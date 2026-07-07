@@ -1,0 +1,97 @@
+# ==============================================================
+# チャンネル設定 — ここを書き換えるだけでテーマ・キャラ・見た目を変更できる
+# ==============================================================
+
+channel:
+  name: "ふしぎ研究所（仮）"
+  theme: "身近な科学・雑学を、ずんだもんと四国めたんが面白く解説する"
+  # 台本生成時に目標とする本編の長さ（分）
+  target_length_minutes: 9
+  # 視聴者層のイメージ（台本プロンプトに渡る）
+  audience: "通勤・寝る前にスマホで気軽に見る20〜40代。専門知識ゼロ前提。"
+
+characters:
+  zunda:
+    display_name: "ずんだもん"
+    credit: "VOICEVOX:ずんだもん"
+    # VOICEVOXのスタイルID（ノーマル=3）。`ytf voices` で一覧を確認できる
+    voicevox_style: 3
+    # 感情ごとにスタイルを切り替えたい場合（任意）
+    style_overrides:
+      happy: 1        # あまあま
+      angry: 7        # ツンツン
+    speed_scale: 1.12
+    position: right   # 画面上の立ち位置 left/right
+    color: "#5CD65C"  # 字幕・サムネで使うキャラカラー
+    sprite_dir: "assets/characters/zunda"
+    role: "元気で好奇心旺盛な質問役。視聴者と同じ目線で驚く。語尾は「〜のだ」「〜なのだ」。"
+  metan:
+    display_name: "四国めたん"
+    credit: "VOICEVOX:四国めたん"
+    voicevox_style: 2
+    speed_scale: 1.12
+    position: left
+    color: "#FF66CC"
+    sprite_dir: "assets/characters/metan"
+    role: "物知りな解説役。丁寧だが少し毒舌。たとえ話がうまい。"
+
+voicevox:
+  url: "http://127.0.0.1:50021"
+  # セリフ間の無音（秒）。台本側の pause_after で上書き可能
+  default_pause: 0.30
+  # 読み間違い対策のユーザー辞書（起動時に自動登録）
+  dictionary:
+    - { surface: "Wi-Fi", pronunciation: "ワイファイ", accent_type: 3 }
+    - { surface: "生成AI", pronunciation: "セイセイエーアイ", accent_type: 5 }
+
+video:
+  width: 1920
+  height: 1080
+  fps: 30
+  # auto: Macなら h264_videotoolbox、無ければ libx264
+  encoder: auto
+  crf: 20
+  bgm:
+    file: null          # 例: assets/bgm/loop.mp3 （nullならBGMなし）
+    volume_db: -24
+    ducking: true       # セリフ中にBGMを自動で下げる
+  loudnorm: true        # -14 LUFS に正規化
+
+subtitles:
+  # ASS字幕用フォント名（libassがfontconfigで解決する名前）
+  font: "Hiragino Sans"
+  font_fallbacks: ["Noto Sans CJK JP", "Noto Sans JP"]
+  font_size: 60
+  outline: 3
+  margin_v: 42
+
+# Pillow描画（見出し・スライド・サムネ）用フォントファイルの探索順
+fonts:
+  paths:
+    - "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc"
+    - "/System/Library/Fonts/Hiragino Sans GB.ttc"
+    - "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
+    - "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
+
+llm:
+  # auto: APIキーがあればAPI、なければコピペ半自動モード
+  mode: auto
+  model: "claude-opus-4-8"
+
+shorts:
+  width: 1080
+  height: 1920
+  # ショート化するシーンは台本側で short: true を付ける
+
+metadata:
+  description_template: |
+    {summary}
+
+    ▼ 目次
+    {chapters}
+
+    ▼ クレジット
+    {credits}
+
+    ※ 本動画は VOICEVOX の音声合成を使用しています。
+  tags_base: ["解説", "雑学", "ゆっくり解説好きにおすすめ", "ずんだもん", "四国めたん", "VOICEVOX"]

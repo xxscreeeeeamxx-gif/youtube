@@ -1,0 +1,22 @@
+# 生成物
+projects/*/audio/
+projects/*/frames/
+projects/*/out/
+projects/*/llm/
+projects/_failed_script.txt
+projects/_prompt_script.md
+ideas/prompt.md
+*_list.txt
+
+# プレースホルダー素材（ytf assets --init で再生成可能）
+assets/characters/
+assets/backgrounds/
+assets/bgm/*
+!assets/bgm/.gitkeep
+
+# Python
+__pycache__/
+*.egg-info/
+.venv/
+build/
+dist/
