@@ -215,9 +215,12 @@ def build_video(
 
     vf = (
         f"scale={width}:{height}:force_original_aspect_ratio=decrease,"
-        f"pad={width}:{height}:(ow-iw)/2:(oh-ih)/2,fps={fps},format=yuv420p,"
-        f"subtitles={ass_rel}"
+        f"pad={width}:{height}:(ow-iw)/2:(oh-ih)/2,fps={fps},format=yuv420p"
     )
+    # subtitles.enabled: false でテロップ焼き込みをオフ（.assは生成されるので
+    # YouTubeの字幕ファイルとして使うことも、フラグを戻して焼き込むことも可能）
+    if cfg.get("subtitles", "enabled", default=True):
+        vf += f",subtitles={ass_rel}"
 
     filters = [f"[0:v]{vf}[vout]"]
     if bgm_path:

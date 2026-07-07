@@ -68,6 +68,16 @@ def main(argv: list[str] | None = None) -> None:
     sp.add_argument("--init", action="store_true", help="プレースホルダー素材を生成")
     sp.add_argument("--force", action="store_true")
 
+    sp = sub.add_parser(
+        "dict",
+        help="読み修正辞書の管理（例: ytf dict add 水分子 すいぶんし）",
+    )
+    sp.add_argument("action", nargs="?", choices=["list", "add"], default="list")
+    sp.add_argument("surface", nargs="?", help="表記（例: 水分子）")
+    sp.add_argument("pronunciation", nargs="?", help="よみ（ひらがな/カタカナ）")
+    sp.add_argument("--accent", type=int, default=0,
+                    help="アクセント核の位置（0=平板。おかしければ調整）")
+
     sub.add_parser("voices", help="VOICEVOXの話者スタイル一覧")
     sub.add_parser("doctor", help="環境チェック")
 
@@ -161,6 +171,9 @@ def main(argv: list[str] | None = None) -> None:
         else:
             print("使い方: ytf assets --init")
 
+    elif args.cmd == "dict":
+        _dict_cmd(cfg, args)
+
     elif args.cmd == "voices":
         from .voice import VoicevoxClient
         client = VoicevoxClient(cfg.get("voicevox", "url", default="http://127.0.0.1:50021"))
@@ -172,6 +185,59 @@ def main(argv: list[str] | None = None) -> None:
 
     elif args.cmd == "doctor":
         _doctor(cfg)
+
+
+def _to_katakana(s: str) -> str:
+    """ひらがな→カタカナ変換（VOICEVOXのよみはカタカナ指定）。"""
+    return "".join(
+        chr(ord(ch) + 0x60) if "ぁ" <= ch <= "ゖ" else ch for ch in s
+    )
+
+
+def _dict_cmd(cfg: Config, args) -> None:
+    from .voice import VoicevoxClient, load_dictionary
+
+    if args.action == "list" or not args.surface:
+        entries = load_dictionary(cfg)
+        if not entries:
+            print("辞書は空です。追加: ytf dict add <表記> <よみ>")
+            return
+        for e in entries:
+            print(f"  {e['surface']}  →  {e['pronunciation']}"
+                  f"（アクセント {e.get('accent_type', 0)}）")
+        return
+
+    # add
+    if not args.pronunciation:
+        raise SystemExit("使い方: ytf dict add <表記> <よみ>（例: ytf dict add 水分子 すいぶんし）")
+    surface = args.surface
+    pron = _to_katakana(args.pronunciation)
+
+    import yaml
+    path = cfg.root / "dictionary.yaml"
+    data = []
+    if path.exists():
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or []
+    # 同じ表記があれば上書き
+    data = [e for e in data if e.get("surface") != surface]
+    data.append({"surface": surface, "pronunciation": pron,
+                 "accent_type": args.accent})
+    lines = ["# VOICEVOXの読み修正辞書（ytf dict add で管理。手で編集してもOK）"]
+    for e in data:
+        lines.append(
+            f"- {{surface: {e['surface']}, pronunciation: {e['pronunciation']}, "
+            f"accent_type: {e.get('accent_type', 0)}}}"
+        )
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"追加: {surface} → {pron} ({path.name})")
+
+    # VOICEVOXが起動していれば即時反映
+    client = VoicevoxClient(cfg.get("voicevox", "url", default="http://127.0.0.1:50021"))
+    if client.ping():
+        client.sync_dictionary(load_dictionary(cfg))
+        print("VOICEVOXに反映しました（次回の音声合成から有効）")
+    else:
+        print("VOICEVOX未起動のため、次回の音声合成時に自動反映されます")
 
 
 def _status(cfg: Config) -> None:

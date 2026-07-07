@@ -53,7 +53,8 @@ n8nを使わない場合は `ytf make <slug>` で手動ビルド、
 
 | 直したいこと | 場所 |
 |---|---|
-| 誤読 | 台本の `[表示|よみ]` 記法 / `channel.yaml` の `voicevox.dictionary` |
+| 誤読 | `ytf dict add <表記> <よみ>`（例: `ytf dict add 水分子 すいぶんし`）。その場限りなら台本の `[表示|よみ]` 記法 |
+| テロップの有無 | `channel.yaml` の `subtitles.enabled` |
 | 話速・声のトーン | `channel.yaml` の `speed_scale` / `style_overrides` |
 | 台本の芸風 | `prompts/script.md`（構成ルール・キャラの口調） |
 | ネタの方向性 | `prompts/ideas.md` と `channel.yaml` の `channel.theme` |

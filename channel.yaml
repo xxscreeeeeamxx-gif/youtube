@@ -52,6 +52,8 @@ video:
   loudnorm: true        # -14 LUFS に正規化
 
 subtitles:
+  # テロップ（字幕焼き込み）のオン/オフ。false でも out/subs.ass は生成される
+  enabled: false
   # ASS字幕用フォント名（libassがfontconfigで解決する名前）
   font: "Hiragino Sans"
   font_fallbacks: ["Noto Sans CJK JP", "Noto Sans JP"]

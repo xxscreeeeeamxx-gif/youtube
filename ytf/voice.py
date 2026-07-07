@@ -57,24 +57,36 @@ class VoicevoxClient:
         return r.json()
 
     def sync_dictionary(self, entries: list[dict]) -> None:
-        """channel.yaml の辞書をユーザー辞書に登録（既存surfaceはスキップ）。"""
+        """辞書をVOICEVOXのユーザー辞書に同期する（新規登録＋読みが変わったら更新）。"""
+        import unicodedata
+
         if not entries:
             return
+
+        def norm(s: str) -> str:
+            # VOICEVOXはsurfaceを全角に正規化して保存するため、比較はNFKCで揃える
+            return unicodedata.normalize("NFKC", s)
+
         r = requests.get(f"{self.base}/user_dict", timeout=10)
         r.raise_for_status()
-        existing = {w["surface"] for w in r.json().values()}
+        existing = {norm(w["surface"]): (uuid, w) for uuid, w in r.json().items()}
         for e in entries:
-            if e["surface"] in existing:
-                continue
-            requests.post(
-                f"{self.base}/user_dict_word",
-                params={
-                    "surface": e["surface"],
-                    "pronunciation": e["pronunciation"],
-                    "accent_type": e.get("accent_type", 0),
-                },
-                timeout=10,
-            ).raise_for_status()
+            params = {
+                "surface": e["surface"],
+                "pronunciation": e["pronunciation"],
+                "accent_type": e.get("accent_type", 0),
+            }
+            hit = existing.get(norm(e["surface"]))
+            if hit is None:
+                requests.post(f"{self.base}/user_dict_word",
+                              params=params, timeout=10).raise_for_status()
+            else:
+                uuid, word = hit
+                same = (norm(word.get("pronunciation", "")) == norm(e["pronunciation"])
+                        and int(word.get("accent_type", 0)) == int(params["accent_type"]))
+                if not same:
+                    requests.put(f"{self.base}/user_dict_word/{uuid}",
+                                 params=params, timeout=10).raise_for_status()
 
     def synthesize(self, text: str, style_id: int, speed: float,
                    pitch: float = 0.0, intonation: float = 1.0) -> bytes:
@@ -135,6 +147,19 @@ def style_for(cfg: Config, speaker: str, emotion: str) -> tuple[int, float, floa
     )
 
 
+def load_dictionary(cfg: Config) -> list[dict]:
+    """読み修正辞書。channel.yaml の voicevox.dictionary と
+    dictionary.yaml（`ytf dict add` で管理）をマージして返す。"""
+    import yaml
+
+    entries = list(cfg.get("voicevox", "dictionary", default=[]) or [])
+    extra = cfg.root / "dictionary.yaml"
+    if extra.exists():
+        data = yaml.safe_load(extra.read_text(encoding="utf-8")) or []
+        entries += [e for e in data if isinstance(e, dict) and e.get("surface")]
+    return entries
+
+
 def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTiming]:
     script = proj.load_script()
     client = None
@@ -145,7 +170,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 "VOICEVOX Engine に接続できません。VOICEVOXを起動するか "
                 "`--tts dummy` を指定してください。"
             )
-        client.sync_dictionary(cfg.get("voicevox", "dictionary", default=[]))
+        client.sync_dictionary(load_dictionary(cfg))
 
     default_pause = float(cfg.get("voicevox", "default_pause", default=0.3))
     timings: list[CutTiming] = []
