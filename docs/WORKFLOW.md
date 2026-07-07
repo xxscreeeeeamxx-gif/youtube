@@ -7,17 +7,19 @@
 ## 初回セットアップ（Mac）
 
 ```bash
-pip install -e .
-# ffmpeg が無ければ: brew install ffmpeg
-
-ytf assets --init      # まずはプレースホルダー素材で動作確認
-ytf doctor             # 環境チェック
+./scripts/setup_mac.sh   # ffmpeg・パッケージ・素材・環境チェックまで一括
 # VOICEVOXアプリを起動しておく（エンジンが :50021 で立つ）
+ytf make sample          # 動作確認
 ```
 
-本番用の立ち絵は `assets/characters/zunda/` `assets/characters/metan/` に
-`normal.png / happy.png / surprised.png / thinking.png / angry.png / sad.png`
-という名前で置くだけで差し替わります（公認立ち絵素材の利用規約を確認のこと）。
+本番用の立ち絵は、公認立ち絵素材（利用規約を確認）から表情PNGを書き出し、
+
+```bash
+python3 scripts/import_sprites.py zunda ~/Downloads/zunda_pngs
+python3 scripts/import_sprites.py metan ~/Downloads/metan_pngs
+```
+
+で取り込めます（余白トリミング・サイズ統一まで自動。normal.png だけでも可）。
 
 ## 1本作る流れ（あなたの作業は3点だけ）
 
