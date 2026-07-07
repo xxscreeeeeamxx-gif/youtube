@@ -39,6 +39,39 @@ class Slide(BaseModel):
 
 
 MOTIONS = {"zoom-in", "zoom-out", "pan-left", "pan-right", "none"}
+TELOP_SIZES = {"sm", "md", "lg", "xl"}
+TELOP_POSITIONS = {
+    f"{v}-{h}"
+    for v in ("top", "middle", "bottom")
+    for h in ("left", "center", "right")
+}
+
+
+class Telop(BaseModel):
+    """画面に大きく出すキーワードテロップ。重要な一言だけを出す。
+
+    スタイル（大きさ・位置・色・縁・光彩）はカットごとに内容へ合わせて指定する。
+    """
+    text: str
+    size: str = "lg"                  # sm / md / lg / xl
+    position: str = "bottom-center"   # top/middle/bottom - left/center/right
+    color: str = "#FFFFFF"            # 文字色
+    stroke: str = "#1E222E"           # 縁取り色
+    glow: str | None = None           # 光彩色（例 "#CC0000"。None なら光彩なし）
+
+    @field_validator("size")
+    @classmethod
+    def size_valid(cls, v: str) -> str:
+        if v not in TELOP_SIZES:
+            raise ValueError(f"telop.size は {sorted(TELOP_SIZES)} のいずれか")
+        return v
+
+    @field_validator("position")
+    @classmethod
+    def position_valid(cls, v: str) -> str:
+        if v not in TELOP_POSITIONS:
+            raise ValueError("telop.position は top/middle/bottom - left/center/right の組合せ")
+        return v
 
 
 class Cut(BaseModel):
@@ -46,6 +79,8 @@ class Cut(BaseModel):
     speaker: str
     text: str
     emotion: str = "normal"   # normal/happy/surprised/thinking/angry/sad
+    reading: str | None = None  # 読み上げの手動上書き（誤読修正用。表示は text のまま）
+    telops: list[Telop] = Field(default_factory=list)
     slide: Slide | None = None
     image: str | None = None  # プロジェクト相対 or assets相対の画像パス
     video: str | None = None  # カード内で再生する動画クリップ（音は使わずナレーション優先）

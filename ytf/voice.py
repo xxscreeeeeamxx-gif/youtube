@@ -173,20 +173,39 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
         client.sync_dictionary(load_dictionary(cfg))
 
     default_pause = float(cfg.get("voicevox", "default_pause", default=0.3))
+    # 同一セリフ・同一声設定のWAVはキャッシュ再利用（台本の一部修正後の再合成を高速化）
+    cache_dir = proj.audio_dir / "cache"
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    dict_sig = json.dumps(load_dictionary(cfg), ensure_ascii=False, sort_keys=True)
+
     timings: list[CutTiming] = []
     t = 0.0
     idx = 0
+    hits = 0
     for scene in script.scenes:
         for ci, cut in enumerate(scene.cuts):
             display, spoken = split_reading(cut.text)
+            if cut.reading:
+                # 誤読の手動修正: 読み上げだけを差し替える（表示は text のまま）
+                spoken = cut.reading
             style_id, speed, pitch, intonation = style_for(cfg, cut.speaker, cut.emotion)
             wav_name = f"{idx:04d}_{cut.speaker}.wav"
             wav_path = proj.audio_dir / wav_name
 
-            if client is not None:
-                data = client.synthesize(spoken, style_id, speed, pitch, intonation)
+            import hashlib
+            key = hashlib.sha1(
+                f"{spoken}|{style_id}|{speed}|{pitch}|{intonation}|{tts}|{dict_sig}".encode()
+            ).hexdigest()[:16]
+            cached = cache_dir / f"{key}.wav"
+            if cached.exists():
+                data = cached.read_bytes()
+                hits += 1
             else:
-                data = dummy_wav(spoken, speed)
+                if client is not None:
+                    data = client.synthesize(spoken, style_id, speed, pitch, intonation)
+                else:
+                    data = dummy_wav(spoken, speed)
+                cached.write_bytes(data)
             wav_path.write_bytes(data)
 
             dur = wav_duration(wav_path)
@@ -215,7 +234,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
         encoding="utf-8",
     )
     concat_narration(proj, timings)
-    print(f"音声 {len(timings)} 本 / 合計 {t/60:.1f} 分 -> {proj.audio_dir}")
+    print(f"音声 {len(timings)} 本（キャッシュ {hits}）/ 合計 {t/60:.1f} 分 -> {proj.audio_dir}")
     return timings
 
 

@@ -53,8 +53,12 @@ n8nを使わない場合は `ytf make <slug>` で手動ビルド、
 
 | 直したいこと | 場所 |
 |---|---|
-| 誤読 | `ytf dict add <表記> <よみ>`（例: `ytf dict add 水分子 すいぶんし`）。その場限りなら台本の `[表示|よみ]` 記法 |
-| テロップの有無 | `channel.yaml` の `subtitles.enabled` |
+| 誤読（単語） | `ytf dict add <表記> <よみ>`（例: `ytf dict add 水分子 すいぶんし`）→全動画に恒久適用 |
+| 誤読（そのセリフだけ） | 台本の `[表示|よみ]` 記法、またはカットに `reading: <読み上げ全文>` を書いて手動上書き |
+| キーワードテロップ | 台本カットの `telops:`（text/size/position/color/stroke/glow を内容に合わせて指定） |
+| 字幕（セリフ全文） | `channel.yaml` の `subtitles.enabled`（既定off。out/subs.ass はYouTube字幕に使える） |
+| 素材集め | `ytf media "<検索語>"` で Wikimedia Commons からDL（歴史画像に強い・英語クエリ推奨）。`--video` で Pexels の動画（要 PEXELS_API_KEY・無料）。ライセンスは media/<クエリ>/credits.txt を確認 |
+| 画像をフル画面で使う | `assets/backgrounds/<名前>.jpg` に置いてシーンの `background: <名前>` を指定（Ken Burnsで動く） |
 | 話速・声のトーン | `channel.yaml` の `speed_scale` / `style_overrides` |
 | 台本の芸風 | `prompts/script.md`（構成ルール・キャラの口調） |
 | ネタの方向性 | `prompts/ideas.md` と `channel.yaml` の `channel.theme` |

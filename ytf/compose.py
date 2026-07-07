@@ -18,8 +18,11 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 from .assets_gen import background_path, sprite_path
 from .config import Config, Project
-from .schema import Script, Slide, split_reading
+from .schema import Script, Slide, Telop, split_reading
 from .voice import CutTiming
+
+# テロップの文字サイズ（画面幅に対する比率）
+TELOP_SIZE_RATIO = {"sm": 0.032, "md": 0.045, "lg": 0.060, "xl": 0.080}
 
 
 @dataclass
@@ -141,6 +144,44 @@ class Composer:
                     d.text((x0 + 70, y), prefix + line, font=f, fill=(30, 34, 46))
                     y += self.lay.slide_font + 22
 
+    def _draw_telop(self, canvas: Image.Image, t: Telop) -> None:
+        """キーワードテロップ。縁取り＋（任意で）光彩付きの大文字を指定位置に描く。"""
+        text = split_reading(t.text)[0]
+        size = int(self.lay.w * TELOP_SIZE_RATIO.get(t.size, 0.060))
+        d = ImageDraw.Draw(canvas)
+        f = self.font(size)
+        max_w = self.lay.w - 100
+        while d.textlength(text, font=f) > max_w and size > 24:
+            size -= 4
+            f = self.font(size)
+        tw = d.textlength(text, font=f)
+        margin = int(self.lay.w * 0.045)
+        vert, _, horiz = t.position.partition("-")
+        x = {
+            "left": margin,
+            "center": (self.lay.w - tw) / 2,
+            "right": self.lay.w - tw - margin,
+        }[horiz]
+        y = {
+            "top": margin,
+            "middle": (self.lay.h - size) / 2,
+            "bottom": self.lay.h - size * 1.45 - margin,
+        }[vert]
+        stroke_w = max(3, size // 14)
+
+        if t.glow:
+            glow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+            gd = ImageDraw.Draw(glow)
+            gd.text((x, y), text, font=f, fill=t.glow,
+                    stroke_width=stroke_w * 3, stroke_fill=t.glow)
+            glow = glow.filter(ImageFilter.GaussianBlur(max(6, size // 7)))
+            canvas.alpha_composite(glow)
+            canvas.alpha_composite(glow)  # 2回重ねて光を強める
+
+        d = ImageDraw.Draw(canvas)
+        d.text((x, y), text, font=f, fill=t.color,
+               stroke_width=stroke_w, stroke_fill=t.stroke)
+
     def _draw_image(self, canvas: Image.Image, image_rel: str) -> None:
         p = self.proj.root / image_rel
         if not p.exists():
@@ -166,6 +207,7 @@ class Composer:
         image: str | None,
         video_card: bool = False,  # True なら空カードを描く（動画は後段でoverlay）
         fg_only: bool = False,     # True なら背景を敷かず透過PNG（背景は後段でzoompan）
+        telops: list[Telop] | None = None,
     ) -> Image.Image:
         if fg_only:
             canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
@@ -181,6 +223,8 @@ class Composer:
 
         if not self.show_chars:
             # 立ち絵を出さない構成（テロップ主体）
+            for t in telops or []:
+                self._draw_telop(canvas, t)
             return canvas if fg_only else canvas.convert("RGB")
 
         if self.lay.vertical:
@@ -199,6 +243,8 @@ class Composer:
                 else:
                     x = self.lay.w - sp.width - 40
                 canvas.paste(sp, (x, self.lay.h - sp.height), sp)
+        for t in telops or []:
+            self._draw_telop(canvas, t)
         return canvas if fg_only else canvas.convert("RGB")
 
 
@@ -305,6 +351,7 @@ def render_frames(
         key_src = json.dumps(
             [scene.background, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
+             [t.model_dump() for t in cut.telops],
              bool(video_path), fg_only, sub],
             ensure_ascii=False, sort_keys=True, default=str,
         )
@@ -314,7 +361,7 @@ def render_frames(
         if key not in manifest_used and not path.exists():
             composer.compose_cut(scene.background, header, chars, cut.slide,
                                  cut.image, video_card=bool(video_path),
-                                 fg_only=fg_only).save(path)
+                                 fg_only=fg_only, telops=cut.telops).save(path)
         manifest_used.add(key)
         result.append(CutRender(
             png=rel,

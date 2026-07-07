@@ -19,6 +19,9 @@ assets/bgm/*
 !assets/bgm/.gitkeep
 assets/clips/
 
+# ダウンロードした素材（ytf media）
+media/
+
 # Python
 __pycache__/
 *.egg-info/

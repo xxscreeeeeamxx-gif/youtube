@@ -78,6 +78,16 @@ def main(argv: list[str] | None = None) -> None:
     sp.add_argument("--accent", type=int, default=0,
                     help="アクセント核の位置（0=平板。おかしければ調整）")
 
+    sp = sub.add_parser(
+        "media",
+        help="フリー素材の検索・DL（例: ytf media \"中世 銀行\"。--video で動画）",
+    )
+    sp.add_argument("query")
+    sp.add_argument("-n", "--count", type=int, default=6)
+    sp.add_argument("--video", action="store_true",
+                    help="動画クリップを探す（Pexels・要PEXELS_API_KEY）")
+    sp.add_argument("--to", help="保存先ディレクトリ（既定: media/<クエリ>/）")
+
     sub.add_parser("voices", help="VOICEVOXの話者スタイル一覧")
     sub.add_parser("doctor", help="環境チェック")
 
@@ -173,6 +183,10 @@ def main(argv: list[str] | None = None) -> None:
 
     elif args.cmd == "dict":
         _dict_cmd(cfg, args)
+
+    elif args.cmd == "media":
+        from .media import run_media
+        run_media(cfg, args.query, args.count, args.video, args.to)
 
     elif args.cmd == "voices":
         from .voice import VoicevoxClient
