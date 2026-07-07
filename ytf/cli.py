@@ -54,6 +54,16 @@ def main(argv: list[str] | None = None) -> None:
     sp.add_argument("--tts", choices=["voicevox", "dummy"], default="voicevox")
     sp.add_argument("--skip-shorts", action="store_true")
 
+    sp = sub.add_parser("approve", help="台本レビュー完了マーク（n8nが自動ビルドする対象になる）")
+    sp.add_argument("project")
+    sp.add_argument("--revoke", action="store_true", help="承認を取り消す")
+
+    sp = sub.add_parser("release", help="動画確認完了マーク（n8nがアップロードする対象になる）")
+    sp.add_argument("project")
+    sp.add_argument("--revoke", action="store_true")
+
+    sub.add_parser("status", help="全プロジェクトの進行状況を一覧")
+
     sp = sub.add_parser("assets", help="素材管理")
     sp.add_argument("--init", action="store_true", help="プレースホルダー素材を生成")
     sp.add_argument("--force", action="store_true")
@@ -119,6 +129,31 @@ def main(argv: list[str] | None = None) -> None:
             render_shorts(cfg, proj, timings)
         print("\n✅ 完了。out/ の中身を確認して投稿してください。")
 
+    elif args.cmd == "approve":
+        proj = Project.resolve(cfg, args.project)
+        marker = proj.root / ".approved"
+        if args.revoke:
+            marker.unlink(missing_ok=True)
+            print(f"承認を取り消しました: {proj.root.name}")
+        else:
+            marker.touch()
+            print(f"承認しました: {proj.root.name}（次回の自動ビルドで処理されます）")
+
+    elif args.cmd == "release":
+        proj = Project.resolve(cfg, args.project)
+        marker = proj.root / ".release"
+        if args.revoke:
+            marker.unlink(missing_ok=True)
+            print(f"リリースを取り消しました: {proj.root.name}")
+        else:
+            if not (proj.root / "out" / "video.mp4").exists():
+                raise SystemExit("out/video.mp4 がありません。先にビルドしてください。")
+            marker.touch()
+            print(f"リリース待ちにしました: {proj.root.name}（n8nがアップロードします）")
+
+    elif args.cmd == "status":
+        _status(cfg)
+
     elif args.cmd == "assets":
         from .assets_gen import init_assets
         if args.init or args.force:
@@ -137,6 +172,26 @@ def main(argv: list[str] | None = None) -> None:
 
     elif args.cmd == "doctor":
         _doctor(cfg)
+
+
+def _status(cfg: Config) -> None:
+    projects = sorted((cfg.root / "projects").glob("*/script.yaml"))
+    if not projects:
+        print("プロジェクトがありません")
+        return
+    for sp in projects:
+        d = sp.parent
+        if (d / ".uploaded").exists():
+            state = "🚀 アップロード済み"
+        elif (d / ".release").exists():
+            state = "📤 リリース待ち（n8nがアップロード）"
+        elif (d / "out" / "video.mp4").exists():
+            state = "🎞  ビルド済み → 確認して ytf release"
+        elif (d / ".approved").exists():
+            state = "⏳ 承認済み（自動ビルド待ち）"
+        else:
+            state = "📝 台本レビュー待ち → ytf approve"
+        print(f"{d.name:24s} {state}")
 
 
 def _doctor(cfg: Config) -> None:

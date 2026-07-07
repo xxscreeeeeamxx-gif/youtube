@@ -1,13 +1,16 @@
 # yt-factory — 顔出しなし解説チャンネル 動画量産システム
 
-VOICEVOX + FFmpeg + Pillow + Claude で、
-**ネタ出し → 台本 → 音声 → 素材 → 組み立て → 書き出し** を自動化するパイプライン。
+VOICEVOX + FFmpeg + Pillow + n8n で、
+**ネタ出し → 台本 → 音声 → 素材 → 組み立て → 書き出し → アップロード** を回すパイプライン。
 静止画＋カット割り＋表情差分の「紙芝居」スタイル専用（動画生成AI不使用）。
+LLMはAPIを使わず、プロンプトを claude.ai にコピペする無料運用（`llm.mode: manual`）。
 
 ```
-ytf ideas                  # ネタ出し（LLM）→ ideas/backlog.yaml
-ytf script --idea <id>     # 台本生成（LLM）→ projects/<slug>/script.yaml
-ytf make <slug>            # 音声合成→映像→サムネ→概要欄→ショート 一括
+ytf ideas / --response     # ネタ出しプロンプト生成 → claude.aiの返答を取り込み
+ytf script --idea <id>     # 台本プロンプト生成 → 返答を script.yaml として検証・保存
+ytf approve <slug>         # 台本レビューOK → n8nが自動ビルド＆通知
+ytf release <slug>         # 動画確認OK → n8nがYouTubeへ非公開アップロード
+ytf status                 # 全プロジェクトの進行状況
 ```
 
 `projects/<slug>/out/` に 本編mp4 / ショートmp4 / サムネPNG / 概要欄テキスト（VOICEVOXクレジット自動挿入）が揃う。
@@ -15,7 +18,7 @@ ytf make <slug>            # 音声合成→映像→サムネ→概要欄→シ
 ## クイックスタート
 
 ```bash
-pip install -e '.[llm]'
+pip install -e .
 ytf assets --init      # プレースホルダー素材を生成
 ytf doctor             # 環境チェック
 # VOICEVOXアプリを起動してから:
@@ -27,6 +30,7 @@ ytf make sample        # サンプル台本で1本ビルド
 
 - [docs/DESIGN.md](docs/DESIGN.md) — 全体設計・アーキテクチャ・ロードマップ
 - [docs/WORKFLOW.md](docs/WORKFLOW.md) — 日々の運用手順・チューニング箇所
+- [automation/README.md](automation/README.md) — n8nセットアップ（自動ビルド・YouTubeアップロード）
 
 ## 構成
 

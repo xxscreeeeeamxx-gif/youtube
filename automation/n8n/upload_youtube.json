@@ -1,0 +1,110 @@
+{
+  "name": "yt-factory YouTubeアップロード（テンプレート）",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "minutes", "minutesInterval": 30 }]
+        }
+      },
+      "name": "30分ごと",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "command": "cd 【/Users/あなた/path/to/youtube】 && python3 scripts/next_upload.py"
+      },
+      "name": "リリース待ちを取得",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [200, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            { "value1": "={{ $json.stdout }}", "operation": "isNotEmpty" }
+          ]
+        }
+      },
+      "name": "対象あり?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [400, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [JSON.parse($input.first().json.stdout)];"
+      },
+      "name": "JSON展開",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [600, -80]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "fileSelector": "={{ $json.video }}"
+      },
+      "name": "動画を読み込み",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [800, -80]
+    },
+    {
+      "parameters": {
+        "resource": "video",
+        "operation": "upload",
+        "title": "={{ $('JSON展開').item.json.title }}",
+        "regionCode": "JP",
+        "categoryId": "28",
+        "options": {
+          "description": "={{ $('JSON展開').item.json.description }}",
+          "tags": "={{ $('JSON展開').item.json.tags.join(',') }}",
+          "privacyStatus": "private",
+          "defaultLanguage": "ja"
+        }
+      },
+      "name": "YouTubeへアップロード",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [1000, -80],
+      "credentials": {}
+    },
+    {
+      "parameters": {
+        "command": "cd 【/Users/あなた/path/to/youtube】 && slug='{{ $('JSON展開').item.json.slug }}' && touch \"projects/$slug/.uploaded\" && rm -f \"projects/$slug/.release\" && echo done"
+      },
+      "name": "アップロード済みマーク",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1200, -80]
+    }
+  ],
+  "connections": {
+    "30分ごと": {
+      "main": [[{ "node": "リリース待ちを取得", "type": "main", "index": 0 }]]
+    },
+    "リリース待ちを取得": {
+      "main": [[{ "node": "対象あり?", "type": "main", "index": 0 }]]
+    },
+    "対象あり?": {
+      "main": [
+        [{ "node": "JSON展開", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "JSON展開": {
+      "main": [[{ "node": "動画を読み込み", "type": "main", "index": 0 }]]
+    },
+    "動画を読み込み": {
+      "main": [[{ "node": "YouTubeへアップロード", "type": "main", "index": 0 }]]
+    },
+    "YouTubeへアップロード": {
+      "main": [[{ "node": "アップロード済みマーク", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": { "executionOrder": "v1" }
+}

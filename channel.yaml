@@ -74,8 +74,9 @@ fonts:
     - "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
 
 llm:
-  # auto: APIキーがあればAPI、なければコピペ半自動モード
-  mode: auto
+  # manual: プロンプトを書き出して claude.ai 等に人間がコピペする（API不使用・無料）
+  # auto にすると ANTHROPIC_API_KEY がある場合だけAPIを使う
+  mode: manual
   model: "claude-opus-4-8"
 
 shorts:

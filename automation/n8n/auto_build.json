@@ -1,0 +1,31 @@
+{
+  "name": "yt-factory 自動ビルド",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "minutes", "minutesInterval": 15 }]
+        }
+      },
+      "name": "15分ごと",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "command": "export YTF_NOTIFY_WEBHOOK='https://discord.com/api/webhooks/【あなたのWebhook】' && cd 【/Users/あなた/path/to/youtube】 && ./scripts/auto_build.sh"
+      },
+      "name": "承認済みをビルド",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [220, 0]
+    }
+  ],
+  "connections": {
+    "15分ごと": {
+      "main": [[{ "node": "承認済みをビルド", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": { "executionOrder": "v1" }
+}
