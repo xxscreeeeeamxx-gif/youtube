@@ -39,6 +39,18 @@
   fieldset { border: 1px solid #2a2d38; border-radius: 8px; margin: 14px 0; padding: 4px 12px 12px; }
   legend { font-size: 12px; color: #9aa0b0; padding: 0 6px; }
   .hint { font-size: 11px; color: #6b7080; margin-top: 4px; }
+  #mediaModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 50; padding: 30px; }
+  #mediaPanel { background: #181b23; border: 1px solid #2a2d38; border-radius: 10px; max-width: 1100px; height: 100%;
+                margin: 0 auto; padding: 14px 18px; display: flex; flex-direction: column; }
+  .mrow { display: flex; gap: 8px; align-items: center; }
+  .mrow input[type=text] { flex: 1; }
+  #mgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; overflow-y: auto; margin-top: 10px; }
+  .mcard { border: 1px solid #2a2d38; border-radius: 8px; overflow: hidden; background: #14161c; display: flex; flex-direction: column; }
+  .mcard img { width: 100%; height: 150px; object-fit: cover; background: #0c0d11; }
+  .mcard .meta { font-size: 10px; color: #8a90a0; padding: 4px 6px; line-height: 1.4; flex: 1; }
+  .mcard .acts { display: flex; gap: 4px; padding: 6px; border-top: 1px solid #2a2d38; }
+  .mcard .acts .btn { flex: 1; text-align: center; }
+  .badge { font-size: 10px; padding: 1px 5px; border-radius: 4px; background: #26304a; color: #9fb2e0; }
 </style>
 </head>
 <body>
@@ -50,11 +62,25 @@
   <div class="topbar">
     <button class="btn primary" onclick="save()">保存 (⌘S)</button>
     <button class="btn" onclick="listen()">▶ このセリフを聴く</button>
+    <button class="btn" onclick="openMedia()">🔍 素材を探す</button>
     <label style="display:inline;margin:0"><input type="checkbox" id="vertical" onchange="schedulePreview()"> 縦(ショート)で見る</label>
     <span id="status"></span>
   </div>
   <img id="preview" alt="プレビュー">
   <div id="form"></div>
+</div>
+
+<div id="mediaModal">
+  <div id="mediaPanel">
+    <div class="mrow">
+      <input type="text" id="mq" placeholder="検索語（英語推奨。例: medieval bank, snow road）" onkeydown="if(event.key==='Enter')mediaSearch()">
+      <label style="white-space:nowrap"><input type="checkbox" id="mvideo"> 動画</label>
+      <button class="btn primary" onclick="mediaSearch()">検索</button>
+      <button class="btn" onclick="closeMedia()">閉じる</button>
+    </div>
+    <div id="mhint" class="hint"></div>
+    <div id="mgrid"></div>
+  </div>
 </div>
 <script>
 let DATA = null, SI = 0, CI = 0, dirty = false, previewTimer = null;
@@ -257,8 +283,74 @@ function setStatus(msg, err) {
   el.className = err ? "err" : "";
 }
 
+let MRESULTS = [];
+function openMedia() {
+  f("mediaModal").style.display = "block";
+  if (!f("mq").value) {
+    // 現在のシーン見出しを検索語の初期値に（英語推奨の案内つき）
+    f("mq").value = "";
+  }
+  f("mq").focus();
+}
+function closeMedia() { f("mediaModal").style.display = "none"; }
+
+async function mediaSearch() {
+  const q = f("mq").value.trim();
+  if (!q) return;
+  const video = f("mvideo").checked;
+  f("mhint").textContent = "検索中…";
+  f("mgrid").innerHTML = "";
+  const r = await fetch("/api/media/search", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({query: q, video, count: 12}),
+  });
+  const j = await r.json();
+  if (!r.ok) { f("mhint").textContent = "検索失敗: " + (j.error || r.status); return; }
+  MRESULTS = j.results || [];
+  if (video && !j.pexels) {
+    f("mhint").innerHTML = "動画検索には Pexels の無料APIキーが必要です（環境変数 PEXELS_API_KEY）。画像はキー不要で使えます。";
+    return;
+  }
+  if (!MRESULTS.length) { f("mhint").textContent = "見つかりません。英語の検索語を試してください。"; return; }
+  f("mhint").innerHTML = MRESULTS.length + " 件。CC BY系は概要欄クレジットが必要（ライセンスは media/credits.txt に記録）。";
+  const g = f("mgrid");
+  g.innerHTML = "";
+  MRESULTS.forEach((it, i) => {
+    const card = document.createElement("div");
+    card.className = "mcard";
+    const isVid = it.type === "video";
+    card.innerHTML = `<img src="${it.thumb}" loading="lazy" alt="">
+      <div class="meta"><span class="badge">${it.source}</span> ${it.license || ""}<br>${(it.author||"").slice(0,40)}</div>
+      <div class="acts">
+        ${isVid ? "" : `<button class="btn small" onclick="insertMedia(${i},'background')">背景に</button>`}
+        <button class="btn small" onclick="insertMedia(${i},'${isVid?"video":"image"}')">カードに</button>
+      </div>`;
+    g.appendChild(card);
+  });
+}
+
+async function insertMedia(i, kind) {
+  const it = MRESULTS[i];
+  f("mhint").textContent = "ダウンロード中…";
+  const r = await fetch("/api/media/insert", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({item: it, kind}),
+  });
+  const j = await r.json();
+  if (!r.ok) { f("mhint").textContent = "挿入失敗: " + (j.error || r.status); return; }
+  const c = cur(), sc = DATA.scenes[SI];
+  if (j.kind === "background") sc.background = j.value;
+  else if (j.kind === "video") { c.video = j.value; c.slide = null; }
+  else c.image = j.value;
+  dirty = true;
+  closeMedia();
+  renderForm(); renderList(); schedulePreview(0);
+  setStatus("素材を挿入しました（" + (j.license || "") + "）保存で確定", false);
+}
+
 document.addEventListener("keydown", e => {
   if ((e.metaKey || e.ctrlKey) && e.key === "s") { e.preventDefault(); save(); }
+  if (e.key === "Escape") closeMedia();
 });
 window.addEventListener("beforeunload", e => { if (dirty) e.preventDefault(); });
 load();

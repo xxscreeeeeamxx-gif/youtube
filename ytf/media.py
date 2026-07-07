@@ -50,7 +50,7 @@ def _download(url: str, dest: Path) -> bool:
 
 
 def search_wikimedia(query: str, n: int) -> list[dict]:
-    """Wikimedia Commons の画像検索。(url, title, license, author, page) を返す。"""
+    """Wikimedia Commons の画像検索。thumb（小）と url（挿入用の大）を返す。"""
     r = requests.get(
         "https://commons.wikimedia.org/w/api.php",
         params={
@@ -62,7 +62,7 @@ def search_wikimedia(query: str, n: int) -> list[dict]:
             "gsrlimit": n,
             "prop": "imageinfo",
             "iiprop": "url|extmetadata",
-            "iiurlwidth": 1920,
+            "iiurlwidth": 480,
         },
         headers=UA,
         timeout=30,
@@ -77,11 +77,15 @@ def search_wikimedia(query: str, n: int) -> list[dict]:
         def m(key: str) -> str:
             return re.sub(r"<[^>]+>", "", str((meta.get(key) or {}).get("value", ""))).strip()
 
-        url = info.get("thumburl") or info.get("url")
-        if not url:
+        thumb = info.get("thumburl")
+        original = info.get("url")
+        if not thumb or not original:
             continue
+        # 挿入用はオリジナルを使う（サムネ生成サービスは不安定なため確実な原本を取得）
         out.append({
-            "url": url,
+            "url": original,
+            "thumb": thumb,
+            "type": "image",
             "title": p.get("title", "").replace("File:", ""),
             "license": m("LicenseShortName") or "不明",
             "author": m("Artist") or "不明",
@@ -110,6 +114,8 @@ def search_pexels(query: str, n: int, video: bool) -> list[dict]:
                 continue
             out.append({
                 "url": files[0]["link"],
+                "thumb": v.get("image", ""),
+                "type": "video",
                 "title": f"pexels_video_{v['id']}.mp4",
                 "license": "Pexels License（クレジット不要・商用可）",
                 "author": v.get("user", {}).get("name", "不明"),
@@ -123,6 +129,8 @@ def search_pexels(query: str, n: int, video: bool) -> list[dict]:
     r.raise_for_status()
     return [{
         "url": p["src"]["large2x"],
+        "thumb": p["src"]["medium"],
+        "type": "image",
         "title": f"pexels_{p['id']}.jpg",
         "license": "Pexels License（クレジット不要・商用可）",
         "author": p.get("photographer", "不明"),
@@ -131,25 +139,69 @@ def search_pexels(query: str, n: int, video: bool) -> list[dict]:
     } for p in r.json().get("photos", [])]
 
 
+def search_all(cfg: Config, query: str, n: int, video: bool) -> list[dict]:
+    """編集画面用: Wikimedia + Pexels を集約して検索する（DLはしない）。"""
+    if video:
+        return search_pexels(query, n, video=True)
+    results: list[dict] = []
+    try:
+        results += search_wikimedia(query, n)
+    except requests.RequestException as e:
+        print(f"Wikimedia検索に失敗: {e}")
+    results += search_pexels(query, max(2, n // 2), video=False)
+    return results
+
+
+def insert_media(cfg: Config, item: dict, kind: str) -> dict:
+    """素材を1件ダウンロードして所定の場所に配置し、台本へ書く値を返す。
+
+    kind: "background"（フル画面背景）/ "image"（カード内画像）/ "video"（カード内動画）
+    """
+    import hashlib
+
+    url = item["url"]
+    key = hashlib.sha1(url.encode()).hexdigest()[:8]
+    src_ext = Path(url.split("?")[0]).suffix.lower()
+
+    if kind == "background":
+        ext = src_ext if src_ext in (".jpg", ".jpeg", ".png") else ".jpg"
+        name = f"m_{key}"
+        dest = cfg.root / "assets" / "backgrounds" / f"{name}{ext}"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if not _download(url, dest):
+            raise RuntimeError("素材のダウンロードに失敗しました")
+        ret = {"kind": "background", "value": name}
+    else:
+        ext = src_ext or (".mp4" if kind == "video" else ".jpg")
+        rel = f"media/_editor/m_{key}{ext}"
+        dest = cfg.root / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if not _download(url, dest):
+            raise RuntimeError("素材のダウンロードに失敗しました")
+        ret = {"kind": kind, "value": rel}
+
+    # ライセンス・作者を1ファイルに集約記録（公開前の確認用）
+    credits = cfg.root / "media" / "credits.txt"
+    credits.parent.mkdir(parents=True, exist_ok=True)
+    line = (f"{dest.relative_to(cfg.root)}\t{item.get('source', '')}\t"
+            f"{item.get('license', '')}\t{item.get('author', '')}\t{item.get('page', '')}")
+    prev = credits.read_text(encoding="utf-8") if credits.exists() else ""
+    credits.write_text(prev + line + "\n", encoding="utf-8")
+    ret["license"] = item.get("license", "")
+    return ret
+
+
 def run_media(cfg: Config, query: str, n: int, video: bool, dest: str | None) -> None:
     out_dir = Path(dest) if dest else cfg.root / "media" / _slug(query)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    results: list[dict] = []
-    if video:
-        results = search_pexels(query, n, video=True)
-        if not results:
-            raise SystemExit(
-                "動画素材の検索には Pexels のAPIキーが必要です（無料）。\n"
-                "  1. https://www.pexels.com/api/ でキーを取得\n"
-                "  2. export PEXELS_API_KEY=<キー> を設定して再実行"
-            )
-    else:
-        try:
-            results += search_wikimedia(query, n)
-        except requests.RequestException as e:
-            print(f"Wikimedia検索に失敗: {e}")
-        results += search_pexels(query, max(2, n // 2), video=False)
+    results = search_all(cfg, query, n, video)
+    if video and not results:
+        raise SystemExit(
+            "動画素材の検索には Pexels のAPIキーが必要です（無料）。\n"
+            "  1. https://www.pexels.com/api/ でキーを取得\n"
+            "  2. export PEXELS_API_KEY=<キー> を設定して再実行"
+        )
 
     if not results:
         raise SystemExit("見つかりませんでした。クエリを変えてみてください（英語も有効）。")
