@@ -45,6 +45,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "青い光は波が短く、空気の粒にぶつかると四方八方に散らばります。"
+        # 動画クリップ埋め込みの検証用（ytf assets --init で生成されるデモ素材）
+        video: assets/clips/demo.mp4
       - speaker: aoyama
         emotion: surprised
         text: "つまり空全体から青い光が飛んでくる。だから見上げると青いんです。"

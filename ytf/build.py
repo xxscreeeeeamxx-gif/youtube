@@ -1,19 +1,29 @@
 """FFmpegによる最終組み立て。
 
-静止画の連番 + narration.wav + (任意)BGM + ASS字幕 を1パスで合成する。
-静止画はconcat demuxerで時間指定するため、フレーム画像の複製は発生しない。
+各カットを「動きのある短い動画セグメント」として生成し（Ken Burnsズーム/パン、
+動画クリップのカード内再生に対応）、concat demuxer で連結してから
+narration.wav + (任意)BGM + ASS字幕 を合成する。
+
+セグメントはハッシュでキャッシュされるので、台本を一部直しての再ビルドは
+変更カットぶんだけ再生成される。motion を無効にした場合は従来どおり
+静止PNGを時間指定で並べる高速パスを使う。
 """
 
 from __future__ import annotations
 
+import hashlib
 import shutil
 import subprocess
 from functools import lru_cache
 from pathlib import Path
 
+from .compose import CutRender
 from .config import Config, Project, ffmpeg_bin, ffprobe_bin
 from .subtitles import build_ass
 from .voice import CutTiming
+
+# zoompan のガタつき対策で入力を拡大してから動かす倍率
+_UPSCALE = 2
 
 
 @lru_cache(maxsize=1)
@@ -53,10 +63,117 @@ def _run(cmd: list[str], cwd: Path) -> None:
         raise SystemExit(f"ffmpeg 失敗:\n{' '.join(cmd)}\n{r.stderr[-3000:]}")
 
 
+# ---------- カットごとのセグメント生成（動きを付ける） ----------
+
+
+def _cut_frame_counts(durs: list[float], fps: int) -> list[int]:
+    """各カットのフレーム数。累積で丸めて音声との誤差を1フレーム未満に保つ。"""
+    counts, acc, prev = [], 0.0, 0
+    for d in durs:
+        acc += d
+        total = round(acc * fps)
+        counts.append(max(1, total - prev))
+        prev = max(total, prev + 1)
+    return counts
+
+
+def _zoompan_expr(motion: str, zoom: float, n: int) -> tuple[str, str, str]:
+    """(z, x, y) の zoompan 式。on は 0..n-1 の出力フレーム番号。"""
+    z_max = 1.0 + zoom
+    cx, cy = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+    if motion == "zoom-out":
+        return f"{z_max}-{zoom}*on/{n}", cx, cy
+    if motion == "pan-left":
+        return f"{z_max}", f"(iw-iw/zoom)*(1-on/{n})", "(ih-ih/zoom)/2"
+    if motion == "pan-right":
+        return f"{z_max}", f"(iw-iw/zoom)*on/{n}", "(ih-ih/zoom)/2"
+    return f"1+{zoom}*on/{n}", cx, cy  # zoom-in（既定）
+
+
+def _render_one_segment(
+    proj: Project, item: CutRender, out_rel: str, n: int,
+    fps: int, w: int, h: int, zoom: float, enc: list[str], crf: str,
+) -> None:
+    base = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error"]
+    if item.video:
+        # ベースPNG（空カード）にクリップをカード内側へ overlay。クリップは無音・ループ
+        x0, y0, x1, y1 = item.box
+        bw, bh = x1 - x0, y1 - y0
+        fc = (
+            f"[1:v]scale={bw}:{bh}:force_original_aspect_ratio=decrease,setsar=1[clip];"
+            f"[0:v][clip]overlay=x={x0}+({bw}-w)/2:y={y0}+({bh}-h)/2,"
+            f"format=yuv420p,setsar=1[vout]"
+        )
+        cmd = base + [
+            "-loop", "1", "-framerate", str(fps), "-i", item.png,
+            "-stream_loop", "-1", "-i", item.video,
+            "-filter_complex", fc, "-map", "[vout]",
+        ]
+    elif item.motion == "none":
+        cmd = base + [
+            "-loop", "1", "-framerate", str(fps), "-i", item.png,
+            "-vf", "format=yuv420p,setsar=1",
+        ]
+    else:
+        z, x, y = _zoompan_expr(item.motion, zoom, n)
+        vf = (
+            f"scale={w * _UPSCALE}:-2,"
+            f"zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={w}x{h}:fps={fps},"
+            f"format=yuv420p,setsar=1"
+        )
+        cmd = base + ["-i", item.png, "-vf", vf]
+
+    cmd += ["-frames:v", str(n), "-an", "-c:v", *enc]
+    if enc[0] == "libx264":
+        cmd += ["-crf", crf]
+    cmd += [out_rel]
+    _run(cmd, cwd=proj.root)
+
+
+def render_segments(
+    cfg: Config, proj: Project, plan: list[CutRender], w: int, h: int,
+) -> list[str]:
+    """カットごとの動画セグメントを frames/ に生成（キャッシュあり）。"""
+    fps = int(cfg.get("video", "fps", default=30))
+    crf = str(cfg.get("video", "crf", default=20))
+    zoom = float(cfg.get("video", "motion", "zoom", default=0.06))
+    enc = pick_encoder(cfg.get("video", "encoder", default="auto"))
+    counts = _cut_frame_counts([c.dur for c in plan], fps)
+
+    rels, made = [], 0
+    for item, n in zip(plan, counts):
+        vsig = ""
+        if item.video:
+            st = Path(item.video).stat()
+            vsig = f"{item.video}:{st.st_size}:{int(st.st_mtime)}:{item.box}"
+        key_src = f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|{vsig}|{enc[0]}"
+        key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
+        rel = f"frames/seg_{key}.mp4"
+        if not (proj.root / rel).exists():
+            _render_one_segment(proj, item, rel, n, fps, w, h, zoom, enc, crf)
+            made += 1
+        rels.append(rel)
+    print(f"セグメント {len(plan)} カット（新規 {made} / キャッシュ {len(plan) - made}）")
+    return rels
+
+
+def _prepare_visual(cfg: Config, proj: Project, plan: list[CutRender],
+                    w: int, h: int, stem: str) -> Path:
+    """映像側のconcatリストを作る。動きあり=セグメント連結 / なし=静止画を時間指定。"""
+    motion_on = bool(cfg.get("video", "motion", "enabled", default=True))
+    if motion_on or any(c.video for c in plan):
+        segs = render_segments(cfg, proj, plan, w, h)
+        lines = ["ffconcat version 1.0"] + [f"file '{s}'" for s in segs]
+        p = proj.root / f"{stem}_list.txt"
+        p.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        return p
+    return write_concat_file(proj, [(c.png, c.dur) for c in plan], f"{stem}_list.txt")
+
+
 def build_video(
     cfg: Config,
     proj: Project,
-    frames: list[tuple[str, float]],
+    concat: Path,
     audio_rel: str,
     ass_rel: str,
     out_rel: str,
@@ -66,7 +183,6 @@ def build_video(
     fps = int(cfg.get("video", "fps", default=30))
     crf = str(cfg.get("video", "crf", default=20))
     enc = pick_encoder(cfg.get("video", "encoder", default="auto"))
-    concat = write_concat_file(proj, frames, Path(out_rel).stem + "_list.txt")
 
     bgm_file = cfg.get("video", "bgm", "file")
     bgm_path = (cfg.root / bgm_file) if bgm_file else None
@@ -121,10 +237,11 @@ def render_main(cfg: Config, proj: Project, timings: list[CutTiming]) -> Path:
 
     w = int(cfg.get("video", "width", default=1920))
     h = int(cfg.get("video", "height", default=1080))
-    frames = render_frames(cfg, proj, timings, vertical=False)
+    plan = render_frames(cfg, proj, timings, vertical=False)
     ass = proj.out_dir / "subs.ass"
     ass.write_text(build_ass(cfg, timings, w, h), encoding="utf-8")
-    out = build_video(cfg, proj, frames, "audio/narration.wav", "out/subs.ass",
+    concat = _prepare_visual(cfg, proj, plan, w, h, "video")
+    out = build_video(cfg, proj, concat, "audio/narration.wav", "out/subs.ass",
                       "out/video.mp4", w, h)
     print(f"書き出し完了: {out}")
     return out
@@ -156,13 +273,14 @@ def render_shorts(cfg: Config, proj: Project, timings: list[CutTiming]) -> list[
               "-ss", f"{start:.3f}", "-t", f"{dur:.3f}",
               "-i", "audio/narration.wav", audio_rel], cwd=proj.root)
 
-        frames = render_frames(cfg, proj, timings, vertical=True, only_scene=sid)
+        plan = render_frames(cfg, proj, timings, vertical=True, only_scene=sid)
         ass_rel = f"out/short_{sid}.ass"
         (proj.root / ass_rel).write_text(
             build_ass(cfg, scene_ts, w, h, font_size=64, margin_v=800, offset=start),
             encoding="utf-8",
         )
-        out = build_video(cfg, proj, frames, audio_rel, ass_rel,
+        concat = _prepare_visual(cfg, proj, plan, w, h, f"short_{sid}")
+        out = build_video(cfg, proj, concat, audio_rel, ass_rel,
                           f"out/short_{sid}.mp4", w, h)
         print(f"ショート書き出し: {out}")
         outs.append(out)

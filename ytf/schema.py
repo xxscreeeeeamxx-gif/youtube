@@ -38,6 +38,9 @@ class Slide(BaseModel):
     big: str = ""      # 一言をドンと出したいとき（bullets より優先）
 
 
+MOTIONS = {"zoom-in", "zoom-out", "pan-left", "pan-right", "none"}
+
+
 class Cut(BaseModel):
     """1セリフ = 1カット。"""
     speaker: str
@@ -45,6 +48,8 @@ class Cut(BaseModel):
     emotion: str = "normal"   # normal/happy/surprised/thinking/angry/sad
     slide: Slide | None = None
     image: str | None = None  # プロジェクト相対 or assets相対の画像パス
+    video: str | None = None  # カード内で再生する動画クリップ（音は使わずナレーション優先）
+    motion: str | None = None  # 画面の動き。未指定は自動（ゆっくりズーム交互）
     pause_after: float | None = None  # 秒。None は channel.yaml の既定値
 
     @field_validator("text")
@@ -53,6 +58,13 @@ class Cut(BaseModel):
         if not v.strip():
             raise ValueError("セリフが空です")
         return v.strip()
+
+    @field_validator("motion")
+    @classmethod
+    def motion_valid(cls, v: str | None) -> str | None:
+        if v is not None and v not in MOTIONS:
+            raise ValueError(f"motion は {sorted(MOTIONS)} のいずれか")
+        return v
 
 
 class Scene(BaseModel):

@@ -109,6 +109,11 @@ class Composer:
                             outline=(30, 34, 46, 255), width=4)
         return box
 
+    def card_inner_box(self) -> tuple[int, int, int, int]:
+        """カード内側（パディング込み）の領域。動画クリップの配置に使う。"""
+        x0, y0, x1, y1 = self._card_box()
+        return (x0 + 24, y0 + 24, x1 - 24, y1 - 24)
+
     def _draw_slide(self, canvas: Image.Image, slide: Slide) -> None:
         x0, y0, x1, y1 = self._draw_card(canvas)
         d = ImageDraw.Draw(canvas)
@@ -159,11 +164,14 @@ class Composer:
         chars: list[tuple[str, str, bool]],  # (speaker, emotion, active)
         slide: Slide | None,
         image: str | None,
+        video_card: bool = False,  # True なら空カードを描く（動画は後段でoverlay）
     ) -> Image.Image:
         canvas = self._bg(background).copy().convert("RGBA")
         self._draw_header(canvas, header)
         if slide is not None:
             self._draw_slide(canvas, slide)
+        elif video_card:
+            self._draw_card(canvas)
         elif image:
             self._draw_image(canvas, image)
 
@@ -211,20 +219,44 @@ def _wrap(d: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
     return lines
 
 
+@dataclass
+class CutRender:
+    """1カット分の描画計画。build がこれをもとに動画セグメントを作る。"""
+    png: str                                 # frames/ 相対のベース静止画
+    dur: float                               # 表示秒（音声実測 + ポーズ）
+    motion: str                              # zoom-in/zoom-out/pan-left/pan-right/none
+    video: str | None                        # 埋め込みクリップの絶対パス（無ければNone）
+    box: tuple[int, int, int, int] | None    # クリップを載せるカード内側領域
+
+
+def _resolve_clip(cfg: Config, proj: Project, rel: str) -> str:
+    p = proj.root / rel
+    if not p.exists():
+        p = cfg.root / rel
+    if not p.exists():
+        raise SystemExit(
+            f"動画クリップが見つかりません: {rel}\n"
+            "（assets/clips/ 等に配置するか、台本の video: を修正してください）"
+        )
+    return str(p)
+
+
 def render_frames(
     cfg: Config,
     proj: Project,
     timings: list[CutTiming],
     vertical: bool = False,
     only_scene: str | None = None,
-) -> list[tuple[str, float]]:
-    """全カットのPNGを frames/ に生成し、(相対パス, 表示秒) のリストを返す。
+) -> list[CutRender]:
+    """全カットのベースPNGを frames/ に生成し、描画計画のリストを返す。
 
     キャラの表情はセリフをまたいで持続する（最後に指定された表情を維持）。
+    motion 未指定のカットは zoom-in / zoom-out を交互に割り当てて常時微動させる。
     """
     script = proj.load_script()
     proj.frames_dir  # frames/ を作成
     composer = Composer(cfg, proj, vertical=vertical)
+    motion_on = bool(cfg.get("video", "motion", "enabled", default=True))
     cuts_meta = {}
     for scene in script.scenes:
         for i, cut in enumerate(scene.cuts):
@@ -233,7 +265,7 @@ def render_frames(
     speakers = script.speakers_used()
     emotion_state = {s: "normal" for s in speakers}
     scene_counters: dict[str, int] = {}
-    result: list[tuple[str, float]] = []
+    result: list[CutRender] = []
     sub = "v" if vertical else "h"
     manifest_used: set[str] = set()
 
@@ -245,19 +277,39 @@ def render_frames(
             continue
         emotion_state[cut.speaker] = cut.emotion
 
+        # 動画クリップ（slide があるカットでは使わない）
+        video_path = None
+        if cut.video and cut.slide is None:
+            video_path = _resolve_clip(cfg, proj, cut.video)
+
+        # 動きの決定: クリップ埋め込み時は静止、それ以外はズーム交互が既定
+        if video_path or not motion_on:
+            motion = "none"
+        elif cut.motion:
+            motion = cut.motion
+        else:
+            motion = "zoom-in" if ct.index % 2 == 0 else "zoom-out"
+
         chars = [(s, emotion_state[s], s == cut.speaker) for s in speakers]
         header = scene.title or (script.meta.title if vertical else "")
         key_src = json.dumps(
             [scene.background, header, chars,
-             cut.slide.model_dump() if cut.slide else None, cut.image, sub],
+             cut.slide.model_dump() if cut.slide else None, cut.image,
+             bool(video_path), sub],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
         rel = f"frames/{sub}_{key}.png"
         path = proj.root / rel
         if key not in manifest_used and not path.exists():
-            composer.compose_cut(scene.background, header, chars, cut.slide, cut.image
-                                 ).save(path)
+            composer.compose_cut(scene.background, header, chars, cut.slide,
+                                 cut.image, video_card=bool(video_path)).save(path)
         manifest_used.add(key)
-        result.append((rel, ct.total_dur))
+        result.append(CutRender(
+            png=rel,
+            dur=ct.total_dur,
+            motion=motion,
+            video=video_path,
+            box=composer.card_inner_box() if video_path else None,
+        ))
     return result

@@ -115,6 +115,34 @@ def init_assets(cfg: Config, force: bool = False) -> None:
         print(f"背景: {bg}")
     (assets / "bgm").mkdir(parents=True, exist_ok=True)
 
+    # 動画クリップ埋め込み（台本の video:）の動作確認用デモクリップ
+    demo = assets / "clips" / "demo.mp4"
+    (assets / "clips").mkdir(parents=True, exist_ok=True)
+    if force or not demo.exists():
+        _gen_demo_clip(demo)
+
+
+def _gen_demo_clip(path: Path) -> None:
+    """ffmpegのテストソースで4秒のカラフルなクリップを作る（ffmpeg無しならスキップ）。"""
+    import shutil
+    import subprocess
+
+    from .config import ffmpeg_bin
+
+    if shutil.which(ffmpeg_bin()) is None:
+        print("デモクリップはスキップ（ffmpegが見つかりません）")
+        return
+    r = subprocess.run(
+        [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error",
+         "-f", "lavfi", "-i", "testsrc2=size=1280x720:rate=30:duration=4",
+         "-pix_fmt", "yuv420p", str(path)],
+        capture_output=True, text=True,
+    )
+    if r.returncode == 0:
+        print(f"デモクリップ: {path}")
+    else:
+        print(f"デモクリップ生成に失敗（動作には影響なし）: {r.stderr[-200:]}")
+
 
 def sprite_path(cfg: Config, speaker: str, emotion: str) -> Path:
     ch = cfg.character(speaker)
