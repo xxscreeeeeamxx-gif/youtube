@@ -1,9 +1,9 @@
-# 1本目の本番台本。投稿前に必ず目視レビューすること。
+# 1本目の本番台本（青山龍星の一人語り）。投稿前に必ず目視レビューすること。
 # 事実関係は断定を避けた表現にしてある（圧力融解の限界・疑似液体層・-7℃研究など）。
 meta:
   title: "【誰も知らない】氷が滑る理由、実はまだ解明されていない"
   slug: "ice-slippery"
-  summary: "スケートも雪道も、私たちは毎日のように「氷は滑るもの」として生きています。でも「なぜ滑るのか」は、200年近く議論が続く科学の未解決問題。定説だった圧力説の崩壊から最新研究まで、ずんだもんと四国めたんが解説します。"
+  summary: "スケートも雪道も、私たちは毎日のように「氷は滑るもの」として生きています。でも「なぜ滑るのか」は、200年近く議論が続く科学の未解決問題。定説だった圧力説の崩壊から最新研究まで、青山龍星が解説します。"
   tags: ["氷", "科学", "物理", "スケート", "未解決問題"]
   thumbnail:
     top: "科学の未解決問題"
@@ -13,244 +13,208 @@ scenes:
     title: ""
     short: true
     cuts:
-      - speaker: zunda
-        emotion: happy
-        text: "ねえめたん、いきなりだけどクイズなのだ！氷の上って、なんで滑ると思うのだ？"
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "ふふ、いい質問ね。実はそれ……「まだ完全には分かっていない」のよ。"
-      - speaker: zunda
+        text: "いきなりですが、質問です。氷の上は、なぜ滑るのでしょうか。"
+      - speaker: aoyama
         emotion: surprised
-        text: "……えっ！？スケートとか、みんな普通に滑ってるのに！？"
-      - speaker: metan
+        text: "実はこれ、「まだ完全には分かっていない」んです。"
+      - speaker: aoyama
         emotion: normal
-        text: "そう。約200年も科学者たちが議論して、いまだに決着していない大問題なの。"
+        text: "スケートも雪道も当たり前に滑る。なのに、その理由は約200年も決着していません。"
         slide:
           title: "今日のテーマ"
           big: "氷が滑る理由は未解決！？"
-      - speaker: zunda
+      - speaker: aoyama
         emotion: thinking
-        text: "身近すぎるものが謎って、めちゃくちゃ気になるのだ……。今日はそれを解説してほしいのだ！"
-      - speaker: metan
-        emotion: happy
-        text: "いいわよ。教科書の定説がひっくり返る話、いってみましょう。"
+        text: "身近すぎるものが、実は謎。今日はその不思議を掘り下げていきます。"
+      - speaker: aoyama
+        emotion: normal
+        text: "教科書の定説がひっくり返る話です。最後までお付き合いください。"
   - id: chapter1
     title: "第1章 100年信じられた「圧力」説"
     cuts:
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "まずは、昔の教科書にも載っていた有名な説から。その名も「圧力融解説」よ。"
+        text: "まずは昔の教科書にも載っていた有名な説から。その名も「圧力融解説」です。"
         slide:
           title: "圧力融解説（昔の定説）"
           bullets:
             - "体重で氷に強い圧力がかかる"
             - "圧力で氷の表面が溶ける"
             - "できた水が潤滑剤になる"
-      - speaker: zunda
-        emotion: happy
-        text: "聞いたことあるのだ！スケートの細い刃が氷をギュッと押して、溶けた水の上をツルーっと滑るってやつなのだ！"
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "そうそれ。氷は圧力をかけると溶ける温度が下がる、という性質自体は本当なの。"
-      - speaker: zunda
+        text: "スケートの細い刃が氷をギュッと押し、溶けた水の上を滑る。聞いたことがある人も多いはずです。"
+      - speaker: aoyama
+        emotion: normal
+        text: "氷は圧力をかけると溶ける温度が下がる。この性質自体は本当です。"
+      - speaker: aoyama
         emotion: thinking
-        text: "じゃあ、それが答えでいいんじゃないのだ？"
-      - speaker: metan
+        text: "では、これが答えでいいのか。ところが計算してみると、全然足りないんです。"
+      - speaker: aoyama
         emotion: normal
-        text: "ところが……計算してみると、全然足りないのよ。"
-      - speaker: zunda
-        emotion: surprised
-        text: "足りない？"
-      - speaker: metan
-        emotion: normal
-        text: "人の体重くらいの圧力では、溶ける温度はせいぜい1度下がる程度と言われているの。"
+        text: "人の体重くらいの圧力では、溶ける温度はせいぜい1度下がる程度と言われています。"
         slide:
           title: "圧力説の弱点"
           bullets:
             - "下がるのは1℃程度とされる"
             - "でも氷点下10℃でも滑る"
             - "圧力だけでは説明できない"
-      - speaker: zunda
-        emotion: thinking
-        text: "あっ……真冬のマイナス10度のカチカチの氷でも、普通にツルツルなのだ。"
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "そういうこと。それに、底が平らな長靴でも滑るでしょう？圧力は分散しているのに、ね。"
-      - speaker: zunda
-        emotion: surprised
-        text: "言われてみればそうなのだ！刃じゃなくても滑るのだ！"
-      - speaker: metan
+        text: "でも真冬、マイナス10度のカチカチの氷でも普通に滑りますよね。"
+      - speaker: aoyama
         emotion: normal
-        text: "というわけで20世紀のうちに、圧力説だけでは説明できないと考えられるようになったの。"
-      - speaker: zunda
+        text: "しかも、底が平らな長靴でも滑る。圧力は分散しているのに、です。"
+      - speaker: aoyama
         emotion: thinking
-        text: "定説の崩壊なのだ……。じゃあ、本当の理由は何なのだ？"
+        text: "こうして20世紀のうちに、圧力説だけでは説明できないと考えられるようになりました。定説の崩壊です。"
   - id: chapter2
     title: "第2章 有力候補は「摩擦熱」と「表面の水」"
     cuts:
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "現在有力とされている説は、大きく2つあるわ。1つ目は「摩擦熱で溶ける」説。"
+        text: "現在有力とされている説は、大きく2つあります。1つ目は「摩擦熱で溶ける」説。"
         slide:
           title: "説① 摩擦融解"
           bullets:
             - "こすれる場所に熱が生まれる"
             - "表面がほんの少し溶ける"
             - "水の膜がすべりを生む"
-      - speaker: zunda
-        emotion: happy
-        text: "寒い日に手をこすると温かくなるのと同じ理屈なのだ！"
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "そう。1930年代には実験でこの説を支持する結果が出ていて、速く動くほど滑りやすい現象とも相性がいいの。"
-      - speaker: zunda
+        text: "寒い日に手をこすると温かくなる、あれと同じ理屈ですね。"
+      - speaker: aoyama
+        emotion: normal
+        text: "1930年代には実験でこの説を支持する結果が出ていて、速く動くほど滑りやすい現象とも相性がいい。"
+      - speaker: aoyama
         emotion: thinking
-        text: "でも待つのだ。それだと、止まって立ってるだけでツルッといくのは説明できなくないのだ？"
-      - speaker: metan
-        emotion: happy
-        text: "鋭いわね。そこで2つ目の説の出番よ。氷の表面は、こすらなくても最初から少し「溶けかけている」の。"
-      - speaker: zunda
-        emotion: surprised
-        text: "何もしてないのに溶けてるのだ！？"
-      - speaker: metan
+        text: "でも待ってください。それだと、止まって立っているだけで滑るのは説明できません。"
+      - speaker: aoyama
         emotion: normal
-        text: "[疑似液体層|ぎじえきたいそう]と呼ばれるものよ。電磁気学で有名なあのファラデーが、160年以上前に提案したと言われているわ。"
+        text: "そこで2つ目の説です。氷の表面は、こすらなくても最初から少し「溶けかけている」んです。"
+      - speaker: aoyama
+        emotion: normal
+        text: "[疑似液体層|ぎじえきたいそう]と呼ばれます。電磁気学で有名なファラデーが160年以上前に提案したと言われています。"
         slide:
           title: "説② 疑似液体層"
           bullets:
             - "氷の表面だけ特別な状態"
             - "分子のつなぎ相手が足りない"
             - "極うすい水っぽい層ができる"
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "氷の内部の水分子は、周りとがっちり手をつないで固定されている。でも一番外側の分子は、外に手をつなぐ相手がいないの。"
-      - speaker: zunda
-        emotion: thinking
-        text: "端っこの席だけ、片手が空いてる状態なのだ。"
-      - speaker: metan
-        emotion: happy
-        text: "いい例えね。だから表面の分子だけは自由に動きやすくて、氷なのに水のようにふるまう層ができると考えられているの。"
-      - speaker: zunda
-        emotion: happy
-        text: "つまり氷は、生まれつき表面にすべり止めならぬ「すべり促進コーティング」を持ってるのだ！"
-      - speaker: metan
+        text: "氷の内部の水分子は、周りとがっちり手をつないで固定されています。でも一番外側の分子は、外につなぐ相手がいない。"
+      - speaker: aoyama
         emotion: normal
-        text: "そう考えると、触った瞬間からツルツルな理由にも説明がつくわね。"
+        text: "端の席だけ片手が空いている状態です。だから表面の分子は動きやすく、水のようにふるまう層ができると考えられています。"
+      - speaker: aoyama
+        emotion: normal
+        text: "つまり氷は、生まれつき表面に「すべり促進コーティング」を持っている。触った瞬間から滑る理由にも説明がつきます。"
   - id: chapter3
     title: "第3章 最新研究でも決着していない"
     cuts:
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "これで解決……と思いきや、近年の研究で話はさらにややこしくなったの。"
-      - speaker: zunda
-        emotion: surprised
-        text: "まだ何かあるのだ！？"
-      - speaker: metan
+        text: "これで解決……と思いきや、近年の研究で話はさらにややこしくなりました。"
+      - speaker: aoyama
         emotion: normal
-        text: "精密な測定をしてみたら、表面の水の膜は「ただの水ではないらしい」と報告されたのよ。"
+        text: "精密な測定をしてみたら、表面の水の膜は「ただの水ではないらしい」と報告されたんです。"
         slide:
           title: "最新の測定でわかったこと"
           bullets:
             - "膜の厚さはナノメートル級"
             - "サラサラではなく粘り気がある"
             - "水と氷の中間のような状態"
-      - speaker: metan
-        emotion: normal
-        text: "油のように粘り気があって、水と氷が混ざったような状態だという研究があるの。「第3の状態」と呼ぶ研究者もいるくらい。"
-      - speaker: zunda
+      - speaker: aoyama
         emotion: surprised
-        text: "毎日見てる氷が、ナノの世界では正体不明の物質だったのだ……！"
-      - speaker: metan
-        emotion: happy
-        text: "面白いデータもあるわよ。氷が一番滑りやすいのは、0℃ではなくマイナス7℃前後だという研究があるの。"
-      - speaker: zunda
-        emotion: surprised
-        text: "えっ、0℃ちょうどが一番ツルツルじゃないのだ！？"
-      - speaker: metan
+        text: "油のように粘り気があって、水と氷が混ざったような状態だという研究があります。「第3の状態」と呼ぶ研究者もいるほどです。"
+      - speaker: aoyama
         emotion: normal
-        text: "0℃近くだと水が多すぎて、逆にブレーキになってしまう。かといって低温すぎると、今度は膜がうまくできない。"
+        text: "面白いデータもあります。氷が一番滑りやすいのは、0℃ではなくマイナス7℃前後だという研究があるんです。"
+      - speaker: aoyama
+        emotion: normal
+        text: "0℃近くだと水が多すぎて逆にブレーキになる。かといって低温すぎると、今度は膜がうまくできない。"
         slide:
           title: "滑りやすさにはピークがある"
           bullets:
             - "最も滑るのは-7℃前後という報告"
             - "0℃付近は水が多すぎて遅い"
             - "極低温では逆に滑りにくい"
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "スケートリンクの氷がだいたい氷点下3〜9℃くらいに管理されているのは、この性質と関係していると言われているわ。"
-      - speaker: zunda
-        emotion: happy
-        text: "リンクの氷って、職人さんの勘だけじゃなくて科学で管理されてたのだ！"
-      - speaker: metan
+        text: "スケートリンクの氷が氷点下3〜9℃くらいに管理されているのは、この性質と関係していると言われています。"
+      - speaker: aoyama
         emotion: normal
-        text: "ちなみにマイナス数十度になる南極では、雪がキュッキュッと鳴って、意外なほど滑りにくいそうよ。"
-      - speaker: zunda
+        text: "ちなみにマイナス数十度になる南極では、雪がキュッキュッと鳴って、意外なほど滑りにくいそうです。"
+      - speaker: aoyama
         emotion: thinking
-        text: "寒ければ寒いほど滑るわけじゃない……。氷、思ってたより奥が深いのだ。"
+        text: "寒ければ寒いほど滑るわけではない。氷は、思っていたより奥が深いんです。"
   - id: chapter4
     title: "第4章 なぜこんな身近な謎が解けないのか"
     cuts:
-      - speaker: zunda
+      - speaker: aoyama
         emotion: thinking
-        text: "でも不思議なのだ。ロケットも飛ばせる時代に、なんで足元の氷ごときが解明できないのだ？"
-      - speaker: metan
+        text: "でも不思議です。ロケットも飛ばせる時代に、なぜ足元の氷が解明できないのか。"
+      - speaker: aoyama
         emotion: normal
-        text: "それはね、「見えない場所」で「一瞬」だけ起きる現象だからよ。"
+        text: "理由は、「見えない場所」で「一瞬」だけ起きる現象だからです。"
         slide:
           title: "研究が難しい理由"
           bullets:
             - "滑る瞬間の接触面は見えない"
             - "膜はナノメートルの薄さ"
             - "調べようと触ると壊れる"
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "靴と氷が触れ合っている面は、上からも横からも覗けない。しかも調べたい膜は、髪の毛の何万分の1という薄さなの。"
-      - speaker: zunda
-        emotion: surprised
-        text: "見えない、薄い、しかも触ったら壊れる……。探偵泣かせの事件なのだ。"
-      - speaker: metan
-        emotion: happy
-        text: "だから研究者は、レーザーや特殊な顕微鏡を使って間接的に調べているの。測定技術が進んだここ20〜30年で、やっと議論が本格化してきた分野なのよ。"
-      - speaker: zunda
-        emotion: thinking
-        text: "ちなみにこの研究、何かの役に立つのだ？雑学で終わりなのだ？"
-      - speaker: metan
+        text: "靴と氷が触れ合う面は、上からも横からも覗けません。しかも膜は、髪の毛の何万分の1という薄さです。"
+      - speaker: aoyama
         emotion: normal
-        text: "大ありよ。冬の転倒事故やスリップ事故は毎年たくさん起きているから、「滑る仕組み」が分かれば「滑らない靴底や路面」を科学的に設計できる。"
+        text: "見えない、薄い、しかも触ったら壊れる。まさに探偵泣かせの事件ですね。"
+      - speaker: aoyama
+        emotion: normal
+        text: "だから研究者は、レーザーや特殊な顕微鏡で間接的に調べています。測定技術が進んだここ20〜30年で、やっと議論が本格化した分野です。"
+      - speaker: aoyama
+        emotion: normal
+        text: "ではこの研究、何かの役に立つのか。答えは、大ありです。"
+      - speaker: aoyama
+        emotion: normal
+        text: "冬の転倒やスリップ事故は毎年たくさん起きています。滑る仕組みが分かれば、滑らない靴底や路面を科学的に設計できます。"
         slide:
           title: "解明されると何が変わる？"
           bullets:
             - "転倒・スリップ事故の対策"
             - "冬用タイヤや靴底の設計"
             - "スケート競技の記録向上"
-      - speaker: zunda
+      - speaker: aoyama
         emotion: happy
-        text: "逆にスケート選手は「もっと滑る」ためにこの科学を使えるのだ！攻めと守りの両方に効くのだ！"
-      - speaker: metan
+        text: "逆にスケート選手は、もっと滑るためにこの科学を使えます。攻めと守り、両方に効くわけです。"
+      - speaker: aoyama
         emotion: normal
-        text: "身近な謎の解明が、そのまま暮らしの安全につながる。基礎研究の面白いところね。"
+        text: "身近な謎の解明が、そのまま暮らしの安全につながる。基礎研究の面白いところです。"
   - id: ending
     title: "まとめ"
     cuts:
-      - speaker: zunda
+      - speaker: aoyama
         emotion: normal
-        text: "まとめるのだ。氷が滑る理由は、「摩擦熱」と「表面のうすい水の層」の合わせ技が有力候補。"
-      - speaker: metan
+        text: "まとめます。氷が滑る理由は、「摩擦熱」と「表面のうすい水の層」の合わせ技が有力候補。"
+      - speaker: aoyama
         emotion: normal
-        text: "でも、その膜の正体や仕組みの細部は今も研究が続いていて、完全な決着はついていない。"
+        text: "でも、その膜の正体や仕組みの細部は今も研究が続いていて、完全な決着はついていません。"
         slide:
           title: "今日のまとめ"
           bullets:
             - "圧力説だけでは説明できない"
             - "摩擦熱＋疑似液体層が有力"
             - "完全解明はまだ先"
-      - speaker: zunda
+      - speaker: aoyama
         emotion: happy
-        text: "毎日見てるものの中に、科学の最前線が隠れてたのだ！なんか得した気分なのだ！"
-      - speaker: metan
+        text: "毎日見ているものの中に、科学の最前線が隠れていた。なんだか得した気分になりませんか。"
+      - speaker: aoyama
+        emotion: normal
+        text: "次に凍った道でツルッといきそうになったら、思い出してください。あなたは今、未解決問題の上に立っています。"
+      - speaker: aoyama
         emotion: happy
-        text: "次に凍った道でツルッといきそうになったら、思い出してみて。あなたは今、未解決問題の上に立っています……ってね。"
-      - speaker: zunda
-        emotion: happy
-        text: "面白かったら高評価とチャンネル登録、お願いするのだ！次回も身近なふしぎを解説するのだ〜！"
+        text: "面白かったら高評価とチャンネル登録をお願いします。次回も身近なふしぎを解説します。"
         pause_after: 0.8

@@ -227,11 +227,16 @@ def _doctor(cfg: Config) -> None:
     except ImportError:
         check("whisper (QC用)", False, "pip install openai-whisper（任意）")
 
-    sprite_ok = all(
-        (cfg.root / ch["sprite_dir"] / "normal.png").exists()
-        for ch in cfg.characters.values()
-    )
-    check("立ち絵素材", sprite_ok, "ytf assets --init でプレースホルダー生成")
+    if cfg.get("video", "show_characters", default=True):
+        sprite_ok = all(
+            (cfg.root / ch["sprite_dir"] / "normal.png").exists()
+            for ch in cfg.characters.values()
+            if "sprite_dir" in ch
+        )
+        check("立ち絵素材", sprite_ok, "ytf assets --init でプレースホルダー生成")
+    else:
+        check("立ち絵素材", True, "")
+        print("   （show_characters: false のため立ち絵は不要）")
 
 
 if __name__ == "__main__":

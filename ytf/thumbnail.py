@@ -37,9 +37,10 @@ def run_thumbnail(cfg: Config, proj: Project) -> Path:
     canvas = ImageEnhance.Brightness(canvas).enhance(0.9)
     canvas = canvas.filter(ImageFilter.GaussianBlur(1)).convert("RGBA")
 
-    # メインキャラ（最初の話者）を右側に大きく
+    # メインキャラ（最初の話者）を右側に大きく（立ち絵オフ時は出さない）
+    show_chars = bool(cfg.get("video", "show_characters", default=True))
     speakers = script.speakers_used()
-    if speakers:
+    if show_chars and speakers:
         sp = Image.open(sprite_path(cfg, speakers[0], "surprised")).convert("RGBA")
         scale = (H * 0.92) / sp.height
         sp = sp.resize((int(sp.width * scale), int(sp.height * scale)), Image.LANCZOS)
@@ -54,7 +55,7 @@ def run_thumbnail(cfg: Config, proj: Project) -> Path:
             size -= 6
         return ImageFont.truetype(font_path, size=30, index=0)
 
-    text_w = int(W * 0.62)
+    text_w = int(W * 0.62) if show_chars else int(W * 0.88)
     if top:
         f = fit_font(top, text_w, 88)
         _outlined_text(canvas, (46, 60), top, f, (255, 255, 255), 10)

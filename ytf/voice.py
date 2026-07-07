@@ -76,7 +76,8 @@ class VoicevoxClient:
                 timeout=10,
             ).raise_for_status()
 
-    def synthesize(self, text: str, style_id: int, speed: float) -> bytes:
+    def synthesize(self, text: str, style_id: int, speed: float,
+                   pitch: float = 0.0, intonation: float = 1.0) -> bytes:
         q = requests.post(
             f"{self.base}/audio_query",
             params={"text": text, "speaker": style_id},
@@ -85,6 +86,8 @@ class VoicevoxClient:
         q.raise_for_status()
         query = q.json()
         query["speedScale"] = speed
+        query["pitchScale"] = pitch          # 声の高さ（±。低音にしたいなら負の値）
+        query["intonationScale"] = intonation  # 抑揚（1.0が標準。下げると平坦・落ち着く）
         query["outputSamplingRate"] = SAMPLE_RATE
         query["outputStereo"] = False
         r = requests.post(
@@ -120,10 +123,16 @@ def wav_duration(path: Path) -> float:
         return w.getnframes() / w.getframerate()
 
 
-def style_for(cfg: Config, speaker: str, emotion: str) -> tuple[int, float]:
+def style_for(cfg: Config, speaker: str, emotion: str) -> tuple[int, float, float, float]:
+    """(スタイルID, 話速, ピッチ, 抑揚) を返す。ピッチ・抑揚は声トーンの調整用。"""
     ch = cfg.character(speaker)
     style = ch.get("style_overrides", {}).get(emotion, ch["voicevox_style"])
-    return int(style), float(ch.get("speed_scale", 1.0))
+    return (
+        int(style),
+        float(ch.get("speed_scale", 1.0)),
+        float(ch.get("pitch_scale", 0.0)),
+        float(ch.get("intonation_scale", 1.0)),
+    )
 
 
 def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTiming]:
@@ -145,12 +154,12 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
     for scene in script.scenes:
         for ci, cut in enumerate(scene.cuts):
             display, spoken = split_reading(cut.text)
-            style_id, speed = style_for(cfg, cut.speaker, cut.emotion)
+            style_id, speed, pitch, intonation = style_for(cfg, cut.speaker, cut.emotion)
             wav_name = f"{idx:04d}_{cut.speaker}.wav"
             wav_path = proj.audio_dir / wav_name
 
             if client is not None:
-                data = client.synthesize(spoken, style_id, speed)
+                data = client.synthesize(spoken, style_id, speed, pitch, intonation)
             else:
                 data = dummy_wav(spoken, speed)
             wav_path.write_bytes(data)

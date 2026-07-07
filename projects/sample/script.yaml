@@ -1,8 +1,8 @@
-# サンプル台本（パイプライン検証用の短縮版）
+# サンプル台本（パイプライン検証用の短縮版・青山龍星の一人語り）
 meta:
   title: "【衝撃】空が青いのはウソ？光の正体を5分で解説"
   slug: "sample"
-  summary: "空はなぜ青いのか。実は「青く見えているだけ」の仕組みを、ずんだもんと四国めたんが解説します。"
+  summary: "空はなぜ青いのか。実は「青く見えているだけ」の仕組みを、青山龍星が5分で解説します。"
   tags: ["空", "科学", "光"]
   thumbnail:
     top: "実は青くない"
@@ -12,45 +12,45 @@ scenes:
     title: ""
     short: true
     cuts:
-      - speaker: zunda
+      - speaker: aoyama
         emotion: surprised
-        text: "ねえめたん、空って本当は青くないって聞いたのだ！どういうことなのだ！？"
-      - speaker: metan
+        text: "空が青いのは当たり前——そう思っていませんか。"
+      - speaker: aoyama
         emotion: normal
-        text: "ええ、正確には『青く見えているだけ』ね。今日はその仕組みを解説するわ。"
+        text: "実はあの青、『青く見えているだけ』なんです。今日はその仕組みを解説します。"
         slide:
           title: "今日のテーマ"
           big: "空は青くない！？"
   - id: chapter1
     title: "第1章 太陽の光は7色の混ぜもの"
     cuts:
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "まず前提から。太陽の光は白く見えるけど、実は7色の光の混ぜものなの。"
+        text: "まず前提から。太陽の光は白く見えますが、実は7色の光の混ぜものです。"
         slide:
           title: "太陽光の正体"
           bullets:
             - "白い光 = 7色のミックス"
             - "[虹|にじ]は光が分解された姿"
             - "色ごとに波の長さが違う"
-      - speaker: zunda
+      - speaker: aoyama
         emotion: thinking
-        text: "たしかに虹は7色なのだ。あれって光が分解されてたのだ？"
-      - speaker: metan
-        emotion: happy
-        text: "そのとおり。そして色ごとに『波の長さ』が違うのがポイントよ。"
+        text: "虹が7色なのは、光が色ごとに分解されているからなんですね。"
+      - speaker: aoyama
+        emotion: normal
+        text: "そしてポイントは、色ごとに『波の長さ』が違うことです。"
   - id: chapter2
     title: "第2章 青い光は散らかりやすい"
     cuts:
-      - speaker: metan
+      - speaker: aoyama
         emotion: normal
-        text: "青い光は波が短くて、空気の粒にぶつかると四方八方に散らばるの。"
-      - speaker: zunda
+        text: "青い光は波が短く、空気の粒にぶつかると四方八方に散らばります。"
+      - speaker: aoyama
         emotion: surprised
-        text: "つまり空全体から青だけが飛んでくるのだ！だから見上げると青いのだ！"
-      - speaker: metan
-        emotion: happy
-        text: "正解。夕焼けが赤いのは、光の通り道が長くなって青が先に散らばり切るからよ。"
+        text: "つまり空全体から青い光が飛んでくる。だから見上げると青いんです。"
+      - speaker: aoyama
+        emotion: normal
+        text: "夕焼けが赤いのは、光の通り道が長くなって青が先に散らばり切るからです。"
         slide:
           title: "まとめ"
           bullets:
@@ -60,10 +60,10 @@ scenes:
   - id: ending
     title: "まとめ"
     cuts:
-      - speaker: zunda
+      - speaker: aoyama
         emotion: happy
-        text: "空の青は、光のかくれんぼだったのだ！ちょっと得した気分なのだ。"
-      - speaker: metan
+        text: "空の青は、光のかくれんぼだったんですね。少し得した気分になりませんか。"
+      - speaker: aoyama
         emotion: normal
-        text: "面白いと思ったら、高評価とチャンネル登録をお願いね。"
+        text: "面白いと思ったら、高評価とチャンネル登録をお願いします。"
         pause_after: 0.6

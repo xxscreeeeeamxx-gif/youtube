@@ -89,16 +89,21 @@ def gen_background(path: Path, w: int, h: int) -> None:
 
 def init_assets(cfg: Config, force: bool = False) -> None:
     assets = cfg.root / "assets"
-    for key, ch in cfg.characters.items():
-        sprite_dir = cfg.root / ch["sprite_dir"]
-        sprite_dir.mkdir(parents=True, exist_ok=True)
-        color = _hex(ch.get("color", "#AAAAAA"))
-        for emo in EMOTIONS:
-            p = sprite_dir / f"{emo}.png"
-            if p.exists() and not force:
+    if not cfg.get("video", "show_characters", default=True):
+        print("立ち絵はスキップ（show_characters: false）")
+    else:
+        for key, ch in cfg.characters.items():
+            if "sprite_dir" not in ch:
                 continue
-            _blob_sprite(color, emo).save(p)
-        print(f"立ち絵(プレースホルダー): {sprite_dir}")
+            sprite_dir = cfg.root / ch["sprite_dir"]
+            sprite_dir.mkdir(parents=True, exist_ok=True)
+            color = _hex(ch.get("color", "#AAAAAA"))
+            for emo in EMOTIONS:
+                p = sprite_dir / f"{emo}.png"
+                if p.exists() and not force:
+                    continue
+                _blob_sprite(color, emo).save(p)
+            print(f"立ち絵(プレースホルダー): {sprite_dir}")
 
     bg = assets / "backgrounds" / "default.png"
     if force or not bg.exists():

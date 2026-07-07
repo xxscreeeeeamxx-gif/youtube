@@ -47,6 +47,7 @@ class Composer:
         self.cfg = cfg
         self.proj = proj
         self.lay = layout_for(cfg, vertical)
+        self.show_chars = bool(cfg.get("video", "show_characters", default=True))
         self.font_path = cfg.find_pillow_font()
         self._sprite_cache: dict[tuple[str, str, bool], Image.Image] = {}
         self._bg_cache: dict[str, Image.Image] = {}
@@ -96,6 +97,9 @@ class Composer:
     def _card_box(self) -> tuple[int, int, int, int]:
         if self.lay.vertical:
             return (60, 190, self.lay.w - 60, 980)
+        if not self.show_chars:
+            # 立ち絵なし: 左右の余白を詰めてカードを大きく使う
+            return (150, 170, self.lay.w - 150, self.lay.h - 200)
         return (400, 170, self.lay.w - 400, self.lay.h - 330)
 
     def _draw_card(self, canvas: Image.Image) -> tuple[int, int, int, int]:
@@ -162,6 +166,10 @@ class Composer:
             self._draw_slide(canvas, slide)
         elif image:
             self._draw_image(canvas, image)
+
+        if not self.show_chars:
+            # 立ち絵を出さない構成（テロップ主体）
+            return canvas.convert("RGB")
 
         if self.lay.vertical:
             # 縦動画は話者のみを画面下端に。字幕はこの上に載る
