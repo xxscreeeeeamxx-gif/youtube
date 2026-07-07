@@ -165,8 +165,12 @@ class Composer:
         slide: Slide | None,
         image: str | None,
         video_card: bool = False,  # True なら空カードを描く（動画は後段でoverlay）
+        fg_only: bool = False,     # True なら背景を敷かず透過PNG（背景は後段でzoompan）
     ) -> Image.Image:
-        canvas = self._bg(background).copy().convert("RGBA")
+        if fg_only:
+            canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
+        else:
+            canvas = self._bg(background).copy().convert("RGBA")
         self._draw_header(canvas, header)
         if slide is not None:
             self._draw_slide(canvas, slide)
@@ -177,7 +181,7 @@ class Composer:
 
         if not self.show_chars:
             # 立ち絵を出さない構成（テロップ主体）
-            return canvas.convert("RGB")
+            return canvas if fg_only else canvas.convert("RGB")
 
         if self.lay.vertical:
             # 縦動画は話者のみを画面下端に。字幕はこの上に載る
@@ -195,7 +199,7 @@ class Composer:
                 else:
                     x = self.lay.w - sp.width - 40
                 canvas.paste(sp, (x, self.lay.h - sp.height), sp)
-        return canvas.convert("RGB")
+        return canvas if fg_only else canvas.convert("RGB")
 
 
 def _cover(img: Image.Image, w: int, h: int) -> Image.Image:
@@ -222,11 +226,13 @@ def _wrap(d: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
 @dataclass
 class CutRender:
     """1カット分の描画計画。build がこれをもとに動画セグメントを作る。"""
-    png: str                                 # frames/ 相対のベース静止画
+    png: str                                 # frames/ 相対の静止画（bgありなら透過前景）
     dur: float                               # 表示秒（音声実測 + ポーズ）
     motion: str                              # zoom-in/zoom-out/pan-left/pan-right/none
     video: str | None                        # 埋め込みクリップの絶対パス（無ければNone）
     box: tuple[int, int, int, int] | None    # クリップを載せるカード内側領域
+    bg: str | None = None                    # 背景画像の絶対パス。あれば背景だけを動かし
+                                             # 前景（見出し・カード・文字）は静止させる
 
 
 def _resolve_clip(cfg: Config, proj: Project, rel: str) -> str:
@@ -290,12 +296,16 @@ def render_frames(
         else:
             motion = "zoom-in" if ct.index % 2 == 0 else "zoom-out"
 
+        # 背景だけを動かすカットは、前景（文字・カード）を透過PNGで分離して静止させる
+        fg_only = motion != "none"
+        bg_path = str(background_path(cfg, scene.background)) if fg_only else None
+
         chars = [(s, emotion_state[s], s == cut.speaker) for s in speakers]
         header = scene.title or (script.meta.title if vertical else "")
         key_src = json.dumps(
             [scene.background, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
-             bool(video_path), sub],
+             bool(video_path), fg_only, sub],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
@@ -303,7 +313,8 @@ def render_frames(
         path = proj.root / rel
         if key not in manifest_used and not path.exists():
             composer.compose_cut(scene.background, header, chars, cut.slide,
-                                 cut.image, video_card=bool(video_path)).save(path)
+                                 cut.image, video_card=bool(video_path),
+                                 fg_only=fg_only).save(path)
         manifest_used.add(key)
         result.append(CutRender(
             png=rel,
@@ -311,5 +322,6 @@ def render_frames(
             motion=motion,
             video=video_path,
             box=composer.card_inner_box() if video_path else None,
+            bg=bg_path,
         ))
     return result

@@ -114,6 +114,20 @@ def _render_one_segment(
             "-loop", "1", "-framerate", str(fps), "-i", item.png,
             "-vf", "format=yuv420p,setsar=1",
         ]
+    elif item.bg:
+        # 背景だけを zoompan で動かし、前景（見出し・カード・文字）は静止 overlay
+        z, x, y = _zoompan_expr(item.motion, zoom, n)
+        fc = (
+            f"[0:v]scale={w * _UPSCALE}:{h * _UPSCALE}:force_original_aspect_ratio=increase,"
+            f"crop={w * _UPSCALE}:{h * _UPSCALE},"
+            f"zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={w}x{h}:fps={fps}[bg];"
+            f"[bg][1:v]overlay=0:0,format=yuv420p,setsar=1[vout]"
+        )
+        cmd = base + [
+            "-i", item.bg,
+            "-loop", "1", "-framerate", str(fps), "-i", item.png,
+            "-filter_complex", fc, "-map", "[vout]",
+        ]
     else:
         z, x, y = _zoompan_expr(item.motion, zoom, n)
         vf = (
@@ -146,6 +160,9 @@ def render_segments(
         if item.video:
             st = Path(item.video).stat()
             vsig = f"{item.video}:{st.st_size}:{int(st.st_mtime)}:{item.box}"
+        if item.bg:
+            st = Path(item.bg).stat()
+            vsig += f"|bg:{item.bg}:{st.st_size}:{int(st.st_mtime)}"
         key_src = f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|{vsig}|{enc[0]}"
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
         rel = f"frames/seg_{key}.mp4"
