@@ -18,6 +18,11 @@ from .voice import CutTiming
 
 @lru_cache(maxsize=1)
 def pick_encoder(cfg_encoder: str) -> list[str]:
+    if shutil.which(ffmpeg_bin()) is None:
+        raise SystemExit(
+            "ffmpeg が見つかりません。`brew install ffmpeg` でインストールするか、"
+            "環境変数 YTF_FFMPEG にバイナリのパスを指定してください。"
+        )
     if cfg_encoder not in ("auto", "h264_videotoolbox", "libx264"):
         return [cfg_encoder]
     if cfg_encoder in ("auto", "h264_videotoolbox"):
@@ -96,7 +101,8 @@ def build_video(
         alabel = "[1:a]"
 
     if cfg.get("video", "loudnorm", default=True):
-        filters.append(f"{alabel}loudnorm=I=-14:TP=-1.5:LRA=11[aout]")
+        # loudnorm は内部で 192kHz 等に上げるので 48kHz に戻す（YouTube推奨）
+        filters.append(f"{alabel}loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[aout]")
         alabel = "[aout]"
 
     cmd += ["-filter_complex", ";".join(filters),
