@@ -79,6 +79,14 @@ def main(argv: list[str] | None = None) -> None:
                     help="アクセント核の位置（0=平板。おかしければ調整）")
 
     sp = sub.add_parser(
+        "edit",
+        help="ブラウザで台本を微修正（セリフ・読み・テロップ・スライド）",
+    )
+    sp.add_argument("project")
+    sp.add_argument("--port", type=int, default=8765)
+    sp.add_argument("--no-open", action="store_true", help="ブラウザを自動で開かない")
+
+    sp = sub.add_parser(
         "media",
         help="フリー素材の検索・DL（例: ytf media \"中世 銀行\"。--video で動画）",
     )
@@ -183,6 +191,11 @@ def main(argv: list[str] | None = None) -> None:
 
     elif args.cmd == "dict":
         _dict_cmd(cfg, args)
+
+    elif args.cmd == "edit":
+        from .editor import run_editor
+        run_editor(cfg, Project.resolve(cfg, args.project),
+                   port=args.port, open_browser=not args.no_open)
 
     elif args.cmd == "media":
         from .media import run_media

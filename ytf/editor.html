@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>yt-factory 台本エディタ</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Hiragino Sans", sans-serif; background: #14161c; color: #e8e8ec; display: flex; height: 100vh; }
+  #side { width: 300px; min-width: 300px; overflow-y: auto; border-right: 1px solid #2a2d38; padding: 10px; }
+  #main { flex: 1; overflow-y: auto; padding: 16px 22px; }
+  h1 { font-size: 15px; margin: 4px 0 10px; }
+  .scene-h { font-size: 12px; color: #9aa0b0; margin: 12px 0 4px; font-weight: bold; }
+  .cutbtn { display: block; width: 100%; text-align: left; background: #1c1f28; color: #cfd2dc; border: 1px solid #2a2d38;
+            border-radius: 6px; padding: 6px 8px; margin: 3px 0; cursor: pointer; font-size: 12px; line-height: 1.4; }
+  .cutbtn:hover { border-color: #4a5068; }
+  .cutbtn.sel { border-color: #5b8def; background: #202536; }
+  .cutbtn .tag { color: #7fd0a0; margin-right: 4px; }
+  label { display: block; font-size: 11px; color: #9aa0b0; margin: 10px 0 3px; }
+  textarea, input[type=text], input[type=number], select {
+    width: 100%; background: #1c1f28; color: #e8e8ec; border: 1px solid #2a2d38; border-radius: 6px;
+    padding: 7px 9px; font-size: 13px; font-family: inherit; }
+  textarea { resize: vertical; min-height: 46px; }
+  input[type=color] { width: 34px; height: 26px; padding: 0; border: 1px solid #2a2d38; border-radius: 4px; background: none; }
+  .row { display: flex; gap: 10px; align-items: flex-end; }
+  .row > div { flex: 1; }
+  .btn { background: #2a3350; color: #dfe4f5; border: 1px solid #45507a; border-radius: 6px;
+         padding: 7px 14px; cursor: pointer; font-size: 13px; }
+  .btn:hover { background: #34406a; }
+  .btn.primary { background: #3556c0; border-color: #4a6ae0; }
+  .btn.small { padding: 3px 9px; font-size: 12px; }
+  .btn.danger { background: #4a2330; border-color: #7a3a50; }
+  #preview { width: 100%; max-width: 860px; border: 1px solid #2a2d38; border-radius: 8px; display: block; }
+  .telop-row { border: 1px solid #2a2d38; border-radius: 8px; padding: 8px 10px; margin: 6px 0; background: #181b23; }
+  #status { font-size: 12px; color: #7fd0a0; margin-left: 10px; }
+  #status.err { color: #ff8896; }
+  .topbar { display: flex; align-items: center; gap: 8px; position: sticky; top: 0; background: #14161c;
+            padding: 6px 0 10px; z-index: 5; }
+  fieldset { border: 1px solid #2a2d38; border-radius: 8px; margin: 14px 0; padding: 4px 12px 12px; }
+  legend { font-size: 12px; color: #9aa0b0; padding: 0 6px; }
+  .hint { font-size: 11px; color: #6b7080; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div id="side">
+  <h1 id="projname">読み込み中…</h1>
+  <div id="cutlist"></div>
+</div>
+<div id="main">
+  <div class="topbar">
+    <button class="btn primary" onclick="save()">保存 (⌘S)</button>
+    <button class="btn" onclick="listen()">▶ このセリフを聴く</button>
+    <label style="display:inline;margin:0"><input type="checkbox" id="vertical" onchange="schedulePreview()"> 縦(ショート)で見る</label>
+    <span id="status"></span>
+  </div>
+  <img id="preview" alt="プレビュー">
+  <div id="form"></div>
+</div>
+<script>
+let DATA = null, SI = 0, CI = 0, dirty = false, previewTimer = null;
+
+const EMOTIONS = ["normal","happy","surprised","thinking","angry","sad"];
+const MOTIONS = ["","zoom-in","zoom-out","pan-left","pan-right","none"];
+const SIZES = ["sm","md","lg","xl"];
+const POSITIONS = ["top-left","top-center","top-right","middle-left","middle-center","middle-right","bottom-left","bottom-center","bottom-right"];
+
+async function load() {
+  const r = await fetch("/api/script");
+  const j = await r.json();
+  DATA = j.script;
+  document.getElementById("projname").textContent = j.name;
+  renderList(); select(0, 0);
+}
+
+function cur() { return DATA.scenes[SI].cuts[CI]; }
+
+function renderList() {
+  const el = document.getElementById("cutlist");
+  el.innerHTML = "";
+  DATA.scenes.forEach((sc, si) => {
+    const h = document.createElement("div");
+    h.className = "scene-h";
+    h.textContent = (sc.title || sc.id) + (sc.short ? " [short]" : "");
+    el.appendChild(h);
+    sc.cuts.forEach((c, ci) => {
+      const b = document.createElement("button");
+      b.className = "cutbtn" + (si === SI && ci === CI ? " sel" : "");
+      const tags = [];
+      if (c.telops && c.telops.length) tags.push("T");
+      if (c.slide) tags.push("S");
+      if (c.reading) tags.push("読");
+      if (c.image) tags.push("画");
+      if (c.video) tags.push("動");
+      b.innerHTML = (tags.length ? `<span class="tag">[${tags.join("")}]</span>` : "")
+                  + c.text.slice(0, 26);
+      b.onclick = () => select(si, ci);
+      el.appendChild(b);
+    });
+  });
+}
+
+function select(si, ci) { SI = si; CI = ci; renderList(); renderForm(); schedulePreview(0); }
+
+function f(id) { return document.getElementById(id); }
+function esc(s) { return (s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;"); }
+
+function renderForm() {
+  const c = cur(), sc = DATA.scenes[SI];
+  let h = `
+  <fieldset><legend>セリフ</legend>
+    <label>テキスト（画面表示と読み上げの元）</label>
+    <textarea id="text" oninput="upd()">${esc(c.text)}</textarea>
+    <label>読み上げの上書き（誤読修正。空なら text を読む。表示は変わらない）</label>
+    <textarea id="reading" oninput="upd()" placeholder="例: みずぶんしの さいけんしょうです">${esc(c.reading)}</textarea>
+    <div class="row">
+      <div><label>感情</label><select id="emotion" onchange="upd()">${EMOTIONS.map(e=>`<option ${e===c.emotion?"selected":""}>${e}</option>`).join("")}</select></div>
+      <div><label>動き（空=自動ズーム）</label><select id="motion" onchange="upd()">${MOTIONS.map(m=>`<option value="${m}" ${m===(c.motion||"")?"selected":""}>${m||"(自動)"}</option>`).join("")}</select></div>
+      <div><label>後の間（秒・空=既定）</label><input type="number" step="0.1" id="pause" value="${c.pause_after ?? ""}" oninput="upd()"></div>
+    </div>
+    <div class="row">
+      <div><label>画像パス（カード内表示）</label><input type="text" id="image" value="${esc(c.image)}" oninput="upd()"></div>
+      <div><label>動画パス（カード内再生）</label><input type="text" id="video" value="${esc(c.video)}" oninput="upd()"></div>
+    </div>
+  </fieldset>
+
+  <fieldset><legend>テロップ（重要な一言を大きく）</legend><div id="telops">`;
+  (c.telops || []).forEach((t, i) => {
+    h += `<div class="telop-row">
+      <div class="row">
+        <div style="flex:2"><label>文言</label><input type="text" id="tp${i}_text" value="${esc(t.text)}" oninput="upd()"></div>
+        <div><label>サイズ</label><select id="tp${i}_size" onchange="upd()">${SIZES.map(s=>`<option ${s===t.size?"selected":""}>${s}</option>`).join("")}</select></div>
+        <div><label>位置</label><select id="tp${i}_pos" onchange="upd()">${POSITIONS.map(p=>`<option ${p===t.position?"selected":""}>${p}</option>`).join("")}</select></div>
+      </div>
+      <div class="row" style="margin-top:6px">
+        <div><label>文字色</label><input type="color" id="tp${i}_color" value="${t.color||"#FFFFFF"}" oninput="upd()"></div>
+        <div><label>縁色</label><input type="color" id="tp${i}_stroke" value="${t.stroke||"#1E222E"}" oninput="upd()"></div>
+        <div><label>光彩</label>
+          <input type="checkbox" id="tp${i}_glowon" ${t.glow?"checked":""} onchange="upd()">
+          <input type="color" id="tp${i}_glow" value="${t.glow||"#CC2222"}" oninput="upd()">
+        </div>
+        <div><button class="btn small danger" onclick="delTelop(${i})">削除</button></div>
+      </div>
+    </div>`;
+  });
+  h += `</div><button class="btn small" onclick="addTelop()">＋ テロップを追加</button></fieldset>
+
+  <fieldset><legend>スライド（図解カード）</legend><div id="slidebox">`;
+  if (c.slide) {
+    const s = c.slide;
+    h += `
+    <label>タイトル</label><input type="text" id="sl_title" value="${esc(s.title)}" oninput="upd()">
+    <label>ドンと出す一言（big。指定時は箇条書きより優先）</label><input type="text" id="sl_big" value="${esc(s.big)}" oninput="upd()">
+    <label>箇条書き（1行=1項目）</label><textarea id="sl_bullets" oninput="upd()">${esc((s.bullets||[]).join("\n"))}</textarea>
+    <button class="btn small danger" style="margin-top:8px" onclick="delSlide()">スライドを削除</button>`;
+  } else {
+    h += `<button class="btn small" onclick="addSlide()">＋ スライドを追加</button>`;
+  }
+  h += `</div></fieldset>
+
+  <fieldset><legend>シーン（このカットが属する章）</legend>
+    <div class="row">
+      <div><label>見出し（画面上部バー・概要欄の章名）</label><input type="text" id="sc_title" value="${esc(sc.title)}" oninput="upd()"></div>
+      <div><label>背景（assets/backgrounds/の名前）</label><input type="text" id="sc_bg" value="${esc(sc.background)}" oninput="upd()"></div>
+    </div>
+    <div class="hint">背景に画像を使うには: ytf media で探した画像を assets/backgrounds/ に置いて名前を指定</div>
+  </fieldset>`;
+  f("form").innerHTML = h;
+}
+
+function upd() {
+  const c = cur(), sc = DATA.scenes[SI];
+  c.text = f("text").value;
+  c.reading = f("reading").value || null;
+  c.emotion = f("emotion").value;
+  c.motion = f("motion").value || null;
+  c.pause_after = f("pause").value === "" ? null : parseFloat(f("pause").value);
+  c.image = f("image").value || null;
+  c.video = f("video").value || null;
+  (c.telops || []).forEach((t, i) => {
+    t.text = f(`tp${i}_text`).value;
+    t.size = f(`tp${i}_size`).value;
+    t.position = f(`tp${i}_pos`).value;
+    t.color = f(`tp${i}_color`).value;
+    t.stroke = f(`tp${i}_stroke`).value;
+    t.glow = f(`tp${i}_glowon`).checked ? f(`tp${i}_glow`).value : null;
+  });
+  if (c.slide) {
+    c.slide.title = f("sl_title").value;
+    c.slide.big = f("sl_big").value;
+    c.slide.bullets = f("sl_bullets").value.split("\n").filter(x => x.trim());
+  }
+  sc.title = f("sc_title").value;
+  sc.background = f("sc_bg").value || "default";
+  dirty = true; setStatus("未保存の変更あり", false);
+  renderListSoft(); schedulePreview();
+}
+
+let listTimer = null;
+function renderListSoft() { clearTimeout(listTimer); listTimer = setTimeout(renderList, 700); }
+
+function addTelop() {
+  const c = cur();
+  c.telops = c.telops || [];
+  c.telops.push({text: "キーワード", size: "lg", position: "bottom-center",
+                 color: "#FFFFFF", stroke: "#1E222E", glow: null});
+  dirty = true; renderForm(); schedulePreview();
+}
+function delTelop(i) { cur().telops.splice(i, 1); dirty = true; renderForm(); schedulePreview(); }
+function addSlide() { cur().slide = {title: "", big: "", bullets: []}; dirty = true; renderForm(); schedulePreview(); }
+function delSlide() { cur().slide = null; dirty = true; renderForm(); schedulePreview(); }
+
+function schedulePreview(delay = 400) {
+  clearTimeout(previewTimer);
+  previewTimer = setTimeout(preview, delay);
+}
+
+async function preview() {
+  const sc = DATA.scenes[SI];
+  const r = await fetch("/api/preview", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({scene: {title: sc.title, background: sc.background},
+                          cut: cur(), vertical: f("vertical").checked}),
+  });
+  if (!r.ok) { const j = await r.json().catch(() => ({})); setStatus("プレビュー失敗: " + (j.error || r.status), true); return; }
+  const url = URL.createObjectURL(await r.blob());
+  const img = f("preview");
+  if (img.dataset.old) URL.revokeObjectURL(img.dataset.old);
+  img.src = url; img.dataset.old = url;
+}
+
+async function listen() {
+  const c = cur();
+  setStatus("合成中…", false);
+  const r = await fetch("/api/tts", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({speaker: c.speaker, emotion: c.emotion,
+                          text: c.text, reading: c.reading}),
+  });
+  if (!r.ok) { const j = await r.json().catch(() => ({})); setStatus(j.error || "音声合成に失敗", true); return; }
+  new Audio(URL.createObjectURL(await r.blob())).play();
+  setStatus("再生中", false);
+}
+
+async function save() {
+  const r = await fetch("/api/save", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({script: DATA}),
+  });
+  const j = await r.json();
+  if (j.ok) { dirty = false; setStatus("保存しました " + new Date().toLocaleTimeString(), false); }
+  else setStatus("保存失敗: " + j.error, true);
+}
+
+function setStatus(msg, err) {
+  const el = f("status");
+  el.textContent = msg;
+  el.className = err ? "err" : "";
+}
+
+document.addEventListener("keydown", e => {
+  if ((e.metaKey || e.ctrlKey) && e.key === "s") { e.preventDefault(); save(); }
+});
+window.addEventListener("beforeunload", e => { if (dirty) e.preventDefault(); });
+load();
+</script>
+</body>
+</html>

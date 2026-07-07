@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "script-editor",
+      "runtimeExecutable": ".venv/bin/python",
+      "runtimeArgs": ["-m", "ytf.cli", "edit", "sample", "--no-open", "--port", "8765"],
+      "port": 8765,
+      "env": { "PYTHONPATH": "." }
+    }
+  ]
+}
