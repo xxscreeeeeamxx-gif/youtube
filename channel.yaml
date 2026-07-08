@@ -54,6 +54,11 @@ video:
     ducking: true       # セリフ中にBGMを自動で下げる
   # 効果音の音量（dB）。台本カットの se: で鳴らす
   se_volume_db: -3
+  # 章の切替トランジション（全画面の章タイトル）
+  transition:
+    enabled: true
+    lead: 1.8           # トランジションの表示秒＝章頭に入れる無音の間。長くするほどじっくり
+    se: don             # トランジションで鳴らす効果音
   loudnorm: true        # -14 LUFS に正規化
 
 subtitles:
