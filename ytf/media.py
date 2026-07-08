@@ -29,6 +29,19 @@ def _slug(query: str) -> str:
     return s[:40] or "query"
 
 
+def pexels_key(cfg: Config | None = None) -> str | None:
+    """PexelsのAPIキー。環境変数 PEXELS_API_KEY か、リポジトリ直下の
+    .pexels_key ファイル（gitignore対象）から読む。"""
+    key = os.environ.get("PEXELS_API_KEY")
+    if key:
+        return key.strip()
+    if cfg is not None:
+        f = cfg.root / ".pexels_key"
+        if f.exists():
+            return f.read_text(encoding="utf-8").strip() or None
+    return None
+
+
 def _download(url: str, dest: Path) -> bool:
     import time
 
@@ -95,9 +108,8 @@ def search_wikimedia(query: str, n: int) -> list[dict]:
     return out
 
 
-def search_pexels(query: str, n: int, video: bool) -> list[dict]:
+def search_pexels(query: str, n: int, video: bool, key: str | None = None) -> list[dict]:
     """Pexels の写真/動画検索（要 PEXELS_API_KEY）。"""
-    key = os.environ.get("PEXELS_API_KEY")
     if not key:
         return []
     headers = {"Authorization": key, **UA}
@@ -141,14 +153,15 @@ def search_pexels(query: str, n: int, video: bool) -> list[dict]:
 
 def search_all(cfg: Config, query: str, n: int, video: bool) -> list[dict]:
     """編集画面用: Wikimedia + Pexels を集約して検索する（DLはしない）。"""
+    key = pexels_key(cfg)
     if video:
-        return search_pexels(query, n, video=True)
+        return search_pexels(query, n, video=True, key=key)
     results: list[dict] = []
     try:
         results += search_wikimedia(query, n)
     except requests.RequestException as e:
         print(f"Wikimedia検索に失敗: {e}")
-    results += search_pexels(query, max(2, n // 2), video=False)
+    results += search_pexels(query, max(2, n // 2), video=False, key=key)
     return results
 
 

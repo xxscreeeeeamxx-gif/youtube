@@ -22,6 +22,10 @@ assets/clips/
 # ダウンロードした素材（ytf media）
 media/
 
+# APIキー等の秘密（絶対にコミットしない）
+.pexels_key
+.env
+
 # Python
 __pycache__/
 *.egg-info/
