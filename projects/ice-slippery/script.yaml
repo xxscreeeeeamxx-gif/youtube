@@ -11,6 +11,7 @@ meta:
 scenes:
   - id: hook
     title: ""
+    background: m_1bd96289
     short: true
     cuts:
       - speaker: aoyama
@@ -33,6 +34,7 @@ scenes:
         text: "教科書の定説がひっくり返る話です。最後までお付き合いください。"
   - id: chapter1
     title: "第1章 100年信じられた圧力説"
+    background: m_852facd6
     cuts:
       - speaker: aoyama
         emotion: normal
@@ -72,6 +74,7 @@ scenes:
         text: "こうして20世紀のうちに、圧力説だけでは説明できないと考えられるようになりました。定説の崩壊です。"
   - id: chapter2
     title: "第2章 有力候補は摩擦熱と表面の水"
+    background: m_1ed7273a
     cuts:
       - speaker: aoyama
         emotion: normal
@@ -114,6 +117,7 @@ scenes:
         text: "つまり氷は、生まれつき表面にすべり促進コーティングを持っている。触った瞬間から滑る理由にも説明がつきます。"
   - id: chapter3
     title: "第3章 最新研究でも決着していない"
+    background: m_4ddd7a6e
     cuts:
       - speaker: aoyama
         emotion: normal
@@ -153,6 +157,7 @@ scenes:
         text: "寒ければ寒いほど滑るわけではない。氷は、思っていたより奥が深いんです。"
   - id: chapter4
     title: "第4章 なぜこんな身近な謎が解けないのか"
+    background: m_348b3f61
     cuts:
       - speaker: aoyama
         emotion: thinking
@@ -195,6 +200,7 @@ scenes:
         text: "身近な謎の解明が、そのまま暮らしの安全につながる。基礎研究の面白いところです。"
   - id: ending
     title: "まとめ"
+    background: m_afe777bf
     cuts:
       - speaker: aoyama
         emotion: normal
