@@ -112,22 +112,28 @@ class Composer:
             return (60, 210, self.lay.w - 60, 980)
         if not self.show_chars:
             # 立ち絵なし: 左右の余白を詰めてカードを大きく使う（見出しの下から）
-            return (170, 200, self.lay.w - 170, self.lay.h - 210)
+            return (190, 200, self.lay.w - 190, self.lay.h - 210)
         return (400, 180, self.lay.w - 400, self.lay.h - 330)
 
-    def _draw_card(self, canvas: Image.Image) -> tuple[int, int, int, int]:
-        box = self._card_box()
+    def _card_band(self) -> tuple[int, int]:
+        """カードを縦方向に中央寄せする帯（上端, 下端）。"""
+        if self.lay.vertical:
+            return (210, 990)
+        return (196, self.lay.h - 116)
+
+    def _draw_card(self, canvas: Image.Image, box=None) -> tuple[int, int, int, int]:
+        box = tuple(box or self._card_box())
         x0, y0, x1, y1 = box
         r = 30
         # 影（ぼかした暗い矩形をずらして敷く）
         shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
         sd = ImageDraw.Draw(shadow)
-        sd.rounded_rectangle([x0 + 6, y0 + 14, x1 + 6, y1 + 18], radius=r,
-                             fill=(10, 14, 24, 120))
-        canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(16)))
+        sd.rounded_rectangle([x0 + 6, y0 + 16, x1 + 6, y1 + 20], radius=r,
+                             fill=(10, 14, 24, 115))
+        canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(18)))
         d = ImageDraw.Draw(canvas, "RGBA")
         # カード本体（ごく淡いオフホワイト＋細い枠）
-        d.rounded_rectangle(box, radius=r, fill=(252, 252, 254, 245),
+        d.rounded_rectangle(box, radius=r, fill=(252, 252, 254, 247),
                             outline=(*self.accent, 90), width=2)
         # 上辺のアクセントライン
         d.rounded_rectangle([x0 + r, y0, x1 - r, y0 + 7], radius=3,
@@ -140,51 +146,72 @@ class Composer:
         return (x0 + 26, y0 + 26, x1 - 26, y1 - 26)
 
     def _draw_slide(self, canvas: Image.Image, slide: Slide) -> None:
-        x0, y0, x1, y1 = self._draw_card(canvas)
+        d = ImageDraw.Draw(canvas, "RGBA")
+        fx0, _, fx1, _ = self._card_box()
+        inner_w = fx1 - fx0 - 130
+        pad_top, pad_bot = 56, 56
+
+        # --- 1) 内容の高さと行を先に計算する（カード高さを内容に合わせるため） ---
+        title_f = self.font(int(self.lay.slide_font * 1.3))
+        title_zone = 0
+        if slide.title:
+            title_zone = int(self.lay.slide_font * 1.3) + 20 + 6 + 44
+
+        body: list[tuple] = []      # (line, font, line_height, is_bullet_head)
+        if slide.big:
+            bf = self.font(int(self.lay.slide_font * 1.9))
+            blh = int(self.lay.slide_font * 1.9) + 20
+            for ln in _wrap(d, split_reading(slide.big)[0], bf, inner_w):
+                body.append((ln, bf, blh, False))
+        else:
+            bf = self.font(self.lay.slide_font)
+            blh = self.lay.slide_font + 30
+            for b in slide.bullets:
+                wl = _wrap(d, split_reading(b)[0], bf, inner_w - 60)
+                for j, ln in enumerate(wl):
+                    body.append((ln, bf, blh, j == 0))
+        body_h = sum(r[2] for r in body)
+        content_h = title_zone + body_h
+
+        # --- 2) カード高さ = 内容 + 余白。帯の中で縦中央寄せ ---
+        band_t, band_b = self._card_band()
+        card_h = min(content_h + pad_top + pad_bot, band_b - band_t)
+        y0 = band_t + (band_b - band_t - card_h) // 2
+        box = (fx0, y0, fx1, y0 + card_h)
+        x0, _, x1, y1 = self._draw_card(canvas, box)
         d = ImageDraw.Draw(canvas, "RGBA")
         cx = (x0 + x1) // 2
-        pad_x = 90
-        y = y0 + 48
+
+        # --- 3) 内容を上から順に描く（全体は中央寄せ済み） ---
+        y = y0 + pad_top
         if slide.title:
             title = split_reading(slide.title)[0]
-            f = self.font(int(self.lay.slide_font * 1.3))
-            tw = d.textlength(title, font=f)
-            d.text((cx - tw / 2, y), title, font=f, fill=self.accent)
+            tw = d.textlength(title, font=title_f)
+            d.text((cx - tw / 2, y), title, font=title_f, fill=self.accent)
             y += int(self.lay.slide_font * 1.3) + 20
-            # タイトル下の短いアクセント下線
-            uw = 130
-            d.rounded_rectangle([cx - uw / 2, y, cx + uw / 2, y + 6], radius=3,
+            d.rounded_rectangle([cx - 65, y, cx + 65, y + 6], radius=3,
                                 fill=(*self.accent, 255))
-            y += 42
+            y += 44
 
         if slide.big:
-            f = self.font(int(self.lay.slide_font * 1.9))
-            lines = _wrap(d, split_reading(slide.big)[0], f, (x1 - x0) - 120)
-            lh = int(self.lay.slide_font * 1.9) + 16
-            y = max(y, (y0 + y1) // 2 - lh * len(lines) // 2)
-            for line in lines:
-                tw = d.textlength(line, font=f)
-                d.text((cx - tw / 2, y), line, font=f, fill=self.ink)
+            for ln, f, lh, _ in body:
+                tw = d.textlength(ln, font=f)
+                d.text((cx - tw / 2, y), ln, font=f, fill=self.ink)
                 y += lh
         else:
-            f = self.font(self.lay.slide_font)
-            lh = self.lay.slide_font + 34
-            # 箇条書きブロックをカード内で縦方向に中央寄せ
-            block_h = lh * sum(
-                max(1, len(_wrap(d, split_reading(b)[0], f, (x1 - x0) - 220)))
-                for b in slide.bullets
-            )
-            y = max(y, (y0 + y1 + (y - y0)) // 2 - block_h // 2)
+            # 箇条書きブロックを水平方向にも中央寄せ（最長行を基準に）
             dot = max(7, self.lay.slide_font // 5)
-            for b in slide.bullets:
-                b = split_reading(b)[0]
-                for j, line in enumerate(_wrap(d, b, f, (x1 - x0) - 220)):
-                    if j == 0:
-                        cyd = y + self.lay.slide_font // 2
-                        d.ellipse([x0 + pad_x - 6, cyd - dot, x0 + pad_x - 6 + dot * 2,
-                                   cyd + dot], fill=(*self.accent, 255))
-                    d.text((x0 + pad_x + dot * 2 + 18, y), line, font=f, fill=self.ink)
-                    y += lh
+            indent = dot * 2 + 22
+            block_w = indent + max((d.textlength(ln, font=f) for ln, f, _, _ in body),
+                                   default=0)
+            bx = int(cx - block_w / 2)
+            for ln, f, lh, head in body:
+                if head:
+                    cyd = y + self.lay.slide_font // 2
+                    d.ellipse([bx, cyd - dot, bx + dot * 2, cyd + dot],
+                              fill=(*self.accent, 255))
+                d.text((bx + indent, y), ln, font=f, fill=self.ink)
+                y += lh
 
     def _draw_telop(self, canvas: Image.Image, t: Telop) -> None:
         """キーワードテロップ。縁取り＋（任意で）光彩付きの大文字を指定位置に描く。"""

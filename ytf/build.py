@@ -22,8 +22,9 @@ from .config import Config, Project, ffmpeg_bin, ffprobe_bin
 from .subtitles import build_ass
 from .voice import CutTiming
 
-# zoompan のガタつき対策で入力を拡大してから動かす倍率
-_UPSCALE = 2
+# zoompan のガタつき対策。入力を大きく拡大してから動かし、最後に縮小することで
+# 遅い動きの「1px刻みのステップ」をサブピクセル化して滑らかに見せる
+_UPSCALE = 4
 
 
 @lru_cache(maxsize=1)
