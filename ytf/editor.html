@@ -62,6 +62,13 @@
   .scut .cap b { color: #7fd0a0; font-weight: normal; }
   #videoWrap { flex: 1; display: flex; align-items: center; justify-content: center; margin-top: 10px; }
   #videoWrap video { max-width: 100%; max-height: 100%; border-radius: 8px; }
+  #playerModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.72); z-index: 55; padding: 30px; }
+  #playerPanel { background: #181b23; border: 1px solid #2a2d38; border-radius: 10px; max-width: 1100px; height: 100%;
+                 margin: 0 auto; padding: 14px 18px; display: flex; flex-direction: column; }
+  #pstage { flex: 1; display: flex; align-items: center; justify-content: center; margin-top: 10px; min-height: 0; }
+  #pstage img { max-width: 100%; max-height: 100%; border-radius: 8px; background: #000; }
+  #pbar { height: 6px; background: #2a2d38; border-radius: 3px; margin: 10px 0 6px; overflow: hidden; }
+  #pbarfill { height: 100%; width: 0; background: #5b8def; transition: width .1s linear; }
 </style>
 </head>
 <body>
@@ -72,8 +79,9 @@
 <div id="main">
   <div class="topbar">
     <button class="btn primary" onclick="save()">保存 (⌘S)</button>
+    <button class="btn" onclick="openPlayer()">▶ 通し再生（音声付き）</button>
     <button class="btn" onclick="openStrip()">🎞 全体プレビュー</button>
-    <button class="btn" onclick="openVideo()">▶ 完成動画</button>
+    <button class="btn" onclick="openVideo()">完成動画(mp4)</button>
     <button class="btn" onclick="listen()">🔊 このセリフを聴く</button>
     <button class="btn" onclick="openMedia()">🔍 素材を探す</button>
     <label style="display:inline;margin:0"><input type="checkbox" id="vertical" onchange="schedulePreview()"> 縦(ショート)で見る</label>
@@ -81,6 +89,19 @@
   </div>
   <img id="preview" alt="プレビュー">
   <div id="form"></div>
+</div>
+
+<div id="playerModal">
+  <div id="playerPanel">
+    <div class="mrow">
+      <b style="font-size:14px">通し再生（mp4レンダー不要・音声とテロップを同期確認）</b>
+      <button class="btn" id="ppause" onclick="togglePlay()">⏸ 一時停止</button>
+      <button class="btn" style="margin-left:auto" onclick="closePlayer()">閉じる</button>
+    </div>
+    <div id="pstage"><img id="pimg" alt=""></div>
+    <div id="pbar"><div id="pbarfill"></div></div>
+    <div id="pinfo" class="hint"></div>
+  </div>
 </div>
 
 <div id="stripModal">
@@ -326,6 +347,104 @@ function setStatus(msg, err) {
   el.className = err ? "err" : "";
 }
 
+// ---- 通し再生（アニマティック: 静止プレビュー×カット音声を同期再生） ----
+let PIMGS = [], PFLAT = [], playToken = 0, curAudio = null, paused = false, AUDIOCACHE = {};
+
+function flatten() {
+  const flat = [];
+  DATA.scenes.forEach((sc, si) => sc.cuts.forEach((c, ci) =>
+    flat.push({ si, ci, c, scene: sc.title || sc.id })));
+  return flat;
+}
+
+async function openPlayer() {
+  f("playerModal").style.display = "block";
+  f("pinfo").textContent = "プレビュー画像を準備中…（全カットを合成しています）";
+  f("pbarfill").style.width = "0";
+  PFLAT = flatten();
+  const r = await fetch("/api/filmstrip?w=960");
+  const j = await r.json();
+  if (!r.ok) { f("pinfo").textContent = "失敗: " + (j.error || r.status); return; }
+  PIMGS = j.cuts.map(x => x.img);
+  AUDIOCACHE = {};
+  const start = Math.max(0, PFLAT.findIndex(x => x.si === SI && x.ci === CI));
+  playFrom(start);
+}
+
+async function getAudio(i) {
+  if (i < 0 || i >= PFLAT.length) return null;
+  if (AUDIOCACHE[i]) return AUDIOCACHE[i];
+  const c = PFLAT[i].c;
+  let entry;
+  try {
+    const r = await fetch("/api/tts", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ speaker: c.speaker, emotion: c.emotion, text: c.text, reading: c.reading }),
+    });
+    if (!r.ok) throw new Error("tts");
+    entry = { url: URL.createObjectURL(await r.blob()), silent: false };
+  } catch (e) {
+    entry = { url: null, silent: true, est: Math.max(1.2, (c.text || "").length / 7) };
+  }
+  AUDIOCACHE[i] = entry;
+  return entry;
+}
+
+async function playFrom(n) {
+  const token = ++playToken;
+  paused = false; f("ppause").textContent = "⏸ 一時停止";
+  for (let i = n; i < PFLAT.length; i++) {
+    if (token !== playToken) return;
+    const fl = PFLAT[i];
+    f("pimg").src = PIMGS[i] || "";
+    f("pinfo").textContent = `${i + 1} / ${PFLAT.length}   ${fl.scene}   ${fl.c.text.slice(0, 40)}`;
+    const a = await getAudio(i);
+    if (token !== playToken) return;
+    getAudio(i + 1);  // 次カットの音声を先読み
+    if (a && !a.silent) await playClip(a.url, token);
+    else await waitBar((a ? a.est : 1.5) * 1000, token);
+    if (token !== playToken) return;
+    await sleep((fl.c.pause_after ?? 0.3) * 1000);
+  }
+  if (token === playToken) { f("pinfo").textContent = "再生終了"; f("pbarfill").style.width = "100%"; }
+}
+
+function playClip(url, token) {
+  return new Promise(res => {
+    const au = new Audio(url); curAudio = au;
+    au.onended = res;
+    au.onerror = res;
+    au.ontimeupdate = () => { if (au.duration) f("pbarfill").style.width = (au.currentTime / au.duration * 100) + "%"; };
+    au.play().catch(res);
+  });
+}
+function waitBar(ms, token) {
+  return new Promise(res => {
+    const t0 = performance.now();
+    (function step() {
+      if (token !== playToken) return res();
+      const p = Math.min(1, (performance.now() - t0) / ms);
+      f("pbarfill").style.width = (p * 100) + "%";
+      if (p >= 1) return res();
+      requestAnimationFrame(step);
+    })();
+  });
+}
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function togglePlay() {
+  if (!curAudio) return;
+  if (paused) { curAudio.play(); paused = false; f("ppause").textContent = "⏸ 一時停止"; }
+  else { curAudio.pause(); paused = true; f("ppause").textContent = "▶ 再開"; }
+}
+function closePlayer() {
+  playToken++;
+  if (curAudio) { curAudio.pause(); curAudio = null; }
+  Object.values(AUDIOCACHE).forEach(a => { if (a.url) URL.revokeObjectURL(a.url); });
+  AUDIOCACHE = {};
+  f("playerModal").style.display = "none";
+}
+
 async function openStrip() {
   f("stripModal").style.display = "block";
   f("mhint2").textContent = "合成中…（全カットのプレビューを作成しています）";
@@ -431,7 +550,7 @@ async function insertMedia(i, kind, full) {
 
 document.addEventListener("keydown", e => {
   if ((e.metaKey || e.ctrlKey) && e.key === "s") { e.preventDefault(); save(); }
-  if (e.key === "Escape") { closeMedia(); closeStrip(); closeVideo(); }
+  if (e.key === "Escape") { closeMedia(); closeStrip(); closeVideo(); closePlayer(); }
 });
 window.addEventListener("beforeunload", e => { if (dirty) e.preventDefault(); });
 load();

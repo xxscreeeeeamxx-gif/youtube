@@ -149,9 +149,12 @@ def make_handler(cfg: Config, proj: Project):
                 script = proj.load_script()
                 self._json(200, {"name": proj.root.name,
                                  "script": script.model_dump()})
-            elif self.path == "/api/filmstrip":
+            elif self.path.startswith("/api/filmstrip"):
+                from urllib.parse import parse_qs, urlparse
+                q = parse_qs(urlparse(self.path).query)
+                w = max(160, min(1280, int((q.get("w") or ["300"])[0])))
                 try:
-                    self._json(200, {"cuts": _filmstrip(cfg, proj)})
+                    self._json(200, {"cuts": _filmstrip(cfg, proj, width=w)})
                 except (SystemExit, Exception) as e:  # noqa: BLE001
                     self._json(400, {"error": str(e)})
             elif self.path.startswith("/api/video"):
