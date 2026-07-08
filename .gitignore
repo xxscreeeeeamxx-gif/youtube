@@ -17,7 +17,8 @@ assets/characters/
 assets/backgrounds/default.png
 assets/bgm/*
 !assets/bgm/.gitkeep
-assets/clips/
+assets/clips/*
+!assets/clips/SOURCES.md
 
 # ダウンロードした素材（ytf media）
 media/

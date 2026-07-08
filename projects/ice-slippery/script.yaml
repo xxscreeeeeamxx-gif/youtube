@@ -17,9 +17,17 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "いきなりですが、質問です。氷の上は、なぜ滑るのでしょうか。"
+        video: assets/clips/skate_spiral.mp4
+        video_span: 2
+        video_full: true
+        video_speed: 0.6
+        telops:
+          - {text: "氷はなぜ滑る？", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE"}
       - speaker: aoyama
         emotion: surprised
         text: "実はこれ、まだ完全には分かっていないんです。"
+        telops:
+          - {text: "実は未解決", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00"}
       - speaker: aoyama
         emotion: normal
         text: "スケートも雪道も当たり前に滑る。なのに、その理由は約200年も決着していません。"
@@ -88,6 +96,12 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "寒い日に手をこすると温かくなる、あれと同じ理屈ですね。"
+        video: assets/clips/melting_ice.mp4
+        video_span: 2
+        video_full: true
+        video_speed: 0.7
+        telops:
+          - {text: "溶けて水になる", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A2A3C", glow: "#33AADD"}
       - speaker: aoyama
         emotion: normal
         text: "1930年代には実験でこの説を支持する結果が出ていて、速く動くほど滑りやすい現象とも相性がいい。"
