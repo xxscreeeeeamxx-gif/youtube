@@ -91,7 +91,7 @@ def _start_build(cfg: Config, proj: Project) -> dict:
     def worker():
         try:
             p = subprocess.Popen(
-                [sys.executable, "-m", "ytf.cli", "make", proj.root.name],
+                [sys.executable, "-u", "-m", "ytf.cli", "make", proj.root.name],
                 cwd=str(cfg.root), stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT, text=True, bufsize=1,
                 env={**os.environ, "PYTHONPATH": str(cfg.root)},

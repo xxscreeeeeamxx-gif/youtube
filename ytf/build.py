@@ -259,7 +259,7 @@ def render_segments(
     counts = _cut_frame_counts([c.dur for c in plan], fps)
 
     rels, made = [], 0
-    for item, n in zip(plan, counts):
+    for i, (item, n) in enumerate(zip(plan, counts)):
         vsig = ""
         if item.video:
             st = Path(item.video).stat()
@@ -282,6 +282,8 @@ def render_segments(
             _render_one_segment(proj, item, rel, n, fps, w, h, zoom, enc, crf, font)
             made += 1
         rels.append(rel)
+        if made and (i + 1) % 8 == 0:
+            print(f"  映像生成中… {i + 1}/{len(plan)} カット", flush=True)
     print(f"セグメント {len(plan)} カット（新規 {made} / キャッシュ {len(plan) - made}）")
     return rels
 
