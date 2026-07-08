@@ -26,6 +26,7 @@ scenes:
       - speaker: aoyama
         emotion: surprised
         text: "実はこれ、まだ完全には分かっていないんです。"
+        se: jaan
         telops:
           - {text: "実は未解決", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00"}
       - speaker: aoyama
@@ -82,6 +83,7 @@ scenes:
       - speaker: aoyama
         emotion: thinking
         text: "こうして20世紀のうちに、圧力説だけでは説明できないと考えられるようになりました。定説の崩壊です。"
+        se: don
         telops:
           - {text: "定説は崩壊", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
   - id: chapter2
@@ -156,8 +158,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "面白いデータもあります。氷が一番滑りやすいのは、0℃ではなくマイナス7℃前後だという研究があるんです。"
-        telops:
-          - {text: "最も滑るのは -7℃", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+        se: jaan
+        stat: {value: -7, unit: "℃", label: "最も滑る温度"}
       - speaker: aoyama
         emotion: normal
         text: "0℃近くだと水が多すぎて逆にブレーキになる。かといって低温すぎると、今度は膜がうまくできない。"
@@ -248,6 +250,7 @@ scenes:
         emotion: normal
         background: m_e82a07f0
         text: "次に凍った道でツルッといきそうになったら、思い出してください。あなたは今、未解決問題の上に立っています。"
+        se: tsuru
         telops:
           - {text: "未解決の上に立つ", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: aoyama

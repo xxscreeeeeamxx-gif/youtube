@@ -38,6 +38,14 @@ class Slide(BaseModel):
     big: str = ""      # 一言をドンと出したいとき（bullets より優先）
 
 
+class Stat(BaseModel):
+    """数字をカウントアップで見せるアニメ図解。"""
+    value: float                 # 到達する数値（例 -7）
+    unit: str = ""               # 単位（例 "℃" "%"）
+    label: str = ""              # 数字の上に出す説明（例 "最も滑る温度"）
+    start: float = 0.0           # カウント開始値
+
+
 MOTIONS = {"zoom-in", "zoom-out", "pan-left", "pan-right", "none"}
 TELOP_SIZES = {"sm", "md", "lg", "xl"}
 TELOP_POSITIONS = {
@@ -91,6 +99,8 @@ class Cut(BaseModel):
     reading: str | None = None  # 読み上げの手動上書き（誤読修正用。表示は text のまま）
     telops: list[Telop] = Field(default_factory=list)
     slide: Slide | None = None
+    stat: Stat | None = None  # 数字カウントアップのアニメ図解
+    se: str | None = None     # 効果音（pop/don/jaan/tsuru/pinpon/bubu など assets/se/の名前）
     image: str | None = None  # プロジェクト相対 or assets相対の画像パス
     video: str | None = None  # 動画クリップ（音は使わずナレーション優先）
     video_span: int = 1       # この動画を何カット分にまたがって連続再生するか

@@ -121,6 +121,102 @@ def init_assets(cfg: Config, force: bool = False) -> None:
     if force or not demo.exists():
         _gen_demo_clip(demo)
 
+    # BGM（アンビエント）と効果音ライブラリ
+    _gen_bgm(assets / "bgm" / "ambient.mp3", force)
+    _gen_se_library(assets / "se", force)
+
+
+def _ff():
+    import shutil
+
+    from .config import ffmpeg_bin
+    return ffmpeg_bin() if shutil.which(ffmpeg_bin()) else None
+
+
+def _run_ff(args: list[str], label: str) -> None:
+    import subprocess
+    ff = _ff()
+    if ff is None:
+        print(f"{label}はスキップ（ffmpegが見つかりません）")
+        return
+    r = subprocess.run([ff, "-y", "-hide_banner", "-loglevel", "error", *args],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        print(f"{label}生成に失敗: {r.stderr[-200:]}")
+
+
+def _gen_bgm(path: Path, force: bool) -> None:
+    if path.exists() and not force:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fc = (
+        "[0]tremolo=f=0.10:d=0.5[a];[1]tremolo=f=0.13:d=0.5[b];"
+        "[2]tremolo=f=0.11:d=0.5[c];[3]volume=0.35,tremolo=f=0.16:d=0.6[d];"
+        "[a][b][c][d]amix=inputs=4:normalize=0,lowpass=f=1100,"
+        "aecho=0.8:0.88:800|1300:0.35|0.25,loudnorm=I=-16:TP=-1.5,"
+        "afade=t=in:d=4,afade=t=out:st=44:d=4[out]"
+    )
+    args = []
+    for f in (220, 261.63, 329.63, 659.26):
+        args += ["-f", "lavfi", "-i", f"sine=frequency={f}:duration=48"]
+    args += ["-filter_complex", fc, "-map", "[out]", "-ar", "44100",
+             "-b:a", "160k", str(path)]
+    _run_ff(args, "BGM")
+
+
+def _gen_se_library(se_dir: Path, force: bool) -> None:
+    se_dir.mkdir(parents=True, exist_ok=True)
+    specs = {
+        "pop": (["-f", "lavfi", "-i", "sine=frequency=920:duration=0.14"],
+                "afade=t=out:st=0.03:d=0.11,volume=0.7,loudnorm=I=-15:TP=-1.5"),
+        "tsuru": (["-f", "lavfi", "-i",
+                   "aevalsrc='sin(2*PI*(500+1600*t)*t)':d=0.28:s=44100"],
+                  "afade=t=in:d=0.02,afade=t=out:st=0.15:d=0.13,volume=0.6,"
+                  "loudnorm=I=-15:TP=-1.5"),
+    }
+    for name, (inp, af) in specs.items():
+        p = se_dir / f"{name}.mp3"
+        if p.exists() and not force:
+            continue
+        _run_ff([*inp, "-af", af, "-ar", "44100", str(p)], f"SE({name})")
+    # 複数音を合成するSE
+    multi = {
+        "don": ("[0][1]amix=inputs=2,afade=t=out:st=0.05:d=0.35,volume=1.4,"
+                "loudnorm=I=-14:TP=-1.5[o]",
+                ["sine=frequency=80:duration=0.4", "sine=frequency=160:duration=0.4"]),
+        "jaan": ("[0][1][2]amix=inputs=3:normalize=0,afade=t=out:st=0.1:d=0.8,"
+                 "aecho=0.8:0.85:60:0.4,loudnorm=I=-15:TP=-1.5[o]",
+                 ["sine=frequency=523.25:duration=0.9", "sine=frequency=659.26:duration=0.9",
+                  "sine=frequency=783.99:duration=0.9"]),
+    }
+    for name, (fc, srcs) in multi.items():
+        p = se_dir / f"{name}.mp3"
+        if p.exists() and not force:
+            continue
+        args = []
+        for s in srcs:
+            args += ["-f", "lavfi", "-i", s]
+        args += ["-filter_complex", fc, "-map", "[o]", "-ar", "44100", str(p)]
+        _run_ff(args, f"SE({name})")
+    # クイズ用（正解ピンポン / 不正解ブブー）: 2音を連結
+    quiz = {
+        "pinpon": ("[0]adelay=0[a];[1]adelay=170[b];[a][b]concat=n=2:v=0:a=1,"
+                   "afade=t=out:st=0.28:d=0.08,loudnorm=I=-15:TP=-1.5[o]",
+                   ["sine=frequency=988:duration=0.16", "sine=frequency=1319:duration=0.16"]),
+        "bubu": ("[0][1]concat=n=2:v=0:a=1,tremolo=f=30:d=0.5,volume=0.9,"
+                 "loudnorm=I=-15:TP=-1.5[o]",
+                 ["sine=frequency=165:duration=0.18", "sine=frequency=165:duration=0.18"]),
+    }
+    for name, (fc, srcs) in quiz.items():
+        p = se_dir / f"{name}.mp3"
+        if p.exists() and not force:
+            continue
+        args = []
+        for s in srcs:
+            args += ["-f", "lavfi", "-i", s]
+        args += ["-filter_complex", fc, "-map", "[o]", "-ar", "44100", str(p)]
+        _run_ff(args, f"SE({name})")
+
 
 def _gen_demo_clip(path: Path) -> None:
     """ffmpegのテストソースで4秒のカラフルなクリップを作る（ffmpeg無しならスキップ）。"""

@@ -102,22 +102,56 @@ def _zoompan_expr(motion: str, zoom: float, p: str) -> tuple[str, str, str]:
     return f"1+{zoom}*({p})", cx, cy  # zoom-in（既定）
 
 
-def _telop_overlay_fc(ti: int, anim: str, dur: float = 0.4) -> str:
-    """テロップレイヤー[ti]を[v0]の上にアニメ付きで重ね[vout]を作る。"""
+def _telop_overlay_fc(ti: int, inl: str, outl: str, anim: str, dur: float = 0.4) -> str:
+    """テロップレイヤー[ti]を inl の上にアニメ付きで重ね outl を作る。"""
     fade = f"[{ti}:v]format=rgba,fade=t=in:st=0:d={dur}:alpha=1[tel];"
     if anim == "none":
-        return f"[{ti}:v]format=rgba[tel];[v0][tel]overlay=0:0,format=yuv420p[vout]"
+        return f"[{ti}:v]format=rgba[tel];{inl}[tel]overlay=0:0,format=yuv420p{outl}"
     if anim == "fade":
-        return fade + "[v0][tel]overlay=0:0,format=yuv420p[vout]"
+        return fade + f"{inl}[tel]overlay=0:0,format=yuv420p{outl}"
     off = 46  # スライド量(px)
     sign = "" if anim == "up" else "-"  # up=下から上へ / down=上から下へ
     y = f"{sign}{off}*max(0\\,1-t/{dur})"
-    return fade + f"[v0][tel]overlay=x=0:y='{y}',format=yuv420p[vout]"
+    return fade + f"{inl}[tel]overlay=x=0:y='{y}',format=yuv420p{outl}"
+
+
+def _trans_overlay_fc(ti: int, inl: str, outl: str, w: int) -> str:
+    """章トランジション帯[ti]を左からスライドイン→保持→右へ退場で重ねる。"""
+    x = (f"if(lt(t\\,0.4)\\,-{w}+{w}*t/0.4\\,"
+         f"if(lt(t\\,1.5)\\,0\\,{w}*(t-1.5)/0.5))")
+    return (f"[{ti}:v]format=rgba[tr];"
+            f"{inl}[tr]overlay=x='{x}':y=0:enable='lt(t\\,2.0)',format=yuv420p{outl}")
+
+
+def _stat_fc(inl: str, outl: str, stat: dict, font: str,
+             w: int, h: int, n: int, fps: int) -> str:
+    """数字カウントアップ（大きな数字＋ラベル）を drawtext で重ねる。"""
+    v = stat.get("value", 0)
+    s = stat.get("start", 0.0)
+    unit = stat.get("unit", "")
+    label = stat.get("label", "")
+    dur = max(0.4, min(1.2, n / fps * 0.6))
+    fs = int(h * 0.17)
+    lfs = int(h * 0.05)
+    alpha = "if(lt(t\\,0.3)\\,t/0.3\\,1)"
+    # drawtext の text 内では : と , をエスケープする（式の区切りと衝突するため）
+    num = f"%{{eif\\:{s}+({v}-{s})*min(1\\,t/{dur})\\:d}}{unit}"
+    dn = (f"drawtext=fontfile='{font}':text='{num}':fontsize={fs}:fontcolor=white:"
+          f"borderw={max(3, fs // 18)}:bordercolor=0x14181e:alpha='{alpha}':"
+          f"x=(w-text_w)/2:y=h*0.40")
+    chain = dn
+    if label:
+        dl = (f"drawtext=fontfile='{font}':text='{label}':fontsize={lfs}:"
+              f"fontcolor=0x9fd0ff:borderw={max(2, lfs // 16)}:bordercolor=0x14181e:"
+              f"alpha='{alpha}':x=(w-text_w)/2:y=h*0.31")
+        chain = dl + "," + dn
+    return f"{inl}{chain},format=yuv420p{outl}"
 
 
 def _render_one_segment(
     proj: Project, item: CutRender, out_rel: str, n: int,
     fps: int, w: int, h: int, zoom: float, enc: list[str], crf: str,
+    font: str = "",
 ) -> None:
     base = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error"]
     inputs: list[str] = []       # 入力（-i …）を順に積む
@@ -169,16 +203,33 @@ def _render_one_segment(
             f"format=yuv420p,setsar=1[v0]"
         )
 
-    # テロップレイヤーをアニメ付きで重ねる
-    if item.telop_png:
-        ti = _count_inputs(inputs)  # テロップ入力のストリーム番号
-        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.telop_png]
-        fc += ";" + _telop_overlay_fc(ti, item.telop_anim)
-        out_label = "[vout]"
-    else:
-        out_label = "[v0]"
+    # オーバーレイを順に重ねる: テロップ → 数字アニメ → 章トランジション
+    cur = "[v0]"
+    step = 0
 
-    cmd = base + inputs + ["-filter_complex", fc, "-map", out_label,
+    def nxt() -> str:
+        nonlocal step
+        step += 1
+        return f"[vov{step}]"
+
+    if item.telop_png:
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.telop_png]
+        out = nxt()
+        fc += ";" + _telop_overlay_fc(ti, cur, out, item.telop_anim)
+        cur = out
+    if item.stat:
+        out = nxt()
+        fc += ";" + _stat_fc(cur, out, item.stat, font, w, h, n, fps)
+        cur = out
+    if item.trans_png:
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.trans_png]
+        out = nxt()
+        fc += ";" + _trans_overlay_fc(ti, cur, out, w)
+        cur = out
+
+    cmd = base + inputs + ["-filter_complex", fc, "-map", cur,
                            "-frames:v", str(n), "-an", "-c:v", *enc]
     if enc[0] == "libx264":
         cmd += ["-crf", crf]
@@ -198,6 +249,7 @@ def render_segments(
     crf = str(cfg.get("video", "crf", default=20))
     zoom = float(cfg.get("video", "motion", "zoom", default=0.06))
     enc = pick_encoder(cfg.get("video", "encoder", default="auto"))
+    font = cfg.find_pillow_font()
     counts = _cut_frame_counts([c.dur for c in plan], fps)
 
     rels, made = [], 0
@@ -212,12 +264,16 @@ def render_segments(
             vsig += f"|bg:{item.bg}:{st.st_size}:{int(st.st_mtime)}"
         if item.telop_png:
             vsig += f"|tel:{item.telop_png}:{item.telop_anim}"
+        if item.trans_png:
+            vsig += f"|trans:{item.trans_png}"
+        if item.stat:
+            vsig += f"|stat:{item.stat}"
         key_src = (f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|"
                    f"{item.m_start}:{item.m_total}|{vsig}|{enc[0]}")
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
         rel = f"frames/seg_{key}.mp4"
         if not (proj.root / rel).exists():
-            _render_one_segment(proj, item, rel, n, fps, w, h, zoom, enc, crf)
+            _render_one_segment(proj, item, rel, n, fps, w, h, zoom, enc, crf, font)
             made += 1
         rels.append(rel)
     print(f"セグメント {len(plan)} カット（新規 {made} / キャッシュ {len(plan) - made}）")
@@ -246,10 +302,12 @@ def build_video(
     out_rel: str,
     width: int,
     height: int,
+    se_events: list[tuple[float, str]] | None = None,
 ) -> Path:
     fps = int(cfg.get("video", "fps", default=30))
     crf = str(cfg.get("video", "crf", default=20))
     enc = pick_encoder(cfg.get("video", "encoder", default="auto"))
+    se_events = se_events or []
 
     bgm_file = cfg.get("video", "bgm", "file")
     bgm_path = (cfg.root / bgm_file) if bgm_file else None
@@ -262,6 +320,9 @@ def build_video(
            "-i", audio_rel]
     if bgm_path:
         cmd += ["-stream_loop", "-1", "-i", str(bgm_path)]
+    se_base = 2 + (1 if bgm_path else 0)
+    for _, se_path in se_events:
+        cmd += ["-i", se_path]
 
     vf = (
         f"scale={width}:{height}:force_original_aspect_ratio=decrease,"
@@ -273,18 +334,34 @@ def build_video(
         vf += f",subtitles={ass_rel}"
 
     filters = [f"[0:v]{vf}[vout]"]
+
+    # ---- 音声: ナレーション + (任意)BGM(ダッキング) + SE を1本にまとめる ----
+    narration = "[1:a]"
+    extra: list[str] = []  # ナレーション以外に混ぜる音（BGM/SE）
+    se_vol = float(cfg.get("video", "se_volume_db", default=-3))
+    for k, (t, _) in enumerate(se_events):
+        ms = max(0, int(round(t * 1000)))
+        filters.append(f"[{se_base + k}:a]adelay={ms},volume={se_vol}dB[se{k}]")
+        extra.append(f"[se{k}]")
     if bgm_path:
         vol = float(cfg.get("video", "bgm", "volume_db", default=-24))
-        chain = f"[2:a]volume={vol}dB[b]"
+        filters.append(f"[2:a]volume={vol}dB[b]")
         if cfg.get("video", "bgm", "ducking", default=True):
-            filters += [chain,
-                        "[b][1:a]sidechaincompress=threshold=0.03:ratio=10:attack=30:release=400[bd]",
-                        "[1:a][bd]amix=inputs=2:duration=first:normalize=0[amix]"]
+            # ナレーションを分岐（サイドチェイン用と本線用）してBGMを喋りで下げる
+            filters.append("[1:a]asplit=2[nar][sc]")
+            filters.append("[b][sc]sidechaincompress=threshold=0.03:ratio=10:"
+                           "attack=30:release=400[bd]")
+            narration = "[nar]"
+            extra = ["[bd]"] + extra
         else:
-            filters += [chain, "[1:a][b]amix=inputs=2:duration=first:normalize=0[amix]"]
+            extra = ["[b]"] + extra
+    if extra:
+        labels = [narration] + extra
+        filters.append("".join(labels)
+                       + f"amix=inputs={len(labels)}:duration=first:normalize=0[amix]")
         alabel = "[amix]"
     else:
-        alabel = "[1:a]"
+        alabel = narration
 
     if cfg.get("video", "loudnorm", default=True):
         # loudnorm は内部で 192kHz 等に上げるので 48kHz に戻す（YouTube推奨）
@@ -302,6 +379,38 @@ def build_video(
     return proj.root / out_rel
 
 
+def collect_se_events(cfg: Config, proj: Project,
+                      timings: list[CutTiming]) -> list[tuple[float, str]]:
+    """台本の se: と章の切替から (時刻, SEファイルの絶対パス) を集める。"""
+    script = proj.load_script()
+    flat = [cut for scene in script.scenes for cut in scene.cuts]
+    events: list[tuple[float, str]] = []
+
+    def se_path(name: str) -> str | None:
+        for ext in ("mp3", "wav", "m4a"):
+            p = cfg.root / "assets" / "se" / f"{name}.{ext}"
+            if p.exists():
+                return str(p)
+        print(f"警告: 効果音が見つかりません: {name}")
+        return None
+
+    # 章の先頭（見出しあり）にトランジション音「don」を自動で鳴らす
+    trans_on = bool(cfg.get("video", "transition", "enabled", default=True))
+    prev_scene = None
+    for cut, ct in zip(flat, timings):
+        scene_first = ct.scene_id != prev_scene
+        prev_scene = ct.scene_id
+        if scene_first and ct.scene_title and trans_on:
+            p = se_path(cfg.get("video", "transition", "se", default="don"))
+            if p:
+                events.append((ct.start, p))
+        if cut.se:
+            p = se_path(cut.se)
+            if p:
+                events.append((ct.start, p))
+    return events
+
+
 def render_main(cfg: Config, proj: Project, timings: list[CutTiming]) -> Path:
     from .compose import render_frames
 
@@ -311,9 +420,10 @@ def render_main(cfg: Config, proj: Project, timings: list[CutTiming]) -> Path:
     ass = proj.out_dir / "subs.ass"
     ass.write_text(build_ass(cfg, timings, w, h), encoding="utf-8")
     concat = _prepare_visual(cfg, proj, plan, w, h, "video")
+    se_events = collect_se_events(cfg, proj, timings)
     out = build_video(cfg, proj, concat, "audio/narration.wav", "out/subs.ass",
-                      "out/video.mp4", w, h)
-    print(f"書き出し完了: {out}")
+                      "out/video.mp4", w, h, se_events=se_events)
+    print(f"書き出し完了: {out}（SE {len(se_events)}）")
     return out
 
 

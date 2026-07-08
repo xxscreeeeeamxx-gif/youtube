@@ -326,6 +326,31 @@ class Composer:
             self._draw_telop(canvas, t)
         return canvas
 
+    def transition_layer(self, title: str) -> Image.Image:
+        """章の切替: 全画面のダークパネル＋章タイトル（横スライドのワイプに使う）。"""
+        w, h = self.lay.w, self.lay.h
+        canvas = Image.new("RGBA", (w, h), (16, 20, 30, 248))
+        d = ImageDraw.Draw(canvas, "RGBA")
+        cy = h // 2
+        title = split_reading(title)[0]
+        size = 82
+        f = self.font(size)
+        while d.textlength(title, font=f) > w - 220 and size > 40:
+            size -= 4
+            f = self.font(size)
+        tw = d.textlength(title, font=f)
+        # タイトルの上下にアクセントライン
+        half = tw / 2 + 30
+        d.rounded_rectangle([w / 2 - half, cy - size / 2 - 34,
+                             w / 2 + half, cy - size / 2 - 27], radius=3,
+                            fill=(*self.accent, 255))
+        d.rounded_rectangle([w / 2 - half, cy + size / 2 + 27,
+                             w / 2 + half, cy + size / 2 + 34], radius=3,
+                            fill=(*self.accent, 255))
+        d.text(((w - tw) / 2, cy - size / 2 - 4), title, font=f,
+               fill=(245, 247, 252))
+        return canvas
+
 
 def _hex_rgb(color: str) -> tuple[int, int, int]:
     c = color.lstrip("#")
@@ -370,6 +395,8 @@ class CutRender:
     # テロップ（別レイヤーでアニメ付き overlay する）
     telop_png: str | None = None             # テロップだけを描いた透過PNGの相対パス
     telop_anim: str = "up"                   # 登場アニメ none/fade/up/down
+    trans_png: str | None = None             # 章トランジションのバナー透過PNG（先頭カット）
+    stat: dict | None = None                 # 数字カウントアップ {value,unit,label,start}
     # シーン単位の連続モーション（1画像を1方向にゆっくり動かす）用のタイムライン
     m_start: float = 0.0                     # シーン先頭からこのカット開始までの秒数
     m_total: float = 0.0                     # シーン全体の秒数（0ならこのカット単独）
@@ -480,6 +507,15 @@ def render_frames(
         shot_start[ct.index] = shot_total[si]
         shot_total[si] += ct.total_dur
 
+    # 各シーンの先頭カット（章トランジションを出す位置）
+    scene_first_idx: set[int] = set()
+    seen_sc = None
+    for ct, scene, cut in flat:
+        if scene.id != seen_sc:
+            scene_first_idx.add(ct.index)
+            seen_sc = scene.id
+    trans_on = bool(cfg.get("video", "transition", "enabled", default=True))
+
     speakers = script.speakers_used()
     emotion_state = {s: "normal" for s in speakers}
     result: list[CutRender] = []
@@ -536,6 +572,17 @@ def render_frames(
             manifest_used.add(tkey)
             telop_anim = cut.telops[0].anim
 
+        # 章トランジション: シーンの先頭カット（見出しあり）にバナーを出す
+        trans_png = None
+        if (trans_on and not vertical and ct.index in scene_first_idx
+                and scene.title):
+            xkey = hashlib.sha1(f"trans|{scene.title}|{sub}".encode()).hexdigest()[:16]
+            trans_png = f"frames/trans_{xkey}.png"
+            xp = proj.root / trans_png
+            if xkey not in manifest_used and not xp.exists():
+                composer.transition_layer(scene.title).save(xp)
+            manifest_used.add(xkey)
+
         result.append(CutRender(
             png=rel,
             dur=ct.total_dur,
@@ -548,6 +595,8 @@ def render_frames(
             v_full=full,
             telop_png=telop_png,
             telop_anim=telop_anim,
+            trans_png=trans_png,
+            stat=cut.stat.model_dump() if cut.stat else None,
             m_start=round(shot_start.get(ct.index, 0.0), 3),
             m_total=round(shot_total.get(shot_id[ct.index], 0.0), 3),
         ))
