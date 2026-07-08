@@ -38,10 +38,12 @@ video:
   fps: 30
   # false にすると立ち絵を一切描かない（背景＋テロップ主体の構成）
   show_characters: false
-  # 画面の動き（静止画にKen Burnsズーム/パンを付ける。離脱対策）
+  # 画面の動き（1画像を1方向にゆっくり動かすKen Burns。シーン単位で連続）
   motion:
     enabled: true
-    zoom: 0.06   # 1カットあたりのズーム量（6%）。台本の motion: で個別指定も可
+    # シーン全体を通したズーム/パン量（12%）。1方向のみ・カットをまたいで連続。
+    # 動きの向きはシーンごとに自動割当。台本の scene.motion で個別指定も可
+    zoom: 0.12
   # auto: Macなら h264_videotoolbox、無ければ libx264
   encoder: auto
   crf: 20

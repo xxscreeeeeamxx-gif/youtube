@@ -77,17 +77,28 @@ def _cut_frame_counts(durs: list[float], fps: int) -> list[int]:
     return counts
 
 
-def _zoompan_expr(motion: str, zoom: float, n: int) -> tuple[str, str, str]:
-    """(z, x, y) の zoompan 式。on は 0..n-1 の出力フレーム番号。"""
+def _motion_progress(item: CutRender, fps: int, n: int) -> str:
+    """このカットが担うシーン全体の進捗 0→1 の式（連続モーション用）。
+
+    シーンをまたいで on を通し番号に変換することで、1画像が1方向に
+    ゆっくり動き続ける（カットごとにリセットしない）。
+    """
+    total_f = max(1, round(item.m_total * fps)) if item.m_total > 0 else n
+    start_f = round(item.m_start * fps)
+    return f"({start_f}+on)/{total_f}"
+
+
+def _zoompan_expr(motion: str, zoom: float, p: str) -> tuple[str, str, str]:
+    """(z, x, y) の zoompan 式。p はシーン全体の進捗式（0→1）。一方向のみ。"""
     z_max = 1.0 + zoom
     cx, cy = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
     if motion == "zoom-out":
-        return f"{z_max}-{zoom}*on/{n}", cx, cy
+        return f"{z_max}-{zoom}*({p})", cx, cy
     if motion == "pan-left":
-        return f"{z_max}", f"(iw-iw/zoom)*(1-on/{n})", "(ih-ih/zoom)/2"
+        return f"{z_max}", f"(iw-iw/zoom)*(1-({p}))", "(ih-ih/zoom)/2"
     if motion == "pan-right":
-        return f"{z_max}", f"(iw-iw/zoom)*on/{n}", "(ih-ih/zoom)/2"
-    return f"1+{zoom}*on/{n}", cx, cy  # zoom-in（既定）
+        return f"{z_max}", f"(iw-iw/zoom)*({p})", "(ih-ih/zoom)/2"
+    return f"1+{zoom}*({p})", cx, cy  # zoom-in（既定）
 
 
 def _telop_overlay_fc(ti: int, anim: str, dur: float = 0.4) -> str:
@@ -140,7 +151,7 @@ def _render_one_segment(
         fc = "[0:v]format=yuv420p,setsar=1[v0]"
     elif item.bg:
         # 背景だけを zoompan で動かし、前景（見出し・カード・文字）は静止 overlay
-        z, x, y = _zoompan_expr(item.motion, zoom, n)
+        z, x, y = _zoompan_expr(item.motion, zoom, _motion_progress(item, fps, n))
         inputs += ["-i", item.bg, "-loop", "1", "-framerate", str(fps), "-i", item.png]
         fc = (
             f"[0:v]scale={w * _UPSCALE}:{h * _UPSCALE}:force_original_aspect_ratio=increase,"
@@ -149,7 +160,7 @@ def _render_one_segment(
             f"[bg][1:v]overlay=0:0,format=yuv420p,setsar=1[v0]"
         )
     else:
-        z, x, y = _zoompan_expr(item.motion, zoom, n)
+        z, x, y = _zoompan_expr(item.motion, zoom, _motion_progress(item, fps, n))
         inputs += ["-i", item.png]
         fc = (
             f"[0:v]scale={w * _UPSCALE}:-2,"
@@ -200,7 +211,8 @@ def render_segments(
             vsig += f"|bg:{item.bg}:{st.st_size}:{int(st.st_mtime)}"
         if item.telop_png:
             vsig += f"|tel:{item.telop_png}:{item.telop_anim}"
-        key_src = f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|{vsig}|{enc[0]}"
+        key_src = (f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|"
+                   f"{item.m_start}:{item.m_total}|{vsig}|{enc[0]}")
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
         rel = f"frames/seg_{key}.mp4"
         if not (proj.root / rel).exists():

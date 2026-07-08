@@ -343,6 +343,9 @@ class CutRender:
     # テロップ（別レイヤーでアニメ付き overlay する）
     telop_png: str | None = None             # テロップだけを描いた透過PNGの相対パス
     telop_anim: str = "up"                   # 登場アニメ none/fade/up/down
+    # シーン単位の連続モーション（1画像を1方向にゆっくり動かす）用のタイムライン
+    m_start: float = 0.0                     # シーン先頭からこのカット開始までの秒数
+    m_total: float = 0.0                     # シーン全体の秒数（0ならこのカット単独）
 
 
 def _resolve_clip(cfg: Config, proj: Project, rel: str) -> str:
@@ -410,6 +413,27 @@ def render_frames(
         else:
             k += 1
 
+    # シーン（＝1画像）ごとに1方向の動きを決め、カットをまたいで連続させる。
+    # 明示指定が無ければシーン順に zoom-in → pan-left → zoom-out → pan-right を割当。
+    auto_cycle = ["zoom-in", "pan-left", "zoom-out", "pan-right"]
+    scene_motion: dict[str, str] = {}
+    seen_scene = 0
+    scene_total: dict[str, float] = {}
+    scene_start: dict[int, float] = {}
+    for scene in script.scenes:
+        cuts_here = [c for (c, s, _) in flat if s.id == scene.id]
+        if not cuts_here:
+            continue
+        m = scene.motion or next((c.motion for c in scene.cuts if c.motion), None) \
+            or auto_cycle[seen_scene % len(auto_cycle)]
+        scene_motion[scene.id] = m
+        seen_scene += 1
+        acc = 0.0
+        for c in cuts_here:
+            scene_start[c.index] = acc
+            acc += c.total_dur
+        scene_total[scene.id] = acc
+
     speakers = script.speakers_used()
     emotion_state = {s: "normal" for s in speakers}
     result: list[CutRender] = []
@@ -421,13 +445,11 @@ def render_frames(
         sp = span_of.get(ct.index)
         full = bool(sp and sp["full"])
 
-        # 動きの決定: 動画カットは静止、それ以外はズーム交互が既定
+        # 動きの決定: 動画カットは静止。それ以外はシーン単位の1方向モーション
         if sp or not motion_on:
             motion = "none"
-        elif cut.motion:
-            motion = cut.motion
         else:
-            motion = "zoom-in" if ct.index % 2 == 0 else "zoom-out"
+            motion = scene_motion.get(scene.id, "zoom-in")
 
         # 背景だけを動かすカットは前景（文字・カード）を透過PNGで分離して静止させる。
         # 全画面動画のカットも前景を透過にして動画の上に重ねる
@@ -479,5 +501,7 @@ def render_frames(
             v_full=full,
             telop_png=telop_png,
             telop_anim=telop_anim,
+            m_start=round(scene_start.get(ct.index, 0.0), 3),
+            m_total=round(scene_total.get(scene.id, 0.0), 3),
         ))
     return result

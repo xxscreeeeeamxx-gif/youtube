@@ -132,7 +132,17 @@ class Scene(BaseModel):
     title: str = ""            # 画面上部の見出しバー（空なら非表示）
     background: str = "default"
     short: bool = False        # True ならショート動画として切り出す
+    # このシーン（＝1画像）の動き。1方向のみ・カットをまたいで連続。
+    # 未指定ならシーンごとに自動割当（zoom-in→pan-left→zoom-out→pan-right）
+    motion: str | None = None
     cuts: list[Cut]
+
+    @field_validator("motion")
+    @classmethod
+    def motion_valid(cls, v: str | None) -> str | None:
+        if v is not None and v not in MOTIONS:
+            raise ValueError(f"scene.motion は {sorted(MOTIONS)} のいずれか")
+        return v
 
 
 class Script(BaseModel):
