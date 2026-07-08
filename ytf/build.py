@@ -96,14 +96,31 @@ def _render_one_segment(
 ) -> None:
     base = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error"]
     if item.video:
-        # ベースPNG（空カード）にクリップをカード内側へ overlay。クリップは無音・ループ
-        x0, y0, x1, y1 = item.box
-        bw, bh = x1 - x0, y1 - y0
-        fc = (
-            f"[1:v]scale={bw}:{bh}:force_original_aspect_ratio=decrease,setsar=1[clip];"
-            f"[0:v][clip]overlay=x={x0}+({bw}-w)/2:y={y0}+({bh}-h)/2,"
-            f"format=yuv420p,setsar=1[vout]"
-        )
+        # 動画クリップを埋め込む。speed で再生速度を変え（setpts）、offset で
+        # このカットが再生する位置を決める（複数カットにまたがると連続再生になる）。
+        # クリップは無音・尺不足なら無限ループ。
+        spd = max(0.1, item.v_speed)
+        off = item.v_offset
+        if item.v_full:
+            # 全画面: クリップを敷き、前景（透過PNGの見出し・テロップ）を上に重ねる。
+            # setpts で速度を変えると素の出力fpsが変わるため fps で固定し直す
+            fc = (
+                f"[1:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
+                f"setpts=PTS/{spd},trim=start={off:.3f},setpts=PTS-STARTPTS,fps={fps},"
+                f"format=yuv420p,setsar=1[clip];"
+                f"[clip][0:v]overlay=0:0,format=yuv420p,setsar=1[vout]"
+            )
+        else:
+            # カード内: ベースPNG（空カード付き）の枠内にクリップを収める
+            x0, y0, x1, y1 = item.box
+            bw, bh = x1 - x0, y1 - y0
+            fc = (
+                f"[1:v]scale={bw}:{bh}:force_original_aspect_ratio=decrease,"
+                f"setpts=PTS/{spd},trim=start={off:.3f},setpts=PTS-STARTPTS,fps={fps},"
+                f"setsar=1[clip];"
+                f"[0:v][clip]overlay=x={x0}+({bw}-w)/2:y={y0}+({bh}-h)/2,"
+                f"format=yuv420p,setsar=1[vout]"
+            )
         cmd = base + [
             "-loop", "1", "-framerate", str(fps), "-i", item.png,
             "-stream_loop", "-1", "-i", item.video,
@@ -159,7 +176,8 @@ def render_segments(
         vsig = ""
         if item.video:
             st = Path(item.video).stat()
-            vsig = f"{item.video}:{st.st_size}:{int(st.st_mtime)}:{item.box}"
+            vsig = (f"{item.video}:{st.st_size}:{int(st.st_mtime)}:{item.box}:"
+                    f"{item.v_offset}:{item.v_speed}:{item.v_full}")
         if item.bg:
             st = Path(item.bg).stat()
             vsig += f"|bg:{item.bg}:{st.st_size}:{int(st.st_mtime)}"

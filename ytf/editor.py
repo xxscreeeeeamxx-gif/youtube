@@ -54,7 +54,7 @@ def _render_preview(cfg: Config, proj: Project, payload: dict) -> bytes:
         chars=[],
         slide=cut.slide,
         image=cut.image,
-        video_card=bool(cut.video and cut.slide is None),
+        video_card=bool(cut.video and cut.slide is None and not cut.video_full),
         telops=cut.telops,
     )
     buf = BytesIO()

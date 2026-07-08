@@ -83,7 +83,10 @@ class Cut(BaseModel):
     telops: list[Telop] = Field(default_factory=list)
     slide: Slide | None = None
     image: str | None = None  # プロジェクト相対 or assets相対の画像パス
-    video: str | None = None  # カード内で再生する動画クリップ（音は使わずナレーション優先）
+    video: str | None = None  # 動画クリップ（音は使わずナレーション優先）
+    video_span: int = 1       # この動画を何カット分にまたがって連続再生するか
+    video_speed: float = 1.0  # 再生速度。0.5でスロー、2.0で倍速
+    video_full: bool = False  # True で全画面表示（False はカード内）
     motion: str | None = None  # 画面の動き。未指定は自動（ゆっくりズーム交互）
     pause_after: float | None = None  # 秒。None は channel.yaml の既定値
 
@@ -99,6 +102,20 @@ class Cut(BaseModel):
     def motion_valid(cls, v: str | None) -> str | None:
         if v is not None and v not in MOTIONS:
             raise ValueError(f"motion は {sorted(MOTIONS)} のいずれか")
+        return v
+
+    @field_validator("video_span")
+    @classmethod
+    def span_valid(cls, v: int) -> int:
+        if v < 1:
+            raise ValueError("video_span は1以上")
+        return v
+
+    @field_validator("video_speed")
+    @classmethod
+    def speed_valid(cls, v: float) -> float:
+        if not 0.1 <= v <= 4.0:
+            raise ValueError("video_speed は 0.1〜4.0")
         return v
 
 

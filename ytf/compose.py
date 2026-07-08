@@ -276,9 +276,13 @@ class CutRender:
     dur: float                               # 表示秒（音声実測 + ポーズ）
     motion: str                              # zoom-in/zoom-out/pan-left/pan-right/none
     video: str | None                        # 埋め込みクリップの絶対パス（無ければNone）
-    box: tuple[int, int, int, int] | None    # クリップを載せるカード内側領域
+    box: tuple[int, int, int, int] | None    # クリップを載せるカード内側領域（Noneで全画面）
     bg: str | None = None                    # 背景画像の絶対パス。あれば背景だけを動かし
                                              # 前景（見出し・カード・文字）は静止させる
+    # 複数カットにまたがる動画（span）用: 動画側の再生開始オフセットと速度
+    v_offset: float = 0.0                    # このカットが再生する動画内の開始秒（速度適用後の時間軸）
+    v_speed: float = 1.0                     # 再生速度（0.5でスロー）
+    v_full: bool = False                     # 全画面表示か
 
 
 def _resolve_clip(cfg: Config, proj: Project, rel: str) -> str:
@@ -314,37 +318,62 @@ def render_frames(
         for i, cut in enumerate(scene.cuts):
             cuts_meta[(scene.id, i)] = (scene, cut)
 
-    speakers = script.speakers_used()
-    emotion_state = {s: "normal" for s in speakers}
+    # 出力対象のカットを平坦化（timings順＝台本の通し順）
+    flat: list[tuple[CutTiming, "object", "object"]] = []
     scene_counters: dict[str, int] = {}
-    result: list[CutRender] = []
-    sub = "v" if vertical else "h"
-    manifest_used: set[str] = set()
-
     for ct in timings:
         i = scene_counters.get(ct.scene_id, 0)
         scene_counters[ct.scene_id] = i + 1
         scene, cut = cuts_meta[(ct.scene_id, i)]
         if only_scene and scene.id != only_scene:
             continue
-        emotion_state[cut.speaker] = cut.emotion
+        flat.append((ct, scene, cut))
 
-        # 動画クリップ（slide があるカットでは使わない）
-        video_path = None
+    # 動画スパンの割り当て: video を持つカットが video_span カット分を占有し、
+    # 後続カットは同じ動画の続き（オフセット）を再生する
+    span_of: dict[int, dict] = {}
+    k = 0
+    while k < len(flat):
+        _, _, cut = flat[k]
         if cut.video and cut.slide is None:
-            video_path = _resolve_clip(cfg, proj, cut.video)
+            src = _resolve_clip(cfg, proj, cut.video)
+            span_len = min(cut.video_span, len(flat) - k)
+            members = flat[k:k + span_len]
+            off = 0.0
+            for (mct, _, _) in members:
+                span_of[mct.index] = {
+                    "src": src, "offset": round(off, 3),
+                    "speed": float(cut.video_speed), "full": bool(cut.video_full),
+                }
+                off += mct.total_dur
+            k += span_len
+        else:
+            k += 1
 
-        # 動きの決定: クリップ埋め込み時は静止、それ以外はズーム交互が既定
-        if video_path or not motion_on:
+    speakers = script.speakers_used()
+    emotion_state = {s: "normal" for s in speakers}
+    result: list[CutRender] = []
+    sub = "v" if vertical else "h"
+    manifest_used: set[str] = set()
+
+    for ct, scene, cut in flat:
+        emotion_state[cut.speaker] = cut.emotion
+        sp = span_of.get(ct.index)
+        full = bool(sp and sp["full"])
+
+        # 動きの決定: 動画カットは静止、それ以外はズーム交互が既定
+        if sp or not motion_on:
             motion = "none"
         elif cut.motion:
             motion = cut.motion
         else:
             motion = "zoom-in" if ct.index % 2 == 0 else "zoom-out"
 
-        # 背景だけを動かすカットは、前景（文字・カード）を透過PNGで分離して静止させる
-        fg_only = motion != "none"
-        bg_path = str(background_path(cfg, scene.background)) if fg_only else None
+        # 背景だけを動かすカットは前景（文字・カード）を透過PNGで分離して静止させる。
+        # 全画面動画のカットも前景を透過にして動画の上に重ねる
+        fg_only = motion != "none" or full
+        bg_path = str(background_path(cfg, scene.background)) if (fg_only and not full) else None
+        card = bool(sp) and not full
 
         chars = [(s, emotion_state[s], s == cut.speaker) for s in speakers]
         header = scene.title or (script.meta.title if vertical else "")
@@ -352,7 +381,7 @@ def render_frames(
             [scene.background, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
              [t.model_dump() for t in cut.telops],
-             bool(video_path), fg_only, sub],
+             bool(sp), card, full, fg_only, sub],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
@@ -360,15 +389,18 @@ def render_frames(
         path = proj.root / rel
         if key not in manifest_used and not path.exists():
             composer.compose_cut(scene.background, header, chars, cut.slide,
-                                 cut.image, video_card=bool(video_path),
+                                 cut.image, video_card=card,
                                  fg_only=fg_only, telops=cut.telops).save(path)
         manifest_used.add(key)
         result.append(CutRender(
             png=rel,
             dur=ct.total_dur,
             motion=motion,
-            video=video_path,
-            box=composer.card_inner_box() if video_path else None,
+            video=sp["src"] if sp else None,
+            box=composer.card_inner_box() if card else None,
             bg=bg_path,
+            v_offset=sp["offset"] if sp else 0.0,
+            v_speed=sp["speed"] if sp else 1.0,
+            v_full=full,
         ))
     return result

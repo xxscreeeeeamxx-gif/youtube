@@ -145,8 +145,14 @@ function renderForm() {
     </div>
     <div class="row">
       <div><label>画像パス（カード内表示）</label><input type="text" id="image" value="${esc(c.image)}" oninput="upd()"></div>
-      <div><label>動画パス（カード内再生）</label><input type="text" id="video" value="${esc(c.video)}" oninput="upd()"></div>
+      <div><label>動画パス</label><input type="text" id="video" value="${esc(c.video)}" oninput="upd()"></div>
     </div>
+    <div class="row">
+      <div><label>動画を何カット分続けるか</label><input type="number" id="vspan" min="1" value="${c.video_span ?? 1}" oninput="upd()"></div>
+      <div><label>再生速度（0.5=スロー / 2=倍速）</label><input type="number" step="0.1" min="0.1" max="4" id="vspeed" value="${c.video_speed ?? 1.0}" oninput="upd()"></div>
+      <div><label>全画面で表示</label><input type="checkbox" id="vfull" ${c.video_full?"checked":""} onchange="upd()"></div>
+    </div>
+    <div class="hint">動画は先頭カットにだけ設定。「何カット分」で複数カットにまたがって連続再生されます</div>
   </fieldset>
 
   <fieldset><legend>テロップ（重要な一言を大きく）</legend><div id="telops">`;
@@ -202,6 +208,9 @@ function upd() {
   c.pause_after = f("pause").value === "" ? null : parseFloat(f("pause").value);
   c.image = f("image").value || null;
   c.video = f("video").value || null;
+  c.video_span = Math.max(1, parseInt(f("vspan").value) || 1);
+  c.video_speed = parseFloat(f("vspeed").value) || 1.0;
+  c.video_full = f("vfull").checked;
   (c.telops || []).forEach((t, i) => {
     t.text = f(`tp${i}_text`).value;
     t.size = f(`tp${i}_size`).value;
@@ -322,14 +331,17 @@ async function mediaSearch() {
     card.innerHTML = `<img src="${it.thumb}" loading="lazy" alt="">
       <div class="meta"><span class="badge">${it.source}</span> ${it.license || ""}<br>${(it.author||"").slice(0,40)}</div>
       <div class="acts">
-        ${isVid ? "" : `<button class="btn small" onclick="insertMedia(${i},'background')">背景に</button>`}
-        <button class="btn small" onclick="insertMedia(${i},'${isVid?"video":"image"}')">カードに</button>
+        ${isVid
+          ? `<button class="btn small" onclick="insertMedia(${i},'video',false)">カードに</button>
+             <button class="btn small" onclick="insertMedia(${i},'video',true)">全画面に</button>`
+          : `<button class="btn small" onclick="insertMedia(${i},'background')">背景に</button>
+             <button class="btn small" onclick="insertMedia(${i},'image')">カードに</button>`}
       </div>`;
     g.appendChild(card);
   });
 }
 
-async function insertMedia(i, kind) {
+async function insertMedia(i, kind, full) {
   const it = MRESULTS[i];
   f("mhint").textContent = "ダウンロード中…";
   const r = await fetch("/api/media/insert", {
@@ -340,7 +352,7 @@ async function insertMedia(i, kind) {
   if (!r.ok) { f("mhint").textContent = "挿入失敗: " + (j.error || r.status); return; }
   const c = cur(), sc = DATA.scenes[SI];
   if (j.kind === "background") sc.background = j.value;
-  else if (j.kind === "video") { c.video = j.value; c.slide = null; }
+  else if (j.kind === "video") { c.video = j.value; c.slide = null; c.video_full = !!full; }
   else c.image = j.value;
   dirty = true;
   closeMedia();
