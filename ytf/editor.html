@@ -51,6 +51,17 @@
   .mcard .acts { display: flex; gap: 4px; padding: 6px; border-top: 1px solid #2a2d38; }
   .mcard .acts .btn { flex: 1; text-align: center; }
   .badge { font-size: 10px; padding: 1px 5px; border-radius: 4px; background: #26304a; color: #9fb2e0; }
+  #stripModal, #videoModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 50; padding: 30px; }
+  #stripPanel, #videoPanel { background: #181b23; border: 1px solid #2a2d38; border-radius: 10px; max-width: 1150px; height: 100%;
+                margin: 0 auto; padding: 14px 18px; display: flex; flex-direction: column; }
+  #stripGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; overflow-y: auto; margin-top: 10px; }
+  .scut { border: 1px solid #2a2d38; border-radius: 8px; overflow: hidden; background: #14161c; cursor: pointer; }
+  .scut:hover { border-color: #5b8def; }
+  .scut img { width: 100%; display: block; }
+  .scut .cap { font-size: 10px; color: #9aa0b0; padding: 3px 6px; line-height: 1.4; }
+  .scut .cap b { color: #7fd0a0; font-weight: normal; }
+  #videoWrap { flex: 1; display: flex; align-items: center; justify-content: center; margin-top: 10px; }
+  #videoWrap video { max-width: 100%; max-height: 100%; border-radius: 8px; }
 </style>
 </head>
 <body>
@@ -61,13 +72,36 @@
 <div id="main">
   <div class="topbar">
     <button class="btn primary" onclick="save()">保存 (⌘S)</button>
-    <button class="btn" onclick="listen()">▶ このセリフを聴く</button>
+    <button class="btn" onclick="openStrip()">🎞 全体プレビュー</button>
+    <button class="btn" onclick="openVideo()">▶ 完成動画</button>
+    <button class="btn" onclick="listen()">🔊 このセリフを聴く</button>
     <button class="btn" onclick="openMedia()">🔍 素材を探す</button>
     <label style="display:inline;margin:0"><input type="checkbox" id="vertical" onchange="schedulePreview()"> 縦(ショート)で見る</label>
     <span id="status"></span>
   </div>
   <img id="preview" alt="プレビュー">
   <div id="form"></div>
+</div>
+
+<div id="stripModal">
+  <div id="stripPanel">
+    <div class="mrow">
+      <b style="font-size:14px">全体プレビュー（クリックでそのカットへ）</b>
+      <button class="btn" style="margin-left:auto" onclick="closeStrip()">閉じる</button>
+    </div>
+    <div id="mhint2" class="hint"></div>
+    <div id="stripGrid"></div>
+  </div>
+</div>
+
+<div id="videoModal">
+  <div id="videoPanel">
+    <div class="mrow">
+      <b style="font-size:14px">完成動画（ビルド済みの out/video.mp4）</b>
+      <button class="btn" style="margin-left:auto" onclick="closeVideo()">閉じる</button>
+    </div>
+    <div id="videoWrap"></div>
+  </div>
 </div>
 
 <div id="mediaModal">
@@ -292,6 +326,41 @@ function setStatus(msg, err) {
   el.className = err ? "err" : "";
 }
 
+async function openStrip() {
+  f("stripModal").style.display = "block";
+  f("mhint2").textContent = "合成中…（全カットのプレビューを作成しています）";
+  f("stripGrid").innerHTML = "";
+  const r = await fetch("/api/filmstrip");
+  const j = await r.json();
+  if (!r.ok) { f("mhint2").textContent = "失敗: " + (j.error || r.status); return; }
+  f("mhint2").textContent = j.cuts.length + " カット。クリックでそのカットへジャンプします。";
+  const g = f("stripGrid");
+  g.innerHTML = "";
+  j.cuts.forEach((c, n) => {
+    const d = document.createElement("div");
+    d.className = "scut";
+    const tag = c.tags.length ? `<b>[${c.tags.join("")}]</b> ` : "";
+    d.innerHTML = `<img src="${c.img}" loading="lazy">
+      <div class="cap">${n + 1}. ${esc(c.scene)}<br>${tag}${esc(c.text)}</div>`;
+    d.onclick = () => { select(c.si, c.ci); closeStrip(); };
+    g.appendChild(d);
+  });
+}
+function closeStrip() { f("stripModal").style.display = "none"; }
+
+function openVideo() {
+  f("videoModal").style.display = "block";
+  f("videoWrap").innerHTML =
+    `<video controls autoplay src="/api/video?t=${Date.now()}"
+       onerror="f('videoWrap').innerHTML='<div class=hint>まだビルドされていません。ターミナルで ytf make ${DATA ? "" : ""}&lt;slug&gt; を実行してください。</div>'"></video>`;
+}
+function closeVideo() {
+  const v = f("videoWrap").querySelector("video");
+  if (v) v.pause();
+  f("videoModal").style.display = "none";
+  f("videoWrap").innerHTML = "";
+}
+
 let MRESULTS = [];
 function openMedia() {
   f("mediaModal").style.display = "block";
@@ -362,7 +431,7 @@ async function insertMedia(i, kind, full) {
 
 document.addEventListener("keydown", e => {
   if ((e.metaKey || e.ctrlKey) && e.key === "s") { e.preventDefault(); save(); }
-  if (e.key === "Escape") closeMedia();
+  if (e.key === "Escape") { closeMedia(); closeStrip(); closeVideo(); }
 });
 window.addEventListener("beforeunload", e => { if (dirty) e.preventDefault(); });
 load();
