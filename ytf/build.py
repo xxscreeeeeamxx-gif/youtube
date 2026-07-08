@@ -115,12 +115,18 @@ def _telop_overlay_fc(ti: int, inl: str, outl: str, anim: str, dur: float = 0.4)
     return fade + f"{inl}[tel]overlay=x=0:y='{y}',format=yuv420p{outl}"
 
 
-def _trans_overlay_fc(ti: int, inl: str, outl: str, w: int) -> str:
-    """章トランジション帯[ti]を左からスライドイン→保持→右へ退場で重ねる。"""
+def _trans_overlay_fc(ti: int, inl: str, outl: str, w: int, lead: float) -> str:
+    """章トランジション[ti]を左からスライドイン→lead秒保持→右へ退場で重ねる。
+
+    この間ナレーションは無音（voice側で lead 秒の間を確保している）。
+    """
+    hold = max(0.6, lead)          # 保持は間の長さに合わせる
+    out_s = hold                    # 退場開始
+    end = hold + 0.45               # 退場完了
     x = (f"if(lt(t\\,0.4)\\,-{w}+{w}*t/0.4\\,"
-         f"if(lt(t\\,1.5)\\,0\\,{w}*(t-1.5)/0.5))")
+         f"if(lt(t\\,{out_s})\\,0\\,{w}*(t-{out_s})/0.45))")
     return (f"[{ti}:v]format=rgba[tr];"
-            f"{inl}[tr]overlay=x='{x}':y=0:enable='lt(t\\,2.0)',format=yuv420p{outl}")
+            f"{inl}[tr]overlay=x='{x}':y=0:enable='lt(t\\,{end})',format=yuv420p{outl}")
 
 
 def _stat_fc(inl: str, outl: str, stat: dict, font: str,
@@ -226,7 +232,7 @@ def _render_one_segment(
         ti = _count_inputs(inputs)
         inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.trans_png]
         out = nxt()
-        fc += ";" + _trans_overlay_fc(ti, cur, out, w)
+        fc += ";" + _trans_overlay_fc(ti, cur, out, w, item.trans_lead)
         cur = out
 
     cmd = base + inputs + ["-filter_complex", fc, "-map", cur,
@@ -265,7 +271,7 @@ def render_segments(
         if item.telop_png:
             vsig += f"|tel:{item.telop_png}:{item.telop_anim}"
         if item.trans_png:
-            vsig += f"|trans:{item.trans_png}"
+            vsig += f"|trans:{item.trans_png}:{item.trans_lead}"
         if item.stat:
             vsig += f"|stat:{item.stat}"
         key_src = (f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|"
@@ -402,8 +408,8 @@ def collect_se_events(cfg: Config, proj: Project,
         prev_scene = ct.scene_id
         if scene_first and ct.scene_title and trans_on:
             p = se_path(cfg.get("video", "transition", "se", default="don"))
-            if p:
-                events.append((ct.start, p))
+            if p:  # トランジションはカット開始の lead 秒前から始まる
+                events.append((max(0.0, ct.start - getattr(ct, "lead", 0.0)), p))
         if cut.se:
             p = se_path(cut.se)
             if p:

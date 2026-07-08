@@ -38,6 +38,7 @@ class CutTiming:
     total_dur: float    # 音声 + 後続ポーズ
     scene_start: bool   # シーン先頭カットか（章立てに使う）
     short: bool         # ショート切出対象シーンか
+    lead: float = 0.0   # このカットの前に入れる無音（章トランジション用）
 
 
 class VoicevoxClient:
@@ -178,12 +179,20 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
     cache_dir.mkdir(parents=True, exist_ok=True)
     dict_sig = json.dumps(load_dictionary(cfg), ensure_ascii=False, sort_keys=True)
 
+    # 章の切替でトランジションを見せるための、先頭カット前の無音（間）
+    trans_on = bool(cfg.get("video", "transition", "enabled", default=True))
+    trans_lead = float(cfg.get("video", "transition", "lead", default=1.8))
+
     timings: list[CutTiming] = []
     t = 0.0
     idx = 0
     hits = 0
-    for scene in script.scenes:
+    for si, scene in enumerate(script.scenes):
         for ci, cut in enumerate(scene.cuts):
+            # 章の頭（最初のシーンを除く）に無音の間を入れる
+            lead = trans_lead if (ci == 0 and si > 0 and trans_on and scene.title) else 0.0
+            if lead:
+                t += lead
             display, spoken = split_reading(cut.text)
             if cut.reading:
                 # 誤読の手動修正: 読み上げだけを差し替える（表示は text のまま）
@@ -224,6 +233,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                     total_dur=round(dur + pause, 3),
                     scene_start=(ci == 0),
                     short=scene.short,
+                    lead=round(lead, 3),
                 )
             )
             t += dur + pause
@@ -246,6 +256,9 @@ def concat_narration(proj: Project, timings: list[CutTiming]) -> Path:
         w.setsampwidth(2)
         w.setframerate(SAMPLE_RATE)
         for ct in timings:
+            lead_frames = int(round(ct.lead * SAMPLE_RATE))
+            if lead_frames > 0:  # 章トランジション用の無音の間
+                w.writeframes(b"\x00\x00" * lead_frames)
             with wave.open(str(proj.audio_dir / ct.wav), "rb") as src:
                 if (src.getframerate(), src.getnchannels(), src.getsampwidth()) != (
                     SAMPLE_RATE, 1, 2,

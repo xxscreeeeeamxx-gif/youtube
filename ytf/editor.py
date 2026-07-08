@@ -12,7 +12,9 @@ from __future__ import annotations
 
 import base64
 import json
+import os
 import re
+import sys
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from io import BytesIO
@@ -41,6 +43,75 @@ def _save_script(proj: Project, script: Script) -> None:
                           allow_unicode=True, sort_keys=False, width=200)
     path.write_text("\n".join(header) + ("\n" if header else "") + body,
                     encoding="utf-8")
+
+
+# ビルド（エンコード）の進行状況（サーバ内で共有）
+BUILD_STATE: dict = {"running": False, "done": False, "error": "", "line": ""}
+
+
+def _audio_lists(cfg: Config) -> dict:
+    def names(kind: str) -> list[str]:
+        d = cfg.root / "assets" / kind
+        return sorted(p.name for p in d.glob("*.mp3")) if d.exists() else []
+    return {
+        "se": names("se"),
+        "bgm": names("bgm"),
+        "bgm_current": Path(cfg.get("video", "bgm", "file", default="") or "").name,
+        "bgm_volume": cfg.get("video", "bgm", "volume_db", default=-20),
+        "se_volume": cfg.get("video", "se_volume_db", default=-3),
+    }
+
+
+def _set_bgm(cfg: Config, body: dict) -> None:
+    """channel.yaml の bgm.file / 音量を、コメントを保ったまま行単位で書き換える。"""
+    import re as _re
+    path = cfg.root / "channel.yaml"
+    text = path.read_text(encoding="utf-8")
+    if "file" in body:
+        val = f"assets/bgm/{body['file']}" if body["file"] else "null"
+        text = _re.sub(r"(?m)^(\s*file:).*$",
+                       lambda m: f"{m.group(1)} {val}", text, count=1)
+    if "bgm_volume" in body:
+        text = _re.sub(r"(?m)^(\s*volume_db:).*$",
+                       lambda m: f"{m.group(1)} {int(body['bgm_volume'])}", text, count=1)
+    if "se_volume" in body:
+        text = _re.sub(r"(?m)^(\s*se_volume_db:).*$",
+                       lambda m: f"{m.group(1)} {int(body['se_volume'])}", text, count=1)
+    path.write_text(text, encoding="utf-8")
+
+
+def _start_build(cfg: Config, proj: Project) -> dict:
+    import subprocess
+    import threading
+
+    if BUILD_STATE["running"]:
+        return {"ok": False, "error": "already running"}
+    BUILD_STATE.update(running=True, done=False, error="", line="開始…")
+
+    def worker():
+        try:
+            p = subprocess.Popen(
+                [sys.executable, "-m", "ytf.cli", "make", proj.root.name],
+                cwd=str(cfg.root), stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT, text=True, bufsize=1,
+                env={**os.environ, "PYTHONPATH": str(cfg.root)},
+            )
+            for line in p.stdout:
+                line = line.strip()
+                if line and "Warning" not in line and "warnings.warn" not in line:
+                    BUILD_STATE["line"] = line
+            p.wait()
+            if p.returncode == 0:
+                BUILD_STATE.update(done=True, line="完了")
+            else:
+                BUILD_STATE.update(error=BUILD_STATE.get("line", "失敗"))
+        except Exception as e:  # noqa: BLE001
+            BUILD_STATE["error"] = str(e)
+        finally:
+            BUILD_STATE["running"] = False
+
+    threading.Thread(target=worker, daemon=True).start()
+    return {"ok": True}
 
 
 def _render_preview(cfg: Config, proj: Project, payload: dict) -> bytes:
@@ -159,8 +230,22 @@ def make_handler(cfg: Config, proj: Project):
                     self._json(400, {"error": str(e)})
             elif self.path.startswith("/api/video"):
                 self._serve_video(proj.root / "out" / "video.mp4")
+            elif self.path == "/api/audiolist":
+                self._json(200, _audio_lists(cfg))
+            elif self.path.startswith("/api/se/") or self.path.startswith("/api/bgm/"):
+                kind = "se" if "/se/" in self.path else "bgm"
+                name = self.path.rsplit("/", 1)[-1].split("?")[0]
+                self._serve_audio(cfg.root / "assets" / kind / name)
+            elif self.path == "/api/build/status":
+                self._json(200, dict(BUILD_STATE))
             else:
                 self._send(404, b"not found", "text/plain")
+
+        def _serve_audio(self, path: Path) -> None:
+            if not path.exists() or ".." in path.name:
+                self._json(404, {"error": "not found"})
+                return
+            self._send(200, path.read_bytes(), "audio/mpeg")
 
         def _serve_video(self, path: Path) -> None:
             if not path.exists():
@@ -215,6 +300,11 @@ def make_handler(cfg: Config, proj: Project):
                     b = self._body()
                     self._json(200, insert_media(cfg, b.get("item") or {},
                                                  b.get("kind", "image")))
+                elif self.path == "/api/bgm/set":
+                    _set_bgm(cfg, self._body())
+                    self._json(200, {"ok": True})
+                elif self.path == "/api/build":
+                    self._json(200, _start_build(cfg, proj))
                 else:
                     self._send(404, b"not found", "text/plain")
             except ConnectionError as e:

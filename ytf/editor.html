@@ -62,6 +62,8 @@
   .scut .cap b { color: #7fd0a0; font-weight: normal; }
   #videoWrap { flex: 1; display: flex; align-items: center; justify-content: center; margin-top: 10px; }
   #videoWrap video { max-width: 100%; max-height: 100%; border-radius: 8px; }
+  #bgmModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 56; padding: 40px; }
+  #bgmPanel { background: #181b23; border: 1px solid #2a2d38; border-radius: 10px; max-width: 640px; margin: 0 auto; padding: 16px 20px; }
   #playerModal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.72); z-index: 55; padding: 30px; }
   #playerPanel { background: #181b23; border: 1px solid #2a2d38; border-radius: 10px; max-width: 1100px; height: 100%;
                  margin: 0 auto; padding: 14px 18px; display: flex; flex-direction: column; }
@@ -79,9 +81,11 @@
 <div id="main">
   <div class="topbar">
     <button class="btn primary" onclick="save()">保存 (⌘S)</button>
+    <button class="btn" onclick="startBuild()">🎬 書き出し</button>
     <button class="btn" onclick="openPlayer()">▶ 通し再生（音声付き）</button>
     <button class="btn" onclick="openStrip()">🎞 全体プレビュー</button>
     <button class="btn" onclick="openVideo()">完成動画(mp4)</button>
+    <button class="btn" onclick="openBgm()">🎵 BGM</button>
     <button class="btn" onclick="listen()">🔊 このセリフを聴く</button>
     <button class="btn" onclick="openMedia()">🔍 素材を探す</button>
     <label style="display:inline;margin:0"><input type="checkbox" id="vertical" onchange="schedulePreview()"> 縦(ショート)で見る</label>
@@ -89,6 +93,16 @@
   </div>
   <img id="preview" alt="プレビュー">
   <div id="form"></div>
+</div>
+
+<div id="bgmModal">
+  <div id="bgmPanel">
+    <div class="mrow">
+      <b style="font-size:14px">BGM と音量</b>
+      <button class="btn" style="margin-left:auto" onclick="closeBgm()">閉じる</button>
+    </div>
+    <div id="bgmBody" class="hint">読み込み中…</div>
+  </div>
 </div>
 
 <div id="playerModal">
@@ -139,6 +153,7 @@
 </div>
 <script>
 let DATA = null, SI = 0, CI = 0, dirty = false, previewTimer = null;
+let SE_LIST = [], AUDIO_INFO = null, sePlayer = null;
 
 const EMOTIONS = ["normal","happy","surprised","thinking","angry","sad"];
 const MOTIONS = ["","zoom-in","zoom-out","pan-left","pan-right","none"];
@@ -146,11 +161,78 @@ const SIZES = ["sm","md","lg","xl"];
 const POSITIONS = ["top-left","top-center","top-right","middle-left","middle-center","middle-right","bottom-left","bottom-center","bottom-right"];
 
 async function load() {
+  try {
+    AUDIO_INFO = await (await fetch("/api/audiolist")).json();
+    SE_LIST = AUDIO_INFO.se || [];
+  } catch (e) { SE_LIST = []; }
   const r = await fetch("/api/script");
   const j = await r.json();
   DATA = j.script;
   document.getElementById("projname").textContent = j.name;
   renderList(); select(0, 0);
+}
+
+function playAudio(url) {
+  if (sePlayer) sePlayer.pause();
+  sePlayer = new Audio(url); sePlayer.play();
+}
+function playSE() {
+  const s = f("se").value;
+  if (s) playAudio("/api/se/" + encodeURIComponent(s) + "?t=" + Date.now());
+}
+
+// ---- BGM 選択 ----
+function openBgm() {
+  const a = AUDIO_INFO || {bgm: [], bgm_current: "", bgm_volume: -20, se_volume: -3};
+  const opts = ['<option value="">（BGMなし）</option>']
+    .concat((a.bgm || []).map(b => `<option value="${b}" ${a.bgm_current===b?"selected":""}>${b}</option>`))
+    .join("");
+  f("bgmBody").innerHTML = `
+    <label>BGMファイル（assets/bgm/ に自分のmp3を置くと選べます）</label>
+    <div class="mrow">
+      <select id="bgmSel" style="flex:1">${opts}</select>
+      <button class="btn small" onclick="previewBgm()">▶ 試聴</button>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <div><label>BGM音量(dB) 小さいほど静か</label><input type="number" id="bgmVol" value="${a.bgm_volume}"></div>
+      <div><label>効果音の音量(dB)</label><input type="number" id="seVol" value="${a.se_volume}"></div>
+    </div>
+    <div class="mrow" style="margin-top:12px;justify-content:flex-end">
+      <button class="btn primary" onclick="saveBgm()">この設定で保存</button></div>
+    <div class="hint" style="margin-top:8px">保存すると channel.yaml に反映。次のビルドから有効です。</div>`;
+  f("bgmModal").style.display = "block";
+}
+function closeBgm() { if (sePlayer) sePlayer.pause(); f("bgmModal").style.display = "none"; }
+function previewBgm() {
+  const b = f("bgmSel").value;
+  if (b) playAudio("/api/bgm/" + encodeURIComponent(b) + "?t=" + Date.now());
+}
+async function saveBgm() {
+  const body = {file: f("bgmSel").value, bgm_volume: parseInt(f("bgmVol").value),
+                se_volume: parseInt(f("seVol").value)};
+  const r = await fetch("/api/bgm/set", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)});
+  if (r.ok) { AUDIO_INFO.bgm_current = body.file; AUDIO_INFO.bgm_volume = body.bgm_volume; AUDIO_INFO.se_volume = body.se_volume;
+    closeBgm(); setStatus("BGM設定を保存しました", false); }
+  else setStatus("保存失敗", true);
+}
+
+// ---- 書き出し（エンコード） ----
+let buildTimer = null;
+async function startBuild() {
+  if (dirty && !confirm("未保存の変更があります。先に保存しますか？（キャンセルで保存せず続行）")) { await save(); }
+  const r = await fetch("/api/build", {method:"POST"});
+  const j = await r.json();
+  if (!j.ok) { setStatus("ビルド開始できず: " + (j.error||""), true); return; }
+  setStatus("🎬 書き出し中…", false);
+  clearInterval(buildTimer);
+  buildTimer = setInterval(pollBuild, 1200);
+}
+async function pollBuild() {
+  const s = await (await fetch("/api/build/status")).json();
+  if (s.running) { setStatus("🎬 書き出し中… " + (s.line||""), false); return; }
+  clearInterval(buildTimer);
+  if (s.error) { setStatus("書き出し失敗: " + s.error, true); }
+  else { setStatus("✅ 書き出し完了。完成動画で確認できます", false); }
 }
 
 function cur() { return DATA.scenes[SI].cuts[CI]; }
@@ -208,6 +290,14 @@ function renderForm() {
       <div><label>全画面で表示</label><input type="checkbox" id="vfull" ${c.video_full?"checked":""} onchange="upd()"></div>
     </div>
     <div class="hint">動画は先頭カットにだけ設定。「何カット分」で複数カットにまたがって連続再生されます</div>
+    <div class="row">
+      <div><label>効果音（このカットの頭で鳴る）</label>
+        <select id="se" onchange="upd()">
+          <option value="">（なし）</option>
+          ${(SE_LIST||[]).map(s=>`<option value="${s}" ${c.se===s?"selected":""}>${s}</option>`).join("")}
+        </select></div>
+      <div><button class="btn small" onclick="playSE()">▶ 試聴</button></div>
+    </div>
   </fieldset>
 
   <fieldset><legend>テロップ（重要な一言を大きく）</legend><div id="telops">`;
@@ -266,6 +356,7 @@ function upd() {
   c.video_span = Math.max(1, parseInt(f("vspan").value) || 1);
   c.video_speed = parseFloat(f("vspeed").value) || 1.0;
   c.video_full = f("vfull").checked;
+  c.se = f("se").value || null;
   (c.telops || []).forEach((t, i) => {
     t.text = f(`tp${i}_text`).value;
     t.size = f(`tp${i}_size`).value;
@@ -550,7 +641,7 @@ async function insertMedia(i, kind, full) {
 
 document.addEventListener("keydown", e => {
   if ((e.metaKey || e.ctrlKey) && e.key === "s") { e.preventDefault(); save(); }
-  if (e.key === "Escape") { closeMedia(); closeStrip(); closeVideo(); closePlayer(); }
+  if (e.key === "Escape") { closeMedia(); closeStrip(); closeVideo(); closePlayer(); closeBgm(); }
 });
 window.addEventListener("beforeunload", e => { if (dirty) e.preventDefault(); });
 load();

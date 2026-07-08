@@ -155,7 +155,7 @@ class Composer:
         title_f = self.font(int(self.lay.slide_font * 1.3))
         title_zone = 0
         if slide.title:
-            title_zone = int(self.lay.slide_font * 1.3) + 20 + 6 + 44
+            title_zone = int(self.lay.slide_font * 1.3) + 20 + 6 + 68
 
         body: list[tuple] = []      # (line, font, line_height, is_bullet_head)
         if slide.big:
@@ -329,7 +329,7 @@ class Composer:
     def transition_layer(self, title: str) -> Image.Image:
         """章の切替: 全画面のダークパネル＋章タイトル（横スライドのワイプに使う）。"""
         w, h = self.lay.w, self.lay.h
-        canvas = Image.new("RGBA", (w, h), (16, 20, 30, 248))
+        canvas = Image.new("RGBA", (w, h), (16, 20, 30, 255))
         d = ImageDraw.Draw(canvas, "RGBA")
         cy = h // 2
         title = split_reading(title)[0]
@@ -396,6 +396,7 @@ class CutRender:
     telop_png: str | None = None             # テロップだけを描いた透過PNGの相対パス
     telop_anim: str = "up"                   # 登場アニメ none/fade/up/down
     trans_png: str | None = None             # 章トランジションのバナー透過PNG（先頭カット）
+    trans_lead: float = 0.0                  # カット冒頭のトランジション表示秒（この間ナレは無音）
     stat: dict | None = None                 # 数字カウントアップ {value,unit,label,start}
     # シーン単位の連続モーション（1画像を1方向にゆっくり動かす）用のタイムライン
     m_start: float = 0.0                     # シーン先頭からこのカット開始までの秒数
@@ -585,7 +586,7 @@ def render_frames(
 
         result.append(CutRender(
             png=rel,
-            dur=ct.total_dur,
+            dur=round(ct.total_dur + getattr(ct, "lead", 0.0), 3),
             motion=motion,
             video=sp["src"] if sp else None,
             box=composer.card_inner_box() if card else None,
@@ -596,6 +597,7 @@ def render_frames(
             telop_png=telop_png,
             telop_anim=telop_anim,
             trans_png=trans_png,
+            trans_lead=round(getattr(ct, "lead", 0.0), 3) if trans_png else 0.0,
             stat=cut.stat.model_dump() if cut.stat else None,
             m_start=round(shot_start.get(ct.index, 0.0), 3),
             m_total=round(shot_total.get(shot_id[ct.index], 0.0), 3),
