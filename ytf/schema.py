@@ -87,6 +87,7 @@ class Cut(BaseModel):
     speaker: str
     text: str
     emotion: str = "normal"   # normal/happy/surprised/thinking/angry/sad
+    background: str | None = None  # このカットから背景画像を切替（数カットごとに変える用）
     reading: str | None = None  # 読み上げの手動上書き（誤読修正用。表示は text のまま）
     telops: list[Telop] = Field(default_factory=list)
     slide: Slide | None = None

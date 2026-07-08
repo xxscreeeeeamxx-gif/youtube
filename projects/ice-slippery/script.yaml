@@ -73,9 +73,11 @@ scenes:
             - "圧力だけでは説明できない"
       - speaker: aoyama
         emotion: normal
+        background: m_7cc9f512
         text: "でも真冬、マイナス10度のカチカチの氷でも普通に滑りますよね。"
       - speaker: aoyama
         emotion: normal
+        background: m_52232659
         text: "しかも、底が平らな長靴でも滑る。圧力は分散しているのに、です。"
       - speaker: aoyama
         emotion: thinking
@@ -124,6 +126,7 @@ scenes:
             - "極うすい水っぽい層ができる"
       - speaker: aoyama
         emotion: normal
+        background: m_a27f2485
         text: "氷の内部の水分子は、周りとがっちり手をつないで固定されています。でも一番外側の分子は、外につなぐ相手がいない。"
       - speaker: aoyama
         emotion: normal
@@ -166,6 +169,7 @@ scenes:
             - "極低温では逆に滑りにくい"
       - speaker: aoyama
         emotion: normal
+        background: m_294db252
         text: "スケートリンクの氷が氷点下3〜9℃くらいに管理されているのは、この性質と関係していると言われています。"
       - speaker: aoyama
         emotion: normal
@@ -199,12 +203,14 @@ scenes:
           - {text: "誰も見られない", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A2436", glow: "#33AADD", anim: fade}
       - speaker: aoyama
         emotion: normal
+        background: m_fb42dda1
         text: "だから研究者は、レーザーや特殊な顕微鏡で間接的に調べています。測定技術が進んだここ20〜30年で、やっと議論が本格化した分野です。"
       - speaker: aoyama
         emotion: normal
         text: "ではこの研究、何かの役に立つのか。答えは、大ありです。"
       - speaker: aoyama
         emotion: normal
+        background: m_b4a04fa9
         text: "冬の転倒やスリップ事故は毎年たくさん起きています。滑る仕組みが分かれば、滑らない靴底や路面を科学的に設計できます。"
         slide:
           title: "解明されると何が変わる？"
@@ -217,6 +223,7 @@ scenes:
         text: "逆にスケート選手は、もっと滑るためにこの科学を使えます。攻めと守り、両方に効くわけです。"
       - speaker: aoyama
         emotion: normal
+        background: m_fe1160b0
         text: "身近な謎の解明が、そのまま暮らしの安全につながる。基礎研究の面白いところです。"
   - id: ending
     title: "まとめ"
@@ -239,6 +246,7 @@ scenes:
         text: "毎日見ているものの中に、科学の最前線が隠れていた。なんだか得した気分になりませんか。"
       - speaker: aoyama
         emotion: normal
+        background: m_e82a07f0
         text: "次に凍った道でツルッといきそうになったら、思い出してください。あなたは今、未解決問題の上に立っています。"
         telops:
           - {text: "未解決の上に立つ", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}

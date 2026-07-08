@@ -160,12 +160,12 @@ class Composer:
         body: list[tuple] = []      # (line, font, line_height, is_bullet_head)
         if slide.big:
             bf = self.font(int(self.lay.slide_font * 1.9))
-            blh = int(self.lay.slide_font * 1.9) + 20
+            blh = int(self.lay.slide_font * 1.9) + 28
             for ln in _wrap(d, split_reading(slide.big)[0], bf, inner_w):
                 body.append((ln, bf, blh, False))
         else:
             bf = self.font(self.lay.slide_font)
-            blh = self.lay.slide_font + 30
+            blh = self.lay.slide_font + 48
             for b in slide.bullets:
                 wl = _wrap(d, split_reading(b)[0], bf, inner_w - 60)
                 for j, ln in enumerate(wl):
@@ -440,26 +440,45 @@ def render_frames(
         else:
             k += 1
 
-    # シーン（＝1画像）ごとに1方向の動きを決め、カットをまたいで連続させる。
-    # 明示指定が無ければシーン順に zoom-in → pan-left → zoom-out → pan-right を割当。
+    # 背景ショット（＝1画像が映る連続カットのまとまり）ごとに1方向の動きを決める。
+    # 数カットごとに背景を切り替えると各画像が短時間だけ動くので、動きが速く・
+    # 滑らかになり、絵の切り替わりで飽きさせない（プロの解説動画の定石）。
+    # 背景は cut.background で切替。無ければシーンの background を引き継ぐ。
+    by_index = {ct.index: (scene, cut) for ct, scene, cut in flat}
+    eff_bg: dict[int, str] = {}
+    cur_bg = None
+    cur_scene = None
+    for ct, scene, cut in flat:
+        if scene.id != cur_scene:
+            cur_scene, cur_bg = scene.id, scene.background
+        if cut.background:
+            cur_bg = cut.background
+        eff_bg[ct.index] = cur_bg
+
     auto_cycle = ["zoom-in", "pan-left", "zoom-out", "pan-right"]
-    scene_motion: dict[str, str] = {}
-    seen_scene = 0
-    scene_total: dict[str, float] = {}
-    scene_start: dict[int, float] = {}
-    for scene in script.scenes:
-        cuts_here = [c for (c, s, _) in flat if s.id == scene.id]
-        if not cuts_here:
-            continue
-        m = scene.motion or next((c.motion for c in scene.cuts if c.motion), None) \
-            or auto_cycle[seen_scene % len(auto_cycle)]
-        scene_motion[scene.id] = m
-        seen_scene += 1
-        acc = 0.0
-        for c in cuts_here:
-            scene_start[c.index] = acc
-            acc += c.total_dur
-        scene_total[scene.id] = acc
+    shot_id: dict[int, int] = {}
+    shots: list[list[int]] = []
+    prev_key = None
+    for ct, scene, cut in flat:
+        key = (scene.id, eff_bg[ct.index])  # シーン変化 or 背景変化で新ショット
+        if key != prev_key:
+            shots.append([])
+            prev_key = key
+        shots[-1].append(ct.index)
+        shot_id[ct.index] = len(shots) - 1
+
+    shot_motion: dict[int, str] = {}
+    for si, idxs in enumerate(shots):
+        scene0, cut0 = by_index[idxs[0]]
+        shot_motion[si] = cut0.motion or scene0.motion or auto_cycle[si % len(auto_cycle)]
+    # モーションのタイムライン（各カットのショット内開始秒とショート総尺）は
+    # 実測長を持つ timings（total_dur）から作る
+    shot_total: dict[int, float] = {si: 0.0 for si in range(len(shots))}
+    shot_start: dict[int, float] = {}
+    for ct, scene, cut in flat:
+        si = shot_id[ct.index]
+        shot_start[ct.index] = shot_total[si]
+        shot_total[si] += ct.total_dur
 
     speakers = script.speakers_used()
     emotion_state = {s: "normal" for s in speakers}
@@ -471,24 +490,25 @@ def render_frames(
         emotion_state[cut.speaker] = cut.emotion
         sp = span_of.get(ct.index)
         full = bool(sp and sp["full"])
+        bg_name = eff_bg[ct.index]
 
-        # 動きの決定: 動画カットは静止。それ以外はシーン単位の1方向モーション
+        # 動きの決定: 動画カットは静止。それ以外は背景ショット単位の1方向モーション
         if sp or not motion_on:
             motion = "none"
         else:
-            motion = scene_motion.get(scene.id, "zoom-in")
+            motion = shot_motion.get(shot_id[ct.index], "zoom-in")
 
         # 背景だけを動かすカットは前景（文字・カード）を透過PNGで分離して静止させる。
         # 全画面動画のカットも前景を透過にして動画の上に重ねる
         fg_only = motion != "none" or full
-        bg_path = str(background_path(cfg, scene.background)) if (fg_only and not full) else None
+        bg_path = str(background_path(cfg, bg_name)) if (fg_only and not full) else None
         card = bool(sp) and not full
 
         chars = [(s, emotion_state[s], s == cut.speaker) for s in speakers]
         header = scene.title or (script.meta.title if vertical else "")
         # ベースはテロップ抜きで合成（テロップは別レイヤーで動かす）
         key_src = json.dumps(
-            [scene.background, header, chars,
+            [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
              bool(sp), card, full, fg_only, sub],
             ensure_ascii=False, sort_keys=True, default=str,
@@ -497,7 +517,7 @@ def render_frames(
         rel = f"frames/{sub}_{key}.png"
         path = proj.root / rel
         if key not in manifest_used and not path.exists():
-            composer.compose_cut(scene.background, header, chars, cut.slide,
+            composer.compose_cut(bg_name, header, chars, cut.slide,
                                  cut.image, video_card=card,
                                  fg_only=fg_only, with_telops=False).save(path)
         manifest_used.add(key)
@@ -528,7 +548,7 @@ def render_frames(
             v_full=full,
             telop_png=telop_png,
             telop_anim=telop_anim,
-            m_start=round(scene_start.get(ct.index, 0.0), 3),
-            m_total=round(scene_total.get(scene.id, 0.0), 3),
+            m_start=round(shot_start.get(ct.index, 0.0), 3),
+            m_total=round(shot_total.get(shot_id[ct.index], 0.0), 3),
         ))
     return result
