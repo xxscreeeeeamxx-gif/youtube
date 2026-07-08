@@ -90,28 +90,42 @@ def _zoompan_expr(motion: str, zoom: float, n: int) -> tuple[str, str, str]:
     return f"1+{zoom}*on/{n}", cx, cy  # zoom-in（既定）
 
 
+def _telop_overlay_fc(ti: int, anim: str, dur: float = 0.4) -> str:
+    """テロップレイヤー[ti]を[v0]の上にアニメ付きで重ね[vout]を作る。"""
+    fade = f"[{ti}:v]format=rgba,fade=t=in:st=0:d={dur}:alpha=1[tel];"
+    if anim == "none":
+        return f"[{ti}:v]format=rgba[tel];[v0][tel]overlay=0:0,format=yuv420p[vout]"
+    if anim == "fade":
+        return fade + "[v0][tel]overlay=0:0,format=yuv420p[vout]"
+    off = 46  # スライド量(px)
+    sign = "" if anim == "up" else "-"  # up=下から上へ / down=上から下へ
+    y = f"{sign}{off}*max(0\\,1-t/{dur})"
+    return fade + f"[v0][tel]overlay=x=0:y='{y}',format=yuv420p[vout]"
+
+
 def _render_one_segment(
     proj: Project, item: CutRender, out_rel: str, n: int,
     fps: int, w: int, h: int, zoom: float, enc: list[str], crf: str,
 ) -> None:
     base = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error"]
+    inputs: list[str] = []       # 入力（-i …）を順に積む
+    fc = ""                      # [v0] を作るフィルタ
+
     if item.video:
         # 動画クリップを埋め込む。speed で再生速度を変え（setpts）、offset で
         # このカットが再生する位置を決める（複数カットにまたがると連続再生になる）。
-        # クリップは無音・尺不足なら無限ループ。
         spd = max(0.1, item.v_speed)
         off = item.v_offset
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.png,
+                   "-stream_loop", "-1", "-i", item.video]
         if item.v_full:
-            # 全画面: クリップを敷き、前景（透過PNGの見出し・テロップ）を上に重ねる。
-            # setpts で速度を変えると素の出力fpsが変わるため fps で固定し直す
             fc = (
                 f"[1:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
                 f"setpts=PTS/{spd},trim=start={off:.3f},setpts=PTS-STARTPTS,fps={fps},"
                 f"format=yuv420p,setsar=1[clip];"
-                f"[clip][0:v]overlay=0:0,format=yuv420p,setsar=1[vout]"
+                f"[clip][0:v]overlay=0:0,format=yuv420p,setsar=1[v0]"
             )
         else:
-            # カード内: ベースPNG（空カード付き）の枠内にクリップを収める
             x0, y0, x1, y1 = item.box
             bw, bh = x1 - x0, y1 - y0
             fc = (
@@ -119,46 +133,49 @@ def _render_one_segment(
                 f"setpts=PTS/{spd},trim=start={off:.3f},setpts=PTS-STARTPTS,fps={fps},"
                 f"setsar=1[clip];"
                 f"[0:v][clip]overlay=x={x0}+({bw}-w)/2:y={y0}+({bh}-h)/2,"
-                f"format=yuv420p,setsar=1[vout]"
+                f"format=yuv420p,setsar=1[v0]"
             )
-        cmd = base + [
-            "-loop", "1", "-framerate", str(fps), "-i", item.png,
-            "-stream_loop", "-1", "-i", item.video,
-            "-filter_complex", fc, "-map", "[vout]",
-        ]
     elif item.motion == "none":
-        cmd = base + [
-            "-loop", "1", "-framerate", str(fps), "-i", item.png,
-            "-vf", "format=yuv420p,setsar=1",
-        ]
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.png]
+        fc = "[0:v]format=yuv420p,setsar=1[v0]"
     elif item.bg:
         # 背景だけを zoompan で動かし、前景（見出し・カード・文字）は静止 overlay
         z, x, y = _zoompan_expr(item.motion, zoom, n)
+        inputs += ["-i", item.bg, "-loop", "1", "-framerate", str(fps), "-i", item.png]
         fc = (
             f"[0:v]scale={w * _UPSCALE}:{h * _UPSCALE}:force_original_aspect_ratio=increase,"
             f"crop={w * _UPSCALE}:{h * _UPSCALE},"
             f"zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={w}x{h}:fps={fps}[bg];"
-            f"[bg][1:v]overlay=0:0,format=yuv420p,setsar=1[vout]"
+            f"[bg][1:v]overlay=0:0,format=yuv420p,setsar=1[v0]"
         )
-        cmd = base + [
-            "-i", item.bg,
-            "-loop", "1", "-framerate", str(fps), "-i", item.png,
-            "-filter_complex", fc, "-map", "[vout]",
-        ]
     else:
         z, x, y = _zoompan_expr(item.motion, zoom, n)
-        vf = (
-            f"scale={w * _UPSCALE}:-2,"
+        inputs += ["-i", item.png]
+        fc = (
+            f"[0:v]scale={w * _UPSCALE}:-2,"
             f"zoompan=z='{z}':x='{x}':y='{y}':d={n}:s={w}x{h}:fps={fps},"
-            f"format=yuv420p,setsar=1"
+            f"format=yuv420p,setsar=1[v0]"
         )
-        cmd = base + ["-i", item.png, "-vf", vf]
 
-    cmd += ["-frames:v", str(n), "-an", "-c:v", *enc]
+    # テロップレイヤーをアニメ付きで重ねる
+    if item.telop_png:
+        ti = _count_inputs(inputs)  # テロップ入力のストリーム番号
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.telop_png]
+        fc += ";" + _telop_overlay_fc(ti, item.telop_anim)
+        out_label = "[vout]"
+    else:
+        out_label = "[v0]"
+
+    cmd = base + inputs + ["-filter_complex", fc, "-map", out_label,
+                           "-frames:v", str(n), "-an", "-c:v", *enc]
     if enc[0] == "libx264":
         cmd += ["-crf", crf]
     cmd += [out_rel]
     _run(cmd, cwd=proj.root)
+
+
+def _count_inputs(args: list[str]) -> int:
+    return sum(1 for a in args if a == "-i")
 
 
 def render_segments(
@@ -181,6 +198,8 @@ def render_segments(
         if item.bg:
             st = Path(item.bg).stat()
             vsig += f"|bg:{item.bg}:{st.st_size}:{int(st.st_mtime)}"
+        if item.telop_png:
+            vsig += f"|tel:{item.telop_png}:{item.telop_anim}"
         key_src = f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|{vsig}|{enc[0]}"
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
         rel = f"frames/seg_{key}.mp4"

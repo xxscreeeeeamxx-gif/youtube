@@ -80,6 +80,8 @@ scenes:
       - speaker: aoyama
         emotion: thinking
         text: "こうして20世紀のうちに、圧力説だけでは説明できないと考えられるようになりました。定説の崩壊です。"
+        telops:
+          - {text: "定説は崩壊", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
   - id: chapter2
     title: "第2章 有力候補は摩擦熱と表面の水"
     background: m_1ed7273a
@@ -151,6 +153,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "面白いデータもあります。氷が一番滑りやすいのは、0℃ではなくマイナス7℃前後だという研究があるんです。"
+        telops:
+          - {text: "最も滑るのは -7℃", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: aoyama
         emotion: normal
         text: "0℃近くだと水が多すぎて逆にブレーキになる。かといって低温すぎると、今度は膜がうまくできない。"
@@ -191,6 +195,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "見えない、薄い、しかも触ったら壊れる。まさに探偵泣かせの事件ですね。"
+        telops:
+          - {text: "誰も見られない", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A2436", glow: "#33AADD", anim: fade}
       - speaker: aoyama
         emotion: normal
         text: "だから研究者は、レーザーや特殊な顕微鏡で間接的に調べています。測定技術が進んだここ20〜30年で、やっと議論が本格化した分野です。"
@@ -234,6 +240,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "次に凍った道でツルッといきそうになったら、思い出してください。あなたは今、未解決問題の上に立っています。"
+        telops:
+          - {text: "未解決の上に立つ", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: aoyama
         emotion: happy
         text: "面白かったら高評価とチャンネル登録をお願いします。次回も身近なふしぎを解説します。"

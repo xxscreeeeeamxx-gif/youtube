@@ -54,6 +54,10 @@ class Composer:
         self.font_path = cfg.find_pillow_font()
         self._sprite_cache: dict[tuple[str, str, bool], Image.Image] = {}
         self._bg_cache: dict[str, Image.Image] = {}
+        # アクセント色（見出し・カードの装飾に使う）。最初のキャラ色 or 既定の青
+        cols = [c.get("color") for c in cfg.characters.values() if c.get("color")]
+        self.accent = _hex_rgb(cols[0]) if cols else (58, 160, 255)
+        self.ink = (28, 32, 44)  # 本文の濃色
 
     # ---------- 部品 ----------
 
@@ -86,63 +90,101 @@ class Composer:
         d = ImageDraw.Draw(canvas, "RGBA")
         size = self.lay.header_font
         f = self.font(size)
-        while d.textlength(title, font=f) > self.lay.w - 140 and size > 28:
+        while d.textlength(title, font=f) > self.lay.w - 260 and size > 26:
             size -= 4
             f = self.font(size)
         tw = d.textlength(title, font=f)
-        pad, y0 = 36, 28
-        x0 = (self.lay.w - tw) / 2 - pad
-        x1 = (self.lay.w + tw) / 2 + pad
-        y1 = y0 + size + 36
-        d.rounded_rectangle([x0, y0, x1, y1], radius=18, fill=(30, 34, 46, 215))
-        d.text(((self.lay.w - tw) / 2, y0 + 16), title, font=f, fill=(255, 255, 255))
+        # 左上に配置。左端にアクセントバー付きのダークタブ
+        m = 44
+        bar_w, gap, pad = 12, 22, 30
+        x0, y0 = m, 40
+        h = size + 30
+        x1 = x0 + bar_w + gap + tw + pad
+        y1 = y0 + h
+        d.rounded_rectangle([x0, y0, x1, y1], radius=14, fill=(22, 26, 38, 230))
+        d.rounded_rectangle([x0 + 10, y0 + 12, x0 + 10 + bar_w, y1 - 12],
+                            radius=6, fill=(*self.accent, 255))
+        d.text((x0 + 10 + bar_w + gap, y0 + (h - size) / 2 - 2), title,
+               font=f, fill=(245, 247, 252))
 
     def _card_box(self) -> tuple[int, int, int, int]:
         if self.lay.vertical:
-            return (60, 190, self.lay.w - 60, 980)
+            return (60, 210, self.lay.w - 60, 980)
         if not self.show_chars:
-            # 立ち絵なし: 左右の余白を詰めてカードを大きく使う
-            return (150, 170, self.lay.w - 150, self.lay.h - 200)
-        return (400, 170, self.lay.w - 400, self.lay.h - 330)
+            # 立ち絵なし: 左右の余白を詰めてカードを大きく使う（見出しの下から）
+            return (170, 200, self.lay.w - 170, self.lay.h - 210)
+        return (400, 180, self.lay.w - 400, self.lay.h - 330)
 
     def _draw_card(self, canvas: Image.Image) -> tuple[int, int, int, int]:
-        d = ImageDraw.Draw(canvas, "RGBA")
         box = self._card_box()
-        d.rounded_rectangle(box, radius=26, fill=(255, 255, 255, 235),
-                            outline=(30, 34, 46, 255), width=4)
+        x0, y0, x1, y1 = box
+        r = 30
+        # 影（ぼかした暗い矩形をずらして敷く）
+        shadow = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
+        sd = ImageDraw.Draw(shadow)
+        sd.rounded_rectangle([x0 + 6, y0 + 14, x1 + 6, y1 + 18], radius=r,
+                             fill=(10, 14, 24, 120))
+        canvas.alpha_composite(shadow.filter(ImageFilter.GaussianBlur(16)))
+        d = ImageDraw.Draw(canvas, "RGBA")
+        # カード本体（ごく淡いオフホワイト＋細い枠）
+        d.rounded_rectangle(box, radius=r, fill=(252, 252, 254, 245),
+                            outline=(*self.accent, 90), width=2)
+        # 上辺のアクセントライン
+        d.rounded_rectangle([x0 + r, y0, x1 - r, y0 + 7], radius=3,
+                            fill=(*self.accent, 255))
         return box
 
     def card_inner_box(self) -> tuple[int, int, int, int]:
         """カード内側（パディング込み）の領域。動画クリップの配置に使う。"""
         x0, y0, x1, y1 = self._card_box()
-        return (x0 + 24, y0 + 24, x1 - 24, y1 - 24)
+        return (x0 + 26, y0 + 26, x1 - 26, y1 - 26)
 
     def _draw_slide(self, canvas: Image.Image, slide: Slide) -> None:
         x0, y0, x1, y1 = self._draw_card(canvas)
-        d = ImageDraw.Draw(canvas)
+        d = ImageDraw.Draw(canvas, "RGBA")
         cx = (x0 + x1) // 2
-        y = y0 + 40
+        pad_x = 90
+        y = y0 + 48
         if slide.title:
             title = split_reading(slide.title)[0]
-            f = self.font(int(self.lay.slide_font * 1.25))
+            f = self.font(int(self.lay.slide_font * 1.3))
             tw = d.textlength(title, font=f)
-            d.text((cx - tw / 2, y), title, font=f, fill=(200, 60, 40))
-            y += int(self.lay.slide_font * 1.25) + 34
-            d.line([x0 + 60, y - 12, x1 - 60, y - 12], fill=(220, 220, 220), width=3)
+            d.text((cx - tw / 2, y), title, font=f, fill=self.accent)
+            y += int(self.lay.slide_font * 1.3) + 20
+            # タイトル下の短いアクセント下線
+            uw = 130
+            d.rounded_rectangle([cx - uw / 2, y, cx + uw / 2, y + 6], radius=3,
+                                fill=(*self.accent, 255))
+            y += 42
+
         if slide.big:
             f = self.font(int(self.lay.slide_font * 1.9))
-            for line in _wrap(d, split_reading(slide.big)[0], f, (x1 - x0) - 120):
+            lines = _wrap(d, split_reading(slide.big)[0], f, (x1 - x0) - 120)
+            lh = int(self.lay.slide_font * 1.9) + 16
+            y = max(y, (y0 + y1) // 2 - lh * len(lines) // 2)
+            for line in lines:
                 tw = d.textlength(line, font=f)
-                d.text((cx - tw / 2, y), line, font=f, fill=(30, 34, 46))
-                y += int(self.lay.slide_font * 1.9) + 16
+                d.text((cx - tw / 2, y), line, font=f, fill=self.ink)
+                y += lh
         else:
             f = self.font(self.lay.slide_font)
+            lh = self.lay.slide_font + 34
+            # 箇条書きブロックをカード内で縦方向に中央寄せ
+            block_h = lh * sum(
+                max(1, len(_wrap(d, split_reading(b)[0], f, (x1 - x0) - 220)))
+                for b in slide.bullets
+            )
+            y = max(y, (y0 + y1 + (y - y0)) // 2 - block_h // 2)
+            dot = max(7, self.lay.slide_font // 5)
             for b in slide.bullets:
                 b = split_reading(b)[0]
-                for j, line in enumerate(_wrap(d, b, f, (x1 - x0) - 200)):
-                    prefix = "・" if j == 0 else "　"
-                    d.text((x0 + 70, y), prefix + line, font=f, fill=(30, 34, 46))
-                    y += self.lay.slide_font + 22
+                for j, line in enumerate(_wrap(d, b, f, (x1 - x0) - 220)):
+                    if j == 0:
+                        cyd = y + self.lay.slide_font // 2
+                        d.ellipse([x0 + pad_x - 6, cyd - dot, x0 + pad_x - 6 + dot * 2,
+                                   cyd + dot], fill=(*self.accent, 255))
+                    d.text((x0 + pad_x + dot * 2 + 18, y), line, font=f, fill=self.ink)
+                    y += lh
 
     def _draw_telop(self, canvas: Image.Image, t: Telop) -> None:
         """キーワードテロップ。縁取り＋（任意で）光彩付きの大文字を指定位置に描く。"""
@@ -208,7 +250,10 @@ class Composer:
         video_card: bool = False,  # True なら空カードを描く（動画は後段でoverlay）
         fg_only: bool = False,     # True なら背景を敷かず透過PNG（背景は後段でzoompan）
         telops: list[Telop] | None = None,
+        with_telops: bool = True,  # False ならテロップは焼かない（別レイヤーで動かす用）
     ) -> Image.Image:
+        if not with_telops:
+            telops = []
         if fg_only:
             canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
         else:
@@ -247,6 +292,18 @@ class Composer:
             self._draw_telop(canvas, t)
         return canvas if fg_only else canvas.convert("RGB")
 
+    def telop_layer(self, telops: list[Telop]) -> Image.Image:
+        """テロップだけを描いた透過フレーム（build でアニメ付き overlay に使う）。"""
+        canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
+        for t in telops:
+            self._draw_telop(canvas, t)
+        return canvas
+
+
+def _hex_rgb(color: str) -> tuple[int, int, int]:
+    c = color.lstrip("#")
+    return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))  # type: ignore[return-value]
+
 
 def _cover(img: Image.Image, w: int, h: int) -> Image.Image:
     scale = max(w / img.width, h / img.height)
@@ -283,6 +340,9 @@ class CutRender:
     v_offset: float = 0.0                    # このカットが再生する動画内の開始秒（速度適用後の時間軸）
     v_speed: float = 1.0                     # 再生速度（0.5でスロー）
     v_full: bool = False                     # 全画面表示か
+    # テロップ（別レイヤーでアニメ付き overlay する）
+    telop_png: str | None = None             # テロップだけを描いた透過PNGの相対パス
+    telop_anim: str = "up"                   # 登場アニメ none/fade/up/down
 
 
 def _resolve_clip(cfg: Config, proj: Project, rel: str) -> str:
@@ -377,10 +437,10 @@ def render_frames(
 
         chars = [(s, emotion_state[s], s == cut.speaker) for s in speakers]
         header = scene.title or (script.meta.title if vertical else "")
+        # ベースはテロップ抜きで合成（テロップは別レイヤーで動かす）
         key_src = json.dumps(
             [scene.background, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
-             [t.model_dump() for t in cut.telops],
              bool(sp), card, full, fg_only, sub],
             ensure_ascii=False, sort_keys=True, default=str,
         )
@@ -390,8 +450,23 @@ def render_frames(
         if key not in manifest_used and not path.exists():
             composer.compose_cut(scene.background, header, chars, cut.slide,
                                  cut.image, video_card=card,
-                                 fg_only=fg_only, telops=cut.telops).save(path)
+                                 fg_only=fg_only, with_telops=False).save(path)
         manifest_used.add(key)
+
+        # テロップレイヤー（あれば透過PNGを別に生成）
+        telop_png = None
+        telop_anim = "up"
+        if cut.telops:
+            tkey = hashlib.sha1(json.dumps(
+                [[t.model_dump() for t in cut.telops], sub],
+                ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:16]
+            telop_png = f"frames/tel_{tkey}.png"
+            tp = proj.root / telop_png
+            if tkey not in manifest_used and not tp.exists():
+                composer.telop_layer(cut.telops).save(tp)
+            manifest_used.add(tkey)
+            telop_anim = cut.telops[0].anim
+
         result.append(CutRender(
             png=rel,
             dur=ct.total_dur,
@@ -402,5 +477,7 @@ def render_frames(
             v_offset=sp["offset"] if sp else 0.0,
             v_speed=sp["speed"] if sp else 1.0,
             v_full=full,
+            telop_png=telop_png,
+            telop_anim=telop_anim,
         ))
     return result

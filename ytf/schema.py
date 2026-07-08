@@ -58,6 +58,14 @@ class Telop(BaseModel):
     color: str = "#FFFFFF"            # 文字色
     stroke: str = "#1E222E"           # 縁取り色
     glow: str | None = None           # 光彩色（例 "#CC0000"。None なら光彩なし）
+    anim: str = "up"                  # 登場アニメ none / fade / up / down
+
+    @field_validator("anim")
+    @classmethod
+    def anim_valid(cls, v: str) -> str:
+        if v not in {"none", "fade", "up", "down"}:
+            raise ValueError("anim は none / fade / up / down のいずれか")
+        return v
 
     @field_validator("size")
     @classmethod
