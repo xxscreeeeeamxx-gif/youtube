@@ -250,10 +250,10 @@ scenes:
         emotion: normal
         background: m_e82a07f0
         text: "次に凍った道でツルッといきそうになったら、思い出してください。あなたは今、未解決問題の上に立っています。"
-        se: tsuru
         telops:
           - {text: "未解決の上に立つ", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: aoyama
         emotion: happy
         text: "面白かったら高評価とチャンネル登録をお願いします。次回も身近なふしぎを解説します。"
+        se: oti
         pause_after: 0.8

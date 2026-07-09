@@ -58,7 +58,7 @@ video:
   transition:
     enabled: true
     lead: 1.8           # トランジションの表示秒＝章頭に入れる無音の間。長くするほどじっくり
-    se: don             # トランジションで鳴らす効果音
+    se: trans           # トランジションで鳴らす効果音（assets/se/の名前）
   loudnorm: true        # -14 LUFS に正規化
 
 subtitles:

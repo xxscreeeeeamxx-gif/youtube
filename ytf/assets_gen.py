@@ -164,58 +164,41 @@ def _gen_bgm(path: Path, force: bool) -> None:
     _run_ff(args, "BGM")
 
 
+# 効果音は「効果音ラボ」(https://soundeffect-lab.info) の素材。商用利用可・
+# クレジット表記は任意（不要）だが、概要欄に自動で記載する（metadata.py）。
+SE_BASE = "https://soundeffect-lab.info/sound/"
+SE_SOURCES = {
+    "jaan": "anime/mp3/jajean1.mp3",       # ジャジャーン（紹介・判明）
+    "don": "anime/mp3/doon1.mp3",          # ドーン（衝撃・結論）
+    "trans": "anime/mp3/title1.mp3",       # タイトル表示（章切替）
+    "pop": "button/mp3/decision3.mp3",     # 決定ボタン（軽い合図）
+    "oti": "anime/mp3/chan-chan1.mp3",     # ちゃんちゃん♪（オチ）
+    "levelup": "anime/mp3/levelup1.mp3",   # テッテレー（達成・正解感）
+    "pinpon": "voice/mp3/info-girl1/info-girl1-seikai1.mp3",  # 「正解」
+    "bubu": "voice/mp3/info-girl1/info-girl1-bubu1.mp3",      # 「ブッブー」
+}
+
+
 def _gen_se_library(se_dir: Path, force: bool) -> None:
+    """効果音ラボからSEをダウンロードする（商用可・クレジット不要）。"""
+    import requests
+
     se_dir.mkdir(parents=True, exist_ok=True)
-    specs = {
-        "pop": (["-f", "lavfi", "-i", "sine=frequency=920:duration=0.14"],
-                "afade=t=out:st=0.03:d=0.11,volume=0.7,loudnorm=I=-15:TP=-1.5"),
-        "tsuru": (["-f", "lavfi", "-i",
-                   "aevalsrc='sin(2*PI*(500+1600*t)*t)':d=0.28:s=44100"],
-                  "afade=t=in:d=0.02,afade=t=out:st=0.15:d=0.13,volume=0.6,"
-                  "loudnorm=I=-15:TP=-1.5"),
-    }
-    for name, (inp, af) in specs.items():
+    ua = {"User-Agent": "Mozilla/5.0", "Referer": SE_BASE}
+    got = 0
+    for name, rel in SE_SOURCES.items():
         p = se_dir / f"{name}.mp3"
         if p.exists() and not force:
             continue
-        _run_ff([*inp, "-af", af, "-ar", "44100", str(p)], f"SE({name})")
-    # 複数音を合成するSE
-    multi = {
-        "don": ("[0][1]amix=inputs=2,afade=t=out:st=0.05:d=0.35,volume=1.4,"
-                "loudnorm=I=-14:TP=-1.5[o]",
-                ["sine=frequency=80:duration=0.4", "sine=frequency=160:duration=0.4"]),
-        "jaan": ("[0][1][2]amix=inputs=3:normalize=0,afade=t=out:st=0.1:d=0.8,"
-                 "aecho=0.8:0.85:60:0.4,loudnorm=I=-15:TP=-1.5[o]",
-                 ["sine=frequency=523.25:duration=0.9", "sine=frequency=659.26:duration=0.9",
-                  "sine=frequency=783.99:duration=0.9"]),
-    }
-    for name, (fc, srcs) in multi.items():
-        p = se_dir / f"{name}.mp3"
-        if p.exists() and not force:
-            continue
-        args = []
-        for s in srcs:
-            args += ["-f", "lavfi", "-i", s]
-        args += ["-filter_complex", fc, "-map", "[o]", "-ar", "44100", str(p)]
-        _run_ff(args, f"SE({name})")
-    # クイズ用（正解ピンポン / 不正解ブブー）: 2音を連結
-    quiz = {
-        "pinpon": ("[0]adelay=0[a];[1]adelay=170[b];[a][b]concat=n=2:v=0:a=1,"
-                   "afade=t=out:st=0.28:d=0.08,loudnorm=I=-15:TP=-1.5[o]",
-                   ["sine=frequency=988:duration=0.16", "sine=frequency=1319:duration=0.16"]),
-        "bubu": ("[0][1]concat=n=2:v=0:a=1,tremolo=f=30:d=0.5,volume=0.9,"
-                 "loudnorm=I=-15:TP=-1.5[o]",
-                 ["sine=frequency=165:duration=0.18", "sine=frequency=165:duration=0.18"]),
-    }
-    for name, (fc, srcs) in quiz.items():
-        p = se_dir / f"{name}.mp3"
-        if p.exists() and not force:
-            continue
-        args = []
-        for s in srcs:
-            args += ["-f", "lavfi", "-i", s]
-        args += ["-filter_complex", fc, "-map", "[o]", "-ar", "44100", str(p)]
-        _run_ff(args, f"SE({name})")
+        try:
+            r = requests.get(SE_BASE + rel, headers=ua, timeout=30)
+            r.raise_for_status()
+            p.write_bytes(r.content)
+            got += 1
+        except requests.RequestException as e:
+            print(f"SE({name})の取得に失敗: {e}")
+    if got:
+        print(f"効果音 {got} 個を取得（効果音ラボ / 商用可）: {se_dir}")
 
 
 def _gen_demo_clip(path: Path) -> None:

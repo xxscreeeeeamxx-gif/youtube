@@ -28,6 +28,13 @@ def build_metadata(cfg: Config, proj: Project, timings: list[CutTiming]) -> dict
     credits = " / ".join(
         cfg.character(s)["credit"] for s in script.speakers_used()
     )
+    # 効果音を使っていれば効果音ラボのクレジットを添える（商用可・任意表記）
+    uses_se = any(c.se for _, _, c in script.all_cuts()) or (
+        cfg.get("video", "transition", "enabled", default=True)
+        and any(sc.title for sc in script.scenes)
+    )
+    if uses_se:
+        credits += " / 効果音: 効果音ラボ"
     description = cfg.get("metadata", "description_template", default="{summary}\n{credits}").format(
         summary=script.meta.summary,
         chapters="\n".join(chapters) or "0:00 本編",
