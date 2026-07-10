@@ -177,12 +177,12 @@ def _filmstrip(cfg: Config, proj: Project, width: int = 300) -> list[dict]:
 
 def _synthesize_cut(cfg: Config, payload: dict) -> bytes:
     """選択カットのセリフをVOICEVOXで合成してWAVを返す（試聴用）。"""
-    from .voice import VoicevoxClient, load_dictionary, style_for
+    from .voice import ensure_engine, load_dictionary, style_for
 
-    client = VoicevoxClient(cfg.get("voicevox", "url",
-                                    default="http://127.0.0.1:50021"))
-    if not client.ping():
-        raise ConnectionError("VOICEVOXが起動していません")
+    try:
+        client = ensure_engine(cfg)  # 落ちていればヘッドレスで自動起動
+    except SystemExit as e:
+        raise ConnectionError(str(e))
     client.sync_dictionary(load_dictionary(cfg))
     text = payload.get("reading") or split_reading(payload.get("text", ""))[1]
     style_id, speed, pitch, intonation = style_for(

@@ -17,6 +17,29 @@ def _norm(s: str) -> str:
     return re.sub(r"[\s、。！？!?・「」()（）\[\]…〜ー]", "", s)
 
 
+def _transcribe(path: str) -> list[dict]:
+    """narration.wav を書き起こす。faster-whisper（数倍速）を優先し、
+    無ければ openai-whisper にフォールバックする。"""
+    try:
+        from faster_whisper import WhisperModel
+        print("faster-whisper で書き起こし中...")
+        model = WhisperModel("small", device="auto", compute_type="int8")
+        segs, _ = model.transcribe(path, language="ja")
+        return [{"start": s.start, "end": s.end, "text": s.text} for s in segs]
+    except ImportError:
+        pass
+    try:
+        import whisper
+    except ImportError:
+        raise SystemExit(
+            "whisperがありません: pip install faster-whisper（推奨・高速）"
+            " または pip install openai-whisper"
+        )
+    print("openai-whisper で書き起こし中...")
+    model = whisper.load_model("small")
+    return model.transcribe(path, language="ja")["segments"]
+
+
 def run_qc(cfg: Config, proj: Project, use_whisper: bool = False) -> None:
     timings = load_timings(proj)
     total = timings[-1].start + timings[-1].total_dur
@@ -34,15 +57,7 @@ def run_qc(cfg: Config, proj: Project, use_whisper: bool = False) -> None:
         print("（誤読チェックは `ytf qc --whisper` で実行）")
         return
 
-    try:
-        import whisper
-    except ImportError:
-        raise SystemExit("whisperがありません: pip install openai-whisper")
-
-    print("Whisperで書き起こし中...")
-    model = whisper.load_model("small")
-    result = model.transcribe(str(narration), language="ja")
-    segments = result["segments"]
+    segments = _transcribe(str(narration))
 
     print("---- 読み上げの一致率が低いセリフ（誤読の可能性）----")
     flagged = 0

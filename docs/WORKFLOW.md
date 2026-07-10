@@ -67,7 +67,7 @@ n8nを使わない場合は `ytf make <slug>` で手動ビルド、
 | 見た目 | `assets/` の差し替え / `compose.py` のレイアウト定数 |
 | 画面の動き | `channel.yaml` の `video.motion`（ズーム量・無効化）/ 台本カットの `motion:` |
 | 実写・動画素材 | クリップを `assets/clips/` に置き、台本カットに `video: assets/clips/xxx.mp4`（無音）。`video_span:` で複数カットにまたがって連続再生、`video_speed:` で速度（0.5=スロー）、`video_full: true` で全画面。`ytf edit` からも設定可 |
-| BGM | `assets/bgm/` に置いて `channel.yaml` の `video.bgm.file` を設定 |
+| BGM | `assets/bgm/` に置くか `ytf bgm "<雰囲気>" --name <名前>` でローカル生成（MusicGen・要 `pip install -e '.[bgm]'`）。選択は `ytf edit` の🎵BGM |
 
 誤読が心配な回は `ytf qc <slug> --whisper` で書き起こし突合ができます。
 

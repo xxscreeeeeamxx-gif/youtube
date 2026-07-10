@@ -39,6 +39,45 @@ class CutTiming:
     scene_start: bool   # シーン先頭カットか（章立てに使う）
     short: bool         # ショート切出対象シーンか
     lead: float = 0.0   # このカットの前に入れる無音（章トランジション用）
+    # モーラ単位のタイミング [[かな, カット内開始秒], ...]（whisper不要の単語同期用。
+    # VOICEVOXのaudio_queryから算出。dummy TTSではNone）
+    moras: list | None = None
+
+
+# macOS版VOICEVOXアプリに同梱されているエンジン単体バイナリ（GUI不要で起動できる）
+DEFAULT_ENGINE_BIN = "/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run"
+
+
+def ensure_engine(cfg) -> "VoicevoxClient":
+    """VOICEVOXエンジンに接続。落ちていればヘッドレスで自動起動する。
+
+    GUIアプリを開いておく必要をなくす（voicevox_engine の思想を部分採用）。
+    """
+    import subprocess
+    import time
+    from urllib.parse import urlparse
+
+    url = cfg.get("voicevox", "url", default="http://127.0.0.1:50021")
+    client = VoicevoxClient(url)
+    if client.ping():
+        return client
+
+    engine = cfg.get("voicevox", "engine_path", default=DEFAULT_ENGINE_BIN)
+    port = urlparse(url).port or 50021
+    if Path(engine).exists():
+        print(f"VOICEVOXエンジンをヘッドレス起動中… (:{port})")
+        subprocess.Popen([engine, "--port", str(port)],
+                         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                         start_new_session=True)
+        for _ in range(30):
+            time.sleep(2)
+            if client.ping():
+                print("エンジン起動OK")
+                return client
+    raise SystemExit(
+        "VOICEVOX Engine に接続できません。VOICEVOXアプリを起動するか、"
+        "channel.yaml の voicevox.engine_path を確認してください。"
+    )
 
 
 class VoicevoxClient:
@@ -103,6 +142,8 @@ class VoicevoxClient:
         query["intonationScale"] = intonation  # 抑揚（1.0が標準。下げると平坦・落ち着く）
         query["outputSamplingRate"] = SAMPLE_RATE
         query["outputStereo"] = False
+        # モーラ単位のタイミング抽出用に直近クエリを保持（whisper不要の単語同期の土台）
+        self.last_query = query
         r = requests.post(
             f"{self.base}/synthesis",
             params={"speaker": style_id},
@@ -111,6 +152,27 @@ class VoicevoxClient:
         )
         r.raise_for_status()
         return r.content
+
+
+def extract_moras(query: dict) -> list:
+    """audio_query からモーラ単位の [かな, カット内開始秒] を計算する。
+
+    合成音声の時間構造はクエリで決定的に決まるため、whisper等の後段認識なしで
+    「この言葉が何秒に話されるか」が分かる（whisperXの発想のネイティブ実装）。
+    """
+    speed = float(query.get("speedScale", 1.0))
+    t = float(query.get("prePhonemeLength", 0.1)) / speed
+    out = []
+    for phrase in query.get("accent_phrases", []):
+        for m in phrase.get("moras", []):
+            dur = (float(m.get("consonant_length") or 0.0)
+                   + float(m.get("vowel_length") or 0.0)) / speed
+            out.append([m.get("text", ""), round(t, 3)])
+            t += dur
+        pm = phrase.get("pause_mora")
+        if pm:
+            t += float(pm.get("vowel_length") or 0.0) / speed
+    return out
 
 
 def dummy_wav(text: str, speed: float) -> bytes:
@@ -165,12 +227,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
     script = proj.load_script()
     client = None
     if tts == "voicevox":
-        client = VoicevoxClient(cfg.get("voicevox", "url", default="http://127.0.0.1:50021"))
-        if not client.ping():
-            raise SystemExit(
-                "VOICEVOX Engine に接続できません。VOICEVOXを起動するか "
-                "`--tts dummy` を指定してください。"
-            )
+        client = ensure_engine(cfg)  # 落ちていればヘッドレスで自動起動
         client.sync_dictionary(load_dictionary(cfg))
 
     default_pause = float(cfg.get("voicevox", "default_pause", default=0.3))
@@ -206,12 +263,19 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 f"{spoken}|{style_id}|{speed}|{pitch}|{intonation}|{tts}|{dict_sig}".encode()
             ).hexdigest()[:16]
             cached = cache_dir / f"{key}.wav"
+            mora_cache = cache_dir / f"{key}.moras.json"
+            moras = None
             if cached.exists():
                 data = cached.read_bytes()
+                if mora_cache.exists():
+                    moras = json.loads(mora_cache.read_text(encoding="utf-8"))
                 hits += 1
             else:
                 if client is not None:
                     data = client.synthesize(spoken, style_id, speed, pitch, intonation)
+                    moras = extract_moras(client.last_query)
+                    mora_cache.write_text(json.dumps(moras, ensure_ascii=False),
+                                          encoding="utf-8")
                 else:
                     data = dummy_wav(spoken, speed)
                 cached.write_bytes(data)
@@ -234,6 +298,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                     scene_start=(ci == 0),
                     short=scene.short,
                     lead=round(lead, 3),
+                    moras=moras,
                 )
             )
             t += dur + pause

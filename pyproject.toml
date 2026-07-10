@@ -12,7 +12,8 @@ dependencies = [
 
 [project.optional-dependencies]
 llm = ["anthropic>=0.40"]
-qc = ["openai-whisper"]
+qc = ["faster-whisper"]          # 誤読チェック（openai-whisperでも可）
+bgm = ["torch", "transformers", "scipy", "sentencepiece"]  # ytf bgm (MusicGen)
 
 [project.scripts]
 ytf = "ytf.cli:main"

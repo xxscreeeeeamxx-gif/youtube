@@ -87,6 +87,14 @@ def main(argv: list[str] | None = None) -> None:
     sp.add_argument("--no-open", action="store_true", help="ブラウザを自動で開かない")
 
     sp = sub.add_parser(
+        "bgm",
+        help="BGMをローカル生成（MusicGen。例: ytf bgm \"calm ambient\" --name calm）",
+    )
+    sp.add_argument("prompt", help="曲の雰囲気（英語推奨）")
+    sp.add_argument("--name", help="保存名（assets/bgm/<name>.mp3）")
+    sp.add_argument("--duration", type=int, default=40, help="秒数（8〜120）")
+
+    sp = sub.add_parser(
         "media",
         help="フリー素材の検索・DL（例: ytf media \"中世 銀行\"。--video で動画）",
     )
@@ -196,6 +204,10 @@ def main(argv: list[str] | None = None) -> None:
         from .editor import run_editor
         run_editor(cfg, Project.resolve(cfg, args.project),
                    port=args.port, open_browser=not args.no_open)
+
+    elif args.cmd == "bgm":
+        from .bgm import run_bgm
+        run_bgm(cfg, args.prompt, args.name, args.duration)
 
     elif args.cmd == "media":
         from .media import run_media

@@ -25,6 +25,8 @@ characters:
 
 voicevox:
   url: "http://127.0.0.1:50021"
+  # エンジンが落ちていたらここからヘッドレス自動起動（GUIアプリを開く必要なし）
+  engine_path: "/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run"
   # セリフ間の無音（秒）。台本側の pause_after で上書き可能
   default_pause: 0.45
   # 読み間違い対策のユーザー辞書（起動時に自動登録）
