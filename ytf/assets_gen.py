@@ -122,7 +122,7 @@ def init_assets(cfg: Config, force: bool = False) -> None:
         _gen_demo_clip(demo)
 
     # BGM（アンビエント）と効果音ライブラリ
-    _gen_bgm(assets / "bgm" / "ambient.mp3", force)
+    _gen_bgm(assets / "bgm", force)
     _gen_se_library(assets / "se", force)
 
 
@@ -145,23 +145,64 @@ def _run_ff(args: list[str], label: str) -> None:
         print(f"{label}生成に失敗: {r.stderr[-200:]}")
 
 
-def _gen_bgm(path: Path, force: bool) -> None:
-    if path.exists() and not force:
-        return
-    path.parent.mkdir(parents=True, exist_ok=True)
-    fc = (
+# 自作シンセBGM（ループ用48秒）。もっと良い曲を使いたいときは
+# DOVA-SYNDROME 等からDLして assets/bgm/ に置けば編集画面で選べる。
+BGM_RECIPES = {
+    # 落ち着いたアンビエント（既定）
+    "ambient": (
+        [220, 261.63, 329.63, 659.26],
         "[0]tremolo=f=0.10:d=0.5[a];[1]tremolo=f=0.13:d=0.5[b];"
         "[2]tremolo=f=0.11:d=0.5[c];[3]volume=0.35,tremolo=f=0.16:d=0.6[d];"
         "[a][b][c][d]amix=inputs=4:normalize=0,lowpass=f=1100,"
         "aecho=0.8:0.88:800|1300:0.35|0.25,loudnorm=I=-16:TP=-1.5,"
-        "afade=t=in:d=4,afade=t=out:st=44:d=4[out]"
-    )
-    args = []
-    for f in (220, 261.63, 329.63, 659.26):
-        args += ["-f", "lavfi", "-i", f"sine=frequency={f}:duration=48"]
-    args += ["-filter_complex", fc, "-map", "[out]", "-ar", "44100",
-             "-b:a", "160k", str(path)]
-    _run_ff(args, "BGM")
+        "afade=t=in:d=4,afade=t=out:st=44:d=4[out]",
+    ),
+    # 暗め・謎めき（未解決ミステリー回向け）
+    "mystery": (
+        [110, 164.81, 220, 246.94, 329.63],
+        "[0]tremolo=f=0.10:d=0.6[a];[1]tremolo=f=0.12:d=0.5[b];"
+        "[2]tremolo=f=0.10:d=0.5[c];[3]volume=0.5,tremolo=f=0.15:d=0.6[d];"
+        "[4]volume=0.2,tremolo=f=0.18:d=0.7[e];"
+        "[a][b][c][d][e]amix=inputs=5:normalize=0,lowpass=f=800,"
+        "aecho=0.8:0.9:1000|1600:0.4|0.3,loudnorm=I=-17:TP=-1.5,"
+        "afade=t=in:d=4,afade=t=out:st=44:d=4[out]",
+    ),
+    # 明るめ・あたたかい（実用・ハウツー回向け）
+    "warm": (
+        [130.81, 164.81, 196.0, 246.94, 523.25],
+        "[0]tremolo=f=0.11:d=0.4[a];[1]tremolo=f=0.14:d=0.4[b];"
+        "[2]tremolo=f=0.12:d=0.4[c];[3]volume=0.6,tremolo=f=0.17:d=0.5[d];"
+        "[4]volume=0.18,tremolo=f=0.2:d=0.6[e];"
+        "[a][b][c][d][e]amix=inputs=5:normalize=0,lowpass=f=1600,"
+        "aecho=0.7:0.8:400|700:0.3|0.2,loudnorm=I=-16:TP=-1.5,"
+        "afade=t=in:d=3,afade=t=out:st=44:d=4[out]",
+    ),
+    # 軽いパルス（テンポ感が欲しい回向け）
+    "beat": (
+        [82.41, 220, 261.63, 329.63],
+        "[0]tremolo=f=2.0:d=0.9[bass];"
+        "[1]volume=0.3,tremolo=f=0.12:d=0.5[p1];"
+        "[2]volume=0.3,tremolo=f=0.15:d=0.5[p2];"
+        "[3]volume=0.25,tremolo=f=0.1:d=0.5[p3];"
+        "[bass][p1][p2][p3]amix=inputs=4:normalize=0,lowpass=f=1300,"
+        "aecho=0.6:0.7:300:0.25,loudnorm=I=-16:TP=-1.5,"
+        "afade=t=in:d=2,afade=t=out:st=44:d=4[out]",
+    ),
+}
+
+
+def _gen_bgm(bgm_dir: Path, force: bool) -> None:
+    bgm_dir.mkdir(parents=True, exist_ok=True)
+    for name, (freqs, fc) in BGM_RECIPES.items():
+        path = bgm_dir / f"{name}.mp3"
+        if path.exists() and not force:
+            continue
+        args = []
+        for f in freqs:
+            args += ["-f", "lavfi", "-i", f"sine=frequency={f}:duration=48"]
+        args += ["-filter_complex", fc, "-map", "[out]", "-ar", "44100",
+                 "-b:a", "160k", str(path)]
+        _run_ff(args, f"BGM({name})")
 
 
 # 効果音は「効果音ラボ」(https://soundeffect-lab.info) の素材。商用利用可・
