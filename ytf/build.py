@@ -140,8 +140,10 @@ def _stat_fc(inl: str, outl: str, stat: dict, font: str,
     fs = int(h * 0.17)
     lfs = int(h * 0.05)
     alpha = "if(lt(t\\,0.3)\\,t/0.3\\,1)"
-    # drawtext の text 内では : と , をエスケープする（式の区切りと衝突するため）
-    num = f"%{{eif\\:{s}+({v}-{s})*min(1\\,t/{dur})\\:d}}{unit}"
+    # drawtext の text 内では : , を \ でエスケープ。半角 % はどうエスケープしても
+    # %{...} 展開と衝突して "Stray %" になる（実測）ため、全角％に置き換える
+    unit_esc = unit.replace("%", "％")
+    num = f"%{{eif\\:{s}+({v}-{s})*min(1\\,t/{dur})\\:d}}{unit_esc}"
     dn = (f"drawtext=fontfile='{font}':text='{num}':fontsize={fs}:fontcolor=white:"
           f"borderw={max(3, fs // 18)}:bordercolor=0x14181e:alpha='{alpha}':"
           f"x=(w-text_w)/2:y=h*0.40")

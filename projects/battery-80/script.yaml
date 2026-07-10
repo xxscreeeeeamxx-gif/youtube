@@ -1,0 +1,192 @@
+# 2本目の本番台本（青山龍星の一人語り）。投稿前に必ず目視レビューすること。
+# 事実関係は断定を避けた表現にしてある（劣化要因・保管実験・サイクル寿命の報告など）。
+meta:
+  title: "スマホ充電は80%で止めるべき？バッテリー科学の真実"
+  slug: "battery-80"
+  summary: "毎晩100%まで充電して寝ていませんか。実はスマホメーカー自身が「80%で止める」機能を搭載しています。リチウムイオン電池が劣化する本当の理由と、今日からできる正しい電池ケアを、青山龍星が解説します。"
+  tags: ["スマホ", "バッテリー", "充電", "科学", "リチウムイオン電池"]
+  thumbnail:
+    top: "満タンが寿命を削る"
+    bottom: "80%の真実"
+scenes:
+  - id: hook
+    title: ""
+    background: m_77e72ca3
+    short: true
+    cuts:
+      - speaker: aoyama
+        emotion: surprised
+        text: "毎晩、スマホを100%まで充電して寝ていませんか。"
+      - speaker: aoyama
+        emotion: normal
+        text: "実はその習慣、バッテリーの寿命を少しずつ削っていると言われています。"
+        se: jaan
+        telops:
+          - {text: "満タンが寿命を削る", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: aoyama
+        emotion: normal
+        text: "しかも、スマホメーカー自身が、80%で充電を止める機能をわざわざ搭載しています。"
+        slide:
+          title: "今日のテーマ"
+          big: "充電は80%で止めるべき？"
+      - speaker: aoyama
+        emotion: normal
+        text: "今日はこの80%論争に、電池の科学で決着をつけます。"
+  - id: chapter1
+    title: "第1章 電池の敵は満タンと熱"
+    background: m_07a487b7
+    cuts:
+      - speaker: aoyama
+        emotion: normal
+        text: "まず、スマホの中の[リチウムイオン電池|リチウムイオンでんち]がどう動いているかから。"
+        slide:
+          title: "リチウムイオン電池の仕組み"
+          bullets:
+            - "リチウムイオンが行き来する"
+            - "充電 = イオンを押し込む"
+            - "放電 = イオンが戻っていく"
+      - speaker: aoyama
+        emotion: normal
+        text: "充電とは、リチウムイオンを片側の電極に、ぎゅうぎゅうに押し込む作業です。"
+      - speaker: aoyama
+        emotion: normal
+        background: m_ccee522e
+        text: "満充電の状態は、この押し込みが限界まで達した、いわば満員電車です。"
+      - speaker: aoyama
+        emotion: normal
+        text: "この状態が長く続くと、電池の中では少しずつ余計な化学反応が進みます。"
+      - speaker: aoyama
+        emotion: normal
+        text: "部品の表面に膜がたまり、イオンの通り道がふさがれていく。これが劣化の正体のひとつと言われています。"
+        slide:
+          title: "劣化の正体"
+          bullets:
+            - "満充電は電池に高い電圧"
+            - "内部で余計な反応が進む"
+            - "イオンの通り道が減っていく"
+      - speaker: aoyama
+        emotion: normal
+        background: m_092e4238
+        text: "そしてもうひとつの大敵が、熱。"
+      - speaker: aoyama
+        emotion: normal
+        text: "化学反応は温度が上がるほど速く進みます。劣化も同じです。"
+        telops:
+          - {text: "敵は満タンと熱", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
+      - speaker: aoyama
+        emotion: thinking
+        text: "つまり、100%のまま熱い場所に置くのが、電池には一番つらい状態なんです。"
+        se: don
+      - speaker: aoyama
+        emotion: normal
+        text: "スマホの電池が2年でヘタるのは、使ったからというより、満タンと熱にさらされ続けたから、という側面が大きいんです。"
+  - id: chapter2
+    title: "第2章 80%に科学的な根拠はあるのか"
+    background: m_37e7bbee
+    cuts:
+      - speaker: aoyama
+        emotion: thinking
+        text: "では、80%という数字に根拠はあるのでしょうか。"
+      - speaker: aoyama
+        emotion: normal
+        text: "電池の研究では、充電状態が高いほど、そして高温ほど劣化が速いという結果が繰り返し報告されています。"
+        slide:
+          title: "研究で知られる傾向"
+          bullets:
+            - "高い充電状態ほど劣化が速い"
+            - "高温で劣化はさらに加速"
+            - "中間の充電が最も穏やか"
+      - speaker: aoyama
+        emotion: normal
+        text: "たとえば100%のまま保管した電池は、40%で保管した場合より容量の減りがずっと速いと言われています。"
+      - speaker: aoyama
+        emotion: normal
+        text: "また、0から100まで使い切る充電を繰り返すより、20から80の範囲で使うほうが、寿命が数倍延びるという報告もあります。"
+      - speaker: aoyama
+        emotion: normal
+        background: m_aeac6565
+        text: "電池が命の電気自動車でも、日常は80%まで、という運用をメーカーが推奨している例があります。"
+      - speaker: aoyama
+        emotion: normal
+        text: "だからスマホメーカーは、上限を80%で止める機能を用意しました。"
+        se: jaan
+        stat: {value: 80, unit: "%", label: "多くのスマホが搭載する充電上限"}
+      - speaker: aoyama
+        emotion: normal
+        text: "iPhoneにもAndroidにも、いたわり充電、最適化充電、充電上限と、名前は違えど同じ思想の機能が入っています。"
+      - speaker: aoyama
+        emotion: normal
+        text: "つまり80%は迷信ではなく、電池の性質に基づいた数字なんです。"
+  - id: chapter3
+    title: "第3章 で、結局どうすればいい？"
+    background: m_38782c86
+    cuts:
+      - speaker: aoyama
+        emotion: normal
+        text: "ここまで聞くと、毎回80%ぴったりで止めなきゃ、と思うかもしれません。でも、神経質になる必要はありません。"
+      - speaker: aoyama
+        emotion: normal
+        text: "現代のスマホはかなり賢くて、電池を守る制御が最初から入っています。"
+        slide:
+          title: "スマホが勝手にやってくれること"
+          bullets:
+            - "満充電後は流入を抑える"
+            - "就寝中は満タン到達を遅らせる"
+            - "温度を常に監視している"
+      - speaker: aoyama
+        emotion: normal
+        background: m_c49925f5
+        text: "たとえば最適化充電は、あなたの起床時間を学習して、朝の直前まで80%で待機してくれます。"
+      - speaker: aoyama
+        emotion: normal
+        text: "その上で、効果が大きいのはこの3つです。"
+        slide:
+          title: "今日からできる電池ケア"
+          bullets:
+            - "高温を避ける（車内・直射日光）"
+            - "充電しながらの重いゲームを控える"
+            - "充電上限か最適化充電をオンに"
+      - speaker: aoyama
+        emotion: normal
+        background: m_802775f3
+        text: "特に夏の車内への放置は、電池の劣化が一気に進みます。熱だけは避けてください。"
+        telops:
+          - {text: "熱だけは避けて", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A00", glow: "#FF6622", anim: up}
+      - speaker: aoyama
+        emotion: normal
+        text: "ワイヤレス充電は便利ですが、発熱しやすいのが弱点。ケースが熱いと感じたら、外して充電を。"
+      - speaker: aoyama
+        emotion: happy
+        text: "逆に、たまに100%にするのはまったく問題ありません。旅行や出張の日は、遠慮なく満タンでいきましょう。"
+      - speaker: aoyama
+        emotion: normal
+        text: "バッテリーは消耗品です。2〜3年使って弱ったら交換すればいい。完璧を目指す必要はありません。"
+  - id: ending
+    title: "まとめ"
+    background: m_415403fb
+    cuts:
+      - speaker: aoyama
+        emotion: normal
+        text: "まとめます。電池の敵は、満タン状態の維持と、熱。"
+        slide:
+          title: "今日のまとめ"
+          bullets:
+            - "敵は満タンの維持と熱"
+            - "80%上限は科学的に妥当"
+            - "設定ひとつ入れたら忘れてOK"
+      - speaker: aoyama
+        emotion: normal
+        text: "80%で止める機能には、ちゃんとした科学的根拠がある。"
+      - speaker: aoyama
+        emotion: normal
+        text: "でも一番のコツは、設定をひとつ入れたら、あとは気にしすぎないことです。"
+        telops:
+          - {text: "気にしすぎない", size: lg, position: bottom-center, color: "#9FE8FF", stroke: "#0A2A3C", glow: "#33AADD", anim: fade}
+      - speaker: aoyama
+        emotion: happy
+        text: "電池を大切にする最良の方法は、電池のことを忘れられる仕組みを作ること、かもしれません。"
+      - speaker: aoyama
+        emotion: normal
+        text: "面白かったら高評価とチャンネル登録をお願いします。次回も身近なふしぎを解説します。"
+        se: oti
+        pause_after: 0.8
