@@ -26,7 +26,6 @@ scenes:
       - speaker: aoyama
         emotion: surprised
         text: "実はこれ、まだ完全には分かっていないんです。"
-        se: jaan
         telops:
           - {text: "実は未解決", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00"}
       - speaker: aoyama
@@ -42,7 +41,7 @@ scenes:
         emotion: normal
         text: "教科書の定説がひっくり返る話です。最後までお付き合いください。"
   - id: chapter1
-    title: "第1章 100年信じられた圧力説"
+    title: "100年信じられた圧力説"
     background: m_852facd6
     cuts:
       - speaker: aoyama
@@ -83,11 +82,10 @@ scenes:
       - speaker: aoyama
         emotion: thinking
         text: "こうして20世紀のうちに、圧力説だけでは説明できないと考えられるようになりました。定説の崩壊です。"
-        se: don
         telops:
           - {text: "定説は崩壊", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
   - id: chapter2
-    title: "第2章 有力候補は摩擦熱と表面の水"
+    title: "有力候補は摩擦熱と表面の水"
     background: m_1ed7273a
     cuts:
       - speaker: aoyama
@@ -137,7 +135,7 @@ scenes:
         emotion: normal
         text: "つまり氷は、生まれつき表面にすべり促進コーティングを持っている。触った瞬間から滑る理由にも説明がつきます。"
   - id: chapter3
-    title: "第3章 最新研究でも決着していない"
+    title: "最新研究でも決着していない"
     background: m_4ddd7a6e
     cuts:
       - speaker: aoyama
@@ -158,7 +156,6 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "面白いデータもあります。氷が一番滑りやすいのは、0℃ではなくマイナス7℃前後だという研究があるんです。"
-        se: jaan
         stat: {value: -7, unit: "℃", label: "最も滑る温度"}
       - speaker: aoyama
         emotion: normal
@@ -180,7 +177,7 @@ scenes:
         emotion: thinking
         text: "寒ければ寒いほど滑るわけではない。氷は、思っていたより奥が深いんです。"
   - id: chapter4
-    title: "第4章 なぜこんな身近な謎が解けないのか"
+    title: "なぜこんな身近な謎が解けないのか"
     background: m_348b3f61
     cuts:
       - speaker: aoyama
@@ -255,5 +252,4 @@ scenes:
       - speaker: aoyama
         emotion: happy
         text: "面白かったら高評価とチャンネル登録をお願いします。次回も身近なふしぎを解説します。"
-        se: oti
         pause_after: 0.8

@@ -54,8 +54,8 @@ video:
     file: assets/bgm/ambient.mp3   # 落ち着いたアンビエント（ytf assets --init で生成）
     volume_db: -20
     ducking: true       # セリフ中にBGMを自動で下げる
-  # 効果音の音量（dB）。台本カットの se: で鳴らす
-  se_volume_db: -3
+  # 効果音の音量（dB）。台本カットの se: で鳴らす（控えめ運用）
+  se_volume_db: -8
   # チャンネルOP（導入シーンの直後に挿入される5秒のオープニング）
   op:
     enabled: true

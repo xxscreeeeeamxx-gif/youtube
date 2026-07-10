@@ -32,7 +32,7 @@ scenes:
         emotion: normal
         text: "今日はこの80%論争に、電池の科学でハッキリ決着をつけます。最後まで見れば、もう充電で迷うことはありません。"
   - id: chapter1
-    title: "第1章 電池の敵は満タンと熱"
+    title: "電池の敵は満タンと熱"
     background: m_07a487b7
     cuts:
       - speaker: aoyama
@@ -79,7 +79,7 @@ scenes:
         emotion: normal
         text: "2年でヘタったあなたのスマホ。あれは使い倒したからじゃない。満タンと熱にさらされ続けたから、という側面が大きいんです。"
   - id: chapter2
-    title: "第2章 80%に科学的な根拠はあるのか"
+    title: "80%に科学的な根拠はあるのか"
     background: m_37e7bbee
     cuts:
       - speaker: aoyama
@@ -115,7 +115,7 @@ scenes:
         emotion: normal
         text: "つまり80%は、誰かの思いつきでも迷信でもなく、電池の性質から出てきた数字なんです。"
   - id: chapter3
-    title: "第3章 で、結局どうすればいい？"
+    title: "で、結局どうすればいい？"
     background: m_38782c86
     cuts:
       - speaker: aoyama

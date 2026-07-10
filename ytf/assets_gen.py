@@ -209,12 +209,13 @@ def _gen_bgm(bgm_dir: Path, force: bool) -> None:
 # クレジット表記は任意（不要）だが、概要欄に自動で記載する（metadata.py）。
 SE_BASE = "https://soundeffect-lab.info/sound/"
 SE_SOURCES = {
-    "jaan": "anime/mp3/jajean1.mp3",       # ジャジャーン（紹介・判明）
-    "don": "anime/mp3/doon1.mp3",          # ドーン（衝撃・結論）
-    "trans": "anime/mp3/title1.mp3",       # タイトル表示（章切替）
-    "pop": "button/mp3/decision3.mp3",     # 決定ボタン（軽い合図）
-    "oti": "anime/mp3/chan-chan1.mp3",     # ちゃんちゃん♪（オチ）
-    "levelup": "anime/mp3/levelup1.mp3",   # テッテレー（達成・正解感）
+    "trans": "anime/mp3/piano-single1.mp3",  # 章切替: ピアノの単音（深く落ち着いた音）
+    "xylo": "anime/mp3/sceneswitch1.mp3",    # 場面転換: 木琴（transの控えめな代替）
+    "jaan": "anime/mp3/jajean1.mp3",         # ジャジャーン（紹介・判明）※控えめ運用
+    "don": "anime/mp3/doon1.mp3",            # ドーン（衝撃・結論）※控えめ運用
+    "pop": "button/mp3/decision3.mp3",       # 決定ボタン（軽い合図）
+    "oti": "anime/mp3/chan-chan1.mp3",       # ちゃんちゃん♪（オチ）
+    "levelup": "anime/mp3/levelup1.mp3",     # テッテレー（達成・正解感）
     "pinpon": "voice/mp3/info-girl1/info-girl1-seikai1.mp3",  # 「正解」
     "bubu": "voice/mp3/info-girl1/info-girl1-bubu1.mp3",      # 「ブッブー」
 }
