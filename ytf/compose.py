@@ -397,6 +397,7 @@ class CutRender:
     telop_anim: str = "up"                   # 登場アニメ none/fade/up/down
     trans_png: str | None = None             # 章トランジションのバナー透過PNG（先頭カット）
     trans_lead: float = 0.0                  # カット冒頭のトランジション表示秒（この間ナレは無音）
+    op_gap: float = 0.0                      # このカットの直前にOP映像を挿入（秒）
     stat: dict | None = None                 # 数字カウントアップ {value,unit,label,start}
     # シーン単位の連続モーション（1画像を1方向にゆっくり動かす）用のタイムライン
     m_start: float = 0.0                     # シーン先頭からこのカット開始までの秒数
@@ -598,6 +599,7 @@ def render_frames(
             telop_anim=telop_anim,
             trans_png=trans_png,
             trans_lead=round(getattr(ct, "lead", 0.0), 3) if trans_png else 0.0,
+            op_gap=round(getattr(ct, "op_gap", 0.0), 3) if not vertical else 0.0,
             stat=cut.stat.model_dump() if cut.stat else None,
             m_start=round(shot_start.get(ct.index, 0.0), 3),
             m_total=round(shot_total.get(shot_id[ct.index], 0.0), 3),

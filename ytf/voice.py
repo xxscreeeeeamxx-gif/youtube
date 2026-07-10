@@ -39,6 +39,7 @@ class CutTiming:
     scene_start: bool   # シーン先頭カットか（章立てに使う）
     short: bool         # ショート切出対象シーンか
     lead: float = 0.0   # このカットの前に入れる無音（章トランジション用）
+    op_gap: float = 0.0  # このカットの前に入れるOP分の無音（OP映像が挿入される）
     # モーラ単位のタイミング [[かな, カット内開始秒], ...]（whisper不要の単語同期用。
     # VOICEVOXのaudio_queryから算出。dummy TTSではNone）
     moras: list | None = None
@@ -240,12 +241,25 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
     trans_on = bool(cfg.get("video", "transition", "enabled", default=True))
     trans_lead = float(cfg.get("video", "transition", "lead", default=1.8))
 
+    # OP: 最初のシーン（導入）の直後に挿入する分の無音
+    op_dur = 0.0
+    if cfg.get("video", "op", "enabled", default=False):
+        op_file = cfg.root / cfg.get("video", "op", "file", default="assets/op.mp4")
+        if op_file.exists():
+            op_dur = _probe_duration(op_file)
+        else:
+            print(f"注意: OPが未生成のためスキップ（ytf op で生成）: {op_file}")
+
     timings: list[CutTiming] = []
     t = 0.0
     idx = 0
     hits = 0
     for si, scene in enumerate(script.scenes):
         for ci, cut in enumerate(scene.cuts):
+            # OPは2番目のシーンの頭（導入→OP→解説）
+            op_gap = op_dur if (si == 1 and ci == 0) else 0.0
+            if op_gap:
+                t += op_gap
             # 章の頭（最初のシーンを除く）に無音の間を入れる
             lead = trans_lead if (ci == 0 and si > 0 and trans_on and scene.title) else 0.0
             if lead:
@@ -298,6 +312,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                     scene_start=(ci == 0),
                     short=scene.short,
                     lead=round(lead, 3),
+                    op_gap=round(op_gap, 3),
                     moras=moras,
                 )
             )
@@ -321,8 +336,9 @@ def concat_narration(proj: Project, timings: list[CutTiming]) -> Path:
         w.setsampwidth(2)
         w.setframerate(SAMPLE_RATE)
         for ct in timings:
-            lead_frames = int(round(ct.lead * SAMPLE_RATE))
-            if lead_frames > 0:  # 章トランジション用の無音の間
+            gap = ct.lead + getattr(ct, "op_gap", 0.0)
+            lead_frames = int(round(gap * SAMPLE_RATE))
+            if lead_frames > 0:  # OP + 章トランジション用の無音の間
                 w.writeframes(b"\x00\x00" * lead_frames)
             with wave.open(str(proj.audio_dir / ct.wav), "rb") as src:
                 if (src.getframerate(), src.getnchannels(), src.getsampwidth()) != (
@@ -334,6 +350,21 @@ def concat_narration(proj: Project, timings: list[CutTiming]) -> Path:
             if pause_frames > 0:
                 w.writeframes(b"\x00\x00" * pause_frames)
     return out
+
+
+def _probe_duration(path: Path) -> float:
+    import subprocess
+
+    from .config import ffprobe_bin
+    r = subprocess.run(
+        [ffprobe_bin(), "-v", "error", "-show_entries", "format=duration",
+         "-of", "default=nw=1:nk=1", str(path)],
+        capture_output=True, text=True,
+    )
+    try:
+        return float(r.stdout.strip())
+    except ValueError:
+        return 5.0
 
 
 def load_timings(proj: Project) -> list[CutTiming]:

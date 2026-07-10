@@ -290,12 +290,47 @@ def render_segments(
     return rels
 
 
+def _op_segment(cfg: Config, proj: Project, w: int, h: int) -> str | None:
+    """OP動画を本編セグメントと同じ規格に変換してキャッシュし、相対パスを返す。"""
+    op_file = cfg.root / cfg.get("video", "op", "file", default="assets/op.mp4")
+    if not op_file.exists():
+        return None
+    fps = int(cfg.get("video", "fps", default=30))
+    crf = str(cfg.get("video", "crf", default=20))
+    enc = pick_encoder(cfg.get("video", "encoder", default="auto"))
+    st = op_file.stat()
+    key = hashlib.sha1(
+        f"op|{op_file}|{st.st_size}|{int(st.st_mtime)}|{w}x{h}|{fps}|{enc[0]}".encode()
+    ).hexdigest()[:16]
+    rel = f"frames/seg_op_{key}.mp4"
+    if not (proj.root / rel).exists():
+        (proj.root / "frames").mkdir(exist_ok=True)
+        cmd = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error",
+               "-i", str(op_file),
+               "-vf", (f"scale={w}:{h}:force_original_aspect_ratio=decrease,"
+                       f"pad={w}:{h}:(ow-iw)/2:(oh-ih)/2,fps={fps},"
+                       f"format=yuv420p,setsar=1"),
+               "-an", "-c:v", *enc]
+        if enc[0] == "libx264":
+            cmd += ["-crf", crf]
+        cmd += [rel]
+        _run(cmd, cwd=proj.root)
+    return rel
+
+
 def _prepare_visual(cfg: Config, proj: Project, plan: list[CutRender],
                     w: int, h: int, stem: str) -> Path:
     """映像側のconcatリストを作る。動きあり=セグメント連結 / なし=静止画を時間指定。"""
     motion_on = bool(cfg.get("video", "motion", "enabled", default=True))
     if motion_on or any(c.video for c in plan):
         segs = render_segments(cfg, proj, plan, w, h)
+        # OP: op_gap を持つカットの直前に挿入（導入→OP→解説）
+        for i, item in enumerate(plan):
+            if item.op_gap > 0:
+                op_rel = _op_segment(cfg, proj, w, h)
+                if op_rel:
+                    segs.insert(i, op_rel)
+                break
         lines = ["ffconcat version 1.0"] + [f"file '{s}'" for s in segs]
         p = proj.root / f"{stem}_list.txt"
         p.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -406,10 +441,16 @@ def collect_se_events(cfg: Config, proj: Project,
 
     # 章の先頭（見出しあり）にトランジション音「don」を自動で鳴らす
     trans_on = bool(cfg.get("video", "transition", "enabled", default=True))
+    op_file = cfg.root / cfg.get("video", "op", "file", default="assets/op.mp4")
     prev_scene = None
     for cut, ct in zip(flat, timings):
         scene_first = ct.scene_id != prev_scene
         prev_scene = ct.scene_id
+        op_gap = getattr(ct, "op_gap", 0.0)
+        if op_gap > 0 and op_file.exists():
+            # OP音声（op.mp4内蔵のオーディオ）をOP開始時刻に鳴らす
+            op_start = max(0.0, ct.start - getattr(ct, "lead", 0.0) - op_gap)
+            events.append((op_start, str(op_file)))
         if scene_first and ct.scene_title and trans_on:
             p = se_path(cfg.get("video", "transition", "se", default="don"))
             if p:  # トランジションはカット開始の lead 秒前から始まる

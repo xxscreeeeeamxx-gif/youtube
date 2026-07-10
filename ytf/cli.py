@@ -86,6 +86,8 @@ def main(argv: list[str] | None = None) -> None:
     sp.add_argument("--port", type=int, default=8765)
     sp.add_argument("--no-open", action="store_true", help="ブラウザを自動で開かない")
 
+    sub.add_parser("op", help="チャンネルOP（5秒）を生成 → assets/op.mp4")
+
     sp = sub.add_parser(
         "bgm",
         help="BGMをローカル生成（MusicGen。例: ytf bgm \"calm ambient\" --name calm）",
@@ -204,6 +206,10 @@ def main(argv: list[str] | None = None) -> None:
         from .editor import run_editor
         run_editor(cfg, Project.resolve(cfg, args.project),
                    port=args.port, open_browser=not args.no_open)
+
+    elif args.cmd == "op":
+        from .op import run_op
+        run_op(cfg)
 
     elif args.cmd == "bgm":
         from .bgm import run_bgm

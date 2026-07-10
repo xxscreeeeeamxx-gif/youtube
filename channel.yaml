@@ -56,6 +56,10 @@ video:
     ducking: true       # セリフ中にBGMを自動で下げる
   # 効果音の音量（dB）。台本カットの se: で鳴らす
   se_volume_db: -3
+  # チャンネルOP（導入シーンの直後に挿入される5秒のオープニング）
+  op:
+    enabled: true
+    file: assets/op.mp4   # ytf op で生成
   # 章の切替トランジション（全画面の章タイトル）
   transition:
     enabled: true
