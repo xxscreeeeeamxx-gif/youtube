@@ -18,6 +18,9 @@ scenes:
       - speaker: aoyama
         emotion: surprised
         text: "また今夜も、スマホを100%まで充電して寝ようとしていませんか。ええ、たった今、充電器に挿したあなたの話です。"
+        video: assets/clips/hook_gauge.mp4
+        video_span: 2
+        video_full: true
       - speaker: aoyama
         emotion: normal
         text: "残念なお知らせです。その満タン、電池の寿命をじわじわ削っていると言われています。しかも毎晩、あなた自身の手で、です。"
@@ -95,6 +98,9 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "たとえば100%のまま置いた電池は、40%で置いた場合より容量の減りがずっと速いと言われています。使っていなくても、です。置いてあるだけで、減る。怖くないですか。"
+        video: assets/clips/graph_decay.mp4
+        video_span: 2
+        video_full: true
       - speaker: aoyama
         emotion: normal
         text: "0から100まで使い切る充電を繰り返すより、20から80の範囲で使うほうが、寿命が数倍延びたという報告まであります。"
@@ -109,6 +115,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "iPhoneなら充電上限。Androidならいたわり充電。名前は違っても、思想は全部同じです。"
+        video: assets/clips/toggle_80.mp4
+        video_full: true
       - speaker: aoyama
         emotion: normal
         text: "つまり80%は、誰かの思いつきでも迷信でもなく、電池の性質から出てきた数字。知らなかったのは、毎日スマホを握りしめている私たちだけだった、というわけです。"
@@ -135,12 +143,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "その上で、人間がやるべきことは、たった3つです。3つですよ。メモの準備はいいですか。"
-        slide:
-          title: "今日からできる電池ケア"
-          bullets:
-            - "高温を避ける（車内・直射日光）"
-            - "充電しながらの重いゲームを控える"
-            - "充電上限か最適化充電をオンに"
+        video: assets/clips/care_checklist.mp4
+        video_full: true
       - speaker: aoyama
         emotion: normal
         background: m_802775f3

@@ -116,17 +116,15 @@ def _telop_overlay_fc(ti: int, inl: str, outl: str, anim: str, dur: float = 0.4)
 
 
 def _trans_overlay_fc(ti: int, inl: str, outl: str, w: int, lead: float) -> str:
-    """章トランジション[ti]を左からスライドイン→lead秒保持→右へ退場で重ねる。
+    """章トランジション[ti]を素早いフェードイン→lead秒保持→フェードアウトで重ねる。
 
     この間ナレーションは無音（voice側で lead 秒の間を確保している）。
     """
     hold = max(0.6, lead)          # 保持は間の長さに合わせる
-    out_s = hold                    # 退場開始
-    end = hold + 0.45               # 退場完了
-    x = (f"if(lt(t\\,0.4)\\,-{w}+{w}*t/0.4\\,"
-         f"if(lt(t\\,{out_s})\\,0\\,{w}*(t-{out_s})/0.45))")
-    return (f"[{ti}:v]format=rgba[tr];"
-            f"{inl}[tr]overlay=x='{x}':y=0:enable='lt(t\\,{end})',format=yuv420p{outl}")
+    end = hold + 0.3               # フェードアウト完了
+    return (f"[{ti}:v]format=rgba,fade=t=in:st=0:d=0.2:alpha=1,"
+            f"fade=t=out:st={hold}:d=0.3:alpha=1[tr];"
+            f"{inl}[tr]overlay=x=0:y=0:enable='lt(t\\,{end})',format=yuv420p{outl}")
 
 
 def _stat_fc(inl: str, outl: str, stat: dict, font: str,
@@ -273,7 +271,8 @@ def render_segments(
         if item.telop_png:
             vsig += f"|tel:{item.telop_png}:{item.telop_anim}"
         if item.trans_png:
-            vsig += f"|trans:{item.trans_png}:{item.trans_lead}"
+            # 末尾は演出バージョン（フィルタを変えたらここを変えてキャッシュを割る）
+            vsig += f"|trans:{item.trans_png}:{item.trans_lead}:fade1"
         if item.stat:
             vsig += f"|stat:{item.stat}"
         key_src = (f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|"
