@@ -1,0 +1,240 @@
+# battery-80 の掛け合い実験版（春日部つむぎ=解説の先生 / ずんだもん=ちょっとアホな生徒）。
+# ずんだもんの語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。つむぎの一人称はあーし。
+# 素材（アニメ・実写クリップ・背景）は battery-80 と共用。
+meta:
+  title: "スマホ充電100%は損！80%の科学【ずんだもん解説】"
+  slug: "battery-80-duo"
+  summary: "毎晩100%まで充電して寝ているずんだもんに、春日部つむぎが衝撃の事実を突きつけます。スマホメーカー自身が80%で充電を止める機能を作る理由と、リチウムイオン電池が劣化する仕組み、今日からできる正しい電池ケアを掛け合いで解説。"
+  tags: ["スマホ", "バッテリー", "充電", "科学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "満タンは損してる"
+    bottom: "80%の科学"
+scenes:
+  - id: hook
+    title: ""
+    background: m_77e72ca3
+    short: true
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "ボク、今夜もスマホを100%まで充電して寝るのだ。完璧な電池管理なのだ。えらいのだ。"
+        video: assets/clips/hook_gauge.mp4
+        video_span: 2
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "あー、それ電池の寿命をゴリゴリ削ってるよ。良かれと思ってやってるやつが、いちばんタチ悪いんだよね。"
+        telops:
+          - {text: "満タンが寿命を削る", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "な、なんでなのだ！？満タンは正義じゃなかったのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもスマホメーカー自身が、80%で充電を止める機能をわざわざ作ってる。おかしいと思わない？満タンにできるのに、させたくないんだよ。"
+        slide:
+          title: "今日のテーマ"
+          big: "充電は80%で止めるべき？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "言われてみれば謎なのだ。メーカーが自分の機能を封じてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日はこの80%論争に、電池の科学で決着をつけるよ。最後まで見ないと、キミも今夜また電池を削って眠ることになるからね。"
+        telops:
+          - {text: "今日で決着", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
+  - id: chapter1
+    title: "電池の敵は満タンと熱"
+    background: m_07a487b7
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず敵を知ろっか。ずんだもん、スマホの中の[リチウムイオン電池|リチウムイオンでんち]がどう動いてるか、説明できる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "任せるのだ。えっと、電気の妖精さんが中で頑張ってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "0点。でも大丈夫、図で見れば10秒で分かるから。"
+        video: assets/clips/battery_anim.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "充電っていうのは、リチウムイオンっていう小さな粒を、片側の電極にぎゅうぎゅう押し込む作業。仕組みはそれだけ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "妖精さんじゃなくて、満員電車だったのだ。夢がないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        background: m_ccee522e
+        text: "そう、満充電は朝8時の通勤電車。この満員状態が何時間も続くと、中では余計な化学反応がじわじわ進む。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "部品の表面にゴミみたいな膜がたまって、イオンの通り道がどんどん塞がれていく。これが劣化の正体のひとつって言われてる。"
+        slide:
+          title: "劣化の正体"
+          bullets:
+            - "満充電は電池に高い電圧"
+            - "内部で余計な反応が進む"
+            - "イオンの通り道が減っていく"
+      - speaker: zundamon
+        emotion: thinking
+        text: "詰め込みっぱなしがダメなのだ。ボクの毎晩の満タン、まずい気がしてきたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        background: m_092e4238
+        text: "で、もう一人の犯人が、熱。"
+        video: assets/clips/heat_flame.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "化学反応は温度が上がるほど速く進む。つまり劣化も速く進む。単純な話だよ。"
+        telops:
+          - {text: "敵は満タンと熱", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "満タンのまま熱い場所に放置が最悪コンボなのだ。ボク、枕の下で充電しながら寝てたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ電池への拷問だから。2年でヘタったスマホの犯人は、使いすぎじゃなくて毎晩の充電習慣。つまり、キミ。"
+        video: assets/clips/settings_tap.mp4
+        video_full: true
+        video_speed: 0.85
+        telops:
+          - {text: "犯人は、キミ", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
+  - id: chapter2
+    title: "80%に科学的な根拠はあるのか"
+    background: m_37e7bbee
+    cuts:
+      - speaker: zundamon
+        emotion: angry
+        text: "でも80%って、キリがいいだけの数字な気もするのだ。ボクは騙されないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、いい疑い方じゃん。じゃあその疑い、科学でつぶすね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "電池の研究では、充電状態が高いほど、そして温度が高いほど劣化が速い。この傾向が嫌というほど繰り返し報告されてる。"
+        slide:
+          title: "研究で知られる傾向"
+          bullets:
+            - "高い充電状態ほど劣化が速い"
+            - "高温で劣化はさらに加速"
+            - "中間の充電が最も穏やか"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たとえば100%のまま置いた電池は、40%で置いた場合より容量の減りがずっと速いと言われてる。使ってなくても、だよ。"
+        video: assets/clips/graph_decay.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "置いてあるだけで減るのだ！？サボってるのに疲れるタイプなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも0から100まで使い切るより、20から80の範囲で使うほうが、寿命が数倍延びたって報告まである。"
+      - speaker: tsumugi
+        emotion: normal
+        background: m_aeac6565
+        text: "電池のかたまりである電気自動車の世界だと、普段は80%までがメーカー公認の常識になりつつあるんだよね。"
+        video: assets/clips/ev_charge.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "だからスマホメーカーは、わざわざ上限80%で止める機能を作ったわけ。"
+        stat: {value: 80, unit: "%", label: "多くのスマホが搭載する充電上限"}
+      - speaker: tsumugi
+        emotion: normal
+        text: "iPhoneなら充電上限、Androidならいたわり充電。名前は違っても、思想は全部同じ。"
+        video: assets/clips/toggle_80.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "80%は思いつきじゃなくて、電池の性質から出てきた数字だったのだ。知らなかったのは、ボクたちだけなのだ。"
+        telops:
+          - {text: "80%は科学", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+  - id: chapter3
+    title: "で、結局どうすればいい？"
+    background: m_38782c86
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "分かったのだ！今日から1%の誤差も許さず、80%ぴったりで止めるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "出た、真面目系ポンコツ。神経質にならなくていいよ。今のスマホは賢くて、電池を守る仕組みが最初から入ってるから。"
+        slide:
+          title: "スマホが勝手にやってくれること"
+          bullets:
+            - "満充電後は流入を抑える"
+            - "就寝中は満タン到達を遅らせる"
+            - "温度を常に監視している"
+      - speaker: tsumugi
+        emotion: normal
+        background: m_c49925f5
+        text: "最適化充電なんて、キミの起床時間を学習して、朝起きる直前まで80%で待機してるんだよ。健気じゃない？"
+        video: assets/clips/sleep_phone.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクが寝てる間、スマホは働いてたのだ。ボクより偉いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その上で人間がやることは、たった3つだけ。ずんだもん、メモの準備はいい？"
+        video: assets/clips/care_checklist.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        background: m_802775f3
+        text: "特に夏の車内への放置。あれは電池を炙ってるのと同じだから、熱だけはガチで避けて。"
+        video: assets/clips/hot_car.mp4
+        video_full: true
+        telops:
+          - {text: "熱だけは避けて", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A00", glow: "#FF6622", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "ワイヤレス充電も弱点は熱。ケースが熱いなと思ったら、外して充電する。それだけでも違うよ。"
+        video: assets/clips/wireless_charge.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: thinking
+        text: "じゃあ旅行の日はどうするのだ？80%だと電池が足りなくて不安なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "たまの100%は全然OK。旅行の日は遠慮なく満タンにしていいよ。"
+        telops:
+          - {text: "たまの100%はOK", size: md, position: bottom-center, color: "#9FFFC8", stroke: "#073A1E", glow: "#33DD77", anim: fade}
+      - speaker: tsumugi
+        emotion: normal
+        text: "そもそも電池は消耗品。2〜3年使って弱ったら交換すればいい。完璧主義、いらないから。"
+  - id: ending
+    title: ""
+    background: m_415403fb
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、やることはひとつだけ。この動画を閉じる前に、充電上限か最適化充電の設定をオンにする。30秒で終わるよ。"
+        video: assets/clips/old_phone.mp4
+        video_full: true
+        video_speed: 0.9
+        telops:
+          - {text: "今すぐ設定オン", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクはもう設定したのだ！やらない理由がないのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして本当のコツは、設定をひとつ入れたら、あとはもう忘れることだよ。"
+        telops:
+          - {text: "気にしすぎない", size: lg, position: bottom-center, color: "#9FE8FF", stroke: "#0A2A3C", glow: "#33AADD", anim: fade}
+      - speaker: zundamon
+        emotion: thinking
+        text: "電池を一番大切にする方法は、電池のことを考えなくていい仕組みを作ること。逆説的なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、キミが知ってるつもりの当たり前を、疑いに来て。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクみたいに損する前に、今すぐ設定なのだ！"
+        pause_after: 0.8
