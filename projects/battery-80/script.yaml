@@ -35,6 +35,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "今日はこの80%論争に、電池の科学でハッキリ決着をつけます。逆にここで閉じたら、あなたは今夜も知らないまま電池を削って眠ることになります。"
+        telops:
+          - {text: "今日で決着", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
   - id: chapter1
     title: "電池の敵は満タンと熱"
     background: m_07a487b7
@@ -68,6 +70,8 @@ scenes:
         emotion: normal
         background: m_092e4238
         text: "そして、もう一人の犯人が、熱。"
+        video: assets/clips/heat_flame.mp4
+        video_full: true
       - speaker: aoyama
         emotion: normal
         text: "化学反応は、温度が上がるほど速く進む。つまり劣化も速く進む。単純な話です。"
@@ -79,6 +83,11 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "2年でヘタったあなたのスマホ。あれは使い倒したからじゃない。満タンと熱にさらされ続けたから、という側面が大きいんです。つまり犯人は、毎晩の充電習慣。ええ、あなたです。"
+        video: assets/clips/settings_tap.mp4
+        video_full: true
+        video_speed: 0.85
+        telops:
+          - {text: "犯人は、あなた", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
   - id: chapter2
     title: "80%に科学的な根拠はあるのか"
     background: m_37e7bbee
@@ -108,6 +117,8 @@ scenes:
         emotion: normal
         background: m_aeac6565
         text: "電池のかたまりである電気自動車の世界では、普段は80%まで、がメーカー公認の常識になりつつあります。何百万円もする電池で、皆そうしているんです。"
+        video: assets/clips/ev_charge.mp4
+        video_full: true
       - speaker: aoyama
         emotion: normal
         text: "だからスマホメーカーは、わざわざ上限80%で止める機能を作ったんです。"
@@ -120,6 +131,8 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "つまり80%は、誰かの思いつきでも迷信でもなく、電池の性質から出てきた数字。知らなかったのは、毎日スマホを握りしめている私たちだけだった、というわけです。"
+        telops:
+          - {text: "80%は科学", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
   - id: chapter3
     title: "で、結局どうすればいい？"
     background: m_38782c86
@@ -140,6 +153,8 @@ scenes:
         emotion: normal
         background: m_c49925f5
         text: "最適化充電なんて、あなたの起床時間を学習して、朝起きる直前まで80%で待機しているんですよ。健気だと思いませんか。あなたが寝ている間も、スマホは働いているんです。"
+        video: assets/clips/sleep_phone.mp4
+        video_full: true
       - speaker: aoyama
         emotion: normal
         text: "その上で、人間がやるべきことは、たった3つです。3つですよ。メモの準備はいいですか。"
@@ -149,14 +164,20 @@ scenes:
         emotion: normal
         background: m_802775f3
         text: "特に、夏の車内への放置。あれは電池を炙っているのと同じです。熱だけは、本当に避けてください。"
+        video: assets/clips/hot_car.mp4
+        video_full: true
         telops:
           - {text: "熱だけは避けて", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A00", glow: "#FF6622", anim: up}
       - speaker: aoyama
         emotion: normal
         text: "ワイヤレス充電も便利ですが、弱点は熱。ケースが熱いなと感じたら、外して充電する。それだけでも違います。"
+        video: assets/clips/wireless_charge.mp4
+        video_full: true
       - speaker: aoyama
         emotion: happy
         text: "逆に、たまの100%はまったく問題ありません。旅行の日まで80%縛りにする必要はなし。遠慮なく満タンでどうぞ。"
+        telops:
+          - {text: "たまの100%はOK", size: md, position: bottom-center, color: "#9FFFC8", stroke: "#073A1E", glow: "#33DD77", anim: fade}
       - speaker: aoyama
         emotion: normal
         text: "そもそもバッテリーは消耗品です。2〜3年使って弱ったら、交換すればいい。完璧主義、いりません。"
@@ -167,6 +188,11 @@ scenes:
       - speaker: aoyama
         emotion: normal
         text: "だから、やることはひとつだけ。この動画を閉じる前に、充電上限か最適化充電の設定をオンにする。30秒で終わります。やらない理由、ありますか。"
+        video: assets/clips/old_phone.mp4
+        video_full: true
+        video_speed: 0.9
+        telops:
+          - {text: "今すぐ設定オン", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: aoyama
         emotion: normal
         text: "そして本当のコツは、設定をひとつ入れたら、あとはもう忘れることです。"

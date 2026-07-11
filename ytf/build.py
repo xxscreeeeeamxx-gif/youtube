@@ -359,40 +359,35 @@ def build_video(
         print(f"警告: BGMが見つからないためスキップ: {bgm_path}")
         bgm_path = None
 
-    cmd = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error",
-           "-f", "concat", "-safe", "0", "-i", concat.name,
-           "-i", audio_rel]
+    # ---- パス1: 音声だけを先にミックスする ----
+    # 映像チェーンと同じ filter_complex に入れると、adelay で大きく遅延した
+    # 短いSE入力が無音になる（ffmpegのスケジューリング起因・実測）。
+    # 音声単体なら確実に動くため、必ず2パスに分ける。
+    acmd = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error",
+            "-i", audio_rel]
     if bgm_path:
-        cmd += ["-stream_loop", "-1", "-i", str(bgm_path)]
-    se_base = 2 + (1 if bgm_path else 0)
+        acmd += ["-stream_loop", "-1", "-i", str(bgm_path)]
+    se_base = 1 + (1 if bgm_path else 0)
     for _, se_path in se_events:
-        cmd += ["-i", se_path]
+        acmd += ["-i", se_path]
 
-    vf = (
-        f"scale={width}:{height}:force_original_aspect_ratio=decrease,"
-        f"pad={width}:{height}:(ow-iw)/2:(oh-ih)/2,fps={fps},format=yuv420p"
-    )
-    # subtitles.enabled: false でテロップ焼き込みをオフ（.assは生成されるので
-    # YouTubeの字幕ファイルとして使うことも、フラグを戻して焼き込むことも可能）
-    if cfg.get("subtitles", "enabled", default=True):
-        vf += f",subtitles={ass_rel}"
-
-    filters = [f"[0:v]{vf}[vout]"]
-
-    # ---- 音声: ナレーション + (任意)BGM(ダッキング) + SE を1本にまとめる ----
-    narration = "[1:a]"
+    filters: list[str] = []
+    narration = "[0:a]"
     extra: list[str] = []  # ナレーション以外に混ぜる音（BGM/SE）
     se_vol = float(cfg.get("video", "se_volume_db", default=-3))
     for k, (t, _) in enumerate(se_events):
         ms = max(0, int(round(t * 1000)))
-        filters.append(f"[{se_base + k}:a]adelay={ms},volume={se_vol}dB[se{k}]")
+        # all=1 が無いと最初のチャンネルしか遅延されず、ステレオSEの片側が
+        # 音声先頭(0秒)で鳴ってしまう
+        filters.append(f"[{se_base + k}:a]adelay={ms}:all=1,"
+                       f"volume={se_vol}dB[se{k}]")
         extra.append(f"[se{k}]")
     if bgm_path:
         vol = float(cfg.get("video", "bgm", "volume_db", default=-24))
-        filters.append(f"[2:a]volume={vol}dB[b]")
+        filters.append(f"[1:a]volume={vol}dB[b]")
         if cfg.get("video", "bgm", "ducking", default=True):
             # ナレーションを分岐（サイドチェイン用と本線用）してBGMを喋りで下げる
-            filters.append("[1:a]asplit=2[nar][sc]")
+            filters.append("[0:a]asplit=2[nar][sc]")
             filters.append("[b][sc]sidechaincompress=threshold=0.03:ratio=10:"
                            "attack=30:release=400[bd]")
             narration = "[nar]"
@@ -412,14 +407,35 @@ def build_video(
         filters.append(f"{alabel}loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[aout]")
         alabel = "[aout]"
 
-    cmd += ["-filter_complex", ";".join(filters),
-            "-map", "[vout]", "-map", alabel,
-            "-c:v", *enc]
+    mix_rel = str(Path(out_rel).with_suffix("")) + "_audio.m4a"
+    if filters:
+        acmd += ["-filter_complex", ";".join(filters), "-map", alabel]
+    else:
+        acmd += ["-map", "0:a"]
+    acmd += ["-c:a", "aac", "-b:a", "192k", mix_rel]
+    _run(acmd, cwd=proj.root)
+
+    # ---- パス2: 映像エンコード + ミックス済み音声を結合 ----
+    vf = (
+        f"scale={width}:{height}:force_original_aspect_ratio=decrease,"
+        f"pad={width}:{height}:(ow-iw)/2:(oh-ih)/2,fps={fps},format=yuv420p"
+    )
+    # subtitles.enabled: false でテロップ焼き込みをオフ（.assは生成されるので
+    # YouTubeの字幕ファイルとして使うことも、フラグを戻して焼き込むことも可能）
+    if cfg.get("subtitles", "enabled", default=True):
+        vf += f",subtitles={ass_rel}"
+
+    cmd = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error",
+           "-f", "concat", "-safe", "0", "-i", concat.name,
+           "-i", mix_rel,
+           "-filter_complex", f"[0:v]{vf}[vout]",
+           "-map", "[vout]", "-map", "1:a",
+           "-c:v", *enc]
     if enc[0] == "libx264":
         cmd += ["-crf", crf]
-    cmd += ["-c:a", "aac", "-b:a", "192k", "-shortest", out_rel]
-
+    cmd += ["-c:a", "copy", "-shortest", out_rel]
     _run(cmd, cwd=proj.root)
+    (proj.root / mix_rel).unlink(missing_ok=True)
     return proj.root / out_rel
 
 
