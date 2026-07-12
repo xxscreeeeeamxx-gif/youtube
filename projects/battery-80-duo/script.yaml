@@ -138,8 +138,6 @@ scenes:
         video: assets/clips/settings_tap.mp4
         video_full: true
         video_speed: 0.85
-        telops:
-          - {text: "犯人は、ずんだもん", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
   - id: chapter2
     title: "80%に科学的な根拠はあるのか"
     background: m_37e7bbee
@@ -505,14 +503,23 @@ scenes:
         text: "つむぎ先生、あれから設定もオンにしたのだ。さらに電池に優しく、0%まで使い切ってから充電する縛りも始めたのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "待って、それは逆に電池がかわいそうなやつだよ。空っぽのまま放置すると過放電といって、また別のダメージが入っちゃうの。"
+        text: "待って、それは逆効果だよ。リチウムイオン電池は実は空っぽも苦手で、0%のまま放っておくと過放電といって、また別のダメージが入っちゃうの。"
       - speaker: zundamon
         emotion: angry
         text: "敵が多すぎるのだ！満タンもダメ、空っぽもダメ、どうしろというのだ！"
       - speaker: tsumugi
-        emotion: happy
-        text: "だから言ったでしょ、気にしすぎないのがコツだって。……その話は、また次の動画でね。"
+        emotion: normal
+        text: "今日の話を思い出して。満タンは粒がぎゅうぎゅう、空っぽはすっからかんで、どっちも電池に無理をさせてる状態だから、真ん中あたりでゆるく使うのがいちばん電池に優しいの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "0%になる前に充電して、満タン側は設定に任せる。守るのはそれだけで、あとは本当に気にしなくて大丈夫だよ。"
       - speaker: zundamon
         emotion: happy
-        text: "チャンネル登録して、待ってるのだ！"
+        text: "真ん中でゆるく使う、なのだ！これでボクの電池ライフは、今度こそ完璧なのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん、今日の授業はここまで。それじゃ、また次の動画で会おうね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "高評価とチャンネル登録も、よろしくなのだ！"
         pause_after: 0.8
