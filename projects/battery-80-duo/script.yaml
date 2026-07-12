@@ -30,7 +30,7 @@ scenes:
         text: "電池切れなのだ！？さっきまで30%あったはずなのだ！このスマホ、まだ2年目なのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "あー、それ電池がヘタってるね。というかキミ、毎晩スマホを100%まで充電して寝てるでしょ。"
+        text: "あー、それは電池がヘタってるね。というかずんだもん、毎晩スマホを100%まで充電して寝てるでしょ。"
       - speaker: zundamon
         emotion: surprised
         text: "なんで分かったのだ。完璧な充電管理なのだ。むしろ褒めてほしいのだ。"
@@ -49,12 +49,12 @@ scenes:
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "その満タン、電池の寿命をどんどん削ってるんだよ。良かれと思ってやってることが、いちばん損してるの。"
+        text: "実はその満タンが電池の寿命をどんどん削ってて、良かれと思ってやってることで、いちばん損しちゃってるんだよ。"
         telops:
           - {text: "満タンが寿命を削る", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: normal
-        text: "しかもスマホメーカー自身が、80%で充電を止める機能をわざわざ作ってるんだよ。おかしいと思わない？満タンにできるのに、させたくないんだよ。"
+        text: "しかもスマホメーカー自身が、80%で充電を止める機能をわざわざ作ってるの。満タンにできるのにさせたくないなんて、おかしいと思わない？"
         slide:
           title: "今日のテーマ"
           big: "充電は80%で止めるべき？"
@@ -63,7 +63,7 @@ scenes:
         text: "言われてみれば謎なのだ。メーカーが自分の機能を封じてるのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "今日はこの80%論争に、電池の科学で決着をつけるよ。最後まで見ないと、キミも今夜また電池を削って眠ることになるからね。"
+        text: "今日はこの80%論争に、電池の科学で決着をつけるよ。最後まで見ないと、ずんだもんは今夜もまた電池を削りながら眠ることになるからね。"
         telops:
           - {text: "今日で決着", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
   - id: chapter1
@@ -78,34 +78,34 @@ scenes:
         text: "任せるのだ。コンセントから電気のつぶが流れてきて、中の箱にたまっていくのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "惜しい、半分だけ正解だよ。じゃあ、図でゆっくり見ていくね。"
+        text: "惜しい、半分だけ正解だよ。それじゃあ、図を見ながらゆっくり説明していくね。"
       - speaker: tsumugi
         emotion: normal
-        text: "電池の中には部屋が2つあるよ。プラス側の[正極|せいきょく]と、マイナス側の[負極|ふきょく]。間は、イオンが移動できる液体で満たされてるの。"
+        text: "電池の中には、プラス側の[正極|せいきょく]とマイナス側の[負極|ふきょく]という2つの部屋があって、その間はイオンが移動できる液体で満たされてるの。"
         video: assets/clips/battery_anim_duo.mp4
         video_span: 8
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "電気をためる主役が、リチウムイオンっていう小さな粒だよ。電池が空のときは、プラス側の部屋にいるの。"
+        text: "電気をためる主役はリチウムイオンっていう小さな粒で、電池が[空|から]のときは、プラス側の部屋にいるんだよ。"
       - speaker: tsumugi
         emotion: normal
-        text: "充電は、この粒を電気の力で、マイナス側の部屋へ押し込んでいく作業だよ。"
+        text: "充電というのは、この粒を電気の力でマイナス側の部屋へ押し込んでいく作業のことだよ。"
       - speaker: zundamon
         emotion: thinking
         text: "粒を反対側に集めるだけで、電気をためたことになるのだ？"
       - speaker: tsumugi
         emotion: normal
-        text: "そうだよ。スマホを使うときは、粒がプラス側へ戻っていって、その流れがそのまま電気になるの。ためた粒が多いほど、長く使えるってわけね。"
+        text: "そうだよ。スマホを使うときは粒がプラス側へ戻っていって、その流れがそのまま電気になるから、ためた粒が多いほど長く使えるってわけね。"
       - speaker: zundamon
         emotion: normal
         text: "なるほどなのだ。じゃあ満タンは、粒が全部マイナス側に詰まった状態なのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "その通りだよ。で、ここからが本題。実はその満タン状態が、電池にとっていちばん苦しいの。"
+        text: "その通りだよ。そしてここからが本題なんだけど、実はその満タン状態が、電池にとっていちばん苦しい状態なの。"
       - speaker: tsumugi
         emotion: normal
-        text: "粒がぎゅうぎゅうに詰まったまま、高い電圧がかかり続けるよ。すると中では、余計な化学反応がじわじわ進んでいくの。"
+        text: "満タンの間は粒がぎゅうぎゅうに詰まったまま高い電圧がかかり続けるから、中では余計な化学反応がじわじわ進んでいくの。"
       - speaker: tsumugi
         emotion: normal
         text: "その反応で部品の表面にゴミみたいな膜がたまって、イオンの通り道がどんどん塞がれていくの。これが劣化の正体のひとつと言われてるよ。"
@@ -121,12 +121,12 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         background: m_092e4238
-        text: "で、もう一人の犯人が、熱だよ。"
+        text: "そして、満タンと並ぶもう一人の犯人が、熱だよ。"
         video: assets/clips/heat_flame.mp4
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "化学反応は温度が上がるほど速く進む。つまり劣化も速く進む。単純な話だよ。"
+        text: "化学反応は温度が上がるほど速く進むから、劣化も同じように速くなっていくの。単純な話だよ。"
         telops:
           - {text: "敵は満タンと熱", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
       - speaker: zundamon
@@ -134,12 +134,12 @@ scenes:
         text: "満タンのまま熱い場所に放置が、最悪の組み合わせなのだ。ボク、枕の下で充電しながら寝てたのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "それ、電池に悪いことを全部同時にやってるからね。2年でヘタったスマホの犯人は、使いすぎじゃなくて毎晩の充電習慣。つまり、キミだよ。"
+        text: "それ、電池に悪いことを全部同時にやってるからね。2年でヘタったスマホの犯人は使いすぎじゃなくて毎晩の充電習慣、つまり、ずんだもん自身だよ。"
         video: assets/clips/settings_tap.mp4
         video_full: true
         video_speed: 0.85
         telops:
-          - {text: "犯人は、キミ", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
+          - {text: "犯人は、ずんだもん", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
   - id: chapter2
     title: "80%に科学的な根拠はあるのか"
     background: m_37e7bbee
@@ -152,7 +152,7 @@ scenes:
         text: "お、いい疑い方じゃん。じゃあその疑いに、研究のデータで答えるね。"
       - speaker: tsumugi
         emotion: normal
-        text: "電池の研究では、充電状態が高いほど、そして温度が高いほど劣化が速いの。この傾向が嫌というほど繰り返し報告されてるよ。"
+        text: "電池の研究では、充電状態が高いほど、そして温度が高いほど劣化が速いという傾向が、嫌というほど繰り返し報告されてるの。"
         slide:
           title: "研究で知られる傾向"
           bullets:
@@ -161,7 +161,7 @@ scenes:
             - "中間の充電が最も穏やか"
       - speaker: tsumugi
         emotion: normal
-        text: "たとえば100%のまま置いた電池は、40%で置いた場合より容量の減りがずっと速いと言われてる。使ってなくても、だよ。"
+        text: "たとえば100%のまま置いた電池は、40%で置いた場合より容量の減りがずっと速いと言われていて、使っていなくてもそうなるんだよ。"
         video: assets/clips/graph_decay.mp4
         video_span: 3
         video_full: true
@@ -183,7 +183,7 @@ scenes:
         stat: {value: 80, unit: "%", label: "多くのスマホが搭載する充電上限"}
       - speaker: tsumugi
         emotion: normal
-        text: "iPhoneなら充電上限、Androidならいたわり充電。名前は違っても、思想は全部同じだよ。"
+        text: "iPhoneなら充電上限、Androidならいたわり充電と、名前は違っても思想は全部同じなんだよ。"
         video: assets/clips/toggle_80.mp4
         video_full: true
       - speaker: zundamon
@@ -212,7 +212,7 @@ scenes:
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "石油の値段が跳ね上がって、世界中が大混乱。石油に頼りすぎた代償に、みんなが気づいたの。"
+        text: "石油の値段が跳ね上がって世界中が大混乱して、石油に頼りすぎた代償にみんなが気づいたの。"
       - speaker: tsumugi
         emotion: normal
         text: "そこで動いたのが、意外な会社。世界最大級の石油会社、エクソンだよ。"
@@ -224,10 +224,10 @@ scenes:
         text: "石油の会社が、石油に代わるものを研究したのだ？"
       - speaker: tsumugi
         emotion: normal
-        text: "石油はいつか尽きる。その前に次のエネルギーを押さえておく。そこで雇われた若い化学者が、ウィッティンガムだよ。"
+        text: "石油はいつか尽きるから、その前に次のエネルギーを押さえておこうというわけ。そこで雇われた若い化学者が、ウィッティンガムだよ。"
       - speaker: tsumugi
         emotion: normal
-        text: "彼は世界で初めて、充電できるリチウム電池を作ることに成功する。ここまでは順調だった。"
+        text: "彼は世界で初めて、充電できるリチウム電池を作ることに成功して、ここまでは順調だったの。"
       - speaker: zundamon
         emotion: happy
         text: "めでたしめでたしなのだ！"
@@ -236,7 +236,7 @@ scenes:
         text: "ところが、この電池には致命的な欠点があったの。"
       - speaker: tsumugi
         emotion: normal
-        text: "充電を繰り返すと、中の金属から細いトゲが伸びてくる。それが反対側に届くと、ショートして発火。"
+        text: "充電を繰り返すと中の金属から細いトゲが伸びてきて、それが反対側に届くとショートして発火しちゃうの。"
         video: assets/clips/explosion_fire.mp4
         video_span: 2
         video_full: true
@@ -245,7 +245,7 @@ scenes:
         text: "燃えたのだ！？"
       - speaker: tsumugi
         emotion: normal
-        text: "実験室では火事が何度も起きたと言われてるよ。しかも石油の値段が落ち着くと、エクソンは研究から手を引いちゃった。"
+        text: "実験室では火事が何度も起きたと言われていて、しかも石油の値段が落ち着くと、エクソンは研究から手を引いちゃったの。"
       - speaker: zundamon
         emotion: sad
         text: "開発中止……。はしごを外されたのだ。"
@@ -257,7 +257,7 @@ scenes:
         video_full: true
       - speaker: tsumugi
         emotion: happy
-        text: "名前の意味は、十分に良い。そして名前どおり、十分すぎる仕事をするの。"
+        text: "名前の意味は、十分に良い。その名前のとおりに、十分すぎる仕事をするんだよ。"
       - speaker: tsumugi
         emotion: normal
         text: "1980年、電池の材料をコバルト酸リチウムに変えて、電圧をそれまでの倍近くまで引き上げたんだよ。"
@@ -269,25 +269,25 @@ scenes:
         text: "日本人も混ざってたのだ！ちょっと誇らしいのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "でも、まだ発火の問題が残ってる。そこで3人目。日本の[吉野彰|よしのあきら]さん、[旭化成|あさひかせい]の研究者だよ。"
+        text: "でも、まだ発火の問題が残ってるよね。そこで3人目に登場するのが、日本の[吉野彰|よしのあきら]さん、[旭化成|あさひかせい]の研究者だよ。"
         video: assets/clips/era_1985.mp4
         video_span: 4
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "吉野さんは、爆発の原因だった金属のリチウムをやめて、イオンを炭素の隙間にしまう方式を考えついた。"
+        text: "吉野さんは、爆発の原因だった金属のリチウムをやめて、イオンを炭素の隙間にしまう方式を考えついたの。"
       - speaker: tsumugi
         emotion: normal
-        text: "粒が炭素の中に出たり入ったりするだけだから、トゲが伸びない。つまり、燃えにくい。"
+        text: "粒が炭素の中に出たり入ったりするだけだから、トゲが伸びなくて燃えにくいの。"
       - speaker: zundamon
         emotion: surprised
         text: "それ、さっき勉強した仕組みそのものなのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "そう。キミのスマホの中身は、吉野さんの発明がほぼそのまま入ってるんだよ。1985年に基本の形が完成した。"
+        text: "そう。ずんだもんのスマホの中身は吉野さんの発明がほぼそのまま入ってるんだよ。1985年に、その基本の形が完成したの。"
       - speaker: tsumugi
         emotion: normal
-        text: "そして1991年。ソニーが世界で初めて商品化する。最初に載ったのは、ビデオカメラだよ。"
+        text: "そして1991年、ソニーが世界で初めてこの電池を商品化して、最初に載ったのはビデオカメラだったんだよ。"
         video: assets/clips/camcorder.mp4
         video_full: true
         video_speed: 0.85
@@ -296,25 +296,25 @@ scenes:
         text: "スマホじゃなくて、ビデオカメラが最初だったのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "ここから携帯電話、ノートパソコン、スマホ、電気自動車。世界はこの電池で動くようになったの。"
+        text: "ここから携帯電話、ノートパソコン、スマホ、電気自動車と広がっていって、世界はこの電池で動くようになったの。"
         video: assets/clips/era_1991.mp4
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "そして2019年。この3人に、ノーベル化学賞が贈られたんだよ。"
+        text: "そして2019年、この3人にノーベル化学賞が贈られたんだよ。"
         video: assets/clips/era_2019.mp4
         video_span: 4
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "このときグッドイナフさん、97歳。史上最高齢の受賞だよ。"
+        text: "このときグッドイナフさんは97歳で、史上最高齢の受賞だったんだよ。"
         stat: {value: 97, unit: "歳", label: "史上最高齢のノーベル賞受賞"}
       - speaker: zundamon
         emotion: surprised
         text: "97歳なのだ！？"
       - speaker: tsumugi
         emotion: normal
-        text: "電圧を倍にした発見をしたのが57歳。そこから40年、100歳で亡くなる直前まで現役の研究者だったの。"
+        text: "電圧を倍にする発見をしたのが57歳のときで、そこから40年、100歳で亡くなる直前まで現役の研究者だったの。"
       - speaker: zundamon
         emotion: happy
         text: "遅すぎるスタートなんて無いのだ。ボクも今から偉くなれるのだ。"
@@ -328,7 +328,7 @@ scenes:
         text: "ボクが毎晩寿命を削ってたのは、そんな大発明だったのだ……。反省なのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "歴史に敬意を払ったところで、話を戻すよ。この大発明を長持ちさせる使い方、いってみよう。"
+        text: "歴史に敬意を払ったところで話を戻して、この大発明を長持ちさせる使い方の話、いってみよう。"
   - id: chapter3
     title: "で、結局どうすればいい？"
     background: m_38782c86
@@ -338,7 +338,7 @@ scenes:
         text: "分かったのだ！今日から1%の誤差も許さず、80%ぴったりで止めるのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "そこまでしなくて大丈夫だよ。今のスマホは賢くて、電池を守る仕組みが最初から入ってるからね。"
+        text: "そこまでしなくても大丈夫だよ。今のスマホは賢くて、電池を守る仕組みが最初から入ってるからね。"
         slide:
           title: "スマホが勝手にやってくれること"
           bullets:
@@ -348,7 +348,7 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         background: m_c49925f5
-        text: "たとえば最適化充電は、キミの起床時間を学習して、夜の間は80%で止めておいて、起きる直前に100%まで仕上げる機能だよ。夜中の満タン放置が、これだけでなくなるの。"
+        text: "たとえば最適化充電は、ずんだもんの起床時間を学習して、夜の間は80%で止めておいて、起きる直前に100%まで仕上げてくれる機能だから、夜中の満タン放置がこれだけでなくなるの。"
         video: assets/clips/sleep_phone.mp4
         video_full: true
       - speaker: zundamon
@@ -362,14 +362,14 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         background: m_802775f3
-        text: "特に夏の車内への放置。あれは電池を火であぶってるのと同じだから、熱だけは絶対に避けてね。"
+        text: "特に夏の車内への放置は電池を火であぶってるのと同じだから、熱だけは絶対に避けてね。"
         video: assets/clips/hot_car.mp4
         video_full: true
         telops:
           - {text: "熱だけは避けて", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A00", glow: "#FF6622", anim: up}
       - speaker: tsumugi
         emotion: normal
-        text: "ワイヤレス充電も、弱点は熱だよ。ケースが熱いなと思ったら、外して充電してね。それだけでも違うよ。"
+        text: "ワイヤレス充電も弱点は熱だから、ケースが熱いなと思ったら外して充電するだけでも、だいぶ違うよ。"
         video: assets/clips/wireless_charge.mp4
         video_full: true
       - speaker: zundamon
@@ -382,7 +382,7 @@ scenes:
           - {text: "たまの100%はOK", size: md, position: bottom-center, color: "#9FFFC8", stroke: "#073A1E", glow: "#33DD77", anim: fade}
       - speaker: tsumugi
         emotion: normal
-        text: "そもそも電池は消耗品だよ。2〜3年使って弱ったら、交換すればいいの。完璧主義は、いらないからね。"
+        text: "そもそも電池は消耗品で、2〜3年使って弱ったら交換すればいいんだから、完璧主義はいらないからね。"
   - id: beyond
     title: "スマホの外でも、80%"
     background: m_aeac6565
@@ -392,7 +392,7 @@ scenes:
         text: "ここまでスマホの話をしてきたけど、この電池との付き合い方、実はもっと大きな世界の常識なんだよ。"
       - speaker: tsumugi
         emotion: normal
-        text: "電気自動車が普段は80%までなのは、もう話したよね。電池が大きくて高価になるほど、みんな満タンを避けてるの。"
+        text: "電気自動車が普段は80%までなのはもう話したけど、電池が大きくて高価になるほど、みんな満タンを避けるようになるんだよ。"
       - speaker: tsumugi
         emotion: normal
         text: "飛行機もそうだよ。モバイルバッテリーがスーツケースに入れられないの、知ってる？"
@@ -405,33 +405,58 @@ scenes:
         text: "空港で毎回引っかかるのだ。あれ、何の意地悪なのだ？"
       - speaker: tsumugi
         emotion: normal
-        text: "リチウムイオン電池は一度燃え始めると、自分で熱を作り続けて、消すのがすごく難しいの。熱暴走という現象だよ。"
+        text: "リチウムイオン電池は一度燃え始めると自分で熱を作り続けて消すのがすごく難しくて、これは熱暴走と呼ばれる現象なんだよ。"
       - speaker: tsumugi
         emotion: normal
-        text: "貨物室で起きたら、誰も気づけないし消せない。だから必ず客室へ。乗務員がすぐ対応できる場所に置くルールなの。"
+        text: "貨物室で起きたら誰も気づけないし消せないから、乗務員がすぐ対応できる客室に必ず持ち込むルールになってるの。"
       - speaker: zundamon
         emotion: surprised
         text: "あの決まり、電池の性質そのものだったのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "ごみの世界でも大問題になってるよ。電池入りの機器をふつうのごみに混ぜると、収集車の中で潰されて発火するの。"
+        text: "ごみの世界でも大問題になっていて、電池入りの機器をふつうのごみに混ぜると、収集車の中で潰されて発火しちゃうの。"
         video: assets/clips/garbage_truck.mp4
         video_span: 2
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "この火事が全国で急増していると言われてる。電池は自治体の回収ルールに従って捨ててね。"
+        text: "この火事は全国で急増していると言われてるから、電池は自治体の回収ルールに従って捨ててね。"
       - speaker: zundamon
         emotion: sad
         text: "ボクの引き出しのモバイルバッテリー、ちょっと膨らんでるのだ……。"
       - speaker: tsumugi
         emotion: normal
-        text: "それは今すぐ回収へ。膨らみは、中でガスが発生してる危険サインだよ。"
+        text: "膨らみは中でガスが発生してる危険サインだから、それは今すぐ回収に出してね。"
         telops:
           - {text: "膨らみは危険サイン", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "聞けば聞くほど怖くなってきたのだ。ボクたちはずっと、火種と一緒に暮らすしかないのだ？"
       - speaker: tsumugi
         emotion: normal
-        text: "最後にすごい話をひとつ。国際宇宙ステーションの電池も、リチウムイオン電池。しかも日本のメーカー製だよ。"
+        text: "安心して、電池の側もちゃんと進化してるよ。そもそも燃える大元の原因は、中を満たしてる電解液が燃えやすい液体だってことだったよね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だったらその液体を燃えにくいゲルに変えちゃおう、というのが半固体電池。すでに発火リスクを抑えたモバイルバッテリーとして、日本でも発売されてるんだよ。"
+        slide:
+          title: "次世代電池はここまで来た"
+          bullets:
+            - "電解液をゲルや固体に置き換え"
+            - "漏れにくく、燃えにくい"
+            - "半固体はもう市販されている"
+      - speaker: zundamon
+        emotion: surprised
+        text: "もう買えるのだ！？未来はとっくに始まってたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもこの半固体電池、充電できる回数が従来の約4倍と言われてるの。安全になったうえに長持ちまでするなんて、いいことずくめでしょ。"
+        stat: {value: 4, unit: "倍", label: "半固体電池の寿命（従来比）"}
+      - speaker: tsumugi
+        emotion: normal
+        text: "さらに液体を完全な固体にした全固体電池は、電気自動車向けに日本のメーカーが開発競争の真っ最中で、完成すればもっと安全で長持ちする電池になると言われてるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後にすごい話をひとつ。実は国際宇宙ステーションの電池もリチウムイオン電池で、しかも日本のメーカー製なんだよ。"
         video: assets/clips/space_earth.mp4
         video_span: 2
         video_full: true
@@ -440,14 +465,14 @@ scenes:
         text: "宇宙でも、ボクのスマホと同じ仕組みなのだ！？"
       - speaker: tsumugi
         emotion: normal
-        text: "90分ごとに昼と夜が来る宇宙で、何年も充電と放電を繰り返してる。まさに、充電できる世界だね。"
+        text: "90分ごとに昼と夜が来る宇宙で何年も充電と放電を繰り返してるんだから、まさに、充電できる世界だね。"
   - id: ending
     title: ""
     background: m_415403fb
     cuts:
       - speaker: tsumugi
         emotion: normal
-        text: "だから、やることはひとつだけだよ。この動画を閉じる前に、充電上限か最適化充電の設定をオンにすること。30秒で終わるよ。"
+        text: "だから、やることはひとつだけ。この動画を閉じる前に、充電上限か最適化充電の設定をオンにすることだよ。30秒で終わるからね。"
         video: assets/clips/old_phone.mp4
         video_full: true
         video_speed: 0.9
@@ -466,7 +491,7 @@ scenes:
         text: "電池を一番大切にする方法は、電池のことを考えなくていい仕組みを作ること。逆説的なのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、キミが知ってるつもりの当たり前を、疑いに来てね。"
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、あなたが知ってるつもりの当たり前を、疑いに来てね。"
       - speaker: zundamon
         emotion: happy
         text: "ボクみたいに損する前に、今すぐ設定なのだ！"
@@ -480,7 +505,7 @@ scenes:
         text: "つむぎ先生、あれから設定もオンにしたのだ。さらに電池に優しく、0%まで使い切ってから充電する縛りも始めたのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "待って、それは逆に電池がかわいそうなやつ。空っぽのまま放置すると過放電といって、また別のダメージが入るの。"
+        text: "待って、それは逆に電池がかわいそうなやつだよ。空っぽのまま放置すると過放電といって、また別のダメージが入っちゃうの。"
       - speaker: zundamon
         emotion: angry
         text: "敵が多すぎるのだ！満タンもダメ、空っぽもダメ、どうしろというのだ！"
