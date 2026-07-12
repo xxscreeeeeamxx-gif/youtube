@@ -1,0 +1,318 @@
+# 3本目（掛け合い・つむぎ=先生／ずんだもん=生徒）。投稿前に必ず目視レビューすること。
+# 事実関係: 原昌宏氏・1994年・囲碁着想・特許権利不行使宣言はデンソーウェーブ公式/特許庁で確認済み。
+# 数字（誤り訂正30%・1日1000回・容量数百倍・チーム2人）は「〜と言われている」でぼかす。
+meta:
+  title: "QRコードはなぜ汚れても読めるのか【ずんだもん解説】"
+  slug: "qr-code"
+  summary: "ずんだ餅の汁で汚れたチケットのQRコードが、なぜ普通に読み取れたのか。白黒モザイクの正体、3割欠けても復元する誤り訂正の数学、そして囲碁から生まれて特許を無料開放した日本人技術者・原昌宏さんの物語を、春日部つむぎとずんだもんが解説します。"
+  tags: ["QRコード", "科学", "雑学", "ずんだもん", "春日部つむぎ", "テクノロジー"]
+  thumbnail:
+    top: "3割汚れても読める"
+    bottom: "QRの正体"
+scenes:
+  - id: hook
+    title: ""
+    background: m_e9086273
+    short: true
+    cuts:
+      # ---- 茶番（ライブ当日、チケットのQRにシミ）----
+      - speaker: zundamon
+        emotion: happy
+        text: "ついに今日なのだ！推しのライブ当日なのだ！チケットのQRコードも印刷して、準備は完璧なのだ！"
+        video: assets/clips/qr_ticket.mp4
+        video_span: 5
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "はっ！かばんの中でずんだ餅の汁がこぼれて、チケットのQRコードにシミがついたのだ！"
+      - speaker: zundamon
+        emotion: sad
+        text: "3割くらい隠れてしまったのだ……。読み取れなかったら、ボクのライブはここで終わりなのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "大丈夫だよ、それくらいの汚れなら普通に読めるから、安心して行っておいで。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ほんとに読めたのだ！？入場のピッが鳴ったのだ！なんで3割も汚れてるのに読めるのだ！？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "実はQRコードは、3割くらい隠れても読めるように、最初からわざと設計されてるんだよ。"
+        telops:
+          - {text: "3割隠れても読める", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: thinking
+        text: "言われてみれば不思議なのだ。あの白黒のモザイク、毎日どこかで見てるのに、仕組みを何も知らないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもQRコードを発明したのは日本人で、誕生のきっかけはお昼休みの囲碁なの。今日は仕組みからその誕生のドラマまで、まとめて解説するね。"
+        slide:
+          title: "今日のテーマ"
+          big: "QRコードの正体"
+      - speaker: zundamon
+        emotion: happy
+        text: "ライブの恩人の正体、気になるのだ！最後まで見るのだ！"
+  - id: chapter1
+    title: "白黒モザイクの正体"
+    background: m_18eabf68
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず、QRコードのあの模様が何なのかから始めよう。ずんだもん、あの白黒の四角の集まり、何だと思う？"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械にしか読めない、秘密の暗号文字なのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "惜しい、半分正解だよ。あの正体は、白と黒で書かれた0と1の数字の列なの。図で見てみよう。"
+        video: assets/clips/qr_anatomy.mp4
+        video_span: 9
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "コンピュータは文字も数字も全部0と1で扱うから、伝えたい文字やURLを0と1に変換して、白いマスと黒いマスとして紙の上に並べたのがQRコードなんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "つまり、マスの一つひとつが数字ってことなのだ？それなら、バーコードの縞模様と同じなのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いい質問だね。バーコードは横一方向にしか情報を持てないけど、QRコードは縦と横の両方を使って面で情報を持てるの。この違いが、あとで出てくる発明の核心につながるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それから、三つの隅にある大きな二重の四角。あれにはデータとは別の、大事な役目があるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれは位置検出用の目印で、機械はまずあの目玉を探して、QRコードの場所と傾きを一瞬で割り出してるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "だからスマホを斜めにかざしても、逆さまに読んでも、一瞬で反応するのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あの目玉は、どの方向から線を引いても白黒の比率が同じになるように設計されてるから、機械が見つけるのがとても速いの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに周りの余白にも意味があって、あそこまで含めてQRコードだから、余白を柄で潰したデザインは読めなくなることがあるんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ただの白黒モザイクだと思ってたのに、全部のパーツに役目があったのだ。"
+  - id: chapter2
+    title: "なぜ3割欠けても読めるのか"
+    background: m_3b6a06a5
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、肝心の疑問がまだ残ってるのだ。なんでずんだ餅の汁で汚れたのに、ちゃんと読めたのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここが今日いちばん面白いところだよ。答えは、誤り訂正という数学の技術なの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "QRコードには本文のデータと一緒に、壊れたときのための復元用の予備データが、あらかじめ書き込んであるんだよ。"
+        video: assets/clips/qr_repair.mp4
+        video_span: 5
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "最初から、壊れる前提で作ってあるのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。読み取ったときに欠けた部分があると、機械は無事だった部分と予備データを組み合わせて、消えた中身を計算で復元するの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもただのコピーを持ってるんじゃなくて、どこが欠けても逆算で答えを出せる、特別な形の予備データなの。だから同じ場所が二度汚れても平気なんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この復元力は4段階から選べて、いちばん強い設定にすると、全体の約30%が欠けても元通りに読めると言われてるよ。"
+        stat: {value: 30, unit: "%", label: "欠けても復元できる割合（最大）"}
+      - speaker: zundamon
+        emotion: surprised
+        text: "3割なのだ！？シミどころか、ちょっと破れてても読めそうなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実はこの誤り訂正、QRコード専用の技術じゃなくて、CDやDVD、地上デジタル放送にも同じ系統の数学が使われてるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "CDが多少傷ついても音飛びしないのは、そういうことだったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "宇宙探査機が何億キロも先から送ってくる写真だって、この系統の数学で守られてるの。QRコードは、その宇宙級の技術を紙切れに載せたようなものだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それと、真ん中にロゴやキャラクターの絵が入ったおしゃれなQRコード、見たことあるでしょ。あれは実は、この復元力を逆手に取って、わざと一部を潰してるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "あのおしゃれQR、壊して作ってたのだ！？無事に読めるのは誤り訂正のおかげだったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "汚れに強いんじゃなくて、壊れても計算で治る。これがQRコードの正体だよ。"
+        telops:
+          - {text: "壊れても計算で治る", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
+  - id: history
+    title: "QRコードを作った男"
+    background: m_c376a7ce
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ、こんな賢い仕組みを誰が作ったのか。時は1990年代はじめの日本、自動車部品の工場の話だよ。"
+        video: assets/clips/factory_line.mp4
+        video_span: 2
+        video_full: true
+        video_speed: 0.8
+      - speaker: zundamon
+        emotion: thinking
+        text: "QRコードって、工場生まれだったのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の工場では部品の管理にバーコードを使ってたんだけど、バーコードは入る情報が少なくて、数字で20桁くらいが限界だったの。"
+        video: assets/clips/barcode_scan.mp4
+        video_full: true
+        video_speed: 0.55
+      - speaker: tsumugi
+        emotion: normal
+        text: "扱う部品は何万種類もあって、伝票も検品も全部コード頼みだから、箱ひとつに何枚もバーコードを貼って、多い日には1日1000回もスキャンしてたと言われてるよ。"
+        stat: {value: 1000, unit: "回", label: "工場での1日のスキャン作業"}
+      - speaker: zundamon
+        emotion: sad
+        text: "1日1000回のピッ……。想像しただけで腕が痛くなってきたのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この現場の悲鳴を聞いたのが、部品メーカーのデンソーにいた技術者、[原昌宏|はらまさひろ]さんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "情報をたくさん入れられて、しかも一瞬で読めるコードを作ろうと開発を始めたんだけど、チームはわずか2人だったと言われてるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "世界を変えた発明が、2人チームだったのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして肝心のアイデアは、意外な場所から降ってきたの。お昼休みの、囲碁だよ。"
+        video: assets/clips/go_to_qr.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "碁盤に並んだ白と黒の石を眺めているうちにひらめいたの。この白黒の並び方なら、縦と横の両方に情報を詰め込めるって。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "毎日見てた遊びの景色が、世界的発明の設計図になったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "横一列しか情報のないバーコードと違って面で持てるから、入る情報は数百倍になって、漢字まで入れられるようになったと言われてるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "三隅の目玉を発明したのも原さんたちで、世界中の印刷物を調べ上げて、印刷物にいちばん現れにくい白黒の比率を探し出して、それを目印にしたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ひらめきだけじゃなくて、地道な執念の塊でもあるのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして1994年、QRコードが完成する。名前の由来は、素早い応答という意味のクイックレスポンスだよ。"
+        video: assets/clips/era_1994.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "ライブの入場が一瞬だったのは、名前の時点で約束されてたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもここからが、この話のいちばんかっこいいところ。デンソーは特許を持ったまま、規格に沿って使うなら誰にでも無料で開放すると宣言したの。"
+        video: assets/clips/era_open.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "え、使用料を取っていたら、大儲けできたはずなのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そうだよ。でもお金よりも、世界中で使ってもらって当たり前のインフラになる道を選んだの。QRコードが無料で誰でも作れるのは、この決断のおかげなんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その結果、QRコードはレジにもチケットにも広がって、今では世界中の屋台の支払いまでこれ1枚だよ。"
+        video: assets/clips/mobile_pay.mp4
+        video_full: true
+        video_speed: 0.9
+      - speaker: zundamon
+        emotion: happy
+        text: "ライブの恩人、スケールが大きすぎたのだ。ありがとうなのだ、原さんなのだ。"
+  - id: chapter3
+    title: "QRコードとの正しい付き合い方"
+    background: m_14a16d8e
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "便利で頑丈なQRコードだけど、その信頼につけこむ悪い人もいるから、最後に注意点も話しておくね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いちばん多いのが、本物のポスターのQRコードの上に、偽物のQRシールを貼っておく手口だよ。読み取ると、そっくりな偽サイトに連れて行かれるの。"
+        slide:
+          title: "偽QRシール詐欺"
+          bullets:
+            - "本物の上に偽シールを貼る"
+            - "見た目では区別できない"
+            - "偽サイトで情報を抜かれる"
+      - speaker: zundamon
+        emotion: surprised
+        text: "QRコードは人間には読めないから、貼り替えられても気づけないのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう、白黒の模様にしか見えないことが唯一の弱点なの。だから読み取ったあとにサイトを開く前、画面に表示されたURLをひと目確認する癖をつけてね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "特にお金の支払いにつながるQRコードのときは、シールが浮いていないか、URLが公式のものか、この2つだけは必ず見てほしいの。"
+        slide:
+          title: "読み取るときのチェック"
+          bullets:
+            - "シールが上から貼られていないか"
+            - "開く前にURLをひと目確認"
+            - "支払いのときは特に慎重に"
+      - speaker: zundamon
+        emotion: thinking
+        text: "壊れに強いのは機械の仕事で、だまされないのは人間の仕事なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "いいまとめだね。技術がどれだけ賢くなっても、最後のひと目だけは、あなたの目の仕事だよ。"
+        telops:
+          - {text: "最後のひと目は人間の仕事", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A00", glow: "#FF6622", anim: up}
+  - id: ending
+    title: ""
+    background: m_b9de408f
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日はQRコードの仕組みと誕生の物語を話してきたよ。次にQRコードを見かけたら、三隅の目玉と余白を探してみてね。"
+        video: assets/clips/qr_scan.mp4
+        video_full: true
+        video_speed: 0.85
+      - speaker: zundamon
+        emotion: normal
+        text: "あの白黒モザイクが、囲碁のひらめきと地道な執念と、太っ腹な決断でできてると知ってから見ると、景色が変わるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "壊れることを前提にして、直せるように設計しておく。この考え方は、機械にも人生にも効くからね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、あなたが知ってるつもりの当たり前を、疑いに来てね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今日からボクも、堂々とQRコードをかざすのだ！"
+        pause_after: 1.2
+  - id: epilogue
+    title: ""
+    background: m_e9086273
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ先生、ボクも宣伝用に、ずんだ色のかっこいいQRコードを作ったのだ！マスも背景も、全部きれいな緑なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あー、それは読めないやつだよ。QRコードは白と黒みたいに、マスと背景の明暗がはっきり分かれていないと、機械が読み取れないの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "おしゃれが犠牲になったのだ！？こういうときこそ、誤り訂正でなんとかするのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "誤り訂正は欠けた部分を直す技術だから、全体が薄いのはさすがに直しようがないの。濃いずんだ色と白の組み合わせなら、いけるかもよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "濃いずんだ色で作り直すのだ！今日の学びは完璧なのだ！高評価とチャンネル登録も、よろしくなのだ！"
+        pause_after: 0.8

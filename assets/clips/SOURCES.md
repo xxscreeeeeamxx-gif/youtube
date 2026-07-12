@@ -29,5 +29,10 @@
 | airplane.mp4 | 旅客機の機内と手荷物収納 | K | https://www.pexels.com/video/passengers-entering-the-airplane-3740021/ |
 | garbage_truck.mp4 | ごみ収集車 | Levi Wedge | https://www.pexels.com/video/dustcart-in-city-13258689/ |
 | space_earth.mp4 | 地球を周回する人工衛星 | Adis Resic | https://www.pexels.com/video/orbiting-satellite-over-earth-at-sunrise-34333825/ |
+| qr_ticket.mp4 / qr_anatomy.mp4 / qr_repair.mp4 / go_to_qr.mp4 / era_1994.mp4 / era_open.mp4 | qr-code用アニメ6本（自作。`scripts/gen_qr_extras.py`） | — | — |
+| qr_scan.mp4 | 荷物のQRラベルをスマホで読み取る | Kampus Production | https://www.pexels.com/video/a-person-receiving-a-delivery-package-6667248/ |
+| barcode_scan.mp4 | レジのバーコードスキャン | Ahimsa - OM | https://www.pexels.com/video/retail-checkout-process-with-scanner-and-items-29832466/ |
+| factory_line.mp4 | 自動化された製造ライン | Usman AbdulrasheedGambo | https://www.pexels.com/video/automated-industrial-production-line-in-action-32386533/ |
+| mobile_pay.mp4 | QRタグの下がる屋台 | Suhail Insights | https://www.pexels.com/video/colorful-street-food-vendor-at-busy-market-36147818/ |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。
