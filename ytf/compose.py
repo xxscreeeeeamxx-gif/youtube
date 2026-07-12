@@ -567,7 +567,10 @@ def render_frames(
         bg_path = str(background_path(cfg, bg_name)) if (fg_only and not full) else None
         card = bool(sp) and not full
 
-        chars = [(s, emotion_state[s], s == cut.speaker) for s in speakers]
+        if cut.duet_with:
+            emotion_state[cut.duet_with] = cut.emotion
+        chars = [(s, emotion_state[s],
+                  s == cut.speaker or s == cut.duet_with) for s in speakers]
         header = scene.title or (script.meta.title if vertical else "")
         # ベースはテロップ抜きで合成（テロップは別レイヤーで動かす）
         key_src = json.dumps(

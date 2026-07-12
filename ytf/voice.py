@@ -293,6 +293,25 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 else:
                     data = dummy_wav(spoken, speed)
                 cached.write_bytes(data)
+
+            # デュエット: 同じセリフをもう1人分合成して重ねる（斉唱）
+            if cut.duet_with:
+                d_style, d_speed, d_pitch, d_int = style_for(
+                    cfg, cut.duet_with, cut.emotion)
+                dkey = hashlib.sha1(
+                    f"{spoken}|{d_style}|{d_speed}|{d_pitch}|{d_int}|{tts}|{dict_sig}".encode()
+                ).hexdigest()[:16]
+                dcached = cache_dir / f"{dkey}.wav"
+                if dcached.exists():
+                    ddata = dcached.read_bytes()
+                else:
+                    if client is not None:
+                        ddata = client.synthesize(spoken, d_style, d_speed,
+                                                  d_pitch, d_int)
+                    else:
+                        ddata = dummy_wav(spoken, d_speed)
+                    dcached.write_bytes(ddata)
+                data = _mix_wavs(data, ddata)
             wav_path.write_bytes(data)
 
             dur = wav_duration(wav_path)
@@ -350,6 +369,35 @@ def concat_narration(proj: Project, timings: list[CutTiming]) -> Path:
             if pause_frames > 0:
                 w.writeframes(b"\x00\x00" * pause_frames)
     return out
+
+
+def _mix_wavs(a: bytes, b: bytes) -> bytes:
+    """2つのWAV（VOICEVOX出力・同一フォーマット前提）を重ねて1本にする。"""
+    import audioop
+    import io
+    import wave
+
+    def read(x: bytes):
+        with wave.open(io.BytesIO(x)) as w:
+            return w.getparams(), w.readframes(w.getnframes())
+
+    pa, fa = read(a)
+    _, fb = read(b)
+    # クリップ防止に各声を少し下げてから加算
+    fa = audioop.mul(fa, pa.sampwidth, 0.85)
+    fb = audioop.mul(fb, pa.sampwidth, 0.85)
+    if len(fa) < len(fb):
+        fa += b"\x00" * (len(fb) - len(fa))
+    else:
+        fb += b"\x00" * (len(fa) - len(fb))
+    mixed = audioop.add(fa, fb, pa.sampwidth)
+    out = io.BytesIO()
+    with wave.open(out, "wb") as w:
+        w.setnchannels(pa.nchannels)
+        w.setsampwidth(pa.sampwidth)
+        w.setframerate(pa.framerate)
+        w.writeframes(mixed)
+    return out.getvalue()
 
 
 def _probe_duration(path: Path) -> float:

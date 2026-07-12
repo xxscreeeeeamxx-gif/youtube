@@ -94,6 +94,9 @@ class Cut(BaseModel):
     """1セリフ = 1カット。"""
     speaker: str
     text: str
+    # 同じセリフをもう1人が同時に言う（挨拶の斉唱など）。voiceが2人分ミックスされ、
+    # 立ち絵も両方明るく表示される
+    duet_with: str | None = None
     emotion: str = "normal"   # normal/happy/surprised/thinking/angry/sad
     background: str | None = None  # このカットから背景画像を切替（数カットごとに変える用）
     reading: str | None = None  # 読み上げの手動上書き（誤読修正用。表示は text のまま）

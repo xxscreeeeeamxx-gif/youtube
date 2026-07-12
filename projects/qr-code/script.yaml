@@ -349,8 +349,12 @@ scenes:
         text: "壊れることを前提にして、直せるように設計しておく。この考え方は、機械にも人生にも効くからね。"
       - speaker: tsumugi
         emotion: happy
-        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、あなたが知ってるつもりの当たり前を、疑いに来てね。"
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
       - speaker: zundamon
         emotion: happy
         text: "今日からボクも、堂々とQRコードをかざすのだ！"
-        pause_after: 1.2
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0
