@@ -8,7 +8,8 @@
 | skate_spiral.mp4 | フィギュアスケートのスパイラル | Pavel Danilyuk | https://www.pexels.com/ で "figure skating ice" |
 | melting_ice.mp4 | つらら・溶ける氷 | Geun Goh | https://www.pexels.com/ で "melting ice water" |
 | demo.mp4 | 動作確認用テストパターン（`ytf assets --init` で生成・再生成可能） | — | — |
-| battery_anim.mp4 | 電池仕組みアニメ（自作。`scripts/gen_battery_anim.py` で再生成） | — | — |
+| battery_anim.mp4 | 電池仕組みアニメ2フェーズ（自作。`scripts/gen_battery_anim.py`・battery-80用） | — | — |
+| battery_anim_duo.mp4 | 電池仕組みアニメ4フェーズ（自作。`scripts/gen_battery_anim_duo.py`・battery-80-duo用） | — | — |
 | hook_gauge.mp4 | 充電ゲージ→寿命バーアニメ（自作。`scripts/gen_infographics.py`） | — | — |
 | graph_decay.mp4 | 容量劣化グラフアニメ（自作。同上） | — | — |
 | toggle_80.mp4 | 設定トグル→80%停止アニメ（自作。同上） | — | — |

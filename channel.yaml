@@ -26,18 +26,15 @@ characters:
   tsumugi:
     display_name: "春日部つむぎ"
     credit: "VOICEVOX:春日部つむぎ"
-    voicevox_style: 8   # ノーマル
-    speed_scale: 1.1
+    voicevox_style: 8   # ノーマル固定（スタイル切替はしない: 聞き取りやすさ優先）
+    speed_scale: 1.15
     color: "#F5A623"
-    role: "解説役の先生。明るいお姉さん口調（一人称あーし）でテンポよく核心を突く。生徒のずんだもんを軽くいじりつつ、最後は必ず分かりやすくまとめる。"
+    role: "解説役の先生。明るいお姉さん口調でテンポよく核心を突く。生徒のずんだもんを軽くいじりつつ、最後は必ず分かりやすくまとめる。奇をてらった言い回しは使わず、誰でも分かる素直な表現で話す。"
   zundamon:
     display_name: "ずんだもん"
     credit: "VOICEVOX:ずんだもん"
-    voicevox_style: 3   # ノーマル
-    style_overrides:    # emotion に応じてスタイルを切り替える
-      angry: 7          # ツンツン
-      sad: 76           # なみだめ
-    speed_scale: 1.1
+    voicevox_style: 3   # ノーマル固定（スタイル切替はしない: 聞き取りやすさ優先）
+    speed_scale: 1.15
     color: "#5AC85A"
     role: "ちょっとアホな生徒役。語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。視聴者と同じ勘違いをして驚き、質問し、突っ込まれる。"
 
