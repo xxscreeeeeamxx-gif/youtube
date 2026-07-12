@@ -73,7 +73,7 @@ video:
   encoder: auto
   crf: 20
   bgm:
-    file: assets/bgm/pop.mp3   # 明るめポップ（MusicGen生成）。旧: assets/bgm/ambient.mp3
+    file: assets/bgm/haru_kitchen.mp3   # 春のキッチン（DOVA-SYNDROME・もっぴーさうんど）。他の曲は assets/bgm/SOURCES.md 参照
     volume_db: -20
     ducking: true       # セリフ中にBGMを自動で下げる
   # 効果音の音量（dB）。台本カットの se: で鳴らす（控えめ運用）
