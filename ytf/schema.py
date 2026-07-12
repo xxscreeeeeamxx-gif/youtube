@@ -146,6 +146,9 @@ class Scene(BaseModel):
     # このシーン（＝1画像）の動き。1方向のみ・カットをまたいで連続。
     # 未指定ならシーンごとに自動割当（zoom-in→pan-left→zoom-out→pan-right）
     motion: str | None = None
+    # このシーンのBGM（assets/bgm/の名前 or パス）。未指定なら直前のシーンから
+    # 継続（先頭シーンが未指定なら channel.yaml の既定曲）。変わり目でフェード切替
+    bgm: str | None = None
     cuts: list[Cut]
 
     @field_validator("motion")

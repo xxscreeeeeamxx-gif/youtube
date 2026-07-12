@@ -13,6 +13,7 @@ scenes:
   - id: hook
     title: ""
     background: m_e9086273
+    bgm: natsuyasumi
     short: true
     cuts:
       # ---- 茶番（ライブ当日、チケットのQRにシミ）----
@@ -58,6 +59,7 @@ scenes:
   - id: chapter1
     title: "白黒モザイクの正体"
     background: m_18eabf68
+    bgm: haru_kitchen
     cuts:
       - speaker: tsumugi
         emotion: normal
@@ -104,6 +106,7 @@ scenes:
   - id: chapter2
     title: "なぜ3割欠けても読めるのか"
     background: m_3b6a06a5
+    bgm: 10do
     cuts:
       - speaker: zundamon
         emotion: normal
@@ -114,7 +117,7 @@ scenes:
         video_speed: 0.7
       - speaker: tsumugi
         emotion: normal
-        text: "ここが今日いちばん面白いところだよ。答えは、誤り訂正という数学の技術なの。"
+        text: "答えは、誤り訂正という数学の技術だよ。"
       - speaker: tsumugi
         emotion: normal
         text: "QRコードには本文のデータと一緒に、壊れたときのための復元用の予備データが、あらかじめ書き込んであるんだよ。"
@@ -166,6 +169,7 @@ scenes:
   - id: history
     title: "QRコードを作った男"
     background: m_c376a7ce
+    bgm: 223am
     cuts:
       - speaker: tsumugi
         emotion: normal
@@ -237,7 +241,7 @@ scenes:
         text: "ライブの入場が一瞬だったのは、名前の時点で約束されてたのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "でもここからが、この話のいちばんかっこいいところ。[DENSO|デンソー]は特許を持ったまま、規格に沿って使うなら誰にでも無料で開放すると宣言したの。"
+        text: "そして[DENSO|デンソー]は、特許を持ったまま、規格に沿って使うなら誰にでも無料で開放すると宣言したの。"
         video: assets/clips/era_open.mp4
         video_span: 3
         video_full: true
@@ -259,6 +263,7 @@ scenes:
   - id: chapter3
     title: "QRコードとの正しい付き合い方"
     background: m_14a16d8e
+    bgm: kinakusai
     cuts:
       - speaker: tsumugi
         emotion: normal
@@ -300,6 +305,11 @@ scenes:
         text: "いいまとめだね。技術がどれだけ賢くなっても、最後のひと目だけは、あなたの目の仕事だよ。"
         telops:
           - {text: "最後のひと目は人間の仕事", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A00", glow: "#FF6622", anim: up}
+  - id: omake
+    title: ""
+    background: m_14a16d8e
+    bgm: pastel_house
+    cuts:
       - speaker: zundamon
         emotion: happy
         text: "そうだ、聞いてほしいのだ！ボクも宣伝用に、ずんだ色のかっこいいQRコードを作ったのだ！マスも背景も、全部きれいな緑なのだ！"
@@ -321,6 +331,7 @@ scenes:
   - id: ending
     title: ""
     background: m_b9de408f
+    bgm: you_and_me
     cuts:
       - speaker: tsumugi
         emotion: normal

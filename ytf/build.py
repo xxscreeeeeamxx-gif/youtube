@@ -349,17 +349,22 @@ def build_video(
     width: int,
     height: int,
     se_events: list[tuple[float, str]] | None = None,
+    bgm_regions: list[tuple[float, float, str]] | None = None,
 ) -> Path:
     fps = int(cfg.get("video", "fps", default=30))
     crf = str(cfg.get("video", "crf", default=20))
     enc = pick_encoder(cfg.get("video", "encoder", default="auto"))
     se_events = se_events or []
 
-    bgm_file = cfg.get("video", "bgm", "file")
-    bgm_path = (cfg.root / bgm_file) if bgm_file else None
-    if bgm_path and not bgm_path.exists():
-        print(f"警告: BGMが見つからないためスキップ: {bgm_path}")
-        bgm_path = None
+    # BGMリージョン（開始秒, 終了秒, ファイル）。未指定なら既定曲1本
+    from .voice import _probe_duration
+    total = _probe_duration(proj.root / audio_rel) + 2.0
+    if bgm_regions is None:
+        bgm_file = cfg.get("video", "bgm", "file")
+        p = (cfg.root / bgm_file) if bgm_file else None
+        bgm_regions = [(0.0, total, str(p))] if p and p.exists() else []
+    bgm_regions = [(s, min(e, total), f) for (s, e, f) in bgm_regions
+                   if Path(f).exists() and s < total]
 
     # ---- パス1: 音声だけを先にミックスする ----
     # 映像チェーンと同じ filter_complex に入れると、adelay で大きく遅延した
@@ -367,9 +372,9 @@ def build_video(
     # 音声単体なら確実に動くため、必ず2パスに分ける。
     acmd = [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error",
             "-i", audio_rel]
-    if bgm_path:
-        acmd += ["-stream_loop", "-1", "-i", str(bgm_path)]
-    se_base = 1 + (1 if bgm_path else 0)
+    for (_, _, f) in bgm_regions:
+        acmd += ["-stream_loop", "-1", "-i", f]
+    se_base = 1 + len(bgm_regions)
     for _, se_path in se_events:
         acmd += ["-i", se_path]
 
@@ -384,9 +389,24 @@ def build_video(
         filters.append(f"[{se_base + k}:a]adelay={ms}:all=1,"
                        f"volume={se_vol}dB[se{k}]")
         extra.append(f"[se{k}]")
-    if bgm_path:
+    if bgm_regions:
         vol = float(cfg.get("video", "bgm", "volume_db", default=-24))
-        filters.append(f"[1:a]volume={vol}dB[b]")
+        # 各リージョンを 尺で切る→前後フェード→開始位置へ遅延 して1本に合成
+        labels = []
+        for k, (st, en, _) in enumerate(bgm_regions):
+            dur = max(1.5, en - st)
+            fout = max(0.0, dur - 1.2)
+            filters.append(
+                f"[{1 + k}:a]atrim=0:{dur:.3f},asetpts=PTS-STARTPTS,"
+                f"afade=t=in:st=0:d=0.8,afade=t=out:st={fout:.3f}:d=1.2,"
+                f"adelay={max(0, int(round(st * 1000)))}:all=1[bg{k}]")
+            labels.append(f"[bg{k}]")
+        if len(labels) > 1:
+            filters.append("".join(labels) +
+                           f"amix=inputs={len(labels)}:duration=longest:normalize=0[ball]")
+        else:
+            filters.append(f"{labels[0]}acopy[ball]")
+        filters.append(f"[ball]volume={vol}dB[b]")
         if cfg.get("video", "bgm", "ducking", default=True):
             # ナレーションを分岐（サイドチェイン用と本線用）してBGMを喋りで下げる
             filters.append("[0:a]asplit=2[nar][sc]")
@@ -479,6 +499,54 @@ def collect_se_events(cfg: Config, proj: Project,
     return events
 
 
+def collect_bgm_regions(cfg: Config, proj: Project,
+                        timings: list[CutTiming]) -> list[tuple[float, float, str]]:
+    """シーンの bgm: 指定から (開始, 終了, ファイル) のリージョン列を作る。
+
+    未指定シーンは直前の曲を継続。切り替わりは章トランジションの頭
+    （カット開始 - lead）に合わせる。
+    """
+    def resolve(name: str) -> str | None:
+        if "/" in name:
+            p = cfg.root / name
+            return str(p) if p.exists() else None
+        for ext in ("mp3", "wav", "m4a"):
+            p = cfg.root / "assets" / "bgm" / f"{name}.{ext}"
+            if p.exists():
+                return str(p)
+        return None
+
+    script = proj.load_script()
+    default = cfg.get("video", "bgm", "file")
+    cur = str(cfg.root / default) if default and (cfg.root / default).exists() else None
+
+    # シーンごとの開始時刻（先頭カットの start - lead）
+    starts: dict[str, float] = {}
+    for ct in timings:
+        if ct.scene_id not in starts:
+            starts[ct.scene_id] = max(0.0, ct.start - getattr(ct, "lead", 0.0))
+    total = timings[-1].start + timings[-1].total_dur + 2.0
+
+    regions: list[tuple[float, float, str]] = []
+    cur_start = 0.0
+    for scene in script.scenes:
+        if not scene.bgm:
+            continue
+        f = resolve(scene.bgm)
+        if f is None:
+            print(f"警告: シーン{scene.id}のBGMが見つかりません: {scene.bgm}")
+            continue
+        st = starts.get(scene.id, None)
+        if st is None or f == cur:
+            continue
+        if cur and st > cur_start:
+            regions.append((cur_start, st, cur))
+        cur, cur_start = f, st
+    if cur:
+        regions.append((cur_start, total, cur))
+    return regions
+
+
 def render_main(cfg: Config, proj: Project, timings: list[CutTiming]) -> Path:
     from .compose import render_frames
 
@@ -489,9 +557,11 @@ def render_main(cfg: Config, proj: Project, timings: list[CutTiming]) -> Path:
     ass.write_text(build_ass(cfg, timings, w, h), encoding="utf-8")
     concat = _prepare_visual(cfg, proj, plan, w, h, "video")
     se_events = collect_se_events(cfg, proj, timings)
+    bgm_regions = collect_bgm_regions(cfg, proj, timings)
     out = build_video(cfg, proj, concat, "audio/narration.wav", "out/subs.ass",
-                      "out/video.mp4", w, h, se_events=se_events)
-    print(f"書き出し完了: {out}（SE {len(se_events)}）")
+                      "out/video.mp4", w, h, se_events=se_events,
+                      bgm_regions=bgm_regions)
+    print(f"書き出し完了: {out}（SE {len(se_events)} / BGM {len(bgm_regions)}リージョン）")
     return out
 
 
