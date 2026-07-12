@@ -14,7 +14,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
 from .assets_gen import background_path, sprite_path
 from .config import Config, Project
@@ -73,8 +73,14 @@ class Composer:
     def _sprite(self, speaker: str, emotion: str, active: bool) -> Image.Image:
         key = (speaker, emotion, active)
         if key not in self._sprite_cache:
+            ch = self.cfg.character(speaker)
             img = Image.open(sprite_path(self.cfg, speaker, emotion)).convert("RGBA")
-            scale = (self.lay.char_h if active else int(self.lay.char_h * 0.9)) / img.height
+            if ch.get("sprite_flip"):
+                # 素材の向きが外向きのキャラは反転して内側（相手側）を向かせる
+                img = ImageOps.mirror(img)
+            # sprite_scale: キャラごとの体格差（ちびキャラは小さく描く）
+            base = self.lay.char_h * float(ch.get("sprite_scale", 1.0))
+            scale = (base if active else base * 0.9) / img.height
             img = img.resize((int(img.width * scale), int(img.height * scale)), Image.LANCZOS)
             if not active:
                 # 非話者は暗くして視線誘導
@@ -531,7 +537,9 @@ def render_frames(
     if composer.show_chars:
         parts = []
         for s in speakers:
-            d = cfg.root / cfg.character(s)["sprite_dir"]
+            ch = cfg.character(s)
+            parts.append(f"{s}@{ch.get('sprite_scale', 1.0)}:{ch.get('sprite_flip', False)}")
+            d = cfg.root / ch["sprite_dir"]
             for p in sorted(d.glob("*.png")) if d.is_dir() else []:
                 st = p.stat()
                 parts.append(f"{s}:{p.name}:{st.st_size}:{int(st.st_mtime)}")

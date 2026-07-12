@@ -40,6 +40,8 @@ characters:
     color: "#5AC85A"
     sprite_dir: assets/characters/zundamon
     position: left
+    sprite_scale: 0.74   # ちびキャラなのでつむぎより小さく
+    sprite_flip: true    # 素材が外向きなので反転して内側（つむぎ側）を向かせる
     role: "ちょっとアホな生徒役。語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。視聴者と同じ勘違いをして驚き、質問し、突っ込まれる。"
 
 voicevox:
