@@ -13,7 +13,6 @@ ideas/prompt.md
 *_list.txt
 
 # プレースホルダー素材（ytf assets --init で再生成可能）
-assets/characters/
 assets/backgrounds/default.png
 assets/bgm/*
 !assets/bgm/.gitkeep
@@ -36,3 +35,6 @@ __pycache__/
 .venv/
 build/
 dist/
+# 立ち絵素材（二次配布禁止のためコミットしない。入手元は assets/characters/SOURCES.md）
+assets/characters/*
+!assets/characters/SOURCES.md

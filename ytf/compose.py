@@ -520,6 +520,23 @@ def render_frames(
 
     speakers = script.speakers_used()
     emotion_state = {s: "normal" for s in speakers}
+
+    # 立ち絵は「出演キャラ全員が sprite_dir を持つ」プロジェクトだけ有効にする。
+    # （aoyama単独回など素材のない構成では自動オフになり、レイアウトも従来どおり）
+    composer.show_chars = composer.show_chars and bool(speakers) and all(
+        "sprite_dir" in cfg.character(s) for s in speakers
+    )
+    # 立ち絵ファイルの差し替えで前景PNGを確実に作り直すための署名
+    sprite_sig = ""
+    if composer.show_chars:
+        parts = []
+        for s in speakers:
+            d = cfg.root / cfg.character(s)["sprite_dir"]
+            for p in sorted(d.glob("*.png")) if d.is_dir() else []:
+                st = p.stat()
+                parts.append(f"{s}:{p.name}:{st.st_size}:{int(st.st_mtime)}")
+        sprite_sig = "|".join(parts)
+
     result: list[CutRender] = []
     sub = "v" if vertical else "h"
     manifest_used: set[str] = set()
@@ -548,7 +565,7 @@ def render_frames(
         key_src = json.dumps(
             [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
-             bool(sp), card, full, fg_only, sub],
+             bool(sp), card, full, fg_only, sub, sprite_sig],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]

@@ -41,9 +41,9 @@ INK = (235, 242, 252)
 GRAY = (150, 158, 175)
 YELLOW = (255, 214, 90)
 
-# 電極の位置
-LX0, LX1 = 180, 360          # 負極（左）
-RX0, RX1 = W - 360, W - 180  # 正極（右）
+# 電極の位置（立ち絵が画面下部の左右に立つため、内側に寄せてある）
+LX0, LX1 = 340, 520          # 負極（左）
+RX0, RX1 = W - 520, W - 340  # 正極（右）
 TOP, BOT = 260, H - 160
 
 
@@ -120,11 +120,13 @@ def main() -> None:
                             outline=(*ACCENT, 255), width=4)
         d.rounded_rectangle([RX0, TOP, RX1, BOT], radius=18, fill=(46, 52, 66, 255),
                             outline=(150, 158, 175, 255), width=4)
-        d.text((LX0 + 40, BOT + 24), "負極", font=f_mid, fill=INK)
-        d.text((RX0 + 40, BOT + 24), "正極", font=f_mid, fill=INK)
-        # 極性マーク
-        d.text(((LX0 + LX1) / 2 - 18, TOP + 14), "−", font=f_sign, fill=INK)
-        d.text(((RX0 + RX1) / 2 - 18, TOP + 14), "＋", font=f_sign, fill=INK)
+        # 極板ラベルは縦書きで板の中に（画面下部は立ち絵と重なるため）
+        for x0, x1, mark, label in ((LX0, LX1, "−", "負極"), (RX0, RX1, "＋", "正極")):
+            cx = (x0 + x1) / 2
+            d.text((cx - 18, TOP + 14), mark, font=f_sign, fill=INK)
+            for k, chz in enumerate(label):
+                d.text((cx - 26, (TOP + BOT) / 2 - 70 + k * 62), chz,
+                       font=f_mid, fill=INK)
 
         # フェーズごとの見出し（左上の章見出しタブと重ならないよう y=150）
         if t < P1S:

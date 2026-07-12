@@ -29,6 +29,8 @@ characters:
     voicevox_style: 8   # ノーマル固定（スタイル切替はしない: 聞き取りやすさ優先）
     speed_scale: 1.15
     color: "#F5A623"
+    sprite_dir: assets/characters/tsumugi
+    position: right
     role: "解説役の先生。明るいお姉さん口調でテンポよく核心を突く。生徒のずんだもんを軽くいじりつつ、最後は必ず分かりやすくまとめる。奇をてらった言い回しは使わず、誰でも分かる素直な表現で話す。"
   zundamon:
     display_name: "ずんだもん"
@@ -36,6 +38,8 @@ characters:
     voicevox_style: 3   # ノーマル固定（スタイル切替はしない: 聞き取りやすさ優先）
     speed_scale: 1.15
     color: "#5AC85A"
+    sprite_dir: assets/characters/zundamon
+    position: left
     role: "ちょっとアホな生徒役。語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。視聴者と同じ勘違いをして驚き、質問し、突っ込まれる。"
 
 voicevox:
@@ -53,8 +57,9 @@ video:
   width: 1920
   height: 1080
   fps: 30
-  # false にすると立ち絵を一切描かない（背景＋テロップ主体の構成）
-  show_characters: false
+  # 立ち絵: 出演キャラ全員に sprite_dir があるプロジェクトだけ自動で表示される
+  # （aoyama単独回は sprite_dir が無いので従来どおり背景＋テロップ主体）
+  show_characters: true
   # 画面の動き（1画像を1方向にゆっくり動かすKen Burns。シーン単位で連続）
   motion:
     enabled: true
