@@ -391,8 +391,7 @@ def qr_repair(img, d, t):
             _repair_seq(d, qx, qy, qsize, R1B + 0.3, t,
                         [(0.74, 0.3, 110, 90), (0.6, 0.16, 80, 60)], qy + qsize + 46)
         return
-    # P2: 復元レベル4段階
-    _caption(d, "復元力は4段階。最強設定なら約3割欠けてもOK")
+    # P2: 復元レベル4段階（statの30%が上に重なるため見出しは出さない）
     levels = [("L", 7), ("M", 15), ("Q", 25), ("H", 30)]
     bx, bw, gap = 330, 260, 60
     for i, (name, pct) in enumerate(levels):
@@ -535,17 +534,129 @@ def make_era(idx, year, title, persons, sub):
     return draw
 
 
+# ------------------------------------------------------------------
+# 6) era_dev — 開発者紹介カード（原昌宏さんの写真入り・CC0/qargo氏撮影）
+#    span3=17.9s → DUR 19.5
+# ------------------------------------------------------------------
+_hara = None
+
+
+def _hara_img():
+    global _hara
+    if _hara is None:
+        ph = Image.open("assets/images/hara_qargo.jpg").convert("RGB")
+        hgt = 720
+        ph = ph.resize((int(ph.width * hgt / ph.height), hgt), Image.LANCZOS)
+        mask = Image.new("L", ph.size, 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, ph.width, ph.height],
+                                               radius=28, fill=255)
+        ph.putalpha(mask)
+        _hara = ph
+    return _hara
+
+
+def era_dev(img, d, t):
+    k = ease(t / 0.5)
+    f_year = font(140)
+    d.text((260, 130 - 40 * (1 - k)), "1990s", font=f_year,
+           fill=(*AMBER, int(255 * k)))
+    k2 = ease((t - 0.35) / 0.4)
+    if k2 > 0:
+        d.text((266, 330), "原昌宏", font=font(84), fill=(*INK, int(255 * k2)))
+        d.text((270, 450), "DENSO の技術者", font=font(46),
+               fill=(*GRAY, int(255 * k2)))
+    k3 = ease((t - 0.8) / 0.4)
+    if k3 > 0:
+        for i, line in enumerate(["読み取りやすさへの執念と", "わずか2人の開発チーム"]):
+            d.text((270, 560 + i * 64), line, font=font(40),
+                   fill=(*INK, int(255 * k3)))
+    # 写真（右側・ふわっと登場）
+    kp = ease((t - 0.5) / 0.6)
+    if kp > 0:
+        ph = _hara_img().copy()
+        ph.putalpha(ph.split()[3].point(lambda a: int(a * kp)))
+        px_, py_ = 1170, 140 + int(20 * (1 - kp))
+        img.paste(ph, (px_, py_), ph)
+        d.text((px_ + 6, 140 + 720 + 12), "写真: qargo（CC0 / Wikimedia Commons）",
+               font=font(24), fill=(110, 118, 134))
+    # 年表バー
+    bx0, bx1, by = 560, 1360, 1008
+    d.line([bx0, by, bx1, by], fill=(50, 64, 92), width=6)
+    f_tick = font(24)
+    for i, e in enumerate(ERAS):
+        x = bx0 + (bx1 - bx0) * i / (len(ERAS) - 1)
+        cur = i == 0
+        r = 13 + (5 * (0.5 + 0.5 * math.sin(t * 3)) if cur else 0)
+        col = AMBER if cur else (60, 72, 98)
+        d.ellipse([x - r, by - r, x + r, by + r], fill=col)
+        d.text((x - d.textlength(e, font=f_tick) / 2, by + 20), e,
+               font=f_tick, fill=INK if cur else GRAY)
+
+
+# ------------------------------------------------------------------
+# 7) green_qr — 全緑QRは読めない→濃い緑なら読める（3章の後日談ネタ）
+#    FAIL=10.56（つむぎの指摘の頭）/ OK=34.76（作り直すのだ の頭）/ DUR 41.5
+# ------------------------------------------------------------------
+GFAIL, GOK = 10.56, 34.76
+
+
+def green_qr(img, d, t):
+    px = 13
+    qsize = (N + 6) * px
+    qx, qy = W // 2 - qsize // 2, 280
+
+    if t < GOK:
+        # 全部ずんだ色（低コントラスト）
+        _caption(d, "ずんだ色QR、爆誕" if t < GFAIL else "明暗の差がないと、機械には見えない")
+        draw_qr(d, qx, qy, px, fg=(122, 186, 108), bgc=(158, 208, 146))
+        if t < GFAIL:
+            # スキャンを試みる
+            k = (t - 6.0)
+            if 0 < k < 1.6:
+                yy = qy + qsize * (0.5 - 0.5 * math.cos(k / 1.6 * math.tau))
+                d.rectangle([qx - 14, yy - 3, qx + qsize + 14, yy + 3],
+                            fill=(*ACCENT, 230))
+        else:
+            blink = (int(t * 1.6) % 2) == 0
+            if blink:
+                cx, cy = qx + qsize / 2, qy + qsize / 2
+                r = 58
+                d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(*RED, 235))
+                d.line([cx - 22, cy - 22, cx + 22, cy + 22], fill=(255, 255, 255), width=10)
+                d.line([cx - 22, cy + 22, cx + 22, cy - 22], fill=(255, 255, 255), width=10)
+            ctext(d, W / 2, qy + qsize + 30, "読み取れません", font(48), RED)
+        return
+    # 濃いずんだ色 × 白 → 成功
+    _caption(d, "濃いずんだ色 × 白なら、読める")
+    draw_qr(d, qx, qy, px, fg=(26, 92, 44), bgc=(252, 252, 250))
+    k = t - GOK - 1.2
+    if 0 < k < 0.8:
+        yy = qy + qsize * (0.5 - 0.5 * math.cos(k / 0.8 * math.tau))
+        d.rectangle([qx - 14, yy - 3, qx + qsize + 14, yy + 3], fill=(*ACCENT, 230))
+    if k >= 0.8:
+        kk = min(1.0, (k - 0.8) / 0.25)
+        r = 58 * kk
+        cx, cy = qx + qsize / 2, qy + qsize / 2
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(*GREEN, 240))
+        if kk > 0.6:
+            d.line([cx - 22, cy + 2, cx - 6, cy + 18], fill=(255, 255, 255), width=9)
+            d.line([cx - 6, cy + 18, cx + 26, cy - 16], fill=(255, 255, 255), width=9)
+        ctext(d, W / 2, qy + qsize + 30, "読み取り成功", font(48), GREEN)
+
+
 def main() -> None:
     render("qr_ticket", 34.0, qr_ticket)
     render("qr_anatomy", 75.0, qr_anatomy)
     render("qr_repair", 39.3, qr_repair)
     render("go_to_qr", 20.5, go_to_qr)
     render("era_1994", 15.0, make_era(
-        2, "1994", "QRコード、誕生", [("原昌宏", "デンソー")],
+        2, "1994", "QRコード、誕生", [("原昌宏", "DENSO")],
         "名前の由来は Quick Response ＝ 素早い応答"))
     render("era_open", 26.0, make_era(
-        3, "無料開放", "特許の権利を行使しないと宣言", [("デンソー", "1994〜")],
+        3, "無料開放", "特許の権利を行使しないと宣言", [("DENSO", "1994〜")],
         "誰でも無料で使える、世界の共通インフラへ"))
+    render("era_dev", 19.5, era_dev)
+    render("green_qr", 41.5, green_qr)
 
 
 if __name__ == "__main__":

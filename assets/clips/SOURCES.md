@@ -34,5 +34,17 @@
 | barcode_scan.mp4 | レジのバーコードスキャン | Ahimsa - OM | https://www.pexels.com/video/retail-checkout-process-with-scanner-and-items-29832466/ |
 | factory_line.mp4 | 自動化された製造ライン | Usman AbdulrasheedGambo | https://www.pexels.com/video/automated-industrial-production-line-in-action-32386533/ |
 | mobile_pay.mp4 | QRタグの下がる屋台 | Suhail Insights | https://www.pexels.com/video/colorful-street-food-vendor-at-busy-market-36147818/ |
+| era_dev.mp4 / green_qr.mp4 | 開発者紹介カード・全緑QRオチ（自作。`scripts/gen_qr_extras.py`） | — | — |
+| crowd.mp4 | ライブの観客 | Cristian Geza | https://www.pexels.com/video/crowd-concert-hands-26744501/ |
+| cd_disc.mp4 | 回転するCD | www.kaboompics.com | https://www.pexels.com/video/close-up-shot-of-a-rotating-compact-disc-4211106/ |
+| menu_qr.mp4 | メニューを見る客 | Tima Miroshnichenko | https://www.pexels.com/video/women-looking-at-the-menu-6327104/ |
+| print_press.mp4 | 印刷機 | Everett Bumstead | https://www.pexels.com/video/industrial-printing-press-operating-in-slow-motion-29906414/ |
+| hacker.mp4 | 暗い部屋のノートPC | Nothing Ahead | https://www.pexels.com/video/hacker-in-dark-room-using-laptop-with-code-36036810/ |
+
+## 画像（assets/images/）
+
+| ファイル | 内容 | ライセンス | 出典 |
+|---|---|---|---|
+| hara_qargo.jpg | 原昌宏氏とQRモザイク肖像アート | CC0（パブリックドメイン・撮影: qargo氏） | https://commons.wikimedia.org/wiki/File:Masahiro_Hara_honored_by_French_artist_qargo.jpg |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。
