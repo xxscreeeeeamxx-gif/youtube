@@ -21,5 +21,13 @@
 | hot_car.mp4 | フロントガラス越しの強い日差し | Ton Souza | https://www.pexels.com/video/the-glare-of-the-sun-causing-diminished-visibility-in-driving-4377434/ |
 | wireless_charge.mp4 | ワイヤレス充電器に置く手元 | Pixabay | https://www.pexels.com/video/samsung-charging-855932/ |
 | old_phone.mp4 | スマホの設定画面を操作する手元 | Foysal Ahmed | https://www.pexels.com/video/a-person-checking-the-battery-rate-of-his-mobile-phone-4201544/ |
+| batt_dead.mp4 | 配信待機画面→電池切れ演出（自作。`scripts/gen_duo_extras.py`） | — | — |
+| era_1970.mp4 〜 era_2019.mp4 | 開発史の時代カード5枚（自作。同上） | — | — |
+| oil_pump.mp4 | 油田のポンプジャック空撮 | Jack Kennedy | https://www.pexels.com/video/aerial-shot-of-a-landscape-9055125/ |
+| explosion_fire.mp4 | 飛び散る火花 | Sini Ko | https://www.pexels.com/video/mesmerizing-sparks-in-dark-atmosphere-29936073/ |
+| camcorder.mp4 | レトロなカメラ | Tatsiana Sa | https://www.pexels.com/video/a-camera-with-a-black-handle-and-a-white-lens-26610180/ |
+| airplane.mp4 | 旅客機の機内と手荷物収納 | K | https://www.pexels.com/video/passengers-entering-the-airplane-3740021/ |
+| garbage_truck.mp4 | ごみ収集車 | Levi Wedge | https://www.pexels.com/video/dustcart-in-city-13258689/ |
+| space_earth.mp4 | 地球を周回する人工衛星 | Adis Resic | https://www.pexels.com/video/orbiting-satellite-over-earth-at-sunrise-34333825/ |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。
