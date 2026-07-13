@@ -38,3 +38,6 @@ dist/
 # 立ち絵素材（二次配布禁止のためコミットしない。入手元は assets/characters/SOURCES.md）
 assets/characters/*
 !assets/characters/SOURCES.md
+# 静的ffmpeg/ffprobe（65MB級なのでコミットしない。入手方法は SKILL.md 参照）
+tools/ffmpeg
+tools/ffprobe
