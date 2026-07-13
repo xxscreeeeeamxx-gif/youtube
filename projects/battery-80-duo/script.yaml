@@ -13,6 +13,7 @@ scenes:
   - id: hook
     title: ""
     background: m_77e72ca3
+    bgm: shuffle_shuffle
     short: true
     cuts:
       # ---- 茶番パート（大事な時に電池切れ）----
@@ -69,6 +70,7 @@ scenes:
   - id: chapter1
     title: "電池の敵は満タンと熱"
     background: m_07a487b7
+    bgm: haru_kitchen
     cuts:
       - speaker: tsumugi
         emotion: normal
@@ -102,7 +104,7 @@ scenes:
         text: "なるほどなのだ。じゃあ満タンは、粒が全部マイナス側に詰まった状態なのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "その通りだよ。そしてここからが本題なんだけど、実はその満タン状態が、電池にとっていちばん苦しい状態なの。"
+        text: "その通りだよ。実はその満タン状態が、電池にとっていちばん苦しい状態なの。"
       - speaker: tsumugi
         emotion: normal
         text: "満タンの間は粒がぎゅうぎゅうに詰まったまま高い電圧がかかり続けるから、中では余計な化学反応がじわじわ進んでいくの。"
@@ -141,6 +143,7 @@ scenes:
   - id: chapter2
     title: "80%に科学的な根拠はあるのか"
     background: m_37e7bbee
+    bgm: 10do
     cuts:
       - speaker: zundamon
         emotion: angry
@@ -192,6 +195,7 @@ scenes:
   - id: history
     title: "その電池、誰が作った？"
     background: m_07a487b7
+    bgm: 223am
     cuts:
       - speaker: tsumugi
         emotion: normal
@@ -330,6 +334,7 @@ scenes:
   - id: chapter3
     title: "で、結局どうすればいい？"
     background: m_38782c86
+    bgm: jitaku_nite
     cuts:
       - speaker: zundamon
         emotion: happy
@@ -384,6 +389,7 @@ scenes:
   - id: beyond
     title: "スマホの外でも、80%"
     background: m_aeac6565
+    bgm: kinakusai
     cuts:
       - speaker: tsumugi
         emotion: normal
@@ -454,7 +460,7 @@ scenes:
         text: "さらに液体を完全な固体にした全固体電池は、電気自動車向けに日本のメーカーが開発競争の真っ最中で、完成すればもっと安全で長持ちする電池になると言われてるよ。"
       - speaker: tsumugi
         emotion: normal
-        text: "最後にすごい話をひとつ。実は国際宇宙ステーションの電池もリチウムイオン電池で、しかも日本のメーカー製なんだよ。"
+        text: "実は国際宇宙ステーションの電池もリチウムイオン電池で、しかも日本のメーカー製なんだよ。"
         video: assets/clips/space_earth.mp4
         video_span: 2
         video_full: true
@@ -464,9 +470,33 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "90分ごとに昼と夜が来る宇宙で何年も充電と放電を繰り返してるんだから、まさに、充電できる世界だね。"
+  - id: zero
+    title: ""
+    background: m_77e72ca3
+    bgm: pastel_house
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "よし、分かったのだ！じゃあボクは今日から電池に優しく、0%まで使い切ってから充電する縛りを始めるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "待って、それは逆効果だよ。リチウムイオン電池は実は空っぽも苦手で、0%のまま放っておくと過放電といって、また別のダメージが入っちゃうの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "敵が多すぎるのだ！満タンもダメ、空っぽもダメ、どうしろというのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日の話を思い出して。満タンは粒がぎゅうぎゅう、空っぽはすっからかんで、どっちも電池に無理をさせてる状態だから、真ん中あたりでゆるく使うのがいちばん電池に優しいの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "0%になる前に充電して、満タン側は設定に任せる。守るのはそれだけで、あとは本当に気にしなくて大丈夫だよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "真ん中でゆるく使う、なのだ！これでボクの電池ライフは、今度こそ完璧なのだ！"
   - id: ending
     title: ""
     background: m_415403fb
+    bgm: you_and_me
     cuts:
       - speaker: tsumugi
         emotion: normal
@@ -489,37 +519,12 @@ scenes:
         text: "電池を一番大切にする方法は、電池のことを考えなくていい仕組みを作ること。逆説的なのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、あなたが知ってるつもりの当たり前を、疑いに来てね。"
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
       - speaker: zundamon
         emotion: happy
         text: "ボクみたいに損する前に、今すぐ設定なのだ！"
-        pause_after: 1.2
-  - id: epilogue
-    title: ""
-    background: m_77e72ca3
-    cuts:
-      - speaker: zundamon
-        emotion: happy
-        text: "つむぎ先生、あれから設定もオンにしたのだ。さらに電池に優しく、0%まで使い切ってから充電する縛りも始めたのだ！"
       - speaker: tsumugi
-        emotion: normal
-        text: "待って、それは逆効果だよ。リチウムイオン電池は実は空っぽも苦手で、0%のまま放っておくと過放電といって、また別のダメージが入っちゃうの。"
-      - speaker: zundamon
-        emotion: angry
-        text: "敵が多すぎるのだ！満タンもダメ、空っぽもダメ、どうしろというのだ！"
-      - speaker: tsumugi
-        emotion: normal
-        text: "今日の話を思い出して。満タンは粒がぎゅうぎゅう、空っぽはすっからかんで、どっちも電池に無理をさせてる状態だから、真ん中あたりでゆるく使うのがいちばん電池に優しいの。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "0%になる前に充電して、満タン側は設定に任せる。守るのはそれだけで、あとは本当に気にしなくて大丈夫だよ。"
-      - speaker: zundamon
+        duet_with: zundamon
         emotion: happy
-        text: "真ん中でゆるく使う、なのだ！これでボクの電池ライフは、今度こそ完璧なのだ！"
-      - speaker: tsumugi
-        emotion: happy
-        text: "うん、今日の授業はここまで。それじゃ、また次の動画で会おうね。"
-      - speaker: zundamon
-        emotion: happy
-        text: "高評価とチャンネル登録も、よろしくなのだ！"
-        pause_after: 0.8
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0

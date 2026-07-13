@@ -74,7 +74,7 @@ video:
   crf: 20
   bgm:
     file: assets/bgm/haru_kitchen.mp3   # 春のキッチン（DOVA-SYNDROME・もっぴーさうんど）。他の曲は assets/bgm/SOURCES.md 参照
-    volume_db: -20
+    volume_db: -24
     ducking: true       # セリフ中にBGMを自動で下げる
   # 効果音の音量（dB）。台本カットの se: で鳴らす（控えめ運用）
   se_volume_db: -8
