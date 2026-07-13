@@ -213,6 +213,60 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "夜食のありがたみが変わってしまったのだ。ありがとうなのだ、百福さんなのだ。"
+  - id: health
+    title: "カップ麺は体に悪いのか"
+    background: m_462f6daa
+    bgm: kinakusai
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "ところで先生、ネットで見たのだ。カップ麺は添加物だらけで体に悪いって、みんなが言ってるのだ！"
+        video: assets/clips/market_shelf.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "出たね、その論争。カップ麺の話題になると、必ずコメント欄が荒れるやつだよ。せっかくだから、今日は正面から答えよう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず、いちばん叩かれがちな保存料の話。実はカップ麺には、保存料がそもそも使われていないの。"
+        telops:
+          - {text: "保存料は使われていない", size: xl, position: bottom-center, color: "#7CFFB2", stroke: "#00331A", glow: "#00CC66", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "え！？あんなに日持ちするのに、使ってないのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "さっきの麺の穴を思い出して。油で揚げて水分を抜いてあるから、カビや菌が育つための水そのものがカップの中にないの。だから腐りようがないんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "さっきの話がつながったのだ！乾かすこと自体が、最強の保存料だったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スープのほうも、濃縮したり塩や糖を溶かし込んだりして、菌が育てない状態に調整されてる。保存料に頼らないための、企業努力の塊なんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "麺のコシを出すかんすいみたいな添加物も、国が安全性を評価して、毎日食べ続けても影響が出ないとされる量よりずっと少ない範囲で使われてるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "じゃあカップ麺は無敵なのだ！毎日3食カップ麺でも問題ないのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それは待って。本当に気をつけるべきなのは、添加物じゃなくて塩分だよ。1杯でおよそ5グラムと言われていて、これだけで1日分の7割前後になっちゃうの。"
+        video: assets/clips/salt_gauge.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "国の目標は、1日あたり男性7.5グラム未満、女性6.5グラム未満。スープまで全部飲み干すと、1杯でかなり埋まってしまうんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも塩分の半分ほどはスープ側にあるから、スープを残せば2割から3割は減らせると言われてるよ。麺と具を楽しんで、スープは味見くらいにしておくのが賢い付き合い方。"
+      - speaker: zundamon
+        emotion: sad
+        text: "敵は添加物じゃなくて、飲み干したくなるおいしいスープだったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そういうこと。ネットの論争は叩きやすいところに集まるけど、本当の注意点は意外と地味なんだよ。"
   - id: chapter3
     title: "3分をおいしく使う"
     background: m_85cda068

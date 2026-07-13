@@ -296,6 +296,64 @@ def cup_structure(d, t):
 
 
 # ------------------------------------------------------------------
+# 3.5) salt_gauge — 塩分ゲージ（目標比較=10.22 / スープを残す=19.88 / DUR 31.7）
+#      1杯 約5g / 目標 男7.5g・女6.5g / スープを残すと2〜3割減
+# ------------------------------------------------------------------
+S_TARGET, S_LEAVE = 10.22, 19.88
+S_MAX = 8.0  # ゲージ上限（g）
+
+
+def _bar(d, x, y, w, h, frac, col, label, grams, f_label, f_val):
+    d.rounded_rectangle([x, y, x + w, y + h], radius=18, fill=(24, 34, 54))
+    if frac > 0:
+        bw = max(36, w * min(frac, 1.0))
+        d.rounded_rectangle([x, y, x + bw, y + h], radius=18, fill=col)
+    d.text((x, y - 54), label, font=f_label, fill=INK)
+    d.text((x + w + 28, y + h / 2 - 26), grams, font=f_val, fill=col)
+
+
+def salt_gauge(d, t):
+    f_label, f_val = font(40), font(46)
+    x, w, h = 360, 900, 76
+    if t < S_TARGET:
+        _caption(d, "カップ麺1杯の塩分")
+        k = ease(t / 2.5)
+        g = 5.0 * k
+        _bar(d, x, 480, w, h, g / S_MAX, RED, "カップ麺 1杯", f"{g:.1f}g", f_label, f_val)
+        if k >= 1.0:
+            ctext(d, W / 2, 640, "およそ5g（スープまで飲んだ場合・推計）", font(36), GRAY)
+        return
+    if t < S_LEAVE:
+        _caption(d, "1日の目標量と比べると……")
+        _bar(d, x, 340, w, h, 5.0 / S_MAX, RED, "カップ麺 1杯", "5.0g", f_label, f_val)
+        k1 = ease((t - S_TARGET) / 0.8)
+        if k1 > 0:
+            _bar(d, x, 540, w, h, 7.5 / S_MAX * k1, GRAY, "1日の目標（男性）",
+                 "7.5g未満", f_label, f_val)
+        k2 = ease((t - S_TARGET - 0.8) / 0.8)
+        if k2 > 0:
+            _bar(d, x, 740, w, h, 6.5 / S_MAX * k2, GRAY, "1日の目標（女性）",
+                 "6.5g未満", f_label, f_val)
+        if k2 >= 1.0:
+            ctext(d, W / 2, 900, "1杯で1日分の7割前後", font(44), AMBER)
+        return
+    # スープを残す
+    _caption(d, "スープを残すだけで")
+    k = ease((t - S_LEAVE) / 2.0)
+    g = 5.0 - 1.4 * k  # 約3割減
+    col = GREEN if k >= 1.0 else RED
+    _bar(d, x, 420, w, h, g / S_MAX, col, "麺と具だけ食べる", f"{g:.1f}g", f_label, f_val)
+    kk = ease((t - S_LEAVE - 2.2) / 0.6)
+    if kk > 0:
+        d.rounded_rectangle([x, 640, x + 640 * kk, 750], radius=20,
+                            fill=(24, 44, 34, int(255 * kk)))
+        if kk > 0.7:
+            d.text((x + 34, 668), "塩分を2〜3割カットできると言われている",
+                   font=font(38), fill=GREEN)
+    ctext(d, W / 2, 900, "本当の注意点は、添加物より塩分", font(40), GRAY)
+
+
+# ------------------------------------------------------------------
 # 4) 時代カード（安藤百福の年表バー付き）
 # ------------------------------------------------------------------
 ERAS = ["1958 チキンラーメン", "1966 渡米", "1971 カップヌードル", "2005 宇宙へ"]
@@ -347,8 +405,23 @@ def make_era(idx, year, title, persons, sub):
     return draw
 
 
+CLIPS = {
+    "cup_timer": (26.0, lambda: cup_timer),
+    "noodle_pore": (47.0, lambda: noodle_pore),
+    "cup_structure": (20.5, lambda: cup_structure),
+    "salt_gauge": (31.7, lambda: salt_gauge),
+}
+
+
 def main() -> None:
+    # 引数でクリップ名を渡すとそれだけ再生成する（例: salt_gauge）
+    if len(sys.argv) > 1:
+        for name in sys.argv[1:]:
+            dur, fn = CLIPS[name]
+            render(name, dur, fn())
+        return
     render("cup_timer", 26.0, cup_timer)
+    render("salt_gauge", 31.7, salt_gauge)
     render("noodle_pore", 47.0, noodle_pore)
     render("cup_structure", 20.5, cup_structure)
     render("era_1958", 24.0, make_era(
