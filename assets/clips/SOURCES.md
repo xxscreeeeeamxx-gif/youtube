@@ -77,6 +77,14 @@
 | magnifier.mp4 | ルーペで本を読む男性 | KoolShooters | https://www.pexels.com/video/man-reading-with-magnifying-glass-6980534/ |
 | wallet_count.mp4 | 財布から紙幣を出す手元 | Jakub Zerdzicki | https://www.pexels.com/video/managing-finances-counting-cash-from-wallet-34596756/ |
 | eye_magnify.mp4 | ルーペ越しの目 | ArtHouse Studio | https://www.pexels.com/video/an-eye-through-a-magnifying-glass-6269182/ |
+| esc_loop.mp4 / ronsou.mp4 / wheelchair_step.mp4 / era_1914.mp4 / era_trademark.mp4 | escalator用アニメ5本（自作。`scripts/gen_escalator_extras.py`） | — | — |
+| esc_people.mp4 | エスカレーターに乗る人々 | Everett Bumstead | https://www.pexels.com/video/people-on-escalator-11331038/ |
+| esc_station.mp4 | 駅のエスカレーター | Wal Saravia | https://www.pexels.com/video/escalator-on-railway-station-11390996/ |
+| esc_yellow.mp4 | 黄色いライン入りエスカレーター | Hideyoshi isai | https://www.pexels.com/video/escalators-in-an-airport-with-yellow-and-black-rails-17854364/ |
+| esc_mall.mp4 | モールのエスカレーター | LayG Traveller | https://www.pexels.com/video/modern-escalator-inside-a-busy-shopping-mall-28925807/ |
+| esc_stand.mp4 | エスカレーターに立つ人のPOV | K | https://www.pexels.com/video/a-man-standing-on-the-escalator-3740035/ |
+| stairs_kamakura.mp4 | 鎌倉駅の階段を降りる通勤客 | Miltan Monjib | https://www.pexels.com/video/commuters-descend-stairs-at-kamakura-station-34654547/ |
+| wheelchair_hosp.mp4 | 病院の廊下と車椅子 | Mister Edits | https://www.pexels.com/video/a-footage-inside-a-hospital-6151283/ |
 
 ## 画像（assets/images/）
 
@@ -92,5 +100,8 @@
 | m_57dad7bc.jpeg（背景） | 夜の勉強机 | Pexels License（Bikram Bezbaruah） | https://www.pexels.com/photo/a-woman-with-eyeglasses-writing-on-white-paper-under-a-light-8921700/ |
 | m_1c7ace29.jpeg（背景） | 紙幣のクローズアップ | Pexels License（SHOX ART） | https://www.pexels.com/photo/close-up-of-polish-zloty-banknotes-in-focus-37950555/ |
 | m_5d0de8b1.jpeg（背景） | 歴史ある銀行建築（京都） | Pexels License（Vinny Anugraha） | https://www.pexels.com/photo/historic-european-style-building-in-urban-japan-32091319/ |
+| m_5f2ff041.jpeg（背景） | 駅構内のエスカレーター | Pexels License（Lars H Knudsen） | https://www.pexels.com/photo/escalators-inside-of-a-building-7172007/ |
+| m_467f8dad.jpeg（背景） | モールの吹き抜けとエスカレーター | Pexels License（dwi endah kusumawati） | https://www.pexels.com/photo/contemporary-shopping-mall-interior-with-escalators-35551656/ |
+| m_c2b9575b.jpeg（背景） | 夕暮れの百貨店外観 | Pexels License（Jimmy Liao） | https://www.pexels.com/photo/brown-and-black-concrete-building-7791038/ |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。

@@ -1,0 +1,285 @@
+# 9本目（掛け合い・漫才モード初実験: ずんだもん=ボケ/つむぎ=ツッコミ）。投稿前に必ず目視レビューすること。
+# 事実確認済み: 片側空けに公式ルールなし（業界は2列・歩行禁止を推奨）・埼玉県条例2021年10月・
+# 名古屋市条例2023年10月（政令市初）・2列立ちの方が輸送効率が高い実験・車いす用ステップ付き
+# エスカレーター（係員がキー操作→ステップ3枚が水平化→半分速度・日立/三菱技報）・
+# 1914年3月8日大正博覧会で日本初試運転（エスカレーターの日）→同年三越日本橋に常設・
+# 「エスカレーター」は元オーチスの商標→「自動階段」→1950年に一般名称化（日本エレベーター協会）。
+# 手すり先行・万博放送起源説・事故統計・速度は「〜と言われている」でぼかす。
+meta:
+  title: "エスカレーターの片側空け、実は公式ルールじゃない【ずんだもん解説】"
+  slug: "escalator"
+  summary: "東京は左、大阪は右。あの片側空け、実はどこにも公式ルールがなく、むしろ作った側は「歩かず2列で」とお願いし続けています。動く階段の仕組み、条例まで生んだ片側空け論争、ステップが変形する車椅子モード、そして「エスカレーター」が商品名だった歴史まで、春日部つむぎとずんだもんが解説します。"
+  tags: ["エスカレーター", "片側空け", "仕組み", "雑学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "片側空けは"
+    bottom: "ルールじゃない"
+scenes:
+  - id: hook
+    title: ""
+    background: m_5f2ff041
+    bgm: shuffle_shuffle
+    short: true
+    cuts:
+      # ---- 茶番（東西の圧に敗北）----
+      - speaker: zundamon
+        emotion: happy
+        text: "エスカレーターとは、立ってるだけで階段に勝てる、人類の勝利の乗り物なのだ！"
+        video: assets/clips/esc_station.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "勝利の定義が雑すぎるよ。……で、その勝者がなんで今日はしょんぼりしてるの？"
+      - speaker: zundamon
+        emotion: sad
+        text: "東京で左側に立ったら、後ろからすごい圧を感じたのだ……。それで大阪に行って右側に立ったら、今度は逆から圧が来たのだ……。ボクはどこに立てばいいのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あー、出たね。エスカレーターの片側空け問題。でも実はそれ、どこにも公式ルールなんてないんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ないのだ！？じゃあ、あの背中に刺さる圧は、幻だったのだ！？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "むしろ作ったメーカーも鉄道会社も、「歩かないで、2列で立って」って何十年もお願いし続けてるの。"
+        telops:
+          - {text: "片側空けに公式ルールはない", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日は、毎日乗ってるのに誰も正解を知らない、エスカレーターを丸ごと解剖するよ。"
+        slide:
+          title: "今日のテーマ"
+          big: "エスカレーターの正解"
+      - speaker: zundamon
+        emotion: happy
+        text: "全国の、圧に負けてきた仲間のために聞くのだ！"
+  - id: chapter1
+    title: "動く階段は、どう動いているのか"
+    background: m_467f8dad
+    bgm: 10do
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まずは仕組みから。ずんだもん、エスカレーターの段々って、裏側でどうなってると思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "巨大なモグラが、1段ずつ手渡ししてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "地下に雇用が発生してるじゃない。正解はね、1段1段が独立した台車になっていて、レールの上をベルトコンベアみたいに、ぐるぐる一周してるの。"
+        video: assets/clips/esc_loop.mp4
+        video_span: 6
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "ステップはお客さんを降ろすと、床の下にもぐって、平らに畳まれたまま裏側を戻って、また[乗り口|のりぐち]から出てくる。ずっとこの一周を繰り返してるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "出口で消えたあの段、地下で回送されてたのだ！働き者の環状線なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そういうこと。それから、ステップのふちに描いてある黄色い線。あれは飾りじゃなくて、隣の段や壁とこすれる危ない境目だから、内側に立ってねという印だよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "速度は毎分30メートルくらいが主流と言われてる。大人の徒歩よりゆっくりなのは、お年寄りも子どもも、誰でも安全に乗り降りできる速さに合わせてるから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "遅いのが不満だったけど、あれは優しさの速度だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そしてとっておきがこれ。手すりはね、ステップよりほんの少しだけ速く動くように作られてることが多いと言われてるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "手すりのフライング……？行儀が悪いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "フライングじゃなくて安全装置。つかまってる体がわずかに前のめりになるから、後ろにひっくり返りにくくなるの。手すりは無言であなたを支えてるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクが勝利の乗り物と呼んでた間、向こうはずっとボクを守ってたのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに動かしてる本体は、[乗り口|のりぐち]の床下や上の機械室にいるモーターだよ。ステップを1段ずつ押すんじゃなくて、つながった輪っかを丸ごと回してるから、あんなに静かでなめらかなの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "縁の下どころか、床下の力持ちだったのだ！"
+  - id: chapter2
+    title: "片側空け、誰も得しない説"
+    background: m_5f2ff041
+    bgm: kinakusai
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ本題、片側空け論争だよ。そもそも、なんで東京は左に立って、大阪は右に立つと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "関ヶ原の戦いの、因縁なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スケールは好きだけど戦国から続いてないよ。有力なのは、大阪は1970年の万博の頃、駅が「お急ぎの方のために片側を空けて」と放送したのがきっかけという説。東京ははっきりした起源がわからないまま、自然に広がったと言われてるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、この良かれと思って続いてきた習慣、実は困った事実がどんどん積み上がってるの。"
+        video: assets/clips/ronsou.mp4
+        video_span: 4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず輸送力。急ぐ人のために空けた片側は、実際にはほとんどガラガラ。全員が2列で立って詰めたほうが、同じ時間でたくさんの人を運べるという実験結果が出てるんだよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "みんなのために空けたのに、みんなが遅くなってたのだ……。切なすぎる助け合いなのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "次に安全。エスカレーターの事故には、歩いたり駆け上がったりが絡むものが多いと言われてる。ぶつかられて転べば、後ろの人まで巻き込むからね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "おまけに、片側にばかり体重がかかり続けるのは、機械にとってもうれしくないと言われてるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "遅くなる、危ない、機械も傷む。いいことが1個もないのだ！？なんでみんな続けてるのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「空けないと申し訳ない」という空気だけで続いてるの。だから埼玉県は2021年に、名古屋市は2023年に、「エスカレーターでは立ち止まりましょう」という条例まで作ったんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "条例！？お願いが、法律級になったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "罰則のない、お願いの条例だけどね。片手に荷物や子どもがいて、決まった側の手すりしか持てない人だっている。真ん中に堂々と立っていい。それがいま推奨されてる正解だよ。"
+        telops:
+          - {text: "「歩かず2列」が公式のお願い", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+  - id: chapter3
+    title: "ステップが変形する、車椅子モード"
+    background: m_467f8dad
+    bgm: hirusagari
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも先生、エスカレーターって、結局は立てる人専用の乗り物なのだ？車椅子の人は、エレベーターしか選べないのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いい質問だね。実は一部のエスカレーターには、車椅子モードという隠し機能が仕込まれてるの。"
+        video: assets/clips/wheelchair_step.mp4
+        video_span: 5
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "駅の係員さんが専用の鍵で切り替えると、ステップが2枚3枚と連なって、フラットな台に変身する。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "台の端からはストッパーがせり上がって、車椅子が転がり落ちないようにがっちり支える。さらに速度をおよそ半分に落として、ゆっくり慎重に運ぶの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "あの段々に、変形機能が仕込まれてたのだ！？ロボットだったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "変形中と運転中は、一般のお客さんの乗車を一度止めるの。だから駅で見かけたら、急かさずに少しだけ待ってあげてね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "待つのだ！むしろ変形シーンが見られて得した気分なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最近はより安全なエレベーターへの案内が基本になってるけど、エレベーターが混んでいたり点検中だったりするとき、この仕掛けが駅のバリアフリーを支えてきたんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "じゃあベビーカーはどうなのだ？そのまま乗せてる人、たまに見かけるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれは実は危険な使い方で、メーカーも鉄道会社もやめてってお願いしてるの。ステップの奥行きに車輪が収まりきらないし、バランスを崩すと、重さごと後ろの人まで巻き込むから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ベビーカーはエレベーター一択なのだ。急がば回れなのだ。"
+  - id: history
+    title: "「エスカレーター」は商品名だった"
+    background: m_c2b9575b
+    bgm: 223am
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "ところでこの動く階段、日本に初めて来たのはいつだと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "昭和……と見せかけて、あえての縄文時代なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あえての幅が広すぎる。正解は1914年、大正3年だよ。東京で開かれた大正博覧会で、3月8日に日本初のエスカレーターが動いたと言われてるの。だから3月8日は、エスカレーターの日。"
+        video: assets/clips/era_1914.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じ年の秋には、日本橋の三越百貨店に、日本初の常設エスカレーターが登場する。乗り方を教える案内係までいた、憧れの最新設備だったんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "動く階段に乗るために、デパートへ行く時代があったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そしてここからが面白いところ。実は「エスカレーター」という言葉、もともとはアメリカのオーチス社の商標、つまり一企業の商品名だったの。"
+        video: assets/clips/era_trademark.mp4
+        video_span: 2
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "だからほかの会社は名乗れなくて、日本では長いこと「自動階段」なんて呼ばれてた。1950年ごろに商標が切れて、ようやく誰でも使える言葉になったと言われてるよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ホッチキスやセロテープの仲間だったのだ！エスカレーターは名前まで出世してたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "100年ちょっと前の憧れの機械は、いまや日本中の駅やお店で、当たり前の顔をして毎日人を運び続けてる。そう思うと、ちょっと見る目が変わるでしょ。"
+  - id: chapter4
+    title: "明日からの正しい乗り方"
+    background: m_5f2ff041
+    bgm: jitaku_nite
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に実用編。安全な乗り方はシンプルだよ。黄色い線の内側に立つ、手すりにつかまる、歩かない。この3つだけ。"
+        video: assets/clips/esc_yellow.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "それともうひとつ、緊急停止ボタンの場所を覚えておいて。乗り口と降り口の近くについてることが多いから、転倒や巻き込まれを見たら、ためらわず押して駅員さんを呼んでね。"
+        slide:
+          title: "エスカレーターの正解"
+          bullets:
+            - "黄色い線の内側に、2列で立つ"
+            - "手すりにつかまって歩かない"
+            - "事故を見たら緊急停止ボタン"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ボタン、勝手に押したら怒られない…のだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "人を守るためのボタンだから、必要なときはためらわなくていいの。もちろん、いたずらは論外だからね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日からは真ん中に堂々と立って、手すりを持って、背中の圧には負けないのだ！"
+  - id: ending
+    title: ""
+    background: m_467f8dad
+    bgm: you_and_me
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日は毎日乗ってるのに誰も正解を知らなかった、エスカレーターの話でした。"
+        video: assets/clips/esc_people.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "片側空けの圧は、幻だったのだ。ボクはもう、真ん中で生きていくのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "急がない勇気が、結局いちばんみんなを早く運ぶ。エスカレーターが毎日教えてくれてる、ちょっといい話だね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは変形するエスカレーターを探す旅に出るのだ！"
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0
