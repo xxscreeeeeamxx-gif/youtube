@@ -54,7 +54,7 @@ scenes:
           big: "USBメモリの正体"
       - speaker: zundamon
         emotion: happy
-        text: "電池、QRコードに続く恩人シリーズなのだ！仕組みもドラマも気になるのだ！"
+        text: "仕組みも人間ドラマも、両方気になるのだ！じっくり聞くのだ！"
   - id: chapter1
     title: "電気なしで覚える仕組み"
     background: m_78652ef5
@@ -138,6 +138,53 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "ただし保証されてるわけじゃないからね。濡らしたら、完全に乾くまで絶対に挿さない。これは約束だよ。"
+  - id: compare
+    title: "HDDやSDカードと、何が違うのか"
+    background: m_d79ac684
+    bgm: natsuyasumi
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "ところで先生、記憶する装置って、ほかにもいろいろあるのだ？パソコンに入ってるハードディスクとか、名前は聞くけど、違いがさっぱりわからないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いい質問だね。記憶装置は「覚え方」で大きく分かれるの。代表選手を並べて比べてみよう。"
+        video: assets/clips/compare_media.mp4
+        video_span: 8
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "まずはハードディスク、略してHDD。中では円盤が高速で回転していて、針みたいなヘッドがレコードプレーヤーのように動いて、データを読み書きしてるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "覚え方は磁石。円盤の表面の磁石の向きで0と1を記録するから、これも電源なしで忘れない。大容量で値段も安い。でも動く部品だらけだから、衝撃に弱くて、速さもフラッシュに負けるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "高速回転する円盤に針……。落としたら一発アウトの予感しかしないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。だから持ち歩くノートパソコンは、落下に強いSSDが主流になったの。で、そのSSDの中身は……実はフラッシュメモリ。USBメモリの親玉みたいな存在だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "SSDも電子の檻だったのだ！？名前が違うだけで、中身は仲間だったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "SDカードも、スマホの保存領域も、SSDも、みんな同じ檻の仲間。それからDVDやブルーレイは、円盤の表面に刻まれた細かいデコボコを、レーザーの光で読み取ってる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に意外なのが、磁気テープ。骨董品と思いきや、安くて長持ちだから、企業や研究所では大事なデータの保管用として、いまも現役で使われてると言われてるよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "完全に適材適所なのだ！速くて頑丈なフラッシュ、たっぷり安いHDD、長期保存のテープなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そういうこと。その中で、小さくて、頑丈で、速い。毎日持ち歩く用途に一番向いていたのがフラッシュメモリだった。だから、ポケットの中を独占してるんだよ。"
+        slide:
+          title: "記憶装置の使い分け"
+          bullets:
+            - "速さと頑丈さ → フラッシュ"
+            - "容量と安さ → HDD"
+            - "長期保存 → 磁気テープ"
   - id: history
     title: "報われなかった発明者"
     background: m_78652ef5
@@ -151,7 +198,7 @@ scenes:
         video_full: true
       - speaker: zundamon
         emotion: surprised
-        text: "また日本人なのだ！電池、QRコード、そして記憶まで、日本生まれだったのだ！？"
+        text: "日本人なのだ！ボクたちの思い出を守る技術、日本生まれだったのだ！？"
       - speaker: tsumugi
         emotion: normal
         text: "舛岡さんは、電源を切ると忘れてしまうメモリの弱点をなくそうと、電子を閉じ込めるこの方式を考え出して、1980年に特許を出願したの。"
@@ -211,7 +258,7 @@ scenes:
         text: "ちなみに舛岡さんはその後も次の世代の半導体を研究し続けていて、ノーベル賞の候補に名前が挙がると言われることもあるんだよ。"
       - speaker: zundamon
         emotion: happy
-        text: "ボクの推し写真の恩人、ここにもいたのだ。ありがとうなのだ、舛岡さんなのだ。"
+        text: "ボクの推し写真の恩人だったのだ。ありがとうなのだ、舛岡さんなのだ。"
   - id: chapter3
     title: "電子の檻との正しい付き合い方"
     background: m_af6ebbff

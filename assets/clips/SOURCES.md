@@ -41,6 +41,7 @@
 | print_press.mp4 | 印刷機 | Everett Bumstead | https://www.pexels.com/video/industrial-printing-press-operating-in-slow-motion-29906414/ |
 | hacker.mp4 | 暗い部屋のノートPC | Nothing Ahead | https://www.pexels.com/video/hacker-in-dark-room-using-laptop-with-code-36036810/ |
 | usb_alive.mp4 / flash_cell.mp4 / era_1980・1987・2006.mp4 | flash-memory用アニメ5本（自作。`scripts/gen_flash_extras.py`） | — | — |
+| compare_media.mp4 | 記憶媒体の比較アニメ（HDD/SSD/SD/DVD/テープ。自作。`scripts/gen_flash_compare.py`） | — | — |
 | laundry.mp4 | 回転する洗濯機ドラム | Ambient_Nature_ Atmosphere | https://www.pexels.com/video/washing-machine-spinning-4119968/ |
 | usb_plug.mp4 | ノートPCにUSBメモリを挿す | www.kaboompics.com | https://www.pexels.com/video/person-cannot-insert-a-flash-drive-on-a-laptop-5970706/ |
 | sd_camera.mp4 | カメラにSDカードを入れる | Thiago Zanutim Lucas | https://www.pexels.com/video/a-person-inserting-a-memory-card-in-a-camera-10415571/ |
