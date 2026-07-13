@@ -1,0 +1,289 @@
+# 4本目（掛け合い）。投稿前に必ず目視レビューすること。
+# 事実確認済み: 舛岡富士雄氏・1980年NOR特許・1984年IEDM発表・1987年NAND・
+# 1994年退社→東北大教授・2004年提訴→2006年和解8700万円（日経/ITmedia/東芝プレス）。
+# 報奨の少なさ・インテル先行などは「〜と言われている」でぼかす。
+meta:
+  title: "USBメモリはなぜ電源を切っても忘れないのか【ずんだもん解説】"
+  slug: "flash-memory"
+  summary: "洗濯機で洗ってしまったUSBメモリが、なぜ無事だったのか。電子を絶縁体の檻に閉じ込めるフラッシュメモリの仕組みと、それを発明したのに報われなかった日本人技術者・舛岡富士雄さんの物語を、春日部つむぎとずんだもんが解説します。"
+  tags: ["USBメモリ", "フラッシュメモリ", "科学", "雑学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "電源ゼロで10年記憶"
+    bottom: "電子の檻"
+scenes:
+  - id: hook
+    title: ""
+    background: m_bc6ba5c6
+    bgm: shuffle_shuffle
+    short: true
+    cuts:
+      # ---- 茶番（USBを洗濯してしまう）----
+      - speaker: zundamon
+        emotion: sad
+        text: "やってしまったのだ……。推しの写真を全部入れたUSBメモリを、ズボンのポケットに入れたまま洗濯したのだ……。"
+        video: assets/clips/laundry.mp4
+        video_span: 2
+        video_full: true
+        video_speed: 0.5
+      - speaker: zundamon
+        emotion: sad
+        text: "ぐるぐる回って、すすがれて、脱水までフルコースなのだ。ボクの思い出は、水の底に沈んだのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "落ち着いて。しっかり乾かしてから挿してみて。ああいうのは、意外と平気なことが多いから。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……読めたのだ！？写真も全部無事なのだ！？あんなに水に沈んだのに、なんで生きてるのだ！？"
+        video: assets/clips/usb_alive.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: thinking
+        text: "というかそもそも、USBメモリって電気もつないでないのに、なんで何ヶ月も覚えていられるのだ？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "いい質問だね。実はUSBメモリの中では、電子が絶縁体の檻に閉じ込められていて、電気がなくても逃げられないようになってるの。"
+        telops:
+          - {text: "電子を檻に閉じ込める", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "そしてこの仕組みを発明したのは日本人で、世界を変えたのに報われなかった人の物語でもあるんだよ。今日はその両方を解説するね。"
+        slide:
+          title: "今日のテーマ"
+          big: "USBメモリの正体"
+      - speaker: zundamon
+        emotion: happy
+        text: "電池、QRコードに続く恩人シリーズなのだ！仕組みもドラマも気になるのだ！"
+  - id: chapter1
+    title: "電気なしで覚える仕組み"
+    background: m_78652ef5
+    bgm: 10do
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まずは仕組みから。ずんだもん、コンピュータが何かを覚えるって、どんな様子を想像する？"
+      - speaker: zundamon
+        emotion: normal
+        text: "電気がピカピカ流れてる何かが、休まず頑張って覚えてるイメージなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実は普通の作業用メモリはそれに近くて、電気を流し続けないと忘れちゃうの。だから電源を落とすと、保存していない作業データは消えるでしょ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもUSBメモリは違うよ。中には小さな部屋がびっしり並んでいて、その一つひとつが電子の檻になってるの。図で見てみよう。"
+        video: assets/clips/flash_cell.mp4
+        video_span: 7
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "檻の周りは、電気をまったく通さない絶縁体の壁で囲まれてる。この壁があるから、一度入った電子は電源を切っても何年も逃げ出せないんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "電子を閉じ込めたままにできるから、電気がなくても覚えていられるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "書き込むときは、高い電圧をかけて電子を壁越しに檻へ押し込むの。トンネル効果といって、電子はすごく薄い壁なら、すり抜けることができるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "壁をすり抜けるのだ！？物理法則が仕事をサボってるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それが電子の世界の正しい物理法則なんだよ。そして檻に電子がいるかいないかを0と1として読み取れば、それがそのままデータになるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "消すときは、逆向きの電圧で檻の電子を一斉に引き抜く。この一括消去が一瞬で、まるでカメラのフラッシュみたいだったから。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "だから、フラッシュメモリなのだ！名前まで回収されたのだ！"
+        video: assets/clips/camera_flash.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう、名前の由来はカメラのフラッシュだと言われてるよ。そしてUSBメモリもSDカードも、スマホの保存領域も、中身は全部このフラッシュメモリなの。"
+  - id: chapter2
+    title: "ポケットの中の電子の檻"
+    background: m_d79ac684
+    bgm: hirusagari
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "スマホで撮った写真も、ゲームのセーブデータも、全部この電子の檻に入ってるんだよ。"
+        video: assets/clips/phone_photos.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "カメラのSDカードも同じ。数え切れない数の檻を開け閉めして、あなたの思い出は保存されてるの。"
+        video: assets/clips/sd_camera.mp4
+        video_full: true
+        video_speed: 0.8
+      - speaker: zundamon
+        emotion: thinking
+        text: "ボクの推し写真は、小さな檻の中で電子として生きてたのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも昔のゲームカセットのセーブデータは、中の電池が切れると消えたと聞いたことがあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いいところに気づいたね。昔のカセットは中に小さな電池が入っていて、その電気で必死にデータを支えてたの。だから電池が切れるとセーブも消えた。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "フラッシュメモリは、その電池すら要らない。ここが革命だったんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それとフラッシュメモリには、動く部品がひとつもないという強みもあるの。だから落としても平気だし、水に濡れても、完全に乾かせば動くことが多いんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクの洗濯USBが生き延びた理由、ここで回収されたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ただし保証されてるわけじゃないからね。濡らしたら、完全に乾くまで絶対に挿さない。これは約束だよ。"
+  - id: history
+    title: "報われなかった発明者"
+    background: m_78652ef5
+    bgm: 223am
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ、この電子の檻を誰が作ったのか。時は1980年、日本の東芝にいた技術者、[舛岡富士雄|ますおかふじお]さんだよ。"
+        video: assets/clips/era_1980.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "また日本人なのだ！電池、QRコード、そして記憶まで、日本生まれだったのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "舛岡さんは、電源を切ると忘れてしまうメモリの弱点をなくそうと、電子を閉じ込めるこの方式を考え出して、1980年に特許を出願したの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時のコンピュータの記憶装置は、磁気テープやフロッピーディスクみたいに、動く部品だらけで大きくて壊れやすいものばかりだったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "部品が動かないで覚えられる装置は、夢の技術だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1984年に国際学会で発表すると、世界に衝撃が走った。ところが、だよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この発明にいち早く本気を出したのは、日本ではなくアメリカの半導体メーカーだったと言われてるの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "発明した側が、置いていかれたのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それでも舛岡さんは諦めずに改良を続けて、1987年、もっと安く大容量にできるNAND型を発表する。今のUSBメモリやスマホに入っているのは、ほぼこの子孫だよ。"
+        video: assets/clips/era_1987.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "諦めなかったのだ！これはもう、大出世間違いなしなのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……それがね。発明に対する会社からの報奨は、当時の社内規定でごくわずかだったと言われてるの。しかも後に研究の一線から外されて、舛岡さんは1994年に会社を去ることになる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "世界を変えた人への扱いじゃないのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "大学の教授になった舛岡さんは、2004年、発明の正当な対価を求めて古巣を訴えた。そして2006年、和解が成立するの。"
+        video: assets/clips/era_2006.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "和解の金額は、8700万円。フラッシュメモリが生み出した利益の大きさを考えると、いろんな受け止め方がある決着だった。"
+        stat: {value: 8700, unit: "万円", label: "2006年の和解金額"}
+      - speaker: zundamon
+        emotion: thinking
+        text: "発明の値段って、難しいのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもこの裁判やほかの発明者たちの声がきっかけになって、日本の会社は発明者への報い方を見直していくの。舛岡さんの戦いは、あとに続く技術者たちの扱いを変えたんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして今、フラッシュメモリは世界中のポケットの中にある。あなたのスマホの思い出も、舛岡さんの電子の檻が守ってるんだよ。"
+        telops:
+          - {text: "発明は世界中のポケットの中に", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに舛岡さんはその後も次の世代の半導体を研究し続けていて、ノーベル賞の候補に名前が挙がると言われることもあるんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクの推し写真の恩人、ここにもいたのだ。ありがとうなのだ、舛岡さんなのだ。"
+  - id: chapter3
+    title: "電子の檻との正しい付き合い方"
+    background: m_af6ebbff
+    bgm: kinakusai
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に、フラッシュメモリと付き合う上での注意点だよ。実はあの檻、使うたびに少しずつ壊れていくの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え、消耗品だったのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "書き込みと消去のたびに電子が壁を無理やり通り抜けるから、壁が少しずつ傷んでいくの。だから書き換えられる回数には、上限があるんだよ。"
+        slide:
+          title: "電子の檻の弱点"
+          bullets:
+            - "書き換えるたびに壁が傷む"
+            - "書き換え回数には上限がある"
+            - "古くなると電子が漏れ出す"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも壁が傷んでくると、閉じ込めたはずの電子が少しずつ漏れていく。何年も放置したデータは、いつの間にか読めなくなることがあると言われてるの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "押し入れのUSBメモリに入れた思い出、永遠じゃなかったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから大事なデータは、USBメモリ1本に任せないこと。もう1箇所、別の場所にも必ずコピーしておく。これが鉄則だよ。"
+        video: assets/clips/server_room.mp4
+        video_full: true
+        telops:
+          - {text: "大事なデータは2箇所に", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "それと、書き込み中にいきなり引き抜くのもだめ。檻の整理をしている最中に扉を閉められて、中身がまるごと読めなくなることがあるからね。"
+        slide:
+          title: "思い出を守る3か条"
+          bullets:
+            - "大事なデータは2箇所に保存"
+            - "書き込み中に引き抜かない"
+            - "濡らしたら完全に乾くまで待つ"
+      - speaker: zundamon
+        emotion: normal
+        text: "取り外しのボタン、これからはちゃんと押すのだ……。ところで、スマホの中の檻も同じように傷むのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じだよ。だからスマホの保存領域にも寿命の考え方はあるけど、普通の使い方なら本体の買い替えのほうが先に来るから、そこは心配しすぎなくて大丈夫。"
+  - id: ending
+    title: ""
+    background: m_bc6ba5c6
+    bgm: you_and_me
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日は電源なしで覚える仕組みと、それを作った人の話をしてきたよ。次にUSBメモリを挿すときは、中の小さな檻を思い出してみてね。"
+        video: assets/clips/usb_plug.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "電気の消えた真っ暗な中で、電子たちがじっと思い出を守ってると思うと、ちょっと感動するのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "報われなくても腐らずに改良を続けた発明が、いま世界中の思い出を守ってる。かっこいい話だと思わない？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクも今夜、推し写真をもう1箇所にコピーするのだ！"
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0

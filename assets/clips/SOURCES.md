@@ -40,6 +40,13 @@
 | menu_qr.mp4 | メニューを見る客 | Tima Miroshnichenko | https://www.pexels.com/video/women-looking-at-the-menu-6327104/ |
 | print_press.mp4 | 印刷機 | Everett Bumstead | https://www.pexels.com/video/industrial-printing-press-operating-in-slow-motion-29906414/ |
 | hacker.mp4 | 暗い部屋のノートPC | Nothing Ahead | https://www.pexels.com/video/hacker-in-dark-room-using-laptop-with-code-36036810/ |
+| usb_alive.mp4 / flash_cell.mp4 / era_1980・1987・2006.mp4 | flash-memory用アニメ5本（自作。`scripts/gen_flash_extras.py`） | — | — |
+| laundry.mp4 | 回転する洗濯機ドラム | Ambient_Nature_ Atmosphere | https://www.pexels.com/video/washing-machine-spinning-4119968/ |
+| usb_plug.mp4 | ノートPCにUSBメモリを挿す | www.kaboompics.com | https://www.pexels.com/video/person-cannot-insert-a-flash-drive-on-a-laptop-5970706/ |
+| sd_camera.mp4 | カメラにSDカードを入れる | Thiago Zanutim Lucas | https://www.pexels.com/video/a-person-inserting-a-memory-card-in-a-camera-10415571/ |
+| server_room.mp4 | ドライブベイの操作 | Media Hopper Studio | https://www.pexels.com/video/operating-dual-hard-drive-bays-in-close-up-38496190/ |
+| camera_flash.mp4 | 撮影するカメラマン | Yusuf Çelik | https://www.pexels.com/video/photographer-taking-photo-12187197/ |
+| phone_photos.mp4 | スマホの写真をスクロール | RDNE Stock project | https://www.pexels.com/video/close-up-on-man-scrolling-pictures-on-phone-10374917/ |
 
 ## 画像（assets/images/）
 
