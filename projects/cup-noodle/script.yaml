@@ -1,0 +1,277 @@
+# 5本目（掛け合い）。投稿前に必ず目視レビューすること。
+# 事実確認済み: 安藤百福氏・1958年8月チキンラーメン発売（48歳）・妻の天ぷらから
+# 瞬間油熱乾燥法・1966年渡米で紙コップ→1971年カップヌードル・2005年宇宙食（91歳・日清公式/Wikipedia）。
+# 睡眠4時間・35円が高いと言われた・雪の山荘事件の中継・年間1000億食は「〜と言われている」でぼかす。
+meta:
+  title: "カップ麺の3分、何が起きているのか【ずんだもん解説】"
+  slug: "cup-noodle"
+  summary: "3分待てずに食べたカップ麺はなぜバリバリなのか。お湯だけで麺が戻る瞬間油熱乾燥法の仕組みと、事業に失敗した48歳が裏庭の小屋から世界を変えた安藤百福さんの物語を、春日部つむぎとずんだもんが解説します。"
+  tags: ["カップ麺", "カップヌードル", "科学", "雑学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "3分の科学"
+    bottom: "麺の穴"
+scenes:
+  - id: hook
+    title: ""
+    background: m_e4ad7908
+    bgm: shuffle_shuffle
+    short: true
+    cuts:
+      # ---- 茶番（3分待てない）----
+      - speaker: zundamon
+        emotion: happy
+        text: "夜食の時間なのだ！カップ麺にお湯を注いだのだ！待ち時間は3分……のはずなのだ。"
+        video: assets/clips/cup_timer.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: angry
+        text: "でも、腹ぺこのボクに3分は長すぎるのだ！30秒で開けてしまうのだ！いただきますなのだ！"
+      - speaker: zundamon
+        emotion: sad
+        text: "……バリッバリなのだ。芯が硬くて、おせんべいをすすってるみたいなのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから言わんこっちゃない。はい、こっちはちゃんと3分待ったほう。食べ比べてみて。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ふっくらもちもちなのだ！同じ麺とは思えないのだ！あの3分の間に、カップの中で何が起きてるのだ！？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "あの3分はね、麺に空いた無数の小さな穴に、お湯が染み込んでいくための時間なんだよ。"
+        telops:
+          - {text: "麺には無数の穴がある", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "そしてその穴を発明したのは、事業に失敗して財産を失った48歳の日本人なの。今日は、世界を変えた夜食の話だよ。"
+        slide:
+          title: "今日のテーマ"
+          big: "カップ麺の3分の正体"
+      - speaker: zundamon
+        emotion: happy
+        text: "恩人シリーズ第4弾なのだ！お腹を空かせて聞くのだ！"
+  - id: chapter1
+    title: "お湯だけで麺が戻る仕組み"
+    background: m_85cda068
+    bgm: 10do
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず、麺がお湯で戻る仕組みから。ずんだもん、カップ麺の麺と普通の生麺、いちばんの違いは何だと思う？"
+      - speaker: zundamon
+        emotion: normal
+        text: "カップの形に合わせて、丸く固まってることなのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それも正解。でも本当の違いは麺の中身だよ。カップ麺の麺は油で揚げてあって、水分の代わりに無数の穴が空いてるの。図で見てみよう。"
+        video: assets/clips/noodle_pore.mp4
+        video_span: 6
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "生の麺を高温の油に入れると、麺の中の水分が一気に沸騰して、蒸気になって外へ弾け飛んでいくの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水分が抜けた跡には、目に見えないほど小さな穴がびっしり残る。これで麺は長持ちする乾物になるの。瞬間油熱乾燥法という技術だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "麺の中身が、スポンジみたいになってるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。だからお湯を注ぐと、その無数の穴がお湯をぐんぐん吸い込んで、麺が茹でたてみたいにふっくら戻るんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "3分という時間は、お湯が麺の表面から芯まで届くのにかかる時間なの。メーカーが麺の太さごとに実測して決めてるんだよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ボクが我慢できなかった3分は、科学の3分だったのだ……。30秒のバリバリは、お湯が芯まで届いてなかっただけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに油で揚げずに乾かすノンフライ麺もあって、あっちは穴の育て方が違うから、待ち時間が長めのことが多いんだよ。"
+  - id: chapter2
+    title: "カップの中の設計図"
+    background: m_462f6daa
+    bgm: hirusagari
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "次はカップ側の秘密ね。ずんだもん、カップ麺の麺が、カップの中で宙に浮いてるのは知ってる？"
+        video: assets/clips/cup_structure.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "浮いてるのだ！？麺は底にどっしり沈んでるものだと思ってたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "麺のかたまりはカップの真ん中あたりで壁に挟まれて固定されてるの。中間保持といって、これがまたすごい発明なんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "下に空間があるからお湯が麺の全体に回るし、輸送中に落としても麺が割れにくい。しかも麺自体が、カップの強度を支える柱にもなってるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "カップはただの容器じゃなくて、麺ごと設計された建築だったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "具が麺の上に乗ってるのも、お湯を注いだときに具がふわっと戻って、開けた瞬間の見た目がきれいになる計算だよ。カップ麺は、小さな設計の塊なの。"
+  - id: history
+    title: "48歳、小屋からの再出発"
+    background: m_b0d3af31
+    bgm: 223am
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ、この発明を生んだ人の話をしよう。[安藤百福|あんどうももふく]さん。カップ麺どころか、インスタントラーメンそのものの生みの親だよ。"
+        video: assets/clips/era_1958.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "チキンラーメンの人なのだ！パッケージで見たことあるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "戦後の焼け跡で、1杯のラーメンのために寒空の下で長い行列を作る人たちを見て、百福さんは食の大切さを心に刻んだと言われてるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その後、関わっていた組織の破綻で財産のほとんどを失ってしまう。このとき40代後半。ほぼ振り出しからのやり直しだった。"
+        video: assets/clips/street_stall.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: sad
+        text: "40代後半で全部失うのは、つらすぎるのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこから百福さんは、自宅の裏庭に小さな小屋を建てて、たった一人でラーメンの研究を始めるの。睡眠は1日4時間ほどだったと言われてるよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "会社でも研究所でもなくて、裏庭の小屋で世界が変わるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "目標は、おいしい、保存がきく、手間いらず、安い、安全の5つ。でも最大の壁が、麺をどう保存するかだった。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "転機は、台所にあったの。奥さんが揚げる天ぷらを見て、ひらめいた。油で揚げれば水分が飛んで、麺を保存できるんじゃないかって。"
+        video: assets/clips/tempura.mp4
+        video_span: 2
+        video_full: true
+        video_speed: 0.75
+      - speaker: zundamon
+        emotion: surprised
+        text: "台所の天ぷらが、世界を変えたのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "囲碁の碁盤も、カメラのフラッシュも、そして天ぷらも。大発明のヒントは、いつも日常の中に転がってるんだね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして1958年、チキンラーメンが発売される。百福さん、48歳の再出発だったんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時は1袋35円。うどん1玉が数円の時代だから、高すぎると言われたの。でもお湯だけで食べられる魔法の麺は、あっという間に大ヒットする。"
+      - speaker: zundamon
+        emotion: happy
+        text: "小屋からの大逆転なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも百福さんは止まらない。1966年、海外への売り込みで訪れたアメリカで、衝撃の光景を見ることになるの。"
+        video: assets/clips/era_1971.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "現地の担当者が、麺を割って紙コップに入れて、お湯を注いでフォークで食べ始めた。どんぶりも箸もない国だったんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "食べる道具が違えば、食べ方も変わるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この光景から、カップがどんぶりになればいいとひらめいて、1971年、カップヌードルが生まれる。さっきの麺の宙づり構造も、このときの発明だよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "発売の翌年、雪山の事件の生中継で、寒空の下の機動隊員たちがすする姿が全国に流れて、一気に広まったと言われてるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして2005年、百福さんは91歳で宇宙食のラーメンまで作ってしまう。"
+        video: assets/clips/era_2005.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "91歳で宇宙なのだ！？97歳でノーベル賞のグッドイナフさんに並ぶ、生涯現役なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スペースシャトルの中で、日本人飛行士が宇宙で麺をすすったんだよ。"
+        video: assets/clips/astronaut.mp4
+        video_full: true
+        video_speed: 0.9
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまや世界で食べられるインスタントラーメンは、年間1000億食を超えると言われてる。その全部が、48歳の裏庭の小屋から始まったの。"
+        stat: {value: 1000, unit: "億食", label: "世界の年間消費（推計）"}
+        telops:
+          - {text: "始まりは裏庭の小屋", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "夜食のありがたみが変わってしまったのだ。ありがとうなのだ、百福さんなのだ。"
+  - id: chapter3
+    title: "3分をおいしく使う"
+    background: m_85cda068
+    bgm: jitaku_nite
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に、カップ麺をおいしく食べる科学だよ。お湯は沸騰したての熱いものを、内側の線までしっかり注ぐこと。ぬるいと3分ではお湯が芯まで届かないの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "フタもちゃんと閉じてね。カップの中を蒸気で満たして温度を保つところまで、設計のうちだから。"
+        slide:
+          title: "おいしい3分の科学"
+          bullets:
+            - "お湯は沸騰したてを線まで"
+            - "フタを閉じて蒸気を逃さない"
+            - "3分は芯まで届く実測時間"
+      - speaker: zundamon
+        emotion: sad
+        text: "30秒で開けるなど、設計への冒涜だったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それとカップ麺は、災害への備えとしても優秀だよ。普段から少し多めに買っておいて、食べたら買い足すローリングストックがおすすめ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ただし賞味期限は半年ほどと意外と短めだから、備蓄は年に2回くらい見直してね。"
+        slide:
+          title: "備えとしてのカップ麺"
+          bullets:
+            - "多めに買って食べたら足す"
+            - "賞味期限は半年ほど"
+            - "備蓄は年2回見直す"
+      - speaker: zundamon
+        emotion: happy
+        text: "おいしく食べられて、いざという時の備えにもなる。カップ麺は頼れるやつなのだ。"
+  - id: ending
+    title: ""
+    background: m_85cda068
+    bgm: you_and_me
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日はお湯だけで戻る麺の仕組みと、48歳の小屋から世界を変えた人の話でした。次の夜食の3分は、少しだけ豊かな時間になるはずだよ。"
+        video: assets/clips/noodle_eat.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "3分待つ間に、麺の穴と裏庭の小屋を思い出すのだ。もうバリバリのまま食べたりしないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何歳からでも、どんな場所からでも、世界は変えられる。百福さんの小屋が教えてくれることだね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは今から、正しい3分で夜食を作り直してくるのだ！"
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0

@@ -47,6 +47,13 @@
 | server_room.mp4 | ドライブベイの操作 | Media Hopper Studio | https://www.pexels.com/video/operating-dual-hard-drive-bays-in-close-up-38496190/ |
 | camera_flash.mp4 | 撮影するカメラマン | Yusuf Çelik | https://www.pexels.com/video/photographer-taking-photo-12187197/ |
 | phone_photos.mp4 | スマホの写真をスクロール | RDNE Stock project | https://www.pexels.com/video/close-up-on-man-scrolling-pictures-on-phone-10374917/ |
+| cup_timer.mp4 / noodle_pore.mp4 / cup_structure.mp4 / era_1958・1971・2005.mp4 | cup-noodle用アニメ6本（自作。`scripts/gen_noodle_extras.py`） | — | — |
+| noodle_pour.mp4 | インスタント麺の調理手元 | RAJU THAPA | https://www.pexels.com/video/quick-instant-noodles-preparation-in-kitchen-35000996/ |
+| noodle_eat.mp4 | 麺をすする男性 | MART PRODUCTION | https://www.pexels.com/video/man-eating-noodle-8107929/ |
+| tempura.mp4 | 沸騰する揚げ油 | Naresh Babu | https://www.pexels.com/video/boiling-oil-in-stainless-steel-pan-35789975/ |
+| street_stall.mp4 | 夜の屋台 | Göksu Taymaz | https://www.pexels.com/video/a-street-vendor-selling-food-at-night-27937620/ |
+| market_shelf.mp4 | スーパーの棚 | Dudubangbang Travel | https://www.pexels.com/video/shopping-aisle-perspective-on-supermarket-essentials-29376327/ |
+| astronaut.mp4 | 宇宙飛行士 | Video Kickstarter | https://www.pexels.com/video/an-astronaut-in-the-space-5299577/ |
 
 ## 画像（assets/images/）
 
