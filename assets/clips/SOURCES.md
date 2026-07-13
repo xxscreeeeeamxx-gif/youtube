@@ -69,6 +69,13 @@
 | temple.mp4 | ギリシャ・ローマ遺跡の柱 | Engin Akyurt | https://www.pexels.com/video/historical-greek-and-roman-ruins-17674905/ |
 | store_drinks.mp4 | コンビニで買い物する人 | K | https://www.pexels.com/video/man-buying-drinks-at-the-convenience-store-4473193/ |
 | walk_enter.mp4 | 建物に入る黒帽子の女性 | Gabe H | https://www.pexels.com/video/woman-looking-around-and-entering-building-13008916/ |
+| bill_tour.mp4 / eurion.mp4 / hologram.mp4 / bill_exchange.mp4 / era_1961.mp4 | banknote用アニメ5本（自作・お札は模式図。`scripts/gen_banknote_extras.py`） | — | — |
+| money_count.mp4 | 紙幣を数える手元 | Mikhail Nilov | https://www.pexels.com/video/person-counting-banknotes-7735914/ |
+| money_close.mp4 | 紙幣のクローズアップ | Lukasz Radziejewski | https://www.pexels.com/video/close-up-video-of-a-money-3977228/ |
+| printer_office.mp4 | オフィスの複合機 | LISTOS PARA RODAR | https://www.pexels.com/video/impresora-19897022/ |
+| magnifier.mp4 | ルーペで本を読む男性 | KoolShooters | https://www.pexels.com/video/man-reading-with-magnifying-glass-6980534/ |
+| wallet_count.mp4 | 財布から紙幣を出す手元 | Jakub Zerdzicki | https://www.pexels.com/video/managing-finances-counting-cash-from-wallet-34596756/ |
+| eye_magnify.mp4 | ルーペ越しの目 | ArtHouse Studio | https://www.pexels.com/video/an-eye-through-a-magnifying-glass-6269182/ |
 
 ## 画像（assets/images/）
 
@@ -81,5 +88,8 @@
 | m_1fac213b.jpeg（背景） | 夜のコンビニ外観 | Pexels License（HONG SON） | https://www.pexels.com/photo/gas-station-and-a-store-at-night-10556938/ |
 | m_7da37780.jpeg（背景） | 「APPROACH SLOWLY AUTO-DOOR」の自動ドア | Pexels License（Erik Mclean） | https://www.pexels.com/photo/entrance-of-service-center-with-glass-doors-5864149/ |
 | m_c7f8b8e3.jpg（背景） | パルテノン神殿 | CC BY 2.0（Steve Swayne）※概要欄にクレジット | https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg |
+| m_57dad7bc.jpeg（背景） | 夜の勉強机 | Pexels License（Bikram Bezbaruah） | https://www.pexels.com/photo/a-woman-with-eyeglasses-writing-on-white-paper-under-a-light-8921700/ |
+| m_1c7ace29.jpeg（背景） | 紙幣のクローズアップ | Pexels License（SHOX ART） | https://www.pexels.com/photo/close-up-of-polish-zloty-banknotes-in-focus-37950555/ |
+| m_5d0de8b1.jpeg（背景） | 歴史ある銀行建築（京都） | Pexels License（Vinny Anugraha） | https://www.pexels.com/photo/historic-european-style-building-in-urban-japan-32091319/ |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。

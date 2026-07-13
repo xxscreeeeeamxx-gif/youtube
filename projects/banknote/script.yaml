@@ -1,0 +1,255 @@
+# 8本目（掛け合い）。投稿前に必ず目視レビューすること。
+# 事実確認済み: ユーリオン=オムロンが1994年開発の技術が元（Wikipedia/特許）・お札の複写は
+# 通貨及証券模造取締法等で違法・2024年7月3日新紙幣（3Dホログラムは銀行券で世界初・財務省）
+# ・チ-37号事件（1961〜、偽千円343枚・22都道府県・未解決時効、新札切替で対抗）
+# ・損傷銀行券: 2/3以上全額・2/5以上半額・未満は失効（日銀）・原料ミツマタ/アバカ（国立印刷局）。
+# 寿命・偽札の少なさは「〜と言われている」でぼかす。アニメのお札は模式図（実物を再現しない）。
+meta:
+  title: "お札はなぜコピーできないのか【ずんだもん解説】"
+  slug: "banknote"
+  summary: "コピー機はお札を見た瞬間に印刷を拒否します。機械にだけ見える隠し模様ユーリオン、触ってわかる深凹版印刷、世界初の3Dホログラム、そして日本中を揺るがした偽札事件チ-37号。財布の中の世界最高クラスの技術を、春日部つむぎとずんだもんが解説します。"
+  tags: ["お札", "新紙幣", "偽造防止", "雑学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "コピー機は"
+    bottom: "お札を拒否する"
+scenes:
+  - id: hook
+    title: ""
+    background: m_57dad7bc
+    bgm: shuffle_shuffle
+    short: true
+    cuts:
+      # ---- 茶番（自由研究で暴走しかける）----
+      - speaker: zundamon
+        emotion: happy
+        text: "夏休みの自由研究で、お札のヒミツを調べてるのだ！ルーペでよーく見ると……ん？なんか小さい字が見えるのだ！"
+        video: assets/clips/magnifier.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "「ニホンギンコウ」って書いてある、超ちっちゃい文字を発見したのだ！お札、隠しごとだらけなのだ！"
+        video: assets/clips/money_close.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "こうなったら全部暴くのだ。そうだ！コンビニでコピーして、拡大してじっくり比べれば早いのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ストーップ！！それはダメ！お札のコピーは、たとえ遊びでも法律違反なの。本物そっくりに写した時点でアウトだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そ、そうだったのだ！？あぶなかったのだ……。でも先生、そもそもお札って、コピーできるのだ？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "実はできないの。いまのコピー機は、お札を見た瞬間に「拒否」する。お札には、機械にだけ見える仕掛けが隠されてるんだよ。"
+        telops:
+          - {text: "コピー機はお札を拒否する", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日は、世界最高クラスと言われる日本のお札の偽造防止技術を、まるごと解剖するよ。"
+        slide:
+          title: "今日のテーマ"
+          big: "コピーできない理由"
+      - speaker: zundamon
+        emotion: happy
+        text: "自由研究、安全なルートで続行なのだ！"
+  - id: chapter1
+    title: "触ってわかる、お札の仕掛け"
+    background: m_1c7ace29
+    bgm: 10do
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まずは手元のお札に詰まってる仕掛けから。ずんだもん、お札を触ると、ちょっとザラッとするの、知ってる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "わかるのだ！あのザラザラ、高級感があって好きなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれは[深凹版|しんおうはん]印刷といって、インキをわざと分厚く盛り上げる特別な印刷だよ。表面が平らなコピーでは、絶対に再現できない「立体の文字」なの。"
+        video: assets/clips/bill_tour.mp4
+        video_span: 7
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "このザラザラを使って、目の不自由な人が指で触って金額がわかるように、お札の種類ごとに違う場所へ識別マークも入れてあるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "次はおなじみ、すかし。光に透かすと肖像が浮かび上がるやつ。実はあれ、印刷じゃなくて、紙の厚みを場所ごとに変えて作る「紙そのもの」の技術なの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "紙の厚さで絵を描いてるのだ！？もう職人技なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも日本では、すかしの入った紙を勝手に作ること自体が、法律で禁止されてる。偽札を刷る前、紙を作った時点でもう違法という、先回りのガードだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "スタートラインに立つ前から犯罪なのだ！法律の先回りがえげつないのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ほかにも、傾けると数字が浮かぶ潜像模様、ピンクに光るパールインキ。そしてずんだもんが見つけたマイクロ文字も、コピーすると必ずつぶれる細かさで書かれた立派な防犯装置だよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ルーペ1本でこんなに見つかるのだ。お札は宝探しの島なのだ！"
+  - id: chapter2
+    title: "機械にだけ見える、隠し模様"
+    background: m_1c7ace29
+    bgm: hirusagari
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ本題だよ。なんでコピー機は、お札を拒否できるのか。ずんだもん、お札のあちこちに、小さな丸い模様がポツポツ散らばってるのは気づいた？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "言われてみれば、地味な丸があちこちにあるのだ。ただの模様じゃないのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれの正体は、ユーリオンと呼ばれる隠し模様。世界中のコピー機や画像ソフトが、「これはお札だ」と一瞬で見抜くための目印なの。"
+        video: assets/clips/eurion.mp4
+        video_span: 4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "コピー機は、読み取った画像の中からこの配置を探してる。見つけた瞬間、印刷を拒否したり、真っ黒に塗りつぶしたり、エラーで止まったりするの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "お札に「コピーするな」って書いてあるようなものなのだ！機械にだけ読める看板なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そしてこの仕組み、元になった技術を開発したのは、日本のオムロンと言われてるの。世界中のお札に、日本生まれの防犯装置が組み込まれてるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "自動改札の会社が、世界のお札まで守ってたのだ！オムロン、働きすぎなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "さらに2024年の新しいお札には、とどめの技術が載った。世界で初めて銀行券に採用された、3Dホログラムだよ。"
+        video: assets/clips/hologram.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "お札を傾けると、肖像が立体的にくるっと回って見える。印刷でも写真でも再現できない「動き」で、本物を証明するの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "もはや芸術なのだ。偽物を作るより、本物を作るほうが難しい世界なのだ！"
+  - id: history
+    title: "偽造犯との、終わらない競争"
+    background: m_5d0de8b1
+    bgm: 223am
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここまで技術が進化したのは、偽造犯とのイタチごっこの歴史があるからなの。中でも有名なのが、チ-37号事件だよ。"
+        video: assets/clips/era_1961.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: thinking
+        text: "チ、サンジュウナナゴウ……？暗号みたいな名前なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1961年、日本銀行の支店で1枚の偽千円札が見つかる。これが恐ろしく精巧で、プロでも見分けがつかないほどの出来だったと言われてるの。"
+        video: assets/clips/money_count.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "偽札はおよそ2年間で343枚、22の都道府県で見つかった。警察は大規模な捜査をしたけど、犯人はとうとう見つからないまま、時効を迎えてしまう。"
+      - speaker: zundamon
+        emotion: sad
+        text: "逃げ切られたのだ……。日本の警察が、振り切られたのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、ここからが本番だった。犯人を捕まえられないなら、偽造できないお札に変えればいい。国は千円札そのものを新しいデザインに切り替えて対抗したの。"
+        video: assets/clips/print_press.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ以来、日本のお札はおよそ20年ごとに全面リニューアルを重ねて、偽造技術を置き去りにし続けてる。2024年の新紙幣も、その最新ラウンドだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "犯人は捕まらなかったけど、勝負には勝ち続けてるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実際、日本で見つかる偽札の数は、世界的に見てもけた違いに少ないと言われてる。あの1枚のザラザラは、60年分の戦いの成果なんだよ。"
+        telops:
+          - {text: "ザラザラは60年の戦いの跡", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+  - id: chapter3
+    title: "破れたお札の運命"
+    background: m_1c7ace29
+    bgm: jitaku_nite
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に実用編。お札をうっかり破いちゃったこと、ある？実はお札は、残っている面積で運命が決まるの。"
+        video: assets/clips/bill_exchange.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "3分の2以上残っていれば、全額交換。5分の2以上なら、半額。それより小さいと、残念ながら0円。日本銀行の本支店や銀行の窓口で引き換えられるよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ちょっと足りないだけで半額になるのだ……。シビアな世界なのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから破れたお札は、切れ端も全部集めておくことが大事。面積が命だからね。焼けたり濡れたりしたお札も、あきらめる前に窓口に相談してみて。"
+        slide:
+          title: "破れたお札の3か条"
+          bullets:
+            - "切れ端は全部集める（面積が命）"
+            - "3分の2以上で全額・5分の2以上で半額"
+            - "銀行か日本銀行の窓口へ"
+      - speaker: zundamon
+        emotion: happy
+        text: "お札の切れ端は、宝の地図の切れ端なのだ！捨てちゃダメなのだ！"
+  - id: kobanashi
+    title: ""
+    background: m_57dad7bc
+    bgm: pastel_house
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "ところで先生、お札ってそもそも何の紙なのだ？コピー用紙とは手触りが全然違うのだ。"
+        video: assets/clips/wallet_count.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "いいところに気づいたね。お札の紙は、ミツマタやアバカっていう植物から作られる特別製だよ。だから水に強くて、あの独特のシャキッとした手触りになるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "洗濯機で回しちゃっても意外と無事なのは、そのおかげだったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あと、お札の寿命は意外と短い。よく使われる千円札は、1年から2年くらいで引退すると言われてるよ。傷んだお札は日本銀行に戻って、細かく裁断されて再利用されるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "お札にも一生があるのだ。今度からもう少し、丁寧に扱うのだ……。"
+  - id: ending
+    title: ""
+    background: m_57dad7bc
+    bgm: you_and_me
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日は財布の中に入ってる、世界最高クラスの技術の話でした。"
+        video: assets/clips/money_close.mp4
+        video_full: true
+        video_speed: 0.8
+      - speaker: zundamon
+        emotion: normal
+        text: "ルーペ1本でこれだけ遊べるのだ。自由研究は観察で進めるのだ。コピーはダメ、絶対なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "隠し文字に、回る肖像に、機械にだけ見える目印。お札は小さな技術の博物館だよ。眺めるだけなら、タダだからね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクはルーペで、マイクロ文字の続きを探してくるのだ！"
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0
