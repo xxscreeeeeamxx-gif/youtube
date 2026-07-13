@@ -54,11 +54,22 @@
 | street_stall.mp4 | 夜の屋台 | Göksu Taymaz | https://www.pexels.com/video/a-street-vendor-selling-food-at-night-27937620/ |
 | market_shelf.mp4 | スーパーの棚 | Dudubangbang Travel | https://www.pexels.com/video/shopping-aisle-perspective-on-supermarket-essentials-29376327/ |
 | astronaut.mp4 | 宇宙飛行士 | Video Kickstarter | https://www.pexels.com/video/an-astronaut-in-the-space-5299577/ |
+| gate_try.mp4 / gate_anatomy.mp4 / ic_tap.mp4 / era_1967・2001・2007.mp4 | ticket-gate用アニメ6本（自作。`scripts/gen_gate_extras.py`） | — | — |
+| gates_walk.mp4 | 地下鉄改札を通る人 | Earth Photart | https://www.pexels.com/video/modern-milan-metro-station-turnstiles-31540854/ |
+| gates_rush.mp4 | 夜の混雑した改札 | murat aksak | https://www.pexels.com/video/busy-night-at-subway-station-turnstiles-35722252/ |
+| card_tap.mp4 | カードリーダーへのタッチ | Julia Repnikova | https://www.pexels.com/video/person-taping-a-card-on-the-bus-7600407/ |
+| station_crowd.mp4 | 混雑する駅ホーム | Ayberk Mirza | https://www.pexels.com/video/busy-metro-station-with-passengers-waiting-29610852/ |
+| tokyo_metro.mp4 | 東京の駅と通過する電車 | yuki kiki | https://www.pexels.com/video/tokyo-train-station-with-passing-metro-38214997/ |
+| ticket_machine.mp4 | 券売機から切符を取る手元 | MART PRODUCTION | https://www.pexels.com/video/close-up-footage-of-a-person-getting-ticket-from-the-machine-7252265/ |
+| enter_metro.mp4 | 駅に入る人 | MART PRODUCTION | https://www.pexels.com/video/man-entering-a-metro-station-7251031/ |
 
 ## 画像（assets/images/）
 
 | ファイル | 内容 | ライセンス | 出典 |
 |---|---|---|---|
 | hara_qargo.jpg | 原昌宏氏とQRモザイク肖像アート | CC0（パブリックドメイン・撮影: qargo氏） | https://commons.wikimedia.org/wiki/File:Masahiro_Hara_honored_by_French_artist_qargo.jpg |
+| m_5b4f80b0.jpg（背景） | JR岐阜羽島駅の改札 | CC BY-SA 4.0（Ty70）※概要欄にクレジット | https://commons.wikimedia.org/wiki/File:JR_Central_Gifu-Hashima_Station_ticket_gate.jpg |
+| m_a3f763ba.jpg（背景） | 高岡駅の自動改札 | CC0（Aspere） | https://commons.wikimedia.org/wiki/File:Ticket_Gate_of_Takaoka_Station_260123_02.jpg |
+| m_d15e48dd.jpg（背景） | 浅草橋駅ホームと電車 | CC BY 4.0（Nesnad）※概要欄にクレジット | https://commons.wikimedia.org/wiki/File:Asakusabashi_station_platform_and_train_-_Oct_23_2020.jpg |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。

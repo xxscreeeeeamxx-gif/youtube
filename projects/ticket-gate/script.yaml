@@ -1,0 +1,279 @@
+# 6本目（掛け合い）。投稿前に必ず目視レビューすること。
+# 事実確認済み: 1967年3月 阪急北千里駅に世界初の自動改札機（立石電機=現オムロン＋大阪大学＋阪急・近鉄）
+# ・2007年IEEEマイルストーン認定・磁気切符は裏の酸化鉄に記録/機内で整列・反転/毎分約60人
+# ・Suica2001年登場・アンテナ13度傾斜（実験でエラー率最低）・IC処理約0.2秒・カードは電池なし（改札から給電）。
+# 腱鞘炎・秒速・テストパターン天文学的は「〜と言われている」でぼかす。
+meta:
+  title: "自動改札機は切符を裏返しで入れてもなぜ通れるのか【ずんだもん解説】"
+  slug: "ticket-gate"
+  summary: "切符を裏向き・逆さに入れても改札を通れる理由、ICカードが充電なしで動く仕組み、タッチ面が13度傾いている理由。そして1967年、世界初の自動改札機を大阪に生んだ人たちの物語を、春日部つむぎとずんだもんが解説します。"
+  tags: ["自動改札機", "Suica", "仕組み", "雑学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "裏返しでも"
+    bottom: "通れる理由"
+scenes:
+  - id: hook
+    title: ""
+    background: m_5b4f80b0
+    bgm: shuffle_shuffle
+    short: true
+    cuts:
+      # ---- 茶番（どの向きで入れても通れる説）----
+      - speaker: zundamon
+        emotion: happy
+        text: "今日は紙の切符で電車に乗るのだ！いつもはタッチだから、なんだか新鮮でワクワクするのだ！"
+        video: assets/clips/ticket_machine.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "ここでボクは気づいてしまったのだ。切符は、どの向きで入れても通れる説。まずは裏向きで入れてみるのだ！"
+        video: assets/clips/gate_try.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "通れたのだ！じゃあ次は逆さ！……通れたのだ！最後は裏向きの逆さ差し！……全部通れてしまったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実験お疲れさま。それ正解だよ。どの向きで入れても、あの箱の中で機械が一瞬で直してるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "中で直してる！？あの箱の中に、切符を裏返す小人さんでも住んでるのだ！？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "小人さんはいないけど、想像の3倍すごいメカが詰まってるよ。毎日くぐってるのに、誰も中身を見たことがない箱。今日はあれを解剖しよう。"
+        telops:
+          - {text: "箱の中で切符が裏返っている", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもこの機械、世界で初めて作ったのは日本なの。テーマはこちら。自動改札機の0.2秒だよ。"
+        slide:
+          title: "今日のテーマ"
+          big: "自動改札機の0.2秒"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎朝お世話になってるのに、何も知らなかったのだ！じっくり聞くのだ！"
+  - id: chapter1
+    title: "切符は箱の中で大冒険している"
+    background: m_a3f763ba
+    bgm: 10do
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まずは紙の切符から。ずんだもん、切符の裏が黒いのはなんでだと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "かっこいいからなのだ！黒は強いのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "残念、あの黒の正体は酸化鉄。ようするに磁石の粉だよ。切符の裏側は全体が、目に見えない磁気データの記録面になってるの。"
+        video: assets/clips/gate_anatomy.mp4
+        video_span: 6
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "どこの駅から乗ったか、いつの切符か、いくら払ったか。そういう情報が、あの小さな紙切れに磁気で書き込まれてる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして[投入口|とうにゅうぐち]に切符を入れた瞬間、切符はベルトとローラーにくわえられて、機械の中を猛スピードで駆け抜けるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "途中には向きをそろえる仕掛けがあって、裏向きの切符はベルトの速度差を使って、走りながらくるっと表に直される。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクの意地悪な入れ方は、全部ここで直されてたのだ！走りながら裏返るなんて、体操選手なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "向きが直ったら、磁気ヘッドが情報を読み取って、通った記録を書き込んで、パンチで穴を開けて、印字して出口へ。ここまで全部で1秒かからないと言われてるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この処理を続けることで、改札機1台が1分間にさばけるのは、およそ60人。1秒に1人のペースだよ。"
+        stat: {value: 60, unit: "人/分", label: "改札機1台の処理能力"}
+      - speaker: zundamon
+        emotion: happy
+        text: "あの箱の中は、紙のための超高速工場だったのだ！"
+  - id: chapter2
+    title: "タッチの0.2秒に起きていること"
+    background: m_d15e48dd
+    bgm: hirusagari
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "次はICカードの番だよ。ずんだもん、いつも使ってるカード、充電したことある？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "！？カードに充電口なんてないのだ！……あれ？でも電池もないのに、なんで動いてるのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いいところに気づいたね。実はICカードは、改札にかざした瞬間だけ、改札側から電気をもらって目を覚ましてるの。"
+        video: assets/clips/ic_tap.mp4
+        video_span: 5
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "改札のアンテナが出す電波を、カードの中にぐるぐる巻かれたコイルが受け取って、その場で発電する。電池ゼロのカードの頭脳が、電波だけで起動するんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "起きた頭脳は、残高の確認、運賃の計算、記録の書き込み、そしてゲートを開ける判断までを一気に済ませる。ここまで全部で、およそ0.2秒と言われてるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "まばたきしてる間に、発電から会計まで終わってるのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもあの読み取り部、よく見ると手前に少し傾いてるの。デザイナーがいろんな形で実験して、いちばん読み取りエラーが少なかった13度という角度に設計されてると言われてるよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "タッチのしやすさまで、実験で作り込まれてたのだ。ただの板だと思ってて、ごめんなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だからタッチのコツは、叩くんじゃなくて1秒くらい「置く」こと。カードが目を覚まして、仕事を終えるまでの時間をあげてね。"
+        video: assets/clips/card_tap.mp4
+        video_full: true
+        video_speed: 0.7
+  - id: history
+    title: "1967年、改札の地獄を救え"
+    background: m_d15e48dd
+    bgm: 223am
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "そんな自動改札機が生まれたのは、実は日本。しかも半世紀以上前の話だよ。"
+        video: assets/clips/era_1967.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "そんなに昔なのだ！？スマホもない時代なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1960年代、高度経済成長まっただ中の日本。駅は毎朝すさまじい通勤ラッシュで、駅員さんが改札に立って、1枚1枚ハサミで切符を切ってたの。"
+        video: assets/clips/station_crowd.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "改札はいつも大行列。駅員さんは1日に何万回もハサミを振って、腕を痛める人もいたと言われてるよ。"
+        video: assets/clips/gates_rush.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: sad
+        text: "人力で1秒に1人は、どう考えても無理なのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこで挑戦したのが、京都の立石電機。いまのオムロンだよ。大阪大学や鉄道会社と手を組んで、世界のどこにもない機械をゼロから作り始めたの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして1967年、大阪に新しくできた阪急の北千里駅に、世界初の自動改札機が設置される。"
+      - speaker: zundamon
+        emotion: happy
+        text: "世界初は、アメリカでもヨーロッパでもなくて、大阪のニュータウンの駅だったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面白いのはゲートの思想でね。日本の改札は、普段は開いていて、問題があるときだけ閉まる方式を選んだの。まず信じて、あとで止める。性善説の設計と言われてるよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "言われてみれば、いつも開いてるのだ。あれは「どうぞ」の状態だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "閉めておくより人がずっと速く流れるからね。そして磁気切符の時代を経て、2001年にはタッチするだけのSuicaが登場。改札は進化を続けていく。"
+        video: assets/clips/era_2001.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "ハサミからタッチまで、たった30年ちょっとなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "2007年には、北千里駅の自動改札システムが[IEEE|アイトリプルイー]マイルストーンに認定された。電気技術の歴史的偉業のリストで、エジソンの電球なんかと同じ仲間入りだよ。"
+        video: assets/clips/era_2007.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "毎朝くぐってるあの箱、世界レベルのレジェンドだったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまの改札機は、複数の路線をまたぐ運賃計算を瞬時にこなしてる。組み合わせは天文学的な数になると言われていて、その全部が、あの薄い箱に詰まってるの。"
+        telops:
+          - {text: "毎朝の「ピッ」は60年の技術", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+  - id: chapter3
+    title: "明日から改札で詰まらないコツ"
+    background: m_a3f763ba
+    bgm: jitaku_nite
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に実用編。改札で通せんぼされないコツだよ。まず、財布に交通系のカードを2枚以上入れてると、電波が混ざってエラーになりやすいの。使うカードは分けておこう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "タッチは素早く叩くより、読み取り部に「置いて、すっと滑らせる」イメージ。0.2秒の仕事が終わる前に離すと、読み損ねの原因になるからね。"
+        slide:
+          title: "改札で詰まらない3か条"
+          bullets:
+            - "交通系カードは1枚だけ持つ"
+            - "叩かず「置く」タッチ"
+            - "エラーが出たら一歩下がって再タッチ"
+      - speaker: zundamon
+        emotion: sad
+        text: "ボクは高速で叩きつけるのがかっこいいと思ってたのだ……。カードに仕事をさせてなかったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "エラーが出ても焦らなくて大丈夫。一歩下がって、もう一度ゆっくり置き直すのが結局いちばん速いよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日からは、スマートに「ピッ」なのだ！"
+  - id: kobanashi
+    title: ""
+    background: m_5b4f80b0
+    bgm: pastel_house
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "ところで先生、聞きたいことがあるのだ。新幹線の改札で、切符を2枚重ねて入れてるおとなを見たのだ。あれは反則技じゃないのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれは公式の技だよ。新幹線の改札は、乗車券と特急券みたいに複数の切符を重ねて入れても、中で1枚ずつ分けて、全部読んでから、また重ねて返してくれるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "読むだけじゃなくて、中で仕分けまでしてるのだ！？ますます工場なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あとは音にも秘密があるよ。改札の「ピッ」は実は全部同じじゃなくて、子ども用のカードだと鳴り方が変わって、駅員さんに分かるようになってると言われてるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "音にも意味があったのだ！明日から耳を澄ませて通るのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみにあの改札機、お値段は1台で車が買えるくらいすると言われてる。あれだけのメカが詰まってるんだから、納得だね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクたちは毎朝、高級メカの間を歩いてたのだ……。ありがたく通るのだ……。"
+  - id: ending
+    title: ""
+    background: m_5b4f80b0
+    bgm: you_and_me
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日は毎日くぐってるのに誰も中身を知らない、自動改札機の話でした。"
+        video: assets/clips/gates_walk.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "明日の朝は、箱の中の超高速工場と、1967年の大阪を思い出しながら通るのだ。"
+        video: assets/clips/tokyo_metro.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "当たり前に流れていく毎日は、誰かが本気で作った仕組みの上に乗ってる。改札の「ピッ」は、その音だね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは切符をわざと裏返しに入れて、体操選手の仕事を見届けてくるのだ！"
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0
