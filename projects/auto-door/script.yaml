@@ -1,0 +1,265 @@
+# 7本目（掛け合い）。投稿前に必ず目視レビューすること。
+# 事実確認済み: 光線式（近赤外線反射）が主流・黒い服は赤外線を吸収し反射不足で検知しにくい
+# ・静止すると背景扱い・検知範囲外/横向き接近も原因（全国自動ドア協会の見解ほか）
+# ・ヘロンの神殿の扉（火→空気膨張→水移動→バケツ→滑車）・1956年ごろ国産初はマット式
+# ・国内200万台以上と推定・普及率世界一と言われる。年代・台数は「〜と言われている」でぼかす。
+meta:
+  title: "自動ドアはなぜ、たまにあなたを無視するのか【ずんだもん解説】"
+  slug: "auto-door"
+  summary: "黒い服だと開かない、じっと待つと開かない、真横から行くと開かない。自動ドアが見ているのは「人」ではなく光の変化でした。センサーの仕組み、無視される4つの理由、そして2000年前の神殿で動いていた世界初の自動ドアまで、春日部つむぎとずんだもんが解説します。"
+  tags: ["自動ドア", "センサー", "仕組み", "雑学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "開かないのは"
+    bottom: "あなたが忍者だから"
+scenes:
+  - id: hook
+    title: ""
+    background: m_1fac213b
+    bgm: shuffle_shuffle
+    short: true
+    cuts:
+      # ---- 茶番（ドアに無視される）----
+      - speaker: zundamon
+        emotion: happy
+        text: "夜のコンビニにアイスを買いに来たのだ！さっそく入店なのだ！"
+        video: assets/clips/auto_door.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: angry
+        text: "……開かないのだ。ボクが目の前にいるのに、ドアが完全に無視してくるのだ！"
+        video: assets/clips/door_skit.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: sad
+        text: "手を振っても開かない。ジャンプしても開かない。なのに、後ろから来たおじさんの時だけ、スッと開いたのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あー、それはずんだもんが悪いんじゃないよ。ドアはサボってるんじゃなくて、ちゃんと理由があって無視してるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "理由があって無視！？ドアに意思があるのだ！？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "意思はないけど、ドアには「目」がある。そしてその目は、人間とはまったく違うものを見てるんだよ。"
+        telops:
+          - {text: "ドアは「人」を見ていない", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日のテーマはこちら。自動ドアはなぜ、あなたを無視するのか。無視される理由は、ちゃんと4つあるよ。"
+        slide:
+          title: "今日のテーマ"
+          big: "自動ドアに無視される理由"
+      - speaker: zundamon
+        emotion: happy
+        text: "全国の、無視されたことがある仲間のために、真相を暴くのだ！"
+  - id: chapter1
+    title: "ドアの目は、何を見ているのか"
+    background: m_7da37780
+    bgm: 10do
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず、自動ドアがどうやって人に気づくかから。ずんだもん、ドアの「目」はどこにあると思う？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ガラスの真ん中あたりから、こっそりこっちを見てるのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実は上だよ。ドアの上についてる黒い箱。あそこから、目に見えない赤外線を、床に向かってシャワーみたいに当ててるの。"
+        video: assets/clips/door_sensor.mp4
+        video_span: 6
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "床に当たった赤外線は、跳ね返ってセンサーに戻ってくる。誰もいなければ、床からの跳ね返りは、いつ見ても同じ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこに人が入ってくると、跳ね返ってくる光の量がガラッと変わる。センサーはこの「変化」を見つけた瞬間、ドアを開けてるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "人を見てるんじゃなくて、光の跳ね返りの変化を見てたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。だからドアの目に映る世界では、人間も台車も買い物袋も全部同じ。「反射が変わったかどうか」がすべてなんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに開いた後は、ドアとドアの間で別のセンサーが見張っていて、人がいる間は閉まらないようになってる。駆け込んでも挟まれないのは、この補助センサーのおかげだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "開ける係と、見張る係。ドアはチームで働いてたのだ！"
+  - id: chapter2
+    title: "無視される4つの理由"
+    background: m_7da37780
+    bgm: hirusagari
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "仕組みがわかったところで本題だよ。なぜずんだもんは無視されたのか。実は定番の理由が4つあるの。"
+        video: assets/clips/door_ignore.mp4
+        video_span: 5
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "理由その1、黒い服。黒は赤外線を吸収しちゃうから、跳ね返りが弱くて、センサーから見ると「誰もいない」に近い状態になっちゃうの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ボク、今日は全身真っ黒コーデだったのだ……。おしゃれが裏目に出たのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "理由その2、動きが少ない。ドアの前でじっと立ってると、センサーはあなたを床や壁と同じ「背景」だと思い始めるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "理由その3、検知エリアの外。センサーが見てる床の範囲は意外と狭い。真横からスッと近づくと、エリアを横切る時間が短くて、気づいてもらえないことがあるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "理由その4は環境。強い日差しや雨で床がキラキラ反射する日は、光の変化がノイズに埋もれて、判定が鈍ることがあると言われてるの。"
+        video: assets/clips/rainy_entrance.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: sad
+        text: "ボクは黒い服で、真横から近づいて、ドアの前でじっと待ってたのだ。無視されるための三冠王だったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ドアから見たら、ずんだもんはほぼ忍者だからね。気配を消した人に反応しないのは、むしろ正常動作だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも先生、逆のパターンもあるのだ。誰もいないのに、ドアがひとりでに開くときがあるのだ。あれは幽霊なのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "残念ながら幽霊じゃないよ。飛んできた虫や落ち葉、風で転がるビニール袋、強い光の揺らぎ。そういうものでも反射は変わるからね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ドアが見てるのは変化だけ。だから虫1匹でも、お客様扱いされるのだ！"
+  - id: history
+    title: "2000年前の自動ドア"
+    background: m_c7f8b8e3
+    bgm: 223am
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "ところでこの自動ドア、最初に作られたのはいつだと思う？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "自動って言うくらいだから、電気がある時代……50年くらい前なのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実は、およそ2000年前。古代都市アレクサンドリアの発明家ヘロンが、神殿の扉を自動で開けてみせたと言われてるの。"
+        video: assets/clips/temple.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "2000年前！？電気もモーターもないのに、どうやって開けるのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "使ったのは、火と空気と水だけ。仕掛けはこうだよ。"
+        video: assets/clips/heron_door.mp4
+        video_span: 4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "祭壇に火を灯すと、その下の密閉された空気が温められて膨張する。膨らんだ空気が容器の水を押し出して、水が隣のバケツに流れ込んでいくの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水で重くなったバケツが、ロープをぐっと引っ張る。滑車が回って、扉がゆっくりと開いていく。祭壇の火を消せば、すべてが逆に動いて扉は閉まる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "神様の奇跡を、物理で演出してたのだ！ヘロンさん、天才プロデューサーなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "参拝する人には仕組みが見えないから、本物の奇跡に見えたはずだよ。それからおよそ2000年経って、舞台は日本へ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1950年代、国産初の建築用自動ドアが登場する。当時はセンサーじゃなくて、入口のマットを踏むと、その重みで開く方式だったと言われてるよ。"
+        video: assets/clips/era_1956.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "体重で開けてたのだ！それはそれで、絶対に無視されない方式なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たしかに。そこから光線式に進化して、お店に、駅に、病院に広がっていった。いまや日本は自動ドア大国で、国内では200万台以上が働いてると推定されてるの。"
+        stat: {value: 200, unit: "万台", label: "国内で稼働する自動ドア（推計）"}
+      - speaker: zundamon
+        emotion: happy
+        text: "両手が荷物でふさがってても、車椅子でも、するっと入れる。あの「どうぞ」が、200万か所にあるのだ。"
+  - id: chapter3
+    title: "無視されない歩き方"
+    background: m_7da37780
+    bgm: jitaku_nite
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に実用編、ドアに気づいてもらう歩き方だよ。コツはシンプル。正面から、普通の速さで、止まらずに近づくこと。センサーの目にちゃんと「変化」を見せてあげるの。"
+        video: assets/clips/walk_enter.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "それでも開かなかったら、その場で粘るより、一歩下がってからもう一度近づき直すのが早いよ。背景になりかけた自分を、リセットするイメージ。"
+        slide:
+          title: "無視されない3か条"
+          bullets:
+            - "正面から普通の速さで近づく"
+            - "ドアの前で立ち止まらない"
+            - "開かなければ一歩下がってやり直す"
+      - speaker: zundamon
+        emotion: surprised
+        text: "下がるのは負けじゃなくて、リセット技だったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それと、閉まりかけのドアに駆け込むのはやめてね。補助センサーが見てるから挟まれはしないけど、ドアにもあなたにも優しくないから。"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日からは堂々と、正面から歩くのだ！ドアと分かり合えた気がするのだ！"
+  - id: kobanashi
+    title: ""
+    background: m_7da37780
+    bgm: pastel_house
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "ところで先生、大きなビルの入口にある、ぐるぐる回る回転ドア。あれはなんで普通の自動ドアじゃダメなのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いい質問だね。高いビルは、暖かい空気が上に昇って、建物全体が煙突みたいになるの。下の入口を普通に開けると、強い風が吹き込んじゃう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "回転ドアなら、人が通っても外と中の空気がほとんど入れ替わらない。人だけ通して、風は通さない仕組みなんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "あのぐるぐるは、ビルの息を止めるフタだったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あと、病院の自動ドアがゆっくり開くのに気づいたことある？あれは故障じゃなくて、車椅子や点滴スタンドの人に合わせて、わざと速度を落としてるの。場所に合わせて性格を変えてるんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "せっかちなコンビニのドアと、優しい病院のドア。ドアにも個性があるのだ！"
+  - id: ending
+    title: ""
+    background: m_1fac213b
+    bgm: you_and_me
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日はあなたを時々無視してくる、自動ドアの言い分でした。"
+        video: assets/clips/store_drinks.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "もう無視されても傷つかないのだ。ボクが忍者だっただけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "2000年前に神殿で起きていた奇跡が、いまはコンビニの入口で毎日起きてる。そう思うと、ちょっとすごい景色だよね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは黒コーデのまま、正面から堂々とリベンジしてくるのだ！"
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0

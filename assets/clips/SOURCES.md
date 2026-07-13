@@ -62,6 +62,13 @@
 | tokyo_metro.mp4 | 東京の駅と通過する電車 | yuki kiki | https://www.pexels.com/video/tokyo-train-station-with-passing-metro-38214997/ |
 | ticket_machine.mp4 | 券売機から切符を取る手元 | MART PRODUCTION | https://www.pexels.com/video/close-up-footage-of-a-person-getting-ticket-from-the-machine-7252265/ |
 | enter_metro.mp4 | 駅に入る人 | MART PRODUCTION | https://www.pexels.com/video/man-entering-a-metro-station-7251031/ |
+| door_skit.mp4 / door_sensor.mp4 / door_ignore.mp4 / heron_door.mp4 / era_1956.mp4 | auto-door用アニメ5本（自作。`scripts/gen_door_extras.py`） | — | — |
+| auto_door.mp4 | 自動ドアから入店する人 | Casey Whalen | https://www.pexels.com/video/people-going-inside-a-store-with-automatic-sliding-doors-6641527/ |
+| metro_doors.mp4 | 駅構内を歩くPOV | Aleks Magnusson | https://www.pexels.com/video/a-view-of-the-metro-station-while-walking-5921060/ |
+| rainy_entrance.mp4 | 雨の日のビル入口 | Mykola Stepaniuk | https://www.pexels.com/video/modern-building-entrance-during-rainy-day-32925746/ |
+| temple.mp4 | ギリシャ・ローマ遺跡の柱 | Engin Akyurt | https://www.pexels.com/video/historical-greek-and-roman-ruins-17674905/ |
+| store_drinks.mp4 | コンビニで買い物する人 | K | https://www.pexels.com/video/man-buying-drinks-at-the-convenience-store-4473193/ |
+| walk_enter.mp4 | 建物に入る黒帽子の女性 | Gabe H | https://www.pexels.com/video/woman-looking-around-and-entering-building-13008916/ |
 
 ## 画像（assets/images/）
 
@@ -71,5 +78,8 @@
 | m_5b4f80b0.jpg（背景） | JR岐阜羽島駅の改札 | CC BY-SA 4.0（Ty70）※概要欄にクレジット | https://commons.wikimedia.org/wiki/File:JR_Central_Gifu-Hashima_Station_ticket_gate.jpg |
 | m_a3f763ba.jpg（背景） | 高岡駅の自動改札 | CC0（Aspere） | https://commons.wikimedia.org/wiki/File:Ticket_Gate_of_Takaoka_Station_260123_02.jpg |
 | m_d15e48dd.jpg（背景） | 浅草橋駅ホームと電車 | CC BY 4.0（Nesnad）※概要欄にクレジット | https://commons.wikimedia.org/wiki/File:Asakusabashi_station_platform_and_train_-_Oct_23_2020.jpg |
+| m_1fac213b.jpeg（背景） | 夜のコンビニ外観 | Pexels License（HONG SON） | https://www.pexels.com/photo/gas-station-and-a-store-at-night-10556938/ |
+| m_7da37780.jpeg（背景） | 「APPROACH SLOWLY AUTO-DOOR」の自動ドア | Pexels License（Erik Mclean） | https://www.pexels.com/photo/entrance-of-service-center-with-glass-doors-5864149/ |
+| m_c7f8b8e3.jpg（背景） | パルテノン神殿 | CC BY 2.0（Steve Swayne）※概要欄にクレジット | https://commons.wikimedia.org/wiki/File:The_Parthenon_in_Athens.jpg |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。
