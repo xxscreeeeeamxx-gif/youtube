@@ -39,7 +39,7 @@ scenes:
       # ---- フック ----
       - speaker: tsumugi
         emotion: normal
-        text: "あの3分はね、麺に空いた無数の小さな穴に、お湯が染み込んでいくための時間なんだよ。"
+        text: "[あの3分はね|あのさんぷんわね]、麺に空いた無数の小さな穴に、お湯が染み込んでいくための時間なんだよ。"
         telops:
           - {text: "麺には無数の穴がある", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi

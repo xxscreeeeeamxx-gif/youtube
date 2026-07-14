@@ -66,7 +66,7 @@ scenes:
         text: "巨大なモグラが、1段ずつ手渡ししてるのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "地下に雇用が発生してるじゃない。正解はね、1段1段が独立した台車になっていて、レールの上をベルトコンベアみたいに、ぐるぐる一周してるの。"
+        text: "地下に雇用が発生してるじゃない。[正解はね|せいかいわね]、1段1段が独立した台車になっていて、レールの上をベルトコンベアみたいに、ぐるぐる一周してるの。"
         video: assets/clips/esc_loop.mp4
         video_span: 6
         video_full: true
@@ -87,7 +87,7 @@ scenes:
         text: "遅いのが不満だったけど、あれは優しさの速度だったのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "そしてとっておきがこれ。手すりはね、ステップよりほんの少しだけ速く動くように作られてることが多いと言われてるの。"
+        text: "そしてとっておきがこれ。[手すりはね|てすりわね]、ステップよりほんの少しだけ速く動くように作られてることが多いと言われてるの。"
       - speaker: zundamon
         emotion: thinking
         text: "手すりのフライング……？行儀が悪いのだ。"
@@ -146,7 +146,7 @@ scenes:
         text: "条例！？お願いが、法律級になったのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "罰則のない、お願いの条例だけどね。片手に荷物や子どもがいて、決まった側の手すりしか持てない人だっている。真ん中に堂々と立っていい。それがいま推奨されてる正解だよ。"
+        text: "罰則のない、お願いの条例だけどね。片手に荷物や子どもがいて、決まった側の手すりしか持てない人だっている。左でも右でも、好きな側に堂々と立ち止まっていい。それがいま推奨されてる正解だよ。"
         telops:
           - {text: "「歩かず2列」が公式のお願い", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
   - id: chapter3
@@ -255,7 +255,7 @@ scenes:
         text: "人を守るためのボタンだから、必要なときはためらわなくていいの。もちろん、いたずらは論外だからね。"
       - speaker: zundamon
         emotion: happy
-        text: "明日からは真ん中に堂々と立って、手すりを持って、背中の圧には負けないのだ！"
+        text: "明日からは2列で堂々と立ち止まって、手すりを持って、背中の圧には負けないのだ！"
   - id: ending
     title: ""
     background: m_467f8dad
@@ -268,7 +268,7 @@ scenes:
         video_full: true
       - speaker: zundamon
         emotion: normal
-        text: "片側空けの圧は、幻だったのだ。ボクはもう、真ん中で生きていくのだ。"
+        text: "片側空けの圧は、幻だったのだ。ボクはもう、どっち側でも堂々と立ち止まるのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "急がない勇気が、結局いちばんみんなを早く運ぶ。エスカレーターが毎日教えてくれてる、ちょっといい話だね。"
