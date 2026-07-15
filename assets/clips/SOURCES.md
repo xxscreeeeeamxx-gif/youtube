@@ -85,6 +85,13 @@
 | esc_stand.mp4 | エスカレーターに立つ人のPOV | K | https://www.pexels.com/video/a-man-standing-on-the-escalator-3740035/ |
 | stairs_kamakura.mp4 | 鎌倉駅の階段を降りる通勤客 | Miltan Monjib | https://www.pexels.com/video/commuters-descend-stairs-at-kamakura-station-34654547/ |
 | wheelchair_hosp.mp4 | 病院の廊下と車椅子 | Mister Edits | https://www.pexels.com/video/a-footage-inside-a-hospital-6151283/ |
+| color_ao.mp4 / led_snow.mp4 / button_wait.mp4 / era_1868.mp4 / era_1930.mp4 | traffic-light用アニメ5本（自作。`scripts/gen_signal_extras.py`） | — | — |
+| signal_change.mp4 | 歩行者信号の切り替わり | Evgenij Mikhailov | https://www.pexels.com/video/traffic-light-changing-at-pedestrian-crosswalk-30528306/ |
+| signal_close.mp4 | 信号機のクローズアップ | Davlat Tursunov | https://www.pexels.com/video/close-up-shot-of-a-traffic-light-6415591/ |
+| shibuya_night.mp4 | 夜の渋谷スクランブル交差点 | Edgar C | https://www.pexels.com/video/bustling-night-scene-at-shibuya-crossing-tokyo-34777477/ |
+| shibuya_walk.mp4 | 渋谷交差点を渡る人々 | Simo Herold | https://www.pexels.com/video/walking-across-shibuya-crossing-18624151/ |
+| press_button.mp4 | 横断歩道の押しボタン | Taryn Elliott | https://www.pexels.com/video/person-pressing-a-button-at-traffic-lights-on-pedestrian-crossing-5665076/ |
+| night_traffic.mp4 | 夜の幹線道路のタイムラプス | German Korb | https://www.pexels.com/video/time-lapse-video-of-traffic-on-a-main-road-at-night-3727447/ |
 
 ## 画像（assets/images/）
 
@@ -103,5 +110,8 @@
 | m_5f2ff041.jpeg（背景） | 駅構内のエスカレーター | Pexels License（Lars H Knudsen） | https://www.pexels.com/photo/escalators-inside-of-a-building-7172007/ |
 | m_467f8dad.jpeg（背景） | モールの吹き抜けとエスカレーター | Pexels License（dwi endah kusumawati） | https://www.pexels.com/photo/contemporary-shopping-mall-interior-with-escalators-35551656/ |
 | m_c2b9575b.jpeg（背景） | 夕暮れの百貨店外観 | Pexels License（Jimmy Liao） | https://www.pexels.com/photo/brown-and-black-concrete-building-7791038/ |
+| m_aa87d2b5.jpeg（背景） | スカイツリーと信号のある街路 | Pexels License（Francesco Albanese） | https://www.pexels.com/photo/urban-street-view-with-tokyo-skytree-in-background-31486554/ |
+| m_b29b417e.jpeg（背景） | 雪の街 | Pexels License（Алексей Сулла） | https://www.pexels.com/photo/city-in-snowy-winter-15819943/ |
+| m_29004165.jpeg（背景） | 夜の交差点の空撮 | Pexels License（Erik Mclean） | https://www.pexels.com/photo/top-view-of-road-junction-in-a-city-at-night-8913522/ |
 
 再取得は `ytf media "<検索語>" --video` か、`ytf edit` の素材ブラウザ「動画」から。

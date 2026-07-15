@@ -1,0 +1,273 @@
+# 10本目（掛け合い・漫才モード）。投稿前に必ず目視レビューすること。
+# 事実確認済み: 1930年3月日比谷に日本初の自動信号機・法令上は「緑色信号」→1947年に法令が
+# 「青信号」へ改正・1973年以降は実物も青寄りの緑に（国際基準の緑の範囲内）・疑似点灯（電球式で
+# 西日が反射鏡に反射し全点灯に見える）→LEDで解消・LEDは発熱が少なく雪が溶けない（北海道の
+# LED化率最低）・縦型は積雪面積を減らすため・世界初は1868年ロンドンのガス灯式→約3週間で爆発
+# 事故→撤去・全国およそ20万基。音響信号の鳴き分け・色の青寄せ・基数は「〜と言われている」でぼかす。
+# 注意: 「〜はね、」はハネ誤読するので使わない。
+meta:
+  title: "信号機の「青」、どう見ても緑なのになぜ青なのか【ずんだもん解説】"
+  slug: "traffic-light"
+  summary: "どう見ても緑の信号を、日本人はなぜ「青」と呼ぶのか。実は昔の法律には「緑色信号」と書かれていました。国民が青と呼び続けた結果、法律のほうが折れた話、LED信号と雪の戦い、雪国の縦型の理由、音響信号と押しボタンの真実、そして爆発から始まった信号機の歴史まで、春日部つむぎとずんだもんが解説します。"
+  tags: ["信号機", "青信号", "LED", "雑学", "ずんだもん", "春日部つむぎ"]
+  thumbnail:
+    top: "法律のほうが"
+    bottom: "折れた色"
+scenes:
+  - id: hook
+    title: ""
+    background: m_aa87d2b5
+    bgm: shuffle_shuffle
+    short: true
+    cuts:
+      # ---- 茶番（緑派ずんだもんの反乱）----
+      - speaker: zundamon
+        emotion: angry
+        text: "今日こそ言わせてもらうのだ。あの信号、どこからどう見ても、緑なのだ！"
+        video: assets/clips/signal_close.mp4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "急にどうしたの。……まあ、たしかに見た目は緑だね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "なのに大人は全員「青信号」って言うのだ！ボクは騙されないのだ！あれは抹茶色なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "抹茶は言い過ぎ。でも実はそれ、大人も全員うすうす思ってるの。しかも驚くことに、昔は法律にも「緑色信号」って書いてあったんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "法律は緑って言ってたのだ！？じゃあ、なんで今は青なのだ！？"
+      # ---- フック ----
+      - speaker: tsumugi
+        emotion: normal
+        text: "国民みんなが「青」と呼び続けた結果、法律のほうが折れて、書き換えられたの。"
+        telops:
+          - {text: "法律のほうが折れた", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日は、毎日見てるのに誰も知らない、信号機の言い分を丸ごと解剖するよ。"
+        slide:
+          title: "今日のテーマ"
+          big: "信号機の言い分"
+      - speaker: zundamon
+        emotion: happy
+        text: "緑派代表のボクが、直々に聞いてやるのだ！"
+  - id: chapter1
+    title: "なぜ緑を「青」と呼ぶのか"
+    background: m_aa87d2b5
+    bgm: 10do
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "まずは言葉の話から。ずんだもん、青菜、青竹、青りんご。この3つ、実際は何色？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ぜんぶ緑なのだ！あれ！？なんでみんな「青」って名乗ってるのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それが答えだよ。昔の日本語の「あお」は、いまの青と緑をまとめてカバーする、すごく広い色の言葉だったの。"
+        video: assets/clips/color_ao.mp4
+        video_span: 9
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "空の青も、葉っぱの緑も、ぜんぶ「あお」。緑という呼び方は、後から細かい区別として広がっていったと言われてるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして1930年、東京の日比谷交差点に日本初の自動信号機が付く。このとき法令に書かれた正式名は、「緑色信号」だった。"
+      - speaker: zundamon
+        emotion: happy
+        text: "法律は正しかったのだ！緑派の大先輩なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ところが世間も新聞も、呼び方はずっと「青信号」。あまりに定着したから、1947年、とうとう法令のほうが「青信号」に書き換えられたの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "言葉が法律に勝ったのだ！？日本語、つよつよなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "さらに続きがあって、1973年ごろからは、信号機の実物の色まで、できるだけ青に近い緑で作られるようになったと言われてるの。世界のルールで「緑」と決められた範囲の中の、いちばん青寄りを選んでる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "呼び名に合わせて、色のほうが歩み寄ったのだ！？もう青でいい気がしてきたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに英語では、そのままグリーンライト。緑を「青」と呼んで渡ってるのは、日本語の歴史を毎日引き継いでる、ちょっと特別な光景なんだよ。"
+  - id: chapter2
+    title: "LEDと、雪との戦い"
+    background: m_b29b417e
+    bgm: hirusagari
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "次は信号機本体の進化の話。昔の信号は電球にカラーレンズをかぶせた方式で、実は困った弱点があったの。ずんだもん、何だと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "夜のうちに、誰かがレンズを塗り替えるイタズラなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "治安が悪すぎるよ。正解は、西日。夕方の強い光がレンズの奥の反射鏡に当たって、全部の色が点いて見えちゃうことがあったの。疑似点灯という現象だよ。"
+        video: assets/clips/led_snow.mp4
+        video_span: 7
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "赤も青も光って見えたら、大事故につながりかねない。そこで登場したのがLED信号機。自分で光るから反射に騙されないし、電気も大幅に節約できて、電球切れの交換もほぼ要らない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "完全上位互換なのだ！弱点なしの優等生なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "と思うでしょ。ところが、たったひとつだけ電球に負けるところがあったの。LEDは、ほとんど熱くならないこと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "熱くならないのは、いいことじゃ……あ！雪なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "正解。電球の時代は自分の熱で雪を溶かせたのに、LEDは張り付いた雪がそのまま。吹雪の日に信号が見えなくなる問題が、雪国で起きたの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから雪国の信号は工夫が満載だよ。雪が積もる面積を減らすために灯りを縦に並べた縦型。ひさしを深くする流派もあれば、逆にひさしをなくしてツルツルにする流派もある。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "縦型はおしゃれじゃなくて、雪との知恵比べだったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あとLEDには面白い性質がもうひとつ。実は人間の目にはわからない速さで、ものすごく細かく点滅してるの。だからドライブレコーダーの映像で、信号が消えて見えることがあるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "カメラにだけバレる高速まばたきなのだ！信号は忙しいのだ！"
+  - id: chapter3
+    title: "目と耳のための信号"
+    background: m_29004165
+    bgm: pastel_house
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "ところで先生、目の見えない人は、信号の色がわからないのだ？どうやって渡ってるのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いい質問だね。そのために、音で知らせる音響式信号機があるの。青になると、ピヨピヨとか、カッコーとか、鳥の声が流れるやつ。聞いたことあるでしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あるのだ！あれは信号の鼻歌だと思ってたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "鼻歌じゃなくて大事な情報だよ。多くの場所では、渡る方向によって鳴き声を変えていて、どっちの横断歩道が青なのか、音だけでわかるようにしてあると言われてるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "あの鳥、方角まで教えてたのだ！？ただのBGMじゃなかったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それからもうひとつ、押しボタン式。押しても一向に変わらなくて、壊れてると思ったことない？"
+        video: assets/clips/press_button.mp4
+        video_full: true
+        video_speed: 0.7
+      - speaker: zundamon
+        emotion: angry
+        text: "あるのだ！連打しても無視されるから、あれは「押させるだけのフリ」だと思ってたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれ、ちゃんと効いてるんだよ。周りの信号との連携で、車の流れを止めてもいいタイミングを待ってから変えてるの。無視じゃなくて、順番待ち。"
+        video: assets/clips/button_wait.mp4
+        video_span: 2
+        video_full: true
+      - speaker: zundamon
+        emotion: thinking
+        text: "たしかに、押した瞬間に変わったら車が急ブレーキなのだ。信号は空気を読んでたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから連打しても早くはならない。1回押したら、信号を信じて待ってあげてね。"
+  - id: history
+    title: "爆発から始まった信号機"
+    background: m_29004165
+    bgm: 223am
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "そんな信号機の歴史、どこから始まったと思う？実は、爆発から始まってるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "穏やかじゃないのだ！？信号は平和の象徴なのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界初の信号機は1868年、ロンドンに置かれた、ガス灯を使う手動式だった。赤と緑のランプを、係の警察官がレバーで切り替えてたの。"
+        video: assets/clips/era_1868.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "ところが設置からわずか3週間ほどで、ガスが爆発する事故が起きて、操作していた警察官が大けがをしてしまう。信号機はそのまま撤去されて、世界から一度姿を消したの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "デビュー3週間で引退なのだ……。伝説になるのが早すぎるのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "復活はおよそ半世紀後。電気の時代になったアメリカで電気式の信号機が生まれて、世界へ広がっていく。そして1930年、日比谷の交差点にやってくるわけ。"
+        video: assets/clips/era_1930.mp4
+        video_span: 1
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまでは日本中の信号機は、およそ20万基と言われてる。毎日24時間、あなたの代わりに交通整理をし続けてるんだよ。"
+        stat: {value: 20, unit: "万基", label: "全国の信号機（推計）"}
+      - speaker: zundamon
+        emotion: happy
+        text: "ロンドンの爆発からおよそ160年で、ここまで来たのだ。信号、大出世なのだ！"
+  - id: chapter4
+    title: "黄色の本当の意味"
+    background: m_aa87d2b5
+    bgm: jitaku_nite
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に実用編。ずんだもん、黄色信号の意味は？"
+      - speaker: zundamon
+        emotion: happy
+        text: "「急げ」なのだ！全力ダッシュの合図なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "出た、全国民の誤解。正解は「止まれ」だよ。ただし、急ブレーキになって安全に止まれない場合だけ、そのまま進んでいい。あくまで例外つきの止まれなの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "急げの真逆だったのだ！？アクセルじゃなくて、ブレーキの合図だったのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "歩行者用の青の点滅も同じ発想で、「渡り始めちゃだめ」の合図。渡ってる途中の人は、急いで渡りきるか、引き返してね。"
+        slide:
+          title: "信号の本当の意味"
+          bullets:
+            - "黄色 = 止まれ（例外つき）"
+            - "青の点滅 = 渡り始めない"
+            - "押しボタンは1回でOK"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日からは、黄色でブレーキ、点滅で待つ、そして緑を青と呼ぶのだ！"
+  - id: ending
+    title: ""
+    background: m_aa87d2b5
+    bgm: you_and_me
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけで、今日はどう見ても緑なのに青な、信号機の言い分でした。"
+        video: assets/clips/shibuya_night.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは今日から青派に転向するのだ。1000年前の日本語が、いまも交差点で生きてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "爆発から始まって、言葉に折れて、雪と知恵比べして。信号機は今日も文句ひとつ言わずに光ってる。ちょっと愛おしくなるでしょ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは音響信号の鳥の声を、聞き分けに行ってくるのだ！"
+      - speaker: tsumugi
+        duet_with: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        pause_after: 1.0
