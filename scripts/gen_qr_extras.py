@@ -9,7 +9,7 @@
   era_open.mp4    26.0s  時代カード: 特許の無料開放
 
 フェーズ境界は timing.json のカット実測に同期（コメントの秒数）。
-QRの模様は qrcode ライブラリで「ふしぎ研究所」を実際に符号化した本物。
+QRの模様は qrcode ライブラリで「日常研究所」を実際に符号化した本物。
 
 実行: PYTHONPATH=. python3 scripts/gen_qr_extras.py
 """
@@ -54,10 +54,10 @@ def ctext(d, cx, y, s, f, fill):
     d.text((cx - d.textlength(s, font=f) / 2, y), s, font=f, fill=fill)
 
 
-# ---- 本物のQR行列（「ふしぎ研究所」をレベルHで符号化）----
+# ---- 本物のQR行列（「日常研究所」をレベルHで符号化）----
 _q = qrcode.QRCode(version=3, error_correction=qrcode.constants.ERROR_CORRECT_H,
                    border=0)
-_q.add_data("ふしぎ研究所")
+_q.add_data("日常研究所")
 _q.make(fit=True)
 M = _q.modules
 N = len(M)
@@ -217,7 +217,7 @@ def qr_anatomy(img, d, t):
         # 左: 変換の流れ
         lx = 220
         d.rounded_rectangle([lx, 320, lx + 480, 430], radius=18, fill=(24, 34, 54))
-        ctext(d, lx + 240, 348, "ふしぎ研究所", font(48), INK)
+        ctext(d, lx + 240, 348, "日常研究所", font(48), INK)
         ay = 470
         d.polygon([(lx + 240 - 22, ay), (lx + 240 + 22, ay), (lx + 240, ay + 34)],
                   fill=(*ACCENT, 255))
