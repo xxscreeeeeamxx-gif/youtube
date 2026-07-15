@@ -300,7 +300,7 @@ def hologram(d, t):
 # ------------------------------------------------------------------
 # 4) bill_exchange — 交換基準（基準=8.12 / DUR 26.0）
 # ------------------------------------------------------------------
-X_RULE = 8.12
+X_RULE = 9.21
 
 
 def bill_exchange(d, t):
@@ -390,7 +390,7 @@ CLIPS = {
     "bill_tour": (64.0, lambda: bill_tour),
     "eurion": (37.0, lambda: eurion),
     "hologram": (26.0, lambda: hologram),
-    "bill_exchange": (26.0, lambda: bill_exchange),
+    "bill_exchange": (27.0, lambda: bill_exchange),
     "era_1961": (14.3, lambda: era_1961),
 }
 

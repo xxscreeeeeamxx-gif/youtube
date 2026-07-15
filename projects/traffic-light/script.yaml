@@ -222,7 +222,7 @@ scenes:
     cuts:
       - speaker: tsumugi
         emotion: normal
-        text: "最後に実用編。ずんだもん、黄色信号の意味は？"
+        text: "最後にひとつ、命に関わる大事な話。ずんだもん、黄色信号の意味は？"
       - speaker: zundamon
         emotion: happy
         text: "「急げ」なのだ！全力ダッシュの合図なのだ！"
@@ -243,7 +243,7 @@ scenes:
             - "押しボタンは1回でOK"
       - speaker: zundamon
         emotion: happy
-        text: "明日からは、黄色でブレーキ、点滅で待つ、そして緑を青と呼ぶのだ！"
+        text: "明日からは、[黄色|きいろ]でブレーキ、点滅で待つ、そして緑を青と呼ぶのだ！"
   - id: ending
     title: ""
     background: m_aa87d2b5
