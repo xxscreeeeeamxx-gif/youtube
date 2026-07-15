@@ -12,12 +12,8 @@ from pydantic import BaseModel, Field, field_validator
 
 
 class Thumbnail(BaseModel):
-    top: str = ""       # サムネ上段の煽り文（短く）
-    bottom: str = ""    # サムネ下段の大文字（最重要ワード）
-    accent: str = ""    # テーマ色（#RRGGBB）。未指定ならslugから自動で派手色を選ぶ
-    symbol: str = "？"  # 背景に巨大表示する記号（？／！など）
-    emotion: str = "surprised"  # メインキャラの表情
-    bg: str = ""        # 背景画像名の上書き（未指定なら1シーン目の背景）
+    top: str = ""      # サムネ上段の煽り文（短く）
+    bottom: str = ""   # サムネ下段の大文字（最重要ワード）
 
 
 class Meta(BaseModel):
