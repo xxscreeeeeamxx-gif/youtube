@@ -89,6 +89,15 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "ちなみに油で揚げずに乾かすノンフライ麺もあって、あっちは穴の育て方が違うから、待ち時間が長めのことが多いんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "その穴、水分はどれくらい抜けてるのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "生の麺は3割ほどが水分だけど、揚げたあとは数％まで落ちると言われてるよ。カラカラのスポンジ状態。だから常温で何ヶ月も置けるし、お湯も一気に吸い込めるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "数％！？ほぼ完全な乾物なのだ。おいしさと保存を、同じ穴が支えてたのだ！"
   - id: chapter2
     title: "カップの中の設計図"
     background: m_462f6daa

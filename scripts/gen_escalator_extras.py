@@ -170,7 +170,7 @@ def esc_loop(d, t):
 # ------------------------------------------------------------------
 # 2) ronsou — 片側空け論争（輸送力=5.95 / (Z=17.38) / 事故=23.38 / DUR 33.7）
 # ------------------------------------------------------------------
-R_CAP, R_ACC = 5.95, 23.38
+R_CAP, R_ACC = 5.95, 24.5
 
 
 def ronsou(d, t):
@@ -309,6 +309,74 @@ def wheelchair_step(d, t):
 
 
 # ------------------------------------------------------------------
+# 3.5) step_rail — 水平を保つ2本レール（姿勢制御=8.56 / DUR 31.2）
+# ------------------------------------------------------------------
+S_POSE = 8.56
+
+
+def _rail_y(x, base, drop):
+    """レール高さ: 左端フラット→斜面→右端フラット の折れ線。"""
+    if x < 480:
+        return base
+    if x > 1440:
+        return base - drop
+    return base - (x - 480) / (1440 - 480) * drop
+
+
+def step_rail(d, t):
+    if t < S_POSE:
+        _caption(d, "ステップの車輪は、前後で別のレールを走る")
+        # 台車拡大図
+        cx, cy = 960, 560
+        d.rounded_rectangle([cx - 220, cy - 40, cx + 220, cy + 40], radius=10, fill=STEP)
+        d.rounded_rectangle([cx - 220, cy - 52, cx + 220, cy - 36], radius=6,
+                            outline=YELLOW, width=6)
+        # 前輪(青)・後輪(橙)
+        d.ellipse([cx + 150, cy + 40, cx + 210, cy + 100], fill=ACCENT)
+        d.ellipse([cx - 210, cy + 90, cx - 150, cy + 150], fill=AMBER)
+        d.line([cx + 60, cy + 70 + 60, cx + 900, cy + 70 + 60], fill=ACCENT, width=8)
+        d.line([cx - 900, cy + 120 + 60, cx - 60, cy + 120 + 60], fill=AMBER, width=8)
+        kk = ease((t - 1.5) / 0.6)
+        if kk > 0:
+            d.text((cx + 240, cy + 30), "前輪 → 青いレール", font=font(34), fill=ACCENT)
+            d.text((cx - 640, cy + 150), "後輪 → 橙のレール", font=font(34), fill=AMBER)
+        return
+    _caption(d, "2本のレールの高さの差が、姿勢を決める")
+    base_f, base_r = 700, 700
+    drop = 300
+    # 2本レール（後輪レールは区間により前輪レールとの差が変わる）
+    fpts, rpts = [], []
+    for x in range(240, 1690, 10):
+        fpts.append((x, _rail_y(x, base_f, drop)))
+        # 後輪レール: 斜面区間だけ下に離れる（=ステップが階段状に）
+        gap = 0 if (x < 480 or x > 1440) else 60
+        rpts.append((x, _rail_y(x, base_f, drop) + gap + 26))
+    d.line(fpts, fill=ACCENT, width=7)
+    d.line(rpts, fill=AMBER, width=7)
+    d.text((250, base_f + 40), "端では差ゼロ = 平ら", font=font(30), fill=GRAY)
+    d.text((1180, base_f - drop + 46), "端では差ゼロ = 平ら", font=font(30), fill=GRAY)
+    ctext(d, 960, 830, "斜面では差が開く = 階段のかたち", font(34), GRAY)
+    # 走るステップ（前輪と後輪の位置からステップ姿勢を決める）
+    k = ((t - S_POSE) * 0.09) % 1.0
+    fx = 340 + k * 1240
+    rx = fx - 120
+    fy = _rail_y(fx, base_f, drop)
+    gap_r = 0 if (rx < 480 or rx > 1440) else 60
+    ry = _rail_y(rx, base_f, drop) + gap_r + 26
+    # 踏面は前輪の少し上に水平で描く（姿勢は前後輪が決める）
+    top_y = min(fy, ry - 26) - 46
+    d.rounded_rectangle([rx - 20, top_y - 14, fx + 40, top_y + 14], radius=6, fill=STEP)
+    d.rounded_rectangle([rx - 20, top_y - 24, fx + 40, top_y - 10], radius=6,
+                        outline=YELLOW, width=5)
+    d.ellipse([fx - 16, fy - 16, fx + 16, fy + 16], fill=ACCENT)
+    d.ellipse([rx - 16, ry - 16, rx + 16, ry + 16], fill=AMBER)
+    d.line([rx, ry, rx, top_y], fill=(120, 134, 160), width=8)
+    d.line([fx, fy, fx, top_y], fill=(120, 134, 160), width=8)
+    if t > S_POSE + 4:
+        ctext(d, 960, 920, "踏む面は、いつでも水平のまま", font(38), GREEN)
+
+
+# ------------------------------------------------------------------
 # 4) 時代カード
 # ------------------------------------------------------------------
 ERAS = ["1900 商標登録", "1914 日本初上陸", "1950 みんなの言葉に"]
@@ -387,7 +455,8 @@ def era_trademark(d, t):
 
 CLIPS = {
     "esc_loop": (52.2, lambda: esc_loop),
-    "ronsou": (33.7, lambda: ronsou),
+    "ronsou": (34.9, lambda: ronsou),
+    "step_rail": (31.2, lambda: step_rail),
     "wheelchair_step": (37.6, lambda: wheelchair_step),
     "era_1914": (31.0, lambda: era_1914),
     "era_trademark": (22.6, lambda: era_trademark),

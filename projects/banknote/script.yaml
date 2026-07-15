@@ -92,6 +92,15 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "ルーペ1本でこんなに見つかるのだ。お札は宝探しの島なのだ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも先生、紙の厚みで絵を描くって、具体的にはどうやるのだ？想像がつかないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お札の紙は、繊維を水に溶かして漉いて作るんだけど、その途中で場所ごとに繊維の量をわざと変えてるの。繊維が多いところは厚くて光を通しにくいから暗く、少ないところは明るく見える。その濃淡で、あの顔を描いてるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "印刷じゃなくて、紙が生まれる瞬間に絵を仕込んでたのだ！仕事が早すぎるのだ！"
   - id: chapter2
     title: "機械にだけ見える、隠し模様"
     background: m_1c7ace29

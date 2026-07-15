@@ -93,6 +93,15 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "あの箱の中は、紙のための超高速工場だったのだ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも、あんな小さい紙に、そんなにいろいろ書けるものなのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "磁気で書けるのは、ほんのメモ書き程度の量だよ。だから駅の名前や日付をそのまま書くんじゃなくて、ぜんぶ短い番号に置き換えた、暗号のような形式でぎゅっと詰め込んでるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "小さな紙の裏で、暗号のやり取りをしてたのだ！スパイ映画なのだ！"
   - id: chapter2
     title: "タッチの0.2秒に起きていること"
     background: m_d15e48dd

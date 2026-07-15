@@ -94,6 +94,38 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "ちなみに英語では、そのままグリーンライト。緑を「青」と呼んで渡ってるのは、日本語の歴史を毎日引き継いでる、ちょっと特別な光景なんだよ。"
+  - id: chapter_red
+    title: "そもそも、なぜ赤が「止まれ」なのか"
+    background: m_29004165
+    bgm: natsuyasumi
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "色の呼び方はわかったのだ。でもそもそも、なんで止まれが赤で、進めが緑なのだ？逆でもよかったのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いい質問だね。あれは好みやおしゃれじゃなくて、物理で決まってるの。光には波の長さ、波長というものがあって、色によって全然違うんだよ。"
+        video: assets/clips/wavelength_red.mp4
+        video_span: 7
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "赤は、目に見える光の中でいちばん波長が長い色。波長が長い光は、空気中のチリや水滴にぶつかっても散らばりにくくて、遠くまでまっすぐ届くの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "夕日が赤いのも、まったく同じ理屈だよ。夕方は太陽の光が空気の中を長く進むから、散らばりやすい青は途中で消えて、しぶとい赤だけが目に届くの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "夕焼けと信号、同じ物理だったのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。霧の日も雨の日も、いちばん遠くから見える色が赤。だから「何よりも先に伝えたい止まれ」に赤が選ばれたの。道路より先に、鉄道の信号で世界の共通ルールになったと言われてるよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "黄色は赤の次に波長が長くて、遠くまで届く目立つ色。そして進めには、赤と最も見間違えにくい緑。3色は、人間の目と光の物理から逆算した、最強の組み合わせなんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "信号の3色、ぜんぶ理由があったのだ！適当に決めた色がひとつもないのだ！"
   - id: chapter2
     title: "LEDと、雪との戦い"
     background: m_b29b417e
@@ -109,7 +141,7 @@ scenes:
         emotion: normal
         text: "治安が悪すぎるよ。正解は、西日。夕方の強い光がレンズの奥の反射鏡に当たって、全部の色が点いて見えちゃうことがあったの。疑似点灯という現象だよ。"
         video: assets/clips/led_snow.mp4
-        video_span: 7
+        video_span: 10
         video_full: true
       - speaker: tsumugi
         emotion: normal
@@ -117,6 +149,15 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "完全上位互換なのだ！弱点なしの優等生なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "光り方の仕組みから別物だからね。電球は、中の金属の糸を2000度以上に熱して、その熱のオマケとして光らせてる。電気のほとんどが、光じゃなくて熱に化けてるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "照明というより、ほぼストーブなのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "一方のLEDは、半導体の中で電気のエネルギーを直接光に変える。ムダな熱がほとんど出ないから、電気は電球のおよそ6分の1。寿命も、半年から1年で切れてた電球に対して、6年から8年もつと言われてるよ。"
       - speaker: tsumugi
         emotion: normal
         text: "と思うでしょ。ところが、たったひとつだけ電球に負けるところがあったの。LEDは、ほとんど熱くならないこと。"
@@ -179,6 +220,18 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "だから連打しても早くはならない。1回押したら、信号を信じて待ってあげてね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも先生、その「いいタイミング」は誰が決めてるのだ？信号の中に、小さい司令官でも住んでるのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "司令官はいないけど、道路の下に秘密があるよ。車道の下には金属探知機の親戚みたいなコイルが埋まっていて、上を車が通ると気づける場所が多いの。車の量を測って、信号どうしが連携して青の配分を変えてるんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "歩行者の青の長さにも、ちゃんと計算式がある。基本は、横断歩道の長さを秒速1メートルで歩いて渡りきれる時間。お年寄りや子どもが多い場所では、さらに長めにされてると言われてるよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1秒に1メートル。あの青の長さ、ボクの歩く速さまで計算されてたのだ！"
   - id: history
     title: "爆発から始まった信号機"
     background: m_29004165

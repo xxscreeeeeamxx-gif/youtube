@@ -103,6 +103,27 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "縁の下どころか、床下の力持ちだったのだ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "そういえば、あの段々は斜めの坂を上ってるのに、なんで踏む面はずっと水平のままなのだ？坂なら傾くはずなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこがステップ台車のいちばん賢いところだよ。実はステップの車輪は前と後ろに2組あって、それぞれが別々のレールの上を走ってるの。"
+        video: assets/clips/step_rail.mp4
+        video_span: 3
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "その2本のレールの高さの差が場所ごとに設計されていて、坂の途中では階段の形に、乗り口と降り口では平らになるように、ステップの姿勢をひとりでに整えてくれる。だから何もしなくても、踏む面はいつも水平なんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "レールが2本あるだけで、階段になったり平らになったりするのだ！？設計した人、天才なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それと、停電したときの備えもよくできてるよ。エスカレーターのブレーキは、電気が切れると自動でバネの力で効く作りが基本と言われてるの。電気がないと動けない、じゃなくて、電気がないと止まる、にしてある。"
+      - speaker: zundamon
+        emotion: happy
+        text: "困ったときは「止まる」に倒れる設計なのだ！安心なのだ！"
   - id: chapter2
     title: "片側空け、誰も得しない説"
     background: m_5f2ff041
@@ -125,7 +146,7 @@ scenes:
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "まず輸送力。急ぐ人のために空けた片側は、実際にはほとんどガラガラ。全員が2列で立って詰めたほうが、同じ時間でたくさんの人を運べるという実験結果が出てるんだよ。"
+        text: "まず輸送力。急ぐ人のために空けた片側は、実際にはほとんどガラガラ。全員が2列で立って詰めたほうが、同じ時間に運べる人数が3割近く増えたという海外の実験結果もあるんだよ。"
       - speaker: zundamon
         emotion: sad
         text: "みんなのために空けたのに、みんなが遅くなってたのだ……。切なすぎる助け合いなのだ……。"

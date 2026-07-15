@@ -89,6 +89,15 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "開ける係と、見張る係。ドアはチームで働いてたのだ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でもセンサーは、跳ね返りの変化にどうやって「気づく」のだ？目玉があるわけじゃないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "中に、光を電気に変える小さな部品が入ってるの。跳ね返ってくる赤外線が強いほど、流れる電気も強くなる。その電気の量をずっと見張っていて、急に変わった瞬間に「何か来た」と判定してるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "光を電気の数字にして、数字の変化を見てたのだ！機械の目は、数字でできてるのだ！"
   - id: chapter2
     title: "無視される4つの理由"
     background: m_7da37780

@@ -287,6 +287,9 @@ scenes:
         text: "押し入れのUSBメモリに入れた思い出、永遠じゃなかったのだ……。"
       - speaker: tsumugi
         emotion: normal
+        text: "ちなみに書き換えの上限は、種類にもよるけど数千回から数万回ほどと言われてるよ。普通に使うぶんには何年も持つけど、無限じゃないことは覚えておいてね。"
+      - speaker: tsumugi
+        emotion: normal
         text: "だから大事なデータは、USBメモリ1本に任せないこと。もう1箇所、別の場所にも必ずコピーしておく。これが鉄則だよ。"
         video: assets/clips/server_room.mp4
         video_full: true

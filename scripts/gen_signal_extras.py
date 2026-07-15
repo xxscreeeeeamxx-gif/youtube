@@ -222,49 +222,79 @@ def color_ao(d, t):
 
 
 # ------------------------------------------------------------------
-# 2) led_snow — LEDと雪
-#    LED=11.39 / (Z=24.45) / 熱=28.99 / (Z=36.6) / 雪=41.41 / 縦型=51.89 / DUR 64.5
+# 2) led_snow — LEDと雪（10カット版）
+#    LED=11.39 / 熱の仕組み=28.99 / 負け=59.3 / 雪=71.72 / 縦型=82.2 / DUR 94.6
 # ------------------------------------------------------------------
-L_LED, L_HEAT, L_SNOW, L_TATE = 11.39, 28.99, 41.41, 51.89
+L_LED, L_HEATWHY, L_LOSE, L_SNOW, L_TATE = 11.39, 28.99, 59.3, 71.72, 82.2
 
 
 def led_snow(d, t):
     if t < L_LED:
         _caption(d, "電球式の弱点 = 西日で全部点いて見える")
         _signal3(d, 760, 560, on="ALL")
-        # 西日
         k = 0.6 + 0.4 * math.sin(t * 2)
         sun_x, sun_y = 1560, 320
         d.ellipse([sun_x - 70, sun_y - 70, sun_x + 70, sun_y + 70], fill=(255, 180, 90))
         for i in range(5):
             ang = math.pi * (0.75 + 0.09 * i)
-            d.line([sun_x, sun_y, sun_x + 600 * math.cos(ang), sun_y - 600 * math.sin(ang) * -1],
+            d.line([sun_x, sun_y, sun_x + 600 * math.cos(ang), sun_y + 600 * math.sin(ang)],
                    fill=(255, 190, 110, int(140 * k)), width=8)
         ctext(d, 760, 760, "どれが点いてるか、わからない（疑似点灯）", font(36), RED)
         return
-    if t < L_HEAT:
+    if t < L_HEATWHY:
         _caption(d, "LED化 = 反射に騙されない")
         _signal3(d, 640, 560, on="G")
-        # LEDの粒々
         for i in range(24):
             ang = i / 24 * 2 * math.pi
             rr = 40 * (0.5 + 0.5 * (i % 2))
             d.ellipse([640 - 150 + rr * math.cos(ang) - 4, 560 + rr * math.sin(ang) - 4,
                        640 - 150 + rr * math.cos(ang) + 4, 560 + rr * math.sin(ang) + 4],
                       fill=(180, 255, 220))
-        feats = [("疑似点灯なし", GREEN), ("電気は大幅節約", ACCENT), ("球切れ交換ほぼ不要", AMBER)]
+        feats = [("疑似点灯なし", GREEN), ("球切れ交換ほぼ不要", AMBER)]
         for i, (s_, col) in enumerate(feats):
             kk = ease((t - L_LED - 1.0 - i * 0.8) / 0.5)
             if kk <= 0:
                 continue
-            d.rounded_rectangle([1080, 400 + i * 130, 1080 + 520 * kk, 500 + i * 130],
+            d.rounded_rectangle([1080, 430 + i * 140, 1080 + 520 * kk, 540 + i * 140],
                                 radius=16, fill=(24, 34, 54, int(255 * kk)))
             if kk > 0.7:
-                d.text((1110, 428 + i * 130), s_, font=font(36), fill=col)
+                d.text((1110, 462 + i * 140), s_, font=font(36), fill=col)
+        return
+    if t < L_LOSE:
+        _caption(d, "電球 = 熱のオマケで光る / LED = 直接光る")
+        # 左: 電球（フィラメント＋熱の波）
+        cx = 560
+        d.ellipse([cx - 130, 400, cx + 130, 660], outline=(230, 220, 200), width=8)
+        fil = 0.6 + 0.4 * math.sin(t * 6)
+        d.line([cx - 50, 560, cx - 15, 500, ], fill=(255, 170 + int(70 * fil), 80), width=10)
+        d.line([cx - 15, 500, cx + 15, 560], fill=(255, 170 + int(70 * fil), 80), width=10)
+        d.line([cx + 15, 560, cx + 50, 500], fill=(255, 170 + int(70 * fil), 80), width=10)
+        for j in range(3):
+            yy = 360 - ((t * 50 + j * 40) % 120)
+            d.arc([cx - 60 + j * 45, yy, cx - 20 + j * 45, yy + 50],
+                  start=200, end=340, fill=(255, 130, 90, 200), width=6)
+        ctext(d, cx, 700, "金属の糸を2000度以上に加熱", font(32), RED)
+        ctext(d, cx, 750, "電気のほとんどが熱に化ける", font(30), GRAY)
+        # 右: LED（半導体→光の矢印）
+        cx2 = 1360
+        d.rounded_rectangle([cx2 - 110, 500, cx2 + 110, 600], radius=12,
+                            fill=(30, 42, 60), outline=GREEN, width=5)
+        ctext(d, cx2, 528, "半導体", font(36), GREEN)
+        kk = 0.5 + 0.5 * math.sin(t * 3)
+        for j in range(3):
+            ang = -math.pi / 2 + (j - 1) * 0.5
+            x2, y2 = cx2 + 150 * math.cos(ang), 500 + 130 * math.sin(ang)
+            d.line([cx2, 500, x2, y2], fill=(180, 255, 220, int(255 * kk)), width=8)
+        ctext(d, cx2, 700, "電気を直接、光に変える", font(32), GREEN)
+        k2 = ease((t - L_HEATWHY - 16.0) / 0.8)
+        if k2 > 0:
+            d.rounded_rectangle([660, 840, 660 + 620 * k2, 960], radius=18,
+                                fill=(24, 34, 54, int(255 * k2)))
+            if k2 > 0.7:
+                ctext(d, 960, 862, "電気は約6分の1・寿命6〜8年", font(36), AMBER)
         return
     if t < L_SNOW:
         _caption(d, "たったひとつの負け = 熱くならない")
-        # 電球 vs LED 温度
         for i, (label, hot) in enumerate((("電球", True), ("LED", False))):
             cx = 640 + i * 640
             _signal3(d, cx, 540, on="G", s=0.9)
@@ -282,7 +312,6 @@ def led_snow(d, t):
         _caption(d, "吹雪の日、LED信号が見えなくなる")
         snow_k = ease((t - L_SNOW) / 4.0)
         _signal3(d, 960, 560, on="G", snow=snow_k)
-        # 降雪
         rr = random.Random(int(t * 5))
         for _ in range(60):
             x, y = rr.uniform(0, W), rr.uniform(220, H)
@@ -292,7 +321,6 @@ def led_snow(d, t):
         return
     _caption(d, "雪国の答え = 縦型（積もる面積を減らす）")
     k = ease((t - L_TATE) / 1.5)
-    # 横型がフェードアウト、縦型が登場
     if k < 1.0:
         _signal3(d, 600, 540, on="G", s=0.85, snow=0.9)
         ctext(d, 600, 700, "横型 = 雪の受け皿が広い", font(32), RED)
@@ -300,6 +328,90 @@ def led_snow(d, t):
     if k > 0.7:
         ctext(d, 1280, 800, "縦型 = 上面が最小限", font(34), GREEN)
         ctext(d, W / 2, 920, "深いひさし派・ツルツルのフラット派もいる", font(34), GRAY)
+
+
+# ------------------------------------------------------------------
+# 2.5) wavelength_red — なぜ赤が止まれか
+#    散乱=9.83 / 夕日=20.04 / 鉄道=34.18 / 3色=47.73 / DUR 68.2
+# ------------------------------------------------------------------
+R_SCAT, R_SUNSET, R_RAIL, R_THREE = 9.83, 20.04, 34.18, 47.73
+
+
+def _wave(d, x0, x1, y, wavelength, col, amp=26, width=7, t=0.0):
+    pts = []
+    x = x0
+    while x <= x1:
+        pts.append((x, y + amp * math.sin((x - x0) / wavelength * 2 * math.pi + t * 4)))
+        x += 6
+    d.line(pts, fill=col, width=width, joint="curve")
+
+
+def wavelength_red(d, t):
+    if t < R_SCAT:
+        _caption(d, "光には「波長」がある")
+        _spectrum(d, 360, 1560, 320, 80)
+        _wave(d, 460, 1460, 560, 260, SIG_R, t=t)
+        ctext(d, 960, 620, "赤 = 波長がいちばん長い（ゆったりした波）", font(34), SIG_R)
+        _wave(d, 460, 1460, 760, 80, (110, 150, 255), amp=18, t=t)
+        ctext(d, 960, 820, "青 = 波長が短い（細かい波）", font(34), (110, 150, 255))
+        return
+    if t < R_SUNSET:
+        _caption(d, "波長が長いほど、散らばらずに遠くへ届く")
+        # チリの中を進む2本の光
+        rr = random.Random(7)
+        for _ in range(50):
+            x, y = rr.uniform(500, 1500), rr.uniform(420, 820)
+            d.ellipse([x - 5, y - 5, x + 5, y + 5], fill=(120, 130, 150, 140))
+        d.line([300, 540, 1620, 540], fill=(*SIG_R, 240), width=10)
+        ctext(d, 1700, 520, "赤", font(40), SIG_R)
+        # 青は途中で散乱
+        k = ((t - R_SCAT) * 0.5) % 1.0
+        bx = 300 + 700 * min(k * 2, 1)
+        d.line([300, 700, min(bx, 1000), 700], fill=(110, 150, 255, 240), width=10)
+        if k > 0.5:
+            for i in range(6):
+                ang = i / 6 * 2 * math.pi
+                d.line([1000, 700, 1000 + 90 * math.cos(ang), 700 + 90 * math.sin(ang)],
+                       fill=(110, 150, 255, 160), width=5)
+        ctext(d, 1700, 680, "青", font(40), (110, 150, 255))
+        ctext(d, 960, 880, "チリや水滴にぶつかると、青は散らばって消える", font(34), GRAY)
+        return
+    if t < R_RAIL:
+        _caption(d, "夕日が赤いのも、同じ物理")
+        # 地平線と夕日
+        d.rectangle([0, 700, W, 1080], fill=(30, 30, 44))
+        d.ellipse([840, 600, 1080, 840], fill=(255, 120, 70))
+        # 大気を長く通る光
+        d.line([960, 700, 300, 460], fill=(255, 120, 70, 220), width=10)
+        ctext(d, 560, 380, "空気の中を長く進む → 赤だけ生き残る", font(34), (255, 150, 100))
+        grad = [(255, 140, 80), (255, 100, 70), (200, 70, 80)]
+        for i, c in enumerate(grad):
+            d.rectangle([0, 700 - (3 - i) * 60, W, 700 - (2 - i) * 60], fill=(*c, 60))
+        return
+    if t < R_THREE:
+        _caption(d, "「何よりも伝えたい止まれ」に、赤")
+        # 鉄道の赤ランプ
+        d.rectangle([880, 400, 920, 860], fill=(70, 80, 100))
+        blink = 0.6 + 0.4 * math.sin(t * 3)
+        d.ellipse([820, 300, 980, 460], fill=(int(255 * blink), 60, 50))
+        d.ellipse([800, 280, 1000, 480], outline=(*SIG_R, int(150 * blink)), width=8)
+        ctext(d, 900, 900, "鉄道の信号から、世界共通のルールに", font(36), GRAY)
+        return
+    _caption(d, "3色は、目と物理からの逆算")
+    items = [("赤 = 止まれ", "いちばん遠くまで届く", SIG_R),
+             ("黄 = 注意", "赤の次に波長が長く目立つ", SIG_Y),
+             ("緑 = 進め", "赤と最も見間違えにくい", SIG_G)]
+    for i, (s1, s2, col) in enumerate(items):
+        kk = ease((t - R_THREE - i * 0.6) / 0.5)
+        if kk <= 0:
+            continue
+        x = 430 + i * 530
+        d.rounded_rectangle([x - 230, 420, x + 230, 660], radius=24,
+                            fill=(24, 34, 54, int(255 * kk)))
+        if kk > 0.5:
+            d.ellipse([x - 50, 450, x + 50, 550], fill=col)
+            ctext(d, x, 566, s1, font(40), col)
+            ctext(d, x, 616, s2, font(26), GRAY)
 
 
 # ------------------------------------------------------------------
@@ -417,7 +529,8 @@ def era_1930(d, t):
 
 CLIPS = {
     "color_ao": (80.3, lambda: color_ao),
-    "led_snow": (64.5, lambda: led_snow),
+    "led_snow": (94.6, lambda: led_snow),
+    "wavelength_red": (68.2, lambda: wavelength_red),
     "button_wait": (17.6, lambda: button_wait),
     "era_1868": (28.2, lambda: era_1868),
     "era_1930": (12.2, lambda: era_1930),
