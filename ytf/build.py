@@ -173,12 +173,24 @@ def _render_one_segment(
         inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.png,
                    "-stream_loop", "-1", "-i", item.video]
         if item.v_full:
-            fc = (
-                f"[1:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-                f"setpts=PTS/{spd},trim=start={off:.3f},setpts=PTS-STARTPTS,fps={fps},"
-                f"format=yuv420p,setsar=1[clip];"
-                f"[clip][0:v]overlay=0:0,format=yuv420p,setsar=1[v0]"
-            )
+            if h > w:
+                # 縦（ショート）: 16:9素材をクロップすると図解の左右が消えるので、
+                # 幅フィットの帯として上寄りに置き、上下は地色で埋める
+                band_y = int(h * 0.26)
+                fc = (
+                    f"[1:v]scale={w}:-2,setpts=PTS/{spd},"
+                    f"trim=start={off:.3f},setpts=PTS-STARTPTS,fps={fps},"
+                    f"format=yuv420p,setsar=1[fit];"
+                    f"[fit]pad={w}:{h}:0:{band_y}:0x080C16[clip];"
+                    f"[clip][0:v]overlay=0:0,format=yuv420p,setsar=1[v0]"
+                )
+            else:
+                fc = (
+                    f"[1:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
+                    f"setpts=PTS/{spd},trim=start={off:.3f},setpts=PTS-STARTPTS,fps={fps},"
+                    f"format=yuv420p,setsar=1[clip];"
+                    f"[clip][0:v]overlay=0:0,format=yuv420p,setsar=1[v0]"
+                )
         else:
             x0, y0, x1, y1 = item.box
             bw, bh = x1 - x0, y1 - y0
@@ -277,7 +289,9 @@ def render_segments(
             vsig += f"|trans:{item.trans_png}:{item.trans_lead}:fade2"
         if item.stat:
             vsig += f"|stat:{item.stat}"
-        key_src = (f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}|"
+        # 縦はv_fullのフィルタが違う（vfit1=帯フィット導入時のバージョン）
+        vlay = "|vfit1" if h > w else ""
+        key_src = (f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}{vlay}|"
                    f"{item.m_start}:{item.m_total}|{vsig}|{enc[0]}")
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
         rel = f"frames/seg_{key}.mp4"

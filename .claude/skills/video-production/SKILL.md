@@ -124,6 +124,9 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
   （例: 東京=左に立つ→圧を受けるのは「右に立ったとき」）。事実確認メモと突き合わせる
 - BGM切替: ビルドログの「BGM Nリージョン」と、境界時刻が章頭と一致しているかを
   `collect_bgm_regions` の出力で確認
+- **ショートも必ずフレーム検証**: out/short_hook.mp4 から3枚以上抽出して目視。
+  縦動画のv_fullは「幅フィット帯」表示（build.pyのvfit1）。図解・キャプションが
+  切れていないか、立ち絵・字幕と帯が重なっていないかを確認する
 
 ## 素材調達
 
