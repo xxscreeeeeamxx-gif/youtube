@@ -22,7 +22,6 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "夜食のカップ麺なのだ！"
-        se: pop
         video: assets/clips/cup_pour.mp4
         video_full: true
         video_speed: 0.7
@@ -35,50 +34,25 @@ scenes:
       - speaker: zundamon
         emotion: angry
         text: "2分で開けるのだ！"
-        se: don
       - speaker: zundamon
         emotion: sad
         text: "バリバリなのだ……。"
-        se: bubu
         pause_after: 0.5
       - speaker: tsumugi
         emotion: normal
         text: "だから言ったのに。"
       - speaker: reimu
-        text: "その3分を、発明した男がいます。"
+        text: "カップ麺にお湯を注いで、3分。"
+      - speaker: reimu
+        text: "この当たり前を、発明した男がいます。"
       - speaker: reimu
         text: "48歳で、全財産を失った男です。"
-        se: jaan
         telops:
           - {text: "全財産を失った48歳", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "話が重いのだ！？"
-      - speaker: reimu
-        text: "本日は、再現ドラマでお送りします。"
-      - speaker: reimu
-        text: "主演、ずんだもんさん。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "ボクなのだ！？"
-        se: pinpon
-      - speaker: zundamon
-        emotion: happy
-        text: "名札まで付いてるのだ！"
-      - speaker: tsumugi
-        emotion: happy
-        text: "わたしは奥さん役ね。"
-      - speaker: tsumugi
-        emotion: happy
-        text: "よろしく、[百福|ももふく]さん。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "……あ、ボクのことなのだ。"
-      - speaker: reimu
-        text: "安藤[百福|ももふく]。インスタントラーメンの父。"
-      - speaker: reimu
-        text: "世界を変えた夜食の物語、開演です。"
-        pause_after: 0.5
+        pause_after: 0.4
   # ================= 1957 年号カード =================
   - id: y1957
     title: "1957・すべてを失う"
@@ -167,14 +141,12 @@ scenes:
       - speaker: zundamon
         emotion: sad
         text: "具が、ないのだ……。"
-        se: bubu
       - speaker: tsumugi
         emotion: normal
         text: "明日は梅干しをのせてあげる。"
       - speaker: zundamon
         emotion: happy
         text: "明日が楽しみなのだ！"
-        se: pinpon
       - speaker: reimu
         text: "この楽観夫婦が、世界を変えます。"
         pause_after: 0.6
