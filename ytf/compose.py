@@ -45,6 +45,10 @@ def layout_for(cfg: Config, vertical: bool) -> Layout:
     return Layout(w, h, False, char_h=640, header_font=54, slide_font=46)
 
 
+# 再現ドラマの立ち絵倍率。お手本準拠で画面の主役になる大きさ（腰上構図ぎみ）
+DRAMA_SCALE = 1.42
+
+
 class Composer:
     def __init__(self, cfg: Config, proj: Project, vertical: bool = False):
         self.cfg = cfg
@@ -287,8 +291,10 @@ class Composer:
         telops: list[Telop] | None = None,
         with_telops: bool = True,  # False ならテロップは焼かない（別レイヤーで動かす用）
         stage: list[dict] | None = None,   # 再現ドラマ: 舞台配置 [{who,emotion,x,flip,scale,tag}]
-        bubble: dict | None = None,        # 再現ドラマ: 話者の吹き出し {text, x}
+        bubble: dict | None = None,        # 再現ドラマ: 話者の吹き出し {text, x, color}
         caption: str | None = None,        # 再現ドラマ: ナレーション字幕（下部）
+        actor: str | None = None,          # 再現ドラマ: 基底に描かず後段で動かす話者
+        bubble_layered: bool = False,      # True なら吹き出しは基底に描かない（最前面レイヤー）
     ) -> Image.Image:
         if not with_telops:
             telops = []
@@ -307,17 +313,18 @@ class Composer:
         if stage is not None:
             # ---- 再現ドラマ: 舞台配置（暗転なし・自由なx位置・名札） ----
             for m in stage:
-                sp = self._sprite(m["who"], m.get("emotion", "normal"), True,
-                                  flip_override=m.get("flip"),
-                                  scale_mult=float(m.get("scale", 1.0)))
-                x = int(self.lay.w * float(m["x"]) - sp.width / 2)
-                x = max(-sp.width // 3, min(x, self.lay.w - sp.width * 2 // 3))
-                y = self.lay.h - sp.height
+                sp, x, y = self.drama_actor(m)
+                if actor is not None and m["who"] == actor:
+                    # 話者は build 側で動く別レイヤー。名札だけ基底に静止で描く
+                    if m.get("tag"):
+                        self._draw_tag(canvas, m["tag"], x + sp.width // 2, y)
+                    continue
                 canvas.paste(sp, (x, y), sp)
                 if m.get("tag"):
                     self._draw_tag(canvas, m["tag"], x + sp.width // 2, y)
-            if bubble:
-                self._draw_bubble(canvas, bubble["text"], float(bubble["x"]))
+            if bubble and not bubble_layered:
+                self._draw_bubble(canvas, bubble["text"], float(bubble["x"]),
+                                  edge=bubble.get("color"))
             if caption:
                 self._draw_caption(canvas, caption)
             for t in telops or []:
@@ -350,6 +357,24 @@ class Composer:
             self._draw_telop(canvas, t)
         return canvas if fg_only else canvas.convert("RGB")
 
+    def bubble_layer(self, bubble: dict) -> Image.Image:
+        """吹き出しだけの透過レイヤー（動く立ち絵より前面に重ねる用）。"""
+        canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
+        self._draw_bubble(canvas, bubble["text"], float(bubble["x"]),
+                          edge=bubble.get("color"))
+        return canvas
+
+    def drama_actor(self, m: dict) -> tuple[Image.Image, int, int]:
+        """再現ドラマの立ち絵1体ぶんの (画像, x, y)。基底描画と動くレイヤーで共用。"""
+        sp = self._sprite(m["who"], m.get("emotion", "normal"), True,
+                          flip_override=m.get("flip"),
+                          scale_mult=float(m.get("scale", 1.0)) * DRAMA_SCALE)
+        x = int(self.lay.w * float(m["x"]) - sp.width / 2)
+        x = max(-sp.width // 3, min(x, self.lay.w - sp.width * 2 // 3))
+        # 少し沈めて腰上構図に寄せる（足元5%はフレーム外）
+        y = self.lay.h - int(sp.height * 0.95)
+        return sp, x, y
+
     def _draw_tag(self, canvas: Image.Image, text: str, cx: int, y_top: int) -> None:
         """キャラ頭上の名札（オレンジの小箱・白フチ）。"""
         d = ImageDraw.Draw(canvas, "RGBA")
@@ -362,8 +387,10 @@ class Composer:
         d.text((x0 + 18, y0 + 7), text, font=f, fill=(255, 255, 255),
                stroke_width=2, stroke_fill=(90, 40, 8))
 
-    def _draw_bubble(self, canvas: Image.Image, text: str, x_frac: float) -> None:
-        """話者の上に出す吹き出し（白地・緑フチ・黒太字）。短文前提で最大3行。"""
+    def _draw_bubble(self, canvas: Image.Image, text: str, x_frac: float,
+                     edge: str | None = None) -> None:
+        """話者の上に出す吹き出し（白地・話者色フチ・黒太字）。短文前提で最大3行。"""
+        edge_rgb = _hex_rgb(edge) if edge else (46, 174, 92)
         text = split_reading(text)[0]
         d = ImageDraw.Draw(canvas, "RGBA")
         f = self.font(38)
@@ -380,11 +407,11 @@ class Composer:
         x0 = max(16, min(cx - bw // 2, self.lay.w - bw - 16))
         y0 = 120
         d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], radius=18,
-                            fill=(255, 255, 255, 245), outline=(46, 174, 92), width=5)
+                            fill=(255, 255, 255, 245), outline=edge_rgb, width=5)
         # しっぽ（話者の方向へ）
         tip_x = max(x0 + 30, min(cx, x0 + bw - 30))
         d.polygon([(tip_x - 16, y0 + bh - 2), (tip_x + 16, y0 + bh - 2),
-                   (tip_x, y0 + bh + 26)], fill=(46, 174, 92))
+                   (tip_x, y0 + bh + 26)], fill=edge_rgb)
         d.polygon([(tip_x - 10, y0 + bh - 4), (tip_x + 10, y0 + bh - 4),
                    (tip_x, y0 + bh + 16)], fill=(255, 255, 255))
         for i, ln in enumerate(lines):
@@ -495,6 +522,12 @@ class CutRender:
     # シーン単位の連続モーション（1画像を1方向にゆっくり動かす）用のタイムライン
     m_start: float = 0.0                     # シーン先頭からこのカット開始までの秒数
     m_total: float = 0.0                     # シーン全体の秒数（0ならこのカット単独）
+    # 再現ドラマ: 話者立ち絵の動くレイヤー（跳ね・ジャンプ・震え）
+    actor_png: str | None = None             # 話者立ち絵の透過PNG（frames/相対）
+    actor_x: int = 0                         # 静止時の貼り付け左上x
+    actor_y: int = 0                         # 静止時の貼り付け左上y
+    actor_anim: str = "talk"                 # talk / jump / shake
+    bubble_png: str | None = None            # 吹き出しの透過PNG（立ち絵より前面）
 
 
 def _resolve_clip(cfg: Config, proj: Project, rel: str) -> str:
@@ -687,7 +720,17 @@ def render_frames(
                 caption = cut.text
             else:
                 mem = next((m for m in scene.stage if m.who == cut.speaker), None)
-                bubble = {"text": cut.text, "x": mem.x if mem else 0.5}
+                bubble = {"text": cut.text, "x": mem.x if mem else 0.5,
+                          "color": cfg.character(cut.speaker).get("color")}
+
+        # 再現ドラマ: 話者の立ち絵は基底から抜いて動くレイヤーにする（横動画のみ）
+        actor = None
+        actor_member = None
+        if drama and not vertical and cut.speaker != narrator and stage_list:
+            actor_member = next((m for m in stage_list if m["who"] == cut.speaker),
+                                None)
+            if actor_member:
+                actor = cut.speaker
 
         header = scene.title or (script.meta.title if vertical else "")
         # ベースはテロップ抜きで合成（テロップは別レイヤーで動かす）
@@ -695,7 +738,7 @@ def render_frames(
             [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
              bool(sp), card, full, fg_only, sub, sprite_sig,
-             stage_list, bubble, caption],
+             stage_list, bubble, caption, actor],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
@@ -706,8 +749,38 @@ def render_frames(
                                  cut.image, video_card=card,
                                  fg_only=fg_only, with_telops=False,
                                  stage=stage_list, bubble=bubble,
-                                 caption=caption).save(path)
+                                 caption=caption, actor=actor,
+                                 bubble_layered=bool(actor)).save(path)
         manifest_used.add(key)
+
+        # 話者立ち絵レイヤー（透過PNG）と動き。吹き出しは立ち絵より前面のレイヤーに
+        # 分離する（ジャンプ等で立ち絵が自分の吹き出しを隠さないように）
+        actor_png = None
+        actor_x = actor_y = 0
+        actor_anim = "talk"
+        bubble_png = None
+        if actor_member:
+            akey = hashlib.sha1(json.dumps(
+                [actor_member, sprite_sig, "actor1"],
+                ensure_ascii=False, sort_keys=True, default=str,
+            ).encode()).hexdigest()[:16]
+            actor_png = f"frames/actor_{akey}.png"
+            ap = proj.root / actor_png
+            spimg, actor_x, actor_y = composer.drama_actor(actor_member)
+            if akey not in manifest_used and not ap.exists():
+                spimg.save(ap)
+            manifest_used.add(akey)
+            actor_anim = {"surprised": "jump", "angry": "shake"}.get(
+                cut.emotion, "talk")
+            if bubble:
+                bkey = hashlib.sha1(json.dumps(
+                    [bubble, "bub1"], ensure_ascii=False, sort_keys=True,
+                    default=str).encode()).hexdigest()[:16]
+                bubble_png = f"frames/bub_{bkey}.png"
+                bp = proj.root / bubble_png
+                if bkey not in manifest_used and not bp.exists():
+                    composer.bubble_layer(bubble).save(bp)
+                manifest_used.add(bkey)
 
         # テロップレイヤー（あれば透過PNGを別に生成）
         telop_png = None
@@ -752,5 +825,10 @@ def render_frames(
             stat=cut.stat.model_dump() if cut.stat else None,
             m_start=round(shot_start.get(ct.index, 0.0), 3),
             m_total=round(shot_total.get(shot_id[ct.index], 0.0), 3),
+            actor_png=actor_png,
+            actor_x=actor_x,
+            actor_y=actor_y,
+            actor_anim=actor_anim,
+            bubble_png=bubble_png,
         ))
     return result

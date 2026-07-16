@@ -1,0 +1,180 @@
+# momofuku v2形式の冒頭90秒テスト（フック+1957）。承認されたら全編をこの形式で作り直す。
+# v1からの変更: 超短文ラリー(中央値10字)・間0.15s・立ち絵1.42倍+演技(跳ね/ジャンプ/震え)・
+# イラスト背景・SE・吹き出しは話者色フチ
+meta:
+  title: "全財産を失った48歳、裏庭の小屋で世界を変える【ゆっくり再現ドラマ】"
+  slug: "momofuku-v2"
+  summary: "v2形式テスト"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: saikensha, label: "債権者", voice: 13, pitch: -0.05, hair: short}
+scenes:
+  # ================= フック（現代・夜のキッチン） =================
+  - id: hook
+    title: ""
+    background: il_kitchen_night
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.30, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "夜食のカップ麺なのだ！"
+        se: pop
+        video: assets/clips/cup_pour.mp4
+        video_full: true
+        video_speed: 0.7
+      - speaker: zundamon
+        emotion: normal
+        text: "待ち時間は、3分なのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……長いのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "2分で開けるのだ！"
+        se: don
+      - speaker: zundamon
+        emotion: sad
+        text: "バリバリなのだ……。"
+        se: bubu
+        pause_after: 0.5
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから言ったのに。"
+      - speaker: reimu
+        text: "その3分を、発明した男がいます。"
+      - speaker: reimu
+        text: "48歳で、全財産を失った男です。"
+        se: jaan
+        telops:
+          - {text: "全財産を失った48歳", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "話が重いのだ！？"
+      - speaker: reimu
+        text: "本日は、再現ドラマでお送りします。"
+      - speaker: reimu
+        text: "主演、ずんだもんさん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクなのだ！？"
+        se: pinpon
+      - speaker: zundamon
+        emotion: happy
+        text: "名札まで付いてるのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "わたしは奥さん役ね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "よろしく、[百福|ももふく]さん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あ、ボクのことなのだ。"
+      - speaker: reimu
+        text: "安藤[百福|ももふく]。インスタントラーメンの父。"
+      - speaker: reimu
+        text: "世界を変えた夜食の物語、開演です。"
+        pause_after: 0.5
+  # ================= 1957 年号カード =================
+  - id: y1957
+    title: "1957・すべてを失う"
+    background: il_washitsu_1957
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "百福", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1957年、大阪。"
+        video: assets/clips/era_m1957.mp4
+        video_full: true
+      - speaker: reimu
+        text: "[百福|ももふく]、47歳。"
+  # ================= 1957 破綻 =================
+  - id: y1957b
+    title: ""
+    background: il_washitsu_1957
+    stage:
+      - {who: zundamon, x: 0.18, tag: "百福", flip: true}
+      - {who: saikensha, x: 0.52}
+      - {who: tsumugi, x: 0.86, tag: "仁子"}
+    cuts:
+      - speaker: saikensha
+        text: "財産は、全部いただきます。"
+        se: don
+      - speaker: zundamon
+        emotion: surprised
+        text: "全部なのだ！？"
+      - speaker: saikensha
+        text: "全部です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "貯金もなのだ！？"
+      - speaker: saikensha
+        text: "はい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "事業もなのだ！？"
+      - speaker: saikensha
+        text: "はい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "家もなのだ！？"
+      - speaker: saikensha
+        text: "……お住まいは残ります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "やったのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "喜ぶところじゃないよ。"
+      - speaker: reimu
+        text: "引き受けた信用組合が、破綻したのです。"
+      - speaker: reimu
+        text: "47歳、無一文。"
+        pause_after: 0.4
+      - speaker: zundamon
+        emotion: sad
+        text: "現代語で言うと、詰みなのだ……。"
+        se: oti
+        pause_after: 0.5
+  # 債権者は退場して夫婦の場面に
+  - id: y1957c
+    title: ""
+    background: il_washitsu_1957
+    stage:
+      - {who: zundamon, x: 0.24, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "仁子"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "命までは、取られてないよ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ごはんにしよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "食べるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日はお粥だけどね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "具が、ないのだ……。"
+        se: bubu
+      - speaker: tsumugi
+        emotion: normal
+        text: "明日は梅干しをのせてあげる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日が楽しみなのだ！"
+        se: pinpon
+      - speaker: reimu
+        text: "この楽観夫婦が、世界を変えます。"
+        pause_after: 0.6

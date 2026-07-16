@@ -272,6 +272,9 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
         client.sync_dictionary(load_dictionary(cfg))
 
     default_pause = float(cfg.get("voicevox", "default_pause", default=0.3))
+    if getattr(script.meta, "mode", "talk") == "drama":
+        # 再現ドラマは短文ラリーの畳みかけが命。間を詰める
+        default_pause = float(cfg.get("voicevox", "drama_pause", default=0.15))
     # 同一セリフ・同一声設定のWAVはキャッシュ再利用（台本の一部修正後の再合成を高速化）
     cache_dir = proj.audio_dir / "cache"
     cache_dir.mkdir(parents=True, exist_ok=True)

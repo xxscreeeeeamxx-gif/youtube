@@ -223,7 +223,7 @@ def _render_one_segment(
             f"format=yuv420p,setsar=1[v0]"
         )
 
-    # オーバーレイを順に重ねる: テロップ → 数字アニメ → 章トランジション
+    # オーバーレイを順に重ねる: 話者立ち絵 → テロップ → 数字アニメ → 章トランジション
     cur = "[v0]"
     step = 0
 
@@ -231,6 +231,33 @@ def _render_one_segment(
         nonlocal step
         step += 1
         return f"[vov{step}]"
+
+    if item.actor_png:
+        # 再現ドラマ: 話者の立ち絵を時間式で動かす（喋り跳ね/ジャンプ/震え）
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.actor_png]
+        ax, ay = item.actor_x, item.actor_y
+        bob = f"{ay}-8*abs(sin(2*PI*2.2*t))"
+        if item.actor_anim == "jump":
+            xe = str(ax)
+            ye = f"if(lt(t,0.55),{ay}-150*sin(PI*t/0.55),{ay}-8*abs(sin(2*PI*2.2*(t-0.55))))"
+        elif item.actor_anim == "shake":
+            xe = f"{ax}+if(lt(t,0.7),7*sin(45*t),0)"
+            ye = bob
+        else:  # talk
+            xe = str(ax)
+            ye = bob
+        out = nxt()
+        fc += f";{cur}[{ti}:v]overlay=x='{xe}':y='{ye}':eval=frame,format=yuv420p{out}"
+        cur = out
+
+    if item.bubble_png:
+        # 吹き出しは動く立ち絵より前面に静止で重ねる
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.bubble_png]
+        out = nxt()
+        fc += f";{cur}[{ti}:v]overlay=0:0,format=yuv420p{out}"
+        cur = out
 
     if item.telop_png:
         ti = _count_inputs(inputs)
@@ -289,6 +316,11 @@ def render_segments(
             vsig += f"|trans:{item.trans_png}:{item.trans_lead}:fade2"
         if item.stat:
             vsig += f"|stat:{item.stat}"
+        if item.actor_png:
+            vsig += (f"|actor:{item.actor_png}:{item.actor_x}:{item.actor_y}:"
+                     f"{item.actor_anim}:av1")
+        if item.bubble_png:
+            vsig += f"|bub:{item.bubble_png}"
         # 縦はv_fullのフィルタが違う（vfit1=帯フィット導入時のバージョン）
         vlay = "|vfit1" if h > w else ""
         key_src = (f"{item.png}|{n}|{fps}|{item.motion}|{zoom}|{w}x{h}{vlay}|"
