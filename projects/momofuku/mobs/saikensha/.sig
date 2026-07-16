@@ -1,0 +1,1 @@
+債権者|short|none||v2

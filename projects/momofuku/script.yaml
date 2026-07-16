@@ -1,0 +1,655 @@
+# 11本目・再現ドラマ形式第1作。投稿前に必ず目視レビューすること。
+# 事実確認済み: 安藤百福1910年3月生まれ・1957年信用組合破綻で財産喪失(ヘッジ済み)・
+# 1958年8月25日チキンラーメン発売35円(うどん玉6円)・睡眠4時間365日・妻の天ぷらから
+# 瞬間油熱乾燥法・1961年以降製法特許を業界へ開放・1966年渡米で紙コップ+機内ナッツのアルミ蓋・
+# 1971年9月18日カップヌードル100円(袋麺25円)・銀座歩行者天国4時間2万食(ヘッジ)・
+# 1972年2月あさま山荘中継で普及・2005年宇宙食スペース・ラム(95歳)・2007年1月没96歳・
+# 昼食はほぼ毎日チキンラーメン・「人生に遅すぎるということはない」
+# 声: ナレーター=れいむ(AquesTalkPlayer/ゆっくり)・百福=ずんだもん・仁子=つむぎ・モブ=白キャラ
+meta:
+  title: "全財産を失った48歳、裏庭の小屋で世界を変える【ゆっくり再現ドラマ】"
+  slug: "momofuku"
+  summary: "カップ麺の3分を発明した男、安藤百福。48歳で全財産を失い、裏庭の小屋にこもった男はどうやって世界を変えたのか。チキンラーメン誕生からカップヌードル、95歳の宇宙食まで、ずんだもんが百福を演じる再現ドラマでお届けします。"
+  tags: ["安藤百福", "カップヌードル", "チキンラーメン", "再現ドラマ", "ゆっくり", "ずんだもん", "伝記"]
+  thumbnail:
+    top: "全財産を失った48歳"
+    bottom: "逆転の3分"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: saikensha, label: "債権者", voice: 13, pitch: -0.05, hair: short}
+    - {id: okusan, label: "奥さん", voice: 8, pitch: 0.06, hair: bun}
+    - {id: tonya, label: "問屋", voice: 13, pitch: -0.08, item: mustache}
+    - {id: buyer, label: "バイヤー", voice: 13, pitch: -0.02, item: hat}
+    - {id: taiin, label: "隊員", voice: 13, pitch: -0.10, hair: short}
+scenes:
+  # ================= フック(現代・ショート切出し) =================
+  - id: hook
+    title: ""
+    background: m_fb2338bb
+    bgm: shuffle_shuffle
+    short: true
+    stage:
+      - {who: zundamon, x: 0.30, flip: true}
+      - {who: tsumugi, x: 0.72}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "夜食のカップ麺にお湯を注いだのだ！待ち時間は3分なのだ！"
+        video: assets/clips/cup_pour.mp4
+        video_full: true
+        video_speed: 0.7
+      - speaker: zundamon
+        emotion: angry
+        text: "……でも腹ぺこのボクに3分は長すぎるのだ。2分で開けるのだ！"
+      - speaker: zundamon
+        emotion: sad
+        text: "バリッバリなのだ。麺の芯がガリガリ言ってるのだ……。"
+      - speaker: reimu
+        text: "その3分を発明したのは、ひとりの日本人です。"
+      - speaker: reimu
+        text: "彼は48歳で全財産を失い、裏庭の小屋にこもりました。"
+        telops:
+          - {text: "全財産を失った48歳", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "いきなり重いのだ！？夜食の話じゃなかったのだ！？"
+      - speaker: reimu
+        text: "本日は再現ドラマでお送りします。主演、ずんだもんさん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクが主役なのだ！？胸に名札まで付いてるのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "わたしは奥さん役ね。よろしく、[百福|ももふく]さん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰なのだ？……あ、ボクのことなのだ。"
+      - speaker: reimu
+        text: "インスタントラーメンの父、安藤[百福|ももふく]。"
+      - speaker: reimu
+        text: "世界を変えた夜食の物語、開演です。"
+  # ================= 1957 破綻 =================
+  - id: y1957
+    title: "1957・すべてを失う"
+    background: m_ee4a93b9
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.85, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "1957年、大阪。[百福|ももふく]、47歳。"
+        video: assets/clips/era_m1957.mp4
+        video_full: true
+      - speaker: reimu
+        text: "頼まれて引き受けた信用組合が破綻。財産のほぼ全てを失ったと言われています。"
+  - id: y1957b
+    title: ""
+    background: m_ee4a93b9
+    stage:
+      - {who: zundamon, x: 0.24, tag: "百福", flip: true}
+      - {who: saikensha, x: 0.55}
+      - {who: tsumugi, x: 0.82, tag: "仁子"}
+    cuts:
+      - speaker: saikensha
+        text: "というわけで、財産は全部いただきます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "全部！？貯金も、事業も、全部なのだ！？"
+      - speaker: saikensha
+        text: "全部です。お住まいは残ります。"
+      - speaker: zundamon
+        emotion: sad
+        text: "現代の言葉で言うと、詰みなのだ……。"
+      - speaker: reimu
+        text: "残ったのは自宅だけ。人生の折り返しでの、ゼロでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた。命まで取られたわけじゃないよ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ごはんにしよ。今日はお粥だけどね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "具が、ないのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "明日は梅干しをのせてあげるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日が楽しみになったのだ！"
+      - speaker: reimu
+        text: "この楽観的な夫婦が、ここから世界を変えていきます。"
+  # ================= 1958 決意と小屋 =================
+  - id: kessin
+    title: ""
+    background: m_b0d3af31
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "[百福|ももふく]には、忘れられない光景がありました。"
+      - speaker: reimu
+        text: "戦後の闇市。一杯のラーメンに並ぶ、長い長い行列です。"
+        video: assets/clips/street_stall.mp4
+        video_span: 3
+        video_full: true
+        video_speed: 0.8
+      - speaker: zundamon
+        emotion: thinking
+        text: "寒空の下、みんな一杯のために何時間も並んでいたのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "家で、お湯だけで食べられたら。それは革命なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いいじゃない。で、作り方は？"
+      - speaker: zundamon
+        emotion: happy
+        text: "これから考えるのだ！"
+      - speaker: reimu
+        text: "ノープランでした。"
+      - speaker: reimu
+        text: "自宅の裏庭に、小さな研究小屋を建てます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "中古の製麺機と、直径1メートルの中華鍋を買ったのだ！"
+      - speaker: reimu
+        text: "目標は5つ。これを全部、同時に満たすと決めました。"
+        slide:
+          title: "百福の5つの条件"
+          bullets:
+            - "おいしいこと"
+            - "保存がきくこと"
+            - "調理が簡単なこと"
+            - "安いこと・安全なこと"
+      - speaker: zundamon
+        emotion: thinking
+        text: "全部同時は、さすがに欲張りすぎなのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ひとつでも欠けたら、毎日の食卓には並ばないよ。"
+      - speaker: reimu
+        text: "睡眠4時間、休みなし。この生活が1年続きます。"
+        stat: {value: 4, unit: "時間", label: "百福の睡眠時間", start: 8}
+  # ================= 近所のヒソヒソ =================
+  - id: hisohiso
+    title: ""
+    background: m_4d6f77b0
+    bgm: honwaka_puppu
+    stage:
+      - {who: okusan, x: 0.40}
+      - {who: tsumugi, x: 0.72, tag: "仁子"}
+      - {who: zundamon, x: 0.12, tag: "百福", flip: true, scale: 0.9}
+    cuts:
+      - speaker: okusan
+        text: "ねえ奥さん。裏の小屋、夜中もガタガタ言ってるけど。"
+      - speaker: okusan
+        text: "商売に失敗して、とうとう……って噂よ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "聞こえてるのだ！実験中なのだ！"
+      - speaker: okusan
+        text: "あら、お元気そうで何より。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うちの人、いま世界を変えてる途中なんです。"
+      - speaker: okusan
+        text: "……お大事にね。"
+      - speaker: reimu
+        text: "信じる人は、まだ家族しかいませんでした。"
+  # ================= 失敗の日々 =================
+  - id: shippai
+    title: ""
+    background: m_e9b4d6b4
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.28, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.78, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "ここからは、失敗の記録をご覧いただきます。"
+        video: assets/clips/mf_fail.mp4
+        video_span: 7
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "麺にスープを練り込んでみたのだ！"
+      - speaker: zundamon
+        emotion: sad
+        text: "……麺がぼろぼろに切れたのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "なら天日干しなのだ！お日さまは無料なのだ！"
+      - speaker: zundamon
+        emotion: sad
+        text: "……戻すのに10分かかったのだ。麺は硬いままなのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "3回目なのだ！今度こそ……"
+      - speaker: zundamon
+        emotion: surprised
+        text: "保存中にカビが生えたのだ！！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい、3連敗ね。"
+      - speaker: reimu
+        text: "以上、数か月ぶんの失敗を30秒でお送りしました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "笑いごとじゃないのだ……そろそろ心が折れそうなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた、最初に何て言ってたか覚えてる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "家でお湯だけで食べられたら、革命……なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "なら、革命はまだ途中だね。"
+      - speaker: reimu
+        text: "小屋の明かりは、今夜も消えませんでした。"
+  # ================= 天ぷらのひらめき =================
+  - id: tempura
+    title: "1958・台所の大発見"
+    background: m_dc0cbe47
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.28, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "1958年のある日。運命は台所にありました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日の夕飯は天ぷらだよ。"
+        video: assets/clips/tempura.mp4
+        video_span: 4
+        video_full: true
+        video_speed: 0.7
+      - speaker: zundamon
+        emotion: thinking
+        text: "……衣がシュワシュワ言ってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "油に入れると、衣の水分が一気に抜けるからね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "おおおおお！なのだ！！"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "え、天ぷらでそんなに驚く？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "水分が抜けた跡には、細かい穴が残るのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そうだけど……ちょっと、どこ行くの！？"
+      - speaker: reimu
+        text: "夕飯を待たずに、小屋へ走りました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "麺を油で揚げれば、乾燥と穴あけが同時にできるのだ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "そしてその穴に、お湯が染み込んで麺が戻るのだ！"
+      - speaker: reimu
+        text: "[瞬間油熱乾燥法|しゅんかんゆねつかんそうほう]。インスタントラーメンの心臓部です。"
+        telops:
+          - {text: "瞬間油熱乾燥法", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1E222E", glow: "#3AA0FF", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "麺の中は、スポンジみたいに穴だらけになってるの。"
+        video: assets/clips/mf_ana.mp4
+        video_span: 4
+        video_full: true
+      - speaker: tsumugi
+        emotion: normal
+        text: "お湯を注ぐと、その穴を通って水分が麺の芯まで届く。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "だから、お湯だけで、たった3分で戻るんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あの3分は、穴にお湯が染み込む時間だったのだ！"
+      - speaker: reimu
+        text: "発想の種は、いつもの夕飯の中にありました。"
+  # ================= 1958 発売 =================
+  - id: hatsubai
+    title: "1958・35円のラーメン"
+    background: m_3594b1e4
+    bgm: natsuyasumi
+    stage:
+      - {who: zundamon, x: 0.15, tag: "百福", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1958年8月25日。チキンラーメン発売。"
+        video: assets/clips/era_m1958.mp4
+        video_full: true
+      - speaker: reimu
+        text: "まずは問屋への売り込みです。"
+  - id: hatsubai_b
+    title: ""
+    background: m_3594b1e4
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+      - {who: tonya, x: 0.68}
+    cuts:
+      - speaker: tonya
+        text: "お湯だけでできるラーメン？で、いくらだい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "1袋、35円なのだ！"
+      - speaker: tonya
+        text: "帰んな。うどん玉は1個6円だよ。"
+        stat: {value: 35, unit: "円", label: "チキンラーメン（うどん玉は6円）", start: 6}
+      - speaker: zundamon
+        emotion: angry
+        text: "でも鍋も出汁も要らないのだ！お湯だけなのだ！"
+      - speaker: tonya
+        text: "6倍近い値段の麺なんて、誰が買うんだい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "門前払いなのだ……。"
+      - speaker: reimu
+        text: "そこで[百福|ももふく]は、問屋を集めて試食会を開きます。"
+      - speaker: tonya
+        text: "……うまい。"
+      - speaker: tonya
+        text: "もう一杯。"
+      - speaker: tonya
+        text: "倉庫ごとくれ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "手のひら返しが気持ちいいのだ！"
+      - speaker: reimu
+        text: "お湯で2分、当時は魔法のラーメンと呼ばれました。"
+        telops:
+          - {text: "魔法のラーメン", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", anim: up}
+  - id: hatsubai_c
+    title: ""
+    background: m_3594b1e4
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "発売の翌年には年間1300万食売れたと言われています。"
+        video: assets/clips/factory_line.mp4
+        video_span: 3
+        video_full: true
+        video_speed: 0.7
+      - speaker: zundamon
+        emotion: happy
+        text: "小屋のラーメンが、工場のラーメンになったのだ！"
+      - speaker: reimu
+        text: "しかし売れると現れるのが、そっくりな偽物です。"
+      - speaker: zundamon
+        emotion: angry
+        text: "パチもんが出たのだ！しかも味が全然違うのだ！"
+      - speaker: reimu
+        text: "のちに[百福|ももふく]は、製法の特許を業界へ開放しました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "独り占めより、業界ごと育てる道を選んだのだ。"
+  # ================= 1966 アメリカ =================
+  - id: america
+    title: "1966・どんぶりのない国"
+    background: m_6be83d2c
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.15, tag: "百福", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1966年。チキンラーメンを世界へ売り込むため、アメリカに飛びます。"
+        video: assets/clips/era_m1966.mp4
+        video_full: true
+  - id: america_b
+    title: ""
+    background: m_6be83d2c
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+      - {who: buyer, x: 0.68}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "この一杯で、世界を驚かせるのだ！"
+      - speaker: buyer
+        text: "オーケー。ところで、どんぶりって何だい？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "どんぶりが、ないのだ！？"
+      - speaker: reimu
+        text: "麺をゆでる鍋も、すする文化もありません。文化の壁です。"
+      - speaker: buyer
+        text: "こうするのさ。麺を、バキバキ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ああああ！麺がァ！！"
+      - speaker: buyer
+        text: "紙コップに入れて、お湯を注ぐ。"
+      - speaker: buyer
+        text: "フォークで食べる。ワーオ、デリシャス。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "丼も箸も使ってないのだ……でも、その手があったのだ！？"
+      - speaker: reimu
+        text: "器がないなら、器ごと売ればいい。逆転の発想でした。"
+        telops:
+          - {text: "器ごと売ればいい", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: reimu
+        text: "さらに帰りの飛行機で、もうひとつ拾います。"
+        video: assets/clips/airplane.mp4
+        video_span: 4
+        video_full: true
+        video_speed: 0.6
+      - speaker: zundamon
+        emotion: thinking
+        text: "機内食のナッツ、アルミの蓋をペリッと剥がすのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "これなのだ！カップの蓋は、これでいくのだ！"
+      - speaker: reimu
+        text: "あの銀色の蓋は、機内食の容器から生まれました。"
+  # ================= 1971 カップヌードル =================
+  - id: y1971
+    title: "1971・カップヌードル誕生"
+    background: m_493acc44
+    bgm: natsuyasumi
+    stage:
+      - {who: zundamon, x: 0.15, tag: "百福", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1971年9月18日、カップヌードル発売。"
+        video: assets/clips/era_m1971.mp4
+        video_full: true
+  - id: y1971dev
+    title: ""
+    background: m_493acc44
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "開発では、麺をカップに入れる方法が問題になりました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "上から麺を落とすと、斜めになって割れるのだ……。"
+        video: assets/clips/mf_gyakusama.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "逆なのだ！麺に、カップを上からかぶせるのだ！"
+      - speaker: reimu
+        text: "逆さま充填。麺はカップの中間で固定され、割れなくなりました。"
+  - id: y1971b
+    title: ""
+    background: m_493acc44
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+      - {who: tonya, x: 0.66}
+    cuts:
+      - speaker: tonya
+        text: "で、今度はいくらだい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "1個、100円なのだ！"
+      - speaker: tonya
+        text: "袋麺が25円の時代にかい！懲りないねえ！"
+      - speaker: zundamon
+        emotion: angry
+        text: "器もフォークも付いてるのだ！お湯だけで食べられるのだ！"
+      - speaker: tonya
+        text: "それでも高いよ。うちは扱わないね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "この流れ、13年前にも見たのだ……。"
+  - id: y1971c
+    title: ""
+    background: m_493acc44
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.78, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "問屋ルートでは売れません。そこで、売る場所を変えました。"
+      - speaker: reimu
+        text: "銀座の歩行者天国。若者に、その場で食べてもらったのです。"
+        video: assets/clips/ginza_crowd.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "熱々を、立ったまま、フォークで食べるのだ！"
+      - speaker: reimu
+        text: "4時間で2万食が売れたと言われています。"
+        stat: {value: 20000, unit: "食", label: "銀座・4時間の販売数"}
+      - speaker: tsumugi
+        emotion: happy
+        text: "若者には、新しさそのものがごちそうだったんだね。"
+  # ================= 1972 あの冬 =================
+  - id: y1972
+    title: "1972・雪の中継"
+    background: m_fbc6f843
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.14, tag: "百福", flip: true, scale: 0.9}
+    cuts:
+      - speaker: reimu
+        text: "翌年の冬。テレビが、ある事件の中継を流し続けます。"
+        video: assets/clips/era_m1972.mp4
+        video_full: true
+  - id: y1972b
+    title: ""
+    background: m_fbc6f843
+    stage:
+      - {who: zundamon, x: 0.14, tag: "百福", flip: true, scale: 0.9}
+      - {who: taiin, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "極寒の山での立てこもり事件。膠着は10日間に及びました。"
+        video: assets/clips/mf_asama.mp4
+        video_span: 5
+        video_full: true
+      - speaker: taiin
+        text: "支給の弁当が、凍って食えない。"
+      - speaker: taiin
+        text: "これなら、湯を注ぐだけで済む。"
+      - speaker: reimu
+        text: "雪の中、機動隊員がすする湯気が全国に映りました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "画面越しでも、あの湯気のあったかさは伝わるのだ。"
+      - speaker: reimu
+        text: "この冬を境に、カップヌードルは日常になりました。"
+  # ================= 晩年 =================
+  - id: bannen
+    title: "止まらない人"
+    background: m_2e945393
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.28, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "その後の広がりは、数字が語ります。"
+      - speaker: reimu
+        text: "インスタントラーメンは今、世界で年間1000億食と言われています。"
+        stat: {value: 1000, unit: "億食", label: "世界の年間消費量"}
+      - speaker: zundamon
+        emotion: surprised
+        text: "地球の全員が、年に12杯以上食べてる計算なのだ！"
+      - speaker: reimu
+        text: "[百福|ももふく]は90歳を過ぎても、開発の現場に立ち続けました。"
+      - speaker: reimu
+        text: "2005年には宇宙食のラーメンを完成させます。95歳でした。"
+        video: assets/clips/astronaut.mp4
+        video_span: 4
+        video_full: true
+        video_speed: 0.8
+      - speaker: zundamon
+        emotion: surprised
+        text: "95歳で宇宙なのだ！？引退という言葉を知らないのだ！"
+      - speaker: reimu
+        text: "麺は一口サイズ、スープにはとろみ。無重力への対策です。"
+      - speaker: zundamon
+        emotion: happy
+        text: "小屋の麺が、ついに地球を出たのだ。"
+      - speaker: reimu
+        text: "そして生涯、昼食はほぼ毎日チキンラーメンだったそうです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "発明した本人が、一番のファンなのだ。"
+      - speaker: reimu
+        text: "2007年1月。96歳で、その生涯を閉じました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "最後まで、麺と一緒の人生だったね。"
+      - speaker: reimu
+        text: "人生に遅すぎるということはない。そう語り続けた人でした。"
+        telops:
+          - {text: "人生に遅すぎるということはない", size: lg, position: middle-center, color: "#FFFFFF", stroke: "#1E222E", anim: fade}
+  # ================= 現代へ =================
+  - id: gendai
+    title: ""
+    background: m_fb2338bb
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.30, flip: true}
+      - {who: tsumugi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "それでは、現代のずんだもんさんに戻っていただきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "お湯を注いだのだ。今日は、ちゃんと3分待つのだ。"
+        video: assets/clips/mf_timer3.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: thinking
+        text: "この3分は、48歳の再出発が詰まった3分なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "待った分だけ、麺の穴にお湯が届くからね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "3分経ったのだ！ふっくらもちもち、いただきますなのだ！"
+        video: assets/clips/noodle_eat.mp4
+        video_span: 2
+        video_full: true
+      - speaker: tsumugi
+        emotion: happy
+        text: "あなたも今夜3分待つとき、ちょっとだけ思い出してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "何かを始めるのに、遅すぎることはないのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "この動画が面白かったら、高評価とチャンネル登録をお願いします。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"
