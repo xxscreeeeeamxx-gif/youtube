@@ -43,6 +43,21 @@ characters:
     sprite_scale: 1.0    # つむぎと身長を揃える（同じ表示高さ）
     sprite_flip: true    # 素材が外向きなので反転して内側（つむぎ側）を向かせる
     role: "ちょっとアホな生徒役。語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。視聴者と同じ勘違いをして驚き、質問し、突っ込まれる。"
+  reimu:
+    display_name: "れいむ"
+    credit: "AquesTalkPlayer（株式会社アクエスト）"
+    # ゆっくりボイス。VOICEVOXではなくAquesTalkPlayer(公式Mac版)のCLIで合成する
+    engine: aquestalk
+    aquestalk_preset: "れいむ"
+    speed_scale: 1.1   # AquesTalkに話速パラメータはないのでffmpeg atempoで調整
+    color: "#FF6B6B"
+    role: "再現ドラマのナレーター。です・ます調で史実・数字・年号を淡々と補足し、ボケには乗らず、時々オチだけ静かに回収する。"
+
+# ゆっくりボイス（AquesTalkPlayer 公式Mac版）。個人・非営利は無償。
+# 再セットアップ: https://www.a-quest.com/products/aquestalkplayer.html のdmgを
+# tools/AquesTalkPlayer.app に展開する（gitには含めない）
+aquestalk:
+  player_path: "tools/AquesTalkPlayer.app/Contents/MacOS/AquesTalkPlayer"
 
 voicevox:
   url: "http://127.0.0.1:50021"

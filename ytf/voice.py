@@ -176,6 +176,43 @@ def extract_moras(query: dict) -> list:
     return out
 
 
+def aquestalk_synthe(cfg: Config, text: str, preset: str, speed: float) -> bytes:
+    """ゆっくりボイスを AquesTalkPlayer(公式Mac版) のCLIで合成する。
+
+    画面を出さずに `-T テキスト -P プリセット -W 出力` で直接WAVが得られる。
+    出力(44kHz)はパイプライン標準(24kHz mono 16bit)へ変換し、話速は
+    AquesTalk側にパラメータがないため atempo（ピッチ保持）で調整する。
+    """
+    import subprocess
+    import tempfile
+
+    from .config import ffmpeg_bin
+
+    bin_path = cfg.root / cfg.get(
+        "aquestalk", "player_path",
+        default="tools/AquesTalkPlayer.app/Contents/MacOS/AquesTalkPlayer")
+    if not bin_path.exists():
+        raise SystemExit(
+            f"AquesTalkPlayer がありません: {bin_path}\n"
+            "https://www.a-quest.com/products/aquestalkplayer.html の"
+            "Mac版dmgを tools/AquesTalkPlayer.app に展開してください")
+    with tempfile.TemporaryDirectory() as td:
+        raw = Path(td) / "raw.wav"
+        subprocess.run(
+            [str(bin_path), "-T", text, "-P", preset, "-W", str(raw)],
+            check=True, timeout=120,
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if not raw.exists():
+            raise SystemExit(f"AquesTalk合成に失敗（プリセット={preset}）: {text[:40]}")
+        out = Path(td) / "out.wav"
+        af = f"atempo={speed}" if abs(speed - 1.0) > 1e-3 else "anull"
+        subprocess.run(
+            [ffmpeg_bin(), "-y", "-i", str(raw), "-af", af,
+             "-ar", str(SAMPLE_RATE), "-ac", "1", "-sample_fmt", "s16", str(out)],
+            check=True, capture_output=True)
+        return out.read_bytes()
+
+
 def dummy_wav(text: str, speed: float) -> bytes:
     """VOICEVOXなしでパイプラインを通すための無音WAV。
 
@@ -271,14 +308,23 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
             if cut.reading:
                 # 誤読の手動修正: 読み上げだけを差し替える（表示は text のまま）
                 spoken = cut.reading
-            style_id, speed, pitch, intonation = style_for(cfg, cut.speaker, cut.emotion)
+            engine = cfg.character(cut.speaker).get("engine", "voicevox")
+            if engine == "aquestalk":
+                # ゆっくりボイス（ナレーター等）: AquesTalkPlayerのCLIで合成
+                ch = cfg.character(cut.speaker)
+                preset = ch.get("aquestalk_preset", "れいむ")
+                speed = float(ch.get("speed_scale", 1.0))
+                key_src = f"{spoken}|aquestalk|{preset}|{speed}|{tts}"
+            else:
+                style_id, speed, pitch, intonation = style_for(
+                    cfg, cut.speaker, cut.emotion)
+                key_src = (f"{spoken}|{style_id}|{speed}|{pitch}|{intonation}"
+                           f"|{tts}|{dict_sig}")
             wav_name = f"{idx:04d}_{cut.speaker}.wav"
             wav_path = proj.audio_dir / wav_name
 
             import hashlib
-            key = hashlib.sha1(
-                f"{spoken}|{style_id}|{speed}|{pitch}|{intonation}|{tts}|{dict_sig}".encode()
-            ).hexdigest()[:16]
+            key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
             cached = cache_dir / f"{key}.wav"
             mora_cache = cache_dir / f"{key}.moras.json"
             moras = None
@@ -288,13 +334,15 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                     moras = json.loads(mora_cache.read_text(encoding="utf-8"))
                 hits += 1
             else:
-                if client is not None:
+                if client is None:
+                    data = dummy_wav(spoken, speed)
+                elif engine == "aquestalk":
+                    data = aquestalk_synthe(cfg, spoken, preset, speed)
+                else:
                     data = client.synthesize(spoken, style_id, speed, pitch, intonation)
                     moras = extract_moras(client.last_query)
                     mora_cache.write_text(json.dumps(moras, ensure_ascii=False),
                                           encoding="utf-8")
-                else:
-                    data = dummy_wav(spoken, speed)
                 cached.write_bytes(data)
 
             # デュエット: 同じセリフをもう1人分合成して重ねる（斉唱）
