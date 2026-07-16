@@ -226,6 +226,9 @@ def load_dictionary(cfg: Config) -> list[dict]:
 
 def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTiming]:
     script = proj.load_script()
+    if getattr(script.meta, "mode", "talk") == "drama":
+        from .mobgen import register_mobs
+        register_mobs(cfg, proj, script)
     client = None
     if tts == "voicevox":
         client = ensure_engine(cfg)  # 落ちていればヘッドレスで自動起動

@@ -16,12 +16,40 @@ class Thumbnail(BaseModel):
     bottom: str = ""   # サムネ下段の大文字（最重要ワード）
 
 
+class Mob(BaseModel):
+    """白モブキャラ（のっぺら白キャラ＋名前ラベル）。再現ドラマモード用。
+
+    立ち絵は mobgen.py が自動生成し、音声は voicevox_style として合成される。
+    """
+    id: str                 # cut.speaker に書くID（半角英数）
+    label: str              # 胴体に縦書き表示する名前（例: 先生）
+    voice: int = 13         # VOICEVOXスタイルID（既定: 青山龍星ノーマル）
+    speed: float = 1.15
+    pitch: float = 0.0      # 声の高さオフセット（同じ声の使い回し感を減らす）
+    hair: str = "none"      # none / twintail / short / bun
+    item: str = "none"      # none / bible / hat / mustache / book
+    photo: str = ""         # 実写顔画像（あれば頭に丸抜きで貼る）
+
+
+class StageMember(BaseModel):
+    """シーンの舞台に立つキャラと立ち位置。"""
+    who: str                # zundamon / tsumugi / モブID
+    x: float                # 画面内の中心位置 0.0〜1.0
+    flip: bool = False      # 左右反転（内側を向かせる用）
+    tag: str = ""           # 頭上に出す名札（例: ウィルバー）。モブはlabelが既定
+    scale: float = 1.0      # このシーンでの大きさ補正
+
+
 class Meta(BaseModel):
     title: str
     slug: str
     summary: str = ""
     tags: list[str] = Field(default_factory=list)
     thumbnail: Thumbnail = Field(default_factory=Thumbnail)
+    # --- 再現ドラマモード ---
+    mode: str = "talk"      # talk（従来の掛け合い） / drama（再現ドラマ）
+    narrator: str = ""      # ナレーターのキャラID（例: aoyama）。dramaで必須
+    mobs: list[Mob] = Field(default_factory=list)
 
     @field_validator("slug")
     @classmethod
@@ -146,6 +174,8 @@ class Scene(BaseModel):
     title: str = ""            # 画面上部の見出しバー（空なら非表示）
     background: str = "default"
     short: bool = False        # True ならショート動画として切り出す
+    # 再現ドラマモード: このシーンの舞台に立つキャラ（空なら従来の左右自動配置）
+    stage: list[StageMember] = Field(default_factory=list)
     # このシーン（＝1画像）の動き。1方向のみ・カットをまたいで連続。
     # 未指定ならシーンごとに自動割当（zoom-in→pan-left→zoom-out→pan-right）
     motion: str | None = None

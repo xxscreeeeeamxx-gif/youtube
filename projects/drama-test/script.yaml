@@ -1,0 +1,31 @@
+meta:
+  title: "ドラマモード動作テスト"
+  slug: "drama-test"
+  mode: drama
+  narrator: aoyama
+  mobs:
+    - {id: sensei, label: "先生", voice: 13, pitch: -0.06, hair: short}
+    - {id: mama, label: "母", voice: 8, pitch: 0.05, hair: bun}
+    - {id: hakase, label: "博士", voice: 13, item: mustache}
+scenes:
+  - id: s1
+    title: ""
+    background: m_57dad7bc
+    stage:
+      - {who: zundamon, x: 0.22, tag: "百福", flip: true}
+      - {who: sensei, x: 0.62, scale: 0.95}
+      - {who: mama, x: 0.85, scale: 0.95}
+    cuts:
+      - speaker: aoyama
+        text: "これは再現ドラマモードの動作テストです。ナレーションは下部の字幕帯に表示されます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクが主人公を演じるのだ！"
+      - speaker: sensei
+        text: "授業中は静かにしてもらわないと困りますよ。"
+      - speaker: mama
+        emotion: normal
+        text: "うちの子がすみません…"
+      - speaker: zundamon
+        emotion: sad
+        text: "怒られたのだ…"

@@ -70,16 +70,18 @@ class Composer:
             self._bg_cache[name] = _cover(img, self.lay.w, self.lay.h)
         return self._bg_cache[name]
 
-    def _sprite(self, speaker: str, emotion: str, active: bool) -> Image.Image:
-        key = (speaker, emotion, active)
+    def _sprite(self, speaker: str, emotion: str, active: bool,
+                flip_override: bool | None = None, scale_mult: float = 1.0) -> Image.Image:
+        key = (speaker, emotion, active, flip_override, round(scale_mult, 3))
         if key not in self._sprite_cache:
             ch = self.cfg.character(speaker)
             img = Image.open(sprite_path(self.cfg, speaker, emotion)).convert("RGBA")
-            if ch.get("sprite_flip"):
+            flip = ch.get("sprite_flip") if flip_override is None else flip_override
+            if flip:
                 # 素材の向きが外向きのキャラは反転して内側（相手側）を向かせる
                 img = ImageOps.mirror(img)
             # sprite_scale: キャラごとの体格差（ちびキャラは小さく描く）
-            base = self.lay.char_h * float(ch.get("sprite_scale", 1.0))
+            base = self.lay.char_h * float(ch.get("sprite_scale", 1.0)) * scale_mult
             scale = (base if active else base * 0.9) / img.height
             img = img.resize((int(img.width * scale), int(img.height * scale)), Image.LANCZOS)
             if not active:
@@ -284,6 +286,9 @@ class Composer:
         fg_only: bool = False,     # True なら背景を敷かず透過PNG（背景は後段でzoompan）
         telops: list[Telop] | None = None,
         with_telops: bool = True,  # False ならテロップは焼かない（別レイヤーで動かす用）
+        stage: list[dict] | None = None,   # 再現ドラマ: 舞台配置 [{who,emotion,x,flip,scale,tag}]
+        bubble: dict | None = None,        # 再現ドラマ: 話者の吹き出し {text, x}
+        caption: str | None = None,        # 再現ドラマ: ナレーション字幕（下部）
     ) -> Image.Image:
         if not with_telops:
             telops = []
@@ -298,6 +303,26 @@ class Composer:
             self._draw_card(canvas)
         elif image:
             self._draw_image(canvas, image)
+
+        if stage is not None:
+            # ---- 再現ドラマ: 舞台配置（暗転なし・自由なx位置・名札） ----
+            for m in stage:
+                sp = self._sprite(m["who"], m.get("emotion", "normal"), True,
+                                  flip_override=m.get("flip"),
+                                  scale_mult=float(m.get("scale", 1.0)))
+                x = int(self.lay.w * float(m["x"]) - sp.width / 2)
+                x = max(-sp.width // 3, min(x, self.lay.w - sp.width * 2 // 3))
+                y = self.lay.h - sp.height
+                canvas.paste(sp, (x, y), sp)
+                if m.get("tag"):
+                    self._draw_tag(canvas, m["tag"], x + sp.width // 2, y)
+            if bubble:
+                self._draw_bubble(canvas, bubble["text"], float(bubble["x"]))
+            if caption:
+                self._draw_caption(canvas, caption)
+            for t in telops or []:
+                self._draw_telop(canvas, t)
+            return canvas if fg_only else canvas.convert("RGB")
 
         if not self.show_chars:
             # 立ち絵を出さない構成（テロップ主体）
@@ -324,6 +349,68 @@ class Composer:
         for t in telops or []:
             self._draw_telop(canvas, t)
         return canvas if fg_only else canvas.convert("RGB")
+
+    def _draw_tag(self, canvas: Image.Image, text: str, cx: int, y_top: int) -> None:
+        """キャラ頭上の名札（オレンジの小箱・白フチ）。"""
+        d = ImageDraw.Draw(canvas, "RGBA")
+        f = self.font(30)
+        tw = d.textlength(text, font=f)
+        x0 = int(cx - tw / 2 - 18)
+        y0 = max(96, y_top - 48)
+        d.rounded_rectangle([x0, y0, x0 + tw + 36, y0 + 46], radius=10,
+                            fill=(238, 120, 34, 255), outline=(255, 255, 255), width=3)
+        d.text((x0 + 18, y0 + 7), text, font=f, fill=(255, 255, 255),
+               stroke_width=2, stroke_fill=(90, 40, 8))
+
+    def _draw_bubble(self, canvas: Image.Image, text: str, x_frac: float) -> None:
+        """話者の上に出す吹き出し（白地・緑フチ・黒太字）。短文前提で最大3行。"""
+        text = split_reading(text)[0]
+        d = ImageDraw.Draw(canvas, "RGBA")
+        f = self.font(38)
+        # 12〜14文字で折り返し（句読点優先ではなく単純分割で十分短い前提）
+        limit = 14
+        lines = [text[i:i + limit] for i in range(0, len(text), limit)][:3]
+        if len(text) > limit * 3:
+            lines[-1] = lines[-1][:limit - 1] + "…"
+        lh = 52
+        tw = max(d.textlength(ln, font=f) for ln in lines)
+        pad_x, pad_y = 26, 18
+        bw, bh = int(tw + pad_x * 2), lh * len(lines) + pad_y * 2
+        cx = int(self.lay.w * x_frac)
+        x0 = max(16, min(cx - bw // 2, self.lay.w - bw - 16))
+        y0 = 120
+        d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], radius=18,
+                            fill=(255, 255, 255, 245), outline=(46, 174, 92), width=5)
+        # しっぽ（話者の方向へ）
+        tip_x = max(x0 + 30, min(cx, x0 + bw - 30))
+        d.polygon([(tip_x - 16, y0 + bh - 2), (tip_x + 16, y0 + bh - 2),
+                   (tip_x, y0 + bh + 26)], fill=(46, 174, 92))
+        d.polygon([(tip_x - 10, y0 + bh - 4), (tip_x + 10, y0 + bh - 4),
+                   (tip_x, y0 + bh + 16)], fill=(255, 255, 255))
+        for i, ln in enumerate(lines):
+            d.text((x0 + pad_x, y0 + pad_y + i * lh), ln, font=f, fill=(24, 26, 34))
+
+    def _draw_caption(self, canvas: Image.Image, text: str) -> None:
+        """ナレーション字幕（下部・暗帯+白文字に琥珀フチ）。最大2行。"""
+        text = split_reading(text)[0]
+        d = ImageDraw.Draw(canvas, "RGBA")
+        f = self.font(42)
+        limit = 26
+        lines = [text[i:i + limit] for i in range(0, len(text), limit)][:2]
+        if len(text) > limit * 2:
+            lines[-1] = lines[-1][:limit - 1] + "…"
+        lh = 58
+        tw = max(d.textlength(ln, font=f) for ln in lines)
+        bh = lh * len(lines) + 28
+        y1 = self.lay.h - 26
+        y0 = y1 - bh
+        x0 = int(self.lay.w / 2 - tw / 2 - 34)
+        x1 = int(self.lay.w / 2 + tw / 2 + 34)
+        d.rounded_rectangle([x0, y0, x1, y1], radius=14, fill=(12, 14, 22, 175))
+        for i, ln in enumerate(lines):
+            lw = d.textlength(ln, font=f)
+            d.text((self.lay.w / 2 - lw / 2, y0 + 16 + i * lh), ln, font=f,
+                   fill=(255, 252, 240), stroke_width=3, stroke_fill=(140, 96, 20))
 
     def telop_layer(self, telops: list[Telop]) -> Image.Image:
         """テロップだけを描いた透過フレーム（build でアニメ付き overlay に使う）。"""
@@ -435,6 +522,11 @@ def render_frames(
     motion 未指定のカットは zoom-in / zoom-out を交互に割り当てて常時微動させる。
     """
     script = proj.load_script()
+    drama = getattr(script.meta, "mode", "talk") == "drama"
+    narrator = script.meta.narrator if drama else ""
+    if drama:
+        from .mobgen import register_mobs
+        register_mobs(cfg, proj, script)
     proj.frames_dir  # frames/ を作成
     composer = Composer(cfg, proj, vertical=vertical)
     motion_on = bool(cfg.get("video", "motion", "enabled", default=True))
@@ -527,16 +619,25 @@ def render_frames(
     speakers = script.speakers_used()
     emotion_state = {s: "normal" for s in speakers}
 
+    # 立ち絵の対象: ナレーターは除外。dramaでは舞台に立つだけのキャラも含める
+    sprite_speakers = [s for s in speakers if s != narrator]
+    if drama:
+        for sc in script.scenes:
+            for m in sc.stage:
+                if m.who not in sprite_speakers:
+                    sprite_speakers.append(m.who)
+                    emotion_state.setdefault(m.who, "normal")
+
     # 立ち絵は「出演キャラ全員が sprite_dir を持つ」プロジェクトだけ有効にする。
     # （aoyama単独回など素材のない構成では自動オフになり、レイアウトも従来どおり）
-    composer.show_chars = composer.show_chars and bool(speakers) and all(
-        "sprite_dir" in cfg.character(s) for s in speakers
+    composer.show_chars = composer.show_chars and bool(sprite_speakers) and all(
+        "sprite_dir" in cfg.character(s) for s in sprite_speakers
     )
     # 立ち絵ファイルの差し替えで前景PNGを確実に作り直すための署名
     sprite_sig = ""
     if composer.show_chars:
         parts = []
-        for s in speakers:
+        for s in sprite_speakers:
             ch = cfg.character(s)
             parts.append(f"{s}@{ch.get('sprite_scale', 1.0)}:{ch.get('sprite_flip', False)}")
             d = cfg.root / ch["sprite_dir"]
@@ -570,13 +671,31 @@ def render_frames(
         if cut.duet_with:
             emotion_state[cut.duet_with] = cut.emotion
         chars = [(s, emotion_state[s],
-                  s == cut.speaker or s == cut.duet_with) for s in speakers]
+                  s == cut.speaker or s == cut.duet_with) for s in speakers
+                 if s != narrator]
+
+        # 再現ドラマ: 舞台配置・吹き出し・ナレーション字幕
+        stage_list = None
+        bubble = None
+        caption = None
+        if drama:
+            stage_list = [{"who": m.who,
+                           "emotion": emotion_state.get(m.who, "normal"),
+                           "x": m.x, "flip": m.flip, "scale": m.scale,
+                           "tag": m.tag} for m in scene.stage]
+            if cut.speaker == narrator:
+                caption = cut.text
+            else:
+                mem = next((m for m in scene.stage if m.who == cut.speaker), None)
+                bubble = {"text": cut.text, "x": mem.x if mem else 0.5}
+
         header = scene.title or (script.meta.title if vertical else "")
         # ベースはテロップ抜きで合成（テロップは別レイヤーで動かす）
         key_src = json.dumps(
             [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
-             bool(sp), card, full, fg_only, sub, sprite_sig],
+             bool(sp), card, full, fg_only, sub, sprite_sig,
+             stage_list, bubble, caption],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
@@ -585,7 +704,9 @@ def render_frames(
         if key not in manifest_used and not path.exists():
             composer.compose_cut(bg_name, header, chars, cut.slide,
                                  cut.image, video_card=card,
-                                 fg_only=fg_only, with_telops=False).save(path)
+                                 fg_only=fg_only, with_telops=False,
+                                 stage=stage_list, bubble=bubble,
+                                 caption=caption).save(path)
         manifest_used.add(key)
 
         # テロップレイヤー（あれば透過PNGを別に生成）
