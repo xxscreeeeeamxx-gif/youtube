@@ -131,22 +131,22 @@ G2_DUR = 11.0
 def draw_graph(d, t):
     d.rectangle([0, 0, W, H], fill=(10, 14, 24))
     _caption(d, "チキンラーメンの売れ行き")
-    x0, y0, x1, y1 = 420, 260, 1500, 860
+    x0, y0, x1, y1 = 720, 300, 1280, 860
     d.line([x0, y1, x1, y1], fill=GRAY, width=6)
     d.line([x0, y1, x0, y0], fill=GRAY, width=6)
     # 12本の月次バーが次々伸びる
     total_p = ease(min(t / (G2_P[2] - 0.4), 1.0))
     for i in range(12):
         bp = max(0.0, min(1.0, total_p * 12 - i))
-        bh = (30 + (i / 11) ** 2 * 460) * ease(bp)
-        bx = x0 + 40 + i * 86
-        d.rounded_rectangle([bx, y1 - bh, bx + 56, y1], radius=10,
+        bh = (30 + (i / 11) ** 2 * 420) * ease(bp)
+        bx = x0 + 24 + i * 44
+        d.rounded_rectangle([bx, y1 - bh, bx + 30, y1], radius=8,
                             fill=BROTH if i < 11 else AMBER)
     if t >= G2_P[1]:
         b = ease((t - G2_P[1]) / 0.8)
         val = int(1300 * min((t - G2_P[1]) / 2.2, 1.0))
         col = tuple(int(AMBER[i] * b) for i in range(3))
-        ctext(d, 960, 350, f"年間 {val}万食", font(110), col)
+        ctext(d, 1000, 340, f"年間 {val}万食", font(88), col)
     if t >= G2_P[2]:
         b = ease((t - G2_P[2]) / 0.6)
         ctext(d, 960, 500, "※発売翌年・当時の記録より",
@@ -184,19 +184,19 @@ def draw_gohan(d, t):
     d.rectangle([0, 0, W, H], fill=(12, 16, 26))
     if t < GH_P[1]:
         _caption(d, "麺の次は、ご飯")
-        _product_card(d, 960, 560, 560, 420, (196, 90, 60),
+        _product_card(d, 1000, 560, 520, 420, (196, 90, 60),
                       "カップカレーライス", "お湯で作るカレーライス", "2013年",
                       reveal=(t - 0.4) / 0.8)
     elif t < GH_P[2]:
         _caption(d, "名前を変えて、大ヒット")
-        _product_card(d, 960, 560, 560, 420, (222, 120, 40),
+        _product_card(d, 1000, 560, 520, 420, (222, 120, 40),
                       "カレーメシ", "混ぜれば本格カレー", "2014年",
                       reveal=(t - GH_P[1]) / 0.8)
     else:
         _caption(d, "ご飯系は、定番になった")
-        _product_card(d, 620, 560, 480, 380, (196, 90, 60),
+        _product_card(d, 1000, 400, 470, 300, (196, 90, 60),
                       "カップカレーライス", "はじまりの一杯", "2013年")
-        _product_card(d, 1300, 560, 480, 380, (222, 120, 40),
+        _product_card(d, 1000, 750, 470, 300, (222, 120, 40),
                       "カレーメシ", "シリーズ展開へ", "2014年",
                       reveal=(t - GH_P[2]) / 0.8)
 
@@ -211,19 +211,19 @@ def draw_kenko(d, t):
     d.rectangle([0, 0, W, H], fill=(12, 16, 26))
     if t < K_P[1]:
         _caption(d, "最近の主戦場は、健康")
-        _product_card(d, 960, 560, 620, 420, (60, 130, 110),
+        _product_card(d, 1000, 560, 540, 420, (60, 130, 110),
                       "カップヌードルPRO", "高たんぱく・低糖質", "2021年",
                       reveal=(t - 0.4) / 0.8)
     elif t < K_P[2]:
         _caption(d, "栄養バランスを、一食に")
-        _product_card(d, 960, 560, 620, 420, (70, 90, 150),
+        _product_card(d, 1000, 560, 540, 420, (70, 90, 150),
                       "完全メシ", "栄養とおいしさの両立", "2022年",
                       reveal=(t - K_P[1]) / 0.8)
     else:
         _caption(d, "おいしい×体にいい、へ")
-        _product_card(d, 620, 560, 500, 380, (60, 130, 110),
+        _product_card(d, 1000, 400, 500, 300, (60, 130, 110),
                       "カップヌードルPRO", "高たんぱく・低糖質", "2021年")
-        _product_card(d, 1300, 560, 500, 380, (70, 90, 150),
+        _product_card(d, 1000, 750, 500, 300, (70, 90, 150),
                       "完全メシ", "栄養とおいしさの両立", "2022年",
                       reveal=(t - K_P[2]) / 0.8)
 
@@ -275,18 +275,18 @@ def draw_joken(d, t):
         if t < J_P[bi]:
             continue
         a = ease((t - J_P[bi]) / 0.5)
-        y0 = 210 + i * 150
+        y0 = 200 + i * 148
         col = AMBER if done else BROTH
-        d.rounded_rectangle([560, y0, 560 + int(800 * a), y0 + 116], radius=20,
+        d.rounded_rectangle([740, y0, 740 + int(540 * a), y0 + 112], radius=18,
                             fill=(30, 38, 54), outline=col, width=4)
         if a > 0.6:
             num = ["一", "二", "三", "四", "五"][i]
-            d.ellipse([590, y0 + 24, 658, y0 + 92], fill=col)
-            f = font(44)
-            d.text((624 - d.textlength(num, font=f) / 2, y0 + 32), num,
+            d.ellipse([764, y0 + 24, 828, y0 + 88], fill=col)
+            f = font(40)
+            d.text((796 - d.textlength(num, font=f) / 2, y0 + 32), num,
                    font=f, fill=(20, 24, 34))
-            f2 = font(52)
-            d.text((700, y0 + 28), item, font=f2, fill=INK)
+            f2 = font(46)
+            d.text((860, y0 + 28), item, font=f2, fill=INK)
 
 
 # ---------------------------------------------------------------- 失敗の物語3連
@@ -345,8 +345,8 @@ def draw_fail2(d, t):
     else:
         lt = t - F2_P[3]
         _caption(d, "→ 乾いても、お湯で戻らない", g)
-        m._noodle_block(d, W / 2 - 200, 560, col=(150, 154, 164))
-        cx, cy, r = W / 2 + 240, 560, 130
+        m._noodle_block(d, W / 2 - 140, 560, col=(150, 154, 164))
+        cx, cy, r = W / 2 + 180, 560, 120
         d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=g, width=10)
         a = -math.pi / 2 + min(lt / 2.2, 1.0) * 2 * math.pi
         d.line([cx, cy, cx + (r - 34) * math.cos(a), cy + (r - 34) * math.sin(a)],

@@ -314,16 +314,21 @@ class Composer:
             # ---- 再現ドラマ: 舞台配置（暗転なし・自由なx位置・名札） ----
             for m in stage:
                 sp, x, y = self.drama_actor(m)
-                # 名札は肩の高さ（頭上=吹き出しと干渉・胸上=ちび頭身だと顔に被るため）
-                tag_y = y + int(sp.height * 0.52)
+                # 名札は肩の高さ・体の少し外側（体に重ねると、動く話者レイヤーの
+                # 下に隠れてしまうため。外側なら常に見える）
+                tag_y = y + int(sp.height * 0.46)
+                if float(m["x"]) < 0.5:
+                    tag_cx = max(76, x - 12)
+                else:
+                    tag_cx = min(self.lay.w - 76, x + sp.width + 12)
                 if actor is not None and m["who"] == actor:
                     # 話者は build 側で動く別レイヤー。名札だけ基底に静止で描く
                     if m.get("tag"):
-                        self._draw_tag(canvas, m["tag"], x + sp.width // 2, tag_y)
+                        self._draw_tag(canvas, m["tag"], tag_cx, tag_y)
                     continue
                 canvas.paste(sp, (x, y), sp)
                 if m.get("tag"):
-                    self._draw_tag(canvas, m["tag"], x + sp.width // 2, tag_y)
+                    self._draw_tag(canvas, m["tag"], tag_cx, tag_y)
             if bubble and not bubble_layered:
                 self._draw_bubble(canvas, bubble["text"], float(bubble["x"]),
                                   edge=bubble.get("color"))

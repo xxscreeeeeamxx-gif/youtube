@@ -348,26 +348,24 @@ def draw_gyakusama(d, t):
         # P0 上から落とすと割れる
         lt = t - G_P[0]
         _caption(d, "上から入れると、斜めになって割れる")
-        _cup(d, 560, 640)
+        _cup(d, 900, 660)
         drop = ease(min(lt / 1.2, 1.0))
-        ny = 300 + drop * 280
-        _noodle_block(d, 560 + 40 * drop, ny, w=240, h=150,
+        ny = 320 + drop * 280
+        _noodle_block(d, 900 + 40 * drop, ny, w=220, h=140,
                       broken=drop >= 1.0, tilt=10 * drop)
         if lt > 1.5:
-            _batsu(d, 560, 560, 80, (lt - 1.5) / 0.5)
-        # 説明側
-        ctext(d, 1360, 560, "高速ラインでは", font(52), GRAY)
-        ctext(d, 1360, 640, "麺が暴れる", font(52), GRAY)
+            _batsu(d, 900, 580, 80, (lt - 1.5) / 0.5)
+        ctext(d, 1000, 900, "高速ラインでは麺が暴れる", font(44), GRAY)
     elif t < G_P[2]:
         # P1 逆さまにかぶせる
         lt = t - G_P[1]
         _caption(d, "発想の逆転　麺にカップをかぶせる")
-        _noodle_block(d, 560, 700, w=240, h=150)
+        _noodle_block(d, 960, 720, w=220, h=140)
         drop = ease(min(lt / 1.6, 1.0))
-        cy = 260 + drop * 300
-        _cup(d, 560, cy, up=False)
+        cy = 280 + drop * 300
+        _cup(d, 960, cy, up=False)
         if drop >= 1.0:
-            ctext(d, 1360, 600, "逆さま充填", font(72), AMBER)
+            ctext(d, 960, 900, "逆さま充填", font(64), AMBER)
     else:
         # P2 中間保持で固定
         lt = t - G_P[2]
