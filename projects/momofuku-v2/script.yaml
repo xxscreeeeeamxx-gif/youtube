@@ -9,6 +9,7 @@ meta:
   narrator: reimu
   mobs:
     - {id: saikensha, label: "債権者", voice: 13, pitch: -0.05, hair: short}
+    - {id: yujin, label: "知人", voice: 13, pitch: 0.03}
 scenes:
   # ================= フック（現代・夜のキッチン） =================
   - id: hook
@@ -81,7 +82,38 @@ scenes:
         video: assets/clips/era_m1957.mp4
         video_full: true
       - speaker: reimu
-        text: "[百福|ももふく]の家に、朝から客が来ていました。"
+        text: "[百福|ももふく]は、いくつもの事業を当てた実業家でした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "事業は絶好調なのだ！"
+  # ================= 転落の始まり（頼まれごと） =================
+  - id: y1957friend
+    title: ""
+    background: il_washitsu_1957
+    stage:
+      - {who: zundamon, x: 0.24, tag: "百福", flip: true}
+      - {who: yujin, x: 0.60}
+    cuts:
+      - speaker: yujin
+        text: "[百福|ももふく]さん、頼みがある。"
+      - speaker: yujin
+        text: "うちの信用組合の理事長を、やってくれないか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "金融は素人なのだ……。"
+      - speaker: yujin
+        text: "名前だけでいいんだ。頼むよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それなら、いいのだ。"
+      - speaker: reimu
+        text: "この軽い返事が、人生を変えます。"
+        pause_after: 0.6
+      - speaker: reimu
+        text: "数年後、組合は破綻。"
+      - speaker: reimu
+        text: "理事長の[百福|ももふく]に、全責任がのしかかりました。"
+        pause_after: 0.4
   # ================= 1957 破綻 =================
   - id: y1957b
     title: ""
@@ -91,6 +123,8 @@ scenes:
       - {who: saikensha, x: 0.52}
       - {who: tsumugi, x: 0.86, tag: "仁子"}
     cuts:
+      - speaker: reimu
+        text: "そして玄関に、男が立っていました。"
       - speaker: saikensha
         text: "財産は、全部いただきます。"
         se: don
@@ -120,8 +154,6 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "喜ぶところじゃないよ。"
-      - speaker: reimu
-        text: "引き受けた信用組合が、破綻したのです。"
       - speaker: reimu
         text: "47歳、無一文。"
         pause_after: 0.4

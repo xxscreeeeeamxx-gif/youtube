@@ -67,6 +67,8 @@ voicevox:
   default_pause: 0.45
   # 再現ドラマ(mode: drama)の間。短文ラリーの畳みかけ用に詰める
   drama_pause: 0.15
+  # 再現ドラマで話者が交代する瞬間の間（会話の呼吸）
+  drama_pause_switch: 0.3
   # 読み間違い対策のユーザー辞書（起動時に自動登録）
   dictionary:
     - { surface: "Wi-Fi", pronunciation: "ワイファイ", accent_type: 3 }

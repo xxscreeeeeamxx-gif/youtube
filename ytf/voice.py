@@ -272,9 +272,14 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
         client.sync_dictionary(load_dictionary(cfg))
 
     default_pause = float(cfg.get("voicevox", "default_pause", default=0.3))
-    if getattr(script.meta, "mode", "talk") == "drama":
-        # 再現ドラマは短文ラリーの畳みかけが命。間を詰める
+    drama = getattr(script.meta, "mode", "talk") == "drama"
+    switch_pause = None
+    if drama:
+        # 再現ドラマは短文ラリーの畳みかけが命。間を詰める。
+        # ただし話者が替わる瞬間は少し空けて会話の呼吸を作る
         default_pause = float(cfg.get("voicevox", "drama_pause", default=0.15))
+        switch_pause = float(cfg.get("voicevox", "drama_pause_switch", default=0.3))
+    next_speaker = [c.speaker for _, _, c in script.all_cuts()][1:] + [None]
     # 同一セリフ・同一声設定のWAVはキャッシュ再利用（台本の一部修正後の再合成を高速化）
     cache_dir = proj.audio_dir / "cache"
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -369,7 +374,13 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
             wav_path.write_bytes(data)
 
             dur = wav_duration(wav_path)
-            pause = cut.pause_after if cut.pause_after is not None else default_pause
+            if cut.pause_after is not None:
+                pause = cut.pause_after
+            elif (switch_pause is not None
+                    and next_speaker[idx] not in (None, cut.speaker)):
+                pause = switch_pause
+            else:
+                pause = default_pause
             timings.append(
                 CutTiming(
                     scene_id=scene.id,
