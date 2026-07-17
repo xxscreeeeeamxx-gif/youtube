@@ -21,34 +21,49 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "夜食のカップ麺なのだ！"
-        video: assets/clips/cup_pour.mp4
-        video_full: true
-        video_speed: 0.7
+        text: "今日も自炊をするのだ！"
       - speaker: zundamon
-        emotion: normal
-        text: "待ち時間は、3分なのだ。"
-      - speaker: zundamon
-        emotion: angry
-        text: "……長いのだ。"
-      - speaker: zundamon
-        emotion: angry
-        text: "2分で開けるのだ！"
-      - speaker: zundamon
-        emotion: sad
-        text: "バリバリなのだ……。"
-        pause_after: 0.5
+        emotion: happy
+        text: "今日はとんこつラーメンなのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "だから言ったのに。"
+        text: "昨日も味噌ラーメンだったじゃない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ていうか、お湯を注いだだけでしょ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "む！カップ麺は立派な料理なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "カップ麺だけだと健康に悪いよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……でもうまいのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎日ラーメン健康生活なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何か違うものも食べなよ。体壊しちゃうよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "わかったのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今日は奮発して、カレーにするのだ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……それもインスタントじゃない。"
+        pause_after: 0.4
       - speaker: reimu
-        text: "カップ麺にお湯を注いで、3分。"
+        text: "インスタントラーメン、世界で年間1000億食。"
       - speaker: reimu
-        text: "この当たり前を、発明した男がいます。"
+        text: "地球の全員が、年12回食べる計算です。"
       - speaker: reimu
-        text: "48歳で、全財産を失った男です。"
+        text: "作ったのは、全財産を失った安藤[百福|ももふく]という、47歳の男でした。"
         telops:
-          - {text: "全財産を失った48歳", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+          - {text: "全財産を失った47歳", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "話が重いのだ！？"
@@ -66,7 +81,7 @@ scenes:
         video: assets/clips/era_m1957.mp4
         video_full: true
       - speaker: reimu
-        text: "[百福|ももふく]、47歳。"
+        text: "[百福|ももふく]の家に、朝から客が来ていました。"
   # ================= 1957 破綻 =================
   - id: y1957b
     title: ""
