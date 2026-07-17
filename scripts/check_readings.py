@@ -105,6 +105,12 @@ def main(slug: str) -> int:
         for cut in scene.cuts:
             text = cut.text
             spoken_src = cut.reading if cut.reading else text
+            # ナレーター(AquesTalk)は漢字変換の誤読を構造的に防ぐため全行ひらがな必須
+            if speaker_engine(cut.speaker) == "aquestalk" and not cut.reading:
+                problems.append(
+                    f"reading必須(ナレーターは全行ひらがな指定): "
+                    f"{scene.id}: {text[:30]}")
+                continue
             for e in ledger:
                 surf = e["surface"]
                 if surf not in re.sub(READING_RE, lambda m: "", text) and surf not in text:
@@ -145,7 +151,8 @@ def main(slug: str) -> int:
         print("(timing.json 未生成のため実測検査はスキップ。voice 後に再実行)")
 
     # ---- 3) 多読み漢字の警告（自動列挙→制作者がモーラを通読して確認する） ----
-    ambiguous = ["金", "空", "方", "日", "辛", "上手", "下手", "人気", "一行", "一見"]
+    ambiguous = ["金", "空", "方", "日", "年", "何", "声", "札", "人", "話",
+                 "同じ", "辛", "上手", "下手", "人気", "一行", "一見"]
     if timing_path.exists():
         warned = 0
         for ct, cut in zip(timings, cuts_flat):

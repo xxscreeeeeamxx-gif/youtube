@@ -314,8 +314,8 @@ class Composer:
             # ---- 再現ドラマ: 舞台配置（暗転なし・自由なx位置・名札） ----
             for m in stage:
                 sp, x, y = self.drama_actor(m)
-                # 名札は胸元（頭上だと吹き出しと重なるため。お手本も胸バッジ）
-                tag_y = y + int(sp.height * 0.34)
+                # 名札は肩の高さ（頭上=吹き出しと干渉・胸上=ちび頭身だと顔に被るため）
+                tag_y = y + int(sp.height * 0.52)
                 if actor is not None and m["who"] == actor:
                     # 話者は build 側で動く別レイヤー。名札だけ基底に静止で描く
                     if m.get("tag"):

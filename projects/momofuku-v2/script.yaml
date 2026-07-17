@@ -27,6 +27,7 @@ meta:
     - {id: ghq, label: "GHQ", voice: 13, pitch: -0.07, item: hat}
     - {id: wakamono, label: "若者", voice: 12, hair: short}
     - {id: okusan, label: "奥さん", voice: 8, pitch: 0.06, hair: bun}
+    - {id: kyaku, label: "客", voice: 8, pitch: 0.02, hair: bun}
     - {id: tonya, label: "問屋", voice: 13, pitch: -0.08, item: mustache}
     - {id: buyer, label: "バイヤー", voice: 13, pitch: -0.02, item: hat}
     - {id: taiin, label: "隊員", voice: 13, pitch: -0.10, hair: short}
@@ -81,10 +82,13 @@ scenes:
         pause_after: 0.4
       - speaker: reimu
         text: "インスタントラーメン、世界で年間1000億食。"
+        reading: "いんすたんとらーめん、せかいでねんかんせんおくしょく。"
       - speaker: reimu
-        text: "地球の全員が、年12回食べる計算です。"
+        text: "地球の全員が、[年|ねん]12回食べる計算です。"
+        reading: "ちきゅうのぜんいんが、ねんじゅうにかいたべるけいさんです。"
       - speaker: reimu
         text: "作ったのは、全財産を失った安藤[百福|ももふく]という、47歳の男でした。"
+        reading: "つくったのは、ぜんざいさんをうしなったあんどうももふくという、よんじゅうななさいのおとこでした。"
         telops:
           - {text: "全財産を失った47歳", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
@@ -93,6 +97,7 @@ scenes:
         pause_after: 0.4
       - speaker: reimu
         text: "物語は、1910年の台湾から始まります。"
+        reading: "ものがたりは、せんきゅうひゃくじゅうねんのたいわんからはじまります。"
         pause_after: 0.5
   # ================= 1910 誕生 =================
   - id: y1910
@@ -103,12 +108,15 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1910年。日本統治時代の台湾、[嘉義|かぎ]。"
+        reading: "せんきゅうひゃくじゅうねん。にほんとうちじだいのたいわん、かぎ。"
         video: assets/clips/era_v1910.mp4
         video_full: true
       - speaker: reimu
         text: "のちの安藤[百福|ももふく]、[呉百福|ごひゃくふく]が生まれました。"
+        reading: "のちのあんどうももふく、ごひゃくふくがうまれました。"
       - speaker: reimu
         text: "幼くして両親を亡くし、[布問屋|ぬのどんや]の祖父母に育てられます。"
+        reading: "おさなくしてりょうしんをなくし、ぬのどんやのそふぼにそだてられます。"
         pause_after: 0.5
   # ================= 幼少期・店番 =================
   - id: y1910b
@@ -117,24 +125,24 @@ scenes:
     bgm: honwaka_puppu
     stage:
       - {who: zundamon, x: 0.20, tag: "百福", flip: true, scale: 0.75}
-      - {who: okusan, x: 0.52}
+      - {who: kyaku, x: 0.52}
       - {who: sofu, x: 0.82}
     cuts:
       - speaker: sofu
         text: "[百福|ももふく]、店番を頼むよ。"
       - speaker: zundamon
         emotion: happy
-        text: "任せるのだ！"
+        text: "任せろなのだ！"
       - speaker: sofu
         text: "挨拶は元気よく、だ。"
       - speaker: zundamon
         emotion: happy
         text: "いらっしゃいなのだ！"
-      - speaker: okusan
+      - speaker: kyaku
         text: "この反物、もう少しまからないの？"
       - speaker: sofu
         text: "これは引けませんな。"
-      - speaker: okusan
+      - speaker: kyaku
         text: "じゃあ、こっちの色違いなら？"
       - speaker: sofu
         text: "それなら、少し勉強しましょう。"
@@ -146,16 +154,16 @@ scenes:
       - speaker: zundamon
         emotion: surprised
         text: "商売は、綱渡りなのだ！"
-      - speaker: okusan
+      - speaker: kyaku
         text: "この子、そろばんが早いのねえ。"
       - speaker: zundamon
         emotion: happy
         text: "毎晩、店で鍛えてるのだ！"
-      - speaker: okusan
+      - speaker: kyaku
         text: "末は大商人だわ。"
       - speaker: zundamon
         emotion: happy
-        text: "目指すのだ！"
+        text: "目指すぞ！"
       - speaker: sofu
         text: "学校より、店が先生だな。"
       - speaker: zundamon
@@ -191,6 +199,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "20歳。町に初めてできた図書館で、司書になります。"
+        reading: "はたち。まちにはじめてできたとしょかんで、ししょになります。"
       - speaker: zundamon
         emotion: happy
         text: "本が読み放題なのだ！端の棚から、全部読みつくすぞ！"
@@ -202,12 +211,13 @@ scenes:
         text: "この本には、氷を売って財を成した人が載ってるのだ。"
       - speaker: zundamon
         emotion: thinking
-        text: "氷が商売になるなら、何だって商売になるのだ。"
+        text: "氷が商売になるなら、なんだって商売になるのだ。"
       - speaker: zundamon
         emotion: normal
         text: "商売の本なんて、係のボクがずっと借りっぱなしなのだ。"
       - speaker: reimu
         text: "それは司書として、どうかと思います。"
+        reading: "それはししょとして、どうかとおもいます。"
       - speaker: zundamon
         emotion: normal
         text: "貸出カードが、ボクの名前だらけなのだ。"
@@ -239,6 +249,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1932年、台北。"
+        reading: "せんきゅうひゃくさんじゅうにねん、たいぺい。"
         video: assets/clips/era_v1932.mp4
         video_full: true
         pause_after: 0.8
@@ -303,7 +314,7 @@ scenes:
         text: "開店の日は、眠れなかったのだ……。"
       - speaker: zundamon
         emotion: surprised
-        text: "でも朝から、店の前に人が並んだのだ！"
+        text: "でも朝から、店の前に行列ができたのだ！"
       - speaker: zundamon
         emotion: happy
         text: "メリヤスの肌着が、仕入れた先から売れてるのだ！"
@@ -317,6 +328,7 @@ scenes:
         text: "乗るのだ！商売は勢いなのだ！"
       - speaker: reimu
         text: "この勢いが、のちに何度も彼を救います。"
+        reading: "このいきおいが、のちになんどもかれをすくいます。"
   # ================= 1933 大阪へ =================
   - id: osaka
     title: ""
@@ -328,9 +340,10 @@ scenes:
     cuts:
       - speaker: reimu
         text: "翌1933年、海を渡って大阪へ。"
+        reading: "よく、せんきゅうひゃくさんじゅうさんねん、うみをわたっておおさかへ。"
       - speaker: zundamon
         emotion: happy
-        text: "大阪で、日東商会を旗揚げなのだ！"
+        text: "大阪で、日東商会を旗揚げだ！"
       - speaker: zundamon
         emotion: happy
         text: "商人の街は、話が早いのだ！"
@@ -353,7 +366,7 @@ scenes:
         text: "社長、追加の注文です！"
       - speaker: zundamon
         emotion: happy
-        text: "どんどん受けるのだ！"
+        text: "どんどん受けるぞ！"
       - speaker: shain
         text: "社長、在庫が足りません！"
       - speaker: zundamon
@@ -361,6 +374,7 @@ scenes:
         text: "どんどん仕入れるのだ！"
       - speaker: reimu
         text: "昼は、若き社長。"
+        reading: "ひるは、わかきしゃちょう。"
   # ================= 夜学 =================
   - id: yagaku
     title: ""
@@ -372,6 +386,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "そして夜は、学生でした。"
+        reading: "そしてよるは、がくせいでした。"
       - speaker: zundamon
         emotion: thinking
         text: "眠い……でも、経済学なのだ……。"
@@ -409,6 +424,7 @@ scenes:
         text: "23歳、社長で学士サマなのだ！"
       - speaker: reimu
         text: "[順風満帆|じゅんぷうまんぱん]。しかし、時代が変わります。"
+        reading: "じゅんぷうまんぱん。しかし、じだいがかわります。"
         pause_after: 0.5
   # ================= 戦中 =================
   - id: senchu
@@ -420,6 +436,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "戦争の時代。"
+        reading: "せんそうのじだい。"
         video: assets/clips/era_v1941.mp4
         video_full: true
         pause_after: 1.8
@@ -470,6 +487,7 @@ scenes:
         text: "……そういう、ことなのだ。"
       - speaker: reimu
         text: "身に覚えのない罪で、45日間拘束されたと言われています。"
+        reading: "みにおぼえのないつみで、よんじゅうごにちかん、こうそくされたといわれています。"
         pause_after: 0.6
       - speaker: zundamon
         emotion: sad
@@ -477,6 +495,7 @@ scenes:
         pause_after: 0.6
       - speaker: reimu
         text: "釈放されたとき、体はぼろぼろでした。"
+        reading: "しゃくほうされたとき、からだはぼろぼろでした。"
       - speaker: zundamon
         emotion: sad
         text: "45日ぶりの外は……まぶしいのだ……。"
@@ -492,6 +511,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "そんな時代にも、出会いはやってきます。京都のホテル。"
+        reading: "そんなじだいにも、であいはやってきます。きょうとのほてる。"
       - speaker: tsumugi
         emotion: normal
         text: "はい、交換台の[仁子|まさこ]です。"
@@ -503,7 +523,7 @@ scenes:
         text: "かしこまりました。"
       - speaker: zundamon
         emotion: thinking
-        text: "……いい声なのだ。"
+        text: "……いい[声|こえ]なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "お仕事中です。"
@@ -515,6 +535,7 @@ scenes:
         text: "電話は用件のためにあるんだけどなあ。"
       - speaker: reimu
         text: "翌日。"
+        reading: "よくじつ。"
       - speaker: tsumugi
         emotion: happy
         text: "あら、昨日の大阪の[方|かた]。"
@@ -534,7 +555,8 @@ scenes:
         emotion: happy
         text: "だ、大阪に繋いでほしいのだ！"
       - speaker: reimu
-        text: "用件は、いつも同じでした。"
+        text: "用件は、いつも[同じ|おなじ]でした。"
+        reading: "ようけんは、いつもおなじでした。"
   # ================= 1945年3月・空襲の中の結婚 =================
   - id: kekkon
     title: ""
@@ -546,6 +568,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1945年3月21日。大阪大空襲の、さなかのことです。"
+        reading: "せんきゅうひゃくよんじゅうごねん、さんがつにじゅういちにち。おおさかだいくうしゅうの、さなかのことです。"
       - speaker: tsumugi
         emotion: normal
         text: "ゆうべも、空が真っ赤だったね。"
@@ -575,6 +598,7 @@ scenes:
         text: "はい。よろしくね、[百福|ももふく]さん。"
       - speaker: reimu
         text: "なお[百福|ももふく]、結婚はこれが3度目です。"
+        reading: "なおももふく、けっこんはこれがさんどめです。"
       - speaker: tsumugi
         emotion: surprised
         text: "……3度目？"
@@ -602,6 +626,7 @@ scenes:
         pause_after: 0.5
       - speaker: reimu
         text: "その5か月後。戦争が、終わります。"
+        reading: "そのごかげつご。せんそうが、おわります。"
         pause_after: 0.5
   # ================= 戦後・闇市 =================
   - id: yamiichi
@@ -613,6 +638,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1945年、大阪。"
+        reading: "せんきゅうひゃくよんじゅうごねん、おおさか。"
         video: assets/clips/era_v1945.mp4
         video_full: true
         pause_after: 0.8
@@ -624,6 +650,7 @@ scenes:
         text: "でも、闇市は生きてるのだ。"
       - speaker: reimu
         text: "一杯のラーメン屋台に、長い行列ができていました。"
+        reading: "いっぱいのらーめんやたいに、ながいぎょうれつができていました。"
         video: assets/clips/mf2_gyoretsu.mp4
         video_span: 4
         video_full: true
@@ -632,10 +659,10 @@ scenes:
         text: "寒空の下で、何時間も並んでるのだ。"
       - speaker: zundamon
         emotion: thinking
-        text: "値段は木の札に手書き……日替わりなのだ。"
+        text: "値段は木の[札|ふだ]に手書き……日替わりなのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "並んでる人の顔が、みんな真剣なのだ。"
+        text: "並んでる[人|ひと]の顔が、みんな真剣なのだ。"
       - speaker: yujin
         text: "兄さんも食べてくかい。今日はもう麺切れだがね。"
       - speaker: zundamon
@@ -657,6 +684,7 @@ scenes:
         text: "ボクのやるべきことは、食だ！"
       - speaker: reimu
         text: "この行列を、[百福|ももふく]は生涯忘れませんでした。"
+        reading: "このぎょうれつを、ももふくはしょうがいわすれませんでした。"
   # ================= 製塩・栄養食品 =================
   - id: hama
     title: ""
@@ -689,6 +717,7 @@ scenes:
         text: "塩ですから。"
       - speaker: reimu
         text: "食糧難の時代、塩は貴重品でした。"
+        reading: "しょくりょうなんのじだい、しおはきちょうひんでした。"
       - speaker: wakamono
         text: "社長、今月の給料は……。"
       - speaker: zundamon
@@ -715,6 +744,7 @@ scenes:
         text: "次は、もっと大きな鉄板を用意するぞ！"
       - speaker: reimu
         text: "若者たちとは、寝食を共にする仲でした。"
+        reading: "わかものたちとは、しんしょくをともにするなかでした。"
   # ================= 栄養食品の研究所 =================
   - id: eiyou
     title: ""
@@ -726,7 +756,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "次は、病人の栄養食を作るのだ！"
+        text: "次は、病人の栄養食を作るぞ！"
       - speaker: tsumugi
         emotion: surprised
         text: "また新しいこと始めた。"
@@ -744,6 +774,7 @@ scenes:
         text: "匂いの分だけ、栄養なのだ。"
       - speaker: reimu
         text: "骨から、たんぱく質のエキスを取り出したのです。"
+        reading: "ほねから、たんぱくしつのえきすをとりだしたのです。"
       - speaker: zundamon
         emotion: normal
         text: "試作品第1号……食べてみるのだ。"
@@ -761,7 +792,7 @@ scenes:
         text: "病人の口に入らなければ、意味がないのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "ペーストにして、名前はビセイクルなのだ！"
+        text: "ペーストにして、名前はビセイクル！"
       - speaker: isha
         text: "病院で出したら、患者がよく食べてくれてね。"
       - speaker: isha
@@ -776,6 +807,7 @@ scenes:
         text: "まず食べられることが、薬なのだ。"
       - speaker: reimu
         text: "国民栄養化学研究所という、研究所まで作りました。"
+        reading: "こくみんえいようかがくけんきゅうしょという、けんきゅうじょまでつくりました。"
       - speaker: tsumugi
         emotion: normal
         text: "塩屋さんだったのに、もう所長さんだよ。"
@@ -787,6 +819,7 @@ scenes:
         text: "なんだか強そうな名前だね。"
       - speaker: reimu
         text: "1948年設立。のちの日清食品です。"
+        reading: "せんきゅうひゃくよんじゅうはちねんせつりつ。のちの、にっしんしょくひんです。"
   # ================= 1948 GHQ・収監 =================
   - id: y1948
     title: "1948・一度目のゼロ"
@@ -797,11 +830,13 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1948年。"
+        reading: "せんきゅうひゃくよんじゅうはちねん。"
         video: assets/clips/era_v1948.mp4
         video_full: true
         pause_after: 1.2
       - speaker: reimu
         text: "順調に見えた、矢先でした。"
+        reading: "じゅんちょうにみえた、やさきでした。"
   - id: y1948b
     title: ""
     background: il_goku
@@ -812,6 +847,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "GHQ。戦後の日本を占領統治していた、連合国軍の司令部です。"
+        reading: "じーえっちきゅー。せんごのにほんをせんりょうとうちしていた、れんごうこくぐんのしれいぶです。"
       - speaker: ghq
         text: "脱税の疑いだ。"
       - speaker: zundamon
@@ -826,11 +862,12 @@ scenes:
         text: "無申告の給与と、みなす。"
       - speaker: zundamon
         emotion: angry
-        text: "給料じゃないのだ！未来への投資なのだ！"
+        text: "給料じゃない！未来への投資なのだ！"
       - speaker: ghq
         text: "連行する。"
       - speaker: reimu
         text: "本人は後年、みせしめだったと語っています。"
+        reading: "ほんにんはこうねん、みせしめだったとかたっています。"
         pause_after: 0.4
       - speaker: zundamon
         emotion: normal
@@ -851,6 +888,7 @@ scenes:
         pause_after: 0.5
       - speaker: reimu
         text: "これが、1度目の全財産喪失です。"
+        reading: "これが、いちどめのぜんざいさんそうしつです。"
       - speaker: zundamon
         emotion: surprised
         text: "1度目！？"
@@ -868,8 +906,10 @@ scenes:
         text: "……うん、なのだ。"
       - speaker: reimu
         text: "この献身ぶりから、のちに観音さまと呼ばれた人です。"
+        reading: "このけんしんぶりから、のちにかんのんさまとよばれたひとです。"
       - speaker: reimu
         text: "収監中も、配られる食事を観察していたと言われています。"
+        reading: "しゅうかんちゅうも、くばられるしょくじをかんさつしていたといわれています。"
       - speaker: zundamon
         emotion: normal
         text: "今日の飯は、パンと薄いスープなのだ。"
@@ -884,6 +924,7 @@ scenes:
         text: "食への興味は、鉄格子でも止まらないのだ。"
       - speaker: reimu
         text: "のちに訴えが取り下げられ、釈放されます。"
+        reading: "のちにうったえがとりさげられ、しゃくほうされます。"
         pause_after: 0.4
       - speaker: tsumugi
         emotion: happy
@@ -896,6 +937,7 @@ scenes:
         text: "商売の魂までは、没収できなかったのだ！"
       - speaker: reimu
         text: "転んでも種を拾って立つ。それがこの男の流儀でした。"
+        reading: "ころんでもたねをひろってたつ。それがこのおとこのりゅうぎでした。"
   # ================= 1957 再びの成功と頼まれごと（承認済みベース） =================
   - id: y1957
     title: "1957・すべてを失う"
@@ -906,6 +948,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1957年、大阪。"
+        reading: "せんきゅうひゃくごじゅうななねん、おおさか。"
         video: assets/clips/era_v1957.mp4
         video_full: true
         pause_after: 0.8
@@ -933,6 +976,7 @@ scenes:
         text: "それなら、いいのだ。"
       - speaker: reimu
         text: "この軽い返事が、人生を変えます。"
+        reading: "このかるいへんじが、じんせいをかえます。"
         pause_after: 0.6
       - speaker: zundamon
         emotion: happy
@@ -951,8 +995,10 @@ scenes:
         text: "楽な話には、裏があるんだけどなあ。"
       - speaker: reimu
         text: "やがて、組合は破綻。"
+        reading: "やがて、くみあいははたん。"
       - speaker: reimu
         text: "理事長の[百福|ももふく]に、全責任がのしかかりました。"
+        reading: "りじちょうのももふくに、ぜんせきにんがのしかかりました。"
         pause_after: 0.4
   - id: y1957b
     title: ""
@@ -1006,6 +1052,7 @@ scenes:
         text: "……たしかに、なのだ。"
       - speaker: reimu
         text: "47歳。人生2回目の、無一文でした。"
+        reading: "よんじゅうななさい。じんせいにかいめの、むいちもんでした。"
         pause_after: 0.4
       - speaker: zundamon
         emotion: sad
@@ -1019,6 +1066,7 @@ scenes:
         text: "昨日までの知り合いが、みんな冷たいのだ。"
       - speaker: reimu
         text: "信用は、お金より早く消えました。"
+        reading: "しんようは、おかねよりはやくきえました。"
   - id: y1957c
     title: ""
     background: il_washitsu_1957
@@ -1052,6 +1100,7 @@ scenes:
         text: "明日が楽しみなのだ！"
       - speaker: reimu
         text: "この夫婦の台所から、あの一杯が生まれます。"
+        reading: "このふうふのだいどころから、あのいっぱいがうまれます。"
         pause_after: 0.6
   # ================= 1958 決意 =================
   - id: kessin
@@ -1064,6 +1113,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1958年。"
+        reading: "せんきゅうひゃくごじゅうはちねん。"
         video: assets/clips/era_v1958a.mp4
         video_full: true
         pause_after: 1.2
@@ -1087,6 +1137,7 @@ scenes:
         text: "これから考えるのだ！"
       - speaker: reimu
         text: "ノープランでした。"
+        reading: "のーぷらんでした。"
   # ================= 小屋ごもり =================
   - id: koya
     title: ""
@@ -1114,18 +1165,36 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "うちの台所より、いい装備だね。"
-      - speaker: reimu
-        text: "目標は5つ。全部同時に満たすと決めました。"
-        slide:
-          title: "百福の5つの条件"
-          bullets:
-            - "おいしいこと"
-            - "保存がきくこと"
-            - "調理が簡単なこと"
-            - "安いこと・安全なこと"
       - speaker: zundamon
         emotion: normal
-        text: "おいしいは、大前提なのだ。"
+        text: "目標を、5つ決めたのだ。"
+        video: assets/clips/mf3_joken.mp4
+        video_span: 8
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつ、うまいこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ふたつ、日持ちすること。"
+      - speaker: zundamon
+        emotion: normal
+        text: "みっつ、手間いらずなこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よっつ、安いこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いつつ、安全なこと。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "全部盛りだね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "全部盛りじゃなきゃ、革命にならないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "中でも、うまいは大前提なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "保存は？うちに冷蔵庫、ないよ。"
@@ -1152,6 +1221,7 @@ scenes:
         text: "ひとつでも欠けたら、毎日の食卓には並ばないよ。"
       - speaker: reimu
         text: "睡眠4時間、休みなし。この生活が1年続きます。"
+        reading: "すいみんよじかん、やすみなし。このせいかつが、いちねんつづきます。"
         stat: {value: 4, unit: "時間", label: "百福の睡眠時間", start: 8}
   # ================= 近所のヒソヒソ =================
   - id: hisohiso
@@ -1179,58 +1249,7 @@ scenes:
         text: "……お大事にね。"
       - speaker: reimu
         text: "信じる人は、まだ家族しかいませんでした。"
-  # ================= 小屋の夜 =================
-  - id: koya_yoru
-    title: ""
-    background: il_koya
-    bgm: 223am
-    stage:
-      - {who: zundamon, x: 0.28, tag: "百福", flip: true}
-      - {who: tsumugi, x: 0.78, tag: "仁子"}
-    cuts:
-      - speaker: reimu
-        text: "小屋の夜は、長い。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "夜食、置いておくね。"
-      - speaker: zundamon
-        emotion: normal
-        text: "すまないのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "で、今日の試作品は？"
-      - speaker: zundamon
-        emotion: happy
-        text: "食べてみるのだ。"
-      - speaker: tsumugi
-        emotion: thinking
-        text: "……ゴムかな。"
-      - speaker: zundamon
-        emotion: sad
-        text: "ゴムなのだ……。"
-      - speaker: tsumugi
-        emotion: happy
-        text: "でも、昨日よりゴムじゃないよ。"
-      - speaker: zundamon
-        emotion: happy
-        text: "進歩なのだ！"
-      - speaker: tsumugi
-        emotion: normal
-        text: "ちなみに今日は何号機？"
-      - speaker: zundamon
-        emotion: normal
-        text: "試作28号なのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "27号までと、何が違うの？"
-      - speaker: zundamon
-        emotion: thinking
-        text: "……愛情なのだ。"
-      - speaker: tsumugi
-        emotion: thinking
-        text: "配合も変えようね。"
-      - speaker: reimu
-        text: "差し入れと毒舌が、小屋の燃料でした。"
+        reading: "しんじるひとは、まだかぞくしかいませんでした。"
   # ================= 失敗1・スープ練り込み =================
   - id: shippai1
     title: ""
@@ -1280,7 +1299,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "今度は天日干しなのだ！"
+        text: "今度は[天日干し|てんぴぼし]なのだ！"
         video: assets/clips/mf3_fail2.mp4
         video_span: 4
         video_full: true
@@ -1289,24 +1308,31 @@ scenes:
         text: "お日さまは、無料なのだ！"
       - speaker: reimu
         text: "三日三晩、干しました。"
+        reading: "みっかみばん、ほしました。"
       - speaker: zundamon
         emotion: sad
         text: "……お湯をかけても、10分戻らないのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "乾いただけじゃ、お湯の通り道がないんだよ。"
       - speaker: zundamon
         emotion: normal
-        text: "ざる干し、網干し、吊り干しも試したのだ。"
+        text: "[ざる干し|ざるぼし]、[網干し|あみぼし]、[吊り干し|つりぼし]も試したのだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "洗濯物みたいだね。"
       - speaker: zundamon
         emotion: sad
-        text: "どれもカチカチで、戻らないのだ。"
+        text: "どれも、カチカチに詰まって戻らないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ねえ、[高野豆腐|こうやどうふ]って、お湯ですぐ戻るよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれは中が、スポンジみたいにスカスカだからなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "乾いてても、お湯の通り道があるんだね。"
       - speaker: zundamon
         emotion: thinking
-        text: "通り道……？"
+        text: "通り道……麺には、それがないのだ……。"
   # ================= 失敗3・カビ =================
   - id: shippai3
     title: ""
@@ -1336,6 +1362,61 @@ scenes:
       - speaker: zundamon
         emotion: angry
         text: "完全に乾かして、すぐ戻る……矛盾なのだ！"
+        pause_after: 0.5
+  # ================= 小屋の夜 =================
+  - id: koya_yoru
+    title: ""
+    background: il_koya
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.28, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.78, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "小屋の夜は、長い。"
+        reading: "こやのよるは、ながい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "夜食、置いておくね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "すまないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、今日の試作品は？"
+      - speaker: zundamon
+        emotion: happy
+        text: "食べてみるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ゴムかな。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ゴムなのだ……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "でも、昨日よりゴムじゃないよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "進歩なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに今日は何号機？"
+      - speaker: zundamon
+        emotion: normal
+        text: "試作28号なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "27号までと、何が違うの？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……愛情なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "配合も変えようね。"
+      - speaker: reimu
+        text: "差し入れと毒舌が、小屋の燃料でした。"
+        reading: "さしいれとどくぜつが、こやのねんりょうでした。"
       - speaker: zundamon
         emotion: sad
         text: "そろそろ心が折れそうなのだ。"
@@ -1350,6 +1431,7 @@ scenes:
         text: "なら、革命はまだ途中だね。"
       - speaker: reimu
         text: "小屋の明かりは、今夜も消えませんでした。"
+        reading: "こやのあかりは、こんやもきえませんでした。"
         pause_after: 0.5
   # ================= 天ぷらのひらめき =================
   - id: tempura
@@ -1362,18 +1444,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "ある日の夕方。運命は台所にありました。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "ねえ、高野豆腐って、お湯ですぐ戻るよね。"
-      - speaker: zundamon
-        emotion: normal
-        text: "あれは中が、スポンジみたいにスカスカだからなのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "麺も、そうできたらいいのにね。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "スカスカ……穴を、どうやって開けるかなのだ……。"
+        reading: "あるひのゆうがた。うんめいはだいどころにありました。"
       - speaker: tsumugi
         emotion: happy
         text: "今日の夕飯は天ぷらだよ。"
@@ -1405,8 +1476,12 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "そしてその穴に、お湯が染み込んで麺が戻るのだ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "[高野豆腐|こうやどうふ]の、スカスカと同じ理屈なのだ！"
       - speaker: reimu
         text: "[瞬間油熱乾燥法|しゅんかんゆねつかんそうほう]。インスタントラーメンの心臓部です。"
+        reading: "しゅんかんゆねつかんそうほう。いんすたんとらーめんのしんぞうぶです。"
         telops:
           - {text: "瞬間油熱乾燥法", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1E222E", glow: "#3AA0FF", anim: up}
       - speaker: tsumugi
@@ -1426,6 +1501,7 @@ scenes:
         text: "あの3分は、穴にお湯が染み込む時間だったのだ！"
       - speaker: reimu
         text: "発想の種は、いつもの夕飯の中にありました。"
+        reading: "はっそうのたねは、いつものゆうはんのなかにありました。"
       - speaker: zundamon
         emotion: happy
         text: "仁子、天才なのだ！"
@@ -1444,6 +1520,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "揚げた麺に、お湯を注ぎます。"
+        reading: "あげためんに、おゆをそそぎます。"
       - speaker: zundamon
         emotion: thinking
         text: "……2分、経ったのだ。"
@@ -1487,6 +1564,7 @@ scenes:
         text: "台所が、お店になったのだ！"
       - speaker: reimu
         text: "1958年、夏のことでした。"
+        reading: "せんきゅうひゃくごじゅうはちねん、なつのことでした。"
         pause_after: 0.6
       - speaker: tsumugi
         emotion: normal
@@ -1502,9 +1580,10 @@ scenes:
         text: "鶏なら、世界のどこでも売れるのだ！"
       - speaker: tsumugi
         emotion: thinking
-        text: "小屋の中から、もう世界の話してる。"
+        text: "小屋の中から、もう世界の話をしてる。"
       - speaker: reimu
         text: "味の土台は、[仁子|まさこ]の炊いた鶏ガラスープでした。"
+        reading: "あじのどだいは、まさこのたいた、とりがらすーぷでした。"
       - speaker: tsumugi
         emotion: normal
         text: "ところで、名前はどうするの？"
@@ -1527,6 +1606,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1958年8月25日。チキンラーメン発売。"
+        reading: "せんきゅうひゃくごじゅうはちねん、はちがつにじゅうごにち。ちきんらーめん、はつばい。"
         video: assets/clips/era_v1958.mp4
         video_full: true
       - speaker: zundamon
@@ -1585,6 +1665,7 @@ scenes:
         text: "手のひら返しが気持ちいいのだ！"
       - speaker: reimu
         text: "お湯で2分。当時は魔法のラーメンと呼ばれました。"
+        reading: "おゆでにふん。とうじは、まほうのらーめんとよばれました。"
         telops:
           - {text: "魔法のラーメン", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", anim: up}
   - id: hyoban
@@ -1611,6 +1692,7 @@ scenes:
         text: "夜食に最高なんだよなあ。"
       - speaker: reimu
         text: "疑いは、一杯で消えました。"
+        reading: "うたがいは、いっぱいできえました。"
   # ================= 日清食品の誕生と量産 =================
   - id: nissin
     title: ""
@@ -1656,6 +1738,7 @@ scenes:
         text: "いい名前だね。"
       - speaker: reimu
         text: "誰もが知るあの社名は、チキンラーメンと同じ年の生まれです。"
+        reading: "だれもがしるあのしゃめいは、ちきんらーめんとおなじとしのうまれです。"
       - speaker: shain
         text: "社長、[高槻|たかつき]の新工場が完成しました！"
       - speaker: shain
@@ -1681,6 +1764,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "発売翌年には、年間1300万食売れたと言われています。"
+        reading: "はつばいよくねんには、ねんかんせんさんびゃくまんしょく、うれたといわれています。"
         video: assets/clips/mf2_graph.mp4
         video_span: 3
         video_full: true
@@ -1733,6 +1817,7 @@ scenes:
         text: "まずいパチもんより、うまいライバルなのだ。"
       - speaker: reimu
         text: "のちに特許は業界団体へ譲られ、市場は一気に育ちました。"
+        reading: "のちにとっきょはぎょうかいだんたいへゆずられ、しじょうはいっきにそだちました。"
         pause_after: 0.5
   # ================= 1966 どんぶりのない国 =================
   - id: america
@@ -1744,6 +1829,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1966年。"
+        reading: "せんきゅうひゃくろくじゅうろくねん。"
         video: assets/clips/era_v1966.mp4
         video_full: true
         pause_after: 1.2
@@ -1826,6 +1912,7 @@ scenes:
         text: "これなのだ！カップの蓋は、これでいくのだ！"
       - speaker: reimu
         text: "あの銀色の蓋は、機内食の容器から生まれました。"
+        reading: "あのぎんいろのふたは、きないしょくのようきからうまれました。"
       - speaker: zundamon
         emotion: happy
         text: "仁子、聞いてほしいのだ！麺をコップで食べる国があったのだ！"
@@ -1847,6 +1934,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1971年9月18日、カップヌードル発売。"
+        reading: "せんきゅうひゃくななじゅういちねん、くがつじゅうはちにち。かっぷぬーどる、はつばい。"
         video: assets/clips/era_v1971.mp4
         video_full: true
       - speaker: shain
@@ -1859,11 +1947,12 @@ scenes:
         video_full: true
       - speaker: zundamon
         emotion: surprised
-        text: "逆なのだ！麺に、カップを上からかぶせるのだ！"
+        text: "逆だ！麺に、カップを上からかぶせるのだ！"
       - speaker: shain
         text: "……天才ですか？"
       - speaker: reimu
         text: "逆さま充填。麺はカップの中間で固定され、割れなくなりました。"
+        reading: "さかさまじゅうてん。めんはかっぷのちゅうかんでこていされ、われなくなりました。"
       - speaker: zundamon
         emotion: happy
         text: "宙に浮いてるから、お湯が下にも回るのだ。"
@@ -1878,7 +1967,7 @@ scenes:
         text: "この新素材、ポリスチレンはどうでしょう。"
       - speaker: zundamon
         emotion: happy
-        text: "採用なのだ！2.1ミリまで薄く加工するのだ！"
+        text: "採用！2.1ミリまで薄く加工するのだ！"
       - speaker: shain
         text: "お湯を入れても、持てるぞ……！"
       - speaker: shain
@@ -1888,11 +1977,12 @@ scenes:
         text: "厚さ6センチの塊を、均一に揚げる……。"
       - speaker: zundamon
         emotion: surprised
-        text: "詰め方なのだ！上を密に、下を粗くするのだ！"
+        text: "詰め方だ！上を密に、下を粗くするのだ！"
       - speaker: shain
         text: "すき間を、油とお湯が通る……！"
       - speaker: reimu
         text: "揚げムラも湯戻りも、これで解決しました。"
+        reading: "あげむらもゆもどりも、これでかいけつしました。"
       - speaker: zundamon
         emotion: normal
         text: "麺は、フォークで食べやすい長さにするのだ。"
@@ -1934,6 +2024,7 @@ scenes:
         text: "この流れ、13年前にも見たのだ……。"
       - speaker: reimu
         text: "[問屋|とんや]ルートでは、まったく売れませんでした。"
+        reading: "とんやるーとでは、まったくうれませんでした。"
   # ================= 銀座の歩行者天国 =================
   - id: ginza
     title: ""
@@ -1952,6 +2043,7 @@ scenes:
         text: "新しいものは、新しい人に聞くのだ。"
       - speaker: reimu
         text: "銀座の歩行者天国。若者に、その場で食べてもらったのです。"
+        reading: "ぎんざのほこうしゃてんごく。わかものに、そのばでたべてもらったのです。"
       - speaker: wakamono
         text: "なにこれ、カップのまま食べるの？"
       - speaker: zundamon
@@ -1963,7 +2055,7 @@ scenes:
         text: "なあ、これどこで買えるんだ？"
       - speaker: zundamon
         emotion: happy
-        text: "今はここだけなのだ！"
+        text: "今は、ここだけだぞ！"
       - speaker: wakamono
         text: "じゃあ、もう1個。"
       - speaker: zundamon
@@ -1978,6 +2070,7 @@ scenes:
         text: "未来の味と思えば、安いのだ！"
       - speaker: reimu
         text: "4時間で2万食が売れたと言われています。"
+        reading: "よじかんで、にまんしょくがうれたといわれています。"
         stat: {value: 20000, unit: "食", label: "銀座・4時間の販売数"}
       - speaker: tsumugi
         emotion: happy
@@ -1990,6 +2083,7 @@ scenes:
         text: "売り場ごと、発明するのだ！"
       - speaker: reimu
         text: "しかし本当の追い風は、翌年の冬に吹きます。"
+        reading: "しかしほんとうのおいかぜは、よくねんのふゆにふきます。"
         pause_after: 0.5
   # ================= 1972 雪の中継 =================
   - id: y1972
@@ -2001,10 +2095,12 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1972年2月。テレビが、ある事件の中継を流し続けます。"
+        reading: "せんきゅうひゃくななじゅうにねん、にがつ。てれびが、あるじけんのちゅうけいをながしつづけます。"
         video: assets/clips/era_v1972.mp4
         video_full: true
       - speaker: reimu
         text: "[連合赤軍|れんごうせきぐん]による、人質立てこもり事件でした。"
+        reading: "れんごうせきぐんによる、ひとじちたてこもりじけんでした。"
   - id: y1972b
     title: ""
     background: il_washitsu_1957
@@ -2014,6 +2110,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "[極寒|ごっかん]の山での立てこもり事件。[膠着|こうちゃく]は10日間に及びました。"
+        reading: "ごっかんのやまでの、たてこもりじけん。こうちゃくは、とおかかんにおよびました。"
         video: assets/clips/mf2_asama.mp4
         video_span: 5
         video_full: true
@@ -2023,6 +2120,7 @@ scenes:
         text: "これなら、湯を注ぐだけで済む。"
       - speaker: reimu
         text: "雪の中、機動隊員がすする湯気が全国に映りました。"
+        reading: "ゆきのなか、きどうたいいんがすするゆげが、ぜんこくにうつりました。"
       - speaker: zundamon
         emotion: normal
         text: "画面越しでも、あの湯気のあったかさは伝わるのだ。"
@@ -2031,9 +2129,11 @@ scenes:
         text: "寒い場所の一杯は、ごちそうだからね。"
       - speaker: reimu
         text: "中継の視聴率は、9割に達したと言われています。"
+        reading: "ちゅうけいのしちょうりつは、きゅうわりにたっしたといわれています。"
         stat: {value: 89.7, unit: "%", label: "中継の総視聴率"}
       - speaker: reimu
         text: "この冬を境に、カップヌードルは日常になりました。"
+        reading: "このふゆをさかいに、かっぷぬーどるはにちじょうになりました。"
       - speaker: zundamon
         emotion: surprised
         text: "作っても作っても、追いつかないのだ！"
@@ -2049,7 +2149,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "今度こそ、海を渡るのだ！"
+        text: "今度こそ、海を渡るぞ！"
       - speaker: zundamon
         emotion: normal
         text: "所変われば、スープの味も変わるのだ。"
@@ -2061,9 +2161,10 @@ scenes:
         text: "[辛い|からい]国にはもっと辛く、酸っぱい国には酸っぱくなのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "郷に入っては、郷の味だね。"
+        text: "[郷|ごう]に入っては、[郷|ごう]の味だね。"
       - speaker: reimu
         text: "世界で年間1000億食。冒頭の数字は、こうして生まれたのです。"
+        reading: "せかいで、ねんかんせんおくしょく。ぼうとうのすうじは、こうしてうまれたのです。"
       - speaker: zundamon
         emotion: happy
         text: "ボクの夜食は、世界の夜食だったのだ！"
@@ -2082,6 +2183,7 @@ scenes:
     cuts:
       - speaker: reimu
         text: "時は流れて、現代。"
+        reading: "ときはながれて、げんだい。"
       - speaker: zundamon
         emotion: surprised
         text: "棚が、カップだらけなのだ！"
@@ -2156,7 +2258,8 @@ scenes:
         emotion: normal
         text: "おいしくて、体にいい。昔なら夢の話だね。"
       - speaker: reimu
-        text: "小屋の5つの条件は、今も更新され続けています。"
+        text: "小屋の5つの目標は、今も更新され続けています。"
+        reading: "こやのいつつのもくひょうは、いまもこうしんされつづけています。"
       - speaker: zundamon
         emotion: thinking
         text: "次は、何が出るのだ？"
@@ -2181,12 +2284,14 @@ scenes:
         text: "まだ、やりたいことがあるのだ。"
       - speaker: reimu
         text: "2005年。宇宙食のラーメンを完成させます。"
+        reading: "にせんごねん。うちゅうしょくのらーめんを、かんせいさせます。"
         video: assets/clips/astronaut.mp4
         video_span: 3
         video_full: true
         video_speed: 0.8
       - speaker: reimu
         text: "95歳でした。"
+        reading: "きゅうじゅうごさいでした。"
       - speaker: zundamon
         emotion: surprised
         text: "95歳で宇宙なのだ！？"
@@ -2201,6 +2306,7 @@ scenes:
         text: "90歳を過ぎて、まだ発明してる。"
       - speaker: reimu
         text: "麺は一口サイズ。スープにはとろみ。無重力への対策です。"
+        reading: "めんはひとくちさいず。すーぷにはとろみ。むじゅうりょくへのたいさくです。"
       - speaker: zundamon
         emotion: happy
         text: "小屋の麺が、ついに地球を出たのだ。"
@@ -2212,6 +2318,7 @@ scenes:
         text: "体が資本なのだ。"
       - speaker: reimu
         text: "日課はゴルフと、チキンラーメンだったと言われています。"
+        reading: "にっかはごるふと、ちきんらーめんだったといわれています。"
       - speaker: tsumugi
         emotion: normal
         text: "今日のお昼も、チキンラーメンでいいの？"
@@ -2220,6 +2327,7 @@ scenes:
         text: "もちろんなのだ。発明した本人が、一番のファンなのだ。"
       - speaker: reimu
         text: "昼食はほぼ毎日チキンラーメン。生涯続いたそうです。"
+        reading: "ちゅうしょくは、ほぼまいにちちきんらーめん。しょうがいつづいたそうです。"
       - speaker: tsumugi
         emotion: normal
         text: "思えば、2回もゼロになったね。"
@@ -2235,6 +2343,7 @@ scenes:
         pause_after: 0.6
       - speaker: reimu
         text: "2007年1月。96歳で、その生涯を閉じました。"
+        reading: "にせんななねん、いちがつ。きゅうじゅうろくさいで、そのしょうがいをとじました。"
         pause_after: 0.8
       - speaker: tsumugi
         emotion: sad
@@ -2242,10 +2351,12 @@ scenes:
         pause_after: 0.5
       - speaker: reimu
         text: "人生に遅すぎるということはない。"
+        reading: "じんせいに、おそすぎるということはない。"
         telops:
           - {text: "人生に遅すぎるということはない", size: lg, position: middle-center, color: "#FFFFFF", stroke: "#1E222E", anim: fade}
       - speaker: reimu
         text: "そう語り続けた人でした。"
+        reading: "そうかたりつづけたひとでした。"
         pause_after: 0.8
   # ================= 現代へ戻る =================
   - id: gendai
@@ -2258,7 +2369,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: thinking
-        text: "今日は何味にするか……よし、しょうゆなのだ。"
+        text: "今日は[何味|なにあじ]にするか……よし、しょうゆなのだ。"
       - speaker: zundamon
         emotion: normal
         text: "お湯を注いだのだ。今日は、ちゃんと3分待つのだ。"

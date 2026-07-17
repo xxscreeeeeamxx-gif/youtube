@@ -260,6 +260,35 @@ def draw_timer3_v2(d, t):
             d.line(pts, fill=(230, 236, 246, 180), width=9)
 
 
+# ---------------------------------------------------------------- 5つの目標
+J_P = [0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0]
+J_DUR = 16.0
+JOKEN = ["うまいこと", "日持ちすること", "手間いらずなこと", "安いこと", "安全なこと"]
+
+
+def draw_joken(d, t):
+    d.rectangle([0, 0, W, H], fill=(10, 14, 24))
+    ctext(d, W / 2, 90, "百福の5つの目標", font(64), INK)
+    done = t >= J_P[6] if len(J_P) > 6 else False
+    for i, item in enumerate(JOKEN):
+        bi = min(i + 1, len(J_P) - 1)
+        if t < J_P[bi]:
+            continue
+        a = ease((t - J_P[bi]) / 0.5)
+        y0 = 210 + i * 150
+        col = AMBER if done else BROTH
+        d.rounded_rectangle([560, y0, 560 + int(800 * a), y0 + 116], radius=20,
+                            fill=(30, 38, 54), outline=col, width=4)
+        if a > 0.6:
+            num = ["一", "二", "三", "四", "五"][i]
+            d.ellipse([590, y0 + 24, 658, y0 + 92], fill=col)
+            f = font(44)
+            d.text((624 - d.textlength(num, font=f) / 2, y0 + 32), num,
+                   font=f, fill=(20, 24, 34))
+            f2 = font(52)
+            d.text((700, y0 + 28), item, font=f2, fill=INK)
+
+
 # ---------------------------------------------------------------- 失敗の物語3連
 # 各フェーズは spans_from_timing で実測同期
 F1_P = [0.0, 2.0, 4.0, 6.0]
@@ -388,6 +417,7 @@ if __name__ == "__main__":
     sync_render("mf2_graph", lambda b: globals().update(G2_P=b), draw_graph)
     sync_render("mf2_gohan", lambda b: globals().update(GH_P=b), draw_gohan)
     sync_render("mf2_kenko", lambda b: globals().update(K_P=b), draw_kenko)
+    sync_render("mf3_joken", lambda b: globals().update(J_P=b), draw_joken)
     sync_render("mf3_fail1", lambda b: globals().update(F1_P=b), draw_fail1)
     sync_render("mf3_fail2", lambda b: globals().update(F2_P=b), draw_fail2)
     sync_render("mf3_fail3", lambda b: globals().update(F3_P=b), draw_fail3)
