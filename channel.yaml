@@ -44,11 +44,11 @@ characters:
     sprite_flip: true    # 素材が外向きなので反転して内側（つむぎ側）を向かせる
     role: "ちょっとアホな生徒役。語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。視聴者と同じ勘違いをして驚き、質問し、突っ込まれる。"
   reimu:
-    display_name: "れいむ"
+    display_name: "ナレーター"
     credit: "AquesTalkPlayer（株式会社アクエスト）"
     # ゆっくりボイス。VOICEVOXではなくAquesTalkPlayer(公式Mac版)のCLIで合成する
     engine: aquestalk
-    aquestalk_preset: "れいむ"
+    aquestalk_preset: "中性"   # ユーザー選定（2026-07 サンプル7種から）
     speed_scale: 1.3   # お手本準拠で速め。AquesTalkに話速パラメータはないのでffmpeg atempoで調整
     color: "#FF6B6B"
     role: "再現ドラマのナレーター。です・ます調で史実・数字・年号を淡々と補足し、ボケには乗らず、時々オチだけ静かに回収する。"
