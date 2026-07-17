@@ -720,7 +720,14 @@ def render_frames(
                 caption = cut.text
             else:
                 mem = next((m for m in scene.stage if m.who == cut.speaker), None)
-                bubble = {"text": cut.text, "x": mem.x if mem else 0.5,
+                bx = mem.x if mem else 0.5
+                if cut.duet_with:
+                    # デュエットは2人の中間に1つの吹き出し（両者のセリフとして見せる）
+                    mem2 = next((m for m in scene.stage
+                                 if m.who == cut.duet_with), None)
+                    if mem2 is not None:
+                        bx = (bx + mem2.x) / 2
+                bubble = {"text": cut.text, "x": bx,
                           "color": cfg.character(cut.speaker).get("color")}
 
         # 再現ドラマ: 話者の立ち絵は基底から抜いて動くレイヤーにする（横動画のみ）
@@ -733,6 +740,9 @@ def render_frames(
                 actor = cut.speaker
 
         header = scene.title or (script.meta.title if vertical else "")
+        if drama and full:
+            # 全画面動画（年号カード・図解アニメ）では章タブを消す（見出しと干渉するため）
+            header = ""
         # ベースはテロップ抜きで合成（テロップは別レイヤーで動かす）
         key_src = json.dumps(
             [bg_name, header, chars,

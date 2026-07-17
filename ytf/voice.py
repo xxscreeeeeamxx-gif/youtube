@@ -116,6 +116,8 @@ class VoicevoxClient:
                 "surface": e["surface"],
                 "pronunciation": e["pronunciation"],
                 "accent_type": e.get("accent_type", 0),
+                # 固有名詞は標準語彙に負けないよう高優先度（5だと人名等に負ける）
+                "priority": e.get("priority", 9),
             }
             hit = existing.get(norm(e["surface"]))
             if hit is None:
@@ -124,7 +126,8 @@ class VoicevoxClient:
             else:
                 uuid, word = hit
                 same = (norm(word.get("pronunciation", "")) == norm(e["pronunciation"])
-                        and int(word.get("accent_type", 0)) == int(params["accent_type"]))
+                        and int(word.get("accent_type", 0)) == int(params["accent_type"])
+                        and int(word.get("priority", 5)) == int(params["priority"]))
                 if not same:
                     requests.put(f"{self.base}/user_dict_word/{uuid}",
                                  params=params, timeout=10).raise_for_status()

@@ -22,6 +22,33 @@ from scripts.gen_momofuku_extras import (  # noqa: E402
 )
 from PIL import ImageDraw  # noqa: E402
 
+# ---------------------------------------------------------------- 境界の自動計測
+def spans_from_timing(slug="momofuku-v2"):
+    """timing.json と script.yaml から各クリップの (フェーズ境界, DUR) を実測で返す。
+
+    台本のセリフを直したら voice → 本スクリプト再実行だけで同期が取り直される。
+    """
+    import json
+    import yaml
+    root = Path(__file__).resolve().parent.parent / "projects" / slug
+    t = json.loads((root / "audio" / "timing.json").read_text())
+    s = yaml.safe_load((root / "script.yaml").read_text())
+    cuts = [c for sc in s["scenes"] for c in sc["cuts"]]
+    out = {}
+    for i, (c, ti) in enumerate(zip(cuts, t)):
+        v = c.get("video") or ""
+        if "/mf" not in v:
+            continue
+        span = c.get("video_span", 1)
+        seg = t[i:i + span]
+        bounds, acc = [], 0.0
+        for x in seg:
+            bounds.append(round(acc, 2))
+            acc += x["total_dur"]
+        out[Path(v).stem] = (bounds, round(acc + 1.0, 1))
+    return out
+
+
 # ---------------------------------------------------------------- 年号カード
 # 完全版の年表ドット（誕生→起業→どん底→発明→カップ→宇宙）
 m.ERAS = [("1910", "誕生"), ("1932", "起業"), ("1948", "どん底"),
@@ -239,23 +266,139 @@ def draw_timer3_v2(d, t):
             d.line(pts, fill=(230, 236, 246, 180), width=9)
 
 
+# ---------------------------------------------------------------- 失敗の物語3連
+# 各フェーズは spans_from_timing で実測同期
+F1_P = [0.0, 2.0, 4.0, 6.0]
+F2_P = [0.0, 2.0, 4.0, 6.0]
+F3_P = [0.0, 2.0, 4.0]
+
+
+def draw_fail1(d, t):
+    """スープ練り込み: こねる→自信→ぼろぼろに切れる。"""
+    g = (200, 204, 214)
+    d.rectangle([0, 0, W, H], fill=(16, 18, 28))
+    if t < F1_P[3]:
+        _caption(d, "作戦1　スープを麺に練り込む", g)
+        m._noodle_block(d, W / 2, 560, col=NOODLE)
+        # スープの粉を振り込む手つき（渦）
+        ang = t * 2.4
+        for i in range(3):
+            x = W / 2 + 230 * math.cos(ang + i * 2.1)
+            y = 560 + 80 * math.sin(ang + i * 2.1)
+            d.ellipse([x - 22, y - 22, x + 22, y + 22],
+                      outline=(214, 150, 80), width=6)
+        if t >= F1_P[2]:
+            b = ease((t - F1_P[2]) / 0.6)
+            ctext(d, W / 2, 850, "うまくいく気しかしない",
+                  font(46), tuple(int(GRAY[i] * b) for i in range(3)))
+    else:
+        lt = t - F1_P[3]
+        _caption(d, "→ 麺が、ぼろぼろに切れた", g)
+        m._noodle_block(d, W / 2, 560, col=(150, 154, 164), broken=True)
+        m._batsu(d, W / 2, 560, 90, lt / 0.5)
+
+
+def draw_fail2(d, t):
+    """天日干し: 干す→三日三晩→硬い。"""
+    g = (200, 204, 214)
+    d.rectangle([0, 0, W, H], fill=(16, 18, 28))
+    if t < F2_P[3]:
+        _caption(d, "作戦2　天日で干す", g)
+        # 太陽が弧を描く（時間経過）
+        prog = min(t / max(F2_P[3], 0.1), 1.0)
+        sx = 400 + prog * 1100
+        sy = 360 - math.sin(prog * math.pi) * 160
+        d.ellipse([sx - 70, sy - 70, sx + 70, sy + 70], fill=(244, 214, 120))
+        for i in range(8):
+            a = i * math.pi / 4 + t * 0.4
+            d.line([sx + 92 * math.cos(a), sy + 92 * math.sin(a),
+                    sx + 126 * math.cos(a), sy + 126 * math.sin(a)],
+                   fill=(244, 214, 120), width=7)
+        m._noodle_block(d, W / 2, 700, col=NOODLE)
+        if t >= F2_P[2]:
+            b = ease((t - F2_P[2]) / 0.6)
+            ctext(d, W / 2, 880, "三日三晩",
+                  font(54), tuple(int(GRAY[i] * b) for i in range(3)))
+    else:
+        lt = t - F2_P[3]
+        _caption(d, "→ 乾いても、お湯で戻らない", g)
+        m._noodle_block(d, W / 2 - 200, 560, col=(150, 154, 164))
+        cx, cy, r = W / 2 + 240, 560, 130
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=g, width=10)
+        a = -math.pi / 2 + min(lt / 2.2, 1.0) * 2 * math.pi
+        d.line([cx, cy, cx + (r - 34) * math.cos(a), cy + (r - 34) * math.sin(a)],
+               fill=g, width=9)
+        ctext(d, cx, cy + r + 30, "10分…", font(52), g)
+        m._batsu(d, W / 2, 560, 90, (lt - 1.4) / 0.5 if lt > 1.4 else 0)
+
+
+def draw_fail3(d, t):
+    """蒸し+干し: 期待→カビ→3連敗。"""
+    g = (200, 204, 214)
+    d.rectangle([0, 0, W, H], fill=(16, 18, 28))
+    if t < F3_P[1]:
+        _caption(d, "作戦3　蒸してから干す", g)
+        m._noodle_block(d, W / 2, 560, col=NOODLE)
+        for k in range(3):
+            pts = []
+            for j in range(8):
+                yy = 440 - j * 18
+                pts.append((W / 2 - 90 + k * 90 + 14 * math.sin(t * 2 + j * 0.7 + k), yy))
+            d.line(pts, fill=(235, 240, 248, 140), width=8)
+    elif t < F3_P[2]:
+        lt = t - F3_P[1]
+        _caption(d, "→ 保存中にカビ", g)
+        m._noodle_block(d, W / 2, 560, col=(150, 154, 164))
+        import random
+        rnd = random.Random(3)
+        n = int(min(lt / 1.0, 1.0) * 26)
+        for i in range(n):
+            x = W / 2 - 170 + rnd.random() * 340
+            y = 480 + rnd.random() * 160
+            r = 8 + rnd.random() * 14
+            d.ellipse([x - r, y - r, x + r, y + r], fill=(96, 128, 96))
+        m._batsu(d, W / 2, 560, 100, (lt - 1.0) / 0.5 if lt > 1.0 else 0)
+    else:
+        lt = t - F3_P[2]
+        _caption(d, "ここまで、3連敗", g)
+        for k in range(3):
+            b = ease((lt - k * 0.3) / 0.4) if lt > k * 0.3 else 0
+            if b > 0:
+                m._batsu(d, 720 + k * 240, 540, int(90 * b), 1.0)
+
+
 # ---------------------------------------------------------------- main
 if __name__ == "__main__":
     # 年号カード（DUR 6.5s固定・カット側で切り出される）
     for name, idx, year, title, sub in CARDS:
         render(name, 6.5, m.make_era(idx, year, title, sub))
-    # 実測フェーズ差し替えの再生成
-    m.F_P = [0.0, 3.06, 5.39, 7.38, 10.65, 14.47, 16.87]
-    render("mf2_fail", 20.1, m.draw_fail)
-    m.A_P = [0.0, 3.27, 7.26, 10.92]
-    render("mf2_ana", 15.9, m.draw_ana)
-    m.G_P = [0.0, 3.45, 7.55]
-    render("mf2_gyakusama", 13.2, m.draw_gyakusama)
-    m.S_P = [0.0, 4.38, 6.84, 9.11, 12.92]
-    render("mf2_asama", 17.7, m.draw_asama)
-    # 完全版の新規アニメ
-    render("mf2_gyoretsu", Q_DUR, draw_gyoretsu)
-    render("mf2_graph", G2_DUR, draw_graph)
-    render("mf2_gohan", GH_DUR, draw_gohan)
-    render("mf2_kenko", K_DUR, draw_kenko)
-    render("mf2_timer3", T2_DUR, draw_timer3_v2)
+
+    # フェーズ同期アニメ: 境界は timing.json から自動計測
+    spans = spans_from_timing()
+
+    def bounds(name, default):
+        return spans.get(name, (default, default[-1] + 4.0))
+
+    def sync_render(name, const_setter, draw):
+        if name not in spans:
+            print(f"スキップ（台本に無い）: {name}")
+            return
+        b, dur = spans[name]
+        const_setter(b)
+        render(name, dur, draw)
+
+    sync_render("mf2_gyoretsu", lambda b: globals().update(Q_P=b), draw_gyoretsu)
+    sync_render("mf2_ana", lambda b: setattr(m, "A_P", b), m.draw_ana)
+    sync_render("mf2_gyakusama", lambda b: setattr(m, "G_P", b), m.draw_gyakusama)
+    sync_render("mf2_asama", lambda b: setattr(m, "S_P", b), m.draw_asama)
+    sync_render("mf2_graph", lambda b: globals().update(G2_P=b), draw_graph)
+    sync_render("mf2_gohan", lambda b: globals().update(GH_P=b), draw_gohan)
+    sync_render("mf2_kenko", lambda b: globals().update(K_P=b), draw_kenko)
+    sync_render("mf3_fail1", lambda b: globals().update(F1_P=b), draw_fail1)
+    sync_render("mf3_fail2", lambda b: globals().update(F2_P=b), draw_fail2)
+    sync_render("mf3_fail3", lambda b: globals().update(F3_P=b), draw_fail3)
+
+    def set_timer(b):
+        globals().update(T2_P=b)
+        globals().update(T2_END=spans["mf2_timer3"][1] - 1.4)
+    sync_render("mf2_timer3", set_timer, draw_timer3_v2)

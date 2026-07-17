@@ -37,7 +37,6 @@ scenes:
     title: ""
     background: il_kitchen_night
     bgm: shuffle_shuffle
-    short: true
     stage:
       - {who: zundamon, x: 0.30, flip: true}
       - {who: tsumugi, x: 0.74}
@@ -113,7 +112,7 @@ scenes:
         text: "幼いころに、両親を亡くします。"
         pause_after: 0.6
       - speaker: reimu
-        text: "育てたのは、布問屋を営む祖父母でした。"
+        text: "育てたのは、[布問屋|ぬのどんや]を営む祖父母でした。"
   # ================= 幼少期・店番 =================
   - id: y1910b
     title: ""
@@ -264,7 +263,7 @@ scenes:
       - speaker: reimu
         text: "翌1933年、海を渡って大阪へ。"
       - speaker: reimu
-        text: "メリヤス問屋、日東商会を設立します。"
+        text: "メリヤス[問屋|とんや]、日東商会を設立します。"
       - speaker: zundamon
         emotion: happy
         text: "商人の街は、話が早いのだ！"
@@ -294,7 +293,7 @@ scenes:
         emotion: thinking
         text: "眠い……でも、経済学なのだ……。"
       - speaker: reimu
-        text: "立命館大学の夜間で経済を学びます。"
+        text: "[立命館|りつめいかん]大学の夜間で経済を学びます。"
       - speaker: zundamon
         emotion: normal
         text: "商売の勘だけじゃ、いつか負けるのだ。"
@@ -406,6 +405,34 @@ scenes:
         text: "この行列を、[百福|ももふく]は生涯忘れませんでした。"
       - speaker: reimu
         text: "彼の関心は、食に向かいます。"
+  # ================= 仁子との出会い =================
+  - id: kekkon
+    title: ""
+    background: il_washitsu_1957
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "この年、[百福|ももふく]は結婚します。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "[仁子|まさこ]です。よろしくね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よろしくなのだ！"
+      - speaker: reimu
+        text: "安藤[仁子|まさこ]。のちに朝ドラのモデルにもなる人です。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "大変なときこそ、笑うのがコツよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "頼もしいのだ！"
+      - speaker: reimu
+        text: "この笑顔に、彼は何度も助けられます。"
+        pause_after: 0.4
   # ================= 製塩・栄養食品 =================
   - id: hama
     title: ""
@@ -439,12 +466,26 @@ scenes:
       - speaker: reimu
         text: "若者たちとは、寝食を共にする仲でした。"
       - speaker: reimu
-        text: "病人のための栄養食品も、開発します。"
+        text: "次に取り組んだのは、病人のための栄養食品です。"
+      - speaker: reimu
+        text: "牛や豚の骨から、たんぱく質のエキスを取り出しました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "骨まで、栄養にするのだ！"
+      - speaker: reimu
+        text: "ペースト状の栄養食ビセイクルは、病院にも納められました。"
+      - speaker: wakamono
+        text: "社長、また変なことを始めましたね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "褒め言葉なのだ。"
+      - speaker: reimu
+        text: "国民栄養化学研究所という、研究所まで作っています。"
       - speaker: zundamon
         emotion: happy
         text: "食で、日本を立て直すのだ！"
       - speaker: reimu
-        text: "1948年には、のちの日清食品となる会社を作りました。"
+        text: "1948年には[中交総社|ちゅうこうそうしゃ]を設立。のちの日清食品です。"
   # ================= 1948 GHQ・収監 =================
   - id: y1948
     title: "1948・一度目のゼロ"
@@ -467,6 +508,8 @@ scenes:
       - {who: zundamon, x: 0.24, tag: "百福", flip: true}
       - {who: ghq, x: 0.66}
     cuts:
+      - speaker: reimu
+        text: "GHQ。戦後の日本を占領統治していた、連合国軍の司令部です。"
       - speaker: ghq
         text: "脱税の疑いだ。"
       - speaker: zundamon
@@ -475,31 +518,44 @@ scenes:
       - speaker: ghq
         text: "連行する。"
       - speaker: reimu
-        text: "GHQに逮捕され、収監されます。"
+        text: "問われたのは、若者たちに配っていた奨学金でした。"
+      - speaker: zundamon
+        emotion: angry
+        text: "あれは給料じゃなくて、応援のお金なのだ！"
       - speaker: reimu
-        text: "財産は、没収されました。"
+        text: "それが、無申告の給与とみなされたのです。"
+      - speaker: reimu
+        text: "本人は後年、みせしめだったと語っています。"
+        pause_after: 0.4
+      - speaker: reimu
+        text: "判決は、重労働4年。"
+        pause_after: 0.5
+      - speaker: reimu
+        text: "収監され、財産は没収されました。"
         pause_after: 0.6
       - speaker: zundamon
         emotion: sad
         text: "……全部、なくなったのだ。"
         pause_after: 0.5
       - speaker: reimu
-        text: "覚えておいてください。これが、1回目です。"
+        text: "これが、1度目の全財産喪失です。"
       - speaker: zundamon
         emotion: surprised
-        text: "1回目！？"
+        text: "1度目！？"
       - speaker: reimu
         text: "収監中も、配られる食事を観察していたと言われています。"
       - speaker: zundamon
         emotion: normal
         text: "食への興味は、鉄格子でも止まらないのだ。"
       - speaker: reimu
-        text: "それでも、出てきた彼はまた商売を始めました。"
+        text: "のちに訴えが取り下げられ、釈放されます。"
+      - speaker: reimu
+        text: "出所した[百福|ももふく]は、残った仲間と商売を立て直しました。"
       - speaker: zundamon
         emotion: angry
         text: "商売の魂までは、没収できないのだ！"
       - speaker: reimu
-        text: "この打たれ強さが、のちに世界を変えます。"
+        text: "転んでも種を拾って立つ。それがこの男の流儀でした。"
   # ================= 1957 再びの成功と頼まれごと（承認済みベース） =================
   - id: y1957
     title: "1957・すべてを失う"
@@ -541,7 +597,7 @@ scenes:
         text: "この軽い返事が、人生を変えます。"
         pause_after: 0.6
       - speaker: reimu
-        text: "数年後、組合は破綻。"
+        text: "やがて、組合は破綻。"
       - speaker: reimu
         text: "理事長の[百福|ももふく]に、全責任がのしかかりました。"
         pause_after: 0.4
@@ -631,7 +687,7 @@ scenes:
         emotion: happy
         text: "明日が楽しみなのだ！"
       - speaker: reimu
-        text: "この楽観夫婦が、ここから世界を変えていきます。"
+        text: "この夫婦の台所から、あの一杯が生まれます。"
         pause_after: 0.6
   # ================= 1958 決意 =================
   - id: kessin
@@ -736,7 +792,7 @@ scenes:
         text: "あら、お元気そうで何より。"
       - speaker: tsumugi
         emotion: happy
-        text: "うちの人、いま世界を変えてる途中なんです。"
+        text: "うちの人、お湯だけで戻るラーメンを作ってるんです。"
       - speaker: okusan
         text: "……お大事にね。"
       - speaker: reimu
@@ -778,8 +834,8 @@ scenes:
         text: "進歩なのだ！"
       - speaker: reimu
         text: "差し入れと毒舌が、小屋の燃料でした。"
-  # ================= 失敗の日々 =================
-  - id: shippai
+  # ================= 失敗1・スープ練り込み =================
+  - id: shippai1
     title: ""
     background: il_koya
     bgm: hirusagari
@@ -787,37 +843,78 @@ scenes:
       - {who: zundamon, x: 0.28, tag: "百福", flip: true}
       - {who: tsumugi, x: 0.78, tag: "仁子"}
     cuts:
-      - speaker: reimu
-        text: "ここからは、失敗の記録をご覧いただきます。"
-        video: assets/clips/mf2_fail.mp4
-        video_span: 7
+      - speaker: zundamon
+        emotion: happy
+        text: "まずは、麺にスープを練り込むのだ！"
+        video: assets/clips/mf3_fail1.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "味付きの麺なら、スープの粉も要らないのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "完璧な作戦なのだ！"
+      - speaker: zundamon
+        emotion: sad
+        text: "……麺が、ぼろぼろに切れたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スープの塩気で、生地が弱くなるんだね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "次なのだ！"
+  # ================= 失敗2・天日干し =================
+  - id: shippai2
+    title: ""
+    background: il_koya
+    stage:
+      - {who: zundamon, x: 0.28, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.78, tag: "仁子"}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "今度は天日干しなのだ！"
+        video: assets/clips/mf3_fail2.mp4
+        video_span: 4
         video_full: true
       - speaker: zundamon
         emotion: happy
-        text: "麺にスープを練り込んでみたのだ！"
+        text: "お日さまは、無料なのだ！"
+      - speaker: reimu
+        text: "三日三晩、干しました。"
       - speaker: zundamon
         emotion: sad
-        text: "……麺がぼろぼろに切れたのだ。"
+        text: "……お湯をかけても、10分戻らないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "乾いただけじゃ、お湯の通り道がないんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "通り道……？"
+  # ================= 失敗3・カビ =================
+  - id: shippai3
+    title: ""
+    background: il_koya
+    stage:
+      - {who: zundamon, x: 0.28, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.78, tag: "仁子"}
+    cuts:
       - speaker: zundamon
         emotion: happy
-        text: "なら天日干しなのだ！お日さまは無料なのだ！"
-      - speaker: zundamon
-        emotion: sad
-        text: "……戻すのに10分かかったのだ。麺は硬いままなのだ。"
-      - speaker: zundamon
-        emotion: happy
-        text: "3回目なのだ！今度こそ……"
+        text: "蒸してから干すのだ！今度こそ……"
+        video: assets/clips/mf3_fail3.mp4
+        video_span: 3
+        video_full: true
       - speaker: zundamon
         emotion: surprised
         text: "保存中にカビが生えたのだ！！"
       - speaker: tsumugi
         emotion: normal
         text: "はい、3連敗ね。"
-      - speaker: reimu
-        text: "以上、数か月ぶんの失敗を30秒でお送りしました。"
       - speaker: zundamon
         emotion: sad
-        text: "笑いごとじゃないのだ……そろそろ心が折れそうなのだ。"
+        text: "そろそろ心が折れそうなのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "あなた、最初に何て言ってたか覚えてる？"
@@ -970,7 +1067,7 @@ scenes:
         video: assets/clips/era_v1958.mp4
         video_full: true
       - speaker: reimu
-        text: "まずは問屋への売り込みです。"
+        text: "まずは[問屋|とんや]への売り込みです。"
   - id: hatsubai_b
     title: ""
     background: il_shotengai
@@ -995,7 +1092,7 @@ scenes:
         emotion: sad
         text: "門前払いなのだ……。"
       - speaker: reimu
-        text: "そこで[百福|ももふく]は、問屋を集めて試食会を開きます。"
+        text: "そこで[百福|ももふく]は、[問屋|とんや]を集めて試食会を開きます。"
       - speaker: tonya
         text: "麺がお湯で戻るわけないだろ。"
       - speaker: zundamon
@@ -1034,6 +1131,44 @@ scenes:
         text: "ね？"
       - speaker: reimu
         text: "疑いは、一杯で消えました。"
+  # ================= 日清食品の誕生と量産 =================
+  - id: nissin
+    title: ""
+    background: il_shotengai
+    stage:
+      - {who: zundamon, x: 0.26, tag: "百福", flip: true}
+      - {who: tsumugi, x: 0.78, tag: "仁子"}
+    cuts:
+      - speaker: reimu
+        text: "注文は、小屋の生産力をすぐに超えました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "家族総出でも、追いつかないのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うれしい悲鳴ってやつだね。"
+      - speaker: reimu
+        text: "年の暮れ、会社の名前を改めます。"
+      - speaker: reimu
+        text: "その名は、日清食品。"
+      - speaker: reimu
+        text: "日々清らかに豊かな味をつくる。そう込めたと言われています。"
+      - speaker: zundamon
+        emotion: happy
+        text: "名前も、心機一転なのだ！"
+      - speaker: reimu
+        text: "誰もが知るあの社名は、チキンラーメンと同じ年の生まれです。"
+      - speaker: reimu
+        text: "翌1959年には、[高槻|たかつき]に工場を建てました。"
+      - speaker: reimu
+        text: "敷地は2万4000平方メートル。小屋の何百倍です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "小屋から、始まったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "始まりはいつも、小さいんだね。"
+        pause_after: 0.4
   - id: hatsubai_c
     title: ""
     background: il_shotengai
@@ -1193,6 +1328,30 @@ scenes:
         text: "宙に浮いてるから、お湯が下にも回るのだ。"
       - speaker: reimu
         text: "ひとつの発想が、3つの問題を解決しました。"
+      - speaker: reimu
+        text: "器も、ゼロから作りました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "軽くて、熱くなくて、割れない器がいるのだ。"
+      - speaker: reimu
+        text: "選んだ素材はポリスチレン。2.1ミリまで薄く加工しました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "お湯を入れても、手で持てるのだ！"
+      - speaker: reimu
+        text: "次の難問は、揚げです。"
+      - speaker: reimu
+        text: "厚さ6センチの麺の塊を、いかに均一に揚げるか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "外はカリカリ、中は生麺になるのだ……。"
+      - speaker: reimu
+        text: "答えは詰め方でした。上を密に、下を粗くしたのです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "すき間を、油とお湯が通るのだ！"
+      - speaker: reimu
+        text: "揚げムラも、湯戻りも、これで解決しました。"
       - speaker: zundamon
         emotion: normal
         text: "麺は、フォークで食べやすい長さにするのだ。"
@@ -1226,7 +1385,7 @@ scenes:
         emotion: sad
         text: "この流れ、13年前にも見たのだ……。"
       - speaker: reimu
-        text: "問屋ルートでは、まったく売れませんでした。"
+        text: "[問屋|とんや]ルートでは、まったく売れませんでした。"
   # ================= 銀座の歩行者天国 =================
   - id: ginza
     title: ""
@@ -1263,6 +1422,11 @@ scenes:
         emotion: happy
         text: "若者には、新しさそのものがごちそうだったんだね。"
       - speaker: reimu
+        text: "さらに、お湯の出る自動販売機を街や職場に置きました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "売り場ごと、発明するのだ！"
+      - speaker: reimu
         text: "しかし本当の追い風は、翌年の冬に吹きます。"
         pause_after: 0.5
   # ================= 1972 雪の中継 =================
@@ -1277,6 +1441,8 @@ scenes:
         text: "1972年2月。テレビが、ある事件の中継を流し続けます。"
         video: assets/clips/era_v1972.mp4
         video_full: true
+      - speaker: reimu
+        text: "[連合赤軍|れんごうせきぐん]による、人質立てこもり事件でした。"
   - id: y1972b
     title: ""
     background: il_washitsu_1957
@@ -1285,7 +1451,7 @@ scenes:
       - {who: taiin, x: 0.80}
     cuts:
       - speaker: reimu
-        text: "極寒の山での立てこもり事件。膠着は10日間に及びました。"
+        text: "[極寒|ごっかん]の山での立てこもり事件。[膠着|こうちゃく]は10日間に及びました。"
         video: assets/clips/mf2_asama.mp4
         video_span: 5
         video_full: true
@@ -1298,6 +1464,9 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "画面越しでも、あの湯気のあったかさは伝わるのだ。"
+      - speaker: reimu
+        text: "中継の視聴率は、9割に達したと言われています。"
+        stat: {value: 89.7, unit: "%", label: "中継の総視聴率"}
       - speaker: reimu
         text: "この冬を境に、カップヌードルは日常になりました。"
       - speaker: reimu
@@ -1472,8 +1641,8 @@ scenes:
     background: il_kitchen_night
     bgm: pastel_house
     stage:
-      - {who: zundamon, x: 0.30, flip: true}
-      - {who: tsumugi, x: 0.72}
+      - {who: zundamon, x: 0.15, flip: true}
+      - {who: tsumugi, x: 0.86}
     cuts:
       - speaker: zundamon
         emotion: normal
