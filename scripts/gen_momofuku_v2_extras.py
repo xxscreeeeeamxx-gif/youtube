@@ -99,18 +99,12 @@ def draw_gyoretsu(d, t):
     d.rectangle([0, 0, W, H], fill=(22, 24, 36))
     d.rectangle([0, 760, W, H], fill=(34, 30, 32))
     _stall(d, 180, 460)
-    # 提灯の光
+    # 行列がフェーズごとに伸びる（見出しテロップは出さない・セリフが担う）
     if t < Q_P[1]:
-        _caption(d, "闇市のラーメン屋台", GRAY)
         n = int(ease(t / 2.6) * 8)
     elif t < Q_P[2]:
-        _caption(d, "行列は、途切れない")
         n = 8 + int(ease((t - Q_P[1]) / 2.0) * 6)
-    elif t < Q_P[3]:
-        _caption(d, "一杯のために、何時間も")
-        n = 14
     else:
-        _caption(d, "この行列を、百福は忘れなかった", AMBER)
         n = 14
     # 行列（屋台の右へ伸びる）
     for i in range(n):

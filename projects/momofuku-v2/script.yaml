@@ -22,10 +22,10 @@ meta:
   mobs:
     - {id: saikensha, label: "債権者", voice: 13, pitch: -0.05, hair: short}
     - {id: yujin, label: "知人", voice: 13, pitch: 0.03}
-    - {id: sofu, label: "祖父", voice: 13, pitch: -0.11, item: mustache}
+    - {id: sofu, label: "祖父", voice: 42, item: mustache}
     - {id: kenpei, label: "憲兵", voice: 13, pitch: -0.12, item: hat}
     - {id: ghq, label: "GHQ", voice: 13, pitch: -0.07, item: hat}
-    - {id: wakamono, label: "若者", voice: 13, pitch: 0.10, hair: short}
+    - {id: wakamono, label: "若者", voice: 12, hair: short}
     - {id: okusan, label: "奥さん", voice: 8, pitch: 0.06, hair: bun}
     - {id: tonya, label: "問屋", voice: 13, pitch: -0.08, item: mustache}
     - {id: buyer, label: "バイヤー", voice: 13, pitch: -0.02, item: hat}
@@ -116,8 +116,9 @@ scenes:
     background: il_nunoya
     bgm: honwaka_puppu
     stage:
-      - {who: zundamon, x: 0.24, tag: "百福", flip: true, scale: 0.75}
-      - {who: sofu, x: 0.68}
+      - {who: zundamon, x: 0.20, tag: "百福", flip: true, scale: 0.75}
+      - {who: okusan, x: 0.52}
+      - {who: sofu, x: 0.82}
     cuts:
       - speaker: sofu
         text: "[百福|ももふく]、店番を頼むよ。"
@@ -129,6 +130,32 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "いらっしゃいなのだ！"
+      - speaker: okusan
+        text: "この反物、もう少しまからないの？"
+      - speaker: sofu
+        text: "これは引けませんな。"
+      - speaker: okusan
+        text: "じゃあ、こっちの色違いなら？"
+      - speaker: sofu
+        text: "それなら、少し勉強しましょう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "引くところと、引かないところがあるのだ……。"
+      - speaker: sofu
+        text: "全部まけたら店が潰れる。全部断ったら客が消える。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "商売は、綱渡りなのだ！"
+      - speaker: okusan
+        text: "この子、そろばんが早いのねえ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎晩、店で鍛えてるのだ！"
+      - speaker: okusan
+        text: "末は大商人だわ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "目指すのだ！"
       - speaker: sofu
         text: "学校より、店が先生だな。"
       - speaker: zundamon
@@ -146,15 +173,14 @@ scenes:
         text: "今日は全部おまけするのだ！"
       - speaker: sofu
         text: "それは商売じゃない。"
-      - speaker: reimu
-        text: "サービス精神は、この頃からでした。"
       - speaker: zundamon
         emotion: happy
         text: "夜は、お店の帳簿を眺めるのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今日は昨日より、反物2本ぶん多く売れてるのだ。"
       - speaker: sofu
-        text: "……変わった子だ。"
-      - speaker: reimu
-        text: "数字は、彼の絵本でした。"
+        text: "……末恐ろしい孫だ。"
   # ================= 図書館司書 =================
   - id: library
     title: ""
@@ -167,27 +193,33 @@ scenes:
         text: "20歳。町に初めてできた図書館で、司書になります。"
       - speaker: zundamon
         emotion: happy
-        text: "本が、読み放題なのだ！"
+        text: "本が読み放題なのだ！端の棚から、全部読みつくすぞ！"
       - speaker: zundamon
         emotion: surprised
-        text: "世界には、知らない商売が山ほどあるのだ。"
+        text: "世界には、ボクの知らない商売が山ほどあるのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "端の棚から、全部読みつくすのだ！"
+        text: "この本には、氷を売って財を成した人が載ってるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "氷が商売になるなら、何だって商売になるのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "商売の本は、係のボクが借りっぱなしなのだ。"
+        text: "商売の本なんて、係のボクがずっと借りっぱなしなのだ。"
       - speaker: reimu
         text: "それは司書として、どうかと思います。"
       - speaker: zundamon
-        emotion: thinking
-        text: "読めば読むほど、うずうずするのだ。"
+        emotion: normal
+        text: "貸出カードが、ボクの名前だらけなのだ。"
       - speaker: zundamon
         emotion: thinking
-        text: "本の中の商売を、ボクはまだ何もやってないのだ。"
+        text: "読めば読むほど、うずうずしてくるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "本の中の商売を、ボクはまだひとつもやってない……。"
       - speaker: zundamon
         emotion: normal
-        text: "……2年、読んだのだ。決めたのだ。"
+        text: "……2年読んで、決めたのだ。"
       - speaker: zundamon
         emotion: happy
         text: "館長、辞表なのだ！"
@@ -227,18 +259,28 @@ scenes:
         text: "……読めん。"
       - speaker: zundamon
         emotion: happy
-        text: "莫大小と書いて、メリヤスなのだ。"
+        text: "これで、メリヤスと読むぞ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "読めない名前は、一度で覚えてもらえるのだ。"
       - speaker: sofu
         text: "で、そのメリヤスとは何だ。"
       - speaker: zundamon
         emotion: normal
-        text: "伸び縮みする、編み物の生地なのだ。"
+        text: "伸び縮みする編み物の生地で、肌着にぴったりなのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "肌着にも靴下にも、ぴったりなのだ。"
+        text: "これからは、メリヤスの時代が来るぞ！"
+      - speaker: sofu
+        text: "仕入れの当てはあるのか。"
       - speaker: zundamon
-        emotion: happy
-        text: "これからは、メリヤスの時代なのだ！"
+        emotion: normal
+        text: "内地の工場から、直接仕入れるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "間に人を挟まない分、安く売れるのだ。"
+      - speaker: sofu
+        text: "若いのに、抜け目がないな。"
       - speaker: sofu
         text: "うちの織物と、かぶらないのかい。"
       - speaker: zundamon
@@ -257,8 +299,14 @@ scenes:
       - speaker: sofu
         text: "で、売れとるのか。"
       - speaker: zundamon
+        emotion: thinking
+        text: "開店の日は、眠れなかったのだ……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "でも朝から、店の前に人が並んだのだ！"
+      - speaker: zundamon
         emotion: happy
-        text: "仕入れた先から、売れてるのだ！"
+        text: "メリヤスの肌着が、仕入れた先から売れてるのだ！"
       - speaker: zundamon
         emotion: happy
         text: "22歳、若社長の誕生なのだ！"
@@ -286,6 +334,21 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "商人の街は、話が早いのだ！"
+      - speaker: shain
+        text: "社長、大阪の問屋さんは値切りがすごいです！"
+      - speaker: zundamon
+        emotion: happy
+        text: "望むところなのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "値切られる前に、こっちからまけるのだ。"
+      - speaker: shain
+        text: "えっ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "その代わり、たくさん買ってもらうのだ。"
+      - speaker: shain
+        text: "その手があったか……。"
       - speaker: shain
         text: "社長、追加の注文です！"
       - speaker: zundamon
@@ -328,8 +391,16 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "気のせいなのだ。"
-      - speaker: reimu
-        text: "学友は、隣の席が社長とは知りませんでした。"
+      - speaker: wakamono
+        text: "てか、あんたいつ寝てるんだ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "移動中に寝るのだ。"
+      - speaker: wakamono
+        text: "器用だな……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "試験前でも、仕入れは待ってくれないのだ……。"
       - speaker: zundamon
         emotion: happy
         text: "2年通って、修了なのだ！働く学士サマなのだ！"
@@ -361,6 +432,15 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "でも、作れと言われれば作るしかないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "部品の検品、今日も山積みなのだ……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "飛行機の部品は、手を抜けば人が死ぬのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "早く、好きな商売がしたいのだ……。"
   - id: senchu_b
     title: ""
     background: il_kojo
@@ -380,6 +460,14 @@ scenes:
         text: "身に覚えがないのだ！"
       - speaker: kenpei
         text: "それはこちらが決める。"
+      - speaker: zundamon
+        emotion: angry
+        text: "帳簿でも納品書でも、全部見せるのだ！"
+      - speaker: kenpei
+        text: "台湾人が、うまくやりすぎなんだよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そういう、ことなのだ。"
       - speaker: reimu
         text: "身に覚えのない罪で、45日間拘束されたと言われています。"
         pause_after: 0.6
@@ -389,18 +477,21 @@ scenes:
         pause_after: 0.6
       - speaker: reimu
         text: "釈放されたとき、体はぼろぼろでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "45日ぶりの外は……まぶしいのだ……。"
         pause_after: 0.5
   # ================= 仁子との出会い =================
   - id: deai
     title: ""
-    background: il_shokai
+    background: il_hotel
     bgm: haru_kitchen
     stage:
       - {who: zundamon, x: 0.24, tag: "百福", flip: true}
       - {who: tsumugi, x: 0.76, tag: "仁子"}
     cuts:
       - speaker: reimu
-        text: "少し時を戻します。出会いは戦争中、京都のホテルでした。"
+        text: "そんな時代にも、出会いはやってきます。京都のホテル。"
       - speaker: tsumugi
         emotion: normal
         text: "はい、交換台の[仁子|まさこ]です。"
@@ -422,6 +513,28 @@ scenes:
       - speaker: tsumugi
         emotion: thinking
         text: "電話は用件のためにあるんだけどなあ。"
+      - speaker: reimu
+        text: "翌日。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あら、昨日の大阪の[方|かた]。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "覚えててくれたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "声が大きいから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……もう少し、静かに話すのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ふふ。それで、ご用件は？"
+      - speaker: zundamon
+        emotion: happy
+        text: "だ、大阪に繋いでほしいのだ！"
+      - speaker: reimu
+        text: "用件は、いつも同じでした。"
   # ================= 1945年3月・空襲の中の結婚 =================
   - id: kekkon
     title: ""
@@ -433,6 +546,12 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1945年3月21日。大阪大空襲の、さなかのことです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ゆうべも、空が真っ赤だったね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "明日どうなるかも、わからないのだ。"
       - speaker: zundamon
         emotion: normal
         text: "式は、挙げられそうにないのだ。"
@@ -442,6 +561,15 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "……生きてるうちに、祝うのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "指輪も、ごちそうも用意できないのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "代わりに、面白い人生がありそうだからいいよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それなら、たっぷりあるのだ！"
       - speaker: tsumugi
         emotion: happy
         text: "はい。よろしくね、[百福|ももふく]さん。"
@@ -465,14 +593,12 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "心強いのだ！"
-      - speaker: reimu
-        text: "[仁子|まさこ]はのちに、観音さまと呼ばれる人になります。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "大変なときこそ、笑って乗り切ろうね。"
       - speaker: zundamon
         emotion: happy
-        text: "投獄も破産も、この人と乗り越えるのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "先に不吉な予告をしないでほしいなあ。"
+        text: "心強いのだ！"
         pause_after: 0.5
       - speaker: reimu
         text: "その5か月後。戦争が、終わります。"
@@ -503,19 +629,32 @@ scenes:
         video_full: true
       - speaker: zundamon
         emotion: surprised
-        text: "寒空の下、何時間も並んでるのだ。"
+        text: "寒空の下で、何時間も並んでるのだ。"
       - speaker: zundamon
         emotion: thinking
-        text: "日本人は、こんなに麺が好きなのだ……。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "一杯のために、何時間も待てるのだ。"
+        text: "値段は木の札に手書き……日替わりなのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "食べることは、生きることなのだ。"
+        text: "並んでる人の顔が、みんな真剣なのだ。"
+      - speaker: yujin
+        text: "兄さんも食べてくかい。今日はもう麺切れだがね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "売り切れでも、まだ並んでるのだ！？"
+      - speaker: yujin
+        text: "明日の分の場所取りだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そこまでして、ラーメンなのだ……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "みんな、こんなに麺が好きなんだな……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一杯に何時間も並べるくらい、食べることは生きることなのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "ボクのやるべきことは、食なのだ！"
+        text: "ボクのやるべきことは、食だ！"
       - speaker: reimu
         text: "この行列を、[百福|ももふく]は生涯忘れませんでした。"
   # ================= 製塩・栄養食品 =================
@@ -529,7 +668,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "みんな、集まれなのだ！浜で塩を作るのだ！"
+        text: "みんな集まれー！浜で塩を作るぞ！"
       - speaker: wakamono
         text: "塩、ですか？"
       - speaker: zundamon
@@ -537,7 +676,7 @@ scenes:
         text: "今いちばん、足りないものなのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "鉄板に海水をまいて、火で炊き上げるのだ！"
+        text: "鉄板に海水をまいて、火で炊き上げるのだ。"
       - speaker: wakamono
         text: "社長、できました！"
       - speaker: zundamon
@@ -562,12 +701,24 @@ scenes:
         text: "はーい、みんなお昼にするよー。"
       - speaker: wakamono
         text: "奥さんの飯が、一番の給料だ。"
+      - speaker: wakamono
+        text: "社長はなんで、俺たちに飯を食わせるんです？"
+      - speaker: zundamon
+        emotion: normal
+        text: "若いやつが食えない国に、未来はないのだ。"
+      - speaker: wakamono
+        text: "……ついていきます。"
+      - speaker: wakamono
+        text: "社長、今日も塩は完売です！"
+      - speaker: zundamon
+        emotion: happy
+        text: "次は、もっと大きな鉄板を用意するぞ！"
       - speaker: reimu
         text: "若者たちとは、寝食を共にする仲でした。"
   # ================= 栄養食品の研究所 =================
   - id: eiyou
     title: ""
-    background: il_shokai
+    background: il_kenkyujo
     stage:
       - {who: zundamon, x: 0.22, tag: "百福", flip: true}
       - {who: isha, x: 0.56}
@@ -584,7 +735,7 @@ scenes:
         text: "戦後は、病人ほど食べられてないのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "牛や豚の骨を、煮て煮て煮まくるのだ！"
+        text: "牛や豚の骨を、煮て煮て煮まくるぞ！"
       - speaker: tsumugi
         emotion: thinking
         text: "……すごい匂いだなあ。"
@@ -594,12 +745,32 @@ scenes:
       - speaker: reimu
         text: "骨から、たんぱく質のエキスを取り出したのです。"
       - speaker: zundamon
+        emotion: normal
+        text: "試作品第1号……食べてみるのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……にがいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "栄養と味は、別物なんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はちみつを足して、飲みやすくするのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "病人の口に入らなければ、意味がないのだ。"
+      - speaker: zundamon
         emotion: happy
         text: "ペーストにして、名前はビセイクルなのだ！"
       - speaker: isha
         text: "病院で出したら、患者がよく食べてくれてね。"
       - speaker: isha
         text: "助かっているよ。"
+      - speaker: isha
+        text: "術後の患者は、噛む力もないからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、飲めるペーストにしたのだ。"
       - speaker: zundamon
         emotion: normal
         text: "まず食べられることが、薬なのだ。"
@@ -647,7 +818,7 @@ scenes:
         emotion: surprised
         text: "またなのだ！？"
       - speaker: ghq
-        text: "この帳簿の、若者たちへの金はなんだ。"
+        text: "この帳簿の、若者たちへの[金|かね]はなんだ。"
       - speaker: zundamon
         emotion: normal
         text: "奨学金なのだ。学びたい子に出してるのだ。"
@@ -661,9 +832,16 @@ scenes:
       - speaker: reimu
         text: "本人は後年、みせしめだったと語っています。"
         pause_after: 0.4
+      - speaker: zundamon
+        emotion: normal
+        text: "裁判では、ちゃんと話せば分かってもらえるのだ。"
       - speaker: ghq
         text: "判決。重労働、4年。"
         pause_after: 0.5
+      - speaker: zundamon
+        emotion: surprised
+        text: "話、聞いてないのだ！？"
+        pause_after: 0.4
       - speaker: ghq
         text: "財産は、すべて没収する。"
         pause_after: 0.6
@@ -689,7 +867,18 @@ scenes:
         emotion: normal
         text: "……うん、なのだ。"
       - speaker: reimu
+        text: "この献身ぶりから、のちに観音さまと呼ばれた人です。"
+      - speaker: reimu
         text: "収監中も、配られる食事を観察していたと言われています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今日の飯は、パンと薄いスープなのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "腹より先に、心が冷えるのだ……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人は、温かい食べ物に飢えるのだ。"
       - speaker: zundamon
         emotion: normal
         text: "食への興味は、鉄格子でも止まらないのだ。"
@@ -745,6 +934,21 @@ scenes:
       - speaker: reimu
         text: "この軽い返事が、人生を変えます。"
         pause_after: 0.6
+      - speaker: zundamon
+        emotion: happy
+        text: "理事長といっても、判子を押すだけの楽な仕事なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今日も書類に、ぽんぽんぽんなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "中身、読んでる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "信じてるから、読まないのだ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "楽な話には、裏があるんだけどなあ。"
       - speaker: reimu
         text: "やがて、組合は破綻。"
       - speaker: reimu
@@ -789,6 +993,17 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "喜ぶところじゃないよ。"
+      - speaker: saikensha
+        text: "車も、時計も、書画も対象です。"
+      - speaker: zundamon
+        emotion: sad
+        text: "本当に、手ぶらになったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "手と足は残ってるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……たしかに、なのだ。"
       - speaker: reimu
         text: "47歳。人生2回目の、無一文でした。"
         pause_after: 0.4
@@ -889,6 +1104,15 @@ scenes:
         text: "中古の製麺機と、直径1メートルの中華鍋も買ったのだ！"
       - speaker: tsumugi
         emotion: normal
+        text: "お金、あったの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なけなしなのだ。だから中古なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "正直でよろしい。"
+      - speaker: tsumugi
+        emotion: normal
         text: "うちの台所より、いい装備だね。"
       - speaker: reimu
         text: "目標は5つ。全部同時に満たすと決めました。"
@@ -900,17 +1124,29 @@ scenes:
             - "調理が簡単なこと"
             - "安いこと・安全なこと"
       - speaker: zundamon
-        emotion: thinking
-        text: "保存がきくって、どれくらいなのだ？"
+        emotion: normal
+        text: "おいしいは、大前提なのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "台所に置きっぱなしでも、平気なくらい。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "生麺なら、2日でダメになるのだ……。"
+        text: "保存は？うちに冷蔵庫、ないよ。"
       - speaker: zundamon
         emotion: thinking
-        text: "全部同時は、欲張りすぎなのだ……。"
+        text: "常温で、何か月も持たせるのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "生麺なら、2日でダメになるのに……なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "台所に置くだけで作れないと、毎日は食べないよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "鍋も、火加減も、いらなくするのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "それで安くて安全って、欲張りすぎない？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……欲張りじゃないと、革命はできないのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "ひとつでも欠けたら、毎日の食卓には並ばないよ。"
@@ -978,6 +1214,21 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "進歩なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに今日は何号機？"
+      - speaker: zundamon
+        emotion: normal
+        text: "試作28号なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "27号までと、何が違うの？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……愛情なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "配合も変えようね。"
       - speaker: reimu
         text: "差し入れと毒舌が、小屋の燃料でした。"
   # ================= 失敗1・スープ練り込み =================
@@ -1008,6 +1259,15 @@ scenes:
         emotion: normal
         text: "スープの塩気で、生地が弱くなるんだね。"
       - speaker: zundamon
+        emotion: normal
+        text: "濃さを3段階、全部試したのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "研究っぽくなってきたね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "全部、切れたのだ。"
+      - speaker: zundamon
         emotion: angry
         text: "次なのだ！"
   # ================= 失敗2・天日干し =================
@@ -1036,6 +1296,15 @@ scenes:
         emotion: normal
         text: "乾いただけじゃ、お湯の通り道がないんだよ。"
       - speaker: zundamon
+        emotion: normal
+        text: "ざる干し、網干し、吊り干しも試したのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "洗濯物みたいだね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "どれもカチカチで、戻らないのだ。"
+      - speaker: zundamon
         emotion: thinking
         text: "通り道……？"
   # ================= 失敗3・カビ =================
@@ -1058,6 +1327,15 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "はい、3連敗ね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "カビない工夫は、できないの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "水分が残ってる限り、カビは来るのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "完全に乾かして、すぐ戻る……矛盾なのだ！"
       - speaker: zundamon
         emotion: sad
         text: "そろそろ心が折れそうなのだ。"
@@ -1084,6 +1362,18 @@ scenes:
     cuts:
       - speaker: reimu
         text: "ある日の夕方。運命は台所にありました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ねえ、高野豆腐って、お湯ですぐ戻るよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれは中が、スポンジみたいにスカスカだからなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "麺も、そうできたらいいのにね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "スカスカ……穴を、どうやって開けるかなのだ……。"
       - speaker: tsumugi
         emotion: happy
         text: "今日の夕飯は天ぷらだよ。"
@@ -1167,7 +1457,7 @@ scenes:
         pause_after: 0.6
       - speaker: zundamon
         emotion: surprised
-        text: "……戻ってるのだ。"
+        text: "……戻ってる。"
       - speaker: zundamon
         emotion: happy
         text: "ちゃんと、ラーメンなのだ！！"
@@ -1183,9 +1473,38 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "1年で、革命なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "わたしにも、一口ちょうだい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "どうぞなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……うん。お店の味だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "台所が、お店になったのだ！"
       - speaker: reimu
         text: "1958年、夏のことでした。"
         pause_after: 0.6
+      - speaker: tsumugi
+        emotion: normal
+        text: "スープは、わたしが炊くね。鶏ガラでいいの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "鶏なのだ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "牛や豚は、食べちゃいけない国があるのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "鶏なら、世界のどこでも売れるのだ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "小屋の中から、もう世界の話してる。"
+      - speaker: reimu
+        text: "味の土台は、[仁子|まさこ]の炊いた鶏ガラスープでした。"
       - speaker: tsumugi
         emotion: normal
         text: "ところで、名前はどうするの？"
@@ -1234,8 +1553,19 @@ scenes:
       - speaker: tonya
         text: "6倍近い値段の麺なんて、誰が買うんだい。"
       - speaker: zundamon
+        emotion: normal
+        text: "小麦も油もスープも、いいものを使ってるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安くして質を落としたら、すぐ飽きられるのだ。"
+      - speaker: tonya
+        text: "理屈は立派だがねえ。うちは扱えないよ。"
+      - speaker: zundamon
         emotion: sad
         text: "門前払いなのだ……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "言葉で説明しても、伝わらないのだ。"
       - speaker: zundamon
         emotion: angry
         text: "こうなったら、試食会なのだ！みんな食べるのだ！"
@@ -1275,6 +1605,10 @@ scenes:
         text: "……あら。戻ったわ。"
       - speaker: wakamono
         text: "ね？"
+      - speaker: okusan
+        text: "お鍋も出汁もいらないなんて、夢みたいだわ。"
+      - speaker: wakamono
+        text: "夜食に最高なんだよなあ。"
       - speaker: reimu
         text: "疑いは、一杯で消えました。"
   # ================= 日清食品の誕生と量産 =================
@@ -1290,7 +1624,7 @@ scenes:
         text: "社長！問屋から追加3000箱です！"
       - speaker: zundamon
         emotion: surprised
-        text: "倉庫はもう空なのだ！"
+        text: "倉庫はもう[空|から]なのだ！"
       - speaker: shain
         text: "百貨店からも注文が来てます！"
       - speaker: zundamon
@@ -1327,8 +1661,13 @@ scenes:
       - speaker: shain
         text: "敷地は、2万4000平方メートルです！"
       - speaker: zundamon
+        emotion: surprised
+        text: "小屋の何百倍なのだ！"
+      - speaker: shain
+        text: "これで全国の店に、いくらでも届けられます！"
+      - speaker: zundamon
         emotion: normal
-        text: "小屋から、始まったのだ……。"
+        text: "……ここまで全部、小屋から始まったのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "始まりはいつも、小さいんだね。"
@@ -1348,6 +1687,11 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "小屋のラーメンが、日本中に届いたのだ！"
+      - speaker: okusan
+        text: "うちの子、おやつにまで食べたがるのよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "育ち盛りの味方なのだ！"
       - speaker: tsumugi
         emotion: happy
         text: "お粥の日々が、嘘みたいだね。"
@@ -1369,9 +1713,21 @@ scenes:
       - speaker: tsumugi
         emotion: surprised
         text: "せっかくの発明なのに、いいの？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "悔しくないの？"
       - speaker: zundamon
         emotion: normal
-        text: "独り占めより、業界ごと育てるのだ。"
+        text: "悔しいのだ。でも、裁判で何年も戦うより……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "業界ごと大きくして、本家が一番であり続けるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "器が大きいんだか、商売上手なんだか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "両方なのだ。"
       - speaker: zundamon
         emotion: happy
         text: "まずいパチもんより、うまいライバルなのだ。"
@@ -1397,6 +1753,15 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "この一杯で、あっと言わせるのだ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ホテルの部屋で、ひとりの夜なのだ……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言葉も食べ物も、違いだらけなのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "でも、うまいものへの笑顔は万国共通なのだ！"
   - id: america_b
     title: ""
     background: il_america
@@ -1423,6 +1788,11 @@ scenes:
         text: "紙コップに入れて、お湯を注ぐ。"
       - speaker: buyer
         text: "フォークで食べる。ワーオ、デリシャス。"
+      - speaker: buyer
+        text: "ただ、長い麺はフォークに絡めにくいね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……麺の長さ、メモするのだ。"
       - speaker: zundamon
         emotion: surprised
         text: "丼も箸も、使ってないのだ……。"
@@ -1456,6 +1826,12 @@ scenes:
         text: "これなのだ！カップの蓋は、これでいくのだ！"
       - speaker: reimu
         text: "あの銀色の蓋は、機内食の容器から生まれました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "仁子、聞いてほしいのだ！麺をコップで食べる国があったのだ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "お土産話が、もう商品会議だね。"
       - speaker: zundamon
         emotion: happy
         text: "ヒントは、そのへんに落ちてるのだ。"
@@ -1525,6 +1901,13 @@ scenes:
         text: "具は、凍らせて乾かすフリーズドライなのだ！"
       - speaker: shain
         text: "麺も具も、お湯だけで戻ります！"
+      - speaker: shain
+        text: "社長、今日も試食ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎日カップ麺を食べられる、幸せな仕事なのだ。"
+      - speaker: shain
+        text: "社長が一番のファンだ……。"
   # ================= 1971 また高いと言われる =================
   - id: y1971b
     title: ""
@@ -1576,11 +1959,23 @@ scenes:
         text: "お湯を注いで、3分なのだ！"
       - speaker: wakamono
         text: "あっつ！……うまっ。"
+      - speaker: wakamono
+        text: "なあ、これどこで買えるんだ？"
+      - speaker: zundamon
+        emotion: happy
+        text: "今はここだけなのだ！"
+      - speaker: wakamono
+        text: "じゃあ、もう1個。"
       - speaker: zundamon
         emotion: happy
         text: "素直でよろしいのだ！"
       - speaker: wakamono
         text: "立ったまま食べられるの、新しいね。"
+      - speaker: wakamono
+        text: "100円かあ。でも映画を見るよりは安いな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "未来の味と思えば、安いのだ！"
       - speaker: reimu
         text: "4時間で2万食が売れたと言われています。"
         stat: {value: 20000, unit: "食", label: "銀座・4時間の販売数"}
@@ -1631,6 +2026,9 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "画面越しでも、あの湯気のあったかさは伝わるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "寒い場所の一杯は、ごちそうだからね。"
       - speaker: reimu
         text: "中継の視聴率は、9割に達したと言われています。"
         stat: {value: 89.7, unit: "%", label: "中継の総視聴率"}
@@ -1658,6 +2056,12 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "国ごとに、味を変えていったんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[辛い|からい]国にはもっと辛く、酸っぱい国には酸っぱくなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "郷に入っては、郷の味だね。"
       - speaker: reimu
         text: "世界で年間1000億食。冒頭の数字は、こうして生まれたのです。"
       - speaker: zundamon
@@ -1742,6 +2146,12 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "時代がボクに追いついたのだ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "で、健康なやつは味はどうなのだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それが、ちゃんとおいしいんだよ。"
       - speaker: tsumugi
         emotion: normal
         text: "おいしくて、体にいい。昔なら夢の話だね。"
@@ -1783,11 +2193,25 @@ scenes:
       - speaker: zundamon
         emotion: thinking
         text: "無重力で、スープが飛んだら大事故なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "麺は丸めて、一口で食べられる塊にするのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "90歳を過ぎて、まだ発明してる。"
       - speaker: reimu
         text: "麺は一口サイズ。スープにはとろみ。無重力への対策です。"
       - speaker: zundamon
         emotion: happy
         text: "小屋の麺が、ついに地球を出たのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日も朝からゴルフ？"
+      - speaker: zundamon
+        emotion: happy
+        text: "体が資本なのだ。"
+      - speaker: reimu
+        text: "日課はゴルフと、チキンラーメンだったと言われています。"
       - speaker: tsumugi
         emotion: normal
         text: "今日のお昼も、チキンラーメンでいいの？"
@@ -1796,6 +2220,19 @@ scenes:
         text: "もちろんなのだ。発明した本人が、一番のファンなのだ。"
       - speaker: reimu
         text: "昼食はほぼ毎日チキンラーメン。生涯続いたそうです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "思えば、2回もゼロになったね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "3回目が来ても、平気なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どうして？"
+      - speaker: zundamon
+        emotion: happy
+        text: "ゼロから始める楽しさを、もう知ってるのだ。"
+        pause_after: 0.6
       - speaker: reimu
         text: "2007年1月。96歳で、その生涯を閉じました。"
         pause_after: 0.8
@@ -1819,6 +2256,9 @@ scenes:
       - {who: zundamon, x: 0.15, flip: true}
       - {who: tsumugi, x: 0.86}
     cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "今日は何味にするか……よし、しょうゆなのだ。"
       - speaker: zundamon
         emotion: normal
         text: "お湯を注いだのだ。今日は、ちゃんと3分待つのだ。"

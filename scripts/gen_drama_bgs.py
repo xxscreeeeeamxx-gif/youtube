@@ -603,6 +603,85 @@ def make_conbini():
     return img.convert("RGB")
 
 
+def make_hotel():
+    """京都のホテル・電話交換台（出会いの場）。"""
+    img = base((92, 72, 66), (66, 52, 50))
+    d = ImageDraw.Draw(img, "RGBA")
+    # 壁のパネルと飾り
+    for x in range(120, W, 440):
+        d.rectangle([x, 120, x + 320, 620], outline=(120, 96, 84), width=8)
+        d.rectangle([x + 24, 150, x + 296, 590], outline=(110, 88, 78), width=4)
+    # シャンデリア風の照明
+    for lx in (520, 1400):
+        d.line([lx, 0, lx, 110], fill=(70, 58, 52), width=6)
+        glow(img, lx, 190, 240, (255, 214, 150), 60)
+        d = ImageDraw.Draw(img, "RGBA")
+        for k in range(3):
+            d.ellipse([lx - 70 + k * 50, 130, lx - 30 + k * 50, 190],
+                      fill=(255, 228, 170))
+    # 交換台（プラグボード）
+    bx0, by0, bx1, by1 = 700, 300, 1240, 700
+    d.rectangle([bx0, by0, bx1, by1], fill=(58, 46, 42))
+    d.rectangle([bx0 + 16, by0 + 16, bx1 - 16, by1 - 120], fill=(40, 34, 32))
+    for r in range(4):
+        for c in range(10):
+            px = bx0 + 50 + c * 46
+            py = by0 + 50 + r * 60
+            d.ellipse([px - 10, py - 10, px + 10, py + 10], fill=(190, 170, 120))
+    # コード
+    for c in range(3):
+        x0 = bx0 + 90 + c * 140
+        d.arc([x0, by1 - 170, x0 + 180, by1 + 40], start=180, end=330,
+              fill=(150, 120, 90), width=8)
+    # 机
+    d.rectangle([bx0 - 60, by1, bx1 + 60, by1 + 40], fill=(84, 62, 50))
+    # 絨毯
+    d.rectangle([0, int(H * 0.74), W, H], fill=(110, 60, 58))
+    for yy in range(int(H * 0.74) + 20, H, 44):
+        d.line([0, yy, W, yy], fill=(96, 52, 50), width=3)
+    return img.convert("RGB")
+
+
+def make_kenkyujo():
+    """国民栄養化学研究所（フラスコと大鍋）。"""
+    img = base((70, 78, 82), (54, 60, 64))
+    d = ImageDraw.Draw(img, "RGBA")
+    # 棚とフラスコ・瓶
+    d.rectangle([130, 150, 900, 172], fill=(96, 88, 76))
+    d.rectangle([130, 330, 900, 352], fill=(96, 88, 76))
+    pal = [(150, 190, 170), (210, 180, 120), (170, 160, 200), (190, 140, 130)]
+    for row, sy in ((0, 172), (1, 352)):
+        for i, bx in enumerate(range(170, 860, 96)):
+            col = pal[(i + row) % len(pal)]
+            if (i + row) % 3 == 0:
+                d.polygon([(bx + 18, sy - 90), (bx + 42, sy - 90), (bx + 58, sy - 8),
+                           (bx + 2, sy - 8)], fill=col)
+                d.rectangle([bx + 24, sy - 118, bx + 36, sy - 88], fill=(200, 208, 214))
+            else:
+                d.rounded_rectangle([bx + 8, sy - 100, bx + 52, sy - 6], radius=10,
+                                    fill=col)
+    # 大鍋（骨を煮る）と火
+    d.rounded_rectangle([1200, 560, 1700, 820], radius=30, fill=(88, 92, 100))
+    d.ellipse([1220, 530, 1680, 610], fill=(110, 114, 124))
+    d.rectangle([1260, 820, 1640, 880], fill=(70, 62, 58))
+    for fx in range(1300, 1620, 80):
+        d.polygon([(fx, 880), (fx + 26, 830), (fx + 52, 880)], fill=(240, 160, 76))
+    # 湯気
+    for k in range(3):
+        pts = []
+        for j in range(9):
+            yy = 520 - j * 26
+            pts.append((1330 + k * 110 + 18 * (1 if (j + k) % 2 else -1), yy))
+        d.line(pts, fill=(230, 236, 244, 130), width=10)
+    # 作業台
+    d.rectangle([150, 700, 900, 740], fill=(96, 88, 76))
+    d.rectangle([180, 740, 220, 1000], fill=(80, 72, 62))
+    d.rectangle([830, 740, 870, 1000], fill=(80, 72, 62))
+    d.rectangle([0, int(H * 0.86), W, H], fill=(62, 66, 70))
+    hanging_bulb(img, 960, warm=False, ly=60)
+    return img.convert("RGB")
+
+
 DRAMA_BGS = {
     "il_nunoya": make_nunoya, "il_library": make_library, "il_shokai": make_shokai,
     "il_yagaku": make_yagaku, "il_kojo": make_kojo, "il_yamiichi": make_yamiichi,
@@ -610,6 +689,7 @@ DRAMA_BGS = {
     "il_daidokoro": make_daidokoro, "il_shotengai": make_shotengai,
     "il_america": make_america, "il_kinai": make_kinai, "il_ginza": make_ginza,
     "il_uchu": make_uchu, "il_conbini": make_conbini,
+    "il_hotel": make_hotel, "il_kenkyujo": make_kenkyujo,
 }
 
 

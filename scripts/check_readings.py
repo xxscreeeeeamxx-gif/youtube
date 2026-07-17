@@ -144,6 +144,28 @@ def main(slug: str) -> int:
     else:
         print("(timing.json 未生成のため実測検査はスキップ。voice 後に再実行)")
 
+    # ---- 3) 多読み漢字の警告（自動列挙→制作者がモーラを通読して確認する） ----
+    ambiguous = ["金", "空", "方", "日", "辛", "上手", "下手", "人気", "一行", "一見"]
+    if timing_path.exists():
+        warned = 0
+        for ct, cut in zip(timings, cuts_flat):
+            disp = ct["display_text"]
+            hits = []
+            for w in ambiguous:
+                if len(w) == 1:
+                    if re.search(rf"(?<![一-龥]){w}(?![一-龥])", disp):
+                        hits.append(w)
+                elif w in disp:
+                    hits.append(w)
+            if hits:
+                kana = (canon("".join(m[0] for m in ct["moras"]))
+                        if ct.get("moras") else "(ナレーター: whisperで確認)")
+                print(f"要通読 idx{ct['index']} [{'/'.join(hits)}] "
+                      f"{disp[:26]} → {kana[:44]}")
+                warned += 1
+        if warned:
+            print(f"↑ 多読み漢字 {warned} 件。読みが正しいか上のカナを通読して確認すること")
+
     if problems:
         print(f"NG: {len(problems)} 件")
         for p in problems:
