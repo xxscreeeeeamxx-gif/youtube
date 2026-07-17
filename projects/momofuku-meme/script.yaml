@@ -57,7 +57,7 @@ scenes:
         text: "ていうか、お湯を注いだだけでしょ。"
       - speaker: zundamon
         emotion: angry
-        text: "は？カップ麺は立派な料理だが？"
+        text: "[は|はぁ]？カップ麺は立派な料理だが？"
       - speaker: tsumugi
         emotion: normal
         text: "カップ麺だけだと健康に悪いよ。"
@@ -1270,7 +1270,7 @@ scenes:
         text: "味付きの麺なら、スープの粉も要らないんだわ。"
       - speaker: zundamon
         emotion: happy
-        text: "完璧な作戦。これは勝ち確。"
+        text: "完璧な作戦。これは[勝ち確|かちかく]。"
       - speaker: zundamon
         emotion: sad
         text: "麺がぼろぼろで草も生えない。"
@@ -1285,7 +1285,7 @@ scenes:
         text: "研究っぽくなってきたね。"
       - speaker: zundamon
         emotion: sad
-        text: "全部切れた。勝ち確とは何だったのか。"
+        text: "全部切れた。[勝ち確|かちかく]とは何だったのか。"
       - speaker: zundamon
         emotion: angry
         text: "次なんだよ！"
@@ -1770,7 +1770,7 @@ scenes:
         video_full: true
       - speaker: zundamon
         emotion: happy
-        text: "小屋のラーメンが、日本中に届いたんだよ！"
+        text: "小屋のラーメンが、[日本中|にほんじゅう]に届いたんだよ！"
       - speaker: okusan
         text: "うちの子、おやつにまで食べたがるのよ。"
       - speaker: zundamon
@@ -1781,7 +1781,7 @@ scenes:
         text: "お粥の日々が、嘘みたいだね。"
       - speaker: zundamon
         emotion: angry
-        text: "パチもんが出たんだよ！しかも味が全然違う！"
+        text: "パチもんが[出た|でた]んだよ！しかも味が全然違う！"
       - speaker: tsumugi
         emotion: normal
         text: "そっくりなのが、山ほど出てるらしいよ。"
@@ -2346,7 +2346,7 @@ scenes:
         reading: "めんはひとくちさいず。すーぷにはとろみ。むじゅうりょくへのたいさくです。"
       - speaker: zundamon
         emotion: happy
-        text: "小屋の麺が、ついに地球を出た。"
+        text: "小屋の麺が、ついに地球を[出た|でた]。"
       - speaker: tsumugi
         emotion: normal
         text: "今日も朝からゴルフ？"
