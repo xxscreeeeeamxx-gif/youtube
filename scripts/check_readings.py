@@ -44,8 +44,28 @@ KATA = str.maketrans(
 )
 
 
+O_COL = set("オコソトノホモヨロヲゴゾドボポォョウ")
+E_COL = set("エケセテネヘメレゲゼデベペェ")
+
+
 def to_kata(s: str) -> str:
     return unicodedata.normalize("NFKC", s).translate(KATA)
+
+
+def canon(s: str) -> str:
+    """長音の表記ゆれを吸収（トウヨウ↔トオヨオ、セイ↔セエ）。
+
+    VOICEVOXのmorasは長音を発音どおり（オ段+オ、エ段+エ）で返すため、
+    仮名書きの読みと比較する前に両方をこの形へ寄せる。
+    """
+    out = []
+    for ch in to_kata(s):
+        if ch == "ウ" and out and out[-1] in O_COL:
+            ch = "オ"
+        elif ch == "イ" and out and out[-1] in E_COL:
+            ch = "エ"
+        out.append(ch)
+    return "".join(out)
 
 
 def main(slug: str) -> int:
@@ -57,6 +77,9 @@ def main(slug: str) -> int:
         print("    人名・地名・社名・専門語を {surface, reading} で列挙してください")
         return 1
     ledger = yaml.safe_load(ledger_path.read_text(encoding="utf-8")) or []
+    common = cfg.root / "assets" / "readings_common.yaml"
+    if common.exists():
+        ledger += yaml.safe_load(common.read_text(encoding="utf-8")) or []
     ledger = [e for e in ledger if e.get("surface") and e.get("reading")]
     script = proj.load_script()
     narrator = getattr(script.meta, "narrator", "")
@@ -108,12 +131,12 @@ def main(slug: str) -> int:
         for ct, cut in zip(timings, cuts_flat):
             if not ct.get("moras"):
                 continue
-            kana = "".join(m[0] for m in ct["moras"])
+            kana = canon("".join(m[0] for m in ct["moras"]))
             disp = ct["display_text"]
             for e in ledger:
                 if e["surface"] not in disp:
                     continue
-                expect = to_kata(e["reading"])
+                expect = canon(e["reading"])
                 if expect not in kana:
                     problems.append(
                         f"実測不一致: 「{e['surface']}」読み「{e['reading']}」が "
