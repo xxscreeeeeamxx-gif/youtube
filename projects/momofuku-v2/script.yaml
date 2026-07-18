@@ -275,7 +275,7 @@ scenes:
         emotion: normal
         text: "読めない名前は、一度で覚えてもらえるのだ。"
       - speaker: sofu
-        text: "で、そのメリヤスとは何だ。"
+        text: "で、そのメリヤスとは[何|なん]だ。"
       - speaker: zundamon
         emotion: normal
         text: "伸び縮みする編み物の生地で、肌着にぴったりなのだ。"
@@ -1422,7 +1422,7 @@ scenes:
         text: "そろそろ心が折れそうなのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "あなた、最初に何て言ってたか覚えてる？"
+        text: "あなた、最初に[何|なん]て言ってたか覚えてる？"
       - speaker: zundamon
         emotion: thinking
         text: "家でお湯だけで食べられたら、革命……なのだ。"

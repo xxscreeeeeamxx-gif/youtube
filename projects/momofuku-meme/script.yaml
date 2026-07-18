@@ -45,10 +45,10 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "今日も自炊をするんだよ！"
+        text: "今日も自炊をするのだ！"
       - speaker: zundamon
         emotion: happy
-        text: "今日はとんこつラーメンだわ！"
+        text: "今日はとんこつラーメンなのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "昨日も味噌ラーメンだったじゃない。"
@@ -75,7 +75,7 @@ scenes:
         text: "はい論破された。わかったよ。"
       - speaker: zundamon
         emotion: happy
-        text: "今日は奮発して、カレーにするんだよ！"
+        text: "今日は奮発して、カレーにするのだ！"
       - speaker: tsumugi
         emotion: thinking
         text: "……それもインスタントじゃない。"
@@ -186,7 +186,7 @@ scenes:
         text: "夜は、お店の帳簿を眺める。"
       - speaker: zundamon
         emotion: happy
-        text: "今日は昨日より、反物2本ぶん多く売れてるんだよね。"
+        text: "今日は昨日より、反物2本ぶん多く売れてるのだ。"
       - speaker: sofu
         text: "……末恐ろしい孫だ。"
   # ================= 図書館司書 =================
@@ -208,7 +208,7 @@ scenes:
         text: "世界には、ボクの知らない商売が山ほどある。"
       - speaker: zundamon
         emotion: happy
-        text: "この本には、氷を売って財を成した人が載ってるんだよね。"
+        text: "この本には、氷を売って財を成した人が載ってるのだ。"
       - speaker: zundamon
         emotion: thinking
         text: "氷が商売になるなら、なんだって商売になるんだわ。"
@@ -220,10 +220,10 @@ scenes:
         reading: "それはししょとして、どうかとおもいます。"
       - speaker: zundamon
         emotion: normal
-        text: "貸出カードが、ボクの名前だらけなんだよね。"
+        text: "貸出カードが、ボクの名前だらけなのだ。"
       - speaker: zundamon
         emotion: thinking
-        text: "読めば読むほど、うずうずしてくるんだわ。"
+        text: "読めば読むほど、うずうずしてくるのだ。"
       - speaker: zundamon
         emotion: thinking
         text: "本の中の商売を、ボクはまだひとつもやってない……。"
@@ -238,7 +238,7 @@ scenes:
         text: "読む側は、もう卒業。"
       - speaker: zundamon
         emotion: happy
-        text: "誰もやってないことを、やるんだよ！"
+        text: "誰もやってないことを、やるのだ！"
   # ================= 1932 22歳の起業 =================
   - id: y1932
     title: "1932・22歳の起業"
@@ -265,7 +265,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "社名は、[東洋莫大小|とうようめりやす]なんだよ！"
+        text: "社名は、[東洋莫大小|とうようめりやす]なのだ！"
       - speaker: sofu
         text: "……読めん。"
       - speaker: zundamon
@@ -275,10 +275,10 @@ scenes:
         emotion: normal
         text: "読めない名前は、一度で覚えてもらえるんだわ。"
       - speaker: sofu
-        text: "で、そのメリヤスとは何だ。"
+        text: "で、そのメリヤスとは[何|なん]だ。"
       - speaker: zundamon
         emotion: normal
-        text: "伸び縮みする編み物の生地で、肌着にぴったりなんだよ。"
+        text: "伸び縮みする編み物の生地で、肌着にぴったりなのだ。"
       - speaker: zundamon
         emotion: happy
         text: "これからは、メリヤスの時代が来るぞ！"
@@ -286,7 +286,7 @@ scenes:
         text: "仕入れの当てはあるのか。"
       - speaker: zundamon
         emotion: normal
-        text: "内地の工場から、直接仕入れるんだわ。"
+        text: "内地の工場から、直接仕入れるのだ。"
       - speaker: zundamon
         emotion: normal
         text: "間に人を挟まない分、安く売れる。"
@@ -296,7 +296,7 @@ scenes:
         text: "うちの織物と、かぶらないのかい。"
       - speaker: zundamon
         emotion: normal
-        text: "編み物は別ジャンルなんだよね。"
+        text: "編み物は別ジャンルなのだ。"
       - speaker: zundamon
         emotion: happy
         text: "おじいちゃんの客は、取らないんだわ。"
@@ -311,7 +311,7 @@ scenes:
         text: "で、売れとるのか。"
       - speaker: zundamon
         emotion: thinking
-        text: "開店の日は、眠れなかったんだよな……。"
+        text: "開店の日は、眠れなかったのだ……。"
       - speaker: zundamon
         emotion: surprised
         text: "朝から行列できてて草。何事！？"
@@ -346,7 +346,7 @@ scenes:
         text: "大阪で、日東商会を旗揚げだ！"
       - speaker: zundamon
         emotion: happy
-        text: "商人の街は、話が早いんだよ！"
+        text: "商人の街は、話が早いのだ！"
       - speaker: shain
         text: "社長、大阪の問屋さんは値切りがすごいです！"
       - speaker: zundamon
@@ -389,10 +389,10 @@ scenes:
         reading: "そしてよるは、がくせいでした。"
       - speaker: zundamon
         emotion: thinking
-        text: "眠い……でも、経済学なんだよな……。"
+        text: "眠い……でも、経済学なのだ……。"
       - speaker: zundamon
         emotion: normal
-        text: "[立命館|りつめいかん]の夜間で、経済を学ぶんだわ。"
+        text: "[立命館|りつめいかん]の夜間で、経済を学ぶのだ。"
       - speaker: zundamon
         emotion: normal
         text: "商売の勘だけじゃ、いつか負ける。"
@@ -415,7 +415,7 @@ scenes:
         text: "器用だな……。"
       - speaker: zundamon
         emotion: thinking
-        text: "試験前でも、仕入れは待ってくれないんだよな……。"
+        text: "試験前でも、仕入れは待ってくれないのだ……。"
       - speaker: zundamon
         emotion: happy
         text: "2年通って修了！働く学士サマ爆誕！"
@@ -442,7 +442,7 @@ scenes:
         pause_after: 1.8
       - speaker: zundamon
         emotion: sad
-        text: "今日から、飛行機の部品を作れ……なんだよね。"
+        text: "今日から、飛行機の部品を作れ……なのだ。"
       - speaker: zundamon
         emotion: sad
         text: "売りたいのは、肌着なんだけどな……。"
@@ -454,7 +454,7 @@ scenes:
         text: "部品の検品、今日も山積みなんだよな……。"
       - speaker: zundamon
         emotion: normal
-        text: "飛行機の部品は、手を抜けば人が死ぬんだわ。"
+        text: "飛行機の部品は、手を抜けば人が死ぬのだ。"
       - speaker: zundamon
         emotion: sad
         text: "早く、好きな商売がしたい……。"
@@ -491,7 +491,7 @@ scenes:
         pause_after: 0.6
       - speaker: zundamon
         emotion: sad
-        text: "……何も、してないんだわ。"
+        text: "……何も、してないのだ。"
         pause_after: 0.6
       - speaker: reimu
         text: "釈放されたとき、体はぼろぼろでした。"
@@ -541,7 +541,7 @@ scenes:
         text: "あら、昨日の大阪の[方|かた]。"
       - speaker: zundamon
         emotion: surprised
-        text: "覚えててくれたんだよ！"
+        text: "覚えててくれたのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "声が大きいから。"
@@ -574,10 +574,10 @@ scenes:
         text: "ゆうべも、空が真っ赤だったね。"
       - speaker: zundamon
         emotion: normal
-        text: "明日どうなるかも、わからないんだよね。"
+        text: "明日どうなるかも、わからないのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "式は、挙げられそうにないんだわ。"
+        text: "式は、挙げられそうにないのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "紙切れ1枚で十分よ。"
@@ -607,7 +607,7 @@ scenes:
         text: "台湾に、前の家族がいる。"
       - speaker: zundamon
         emotion: normal
-        text: "長男の宏寿も、いるんだよね。"
+        text: "長男の宏寿も、いるのだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "波乱万丈すぎない？"
@@ -644,7 +644,7 @@ scenes:
         pause_after: 0.8
       - speaker: zundamon
         emotion: sad
-        text: "……何もかも、焼けてしまったんだよね。"
+        text: "……何もかも、焼けてしまったのだ。"
       - speaker: zundamon
         emotion: surprised
         text: "でも、闇市は生きてるんだわ。"
@@ -659,10 +659,10 @@ scenes:
         text: "寒空の下で、何時間も並んでる。"
       - speaker: zundamon
         emotion: thinking
-        text: "値段は木の[札|ふだ]に手書き……日替わりなんだよね。"
+        text: "値段は木の[札|ふだ]に手書き……日替わりなのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "並んでる[人|ひと]の顔が、みんな真剣だわ。"
+        text: "並んでる[人|ひと]の顔が、みんな真剣なのだ。"
       - speaker: yujin
         text: "兄さんも食べてくかい。今日はもう麺切れだがね。"
       - speaker: zundamon
@@ -734,7 +734,7 @@ scenes:
         text: "社長はなんで、俺たちに飯を食わせるんです？"
       - speaker: zundamon
         emotion: normal
-        text: "若いやつが食えない国に、未来はないんだわ。"
+        text: "若いやつが食えない国に、未来はないのだ。"
       - speaker: wakamono
         text: "……ついていきます。"
       - speaker: wakamono
@@ -762,7 +762,7 @@ scenes:
         text: "また新しいこと始めた。"
       - speaker: zundamon
         emotion: normal
-        text: "戦後は、病人ほど食べられてないんだわ。"
+        text: "戦後は、病人ほど食べられてないのだ。"
       - speaker: zundamon
         emotion: happy
         text: "牛や豚の骨を、煮て煮て煮まくるぞ！"
@@ -777,7 +777,7 @@ scenes:
         reading: "ほねから、たんぱくしつのえきすをとりだしたのです。"
       - speaker: zundamon
         emotion: normal
-        text: "試作品第1号……食べてみるんだわ。"
+        text: "試作品第1号……食べてみるのだ。"
       - speaker: zundamon
         emotion: sad
         text: "苦すぎて無理。これは苦行。"
@@ -786,10 +786,10 @@ scenes:
         text: "栄養と味は、別物なんだね。"
       - speaker: zundamon
         emotion: normal
-        text: "はちみつを足して、飲みやすくするんだよね。"
+        text: "はちみつを足して、飲みやすくするのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "病人の口に入らなければ、意味がないんだわ。"
+        text: "病人の口に入らなければ、意味がないのだ。"
       - speaker: zundamon
         emotion: happy
         text: "ペーストにして、名前はビセイクル！"
@@ -804,7 +804,7 @@ scenes:
         text: "だから、飲めるペーストにしたんだよね。"
       - speaker: zundamon
         emotion: normal
-        text: "まず食べられることが、薬だわ。"
+        text: "まず食べられることが、薬なのだ。"
       - speaker: reimu
         text: "国民栄養化学研究所という、研究所まで作りました。"
         reading: "こくみんえいようかがくけんきゅうしょという、けんきゅうじょまでつくりました。"
@@ -871,7 +871,7 @@ scenes:
         pause_after: 0.4
       - speaker: zundamon
         emotion: normal
-        text: "裁判では、ちゃんと話せば分かってもらえるんだよね。"
+        text: "裁判では、ちゃんと話せば分かってもらえるのだ。"
       - speaker: ghq
         text: "判決。重労働、4年。"
         pause_after: 0.5
@@ -921,7 +921,7 @@ scenes:
         text: "人は、温かい食べ物に飢える。"
       - speaker: zundamon
         emotion: normal
-        text: "食への興味は、鉄格子でも止まらないんだよね。"
+        text: "食への興味は、鉄格子でも止まらないのだ。"
       - speaker: reimu
         text: "のちに訴えが取り下げられ、釈放されます。"
         reading: "のちにうったえがとりさげられ、しゃくほうされます。"
@@ -931,7 +931,7 @@ scenes:
         text: "おかえり。"
       - speaker: zundamon
         emotion: happy
-        text: "ただいまだわ！"
+        text: "ただいまなのだ！"
       - speaker: zundamon
         emotion: angry
         text: "商売の魂までは、没収できなかった！"
@@ -1025,7 +1025,7 @@ scenes:
         text: "はい。"
       - speaker: zundamon
         emotion: surprised
-        text: "事業もなんだよ！？"
+        text: "事業もなのだ！？"
       - speaker: saikensha
         text: "はい。"
       - speaker: zundamon
@@ -1085,7 +1085,7 @@ scenes:
         text: "ごはんにしよ。"
       - speaker: zundamon
         emotion: happy
-        text: "食べるんだよ！"
+        text: "食べるのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "今日はお粥だけどね。"
@@ -1119,10 +1119,10 @@ scenes:
         pause_after: 1.2
       - speaker: zundamon
         emotion: thinking
-        text: "思い出すのは、闇市のあの行列なんだよね。"
+        text: "思い出すのは、闇市のあの行列なのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "みんな、一杯のラーメンに並んでいたんだわ。"
+        text: "みんな、一杯のラーメンに並んでいたのだ。"
       - speaker: zundamon
         emotion: happy
         text: "家で、お湯だけで食べられたら。"
@@ -1152,7 +1152,7 @@ scenes:
         text: "裏庭に、研究小屋を建てた！"
       - speaker: zundamon
         emotion: happy
-        text: "中古の製麺機と、直径1メートルの中華鍋も買ったんだよ！"
+        text: "中古の製麺機と、直径1メートルの中華鍋も買ったのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "お金、あったの？"
@@ -1194,13 +1194,13 @@ scenes:
         text: "全部盛りじゃなきゃ革命にならない。知らんけど。"
       - speaker: zundamon
         emotion: normal
-        text: "中でも、うまいは大前提なんだよね。"
+        text: "中でも、うまいは大前提なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "保存は？うちに冷蔵庫、ないよ。"
       - speaker: zundamon
         emotion: thinking
-        text: "常温で、何か月も持たせるんだわ。"
+        text: "常温で、何か月も持たせるのだ。"
       - speaker: zundamon
         emotion: surprised
         text: "生麺なら、2日でダメになるのになあ……。"
@@ -1261,13 +1261,13 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "まずは、麺にスープを練り込むんだよ！"
+        text: "まずは、麺にスープを練り込むのだ！"
         video: assets/clips/mm3_fail1.mp4
         video_span: 4
         video_full: true
       - speaker: zundamon
         emotion: normal
-        text: "味付きの麺なら、スープの粉も要らないんだわ。"
+        text: "味付きの麺なら、スープの粉も要らないのだ。"
       - speaker: zundamon
         emotion: happy
         text: "完璧な作戦。これは[勝ち確|かちかく]。"
@@ -1285,10 +1285,10 @@ scenes:
         text: "研究っぽくなってきたね。"
       - speaker: zundamon
         emotion: sad
-        text: "全部切れた。[勝ち確|かちかく]とは何だったのか。"
+        text: "全部切れた。[勝ち確|かちかく]とは[何|なん]だったのか。"
       - speaker: zundamon
         emotion: angry
-        text: "次なんだよ！"
+        text: "次なのだ！"
   # ================= 失敗2・天日干し =================
   - id: shippai2
     title: ""
@@ -1311,7 +1311,7 @@ scenes:
         reading: "みっかみばん、ほしました。"
       - speaker: zundamon
         emotion: sad
-        text: "……お湯をかけても、10分戻らないんだよね。"
+        text: "……お湯をかけても、10分戻らないのだ。"
       - speaker: zundamon
         emotion: normal
         text: "[ざる干し|ざるぼし]、[網干し|あみぼし]、[吊り干し|つりぼし]も試したんだわ。"
@@ -1326,7 +1326,7 @@ scenes:
         text: "ねえ、[高野豆腐|こうやどうふ]って、お湯ですぐ戻るよね。"
       - speaker: zundamon
         emotion: normal
-        text: "あれは中が、スポンジみたいにスカスカだからなんだよね。"
+        text: "あれは中が、スポンジみたいにスカスカだからなのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "乾いてても、お湯の通り道があるんだね。"
@@ -1358,7 +1358,7 @@ scenes:
         text: "カビない工夫は、できないの？"
       - speaker: zundamon
         emotion: normal
-        text: "水分が残ってる限り、カビは来るんだわ。"
+        text: "水分が残ってる限り、カビは来るのだ。"
       - speaker: zundamon
         emotion: angry
         text: "完全に乾かして、すぐ戻る……矛盾！"
@@ -1386,7 +1386,7 @@ scenes:
         text: "で、今日の試作品は？"
       - speaker: zundamon
         emotion: happy
-        text: "食べてみるんだわ。"
+        text: "食べてみるのだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "……ゴムかな。"
@@ -1404,7 +1404,7 @@ scenes:
         text: "ちなみに今日は何号機？"
       - speaker: zundamon
         emotion: normal
-        text: "試作28号だわ。"
+        text: "試作28号なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "27号までと、何が違うの？"
@@ -1422,7 +1422,7 @@ scenes:
         text: "メンタルが豆腐になってきた……。"
       - speaker: tsumugi
         emotion: normal
-        text: "あなた、最初に何て言ってたか覚えてる？"
+        text: "あなた、最初に[何|なん]て言ってたか覚えてる？"
       - speaker: zundamon
         emotion: thinking
         text: "家でお湯だけで食べられたら、革命……。"
@@ -1475,7 +1475,7 @@ scenes:
         text: "麺を油で揚げれば、乾燥と穴あけが同時にできる！"
       - speaker: zundamon
         emotion: happy
-        text: "そしてその穴に、お湯が染み込んで麺が戻るんだよ！"
+        text: "そしてその穴に、お湯が染み込んで麺が戻るのだ！"
       - speaker: zundamon
         emotion: happy
         text: "[高野豆腐|こうやどうふ]の、スカスカと同じ理屈だわ！"
@@ -1523,7 +1523,7 @@ scenes:
         reading: "あげためんに、おゆをそそぎます。"
       - speaker: zundamon
         emotion: thinking
-        text: "……2分、経ったんだわ。"
+        text: "……2分、経ったのだ。"
         pause_after: 0.5
       - speaker: zundamon
         emotion: surprised
@@ -1561,7 +1561,7 @@ scenes:
         text: "……うん。お店の味だ。"
       - speaker: zundamon
         emotion: happy
-        text: "台所が、お店になったんだよ！"
+        text: "台所が、お店になったのだ！"
       - speaker: reimu
         text: "1958年、夏のことでした。"
         reading: "せんきゅうひゃくごじゅうはちねん、なつのことでした。"
@@ -1589,13 +1589,13 @@ scenes:
         text: "ところで、名前はどうするの？"
       - speaker: zundamon
         emotion: happy
-        text: "鶏ガラのスープだから、チキンラーメンなんだよ！"
+        text: "鶏ガラのスープだから、チキンラーメンなのだ！"
       - speaker: tsumugi
         emotion: thinking
         text: "そのまんまだね。"
       - speaker: zundamon
         emotion: happy
-        text: "わかりやすさは、正義だわ！"
+        text: "わかりやすさは、正義なのだ！"
   # ================= 1958.8 発売・35円の壁 =================
   - id: hatsubai
     title: "1958・35円のラーメン"
@@ -1637,7 +1637,7 @@ scenes:
         text: "小麦も油もスープも、いいものを使ってるんだよね。"
       - speaker: zundamon
         emotion: normal
-        text: "安くして質を落としたら、すぐ飽きられるんだわ。"
+        text: "安くして質を落としたら、すぐ飽きられるのだ。"
       - speaker: tonya
         text: "理屈は立派だがねえ。うちは扱えないよ。"
       - speaker: zundamon
@@ -1645,7 +1645,7 @@ scenes:
         text: "門前払いで草も生えない……。"
       - speaker: zundamon
         emotion: thinking
-        text: "言葉で説明しても、伝わらないんだよね。"
+        text: "言葉で説明しても、伝わらないのだ。"
       - speaker: zundamon
         emotion: angry
         text: "こうなったら、試食会なんだよ！みんな食べるぞ！"
@@ -1720,7 +1720,7 @@ scenes:
         text: "……決めた。工場を建てる。"
       - speaker: zundamon
         emotion: happy
-        text: "それと、会社の名前も変えるんだわ。"
+        text: "それと、会社の名前も変えるのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "どんな名前にするの？"
@@ -1732,7 +1732,7 @@ scenes:
         text: "日清……どういう意味？"
       - speaker: zundamon
         emotion: normal
-        text: "日々清らかに、豊かな味をつくるんだよね。"
+        text: "日々清らかに、豊かな味をつくるのだ。"
       - speaker: tsumugi
         emotion: happy
         text: "いい名前だね。"
@@ -1775,7 +1775,7 @@ scenes:
         text: "うちの子、おやつにまで食べたがるのよ。"
       - speaker: zundamon
         emotion: happy
-        text: "育ち盛りの味方だわ！"
+        text: "育ち盛りの味方なのだ！"
       - speaker: tsumugi
         emotion: happy
         text: "お粥の日々が、嘘みたいだね。"
@@ -1790,10 +1790,10 @@ scenes:
         text: "訴えるんでしょ？"
       - speaker: zundamon
         emotion: thinking
-        text: "……いや、逆をいくんだよね。"
+        text: "……いや、逆をいくのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "製法の特許を、業界に開放するんだわ。"
+        text: "製法の特許を、業界に開放するのだ。"
       - speaker: tsumugi
         emotion: surprised
         text: "せっかくの発明なのに、いいの？"
@@ -1844,10 +1844,10 @@ scenes:
         text: "ひとりの夜、正直しんどい……。"
       - speaker: zundamon
         emotion: normal
-        text: "言葉も食べ物も、違いだらけなんだよね。"
+        text: "言葉も食べ物も、違いだらけなのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "でも、うまいものへの笑顔は万国共通だわ！"
+        text: "でも、うまいものへの笑顔は万国共通なのだ！"
   - id: america_b
     title: ""
     background: il_america
@@ -1892,7 +1892,7 @@ scenes:
           - {text: "器ごと売ればいい", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: happy
-        text: "カップに入った、ラーメンだわ！"
+        text: "カップに入った、ラーメンなのだ！"
   # ================= 機内のヒント =================
   - id: kinai
     title: ""
@@ -1903,7 +1903,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: thinking
-        text: "カップに、どんな蓋をするかも問題だわ。"
+        text: "カップに、どんな蓋をするかも問題なのだ。"
       - speaker: zundamon
         emotion: normal
         text: "紙の蓋だと、湯気でふにゃふにゃになる。"
@@ -1921,7 +1921,7 @@ scenes:
         text: "蓋が、紙とアルミの貼り合わせだぞ！"
       - speaker: zundamon
         emotion: happy
-        text: "ペリッと剥がせるのに、しっかり閉じてるんだよ！"
+        text: "ペリッと剥がせるのに、しっかり閉じてるのだ！"
       - speaker: zundamon
         emotion: happy
         text: "湯気に強くて、値段も安い。これしかないぞ！"
@@ -1984,7 +1984,7 @@ scenes:
         video_full: true
       - speaker: zundamon
         emotion: surprised
-        text: "逆だ！麺に、カップを上からかぶせるんだよ！"
+        text: "逆だ！麺に、カップを上からかぶせるのだ！"
       - speaker: shain
         text: "……天才ですか？"
       - speaker: reimu
@@ -2004,7 +2004,7 @@ scenes:
         text: "この新素材、ポリスチレンはどうでしょう。"
       - speaker: zundamon
         emotion: happy
-        text: "採用！2.1ミリまで薄く加工するんだよ！"
+        text: "採用！2.1ミリまで薄く加工するのだ！"
       - speaker: shain
         text: "お湯を入れても、持てるぞ……！"
       - speaker: shain
@@ -2022,10 +2022,10 @@ scenes:
         reading: "あげむらもゆもどりも、これでかいけつしました。"
       - speaker: zundamon
         emotion: normal
-        text: "麺は、フォークで食べやすい長さにするんだよね。"
+        text: "麺は、フォークで食べやすい長さにするのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "具は、凍らせて乾かすフリーズドライなんだよ！"
+        text: "具は、凍らせて乾かすフリーズドライなのだ！"
       - speaker: shain
         text: "麺も具も、お湯だけで戻ります！"
       - speaker: shain
@@ -2077,7 +2077,7 @@ scenes:
         text: "売る場所を、変えるんだよね。"
       - speaker: zundamon
         emotion: normal
-        text: "新しいものは、新しい人に聞くんだわ。"
+        text: "新しいものは、新しい人に聞くのだ。"
       - speaker: reimu
         text: "銀座の歩行者天国。若者に、その場で食べてもらったのです。"
         reading: "ぎんざのほこうしゃてんごく。わかものに、そのばでたべてもらったのです。"
@@ -2114,7 +2114,7 @@ scenes:
         text: "若者には、新しさそのものがごちそうだったんだね。"
       - speaker: zundamon
         emotion: happy
-        text: "次は、お湯の出る自動販売機を街に置くんだよ！"
+        text: "次は、お湯の出る自動販売機を街に置くのだ！"
       - speaker: zundamon
         emotion: happy
         text: "売り場ごと、発明するぞ！"
@@ -2195,7 +2195,7 @@ scenes:
         text: "国ごとに、味を変えていったんだね。"
       - speaker: zundamon
         emotion: normal
-        text: "[辛い|からい]国にはもっと辛く、酸っぱい国には酸っぱくなんだよね。"
+        text: "[辛い|からい]国にはもっと辛く、酸っぱい国には酸っぱくなのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "[郷|ごう]に入っては、[郷|ごう]の味だね。"
@@ -2229,7 +2229,7 @@ scenes:
         text: "しかも麺だけじゃないんだよね。"
       - speaker: zundamon
         emotion: thinking
-        text: "種類が多すぎて、選べないんだよね。"
+        text: "種類が多すぎて、選べないのだ。"
       - speaker: tsumugi
         emotion: happy
         text: "その悩み、昭和にはなかったんだよ。"
@@ -2318,7 +2318,7 @@ scenes:
         text: "90歳を過ぎても、まだ会社に行くの？"
       - speaker: zundamon
         emotion: normal
-        text: "まだ、やりたいことがあるんだわ。"
+        text: "まだ、やりたいことがあるのだ。"
       - speaker: reimu
         text: "2005年。宇宙食のラーメンを完成させます。"
         reading: "にせんごねん。うちゅうしょくのらーめんを、かんせいさせます。"
@@ -2334,7 +2334,7 @@ scenes:
         text: "95歳で宇宙進出はレベル上げすぎだろ！？"
       - speaker: zundamon
         emotion: thinking
-        text: "無重力で、スープが飛んだら大事故なんだよね。"
+        text: "無重力で、スープが飛んだら大事故なのだ。"
       - speaker: zundamon
         emotion: normal
         text: "麺は丸めて、一口で食べられる塊にするんだわ。"
@@ -2352,7 +2352,7 @@ scenes:
         text: "今日も朝からゴルフ？"
       - speaker: zundamon
         emotion: happy
-        text: "体が資本なんだよね。"
+        text: "体が資本なのだ。"
       - speaker: reimu
         text: "日課はゴルフと、チキンラーメンだったと言われています。"
         reading: "にっかはごるふと、ちきんらーめんだったといわれています。"
@@ -2376,7 +2376,7 @@ scenes:
         text: "どうして？"
       - speaker: zundamon
         emotion: happy
-        text: "ゼロから始める楽しさを、もう知ってるんだよね。"
+        text: "ゼロから始める楽しさを、もう知ってるのだ。"
         pause_after: 0.6
       - speaker: reimu
         text: "2007年1月。96歳で、その生涯を閉じました。"

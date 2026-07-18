@@ -314,21 +314,18 @@ class Composer:
             # ---- 再現ドラマ: 舞台配置（暗転なし・自由なx位置・名札） ----
             for m in stage:
                 sp, x, y = self.drama_actor(m)
-                # 名札は肩の高さ・体の少し外側（体に重ねると、動く話者レイヤーの
-                # 下に隠れてしまうため。外側なら常に見える）
-                tag_y = y + int(sp.height * 0.46)
-                if float(m["x"]) < 0.5:
-                    tag_cx = max(76, x - 12)
-                else:
-                    tag_cx = min(self.lay.w - 76, x + sp.width + 12)
                 if actor is not None and m["who"] == actor:
-                    # 話者は build 側で動く別レイヤー。名札だけ基底に静止で描く
-                    if m.get("tag"):
-                        self._draw_tag(canvas, m["tag"], tag_cx, tag_y)
+                    # 話者は build 側で動く別レイヤー
                     continue
                 canvas.paste(sp, (x, y), sp)
-                if m.get("tag"):
-                    self._draw_tag(canvas, m["tag"], tag_cx, tag_y)
+            # 名札は全立ち絵より後に描く（後ろ髪にも隠れない最前面）。
+            # 話者ありカットは動く話者レイヤーより前面が必要なので
+            # 吹き出しレイヤー（bubble_layer）側で描く
+            if not bubble_layered:
+                for m in stage:
+                    if m.get("tag"):
+                        cx, ty = self._tag_pos(m)
+                        self._draw_tag(canvas, m["tag"], cx, ty)
             if bubble and not bubble_layered:
                 self._draw_bubble(canvas, bubble["text"], float(bubble["x"]),
                                   edge=bubble.get("color"))
@@ -364,12 +361,30 @@ class Composer:
             self._draw_telop(canvas, t)
         return canvas if fg_only else canvas.convert("RGB")
 
-    def bubble_layer(self, bubble: dict) -> Image.Image:
-        """吹き出しだけの透過レイヤー（動く立ち絵より前面に重ねる用）。"""
+    def bubble_layer(self, bubble: dict,
+                     stage: list[dict] | None = None) -> Image.Image:
+        """吹き出し+名札の透過レイヤー（動く立ち絵より前面に重ねる用）。
+
+        名札もここに描くことで、跳ねる話者の後ろ髪に隠れない。
+        """
         canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
+        for m in stage or []:
+            if m.get("tag"):
+                cx, ty = self._tag_pos(m)
+                self._draw_tag(canvas, m["tag"], cx, ty)
         self._draw_bubble(canvas, bubble["text"], float(bubble["x"]),
                           edge=bubble.get("color"))
         return canvas
+
+    def _tag_pos(self, m: dict) -> tuple[int, int]:
+        """名札の中心x・上端y。肩の高さ・体の少し外側。"""
+        sp, x, y = self.drama_actor(m)
+        tag_y = y + int(sp.height * 0.46)
+        if float(m["x"]) < 0.5:
+            tag_cx = max(76, x - 12)
+        else:
+            tag_cx = min(self.lay.w - 76, x + sp.width + 12)
+        return tag_cx, tag_y
 
     def drama_actor(self, m: dict) -> tuple[Image.Image, int, int]:
         """再現ドラマの立ち絵1体ぶんの (画像, x, y)。基底描画と動くレイヤーで共用。"""
@@ -755,7 +770,7 @@ def render_frames(
             [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
              bool(sp), card, full, fg_only, sub, sprite_sig,
-             stage_list, bubble, caption, actor],
+             stage_list, bubble, caption, actor, "tags-top1"],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
@@ -791,12 +806,13 @@ def render_frames(
                 cut.emotion, "talk")
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
-                    [bubble, "bub1"], ensure_ascii=False, sort_keys=True,
+                    [bubble, stage_list, sprite_sig, "bub2"],
+                    ensure_ascii=False, sort_keys=True,
                     default=str).encode()).hexdigest()[:16]
                 bubble_png = f"frames/bub_{bkey}.png"
                 bp = proj.root / bubble_png
                 if bkey not in manifest_used and not bp.exists():
-                    composer.bubble_layer(bubble).save(bp)
+                    composer.bubble_layer(bubble, stage=stage_list).save(bp)
                 manifest_used.add(bkey)
 
         # テロップレイヤー（あれば透過PNGを別に生成）

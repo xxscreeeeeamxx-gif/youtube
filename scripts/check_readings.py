@@ -147,6 +147,22 @@ def main(slug: str) -> int:
                     problems.append(
                         f"実測不一致: 「{e['surface']}」読み「{e['reading']}」が "
                         f"moras に無い idx{ct['index']}: {disp[:24]} → {kana[:40]}")
+        # ---- 2b) なに/なん・は/わ の誤読を自動NG化（通読の取りこぼし対策） ----
+        # 実例: 「とは何だ」=ナニダ、「何だったのか」=ナニダッタ、「何て言ってた」=ナニテ、
+        #       文頭の「は？」=ワ。いずれも [何|なん] / [は|はぁ] タグで修正する
+        for ct, cut in zip(timings, cuts_flat):
+            if not ct.get("moras"):
+                continue
+            kana = canon("".join(m[0] for m in ct["moras"]))
+            disp = ct["display_text"]
+            if re.search(r"何[だて]", disp) and re.search(r"ナニ[ダテ]", kana):
+                problems.append(
+                    f"誤読(何だ/何て=なん のはず): idx{ct['index']}: "
+                    f"{disp[:24]} → {kana[:40]}")
+            if re.match(r"^(……)?は[？！、]", disp) and re.match(r"^ワ", kana):
+                problems.append(
+                    f"誤読(間投詞の は=ハ のはず): idx{ct['index']}: "
+                    f"{disp[:24]} → {kana[:40]}")
     else:
         print("(timing.json 未生成のため実測検査はスキップ。voice 後に再実行)")
 
