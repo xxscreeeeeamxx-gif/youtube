@@ -23,6 +23,20 @@ from scripts.gen_momofuku_extras import (  # noqa: E402
 from PIL import ImageDraw  # noqa: E402
 
 # ---------------------------------------------------------------- 境界の自動計測
+def pad_graph(b):
+    """グラフはP0/カウンタ/脚注の3境界必要。span=2ならナレ文中(55%)で切る。"""
+    if len(b) >= 3:
+        return b
+    return [b[0], b[0] + (b[1] - b[0]) * 0.55, b[1]]
+
+
+def pad_asama(b):
+    """浅間はP0〜P4の5境界必要。span=4なら冒頭ナレ文中(55%)でP0/P1を切る。"""
+    if len(b) >= 5:
+        return b
+    return [b[0], b[0] + (b[1] - b[0]) * 0.55] + list(b[1:])
+
+
 def spans_from_timing(slug="momofuku-v2"):
     """timing.json と script.yaml から各クリップの (フェーズ境界, DUR) を実測で返す。
 
@@ -413,8 +427,8 @@ if __name__ == "__main__":
     sync_render("mf2_gyoretsu", lambda b: globals().update(Q_P=b), draw_gyoretsu)
     sync_render("mf2_ana", lambda b: setattr(m, "A_P", b), m.draw_ana)
     sync_render("mf2_gyakusama", lambda b: setattr(m, "G_P", b), m.draw_gyakusama)
-    sync_render("mf2_asama", lambda b: setattr(m, "S_P", b), m.draw_asama)
-    sync_render("mf2_graph", lambda b: globals().update(G2_P=b), draw_graph)
+    sync_render("mf2_asama", lambda b: setattr(m, "S_P", pad_asama(b)), m.draw_asama)
+    sync_render("mf2_graph", lambda b: globals().update(G2_P=pad_graph(b)), draw_graph)
     sync_render("mf2_gohan", lambda b: globals().update(GH_P=b), draw_gohan)
     sync_render("mf2_kenko", lambda b: globals().update(K_P=b), draw_kenko)
     sync_render("mf3_joken", lambda b: globals().update(J_P=b), draw_joken)

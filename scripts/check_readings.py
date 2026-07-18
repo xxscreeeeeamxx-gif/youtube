@@ -189,6 +189,102 @@ def main(slug: str) -> int:
         if warned:
             print(f"↑ 多読み漢字 {warned} 件。読みが正しいか上のカナを通読して確認すること")
 
+    # ---- 4) 舞台整合（ドラマ）: 舞台にいないキャラが喋っていないか ----
+    for scene in script.scenes:
+        stage = getattr(scene, "stage", None)
+        if not stage:
+            continue
+        members = {m.who for m in stage}
+        for cut in scene.cuts:
+            if cut.speaker != narrator and cut.speaker not in members:
+                problems.append(
+                    f"舞台にいないキャラが発話: {scene.id}: "
+                    f"{cut.speaker}「{cut.text[:20]}」→ stage に追加すること")
+            if cut.duet_with and cut.duet_with not in members:
+                problems.append(
+                    f"舞台にいないキャラとデュエット: {scene.id}: "
+                    f"{cut.duet_with}（{cut.text[:16]}）")
+
+    # ---- 5) ナレーターの助詞 は/へ 検査（VOICEVOX形態素解析と突き合わせ） ----
+    # AquesTalkはひらがなを字面どおり読むため、助詞は「わ」「え」で書く必要がある。
+    # 表示テキストをVOICEVOXに解析させ、ワ/エ になる位置の reading が は/へ ならNG。
+    # は/わ以外の差分は誤読の可能性として警告表示する（VOICEVOX側の誤読もあるため）。
+    def kana_only(s: str, keep_pos: bool = False):
+        s = to_kata(s)
+        out, pos = [], []
+        for i, ch in enumerate(s):
+            if "ァ" <= ch <= "ヶ" or ch == "ー":
+                out.append("オ" if ch == "ヲ" else ch)
+                pos.append(i)
+        return ("".join(out), pos) if keep_pos else "".join(out)
+
+    def norm_kana(s: str) -> str:
+        """canon + ー を直前の母音へ展開 + ヲ→オ（VOICEVOXモーラ表記に寄せる）。"""
+        s = canon(s).replace("ヲ", "オ")
+        out = []
+        for ch in s:
+            if ch == "ー" and out:
+                p = out[-1]
+                for col, v in ((O_COL, "オ"), (E_COL, "エ")):
+                    if p in col:
+                        ch = v
+                        break
+                else:
+                    ch = {"ア": "ア", "イ": "イ", "ウ": "ウ"}.get(p, "")
+                    if not ch:
+                        for group, v in (
+                            ("アカサタナハマヤラワガザダバパァャヮ", "ア"),
+                            ("イキシチニヒミリギジヂビピィ", "イ"),
+                            ("ウクスツヌフムユルグズヅブプゥュヴ", "ウ"),
+                        ):
+                            if p in group:
+                                ch = v
+                                break
+                        else:
+                            ch = "ー"
+            out.append(ch)
+        return "".join(out)
+
+    narrator_cuts = [(sc, c) for sc in script.scenes for c in sc.cuts
+                     if speaker_engine(c.speaker) == "aquestalk" and c.reading]
+    if narrator_cuts:
+        try:
+            from ytf.voice import ensure_engine
+            import difflib
+            import requests
+            client = ensure_engine(cfg)
+            for sc, cut in narrator_cuts:
+                disp = READING_RE.sub(lambda m: m.group(2), cut.text)
+                q = requests.post(f"{client.base}/audio_query",
+                                  params={"text": disp, "speaker": 13},
+                                  timeout=30)
+                q.raise_for_status()
+                vv = norm_kana("".join(m.get("text", "")
+                                       for ph in q.json()["accent_phrases"]
+                                       for m in ph.get("moras", [])))
+                rd = norm_kana(kana_only(cut.reading))
+                if rd == vv:
+                    continue
+                for op, a0, a1, b0, b1 in difflib.SequenceMatcher(
+                        None, rd, vv).get_opcodes():
+                    if op == "equal":
+                        continue
+                    seg_r, seg_v = rd[a0:a1], vv[b0:b1]
+                    ctx = f"…{rd[max(0, a0-6):a1+3]}…"
+                    if set(seg_r) <= {"ハ"} and set(seg_v) <= {"ワ"} and seg_r:
+                        problems.append(
+                            f"ナレの助詞: は→わ に直す: {sc.id}: "
+                            f"{ctx} ({cut.text[:18]})")
+                    elif set(seg_r) <= {"ヘ"} and set(seg_v) <= {"エ"} and seg_r:
+                        problems.append(
+                            f"ナレの助詞: へ→え に直す: {sc.id}: "
+                            f"{ctx} ({cut.text[:18]})")
+                    else:
+                        print(f"要確認(ナレ読み差分) {sc.id}: reading「{seg_r}」"
+                              f"↔ VOICEVOX解釈「{seg_v}」 {ctx}: {cut.text[:24]}")
+        except Exception as e:  # エンジン未起動などでも他の検査結果は返す
+            print(f"(ナレの は/へ 検査をスキップ: {e})")
+
     if problems:
         print(f"NG: {len(problems)} 件")
         for p in problems:
