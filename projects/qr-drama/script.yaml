@@ -1,0 +1,2014 @@
+# QRコード再現ドラマ（誕生1957→現代）。投稿前に必ず目視レビュー。
+# 裏取り: 日本自動車殿堂(dendosha05.pdf)・qrcode.com・denso-wave・levtech30周年
+# 1957/8/8杉並生・父文雄(カーボン抵抗特許/逓信省→帝国通信→独立)・中学から囲碁・
+# 法政大工学部(オーディオ/無線)・音声認識志望→認識技術の日本電装1980入社・配属は
+# バーコード読取機/OCR・NDコード1975トヨタ共同・1985埃の直言→現場主義・1992西尾工場の
+# 電話(箱に8〜10個/読むだけで疲れる)→上司直訴(世界一/時間はかけません)→2人チーム・
+# ファインダパターン→印刷物調査→1:1:3:1:1・囲碁(ずれ/欠け耐性)・誤り訂正最大約30%・
+# 1年半で1994完成(数字約7000字/漢字/10倍速)・Quick Response・トヨタ物流→業界標準・
+# ISO 2000/6/15・特許保有のまま無償開放(読取機で収益)・2002/10シャープ携帯・決済/途上国・
+# SQRC2007二層・画像入り大容量構想・災害医療・2014欧州発明家賞PopularPrize・
+# 2020IEEEマイルストーン・2023恩賜賞/法政名誉博士・現役主席技師
+meta:
+  title: "工場の「疲れた」から生まれた四角、世界標準になる【QRコード誕生・ゆっくり再現ドラマ】"
+  slug: "qr-drama"
+  summary: "QRコードを発明した原昌宏の物語。音声認識がやりたくて自動車部品会社に入った青年が、現場に叱られ、一本の電話を受け、たった2人で世界標準を作るまで。碁盤のひらめき、1対1対3対1対1の発見、特許をタダで開放した決断、そしてスマホ決済の時代まで、ずんだもんが原昌宏を演じる再現ドラマでお届けします。"
+  tags: ["QRコード", "原昌宏", "デンソー", "再現ドラマ", "ゆっくり", "ずんだもん", "伝記"]
+  thumbnail:
+    top: "たった2人で作った"
+    bottom: "世界標準の四角"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: chichi, label: "父", voice: 13, pitch: -0.04, item: mustache}
+    - {id: gakuyu, label: "学友", voice: 12, pitch: 0.02, hair: short}
+    - {id: joshi, label: "上司", voice: 13, pitch: -0.09, hair: short}
+    - {id: veteran, label: "ベテラン", voice: 42, item: mustache}
+    - {id: wakate, label: "作業員", voice: 12, hair: short}
+    - {id: nishio, label: "西尾工場", voice: 13, pitch: 0.01, hair: short}
+    - {id: machikko, label: "街の若者", voice: 12, pitch: 0.04, hair: short}
+    - {id: oneesan, label: "街の人", voice: 8, pitch: 0.05, hair: bun}
+scenes:
+  - id: hook
+    title: ""
+    background: il_qr_conbini
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "買い物完了！お会計はスマホでピッなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "早いね。もう財布、出さないんだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは現金卒業勢なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "小銭をジャラジャラ数える時代は、終わったのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "この前、ガチャガチャの前で固まってたけどね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "あれは小銭がなかっただけなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "現金、たまには連れて歩きなよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "とにかく、時代はピッなのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "レジで四角い模様を見せるだけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その四角い模様、名前知ってる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……白黒の、パズルのやつ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "QRコード。誰が作ったと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "シリコンバレーの天才なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "日本の、自動車部品の会社。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "クルマの会社！？なんでなのだ！？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "工場の、疲れたって一言から生まれたんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "疲れたから、世界の発明！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。今日はその話。"
+      - speaker: zundamon
+        emotion: happy
+        text: "気になりすぎるのだ！"
+      - speaker: reimu
+        text: "スマホ決済、搭乗券、コンサートのチケット、レストランのメニュー。"
+        reading: "すまほけっさい、とうじょうけん、こんさーとのちけっと、れすとらんのめにゅー。"
+      - speaker: reimu
+        text: "QRコードは、いまや世界中の暮らしの入り口です。"
+        reading: "きゅーあーるこーどわ、いまやせかいじゅうのくらしのいりぐちです。"
+      - speaker: reimu
+        text: "作ったのは、愛知の自動車部品メーカーの、たった2人のエンジニアでした。"
+        reading: "つくったのわ、あいちのじどうしゃぶひんめーかーの、たったふたりのえんじにあでした。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "たった2人なのだ！？"
+      - speaker: reimu
+        text: "物語は、1957年の東京から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくごじゅうななねんのとうきょうからはじまります。"
+  - id: era1957
+    title: "1957・エンジニアの家"
+    background: il_qr_machikoba
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "原", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1957年、東京、杉並。"
+        reading: "せんきゅうひゃくごじゅうななねん、とうきょう、すぎなみ。"
+        video: assets/clips/era_d1957.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: syonen
+    title: ""
+    background: il_qr_machikoba
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true, scale: 0.78}
+      - {who: chichi, x: 0.7}
+    cuts:
+      - speaker: reimu
+        text: "原昌宏は、エンジニアの家に生まれました。"
+        reading: "はらまさひろわ、えんじにあのいえにうまれました。"
+      - speaker: chichi
+        text: "昌宏、こっちに来てみろ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "父さんの工場、機械だらけなのだ！"
+      - speaker: chichi
+        text: "これはカーボン抵抗。電気の流れを整える部品だ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ちっちゃいのに、えらいのだ……。"
+      - speaker: chichi
+        text: "父さんはな、この作り方で特許を持ってるんだぞ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "とっきょ？"
+      - speaker: chichi
+        text: "世界で最初に考えました、っていう証明書だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "世界で最初……かっこいいのだ！"
+      - speaker: reimu
+        text: "父の文雄は、逓信省から民間に移り、のちに独立した技術者でした。"
+        reading: "ちちのふみおわ、ていしんしょうからみんかんにうつり、のちにどくりつしたぎじゅつしゃでした。"
+      - speaker: reimu
+        text: "工場を営みながら、一家を支えていました。"
+        reading: "こうじょうをいとなみながら、いっかをささえていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "父さん。ボクも大きくなったら発明する。"
+      - speaker: zundamon
+        emotion: happy
+        text: "父さんを超える発明を、するのだ！"
+      - speaker: chichi
+        text: "ハッハッハ。楽しみにしてるぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "手始めに、このネジを回すのだ。"
+      - speaker: chichi
+        text: "あっ、待て。それはまだ組み立ての途中……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ばらばらに、なったのだ。"
+      - speaker: chichi
+        text: "……昌宏。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ごめんなさいなのだ。"
+      - speaker: chichi
+        text: "直し方も、覚えて帰れ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "はいなのだ！"
+      - speaker: reimu
+        text: "後日。"
+        reading: "ごじつ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "父さん、家のラジオの音が変なのだ。"
+      - speaker: chichi
+        text: "どれ。……ほう、直してみるか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクが直すのだ！ドライバー貸してなのだ！"
+      - speaker: chichi
+        text: "今度はバラす前に、中の絵をかいてからだぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……メモしてから、バラす。覚えたのだ。"
+      - speaker: reimu
+        text: "機械いじりは、そのまま少年の遊びになりました。"
+        reading: "きかいいじりわ、そのまましょうねんのあそびになりました。"
+  - id: igo
+    title: ""
+    background: il_qr_washitsu
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.26, tag: "原", flip: true, scale: 0.86}
+      - {who: chichi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "中学生になると、父のすすめで囲碁を覚えます。"
+        reading: "ちゅうがくせいになると、ちちのすすめでいごをおぼえます。"
+      - speaker: chichi
+        text: "昌宏、たまには頭の勝負だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "白と黒の石を、置いていくのだ？"
+      - speaker: chichi
+        text: "陣地が広いほうが勝ちだ。単純だろう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "単純なら、勝てるのだ！"
+      - speaker: reimu
+        text: "30分後。"
+        reading: "さんじゅっぷんご。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクの陣地が、どこにもないのだ！？"
+      - speaker: chichi
+        text: "単純なものほど、奥が深いのさ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "もう一局なのだ！"
+      - speaker: chichi
+        text: "その前に、いいものを見せてやる。この石だ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "枡目から、ちょっとずれて置いてあるのだ。"
+      - speaker: chichi
+        text: "ずれていても、どこの石かは分かるだろう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "周りの石を見れば、分かるのだ。"
+      - speaker: chichi
+        text: "じゃあ、この欠けた石はどうだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "欠けてても、黒は黒なのだ。"
+      - speaker: chichi
+        text: "そうだ。碁盤の上は、案外ゆるくて、強いんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ゆるくて、強い……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "覚えておくのだ。かっこいいから。"
+      - speaker: chichi
+        text: "さ、もう一局やるか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今度こそ勝つのだ！"
+      - speaker: reimu
+        text: "1時間後。"
+        reading: "いちじかんご。"
+      - speaker: zundamon
+        emotion: sad
+        text: "陣地が、さっきより減ったのだ……。"
+      - speaker: chichi
+        text: "ハッハッハ。10年早い。"
+      - speaker: zundamon
+        emotion: angry
+        text: "じゃあ10年後に、勝つのだ！"
+  - id: daigaku
+    title: ""
+    background: il_qr_daigaku
+    bgm: natsuyasumi
+    stage:
+      - {who: zundamon, x: 0.26, tag: "原", flip: true}
+      - {who: gakuyu, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1970年代。原は法政大学の工学部で、電気を学びます。"
+        reading: "せんきゅうひゃくななじゅうねんだい。はらわほうせいだいがくのこうがくぶで、でんきをまなびます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見るのだ！自作アンプ、ついに完成なのだ！"
+      - speaker: gakuyu
+        text: "おお、音出るの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "出るのだ。ちょっと感動するのだ。"
+      - speaker: gakuyu
+        text: "……片方しか鳴ってなくない？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "はんだ付けをミスってるのだ！？"
+      - speaker: zundamon
+        emotion: normal
+        text: "直すのだ。こういう地味な作業は、嫌いじゃないのだ。"
+      - speaker: reimu
+        text: "専攻はオーディオや無線。音の電子工学でした。"
+        reading: "せんこうわおーでぃおやむせん。おとのでんしこうがくでした。"
+      - speaker: gakuyu
+        text: "原、就職どうすんの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "決めてるのだ。音声認識をやりたいのだ。"
+      - speaker: gakuyu
+        text: "おんせいにんしき？"
+      - speaker: zundamon
+        emotion: happy
+        text: "機械が、人の声を聞き取る技術なのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "声で機械が動く。未来しかないのだ！"
+      - speaker: gakuyu
+        text: "SFかよ。そんなのどこでやれんの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "探したのだ。愛知に、認識技術を研究してる会社があるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "自動車部品の、日本電装なのだ。"
+      - speaker: gakuyu
+        text: "クルマの部品屋で、音声認識？"
+      - speaker: zundamon
+        emotion: happy
+        text: "認識は認識なのだ。ボクは愛知に行くのだ！"
+      - speaker: gakuyu
+        text: "東京もん、名古屋めしにやられるなよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "味噌カツ、楽しみにしてるのだ。"
+  - id: mensetsu
+    title: ""
+    background: il_qr_kaigi
+    bgm: natsuyasumi
+    stage:
+      - {who: zundamon, x: 0.26, tag: "原", flip: true}
+      - {who: joshi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "面接の日。"
+        reading: "めんせつのひ。"
+      - speaker: joshi
+        text: "きみは、なぜうちを？"
+      - speaker: zundamon
+        emotion: normal
+        text: "音声認識が、やりたいのだ……やりたいんです。"
+      - speaker: joshi
+        text: "ほう。うちが認識技術をやってると、よく知ってたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "御社の研究を、雑誌で読んだんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械に、人の言葉が届く時代が来ます。"
+      - speaker: joshi
+        text: "面白い。クルマの部品屋には、もったいない夢だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "もったいなくないようにするのが、ボクの仕事なのだ。"
+      - speaker: joshi
+        text: "……面接で素が出るやつは、初めて見たよ。合格だ。"
+      - speaker: reimu
+        text: "1980年春。原は日本電装、いまのデンソーに入社します。"
+        reading: "せんきゅうひゃくはちじゅうねんはる。はらわにっぽんでんそう、いまのでんそーににゅうしゃします。"
+  - id: era1980
+    title: "1980・入社"
+    background: il_qr_lab
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.15, tag: "原", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1980年、愛知。"
+        reading: "せんきゅうひゃくはちじゅうねん、あいち。"
+        video: assets/clips/era_d1980.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: nyusha
+    title: ""
+    background: il_qr_lab
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: joshi, x: 0.72}
+    cuts:
+      - speaker: joshi
+        text: "原くん、配属を伝える。"
+      - speaker: zundamon
+        emotion: happy
+        text: "音声認識、待ってたのだ！"
+      - speaker: joshi
+        text: "バーコード読み取り機器の、開発だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ばーこーど！？"
+      - speaker: joshi
+        text: "認識は認識だろう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……声じゃなくて、縞々の認識なのだ。"
+      - speaker: joshi
+        text: "うちはトヨタグループの部品会社だ。主戦場は工場だぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "わかったのだ。まずは縞々と友達になるのだ。"
+      - speaker: reimu
+        text: "当時のデンソーは、独自のバーコードを工場で使っていました。"
+        reading: "とうじのでんそーわ、どくじのばーこーどをこうじょうでつかっていました。"
+      - speaker: joshi
+        text: "これがNDコード。トヨタと一緒に作った、うちのバーコードだ。"
+      - speaker: reimu
+        text: "NDコードは1975年、トヨタとの共同開発で生まれました。"
+        reading: "えぬでぃーこーどわせんきゅうひゃくななじゅうごねん、とよたとのきょうどうかいはつでうまれました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "何に使ってるのだ？"
+      - speaker: joshi
+        text: "かんばんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "看板？お店の？"
+      - speaker: joshi
+        text: "違う。生産の合図の紙のほうだ。"
+      - speaker: reimu
+        text: "かんばん方式。トヨタ生まれの、生産の仕組みです。"
+        reading: "かんばんほうしき。とよたうまれの、せいさんのしくみです。"
+        video: assets/clips/qd_kanban.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "必要なものを、必要なときに、必要な数だけ作る。"
+      - speaker: joshi
+        text: "そのやり取りの伝票が、かんばんだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "その、かんばんを電子化したのが、NDコードなのだ！"
+      - speaker: reimu
+        text: "そもそもバーコードとは、なんなのか。"
+        reading: "そもそもばーこーどとわ、なんなのか。"
+        video: assets/clips/qd_barcode.mp4
+        video_span: 5
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "縞の太さの並びが、数字や文字を表してるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "読み取り機の光が、白と黒の反射を数えるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ただし、入るのは英数字で20文字ほど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "品番くらいなら、じゅうぶんなのだ。"
+      - speaker: reimu
+        text: "原はこの読み取り機の開発と改良を、担当することになります。"
+        reading: "はらわこのよみとりきのかいはつとかいりょうを、たんとうすることになります。"
+      - speaker: joshi
+        text: "地味に見えて、工場の血管みたいな仕事だぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "血管、詰まらせないのだ。"
+  - id: genba1985
+    title: "1985・現場に叱られる"
+    background: il_qr_kojo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.22, tag: "原", flip: true}
+      - {who: veteran, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "5年目のある日。原は自分の製品に会いに、工場へ向かいました。"
+        reading: "ごねんめのあるひ。はらわじぶんのせいひんにあいに、こうじょうえむかいました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクの読み取り機、活躍してるのだ？"
+      - speaker: veteran
+        text: "ああ、あれか。そこの棚だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……棚の上で、埃をかぶってるのだ。"
+      - speaker: veteran
+        text: "こんな使いづらいもの、誰が使うんだ。"
+        se: don
+      - speaker: zundamon
+        emotion: surprised
+        text: "つ、使いづらい……。"
+      - speaker: veteran
+        text: "ボタンは多いし、手順は覚えられんし。"
+      - speaker: veteran
+        text: "わしらは毎日、油だらけの手で働いとるんだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: veteran
+        text: "機械に人が合わせるんじゃない。機械が、人に合わせるんだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "返す言葉が、ないのだ。"
+      - speaker: reimu
+        text: "自信作は現場では、ただの箱でした。"
+        reading: "じしんさくわげんばでわ、ただのはこでした。"
+        pause_after: 0.5
+      - speaker: zundamon
+        emotion: normal
+        text: "……教えてほしいのだ。"
+      - speaker: veteran
+        text: "あん？"
+      - speaker: zundamon
+        emotion: normal
+        text: "どこが使いにくいか、全部。"
+      - speaker: veteran
+        text: "全部か。長くなるぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全部、聞くのだ。"
+      - speaker: reimu
+        text: "この日から原は、ひまさえあれば工場に通うようになります。"
+        reading: "このひからはらわ、ひまさえあればこうじょうにかようようになります。"
+      - speaker: veteran
+        text: "また来たのか、あんちゃん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今日はメモ帳を3冊持ってきたのだ！"
+      - speaker: veteran
+        text: "3冊も要るか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先週は2冊で足りなかったのだ。"
+      - speaker: veteran
+        text: "……よく聞く気になったな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "埃をかぶらない機械を、作りたいのだ。"
+      - speaker: reimu
+        text: "技術のための技術から、現場のための技術へ。"
+        reading: "ぎじゅつのためのぎじゅつから、げんばのためのぎじゅつえ。"
+      - speaker: reimu
+        text: "原のものづくりが、この工場で変わりました。"
+        reading: "はらのものづくりが、このこうじょうでかわりました。"
+  - id: namiuchi
+    title: ""
+    background: il_qr_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: joshi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1980年代の終わり。クルマの作り方が、変わり始めます。"
+        reading: "せんきゅうひゃくはちじゅうねんだいのおわり。くるまのつくりかたが、かわりはじめます。"
+      - speaker: joshi
+        text: "車種がどんどん増えてる。部品の種類は、もっと増えてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "多品種少量生産、なのだ。"
+      - speaker: joshi
+        text: "海外の工場も増えた。仕入れ先も増えた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "管理する情報が、爆発してるのだ。"
+      - speaker: joshi
+        text: "そこでだ。バーコードにもっと情報を持たせられんか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "縞々20文字に、これ以上は詰められないのだ……。"
+      - speaker: joshi
+        text: "現場は困っとるぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "知ってるのだ。毎週通ってるのだ。"
+      - speaker: reimu
+        text: "現場の情報は、バーコードの器を超え始めていました。"
+        reading: "げんばのじょうほうわ、ばーこーどのうつわをこえはじめていました。"
+  - id: era1992
+    title: "1992・一本の電話"
+    background: il_qr_kojo
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.15, tag: "原", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1992年。"
+        reading: "せんきゅうひゃくきゅうじゅうにねん。"
+        video: assets/clips/era_d1992.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: denwa
+    title: ""
+    background: il_qr_lab
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: nishio, x: 0.76}
+    cuts:
+      - speaker: reimu
+        text: "きっかけは、1本の電話でした。"
+        reading: "きっかけわ、いっぽんのでんわでした。"
+      - speaker: nishio
+        text: "もしもし、西尾工場ですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "読み取り機担当の、原なのだ。"
+      - speaker: nishio
+        text: "単刀直入に言います。バーコード、どうにかなりませんか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "どうにか、とは。"
+      - speaker: nishio
+        text: "1つの箱に、バーコードがずらっと並んでるんです。"
+      - speaker: reimu
+        text: "箱には多いときで、10近くのバーコードが並んでいたといいます。"
+        reading: "はこにわおおいときで、じゅうちかくのばーこーどがならんでいたといいます。"
+        video: assets/clips/qd_burden.mp4
+        video_span: 5
+        video_full: true
+      - speaker: nishio
+        text: "品番、数量、行き先。1本ずつ、ピッ、ピッと読んでいく。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "[1箱|ひとハコ]で、10回なのだ。"
+      - speaker: nishio
+        text: "それが1日、何百箱もです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "何百箱……。"
+      - speaker: nishio
+        text: "現場はもう、へとへとです。"
+      - speaker: nishio
+        text: "読むだけで、疲れるんですよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "読むだけで、疲れる……。"
+      - speaker: nishio
+        text: "まとめて一度に読めるように、なりませんか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……わかったのだ。まず、この目で見に行くのだ。"
+      - speaker: reimu
+        text: "受話器の向こうの一言を、原は生涯忘れませんでした。"
+        reading: "じゅわきのむこうのひとことを、はらわしょうがいわすれませんでした。"
+  - id: genbami
+    title: ""
+    background: il_qr_kojo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.2, tag: "原", flip: true}
+      - {who: nishio, x: 0.62}
+      - {who: wakate, x: 0.88}
+    cuts:
+      - speaker: reimu
+        text: "翌週。原は西尾工場に立っていました。"
+        reading: "よくしゅう。はらわにしおこうじょうにたっていました。"
+      - speaker: nishio
+        text: "電話した係の者です。わざわざどうも。"
+      - speaker: zundamon
+        emotion: normal
+        text: "百聞は一見にしかず、なのだ。"
+      - speaker: nishio
+        text: "あれが、例の箱です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……本当に、縞々だらけなのだ。"
+      - speaker: wakate
+        text: "ピッ。ピッ。ピッ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "読んでる読んでる、なのだ。"
+      - speaker: wakate
+        text: "ピッ。……ピッ。あー、いま1本飛ばした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "飛ばすと、どうなるのだ？"
+      - speaker: wakate
+        text: "最初から、やり直しっす。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1本ミスで、全部やり直し……。"
+      - speaker: nishio
+        text: "これを毎日、何百箱です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ストップウォッチで測らせてほしいのだ。"
+      - speaker: nishio
+        text: "どうぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "[1箱|ひとハコ]ぶんで、けっこうな時間なのだ……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "この時間、工場全体だと途方もないのだ。"
+      - speaker: nishio
+        text: "でしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "読み取りは[1箱|ひとハコ]、1回。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それが目指すゴールなのだ。"
+      - speaker: nishio
+        text: "できたら、拝みますよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "拝まれる前に、作るのだ。"
+  - id: chosa
+    title: ""
+    background: il_qr_kojo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.2, tag: "原", flip: true}
+      - {who: wakate, x: 0.56}
+      - {who: veteran, x: 0.86}
+    cuts:
+      - speaker: reimu
+        text: "原は西尾工場だけでなく、あちこちの工場を回りました。"
+        reading: "はらわにしおこうじょうだけでなく、あちこちのこうじょうをまわりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "バーコード、1日に何回くらい読むのだ？"
+      - speaker: wakate
+        text: "数えたくもないっす。"
+      - speaker: veteran
+        text: "手首を痛めた奴もおるぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ここでも、同じ声なのだ。"
+      - speaker: wakate
+        text: "あと、入れたい情報も増えてるんすよ。"
+      - speaker: wakate
+        text: "品番だけじゃなくて、履歴とか、検査結果とか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "20文字じゃ、ぜんぜん足りないのだ。"
+      - speaker: veteran
+        text: "あんちゃん、例の埃の機械の借りが残っとるぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……忘れてないのだ。"
+      - speaker: veteran
+        text: "今度は、埃をかぶらんやつを頼む。"
+      - speaker: zundamon
+        emotion: normal
+        text: "現場が楽になるやつを、作るのだ。"
+      - speaker: reimu
+        text: "読み取り機の改良では、もう間に合わない。"
+        reading: "よみとりきのかいりょうでわ、もうまにあわない。"
+      - speaker: reimu
+        text: "原の結論は、シンプルでした。"
+        reading: "はらのけつろんわ、しんぷるでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "バーコードそのものを、作り直すのだ。"
+  - id: jikiso
+    title: "世界一への直訴"
+    background: il_qr_kaigi
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.26, tag: "原", flip: true}
+      - {who: joshi, x: 0.72}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "お願いが、あるのだ。"
+      - speaker: joshi
+        text: "改まってどうした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "バーコードに代わる、新しいコードを作らせてほしいのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうせ作るなら、世界一になるやつを。"
+      - speaker: joshi
+        text: "……世界一と来たか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "時間は、長くはかけません。"
+      - speaker: joshi
+        text: "勝算はあるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "数字の裏付けは、ないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、現場の声なら山ほど持ってるのだ。"
+      - speaker: joshi
+        text: "メモ帳何冊ぶんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "12冊なのだ。"
+      - speaker: joshi
+        text: "……ふっ。わかった、やってみろ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "いいのだ！？"
+      - speaker: joshi
+        text: "ただし、人は[出せん|だせん]。相棒1人だけだ。"
+      - speaker: reimu
+        text: "こうして生まれた開発チームは、たった2人でした。"
+        reading: "こうしてうまれたかいはつちーむわ、たったふたりでした。"
+  - id: team
+    title: ""
+    background: il_qr_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日からご一緒します。よろしくお願いします、原さん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よろしくなのだ！2人で世界一を作るのだ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "2人で、世界一。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ところで、周りの人がなんて言ってるか知ってます？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "なんて言ってるのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これからは、ICカードの時代だって。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまさら紙に刷るコードなんて、って。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ICカードは、電子の箱なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちのは、紙に刷れる、ただの模様なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "それ、勝ち目あります？"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙に刷れるってことは、ほぼタダってことなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……なるほど。安いは正義。"
+      - speaker: zundamon
+        emotion: normal
+        text: "工場は数との勝負なのだ。タダに近いは、武器なのだ。"
+      - speaker: reimu
+        text: "期待されない2人の挑戦が、始まりました。"
+        reading: "きたいされないふたりのちょうせんが、はじまりました。"
+  - id: nijigen
+    title: ""
+    background: il_qr_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "2人はまず、世界のコードを調べ上げました。"
+        reading: "ふたりわまず、せかいのこーどをしらべあげました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "情報を増やすなら、2次元コードですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "縞々は横方向だけ。それを、縦にも積むのだ。"
+      - speaker: reimu
+        text: "横一列のバーコードに対して、2次元コードは面で記録します。"
+        reading: "よこいちれつのばーこーどにたいして、にじげんこーどわめんできろくします。"
+        video: assets/clips/qd_2d.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "白黒のマス目を敷き詰めれば、情報は何百倍にもなるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実は海外には、2次元コードがもうあるんです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "先を越されてるのだ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、どれも現場では使いにくいみたいで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……読み取りが、遅いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。機械がコードを見つけるのに、時間がかかるんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "工場のラインは、待ってくれないのだ。"
+      - speaker: reimu
+        text: "部品は流れ、コードの位置も向きも、その都度バラバラです。"
+        reading: "ぶひんわながれ、こーどのいちもむきも、そのつどばらばらです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "速くて、正確。そこが空いてます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "決めたのだ。速さで世界一を[獲|と]るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "情報量も、ですよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "欲張り全部盛りで行くのだ。"
+  - id: kabe
+    title: ""
+    background: il_qr_lab
+    bgm: mystery
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……で、悩んでいるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "3日間ずっとですね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "機械はまず、画像のどこにコードがあるかを探すのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "この探す時間が、とにかく長いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "画像の隅から隅まで、なめるように調べてますからね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "人間なら、パッと見つけるのに……。"
+      - speaker: reimu
+        text: "その晩も、原は帰りませんでした。"
+        reading: "そのばんも、はらわかえりませんでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "紙にかいて、切って、[並|なら]べて……違うのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "コードを速く探す方法、コードを速く……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "原さん、差し入れです。あと、ひとりごとが漏れてます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "人間は、目印で見つけてるんですよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……目印。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それなのだ！コードに目印をつけるのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ここにいるよって、コードが自分から言えばいい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "四角の目印を、3つの隅に置くのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "名付けて、ファインダパターンなのだ！"
+      - speaker: reimu
+        text: "3つの隅に置く、位置の目印。この発明の心臓部です。"
+        reading: "みっつのすみにおく、いちのめじるし。このはつめいのしんぞうぶです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、目印はどんな模様にします？"
+      - speaker: zundamon
+        emotion: normal
+        text: "四角の中に四角。二重の四角なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "あ、でも待ってください。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "似た模様が近くに印刷されてたら、機械が間違えますよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……たしかに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界のどの印刷物にもない模様じゃないと、ダメなのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "そんな模様、どうやって探すんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界の印刷物を、全部調べるのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "全部！？"
+  - id: insatsu
+    title: "どこにもない模様"
+    background: il_qr_insatsu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "2人は、印刷物を集め始めました。"
+        reading: "ふたりわ、いんさつぶつをあつめはじめました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "チラシ、雑誌、新聞、段ボール。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "海外の雑誌も、取り寄せました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ぜんぶ白黒にして、白と黒の幅の比率を測るのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "気の遠くなる作業ですね……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界一への道は、地味なのだ。"
+      - speaker: reimu
+        text: "昼も夜も、2人は紙の山と向き合いました。"
+        reading: "ひるもよるも、ふたりわかみのやまとむきあいました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "白1、黒1、白2……メモ。次なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "こちら、白2、黒2、白1です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "同僚、目が真っ赤なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[原|はら]さんもです。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "ゆうべ、夢に縞々が出てきました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ボクは夢の中でも比率を測ってたのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "重症です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、続けるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どこにもない模様は、調べた者にしか作れないのだ。"
+      - speaker: reimu
+        text: "1か月がすぎました。"
+        reading: "いっかげつがすぎました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "いたっ。紙で指を切りました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今月3回目なのだ。絆創膏はそこなのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "ありがとうございます。……で、収穫ゼロです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "収穫ゼロも、収穫なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "どういうことです？"
+      - speaker: zundamon
+        emotion: normal
+        text: "よく使われてる比率が分かれば、その逆が見えてくるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……消去法の、山登りですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうなのだ。だから今日も測るのだ。"
+      - speaker: reimu
+        text: "数えきれない紙をめくり続けて、2人はある比率にたどり着きます。"
+        reading: "かぞえきれないかみをめくりつづけて、ふたりわあるひりつにたどりつきます。"
+      - speaker: reimu
+        text: "白と黒の幅が、1、1、3、1、1。"
+        reading: "しろとくろのはばが、いち、いち、さん、いち、いち。"
+        video: assets/clips/qd_finder.mp4
+        video_span: 6
+        video_full: true
+        se: don
+      - speaker: zundamon
+        emotion: happy
+        text: "あったのだ！印刷物で一番使われていない比率なのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "この並び、世界中の紙の上に、ほとんど存在しません！"
+      - speaker: zundamon
+        emotion: happy
+        text: "この比率で二重の四角を作れば、誤認しないのだ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "しかも見るのだ。[走査線|そうさせん]がどの角度から[通|とお]っても……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "白黒の幅は、いつでも、1、1、3、1、1。"
+      - speaker: zundamon
+        emotion: happy
+        text: "逆さでも斜めでも、一発で位置と向きが分かるのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "探す時間、ほぼゼロです。"
+      - speaker: reimu
+        text: "のちに世界中を駆け回る、あの3つの四角が生まれた瞬間でした。"
+        reading: "のちにせかいじゅうをかけまわる、あのみっつのしかくがうまれたしゅんかんでした。"
+  - id: igo2
+    title: ""
+    background: il_qr_kyukei
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "開発の合間。原の昼休みは、決まって囲碁でした。"
+        reading: "かいはつのあいま。はらのひるやすみわ、きまっていごでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "原さん、お昼まで難しい顔しないでください。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これは仕事の顔じゃないのだ。囲碁の顔なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じ顔です。じゃあ、一局だけですよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "[来|き]たまえなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "えい。……あ、石がずれちゃった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "平気なのだ。どこに置いたかは、周りの石で分かるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ん？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どうしました？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ずれても、周りとの関係で分かる……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "父さんの言ってた、ゆるくて強い、なのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "同僚！これ、コードに使えるのだ！"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "お昼休み、終了ですね。"
+      - speaker: reimu
+        text: "碁盤です。"
+        reading: "ごばんです。"
+        video: assets/clips/qd_goban.mp4
+        video_span: 5
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "印刷がすこしずれても、周りのマス目との関係で正しく読むのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "中学のとき、父さんに教わったのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "欠けた石でも、白か黒かは分かる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "つまり、かすれたマス目も判定できる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "碁盤の上は、ゆるくて強いのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お父さん、大金星ですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "10年どころか、20年ごしなのだ。"
+      - speaker: reimu
+        text: "中学の碁盤が、白黒のマス目に生かされました。"
+        reading: "ちゅうがくのごばんが、しろくろのますめにいかされました。"
+  - id: gosei
+    title: ""
+    background: il_qr_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "残るは、工場ならではの問題ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "油汚れと、破れなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "コードの上に油が一滴。はい、読めません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、誤り訂正を入れるのだ。"
+      - speaker: reimu
+        text: "誤り訂正。汚れて欠けた情報を、計算で復元する仕組みです。"
+        reading: "あやまりていせい。よごれてかけたじょうほうを、けいさんでふくげんするしくみです。"
+        video: assets/clips/qd_gosei.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ情報を、数学の力で分散して持たせておくのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "一部が読めなくても、残りから元通りに計算できる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "最大で、約3割が欠けても復元できるのだ。"
+        stat: {value: 30, unit: "％", label: "欠けても復元（最大設定）"}
+      - speaker: tsumugi
+        emotion: happy
+        text: "油まみれの現場でも、へっちゃらですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "相手は工場なのだ。これくらいの用心が要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ゆるくて、強い。ほんとにそういうコードですね。"
+  - id: shisaku
+    title: ""
+    background: il_qr_lab
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "設計がそろい、試作が始まりました。"
+        reading: "せっけいがそろい、しさくがはじまりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "試作コード、印刷できました。読みます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……読めないのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "えっ。目印はバッチリなのに。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "見つけるのは一瞬。でも、中身の解読でつまずいてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ソフトの調整、やり直しですね。"
+      - speaker: reimu
+        text: "作っては読ませ、直しては読ませ。"
+        reading: "つくってわよませ、なおしてわよませ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今度はどうなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "読めました。でも、2秒かかってます。"
+      - speaker: zundamon
+        emotion: angry
+        text: "遅いのだ。ラインは待ってくれないのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "どこまで求めるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一瞬なのだ。ピッ、なのだ。"
+      - speaker: reimu
+        text: "深夜の実験室に、ピッの音だけが響き続けました。"
+        reading: "しんやのじっけんしつに、ぴっのおとだけがひびきつづけました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "改良版、いきます。……ピッ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "早くなったのだ。でもまだなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "もう1回。……ピッ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "惜しいのだ。もうひと絞りなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "原さん、楽しそうですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "難問ほど、燃えるのだ。"
+  - id: era1994
+    title: "1994・QRコード誕生"
+    background: il_qr_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.15, tag: "原", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1994年。"
+        reading: "せんきゅうひゃくきゅうじゅうよねん。"
+        video: assets/clips/era_d1994.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: kansei
+    title: ""
+    background: il_qr_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "開発開始から、1年半がたっていました。"
+        reading: "かいはつかいしから、いちねんはんがたっていました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "原さん、最終テストいきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "読み取り機、構え、なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "数字およそ7000文字入りの、フルサイズです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ピッ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "読めた。いま、一瞬でしたよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "もう一回なのだ。ピッ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "何回やっても一瞬です！"
+      - speaker: zundamon
+        emotion: happy
+        text: "斜めに置くのだ。ピッ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "読めてます！逆さまも！"
+      - speaker: reimu
+        text: "数字でおよそ7000文字。漢字も入る。速さは10倍以上。"
+        reading: "すうじでおよそななせんもじ。かんじもはいる。はやさわじゅうばいいじょう。"
+        video: assets/clips/qd_spec.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "容量はバーコードの数百倍なのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "読み取りは、他の2次元コードの10倍以上なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界一、獲りましたね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "現場の全部盛り、完成なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、名前どうします？"
+      - speaker: zundamon
+        emotion: normal
+        text: "候補は考えてあるのだ。素早い応答。"
+      - speaker: zundamon
+        emotion: normal
+        text: "英語で、クイックレスポンス。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "頭文字で、QR。"
+      - speaker: zundamon
+        emotion: happy
+        text: "QRコード、なのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "呼びやすい。即採用です。"
+  - id: houkoku
+    title: ""
+    background: il_qr_kaigi
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.26, tag: "原", flip: true}
+      - {who: joshi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "そして、上司への報告の日。"
+        reading: "そして、じょうしえのほうこくのひ。"
+      - speaker: joshi
+        text: "で、どうなった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界一、なったのだ。"
+      - speaker: joshi
+        text: "口だけじゃないだろうな。読ませてみろ。……ピッ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうなのだ。"
+      - speaker: joshi
+        text: "……速いな。うちのバーコードより速いじゃないか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "容量は数百倍で、この速さなのだ。"
+      - speaker: joshi
+        text: "約束どおり、時間も長くかけなかったな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "1年半なのだ。"
+      - speaker: joshi
+        text: "あの埃の機械の男が、よくやったもんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "現場の先生たちの、おかげなのだ。"
+      - speaker: reimu
+        text: "1994年。QRコードが誕生しました。"
+        reading: "せんきゅうひゃくきゅうじゅうよねん。きゅーあーるこーどがたんじょうしました。"
+  - id: donyu
+    title: ""
+    background: il_qr_kojo
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.2, tag: "原", flip: true}
+      - {who: wakate, x: 0.56}
+      - {who: veteran, x: 0.86}
+    cuts:
+      - speaker: reimu
+        text: "QRコードはまず、トヨタグループの物流の現場に入りました。"
+        reading: "きゅーあーるこーどわまず、とよたぐるーぷのぶつりゅうのげんばにはいりました。"
+      - speaker: wakate
+        text: "箱のバーコード10連発が……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "四角ひとつに、なったのだ。"
+      - speaker: wakate
+        text: "ピッ。……えっ、終わり？"
+      - speaker: zundamon
+        emotion: happy
+        text: "終わりなのだ。"
+      - speaker: wakate
+        text: "1回で終わるんすよ！1回で！"
+      - speaker: veteran
+        text: "大げさなやつだ。どれ、わしも。……ピッ。"
+      - speaker: veteran
+        text: "……こりゃあ、楽だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "埃の借り、返せたのだ？"
+      - speaker: veteran
+        text: "ああ。今度のは、道具の顔をしとる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "現場の先生の、おかげなのだ。"
+      - speaker: reimu
+        text: "手書きやバラバラだった伝票も、四角ひとつにまとまりました。"
+        reading: "てがきやばらばらだったでんぴょうも、しかくひとつにまとまりました。"
+      - speaker: reimu
+        text: "やがて自動車業界の標準の仕組みに、QRコードが採用されます。"
+        reading: "やがてじどうしゃぎょうかいのひょうじゅんのしくみに、きゅーあーるこーどがさいようされます。"
+  - id: eigyo
+    title: ""
+    background: il_qr_kaigi
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: joshi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "社内の次は、業界でした。"
+        reading: "しゃないのつぎわ、ぎょうかいでした。"
+      - speaker: joshi
+        text: "自動車業界の伝票は、各社バラバラだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "各社がそれぞれの様式で、書類の山なのだ。"
+      - speaker: joshi
+        text: "業界共通の仕組みに、QRコードを推そうと思う。"
+      - speaker: zundamon
+        emotion: happy
+        text: "共通になれば、どの会社の箱も1回ピッなのだ。"
+      - speaker: reimu
+        text: "デンソーは業界団体に働きかけ、標準の仕組みへの採用を実現します。"
+        reading: "でんそーわぎょうかいだんたいにはたらきかけ、ひょうじゅんのしくみえのさいようをじつげんします。"
+      - speaker: reimu
+        text: "国内の自動車業界で、QRコードは当たり前になっていきました。"
+        reading: "こくないのじどうしゃぎょうかいで、きゅーあーるこーどわあたりまえになっていきました。"
+  - id: era2000
+    title: "2000・世界標準へ"
+    background: il_qr_kaigi
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "原", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "2000年。"
+        reading: "にせんねん。"
+        video: assets/clips/era_d2000.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: iso
+    title: ""
+    background: il_qr_kaigi
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "原さん、海外からも要望が来てます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "海外の工場でも、使いたいのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。ただ、条件があって。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界標準の規格じゃないと、採用できないそうです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "一社の社内規格のままでは、ダメなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "国際規格への登録、動きましょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "書類の山も、印刷物の山に比べたら余裕なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "その強がり、半年後に聞かせてください。"
+      - speaker: reimu
+        text: "国際規格への道は、書類との戦いでした。"
+        reading: "こくさいきかくえのみちわ、しょるいとのたたかいでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "仕様書、英訳、試験データ、また仕様書……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "余裕、でしたっけ？"
+      - speaker: zundamon
+        emotion: sad
+        text: "……印刷物の山のほうが、まだ優しかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい、次の書類です。"
+      - speaker: zundamon
+        emotion: sad
+        text: "四角のためなのだ。書くのだ……。"
+      - speaker: reimu
+        text: "地道な働きかけの末、2000年6月15日。"
+        reading: "じみちなはたらきかけのすえ、にせんねんろくがつじゅうごにち。"
+      - speaker: reimu
+        text: "QRコードは、国際標準規格になりました。"
+        reading: "きゅーあーるこーどわ、こくさいひょうじゅんきかくになりました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "日本生まれの四角が、世界の共通語になったのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "世界一の看板に、偽りなしです。"
+  - id: tokkyo
+    title: "タダで配るという決断"
+    background: il_qr_kaigi
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.22, tag: "原", flip: true}
+      - {who: joshi, x: 0.54}
+      - {who: tsumugi, x: 0.86, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "そのころ、想定していなかったことが起きます。"
+        reading: "そのころ、そうていしていなかったことがおきます。"
+      - speaker: joshi
+        text: "原くん、妙な問い合わせが増えてる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "妙、とは。"
+      - speaker: joshi
+        text: "工場と関係ない会社が、QRコードを使いたいそうだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "暮らしのサービスに使いたいみたいです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "工場の道具に、なのだ？"
+      - speaker: joshi
+        text: "で、どうする。使用料を取るか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……特許は、うちが持ってるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "課金すれば、それなりの商売になるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "原さんは、どうしたいんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……タダで、開放したいのだ。"
+      - speaker: joshi
+        text: "正気か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちは、工場のことしか知らないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "暮らしの使い方は、暮らしの人たちのほうが上手いのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "使い方の発明は、世界に任せるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちはコードを進化させて、読み取り機で稼ぐのだ。"
+      - speaker: joshi
+        text: "……読み取り機は、確かにうちの本業だな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "コードが広まるほど、読み取り機が売れる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "広まってもらったほうが、勝ちなのだ。"
+      - speaker: joshi
+        text: "よし。その道で行こう。"
+      - speaker: reimu
+        text: "特許は保有したまま、権利は行使しない。"
+        reading: "とっきょわほゆうしたまま、けんりわこうししない。"
+      - speaker: reimu
+        text: "QRコードは、誰でも無料で使える技術になりました。"
+        reading: "きゅーあーるこーどわ、だれでもむりょうでつかえるぎじゅつになりました。"
+  - id: era2002
+    title: "2002・ポケットの中へ"
+    background: il_qr_machi2002
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "原", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "2002年。"
+        reading: "にせんにねん。"
+        video: assets/clips/era_d2002.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: keitai
+    title: ""
+    background: il_qr_machi2002
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.2, tag: "原", flip: true}
+      - {who: machikko, x: 0.58}
+      - {who: oneesan, x: 0.88}
+    cuts:
+      - speaker: reimu
+        text: "ポケットの中に、カメラが入り始めたころです。"
+        reading: "ぽけっとのなかに、かめらがはいりはじめたころです。"
+      - speaker: machikko
+        text: "ねえ、この雑誌の隅の四角、何の模様？"
+      - speaker: oneesan
+        text: "ケータイのカメラで、写してみな。"
+      - speaker: machikko
+        text: "……うわ、サイトに飛んだ！"
+      - speaker: machikko
+        text: "URLを打たなくていいの、便利すぎん？"
+      - speaker: oneesan
+        text: "最近のケータイ、それ読めるんだって。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "読まれてるのだ……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "工場の四角が、街で読まれてるのだ！"
+  - id: keitai2
+    title: ""
+    background: il_qr_machi2002
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "原", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "2002年10月。カメラ付き携帯での読み取りサービスが始まりました。"
+        reading: "にせんにねんじゅうがつ。かめらつきけいたいでのよみとりさーびすがはじまりました。"
+        video: assets/clips/qd_keitai.mp4
+        video_span: 4
+        video_full: true
+      - speaker: reimu
+        text: "シャープの携帯電話が、QRコードに対応したのです。"
+        reading: "しゃーぷのけいたいでんわが、きゅーあーるこーどにたいおうしたのです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "長いURLを、ボタンでポチポチ打つ時代に……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "写すだけで届く、なのだ。"
+  - id: keitai3
+    title: ""
+    background: il_qr_machi2002
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.2, tag: "原", flip: true}
+      - {who: machikko, x: 0.58}
+      - {who: oneesan, x: 0.88}
+    cuts:
+      - speaker: machikko
+        text: "この四角、考えた人天才っしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "工場の人の、疲れたの一言から生まれたのだ。"
+      - speaker: machikko
+        text: "[は|はぁ]？工場？"
+      - speaker: zundamon
+        emotion: normal
+        text: "話すと長いのだ。"
+      - speaker: machikko
+        text: "てか、おじさん詳しくない？作った人の知り合い？"
+      - speaker: zundamon
+        emotion: normal
+        text: "本人なのだ。"
+      - speaker: machikko
+        text: "またまたー。"
+      - speaker: zundamon
+        emotion: sad
+        text: "信じてもらえないのだ……。"
+      - speaker: oneesan
+        text: "じゃあまたいつか聞くわ。"
+      - speaker: reimu
+        text: "雑誌に、ポスターに、名刺に。四角は街へあふれ出しました。"
+        reading: "ざっしに、ぽすたーに、めいしに。しかくわまちえあふれだしました。"
+  - id: mame
+    title: ""
+    background: il_qr_machi2002
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.26, tag: "原", flip: true}
+      - {who: oneesan, x: 0.76}
+    cuts:
+      - speaker: reimu
+        text: "余談ですが。"
+        reading: "よだんですが。"
+      - speaker: oneesan
+        text: "ねえ、この四角って、使うのにお金かかるの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "かからないのだ。誰でも無料で作れるのだ。"
+      - speaker: oneesan
+        text: "え、お店のチラシに載せてもタダ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "タダなのだ。無料で作れるサイトも公開されてるのだ。"
+      - speaker: oneesan
+        text: "うちの店でも使お。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうやって広まってくれるのが、一番うれしいのだ。"
+  - id: sekai
+    title: "そして現代へ"
+    background: il_qr_machinow
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。"
+        reading: "ときわながれて、げんだい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "原さん、いまの世界の使われ方、見てみましょう。"
+      - speaker: reimu
+        text: "いちばん広がったのは、スマホ決済でした。"
+        reading: "いちばんひろがったのわ、すまほけっさいでした。"
+        video: assets/clips/qd_payment.mp4
+        video_span: 5
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "画面に四角を出して、ピッ。お金が動くのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "屋台でも、[市場|いちば]でも、お賽銭でも使われてます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "紙に刷るだけ、画面に出すだけ。タダ同然だからなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、途上国でも一気に広まりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "高い機械が要らないのが、四角の強みなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "画面がバキバキに割れたスマホでも、読めますし。"
+      - speaker: zundamon
+        emotion: happy
+        text: "3割欠けても平気な、工場育ちなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "飛行機の搭乗券も、ライブのチケットも。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "レストランの注文も、四角になりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "回覧板にも、役所の書類にも付いてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "宅配の伝票も、工場のかんばんの親戚ですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "みんな親戚なのだ。実家は愛知の工場なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "世界一帰省しない親戚です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "正直、ここまで広がるとは思ってなかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "使い方は世界に任せる、でしたもんね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "世界は、ボクらより発明が上手かったのだ。"
+      - speaker: reimu
+        text: "使い方を世界に任せた四角は、いまも発明され続けています。"
+        reading: "つかいかたをせかいにまかせたしかくわ、いまもはつめいされつづけています。"
+  - id: award
+    title: "恩賜賞"
+    background: il_qr_award
+    bgm: amacha_hoshizora
+    stage:
+      - {who: zundamon, x: 0.28, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "発明はやがて、表彰の舞台に呼ばれるようになりました。"
+        reading: "はつめいわやがて、ひょうしょうのぶたいによばれるようになりました。"
+      - speaker: reimu
+        text: "2014年、欧州発明家賞。一般の投票で選ばれる人気賞でした。"
+        reading: "にせんじゅうよねん、おうしゅうはつめいかしょう。いっぱんのとうひょうでえらばれるにんきしょうでした。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "世界の人の投票で、なのだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それだけ暮らしに届いてる、ってことです。"
+      - speaker: reimu
+        text: "2020年には、電気技術の歴史的な節目を称える認定も受けました。"
+        reading: "にせんにじゅうねんにわ、でんきぎじゅつのれきしてきなふしめをたたえるにんていもうけました。"
+      - speaker: reimu
+        text: "そして2023年。日本学士院から、恩賜賞が贈られます。"
+        reading: "そしてにせんにじゅうさんねん。にほんがくしいんから、おんししょうがおくられます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "学問の世界の、最高峰クラスの賞です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "工場のための四角が、ここまで来たのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "母校の[法政大学|ほうせいだいがく]からは、名誉博士も贈られましたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……父さんは、特許を持ってたのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクの特許は、タダで世界に配ったのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "超えられたのかどうか、判定が難しいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お父さんなら、なんて言うと思います？"
+      - speaker: zundamon
+        emotion: happy
+        text: "……10年早い、なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "一生言われるやつですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、いつか胸を張って墓前で言うのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "父さんの囲碁が、世界中で読まれてるのだ、って。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ、特許より効く親孝行だと思います。"
+  - id: shinka
+    title: "止まらない四角"
+    background: il_qr_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "原", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "原はいまも、デンソーウェーブの主席技師です。"
+        reading: "はらわいまも、でんそーうぇーぶのしゅせきぎしです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "原さん、まだ改良するんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "当たり前なのだ。四角は、まだ進化するのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "例えば？"
+      - speaker: zundamon
+        emotion: normal
+        text: "読む人によって、見える中身が変わる四角は、もう作ったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "公開の情報と、秘密の情報の二階建てですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次は、画像ごと入る大容量の四角を考えてるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "なにに使うんですか？"
+      - speaker: zundamon
+        emotion: normal
+        text: "災害なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "大きな地震で通信が止まると、カルテが見られなくなるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙の四角に医療情報ごと入っていれば、停電でも読めるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "通信がなくても、情報が手元に残る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "困ってる現場があるかぎり、やることは尽きないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "楽しそうに言いますね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "楽しくなければ、仕事は長続きしないのだ。"
+      - speaker: reimu
+        text: "「疲れた」に応え続けて、40年あまり。"
+        reading: "つかれたにこたえつづけて、よんじゅうねんあまり。"
+      - speaker: reimu
+        text: "発明家はいまも、現場の声を聞いています。"
+        reading: "はつめいかわいまも、げんばのこえをきいています。"
+  - id: musubi
+    title: ""
+    background: il_qr_conbini
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "というわけで、お会計はスマホでピッなのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "話を聞いたあとだと、ピッの重みが違うね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この一瞬に、紙の山と碁盤と、油汚れの工夫が詰まってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "工場の、疲れたの一言が、世界を楽にしたんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "不便の声は、発明の種なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ずんだもんも、なにか不便、見つけた？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……レジ前でスマホを探す時間が、もったいないのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "それは自分で解決して。"
+      - speaker: zundamon
+        emotion: normal
+        text: "皆さんの近くの、疲れたの一言も、たぶん発明の種なのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "気づいた人が、次の発明家なのだ！"
+        telops:
+          - {text: "不便は、発明の種", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、あなたの見つけた不便も教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi

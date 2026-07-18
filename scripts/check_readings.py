@@ -220,7 +220,7 @@ def main(slug: str) -> int:
 
     def norm_kana(s: str) -> str:
         """canon + ー を直前の母音へ展開 + ヲ→オ（VOICEVOXモーラ表記に寄せる）。"""
-        s = canon(s).replace("ヲ", "オ")
+        s = canon(s).replace("ヲ", "オ").replace("ヅ", "ズ").replace("ヂ", "ジ")
         out = []
         for ch in s:
             if ch == "ー" and out:
