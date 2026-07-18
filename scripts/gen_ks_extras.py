@@ -347,7 +347,7 @@ def draw_now(d, t):
                        fill=(150, 158, 170), outline=(96, 104, 116))
     if t >= NW_P[2]:
         b = ease((t - NW_P[2]) / 0.6)
-        ctext(d, 1000, 790, "うろこ板は、開発当時とほぼ同じ形", font(44),
+        ctext(d, 970, 790, "うろこ板は、当時とほぼ同じ形", font(42),
               tuple(int(AMBER[i] * b) for i in range(3)))
     if t >= NW_P[3]:
         b = ease((t - NW_P[3]) / 0.6)

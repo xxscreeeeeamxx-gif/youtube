@@ -1,0 +1,1 @@
+店の少年|short|none||v2

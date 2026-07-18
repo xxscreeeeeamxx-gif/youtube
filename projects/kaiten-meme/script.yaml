@@ -1,0 +1,1536 @@
+# 回転寿司再現ドラマ（白石義明・誕生1913→現代）。投稿前に必ず目視レビュー。
+# 裏取りはビルダーdocstring参照（Wikipedia/元禄寿司公式/リクナビNEXT/J-Net21/イノベーション100選）
+meta:
+  title: "皿を回した男。人手不足の寿司屋がビール工場で見つけた答え【回転寿司誕生・再現ドラマ・ミーム版】"
+  slug: "kaiten-meme"
+  summary: "回転寿司を発明した白石義明の物語。愛媛の板前が34歳で大阪へ。ツケ地獄の小料理屋、商売敵に頭を下げて覚えた握り、1皿20円の立ち食い寿司、そして人手不足。ビール工場のベルトコンベアに「これや！」とひらめき、町工場と夜な夜な10年。トランプの扇から生まれたうろこ板、毎秒8センチの計算、人工衛星廻る寿司、万博の大行列から機械遺産まで、ずんだもんが白石義明を演じる再現ドラマでお届けします。"
+  tags: ["回転寿司", "白石義明", "元禄寿司", "再現ドラマ", "ゆっくり", "ずんだもん", "伝記"]
+  thumbnail:
+    top: "皿を回した男"
+    bottom: "毎秒8センチの発明"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: oyakata, label: "親方", voice: 42, item: mustache}
+    - {id: tonari, label: "隣の寿司屋", voice: 13, pitch: -0.06, item: mustache}
+    - {id: deshi, label: "店の少年", voice: 12, hair: short}
+    - {id: wakamono_k, label: "客の若者", voice: 12, pitch: 0.03, hair: short}
+    - {id: okyaku, label: "客", voice: 8, pitch: 0.04, hair: bun}
+    - {id: shacho, label: "町工場の社長", voice: 13, pitch: -0.09, item: mustache}
+    - {id: nakama, label: "見学仲間", voice: 13, pitch: 0.02, hair: short}
+    - {id: gaikoku, label: "外国のお客", voice: 13, pitch: 0.05, item: hat}
+    - {id: kisha, label: "記者", voice: 13, pitch: -0.02, item: hat}
+    - {id: kodomo_k, label: "子ども", voice: 12, pitch: 0.1, hair: short}
+scenes:
+  - id: hook
+    title: ""
+    background: il_ks_gendai
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "回転寿司に来た！今日は10皿チャレンジ、優勝しにきたぞ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "宣言はいいけど、もう6皿目だよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "回ってるお寿司、ぜんぶSSRに見えるんだよね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ、お店の狙いどおりだね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "サーモン、はまち、たまご……あっ、またサーモンだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "サーモン3皿目じゃない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "目の前を通ると取っちゃう。これは沼。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……お皿の塔が、視界を超えた件について。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい、10皿。有言実行だね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ところで、なんでお寿司は回ってるんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お、いい質問。このレーン、誰が作ったか知ってる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……寿司ロボットの祖先？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "愛媛から出てきた、寿司屋のおじさん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "おじさん！？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ビール工場を見て、ひらめいたんだって。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ビールとお寿司、つながらないんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "つながるんだなあ、これが。今日はその話。"
+      - speaker: zundamon
+        emotion: happy
+        text: "10皿目を食べながら聞くぞ！"
+      - speaker: reimu
+        text: "回転寿司。いまや日本中の週末の定番です。"
+        reading: "かいてんずし。いまやにほんじゅうのしゅうまつのていばんです。"
+      - speaker: reimu
+        text: "この仕組みを発明したのは、白石義明という寿司屋の主人でした。"
+        reading: "このしくみをはつめいしたのわ、しらいしよしあきというすしやのしゅじんでした。"
+      - speaker: reimu
+        text: "物語は、1913年の愛媛から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくじゅうさんねんのえひめからはじまります。"
+  - id: era1913
+    title: "1913・海の町から"
+    background: il_ks_ehime
+    bgm: natsuyasumi
+    stage:
+      - {who: zundamon, x: 0.15, tag: "白石", flip: true, scale: 0.8}
+    cuts:
+      - speaker: reimu
+        text: "1913年、愛媛。"
+        reading: "せんきゅうひゃくじゅうさんねん、えひめ。"
+        video: assets/clips/era_k1913.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: ehime
+    title: ""
+    background: il_ks_ehime
+    bgm: natsuyasumi
+    stage:
+      - {who: zundamon, x: 0.26, tag: "白石", flip: true, scale: 0.8}
+      - {who: oyakata, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "白石義明は、海と山の近い町に生まれました。"
+        reading: "しらいしよしあきわ、うみとやまのちかいまちにうまれました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "海の魚も、山のみかんも、うまいぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "食べるのが好きなら、作るのも好きになるんだ。"
+      - speaker: reimu
+        text: "やがて白石は、料理の道へ進みます。"
+        reading: "やがてしらいしわ、りょうりのみちえすすみます。"
+      - speaker: oyakata
+        text: "義明、包丁は毎日研げ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "りょうかいだぞ！"
+      - speaker: oyakata
+        text: "研ぎが甘いと、味も甘くなるぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……味は甘いほうがよくないのだ？"
+      - speaker: oyakata
+        text: "そういう甘いじゃないわ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "親方スパルタで草。でも、覚えるんだ。"
+      - speaker: reimu
+        text: "板前としての修業の日々が続きました。"
+        reading: "いたまえとしてのしゅぎょうのひびがつづきました。"
+      - speaker: oyakata
+        text: "義明、お前は手が早いな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "お客さんを待たせるのが、嫌いだ。"
+      - speaker: oyakata
+        text: "ほう。料理人の才能だ、それは。"
+      - speaker: zundamon
+        emotion: happy
+        text: "待たせない料理人に、なるのだ！"
+      - speaker: reimu
+        text: "皿洗いから焼き場、煮物まで。修業は続きます。"
+        reading: "さらあらいからやきば、にものまで。しゅぎょうわつづきます。"
+      - speaker: oyakata
+        text: "義明、賄い当番や。"
+      - speaker: zundamon
+        emotion: happy
+        text: "任せるのだ。余り物で一品つくるんだ。"
+      - speaker: oyakata
+        text: "……うまいな。余り物とは思えん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "安いもので喜ばせるのが、腕なんだ。"
+      - speaker: oyakata
+        text: "その考え、忘れるなよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "忘れないのだ。安くて、うまいが一番だ。"
+  - id: era1947
+    title: "1947・34歳の再出発"
+    background: il_ks_eki
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.15, tag: "白石", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1947年、大阪。"
+        reading: "せんきゅうひゃくよんじゅうななねん、おおさか。"
+        video: assets/clips/era_k1947.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: osaka
+    title: ""
+    background: il_ks_eki
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "戦争が終わって2年。白石は34歳で、愛媛から大阪に出てきました。"
+        reading: "せんそうがおわってにねん。しらいしわさんじゅうよんさいで、えひめからおおさかにでてきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "着いた。ここが大阪、食のラスボスの城なんだわ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "すごい人ね。みんな早足。"
+      - speaker: zundamon
+        emotion: happy
+        text: "食いだおれの街。腕試しには最高だろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お店、どこに構えるの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "布施なのだ。駅前で、人通りがあるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ねえ、あっちの通り、屋台がずらっと並んでる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うどんに、おでんに、天ぷら……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "みんな、食べることに必死なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "衣食住の食が、いちばん先ね。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "貯金、ほとんど無くなるけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "板前の腕は、戦争でも焼けなかったぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "腕一本で、やり直すのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ふふ。じゃあ、ついていくよ。"
+      - speaker: reimu
+        text: "夫婦の再出発でした。"
+        reading: "ふうふのさいしゅっぱつでした。"
+        pause_after: 0.5
+  - id: genroku
+    title: ""
+    background: il_ks_koryori
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "布施の駅前に、小さな料理店を開きます。"
+        reading: "ふせのえきまえに、ちいさなりょうりてんをひらきます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お店の名前、決めた？"
+      - speaker: zundamon
+        emotion: normal
+        text: "元禄、なんだわ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "げんろく？時代劇の？"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちの家系図は、元禄時代から続いてるんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あら、由緒正しい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それにな、元は「入る」、禄は「カネ」だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "カネが入る。実質[勝ち確|かちかく]の名前だろ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "発想が商売人すぎる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "大阪でやっていくには、これくらいでいいんだ。"
+      - speaker: reimu
+        text: "開店初日。"
+        reading: "かいてんしょにち。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "のれんを出すのだ。……お客さん、来るのだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "さっそく1人目。いらっしゃいませ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "煮付けに、だし巻きに、なんでも作るんだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "大将、張り切りすぎ。"
+      - speaker: reimu
+        text: "小料理屋、元禄。のちの世界企業の一号店です。"
+        reading: "こりょうりや、げんろく。のちのせかいきぎょうのいちごうてんです。"
+  - id: tsuke
+    title: ""
+    background: il_ks_koryori
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.22, tag: "白石", flip: true}
+      - {who: wakamono_k, x: 0.56}
+      - {who: tsumugi, x: 0.88, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "しかし、商売は甘くありませんでした。"
+        reading: "しかし、しょうばいわあまくありませんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今月の売り上げ、帳面の上では好調なんだわ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "帳面の上では、ね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……現金が、ぜんぜん無いんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "みんな「ツケで頼むわ」って帰るからね。"
+      - speaker: wakamono_k
+        text: "大将、うまかったわ。ツケといて！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ま、待つのだ！先月のぶんもまだ……行ってしまったぞ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ツケ、ツケ、またツケ。はい、詰んだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "戦後はどこも、お金がないのよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "気持ちは分かるのだ。でも、うちも仕入れができないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "このままだと、お店が持たないよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……現金で、気軽に払える商売に変えるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安くて、早くて、うまいものだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そんな都合のいい料理、ある？"
+      - speaker: zundamon
+        emotion: normal
+        text: "あるのだ。……寿司なのだ。"
+  - id: shugyo2
+    title: "商売敵に頭を下げる"
+    background: il_ks_koryori
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tonari, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "白石は板前でしたが、寿司は専門外でした。"
+        reading: "しらいしわいたまえでしたが、すしわせんもんがいでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……頼みがあるんだ。"
+      - speaker: tonari
+        text: "おう、元禄の大将。どうした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "握りの仕事を、教えてほしいんだ。"
+      - speaker: tonari
+        text: "……あんた、それ、商売敵に言うことか？"
+      - speaker: zundamon
+        emotion: normal
+        text: "承知の上なのだ。この通りなのだ。"
+      - speaker: tonari
+        text: "頭を上げてくれや。"
+      - speaker: zundamon
+        emotion: normal
+        text: "寿司を、庶民の食べ物に戻したいぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "気取らない値段で、腹いっぱい食わせたいんだ。"
+      - speaker: tonari
+        text: "……ええ心意気や。ほな、教えたる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "いいのだ！？"
+      - speaker: tonari
+        text: "戦後は助け合いや。その代わり、握りは厳しくいくで。"
+      - speaker: zundamon
+        emotion: happy
+        text: "望むところなのだ！"
+      - speaker: reimu
+        text: "商売敵が、師匠になりました。"
+        reading: "しょうばいがたきが、ししょうになりました。"
+      - speaker: tonari
+        text: "シャリは強く握ったらあかん。ふわっとや。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ふわっと……むずかしいぞ。"
+      - speaker: tonari
+        text: "ネタは手の温度で変わる。もたもたすな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "早いのは、得意なんだ！"
+      - speaker: tonari
+        text: "あかん、シャリが硬い。握り直しや。"
+      - speaker: zundamon
+        emotion: sad
+        text: "80回目のやり直し。苦行周回なんだが……。"
+      - speaker: tonari
+        text: "80回で[音|ね]を上げるな。わしは3年かかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "3年ぶんを3か月でクリアする。RTAだ。"
+      - speaker: tonari
+        text: "言うたな。ほな夜も特訓や。"
+      - speaker: zundamon
+        emotion: happy
+        text: "望むところなのだ！"
+      - speaker: reimu
+        text: "昼は店、夜は特訓の日々が続きました。"
+        reading: "ひるわみせ、よるわとっくんのひびがつづきました。"
+      - speaker: tonari
+        text: "……ほんまに早いな。筋がええわ。"
+      - speaker: reimu
+        text: "こうして元禄は、寿司の店になりました。"
+        reading: "こうしてげんろくわ、すしのみせになりました。"
+  - id: tachigui
+    title: ""
+    background: il_ks_tachigui
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.2, tag: "白石", flip: true}
+      - {who: wakamono_k, x: 0.56}
+      - {who: tsumugi, x: 0.88, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "元禄の寿司は、1皿4貫で20円。立ち食いの気軽さでした。"
+        reading: "げんろくのすしわ、ひとさらよんかんでにじゅうえん。たちぐいのきがるさでした。"
+      - speaker: wakamono_k
+        text: "大将、4貫で20円ってほんまか！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "ほんまなのだ。どんどん食べるんだ。"
+      - speaker: wakamono_k
+        text: "寿司なんて、祝い事の食べもんやと思ってた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "寿司は、腹が減った人のものだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい、お茶どうぞ。"
+      - speaker: wakamono_k
+        text: "うまい！もう1皿！"
+      - speaker: zundamon
+        emotion: happy
+        text: "きたきたきた！"
+      - speaker: wakamono_k
+        text: "せやけど大将、この値段で儲かるんか？"
+      - speaker: zundamon
+        emotion: normal
+        text: "立ち食いだから、席がすぐ空くんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安くても、たくさん売れば成り立つのだ。"
+      - speaker: wakamono_k
+        text: "ほー、考えとるなあ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "薄利多売。商売の基本なのだ。"
+      - speaker: reimu
+        text: "集団就職で大阪に来た若者たちが、毎日詰めかけました。"
+        reading: "しゅうだんしゅうしょくでおおさかにきたわかものたちが、まいにちつめかけました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日も満員。ありがたいねえ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "腕がちぎれそうなのだ。でも、うれしい悲鳴だ。"
+      - speaker: wakamono_k
+        text: "大将、こっちにも1皿！"
+      - speaker: zundamon
+        emotion: happy
+        text: "いま行くぞ！"
+  - id: hitode
+    title: ""
+    background: il_ks_tachigui
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.22, tag: "白石", flip: true}
+      - {who: deshi, x: 0.6}
+      - {who: tsumugi, x: 0.88, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "繁盛には、悩みがついてきました。"
+        reading: "はんじょうにわ、なやみがついてきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新入りくん、皿運びを頼むんだ。"
+      - speaker: deshi
+        text: "はい！……あの、大将。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうした？"
+      - speaker: deshi
+        text: "僕、今月で辞めます。実家に帰ります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "はやすぎん！？先月来たばかりだが！？"
+      - speaker: reimu
+        text: "人手不足の時代。若い店員は、なかなか居つきませんでした。"
+        reading: "ひとでぶそくのじだい。わかいてんいんわ、なかなかいつきませんでした。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "また求人の貼り紙、書き直しね。"
+      - speaker: reimu
+        text: "1か月後。"
+        reading: "いっかげつご。"
+      - speaker: zundamon
+        emotion: happy
+        text: "新しい新入りくん、今日からよろしくだ。"
+      - speaker: deshi
+        text: "はい！頑張ります！"
+      - speaker: reimu
+        text: "2週間後。"
+        reading: "にしゅうかんご。"
+      - speaker: deshi
+        text: "大将、僕、故郷の工場に決まりまして……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "もっとはやいんだが！？"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "時代ね。若い子は引っ張りだこ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "育てても育てても、辞めていくのだ……。"
+  - id: timeloss
+    title: "人手が、足りない"
+    background: il_ks_tachigui
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.2, tag: "白石", flip: true}
+      - {who: wakamono_k, x: 0.58}
+      - {who: tsumugi, x: 0.88, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "そして店には、もうひとつのロスがありました。"
+        reading: "そしてみせにわ、もうひとつのろすがありました。"
+      - speaker: wakamono_k
+        text: "大将ー！端の席にも1皿くれー！"
+      - speaker: zundamon
+        emotion: normal
+        text: "いま届けるのだ！……よいしょ、よいしょ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……戻ってくるだけで、ひと仕事だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その往復の間に、2貫は握れるよね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "そう。手渡しの時間、タイパ最悪なのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "握りたいのに、運んでばかりなんだわ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "誰か運ぶ係がいれば……でも、その人が来ないのよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人がだめなら……何か、別の方法があるはずなんだ。"
+  - id: beer
+    title: "これや！"
+    background: il_ks_beer
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.22, tag: "白石", flip: true}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "そんなある日。白石は仲間と、ビール工場の見学に出かけます。"
+        reading: "そんなあるひ。しらいしわなかまと、びーるこうじょうのけんがくにでかけます。"
+      - speaker: nakama
+        text: "白石はん、たまには息抜きやで。"
+      - speaker: zundamon
+        emotion: happy
+        text: "商売を忘れてビール。ととのうぞ。"
+      - speaker: nakama
+        text: "顔に「人手不足」て書いてあるで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "書いてないのだ。……書いてあるかもだ。"
+      - speaker: nakama
+        text: "今日は忘れい。ほれ、工場の中や。"
+      - speaker: nakama
+        text: "見てみい、瓶がずらーっと流れとる。"
+      - speaker: reimu
+        text: "ベルトコンベアの上を、ビール瓶が行進していました。"
+        reading: "べるとこんべあのうえを、びーるびんがこうしんしていました。"
+        video: assets/clips/km_beerline.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "……瓶が、勝手に動いてるんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "人が運ばないのに、次々に届くのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "人が、運ばないのに……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "…………これや！！"
+        se: don
+      - speaker: nakama
+        text: "ど、どうした白石はん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "寿司を、この上に乗せるんだ！"
+      - speaker: nakama
+        text: "……はあ！？寿司を！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "皿がお客の前を流れれば、誰も運ばなくていいぞ！"
+      - speaker: nakama
+        text: "工場とちゃうんやで。寿司屋やで。"
+      - speaker: zundamon
+        emotion: happy
+        text: "寿司屋を、工場にするのだ！"
+      - speaker: nakama
+        text: "……あんた、おもろいこと考えるなあ。"
+      - speaker: reimu
+        text: "ビール瓶の行進が、回転寿司の始まりでした。"
+        reading: "びーるびんのこうしんが、かいてんずしのはじまりでした。"
+  - id: kaihatsu
+    title: ""
+    background: il_ks_machikoba
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: shacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "白石は、近所の町工場に相談を持ち込みました。"
+        reading: "しらいしわ、きんじょのまちこうじょうにそうだんをもちこみました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "社長、寿司を回したいんだ。"
+      - speaker: shacho
+        text: "……もういっぺん言うてくれ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "寿司の皿を、コンベアでお客の前に流したいぞ。"
+      - speaker: shacho
+        text: "ハッハッハ！なんやそれ、聞いたことないわ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰もやってないから、やるのだ。"
+      - speaker: shacho
+        text: "……おもろい。乗った。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "いいんだが！？"
+      - speaker: shacho
+        text: "おもろいことに乗るのが、町工場や。"
+      - speaker: reimu
+        text: "夜、店を閉めてからが開発の時間でした。"
+        reading: "よる、みせをしめてからがかいはつのじかんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今夜も、よろしくな。"
+      - speaker: shacho
+        text: "一升瓶も連れてきたか。話が早いな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "飲みながら考えると、ええ案が出るのだ。"
+      - speaker: shacho
+        text: "まず、皿を安定して運ぶ台や。素材から決めよか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "水と酢に強くないと、だめだ。"
+      - speaker: shacho
+        text: "錆びたら食いもん屋は終わりやからな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "この金具は、1週間でだめになったんだ。"
+      - speaker: shacho
+        text: "酢に負けとるな。次はこっちの板や。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "お酢と水と醤油。寿司屋は金属の敵だらけなんだ。"
+      - speaker: shacho
+        text: "敵が多いほど、燃えるやろ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "社長も大概おもろい人。有能なんだわ。"
+      - speaker: reimu
+        text: "錆びない素材探しから、試行錯誤が始まりました。"
+        reading: "さびないそざいさがしから、しこうさくごがはじまりました。"
+  - id: curve
+    title: "曲がれない"
+    background: il_ks_machikoba
+    bgm: mystery
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: shacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "最大の壁は、曲がり角でした。"
+        reading: "さいだいのかべわ、まがりかどでした。"
+      - speaker: shacho
+        text: "白石はん、直線はもう完璧や。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "問題は、カーブだ。"
+      - speaker: reimu
+        text: "まっすぐ進む台は作れても、角で皿が渋滞しました。"
+        reading: "まっすぐすすむだいわつくれても、かどでさらがじゅうたいしました。"
+        video: assets/clips/km_curve.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "また角で皿が詰まった。草も生えない。"
+      - speaker: shacho
+        text: "角のたびに皿が喧嘩しよる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "店のカウンターは四角いのだ。曲がれないと使えないんだ。"
+      - speaker: shacho
+        text: "板を四角いまま並べとる限り、無理やで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "曲がるための、板の形があるはずなのだ……。"
+      - speaker: reimu
+        text: "夜ごとの実験は、失敗が続きます。"
+        reading: "よごとのじっけんわ、しっぱいがつづきます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "角を丸く削ってみたのだ。……皿が落ちたぞ。"
+      - speaker: shacho
+        text: "板と板の間に、隙間ができるからや。"
+      - speaker: zundamon
+        emotion: sad
+        text: "じゃあ隙間を埋めると……今度は曲がらないんだ。"
+      - speaker: shacho
+        text: "曲がると隙間、両立せえへんのか……。"
+      - speaker: zundamon
+        emotion: sad
+        text: "今夜もだめだった。HPゼロなんだわ……。"
+      - speaker: shacho
+        text: "まあ飲め。知恵は明日も湧く。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……あと1年やっても解けない気がする。無理ゲーか？"
+      - speaker: shacho
+        text: "弱音は一升瓶に吸わせとけ。"
+  - id: trump
+    title: "扇のひらめき"
+    background: il_ks_machikoba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: shacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "ひらめきは、手の中にありました。"
+        reading: "ひらめきわ、てのなかにありました。"
+      - speaker: shacho
+        text: "休憩や休憩。一局やるか、トランプ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "負けないのだ。……配るんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "…………ん？"
+      - speaker: shacho
+        text: "どうした、手が止まっとるで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "いま、トランプを扇に広げたぞ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1枚1枚は四角いのに、全体は曲がってるんだ。"
+      - speaker: shacho
+        text: "……おい、それや！"
+      - speaker: zundamon
+        emotion: happy
+        text: "板を扇の形にして重ねれば、カーブを曲がれるのだ！"
+        se: don
+      - speaker: reimu
+        text: "扇形の板を、うろこのように重ねて連ねる。"
+        reading: "おうぎがたのいたを、うろこのようにかさねてつらねる。"
+        video: assets/clips/km_fan.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "直線では、まっすぐ並ぶのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "カーブでは、扇の[重|かさ]なりが開いて曲がるんだ！"
+      - speaker: shacho
+        text: "ほんまや……角で開いて、直線で閉じる……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "隙間は扇の重なりの中に、隠れるんだ。"
+      - speaker: shacho
+        text: "皿は上でずっと安定や。ようできとる！"
+      - speaker: zundamon
+        emotion: happy
+        text: "さっそく木で削って試す。[勝ち確|かちかく]の予感がするぞ！"
+      - speaker: shacho
+        text: "夜明けまでに1周、回したるわ。"
+      - speaker: reimu
+        text: "このうろこ状の板は、いまも回転寿司で使われ続けています。"
+        reading: "このうろこじょうのいたわ、いまもかいてんずしでつかわれつづけています。"
+      - speaker: reimu
+        text: "ひらめきの相手は、トランプだったとも、名刺の束だったとも言われます。"
+        reading: "ひらめきのあいてわ、とらんぷだったとも、めいしのたばだったともいわれます。"
+  - id: sokudo
+    title: "毎秒8センチ"
+    background: il_ks_machikoba
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "次の問題は、速さでした。"
+        reading: "つぎのもんだいわ、はやさでした。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "試運転、見に来たよ。……はやっ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "第1案、人の[早歩|はやある]きくらいの速さなんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "お寿司が走り抜けてく。RTAじゃん、取れないって。"
+      - speaker: zundamon
+        emotion: normal
+        text: "では第2案。うんと遅くするぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……こんどは、じれったいねえ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "待つ間に、ネタも乾いてしまうんだ。"
+      - speaker: reimu
+        text: "速すぎれば取れない。遅すぎれば乾く。"
+        reading: "はやすぎればとれない。おそすぎればかわく。"
+        video: assets/clips/km_speed.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: normal
+        text: "取りやすくて、乾かない速さを探すのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "子どもの手でも、取れる速さがいいね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……決めたのだ。毎秒8センチなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "毎秒、8センチ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "皿を目で吟味できて、子どもも手が届くぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そしてネタが乾く前に、一周して戻るんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "おいしさまで計算した速さなんだ。"
+      - speaker: reimu
+        text: "毎秒8センチ。この速さは、いまもほぼ変わっていません。"
+        reading: "まいびょうはっせんち。このはやさわ、いまもほぼかわっていません。"
+  - id: shisaku
+    title: ""
+    background: il_ks_machikoba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: shacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "着想から約10年。実験だけでも4年がたっていました。"
+        reading: "ちゃくそうからやくじゅうねん。じっけんだけでもよねんがたっていました。"
+      - speaker: shacho
+        text: "白石はん。ついに、動くで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……回すんだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "回った……回ったのだ！皿が、店を一周したのだ！"
+      - speaker: shacho
+        text: "長かったなあ。わしらの10年や。"
+      - speaker: zundamon
+        emotion: happy
+        text: "社長、ありがとうだ。"
+      - speaker: shacho
+        text: "礼はまだ早い。客が付いてからや。"
+      - speaker: zundamon
+        emotion: happy
+        text: "客席で誰が最初に取るか、いまから楽しみなんだわ。"
+      - speaker: reimu
+        text: "1957年、試作機が完成しました。"
+        reading: "せんきゅうひゃくごじゅうななねん、しさくきがかんせいしました。"
+  - id: era1958
+    title: "1958・寿司が、回った"
+    background: il_ks_kaiten
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.15, tag: "白石", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1958年、布施。"
+        reading: "せんきゅうひゃくごじゅうはちねん、ふせ。"
+        video: assets/clips/era_k1958.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: zenya
+    title: ""
+    background: il_ks_kaiten
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: shacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "開店前夜。店に、レーンが据え付けられました。"
+        reading: "かいてんぜんや。みせに、れーんがすえつけられました。"
+      - speaker: shacho
+        text: "搬入完了や。回してみ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……動いたのだ。店の中を、レーンが流れてるのだ。"
+      - speaker: shacho
+        text: "感慨にひたるのは早い。皿を乗せて試運転や。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "皿、乗せたのだ。……あっ、角で止まったんだ！"
+      - speaker: shacho
+        text: "締めが甘いとこがあるな。工具や工具。"
+      - speaker: zundamon
+        emotion: normal
+        text: "夜が明けるまでに、直すぞ！"
+      - speaker: reimu
+        text: "深夜の調整が続きます。"
+        reading: "しんやのちょうせいがつづきます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……よし。10周、ノンストップなんだ。"
+      - speaker: shacho
+        text: "ほな大将、明日は初日や。寝とけ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "遠足前かよってくらい、眠れないんだが！"
+      - speaker: reimu
+        text: "店の名前は、廻る元禄寿司と決まりました。"
+        reading: "みせのなまえわ、まわるげんろくずしときまりました。"
+  - id: kaiten_open
+    title: "人工衛星廻る寿司"
+    background: il_ks_kaiten
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.2, tag: "白石", flip: true}
+      - {who: wakamono_k, x: 0.56}
+      - {who: okyaku, x: 0.88}
+    cuts:
+      - speaker: reimu
+        text: "近鉄布施駅の北口に、廻る元禄寿司が開店します。"
+        reading: "きんてつふせえきのきたぐちに、まわるげんろくずしがかいてんします。"
+      - speaker: reimu
+        text: "時代は、人工衛星スプートニクの打ち上げに沸いていました。"
+        reading: "じだいわ、じんこうえいせいすぷーとにくのうちあげにわいていました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "キャッチコピーはこれなのだ。「人工衛星廻る寿司」！"
+      - speaker: wakamono_k
+        text: "なんや衛星て。寿司が飛ぶんか？"
+      - speaker: zundamon
+        emotion: happy
+        text: "飛ばないのだ。回るのだ。入って見るのだ！"
+      - speaker: okyaku
+        text: "……ほんまに回ってるわ！お寿司が！"
+      - speaker: wakamono_k
+        text: "うわ、なんやこれ！おもろ！"
+  - id: kaiten_lane
+    title: ""
+    background: il_ks_kaiten
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.15, tag: "白石", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "皿の列が、お客の前を静かに流れていきました。"
+        reading: "さらのれつが、おきゃくのまえをしずかにながれていきました。"
+        video: assets/clips/km_lane.mp4
+        video_full: true
+  - id: kaiten_open2
+    title: ""
+    background: il_ks_kaiten
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.2, tag: "白石", flip: true}
+      - {who: wakamono_k, x: 0.56}
+      - {who: okyaku, x: 0.88}
+    cuts:
+      - speaker: okyaku
+        text: "好きな皿を、勝手に取ってええの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "どうぞなのだ。取った皿の数で、お会計だ。"
+      - speaker: wakamono_k
+        text: "注文せんでええし、[待|ま]たんでええし……。"
+      - speaker: okyaku
+        text: "見てるだけでも、おもろいわあ。"
+      - speaker: okyaku
+        text: "お会計は、どうしたらええの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "積んだ皿を、数えるだけなんだわ。"
+      - speaker: okyaku
+        text: "明朗会計やわあ。"
+      - speaker: reimu
+        text: "安い、早い。そして大阪の決め手は「おもろい」でした。"
+        reading: "やすい、はやい。そしておおさかのきめてわ「おもろい」でした。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "行列……行列できてて優勝なんだが！"
+      - speaker: wakamono_k
+        text: "大将、これ毎日来るわ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎日来るのだ！回して待ってるのだ！"
+  - id: kodomo
+    title: ""
+    background: il_ks_kaiten
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.22, tag: "白石", flip: true}
+      - {who: okyaku, x: 0.62}
+      - {who: kodomo_k, x: 0.88}
+    cuts:
+      - speaker: reimu
+        text: "回るレーンは、思わぬお客も連れてきました。"
+        reading: "まわるれーんわ、おもわぬおきゃくもつれてきました。"
+      - speaker: okyaku
+        text: "うちの子、寿司屋は初めてなんやけど……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "大丈夫なのだ。見ててほしいぞ。"
+      - speaker: kodomo_k
+        text: "あっ、たまごが来た！……取れた！"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎秒8センチは、子どもの手の速さなんだわ。"
+      - speaker: okyaku
+        text: "自分で取れて、嬉しそうやわあ。"
+      - speaker: kodomo_k
+        text: "母ちゃん、寿司屋って遊園地みたいやな！"
+      - speaker: zundamon
+        emotion: happy
+        text: "家族で来られる寿司屋。それがやりたかったんだ。"
+      - speaker: reimu
+        text: "敷居の高かった寿司が、家族の外食になっていきます。"
+        reading: "しきいのたかかったすしが、かぞくのがいしょくになっていきます。"
+  - id: oiwai
+    title: ""
+    background: il_ks_koryori
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: tsumugi
+        emotion: happy
+        text: "初日、完売だったね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "皿が回って、客が回って、目も回ったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "10年かけた甲斐、あったね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "半分は、社長と工場のおかげだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "残りの半分は？"
+      - speaker: zundamon
+        emotion: normal
+        text: "ツケで苦しんだ日々なんだわ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……あの頃があって、今日があるか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "困りごとは、発明の材料なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい、今夜は祝杯。"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日も回すのだ！"
+  - id: dotonbori
+    title: ""
+    background: il_ks_dotonbori
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.22, tag: "白石", flip: true}
+      - {who: wakamono_k, x: 0.56}
+      - {who: tsumugi, x: 0.88, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "評判は、ミナミの繁華街へ広がります。"
+        reading: "ひょうばんわ、みなみのはんかがいえひろがります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "道頓堀に、2号店を出したぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "芝居帰りのお客さんで、いっぱいだね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "芸人さんも、ひいきにしてくれてるんだ。"
+      - speaker: wakamono_k
+        text: "あっ、あの人、舞台で見た顔や！"
+      - speaker: zundamon
+        emotion: normal
+        text: "しーっ、なのだ。ゆっくり食べてもらうんだ。"
+      - speaker: wakamono_k
+        text: "有名人と同じ店で食えるんか。ええなあ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "有名人が来ると、また人が来る。"
+      - speaker: zundamon
+        emotion: happy
+        text: "回る寿司、いよいよ覇権とってきたんだが。"
+      - speaker: reimu
+        text: "映画や芝居の帰りに回転寿司へ。若者の定番コースになりました。"
+        reading: "えいがやしばいのかえりにかいてんずしえ。わかもののていばんこーすになりました。"
+      - speaker: reimu
+        text: "1962年。回る食事台は「コンベヤ附調理食台」として実用新案に登録されます。"
+        reading: "せんきゅうひゃくろくじゅうにねん。まわるしょくじだいわ「こんべやつきちょうりしょくだい」としてじつようしんあんにとうろくされます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これでこの仕組みは、うちの発明として守られるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "10年の苦労の、証明書だね。"
+  - id: era1970
+    title: "1970・万博の行列"
+    background: il_ks_banpaku
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "白石", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1970年、大阪万博。"
+        reading: "せんきゅうひゃくななじゅうねん、おおさかばんぱく。"
+        video: assets/clips/era_k1970.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: banpaku
+    title: "1970・万博の行列"
+    background: il_ks_banpaku
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.2, tag: "白石", flip: true}
+      - {who: gaikoku, x: 0.6}
+      - {who: tsumugi, x: 0.88, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "元禄寿司は、万博会場に出店しました。"
+        reading: "げんろくずしわ、ばんぱくかいじょうにしゅってんしました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "モノレール西口駅前。SSR立地なのだ！"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "開場と同時に、もう行列よ。"
+  - id: banpaku_clip
+    title: ""
+    background: il_ks_banpaku
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "白石", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "連日の大行列。世界中の来場者が、回る寿司に驚きました。"
+        reading: "れんじつのだいぎょうれつ。せかいじゅうのらいじょうしゃが、まわるすしにおどろきました。"
+        video: assets/clips/km_expo.mp4
+        video_full: true
+  - id: banpaku2
+    title: ""
+    background: il_ks_banpaku
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.2, tag: "白石", flip: true}
+      - {who: gaikoku, x: 0.6}
+      - {who: tsumugi, x: 0.88, tag: "女将"}
+    cuts:
+      - speaker: gaikoku
+        text: "オー……スシガ、マワッテイマス！"
+      - speaker: zundamon
+        emotion: happy
+        text: "どうぞなのだ。好きな皿を取るんだ。"
+      - speaker: gaikoku
+        text: "ワンダフル！コレハ、タノシイ発明デス！"
+      - speaker: zundamon
+        emotion: happy
+        text: "楽しいは、世界共通なのだ！"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "行列、通路の先まで伸びてるよ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "レーンは休まず回すのだ！皿を切らすなよ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "今日も店じまいは午前0時ね……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "帰って寝て、また回すのだ！"
+      - speaker: reimu
+        text: "1970年は、外食産業元年とも呼ばれます。"
+        reading: "せんきゅうひゃくななじゅうねんわ、がいしょくさんぎょうがんねんともよばれます。"
+      - speaker: reimu
+        text: "新しい外食が次々に生まれた、その最前列に回る寿司がいました。"
+        reading: "あたらしいがいしょくがつぎつぎにうまれた、そのさいぜんれつにまわるすしがいました。"
+      - speaker: reimu
+        text: "万博のあと、全国から問い合わせが殺到します。"
+        reading: "ばんぱくのあと、ぜんこくからといあわせがさっとうします。"
+  - id: toiawase
+    title: ""
+    background: il_ks_koryori
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: kisha, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "店には、取材と商談が押し寄せました。"
+        reading: "みせにわ、しゅざいとしょうだんがおしよせました。"
+      - speaker: kisha
+        text: "白石さん、回る寿司の発明のコツは何ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "困りごとを、面白がることだ。"
+      - speaker: kisha
+        text: "面白がる、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人手不足は困りごとなのだ。でも、皿が回る店はおもろいんだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "困りごとをおもろいで包むと、発明になるのだ。"
+      - speaker: kisha
+        text: "……いい言葉です。いただきます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "お寿司も食べていくんだ。"
+      - speaker: reimu
+        text: "うちの街にも欲しい。そんな声に応えて、店は増えていきます。"
+        reading: "うちのまちにもほしい。そんなこえにこたえて、みせわふえていきます。"
+      - speaker: reimu
+        text: "ピーク時にはおよそ250店。回転寿司はチェーンになりました。"
+        reading: "ぴーくじにわおよそにひゃくごじゅってん。かいてんずしわちぇーんになりました。"
+  - id: era1978
+    title: "1978・回転寿司、解禁"
+    background: il_ks_gendai
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "白石", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1978年。"
+        reading: "せんきゅうひゃくななじゅうはちねん。"
+        video: assets/clips/era_k1978.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: kaikin
+    title: ""
+    background: il_ks_gendai
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "登録から16年。実用新案の権利が、期限を迎えました。"
+        reading: "とうろくからじゅうろくねん。じつようしんあんのけんりが、きげんをむかえました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これからは、どこのお店でも寿司を回せるのね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうなのだ。回転寿司が、うちだけの看板じゃなくなるぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "悔しくない？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ちょっとは悔しい。それはそう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、回る寿司が当たり前になるなら、それは勝ちなんだわ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "文化になる、ってことだもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、負ける気はしない。元祖はノーダメだが？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、言うね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "10年の蓄積と、元祖の看板。格が違うのだ。"
+      - speaker: reimu
+        text: "この年から、回転寿司の看板が全国に一気に増えていきます。"
+        reading: "このとしから、かいてんずしのかんばんがぜんこくにいっきにふえていきます。"
+        video: assets/clips/km_spread.mp4
+        video_span: 3
+        video_full: true
+      - speaker: zundamon
+        emotion: happy
+        text: "どの街でも、寿司が回ってるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あなたの「これや！」が、[日本中|にほんじゅう]の日常になったね。"
+  - id: yasusa
+    title: "なぜ安くできるのか"
+    background: il_ks_gendai
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "ところで、回転寿司はなぜ安くできるのか。"
+        reading: "ところで、かいてんずしわなぜやすくできるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "白石さんの仕組みに、答えが詰まってるのよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まず、皿を運ぶ人がいらないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "レーンが店員さんの代わりだもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "注文を聞いて回る時間も、いらないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "目の前の皿を、取るだけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "職人は握りに集中できて、席の回転も速いんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "浮いた手間のぶん、値段を下げられる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "立ち食い時代の薄利多売が、レーンで完成したぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "困りごとの解決が、そのまま商売の強さなんだね。"
+  - id: gendai
+    title: "そして現代へ"
+    background: il_ks_gendai
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。"
+        reading: "ときわながれて、げんだい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまの回転寿司、進化がすごいのよ。"
+      - speaker: reimu
+        text: "タッチパネルで注文。特急レーンが皿を直送します。"
+        reading: "たっちぱねるでちゅうもん。とっきゅうれーんがさらをちょくそうします。"
+        video: assets/clips/km_now.mp4
+        video_span: 4
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "画面押すと寿司が新幹線で来るんだが！？未来すぎん？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "皿の枚数も、機械が自動で数えるのよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "未来すぎて、もう2100年まである……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもね、足元のレーンを見て。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……うろこ形の板が、回ってるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。あの[扇形|おうぎがた]の板、60年以上ほぼそのまま。"
+      - speaker: zundamon
+        emotion: happy
+        text: "町工場の夜なべが、まだ現役なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "回らないで注文だけのお店も増えたけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "形は変わっても、席まで皿が来る仕組みは同じなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "全部、あのレーンの子孫ってことか。"
+      - speaker: reimu
+        text: "2021年。元禄の回転寿司システムは、機械遺産に認定されました。"
+        reading: "にせんにじゅういちねん。げんろくのかいてんずしシステムわ、きかいいさんににんていされました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "発明品として、歴史に残ったんだね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "トランプと一升瓶の発明が、遺産なのだ。"
+      - speaker: reimu
+        text: "創業の店はいまも、家族が受け継いでいます。"
+        reading: "そうぎょうのみせわいまも、かぞくがうけついでいます。"
+  - id: sekai_ks
+    title: ""
+    background: il_ks_gendai
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "白石", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "女将"}
+    cuts:
+      - speaker: reimu
+        text: "回る寿司は、海も越えました。"
+        reading: "まわるすしわ、うみもこえました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "海外でも、回転寿司のお店って人気なのよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "万博で外国のお客さんが驚いてた、あの続きだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実演みたいで楽しいのが、言葉の壁を越えるんだね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うまいと、おもろいは、翻訳いらずなのだ。"
+      - speaker: reimu
+        text: "布施の駅前で生まれた仕組みは、世界の寿司の顔になりました。"
+        reading: "ふせのえきまえでうまれたしくみわ、せかいのすしのかおになりました。"
+  - id: bannen
+    title: ""
+    background: il_ks_kaiten
+    bgm: amacha_hoshizora
+    stage:
+      - {who: zundamon, x: 0.2, tag: "白石", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "白石義明は2001年、87歳でその生涯を閉じました。"
+        reading: "しらいしよしあきわにせんいちねん、はちじゅうななさいでそのしょうがいをとじました。"
+        pause_after: 0.6
+      - speaker: reimu
+        text: "残されたのは、世界中で回り続ける皿の列です。"
+        reading: "のこされたのわ、せかいじゅうでまわりつづけるさらのれつです。"
+        pause_after: 0.6
+      - speaker: zundamon
+        emotion: normal
+        text: "……今日も、どこかで回ってるのだ。"
+  - id: musubi
+    title: ""
+    background: il_ks_gendai
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "というわけで、11皿目なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "話の間にも食べてたんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この皿が目の前に来るまでに、100年ぶんの物語があるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ツケ地獄も、ビール工場も、トランプもね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "困りごとと「おもろい」が合体すると、発明になるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの困りごとも、種になるかもよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ボクの困りごとは、お皿が[積|つ]み上がりすぎることなんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "それは食べすぎってだけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次に回転寿司へ行ったら、足元のレーンも見てほしいぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "[扇形|おうぎがた]の板が、60年前の夜なべの答えなのだ！"
+        telops:
+          - {text: "おもろいは、発明の母", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録もよろしくね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、好きな寿司ネタも教えてほしいんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
