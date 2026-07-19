@@ -350,7 +350,6 @@ scenes:
         text: "危険がない。苦しくない。速い。鮮明。この4つが羅針盤でした。"
         reading: "きけんがない。くるしくない。はやい。せんめい。このよっつがらしんばんでした。"
         video: assets/clips/gc_mokuhyou.mp4
-        video_span: 4
         video_full: true
   - id: mokuhyou2
     title: ""
@@ -694,12 +693,27 @@ scenes:
         text: "そして……ここ。坂本先生の、胃潰瘍なのだ。"
       - speaker: sakamoto
         text: "……わしの胃の中が、こんなにはっきり。信じられん。"
+  - id: seikou_clip
+    title: ""
+    background: il_gc_hospital
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.15, tag: "宇治", flip: true}
+    cuts:
       - speaker: reimu
         text: "生きた胃の内側が、世界で初めて鮮明に写った瞬間でした。"
         reading: "いきたいのうちがわが、せかいではじめてせんめいにうつったしゅんかんでした。"
         video: assets/clips/gc_shashin.mp4
-        video_span: 5
         video_full: true
+  - id: seikou2
+    title: ""
+    background: il_gc_hospital
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "宇治", flip: true}
+      - {who: sakamoto, x: 0.56}
+      - {who: tsumugi, x: 0.86, tag: "杉浦"}
+    cuts:
       - speaker: zundamon
         emotion: normal
         text: "お腹を開けなくても、胃の中が見えるのだ……。"
@@ -815,12 +829,26 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "そう。ファイバースコープ。さらに今は、電子の目。"
+  - id: shinka_clip
+    title: ""
+    background: il_gc_gendai
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.15, tag: "宇治", flip: true}
+    cuts:
       - speaker: reimu
         text: "レンズの先はカメラの目になり、胃の中がその場で画面に映ります。"
         reading: "れんずのさきわかめらのめになり、いのなかがそのばでがめんにうつります。"
         video: assets/clips/gc_shinka.mp4
-        video_span: 4
         video_full: true
+  - id: shinka2
+    title: ""
+    background: il_gc_gendai
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "宇治", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "杉浦"}
+    cuts:
       - speaker: zundamon
         emotion: happy
         text: "リアルタイムで、胃の中を旅できるのだ。"

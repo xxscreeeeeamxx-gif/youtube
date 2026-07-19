@@ -53,6 +53,7 @@ MK_P = [0.0, 3.0, 6.0, 9.0, 12.0, 15.0]
 
 
 def draw_mokuhyou(d, t):
+    # 単独シーン（1カット・約6秒）で4項目を出し切る詰めたタイミング
     d.rectangle([0, 0, W, H], fill=DARKBG)
     _caption(d, "胃カメラ・4つの目標")
     goals = [("① 危険がない", GREEN, "体の中に入れる"),
@@ -60,24 +61,24 @@ def draw_mokuhyou(d, t):
              ("③ 速い", AMBER, "胃の中を短時間で"),
              ("④ 鮮明", (230, 130, 200), "病気を見分けられる")]
     for k, (title, col, note) in enumerate(goals):
-        st = MK_P[1] + k * 1.6 - 3.0
+        st = 0.3 + k * 0.75
         if t < st:
             continue
-        y = 300 + k * 128
-        b = ease(min(1.0, (t - st) / 0.5))
+        y = 250 + k * 120
+        b = ease(min(1.0, (t - st) / 0.4))
         x0 = 700
-        d.rounded_rectangle([x0, y, x0 + 600, y + 108], radius=14,
+        d.rounded_rectangle([x0, y, x0 + 600, y + 104], radius=14,
                             outline=tuple(int(col[i] * b) for i in range(3)), width=4)
         cb = tuple(int(col[i] * b) for i in range(3))
         f = font(46)
-        d.text((x0 + 30, y + 28), title, font=f, fill=cb)
+        d.text((x0 + 30, y + 26), title, font=f, fill=cb)
         gb = tuple(int(GRAY[i] * b) for i in range(3))
         fn = font(30)
-        d.text((x0 + 600 - 30 - d.textlength(note, font=fn), y + 40), note,
+        d.text((x0 + 600 - 30 - d.textlength(note, font=fn), y + 38), note,
                font=fn, fill=gb)
-    if t >= MK_P[4]:
-        b = ease((t - MK_P[4]) / 0.6)
-        ctext(d, 1000, 900, "4つ全部そろって、はじめて胃カメラ", font(44),
+    if t >= 3.6:
+        b = ease((t - 3.6) / 0.5)
+        ctext(d, 1000, 820, "4つ全部そろって、はじめて胃カメラ", font(44),
               tuple(int(AMBER[i] * b) for i in range(3)))
 
 
@@ -86,43 +87,29 @@ SH_P = [0.0, 3.0, 6.0, 9.0, 12.0, 15.0]
 
 
 def draw_shashin(d, t):
+    # 単独シーン（約5秒）でクライマックスの「写真が浮かぶ」瞬間を出し切る。
+    # 管の挿入・撮影の過程は直前の会話カットで描写済みなので、ここは現像の像に集中。
     d.rectangle([0, 0, W, H], fill=DARKBG)
-    if t < SH_P[1]:
-        _caption(d, "柔らかい管の先に、超小型カメラと豆電球")
-    elif t < SH_P[3]:
-        _caption(d, "胃の中で、シャッターを切る")
+    if t < 1.0:
+        _caption(d, "暗室で、像が浮かんでくる")
     else:
-        _caption(d, "現像すると……")
-    cx, cy = 1000, 520
-    if t < SH_P[3]:
-        # 管が口から胃へ入る断面図
-        _tube(d, [(760, 200), (860, 340), (940, 460), (1000, 560)], w=24)
-        _stomach(d, cx, cy + 40, s=1.0, lesion=(t >= SH_P[2]))
-        # 先端のカメラ+電球
-        d.ellipse([cx - 30, cy + 10, cx + 30, cy + 70], fill=(60, 66, 78))
-        d.ellipse([cx - 12, cy + 28, cx + 12, cy + 52], fill=(150, 200, 220))
-        if int(t * 3) % 2 == 0 and t >= SH_P[1]:
-            d.ellipse([cx - 60, cy - 20, cx + 80, cy + 120], outline=(255, 240, 180),
-                      width=4)
-        if t >= SH_P[1] and (t - SH_P[1]) % 1.5 < 0.15:
-            d.rectangle([cx - 180, cy - 140, cx + 200, cy + 220],
-                        fill=(255, 255, 255, 90))
-        if t >= SH_P[2]:
-            n = min(21, int((t - SH_P[2]) / 0.14) + 1)
-            ctext(d, 1000, 880, f"撮影 {n} ／ 21 枚", font(46), AMBER)
-    else:
-        # 写真として胃壁が浮かぶ
-        p = ease(min(1.0, (t - SH_P[3]) / 1.6))
-        d.rounded_rectangle([740, 260, 1260, 760], radius=10,
-                            fill=(int(230 * p), int(230 * p), int(228 * p)))
-        if p > 0.4:
-            _stomach(d, 1000, 500, s=1.1, lesion=True)
-            if t >= SH_P[4]:
-                b = ease((t - SH_P[4]) / 0.6)
-                d.ellipse([1030 - 70, 540 - 70, 1030 + 70, 540 + 70],
-                          outline=tuple(int(RED[i] * b) for i in range(3)), width=6)
-                ctext(d, 1000, 810, "生きた胃が、世界で初めて写った", font(44),
-                      tuple(int(GREEN[i] * b) for i in range(3)))
+        _caption(d, "生きた胃が、世界で初めて鮮明に")
+    # 現像バットに胃壁の写真が浮かび上がる
+    p = ease(min(1.0, t / 1.4))
+    d.rounded_rectangle([740, 240, 1260, 760], radius=10,
+                        fill=(int(228 * p), int(228 * p), int(226 * p)))
+    if p > 0.35:
+        _stomach(d, 1000, 500, s=1.15, lesion=True)
+    if t >= 2.0:
+        b = ease((t - 2.0) / 0.5)
+        d.ellipse([1030 - 74, 545 - 74, 1030 + 74, 545 + 74],
+                  outline=tuple(int(RED[i] * b) for i in range(3)), width=6)
+        ctext(d, 1000, 812, "胃潰瘍まで、くっきりと", font(42),
+              tuple(int(RED[i] * b) for i in range(3)))
+    if t >= 3.4:
+        b = ease((t - 3.4) / 0.5)
+        ctext(d, 1000, 880, "開腹せずに、胃の中を撮った世界初", font(42),
+              tuple(int(GREEN[i] * b) for i in range(3)))
 
 
 # ---------------------------------------------------------------- 3. 現代への進化
@@ -130,32 +117,33 @@ SK_P = [0.0, 3.0, 6.0, 9.0, 12.0, 15.0]
 
 
 def draw_shinka(d, t):
+    # 単独シーン（約5秒）で3段の進化を出し切る。
     d.rectangle([0, 0, W, H], fill=DARKBG)
     _caption(d, "胃カメラの進化")
     steps = [("フィルム式", "撮って、現像して見る", "1950s"),
              ("ファイバースコープ", "その場で覗いて見る", "1960s〜"),
              ("電子内視鏡", "画面にリアルタイム表示", "現代")]
     for k, (name, note, era) in enumerate(steps):
-        st = SK_P[1] + k * 2.4 - 3.0
+        st = 0.3 + k * 1.0
         if t < st:
             continue
-        b = ease(min(1.0, (t - st) / 0.6))
-        y = 320 + k * 180
+        b = ease(min(1.0, (t - st) / 0.4))
+        y = 250 + k * 168
         col = (GRAY, BLUE, GREEN)[k]
-        d.rounded_rectangle([730, y, 1290, y + 140], radius=16,
+        d.rounded_rectangle([700, y, 1300, y + 132], radius=16,
                             outline=tuple(int(col[i] * b) for i in range(3)), width=4)
-        ctext(d, 900, y + 26, name, font(46),
+        ctext(d, 900, y + 24, name, font(46),
               tuple(int(col[i] * b) for i in range(3)))
-        ctext(d, 900, y + 84, note, font(32),
+        ctext(d, 900, y + 80, note, font(32),
               tuple(int(GRAY[i] * b) for i in range(3)))
-        ctext(d, 1200, y + 52, era, font(34),
+        ctext(d, 1190, y + 48, era, font(34),
               tuple(int(AMBER[i] * b) for i in range(3)))
-        if k < 2 and t >= st + 1.8:
-            d.line([1010, y + 140, 1010, y + 180], fill=GRAY, width=6)
-            d.polygon([(994, y + 172), (1026, y + 172), (1010, y + 196)], fill=GRAY)
-    if t >= SK_P[4]:
-        b = ease((t - SK_P[4]) / 0.6)
-        ctext(d, 1000, 940, "胃がんは、早期に見つかれば治せる", font(44),
+        if k < 2 and t >= st + 0.7:
+            d.line([1000, y + 132, 1000, y + 168], fill=GRAY, width=6)
+            d.polygon([(984, y + 160), (1016, y + 160), (1000, y + 184)], fill=GRAY)
+    if t >= 3.6:
+        b = ease((t - 3.6) / 0.5)
+        ctext(d, 1000, 858, "胃がんは、早期に見つかれば治せる", font(42),
               tuple(int(GREEN[i] * b) for i in range(3)))
 
 
