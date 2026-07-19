@@ -128,6 +128,19 @@ scenes:
         text: "でも、お腹を開けたときには……。"
       - speaker: senpai
         text: "手遅れのことも、ある。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "レントゲンは、バリウムの影絵なのだ。"
+      - speaker: senpai
+        text: "でこぼこは分かる。でも、色も、ただれ具合も写らん。"
+      - speaker: zundamon
+        emotion: sad
+        text: "早いがんは、影にすら出ないこともあるのだ。"
+      - speaker: senpai
+        text: "胃鏡も、硬い管を喉の奥まで。えずいて続かない人が多い。"
+      - speaker: zundamon
+        emotion: sad
+        text: "苦しい上に、先の一部しか見えないのだ。"
       - speaker: reimu
         text: "胃の中を、生きたまま見る方法がない。それが当時の壁でした。"
         reading: "いのなかを、いきたままみるほうほうがない。それがとうじのかべでした。"
@@ -208,6 +221,21 @@ scenes:
       - speaker: tsumugi
         emotion: thinking
         text: "理屈の上では、ですよ。作るのは、別の話です。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "問題は、暗いことと、狭いことです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "暗いと、写らないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自前の光を、持たせるしかない。豆電球のようなものを。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "狭いほうは？"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "レンズもフィルムも、指の中に畳み込む。ここが難物です。"
       - speaker: zundamon
         emotion: thinking
         text: "どれくらい、小さくできるのだ？"
@@ -264,6 +292,18 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "何十人、何百人が、助かるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "気持ちは分かります。でも、無理は無理です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "無理を、可能にするのが技師じゃないのだ？"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……そう来ますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "杉浦さんのカメラなら、できると思ったのだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "先生、私はカメラ屋です。医者じゃない。"
@@ -333,12 +373,18 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "長く入れておくほど、苦しいですからね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、光は熱を持つ。強くすれば、胃をやけどさせる。"
       - speaker: zundamon
         emotion: normal
         text: "よっつ。病気を見分けられる、鮮明な写真。"
       - speaker: tsumugi
         emotion: normal
-        text: "ぼやけていたら、意味がない。"
+        text: "ぼやけていたら、意味がない。ピントは指先の中で合わせる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "4つとも、今の技術の一歩先なのだ。"
   - id: mokuhyou_clip
     title: ""
     background: il_gc_lab
@@ -404,6 +450,16 @@ scenes:
         emotion: normal
         text: "まず、管です。硬いと喉を通らない。柔らかいと、中で潰れる。"
       - speaker: fukami
+        text: "硬いゴムは喉で引っかかる。柔らかいと、胃の中でよれる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "細くて、しなやかで、でも潰れない。わがままな注文なのだ。"
+      - speaker: fukami
+        text: "中に細い針金を編み込んで、腰を持たせてみます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先端だけは自在に曲がるように。胃の壁をなめるように撮りたい。"
+      - speaker: fukami
         text: "ゴムを何種類も取り寄せました。曲がって、潰れない太さを探します。"
       - speaker: zundamon
         emotion: surprised
@@ -425,6 +481,49 @@ scenes:
       - speaker: reimu
         text: "医師は体の知識を、技師は機械の腕を持ち寄りました。"
         reading: "いしわからだのちしきを、ぎしわきかいのうでをもちよりました。"
+  - id: lens
+    title: "指先に畳み込む"
+    background: il_gc_workshop
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "宇治", flip: true}
+      - {who: tsumugi, x: 0.56, tag: "杉浦"}
+      - {who: fukami, x: 0.86}
+    cuts:
+      - speaker: reimu
+        text: "指先の中に、レンズとフィルムを畳み込む。難題が続きます。"
+        reading: "ゆびさきのなかに、れんずとふぃるむをたたみこむ。なんだいがつづきます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "レンズは、米粒ほど。手で研いで、光を集めます。"
+      - speaker: fukami
+        text: "0.1ミリずれると、もうぼやける。息を止めて削ります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そんな小さなレンズ、どこにも売ってないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、削るんです。何百枚も。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "フィルムは、どう送るのだ？1枚撮ったら、次を用意しないと。"
+      - speaker: fukami
+        text: "細いワイヤーを、外から手で巻く。歯車で、少しずつ送ります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "胃の中で、1枚撮る、巻く、また撮る。手品みたいな仕掛けです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "撮った枚数を、外から数えるのだ？"
+      - speaker: fukami
+        emotion: normal
+        text: "そうです。手ごたえで、いま何枚目かを覚える。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "職人技のかたまりなのだ……。"
+      - speaker: reimu
+        text: "レンズも、フィルム送りも、手仕事で組み上げていきました。"
+        reading: "れんずも、ふぃるむおくりも、てしごとでくみあげていきました。"
   - id: denkyu
     title: "米粒の光"
     background: il_gc_workshop
@@ -462,6 +561,16 @@ scenes:
         text: "小さすぎる電球は、すぐ切れ、熱を持ちました。"
         reading: "ちいさすぎるでんきゅうわ、すぐきれ、ねつをもちました。"
       - speaker: maruyama
+        text: "太くすれば長持ちする。でも、指に入らない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "細くすると、切れる。堂々めぐりなのだ。"
+      - speaker: maruyama
+        text: "ガラスも、豆粒に吹くと、すぐ割れるんです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ガラス吹きの息づかいまで、直しているそうです。"
+      - speaker: maruyama
         text: "また切れました。……フィラメントが、細すぎて。"
       - speaker: zundamon
         emotion: thinking
@@ -471,6 +580,11 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "でも、光がなければ何も写らないのだ。"
+      - speaker: reimu
+        text: "百回、二百回。数えるのをやめたころ、糸口が見えてきます。"
+        reading: "ひゃっかい、にひゃっかい。かぞえるのをやめたころ、いとぐちがみえてきます。"
+      - speaker: maruyama
+        text: "巻きの数と、ガラスの厚み。ようやく、ちょうどが見えた。"
       - speaker: maruyama
         text: "分かってます。……もう1回、巻き直します。"
       - speaker: reimu
@@ -505,6 +619,18 @@ scenes:
       - speaker: zundamon
         emotion: sad
         text: "光ってるはずなのに、なぜなのだ……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "光が強すぎて、白飛びしているのかもしれません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "弱めると、今度は真っ暗なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "光の強さ、レンズの距離、フィルムの感度。組み合わせが無限です。"
+      - speaker: zundamon
+        emotion: sad
+        text: "何より、胃の中でカメラがどこを向いているか、見えないのだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "レンズと胃壁の距離が、近すぎるのか、遠すぎるのか。"
@@ -590,6 +716,18 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "無理をしないと、患者さんの苦しさが分からないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……のど、通りました。うっ、胃の入り口が、しぶい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこは、体をひねると楽になるのだ。ボクで確かめたのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "先生、涙目ですよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うれし涙なのだ。ちゃんと、入っていくのだ。"
       - speaker: reimu
         text: "2人は自らの胃で、管の太さと角度を、体で確かめました。"
         reading: "ふたりわみずからのいで、かんのふとさとかくどを、からだでたしかめました。"
@@ -665,6 +803,20 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "1枚。ワイヤーを巻いて、フィルムを送ります。"
+      - speaker: sakamoto
+        text: "……ごほっ。だいじょうぶ、続けろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先生、あと少しなのだ。ゆっくり呼吸してほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "巻き上げ、よし。フラッシュ、充電できました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "胃の奥、幽門のあたり……ここも1枚。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "光、透けています。位置は、合ってます。"
       - speaker: zundamon
         emotion: normal
         text: "少し向きを変えて、もう1枚。"
@@ -723,6 +875,44 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "……できたのだ。みんなで、やり遂げたのだ。"
+  - id: hankyou
+    title: "世界を、驚かせた"
+    background: il_gc_lab
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "宇治", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "杉浦"}
+    cuts:
+      - speaker: reimu
+        text: "生きた胃の写真は、日本の医学界に衝撃を与えました。"
+        reading: "いきたいのしゃしんわ、にほんのいがくかいにしょうげきをあたえました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先生。この仕組み、特許を出しておきましょう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "腹の中の臓器を撮る、写真機。……大げさな名前なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "大げさなくらいで、ちょうどいい。世界初ですから。"
+      - speaker: reimu
+        text: "腹腔内臓器撮影用写真機。のちのガストロカメラの原型です。"
+        reading: "ふくくうないぞうきさつえいようしゃしんき。のちのがすとろかめらのげんけいです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "海外の医者からも、問い合わせが来てるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "胃の中を、開けずに撮る。西洋にもなかった発想です。"
+      - speaker: zundamon
+        emotion: happy
+        text: "日本の町工場の技術が、世界を驚かせてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、浮かれてる暇はない。ここからが、本当の勝負です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "作れたことと、広まることは、別なのだ。"
   - id: gakkai
     title: "500人の前で"
     background: il_gc_gakkai
@@ -749,6 +939,16 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "自分の胃で、何十回も試したのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "危険がないこと。それが、1つめの目標だったのだ。"
+      - speaker: isha_b
+        text: "この、白いところは。ただの影ではないのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "坂本先生の、胃潰瘍なのだ。開腹の所見と、一致したのだ。"
+      - speaker: isha_b
+        text: "……写真と、実際が、合ったというのか。"
       - speaker: reimu
         text: "会場には、全国からおよそ500人の医師が集まっていました。"
         reading: "かいじょうにわ、ぜんこくからおよそごひゃくにんのいしがあつまっていました。"
@@ -788,6 +988,18 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "せっかく撮れても、診断できなければ意味がない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "撮るのにも、コツがいります。胃をふくらませて、隅々まで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "うまく撮る医者と、そうでない医者で、差が出るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、講習会を開くんですね。全国を回って。"
+      - speaker: zundamon
+        emotion: normal
+        text: "道具と、腕と、目。3つがそろって、はじめて役に立つのだ。"
       - speaker: zundamon
         emotion: normal
         text: "写真の見方を、医者みんなで学ぶ必要があるのだ。"
@@ -809,6 +1021,44 @@ scenes:
       - speaker: reimu
         text: "撮る技術と、読む技術。両輪がそろって、胃カメラは根づきました。"
         reading: "とるぎじゅつと、よむぎじゅつ。りょうりんがそろって、いかめらわねづきました。"
+  - id: soukika
+    title: "早さが、運命を変える"
+    background: il_gc_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "宇治", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "杉浦"}
+    cuts:
+      - speaker: reimu
+        text: "そもそも、なぜ早く見つけることが、そんなに大事なのか。"
+        reading: "そもそも、なぜはやくみつけることが、そんなにだいじなのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "胃がんは、最初は胃の壁の、ごく浅いところにできるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "浅いうちなら、その部分だけ取れば済む。"
+      - speaker: zundamon
+        emotion: sad
+        text: "でも、気づかず放っておくと、深く根を張るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "深くなると、外に広がって、手が届かなくなる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ病気でも、見つける早さで、運命が変わるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "レントゲンでは、その浅い時期が、写らなかった。"
+      - speaker: zundamon
+        emotion: happy
+        text: "胃カメラは、その浅いうちを、目で見つけられるのだ。"
+      - speaker: reimu
+        text: "早期発見は、同じ病気を、治せる病気に変えたのです。"
+        reading: "そうきはっけんわ、おなじびょうきを、なおせるびょうきにかえたのです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見えるようになったから、間に合うようになったのだ。"
   - id: shinka
     title: "そして現代へ"
     background: il_gc_gendai
@@ -860,6 +1110,12 @@ scenes:
         text: "見つけて、その場で調べる。すごい時代なのだ。"
       - speaker: tsumugi
         emotion: normal
+        text: "画像を拡大したり、特殊な光で、がんを目立たせたり。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見つける精度も、どんどん上がってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
         text: "鼻から入る細いのも、眠ってる間に終わるのも、この子孫。"
       - speaker: zundamon
         emotion: thinking
@@ -896,6 +1152,15 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "私も、カメラを作り続けます。人の命を救う道具を。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うまくいったのは、みんなのおかげです。私だけの手柄じゃない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "丸山くんの電球も、今井くんの気づきも、坂本先生の胃も。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "名前の残らない人たちの、積み重ねでしたね。"
       - speaker: zundamon
         emotion: happy
         text: "杉浦さんは、根っからの職人なのだ。"
