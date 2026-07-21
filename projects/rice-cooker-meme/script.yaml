@@ -1,0 +1,1197 @@
+# 電気炊飯器再現ドラマ・ミーム版（三並義忠×風美子・1950頃→現代）。投稿前に必ず目視レビュー。
+# 本編rice-cookerのセリフをネットミーム化した派生版。ナレ行・クリップ・年号カードは本編と共用（位相同期なし）。
+# 裏取りはビルダーdocstring参照（三並義忠Wikipedia/イノベーション100選/SK弁理士法人/
+# All About/東芝ライフスタイル沿革）
+meta:
+  title: "スイッチひとつで、失敗しない。妻が千回炊いた世界初の電気炊飯器【ゆっくり再現ドラマ・ミーム版】"
+  slug: "rice-cooker-meme"
+  summary: "世界初の自動式電気炊飯器を作った町工場の夫婦、三並義忠と風美子の物語。夜明け前からの火の番が主婦の重労働だった時代、東芝は大手も諦めた自動炊飯を小さな光伸社に託す。妻の風美子は1日20回、4か月で千回ごはんを炊き、家の米が尽きれば家と工場を担保に。倒れても続けた末に掴んだ98度20分のデータ、一杯の水を時計に変えた二重釜間接炊きのひらめき。1955年の発売から台所革命まで、ずんだもんが三並を、つむぎが風美子を演じる再現ドラマ・ミーム版でお届けします。"
+  tags: ["炊飯器", "電気釜", "三並義忠", "東芝", "再現ドラマ", "ゆっくり", "ずんだもん", "昭和", "ミーム"]
+  thumbnail:
+    top: "妻が千回炊いた"
+    bottom: "失敗しない箱"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: yamada, label: "東芝の山田", voice: 13, pitch: -0.05, item: hat}
+    - {id: kyaku, label: "主婦", voice: 8, pitch: 0.05, hair: bun}
+scenes:
+  - id: hook
+    title: ""
+    background: il_rc_kitchen
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "ごはん、炊けたのだ！ボタンひとつで優勝なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "早いね。お米といで、スイッチ押しただけでしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それだけで、ふっくらツヤツヤ。[QOL|きゅーおーえる]爆上がりだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "火加減も、見張りも、ノーダメで済むんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "焦がしたことも、芯が残ったことも、ないもんね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "炊飯器は、失敗しない魔法の箱なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その「魔法」、実は物理と、千回の根性のかたまりなんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "物理と、根性……？急に、重いワードが爆誕したぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その「失敗しない」が、どれだけすごいか分かる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ボタン押すだけだ。ふつうだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昔はね、ごはんを炊くのが、一日で一番の重労働だったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ごはんを炊くのが、重労働！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "夜明け前に起きて、かまどの火を、ずっと見張る。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "スイッチひとつじゃ、なかったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その火の番から、主婦を解放した箱なんだよ、これ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "誰が作ったんだ？大きな電機メーカーか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "町工場の夫婦。奥さんが、千回ごはんを炊いたの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "せ、千回！？ガチのやつかよ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日はその話。炊きたてを食べながら、聞いていこう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "おかわりしながら聞くぞ！"
+      - speaker: reimu
+        text: "炊飯器。スイッチひとつで、失敗なくごはんが炊ける箱です。"
+        reading: "すいはんき。すいっちひとつで、しっぱいなくごはんがたけるはこです。"
+      - speaker: reimu
+        text: "世界で初めて作ったのは、町工場の夫婦でした。"
+        reading: "せかいではじめてつくったのわ、まちこうばのふうふでした。"
+      - speaker: reimu
+        text: "物語は、1950年ごろの東京から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくごじゅうねんごろのとうきょうからはじまります。"
+  - id: era1950
+    title: "ごはんは、重労働だった"
+    background: il_rc_kamado
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三並", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1950年ごろ、東京。"
+        reading: "せんきゅうひゃくごじゅうねんごろ、とうきょう。"
+        video: assets/clips/era_r1950.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: kamado
+    title: ""
+    background: il_rc_kamado
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "当時、ごはんはかまどで炊くのが当たり前でした。"
+        reading: "とうじ、ごはんわかまどでたくのがあたりまえでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まだ暗いうちに起きて、火をおこすの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "夜明け前からかよ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はじめチョロチョロ、なかパッパ。火加減が命なのよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "強すぎると焦げて、弱すぎると芯が残る。無理ゲーだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、そばを離れられない。赤ん坊を背負ったままね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "煙で目は痛いし、夏は汗だくだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "少しでも火から目を離すと、すぐ焦げるの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "つきっきりで、他のことは何もできないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "沸いてきたら火を弱めて、蒸らして。何十年も体で覚えた勘よ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "その勘を、新米のお嫁さんは、一から仕込まれるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "毎日、朝昼晩。[日本中|にほんじゅう]の主婦が、火の番をしてたの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "料理より前に、炊くだけで[HP|えいちぴー]ゼロだ。"
+      - speaker: reimu
+        text: "炊飯は、掃除や洗濯と並ぶ、主婦の重い仕事でした。"
+        reading: "すいはんわ、そうじやせんたくとならぶ、しゅふのおもいしごとでした。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "この火の番が、なくなったら……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電気で、勝手に炊けたら。夢みたいな話だ。"
+      - speaker: reimu
+        text: "その夢に、町工場の夫婦が挑みます。"
+        reading: "そのゆめに、まちこうばのふうふがいどみます。"
+  - id: irai
+    title: "町工場への、無茶な依頼"
+    background: il_rc_koba
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: yamada, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "三並義忠は、光伸社という小さな町工場の主人でした。"
+        reading: "みなみよしただわ、こうしんしゃというちいさなまちこうばのしゅじんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちは、精密な測定器を作る工場だ。"
+      - speaker: yamada
+        text: "三並さん。東芝の山田です。折り入って、お願いが。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "天下の東芝さんが、うちに？"
+      - speaker: yamada
+        text: "電気で、自動でごはんが炊ける釜を、作ってほしい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "自動で、炊ける釜……その発想はなかったぞ。"
+      - speaker: yamada
+        text: "実は、大手のメーカーが何社も挑んで、諦めました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "大手が匙を投げたものを、うちの町工場に？"
+      - speaker: yamada
+        text: "測定器で鍛えた、あなたの精密さに賭けたい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "なぜ、大手は諦めたんだ？"
+      - speaker: yamada
+        text: "火加減が、どうしても自動にならない。焦がすか、生煮えか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "人が見て加減してたものを、機械にやらせるのか。"
+      - speaker: yamada
+        text: "電気を入れて、切る。ただそれだけが、できないんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……正直に聞くぞ。研究のお金は、出るんだ？"
+      - speaker: yamada
+        text: "……それが。売れる保証がないので、出せません。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "タダ働きで、大手が爆死したものに挑めと。"
+      - speaker: yamada
+        text: "虫のいい話なのは、承知です。でも、あなたにしか。"
+      - speaker: reimu
+        text: "割に合わない仕事でした。それでも、三並の心は動きます。"
+        reading: "わりにあわないしごとでした。それでも、みなみのこころわうごきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あの、火の番の苦労が、なくなるんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それは、やる価値があるぞ。"
+      - speaker: yamada
+        text: "引き受けて、いただけますか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "やるのだ。世界の台所を、変えるぞ。"
+      - speaker: reimu
+        text: "東芝の山田正吾との、握手でした。"
+        reading: "とうしばのやまだしょうごとの、あくしゅでした。"
+  - id: naze
+    title: "なぜ、自動は難しいのか"
+    background: il_rc_home
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "家に持ち帰ると、妻の風美子が待っていました。"
+        reading: "いえにもちかえると、つまのふみこがまっていました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた、浮かない顔ね。どんなお仕事？"
+      - speaker: zundamon
+        emotion: normal
+        text: "電気で、自動でごはんを炊く釜だ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あら、それができたら、主婦は大助かりよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも、難しいんだ。火加減が、全部なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どういうこと？"
+      - speaker: zundamon
+        emotion: normal
+        text: "強火で炊いて、ちょうどよく水がなくなったら止める。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "その「ちょうど」が、毎回ちがうんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お米の量でも、変わるものね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "冬と夏でも、水の温度がちがう。同じ時間じゃ、詰むんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "新米と古米でも、吸う水の量がちがうしね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "2合と5合でも、火の通り方がまるでちがうぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "条件が、いくつも掛け算になる。かまどは、それを人が見てた。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "かまどなら、人が見て加減する。でも、機械は……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "機械には、目も舌もないんだ。どう止めさせるか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……いつ火を止めればいいか、機械に教えないと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこが、大手も越えられなかったラスボスなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた一人じゃ、無理よ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……手伝ってくれるのか？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ごはんを炊くことなら、あなたより私のほうが上手よ。"
+      - speaker: reimu
+        text: "こうして、夫婦の挑戦が始まりました。"
+        reading: "こうして、ふうふのちょうせんがはじまりました。"
+  - id: jikken
+    title: "千回、炊く"
+    background: il_rc_home
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "解決の糸口は、ただひたすら、炊いてみることでした。"
+        reading: "かいけつのいとぐちわ、ただひたすら、たいてみることでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず、いろんな条件で炊いて、記録するのね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "水の量、火の強さ、時間。ぜんぶ変えて試すぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1回目。強火で、15分。……芯が残ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "記録なのだ。次は、20分で試すぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "2回目。20分。……あら、いい感じ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、たまたまかもしれない。もう1回だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "3回目、4回目……。1日20回、炊いた日もあったわ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "朝から晩まで、家じゅう湯気だらけだ。"
+      - speaker: reimu
+        text: "風美子は来る日も来る日も、ごはんを炊き続けました。"
+        reading: "ふみこわくるひもくるひも、ごはんをたきつづけました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "温度計を、お米にさして。……98度。"
+      - speaker: zundamon
+        emotion: normal
+        text: "温度と、時間と、炊きあがり。全部を表にするんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "家族みんなで、毎食、実験のごはんを食べたわね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "息子たちも、味の判定係だ。舌の有識者なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "「今日のはちょっと硬い」「昨日のがよかった」ってね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "毎食ごはんばかりで、おかずが寂しいぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "文句も言わず、家族みんなで支えてくれたわ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "1回ごとに、水と時間と温度を、几帳面に書き留めるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その帳面が、だんだん分厚くなっていってね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "焦げても、芯があっても、残さず食べてくれた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "失敗作も、大事なデータ。ぜんぶ経験値なのだ。"
+  - id: shippai
+    title: "時計では、止まらない"
+    background: il_rc_lab
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "はじめの試作は、単純な仕組みでした。"
+        reading: "はじめのしさくわ、たんじゅんなしくみでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "時計をつけて、20分たったら電気を切る。チュートリアルだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それなら、簡単そうだけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "冬の朝に試すぞ。……スイッチ、オン。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "20分後。……あら、まだ芯が残ってる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "水が冷たいと、20分じゃ足りないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ、夏は？"
+      - speaker: zundamon
+        emotion: sad
+        text: "同じ20分で……今度は、真っ黒に焦げる。オワタ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "時計だけじゃ、季節に負けるのね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "「何分」で止めるのが、そもそも間違いなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "時間じゃなくて、ごはんの状態で止めないと。"
+      - speaker: zundamon
+        emotion: sad
+        text: "でも、機械は、ごはんの中身を見られないんだ……。"
+      - speaker: reimu
+        text: "時間で計る発想は、ことごとく壁にぶつかりました。"
+        reading: "じかんではかるはっそうわ、ことごとくかべにぶつかりました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "何度やっても、焦げるか、生煮え。無理ゲーかよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "大手が諦めた壁が、目の前にあるのね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、越えられない壁じゃないはずだ。"
+  - id: kome
+    title: "家を、担保に"
+    background: il_rc_home
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "実験を続けるうち、家の米が底をつきました。"
+        reading: "じっけんをつづけるうち、いえのこめがそこをつきました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "あなた……お米、もう、ないの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "実験には、まだまだ要るんだ。何百回ぶんも。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "でも、うちにそんなお金……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……工場と、この家を、担保に入れるのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "家を！？失敗したら、住むところも無くなるのよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "承知なのだ。でも、ここでやめたら、ぜんぶ無駄になるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……分かったわ。とことん、やりましょう。"
+      - speaker: reimu
+        text: "夫婦は自宅と工場を担保に借金し、1トン以上の米を買いました。"
+        reading: "ふうふわじたくとこうじょうをたんぽにしゃっきんし、いっとんいじょうのこめをかいました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "台所じゅう、米俵だらけだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この1粒ずつが、主婦の朝につながってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "1粒も、無駄にしないぞ。"
+  - id: taicho
+    title: "世の主婦のために"
+    background: il_rc_home
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "無理は、続きませんでした。"
+        reading: "むりわ、つづきませんでした。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "風美子！大丈夫なのだ！？"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……ごめんなさい。少し、めまいがして。"
+      - speaker: zundamon
+        emotion: sad
+        text: "毎日20回も炊いて、無理をさせすぎたのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "実験は、もうやめるのだ。体のほうが大事なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……いやよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "風美子……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世の中の主婦みんなが、毎日この火の番で苦労してる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この釜ができれば、その人たちが、楽になるの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "でも、きみが倒れては……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "私が休んだら、その分、実現が遠のくでしょう。"
+      - speaker: zundamon
+        emotion: sad
+        text: "きみ一人の体で、[日本中|にほんじゅう]の朝を背負わなくていいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "背負ってるんじゃないの。楽にしてあげたいだけ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、やめない。少し休んだら、また炊くわ。"
+      - speaker: reimu
+        text: "世のため、という一念が、風美子を支えていました。"
+        reading: "よのため、といういちねんが、ふみこをささえていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かったのだ。でも、無理はさせないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "半分は、ボクが炊くのだ。二人で、やりきるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ふふ。あなたの炊くごはんは、いつも柔らかすぎるけどね。"
+  - id: data
+    title: "98度、20分"
+    background: il_rc_home
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "積み上げた記録が、ひとつの答えを指し示します。"
+        reading: "つみあげたきろくが、ひとつのこたえをさししめします。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "表を、ずっと眺めていて、気づいたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "うまく炊けたときは、いつも……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "98度くらいを、20分ほど保っているのよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "温度と時間が、完全に一致してるぞ！"
+  - id: data_clip
+    title: ""
+    background: il_rc_home
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三並", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "98度で、およそ20分。米が芯まで、おいしく変わる条件でした。"
+        reading: "きゅうじゅうはちどで、およそにじゅっぷん。こめがしんまで、おいしくかわるじょうけんでした。"
+        video: assets/clips/rc_data.mp4
+        video_full: true
+  - id: data2
+    title: ""
+    background: il_rc_home
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "この条件を、機械が自分で作れれば、勝ちなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "でも、どうやって「20分たったら止める」の？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "時計で計る？いや、気温で炊きあがりは変わるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "時間じゃなくて……ごはん自身に、教えてもらえたら。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "炊きあがると、何が変わるんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水がなくなると、急に温度が上がって、おこげができる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……温度が、上がる。その瞬間を、捕まえればいいんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ごはんが、できたと合図してくれる仕組み……。"
+      - speaker: reimu
+        text: "答えは、意外にも、一杯の水にありました。"
+        reading: "こたえわ、いがいにも、いっぱいのみずにありました。"
+  - id: alpha
+    title: "ふっくらの、正体"
+    background: il_rc_home
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "そもそも、なぜ98度で、20分なのか。"
+        reading: "そもそも、なぜきゅうじゅうはちどで、にじゅっぷんなのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "生の米は、硬くて、そのままじゃ食べられないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水を吸わせて、しっかり熱を通すと、変わるのよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "米のでんぷんが、熱と水で、ほろほろにほどけるんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そのほどけた状態が、あの、ふっくらなのね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも、中途半端な温度だと、芯までほどけないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、高い温度を、一定の時間、保つ必要がある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "98度あたりを20分。それが、芯までほどける条件なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "低くても、短くても、だめ。芯が残る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "千回の失敗が、この数字を、教えてくれたんだ。"
+      - speaker: reimu
+        text: "おいしさの正体は、でんぷんの変化にありました。"
+        reading: "おいしさのしょうたいわ、でんぷんのへんかにありました。"
+  - id: futagama
+    title: "一杯の水が、時計になる"
+    background: il_rc_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "水は、100度で沸いて、それ以上は上がらないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お鍋の水があるうちは、ずっと100度くらい、ってこと？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そうなんだ。水がなくなった瞬間、温度が跳ね上がるぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……あっ。その跳ね上がりを、合図にできる！"
+      - speaker: zundamon
+        emotion: happy
+        text: "釜を、二重にするのだ！"
+        se: don
+      - speaker: reimu
+        text: "思いついたのが、二重釜間接炊きという仕組みです。"
+        reading: "おもいついたのが、にじゅうがまかんせつだきというしくみです。"
+  - id: futagama_clip
+    title: ""
+    background: il_rc_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三並", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "外の釜に、コップ一杯の水。内の釜で、お米を炊きます。"
+        reading: "そとのかまに、こっぷいっぱいのみず。うちのかまで、おこめをたきます。"
+        video: assets/clips/rc_futagama.mp4
+        video_full: true
+  - id: futagama2
+    title: ""
+    background: il_rc_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "外の水は、ちょうど20分で、蒸発しきる量にするんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水があるうちは、100度。ごはんが炊ける温度ね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "水が尽きると、外釜の温度が、一気に上がるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その温度を、感じとって、スイッチを切る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "バイメタル。熱で曲がる金属の板を、使うんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "2種類の金属を貼り合わせると、熱で反り返るのよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "100度までは、まっすぐ。それを超えると、くいっと曲がるんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その動きで、パチンとスイッチを跳ね上げる。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "曲がったら、電気を切る。ごはんが、自分で終わりを告げる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "時計もいらない。人の見張りも、ノーダメなのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "一杯の水が、いちばん正直な、タイマーだったのね。"
+      - speaker: reimu
+        text: "水の蒸発を時計に変える。この発想が、突破口でした。"
+        reading: "みずのじょうはつをとけいにかえる。このはっそうが、とっぱぐちでした。"
+  - id: sanju
+    title: "寒い日も、暑い日も"
+    background: il_rc_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "しかし、最後の壁が残っていました。"
+        reading: "しかし、さいごのかべがのこっていました。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "試作機を、冬の寒い台所で使うと……。"
+      - speaker: zundamon
+        emotion: sad
+        text: "外が冷えてると、水が蒸発しきる前に、冷めるんだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "夏とちがって、うまく炊けない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "気温に、炊きあがりが左右されては、失敗しない箱じゃないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "北海道でも、九州でも、同じごはんが炊けないと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "「たいてい炊ける」じゃ、だめなのだ。「必ず炊ける」なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "外の寒さが、水の釜まで届かないように……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……釜を、もう1枚増やすぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "二重を、三重に？"
+      - speaker: zundamon
+        emotion: normal
+        text: "外の空気の寒さから、水の釜を守る層を、足すんだ。"
+  - id: sanju_clip
+    title: ""
+    background: il_rc_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三並", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "二重釜を三重釜に。外気の影響を抑える工夫でした。"
+        reading: "にじゅうがまをさんじゅうがまに。がいきのえいきょうをおさえるくふうでした。"
+        video: assets/clips/rc_sanju.mp4
+        video_full: true
+  - id: sanju2
+    title: ""
+    background: il_rc_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: tsumugi
+        emotion: happy
+        text: "これで、寒い日でも、暑い日でも。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いつでも、どこでも、同じごはんなのだ！"
+      - speaker: reimu
+        text: "季節や土地を選ばない。失敗しない箱が、完成に近づきます。"
+        reading: "きせつやとちをえらばない。しっぱいしないはこが、かんせいにちかづきます。"
+  - id: seikou
+    title: "ひとりでに、炊けた"
+    background: il_rc_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "1955年。ついに、その日が来ました。"
+        reading: "せんきゅうひゃくごじゅうごねん。ついに、そのひがきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "スイッチ、入れるぞ。……あとは、待つだけなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "見張らなくて、いいのよね。……そわそわするわ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "20分後。……カチッ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "切れた。ひとりでに、電気が切れたわ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "ふた、開けるのだ……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ふっくら。真っ白で、つやつや。"
+      - speaker: zundamon
+        emotion: happy
+        text: "焦げてない。芯もない。ちゃんと炊けてる……大勝利なのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "触ってもいないのに、ちゃんと炊けてる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ためしに、ボクが寝てる間にも炊いてみるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "翌朝。……ちゃんと、炊けてるわ。あなたが寝てる間に。"
+      - speaker: zundamon
+        emotion: happy
+        text: "夜のうちに仕込んで、朝には炊きたて。夢が、現実なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "誰も、火の番をしてないのに……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "できたのだ……。世界で初めての、自動の釜なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "千回のごはんが、この一杯になったのね。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……なんだか、涙が出てきちゃった。"
+      - speaker: zundamon
+        emotion: happy
+        text: "泣くところなのだ。うんと泣いていいのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "きみの千回が、実ったのだ。"
+      - speaker: reimu
+        text: "スイッチひとつで炊ける釜が、夫婦の手で生まれました。"
+        reading: "すいっちひとつでたけるかまが、ふうふのてでうまれました。"
+  - id: era1955
+    title: "1955・自動式電気釜、発売"
+    background: il_rc_shop
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三並", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1955年12月10日。"
+        reading: "せんきゅうひゃくごじゅうごねんじゅうにがつとおか。"
+        video: assets/clips/era_r1955.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: hatsubai
+    title: "時間を、買う"
+    background: il_rc_shop
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: kyaku, x: 0.56}
+      - {who: yamada, x: 0.86}
+    cuts:
+      - speaker: reimu
+        text: "東芝から、自動式電気釜が発売されます。"
+        reading: "とうしばから、じどうしきでんきがまがはつばいされます。"
+      - speaker: yamada
+        text: "定価は、3200円。強気の値付けです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "3200円……大卒の初任給の、3分の1くらい。ガチで高いんだ。"
+      - speaker: kyaku
+        text: "高いわねえ。ごはんなんて、かまどで炊けるのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "かまど炊きは、タダに見えて、時間を溶かしてるのだ。"
+      - speaker: kyaku
+        text: "そりゃ、毎朝1時間は、火の前にいるけどねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その1時間が、毎日、一生ぶんなんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "奥さん、ちょっと、これを見てほしいんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "夜、お米と水を入れて、スイッチを予約するぞ。"
+      - speaker: kyaku
+        text: "朝、起きたら……炊けてるの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "火の番も、早起きも、いらないんだ。"
+      - speaker: kyaku
+        text: "……あの、つらい火の番が、いらない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その時間で、もう少し眠れるぞ。実質、寝坊が正義なのだ。"
+      - speaker: kyaku
+        text: "高いけど……これは、時間を買うのね。1台ちょうだい。"
+      - speaker: reimu
+        text: "はじめは700台。しかし、口コミで火が付きます。"
+        reading: "はじめわななひゃくだい。しかし、くちこみでひがつきます。"
+  - id: fukyu
+    title: "台所革命"
+    background: il_rc_shop
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "使った主婦の評判が、評判を呼びました。"
+        reading: "つかったしゅふのひょうばんが、ひょうばんをよびました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "朝がこんなに楽になるなんて、って手紙が山ほど来るの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "作っても作っても、追いつかない。うれしい悲鳴だ。"
+      - speaker: reimu
+        text: "最高で、月に20万台。工場はフル回転でした。"
+        reading: "さいこうで、つきににじゅうまんだい。こうじょうわふるかいてんでした。"
+  - id: fukyu_clip
+    title: ""
+    background: il_rc_shop
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三並", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "700台から、月20万台へ。4年で、日本の家庭の半分に届きました。"
+        reading: "ななひゃくだいから、つきにじゅうまんだいえ。よねんで、にほんのかていのはんぶんにとどきました。"
+        video: assets/clips/rc_graph.mp4
+        video_full: true
+  - id: fukyu2
+    title: ""
+    background: il_rc_shop
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: tsumugi
+        emotion: happy
+        text: "たった4年で、日本の家庭の、半分に届いたそうよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "半分の家から、朝の火の番が消えたんだ。ほぼ覇権だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "浮いた時間で、みんな何をしたのかしらね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "働きに出る奥さんも、増えていったのよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "朝の1時間が空くと、暮らし方まで変わるぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "少し眠って、子どもと話して、本を読んで。"
+      - speaker: zundamon
+        emotion: happy
+        text: "その時間ぜんぶが、この箱から生まれたんだ。"
+      - speaker: reimu
+        text: "炊飯器は、台所から時間を生み出す道具になりました。"
+        reading: "すいはんきわ、だいどころからじかんをうみだすどうぐになりました。"
+  - id: tokkyo
+    title: "夫婦の、発明"
+    background: il_rc_koba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "発明は、特許として認められました。"
+        reading: "はつめいわ、とっきょとしてみとめられました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "家を担保に入れたぶん、取り返せたわね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "借金も返せて、工場も守れた。まさに、伏線回収なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、いちばんの財産は、お金じゃない気がするわ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[日本中|にほんじゅう]の朝が、少し楽になったことなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "千回炊いた甲斐が、あったわね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "きみがいなければ、データは取れなかったのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "これは、夫婦二人の発明なのだ。"
+      - speaker: reimu
+        text: "のちに三並は、科学技術庁から表彰を受けます。"
+        reading: "のちにみなみわ、かがくぎじゅつちょうからひょうしょうをうけます。"
+  - id: shinka
+    title: "そして現代へ"
+    background: il_rc_denki
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。炊飯器は、進化を続けました。"
+        reading: "ときわながれて、げんだい。すいはんきわ、しんかをつづけました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "温度を細かく操る、マイコン。そして、電気の力で釜ごと熱するIH。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "かまどの、あの火加減を、機械が再現してるだと？壊れ性能だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。はじめチョロチョロ、なかパッパを、コンピューターで。"
+  - id: shinka_clip
+    title: ""
+    background: il_rc_denki
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三並", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "電気釜から、マイコン、そしてIHへ。火加減は、より賢くなりました。"
+        reading: "でんきがまから、まいこん、そしてあいえいちえ。ひかげんわ、よりかしこくなりました。"
+        video: assets/clips/rc_shinka.mp4
+        video_full: true
+  - id: shinka2
+    title: ""
+    background: il_rc_denki
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: zundamon
+        emotion: surprised
+        text: "何万円もする、高級炊飯器まであるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お米の銘柄ごとに、炊き方を変えたりね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "圧力をかけて、もちもちに炊くのもある。もはや重課金の世界だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、どれだけ賢くなっても、やってることは同じ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、いちばんの土台は、変わってないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スイッチひとつで、失敗なく炊ける。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あの夫婦の、二重釜のひらめきなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "水の蒸発を時計にした、あの一杯の水ね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "冒頭でボタン押しただけって言ったけど……。"
+      - speaker: reimu
+        text: "ボタンひとつの裏に、千回のごはんが、詰まっていました。"
+        reading: "ぼたんひとつのうらに、せんかいのごはんが、つまっていました。"
+  - id: bannen
+    title: "名を知られずとも"
+    background: il_rc_washitsu
+    bgm: amacha_hoshizora
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三並", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "風美子"}
+    cuts:
+      - speaker: reimu
+        text: "三並義忠は、その後も、ものづくりを続けました。"
+        reading: "みなみよしただわ、そのごも、ものづくりをつづけました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "初代の釜、床の間に飾ってあるのね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うちの、いちばんの宝物なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この釜のおかげで、って言ってくれる人に、時々会うわ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "顔も知らない、たくさんの朝を、楽にできたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "名前は、あまり知られていないけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "名前なんて、いいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた、後悔してない？家まで担保に入れて。"
+      - speaker: zundamon
+        emotion: happy
+        text: "してないのだ。あれは、いちばんいい借金だったのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "台所から、あの重労働が消えた。それで、じゅうぶんなのだ。"
+      - speaker: reimu
+        text: "夫婦の名を知る人は、多くありません。"
+        reading: "ふうふのなをしるひとわ、おおくありません。"
+        pause_after: 0.5
+      - speaker: reimu
+        text: "けれど、その発明は、いまも毎朝、日本中の台所で動いています。"
+        reading: "けれど、そのはつめいわ、いまもまいあさ、にほんじゅうのだいどころでうごいています。"
+        pause_after: 0.6
+  - id: musubi
+    title: ""
+    background: il_rc_kitchen
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "おかわり、3杯目なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "話を聞きながら、しっかり食べてたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "このふっくらの裏に、千回のごはんがあるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "家を担保に入れて、奥さんが倒れても炊いて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一杯の水を、時計に変えたひらめきなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "失敗しないって、当たり前じゃなかったんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボタンひとつは、誰かの千回の上にあるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "身のまわりの「便利」も、たいてい、そうかもね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次にごはんを炊くときは、そっと感謝するのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見えない千回が、あなたの朝を守ってるのだ！"
+        telops:
+          - {text: "ボタンひとつの裏に、千回", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、好きなごはんのお供も教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
