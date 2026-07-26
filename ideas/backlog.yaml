@@ -238,7 +238,7 @@ ideas:
   hook: "世界中の駅にある黄色いブロック。始まりは岡山の一人の発明家でした。"
   angle: "三宅精一が私財で発明・無償で広めた感動ドラマ。2種類のブロック（線と点）の意味の図解→上に物を置かない・自転車を停めない啓発で完結"
   score: 5
-  status: new
+  status: used
 - id: vacuum-flask
   title: "魔法瓶はなぜ12時間も冷めないのか"
   hook: "熱の逃げ道は3つしかない。魔法瓶はその全部に罠を仕掛けています。"
@@ -388,7 +388,7 @@ ideas:
   status: used
 - id: karaoke-drama
   title: "カラオケを発明して特許を取らなかった男・井上大佑【再現ドラマ候補】"
-  status: new
+  status: new  # 2026-07提示・未選択
 - id: suihanki-drama
   title: "千回の炊飯実験・電気炊飯器を生んだ夫婦【再現ドラマ候補】"
   status: new
@@ -400,4 +400,17 @@ ideas:
   status: used
 - id: rice-cooker-drama
   title: "電気炊飯器を発明した町工場の夫婦・三並義忠×風美子【再現ドラマ】"
+  status: used
+- id: yai-denchi-drama
+  title: "乾電池を発明した丁稚・屋井先蔵【再現ドラマ候補】"
+  hook: "電気で狂わない時計のために世界初の乾電池を発明。特許費用が払えず海外に先行される（2026-07提示・未選択）"
+  score: 4
+  status: new
+- id: hayakawa-drama
+  title: "シャープペンシルと震災からの再起・早川徳次【再現ドラマ候補】"
+  hook: "発明→関東大震災で全てを失う→大阪で再起しシャープ創業（2026-07提示・未選択）"
+  score: 4
+  status: new
+- id: tenji-block-drama
+  title: "点字ブロックを発明した男・三宅精一【再現ドラマ】"
   status: used

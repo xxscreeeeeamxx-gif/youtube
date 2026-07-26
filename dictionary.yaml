@@ -3,47 +3,57 @@
 - {surface: 一択, pronunciation: イッタク, accent_type: 0}
 - {surface: 乗り口, pronunciation: ノリグチ, accent_type: 0}
 - {surface: 降り口, pronunciation: オリグチ, accent_type: 0}
-- {surface: 百福, pronunciation: モモフク, accent_type: 1, priority: 9}
-- {surface: 仁子, pronunciation: マサコ, accent_type: 1, priority: 9}
-- {surface: 高槻, pronunciation: タカツキ, accent_type: 0, priority: 9}
-- {surface: 反物, pronunciation: タンモノ, accent_type: 0, priority: 9}
-- {surface: 順風満帆, pronunciation: ジュンプウマンパン, accent_type: 0, priority: 9}
-- {surface: 宏寿, pronunciation: ヒロトシ, accent_type: 0, priority: 9}
-- {surface: 問屋, pronunciation: トンヤ, accent_type: 0, priority: 9}
-- {surface: 高野豆腐, pronunciation: コウヤドウフ, accent_type: 3, priority: 9}
-- {surface: 昌宏, pronunciation: マサヒロ, accent_type: 0, priority: 9}
-- {surface: 文雄, pronunciation: フミオ, accent_type: 0, priority: 9}
-- {surface: 日本電装, pronunciation: ニッポンデンソー, accent_type: 5, priority: 9}
-- {surface: 逓信省, pronunciation: テイシンショウ, accent_type: 3, priority: 9}
-- {surface: 西尾, pronunciation: ニシオ, accent_type: 0, priority: 9}
-- {surface: 原さん, pronunciation: ハラサン, accent_type: 1, priority: 9}
-- {surface: 義明, pronunciation: ヨシアキ, accent_type: 0, priority: 9}
-- {surface: 白石, pronunciation: シライシ, accent_type: 0, priority: 9}
-- {surface: 布施, pronunciation: フセ, accent_type: 1, priority: 9}
-- {surface: 元禄, pronunciation: ゲンロク, accent_type: 1, priority: 9}
-- {surface: 廻る, pronunciation: マワル, accent_type: 0, priority: 9}
-- {surface: 薄利多売, pronunciation: ハクリタバイ, accent_type: 5, priority: 9}
-- {surface: 板前, pronunciation: イタマエ, accent_type: 0, priority: 9}
-- {surface: 道頓堀, pronunciation: ドウトンボリ, accent_type: 0, priority: 9}
-- {surface: 達郎, pronunciation: タツロウ, accent_type: 0, priority: 9}
-- {surface: 睦夫, pronunciation: ムツオ, accent_type: 0, priority: 9}
-- {surface: 深海, pronunciation: フカミ, accent_type: 0, priority: 9}
-- {surface: 胃鏡, pronunciation: イキョウ, accent_type: 0, priority: 9}
-- {surface: 胃潰瘍, pronunciation: イカイヨウ, accent_type: 2, priority: 9}
-- {surface: 分院, pronunciation: ブンイン, accent_type: 0, priority: 9}
-- {surface: 宇治, pronunciation: ウジ, accent_type: 1, priority: 9}
-- {surface: 杉浦, pronunciation: スギウラ, accent_type: 0, priority: 9}
-- {surface: 坂本, pronunciation: サカモト, accent_type: 0, priority: 9}
-- {surface: 丸山, pronunciation: マルヤマ, accent_type: 0, priority: 9}
-- {surface: 今井, pronunciation: イマイ, accent_type: 0, priority: 9}
-- {surface: 開腹, pronunciation: カイフク, accent_type: 0, priority: 9}
-- {surface: 羅針盤, pronunciation: ラシンバン, accent_type: 0, priority: 9}
-- {surface: 三並, pronunciation: ミナミ, accent_type: 0, priority: 9}
-- {surface: 義忠, pronunciation: ヨシタダ, accent_type: 0, priority: 9}
-- {surface: 風美子, pronunciation: フミコ, accent_type: 0, priority: 9}
-- {surface: 光伸社, pronunciation: コウシンシャ, accent_type: 4, priority: 9}
-- {surface: 二重釜, pronunciation: ニジュウガマ, accent_type: 0, priority: 9}
-- {surface: 三重釜, pronunciation: サンジュウガマ, accent_type: 0, priority: 9}
-- {surface: 間接炊き, pronunciation: カンセツダキ, accent_type: 0, priority: 9}
-- {surface: 羽釜, pronunciation: ハガマ, accent_type: 0, priority: 9}
-- {surface: 東芝, pronunciation: トウシバ, accent_type: 1, priority: 9}
+- {surface: 百福, pronunciation: モモフク, accent_type: 1}
+- {surface: 仁子, pronunciation: マサコ, accent_type: 1}
+- {surface: 高槻, pronunciation: タカツキ, accent_type: 0}
+- {surface: 反物, pronunciation: タンモノ, accent_type: 0}
+- {surface: 順風満帆, pronunciation: ジュンプウマンパン, accent_type: 0}
+- {surface: 宏寿, pronunciation: ヒロトシ, accent_type: 0}
+- {surface: 問屋, pronunciation: トンヤ, accent_type: 0}
+- {surface: 高野豆腐, pronunciation: コウヤドウフ, accent_type: 3}
+- {surface: 昌宏, pronunciation: マサヒロ, accent_type: 0}
+- {surface: 文雄, pronunciation: フミオ, accent_type: 0}
+- {surface: 日本電装, pronunciation: ニッポンデンソー, accent_type: 5}
+- {surface: 逓信省, pronunciation: テイシンショウ, accent_type: 3}
+- {surface: 西尾, pronunciation: ニシオ, accent_type: 0}
+- {surface: 原さん, pronunciation: ハラサン, accent_type: 1}
+- {surface: 義明, pronunciation: ヨシアキ, accent_type: 0}
+- {surface: 白石, pronunciation: シライシ, accent_type: 0}
+- {surface: 布施, pronunciation: フセ, accent_type: 1}
+- {surface: 元禄, pronunciation: ゲンロク, accent_type: 1}
+- {surface: 廻る, pronunciation: マワル, accent_type: 0}
+- {surface: 薄利多売, pronunciation: ハクリタバイ, accent_type: 5}
+- {surface: 板前, pronunciation: イタマエ, accent_type: 0}
+- {surface: 道頓堀, pronunciation: ドウトンボリ, accent_type: 0}
+- {surface: 達郎, pronunciation: タツロウ, accent_type: 0}
+- {surface: 睦夫, pronunciation: ムツオ, accent_type: 0}
+- {surface: 深海, pronunciation: フカミ, accent_type: 0}
+- {surface: 胃鏡, pronunciation: イキョウ, accent_type: 0}
+- {surface: 胃潰瘍, pronunciation: イカイヨウ, accent_type: 2}
+- {surface: 分院, pronunciation: ブンイン, accent_type: 0}
+- {surface: 宇治, pronunciation: ウジ, accent_type: 1}
+- {surface: 杉浦, pronunciation: スギウラ, accent_type: 0}
+- {surface: 坂本, pronunciation: サカモト, accent_type: 0}
+- {surface: 丸山, pronunciation: マルヤマ, accent_type: 0}
+- {surface: 今井, pronunciation: イマイ, accent_type: 0}
+- {surface: 開腹, pronunciation: カイフク, accent_type: 0}
+- {surface: 羅針盤, pronunciation: ラシンバン, accent_type: 0}
+- {surface: 三並, pronunciation: ミナミ, accent_type: 0}
+- {surface: 義忠, pronunciation: ヨシタダ, accent_type: 0}
+- {surface: 風美子, pronunciation: フミコ, accent_type: 0}
+- {surface: 光伸社, pronunciation: コウシンシャ, accent_type: 4}
+- {surface: 二重釜, pronunciation: ニジュウガマ, accent_type: 0}
+- {surface: 三重釜, pronunciation: サンジュウガマ, accent_type: 0}
+- {surface: 間接炊き, pronunciation: カンセツダキ, accent_type: 0}
+- {surface: 羽釜, pronunciation: ハガマ, accent_type: 0}
+- {surface: 東芝, pronunciation: トウシバ, accent_type: 1}
+- {surface: 三宅, pronunciation: ミヤケ, accent_type: 0}
+- {surface: 精一, pronunciation: セイイチ, accent_type: 0}
+- {surface: 岩橋, pronunciation: イワハシ, accent_type: 0}
+- {surface: 英行, pronunciation: ヒデユキ, accent_type: 0}
+- {surface: 三郎, pronunciation: サブロウ, accent_type: 0}
+- {surface: 高田馬場, pronunciation: タカダノババ, accent_type: 0}
+- {surface: 弱視, pronunciation: ジャクシ, accent_type: 0}
+- {surface: 黄色, pronunciation: キイロ, accent_type: 0}
+- {surface: 融雪, pronunciation: ユウセツ, accent_type: 0}
+- {surface: 白杖, pronunciation: ハクジョウ, accent_type: 0}

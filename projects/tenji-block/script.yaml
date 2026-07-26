@@ -1,0 +1,1070 @@
+# 点字ブロック再現ドラマ（三宅精一×三郎×岩橋英行・1963→現代）。投稿前に必ず目視レビュー。
+# 裏取り: 三宅精一Wikipedia/視覚障害者誘導用ブロックWikipedia/岡山県HP/precious.jp/
+# 日経2017(75カ国)/安全交通試験研究センター。1967-3-18原尾島交差点230枚・1972高田馬場1万枚・
+# 1970阪和線我孫子町駅ホーム初・1974建設省協力と線状考案・1982精一没56歳・2001JIS T9251・2012 ISO23599
+meta:
+  title: "黄色いブロックに、全財産。友の失明から生まれた点字ブロック【ゆっくり再現ドラマ】"
+  slug: "tenji-block"
+  summary: "点字ブロックを発明した岡山の発明家・三宅精一の物語。交差点で白い杖の人が車道へ入りかける場面を目撃し、失明が進む友人・岩橋英行の「コケと土の境は足の裏で分かる」という一言から、足の裏で読む道を思いつく。弟・三郎と試作を重ね、1967年、世界初の点字ブロック230枚を私費で岡山に敷設。しかし時代は動かず、私財は底をつきかける。高田馬場の1万枚、駅ホームへの採用、そして兄の遺志を継いだ弟のJIS化から世界75カ国への広がりまで、ずんだもんが三宅精一を、つむぎが弟・三郎を演じる再現ドラマでお届けします。"
+  tags: ["点字ブロック", "三宅精一", "岡山", "バリアフリー", "再現ドラマ", "ゆっくり", "ずんだもん", "発明"]
+  thumbnail:
+    top: "足の裏で、読む道"
+    bottom: "全財産を黄色に変えた男"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: iwahashi, label: "岩橋英行", voice: 13, pitch: -0.03, item: mustache}
+    - {id: yakunin, label: "役人", voice: 13, pitch: -0.08, item: hat}
+    - {id: seito, label: "盲学校の生徒", voice: 12, hair: short}
+scenes:
+  - id: hook
+    title: ""
+    background: il_tb_st
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "この黄色いデコボコ道、歩くと足つぼで気持ちいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ずんだもん、そこ。立ち止まっちゃだめ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "快適だから、ボク専用の健康ロードなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "専用は合ってる。でも、あなた専用じゃないよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "えっ。じゃあ、誰専用なのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "目の不自由な人が、足の裏で読む道。点字ブロックだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "足の裏で、読む！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "突起の形で、止まれと進めを伝えてるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ただのデコボコじゃ、なかったのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界中の駅や道にあるけど、生まれた場所は日本。岡山だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "岡山！？大企業でも、国の研究所でもなく？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "一人の発明家。自分の財産をつぎ込んで、世界に広めたの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ぜ、全財産……なんで、そこまでしたのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "友だちの目が、見えなくなっていったから。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……悲しい話なのだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ううん、優しい話。今日はその人の物語だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "聞くのだ。……あ、ブロックの上からは、どくのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その一歩の意味も、最後には分かるからね。"
+      - speaker: reimu
+        text: "点字ブロック。目の不自由な人が、足の裏で読む道です。"
+        reading: "てんじぶろっく。めのふじゆうなひとが、あしのうらでよむみちです。"
+      - speaker: reimu
+        text: "作ったのは、岡山の一人の発明家と、その弟でした。"
+        reading: "つくったのわ、おかやまのひとりのはつめいかと、そのおとうとでした。"
+      - speaker: reimu
+        text: "物語は、1963年の岡山から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくろくじゅうさんねんのおかやまからはじまります。"
+  - id: era1963
+    title: "1963・ある交差点で"
+    background: il_tb_kosaten
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三宅", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1963年、岡山。"
+        reading: "せんきゅうひゃくろくじゅうさんねん、おかやま。"
+        video: assets/clips/era_tb1963.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: shokai
+    title: ""
+    background: il_tb_home
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: reimu
+        text: "三宅精一は、岡山で旅館を営む、発明好きの経営者でした。"
+        reading: "みやけせいいちわ、おかやまでりょかんをいとなむ、はつめいずきのけいえいしゃでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "三郎、見てくれ。ナンバープレートの雪を溶かす装置なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "兄さん、また発明か。旅館の仕事はどうしたんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "旅館はやってるのだ。発明は、その合間の倍やってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "威張るところじゃないだろ、それ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "旅館はいいのだ。お客さんの困りごとが、よく見えるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そういえば、階段の手すりも、兄さんが勝手に増やしてたな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "お年寄りのお客さんが、のぼるのに苦労してたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "商売より先に、手が動くんだから、しょうがない人だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世の中の困りごとを見つけると、直したくなる性分なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まあ、兄さんの図面は、おれが形にしてやるけどさ。"
+      - speaker: reimu
+        text: "弟の三郎は、建設の技術者でした。"
+        reading: "おとうとのさぶろうわ、けんせつのぎじゅつしゃでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "兄弟がそろえば、たいていの物は作れるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、次は何を直すんだ？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "それが、まだ見つかってないのだ。町でも歩いて探すのだ。"
+  - id: mokugeki
+    title: ""
+    background: il_tb_kosaten
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.2, tag: "三宅", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "その散歩の途中。交差点で、精一の足が止まりました。"
+        reading: "そのさんぽのとちゅう。こうさてんで、せいいちのあしがとまりました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……あの人、白い杖を持ってるのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "待つのだ、そこは車道……あぶない！"
+      - speaker: zundamon
+        emotion: sad
+        text: "……止まってくれた。車が、気づいてくれたのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "今のは、運が良かっただけなのだ。"
+      - speaker: reimu
+        text: "白い杖の人が、車の前へ出かける場面でした。"
+        reading: "しろいつえのひとが、くるまのまええでかけるばめんでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "歩道と車道の境目に、足で分かる目印が、何もないのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "あの人は毎日、音だけをたよりに、ここを渡ってるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見えないままで、安全に歩ける道。この町には、無いのだ。"
+      - speaker: reimu
+        text: "この光景が、精一の頭を離れなくなります。"
+        reading: "このこうけいが、せいいちのあたまをはなれなくなります。"
+  - id: iwahashi
+    title: "友の告白"
+    background: il_tb_niwa
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: iwahashi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "そのころ三宅家には、セント・バーナードの大きな犬がいました。"
+        reading: "そのころみやけけにわ、せんとばあなあどのおおきないぬがいました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よしよし。今日もごはんを、よく食べるのだ。"
+      - speaker: iwahashi
+        text: "三宅さん、こんにちは。子犬は元気ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "岩橋さん！ちょうど、庭で遊ばせてるのだ。"
+      - speaker: iwahashi
+        text: "足音と息づかいで分かります。ずいぶん、大きくなりましたね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "音で、分かるのだ？"
+      - speaker: iwahashi
+        text: "目の代わりに、耳と手が働いてくれますから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "岩橋さんの世界の感じ方、ボクはまだ、何も知らないのだ。"
+      - speaker: reimu
+        text: "犬の縁で親しくなったのが、岩橋英行。"
+        reading: "いぬのえんでしたしくなったのが、いわはしひでゆき。"
+      - speaker: reimu
+        text: "目の不自由な人の福祉に生涯をかけた、日本ライトハウスの人物です。"
+        reading: "めのふじゆうなひとのふくしにしょうがいをかけた、にほんらいとはうすのじんぶつです。"
+      - speaker: iwahashi
+        text: "三宅さん。今日は、私の目のことで、話があります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……どうしたのだ、あらたまって。"
+      - speaker: iwahashi
+        text: "病気が、進んでいましてね。"
+      - speaker: iwahashi
+        text: "数年のうちに、光を失うそうです。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……岩橋さん。"
+      - speaker: iwahashi
+        text: "怖くないと言えば、うそになります。"
+      - speaker: iwahashi
+        text: "でも私は、見えなくなっても、自分の足で歩きたい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……この前、交差点で見たのだ。白い杖の人が、車道へ。"
+      - speaker: iwahashi
+        text: "珍しいことでは、ありません。毎日、どこかで起きています。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "毎日……。ボクは発明家なのだ。何か、できないのだ？"
+      - speaker: iwahashi
+        text: "安全に、自由に歩ける。それだけで、どれほど救われるか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……決めたのだ。目が見えなくても、安全に歩ける道を作るのだ。"
+      - speaker: reimu
+        text: "安全に、自由に。友の言葉が、開発の出発点になりました。"
+        reading: "あんぜんに、じゆうに。とものことばが、かいはつのしゅっぱつてんになりました。"
+  - id: naze
+    title: "なぜ、道は危険なのか"
+    background: il_tb_home
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "兄さん、道を作るって、どういうことだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三郎、目をつぶって、この部屋を歩いてみるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "よし。……おっと、机にぶつかった。何も分からないな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "白い杖でさぐれるのは、せいぜい一歩先までなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "一歩ごとの手さぐりで、車の走る道を渡るのか……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人は、まわりの情報の8割を、目から得ていると言われるのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "8割……その8割が、まるごと無い状態で外を歩くのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "残りの耳と手と足で、8割ぶんを補ってるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そう聞くと、外を歩くだけで、大仕事だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "音もたよりになる。でも、雨の日や工事中は、かき消されるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たよりの綱が、天気で切れるんじゃ、危なすぎる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "点字があるだろ。指で読む、あの点々。"
+      - speaker: zundamon
+        emotion: normal
+        text: "点字は手で読むものなのだ。歩きながら、地面は触れないのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "地面から情報をもらう方法が、ひとつも無いんだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこなのだ。だから、道そのものに情報を埋め込みたいのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "道が、しゃべるようにするってことか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ここは危ない、こっちは安全。道に言わせるのだ。"
+      - speaker: reimu
+        text: "道そのものを、情報に変える。前例のない発想でした。"
+        reading: "みちそのものを、じょうほうにかえる。ぜんれいのないはっそうでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "言うのは簡単だけどな。どうやって、道に言わせるんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……それを、これから探すのだ。"
+  - id: koke
+    title: "庭のコケが、教えてくれた"
+    background: il_tb_niwa
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: iwahashi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "答えの糸口は、思いがけない場所にありました。"
+        reading: "こたえのいとぐちわ、おもいがけないばしょにありました。"
+      - speaker: iwahashi
+        text: "三宅さん、この庭を歩いていて、気づいたことがあります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんなのだ？"
+      - speaker: iwahashi
+        text: "コケと土の境目が、足の裏で分かるんですよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……くつを、履いたままでもなのだ？"
+      - speaker: iwahashi
+        text: "ええ。感触がまるで違う。見えなくても、境目が分かる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "足の裏は、くつ越しでも、地面を読める……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それなのだ！地面の感触を、合図にするのだ！"
+        se: don
+      - speaker: iwahashi
+        text: "感触を、合図に？"
+      - speaker: zundamon
+        emotion: happy
+        text: "突起を並べたブロックを、道の要所に敷くのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "足の裏でも、杖の先でも分かる、でこぼこの合図なのだ。"
+      - speaker: iwahashi
+        text: "……くつ越しに読める、地面の点字ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "岩橋さん、それだ。名前も、もう決まったのだ。"
+      - speaker: reimu
+        text: "庭のコケの感触から、点字ブロックの発想が生まれました。"
+        reading: "にわのこけのかんしょくから、てんじぶろっくのはっそうがうまれました。"
+  - id: kaihatsu
+    title: "5ミリの答え"
+    background: il_tb_koujou
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "三郎、セメントで試作するのだ。突起つきのブロックなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "よし、まかせろ。で、突起の高さはどうする。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まずは、1センチで作ってみるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "できたぞ。並べて歩いて……おっと、おれがつまずいた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "高すぎるのだ。お年寄りには、転ぶもとになるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ今度は薄く、2ミリだ。……うーん、くつだと分からん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "低すぎても、届かない。……間を、探すのだ。"
+      - speaker: reimu
+        text: "兄が図面を引き、弟が形にする。試作は何十回と続きました。"
+        reading: "あにがずめんをひき、おとうとがかたちにする。しさくわなんじゅっかいとつづきました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "5ミリ前後。このあたりが、ちょうどいいな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "つまずかない。でも、足の裏には、はっきり届くのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "点の数と並べ方も、そろえよう。ばらばらだと読みにくい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "縦横に、きちんと格子で並べるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ばらばらに散らすのと、何が違うんだ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "並びが規則正しいと、踏んだ瞬間に、模様として分かるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なるほど。1点じゃなくて、面で読ませるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どこの町でも同じ形なら、体が覚えてくれるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "雨の日に滑らないかも、確かめないとな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水をまいて、革ぐつで踏む。……よし、すべり止めにもなってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "車いすの車輪に、ひっかからないかもなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "兄さん、細かいねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "命を預かる道具なのだ。妥協は、できないのだ。"
+      - speaker: reimu
+        text: "突起の高さ、数、並び。体で確かめながら、形を決めていきました。"
+        reading: "とっきのたかさ、かず、ならび。からだでたしかめながら、かたちをきめていきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "名前は、点字ブロック。指で読む点字の、地面の親戚なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "いい名前だ。あとは、これをどこに敷くかだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決めてるのだ。目の不自由な生徒が通う、学校のそばなのだ。"
+  - id: era1967
+    title: "1967・世界初の敷設"
+    background: il_tb_gakko
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三宅", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1967年3月18日、岡山。"
+        reading: "せんきゅうひゃくろくじゅうななねんさんがつじゅうはちにち、おかやま。"
+        video: assets/clips/era_tb1967.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: fusetsu
+    title: ""
+    background: il_tb_gakko
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.22, tag: "三宅", flip: true}
+      - {who: seito, x: 0.54}
+      - {who: iwahashi, x: 0.86}
+    cuts:
+      - speaker: reimu
+        text: "盲学校に近い交差点に、精一は自費で作った230枚を寄贈しました。"
+        reading: "もうがっこうにちかいこうさてんに、せいいちわじひでつくったにひゃくさんじゅうまいをきぞうしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "夜のうちに、230枚ぜんぶ運び込んだのだ。"
+      - speaker: iwahashi
+        text: "売り物にせず、寄贈とは。太っ腹ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "最初の一枚は、売り物じゃないのだ。証明なのだ。"
+      - speaker: iwahashi
+        text: "証明、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この道が役に立つと、世の中に見せる証明なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "敷き終わったのだ。……どう、なのだ。"
+      - speaker: seito
+        text: "あの、歩いてみても、いいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "もちろんなのだ。ゆっくりで、いいのだ。"
+      - speaker: seito
+        text: "……足の裏に、点が届きます。"
+      - speaker: seito
+        text: "ここで、止まれ。……車道の手前が、分かります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこが、横断歩道の入り口なのだ。"
+      - speaker: seito
+        text: "…………渡れました。一人で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……よかったのだ。ほんとうに、よかったのだ。"
+      - speaker: seito
+        text: "いつもは、誰かが来るのを待って、いっしょに渡るんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これからは、待たなくていいのだ。"
+      - speaker: seito
+        text: "……はい。行きたいときに、行けます。"
+      - speaker: iwahashi
+        text: "三宅さん。これは、道が変わりますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まだ230枚なのだ。ここから、[日本中|にほんじゅう]に広げるのだ。"
+      - speaker: iwahashi
+        text: "私たちの足元に、光をともしてくれましたね。"
+      - speaker: reimu
+        text: "世界で初めての点字ブロックが、岡山の交差点に生まれました。"
+        reading: "せかいではじめてのてんじぶろっくが、おかやまのこうさてんにうまれました。"
+  - id: fugu
+    title: "売れない黄色"
+    background: il_tb_yakusho
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: yakunin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "しかし、時代は動きませんでした。"
+        reading: "しかし、じだいわうごきませんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "役所のみなさん。これが、点字ブロックなのだ。"
+      - speaker: yakunin
+        text: "ほう。……で、これを、うちに買えと？"
+      - speaker: zundamon
+        emotion: normal
+        text: "町の交差点に、敷いてほしいのだ。命を守る道なのだ。"
+      - speaker: yakunin
+        text: "予算が、ありません。前例も、ありません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "前例なら、岡山でボクが作ったのだ。"
+      - speaker: yakunin
+        text: "よその県の話でしょう。うちには、うちのやり方が。"
+      - speaker: zundamon
+        emotion: normal
+        text: "では、どこに相談すれば、いいのだ？"
+      - speaker: yakunin
+        text: "道路のことなら、道路の課へ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "道路の課には、福祉のことは福祉の課へ、と言われたのだ。"
+      - speaker: yakunin
+        text: "……それは、また道路の課へ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ぐるぐる回って、誰も受け取ってくれないのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……このブロックの上を、歩く人の話を、聞いてほしいのだ。"
+      - speaker: yakunin
+        text: "お気持ちは、分かりますがね。福祉に回すお金は、無いのです。"
+      - speaker: reimu
+        text: "福祉という言葉が、まだ社会に根付いていない時代でした。"
+        reading: "ふくしということばが、まだしゃかいにねづいていないじだいでした。"
+  - id: fugu2
+    title: ""
+    background: il_tb_home
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: tsumugi
+        emotion: sad
+        text: "兄さん。今月も、注文はゼロだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……倉庫に、ブロックの山だけが増えていくのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "旅館の稼ぎも貯金も、ほとんどブロックに消えてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "承知の上なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "セメント代も型代も、ぜんぶ持ち出しだ。売り上げは、ない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "作れば作るほど、財布が軽くなる商売なのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "商売って言わないんだよ、それは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、先行投資なのだ。時代のほうが、遅れてるだけなのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "このままだと、家が傾く。もう、やめどきじゃないのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……三郎。敷設の日を、覚えてるか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "生徒さんが、一人で渡った日か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの一歩を見て、やめられる人間が、いると思うか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……言うと思ったよ。分かった。とことん、付き合う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "すまないのだ。財布ごと、心中なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "縁起でもないこと言うな。売れるまで作るだけだ。"
+      - speaker: reimu
+        text: "精一は私財を注ぎ続け、資金は何度も底をつきかけました。"
+        reading: "せいいちわしざいをそそぎつづけ、しきんわなんどもそこをつきかけました。"
+  - id: sekai_shokai
+    title: ""
+    background: il_tb_niwa
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: iwahashi, x: 0.72}
+    cuts:
+      - speaker: iwahashi
+        text: "三宅さん。世界の福祉の会議で、点字ブロックを紹介しました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "世界……海の向こうで、なのだ？"
+      - speaker: iwahashi
+        text: "各国の専門家が、口をそろえましたよ。これは発明だと。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……うれしいのだ。でも、少し複雑なのだ。"
+      - speaker: iwahashi
+        text: "国内より先に、世界が気づいてしまいましたね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "日本の道に敷けない発明が、海の向こうで褒められてるのだ。"
+      - speaker: iwahashi
+        text: "大丈夫。いいものには、時代のほうが追いつきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その日まで、作り続けるのだ。"
+      - speaker: reimu
+        text: "岩橋は点字ブロックを世界の会議で紹介し、賞賛を受けました。"
+        reading: "いわはしわてんじぶろっくをせかいのかいぎでしょうかいし、しょうさんをうけました。"
+  - id: tenki
+    title: "1万枚の電話"
+    background: il_tb_tokyo
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: reimu
+        text: "転機は、東京から来ました。"
+        reading: "てんきわ、とうきょうからきました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "兄さん、東京から電話だ！高田馬場が、交通安全のモデル地区になる！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "高田馬場……目の不自由な人の施設が集まる町なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "点字の図書館も、働く場所もある。あの町を歩く人は多い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "日本でいちばん、この道を待ってる町なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その一帯の道に、点字ブロックを敷きたいそうだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何枚、なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "1万枚。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "い、1万！？岡山の最初は、230枚だったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "40倍以上だ。倉庫の山が、ぜんぶ道になる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "作るのだ。工場、フル回転なのだ！"
+      - speaker: reimu
+        text: "1972年、高田馬場一帯に、およそ1万枚が敷かれました。"
+        reading: "せんきゅうひゃくななじゅうにねん、たかだのばばいったいに、およそいちまんまいがしかれました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "兄さん、東京から手紙だ。毎日あの道を使ってます、って。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……岡山の庭から生まれた道を、東京の人が歩いてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "公費で敷かれたのが、大きい。役所が認めた、ってことだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "時代が、追いついてきたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "翌年には、国が福祉の予算を増やした。風向きが変わったな。"
+      - speaker: reimu
+        text: "1974年には建設省が研究に協力。国のお墨付きを得ました。"
+        reading: "せんきゅうひゃくななじゅうよねんにわけんせつしょうがけんきゅうにきょうりょく。くにのおすみつきをえました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そして、新しい仲間も作ったのだ。線のブロックなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "点で止まれ、線で進め。これで、そろったな。"
+  - id: kinds_clip
+    title: ""
+    background: il_tb_tokyo
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三宅", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "点は、警告。線は、誘導。2種類で、道は言葉になります。"
+        reading: "てんわ、けいこく。せんわ、ゆうどう。にしゅるいで、みちわことばになります。"
+        video: assets/clips/tb_kinds.mp4
+        video_full: true
+  - id: kinds2
+    title: ""
+    background: il_tb_tokyo
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "点のブロックは、この先に注意。止まって確かめろ、の合図。"
+      - speaker: zundamon
+        emotion: normal
+        text: "交差点の手前や、階段の前に敷くのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "線のブロックは、この向きに進め。安全な道筋の合図だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "線をたどれば、駅から学校まで、道がつながるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たった2種類。だから、体で覚えられる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "シンプルこそが、命を守る設計なのだ。"
+  - id: homu
+    title: "ホームの端の、命綱"
+    background: il_tb_homu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: reimu
+        text: "1970年には、大阪の駅のホームに、初めて敷かれました。"
+        reading: "せんきゅうひゃくななじゅうねんにわ、おおさかのえきのほおむに、はじめてしかれました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "駅のホームは、目の不自由な人に、いちばん怖い場所なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "柵のない崖っぷちを歩くようなもの、と言われるんだよな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ホームの端に点のブロックがあれば、崖の縁が分かるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "アナウンスの、黄色い線の内側。あの線のことだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "毎日、何百万人もの足元を、静かに守ってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "目の見える人の転落も、あの点が減らしてるんだよな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "みんなの命綱に、なっていったのだ。"
+  - id: graph_clip
+    title: ""
+    background: il_tb_homu
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "三宅", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "230枚から、1万枚へ。そして、およそ75の国へ広がりました。"
+        reading: "にひゃくさんじゅうまいから、いちまんまいえ。そして、およそななじゅうごのくにえひろがりました。"
+        video: assets/clips/tb_graph.mp4
+        video_full: true
+  - id: bannen
+    title: "兄さんの道"
+    background: il_tb_home
+    bgm: amacha_hoshizora
+    stage:
+      - {who: zundamon, x: 0.24, tag: "三宅", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三郎"}
+    cuts:
+      - speaker: reimu
+        text: "全国に広がり始めたころ、精一の体は、病に蝕まれていました。"
+        reading: "ぜんこくにひろがりはじめたころ、せいいちのからだわ、やまいにむしばまれていました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "兄さん、今日は休んでろ。工場は、おれが見る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……窓から、通りが見えるのだ。黄色い道の上を、人が歩いてる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ああ。白い杖の人が、毎朝あそこを通る。"
+      - speaker: zundamon
+        emotion: happy
+        text: "誰にも付き添われずに、すたすた歩いていくのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "兄さんが見たかった景色が、窓の外にあるんだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……三郎。ブロックはまだ、日本の一部にしか無いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "分かってる。続きは、おれがやる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "形も、まだ町ごとに、ばらばらなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全国どこでも同じ形。それが、仕上げだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "頼んだのだ。……なあ、三郎。いい発明だったろ、これ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ああ。兄さんの人生で、いちばんの発明だよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "全財産と引き換えでも、安い買い物だったのだ。"
+      - speaker: reimu
+        text: "1982年7月。三宅精一、永眠。56歳でした。"
+        reading: "せんきゅうひゃくはちじゅうにねんしちがつ。みやけせいいち、えいみん。ごじゅうろくさいでした。"
+        pause_after: 0.8
+      - speaker: tsumugi
+        emotion: normal
+        text: "……兄さんの道は、終わらせない。"
+      - speaker: reimu
+        text: "兄の遺志を、弟が継ぎました。"
+        reading: "あにのいしを、おとうとがつぎました。"
+        pause_after: 0.6
+  - id: jis
+    title: "仕上げの規格"
+    background: il_tb_koujou
+    bgm: you_and_me
+    stage:
+      - {who: tsumugi, x: 0.7, tag: "三郎"}
+    cuts:
+      - speaker: reimu
+        text: "普及が進むほど、新しい問題が生まれていました。"
+        reading: "ふきゅうがすすむほど、あたらしいもんだいがうまれていました。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "町ごとに、突起の形がばらばらだ。これじゃ、読み間違える。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作る会社が増えて、それぞれ勝手な形で売り始めたからな。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "似て非なる点が町ごとに違えば、体で覚えた読みが狂う。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "岡山で覚えた足が、東京で迷ったら、意味がない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "点の大きさも、高さも、全国で統一する。"
+      - speaker: reimu
+        text: "2001年。突起の形と配列が、国の規格として統一されました。"
+        reading: "にせんいちねん。とっきのかたちとはいれつが、くにのきかくとしてとういつされました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……兄さん。やっと、仕上げができたよ。"
+  - id: jis_clip
+    title: ""
+    background: il_tb_koujou
+    bgm: you_and_me
+    stage:
+      - {who: tsumugi, x: 0.15, tag: "三郎"}
+    cuts:
+      - speaker: reimu
+        text: "1辺30センチ、点は5かける5、高さ5ミリ。どの町でも、同じ形です。"
+        reading: "いっぺんさんじゅっせんち、てんわごかけるご、たかさごみり。どのまちでも、おなじかたちです。"
+        video: assets/clips/tb_jis.mp4
+        video_full: true
+  - id: iro
+    title: "なぜ、黄色なのか"
+    background: il_tb_sekai
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。"
+        reading: "ときわながれて、げんだい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ところで、なんで黄色だと思う？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "足の裏で読む道なのに、色が要るのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見えにくい人と、全く見えない人は、違うんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……そうか。ぼんやりなら見える人も、たくさんいるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "弱視の人にはね、灰色の道の上で、黄色がいちばん浮いて見えるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "たしかに、暗い道でも、あの黄色だけは目に飛び込んでくるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まわりの道より明るく目立つこと、って国の指針にもあるんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "足の裏と、杖の先と、目。三重の合図だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "2012年には、日本の規格をもとに、国際規格もできたよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "岡山生まれの形が、世界の標準になったのだ。"
+      - speaker: reimu
+        text: "点字ブロックは今、およそ75の国で使われています。"
+        reading: "てんじぶろっくわいま、およそななじゅうごのくにでつかわれています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ロンドンでも、ニューヨークでも、あの黄色が道を教えてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たった一人の思いつきが、世界の足元を変えたんだね。"
+  - id: jitsuyou
+    title: "私たちに、できること"
+    background: il_tb_st
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に、私たちにできることの話。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ブロックの上に、立ち止まらないこと。冒頭のボクなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。あそこで立ち止まると、誰かの道をふさいじゃう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "スマホを見ながらブロックの上を歩くのも、あぶないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。あの線の上は、よけられない人が通る道だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "自転車や看板を、上に置くのも、だめなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "線の上の障害物は、見えない人には、突然の壁だからね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "もし、白い杖の人が困ってたら、どうすればいいのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "正面から、何かお手伝いしましょうか、って声をかけるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いきなり腕をつかむのは、びっくりさせるから、だめなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "よく知ってるね。こちらの肩や腕に、つかまってもらうのが基本。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ブロックを空けて、困ってたら声をかける。それだけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それだけで、あの黄色い道は、ちゃんと働ける。"
+      - speaker: reimu
+        text: "道は、敷いた人と、使う人と、ゆずる人とで、できています。"
+        reading: "みちわ、しいたひとと、つかうひとと、ゆずるひととで、できています。"
+  - id: musubi
+    title: ""
+    background: il_tb_st
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "駅までの黄色い道、今日から違って見えるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あの一枚一枚が、岡山の兄弟の全財産と、執念だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "始まりは、友だちの、歩きたいという一言なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "庭のコケの感触に気づいた、友だちもすごいんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "岡山の230枚が、75の国に広がったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "優しさって、ちゃんと広がるんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しかも、発明した人の名前は、ほとんど知られてないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "名前は残らなくても、道は残った。それでいいって笑いそうだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "明日から、黄色い道の上を、空けて歩くのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あの黄色は、誰かの目なのだ！"
+        telops:
+          - {text: "黄色いブロックは、誰かの目", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、あなたの町の点字ブロックの話も、教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
