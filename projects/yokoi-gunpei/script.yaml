@@ -1,0 +1,992 @@
+# 横井軍平再現ドラマ・ミーム版（1965→現代）。投稿前に必ず目視レビュー。
+# 新方針: ミーム版のみ1本。センシティブ場面(死去jiko・バーチャルボーイの失敗の核)はクリーン維持。
+# 故人だが遺族が存命のため、公知エピソードのみ・敬意ある描写。事故の詳細は「交通事故で急逝」に留める。
+# 裏取り: 横井軍平Wikipedia/ASCII記事/本人著書の広く知られた逸話。
+# 1941京都生・同志社大電気工学科・1965入社(設備保守)・ウルトラハンド(山内社長が見つけ商品化・
+# 120万個と言われる)・ラブテスター/光線銃・新幹線で電卓のサラリーマン→ゲーム&ウォッチ1980
+# (4340万個と言われる)・十字キー考案(ゲーム&ウォッチ版ドンキーコング・特許)・ゲームボーイ1989
+# (12500円・単3電池4本で約35時間と言われる・白黒液晶・通信ケーブル・シリーズ累計約1億1900万台)・
+# テトリス北米同梱・ポケモン1996・バーチャルボーイ1995→1996自主退社・コト設立・1997交通事故死56歳
+meta:
+  title: "白黒画面で、世界を取った男。ゲームボーイの父・横井軍平【ゆっくり再現ドラマ・ミーム版】"
+  slug: "yokoi-gunpei"
+  summary: "ゲームボーイの父・横井軍平の物語。任天堂の設備保守係だった青年が、暇つぶしに作ったおもちゃを社長に見つかり、クビを覚悟した社長室で「商品化しろ」の一言。ウルトラハンドの大ヒットから、新幹線で電卓をいじるサラリーマンに着想したゲーム&ウォッチ、いまも全てのゲーム機に生きる十字キー、そしてカラー全盛の時代にあえて白黒液晶で世界1億台を売ったゲームボーイまで。「枯れた技術の水平思考」を貫いた開発者の実話を、ずんだもんが横井を演じる再現ドラマ・ミーム版でお届けします。"
+  tags: ["横井軍平", "ゲームボーイ", "任天堂", "ゲームアンドウォッチ", "枯れた技術の水平思考", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "白黒画面で"
+    bottom: "世界を取った男"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: yamauchi, label: "山内社長", voice: 13, pitch: -0.07, item: mustache}
+    - {id: salaryman, label: "サラリーマン", voice: 13, pitch: 0.02, item: hat}
+    - {id: kodomo, label: "子ども", voice: 12, hair: short}
+scenes:
+  - id: hook
+    title: ""
+    background: il_yg_living
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "見るのだ、この携帯ゲーム機。グラフィックが実写レベルなんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "きれいだね。じゃあ、その先祖の話をしようか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先祖？どうせ昔も、最新技術の塊だったんだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "逆。世界でいちばん売れた携帯ゲーム機のひとつは、白黒画面だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "白黒！？カラーもない画面で、世界を取ったのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。ゲームボーイ。シリーズ累計、約1億1900万台。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1億！？レトロ機のくせに、販売数が壊れてるんだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも当時、ライバルは全部カラー画面だったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "カラー相手に白黒で勝負？縛りプレイにもほどがあるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その縛りこそが、勝因だったんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……何を言っているのか、分からないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作ったのは、もともとゲームと関係ない、機械の保守係さん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "保守係！？初期配置から主人公になったのか？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "暇つぶしのおもちゃが、社長にバレたところから始まるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "バレて、クビじゃなくて、伝説になるのか……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日はその人の話。電源を入れながら、聞いていこう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。白黒で勝つ方法、ボクも知りたいぞ。"
+      - speaker: reimu
+        text: "ゲームボーイ。白黒の画面で、世界一売れた携帯ゲーム機のひとつです。"
+        reading: "げーむぼーい。しろくろのがめんで、せかいいちうれたけいたいげーむきのひとつです。"
+      - speaker: reimu
+        text: "生んだのは、機械の保守係から始まった一人の開発者でした。"
+        reading: "うんだのわ、きかいのほしゅがかりからはじまったひとりのかいはつしゃでした。"
+      - speaker: reimu
+        text: "物語は、1965年の京都から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくろくじゅうごねんのきょうとからはじまります。"
+  - id: era1965
+    title: "1965・京都"
+    background: il_yg_kojo
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "横井", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1965年、京都。"
+        reading: "せんきゅうひゃくろくじゅうごねん、きょうと。"
+        video: assets/clips/era_yg1965.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: hozen
+    title: ""
+    background: il_yg_kojo
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "横井軍平は、大学の電気工学科を出て、任天堂に入社しました。"
+        reading: "よこいぐんぺいわ、だいがくのでんきこうがっかをでて、にんてんどうににゅうしゃしました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "横井くん、今日の点検は終わったのかい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "午前中に、ぜんぶ終わったんだ。"
+      - speaker: reimu
+        text: "当時の任天堂は、トランプや花札を作る会社でした。"
+        reading: "とうじのにんてんどうわ、とらんぷやはなふだをつくるかいしゃでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うちはカードの会社だから、電気設備は多くないしね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "花札の印刷機を、たまに直すくらいなんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "電気工学科を出て、花札の会社に入る人も珍しいよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "京都で暮らしたかったのだ。それが第一条件だったんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ゆるい志望動機だなあ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "機械が壊れないと、ボクの仕事は、ないんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "つまり、暇ってことかい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そう。暇すぎて、経験値がまったく入らないんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから……工場の道具を借りて、こんな物を作ったのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "格子が伸び縮みして……先のツメで、物がつかめる！"
+      - speaker: zundamon
+        emotion: normal
+        text: "ほら、あそこのハンコ。取ってみせるのだ。……ほい。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "おお、届いた。席から動かずに取れた。"
+      - speaker: zundamon
+        emotion: happy
+        text: "マジックハンドだ。離れた物を、これでキャッチするんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白いなあ。……あっ、横井くん、後ろ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ん？"
+      - speaker: tsumugi
+        emotion: sad
+        text: "しゃ、社長……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "…………詰んだ。"
+      - speaker: reimu
+        text: "勤務中の工作を、社長の山内溥に見られてしまいました。"
+        reading: "きんむちゅうのこうさくを、しゃちょうのやまうちひろしにみられてしまいました。"
+  - id: shacho
+    title: "社長室への、呼び出し"
+    background: il_yg_shacho
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: yamauchi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "翌日、横井は社長室に呼び出されます。"
+        reading: "よくじつ、よこいわしゃちょうしつによびだされます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "（終わった……ボクの社会人生活、1年でゲームオーバーなのだ。）"
+      - speaker: yamauchi
+        text: "横井くん。昨日の、あれを持ってきたか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "[は|ハ]、はい……。勤務中に、申し訳ありませんでした！"
+      - speaker: yamauchi
+        text: "……ふむ。伸びて、つかんで、縮む、と。"
+      - speaker: zundamon
+        emotion: sad
+        text: "処分は、覚悟しています……。"
+      - speaker: yamauchi
+        text: "……横井くん。これで遊んでいるとき、楽しかったか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。正直、夢中になってました。"
+      - speaker: yamauchi
+        text: "同僚たちも、面白がっていたな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[は|ハ]、はい。取り合いに、なってました……。"
+      - speaker: yamauchi
+        text: "それを、商品にしろ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "…………は？"
+      - speaker: yamauchi
+        text: "面白いものは、売れる。おもちゃとして、仕上げてみろ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "クビじゃ、ないんですか！？"
+      - speaker: yamauchi
+        text: "怒られると思ったか。うちは、面白いものを作る会社だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "や、やりますなのだ！全力で、やらせてもらうのだ！"
+      - speaker: reimu
+        text: "処分どころか、まさかの商品化命令でした。"
+        reading: "しょぶんどころか、まさかのしょうひんかめいれえでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "（怒られる流れから、大抜擢……人生、何が起きるか分からないのだ。）"
+  - id: hit
+    title: "ウルトラハンド、爆売れ"
+    background: il_yg_mise
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: kodomo, x: 0.6}
+      - {who: tsumugi, x: 0.86, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "1966年。おもちゃは、ウルトラハンドとして発売されました。"
+        reading: "せんきゅうひゃくろくじゅうろくねん。おもちゃわ、うるとらはんどとしてはつばいされました。"
+      - speaker: kodomo
+        text: "お母さん、これ！これ買って！みんな持ってるんだ！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "売り場から、どんどん消えていくのだ……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "横井くん、すごい勢いだ。工場がフル回転だってさ。"
+      - speaker: reimu
+        text: "ウルトラハンドは、120万個を売ったと言われる大ヒットになりました。"
+        reading: "うるとらはんどわ、ひゃくにじゅうまんこをうったといわれるだいひっとになりました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "暇つぶしの工作が、120万個……バグみたいな数字なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コピー品まで出回ってるらしいのだ。人気の証明なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "会社も、君を保守係にしておく気は、もう無いみたいだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "えっ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "開発部に、異動だってさ。おもちゃを作る側だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "保守係から開発へ……転職なしで、転職なのだ。"
+      - speaker: reimu
+        text: "横井は開発の担当となり、玩具を次々と生み出していきます。"
+        reading: "よこいわかいはつのたんとうとなり、がんぐをつぎつぎとうみだしていきます。"
+  - id: omocha
+    title: ""
+    background: il_yg_kaihatsu
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "次は、部屋の中で野球ができるマシンだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ふわっと飛ぶボールなら、家の中でも打てるってわけか。"
+      - speaker: reimu
+        text: "ウルトラマシンも、続けてヒット。"
+        reading: "うるとらましんも、つづけてひっと。"
+      - speaker: zundamon
+        emotion: happy
+        text: "次は、手をつなぐと針が動く、ラブテスターなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "針が動くのは、手の湿り気で電気が流れるからだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "仕組みは、理科の実験レベル。枯れきった技術なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "これ、科学というより、口実の発明だよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手をつなぐ理由を、機械が作ってあげる。優しさなんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "太陽電池を使った、光線銃も当たったねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "光で的を撃つ。火薬より安全で、未来っぽいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "太陽電池も、当時はもう値段がこなれてた部品だしね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "高い部品はひとつも無い。でも、遊びは新しいんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "とはいえ、全部が当たったわけじゃないよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "外れも山ほどあるのだ。でも、打席に立ち続けるんだ。"
+      - speaker: reimu
+        text: "どの玩具にも、共通の考え方がありました。"
+        reading: "どのがんぐにも、きょうつうのかんがえかたがありました。"
+  - id: tetsugaku
+    title: "枯れた技術の、水平思考"
+    background: il_yg_kaihatsu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "横井くんの発明って、実は最新技術を使ってないよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこが、狙いだ。ボクは、枯れた技術しか使わないんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "枯れた技術？しおれてるの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "枯れた技術は、世に出て時間がたって、こなれた技術のことなのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作り方が確立してて、安くて、めったに壊れないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たしかに、最新技術は高いし、不具合も多い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "最新での勝負は、資金が多い大企業の課金ゲーなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "じゃあ、枯れた技術で、どう新しさを出すの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "使い道を、横にずらすのだ。それが、水平思考なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電卓の部品も、使い道を変えれば、おもちゃになるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "電卓、数年前は高級品だったのに、いまや誰でも持ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "量産合戦のおかげで、液晶もチップも激安になったのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "つまり、値崩れした戦場の技術を、別の戦場で使うのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "性能を上げるんじゃなくて、使い方を発明するのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "枯れた技術の水平思考。これが、ボクの必勝法なのだ。"
+      - speaker: reimu
+        text: "安くて確実な技術に、新しい遊びをさせる。横井の哲学でした。"
+        reading: "やすくてかくじつなぎじゅつに、あたらしいあそびをさせる。よこいのてつがくでした。"
+  - id: tetsugaku_clip
+    title: ""
+    background: il_yg_kaihatsu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "横井", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "性能を縦に伸ばすのではなく、使い道を横に広げる考え方です。"
+        reading: "せえのうをたてにのばすのでわなく、つかいみちをよこにひろげるかんがえかたです。"
+        video: assets/clips/yg_tetsugaku.mp4
+        video_full: true
+  - id: shinkansen
+    title: "新幹線の、電卓"
+    background: il_yg_train
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: salaryman, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1970年代の末。転機は、出張帰りの新幹線で訪れます。"
+        reading: "せんきゅうひゃくななじゅうねんだいのすえ。てんきわ、しゅっちょうがえりのしんかんせんでおとずれます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "（東京出張、疲れたのだ……京都まで、ひと眠り……。）"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（……ん？隣の席の人、さっきから何をしてるのだ？）"
+      - speaker: salaryman
+        text: "……ふむ。……ほう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（電卓を、カチカチ、カチカチ……仕事、ではなさそうなのだ。）"
+      - speaker: zundamon
+        emotion: surprised
+        text: "（あの人、電卓のボタンで、遊んでるのだ！）"
+      - speaker: salaryman
+        text: "……ふっ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（大人が、真剣に暇をつぶしてる。おもちゃも持たずに……。）"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（大人がポケットに入れて持ち歩ける、遊び道具があったら……。）"
+      - speaker: zundamon
+        emotion: surprised
+        text: "（電卓の部品で、ゲーム機が作れるのだ！）"
+        se: don
+      - speaker: zundamon
+        emotion: thinking
+        text: "（よく見れば、あちこちの席で、大人が暇を持て余してるのだ。）"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（新聞を3回読み直す人。窓の外を眺め続ける人……。）"
+      - speaker: zundamon
+        emotion: normal
+        text: "（この退屈こそ、日本最大の空白市場かもしれないのだ。）"
+      - speaker: reimu
+        text: "電卓で暇をつぶす大人の姿が、発想のスイッチでした。"
+        reading: "でんたくでひまをつぶすおとなのすがたが、はっそうのすいっちでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "（電卓の液晶とチップ。枯れて、安くなりきった技術……。）"
+      - speaker: zundamon
+        emotion: happy
+        text: "（水平思考の、出番なのだ。京都に着いたら、即開発なのだ。）"
+  - id: gw
+    title: "ゲーム&ウォッチ"
+    background: il_yg_kaihatsu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "電卓の液晶と、電卓のチップで、ゲーム機を作るのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "電卓の部品で？性能、足りるのかい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "凝ったゲームは無理だ。でも、それでいいんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "片手サイズで、薄くて、電池が何か月ももつ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スーツの胸ポケットに、すっと入る薄さだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボタン電池2個で、数か月動く。充電という概念すら不要なのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "電卓の技術って、そんなに省エネだったんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "時計も付けるのだ。ただの遊び道具じゃない、が言い訳になるんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "大の大人がゲームなんて、と言われる時代だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "腕時計代わりです、で堂々と会議にも置けるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "名前もゲーム&ウォッチ。時計が主役みたいな顔してる。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "大人が堂々と買える口実か。ラブテスターと同じ手だね。"
+      - speaker: reimu
+        text: "1980年、ゲーム&ウォッチ発売。"
+        reading: "せんきゅうひゃくはちじゅうねん、げーむあんどうぉっちはつばい。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "横井くん、売り切れ続出だ。海外からも注文が止まらない！"
+      - speaker: zundamon
+        emotion: happy
+        text: "枯れた技術が、世界で無双してるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "経営が苦しかった会社も、これで一気に立て直しだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新幹線の、あの電卓おじさんのおかげなのだ。"
+      - speaker: reimu
+        text: "ゲーム&ウォッチは、世界で4340万個を売ったと言われています。"
+        reading: "げーむあんどうぉっちわ、せかいでよんせんさんびゃくよんじゅうまんこをうったといわれています。"
+  - id: juji
+    title: "十字キー、爆誕"
+    background: il_yg_kaihatsu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "ゲーム&ウォッチは、もうひとつの発明を生みます。"
+        reading: "げーむあんどうぉっちわ、もうひとつのはつめいをうみます。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "次のゲーム&ウォッチ、キャラを上下左右に動かしたいんだけど。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ボタンを4つ並べると、ごちゃごちゃして、押し間違えるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ジョイスティックは、薄い本体に入らないしね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "試作の4ボタン版、遊んでもらったら、誤爆だらけだったよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "画面を見ながらだと、指がボタンの位置を見失うのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "手元を見ずに、押し分けられる形が要るんだね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "4方向をひとつにまとめて、親指1本で……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "十字なのだ。十字の形のボタンにするのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "端を押せば、その方向。中央はシーソーで、誤爆もしない！"
+      - speaker: zundamon
+        emotion: normal
+        text: "真ん中を支点にしてるから、同時押しが物理的に起きないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "構造そのものが、操作ミスを消してくれるんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "親指の腹に、ぴったり収まる大きさなのだ。"
+      - speaker: reimu
+        text: "十字キーの誕生です。特許も取得しました。"
+        reading: "じゅうじきーのたんじょうです。とっきょもしゅとくしました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この十字、今のゲーム機のコントローラーにも、全部いるよね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "40年たっても現役。殿堂入りの発明なのだ。"
+  - id: era1989
+    title: "1989・ゲームボーイ"
+    background: il_yg_kaihatsu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "横井", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1989年、京都。"
+        reading: "せんきゅうひゃくはちじゅうきゅうねん、きょうと。"
+        video: assets/clips/era_yg1989.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: gb
+    title: ""
+    background: il_yg_kaihatsu
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "次の課題は、カセットを差し替えられる、携帯ゲーム機でした。"
+        reading: "つぎのかだいわ、かせっとをさしかえられる、けいたいげーむきでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "他社の試作情報だと、ライバルは全部、カラー液晶らしい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だろうな。カラーのほうが、見た目は強いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うちも当然、カラーでいくんだよね？"
+      - speaker: zundamon
+        emotion: normal
+        text: "いや。白黒でいくのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "白黒！？この時代に！？正気かい！？"
+      - speaker: zundamon
+        emotion: normal
+        text: "正気だ。むしろ、カラーのほうが無謀なんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "社内でも、地味すぎるって声が出てるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だろうな。白黒は、宣伝写真でも地味に写るのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "隣にカラーが並んだら、店頭で見劣りしないかい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見た目の派手さは、店では勝てる。でも、家で負けるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "家で負ける……？"
+      - speaker: zundamon
+        emotion: normal
+        text: "考えてみてほしいのだ。これで遊ぶのは、誰なのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……子ども、だね。お小遣いと、お年玉の世界だ。"
+      - speaker: reimu
+        text: "横井には、勝ち筋がはっきり見えていました。"
+        reading: "よこいにわ、かちすじがはっきりみえていました。"
+  - id: naze_kuro
+    title: "なぜ、白黒で勝てるのか"
+    background: il_yg_kaihatsu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "白黒が有利な理由、ちゃんと聞かせてよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "第一に、電池だ。カラー液晶は、電気を食いまくるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "カラーだと、電池が数時間しかもたないって話だね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "遠足の帰りのバスで、電池が切れたら、どうなると思う？"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……ただの板を握りしめた子どもが、爆誕する。"
+      - speaker: zundamon
+        emotion: normal
+        text: "白黒なら、単3電池4本で、35時間くらい遊べる設計にできるのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "毎日1時間で、ひと月。桁がひとつ違う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "第二に、値段だ。枯れた白黒液晶なら、安く作れる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "目標は？"
+      - speaker: zundamon
+        emotion: normal
+        text: "1万2500円。お年玉で、手が届く値段にするんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "カラー勢は、その倍近くになるだろうね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "第三に、頑丈さだ。子どもは、絶対に落とすんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枯れた部品は、衝撃にも強い。修理も安い。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "でも白黒だと、絵が寂しくならないかい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "濃さを4段階に分けるのだ。影も立体感も、ちゃんと出せるんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ゲームを作る会社側には、メリットあるの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "白黒でシンプルなら、ソフトも安く早く作れるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作りやすい機械には、ゲームがたくさん集まるね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "遊びの数こそ、ゲーム機の本体なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "画面の色より、長く遊べて、買えて、壊れないこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "子どもにとっての最強スペックは、そっちなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……なるほど。派手さを捨てて、実を全部取るのか。"
+      - speaker: reimu
+        text: "性能表の数字ではなく、遊ぶ子どもの一日から設計されていました。"
+        reading: "せえのうひょうのすうじでわなく、あそぶこどものいちにちからせっけえされていました。"
+  - id: gb_clip
+    title: ""
+    background: il_yg_kaihatsu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "横井", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "白黒だから、安く、長く、頑丈に。逆転の成績表です。"
+        reading: "しろくろだから、やすく、ながく、がんじょうに。ぎゃくてんのせえせきひょうです。"
+        video: assets/clips/yg_gb.mp4
+        video_full: true
+  - id: hatsubai
+    title: "発売、そして通信ケーブル"
+    background: il_yg_mise
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: kodomo, x: 0.6}
+      - {who: tsumugi, x: 0.86, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "1989年4月、ゲームボーイ発売。"
+        reading: "せんきゅうひゃくはちじゅうきゅうねんしがつ、げーむぼーいはつばい。"
+      - speaker: kodomo
+        text: "テトリスの対戦しよ！ケーブル、持ってきた！"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれが、通信ケーブルなのだ。2台をつなぐと、対戦できるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "友だちと繋がる遊びって、当時は画期的だったんだよね。"
+      - speaker: kodomo
+        text: "やった、勝った！もう1回、もう1回！"
+      - speaker: zundamon
+        emotion: happy
+        text: "画面が白黒でも、遊びは極彩色なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "通勤電車でやってる大人も、けっこう見かけるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新幹線の電卓おじさんの需要は、健在なのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "問屋さんから、追加の注文が山積みだ。生産が追いつかない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うれしい悲鳴、というやつなのだ。"
+      - speaker: reimu
+        text: "海外ではテトリスを同梱。社会現象のヒットになりました。"
+        reading: "かいがいでわてとりすをどうこん。しゃかいげんしょうのひっとになりました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "横井くん、カラーのライバル機、次々と市場から消えてるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電池切れと、値段には、勝てなかったんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "白黒への不安、見事にひっくり返したね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "派手なスペックより、遊ぶ人の一日。それだけなのだ。"
+  - id: pokemon
+    title: "白黒画面の、大逆転"
+    background: il_yg_mise
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: kodomo, x: 0.6}
+      - {who: tsumugi, x: 0.86, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "発売から7年目の1996年。伝説の追い風が吹きます。"
+        reading: "はつばいからななねんめのせんきゅうひゃくきゅうじゅうろくねん。でんせつのおいかぜがふきます。"
+      - speaker: kodomo
+        text: "ポケモン交換しよう！ケーブルつないで！"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "ポケットモンスターが、爆発的に売れてる。7年前の本体ごと。"
+      - speaker: zundamon
+        emotion: happy
+        text: "通信ケーブルが、交換と対戦の必須アイテムになったんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "古い機械が、新しい遊びで、もう一度主役になるんだね。"
+      - speaker: reimu
+        text: "ゲームボーイのシリーズ累計は、約1億1900万台にのぼりました。"
+        reading: "げーむぼーいのしりーずるいけえわ、やくいちおくせんきゅうひゃくまんだいにのぼりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "発売から7年たった機械が、また品切れになるなんてね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "通信ケーブルを最初から用意してた、過去のボクを褒めたいのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "白黒の箱が、1億台。枯れた技術の、完全勝利なのだ。"
+  - id: vb
+    title: "挑戦と、失敗"
+    background: il_yg_kaihatsu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "横井", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "しかし、勝ち続けた横井にも、うまくいかない日は来ます。"
+        reading: "しかし、かちつづけたよこいにも、うまくいかないひわきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次は、立体映像のゲーム機に挑戦するぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "赤い光で、目の前に絵が浮かぶやつだね。"
+      - speaker: reimu
+        text: "1995年発売のバーチャルボーイは、しかし、振るいませんでした。"
+        reading: "せんきゅうひゃくきゅうじゅうごねんはつばいのばーちゃるぼーいわ、しかし、ふるいませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……今回は、届かなかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "挑戦だったんだから、しかたないよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作りたいものは、まだまだあるのだ。歩みは、止めないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "挑まなければ、ウルトラハンドだって無かったわけだし。"
+      - speaker: zundamon
+        emotion: normal
+        text: "10個作って、1個当たれば上等の世界なんだ。"
+      - speaker: reimu
+        text: "翌1996年、横井は任天堂を自ら退社。"
+        reading: "よくせんきゅうひゃくきゅうじゅうろくねん、よこいわにんてんどうをみずからたいしゃ。"
+      - speaker: reimu
+        text: "小さな会社コトを作り、新しい玩具の開発を続けました。"
+        reading: "ちいさなかいしゃことをつくり、あたらしいがんぐのかいはつをつづけました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "大きな組織じゃなくても、面白いものは作れるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "保守係の暇つぶしから始まった人だもんね。"
+  - id: jiko
+    title: ""
+    background: il_yg_yugure
+    bgm: amacha_hoshizora
+    stage:
+      - {who: tsumugi, x: 0.7, tag: "同僚"}
+    cuts:
+      - speaker: reimu
+        text: "1997年10月4日。横井軍平は、交通事故により急逝します。"
+        reading: "せんきゅうひゃくきゅうじゅうななねんじゅうがつよっか。よこいぐんぺいわ、こうつうじこによりきゅうせえします。"
+        pause_after: 0.8
+      - speaker: reimu
+        text: "56歳でした。"
+        reading: "ごじゅうろくさいでした。"
+        pause_after: 0.8
+      - speaker: tsumugi
+        emotion: sad
+        text: "……早すぎるよ、横井くん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、君が遺した遊びは、ぜんぶ生きてる。"
+      - speaker: reimu
+        text: "その手が生んだ発明は、いまも世界中で動き続けています。"
+        reading: "そのてがうんだはつめいわ、いまもせかいじゅうでうごきつづけています。"
+        pause_after: 0.6
+  - id: isan
+    title: "遺したもの"
+    background: il_yg_living
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。"
+        reading: "ときわながれて、げんだい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたのそのコントローラー、左手の親指の下を見て。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……十字キーなのだ。横井さんの発明が、標準装備なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "携帯ゲーム機という文化そのものが、あの人の子孫だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "スペック競争だけが、勝ち筋じゃないと証明したのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枯れた技術の水平思考は、いまも技術者の教科書に出てくるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "体を動かして遊ぶゲーム機にも、この思想が流れてると言われるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "性能勝負を降りて、遊び方で勝負する。あの会社の伝統だね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "スマホの簡単なゲームがヒットするのも、同じ理屈なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面白さは、画素数じゃないってことだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新しい道具がなくても、使い方は発明できるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それって、私たちの仕事や勉強でも、同じかもね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手持ちの装備で、戦い方を変える。今日から使える思考法なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "高い道具を買う前に、いまある物の使い方を考えてみる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それだけで、勝てる勝負は案外多いんだ。"
+      - speaker: reimu
+        text: "枯れた技術の水平思考は、ものづくりの言葉として生き続けています。"
+        reading: "かれたぎじゅつのすいへえしこうわ、ものづくりのことばとしていきつづけています。"
+  - id: musubi
+    title: ""
+    background: il_yg_living
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "実写レベルのグラフィックを、ちょっと反省したのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "きれいなのはいいことだよ。でも、それだけじゃないってこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "保守係の暇つぶしが、世界の遊びを変えたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見つけた社長も、クビにせず才能を拾ったのが偉いよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新幹線の電卓おじさんも、歴史の影の功労者なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "日常の観察から、1億台が生まれたんだから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "最新装備がなくても、戦い方で勝てる。覚えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの手元の枯れた技術も、使い方しだいかもね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "最新より、最適なのだ！"
+        telops:
+          - {text: "最新より、最適", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、あなたの思い出のゲーム機も教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
