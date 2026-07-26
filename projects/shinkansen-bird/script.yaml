@@ -1,0 +1,1040 @@
+# 新幹線×カワセミ再現ドラマ・ミーム版（仲津英治・1990→現代）。投稿前に必ず目視レビュー。
+# 新方針(2026-07): 新作はミーム版のみ1本。センシティブ場面(住民苦情の生活被害・kotobaの名言)はクリーン維持。
+# 仲津氏は存命の可能性が高いため、本人インタビューで公知のエピソードのみ使用し敬意をもって描く。
+# 裏取り: JFSインタビュー(仲津英治)/日本機械学会W20200/JR西日本500系記録。
+# 1990開発開始・300km/h・トンネル微気圧波=400m先から苦情・若手の「列車が縮む」発言・
+# カワセミのダイブ・ノーズ15m・空気抵抗3割減・速度1割増でも電力15%減・フクロウのセレーション
+# (ボルテックスジェネレーター・4年研究・翼型パンタグラフ)・アデリーペンギン=パンタ支持部・
+# 1997営業運転(当時世界最速タイと言われる)・名言「一木一草、一鳥一魚、皆我々の輝ける永遠の教師」
+meta:
+  title: "新幹線の鼻は、なぜカワセミなのか。バードウォッチングが世界最速を作った話【ゆっくり再現ドラマ・ミーム版】"
+  slug: "shinkansen-bird"
+  summary: "500系新幹線を設計したJR西日本の技術者・仲津英治の物語。時速300キロの壁は、トンネル出口の「ドン！」という爆音だった。400メートル先から苦情が来る騒音問題に悩む中、試験班の若手の「列車が縮む気がする」という一言と、趣味のバードウォッチングで見慣れたカワセミのダイブが答えをくれる。フクロウの羽が教えたパンタグラフ、アデリーペンギンの支持部、そして1997年のデビューまで。自然を先生にした技術者の実話を、ずんだもんが仲津を演じる再現ドラマ・ミーム版でお届けします。"
+  tags: ["新幹線", "500系", "カワセミ", "バイオミメティクス", "仲津英治", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "鼻が長いのは"
+    bottom: "鳥のパクリ？いいえ師匠"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: juumin, label: "沿線の住民", voice: 8, pitch: 0.05, hair: bun}
+    - {id: joushi, label: "上司", voice: 13, pitch: -0.06, item: hat}
+    - {id: nakama, label: "野鳥の会の会員", voice: 42, item: mustache}
+scenes:
+  - id: hook
+    title: ""
+    background: il_sb_homu
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "新幹線で旅なのだ！見るのだ、この長い鼻。かっこよすぎるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ほんと、先頭だけで15メートルもあるんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "15メートル！？もはや鼻が本体なんだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なんでこんなに長いか、知ってる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "長いほうが、先に目的地に着くからか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "鼻の分だけね。所要時間は、変わらないよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決まってるのだ。速そうに見えて、かっこいいからだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "デザイン優先じゃないんだな、これが。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "じゃあ、空気抵抗？それくらい、ボクでも分かるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "半分正解。本当の敵は、トンネルの出口で鳴る「ドン！」。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ドン？新幹線が、太鼓でも積んでるのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "積んでない。速すぎる列車がトンネルに入ると、爆音が出ちゃうの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そんな物理現象、初めて聞いたんだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それを解決したのが、この鼻。お手本は、鳥のくちばしだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "鳥！？ファッ！？新幹線が、実質バードなのか！？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "設計したのは、バードウォッチングが趣味の技術者さん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "趣味が仕事を救ったのか。ずるいぞ、そんな伏線回収。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日はその人の話。乗りながら、聞いていこう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くぞ。鼻の正体、気になって夜しか眠れないんだ。"
+      - speaker: reimu
+        text: "新幹線500系。先頭の長い鼻には、3種類の鳥が隠れています。"
+        reading: "しんかんせんごひゃくけい。せんとうのながいはなにわ、さんしゅるいのとりがかくれています。"
+      - speaker: reimu
+        text: "設計したのは、鳥を愛する一人の技術者でした。"
+        reading: "せっけいしたのわ、とりをあいするひとりのぎじゅつしゃでした。"
+      - speaker: reimu
+        text: "物語は、1990年ごろの日本から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくきゅうじゅうねんごろのにほんからはじまります。"
+  - id: era1990
+    title: "1990・最速への挑戦"
+    background: il_sb_kaigi
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "仲津", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1990年ごろ、日本。"
+        reading: "せんきゅうひゃくきゅうじゅうねんごろ、にほん。"
+        video: assets/clips/era_sb1990.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: project
+    title: ""
+    background: il_sb_kaigi
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: joushi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "JR西日本の技術者、仲津英治。新型新幹線の開発チームにいました。"
+        reading: "じぇいあーるにしにほんのぎじゅつしゃ、なかつえいじ。しんがたしんかんせんのかいはつちーむにいました。"
+      - speaker: joushi
+        text: "目標は、時速300キロでの営業運転だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "300キロ……世界最速級への挑戦なんだ。"
+      - speaker: joushi
+        text: "飛行機に、客を取られ続けている。速さで取り返す。"
+      - speaker: zundamon
+        emotion: normal
+        text: "エンジンのパワーなら、いけるはずなんだ。"
+      - speaker: joushi
+        text: "ああ。だが、本当の壁は速さじゃない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "パワーだけなら、もう出せる時代なんだ。"
+      - speaker: joushi
+        text: "そのとおり。問題は、出したあとに何が起きるかだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……音、ですか。"
+      - speaker: joushi
+        text: "そうだ。日本の騒音基準は、世界一厳しい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "住宅のそばを走る以上、うるさい最速に、価値はないんだ。"
+      - speaker: joushi
+        text: "静かで、速い。両方だ。仲津くん、頼んだぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "静かで速い……縛りプレイにも、ほどがあるぞ。"
+      - speaker: reimu
+        text: "速く、しかも静かに。無理難題への挑戦が始まりました。"
+        reading: "はやく、しかもしずかに。むりなんだいえのちょうせんがはじまりました。"
+  - id: don
+    title: "トンネルの出口で、ドン"
+    background: il_sb_tonneru
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: juumin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "最大の敵は、トンネルでした。"
+        reading: "さいだいのてきわ、とんねるでした。"
+      - speaker: juumin
+        text: "あの、すみません。トンネルの近くに住んでる者ですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい、どうされました？"
+      - speaker: juumin
+        text: "新幹線が通るたび、ドン！って。雷みたいな音がするんです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "トンネルの、出口からですか？"
+      - speaker: juumin
+        text: "ええ。窓もビリビリ震えて。うちは400メートルも離れてるのに。"
+      - speaker: zundamon
+        emotion: sad
+        text: "400メートル先まで……申し訳ないです。"
+      - speaker: juumin
+        text: "夜中はね、ドンのたびに、子どもが起きちゃうんですよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "生活の中に、響いてしまってるのだ……。"
+      - speaker: juumin
+        text: "速くなるのはいいけど、これ以上うるさくなるのは困ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……必ず、静かにします。約束するのだ。"
+      - speaker: reimu
+        text: "トンネル微気圧波。出口で低い音が響く現象でした。"
+        reading: "とんねるびきあつは。でぐちでひくいおとがひびくげんしょうでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "これで300キロに上げたら、音はもっとひどくなるのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "速くするほど、うるさくなる。詰んでるんだが。"
+      - speaker: reimu
+        text: "苦情は深刻でした。解決なくして、300キロはありません。"
+        reading: "くじょうわしんこくでした。かいけつなくして、さんびゃっきろわありません。"
+  - id: naze
+    title: "なぜ、ドンが鳴るのか"
+    background: il_sb_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "仲津さん、そもそも、なんでトンネルだと音が出るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "列車は、前の空気を押しのけながら走ってるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "開けた場所なら、空気は横に逃げられますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、トンネルは筒なのだ。逃げ場が、ないんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "押された空気は、どうなるんです？"
+      - speaker: zundamon
+        emotion: normal
+        text: "注射器を想像してほしいのだ。筒の中で、ピストンを押す。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先がふさがってたら、中の空気がぎゅっと詰まりますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "トンネルの中の列車は、まさにあのピストンなんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ぎゅっと圧縮されて、波になって、トンネルの奥へ走るんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "波の速さは？"
+      - speaker: zundamon
+        emotion: normal
+        text: "音速なのだ。列車より先に、出口へ届くんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "その波が出口から出るとき……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一気に解放されて、ドン。空気の津波が、はじけるんだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "つまり、列車が空気の逃げ場を奪うのが原因。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しかも日本のトンネルは、断面が狭いんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "海外より、空気の逃げ場がさらに少ないんですね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "そして速度を上げるほど、波は急激に強くなるんだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "300キロなんて、無理ゲーじゃないですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "無理ゲーを、攻略するのがボクらの仕事なのだ。"
+      - speaker: reimu
+        text: "問題は、入り口。空気をどう押しのけるかが、鍵でした。"
+        reading: "もんだいわ、いりぐち。くうきをどうおしのけるかが、かぎでした。"
+  - id: wakate
+    title: "列車が、縮む気がする"
+    background: il_sb_shaken
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "ヒントは、試験走行の現場で生まれました。"
+        reading: "ひんとわ、しけんそうこうのげんばでうまれました。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "仲津さん。変なこと言っても、いいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "むしろ、変なことしか聞きたくないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "相変わらずですね、その方針。"
+      - speaker: zundamon
+        emotion: normal
+        text: "変なこと、大歓迎だ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "試験車両に乗ってると、トンネルに入る瞬間……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "列車が、ぎゅっと縮むような気がするんです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……縮む。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "空気の壁に、突っ込んでる感じというか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "空気の薄いところから、濃いところへ、一瞬で突っ込む……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "抵抗が急に変わる場所へ、飛び込んでる。それと同じ状況を……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "毎日こなしてる生き物が、いるんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "生き物？"
+      - speaker: zundamon
+        emotion: happy
+        text: "週末、川に来てほしいのだ。ボクの趣味に、付き合ってくれ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "趣味って、たしか鳥でしたよね。まさか……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そのまさかなのだ。会社の会議室に、答えはないのだ。"
+      - speaker: reimu
+        text: "若手の直感が、仲津の頭の中の鳥と、つながった瞬間でした。"
+        reading: "わかてのちょっかんが、なかつのあたまのなかのとりと、つながったしゅんかんでした。"
+  - id: bird
+    title: "青い弾丸"
+    background: il_sb_kawa
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "仲津は、日本野鳥の会にも入る、鳥のガチ勢でした。"
+        reading: "なかつわ、にほんやちょうのかいにもはいる、とりのがちぜいでした。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "休みの日に呼び出して、バードウォッチングですか……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "遊びじゃないのだ。これも仕事。実質、休日出張なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その理屈は、経理に通るんですかね。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "その双眼鏡と望遠レンズ、完全にプロの装備じゃないですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "野鳥の会の会員なのだ。装備は、魂なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しっ。……ほら、あそこ。川の上の枝なのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "わっ、青い鳥。宝石みたいですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "カワセミなのだ。水辺の宝石、飛ぶ青い弾丸だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ずいぶん、くちばしが長くて、とがってますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見てるのだ。……ほら、いま魚を狙って……。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "飛び込んだ！……えっ、水しぶきが、ほとんど出てない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それなのだ！それを見せたかったのだ！"
+        se: don
+      - speaker: tsumugi
+        emotion: thinking
+        text: "たしかに……もっと、バシャッてなるはずじゃ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "空気から水へ。密度はおよそ800倍と言われる世界への突入なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "私たちがプールに飛び込むだけでも、おなかが痛いのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "カワセミは、それを時速数十キロでやってのけるんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "もう一回、飛び込みました。……やっぱり、しぶきが出ない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何回見ても、しぶきはゼロ。これが、俺じゃなきゃ見逃しちゃうね、なのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "急に抵抗が変わる場所へ、飛び込んでる……。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "トンネルに入る新幹線と、完全に一致じゃないですか！"
+      - speaker: zundamon
+        emotion: happy
+        text: "カワセミは、この難題を毎日ノーダメでクリアしてる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "しかも狙いを外さない。空中で止まって照準まで合わせてました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ホバリングなのだ。目も体も、狩りに全振りした鳥なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "つまり、答えは何億年も前から、川辺にいたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自然が先に、正解を出してたんですね。"
+      - speaker: reimu
+        text: "水しぶきを立てないダイブ。それが、答えの形でした。"
+        reading: "みずしぶきをたてないだいぶ。それが、こたえのかたちでした。"
+  - id: kuchibashi
+    title: "くちばしの、種明かし"
+    background: il_sb_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "でも、なんであのくちばしだと、しぶきが出ないんです？"
+      - speaker: zundamon
+        emotion: normal
+        text: "秘密は、先っぽから根元への、太くなり方なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先は針みたいに細くて、じわじわ太くなりますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "断面積が、急に増えないんだ。なだらかに、少しずつ増える。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "水を、一気に押しのけない……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。少しずつ、そっと押しのけていくんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから水面が、驚かない。しぶきも波も立たない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "逆に、丸い頭から飛び込んだら、どうなると思う？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水を一気に押すから……盛大に、バッシャーンですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それが、いまの新幹線の頭で起きてることなんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新幹線も同じなのだ。空気を一気に押すから、ドンが出る。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "先頭をカワセミのくちばしにすれば、空気が驚かない！"
+      - speaker: zundamon
+        emotion: happy
+        text: "その発想で、いくのだ。逆に考えれば、鳥が最強の先生なのだ。"
+      - speaker: reimu
+        text: "急がず、少しずつ押しのける。単純にして、最強の原理でした。"
+        reading: "いそがず、すこしずつおしのける。たんじゅんにして、さいきょうのげんりでした。"
+  - id: kuchibashi_clip
+    title: ""
+    background: il_sb_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "仲津", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "カワセミのダイブと同じ形へ。空気をそっと押しのける鼻です。"
+        reading: "かわせみのだいぶとおなじかたちえ。くうきをそっとおしのけるはなです。"
+        video: assets/clips/sb_kuchibashi.mp4
+        video_full: true
+  - id: keisan
+    title: "データが出した、答え合わせ"
+    background: il_sb_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "ひらめきは、データで検証されました。"
+        reading: "ひらめきわ、でーたでけんしょうされました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いろんな形で、空気の流れを計算してみました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "とがった弾丸型、丸い流線型、くさび型。全部並べたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "模型も作って、実験と計算の両方でチェックです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "音が最小になる、理想の形は出たのだ？"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "それが……出てきた形を見てください。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……カワセミの、くちばしなのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "ほぼ一致です。データが、鳥に答え合わせされました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "何億年の進化は、伊達じゃない。自然、恐るべしなのだ。"
+      - speaker: reimu
+        text: "解析が導いた理想形は、カワセミにきわめて近い形でした。"
+        reading: "かいせきがみちびいたりそうけえわ、かわせみにきわめてちかいかたちでした。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ただ、この形を突き詰めると、先頭が15メートルになります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "長いのだ。運転席が、鼻の中に埋まるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "客席も一部、円い壁で狭くなる。営業さんに怒られますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それでも、静けさのほうが大事なのだ。通すぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ですね。沿線の人との、約束ですから。"
+      - speaker: reimu
+        text: "快適さを一部ゆずってでも、静けさを選ぶ設計でした。"
+        reading: "かいてきさをいちぶゆずってでも、しずけさをえらぶせっけいでした。"
+  - id: panta
+    title: "もう一つの、騒音源"
+    background: il_sb_shaken
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "しかし、敵はトンネルだけではありませんでした。"
+        reading: "しかし、てきわとんねるだけでわありませんでした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "仲津さん、走行試験の騒音データ、まだ基準を超えてます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "鼻は良くなったのに、どこが鳴いてるんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "屋根の上です。パンタグラフ。電気を取る、あの腕です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "300キロの風が、むき出しの棒に当たり続けてるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "風が棒の後ろで渦を巻いて、ビュービュー鳴くんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "風切り音……こいつが、ラスボスなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "パンタグラフを外すわけには、いきませんしね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電気の取り入れ口なのだ。外したら、ただの置物なんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "形はそのまま、音だけ消す。矛盾みたいな注文ですね。"
+      - speaker: reimu
+        text: "高速の風が渦を作り、大きな音を生んでいました。"
+        reading: "こうそくのかぜがうずをつくり、おおきなおとをうんでいました。"
+  - id: fukurou
+    title: "音のない、翼"
+    background: il_sb_mori
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: nakama, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "仲津はまた、鳥に聞きに行きました。夜の森です。"
+        reading: "なかつわまた、とりにききにいきました。よるのもりです。"
+      - speaker: nakama
+        text: "仲津さん、静かに。……ほら、あの木に、フクロウが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……大きいのだ。今夜も、狩りの時間なんだ。"
+      - speaker: nakama
+        text: "見ていてごらん。フクロウの狩りは、音がしないから。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……飛んだ。ほんとだ、羽音が、まったく聞こえないのだ。"
+      - speaker: nakama
+        text: "ネズミに気づかれたら、狩りは失敗だからねえ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "あの体で無音飛行……ステルス性能が、壊れてるんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "同じ鳥でも、ハトが飛ぶと、バサバサうるさいのに。"
+      - speaker: nakama
+        text: "いいところに気づいたね。フクロウだけの、仕掛けがあるのさ。"
+      - speaker: nakama
+        text: "秘密は、風切羽さ。羽の前の縁に、ギザギザがあるんだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ギザギザ？なめらかなほうが、静かそうなのに。"
+      - speaker: nakama
+        text: "それが逆でね。ギザギザが、空気を小さくかき混ぜる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "小さな渦を、わざと作る……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そうか。小さな渦が、音の元になる大きな渦を、防ぐのだ！"
+      - speaker: nakama
+        text: "ほっほ。さすが、新幹線の先生は察しがいい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "その発想はなかったのだ。パンタグラフに、フクロウを乗せるのだ。"
+      - speaker: reimu
+        text: "音を立てない翼の秘密は、風切羽のギザギザにありました。"
+        reading: "おとをたてないつばさのひみつわ、かざきりばねのぎざぎざにありました。"
+  - id: serration_clip
+    title: ""
+    background: il_sb_mori
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.15, tag: "仲津", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "小さな渦で、大きな渦を消す。フクロウの羽の技です。"
+        reading: "ちいさなうずで、おおきなうずをけす。ふくろうのはねのわざです。"
+        video: assets/clips/sb_serration.mp4
+        video_full: true
+  - id: fukurou2
+    title: ""
+    background: il_sb_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "しかし、応用は簡単ではありませんでした。"
+        reading: "しかし、おうようわかんたんでわありませんでした。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ギザギザの大きさも間隔も、無限に組み合わせがあります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつずつ、試すのだ。風洞で、地道にやるんだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "この検証、何年かかるんですか……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "かかっても、やるのだ。フクロウは何万年も先輩だ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "パターン47、だめでした。逆に音が増えてます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "48を試すのだ。フクロウに、まだ何かを見落としてるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ギザギザの角度を、羽にもっと寄せてみます。"
+      - speaker: reimu
+        text: "研究は、4年におよびました。"
+        reading: "けんきゅうわ、よねんにおよびました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "仲津さん、出ました。翼の形のパンタグラフ、基準クリアです！"
+      - speaker: zundamon
+        emotion: happy
+        text: "4年ごしの実績解除なのだ！フクロウ先生に、感謝なのだ。"
+      - speaker: reimu
+        text: "翼型パンタグラフ。フクロウの技が、屋根の上に乗りました。"
+        reading: "よくがたぱんたぐらふ。ふくろうのわざが、やねのうえにのりました。"
+  - id: penguin
+    title: "3羽目の、先生"
+    background: il_sb_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "あとは、パンタグラフを支える、付け根の部分ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ここも風を受けて、渦を作る。……また鳥に聞くんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今度は、どの鳥ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "アデリーペンギンなのだ。水の中を、するする泳ぐ体なんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "ペンギンって、鳥カウントでいいんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "立派な鳥なのだ。飛ぶ場所が、水の中なだけなんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あの流線型なら、渦を作らずに風を流せる……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "たしかに、あの体は水の中で音もなく速い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "水中を飛ぶ鳥の体を、風の中に置くんだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "カワセミ、フクロウ、ペンギン。3羽そろって、役満なのだ。"
+      - speaker: reimu
+        text: "支える部分には、ペンギンの体の形が生かされました。"
+        reading: "ささえるぶぶんにわ、ぺんぎんのからだのかたちがいかされました。"
+  - id: maru
+    title: "丸い車体の、種明かし"
+    background: il_sb_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そういえば、車体まで円筒形にしたのは、なぜなんです？"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれもトンネル対策なのだ。断面を、少しでも小さくしたいんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "トンネルの中で、空気の通り道を広くするためですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "列車が細いほど、押しのける空気は減る。ドンも小さくなるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "角ばった箱より、丸いほうが有利なんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "丸は、同じ広さでいちばん外周が小さい形なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しかも風を、どの向きにもなめらかに流せるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "鼻も、屋根も、胴体まで。空気のことしか考えてない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "空気を読むことに、全振りした車両なのだ。"
+      - speaker: reimu
+        text: "筒のような車体も、音を減らすための形でした。"
+        reading: "つつのようなしゃたいも、おとをへらすためのかたちでした。"
+  - id: era1997
+    title: "1997・500系、デビュー"
+    background: il_sb_eki
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.15, tag: "仲津", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1997年3月。"
+        reading: "せんきゅうひゃくきゅうじゅうななねんさんがつ。"
+        video: assets/clips/era_sb1997.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: debut
+    title: ""
+    background: il_sb_eki
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "500系のぞみ、営業運転開始。時速300キロ。"
+        reading: "ごひゃくけいのぞみ、えいぎょううんてんかいし。じそくさんびゃっきろ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "仲津さん、来ました。うちの、青い弾丸です。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……長い鼻。翼のパンタグラフ。鳥だらけの新幹線なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "当時、世界最速タイと言われた300キロです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それでいて、あの騒音基準を、クリアしてるんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "トンネルの出口も、静かになりました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "沿線の人との約束、果たせたんだ。"
+      - speaker: reimu
+        text: "世界一厳しい騒音基準の中での、最速でした。"
+        reading: "せかいいちきびしいそうおんきじゅんのなかでの、さいそくでした。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ホームの子どもたち、見てください。大騒ぎですよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "未来から来た顔してるからな。人気もSSR級なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "丸い車体に、戦闘機みたいな顔。ほかのどの車両とも違う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全部、音と風に理由がある形なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "デザイン優先って言われそうですけど、真逆なんですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機能を突き詰めたら、かっこよくなったのだ。物理の勝利なのだ。"
+  - id: seika_clip
+    title: ""
+    background: il_sb_eki
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "仲津", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "空気抵抗3割減。速度1割増でも、電力は15％減りました。"
+        reading: "くうきていこうさんわりげん。そくどいちわりぞうでも、でんりょくわじゅうごぱーせんとへりました。"
+        video: assets/clips/sb_seika.mp4
+        video_full: true
+  - id: seika2
+    title: ""
+    background: il_sb_eki
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: tsumugi
+        emotion: surprised
+        text: "速くなったのに、電気は減る。バグみたいな数字ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "バグじゃない。鳥のスペックが、それだけ壊れてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "静かで、速くて、省エネ。全部そろっちゃいました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "自然のデザインは、公式チートなのだ。"
+      - speaker: reimu
+        text: "速さと静けさと省エネ。3つ同時の達成でした。"
+        reading: "はやさとしずけさとしょうえね。みっつどうじのたっせえでした。"
+  - id: biomim
+    title: "自然という、先生"
+    background: il_sb_lab
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "生き物に学ぶ技術は、バイオミメティクスと呼ばれます。"
+        reading: "いきものにまなぶぎじゅつわ、ばいおみめてぃくすとよばれます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "考えてみると、身のまわりにもありますよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "マジックテープは、服にくっつく草の実がヒントなんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ヨーグルトのふたに、中身がつかないのは……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "水をはじく、ハスの葉の表面がお手本と言われるんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "痛くない注射針の参考は、蚊だって聞きました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "刺されても気づかない技術の、有識者だからな。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "自然界、先行研究が充実しすぎじゃないですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なにせ、何億年ぶんの試行錯誤だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "生き残った形だけが、いま目の前にいるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全部が、実戦で勝ち残った答えなんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから困ったら、外に出て、生き物を見るんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "500系は、この考え方の有名な成功例になりましたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界の教科書が、日本の新幹線と鳥の話を載せてるのだ。"
+      - speaker: reimu
+        text: "答えに困ったら、自然に聞く。技術者たちの合言葉になりました。"
+        reading: "こたえにこまったら、しぜんにきく。ぎじゅつしゃたちのあいことばになりました。"
+  - id: gendai
+    title: ""
+    background: il_sb_homu
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。"
+        reading: "ときわながれて、げんだい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "500系はいま、こだまとして山陽区間を走ってますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "30年近く、現役なんだ。レジェンド枠なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "空気をそっと押しのける考え方は、いまの新幹線にも……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "受け継がれてるのだ。あの長い鼻は、ぜんぶ子孫なんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "カワセミの遺伝子、鉄道の中で生き続けてるんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "引退を惜しむファンが、いまも撮りに集まる人気者なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "機能美って、時間がたっても古くならないんだね。"
+      - speaker: reimu
+        text: "静かに速く走る思想は、次の世代の車両に受け継がれています。"
+        reading: "しずかにはやくはしるしそうわ、つぎのせだいのしゃりょうにうけつがれています。"
+  - id: kotoba
+    title: "永遠の、教師"
+    background: il_sb_kawa_yu
+    bgm: amacha_hoshizora
+    stage:
+      - {who: zundamon, x: 0.24, tag: "仲津", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "仲津は、自然への思いを、こんな言葉で語っています。"
+        reading: "なかつわ、しぜんえのおもいを、こんなことばでかたっています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[一木一草|いちぼくいっそう]、[一鳥一魚|いっちょういちぎょ]。"
+      - speaker: zundamon
+        emotion: normal
+        text: "みんな、ボクたちの輝ける、永遠の教師なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……木も草も、鳥も魚も、全部が先生。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人間が悩む問題の多くを、自然はとっくに解いてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "私たちは、教わる側なんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、教師がいる森や川を、大事にするのだ。"
+      - speaker: reimu
+        text: "鳥を愛した技術者は、いまも自然と人の関わりを伝え続けています。"
+        reading: "とりをあいしたぎじゅつしゃわ、いまもしぜんとひとのかかわりをつたえつづけています。"
+        pause_after: 0.6
+  - id: musubi
+    title: ""
+    background: il_sb_homu
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "着いたのだ。あっという間で、静かな旅だったんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その静かさが、カワセミとフクロウとペンギンのおかげだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この鼻は、かっこつけじゃなくて、沿線への優しさだったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ドンを消すための、15メートルだからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "丸い車体も、空気を読んだ結果だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "空気を読むって、本来こういう意味じゃない気がするけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "若手の、縮む気がするって一言も、地味にMVPなんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "変なことを言える現場って、実は強いんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "答えに詰まったら、外に出て生き物を見る。覚えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの困りごとの答えも、案外その辺にいるかもね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "答えは、自然が先に出してるのだ！"
+        telops:
+          - {text: "答えは、自然が先に出してる", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、あなたが見つけた自然の天才も教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
