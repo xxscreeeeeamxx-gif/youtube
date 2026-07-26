@@ -1,0 +1,913 @@
+# うま味発見再現ドラマ・ミーム版（池田菊苗×鈴木三郎助・1899→現代）。投稿前に必ず目視レビュー。
+# 新方針: ミーム版のみ1本。センシティブ場面(論争章は正確に・晩年bannenはクリーン)。
+# 裏取り: 味の素グループ公式ストーリー(池田菊苗物語)/池田菊苗Wikipedia/鈴木三郎助Wikipedia/
+# 国会図書館・うま味インフォメーションセンター。
+# 1899ドイツ留学(オストワルト師事・体格差痛感・発明を形に)・帰国後東京帝大教授・
+# 妻が買った昆布の湯豆腐(1907)→昆布12kgから30gのグルタミン酸結晶(1908年2月)→
+# 「うま味」命名・5基本味・1908年7月特許→鈴木三郎助(葉山のヨード業・鈴木商店)が事業化→
+# 1909年5月20日「味の素」発売→当初は不信とデマで苦戦→料理店・実演から普及→
+# 志「佳良にして廉価なる調味料を造り出し滋養に富める粗食を美味ならしむること」→
+# 1985ハワイでUMAMI国際合意・2000舌の受容体発見・2006胃にも→世界の共通語へ。
+# 論争章: 化学調味料への俗説→グルタミン酸はトマト・チーズ・母乳にも天然/国際機関の安全評価→
+# 本当の注意点はバランス。池田1936没(十大発明家)は静かに。
+meta:
+  title: "だしの正体を、世界の言葉にした男たち。うま味の発見【ゆっくり再現ドラマ・ミーム版】"
+  slug: "ajinomoto"
+  summary: "うま味を発見した化学者・池田菊苗と、それを世界の調味料に育てた商人・鈴木三郎助の物語。ドイツ留学で日本人との体格差に衝撃を受けた化学者は、妻が買ってきた昆布の湯豆腐で気づく。この味は、甘くも塩辛くも、酸っぱくも苦くもない。昆布12キロから取り出した30グラムの結晶、「うま味」の命名、第五の基本味への長い道のり。売れない発売初期からUMAMIが世界の共通語になるまで、ずんだもんが池田を、つむぎが鈴木を演じる再現ドラマ・ミーム版でお届けします。"
+  tags: ["うま味", "池田菊苗", "鈴木三郎助", "味の素", "UMAMI", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "だしの正体"
+    bottom: "第五の味を見つけた男"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: tsuma, label: "妻・貞", voice: 8, pitch: 0.03, hair: bun}
+    - {id: ostwald, label: "オストワルト教授", voice: 13, pitch: -0.06, item: mustache}
+    - {id: kyaku, label: "お客", voice: 8, pitch: 0.06, hair: bun}
+scenes:
+  - id: hook
+    title: ""
+    background: il_aj_kitchen
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "スープを自作したのだ。でも、なんか味が決まらないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どれどれ。……ああ、塩気はあるのに、コクがないんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "塩を足しても、しょっぱくなるだけで、おいしくならないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに、これまで何を試したの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "具を倍にした。次に肉を足した。最後に、気合いを入れた。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "最後のは調味料じゃないね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "足りないのは塩じゃなくて、うま味だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "うま味？おいしい味、っていう雑なネーミングか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "れっきとした味の名前。[甘味|かんみ]、[塩味|えんみ]、酸味、苦味、そしてうま味。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "基本の味、5人パーティーだったのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "5人目のうま味だけ、見つかったのが100年ちょっと前なの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "他の4人より、圧倒的に新入りなんだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見つけたのは、日本の化学者。だから世界中で[UMAMI|うまみ]って呼ぶの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ファッ！？うま味、日本語のまま世界デビューしてるのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スシ、テンプラ、ウマミ。世界の共通語だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "何がきっかけで、5人目に気づいたんだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "晩ごはんの、湯豆腐。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "スケールの差がすごいぞ。湯豆腐から世界共通語なのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日はその話。そのスープを直しながら、聞いていこう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。ボクのスープの伏線も、回収してほしいんだ。"
+      - speaker: reimu
+        text: "うま味。世界がUMAMIと呼ぶ、5つめの基本味です。"
+        reading: "うまみ。せかいがうまみとよぶ、いつつめのきほんあじです。"
+      - speaker: reimu
+        text: "見つけたのは、一人の化学者と、一杯の湯豆腐でした。"
+        reading: "みつけたのわ、ひとりのかがくしゃと、いっぱいのゆどうふでした。"
+      - speaker: reimu
+        text: "物語は、1899年のドイツから始まります。"
+        reading: "ものがたりわ、せんはっぴゃくきゅうじゅうきゅうねんのどいつからはじまります。"
+  - id: era1899
+    title: "1899・ドイツ留学"
+    background: il_aj_germany
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "池田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1899年、ドイツ・ライプツィヒ。"
+        reading: "せんはっぴゃくきゅうじゅうきゅうねん、どいつ、らいぷつぃひ。"
+        video: assets/clips/era_aj1899.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: germany
+    title: ""
+    background: il_aj_germany
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: ostwald, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "化学者の池田菊苗は、ドイツに留学していました。"
+        reading: "かがくしゃのいけだきくなえわ、どいつにりゅうがくしていました。"
+      - speaker: ostwald
+        text: "イケダ君。今日の実験データを、見せてもらおう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい、教授。まとめてあります。"
+      - speaker: reimu
+        text: "師は、のちにノーベル化学賞を受けるオストワルト教授でした。"
+        reading: "しわ、のちにのーべるかがくしょうをうけるおすとわるときょうじゅでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（それにしても……この国の人は、体が大きいのだ。）"
+      - speaker: zundamon
+        emotion: sad
+        text: "（ボクたち日本人と、頭ひとつ違う。栄養の差なのだ……。）"
+      - speaker: ostwald
+        text: "どうした、浮かない顔だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "母国の食生活を、考えていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "日本の庶民の食事は、質素です。麦飯と、漬物と、汁だけの日も。"
+      - speaker: ostwald
+        text: "こちらの食事は、どうかね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "肉とチーズとパン。カロリーの桁が、違います。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（この差が続けば、国の体力の差になるのだ……。）"
+      - speaker: ostwald
+        text: "栄養は、国力の土台だ。科学者が取り組むべき課題だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。いつか、この問題に化学で挑みたいのです。"
+      - speaker: ostwald
+        text: "イケダ君。science は、論文で終わらせるな。"
+      - speaker: ostwald
+        text: "発明を、世の中で使われる形にしてこそ、価値がある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……発明を、形に。胸に刻みます。"
+      - speaker: reimu
+        text: "体格の差への衝撃と、師の言葉。ふたつが池田の土台になります。"
+        reading: "たいかくのさえのしょうげきと、しのことば。ふたつがいけだのどだいになります。"
+  - id: kadai
+    title: "粗食を、うまくせよ"
+    background: il_aj_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "鈴木"}
+    cuts:
+      - speaker: reimu
+        text: "帰国した池田は、東京帝国大学の教授になりました。"
+        reading: "きこくしたいけだわ、とうきょうていこくだいがくのきょうじゅになりました。"
+      - speaker: reimu
+        text: "研究室には、事業家の鈴木三郎助も出入りしていました。"
+        reading: "けんきゅうしつにわ、じぎょうかのすずきさぶろうすけもでいりしていました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "池田先生、うちのヨード事業の相談、ありがとうございました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "鈴木さんの工場は、海藻を扱うのが上手なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "海藻から薬の材料を作るのが、うちの家業ですからね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ときに鈴木さん。日本人の食事を、どう思うのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "うちの職人たちの弁当は、麦飯に漬物。まあ、質素ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "栄養のある物を食べたくても、まずくて安い物しか買えない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うまい物は、高い。世の常です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なら、安い食事をうまくする調味料があれば、いいのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "安くて、うまくなる魔法の粉ですか。あったら大発明ですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "粗食が進めば、栄養が進む。栄養が進めば、体が変わるのだ。"
+      - speaker: reimu
+        text: "佳良にして廉価な調味料で、粗食をうまく。それが池田の志でした。"
+        reading: "かりょうにしてれんかなちょうみりょうで、そしょくをうまく。それがいけだのこころざしでした。"
+  - id: yudofu
+    title: "運命の、湯豆腐"
+    background: il_aj_home
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsuma, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1907年のある晩。池田家の食卓に、湯豆腐が出ました。"
+        reading: "せんきゅうひゃくななねんのあるばん。いけだけのしょくたくに、ゆどうふがでました。"
+      - speaker: tsuma
+        text: "あなた、今夜は湯豆腐ですよ。いい昆布が手に入ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ほう、いい昆布とは、ぜいたくなのだ。"
+      - speaker: tsuma
+        text: "催し物の即売で、上等なのを見つけたんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "湯豆腐は、昆布が命なのだ。楽しみなんだ。"
+      - speaker: tsuma
+        text: "お豆腐も、いつものお店の、いいのを選びましたよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いただきます。……うん、うまいのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "…………ん？"
+      - speaker: tsuma
+        text: "どうしました？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "この、だしの味……甘く、ないのだ。"
+      - speaker: tsuma
+        text: "ええ、お砂糖は入れてませんから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "塩辛くもない。酸っぱくもない。苦くも、ない。"
+      - speaker: tsuma
+        text: "あらあら、味見の顔が、実験の顔になってますよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "貞。この味は、4つの基本味の、どれでもないのだ。"
+        se: don
+      - speaker: tsuma
+        text: "でも、たしかに、おいしい味ですよねえ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そう、確かに存在する。なのに、名前がない味なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この正体を、突き止めるのだ。昆布、あるだけ買ってくるのだ。"
+      - speaker: tsuma
+        text: "はいはい。うちの台所が、実験室になりそうですねえ。"
+      - speaker: reimu
+        text: "一杯の湯豆腐が、世紀の研究の始まりでした。"
+        reading: "いっぱいのゆどうふが、せえきのけんきゅうのはじまりでした。"
+  - id: naze
+    title: "そもそも、味とは何か"
+    background: il_aj_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "鈴木"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "先生、だしの味の研究を始めたって、本当ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "本当だ。鈴木さん、そもそも味とは[何|なん]なのか、知ってるか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "舌で感じる……甘い、塩辛い、酸っぱい、苦い、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今の学問では、その4つが基本とされているんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "組み合わせれば、どんな味も説明できる、と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、昆布だしの味は、4つのどれでも説明できないんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "あれ、でも先生。[辛い|からい]は？辛味は基本味じゃないんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いい質問なのだ。実は辛味は、味ではないんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "えっ。あんなに主張が強いのに？"
+      - speaker: zundamon
+        emotion: normal
+        text: "[辛さ|からさ]は、痛みや熱の感覚なのだ。舌が、ヒリヒリしてるだけなんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "だから[辛い|からい]ものを食べると、汗が出るのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[渋味|しぶみ]も、口の中が縮む触覚に近い。味のセンサーとは別なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "基本味を名乗るには、専用センサーの席が要るんですね。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "うーん。でも味なんて、気分にもよるでしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いいや。舌に、専用のセンサーがあるはずなんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "第五のセンサーが、隠しコマンドみたいに残ってると？"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。誰も見つけてない、5人目の基本味なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "学会の常識に、真っ向勝負ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "常識は、更新するためにあるんだ。"
+      - speaker: reimu
+        text: "基本味は4つ。その常識への、挑戦でした。"
+        reading: "きほんあじわよっつ。そのじょうしきえの、ちょうせんでした。"
+  - id: kenkyu
+    title: "昆布12キロとの、格闘"
+    background: il_aj_lab
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsuma, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "研究は、地道な煮出し作業から始まりました。"
+        reading: "けんきゅうわ、じみちなにだしさぎょうからはじまりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "昆布を煮出して、煮詰めて、余計な成分を取り除くんだ。"
+      - speaker: tsuma
+        text: "あなた、今日も研究室に泊まりですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だしの正体に、あと少しで手が届きそうなんだ。"
+      - speaker: tsuma
+        text: "台所の昆布、また減ってましたよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "すまない。実験用が、足りなくなったんだ。"
+      - speaker: reimu
+        text: "使った昆布は、およそ12キロにのぼりました。"
+        reading: "つかったこんぶわ、およそじゅうにきろにのぼりました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "煮汁から、砂糖のような甘い成分を除いて、塩の成分も除いて……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "残った液を、ゆっくり冷やして、結晶を待つのだ。"
+      - speaker: tsuma
+        text: "研究のほう、進んでいますか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "煮詰めても煮詰めても、狙いの成分だけが、残ってくれないのだ。"
+      - speaker: tsuma
+        text: "根気くらべですねえ。お夜食、置いておきますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "すまないのだ。……よし、もう一晩、粘るのだ。"
+      - speaker: reimu
+        text: "そして1908年2月。"
+        reading: "そしてせんきゅうひゃくはちねんにがつ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……出た。小さな結晶が、出てきたのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "12キロの昆布から、たった30グラム。……なめてみるのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "…………これだ！湯豆腐の、あの味なのだ！"
+      - speaker: reimu
+        text: "結晶の正体は、グルタミン酸。うま味の主成分でした。"
+        reading: "けっしょうのしょうたいわ、ぐるたみんさん。うまみのしゅせえぶんでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見つけたのだ。5人目の基本味、ここに確保なのだ！"
+  - id: kessho_clip
+    title: ""
+    background: il_aj_lab
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.15, tag: "池田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "昆布12キロから、結晶30グラム。うま味の正体でした。"
+        reading: "こんぶじゅうにきろから、けっしょうさんじゅうぐらむ。うまみのしょうたいでした。"
+        video: assets/clips/aj_kessho.mp4
+        video_full: true
+  - id: meimei
+    title: "うま味と、名づける"
+    background: il_aj_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "鈴木"}
+    cuts:
+      - speaker: tsumugi
+        emotion: surprised
+        text: "先生、やりましたね！で、この味、何と呼ぶんです？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "考えたのだ。[甘味|かんみ]、[塩味|えんみ]、酸味、苦味に並べる名前……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うま味、なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そのまますぎませんか。もっと学術っぽく、しなくても？"
+      - speaker: zundamon
+        emotion: normal
+        text: "日本人が昔から、うまい、と呼んできた味なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、うま味。これ以上正確な名前は、ないんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "シンプル・イズ・ベスト。覚えやすさは、最強ですしね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "甘い、塩辛い、酸っぱい、苦い、うまい。並びも自然だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ずっと空いていた5人目の椅子に、名前が入ったのだ。"
+      - speaker: reimu
+        text: "1908年7月、製造法の特許を取得。"
+        reading: "せんきゅうひゃくはちねんしちがつ、せえぞうほうのとっきょをしゅとく。"
+      - speaker: zundamon
+        emotion: normal
+        text: "論文で終わらせないのだ。オストワルト先生との、約束なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "発明を、形に。ですね。"
+      - speaker: reimu
+        text: "五つめの基本味に、日本語の名前がつきました。"
+        reading: "いつつめのきほんあじに、にほんごのなまえがつきました。"
+  - id: gomi_clip
+    title: ""
+    background: il_aj_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.15, tag: "池田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "甘味、塩味、酸味、苦味、そしてうま味。基本味は5つです。"
+        reading: "かんみ、えんみ、さんみ、にがみ、そしてうまみ。きほんあじわいつつです。"
+        video: assets/clips/aj_gomi.mp4
+        video_full: true
+  - id: jigyo
+    title: "学者と、商人"
+    background: il_aj_shoten
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "鈴木"}
+    cuts:
+      - speaker: reimu
+        text: "池田は、事業の相手に鈴木三郎助を選びました。"
+        reading: "いけだわ、じぎょうのあいてにすずきさぶろうすけをえらびました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "鈴木さん。この結晶を、商品にしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "うちで、ですか。うちは海藻から薬品を作る町工場ですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "海藻を煮て、成分を取り出すのが本業だろう。適任なんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "たしかに、設備と技は、ありますが……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "正直、味の商売は、未知の領域です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安い食事が、この粉ひとつでうまくなる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[日本中|にほんじゅう]の食卓の、栄養を変える商売なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "…………先生。それ、儲かりますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分からない。でも、世の中の役に立つのは、確実なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ハハハ。正直な学者さんだ。気に入りました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実はうちも、新しい柱を探してたんです。ヨードは相場が荒い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "波の荒い商売を、家族で耐えてきた鈴木さんだからこそなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その勝負、うちが乗ります。やりましょう。"
+      - speaker: reimu
+        text: "学者の発明に、商人が人生を賭けました。"
+        reading: "がくしゃのはつめいに、しょうにんがじんせいをかけました。"
+  - id: seizo
+    title: "量産という、壁"
+    background: il_aj_kojo
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "鈴木"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "先生、昆布からの抽出じゃ、商売になりません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だろうな。12キロで30グラムでは、値段が跳ね上がるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "佳良で廉価、の廉価が、崩れちゃいます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、原料を変えるのだ。小麦のタンパク質を使う。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "小麦から、昆布の味の素が取れるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "グルタミン酸は、タンパク質の部品のひとつなんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "小麦のタンパク質を分解すれば、大量に取り出せるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昆布は入り口で、正体はもっと普遍的なものだったのか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ただ、取り出したグルタミン酸そのままだと、酸っぱいですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうなのだ。だから、ナトリウムと結びつけて塩の形にする。"
+      - speaker: zundamon
+        emotion: normal
+        text: "水に溶けやすく、味もまろやかになるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "グルタミン酸ナトリウム。それが白い粉の正体か。"
+      - speaker: reimu
+        text: "しかし、工場での量産は、失敗の連続でした。"
+        reading: "しかし、こうじょうでのりょうさんわ、しっぱいのれんぞくでした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "また釜がだめになりました。分解に使う酸で、設備が溶けます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "酸に耐える釜を、探すのだ。妥協したら、品質が落ちるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "家業で鍛えた煮出しの腕、全部つぎ込みますよ。"
+      - speaker: reimu
+        text: "薬品づくりの技術が、調味料づくりを支えました。"
+        reading: "やくひんづくりのぎじゅつが、ちょうみりょうづくりをささえました。"
+  - id: era1909
+    title: "1909・味の素、発売"
+    background: il_aj_mise
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.15, tag: "池田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1909年5月20日。"
+        reading: "せんきゅうひゃくきゅうねんごがつはつか。"
+        video: assets/clips/era_aj1909.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: hatsubai
+    title: ""
+    background: il_aj_mise
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: kyaku, x: 0.56}
+      - {who: tsumugi, x: 0.86, tag: "鈴木"}
+    cuts:
+      - speaker: reimu
+        text: "世界初のうま味調味料が、味の素として発売されました。"
+        reading: "せかいはつのうまみちょうみりょうが、あじのもととしてはつばいされました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "さあ、いらっしゃい！ふりかけるだけで、料理がうまくなる粉だよ！"
+      - speaker: kyaku
+        text: "……ふりかけるだけで？そんな都合のいい話、あるのかしら。"
+      - speaker: zundamon
+        emotion: normal
+        text: "昆布のだしと同じ成分を、取り出した物なんです。"
+      - speaker: kyaku
+        text: "薬みたいで、なんだか怖いわねえ。今日はやめておくわ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……今日も、さっぱりです。先生。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "便利すぎる話は、かえって疑われるんだ。"
+      - speaker: reimu
+        text: "画期的すぎた白い粉は、まったく売れませんでした。"
+        reading: "かっきてきすぎたしろいこなわ、まったくうれませんでした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "しまいには、変なうわさまで流れる始末です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "白い粉の正体は蛇だ、といううわさが流れたと言われるのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "ヘビ！？うちは小麦から作ってるのに、ひどい風評ですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新しすぎる物の宿命なのだ。地道に、誤解を解くしかないんだ。"
+      - speaker: reimu
+        text: "新しすぎる発明は、まず疑いと戦うことになりました。"
+        reading: "あたらしすぎるはつめいわ、まずうたがいとたたかうことになりました。"
+  - id: fukyu
+    title: "台所への、長い道"
+    background: il_aj_mise
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: kyaku, x: 0.56}
+      - {who: tsumugi, x: 0.86, tag: "鈴木"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "作戦を変えます。まず、プロに使ってもらいましょう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "料理店から、なのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そば屋やうなぎ屋が使えば、味が証明になります。"
+      - speaker: reimu
+        text: "プロの台所から、評判は少しずつ広がり始めます。"
+        reading: "ぷろのだいどころから、ひょうばんわすこしずつひろがりはじめます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それから、店先での実演です。実際に味見してもらう。"
+      - speaker: kyaku
+        text: "あら……。お吸い物が、料亭の味になったわ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "種も仕掛けもない。うま味という、味の力なのだ。"
+      - speaker: kyaku
+        text: "ひと瓶、もらおうかしら。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "毎度ありがとうございます！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "宣伝も、思いつく限りやります。新聞広告に、看板に……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "自転車の部隊で、全国を回る計画まであるのだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "使ってもらえれば、味が営業してくれますから。"
+      - speaker: reimu
+        text: "新聞広告に、店頭実演。うわさは、味の前に消えていきました。"
+        reading: "しんぶんこうこくに、てんとうじつえん。うわさわ、あじのまえにきえていきました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "先生、注文が追いつきません。台所の定番になってきましたよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "質素なおかずが、ひとふりでうまくなる。志の実現なのだ。"
+      - speaker: reimu
+        text: "佳良にして廉価。白い粉は、日本の台所に根づきました。"
+        reading: "かりょうにしてれんか。しろいこなわ、にほんのだいどころにねづきました。"
+  - id: sekai
+    title: "UMAMIに、なるまで"
+    background: il_aj_sekai
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "鈴木"}
+    cuts:
+      - speaker: reimu
+        text: "しかし、うま味が世界に認められるには、時間がかかりました。"
+        reading: "しかし、うまみがせかいにみとめられるにわ、じかんがかかりました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "海外の学者には、長いこと信じてもらえなかったんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うま味は[塩味|えんみ]と[甘味|かんみ]の組み合わせだろう、って言われ続けてね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "アジア人の思い込み扱いされた時代も、あったのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それでも、日本の研究者たちは、データを積み続けたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "証拠の前では、思い込みのほうが折れますからね。"
+      - speaker: reimu
+        text: "転機は、1985年。国際シンポジウムで、UMAMIの語が採択されます。"
+        reading: "てんきわ、せんきゅうひゃくはちじゅうごねん。こくさいしんぽじうむで、うまみのごがさいたくされます。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "研究が積み重なって、ようやく世界の学会が追いついてきた。"
+      - speaker: reimu
+        text: "そして2000年、決定打が出ます。"
+        reading: "そしてにせんねん、けっていだがでます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "舌に、グルタミン酸専用の受容体が見つかったのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うま味センサーが、体の側に実装されてた証拠だ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "92年ごしの、伏線回収なのだ。"
+      - speaker: reimu
+        text: "うま味は科学の言葉UMAMIとして、世界の共通語になりました。"
+        reading: "うまみわかがくのことばうまみとして、せかいのきょうつうごになりました。"
+  - id: umami_clip
+    title: ""
+    background: il_aj_sekai
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "池田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1908年の発見から、2000年の証明まで。UMAMIの旅路です。"
+        reading: "せんきゅうひゃくはちねんのはっけんから、にせんねんのしょうめえまで。うまみのたびじです。"
+        video: assets/clips/aj_umami.mp4
+        video_full: true
+  - id: ronso
+    title: "体に悪いって、本当？"
+    background: il_aj_kitchen
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも、ネットで見たのだ。うま味調味料は体に悪い、って。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はっきり言うとね、その説を支える科学的な根拠は、無いの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "えっ。あんなに広まってる話なのに？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昔、海外の食堂で食後の不調のうわさが広まったのが発端でね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その後の実験で、再現できなかったと言われてるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "じゃあ、グルタミン酸そのものは、何なんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "トマトにも、チーズにも、母乳にも入ってる、ありふれた成分。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "母乳！？人類、生まれた日からうま味ユーザーなのか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "昆布のグルタミン酸と、工場のグルタミン酸は、別物じゃないのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "分子としては同じもの。出どころが違うだけなんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "国際機関の評価でも、通常の使用での安全性は認められてるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、安心して振りまくっていいんだな？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこは、ほどほどに。本当の注意点は、別にあるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……と、いうと？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うま味が強いと、味が濃く感じて、塩やだしの調整をさぼりがち。"
+      - speaker: zundamon
+        emotion: normal
+        text: "味覚の育ちには、昆布やかつおのだしも大事、ってことか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。道具は道具。使い分けが、いちばんおいしいんだよ。"
+      - speaker: reimu
+        text: "怖い話より、正しい使い方。それが科学との付き合い方です。"
+        reading: "こわいはなしより、ただしいつかいかた。それがかがくとのつきあいかたです。"
+  - id: bannen
+    title: "湯豆腐の、その後"
+    background: il_aj_engawa
+    bgm: amacha_hoshizora
+    stage:
+      - {who: zundamon, x: 0.24, tag: "池田", flip: true}
+      - {who: tsuma, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "池田菊苗は、のちに日本の十大発明家に選ばれました。"
+        reading: "いけだきくなえわ、のちににほんのじゅうだいはつめいかにえらばれました。"
+      - speaker: tsuma
+        text: "あなた。今夜も、湯豆腐にしましょうか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ああ。あの晩と、同じやつを頼むのだ。"
+      - speaker: tsuma
+        text: "あの湯豆腐が、こんな大きな話になるなんてねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "きみが、いい昆布を選んでくれたおかげなんだ。"
+      - speaker: tsuma
+        text: "あらあら。では、発見の半分は、私の手柄ですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ああ。この発見は、うちの食卓から生まれたのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "質素なごはんが、少しうまくなる。それだけの願いだったのだ。"
+      - speaker: tsuma
+        text: "その願い、世界中の台所に届きましたよ。"
+      - speaker: reimu
+        text: "科学の大発見は、いつもの晩ごはんの中にありました。"
+        reading: "かがくのだいはっけんわ、いつものばんごはんのなかにありました。"
+        pause_after: 0.6
+  - id: musubi
+    title: ""
+    background: il_aj_kitchen
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "スープ、完成したのだ。……うまい。コクが実装されたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "冒頭の伏線、無事に回収できたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "足りなかったのは腕じゃなくて、5人目の基本味だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "湯豆腐の違和感を流さなかった観察力が、全部の始まりだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "名前のない味に、名前をつけた。それが世界共通語になったんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "科学者の発見と、商人の執念。二人がかりの偉業だね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "トマトもチーズも干ししいたけも、うま味の仲間だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "洋食のコクも中華の深みも、正体は同じ5人目なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今夜の晩ごはんの、だしの味。ちゃんと味わって食べるのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あなたの舌にも、うま味センサーが標準装備なのだ！"
+        telops:
+          - {text: "UMAMIは、日本語", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、あなたのいちばん好きなだしも教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
