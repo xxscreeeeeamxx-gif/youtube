@@ -59,7 +59,8 @@ def make_icon() -> Image.Image:
     img.paste(sp, (px, 150), sp)
     d = ImageDraw.Draw(img)
     # チャンネル名と！？
-    ctext(d, S / 2, 80, "日常研究所", font(84), (255, 255, 255), stroke=ZUNDA_DK, sw=12)
+    # 円形マスクの上端で見切れないよう、名前は y120 に置く
+    ctext(d, S / 2, 120, "日常研究所", font(84), (255, 255, 255), stroke=ZUNDA_DK, sw=12)
     ctext(d, 668, 250, "？", font(120), (255, 255, 255), stroke=ZUNDA_DK, sw=10)
     ctext(d, 132, 264, "！", font(110), (255, 255, 255), stroke=ZUNDA_DK, sw=10)
     return img
