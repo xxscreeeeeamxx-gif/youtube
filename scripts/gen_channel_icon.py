@@ -44,11 +44,19 @@ def make_icon() -> Image.Image:
                    (S / 2 + math.cos(a) * 900, S / 2 + math.sin(a) * 900),
                    (S / 2 + math.cos(a2) * 900, S / 2 + math.sin(a2) * 900)],
                   fill=ZUNDA_DK)
-    # ずんだもん顔アップ（中央）
+    # ずんだもん顔アップ（顔の重心を実測して水平センタリング）
     sp = Image.open("assets/characters/zundamon/happy.png")
+    import numpy as np
+    alpha = np.array(sp)[:, :, 3]
+    hh, ww = alpha.shape
+    band = alpha[int(hh * 0.22):int(hh * 0.42), :].sum(axis=0).astype(float)
+    face_cx = (band * np.arange(ww)).sum() / band.sum()
     w = 760
     sp = sp.resize((w, int(sp.height * w / sp.width)), Image.LANCZOS)
-    img.paste(sp, ((S - w) // 2, 150), sp)
+    # 前髪と尻尾髪の非対称のぶんは目視で補正（+55px）
+    FACE_OFFSET = 55
+    px = int(S / 2 - face_cx * w / ww) + FACE_OFFSET
+    img.paste(sp, (px, 150), sp)
     d = ImageDraw.Draw(img)
     # チャンネル名と！？
     ctext(d, S / 2, 80, "日常研究所", font(84), (255, 255, 255), stroke=ZUNDA_DK, sw=12)
