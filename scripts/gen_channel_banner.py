@@ -65,12 +65,13 @@ def make_banner() -> Image.Image:
         im = im.crop((0, 0, im.width, int(im.height * head_ratio)))
         return im.resize((w, int(im.height * w / im.width)), Image.LANCZOS)
 
+    # 動画のステージと同じ向き: 左のずんだもんは反転して内側(右)へ、右のつむぎは元向きで内側(左)へ
     zw = 430
     zu = head_crop("zundamon", "happy", zw, 0.40)
+    zu = zu.transpose(Image.FLIP_LEFT_RIGHT)
     img.paste(zu, (SX0 + 6, SY0 + SAFE_H - zu.height + 8), zu)
     tw = 440
     ts = head_crop("tsumugi", "happy", tw, 0.38)
-    ts = ts.transpose(Image.FLIP_LEFT_RIGHT)
     img.paste(ts, (SX0 + SAFE_W - tw - 6, SY0 + SAFE_H - ts.height + 8), ts)
     # 中央の文字（キャラと横に並ぶ幅に抑える）
     d = ImageDraw.Draw(img)
