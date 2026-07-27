@@ -1,0 +1,829 @@
+# カッターナイフ再現ドラマ・ミーム版（岡田良男・1950年代→現代）。投稿前に必ず目視レビュー。
+# 新方針: ミーム版のみ1本。戦後の貧しさの描写は茶化さない。死去シーンなし（明るい伝記）。
+# 裏取り: オルファ公式「誕生秘話」/オルファWikipedia/カッターナイフWikipedia/precious.jp/CBC/SK弁理士法人。
+# 印刷工の岡田(30歳・1956)が紙裁断の刃の消耗に悩む→進駐軍向け靴職人がガラス片で靴底を削り
+# 切れなくなると割って新しい縁を使うのを目撃+進駐軍の板チョコの割り線→折る刃式を着想→
+# 試作1号(長さ13cm・幅1cm・折り筋ピッチ約5mm)・実用新案→メーカーに断られ続ける→
+# 資金難で日本転写紙に製造協力を求め1959特許出願・取得→1967-6-8 弟の三朗・四郎・博と
+# 妻・輝子と岡田工業設立→ブランドOLFA(折る刃→H音を発音しない国があるためOLHAでなくOLFA)→
+# 刃幅9mm/18mm・折れ線角度59度が世界のデファクトスタンダード・黄色いボディ・ジャパニーズナイフ
+meta:
+  title: "刃を折ったら、世界が切れた。カッターナイフを発明した印刷工・岡田良男【ゆっくり再現ドラマ・ミーム版】"
+  slug: "cutter-knife"
+  summary: "カッターナイフを発明した大阪の印刷工・岡田良男の物語。紙を切るカミソリの刃がすぐ駄目になる悩みの中、進駐軍の靴を直す職人が「切れなくなったガラス片を割って、新しい縁で削る」のを目撃。進駐軍の板チョコの割り線と掛け合わせて、世界初の「折れば切れ味が戻る刃」を思いつく。メーカーに断られ続けた試作品が、弟たちと建てた会社オルファとなり、刃幅9ミリ・折れ線59度が世界標準になるまで。ずんだもんが岡田を演じる再現ドラマ・ミーム版でお届けします。"
+  tags: ["カッターナイフ", "岡田良男", "オルファ", "発明", "大阪", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "刃を折ったら"
+    bottom: "世界が切れた"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: oyakata, label: "印刷所の親方", voice: 13, pitch: -0.06, item: mustache}
+    - {id: shokunin, label: "靴職人", voice: 42, item: hat}
+    - {id: tantou, label: "メーカーの担当", voice: 13, pitch: 0.02, item: hat}
+    - {id: teruko, label: "妻・輝子", voice: 8, pitch: 0.03, hair: bun}
+scenes:
+  - id: hook
+    title: ""
+    background: il_ck_desk
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "工作中なのだ。……むむ、カッターの切れ味が、落ちてきたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ、刃を折らないと。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "はあ！？切れないのに、さらに壊すのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "壊すんじゃなくて、折るの。ほら、ペンチで、ポキッ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……切れ味が、完全回復したのだ。回復魔法か？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "刃に最初から折り線が入ってて、折ると新品の刃先が出るの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "回復じゃなくて、交代だったのか。野球の投手みたいなんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。疲れた先発の後ろに、新品が何人も控えてる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "言われてみれば、この斜めの線、なんで入ってるんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その線こそが、世紀の大発明。日本生まれだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "カッターナイフ、日本発なのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "折る刃式はね。海外にはジャパニーズ・ナイフって呼ぶ国もあるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "誰が考えたんだ？刃物の職人？大企業の研究所？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "大阪の、紙を切る仕事をしてた印刷工さん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "作る側じゃなくて、使う側の発明なのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、刃物のメーカーには、断られまくったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "世界標準になる発明が、書類選考で全落ちしてたのか……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ヒントは、板チョコと、ガラスのかけら。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "チョコとガラス……情報量が渋滞してるんだが。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日はその話。工作しながら、聞いていこう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。この斜め線の正体、気になって作業が進まないんだ。"
+      - speaker: reimu
+        text: "カッターナイフ。折ると切れ味が戻る、日本生まれの道具です。"
+        reading: "かったーないふ。おるときれあじがもどる、にほんうまれのどうぐです。"
+      - speaker: reimu
+        text: "発明したのは、刃物屋ではなく、一人の印刷工でした。"
+        reading: "はつめいしたのわ、はものやでわなく、ひとりのいんさつこうでした。"
+      - speaker: reimu
+        text: "物語は、1950年代の大阪から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくごじゅうねんだいのおおさかからはじまります。"
+  - id: era1950
+    title: "1950年代・大阪"
+    background: il_ck_insatsu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "岡田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1950年代、大阪。"
+        reading: "せんきゅうひゃくごじゅうねんだい、おおさか。"
+        video: assets/clips/era_ck1950.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: insatsu
+    title: ""
+    background: il_ck_insatsu
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: oyakata, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "岡田良男は、印刷の仕事場で働く、30歳の職人でした。"
+        reading: "おかだよしおわ、いんさつのしごとばではたらく、さんじゅっさいのしょくにんでした。"
+      - speaker: oyakata
+        text: "岡田、この紙の山、昼までに断ち終わるか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "任せてほしいのだ。……よし、どんどん切るぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……むむ。もう刃が、引っかかり始めたのだ。"
+      - speaker: oyakata
+        text: "カミソリの刃、また換えるんか。今日それで何枚目や。"
+      - speaker: zundamon
+        emotion: sad
+        text: "紙は、見た目より刃に厳しいのだ。すぐ切れ味が死ぬんだ。"
+      - speaker: oyakata
+        text: "柔らかい紙のくせに、砥石より刃を食いよるんは、なんでやろな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙には、白くするための鉱物の粉が、練り込まれてるのだ。"
+      - speaker: oyakata
+        text: "ほう。ほな紙を切るっちゅうのは、石の粉を切っとるようなもんか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。だから紙の現場の刃は、人一倍早く丸くなるんだ。"
+      - speaker: oyakata
+        text: "道理でうちの替え刃代が、かさむわけや。"
+      - speaker: oyakata
+        text: "刃物は消耗品や。けど、もったいない話やで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "刃のほとんどは、まだピカピカの新品なのに……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "使ってるのは、先っぽの数ミリだけ。あとは全部、無駄死になのだ。"
+      - speaker: oyakata
+        text: "ほな、先っぽだけ新品にできたら、大発明やな。ハッハッハ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（親方は冗談で言ってるけど……それ、できたら革命なのだ。）"
+      - speaker: reimu
+        text: "刃はすぐ切れなくなる。それが、岡田の毎日の悩みでした。"
+        reading: "はわすぐきれなくなる。それが、おかだのまいにちのなやみでした。"
+  - id: machi
+    title: "ガラスの、靴職人"
+    background: il_ck_machi
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "仕事帰りの街角で、岡田はある職人に目を留めます。"
+        reading: "しごとがえりのまちかどで、おかだわあるしょくにんにめをとめます。"
+      - speaker: shokunin
+        text: "へい、進駐軍さんの靴、直しますよってに。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（あの職人さん、靴底を削ってるのは……ガラスのかけら？）"
+      - speaker: zundamon
+        emotion: normal
+        text: "おっちゃん、それ、刃物じゃなくてガラスなのだ？"
+      - speaker: shokunin
+        text: "おう。ガラスの[割れ口|われくち]はな、下手な刃物より、ようけ削れるんや。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "[割れ口|われくち]が、刃の代わり……。"
+      - speaker: shokunin
+        text: "ほんで、切れんようになったら、こうや。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "割った！ガラスを、パキッと割ったのだ！"
+      - speaker: shokunin
+        text: "割ったら、新しい[割れ口|われくち]ができるやろ。ほら、また切れる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "研がずに、割って、切れ味を作り直してるのだ……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "進駐軍の靴は、革が分厚くて、硬そうなのだ。"
+      - speaker: shokunin
+        text: "おう。軍靴の底はごついで。並みの刃やと、すぐ[音|ね]を上げよる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "その厚革相手に、ガラスの[割れ口|われくち]は、ずっと勝ち続けてる……。"
+      - speaker: shokunin
+        text: "割りたてはな、カミソリ顔負けや。ほんまもんの切れ味やで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（割りたての縁は、いつでも新品。在庫は、かけらの数だけ……。）"
+      - speaker: shokunin
+        text: "貧乏人の知恵や。砥石なんぞ、うちにはあらへんからな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（違う。これは知恵どころか、発明の種なのだ。）"
+      - speaker: reimu
+        text: "切れなくなったら、割って新しい縁を出す。目からうろこでした。"
+        reading: "きれなくなったら、わってあたらしいふちをだす。めからうろこでした。"
+  - id: choco
+    title: "板チョコの、割り線"
+    background: il_ck_home
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: teruko, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "その晩、岡田家に、めずらしい土産がありました。"
+        reading: "そのばん、おかだけに、めずらしいみやげがありました。"
+      - speaker: teruko
+        text: "あなた、いただきものの板チョコがありますよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "進駐軍の、あの板チョコなのだ。貴重品なんだ。"
+      - speaker: teruko
+        text: "ご近所からのお裾分けです。甘い物は、久しぶりですねえ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "子どもたちが、目の色を変えるぞ。"
+      - speaker: teruko
+        text: "みんなで分けましょう。ほら、ポキッ、ポキッ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……輝子。それ、なんできれいに割れるのだ？"
+      - speaker: teruko
+        text: "溝が入ってますから。この線のとおりに、力が走るんでしょう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "溝は、割れ目の道案内……力の通り道を、先に彫ってあるのだ。"
+      - speaker: teruko
+        text: "だから誰が折っても、同じ形になるんですねえ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "溝の場所で、狙いどおりに、何度でも割れる……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "昼間のガラスは、割るたびに切れ味が戻った。でも割れ方は運任せ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "チョコの溝なら、割れる場所を、あらかじめ決められる……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "合体なのだ！ガラスの「割る」と、チョコの「割り線」を！"
+        se: don
+      - speaker: teruko
+        text: "あらあら、チョコを持ったまま、固まってますよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "刃に折り線を入れる。切れなくなったら、先だけ折って捨てるのだ！"
+      - speaker: teruko
+        text: "折るたびに、新品の刃が出てくる、ということですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そう！研がない。換えない。折る。世界初の発想なのだ！"
+      - speaker: reimu
+        text: "ガラスの[割れ口|われくち]と、板チョコの溝。ふたつが、ひとつになりました。"
+        reading: "がらすのわれくちと、いたちょこのみぞ。ふたつが、ひとつになりました。"
+  - id: naze
+    title: "そもそも、なぜ刃は切れなくなる"
+    background: il_ck_home
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: teruko, x: 0.72}
+    cuts:
+      - speaker: teruko
+        text: "でも、あなた。そもそも刃は、なぜ切れなくなるんでしょうね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いい質問なのだ。刃先は、見た目よりずっと繊細なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "切れる刃の先は、髪の毛より細く、とがってるのだ。"
+      - speaker: teruko
+        text: "つるんとした一枚の板、というわけではないんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "拡大すると、先端は細かいギザギザ。ミクロのノコギリなんだ。"
+      - speaker: teruko
+        text: "そのギザギザが、繊維を引っかけて切るんですね。"
+      - speaker: teruko
+        text: "そんなに細いと、すぐ傷みそうですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。紙でも革でも、切るたびに先端がすり減って、丸くなるんだ。"
+      - speaker: teruko
+        text: "丸くなった刃は、切るというより、押しつぶす感じに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それが、切れないという状態の正体なのだ。"
+      - speaker: teruko
+        text: "細い先が丸くなるだけで、そんなに変わるものですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "刃先が丸いと、紙の繊維を切らずに、引きちぎる形になるのだ。"
+      - speaker: teruko
+        text: "切り口も汚くなるし、力も要る、というわけですね。"
+      - speaker: teruko
+        text: "研げば直るのでは？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "研ぐのは腕がいるし、時間もかかる。仕事場では現実的じゃないんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから発想を変える。直すんじゃなくて、取り替えるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "刃先の数ミリだけ折って捨てれば、残り全部が予備の新品なんだ。"
+      - speaker: teruko
+        text: "一本の刃が、何本ぶんにもなるんですね。"
+      - speaker: reimu
+        text: "切れ味の正体は、先端の数ミリ。そこだけ新しくすればいいのです。"
+        reading: "きれあじのしょうたいわ、せんたんのすうみり。そこだけあたらしくすればいいのです。"
+  - id: shisaku
+    title: "手作りの、1号機"
+    background: il_ck_home
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: teruko, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "岡田は仕事のかたわら、試作を始めました。"
+        reading: "おかだわしごとのかたわら、しさくをはじめました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "刃の長さは13センチ。幅は1センチ。折り筋は5ミリ間隔なのだ。"
+      - speaker: teruko
+        text: "ずいぶん細かく折れるんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "細かいほど、一本の刃で長く戦えるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "問題は、折り筋の深さなんだ。"
+      - speaker: teruko
+        text: "深すぎると、使ってる最中に、ポキッと？"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。浅すぎると、今度は折りたいときに折れない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "使うときは折れず、折るときは折れる。絶妙ラインを探すのだ。"
+      - speaker: teruko
+        text: "わがままな注文ですねえ。"
+      - speaker: reimu
+        text: "試作は、一度では決まりませんでした。"
+        reading: "しさくわ、いちどでわきまりませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "今回のは、筋が深すぎた。力を入れたら、途中で折れたのだ。"
+      - speaker: teruko
+        text: "では、少し浅く。……今度は、折りたいのに折れませんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "深さを、髪の毛一本ぶんずつ、調整していくのだ。"
+      - speaker: teruko
+        text: "地道ですねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この筋の深さこそが、発明の心臓部なのだ。妥協できないんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あと、むき出しの刃は危ない。さやに収めて、少しずつ出すのだ。"
+      - speaker: teruko
+        text: "使う分だけ出して、あとは隠しておく。安全ですね。"
+      - speaker: teruko
+        text: "見た目は、ちょっと不格好ですけど……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "手作りだからな。でも、機能は本物なのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "できたのだ。世界初の、折る刃式ナイフ1号なのだ！"
+      - speaker: reimu
+        text: "岡田は考案をまとめ、権利の出願も行いました。"
+        reading: "おかだわこうあんをまとめ、けんりのしゅつがんもおこないました。"
+  - id: ore_clip
+    title: ""
+    background: il_ck_home
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.15, tag: "岡田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "すり減った先端を折れば、下から新品の刃先が現れます。"
+        reading: "すりへったせんたんをおれば、したからしんぴんのはさきがあらわれます。"
+        video: assets/clips/ck_ore.mp4
+        video_full: true
+  - id: urikomi
+    title: "断られ続けた、発明"
+    background: il_ck_tonya
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: tantou, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "岡田は試作品を持って、メーカーを回りました。"
+        reading: "おかだわしさくひんをもって、めーかーをまわりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "（自分では作る設備がない。作れる会社に、頼み込むのだ。）"
+      - speaker: zundamon
+        emotion: normal
+        text: "折ると切れ味が戻る、新しい刃物なのだ。作ってほしいのだ。"
+      - speaker: tantou
+        text: "刃にわざわざ切り込みを？強度が落ちるだけでしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこは折り筋の深さで解決してるのだ。実物を見てほしいのだ。"
+      - speaker: tantou
+        text: "だいたい、刃物は研いで使うもの。折って捨てるなど、邪道です。"
+      - speaker: zundamon
+        emotion: sad
+        text: "（伝統の壁は、ぶ厚いのだ……。）"
+      - speaker: reimu
+        text: "次の会社も、その次の会社も、答えは同じでした。"
+        reading: "つぎのかいしゃも、そのつぎのかいしゃも、こたえわおなじでした。"
+      - speaker: tantou
+        text: "素人の思いつきに、うちの設備は貸せませんな。"
+      - speaker: tantou
+        text: "そもそも君、刃物の職人ですらないでしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "印刷工なのだ。でも、刃を一番使ってるのは、ボクら現場なのだ。"
+      - speaker: tantou
+        text: "現場の声ねえ。まあ、うちでは扱えませんな。"
+      - speaker: zundamon
+        emotion: sad
+        text: "またお祈りされたのだ……。何社目か、数えるのをやめたんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、現場のボクは知ってるのだ。これは絶対に、要る道具なのだ。"
+      - speaker: reimu
+        text: "使う人の発明は、作る人には、なかなか届きませんでした。"
+        reading: "つかうひとのはつめいわ、つくるひとにわ、なかなかとどきませんでした。"
+  - id: kyoryoku
+    title: "やっと、世に出る"
+    background: il_ck_tonya
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: tantou, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "転機は、紙を扱う会社への相談でした。"
+        reading: "てんきわ、かみをあつかうかいしゃえのそうだんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙の現場なら、刃の悩みを分かってもらえるはずなのだ。"
+      - speaker: tantou
+        text: "……ほう。折るたびに、切れ味が戻る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙を切る現場で生まれた、現場のための道具なんだ。"
+      - speaker: tantou
+        text: "面白い。うちで、ものにしてみましょう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "話が分かる会社が、やっとあったのだ！"
+      - speaker: reimu
+        text: "協力を得た岡田の考案は、1959年、特許として結実します。"
+        reading: "きょうりょくをえたおかだのこうあんわ、せんきゅうひゃくごじゅうきゅうねん、とっきょとしてけつじつします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "断られ続けた折る刃が、ついに製品になったのだ。"
+      - speaker: tantou
+        text: "現場の人の発明は、現場が一番よく分かる、ということですな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かってくれる相手を探し続けた甲斐が、あったのだ。"
+      - speaker: reimu
+        text: "折る刃式カッターナイフは、こうして世に出ました。"
+        reading: "おるはしきかったーないふわ、こうしてよにでました。"
+  - id: fukyu
+    title: "現場が、認めた"
+    background: il_ck_insatsu
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: oyakata, x: 0.72}
+    cuts:
+      - speaker: oyakata
+        text: "岡田、お前の考えたナイフ、隣の製本所でも使うとったで。"
+      - speaker: zundamon
+        emotion: happy
+        text: "切れなくなったら、その場でポキッ。仕事が止まらないのだ。"
+      - speaker: oyakata
+        text: "研ぎ屋いらず、換え刃の在庫いらず。ようできとるわ。"
+      - speaker: reimu
+        text: "時代も、追い風でした。"
+        reading: "じだいも、おいかぜでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "高度成長で、荷物はみんな段ボール箱になっていくんだ。"
+      - speaker: oyakata
+        text: "木箱の時代が終わって、紙の箱が天下を取りよる。"
+      - speaker: oyakata
+        text: "開けるのも、切るのも、カッターが一番や。"
+      - speaker: oyakata
+        text: "職人の道具箱に、一本ずつ増えていきよるで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "刃物を研げない人でも、いつでも最高の切れ味を使えるんだ。"
+      - speaker: oyakata
+        text: "切れ味の民主化っちゅうやつやな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙の時代の相棒として、どこの現場にも広がっていくのだ。"
+      - speaker: reimu
+        text: "印刷所から倉庫まで、折る刃は現場の定番になっていきます。"
+        reading: "いんさつしょからそうこまで、おるはわげんばのてえばんになっていきます。"
+  - id: era1967
+    title: "1967・オルファ誕生"
+    background: il_ck_kojo
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.15, tag: "岡田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1967年6月8日、大阪。"
+        reading: "せんきゅうひゃくろくじゅうななねんろくがつようか、おおさか。"
+        video: assets/clips/era_ck1967.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: sogyo
+    title: ""
+    background: il_ck_kojo
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.22, tag: "岡田", flip: true}
+      - {who: tsumugi, x: 0.54, tag: "三朗"}
+      - {who: teruko, x: 0.86}
+    cuts:
+      - speaker: reimu
+        text: "岡田は、自分たちの会社を作る決意をします。"
+        reading: "おかだわ、じぶんたちのかいしゃをつくるけついをします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三朗、四郎、博。兄弟みんなの力を、貸してほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "兄さんの折る刃で、勝負するんだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よその看板の下じゃなく、自分たちの手で作って、届けるんだ。"
+      - speaker: teruko
+        text: "家計は、私がなんとかしますから。思い切りおやりなさい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作るのはおれたちがやる。兄さんは、次の発明を考えてくれ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作る、売る、考える。兄弟で役割分担なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "兄弟と家族の総力戦。負ける気がしないな。"
+      - speaker: reimu
+        text: "弟たちと妻に支えられ、岡田の会社が生まれました。"
+        reading: "おとうとたちとつまにささえられ、おかだのかいしゃがうまれました。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "それで兄さん、ブランドの名前は、どうするんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決めてあるのだ。オルファ。折る刃、そのままなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "日本語を、そのまま看板にするのか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ならローマ字で、OLHAじゃないのか？"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界には、Hを発音しない国がある。だからFに変えたんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "町工場の初日から、世界で呼ばれる日を想定してるのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "折る刃は、世界に通用する発明なのだ。先に名前を整えたのだ。"
+      - speaker: reimu
+        text: "オルファ。日本語の折る刃が、そのまま社名になりました。"
+        reading: "おるふぁ。にほんごのおるはが、そのまましゃめえになりました。"
+  - id: sekai
+    title: "世界標準に、なった線"
+    background: il_ck_kojo
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三朗"}
+    cuts:
+      - speaker: reimu
+        text: "岡田の決めた刃の形は、やがて世界に広がります。"
+        reading: "おかだのきめたはのかたちわ、やがてせかいにひろがります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "小さい刃は幅9ミリ。大きい刃は18ミリ。折れ線は59度。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この寸法が、他社さんの替え刃でも、そのまま使われてるんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "規格として決めたわけでもないのに、世界共通になったのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "みんなが合わせてくれた結果の、事実上の世界標準なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "刃のサイズが同じなら、どの国の道具でも替え刃が合うんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "使う人が困らない形が、結局いちばん強い規格なんだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ボディの黄色も、オルファの発明だっけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作業場で目立って、なくしにくい色を選んだんだ。"
+      - speaker: reimu
+        text: "9ミリ、18ミリ、59度。大阪生まれの寸法が、世界の共通語です。"
+        reading: "きゅうみり、じゅうはちみり、ごじゅうきゅうど。おおさかうまれのすんぽうが、せかいのきょうつうごです。"
+  - id: std_clip
+    title: ""
+    background: il_ck_kojo
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.15, tag: "岡田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "刃幅9ミリと18ミリ、折れ線59度。世界が同じ刃を使っています。"
+        reading: "はばきゅうみりとじゅうはちみり、おれせんごじゅうきゅうど。せかいがおなじはをつかっています。"
+        video: assets/clips/ck_std.mp4
+        video_full: true
+  - id: kaigai
+    title: "世界が、拾った"
+    background: il_ck_kojo
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "岡田", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "三朗"}
+    cuts:
+      - speaker: reimu
+        text: "折る刃は、海を越えていきました。"
+        reading: "おるはわ、うみをこえていきました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "兄さん、海外から注文だ。あの名前の読みが、そのまま通じてる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "Hを抜いた甲斐が、あったのだ。どの国でもオルファなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "国によっては、この道具ごとジャパニーズ・ナイフ呼びらしいぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "大阪の紙切り場の発明が、国の代表選手なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "断り続けたメーカーの人たち、いまごろどんな顔してるかな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "恨みっこなしなのだ。誰も見たことのない道具だったんだから。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "新しすぎる発明の宿命、ってやつか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新しすぎたものは、時間が味方してくれるのだ。"
+      - speaker: reimu
+        text: "使う人の悩みから生まれた形は、国境に関係なく届きました。"
+        reading: "つかうひとのなやみからうまれたかたちわ、こっきょうにかんけえなくとどきました。"
+  - id: gendai
+    title: ""
+    background: il_ck_desk
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。"
+        reading: "ときわながれて、げんだい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "工場でも、引っ越しでも、図工の時間でも、世界中で現役だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ジャパニーズ・ナイフの名前も、伊達じゃないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "使う人が困って、使う人が考えた道具は、強いんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "困りごとの数だけ、発明のチャンスが転がってるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "会議室じゃなくて、紙の山の前で生まれた発明なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "100を超える国と地域で売られてると言われる、ロングセラーだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "半世紀前の設計のまま、いまだに世界の一軍装備なんだ。"
+      - speaker: reimu
+        text: "現場の悩みから生まれた道具は、現場が手放しませんでした。"
+        reading: "げんばのなやみからうまれたどうぐわ、げんばがてばなしませんでした。"
+  - id: jitsuyou
+    title: "刃の折り方、だいじょうぶ？"
+    background: il_ck_desk
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に、安全な刃の折り方の話。"
+      - speaker: zundamon
+        emotion: normal
+        text: "素手でポキッは、だめなのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。手がすべると、刃で切っちゃうからね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "折り方にも、正しい装備があるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ペンチか、専用の折り具を使って、刃先を人に向けずに折るの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "折った刃の欠片も、そのままゴミ箱はあぶないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "缶やケースにためてから、包んで捨てるのが基本だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "あと、切れないまま無理に使うのも、実はあぶないのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。切れない刃ほど、力が入って、すべって、けがのもと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "切れ味が落ちたら、ためらわず折る。それが一番安全なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "もったいない精神の発明なのに、折るのをためらったら本末転倒なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "岡田さんの発明は、折ってこそ完成する道具だからね。"
+      - speaker: reimu
+        text: "ためらわず折る。それが、いちばんの安全対策です。"
+        reading: "ためらわずおる。それが、いちばんのあんぜんたいさくです。"
+  - id: musubi
+    title: ""
+    background: il_ck_desk
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "工作、再開なのだ。……ポキッ。うん、新品の切れ味なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その一折りに、ガラスの靴職人と板チョコが入ってるんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "刃物屋の常識の外から来た発明だから、断られ続けたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも現場の男は、現場の答えを知ってたんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "町工場の初日から、世界を見てた名前も、かっこいいんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ガラスと板チョコを見て、ひらめける目も、鍛えたいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの手元の道具にも、誰かのひらめきが入ってるかもね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "身のまわりの当たり前、ぜんぶ誰かの発明なのだ！"
+        telops:
+          - {text: "もったいないが、世界を切った", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、あなたの町の意外な発明も教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
