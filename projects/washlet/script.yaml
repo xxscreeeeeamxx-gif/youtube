@@ -1,0 +1,842 @@
+# ウォシュレット開発再現ドラマ・ミーム版（TOTO開発チーム・1964→現代）。投稿前に必ず目視レビュー。
+# 新方針: ミーム版のみ1本。下ネタ禁止: 「おしり」までOK(公式CMコピー準拠)・肛門等の直接語は使わない。
+# 笑いは「会社でお尻のデータを真剣に集める」状況のギャップで取り、実験参加者を茶化さない。
+# 主要2人は役名(開発リーダー/若手)。実在の個人名は使わない(チーム開発として描く)。
+# 裏取り: TOTO公式(ウォシュレットの歴史/PR TIMES STORY)/ウォシュレットWikipedia/日経ビジネス/
+# NTTコムワレ ロングセラー考/日刊ゲンダイ。
+# 1964-12 米アメリカン・ビデ社ウォッシュエアシート輸入(温水洗浄・乾燥のみ・元は医療向け)→
+# 1969-11 国産化(+暖房便座)→自社開発: 便座にハリガネを張り印をつけてもらう方式で
+# 社員モニター約300人のデータ→黄金比率(噴射角度43度・温水38度・便座36度・乾燥約50度)→
+# 1980-6 ウォシュレット発売(G貯湯式/S瞬間式)→1982-9 CM「おしりだって、洗ってほしい。」→
+# CM後の売上が目標の160%・シェア58%→普及率8割超と言われる→訪日客人気・世界へ
+meta:
+  title: "社員300人が、体を張った。ウォシュレット開発の伝説【ゆっくり再現ドラマ・ミーム版】"
+  slug: "washlet"
+  summary: "ウォシュレットを生んだTOTO開発チームの物語。1964年に輸入した米国製の医療用便座は、温度が安定しない未完成品だった。「日本人の体に合う数字は、日本人が測るしかない」。便座にハリガネを張り、社員約300人に頼み込んでデータを集め、噴射角度43度・温水38度・便座36度の黄金比率にたどり着く。売れない発売初期から、1982年の伝説のCM「おしりだって、洗ってほしい。」、世界の観光客が驚く現在まで。ずんだもんが開発リーダーを演じる再現ドラマ・ミーム版でお届けします。"
+  tags: ["ウォシュレット", "TOTO", "温水洗浄便座", "開発秘話", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "社員300人が"
+    bottom: "体を張った43度"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: bucho, label: "部長", voice: 13, pitch: -0.06, item: mustache}
+    - {id: shain, label: "モニター社員", voice: 12, hair: short}
+    - {id: okyaku, label: "お客", voice: 8, pitch: 0.05, hair: bun}
+scenes:
+  - id: hook
+    title: ""
+    background: il_wl_toilet
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "海外の友だちが、日本で一番感動した場所を教えてくれたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お寺？富士山？"
+      - speaker: zundamon
+        emotion: normal
+        text: "トイレなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あるあるだね。日本のトイレは、観光名所扱いされてるから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ふたは開く、便座は温かい、洗ってくれる。フルコースだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しかも音楽が流れる機種まである。もてなしの鬼なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "外国だと「日本のトイレはハイテクすぎる」って動画が定番だしね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その「洗ってくれる」、設定の数字を知ってる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "数字？水が出る、以上の情報があるのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "噴射の角度は43度。お湯は38度。便座は36度。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "やけに具体的なんだが。レシピか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "黄金比率って呼ばれてる。で、問題はこの数字の決め方。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……普通に、計算で出したんじゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "人の体のことは、計算じゃ出ないの。測るしかない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "測る？誰の、何をだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "社員さん約300人の、おしりの位置。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ファッ！？会社で！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "もちろん服のまま、位置の記録だけね。それでも勇気が要るけど。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "職場で頼まれごとの難易度としては、最高クラスなんだが。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。世界一まじめに、おしりと向き合った開発の話だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "字面はふざけてるのに、中身は超本気のやつなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日はその話。誰もお世話にならない日はない発明だからね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。毎日の快適の、種明かしなんだ。"
+      - speaker: reimu
+        text: "ウォシュレット。いまや日本の家の8割にあると言われる道具です。"
+        reading: "うぉしゅれっと。いまやにほんのいえのはちわりにあるといわれるどうぐです。"
+      - speaker: reimu
+        text: "その快適の裏には、体を張った社員たちがいました。"
+        reading: "そのかいてきのうらにわ、からだをはったしゃいんたちがいました。"
+      - speaker: reimu
+        text: "物語は、1964年から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくろくじゅうよねんからはじまります。"
+  - id: era1964
+    title: "1964・輸入品との出会い"
+    background: il_wl_office
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "リーダー", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1964年12月。"
+        reading: "せんきゅうひゃくろくじゅうよねんじゅうにがつ。"
+        video: assets/clips/era_wl1964.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: yunyu
+    title: ""
+    background: il_wl_office
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: bucho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "衛生陶器の会社TOTOは、アメリカからある製品を輸入します。"
+        reading: "えいせいとうきのかいしゃとうとうわ、あめりかからあるせえひんをゆにゅうします。"
+      - speaker: bucho
+        text: "アメリカ製の、お湯で洗う便座だ。ウォッシュエアシートという。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "洗う便座……その発想はなかったんだ。"
+      - speaker: bucho
+        text: "もともとは、医療の現場向けの道具でな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手が不自由な人や、お医者さんにかかる人のための機械か。"
+      - speaker: bucho
+        text: "うちで輸入販売してみることになった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（洗う便座……ニッチだけど、悪くない発想なのだ。）"
+      - speaker: reimu
+        text: "しかし、この輸入品には、課題が山積みでした。"
+        reading: "しかし、このゆにゅうひんにわ、かだいがやまづみでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "部長、苦情なのだ。お湯の温度が、安定しないと言われています。"
+      - speaker: bucho
+        text: "ぬるすぎたり、熱すぎたり、か。"
+      - speaker: zundamon
+        emotion: sad
+        text: "体に直接あたるお湯なのだ。温度のブレは、そのまま苦情なんだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "修理のたびに、アメリカから部品待ちなのも、つらいのだ。"
+      - speaker: bucho
+        text: "船便で何週間、だからな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "せっかくの良い発想が、道具として未完成なんだ。"
+      - speaker: bucho
+        text: "アメリカ人の体格に合わせた設計、というのもあるだろうな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "水の当たる位置も、日本人にはどうも合ってないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "国産で作り直せば、品質は上げられるはずです。"
+      - speaker: bucho
+        text: "よし、国産化だ。暖房便座も付けよう。冬の日本には必須だ。"
+      - speaker: reimu
+        text: "1969年には国産化。それでも、まだ一部の人の道具でした。"
+        reading: "せんきゅうひゃくろくじゅうきゅうねんにわこくさんか。それでも、まだいちぶのひとのどうぐでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "性能はまだ、輸入品の延長なのだ。数字の根拠が、ないんだ。"
+  - id: ketsudan
+    title: "ゼロから、作り直す"
+    background: il_wl_kaigi
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: bucho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1970年代の末。開発チームは、大きな決断をします。"
+        reading: "せんきゅうひゃくななじゅうねんだいのすえ。かいはつちーむわ、おおきなけつだんをします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "部長。輸入品の改良では、もう限界なんだ。"
+      - speaker: bucho
+        text: "ゼロから、うちで設計し直すというのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "日本人の体に合う数字は、日本人が測って決めるしかないんだ。"
+      - speaker: bucho
+        text: "トイレは、用を足すだけの場所。それが世間の常識だぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、毎日必ず全員が使う場所でもあるのだ。"
+      - speaker: bucho
+        text: "……たしかに、そんな家電は他にないな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その常識を、変えたいんだ。我慢の場所を、快適の場所に。"
+      - speaker: bucho
+        text: "……よし。ただし、生半可な物は出すなよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎日使う物だからこそ、本気で作るんだ。"
+      - speaker: reimu
+        text: "こうして、自社開発のプロジェクトが動き出しました。"
+        reading: "こうして、じしゃかいはつのぷろじぇくとがうごきだしました。"
+  - id: naze
+    title: "なぜ、洗うのは難しいのか"
+    background: il_wl_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "リーダー。そもそも、お湯で洗うだけなら簡単そうですけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "と、思うじゃん？これが、とんでもない難題なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何がそんなに難しいんです？"
+      - speaker: zundamon
+        emotion: normal
+        text: "第一に、機械からは、狙う場所が見えないんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "たしかに。座られたら、センサーも何もない時代ですし。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見えない[的|まと]に、見えない場所から、一発で当てるんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "スナイパーみたいな話になってきましたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "第二に、[的|まと]の位置が、人によって違うんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "体格も座り方も、人それぞれですからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そして、跳ね返った水が機械や体に戻らない工夫も要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当てて終わりじゃなくて、水の行き先まで設計するんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "衛生の道具が不衛生では、本末転倒だからな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "第三に、温度なのだ。体にあたるお湯は、1度違えば不快なんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "お風呂より、ずっとシビアな世界……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "しかも失敗したら、服がぬれる事故になりますからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。一発で当てて、一度も外せない。減点方式の世界なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見えない、人による、超シビア。三重の無理ゲーなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、どう攻略するんです？"
+      - speaker: zundamon
+        emotion: normal
+        text: "計算では出ない。なら、測って平均を取るしかないんだ。"
+      - speaker: reimu
+        text: "答えは理屈の中ではなく、人の体の中にありました。"
+        reading: "こたえわりくつのなかでわなく、ひとのからだのなかにありました。"
+  - id: chosa
+    title: "伝説の、社内調査"
+    background: il_wl_lab
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.22, tag: "リーダー", flip: true}
+      - {who: tsumugi, x: 0.54, tag: "若手"}
+      - {who: shain, x: 0.86}
+    cuts:
+      - speaker: reimu
+        text: "こうして、いまも語り継がれる調査が始まります。"
+        reading: "こうして、いまもかたりつがれるちょうさがはじまります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "便座にハリガネを張って、座った位置に印をつけてもらうんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "つまり、社員のみなさんに、その、座ってもらって……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。おしりの位置の、実測データを集めるんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "言い出しにくさが、限界突破してませんか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、まずボクが測られる。言い出した者の責任なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……リーダーが先陣を切るなら、私も続きます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よし。あとは、社内のみんなに頼み込むのだ。"
+      - speaker: reimu
+        text: "しかし、最初の依頼は、うまくいきませんでした。"
+        reading: "しかし、さいしょのいらいわ、うまくいきませんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "というわけで、協力をお願いしたいのだ。"
+      - speaker: shain
+        text: "……えっ。それ、私が、その、座って測られるやつですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "服のままで大丈夫なのだ。印の位置を記録するだけなんだ。"
+      - speaker: shain
+        text: "い、いやでも、心の準備が……また今度でもいいですか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "（今日も断られたのだ。分かる。分かるのだ……。）"
+      - speaker: reimu
+        text: "それでも、チームの真剣さは、少しずつ伝わっていきます。"
+        reading: "それでも、ちーむのしんけんさわ、すこしずつつたわっていきます。"
+      - speaker: shain
+        text: "リーダー、お話は聞きました。……本気なんですね？"
+      - speaker: zundamon
+        emotion: normal
+        text: "本気なのだ。この数字が、[日本中|にほんじゅう]の毎日を変えるんだ。"
+      - speaker: shain
+        text: "分かりました。日本の未来のおしりのために、協力します。"
+      - speaker: zundamon
+        emotion: happy
+        text: "恩に着るのだ。君の勇気は、歴史に残るのだ。"
+      - speaker: reimu
+        text: "断られ、頼み込み、また断られ。それでも協力者は増えていきました。"
+        reading: "ことわられ、たのみこみ、またことわられ。それでもきょうりょくしゃわふえていきました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "本日の協力者、42人目です。データ、たまってきましたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "目標は300人なのだ。男女も体格も、幅広く測るんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "女性の協力者には、女性の担当者が対応する体制にしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "当然の配慮なのだ。安心してもらってこそのデータなんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "廊下で「例の件お願いします」って言うと、みんな苦笑いですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "笑われてもいいのだ。データは、笑わないんだ。"
+      - speaker: shain
+        text: "リーダー、同期も連れてきました。データ、増やしてください。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ありがたいのだ！仲間の輪が、広がってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "測定ノート、もう3冊目です。点の散らばりが、見えてきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ばらばらに見えて、ちゃんと集まる場所があるのだ。"
+      - speaker: reimu
+        text: "集まった記録は、およそ300人分にのぼりました。"
+        reading: "あつまったきろくわ、およそさんびゃくにんぶんにのぼりました。"
+  - id: data_clip
+    title: ""
+    background: il_wl_lab
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.15, tag: "リーダー", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "約300人の実測データが、狙うべき一点を教えてくれました。"
+        reading: "やくさんびゃくにんのじっそくでーたが、ねらうべきいってんをおしえてくれました。"
+        video: assets/clips/wl_data.mp4
+        video_full: true
+  - id: golden
+    title: "黄金比率、確定"
+    background: il_wl_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "データは、次々と数字を確定させていきます。"
+        reading: "でーたわ、つぎつぎとすうじをかくていさせていきます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "噴射の角度、決まりました。43度です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "真下からでも真後ろからでもない、43度。これが狙える角度なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水が体に沿って流れて、跳ね返りも少ない角度なんですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "浅すぎると届かない。深すぎると跳ね返る。43度が答えなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "300人分の[的|まと]の平均に、ちょうど届く角度でもある、と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次は、お湯の温度なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "モニターの声を集計すると……38度が最多です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "体温より、ほんの少し上。ぬるくなく、熱くなく、なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "便座は36度。人の肌と、ほぼ同じ温度。"
+      - speaker: zundamon
+        emotion: normal
+        text: "座った瞬間の、ヒヤッを消す数字なんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "38度って、お風呂よりぬるめですけど、いいんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "お風呂は体全体。こっちは敏感な場所への直撃なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じお湯でも、当たり方で最適温度が変わるんですね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "乾燥の風は、50度くらいと言われる温度に落ち着きました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "43度、38度、36度。黄金比率、ここに確定なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "全部、300人の体が教えてくれた数字ですね。"
+      - speaker: reimu
+        text: "計算ではなく実測。それが、この数字の強さでした。"
+        reading: "けえさんでわなくじっそく。それが、このすうじのつよさでした。"
+  - id: golden_clip
+    title: ""
+    background: il_wl_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "リーダー", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "角度43度、温水38度、便座36度。体が教えた黄金比率です。"
+        reading: "かくどよんじゅうさんど、おんすいさんじゅうはちど、べんざさんじゅうろくど。からだがおしえたおうごんひりつです。"
+        video: assets/clips/wl_golden.mp4
+        video_full: true
+  - id: namae
+    title: "名前の、由来"
+    background: il_wl_kaigi
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "発売を前に、名前が議題にあがりました。"
+        reading: "はつばいをまえに、なまえがぎだいにあがりました。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "商品名、どうします？温水洗浄便座、そのままじゃ硬いし。"
+      - speaker: zundamon
+        emotion: normal
+        text: "英語の、レッツウォッシュ。洗いましょう、が元ネタ候補なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "レッツウォッシュ……そのままだと、標語みたいですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、ひっくり返すのだ。ウォッシュ、レット。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "ウォシュレット。おお、商品名の顔になりました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "洗いましょう、を逆から読んだ造語。それが名前の正体なのだ。"
+      - speaker: reimu
+        text: "ウォシュレットは、洗いましょうから生まれた造語と言われています。"
+        reading: "うぉしゅれっとわ、あらいましょうからうまれたぞうごといわれています。"
+  - id: kabe
+    title: "最後の壁"
+    background: il_wl_lab
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "数字が決まっても、壁は残っていました。"
+        reading: "すうじがきまっても、かべわのこっていました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "リーダー、38度のお湯を安定して出すのが、難しいです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "タンクにためて温めておく、貯湯式でいくんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "使いすぎると、途中で水になっちゃいますけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、瞬間式も並行開発なのだ。二本立てでいくんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "安全装置も、しつこいくらい入れましょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "体に触れる家電なのだ。安全は、盛りすぎでちょうどいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "座っていないときは、水が出ない仕掛けも入れましょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うっかりボタンで、天井に水柱ができたら大惨事だからな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それ、試験室で一回やりましたよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれは貴重な失敗データなのだ。忘れてほしいのだ。"
+      - speaker: reimu
+        text: "温度の安定と安全。地味な作り込みが続きました。"
+        reading: "おんどのあんてえとあんぜん。じみなつくりこみがつづきました。"
+  - id: shiken
+    title: "試験室の、日々"
+    background: il_wl_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "発売前の試験は、延々と続きました。"
+        reading: "はつばいまえのしけんわ、えんえんとつづきました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ボタンの連打試験、10万回。まだ壊れません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "毎日何回も、何年も使われる機械なのだ。頑丈が正義なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "真冬の寒い部屋でも、38度が出るかの試験もクリアです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "北国の冬の朝が、いちばんこの機械が輝く瞬間だからな。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "リーダー、そういえば毎朝、真っ先に試作機に座ってますよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "毎日使う人の気持ちは、毎日使わないと分からないんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "社内で一番のヘビーユーザーが、開発リーダーという。"
+      - speaker: zundamon
+        emotion: normal
+        text: "自分が惚れ込めない物を、人に勧められないのだ。"
+      - speaker: reimu
+        text: "作り手自身が、最初の愛用者になっていました。"
+        reading: "つくりてじしんが、さいしょのあいようしゃになっていました。"
+  - id: era1980
+    title: "1980・ウォシュレット発売"
+    background: il_wl_mise
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.15, tag: "リーダー", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1980年6月。"
+        reading: "せんきゅうひゃくはちじゅうねんろくがつ。"
+        video: assets/clips/era_wl1980.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: hatsubai
+    title: ""
+    background: il_wl_mise
+    bgm: honwaka_puppu
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: okyaku, x: 0.56}
+      - {who: tsumugi, x: 0.86, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "ウォシュレット、発売。しかし、売り場は静かでした。"
+        reading: "うぉしゅれっと、はつばい。しかし、うりばわしずかでした。"
+      - speaker: okyaku
+        text: "お湯で洗う便座……？あら、ちょっと恥ずかしい話ねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一度使えば、良さは絶対に分かるんだ。でも……。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "その「一度」までが、遠いんですよね。"
+      - speaker: okyaku
+        text: "だいたい、お店で試すわけにもいかないでしょう、これ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ぐうの音も出ない正論なのだ。"
+      - speaker: reimu
+        text: "人前で話しにくい商品。それが、最大の壁でした。"
+        reading: "ひとまえではなしにくいしょうひん。それが、さいだいのかべでした。"
+      - speaker: reimu
+        text: "営業の現場でも、壁は同じでした。"
+        reading: "えいぎょうのげんばでも、かべわおなじでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "商品説明を始めると、お客さんが目をそらすのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "カタログを渡そうとしても、受け取ってもらえなくて。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "性能は最高なのに、話題にすらしてもらえないなんて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なら、話題にできる空気ごと、作るしかないのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "空気ごと、ですか。商品より先に、世の中を変えると。"
+      - speaker: zundamon
+        emotion: normal
+        text: "300人が乗り越えた恥ずかしさなのだ。お客さんも越えられるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その一言、宣伝部に持っていきましょう。"
+  - id: cm
+    title: "おしりだって、洗ってほしい。"
+    background: il_wl_cm
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "リーダー", flip: true}
+      - {who: tsumugi, x: 0.76, tag: "若手"}
+    cuts:
+      - speaker: reimu
+        text: "1982年9月。テレビから、あるセリフが流れます。"
+        reading: "せんきゅうひゃくはちじゅうにねんくがつ。てれびから、あるせりふがながれます。"
+      - speaker: reimu
+        text: "おしりだって、洗ってほしい。"
+        reading: "おしりだって、あらってほしい。"
+        pause_after: 0.6
+      - speaker: tsumugi
+        emotion: surprised
+        text: "リーダー、うちのCM、お茶の間に流れてますよ！ゴールデンに！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "手が汚れたら、洗う。なのに、おしりは紙だけ。という問いかけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "言われてみれば、たしかに……って、[日本中|にほんじゅう]が思ってます。"
+      - speaker: reimu
+        text: "ためらいを、たった一言が壊しました。"
+        reading: "ためらいを、たったひとことがこわしました。"
+      - speaker: reimu
+        text: "歌手の戸川純が出演したこのCMは、たちまち話題になりました。"
+        reading: "かしゅのとがわじゅんがしゅつえんしたこのしーえむわ、たちまちわだいになりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "学校でも会社でも、CMのまねをする人が続出してるらしいです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "みんなが口に出せた瞬間、恥ずかしさの壁が消えたのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "問い合わせが、鳴りやみません！売り場にも人が！"
+      - speaker: zundamon
+        emotion: happy
+        text: "話しにくい商品が、日本一の話題になったのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "測られてくれた300人にも、胸を張って報告できるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "社内のあの苦笑いが、全部誇らしい顔に変わってますよ。"
+      - speaker: reimu
+        text: "CM後の売り上げは目標の160％。シェアは58％に達しました。"
+        reading: "しーえむごのうりあげわもくひょうのひゃくろくじゅっぱーせんと。しぇあわごじゅうはっぱーせんとにたっしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "300人のデータは、ちゃんと世の中に届いたのだ。"
+  - id: fukyu
+    title: "8割の家に"
+    background: il_wl_toilet
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "時は流れて、現代。"
+        reading: "ときわながれて、げんだい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "温水洗浄便座は、日本の家の8割にあると言われてるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "駅にも、コンビニにも、ホテルにも。もはやインフラなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして海外の観光客が、日本のトイレに感動して帰る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "お土産に買って帰る人までいるのだ。便座が、なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "海外の有名人が、日本のトイレのすごさを話す時代だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "空港やホテルから、世界の建物にも広がり始めてるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "50年前は輸入してた国が、いまは輸出する側っていうのがいいよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いまや、ふたが自動で開いて、ノズルが自分で除菌までするのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "節水も進化してて、昔のトイレの何分の一かの水で流せるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "43度と38度は、いまの機種にも受け継がれてる基準だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの300人の体が、世界標準の快適を作ったんだ。"
+      - speaker: reimu
+        text: "社内の勇気ある協力者たちの数字は、いまも現役です。"
+        reading: "しゃないのゆうきあるきょうりょくしゃたちのすうじわ、いまもげんえきです。"
+  - id: jitsuyou
+    title: "ちょっとした、使いこなし"
+    background: il_wl_toilet
+    bgm: beat
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に、毎日の使いこなしの話。"
+      - speaker: zundamon
+        emotion: normal
+        text: "水勢は[弱|よわ]から試すのが、正解なんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。強すぎる水勢は、体にはむしろ負担だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "洗いすぎも、かえって良くないと言われてるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あとは、ふたを閉める習慣。それだけで節電になるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "便座の熱が、逃げにくくなるからなのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "旅先で操作パネルが違って、あわてるのは、あるあるなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「止」ボタンの位置だけ、先に確認しておくと安心だよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ノズルのお掃除機能も、たまに動かしてあげてね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "毎日働く相棒なのだ。手入れくらいは、してあげたいんだ。"
+      - speaker: reimu
+        text: "弱めに、洗いすぎず、ふたは閉める。今日から使える三か条です。"
+        reading: "よわめに、あらいすぎず、ふたわしめる。きょうからつかえるさんかじょうです。"
+  - id: musubi
+    title: ""
+    background: il_wl_toilet
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "毎日使ってるのに、43度のことは何も知らなかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "快適すぎるものって、存在を忘れられちゃうんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その裏に、ハリガネの便座と300人の勇者がいたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "笑い話みたいな調査を、大真面目にやり切った人たちだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "気まずさより、データ。それが本物のプロなのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次にあの温かい便座に座るとき、36度に感謝するのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの家の快適にも、誰かの本気が入ってるかもよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今日の快適は、300人の本気なのだ！"
+        telops:
+          - {text: "快適は、誰かの本気の実験", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "コメントで、あなたが感動した日本の設備も教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでは、また次の動画で。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございましたなのだ！"
+        duet_with: tsumugi
