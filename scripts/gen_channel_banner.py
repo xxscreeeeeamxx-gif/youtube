@@ -66,19 +66,19 @@ def make_banner() -> Image.Image:
         return im.resize((w, int(im.height * w / im.width)), Image.LANCZOS)
 
     # 動画のステージと同じ向き: 左のずんだもんは反転して内側(右)へ、右のつむぎは元向きで内側(左)へ
-    zw = 430
+    zw = 370
     zu = head_crop("zundamon", "happy", zw, 0.40)
     zu = zu.transpose(Image.FLIP_LEFT_RIGHT)
-    img.paste(zu, (SX0 + 6, SY0 + SAFE_H - zu.height + 8), zu)
-    tw = 440
+    img.paste(zu, (SX0 - 6, SY0 + SAFE_H - zu.height + 8), zu)
+    tw = 400
     ts = head_crop("tsumugi", "happy", tw, 0.38)
-    img.paste(ts, (SX0 + SAFE_W - tw - 6, SY0 + SAFE_H - ts.height + 8), ts)
+    img.paste(ts, (SX0 + SAFE_W - tw + 16, SY0 + SAFE_H - ts.height + 8), ts)
     # 中央の文字（キャラと横に並ぶ幅に抑える）
     d = ImageDraw.Draw(img)
     ctext(d, W / 2, SY0 + 140, "日常研究所", font(150), (255, 255, 255),
           stroke=ZUNDA_DK, sw=16)
     ctext(d, W / 2, SY0 + 268, "身近な当たり前を、再現ドラマで",
-          font(56), CREAM, stroke=ZUNDA_DK, sw=9)
+          font(50), CREAM, stroke=ZUNDA_DK, sw=8)
     # 豆電球ワンポイント（タイトルの真上・セーフエリア内）
     bx, by = W / 2, SY0 + 44
     d.ellipse([bx - 26, by - 26, bx + 26, by + 26], fill=(255, 232, 150))
