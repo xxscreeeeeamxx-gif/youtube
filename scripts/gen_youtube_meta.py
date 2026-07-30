@@ -115,16 +115,8 @@ def build_entry(slug: str):
         print(f"警告: {slug} は TITLES 未登録。metadata.txt のタイトルをそのまま使用")
 
     gaiyou = sec.get("概要欄", "")
-    # 概要欄を「本文」「目次」に分解（クレジット以降は作り直す）
+    # 概要欄の本文だけ使う（目次は載せない・クレジット以降は作り直す）
     body = gaiyou.split("▼ 目次")[0].strip()
-    toc = ""
-    m = re.search(r"▼ 目次\n(.*?)(?:\n▼|\Z)", gaiyou, re.S)
-    if m:
-        lines = m.group(1).strip().splitlines()
-        # 先頭章はタイトルそのままなので「オープニング」に置き換える
-        if lines and lines[0].startswith("0:00"):
-            lines[0] = "0:00 オープニング"
-        toc = "▼目次\n" + "\n".join(lines)
 
     raw_credits = sec.get("概要欄", "").split("▼ クレジット")[-1]
     # モブ音声のクレジット欠け（空スロット）を script.yaml の mobs から補完
@@ -145,7 +137,7 @@ def build_entry(slug: str):
     tags = [t for t in (meta.get("tags") or []) if t not in TAG_SKIP][:3]
     hashtags = " ".join(["#ずんだもん", "#ゆっくり解説"] + [f"#{t.replace(' ', '')}" for t in tags])
 
-    desc_parts = [body, toc, note, credits, hashtags]
+    desc_parts = [body, note, credits, hashtags]
     description = "\n\n".join(p for p in desc_parts if p)
     return title, description
 
