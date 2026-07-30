@@ -55,9 +55,8 @@ TITLES = {
     "washlet": "【ウォシュレットの誕生】社員300人がおしりを差し出した、前代未聞の開発計画【ずんだもん解説】",
 }
 
-# ハッシュタグに使わない汎用タグ
-TAG_SKIP = {"解説", "雑学", "science", "VOICEVOX", "青山龍星", "ゆっくり", "ミーム",
-            "再現ドラマ", "ずんだもん"}
+# Studioのタグ欄に必ず入れる共通タグ（視聴者には見えない）
+BASE_TAGS = ["ずんだもん", "春日部つむぎ", "ゆっくり解説", "再現ドラマ", "雑学", "VOICEVOX"]
 
 
 def parse_metadata(path: Path):
@@ -134,12 +133,16 @@ def build_entry(slug: str):
             if meta.get("mode") == "drama"
             else "※内容は公開資料をもとに構成していますが、誤りに気づいた方はコメントで教えてください。")
 
-    tags = [t for t in (meta.get("tags") or []) if t not in TAG_SKIP][:3]
-    hashtags = " ".join(["#ずんだもん", "#ゆっくり解説"] + [f"#{t.replace(' ', '')}" for t in tags])
+    # Studioのタグ欄用（コンマ区切り・視聴者非表示・上限500文字）
+    tags = list(BASE_TAGS)
+    for t in (meta.get("tags") or []):
+        if t not in tags:
+            tags.append(t)
+    tag_line = ",".join(tags)
 
-    desc_parts = [body, note, credits, hashtags]
+    desc_parts = [body, note, credits]
     description = "\n\n".join(p for p in desc_parts if p)
-    return title, description
+    return title, description, tag_line
 
 
 if __name__ == "__main__":
@@ -152,8 +155,9 @@ if __name__ == "__main__":
         entry = build_entry(slug)
         if not entry:
             continue
-        title, description = entry
-        text = f"■タイトル\n{title}\n\n■説明文\n{description}\n"
+        title, description, tag_line = entry
+        text = (f"■タイトル\n{title}\n\n■説明文\n{description}\n\n"
+                f"■タグ（Studioのタグ欄用・視聴者には見えない）\n{tag_line}\n")
         (p / "youtube.txt").write_text(text)
         out_all.append(f"{'=' * 60}\n【{slug}】\n{'=' * 60}\n{text}")
         count += 1
