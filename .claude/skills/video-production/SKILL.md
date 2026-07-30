@@ -185,7 +185,12 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
      「ものがたりは」→「ものがたりわ」・「おおさかへ」→「おおさかえ」。
      一括修正は `scripts/fix_narrator_particles.py <slug>`、検出は check_readings.py が
      VOICEVOX形態素解析と突き合わせて自動NG化する。は→わ44箇所を見逃していた実例）
-  6. **VOICEVOX行は voice 後に全カットのモーラを通読する**（多読み警告だけに頼らない。
+  6. **VOICEVOX行は voice 後に `scripts/check_moras_cross.py <slug>` を必ず実行し、
+     不一致の全件を文脈判定する**（pykakasiとの全数クロス照合。「怪しそうな語を予想して
+     リスト照合する」方式は禁止—予想外の語を素通しして 熱すぎ=ネツ・字面=ジメン・
+     船便=センビン を出荷した事故の再発防止）。両エンジンが同じ誤読をする語
+     （三重=ミエ 等）は捕まらないので、見つけ次第 dict + readings_common に登録する。
+     加えて従来どおり全カットのモーラを通読する（多読み警告だけに頼らない。
      watchlist方式では 年=とし・声=ごえ・同じ=どうじ・札=さつ・人=にん・高野豆腐=たかの・
      天日干し=てんひ・網干し=あぼし・郷=さと・何味=なんあじ を取りこぼした実績がある）。
      通読で見つけた誤読はタグ修正＋readings_common.yamlへ追加
@@ -287,6 +292,9 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
 - 尺: video.mp4 と audio/narration.wav の duration がほぼ一致（ffprobe）
 - フレーム抽出で目視: 茶番演出 / 各アニメのフェーズ切替（セリフ頭と同期しているか）/
   テロップ・statの文字被りなし / 新規クリップ / 締めのデュエット（両立ち絵が明るい）
+- **モーラのクロス照合（必須）**: `python3 scripts/check_moras_cross.py <slug>` で
+  VOICEVOX実読とpykakasiを全カット突き合わせ、不一致を全件文脈判定する。
+  実誤読はタグ修正+dict+readings_common登録までがワンセット
 - `ytf qc <slug> --whisper`: フラグは大半が「隣カット混入＋同音字違い」の誤検出。
   **同音（満タン/マンタン等）なら無視、読みが本当に違う疑いだけ moras で確認**
 - **助詞「は」の誤読スキャン（必須）**: 「〜はね、」は「ハネ（羽根）」に化ける

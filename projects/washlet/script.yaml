@@ -94,7 +94,7 @@ scenes:
         text: "そう。世界一まじめに、おしりと向き合った開発の話だよ。"
       - speaker: zundamon
         emotion: normal
-        text: "字面はふざけてるのに、中身は超本気のやつなのだ。"
+        text: "[字面|じずら]はふざけてるのに、中身は超本気のやつなのだ。"
       - speaker: tsumugi
         emotion: happy
         text: "今日はその話。誰もお世話にならない日はない発明だからね。"
@@ -156,7 +156,7 @@ scenes:
         emotion: sad
         text: "部長、苦情なのだ。お湯の温度が、安定しないと言われています。"
       - speaker: bucho
-        text: "ぬるすぎたり、熱すぎたり、か。"
+        text: "ぬるすぎたり、[熱|あつ]すぎたり、か。"
       - speaker: zundamon
         emotion: sad
         text: "体に直接あたるお湯なのだ。温度のブレは、そのまま苦情なんだ。"
@@ -164,7 +164,7 @@ scenes:
         emotion: sad
         text: "修理のたびに、アメリカから部品待ちなのも、つらいのだ。"
       - speaker: bucho
-        text: "船便で何週間、だからな。"
+        text: "[船便|ふなびん]で何週間、だからな。"
       - speaker: zundamon
         emotion: thinking
         text: "せっかくの良い発想が、道具として未完成なんだ。"
@@ -279,7 +279,7 @@ scenes:
         text: "そう。一発で当てて、一度も外せない。減点方式の世界なんだ。"
       - speaker: zundamon
         emotion: normal
-        text: "見えない、人による、超シビア。三重の無理ゲーなのだ。"
+        text: "見えない、人による、超シビア。[三重|さんじゅう]の無理ゲーなのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "で、どう攻略するんです？"
@@ -432,7 +432,7 @@ scenes:
         text: "モニターの声を集計すると……38度が最多です。"
       - speaker: zundamon
         emotion: normal
-        text: "体温より、ほんの少し上。ぬるくなく、熱くなく、なのだ。"
+        text: "体温より、ほんの[少し|すこし]上。ぬるくなく、[熱|あつ]くなく、なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "便座は36度。人の肌と、ほぼ同じ温度。"
