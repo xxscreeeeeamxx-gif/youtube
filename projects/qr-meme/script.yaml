@@ -405,12 +405,12 @@ scenes:
         text: "認識は認識だろう。"
       - speaker: zundamon
         emotion: thinking
-        text: "声じゃなくて縞々の認識って、解釈違いなんだが。"
+        text: "声じゃなくて[縞々|しましま]の認識って、解釈違いなんだが。"
       - speaker: joshi
         text: "うちはトヨタグループの部品会社だ。主戦場は工場だぞ。"
       - speaker: zundamon
         emotion: normal
-        text: "わかったわ。縞々と友達になる。知らんけど。"
+        text: "わかったわ。[縞々|しましま]と友達になる。知らんけど。"
       - speaker: reimu
         text: "当時のデンソーは、独自のバーコードを工場で使っていました。"
         reading: "とうじのでんそーわ、どくじのばーこーどをこうじょうでつかっていました。"
@@ -669,7 +669,7 @@ scenes:
         text: "あれが、例の箱です。"
       - speaker: zundamon
         emotion: surprised
-        text: "……本当に、縞々だらけだ。"
+        text: "……本当に、[縞々|しましま]だらけだ。"
       - speaker: wakate
         text: "ピッ。ピッ。ピッ。"
       - speaker: zundamon
@@ -872,7 +872,7 @@ scenes:
         text: "情報を増やすなら、2次元コードですね。"
       - speaker: zundamon
         emotion: normal
-        text: "縞々は横方向だけ。それを、縦にも積むんだ。"
+        text: "[縞々|しましま]は横方向だけ。それを、縦にも積むんだ。"
       - speaker: reimu
         text: "横一列のバーコードに対して、2次元コードは面で記録します。"
         reading: "よこいちれつのばーこーどにたいして、にじげんこーどわめんできろくします。"
@@ -1044,7 +1044,7 @@ scenes:
         text: "[原|はら]さんもです。"
       - speaker: tsumugi
         emotion: sad
-        text: "ゆうべ、夢に縞々が出てきました。"
+        text: "ゆうべ、夢に[縞々|しましま]が出てきました。"
       - speaker: zundamon
         emotion: thinking
         text: "夢の中でも比率測ってた。限界オタクだわ。"
@@ -1367,7 +1367,7 @@ scenes:
         text: "容量はバーコードの数百倍なんだわ。"
       - speaker: zundamon
         emotion: happy
-        text: "読み取りは、他の2次元コードの10倍以上なのだ！"
+        text: "読み取りは、[他の|ほかの]2次元コードの10倍以上なのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "世界一、獲りましたね。"

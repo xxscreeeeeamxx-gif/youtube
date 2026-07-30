@@ -369,7 +369,7 @@ scenes:
         text: "電卓の部品も、使い道を変えれば、おもちゃになるのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "電卓、数年前は高級品だったのに、いまや誰でも持ってる。"
+        text: "電卓、数年前は[高級品|こうきゅうひん]だったのに、いまや誰でも持ってる。"
       - speaker: zundamon
         emotion: normal
         text: "量産合戦のおかげで、液晶もチップも激安になったのだ。"
@@ -426,7 +426,7 @@ scenes:
         text: "……ふっ。"
       - speaker: zundamon
         emotion: thinking
-        text: "（大人が、真剣に暇をつぶしてる。おもちゃも持たずに……。）"
+        text: "（大人が、真剣に[暇|ひま]をつぶしてる。おもちゃも持たずに……。）"
       - speaker: zundamon
         emotion: thinking
         text: "（大人がポケットに入れて持ち歩ける、遊び道具があったら……。）"
@@ -436,7 +436,7 @@ scenes:
         se: don
       - speaker: zundamon
         emotion: thinking
-        text: "（よく見れば、あちこちの席で、大人が暇を持て余してるのだ。）"
+        text: "（よく見れば、あちこちの席で、大人が[暇|ひま]を持て余してるのだ。）"
       - speaker: zundamon
         emotion: thinking
         text: "（新聞を3回読み直す人。窓の外を眺め続ける人……。）"
@@ -749,7 +749,7 @@ scenes:
         text: "やった、勝った！もう1回、もう1回！"
       - speaker: zundamon
         emotion: happy
-        text: "画面が白黒でも、遊びは極彩色なのだ。"
+        text: "画面が白黒でも、遊びは[極彩色|ごくさいしき]なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "通勤電車でやってる大人も、けっこう見かけるよ。"
@@ -770,7 +770,7 @@ scenes:
         text: "横井くん、カラーのライバル機、次々と市場から消えてるよ。"
       - speaker: zundamon
         emotion: normal
-        text: "電池切れと、値段には、勝てなかったんだ。"
+        text: "[電池切れ|でんちぎれ]と、値段には、勝てなかったんだ。"
       - speaker: tsumugi
         emotion: normal
         text: "白黒への不安、見事にひっくり返したね。"

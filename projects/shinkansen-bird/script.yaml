@@ -216,7 +216,7 @@ scenes:
         text: "列車は、前の空気を押しのけながら走ってるんだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "開けた場所なら、空気は横に逃げられますね。"
+        text: "[開けた|ひらけた]場所なら、空気は横に逃げられますね。"
       - speaker: zundamon
         emotion: normal
         text: "でも、トンネルは筒なのだ。逃げ場が、ないんだ。"
@@ -569,7 +569,7 @@ scenes:
         text: "パンタグラフを外すわけには、いきませんしね。"
       - speaker: zundamon
         emotion: normal
-        text: "電気の取り入れ口なのだ。外したら、ただの置物なんだ。"
+        text: "電気の取り入れ[口|ぐち]なのだ。外したら、ただの置物なんだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "形はそのまま、音だけ消す。矛盾みたいな注文ですね。"
@@ -735,7 +735,7 @@ scenes:
     cuts:
       - speaker: tsumugi
         emotion: thinking
-        text: "そういえば、車体まで円筒形にしたのは、なぜなんです？"
+        text: "そういえば、車体まで[円筒形|えんとうけい]にしたのは、なぜなんです？"
       - speaker: zundamon
         emotion: normal
         text: "あれもトンネル対策なのだ。断面を、少しでも小さくしたいんだ。"
@@ -747,7 +747,7 @@ scenes:
         text: "列車が細いほど、押しのける空気は減る。ドンも小さくなるのだ。"
       - speaker: tsumugi
         emotion: thinking
-        text: "角ばった箱より、丸いほうが有利なんですか。"
+        text: "[角|かど]ばった[箱|ハコ]より、丸いほうが有利なんですか。"
       - speaker: zundamon
         emotion: normal
         text: "丸は、同じ広さでいちばん外周が小さい形なんだ。"
@@ -886,7 +886,7 @@ scenes:
         text: "水をはじく、ハスの葉の表面がお手本と言われるんだ。"
       - speaker: tsumugi
         emotion: surprised
-        text: "痛くない注射針の参考は、蚊だって聞きました。"
+        text: "痛くない[注射針|ちゅうしゃばり]の参考は、蚊だって聞きました。"
       - speaker: zundamon
         emotion: normal
         text: "刺されても気づかない技術の、有識者だからな。"

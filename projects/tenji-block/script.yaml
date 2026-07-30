@@ -27,7 +27,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "この黄色いデコボコ道、歩くと足つぼで気持ちいいのだ。"
+        text: "この黄色いデコボコ[道|みち]、歩くと足つぼで気持ちいいのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "ずんだもん、そこ。立ち止まっちゃだめ。"
@@ -415,7 +415,7 @@ scenes:
         text: "点の数と並べ方も、そろえよう。ばらばらだと読みにくい。"
       - speaker: zundamon
         emotion: normal
-        text: "縦横に、きちんと格子で並べるのだ。"
+        text: "[縦横|たてよこ]に、きちんと格子で並べるのだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "ばらばらに散らすのと、何が違うんだ？"
@@ -786,7 +786,7 @@ scenes:
         text: "駅のホームは、目の不自由な人に、いちばん怖い場所なのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "柵のない崖っぷちを歩くようなもの、と言われるんだよな。"
+        text: "[柵|さく]のない崖っぷちを歩くようなもの、と言われるんだよな。"
       - speaker: zundamon
         emotion: normal
         text: "ホームの端に点のブロックがあれば、崖の縁が分かるのだ。"

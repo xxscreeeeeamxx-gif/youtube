@@ -460,7 +460,7 @@ scenes:
         text: "せやけど大将、この値段で儲かるんか？"
       - speaker: zundamon
         emotion: normal
-        text: "立ち食いだから、席がすぐ空くんだ。"
+        text: "立ち食いだから、席がすぐ[空く|あく]んだ。"
       - speaker: zundamon
         emotion: normal
         text: "安くても、たくさん売れば成り立つのだ。"

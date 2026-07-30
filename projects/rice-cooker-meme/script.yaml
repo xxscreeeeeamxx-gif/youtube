@@ -140,7 +140,7 @@ scenes:
         text: "少しでも火から目を離すと、すぐ焦げるの。"
       - speaker: zundamon
         emotion: sad
-        text: "つきっきりで、他のことは何もできないんだ。"
+        text: "つきっきりで、[他の|ほかの]ことは何もできないんだ。"
       - speaker: tsumugi
         emotion: normal
         text: "沸いてきたら火を弱めて、蒸らして。何十年も体で覚えた勘よ。"
@@ -213,7 +213,7 @@ scenes:
         text: "……それが。売れる保証がないので、出せません。"
       - speaker: zundamon
         emotion: thinking
-        text: "タダ働きで、大手が爆死したものに挑めと。"
+        text: "タダ働きで、大手が爆死したものに[挑め|いどめ]と。"
       - speaker: yamada
         text: "虫のいい話なのは、承知です。でも、あなたにしか。"
       - speaker: reimu
@@ -620,7 +620,7 @@ scenes:
         reading: "そもそも、なぜきゅうじゅうはちどで、にじゅっぷんなのか。"
       - speaker: zundamon
         emotion: normal
-        text: "生の米は、硬くて、そのままじゃ食べられないんだ。"
+        text: "生の[米|こめ]は、硬くて、そのままじゃ食べられないんだ。"
       - speaker: tsumugi
         emotion: normal
         text: "水を吸わせて、しっかり熱を通すと、変わるのよね。"
@@ -981,7 +981,7 @@ scenes:
         text: "働きに出る奥さんも、増えていったのよ。"
       - speaker: zundamon
         emotion: thinking
-        text: "朝の1時間が空くと、暮らし方まで変わるぞ。"
+        text: "朝の1時間が[空く|あく]と、暮らし方まで変わるぞ。"
       - speaker: zundamon
         emotion: normal
         text: "少し眠って、子どもと話して、本を読んで。"
@@ -1112,7 +1112,7 @@ scenes:
         text: "初代の釜、床の間に飾ってあるのね。"
       - speaker: zundamon
         emotion: happy
-        text: "うちの、いちばんの宝物なのだ。"
+        text: "うちの、いちばんの[宝物|たからもの]なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "この釜のおかげで、って言ってくれる人に、時々会うわ。"

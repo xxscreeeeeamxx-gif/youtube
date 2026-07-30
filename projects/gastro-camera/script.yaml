@@ -375,7 +375,7 @@ scenes:
         text: "長く入れておくほど、苦しいですからね。"
       - speaker: tsumugi
         emotion: normal
-        text: "でも、光は熱を持つ。強くすれば、胃をやけどさせる。"
+        text: "でも、[光|ひかり]は熱を持つ。強くすれば、胃をやけどさせる。"
       - speaker: zundamon
         emotion: normal
         text: "よっつ。病気を見分けられる、鮮明な写真。"
@@ -636,7 +636,7 @@ scenes:
         text: "レンズと胃壁の距離が、近すぎるのか、遠すぎるのか。"
       - speaker: zundamon
         emotion: sad
-        text: "胃の中でカメラがどこを向いてるか、分からないのだ。"
+        text: "胃の中でカメラがどこを[向い|むい]てるか、分からないのだ。"
       - speaker: reimu
         text: "胃の中は、暗い袋。カメラの位置が、誰にも分かりませんでした。"
         reading: "いのなかわ、くらいふくろ。かめらのいちが、だれにもわかりませんでした。"
@@ -891,7 +891,7 @@ scenes:
         text: "先生。この仕組み、特許を出しておきましょう。"
       - speaker: zundamon
         emotion: happy
-        text: "腹の中の臓器を撮る、写真機。……大げさな名前なのだ。"
+        text: "腹の[中の|なかの]臓器を撮る、写真機。……大げさな名前なのだ。"
       - speaker: tsumugi
         emotion: happy
         text: "大げさなくらいで、ちょうどいい。世界初ですから。"
@@ -909,7 +909,7 @@ scenes:
         text: "日本の町工場の技術が、世界を驚かせてるのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "でも、浮かれてる暇はない。ここからが、本当の勝負です。"
+        text: "でも、浮かれてる[暇|ひま]はない。ここからが、本当の勝負です。"
       - speaker: zundamon
         emotion: thinking
         text: "作れたことと、広まることは、別なのだ。"
@@ -1040,7 +1040,7 @@ scenes:
         text: "浅いうちなら、その部分だけ取れば済む。"
       - speaker: zundamon
         emotion: sad
-        text: "でも、気づかず放っておくと、深く根を張るのだ。"
+        text: "でも、気づかず[放っ|ほうっ]ておくと、深く根を張るのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "深くなると、外に広がって、手が届かなくなる。"

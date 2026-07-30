@@ -68,7 +68,7 @@ scenes:
         text: "5人目のうま味だけ、見つかったのが100年ちょっと前なの。"
       - speaker: zundamon
         emotion: surprised
-        text: "他の4人より、圧倒的に新入りなんだが。"
+        text: "[他の|ほかの]4人より、圧倒的に新入りなんだが。"
       - speaker: tsumugi
         emotion: normal
         text: "見つけたのは、日本の化学者。だから世界中で[UMAMI|うまみ]って呼ぶの。"
@@ -261,7 +261,7 @@ scenes:
         text: "あらあら、味見の顔が、実験の顔になってますよ。"
       - speaker: zundamon
         emotion: surprised
-        text: "貞。この味は、4つの基本味の、どれでもないのだ。"
+        text: "[貞|てい]。この味は、4つの基本味の、どれでもないのだ。"
         se: don
       - speaker: tsuma
         text: "でも、たしかに、おいしい味ですよねえ。"

@@ -183,7 +183,7 @@ scenes:
         text: "へい、進駐軍さんの靴、直しますよってに。"
       - speaker: zundamon
         emotion: thinking
-        text: "（あの職人さん、靴底を削ってるのは……ガラスのかけら？）"
+        text: "（あの職人さん、[靴底|くつぞこ]を削ってるのは……ガラスのかけら？）"
       - speaker: zundamon
         emotion: normal
         text: "おっちゃん、それ、刃物じゃなくてガラスなのだ？"
@@ -267,7 +267,7 @@ scenes:
         text: "チョコの溝なら、割れる場所を、あらかじめ決められる……。"
       - speaker: zundamon
         emotion: surprised
-        text: "合体なのだ！ガラスの「割る」と、チョコの「割り線」を！"
+        text: "合体なのだ！ガラスの「[割る|わる]」と、チョコの「割り線」を！"
         se: don
       - speaker: teruko
         text: "あらあら、チョコを持ったまま、固まってますよ。"
@@ -565,7 +565,7 @@ scenes:
         reading: "おかだわ、じぶんたちのかいしゃをつくるけついをします。"
       - speaker: zundamon
         emotion: normal
-        text: "三朗、四郎、博。兄弟みんなの力を、貸してほしいのだ。"
+        text: "三朗、四郎、[博|ひろし]。兄弟みんなの力を、貸してほしいのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "兄さんの折る刃で、勝負するんだな。"
@@ -582,7 +582,7 @@ scenes:
         text: "作る、売る、考える。兄弟で役割分担なのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "兄弟と家族の総力戦。負ける気がしないな。"
+        text: "兄弟と家族の[総力戦|そうりょくせん]。負ける気がしないな。"
       - speaker: reimu
         text: "弟たちと妻に支えられ、岡田の会社が生まれました。"
         reading: "おとうとたちとつまにささえられ、おかだのかいしゃがうまれました。"
@@ -682,7 +682,7 @@ scenes:
         text: "国によっては、この道具ごとジャパニーズ・ナイフ呼びらしいぞ。"
       - speaker: zundamon
         emotion: happy
-        text: "大阪の紙切り場の発明が、国の代表選手なのだ。"
+        text: "大阪の[紙切り場|かみきりば]の発明が、国の代表選手なのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "断り続けたメーカーの人たち、いまごろどんな顔してるかな。"

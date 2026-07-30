@@ -29,7 +29,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: happy
-        text: "この黄色いデコボコ道、足つぼで気持ちいい。実質無料マッサージなのだ。"
+        text: "この黄色いデコボコ[道|みち]、足つぼで気持ちいい。実質無料マッサージなのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "ずんだもん、そこ。立ち止まっちゃだめ。"
@@ -396,7 +396,7 @@ scenes:
         text: "できたぞ。[並べて歩いて|ならべてあるいて]……おっと、おれがつまずいた。[初見殺し|しょけんごろし]だな。"
       - speaker: zundamon
         emotion: thinking
-        text: "高すぎだ。お年寄りには、転ぶもとになるんだ。"
+        text: "[高す|たかす]ぎだ。お年寄りには、転ぶもとになるんだ。"
       - speaker: tsumugi
         emotion: normal
         text: "じゃあ今度は薄く、2ミリだ。……うーん、くつだと分からん。"
@@ -417,7 +417,7 @@ scenes:
         text: "点の数と並べ方も、そろえよう。ばらばらだと読みにくい。"
       - speaker: zundamon
         emotion: normal
-        text: "縦横に、きちんと格子で並べるんだ。"
+        text: "[縦横|たてよこ]に、きちんと格子で並べるんだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "ばらばらに散らすのと、何が違うんだ？"
@@ -788,7 +788,7 @@ scenes:
         text: "駅のホームは、目の不自由な人に、いちばん怖い場所なんだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "柵のない崖っぷちを歩くようなもの、と言われるんだよな。"
+        text: "[柵|さく]のない崖っぷちを歩くようなもの、と言われるんだよな。"
       - speaker: zundamon
         emotion: normal
         text: "ホームの端に点のブロックがあれば、崖の縁が分かるんだ。"
