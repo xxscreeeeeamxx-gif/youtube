@@ -232,13 +232,31 @@ def _render_one_segment(
         step += 1
         return f"[vov{step}]"
 
+    # 入場は章バナー（暗転）が明けてから始める。バナー中に歩いても見えない
+    ent_lead = item.trans_lead if item.trans_png else 0.0
+    for en in (item.enters or []):
+        # シーン新登場キャラの歩き入り（画面外からイージングで到着+小さく弾む）
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", en["png"]]
+        xt, x0, ey = en["x"], en["x0"], en["y"]
+        tv = f"max(0,t-{ent_lead:.2f})"
+        xe = f"{xt}+({x0}-{xt})*pow(max(0,1-{tv}/0.6),2)"
+        ye = f"{ey}-7*abs(sin(14*{tv}))*lt({tv},0.62)"
+        out = nxt()
+        fc += f";{cur}[{ti}:v]overlay=x='{xe}':y='{ye}':eval=frame,format=yuv420p{out}"
+        cur = out
+
     if item.actor_png:
-        # 再現ドラマ: 話者の立ち絵を時間式で動かす（喋り跳ね/ジャンプ/震え）
+        # 再現ドラマ: 話者の立ち絵を時間式で動かす（喋り跳ね/ジャンプ/震え/入場）
         ti = _count_inputs(inputs)
         inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.actor_png]
         ax, ay = item.actor_x, item.actor_y
         bob = f"{ay}-8*abs(sin(2*PI*2.2*t))"
-        if item.actor_anim == "jump":
+        if item.actor_x0 is not None:
+            tv = f"max(0,t-{ent_lead:.2f})"
+            xe = f"{ax}+({item.actor_x0}-{ax})*pow(max(0,1-{tv}/0.6),2)"
+            ye = bob
+        elif item.actor_anim == "jump":
             xe = str(ax)
             ye = f"if(lt(t,0.55),{ay}-150*sin(PI*t/0.55),{ay}-8*abs(sin(2*PI*2.2*(t-0.55))))"
         elif item.actor_anim == "shake":
@@ -249,6 +267,18 @@ def _render_one_segment(
             ye = bob
         out = nxt()
         fc += f";{cur}[{ti}:v]overlay=x='{xe}':y='{ye}':eval=frame,format=yuv420p{out}"
+        cur = out
+
+    if item.mark_png:
+        # リアクション記号（！？💢汗）: 頭上に落ちて弾み、少ししたら消える
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.mark_png]
+        out = nxt()
+        fc += (f";[{ti}:v]format=rgba,fade=t=in:st=0:d=0.1:alpha=1,"
+               f"fade=t=out:st=1.0:d=0.25:alpha=1[mk{ti}];"
+               f"{cur}[mk{ti}]overlay=x={item.mark_x}:"
+               f"y='{item.mark_y}-26*exp(-5*t)*cos(11*t)':eval=frame,"
+               f"format=yuv420p{out}")
         cur = out
 
     if item.bubble_png:
@@ -269,6 +299,21 @@ def _render_one_segment(
         out = nxt()
         fc += ";" + _stat_fc(cur, out, item.stat, font, w, h, n, fps)
         cur = out
+    if item.impact_png:
+        # 衝撃演出: 押しズーム+画面シェイク（zoompan）の上に集中線を一瞬光らせる
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.impact_png]
+        ns = int(0.42 * fps)
+        z = f"max(1.0,1.09-0.27*on/{fps})"
+        jx = f"if(lt(on,{ns}),8*sin(2.1*on),0)"
+        jy = f"if(lt(on,{ns}),6*sin(2.9*on+1.3),0)"
+        out = nxt()
+        fc += (f";{cur}zoompan=z='{z}':x='iw/2-(iw/zoom/2)+{jx}':"
+               f"y='ih/2-(ih/zoom/2)+{jy}':d=1:s={w}x{h}:fps={fps}[impz];"
+               f"[{ti}:v]format=rgba,fade=t=out:st=0.26:d=0.22:alpha=1[slv];"
+               f"[impz][slv]overlay=0:0,format=yuv420p{out}")
+        cur = out
+
     if item.trans_png:
         ti = _count_inputs(inputs)
         inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.trans_png]
@@ -319,6 +364,15 @@ def render_segments(
         if item.actor_png:
             vsig += (f"|actor:{item.actor_png}:{item.actor_x}:{item.actor_y}:"
                      f"{item.actor_anim}:av1")
+        if item.actor_x0 is not None:
+            vsig += f"|ax0:{item.actor_x0}"
+        if item.enters:
+            vsig += "|ent2:" + ",".join(
+                f"{e['png']}:{e['x']}:{e['x0']}" for e in item.enters)
+        if item.mark_png:
+            vsig += f"|mk1:{item.mark_png}:{item.mark_x}:{item.mark_y}"
+        if item.impact_png:
+            vsig += "|imp1"
         if item.bubble_png:
             vsig += f"|bub:{item.bubble_png}"
         # 縦はv_fullのフィルタが違う（vfit1=帯フィット導入時のバージョン）

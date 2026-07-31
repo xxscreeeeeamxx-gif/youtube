@@ -138,6 +138,8 @@ class Cut(BaseModel):
     video_speed: float = 1.0  # 再生速度。0.5でスロー、2.0で倍速
     video_full: bool = False  # True で全画面表示（False はカード内）
     motion: str | None = None  # 画面の動き。未指定は自動（ゆっくりズーム交互）
+    # 衝撃演出（画面シェイク+押しズーム+集中線）。None は se: don のとき自動でON
+    impact: bool | None = None
     pause_after: float | None = None  # 秒。None は channel.yaml の既定値
 
     @field_validator("text")

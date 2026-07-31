@@ -16,6 +16,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
+from . import fx
 from .assets_gen import background_path, sprite_path
 from .config import Config, Project
 from .schema import Script, Slide, Telop, split_reading
@@ -549,7 +550,16 @@ class CutRender:
     actor_x: int = 0                         # 静止時の貼り付け左上x
     actor_y: int = 0                         # 静止時の貼り付け左上y
     actor_anim: str = "talk"                 # talk / jump / shake
+    actor_x0: int | None = None              # 入場スライドの開始x（画面外）。Noneで通常
     bubble_png: str | None = None            # 吹き出しの透過PNG（立ち絵より前面）
+    # 入場スライド: シーン新登場キャラの歩き入りレイヤー [{png,x,y,x0}]
+    enters: list[dict] | None = None
+    # リアクション記号（！？💢汗）のポップ表示
+    mark_png: str | None = None
+    mark_x: int = 0
+    mark_y: int = 0
+    # 衝撃演出（画面シェイク+押しズーム+集中線）。集中線PNGの絶対パス
+    impact_png: str | None = None
 
 
 def _resolve_clip(cfg: Config, proj: Project, rel: str) -> str:
@@ -704,8 +714,10 @@ def render_frames(
     result: list[CutRender] = []
     sub = "v" if vertical else "h"
     manifest_used: set[str] = set()
+    last_stage_whos: set[str] = set()  # 入場スライド: 直前シーンの舞台メンバー
 
     for ct, scene, cut in flat:
+        prev_emo = emotion_state.get(cut.speaker, "normal")
         emotion_state[cut.speaker] = cut.emotion
         sp = span_of.get(ct.index)
         full = bool(sp and sp["full"])
@@ -761,6 +773,38 @@ def render_frames(
             if actor_member:
                 actor = cut.speaker
 
+        # 入場スライド: シーン先頭カットで、直前シーンに居なかったキャラが
+        # 画面外から歩いて入る。入るキャラは基底に焼かず動くレイヤーにする
+        enter_set: set[str] = set()
+        if drama and stage_list and ct.index in scene_first_idx:
+            cur_whos = {m["who"] for m in stage_list}
+            if not vertical:
+                enter_set = cur_whos - last_stage_whos
+            last_stage_whos = cur_whos
+        enters = None
+        if enter_set:
+            ent_list = []
+            for m in stage_list:
+                if m["who"] not in enter_set:
+                    continue
+                if actor_member and m["who"] == actor_member["who"]:
+                    continue  # 話者は動く話者レイヤー側でスライドインさせる
+                sp2, tx, ty = composer.drama_actor(m)
+                ekey = hashlib.sha1(json.dumps(
+                    [m, sprite_sig, "ent1"], ensure_ascii=False,
+                    sort_keys=True, default=str).encode()).hexdigest()[:16]
+                erel = f"frames/actor_{ekey}.png"
+                ep = proj.root / erel
+                if ekey not in manifest_used and not ep.exists():
+                    sp2.save(ep)
+                manifest_used.add(ekey)
+                x0 = -sp2.width if float(m["x"]) < 0.5 else composer.lay.w
+                ent_list.append({"png": erel, "x": tx, "y": ty, "x0": x0})
+            enters = ent_list or None
+        base_stage = ([m for m in stage_list if m["who"] not in enter_set
+                       or (actor_member and m["who"] == actor_member["who"])]
+                      if enter_set else stage_list)
+
         header = scene.title or (script.meta.title if vertical else "")
         if drama and full:
             # 全画面動画（年号カード・図解アニメ）では章タブを消す（見出しと干渉するため）
@@ -770,7 +814,7 @@ def render_frames(
             [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
              bool(sp), card, full, fg_only, sub, sprite_sig,
-             stage_list, bubble, caption, actor, "tags-top1"],
+             base_stage, bubble, caption, actor, "tags-top1"],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
@@ -780,7 +824,7 @@ def render_frames(
             composer.compose_cut(bg_name, header, chars, cut.slide,
                                  cut.image, video_card=card,
                                  fg_only=fg_only, with_telops=False,
-                                 stage=stage_list, bubble=bubble,
+                                 stage=base_stage, bubble=bubble,
                                  caption=caption, actor=actor,
                                  bubble_layered=bool(actor)).save(path)
         manifest_used.add(key)
@@ -790,6 +834,9 @@ def render_frames(
         actor_png = None
         actor_x = actor_y = 0
         actor_anim = "talk"
+        actor_x0 = None
+        mark_png = None
+        mark_x = mark_y = 0
         bubble_png = None
         if actor_member:
             akey = hashlib.sha1(json.dumps(
@@ -804,6 +851,21 @@ def render_frames(
             manifest_used.add(akey)
             actor_anim = {"surprised": "jump", "angry": "shake"}.get(
                 cut.emotion, "talk")
+            if actor_member["who"] in enter_set:
+                # 話者自身がこのシーンの新登場: 画面外からスライドイン
+                actor_x0 = (-spimg.width if float(actor_member["x"]) < 0.5
+                            else composer.lay.w)
+            # リアクション記号: 感情が切り替わった瞬間だけ、こめかみの横にポップ
+            # （頭の真上は吹き出しと重なるので、内側斜め上に出す）
+            if cut.emotion != prev_emo:
+                kind = fx.EMOTION_MARK.get(cut.emotion)
+                if kind:
+                    mark_png = fx.reaction_mark(cfg, kind)
+                    if float(actor_member["x"]) < 0.5:  # 左に立つ→内側は右
+                        mark_x = actor_x + int(spimg.width * 0.70)
+                    else:
+                        mark_x = actor_x + int(spimg.width * 0.30) - fx.MARK_SIZE
+                    mark_y = max(10, actor_y + 26)
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
                     [bubble, stage_list, sprite_sig, "bub2"],
@@ -828,6 +890,12 @@ def render_frames(
                 composer.telop_layer(cut.telops).save(tp)
             manifest_used.add(tkey)
             telop_anim = cut.telops[0].anim
+
+        # 衝撃演出: se: don のカット（または impact: true 指定）で
+        # 画面シェイク+押しズーム+集中線。横動画のみ
+        imp_on = cut.impact if cut.impact is not None else (cut.se == "don")
+        impact_png = (fx.speedlines(cfg, composer.lay.w, composer.lay.h)
+                      if (imp_on and not vertical) else None)
 
         # 章トランジション: シーンの先頭カット（見出しあり）にバナーを出す
         trans_png = None
@@ -862,6 +930,12 @@ def render_frames(
             actor_x=actor_x,
             actor_y=actor_y,
             actor_anim=actor_anim,
+            actor_x0=actor_x0,
             bubble_png=bubble_png,
+            enters=enters,
+            mark_png=mark_png,
+            mark_x=mark_x,
+            mark_y=mark_y,
+            impact_png=impact_png,
         ))
     return result
