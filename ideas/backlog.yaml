@@ -250,7 +250,7 @@ ideas:
   hook: "世界中で億を稼ぐ発明をしたのに、本人には1円も入りませんでした。しかも本人は後悔していないと言います。"
   angle: "井上大佑の実話（イグノーベル平和賞）。特許無料開放のQR・対価を争った舛岡と並べる第3の生き方→エコーで上手く聞こえる仕組みの図解"
   score: 4
-  status: new
+  status: used  # 2026-07-31 karaoke ミーム版で採用
 - id: washlet
   title: "ウォシュレットの開発、想像の10倍大変だった"
   hook: "ちょうどいい角度と温度を見つけるため、社員たちが体を張ったと言われています。"
@@ -388,7 +388,7 @@ ideas:
   status: used
 - id: karaoke-drama
   title: "カラオケを発明して特許を取らなかった男・井上大佑【再現ドラマ候補】"
-  status: new  # 2026-07提示・未選択
+  status: used  # 2026-07-31 karaoke ミーム版で採用
 - id: suihanki-drama
   title: "千回の炊飯実験・電気炊飯器を生んだ夫婦【再現ドラマ候補】"
   status: new

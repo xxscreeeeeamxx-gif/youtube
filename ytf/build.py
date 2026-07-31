@@ -246,6 +246,14 @@ def _render_one_segment(
         fc += f";{cur}[{ti}:v]overlay=x='{xe}':y='{ye}':eval=frame,format=yuv420p{out}"
         cur = out
 
+    if item.caption_png:
+        # 入場スライドで隠れないよう、ナレ字幕を入場キャラより前面に重ねる
+        ti = _count_inputs(inputs)
+        inputs += ["-loop", "1", "-framerate", str(fps), "-i", item.caption_png]
+        out = nxt()
+        fc += f";{cur}[{ti}:v]overlay=0:0,format=yuv420p{out}"
+        cur = out
+
     if item.actor_png:
         # 再現ドラマ: 話者の立ち絵を時間式で動かす（喋り跳ね/ジャンプ/震え/入場）
         ti = _count_inputs(inputs)
@@ -366,6 +374,8 @@ def render_segments(
                      f"{item.actor_anim}:av1")
         if item.actor_x0 is not None:
             vsig += f"|ax0:{item.actor_x0}"
+        if item.caption_png:
+            vsig += f"|cap:{item.caption_png}"
         if item.enters:
             vsig += "|ent2:" + ",".join(
                 f"{e['png']}:{e['x']}:{e['x0']}" for e in item.enters)

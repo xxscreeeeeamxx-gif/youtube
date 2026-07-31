@@ -362,6 +362,12 @@ class Composer:
             self._draw_telop(canvas, t)
         return canvas if fg_only else canvas.convert("RGB")
 
+    def caption_layer(self, text: str) -> Image.Image:
+        """ナレーション字幕だけの透過レイヤー（入場スライドのキャラより前面に置く用）。"""
+        canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
+        self._draw_caption(canvas, text)
+        return canvas
+
     def bubble_layer(self, bubble: dict,
                      stage: list[dict] | None = None) -> Image.Image:
         """吹き出し+名札の透過レイヤー（動く立ち絵より前面に重ねる用）。
@@ -554,6 +560,8 @@ class CutRender:
     bubble_png: str | None = None            # 吹き出しの透過PNG（立ち絵より前面）
     # 入場スライド: シーン新登場キャラの歩き入りレイヤー [{png,x,y,x0}]
     enters: list[dict] | None = None
+    # 入場キャラがナレ字幕を隠さないよう、字幕を前面レイヤーに分離したPNG
+    caption_png: str | None = None
     # リアクション記号（！？💢汗）のポップ表示
     mark_png: str | None = None
     mark_x: int = 0
@@ -804,6 +812,16 @@ def render_frames(
         base_stage = ([m for m in stage_list if m["who"] not in enter_set
                        or (actor_member and m["who"] == actor_member["who"])]
                       if enter_set else stage_list)
+        cap_png = None
+        if enters and caption:
+            ckey = hashlib.sha1(json.dumps(["cap1", caption, sub],
+                                ensure_ascii=False).encode()).hexdigest()[:16]
+            cap_png = f"frames/cap_{ckey}.png"
+            cp = proj.root / cap_png
+            if ckey not in manifest_used and not cp.exists():
+                composer.caption_layer(caption).save(cp)
+            manifest_used.add(ckey)
+            caption = None  # 基底には描かず、入場キャラより前面に重ねる
 
         header = scene.title or (script.meta.title if vertical else "")
         if drama and full:
@@ -933,6 +951,7 @@ def render_frames(
             actor_x0=actor_x0,
             bubble_png=bubble_png,
             enters=enters,
+            caption_png=cap_png,
             mark_png=mark_png,
             mark_x=mark_x,
             mark_y=mark_y,

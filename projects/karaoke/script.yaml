@@ -1,0 +1,847 @@
+# カラオケを産業にした男・井上大佑 再現ドラマ・ミーム版
+#
+# == 裏取り済みの事実（出典: 本人回想The Appendix2005 / SCMP2020 / WIPO / Improbable Research /
+#    コトバンク / カラオケ白書2024。詳細URLはリサーチ記録参照）==
+# - 1940年5月10日 大阪・十三生まれ。本名は祐輔。幼少期の大けがの後、僧侶が「大佑(大きな助け)」に改名
+# - ドラム担当。楽譜は読めず「ドラムなら叩けばいいだけ」(本人談)。プロで約9年
+# - 神戸のクラブでサラリーマン客の歌の伴奏。客のキーに合わせる職人芸
+# - 転機: 得意客の社長が旅行先で歌うため、伴奏テープを吹き込んで渡した(1970年ごろ)
+# - 1971年「8JUKE」を11台製作(8トラックカーステレオ+アンプ+マイク+コインボックス+エコー)
+#   100円で5分(本人談)。曲庫は約300曲、月8曲追加。レンタル方式で1年で神戸約200店→累計約2万5000台
+# - 特許は取らなかった。本人の弁「私は発明家ではない。既にある物を組み合わせただけ」
+#   「特許を取っていたらカラオケはここまで広がらなかったと思う。後悔していない」
+#   逃した額は「年1億ドル超」ともいわれる(SCMP2020の推計。累計◯兆円という出典は無いので使わない)
+# - 「カラオケ」の語源は放送業界の「空(から)オーケストラ」(一説。井上の造語ではない)
+# - 先行発明者が複数実在: 根岸重一(1967年スパルコボックス、2024年に100歳で死去)ら。
+#   自称発明者は約20人(烏賀陽弘道『カラオケ秘史』)。井上は「産業にして広めた人」
+# - カラオケボックスは井上の事業ではない(1985年・岡山が通説)→本作では触れない
+# - 1990年前後に体調を崩し一線を退いた時期がある(クリーン1行のみ・ミーム禁止)
+# - 1993年 カラオケ機の配線をかじるゴキブリ・ネズミの駆除剤を開発、これは特許制度を利用
+# - 1999年 TIMEアジア版「今世紀最も影響力のあったアジアの20人」(毛沢東・ガンジー・黒澤明らと)
+# - 2004年 イグノーベル平和賞。受賞理由「カラオケの発明により、人々が互いに寛容になる
+#   まったく新しい方法を提供した」。観客約1100人、ノーベル賞受賞者3人がセレナーデ、
+#   本人の歌にイグノーベル史上最長といわれるスタンディングオベーション
+# - 2023年度の国内カラオケ市場は約4430億円・カラオケボックス8298店(カラオケ白書2024)
+#
+# == センシティブルール ==
+# - 井上大佑さんは存命。本人が公開の場で笑い話にしているエピソード(特許・下手なドラム・熱唱)だけを
+#   描き、本人を嘲笑するミームは入れない(ずんだもん・つむぎのリアクション側で笑いを取る)
+# - 「カラオケの発明者」と単独断定しない。「産業にした男」+本人の「私は発明家ではない」を軸にする
+# - 先行者(根岸重一さんら)の場面はクリーン(ミーム禁止)。故人と遺族への敬意を保つ
+# - 体調を崩した時期はクリーン1行のみ。ミーム・SE禁止
+meta:
+  title: "手作りの11台で世界を変え、特許を取らなかった男【カラオケ誕生・再現ドラマ・ミーム版】"
+  slug: "karaoke"
+  summary: "カラオケを産業にした男、井上大佑の物語。大阪・十三に生まれ、楽譜の読めないドラマーとして神戸のクラブでサラリーマンの歌を支え、1971年、伴奏テープの機械「8JUKE」を11台手作りした。特許は取らず、機械はレンタルで神戸のスナックから世界へ。逃した特許料は年1億ドル超ともいわれるが、本人は「特許を取っていたらここまで広がらなかった」と笑う。1999年タイム誌のアジアの20人、2004年イグノーベル平和賞、ハーバードの講堂1100人のスタンディングオベーションまで、ずんだもんが井上を演じる再現ドラマ・ミーム版でお届けします。"
+  tags: ["カラオケ", "井上大佑", "イグノーベル賞", "再現ドラマ", "ゆっくり", "ずんだもん", "昭和", "ミーム"]
+  thumbnail:
+    top: "特許を取らなかった"
+    bottom: "カラオケの父"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: shacho, label: "社長", voice: 13, pitch: -0.06, item: hat}
+    - {id: nakama, label: "バンド仲間", voice: 12, pitch: 0.0}
+    - {id: osho, label: "和尚", voice: 42, pitch: 0.0}
+    - {id: mama, label: "ママ", voice: 8, pitch: 0.06, hair: bun}
+scenes:
+  # ============ 茶番フック: 現代のカラオケボックス ============
+  - id: hook
+    title: ""
+    background: il_ka_box
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "採点97点！今日のボクは優勝なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "すごいじゃん。で、それ何曲目？"
+      - speaker: zundamon
+        emotion: happy
+        text: "21曲目だ。喉が仕上がってきたぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "仕上がる前に閉店するよ。もう3時間経ってるからね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ヒトカラは時間が溶けるのだ。実質タイムマシンだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "溶けてるのはお小遣いだよ。ドリンクバーも3杯目でしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "歌ってストレス発散、毎日カラオケ健康生活なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昨日も一昨日も来てたもんね。その健康、偏ってない？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "むむ。じゃあ明日は歌わずに、静かに過ごすぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "えらい。何するの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "家で採点アプリの練習だ。[明後日|あさって]の本番に備えるんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "それ休みじゃなくて[自主練|じしゅれん]だからね！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "ところでこの機械、押せば伴奏が出てくる。天才の発明なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その機械をね、最初に商売にした人がいるんだけど。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "特許を取らなくて、世界中で使われてるのに1円も入ってないの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "1円も！？待って、情報量が多すぎる！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "しかも本人は、後悔してないって笑ってるんだよね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "どういうメンタルだ……その人の話、詳しく聞かせてほしいのだ。"
+  # ============ 1940 年号カード ============
+  - id: era1940
+    title: ""
+    background: il_ka_juso
+    bgm: pastel_house
+    cuts:
+      - speaker: reimu
+        reading: "かたやきそば、いっちょう。おおさかわ じゅうそうの しょくどうがいに、そのこわ うまれました。"
+        text: "かた焼きそば、一丁。大阪は十三の食堂街に、その子は生まれました。"
+        video: assets/clips/ka_era1940.mp4
+        video_full: true
+        video_span: 2
+      - speaker: reimu
+        reading: "せんきゅうひゃくよんじゅうねん ごがつとおか。なまえわ いのうえ ゆうすけ。のちの いのうえ だいすけです。"
+        text: "1940年5月10日。名前は井上祐輔。のちの井上大佑です。"
+  # ============ 幼少期: 名前の由来 ============
+  - id: youth
+    title: "1940・大阪十三"
+    background: il_ka_juso
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.8, tag: "祐輔"}
+      - {who: osho, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "やんちゃな ゆうすけしょうねんわ、あるひ おおけがを してしまいます。"
+        text: "やんちゃな祐輔少年は、ある日大けがをしてしまいます。"
+      - speaker: osho
+        emotion: normal
+        text: "この子の名前を、変えなさい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクの名前、変わっちゃうのだ！？"
+      - speaker: osho
+        emotion: normal
+        text: "大きな助けと書いて、[大佑|だいすけ]。人を助ける名前じゃ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "だいすけ……なんか強そうだから、まあいいのだ。"
+      - speaker: reimu
+        reading: "おてらの おしょうさんの ひとことで、なまえわ だいすけに。ほんにんが のちに かたっている、じつわです。"
+        text: "お寺の和尚さんの一言で、名前は大佑に。本人がのちに語っている実話です。"
+      - speaker: reimu
+        reading: "おおきなたすけ という なまえわ、ごじゅうねんごに せかいじゅうの うたごえを たすけることに なります。"
+        text: "大きな助けという名前は、50年後に世界中の歌声を助けることになります。"
+  # ============ 1956 年号カード ============
+  - id: era1956
+    title: ""
+    background: il_ka_club
+    bgm: you_and_me
+    cuts:
+      - speaker: reimu
+        reading: "せんきゅうひゃくごじゅうろくねん。じゅうろくさいの だいすけわ、バンドで ドラムを たたいていました。"
+        text: "1956年。16歳の大佑は、バンドでドラムを叩いていました。"
+        video: assets/clips/ka_era1956.mp4
+        video_full: true
+  # ============ バンド時代 ============
+  - id: band
+    title: "1956・ドラム少年"
+    background: il_ka_club
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.9, tag: "井上"}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: nakama
+        emotion: normal
+        text: "おい[井上|いのうえ]、なんでドラム希望なんだ？"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボク、楽譜が読めないのだ。"
+      - speaker: nakama
+        emotion: surprised
+        text: "威張って言うことか！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "でもドラムなら、[叩|たた]けばいいだけだ。頭脳プレーだぞ。"
+      - speaker: nakama
+        emotion: angry
+        text: "それは頭脳を使ってないって言うんだよ！"
+      - speaker: reimu
+        reading: "がくふわ よめない。それでも リズムかんと あいきょうで、プロの ドラマーとして やく くねん。"
+        text: "楽譜は読めない。それでもリズム感と愛嬌で、プロのドラマーとして約9年。"
+      - speaker: zundamon
+        emotion: happy
+        text: "音楽は理論じゃなくて、ノリだ。"
+      - speaker: nakama
+        emotion: normal
+        text: "お前のそういうとこ、嫌いじゃないぜ。"
+      - speaker: reimu
+        reading: "キャバレーに ダンスホール。うたと えんそうが、よるの まちの ごちそうだった じだいです。"
+        text: "キャバレーにダンスホール。歌と演奏が、夜の街のごちそうだった時代です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "テレビより、[生|なま]の音楽の時代。ボクらが夜のBGM係というわけだ。"
+  # ============ 神戸のクラブ: 伴奏職人 ============
+  - id: kobe
+    title: "1960年代・神戸のクラブ"
+    background: il_ka_club
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.28, flip: true, tag: "井上"}
+      - {who: shacho, x: 0.76}
+      - {who: nakama, x: 0.55}
+    cuts:
+      - speaker: reimu
+        reading: "にじゅうはっさいの だいすけわ、こうべの クラブに いました。しごとわ、おきゃくの うたの ばんそうです。"
+        text: "28歳の大佑は、神戸のクラブにいました。仕事は、お客の歌の伴奏です。"
+      - speaker: shacho
+        emotion: happy
+        text: "[井上|いのうえ]くん！今夜もあれ、頼むで！"
+      - speaker: zundamon
+        emotion: happy
+        text: "社長の[十八番|おはこ]、了解だ。キーは低めで合わせるぞ。"
+      - speaker: reimu
+        reading: "じょうれんの しゃちょうわ、うたが だいすき。ただし おんていわ、かなり じゆうでした。"
+        text: "常連の社長は、歌が大好き。ただし音程は、かなり自由でした。"
+      - speaker: nakama
+        emotion: thinking
+        text: "なあ、社長の歌、今日も音を外してないか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いいんだ。外れたら、こっちが合わせにいく。"
+      - speaker: nakama
+        emotion: surprised
+        text: "伴奏が歌に寄せるのか！？逆だろ普通！"
+      - speaker: zundamon
+        emotion: happy
+        text: "お客が気持ちよく歌えたら、それが正解の演奏なのだ。"
+      - speaker: reimu
+        reading: "おきゃくの キーに あわせ、テンポを あわせ、まちがえても しらんかおで ついていく。"
+        text: "お客のキーに合わせ、テンポを合わせ、間違えても知らん顔でついていく。"
+      - speaker: reimu
+        reading: "へたな うたを きもちよく うたわせる ぎじゅつなら、だれにも まけませんでした。"
+        text: "下手な歌を気持ちよく歌わせる技術なら、誰にも負けませんでした。"
+      - speaker: shacho
+        emotion: happy
+        text: "キミの伴奏やと、わし、歌がうまなった気がするんや！"
+      - speaker: zundamon
+        emotion: happy
+        text: "気のせいじゃないぞ。社長は今夜、優勝だ。"
+      - speaker: nakama
+        emotion: normal
+        text: "接客の天才かよ。"
+  # ============ 転機: 社長の依頼 ============
+  - id: tape
+    title: "1970・運命の依頼"
+    background: il_ka_club
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: shacho, x: 0.74}
+    cuts:
+      - speaker: shacho
+        emotion: normal
+        text: "[井上|いのうえ]くん、[折り入って|おりいって]頼みがあるんや。"
+      - speaker: zundamon
+        emotion: normal
+        text: "改まってどうしたんだ、社長。"
+      - speaker: shacho
+        emotion: normal
+        text: "こんど会社の旅行でな、宴会で歌わなあかんのや。"
+      - speaker: shacho
+        emotion: sad
+        text: "せやけど旅先に、キミの伴奏はあらへん。わし、あの伴奏なしでは歌えん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "社長、ボクの伴奏に依存してたのだ！？"
+      - speaker: shacho
+        emotion: normal
+        text: "せや。そこでや。キミの伴奏を、テープに吹き込んでくれへんか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "伴奏だけを、テープに……。"
+      - speaker: reimu
+        reading: "だいすけわ しゃちょうの キーに あわせた ばんそうを、テープに ふきこんで わたしました。"
+        text: "大佑は社長のキーに合わせた伴奏を、テープに吹き込んで渡しました。"
+      - speaker: shacho
+        emotion: happy
+        text: "おおきに！これで宴会、無双できるわ！"
+      - speaker: reimu
+        reading: "りょこうから もどった しゃちょうわ、おおよろこびで みせに きました。"
+        text: "旅行から戻った社長は、大喜びで店に来ました。"
+      - speaker: shacho
+        emotion: happy
+        text: "大成功や！満場一致で、わしの独壇場やった！"
+      - speaker: zundamon
+        emotion: happy
+        text: "よかったな。テープの伴奏でも、ちゃんと歌えるんだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ん？待つのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "テープで歌えるなら、バンドがいない店でも、歌えるのでは？"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "伴奏の機械を置けば、どの店でも歌える！これは、いけるのだ！"
+      - speaker: reimu
+        reading: "ばんそうを きかいに やらせる。よの なかを かえる おもいつきわ、じょうれんの たのみごとから うまれました。"
+        text: "伴奏を機械にやらせる。世の中を変える思いつきは、常連の頼みごとから生まれました。"
+  # ============ 1971 年号カード ============
+  - id: era1971
+    title: ""
+    background: il_ka_workshop
+    bgm: curious
+    cuts:
+      - speaker: reimu
+        reading: "せんきゅうひゃくななじゅういちねん。だいすけ、さんじゅういっさい。てづくりの きかいづくりが はじまります。"
+        text: "1971年。大佑、31歳。手作りの機械づくりが始まります。"
+        video: assets/clips/ka_era1971.mp4
+        video_full: true
+  # ============ 8JUKE製作 ============
+  - id: build8juke
+    title: "1971・8JUKE誕生"
+    background: il_ka_workshop
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: nakama
+        emotion: normal
+        text: "で、伴奏の機械って、どう作るんだ？"
+      - speaker: zundamon
+        emotion: happy
+        text: "作らないのだ。組み合わせるのだ。"
+      - speaker: nakama
+        emotion: thinking
+        text: "どういうことだ？"
+      - speaker: reimu
+        reading: "ざいりょうわ、すべて まちで かえる ありものでした。"
+        text: "材料は、すべて街で買えるありものでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まず、車用の[8トラ|ハチトラ]ックデッキ。伴奏テープはここに入れる。"
+        video: assets/clips/ka_jbox.mp4
+        video_full: true
+        video_span: 4
+      - speaker: zundamon
+        emotion: normal
+        text: "次に100円のコインボックス。お金を入れたら動く仕掛けだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "アンプとマイクをつないで、声と伴奏を一緒に鳴らすのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "仕上げはエコー。声を響かせれば、誰でも3割うまく聞こえるんだ。"
+      - speaker: nakama
+        emotion: surprised
+        text: "最後のやつ、機能というより魔法だろ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "[風呂場|ふろば]で歌うと、うまく聞こえるだろ。あれを機械に積んだんだ。"
+      - speaker: nakama
+        emotion: happy
+        text: "天才かよ。"
+      - speaker: nakama
+        emotion: thinking
+        text: "でも、なんでエコーだと、うまく聞こえるんだ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "声に、ちょっと遅れた自分の声が重なるからだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "重なった響きが音の輪郭をぼかして、外した瞬間が耳で特定できなくなるのだ。"
+      - speaker: nakama
+        emotion: surprised
+        text: "粗が隠れるのか。音のモザイクじゃないか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "響きが増えるぶん[声|こえ]も豊かに聞こえる。いいことずくめなんだ。"
+      - speaker: reimu
+        reading: "エコーで きもちよく。クラブで みがいた せっきゃくじゅつが、そのまま きかいに なりました。"
+        text: "エコーで気持ちよく。クラブで磨いた接客術が、そのまま機械になりました。"
+      - speaker: reimu
+        reading: "かんせいした きかいわ、その なも エイトジューク。てづくりで、じゅういちだい。"
+        text: "完成した機械は、その名も8JUKE。手作りで、11台。"
+      - speaker: zundamon
+        emotion: happy
+        text: "100円で5分。歌い放題とはいかないが、1曲歌うには十分だ。"
+      - speaker: nakama
+        emotion: normal
+        text: "曲はどうすんだ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "バンド仲間と300曲、吹き込んだ。毎月8曲ずつ増やしていくぞ。"
+      - speaker: nakama
+        emotion: surprised
+        text: "300曲！？レコード会社もびっくりの物量だな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "リクエストに応えてこそ、夜の店の音楽係だからな。"
+  # ============ スナック設置 ============
+  - id: snack
+    title: "神戸・スナックの夜"
+    background: il_ka_snack
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.26, flip: true, tag: "井上"}
+      - {who: mama, x: 0.56}
+      - {who: shacho, x: 0.8}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "ママ、この機械を店に置かせてほしいのだ。"
+      - speaker: mama
+        emotion: thinking
+        text: "何よこの箱。ジュークボックスにしては不細工ねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "100円入れると、伴奏が流れる。お客さんが自分で歌える機械だ。"
+      - speaker: mama
+        emotion: surprised
+        text: "お客が自分で？バンドもいないのに、人前で歌うかしら。"
+      - speaker: zundamon
+        emotion: normal
+        text: "買ってくれとは言わない。置くだけ。売り上げは山分けだ。"
+      - speaker: mama
+        emotion: happy
+        text: "タダなら置いてあげる。場所代と思えば悪くないわね。"
+      - speaker: reimu
+        reading: "うらない きかいわ、かさない。うりあげを わけあう レンタルほうしき。これが のちに きく いってに なります。"
+        text: "売らない機械は、貸さない。売り上げを分け合うレンタル方式。これがのちに効く一手になります。"
+      - speaker: reimu
+        reading: "さいしょの よるわ、みんな とおまきに ながめるだけでした。"
+        text: "最初の夜は、みんな遠巻きに眺めるだけでした。"
+      - speaker: mama
+        emotion: normal
+        text: "ほら、誰も歌わないじゃない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "み、みんな照れてるだけだ。きっかけさえあれば……。"
+      - speaker: shacho
+        emotion: happy
+        text: "なんや、わしの伴奏があるんかいな！ほな一曲いくで！"
+      - speaker: zundamon
+        emotion: happy
+        text: "社長！ナイス突撃なのだ！"
+      - speaker: reimu
+        reading: "ひとり うたえば、つぎつぎに マイクの じゅんばんまちが できました。"
+        text: "ひとり歌えば、次々にマイクの順番待ちができました。"
+      - speaker: mama
+        emotion: surprised
+        se: don
+        text: "ちょっと、100円玉が箱に入りきらないんだけど！？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "回収が追いつかない！うれしい悲鳴というやつなのだ！"
+      - speaker: reimu
+        reading: "エイトジュークわ いちねんで、こうべの やく にひゃくてんに ひろがりました。"
+        text: "8JUKEは1年で、神戸の約200店に広がりました。"
+      - speaker: mama
+        emotion: happy
+        text: "うちの店、歌目当てのお客で毎晩満席よ。"
+      - speaker: mama
+        emotion: normal
+        text: "面白いのはね、常連さんたち、次は自分の番だから、人の歌を拍手で聞くのよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "歌う人と聞く人が、勝手に回り出したのだ。マイクは平和の道具かもしれないぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "歌は最強の集客なのだ。ボクの読み、大勝利だ。"
+  # ============ 全国拡大 ============
+  - id: spread
+    title: "全国へ"
+    background: il_ka_office
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "うわさわ こうべから おおさか、とうきょうえ。ちゅうもんわ とまらなくなります。"
+        text: "うわさは神戸から大阪、東京へ。注文は止まらなくなります。"
+        video: assets/clips/ka_spread.mp4
+        video_full: true
+        video_span: 3
+      - speaker: nakama
+        emotion: surprised
+        text: "注文の電話が鳴りやまないぞ。何台作ればいいんだ！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "作れるだけ作るぞ。夜の日本が、歌いたがってるんだ。"
+      - speaker: reimu
+        reading: "エイトジュークと そのこうけいきわ、るいけいで やく にまんごせんだいに たっしたと ほんにんわ かたります。"
+        text: "8JUKEとその後継機は、累計で約2万5000台に達したと本人は語ります。"
+        stat: {value: 25000, unit: "台", label: "累計製造台数・本人談"}
+      - speaker: reimu
+        reading: "この ばんそうきかいわ、いつしか カラオケと よばれる ように なっていました。"
+        text: "この伴奏機械は、いつしかカラオケと呼ばれるようになっていました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "カラオケって、そもそもどういう意味なのだ？"
+      - speaker: nakama
+        emotion: normal
+        text: "放送業界の言葉らしいぜ。歌のない伴奏だけの演奏を、[空|から]のオーケストラ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "略してカラオケか。業界用語、センスの塊だ。"
+      - speaker: reimu
+        reading: "からオーケストラの りゃくと される、ほうそうげんばの ことば。それが きかいの なまえに なった、と いわれています。"
+        text: "空オーケストラの略とされる、放送現場の言葉。それが機械の名前になった、といわれています。"
+  # ============ 特許の話 ============
+  - id: patent
+    title: "特許を取らなかった男"
+    background: il_ka_office
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: nakama
+        emotion: normal
+        text: "なあ[井上|いのうえ]、そういえばこの機械、特許はどうしたんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "取ってないぞ。"
+      - speaker: nakama
+        emotion: surprised
+        se: don
+        text: "取ってない！？この大ヒット商品を！？"
+      - speaker: zundamon
+        emotion: normal
+        text: "だってボクは、発明家じゃないからな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "カーステレオも、アンプも、コインボックスも、全部よそ様の発明だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクはそれを、つないだだけ。誰がこんなもので特許を取ると思う？"
+      - speaker: reimu
+        reading: "わたしわ はつめいかでわ ない。すでに ある ものを くみあわせただけ。ほんにんが くりかえし かたる ことばです。"
+        text: "私は発明家ではない。既にある物を組み合わせただけ。本人が繰り返し語る言葉です。"
+      - speaker: reimu
+        reading: "とっきょの ない カラオケわ、だれでも つくれます。おおてメーカーが ぞくぞくと さんにゅうしました。"
+        text: "特許のないカラオケは、誰でも作れます。大手メーカーが続々と参入しました。"
+      - speaker: nakama
+        emotion: sad
+        text: "うちより立派な機械が、どんどん出てくるぞ……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械で負けても、レンタルと曲の入れ替えなら、うちが一番だ。"
+      - speaker: reimu
+        reading: "もし とっきょを とっていたら。その とっきょりょうわ、ねんに いちおくドルを こえたとも いわれます。"
+        text: "もし特許を取っていたら。その特許料は、年に1億ドルを超えたともいわれます。"
+        telops:
+          - {text: "年1億ドル超(推計)", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: nakama
+        emotion: surprised
+        text: "1億ドル！？円じゃなくてドル！？しかも毎年！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "細かいことは、気にしないのだ。"
+      - speaker: nakama
+        emotion: angry
+        text: "細かくないんだよ！桁が細かくないんだよ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "お金の計算より、今夜もどこかの店で誰かが歌ってる。そっちのほうが大事なのだ。"
+      - speaker: nakama
+        emotion: thinking
+        text: "……お前、それを本気で言ってるから、怖いんだよなあ。"
+      - speaker: reimu
+        reading: "しかし ほんにんわ、こう わらいます。とっきょを とっていたら、カラオケわ ここまで ひろがらなかったと。"
+        text: "しかし本人は、こう笑います。特許を取っていたら、カラオケはここまで広がらなかったと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰でも作れたから、世界中に広がった。それでいいのだ。"
+  # ============ 先行者たち(クリーン) ============
+  - id: pioneers
+    title: "最初に作った人"
+    background: il_ka_office
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "じつわ、うたの ばんそうきかいを さいしょに つくった ひとわ、だいすけでわ ありません。"
+        text: "実は、歌の伴奏機械を最初に作った人は、大佑ではありません。"
+      - speaker: nakama
+        emotion: surprised
+        text: "え、そうなのか？"
+      - speaker: reimu
+        reading: "せんきゅうひゃくろくじゅうななねん、ねぎし しげいちさんが マイクつきの ハチトラきを かいはつ。ほかにも せんくしゃが なんにんも いました。"
+        text: "1967年、根岸重一さんがマイク付きの8トラ機を開発。ほかにも先駆者が何人もいました。"
+      - speaker: reimu
+        reading: "じぶんが カラオケを つくったと なのる ひとわ、やく にじゅうにんいる とも いわれます。"
+        text: "自分がカラオケを作ったと名乗る人は、約20人いるともいわれます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "みんな、同じ時代に同じ夢を見てたんだ。"
+      - speaker: reimu
+        reading: "その なかで だいすけわ、レンタルと きょくの こうしんで、カラオケを しょうばいの かたちに した ひとでした。"
+        text: "その中で大佑は、レンタルと曲の更新で、カラオケを商売の形にした人でした。"
+      - speaker: nakama
+        emotion: normal
+        text: "作った人が何人もいて、広めたのがお前ってことか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だからボクは、発明家じゃないと言ってるだろ。"
+  # ============ 低迷と回り道 ============
+  - id: valley
+    title: "回り道"
+    background: il_ka_office
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "じだいわ うつり、きかいわ レーザーディスクや つうしん カラオケえ。だいすけの かいしゃわ しだいに おされていきます。"
+        text: "時代は移り、機械はレーザーディスクや通信カラオケへ。大佑の会社は次第に押されていきます。"
+      - speaker: reimu
+        reading: "たいちょうを くずし、いっせんを しりぞいた じきも ありました。"
+        text: "体調を崩し、一線を退いた時期もありました。"
+      - speaker: reimu
+        reading: "それでも、カラオケの そばを はなれませんでした。そして せんきゅうひゃくきゅうじゅうさんねん。"
+        text: "それでも、カラオケのそばを離れませんでした。そして1993年。"
+      - speaker: zundamon
+        emotion: happy
+        text: "新商品、完成したぞ！"
+      - speaker: nakama
+        emotion: normal
+        text: "お、次はどんなカラオケ機だ？"
+      - speaker: zundamon
+        emotion: happy
+        text: "ゴキブリ駆除剤なのだ！"
+      - speaker: nakama
+        emotion: surprised
+        text: "[待て待て待て|まてまてまて]。ジャンルが飛びすぎだろ！"
+      - speaker: zundamon
+        emotion: normal
+        text: "カラオケ機の中は、あったかくて暗い。虫とネズミの人気物件なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "配線をかじられて壊れる機械を、ずっと見てきたからな。"
+      - speaker: nakama
+        emotion: thinking
+        text: "確かに、現場を知ってるやつにしか作れない商品だな……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そして今回は、ちゃんと特許制度を使ったのだ！"
+      - speaker: nakama
+        emotion: surprised
+        text: "学習してる！カラオケで取らなかった男が、ゴキブリで取った！"
+      - speaker: reimu
+        reading: "カラオケでわ とらず、くじょざいでわ つかう。ほんにんも わらいばなしに する エピソードです。"
+        text: "カラオケでは取らず、駆除剤では使う。本人も笑い話にするエピソードです。"
+  # ============ 1999 TIME ============
+  - id: time1999
+    title: ""
+    background: il_ka_office
+    bgm: curious
+    cuts:
+      - speaker: reimu
+        reading: "せんきゅうひゃくきゅうじゅうきゅうねん。アメリカの タイムしが、にじっせいきに もっとも えいきょうを あたえた アジアの にじゅうにんを えらびました。"
+        text: "1999年。アメリカのタイム誌が、20世紀に最も影響を与えたアジアの20人を選びました。"
+        video: assets/clips/ka_era1999.mp4
+        video_full: true
+  - id: time1999b
+    title: "1999・アジアの20人"
+    background: il_ka_office
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: nakama, x: 0.74}
+    cuts:
+      - speaker: nakama
+        emotion: surprised
+        text: "おい[井上|いのうえ]！タイム誌にお前が載ってるぞ！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なんでボクなんだ！？"
+      - speaker: nakama
+        emotion: normal
+        text: "見ろよこの並び。[毛沢東|もうたくとう]、ガンジー、[黒澤明|くろさわあきら]……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "歴史の教科書と映画の巨匠に挟まれてる！場違いすぎるのだ！"
+      - speaker: reimu
+        reading: "きじわ こう つづります。かれわ アジアの よるを かえた、と。"
+        text: "記事はこうつづります。彼はアジアの夜を変えた、と。"
+      - speaker: nakama
+        emotion: happy
+        text: "夜の過ごし方を変えた男、って評価らしいぜ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "伴奏係から始まって、アジアの夜担当まで出世したぞ。"
+  # ============ 2004 イグノーベル賞 ============
+  - id: era2004
+    title: ""
+    background: il_ka_hall
+    bgm: 223am
+    cuts:
+      - speaker: reimu
+        reading: "にせんよねん あき。ハーバードだいがくの こうどうから、いっつうの しょうたいが とどきます。"
+        text: "2004年秋。ハーバード大学の講堂から、一通の招待が届きます。"
+        video: assets/clips/ka_era2004.mp4
+        video_full: true
+  - id: ignobel
+    title: "2004・イグノーベル平和賞"
+    background: il_ka_hall
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "井上"}
+      - {who: mama, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "イグノーベルしょう。ひとを わらわせ、かんがえさせた けんきゅうに おくられる、せかいてきな しょうです。"
+        text: "イグノーベル賞。人を笑わせ、考えさせた研究に贈られる、世界的な賞です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ハーバードの講堂……観客が1100人……。"
+      - speaker: reimu
+        reading: "かいじょうにわ やく せんひゃくにん。ほんものの ノーベルしょう じゅしょうしゃたちが、ぶたいで かれを むかえました。"
+        text: "会場には約1100人。本物のノーベル賞受賞者たちが、舞台で彼を迎えました。"
+        stat: {value: 1100, unit: "人", label: "授賞式の観客"}
+      - speaker: mama
+        emotion: happy
+        text: "ノーベル賞の先生たちが、歌でお出迎えですって！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "世界最高の頭脳が、ボクのためにセレナーデ！？"
+      - speaker: reimu
+        reading: "じゅしょうりゆうわ、こうです。"
+        text: "受賞理由は、こうです。"
+      - speaker: reimu
+        reading: "カラオケという、ひとびとが たがいに かんように なることを まなぶ、まったく あたらしい ほうほうを ていきょうした。"
+        text: "カラオケという、人々が互いに寛容になることを学ぶ、まったく新しい方法を提供した。"
+        telops:
+          - {text: "人々が互いに寛容になる方法", size: lg, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
+      - speaker: zundamon
+        emotion: thinking
+        text: "寛容……つまり、下手な歌でも笑って許し合えってことか。"
+      - speaker: mama
+        emotion: happy
+        text: "あなたの機械、最初からエコーで許してたものね。"
+      - speaker: reimu
+        reading: "スピーチの さいごに、だいすけわ うたいました。"
+        text: "スピーチの最後に、大佑は歌いました。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "世界中のみんなに、歌を教えたい……そんな歌を、ここで歌うのだ！"
+      - speaker: reimu
+        reading: "かいじょうわ そうだち。イグノーベルしじょう さいちょうと いわれる スタンディングオベーションが おきました。"
+        text: "会場は総立ち。イグノーベル史上最長といわれるスタンディングオベーションが起きました。"
+      - speaker: mama
+        emotion: happy
+        text: "みんな立ち上がって、拍手が鳴りやまないわ！"
+      - speaker: reimu
+        reading: "かんきゃくわ こたえに、めいきょく、きみのひとみにこいしてるを がっしょうしました。うたが うたを よんだ よるでした。"
+        text: "観客は応えに、名曲・君の瞳に恋してるを合唱しました。歌が歌を呼んだ夜でした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "特許料はもらえなかったけど、こんな夜は、お金じゃ買えないのだ。"
+  # ============ 現代 ============
+  - id: today
+    title: "そして現代へ"
+    background: il_ka_box
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "ピークの せんきゅうひゃくきゅうじゅうろくねんにわ、カラオケじんこうわ ごせんろっぴゃくきゅうじゅうまんにんと されます。"
+        text: "ピークの1996年には、カラオケ人口は5690万人とされます。"
+        stat: {value: 5690, unit: "万人", label: "カラオケ人口・1996年"}
+      - speaker: zundamon
+        emotion: surprised
+        text: "日本人の2人に1人が歌ってた計算なのだ！？"
+      - speaker: reimu
+        reading: "にっぽんの カラオケしじょうわ、いまも ねんかん やく よんせんよんひゃくおくえん。"
+        text: "日本のカラオケ市場は、今も年間約4400億円。"
+        stat: {value: 4430, unit: "億円", label: "国内カラオケ市場・2023年度"}
+      - speaker: reimu
+        reading: "カラオケわ そのまま、ローマじの カラオケとして、せかいの ことばに なりました。"
+        text: "カラオケはそのままKARAOKEとして、世界の言葉になりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "というわけ。あなたが3時間歌ってた機械の、始まりの話。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手作りの11台が、世界中の夜になったのか……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "特許を取らなかったから、誰でも作れて、ここまで広がった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "本人が言う通り、独り占めしてたら、こうはならなかったかもな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "だからカラオケで歌うたび、世界のどこかで恩返しが鳴ってるようなものよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よし、決めたぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何を？"
+      - speaker: zundamon
+        emotion: happy
+        text: "今夜はエコー最大で、感謝の熱唱なのだ！"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "結局歌うんかい！さっき3時間歌ったでしょ！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "歌は寛容を学ぶ授業だから、つまりこれは勉強なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "イグノーベル賞の使い方がうますぎるのよ。"
+  # ============ 締め ============
+  - id: ending
+    title: ""
+    background: il_ka_box
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "次にカラオケに行ったら、マイクの向こうの物語を思い出してみてね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "下手でもいいのだ。機械が3割、盛ってくれるからな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "身近な当たり前の裏側を、これからも掘っていくよ。チャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "高評価も、アンコールみたいでうれしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"
