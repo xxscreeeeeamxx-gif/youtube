@@ -83,6 +83,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "しかも日本では、すかしの入った紙を勝手に作ること自体が、法律で禁止されてる。偽札を刷る前、紙を作った時点でもう違法という、先回りのガードだよ。"
+        telops:
+          - {text: "紙を作った時点で違法", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "スタートラインに立つ前から犯罪なのだ！法律の先回りがえげつないのだ！"
@@ -98,6 +100,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "お札の紙は、繊維を水に溶かして漉いて作るんだけど、その途中で場所ごとに繊維の量をわざと変えてるの。繊維が多いところは厚くて光を通しにくいから暗く、少ないところは明るく見える。その濃淡で、あの顔を描いてるんだよ。"
+        telops:
+          - {text: "紙の厚みで顔を描く", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "印刷じゃなくて、紙が生まれる瞬間に絵を仕込んでたのだ！仕事が早すぎるのだ！"
@@ -121,6 +125,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "コピー機は、読み取った画像の中からこの配置を探してる。見つけた瞬間、印刷を拒否したり、真っ黒に塗りつぶしたり、エラーで止まったりするの。"
+        telops:
+          - {text: "見つけた瞬間、印刷拒否", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "お札に「コピーするな」って書いてあるようなものなのだ！機械にだけ読める看板なのだ！"
@@ -139,6 +145,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "お札を傾けると、肖像が立体的にくるっと回って見える。印刷でも写真でも再現できない「動き」で、本物を証明するの。"
+        telops:
+          - {text: "世界初の3Dホログラム", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: happy
         text: "もはや芸術なのだ。偽物を作るより、本物を作るほうが難しい世界なのだ！"
@@ -164,6 +172,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "偽札はおよそ2年間で343枚、22の都道府県で見つかった。警察は大規模な捜査をしたけど、犯人はとうとう見つからないまま、時効を迎えてしまう。"
+        telops:
+          - {text: "偽札343枚、犯人は時効", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A0A0A", glow: "#EE3322", anim: up}
       - speaker: zundamon
         emotion: sad
         text: "逃げ切られたのだ……。日本の警察が、振り切られたのだ……。"
@@ -197,6 +207,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "3分の2以上残っていれば、全額交換。5分の2以上なら、半額。それより小さいと、残念ながら0円。日本銀行の本支店や銀行の窓口で引き換えられるよ。"
+        telops:
+          - {text: "残った面積で決まる", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: zundamon
         emotion: sad
         text: "ちょっと足りないだけで半額になるのだ……。シビアな世界なのだ……。"
@@ -251,6 +263,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "隠し文字に、回る肖像に、機械にだけ見える目印。お札は小さな技術の博物館だよ。眺めるだけなら、タダだからね。"
+        telops:
+          - {text: "お札は小さな技術の博物館", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: happy
         text: "納得したら、高評価とチャンネル登録よろしくね。次回も、身近な当たり前にかくれた意外な話を持ってくるね。"

@@ -80,6 +80,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "社員さん約300人の、おしりの位置。"
+        telops:
+          - {text: "社員300人の、おしりの位置", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "ファッ！？会社で！？"
@@ -203,6 +205,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "日本人の体に合う数字は、日本人が測って決めるしかないんだ。"
+        telops:
+          - {text: "日本人の体は、日本人が測る", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: bucho
         text: "トイレは、用を足すだけの場所。それが世間の常識だぞ。"
       - speaker: zundamon
@@ -280,6 +284,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "見えない、人による、超シビア。[三重|さんじゅう]の無理ゲーなのだ。"
+        telops:
+          - {text: "洗浄は、三重の無理ゲー", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: tsumugi
         emotion: normal
         text: "で、どう攻略するんです？"
@@ -348,6 +354,8 @@ scenes:
         text: "本気なのだ。この数字が、[日本中|にほんじゅう]の毎日を変えるんだ。"
       - speaker: shain
         text: "分かりました。日本の未来のおしりのために、協力します。"
+        telops:
+          - {text: "日本の未来のおしりのために", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: zundamon
         emotion: happy
         text: "恩に着るのだ。君の勇気は、歴史に残るのだ。"
@@ -454,6 +462,8 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "43度、38度、36度。黄金比率、ここに確定なのだ。"
+        telops:
+          - {text: "黄金比率 43・38・36", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: happy
         text: "全部、300人の体が教えてくれた数字ですね。"
@@ -666,6 +676,8 @@ scenes:
         text: "おしりだって、洗ってほしい。"
         reading: "おしりだって、あらってほしい。"
         pause_after: 0.6
+        telops:
+          - {text: "おしりだって、洗ってほしい。", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: surprised
         text: "リーダー、うちのCM、お茶の間に流れてますよ！ゴールデンに！"
@@ -702,6 +714,8 @@ scenes:
       - speaker: reimu
         text: "CM後の売り上げは目標の160％。シェアは58％に達しました。"
         reading: "しーえむごのうりあげわもくひょうのひゃくろくじゅっぱーせんと。しぇあわごじゅうはっぱーせんとにたっしました。"
+        telops:
+          - {text: "売上160％・シェア58％", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: normal
         text: "300人のデータは、ちゃんと世の中に届いたのだ。"
@@ -752,6 +766,8 @@ scenes:
       - speaker: reimu
         text: "社内の勇気ある協力者たちの数字は、いまも現役です。"
         reading: "しゃないのゆうきあるきょうりょくしゃたちのすうじわ、いまもげんえきです。"
+        telops:
+          - {text: "300人の数字は、いまも現役", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
   - id: jitsuyou
     title: "ちょっとした、使いこなし"
     background: il_wl_toilet

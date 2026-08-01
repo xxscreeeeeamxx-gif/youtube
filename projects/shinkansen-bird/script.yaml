@@ -59,6 +59,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "半分正解。本当の敵は、トンネルの出口で鳴る「ドン！」。"
+        telops:
+          - {text: "本当の敵は、出口のドン", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "ドン？新幹線が、太鼓でも積んでるのか？"
@@ -191,6 +193,8 @@ scenes:
       - speaker: reimu
         text: "トンネル微気圧波。出口で低い音が響く現象でした。"
         reading: "とんねるびきあつは。でぐちでひくいおとがひびくげんしょうでした。"
+        telops:
+          - {text: "正体は、トンネル微気圧波", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: zundamon
         emotion: thinking
         text: "これで300キロに上げたら、音はもっとひどくなるのだ。"
@@ -297,6 +301,8 @@ scenes:
       - speaker: tsumugi
         emotion: thinking
         text: "列車が、ぎゅっと縮むような気がするんです。"
+        telops:
+          - {text: "列車が、縮む気がする", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "……縮む。"
@@ -375,6 +381,8 @@ scenes:
         emotion: happy
         text: "それなのだ！それを見せたかったのだ！"
         se: don
+        telops:
+          - {text: "水しぶきが、立たない", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: thinking
         text: "たしかに……もっと、バシャッてなるはずじゃ。"
@@ -511,6 +519,8 @@ scenes:
       - speaker: tsumugi
         emotion: surprised
         text: "ほぼ一致です。データが、鳥に答え合わせされました。"
+        telops:
+          - {text: "理想形は、カワセミだった", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: happy
         text: "何億年の進化は、伊達じゃない。自然、恐るべしなのだ。"
@@ -678,6 +688,8 @@ scenes:
       - speaker: tsumugi
         emotion: happy
         text: "仲津さん、出ました。翼の形のパンタグラフ、基準クリアです！"
+        telops:
+          - {text: "4年ごしの、基準クリア", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: happy
         text: "4年ごしの実績解除なのだ！フクロウ先生に、感謝なのだ。"
@@ -849,6 +861,8 @@ scenes:
       - speaker: tsumugi
         emotion: surprised
         text: "速くなったのに、電気は減る。バグみたいな数字ですね。"
+        telops:
+          - {text: "速度1割増、電力15％減", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: normal
         text: "バグじゃない。鳥のスペックが、それだけ壊れてるのだ。"
@@ -966,6 +980,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "みんな、ボクたちの輝ける、永遠の教師なのだ。"
+        telops:
+          - {text: "皆、輝ける永遠の教師", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: up}
       - speaker: tsumugi
         emotion: normal
         text: "……木も草も、鳥も魚も、全部が先生。"

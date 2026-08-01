@@ -103,6 +103,8 @@ scenes:
         emotion: surprised
         se: don
         text: "世界中で使われて0円！？計算が合わないのだ！"
+        telops:
+          - {text: "世界中で使われて、0円", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: happy
         text: "しかも本人は、後悔してないって笑ってるんだよね。"
@@ -306,6 +308,8 @@ scenes:
         emotion: surprised
         se: don
         text: "伴奏の機械を置けば、どの店でも歌える！これは、いけるのだ！"
+        telops:
+          - {text: "どの店でも、歌える", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: reimu
         reading: "ばんそうを きかいに やらせる。よの なかを かえる おもいつきわ、じょうれんの たのみごとから うまれました。"
         text: "伴奏を機械にやらせる。世の中を変える思いつきは、常連の頼みごとから生まれました。"
@@ -385,6 +389,8 @@ scenes:
       - speaker: reimu
         reading: "かんせいした きかいわその なも エイトジューク。てづくりでじゅういちだい。"
         text: "完成した機械は、その名も8JUKE。手作りで、11台。"
+        telops:
+          - {text: "手作りの8JUKE、11台", size: lg, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
       - speaker: zundamon
         emotion: happy
         text: "100円で5分。歌い放題とはいかないが、1曲歌うには十分だ。"
@@ -453,6 +459,8 @@ scenes:
         emotion: surprised
         se: don
         text: "ちょっと、100円玉が箱に入りきらないんだけど！？"
+        telops:
+          - {text: "100円玉が入りきらない", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "回収が追いつかない！うれしい悲鳴というやつなのだ！"
@@ -655,6 +663,8 @@ scenes:
       - speaker: nakama
         emotion: surprised
         text: "学習してる！カラオケで取らなかった男が、ゴキブリで取った！"
+        telops:
+          - {text: "ゴキブリでは特許を取った", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: reimu
         reading: "カラオケでわ とらずくじょざいでわ つかう。ほんにんも わらいばなしに する エピソードです。"
         text: "カラオケでは取らず、駆除剤では使う。本人も笑い話にするエピソードです。"
@@ -691,6 +701,8 @@ scenes:
       - speaker: reimu
         reading: "きじわ こう つづります。かれわ アジアの よるを かえたと。"
         text: "記事はこうつづります。彼はアジアの夜を変えた、と。"
+        telops:
+          - {text: "アジアの夜を変えた", size: lg, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
       - speaker: nakama
         emotion: happy
         text: "夜の過ごし方を変えた男、って評価らしいぜ。"
@@ -787,6 +799,8 @@ scenes:
       - speaker: reimu
         reading: "カラオケわ そのままローマじの カラオケとして、せかいの ことばに なりました。"
         text: "カラオケはそのままKARAOKEとして、世界の言葉になりました。"
+        telops:
+          - {text: "KARAOKEは、世界の言葉", size: lg, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
       - speaker: tsumugi
         emotion: normal
         text: "というわけ。あなたが3時間歌ってた機械の、始まりの話。"
