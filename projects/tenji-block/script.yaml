@@ -46,6 +46,8 @@ scenes:
       - speaker: zundamon
         emotion: surprised
         text: "足の裏で、読む！？"
+        telops:
+          - {text: "足の裏で、読む道", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: normal
         text: "突起の形で、止まれと進めを伝えてるの。"
@@ -284,6 +286,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "人は、まわりの情報の8割を、目から得ていると言われるのだ。"
+        telops:
+          - {text: "情報の8割は、目から", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: surprised
         text: "8割……その8割が、まるごと無い状態で外を歩くのか。"
@@ -356,6 +360,8 @@ scenes:
         emotion: happy
         text: "それなのだ！地面の感触を、合図にするのだ！"
         se: don
+        telops:
+          - {text: "地面の感触を、合図に！", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: iwahashi
         text: "感触を、合図に？"
       - speaker: zundamon
@@ -530,6 +536,8 @@ scenes:
       - speaker: reimu
         text: "世界で初めての点字ブロックが、岡山の交差点に生まれました。"
         reading: "せかいではじめてのてんじぶろっくが、おかやまのこうさてんにうまれました。"
+        telops:
+          - {text: "世界初は、岡山の交差点", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
   - id: fugu
     title: "売れない黄色"
     background: il_tb_yakusho
@@ -633,6 +641,8 @@ scenes:
       - speaker: reimu
         text: "精一は私財を注ぎ続け、資金は何度も底をつきかけました。"
         reading: "せいいちわしざいをそそぎつづけ、しきんわなんどもそこをつきかけました。"
+        telops:
+          - {text: "私財を注ぎ、資金は底へ", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
   - id: sekai_shokai
     title: ""
     background: il_tb_niwa
@@ -696,6 +706,8 @@ scenes:
       - speaker: tsumugi
         emotion: happy
         text: "1万枚。"
+        telops:
+          - {text: "その数、1万枚！", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "い、1万！？岡山の最初は、230枚だったのだ。"
@@ -796,6 +808,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "毎日、何百万人もの足元を、静かに守ってるのだ。"
+        telops:
+          - {text: "毎日、何百万人の足元を守る", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
       - speaker: tsumugi
         emotion: normal
         text: "目の見える人の転落も、あの点が減らしてるんだよな。"
@@ -959,6 +973,8 @@ scenes:
       - speaker: reimu
         text: "点字ブロックは今、およそ75の国で使われています。"
         reading: "てんじぶろっくわいま、およそななじゅうごのくにでつかわれています。"
+        telops:
+          - {text: "世界およそ75カ国へ", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: normal
         text: "ロンドンでも、ニューヨークでも、あの黄色が道を教えてるのだ。"

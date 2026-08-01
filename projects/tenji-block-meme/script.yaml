@@ -45,6 +45,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "目の不自由な人が、足の裏で読む道。点字ブロックだよ。"
+        telops:
+          - {text: "足の裏で、読む道", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "足の裏で、読む！？ファッ！？"
@@ -358,6 +360,8 @@ scenes:
         emotion: happy
         text: "それなのだ！地面の感触を、合図にするのだ！"
         se: don
+        telops:
+          - {text: "地面の感触を、合図に！", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: iwahashi
         text: "感触を、合図に？"
       - speaker: zundamon
@@ -409,6 +413,8 @@ scenes:
       - speaker: tsumugi
         emotion: happy
         text: "5ミリ前後。このあたりが、ちょうどいいな。"
+        telops:
+          - {text: "答えは、高さ5ミリ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: happy
         text: "つまずかない。でも足の裏には届く。神調整なんだ。"
@@ -635,6 +641,8 @@ scenes:
       - speaker: reimu
         text: "精一は私財を注ぎ続け、資金は何度も底をつきかけました。"
         reading: "せいいちわしざいをそそぎつづけ、しきんわなんどもそこをつきかけました。"
+        telops:
+          - {text: "私財は、何度も底をつきかけた", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
   - id: sekai_shokai
     title: ""
     background: il_tb_niwa
@@ -701,6 +709,8 @@ scenes:
       - speaker: zundamon
         emotion: surprised
         text: "い、1万！？最初は230枚だったのに、桁がバグってるのだ。"
+        telops:
+          - {text: "230枚が、1万枚に", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: happy
         text: "40倍以上だ。倉庫の山が、ぜんぶ道になる。"
@@ -798,6 +808,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "毎日、何百万人もの足元を、静かに守ってるんだ。"
+        telops:
+          - {text: "毎日、何百万人の足元を守る", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
       - speaker: tsumugi
         emotion: normal
         text: "目の見える人の転落も、あの点が減らしてるんだよな。"
@@ -902,6 +914,8 @@ scenes:
       - speaker: reimu
         text: "2001年。突起の形と配列が、国の規格として統一されました。"
         reading: "にせんいちねん。とっきのかたちとはいれつが、くにのきかくとしてとういつされました。"
+        telops:
+          - {text: "どの町でも、同じ形に", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
       - speaker: tsumugi
         emotion: happy
         text: "……兄さん。やっと、仕上げができたよ。"
@@ -958,6 +972,8 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "岡山生まれの形が、世界標準になった。覇権なのだ。"
+        telops:
+          - {text: "岡山の形が、世界標準に", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: reimu
         text: "点字ブロックは今、およそ75の国で使われています。"
         reading: "てんじぶろっくわいま、およそななじゅうごのくにでつかわれています。"

@@ -48,6 +48,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "そう。ゲームボーイ。シリーズ累計、約1億1900万台。"
+        telops:
+          - {text: "累計、約1億1900万台", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "1億！？レトロ機のくせに、販売数が壊れてるんだが。"
@@ -213,6 +215,8 @@ scenes:
         text: "[は|ハ]、はい。取り合いに、なってました……。"
       - speaker: yamauchi
         text: "それを、商品にしろ。"
+        telops:
+          - {text: "それを、商品にしろ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "…………は？"
@@ -255,6 +259,8 @@ scenes:
       - speaker: reimu
         text: "ウルトラハンドは、120万個を売ったと言われる大ヒットになりました。"
         reading: "うるとらはんどわ、ひゃくにじゅうまんこをうったといわれるだいひっとになりました。"
+        telops:
+          - {text: "120万個の大ヒット", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: happy
         text: "暇つぶしの工作が、120万個……バグみたいな数字なのだ。"
@@ -382,6 +388,8 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "枯れた技術の水平思考。これが、ボクの必勝法なのだ。"
+        telops:
+          - {text: "枯れた技術の水平思考", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: reimu
         text: "安くて確実な技術に、新しい遊びをさせる。横井の哲学でした。"
         reading: "やすくてかくじつなぎじゅつに、あたらしいあそびをさせる。よこいのてつがくでした。"
@@ -434,6 +442,8 @@ scenes:
         emotion: surprised
         text: "（電卓の部品で、ゲーム機が作れるのだ！）"
         se: don
+        telops:
+          - {text: "電卓が、ゲーム機になる", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: thinking
         text: "（よく見れば、あちこちの席で、大人が[暇|ひま]を持て余してるのだ。）"
@@ -514,6 +524,8 @@ scenes:
       - speaker: reimu
         text: "ゲーム&ウォッチは、世界で4340万個を売ったと言われています。"
         reading: "げーむあんどうぉっちわ、せかいでよんせんさんびゃくよんじゅうまんこをうったといわれています。"
+        telops:
+          - {text: "世界で4340万個", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
   - id: juji
     title: "十字キー、爆誕"
     background: il_yg_kaihatsu
@@ -662,6 +674,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "白黒なら、単3電池4本で、35時間くらい遊べる設計にできるのだ。"
+        telops:
+          - {text: "単3電池4本で、35時間", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: surprised
         text: "毎日1時間で、ひと月。桁がひとつ違う。"
@@ -812,6 +826,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "白黒の箱が、1億台。枯れた技術の、完全勝利なのだ。"
+        telops:
+          - {text: "枯れた技術の、完全勝利", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
   - id: vb
     title: "挑戦と、失敗"
     background: il_yg_kaihatsu

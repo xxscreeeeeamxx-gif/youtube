@@ -63,6 +63,8 @@ scenes:
       - speaker: zundamon
         emotion: surprised
         text: "基本の味、5人パーティーだったのか？"
+        telops:
+          - {text: "味の基本は、5つ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: normal
         text: "5人目のうま味だけ、見つかったのが100年ちょっと前なの。"
@@ -263,6 +265,8 @@ scenes:
         emotion: surprised
         text: "[貞|てい]。この味は、4つの基本味の、どれでもないのだ。"
         se: don
+        telops:
+          - {text: "どの基本味でも、ない", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsuma
         text: "でも、たしかに、おいしい味ですよねえ。"
       - speaker: zundamon
@@ -396,6 +400,8 @@ scenes:
       - speaker: zundamon
         emotion: thinking
         text: "12キロの昆布から、たった30グラム。……なめてみるのだ。"
+        telops:
+          - {text: "12キロから、30グラム", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "…………これだ！湯豆腐の、あの味なのだ！"
@@ -434,6 +440,8 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "うま味、なのだ。"
+        telops:
+          - {text: "その名は、うま味", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: thinking
         text: "そのまますぎませんか。もっと学術っぽく、しなくても？"
@@ -529,6 +537,8 @@ scenes:
       - speaker: reimu
         text: "学者の発明に、商人が人生を賭けました。"
         reading: "がくしゃのはつめいに、しょうにんがじんせいをかけました。"
+        telops:
+          - {text: "商人が、人生を賭けた", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
   - id: seizo
     title: "量産という、壁"
     background: il_aj_kojo
@@ -632,6 +642,8 @@ scenes:
       - speaker: reimu
         text: "画期的すぎた白い粉は、まったく売れませんでした。"
         reading: "かっきてきすぎたしろいこなわ、まったくうれませんでした。"
+        telops:
+          - {text: "まったく、売れなかった", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: sad
         text: "しまいには、変なうわさまで流れる始末です。"
@@ -740,6 +752,8 @@ scenes:
       - speaker: zundamon
         emotion: surprised
         text: "舌に、グルタミン酸専用の受容体が見つかったのだ！"
+        telops:
+          - {text: "舌に、専用の受容体があった", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: happy
         text: "うま味センサーが、体の側に実装されてた証拠だ！"
@@ -775,6 +789,8 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "はっきり言うとね、その説を支える科学的な根拠は、無いの。"
+        telops:
+          - {text: "体に悪い説、根拠なし", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "えっ。あんなに広まってる話なのに？"
