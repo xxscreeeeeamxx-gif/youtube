@@ -175,6 +175,9 @@ def bust(who="zundamon", emotion="surprised", height=560, crop=0.52):
 def prop_layer(draw_fn, size=620, tilt=-12):
     img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     draw_fn(ImageDraw.Draw(img), size)
+    bb = img.getbbox()          # 描いた範囲だけに切り詰める（余白で小さく見えるのを防ぐ）
+    if bb:
+        img = img.crop(bb)
     if tilt:
         img = img.rotate(tilt, expand=True, resample=Image.BICUBIC)
     # 白フチ+影で切り抜き感
@@ -199,6 +202,22 @@ def p_mic(d, s):
     d.polygon([(s*0.42, s*0.46), (s*0.58, s*0.46), (s*0.55, s*0.96), (s*0.45, s*0.96)],
               fill=(60, 64, 80), outline=(30, 32, 44))
     d.rectangle([s*0.44, s*0.60, s*0.56, s*0.66], fill=(230, 180, 60))
+
+
+def p_jukebox(d, s):
+    """手作りの8JUKE（箱型のカラオケ機）。"""
+    d.rounded_rectangle([s*0.14, s*0.10, s*0.86, s*0.90], radius=18,
+                        fill=(58, 62, 78), outline=(150, 156, 172), width=10)
+    d.rounded_rectangle([s*0.22, s*0.18, s*0.78, s*0.40], radius=8, fill=(24, 26, 34))
+    for k in range(3):
+        d.line([(s*0.27, s*0.24 + k*s*0.06), (s*0.73, s*0.24 + k*s*0.06)],
+               fill=(90, 200, 150), width=6)
+    d.ellipse([s*0.22, s*0.50, s*0.38, s*0.66], fill=(230, 180, 60), outline=(150, 110, 20), width=5)
+    d.ellipse([s*0.44, s*0.50, s*0.56, s*0.62], fill=(200, 80, 70), outline=(120, 40, 34), width=5)
+    d.rounded_rectangle([s*0.62, s*0.48, s*0.80, s*0.68], radius=6, fill=(36, 38, 48),
+                        outline=(150, 156, 172), width=5)
+    d.rectangle([s*0.24, s*0.74, s*0.76, s*0.82], fill=(30, 32, 40))
+    d.rectangle([s*0.40, s*0.72, s*0.60, s*0.76], fill=(230, 180, 60))
 
 
 def p_block(d, s):
@@ -307,130 +326,378 @@ def p_signal(d, s, active="green"):
 
 
 # ---------------------------------------------------------------- レイアウト
+#
+# 調査した定石（stock-sun / LEL-japan 他）を反映:
+#  - 文字は全体で20字以内。1行5〜7字、最大2行
+#  - 色は3色以内。背景と文字のコントラストを強く取る
+#  - ジャンプ率（小フックと大コピーの大小差）を3倍以上つける
+#  - 右下25%は再生時間バッジが乗るので文字を置かない
+#  - 装飾しすぎない（スマホで潰れる）。縁取りは太い一本+影
+#  - タイトルと同じ文言を繰り返さない（一覧で情報が重複して弱くなる）
+
+BADGE_W, BADGE_H = 330, 150   # 右下の再生時間バッジ回避域
+
+
+def hook_label(canvas, xy, text, size=54, fill=(255, 255, 255, 255),
+               bg=(16, 18, 26, 235), kind="w9"):
+    """小フック: 帯の中に置いて背景から確実に浮かせる。"""
+    f = font(kind, size)
+    tw = int(f.getlength(text))
+    pad_x, pad_y = 26, 16
+    box = Image.new("RGBA", (tw + pad_x * 2, size + pad_y * 2), (0, 0, 0, 0))
+    d = ImageDraw.Draw(box)
+    d.rounded_rectangle([0, 0, box.width - 1, box.height - 1], radius=14, fill=bg)
+    d.text((pad_x, pad_y - 4), text, font=f, fill=fill)
+    sh = Image.new("RGBA", box.size, (0, 0, 0, 0))
+    sh.paste(Image.new("RGBA", box.size, (0, 0, 0, 150)), (0, 0), box.split()[3])
+    canvas.alpha_composite(sh.filter(ImageFilter.GaussianBlur(7)), (xy[0] + 5, xy[1] + 9))
+    canvas.alpha_composite(box, xy)
+    return box.width, box.height
+
+
+def punch_text(canvas, xy, text, size, fill, edge, kind="w9", rotate=-2):
+    """大コピー: 太い一本縁+影のみ（二重縁はスマホで潰れる）。"""
+    big_text(canvas, xy, text, size, fill, edge, edge,
+             rotate=rotate, ew1=max(8, size // 12), ew2=max(8, size // 12), kind=kind)
+
 
 def layout_hero(spec):
     c1, c2 = spec.get("bg", ((52, 20, 86), (78, 32, 120)))
     img = rays((W, H), c1, c2)
     pr = prop_layer(spec["prop"], tilt=spec.get("tilt", -12))
-    scale = spec.get("prop_h", 500) / pr.height
-    pr = pr.resize((int(pr.width*scale), int(pr.height*scale)), Image.LANCZOS)
-    img.alpha_composite(pr, (int(W*0.30) - pr.width//2, int(H*0.46) - pr.height//2))
+    scale = spec.get("prop_h", 520) / pr.height
+    pr = pr.resize((int(pr.width * scale), int(pr.height * scale)), Image.LANCZOS)
+    img.alpha_composite(pr, (int(W * 0.40) - pr.width // 2, int(H * 0.42) - pr.height // 2))
     b = bust("zundamon", spec.get("emotion", "surprised"), 470)
     img.alpha_composite(b, (W - b.width + 40, H - b.height + 70))
-    big_text(img, (30, 30), spec["top"], spec.get("top_size", 76),
-             (255, 255, 255, 255), (20, 20, 30, 255), (20, 20, 30, 255),
-             rotate=1, kind=spec.get("top_font", "w9"))
-    bf = spec.get("bottom_font", "genkai")
-    if not has_glyphs(bf, spec["bottom"]):
-        bf = "w9"
-    big_text(img, (24, H - spec.get("bottom_size", 132) - 105), spec["bottom"],
-             spec.get("bottom_size", 132), spec.get("bottom_fill", (255, 225, 40, 255)),
-             spec.get("bottom_edge", (150, 30, 20, 255)), (25, 8, 8, 255),
-             rotate=-2, kind=bf)
+    hook_label(img, (34, 34), spec["hook"], spec.get("hook_size", 54))
+    size = spec.get("punch_size", 176)
+    punch_text(img, (24, H - size - 128), spec["punch"], size,
+               spec.get("punch_fill", (255, 226, 40, 255)),
+               spec.get("punch_edge", (22, 12, 6, 255)),
+               kind=spec.get("punch_font", "w9"))
     return vignette(img, 100)
 
 
 def layout_split(spec):
-    """左右分割のビフォー/アフター。"""
+    """左右分割のビフォー/アフター。左=問題、右=答え。"""
     img = Image.new("RGBA", (W, H))
     lc = spec.get("left_bg", (34, 38, 56))
-    rc1, rc2 = spec.get("right_bg", ((250, 205, 50), (255, 226, 110)))
+    rc1, rc2 = spec.get("right_bg", ((24, 72, 52), (30, 92, 66)))
     img.paste(Image.new("RGBA", (W, H), (*lc, 255)), (0, 0))
     right = rays((W, H), rc1, rc2, n=24, center=(0.75, 0.4))
     mask = Image.new("L", (W, H), 0)
-    ImageDraw.Draw(mask).polygon([(W*0.54, 0), (W, 0), (W, H), (W*0.44, H)], fill=255)
+    ImageDraw.Draw(mask).polygon([(W * 0.54, 0), (W, 0), (W, H), (W * 0.44, H)], fill=255)
     img.paste(right, (0, 0), mask)
-    d = ImageDraw.Draw(img)
-    d.line([(W*0.54, 0), (W*0.44, H)], fill=(255, 255, 255), width=12)
-    # 左右の小物
-    for side, key, cx in [("l", "prop_l", 0.24), ("r", "prop_r", 0.72)]:
+    ImageDraw.Draw(img).line([(W * 0.54, 0), (W * 0.44, H)], fill=(255, 255, 255), width=12)
+    for key, cx in [("prop_l", 0.25), ("prop_r", 0.74)]:
         fn = spec.get(key)
         if not fn:
             continue
-        pr = prop_layer(fn, tilt=-8 if side == "l" else 8)
-        scale = spec.get("prop_h", 330) / pr.height
-        pr = pr.resize((int(pr.width*scale), int(pr.height*scale)), Image.LANCZOS)
-        img.alpha_composite(pr, (int(W*cx) - pr.width//2, int(H*0.44) - pr.height//2))
-    b = bust("zundamon", spec.get("emotion", "surprised"), 400)
-    img.alpha_composite(b, (W - b.width + 30, H - b.height + 60))
-    # 文字: 左上(ビフォー)・左下 / 右下(アフター)
-    big_text(img, (26, 26), spec["left_top"], 62, (230, 234, 244, 255),
-             (16, 18, 26, 255), (16, 18, 26, 255))
-    lf = spec.get("left_font", "genkai")
-    if not has_glyphs(lf, spec["left_big"]):
-        lf = "w9"
-    big_text(img, (20, H - 210), spec["left_big"], 104,
-             spec.get("left_fill", (255, 90, 80, 255)),
-             spec.get("left_edge", (255, 255, 255, 255)),
-             (20, 8, 8, 255), rotate=-2, kind=lf)
-    rf = spec.get("right_font", "851")
-    if not has_glyphs(rf, spec["right_big"]):
-        rf = "w9"
-    big_text(img, (int(W*0.52), 40), spec["right_big"], 88,
-             spec.get("right_fill", (40, 44, 60, 255)),
-             spec.get("right_edge", (18, 22, 32, 255)),
-             (255, 255, 255, 255), rotate=2, kind=rf)
+        pr = prop_layer(fn, tilt=-8 if key == "prop_l" else 8)
+        scale = spec.get("prop_h", 300) / pr.height
+        pr = pr.resize((int(pr.width * scale), int(pr.height * scale)), Image.LANCZOS)
+        img.alpha_composite(pr, (int(W * cx) - pr.width // 2, int(H * 0.34) - pr.height // 2))
+    b = bust("zundamon", spec.get("emotion", "surprised"), 320)
+    img.alpha_composite(b, (W - b.width + 56, H - b.height + 26))
+    hook_label(img, (30, 30), spec["hook"], spec.get("hook_size", 48))
+    ls = spec.get("punch_size", 128)
+    punch_text(img, (26, H - ls - 92), spec["left_big"], ls,
+               spec.get("left_fill", (255, 96, 86, 255)), (255, 255, 255, 255),
+               kind=spec.get("left_font", "w9"), rotate=-2)
+    punch_text(img, (int(W * 0.55), H - ls - 150), spec["right_big"], ls,
+               spec.get("right_fill", (255, 255, 255, 255)), (16, 30, 22, 255),
+               kind=spec.get("right_font", "w9"), rotate=2)
     return vignette(img, 80)
+
+
+def layout_band(spec):
+    """黄色ベタ帯型。実際の人気ゆっくり解説サムネで最も多い構図:
+    上=絵、下=黄色帯の中に「状況（黒）＋オチ（赤）」の2行。
+    文字が背景から完全に分離するので一覧でも確実に読める。
+    """
+    c1, c2 = spec.get("bg", ((30, 34, 48), (44, 50, 70)))
+    img = rays((W, H), c1, c2, n=22, center=(0.5, 0.34))
+    pr = prop_layer(spec["prop"], tilt=spec.get("tilt", -10))
+    scale = spec.get("prop_h", 380) / pr.height
+    pr = pr.resize((int(pr.width * scale), int(pr.height * scale)), Image.LANCZOS)
+    img.alpha_composite(pr, (int(W * 0.32) - pr.width // 2, int(H * 0.30) - pr.height // 2))
+    b = bust("zundamon", spec.get("emotion", "surprised"), 400)
+    img.alpha_composite(b, (W - b.width + 44, 20))
+    # 下部の黄色帯（画面の約4割）
+    band_y = int(H * 0.55)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, band_y, W, H], fill=(252, 216, 40, 255))
+    d.rectangle([0, band_y, W, band_y + 10], fill=(196, 150, 12, 255))
+    # 1行目（状況・黒）
+    f1 = font(spec.get("line1_font", "w9"), spec.get("line1_size", 84))
+    t1 = spec["line1"]
+    x1 = max(24, (W - int(f1.getlength(t1))) // 2)
+    d.text((x1, band_y + 26), t1, font=f1, fill=(26, 26, 30))
+    # 2行目（オチ・赤。末尾の…で引きを作る）
+    size2 = spec.get("line2_size", 112)
+    kind2 = spec.get("line2_font", "851")
+    if not has_glyphs(kind2, spec["line2"]):
+        kind2 = "w9"
+    f2 = font(kind2, size2)
+    t2 = spec["line2"]
+    x2 = max(20, (W - int(f2.getlength(t2))) // 2)
+    y2 = band_y + 26 + spec.get("line1_size", 84) + 18
+    layer = Image.new("RGBA", (W, size2 + 80), (0, 0, 0, 0))
+    ld = ImageDraw.Draw(layer)
+    ld.text((x2, 10), t2, font=f2, fill=(214, 32, 28),
+            stroke_width=max(6, size2 // 16), stroke_fill=(255, 255, 255))
+    img.alpha_composite(layer, (0, y2))
+    return vignette(img, 60)
+
+
+def _yellow_tag(canvas, xy, text, size=30, w=None):
+    """小さな黄色ラベル（年号・状況の説明）。"""
+    f = font("w9", size)
+    tw = w or int(f.getlength(text)) + 24
+    box = Image.new("RGBA", (tw, size + 18), (250, 214, 32, 255))
+    d = ImageDraw.Draw(box)
+    d.text((12, 6), text, font=f, fill=(24, 24, 28))
+    canvas.alpha_composite(box, xy)
+    return box.size
+
+
+def _arrow(canvas, cx, cy, w=150, h=110, col=(255, 138, 24)):
+    """中央のオレンジ矢印（左→右の流れ）。白フチ付き。"""
+    lay = Image.new("RGBA", (w + 40, h + 40), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    x0, y0 = 20, 20
+    pts = [(x0, y0 + h * 0.28), (x0 + w * 0.55, y0 + h * 0.28),
+           (x0 + w * 0.55, y0), (x0 + w, y0 + h * 0.5),
+           (x0 + w * 0.55, y0 + h), (x0 + w * 0.55, y0 + h * 0.72),
+           (x0, y0 + h * 0.72)]
+    d.polygon(pts, fill=col)
+    lay = outline_sprite(lay, 7)
+    canvas.alpha_composite(lay, (int(cx - lay.width / 2), int(cy - lay.height / 2)))
+
+
+def _speech(canvas, xy, text, size=44):
+    """白い吹き出し（下部のツッコミ）。"""
+    f = font("w9", size)
+    tw = int(f.getlength(text))
+    bw, bh = tw + 64, size + 44
+    lay = Image.new("RGBA", (bw, bh + 22), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.rounded_rectangle([0, 0, bw - 1, bh - 1], radius=bh // 2,
+                        fill=(255, 255, 255), outline=(20, 20, 26), width=6)
+    d.polygon([(bw * 0.36, bh - 4), (bw * 0.5, bh + 20), (bw * 0.52, bh - 4)],
+              fill=(255, 255, 255), outline=(20, 20, 26))
+    d.text((32, 18), text, font=f, fill=(200, 26, 26))
+    canvas.alpha_composite(lay, xy)
+
+
+def layout_beforeafter(spec):
+    """ビフォー→アフター型（実物のゆっくり解説サムネで最も情報量が多い構図）。
+
+    上部に見出し2色、左右パネルに黄色ラベル+絵、中央にオレンジ矢印、
+    下部に吹き出しのツッコミ。余白を作らず画面を埋める。
+    """
+    img = Image.new("RGBA", (W, H), (18, 18, 24, 255))
+    lc = spec.get("left_bg", ((26, 30, 44), (38, 44, 62)))
+    rc = spec.get("right_bg", ((58, 22, 92), (84, 34, 126)))
+    top = 118                      # 見出し帯の高さ
+    left = rays((W, H), *lc, n=20, center=(0.25, 0.5))
+    right = rays((W, H), *rc, n=20, center=(0.75, 0.5))
+    img.paste(left.crop((0, 0, W // 2, H)), (0, 0))
+    img.paste(right.crop((W // 2, 0, W, H)), (W // 2, 0))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, top], fill=(16, 16, 22, 255))
+    d.line([(W // 2, top), (W // 2, H)], fill=(255, 255, 255), width=10)
+
+    # 上部見出し（左=白 / 右=黄。合わせて一文になる）
+    f = font("w9", spec.get("head_size", 78))
+    t1, t2 = spec["head_l"], spec["head_r"]
+    w1, w2 = int(f.getlength(t1)), int(f.getlength(t2))
+    gap = 22
+    x = max(12, (W - (w1 + w2 + gap)) // 2)
+    y = (top - spec.get("head_size", 78)) // 2 - 6
+    for t, col, xx in [(t1, (255, 255, 255), x), (t2, (255, 222, 40), x + w1 + gap)]:
+        d.text((xx, y), t, font=f, fill=col, stroke_width=8, stroke_fill=(12, 12, 18))
+
+    # 左右パネルの黄色ラベル
+    _yellow_tag(img, (16, top + 14), spec["tag_l"], 30)
+    _yellow_tag(img, (W // 2 + 16, top + 14), spec["tag_r"], 30)
+
+    # 左右の絵
+    for key, cx in [("prop_l", 0.26), ("prop_r", 0.76)]:
+        fn = spec.get(key)
+        if not fn:
+            continue
+        pr = prop_layer(fn, tilt=-8 if key == "prop_l" else 8)
+        sc = spec.get("prop_h", 300) / pr.height
+        pr = pr.resize((int(pr.width * sc), int(pr.height * sc)), Image.LANCZOS)
+        img.alpha_composite(pr, (int(W * cx) - pr.width // 2, top + 96))
+
+    # キャラ（各パネル手前・小さめ）
+    bl = bust("zundamon", spec.get("emo_l", "sad"), 320)
+    img.alpha_composite(bl, (-16, H - bl.height + 22))
+    br = bust("tsumugi", spec.get("emo_r", "happy"), 320)
+    img.alpha_composite(br, (W - br.width + 16, H - br.height + 22))
+
+    _arrow(img, W // 2, top + 210)
+    f2 = font("w9", spec.get("speech_size", 50))
+    sw = int(f2.getlength(spec["speech"])) + 64
+    _speech(img, ((W - sw) // 2, H - 128), spec["speech"], spec.get("speech_size", 50))
+    return vignette(img, 60)
+
+
+def _dots(size, base, dot, r=9, step=46):
+    """ポップなドット背景。"""
+    img = Image.new("RGBA", size, (*base, 255))
+    d = ImageDraw.Draw(img)
+    for y in range(0, size[1] + step, step):
+        off = (y // step % 2) * (step // 2)
+        for x in range(-step, size[0] + step, step):
+            d.ellipse([x + off - r, y - r, x + off + r, y + r], fill=(*dot, 255))
+    return img
+
+
+def text_block(canvas, xy, lines, align="left"):
+    """見出しを帯付きの塊として置く（プロのサムネの定番）。
+
+    lines: [(文字列, サイズ, 文字色, 帯色 or None)]
+    帯を敷くことで背景から完全に分離し、行間の余白も埋まる。
+    フォントは原則 w9 一種に統一し、差は「大きさ・色・帯」でつける。
+    """
+    x, y = xy
+    out_w = 0
+    for text, size, fill, band in lines:
+        f = font("w9", size)
+        tw = int(f.getlength(text))
+        pad_x, pad_y = int(size * 0.22), int(size * 0.16)
+        bw, bh = tw + pad_x * 2, size + pad_y * 2
+        lay = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        if band:
+            d.rounded_rectangle([0, 0, bw - 1, bh - 1], radius=int(size * 0.12), fill=band)
+            d.text((pad_x, pad_y - int(size * 0.06)), text, font=f, fill=fill)
+        else:
+            d.text((pad_x, pad_y - int(size * 0.06)), text, font=f, fill=fill,
+                   stroke_width=max(6, size // 11), stroke_fill=(16, 14, 22))
+        sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+        sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 170)), (0, 0), lay.split()[3])
+        canvas.alpha_composite(sh.filter(ImageFilter.GaussianBlur(8)), (x + 7, y + 11))
+        canvas.alpha_composite(lay, (x, y))
+        y += bh - int(size * 0.06)
+        out_w = max(out_w, bw)
+    return out_w, y - xy[1]
+
+
+def stripes(size, base, line, w=26, gap=44):
+    """斜めストライプの下地（無地の余白を消す）。"""
+    img = Image.new("RGBA", size, (*base, 255))
+    d = ImageDraw.Draw(img)
+    for x in range(-size[1], size[0] + size[1], gap):
+        d.polygon([(x, size[1]), (x + w, size[1]), (x + w + size[1], 0), (x + size[1], 0)],
+                  fill=(*line, 255))
+    return img
+
+
+def layout_charbig(spec):
+    """キャラ大型。右にキャラを大きく、左に帯付きの見出しの塊。
+
+    ギャラリーで見た「キャラが画面の半分近くを占める」構図。
+    表情で感情を伝えられるので、驚き・落胆が主題の回に向く。
+    """
+    base = spec.get("bg", ((52, 22, 84), (62, 28, 98)))
+    img = stripes((W, H), base[0], base[1])
+    img.alpha_composite(_dots((W, H), (0, 0, 0), base[1], r=5, step=54).point(
+        lambda v: v) if False else Image.new("RGBA", (W, H), (0, 0, 0, 0)))
+    # キャラ（顔が大きく見えるようバストで切って画面いっぱい）
+    sp = Image.open(sprite_path(cfg, spec.get("who", "zundamon"),
+                                spec.get("emotion", "surprised"))).convert("RGBA")
+    b = sp.crop((0, 0, sp.width, int(sp.height * 0.62)))
+    sc = int(H * 1.02) / b.height
+    b = outline_sprite(b.resize((int(b.width * sc), int(b.height * sc)), Image.LANCZOS), 14)
+    img.alpha_composite(b, (W - b.width + 74, H - b.height + 20))
+    # 左の見出し（帯付きの塊。余白を残さない）
+    bw, bh = text_block(img, (26, spec.get("text_top", 26)), spec["lines"])
+    # 小物は見出しのすぐ下に大きく置いて左側を埋める
+    if spec.get("prop"):
+        pr = prop_layer(spec["prop"], tilt=-12)
+        avail_h = H - (spec.get("text_top", 26) + bh) - 10
+        avail_w = int(W * 0.46)
+        psc = min(avail_h / pr.height, avail_w / pr.width)
+        pr = pr.resize((max(1, int(pr.width * psc)), max(1, int(pr.height * psc))),
+                       Image.LANCZOS)
+        img.alpha_composite(pr, (26, H - pr.height + 4))
+    if spec.get("speech"):
+        f2 = font("w9", 44)
+        sw = int(f2.getlength(spec["speech"])) + 64
+        _speech(img, (min(W - sw - 24, int(W * 0.47)), H - 130), spec["speech"], 44)
+    return vignette(img, 70)
 
 
 # ---------------------------------------------------------------- 動画ごとの仕様
 
+# 文言はタイトルと重複させない。hook=状況(5〜9字)、punch=感情の落とし所(3〜6字)
 SPECS = {
-    # 開発秘話・挑戦もの → 851（熱血の殴り書き）
-    "karaoke": dict(layout="hero", prop=p_mic, tilt=-16,
-                    bg=((52, 20, 86), (78, 32, 120)),
-                    top="手作り11台から世界へ", bottom="特許、取らず。",
-                    bottom_font="851", emotion="surprised"),
-    "cutter-knife": dict(layout="hero", prop=p_blade, tilt=0,
-                         bg=((22, 58, 92), (28, 76, 118)),
-                         top="ヒントは板チョコ", bottom="折る刃、世界へ。",
-                         bottom_font="851", emotion="happy"),
-    "washlet": dict(layout="hero", prop=p_toilet, tilt=-8,
-                    bg=((16, 66, 72), (22, 88, 96)),
-                    top="社員300人が体を張った", bottom="前代未聞の開発。",
-                    bottom_font="851", emotion="surprised"),
-    "tenji-block-meme": dict(layout="hero", prop=p_block, tilt=-10,
-                             bg=((20, 44, 84), (28, 60, 110)),
-                             top="友の失明から生まれた", bottom="全財産を、道路に。",
-                             bottom_font="w9", emotion="normal"),
-    # 不穏・偽造・未解明 → genkai（崩壊明朝）
-    "banknote": dict(layout="hero", prop=p_bill, tilt=-10,
-                     bg=((44, 20, 52), (62, 28, 72)),
-                     top="偽札は2年で343枚だけ", bottom="コピー、不可能。",
-                     bottom_font="genkai", emotion="thinking"),
-    # 対比もの（左右分割）
+    "karaoke": dict(layout="ba", prop_l=p_jukebox, prop_r=p_mic, prop_h=340,
+                    left_bg=((26, 30, 44), (38, 44, 62)),
+                    right_bg=((58, 22, 92), (84, 34, 126)),
+                    head_l="手作り11台が", head_r="世界の定番に",
+                    tag_l="1971年:神戸のスナック", tag_r="いま:年4400億円市場",
+                    speech="なのに収入0円…", emo_l="sad", emo_r="surprised"),
+    "cutter-knife": dict(layout="hero", prop=p_blade, tilt=0, prop_h=520,
+                         bg=((18, 52, 88), (26, 72, 116)),
+                         hook="板チョコを見て", punch="刃を折った",
+                         punch_font="851", punch_size=168, emotion="happy"),
+    "washlet": dict(layout="hero", prop=p_toilet, tilt=-8, prop_h=470,
+                    bg=((14, 62, 70), (20, 84, 94)),
+                    hook="社員300人が", punch="体を張った",
+                    punch_font="851", punch_size=168, emotion="surprised"),
+    "tenji-block-meme": dict(layout="hero", prop=p_block, tilt=-10, prop_h=470,
+                             bg=((18, 40, 80), (26, 56, 106)),
+                             hook="友の目が見えなくなる", punch="全財産を賭けた",
+                             punch_font="w9", punch_size=138, emotion="normal"),
+    "banknote-charbig": dict(layout="charbig", prop=p_bill, prop_h=330,
+                             bg=((44, 20, 60), (58, 30, 78)),
+                             who="zundamon", emotion="surprised",
+                             lines=[("コピー機は", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                    ("お札だけ", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                    ("拒否する", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
+                             speech="なぜバレるのだ"),
+    "banknote": dict(layout="hero", prop=p_bill, tilt=-10, prop_h=470,
+                     bg=((40, 18, 48), (58, 26, 68)),
+                     hook="コピー機に入れると", punch="拒否される",
+                     punch_font="genkai", punch_size=168, emotion="thinking"),
     "battery-80-duo": dict(layout="split",
-                           left_bg=(52, 26, 30), right_bg=((24, 72, 52), (30, 92, 66)),
+                           left_bg=(56, 26, 30), right_bg=((22, 70, 50), (28, 90, 64)),
                            prop_l=lambda d, s: p_battery(d, s, 100, (255, 90, 70)),
                            prop_r=lambda d, s: p_battery(d, s, 80, (80, 220, 130)),
-                           left_top="充電100%は", left_big="実は損",
-                           left_font="851", left_fill=(255, 96, 86, 255),
-                           right_big="80%が正解", right_font="851",
-                           right_fill=(255, 255, 255, 255),
-                           emotion="surprised"),
+                           hook="スマホの充電",
+                           left_big="100%", left_fill=(255, 108, 96, 255),
+                           right_big="80%", right_fill=(120, 240, 170, 255),
+                           punch_size=150, emotion="surprised"),
     "shinkansen-bird": dict(layout="split",
-                            left_bg=(30, 34, 52), right_bg=((28, 90, 120), (36, 112, 148)),
+                            left_bg=(28, 32, 50), right_bg=((26, 86, 118), (34, 108, 144)),
                             prop_l=p_shinkansen, prop_r=p_kingfisher,
-                            left_top="時速300キロの騒音", left_big="どうする？",
-                            left_font="851", left_fill=(255, 235, 90, 255),
-                            right_big="鳥が解決", right_font="851",
-                            right_fill=(255, 255, 255, 255),
-                            emotion="surprised"),
+                            hook="時速300キロの騒音",
+                            left_big="お手上げ", left_fill=(255, 235, 90, 255),
+                            right_big="鳥が解決", right_fill=(255, 255, 255, 255),
+                            left_font="851", right_font="851",
+                            punch_size=120, emotion="surprised"),
     "traffic-light": dict(layout="split",
-                          left_bg=(24, 52, 36), right_bg=((30, 60, 130), (40, 78, 160)),
+                          left_bg=(22, 50, 34), right_bg=((28, 58, 128), (38, 76, 158)),
                           prop_l=lambda d, s: p_signal(d, s, "green"),
                           prop_r=lambda d, s: p_signal(d, s, "green"),
-                          left_top="どう見ても", left_big="緑なのに",
-                          left_font="w9", left_fill=(90, 230, 150, 255),
-                          right_big="呼び名は青", right_font="851",
-                          right_fill=(150, 200, 255, 255),
-                          emotion="thinking"),
+                          hook="どう見ても",
+                          left_big="緑", left_fill=(110, 240, 160, 255),
+                          right_big="でも青", right_fill=(160, 205, 255, 255),
+                          punch_size=150, emotion="thinking"),
 }
 
 
 def render(slug, out_path=None):
     spec = SPECS[slug]
-    img = layout_split(spec) if spec["layout"] == "split" else layout_hero(spec)
+    kind = spec["layout"]
+    img = {"split": layout_split, "band": layout_band, "ba": layout_beforeafter,
+           "charbig": layout_charbig}.get(kind, layout_hero)(spec)
     out = out_path or Path(f"projects/{slug}/out/thumbnail.png")
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out)

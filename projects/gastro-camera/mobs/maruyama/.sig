@@ -1,1 +1,0 @@
-電球職人|short|none||v2
