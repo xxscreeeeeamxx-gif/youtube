@@ -1,12 +1,12 @@
 # 生成物
-projects/*/audio/
-projects/*/frames/
-projects/*/out/
-projects/*/llm/
-projects/*/build.log
-projects/*/.approved
-projects/*/.release
-projects/*/.uploaded
+projects/**/audio/
+projects/**/frames/
+projects/**/out/
+projects/**/llm/
+projects/**/build.log
+projects/**/.approved
+projects/**/.release
+projects/**/.uploaded
 projects/_failed_script.txt
 projects/_prompt_script.md
 ideas/prompt.md

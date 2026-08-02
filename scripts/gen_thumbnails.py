@@ -698,7 +698,11 @@ def render(slug, out_path=None):
     kind = spec["layout"]
     img = {"split": layout_split, "band": layout_band, "ba": layout_beforeafter,
            "charbig": layout_charbig}.get(kind, layout_hero)(spec)
-    out = out_path or Path(f"projects/{slug}/out/thumbnail.png")
+    if out_path is None:
+        from ytf.config import find_project_dir
+        d = find_project_dir(cfg.root, slug)
+        out_path = (d / "out" / "thumbnail.png") if d else Path(f"projects/{slug}/out/thumbnail.png")
+    out = out_path
     out.parent.mkdir(parents=True, exist_ok=True)
     img.save(out)
     return out

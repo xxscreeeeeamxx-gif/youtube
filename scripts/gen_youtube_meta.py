@@ -93,9 +93,10 @@ def build_credits(raw: str) -> str:
 VOICE_NAMES = {8: "春日部つむぎ", 12: "白上虎太郎", 13: "青山龍星", 42: "ちび式じい"}
 
 
-def build_entry(slug: str):
-    meta_path = Path(f"projects/{slug}/out/metadata.txt")
-    script_path = Path(f"projects/{slug}/script.yaml")
+def build_entry(slug: str, pdir: Path = None):
+    pdir = pdir or Path(f"projects/{slug}")
+    meta_path = pdir / "out" / "metadata.txt"
+    script_path = pdir / "script.yaml"
     if not meta_path.exists() or not script_path.exists():
         return None
     sec = parse_metadata(meta_path)
@@ -140,11 +141,12 @@ def build_entry(slug: str):
 if __name__ == "__main__":
     out_all = []
     count = 0
-    for p in sorted(Path("projects").iterdir()):
+    from ytf.config import Config, iter_projects
+    for p in iter_projects(Config.load().root):
         slug = p.name
         if slug in SKIP or not (p / "out" / "video.mp4").exists():
             continue
-        entry = build_entry(slug)
+        entry = build_entry(slug, p)
         if not entry:
             continue
         title, description, tag_line = entry

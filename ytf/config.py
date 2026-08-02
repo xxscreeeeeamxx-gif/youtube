@@ -64,6 +64,38 @@ class Config:
         )
 
 
+def find_project_dir(root: Path, name: str) -> Path | None:
+    """projects/ 以下から name に一致するプロジェクトを探す。
+
+    一致の優先順位: フォルダ名の完全一致 → script.yaml の meta.slug 一致。
+    「アップロード済み/」のような中間フォルダが何段あってもよい。
+    """
+    base = root / "projects"
+    if not base.is_dir():
+        return None
+    cands = sorted(base.rglob("script.yaml"))
+    for sp in cands:
+        if sp.parent.name == name:
+            return sp.parent
+    import yaml as _yaml
+    for sp in cands:
+        try:
+            meta = (_yaml.safe_load(sp.read_text()) or {}).get("meta", {})
+        except Exception:
+            continue
+        if meta.get("slug") == name:
+            return sp.parent
+    return None
+
+
+def iter_projects(root: Path):
+    """projects/ 以下の全プロジェクトディレクトリを列挙する。"""
+    base = root / "projects"
+    if not base.is_dir():
+        return []
+    return sorted({sp.parent for sp in base.rglob("script.yaml")})
+
+
 @dataclass
 class Project:
     """projects/<slug>/ 以下の作業ディレクトリ。"""
@@ -72,12 +104,18 @@ class Project:
 
     @classmethod
     def resolve(cls, cfg: Config, name: str) -> "Project":
+        """slug・フォルダ名・パスのいずれからでもプロジェクトを見つける。
+
+        projects/ 以下は「アップロード済み/未アップロード」などで階層を切って
+        よい（フォルダ名は日本語可）。script.yaml の meta.slug でも引ける。
+        """
         p = Path(name)
-        if not p.exists():
-            p = cfg.root / "projects" / name
-        if not p.exists():
+        if p.exists() and (p / "script.yaml").exists():
+            return cls(p.resolve())
+        found = find_project_dir(cfg.root, name)
+        if found is None:
             raise SystemExit(f"プロジェクトが見つかりません: {name}")
-        return cls(p.resolve())
+        return cls(found.resolve())
 
     @property
     def script_path(self) -> Path:

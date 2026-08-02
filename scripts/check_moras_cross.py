@@ -110,7 +110,9 @@ def strip_tags(text: str) -> str:
 
 
 def check_slug(slug: str) -> int:
-    tj = Path(f"projects/{slug}/audio/timing.json")
+    from ytf.config import Config, find_project_dir
+    d = find_project_dir(Config.load().root, slug)
+    tj = (d / "audio" / "timing.json") if d else Path("nonexistent")
     if not tj.exists():
         print(f"({slug}: timing.json なし・スキップ)")
         return 0
@@ -144,7 +146,8 @@ if __name__ == "__main__":
         sys.exit(1)
     if sys.argv[1] == "--all":
         total = 0
-        for p in sorted(Path("projects").iterdir()):
+        from ytf.config import Config, iter_projects
+        for p in iter_projects(Config.load().root):
             if (p / "audio" / "timing.json").exists():
                 total += check_slug(p.name)
         print(f"\n不一致 合計 {total} 件（全件を目視判定すること）")

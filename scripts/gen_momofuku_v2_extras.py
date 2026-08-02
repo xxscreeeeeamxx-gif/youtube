@@ -44,7 +44,10 @@ def spans_from_timing(slug="momofuku-v2"):
     """
     import json
     import yaml
-    root = Path(__file__).resolve().parent.parent / "projects" / slug
+    from ytf.config import Config, find_project_dir
+    root = find_project_dir(Config.load().root, slug)
+    if root is None:
+        root = Path(__file__).resolve().parent.parent / "projects" / slug
     t = json.loads((root / "audio" / "timing.json").read_text())
     s = yaml.safe_load((root / "script.yaml").read_text())
     cuts = [c for sc in s["scenes"] for c in sc["cuts"]]

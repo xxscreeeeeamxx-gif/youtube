@@ -212,6 +212,14 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
      check_readings.py が「何だ/何て=ナニ」「文頭 は？=ワ」を自動NG化済み。
      使い分けの原則: 何だ・何だった・何て・何だって=なん / 何が・何を・何か・何より・
      何事=なに / 何か月・何時間・何百=なん。間投詞の「は？」は [は|はぁ] タグで書く
+- **プロジェクトのフォルダ構成**（2026-08 変更）: `projects/アップロード済み/<日本語名>/` と
+  `projects/未アップロード/<日本語名>/`、テスト用は `projects/_テスト/`。
+  フォルダ名は投稿タイトルの【】内（例: カラオケの誕生）。script.yaml の `meta.slug` は
+  従来どおり半角英数のまま保つ（キャッシュキー・クリップ接頭辞に使うため）。
+  `ytf <cmd> <slug>` でも `ytf <cmd> <日本語フォルダ名>` でも解決される
+  （ytf/config.py の find_project_dir が projects/ 以下を再帰検索する）。
+  新作は `projects/未アップロード/` に作り、投稿したら手動で `アップロード済み/` へ移し、
+  PUBLISH.md の表も更新する
 - **新作を始める前に名前の衝突を確認する**: `projects/<slug>/`・`scripts/gen_*.py`・
   `assets/clips/` の接頭辞が既存プロジェクトと被っていないか必ず先に見る
   （旧qr-code解説動画の script.yaml を新作で上書きしかけた実例。既存があれば
