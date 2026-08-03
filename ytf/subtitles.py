@@ -42,6 +42,12 @@ def _wrap_jp(text: str, chars_per_line: int) -> str:
         cur += ch
     if cur:
         lines.append(cur)
+    # 最終行が2文字以下だと「。」だけの行になって間が抜けるので、前の行から
+    # 文字を借りて均す（例: 27字を29字幅で割ると 26+1 になってしまう）
+    if len(lines) >= 2 and len(lines[-1]) <= 2 and len(lines[-2]) > 6:
+        need = 3 - len(lines[-1])
+        lines[-1] = lines[-2][-need:] + lines[-1]
+        lines[-2] = lines[-2][:-need]
     return "\\N".join(lines)
 
 
@@ -88,7 +94,9 @@ def build_ass(
         "[Events]",
         "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text",
     ]
-    chars_per_line = max(8, int((width - 150) / size))
+    # 実測の字幅はフォントサイズより1割ほど広い（Hiragino Sans）。
+    # 余裕を見ないと libass が再折返しして「。」だけの行が生まれる
+    chars_per_line = max(8, int((width - 150) / (size * 1.12)))
     for ct in timings:
         start = ct.start - offset
         end = start + ct.voice_dur + min(0.25, ct.total_dur - ct.voice_dur)

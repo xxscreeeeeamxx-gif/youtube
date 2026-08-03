@@ -1,0 +1,1182 @@
+# 乾電池を作った男・屋井先蔵 再現ドラマ・ミーム版
+#
+# == 裏取り済みの事実（出典: 国立科学博物館 理工電子資料館 / 国立公文書館「公文書にみる発明のチカラ」/
+#    IEEE ETHW マイルストーン / 電気学会「でんきの礎」/ 東京理科大学 / 上山明博『白いツツジ』系）==
+#
+# ★通説の誤り3点（この動画で正しく描く）★
+# 1. 受験したのは「東京物理学校」ではなく【東京職工学校】（後の東京工業大学）。
+#    東京物理学校（現・東京理科大）は後年、実験所付属の職工として働き学んだ場所
+# 2. 受験失敗は【2回】（3回ではない）。遅刻したのは2回目
+# 3. 「特許を取れなかった」は誤り。乾電池の特許は【取っている】（特許第2086号）。
+#    取れなかったのは「日本初の乾電池特許」の座
+#
+# - 生没: 1864年1月13日（文久3年12月5日）〜1927年6月1日・享年63
+#   ※和暦をそのまま取って「1863年生まれ」と書く資料が多いので注意
+# - 越後長岡の武士の家。6歳で父が死去し家が没落（単一出典・弱いので断定しない）
+# - 1875年（13歳）東京・神田の時計店へ丁稚奉公→病気で2年余りで帰郷
+# - 1877〜84年 長岡の時計店で7年の年季奉公
+# - 東京職工学校を2度受験して失敗。2度目は「手元の時計では1分前なのに会場では5分遅刻」
+#   と伝えられる（★一次史料なし・伝承。ナレで「伝えられています」と必ず添える）
+# - 1885年（21歳）連続電気時計を発明。特許第1205号（出願1889/12/12・登録1891/5/21）
+#   日本で最初の電気関係の特許とされる
+# - 当時の湿電池（ルクランシェ電池等）の問題: 手入れが要る・薬液が沁みて金具が腐る・冬に凍る
+# - 炭素棒にパラフィンを含浸させて腐食を封じ、金属ケースで包んだ＝乾電池
+# - 発明年は1887年頃が通説だが1885年説・1889年説もあり、★国立科学博物館は
+#   「発明年次を証明する明確な資料は確認できない」と明記→動画では年を断定しない
+# - 特許: 屋井の出願1892/10/4→登録1893/11/21（第2086号）。
+#   高橋市三郎は屋井より【11日遅く出願】したが【1か月以上早く登録】され第2062号を得た。
+#   ★高橋を「横取りした悪人」に描かない。出願が5年遅れた屋井側の事情の話にする
+# - 世界初論争: ドイツのガスナー（独特許1886年・米特許1887年）、デンマークのヘレセン（1887年）。
+#   ★「屋井が世界初」と地の文で断定しない。「日本では世界初とされる」「独立にほぼ同時期に」まで
+# - 1894年 日清戦争。厳寒の満洲で湿電池が凍る中、屋井乾電池が電信用に使われ成功
+#   （電池工業会・国立公文書館・IEEEが揃って記述）。ただし
+#   ★「満洲の勝利はひとえに乾電池のおかげ」という号外の文言は原資料未確認→「と伝えられる」
+#   ★受注個数（500個/50個で資料が矛盾）と当時の価格は使わない
+# - 1892年 帝国大学がシカゴ万博に出品した地震計に屋井乾電池が使われ注目される
+# - 米国から模造品が逆輸入された
+# - 1910年 合資会社屋井乾電池を設立。筒型金属ケースで現在の乾電池の形を確立
+# - 1921年時点で浅草工場の年産20万個超（当時日本最大）
+# - 1923年 関東大震災で全施設焼失→川崎に新工場を再建
+# - 1927年6月1日 死去（胃がんと急性肺炎の併発）
+# - 2014年 IEEEマイルストーン「日本の一次・二次電池産業の誕生と成長 1893」認定。
+#   銘板は長岡市・東京理科大学近代科学資料館・GSユアサ・パナソニックへ
+# - 東京理科大学近代科学資料館が屋井乾電池の実物を所蔵・展示
+#
+# == センシティブルール ==
+# - 父の死・本人の死の場面はクリーン（ミーム・SE禁止）
+# - 高橋市三郎は実在の技術者。悪役化・揶揄は禁止。事実（出願は屋井が先、登録は高橋が先）だけ描く
+# - 「世界初」は断定しない。ナレは「日本では世界初とされます」「国際的にはドイツの
+#   ガスナーが最初とされることが多い」と両論を出す
+# - 遅刻の逸話は「伝えられています」で必ずヘッジする
+meta:
+  title: "5分の遅刻から始まった。凍らない電池を作った男【乾電池誕生・再現ドラマ・ミーム版】"
+  slug: "yai-denchi"
+  summary: "リモコンにもリチウムイオンにも先立つ、乾電池という発明。作ったのは越後長岡の没落士族の子、屋井先蔵という男でした。13歳で丁稚に出され、進学の道も断たれた青年が、冬になると凍ってしまう当時の電池に挑みます。日本では世界初とも語られる発明の裏で、彼が5年間できなかったこととは。ずんだもんが屋井先蔵を演じる再現ドラマです。"
+  tags: ["乾電池", "屋井先蔵", "発明", "明治", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "5分の遅刻から"
+    bottom: "凍らない電池"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: tokei, label: "時計店主", voice: 42, pitch: 0.0}
+    - {id: shiken, label: "試験官", voice: 13, pitch: -0.06, item: hat}
+    - {id: haha, label: "母", voice: 8, pitch: 0.04, hair: bun}
+    - {id: gunjin, label: "陸軍の男", voice: 13, pitch: 0.05, item: hat}
+    - {id: shokko, label: "職工", voice: 12, pitch: 0.0}
+scenes:
+  # ============ 茶番フック ============
+  - id: hook
+    title: ""
+    background: il_yi_room
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: angry
+        text: "つむぎ、大変なのだ。テレビが言うことを聞かないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "リモコン、電池切れじゃない？"
+      - speaker: zundamon
+        emotion: happy
+        text: "そんなときは、こうするのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "電池を取り出して、手のひらでコロコロ転がすぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "おばあちゃんの知恵みたいなことするじゃん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ほら、ついた。ボクの手には電力があるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ[手|て]じゃなくて、接点が動いて一瞬つながっただけだからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "夢のない解説をありがとうなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ところでずんだもん、その筒、何本持ってる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "リモコンに2本、時計に1本、ゲームのコントローラーに2本……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "家じゅうにいるじゃないか。実質、[同居人|どうきょにん]なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その[同居人|どうきょにん]の元祖を作った日本人がいるんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "電池って、外国の発明じゃないのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "電池そのものはね。でも、持ち歩ける乾いた電池を作った一人が日本にいたの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもその人、5分の遅刻で人生が変わったと言われてる。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "5分！？電池の話じゃなかったのか！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこから始まる話なの。聞いてみる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。電池が切れるまで聞くぞ。"
+  # ============ 1864 年号カード ============
+  - id: era1864
+    title: ""
+    background: il_yi_nagaoka
+    bgm: pastel_house
+    cuts:
+      - speaker: reimu
+        reading: "ゆきぐにの えちご ながおか。ぶしの いえに ひとりの おとこのこが うまれました。"
+        text: "雪国の越後長岡。武士の家に、一人の男の子が生まれました。"
+        video: assets/clips/yi_era1864.mp4
+        video_full: true
+        video_span: 2
+      - speaker: reimu
+        reading: "せんはっぴゃくろくじゅうよねん いちがつ。なまえわ やい さきぞう。"
+        text: "1864年1月。名前は、屋井先蔵。"
+  # ============ 幼少期・父の死（クリーン）============
+  - id: youth
+    title: "1870年代・越後長岡"
+    background: il_yi_nagaoka
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.78, tag: "先蔵"}
+      - {who: haha, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "さきぞうが むっつの ころ、ちちが なくなったと つたえられます。"
+        text: "先蔵が6つのころ、父が亡くなったと伝えられます。"
+      - speaker: haha
+        emotion: sad
+        text: "先蔵。これからは、二人で生きていくのよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……うん。"
+      - speaker: haha
+        emotion: sad
+        text: "先蔵。この家は、もう出なければならないの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "どうしてなのだ。父上の家だぞ。"
+      - speaker: haha
+        emotion: sad
+        text: "刀を差していれば食べられた時代は、終わったのよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……侍は、もう仕事じゃないのか。"
+      - speaker: haha
+        emotion: normal
+        text: "これからは、手に職のある人が強いのですって。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手に職。……ボクにも、持てるだろうか。"
+      - speaker: reimu
+        reading: "おやこわ おじの もとに ひきとられました。"
+        text: "親子は叔父のもとに引き取られました。"
+      - speaker: reimu
+        reading: "そして じゅうさんさいの はる。さきぞうわ ひとりで とうきょうえ むかいます。"
+        text: "そして13歳の春。先蔵は一人で東京へ向かいます。"
+      - speaker: haha
+        emotion: normal
+        text: "神田の時計屋さんが、預かってくださるそうよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……時計屋。ボク、機械はきらいじゃないぞ。"
+      - speaker: haha
+        emotion: sad
+        text: "体だけは、こわさないでね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "行ってくるのだ。"
+  # ============ 丁稚時代 ============
+  - id: decchi
+    title: "1875・神田の時計店"
+    background: il_yi_tokeiten
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.82, tag: "先蔵"}
+      - {who: tokei, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "めいじはちねん。とうきょう かんだの とけいてんに、でっちとして はいります。"
+        text: "明治8年。東京・神田の時計店に、丁稚として入ります。"
+      - speaker: tokei
+        emotion: normal
+        text: "小僧。まずは掃除と使い走りじゃ。機械にはまだ触らせん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。……いつになったら触れるんだ？"
+      - speaker: tokei
+        emotion: angry
+        text: "口より手を動かせ。三年は下働きじゃ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "三年……修行の道のりが長すぎるぞ。"
+      - speaker: tokei
+        emotion: normal
+        text: "小僧、水を汲んでこい。それが終わったら炭だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。……親方、その机の上のは何ですか。"
+      - speaker: tokei
+        emotion: normal
+        text: "分解した懐中時計じゃ。触るなよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "触りません。見るだけなのだ。"
+      - speaker: tokei
+        emotion: angry
+        text: "見るのも仕事の邪魔じゃ。行け。"
+      - speaker: reimu
+        reading: "それでも さきぞうわ、しごとの あいまに ぶんかいされた とけいを ながめつづけました。"
+        text: "それでも先蔵は、仕事の合間に分解された時計を眺め続けました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……歯車が、こっちを回して、あっちが止まる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "分かったぞ。時計は、規則正しい歯車の会議だ。"
+      - speaker: tokei
+        emotion: surprised
+        text: "小僧、なぜそれを知っとる。教えとらんぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見てたら分かったぞ。"
+      - speaker: tokei
+        emotion: normal
+        text: "……妙な小僧じゃ。"
+      - speaker: reimu
+        reading: "しかし にねんあまりで びょうきに たおれ、ながおかえ かえることに なります。"
+        text: "しかし2年あまりで病気に倒れ、長岡へ帰ることになります。"
+      - speaker: zundamon
+        emotion: sad
+        text: "せっかく、機械に触れそうだったのに……。"
+  # ============ 長岡での修業 ============
+  - id: shugyo
+    title: "1877・長岡で7年"
+    background: il_yi_tokeiten
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.9, tag: "先蔵"}
+      - {who: tokei, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "ながおかの とけいてんで、こんどわ しゅうりこうとして ななねん。"
+        text: "長岡の時計店で、今度は修理工として7年。"
+      - speaker: tokei
+        emotion: normal
+        text: "この柱時計、また遅れとると苦情が来た。直せるか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "任せるのだ。……ふむ。ゼンマイの力が弱っているぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "巻きたてはよく進んで、ほどけてくると遅れる。"
+      - speaker: tokei
+        emotion: normal
+        text: "そういうもんじゃ。毎朝きっちり巻けばよい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも親方。それって、時計が悪いんじゃなくて仕組みが悪いんじゃないか？"
+      - speaker: tokei
+        emotion: surprised
+        text: "……なんじゃと？"
+      - speaker: zundamon
+        emotion: normal
+        text: "力が弱っていくものを、力の元にしてるのがおかしいのだ。"
+      - speaker: tokei
+        emotion: angry
+        text: "口の減らん男になったのう。二百年そうやって動いとるわ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "二百年おかしいままなら、二百年ぶんの改善余地があるってことだ。"
+      - speaker: reimu
+        reading: "ぜんまいで うごく とけいわ、まくたびに ちからが かわり、じかんが ずれる。"
+        text: "ゼンマイで動く時計は、巻くたびに力が変わり、時間がずれる。"
+      - speaker: reimu
+        reading: "このころの まちの とけいわ、いえごとに ばらばらの じこくを さしていました。"
+        text: "このころの街の時計は、家ごとにばらばらの時刻を指していました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ずれない時計が、あればいいのだ。"
+  # ============ 1884 年号カード ============
+  - id: era1884
+    title: ""
+    background: il_yi_school
+    bgm: serious
+    cuts:
+      - speaker: reimu
+        reading: "めいじじゅうしちねん。にじゅっさいの さきぞうわ、もういちど とうきょうえ むかいます。"
+        text: "明治17年。20歳の先蔵は、もう一度東京へ向かいます。"
+        video: assets/clips/yi_era1884.mp4
+        video_full: true
+  # ============ 受験失敗（伝承としてヘッジ）============
+  - id: juken
+    title: "5分の遅刻"
+    background: il_yi_school
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shiken, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "めざしたのわ、とうきょう しょっこう がっこう。のちの とうきょう こうぎょう だいがくです。"
+        text: "目指したのは、東京職工学校。のちの東京工業大学です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ここで[学|まな]べば、機械を一から作れるようになるはずだ。"
+      - speaker: reimu
+        reading: "しかし いちどめの じゅけんわ、ふごうかくに おわります。"
+        text: "しかし一度目の受験は、不合格に終わります。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……独学の限界か。来年、もう一度やるぞ。"
+      - speaker: reimu
+        reading: "そして にどめの しけんの ひ。"
+        text: "そして二度目の試験の日。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よし、間に合ったぞ。ボクの時計では、まだ1分前だ。"
+      - speaker: shiken
+        emotion: normal
+        text: "締め切りだ。門を閉めろ。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "待つのだ！まだ時間前だぞ！"
+      - speaker: shiken
+        emotion: normal
+        text: "こちらの時計では、5分過ぎている。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "5分！？そんなはずは……。"
+      - speaker: shiken
+        emotion: normal
+        text: "規則は規則だ。来年また来なさい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……ボクの時計は、間違っていたのか。"
+      - speaker: reimu
+        reading: "この えぴそーどわ、いちじ しりょうで かくにんできる ものでわ ありません。"
+        text: "このエピソードは、一次史料で確認できるものではありません。"
+      - speaker: reimu
+        reading: "のちに かたられる でんしょうとして、ひろく しられている はなしです。"
+        text: "のちに語られる伝承として、広く知られている話です。"
+      - speaker: reimu
+        reading: "たしかなのわ、さきぞうが にど しっぱいし、しんがくの みちが とざされたこと。"
+        text: "確かなのは、先蔵が二度失敗し、進学の道が閉ざされたこと。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……もう、受けられないのだ。"
+      - speaker: reimu
+        reading: "がっこうえの みちわ、とざされました。"
+        text: "学校への道は、閉ざされました。"
+  # ============ 決意 ============
+  - id: ketsui
+    title: ""
+    background: il_yi_room
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: tsumugi, x: 0.74, tag: "下宿の人"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "屋井さん、ずっと部屋にこもってるけど、大丈夫？"
+      - speaker: zundamon
+        emotion: normal
+        text: "考えてたのだ。なぜ、あの5分が生まれたのか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そりゃあ、時計が合ってなかったんでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。でも、どっちが合ってたと思う？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そりゃ、学校のほうじゃないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分からないのだ。誰にも分からない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この街に、正しい時間を持ってる時計が一つも無いからだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……言われてみれば、そうかも。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。この国の時計は、どれも少しずつ違う時間を指してるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ゼンマイで動くかぎり、ずれは必ず生まれる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、時計ってそういうものでしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そこだ。みんな、そういうものだと思って諦めてる。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "ボクは諦めない。ずれない時計を、自分で作るのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "作るって、時計を！？学校にも行けてないのに！"
+      - speaker: zundamon
+        emotion: normal
+        text: "学校が閉まってるなら、外で学ぶまでなのだ。"
+      - speaker: reimu
+        reading: "さきぞうわ、とうきょう ぶつり がっこうの じっけんじょで しょっことして はたらきながら、まなびはじめます。"
+        text: "先蔵は、東京物理学校の実験所で職工として働きながら、学びはじめます。"
+      - speaker: reimu
+        reading: "げんざいの とうきょう りか だいがく。がくもんの ばの すみで、どくがくわ つづきました。"
+        text: "現在の東京理科大学。学問の場の隅で、独学は続きました。"
+  # ============ 1885 年号カード ============
+  - id: era1885
+    title: ""
+    background: il_yi_koba
+    bgm: curious
+    cuts:
+      - speaker: reimu
+        reading: "めいじじゅうはちねん。にじゅういっさいの さきぞうわ、ひとつの とけいを かんせいさせます。"
+        text: "明治18年。21歳の先蔵は、一つの時計を完成させます。"
+        video: assets/clips/yi_era1885.mp4
+        video_full: true
+  # ============ 連続電気時計 ============
+  - id: tokei
+    title: "1885・電気で動く時計"
+    background: il_yi_koba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: shokko
+        emotion: thinking
+        text: "屋井さん、これ、ゼンマイがどこにも無いぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "無くていい。電気で動かすからな。"
+      - speaker: shokko
+        emotion: surprised
+        text: "電気！？時計を電気で動かすなんて聞いたことないぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ゼンマイは、巻いた直後と切れる直前で力が違う。だからずれる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電気なら、いつでも[同|おな]じ[力|ちから]で押せるのだ。"
+      - speaker: shokko
+        emotion: thinking
+        text: "……確かに、力が変わらなければ、速さも変わらないか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そういうことだ。名付けて、連続電気時計。"
+      - speaker: reimu
+        reading: "ぜんまいを でんきで まくのでわ なく、すべてを でんきで うごかす。とうじとしてわ あたらしい はっそうでした。"
+        text: "ゼンマイを電気で巻くのではなく、すべてを電気で動かす。当時としては新しい発想でした。"
+      - speaker: shokko
+        emotion: thinking
+        text: "でも屋井さん、これ何回作り直したんだ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "数えてないぞ。針が動かない、止まる、また動く。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そのたびに、部品を削っては付け直した。"
+      - speaker: shokko
+        emotion: surprised
+        text: "寝てるのか、あんた。"
+      - speaker: zundamon
+        emotion: happy
+        text: "寝てるぞ。三時間くらい。"
+      - speaker: shokko
+        emotion: angry
+        text: "寝てないのと同じだろ！"
+      - speaker: shokko
+        emotion: happy
+        text: "屋井さん、これは売れるぞ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうだろう。ボクの5分の恨みが、形になったぞ。"
+      - speaker: reimu
+        reading: "このはつめいわ のちに とっきょとなり、にほんで さいしょの でんきかんけいの とっきょの ひとつと されています。"
+        text: "この発明はのちに特許となり、日本で最初の電気関係の特許の一つとされています。"
+        telops:
+          - {text: "特許第1205号", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+  # ============ 電池の壁 ============
+  - id: kabe
+    title: "動かない冬"
+    background: il_yi_koba
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "しかし ふゆが きて、じけんが おきます。"
+        text: "しかし冬が来て、事件が起きます。"
+      - speaker: shokko
+        emotion: surprised
+        text: "屋井さん！時計が、止まってる！"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "なんだと！？昨日まで動いてたぞ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……電池を見せてみろ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "凍ってる。中の液が、がっちり凍ってるのだ。"
+      - speaker: shokko
+        emotion: sad
+        text: "そりゃあ、この寒さじゃ……。"
+      - speaker: shokko
+        emotion: normal
+        text: "この電池、[中|なか]わ薬の液で満たされてるからな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "液が凍れば、電気は流れない。当たり前の話なのだ。"
+      - speaker: shokko
+        emotion: sad
+        text: "冬のあいだは、諦めるしかないってことか。"
+      - speaker: zundamon
+        emotion: angry
+        text: "つまりボクの時計は、冬眠する時計だ。"
+      - speaker: shokko
+        emotion: normal
+        text: "身も蓋もない言い方するなよ。"
+      - speaker: reimu
+        reading: "もんだいわ、こおることだけでわ ありませんでした。"
+        text: "問題は、凍ることだけではありませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "見ろ。金具が、白く錆びてる。"
+      - speaker: shokko
+        emotion: thinking
+        text: "薬液が、沁み出してきてるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手入れも要る。倒せばこぼれる。冬は凍る。"
+      - speaker: zundamon
+        emotion: angry
+        text: "この電池、わがままが多すぎるぞ。"
+      - speaker: shokko
+        emotion: normal
+        text: "でも、みんなそれを使ってるんだ。しょうがないだろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……またそれか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しょうがないで止まるなら、5分の遅刻もしょうがないになるだろ。"
+      - speaker: shokko
+        emotion: surprised
+        text: "そこに戻るのかよ。"
+  # ============ 乾いた電池へ ============
+  - id: kansou
+    title: "液をこぼさない電池"
+    background: il_yi_koba
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "考えるぞ。なぜ凍るかというと、液体だからだ。"
+      - speaker: shokko
+        emotion: normal
+        text: "そりゃそうだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "なら、液を減らして、こぼれない形にすればいい。"
+      - speaker: shokko
+        emotion: surprised
+        text: "液を減らしたら、電気が出ないんじゃないか？"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、乾かすんじゃない。閉じ込めるのだ。"
+      - speaker: shokko
+        emotion: thinking
+        text: "でも液が無いと、そもそも電気が生まれないんだろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。液は要る。要るが、むき出しにしておく理由は無い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "凍るのも、こぼれるのも、沁み出すのも、全部むき出しだからだ。"
+      - speaker: shokko
+        emotion: surprised
+        text: "……閉じ込めれば、三つとも消えるってことか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "炭素の棒が、液を吸ってしまうのが良くない。"
+      - speaker: shokko
+        emotion: thinking
+        text: "吸わない棒なんて、あるのか？"
+      - speaker: zundamon
+        emotion: happy
+        text: "作ればいい。棒に、蝋を染み込ませるぞ。"
+      - speaker: shokko
+        emotion: surprised
+        text: "蝋！？ろうそくの、あれか！"
+      - speaker: shokko
+        emotion: thinking
+        text: "前に油を塗ったときは、電気まで止まったぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "塗ったからだ。表面を覆えば、電気の通り道まで塞ぐ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "覆うんじゃない。染み込ませて、中の穴だけ埋めるのだ。"
+      - speaker: shokko
+        emotion: surprised
+        text: "そんな器用なこと、できるのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "パラフィンだ。隙間を[埋|う]めれば、液は通らないぞ。"
+      - speaker: shokko
+        emotion: surprised
+        text: "屋井さん、棒に蝋が入った！液が滲んでこないぞ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "よし。あとは全体を、金属の入れ物で包むのだ。"
+      - speaker: shokko
+        emotion: thinking
+        text: "これなら、鞄に放り込んでも大丈夫だな。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "できたぞ。倒してもこぼれない。手入れも要らない。"
+      - speaker: shokko
+        emotion: surprised
+        text: "液が入ってるのに、乾いてるみたいだ……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いい表現だ。それでいこう。乾いた電池、乾電池なのだ。"
+      - speaker: reimu
+        reading: "かんでんちと いう なまえわ、さきぞうたちが なづけたと つたえられています。"
+        text: "乾電池という名前は、先蔵たちが名づけたと伝えられています。"
+      - speaker: reimu
+        reading: "はつめいの ねんわ、せんはっぴゃくはちじゅうななねん ごろと される ことが おおいのですが、"
+        text: "発明の年は、1887年ごろとされることが多いのですが、"
+      - speaker: reimu
+        reading: "しょうめいできる しりょうわ かくにんされていないと、こくりつ かがく はくぶつかんわ しるしています。"
+        text: "証明できる資料は確認されていないと、国立科学博物館は記しています。"
+  # ============ 世界の同時期（両論併記）============
+  - id: sekai
+    title: "同じころ、世界でも"
+    background: il_yi_koba
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "じつわ おなじころ、よーろっぱでも おなじ ちょうせんが おこなわれていました。"
+        text: "実は同じころ、ヨーロッパでも同じ挑戦が行われていました。"
+      - speaker: reimu
+        reading: "どいつの がすなーが せんはっぴゃくはちじゅうろくねんに とっきょを しゅとくし、"
+        text: "ドイツのガスナーが1886年に特許を取得し、"
+      - speaker: reimu
+        reading: "でんまーくの へれせんも おなじ ころに かんでんちを つくっています。"
+        text: "デンマークのヘレセンも同じころに乾電池を作っています。"
+      - speaker: shokko
+        emotion: surprised
+        text: "外国でも、同じことを考えてた人がいたのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "困ってることが同じなら、答えが似るのは当然だろ。"
+      - speaker: reimu
+        reading: "にほんでわ やいが せかいはつと される ことが おおく、こくさいてきにわ がすなーが さいしょと される ことが おおい。"
+        text: "日本では屋井が世界初とされることが多く、国際的にはガスナーが最初とされることが多い。"
+      - speaker: reimu
+        reading: "たしかなのわ、さきぞうが だれの まねでも なく、どくりつに たどりついた ということです。"
+        text: "確かなのは、先蔵が誰の真似でもなく、独立にたどり着いたということです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは、ボクの冬を相手にしてただけなのだ。"
+  # ============ 特許・5年の空白 ============
+  - id: tokkyo
+    title: "出せなかった5年"
+    background: il_yi_room
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: tsumugi, x: 0.74, tag: "妻"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた、この電池、特許は出さないの？"
+      - speaker: zundamon
+        emotion: sad
+        text: "……出したい。出したいが、金がないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いくら要るの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……材料をひと月ぶん、諦める額なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ひと月止めたら、注文に間に合わないものね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちには、明日の炭素棒を買う金しかないのだ。"
+      - speaker: reimu
+        reading: "とっきょの しゅつがんにわ、てすうりょうが かかります。"
+        text: "特許の出願には、手数料がかかります。"
+      - speaker: reimu
+        reading: "ざいりょうを かい、しさくを つづける まいにちに、その よゆうわ ありませんでした。"
+        text: "材料を買い、試作を続ける毎日に、その余裕はありませんでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、先に誰かが出したら、どうなるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そのときは、そのときだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いまは、一個でも多く売って、明日の材料を買うほうが先だ。"
+      - speaker: reimu
+        reading: "さきぞうが かんでんちの とっきょを しゅつがんしたのわ、せんはっぴゃくきゅうじゅうにねん じゅうがつ よっか。"
+        text: "先蔵が乾電池の特許を出願したのは、1892年10月4日。"
+      - speaker: reimu
+        reading: "はつめいから、およそ ごねんが たっていました。"
+        text: "発明から、およそ5年が経っていました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "やっと出せたぞ。これで、ボクの電池になる。"
+  # ============ 11日と1か月 ============
+  - id: hikaku
+    title: "11日と、1か月"
+    background: il_yi_room
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: tsumugi, x: 0.74, tag: "妻"}
+    cuts:
+      - speaker: reimu
+        reading: "ところが。"
+        text: "ところが。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "あなた、これ。乾電池の特許が、もう認められてる。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "なに！？ボクのより先に！？"
+      - speaker: reimu
+        reading: "ていしんしょうの ぎしだった たかはし いちさぶろうの とっきょが、さきに とうろくされたのです。"
+        text: "逓信省の技師だった高橋市三郎の特許が、先に登録されたのです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……待て。出願は、いつだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの11日あと、って書いてある。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクのほうが、先に出してるじゃないか！"
+      - speaker: reimu
+        reading: "しゅつがんわ さきぞうが じゅういちにち はやく、とうろくわ たかはしが いっかげついじょう はやかった。"
+        text: "出願は先蔵が11日早く、登録は高橋が1か月以上早かった。"
+      - speaker: reimu
+        reading: "しんさの じゅんばんが、にほんはつの ざを わけました。"
+        text: "審査の順番が、日本初の座を分けました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "悔しくないの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "悔しいさ。でも、高橋さんが悪いわけじゃない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの人も、ちゃんと考えて、ちゃんと出したんだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "遅れたのは、ボクだ。5年、出せなかったボクだ。"
+      - speaker: reimu
+        reading: "さきぞうの とっきょも、よくとしに みとめられました。とっきょ だいにせんはちじゅうろくごう。"
+        text: "先蔵の特許も、翌年に認められました。特許第2086号。"
+        telops:
+          - {text: "特許第2086号・1893年", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
+      - speaker: reimu
+        reading: "とっきょを とれなかったと かたられる ことが ありますが、それわ せいかくでわ ありません。"
+        text: "特許を取れなかったと語られることがありますが、それは正確ではありません。"
+      - speaker: reimu
+        reading: "とれなかったのわ、にほんはつと いう ざだけでした。"
+        text: "取れなかったのは、日本初という座だけでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "順番は取られた。でも、ボクの電池は、ボクの電池なのだ。"
+  # ============ 1894 年号カード ============
+  - id: era1894
+    title: ""
+    background: il_yi_manshu
+    bgm: serious
+    cuts:
+      - speaker: reimu
+        reading: "せんはっぴゃくきゅうじゅうよねん。にっしんせんそうが はじまります。"
+        text: "1894年。日清戦争が始まります。"
+        video: assets/clips/yi_era1894.mp4
+        video_full: true
+  # ============ 満洲の冬 ============
+  - id: manshu
+    title: "凍らなかった電池"
+    background: il_yi_manshu
+    bgm: serious
+    stage:
+      - {who: gunjin, x: 0.5}
+    cuts:
+      - speaker: reimu
+        reading: "せんちの まんしゅうわ、にほんの ふゆより はるかに きびしい さむさでした。"
+        text: "戦地の満洲は、日本の冬よりはるかに厳しい寒さでした。"
+      - speaker: gunjin
+        emotion: angry
+        text: "電信が使えん。電池が、みな凍っておる。"
+      - speaker: gunjin
+        emotion: sad
+        text: "電信が止まれば、命令ひとつ届かん。"
+      - speaker: gunjin
+        emotion: angry
+        text: "湯をかけろ。懐に入れて温めろ。何でもいい、動かせ。"
+      - speaker: gunjin
+        emotion: sad
+        text: "……だめだ。温めたそばから、また凍る。"
+      - speaker: gunjin
+        emotion: thinking
+        text: "……凍らない電池が、あると聞いたが。"
+      - speaker: gunjin
+        emotion: normal
+        text: "東京の、屋井という男が作っているそうだ。"
+      - speaker: reimu
+        reading: "やい かんでんちが、でんしんように つかわれます。"
+        text: "屋井乾電池が、電信用に使われます。"
+      - speaker: gunjin
+        emotion: surprised
+        se: don
+        text: "動いた……この寒さで、動いておる！"
+      - speaker: reimu
+        reading: "えきが むきだしでない かんでんちわ、こおらずに でんきを おくりつづけました。"
+        text: "液がむき出しでない乾電池は、凍らずに電気を送り続けました。"
+      - speaker: reimu
+        reading: "この ことわ ごうがいで ほうじられ、しんぶんが やいの せいひんだと つきとめたと つたえられています。"
+        text: "このことは号外で報じられ、新聞が屋井の製品だと突き止めたと伝えられています。"
+  - id: goukai
+    title: ""
+    background: il_yi_koba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: shokko
+        emotion: surprised
+        text: "屋井さん、新聞！屋井さんの名前が出てます！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクの名前が、新聞に出てるのだ！？"
+      - speaker: shokko
+        emotion: happy
+        text: "満洲で使われた電池は、東京の屋井の品だ、と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……冬に負けない電池を作れと、あの5分が言ってたんだ。"
+      - speaker: shokko
+        emotion: thinking
+        text: "また5分の話ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "一生言うと決めてるのだ。"
+      - speaker: reimu
+        reading: "むめいの しょっこうの なまえが、いっきに しられる ように なりました。"
+        text: "無名の職工の名前が、一気に知られるようになりました。"
+  # ============ 逆輸入の模造品 ============
+  - id: mozo
+    title: "海を渡った模造品"
+    background: il_yi_koba
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: shokko
+        emotion: surprised
+        text: "屋井さん、これ見てくれ。アメリカから入ってきた電池だ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……どれ。"
+      - speaker: zundamon
+        emotion: angry
+        se: don
+        text: "これ、ボクのじゃないか！形も中身もそっくりだぞ！"
+      - speaker: shokko
+        emotion: sad
+        text: "海の向こうで真似されて、それが日本に売られてるんだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "自分の発明の模造品を、輸入品として買う国。世界一の実質無料奉仕だぞ。"
+      - speaker: shokko
+        emotion: normal
+        text: "怒っていいところだぞ、それ。"
+      - speaker: reimu
+        reading: "べいこくで つくられた もぞうひんが、にほんに ぎゃくゆにゅうされていました。"
+        text: "米国で作られた模造品が、日本に逆輸入されていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……真似されるということは、いい物だという証拠でもあるのだ。"
+      - speaker: shokko
+        emotion: surprised
+        text: "前向きすぎないか！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "泣いてる[暇|ひま]があったら、もっといい物を作るのだ。"
+  # ============ 1910 年号カード ============
+  - id: era1910
+    title: ""
+    background: il_yi_kojo
+    bgm: you_and_me
+    cuts:
+      - speaker: reimu
+        reading: "せんきゅうひゃくじゅうねん。ごうしがいしゃ やい かんでんちが せつりつされます。"
+        text: "1910年。合資会社屋井乾電池が設立されます。"
+        video: assets/clips/yi_era1910.mp4
+        video_full: true
+  # ============ 会社・筒の形 ============
+  - id: kaisha
+    title: "いまの形になるまで"
+    background: il_yi_kojo
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: shokko
+        emotion: normal
+        text: "社長、新しい形の試作ができました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見せてみろ。……ふむ。筒か。"
+      - speaker: shokko
+        emotion: normal
+        text: "四角より、金属の筒で包んだほうが丈夫で、詰めやすいです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "持ちやすいし、転がしても平気だ。これでいこう。"
+      - speaker: reimu
+        reading: "きんぞくの つつで つつむ かたち。いま わたしたちが しっている かんでんちの すがたです。"
+        text: "金属の筒で包む形。いま私たちが知っている乾電池の姿です。"
+      - speaker: shokko
+        emotion: happy
+        text: "工場も手狭になってきました。注文が止まりません。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あの時計を作ったときは、一人だったのになあ。"
+      - speaker: reimu
+        reading: "あさくさの こうじょうわ、たいしょうじゅうねんの じてんで ねんかん にじゅうまんこ いじょうを つくる、とうじ にほん さいだいの きぼに なっていました。"
+        text: "浅草の工場は、大正10年の時点で年間20万個以上を作る、当時日本最大の規模になっていました。"
+        stat: {value: 20, unit: "万個", label: "年間生産数・1921年"}
+      - speaker: zundamon
+        emotion: happy
+        text: "20万個！？ボクの手はもう追いつかないぞ。"
+      - speaker: reimu
+        reading: "ひとびとわ さきぞうを、かんでんち おうと よぶように なります。"
+        text: "人々は先蔵を、乾電池王と呼ぶようになります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "王だそうだ。5分で門前払いされた男が、王なのだ。"
+      - speaker: shokko
+        emotion: happy
+        text: "その5分、いつまで言うんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一生言うぞ。あれが無ければ、ボクは何も作ってない。"
+  # ============ 震災（クリーン寄り）============
+  - id: shinsai
+    title: "1923・すべて焼ける"
+    background: il_yi_kojo
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: shokko, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "たいしょうじゅうにねん くがつ。かんとう だいしんさい。"
+        text: "大正12年9月。関東大震災。"
+      - speaker: reimu
+        reading: "とうきょうの しせつわ、すべて うしなわれました。"
+        text: "東京の施設は、すべて失われました。"
+      - speaker: shokko
+        emotion: sad
+        text: "社長……工場も、機械も、何も残っていません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "みんなは無事か。"
+      - speaker: shokko
+        emotion: normal
+        text: "はい。みんな、生きています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なら、また作れる。"
+      - speaker: shokko
+        emotion: surprised
+        text: "また、一からですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは一からしかやったことがないのだ。"
+      - speaker: reimu
+        reading: "かわさきに あたらしい こうじょうが たてられ、せいさんわ さいかいされました。このとき、さきぞうわ ごじゅうきゅうさいでした。"
+        text: "川崎に新しい工場が建てられ、生産は再開されました。このとき、先蔵は59歳でした。"
+  # ============ 晩年・死（完全クリーン）============
+  - id: bannen
+    title: ""
+    background: il_yi_room
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: tsumugi, x: 0.74, tag: "妻"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた、少し休んだら。"
+      - speaker: zundamon
+        emotion: normal
+        text: "もう少しだけ、この試作を見ておきたい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "五十年、そればっかりね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "冬に凍らない電池を作ろうと思っただけで、ここまで来たのだ。"
+      - speaker: reimu
+        reading: "しょうわ にねん ろくがつ ついたち。やい さきぞうわ、ろくじゅうさんさいで この よを さりました。"
+        text: "昭和2年6月1日。屋井先蔵は、63歳でこの世を去りました。"
+      - speaker: reimu
+        reading: "あの ごふんの ちこくから、よんじゅうねんあまりが たっていました。"
+        text: "あの5分の遅刻から、40年あまりが経っていました。"
+  # ============ 現代へ ============
+  - id: gendai
+    title: "そして現代へ"
+    background: il_yi_gendai
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        reading: "やい かんでんちわ、せんきゅうひゃくよんじゅうごねんの しゅうせんごに すがたを けしました。"
+        text: "屋井乾電池は、1945年の終戦後に姿を消しました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "会社は、残らなかったのか……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。でも、形は残ったよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたが今日コロコロ転がしてた、その筒。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……これが、あの人の形なのだ？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "会社が消えたのに、形だけ生き残るって、変な話なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作った人の名前を知らなくても、みんな使ってるからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それはそれで、いい発明の証拠かもしれないぞ。"
+      - speaker: reimu
+        reading: "にせんじゅうよねん。あいとりぷるいーの まいるすとーんに、にほんの でんち さんぎょうの たんじょうが にんていされました。"
+        text: "2014年。IEEEのマイルストーンに、日本の電池産業の誕生が認定されました。"
+      - speaker: reimu
+        reading: "めいばんわ、しゅっしんちの ながおかしと、まなびの ばだった とうきょう りか だいがくなどに おくられています。"
+        text: "銘板は、出身地の長岡市と、学びの場だった東京理科大学などに贈られています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "受験に落ちた男が、学校に飾られてるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "しかも、その人が入れなかったほうじゃない学校でね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……人生、どこで拾われるか分からないな。"
+      - speaker: reimu
+        reading: "とうきょう りか だいがくの しりょうかんにわ、やい かんでんちの じつぶつが いまも のこされています。"
+        text: "東京理科大学の資料館には、屋井乾電池の実物が今も残されています。"
+  # ============ 締め ============
+  - id: musubi
+    title: ""
+    background: il_yi_room
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "つむぎ。ボク、さっきの電池、捨てようとしてたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "使い切ったならね。ちゃんと分別してね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "捨てる前に、ちょっと持っておきたくなったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "気持ちは分かるよ。しょうがないで止まらなかった人の形だもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "冬は凍る、手入れが要る、みんなそう言ってたのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこで一人だけ、しょうがなくないって言ったんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの家の不便も、誰かのしょうがないで止まってるかもよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "じゃあボクは、リモコンが行方不明になる問題を解決するのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "それは置き場所を決めるだけで解決するからね！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "発明の前に、片付けなのだ……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "コメントで、あなたの家の不便も教えてほしいぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それでは、また次の動画で。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"

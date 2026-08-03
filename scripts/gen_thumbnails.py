@@ -554,6 +554,33 @@ def p_cane(d, s):
     d.arc([s*0.60, s*0.00, s*0.86, s*0.16], start=200, end=340, fill=(200, 206, 216), width=int(s*0.06))
 
 
+def p_wetcell(d, s):
+    """湿電池（ガラス瓶に液と電極。凍る・こぼれる側）。"""
+    d.rounded_rectangle([s*0.18, s*0.24, s*0.82, s*0.92], radius=10,
+                        fill=(198, 226, 236, 230), outline=(120, 150, 168), width=8)
+    d.rectangle([s*0.20, s*0.52, s*0.80, s*0.90], fill=(150, 196, 214))
+    for x in (0.34, 0.62):
+        d.rectangle([s*x, s*0.10, s*(x+0.08), s*0.72], fill=(120, 126, 140),
+                    outline=(70, 76, 92), width=5)
+    d.ellipse([s*0.16, s*0.18, s*0.84, s*0.32], fill=(214, 236, 244),
+              outline=(120, 150, 168), width=7)
+    # 凍結のひび
+    d.line([(s*0.30, s*0.62), (s*0.42, s*0.74), (s*0.36, s*0.86)],
+           fill=(255, 255, 255), width=7)
+    d.line([(s*0.58, s*0.60), (s*0.68, s*0.78)], fill=(255, 255, 255), width=6)
+
+
+def p_drycell(d, s):
+    """乾電池（筒型・現在の形）。"""
+    d.rounded_rectangle([s*0.28, s*0.14, s*0.72, s*0.94], radius=14,
+                        fill=(206, 172, 70), outline=(120, 96, 40), width=8)
+    d.rounded_rectangle([s*0.42, s*0.04, s*0.58, s*0.16], radius=5,
+                        fill=(180, 186, 200), outline=(110, 116, 132), width=5)
+    d.rectangle([s*0.28, s*0.40, s*0.72, s*0.56], fill=(46, 42, 36))
+    d.rectangle([s*0.28, s*0.82, s*0.72, s*0.94], fill=(160, 166, 180))
+    d.text((s*0.38, s*0.60), "＋", font=font("w9", int(s*0.18)), fill=(40, 36, 30))
+
+
 # ---------------------------------------------------------------- レイアウト
 #
 # 調査した定石（stock-sun / LEL-japan 他）を反映:
@@ -951,6 +978,12 @@ SPECS = {
                             left_big="お手上げ", left_fill=(255, 235, 90, 255),
                             right_big="鳥が解決", right_fill=(255, 255, 255, 255),
                             punch_size=120, emotion="surprised"),
+    "yai-denchi": dict(layout="ba", prop_l=p_wetcell, prop_r=p_drycell, prop_h=300,
+                       left_bg=((30, 40, 62), (42, 54, 82)),
+                       right_bg=((72, 52, 16), (98, 72, 22)),
+                       head_l="冬になると凍る", head_r="凍らない電池へ",
+                       tag_l="液がむき出しの電池", tag_r="いま家じゅうにある筒",
+                       speech="5分の遅刻から…", emo_l="sad", emo_r="surprised"),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="split",
                            left_bg=(56, 26, 30), right_bg=((22, 70, 50), (28, 90, 64)),
