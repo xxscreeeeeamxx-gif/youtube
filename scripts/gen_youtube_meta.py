@@ -105,9 +105,10 @@ def build_entry(slug: str, pdir: Path = None):
         title = sec.get("タイトル", meta.get("title", slug)).strip()
         print(f"‼ 警告: {slug} は TITLES 未登録。旧タイトルが出力されます（TITLES に追加してください）")
 
-    gaiyou = sec.get("概要欄", "")
-    # 概要欄の本文だけ使う（目次は載せない・クレジット以降は作り直す）
-    body = gaiyou.split("▼ 目次")[0].strip()
+    # 本文は script.yaml の meta.summary が正（説明文の修正に再ビルドが要らない）
+    body = (meta.get("summary") or "").strip()
+    if not body:
+        body = sec.get("概要欄", "").split("▼ 目次")[0].strip()
 
     raw_credits = sec.get("概要欄", "").split("▼ クレジット")[-1]
     # モブ音声のクレジット欠け（空スロット）を script.yaml の mobs から補完
