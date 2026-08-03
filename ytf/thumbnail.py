@@ -24,6 +24,29 @@ def _outlined_text(canvas: Image.Image, xy: tuple[int, int], text: str,
 
 
 def run_thumbnail(cfg: Config, proj: Project) -> Path:
+    """サムネイル生成。scripts/gen_thumbnails.py に仕様があればそちらを使う。
+
+    （旧実装は背景+立ち絵+上下テキストだけの簡易版。新デザインへ移行済みで、
+    未登録の動画だけ旧実装にフォールバックする）
+    """
+    try:
+        import sys
+        root = str(cfg.root)
+        if root not in sys.path:
+            sys.path.insert(0, root)
+        from scripts.gen_thumbnails import SPECS, render as _render
+        slug = proj.load_script().meta.slug
+        if slug in SPECS:
+            out = proj.out_dir / "thumbnail.png"
+            _render(slug, out)
+            print(f"サムネイル -> {out}")
+            return out
+    except Exception as e:                      # 新実装が使えない場合は従来どおり
+        print(f"（新サムネ生成をスキップ: {e}）")
+    return _run_thumbnail_legacy(cfg, proj)
+
+
+def _run_thumbnail_legacy(cfg: Config, proj: Project) -> Path:
     from PIL import ImageFont
 
     script = proj.load_script()

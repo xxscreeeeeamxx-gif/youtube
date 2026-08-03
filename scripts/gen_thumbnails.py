@@ -314,8 +314,9 @@ def p_signal(d, s, active="green"):
     """信号機。"""
     d.rounded_rectangle([s*0.10, s*0.30, s*0.90, s*0.66], radius=30,
                         fill=(50, 54, 66), outline=(24, 26, 34), width=10)
-    cols = {"red": (255, 90, 70), "yellow": (255, 210, 70), "green": (60, 220, 140)}
-    for i, name in enumerate(["green", "yellow", "red"]):
+    cols = {"red": (255, 90, 70), "yellow": (255, 210, 70), "green": (60, 220, 140),
+            "blue": (70, 150, 255)}
+    for i, name in enumerate([("blue" if active == "blue" else "green"), "yellow", "red"]):
         cx = s*0.24 + i * s*0.26
         on = name == active
         c = cols[name] if on else tuple(int(v*0.25) for v in cols[name])
@@ -323,6 +324,163 @@ def p_signal(d, s, active="green"):
         if on:
             d.ellipse([cx-s*0.12, s*0.36, cx+s*0.12, s*0.60],
                       outline=(255, 255, 255), width=6)
+
+
+def p_cupnoodle(d, s):
+    """カップ麺（フタを開けた容器）。"""
+    d.polygon([(s*0.24, s*0.30), (s*0.76, s*0.30), (s*0.68, s*0.92), (s*0.32, s*0.92)],
+              fill=(245, 240, 232), outline=(120, 110, 100), width=8)
+    d.ellipse([s*0.22, s*0.22, s*0.78, s*0.38], fill=(238, 232, 222), outline=(120, 110, 100), width=8)
+    d.ellipse([s*0.28, s*0.25, s*0.72, s*0.36], fill=(230, 190, 120))
+    d.rectangle([s*0.30, s*0.48, s*0.70, s*0.60], fill=(210, 60, 50))
+    d.rectangle([s*0.30, s*0.66, s*0.70, s*0.72], fill=(180, 170, 160))
+    # 湯気
+    for k, x in enumerate([0.36, 0.50, 0.64]):
+        d.arc([s*x-s*0.06, s*0.02, s*x+s*0.06, s*0.22], start=200+k*20, end=340+k*20,
+              fill=(235, 238, 245), width=9)
+
+
+def p_endoscope(d, s):
+    """胃カメラ（先端にレンズと光）。"""
+    d.line([(s*0.12, s*0.10), (s*0.44, s*0.30), (s*0.62, s*0.58), (s*0.54, s*0.88)],
+           fill=(70, 76, 92), width=int(s*0.16), joint="curve")
+    d.ellipse([s*0.36, s*0.72, s*0.74, s*1.06], fill=(215, 220, 232), outline=(60, 66, 82), width=9)
+    d.ellipse([s*0.44, s*0.80, s*0.66, s*0.99], fill=(90, 200, 240), outline=(40, 120, 170), width=6)
+    d.ellipse([s*0.02, s*0.02, s*0.30, s*0.28], fill=(160, 166, 182), outline=(60, 66, 82), width=8)
+    for a in (0, 45, 90, 135):
+        import math
+        rad = math.radians(a)
+        d.line([(s*0.53 + math.cos(rad)*s*0.13, s*0.91 + math.sin(rad)*s*0.13),
+                (s*0.53 + math.cos(rad)*s*0.22, s*0.91 + math.sin(rad)*s*0.22)],
+               fill=(255, 230, 120), width=6)
+
+
+def p_sushi(d, s):
+    """回転寿司（皿に乗ったにぎり）。"""
+    d.ellipse([s*0.08, s*0.58, s*0.92, s*0.92], fill=(220, 90, 80), outline=(140, 40, 34), width=8)
+    d.ellipse([s*0.18, s*0.62, s*0.82, s*0.86], fill=(240, 130, 118))
+    d.rounded_rectangle([s*0.28, s*0.40, s*0.72, s*0.68], radius=18, fill=(250, 248, 244),
+                        outline=(190, 184, 174), width=6)
+    d.rounded_rectangle([s*0.24, s*0.30, s*0.76, s*0.50], radius=16, fill=(240, 110, 96),
+                        outline=(180, 60, 50), width=6)
+    for x in (0.34, 0.50, 0.66):
+        d.line([(s*x, s*0.33), (s*x, s*0.47)], fill=(255, 180, 170), width=6)
+
+
+def p_ricecooker(d, s):
+    """電気炊飯器。"""
+    d.rounded_rectangle([s*0.12, s*0.34, s*0.88, s*0.90], radius=26,
+                        fill=(238, 240, 246), outline=(120, 128, 142), width=9)
+    d.ellipse([s*0.10, s*0.22, s*0.90, s*0.46], fill=(248, 250, 254), outline=(120, 128, 142), width=9)
+    d.rounded_rectangle([s*0.40, s*0.14, s*0.60, s*0.26], radius=8, fill=(150, 156, 172))
+    d.rounded_rectangle([s*0.24, s*0.58, s*0.52, s*0.74], radius=8, fill=(40, 44, 56))
+    d.ellipse([s*0.62, s*0.60, s*0.76, s*0.74], fill=(240, 90, 70), outline=(255, 255, 255), width=5)
+    for k, x in enumerate([0.34, 0.50, 0.66]):
+        d.arc([s*x-s*0.06, s*0.00, s*x+s*0.06, s*0.18], start=200+k*20, end=340+k*20,
+              fill=(235, 238, 245), width=8)
+
+
+def p_gameboy(d, s):
+    """携帯ゲーム機。"""
+    d.rounded_rectangle([s*0.22, s*0.06, s*0.78, s*0.96], radius=22,
+                        fill=(198, 200, 190), outline=(110, 112, 106), width=8)
+    d.rounded_rectangle([s*0.30, s*0.14, s*0.70, s*0.46], radius=10, fill=(60, 66, 60))
+    d.rounded_rectangle([s*0.34, s*0.18, s*0.66, s*0.42], radius=6, fill=(150, 172, 110))
+    # 十字キー
+    d.rectangle([s*0.30, s*0.62, s*0.44, s*0.68], fill=(50, 52, 58))
+    d.rectangle([s*0.34, s*0.58, s*0.40, s*0.72], fill=(50, 52, 58))
+    d.ellipse([s*0.56, s*0.60, s*0.66, s*0.70], fill=(170, 60, 90))
+    d.ellipse([s*0.66, s*0.55, s*0.76, s*0.65], fill=(170, 60, 90))
+    d.rounded_rectangle([s*0.40, s*0.82, s*0.60, s*0.88], radius=4, fill=(90, 94, 102))
+
+
+def p_umami(d, s):
+    """味の素（結晶と昆布）。"""
+    d.polygon([(s*0.16, s*0.94), (s*0.30, s*0.20), (s*0.44, s*0.94)],
+              fill=(40, 70, 46), outline=(20, 44, 26))
+    d.polygon([(s*0.30, s*0.94), (s*0.44, s*0.28), (s*0.58, s*0.94)],
+              fill=(52, 88, 56), outline=(20, 44, 26))
+    d.rounded_rectangle([s*0.58, s*0.44, s*0.94, s*0.94], radius=12,
+                        fill=(250, 252, 255), outline=(150, 160, 180), width=7)
+    import random
+    rnd = random.Random(5)
+    for _ in range(14):
+        x = rnd.uniform(0.62, 0.90) * s
+        y = rnd.uniform(0.52, 0.88) * s
+        d.rectangle([x, y, x + s*0.045, y + s*0.045], fill=(235, 240, 250),
+                    outline=(170, 180, 200), width=3)
+
+
+def p_usb(d, s):
+    """USBメモリ。"""
+    d.rounded_rectangle([s*0.30, s*0.30, s*0.70, s*0.94], radius=12,
+                        fill=(50, 56, 70), outline=(150, 156, 172), width=8)
+    d.rounded_rectangle([s*0.36, s*0.06, s*0.64, s*0.34], radius=6,
+                        fill=(200, 206, 220), outline=(110, 116, 132), width=6)
+    d.rectangle([s*0.40, s*0.12, s*0.60, s*0.24], fill=(120, 126, 142))
+    d.ellipse([s*0.44, s*0.72, s*0.56, s*0.84], fill=(90, 220, 150))
+    d.rounded_rectangle([s*0.36, s*0.42, s*0.64, s*0.62], radius=4, fill=(30, 34, 44))
+
+
+def p_autodoor(d, s):
+    """自動ドアとセンサー。"""
+    d.rectangle([s*0.06, s*0.10, s*0.94, s*0.20], fill=(90, 96, 110))
+    d.rounded_rectangle([s*0.44, s*0.20, s*0.58, s*0.30], radius=4, fill=(40, 44, 56))
+    for a in (-30, 0, 30):
+        import math
+        rad = math.radians(90 + a)
+        d.line([(s*0.51, s*0.30), (s*0.51 + math.cos(rad)*s*0.34, s*0.30 + math.sin(rad)*s*0.34)],
+               fill=(255, 220, 90), width=7)
+    d.rectangle([s*0.08, s*0.22, s*0.44, s*0.96], fill=(190, 220, 235, 200),
+                outline=(120, 128, 142), width=8)
+    d.rectangle([s*0.58, s*0.22, s*0.94, s*0.96], fill=(190, 220, 235, 200),
+                outline=(120, 128, 142), width=8)
+
+
+def p_gate(d, s):
+    """自動改札機。"""
+    d.rounded_rectangle([s*0.06, s*0.34, s*0.40, s*0.94], radius=14,
+                        fill=(210, 214, 224), outline=(110, 116, 132), width=8)
+    d.rounded_rectangle([s*0.60, s*0.34, s*0.94, s*0.94], radius=14,
+                        fill=(210, 214, 224), outline=(110, 116, 132), width=8)
+    d.rounded_rectangle([s*0.10, s*0.38, s*0.36, s*0.50], radius=8, fill=(60, 160, 220))
+    d.rounded_rectangle([s*0.64, s*0.38, s*0.90, s*0.50], radius=8, fill=(60, 160, 220))
+    d.rectangle([s*0.40, s*0.62, s*0.60, s*0.70], fill=(90, 200, 140))
+    d.rounded_rectangle([s*0.42, s*0.06, s*0.58, s*0.28], radius=4,
+                        fill=(250, 248, 240), outline=(150, 150, 160), width=5)
+
+
+def p_escalator(d, s):
+    """エスカレーター（斜めの段）。"""
+    for k in range(5):
+        x0 = s*0.08 + k * s*0.16
+        y0 = s*0.90 - k * s*0.16
+        d.rectangle([x0, y0, x0 + s*0.22, y0 + s*0.10],
+                    fill=(200, 206, 218), outline=(110, 116, 132), width=6)
+    d.line([(s*0.06, s*0.74), (s*0.94, s*0.16)], fill=(60, 66, 80), width=14)
+    d.line([(s*0.06, s*0.74), (s*0.94, s*0.16)], fill=(140, 146, 160), width=6)
+
+
+def p_qr(d, s):
+    """QRコード。"""
+    d.rounded_rectangle([s*0.06, s*0.06, s*0.94, s*0.94], radius=10, fill=(255, 255, 255),
+                        outline=(40, 44, 56), width=6)
+    def finder(x, y):
+        u = s*0.20
+        d.rectangle([x, y, x+u, y+u], fill=(20, 22, 30))
+        d.rectangle([x+u*0.18, y+u*0.18, x+u*0.82, y+u*0.82], fill=(255, 255, 255))
+        d.rectangle([x+u*0.34, y+u*0.34, x+u*0.66, y+u*0.66], fill=(20, 22, 30))
+    finder(s*0.12, s*0.12); finder(s*0.68, s*0.12); finder(s*0.12, s*0.68)
+    import random
+    rnd = random.Random(3)
+    for gy in range(9):
+        for gx in range(9):
+            x = s*0.14 + gx*s*0.08
+            y = s*0.14 + gy*s*0.08
+            if (gx < 3 and gy < 3) or (gx > 5 and gy < 3) or (gx < 3 and gy > 5):
+                continue
+            if rnd.random() < 0.52:
+                d.rectangle([x, y, x+s*0.062, y+s*0.062], fill=(20, 22, 30))
 
 
 # ---------------------------------------------------------------- レイアウト
@@ -510,12 +668,18 @@ def layout_beforeafter(spec):
     d.line([(W // 2, top), (W // 2, H)], fill=(255, 255, 255), width=10)
 
     # 上部見出し（左=白 / 右=黄。合わせて一文になる）
-    f = font("w9", spec.get("head_size", 78))
     t1, t2 = spec["head_l"], spec["head_r"]
-    w1, w2 = int(f.getlength(t1)), int(f.getlength(t2))
     gap = 22
+    size = spec.get("head_size", 78)
+    while size > 44:
+        f = font("w9", size)
+        if int(f.getlength(t1)) + int(f.getlength(t2)) + gap <= W - 40:
+            break
+        size -= 3
+    f = font("w9", size)
+    w1, w2 = int(f.getlength(t1)), int(f.getlength(t2))
     x = max(12, (W - (w1 + w2 + gap)) // 2)
-    y = (top - spec.get("head_size", 78)) // 2 - 6
+    y = (top - size) // 2 - 6
     for t, col, xx in [(t1, (255, 255, 255), x), (t2, (255, 222, 40), x + w1 + gap)]:
         d.text((xx, y), t, font=f, fill=col, stroke_width=8, stroke_fill=(12, 12, 18))
 
@@ -635,37 +799,88 @@ def layout_charbig(spec):
 
 # ---------------------------------------------------------------- 動画ごとの仕様
 
-# 文言はタイトルと重複させない。hook=状況(5〜9字)、punch=感情の落とし所(3〜6字)
+# 全20本の仕様。型は題材で使い分ける:
+#   ba      = 時代の変化がある（ビフォー→アフター）
+#   charbig = 驚き・落胆が主題（キャラの表情で見せる）
+#   split   = 数字や二択の対比
+#   hero    = 発明品そのものを主役に
+# 文言はタイトルと重複させない（一覧で情報が重複して弱くなる）
 SPECS = {
-    "karaoke": dict(layout="ba", prop_l=p_jukebox, prop_r=p_mic, prop_h=340,
+    # ---- ドラマ（誕生秘話）----
+    "momofuku-meme": dict(layout="ba", prop_l=p_cupnoodle, prop_r=p_cupnoodle, prop_h=280,
+                          left_bg=((30, 26, 24), (44, 38, 34)),
+                          right_bg=((186, 60, 40), (214, 84, 52)),
+                          head_l="47歳・全財産ゼロ", head_r="世界に年1000億食",
+                          tag_l="1958年:裏庭の小屋", tag_r="いま:世界の非常食",
+                          speech="小屋から始まったのだ", emo_l="sad", emo_r="happy"),
+    "qr-meme": dict(layout="ba", prop_l=p_qr, prop_r=p_qr, prop_h=270,
+                    left_bg=((28, 32, 44), (40, 46, 62)),
+                    right_bg=((22, 78, 122), (30, 100, 150)),
+                    head_l="工場の「疲れた」が", head_r="世界標準になった",
+                    tag_l="1992年:愛知の部品工場", tag_r="いま:世界のレジで",
+                    speech="特許はタダなのだ", emo_l="sad", emo_r="surprised"),
+    "karaoke": dict(layout="ba", prop_l=p_jukebox, prop_r=p_mic, prop_h=300,
                     left_bg=((26, 30, 44), (38, 44, 62)),
                     right_bg=((58, 22, 92), (84, 34, 126)),
                     head_l="手作り11台が", head_r="世界の定番に",
                     tag_l="1971年:神戸のスナック", tag_r="いま:年4400億円市場",
                     speech="なのに収入0円…", emo_l="sad", emo_r="surprised"),
-    "cutter-knife": dict(layout="hero", prop=p_blade, tilt=0, prop_h=520,
-                         bg=((18, 52, 88), (26, 72, 116)),
-                         hook="板チョコを見て", punch="刃を折った",
-                         punch_font="851", punch_size=168, emotion="happy"),
-    "washlet": dict(layout="hero", prop=p_toilet, tilt=-8, prop_h=470,
-                    bg=((14, 62, 70), (20, 84, 94)),
-                    hook="社員300人が", punch="体を張った",
-                    punch_font="851", punch_size=168, emotion="surprised"),
-    "tenji-block-meme": dict(layout="hero", prop=p_block, tilt=-10, prop_h=470,
-                             bg=((18, 40, 80), (26, 56, 106)),
-                             hook="友の目が見えなくなる", punch="全財産を賭けた",
-                             punch_font="w9", punch_size=138, emotion="normal"),
-    "banknote-charbig": dict(layout="charbig", prop=p_bill, prop_h=330,
-                             bg=((44, 20, 60), (58, 30, 78)),
-                             who="zundamon", emotion="surprised",
-                             lines=[("コピー機は", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                    ("お札だけ", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                    ("拒否する", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
-                             speech="なぜバレるのだ"),
-    "banknote": dict(layout="hero", prop=p_bill, tilt=-10, prop_h=470,
-                     bg=((40, 18, 48), (58, 26, 68)),
-                     hook="コピー機に入れると", punch="拒否される",
-                     punch_font="genkai", punch_size=168, emotion="thinking"),
+    "rice-cooker-meme": dict(layout="ba", prop_l=p_ricecooker, prop_r=p_ricecooker, prop_h=290,
+                             left_bg=((44, 34, 26), (60, 46, 34)),
+                             right_bg=((26, 74, 92), (34, 96, 118)),
+                             head_l="夜明け前から火の番", head_r="スイッチひとつへ",
+                             tag_l="1950年代:主婦の重労働", tag_r="いま:全国の台所に",
+                             speech="妻が千回炊いたのだ", emo_l="sad", emo_r="happy"),
+    "tenji-block-meme": dict(layout="ba", prop_l=p_block, prop_r=p_block, prop_h=280,
+                             left_bg=((28, 32, 48), (40, 46, 66)),
+                             right_bg=((186, 148, 20), (214, 176, 34)),
+                             head_l="全財産を道路に", head_r="世界が真似した",
+                             tag_l="1967年:岡山の交差点", tag_r="いま:駅と歩道の定番",
+                             speech="友の一言だったのだ", emo_l="sad", emo_r="normal"),
+    "gastro-meme": dict(layout="charbig", prop=p_endoscope, prop_h=330,
+                        bg=((22, 44, 78), (28, 56, 94)), who="zundamon", emotion="surprised",
+                        lines=[("開けなければ", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
+                               ("見えなかった", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
+                               ("胃の中を撮る", 126, (24, 20, 14, 255), (252, 214, 36, 255))],
+                        speech="たった2人でだと"),
+    "kaiten-meme": dict(layout="ba", prop_l=p_sushi, prop_r=p_sushi, prop_h=290,
+                        left_bg=((40, 30, 26), (56, 42, 34)),
+                        right_bg=((26, 84, 66), (34, 108, 84)),
+                        head_l="人手が足りない", head_r="皿が勝手に回る",
+                        tag_l="1958年:1皿20円の店", tag_r="ヒントはビール工場",
+                        speech="構想10年なのだ", emo_l="sad", emo_r="happy"),
+    "yokoi-gunpei": dict(layout="charbig", prop=p_gameboy, prop_h=340,
+                         bg=((30, 34, 52), (40, 46, 68)), who="zundamon", emotion="surprised",
+                         lines=[("カラー全盛の時代に", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                ("あえて白黒", 118, (24, 20, 14, 255), (252, 214, 36, 255)),
+                                ("そして1億台", 92, (255, 255, 255, 255), (196, 40, 34, 245))],
+                         speech="枯れた技術なのだ"),
+    "cutter-knife": dict(layout="charbig", prop=p_blade, prop_h=330,
+                         bg=((18, 52, 88), (26, 72, 116)), who="zundamon", emotion="happy",
+                         lines=[("切れなくなったら", 70, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                ("折ればいい", 130, (24, 20, 14, 255), (252, 214, 36, 255)),
+                                ("ヒントは板チョコ", 66, (255, 255, 255, 255), (196, 40, 34, 245))],
+                         speech="町の印刷工の発明だ"),
+    "washlet": dict(layout="charbig", prop=p_toilet, prop_h=320,
+                    bg=((14, 62, 70), (20, 84, 94)), who="zundamon", emotion="surprised",
+                    lines=[("日本人の体は", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
+                           ("日本人が測る", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
+                           ("社員300人が実験", 108, (24, 20, 14, 255), (252, 214, 36, 255))],
+                    speech="体を張ったのだ"),
+    "ajinomoto": dict(layout="charbig", prop=p_umami, prop_h=320,
+                      bg=((44, 34, 20), (60, 46, 28)), who="zundamon", emotion="thinking",
+                      lines=[("甘い・しょっぱい", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
+                             ("すっぱい・苦い", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
+                             ("5つ目の味がある", 118, (24, 20, 14, 255), (252, 214, 36, 255))],
+                      speech="昆布12キロから"),
+    "shinkansen-bird": dict(layout="split",
+                            left_bg=(28, 32, 50), right_bg=((26, 86, 118), (34, 108, 144)),
+                            prop_l=p_shinkansen, prop_r=p_kingfisher,
+                            hook="時速300キロの騒音",
+                            left_big="お手上げ", left_fill=(255, 235, 90, 255),
+                            right_big="鳥が解決", right_fill=(255, 255, 255, 255),
+                            punch_size=120, emotion="surprised"),
+    # ---- 解説 ----
     "battery-80-duo": dict(layout="split",
                            left_bg=(56, 26, 30), right_bg=((22, 70, 50), (28, 90, 64)),
                            prop_l=lambda d, s: p_battery(d, s, 100, (255, 90, 70)),
@@ -674,22 +889,50 @@ SPECS = {
                            left_big="100%", left_fill=(255, 108, 96, 255),
                            right_big="80%", right_fill=(120, 240, 170, 255),
                            punch_size=150, emotion="surprised"),
-    "shinkansen-bird": dict(layout="split",
-                            left_bg=(28, 32, 50), right_bg=((26, 86, 118), (34, 108, 144)),
-                            prop_l=p_shinkansen, prop_r=p_kingfisher,
-                            hook="時速300キロの騒音",
-                            left_big="お手上げ", left_fill=(255, 235, 90, 255),
-                            right_big="鳥が解決", right_fill=(255, 255, 255, 255),
-                            left_font="851", right_font="851",
-                            punch_size=120, emotion="surprised"),
+    "banknote": dict(layout="charbig", prop=p_bill, prop_h=330,
+                     bg=((44, 20, 60), (58, 30, 78)), who="zundamon", emotion="surprised",
+                     lines=[("コピー機は", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                            ("お札だけ", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                            ("拒否する", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
+                     speech="なぜバレるのだ"),
     "traffic-light": dict(layout="split",
                           left_bg=(22, 50, 34), right_bg=((28, 58, 128), (38, 76, 158)),
                           prop_l=lambda d, s: p_signal(d, s, "green"),
-                          prop_r=lambda d, s: p_signal(d, s, "green"),
+                          prop_r=lambda d, s: p_signal(d, s, "blue"),
                           hook="どう見ても",
                           left_big="緑", left_fill=(110, 240, 160, 255),
                           right_big="でも青", right_fill=(160, 205, 255, 255),
                           punch_size=150, emotion="thinking"),
+    "auto-door": dict(layout="charbig", prop=p_autodoor, prop_h=320,
+                      bg=((26, 44, 66), (34, 58, 86)), who="zundamon", emotion="angry",
+                      lines=[("黒い服だと", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
+                             ("開かない", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
+                             ("無視される理由", 118, (24, 20, 14, 255), (252, 214, 36, 255))],
+                      speech="ボクが軽いのか？"),
+    "ticket-gate": dict(layout="charbig", prop=p_gate, prop_h=320,
+                        bg=((22, 46, 60), (30, 62, 80)), who="zundamon", emotion="thinking",
+                        lines=[("裏返しでも", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                               ("逆さでも", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                               ("なぜ通れる", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
+                        speech="1分で60人だと"),
+    "escalator": dict(layout="charbig", prop=p_escalator, prop_h=330,
+                      bg=((30, 40, 58), (40, 54, 76)), who="zundamon", emotion="surprised",
+                      lines=[("片側空けの", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                             ("公式ルールは", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                             ("存在しない", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
+                      speech="誰が決めたのだ"),
+    "flash-memory": dict(layout="charbig", prop=p_usb, prop_h=330,
+                         bg=((28, 34, 56), (38, 46, 74)), who="zundamon", emotion="surprised",
+                         lines=[("電源を切っても", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                ("10年忘れない", 126, (24, 20, 14, 255), (252, 214, 36, 255)),
+                                ("洗濯機でも無事", 68, (255, 255, 255, 255), (196, 40, 34, 245))],
+                         speech="なぜ消えないのだ"),
+    "cup-noodle": dict(layout="charbig", prop=p_cupnoodle, prop_h=330,
+                       bg=((60, 28, 24), (80, 40, 32)), who="zundamon", emotion="thinking",
+                       lines=[("お湯を入れて", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                              ("3分待つ間に", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
+                              ("何が起きてる", 126, (24, 20, 14, 255), (252, 214, 36, 255))],
+                       speech="待てないのだ"),
 }
 
 
