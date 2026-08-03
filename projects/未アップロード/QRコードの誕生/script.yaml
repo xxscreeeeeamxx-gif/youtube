@@ -1959,6 +1959,122 @@ scenes:
       - speaker: reimu
         text: "発明家はいまも、現場の声を聞いています。"
         reading: "はつめいかわいまも、げんばのこえをきいています。"
+  # ============ 現代の実用編（解説版から統合）============
+  - id: anzen
+    title: "四角の、たったひとつの弱点"
+    background: il_qr_conbini
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "さて、ここからは現代を生きるわたしたちの話ね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "40年の努力の成果を、ありがたく使う側の話だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その頑丈な四角にも、たったひとつだけ弱点があるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "3割欠けても平気なのに！？何が弱点なんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "人間には、中身が読めないこと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……確かに。ボクにはただの白黒の模様にしか見えないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        se: don
+        text: "だから、貼り替えられても気づけないの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "貼り替え！？そんな手口があるのか！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "本物のポスターの四角の上に、偽物のシールを貼るのよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "読み取ると、そっくりな偽サイトに連れていかれるの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "信用を、そのまま乗っ取られてるじゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。機械は正しく読んでる。だまされてるのは人間のほう。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "誤り訂正でも、これは直せないんだな……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "直せるのは汚れと欠けだけ。悪意は守備範囲外なの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、ボクらはどうすればいいんだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "読み取ったあと、サイトを開く前にURLをひと目見る。それだけ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ひと目でいいのか。それならタイパも悪くないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "特にお金を払う四角のときは、2つだけ確認してね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "シールが浮いていないか。URLが公式のものか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊れに強いのは機械の仕事で、だまされないのは人間の仕事なのだ。"
+        telops:
+          - {text: "最後のひと目は、人間の仕事", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "いいまとめ。技術がどれだけ賢くなっても、そこだけは任せられないのよ。"
+  - id: omake
+    title: ""
+    background: il_qr_conbini
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "そうだ、報告があるのだ。ボクも四角を作ってみたぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "作れるんだ。どんなの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "ずんだ[色|いろ]の、おしゃれな四角だ。マスも背景も、全部きれいな緑なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あー。それ、読めないやつだね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なんでだ！？ちゃんと四角に並べたぞ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "白と黒みたいに、マスと背景の明暗がはっきり分かれてないと、機械が見分けられないの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "おしゃれが犠牲になったのだ……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "こういうときこそ、誤り訂正でなんとかするのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "誤り訂正は欠けたところを直す技術だから、全体が薄いのは直しようがないよ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "濃いずんだ[色|いろ]と白の組み合わせなら、いけるかも。"
+      - speaker: zundamon
+        emotion: happy
+        text: "濃いずんだ[色|いろ]で作り直すのだ！明暗さえあれば、緑でも戦えるぞ！"
   - id: musubi
     title: ""
     background: il_qr_conbini
