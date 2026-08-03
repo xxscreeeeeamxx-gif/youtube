@@ -199,6 +199,10 @@ def aquestalk_synthe(cfg: Config, text: str, preset: str, speed: float) -> bytes
             f"AquesTalkPlayer がありません: {bin_path}\n"
             "https://www.a-quest.com/products/aquestalkplayer.html の"
             "Mac版dmgを tools/AquesTalkPlayer.app に展開してください")
+    # 分かち書きのスペースは AquesTalk では1個につき約0.18秒の「間」になり、
+    # 1文が細切れに聞こえる（ユーザー指摘 2026-08）。台本は可読性のため
+    # スペースを残せるようにし、合成の直前でだけ取り除く
+    text = text.replace(" ", "").replace("\u3000", "")
     with tempfile.TemporaryDirectory() as td:
         raw = Path(td) / "raw.wav"
         subprocess.run(
@@ -325,7 +329,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 ch = cfg.character(cut.speaker)
                 preset = ch.get("aquestalk_preset", "れいむ")
                 speed = float(ch.get("speed_scale", 1.0))
-                key_src = f"{spoken}|aquestalk|{preset}|{speed}|{tts}"
+                key_src = f"{spoken}|aquestalk|{preset}|{speed}|{tts}|nosp1"
             else:
                 style_id, speed, pitch, intonation = style_for(
                     cfg, cut.speaker, cut.emotion)
