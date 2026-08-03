@@ -483,6 +483,77 @@ def p_qr(d, s):
                 d.rectangle([x, y, x+s*0.062, y+s*0.062], fill=(20, 22, 30))
 
 
+def p_barcode(d, s):
+    """バーコード（QRの「ビフォー」。情報量の少なさを絵で見せる）。"""
+    d.rounded_rectangle([s*0.06, s*0.22, s*0.94, s*0.80], radius=8, fill=(255, 255, 255),
+                        outline=(40, 44, 56), width=6)
+    import random
+    rnd = random.Random(9)
+    x = s*0.13
+    while x < s*0.87:
+        w = rnd.choice([s*0.012, s*0.02, s*0.032])
+        d.rectangle([x, s*0.28, x + w, s*0.64], fill=(20, 22, 30))
+        x += w + rnd.choice([s*0.014, s*0.022])
+    for k, ch in enumerate("4901234"):
+        d.text((s*0.16 + k*s*0.10, s*0.66), ch, font=font("w9", int(s*0.10)),
+               fill=(30, 34, 44))
+
+
+def p_kamado(d, s):
+    """かまどと羽釜（炊飯器の「ビフォー」）。"""
+    d.polygon([(s*0.12, s*0.94), (s*0.20, s*0.52), (s*0.80, s*0.52), (s*0.88, s*0.94)],
+              fill=(96, 74, 60), outline=(56, 42, 34), width=8)
+    d.ellipse([s*0.16, s*0.36, s*0.84, s*0.60], fill=(120, 124, 134), outline=(60, 64, 74), width=8)
+    d.ellipse([s*0.26, s*0.30, s*0.74, s*0.48], fill=(78, 62, 50), outline=(48, 38, 30), width=7)
+    d.rectangle([s*0.34, s*0.68, s*0.66, s*0.92], fill=(30, 24, 20))
+    # 炎
+    for k, x in enumerate([0.42, 0.50, 0.58]):
+        d.polygon([(s*x, s*0.70), (s*(x+0.045), s*0.80), (s*x, s*0.90), (s*(x-0.045), s*0.80)],
+                  fill=(250, 150 + k*20, 40))
+    for k, x in enumerate([0.30, 0.50, 0.70]):
+        d.arc([s*x-s*0.06, s*0.06, s*x+s*0.06, s*0.28], start=200+k*20, end=340+k*20,
+              fill=(228, 232, 240), width=8)
+
+
+def p_chickenramen(d, s):
+    """どんぶりのラーメン（カップ麺の「ビフォー」=チキンラーメン）。"""
+    d.ellipse([s*0.06, s*0.40, s*0.94, s*0.92], fill=(240, 236, 228),
+              outline=(150, 60, 50), width=9)
+    d.ellipse([s*0.14, s*0.44, s*0.86, s*0.74], fill=(212, 160, 70))
+    for k, x in enumerate([0.28, 0.44, 0.60, 0.74]):
+        d.arc([s*x-s*0.08, s*0.46, s*x+s*0.08, s*0.66], start=190, end=350,
+              fill=(238, 200, 110), width=7)
+    d.ellipse([s*0.30, s*0.50, s*0.44, s*0.60], fill=(250, 248, 240), outline=(200, 190, 170), width=4)
+    d.rectangle([s*0.54, s*0.48, s*0.72, s*0.58], fill=(60, 130, 70))
+    for k, x in enumerate([0.34, 0.50, 0.66]):
+        d.arc([s*x-s*0.06, s*0.06, s*x+s*0.06, s*0.34], start=200+k*20, end=340+k*20,
+              fill=(232, 236, 244), width=8)
+
+
+def p_sushilane(d, s):
+    """回転レーン（回転寿司の「アフター」）。"""
+    d.polygon([(s*0.02, s*0.72), (s*0.98, s*0.46), (s*0.98, s*0.68), (s*0.02, s*0.94)],
+              fill=(70, 76, 92), outline=(40, 44, 56), width=6)
+    d.polygon([(s*0.02, s*0.70), (s*0.98, s*0.44), (s*0.98, s*0.50), (s*0.02, s*0.76)],
+              fill=(150, 156, 172))
+    for k, (x, y) in enumerate([(0.14, 0.66), (0.44, 0.58), (0.74, 0.50)]):
+        d.ellipse([s*(x-0.11), s*(y-0.06), s*(x+0.11), s*(y+0.06)],
+                  fill=(220, 90, 80), outline=(140, 40, 34), width=5)
+        d.rounded_rectangle([s*(x-0.06), s*(y-0.12), s*(x+0.06), s*(y-0.02)], radius=6,
+                            fill=(250, 248, 244), outline=(190, 184, 174), width=4)
+        d.rounded_rectangle([s*(x-0.07), s*(y-0.16), s*(x+0.07), s*(y-0.08)], radius=5,
+                            fill=(240, 110, 96), outline=(180, 60, 50), width=4)
+
+
+def p_cane(d, s):
+    """白い杖（点字ブロックの「ビフォー」）。"""
+    d.line([(s*0.72, s*0.06), (s*0.30, s*0.92)], fill=(248, 250, 252), width=int(s*0.10))
+    d.line([(s*0.72, s*0.06), (s*0.30, s*0.92)], fill=(200, 206, 216), width=int(s*0.03))
+    d.line([(s*0.62, s*0.26), (s*0.54, s*0.42)], fill=(220, 60, 50), width=int(s*0.10))
+    d.ellipse([s*0.22, s*0.84, s*0.40, s*1.00], fill=(230, 234, 242), outline=(140, 146, 160), width=6)
+    d.arc([s*0.60, s*0.00, s*0.86, s*0.16], start=200, end=340, fill=(200, 206, 216), width=int(s*0.06))
+
+
 # ---------------------------------------------------------------- レイアウト
 #
 # 調査した定石（stock-sun / LEL-japan 他）を反映:
@@ -807,17 +878,17 @@ def layout_charbig(spec):
 # 文言はタイトルと重複させない（一覧で情報が重複して弱くなる）
 SPECS = {
     # ---- ドラマ（誕生秘話）----
-    "momofuku-meme": dict(layout="ba", prop_l=p_cupnoodle, prop_r=p_cupnoodle, prop_h=280,
+    "momofuku-meme": dict(layout="ba", prop_l=p_chickenramen, prop_r=p_cupnoodle, prop_h=280,
                           left_bg=((30, 26, 24), (44, 38, 34)),
                           right_bg=((186, 60, 40), (214, 84, 52)),
                           head_l="47歳・全財産ゼロ", head_r="世界に年1000億食",
-                          tag_l="1958年:裏庭の小屋", tag_r="いま:世界の非常食",
+                          tag_l="1958年:お湯だけで戻る麺", tag_r="1971年:容器ごと商品に",
                           speech="小屋から始まったのだ", emo_l="sad", emo_r="happy"),
-    "qr-meme": dict(layout="ba", prop_l=p_qr, prop_r=p_qr, prop_h=270,
+    "qr-meme": dict(layout="ba", prop_l=p_barcode, prop_r=p_qr, prop_h=270,
                     left_bg=((28, 32, 44), (40, 46, 62)),
                     right_bg=((22, 78, 122), (30, 100, 150)),
                     head_l="工場の「疲れた」が", head_r="世界標準になった",
-                    tag_l="1992年:愛知の部品工場", tag_r="いま:世界のレジで",
+                    tag_l="バーコードは数字20桁", tag_r="QRは漢字1800字",
                     speech="特許はタダなのだ", emo_l="sad", emo_r="surprised"),
     "karaoke": dict(layout="ba", prop_l=p_jukebox, prop_r=p_mic, prop_h=300,
                     left_bg=((26, 30, 44), (38, 44, 62)),
@@ -825,17 +896,17 @@ SPECS = {
                     head_l="手作り11台が", head_r="世界の定番に",
                     tag_l="1971年:神戸のスナック", tag_r="いま:年4400億円市場",
                     speech="なのに収入0円…", emo_l="sad", emo_r="surprised"),
-    "rice-cooker-meme": dict(layout="ba", prop_l=p_ricecooker, prop_r=p_ricecooker, prop_h=290,
+    "rice-cooker-meme": dict(layout="ba", prop_l=p_kamado, prop_r=p_ricecooker, prop_h=290,
                              left_bg=((44, 34, 26), (60, 46, 34)),
                              right_bg=((26, 74, 92), (34, 96, 118)),
                              head_l="夜明け前から火の番", head_r="スイッチひとつへ",
-                             tag_l="1950年代:主婦の重労働", tag_r="いま:全国の台所に",
+                             tag_l="1950年代:火の番が必要", tag_r="いま:スイッチだけ",
                              speech="妻が千回炊いたのだ", emo_l="sad", emo_r="happy"),
-    "tenji-block-meme": dict(layout="ba", prop_l=p_block, prop_r=p_block, prop_h=280,
+    "tenji-block-meme": dict(layout="ba", prop_l=p_cane, prop_r=p_block, prop_h=280,
                              left_bg=((28, 32, 48), (40, 46, 66)),
                              right_bg=((186, 148, 20), (214, 176, 34)),
                              head_l="全財産を道路に", head_r="世界が真似した",
-                             tag_l="1967年:岡山の交差点", tag_r="いま:駅と歩道の定番",
+                             tag_l="足の裏だけが頼り", tag_r="いま:世界の駅と歩道に",
                              speech="友の一言だったのだ", emo_l="sad", emo_r="normal"),
     "gastro-meme": dict(layout="charbig", prop=p_endoscope, prop_h=330,
                         bg=((22, 44, 78), (28, 56, 94)), who="zundamon", emotion="surprised",
@@ -843,11 +914,11 @@ SPECS = {
                                ("見えなかった", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
                                ("胃の中を撮る", 126, (24, 20, 14, 255), (252, 214, 36, 255))],
                         speech="たった2人でだと"),
-    "kaiten-meme": dict(layout="ba", prop_l=p_sushi, prop_r=p_sushi, prop_h=290,
+    "kaiten-meme": dict(layout="ba", prop_l=p_sushi, prop_r=p_sushilane, prop_h=290,
                         left_bg=((40, 30, 26), (56, 42, 34)),
                         right_bg=((26, 84, 66), (34, 108, 84)),
                         head_l="人手が足りない", head_r="皿が勝手に回る",
-                        tag_l="1958年:1皿20円の店", tag_r="ヒントはビール工場",
+                        tag_l="1958年:人手が足りない", tag_r="ヒントはビール工場",
                         speech="構想10年なのだ", emo_l="sad", emo_r="happy"),
     "yokoi-gunpei": dict(layout="charbig", prop=p_gameboy, prop_h=340,
                          bg=((30, 34, 52), (40, 46, 68)), who="zundamon", emotion="surprised",
