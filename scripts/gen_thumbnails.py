@@ -1028,9 +1028,15 @@ if __name__ == "__main__":
     if slugs and slugs[0] == "--sample":
         outdir = Path(slugs[1])
         slugs = slugs[2:] or list(SPECS)
+    from ytf.config import find_project_dir, is_uploaded
+    explicit = bool(sys.argv[1:]) and sys.argv[1] != "--sample"
     for slug in slugs:
         if slug not in SPECS:
             print(f"スキップ（SPECS未登録）: {slug}")
+            continue
+        d = find_project_dir(cfg.root, slug)
+        if d is not None and is_uploaded(d) and not explicit and not outdir:
+            print(f"スキップ（公開済み・編集しない）: {slug}")
             continue
         dst = (outdir / f"tn_{slug}.png") if outdir else None
         print("生成:", render(slug, dst))

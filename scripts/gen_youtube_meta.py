@@ -141,9 +141,16 @@ def build_entry(slug: str, pdir: Path = None):
 if __name__ == "__main__":
     out_all = []
     count = 0
-    from ytf.config import Config, iter_projects
+    from ytf.config import Config, iter_projects, is_uploaded
     for p in iter_projects(Config.load().root):
         if not (p / "out" / "video.mp4").exists():
+            continue
+        if is_uploaded(p):
+            # 公開済みは編集しない。既存の youtube.txt をそのまま集約に載せる
+            f = p / "youtube.txt"
+            if f.exists():
+                out_all.append(f"{'=' * 60}\n【{p.name}】(公開済み)\n{'=' * 60}\n{f.read_text()}")
+                count += 1
             continue
         # slug はフォルダ名ではなく script.yaml の meta.slug（TITLES のキー）
         try:

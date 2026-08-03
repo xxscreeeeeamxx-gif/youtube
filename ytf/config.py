@@ -88,6 +88,15 @@ def find_project_dir(root: Path, name: str) -> Path | None:
     return None
 
 
+UPLOADED_DIR = "アップロード済み"
+
+
+def is_uploaded(path) -> bool:
+    """公開済みプロジェクトか（一括処理の対象外にする）。"""
+    from pathlib import Path as _P
+    return UPLOADED_DIR in _P(path).parts
+
+
 def iter_projects(root: Path):
     """projects/ 以下の全プロジェクトディレクトリを列挙する。"""
     base = root / "projects"
