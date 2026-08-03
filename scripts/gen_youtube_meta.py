@@ -103,7 +103,7 @@ def build_entry(slug: str, pdir: Path = None):
     title = TITLES.get(slug)
     if not title:
         title = sec.get("タイトル", meta.get("title", slug)).strip()
-        print(f"警告: {slug} は TITLES 未登録。metadata.txt のタイトルをそのまま使用")
+        print(f"‼ 警告: {slug} は TITLES 未登録。旧タイトルが出力されます（TITLES に追加してください）")
 
     gaiyou = sec.get("概要欄", "")
     # 概要欄の本文だけ使う（目次は載せない・クレジット以降は作り直す）
@@ -142,8 +142,15 @@ if __name__ == "__main__":
     count = 0
     from ytf.config import Config, iter_projects
     for p in iter_projects(Config.load().root):
-        slug = p.name
-        if slug in SKIP or not (p / "out" / "video.mp4").exists():
+        if not (p / "out" / "video.mp4").exists():
+            continue
+        # slug はフォルダ名ではなく script.yaml の meta.slug（TITLES のキー）
+        try:
+            slug = (yaml.safe_load((p / "script.yaml").read_text())
+                    or {}).get("meta", {}).get("slug") or p.name
+        except Exception:
+            slug = p.name
+        if slug in SKIP:
             continue
         entry = build_entry(slug, p)
         if not entry:

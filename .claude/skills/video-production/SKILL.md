@@ -220,6 +220,11 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
   （ytf/config.py の find_project_dir が projects/ 以下を再帰検索する）。
   新作は `projects/未アップロード/` に作り、投稿したら手動で `アップロード済み/` へ移し、
   PUBLISH.md の表も更新する
+- **フォルダ名とslugを混同しない**: 動画メタの生成（gen_youtube_meta.py の TITLES 等）は
+  必ず script.yaml の `meta.slug` をキーにする。`p.name`（フォルダ名）を slug 扱いすると、
+  日本語フォルダ化以降は辞書に一致せず旧タイトルが黙って出力される
+  （2026-08に全20本のタイトルが古い形式に戻る事故。ユーザー指摘で発覚）。
+  未登録slugは警告を出すので、生成後は必ずログを見る
 - **新作を始める前に名前の衝突を確認する**: `projects/<slug>/`・`scripts/gen_*.py`・
   `assets/clips/` の接頭辞が既存プロジェクトと被っていないか必ず先に見る
   （旧qr-code解説動画の script.yaml を新作で上書きしかけた実例。既存があれば
