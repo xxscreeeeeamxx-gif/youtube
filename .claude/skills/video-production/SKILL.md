@@ -224,8 +224,9 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
   公開後に直したい点が出たら、動画は直さず YouTube Studio 側で
   タイトル・説明文・サムネだけ差し替える
 - **プロジェクトのフォルダ構成**（2026-08 変更）: `projects/アップロード済み/<日本語名>/` と
-  `projects/未アップロード/<日本語名>/`、テスト用は `projects/_テスト/`。
-  フォルダ名は投稿タイトルの【】内（例: カラオケの誕生）。script.yaml の `meta.slug` は
+  `projects/未アップロード/<番号>_<日本語名>/`、テスト用は `projects/_テスト/`。
+  フォルダ名は「制作順の2桁番号＋投稿タイトルの【】内」（例: 21_乾電池の誕生）。
+  番号は通し番号で、公開済み・未公開をまたいで連番。新作には次の番号を付ける。script.yaml の `meta.slug` は
   従来どおり半角英数のまま保つ（キャッシュキー・クリップ接頭辞に使うため）。
   `ytf <cmd> <slug>` でも `ytf <cmd> <日本語フォルダ名>` でも解決される
   （ytf/config.py の find_project_dir が projects/ 以下を再帰検索する）。

@@ -74,8 +74,13 @@ def find_project_dir(root: Path, name: str) -> Path | None:
     if not base.is_dir():
         return None
     cands = sorted(base.rglob("script.yaml"))
+    import re as _re
+
+    def _bare(n: str) -> str:
+        return _re.sub(r"^\d+_", "", n)   # 制作順の番号プレフィックスを外す
+
     for sp in cands:
-        if sp.parent.name == name:
+        if sp.parent.name == name or _bare(sp.parent.name) == _bare(name):
             return sp.parent
     import yaml as _yaml
     for sp in cands:
