@@ -895,6 +895,63 @@ def layout_charbig(spec):
     return vignette(img, 70)
 
 
+def _photo_bg(name, darken=0.42, blur=0):
+    """実写を16:9に切り出して暗くする（文字を載せるため）。"""
+    src = Path("assets/photos") / name
+    im = Image.open(src).convert("RGB")
+    r = max(W / im.width, H / im.height)
+    im = im.resize((int(im.width * r) + 1, int(im.height * r) + 1), Image.LANCZOS)
+    x0 = (im.width - W) // 2
+    y0 = (im.height - H) // 2
+    im = im.crop((x0, y0, x0 + W, y0 + H))
+    if blur:
+        im = im.filter(ImageFilter.GaussianBlur(blur))
+    dark = Image.new("RGB", (W, H), (0, 0, 0))
+    im = Image.blend(im, dark, darken)
+    return im.convert("RGBA")
+
+
+def _bolt(canvas, cx, cy, s=90, col=(255, 214, 40, 255)):
+    """稲妻マーク（充電の記号）。"""
+    lay = Image.new("RGBA", (s * 2, s * 2), (0, 0, 0, 0))
+    d = ImageDraw.Draw(lay)
+    d.polygon([(s * 1.15, 6), (s * 0.55, s * 1.02), (s * 0.98, s * 1.02),
+               (s * 0.80, s * 1.94), (s * 1.46, s * 0.86), (s * 1.02, s * 0.86),
+               (s * 1.28, 6)], fill=col)
+    lay = outline_sprite(lay, 8)
+    canvas.alpha_composite(lay, (int(cx - lay.width / 2), int(cy - lay.height / 2)))
+
+
+def layout_photo(spec):
+    """実写背景型。視聴者自身の行動を写真で見せ、損失を文字で言い切る。
+
+    「100%と80%」のような抽象的な数字だけでは何の話か伝わらないので、
+    情景（夜の充電）＋損失（寿命が縮む）をセットで出す。
+    """
+    img = _photo_bg(spec["photo"], spec.get("darken", 0.45), spec.get("blur", 0))
+    # 上部の小フック（黒帯）
+    hook_label(img, (30, 28), spec["hook"], spec.get("hook_size", 52))
+    # 中央〜下の大コピー（帯付きの塊）
+    bw, bh = text_block(img, (28, spec.get("text_top", 150)), spec["lines"])
+    # 右上のアクセント: バッジ（バッテリー残量など）か稲妻
+    badge = spec.get("badge")
+    if badge:
+        pr = prop_layer(badge, tilt=spec.get("badge_tilt", 8))
+        sc = spec.get("badge_h", 250) / pr.height
+        pr = pr.resize((int(pr.width * sc), int(pr.height * sc)), Image.LANCZOS)
+        img.alpha_composite(pr, (W - pr.width - 150, 26))
+        _bolt(img, W - 152, 96, 58)
+    elif spec.get("bolt", True):
+        _bolt(img, W - 250, 130, 76)
+    b = bust("zundamon", spec.get("emotion", "surprised"), 430)
+    img.alpha_composite(b, (W - b.width + 46, H - b.height + 24))
+    if spec.get("speech"):
+        f2 = font("w9", 44)
+        sw = int(f2.getlength(spec["speech"])) + 64
+        _speech(img, (min(W - sw - 24, int(W * 0.44)), H - 126), spec["speech"], 44)
+    return vignette(img, 90)
+
+
 # ---------------------------------------------------------------- 動画ごとの仕様
 
 # 全20本の仕様。型は題材で使い分ける:
@@ -985,14 +1042,13 @@ SPECS = {
                        tag_l="液がむき出しの電池", tag_r="いま家じゅうにある筒",
                        speech="5分の遅刻から…", emo_l="sad", emo_r="surprised"),
     # ---- 解説 ----
-    "battery-80-duo": dict(layout="split",
-                           left_bg=(56, 26, 30), right_bg=((22, 70, 50), (28, 90, 64)),
-                           prop_l=lambda d, s: p_battery(d, s, 100, (255, 90, 70)),
-                           prop_r=lambda d, s: p_battery(d, s, 80, (80, 220, 130)),
-                           hook="スマホの充電",
-                           left_big="100%", left_fill=(255, 108, 96, 255),
-                           right_big="80%", right_fill=(120, 240, 170, 255),
-                           punch_size=150, emotion="surprised"),
+    "battery-80-duo": dict(layout="photo", photo="ph_charging_desk.jpg", darken=0.38,
+                           badge=lambda d, s: p_battery(d, s, 100, (255, 86, 66)),
+                           badge_h=250, hook="毎晩ケーブルを挿す人へ",
+                           lines=[("その100%が", 78, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                  ("バッテリーを", 78, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                  ("削っている", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
+                           speech="満タンが正義じゃない", emotion="surprised"),
     "banknote": dict(layout="charbig", prop=p_bill, prop_h=330,
                      bg=((44, 20, 60), (58, 30, 78)), who="zundamon", emotion="surprised",
                      lines=[("コピー機は", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
@@ -1044,7 +1100,7 @@ def render(slug, out_path=None):
     spec = SPECS[slug]
     kind = spec["layout"]
     img = {"split": layout_split, "band": layout_band, "ba": layout_beforeafter,
-           "charbig": layout_charbig}.get(kind, layout_hero)(spec)
+           "charbig": layout_charbig, "photo": layout_photo}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
         d = find_project_dir(cfg.root, slug)
