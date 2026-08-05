@@ -1,4 +1,4 @@
-# 乾電池を作った男・屋井先蔵 再現ドラマ・ミーム版
+# 乾電池を作った男・屋井[先蔵|さきぞう] 再現ドラマ・ミーム版
 #
 # == 裏取り済みの事実（出典: 国立科学博物館 理工電子資料館 / 国立公文書館「公文書にみる発明のチカラ」/
 #    IEEE ETHW マイルストーン / 電気学会「でんきの礎」/ 東京理科大学 / 上山明博『白いツツジ』系）==
@@ -51,8 +51,8 @@
 meta:
   title: "5分の遅刻から始まった。凍らない電池を作った男【乾電池誕生・再現ドラマ・ミーム版】"
   slug: "yai-denchi"
-  summary: "リモコンにもリチウムイオンにも先立つ、乾電池という発明。作ったのは越後長岡の没落士族の子、屋井先蔵という男でした。13歳で丁稚に出され、進学の道も断たれた青年が、冬になると凍ってしまう当時の電池に挑みます。日本では世界初とも語られる発明の裏で、彼が5年間できなかったこととは。ずんだもんが屋井先蔵を演じる再現ドラマです。"
-  tags: ["乾電池", "屋井先蔵", "発明", "明治", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  summary: "リモコンにもリチウムイオンにも先立つ、乾電池という発明。作ったのは越後長岡の没落士族の子、屋井[先蔵|さきぞう]という男でした。13歳で丁稚に出され、進学の道も断たれた青年が、冬になると凍ってしまう当時の電池に挑みます。日本では世界初とも語られる発明の裏で、彼が5年間できなかったこととは。ずんだもんが屋井[先蔵|さきぞう]を演じる再現ドラマです。"
+  tags: ["乾電池", "屋井[先蔵|さきぞう]", "発明", "明治", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
   thumbnail:
     top: "5分の遅刻から"
     bottom: "凍らない電池"
@@ -143,28 +143,28 @@ scenes:
         video_span: 2
       - speaker: reimu
         reading: "せんはっぴゃくろくじゅうよねん いちがつ。なまえわ やい さきぞう。"
-        text: "1864年1月。名前は、屋井先蔵。"
+        text: "1864年1月。名前は、屋井[先蔵|さきぞう]。"
   # ============ 幼少期・父の死（クリーン）============
   - id: youth
     title: "1870年代・越後長岡"
     background: il_yi_nagaoka
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, scale: 0.78, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.78, tag: "[先蔵|さきぞう]"}
       - {who: haha, x: 0.74}
     cuts:
       - speaker: reimu
         reading: "さきぞうが むっつの ころ、ちちが なくなったと つたえられます。"
-        text: "先蔵が6つのころ、父が亡くなったと伝えられます。"
+        text: "[先蔵|さきぞう]が6つのころ、父が亡くなったと伝えられます。"
       - speaker: haha
         emotion: sad
-        text: "先蔵。これからは、二人で生きていくのよ。"
+        text: "[先蔵|さきぞう]。これからは、二人で生きていくのよ。"
       - speaker: zundamon
         emotion: sad
         text: "……うん。"
       - speaker: haha
         emotion: sad
-        text: "先蔵。この家は、もう出なければならないの。"
+        text: "[先蔵|さきぞう]。この家は、もう出なければならないの。"
       - speaker: zundamon
         emotion: surprised
         text: "どうしてなのだ。父上の家だぞ。"
@@ -185,7 +185,7 @@ scenes:
         text: "親子は叔父のもとに引き取られました。"
       - speaker: reimu
         reading: "そして じゅうさんさいの はる。さきぞうわ ひとりで とうきょうえ むかいます。"
-        text: "そして13歳の春。先蔵は一人で東京へ向かいます。"
+        text: "そして13歳の春。[先蔵|さきぞう]は一人で東京へ向かいます。"
       - speaker: haha
         emotion: normal
         text: "神田の時計屋さんが、預かってくださるそうよ。"
@@ -204,7 +204,7 @@ scenes:
     background: il_yi_tokeiten
     bgm: curious
     stage:
-      - {who: zundamon, x: 0.3, flip: true, scale: 0.82, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.82, tag: "[先蔵|さきぞう]"}
       - {who: tokei, x: 0.74}
     cuts:
       - speaker: reimu
@@ -239,7 +239,7 @@ scenes:
         text: "見るのも仕事の邪魔じゃ。行け。"
       - speaker: reimu
         reading: "それでも さきぞうわ、しごとの あいまに ぶんかいされた とけいを ながめつづけました。"
-        text: "それでも先蔵は、仕事の合間に分解された時計を眺め続けました。"
+        text: "それでも[先蔵|さきぞう]は、仕事の合間に分解された時計を眺め続けました。"
       - speaker: zundamon
         emotion: thinking
         text: "……歯車が、こっちを回して、あっちが止まる。"
@@ -267,7 +267,7 @@ scenes:
     background: il_yi_tokeiten
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, scale: 0.9, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.9, tag: "[先蔵|さきぞう]"}
       - {who: tokei, x: 0.74}
     cuts:
       - speaker: reimu
@@ -317,7 +317,7 @@ scenes:
     cuts:
       - speaker: reimu
         reading: "めいじじゅうしちねん。にじゅっさいの さきぞうわ、もういちど とうきょうえ むかいます。"
-        text: "明治17年。20歳の先蔵は、もう一度東京へ向かいます。"
+        text: "明治17年。20歳の[先蔵|さきぞう]は、もう一度東京へ向かいます。"
         video: assets/clips/yi_era1884.mp4
         video_full: true
   # ============ 受験失敗（伝承としてヘッジ）============
@@ -326,7 +326,7 @@ scenes:
     background: il_yi_school
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shiken, x: 0.74}
     cuts:
       - speaker: reimu
@@ -374,7 +374,7 @@ scenes:
         text: "のちに語られる伝承として、広く知られている話です。"
       - speaker: reimu
         reading: "たしかなのわ、さきぞうが にど しっぱいし、しんがくの みちが とざされたこと。"
-        text: "確かなのは、先蔵が二度失敗し、進学の道が閉ざされたこと。"
+        text: "確かなのは、[先蔵|さきぞう]が二度失敗し、進学の道が閉ざされたこと。"
       - speaker: zundamon
         emotion: sad
         text: "……もう、受けられないのだ。"
@@ -387,7 +387,7 @@ scenes:
     background: il_yi_room
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: tsumugi, x: 0.74, tag: "下宿の人"}
     cuts:
       - speaker: tsumugi
@@ -438,7 +438,7 @@ scenes:
         text: "学校が閉まってるなら、外で学ぶまでなのだ。"
       - speaker: reimu
         reading: "さきぞうわ、とうきょう ぶつり がっこうの じっけんじょで しょっことして はたらきながら、まなびはじめます。"
-        text: "先蔵は、東京物理学校の実験所で職工として働きながら、学びはじめます。"
+        text: "[先蔵|さきぞう]は、東京物理学校の実験所で職工として働きながら、学びはじめます。"
       - speaker: reimu
         reading: "げんざいの とうきょう りか だいがく。がくもんの ばの すみで、どくがくわ つづきました。"
         text: "現在の東京理科大学。学問の場の隅で、独学は続きました。"
@@ -450,7 +450,7 @@ scenes:
     cuts:
       - speaker: reimu
         reading: "めいじじゅうはちねん。にじゅういっさいの さきぞうわ、ひとつの とけいを かんせいさせます。"
-        text: "明治18年。21歳の先蔵は、一つの時計を完成させます。"
+        text: "明治18年。21歳の[先蔵|さきぞう]は、一つの時計を完成させます。"
         video: assets/clips/yi_era1885.mp4
         video_full: true
   # ============ 連続電気時計 ============
@@ -459,7 +459,7 @@ scenes:
     background: il_yi_koba
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -521,7 +521,7 @@ scenes:
     background: il_yi_koba
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: reimu
@@ -591,7 +591,7 @@ scenes:
     background: il_yi_koba
     bgm: curious
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: zundamon
@@ -669,7 +669,7 @@ scenes:
         text: "いい表現だ。それでいこう。乾いた電池、乾電池なのだ。"
       - speaker: reimu
         reading: "かんでんちと いう なまえわ、さきぞうたちが なづけたと つたえられています。"
-        text: "乾電池という名前は、先蔵たちが名づけたと伝えられています。"
+        text: "乾電池という名前は、[先蔵|さきぞう]たちが名づけたと伝えられています。"
       - speaker: reimu
         reading: "はつめいの ねんわ、せんはっぴゃくはちじゅうななねん ごろと される ことが おおいのですが、"
         text: "発明の年は、1887年ごろとされることが多いのですが、"
@@ -682,7 +682,7 @@ scenes:
     background: il_yi_koba
     bgm: serious
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: reimu
@@ -705,7 +705,7 @@ scenes:
         text: "日本では屋井が世界初とされることが多く、国際的にはガスナーが最初とされることが多い。"
       - speaker: reimu
         reading: "たしかなのわ、さきぞうが だれの まねでも なく、どくりつに たどりついた ということです。"
-        text: "確かなのは、先蔵が誰の真似でもなく、独立にたどり着いたということです。"
+        text: "確かなのは、[先蔵|さきぞう]が誰の真似でもなく、独立にたどり着いたということです。"
       - speaker: zundamon
         emotion: normal
         text: "ボクは、ボクの冬を相手にしてただけなのだ。"
@@ -715,7 +715,7 @@ scenes:
     background: il_yi_room
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: tsumugi, x: 0.74, tag: "妻"}
     cuts:
       - speaker: tsumugi
@@ -723,7 +723,7 @@ scenes:
         text: "あなた、この電池、特許は出さないの？"
       - speaker: zundamon
         emotion: sad
-        text: "……出したい。出したいが、金がないのだ。"
+        text: "……出したい。出したいが、[金|かね]がないのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "いくら要るの。"
@@ -735,7 +735,7 @@ scenes:
         text: "ひと月止めたら、注文に間に合わないものね。"
       - speaker: zundamon
         emotion: normal
-        text: "うちには、明日の炭素棒を買う金しかないのだ。"
+        text: "うちには、明日の炭素棒を買う[金|かね]しかないのだ。"
       - speaker: reimu
         reading: "とっきょの しゅつがんにわ、てすうりょうが かかります。"
         text: "特許の出願には、手数料がかかります。"
@@ -753,7 +753,7 @@ scenes:
         text: "いまは、一個でも多く売って、明日の材料を買うほうが先だ。"
       - speaker: reimu
         reading: "さきぞうが かんでんちの とっきょを しゅつがんしたのわ、せんはっぴゃくきゅうじゅうにねん じゅうがつ よっか。"
-        text: "先蔵が乾電池の特許を出願したのは、1892年10月4日。"
+        text: "[先蔵|さきぞう]が乾電池の特許を出願したのは、1892年10月4日。"
       - speaker: reimu
         reading: "はつめいから、およそ ごねんが たっていました。"
         text: "発明から、およそ5年が経っていました。"
@@ -766,7 +766,7 @@ scenes:
     background: il_yi_room
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: tsumugi, x: 0.74, tag: "妻"}
     cuts:
       - speaker: reimu
@@ -793,7 +793,7 @@ scenes:
         text: "ボクのほうが、先に出してるじゃないか！"
       - speaker: reimu
         reading: "しゅつがんわ さきぞうが じゅういちにち はやく、とうろくわ たかはしが いっかげついじょう はやかった。"
-        text: "出願は先蔵が11日早く、登録は高橋が1か月以上早かった。"
+        text: "出願は[先蔵|さきぞう]が11日早く、登録は高橋が1か月以上早かった。"
       - speaker: reimu
         reading: "しんさの じゅんばんが、にほんはつの ざを わけました。"
         text: "審査の順番が、日本初の座を分けました。"
@@ -814,7 +814,7 @@ scenes:
         text: "遅れたのは、ボクだ。5年、出せなかったボクだ。"
       - speaker: reimu
         reading: "さきぞうの とっきょも、よくとしに みとめられました。とっきょ だいにせんはちじゅうろくごう。"
-        text: "先蔵の特許も、翌年に認められました。特許第2086号。"
+        text: "[先蔵|さきぞう]の特許も、翌年に認められました。特許第2086号。"
         telops:
           - {text: "特許第2086号・1893年", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
       - speaker: reimu
@@ -884,7 +884,7 @@ scenes:
     background: il_yi_koba
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -914,7 +914,7 @@ scenes:
     background: il_yi_koba
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -965,7 +965,7 @@ scenes:
     background: il_yi_kojo
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -998,7 +998,7 @@ scenes:
         text: "20万個！？ボクの手はもう追いつかないぞ。"
       - speaker: reimu
         reading: "ひとびとわ さきぞうを、かんでんち おうと よぶように なります。"
-        text: "人々は先蔵を、乾電池王と呼ぶようになります。"
+        text: "人々は[先蔵|さきぞう]を、乾電池王と呼ぶようになります。"
       - speaker: zundamon
         emotion: happy
         text: "王だそうだ。5分で門前払いされた男が、王なのだ。"
@@ -1014,7 +1014,7 @@ scenes:
     background: il_yi_kojo
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: reimu
@@ -1046,14 +1046,14 @@ scenes:
         text: "ボクは一からしかやったことがないのだ。"
       - speaker: reimu
         reading: "かわさきに あたらしい こうじょうが たてられ、せいさんわ さいかいされました。このとき、さきぞうわ ごじゅうきゅうさいでした。"
-        text: "川崎に新しい工場が建てられ、生産は再開されました。このとき、先蔵は59歳でした。"
+        text: "川崎に新しい工場が建てられ、生産は再開されました。このとき、[先蔵|さきぞう]は59歳でした。"
   # ============ 晩年・死（完全クリーン）============
   - id: bannen
     title: ""
     background: il_yi_room
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
       - {who: tsumugi, x: 0.74, tag: "妻"}
     cuts:
       - speaker: tsumugi
@@ -1073,7 +1073,7 @@ scenes:
         text: "冬に凍らない電池を作ろうと思っただけで、ここまで来たのだ。"
       - speaker: reimu
         reading: "しょうわ にねん ろくがつ ついたち。やい さきぞうわ、ろくじゅうさんさいで この よを さりました。"
-        text: "昭和2年6月1日。屋井先蔵は、63歳でこの世を去りました。"
+        text: "昭和2年6月1日。屋井[先蔵|さきぞう]は、63歳でこの世を去りました。"
       - speaker: reimu
         reading: "あの ごふんの ちこくから、よんじゅうねんあまりが たっていました。"
         text: "あの5分の遅刻から、40年あまりが経っていました。"

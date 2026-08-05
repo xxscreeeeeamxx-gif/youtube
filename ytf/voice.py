@@ -320,7 +320,11 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
             if lead:
                 t += lead
             display, spoken = split_reading(cut.text)
-            if cut.reading:
+            # AquesTalk は漢字かな交じり文のほうが形態素解析でアクセントが付き、
+            # ひらがなだけだと抑揚が平板になる（実測で抑揚3.10→3.99・ユーザー指摘 2026-08）。
+            # 読みの上書きが要る語は text 側に [表示|よみ] タグを付ける運用に統一する
+            is_aq = (cfg.character(cut.speaker) or {}).get("engine") == "aquestalk"
+            if cut.reading and not is_aq:
                 # 誤読の手動修正: 読み上げだけを差し替える（表示は text のまま）
                 spoken = cut.reading
             engine = cfg.character(cut.speaker).get("engine", "voicevox")
@@ -329,7 +333,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 ch = cfg.character(cut.speaker)
                 preset = ch.get("aquestalk_preset", "れいむ")
                 speed = float(ch.get("speed_scale", 1.0))
-                key_src = f"{spoken}|aquestalk|{preset}|{speed}|{tts}|nosp1"
+                key_src = f"{spoken}|aquestalk|{preset}|{speed}|{tts}|nosp1|kanji1"
             else:
                 style_id, speed, pitch, intonation = style_for(
                     cfg, cut.speaker, cut.emotion)
