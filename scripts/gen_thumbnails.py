@@ -904,6 +904,21 @@ def layout_charbig(spec):
         pr = pr.resize((max(1, int(pr.width * psc)), max(1, int(pr.height * psc))),
                        Image.LANCZOS)
         img.alpha_composite(pr, (26, H - pr.height + 4))
+    # 題材ラベル（何を説明する動画かを一目で示す）
+    if spec.get("subject"):
+        sf = font("w9", spec.get("subject_size", 62))
+        tw = int(sf.getlength(spec["subject"]))
+        pad = 22
+        lay = Image.new("RGBA", (tw + pad * 2, int(sf.size * 1.5)), (0, 0, 0, 0))
+        ld = ImageDraw.Draw(lay)
+        ld.rounded_rectangle([0, 0, lay.width - 1, lay.height - 1], radius=14,
+                             fill=(250, 250, 252, 250))
+        ld.text((pad, int(sf.size * 0.16)), spec["subject"], font=sf, fill=(20, 22, 32))
+        sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+        sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 150)), (0, 0), lay.split()[3])
+        pos = spec.get("subject_at", (int(W * 0.30), H - 118))
+        img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(7)), (pos[0] + 6, pos[1] + 9))
+        img.alpha_composite(lay, pos)
     if spec.get("speech"):
         f2 = font("w9", 44)
         sw = int(f2.getlength(spec["speech"])) + 64
@@ -1026,25 +1041,29 @@ SPECS = {
                          lines=[("カラー全盛の時代に", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
                                 ("あえて白黒", 118, (24, 20, 14, 255), (252, 214, 36, 255)),
                                 ("そして1億台", 92, (255, 255, 255, 255), (196, 40, 34, 245))],
-                         speech="枯れた技術なのだ"),
+                         subject="ゲームボーイ", subject_at=(228, 556), subject_size=58,
+                       speech="枯れた技術なのだ"),
     "cutter-knife": dict(layout="charbig", prop=p_blade, prop_h=330,
                          bg=((18, 52, 88), (26, 72, 116)), who="zundamon", emotion="happy",
                          lines=[("切れなくなったら", 70, (255, 255, 255, 255), (22, 20, 30, 245)),
                                 ("折ればいい", 130, (24, 20, 14, 255), (252, 214, 36, 255)),
                                 ("ヒントは板チョコ", 66, (255, 255, 255, 255), (196, 40, 34, 245))],
-                         speech="町の印刷工の発明だ"),
+                         subject="カッターナイフ", subject_at=(228, 556), subject_size=50,
+                       speech="町の印刷工の発明だ"),
     "washlet": dict(layout="charbig", prop=p_toilet, prop_h=320,
                     bg=((14, 62, 70), (20, 84, 94)), who="zundamon", emotion="surprised",
                     lines=[("日本人の体は", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
                            ("日本人が測る", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
                            ("社員300人が実験", 108, (24, 20, 14, 255), (252, 214, 36, 255))],
-                    speech="体を張ったのだ"),
+                    subject="ウォシュレット", subject_at=(228, 556), subject_size=50,
+                       speech="体を張ったのだ"),
     "ajinomoto": dict(layout="charbig", prop=p_umami, prop_h=320,
                       bg=((44, 34, 20), (60, 46, 28)), who="zundamon", emotion="thinking",
                       lines=[("甘い・しょっぱい", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
                              ("すっぱい・苦い", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
                              ("5つ目の味がある", 118, (24, 20, 14, 255), (252, 214, 36, 255))],
-                      speech="昆布12キロから"),
+                      subject="味の素", subject_at=(228, 556), subject_size=58,
+                       speech="昆布12キロから"),
     "shinkansen-bird": dict(layout="split",
                             left_bg=(28, 32, 50), right_bg=((26, 86, 118), (34, 108, 144)),
                             prop_l=p_shinkansen, prop_r=p_kingfisher,
@@ -1085,31 +1104,36 @@ SPECS = {
                       lines=[("黒い服だと", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
                              ("開かない", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
                              ("無視される理由", 118, (24, 20, 14, 255), (252, 214, 36, 255))],
-                      speech="ボクが軽いのか？"),
+                      subject="自動ドア", subject_at=(228, 556), subject_size=58,
+                       speech="ボクが軽いのか？"),
     "ticket-gate": dict(layout="charbig", prop=p_gate, prop_h=320,
                         bg=((22, 46, 60), (30, 62, 80)), who="zundamon", emotion="thinking",
                         lines=[("裏返しでも", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
                                ("逆さでも", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
                                ("なぜ通れる", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
-                        speech="1分で60人だと"),
+                        subject="自動改札機", subject_at=(228, 556), subject_size=58,
+                       speech="1分で60人だと"),
     "escalator": dict(layout="charbig", prop=p_escalator, prop_h=330,
                       bg=((30, 40, 58), (40, 54, 76)), who="zundamon", emotion="surprised",
                       lines=[("片側空けの", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
                              ("公式ルールは", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
                              ("存在しない", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
-                      speech="誰が決めたのだ"),
+                      subject="エスカレーター", subject_at=(228, 556), subject_size=50,
+                       speech="誰が決めたのだ"),
     "flash-memory": dict(layout="charbig", prop=p_usb, prop_h=330,
                          bg=((28, 34, 56), (38, 46, 74)), who="zundamon", emotion="surprised",
                          lines=[("電池も電気も", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
                                 ("入ってないのに", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
                                 ("記憶が消えない", 116, (24, 20, 14, 255), (252, 214, 36, 255)),
                                 ("洗濯機でも無事", 64, (255, 255, 255, 255), (196, 40, 34, 245))],
+                         subject="USBメモリ", subject_at=(228, 556), subject_size=58,
                          speech="なぜ消えないのだ"),
     "cup-noodle": dict(layout="charbig", prop=p_cupnoodle, prop_h=330,
                        bg=((60, 28, 24), (80, 40, 32)), who="zundamon", emotion="thinking",
                        lines=[("お湯を入れて", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
                               ("3分待つ間に", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
                               ("何が起きてる", 126, (24, 20, 14, 255), (252, 214, 36, 255))],
+                       subject="カップ麺", subject_at=(228, 556), subject_size=58,
                        speech="待てないのだ"),
 }
 
