@@ -819,7 +819,7 @@ def _dots(size, base, dot, r=9, step=46):
     return img
 
 
-def text_block(canvas, xy, lines, align="left"):
+def text_block(canvas, xy, lines, align="left", max_w=None):
     """見出しを帯付きの塊として置く（プロのサムネの定番）。
 
     lines: [(文字列, サイズ, 文字色, 帯色 or None)]
@@ -831,6 +831,11 @@ def text_block(canvas, xy, lines, align="left"):
     for text, size, fill, band in lines:
         f = font("w9", size)
         tw = int(f.getlength(text))
+        if max_w:                       # 右のキャラに文字が被らないよう縮める
+            while size > 40 and tw + int(size * 0.44) > max_w:
+                size -= 3
+                f = font("w9", size)
+                tw = int(f.getlength(text))
         pad_x, pad_y = int(size * 0.22), int(size * 0.16)
         bw, bh = tw + pad_x * 2, size + pad_y * 2
         lay = Image.new("RGBA", (bw, bh), (0, 0, 0, 0))
@@ -878,7 +883,8 @@ def layout_charbig(spec):
     b = outline_sprite(b.resize((int(b.width * sc), int(b.height * sc)), Image.LANCZOS), 14)
     img.alpha_composite(b, (W - b.width + 74, H - b.height + 20))
     # 左の見出し（帯付きの塊。余白を残さない）
-    bw, bh = text_block(img, (26, spec.get("text_top", 26)), spec["lines"])
+    bw, bh = text_block(img, (26, spec.get("text_top", 26)), spec["lines"],
+                        max_w=spec.get("text_max_w", int(W * 0.53)))
     # 小物は見出しのすぐ下に大きく置いて左側を埋める
     if spec.get("prop"):
         pr = prop_layer(spec["prop"], tilt=-12)
@@ -932,7 +938,8 @@ def layout_photo(spec):
     # 上部の小フック（黒帯）
     hook_label(img, (30, 28), spec["hook"], spec.get("hook_size", 52))
     # 中央〜下の大コピー（帯付きの塊）
-    bw, bh = text_block(img, (28, spec.get("text_top", 150)), spec["lines"])
+    bw, bh = text_block(img, (28, spec.get("text_top", 150)), spec["lines"],
+                        max_w=spec.get("text_max_w", int(W * 0.60)))
     # 右上のアクセント: バッジ（バッテリー残量など）か稲妻
     badge = spec.get("badge")
     if badge:
@@ -1083,9 +1090,10 @@ SPECS = {
                       speech="誰が決めたのだ"),
     "flash-memory": dict(layout="charbig", prop=p_usb, prop_h=330,
                          bg=((28, 34, 56), (38, 46, 74)), who="zundamon", emotion="surprised",
-                         lines=[("電源を切っても", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                ("10年忘れない", 126, (24, 20, 14, 255), (252, 214, 36, 255)),
-                                ("洗濯機でも無事", 68, (255, 255, 255, 255), (196, 40, 34, 245))],
+                         lines=[("電池も電気も", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                ("入ってないのに", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
+                                ("記憶が消えない", 116, (24, 20, 14, 255), (252, 214, 36, 255)),
+                                ("洗濯機でも無事", 64, (255, 255, 255, 255), (196, 40, 34, 245))],
                          speech="なぜ消えないのだ"),
     "cup-noodle": dict(layout="charbig", prop=p_cupnoodle, prop_h=330,
                        bg=((60, 28, 24), (80, 40, 32)), who="zundamon", emotion="thinking",
