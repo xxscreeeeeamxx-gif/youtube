@@ -15,6 +15,64 @@ import sys
 from .config import Config, Project
 
 
+def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -> bool:
+    """ビルド後の読み検査。誤読ゼロが最優先なので make のたびに必ず走らせる。
+
+    - check_readings: 読み台帳・タグ・名札・舞台整合
+    - check_moras_cross: 全カットのモーラを漢字の読みと突き合わせ
+    - check_aq_readings: ゆっくり(AquesTalk)ナレを whisper で書き起こし照合
+      （重いので --skip-reading-check で省略できるが、省略したことを警告する）
+    """
+    import os
+    import subprocess
+
+    root = str(cfg.root)
+    script = proj.load_script()
+    slug = script.meta.slug
+    env = {**os.environ, "PYTHONPATH": root}
+    print("\n———— 読み検査 ————")
+    problems = 0
+
+    def _run(name: str) -> list[str]:
+        r = subprocess.run([sys.executable, f"scripts/{name}", slug],
+                           cwd=root, env=env, capture_output=True, text=True)
+        out = (r.stdout or "") + (r.stderr or "")
+        return [ln for ln in out.splitlines()
+                if ln.strip() and "Warning" not in ln and "warnings.warn" not in ln
+                and "mel_spec" not in ln]
+
+    lines = _run("check_readings.py")
+    for ln in lines:
+        if ln.startswith(("NG", "OK:", " - ")):
+            print(ln)
+    problems += sum(1 for ln in lines if ln.startswith("NG") and "0 件" not in ln)
+
+    lines = _run("check_moras_cross.py")
+    hit = [ln for ln in lines if ln.startswith("‼")]
+    print(f"モーラ照合: 不一致 {len(hit)} 件"
+          + ("（全件を目視判定すること）" if hit else "（誤読なし）"))
+    for ln in lines:
+        if ln.startswith("‼") or ln.startswith("   "):
+            print("  " + ln)
+    problems += len(hit)
+
+    has_aq = any((cfg.character(c.speaker) or {}).get("engine") == "aquestalk"
+                 for sc in script.scenes for c in sc.cuts)
+    if has_aq:
+        if skip_whisper:
+            print(f"ゆっくりナレ照合: スキップ。投稿前に "
+                  f"python3 scripts/check_aq_readings.py {slug} を必ず実行すること")
+            problems += 1
+        else:
+            for ln in _run("check_aq_readings.py"):
+                if ln.startswith(("ナレ", "要確認")):
+                    print(ln)
+                elif ln.startswith(("‼", "   ")):
+                    print("  " + ln)
+                    problems += ln.startswith("‼")
+    return problems == 0
+
+
 def main(argv: list[str] | None = None) -> None:
     p = argparse.ArgumentParser(prog="ytf", description="動画量産パイプライン")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -53,6 +111,8 @@ def main(argv: list[str] | None = None) -> None:
     sp.add_argument("project")
     sp.add_argument("--tts", choices=["voicevox", "dummy"], default="voicevox")
     sp.add_argument("--skip-shorts", action="store_true")
+    sp.add_argument("--skip-reading-check", action="store_true",
+                    help="ゆっくりナレのwhisper照合を省く（重い。投稿前には必ず実行すること）")
 
     sp = sub.add_parser("approve", help="台本レビュー完了マーク（n8nが自動ビルドする対象になる）")
     sp.add_argument("project")
@@ -165,7 +225,12 @@ def main(argv: list[str] | None = None) -> None:
         run_metadata(cfg, proj, timings)
         if not args.skip_shorts:
             render_shorts(cfg, proj, timings)
-        print("\n✅ 完了。out/ の中身を確認して投稿してください。")
+        ok = run_reading_checks(cfg, proj, skip_whisper=args.skip_reading_check)
+        if ok:
+            print("\n✅ 完了。out/ の中身を確認して投稿してください。")
+        else:
+            print("\n⚠️  ビルドは完了しましたが、読み検査に指摘があります。"
+                  "上の一覧を全件目視してから投稿してください。")
 
     elif args.cmd == "approve":
         proj = Project.resolve(cfg, args.project)

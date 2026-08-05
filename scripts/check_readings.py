@@ -124,10 +124,11 @@ def main(slug: str) -> int:
                     continue  # 全出現がタグ済み or reading: で上書き済み
                 eng = speaker_engine(cut.speaker)
                 if eng == "aquestalk":
-                    problems.append(
-                        f"タグ必須(ナレーター): 「{surf}」 in "
-                        f"{scene.id}/{cut.speaker}: {text[:28]}")
-                elif unicodedata.normalize("NFKC", surf) not in dict_surfaces:
+                    # ゆっくりは漢字かな交じりを正しく読める語が多く、台帳との
+                    # 突き合わせでは判定できない。読みの検証は実測に任せる
+                    # （scripts/check_aq_readings.py が whisper で全数照合する）
+                    continue
+                if unicodedata.normalize("NFKC", surf) not in dict_surfaces:
                     problems.append(
                         f"タグか辞書が必要: 「{surf}」 in "
                         f"{scene.id}/{cut.speaker}: {text[:28]}")
@@ -257,6 +258,10 @@ def main(slug: str) -> int:
             import requests
             client = ensure_engine(cfg)
             for sc, cut in narrator_cuts:
+                # reading を書かない運用（2026-08〜）では比較対象がない。
+                # ゆっくりの読みは check_aq_readings.py の実測で検証する
+                #（固有名詞の「ヘ」を助詞と誤検出する問題もあった）
+                continue
                 disp = READING_RE.sub(lambda m: m.group(2), cut.text)
                 q = requests.post(f"{client.base}/audio_query",
                                   params={"text": disp, "speaker": 13},
