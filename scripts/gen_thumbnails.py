@@ -546,12 +546,22 @@ def p_sushilane(d, s):
 
 
 def p_cane(d, s):
-    """白い杖（点字ブロックの「ビフォー」）。"""
-    d.line([(s*0.72, s*0.06), (s*0.30, s*0.92)], fill=(248, 250, 252), width=int(s*0.10))
-    d.line([(s*0.72, s*0.06), (s*0.30, s*0.92)], fill=(200, 206, 216), width=int(s*0.03))
-    d.line([(s*0.62, s*0.26), (s*0.54, s*0.42)], fill=(220, 60, 50), width=int(s*0.10))
-    d.ellipse([s*0.22, s*0.84, s*0.40, s*1.00], fill=(230, 234, 242), outline=(140, 146, 160), width=6)
-    d.arc([s*0.60, s*0.00, s*0.86, s*0.16], start=200, end=340, fill=(200, 206, 216), width=int(s*0.06))
+    """白杖（点字ブロックの「ビフォー」）。
+
+    小物は prop_layer で傾けて配置するので、路面など水平が前提の要素は描かない。
+    杖そのものだけで「白杖」と分かる形にする。
+    """
+    # 本体（上の握りから下の石突きへ）
+    d.line([(s*0.74, s*0.10), (s*0.34, s*0.90)], fill=(250, 252, 255), width=int(s*0.11))
+    d.line([(s*0.74, s*0.10), (s*0.34, s*0.90)], fill=(206, 212, 224), width=int(s*0.025))
+    # 赤い帯（白杖の識別色）
+    d.line([(s*0.60, s*0.38), (s*0.50, s*0.58)], fill=(224, 58, 48), width=int(s*0.115))
+    # 握り（上端の曲がり）
+    d.arc([s*0.62, s*0.02, s*0.94, s*0.22], start=190, end=350,
+          fill=(236, 240, 250), width=int(s*0.075))
+    # 石突き（先端の玉）
+    d.ellipse([s*0.26, s*0.82, s*0.46, s*1.00], fill=(236, 240, 248),
+              outline=(150, 156, 172), width=6)
 
 
 def p_wetcell(d, s):
@@ -996,8 +1006,8 @@ SPECS = {
     "tenji-block-meme": dict(layout="ba", prop_l=p_cane, prop_r=p_block, prop_h=280,
                              left_bg=((28, 32, 48), (40, 46, 66)),
                              right_bg=((186, 148, 20), (214, 176, 34)),
-                             head_l="全財産を道路に", head_r="世界が真似した",
-                             tag_l="足の裏だけが頼り", tag_r="いま:世界の駅と歩道に",
+                             head_l="目が見えなくても", head_r="足の裏で道を読む",
+                             tag_l="1967年:岡山の交差点", tag_r="いま:世界の駅と歩道に",
                              speech="友の一言だったのだ", emo_l="sad", emo_r="normal"),
     "gastro-meme": dict(layout="charbig", prop=p_endoscope, prop_h=330,
                         bg=((22, 44, 78), (28, 56, 94)), who="zundamon", emotion="surprised",

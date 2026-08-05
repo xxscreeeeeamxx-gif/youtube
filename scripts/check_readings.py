@@ -101,16 +101,19 @@ def main(slug: str) -> int:
     problems = []
 
     # ---- 1) 静的検査 ----
+    # 名札(stage.tag / mobs.label)は表示専用。読みタグ記法を書くと画面にそのまま出る
+    raw = (Path(proj.root) / "script.yaml").read_text()
+    for m in re.finditer(r'(?:tag|label): "(\[[^"]*\])"', raw):
+        problems.append(f"名札に読みタグ記法: {m.group(1)} "
+                        f"（tag/label は表示名のみ。読みは本文側の [表示|よみ] で指定する）")
+
     for scene in script.scenes:
         for cut in scene.cuts:
             text = cut.text
-            spoken_src = cut.reading if cut.reading else text
-            # ナレーター(AquesTalk)は漢字変換の誤読を構造的に防ぐため全行ひらがな必須
-            if speaker_engine(cut.speaker) == "aquestalk" and not cut.reading:
-                problems.append(
-                    f"reading必須(ナレーターは全行ひらがな指定): "
-                    f"{scene.id}: {text[:30]}")
-                continue
+            # AquesTalkは2026-08から漢字かな交じりの text をそのまま使う
+            # （ひらがなだけだと抑揚が平板になるため）。reading は参照されない
+            is_aq = speaker_engine(cut.speaker) == "aquestalk"
+            spoken_src = text if is_aq else (cut.reading if cut.reading else text)
             for e in ledger:
                 surf = e["surface"]
                 if surf not in re.sub(READING_RE, lambda m: "", text) and surf not in text:

@@ -1,13 +1,13 @@
-# 点字ブロック再現ドラマ・ミーム版（三宅精一×三郎×岩橋英行・1963→現代）。投稿前に必ず目視レビュー。
+# 点字ブロック再現ドラマ・ミーム版（[三宅精一|みやけせいいち]×[三郎|さぶろう]×[岩橋英行|イワハシヒデユキ]・1963→現代）。投稿前に必ず目視レビュー。
 # 本編tenji-blockのセリフをミーム化した派生版。ナレ行・クリップ・年号カードは本編と共用（位相同期なし）。
 # 配慮: mokugeki/iwahashi/fusetsu/bannen/jitsuyouの核・naze はミーム無しでクリーン維持。
-# 裏取り: 三宅精一Wikipedia/視覚障害者誘導用ブロックWikipedia/岡山県HP/precious.jp/
-# 日経2017(75カ国)/安全交通試験研究センター。1967-3-18原尾島交差点230枚・1972高田馬場1万枚・
-# 1970阪和線我孫子町駅ホーム初・1974建設省協力と線状考案・1982精一没56歳・2001JIS T9251・2012 ISO23599
+# 裏取り: [三宅精一|みやけせいいち]Wikipedia/視覚障害者誘導用ブロックWikipedia/岡山県HP/precious.jp/
+# 日経2017(75カ国)/安全交通試験研究センター。1967-3-18原尾島交差点230枚・1972[高田馬場|たかだのばば]1万枚・
+# 1970阪和線我孫子町駅ホーム初・1974建設省協力と線状考案・1982[精一|せいいち]没56歳・2001JIS T9251・2012 ISO23599
 meta:
   title: "黄色いブロックに、全財産。友の失明から生まれた点字ブロック【ゆっくり再現ドラマ・ミーム版】"
   slug: "tenji-block-meme"
-  summary: "駅や歩道の黄色いブロック。あれを考えたのは、岡山の一人の発明家でした。交差点で白い杖の人が車道に入りかける場面を目撃した三宅精一。目が見えなくなっていく友人の何気ない一言が、足の裏で読む道という発想をくれます。ずんだもんが三宅を、つむぎが弟・三郎を演じる再現ドラマです。"
+  summary: "駅や歩道の黄色いブロック。あれを考えたのは、岡山の一人の発明家でした。交差点で白い杖の人が車道に入りかける場面を目撃した[三宅精一|みやけせいいち]。目が見えなくなっていく友人の何気ない一言が、足の裏で読む道という発想をくれます。ずんだもんが[三宅|みやけ]を、つむぎが弟・[三郎|さぶろう]を演じる再現ドラマです。"
   tags: ["点字ブロック", "三宅精一", "岡山", "バリアフリー", "再現ドラマ", "ゆっくり", "ずんだもん", "発明", "ミーム"]
   thumbnail:
     top: "足の裏で、読む道"
@@ -101,6 +101,8 @@ scenes:
     cuts:
       - speaker: reimu
         text: "1963年、岡山。"
+      - speaker: reimu
+        text: "旅館を営む一人の男が、ある光景を目にします。"
         reading: "せんきゅうひゃくろくじゅうさんねん、おかやま。"
         video: assets/clips/era_tb1963.mp4
         video_full: true
@@ -114,11 +116,11 @@ scenes:
       - {who: tsumugi, x: 0.76, tag: "三郎"}
     cuts:
       - speaker: reimu
-        text: "三宅精一は、岡山で旅館を営む、発明好きの経営者でした。"
+        text: "[三宅精一|みやけせいいち]は、岡山で旅館を営む、発明好きの経営者でした。"
         reading: "みやけせいいちわ、おかやまでりょかんをいとなむ、はつめいずきのけいえいしゃでした。"
       - speaker: zundamon
         emotion: happy
-        text: "三郎、見てくれ。ナンバーの雪を溶かす装置が爆誕したのだ。"
+        text: "[三郎|さぶろう]、見てくれ。ナンバーの雪を溶かす装置が爆誕したのだ。"
       - speaker: tsumugi
         emotion: thinking
         text: "兄さん、また発明か。旅館の仕事はどうしたんだ。"
@@ -147,7 +149,7 @@ scenes:
         emotion: normal
         text: "まあ、兄さんの図面は、おれが形にしてやるけどさ。"
       - speaker: reimu
-        text: "弟の三郎は、建設の技術者でした。"
+        text: "弟の[三郎|さぶろう]は、建設の技術者でした。"
         reading: "おとうとのさぶろうわ、けんせつのぎじゅつしゃでした。"
       - speaker: zundamon
         emotion: happy
@@ -166,7 +168,7 @@ scenes:
       - {who: zundamon, x: 0.2, tag: "三宅", flip: true}
     cuts:
       - speaker: reimu
-        text: "その散歩の途中。交差点で、精一の足が止まりました。"
+        text: "その散歩の途中。交差点で、[精一|せいいち]の足が止まりました。"
         reading: "そのさんぽのとちゅう。こうさてんで、せいいちのあしがとまりました。"
       - speaker: zundamon
         emotion: surprised
@@ -193,7 +195,7 @@ scenes:
         emotion: normal
         text: "見えないままで、安全に歩ける道。この町には、無いのだ。"
       - speaker: reimu
-        text: "この光景が、精一の頭を離れなくなります。"
+        text: "この光景が、[精一|せいいち]の頭を離れなくなります。"
         reading: "このこうけいが、せいいちのあたまをはなれなくなります。"
   - id: iwahashi
     title: "友の告白"
@@ -204,16 +206,16 @@ scenes:
       - {who: iwahashi, x: 0.72}
     cuts:
       - speaker: reimu
-        text: "そのころ三宅家には、セント・バーナードの大きな犬がいました。"
+        text: "そのころ[三宅|みやけ]家には、セント・バーナードの大きな犬がいました。"
         reading: "そのころみやけけにわ、せんとばあなあどのおおきないぬがいました。"
       - speaker: zundamon
         emotion: happy
         text: "よしよし。今日もごはんを、よく食べるのだ。"
       - speaker: iwahashi
-        text: "三宅さん、こんにちは。子犬は元気ですか。"
+        text: "[三宅|みやけ]さん、こんにちは。子犬は元気ですか。"
       - speaker: zundamon
         emotion: happy
-        text: "岩橋さん！ちょうど、庭で遊ばせてるのだ。"
+        text: "[岩橋|イワハシ]さん！ちょうど、庭で遊ばせてるのだ。"
       - speaker: iwahashi
         text: "足音と息づかいで分かります。ずいぶん、大きくなりましたね。"
       - speaker: zundamon
@@ -223,15 +225,15 @@ scenes:
         text: "目の代わりに、耳と手が働いてくれますから。"
       - speaker: zundamon
         emotion: thinking
-        text: "岩橋さんの世界の感じ方、ボクはまだ、何も知らないのだ。"
+        text: "[岩橋|イワハシ]さんの世界の感じ方、ボクはまだ、何も知らないのだ。"
       - speaker: reimu
-        text: "犬の縁で親しくなったのが、岩橋英行。"
+        text: "犬の縁で親しくなったのが、[岩橋英行|イワハシヒデユキ]。"
         reading: "いぬのえんでしたしくなったのが、いわはしひでゆき。"
       - speaker: reimu
         text: "目の不自由な人の福祉に生涯をかけた、日本ライトハウスの人物です。"
         reading: "めのふじゆうなひとのふくしにしょうがいをかけた、にほんらいとはうすのじんぶつです。"
       - speaker: iwahashi
-        text: "三宅さん。今日は、私の目のことで、話があります。"
+        text: "[三宅|みやけ]さん。今日は、私の目のことで、話があります。"
       - speaker: zundamon
         emotion: normal
         text: "……どうしたのだ、あらたまって。"
@@ -241,7 +243,7 @@ scenes:
         text: "数年のうちに、光を失うそうです。"
       - speaker: zundamon
         emotion: sad
-        text: "……岩橋さん。"
+        text: "……[岩橋|イワハシ]さん。"
       - speaker: iwahashi
         text: "怖くないと言えば、うそになります。"
       - speaker: iwahashi
@@ -275,7 +277,7 @@ scenes:
         text: "兄さん、道を作るって、どういうことだよ。"
       - speaker: zundamon
         emotion: normal
-        text: "三郎、目をつぶって、この部屋を歩いてみるのだ。"
+        text: "[三郎|さぶろう]、目をつぶって、この部屋を歩いてみるのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "よし。……おっと、机にぶつかった。何も分からないな。"
@@ -342,7 +344,7 @@ scenes:
         text: "答えの糸口は、思いがけない場所にありました。"
         reading: "こたえのいとぐちわ、おもいがけないばしょにありました。"
       - speaker: iwahashi
-        text: "三宅さん、この庭を歩いていて、気づいたことがあります。"
+        text: "[三宅|みやけ]さん、この庭を歩いていて、気づいたことがあります。"
       - speaker: zundamon
         emotion: normal
         text: "なんなのだ？"
@@ -374,7 +376,7 @@ scenes:
         text: "……くつ越しに読める、地面の点字ですか。"
       - speaker: zundamon
         emotion: happy
-        text: "岩橋さん、その気づきは天才なのだ。名前も、もう決まったぞ。"
+        text: "[岩橋|イワハシ]さん、その気づきは天才なのだ。名前も、もう決まったぞ。"
       - speaker: reimu
         text: "庭のコケの感触から、点字ブロックの発想が生まれました。"
         reading: "にわのこけのかんしょくから、てんじぶろっくのはっそうがうまれました。"
@@ -388,7 +390,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: normal
-        text: "三郎、セメントで試作するぞ。突起つきのブロックだ。"
+        text: "[三郎|さぶろう]、セメントで試作するぞ。突起つきのブロックだ。"
       - speaker: tsumugi
         emotion: normal
         text: "よし、まかせろ。で、突起の高さはどうする。"
@@ -486,7 +488,7 @@ scenes:
       - {who: iwahashi, x: 0.86}
     cuts:
       - speaker: reimu
-        text: "盲学校に近い交差点に、精一は自費で作った230枚を寄贈しました。"
+        text: "盲学校に近い交差点に、[精一|せいいち]は自費で作った230枚を寄贈しました。"
         reading: "もうがっこうにちかいこうさてんに、せいいちわじひでつくったにひゃくさんじゅうまいをきぞうしました。"
       - speaker: zundamon
         emotion: normal
@@ -529,7 +531,7 @@ scenes:
       - speaker: seito
         text: "……はい。行きたいときに、行けます。"
       - speaker: iwahashi
-        text: "三宅さん。これは、道が変わりますよ。"
+        text: "[三宅|みやけ]さん。これは、道が変わりますよ。"
       - speaker: zundamon
         emotion: normal
         text: "まだ230枚なのだ。ここから、[日本中|にほんじゅう]に広げるのだ。"
@@ -622,7 +624,7 @@ scenes:
         text: "このままだと、家が傾く。もう、やめどきじゃないのか。"
       - speaker: zundamon
         emotion: normal
-        text: "……三郎。敷設の日を、覚えてるか。"
+        text: "……[三郎|さぶろう]。敷設の日を、覚えてるか。"
       - speaker: tsumugi
         emotion: normal
         text: "生徒さんが、一人で渡った日か。"
@@ -639,7 +641,7 @@ scenes:
         emotion: happy
         text: "縁起でもないこと言うな。売れるまで作るだけだ。"
       - speaker: reimu
-        text: "精一は私財を注ぎ続け、資金は何度も底をつきかけました。"
+        text: "[精一|せいいち]は私財を注ぎ続け、資金は何度も底をつきかけました。"
         reading: "せいいちわしざいをそそぎつづけ、しきんわなんどもそこをつきかけました。"
         telops:
           - {text: "私財は、何度も底をつきかけた", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1E3C", glow: "#2288EE", anim: fade}
@@ -652,7 +654,7 @@ scenes:
       - {who: iwahashi, x: 0.72}
     cuts:
       - speaker: iwahashi
-        text: "三宅さん。世界の福祉の会議で、点字ブロックを紹介しました。"
+        text: "[三宅|みやけ]さん。世界の福祉の会議で、点字ブロックを紹介しました。"
       - speaker: zundamon
         emotion: surprised
         text: "世界……海の向こうで、なんだ？"
@@ -672,7 +674,7 @@ scenes:
         emotion: normal
         text: "その日まで、作り続けるのだ。"
       - speaker: reimu
-        text: "岩橋は点字ブロックを世界の会議で紹介し、賞賛を受けました。"
+        text: "[岩橋|イワハシ]は点字ブロックを世界の会議で紹介し、賞賛を受けました。"
         reading: "いわはしわてんじぶろっくをせかいのかいぎでしょうかいし、しょうさんをうけました。"
   - id: tenki
     title: "1万枚の電話"
@@ -687,10 +689,10 @@ scenes:
         reading: "てんきわ、とうきょうからきました。"
       - speaker: tsumugi
         emotion: surprised
-        text: "兄さん、東京から電話だ！高田馬場が、交通安全のモデル地区になる！"
+        text: "兄さん、東京から電話だ！[高田馬場|たかだのばば]が、交通安全のモデル地区になる！"
       - speaker: zundamon
         emotion: surprised
-        text: "高田馬場……目の不自由な人の施設が集まる町なのだ！"
+        text: "[高田馬場|たかだのばば]……目の不自由な人の施設が集まる町なのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "点字の図書館も、働く場所もある。あの町を歩く人は多い。"
@@ -718,7 +720,7 @@ scenes:
         emotion: happy
         text: "作るぞ。工場フル回転で、うれしい悲鳴なのだ！"
       - speaker: reimu
-        text: "1972年、高田馬場一帯に、およそ1万枚が敷かれました。"
+        text: "1972年、[高田馬場|たかだのばば]一帯に、およそ1万枚が敷かれました。"
         reading: "せんきゅうひゃくななじゅうにねん、たかだのばばいったいに、およそいちまんまいがしかれました。"
       - speaker: tsumugi
         emotion: happy
@@ -837,7 +839,7 @@ scenes:
       - {who: tsumugi, x: 0.76, tag: "三郎"}
     cuts:
       - speaker: reimu
-        text: "全国に広がり始めたころ、精一の体は、病に蝕まれていました。"
+        text: "全国に広がり始めたころ、[精一|せいいち]の体は、病に蝕まれていました。"
         reading: "ぜんこくにひろがりはじめたころ、せいいちのからだわ、やまいにむしばまれていました。"
       - speaker: tsumugi
         emotion: normal
@@ -856,7 +858,7 @@ scenes:
         text: "兄さんが見たかった景色が、窓の外にあるんだな。"
       - speaker: zundamon
         emotion: normal
-        text: "……三郎。ブロックはまだ、日本の一部にしか無いのだ。"
+        text: "……[三郎|さぶろう]。ブロックはまだ、日本の一部にしか無いのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "分かってる。続きは、おれがやる。"
@@ -868,7 +870,7 @@ scenes:
         text: "全国どこでも同じ形。それが、仕上げだな。"
       - speaker: zundamon
         emotion: normal
-        text: "頼んだのだ。……なあ、三郎。いい発明だったろ、これ。"
+        text: "頼んだのだ。……なあ、[三郎|さぶろう]。いい発明だったろ、これ。"
       - speaker: tsumugi
         emotion: normal
         text: "ああ。兄さんの人生で、いちばんの発明だよ。"
@@ -876,7 +878,7 @@ scenes:
         emotion: happy
         text: "全財産と引き換えでも、安い買い物だったのだ。"
       - speaker: reimu
-        text: "1982年7月。三宅精一、永眠。56歳でした。"
+        text: "1982年7月。[三宅精一|みやけせいいち]、永眠。56歳でした。"
         reading: "せんきゅうひゃくはちじゅうにねんしちがつ。みやけせいいち、えいみん。ごじゅうろくさいでした。"
         pause_after: 0.8
       - speaker: tsumugi

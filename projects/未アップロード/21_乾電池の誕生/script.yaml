@@ -150,7 +150,7 @@ scenes:
     background: il_yi_nagaoka
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, scale: 0.78, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.78, tag: "先蔵"}
       - {who: haha, x: 0.74}
     cuts:
       - speaker: reimu
@@ -204,7 +204,7 @@ scenes:
     background: il_yi_tokeiten
     bgm: curious
     stage:
-      - {who: zundamon, x: 0.3, flip: true, scale: 0.82, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.82, tag: "先蔵"}
       - {who: tokei, x: 0.74}
     cuts:
       - speaker: reimu
@@ -267,7 +267,7 @@ scenes:
     background: il_yi_tokeiten
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, scale: 0.9, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, scale: 0.9, tag: "先蔵"}
       - {who: tokei, x: 0.74}
     cuts:
       - speaker: reimu
@@ -326,7 +326,7 @@ scenes:
     background: il_yi_school
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shiken, x: 0.74}
     cuts:
       - speaker: reimu
@@ -387,7 +387,7 @@ scenes:
     background: il_yi_room
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: tsumugi, x: 0.74, tag: "下宿の人"}
     cuts:
       - speaker: tsumugi
@@ -459,7 +459,7 @@ scenes:
     background: il_yi_koba
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -521,7 +521,7 @@ scenes:
     background: il_yi_koba
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: reimu
@@ -591,7 +591,7 @@ scenes:
     background: il_yi_koba
     bgm: curious
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: zundamon
@@ -682,7 +682,7 @@ scenes:
     background: il_yi_koba
     bgm: serious
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: reimu
@@ -715,7 +715,7 @@ scenes:
     background: il_yi_room
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: tsumugi, x: 0.74, tag: "妻"}
     cuts:
       - speaker: tsumugi
@@ -766,7 +766,7 @@ scenes:
     background: il_yi_room
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: tsumugi, x: 0.74, tag: "妻"}
     cuts:
       - speaker: reimu
@@ -884,7 +884,7 @@ scenes:
     background: il_yi_koba
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -914,7 +914,7 @@ scenes:
     background: il_yi_koba
     bgm: kinakusai
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -965,7 +965,7 @@ scenes:
     background: il_yi_kojo
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: shokko
@@ -1014,7 +1014,7 @@ scenes:
     background: il_yi_kojo
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: shokko, x: 0.74}
     cuts:
       - speaker: reimu
@@ -1053,7 +1053,7 @@ scenes:
     background: il_yi_room
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "[先蔵|さきぞう]"}
+      - {who: zundamon, x: 0.3, flip: true, tag: "先蔵"}
       - {who: tsumugi, x: 0.74, tag: "妻"}
     cuts:
       - speaker: tsumugi
