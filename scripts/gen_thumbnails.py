@@ -591,6 +591,38 @@ def p_drycell(d, s):
     d.text((s*0.38, s*0.60), "＋", font=font("w9", int(s*0.18)), fill=(40, 36, 30))
 
 
+def p_kyakka(d, s):
+    """却下印の押された申請書（フラッシュメモリ回のビフォー）。"""
+    d.rounded_rectangle([s*0.14, s*0.06, s*0.86, s*0.94], radius=10,
+                        fill=(248, 246, 238), outline=(150, 146, 134), width=7)
+    for i, y in enumerate(range(int(s*0.20), int(s*0.80), int(s*0.09))):
+        w = 0.60 if i % 3 else 0.44
+        d.rectangle([s*0.22, y, s*(0.22+w), y + s*0.028], fill=(176, 178, 186))
+    # 却下のスタンプ
+    d.rounded_rectangle([s*0.30, s*0.40, s*0.82, s*0.66], radius=8,
+                        outline=(206, 44, 52), width=9)
+    d.text((s*0.36, s*0.435), "却下", font=font("w9", int(s*0.19)), fill=(206, 44, 52))
+
+
+def p_phone_mem(d, s):
+    """スマホとメモリチップ（アフター）。"""
+    d.rounded_rectangle([s*0.24, s*0.04, s*0.76, s*0.80], radius=int(s*0.09),
+                        fill=(38, 42, 56), outline=(178, 184, 200), width=8)
+    d.rounded_rectangle([s*0.29, s*0.11, s*0.71, s*0.72], radius=int(s*0.04),
+                        fill=(96, 170, 220))
+    for gy in range(6):
+        for gx in range(4):
+            x = s*0.32 + gx*s*0.10
+            y = s*0.15 + gy*s*0.095
+            d.rounded_rectangle([x, y, x+s*0.075, y+s*0.072], radius=6, fill=(232, 240, 250))
+    # チップ
+    d.rounded_rectangle([s*0.10, s*0.72, s*0.56, s*0.98], radius=8,
+                        fill=(28, 30, 40), outline=(150, 156, 172), width=6)
+    for k in range(6):
+        d.rectangle([s*(0.13+k*0.075), s*0.68, s*(0.155+k*0.075), s*0.74], fill=(200, 176, 90))
+        d.rectangle([s*(0.13+k*0.075), s*0.96, s*(0.155+k*0.075), s*1.02], fill=(200, 176, 90))
+
+
 # ---------------------------------------------------------------- レイアウト
 #
 # 調査した定石（stock-sun / LEL-japan 他）を反映:
@@ -1092,6 +1124,12 @@ SPECS = {
                        head_l="冬になると凍る", head_r="凍らない電池へ",
                        tag_l="液がむき出しの電池", tag_r="いま家じゅうにある筒",
                        speech="5分の遅刻から…", emo_l="sad", emo_r="surprised"),
+    "masuoka-flash": dict(layout="ba", prop_l=p_kyakka, prop_r=p_phone_mem, prop_h=300,
+                          left_bg=((34, 30, 28), (48, 42, 38)),
+                          right_bg=((18, 58, 96), (24, 78, 126)),
+                          head_l="金がない、却下", head_r="世界中のポケットへ",
+                          tag_l="1987年:予算ゼロの発明", tag_r="いま:スマホもカメラも",
+                          speech="土日に特許23件なのだ", emo_l="sad", emo_r="surprised"),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="photo", photo="ph_charging_desk.jpg", darken=0.38,
                            badge=lambda d, s: p_battery(d, s, 100, (255, 86, 66)),
@@ -1135,14 +1173,6 @@ SPECS = {
                              ("存在しない", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
                       subject="エスカレーター", subject_at=(232, 470), subject_max_w=790, subject_big=True,
                        speech="誰が決めたのだ"),
-    "flash-memory": dict(layout="charbig", prop=p_usb, prop_h=330,
-                         bg=((28, 34, 56), (38, 46, 74)), who="zundamon", emotion="surprised",
-                         lines=[("電池も電気も", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                ("入ってないのに", 72, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                ("記憶が消えない", 116, (24, 20, 14, 255), (252, 214, 36, 255)),
-                                ("洗濯機でも無事", 64, (255, 255, 255, 255), (196, 40, 34, 245))],
-                         subject="USBメモリ", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                         speech="なぜ消えないのだ"),
     "cup-noodle": dict(layout="charbig", prop=p_cupnoodle, prop_h=330,
                        bg=((60, 28, 24), (80, 40, 32)), who="zundamon", emotion="thinking",
                        lines=[("お湯を入れて", 76, (255, 255, 255, 255), (22, 20, 30, 245)),

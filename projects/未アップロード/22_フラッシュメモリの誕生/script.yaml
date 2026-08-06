@@ -1,0 +1,1077 @@
+# フラッシュメモリを作った男・舛岡富士雄 再現ドラマ・ミーム版
+#
+# == 裏取り済みの事実（出典: 舛岡本人「フラッシュメモリ開発物語」半導体産業人協会 会報No.92 /
+#    作井康司 IEEE Solid-State Circuits Magazine Fall 2013 / Computer History Museum 口述 /
+#    東芝プレスリリース 2006-07-27 / 武田計測先端知財団 / 本田財団 / 毎日新聞取材班）==
+#
+# ★通説の誤り4点（この動画で正しく描く）★
+# 1. 「上司にやめろと言われた」は未確認。正しくは【4MビットNANDの予算を「金がない」と即却下】
+# 2. 「4人だけで開発」はNOR型立ち上げ時の話。NANDは協力者2人→10人未満
+# 3. 「インテルが先に製品化」は不正確。【東芝も1988年に製品化】。
+#    インテルは後から数百倍の技術者を投入して【大市場を取った】
+# 4. 日本国際賞は受賞していない。ノーベル賞の「有力候補」も公式な記録なし → 触れない
+#
+# - 生年: 1943年5月8日、群馬県高崎市。東北大→西澤潤一研究室（1965年）
+#   西澤の教え「人のまねはするな」「松茸は採られるまで人の股を千以上見ている」
+# - 1971年 東芝入社。入社3ヶ月で特許5件、うち1件が米国特許となりインテルとの
+#   無償クロスライセンスにつながる。1980年 全国発明表彰・発明賞
+# - 1977年 自ら志願して営業へ。英語も話せぬまま米国の計算機メーカーを回り惨敗。
+#   顧客の声「性能は最低限でいい。もっと安く」→「技術はサービスを受ける人のためにある」
+# - 1980年2月 サンフランシスコでインテルの16kEEPROM発表を聴く。1ビットに2トランジスタ必要と知り
+#   「これでは磁気ディスクを置き換えられない」と直感 → ランダムアクセスを捨て一括消去へ
+# - 特許は【1980年11月20日〜1981年7月30日に23件】。当時は1MビットDRAMの主務で、
+#   フラッシュの特許は土日に書いた
+# - 1983年 メモリ担当部長・鈴木紘一に打ち明ける →「それは面白い。開発しろ」（ただし予算なし）
+#   ★東芝には水面下の試作を大目に見る風土があった（武田財団）
+# - 開発は【他の仕事を持つ技術者4名に本人が頼んで】開始。3ヶ月でプロトタイプ
+# - 【1984年6月、命名の瞬間】作井の机の後ろで「いい名前を探している」→ 沈黙 →
+#   元SRAM設計課長・有泉が「Flash Memory はどうですか」→ 由来は「チップ全体を一括で消せる=カメラのフラッシュ」
+# - 1984年12月 IEDMで発表（256kビット、面積はインテルEEPROMの1/4以下）
+# - 1985年3月25日 BUSINESS WEEK が顔写真つきで「東芝の新メモリで米半導体は悪夢を見るか」。
+#   同記事にインテル技術責任者の否定コメント → だが【直後にインテルがサンプルを要求】
+# - 1986年 TIとのITC訴訟で技術責任者としてワシントンへ。法廷の空き時間にNANDを構想し特許5件
+# - NAND特許は1987年3月17〜19日に提案書8件、4月24日に出願8件。1987年12月 IEDM発表
+#   NOR 21.6F² → NAND 11.6F²（約半分）。失ったのは読み出し速度、得たのは容量と書換回数
+# - 4MビットNANDの予算を超LSI研究所長に直訴 →【「当然予算がない。即却下である」】
+#   → 家電技術研究所長に「1チップでフロッピー2枚分、切手大で10グラム以下」と説明 →
+#   【メカニズムも聞かず信じてマスク代1000万円】を出した
+#   →【客がつくと超LSI研究所長は完全にバックアップ側にまわり、研究所の最重要課題に格上げ】
+# - 1988年 東芝がNOR型を製品化（日刊工業新聞10大新製品賞）。同年インテルもETOXで参入
+# - 1990年 世界初のNAND搭載デジカメ（一式150万円）→ 売れず2年で撤退。
+#   その技術者たちがフィルムメーカー等へ移り、のちのデジカメ発展に寄与
+# - 1991年 庇護者だったULSI研究所長・武石喜幸が63歳で急逝（★死の場面はクリーン）
+# - 1993年 「部下なし・研究費なし・部屋だけ」のポストを提示される（本人CHM口述）
+# - 1994年 東芝退職（51歳）、東北大学教授へ。※毎日新聞は「先の技術をやりたかった」と前向きに記述
+# - 2004年3月2日 提訴（相当対価40億円と算定し一部10億円請求。後に80億円/11億100万円へ増額）
+# - 2006年7月27日 和解。【東芝が8700万円を支払う】（東芝公式発表。在職中の全職務発明が対象）
+#   東芝側「和解勧告が当社の考え方を相当程度考慮した内容と判断した」
+#   ★本人の本音「報酬の少ない技術者を元気づけたかった」「"ありがとう"と言ってくれれば終わりだった」
+# - 受賞: 1997 IEEE Liebmann賞 / 2007 紫綬褒章 / 2013 文化功労者 / 2016 瑞宝重光章 /
+#   2018 本田賞。2010 コンピュータ歴史博物館、2011 CEA殿堂入り
+# - いまも柱状トランジスタ(SGT)による三次元メモリを研究。2026年時点で83歳
+#
+# == 東芝を悪者にしないための材料（必ず描く）==
+# - 鈴木部長の「それは面白い。開発しろ」／水面下の試作を黙認する風土
+# - 家電研究所長がメカニズムも聞かず1000万円を出した
+# - 客がつくと研究所が全面支援に回り最重要課題へ格上げ
+# - 当時はDRAMが本業で絶好調。総合電機ゆえ投資配分の制約があった
+# - 技術的にも本当に難しく、社内で「ナンドやってもダメなNAND」と言われた時期がある
+# - 本人が結びで「私一人で実現できたことではなく、関係した皆々様に深く感謝」と書いている
+#
+# == センシティブルール ==
+# - 武石所長の死の場面はクリーン（ミーム・SE禁止）
+# - 訴訟は事実のみ。東芝を糾弾する台詞を書かない。金額の是非を断じない
+# - 「報われなかった」を煽らない。本人の「ありがとうと言ってくれれば」を軸にする
+# - 有泉・鈴木・武石・作井は実在。敬意をもって描く
+meta:
+  title: "「金がない、却下」から始まった。スマホの記憶を作った男【フラッシュメモリ誕生・再現ドラマ・ミーム版】"
+  slug: "masuoka-flash"
+  summary: "スマホの写真も、ゲームのセーブも、この人が作った仕組みの上にあります。作ったのは東芝の技術者、[舛岡富士雄|ますおかふじお]。営業に出て惨敗した男が、ある学会で「これでは置き換えられない」と直感し、土日だけで23件の特許を書きます。予算はつかず、頼れるのは本業を持つ4人の同僚だけ。ずんだもんが[舛岡|ますおか]を演じる再現ドラマです。後半では、電気を切っても記憶が消えない仕組みも解説します。"
+  tags: ["フラッシュメモリ", "舛岡富士雄", "USBメモリ", "東芝", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "金がない、却下"
+    bottom: "それでも作った"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: nishizawa, label: "西澤教授", voice: 42, pitch: -0.02}
+    - {id: suzuki, label: "鈴木部長", voice: 13, pitch: -0.04}
+    - {id: ariizumi, label: "有泉さん", voice: 12, pitch: 0.02}
+    - {id: shocho, label: "研究所長", voice: 13, pitch: -0.06}
+    - {id: kaden, label: "家電研究所長", voice: 42, pitch: 0.03}
+    - {id: dohryo, label: "同僚", voice: 12, pitch: 0.0}
+    - {id: kyaku, label: "米国の客", voice: 13, pitch: 0.05}
+scenes:
+  # ============ 茶番フック ============
+  - id: hook
+    title: ""
+    background: il_ms_room
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ、見てほしいのだ。スマホの写真、1万2千枚になったぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "多すぎでしょ。ほとんど枝豆の写真じゃない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "全部ちがう枝豆なのだ。角度も、ゆで加減も。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その1万2千枚、どこに入ってるか知ってる？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "スマホの中なのだ。当たり前だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スマホの中の、爪より小さいチップの中だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "そんなところに1万2千枚も！？物理的におかしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも電源を切っても消えない。充電が切れても残ってる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……言われてみれば、なんで消えないんだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その仕組みを考えた人が、日本にいるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "日本人なのか！ボクの枝豆コレクションの恩人なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもその人、社内で言われた言葉があるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「金がない。却下」"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "世界を動かす発明が、そこで止まりかけたのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "止まらなかったから、いまあなたの手の中にあるんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。1万2千枚ぶんの恩を返すのだ。"
+  # ============ 1943 年号カード ============
+  - id: era1943
+    title: ""
+    background: il_ms_takasaki
+    bgm: pastel_house
+    cuts:
+      - speaker: reimu
+        text: "1943年、群馬県高崎市。のちにフラッシュメモリを生む男が生まれます。"
+        video: assets/clips/ms_era1943.mp4
+        video_full: true
+        video_span: 2
+      - speaker: reimu
+        text: "名前は、[舛岡富士雄|ますおかふじお]。"
+  # ============ 西澤研究室 ============
+  - id: nishizawa
+    title: "1965・仙台の研究室"
+    background: il_ms_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.22, flip: true, scale: 0.92, tag: "舛岡"}
+      - {who: dohryo, x: 0.5, scale: 0.92}
+      - {who: nishizawa, x: 0.8}
+    cuts:
+      - speaker: reimu
+        text: "東北大学の学部4年。[舛岡|ますおか]はいちばん厳しいと評判の研究室を選びます。"
+      - speaker: nishizawa
+        emotion: normal
+        text: "うちは厳しいぞ。なぜ選んだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは弱い人間だからです。厳しいところで、訓練してもらいたいのだ。"
+      - speaker: nishizawa
+        emotion: surprised
+        text: "……正直な男だな。"
+      - speaker: nishizawa
+        emotion: normal
+        text: "ひとつだけ言っておく。人のまねはするな。"
+      - speaker: nishizawa
+        emotion: normal
+        text: "オリジナリティのあることをやれ。それだけだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "オリジナリティ……。"
+      - speaker: reimu
+        text: "この研究室では、成果を出さなければ教授と話す機会すらありませんでした。"
+      - speaker: dohryo
+        emotion: sad
+        text: "先生、今週も捕まらなかった……。データが無いと会ってもくれない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "話を聞いてもらう権利を、自分で作るしかないのだ。"
+      - speaker: reimu
+        text: "教授は当時の大学人としては珍しく、特許を100件以上出していました。"
+      - speaker: nishizawa
+        emotion: normal
+        text: "[舛岡|ますおか]、特許庁への答弁書を手伝え。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクがですか。学生なのに。"
+      - speaker: nishizawa
+        emotion: normal
+        text: "書けば分かる。発明は、書いて初めて自分のものになる。"
+      - speaker: reimu
+        text: "この経験が、のちの[舛岡|ますおか]を支えることになります。"
+  # ============ 入社と最初の特許 ============
+  - id: nyusha
+    title: "1971・東芝入社"
+    background: il_ms_office
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: dohryo, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1971年、東京芝浦電気に入社。配属は半導体の研究部門でした。"
+      - speaker: dohryo
+        emotion: normal
+        text: "新人、何をやりたい？"
+      - speaker: zundamon
+        emotion: normal
+        text: "上司から言われたのだ。不揮発性メモリをやりなさい、と。"
+      - speaker: dohryo
+        emotion: thinking
+        text: "電源を切っても消えないメモリか。地味だけど面白いところだな。"
+      - speaker: reimu
+        text: "入社から3ヶ月。[舛岡|ますおか]はいきなり特許を5件書きます。"
+      - speaker: dohryo
+        emotion: surprised
+        se: don
+        text: "5件！？新人が3ヶ月で！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "学生のとき、答弁書を書かされたからな。書き方は体で覚えてるのだ。"
+      - speaker: reimu
+        text: "うち1件は米国特許となり、のちに東芝がインテルと無償で技術を交換する切り札になります。"
+      - speaker: dohryo
+        emotion: happy
+        text: "新人の特許が、会社を守る盾になったのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "書いておくものなのだ。誰も見ていなくても。"
+  # ============ 営業への志願と惨敗 ============
+  - id: eigyo
+    title: "1977・売れない"
+    background: il_ms_office
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: kyaku, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "しかし[舛岡|ますおか]が開発したメモリは、思うように売れませんでした。"
+      - speaker: zundamon
+        emotion: angry
+        text: "性能はいいはずなのだ。なぜ売れない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……もしかして、売り方が悪いんじゃないか？"
+      - speaker: reimu
+        text: "[舛岡|ますおか]は自ら志願して、研究所から営業の部隊へ移ります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "自分で売れば分かるのだ。アメリカへ行くぞ。"
+      - speaker: reimu
+        text: "英語はほとんど話せませんでした。"
+      - speaker: kyaku
+        emotion: normal
+        text: "……で、これは何が優れているんだ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "ええと、スピード、とても、速い。あと、性能、高い。"
+      - speaker: kyaku
+        emotion: thinking
+        text: "うちはそこまでの性能は要らないんだ。"
+      - speaker: kyaku
+        emotion: normal
+        text: "最低限これだけ動けばいい。それを、もっと安く作ってくれ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……安く。"
+      - speaker: reimu
+        text: "営業成績は上がらず、1年で外されます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "完敗なのだ。今から思えば、無謀だった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、いちばん大事なことを教わったぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "技術は、それを使う人のためにあるのだ。作る側のためじゃない。"
+      - speaker: reimu
+        text: "この1年が、のちの発明の入口になります。"
+  # ============ 1980 年号カード ============
+  - id: era1980
+    title: ""
+    background: il_ms_conf
+    bgm: serious
+    cuts:
+      - speaker: reimu
+        text: "1980年2月、サンフランシスコ。ひとつの発表が、すべての始まりでした。"
+        video: assets/clips/ms_era1980.mp4
+        video_full: true
+  # ============ 学会での直感 ============
+  - id: hirameki
+    title: "捨てる、という発想"
+    background: il_ms_conf
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: dohryo, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "壇上ではインテルが、書き換えできる新しいメモリを発表していました。"
+      - speaker: dohryo
+        emotion: happy
+        text: "すごいな。電気で書き換えられて、電源を切っても消えない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……1ビットに、トランジスタが2個要るのか。"
+      - speaker: dohryo
+        emotion: normal
+        text: "選ぶ用と、覚える用。2個要るのは仕方ないだろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "2個要るということは、値段が半分にならないということだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これでは、磁気のディスクやテープを置き換えられないぞ。"
+      - speaker: dohryo
+        emotion: surprised
+        text: "置き換える気なのか！？相手はコンピュータの記憶装置の本丸だぞ。"
+      - speaker: dohryo
+        emotion: normal
+        text: "いまの記憶装置は、円盤かテープだからな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どっちも動く。動くものは、いつか壊れるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "1個で済ませるには、何かを捨てるしかないのだ。"
+      - speaker: dohryo
+        emotion: thinking
+        text: "捨てる？何を。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "1ビットずつ消す機能だ。全部まとめて消せばいい。"
+      - speaker: dohryo
+        emotion: surprised
+        text: "全部！？間違えて1文字直したいときはどうするんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "写真や音楽をしまう用途なら、1文字だけ書き換えることなんて無いのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "要らない機能を捨てれば、部品が減る。部品が減れば、安くなる。"
+      - speaker: reimu
+        text: "営業で言われた「もっと安く」が、ここでつながりました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あの1年は、無駄じゃなかったのだ。"
+  # ============ 土日の特許 ============
+  - id: tokkyo
+    title: "土日だけの23件"
+    background: il_ms_room
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: tsumugi, x: 0.74, tag: "妻"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた、今日も休みなのに机に向かってるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "平日は別の仕事があるのだ。1メガのメモリの開発でな。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "じゃあ、その紙は何？"
+      - speaker: zundamon
+        emotion: normal
+        text: "特許だ。会社の計画には無い、ボクの思いつきなのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "計画に無いものを、休みの日に書いてるの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "いま書かないと、誰かが先に書く。それだけなのだ。"
+      - speaker: reimu
+        text: "1980年11月20日から翌年7月30日までの8ヶ月あまりで、23件。"
+      - speaker: reimu
+        text: "そのすべてが、勤務時間の外で書かれました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枕元にもメモ置いてるでしょ。夜中に飛び起きて書いてる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "思いつくのは、たいてい寝る前なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "紙、積み上げたら50センチになってたわよ。"
+  # ============ 1983 部長への直談判 ============
+  - id: buchou
+    title: "それは面白い"
+    background: il_ms_office
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: suzuki, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1983年。大きな開発が一段落したとき、[舛岡|ますおか]は部長のもとへ向かいます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "部長。3年前から温めている構想があるのだ。"
+      - speaker: suzuki
+        emotion: normal
+        text: "聞こう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一括で消すメモリです。部品が減って、桁違いに安くなります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うまくいけば、円盤やテープを置き換えられるのだ。"
+      - speaker: suzuki
+        emotion: surprised
+        text: "……ディスクを、半導体で。"
+      - speaker: suzuki
+        emotion: happy
+        se: don
+        text: "それは面白い。開発しろ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ありがとうございます！では予算を——"
+      - speaker: suzuki
+        emotion: normal
+        text: "予算は無い。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……無い。"
+      - speaker: suzuki
+        emotion: normal
+        text: "計画外だからな。だが、やるなと言った覚えもないぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なるほど。そういうことなら。"
+      - speaker: reimu
+        text: "当時の東芝には、計画外の試作を黙って見過ごす風土がありました。"
+      - speaker: reimu
+        text: "[舛岡|ますおか]は、別の試作の列に自分のロットをそっと紛れ込ませます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見つからない程度に、堂々とやるのだ。"
+  # ============ 4人の仲間 ============
+  - id: yonin
+    title: "本業を持つ4人"
+    background: il_ms_lab2
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: dohryo, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "正式な開発計画はありません。人も、予算もつきません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "頼みがある。自分の仕事をやりながらでいい。手を貸してほしいのだ。"
+      - speaker: dohryo
+        emotion: thinking
+        text: "……正式な仕事じゃないんだろ？評価もされないぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "されない。でも、うまくいけば教科書が書き換わる。"
+      - speaker: dohryo
+        emotion: surprised
+        text: "教科書。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクらの仕事は、教科書を書き換える仕事なのだ。"
+      - speaker: dohryo
+        emotion: happy
+        text: "……その言い方はずるいな。やるよ。"
+      - speaker: reimu
+        text: "回路を2人、製造の設計を2人。本業を抱えた技術者4人が集まりました。"
+      - speaker: reimu
+        text: "既にある部品に、層をひとつ足すだけで作れる設計にしたのも[舛岡|ますおか]の判断でした。"
+      - speaker: dohryo
+        emotion: thinking
+        text: "工場のラインをそのまま使えるようにしたのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新しい設備が要る設計にしたら、その時点で却下されるのだ。"
+      - speaker: reimu
+        text: "開発開始から3ヶ月で、試作品が動きます。"
+      - speaker: dohryo
+        emotion: happy
+        se: don
+        text: "動いた！一括で消えて、また書ける！"
+      - speaker: zundamon
+        emotion: happy
+        text: "1個のトランジスタで、覚えているのだ。"
+  # ============ 命名の瞬間 ============
+  - id: naming
+    title: "1984・名前をつける"
+    background: il_ms_lab2
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.28, flip: true, tag: "舛岡"}
+      - {who: ariizumi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1984年6月。設計室での何気ないやり取りが、この技術の名前を決めます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "12月の学会に論文を出す。いい名前を探しているのだ。"
+      - speaker: reimu
+        text: "しばらく、誰も口を開きませんでした。"
+      - speaker: ariizumi
+        emotion: normal
+        text: "……[舛岡|ますおか]さん。フラッシュメモリ、はどうですか。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "フラッシュメモリ。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "おお、シンプルでとてもいい名前だ！気に入ったぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ところで、どうやって思いついたのだ？"
+      - speaker: ariizumi
+        emotion: happy
+        text: "チップ全体を、一瞬でまとめて消すでしょう。"
+      - speaker: ariizumi
+        emotion: normal
+        text: "カメラのフラッシュが光る感じを、思い浮かべたんです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "決まりなのだ。これで論文を書くぞ。"
+      - speaker: reimu
+        text: "いま世界中で使われているこの名前は、この日の雑談から生まれました。"
+  # ============ 1984 IEDM 発表 ============
+  - id: iedm
+    title: "悪夢を見るのは誰か"
+    background: il_ms_conf
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: dohryo, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1984年12月、国際学会で発表。1ビットあたりの面積は、既存品の4分の1以下でした。"
+      - speaker: dohryo
+        emotion: surprised
+        text: "会場がざわついてるぞ。"
+      - speaker: reimu
+        text: "翌年3月、アメリカのビジネス誌が[舛岡|ますおか]の顔写真つきでこう書きます。"
+      - speaker: reimu
+        text: "「東芝が開発した新しいメモリで、米国の半導体メーカーは悪夢を見るのか」"
+      - speaker: dohryo
+        emotion: surprised
+        se: don
+        text: "悪夢！？あんた、名指しで恐れられてるぞ！"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……その記事、続きがあるのだ。"
+      - speaker: reimu
+        text: "同じ記事には、インテルの技術責任者のコメントも載っていました。"
+      - speaker: reimu
+        text: "「東芝のメモリは新しい製造方法が必要で、だめである」"
+      - speaker: dohryo
+        emotion: angry
+        text: "けなされてるじゃないか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いいのだ。事実は、そのあとに起きる。"
+      - speaker: reimu
+        text: "記事が出た直後、そのインテルから東芝にサンプルの要求が届きます。"
+      - speaker: dohryo
+        emotion: surprised
+        text: "だめだと言った会社が、現物をくれと言ってきたのか！"
+      - speaker: zundamon
+        emotion: happy
+        text: "半導体の王様が欲しがったのだ。これで工場も本気になるぞ。"
+      - speaker: reimu
+        text: "サンプルを求めてきた企業の多くが東芝の大口顧客でした。専任の担当がつき、製品化が動き出します。"
+  # ============ 1986 ワシントン ============
+  - id: era1986
+    title: ""
+    background: il_ms_court
+    bgm: serious
+    cuts:
+      - speaker: reimu
+        text: "1986年。[舛岡|ますおか]は、まったく別の理由でアメリカにいました。"
+        video: assets/clips/ms_era1986.mp4
+        video_full: true
+  - id: washington
+    title: "法廷の空き時間"
+    background: il_ms_court
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: dohryo, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "他社との特許紛争。[舛岡|ますおか]は東芝側の技術責任者として法廷に立ちます。"
+      - speaker: dohryo
+        emotion: sad
+        text: "最初の3ヶ月はすごい議論だったな。毎日つるし上げだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこは終わったのだ。いまは法律の話ばかりで、ボクの出番はない。"
+      - speaker: dohryo
+        emotion: thinking
+        text: "じゃあ何してるんだ、その紙は。"
+      - speaker: zundamon
+        emotion: happy
+        text: "特許だ。待ち時間で5件書いたぞ。"
+      - speaker: dohryo
+        emotion: surprised
+        se: don
+        text: "裁判に呼ばれた先で、次の発明をしてるのか！"
+      - speaker: zundamon
+        emotion: normal
+        text: "あのフラッシュメモリには、まだ余地があるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いまは1つずつ線を引き出している。あれを、数珠つなぎにできないか。"
+      - speaker: dohryo
+        emotion: thinking
+        text: "つなげると、線が減る。線が減れば……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "面積が半分になるのだ。同じ大きさで、倍しまえるぞ。"
+      - speaker: dohryo
+        emotion: normal
+        text: "その代わり、読み出しは遅くなるんじゃないか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "遅くなる。だが、写真をしまう用途なら誰も困らないのだ。"
+      - speaker: reimu
+        text: "捨てられるものを見極める。この判断が、のちのNAND型になります。"
+  # ============ 却下、そして逆転 ============
+  - id: kyakka
+    title: "金がない、却下"
+    background: il_ms_office
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: shocho, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1987年、帰国。[舛岡|ますおか]は10年ぶりに研究所へ戻ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "所長。新しい方式のメモリを、4メガビットまで作りたいのだ。"
+      - speaker: shocho
+        emotion: normal
+        text: "計画書は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これから作ります。まず開発費をいただきたい。"
+      - speaker: shocho
+        emotion: normal
+        se: don
+        text: "金がない。却下。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……即答なのだ。"
+      - speaker: shocho
+        emotion: normal
+        text: "今期の予算は、もう全部あてがある。"
+      - speaker: shocho
+        emotion: normal
+        text: "うちの本業は別のメモリだ。あれで世界を取ったばかりでな。"
+      - speaker: shocho
+        emotion: normal
+        text: "そこへ、桁違いに安い商品を自分で持ち込む理由が要る。"
+      - speaker: zundamon
+        emotion: sad
+        text: "正しい判断だ。ボクの話が、まだ絵に描いた餅だからな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なら、餅を食べたい人を先に見つければいいのだ。"
+  - id: kaden
+    title: "切手の大きさで"
+    background: il_ms_kaden
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: kaden, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "[舛岡|ますおか]が向かったのは、半導体ではなく家電の研究所でした。"
+      - speaker: kaden
+        emotion: thinking
+        text: "半導体の人が、うちに何の用です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "カメラを、作り変えませんか。"
+      - speaker: kaden
+        emotion: surprised
+        text: "カメラ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "いま開発している部品は、1つでフロッピー2枚ぶん入るのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "フィルムも、巻き上げる部品も要らない。動くところが無くなる。"
+      - speaker: kaden
+        emotion: surprised
+        text: "駆動部が無いカメラ……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "切手くらいの大きさで、重さは10グラム以下。電気もほとんど食わないぞ。"
+      - speaker: reimu
+        text: "家電技術研究所長は、仕組みの説明を求めませんでした。"
+      - speaker: kaden
+        emotion: normal
+        text: "……面白い。試作の型代、1000万円出しましょう。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "メカニズムを聞かないのですか。"
+      - speaker: kaden
+        emotion: happy
+        text: "聞いても分かりませんよ。あなたを信じます。"
+      - speaker: reimu
+        text: "この1000万円が、いまのスマホにつながる最初の資金になりました。"
+      - speaker: reimu
+        text: "そして客がついた瞬間、研究所の態度は変わります。"
+  - id: gyakuten
+    title: "客がつけば、話は別"
+    background: il_ms_office
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: shocho, x: 0.74}
+    cuts:
+      - speaker: shocho
+        emotion: happy
+        text: "[舛岡|ますおか]。期の途中だが、研究員のテーマを変更していい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "所長。あれほど却下と——"
+      - speaker: shocho
+        emotion: normal
+        text: "客がついたなら話は別だ。研究所の最重要課題にする。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……この会社、そういうところがあるのだ。"
+      - speaker: shocho
+        emotion: normal
+        text: "止めはしなかっただろう。金が出せなかっただけだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そこは、感謝しているのだ。"
+  # ============ 1990 世界初のデジカメ ============
+  - id: digicam
+    title: "150万円のカメラ"
+    background: il_ms_kaden
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: kaden, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1988年に試作が成功し、1990年、世界で初めてこの部品を積んだカメラが世に出ます。"
+      - speaker: kaden
+        emotion: happy
+        text: "できました。フィルムの要らないカメラです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ついに出たのだ！いくらで売るんだ？"
+      - speaker: kaden
+        emotion: sad
+        text: "……一式で、150万円です。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "150万！？車が買えるのだ！"
+      - speaker: kaden
+        emotion: sad
+        text: "部品がまだ高くて。これ以上は下げられません。"
+      - speaker: reimu
+        text: "売れませんでした。2年ほどで撤退します。"
+      - speaker: zundamon
+        emotion: sad
+        text: "早すぎたのだ。世の中が、まだ追いついていない。"
+      - speaker: reimu
+        text: "しかしこのとき開発に関わった技術者たちは、その後カメラの会社などへ移っていきます。"
+      - speaker: reimu
+        text: "のちのデジタルカメラの普及を、彼らが支えることになりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "失敗したのは商品で、技術と人は残ったのだ。"
+  # ============ 1991 武石所長（クリーン）============
+  - id: takeishi
+    title: ""
+    background: il_ms_office
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: dohryo, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1991年。[舛岡|ますおか]の研究を守ってきた研究所長が、63歳で急逝します。"
+      - speaker: dohryo
+        emotion: sad
+        text: "……所長、いつも言ってくれてたよな。"
+      - speaker: dohryo
+        emotion: sad
+        text: "「なんで本業をやらないんだ」って声から、あんたを庇ってた。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……知っている。"
+      - speaker: zundamon
+        emotion: normal
+        text: "計画外の試作を、見て見ぬふりしてくれた人だ。"
+      - speaker: reimu
+        text: "盾がなくなったあと、[舛岡|ますおか]の立場は少しずつ変わっていきます。"
+  # ============ 1993-1994 退社 ============
+  - id: taisha
+    title: "部屋だけ、あります"
+    background: il_ms_office
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.22, flip: true, tag: "舛岡"}
+      - {who: shocho, x: 0.5}
+      - {who: dohryo, x: 0.8}
+    cuts:
+      - speaker: reimu
+        text: "1993年。[舛岡|ますおか]は技監という肩書きになります。"
+      - speaker: shocho
+        emotion: normal
+        text: "新しいポストだ。部屋は用意する。"
+      - speaker: zundamon
+        emotion: normal
+        text: "部下は。"
+      - speaker: shocho
+        emotion: normal
+        text: "つかない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "研究費は。"
+      - speaker: shocho
+        emotion: normal
+        text: "……無い。"
+      - speaker: zundamon
+        emotion: sad
+        text: "部屋だけあります、ということなのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "部下も金も無いということは、何も作れないということなのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは、まだ次を作りたいのだ。"
+      - speaker: reimu
+        text: "1994年、[舛岡|ますおか]は51歳で東芝を去り、母校の東北大学へ移ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "恨みは無いぞ。ただ、作れる場所へ行くだけなのだ。"
+      - speaker: dohryo
+        emotion: sad
+        text: "製品は出た。でも、まったく売れないんだ。"
+      - speaker: dohryo
+        emotion: sad
+        text: "社内じゃ「やってもダメだ」って言われてるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "使い道が見つかるまで、10年はかかるのだ。"
+  # ============ 訴訟（淡々と）============
+  - id: saiban
+    title: "2004・8700万円"
+    background: il_ms_univ
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "舛岡"}
+      - {who: tsumugi, x: 0.74, tag: "妻"}
+    cuts:
+      - speaker: tsumugi
+        emotion: surprised
+        text: "ねえ、電気屋さん行ったら、どのカメラにも入ってたわよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "携帯電話にも。あなたが作ったあれが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたの発明、いま世界中で使われてるわね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うれしいのだ。……ただ、ひとつだけ引っかかっている。"
+      - speaker: reimu
+        text: "2004年3月、[舛岡|ますおか]は発明の対価を求めて古巣を訴えます。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "お金が欲しいの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "金額は、正直どうでもいいのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "報酬の少ない技術者たちを、元気づけたかった。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ちゃんと評価してほしい。それだけなのだ。"
+      - speaker: reimu
+        text: "2006年7月、和解が成立します。東芝が支払う金額は、8700万円。"
+      - speaker: reimu
+        text: "在職中のすべての職務発明を対象にした、全面的な和解でした。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……多いのか、少ないのか、わたしには分からない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "受け止め方は、人それぞれでいいのだ。"
+      - speaker: reimu
+        text: "会社側は「和解案は当社の考え方も相当に考慮した内容だった」と発表しています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "本当はな、ひとこと言ってもらえれば、それで終わりだったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ひとこと？"
+      - speaker: zundamon
+        emotion: normal
+        text: "「ありがとう」なのだ。"
+  # ============ 現代へ + 仕組みの解説 ============
+  - id: shikumi
+    title: "なぜ消えないのか"
+    background: il_ms_now
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ところでつむぎ。結局なんで消えないんだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこ、まだ説明してなかったね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ふつうのメモリは、電気を流し続けないと忘れちゃうの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "パソコンの電源を切ると、保存してない書類が消えるやつなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。あれは電気そのもので覚えてるから、切れたら終わり。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "フラッシュメモリは、電子を檻に閉じ込めて覚えるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "檻！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まわりを電気を通さない材料でぐるっと囲った、小さな部屋だよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこに電子を放り込む。壁があるから、電気を切っても出てこられないの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "閉じ込めたら、放っておいても居続けるのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "電子が入ってる檻を1、空っぽの檻を0。それがデータの正体。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクの枝豆1万2千枚は、電子が入った檻の並びなのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "書き換えるときは、壁をむりやり通す。だから回数に限りがあるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "無限じゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。だから大事なデータは、別の場所にもう1つ置いておくのが安心。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あと、動く部品がひとつも無いのも強みだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "円盤も回らないし、テープも動かない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから落としても平気だし、濡れても完全に乾かせば動くことが多いの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "洗濯機で洗ったUSBが生きてたって話、そういうことなのだ！"
+  - id: gendai
+    title: "そして現代へ"
+    background: il_ms_now
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "あの1000万円の試作から、およそ40年。"
+      - speaker: reimu
+        text: "フラッシュメモリは、スマートフォン、カメラ、車、データセンターに入っています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "却下されたあの部品が、世界中のポケットにあるのだ。"
+      - speaker: reimu
+        text: "[舛岡|ますおか]はその後、紫綬褒章、文化功労者などを受けています。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまも研究を続けてるんだよ。83歳で。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "まだ作ってるのか！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "平らなメモリを、立体に積む研究。次の40年ぶんの仕込みだね。"
+      - speaker: reimu
+        text: "本人はのちに、こう書き残しています。"
+      - speaker: reimu
+        text: "「当然私一人で実現できたことではなく、関係した皆々様に深く感謝いたします」"
+      - speaker: zundamon
+        emotion: normal
+        text: "……却下した人たちも、その中に入ってるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "予算は出さなかったけど、止めもしなかった人たちだからね。"
+  # ============ 締め ============
+  - id: musubi
+    title: ""
+    background: il_ms_room
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "つむぎ。ボク、写真を消そうとしてたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1万2千枚もあるものね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、消すのやめたぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この中の檻には、土日に特許を書いた人の40年が入ってるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "急に重みが出たね、枝豆の写真に。"
+      - speaker: zundamon
+        emotion: happy
+        text: "予算が出なくても、勝手に始めていいということなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、止めなかった人たちがいたから続いたんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あなたの職場にも、却下された面白い案が転がってないか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "コメントで、あなたの「却下された案」も教えてほしいぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それでは、また次の動画で。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"
