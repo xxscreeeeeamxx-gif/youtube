@@ -173,6 +173,9 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
   （実測: 抑揚の指標が 3.10→4.09 と3割改善）。voice.py が text 側を使うので、
   ナレの `reading:` は AquesTalk では参照されない。読みの上書きは
   `[表示|よみ]` タグで行う（VOICEVOXと同じ運用に統一）
+- **人名の一括タグ化は表示テキストを巻き込む**。名札（stage.tag / mobs.label）と
+  `meta.summary` は表示専用なので、置換対象から必ず外す（2026-08に両方で事故）。
+  gen_youtube_meta.py は保険として summary のタグを展開してから出力する
 - **名札（stage.tag / mobs.label）に読みタグ記法を書かない**（2026-08の事故:
   人名へ一括でタグを付けたとき名札まで置換され、画面に「[三宅|みやけ]」と
   そのまま出た。点字ブロック29箇所・乾電池16箇所）。名札は表示専用。
