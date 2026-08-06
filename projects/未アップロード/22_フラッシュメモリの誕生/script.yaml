@@ -66,7 +66,7 @@
 meta:
   title: "「金がない、却下」から始まった。スマホの記憶を作った男【フラッシュメモリ誕生・再現ドラマ・ミーム版】"
   slug: "masuoka-flash"
-  summary: "スマホの写真も、ゲームのセーブも、この人が作った仕組みの上にあります。作ったのは東芝の技術者、[舛岡富士雄|ますおかふじお]。営業に出て惨敗した男が、ある学会で「これでは置き換えられない」と直感し、土日だけで23件の特許を書きます。予算はつかず、頼れるのは本業を持つ4人の同僚だけ。ずんだもんが[舛岡|ますおか]を演じる再現ドラマです。後半では、電気を切っても記憶が消えない仕組みも解説します。"
+  summary: "ポケットに入れたまま洗濯したUSBメモリが、なぜ無事だったのか。作ったのは東芝の技術者、[舛岡富士雄|ますおかふじお]。営業に出て惨敗した男が、ある学会で「これでは置き換えられない」と直感し、土日だけで23件の特許を書きます。予算はつかず、頼れるのは本業を持つ4人の同僚だけ。ずんだもんが[舛岡|ますおか]を演じる再現ドラマです。後半では、電気を切っても記憶が消えない仕組みも解説します。"
   tags: ["フラッシュメモリ", "舛岡富士雄", "USBメモリ", "東芝", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
   thumbnail:
     top: "金がない、却下"
@@ -92,41 +92,36 @@ scenes:
       - {who: tsumugi, x: 0.74}
     cuts:
       - speaker: zundamon
-        emotion: happy
-        text: "つむぎ、見てほしいのだ。スマホの写真、1万2千枚になったぞ。"
-      - speaker: tsumugi
-        emotion: surprised
-        text: "多すぎでしょ。ほとんど枝豆の写真じゃない。"
+        emotion: sad
+        text: "やってしまったのだ……。推しの写真を全部入れたUSBメモリを、ポケットに入れたまま洗濯したのだ。"
       - speaker: zundamon
-        emotion: happy
-        text: "全部ちがう枝豆なのだ。角度も、ゆで加減も。"
+        emotion: sad
+        text: "ぐるぐる回って、すすがれて、脱水までフルコースだ。ボクの思い出は水の底なのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "その1万2千枚、どこに入ってるか知ってる？"
+        text: "落ち着いて。しっかり乾かしてから挿してみて。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ああいうのは、意外と平気なことが多いから。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……読めたのだ！？写真も全部無事なのだ！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "あんなに水に沈んだのに、なんで生きてるのだ！？"
       - speaker: zundamon
         emotion: thinking
-        text: "スマホの中なのだ。当たり前だぞ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "スマホの中の、爪より小さいチップの中だよ。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "そんなところに1万2千枚も！？物理的におかしいのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "しかも電源を切っても消えない。充電が切れても残ってる。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "……言われてみれば、なんで消えないんだ？"
+        text: "というかそもそも、電気もつないでないのに、なんで何ヶ月も覚えていられるんだ？"
       - speaker: tsumugi
         emotion: happy
-        text: "その仕組みを考えた人が、日本にいるの。"
+        text: "いい質問。その仕組みを考えた人が、日本にいるの。"
       - speaker: zundamon
         emotion: surprised
-        text: "日本人なのか！ボクの枝豆コレクションの恩人なのだ！"
+        text: "日本人なのか！ボクの推しの恩人なのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "でもその人、社内で言われた言葉があるんだ。"
+        text: "でもその人、会社でこう言われたんだ。"
       - speaker: tsumugi
         emotion: normal
         text: "「金がない。却下」"
@@ -136,10 +131,10 @@ scenes:
         text: "世界を動かす発明が、そこで止まりかけたのか！？"
       - speaker: tsumugi
         emotion: normal
-        text: "止まらなかったから、いまあなたの手の中にあるんだよ。"
+        text: "止まらなかったから、いまあなたのポケットの中にあるんだよ。"
       - speaker: zundamon
         emotion: happy
-        text: "聞くのだ。1万2千枚ぶんの恩を返すのだ。"
+        text: "聞くのだ。洗濯機を生き延びた恩を返すのだ。"
   # ============ 1943 年号カード ============
   - id: era1943
     title: ""
@@ -971,7 +966,7 @@ scenes:
         text: "電子が入ってる檻を1、空っぽの檻を0。それがデータの正体。"
       - speaker: zundamon
         emotion: surprised
-        text: "ボクの枝豆1万2千枚は、電子が入った檻の並びなのだ……。"
+        text: "ボクの推しの写真は、電子が入った檻の並びだったのだ……。"
       - speaker: tsumugi
         emotion: normal
         text: "書き換えるときは、壁をむりやり通す。だから回数に限りがあるの。"
@@ -992,7 +987,7 @@ scenes:
         text: "だから落としても平気だし、濡れても完全に乾かせば動くことが多いの。"
       - speaker: zundamon
         emotion: happy
-        text: "洗濯機で洗ったUSBが生きてたって話、そういうことなのだ！"
+        text: "だからボクのUSBは、洗濯機を生き延びたのだ！"
   - id: gendai
     title: "そして現代へ"
     background: il_ms_now
@@ -1040,19 +1035,19 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: normal
-        text: "つむぎ。ボク、写真を消そうとしてたのだ。"
+        text: "つむぎ。ボク、あのUSBを買い替えようとしてたのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "1万2千枚もあるものね。"
+        text: "洗濯しちゃったもんね。"
       - speaker: zundamon
         emotion: normal
-        text: "でも、消すのやめたぞ。"
+        text: "でも、やめたぞ。まだ動くからな。"
       - speaker: zundamon
         emotion: normal
         text: "この中の檻には、土日に特許を書いた人の40年が入ってるのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "急に重みが出たね、枝豆の写真に。"
+        text: "急に重みが出たね、その小さい部品に。"
       - speaker: zundamon
         emotion: happy
         text: "予算が出なくても、勝手に始めていいということなのだ。"
