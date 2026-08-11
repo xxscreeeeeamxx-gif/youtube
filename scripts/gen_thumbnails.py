@@ -1173,13 +1173,6 @@ SPECS = {
                              ("存在しない", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
                       subject="エスカレーター", subject_at=(232, 470), subject_max_w=790, subject_big=True,
                        speech="誰が決めたのだ"),
-    "cup-noodle": dict(layout="charbig", prop=p_cupnoodle, prop_h=330,
-                       bg=((60, 28, 24), (80, 40, 32)), who="zundamon", emotion="thinking",
-                       lines=[("お湯を入れて", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                              ("3分待つ間に", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                              ("何が起きてる", 126, (24, 20, 14, 255), (252, 214, 36, 255))],
-                       subject="カップ麺", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="待てないのだ"),
 }
 
 
