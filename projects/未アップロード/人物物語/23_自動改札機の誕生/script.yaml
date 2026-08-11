@@ -172,7 +172,7 @@ scenes:
         text: "当時の改札に、機械はありません。係員が一人ひとりの切符にハサミを入れます。"
       - speaker: ekiin
         emotion: normal
-        text: "はい、どうぞ。どうぞ。次の方。"
+        text: "はい、どうぞ。どうぞ。次の[方|かた]。"
       - speaker: reimu
         text: "その速さ、1分間におよそ75人から80人。1秒に1人以上です。"
       - speaker: ekiin
@@ -419,8 +419,9 @@ scenes:
     background: il_kg_lab
     bgm: you_and_me
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
-      - {who: tsumugi, x: 0.74, tag: "浅田"}
+      - {who: zundamon, x: 0.22, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.5, tag: "浅田"}
+      - {who: tetsudo, x: 0.8}
     cuts:
       - speaker: reimu
         text: "もうひとつ、鉄道側から出された条件がありました。"
@@ -477,7 +478,7 @@ scenes:
         text: "丸めて入れる人もいます。あれも詰まります。"
       - speaker: zundamon
         emotion: normal
-        text: "掴めばいいのだ。転がすんじゃなく、掴んで運ぶ。"
+        text: "掴めばいいのだ。[転|ころ]がすんじゃなく、掴んで運ぶ。"
       - speaker: tsumugi
         emotion: thinking
         text: "細いベルトで挟むんですね。幅は……5ミリでどうでしょう。"
@@ -558,8 +559,9 @@ scenes:
     background: il_kg_office
     bgm: 223am
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
-      - {who: tetsudo, x: 0.74}
+      - {who: zundamon, x: 0.22, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.5, tag: "浅田"}
+      - {who: tetsudo, x: 0.8}
     cuts:
       - speaker: reimu
         text: "最初に導入が決まっていたのは、大阪のある大きな乗り換え駅でした。"
@@ -709,8 +711,9 @@ scenes:
     background: il_kg_kitasenri
     bgm: curious
     stage:
-      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
-      - {who: tsumugi, x: 0.74, tag: "浅田"}
+      - {who: zundamon, x: 0.22, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.5, tag: "浅田"}
+      - {who: tetsudo, x: 0.8}
     cuts:
       - speaker: reimu
         text: "動きはじめた機械には、まだ大きな制約がありました。"
@@ -719,7 +722,7 @@ scenes:
         text: "定期券用と、切符用。改札口そのものが別なんですよね。"
       - speaker: zundamon
         emotion: normal
-        text: "定期の投入口は広い。そこに小さい切符を入れると、中で泳いで詰まるのだ。"
+        text: "定期の[投入口|とうにゅうぐち]は広い。そこに小さい切符を入れると、中で泳いで詰まるのだ。"
       - speaker: reimu
         text: "二年ほど経って、鉄道側から新しい注文が届きます。"
       - speaker: tetsudo
@@ -829,7 +832,7 @@ scenes:
         text: "入れた瞬間、切符はベルトに掴まれて、機械の中を猛スピードで走るよ。"
       - speaker: zundamon
         emotion: thinking
-        text: "掴まれる。転がされるんじゃないのか。"
+        text: "掴まれる。[転|ころ]がされるんじゃないのか。"
       - speaker: tsumugi
         emotion: happy
         text: "そこが昔の人の工夫だね。濡れた切符も丸めた切符も、掴めば運べるから。"
@@ -861,7 +864,7 @@ scenes:
         text: "次はICカード。ずんだもん、あのカード、充電したことある？"
       - speaker: zundamon
         emotion: surprised
-        text: "充電口なんてないのだ。……あれ、電池も入ってないぞ。"
+        text: "[充電口|じゅうでんぐち]なんてないのだ。……あれ、電池も入ってないぞ。"
       - speaker: tsumugi
         emotion: happy
         text: "改札にかざした瞬間だけ、改札から電気をもらって目を覚ますの。"

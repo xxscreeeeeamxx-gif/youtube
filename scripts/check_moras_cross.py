@@ -58,6 +58,24 @@ def norms(kana: str):
     return base, fused
 
 
+# 文脈で読みが確定する言い回し（ALTの許容読みでは見逃せるため個別に照合する）。
+# 例: 「方」は方式=ホオ / 次の方=カタ。ALTに両方入れると誤読を拾えない
+# (正規表現, 期待読み)。「その方針/方向/方式」等に誤反応しないよう後続を除外する
+_NOT_KATA = r"(?![針向式法面々々位角言便])"
+CONTEXT = [
+    (r"次の方" + _NOT_KATA, "ツギノカタ"),
+    (r"あの方" + _NOT_KATA, "アノカタ"),
+    (r"この方" + _NOT_KATA, "コノカタ"),
+    (r"その方" + _NOT_KATA, "ソノカタ"),
+    (r"どの方" + _NOT_KATA, "ドノカタ"),
+    (r"一人の方" + _NOT_KATA, "ヒトリノカタ"),
+    (r"女の方" + _NOT_KATA, "オンナノカタ"),
+    (r"男の方" + _NOT_KATA, "オトコノカタ"),
+    (r"何人", "ナンニン"), (r"何回", "ナンカイ"), (r"何度", "ナンド"),
+    (r"今日は", "キョオワ"), (r"明日は", "アシタワ"),
+]
+
+
 # pykakasi側が単独では読みを外しやすい汎用語の代替読み（これらが実読に居れば不一致としない）
 ALT = {
     "人": ["ヒト", "ジン", "ニン"], "入": ["ハイ", "イ", "ニュウ"], "何": ["ナニ", "ナン"],
@@ -125,6 +143,15 @@ def check_slug(slug: str) -> int:
         raw = "".join(x[0] for x in moras)
         mstrs = norms(raw)
         text = strip_tags(c.get("display_text", ""))
+        # 文脈で読みが確定する言い回しを先に照合（ALTの許容読みでは拾えないため）
+        for pattern, expect in CONTEXT:
+            if not re.search(pattern, text):
+                continue
+            if not any(expect in m for m in mstrs):
+                hits += 1
+                print(f"‼ {slug} idx{i} 「{re.search(pattern, text).group(0)}」は {expect} のはず")
+                print(f"   text: {c.get('display_text','')[:42]}")
+                print(f"   実読: {mstrs[0][:60]}")
         for seg in _kks.convert(text):
             orig = seg["orig"]
             if not re.search(r"[一-鿿]", orig):
