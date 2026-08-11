@@ -623,6 +623,36 @@ def p_phone_mem(d, s):
         d.rectangle([s*(0.13+k*0.075), s*0.96, s*(0.155+k*0.075), s*1.02], fill=(200, 176, 90))
 
 
+def p_hasami(d, s):
+    """改札鋏と切符（自動改札のビフォー）。"""
+    # 切符
+    d.rounded_rectangle([s*0.06, s*0.52, s*0.62, s*0.86], radius=6, fill=(244, 240, 226),
+                        outline=(160, 152, 132), width=6)
+    for y in (s*0.60, s*0.68):
+        d.rectangle([s*0.12, y, s*0.46, y + s*0.03], fill=(150, 146, 136))
+    # 鋏
+    d.line([(s*0.52, s*0.44), (s*0.88, s*0.10)], fill=(150, 156, 170), width=int(s*0.09))
+    d.line([(s*0.62, s*0.46), (s*0.96, s*0.20)], fill=(178, 184, 198), width=int(s*0.08))
+    d.ellipse([s*0.80, s*0.02, s*0.98, s*0.20], outline=(120, 126, 140), width=int(s*0.05))
+    d.ellipse([s*0.88, s*0.16, s*1.04, s*0.32], outline=(120, 126, 140), width=int(s*0.05))
+    d.ellipse([s*0.50, s*0.40, s*0.66, s*0.54], fill=(90, 96, 110))
+
+
+def p_gate_now(d, s):
+    """現代の自動改札（タッチ面が光る）。"""
+    d.rounded_rectangle([s*0.06, s*0.30, s*0.40, s*0.96], radius=12,
+                        fill=(206, 210, 222), outline=(110, 116, 130), width=7)
+    d.rounded_rectangle([s*0.60, s*0.30, s*0.94, s*0.96], radius=12,
+                        fill=(206, 210, 222), outline=(110, 116, 130), width=7)
+    for x in (0.10, 0.64):
+        d.rounded_rectangle([s*x, s*0.20, s*(x+0.26), s*0.34], radius=8, fill=(64, 70, 86))
+        d.ellipse([s*(x+0.05), s*0.40, s*(x+0.21), s*0.55], fill=(96, 200, 244))
+        d.rectangle([s*(x+0.03), s*0.66, s*(x+0.23), s*0.72], fill=(110, 210, 150))
+    # 開いた通路（緑の矢印）
+    d.polygon([(s*0.44, s*0.62), (s*0.56, s*0.62), (s*0.56, s*0.56), (s*0.62, s*0.68),
+               (s*0.56, s*0.80), (s*0.56, s*0.74), (s*0.44, s*0.74)], fill=(90, 220, 150))
+
+
 # ---------------------------------------------------------------- レイアウト
 #
 # 調査した定石（stock-sun / LEL-japan 他）を反映:
@@ -1130,6 +1160,12 @@ SPECS = {
                           head_l="金がない、却下", head_r="世界中のポケットへ",
                           tag_l="1987年:予算ゼロの発明", tag_r="いま:スマホもカメラも",
                           speech="土日に特許23件なのだ", emo_l="sad", emo_r="surprised"),
+    "kaisatsu-drama": dict(layout="ba", prop_l=p_hasami, prop_r=p_gate_now, prop_h=300,
+                           left_bg=((44, 38, 30), (60, 52, 40)),
+                           right_bg=((20, 54, 92), (26, 74, 122)),
+                           head_l="1分間に80人", head_r="機械で超えろ",
+                           tag_l="1960年代:駅員がハサミで", tag_r="1967年:大阪の新しい駅で",
+                           speech="失敗したら暴動だと", emo_l="sad", emo_r="surprised"),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="photo", photo="ph_charging_desk.jpg", darken=0.38,
                            badge=lambda d, s: p_battery(d, s, 100, (255, 86, 66)),
@@ -1159,13 +1195,6 @@ SPECS = {
                              ("無視される理由", 118, (24, 20, 14, 255), (252, 214, 36, 255))],
                       subject="自動ドア", subject_at=(232, 470), subject_max_w=790, subject_big=True,
                        speech="ボクが軽いのか？"),
-    "ticket-gate": dict(layout="charbig", prop=p_gate, prop_h=320,
-                        bg=((22, 46, 60), (30, 62, 80)), who="zundamon", emotion="thinking",
-                        lines=[("裏返しでも", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                               ("逆さでも", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                               ("なぜ通れる", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
-                        subject="自動改札機", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="1分で60人だと"),
     "escalator": dict(layout="charbig", prop=p_escalator, prop_h=330,
                       bg=((30, 40, 58), (40, 54, 76)), who="zundamon", emotion="surprised",
                       lines=[("片側空けの", 76, (255, 255, 255, 255), (22, 20, 30, 245)),

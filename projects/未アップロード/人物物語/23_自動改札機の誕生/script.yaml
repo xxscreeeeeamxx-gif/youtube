@@ -1,0 +1,989 @@
+# 自動改札機を作った人たち 再現ドラマ・ミーム版（仕組みの解説も統合）
+#
+# == 裏取り済みの事実（出典: 吹田市立千里ニュータウン情報館 セミナー「自動改札機開発秘話」
+#    田中・浅田 両氏の証言録 2021-11-21 / IEEE ETHW マイルストーン公式 / 阪急電鉄公式 /
+#    日本機械学会 機械遺産第43号 / 発明協会 戦後日本のイノベーション100選 / オムロンSS 畑山氏講演）==
+#
+# ★通説の誤り・注意点4点★
+# 1. 「世界初」は無条件では言えない。ロンドン交通局は1963年に実験・1964年に設置済み。
+#    正確には【常時開放（ノーマルオープン）方式で、複雑な定期券を高速処理できるシステムとして初】。
+#    IEEE自身が海外先行例を認めている → 動画では必ず修飾を付ける
+# 2. IEEEマイルストーンの正式名称は【Railroad Ticketing Examining System, 1965-1971】。
+#    銘板に「世界初」も「自動改札機」も入っていない。対象は1965〜1971年
+# 3. 「駅員が腱鞘炎になった」は裏付けなし → 使わない。
+#    裏が取れるのは改札鋏で【手に血豆ができた】まで（関東交通印刷）
+# 4. 江尻正員は日立の研究者で【別人・無関係】→ 登場させない
+#
+# == 人物（実名が確認できるのは2名。ともにプロジェクトX出演・千里NT情報館で証言）==
+# - 田中壽雄: 開発リーダー格。★読み仮名が公開資料で確定できないため、
+#   動画では【姓のみ「田中」】で呼ぶ。フルネームは出さない
+# - 浅田武夫: メカ設計の中心。同じく【姓のみ「浅田」】で呼ぶ
+# - 立石一真（創業者）は自動改札への具体的関与を示す一次資料がない → 会社の理念のみ引用し、
+#   「創業者が英断した」式の演出はしない
+#
+# == 4者の分担（どれか一社の手柄にしない）==
+# - 近畿日本鉄道: 発案・最初の発注元。1964年2月に研究会を設立
+# - 大阪大学: 経路符号化の理論（グラフ理論・21ビット）
+# - 立石電機（現オムロン）: ハードウェア。1964年9月に参加
+# - 京阪神急行電鉄（現阪急）: 最初の実用設置場所を提供
+#
+# == 裏取りできた事実 ==
+# - 1960年代、駅員のいる改札は毎分75〜80人が通過（IEEE）。田中の観察では毎分60〜80人
+# - 1日の総乗客の50%超が朝ラッシュに集中（IEEE）
+# - 田中と浅田が阪急梅田駅で張り込み観察 → 係員は「ちゃんと見てる。問題がないから黙っている」
+#   → 客は常に正しいという前提 →【性善説のノーマルオープン】という設計思想へ
+# - 鉄道側の最大要件は速度。「係員の処理能力を下回るな。混雑が起きたら駅で暴動が起こるかもしれない」
+# - 自社で3本バーのターンスタイルを試作 → 【毎分20人】が限界。海外の4扉式も毎分15〜20人
+# - 機械が長い理由: 客は歩きながら券を入れ、手は体の後ろに残る。手を入れ替えるのに【0.6秒】、
+#   歩行4km/h＝1.1m/sなので【70cm】進む。手前30cm＋70cm＋取る30cm＝【1.3m】必要。
+#   券は客より速く運ばれ、客を追い抜く
+# - 券の整列機構（浅田の設計）: 中心をずらして回るコマで、表裏も前後も問わず縦に揃える。
+#   「渓流で岩に当たった笹の葉がまっすぐになるように」
+# - 搬送は幅【5mm】の特殊ベルト。芯にナイロンを入れてベルトメーカーに開発を頼んだ
+# - 大阪大学の経路符号化: 近鉄【280駅・17万通り】の経路を、最低18ビットのところ
+#   冗長3ビットを足した【21ビット】で表現し、比較演算だけで妥当性判定
+# - 親子連れ対応: 手すりのセンサーで人と荷物をパターン認識（海外の改札にはない発想）
+# - 近鉄は鶴橋駅で導入予定だったが、国鉄が「穴のあいた定期券はダメだ」として連絡改札で扱えず頓挫。
+#   ★国鉄を悪役にしない（当時は規格が統一されておらず技術的に妥当な判断でもあった）
+# - そこで立石電機の営業が阪急へ。万博前で北千里駅の新設が進んでいた。
+#   「うちに置かしてあげる、入れてみるか」「ぜひお願いします」
+# - 【1967年3月1日】北千里駅で稼働。阪急公式によれば【10台】導入。当日は最高10度・最低マイナス2度
+# - 当初は定期券用と切符用で改札機も改札口も別だった。約2年後に一体化を要求され、
+#   北千里を実験場に設計者自身が泊まり込みで改修。1971年に新型へ
+# - 開発チームの日常: 商店街で毎日同じ店に通うと奥さんが自宅用の漬物を出してくれた／
+#   終電後に屋台で酒とつまみを買い、駅員と一杯やってから寝るのが楽しみだった
+# - 特許は全公開。メーカーからは適度なロイヤリティを取るが鉄道会社からは取らない方針
+#   → 全国統一規格が守られた
+# - 1971年5月 日本鉄道サイバネティクス協議会が磁気カードの全国統一規格を制定
+# - 2007年11月27日 IEEEマイルストーン認定（大阪大学・近鉄・阪急・オムロンの4か所に銘板）
+# - 1970年 新技術開発財団 市村産業賞本賞（第2回）
+# - 現在: 磁気券【0.6秒】/ ICカード【0.2秒】で処理。運賃計算の組み合わせは【10の40乗】オーダー
+# - 実用化から30年で全国約2万台
+#
+# == センシティブルール ==
+# - 「世界初」は必ず修飾付き。海外の先行例（ロンドン1964年）に触れる
+# - 4者の分担を潰さない。「オムロンが作った」と単純化しない
+# - 国鉄・労組を悪役にしない。JR導入が遅れた事情には深入りしない
+# - 性善説は文化論に寄せすぎない。「混雑という制約への解」として描く
+# - 人名は姓のみ。読みが不確定なフルネームを音声にしない
+meta:
+  title: "1秒に1人を通せ。世界の改札が真似しなかった日本の答え【自動改札機誕生・再現ドラマ・ミーム版】"
+  slug: "kaisatsu-drama"
+  summary: "毎朝くぐるあの箱は、1967年に大阪の新しい駅で動きはじめました。当時の改札は駅員が1枚ずつハサミを入れ、1分間に80人をさばいていた場所。機械にそれを超えろと言われた技術者たちが、まず何をしたか。ずんだもんと春日部つむぎが開発者を演じる再現ドラマです。後半では、切符が機械の中で何をされているのか、ICカードが電池なしで動く理由も解説します。"
+  tags: ["自動改札機", "オムロン", "阪急", "北千里", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "1秒に1人を通せ"
+    bottom: "1967年・大阪"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: ekiin, label: "改札の係員", voice: 42, pitch: 0.0}
+    - {id: tetsudo, label: "鉄道会社の人", voice: 13, pitch: -0.04, item: hat}
+    - {id: sensei, label: "大学の先生", voice: 42, pitch: -0.03}
+    - {id: eigyo, label: "営業担当", voice: 12, pitch: 0.02}
+    - {id: hankyu, label: "阪急の人", voice: 13, pitch: 0.03, item: hat}
+    - {id: kyaku, label: "通勤客", voice: 12, pitch: 0.05}
+scenes:
+  # ============ 茶番フック ============
+  - id: hook
+    title: ""
+    background: il_kg_now
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: angry
+        text: "つむぎ、聞いてほしいのだ。今朝、改札に閉じ込められたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "閉じ込められた？"
+      - speaker: zundamon
+        emotion: angry
+        text: "カードをかざしたら、扉がバタンと閉まって、ボクを止めたのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "残高、足りてた？"
+      - speaker: zundamon
+        emotion: sad
+        text: "……20円足りなかったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "改札は悪くないね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも気づいたのだ。あの扉、ふだんは開きっぱなしだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。日本の改札は、普段は開いていて、問題があるときだけ閉じるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "無賃乗車し放題じゃないか。閉めておけばいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "外国の改札は、たいてい閉まってるよ。入れて、開けて、通る。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "じゃあなんで日本だけ開けてるんだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1960年代の駅を、技術者がずっと立って見ていたからだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "立って、見ていた。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そのとき彼らに突きつけられた条件が、これ。"
+      - speaker: tsumugi
+        emotion: normal
+        se: don
+        text: "「1分間に80人。駅員より遅かったら、失敗だ」"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1分で80人！？1秒に1人以上なのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "しかも、切符の裏表がバラバラのままでね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。閉じ込められた恨みは、いったん置いておくのだ。"
+  # ============ 1960年代・通勤地獄 ============
+  - id: era1960
+    title: ""
+    background: il_kg_station
+    bgm: serious
+    cuts:
+      - speaker: reimu
+        text: "1960年代の日本。経済は年に10パーセント以上の勢いで膨らんでいました。"
+        video: assets/clips/kg_era1960.mp4
+        video_full: true
+        video_span: 2
+      - speaker: reimu
+        text: "駅には、その勢いがそのまま押し寄せていました。"
+  - id: rush
+    title: "1分間に80人"
+    background: il_kg_station
+    bgm: kinakusai
+    stage:
+      - {who: ekiin, x: 0.5}
+    cuts:
+      - speaker: reimu
+        text: "当時の改札に、機械はありません。係員が一人ひとりの切符にハサミを入れます。"
+      - speaker: ekiin
+        emotion: normal
+        text: "はい、どうぞ。どうぞ。次の方。"
+      - speaker: reimu
+        text: "その速さ、1分間におよそ75人から80人。1秒に1人以上です。"
+      - speaker: ekiin
+        emotion: sad
+        text: "……手が、痛い。鋏を握りすぎて豆ができた。"
+      - speaker: reimu
+        text: "1日の乗客の半分以上が、朝のわずかな時間に集中していました。"
+      - speaker: ekiin
+        emotion: angry
+        text: "ホームがいっぱいだ！改札を止めろ！"
+      - speaker: reimu
+        text: "ホームが満員になると、転落を防ぐために改札そのものを閉めます。"
+      - speaker: reimu
+        text: "電車が出れば、また開ける。その繰り返しでした。"
+      - speaker: ekiin
+        emotion: sad
+        text: "人を増やしたくても、混むのは朝と夕方だけなんだ。"
+  # ============ 梅田駅の張り込み ============
+  - id: harikomi
+    title: "立って、見ていた"
+    background: il_kg_umeda
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.22, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.5, tag: "浅田"}
+      - {who: ekiin, x: 0.8}
+    cuts:
+      - speaker: reimu
+        text: "機械を作ることになった技術者たちは、まず駅へ行きました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[浅田|あさだ]。今日もここに立つぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "田中さん、もう三日目ですよ。何を見てるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "係員の手だ。あの人、切符をほとんど見てないように見えるだろう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たしかに。ただ立ってるだけに見えます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……すみません。あなた、切符を見ていますか。"
+      - speaker: ekiin
+        emotion: normal
+        text: "見てますよ。ちゃんと見てる。"
+      - speaker: ekiin
+        emotion: normal
+        text: "問題がないから、黙ってるだけです。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……本当ですか？"
+      - speaker: ekiin
+        emotion: normal
+        text: "あ、もしもしお客さん。それ、期限が切れてますよ。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……見えてる。あの速さで、全部見えてるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "お客さんも、定期をさっと見せて、止まりもしない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[浅田|あさだ]。ここには、信頼があるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "信頼、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ほとんどの客は、正しい券を持っている。係員はそれを知っている。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、止めない。止めないから、流れる。"
+      - speaker: reimu
+        text: "この観察が、のちの設計思想を決めます。"
+  # ============ 暴動が起こるかもしれない ============
+  - id: joken
+    title: "失敗は許されない"
+    background: il_kg_office
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.22, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.5, tag: "浅田"}
+      - {who: tetsudo, x: 0.8}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "券が正しければ扉を開く。それでいいはずなのだ。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "違います。それは改札機の、基本機能です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "基本機能。では、最大の要件は。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "速度です。ラッシュ時の係員の処理能力を、下回ってはいけない。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……下回ると、どうなるんですか。"
+      - speaker: tetsudo
+        emotion: sad
+        text: "改札に人が溜まります。ホームにも、階段にも。"
+      - speaker: tetsudo
+        emotion: normal
+        se: don
+        text: "駅で、暴動が起こるかもしれない。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "暴動。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "それに、一度失敗すれば、世の中は二度と自動化を受け入れません。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "だから、失敗は絶対に許されないんです。"
+      - speaker: reimu
+        text: "この一言を聞いたときの衝撃を、田中はのちに語っています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……[浅田|あさだ]。これは、機械を作る話じゃないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。人の流れを、止めない話です。"
+  # ============ 3本バーの壁 ============
+  - id: kabe
+    title: "毎分20人の壁"
+    background: il_kg_lab
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.74, tag: "浅田"}
+    cuts:
+      - speaker: reimu
+        text: "当時、世界にあった自動改札は、どれも普段は閉じている方式でした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "海外の方式を、まず作ってみました。三本のバーが回るやつです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よし、測るぞ。何人通せる。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……毎分20人です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "20人！？係員の四分の一なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どう改良しても、これ以上は上がりません。"
+      - speaker: reimu
+        text: "ロンドンやアメリカで動いていた最新式でも、毎分15人から20人ほどでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なぜ上がらないか、分かるか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "止まるからです。閉まっているから、人はいったん止まる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。止まった人を動かすのに、時間がかかるのだ。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "なら、閉めるのをやめるぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "開けっぱなしにするんですか！？ただ乗りされます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "梅田で見ただろう。ほとんどの客は、正しい券を持っているのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "普段は開けておく。おかしい券のときだけ、閉じる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……お客さんを、疑わない改札。"
+      - speaker: reimu
+        text: "普段は開いている方式は、ノーマルオープンと呼ばれます。"
+      - speaker: reimu
+        text: "ただしこれは、性善説である以前に、混雑をさばくための答えでもありました。"
+  # ============ 機械の長さの謎 ============
+  - id: nagasa
+    title: "なぜ改札は長いのか"
+    background: il_kg_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.74, tag: "浅田"}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "田中さん。読み取りは、切符を入れた瞬間に終わってるんですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "終わってる。一瞬だ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "じゃあ、すぐ横から返せばいい。機械はもっと短くできます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いや。それだと、客は立ち止まるぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "なぜですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "客は歩きながら券を入れる。入れた手は、体の後ろに残るのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その手を前に持ってくるまで、およそ0.6秒かかる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "0.6秒……歩く速さが時速4キロだから、その間に。"
+      - speaker: zundamon
+        emotion: normal
+        text: "70センチ進む。"
+      - speaker: tsumugi
+        emotion: surprised
+        se: don
+        text: "すぐ返したら、券は体の後ろにあることになる！"
+      - speaker: zundamon
+        emotion: normal
+        text: "手を伸ばす30センチ、進む70センチ、取るのに30センチ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "合わせて1メートル30。だから改札は、あの長さなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ということは、切符のほうが客より速く走るんですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうだ。券が、人を追い抜いていくのだ。"
+      - speaker: reimu
+        text: "田中はのちに、ここが一番難しかったと語っています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械の都合じゃない。人の歩き方に、機械を合わせるのだ。"
+  # ============ 券の整列（浅田の発明）============
+  - id: seiretsu
+    title: "笹の葉のように"
+    background: il_kg_lab
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.74, tag: "浅田"}
+    cuts:
+      - speaker: reimu
+        text: "もうひとつ、鉄道側から出された条件がありました。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "切符の大きさは、いままでのままにしてください。券売機がありますので。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……切符と定期券で、大きさが違うんですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しかも客は、裏表を確認せずに入れる。前後もばらばらだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "どんな向きで入っても、中で揃えるしかないですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "詰まらせずにな。詰まったら、その改札は止まるのだ。"
+      - speaker: reimu
+        text: "[浅田|あさだ]が考えたのは、中心をずらして回る、小さなコマでした。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "見てください。券がコマに触れると、自然に縦を向きます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……揃った。押さえつけてないのに、揃ってるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "渓流で、岩に当たった笹の葉が、まっすぐになるのと同じです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "力ずくじゃなく、流れで揃えるのだ。"
+      - speaker: reimu
+        text: "この機構は、半世紀を過ぎたいまも、各社の改札機で使われ続けています。"
+      - speaker: reimu
+        text: "決まりがあるわけではありません。これ以上の方式が、まだ無いのです。"
+  # ============ ベルトと雨の切符 ============
+  - id: belt
+    title: "濡れた切符を運べ"
+    background: il_kg_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.74, tag: "浅田"}
+    cuts:
+      - speaker: tsumugi
+        emotion: sad
+        text: "田中さん。雨の日の切符が、また詰まりました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "濡れて柔らかくなると、ローラーが噛まないのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "丸めて入れる人もいます。あれも詰まります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "掴めばいいのだ。転がすんじゃなく、掴んで運ぶ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "細いベルトで挟むんですね。幅は……5ミリでどうでしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "薄い紙が、ベルトの波の中に入れば、立体になって安定するぞ。"
+      - speaker: reimu
+        text: "問題は、そんなベルトがどこにも売っていないことでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "布のベルトしかありません。すぐ伸びます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ベルト屋さんに頼みに行くぞ。芯にナイロンを入れてもらう。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "そんな特注、受けてくれますかね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "必死の思いで頼めばいいのだ。こっちも必死なんだからな。"
+  # ============ 大学の21ビット ============
+  - id: daigaku
+    title: "17万通りを21個の0と1で"
+    background: il_kg_univ
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: sensei, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "定期券には、もっと厄介な問題がありました。"
+      - speaker: sensei
+        emotion: normal
+        text: "定期は区間券です。その経路を通ったかどうかを、機械が判断せねばなりません。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "路線は280駅。経路の数は。"
+      - speaker: sensei
+        emotion: normal
+        text: "17万通りです。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "17万！？そんな表、機械に持たせられないのだ！"
+      - speaker: reimu
+        text: "この時代、集積回路はまだ使えません。トランジスタを並べて回路を組みます。"
+      - speaker: sensei
+        emotion: normal
+        text: "ですから、覚えさせるのではなく、計算で判定させます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "計算で。"
+      - speaker: sensei
+        emotion: normal
+        text: "路線を木の枝に見立てて、経路に番号を割り当てるのです。"
+      - speaker: sensei
+        emotion: normal
+        text: "17万通りなら、18個の0と1があれば足ります。"
+      - speaker: sensei
+        emotion: happy
+        text: "そこへ3個だけ足して、21個にする。すると。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……大小を比べるだけで、正しい経路かどうか分かるのか。"
+      - speaker: sensei
+        emotion: normal
+        text: "そうです。引き算と比較だけ。トランジスタでも間に合います。"
+      - speaker: zundamon
+        emotion: happy
+        text: "理屈が、機械を小さくするのだ。"
+      - speaker: reimu
+        text: "この方式のおかげで、路線が増えても定期券を作り直す必要はありませんでした。"
+      - speaker: reimu
+        text: "開発から半世紀、一度もです。"
+  # ============ 近鉄の頓挫 ============
+  - id: tonza
+    title: "置き場所が、なくなった"
+    background: il_kg_office
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: tetsudo, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "最初に導入が決まっていたのは、大阪のある大きな乗り換え駅でした。"
+      - speaker: tetsudo
+        emotion: sad
+        text: "田中さん。……あの話、止まりました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "止まった。なぜですか。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "国鉄さんとの連絡改札がある駅なんです。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "うちの定期券は、穴をあける方式でしょう。あれは扱えないと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あちらの改札を、うちの穴が通ることになるのか。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "規格が、まだどこにも無いんです。断られても仕方がない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうですね。あちらにも、あちらの理屈がある。"
+      - speaker: reimu
+        text: "田中はのちに、この知らせを聞いたときのことを一言で語っています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "がっくり、きたのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……機械は、できてるのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "置く場所がなければ、機械はただの箱なのだ。"
+  # ============ 阪急へ ============
+  - id: hankyu
+    title: "うちに置かせてあげる"
+    background: il_kg_office
+    bgm: you_and_me
+    stage:
+      - {who: eigyo, x: 0.28}
+      - {who: hankyu, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "動いたのは、営業の担当者でした。"
+      - speaker: eigyo
+        emotion: normal
+        text: "お聞きしました。千里に、新しい駅を作られるそうですね。"
+      - speaker: hankyu
+        emotion: normal
+        text: "ええ。ニュータウンの北の端です。万博も控えていますから。"
+      - speaker: eigyo
+        emotion: happy
+        text: "その駅に、置かせていただけませんか。自動の改札機です。"
+      - speaker: hankyu
+        emotion: surprised
+        text: "自動の。……動くんですか、それ。"
+      - speaker: eigyo
+        emotion: normal
+        text: "動きます。ただ、まだ世界のどこでも本格的には使われていません。"
+      - speaker: hankyu
+        emotion: thinking
+        text: "……新しい駅だから、うちは困らないな。"
+      - speaker: hankyu
+        emotion: happy
+        text: "いいでしょう。うちに置かせてあげる。入れてみるか。"
+      - speaker: eigyo
+        emotion: happy
+        se: don
+        text: "ぜひ、お願いします！"
+      - speaker: reimu
+        text: "田中はのちに、こう振り返っています。"
+      - speaker: reimu
+        text: "[北千里|きたせんり]駅には、もともと自動化する計画は無かったのではないか、と。"
+  # ============ 1967 北千里 ============
+  - id: era1967
+    title: ""
+    background: il_kg_kitasenri
+    bgm: pastel_house
+    cuts:
+      - speaker: reimu
+        text: "1967年3月1日。大阪府[吹田市|すいたし]、[阪急|はんきゅう][千里線|せんりせん]・[北千里|きたせんり]駅。"
+        video: assets/clips/kg_era1967.mp4
+        video_full: true
+        video_span: 2
+      - speaker: reimu
+        text: "最高気温10度、最低気温マイナス2度。寒い日でした。"
+  - id: kaigyo
+    title: "1967・[北千里|きたせんり]"
+    background: il_kg_kitasenri
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.22, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.5, tag: "浅田"}
+      - {who: kyaku, x: 0.8}
+    cuts:
+      - speaker: reimu
+        text: "駅の周りは、まだ工事の途中でした。信号もありません。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "田中さん。人、来ますかね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……来る。団地ができはじめてるからな。"
+      - speaker: reimu
+        text: "改札に並んだのは、10台の機械でした。"
+      - speaker: kyaku
+        emotion: thinking
+        text: "これ、どうやって通るんですか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "切符を、そこへ入れてください。向きは、そのままで大丈夫です。"
+      - speaker: kyaku
+        emotion: surprised
+        text: "そのまま？裏返さなくていいの？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい。中で機械が揃えますので。"
+      - speaker: reimu
+        text: "客が切符を入れます。扉は、開いたままです。"
+      - speaker: kyaku
+        emotion: surprised
+        se: don
+        text: "……あ、出てきた。歩いてるだけなのに、もう前に出てる！"
+      - speaker: zundamon
+        emotion: happy
+        text: "券が、人を追い抜いたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "止まらずに、通れましたね。"
+      - speaker: reimu
+        text: "普段は開いていて、問題があるときだけ閉じる改札。"
+      - speaker: reimu
+        text: "複雑な定期券を高速で処理できる方式としては、これが世界で最初とされています。"
+      - speaker: reimu
+        text: "ただし、閉じたままの自動改札そのものは、すでにロンドンなどにありました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクらが作ったのは、初めての改札じゃないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この国の混み方に、合わせた改札なのだ。"
+  # ============ 泊まり込みの日々 ============
+  - id: tomarikomi
+    title: "駅に住んだ二年"
+    background: il_kg_kitasenri
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.74, tag: "浅田"}
+    cuts:
+      - speaker: reimu
+        text: "動きはじめた機械には、まだ大きな制約がありました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "定期券用と、切符用。改札口そのものが別なんですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "定期の投入口は広い。そこに小さい切符を入れると、中で泳いで詰まるのだ。"
+      - speaker: reimu
+        text: "二年ほど経って、鉄道側から新しい注文が届きます。"
+      - speaker: tetsudo
+        emotion: normal
+        text: "定期も切符も、一台で通せるようにしてください。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……やるぞ。[北千里|きたせんり]を、そのまま実験場にする。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "動いてる駅で、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "毎日詰めていないと、本当の問題は分からないのだ。"
+      - speaker: reimu
+        text: "設計者たちは、駅に泊まり込みます。試作品を持ち込んでは入れ替える日々でした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "また記者の人が来ました。根掘り葉掘り聞かれて、逃げたくなります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "昼は、商店街のあの店に行くぞ。若いのも連れてな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "毎日通ってたら、奥さんが自宅用の漬物を出してくれるようになりましたね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あれが楽しみなのだ。……あと、夜の屋台もな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "終電が出たあとに、駅員さんと一杯やるやつですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "酒とつまみを買ってきて、改札のそばで飲むのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "彼らがいちばん、この機械を見ているからな。"
+  # ============ 特許の全公開 ============
+  - id: tokkyo
+    title: "全部、公開する"
+    background: il_kg_office
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, tag: "田中"}
+      - {who: tsumugi, x: 0.74, tag: "浅田"}
+    cuts:
+      - speaker: reimu
+        text: "改良が進むにつれ、特許をどうするかという判断が必要になります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "田中さん。特許で囲えば、うちが独占できます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……独占したら、どうなると思う。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "他社は、特許に引っかからない別の方式で作るでしょうね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。会社ごとに規格が変わる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "客は、路線ごとに定期券を何枚も持つことになるのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……それは、不便です。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "全部公開するぞ。作る会社からは少しいただく。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だが、鉄道会社からは取らない。使う側から取ったら意味がないのだ。"
+      - speaker: reimu
+        text: "1971年、磁気カードの全国統一規格が定められます。"
+      - speaker: reimu
+        text: "その規格は、いまも守られています。"
+  # ============ 現代へ + 仕組み ============
+  - id: shikumi1
+    title: "切符は箱の中で何をされているのか"
+    background: il_kg_now
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……つむぎ。あの中って、いま何が起きてるんだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "紙の切符から話そうか。裏が黒いの、なんでだと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "かっこいいからなのだ！黒は強いのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あの黒の正体は、酸化鉄。ようするに磁石の粉だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "切符の裏、全面が磁石なのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どこから乗ったか、いつの切符か、いくら払ったか。全部そこに書いてあるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "入れた瞬間、切符はベルトに掴まれて、機械の中を猛スピードで走るよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "掴まれる。転がされるんじゃないのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこが昔の人の工夫だね。濡れた切符も丸めた切符も、掴めば運べるから。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あの5ミリのベルトが、いまも走ってるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして走りながら、向きを揃えて、読んで、印字して、また重ねて返す。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "新幹線で切符を2枚重ねて入れる人がいるのだ。あれは反則じゃないのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "公式の技だよ。中で1枚ずつに分けて、全部読んで、また重ねて返してるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "読むだけじゃなく、仕分けまでしてるのだ！？"
+  - id: shikumi2
+    title: "タッチの0.2秒"
+    background: il_kg_now
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "次はICカード。ずんだもん、あのカード、充電したことある？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "充電口なんてないのだ。……あれ、電池も入ってないぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "改札にかざした瞬間だけ、改札から電気をもらって目を覚ますの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "電気を、もらう。線もつながってないのに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "改札のアンテナが電波を出してる。カードの中のコイルがそれを受けて発電するんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "電波で発電して、その電気で自分が動くのか！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "起きたカードは、残高を確認して、運賃を計算して、記録を書き込む。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして扉を開けるかどうかを決める。ここまで全部で、およそ0.2秒。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "0.2秒！？瞬きより速いのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "紙の切符でも0.6秒。あの人たちが決めた速さを、いまも守ってるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "1分間に80人。あの条件が、まだ生きてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも運賃の計算は、路線をまたぐと組み合わせが天文学的になる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "10の40乗なんて数字が出てくるくらい。それを0.2秒で解いてる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "毎朝くぐってたあの箱、とんでもないやつだったのだ。"
+  - id: shikumi3
+    title: "明日、詰まらないために"
+    background: il_kg_now
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "最後に、改札で止められないコツを教えるね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まず、財布に交通系のカードを2枚以上入れないこと。電波が混ざるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクの財布、3枚入ってるのだ……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それ、原因だね。使うカードだけ出すのが確実だよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あと、叩きつけないこと。置いて、すっと滑らせるイメージ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "高速で叩くのがかっこいいと思ってたのだ……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "0.2秒の仕事が終わる前に離すと、読み損ねるからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "カードに、仕事をさせてなかったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "エラーが出ても焦らないで。一歩下がって、ゆっくり置き直すのが結局いちばん速い。"
+  # ============ 締め ============
+  - id: musubi
+    title: ""
+    background: il_kg_now
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "[北千里|きたせんり]の10台から、およそ30年で全国に2万台が並びました。"
+      - speaker: reimu
+        text: "2007年、この改札システムは電気技術の歴史的な業績として認定されています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "つむぎ。ボク、今朝あの箱に閉じ込められて怒ってたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "20円足りなかっただけだけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、あの扉がふだん開いてるのは、疑われてないってことなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "駅に立って、係員とお客さんを見ていた人たちが決めたことだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械を作る前に、人を見たのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして、特許を全部公開した。だから全国どこでも同じ定期券が使える。"
+      - speaker: zundamon
+        emotion: happy
+        text: "明日からは、20円多めに入れてから通るのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこは学習してほしいところだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あなたが毎朝くぐるあの箱にも、たぶん誰かの二年が入ってるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "面白かったら、高評価とチャンネル登録で応援してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "コメントで、あなたの改札エピソードも教えてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それでは、また次の動画で。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"
