@@ -74,15 +74,31 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
-      - speaker: zundamon
-        emotion: angry
-        text: "つむぎ、大変なのだ。テレビが言うことを聞かないぞ。"
       - speaker: tsumugi
         emotion: normal
-        text: "リモコン、電池切れじゃない？"
+        text: "たった5分の遅刻で、人生が変わった男がいるの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "5分！？何があったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その人がいなかったら、いまずんだもんが持ってるリモコン、動いてないよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……このリモコンが？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "電池を作った人の話。しかも、冬に凍らない電池ね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "電池って凍るのか。というか、外国の発明じゃないのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "電池そのものはね。でも、持ち歩ける乾いた電池を作った一人は日本にいたの。"
       - speaker: zundamon
         emotion: happy
-        text: "そんなときは、こうするのだ。"
+        text: "聞くのだ。ところでその前に、このリモコン直したいのだ。"
       - speaker: zundamon
         emotion: happy
         text: "電池を取り出して、手のひらでコロコロ転がすぞ。"
@@ -97,38 +113,7 @@ scenes:
         text: "それ[手|て]じゃなくて、接点が動いて一瞬つながっただけだからね。"
       - speaker: zundamon
         emotion: normal
-        text: "夢のない解説をありがとうなのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "ところでずんだもん、その筒、何本持ってる？"
-      - speaker: zundamon
-        emotion: thinking
-        text: "リモコンに2本、時計に1本、ゲームのコントローラーに2本……。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "家じゅうにいるじゃないか。実質、[同居人|どうきょにん]なのだ。"
-      - speaker: tsumugi
-        emotion: happy
-        text: "その[同居人|どうきょにん]の元祖を作った日本人がいるんだよ。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "電池って、外国の発明じゃないのか？"
-      - speaker: tsumugi
-        emotion: normal
-        text: "電池そのものはね。でも、持ち歩ける乾いた電池を作った一人が日本にいたの。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "しかもその人、5分の遅刻で人生が変わったと言われてる。"
-      - speaker: zundamon
-        emotion: surprised
-        se: don
-        text: "5分！？電池の話じゃなかったのか！"
-      - speaker: tsumugi
-        emotion: happy
-        text: "そこから始まる話なの。聞いてみる？"
-      - speaker: zundamon
-        emotion: happy
-        text: "聞くのだ。電池が切れるまで聞くぞ。"
+        text: "夢のない解説をありがとうなのだ。それで、5分の話は。"
   # ============ 1864 年号カード ============
   - id: era1864
     title: ""

@@ -1061,6 +1061,59 @@ def layout_photo(spec):
     return vignette(img, 90)
 
 
+def layout_bold(spec):
+    """極大文字型。スマホ幅168pxでも読めることだけを狙う。
+
+    クリック率1.5%（2026-08のStudio実測）の原因は、実寸で文字が読めないこと。
+    要素を「短い2行の文字」と「大きなキャラ」だけに絞り、小物・ラベル・
+    吹き出しは置かない。1行は最大7文字を目安にする。
+    """
+    base = spec.get("bg", ((150, 26, 40), (96, 14, 26)))
+    img = Image.new("RGBA", (W, H), (*base[0], 255))
+    d = ImageDraw.Draw(img)
+    # 斜めの色面で奥行きを作る（単色だと一覧で沈む）
+    d.polygon([(0, H), (0, int(H * 0.42)), (W, int(H * 0.06)), (W, H)], fill=(*base[1], 255))
+    for i in range(-2, 22):                      # 集中線
+        x = int(W * 0.62) + i * 96
+        d.polygon([(int(W * 0.62), int(H * 0.5)), (x, -60), (x + 42, -60)],
+                  fill=(255, 255, 255, 12))
+    # キャラ（顔が大きく出るようバストで切る）
+    sp = Image.open(sprite_path(cfg, spec.get("who", "zundamon"),
+                                spec.get("emotion", "surprised"))).convert("RGBA")
+    b = sp.crop((0, 0, sp.width, int(sp.height * 0.58)))
+    sc = int(H * 1.06) / b.height
+    b = outline_sprite(b.resize((int(b.width * sc), int(b.height * sc)), Image.LANCZOS), 16)
+    img.alpha_composite(b, (W - b.width + 92, H - b.height + 18))
+    # 文字（2行・極大）。幅に収まるまでサイズを落とす
+    lines = spec["lines"]
+    max_w = int(W * 0.62)
+    y = spec.get("text_top", 96)
+    for text, color, accent in lines:
+        size = spec.get("size", 190)
+        while size > 90:
+            f = font("w9", size)
+            if int(f.getlength(text)) <= max_w:
+                break
+            size -= 6
+        f = font("w9", size)
+        tw = int(f.getlength(text))
+        lay = Image.new("RGBA", (tw + 80, int(size * 1.34)), (0, 0, 0, 0))
+        ld = ImageDraw.Draw(lay)
+        if accent:                               # 帯付き（強調行）
+            ld.rounded_rectangle([0, 0, lay.width - 1, lay.height - 1],
+                                 radius=int(size * 0.1), fill=accent)
+            ld.text((40, int(size * 0.1)), text, font=f, fill=color)
+        else:
+            ld.text((40, int(size * 0.1)), text, font=f, fill=color,
+                    stroke_width=max(10, size // 12), stroke_fill=(14, 12, 20))
+        sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+        sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 190)), (0, 0), lay.split()[3])
+        img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(11)), (28, y + 14))
+        img.alpha_composite(lay, (22, y))
+        y += int(size * 1.18)
+    return vignette(img, 78)
+
+
 # ---------------------------------------------------------------- 動画ごとの仕様
 
 # 全20本の仕様。型は題材で使い分ける:
@@ -1069,139 +1122,55 @@ def layout_photo(spec):
 #   split   = 数字や二択の対比
 #   hero    = 発明品そのものを主役に
 # 文言はタイトルと重複させない（一覧で情報が重複して弱くなる）
+W1 = (255, 255, 255, 255)
+B1 = (26, 20, 12, 255)
+Y1 = (255, 214, 40, 255)
+
 SPECS = {
-    # ---- ドラマ（誕生秘話）----
-    "momofuku-meme": dict(layout="ba", prop_l=p_chickenramen, prop_r=p_cupnoodle, prop_h=280,
-                          left_bg=((30, 26, 24), (44, 38, 34)),
-                          right_bg=((186, 60, 40), (214, 84, 52)),
-                          head_l="47歳・全財産ゼロ", head_r="世界に年1000億食",
-                          tag_l="1958年:お湯だけで戻る麺", tag_r="1971年:容器ごと商品に",
-                          speech="小屋から始まったのだ", emo_l="sad", emo_r="happy"),
-    "qr-meme": dict(layout="ba", prop_l=p_barcode, prop_r=p_qr, prop_h=270,
-                    left_bg=((28, 32, 44), (40, 46, 62)),
-                    right_bg=((22, 78, 122), (30, 100, 150)),
-                    head_l="工場の「疲れた」が", head_r="世界標準になった",
-                    tag_l="バーコードは数字20桁", tag_r="QRは漢字1800字",
-                    speech="特許はタダなのだ", emo_l="sad", emo_r="surprised"),
-    "karaoke": dict(layout="ba", prop_l=p_jukebox, prop_r=p_mic, prop_h=300,
-                    left_bg=((26, 30, 44), (38, 44, 62)),
-                    right_bg=((58, 22, 92), (84, 34, 126)),
-                    head_l="手作り11台が", head_r="世界の定番に",
-                    tag_l="1971年:神戸のスナック", tag_r="いま:年4400億円市場",
-                    speech="なのに収入0円…", emo_l="sad", emo_r="surprised"),
-    "rice-cooker-meme": dict(layout="ba", prop_l=p_kamado, prop_r=p_ricecooker, prop_h=290,
-                             left_bg=((44, 34, 26), (60, 46, 34)),
-                             right_bg=((26, 74, 92), (34, 96, 118)),
-                             head_l="夜明け前から火の番", head_r="スイッチひとつへ",
-                             tag_l="1950年代:火の番が必要", tag_r="いま:スイッチだけ",
-                             speech="妻が千回炊いたのだ", emo_l="sad", emo_r="happy"),
-    "tenji-block-meme": dict(layout="ba", prop_l=p_cane, prop_r=p_block, prop_h=280,
-                             left_bg=((28, 32, 48), (40, 46, 66)),
-                             right_bg=((186, 148, 20), (214, 176, 34)),
-                             head_l="目が見えなくても", head_r="足の裏で道を読む",
-                             tag_l="1967年:岡山の交差点", tag_r="いま:世界の駅と歩道に",
-                             speech="友の一言だったのだ", emo_l="sad", emo_r="normal"),
-    "gastro-meme": dict(layout="charbig", prop=p_endoscope, prop_h=330,
-                        bg=((22, 44, 78), (28, 56, 94)), who="zundamon", emotion="surprised",
-                        lines=[("開けなければ", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
-                               ("見えなかった", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
-                               ("胃の中を撮る", 126, (24, 20, 14, 255), (252, 214, 36, 255))],
-                        speech="たった2人でだと"),
-    "kaiten-meme": dict(layout="ba", prop_l=p_sushi, prop_r=p_sushilane, prop_h=290,
-                        left_bg=((40, 30, 26), (56, 42, 34)),
-                        right_bg=((26, 84, 66), (34, 108, 84)),
-                        head_l="人手が足りない", head_r="皿が勝手に回る",
-                        tag_l="1958年:人手が足りない", tag_r="ヒントはビール工場",
-                        speech="構想10年なのだ", emo_l="sad", emo_r="happy"),
-    "yokoi-gunpei": dict(layout="charbig", prop=p_gameboy, prop_h=340,
-                         bg=((30, 34, 52), (40, 46, 68)), who="zundamon", emotion="surprised",
-                         lines=[("カラー全盛の時代に", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                ("あえて白黒", 118, (24, 20, 14, 255), (252, 214, 36, 255)),
-                                ("そして1億台", 92, (255, 255, 255, 255), (196, 40, 34, 245))],
-                         subject="ゲームボーイ", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="枯れた技術なのだ"),
-    "cutter-knife": dict(layout="charbig", prop=p_blade, prop_h=330,
-                         bg=((18, 52, 88), (26, 72, 116)), who="zundamon", emotion="happy",
-                         lines=[("切れなくなったら", 70, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                ("折ればいい", 130, (24, 20, 14, 255), (252, 214, 36, 255)),
-                                ("ヒントは板チョコ", 66, (255, 255, 255, 255), (196, 40, 34, 245))],
-                         subject="カッターナイフ", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="町の印刷工の発明だ"),
-    "washlet": dict(layout="charbig", prop=p_toilet, prop_h=320,
-                    bg=((14, 62, 70), (20, 84, 94)), who="zundamon", emotion="surprised",
-                    lines=[("日本人の体は", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
-                           ("日本人が測る", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
-                           ("社員300人が実験", 108, (24, 20, 14, 255), (252, 214, 36, 255))],
-                    subject="ウォシュレット", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="体を張ったのだ"),
-    "ajinomoto": dict(layout="charbig", prop=p_umami, prop_h=320,
-                      bg=((44, 34, 20), (60, 46, 28)), who="zundamon", emotion="thinking",
-                      lines=[("甘い・しょっぱい", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
-                             ("すっぱい・苦い", 66, (255, 255, 255, 255), (22, 20, 30, 245)),
-                             ("5つ目の味がある", 118, (24, 20, 14, 255), (252, 214, 36, 255))],
-                      subject="味の素", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="昆布12キロから"),
-    "shinkansen-bird": dict(layout="split",
-                            left_bg=(28, 32, 50), right_bg=((26, 86, 118), (34, 108, 144)),
-                            prop_l=p_shinkansen, prop_r=p_kingfisher,
-                            hook="時速300キロの騒音",
-                            left_big="お手上げ", left_fill=(255, 235, 90, 255),
-                            right_big="鳥が解決", right_fill=(255, 255, 255, 255),
-                            punch_size=120, emotion="surprised"),
-    "yai-denchi": dict(layout="ba", prop_l=p_wetcell, prop_r=p_drycell, prop_h=300,
-                       left_bg=((30, 40, 62), (42, 54, 82)),
-                       right_bg=((72, 52, 16), (98, 72, 22)),
-                       head_l="冬になると凍る", head_r="凍らない電池へ",
-                       tag_l="液がむき出しの電池", tag_r="いま家じゅうにある筒",
-                       speech="5分の遅刻から…", emo_l="sad", emo_r="surprised"),
-    "masuoka-flash": dict(layout="ba", prop_l=p_kyakka, prop_r=p_phone_mem, prop_h=300,
-                          left_bg=((34, 30, 28), (48, 42, 38)),
-                          right_bg=((18, 58, 96), (24, 78, 126)),
-                          head_l="金がない、却下", head_r="世界中のポケットへ",
-                          tag_l="1987年:予算ゼロの発明", tag_r="いま:スマホもカメラも",
-                          speech="土日に特許23件なのだ", emo_l="sad", emo_r="surprised"),
-    "kaisatsu-drama": dict(layout="ba", prop_l=p_hasami, prop_r=p_gate_now, prop_h=300,
-                           left_bg=((44, 38, 30), (60, 52, 40)),
-                           right_bg=((20, 54, 92), (26, 74, 122)),
-                           head_l="1分間に80人", head_r="機械で超えろ",
-                           tag_l="1960年代:駅員がハサミで", tag_r="1967年:大阪の新しい駅で",
-                           speech="失敗したら暴動だと", emo_l="sad", emo_r="surprised"),
+    # 2026-08のStudio実測でクリック率1.5%だったため、スマホ幅168pxで読めることを
+    # 最優先に全面刷新した。1行7文字以内・2行・要素は文字とキャラだけに絞る
+    # ---- 人物物語 ----
+    "momofuku-meme": dict(layout="bold", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
+        lines=[("47歳", W1, None), ("全財産ゼロ", B1, Y1)]),
+    "qr-meme": dict(layout="bold", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
+        lines=[("疲れたの一言が", W1, None), ("世界標準に", B1, Y1)]),
+    "kaiten-meme": dict(layout="bold", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
+        lines=[("寿司を回す", W1, None), ("ヒントは工場", B1, Y1)]),
+    "yai-denchi": dict(layout="bold", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
+        lines=[("5分の遅刻で", W1, None), ("人生が変わる", B1, Y1)]),
+    "tenji-block-meme": dict(layout="bold", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
+        lines=[("全財産を", W1, None), ("道路に敷いた", B1, Y1)]),
+    "masuoka-flash": dict(layout="bold", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
+        lines=[("金がない、却下", W1, None), ("それでも作った", B1, Y1)]),
+    "kaisatsu-drama": dict(layout="bold", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
+        lines=[("1分間に80人", W1, None), ("機械で超えろ", B1, Y1)]),
+    "gastro-meme": dict(layout="bold", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
+        lines=[("たった2人で", W1, None), ("胃の中を撮る", B1, Y1)]),
+    "rice-cooker-meme": dict(layout="bold", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
+        lines=[("妻が千回", W1, None), ("米を炊いた", B1, Y1)]),
+    "karaoke": dict(layout="bold", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
+        lines=[("手作り11台", W1, None), ("なのに収入0", B1, Y1)]),
+    "yokoi-gunpei": dict(layout="bold", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
+        lines=[("カラー全盛に", W1, None), ("あえて白黒", B1, Y1)]),
+    "shinkansen-bird": dict(layout="bold", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
+        lines=[("時速300キロ", W1, None), ("鳥が解決した", B1, Y1)]),
+    "cutter-knife": dict(layout="bold", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
+        lines=[("切れないなら", W1, None), ("折ればいい", B1, Y1)]),
+    "washlet": dict(layout="bold", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
+        lines=[("社員300人が", W1, None), ("体を張った", B1, Y1)]),
+    "ajinomoto": dict(layout="bold", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
+        lines=[("5つ目の味は", W1, None), ("昆布にあった", B1, Y1)]),
     # ---- 解説 ----
-    "battery-80-duo": dict(layout="photo", photo="ph_charging_desk.jpg", darken=0.38,
-                           badge=lambda d, s: p_battery(d, s, 100, (255, 86, 66)),
-                           badge_h=250, hook="毎晩ケーブルを挿す人へ",
-                           lines=[("その100%が", 78, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                  ("バッテリーを", 78, (255, 255, 255, 255), (22, 20, 30, 245)),
-                                  ("削っている", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
-                           speech="満タンが正義じゃない", emotion="surprised"),
-    "banknote": dict(layout="charbig", prop=p_bill, prop_h=330,
-                     bg=((44, 20, 60), (58, 30, 78)), who="zundamon", emotion="surprised",
-                     lines=[("コピー機は", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                            ("お札だけ", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                            ("拒否する", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
-                     speech="なぜバレるのだ"),
-    "traffic-light": dict(layout="split",
-                          left_bg=(22, 50, 34), right_bg=((28, 58, 128), (38, 76, 158)),
-                          prop_l=lambda d, s: p_signal(d, s, "green"),
-                          prop_r=lambda d, s: p_signal(d, s, "blue"),
-                          hook="どう見ても",
-                          left_big="緑", left_fill=(110, 240, 160, 255),
-                          right_big="でも青", right_fill=(160, 205, 255, 255),
-                          punch_size=150, emotion="thinking"),
-    "auto-door": dict(layout="charbig", prop=p_autodoor, prop_h=320,
-                      bg=((26, 44, 66), (34, 58, 86)), who="zundamon", emotion="angry",
-                      lines=[("黒い服だと", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
-                             ("開かない", 74, (255, 255, 255, 255), (22, 20, 30, 245)),
-                             ("無視される理由", 118, (24, 20, 14, 255), (252, 214, 36, 255))],
-                      subject="自動ドア", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="ボクが軽いのか？"),
-    "escalator": dict(layout="charbig", prop=p_escalator, prop_h=330,
-                      bg=((30, 40, 58), (40, 54, 76)), who="zundamon", emotion="surprised",
-                      lines=[("片側空けの", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                             ("公式ルールは", 76, (255, 255, 255, 255), (22, 20, 30, 245)),
-                             ("存在しない", 132, (24, 20, 14, 255), (252, 214, 36, 255))],
-                      subject="エスカレーター", subject_at=(232, 470), subject_max_w=790, subject_big=True,
-                       speech="誰が決めたのだ"),
+    "battery-80-duo": dict(layout="bold", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
+        lines=[("毎晩100%は", W1, None), ("損してる", B1, Y1)]),
+    "banknote": dict(layout="bold", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
+        lines=[("コピー機は", W1, None), ("お札を拒否", B1, Y1)]),
+    "escalator": dict(layout="bold", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
+        lines=[("片側空けの", W1, None), ("ルールは無い", B1, Y1)]),
+    "traffic-light": dict(layout="bold", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
+        lines=[("どう見ても緑", W1, None), ("なのに青", B1, Y1)]),
+    "auto-door": dict(layout="bold", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
+        lines=[("黒い服だと", W1, None), ("開かない", B1, Y1)]),
 }
 
 
@@ -1209,7 +1178,8 @@ def render(slug, out_path=None):
     spec = SPECS[slug]
     kind = spec["layout"]
     img = {"split": layout_split, "band": layout_band, "ba": layout_beforeafter,
-           "charbig": layout_charbig, "photo": layout_photo}.get(kind, layout_hero)(spec)
+           "charbig": layout_charbig, "photo": layout_photo,
+           "bold": layout_bold}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
         d = find_project_dir(cfg.root, slug)
