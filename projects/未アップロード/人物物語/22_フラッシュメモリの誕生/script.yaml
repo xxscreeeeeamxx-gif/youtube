@@ -91,9 +91,28 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたのスマホの写真を守ってる技術、会社では一度こう言われたの。"
+      - speaker: tsumugi
+        emotion: normal
+        se: don
+        text: "「金がない。却下」"
+      - speaker: zundamon
+        emotion: surprised
+        text: "世界中で使われてる技術が、却下されかけたのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作った人は土日に特許を23件書いて、同僚4人に頭を下げて始めたんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "会社の仕事じゃなかったのか……。"
       - speaker: zundamon
         emotion: sad
-        text: "やってしまったのだ……。推しの写真を全部入れたUSBメモリを、ポケットに入れたまま洗濯したのだ。"
+        text: "……あ、その前に聞いてほしいのだ。やってしまったのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "推しの写真を全部入れたUSBメモリを、ポケットに入れたまま洗濯したのだ。"
       - speaker: zundamon
         emotion: sad
         text: "ぐるぐる回って、すすがれて、脱水までフルコースだ。ボクの思い出は水の底なのだ。"

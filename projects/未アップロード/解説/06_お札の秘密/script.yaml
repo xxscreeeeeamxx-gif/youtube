@@ -20,9 +20,28 @@ scenes:
     short: true
     cuts:
       # ---- 茶番（自由研究で暴走しかける）----
+      - speaker: tsumugi
+        emotion: normal
+        text: "コピー機にお札を置くと、印刷を拒否されるの。知ってた？"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "拒否！？機械がお札だと見抜くのか！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "人間には見えない仕掛けが、あの紙に隠されてるからね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも日本の偽札は、2年でたった343枚。世界でいちばん少ない部類だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "343枚！？1億人以上いる国で、それだけなのか。"
       - speaker: zundamon
         emotion: happy
-        text: "夏休みの自由研究で、お札のヒミツを調べてるのだ！ルーペでよーく見ると……ん？なんか小さい字が見えるのだ！"
+        text: "……ところでボク、いま自由研究でお札を調べてるのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ルーペで見たら、小さい字が見えたぞ！"
         video: assets/clips/magnifier.mp4
         video_full: true
       - speaker: zundamon

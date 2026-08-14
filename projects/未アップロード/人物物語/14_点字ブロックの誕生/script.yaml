@@ -27,9 +27,28 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "自分の全財産を、道路に敷いた人がいるの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "全財産を、道路に！？何を敷いたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "駅や歩道にある、あの黄色いブロック。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あれ、個人が作ったのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "岡山の発明家がひとりでね。理由は、友だちの目が見えなくなっていったから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……聞くのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "この黄色いデコボコ[道|みち]、足つぼで気持ちいい。実質無料マッサージなのだ。"
+        text: "ところでこの黄色いデコボコ[道|みち]、足つぼで気持ちいいのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "ずんだもん、そこ。立ち止まっちゃだめ。"
