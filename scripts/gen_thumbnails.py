@@ -1083,10 +1083,13 @@ def layout_bold(spec):
     b = sp.crop((0, 0, sp.width, int(sp.height * 0.58)))
     sc = int(H * 1.06) / b.height
     b = outline_sprite(b.resize((int(b.width * sc), int(b.height * sc)), Image.LANCZOS), 16)
-    img.alpha_composite(b, (W - b.width + 92, H - b.height + 18))
-    # 文字（2行・極大）。幅に収まるまでサイズを落とす
+    char_x = W - b.width + 92
+    img.alpha_composite(b, (char_x, H - b.height + 18))
+    # 文字（2行・極大）。キャラの実際の左端（不透明部分）の手前までに収める
+    bb = b.split()[3].getbbox()                  # 白フチ込みの実体範囲
+    char_left = char_x + (bb[0] if bb else 0)
     lines = spec["lines"]
-    max_w = int(W * 0.62)
+    max_w = min(int(W * 0.62), char_left - 46)
     y = spec.get("text_top", 96)
     for text, color, accent in lines:
         size = spec.get("size", 190)
@@ -1131,46 +1134,46 @@ SPECS = {
     # 最優先に全面刷新した。1行7文字以内・2行・要素は文字とキャラだけに絞る
     # ---- 人物物語 ----
     "momofuku-meme": dict(layout="bold", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
-        lines=[("47歳", W1, None), ("全財産ゼロ", B1, Y1)]),
+        lines=[("47歳で全財産ゼロ", W1, None), ("カップ麺誕生", B1, Y1)]),
     "qr-meme": dict(layout="bold", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
-        lines=[("疲れたの一言が", W1, None), ("世界標準に", B1, Y1)]),
+        lines=[("疲れたの一言が", W1, None), ("QRを生んだ", B1, Y1)]),
     "kaiten-meme": dict(layout="bold", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
-        lines=[("寿司を回す", W1, None), ("ヒントは工場", B1, Y1)]),
+        lines=[("人手が足りない", W1, None), ("回転寿司誕生", B1, Y1)]),
     "yai-denchi": dict(layout="bold", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
-        lines=[("5分の遅刻で", W1, None), ("人生が変わる", B1, Y1)]),
+        lines=[("5分の遅刻が", W1, None), ("乾電池を生んだ", B1, Y1)]),
     "tenji-block-meme": dict(layout="bold", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
-        lines=[("全財産を", W1, None), ("道路に敷いた", B1, Y1)]),
+        lines=[("全財産を道路に", W1, None), ("点字ブロック", B1, Y1)]),
     "masuoka-flash": dict(layout="bold", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
-        lines=[("金がない、却下", W1, None), ("それでも作った", B1, Y1)]),
+        lines=[("金がない、却下", W1, None), ("USBメモリ誕生", B1, Y1)]),
     "kaisatsu-drama": dict(layout="bold", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
-        lines=[("1分間に80人", W1, None), ("機械で超えろ", B1, Y1)]),
+        lines=[("1分間に80人", W1, None), ("自動改札の誕生", B1, Y1)]),
     "gastro-meme": dict(layout="bold", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
-        lines=[("たった2人で", W1, None), ("胃の中を撮る", B1, Y1)]),
+        lines=[("たった2人で", W1, None), ("胃カメラを作る", B1, Y1)]),
     "rice-cooker-meme": dict(layout="bold", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
-        lines=[("妻が千回", W1, None), ("米を炊いた", B1, Y1)]),
+        lines=[("妻が千回炊いた", W1, None), ("炊飯器の誕生", B1, Y1)]),
     "karaoke": dict(layout="bold", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
-        lines=[("手作り11台", W1, None), ("なのに収入0", B1, Y1)]),
+        lines=[("手作り11台から", W1, None), ("カラオケ誕生", B1, Y1)]),
     "yokoi-gunpei": dict(layout="bold", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
-        lines=[("カラー全盛に", W1, None), ("あえて白黒", B1, Y1)]),
+        lines=[("あえて白黒で", W1, None), ("ゲームボーイ", B1, Y1)]),
     "shinkansen-bird": dict(layout="bold", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
-        lines=[("時速300キロ", W1, None), ("鳥が解決した", B1, Y1)]),
+        lines=[("騒音を鳥が解決", W1, None), ("新幹線の秘密", B1, Y1)]),
     "cutter-knife": dict(layout="bold", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
-        lines=[("切れないなら", W1, None), ("折ればいい", B1, Y1)]),
+        lines=[("折れば切れる", W1, None), ("カッターナイフ", B1, Y1)]),
     "washlet": dict(layout="bold", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
-        lines=[("社員300人が", W1, None), ("体を張った", B1, Y1)]),
+        lines=[("社員300人が実験", W1, None), ("ウォシュレット", B1, Y1)]),
     "ajinomoto": dict(layout="bold", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
-        lines=[("5つ目の味は", W1, None), ("昆布にあった", B1, Y1)]),
+        lines=[("5つ目の味を発見", W1, None), ("味の素の誕生", B1, Y1)]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="bold", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
-        lines=[("毎晩100%は", W1, None), ("損してる", B1, Y1)]),
+        lines=[("毎晩100%は損", W1, None), ("スマホ充電の話", B1, Y1)]),
     "banknote": dict(layout="bold", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
-        lines=[("コピー機は", W1, None), ("お札を拒否", B1, Y1)]),
+        lines=[("コピー機が拒否", W1, None), ("お札の秘密", B1, Y1)]),
     "escalator": dict(layout="bold", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
-        lines=[("片側空けの", W1, None), ("ルールは無い", B1, Y1)]),
+        lines=[("片側空けの謎", W1, None), ("エスカレーター", B1, Y1)]),
     "traffic-light": dict(layout="bold", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
-        lines=[("どう見ても緑", W1, None), ("なのに青", B1, Y1)]),
+        lines=[("緑なのに青と呼ぶ", W1, None), ("信号機の謎", B1, Y1)]),
     "auto-door": dict(layout="bold", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
-        lines=[("黒い服だと", W1, None), ("開かない", B1, Y1)]),
+        lines=[("黒い服だと開かない", W1, None), ("自動ドアの謎", B1, Y1)]),
 }
 
 
