@@ -1089,15 +1089,15 @@ def layout_bold(spec):
     sp = Image.open(sprite_path(cfg, spec.get("who", "zundamon"),
                                 spec.get("emotion", "surprised"))).convert("RGBA")
     b = sp.crop((0, 0, sp.width, int(sp.height * 0.58)))
-    sc = int(H * 1.06) / b.height
+    sc = int(H * 0.99) / b.height
     b = outline_sprite(b.resize((int(b.width * sc), int(b.height * sc)), Image.LANCZOS), 16)
-    char_x = W - b.width + 92
+    char_x = W - b.width + 128
     img.alpha_composite(b, (char_x, H - b.height + 18))
     # 文字（2行・極大）。キャラの実際の左端（不透明部分）の手前までに収める
     bb = b.split()[3].getbbox()                  # 白フチ込みの実体範囲
     char_left = char_x + (bb[0] if bb else 0)
     lines = spec["lines"]
-    max_w = min(int(W * 0.62), char_left - 46)
+    max_w = min(int(W * 0.70), char_left - 28)
 
     def _fit(text, base):
         size = base
@@ -1111,9 +1111,13 @@ def layout_bold(spec):
     # 行ごとの基準サイズ。4要素目に倍率を持てる（前振りは小さく）
     fits = [_fit(t, int(spec.get("size", 190) * (ln[3] if len(ln) > 3 else 1.0)))
             for t, ln in ((l[0], l) for l in lines)]
-    block_h = sum(int(sz * 1.30) for sz, _ in fits) + int(fits[-1][0] * 0.18)
-    # 画面の縦をなるべく使い切る（上下に空白を残さない）
-    y = spec.get("text_top") or max(18, H - block_h - 30)
+    # 3行で画面の縦を使い切るよう、行間を自動で広げる（無地を残さない）
+    base_h = sum(fits[i][0] for i in range(len(fits)))
+    gap = 1.30
+    while gap < 2.2 and sum(int(sz * gap) for sz, _ in fits) < int(H * 0.86):
+        gap += 0.04
+    block_h = sum(int(sz * gap) for sz, _ in fits) + int(fits[-1][0] * 0.18)
+    y = spec.get("text_top") or max(14, (H - block_h) // 2)
     for ln, (size, f) in zip(lines, fits):
         text, color, accent = ln[0], ln[1], ln[2]
         tw = int(f.getlength(text))
@@ -1130,7 +1134,7 @@ def layout_bold(spec):
         sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 190)), (0, 0), lay.split()[3])
         img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(11)), (28, y + 14))
         img.alpha_composite(lay, (22, y))
-        y += int(size * 1.30)
+        y += int(size * gap)
     return vignette(img, 78)
 
 
