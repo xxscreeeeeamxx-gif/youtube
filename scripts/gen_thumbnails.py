@@ -1073,6 +1073,14 @@ def layout_bold(spec):
     d = ImageDraw.Draw(img)
     # 斜めの色面で奥行きを作る（単色だと一覧で沈む）
     d.polygon([(0, H), (0, int(H * 0.42)), (W, int(H * 0.06)), (W, H)], fill=(*base[1], 255))
+    # 斜めストライプを全面に薄く敷く（無地だと一覧で「空白」に見える）
+    stripe = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(stripe)
+    for x in range(-H, W + H, 58):
+        sd.polygon([(x, H), (x + 22, H), (x + 22 + H, 0), (x + H, 0)],
+                   fill=(255, 255, 255, 13))
+    img.alpha_composite(stripe)
+    d = ImageDraw.Draw(img)
     for i in range(-2, 22):                      # 集中線
         x = int(W * 0.62) + i * 96
         d.polygon([(int(W * 0.62), int(H * 0.5)), (x, -60), (x + 42, -60)],
@@ -1091,20 +1099,23 @@ def layout_bold(spec):
     lines = spec["lines"]
     max_w = min(int(W * 0.62), char_left - 46)
 
-    def _fit(text):
-        size = spec.get("size", 190)
-        while size > 90:
+    def _fit(text, base):
+        size = base
+        while size > 56:
             f = font("w9", size)
             if int(f.getlength(text)) <= max_w:
                 return size, f
-            size -= 6
+            size -= 5
         return size, font("w9", size)
 
-    # 先に全行の高さを測り、縦中央に置く（上寄せだと左下が大きく空く）
-    fits = [_fit(t) for t, _, _ in lines]
-    block_h = sum(int(sz * 1.18) for sz, _ in fits) + int(fits[-1][0] * 0.16)
-    y = spec.get("text_top") or max(40, H - block_h - 56)
-    for (text, color, accent), (size, f) in zip(lines, fits):
+    # 行ごとの基準サイズ。4要素目に倍率を持てる（前振りは小さく）
+    fits = [_fit(t, int(spec.get("size", 190) * (ln[3] if len(ln) > 3 else 1.0)))
+            for t, ln in ((l[0], l) for l in lines)]
+    block_h = sum(int(sz * 1.30) for sz, _ in fits) + int(fits[-1][0] * 0.18)
+    # 画面の縦をなるべく使い切る（上下に空白を残さない）
+    y = spec.get("text_top") or max(18, H - block_h - 30)
+    for ln, (size, f) in zip(lines, fits):
+        text, color, accent = ln[0], ln[1], ln[2]
         tw = int(f.getlength(text))
         lay = Image.new("RGBA", (tw + 80, int(size * 1.34)), (0, 0, 0, 0))
         ld = ImageDraw.Draw(lay)
@@ -1119,7 +1130,7 @@ def layout_bold(spec):
         sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 190)), (0, 0), lay.split()[3])
         img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(11)), (28, y + 14))
         img.alpha_composite(lay, (22, y))
-        y += int(size * 1.18)
+        y += int(size * 1.30)
     return vignette(img, 78)
 
 
@@ -1140,46 +1151,46 @@ SPECS = {
     # 最優先に全面刷新した。1行7文字以内・2行・要素は文字とキャラだけに絞る
     # ---- 人物物語 ----
     "momofuku-meme": dict(layout="bold", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
-        lines=[("47歳で全財産ゼロ", W1, None), ("カップ麺誕生", B1, Y1)]),
+        lines=[("裏庭の小屋から", W1, None, 0.52), ("47歳で全財産ゼロ", W1, None), ("カップ麺誕生", B1, Y1)]),
     "qr-meme": dict(layout="bold", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
-        lines=[("疲れたの一言が", W1, None), ("QRを生んだ", B1, Y1)]),
+        lines=[("愛知の部品工場で", W1, None, 0.52), ("疲れたの一言が", W1, None), ("QRを生んだ", B1, Y1)]),
     "kaiten-meme": dict(layout="bold", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
-        lines=[("人手が足りない", W1, None), ("回転寿司誕生", B1, Y1)]),
+        lines=[("ヒントはビール工場", W1, None, 0.52), ("人手が足りない", W1, None), ("回転寿司誕生", B1, Y1)]),
     "yai-denchi": dict(layout="bold", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
-        lines=[("5分の遅刻が", W1, None), ("乾電池を生んだ", B1, Y1)]),
+        lines=[("明治の職工が挑む", W1, None, 0.52), ("5分の遅刻が", W1, None), ("乾電池を生んだ", B1, Y1)]),
     "tenji-block-meme": dict(layout="bold", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
-        lines=[("全財産を道路に", W1, None), ("点字ブロック", B1, Y1)]),
+        lines=[("友の失明がきっかけ", W1, None, 0.52), ("全財産を道路に", W1, None), ("点字ブロック", B1, Y1)]),
     "masuoka-flash": dict(layout="bold", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
-        lines=[("金がない、却下", W1, None), ("USBメモリ誕生", B1, Y1)]),
+        lines=[("土日に特許23件", W1, None, 0.52), ("金がない、却下", W1, None), ("USBメモリ誕生", B1, Y1)]),
     "kaisatsu-drama": dict(layout="bold", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
-        lines=[("1分間に80人", W1, None), ("自動改札の誕生", B1, Y1)]),
+        lines=[("駅員より速くしろ", W1, None, 0.52), ("1分間に80人", W1, None), ("自動改札の誕生", B1, Y1)]),
     "gastro-meme": dict(layout="bold", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
-        lines=[("たった2人で", W1, None), ("胃カメラを作る", B1, Y1)]),
+        lines=[("夜行列車で口説いた", W1, None, 0.52), ("たった2人で", W1, None), ("胃カメラを作る", B1, Y1)]),
     "rice-cooker-meme": dict(layout="bold", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
-        lines=[("妻が千回炊いた", W1, None), ("炊飯器の誕生", B1, Y1)]),
+        lines=[("町工場の夫婦が", W1, None, 0.52), ("妻が千回炊いた", W1, None), ("炊飯器の誕生", B1, Y1)]),
     "karaoke": dict(layout="bold", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
-        lines=[("手作り11台から", W1, None), ("カラオケ誕生", B1, Y1)]),
+        lines=[("特許を取らなかった", W1, None, 0.52), ("手作り11台から", W1, None), ("カラオケ誕生", B1, Y1)]),
     "yokoi-gunpei": dict(layout="bold", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
-        lines=[("あえて白黒で", W1, None), ("ゲームボーイ", B1, Y1)]),
+        lines=[("枯れた技術の水平思考", W1, None, 0.52), ("あえて白黒で", W1, None), ("ゲームボーイ", B1, Y1)]),
     "shinkansen-bird": dict(layout="bold", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
-        lines=[("騒音を鳥が解決", W1, None), ("新幹線の秘密", B1, Y1)]),
+        lines=[("趣味の野鳥観察が", W1, None, 0.52), ("騒音を鳥が解決", W1, None), ("新幹線の秘密", B1, Y1)]),
     "cutter-knife": dict(layout="bold", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
-        lines=[("折れば切れる", W1, None), ("カッターナイフ", B1, Y1)]),
+        lines=[("ヒントは板チョコ", W1, None, 0.52), ("折れば切れる", W1, None), ("カッターナイフ", B1, Y1)]),
     "washlet": dict(layout="bold", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
-        lines=[("社員300人が実験", W1, None), ("ウォシュレット", B1, Y1)]),
+        lines=[("日本人の体を測れ", W1, None, 0.52), ("社員300人が実験", W1, None), ("ウォシュレット", B1, Y1)]),
     "ajinomoto": dict(layout="bold", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
-        lines=[("5つ目の味を発見", W1, None), ("味の素の誕生", B1, Y1)]),
+        lines=[("昆布12キロから", W1, None, 0.52), ("5つ目の味を発見", W1, None), ("味の素の誕生", B1, Y1)]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="bold", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
-        lines=[("毎晩100%は損", W1, None), ("スマホ充電の話", B1, Y1)]),
+        lines=[("メーカーが止める機能", W1, None, 0.52), ("毎晩100%は損", W1, None), ("スマホ充電の話", B1, Y1)]),
     "banknote": dict(layout="bold", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
-        lines=[("コピー機が拒否", W1, None), ("お札の秘密", B1, Y1)]),
+        lines=[("偽札は2年で343枚", W1, None, 0.52), ("コピー機が拒否", W1, None), ("お札の秘密", B1, Y1)]),
     "escalator": dict(layout="bold", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
-        lines=[("片側空けの謎", W1, None), ("エスカレーター", B1, Y1)]),
+        lines=[("誰も得しない説", W1, None, 0.52), ("片側空けの謎", W1, None), ("エスカレーター", B1, Y1)]),
     "traffic-light": dict(layout="bold", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
-        lines=[("緑なのに青と呼ぶ", W1, None), ("信号機の謎", B1, Y1)]),
+        lines=[("法律の方が折れた", W1, None, 0.52), ("緑なのに青と呼ぶ", W1, None), ("信号機の謎", B1, Y1)]),
     "auto-door": dict(layout="bold", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
-        lines=[("黒い服だと開かない", W1, None), ("自動ドアの謎", B1, Y1)]),
+        lines=[("見てるのは人じゃない", W1, None, 0.52), ("黒い服だと開かない", W1, None), ("自動ドアの謎", B1, Y1)]),
 }
 
 
