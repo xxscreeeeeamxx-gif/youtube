@@ -248,7 +248,7 @@ if __name__ == "__main__":
     for name, idx, year, title, sub in CARDS:
         render(name, 6.5, m.make_era(idx, year, title, sub))
 
-    spans = v2.spans_from_timing("rice-cooker")
+    spans = v2.spans_from_timing("rice-cooker-meme")
 
     def sync(name, bounds, draw):
         if name not in spans:

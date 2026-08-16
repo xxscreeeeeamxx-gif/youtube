@@ -33,9 +33,27 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "味の基本は、甘い、しょっぱい、すっぱい、苦い。この4つだと思ってない？"
+      - speaker: zundamon
+        emotion: normal
+        text: "4つなのだ。理科で習ったぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "5つ目があるの。見つけたのは日本の化学者で、きっかけは晩ごはんの湯豆腐。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "湯豆腐！？スケールの差がすごいぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その5つ目、いまや世界中で[UMAMI|うまみ]って日本語のまま呼ばれてるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ファッ！？日本語のまま世界デビューしてるのか！？"
       - speaker: zundamon
         emotion: thinking
-        text: "スープを自作したのだ。でも、なんか味が決まらないんだ。"
+        text: "……ところで、スープを自作したのだ。でも、なんか味が決まらないんだ。"
       - speaker: tsumugi
         emotion: normal
         text: "どれどれ。……ああ、塩気はあるのに、コクがないんだね。"
@@ -73,25 +91,10 @@ scenes:
         text: "[他の|ほかの]4人より、圧倒的に新入りなんだが。"
       - speaker: tsumugi
         emotion: normal
-        text: "見つけたのは、日本の化学者。だから世界中で[UMAMI|うまみ]って呼ぶの。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "ファッ！？うま味、日本語のまま世界デビューしてるのか！？"
-      - speaker: tsumugi
-        emotion: normal
         text: "スシ、テンプラ、ウマミ。世界の共通語だよ。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "何がきっかけで、5人目に気づいたんだ？"
       - speaker: tsumugi
         emotion: happy
-        text: "晩ごはんの、湯豆腐。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "スケールの差がすごいぞ。湯豆腐から世界共通語なのか。"
-      - speaker: tsumugi
-        emotion: happy
-        text: "今日はその話。そのスープを直しながら、聞いていこう。"
+        text: "そのスープを直しながら、聞いていこう。"
       - speaker: zundamon
         emotion: happy
         text: "聞くのだ。ボクのスープの伏線も、回収してほしいんだ。"
@@ -229,7 +232,7 @@ scenes:
       - {who: tsuma, x: 0.72}
     cuts:
       - speaker: reimu
-        text: "1907年のある晩。池田家の食卓に、湯豆腐が出ました。"
+        text: "1907年のある晩。[池田家|いけだけ]の食卓に、湯豆腐が出ました。"
         reading: "せんきゅうひゃくななねんのあるばん。いけだけのしょくたくに、ゆどうふがでました。"
       - speaker: tsuma
         text: "あなた、今夜は湯豆腐ですよ。いい昆布が手に入ったの。"

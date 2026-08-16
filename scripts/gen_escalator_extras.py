@@ -168,9 +168,9 @@ def esc_loop(d, t):
 
 
 # ------------------------------------------------------------------
-# 2) ronsou — 片側空け論争（輸送力=5.95 / (Z=17.38) / 事故=23.38 / DUR 33.7）
+# 2) ronsou — 片側空け論争（輸送力=5.95 / (Z=18.49) / 事故=24.49 / DUR 34.8）
 # ------------------------------------------------------------------
-R_CAP, R_ACC = 5.95, 24.5
+R_CAP, R_ACC = 5.95, 24.49
 
 
 def ronsou(d, t):
@@ -455,7 +455,7 @@ def era_trademark(d, t):
 
 CLIPS = {
     "esc_loop": (52.2, lambda: esc_loop),
-    "ronsou": (34.9, lambda: ronsou),
+    "ronsou": (34.8, lambda: ronsou),
     "step_rail": (31.2, lambda: step_rail),
     "wheelchair_step": (37.6, lambda: wheelchair_step),
     "era_1914": (31.0, lambda: era_1914),

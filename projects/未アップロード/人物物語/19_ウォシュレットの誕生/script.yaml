@@ -32,9 +32,27 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "ウォシュレットの噴射の角度は43度。決めるために社員さん約300人が体を張ったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ファッ！？会社で！？何をしたのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "おしりの位置を測らせてもらったんだよ。服のまま、位置の記録だけね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "職場で頼まれごとの難易度としては、最高クラスなんだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "人の体のことは、計算じゃ出ないから。測るしかなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[字面|じずら]はふざけてるのに、中身は超本気のやつなのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "海外の友だちが、日本で一番感動した場所を教えてくれたのだ。"
+        text: "……ところで、海外の友だちが、日本で一番感動した場所を教えてくれたのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "お寺？富士山？"
@@ -61,45 +79,24 @@ scenes:
         text: "数字？水が出る、以上の情報があるのか？"
       - speaker: tsumugi
         emotion: normal
-        text: "噴射の角度は43度。お湯は38度。便座は36度。"
+        text: "さっきの43度だけじゃないよ。お湯は38度。便座は36度。"
+        telops:
+          - {text: "角度43度・お湯38度・便座36度", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: zundamon
         emotion: surprised
         text: "やけに具体的なんだが。レシピか？"
       - speaker: tsumugi
         emotion: normal
-        text: "黄金比率って呼ばれてる。で、問題はこの数字の決め方。"
+        text: "黄金比率って呼ばれてる。全部、測って決めた数字なの。"
       - speaker: zundamon
         emotion: thinking
-        text: "……普通に、計算で出したんじゃないのか。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "人の体のことは、計算じゃ出ないの。測るしかない。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "測る？誰の、何をだ？"
-      - speaker: tsumugi
-        emotion: normal
-        text: "社員さん約300人の、おしりの位置。"
-        telops:
-          - {text: "社員300人の、おしりの位置", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
-      - speaker: zundamon
-        emotion: surprised
-        text: "ファッ！？会社で！？"
-      - speaker: tsumugi
-        emotion: normal
-        text: "もちろん服のまま、位置の記録だけね。それでも勇気が要るけど。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "職場で頼まれごとの難易度としては、最高クラスなんだが。"
+        text: "……計算で出したんじゃないのか。"
       - speaker: tsumugi
         emotion: happy
         text: "そう。世界一まじめに、おしりと向き合った開発の話だよ。"
-      - speaker: zundamon
-        emotion: normal
-        text: "[字面|じずら]はふざけてるのに、中身は超本気のやつなのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "今日はその話。誰もお世話にならない日はない発明だからね。"
+        text: "誰もお世話にならない日はない発明だからね。"
       - speaker: zundamon
         emotion: happy
         text: "聞くのだ。毎日の快適の、種明かしなんだ。"

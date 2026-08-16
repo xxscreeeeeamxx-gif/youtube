@@ -20,12 +20,33 @@ scenes:
     bgm: shuffle_shuffle
     short: true
     cuts:
+      # ---- フック（0秒に前倒し。サムネ「誰も得しない」と同じ話から入る）----
+      - speaker: tsumugi
+        emotion: normal
+        text: "エスカレーターの片側空け。急ぐ人のために空けてるのに、実は誰も得してないの。"
+        video: assets/clips/esc_station.mp4
+        video_full: true
+      - speaker: zundamon
+        emotion: surprised
+        text: "誰もなのだ！？急いでる人は得してるはずだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全員が2列で立って詰めたほうが、同じ時間に運べる人数が3割近く増えるんだよ。"
+        telops:
+          - {text: "2列で立つと、3割多く運べる", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "空けたほうが、みんな遅くなってたのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そもそも片側を空けるルールなんて、どこにも無いしね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "無いのだ！？じゃあ、あの背中に刺さる圧は、何だったのだ。"
       # ---- 茶番（東西の圧に敗北）----
       - speaker: zundamon
         emotion: happy
-        text: "エスカレーターとは、立ってるだけで階段に勝てる、人類の勝利の乗り物なのだ！"
-        video: assets/clips/esc_station.mp4
-        video_full: true
+        text: "……ところでエスカレーターは、立つだけで階段に勝てる、人類の勝利の乗り物なのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "勝利の定義が雑すぎるよ。……で、その勝者がなんで今日はしょんぼりしてるの？"
@@ -34,11 +55,10 @@ scenes:
         text: "東京で右側に立ったら、後ろからすごい圧を感じたのだ……。それで大阪に行って左側に立ったら、今度は逆から圧が来たのだ……。ボクはどこに立てばいいのだ！？"
       - speaker: tsumugi
         emotion: normal
-        text: "あー、出たね。エスカレーターの片側空け問題。でも実はそれ、どこにも公式ルールなんてないんだよ。"
+        text: "さっきの話だよ。どこにもルールが無いのに、圧だけが全国にあるの。"
       - speaker: zundamon
         emotion: surprised
-        text: "ないのだ！？じゃあ、あの背中に刺さる圧は、幻だったのだ！？"
-      # ---- フック ----
+        text: "じゃあ、あの背中に刺さる圧は、幻だったのだ！？"
       - speaker: tsumugi
         emotion: normal
         text: "むしろ作ったメーカーも鉄道会社も、「歩かないで、2列で立って」って何十年もお願いし続けてるの。"
@@ -146,7 +166,7 @@ scenes:
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "まず輸送力。急ぐ人のために空けた片側は、実際にはほとんどガラガラ。全員が2列で立って詰めたほうが、同じ時間に運べる人数が3割近く増えたという海外の実験結果もあるんだよ。"
+        text: "まず輸送力。冒頭で言った3割の話、あれは海外の実験結果なの。急ぐ人のために空けた片側は、実際にはほとんどガラガラで、全員が2列で詰めたほうが多く運べたんだよ。"
       - speaker: zundamon
         emotion: sad
         text: "みんなのために空けたのに、みんなが遅くなってたのだ……。切なすぎる助け合いなのだ……。"

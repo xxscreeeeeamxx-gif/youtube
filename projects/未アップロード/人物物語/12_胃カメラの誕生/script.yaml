@@ -27,9 +27,27 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "胃の中を撮った写真。世界で最初に成功したのは、日本なんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "世界初なのか！？さぞ大きな研究チームなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "町医者になった外科医と、カメラ会社の技師。ふたりだけ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "たった2人！？ファッ！？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "しかも声を掛けたのは、走ってる夜行列車の中だったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そのふたり、詳しく聞かせてほしいのだ。"
       - speaker: zundamon
         emotion: sad
-        text: "検診の日なのだ。今日は、胃カメラなのだ……。"
+        text: "……ところでボク、その検診が明日なのだ。胃カメラなのだ……。"
       - speaker: tsumugi
         emotion: normal
         text: "緊張してるね。"
@@ -56,25 +74,10 @@ scenes:
         text: "お腹を開けてから、じゃ遅いこともあるんだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "そう。その常識をひっくり返したのが、この胃カメラ。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "誰が作ったのだ？大きな会社の、大勢の研究者？"
-      - speaker: tsumugi
-        emotion: normal
-        text: "町医者になった外科医と、カメラ会社の技師。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "たった2人！？ファッ！？"
+        text: "そう。その常識をひっくり返したのが、さっきのふたりだよ。"
       - speaker: tsumugi
         emotion: happy
-        text: "電車の中で口説かれて、始まったんだよ。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "口説く……胃カメラを！？"
-      - speaker: tsumugi
-        emotion: happy
-        text: "今日はその話。管を飲む前に、聞いていこう。"
+        text: "管を飲む前に、聞いていこう。"
       - speaker: zundamon
         emotion: normal
         text: "こわいの、まぎれるんだ。とりまお願いなんだ。"
@@ -395,7 +398,7 @@ scenes:
       - speaker: reimu
         text: "危険がない。苦しくない。速い。鮮明。この4つが羅針盤でした。"
         reading: "きけんがない。くるしくない。はやい。せんめい。このよっつがらしんばんでした。"
-        video: assets/clips/gc_mokuhyou.mp4
+        video: assets/clips/gm_mokuhyou.mp4
         video_full: true
   - id: mokuhyou2
     title: ""
@@ -855,7 +858,7 @@ scenes:
       - speaker: reimu
         text: "生きた胃の内側が、世界で初めて鮮明に写った瞬間でした。"
         reading: "いきたいのうちがわが、せかいではじめてせんめいにうつったしゅんかんでした。"
-        video: assets/clips/gc_shashin.mp4
+        video: assets/clips/gm_shashin.mp4
         video_full: true
   - id: seikou2
     title: ""
@@ -896,7 +899,7 @@ scenes:
         emotion: happy
         text: "大げさなくらいで、ちょうどいい。世界初ですから。"
       - speaker: reimu
-        text: "腹腔内臓器撮影用写真機。のちのガストロカメラの原型です。"
+        text: "[腹腔|ふくくう]内臓器撮影用写真機。のちのガストロカメラの原型です。"
         reading: "ふくくうないぞうきさつえいようしゃしんき。のちのがすとろかめらのげんけいです。"
       - speaker: zundamon
         emotion: surprised
@@ -1089,7 +1092,7 @@ scenes:
       - speaker: reimu
         text: "レンズの先はカメラの目になり、胃の中がその場で画面に映ります。"
         reading: "れんずのさきわかめらのめになり、いのなかがそのばでがめんにうつります。"
-        video: assets/clips/gc_shinka.mp4
+        video: assets/clips/gm_shinka.mp4
         video_full: true
   - id: shinka2
     title: ""

@@ -54,9 +54,30 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "カラオケの機械を最初に商売にした人、特許を取らなかったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "取り忘れたのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界中で使われてるのに、その人には1円も入ってないんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "世界中で使われて0円！？計算が合わないのだ！"
+        telops:
+          - {text: "世界中で使われて、0円", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "しかも本人は、後悔してないって笑ってるんだよね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "どういうメンタルだ……その人の話、詳しく聞かせてほしいのだ。"
       - speaker: zundamon
         emotion: happy
-        text: "採点97点！今日のボクは優勝なのだ！"
+        text: "……ところで、採点97点！今日のボクは優勝なのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "すごいじゃん。で、それ何曲目？"
@@ -92,25 +113,10 @@ scenes:
         text: "それ休みじゃなくて[自主練|じしゅれん]だからね！？"
       - speaker: zundamon
         emotion: happy
-        text: "ところでこの機械、押せば伴奏が出てくる。天才の発明なのだ。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "その機械をね、最初に商売にした人がいるんだけど。"
-      - speaker: tsumugi
-        emotion: normal
-        text: "特許を取らなくて、世界中で使われてるのに1円も入ってないの。"
-      - speaker: zundamon
-        emotion: surprised
-        se: don
-        text: "世界中で使われて0円！？計算が合わないのだ！"
-        telops:
-          - {text: "世界中で使われて、0円", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+        text: "それにこの機械、押せば伴奏が出てくる。天才の発明なのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "しかも本人は、後悔してないって笑ってるんだよね。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "どういうメンタルだ……その人の話、詳しく聞かせてほしいのだ。"
+        text: "その天才の話、いまから聞いていこう。"
   # ============ 1940 年号カード ============
   - id: era1940
     title: ""

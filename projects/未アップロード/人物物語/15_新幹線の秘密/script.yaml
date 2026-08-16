@@ -29,9 +29,27 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "新幹線の、あの長い鼻。あれ、鳥のくちばしを真似して作られてるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "鳥！？ファッ！？新幹線が、実質バードなのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "設計したのは、バードウォッチングが趣味の技術者さんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "趣味が仕事を救ったのか。ずるいぞ、そんな伏線回収。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも狙いは速さじゃなくて、トンネルの出口で鳴る爆音を消すことだった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "爆音……？聞いたことないんだが。"
       - speaker: zundamon
         emotion: happy
-        text: "新幹線で旅なのだ！見るのだ、この長い鼻。かっこよすぎるぞ。"
+        text: "……ところで、今まさに新幹線で旅なのだ！見るのだ、この長い鼻。かっこよすぎるぞ。"
       - speaker: tsumugi
         emotion: normal
         text: "ほんと、先頭だけで15メートルもあるんだよ。"
@@ -72,19 +90,10 @@ scenes:
         text: "そんな物理現象、初めて聞いたんだが。"
       - speaker: tsumugi
         emotion: normal
-        text: "それを解決したのが、この鼻。お手本は、鳥のくちばしだよ。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "鳥！？ファッ！？新幹線が、実質バードなのか！？"
+        text: "それを解決したのが、この鼻の形なの。"
       - speaker: tsumugi
         emotion: happy
-        text: "設計したのは、バードウォッチングが趣味の技術者さん。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "趣味が仕事を救ったのか。ずるいぞ、そんな伏線回収。"
-      - speaker: tsumugi
-        emotion: happy
-        text: "今日はその人の話。乗りながら、聞いていこう。"
+        text: "乗りながら、聞いていこう。"
       - speaker: zundamon
         emotion: happy
         text: "聞くぞ。鼻の正体、気になって夜しか眠れないんだ。"

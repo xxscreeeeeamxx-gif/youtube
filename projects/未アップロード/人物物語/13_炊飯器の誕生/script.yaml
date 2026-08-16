@@ -24,9 +24,27 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界で最初の電気炊飯器はね、ある奥さんが千回ごはんを炊いて完成したの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "せ、千回！？ガチのやつかよ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作ったのは大きな電機メーカーじゃなくて、東京の町工場の夫婦だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "夫婦ふたりで、あの箱を発明したのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昔はごはんを炊くのが、一日で一番の重労働だったからね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ごはんを炊くのが、重労働！？"
       - speaker: zundamon
         emotion: happy
-        text: "ごはん、炊けたのだ！ボタンひとつで優勝なのだ！"
+        text: "……ところで、ごはん炊けたのだ！ボタンひとつで優勝なのだ！"
       - speaker: tsumugi
         emotion: normal
         text: "早いね。お米といで、スイッチ押しただけでしょ。"
@@ -56,31 +74,16 @@ scenes:
         text: "……ボタン押すだけだ。ふつうだが。"
       - speaker: tsumugi
         emotion: normal
-        text: "昔はね、ごはんを炊くのが、一日で一番の重労働だったの。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "ごはんを炊くのが、重労働！？"
-      - speaker: tsumugi
-        emotion: normal
-        text: "夜明け前に起きて、かまどの火を、ずっと見張る。"
+        text: "さっき言った重労働ってね、夜明け前に起きて、かまどの火をずっと見張ることなの。"
       - speaker: zundamon
         emotion: surprised
         text: "スイッチひとつじゃ、なかったのだ……。"
       - speaker: tsumugi
         emotion: normal
         text: "その火の番から、主婦を解放した箱なんだよ、これ。"
-      - speaker: zundamon
-        emotion: thinking
-        text: "誰が作ったんだ？大きな電機メーカーか？"
-      - speaker: tsumugi
-        emotion: normal
-        text: "町工場の夫婦。奥さんが、千回ごはんを炊いたの。"
-      - speaker: zundamon
-        emotion: surprised
-        text: "せ、千回！？ガチのやつかよ！"
       - speaker: tsumugi
         emotion: happy
-        text: "今日はその話。炊きたてを食べながら、聞いていこう。"
+        text: "炊きたてを食べながら、聞いていこう。"
       - speaker: zundamon
         emotion: happy
         text: "おかわりしながら聞くぞ！"
@@ -174,7 +177,7 @@ scenes:
       - {who: yamada, x: 0.72}
     cuts:
       - speaker: reimu
-        text: "三並義忠は、光伸社という小さな町工場の主人でした。"
+        text: "三並義忠は、[光伸社|こうしんしゃ]という小さな町工場の主人でした。"
         reading: "みなみよしただわ、こうしんしゃというちいさなまちこうばのしゅじんでした。"
       - speaker: zundamon
         emotion: normal
@@ -242,7 +245,7 @@ scenes:
       - {who: tsumugi, x: 0.76, tag: "風美子"}
     cuts:
       - speaker: reimu
-        text: "家に持ち帰ると、妻の風美子が待っていました。"
+        text: "家に持ち帰ると、妻の[風美子|ふみこ]が待っていました。"
         reading: "いえにもちかえると、つまのふみこがまっていました。"
       - speaker: tsumugi
         emotion: normal
@@ -340,7 +343,7 @@ scenes:
         emotion: happy
         text: "朝から晩まで、家じゅう湯気だらけだ。"
       - speaker: reimu
-        text: "風美子は来る日も来る日も、ごはんを炊き続けました。"
+        text: "[風美子|ふみこ]は来る日も来る日も、ごはんを炊き続けました。"
         reading: "ふみこわくるひもくるひも、ごはんをたきつづけました。"
       - speaker: tsumugi
         emotion: normal
@@ -488,7 +491,7 @@ scenes:
         reading: "むりわ、つづきませんでした。"
       - speaker: zundamon
         emotion: surprised
-        text: "風美子！大丈夫なのだ！？"
+        text: "[風美子|ふみこ]！大丈夫なのだ！？"
       - speaker: tsumugi
         emotion: sad
         text: "……ごめんなさい。少し、めまいがして。"
@@ -503,7 +506,7 @@ scenes:
         text: "……いやよ。"
       - speaker: zundamon
         emotion: surprised
-        text: "風美子……。"
+        text: "[風美子|ふみこ]……。"
       - speaker: tsumugi
         emotion: normal
         text: "世の中の主婦みんなが、毎日この火の番で苦労してる。"
@@ -526,7 +529,7 @@ scenes:
         emotion: normal
         text: "だから、やめない。少し休んだら、また炊くわ。"
       - speaker: reimu
-        text: "世のため、という一念が、風美子を支えていました。"
+        text: "世のため、という一念が、[風美子|ふみこ]を支えていました。"
         reading: "よのため、といういちねんが、ふみこをささえていました。"
       - speaker: zundamon
         emotion: normal
@@ -780,7 +783,7 @@ scenes:
       - {who: zundamon, x: 0.15, tag: "三並", flip: true}
     cuts:
       - speaker: reimu
-        text: "二重釜を三重釜に。外気の影響を抑える工夫でした。"
+        text: "二重釜を[三重釜|さんじゅうがま]に。外気の影響を抑える工夫でした。"
         reading: "にじゅうがまをさんじゅうがまに。がいきのえいきょうをおさえるくふうでした。"
         video: assets/clips/rc_sanju.mp4
         video_full: true
