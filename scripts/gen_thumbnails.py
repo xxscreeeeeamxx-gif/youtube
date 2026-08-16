@@ -1138,6 +1138,285 @@ def layout_bold(spec):
     return vignette(img, 78)
 
 
+def layout_face(spec):
+    """顔アップ型。クリック率の定石「顔を大きく」に振った版。
+
+    従来の bold 型は顔の面積が画面の7.6%しかなく、定石の25〜40%に届いていない
+    （2026-08の実測）。頭部を切り出して大きく置き、文字は左に2〜3行。
+    """
+    base = spec.get("bg", ((150, 26, 40), (96, 14, 26)))
+    img = Image.new("RGBA", (W, H), (*base[0], 255))
+    d = ImageDraw.Draw(img)
+    d.polygon([(0, H), (0, int(H * 0.46)), (W, int(H * 0.04)), (W, H)], fill=(*base[1], 255))
+    stripe = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(stripe)
+    for x in range(-H, W + H, 58):
+        sd.polygon([(x, H), (x + 22, H), (x + 22 + H, 0), (x + H, 0)],
+                   fill=(255, 255, 255, 13))
+    img.alpha_composite(stripe)
+    d = ImageDraw.Draw(img)
+    for i in range(-2, 22):
+        x = int(W * 0.58) + i * 96
+        d.polygon([(int(W * 0.58), int(H * 0.5)), (x, -60), (x + 42, -60)],
+                  fill=(255, 255, 255, 14))
+    # 頭部だけを切り出して大きく（顔の面積を稼ぐ）
+    sp = Image.open(sprite_path(cfg, spec.get("who", "zundamon"),
+                                spec.get("emotion", "surprised"))).convert("RGBA")
+    head = sp.crop((0, 0, sp.width, int(sp.height * 0.34)))
+    hb = head.split()[3].getbbox()
+    if hb:
+        head = head.crop(hb)
+    sc = int(H * 1.02) / head.height
+    head = outline_sprite(head.resize((int(head.width * sc), int(head.height * sc)),
+                                      Image.LANCZOS), 18)
+    char_x = W - head.width + int(head.width * 0.10)
+    img.alpha_composite(head, (char_x, H - head.height + 10))
+    char_left = char_x + (head.split()[3].getbbox() or (0,))[0]
+
+    lines = spec["lines"]
+    max_w = min(int(W * 0.60), char_left - 26)
+
+    def _fit(text, base_size):
+        size = base_size
+        while size > 56:
+            f = font("w9", size)
+            if int(f.getlength(text)) <= max_w:
+                return size, f
+            size -= 5
+        return size, font("w9", size)
+
+    fits = [_fit(l[0], int(spec.get("size", 190) * (l[3] if len(l) > 3 else 1.0)))
+            for l in lines]
+    gap = 1.30
+    while gap < 2.2 and sum(int(sz * gap) for sz, _ in fits) < int(H * 0.86):
+        gap += 0.04
+    block_h = sum(int(sz * gap) for sz, _ in fits) + int(fits[-1][0] * 0.18)
+    y = max(14, (H - block_h) // 2)
+    for ln, (size, f) in zip(lines, fits):
+        text, color, accent = ln[0], ln[1], ln[2]
+        tw = int(f.getlength(text))
+        lay = Image.new("RGBA", (tw + 80, int(size * 1.34)), (0, 0, 0, 0))
+        ld = ImageDraw.Draw(lay)
+        if accent:
+            ld.rounded_rectangle([0, 0, lay.width - 1, lay.height - 1],
+                                 radius=int(size * 0.1), fill=accent)
+            ld.text((40, int(size * 0.1)), text, font=f, fill=color)
+        else:
+            ld.text((40, int(size * 0.1)), text, font=f, fill=color,
+                    stroke_width=max(10, size // 12), stroke_fill=(14, 12, 20))
+        sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+        sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 190)), (0, 0), lay.split()[3])
+        img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(11)), (28, y + 14))
+        img.alpha_composite(lay, (22, y))
+        y += int(size * gap)
+    return vignette(img, 78)
+
+
+def layout_punch(spec):
+    """パンチ型。文字は2行まで・顔は右端で見切れるほど大きく。
+
+    bold 型は3行22文字あり、スマホ幅168pxで一瞬に読み切れない。文字を12〜14文字まで
+    削ると1行あたりを1.5倍に拡大でき、空いた分だけ顔も大きくできる（顔の面積は
+    定石の25〜40%に対し bold 型は7.6%しかなかった・2026-08の実測）。
+    """
+    base = spec.get("bg", ((150, 26, 40), (96, 14, 26)))
+    img = Image.new("RGBA", (W, H), (*base[0], 255))
+    d = ImageDraw.Draw(img)
+    d.polygon([(0, H), (0, int(H * 0.44)), (W, int(H * 0.05)), (W, H)], fill=(*base[1], 255))
+    stripe = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(stripe)
+    for x in range(-H, W + H, 58):
+        sd.polygon([(x, H), (x + 22, H), (x + 22 + H, 0), (x + H, 0)],
+                   fill=(255, 255, 255, 13))
+    img.alpha_composite(stripe)
+    # 顔の後ろに集中線。視線を顔へ集める
+    d = ImageDraw.Draw(img)
+    cx, cy = int(W * 0.78), int(H * 0.42)
+    for i in range(30):
+        a = i * (360 / 30)
+        import math
+        x1 = cx + math.cos(math.radians(a)) * 300
+        y1 = cy + math.sin(math.radians(a)) * 300
+        x2 = cx + math.cos(math.radians(a + 1.6)) * 1400
+        y2 = cy + math.sin(math.radians(a + 1.6)) * 1400
+        d.polygon([(cx, cy), (x1, y1), (x2, y2)], fill=(255, 255, 255, 16))
+
+    # 頭部を切り出して大きく。右端で少し見切れさせて迫力を出す
+    sp = Image.open(sprite_path(cfg, spec.get("who", "zundamon"),
+                                spec.get("emotion", "surprised"))).convert("RGBA")
+    head = sp.crop((0, 0, sp.width, int(sp.height * 0.40)))
+    hb = head.split()[3].getbbox()
+    if hb:
+        head = head.crop(hb)
+    sc = int(H * 1.06) / head.height
+    head = outline_sprite(head.resize((int(head.width * sc), int(head.height * sc)),
+                                      Image.LANCZOS), 20)
+    char_x = W - int(head.width * 0.80)
+    img.alpha_composite(head, (char_x, H - head.height + 6))
+    char_left = char_x + (head.split()[3].getbbox() or (0,))[0]
+
+    lines = spec["lines"]
+    max_w = min(int(W * 0.62), char_left - 24)
+
+    def _fit(text, base_size):
+        size = base_size
+        while size > 70:
+            f = font("w9", size)
+            if int(f.getlength(text)) <= max_w:
+                return size, f
+            size -= 4
+        return size, font("w9", size)
+
+    fits = [_fit(l[0], int(spec.get("size", 240) * (l[3] if len(l) > 3 else 1.0)))
+            for l in lines]
+    gap = 1.32
+    while gap < 2.4 and sum(int(sz * gap) for sz, _ in fits) < int(H * 0.80):
+        gap += 0.04
+    block_h = sum(int(sz * gap) for sz, _ in fits) + int(fits[-1][0] * 0.20)
+    y = max(12, (H - block_h) // 2)
+    for ln, (size, f) in zip(lines, fits):
+        text, color, accent = ln[0], ln[1], ln[2]
+        tw = int(f.getlength(text))
+        lay = Image.new("RGBA", (tw + 84, int(size * 1.36)), (0, 0, 0, 0))
+        ld = ImageDraw.Draw(lay)
+        if accent:
+            ld.rounded_rectangle([0, 0, lay.width - 1, lay.height - 1],
+                                 radius=int(size * 0.1), fill=accent)
+            ld.text((42, int(size * 0.11)), text, font=f, fill=color)
+        else:
+            ld.text((42, int(size * 0.11)), text, font=f, fill=color,
+                    stroke_width=max(12, size // 11), stroke_fill=(14, 12, 20))
+        sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+        sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 200)), (0, 0), lay.split()[3])
+        img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(13)), (26, y + 16))
+        img.alpha_composite(lay, (18, y))
+        y += int(size * gap)
+    return vignette(img, 74)
+
+
+def _tw(f, text):
+    """句読点の後ろは詰めて測る。全角の読点は右に半角分の余白を持つので、
+    そのままだと「金がない、却下」が「金がない、、却下」に見えるほど間延びする。"""
+    w = 0.0
+    for ch in text:
+        a = f.getlength(ch)
+        w += a * 0.52 if ch in "、。，．" else a
+    return int(w)
+
+
+def _ttext(d, xy, text, f, fill, **kw):
+    """_tw と同じ送りで1文字ずつ描く。"""
+    x, y = xy
+    for ch in text:
+        d.text((x, y), ch, font=f, fill=fill, **kw)
+        a = f.getlength(ch)
+        x += a * 0.52 if ch in "、。，．" else a
+
+
+def layout_stack(spec):
+    """上下分割型。文字は横幅いっぱい・顔は右下に大きく。
+
+    横並び（bold/punch）は顔を大きくすると文字の使える幅が減り、両方は立たない。
+    上下に分ければ上段のフックは画面幅の94%を使えるので1文字あたり約155px
+    （bold は約93px）まで太らせられ、空いた右下に顔を大きく置ける。
+    3段（フック／サブ／題材）にして中央の空きも潰す。
+    """
+    base = spec.get("bg", ((150, 26, 40), (96, 14, 26)))
+    img = Image.new("RGBA", (W, H), (*base[0], 255))
+    d = ImageDraw.Draw(img)
+    d.polygon([(0, H), (0, int(H * 0.40)), (W, int(H * 0.16)), (W, H)], fill=(*base[1], 255))
+    stripe = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(stripe)
+    for x in range(-H, W + H, 58):
+        sd.polygon([(x, H), (x + 22, H), (x + 22 + H, 0), (x + H, 0)],
+                   fill=(255, 255, 255, 13))
+    img.alpha_composite(stripe)
+    d = ImageDraw.Draw(img)
+    cx, cy = int(W * 0.74), int(H * 0.74)
+    for i in range(30):
+        a = i * 12.0
+        x1 = cx + math.cos(math.radians(a)) * 240
+        y1 = cy + math.sin(math.radians(a)) * 240
+        x2 = cx + math.cos(math.radians(a + 1.7)) * 1500
+        y2 = cy + math.sin(math.radians(a + 1.7)) * 1500
+        d.polygon([(cx, cy), (x1, y1), (x2, y2)], fill=(255, 255, 255, 17))
+
+    lines = spec["lines"]
+    hook, topic = lines[0], lines[-1]
+    sub = lines[1] if len(lines) > 2 else None
+
+    # ① 顔を先に置く。文字は必ずこの上に来る
+    sp = Image.open(sprite_path(cfg, spec.get("who", "zundamon"),
+                                spec.get("emotion", "surprised"))).convert("RGBA")
+    head = sp.crop((0, 0, sp.width, int(sp.height * 0.44)))
+    hb = head.split()[3].getbbox()
+    if hb:
+        head = head.crop(hb)
+    sc = int(H * 0.84) / head.height
+    head = outline_sprite(head.resize((int(head.width * sc), int(head.height * sc)),
+                                      Image.LANCZOS), 20)
+    head_x = W - int(head.width * 0.90)
+    head_left = head_x + (head.split()[3].getbbox() or (0,))[0]
+
+    # ② 上段フックの下地。キャラの白フチと文字がぶつかるのを防ぐ。
+    #    帯 → 顔 の順に重ねる（逆にすると頭の豆が帯に埋まり、ずんだもんと分からなくなる）
+    band_h = int(H * 0.34)
+    top = Image.new("RGBA", (W, band_h), (0, 0, 0, 0))
+    td = ImageDraw.Draw(top)
+    td.rectangle([0, 0, W, band_h - 26], fill=(10, 9, 14, 205))
+    td.polygon([(0, band_h - 26), (W, band_h - 26), (W, band_h - 60), (0, band_h)],
+               fill=(10, 9, 14, 205))
+    img.alpha_composite(top, (0, 0))
+    img.alpha_composite(head, (head_x, H - head.height + 8))
+
+    def _fit(text, base_size, limit, ratio=1.0):
+        size = int(base_size * ratio)
+        while size > 56:
+            f = font("w9", size)
+            if _tw(f, text) <= limit:
+                break
+            size -= 4
+        f = font("w9", size)
+        pad = 42
+        return size, f, _tw(f, text) + pad * 2, int(size * 1.36), pad
+
+    def _blit(text, color, accent, fit, x, y):
+        size, f, w, h, pad = fit
+        lay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        ld = ImageDraw.Draw(lay)
+        if accent:
+            ld.rounded_rectangle([0, 0, w - 1, h - 1], radius=int(size * 0.12), fill=accent)
+            _ttext(ld, (pad, int(size * 0.11)), text, f, color)
+        else:
+            _ttext(ld, (pad, int(size * 0.11)), text, f, color,
+                   stroke_width=max(12, size // 11), stroke_fill=(14, 12, 20))
+        sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
+        sh.paste(Image.new("RGBA", lay.size, (0, 0, 0, 205)), (0, 0), lay.split()[3])
+        px = x if x is not None else (W - w) // 2
+        img.alpha_composite(sh.filter(ImageFilter.GaussianBlur(15)), (px + 8, y + 16))
+        img.alpha_composite(lay, (px, y))
+
+    # 先に3段すべての寸法を確定させてから置く。順に描くと、フックが縮んだときに
+    # サブ行が題材帯へめり込む（escalator で実際に重なった・2026-08）
+    left_limit = min(int(W * 0.60), head_left - 20)
+    hf = _fit(hook[0], 300, int(W * 0.94))
+    tf = _fit(topic[0], hf[0], left_limit, 0.80)
+    hook_y = int(H * 0.005)
+    topic_y = H - tf[3] - int(H * 0.05)
+    gap_top = hook_y + hf[3]
+    gap = topic_y - gap_top
+
+    _blit(hook[0], hook[1], hook[2], hf, None, hook_y)
+    _blit(topic[0], topic[1], topic[2] or (255, 214, 40, 255), tf, 22, topic_y)
+    # 中央の空きにサブ行。空きが足りないときは入れない（重ねるより余白の方がまし）
+    if sub and gap > 96:
+        sf = _fit(sub[0], hf[0], min(int(W * 0.56), head_left - 20), 0.58)
+        while sf[3] > gap - 16 and sf[0] > 56:
+            sf = _fit(sub[0], sf[0] - 8, min(int(W * 0.56), head_left - 20), 1.0)
+        _blit(sub[0], sub[1], sub[2], sf, 26, gap_top + (gap - sf[3]) // 2)
+    return vignette(img, 74)
+
+
 # ---------------------------------------------------------------- 動画ごとの仕様
 
 # 全20本の仕様。型は題材で使い分ける:
@@ -1154,47 +1433,47 @@ SPECS = {
     # 2026-08のStudio実測でクリック率1.5%だったため、スマホ幅168pxで読めることを
     # 最優先に全面刷新した。1行7文字以内・2行・要素は文字とキャラだけに絞る
     # ---- 人物物語 ----
-    "momofuku-meme": dict(layout="bold", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
-        lines=[("裏庭の小屋から", W1, None, 0.52), ("47歳で全財産ゼロ", W1, None), ("カップ麺誕生", B1, Y1)]),
-    "qr-meme": dict(layout="bold", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
-        lines=[("愛知の部品工場で", W1, None, 0.52), ("疲れたの一言が", W1, None), ("QRを生んだ", B1, Y1)]),
-    "kaiten-meme": dict(layout="bold", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
-        lines=[("ヒントはビール工場", W1, None, 0.52), ("人手が足りない", W1, None), ("回転寿司誕生", B1, Y1)]),
-    "yai-denchi": dict(layout="bold", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
-        lines=[("明治の職工が挑む", W1, None, 0.52), ("5分の遅刻が", W1, None), ("乾電池を生んだ", B1, Y1)]),
-    "tenji-block-meme": dict(layout="bold", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
-        lines=[("友の失明がきっかけ", W1, None, 0.52), ("全財産を道路に", W1, None), ("点字ブロック", B1, Y1)]),
-    "masuoka-flash": dict(layout="bold", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
-        lines=[("土日に特許23件", W1, None, 0.52), ("金がない、却下", W1, None), ("USBメモリ誕生", B1, Y1)]),
-    "kaisatsu-drama": dict(layout="bold", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
-        lines=[("駅員より速くしろ", W1, None, 0.52), ("1分間に80人", W1, None), ("自動改札の誕生", B1, Y1)]),
-    "gastro-meme": dict(layout="bold", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
-        lines=[("夜行列車で口説いた", W1, None, 0.52), ("たった2人で", W1, None), ("胃カメラを作る", B1, Y1)]),
-    "rice-cooker-meme": dict(layout="bold", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
-        lines=[("町工場の夫婦が", W1, None, 0.52), ("妻が千回炊いた", W1, None), ("炊飯器の誕生", B1, Y1)]),
-    "karaoke": dict(layout="bold", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
-        lines=[("特許を取らなかった", W1, None, 0.52), ("手作り11台から", W1, None), ("カラオケ誕生", B1, Y1)]),
-    "yokoi-gunpei": dict(layout="bold", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
-        lines=[("枯れた技術の水平思考", W1, None, 0.52), ("あえて白黒で", W1, None), ("ゲームボーイ", B1, Y1)]),
-    "shinkansen-bird": dict(layout="bold", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
-        lines=[("趣味の野鳥観察が", W1, None, 0.52), ("騒音を鳥が解決", W1, None), ("新幹線の秘密", B1, Y1)]),
-    "cutter-knife": dict(layout="bold", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
-        lines=[("ヒントは板チョコ", W1, None, 0.52), ("折れば切れる", W1, None), ("カッターナイフ", B1, Y1)]),
-    "washlet": dict(layout="bold", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
-        lines=[("日本人の体を測れ", W1, None, 0.52), ("社員300人が実験", W1, None), ("ウォシュレット", B1, Y1)]),
-    "ajinomoto": dict(layout="bold", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
-        lines=[("昆布12キロから", W1, None, 0.52), ("5つ目の味を発見", W1, None), ("味の素の誕生", B1, Y1)]),
+    "momofuku-meme": dict(layout="stack", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
+    lines=[("47歳で全財産ゼロ", W1, None), ("裏庭の小屋から", W1, None), ("カップ麺", B1, Y1)]),
+    "qr-meme": dict(layout="stack", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
+    lines=[("疲れたの一言から", W1, None), ("愛知の部品工場で", W1, None), ("QRコード", B1, Y1)]),
+    "kaiten-meme": dict(layout="stack", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
+    lines=[("ヒントはビール工場", W1, None), ("人手が足りない", W1, None), ("回転寿司", B1, Y1)]),
+    "yai-denchi": dict(layout="stack", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
+    lines=[("5分の遅刻が", W1, None), ("明治の職工が挑む", W1, None), ("乾電池", B1, Y1)]),
+    "tenji-block-meme": dict(layout="stack", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
+    lines=[("全財産を道路に", W1, None), ("友の失明がきっかけ", W1, None), ("点字ブロック", B1, Y1)]),
+    "masuoka-flash": dict(layout="stack", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
+    lines=[("金がない、却下", W1, None), ("土日に特許23件", W1, None), ("USBメモリ", B1, Y1)]),
+    "kaisatsu-drama": dict(layout="stack", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
+    lines=[("1分間に80人", W1, None), ("駅員より速くしろ", W1, None), ("自動改札", B1, Y1)]),
+    "gastro-meme": dict(layout="stack", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
+    lines=[("たった2人で作る", W1, None), ("夜行列車で口説いた", W1, None), ("胃カメラ", B1, Y1)]),
+    "rice-cooker-meme": dict(layout="stack", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
+    lines=[("妻が千回炊いた", W1, None), ("町工場の夫婦が", W1, None), ("炊飯器", B1, Y1)]),
+    "karaoke": dict(layout="stack", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
+    lines=[("特許を取らなかった", W1, None), ("手作り11台から", W1, None), ("カラオケ", B1, Y1)]),
+    "yokoi-gunpei": dict(layout="stack", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
+    lines=[("あえて白黒で勝つ", W1, None), ("枯れた技術の水平思考", W1, None), ("ゲームボーイ", B1, Y1)]),
+    "shinkansen-bird": dict(layout="stack", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
+    lines=[("騒音を鳥が解決", W1, None), ("趣味の野鳥観察が", W1, None), ("新幹線", B1, Y1)]),
+    "cutter-knife": dict(layout="stack", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
+    lines=[("ヒントは板チョコ", W1, None), ("折れば切れる", W1, None), ("カッターナイフ", B1, Y1)]),
+    "washlet": dict(layout="stack", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
+    lines=[("社員300人が実験", W1, None), ("日本人の体を測れ", W1, None), ("ウォシュレット", B1, Y1)]),
+    "ajinomoto": dict(layout="stack", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
     # ---- 解説 ----
-    "battery-80-duo": dict(layout="bold", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
-        lines=[("メーカーが止める機能", W1, None, 0.52), ("毎晩100%は損", W1, None), ("スマホ充電の話", B1, Y1)]),
-    "banknote": dict(layout="bold", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
-        lines=[("偽札は2年で343枚", W1, None, 0.52), ("コピー機が拒否", W1, None), ("お札の秘密", B1, Y1)]),
-    "escalator": dict(layout="bold", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
-        lines=[("誰も得しない説", W1, None, 0.52), ("片側空けの謎", W1, None), ("エスカレーター", B1, Y1)]),
-    "traffic-light": dict(layout="bold", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
-        lines=[("法律の方が折れた", W1, None, 0.52), ("緑なのに青と呼ぶ", W1, None), ("信号機の謎", B1, Y1)]),
-    "auto-door": dict(layout="bold", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
-        lines=[("見てるのは人じゃない", W1, None, 0.52), ("黒い服だと開かない", W1, None), ("自動ドアの謎", B1, Y1)]),
+    lines=[("5つ目の味を発見", W1, None), ("昆布12キロから", W1, None), ("味の素", B1, Y1)]),
+    "battery-80-duo": dict(layout="stack", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
+    lines=[("毎晩100%は損", W1, None), ("メーカーが止める機能", W1, None), ("スマホ充電", B1, Y1)]),
+    "banknote": dict(layout="stack", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
+    lines=[("コピー機が拒否", W1, None), ("偽札は2年で343枚", W1, None), ("お札の秘密", B1, Y1)]),
+    "escalator": dict(layout="stack", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
+    lines=[("誰も得しない", W1, None), ("片側空けの謎", W1, None), ("エスカレーター", B1, Y1)]),
+    "traffic-light": dict(layout="stack", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
+    lines=[("緑なのに青と呼ぶ", W1, None), ("世界で日本だけ", W1, None), ("信号機", B1, Y1)]),
+    "auto-door": dict(layout="stack", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
+    lines=[("黒い服だと開かない", W1, None), ("見てるのは人じゃない", W1, None), ("自動ドア", B1, Y1)]),
 }
 
 
@@ -1203,7 +1482,9 @@ def render(slug, out_path=None):
     kind = spec["layout"]
     img = {"split": layout_split, "band": layout_band, "ba": layout_beforeafter,
            "charbig": layout_charbig, "photo": layout_photo,
-           "bold": layout_bold}.get(kind, layout_hero)(spec)
+           "bold": layout_bold, "face": layout_face,
+           "punch": layout_punch,
+           "stack": layout_stack}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
         d = find_project_dir(cfg.root, slug)
