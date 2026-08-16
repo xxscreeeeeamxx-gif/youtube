@@ -1090,15 +1090,21 @@ def layout_bold(spec):
     char_left = char_x + (bb[0] if bb else 0)
     lines = spec["lines"]
     max_w = min(int(W * 0.62), char_left - 46)
-    y = spec.get("text_top", 96)
-    for text, color, accent in lines:
+
+    def _fit(text):
         size = spec.get("size", 190)
         while size > 90:
             f = font("w9", size)
             if int(f.getlength(text)) <= max_w:
-                break
+                return size, f
             size -= 6
-        f = font("w9", size)
+        return size, font("w9", size)
+
+    # 先に全行の高さを測り、縦中央に置く（上寄せだと左下が大きく空く）
+    fits = [_fit(t) for t, _, _ in lines]
+    block_h = sum(int(sz * 1.18) for sz, _ in fits) + int(fits[-1][0] * 0.16)
+    y = spec.get("text_top") or max(40, H - block_h - 56)
+    for (text, color, accent), (size, f) in zip(lines, fits):
         tw = int(f.getlength(text))
         lay = Image.new("RGBA", (tw + 80, int(size * 1.34)), (0, 0, 0, 0))
         ld = ImageDraw.Draw(lay)
