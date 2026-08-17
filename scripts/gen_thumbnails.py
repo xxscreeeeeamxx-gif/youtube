@@ -245,17 +245,23 @@ def p_bill(d, s):
 
 
 def p_blade(d, s):
-    """カッターの刃（先端が折れて飛ぶ）。"""
-    seg = [(s*0.10, s*0.86), (s*0.62, s*0.34), (s*0.78, s*0.50), (s*0.26, s*1.02)]
-    d.polygon(seg, fill=(200, 206, 218), outline=(90, 96, 110))
-    for k in range(1, 4):
-        x0 = s*0.10 + (s*0.52) * k / 4
-        y0 = s*0.86 - (s*0.52) * k / 4
-        d.line([(x0, y0), (x0 + s*0.16, y0 + s*0.16)], fill=(110, 116, 130), width=8)
-    # 折れた先端
-    tip = [(s*0.68, s*0.16), (s*0.84, s*0.32), (s*0.72, s*0.44), (s*0.58, s*0.28)]
-    d.polygon(tip, fill=(225, 230, 240), outline=(90, 96, 110))
-    d.line([(s*0.52, s*0.40), (s*0.60, s*0.32)], fill=(255, 255, 255), width=10)
+    """カッターナイフ。刃だけだと何か分からないので、黄色い本体ごと描く。"""
+    # 本体
+    d.polygon([(s*0.06, s*0.78), (s*0.62, s*0.22), (s*0.78, s*0.38), (s*0.22, s*0.94)],
+              fill=(240, 196, 40), outline=(140, 106, 10), width=7)
+    # スライダー
+    d.polygon([(s*0.24, s*0.66), (s*0.36, s*0.54), (s*0.44, s*0.62), (s*0.32, s*0.74)],
+              fill=(70, 76, 92), outline=(30, 34, 46), width=5)
+    # 刃（本体から突き出す）
+    d.polygon([(s*0.62, s*0.22), (s*0.94, s*0.06), (s*0.99, s*0.20), (s*0.72, s*0.32)],
+              fill=(216, 222, 234), outline=(90, 96, 110), width=6)
+    # 折り線
+    for k in range(1, 3):
+        t = k / 3
+        x0 = s*0.62 + (s*0.32) * t
+        y0 = s*0.22 - (s*0.16) * t
+        d.line([(x0, y0), (x0 + s*0.05, y0 + s*0.11)], fill=(120, 126, 140), width=6)
+    d.line([(s*0.66, s*0.26), (s*0.92, s*0.13)], fill=(255, 255, 255), width=7)
 
 
 def p_toilet(d, s):
@@ -341,18 +347,38 @@ def p_cupnoodle(d, s):
 
 
 def p_endoscope(d, s):
-    """胃カメラ（先端にレンズと光）。"""
-    d.line([(s*0.12, s*0.10), (s*0.44, s*0.30), (s*0.62, s*0.58), (s*0.54, s*0.88)],
-           fill=(70, 76, 92), width=int(s*0.16), joint="curve")
-    d.ellipse([s*0.36, s*0.72, s*0.74, s*1.06], fill=(215, 220, 232), outline=(60, 66, 82), width=9)
-    d.ellipse([s*0.44, s*0.80, s*0.66, s*0.99], fill=(90, 200, 240), outline=(40, 120, 170), width=6)
-    d.ellipse([s*0.02, s*0.02, s*0.30, s*0.28], fill=(160, 166, 182), outline=(60, 66, 82), width=8)
-    for a in (0, 45, 90, 135):
-        import math
+    """胃カメラ。楕円だと胃に見えないので、J字の胃袋を輪郭で描いて管を差し込む。"""
+    import math
+    # 胃袋（J字）。上が広く、右下がすぼまる
+    body = [(0.20, 0.30), (0.40, 0.26), (0.58, 0.36), (0.66, 0.56), (0.62, 0.76),
+            (0.48, 0.90), (0.30, 0.92), (0.14, 0.80), (0.10, 0.58), (0.13, 0.40)]
+    d.polygon([(x*s, y*s) for x, y in body], fill=(246, 190, 176),
+              outline=(190, 104, 92))
+    d.line([(x*s, y*s) for x, y in body] + [(body[0][0]*s, body[0][1]*s)],
+           fill=(190, 104, 92), width=9, joint="curve")
+    # 幽門側の細い出口（胃らしさ）
+    d.line([(s*0.60, s*0.78), (s*0.76, s*0.90)], fill=(190, 104, 92), width=16)
+    d.line([(s*0.60, s*0.78), (s*0.76, s*0.90)], fill=(246, 190, 176), width=8)
+    # 内側の陰影（ひだ）
+    for k in range(3):
+        y = s*(0.46 + k*0.13)
+        d.arc([s*0.18, y - s*0.06, s*0.56, y + s*0.06], 20, 160,
+              fill=(228, 152, 138), width=6)
+    # 食道から差し込む管
+    d.line([(s*0.96, s*0.02), (s*0.72, s*0.10), (s*0.46, s*0.16), (s*0.36, s*0.38)],
+           fill=(56, 62, 78), width=int(s*0.10), joint="curve")
+    d.line([(s*0.96, s*0.02), (s*0.72, s*0.10), (s*0.46, s*0.16), (s*0.36, s*0.38)],
+           fill=(126, 134, 150), width=int(s*0.035), joint="curve")
+    # 先端のレンズと光
+    d.ellipse([s*0.26, s*0.34, s*0.46, s*0.54], fill=(226, 231, 242),
+              outline=(46, 52, 68), width=7)
+    d.ellipse([s*0.30, s*0.38, s*0.42, s*0.50], fill=(80, 200, 245),
+              outline=(28, 106, 160), width=5)
+    for a in (150, 195, 240):
         rad = math.radians(a)
-        d.line([(s*0.53 + math.cos(rad)*s*0.13, s*0.91 + math.sin(rad)*s*0.13),
-                (s*0.53 + math.cos(rad)*s*0.22, s*0.91 + math.sin(rad)*s*0.22)],
-               fill=(255, 230, 120), width=6)
+        d.line([(s*0.36 + math.cos(rad)*s*0.12, s*0.44 + math.sin(rad)*s*0.12),
+                (s*0.36 + math.cos(rad)*s*0.26, s*0.44 + math.sin(rad)*s*0.26)],
+               fill=(255, 232, 120), width=8)
 
 
 def p_sushi(d, s):
@@ -395,20 +421,26 @@ def p_gameboy(d, s):
 
 
 def p_umami(d, s):
-    """味の素（結晶と昆布）。"""
-    d.polygon([(s*0.16, s*0.94), (s*0.30, s*0.20), (s*0.44, s*0.94)],
-              fill=(40, 70, 46), outline=(20, 44, 26))
-    d.polygon([(s*0.30, s*0.94), (s*0.44, s*0.28), (s*0.58, s*0.94)],
-              fill=(52, 88, 56), outline=(20, 44, 26))
-    d.rounded_rectangle([s*0.58, s*0.44, s*0.94, s*0.94], radius=12,
-                        fill=(250, 252, 255), outline=(150, 160, 180), width=7)
-    import random
-    rnd = random.Random(5)
-    for _ in range(14):
-        x = rnd.uniform(0.62, 0.90) * s
-        y = rnd.uniform(0.52, 0.88) * s
-        d.rectangle([x, y, x + s*0.045, y + s*0.045], fill=(235, 240, 250),
-                    outline=(170, 180, 200), width=3)
+    """うま味。昆布だけだと海藻に見えるので、卓上びんを主役にして昆布を添える。"""
+    # 昆布（背後に2枚）
+    d.polygon([(s*0.04, s*0.96), (s*0.14, s*0.30), (s*0.30, s*0.96)],
+              fill=(38, 68, 44), outline=(18, 40, 24), width=5)
+    d.polygon([(s*0.18, s*0.96), (s*0.30, s*0.40), (s*0.44, s*0.96)],
+              fill=(52, 88, 56), outline=(18, 40, 24), width=5)
+    # びん本体
+    d.rounded_rectangle([s*0.44, s*0.34, s*0.88, s*0.96], radius=int(s*0.08),
+                        fill=(250, 252, 255), outline=(120, 130, 150), width=7)
+    # ラベル
+    d.rounded_rectangle([s*0.48, s*0.52, s*0.84, s*0.80], radius=int(s*0.03),
+                        fill=(228, 32, 48), outline=(150, 16, 28), width=5)
+    d.line([(s*0.52, s*0.60), (s*0.80, s*0.60)], fill=(255, 255, 255), width=7)
+    d.line([(s*0.52, s*0.70), (s*0.74, s*0.70)], fill=(255, 255, 255), width=7)
+    # 赤いキャップ
+    d.rounded_rectangle([s*0.50, s*0.16, s*0.82, s*0.38], radius=int(s*0.05),
+                        fill=(228, 32, 48), outline=(150, 16, 28), width=6)
+    for k in range(3):
+        cx = s*0.58 + k * s*0.08
+        d.ellipse([cx, s*0.24, cx + s*0.035, s*0.275], fill=(150, 16, 28))
 
 
 def p_usb(d, s):
@@ -451,14 +483,22 @@ def p_gate(d, s):
 
 
 def p_escalator(d, s):
-    """エスカレーター（斜めの段）。"""
+    """エスカレーター。段だけだと階段と区別がつかないので、手すりと側板まで描く。"""
+    # 側板（斜めのパネル）
+    d.polygon([(s*0.04, s*0.98), (s*0.04, s*0.80), (s*0.96, s*0.24), (s*0.96, s*0.42)],
+              fill=(96, 104, 122), outline=(48, 54, 68), width=6)
+    # ステップ
     for k in range(5):
-        x0 = s*0.08 + k * s*0.16
-        y0 = s*0.90 - k * s*0.16
-        d.rectangle([x0, y0, x0 + s*0.22, y0 + s*0.10],
-                    fill=(200, 206, 218), outline=(110, 116, 132), width=6)
-    d.line([(s*0.06, s*0.74), (s*0.94, s*0.16)], fill=(60, 66, 80), width=14)
-    d.line([(s*0.06, s*0.74), (s*0.94, s*0.16)], fill=(140, 146, 160), width=6)
+        x0 = s*0.10 + k * s*0.165
+        y0 = s*0.80 - k * s*0.135
+        d.polygon([(x0, y0), (x0 + s*0.20, y0), (x0 + s*0.20, y0 + s*0.13),
+                   (x0, y0 + s*0.13)],
+                  fill=(214, 220, 232), outline=(90, 96, 112), width=5)
+        d.line([(x0 + s*0.02, y0 + s*0.11), (x0 + s*0.18, y0 + s*0.11)],
+               fill=(240, 196, 40), width=6)
+    # 手すり（太い黒ベルト）
+    d.line([(s*0.02, s*0.66), (s*0.98, s*0.10)], fill=(38, 42, 54), width=int(s*0.10))
+    d.line([(s*0.02, s*0.64), (s*0.98, s*0.08)], fill=(120, 128, 145), width=int(s*0.03))
 
 
 def p_qr(d, s):
@@ -1400,20 +1440,41 @@ def layout_stack(spec):
     # サブ行が題材帯へめり込む（escalator で実際に重なった・2026-08）
     left_limit = min(int(W * 0.60), head_left - 20)
     hf = _fit(hook[0], 300, int(W * 0.94))
-    tf = _fit(topic[0], hf[0], left_limit, 0.80)
+    tf = _fit(topic[0], hf[0], left_limit, 0.62)
     hook_y = int(H * 0.005)
     topic_y = H - tf[3] - int(H * 0.05)
     gap_top = hook_y + hf[3]
+    # 絵を置くので中段の高さを確保する。フックが短い語だと文字が最大まで太り、
+    # 中段が潰れて絵だけ極端に小さくなる（乾電池「5分の遅刻が」で170pxしか残らなかった）
+    if spec.get("prop"):
+        while topic_y - gap_top < int(H * 0.40) and hf[0] > 96:
+            hf = _fit(hook[0], hf[0] - 10, int(W * 0.94))
+            tf = _fit(topic[0], hf[0], left_limit, 0.62)
+            topic_y = H - tf[3] - int(H * 0.05)
+            gap_top = hook_y + hf[3]
     gap = topic_y - gap_top
 
     _blit(hook[0], hook[1], hook[2], hf, None, hook_y)
     _blit(topic[0], topic[1], topic[2] or (255, 214, 40, 255), tf, 22, topic_y)
-    # 中央の空きにサブ行。空きが足りないときは入れない（重ねるより余白の方がまし）
-    if sub and gap > 96:
-        sf = _fit(sub[0], hf[0], min(int(W * 0.56), head_left - 20), 0.58)
-        while sf[3] > gap - 16 and sf[0] > 56:
-            sf = _fit(sub[0], sf[0] - 8, min(int(W * 0.56), head_left - 20), 1.0)
-        _blit(sub[0], sub[1], sub[2], sf, 26, gap_top + (gap - sf[3]) // 2)
+
+    # 題材の絵。文字だけでは一覧で何の動画か伝わらない（ユーザー指摘 2026-08-17）。
+    # 中段はまるごと絵に使う。サブ行と横に並べると両方小さくなるので、サブ行は捨てた
+    # ——「一目でわかる」ほうが補助情報より効く。
+    prop = spec.get("prop")
+    if prop and globals().get(prop):
+        pl = prop_layer(globals()[prop], size=620, tilt=-10)
+        room_h = max(80, topic_y - gap_top - 20)
+        room_w = max(120, head_left - 12 - 40)
+        # 高さだけで合わせると、マイクやUSBのような細長い絵が痩せて見える。
+        # 面積を基準に決めてから枠に収めると、絵ごとの見た目の大きさがそろう
+        import math as _m
+        area = _m.sqrt(room_w * room_h * 0.92 / (pl.width * pl.height))
+        sc = min(area, room_w / pl.width, room_h / pl.height)
+        pl = pl.resize((max(1, int(pl.width * sc)), max(1, int(pl.height * sc))),
+                       Image.LANCZOS)
+        # 顔の左の帯を絵で埋める。中央に置くと左が空くので、やや左寄せにする
+        px = max(30, 30 + int((room_w - pl.width) * 0.42))
+        img.alpha_composite(pl, (px, gap_top + (room_h - pl.height) // 2 + 8))
     return vignette(img, 74)
 
 
@@ -1433,46 +1494,46 @@ SPECS = {
     # 2026-08のStudio実測でクリック率1.5%だったため、スマホ幅168pxで読めることを
     # 最優先に全面刷新した。1行7文字以内・2行・要素は文字とキャラだけに絞る
     # ---- 人物物語 ----
-    "momofuku-meme": dict(layout="stack", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
+    "momofuku-meme": dict(prop="p_cupnoodle", layout="stack", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
     lines=[("47歳で全財産ゼロ", W1, None), ("裏庭の小屋から", W1, None), ("カップ麺", B1, Y1)]),
-    "qr-meme": dict(layout="stack", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
+    "qr-meme": dict(prop="p_qr", layout="stack", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
     lines=[("疲れたの一言から", W1, None), ("愛知の部品工場で", W1, None), ("QRコード", B1, Y1)]),
-    "kaiten-meme": dict(layout="stack", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
+    "kaiten-meme": dict(prop="p_sushilane", layout="stack", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
     lines=[("ヒントはビール工場", W1, None), ("人手が足りない", W1, None), ("回転寿司", B1, Y1)]),
-    "yai-denchi": dict(layout="stack", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
+    "yai-denchi": dict(prop="p_drycell", layout="stack", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
     lines=[("5分の遅刻が", W1, None), ("明治の職工が挑む", W1, None), ("乾電池", B1, Y1)]),
-    "tenji-block-meme": dict(layout="stack", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
+    "tenji-block-meme": dict(prop="p_block", layout="stack", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
     lines=[("全財産を道路に", W1, None), ("友の失明がきっかけ", W1, None), ("点字ブロック", B1, Y1)]),
-    "masuoka-flash": dict(layout="stack", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
+    "masuoka-flash": dict(prop="p_usb", layout="stack", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
     lines=[("金がない、却下", W1, None), ("土日に特許23件", W1, None), ("USBメモリ", B1, Y1)]),
-    "kaisatsu-drama": dict(layout="stack", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
+    "kaisatsu-drama": dict(prop="p_gate", layout="stack", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
     lines=[("1分間に80人", W1, None), ("駅員より速くしろ", W1, None), ("自動改札", B1, Y1)]),
-    "gastro-meme": dict(layout="stack", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
+    "gastro-meme": dict(prop="p_endoscope", layout="stack", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
     lines=[("たった2人で作る", W1, None), ("夜行列車で口説いた", W1, None), ("胃カメラ", B1, Y1)]),
-    "rice-cooker-meme": dict(layout="stack", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
+    "rice-cooker-meme": dict(prop="p_ricecooker", layout="stack", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
     lines=[("妻が千回炊いた", W1, None), ("町工場の夫婦が", W1, None), ("炊飯器", B1, Y1)]),
-    "karaoke": dict(layout="stack", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
+    "karaoke": dict(prop="p_mic", layout="stack", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
     lines=[("特許を取らなかった", W1, None), ("手作り11台から", W1, None), ("カラオケ", B1, Y1)]),
-    "yokoi-gunpei": dict(layout="stack", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
+    "yokoi-gunpei": dict(prop="p_gameboy", layout="stack", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
     lines=[("あえて白黒で勝つ", W1, None), ("枯れた技術の水平思考", W1, None), ("ゲームボーイ", B1, Y1)]),
-    "shinkansen-bird": dict(layout="stack", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
+    "shinkansen-bird": dict(prop="p_shinkansen", layout="stack", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
     lines=[("騒音を鳥が解決", W1, None), ("趣味の野鳥観察が", W1, None), ("新幹線", B1, Y1)]),
-    "cutter-knife": dict(layout="stack", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
+    "cutter-knife": dict(prop="p_blade", layout="stack", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
     lines=[("ヒントは板チョコ", W1, None), ("折れば切れる", W1, None), ("カッターナイフ", B1, Y1)]),
-    "washlet": dict(layout="stack", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
+    "washlet": dict(prop="p_toilet", layout="stack", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
     lines=[("社員300人が実験", W1, None), ("日本人の体を測れ", W1, None), ("ウォシュレット", B1, Y1)]),
-    "ajinomoto": dict(layout="stack", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
+    "ajinomoto": dict(prop="p_umami", layout="stack", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
     # ---- 解説 ----
     lines=[("5つ目の味を発見", W1, None), ("昆布12キロから", W1, None), ("味の素", B1, Y1)]),
-    "battery-80-duo": dict(layout="stack", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
+    "battery-80-duo": dict(prop="p_battery", layout="stack", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
     lines=[("毎晩100%は損", W1, None), ("メーカーが止める機能", W1, None), ("スマホ充電", B1, Y1)]),
-    "banknote": dict(layout="stack", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
+    "banknote": dict(prop="p_bill", layout="stack", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
     lines=[("コピー機が拒否", W1, None), ("偽札は2年で343枚", W1, None), ("お札の秘密", B1, Y1)]),
-    "escalator": dict(layout="stack", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
+    "escalator": dict(prop="p_escalator", layout="stack", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
     lines=[("誰も得しない", W1, None), ("片側空けの謎", W1, None), ("エスカレーター", B1, Y1)]),
-    "traffic-light": dict(layout="stack", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
+    "traffic-light": dict(prop="p_signal", layout="stack", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
     lines=[("緑なのに青と呼ぶ", W1, None), ("世界で日本だけ", W1, None), ("信号機", B1, Y1)]),
-    "auto-door": dict(layout="stack", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
+    "auto-door": dict(prop="p_autodoor", layout="stack", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
     lines=[("黒い服だと開かない", W1, None), ("見てるのは人じゃない", W1, None), ("自動ドア", B1, Y1)]),
 }
 
