@@ -177,13 +177,13 @@ scenes:
       - {who: yamada, x: 0.72}
     cuts:
       - speaker: reimu
-        text: "三並義忠は、[光伸社|こうしんしゃ]という小さな町工場の主人でした。"
+        text: "[三並義忠|みなみよしただ]は、[光伸社|こうしんしゃ]という小さな町工場の主人でした。"
         reading: "みなみよしただわ、こうしんしゃというちいさなまちこうばのしゅじんでした。"
       - speaker: zundamon
         emotion: normal
         text: "うちは、精密な測定器を作る工場だ。"
       - speaker: yamada
-        text: "三並さん。東芝の山田です。折り入って、お願いが。"
+        text: "三並さん。東芝の山田です。[折り入って|おりいって]、お願いが。"
       - speaker: zundamon
         emotion: surprised
         text: "天下の東芝さんが、うちに？"
@@ -220,7 +220,7 @@ scenes:
       - speaker: yamada
         text: "虫のいい話なのは、承知です。でも、あなたにしか。"
       - speaker: reimu
-        text: "割に合わない仕事でした。それでも、三並の心は動きます。"
+        text: "割に合わない仕事でした。それでも、[三並|みなみ]の心は動きます。"
         reading: "わりにあわないしごとでした。それでも、みなみのこころわうごきます。"
       - speaker: zundamon
         emotion: normal
@@ -771,7 +771,7 @@ scenes:
         text: "……釜を、もう1枚増やすぞ。"
       - speaker: tsumugi
         emotion: surprised
-        text: "二重を、三重に？"
+        text: "二重を、[三重|さんじゅう]に？"
       - speaker: zundamon
         emotion: normal
         text: "外の空気の寒さから、水の釜を守る層を、足すんだ。"
@@ -1027,7 +1027,7 @@ scenes:
         emotion: happy
         text: "これは、夫婦二人の発明なのだ。"
       - speaker: reimu
-        text: "のちに三並は、科学技術庁から表彰を受けます。"
+        text: "のちに[三並|みなみ]は、科学技術庁から表彰を受けます。"
         reading: "のちにみなみわ、かがくぎじゅつちょうからひょうしょうをうけます。"
   - id: shinka
     title: "そして現代へ"
@@ -1108,7 +1108,7 @@ scenes:
       - {who: tsumugi, x: 0.76, tag: "風美子"}
     cuts:
       - speaker: reimu
-        text: "三並義忠は、その後も、ものづくりを続けました。"
+        text: "[三並義忠|みなみよしただ]は、その後も、ものづくりを続けました。"
         reading: "みなみよしただわ、そのごも、ものづくりをつづけました。"
       - speaker: tsumugi
         emotion: normal
