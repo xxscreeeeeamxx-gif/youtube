@@ -26,7 +26,7 @@ scenes:
     cuts:
       - speaker: tsumugi
         emotion: normal
-        text: "世界で最初の電気炊飯器はね、ある奥さんが千回ごはんを炊いて完成したの。"
+        text: "世界で最初の[電気炊飯器はね|でんきすいはんきわね]、ある奥さんが千回ごはんを炊いて完成したの。"
       - speaker: zundamon
         emotion: surprised
         text: "せ、千回！？ガチのやつかよ！"
@@ -47,7 +47,7 @@ scenes:
         text: "……ところで、ごはん炊けたのだ！ボタンひとつで優勝なのだ！"
       - speaker: tsumugi
         emotion: normal
-        text: "早いね。お米といで、スイッチ押しただけでしょ。"
+        text: "早いね。[お米|おこめ]といで、スイッチ押しただけでしょ。"
       - speaker: zundamon
         emotion: happy
         text: "それだけで、ふっくらツヤツヤ。[QOL|きゅーおーえる]爆上がりだ。"
@@ -270,7 +270,7 @@ scenes:
         text: "その「ちょうど」が、毎回ちがうんだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "お米の量でも、変わるものね。"
+        text: "[お米|おこめ]の量でも、変わるものね。"
       - speaker: zundamon
         emotion: normal
         text: "冬と夏でも、水の温度がちがう。同じ時間じゃ、詰むんだ。"
@@ -347,7 +347,7 @@ scenes:
         reading: "ふみこわくるひもくるひも、ごはんをたきつづけました。"
       - speaker: tsumugi
         emotion: normal
-        text: "温度計を、お米にさして。……98度。"
+        text: "温度計を、[お米|おこめ]にさして。……98度。"
       - speaker: zundamon
         emotion: normal
         text: "温度と、時間と、炊きあがり。全部を表にするんだ。"
@@ -447,7 +447,7 @@ scenes:
         reading: "じっけんをつづけるうち、いえのこめがそこをつきました。"
       - speaker: tsumugi
         emotion: sad
-        text: "あなた……お米、もう、ないの。"
+        text: "あなた……[お米|おこめ]、もう、ないの。"
       - speaker: zundamon
         emotion: thinking
         text: "実験には、まだまだ要るんだ。何百回ぶんも。"
@@ -471,7 +471,7 @@ scenes:
         reading: "ふうふわじたくとこうじょうをたんぽにしゃっきんし、いっとんいじょうのこめをかいました。"
       - speaker: zundamon
         emotion: normal
-        text: "台所じゅう、米俵だらけだ。"
+        text: "台所じゅう、[米俵|こめだわら]だらけだ。"
       - speaker: tsumugi
         emotion: normal
         text: "この1粒ずつが、主婦の朝につながってる。"
@@ -629,7 +629,7 @@ scenes:
         text: "水を吸わせて、しっかり熱を通すと、変わるのよね。"
       - speaker: zundamon
         emotion: normal
-        text: "米のでんぷんが、熱と水で、ほろほろにほどけるんだ。"
+        text: "[米|こめ]のでんぷんが、熱と水で、ほろほろにほどけるんだ。"
       - speaker: tsumugi
         emotion: happy
         text: "そのほどけた状態が、あの、ふっくらなのね。"
@@ -914,7 +914,7 @@ scenes:
         text: "奥さん、ちょっと、これを見てほしいんだ。"
       - speaker: zundamon
         emotion: normal
-        text: "夜、お米と水を入れて、スイッチを予約するぞ。"
+        text: "夜、[お米|おこめ]と水を入れて、スイッチを予約するぞ。"
       - speaker: kyaku
         text: "朝、起きたら……炊けてるの？"
       - speaker: zundamon
@@ -1074,7 +1074,7 @@ scenes:
         text: "何万円もする、高級炊飯器まであるぞ。"
       - speaker: tsumugi
         emotion: normal
-        text: "お米の銘柄ごとに、炊き方を変えたりね。"
+        text: "[お米|おこめ]の銘柄ごとに、炊き方を変えたりね。"
       - speaker: zundamon
         emotion: surprised
         text: "圧力をかけて、もちもちに炊くのもある。もはや重課金の世界だ。"
@@ -1142,7 +1142,7 @@ scenes:
         reading: "ふうふのなをしるひとわ、おおくありません。"
         pause_after: 0.5
       - speaker: reimu
-        text: "けれど、その発明は、いまも毎朝、日本中の台所で動いています。"
+        text: "けれど、その発明は、いまも毎朝、[日本中|にほんじゅう]の台所で動いています。"
         reading: "けれど、そのはつめいわ、いまもまいあさ、にほんじゅうのだいどころでうごいています。"
         pause_after: 0.6
   - id: musubi

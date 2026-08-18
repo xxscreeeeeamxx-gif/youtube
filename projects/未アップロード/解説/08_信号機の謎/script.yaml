@@ -133,7 +133,7 @@ scenes:
     cuts:
       - speaker: tsumugi
         emotion: normal
-        text: "次は信号機本体の進化の話。昔の信号は電球にカラーレンズをかぶせた方式で、実は困った弱点があったの。ずんだもん、何だと思う？"
+        text: "次は信号機本体の進化の話。昔の信号は電球にカラーレンズをかぶせた方式で、実は困った弱点があったの。ずんだもん、[何だ|なんだ]と思う？"
       - speaker: zundamon
         emotion: happy
         text: "夜のうちに、誰かがレンズを塗り替えるイタズラなのだ。"
@@ -263,7 +263,7 @@ scenes:
         video_full: true
       - speaker: tsumugi
         emotion: normal
-        text: "いまでは日本中の信号機は、およそ20万基と言われてる。毎日24時間、あなたの代わりに交通整理をし続けてるんだよ。"
+        text: "いまでは[日本中|にほんじゅう]の信号機は、およそ20万基と言われてる。毎日24時間、あなたの代わりに交通整理をし続けてるんだよ。"
         stat: {value: 20, unit: "万基", label: "全国の信号機（推計）"}
       - speaker: zundamon
         emotion: happy

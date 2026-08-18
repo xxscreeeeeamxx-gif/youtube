@@ -72,11 +72,14 @@ def main(slug: str) -> int:
     cfg = Config.load()
     proj = Project.resolve(cfg, slug)
     ledger_path = proj.root / "readings.yaml"
+    # 台帳が無くても打ち切らない。固有名詞が出ない解説回でも「定番の化け」検査は
+    # 走らせる必要がある（台帳なしの3本で検査ごとスキップされていた・2026-08）
     if not ledger_path.exists():
-        print(f"NG: 読み台帳がありません: {ledger_path}")
-        print("    人名・地名・社名・専門語を {surface, reading} で列挙してください")
-        return 1
-    ledger = yaml.safe_load(ledger_path.read_text(encoding="utf-8")) or []
+        print(f"注意: 読み台帳がありません: {ledger_path}")
+        print("    固有名詞があるなら {surface, reading} で列挙してください（以降の検査は続行）")
+        ledger = []
+    else:
+        ledger = yaml.safe_load(ledger_path.read_text(encoding="utf-8")) or []
     common = cfg.root / "assets" / "readings_common.yaml"
     if common.exists():
         ledger += yaml.safe_load(common.read_text(encoding="utf-8")) or []
@@ -192,6 +195,30 @@ def main(slug: str) -> int:
                 warned += 1
         if warned:
             print(f"↑ 多読み漢字 {warned} 件。読みが正しいか上のカナを通読して確認すること")
+
+    # ---- 3.5) 定番の化けを実読から機械検出 ----
+    # 「要通読」で人間が目を滑らせた実績がある型を、フラグ語ではなく実読全体で拾う。
+    #   ・「〜はね」→ ハネ（羽根）化。台本に羽/跳が無いのに ハネ が出たら助詞の誤読
+    #   ・「お米/米」→ ベエ・ベイ 化
+    #   ・「何だ/何て」→ ナニ 化（正しくは なん）
+    # 2026-08にユーザー指摘で発覚。5作品に同じ「〜はね」が残っていた
+    MELT = [
+        ("助詞が羽根化", lambda d, k: "ハネ" in k and not re.search(r"[羽跳]", d)),
+        ("米がベイ化", lambda d, k: ("ベエ" in k or "ベイ" in k) and "米" in d),
+        ("何だがナニ化", lambda d, k: "ナニダ" in k and re.search(r"何(だ|だった|だっけ)", d)),
+        ("何てがナニ化", lambda d, k: "ナニテ" in k and "何て" in d),
+    ]
+    for ct in timings:
+        if not ct.get("moras"):
+            continue
+        disp = ct.get("display_text") or ""
+        kana = canon("".join(m[0] for m in ct["moras"]))
+        for label, fn in MELT:
+            try:
+                if fn(disp, kana):
+                    problems.append(f"{label}: idx{ct['index']}: {disp[:30]} → {kana[:44]}")
+            except Exception:
+                pass
 
     # ---- 4) 舞台整合（ドラマ）: 舞台にいないキャラが喋っていないか ----
     for scene in script.scenes:
