@@ -1,0 +1,1007 @@
+# クオーツ時計の誕生 再現ドラマ・ミーム版（中村恒也と諏訪精工舎・1950年代→現代）
+#
+# == 裏取り済みの事実（出典: セイコーミュージアム銀座「クオーツ時計の誕生」「クオーツショックと
+#    スイス時計の復興」「スイス天文台クロノメーター・コンクールへの挑戦」/ 中村恒也Wikipedia /
+#    発明協会 戦後日本のイノベーション100選「クオーツ腕時計」/ セイコーウオッチ公式 アストロン特設 /
+#    エプソン公式 沿革）==
+#
+# ★注意点★
+# 1. ヌーシャテル天文台コンクールの終了は【1976年】。「1967年以降開催されていない」と書く
+#    ネット記事があるが、セイコーミュージアムは「1976年、100年余り続いた歴史の幕を閉じた」と明記。
+#    一次情報に近い方を採る
+# 2. 「世界初のクオーツ腕時計」は無条件で言える（アストロン35SQ・1969年12月25日）
+# 3. 中村恒也の個人的な逸話は公開資料が乏しい。生没年・経歴・役職は事実、
+#    会話と心情は再現ドラマとしての脚色。断定的な人物評はナレーションで言わない
+# 4. 特許公開は「デファクト・スタンダード化のため」というセイコーミュージアムの記述に沿う。
+#    「善意で無償公開した」式の美談にしない（戦略だった）
+#
+# == 人物 ==
+# - 中村恒也（1923-2018）: 主人公。1944年日本大学卒→第二精工舎。1956年マーベル設計、
+#   1959年ジャイロマーベル。1963年諏訪精工舎取締役。1964年東京五輪のクオーツ開発
+#   プロジェクトリーダー。1969年に世界初のクオーツ腕時計を商品化。1987年セイコーエプソン社長
+# - 諏訪精工舎（長野県諏訪・現セイコーエプソン）と第二精工舎（東京・亀戸）が
+#   社内で競い合う二社体制。1967年のコンクールで2位（第二）と3位（諏訪）
+#
+# == 数字（すべて出典あり）==
+# - 1958年 放送局用水晶時計を商品化。大型ロッカー並みの大きさ
+# - 腕時計にするには体積を【30万分の1】、消費電力を【1000万分の1】（100W→10μW）に
+# - 1959年 社内にプロジェクト発足（59Aプロジェクト）
+# - 1964年 ヌーシャテル初参加。諏訪144位（7.97点）第二153位（8.60点）。検定不合格
+# - 1964年 東京五輪でクリスタルクロノメーターが親時計。消費電力は約10万分の1まで到達
+# - 1967年 ヌーシャテル シリーズ賞 第二2位・諏訪3位
+# - 1968年 ジュネーブ天文台コンクール 諏訪が機械式腕時計最高の4位（58.19点）腕時計総合1位
+# - 1969年12月25日 クオーツアストロン35SQ 発売。45万円（中型車1台ぶん）。1週間で100台
+# - 精度 日差±0.2秒・月差±5秒。機械式の日差20秒前後に対して桁違い
+# - 音叉型水晶振動子（棒状の水晶をU字に加工し真空封入）・振動数8,192Hz
+# - ハイブリッドIC（セラミック基板にトランジスタ76個・コンデンサ29個）
+# - ステッピングモーター（1秒に1度だけ動かす）
+# - セイコーは特許を一般公開しデファクト・スタンダード化を狙った
+# - スイスの時計企業 1970年1600社以上 → 1980年代中頃600社割れ
+# - スイスの時計産業就業者 1970年9万人 → 1984年3万3千人
+# - スイスの時計輸出額 80年代前半にピーク（1974年）の1/2
+# - 1976年 ヌーシャテル天文台コンクール終了（100年余りの歴史）
+meta:
+  title: "スイスを倒した日本の時計。世界初のクオーツを作った男【クオーツ誕生・再現ドラマ・ミーム版】"
+  slug: "quartz-astron"
+  summary: "腕時計はかつて、スイスのものでした。長野県諏訪の工場では、天文台のコンクールで最下位に沈んだ技術者たちが、別の何かを作ろうとしていました。中村恒也が挑んだのは、体積を30万分の1にするという無茶です。ずんだもんが中村を演じる再現ドラマです。後半では、電池で動く時計がなぜ月に5秒しかずれないのかも解説します。"
+  tags: ["クオーツ", "セイコー", "アストロン", "中村恒也", "腕時計", "再現ドラマ", "ゆっくり", "ずんだもん", "ミーム"]
+  thumbnail:
+    top: "スイスを倒した"
+    bottom: "日本の時計"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: joushi, label: "工場長", voice: 13, pitch: -0.06, item: mustache}
+    - {id: wakate, label: "若手技師", voice: 12, hair: short}
+    - {id: swiss, label: "天文台の人", voice: 13, pitch: -0.08, item: hat}
+    - {id: eigyo, label: "営業部長", voice: 13, pitch: 0.02, item: hat}
+    - {id: kyaku, label: "銀座の客", voice: 42, item: hat}
+scenes:
+  - id: hook
+    title: ""
+    background: il_qz_now
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "スイスの時計会社、1600社あったのが600社を切ったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1000社が消えたのか！？何があったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "日本の技術者が、電池で動く腕時計を作ったから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "たかが電池の時計で、国の産業が傾くのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "月に5秒しかずれないの。当時の高級な機械式で、日に20秒。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "桁が違うのだ。勝負にならんぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……ところで、ボクの腕時計、止まってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "電池でしょ。何年替えてないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "覚えてないのだ。時間はスマホで見るから、困ってないんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そのスマホの時計もね、同じ仕組みで動いてるよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "スマホの中にも、時計が入ってるのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水晶のかけらが、1秒間に8192回ふるえてる。それを数えてるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "8192回……ボクの手首とポケットで、石が震えてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その石を腕時計に入れるまでに、10年かかってるんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "10年！？石を入れるだけだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最初の水晶時計はね、大型ロッカーくらいの大きさだったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ロッカーを手首に巻けるかよ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その無理を通した人の話。止まった時計を持ったまま、聞いていこう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "聞くのだ。電池、あとで買いに行くんだ。"
+      - speaker: reimu
+        text: "クオーツ時計。水晶のふるえを数えて時を刻む、電池式の時計です。"
+        reading: "くおーつどけい。すいしょうのふるえをかぞえてときをきざむ、でんちしきのとけいです。"
+      - speaker: reimu
+        text: "世界で初めて作ったのは、長野県[諏訪|すわ]の工場でした。"
+        reading: "せかいではじめてつくったのわ、ながのけんすわのこうじょうでした。"
+      - speaker: reimu
+        text: "物語は、1964年のスイスから始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくろくじゅうよねんのすいすからはじまります。"
+  - id: era1964a
+    title: "1964・スイス、ヌーシャテル"
+    background: il_qz_observatory
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "中村", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1964年、スイス。ヌーシャテル天文台。"
+        reading: "せんきゅうひゃくろくじゅうよねん、すいす。ぬーしゃてるてんもんだい。"
+        video: assets/clips/qa_era1964.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: contest
+    title: ""
+    background: il_qz_observatory
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: swiss, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "この天文台では、100年以上ものあいだ時計の精度を競う大会が開かれていました。"
+        reading: "このてんもんだいでわ、ひゃくねんいじょうものあいだとけいのせいどをきそうたいかいがひらかれていました。"
+      - speaker: reimu
+        text: "スイスの名門が並ぶそこに、日本の会社が初めて出場します。"
+        reading: "すいすのめいもんがならぶそこに、にほんのかいしゃがはじめてしゅつじょうします。"
+      - speaker: swiss
+        text: "ミスター・ナカムラ。日本から、はるばる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はじめまして。[諏訪精工舎|すわせいこうしゃ]の、中村なのだ。"
+      - speaker: swiss
+        text: "スワ。どこにある町だね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "東京から、汽車で4時間ほどの山の中だ。"
+      - speaker: swiss
+        text: "山の中で、時計を。……まあ、がんばりたまえ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（笑ってはいない。でも、勘定にも入ってないのだ。）"
+      - speaker: reimu
+        text: "審査は45日間。温度と姿勢を変えながら、日ごとのずれを測り続けます。"
+        reading: "しんさわよんじゅうごにちかん。おんどとしせいをかえながら、ひごとのずれをはかりつづけます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "こっちは持てるものを全部積んできたんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "てんぷの振動数も上げた。ひげゼンマイも作り直した。"
+      - speaker: reimu
+        text: "そして、結果が張り出されます。"
+        reading: "そして、けっかがはりだされます。"
+      - speaker: swiss
+        text: "スワ・セイコーシャ、144位。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……144位。"
+        telops:
+          - {text: "初参加は144位", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: swiss
+        text: "ダイニ・セイコーシャ、153位。"
+      - speaker: zundamon
+        emotion: sad
+        text: "2社とも、合格の線にすら届いてないのだ。"
+      - speaker: reimu
+        text: "点数は7.97点と8.60点。検定に合格することもできませんでした。"
+        reading: "てんすうわ、ななてんきゅうななてんとはちてんろくまるてん。けんていにごうかくすることもできませんでした。"
+      - speaker: swiss
+        text: "悪くはない。100年の差だ。仕方あるまい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……100年。"
+      - speaker: swiss
+        text: "時計は、我々がやってきたことだ。積み重ねが違う。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（正しい。悔しいが、ぜんぶ正しいのだ。）"
+      - speaker: zundamon
+        emotion: normal
+        text: "来年も来るぞ。順位は上げてくる。"
+      - speaker: swiss
+        text: "ふむ。待っているよ。"
+      - speaker: reimu
+        text: "中村恒也。当時41歳。[諏訪精工舎|すわせいこうしゃ]の取締役でした。"
+        reading: "なかむらつねや。とうじよんじゅういっさい。すわせいこうしゃのとりしまりやくでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（積み重ねで負けてるなら、同じ土俵で積んでも追いつけないのでは。）"
+      - speaker: reimu
+        text: "この帰り道の思いつきが、100年の歴史を終わらせることになります。"
+        reading: "このかえりみちのおもいつきが、ひゃくねんのれきしをおわらせることになります。"
+  - id: era1950
+    title: "その5年前・長野県諏訪"
+    background: il_qz_kojo
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "中村", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "話は、その5年前にさかのぼります。"
+        reading: "はなしわ、そのごねんまえにさかのぼります。"
+        video: assets/clips/qa_era1959.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: kojo1
+    title: ""
+    background: il_qz_kojo
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: joushi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1959年、長野県[諏訪|すわ]。冬は氷点下十度まで下がる、山あいの町です。"
+        reading: "せんきゅうひゃくごじゅうきゅうねん、ながのけんすわ。ふゆわひょうてんかじゅうどまでさがるやまあいのまちです。"
+      - speaker: joushi
+        text: "中村さん。東京の[亀戸|かめいど]が、また新しいのを出したそうだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "[第二精工舎|だいにせいこうしゃ]か。あっちも必死だな。"
+      - speaker: joushi
+        text: "同じ会社なのに、競わされる。やりにくいもんですな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "やりやすいぞ。負けたくない相手が、廊下の向こうにいるんだ。"
+      - speaker: reimu
+        text: "セイコーは諏訪と[亀戸|かめいど]のふたつの工場に、同じものを競って作らせていました。"
+        reading: "せいこーわすわとかめいどのふたつのこうじょうに、おなじものをきそってつくらせていました。"
+      - speaker: joushi
+        text: "しかし中村さん、あんたが設計したマーベル、よく売れてますな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "3年前のだ。もう次を考えてる。"
+      - speaker: joushi
+        text: "次って、また機械式でしょう。ほかに何があるんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……水晶を、考えてるんだ。"
+      - speaker: joushi
+        text: "水晶？あの、放送局に納めてるやつですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。去年うちが商品にした、水晶時計。"
+      - speaker: reimu
+        text: "1958年、セイコーは放送局用の水晶時計を商品化していました。"
+        reading: "せんきゅうひゃくごじゅうはちねん、せいこーわほうそうきょくようのすいしょうどけいをしょうひんかしていました。"
+      - speaker: joushi
+        text: "あれは大きさが、こう、大型ロッカーくらいありますが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ある。だが、精度は機械式の比じゃないんだ。"
+      - speaker: joushi
+        text: "そりゃそうでしょう。でも中村さん、まさか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "腕に、載せる。"
+      - speaker: joushi
+        se: don
+        text: "……ロッカーを、手首に！？"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。うちは山の中の工場だが、これなら誰も先を走ってない。"
+      - speaker: joushi
+        text: "誰も走ってないんじゃなくて、無理だから誰もやらんのでは。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "無理かどうかは、数字にしてから言うぞ。"
+      - speaker: reimu
+        text: "同じ年、社内にプロジェクトが発足します。"
+        reading: "おなじとし、しゃないにぷろじぇくとがほっそくします。"
+  - id: lab1
+    title: "30万分の1と、1000万分の1"
+    background: il_qz_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: wakate, x: 0.72}
+    cuts:
+      - speaker: wakate
+        text: "中村さん、言われたとおり計算しました。ですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言ってみろ。悪い数字ほど、早く知りたいんだ。"
+      - speaker: wakate
+        text: "放送局用の水晶時計を、腕時計の大きさにするには。"
+      - speaker: wakate
+        text: "体積を、30万分の1にする必要があります。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "30万分の1！？"
+        telops:
+          - {text: "体積を30万分の1に", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: wakate
+        text: "しかも、そこで終わりじゃないんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "まだあるのか。"
+      - speaker: wakate
+        text: "電気です。いまの水晶時計は、100ワットほど食っています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電球より食うな。壁のコンセントがあるから成り立ってる。"
+      - speaker: wakate
+        text: "腕時計は、小さな電池ひとつです。10マイクロワットに収めないと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "10マイクロ……つまり、1000万分の1か。"
+      - speaker: wakate
+        text: "はい。体積を30万分の1、電気を1000万分の1です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（ひとつでも常識外れだ。それを両方、同時に。）"
+      - speaker: wakate
+        text: "……あの、これ、やる意味があるんでしょうか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "スイスで144位だった。同じやり方を続けても、143位止まりだ。"
+      - speaker: wakate
+        text: "でも、無理なものは無理では。"
+      - speaker: zundamon
+        emotion: normal
+        text: "無理かどうかは、どこが無理かを分けてから決めるぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でかいのは何だ。水晶か、回路か、電池か。"
+      - speaker: wakate
+        text: "……水晶の棒が、まず長いです。周波数を出すのに長さが要るので。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "長さが要るなら、まっすぐ伸ばさなければいい。"
+      - speaker: wakate
+        text: "曲げる、ということですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ユー字だ。[音叉|おんさ]と同じ形にすれば、長さを畳んで入れられる。"
+      - speaker: reimu
+        text: "棒状の水晶をユー字に加工した、[音叉|おんさ]型水晶振動子です。"
+        reading: "ぼうじょうのすいしょうをゆーのじにまげた、おんさがたすいしょうしんどうしです。"
+      - speaker: wakate
+        text: "ですが、空気の抵抗で振動が乱れます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なら空気を抜け。真空に封じ込めるんだ。"
+      - speaker: wakate
+        text: "……なるほど。やってみます。"
+      - speaker: reimu
+        text: "[音叉|おんさ]型の水晶を真空に封じることで、小さくても安定してふるえるようになります。"
+        reading: "おんさがたのすいしょうをしんくうにふうじることで、ちいさくてもあんていしてふるえるようになります。"
+      - speaker: wakate
+        text: "残るのは電気です。回路がとにかく食います。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "そっちは時間がかかる。だが、締め切りをひとつ置くぞ。"
+      - speaker: wakate
+        text: "締め切り、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "1964年。東京でオリンピックがある。"
+      - speaker: wakate
+        text: "……あと5年です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "5年ある、だ。そこで持ち運べる大きさまで持っていくぞ。"
+  - id: kabe_zukai
+    title: ""
+    background: il_qz_lab
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.15, tag: "中村", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "大きさを30万分の1に。電気を1000万分の1に。ふたつの壁が立ちはだかりました。"
+        reading: "おおきさをさんじゅうまんぶんのいちに。でんきをせんまんぶんのいちに。ふたつのかべがたちはだかりました。"
+        video: assets/clips/qa_kabe.mp4
+        video_full: true
+        pause_after: 0.6
+  - id: era1964b
+    title: "1964・東京オリンピック"
+    background: il_qz_olympic
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "中村", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1964年、東京。"
+        reading: "せんきゅうひゃくろくじゅうよねん、とうきょう。"
+        video: assets/clips/qa_era1964b.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: olympic
+    title: ""
+    background: il_qz_olympic
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: wakate, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "東京オリンピックで、セイコーが競技の計時を担当することになりました。"
+        reading: "とうきょうおりんぴっくで、せいこーがきょうぎのけいじをたんとうすることになりました。"
+      - speaker: wakate
+        text: "中村さん、間に合いました。クリスタルクロノメーターです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "持てるな。ちゃんと、人の手で運べる大きさだ。"
+      - speaker: wakate
+        text: "消費電力、当初の10万分の1まで落ちました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "10万分の1か。目標は1000万分の1だから、まだ100倍ある。"
+      - speaker: wakate
+        text: "……そこ、素直に喜ばないんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "喜んでるぞ。5年で10万分の1だ。上出来だが。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "腕には、まだ載らん。"
+      - speaker: reimu
+        text: "この時計は競技場の親時計として、大会中ずっと基準の時を刻み続けました。"
+        reading: "このとけいわきょうぎじょうのおやどけいとして、たいかいちゅうずっときじゅんのときをきざみつづけました。"
+      - speaker: wakate
+        text: "各国の役員が、見に来ますよ。日本の計時は正確だと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見に来るのはいい。だが、置き時計を褒められても腕には届かないんだ。"
+      - speaker: wakate
+        text: "欲が深いです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そりゃそうだ。同じ年、スイスで144位だったんだぞ。"
+      - speaker: reimu
+        text: "同じ1964年。中村たちはヌーシャテルで、検定にすら通りませんでした。"
+        reading: "おなじせんきゅうひゃくろくじゅうよねん。なかむらたちわぬーしゃてるで、けんていにすらとおりませんでした。"
+      - speaker: wakate
+        text: "……両方やってたんですね。機械式も、水晶も。"
+      - speaker: zundamon
+        emotion: normal
+        text: "両方だ。片方に賭けられるほど、余裕のある会社じゃない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械式では、スイスに追いつく。水晶では、追い越す。"
+  - id: era1967
+    title: "1967・ヌーシャテル"
+    background: il_qz_observatory
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "中村", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1967年、ふたたびスイス。"
+        reading: "せんきゅうひゃくろくじゅうななねん、ふたたびすいす。"
+        video: assets/clips/qa_era1967.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: contest2
+    title: ""
+    background: il_qz_observatory
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: swiss, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "3年後。中村たちは、同じ天文台に戻ってきました。"
+        reading: "さんねんご。なかむらたちわ、おなじてんもんだいにもどってきました。"
+      - speaker: swiss
+        text: "……ミスター・ナカムラ。今年の結果だが。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "聞かせてくれ。"
+      - speaker: swiss
+        text: "企業賞、シリーズ賞。2位、ダイニ・セイコーシャ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "[亀戸|かめいど]が、2位。"
+      - speaker: swiss
+        se: don
+        text: "3位、スワ・セイコーシャ。"
+        telops:
+          - {text: "144位 → 3位", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……3年で、144位から3位。"
+      - speaker: swiss
+        text: "正直に言う。ここまで来るとは思っていなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "100年の差だと言われたのだ。忘れてないぞ。"
+      - speaker: swiss
+        text: "覚えていたか。あれは、悪気があったわけでは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かってる。事実だったんだ。"
+      - speaker: reimu
+        text: "翌1968年、[諏訪精工舎|すわせいこうしゃ]はジュネーブ天文台コンクールに初挑戦します。"
+        reading: "よくせんきゅうひゃくろくじゅうはちねん、すわせいこうしゃわじゅねーぶてんもんだいこんくーるにはつちょうせんします。"
+      - speaker: reimu
+        text: "機械式腕時計としては最高の4位。腕時計の総合では、1位でした。"
+        reading: "きかいしきうでどけいとしてわさいこうのよんい。うでどけいのそうごうでわ、いちいでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "追いついたぞ。山の中の工場が、時計の本場で1位だ。"
+      - speaker: swiss
+        text: "おめでとう。これで君たちも、我々の仲間だ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（仲間、か。……言いにくいのだ。）"
+      - speaker: swiss
+        text: "どうした。浮かない顔だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いや。……来年、別のものを出すんだ。"
+      - speaker: swiss
+        text: "別のもの。また新しい機械式かね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械では、ない。"
+      - speaker: reimu
+        text: "[諏訪|すわ]では10年前から、まったく別の時計が仕上げに入っていました。"
+        reading: "すわでわじゅうねんまえから、まったくべつのとけいがしあげにはいっていました。"
+  - id: kaigi
+    title: "45万円の値札"
+    background: il_qz_kaigi
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: eigyo, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1969年の秋。腕時計に載る大きさまで、すべてが縮んでいました。"
+        reading: "せんきゅうひゃくろくじゅうきゅうねんのあき。うでどけいにのるおおきさまで、すべてがちぢんでいました。"
+      - speaker: eigyo
+        text: "中村さん。現物、見せてもらいました。ですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "値段の話だな。"
+      - speaker: eigyo
+        text: "ええ。回路の[歩留まり|ぶどまり]が悪すぎて、原価が下がりません。"
+      - speaker: reimu
+        text: "セラミックの板に、トランジスタ76個とコンデンサ29個を並べたハイブリッド回路です。"
+        reading: "せらみっくのいたに、とらんじすたななじゅうろっことこんでんさにじゅうきゅうこをならべたはいぶりっどかいろです。"
+      - speaker: eigyo
+        text: "ひとつずつ手で載せて、ひとつずつ確かめて。数が作れません。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……で、いくらになる。"
+      - speaker: eigyo
+        text: "45万円です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "45万。中型車が1台買えるじゃないか。"
+        telops:
+          - {text: "45万円＝車1台", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: eigyo
+        text: "そうなんです。誰が腕に車を巻くのかと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（安くできる日は来る。だが、それを待つと誰かに先を越される。）"
+      - speaker: eigyo
+        text: "もう少し待って、量産のめどが立ってからでは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "出すぞ。100本でいい。"
+      - speaker: eigyo
+        text: "100本！？商売になりませんが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "商売にはならん。だが、世界で最初になる。"
+      - speaker: eigyo
+        text: "最初、ですか。それに、そこまでの値打ちが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ある。最初にやった者だけが、次の形を決められるんだ。"
+      - speaker: eigyo
+        text: "……日にちは、いつにします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "年内だ。1969年のうちに出す。"
+  - id: era1969
+    title: "1969年12月25日・銀座"
+    background: il_qz_ginza
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.15, tag: "中村", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1969年12月25日。"
+        reading: "せんきゅうひゃくろくじゅうきゅうねんじゅうにがつにじゅうごにち。"
+        video: assets/clips/qa_era1969.mp4
+        video_full: true
+        pause_after: 0.8
+  - id: ginza
+    title: ""
+    background: il_qz_ginza
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: kyaku, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "クリスマスの銀座。ショーウィンドウに、世界初のクオーツ腕時計が並びます。"
+        reading: "くりすますのぎんざ。しょーうぃんどうに、せかいはつのくおーつうでどけいがならびます。"
+      - speaker: reimu
+        text: "セイコークオーツアストロン35SQ。金無垢のケースに、45万円の値札でした。"
+        reading: "せいこーくおーつあすとろんさんじゅうごえすきゅー。きんむくのけーすに、よんじゅうごまんえんのねふだでした。"
+      - speaker: kyaku
+        text: "……これが、噂の電気で動く時計かね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電池で動く。ゼンマイは巻かなくていいんだ。"
+      - speaker: kyaku
+        text: "ゼンマイを巻かない時計。それは、時計と呼べるのかね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "呼べるぞ。月に5秒しか、ずれないんだ。"
+      - speaker: kyaku
+        se: don
+        text: "月に、5秒。"
+        telops:
+          - {text: "月差わずか5秒", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "そちらの腕にあるのは、たぶん日に20秒前後だ。"
+      - speaker: kyaku
+        text: "……これでも、いいほうだと言われて買ったんだが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いいほうだ。そこは嘘じゃないぞ。"
+      - speaker: kyaku
+        text: "だが、月に5秒か。桁が違うな。"
+      - speaker: kyaku
+        text: "……値段も、桁が違うが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこは、そのうち下がる。約束するのだ。"
+      - speaker: reimu
+        text: "発売から1週間のうちに、100台は売り切れました。"
+        reading: "はつばいからいっしゅうかんのうちに、ひゃくだいわうりきれました。"
+      - speaker: kyaku
+        text: "しかし、なぜ水晶なんだ。石が時間を知っているわけでもあるまい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "知らんぞ。ただ、電気をかけると決まった回数だけふるえるんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "1秒間に、8192回。それを数えて1秒にしてる。"
+      - speaker: kyaku
+        text: "数えている。……時計の中で、そんなことを。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうだ。ゼンマイの代わりに、勘定してるんだ。"
+  - id: patent
+    title: "特許を、開ける"
+    background: il_qz_kaigi
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: eigyo, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "世界初を取ったあと、セイコーはひとつの決断をします。"
+        reading: "せかいはつをとったあと、せいこーわひとつのけつだんをします。"
+      - speaker: eigyo
+        text: "中村さん。特許のことで、上と話がついたと聞きましたが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ついた。一般に公開する。"
+      - speaker: eigyo
+        se: don
+        text: "公開！？よその会社が、同じものを作れてしまいますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作らせるんだ。"
+      - speaker: eigyo
+        text: "……意味が分かりません。10年かけたんですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちだけが作ってるうちは、これは変わり種のままだ。"
+      - speaker: eigyo
+        text: "変わり種、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界中が同じ作り方をして、はじめて当たり前になる。"
+      - speaker: reimu
+        text: "クオーツ技術をデファクト・スタンダード、つまり業界の標準にするための公開でした。"
+        reading: "くおーつぎじゅつをでふぁくとすたんだーど、つまりぎょうかいのひょうじゅんにするためのこうかいでした。"
+      - speaker: eigyo
+        text: "しかし、値段の競争になれば、うちも巻き込まれます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "巻き込まれるぞ。だが、市場そのものが無いよりましだ。"
+      - speaker: eigyo
+        text: "……善意でやるわけでは、ないんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "善意じゃない。標準を握るための、計算だ。"
+      - speaker: reimu
+        text: "狙いどおり、各社はこぞってこの技術でクオーツ時計に参入していきます。"
+        reading: "ねらいどおり、かくしゃわこぞってこのぎじゅつでくおーつどけいにさんにゅうしていきます。"
+      - speaker: eigyo
+        text: "スイスは、どうなりますか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……分からん。"
+      - speaker: eigyo
+        text: "分からない、で済みますか。あそこは、時計の国ですよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "（分からないんじゃない。想像はついている。）"
+  - id: shock
+    title: "1600社が、600社に"
+    background: il_qz_observatory
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中村", flip: true}
+      - {who: swiss, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1970年代。安くて正確なクオーツ時計が、世界中で作られはじめます。"
+        reading: "せんきゅうひゃくななじゅうねんだい。やすくてせいかくなくおーつどけいが、せかいじゅうでつくられはじめます。"
+      - speaker: reimu
+        text: "1970年に1600社以上あったスイスの時計企業は、80年代中頃には600社を割り込みました。"
+        reading: "せんきゅうひゃくななじゅうねんにせんろっぴゃくしゃいじょうあったすいすのとけいきぎょうわ、はちじゅうねんだいなかごろにわろっぴゃくしゃをわりこみました。"
+      - speaker: reimu
+        text: "働く人も、1970年の9万人から1984年には3万3千人に減りました。"
+        reading: "はたらくひとわせんきゅうひゃくななじゅうねんのきゅうまんにんから、せんきゅうひゃくはちじゅうよねんにわさんまんさんぜんにんにへりました。"
+      - speaker: reimu
+        text: "輸出額は、過去最高だった1974年の半分にまで落ち込みます。"
+        reading: "ゆしゅつがくわ、かこさいこうだったせんきゅうひゃくななじゅうよねんのはんぶんにまでおちこみます。"
+      - speaker: reimu
+        text: "のちに、クオーツショックと呼ばれる出来事です。"
+        reading: "のちに、くおーつしょっくとよばれるできごとです。"
+      - speaker: swiss
+        text: "……ミスター・ナカムラ。久しぶりだな。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……ああ。"
+      - speaker: swiss
+        text: "うちの町の工場は、半分が畳んだ。職人はよそへ行った。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……知っている。"
+      - speaker: swiss
+        text: "恨み言を言いに来たわけじゃない。技術は技術だ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "言ってくれてもいいんだ。おれが撒いたことだ。"
+      - speaker: swiss
+        text: "君が撒かなくても、誰かが撒いた。10年遅かっただけだろう。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……それでも、10年は10年だ。"
+      - speaker: reimu
+        text: "1976年。100年余り続いたヌーシャテル天文台コンクールの歴史が、幕を閉じます。"
+        reading: "せんきゅうひゃくななじゅうろくねん。ひゃくねんあまりつづいたぬーしゃてるてんもんだいこんくーるのれきしが、まくをとじます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……144位だと言われた、あの場所が。"
+      - speaker: swiss
+        text: "無くなった。精度を競う意味が、なくなってしまったからな。"
+      - speaker: zundamon
+        emotion: sad
+        text: "追いつきたかっただけなんだ。追い越して、消すつもりはなかった。"
+      - speaker: swiss
+        text: "分かっている。……時計は、まだ死んでいないよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そうだといいのだ。"
+      - speaker: reimu
+        text: "のちにスイスの時計産業は、機械式を工芸品として位置づけ直すことで立ち直っていきます。"
+        reading: "のちにすいすのとけいさんぎょうわ、きかいしきをこうげいひんとしていちづけなおすことでたちなおっていきます。"
+  - id: shock_zukai
+    title: ""
+    background: il_qz_observatory
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.15, tag: "中村", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1600社を超えていたスイスの時計企業は、600社を割り込みました。"
+        reading: "せんろっぴゃくしゃをこえていたすいすのとけいきぎょうわ、ろっぴゃくしゃをわりこみました。"
+        video: assets/clips/qa_shock.mp4
+        video_full: true
+        pause_after: 0.6
+  - id: shikumi
+    title: "水晶は、なぜ正確なのか"
+    background: il_qz_lab
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "先生。そもそも、なんで水晶だと正確なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "水晶に電気をかけると、決まった速さでふるえる性質があるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "石が、電気で震えるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、そのふるえる速さが形と大きさでほぼ決まるんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "同じ形に切れば、同じ速さで震えるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。腕時計のは1秒間に8192回ふるえるよう作られてる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "8192。中途半端な数字なんだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "2を13回かけた数なの。半分にしていくと、ちょうど1になる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "半分、半分と割っていって、13回で1秒か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから回路は、割り算じゃなくて半分にするだけでいいの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "電気を食わない理由が、そこにあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、1秒ぶんの合図が来たら、針を1度だけ動かす。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "動かしっぱなしじゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1秒に一瞬だけ電気を流して、あとは休んでる。だから電池がもつの。"
+      - speaker: reimu
+        text: "1秒に一度だけ針を送る、ステッピングモーターです。"
+        reading: "いちびょうにいちどだけはりをおくる、すてっぴんぐもーたーです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "秒針がカクカク動くのは、サボってたんじゃなくて省エネなのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そういうこと。あのカクカクは、電池を延ばすための動きだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "機械式のは、なめらかに動くのだ。あれは。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ゼンマイの力を歯車で少しずつ逃がしてるから、連続に近く見えるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なめらかだけどずれる。カクカクだけど合ってる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこが分かれ目だったんだよ。1969年の。"
+  - id: shikumi_zukai
+    title: ""
+    background: il_qz_lab
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.15, flip: true}
+    cuts:
+      - speaker: reimu
+        text: "水晶のふるえを半分にしていくと1秒になり、針が1度だけ動きます。"
+        reading: "すいしょうのふるえをはんぶんにしていくといちびょうになり、はりがいちどだけうごきます。"
+        video: assets/clips/qa_shikumi.mp4
+        video_full: true
+        pause_after: 0.6
+  - id: gendai
+    title: ""
+    background: il_qz_now
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "中村恒也は、1982年にエプソンの社長となり、1987年にはセイコーエプソンの社長を務めます。"
+        reading: "なかむらつねやわせんきゅうひゃくはちじゅうにねんにえぷそんのしゃちょうとなり、せんきゅうひゃくはちじゅうななねんにわせいこーえぷそんのしゃちょうをつとめます。"
+      - speaker: reimu
+        text: "郷里の庄内には、生産の子会社を作りました。"
+        reading: "きょうりのしょうないにわ、せいさんのこがいしゃをつくりました。"
+      - speaker: reimu
+        text: "2018年12月25日、95歳で亡くなりました。"
+        reading: "にせんじゅうはちねんじゅうにがつにじゅうごにち、きゅうじゅうごさいでなくなりました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "12月25日。……アストロンを出したのと、同じ日付なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "偶然だけどね。49年後の、同じ日。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんか、できすぎてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまはクオーツの時計、千円台でも買えるでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "買えるのだ。ボクの止まってるやつも、たしか安かったぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その安い時計が、45万円だったアストロンより正確なこともあるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ファッ！？車1台が、千円に負けるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "50年ぶんの改良が乗ってるからね。特許を開けたから、みんなで直せた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "独り占めしてたら、こうはならなかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そしてスイスの機械式も、いま値段が上がってるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "潰れたんじゃなかったのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "正確さで勝てなくなったから、手仕事の値打ちで売る方に変えたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "負けた[側|がわ]が、別の勝ち方を見つけたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "だから今は、両方が並んで売られてる。"
+  - id: shime
+    title: ""
+    background: il_qz_now
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "ずんだもん、その止まった時計。電池を替えたら、また月に5秒だよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "替えてくるのだ。急に、大事なものに見えてきたぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "山の中の工場が、144位から始めたやつなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "追いつくために磨いた技術が、追い越して、競技場ごと消した。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……勝ちすぎるのも、寂しいものなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その寂しさごと、いまあなたの手首で動いてるよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "動いてないのだ。電池が切れてるんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……早く替えてきなさい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面白かったら、高評価とチャンネル登録よろしくね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "次も、身近な当たり前にかくれた話をやるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"

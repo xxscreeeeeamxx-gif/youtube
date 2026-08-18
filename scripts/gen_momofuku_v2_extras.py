@@ -54,7 +54,7 @@ def spans_from_timing(slug="momofuku-v2"):
     out = {}
     for i, (c, ti) in enumerate(zip(cuts, t)):
         v = c.get("video") or ""
-        if not any(k in v for k in ("/mf", "/mm", "/qd", "/qm", "/ks", "/km", "/gc", "/gm", "/rc", "/tb", "/sb", "/yg", "/aj", "/ck", "/wl", "/ka", "/yi", "/era_g", "/era_r")):
+        if not any(k in v for k in ("/mf", "/mm", "/qd", "/qm", "/ks", "/km", "/gc", "/gm", "/rc", "/tb", "/sb", "/yg", "/aj", "/ck", "/wl", "/ka", "/yi", "/era_g", "/era_r", "/qa")):
             continue
         span = c.get("video_span", 1)
         seg = t[i:i + span]

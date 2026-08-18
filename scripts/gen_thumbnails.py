@@ -192,6 +192,42 @@ def prop_layer(draw_fn, size=620, tilt=-12):
 
 # ---------------------------------------------------------------- 小物イラスト
 
+def p_wristwatch(d, s):
+    """腕時計。クオーツの回。文字盤とベルトで一目で時計と分かる形にする。"""
+    # ベルト（上下）
+    d.rounded_rectangle([s*0.34, s*0.02, s*0.66, s*0.34], radius=int(s*0.05),
+                        fill=(72, 64, 58), outline=(40, 34, 30), width=7)
+    d.rounded_rectangle([s*0.34, s*0.66, s*0.66, s*0.98], radius=int(s*0.05),
+                        fill=(72, 64, 58), outline=(40, 34, 30), width=7)
+    for y in (0.10, 0.20, 0.76, 0.86):
+        d.line([(s*0.36, s*y), (s*0.64, s*y)], fill=(48, 42, 38), width=5)
+    # ケース
+    d.ellipse([s*0.16, s*0.20, s*0.84, s*0.80], fill=(226, 200, 118),
+              outline=(140, 112, 40), width=9)
+    d.ellipse([s*0.23, s*0.27, s*0.77, s*0.73], fill=(248, 248, 244),
+              outline=(150, 152, 156), width=6)
+    # 目盛り
+    import math as _m
+    for k in range(12):
+        a = _m.radians(k * 30 - 90)
+        x0 = s*0.50 + _m.cos(a) * s*0.21
+        y0 = s*0.50 + _m.sin(a) * s*0.21
+        x1 = s*0.50 + _m.cos(a) * s*0.245
+        y1 = s*0.50 + _m.sin(a) * s*0.245
+        d.line([(x0, y0), (x1, y1)], fill=(60, 64, 78), width=6 if k % 3 == 0 else 4)
+    # 針（10時10分）
+    d.line([(s*0.50, s*0.50), (s*0.50 - s*0.13, s*0.50 - s*0.10)],
+           fill=(40, 44, 56), width=9)
+    d.line([(s*0.50, s*0.50), (s*0.50 + s*0.15, s*0.50 - s*0.12)],
+           fill=(40, 44, 56), width=7)
+    d.line([(s*0.50, s*0.50), (s*0.50 + s*0.06, s*0.50 + s*0.18)],
+           fill=(210, 70, 60), width=5)
+    d.ellipse([s*0.47, s*0.47, s*0.53, s*0.53], fill=(40, 44, 56))
+    # リューズ
+    d.rounded_rectangle([s*0.84, s*0.45, s*0.92, s*0.55], radius=6,
+                        fill=(200, 176, 100), outline=(130, 104, 36), width=5)
+
+
 def p_mic(d, s):
     """マイク。"""
     d.ellipse([s*0.28, s*0.04, s*0.72, s*0.48], fill=(215, 219, 230), outline=(70, 74, 88), width=10)
@@ -1512,6 +1548,10 @@ SPECS = {
     lines=[("たった2人で作る", W1, None), ("夜行列車で口説いた", W1, None), ("胃カメラ", B1, Y1)]),
     "rice-cooker-meme": dict(prop="p_ricecooker", layout="stack", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
     lines=[("妻が千回炊いた", W1, None), ("町工場の夫婦が", W1, None), ("炊飯器", B1, Y1)]),
+    "quartz-astron": dict(prop="p_wristwatch", layout="stack",
+        bg=((28, 52, 92), (14, 28, 56)), emotion="surprised",
+        lines=[("スイスを倒した", W1, None), ("1600社が600社に", W1, None),
+               ("クオーツ時計", B1, Y1)]),
     "karaoke": dict(prop="p_mic", layout="stack", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
     lines=[("特許を取らなかった", W1, None), ("手作り11台から", W1, None), ("カラオケ", B1, Y1)]),
     "yokoi-gunpei": dict(prop="p_gameboy", layout="stack", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
