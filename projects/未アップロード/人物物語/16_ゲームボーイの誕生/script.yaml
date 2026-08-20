@@ -30,9 +30,27 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "カラーが当たり前の時代に、白黒の画面で1億台売れたゲーム機があるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1億！？白黒で！？画面がカラーの機種に、どうやって勝つのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作ったのは、もともとゲームと関係ない、機械の保守係さんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "保守係！？初期配置から主人公になったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも白黒にしたのは、技術が足りなかったからじゃない。選んだの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "わざと弱いほうを選んだのか。意味が分からんぞ。"
       - speaker: zundamon
         emotion: happy
-        text: "見るのだ、この携帯ゲーム機。グラフィックが実写レベルなんだ。"
+        text: "……ところで見るのだ、この携帯ゲーム機。グラフィックが実写レベルなんだ。"
       - speaker: tsumugi
         emotion: normal
         text: "きれいだね。じゃあ、その先祖の話をしようか。"
@@ -535,7 +553,7 @@ scenes:
       - {who: tsumugi, x: 0.76, tag: "同僚"}
     cuts:
       - speaker: reimu
-        text: "ゲーム&ウォッチは、もうひとつの発明を生みます。"
+        text: "この小さな機械は、もうひとつの発明を生みます。"
         reading: "げーむあんどうぉっちわ、もうひとつのはつめいをうみます。"
       - speaker: tsumugi
         emotion: thinking

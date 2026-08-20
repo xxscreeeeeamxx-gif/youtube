@@ -93,9 +93,27 @@ scenes:
       - {who: zundamon, x: 0.3, flip: true}
       - {who: tsumugi, x: 0.74}
     cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "駅員さんが手で切符を切っていた頃、1分間に80人をさばいてたの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "1分で80人！？1秒に1人以上なのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "機械を作る側は、その速さを超えろと言われたんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "人間の職人技に、機械が勝てと。無茶ぶりなんだが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも遅れたら、朝のホームで人が詰まる。失敗できない機械なの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "毎朝くぐってるあの箱、そんな重い任務を背負ってたのか。"
       - speaker: zundamon
         emotion: angry
-        text: "つむぎ、聞いてほしいのだ。今朝、改札に閉じ込められたのだ。"
+        text: "……ところでつむぎ、聞いてほしいのだ。今朝、改札に閉じ込められたのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "閉じ込められた？"
