@@ -379,7 +379,7 @@ scenes:
         text: "足の裏は、くつ越しでも、地面を読める……。"
       - speaker: zundamon
         emotion: happy
-        text: "それなのだ！地面の感触を、合図にするのだ！"
+        text: "そうか！地面の感触を、合図にすればいいのだ！"
         se: don
         telops:
           - {text: "地面の感触を、合図に！", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
