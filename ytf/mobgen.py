@@ -126,6 +126,10 @@ def register_mobs(cfg: Config, proj: Project, script) -> None:
         cfg.characters[mob.id] = {
             "display_name": mob.label,
             "credit": "",
+            # モブは名前を胴体に焼き込んでいるので左右反転してはいけない。
+            # のっぺら白キャラには向きが無く、反転しても得るものが無いのに
+            # 名前だけが鏡文字になる（stage の flip: true で「原野」が鏡像化した。2026-08）
+            "no_mirror": True,
             "voicevox_style": mob.voice,
             "speed_scale": mob.speed,
             "pitch_scale": mob.pitch,

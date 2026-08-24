@@ -125,7 +125,7 @@ scenes:
         text: "日本！？世界のどこかから来たと思ってたのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "作ったのは、社員が数十人の小さなゲーム会社。"
+        text: "作ったのは、当時まだ小さかったゲーム会社。"
       - speaker: zundamon
         emotion: surprised
         text: "大手じゃないのか。ファッ！？"
@@ -142,8 +142,8 @@ scenes:
         text: "プリクラ。写真をその場でシールにする機械です。"
         reading: "ぷりくら。しゃしんをそのばでしーるにするきかいです。"
       - speaker: reimu
-        text: "作ったのは、社員数十人の小さなゲーム会社の営業でした。"
-        reading: "つくったのわ、しゃいんすうじゅうにんのちいさなげーむがいしゃのえいぎょうでした。"
+        text: "作ったのは、当時まだ小さかったゲーム会社の営業でした。"
+        reading: "つくったのわ、とうじまだちいさかったげーむがいしゃのえいぎょうでした。"
       - speaker: reimu
         text: "物語は、1986年の東京から始まります。"
         reading: "ものがたりわ、せんきゅうひゃくはちじゅうろくねんのとうきょうからはじまります。"
@@ -1807,7 +1807,7 @@ scenes:
     bgm: 223am
     stage:
       - {who: zundamon, x: 0.3, tag: "佐々木", flip: true}
-      - {who: tsumugi, x: 0.74}
+      - {who: tsumugi, x: 0.74, tag: "岡田"}
     cuts:
       - speaker: reimu
         text: "佐々木美穂は、その後アトラスを離れました。"

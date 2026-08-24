@@ -82,6 +82,9 @@ class Composer:
             ch = self.cfg.character(speaker)
             img = Image.open(sprite_path(self.cfg, speaker, emotion)).convert("RGBA")
             flip = ch.get("sprite_flip") if flip_override is None else flip_override
+            if ch.get("no_mirror"):
+                # 名前を胴体に焼き込んだモブは反転すると鏡文字になる
+                flip = False
             if flip:
                 # 素材の向きが外向きのキャラは反転して内側（相手側）を向かせる
                 img = ImageOps.mirror(img)
@@ -712,7 +715,8 @@ def render_frames(
         parts = []
         for s in sprite_speakers:
             ch = cfg.character(s)
-            parts.append(f"{s}@{ch.get('sprite_scale', 1.0)}:{ch.get('sprite_flip', False)}")
+            parts.append(f"{s}@{ch.get('sprite_scale', 1.0)}:{ch.get('sprite_flip', False)}"
+                         f":nm{ch.get('no_mirror', False)}")
             d = cfg.root / ch["sprite_dir"]
             for p in sorted(d.glob("*.png")) if d.is_dir() else []:
                 st = p.stat()
