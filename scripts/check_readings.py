@@ -53,13 +53,15 @@ def to_kata(s: str) -> str:
 
 
 def canon(s: str) -> str:
-    """長音の表記ゆれを吸収（トウヨウ↔トオヨオ、セイ↔セエ）。
+    """長音と四つ仮名の表記ゆれを吸収（トウヨウ↔トオヨオ、セイ↔セエ、ヤイヅ↔ヤイズ）。
 
     VOICEVOXのmorasは長音を発音どおり（オ段+オ、エ段+エ）で返すため、
     仮名書きの読みと比較する前に両方をこの形へ寄せる。
+    ヅ・ヂは現代語では ズ・ジ と同音で、morasも常に ズ・ジ を返すため同一視する
+    （焼津=やいづ が ヤイズ と出て実測不一致に誤判定された。2026-08）。
     """
     out = []
-    for ch in to_kata(s):
+    for ch in to_kata(s).replace("ヅ", "ズ").replace("ヂ", "ジ"):
         if ch == "ウ" and out and out[-1] in O_COL:
             ch = "オ"
         elif ch == "イ" and out and out[-1] in E_COL:
@@ -137,6 +139,9 @@ def main(slug: str) -> int:
                         f"{scene.id}/{cut.speaker}: {text[:28]}")
 
     # ---- 2) 音声後検査（moras 実測） ----
+    # timing.json が無い（台本執筆直後）ときは実測系を全部スキップする。
+    # 空リストで初期化しておかないと 3.5 の機械検出が未定義参照で落ちる
+    timings: list = []
     timing_path = proj.timing_path
     if timing_path.exists():
         timings = json.loads(timing_path.read_text(encoding="utf-8"))

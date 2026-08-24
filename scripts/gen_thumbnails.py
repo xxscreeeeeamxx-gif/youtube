@@ -268,6 +268,40 @@ def p_block(d, s):
                       fill=(255, 228, 110), outline=(170, 125, 15), width=6)
 
 
+def p_purikura(d, s):
+    """プリクラのシール。顔の代わりに、切り取り線で分かれた小さな枠を並べる。
+
+    機械そのものより「小さいのが何枚も出て、分けて配れる」ほうが題材の核なので、
+    シール紙を主役にした。ピンクの縁と切り取り線でプリクラだと分かる。
+    """
+    # シール台紙
+    d.rounded_rectangle([s*0.06, s*0.10, s*0.94, s*0.90], radius=20,
+                        fill=(255, 246, 250), outline=(216, 60, 130), width=12)
+    # 2×3 の小コマ
+    for gy in range(3):
+        for gx in range(2):
+            x0 = s*0.14 + gx * s*0.42
+            y0 = s*0.17 + gy * s*0.245
+            x1, y1 = x0 + s*0.30, y0 + s*0.175
+            d.rounded_rectangle([x0, y0, x1, y1], radius=8,
+                                fill=(250, 214, 232) if (gx + gy) % 2 else (206, 232, 250),
+                                outline=(216, 60, 130), width=5)
+            # 顔（丸と髪）
+            cx, cy = (x0 + x1) / 2, (y0 + y1) / 2 + s*0.012
+            r = s*0.048
+            d.ellipse([cx-r*1.35, cy-r*1.5, cx+r*1.35, cy-r*0.1], fill=(90, 66, 74))
+            d.ellipse([cx-r, cy-r, cx+r, cy+r], fill=(255, 228, 206))
+            d.ellipse([cx-r*0.42, cy-r*0.2, cx-r*0.16, cy+r*0.1], fill=(60, 46, 50))
+            d.ellipse([cx+r*0.16, cy-r*0.2, cx+r*0.42, cy+r*0.1], fill=(60, 46, 50))
+    # 切り取り線（縦・横の破線）
+    for k in range(1, 3):
+        yy = s*0.10 + k * s*0.267
+        for xx in range(int(s*0.10), int(s*0.90), int(s*0.05)):
+            d.line([xx, yy, xx + s*0.028, yy], fill=(230, 150, 185), width=4)
+    for yy in range(int(s*0.13), int(s*0.88), int(s*0.05)):
+        d.line([s*0.50, yy, s*0.50, yy + s*0.028], fill=(230, 150, 185), width=4)
+
+
 def p_bill(d, s):
     """お札。"""
     d.rounded_rectangle([s*0.05, s*0.22, s*0.95, s*0.78], radius=16,
@@ -1552,6 +1586,10 @@ SPECS = {
         bg=((28, 52, 92), (14, 28, 56)), emotion="surprised",
         lines=[("スイスを倒した", W1, None), ("1600社が600社に", W1, None),
                ("クオーツ時計", B1, Y1)]),
+    "purikura-meme": dict(prop="p_purikura", layout="stack",
+        bg=((150, 26, 88), (86, 12, 50)), emotion="sad",
+        lines=[("持って帰ってどうすんの", W1, None), ("ゲーセンは男の場所", W1, None),
+               ("プリクラ", B1, Y1)]),
     "karaoke": dict(prop="p_mic", layout="stack", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
     lines=[("特許を取らなかった", W1, None), ("手作り11台から", W1, None), ("カラオケ", B1, Y1)]),
     "yokoi-gunpei": dict(prop="p_gameboy", layout="stack", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",

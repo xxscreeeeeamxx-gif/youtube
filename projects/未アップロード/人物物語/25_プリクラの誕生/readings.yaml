@@ -1,0 +1,23 @@
+# purikura-meme 読み台帳
+# 固有名詞だけを載せる。一般語の誤読は voice 後の check_moras_cross.py で全数照合し、
+# 実際に化けたものだけ assets/readings_common.yaml に足す（台帳に載せると全出現にタグが要る）
+- {surface: 佐々木美穂, reading: ささきみほ}
+- {surface: 佐々木, reading: ささき}
+- {surface: 美穂, reading: みほ}
+- {surface: 原野直也, reading: はらのなおや}
+- {surface: 原野, reading: はらの}
+- {surface: 清水隆志, reading: しみずたかし}
+- {surface: 清水, reading: しみず}
+- {surface: 隆志, reading: たかし}
+- {surface: 岡田耕始, reading: おかだこうじ}
+- {surface: 岡田, reading: おかだ}
+- {surface: 耕始, reading: こうじ}
+- {surface: 中山隼雄, reading: なかやまはやお}
+- {surface: 中山, reading: なかやま}
+- {surface: 隼雄, reading: はやお}
+- {surface: 峰岸不二男, reading: みねぎしふじお}
+- {surface: 峰岸, reading: みねぎし}
+- {surface: 不二男, reading: ふじお}
+- {surface: 焼津, reading: やいづ}
+- {surface: 神楽坂, reading: かぐらざか}
+- {surface: 倶楽部, reading: くらぶ}

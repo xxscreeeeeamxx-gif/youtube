@@ -1,0 +1,1955 @@
+# プリクラ再現ドラマ・ミーム版（[佐々木美穂|ささきみほ]×[岡田耕始|おかだこうじ]・1986→現代）。投稿前に必ず目視レビュー。
+# 配役: ずんだもん=佐々木美穂（アトラス営業）/ つむぎ=岡田耕始（開発）/ ナレ=ゆっくり
+# 配慮: sasaki_ato（その後・逝去）はミーム完全禁止でクリーン維持。shimizu_kenri も静かに。
+# 裏取り: プリント倶楽部Wikipedia「企画・開発」「本稼働後の反響」/ Yahoo!ニュース特集1189（佐々木本人インタビュー）/
+#   朝日新聞「はじまりを歩く」プリントシール機（佐々木美穂さん=故人・技術職の矢野さんとの雑談）/ 愛ラブSMAP!Wikipedia（テレビ東京・1991-10-06〜1996-03-25）
+# 確定事実: 1986年4月原野直也がアトラス設立 / 佐々木はリクルートから1987年移籍 /
+#   焼津のゲーセン店員・清水隆志が女性客向けに発案 / 当時の女性向け機は占い機とパズル機のみ /
+#   電話のやり取りで偶然見たビデオプリンターが着想元 / 男性陣「そんなの持って帰ってどうすんの」/
+#   90年代半ばは格闘ゲーム全盛で客層は格ゲー男子 / ロケテストは芳しくない反応 /
+#   1995年2月アミューズメントの展示会でコンパニオンが空き時間に並び長蛇の列 /
+#   1995年7月発売・原価約200円だが女性の意見で1回300円 / 案内役はジャックフロスト /
+#   峰岸不二男のツテで1995年「愛ラブSMAP!」（テレビ東京）→回線パンク /
+#   1996年流行語大賞・第八回中小企業優秀新技術新製品賞 / 1997年時点で設置5万台超 /
+#   1999年頃ピーク・2年ほどで収縮 / 原野「自分たちだけが儲けるのはダメだ」/
+#   清水は権利の説明を受けたが当時は無償を了承 / 佐々木は退社後に介護の仕事・故人
+meta:
+  title: "【プリクラの誕生】そんなの持って帰ってどうすんの【ずんだもん解説】"
+  slug: "purikura-meme"
+  summary: "ゲームセンターが男の子だけの場所だった1990年代。アトラスという小さなゲーム会社の営業だった佐々木美穂は、会議である提案をします。返ってきたのは「そんなの持って帰ってどうすんの」でした。日本中の女の子を行列に並ばせることになる機械が、どこから生まれたのか。ずんだもんが佐々木を演じる再現ドラマです。"
+  tags: ["プリクラ", "プリント倶楽部", "佐々木美穂", "アトラス", "セガ", "90年代", "再現ドラマ", "ゆっくり", "ずんだもん", "発明", "ミーム"]
+  thumbnail:
+    top: "ゲーセンは男の場所"
+    bottom: "そんなの誰が持って帰る"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: harano, label: "原野", voice: 13, pitch: -0.05, item: mustache}
+    - {id: otoko, label: "男性社員", voice: 12, hair: short}
+    - {id: shimizu, label: "清水", voice: 12, pitch: 0.06, item: hat}
+    - {id: nakayama, label: "中山社長", voice: 13, pitch: -0.1, item: none}
+    - {id: konpanion, label: "コンパニオン", voice: 8, pitch: 0.06, hair: twintail}
+    - {id: jk, label: "女子高生", voice: 8, pitch: 0.1, hair: twintail}
+    - {id: minegishi, label: "峰岸", voice: 13, pitch: 0.05, item: book}
+scenes:
+  - id: hook
+    title: ""
+    background: il_pk_heya
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "そんなの持って帰って、どうすんの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "な、なんだ急に。ボク何も持ってないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "30年前、ある女の人の企画に、会社の男の人たちが返した言葉。"
+      - speaker: zundamon
+        emotion: angry
+        text: "うわ、言い方。塩対応にもほどがあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その企画がね。[日本中|にほんじゅう]の女の子を、ゲームセンターに並ばせたの。"
+        telops:
+          - {text: "そんなの持って帰ってどうすんの", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A1A2A", glow: "#E85096", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "情緒どうなってんの。で、何を作ったんだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その話をする前に。ずんだもん、さっきから何してるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "自撮りなのだ。今ので102枚目。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "102枚。全部おんなじ顔だけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "違うのだ。1枚目は前髪が3ミリ右で、42枚目は光が違う。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "その差、誰が分かるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは記録係なのだ。歴史を残しているんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自分の顔の歴史ね。それ、誰得なの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "俺得なのだ。……いや、分かった。今日は反省するぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、えらい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今日はもう、1枚だけにするのだ。厳選するぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん、それでいいと思う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……で、この1枚を30分かけて盛るのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "枚数減らして、時間増えてる。総量は変わってないよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "質を上げたのだ。圧倒的成長。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その盛るっていう言葉ね。生まれたきっかけが、今日の話。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "えっ。盛るに誕生日があったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "写真を、その場でシールにする機械。プリクラだよ。"
+        telops:
+          - {text: "プリクラ", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A2A", glow: "#E85096", anim: up}
+      - speaker: zundamon
+        emotion: thinking
+        text: "プリクラ。ボクでも知ってるのだ。昔からあるやつ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昔からじゃないよ。1995年、日本で生まれたの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "日本！？世界のどこかから来たと思ってたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作ったのは、社員が数十人の小さなゲーム会社。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "大手じゃないのか。ファッ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこの営業だった、ひとりの女の人が言い出したの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それで、さっきの塩対応につながるんだな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。今日はその人の話だよ。"
+      - speaker: reimu
+        text: "プリクラ。写真をその場でシールにする機械です。"
+        reading: "ぷりくら。しゃしんをそのばでしーるにするきかいです。"
+      - speaker: reimu
+        text: "作ったのは、社員数十人の小さなゲーム会社の営業でした。"
+        reading: "つくったのわ、しゃいんすうじゅうにんのちいさなげーむがいしゃのえいぎょうでした。"
+      - speaker: reimu
+        text: "物語は、1986年の東京から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくはちじゅうろくねんのとうきょうからはじまります。"
+  - id: era1986
+    title: "1986・神楽坂の小さな会社"
+    background: il_pk_atlas
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.28, tag: "佐々木", flip: true}
+      - {who: harano, x: 0.7}
+    cuts:
+      - speaker: reimu
+        text: "1986年4月、原野直也がアトラスというゲーム会社を作りました。"
+        reading: "せんきゅうひゃくはちじゅうろくねんしがつ、はらのなおやがあとらすというげーむがいしゃをつくりました。"
+      - speaker: reimu
+        text: "場所は東京の神楽坂。社員は数えるほどでした。"
+        reading: "ばしょわとうきょうのかぐらざか。しゃいんわかぞえるほどでした。"
+      - speaker: harano
+        emotion: normal
+        text: "うちは小さい。だから、大きいところがやらないことをやる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[原野|はらの]さん。今日も名刺、置いていきますね。"
+      - speaker: harano
+        emotion: normal
+        text: "[佐々木|ささき]さん、今月何回目だ。もう顔だけで用件が分かる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "営業なので。通うのが仕事なのだ。"
+      - speaker: reimu
+        text: "佐々木美穂。このときはリクルートの営業でした。"
+        reading: "ささきみほ。このときわりくるーとのえいぎょうでした。"
+      - speaker: reimu
+        text: "求人広告を売るために、アトラスへ通っていたのです。"
+        reading: "きゅうじんこうこくをうるために、あとらすえかよっていたのです。"
+      - speaker: harano
+        emotion: thinking
+        text: "[佐々木|ささき]さん。逆に聞くけど、うちで働く気はない？"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……え。今、ボクを引き抜こうとしたか？"
+      - speaker: harano
+        emotion: normal
+        text: "した。だって、うちの誰より、うちに詳しいだろ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……たしかに。通いすぎて社員だと思われてるのだ。"
+      - speaker: harano
+        emotion: happy
+        text: "給料は保証できない。おもしろいことは保証する。"
+      - speaker: zundamon
+        emotion: normal
+        text: "後半だけで判断するの、危ないと思うぞ。"
+      - speaker: harano
+        emotion: normal
+        text: "危ないよ。でも来ないか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……行くのだ。"
+      - speaker: reimu
+        text: "1987年、佐々木はアトラスへ移りました。"
+        reading: "せんきゅうひゃくはちじゅうななねん、ささきわあとらすえうつりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ところで、うちは何を作る会社なんだ？"
+      - speaker: harano
+        emotion: normal
+        text: "決めてない。ゲームも作るし、カラオケボックスもやる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ジャンル、ガバガバすぎるのだ。"
+      - speaker: harano
+        emotion: happy
+        text: "小さい会社の強みだ。呼ばれたところに全部行く。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "無節操を強みと言い張るの、けっこう好きなのだ。"
+  - id: gamecenter
+    title: "格ゲー男子しかいない店"
+    background: il_pk_gamecenter
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.26, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.72, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "1990年代の半ば。ゲームセンターは格闘ゲームの全盛期でした。"
+        reading: "せんきゅうひゃくきゅうじゅうねんだいのなかば。げーむせんたーわかくとうげーむのぜんせいきでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[佐々木|ささき]さん、見てよ。今日も満席だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[岡田|おかだ]さん。ちょっと数えてみたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。何を？"
+      - speaker: zundamon
+        emotion: normal
+        text: "この店にいる人。48人。全員、男。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……言われてみれば。"
+      - speaker: zundamon
+        emotion: normal
+        text: "対戦台に張りついて、100円ずつ入れて、勝った負けたなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それがいちばん儲かるからね。負けたらもう100円入るし。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "負けるほど売上が伸びる仕組み。よくできてるのだ。"
+      - speaker: reimu
+        text: "対戦台は、客が負けるたびに次の百円が入る仕組みでした。"
+        reading: "たいせんだいわ、きゃくがまけるたびにつぎのひゃくえんがはいるしくみでした。"
+      - speaker: reimu
+        text: "店の売上は、この繰り返しで成り立っていたのです。"
+        reading: "みせのうりあげわ、このくりかえしでなりたっていたのです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ聞くけど。女の人が来たら、何をするんだ？"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……占いの機械。あとはパズル。"
+      - speaker: zundamon
+        emotion: normal
+        text: "以上？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "以上。それが当時の全部だよ。"
+      - speaker: reimu
+        text: "当時、女性向けの機械は占い機とパズル機しかありませんでした。"
+        reading: "とうじ、じょせいむけのきかいわうらないきとぱずるきしかありませんでした。"
+      - speaker: zundamon
+        emotion: angry
+        text: "選択肢が2つ。無理ゲーすぎるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まあ、来ないものは仕方ないでしょ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……順番が逆じゃないか？"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "逆？"
+      - speaker: zundamon
+        emotion: normal
+        text: "来ないから置かないんじゃなくて、置いてないから来ないのだ。"
+        telops:
+          - {text: "置いてないから、来ない", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#2A1A3A", glow: "#6CD8C8", anim: up}
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……それ、けっこう痛いところ突いてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクだって、この店に一人では入れないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "入りにくい？"
+      - speaker: zundamon
+        emotion: normal
+        text: "暗いし、うるさいし、知らない男の背中しかない。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そこは考えたことなかったな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "もうひとつあるのだ。こっちのほうが大きいぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに？"
+      - speaker: zundamon
+        emotion: normal
+        text: "この店、100円入れて、手に何も残らないのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……残らない？"
+      - speaker: zundamon
+        emotion: normal
+        text: "遊んだ記憶は残る。でも、持って帰るものがないのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "クレーンゲームがあるじゃない。ぬいぐるみ取れるよ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "取れたらな。あれ、100円で必ず取れるのか？"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……取れないね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "運ゲーなのだ。ガチャ運がない日は、財布だけ軽くなる。"
+      - speaker: reimu
+        text: "女性が確実に持ち帰れるものは、当時の店にありませんでした。"
+        reading: "じょせいがかくじつにもちかえれるものわ、とうじのみせにありませんでした。"
+  - id: yaizu
+    title: "焼津のゲームセンターから"
+    background: il_pk_yaizu
+    bgm: natsuyasumi
+    stage:
+      - {who: shimizu, x: 0.28, flip: true}
+      - {who: harano, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "同じころ、静岡県[焼津|やいづ]市のゲームセンターに一人の店員がいました。"
+        reading: "おなじころ、しずおかけんやいづしのげーむせんたーにひとりのてんいんがいました。"
+      - speaker: shimizu
+        emotion: normal
+        text: "[原野|はらの]さん、わざわざ[焼津|やいづ]まですみません。"
+      - speaker: harano
+        emotion: happy
+        text: "いいよ。現場の話がいちばん役に立つ。"
+      - speaker: shimizu
+        emotion: normal
+        text: "うち、女の子のお客さんが来ても、すぐ帰っちゃうんです。"
+      - speaker: harano
+        emotion: thinking
+        text: "うん。どこもそうだ。"
+      - speaker: shimizu
+        emotion: normal
+        text: "で、考えたんですけど。自分の写真をシールにできたら、どうですか。"
+      - speaker: harano
+        emotion: surprised
+        se: don
+        text: "……写真を、シールに？"
+      - speaker: shimizu
+        emotion: happy
+        text: "はい。撮って、その場でペタッと。"
+      - speaker: harano
+        emotion: thinking
+        text: "[清水|しみず]さん。それ、誰が欲しがるんだ。"
+      - speaker: shimizu
+        emotion: normal
+        text: "分かりません。でも、女の子はシール好きですよ。"
+      - speaker: harano
+        emotion: normal
+        text: "根拠がふわっとしてるな。データとかあるんですか。"
+      - speaker: shimizu
+        emotion: normal
+        text: "ないです。店で毎日見てるだけです。"
+      - speaker: harano
+        emotion: happy
+        text: "……いや、それがいちばん強いデータかもしれん。"
+      - speaker: reimu
+        text: "この企画は、[焼津|やいづ]の店員である清水隆志が持ち込んだものでした。"
+        reading: "このきかくわ、やいづのてんいんであるしみずたかしがもちこんだものでした。"
+      - speaker: reimu
+        text: "需要があるかどうかは、誰にも分かりませんでした。"
+        reading: "じゅようがあるかどうかわ、だれにもわかりませんでした。"
+      - speaker: harano
+        emotion: normal
+        text: "持ち帰る。そのひとことが引っかかってるんだ。"
+      - speaker: shimizu
+        emotion: surprised
+        text: "そこですか？"
+      - speaker: harano
+        emotion: normal
+        text: "うちの店は、金だけ取って何も渡してない。ずっとそうだ。"
+      - speaker: shimizu
+        emotion: normal
+        text: "……言われてみると、そうですね。"
+      - speaker: harano
+        emotion: normal
+        text: "会社に持って帰る。うちの[佐々木|ささき]に投げてみるよ。"
+  - id: printer
+    title: "電話の向こうで、紙が出た"
+    background: il_pk_atlas
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.28, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.72, tag: "岡田"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "はい、アトラスです。……はい、来週の件ですね。"
+      - speaker: reimu
+        text: "電話をしながら、佐々木はある機械に目をやりました。"
+        reading: "でんわをしながら、ささきわあるきかいにめをやりました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ん。あの機械、何が出てるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ビデオプリンター。ビデオの映像を、紙に出すやつ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "映像が、紙に。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "資料用にね。会議で使う画面を止めて、印刷してる。"
+      - speaker: reimu
+        text: "ビデオプリンターは、映像の一こまを紙に印刷する装置です。"
+        reading: "びでおぷりんたーわ、えいぞうのひとこまをかみにいんさつするそうちです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[岡田|おかだ]さん。これ、紙じゃなくてもいいのか？"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "[は|はぁ]？"
+      - speaker: zundamon
+        emotion: normal
+        text: "出てくる先が、シールの紙だったら。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……できなくはない。裏に糊がついてるだけだし。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "できるのか！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "落ち着いて。何を出すつもりなの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "顔なのだ。ゲームセンターで、自分の顔を撮って、シールにする。"
+        telops:
+          - {text: "顔を、シールにする", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A1A2A", glow: "#E85096", anim: up}
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……えっ、何のために？"
+      - speaker: zundamon
+        emotion: normal
+        text: "持って帰るためなのだ。手に、必ず残るぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……[焼津|やいづ]から来た話と、つながってる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "つながったのだ。[焼津|やいづ]の人と、同じ絵を見てるぞ。"
+      - speaker: reimu
+        text: "写真の機械は、それまでフィルムで撮って現像するものでした。"
+        reading: "しゃしんのきかいわ、それまでふぃるむでとってげんぞうするものでした。"
+      - speaker: reimu
+        text: "映像をそのまま紙にできるようになったのは、この時代からです。"
+        reading: "えいぞうをそのままかみにできるようになったのわ、このじだいからです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも[佐々木|ささき]さん。それ、証明写真の機械と何が違うの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いい質問なのだ。証明写真は、1枚だけ大きく出るだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。履歴書に貼るやつ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "小さいのが、たくさん出たら？"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……たくさん出て、どうするの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "配るのだ。1枚は自分。あとは友達に。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "配る……。写真を、配る？"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこが本体なのだ。持って帰るだけじゃ、半分なんだ。"
+      - speaker: reimu
+        text: "一枚の写真が、複数のシールになる。これが分かれ目でした。"
+        reading: "いちまいのしゃしんが、ふくすうのしーるになる。これがわかれめでした。"
+  - id: kaigi
+    title: "そんなの持って帰ってどうすんの"
+    background: il_pk_kaigi
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.2, tag: "佐々木", flip: true}
+      - {who: otoko, x: 0.52}
+      - {who: tsumugi, x: 0.82, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "会議で、佐々木はこの案を出しました。"
+        reading: "かいぎで、ささきわこのあんをだしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "撮った顔が、その場でシールになって出てくる機械なのだ。"
+      - speaker: otoko
+        emotion: normal
+        text: "……ちょっといい？"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: otoko
+        emotion: normal
+        se: don
+        text: "そんなの持って帰って、どうすんの。"
+        telops:
+          - {text: "そんなの持って帰ってどうすんの", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#2A2A3A", glow: "#4466AA", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……どうすんの、とは。"
+      - speaker: otoko
+        emotion: normal
+        text: "自分の顔のシールでしょ。貼る場所ある？"
+      - speaker: zundamon
+        emotion: normal
+        text: "ある。手帳とか、定期入れとか。"
+      - speaker: otoko
+        emotion: thinking
+        text: "俺は貼らないな。"
+      - speaker: zundamon
+        emotion: angry
+        text: "そりゃそうなのだ。あなた向けじゃないのだ。"
+      - speaker: otoko
+        emotion: surprised
+        text: "え、じゃあ誰向け。"
+      - speaker: zundamon
+        emotion: normal
+        text: "女の子なのだ。うちの店に、来てない人たち。"
+      - speaker: otoko
+        emotion: normal
+        text: "来てない人向けに作るの？ 売れる根拠は？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ないのだ。今は。"
+      - speaker: otoko
+        emotion: normal
+        text: "でしょ。それってあなたの感想ですよね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "感想なのだ。でも、感想を持ってるのがボクだけなんだ。"
+      - speaker: reimu
+        text: "会議室に、女性は佐々木ひとりでした。"
+        reading: "かいぎしつに、じょせいわささきひとりでした。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……[佐々木|ささき]さん。俺も正直、ピンときてないんだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "[岡田|おかだ]さんもか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。写真が出るのは分かる。その先が見えない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ聞くのだ。あなたたち、店で何にお金を使った？"
+      - speaker: otoko
+        emotion: happy
+        text: "対戦。昨日は2000円溶けた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "2000円で、何が手元に残ってるんだ。"
+      - speaker: otoko
+        emotion: thinking
+        text: "……勝った記憶。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それで満足できるのが、あなたたちなのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……あー。"
+      - speaker: zundamon
+        emotion: normal
+        text: "満足できない人が、外にいっぱいいるのだ。"
+      - speaker: otoko
+        emotion: normal
+        text: "でも、うちに来ないんでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "来る理由を作ってないからなのだ。ずっとその話をしてるぞ。"
+      - speaker: reimu
+        text: "岡田耕始によれば、当時の反応は冷たいものでした。"
+        reading: "おかだこうじによれば、とうじのはんのうわつめたいものでした。"
+      - speaker: reimu
+        text: "客層は格闘ゲームの男性ばかりで、期待は薄かったといいます。"
+        reading: "きゃくそうわかくとうげーむのだんせいばかりで、きたいわうすかったといいます。"
+  - id: sanbyaku
+    title: "300円払ってでも"
+    background: il_pk_kaigi
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.2, tag: "佐々木", flip: true}
+      - {who: otoko, x: 0.52}
+      - {who: tsumugi, x: 0.82, tag: "岡田"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつ、値段の話をしていいか。"
+      - speaker: otoko
+        emotion: normal
+        text: "どうぞ。まあ100円だよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "300円なのだ。"
+      - speaker: otoko
+        emotion: surprised
+        se: don
+        text: "300！？ 高いって。誰も入れないよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "100円で、必ず取れないクレーンゲームがあるだろ。"
+      - speaker: otoko
+        emotion: normal
+        text: "ある。昨日も取れなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれ、5回やったら500円なのだ。それで手ぶらもある。"
+      - speaker: otoko
+        emotion: sad
+        text: "……昨日のボクだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "300円で、必ず持って帰れる。どっちが安いんだ。"
+        telops:
+          - {text: "300円で、必ず持って帰れる", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……あ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "運がいらないのだ。入れたら、絶対に出る。"
+      - speaker: reimu
+        text: "1回300円払ってでも、必ず持ち帰れるものがあると気持ちが違う。"
+        reading: "いっかいさんびゃくえんはらってでも、かならずもちかえれるものがあるときもちがちがう。"
+      - speaker: reimu
+        text: "佐々木は、同性の視点からそう考えていました。"
+        reading: "ささきわ、どうせいのしてんからそうかんがえていました。"
+      - speaker: otoko
+        emotion: thinking
+        text: "……でも300円は、感覚的に高いよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あなたの感覚なのだ。ボクの感覚だと安いのだ。"
+      - speaker: otoko
+        emotion: normal
+        text: "感覚と感覚じゃ、決まらないでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決まらないのだ。だから作って、置いてみるしかない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……[原野|はらの]さんに聞いてみようか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それは賛成なのだ。あの人、変な話が好きだぞ。"
+  - id: sega
+    title: "セガの社長室"
+    background: il_pk_sega
+    bgm: serious
+    stage:
+      - {who: harano, x: 0.26, flip: true}
+      - {who: nakayama, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "アトラスだけでは、全国に置くことができません。"
+        reading: "あとらすだけでわ、ぜんこくにおくことができません。"
+      - speaker: reimu
+        text: "原野は、セガの社長である中山隼雄に会いに行きました。"
+        reading: "はらのわ、せがのしゃちょうであるなかやまはやおにあいにいきました。"
+      - speaker: nakayama
+        emotion: normal
+        text: "[原野|はらの]さん。それで、持ってきたのは何。"
+      - speaker: harano
+        emotion: normal
+        text: "写真をシールにする機械です。"
+      - speaker: nakayama
+        emotion: thinking
+        text: "……写真。ゲームじゃなくて。"
+      - speaker: harano
+        emotion: normal
+        text: "ゲームじゃないです。遊びではありますが。"
+      - speaker: nakayama
+        emotion: normal
+        text: "誰が入れるの。"
+      - speaker: harano
+        emotion: normal
+        text: "女の子です。今、うちの店に来てない人たち。"
+      - speaker: nakayama
+        emotion: normal
+        text: "来てないなら、いないのと同じでしょ。"
+      - speaker: harano
+        emotion: normal
+        text: "そこは、うちの営業が食い下がってまして。"
+      - speaker: nakayama
+        emotion: surprised
+        text: "食い下がる？"
+      - speaker: harano
+        emotion: happy
+        text: "会議で男が全員反対して、女がひとりで押し返してます。"
+      - speaker: nakayama
+        emotion: thinking
+        text: "……その構図は、ちょっとおもしろいな。"
+      - speaker: harano
+        emotion: normal
+        text: "需要は分かりません。正直に言います。"
+      - speaker: nakayama
+        emotion: normal
+        text: "分からないものを、なんで作るの。"
+      - speaker: harano
+        emotion: normal
+        text: "分かってるものは、もう誰かが作ってるからです。"
+      - speaker: nakayama
+        emotion: surprised
+        se: don
+        text: "……いい言葉だ。"
+      - speaker: harano
+        emotion: happy
+        text: "小さい会社の言い訳です。"
+      - speaker: nakayama
+        emotion: normal
+        text: "分かった。うちが販売を持つ。作りなさい。"
+      - speaker: harano
+        emotion: happy
+        text: "……ありがとうございます。"
+      - speaker: reimu
+        text: "セガがパブリッシャーとなり、アトラスが開発に入りました。"
+        reading: "せががぱぶりっしゃーとなり、あとらすがかいはつにはいりました。"
+  - id: shikumi
+    title: "シールになる仕組み"
+    background: il_pk_atlas
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.28, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.72, tag: "岡田"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "[岡田|おかだ]さん。中身って、どうなってるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そんなに難しくないよ。3つ並んでるだけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "3つ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "カメラ、コンピューター、プリンター。順番に渡していく。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……普通じゃないか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "普通だよ。でも10年前は、この普通ができなかった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なんでだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "写真がフィルムだったから。撮ったら、現像しないと見えない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あー。その場で出せないのだ。"
+      - speaker: reimu
+        text: "フィルムの写真は、薬品で現像するまで見ることができません。"
+        reading: "ふぃるむのしゃしんわ、やくひんでげんぞうするまでみることができません。"
+      - speaker: reimu
+        text: "その場で出す機械は、原理として作れなかったのです。"
+        reading: "そのばでだすきかいわ、げんりとしてつくれなかったのです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それが、映像を数字として扱えるようになった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "数字。写真が、数字なのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。明るさの数字が、点の数だけ並んでるだけ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "顔が、数字の列になってるのだ。ちょっと怖いぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "怖いけど、便利。数字なら、いじれるからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いじれる。……たとえば？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枠をつける。背景を重ねる。縮めて、並べる。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "並べる！そこなのだ！"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "そこ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "1枚の紙に、小さい顔を何枚も並べて印刷するのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、その紙がシール。切り離して配れる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "配れる。1回で、何人分にもなるのだ。"
+      - speaker: reimu
+        text: "写真がデジタルになったこと。それが、この機械の土台でした。"
+        reading: "しゃしんがでじたるになったこと。それが、このきかいのどだいでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも[佐々木|ささき]さん。ここまで全部、技術の話だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。技術は、どこの会社にもあるのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……じゃあ、何が違うの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これを、誰のために置くかなのだ。そこだけは譲らないぞ。"
+  - id: loketest
+    title: "ロケテスト"
+    background: il_pk_gamecenter
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.26, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.72, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "試作機を実際の店に置き、反応を見ることをロケテストといいます。"
+        reading: "しさくきをじっさいのみせにおき、はんのうをみることをろけてすとといいます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "置いたよ。あそこの角に。"
+      - speaker: zundamon
+        emotion: happy
+        text: "どうだ。並んでるか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……3時間で、2人。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "2人！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも1人は、うちの社員。"
+      - speaker: zundamon
+        emotion: sad
+        text: "実質1人なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "みんな前を通るんだよ。[通って|とおって]、そのまま対戦台に行く。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……見えてないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見えてるけど、何をする機械か分からないみたい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "そうか。写真の機械なんて、ゲーセンにはなかったのだ。"
+      - speaker: reimu
+        text: "ロケテストの反応は芳しくなく、社内の期待は薄いままでした。"
+        reading: "ろけてすとのはんのうわかんばしくなく、しゃないのきたいわうすいままでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[佐々木|ささき]さん。数字は数字だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かってるのだ。でも、ひとつ気になることがある。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この店に、女の子が何人来たんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ほとんど来てないな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ今のテストは、何を測ったんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        se: don
+        text: "……あ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "男の人が、女の子向けの機械を素通りした。それだけなのだ。"
+        telops:
+          - {text: "測る相手が、そこにいない", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#2A1A3A", glow: "#6CD8C8", anim: up}
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……テストとして、成立してないってこと？"
+      - speaker: zundamon
+        emotion: normal
+        text: "全否定はしないのだ。でも、これで諦めるのは早いぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……メンタル鋼だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "豆腐なのだ。毎晩へこんでるぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "へこんでたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "へこむのと、間違ってると認めるのは、別なのだ。"
+  - id: expo
+    title: "1995年2月・展示会"
+    background: il_pk_expo
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.2, tag: "佐々木", flip: true}
+      - {who: konpanion, x: 0.52}
+      - {who: tsumugi, x: 0.82, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "1995年2月。業界向けの展示会に、試作機を出しました。"
+        reading: "せんきゅうひゃくきゅうじゅうごねんにがつ。ぎょうかいむけのてんじかいに、しさくきをだしました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まあ、業者向けの会だからね。期待はしないでおこう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。今日は様子を見るのだ。"
+      - speaker: konpanion
+        emotion: normal
+        text: "あの、すみません。これって撮れるんですか。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……え。あ、はい。撮れるのだ。"
+      - speaker: konpanion
+        emotion: happy
+        text: "休憩なんです。撮ってもいいですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "どうぞどうぞ。"
+      - speaker: reimu
+        text: "会場のコンパニオンたちが、空き時間を割いて並び始めました。"
+        reading: "かいじょうのこんぱにおんたちが、あきじかんをさいてならびはじめました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……[佐々木|ささき]さん。列ができてる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。"
+      - speaker: tsumugi
+        emotion: surprised
+        se: don
+        text: "うちのブースだけ、長蛇の列だ。"
+        telops:
+          - {text: "【速報】うちのブースだけ長蛇の列", size: lg, position: top-center, color: "#FFF15A", stroke: "#3A1A2A", glow: "#E85096", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "キタ━━━━！"
+      - speaker: konpanion
+        emotion: happy
+        text: "ねえ、2人で入れる？ 一緒に撮ろうよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……2人で。"
+      - speaker: konpanion
+        emotion: happy
+        text: "だって1人の顔だけあってもね。誰かと写るから意味あるんじゃない。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……あれ。今の、聞いた？"
+      - speaker: zundamon
+        emotion: normal
+        text: "聞いたのだ。ボク、そこまで考えてなかったぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "俺、思い出したことがある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "駅の証明写真の機械。あそこに女の子が2人で入ってた。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "履歴書用じゃなくて？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ふざけた顔で撮ってた。カップルも入ってた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……本来の用途を、無視してるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "無視して遊んでた。でも1枚しか出ないから、分けられない。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "そこにシールを何枚も出したら。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……分けられる。手紙にも貼れる。交換もできる。"
+      - speaker: reimu
+        text: "写真が複数のシールとして出れば、女性の表現手段になる。"
+        reading: "しゃしんがふくすうのしーるとしてでれば、じょせいのひょうげんしゅだんになる。"
+      - speaker: reimu
+        text: "開発陣がそう気づいたのは、この展示会でのことでした。"
+        reading: "かいはつじんがそうきづいたのわ、このてんじかいでのことでした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "[佐々木|ささき]さん。ごめん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "何がだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ピンときてない、って言ったやつ。あれ、俺が見えてなかっただけだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見えたなら、それでいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "手のひら返して悪いけど、これ、いけるんじゃないか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "手のひらは、何回返してもいいのだ。"
+  - id: nedan
+    title: "原価200円を、300円で"
+    background: il_pk_kaigi
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.2, tag: "佐々木", flip: true}
+      - {who: otoko, x: 0.52}
+      - {who: tsumugi, x: 0.82, tag: "岡田"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "値段の話に戻ろう。原価が出たよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いくらだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1回、だいたい200円。印刷が高いんだ。"
+      - speaker: otoko
+        emotion: surprised
+        text: "200！？ ほとんど残らないじゃん。"
+      - speaker: reimu
+        text: "当時の印刷技術では、一回あたりの原価が約200円かかりました。"
+        reading: "とうじのいんさつぎじゅつでわ、いっかいあたりのげんかがやくにひゃくえんかかりました。"
+      - speaker: otoko
+        emotion: normal
+        text: "じゃあ400円にしよう。それなら利益が出る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だめなのだ。300円。"
+      - speaker: otoko
+        emotion: angry
+        text: "なんで100円分捨てるの。意味が分からない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "100円玉、3枚なのだ。"
+      - speaker: otoko
+        emotion: surprised
+        text: "……[は|はぁ]？"
+      - speaker: zundamon
+        emotion: normal
+        text: "財布から出す枚数の話をしてるのだ。3枚は、まだ出せる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……4枚だと、急に高く感じる？"
+      - speaker: zundamon
+        emotion: normal
+        text: "感じるのだ。数えるとき、指が止まるぞ。"
+      - speaker: otoko
+        emotion: normal
+        text: "それ、データあるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ないのだ。でも財布を持ってるのはボクたちなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……その反論、けっこう強いな。"
+      - speaker: reimu
+        text: "女性の意見もあり、価格は一回300円で決まりました。"
+        reading: "じょせいのいけんもあり、かかくわいっかいさんびゃくえんできまりました。"
+      - speaker: otoko
+        emotion: thinking
+        text: "……分かった。300でいく。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。あっさりだな。"
+      - speaker: otoko
+        emotion: normal
+        text: "展示会の列、俺も見たから。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見たら分かるのだ。ずっとそう言ってたぞ。"
+  - id: hatsubai
+    title: "1995年7月・発売"
+    background: il_pk_gamecenter
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.26, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.72, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "1995年7月、プリント[倶楽部|くらぶ]が発売されました。"
+        reading: "せんきゅうひゃくきゅうじゅうごねんしちがつ、ぷりんとくらぶがはつばいされました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "名前、プリント[倶楽部|くらぶ]にしたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[倶楽部|くらぶ]って字、硬くない？"
+      - speaker: zundamon
+        emotion: happy
+        text: "硬いくらいでいいのだ。ふざけた機械だと思われたくない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あと、使い方の案内役を入れたよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "案内役。誰だ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ジャックフロスト。うちのゲームに出てくる、雪の悪魔。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "悪魔！？ 女の子向けの機械に、悪魔を入れたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "かわいいから大丈夫だよ。青くて、まるくて、笑ってる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……たしかに悪魔に見えないぞ。"
+      - speaker: reimu
+        text: "案内役には、自社のゲームに出ていたジャックフロストを使いました。"
+        reading: "あんないやくにわ、じしゃのげーむにでていたじゃっくふろすとをつかいました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、初動なんだけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……静かだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "静か。……初動、完全に詰んでるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "置いた店から、これ何の機械ですかって電話が来る。"
+      - speaker: zundamon
+        emotion: angry
+        text: "店の人が分かってないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "説明書は送ってるんだけどね。見たことないものだから。"
+      - speaker: reimu
+        text: "登場した当初は、何をする機械なのか分かりにくいものでした。"
+        reading: "とうじょうしたとうしょわ、なにをするきかいなのかわかりにくいものでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……知らないものは、説明しても伝わらないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どうする。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰かが撮ってるところを、見せるしかないぞ。"
+  - id: smap
+    title: "テレビが火をつけた"
+    background: il_pk_atlas
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.2, tag: "佐々木", flip: true}
+      - {who: minegishi, x: 0.52}
+      - {who: tsumugi, x: 0.82, tag: "岡田"}
+    cuts:
+      - speaker: minegishi
+        emotion: normal
+        text: "[佐々木|ささき]さん。あの機械、テレビに出したらどう。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "テレビ。うち、そんな金ないぞ。"
+      - speaker: minegishi
+        emotion: happy
+        text: "広告じゃなくて。番組で使ってもらうんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そんなツテ、あるのか。"
+      - speaker: minegishi
+        emotion: normal
+        text: "音楽の仕事で、少し。当たってみる。"
+      - speaker: reimu
+        text: "アトラスの峰岸不二男に、音楽業界へのつながりがありました。"
+        reading: "あとらすのみねぎしふじおに、おんがくぎょうかいえのつながりがありました。"
+      - speaker: reimu
+        text: "1995年、テレビ東京の愛ラブSMAPという番組で使われます。"
+        reading: "せんきゅうひゃくきゅうじゅうごねん、てれびとうきょうのあいらぶすまっぷというばんぐみでつかわれます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "SMAPのメンバーが撮って、そのシールを視聴者にあげる企画だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……本人が撮るのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "撮って、その場で出て、その場で配れる。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "……それ、この機械の説明そのものなのだ！"
+        telops:
+          - {text: "撮って、出て、配れる", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A1A2A", glow: "#E85096", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "説明書、いらなかったな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見れば分かるのだ。ずっとそう言ってたぞ。"
+      - speaker: minegishi
+        emotion: normal
+        text: "放送、来週の月曜だって。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……ちょっと、家で正座して見るのだ。"
+  - id: pank
+    title: "回線がパンクした"
+    background: il_pk_yakin
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.2, tag: "佐々木", flip: true}
+      - {who: otoko, x: 0.52}
+      - {who: tsumugi, x: 0.82, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "放送の翌日、会社の電話が鳴り止まなくなりました。"
+        reading: "ほうそうのよくじつ、かいしゃのでんわがなりやまなくなりました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "[佐々木|ささき]さん、電話！"
+      - speaker: zundamon
+        emotion: normal
+        text: "出てるのだ。……はい、アトラスです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……テレビで見たやつ、どこで撮れますか、って。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "こっちも鳴ってる！"
+      - speaker: otoko
+        emotion: surprised
+        text: "こっちも！ 全部の回線が埋まってる！"
+      - speaker: reimu
+        text: "問い合わせの電話で回線がパンクした、と佐々木は語っています。"
+        reading: "といあわせのでんわでかいせんがぱんくした、とささきわかたっています。"
+      - speaker: reimu
+        text: "全国の女の子から、どこへ行けば撮れるのかと聞かれたのです。"
+        reading: "ぜんこくのおんなのこから、どこえいけばとれるのかときかれたのです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[岡田|おかだ]さん。設置してある店のリスト、ある？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ある。印刷してくる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全員に配るのだ。手が空いてる人、全員電話に出るぞ。"
+      - speaker: otoko
+        emotion: normal
+        text: "経理も？"
+      - speaker: zundamon
+        emotion: happy
+        text: "経理も。今日は全員が営業なのだ。"
+      - speaker: otoko
+        emotion: happy
+        text: "……了解。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "[佐々木|ささき]さん、リスト刷ってきた。何部いる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "全部なのだ。足りなくなるぞ。"
+  - id: denwa
+    title: ""
+    background: il_pk_yakin
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.28, tag: "佐々木", flip: true}
+      - {who: jk, x: 0.72}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "はい、アトラスです。お住まいはどちらですか。"
+      - speaker: jk
+        emotion: happy
+        text: "駅前に置いてある店、教えてください！"
+      - speaker: zundamon
+        emotion: normal
+        text: "少々お待ちを。……ええと、そこなら3軒ありますよ。"
+      - speaker: jk
+        emotion: happy
+        text: "3軒！ ありがとうございます、友達5人で行きます！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……5人。"
+      - speaker: jk
+        emotion: happy
+        text: "みんなで撮って、分けるんです。それが楽しいんですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分けるために、行くのだ。"
+      - speaker: reimu
+        text: "一人で撮って持ち帰るものではなく、分け合うものになっていました。"
+        reading: "ひとりでとってもちかえるものでわなく、わけあうものになっていました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……あの人たち、ボクの想像より先に行ってるのだ。"
+  - id: boom
+    title: "女の子たちのツール"
+    background: il_pk_shibuya
+    bgm: natsuyasumi
+    stage:
+      - {who: zundamon, x: 0.26, tag: "佐々木", flip: true}
+      - {who: jk, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1990年代半ばは、女子高生ブームと呼ばれた時代でした。"
+        reading: "せんきゅうひゃくきゅうじゅうねんだいなかばわ、じょしこうせいぶーむとよばれたじだいでした。"
+      - speaker: jk
+        emotion: happy
+        text: "見て見て、これ今日の。ルーズソックスも写ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その帳面、なんだ。"
+      - speaker: jk
+        emotion: happy
+        text: "プリクラ帳です。集めたやつ、全部貼ってあるんですよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ノート1冊、全部シール？"
+      - speaker: jk
+        emotion: happy
+        text: "3冊目です。友達と交換するので。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "交換。……集めるものになってるのだ。"
+      - speaker: jk
+        emotion: normal
+        text: "レアなのもあるんですよ。一緒に撮れない子とか。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "レアリティが発生してるのか。"
+      - speaker: reimu
+        text: "みんなルーズソックスをはいて、時代を謳歌していた。"
+        reading: "みんなるーずそっくすをはいて、じだいをおうかしていた。"
+      - speaker: reimu
+        text: "プリクラは女の子たちのツールになった、と佐々木は振り返ります。"
+        reading: "ぷりくらわおんなのこたちのつーるになった、とささきわふりかえります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつ聞いていいか。なんで、シールなんだ。"
+      - speaker: jk
+        emotion: normal
+        text: "え。だって、貼れるから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "貼れると、何がいいんだ。"
+      - speaker: jk
+        emotion: happy
+        text: "……相手のものに、なるからかな。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……相手のものに。"
+      - speaker: jk
+        emotion: normal
+        text: "手帳に貼ってもらったら、その子の毎日に入るじゃないですか。"
+      - speaker: reimu
+        text: "写真は、渡した相手の日常の中に入っていきました。"
+        reading: "しゃしんわ、わたしたあいてのにちじょうのなかにはいっていきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクは、持って帰れるものを作ったつもりだったのだ。"
+      - speaker: jk
+        emotion: surprised
+        text: "違うんですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "違ったのだ。渡すものを作ってたぞ。"
+        telops:
+          - {text: "持って帰るものではなく、渡すもの", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#3A1A2A", glow: "#E85096", anim: up}
+      - speaker: jk
+        emotion: happy
+        text: "あ、そろそろ行きます。並ぶので。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……並ぶ？"
+      - speaker: jk
+        emotion: normal
+        text: "40分待ちです。今日はまだ空いてるほうですよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "40分待ちが、空いてるほう。感覚がバグってるのだ。"
+  - id: yakin
+    title: "夜中2時の伝票"
+    background: il_pk_yakin
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.26, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.72, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "発売から数年、社内は注文をさばききれない状態が続きました。"
+        reading: "はつばいからすうねん、しゃないわちゅうもんをさばききれないじょうたいがつづきました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……今、何時。"
+      - speaker: zundamon
+        emotion: sad
+        text: "2時なのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "受注の伝票、まだ半分残ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "派遣の人にも来てもらってるのに、追いつかないぞ。"
+      - speaker: reimu
+        text: "夜中の2時まで働き、派遣社員を雇っても伝票が追いつきません。"
+        reading: "よなかのにじまではたらき、はけんしゃいんをやとってもでんぴょうがおいつきません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[佐々木|ささき]さん、笑ってる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "笑ってるのだ。だって、この山、全部注文だぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そうだけどさ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "半年前は、この机に何も乗ってなかったのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……あの3時間で2人のとき。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。あのときのボクに、この山を見せたいぞ。"
+      - speaker: reimu
+        text: "1997年の時点で、設置台数は5万台を超えていました。"
+        reading: "せんきゅうひゃくきゅうじゅうななねんのじてんで、せっちだいすうわごまんだいをこえていました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "5万台。……全国のどこにでもある、ってことなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "駅前、商店街、デパートの屋上。全部にある。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ゲームセンターの外にも出たのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "出た。これのためだけに、店ができてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "女の子が、一人でも入れる店なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……最初に言ってたやつだ。それ。"
+  - id: y1996
+    title: "1996・流行語大賞"
+    background: il_pk_gyoretsu
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.2, tag: "佐々木", flip: true}
+      - {who: otoko, x: 0.52}
+      - {who: tsumugi, x: 0.82, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "1996年、プリクラは流行語大賞に選ばれました。"
+        reading: "せんきゅうひゃくきゅうじゅうろくねん、ぷりくらわりゅうこうごたいしょうにえらばれました。"
+      - speaker: reimu
+        text: "中小企業の優秀新技術新製品賞も受けています。"
+        reading: "ちゅうしょうきぎょうのゆうしゅうしんぎじゅつしんせいひんしょうもうけています。"
+      - speaker: otoko
+        emotion: happy
+        text: "[佐々木|ささき]さん、賞だって。二つも。"
+      - speaker: zundamon
+        emotion: normal
+        text: "実績解除なのだ。……というか、プリクラって略されてるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。誰も[倶楽部|くらぶ]まで言わない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "硬い字にした意味、なかったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "略される商品は、当たった商品だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……いい言葉なのだ。今のは覚えておくぞ。"
+      - speaker: otoko
+        emotion: normal
+        text: "あと、あの青いのも人気になってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "青いの。"
+      - speaker: otoko
+        emotion: happy
+        text: "案内役の悪魔。プリクラ太郎って呼ばれてるらしい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "太郎！？ 名前が変わってるぞ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "うちのゲーム知らない人からしたら、そう見えるんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "悪魔だと知らないまま愛されてるのだ。逆にアリだぞ。"
+      - speaker: otoko
+        emotion: normal
+        text: "しかし、あんなに反対して悪かったね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "反対は別にいいのだ。ボクも根拠なかったし。"
+      - speaker: otoko
+        emotion: normal
+        text: "じゃあ、何が悪かったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そんなの持って帰ってどうすんの、の言い方なのだ。"
+      - speaker: otoko
+        emotion: sad
+        text: "……あー。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分からないなら、分からないって言えばよかったぞ。"
+      - speaker: otoko
+        emotion: sad
+        text: "……はい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "はい、この話おわり。伝票やるぞ。"
+  - id: harano_no
+    title: "自分たちだけが儲けるのは"
+    background: il_pk_kaigi
+    bgm: 223am
+    stage:
+      - {who: harano, x: 0.26, flip: true}
+      - {who: otoko, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "ヒットを受けて、役員会である案が出ました。"
+        reading: "ひっとをうけて、やくいんかいであるあんがでました。"
+      - speaker: otoko
+        emotion: happy
+        text: "うちの機械だけを置いた、専用の店を作りませんか。"
+      - speaker: harano
+        emotion: normal
+        text: "専用。他社のは置かない、ということか。"
+      - speaker: otoko
+        emotion: happy
+        text: "はい。今なら行列ができます。全部うちの売上です。"
+      - speaker: harano
+        emotion: thinking
+        text: "……たしかに儲かるな。"
+      - speaker: otoko
+        emotion: happy
+        text: "でしょう。今やらないと。"
+      - speaker: harano
+        emotion: normal
+        se: don
+        text: "やらない。"
+      - speaker: otoko
+        emotion: surprised
+        text: "……え。"
+      - speaker: harano
+        emotion: normal
+        text: "自分たちだけが儲けるのは、だめだ。"
+        telops:
+          - {text: "自分たちだけが儲けるのはダメだ", size: lg, position: bottom-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
+      - speaker: otoko
+        emotion: normal
+        text: "……なんでですか。"
+      - speaker: harano
+        emotion: normal
+        text: "この機械、うちの店だけで育ったか？"
+      - speaker: otoko
+        emotion: thinking
+        text: "……いえ。全国の店が置いてくれたので。"
+      - speaker: harano
+        emotion: normal
+        text: "[焼津|やいづ]の店員が言い出した話でもある。"
+      - speaker: otoko
+        emotion: sad
+        text: "……そうでした。"
+      - speaker: harano
+        emotion: normal
+        text: "囲い込んだら、次に持ってきてくれる人がいなくなる。"
+      - speaker: reimu
+        text: "原野は、この案に反対しました。"
+        reading: "はらのわ、このあんにはんたいしました。"
+  - id: shimizu_ato
+    title: ""
+    background: il_pk_yaizu
+    bgm: 223am
+    stage:
+      - {who: shimizu, x: 0.28, flip: true}
+      - {who: harano, x: 0.72}
+    cuts:
+      - speaker: harano
+        emotion: normal
+        text: "[清水|しみず]さん。あの話、権利のことなんだが。"
+      - speaker: shimizu
+        emotion: normal
+        text: "説明は聞きました。難しくてよく分からなかったです。"
+      - speaker: harano
+        emotion: normal
+        text: "分からないまま決めなくていい。"
+      - speaker: shimizu
+        emotion: happy
+        text: "いいですよ。うちの店に置いてもらえれば。"
+      - speaker: harano
+        emotion: surprised
+        text: "本当にいいのか。"
+      - speaker: shimizu
+        emotion: normal
+        text: "はい。女の子が来るようになりましたから。"
+      - speaker: reimu
+        text: "清水は権利について説明を受けましたが、無償での扱いを了承しています。"
+        reading: "しみずわけんりについてせつめいをうけましたが、むしょうでのあつかいをりょうしょうしています。"
+      - speaker: shimizu
+        emotion: happy
+        text: "土曜の夕方に、うちの店に列ができるんです。"
+      - speaker: harano
+        emotion: normal
+        text: "……そうか。"
+      - speaker: shimizu
+        emotion: normal
+        text: "前は、男の子だけの店だったので。"
+  - id: peak
+    title: "ブームは2年で"
+    background: il_pk_purikura
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.26, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.72, tag: "岡田"}
+    cuts:
+      - speaker: reimu
+        text: "他社も次々と同じ機械を出し、遊びの要素が増えていきます。"
+        reading: "たしゃもつぎつぎとおなじきかいをだし、あそびのようそがふえていきます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "他社のやつ、ペンで文字が書けるようになってる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "書ける！？ シールに落書きできるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "有名人の写真と合成できるのもある。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……どんどん先に行かれてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "悔しい？"
+      - speaker: zundamon
+        emotion: happy
+        text: "全然。ボクが欲しかったのは、これなのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "これ？"
+      - speaker: zundamon
+        emotion: normal
+        text: "女の子が、遊べる場所。作ったのが誰かは、二番目なのだ。"
+      - speaker: reimu
+        text: "1999年ごろ、第一次ブームがピークを迎えます。"
+        reading: "せんきゅうひゃくきゅうじゅうきゅうねんごろ、だいいちじぶーむがぴーくをむかえます。"
+      - speaker: reimu
+        text: "そして、過熱したブームは2年ほどでしぼんでいきました。"
+        reading: "そして、かねつしたぶーむわにねんほどでしぼんでいきました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……街から、ずいぶん減ったな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。あれだけあったのに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "終わったと思う？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……どうだろうな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "みんな携帯を持ち始めた。写真も撮れる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "自分で撮れるなら、300円払わないのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……役目、終わりかな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "終わらないと思うぞ。ひとつだけ、携帯にできないことがある。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙で出て、その場で分けられるのだ。"
+  - id: ima
+    title: "30年後の、盛る"
+    background: il_pk_purikura
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……で、今はどうなってるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "残ってるよ。30年、ずっと。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "30年！？ ブームが終わったのに？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "終わったのはブーム。機械は進化し続けたの。"
+      - speaker: reimu
+        text: "その後の機械は、目の大きさや肌の明るさを調整できるようになります。"
+        reading: "そのごのきかいわ、めのおおきさやはだのあかるさをちょうせいできるようになります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……それが、盛るなのだ？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。きれいに写ることを盛るって呼んだの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ボクが30分かけてやってるやつ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。あなたの102枚は、ここから来てるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボク、30年前の会議の続きをやってたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "写真を加工していい、っていう考え方も、ここから広まったんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……前は、写真っていじっちゃだめだったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "記録だったからね。ありのままを残すもの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それが、遊んでいいものになったのだ。"
+      - speaker: reimu
+        text: "自分の顔を加工して見せることは、今では当たり前になりました。"
+        reading: "じぶんのかおをかこうしてみせることわ、いまでわあたりまえになりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スマホの自撮りも、加工のアプリも、たどると同じ場所に行き着く。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ゲームセンターの、隅っこなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。3時間で2人しか来なかった、あの機械。"
+  - id: sasaki_ato
+    title: "宝くじに当たったようなもの"
+    background: il_pk_kaigo
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "佐々木", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "佐々木美穂は、その後アトラスを離れました。"
+        reading: "ささきみほわ、そのごあとらすをはなれました。"
+      - speaker: reimu
+        text: "都内の介護施設で、お年寄りの世話をする仕事に就いています。"
+        reading: "とないのかいごしせつで、おとしよりのせわをするしごとについています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい、ゆっくりでいいですよ。手すり、つかまって。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……ゲームの会社じゃ、なくなったんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。今はこっちなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれだけのものを作った人が、って言われない？"
+      - speaker: zundamon
+        emotion: happy
+        text: "言われるのだ。でも、あれは運がよかっただけだぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "運。"
+      - speaker: zundamon
+        emotion: normal
+        text: "宝くじに当たったようなものなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……そんな言い方する？"
+      - speaker: zundamon
+        emotion: normal
+        text: "だって、当たると思って作ってないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、買わなきゃ当たらない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……そこは、たしかにそうなのだ。"
+      - speaker: reimu
+        text: "宝くじに当たったようなもの。いつ死んでも悔いはありません。"
+        reading: "たからくじにあたったようなもの。いつしんでもくいわありません。"
+      - speaker: reimu
+        text: "佐々木美穂は、そう語っています。"
+        reading: "ささきみほわ、そうかたっています。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……悔いがない、か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "会議で、ひとりだけ反対されたのを覚えてるか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "覚えてる。そんなの持って帰ってどうすんの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あそこで黙ってたら、何も残らなかったのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……うん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから、あの日のボクにだけは、ちょっと感謝してるぞ。"
+      - speaker: reimu
+        text: "佐々木美穂さんは、いまはもうこの世にいません。"
+        reading: "ささきみほさんわ、いまわもうこのよにいません。"
+      - speaker: reimu
+        text: "あの機械は、いまも街のどこかで動いています。"
+        reading: "あのきかいわ、いまもまちのどこかでうごいています。"
+  - id: end
+    title: ""
+    background: il_pk_purikura
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今度プリクラを見かけたら、値段のところを見てみて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "値段。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこが100円じゃない理由を、ひとりの人が押し通したの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……100円玉、3枚なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "覚えてたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも不思議なのだ。会議で勝ったのは、多数決じゃないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そうだね。全員が反対してた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "反対した人たちも、間違ってなかったのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "え。"
+      - speaker: zundamon
+        emotion: normal
+        text: "自分が欲しくないものを、欲しくないって言っただけなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……そうか。正直ではあったんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "足りなかったのは、その部屋にいない人の分なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……その場にいない人のことは、その場では分からない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから、ひとりだけ違うことを言う人が要るのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。……あ、ずんだもん。写真、まだ加工してる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "してるのだ。今103枚目。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "増えてる。1枚だけって言ってたよね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎさんと撮ったのだ。だから、これは配る用なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……それ、いちばん正しい使い方だよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "チャンネル登録も、してくれると嬉しいのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "感想もコメントで教えてね。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"
