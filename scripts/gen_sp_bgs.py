@@ -143,6 +143,41 @@ def tenpo() -> Image.Image:
     return img
 
 
+def nihonbungu() -> Image.Image:
+    """大阪の日本文具製造の応接室。特許を譲る話をした場所。
+
+    東京の問屋（tenpo）と同じ絵にすると場面が嘘になるので別に作る。
+    洋室の応接セットで、店先ではなく会社の中だと分かるようにした。
+    """
+    img = vgrad((W, H), (166, 152, 132), (140, 128, 110)).convert("RGBA")
+    d = ImageDraw.Draw(img, "RGBA")
+    _floor(d, int(H * 0.66), (118, 92, 66), (96, 76, 54))
+    # 腰壁
+    d.rectangle([0, int(H * 0.46), W, int(H * 0.66)], fill=(120, 94, 68))
+    d.line([0, int(H * 0.46), W, int(H * 0.46)], fill=(96, 76, 54), width=8)
+    _window(img, d, 1360, 130, 1800, 440, (176, 196, 216), (224, 232, 238))
+    # 書類棚（ガラス扉）
+    d.rectangle([90, 150, 620, 480], fill=(104, 80, 58))
+    for c in range(3):
+        d.rectangle([112 + c * 172, 172, 258 + c * 172, 458], fill=(168, 186, 196))
+        d.line([112 + c * 172, 300, 258 + c * 172, 300], fill=(104, 80, 58), width=8)
+    # 応接テーブルとソファ
+    d.rounded_rectangle([700, 700, 1340, 830], radius=10, fill=(146, 110, 74))
+    d.rectangle([700, 700, 1340, 736], fill=(120, 90, 60))
+    for x in (620, 1360):
+        d.rounded_rectangle([x, 640, x + 200, 900], radius=16, fill=(92, 70, 74))
+        d.rounded_rectangle([x + 16, 600, x + 184, 700], radius=14, fill=(112, 86, 90))
+    # 茶托
+    for x in (820, 1140):
+        d.ellipse([x, 676, x + 76, 712], fill=(206, 198, 182))
+    # 壁の額
+    d.rectangle([760, 180, 1180, 400], fill=(90, 72, 54))
+    d.rectangle([784, 204, 1156, 376], fill=(224, 216, 198))
+    for j in range(4):
+        d.line([820, 250 + j * 34, 1120, 250 + j * 34], fill=(160, 150, 132), width=6)
+    return img
+
+
 def yokohama() -> Image.Image:
     """横浜の商館。洋風の建物と港。海外からの注文が来た場所。"""
     img = vgrad((W, H), (170, 200, 224), (218, 230, 238)).convert("RGBA")
@@ -363,6 +398,7 @@ PAINTERS = {
     "il_sp_kazariya": kazariya,
     "il_sp_kojo": kojo_taisho,
     "il_sp_tenpo": tenpo,
+    "il_sp_nihonbungu": nihonbungu,
     "il_sp_yokohama": yokohama,
     "il_sp_jitaku": jitaku_taisho,
     "il_sp_shinsai": shinsai,

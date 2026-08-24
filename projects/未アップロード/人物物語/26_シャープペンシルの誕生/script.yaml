@@ -1236,7 +1236,7 @@ scenes:
         reading: "とくじがもっていたしゃーぷぺんしるかんれんのとっきょわ、よんじゅうはっしゅるいありました。"
   - id: osaka_kouzo
     title: "大阪へ"
-    background: il_sp_tenpo
+    background: il_sp_nihonbungu
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
