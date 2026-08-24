@@ -1,0 +1,1951 @@
+# シャープペンシル再現ドラマ・ミーム版（[早川徳次|はやかわとくじ]・1893→1980）。投稿前に必ず目視レビュー。
+# 配役: ずんだもん=早川徳次 / つむぎ=妻・文子（結婚〜震災）＋現代パートは素のつむぎ / ナレ=ゆっくり
+# ★ミーム完全禁止の章: inoue（恩人）/ shinsai・kawa・fumiko（震災と死別）/ shitsumei（失明者の工場）
+# 裏取り: 早川徳次(シャープ)Wikipedia / シャープ公式「シャープの歩み」創業者 /
+#   岡田晃「関東大震災を乗り越えた先人の教訓」/ シャープ特選工業70年史 / ライオン事務器
+# 確定事実:
+#   1893-11-3 東京市日本橋区久松町42番地生まれ。父・早川政吉、母・花子。三男
+#   生後1年11か月で出野家の養子。継養母に厳しく当たられ食事も満足に与えられず
+#   目の不自由な近所の井上という女性が手を引いて坂田芳松の店へ連れて行った
+#   1901-9-15 出野家を出る。本所区の錺屋・坂田芳松に丁稚奉公。1909-4-15 に7年7か月の年季明け
+#   1912 徳尾錠（ベルトに穴を開けないバックル）登録実用新案第25356号。33グロス=4,752個の受注で独立
+#   1915 早川姓に復籍。早川式繰出鉛筆を出願（特許は1920）。兄・政治が部品の仕事を持ち込んだ
+#   当初「和服には向かない」「金属製は冷たい」と全く売れず。第一次大戦で欧米が品薄になり
+#   横浜の商館から大量注文。1916 関西総代理店・福井商店の勧めで
+#   「エバー・レディ・シャープ・ペンシル」に改名。従業員200人超に
+#   1923-9-1 関東大震災。妻・文子と子2人（9歳と7歳）が避難中に火に巻かれ川へ。子2人は死亡、
+#   文子も約2か月後に死亡。工場焼失。徳次自身も大火傷。借金2万円
+#   1923-11 大阪市浪速区の日本文具製造へ。社長・中山豊三と親会社 中山太陽堂社長・中山太一に面会。
+#   機械類（2万2000円相当）を譲渡し、48種類の特許を無償で使わせる条件で清算
+#   1924-8 契約満了で退社。1924-9-1（震災からちょうど1年後）大阪に早川金属工業研究所を設立。
+#   東京時代の従業員3人と。金属加工の下請けから
+#   1925-4 国産第1号の鉱石ラジオ受信機。1944 失明軍人が働く早川電機分工場。
+#   1950 合資会社特選金属工場。1953-2 国産第1号テレビ TV3-14T（17万5000円）。
+#   1962 国産第1号電子レンジ / 大阪市立早川福祉会館に寄付。
+#   1964 世界初のオールトランジスタ電卓 コンペット CS-10A。1980-6-24 逝去、享年86
+meta:
+  title: "【シャープペンシルの誕生】全部失って、大阪へ【ずんだもん解説】"
+  slug: "sharp-pencil"
+  summary: "シャープという名前は、会社より先に商品にありました。東京の下町で育った早川徳次が21歳で作った金属製の繰出鉛筆です。売れず、海外で評価され、従業員200人まで伸びた矢先に関東大震災が来ます。何を手放して大阪へ向かったのか。ずんだもんが徳次を演じる再現ドラマです。"
+  tags: ["シャープペンシル", "早川徳次", "シャープ", "関東大震災", "明治", "大正", "再現ドラマ", "ゆっくり", "ずんだもん", "発明", "ミーム"]
+  thumbnail:
+    top: "全部失って大阪へ"
+    bottom: "シャープの名前の由来"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: youbo, label: "継養母", voice: 8, pitch: -0.07}
+    - {id: inoue, label: "井上", voice: 8, pitch: -0.15, hair: bun}
+    - {id: sakata, label: "坂田親方", voice: 13, pitch: -0.05, item: mustache}
+    - {id: masaji, label: "兄・政治", voice: 12}
+    - {id: tonya, label: "文具問屋", voice: 13, pitch: 0.07, item: hat}
+    - {id: shokan, label: "商館の人", voice: 12, pitch: 0.09}
+    - {id: taichi, label: "中山太一", voice: 13, pitch: -0.11, item: book}
+    - {id: shain, label: "従業員", voice: 12, pitch: -0.06}
+    - {id: kouin, label: "工員", voice: 42}
+scenes:
+  - id: hook
+    title: ""
+    background: il_sp_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "シャープって、会社の名前だと思ってる？"
+      - speaker: zundamon
+        emotion: normal
+        text: "思ってるのだ。テレビとか、電卓とかの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先に商品があったの。それがシャープペンシル。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……えっ。会社が先じゃないのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作った人はね。その商品も、工場も、家族も、いっぺんに失ってる。"
+        telops:
+          - {text: "シャープは、商品名が先", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A3A", glow: "#2A9AD8", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "情緒どうなってんの。重い話が急に来たぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その話をする前に。ずんだもん、それ何本目？"
+      - speaker: zundamon
+        emotion: happy
+        text: "シャーペンの芯なのだ。今ので7本目。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "7本。折りすぎでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは芯を長く出す派なのだ。そういう界隈があるんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "どのくらい出すの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "1センチなのだ。攻めの筆記なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "攻めた結果が、7本折れてるんだけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かった。今日は短くするのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、えらい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから今、芯をぜんぶ引っ込めたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それだと書けないよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あ。じゃあ出すのだ。カチカチカチカチ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "出しすぎ。全部出てきてる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "床に落ちたのだ。8本目。完全に詰んだぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その、押すと芯が出てくる仕組みね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。当たり前すぎて、考えたこともないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当たり前になるまでに、100年以上かかってるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "100年！？ たかが鉛筆にか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今の形にしたのは、日本の職人だよ。1915年。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "日本！？ ファッ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そのとき21歳。工場は、自分ひとりで建てたばかり。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……21歳で工場。経歴がバグってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ただ、そこに行くまでが長いの。学校に通えてないから。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。学校、行ってないのか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。8歳で奉公に出てる。手を引いてくれた人がいてね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……聞くのだ。"
+      - speaker: reimu
+        text: "シャープペンシル。押すと芯が出てくる、あの鉛筆です。"
+        reading: "しゃーぷぺんしる。おすとしんがでてくる、あのえんぴつです。"
+      - speaker: reimu
+        text: "作ったのは、東京の下町で育った職人でした。"
+        reading: "つくったのわ、とうきょうのしたまちでそだったしょくにんでした。"
+      - speaker: reimu
+        text: "物語は、1893年の日本橋から始まります。"
+        reading: "ものがたりわ、せんはっぴゃくきゅうじゅうさんねんのにほんばしからはじまります。"
+  - id: deno
+    title: "1893・もらわれた子"
+    background: il_sp_deno
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true, scale: 0.75}
+      - {who: youbo, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1893年11月3日、東京市日本橋区に早川徳次が生まれます。"
+        reading: "せんはっぴゃくきゅうじゅうさんねんじゅういちがつみっか、とうきょうしにほんばしくにはやかわとくじがうまれます。"
+      - speaker: reimu
+        text: "早川家の三男で、上に兄が二人いました。"
+        reading: "はやかわけのさんなんで、うえにあにがふたりいました。"
+      - speaker: reimu
+        text: "生後1年11か月で、出野という家の養子になります。"
+        reading: "せいごいちねんじゅういっかげつで、でのというええのようしになります。"
+      - speaker: youbo
+        emotion: normal
+        text: "[徳次|とくじ]。その箱、まだ終わってないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あと10個です。"
+      - speaker: youbo
+        emotion: angry
+        text: "終わるまで、ごはんはなし。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……はい。"
+      - speaker: reimu
+        text: "継養母は徳次に厳しく当たり、食事も満足に与えませんでした。"
+        reading: "けいようぼわとくじにきびしくあたり、しょくじもまんぞくにあたえませんでした。"
+      - speaker: youbo
+        emotion: normal
+        text: "うちは、あんたを食べさせてやってるんだからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: youbo
+        emotion: normal
+        text: "学校？ そんな[暇|ひま]があったら、手を動かしな。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……はい。"
+      - speaker: reimu
+        text: "近所の子が学校へ通う時間、徳次は内職をしていました。"
+        reading: "きんじょのこががっこうえかようじかん、とくじわないしょくをしていました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……箱を100個折ると、指の腹が固くなるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "固くなると、紙で切れなくなる。得したのかな。"
+      - speaker: reimu
+        text: "この家に、徳次の味方はいませんでした。"
+        reading: "このいえに、とくじのみかたわいませんでした。"
+  - id: inoue
+    title: "手を引いた人"
+    background: il_sp_michi
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true, scale: 0.75}
+      - {who: inoue, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "近所に、目の不自由な井上という女性が住んでいました。"
+        reading: "きんじょに、めのふじゆうないのうえというじょせいがすんでいました。"
+      - speaker: inoue
+        emotion: normal
+        text: "そこにいるのは、[徳次|とくじ]ちゃんかい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……はい。なんで分かるんですか。"
+      - speaker: inoue
+        emotion: happy
+        text: "足の音。あんたの歩き方は、いつも急いでる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……怒られるから、急いでるんです。"
+      - speaker: inoue
+        emotion: normal
+        text: "今日も学校は行ってないのかい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……はい。"
+      - speaker: inoue
+        emotion: normal
+        text: "手を出してごらん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "手、ですか。"
+      - speaker: inoue
+        emotion: normal
+        text: "……固いね。まだ小さい手なのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……箱を折ってるので。"
+      - speaker: inoue
+        emotion: normal
+        text: "この子は、字を習うより先に、手を覚えたほうがいい。"
+      - speaker: reimu
+        text: "井上は、出野家に一つの提案をします。"
+        reading: "いのうえわ、でのけにひとつのていあんをします。"
+      - speaker: reimu
+        text: "学校に行かせないなら、手に職をつけさせてやってくれ、と。"
+        reading: "がっこうにいかせないなら、てにしょくをつけさせてやってくれと。"
+      - speaker: inoue
+        emotion: normal
+        text: "知り合いに、[錺屋|かざりや]の親方がいるんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……かざりや。"
+      - speaker: inoue
+        emotion: normal
+        text: "金物に細工をする仕事。ちゃんと覚えれば、食っていける。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクに、できますか。"
+      - speaker: inoue
+        emotion: happy
+        text: "分からないよ。でも、ここにいるよりはいい。"
+      - speaker: inoue
+        emotion: normal
+        text: "さ、行こうか。手を貸しな。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……え。今からですか。"
+      - speaker: inoue
+        emotion: normal
+        text: "今からだよ。明日にしたら、明日にはならない。"
+      - speaker: reimu
+        text: "1901年9月15日。徳次は出野家を出ました。"
+        reading: "せんきゅうひゃくいちねんくがつじゅうごにち。とくじわでのけをでました。"
+      - speaker: reimu
+        text: "目の見えない女性が、7歳の子の手を引いて歩きます。"
+        reading: "めのみえないじょせいが、ななさいのこのてをひいてあるきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[井上|いのうえ]さん。道、分かるんですか。"
+      - speaker: inoue
+        emotion: happy
+        text: "何十年も歩いた道だよ。目より足が覚えてる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……遠いですか。"
+      - speaker: inoue
+        emotion: normal
+        text: "1時間くらいかね。まあ、話しながら行けばすぐだよ。"
+      - speaker: reimu
+        text: "本所まで、およそ1時間。二人は歩いて行きました。"
+        reading: "ほんじょまで、およそいちじかん。ふたりわあるいていきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あの。ひとつ聞いていいですか。"
+      - speaker: inoue
+        emotion: normal
+        text: "なんだい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんで、ボクなんですか。"
+      - speaker: inoue
+        emotion: normal
+        text: "……さあね。急いで歩く音が、気になっただけだよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……それだけで。"
+      - speaker: inoue
+        emotion: happy
+        text: "それだけで十分だろ。ほら、手が離れる。"
+      - speaker: reimu
+        text: "徳次は後年まで、この手の温かさを覚えていたといいます。"
+        reading: "とくじわこうねんまで、このてのあたたかさをおぼえていたといいます。"
+  - id: kazariya
+    title: "7年7か月"
+    background: il_sp_kazariya
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true, scale: 0.8}
+      - {who: sakata, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "奉公先は、本所の錺屋でした。"
+        reading: "ほうこうさきわ、ほんじょのかざりやでした。"
+      - speaker: reimu
+        text: "親方の名は、坂田芳松といいます。"
+        reading: "おやかたのなわ、さかたよしまつといいます。"
+      - speaker: sakata
+        emotion: normal
+        text: "おい、小僧。まず床を掃け。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。……あの、細工は。"
+      - speaker: sakata
+        emotion: angry
+        text: "3年早い。"
+      - speaker: zundamon
+        emotion: sad
+        text: "3年。……チュートリアルが長すぎるのだ。"
+      - speaker: sakata
+        emotion: normal
+        text: "床が読めない奴に、金物は読めん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……床を、読む。"
+      - speaker: reimu
+        text: "当時の職人の世界に、教科書はありません。"
+        reading: "とうじのしょくにんのせかいに、きょうかしょわありません。"
+      - speaker: reimu
+        text: "手元を見て盗み、手が覚えるまで繰り返すだけでした。"
+        reading: "てもとをみてぬすみ、てがおぼえるまでくりかえすだけでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "親方。今日の削り、見てもらえますか。"
+      - speaker: sakata
+        emotion: normal
+        text: "……ふん。角が甘い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。もう一回やります。"
+      - speaker: sakata
+        emotion: surprised
+        text: "おい。もう夜中だぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "夜中のほうが、静かでよく見えるのだ。"
+      - speaker: sakata
+        emotion: thinking
+        text: "……変な小僧だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ここを追い出されたら、帰る家がないんです。"
+      - speaker: sakata
+        emotion: sad
+        text: "……そうか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから、フルコミットします。"
+      - speaker: sakata
+        emotion: normal
+        text: "働くのはいい。だが、目も休めろ。"
+      - speaker: reimu
+        text: "1909年4月15日。7年7か月の年季を勤め上げました。"
+        reading: "せんきゅうひゃくくねんしがつじゅうごにち。ななねんななかげつのねんきをつとめあげました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "親方。長いあいだ、ありがとうございました。"
+      - speaker: sakata
+        emotion: normal
+        text: "……おい、[徳次|とくじ]。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: sakata
+        emotion: normal
+        text: "お前の手は、もう俺のより速い。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……そんなことは。"
+      - speaker: sakata
+        emotion: happy
+        text: "速いだけだ。深さはこれからだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……最後の最後まで、塩対応なのだ。"
+  - id: tokubijo
+    title: "1912・穴を開けない留め具"
+    background: il_sp_kazariya
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: masaji, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1912年。徳次は一つの金具を考えます。"
+        reading: "せんきゅうひゃくじゅうにねん。とくじわひとつのかなぐをかんがえます。"
+      - speaker: masaji
+        emotion: normal
+        text: "[徳次|とくじ]。何をにらんでるんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ベルトなのだ。兄さん、これ変じゃないか。"
+      - speaker: masaji
+        emotion: surprised
+        text: "変？ 普通のベルトだろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "穴が5つしかないのだ。太ったら人生オワタだぞ。"
+      - speaker: masaji
+        emotion: happy
+        text: "……そりゃそうだけど。穴を足せばいいだろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "足したら、革が弱くなる。そこから切れるのだ。"
+      - speaker: masaji
+        emotion: thinking
+        text: "……言われてみれば。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから、穴を開けずに留めるのだ。"
+      - speaker: masaji
+        emotion: surprised
+        text: "[は|はぁ]？ どうやって。"
+      - speaker: zundamon
+        emotion: normal
+        text: "金具のほうで、革をはさむのだ。"
+      - speaker: reimu
+        text: "ベルトに穴を開けずに使える留め具。徳尾錠と名づけました。"
+        reading: "べるとにあなをあけずにつかえるとめぐ。とくびじょうとなづけました。"
+      - speaker: reimu
+        text: "登録実用新案、第25356号です。"
+        reading: "とうろくじつようしんあん、だいにまんごせんさんびゃくごじゅうろくごうです。"
+      - speaker: masaji
+        emotion: normal
+        text: "で、売れるのか、これ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分からないのだ。持っていってみるぞ。"
+      - speaker: masaji
+        emotion: surprised
+        text: "……[徳次|とくじ]、戻ってきた。どうだった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……兄さん。落ち着いて聞いてほしいのだ。"
+      - speaker: masaji
+        emotion: thinking
+        text: "断られたか。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "33グロス。"
+      - speaker: masaji
+        emotion: surprised
+        text: "……グロス？ それ、いくつだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "1グロスが144個。33グロスで、4752個なのだ。"
+        telops:
+          - {text: "いきなり4752個", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A3A", glow: "#2A9AD8", anim: up}
+      - speaker: masaji
+        emotion: surprised
+        text: "よ、4752！？ 無理ゲーだろ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "作るのだ。というか、もう受けてきたぞ。"
+      - speaker: masaji
+        emotion: angry
+        text: "受けてから相談するな！"
+      - speaker: reimu
+        text: "この受注を元手に、徳次は独立します。18歳でした。"
+        reading: "このじゅちゅうをもとでに、とくじわどくりつします。じゅうはっさいでした。"
+  - id: kuridashi
+    title: "1915・折れない鉛筆を"
+    background: il_sp_kojo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: masaji, x: 0.72}
+    cuts:
+      - speaker: masaji
+        emotion: normal
+        text: "[徳次|とくじ]。妙な仕事を持ってきたぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんだ。"
+      - speaker: masaji
+        emotion: normal
+        text: "繰出鉛筆っていうやつの、部品。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……繰出鉛筆。芯が出てくるやつか。"
+      - speaker: masaji
+        emotion: normal
+        text: "そう。外国から入ってきてる。これがその現物。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……兄さん。これ、割れてるぞ。"
+      - speaker: masaji
+        emotion: sad
+        text: "うん。うちに来る前から割れてた。"
+      - speaker: reimu
+        text: "当時の繰出鉛筆は、セルロイドで作られていました。"
+        reading: "とうじのくりだしえんぴつわ、せるろいどでつくられていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "セルロイドは軽いけど、粘りがないのだ。"
+      - speaker: masaji
+        emotion: normal
+        text: "落とすと割れる。ねじると割れる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……というか、そもそも精度が出ないぞ。"
+      - speaker: masaji
+        emotion: surprised
+        text: "精度？"
+      - speaker: zundamon
+        emotion: normal
+        text: "中でネジを回して芯を送るのだ。ネジがゆがんだら終わりだぞ。"
+      - speaker: reimu
+        text: "芯を送り出すのは、中に入った細いネジの仕組みでした。"
+        reading: "しんをおくりだすのわ、なかにはいったほそいねじのしくみでした。"
+      - speaker: masaji
+        emotion: normal
+        text: "じゃあ、どうするんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "金属で作るのだ。"
+      - speaker: masaji
+        emotion: surprised
+        se: don
+        text: "金属！？ 鉛筆をか？"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。ボク、金物ならガチ勢だぞ。7年やってる。"
+      - speaker: masaji
+        emotion: thinking
+        text: "……たしかに、そこは本職か。"
+      - speaker: reimu
+        text: "1915年、徳次は早川姓に復籍します。"
+        reading: "せんきゅうひゃくじゅうごねん、とくじわはやかわせいにふくせきします。"
+      - speaker: reimu
+        text: "そして早川式繰出鉛筆を出願しました。"
+        reading: "そしてはやかわしきくりだしえんぴつをしゅつがんしました。"
+      - speaker: reimu
+        text: "特許が下りるのは1920年のことです。"
+        reading: "とっきょがおりるのわせんきゅうひゃくにじゅうねんのことです。"
+  - id: shikumi
+    title: "なぜ金属でなければ"
+    background: il_sp_kojo
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: masaji, x: 0.72}
+    cuts:
+      - speaker: masaji
+        emotion: normal
+        text: "[徳次|とくじ]。今北産業でいいから説明してくれ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いいのだ。中身は3つしかないぞ。"
+      - speaker: masaji
+        emotion: normal
+        text: "3つ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "芯を入れる筒。芯をつかむ口。そして、送るネジ。"
+      - speaker: masaji
+        emotion: thinking
+        text: "……そのネジが、芯を押すのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "押すのだ。回すと、少しずつ前に出るぞ。"
+      - speaker: masaji
+        emotion: normal
+        text: "少しずつ、ってどのくらいだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "髪の毛より細い差なのだ。そこがいちばん難しいぞ。"
+      - speaker: masaji
+        emotion: surprised
+        text: "髪の毛。"
+      - speaker: zundamon
+        emotion: normal
+        text: "出すぎたら折れる。出なかったら書けない。"
+      - speaker: masaji
+        emotion: thinking
+        text: "……ちょうどの一点しかないのか。無理ゲーだろ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。だから、精度がすべてなんだ。"
+      - speaker: reimu
+        text: "芯を送る量は、わずかな誤差でも書けなくなります。"
+        reading: "しんをおくるりょうわ、わずかなごさでもかけなくなります。"
+      - speaker: masaji
+        emotion: normal
+        text: "で、なんでセルロイドじゃだめなんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "型で抜くと、どうしても寸法がばらつくのだ。"
+      - speaker: masaji
+        emotion: normal
+        text: "……ばらつくと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ネジが噛まない。噛まないと、芯が出ないのだ。"
+      - speaker: masaji
+        emotion: surprised
+        text: "じゃあ、金属だと。"
+      - speaker: zundamon
+        emotion: happy
+        text: "削れるのだ。削れるってことは、直せるってことだぞ。"
+      - speaker: reimu
+        text: "金属は削って寸法を合わせられます。これが分かれ目でした。"
+        reading: "きんぞくわけずってすんぽうをあわせられます。これがわかれめでした。"
+      - speaker: masaji
+        emotion: thinking
+        text: "……[錺屋|かざりや]で7年やった意味が、ここで出るのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "床を掃いてた3年も、たぶん入ってるのだ。"
+      - speaker: masaji
+        emotion: happy
+        text: "そこは入ってないだろ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "入ってるのだ。あれもレベル上げなんだ。"
+  - id: urenai
+    title: "和服には向かない"
+    background: il_sp_tenpo
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: tonya, x: 0.72}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "これが、[早川|はやかわ]式繰出鉛筆なのだ。"
+      - speaker: tonya
+        emotion: normal
+        text: "……ふうん。金属ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。割れないし、寸法が狂わない。壊れ性能ですよ。"
+      - speaker: tonya
+        emotion: normal
+        text: "[早川|はやかわ]さん。これ、和服には向かないね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……和服。"
+      - speaker: tonya
+        emotion: normal
+        text: "うちのお客は、みんな着物だよ。懐に入れるんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "入りますよ。細いですし。"
+      - speaker: tonya
+        emotion: normal
+        text: "冷たいだろ、金属は。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……冷たい、が理由ですか。"
+      - speaker: tonya
+        emotion: normal
+        text: "理由だよ。懐に冷たいものは入れたくない。"
+      - speaker: reimu
+        text: "文具問屋の評判は芳しくなく、まったく売れませんでした。"
+        reading: "ぶんぐどんやのひょうばんわかんばしくなく、まったくうれませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……1本も、ですか。"
+      - speaker: tonya
+        emotion: normal
+        text: "置いてはおくよ。売れるとは言ってない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[塩対応|しおたいおう]がすぎるのだ。"
+      - speaker: tonya
+        emotion: happy
+        text: "商売だからね。売れないものは、売れない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ひとつ聞いていいですか。"
+      - speaker: tonya
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "使ってから、だめだと言われたんですか。"
+      - speaker: tonya
+        emotion: surprised
+        text: "……いや。見ただけだけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、ひと月だけ使ってください。それでだめなら諦めます。"
+      - speaker: tonya
+        emotion: thinking
+        text: "……変な人だね、あんた。"
+      - speaker: reimu
+        text: "それでも、注文は来ませんでした。在庫だけが増えていきます。"
+        reading: "それでも、ちゅうもんわきませんでした。ざいこだけがふえていきます。"
+  - id: yokohama
+    title: "海の向こうから"
+    background: il_sp_yokohama
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: shokan, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1914年に始まった第一次世界大戦が、流れを変えます。"
+        reading: "せんきゅうひゃくじゅうよねんにはじまっただいいちじせかいたいせんが、ながれをかえます。"
+      - speaker: reimu
+        text: "ヨーロッパの工場が止まり、欧米で文具が品薄になったのです。"
+        reading: "よーろっぱのこうじょうがとまり、おうべいでぶんぐがしなうすになったのです。"
+      - speaker: shokan
+        emotion: normal
+        text: "[早川|はやかわ]さん、でしたか。横浜の商館の者です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……横浜。うちに、何の用ですか。"
+      - speaker: shokan
+        emotion: happy
+        text: "金属の繰出鉛筆を作ってると聞きまして。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作ってます。売れてませんけど。"
+      - speaker: shokan
+        emotion: normal
+        text: "国内は、ね。外は違いますよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……外。"
+      - speaker: shokan
+        emotion: normal
+        text: "向こうは今、鉛筆一本が手に入らない。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……えっ。戦争でですか。"
+      - speaker: shokan
+        emotion: normal
+        text: "そうです。作る国が、作れなくなってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それで、うちの。"
+      - speaker: shokan
+        emotion: happy
+        text: "金属なら、船で運んでも割れない。ここが大きい。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……あ。"
+      - speaker: reimu
+        text: "割れないという性質が、海を渡る商品として効きました。"
+        reading: "われないというせいしつが、うみをわたるしょうひんとしてききました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……冷たいから売れない、と言われたやつが。"
+      - speaker: shokan
+        emotion: normal
+        text: "冷たい？ 向こうは洋服ですから、関係ないですよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……関係、ない。"
+      - speaker: shokan
+        emotion: happy
+        text: "それで、いくつ作れます？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……いくつ、要りますか。"
+      - speaker: shokan
+        emotion: happy
+        text: "作れるだけ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "作れるだけ！？ 発注がバグってるのだ！"
+      - speaker: reimu
+        text: "海外での評価が伝わると、国内からも注文が殺到しました。"
+        reading: "かいがいでのひょうかがつたわると、こくないからもちゅうもんがさっとうしました。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……国内の問屋、手のひら返すのが早すぎるのだ。"
+      - speaker: shokan
+        emotion: happy
+        text: "そういうものですよ。誰かが認めるまで、誰も認めない。"
+  - id: kaimei
+    title: "1916・名前を変える"
+    background: il_sp_kojo
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: masaji, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1916年、芯をさらに細くした改良品を出します。"
+        reading: "せんきゅうひゃくじゅうろくねん、しんをさらにほそくしたかいりょうひんをだします。"
+      - speaker: masaji
+        emotion: normal
+        text: "[徳次|とくじ]。関西の代理店から言われたぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんだ。"
+      - speaker: masaji
+        emotion: normal
+        text: "[早川|はやかわ]式繰出鉛筆っていう名前、硬すぎるって。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……硬いか？ 中身そのままなのだ。"
+      - speaker: masaji
+        emotion: happy
+        text: "そのままだから硬いんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、なんて呼ぶんだ。"
+      - speaker: masaji
+        emotion: normal
+        text: "エバー・レディ・シャープ・ペンシル。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……長いのだ。さっきより長いぞ。"
+      - speaker: masaji
+        emotion: happy
+        text: "でも、意味が入ってる。いつでも、とがってる鉛筆。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……いつでも、とがってる。名づけの有識者なのだ。"
+      - speaker: reimu
+        text: "エバー・レディ・シャープ・ペンシル。この名がのちに残ります。"
+        reading: "えばーれでぃしゃーぷぺんしる。このながのちにのこります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……悪くないのだ。削らなくていい鉛筆、って伝わるぞ。"
+      - speaker: masaji
+        emotion: normal
+        text: "そこなんだよ。削らなくていい、が売りだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "小刀を持ち歩かなくていいのだ。QOL爆上がりだぞ。"
+      - speaker: masaji
+        emotion: happy
+        text: "手も汚れない。着物も汚れない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……和服に向かない、って言われたやつが。"
+      - speaker: masaji
+        emotion: happy
+        text: "いちばん和服の役に立ってるな。"
+      - speaker: reimu
+        text: "工場は大きくなり、従業員は200人を超えました。"
+        reading: "こうじょうわおおきくなり、じゅうぎょういんわにひゃくにんをこえました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……200人。"
+      - speaker: masaji
+        emotion: normal
+        text: "8歳で奉公に出た子が、200人を食わせてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[井上|いのうえ]さんに、見せたかったのだ。"
+      - speaker: masaji
+        emotion: sad
+        text: "……そうだな。"
+  - id: kazoku
+    title: "早川家の夕方"
+    background: il_sp_jitaku
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "文子"}
+    cuts:
+      - speaker: reimu
+        text: "徳次は結婚し、二人の子に恵まれていました。"
+        reading: "とくじわけっこんし、ふたりのこにめぐまれていました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなた。今日は早いのね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "[文子|ふみこ]。今日は帰ると決めてたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "決めないと帰れないの、変だと思わない？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……言われてみると、変だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "上の子、また学校で自慢したみたい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "何をだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うちのお父さんは、削らない鉛筆を作った人だって。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……ちょっと、うれしいのだ。親バカ不可避だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもね。友だちに、削らないと書けないって言われて。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "本物を持っていって、その場で書いてみせたって。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "……実演販売なのだ。ボクの子だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "下の子は、机の下でずっと分解してた。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "分解！？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ネジのところ、上手に外してたわよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……それ、いちばん外しちゃいけないところなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そっくりね、あなたに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[文子|ふみこ]。ひとつ、言っていいか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なあに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、子どものころ、家に帰るのが嫌だったのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……うん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今は、帰るのが楽しみなんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……じゃあ、もっと早く帰ってきてね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "善処するのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ、帰ってこない人の言い方。"
+      - speaker: reimu
+        text: "1923年の夏。早川家は、静かに幸せでした。"
+        reading: "せんきゅうひゃくにじゅうさんねんのなつ。はやかわけわ、しずかにしあわせでした。"
+  - id: shinsai
+    title: "1923年9月1日"
+    background: il_sp_shinsai
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: shain, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1923年9月1日、午前11時58分。関東大震災が起きます。"
+        reading: "せんきゅうひゃくにじゅうさんねんくがつついたち、ごぜんじゅういちじごじゅうはっぷん。かんとうだいしんさいがおきます。"
+      - speaker: shain
+        emotion: surprised
+        se: don
+        text: "社長！ 天井が落ちます！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "外へ！ 全員、外へ出るのだ！"
+      - speaker: shain
+        emotion: surprised
+        text: "機械が！"
+      - speaker: zundamon
+        emotion: angry
+        text: "置いていけ！ 人が先だ！"
+      - speaker: reimu
+        text: "昼どきの火が各所から燃え広がり、下町は火の海になりました。"
+        reading: "ひるどきのひがかくしょからもえひろがり、したまちわひのうみになりました。"
+      - speaker: shain
+        emotion: sad
+        text: "……社長。工場が。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……見なくていい。"
+      - speaker: shain
+        emotion: normal
+        text: "でも、あれだけの機械が。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械は作れる。今は、みんなを数えるのだ。"
+      - speaker: reimu
+        text: "徳次自身も大やけどを負い、煙を吸って倒れています。"
+        reading: "とくじじしんもおおやけどをおい、けむりをすってたおれています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……[文子|ふみこ]たちは。家のほうへ行った者はいるか。"
+      - speaker: shain
+        emotion: sad
+        text: "……分かりません。道が、通れなくて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクが行く。"
+      - speaker: shain
+        emotion: surprised
+        text: "社長、その体では！"
+      - speaker: zundamon
+        emotion: normal
+        text: "……行くのだ。"
+  - id: kawa
+    title: ""
+    background: il_sp_kawa
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "文子"}
+    cuts:
+      - speaker: reimu
+        text: "文子は、二人の子を連れて避難していました。"
+        reading: "ふみこわ、ふたりのこをつれてひなんしていました。"
+      - speaker: reimu
+        text: "上の子は9歳、下の子は7歳でした。"
+        reading: "うえのこわきゅうさい、したのこわななさいでした。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "こっち！ 手を離さないで！"
+      - speaker: reimu
+        text: "しかし逃げる先々で火に囲まれ、川へ追い込まれます。"
+        reading: "しかしにげるさきざきでひにかこまれ、かわえおいこまれます。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……ごめんね。もう、こっちしかないの。"
+      - speaker: reimu
+        text: "三人は川へ飛び込みました。"
+        reading: "さんにんわかわえとびこみました。"
+      - speaker: reimu
+        text: "二人の子は、助かりませんでした。"
+        reading: "ふたりのこわ、たすかりませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……[文子|ふみこ]。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……あなた。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……子どもたちは。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……手を、離してしまったの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……ごめんなさい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "謝るな。……謝ることじゃない。"
+      - speaker: reimu
+        text: "文子はやけどを負いながらも、いったんは助け出されます。"
+        reading: "ふみこわやけどをおいながらも、いったんわたすけだされます。"
+  - id: fumiko
+    title: "二か月"
+    background: il_sp_jitaku
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "文子"}
+    cuts:
+      - speaker: tsumugi
+        emotion: sad
+        text: "……あなた。工場は、どうなったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……今はいい。[文子|ふみこ]が治るのが先だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ずっと、うそが下手ね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……全部、焼けたのね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……うん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あなたなら、また作れる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……作って、どうするんだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……え。"
+      - speaker: zundamon
+        emotion: sad
+        text: "誰に見せるんだ。誰が、うれしがってくれるんだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……あのね。あの子が、学校で自慢したでしょう。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……削らない鉛筆の話か。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あれ、うちの子だけじゃないと思うの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……どういう意味だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どこかの家にも、同じことを言ってる子がいる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "だから、作って。その子たちのために。"
+      - speaker: reimu
+        text: "文子は、震災からおよそ二か月後に亡くなりました。"
+        reading: "ふみこわ、しんさいからおよそにかげつごになくなりました。"
+      - speaker: reimu
+        text: "徳次のもとに残ったのは、二万円の借金だけでした。"
+        reading: "とくじのもとにのこったのわ、にまんえんのしゃっきんだけでした。"
+  - id: shakkin
+    title: "残ったのは借金だけ"
+    background: il_sp_shinsai
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: masaji, x: 0.72}
+    cuts:
+      - speaker: masaji
+        emotion: sad
+        text: "[徳次|とくじ]。……数えたぞ。二万だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……うん。"
+      - speaker: masaji
+        emotion: normal
+        text: "工場も機械も焼けた。返す当てがない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ひとつだけ、焼けなかったものがあるのだ。"
+      - speaker: masaji
+        emotion: surprised
+        text: "なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "特許なのだ。紙は焼けても、権利は残ってる。"
+      - speaker: masaji
+        emotion: happy
+        text: "……そうか！ それを担保に借りれば。"
+      - speaker: zundamon
+        emotion: normal
+        text: "違うのだ、兄さん。売るんじゃない。"
+      - speaker: masaji
+        emotion: surprised
+        text: "……じゃあ、どうする。"
+      - speaker: zundamon
+        emotion: normal
+        text: "使ってもらうのだ。無償で。"
+      - speaker: masaji
+        emotion: angry
+        se: don
+        text: "無償！？ ただでか！"
+      - speaker: zundamon
+        emotion: normal
+        text: "そのかわり、借金を消してもらう。"
+      - speaker: masaji
+        emotion: angry
+        text: "待て。48件だぞ。あれ全部、お前が一人で取ったやつだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "知ってるのだ。全部覚えてるぞ。"
+      - speaker: masaji
+        emotion: sad
+        text: "……それを、手放すのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手元に置いても、作る工場がないのだ。"
+      - speaker: masaji
+        emotion: sad
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰かが作れば、あの鉛筆は世の中に残るぞ。"
+      - speaker: reimu
+        text: "徳次が持っていたシャープペンシル関連の特許は、48種類ありました。"
+        reading: "とくじがもっていたしゃーぷぺんしるかんれんのとっきょわ、よんじゅうはっしゅるいありました。"
+  - id: osaka_kouzo
+    title: "大阪へ"
+    background: il_sp_tenpo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: taichi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1923年11月、徳次は大阪の日本文具製造を訪ねます。"
+        reading: "せんきゅうひゃくにじゅうさんねんじゅういちがつ、とくじわおおさかのにほんぶんぐせいぞうをたずねます。"
+      - speaker: reimu
+        text: "社長の中山豊三と、親会社の社長である中山太一に会いました。"
+        reading: "しゃちょうのなかやまとよぞうと、おやがいしゃのしゃちょうであるなかやまたいちにあいました。"
+      - speaker: taichi
+        emotion: normal
+        text: "東京から、その体で来られたんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: taichi
+        emotion: normal
+        text: "で、ご用件は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "シャープペンシルの特許を、無償で使っていただきたいのです。"
+      - speaker: taichi
+        emotion: surprised
+        text: "……無償。何かの間違いでは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "間違いではありません。48種類、全部です。"
+      - speaker: taichi
+        emotion: thinking
+        text: "……条件は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "借金を、消していただきたい。二万円あります。"
+      - speaker: taichi
+        emotion: normal
+        text: "それだけですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あと、しばらく私に技術を教えさせてください。"
+      - speaker: taichi
+        emotion: surprised
+        text: "教える、ほうを。"
+      - speaker: zundamon
+        emotion: normal
+        text: "図面だけ渡しても、あの精度は出ません。"
+      - speaker: reimu
+        text: "機械類は二万二千円相当で譲渡し、特許は無償で使わせる。"
+        reading: "きかいるいわにまんにせんえんそうとうでじょうとし、とっきょわむしょうでつかわせる。"
+      - speaker: reimu
+        text: "そのうえで大阪に残り、技術を伝える。それが合意でした。"
+        reading: "そのうえでおおさかにのこり、ぎじゅつをつたえる。それがごういでした。"
+      - speaker: taichi
+        emotion: normal
+        text: "[早川|はやかわ]さん。ひとつ、聞いてもいいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: taichi
+        emotion: normal
+        text: "惜しくないんですか。あなたが作ったものでしょう。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……惜しいです。"
+      - speaker: taichi
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、持っていても、もう誰も削らずに書けません。"
+      - speaker: taichi
+        emotion: thinking
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "使ってもらったほうが、あれのためになります。"
+      - speaker: taichi
+        emotion: normal
+        text: "……分かりました。お引き受けします。"
+  - id: yakosha
+    title: "焼け跡を見ながら"
+    background: il_sp_yakosha
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.42, tag: "徳次"}
+    cuts:
+      - speaker: reimu
+        text: "東京を離れる夜、徳次は夜行列車に乗りました。"
+        reading: "とうきょうをはなれるよる、とくじわやこうれっしゃにのりました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……新橋の近くだ。"
+      - speaker: reimu
+        text: "本人は後年、この夜のことをこう書き残しています。"
+        reading: "ほんにんわこうねん、このよるのことをこうかきのこしています。"
+      - speaker: reimu
+        text: "あちらこちらと焼けた建物の跡が、黒く横たわっていた。"
+        reading: "あちらこちらとやけたたてもののあとが、くろくよこたわっていた。"
+      - speaker: reimu
+        text: "夜の孤灯の影に、それを見るともなく見ていた、と。"
+        reading: "よるのことうのかげに、それをみるともなくみていたと。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……ここに、工場があったのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……あの角を曲がると、家だったのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[文子|ふみこ]。ボク、大阪に行くぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "教えてこいって言われた仕事を、ちゃんとやってくる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それが終わったら、何をするかな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……分からないのだ。今は、何も浮かばないぞ。"
+      - speaker: reimu
+        text: "大阪へ向かったとき、徳次は二十九歳でした。"
+        reading: "おおさかえむかったとき、とくじわにじゅうきゅうさいでした。"
+  - id: saiki
+    title: "1924・机が三つ"
+    background: il_sp_osaka
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: shain, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1924年8月、契約を満了して日本文具製造を退社します。"
+        reading: "せんきゅうひゃくにじゅうよねんはちがつ、けいやくをまんりょうしてにほんぶんぐせいぞうをたいしゃします。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。東京から、三人来ました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……三人？ なんで来たのだ。"
+      - speaker: shain
+        emotion: happy
+        text: "なんでって。社長が大阪だからです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……給料、出せるか分からないぞ。"
+      - speaker: shain
+        emotion: happy
+        text: "知ってます。それでも来ました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: shain
+        emotion: normal
+        text: "社長、机はどうします。三つでいいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……四つなのだ。ボクの分も要るぞ。"
+      - speaker: shain
+        emotion: happy
+        text: "そうでした。"
+      - speaker: reimu
+        text: "1924年9月1日。震災からちょうど一年後のことです。"
+        reading: "せんきゅうひゃくにじゅうよねんくがつついたち。しんさいからちょうどいちねんごのことです。"
+      - speaker: reimu
+        text: "大阪に、早川金属工業研究所が生まれました。"
+        reading: "おおさかに、はやかわきんぞくこうぎょうけんきゅうじょがうまれました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……日にちは、今日にしたのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "9月1日。……去年の。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。忘れないように、同じ日にしたぞ。"
+      - speaker: shain
+        emotion: sad
+        text: "……はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "で、最初の仕事はなんだ。"
+      - speaker: shain
+        emotion: normal
+        text: "……下請けです。金属の部品を、言われたとおりに作る。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いいのだ。むしろ初期装備に戻っただけだぞ。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。もう自分の商品は、作らないんですか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……作るのだ。ただ、鉛筆はもうやらない。"
+      - speaker: shain
+        emotion: surprised
+        text: "……なんでですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれは、もう大阪の人の商品なのだ。"
+      - speaker: reimu
+        text: "譲った特許は、契約どおり相手の手で作られ続けました。"
+        reading: "ゆずったとっきょわ、けいやくどおりあいてのてでつくられつづけました。"
+  - id: radio
+    title: "これからはラジオの時代だ"
+    background: il_sp_radio
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: shain, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1925年、日本でラジオ放送が始まろうとしていました。"
+        reading: "せんきゅうひゃくにじゅうごねん、にほんでらじおほうそうがはじまろうとしていました。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "……これからは、ラジオの時代だ。"
+        telops:
+          - {text: "これからはラジオの時代だ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A3A", glow: "#2A9AD8", anim: up}
+      - speaker: shain
+        emotion: surprised
+        text: "社長。うち、金属屋ですよ。急展開すぎます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "知ってるのだ。だから作れるぞ。"
+      - speaker: shain
+        emotion: thinking
+        text: "……ラジオって、金属なんですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "外側は金属なのだ。中は、線と[鉱石|こうせき]だ。"
+      - speaker: shain
+        emotion: normal
+        text: "こうせき。石ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "石なのだ。特定の石に針を当てると、電波が音になるぞ。"
+      - speaker: reimu
+        text: "鉱石ラジオは、電池を使わずに音を出す受信機です。"
+        reading: "こうせきらじおわ、でんちをつかわずにおとをだすじゅしんきです。"
+      - speaker: shain
+        emotion: surprised
+        text: "電池なしで鳴るんですか。ファッ！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "電波そのものが、わずかな力を持ってるのだ。"
+      - speaker: shain
+        emotion: normal
+        text: "でも社長、うちに設計できる人が。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いないのだ。だから、買ってきて全部ばらすぞ。"
+      - speaker: shain
+        emotion: surprised
+        text: "ばらす！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "ばらして、寸法を測って、同じものを作るのだ。"
+      - speaker: shain
+        emotion: thinking
+        text: "……[錺屋|かざりや]のやり方ですね、それ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。手で覚えるしかないぞ。"
+      - speaker: reimu
+        text: "1925年4月、国産第1号の鉱石ラジオ受信機が完成します。"
+        reading: "せんきゅうひゃくにじゅうごねんしがつ、こくさんだいいちごうのこうせきらじおじゅしんきがかんせいします。"
+      - speaker: shain
+        emotion: surprised
+        text: "……社長、鳴りました。鳴ってます！"
+      - speaker: zundamon
+        emotion: happy
+        text: "……聞こえるのだ。ちゃんと、声だぞ。"
+      - speaker: shain
+        emotion: happy
+        text: "東京の声が、大阪で聞こえてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……東京の声。"
+      - speaker: shain
+        emotion: surprised
+        text: "……あ。すみません。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いいのだ。……いい響きだぞ。"
+  - id: namae
+    title: "名前だけが残った"
+    background: il_sp_ima
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: surprised
+        text: "……つむぎさん。ちょっと待つのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どうしたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この人、鉛筆の権利を全部渡したんだよな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。48件、無償で。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "じゃあ、なんで会社の名前がシャープなんだ？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "いい質問。そこがこの話のいちばん変なところなの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "変？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "手放したのは、作る権利。名前は手元に残ったの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……名前だけ、残ったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。ラジオを出すとき、その名前をつけたんだよ。"
+      - speaker: reimu
+        text: "早川電機工業は、のちに社名そのものをシャープとします。"
+        reading: "はやかわでんきこうぎょうわ、のちにしゃめいそのものをしゃーぷとします。"
+      - speaker: reimu
+        text: "由来は、あの繰出鉛筆の商品名でした。"
+        reading: "ゆらいわ、あのくりだしえんぴつのしょうひんめいでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……テレビも、電卓も、あの鉛筆の名前だったのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そうだよ。いつでも、とがってる、っていう意味の。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……失った[側|がわ]が、名前だけ抱えて西に行ったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。そして、その名前で百年やってる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "百年！ ……重すぎるのだ、由来が。"
+  - id: shitsumei
+    title: "手を引く側になる"
+    background: il_sp_shitsumei
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: kouin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1944年、徳次は目の見えない人が働く分工場を作ります。"
+        reading: "せんきゅうひゃくよんじゅうよねん、とくじわめのみえないひとがはたらくぶんこうじょうをつくります。"
+      - speaker: kouin
+        emotion: normal
+        text: "社長さん。わしらに、本当に務まりますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "務まるのだ。プレスは、目より手の仕事だぞ。"
+      - speaker: kouin
+        emotion: surprised
+        text: "……手の。"
+      - speaker: zundamon
+        emotion: normal
+        text: "型に置いて、押す。位置は、指が覚えるのだ。"
+      - speaker: kouin
+        emotion: thinking
+        text: "……覚えられますかね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "覚えるのだ。ボクも、そうやって覚えたぞ。"
+      - speaker: reimu
+        text: "作業台の位置も通路も、手で分かるように作り直されました。"
+        reading: "さぎょうだいのいちもつうろも、てでわかるようにつくりなおされました。"
+      - speaker: kouin
+        emotion: normal
+        text: "社長さん。ひとつ、伺ってもいいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: kouin
+        emotion: normal
+        text: "なんで、わしらなんですか。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: kouin
+        emotion: normal
+        text: "情けをかけてくださるなら、金をくれたほうが早い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……情けではないのだ。"
+      - speaker: kouin
+        emotion: thinking
+        text: "……では。"
+      - speaker: zundamon
+        emotion: normal
+        text: "働いて、自分で食える。それが本当の助けだと思ってるぞ。"
+      - speaker: kouin
+        emotion: normal
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それに、ボクは昔、手を引いてもらったのだ。"
+      - speaker: kouin
+        emotion: surprised
+        text: "手を。"
+      - speaker: zundamon
+        emotion: normal
+        text: "目の見えない人に、1時間、引かれて歩いたぞ。"
+      - speaker: kouin
+        emotion: normal
+        text: "……[その方|そのかた]は。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……名前しか覚えてないのだ。[井上|いのうえ]さんという。"
+      - speaker: kouin
+        emotion: normal
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手が、温かかった。それだけは、はっきり覚えてるぞ。"
+      - speaker: reimu
+        text: "1950年、この工場は合資会社特選金属工場として独立します。"
+        reading: "せんきゅうひゃくごじゅうねん、このこうじょうわごうしがいしゃとくせんきんぞくこうじょうとしてどくりつします。"
+  - id: sengo
+    title: "国産第1号が並ぶ"
+    background: il_sp_radio
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: shain, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1953年2月、国産第1号のテレビを発売します。"
+        reading: "せんきゅうひゃくごじゅうさんねんにがつ、こくさんだいいちごうのてれびをはつばいします。"
+      - speaker: shain
+        emotion: happy
+        text: "社長、値段が決まりました。17万5000円です。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……17万5000円。無課金では無理なのだ。"
+      - speaker: shain
+        emotion: sad
+        text: "当時の大卒の初任給が、月に1万円いかないくらいで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……一年半、まるまる働いて1台か。"
+      - speaker: shain
+        emotion: normal
+        text: "誰が買うんでしょうね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "最初は、街の人が集まって見るのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "1台をみんなでですか。実質、無料公開ですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そこから始めればいいのだ。ラジオもそうだったぞ。"
+      - speaker: reimu
+        text: "1962年には国産第1号の電子レンジを発売します。"
+        reading: "せんきゅうひゃくろくじゅうにねんにわこくさんだいいちごうのでんしれんじをはつばいします。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。次は計算機だと聞きました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。歯車をやめて、全部電気にするぞ。"
+      - speaker: shain
+        emotion: surprised
+        text: "全部……ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "トランジスタだけで作るのだ。世界のどこもやってないぞ。"
+      - speaker: reimu
+        text: "1964年、世界初のオールトランジスタ電卓を完成させます。"
+        reading: "せんきゅうひゃくろくじゅうよねん、せかいはつのおーるとらんじすたでんたくをかんせいさせます。"
+      - speaker: reimu
+        text: "コンペット、CS-10A。ここから電卓の競争が始まりました。"
+        reading: "こんぺっと、しーえすじゅうえー。ここからでんたくのきょうそうがはじまりました。"
+      - speaker: shain
+        emotion: happy
+        text: "社長。鉛筆から、ずいぶん遠くまで来ましたね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……遠いか？"
+      - speaker: shain
+        emotion: surprised
+        text: "遠いですよ。鉛筆と電卓ですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じなのだ。人が手で書く手間を、機械が肩代わりする。"
+      - speaker: shain
+        emotion: thinking
+        text: "……あ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "削る手間。計算する手間。減らしてるのは、いつも手間だぞ。"
+  - id: bannen
+    title: "1980・享年86"
+    background: il_sp_shitsumei
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "徳次", flip: true}
+      - {who: kouin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1962年、徳次の寄付をもとに大阪市立早川福祉会館が建ちます。"
+        reading: "せんきゅうひゃくろくじゅうにねん、とくじのきふをもとにおおさかしりつはやかわふくしかいかんがたちます。"
+      - speaker: reimu
+        text: "共働きの家庭や、障害のある家庭の子を預かる場所も作りました。"
+        reading: "ともばたらきのかていや、しょうがいのあるかていのこをあずかるばしょもつくりました。"
+      - speaker: kouin
+        emotion: normal
+        text: "社長さん。ずいぶん、この手のことばかりされますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……子どもが預けられる場所がないと、親が働けないのだ。"
+      - speaker: kouin
+        emotion: thinking
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "働けないと、その子は学校に行けなくなるぞ。"
+      - speaker: kouin
+        emotion: sad
+        text: "……社長さんの、子どものころの話ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そこまでは、言ってないのだ。"
+      - speaker: kouin
+        emotion: happy
+        text: "……はい。伺っておりません。"
+      - speaker: reimu
+        text: "1980年6月24日、早川徳次は亡くなりました。享年86。"
+        reading: "せんきゅうひゃくはちじゅうねんろくがつにじゅうよっか、はやかわとくじわなくなりました。きょうねんはちじゅうろく。"
+      - speaker: reimu
+        text: "生涯に取った特許と実用新案は、数百件にのぼります。"
+        reading: "しょうがいにとったとっきょとじつようしんあんわ、すうひゃっけんにのぼります。"
+      - speaker: reimu
+        text: "そのうち最も有名なものは、いま他社の手で作られています。"
+        reading: "そのうちもっともゆうめいなものわ、いまたしゃのてでつくられています。"
+  - id: ima
+    title: "いま手元にあるもの"
+    background: il_sp_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎさん。ボクの手元のこれ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "シャープペンシルね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作ってる会社、シャープじゃないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そうだよ。ほとんどが文具メーカーのもの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……名前だけ、あっちに行ったんだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。名前は会社に、物は世の中に。分かれたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かれて、両方生き残ってるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこがこの話の、いちばんいいところだと思う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつ聞いていいか。今のって、あの仕組みなのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ネジで送るやつ？ あれは、もう主流じゃないの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。変わったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今はノック式。押すと、中の口が芯をつかんで送るの。"
+      - speaker: reimu
+        text: "現在の主流は、押すと芯をつかんで送るノック式です。"
+        reading: "げんざいのしゅりゅうわ、おすとしんをつかんでおくるのっくしきです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……じゃあ、あの人の仕組みは消えたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "仕組みはね。でも、考え方は残ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "考え方。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "削らずに書ける。芯を細くして、金属で精度を出す。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……先っぽの金属の筒、今のにもあるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこ。あそこだけは、ずっと金属なの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……100年、同じところが金属なのか。ナーフされてないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "細い芯を、まっすぐ支えられる素材が他にないから。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……[錺屋|かざりや]の7年が、まだそこにいるのだ。"
+  - id: end
+    title: ""
+    background: il_sp_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今度シャーペンを使うとき、先の金属を見てみて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの、細い筒か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこを金属にすると決めたのが、100年前の職人。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……全部失った人なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。でもね、失ったあとの選び方が変わってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "変わってる？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "普通は、残った権利を握るでしょ。それが最後の財産だもん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "握らずに、渡したのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "渡したから、あの鉛筆は途切れなかった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……もし握ってたら、どうなってたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作る工場がないから、たぶん誰も作れないまま消えてた。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……持ってるほうが、消えるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "抱えたまま動けないなら、そうなることもある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボク、ひとつ分かったことがあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この人、助けてもらった手を、ずっと返してるだけなのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……手を、返す。"
+      - speaker: zundamon
+        emotion: normal
+        text: "7歳で手を引かれて、あとは引く側をやり続けたぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……うん。そう読むと、全部つながるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……あ。それでボク、芯を折らないように書くのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "急にどうしたの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "1センチ出すの、やめるのだ。攻めるのは今日でおしまい。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……それ、いちばんいい感想だと思う。"
+      - speaker: zundamon
+        emotion: happy
+        text: "チャンネル登録も、してくれると嬉しいのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "感想もコメントで教えてね。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"

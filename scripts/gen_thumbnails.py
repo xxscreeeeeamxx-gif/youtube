@@ -268,6 +268,37 @@ def p_block(d, s):
                       fill=(255, 228, 110), outline=(170, 125, 15), width=6)
 
 
+def p_sharppencil(d, s):
+    """シャープペンシル。先の金属の筒と出ている芯が要なので、全部を枠の中に収める。
+
+    枠（0〜s）からはみ出した分は切り落とされるため、芯と筆記線まで含めて
+    y=0.96s までに納めている。
+    """
+    ax, ay = s*0.62, s*0.10          # 後端
+    bx, by = s*0.34, s*0.74          # 先端（金属の筒の付け根）
+    w = s*0.085
+    # 軸
+    d.polygon([(bx - w, by), (bx + w, by), (ax + w, ay), (ax - w, ay)],
+              fill=(40, 96, 168), outline=(18, 52, 100), width=8)
+    # グリップのローレット
+    for k in range(5):
+        t = 0.06 + k * 0.11
+        cx, cy = bx + (ax - bx) * t, by + (ay - by) * t
+        d.line([cx - w*0.8, cy, cx + w*0.8, cy], fill=(20, 60, 116), width=7)
+    # 後端のノック部
+    d.polygon([(ax - w, ay), (ax + w, ay), (ax + w*0.8, ay - s*0.07),
+               (ax - w*0.8, ay - s*0.07)],
+              fill=(212, 216, 224), outline=(120, 128, 142), width=7)
+    # 先の金属の筒（この話の核。100年変わっていないところ）
+    d.polygon([(bx - w, by), (bx + w, by), (bx + w*0.32, by + s*0.13),
+               (bx - w*0.32, by + s*0.13)],
+              fill=(214, 220, 230), outline=(110, 118, 132), width=7)
+    # 出ている芯
+    d.line([bx, by + s*0.13, bx - s*0.015, by + s*0.22], fill=(46, 46, 54), width=12)
+    # 書いた線
+    d.line([s*0.05, s*0.93, bx - s*0.02, by + s*0.21], fill=(80, 80, 92), width=10)
+
+
 def p_purikura(d, s):
     """プリクラのシール。顔の代わりに、切り取り線で分かれた小さな枠を並べる。
 
@@ -1586,6 +1617,10 @@ SPECS = {
         bg=((28, 52, 92), (14, 28, 56)), emotion="surprised",
         lines=[("スイスを倒した", W1, None), ("1600社が600社に", W1, None),
                ("クオーツ時計", B1, Y1)]),
+    "sharp-pencil": dict(prop="p_sharppencil", layout="stack",
+        bg=((22, 54, 104), (10, 28, 60)), emotion="sad",
+        lines=[("全部失って大阪へ", W1, None), ("シャープの名前の由来", W1, None),
+               ("シャーペン", B1, Y1)]),
     "purikura-meme": dict(prop="p_purikura", layout="stack",
         bg=((150, 26, 88), (86, 12, 50)), emotion="sad",
         lines=[("持って帰ってどうすんの", W1, None), ("ゲーセンは男の場所", W1, None),

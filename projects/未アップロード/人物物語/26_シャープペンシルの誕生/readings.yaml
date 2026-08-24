@@ -1,0 +1,27 @@
+# sharp-pencil 読み台帳
+# 固有名詞だけを載せる。一般語の誤読は voice 後の check_moras_cross.py で全数照合し、
+# 実際に化けたものだけ assets/readings_common.yaml に足す（台帳に載せると全出現にタグが要る）
+- {surface: 早川徳次, reading: はやかわとくじ}
+- {surface: 早川, reading: はやかわ}
+- {surface: 徳次, reading: とくじ}
+- {surface: 政吉, reading: まさきち}
+- {surface: 花子, reading: はなこ}
+- {surface: 出野, reading: での}
+- {surface: 井上, reading: いのうえ}
+- {surface: 坂田芳松, reading: さかたよしまつ}
+- {surface: 坂田, reading: さかた}
+- {surface: 芳松, reading: よしまつ}
+- {surface: 政治, reading: まさじ}
+- {surface: 文子, reading: ふみこ}
+- {surface: 中山太一, reading: なかやまたいち}
+- {surface: 中山豊三, reading: なかやまとよぞう}
+- {surface: 太一, reading: たいち}
+- {surface: 豊三, reading: とよぞう}
+- {surface: 錺屋, reading: かざりや}
+- {surface: 徳尾錠, reading: とくびじょう}
+- {surface: 本所, reading: ほんじょ}
+- {surface: 浪速区, reading: なにわく}
+- {surface: 日本橋区, reading: にほんばしく}
+- {surface: 久松町, reading: ひさまつちょう}
+- {surface: 阿倍野, reading: あべの}
+- {surface: 鉱石, reading: こうせき}
