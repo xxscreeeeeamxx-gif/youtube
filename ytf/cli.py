@@ -19,6 +19,8 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
     """ビルド後の読み検査。誤読ゼロが最優先なので make のたびに必ず走らせる。
 
     - check_readings: 読み台帳・タグ・名札・舞台整合
+    - check_readings_vote: 系統の違う3辞書の多数決。割れた語だけを自動で拾う
+      （ナレは多数派/少数派の両方に置換した実音と比べて、どちらに近いかで判定）
     - check_moras_cross: 全カットのモーラを漢字の読みと突き合わせ
     - check_aq_readings: ゆっくり(AquesTalk)ナレを whisper で書き起こし照合
       （重いので --skip-reading-check で省略できるが、省略したことを警告する）
@@ -49,6 +51,15 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
         if ln.startswith(("NG", "OK:", " - ")):
             print(ln)
     problems += sum(1 for ln in lines if ln.startswith("NG") and "0 件" not in ln)
+
+    # 辞書3系統の多数決。語を指定せずに読みが割れる場所を自動で拾う。
+    # 「怪しい語を人が挙げる」方式では思いつかない語を永久に取りこぼすため
+    # （ユーザー指摘 2026-08-26）、こちらを主検査にした
+    lines = _run("check_readings_vote.py")
+    for ln in lines:
+        if ln.startswith(("‼", "OK ", "  「", "    idx", "      ")):
+            print(ln)
+    problems += sum(1 for ln in lines if "‼ 多数派と違う" in ln)
 
     lines = _run("check_moras_cross.py")
     hit = [ln for ln in lines if ln.startswith("‼")]

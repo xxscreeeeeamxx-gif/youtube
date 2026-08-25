@@ -349,7 +349,7 @@ scenes:
         text: "どういうことだ？"
       - speaker: reimu
         reading: "ざいりょうわすべて まちで かえる ありものでした。"
-        text: "材料は、すべて街で買えるありものでした。"
+        text: "材料は、すべて町で買えるありものでした。"
       - speaker: zundamon
         emotion: normal
         text: "まず、車用の[8トラ|ハチトラ]ックデッキ。伴奏テープはここに入れる。"
@@ -566,8 +566,8 @@ scenes:
         emotion: normal
         text: "機械で負けても、レンタルと曲の入れ替えなら、うちが一番だ。"
       - speaker: reimu
-        reading: "もし とっきょを とっていたら。その とっきょりょうわ、ねんに いちおくドルを こえたとも いわれます。"
-        text: "もし特許を取っていたら。その特許料は、年に1億ドルを超えたともいわれます。"
+        reading: "もし とっきょを とっていたら。その とっきょりょうわ、いちねんで いちおくドルを こえたとも いわれます。"
+        text: "もし特許を取っていたら。その特許料は、1年で1億ドルを超えたともいわれます。"
         telops:
           - {text: "年1億ドル超(推計)", size: xl, position: middle-center, color: "#FFF15A", stroke: "#3A2A00", glow: "#FFAA00", anim: up}
       - speaker: nakama
