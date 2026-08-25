@@ -82,7 +82,7 @@ scenes:
         text: "顔が死んでるよ。"
       - speaker: zundamon
         emotion: angry
-        text: "死んでないのだ。ボクはメンタル鋼なんだぞ。"
+        text: "死んでないのだ。ボクはメンタル[鋼|はがね]なんだぞ。"
       - speaker: tsumugi
         emotion: thinking
         text: "去年どうだったっけ。"
@@ -162,7 +162,7 @@ scenes:
         text: "1933年、岡野雅行は東京の向島に生まれました。"
         reading: "せんきゅうひゃくさんじゅうさんねん、おかのまさゆきわとうきょうのむこうじまにうまれました。"
       - speaker: reimu
-        text: "父は、金型を作る小さな工場をやっていました。"
+        text: "父は、[金型|かながた]を作る小さな工場をやっていました。"
         reading: "ちちわ、かながたをつくるちいさなこうばをやっていました。"
       - speaker: chichi
         emotion: normal
@@ -207,7 +207,7 @@ scenes:
         emotion: normal
         text: "全部だ。だから、削る前に頭で決めろ。"
       - speaker: reimu
-        text: "金型は、押す前にすべてを決めておく仕事です。"
+        text: "[金型|かながた]は、押す前にすべてを決めておく仕事です。"
         reading: "かながたわ、おすまえにすべてをきめておくしごとです。"
   - id: yoru
     title: "夕方5時から、朝8時まで"
@@ -921,7 +921,7 @@ scenes:
         text: "溶接を一切使わず、押し当てるだけで筒にする。"
         reading: "ようせつをいっさいつかわず、おしあてるだけでつつにする。"
       - speaker: reimu
-        text: "そのすべては、金型の精度に懸かっていました。"
+        text: "そのすべては、[金型|かながた]の精度に懸かっていました。"
         reading: "そのすべてわ、かながたのせいどにかかっていました。"
       - speaker: shokunin
         emotion: normal
@@ -938,7 +938,7 @@ scenes:
       - {who: shokunin, x: 0.72}
     cuts:
       - speaker: reimu
-        text: "ここから、金型を作っては直す日々が始まります。"
+        text: "ここから、[金型|かながた]を作っては直す日々が始まります。"
         reading: "ここから、かながたをつくってわなおすひびがはじまります。"
       - speaker: shokunin
         emotion: normal
@@ -962,7 +962,7 @@ scenes:
         emotion: happy
         text: "測るな。手でやるのだ。"
       - speaker: reimu
-        text: "金型は削り直すたびに一からで、数日から数週間かかります。"
+        text: "[金型|かながた]は削り直すたびに一からで、数日から数週間かかります。"
         reading: "かながたわけずりなおすたびにいちからで、すうじつからすうしゅうかんかかります。"
       - speaker: shokunin
         emotion: normal
@@ -983,7 +983,7 @@ scenes:
         emotion: happy
         text: "こうやると割れる、が1個増えたぞ。実績解除なんだ。"
       - speaker: reimu
-        text: "作り直した金型は、数百個にのぼったといいます。"
+        text: "作り直した[金型|かながた]は、数百個にのぼったといいます。"
         reading: "つくりなおしたかながたわ、すうひゃっこにのぼったといいます。"
   - id: shippai
     title: "割れる、詰まる、曲がる"

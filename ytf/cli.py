@@ -22,6 +22,9 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
     - check_moras_cross: 全カットのモーラを漢字の読みと突き合わせ
     - check_aq_readings: ゆっくり(AquesTalk)ナレを whisper で書き起こし照合
       （重いので --skip-reading-check で省略できるが、省略したことを警告する）
+    - check_aq_kanji: ゆっくりナレの要注意漢字を、漢字版とかな版の実音比較で判定
+      （whisper は言語モデルを持つので、きんがた と発音されても「金型」と
+      書き起こして誤読を隠してしまう。この穴を実音でふさぐ。ユーザー指摘 2026-08-25）
     """
     import os
     import subprocess
@@ -70,6 +73,13 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
                 elif ln.startswith(("‼", "   ")):
                     print("  " + ln)
                     problems += ln.startswith("‼")
+        # 漢字の実音チェックは軽い（該当語のある行だけ合成する）ので常に走らせる
+        for ln in _run("check_aq_kanji.py"):
+            if ln.startswith("‼") or ln.startswith("  - ") or ln.startswith("（要人手"):
+                print(ln if ln.startswith("（") else "  " + ln)
+                problems += ln.startswith("‼")
+            elif ln.startswith("OK:"):
+                print("ナレの漢字読み: " + ln)
     return problems == 0
 
 

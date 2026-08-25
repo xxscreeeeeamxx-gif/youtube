@@ -47,3 +47,5 @@
 - {surface: "池田家", reading: "イケダケ"}
 - {surface: "お米", reading: "オコメ"}
 - {surface: "米俵", reading: "コメダワラ"}
+# 両エンジンが同じ誤読をするためモーラ照合で捕まらない語（ユーザー指摘 2026-08-25）
+- {surface: メンタル鋼, reading: メンタルはがね}
