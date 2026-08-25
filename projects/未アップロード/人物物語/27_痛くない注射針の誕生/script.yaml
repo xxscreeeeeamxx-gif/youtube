@@ -1,0 +1,1674 @@
+# 痛くない注射針の再現ドラマ・ミーム版（[岡野雅行|おかのまさゆき]・1933→2018）。投稿前に必ず目視レビュー。
+# 配役: ずんだもん=岡野雅行（岡野工業）/ つむぎ=テルモの技術者 / ナレ=ゆっくり
+# ★ミーム禁止の章: kodomo（糖尿病の子ども）/ kodomo2（発売後の反応）
+# ★扱わないと決めたこと: 岡野氏は存命（1933年生まれ）。2012年に報じられた税の件は、
+#   注射針の開発の話に必要がなく、存命の個人の法的な事柄なので範囲に入れない。
+#   この動画は「一本の針ができるまで」であって、生涯の伝記ではない（胃カメラ回と同じ形）。
+#   テルモ側の担当者は実名が公表されているが、姓の読みを確認できなかったので
+#   誤読を避けて「テルモの技術者」として描く（誤読ゼロを優先）。
+# 裏取り: 岡野雅行(会社社長)Wikipedia / CBCマガジン「日本で生まれた痛くない注射針」/
+#   日経「痛くない注射針の岡野工業、家族に引き継がない理由」2018-03 / ナノパスWikipedia /
+#   SBBIT「痛みの少ない注射針の意外な開発裏話」
+# 確定事実:
+#   1933-2-14 東京府東京市向島区（現・墨田区）生まれ。父は金型工場を創業
+#   1945 向島更正国民学校初等科卒。旧制中学中退。父の工場を手伝い始める
+#   20代、夕方5時から翌朝8時まで工場を借り、昼は勤めて夜に自分の受注をこなした
+#   「安すぎて誰もやらない仕事」「難しすぎて他の誰にもできない仕事」しか受けない
+#   1972 二代目に就任し、岡野金型製作所から岡野工業へ改称。従業員6人
+#   リチウムイオン電池ケース（ウォークマン用→携帯電話へ）。ジッポーのケースで培った深絞り
+#   テルモは100社以上に相談して全部断られた。きっかけは子どもの患者の「針が痛い」
+#   糖尿病で毎日インスリンを自分で打つ患者がいる
+#   針は細いほど液が出にくいので、根元を太く先端を細いメガホン状にした
+#   プレス加工。溶接は一切使わない。作り直した金型は数百個。開発に5年
+#   先端の外径0.2ミリ、内径0.08ミリ。蚊の口とほぼ同じ太さ
+#   2005-7 テルモが「ナノパス33」として発売。2005年度グッドデザイン大賞
+#   のちに0.18ミリの「ナノパスニードル2」。2012年 日経優秀製品・サービス賞 最優秀賞を共同受賞
+#   生産累計5億本以上。2018-3 後継者がなく「あと2年で会社を閉じる」と表明
+meta:
+  title: "【痛くない注射針の誕生】100社が断った仕事を、6人の町工場が【ずんだもん解説】"
+  slug: "okano-needle"
+  summary: "注射が痛いのは仕方ない。その常識を壊したのは、東京都墨田区の従業員6人の町工場でした。100社以上に断られた依頼が最後に行き着いた先で、職人は「よし、やろう」と答えます。先端0.2ミリ、蚊の口と同じ太さの針をどうやって作ったのか。ずんだもんが岡野雅行を演じる再現ドラマです。"
+  tags: ["注射針", "岡野雅行", "岡野工業", "ナノパス", "テルモ", "町工場", "ものづくり", "再現ドラマ", "ゆっくり", "ずんだもん", "発明", "ミーム"]
+  thumbnail:
+    top: "100社が断った"
+    bottom: "6人の町工場がやった"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: chichi, label: "父", voice: 13, pitch: -0.07, item: mustache}
+    - {id: shokunin, label: "職人", voice: 12}
+    - {id: kotowaru, label: "断った会社", voice: 13, pitch: 0.06, item: hat}
+    - {id: kodomo, label: "患者の子", voice: 8, pitch: 0.14, hair: twintail}
+    - {id: isha, label: "医師", voice: 13, pitch: -0.02}
+    - {id: kisha, label: "記者", voice: 12, pitch: 0.07}
+scenes:
+  - id: hook
+    title: ""
+    background: il_nd_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "注射が痛いのは、仕方ないことだと思ってる？"
+      - speaker: zundamon
+        emotion: normal
+        text: "思ってるのだ。針を刺すんだから、痛いに決まってる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その仕方ないを、従業員6人の町工場が壊したの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "6人！？ 大企業じゃないのか。ファッ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "100社以上に断られた話が、最後にそこへ行き着いたんだよ。"
+        telops:
+          - {text: "100社が断った仕事", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A2A", glow: "#2AC8B0", anim: up}
+      - speaker: zundamon
+        emotion: thinking
+        text: "……100社。ガチャを100回引いて、最後に出たのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その話をする前に。ずんだもん、明日なんだっけ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……健康診断なのだ。採血があるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "顔が死んでるよ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "死んでないのだ。ボクはメンタル鋼なんだぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "去年どうだったっけ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "泣いてないのだ。一滴も。ノーダメだったぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "腕は出してた？"
+      - speaker: zundamon
+        emotion: sad
+        text: "……看護師さんに、3回呼ばれた。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "泣いてないのは、そこまで行ってないからだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かった。今年は対策を考えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お、どんな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見ないのだ。目をつぶれば、実質ないのと同じだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ、去年もやってなかった？"
+      - speaker: zundamon
+        emotion: sad
+        text: "……やった。見えないと、いつ来るか分からなくて余計こわい。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "対策が、去年と同じところに落ちてるね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……で、その6人の町工場は何をしたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "刺しても痛みが少ない針を作ったの。先っぽが0.2ミリ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "0.2ミリ。……それ、どのくらいなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "蚊の口と、だいたい同じ太さ。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "蚊！ 言われてみたら、蚊に刺されても気づかないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこを狙ったんだよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……でも、なんで大企業にできなくて、6人にできたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作り方が、まったく違ったから。今日はその話だよ。"
+      - speaker: reimu
+        text: "痛みの少ない注射針。先端の太さは、0.2ミリしかありません。"
+        reading: "いたみのすくないちゅうしゃばり。せんたんのふとさわ、れーてんにみりしかありません。"
+      - speaker: reimu
+        text: "作ったのは、東京都墨田区の従業員6人の町工場でした。"
+        reading: "つくったのわ、とうきょうとすみだくのじゅうぎょういんろくにんのまちこうばでした。"
+      - speaker: reimu
+        text: "物語は、1945年の向島から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくよんじゅうごねんのむこうじまからはじまります。"
+  - id: shonen
+    title: "1945・工場を手伝う"
+    background: il_nd_gakko
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true, scale: 0.82}
+      - {who: chichi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1933年、岡野雅行は東京の向島に生まれました。"
+        reading: "せんきゅうひゃくさんじゅうさんねん、おかのまさゆきわとうきょうのむこうじまにうまれました。"
+      - speaker: reimu
+        text: "父は、金型を作る小さな工場をやっていました。"
+        reading: "ちちわ、かながたをつくるちいさなこうばをやっていました。"
+      - speaker: chichi
+        emotion: normal
+        text: "[雅行|まさゆき]。学校はもういいから、手を貸せ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いいのか、勉強しなくて。"
+      - speaker: chichi
+        emotion: normal
+        text: "うちの仕事は、紙の上には書いてない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……じゃあ、どこに書いてあるんだ。"
+      - speaker: chichi
+        emotion: happy
+        text: "手だ。やった分だけ、手に溜まる。"
+      - speaker: reimu
+        text: "1945年に国民学校を出たあと、旧制中学は中退します。"
+        reading: "せんきゅうひゃくよんじゅうごねんにこくみんがっこうをでたあと、きゅうせいちゅうがくわちゅうたいします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "父ちゃん。[金型|かながた]って、何を作るものなんだ。"
+      - speaker: chichi
+        emotion: normal
+        text: "型だ。金属を、この形にしろって決める型。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……型が、金属を曲げるのか。"
+      - speaker: chichi
+        emotion: normal
+        text: "押すんだ。上から一発。プレスっていう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "一発。……気持ちよさそうなのだ。"
+      - speaker: chichi
+        emotion: angry
+        text: "気持ちよくない。一発で決まらなきゃ、型を作り直しだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "作り直し。全部か。無理ゲーだろ。"
+      - speaker: chichi
+        emotion: normal
+        text: "全部だ。だから、削る前に頭で決めろ。"
+      - speaker: reimu
+        text: "金型は、押す前にすべてを決めておく仕事です。"
+        reading: "かながたわ、おすまえにすべてをきめておくしごとです。"
+  - id: yoru
+    title: "夕方5時から、朝8時まで"
+    background: il_nd_yoru
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: chichi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "20代のころ、雅行は父にひとつの頼みをします。"
+        reading: "にじゅうだいのころ、まさゆきわちちにひとつのたのみをします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "父ちゃん。夜、工場を貸してほしいのだ。"
+      - speaker: chichi
+        emotion: surprised
+        text: "夜？ 何時からだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "夕方5時から、翌朝の8時まで。"
+      - speaker: chichi
+        emotion: angry
+        text: "……それ、寝る時間がないぞ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "昼は勤めに出るのだ。夜は自分で取ってきた仕事をやるぞ。"
+      - speaker: chichi
+        emotion: thinking
+        text: "自分で取ってくる？ 客がいるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これから作るのだ。"
+      - speaker: reimu
+        text: "昼は工場に勤め、夜は自分の受注をこなす。それを続けました。"
+        reading: "ひるわこうばにつとめ、よるわじぶんのじゅちゅうをこなす。それをつづけました。"
+      - speaker: chichi
+        emotion: normal
+        text: "……なあ。なんでそこまでやるんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "父ちゃんの型を見てて、思ったのだ。"
+      - speaker: chichi
+        emotion: normal
+        text: "何を。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ形を作れる人は、たくさんいる。"
+      - speaker: chichi
+        emotion: thinking
+        text: "……そうだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、誰も作ったことがない形は、まだ空いてるぞ。"
+        telops:
+          - {text: "誰も作ってない形は、空いてる", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A2A2A", glow: "#2AC8B0", anim: up}
+      - speaker: chichi
+        emotion: surprised
+        text: "……空いてる、か。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そこは競争がないのだ。実質、ひとり勝ちだぞ。"
+      - speaker: chichi
+        emotion: happy
+        text: "言い方が商売人だな。職人のくせに。"
+      - speaker: zundamon
+        emotion: happy
+        text: "職人が商売を知らないから、買い叩かれるのだ。"
+  - id: shinjo
+    title: "受けない仕事を決める"
+    background: il_nd_koba
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1972年、雅行は二代目になります。"
+        reading: "せんきゅうひゃくななじゅうにねん、まさゆきわにだいめになります。"
+      - speaker: reimu
+        text: "社名を岡野工業と改めました。"
+        reading: "しゃめいをおかのこうぎょうとあらためました。"
+      - speaker: reimu
+        text: "従業員は6人。増やしませんでした。"
+        reading: "じゅうぎょういんわろくにん。ふやしませんでした。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。またお断りしたんですか、あの仕事。"
+      - speaker: zundamon
+        emotion: happy
+        text: "断ったのだ。あれは、よそでもできる。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "でも、数が出ますよ。安定します。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安定した瞬間、値段を下げろって言われるのだ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……たしかに。それはそう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちが受けるのは、2つだけと決めてるぞ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "2つ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつ。安すぎて、誰もやりたがらない仕事。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "安すぎるほうを、わざわざ？"
+      - speaker: zundamon
+        emotion: happy
+        text: "誰もやらないなら、値段はこっちが決められるのだ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……逆にアリだ、それ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ふたつ。難しすぎて、[他|ほか]の誰にもできない仕事。"
+      - speaker: shokunin
+        emotion: normal
+        text: "そっちは分かります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この2つは、競争相手がいないのだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "でも社長。それ、仕事が来なくなりませんか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "逆なのだ。困った人しか来なくなるぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……困った人。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[他|ほか]で断られて、最後にうちに来るのだ。"
+  - id: zippo
+    title: "板が、箱になる"
+    background: il_nd_koba
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "岡野工業には、以前から得意な加工がありました。"
+        reading: "おかのこうぎょうにわ、いぜんからとくいなかこうがありました。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。この平らな板が、本当に箱になるんですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "なるのだ。見てろ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……押した。……あ、へこんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "へこんだんじゃないのだ。伸びたんだぞ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……伸びる。金属がですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "伸びるのだ。ゆっくりやれば、けっこう伸びるぞ。"
+      - speaker: reimu
+        text: "板を型で押し込み、深い容器にする。これを深絞りといいます。"
+        reading: "いたをかたでおしこみ、ふかいようきにする。これをふかしぼりといいます。"
+      - speaker: shokunin
+        emotion: normal
+        text: "でも、急に押すと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[破れる|やぶれる]のだ。伸びる速さには、限界があるぞ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……そこを見極めるのが、腕なんですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。ライターのケースで、さんざん覚えたぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "ライター。あの、四角い金属のやつですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれなのだ。継ぎ目がないだろ。1枚から絞ってるぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        se: don
+        text: "……言われてみたら、継ぎ目がない。"
+      - speaker: reimu
+        text: "継ぎ目のない容器は、一枚の板を絞ることでしか作れません。"
+        reading: "つぎめのないようきわ、いちまいのいたをしぼることでしかつくれません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "継ぎ目があると、そこから漏れる。そこから割れる。"
+      - speaker: shokunin
+        emotion: normal
+        text: "……だから、最初から1枚で作る。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。この考え方は、あとでもう一回出てくるぞ。"
+  - id: denchi
+    title: "ライターから電池へ"
+    background: il_nd_koba
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "[深絞り|ふかしぼり]なのだ。平らな板を、深い箱にする。"
+      - speaker: shokunin
+        emotion: normal
+        text: "ライターのケースで、さんざんやりましたね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あれでレベル上げしたのだ。金属は、思ったより伸びるぞ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。今度の話、電池のケースだそうです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電池。乾電池か。"
+      - speaker: shokunin
+        emotion: normal
+        text: "いえ、四角いやつです。ウォークマン用の。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……四角い電池。中身は液か。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "はい。だから、絶対に漏れちゃいけないと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なら、継ぎ目を作れないのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "継ぎ目なし！？ それ無理ゲーですよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "1枚の板から、そのまま絞るのだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "ステンレスですよ。薄くすると、割れます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "割れる手前で止めるのだ。そこが腕なんだ。"
+      - speaker: reimu
+        text: "この電池ケースは、のちに携帯電話へ使われていきます。"
+        reading: "このでんちけーすわ、のちにけいたいでんわえつかわれていきます。"
+      - speaker: shokunin
+        emotion: happy
+        text: "社長。うち、けっこう有名になってきましたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "有名はどうでもいいのだ。困った人が探しやすくなるのはいいぞ。"
+  - id: kodomo
+    title: "針が、痛い"
+    background: il_nd_byoin
+    bgm: 223am
+    stage:
+      - {who: kodomo, x: 0.3, flip: true}
+      - {who: isha, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "同じころ、ある病院での話です。"
+        reading: "おなじころ、あるびょういんでのはなしです。"
+      - speaker: isha
+        emotion: normal
+        text: "はい、じゃあ今日の分を打とうか。"
+      - speaker: kodomo
+        emotion: sad
+        text: "……はい。"
+      - speaker: isha
+        emotion: normal
+        text: "上手だね。もう自分で打てるんだもんな。"
+      - speaker: kodomo
+        emotion: normal
+        text: "……先生。ひとつ聞いていいですか。"
+      - speaker: isha
+        emotion: normal
+        text: "うん。"
+      - speaker: kodomo
+        emotion: sad
+        text: "この針、痛いです。"
+      - speaker: isha
+        emotion: sad
+        text: "……そうだね。"
+      - speaker: kodomo
+        emotion: normal
+        text: "1日に何回も打つので。……ずっと、痛いです。"
+      - speaker: isha
+        emotion: sad
+        text: "……。"
+      - speaker: reimu
+        text: "糖尿病の患者は、毎日インスリンを自分で打ちます。"
+        reading: "とうにょうびょうのかんじゃわ、まいにちいんすりんをじぶんでうちます。"
+      - speaker: reimu
+        text: "一日に何度も、それが何年も続きます。"
+        reading: "いちにちになんども、それがなんねんもつづきます。"
+      - speaker: kodomo
+        emotion: normal
+        text: "……痛くない針って、ないんですか。"
+      - speaker: isha
+        emotion: normal
+        text: "……ないなあ。針は、刺すものだから。"
+      - speaker: kodomo
+        emotion: sad
+        text: "……そうですよね。"
+      - speaker: reimu
+        text: "この一言が、ある技術者のところへ届きます。"
+        reading: "このひとことが、あるぎじゅつしゃのところえとどきます。"
+  - id: hyakusha
+    title: "100社、全部だめ"
+    background: il_nd_kaigi
+    bgm: kinakusai
+    stage:
+      - {who: tsumugi, x: 0.3, tag: "テルモ", flip: true}
+      - {who: kotowaru, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "医療機器メーカー、テルモの技術者が動き始めます。"
+        reading: "いりょうききめーかー、てるものぎじゅつしゃがうごきはじめます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先端が0.2ミリの、注射針を作りたいんです。"
+      - speaker: kotowaru
+        emotion: surprised
+        text: "……0.2？ ミリですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。しかも、根元は太くしてほしい。"
+      - speaker: kotowaru
+        emotion: thinking
+        text: "先が細くて、根元が太い。……メガホンみたいな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そうです。それです。"
+      - speaker: kotowaru
+        emotion: normal
+        text: "無理ですね。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……即答ですか。塩対応すぎます。"
+      - speaker: kotowaru
+        emotion: normal
+        text: "即答です。管を引っぱって細くするやり方しかないので。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "引っぱると、どうなるんですか。"
+      - speaker: kotowaru
+        emotion: normal
+        text: "全部同じ太さになります。途中で変えられない。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そうですか。"
+      - speaker: reimu
+        text: "この相談は100社以上に持ち込まれ、すべて断られました。"
+        reading: "このそうだんわひゃくしゃいじょうにもちこまれ、すべてことわられました。"
+      - speaker: kotowaru
+        emotion: normal
+        text: "あのう。ひとつ、いいですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。"
+      - speaker: kotowaru
+        emotion: normal
+        text: "なんで、そこまでして細くしたいんです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……子どもに、痛いと言われたので。"
+      - speaker: kotowaru
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "毎日、何回も打つ子です。"
+      - speaker: kotowaru
+        emotion: sad
+        text: "……うちじゃ、無理です。すみません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いえ。ありがとうございました。"
+      - speaker: reimu
+        text: "断られるたびに、企画は少しずつ具体的になっていきました。"
+        reading: "ことわられるたびに、きかくわすこしずつぐたいてきになっていきました。"
+  - id: irai
+    title: "よし、やろう"
+    background: il_nd_jimusho
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "テルモ"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "……こちらが、最後にお願いできるところなんです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "最後。いい響きなのだ。うち、いつも最後だぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……よく言われるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よそで断られた人しか来ないのだ。で、何が要るんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先端0.2ミリ、根元は太い。メガホン型の管です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ふうん。管を引っぱるやり方だと、無理だな。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "そこ、すぐ分かるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かるのだ。100社が断ったのも、そこだろ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……はい。全部そこでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつ聞くのだ。なんで、その形にしたいんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "細いと痛みが減ります。でも細いと、薬が出ないんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……先だけ細くして、あとは太く。それで両方取るのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい。そこだけが答えでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なるほど。よし。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "え。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "やろう。"
+        telops:
+          - {text: "よし、やろう", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A2A", glow: "#2AC8B0", anim: up}
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……えっ。今、検討もせずに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "したのだ。話してる間に、頭の中で1回作った。秒で終わったぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "作った！？"
+      - speaker: zundamon
+        emotion: happy
+        text: "できるかどうかは、まだ分からないのだ。でも、やり方は見えた。"
+      - speaker: reimu
+        text: "岡野工業は、100社が断った仕事を引き受けました。"
+        reading: "おかのこうぎょうわ、ひゃくしゃがことわったしごとをひきうけました。"
+  - id: naze
+    title: "なぜ細いと痛くないのか"
+    background: il_nd_terumo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "テルモ"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "先に確認しておきたいのだ。なぜ細いと痛くないんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "痛みを感じる点が、皮膚に散らばってるんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "散らばってる。全部が痛いわけじゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "違います。点と点の間は、刺されても分かりにくい。"
+      - speaker: reimu
+        text: "痛みを感じる点は、皮膚の上に点々と散らばっています。"
+        reading: "いたみをかんじるてんわ、ひふのうえにてんてんとちらばっています。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……なるほど。針が細いほど、その点を外しやすいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そうです。当たる確率が下がるんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "蚊が気づかれない理由も、それなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。あと、押し広げる量も減ります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "押し広げる。……刺すって、穴をあけることだもんな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "太い針は、その分だけ組織を押しのけてます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……じゃあ、[細ければ|ほそければ]細いほどいいのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "そこで、次の問題が出ます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "問題。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "細くすると、薬が出なくなるんです。"
+  - id: yonjou
+    title: "半径の4乗"
+    background: il_nd_terumo
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "テルモ"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "細いと出にくいのは分かるのだ。半分にしたら、半分か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いえ。もっと、ずっと減ります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "もっと？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "管を通る量は、太さの4乗で効くんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……4乗。ということは。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "太さを半分にすると、流れる量は16分の1です。"
+        telops:
+          - {text: "半分にすると、16分の1", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A1A00", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "16分の1！？ 落ち方がえぐいのだ。"
+      - speaker: reimu
+        text: "管を流れる量は、内側の太さの4乗に比例します。"
+        reading: "くだをながれるりょうわ、うちがわのふとさのよんじょうにひれいします。"
+      - speaker: reimu
+        text: "少し細くしただけで、薬はほとんど出なくなります。"
+        reading: "すこしほそくしただけで、くすりわほとんどでなくなります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……患者は、押し続けることになるのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "はい。時間もかかるし、力もいります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "痛みは減ったけど、注射の時間が長くなった。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "それだと、意味がないんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……だから、先だけ細いのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこです。刺さるのは先だけなので。"
+      - speaker: zundamon
+        emotion: normal
+        text: "皮膚を通るのは先。あとは通り道でしかないのだ。"
+      - speaker: reimu
+        text: "痛いのは先端だけ。手前は太くても構いません。"
+        reading: "いたいのわせんたんだけ。てまえわふとくてもかまいません。"
+      - speaker: zundamon
+        emotion: happy
+        text: "答えは出てるのだ。あとは、作れるかどうかだぞ。"
+  - id: hikinuki
+    title: "引っぱっては作れない"
+    background: il_nd_koba
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。針って、普通はどう作るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "管を引っぱるのだ。細い穴を通して、細くする。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……のばすんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうなのだ。ところが、それだと全部同じ太さになる。"
+      - speaker: reimu
+        text: "管を穴に通して細くする方法では、太さが一様になります。"
+        reading: "くだをあなにとおしてほそくするほうほうでわ、ふとさがいちようになります。"
+      - speaker: shokunin
+        emotion: normal
+        text: "途中で太さを変えるのは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "できないのだ。引っぱる力は、全体にかかるぞ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……じゃあ、メガホン型は無理じゃないですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "その作り方ならな。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……[他|ほか]にあるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "考えてみろ。管って、そもそも何なんだ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "何って……穴のあいた棒、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "違う見方をするのだ。丸めた板だぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        se: don
+        text: "……あ。その発想はなかったです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うちは板を絞る工場なのだ。板からなら、好きな形にできる。"
+        telops:
+          - {text: "管は、丸めた板である", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A2A2A", glow: "#2AC8B0", anim: up}
+      - speaker: shokunin
+        emotion: surprised
+        text: "板を、針の形に丸めるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうなのだ。先を細く、根元を太く、板の段階で決めておくぞ。"
+      - speaker: reimu
+        text: "平らな板を、先細りの筒に丸める。これが岡野の答えでした。"
+        reading: "たいらないたを、さきぼそりのつつにまるめる。これがおかののこたえでした。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……社長。ひとつ、問題があります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かってるのだ。合わせ目だろ。"
+  - id: yousetsu
+    title: "溶接すると、太くなる"
+    background: il_nd_teatsu
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: shokunin
+        emotion: normal
+        text: "板を丸めたら、端と端が合わさりますよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "合わさるのだ。普通は、そこを溶接する。"
+      - speaker: shokunin
+        emotion: normal
+        text: "じゃあ、溶接すればいいんじゃ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だめなのだ。溶かした金属が盛り上がるぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "盛り上がると、どうなるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "外は太くなる。中は狭くなる。両方だめだ。"
+      - speaker: reimu
+        text: "溶接した部分は外側が盛り上がり、内側も狭くなります。"
+        reading: "ようせつしたぶぶんわそとがわがもりあがり、うちがわもせまくなります。"
+      - speaker: shokunin
+        emotion: sad
+        text: "0.2ミリで、盛り上がったら終わりですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "終わりなのだ。だから、溶接はしない。"
+      - speaker: shokunin
+        emotion: surprised
+        se: don
+        text: "しない！？ じゃあ、開いちゃいますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "開かないように、ぴったり突き合わせるのだ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……ぴったり。どのくらいの、ぴったりですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "隙間があったら、液が漏れる。つまり、ゼロなのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "ゼロ！ そんな精度、出るんですか。壊れ性能でしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "出すのだ。型で。"
+      - speaker: reimu
+        text: "溶接を一切使わず、押し当てるだけで筒にする。"
+        reading: "ようせつをいっさいつかわず、おしあてるだけでつつにする。"
+      - speaker: reimu
+        text: "そのすべては、金型の精度に懸かっていました。"
+        reading: "そのすべてわ、かながたのせいどにかかっていました。"
+      - speaker: shokunin
+        emotion: normal
+        text: "……社長。それ、押す前に全部決まるやつですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。父ちゃんに言われたやつだぞ。"
+  - id: kanagata
+    title: "作っては、直す"
+    background: il_nd_kanagata
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "ここから、金型を作っては直す日々が始まります。"
+        reading: "ここから、かながたをつくってわなおすひびがはじまります。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長、19号です。押しました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……見せろ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……先が割れてるのだ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "はい。[曲げ|まげ]が急すぎたみたいで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "20号を作るぞ。角を、髪の毛の半分だけ緩める。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "髪の毛の半分。……測れませんよ、それ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "測るな。手でやるのだ。"
+      - speaker: reimu
+        text: "金型は削り直すたびに一からで、数日から数週間かかります。"
+        reading: "かながたわけずりなおすたびにいちからで、すうじつからすうしゅうかんかかります。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。今、何号まで来ましたっけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "数えてないのだ。数えると、メンタルが折れるぞ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……そうですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、毎回1個ずつ分かってるのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "分かってる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "こうやると割れる、が1個増えたぞ。実績解除なんだ。"
+      - speaker: reimu
+        text: "作り直した金型は、数百個にのぼったといいます。"
+        reading: "つくりなおしたかながたわ、すうひゃっこにのぼったといいます。"
+  - id: shippai
+    title: "割れる、詰まる、曲がる"
+    background: il_nd_teatsu
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "失敗の出方は、大きく三つに分かれました。"
+        reading: "しっぱいのでかたわ、おおきくみっつにわかれました。"
+      - speaker: shokunin
+        emotion: sad
+        text: "社長。またここです。先が縦に裂けました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……見せろ。うん、これは伸ばしすぎだな。"
+      - speaker: shokunin
+        emotion: normal
+        text: "でも、伸ばさないと細くならないですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一度に伸ばすからだめなのだ。何回かに分けるぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "分ける。……工程が増えますよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "増やすのだ。金属は、急かすと機嫌を損ねるぞ。"
+      - speaker: reimu
+        text: "一度に絞らず、少しずつ何度も絞る。それが一つ目の答えでした。"
+        reading: "いちどにしぼらず、すこしずつなんどもしぼる。それがひとつめのこたえでした。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長、次のが上がりました。裂けてません。"
+      - speaker: zundamon
+        emotion: happy
+        text: "お。……液、通してみろ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……出ません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "出ない？ 穴はあいてるだろ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "あいてます。でも、途中で潰れてるみたいで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……外は丸い。中が潰れてるのか。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "外から見えないやつじゃないですか。詰んでます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[詰んで|つんで]ないのだ。中の型を、もう一段細くするぞ。"
+      - speaker: reimu
+        text: "外側が良くても、内側が潰れていれば薬は通りません。"
+        reading: "そとがわがよくても、うちがわがつぶれていればくすりわとおりません。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。今度は、通りました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よし。刺してみろ。ゴムでいいぞ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……曲がりました。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "曲がった！？"
+      - speaker: shokunin
+        emotion: normal
+        text: "細すぎて、腰がないんです。ふにゃっといきました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……細さと、硬さは別なのだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "硬くするには、厚くするしかないですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "厚くすると、中が狭くなるのだ。また出なくなるぞ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……どっちを立てても、どっちかが倒れる。詰みでは。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。だから、先だけ薄くするぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……場所によって、厚みを変えるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "変えるのだ。刺さるのは先の1ミリだけだからな。"
+      - speaker: reimu
+        text: "細さと通りと強さ。三つはいつも、互いを邪魔しました。"
+        reading: "ほそさととおりとつよさ。みっつわいつも、たがいをじゃましました。"
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。ひとつ聞いていいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "……なんで、諦めないんですか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……諦める理由がないのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "3年、金にならないですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちは、できない仕事を引き受けた工場なのだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "……はい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "できないうちに投げたら、ただの断った101社目だぞ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……101社目。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それだけは嫌なのだ。"
+  - id: gonen
+    title: "5年"
+    background: il_nd_koba
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "テルモ"}
+    cuts:
+      - speaker: tsumugi
+        emotion: sad
+        text: "……[岡野|おかの]さん。もう、5年目になります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうか。早いのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "早い、ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うちの基準では早いぞ。10年かかる仕事もあるんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……社内では、そろそろ厳しいと言われてます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だろうな。5年、金だけ出てるからな。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "テルモさん。ひとつ聞くのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの子は、まだ毎日打ってるのか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……打ってます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、やめる理由はないのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "こっちはもう、割れないところまで来てるぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "え。割れないんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "割れない。あとは、合わせ目を詰めるだけなのだ。"
+      - speaker: reimu
+        text: "開発には、5年の歳月がかかりました。"
+        reading: "かいはつにわ、ごねんのさいげつがかかりました。"
+  - id: kansei
+    title: "蚊と、同じ太さ"
+    background: il_nd_teatsu
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "テルモ"}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "テルモさん。できたのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……え。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ルーペで見てくれ。合わせ目、見えるか。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……見えません。どこですか。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "見えないのが正解なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ほんとに、継ぎ目がない。"
+      - speaker: reimu
+        text: "先端の外側は0.2ミリ、内側は0.08ミリになりました。"
+        reading: "せんたんのそとがわわれーてんにみり、うちがわわれーてんぜろはちみりになりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先が0.2ミリ。中は0.08ミリなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……0.2ミリって、何と同じでしたっけ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "蚊なのだ。あいつの口と、だいたい同じだぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "蚊に、追いついたんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "追いついたのだ。5年かかったぞ。"
+        telops:
+          - {text: "蚊の口と、同じ太さ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A2A", glow: "#2AC8B0", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "……向こうは、何万年もかけてますけどね。古参が強すぎます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うるさいのだ。こっちは5年で追いついたぞ。"
+      - speaker: reimu
+        text: "蚊の口の太さと、ほぼ同じところまで到達しました。"
+        reading: "かのくちのふとさと、ほぼおなじところまでとうたつしました。"
+  - id: hatsubai
+    title: "2005年7月"
+    background: il_nd_shukka
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "2005年7月、テルモがナノパス33として発売します。"
+        reading: "にせんごねんしちがつ、てるもがなのぱすさんじゅうさんとしてはつばいします。"
+      - speaker: shokunin
+        emotion: happy
+        text: "社長。箱が積み上がってますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……多いな。何本入ってるんだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "この山で、ざっと数十万本かと。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "数十万。……全部、誰かの腕に刺さるのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……言い方。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そういう仕事なのだ。1本でも不良を出したら、誰かが痛い。"
+      - speaker: shokunin
+        emotion: normal
+        text: "……はい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから、うちは全部見るぞ。目で。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "全部！？ 数十万を！ 無理ですって！"
+      - speaker: zundamon
+        emotion: happy
+        text: "6人いるのだ。やれるぞ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……やれますけど。"
+  - id: kenpin
+    title: "6人で、全部見る"
+    background: il_nd_teatsu
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: shokunin, x: 0.72}
+    cuts:
+      - speaker: shokunin
+        emotion: normal
+        text: "社長。この検品、機械でできませんか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "できるのだ。でも、機械は決めた項目しか見ないぞ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……決めてない不良は、通っちゃう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。人は、なんか変だなが分かるぞ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "その、なんか変だなが説明できないんですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "説明できたら、機械にやらせるのだ。"
+      - speaker: reimu
+        text: "言葉にできない違和感は、機械の項目にできません。"
+        reading: "ことばにできないいわかんわ、きかいのこうもくにできません。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……社長、これ。ちょっと変です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どれだ。……ああ、先の光り方が違うな。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "光り方！？ 格が違いますね……。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見てるのだ。面が荒れると、光がにじむぞ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……道具、目だけですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "目と、40年なのだ。"
+      - speaker: reimu
+        text: "岡野は、この検品を最後まで人の目で行いました。"
+        reading: "おかのわ、このけんぴんをさいごまでひとのめでおこないました。"
+  - id: kodomo2
+    title: "刺した、あと"
+    background: il_nd_byoin
+    bgm: 223am
+    stage:
+      - {who: kodomo, x: 0.3, flip: true}
+      - {who: isha, x: 0.72}
+    cuts:
+      - speaker: isha
+        emotion: normal
+        text: "今日から、針が新しいのに変わったよ。"
+      - speaker: kodomo
+        emotion: normal
+        text: "……新しい。"
+      - speaker: isha
+        emotion: normal
+        text: "うん。細くなってる。じゃあ、いこうか。"
+      - speaker: kodomo
+        emotion: sad
+        text: "……はい。"
+      - speaker: kodomo
+        emotion: surprised
+        text: "……あれ。"
+      - speaker: isha
+        emotion: normal
+        text: "どうした。"
+      - speaker: kodomo
+        emotion: surprised
+        text: "……もう、終わったんですか。"
+      - speaker: isha
+        emotion: happy
+        text: "終わったよ。"
+      - speaker: kodomo
+        emotion: normal
+        text: "……気づかなかった。"
+      - speaker: isha
+        emotion: happy
+        text: "……そう。それが作りたかったものなんだって。"
+      - speaker: kodomo
+        emotion: normal
+        text: "……誰が作ったんですか。"
+      - speaker: isha
+        emotion: normal
+        text: "東京の、小さな工場のおじさんたちだよ。"
+      - speaker: reimu
+        text: "痛みが少ない、という評価は、患者から返ってきました。"
+        reading: "いたみがすくないというひょうかわ、かんじゃからかえってきました。"
+  - id: shou
+    title: "2005年度・グッドデザイン大賞"
+    background: il_nd_hyoushou
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: kisha, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "この針は、2005年度のグッドデザイン大賞に選ばれます。"
+        reading: "このはりわ、にせんごねんどのぐっどでざいんたいしょうにえらばれます。"
+      - speaker: kisha
+        emotion: happy
+        text: "[岡野|おかの]さん、おめでとうございます。大賞です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……デザインの賞なのか。うち、絵は描いてないぞ。"
+      - speaker: kisha
+        emotion: normal
+        text: "見た目だけじゃないんです。形が意味を持ってるかどうかで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ああ。メガホンの形は、意味しかないのだ。"
+      - speaker: kisha
+        emotion: happy
+        text: "そこが評価されたんだと思います。"
+      - speaker: kisha
+        emotion: normal
+        text: "ひとつ伺っても。なぜ引き受けたんですか、100社が断った仕事を。"
+      - speaker: zundamon
+        emotion: normal
+        text: "100社が断ったからなのだ。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……逆、ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "うちは、他でできる仕事は受けないと決めてるぞ。"
+      - speaker: kisha
+        emotion: thinking
+        text: "……断られた数が多いほど、御社向きになる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。100社断られたは、いい看板だぞ。"
+      - speaker: kisha
+        emotion: normal
+        text: "従業員6人と伺いました。増やさないんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "増やさないのだ。増やすと、断れなくなる。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……断るために、小さいままなんですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうなのだ。食わせる口が増えると、仕事を選べないぞ。"
+  - id: sonogo
+    title: "5億本"
+    background: il_nd_shukka
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "テルモ"}
+    cuts:
+      - speaker: reimu
+        text: "その後、針はさらに細くなります。"
+        reading: "そのご、はりわさらにほそくなります。"
+      - speaker: reimu
+        text: "0.18ミリの型が出ました。"
+        reading: "れーてんいちはちみりのかたがでました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "[岡野|おかの]さん。0.18ミリ、通りました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "0.2の次は0.18か。……たった0.02なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、流れる量は1.5倍くらい減りますよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……また4乗が効いてくるのだ。えぐい法則なんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい。根元をさらに太くして、帳尻を合わせました。"
+      - speaker: reimu
+        text: "0.18ミリの製品は、2012年に岡野工業との共同で賞を受けます。"
+        reading: "れーてんいちはちみりのせいひんわ、にせんじゅうにねんにおかのこうぎょうとのきょうどうでしょうをうけます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "累計の生産、5億本を超えました。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "5億！？"
+        telops:
+          - {text: "累計5億本を超えた", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A1A00", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい。5億回、誰かの腕に刺さってます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……5億回、気づかれてないのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……あ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いい仕事なのだ。誰にも覚えられてないぞ。"
+  - id: haigyou
+    title: "2018・あと2年で閉じる"
+    background: il_nd_jimusho
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "岡野", flip: true}
+      - {who: kisha, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "2018年3月、85歳になった岡野は取材でこう話します。"
+        reading: "にせんじゅうはちねんさんがつ、はちじゅうごさいになったおかのわしゅざいでこうはなします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あと2年で、会社を閉じるつもりなのだ。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……閉じる。どなたかに継がせないんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "継がせないのだ。"
+      - speaker: kisha
+        emotion: normal
+        text: "ご家族もいらっしゃるのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちの仕事は、注文が来ないと成り立たないのだ。"
+      - speaker: kisha
+        emotion: thinking
+        text: "……それは、どこも同じでは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "違うのだ。うちに来るのは、[他|ほか]が断った仕事だけだぞ。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……あ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その注文は、うちの腕を見込んで来てる。設備じゃない。"
+      - speaker: kisha
+        emotion: normal
+        text: "……腕は、譲れませんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "譲れないのだ。看板だけ継がせても、続かない。"
+      - speaker: kisha
+        emotion: sad
+        text: "……もったいない気もします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "もったいなくないのだ。針は残るぞ。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……針は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "型を渡してあるのだ。あれで、これからも作れる。"
+      - speaker: reimu
+        text: "岡野は、自然体でやめていくと語りました。"
+        reading: "おかのわ、しぜんたいでやめていくとかたりました。"
+  - id: ima
+    title: "いま腕に刺さるもの"
+    background: il_nd_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎさん。ボク、明日の採血のことだけど。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれも、細くなってるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "採血の針は、太さの目的が違うの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "違う？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "血を吸い出すから、細すぎると壊れちゃう。血の粒が。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なるほど。出す針と、吸う針は違うのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。でも、痛みを減らす工夫はどっちにも入ってるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……先の削り方とか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。刃の角度も、細かく決められてる。"
+      - speaker: reimu
+        text: "針の先は、刃のように斜めに削られています。"
+        reading: "はりのさきわ、はのようにななめにけずられています。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ひとつ気づいたことがあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクが痛くないと思ってるやつ、全部誰かが減らしたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……うん。勝手に痛くなくなったわけじゃない。"
+  - id: end
+    title: ""
+    background: il_nd_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今度、注射のあとに何も感じなかったら思い出してみて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……100社が断った、あれか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。断られた数だけ、あの人に近づいてたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……変な話なのだ。断られたのは、いいことだったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "結果としてはね。100社が受けてたら、たぶん途中でやめてる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なんでだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "できる会社は、できる範囲でやるから。5年は待てないよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……できない会社が、できるまでやったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこがこの話の、いちばん妙なところだと思う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、もうひとつ気になってることがあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの人、うちの仕事は紙の上に書いてない、って育てられたろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。お父さんにね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、継がせられなかったのだ。書き残せないから。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そうだね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "でも、型は残したのだ。あれは形が答えを持ってるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……手の代わりに、型が覚えてるんだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……よし。明日は腕、一発で出すのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "お、成長した。"
+      - speaker: zundamon
+        emotion: happy
+        text: "目もつぶらないぞ。見届けるのだ、0.2ミリを。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……たぶん見えないけどね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "チャンネル登録も、してくれると嬉しいのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "感想もコメントで教えてね。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"

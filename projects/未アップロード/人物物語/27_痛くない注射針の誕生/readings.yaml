@@ -1,0 +1,10 @@
+# okano-needle 読み台帳
+# 固有名詞だけを載せる。一般語の誤読は voice 後の check_moras_cross.py で全数照合し、
+# 実際に化けたものだけ assets/readings_common.yaml に足す
+- {surface: 岡野雅行, reading: おかのまさゆき}
+- {surface: 岡野, reading: おかの}
+- {surface: 雅行, reading: まさゆき}
+- {surface: 墨田区, reading: すみだく}
+- {surface: 向島, reading: むこうじま}
+- {surface: 深絞り, reading: ふかしぼり}
+- {surface: 金型, reading: かながた}
