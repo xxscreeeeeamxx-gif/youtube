@@ -43,10 +43,18 @@ TAG = re.compile(r"\[([^|\]]+)\|([^\]]+)\]")
 KANJI = re.compile(r"[一-鿿々]")
 JOIN = re.compile(r"[一-鿿々0-9０-９]")   # これに挟まれた語は複合語の一部
 KANA_ONLY = re.compile(r"[^ァ-ヶー]")
+# 1モーラの語は連濁・音便のノイズが多く、実読に埋もれた別語とも当たる。
+# 2モーラ以上に絞ると偽陽性が実用域まで落ちる（八木・荷馬車は2モーラ以上）
+MIN_MORA = 2
 O_COL = set("オコソトノホモヨロヲゴゾドボポョ")
 E_COL = set("エケセテネヘメレゲゼデベペ")
 VOICED = str.maketrans("ガギグゲゴザジズゼゾダヂヅデドバビブベボ",
                        "カキクケコサシスセソタチツテトハヒフヘホ")
+# canon() は長音のゆれを吸収するために「オ段+ウ」を「オ段+オ」に寄せる。
+# その副作用で、文の中に置かれた語は語頭の ウ/イ が変わってしまう
+# （「の受け売り」→ ノオケウリ。単独の ウケウリ と字面が合わなくなる）。
+# 語が文中にあるか調べるときだけ、ウ/オ・イ/エ を同一視して照合する
+LOOSE = str.maketrans("ウイ", "オエ")
 
 _sud = _jt = _kks = _mode = None
 
@@ -100,8 +108,14 @@ def disp_of(t):
     return TAG.sub(lambda m: m.group(1), t)
 
 
-def word_votes(text: str) -> dict:
-    """漢字を含む語ごとに、3系統の読みを集める。表層が一致する語だけ比べる。"""
+def word_votes(text: str):
+    """漢字を含む語ごとに、3系統の読みを集める。表層が一致する語だけ比べる。
+
+    返り値は (割れた語, 全会一致の語)。全会一致も返すのは、辞書どうしの
+    不一致だけを見ていると **辞書が3つとも正しくて VOICEVOX だけが間違えた語**
+    を取りこぼすため（八木=ハチボク・荷馬車=ニウマシャ・通って=カヨッテ の実例。
+    2026-08-26、光ファイバー回で3件が多数決検査をすり抜けた）。
+    """
     maps = {}
     for name, fn in (("IPAdic", words_janome), ("KAKASI", words_kakasi),
                      ("Sudachi", words_sudachi)):
@@ -111,13 +125,17 @@ def word_votes(text: str) -> dict:
                 d[surf].add(canon(yomi))
         maps[name] = d
     common = set(maps["IPAdic"]) & set(maps["KAKASI"]) & set(maps["Sudachi"])
-    out = {}
+    split, agreed = {}, {}
     for surf in common:
         votes = {n: sorted(maps[n][surf]) for n in maps}
         flat = [v[0] for v in votes.values() if v]
         if len(set(flat)) > 1:
-            out[surf] = votes
-    return out
+            split[surf] = votes
+        elif flat and len(set().union(*(set(v) for v in votes.values()))) == 1:
+            # 3辞書が1つの読みしか出さなかった語。ここが割れないということは
+            # 読みが一意なので、実読がそれと違えば誤読と断じてよい
+            agreed[surf] = flat[0]
+    return split, agreed
 
 
 def _standalone(text: str, surf: str) -> bool:
@@ -147,17 +165,38 @@ def check(slug: str) -> list:
         text = spoken_of(cut["text"])
         if not KANJI.search(text):
             continue
-        split = word_votes(text)
-        # 複合語の断片は判定できない。「2005年7月」から「月」だけ抜いて
-        # かなに置換しても、置換した文自体が別物になって比較にならない。
-        # 前後が漢字か数字なら、その語は複合語の一部とみなして飛ばす
-        split = {w: v for w, v in split.items() if _standalone(text, w)}
-        if not split:
-            continue
+        split, agreed = word_votes(text)
         is_narr = cut["speaker"] == narrator
+        # 複合語の断片を飛ばすのは **ナレだけ**。ナレは「その語をかなに置換した文」を
+        # 合成して聴き比べるので、「2005年7月」から「月」だけ抜くと置換文が別物になり
+        # 比較にならない。セリフは実読カナと突き合わせるだけなので、複合語の中にあっても
+        # 判定できる。ここを一律に除外していたため「八木先生」の八木＝ハチボクを
+        # 取りこぼした（2026-08-26）
+        if is_narr:
+            split = {w: v for w, v in split.items() if _standalone(text, w)}
+            agreed = {w: y for w, y in agreed.items() if _standalone(text, w)}
         actual = None
         if not is_narr and i < len(timings) and timings[i].get("moras"):
             actual = canon("".join(m[0] for m in timings[i]["moras"]))
+
+        def present(y, act=None):
+            act = actual if act is None else act
+            for tr in (LOOSE, None):
+                a, b = (act.translate(tr), y.translate(tr)) if tr else (act, y)
+                if b in a or b.translate(VOICED) in a.translate(VOICED):
+                    return True
+            return False
+
+        # ① 3辞書が全会一致なのに VOICEVOX がそう読んでいない語
+        if actual is not None:
+            for surf, yomi in sorted(agreed.items()):
+                if len(yomi) < MIN_MORA or present(yomi):
+                    continue
+                found.append({"idx": i, "speaker": cut["speaker"], "narr": False,
+                              "text": disp_of(cut["text"]), "surf": surf,
+                              "votes": {"3辞書とも": [yomi]}, "actual": actual,
+                              "verdict": f"‼ 3辞書とも {yomi} なのに実読に無い"})
+        # ② 辞書どうしが割れた語
         for surf, votes in split.items():
             cand = [v[0] for v in votes.values() if v]
             major = max(set(cand), key=cand.count)
@@ -165,8 +204,6 @@ def check(slug: str) -> list:
             verdict = None
             if actual is not None:
                 # 実読の中にどの候補が含まれるか。連濁で頭が濁ることがあるので許す
-                def present(y):
-                    return y in actual or y.translate(VOICED) in actual.translate(VOICED)
                 hits = [y for y in set(cand) if present(y)]
                 if len(hits) == 1 and hits[0] == major and n_major >= 2:
                     continue                     # 多数派どおりに読めている

@@ -268,6 +268,33 @@ def p_block(d, s):
                       fill=(255, 228, 110), outline=(170, 125, 15), width=6)
 
 
+def p_fiber(d, s):
+    """光ファイバー。束ねた糸が扇状に広がり、先が光っている図。
+
+    実寸168pxで読めることだけを狙う。断面図や外皮を描き込むと小さな暗い塊に
+    潰れるので、暗い地の上に「光る線が広がる」形だけを残した。
+    枠（0〜s）からはみ出した分は切り落とされるので、先端の光のにじみまで
+    含めて全部を内側に収める（はみ出させて短い棒に化けた失敗あり）。
+    """
+    import math as _m
+    ox, oy = s*0.92, s*0.92          # 束の根元（右下）
+    r = s*0.78                        # 先端が光のにじみごと枠に収まる長さ
+    tips = [(ox + _m.cos(_m.radians(a)) * r, oy + _m.sin(_m.radians(a)) * r)
+            for a in (190, 205, 220, 235, 250)]
+    for tx, ty in tips:               # ① にじみ
+        d.line([ox, oy, tx, ty], fill=(90, 180, 240, 80), width=int(s*0.070))
+    for tx, ty in tips:               # ② 糸
+        d.line([ox, oy, tx, ty], fill=(120, 200, 245), width=int(s*0.038))
+        d.line([ox, oy, tx, ty], fill=(245, 252, 255), width=int(s*0.016))
+    # ③ 束ねている根元のスリーブ
+    d.polygon([(s*0.74, s*0.99), (s*0.99, s*0.99), (s*0.99, s*0.74), (s*0.80, s*0.83)],
+              fill=(24, 38, 68), outline=(165, 195, 230), width=int(s*0.020))
+    for tx, ty in tips:               # ④ 先端の光
+        for rr, col in ((s*0.100, (110, 195, 255, 90)), (s*0.065, (185, 230, 255, 165)),
+                        (s*0.038, (255, 255, 255, 255))):
+            d.ellipse([tx-rr, ty-rr, tx+rr, ty+rr], fill=col)
+
+
 def p_needle(d, s):
     """注射針。先が細く根元が太いメガホン型を、斜めに描く。
 
@@ -1642,6 +1669,10 @@ SPECS = {
         bg=((28, 52, 92), (14, 28, 56)), emotion="surprised",
         lines=[("スイスを倒した", W1, None), ("1600社が600社に", W1, None),
                ("クオーツ時計", B1, Y1)]),
+    "nishizawa-fiber": dict(prop="p_fiber", layout="stack",
+        bg=((18, 46, 92), (8, 22, 50)), emotion="sad",
+        lines=[("金は出せない", W1, None), ("日本が捨てた発明", W1, None),
+               ("光ファイバー", B1, Y1)]),
     "okano-needle": dict(prop="p_needle", layout="stack",
         bg=((16, 74, 84), (8, 40, 48)), emotion="surprised",
         lines=[("100社が断った", W1, None), ("6人の町工場がやった", W1, None),

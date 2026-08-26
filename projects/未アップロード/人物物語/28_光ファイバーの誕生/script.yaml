@@ -1,0 +1,1520 @@
+# 光ファイバー再現ドラマ・ミーム版（[西澤潤一|にしざわじゅんいち]・1926→2018）。投稿前に必ず目視レビュー。
+# 配役: ずんだもん=西澤潤一 / つむぎ=恩師・渡辺寧 / ナレ=ゆっくり
+# ★ミーム禁止の章: azukari（学界に叩かれる）/ kotoba（本人の述懐）/ bannen（逝去）
+# 裏取り: 西澤潤一Wikipedia / 学士会会報883号「光通信五十周年」西澤潤一 本人寄稿 /
+#   東北大学萩友会「ミスター半導体・光通信の父」
+# 確定事実:
+#   1926-9-12 宮城県仙台市生まれ。父は西澤恭助（東北帝国大学工学部化学工学科教授）
+#   1943 仙台第二中学校卒 / 1945 第二高等学校卒 / 1948-3 東北大学工学部電気工学科卒
+#   恩師は渡辺寧（東北大電気工学科教授）。抜山平一教授が渡辺の研究室を推薦
+#   渡辺はベル研の点接触型トランジスタ（1947）の情報をいち早く得ていた
+#   1950 pin接合構造・PINダイオード・静電誘導トランジスタ / 1952 アバランシェフォトダイオード
+#   1957 半導体レーザーを日本国特許として出願 / 1964 集束型光ファイバー（GI型）を考案
+#   八木秀次からの間接的指導「周波数をどんどん開拓していくと、最後は光になるよ」
+#   GI型の原理: 管の中心部の屈折率を最も高く、周辺ほど低くする。光は屈折率の大きい方へ
+#     曲がるので蛇行し、表面にぶつからないので逃げずに遠くまで伝わる
+#   電電公社電気通信研究所へ陳情 → 研究室長に「出来るか出来ないかわからないものに、
+#     金は出せない」と断られた。2度陳情して同じ結果
+#   新説が定説と異なるとして攻撃され、渡辺が論文を預かり対外発表を控えさせた時期がある
+#   アメリカの研究者に構想を話した5年後、米5か所の研究機関から一斉に半導体レーザー完成の報告
+#   PINダイオードは日本で先に特許が成立していたのに、日本企業はGEに特許料を払っていた。
+#     日本の特許が有効と知れ渡ってからも「特許料をほとんど払ってもらえなかった」
+#   光ファイバー特許は書類不備で差し戻され、異議申立で拒絶査定。裁判が長期化し期限切れ
+#   本人の言葉「日本人に独創性がないのではない。同胞の成果を評価しないし工業化もしないのが問題」
+#   「独創を成すには異端であらねばならない」
+#   1989-11-3 文化勲章 / 2000 IEEEエジソンメダル / 2003 IEEEが「西澤潤一メダル」を創設
+#   1990-11 東北大学総長（第17代）/ 1998-2005 岩手県立大学初代学長
+#   2009 チャールズ・カオが光ファイバーでノーベル物理学賞
+#   2018-10-21 逝去、享年92
+meta:
+  title: "【光ファイバーの誕生】日本が要らないと言った発明【ずんだもん解説】"
+  slug: "nishizawa-fiber"
+  summary: "スマホで動画が見られるのは、髪の毛ほどのガラスの糸のおかげです。光で通信するという構想を1950年代に出したのは、仙台の研究者・西澤潤一でした。ところが国内では相手にされず、資金の相談は断られます。何と言われたのか。ずんだもんが西澤を演じる再現ドラマです。"
+  tags: ["光ファイバー", "西澤潤一", "光通信", "半導体", "東北大学", "発明", "再現ドラマ", "ゆっくり", "ずんだもん", "技術史", "ミーム"]
+  thumbnail:
+    top: "金は出せない"
+    bottom: "日本が捨てた発明"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: chichi, label: "父・恭助", voice: 13, pitch: -0.08, item: mustache}
+    - {id: sensei, label: "物理の先生", voice: 13, pitch: -0.02, item: book}
+    - {id: shitsucho, label: "研究室長", voice: 13, pitch: -0.1, item: hat}
+    - {id: gakusha, label: "学会の重鎮", voice: 13, pitch: -0.05, item: mustache}
+    - {id: kigyou, label: "企業の人", voice: 12, pitch: 0.05}
+    - {id: kisha, label: "記者", voice: 12, pitch: 0.07}
+scenes:
+  - id: hook
+    title: ""
+    background: il_nf_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "スマホで動画が見られるのは、髪の毛くらいのガラスの糸のおかげなの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "ガラス！？ 電気じゃないのか。ファッ！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "光だよ。ガラスの中を、光が走ってる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そんなSFみたいな話、誰が考えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[仙台|せんだい]の研究者。ただ日本では、[金|かね]は出せないって断られてる。"
+        telops:
+          - {text: "金は出せない", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A1E3A", glow: "#4AA8E8", anim: up}
+      - speaker: zundamon
+        emotion: angry
+        text: "断ったのか！？ 今それで全世界がつながってるのに。無能すぎるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その話をする前に。ずんだもん、さっきから何を怒ってるの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "動画が止まるのだ。4Kにしたら、ぐるぐる回るんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "回線、何を使ってる？"
+      - speaker: zundamon
+        emotion: normal
+        text: "無線なのだ。ボクの回線が悪いんじゃないぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "じゃあ何が悪いの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "世界が遅いのだ。ボクは悪くない。ノーダメだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スケールが大きいね、責任の押しつけ方。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かった。対策を考えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お、どんな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "有線にするのだ。線でつなげば、速いに決まってるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん、それは正しい。じゃあ、その線の先は何につながってる？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……壁の穴なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その先は。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……道の下。……電柱。……えっ、どこまで行くんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "海の底まで行くよ。そして、その全部がガラスの糸。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "全部！？ 世界一周ぶんガラスなのか。スケールがバグってる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。だから、世界が遅いんじゃなくて、無線の区間だけが遅いの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……結局ボクの区間なのだ。詰んでるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そういうこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……で、そのガラスの糸を考えたのが、断られた人か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。しかも、光で通信する道具を、ほとんど一人で考えてる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "一人！？ チームじゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "光を出す部品、運ぶ糸、受け取る部品。全部その人だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……それ、褒められないほうがおかしいのだ。格が違うぞ。"
+      - speaker: reimu
+        text: "光ファイバー。髪の毛ほどの太さのガラスの糸です。"
+        reading: "ひかりふぁいばー。かみのけほどのふとさのがらすのいとです。"
+      - speaker: reimu
+        text: "その中を光が走り、世界の通信を支えています。"
+        reading: "そのなかをひかりがはしり、せかいのつうしんをささえています。"
+      - speaker: reimu
+        text: "物語は、1930年代の仙台から始まります。"
+        reading: "ものがたりわ、せんきゅうひゃくさんじゅうねんだいのせんだいからはじまります。"
+  - id: kodomo
+    title: "1926・仙台に生まれる"
+    background: il_nf_jitaku
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true, scale: 0.78}
+      - {who: chichi, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1926年9月12日、西澤潤一は宮城県仙台市に生まれました。"
+        reading: "せんきゅうひゃくにじゅうろくねんくがつじゅうににち、にしざわじゅんいちわみやぎけんせんだいしにうまれました。"
+      - speaker: reimu
+        text: "父は、東北帝国大学で化学工学を教えていました。"
+        reading: "ちちわ、とうほくていこくだいがくでかがくこうがくをおしえていました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "父さん。ひとつ、聞いてもいいですか。"
+      - speaker: chichi
+        emotion: normal
+        text: "なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "1足す1は、なぜ2になるのですか。"
+      - speaker: chichi
+        emotion: surprised
+        text: "……なぜ、とは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "1と1を足すと2になる、と決めたのは誰ですか。"
+      - speaker: chichi
+        emotion: thinking
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決めた人がいるなら、違う決め方もできたはずです。"
+      - speaker: chichi
+        emotion: happy
+        text: "……お前、学校で嫌われるぞ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……もう、少し。"
+      - speaker: chichi
+        emotion: normal
+        text: "だが、その聞き方はやめるな。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……いいのですか。"
+      - speaker: chichi
+        emotion: normal
+        text: "みんなが正しいと言うことほど、誰も確かめていない。"
+      - speaker: reimu
+        text: "この問いは、本人が後年まで語った幼少期の逸話です。"
+        reading: "このといわ、ほんにんがこうねんまでかたったようしょうきのいつわです。"
+  - id: kyoshitsu
+    title: "光の話を聞いた日"
+    background: il_nf_kyoshitsu
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true, scale: 0.86}
+      - {who: sensei, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "仙台第二中学校。物理の授業でのことです。"
+        reading: "せんだいだいにちゅうがっこう。ぶつりのじゅぎょうでのことです。"
+      - speaker: sensei
+        emotion: normal
+        text: "ドイツに、フラウンホーファーという少年職工がいた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "職工。学者じゃないんですか。"
+      - speaker: sensei
+        emotion: normal
+        text: "ガラス磨きだ。だが、光をよく見ていた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ガラスと、光。"
+      - speaker: sensei
+        emotion: normal
+        text: "彼は、太陽の光を細かく分けて、そこに線があることを見つけた。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "線！？ 光に線があるんですか。"
+      - speaker: sensei
+        emotion: happy
+        text: "ある。何が燃えているかまで分かる。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……光が、しゃべってるのだ。"
+      - speaker: sensei
+        emotion: surprised
+        text: "しゃべる？"
+      - speaker: zundamon
+        emotion: normal
+        text: "遠くの星のことを、光が運んできたってことですよね。"
+      - speaker: sensei
+        emotion: thinking
+        text: "……そういう言い方は、しないな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "でも、運んでます。何億キロも。"
+      - speaker: reimu
+        text: "光が情報を運ぶ。この見方が、後の仕事の底になります。"
+        reading: "ひかりがじょうほうをはこぶ。このみかたが、のちのしごとのそこになります。"
+  - id: watanabe
+    title: "1948・渡辺研究室へ"
+    background: il_nf_kenkyu
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: reimu
+        text: "1948年、東北大学工学部電気工学科を卒業します。"
+        reading: "せんきゅうひゃくよんじゅうはちねん、とうほくだいがくこうがくぶでんきこうがっかをそつぎょうします。"
+      - speaker: reimu
+        text: "抜山平一教授の推薦で、渡辺寧の研究室に入りました。"
+        reading: "ぬきやまへいいちきょうじゅのすいせんで、わたなべやすしのけんきゅうしつにはいりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "君が[西澤|にしざわ]くんか。[抜山|ぬきやま]さんから聞いてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よろしくお願いします。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "変わった質問をする学生だ、と言われたよ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……それ、褒められてますか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "この研究室では褒め言葉。……これ、見たことある？"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……なんですか、この小さいの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "去年アメリカで出た、トランジスタというもの。"
+      - speaker: reimu
+        text: "渡辺は、ベル研究所の点接触型トランジスタの情報をいち早く得ていました。"
+        reading: "わたなべわ、べるけんきゅうじょのてんせっしょくがたとらんじすたのじょうほうをいちはやくえていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……真空管の代わりですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。熱くならないし、壊れにくいし、小さい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……小さいのは、いいことなんですか。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "え。"
+      - speaker: zundamon
+        emotion: normal
+        text: "小さくすると、何がうれしいんでしょう。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……たくさん並べられる、かな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "並べたら、速くなりますか。"
+      - speaker: tsumugi
+        emotion: surprised
+        se: don
+        text: "……。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……君、うちに来て正解だったよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。今の質問、変でしたか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "変だよ。20年先の質問をしてる。時代を先取りしすぎだ。"
+  - id: hatsumei
+    title: "1950年代・出しすぎた男"
+    background: il_nf_jitsuken
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: reimu
+        text: "1950年、西澤はpin接合という構造を考えます。"
+        reading: "せんきゅうひゃくごじゅうねん、にしざわわぴんせつごうというこうぞうをかんがえます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[西澤|にしざわ]くん。今月、いくつ出した。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……数えてないです。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "数えてない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "思いついたら書くので、数える[暇|ひま]がないんです。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……私が数えた。今年に入って、もう二桁だ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そんなにありましたか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "普通は、一生に一つ出れば大したものなんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……えっ。じゃあボク、出しすぎてます？ 課金しすぎですか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "出しすぎ。でも、止めない。"
+      - speaker: reimu
+        text: "1952年には、半導体の中で電子がなだれのように増える現象を見つけます。"
+        reading: "せんきゅうひゃくごじゅうにねんにわ、はんどうたいのなかででんしがなだれのようにふえるげんしょうをみつけます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "先生。面白いものが見えました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電子が1個ぶつかると、2個になって、4個になるんです。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……ねずみ算か。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうです。弱い光でも、これなら拾えます。壊れ性能ですよ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……弱い光を拾う。何に使う気だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まだ分かりません。でも、いつか要ると思います。"
+      - speaker: reimu
+        text: "この素子は、のちに光通信の受け手として使われることになります。"
+        reading: "このそしわ、のちにひかりつうしんのうけてとしてつかわれることになります。"
+  - id: azukari
+    title: "論文を、預かる"
+    background: il_nf_kenkyu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: reimu
+        text: "定説と違う説は、学界で攻撃を受けました。"
+        reading: "ていせつとちがうせつわ、がっかいでこうげきをうけました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先生。次の論文、できました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……見せなさい。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……だめ、ですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "正しいと思う。だから困ってる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……正しいと、困るんですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今の教科書と食い違ってる。出せば、また叩かれる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……叩かれるのは、慣れました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "慣れるな。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "叩かれ続けると、まともな人は書くのをやめる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクは、やめませんよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "知ってる。だから、しばらく私が預かる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "預かる。……発表しないんですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "時期を待つ。君が潰されない時期を。"
+      - speaker: reimu
+        text: "渡辺は西澤の論文を預かり、対外発表を控える時期がしばらく続きました。"
+        reading: "わたなべわにしざわのろんぶんをあずかり、たいがいはっぴょうをひかえるじきがしばらくつずきました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……先生。ひとつだけ、聞いていいですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクの考えは、間違ってますか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……間違ってない。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "早すぎるだけだ。それは、罪じゃない。"
+  - id: shuha
+    title: "最後は、光になる"
+    background: il_nf_kokuban
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "[西澤|にしざわ]くん。[八木|やぎ]先生の受け売りだが、いい話がある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[八木|やぎ]先生。あのアンテナの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。通信屋への言葉だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "周波数をどんどん開拓していくと、最後は光になるよ、と。"
+        telops:
+          - {text: "最後は光になる", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A1E3A", glow: "#4AA8E8", anim: up}
+      - speaker: zundamon
+        emotion: thinking
+        text: "……最後は、光。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "意味、分かるか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そもそも、なぜ周波数を開拓するんでしたっけ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこから聞くか。いい質問だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "波は、1秒に振れる回数が多いほど、たくさん運べる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[荷馬車|にばしゃ]の便が増える、みたいな話ですか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。振れる回数が増えれば、便が増える。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、どこまでも上げればいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "上げていくと、どうなると思う。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……長波、短波、マイクロ波……。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……その先が、光ですか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこ。電波を上げ切った先に、光がある。"
+      - speaker: reimu
+        text: "電波と光は、振れる回数が違うだけの同じものです。"
+        reading: "でんぱとひかりわ、ふれるかいすうがちがうだけのおなじものです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……じゃあ、光で通信するのは、当たり前の続きなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "理屈ではね。ただ、誰もやってない。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……空いてるってことですね。無双できます。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……君、そういうところだぞ。"
+  - id: sanyouso
+    title: "三つ、要る"
+    background: il_nf_kokuban
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "先生。光で通信するには、三つ要ります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "三つ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電気を光に変える口。光を運ぶ道。光を電気に戻す口。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……当たり前だが、どれも無いな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "無いです。だから作ります。初期装備から作ります。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……三つとも？"
+      - speaker: zundamon
+        emotion: normal
+        text: "一つでも欠けたら、つながらないので。"
+      - speaker: reimu
+        text: "光通信には、送る・運ぶ・受けるの三つがそろわねばなりません。"
+        reading: "ひかりつうしんにわ、おくるはこぶうけるのみっつがそろわねばなりません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "受けるほうは、もうあるんじゃないか。なだれのやつ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あります。あれ、今日から光を受ける部品なのだ。実質、転職なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……用途を後から決めたな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先に作っておくと、こういう日が来るんです。"
+      - speaker: reimu
+        text: "1957年、西澤は半導体レーザーを日本国特許として出願します。"
+        reading: "せんきゅうひゃくごじゅうななねん、にしざわわはんどうたいれーざーをにほんこくとっきょとしてしゅつがんします。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……出す口も、できたのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙の上では。作るのは、これからです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "残るは、運ぶ道だな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "そこが、いちばん難しいんです。"
+  - id: garasu
+    title: "ガラスは、光を通さない"
+    background: il_nf_jitsuken
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "運ぶ道。空気中を飛ばすんじゃだめなのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だめです。雨が降ったら止まります。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そうか。曲がり角も回れないな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、管の中を通します。ガラスの管です。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ガラスか。……[西澤|にしざわ]くん、窓ガラスを横から見たことは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あります。緑ですね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。厚み方向に何メートルもあったら、真っ暗だ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……ガラスは、透明じゃないのだ。詐欺だろ。"
+      - speaker: reimu
+        text: "当時のガラスは、数メートル進むうちに光がほとんど消えました。"
+        reading: "とうじのがらすわ、すうめーとるすすむうちにひかりがほとんどきえました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何キロも送るんだろう。話にならん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なぜ、消えるんでしょう。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "また、なぜか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ガラスそのものが暗いのか、何かが邪魔してるのか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……そこは、違う話だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "違います。前者なら諦めますが、後者なら[取り除け|とりのぞけ]ます。"
+      - speaker: reimu
+        text: "光を消していたのは、ガラスに混ざった鉄などの不純物でした。"
+        reading: "ひかりをけしていたのわ、がらすにまざったてつなどのふじゅんぶつでした。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "不純物なのだ。ガラスは無罪だぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……取れるのか、それ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "取ります。純度を上げれば、光は通ります。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……言うのは簡単だがな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "やることは決まりました。あとはレベル上げの話なのだ。"
+  - id: bunsan
+    title: "まっすぐ行くと、にじむ"
+    background: il_nf_kokuban
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "純度が上がったとして、それで終わりか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……もう一つ、厄介なのが残ってます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "言ってみろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "管の中で、光は壁に当たって跳ね返りながら進みます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それでいいだろう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まっすぐ入った光と、斜めに入った光を比べてください。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……斜めのほうが、何度も跳ねるな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "跳ねるぶん、道のりが長いんです。"
+      - speaker: tsumugi
+        emotion: surprised
+        se: don
+        text: "……着く時刻が、ずれるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ずれます。同時に出したのに、バラバラに着くんです。"
+      - speaker: reimu
+        text: "壁で跳ねた光は道のりが長くなり、到着が遅れます。"
+        reading: "かべではねたひかりわみちのりがながくなり、とうちゃくがおくれます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……それの、何がまずい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "光の点滅で、文字を送るつもりなんです。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "点いた、消えた、点いた。……ああ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "点が遅れて着くと、次の点と重なります。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……にじんで、読めなくなるのか。それは詰むな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうです。遠くへ送るほど、にじみます。"
+      - speaker: reimu
+        text: "信号は距離とともににじみ、やがて読み取れなくなります。"
+        reading: "しんごうわきょりとともににじみ、やがてよみとれなくなります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……壁で跳ねさせなければいい、という話になるが。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そこなのだ、先生。その発想で合ってます。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……何か、あるのか。"
+  - id: shusoku
+    title: "1964・光を、蛇行させる"
+    background: il_nf_kokuban
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "先生。光は、まっすぐ進むと思ってますよね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "思ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "曲がります。濃さの違うものに入ると、曲がるんです。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……水に挿した箸が折れて見える、あれか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "あれです。光は、濃いほうへ曲がります。"
+      - speaker: reimu
+        text: "光は、屈折率の高いほうへ曲がる性質を持っています。"
+        reading: "ひかりわ、くっせつりつのたかいほうえまがるせいしつをもっています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこで、管の作り方を変えます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どう変える。"
+      - speaker: zundamon
+        emotion: normal
+        text: "真ん中をいちばん濃くして、外へいくほど薄くします。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……濃さに、傾きをつけるのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "つけます。すると、光はどう動くと思いますか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……外へ行こうとすると、濃い真ん中へ引き戻される。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "そうなのだ。蛇行するんです。"
+        telops:
+          - {text: "壁にぶつからず、蛇行する", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A1E3A", glow: "#4AA8E8", anim: up}
+      - speaker: reimu
+        text: "中心ほど屈折率を高くすると、光は外へ出ようとするたび引き戻されます。"
+        reading: "ちゅうしんほどくっせつりつをたかくすると、ひかりわそとえでようとするたびひきもどされます。"
+      - speaker: reimu
+        text: "壁にぶつからないので、逃げずに遠くまで届きます。"
+        reading: "かべにぶつからないので、にげずにとおくまでとどきます。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……跳ね返さずに、閉じ込めるのか。天才かよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。しかも、もう一つ得があります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "まだあるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "大回りした光は、外側の薄いところを通ります。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "薄いところは……光が速い。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうです。遠回りしたぶん、速く走るんです。"
+      - speaker: tsumugi
+        emotion: surprised
+        se: don
+        text: "……差が、打ち消えるのか。"
+      - speaker: reimu
+        text: "遠回りした光ほど速い場所を通るため、到着の差が打ち消されます。"
+        reading: "とおまわりしたひかりほどはやいばしょをとおるため、とうちゃくのさがうちけされます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "にじみが消えます。これで、遠くまで送れるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……[西澤|にしざわ]くん。それ、いつ思いついた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "箸が折れて見えるのを、ずっと考えてました。"
+      - speaker: reimu
+        text: "1964年、この集束型の光ファイバーが考案されます。"
+        reading: "せんきゅうひゃくろくじゅうよねん、このしゅうそくがたのひかりふぁいばーがこうあんされます。"
+  - id: denden
+    title: "出来るか分からないものに"
+    background: il_nf_denden
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: shitsucho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "西澤は、電電公社の電気通信研究所を訪ねます。"
+        reading: "にしざわわ、でんでんこうしゃのでんきつうしんけんきゅうじょをたずねます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "光で通信します。三つの部品は、構想ができています。"
+      - speaker: shitsucho
+        emotion: normal
+        text: "……光、ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "はい。電波より、けた違いに運べます。"
+      - speaker: shitsucho
+        emotion: normal
+        text: "今の電話線で、間に合っておりますが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今は。10年後は足りません。"
+      - speaker: shitsucho
+        emotion: thinking
+        text: "10年後の話をされましても。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……試作の費用を、お願いできませんか。"
+      - speaker: shitsucho
+        emotion: normal
+        se: don
+        text: "出来るか出来ないかわからないものに、[金|かね]は出せない。"
+        telops:
+          - {text: "出来るか出来ないかわからないものに、金は出せない", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3A", glow: "#4AA8E8", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: shitsucho
+        emotion: normal
+        text: "出来ると分かってから、来ていただければ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……出来ると分かったものは、研究とは言いません。"
+      - speaker: shitsucho
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分からないから、確かめるんです。"
+      - speaker: shitsucho
+        emotion: normal
+        text: "お気持ちは分かります。ただ、うちは公社ですので。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……はい。"
+      - speaker: reimu
+        text: "西澤は二度、この陳情を試みました。"
+        reading: "にしざわわにど、このちんじょうをこころみました。"
+      - speaker: reimu
+        text: "結果は、どちらも同じでした。"
+        reading: "けっかわ、どちらもおなじでした。"
+  - id: gakkai
+    title: "学会でも"
+    background: il_nf_gakkai
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: gakusha, x: 0.72}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……以上が、光で通信する構想です。"
+      - speaker: gakusha
+        emotion: normal
+        text: "西澤くん。ひとつ、よろしいかな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: gakusha
+        emotion: normal
+        text: "ガラスの中を光が何キロも走る、と。"
+      - speaker: zundamon
+        emotion: happy
+        text: "走ります。純度を上げれば。"
+      - speaker: gakusha
+        emotion: angry
+        text: "君ね。ガラスは光を吸うんだよ。教科書に書いてある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "吸っているのは、混ざりものです。"
+      - speaker: gakusha
+        emotion: normal
+        text: "……根拠は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "混ざりものの種類ごとに、吸う色が違うからです。"
+      - speaker: gakusha
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ガラス自身が吸っているなら、色は選びません。"
+      - speaker: gakusha
+        emotion: angry
+        text: "……それは、君の想像だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "想像です。確かめる[金|かね]を、いま探しています。"
+      - speaker: reimu
+        text: "新しい説は、定説と異なるという理由で退けられました。"
+        reading: "あたらしいせつわ、ていせつとことなるというりゆうでしりぞけられました。"
+      - speaker: gakusha
+        emotion: normal
+        text: "西澤くん。悪いことは言わん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: gakusha
+        emotion: normal
+        text: "もっと、通りやすい研究をしなさい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……通りやすい研究。"
+      - speaker: gakusha
+        emotion: normal
+        text: "そのほうが、君のためだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……お気遣いは、ありがたいです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ただ、通りやすい道は、もう誰かが[通って|とおって]います。"
+  - id: america
+    title: "5年後、海の向こうから"
+    background: il_nf_america
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: reimu
+        text: "西澤は、アメリカの研究者に自分の構想を話していました。"
+        reading: "にしざわわ、あめりかのけんきゅうしゃにじぶんのこうそうをはなしていました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "[西澤|にしざわ]くん。これを見なさい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なんですか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "アメリカの5か所から、一斉に発表が出た。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "5か所。……何の発表ですか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "半導体でレーザーが完成した、と。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……。"
+      - speaker: reimu
+        text: "西澤が構想を話してから、およそ5年後のことでした。"
+        reading: "にしざわがこうそうをはなしてから、およそごねんごのことでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "君の特許のほうが、先だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……先ですね。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "先なのに、動いたのは向こうだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……向こうは、出来るか分からないものに[金|かね]を出したんです。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そこが、差だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先生。ボク、悔しくないと言ったら嘘になります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、動いてくれたのは、ありがたいです。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……ありがたい？"
+      - speaker: zundamon
+        emotion: happy
+        text: "光通信が、この世に出るからです。誰の手でも。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……君は、ときどき怖いことを言う。"
+  - id: tokkyo
+    title: "特許料は、払われない"
+    background: il_nf_kigyou
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: kigyou, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "西澤のPINダイオードは、日本で先に特許が成立していました。"
+        reading: "にしざわのぴんだいおーどわ、にほんでさきにとっきょがせいりつしていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "御社は、この構造を使っておられますよね。"
+      - speaker: kigyou
+        emotion: normal
+        text: "使っております。特許料も、きちんと払っています。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……どちらに。"
+      - speaker: kigyou
+        emotion: normal
+        text: "アメリカのゼネラル・エレクトリックさんに。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……えっ。"
+      - speaker: reimu
+        text: "日本企業は、アメリカの会社へ特許料を払っていました。"
+        reading: "にほんきぎょうわ、あめりかのかいしゃえとっきょりょうをはらっていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その特許、日本ではボクのものなんですが。"
+      - speaker: kigyou
+        emotion: surprised
+        text: "……えっ。そうなんですか。初耳です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先に出しています。調べれば、すぐ分かります。"
+      - speaker: kigyou
+        emotion: thinking
+        text: "……いや、しかし。あちらが本家だと思っておりまして。"
+      - speaker: zundamon
+        emotion: normal
+        text: "本家は、こちらです。"
+      - speaker: reimu
+        text: "日本の特許が有効と知れ渡ってからも、支払いはほとんどありませんでした。"
+        reading: "にほんのとっきょがゆうこうとしれわたってからも、しはらいわほとんどありませんでした。"
+      - speaker: kigyou
+        emotion: normal
+        text: "……その、金額のことなんですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: kigyou
+        emotion: normal
+        text: "国内の先生ですと、少し、お安くしていただけると。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……安く。"
+      - speaker: kigyou
+        emotion: happy
+        text: "同じ[日本人|にほんじん]同士ですし。"
+      - speaker: reimu
+        text: "西澤はのちに、随分ディスカウントさせられた、と述べています。"
+        reading: "にしざわわのちに、ずいぶんでぃすかうんとさせられたとのべています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ひとつ、伺っていいですか。"
+      - speaker: kigyou
+        emotion: normal
+        text: "はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "アメリカに払っていたときも、同じことを言いましたか。"
+      - speaker: kigyou
+        emotion: surprised
+        text: "……いえ。言えるわけが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうでしょうね。"
+  - id: fiber_tokkyo
+    title: "書類の不備で"
+    background: il_nf_jitaku
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: reimu
+        text: "光ファイバーの特許は、書類の不備を理由に差し戻されます。"
+        reading: "ひかりふぁいばーのとっきょわ、しょるいのふびをりゆうにさしもどされます。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……戻ってきたのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "戻りました。書き直します。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……何度目だ、それ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "覚えてません。数えると、腹が立つので。"
+      - speaker: reimu
+        text: "その後も異議申立を受け、拒絶査定となりました。"
+        reading: "そのごもいぎもうしたてをうけ、きょぜつさていとなりました。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "……裁判にするのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "します。ただ、長くなります。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "長くなると、どうなる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……特許には、期限があります。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……。"
+      - speaker: reimu
+        text: "裁判は長期化し、特許は期限切れを迎えました。"
+        reading: "さいばんわちょうきかし、とっきょわきげんぎれをむかえました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……君の取り分は、ゼロか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ゼロです。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "おかしいだろう。世界中が使うものだぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……先生。ひとつ、いいですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクが取れなかったのは、[金|かね]です。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "光は、ちゃんと世界中を走ってます。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……それで、いいのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よくはないです。でも、順番はそっちが先でした。"
+  - id: kotoba
+    title: "独創は、異端である"
+    background: il_nf_jitaku
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: kisha, x: 0.72}
+    cuts:
+      - speaker: kisha
+        emotion: normal
+        text: "先生。よく言われますよね。[日本人|にほんじん]には独創性がない、と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あれは、違います。"
+      - speaker: kisha
+        emotion: surprised
+        text: "違う、といいますと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[日本人|にほんじん]に独創性がないのではありません。"
+      - speaker: kisha
+        emotion: normal
+        text: "では、何が。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同胞の成果を評価しない。工業化もしない。そこが問題です。"
+        telops:
+          - {text: "同胞の成果を評価しない", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#0A1E3A", glow: "#4AA8E8", anim: up}
+      - speaker: kisha
+        emotion: thinking
+        text: "……作る力はある、と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あります。認める力が、足りないだけです。"
+      - speaker: reimu
+        text: "西澤は、この言葉を繰り返し語っています。"
+        reading: "にしざわわ、このことばをくりかえしかたっています。"
+      - speaker: kisha
+        emotion: normal
+        text: "先生は、なぜ折れなかったんですか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……折れる理由が、なかったので。"
+      - speaker: kisha
+        emotion: surprised
+        text: "何度も断られて、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "断られたのは、[金|かね]の話です。理屈は断られていません。"
+      - speaker: kisha
+        emotion: thinking
+        text: "……理屈は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰も、間違っていると証明はしませんでした。"
+      - speaker: kisha
+        emotion: normal
+        text: "……ただ、通らなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうです。通らないのと、間違っているのは、別です。"
+      - speaker: reimu
+        text: "独創を成すには異端であらねばならない。そう書き残しています。"
+        reading: "どくそうをなすにわいたんであらねばならない。そうかきのこしています。"
+  - id: jushou
+    title: "海の向こうが、先に"
+    background: il_nf_jushou
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: kisha, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "1989年、西澤は文化勲章を受けます。"
+        reading: "せんきゅうひゃくはちじゅうきゅうねん、にしざわわぶんかくんしょうをうけます。"
+      - speaker: reimu
+        text: "2000年には、アメリカの学会からエジソンメダルが贈られました。"
+        reading: "にせんねんにわ、あめりかのがっかいからえじそんめだるがおくられました。"
+      - speaker: kisha
+        emotion: happy
+        text: "先生、おめでとうございます。エジソンメダルです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ありがとうございます。"
+      - speaker: kisha
+        emotion: normal
+        text: "アメリカの学会からですね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そうですね。アメリカからです。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……あ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いいんです。もらえるほうが、ありがたい。"
+      - speaker: reimu
+        text: "2003年、この学会は西澤潤一メダルを創設します。"
+        reading: "にせんさんねん、このがっかいわにしざわじゅんいちめだるをそうせつします。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……先生の名前が付いた賞が、できたそうで。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ボク、まだ生きてますが。生存確認されてるぞ。"
+      - speaker: kisha
+        emotion: happy
+        text: "そこが異例だと、書かれています。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……賞のほうが先に、ボクを歴史にしたのだ。"
+      - speaker: reimu
+        text: "2009年、光ファイバーの研究でノーベル物理学賞が贈られます。"
+        reading: "にせんきゅうねん、ひかりふぁいばーのけんきゅうでのーべるぶつりがくしょうがおくられます。"
+      - speaker: reimu
+        text: "受けたのは、イギリスで研究したチャールズ・カオでした。"
+        reading: "うけたのわ、いぎりすでけんきゅうしたちゃーるずかおでした。"
+      - speaker: kisha
+        emotion: sad
+        text: "……先生。今年のノーベル賞ですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見ました。光ファイバーですね。"
+      - speaker: kisha
+        emotion: normal
+        text: "……お気持ちを、伺っても。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いい仕事です。あの人は、本当に測って確かめた。"
+      - speaker: kisha
+        emotion: surprised
+        text: "……悔しくは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "悔しいのは、あの人にじゃありません。"
+      - speaker: kisha
+        emotion: thinking
+        text: "……では、どなたに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[金|かね]は出せない、と言った人たちにです。"
+  - id: bannen
+    title: "2018・享年92"
+    background: il_nf_kenkyu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "西澤", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "渡辺"}
+    cuts:
+      - speaker: reimu
+        text: "1990年、西澤は東北大学の総長になります。"
+        reading: "せんきゅうひゃくきゅうじゅうねん、にしざわわとうほくだいがくのそうちょうになります。"
+      - speaker: reimu
+        text: "その後、岩手県立大学の初代学長も務めました。"
+        reading: "そのご、いわてけんりつだいがくのしょだいがくちょうもつとめました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[西澤|にしざわ]くん。総長になったそうだな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なりました。研究の時間が減りました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "文句を言うな。君を潰そうとした側の椅子だぞ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……あ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "今度は、君が誰かの論文を預かる番だ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……預かる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "早すぎる、と言われている学生が、必ずいる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……探します。"
+      - speaker: reimu
+        text: "2018年10月21日、西澤潤一は亡くなりました。享年92。"
+        reading: "にせんじゅうはちねんじゅうがつにじゅういちにち、にしざわじゅんいちわなくなりました。きょうねんきゅうじゅうに。"
+      - speaker: reimu
+        text: "生涯に出した発明の数は、数えきれないほどでした。"
+        reading: "しょうがいにだしたはつめいのかずわ、かぞえきれないほどでした。"
+      - speaker: reimu
+        text: "そのうち最も広く使われているものは、いま海の底を走っています。"
+        reading: "そのうちもっともひろくつかわれているものわ、いまうみのそこをはしっています。"
+  - id: ima
+    title: "いま、線の先にあるもの"
+    background: il_nf_hikari
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎさん。さっきの、壁の穴の先の話だけど。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれ、ぜんぶこの人の考えた形なのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "中心を濃く、外を薄く。その考え方はいまも生きてるよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "60年前のままか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "純度はもっと上がったけどね。今は何十キロも届く。"
+      - speaker: reimu
+        text: "現在の光ファイバーは、増幅なしで数十キロを届きます。"
+        reading: "げんざいのひかりふぁいばーわ、ぞうふくなしですうじゅっきろをとどきます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……海の底にもあるって言ってたな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "大陸と大陸をつないでる。地図で見ると、糸だらけだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その糸の中を、いまボクの動画が走ってるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。ガラスの中を、光になって。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつ聞いていいか。なんで日本は断ったんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……出来ると分かってなかったから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、出来ると分かってたら、研究じゃないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。本人も、まったく同じことを言ってる。"
+  - id: end
+    title: ""
+    background: il_nf_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今度、動画が止まらずに流れたら思い出してみて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ガラスの糸か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。断られながら、40年ぶんの先を見てた人がいたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ボク、ひとつ引っかかってることがあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "断った人たちって、悪い人だったのか。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "出来るか分からないものに[金|かね]は出せない、って、正論だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "正論だね。公社のお金は、みんなのお金だし。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じゃあ、何が足りなかったんだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……たぶん、外れてもいい枠。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "外れてもいい枠。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全部当てにいくと、当たりが小さいものしか残らないの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……大きい当たりは、外れの隣にあるのだ。ガチャと同じだぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。アメリカは、外れる用のお金を持ってた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……差は、頭の良さじゃなかったんだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。本人も、そう言い続けた人だった。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……よし。ボク、有線にするのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "急に現実的だね。手のひら返しが早い。"
+      - speaker: zundamon
+        emotion: happy
+        text: "壁の穴の向こうに、あの人がいると思うと、使いたくなるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……それ、いちばんいい供養かも。"
+      - speaker: zundamon
+        emotion: happy
+        text: "チャンネル登録も、してくれると嬉しいのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "感想もコメントで教えてね。"
+      - speaker: tsumugi
+        emotion: happy
+        duet_with: zundamon
+        text: "ご視聴、ありがとうございました！"
