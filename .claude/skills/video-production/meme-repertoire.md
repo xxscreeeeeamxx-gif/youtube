@@ -125,3 +125,24 @@ Press F（Fを送れ） ／ GG ／ ナイストライ
 **チェックの手順**: 台本を書き終えたら、ミーム語を含むカットを前後2カットごと抜き出し、
 ①その語の本来の意味 ②話者が誰で、直前が誰の発言か を並べて読む。
 「語感は合うが対象がずれている」型は、通読だけだと目が滑るので必ず表にする。
+
+## 読みの穴（2026-08-26 に全数検査した結果）
+
+`check_readings_vote.py` は系統の違う3辞書の多数決で誤読を拾うが、
+**3辞書とも同じ間違いをする語**だけは捕まらない。それがミーム語なので、
+この一覧の漢字を含む語127語を全数検査した。
+
+結果、3辞書が一致した67語のうち **読みが誤るのは「鋼」だけ**だった
+（メンタル鋼 → メンタルコオ。正: はがね）。`assets/readings_common.yaml` に登録済み。
+残る60語は辞書が割れるので、多数決検査が自動で拾う。
+
+**この一覧に語を足したら、その語も同じ検査にかけること**:
+```
+PYTHONPATH=. python3 -c "import importlib.util as u; \
+  s=u.spec_from_file_location('v','scripts/check_readings_vote.py'); \
+  v=u.module_from_spec(s); s.loader.exec_module(v); \
+  w='新しいミーム語'; \
+  print({n: v.canon(''.join(y for _,y in f(w))) for n,f in \
+    (('I',v.words_janome),('K',v.words_kakasi),('S',v.words_sudachi))})"
+```
+3つが一致し、かつその読みが正しくなければ readings_common.yaml に登録する。
