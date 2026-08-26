@@ -1,0 +1,1659 @@
+# 非常口マーク再現ドラマ・ミーム版（[太田幸夫|おおたゆきお]・1939→存命）。投稿前に必ず目視レビュー。
+# 配役: ずんだもん=太田幸夫 / つむぎ=消防庁の担当者（実名は出さない） / ナレ=ゆっくり
+# ★ミーム禁止の章: sennichi / kemuri / taiyo / newjapan（いずれも多数の死者が出た火災）
+# ★存命人物なので、家族・私生活・内面の創作はしない。会話は仕事上のやりとりに限る
+# 裏取り: 太田幸夫Wikipedia / 非常口Wikipedia / PRESIDENT Online「日本発、世界標準デザイン！
+#   『非常口サイン』」/ Balloon Inc.「非常口ピクトグラムデザイン」/ イロハニアート
+# 確定事実:
+#   1939 愛知県刈谷市生まれ / 1958 愛知県立刈谷高校卒 / 1962 多摩美術大学美術学部図案科卒
+#   1966 多摩美大学院修了、イタリア・ベニス国立美術学院グラフィックデザイン科修了
+#   留学中から視覚言語 LoCoS（ロコス）を研究開発
+#   1967-70 東京造形大学 助手・講師 / 1970-72 助教授 / 1972-75 ピクトリアル研究所 主任研究員
+#   1985-99 多摩美術大学 非常勤講師・教授。現在は太田幸夫デザインアソシエーツ代表
+#   1972-5-13 千日デパート火災（大阪）死者118人。誘導灯が梁の付近にあり、煙と停電で見えず
+#   1973-11-29 大洋デパート火災（熊本）死者104人。誘導灯が小さく非常口の位置が分からず混乱
+#   1979-3 消防庁がデザインを公募。応募は約3300点
+#   小谷松敏文の案が入選 → 太田幸夫が改良（58点のバリエーションを制作）
+#   入選案に「足先に影をつけてほしい」という条件が加えられた
+#   1982-1-20 消防庁告示 / 1982-4-1 施行
+#   1982-2-8 ホテルニュージャパン火災 死者33人（施行の直前）
+#   施行から1年半で70%以上の誘導灯が新表示に取り換えられた（表示板だけ交換した例が多い）
+#   1980 ISO へ提出。すでにソ連案が決まりかけており、再度議論になった
+#   視認テストで日本案が優れると判定され、ソ連が案を取り下げた
+#   日本案の視認性は通常照明下で約2割、煙の中では約1割よかったと言われている
+#   1987 ISO 6309:1987（Fire protection--Safety signs）に採用され国際規格になった
+#   緑は赤の補色で炎の中でも見えやすく、気持ちを落ち着ける効果も期待できる
+#   太田の言葉「走る人型を囲む空間が見る人を包む空間とつながって走る人は見る人の投影になる」
+#   のちに、非常口のある方向が直観的に分かるよう左右を反転させて使うようになった
+#   JIS規格の図形なので、いまは誰でも使える公共のデザインになっている
+meta:
+  title: "【非常口マークの誕生】あの緑の人を描いたのは日本人だった【ずんだもん解説】"
+  slug: "exit-sign"
+  summary: "毎日どこかで見ている、緑の非常口マーク。あれを描いたのは日本人です。きっかけは、1970年代に百人以上が亡くなった二つのデパート火災でした。文字の表示では、なぜ人は逃げられなかったのか。そして世界標準になるまでに、日本案は何と競ったのか。ずんだもんが太田幸夫を演じる再現ドラマです。"
+  tags: ["非常口", "ピクトグラム", "太田幸夫", "デザイン", "ISO", "防災", "再現ドラマ", "ゆっくり", "ずんだもん", "技術史", "ミーム"]
+  thumbnail:
+    top: "世界に配った"
+    bottom: "あの緑の人は日本人"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: kyoju, label: "美大の教授", voice: 13, pitch: -0.06, item: book}
+    - {id: tenin, label: "ベニスの店主", voice: 12, pitch: 0.04, item: mustache}
+    - {id: kacho, label: "消防庁の課長", voice: 13, pitch: -0.1, item: hat}
+    - {id: iinkai, label: "ISOの委員", voice: 13, pitch: -0.04, item: mustache}
+    - {id: soren, label: "ソ連の代表", voice: 13, pitch: -0.08}
+    - {id: gakusei, label: "学生", voice: 12, pitch: 0.07}
+scenes:
+  - id: hook
+    title: ""
+    background: il_es_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "つむぎさん。あの緑のやつ。あそこで走ってる人、誰なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "非常口のマークね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "毎日見てるのに、名前を知らないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ、あれ誰が描いたと思う？"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうせ外国だろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[日本人|にほんじん]だよ。"
+        telops:
+          - {text: "描いたのは日本人", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A1E3A", glow: "#4AA8E8", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "えっ。日本の、あの緑のやつが、世界にあるのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "世界にあるよ。しかも、使うのにお金はいらない。"
+      - speaker: zundamon
+        emotion: angry
+        text: "取れよ！ 世界中の建物からちょっとずつもらえば大勝利だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お金がいらないから、世界中に付いたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あーね。ああいうのは全部外国だと思ってたぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……というか、ボクは毎日あれを見てるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見てるね。駅でも、ビルでも、映画館でも。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[日本中|にほんじゅう]にあるのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あるよ。会ってる回数だけなら、家族より多いかも。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ファッ！？ 言われてみると重い関係だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そういうこと。じゃあ、どうしてそのマークが必要になったと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "そりゃあ、あったほうがオシャレだからなのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……ううん。人がたくさん亡くなったからだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……えっ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昔の非常口は、ただ漢字で、非常口、って書いてあるだけだったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "読めるならいいじゃないか。何が問題なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "煙が入ってきたら、読める？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……煙。……あっ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "停電したら、光らない。日本語が読めない人には通じない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……三つとも、いちばん必要なときに効かないやつなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それで、百人以上が亡くなる火事が二回起きた。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……二回。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そのあと[国|くに]が、全国からデザインを募集したの。三千枚以上集まった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "三千！？ 情報量が多すぎるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その中から一枚を選んで、直して、世界に出した人がいる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その人が、あの走ってる人を描いたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[太田幸夫|おおたゆきお]さん。デザイナーだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……知らない名前なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "でも、あなたはその人の絵を、たぶん今日も見てる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ボク、そんな有名人と毎日会ってたのか。"
+
+  - id: umare
+    title: "1939・愛知県刈谷"
+    background: il_es_jitaku
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.42, tag: "太田", scale: 0.8, flip: true}
+    cuts:
+      - speaker: reimu
+        text: "1939年、[太田幸夫|おおたゆきお]は愛知県[刈谷|かりや]市に生まれました。"
+        reading: "せんきゅうひゃくさんじゅうきゅうねん、おおたゆきおわあいちけんかりやしにうまれました。"
+      - speaker: reimu
+        text: "1958年に[刈谷|かりや]高校を卒業し、東京の[多摩|たま]美術大学へ進みます。"
+        reading: "せんきゅうひゃくごじゅうはちねんにかりやこうこうをそつぎょうし、とうきょうのたまびじゅつだいがくえすすみます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "絵を描くのは、飽きないのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも、うまい絵を描く人はいくらでもいる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクが描きたいのは、うまい絵じゃないぞ。"
+      - speaker: reimu
+        text: "彼が選んだのは、[図案|ずあん]の道でした。"
+        reading: "かれがえらんだのわ、ずあんのみちでした。"
+      - speaker: reimu
+        text: "いまで言う、デザインです。"
+        reading: "いまでいう、でざいんです。"
+
+  - id: tamabi
+    title: "1962・多摩美術大学"
+    background: il_es_daigaku
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: kyoju, x: 0.72}
+    cuts:
+      - speaker: kyoju
+        emotion: normal
+        text: "[太田|おおた]くん。また看板の写真ばかり撮っているな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。街の看板を集めています。"
+      - speaker: kyoju
+        emotion: thinking
+        text: "何のために。"
+      - speaker: zundamon
+        emotion: normal
+        text: "読めない看板と、読める看板の違いを知りたいんです。"
+      - speaker: kyoju
+        emotion: normal
+        text: "美しい看板、ではなくてか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。きれいでも、通じなければ看板じゃないので。"
+      - speaker: kyoju
+        emotion: surprised
+        text: "……変わった学生だな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よく言われます。看板の話だけは、うるさいので。"
+      - speaker: kyoju
+        emotion: normal
+        text: "だが、その考え方はデザインの本筋だ。覚えておきなさい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: kyoju
+        emotion: thinking
+        text: "ところで、君は卒業したらどうするんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……もう少し、学びたいと思っています。"
+      - speaker: kyoju
+        emotion: normal
+        text: "どこで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "イタリアです。"
+      - speaker: kyoju
+        emotion: surprised
+        se: don
+        text: "イタリア！？ 急にスケールがバグったな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "はい。ベニスに、いい学校があると聞きました。"
+      - speaker: kyoju
+        emotion: thinking
+        text: "……言葉は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "できません。初期装備で行きます。"
+      - speaker: kyoju
+        emotion: angry
+        text: "できないのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから行くんです。"
+      - speaker: kyoju
+        emotion: surprised
+        text: "……なぜ、そこで前向きになれるんだ。メンタルが鋼だな。"
+      - speaker: reimu
+        text: "1962年、[太田|おおた]は[多摩|たま]美術大学を卒業します。"
+        reading: "せんきゅうひゃくろくじゅうにねん、おおたわたまびじゅつだいがくをそつぎょうします。"
+      - speaker: reimu
+        text: "その後、大学院に進み、イタリアへ渡りました。"
+        reading: "そのご、だいがくいんにすすみ、いたりあえわたりました。"
+
+  - id: venezia
+    title: "1966・ベニス"
+    background: il_es_venezia
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: tenin, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "ベニスは、水の上に建てられた街です。"
+        reading: "べにすわ、みずのうえにたてられたまちです。"
+      - speaker: reimu
+        text: "[太田|おおた]は国立美術学院で、グラフィックデザインを学びました。"
+        reading: "おおたわこくりつびじゅつがくいんで、ぐらふぃっくでざいんをまなびました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……困った。買い物ができないのだ。"
+      - speaker: tenin
+        emotion: normal
+        text: "ボンジョルノ！ ケ コーザ デジデラ？"
+      - speaker: zundamon
+        emotion: sad
+        text: "……すみません。分かりません。"
+      - speaker: tenin
+        emotion: thinking
+        text: "ノン カピスコ？ アッローラ、ディンミ ディンミ！"
+      - speaker: zundamon
+        emotion: sad
+        text: "……情報量が増えて、逆に詰んだぞ。"
+      - speaker: reimu
+        text: "店主はため息をつくと、紙に何かを描いて差し出しました。"
+        reading: "てんしゅわためいきをつくと、かみになにかをかいてさしだしました。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……あっ。パンだ。パンって描いてあるぞ。"
+      - speaker: tenin
+        emotion: happy
+        text: "シー！ ドゥーエ？ トレ？"
+      - speaker: zundamon
+        emotion: happy
+        text: "二つです。指を立てるだけで通じた。実質、無料の通訳なのだ。"
+      - speaker: reimu
+        text: "店主は笑って、パンを二つ渡してくれました。"
+        reading: "てんしゅわわらって、ぱんをふたつわたしてくれました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いま、言葉はひとつも通じてないぞ。絵が強すぎる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "でも、意味は届いた。値段も、数も。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……絵は、言葉より速いのだ。"
+        telops:
+          - {text: "絵は、言葉より速い", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#20303C", glow: "#7ADFA8", anim: up}
+      - speaker: reimu
+        text: "この体験が、のちの仕事の芯になります。"
+        reading: "このたいけんが、のちのしごとのしんになります。"
+
+  - id: locos
+    title: "言葉のいらない言葉"
+    background: il_es_atelier
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: gakusei, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "[太田|おおた]は留学中から、[LoCoS|ロコス]という視覚言語の研究を始めます。"
+        reading: "おおたわりゅうがくちゅうから、ろこすというしかくげんごのけんきゅうをはじめます。"
+      - speaker: reimu
+        text: "絵文字だけで文章を書き、世界の誰にでも読ませようという試みでした。"
+        reading: "えもじだけでぶんしょうをかき、せかいのだれにでもよませようというこころみでした。"
+      - speaker: gakusei
+        emotion: thinking
+        text: "先生。これ、字じゃなくて絵ですよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "絵で書く言葉なのだ。並べ方に決まりがある。"
+      - speaker: gakusei
+        emotion: normal
+        text: "……読めるように、なるんですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "なる。しかも、習うのに何年もいらない。チュートリアルが短いのだ。"
+      - speaker: gakusei
+        emotion: surprised
+        text: "え、じゃあ英語より速いってことですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこを狙ってる。言葉を覚える前に、意味だけ渡すのだ。"
+      - speaker: gakusei
+        emotion: thinking
+        text: "……でも先生、それ、何の役に立つんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いい質問だぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "たとえば、外国の空港。文字が読めなくても、便所には行けるだろう。"
+      - speaker: gakusei
+        emotion: happy
+        text: "……あー、あの人のマークですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれが答えなのだ。絵は、国境で止まらない。"
+      - speaker: gakusei
+        emotion: normal
+        text: "先生、めちゃくちゃ楽しそうですね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "楽しいぞ。完全に沼だが、まだ誰も本気にしてくれない。"
+      - speaker: gakusei
+        emotion: sad
+        text: "……売れないやつですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "一円にもならないな。"
+      - speaker: gakusei
+        emotion: surprised
+        text: "言い切りましたね。潔さだけは尊敬します。"
+      - speaker: reimu
+        text: "帰国後、[太田|おおた]は東京造形大学で教え、のちに研究所へ移ります。"
+        reading: "きこくご、おおたわとうきょうぞうけいだいがくでおしえ、のちにけんきゅうじょえうつります。"
+      - speaker: reimu
+        text: "看板や案内の絵を、来る日も来る日も設計する日々でした。"
+        reading: "かんばんやあんないのえを、くるひもくるひもせっけいするひびでした。"
+      - speaker: reimu
+        text: "その仕事に、日本中を揺らす出来事が近づいていました。"
+        reading: "そのしごとに、にほんじゅうをゆらすできごとがちかづいていました。"
+
+  - id: sennichi
+    title: "1972・5月13日"
+    background: il_es_depart
+    bgm: 223am
+    stage:
+      - {who: tsumugi, x: 0.5, tag: "消防庁"}
+    cuts:
+      - speaker: reimu
+        text: "1972年5月13日、大阪の[千日|せんにち]デパートで火災が起きました。"
+        reading: "せんきゅうひゃくななじゅうにねんごがつじゅうさんにち、おおさかのせんにちでぱーとでかさいがおきました。"
+      - speaker: reimu
+        text: "夜の10時半ごろ、工事中だった3階から火が出ます。"
+        reading: "よるのじゅうじはんごろ、こうじちゅうだったさんがいからひがでます。"
+      - speaker: reimu
+        text: "亡くなった方は、118人でした。"
+        reading: "なくなったかたわ、ひゃくじゅうはちにんでした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……上の階の人が、いちばん多い。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "煙は、下から上へ上がるから。"
+      - speaker: reimu
+        text: "誘導灯は、天井の[梁|はり]の近くに付いていました。"
+        reading: "ゆうどうとうわ、てんじょうのはりのちかくについていました。"
+      - speaker: reimu
+        text: "煙は天井にたまります。上にある表示から、先に見えなくなりました。"
+        reading: "けむりわてんじょうにたまります。うえにあるひょうじから、さきにみえなくなりました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そして、停電した。"
+      - speaker: reimu
+        text: "非常用の電源がなく、誘導灯は消えたと記録されています。"
+        reading: "ひじょうようのでんげんがなく、ゆうどうとうわきえたときろくされています。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "暗い。煙い。表示は消えている。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……その中で、出口を探すことになる。"
+
+  - id: kemuri
+    title: ""
+    background: il_es_kemuri
+    bgm: 223am
+    stage:
+      - {who: tsumugi, x: 0.5, tag: "消防庁"}
+    cuts:
+      - speaker: reimu
+        text: "当時の表示は、白い板に赤い文字で、非常口、と書いたものでした。"
+        reading: "とうじのひょうじわ、しろいいたにあかいもじでひじょうぐちとかいたものでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "文字は、目で追って、頭で読んで、意味にする。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……その三つを、煙の中でやらないといけない。"
+      - speaker: reimu
+        text: "板は小さく、位置も高く、日本語が読めなければ意味を持ちません。"
+        reading: "いたわちいさく、いちもたかく、にほんごがよめなければいみをもちません。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……いちばん必要なときに、いちばん効かない。"
+
+  - id: taiyo
+    title: "1973・11月29日"
+    background: il_es_depart
+    bgm: 223am
+    stage:
+      - {who: tsumugi, x: 0.3, tag: "消防庁"}
+      - {who: kacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "翌年の11月29日、今度は熊本の[大洋|たいよう]デパートで火災が起きます。"
+        reading: "よくねんのじゅういちがつにじゅうくにち、こんどわくまもとのたいようでぱーとでかさいがおきます。"
+      - speaker: reimu
+        text: "亡くなった方は、104人でした。"
+        reading: "なくなったかたわ、ひゃくよにんでした。"
+      - speaker: kacho
+        emotion: sad
+        text: "……また、同じところで止まっている。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "誘導灯が小さくて、非常口の場所が分からなかったと。"
+      - speaker: kacho
+        emotion: sad
+        text: "分からないから、人が同じ方向に集まる。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そして、動けなくなる。"
+      - speaker: kacho
+        emotion: angry
+        text: "一年半で二回だ。偶然じゃない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……表示のほうを、変えないといけません。"
+
+  - id: naze
+    title: "読めない、見えない、通じない"
+    background: il_es_shobo
+    bgm: serious
+    stage:
+      - {who: tsumugi, x: 0.3, tag: "消防庁"}
+      - {who: kacho, x: 0.72}
+    cuts:
+      - speaker: kacho
+        emotion: normal
+        text: "問題を整理しよう。何が悪かった。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "三つあります。まず、文字であること。"
+      - speaker: kacho
+        emotion: thinking
+        text: "読めない人がいる、ということか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。子どもも、外国の方も。"
+      - speaker: kacho
+        emotion: normal
+        text: "二つ目。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "小さいこと。遠くから見えません。"
+      - speaker: kacho
+        emotion: normal
+        text: "三つ目。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……煙の中で、いちばん先に見えなくなる高さに付いていること。"
+      - speaker: kacho
+        emotion: angry
+        text: "全部、火事のときに効かない条件だな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。平時のことしか考えていない設計でした。"
+      - speaker: kacho
+        emotion: thinking
+        text: "……で、どうする。文字をやめるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "やめます。絵にします。"
+      - speaker: kacho
+        emotion: surprised
+        text: "絵。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "絵なら、読まなくていい。見た瞬間に意味になります。"
+      - speaker: kacho
+        emotion: thinking
+        text: "……だが、どんな絵にする。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこが決まっていません。だから、集めます。"
+      - speaker: kacho
+        emotion: surprised
+        text: "集める？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全国から募集します。デザインを、公募で。"
+      - speaker: kacho
+        emotion: angry
+        text: "役所が絵を募集するのか。前例がない。無理ゲーだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "前例どおりにやって、二回同じことが起きました。"
+      - speaker: kacho
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "誰にでも分かる絵は、この国のどこかの誰かが、もう描いているかもしれません。"
+      - speaker: kacho
+        emotion: normal
+        text: "……分かった。やろう。"
+      - speaker: reimu
+        text: "1979年、消防庁はデザインを公募しました。"
+        reading: "せんきゅうひゃくななじゅうきゅうねん、しょうぼうちょうわでざいんをこうぼしました。"
+
+  - id: koubo
+    title: "1979・3300の応募"
+    background: il_es_koubo
+    bgm: pop
+    stage:
+      - {who: tsumugi, x: 0.3, tag: "消防庁"}
+      - {who: kacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "集まった案は、およそ3300点にのぼりました。"
+        reading: "あつまったあんわ、およそさんぜんさんびゃくてんにのぼりました。"
+      - speaker: kacho
+        emotion: surprised
+        se: don
+        text: "……三千を超えたのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい。壁が足りません。会場がもう沼です。"
+      - speaker: kacho
+        emotion: normal
+        text: "どんなものが来ている。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "扉だけの案、矢印だけの案、走る人の案。"
+      - speaker: kacho
+        emotion: thinking
+        text: "……走る人が多いな。みんな同じところに着いている。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。逃げる人を描こう、で完全に一致してます。"
+      - speaker: kacho
+        emotion: normal
+        text: "似ているなら、どうやって選ぶんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見比べません。実験します。"
+      - speaker: kacho
+        emotion: surprised
+        text: "実験？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "遠くから見せて、どれが速く伝わるかを測ります。"
+      - speaker: kacho
+        emotion: thinking
+        text: "……好みで決めない、ということか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "好みで決めたら、また人が死にます。そこは譲れません。"
+      - speaker: kacho
+        emotion: surprised
+        text: "……そうだな。"
+      - speaker: reimu
+        text: "図形の評価実験などを経て、[小谷松敏文|こやまつとしふみ]の案が選ばれました。"
+        reading: "ずけいのひょうかじっけんなどをへて、こやまつとしふみのあんがえらばれました。"
+      - speaker: kacho
+        emotion: normal
+        text: "……これか。走っている人と、扉。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。素直で、強い案です。"
+      - speaker: kacho
+        emotion: thinking
+        text: "では、これで決まりだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……いえ。ここから、もう一段あります。"
+      - speaker: kacho
+        emotion: surprised
+        text: "まだやるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "選ぶことと、使えるようにすることは、別の仕事なので。"
+      - speaker: kacho
+        emotion: normal
+        text: "……誰に頼む。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "絵で意味を渡す研究を、ずっとやっている人がいます。"
+
+  - id: irai
+    title: "改良を頼まれた男"
+    background: il_es_shobo
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "消防庁"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "[太田|おおた]先生。お忙しいところ、すみません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いえ。看板の相談なら、いつでも来てください。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "看板です。ただ、少し重いやつで。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……重い、というと。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "非常口の表示です。二回の火事で、二百人以上が亡くなりました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "公募で案は選びました。これを、使えるところまで持っていきたい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……見せてください。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "こちらです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なるほど。走る人と、扉。考え方は、もう正しい。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう思われますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。ただ、これは紙の上の絵です。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……といいますと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この絵が置かれるのは、天井の近くです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見る人は、下から、斜めに、走りながら見る。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……止まって見る人はいない、ということですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰も止まりません。止まって鑑賞する看板じゃないので。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……確かに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、線の太さも、余白も、全部そこに合わせ直します。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お願いできますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "やります。ただ、条件があります。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一発では決めません。何十枚も作って、見比べさせてください。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……こちらこそ、そうしてほしいです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "話が早いのだ。有識者がいると助かるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あと、こちらからも一つだけ、注文があります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんでしょう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "足の先に、影をつけてほしいんです。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……影。"
+
+  - id: ashiato
+    title: "足先に、影をつけてほしい"
+    background: il_es_atelier
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "消防庁"}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なぜ、影がいるんですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "影がないと、浮いて見えるんです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ああ。地面に立っていない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。飛んでいるようにも、倒れているようにも見えてしまう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……走っていると分からせるには、地面がいるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そういう指摘が出ました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……いい注文なのだ。指摘が的確すぎるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "褒められると照れます。"
+      - speaker: reimu
+        text: "[太田|おおた]は、この案をもとに58点のデザインを作りました。"
+        reading: "おおたわ、このあんをもとにごじゅうはってんのでざいんをつくりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……まず、腕の角度を五通り。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次に、足の開きを四通り。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……頭の大きさも、変えてみるか。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "先生、もう三十枚を超えてます。完全に周回してませんか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "まだ増えるぞ。ここからがレベル上げなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……どこまで作るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "答えが出るまでなのだ。作らないと、比べられない。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……頭の中で決めない、と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "頭の[中|なか]はあてになりません。目で見て、遠ざけて、確かめる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これを、こつこつ削ると呼んでいます。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……先生、楽しんでますね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "楽しいぞ。ただ、線を一本細くするだけで意味が変わる。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "そんなに変わりますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "変わる。細すぎると、遠くで消える。ナーフのしすぎだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "太すぎると、人の形が塊になる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ちょうどいい太さが、どこかにある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ある。それを探すのが、この仕事なのだ。"
+      - speaker: reimu
+        text: "58点は並べられ、遠くから、斜めから、繰り返し比べられました。"
+        reading: "ごじゅうはってんわならべられ、とおくから、ななめから、くりかえしくらべられました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……これだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どれですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "前に傾いていて、腕が振れていて、足先に影がある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "十メートル離れても、走っていると分かる。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……決まりですね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "いや。色が、まだなのだ。"
+
+  - id: midori
+    title: "なぜ、緑なのか"
+    background: il_es_atelier
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "消防庁"}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "色は、赤ではないんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "赤は、だめなのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……えっ。危険は赤、で勝ち確だと思ってました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。だから消火器も、火災報知器も赤です。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……なのに、なぜ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "火事のとき、まわりが何色になりますか。"
+      - speaker: tsumugi
+        emotion: surprised
+        se: don
+        text: "……赤。"
+      - speaker: zundamon
+        emotion: normal
+        text: "炎の色です。その中に赤い看板を置いたら、背景と同化して消える。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……いちばん要るときに、また見えなくなる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこで、赤の反対側の色を使うのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "反対側……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[補色|ほしょく]といいます。赤の[補色|ほしょく]は、緑です。"
+        telops:
+          - {text: "赤の補色は、緑", size: xl, position: bottom-center, color: "#8FE8B0", stroke: "#0A2A18", glow: "#3FBF77", anim: up}
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……炎の中で、いちばん浮き上がる色。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう言われています。しかも、緑にはもう一つ効き目がある。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……なんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "気持ちが、少し落ち着く。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……落ち着く。"
+      - speaker: zundamon
+        emotion: normal
+        text: "火事で人が死ぬ理由の多くは、慌てて動くことです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ方向に走って、押し合って、動けなくなる。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……熊本のときが、それでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、目に入った瞬間に少しだけ息をつける色がいい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……看板が、人の速度まで決めるんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決めます。デザインは、飾りじゃないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……先生、いま、めちゃくちゃかっこよかったです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そこは録音しておいてほしいぞ。次から使うので。"
+
+  - id: hashiru
+    title: "走っているのは、誰か"
+    background: il_es_jitaku
+    bgm: amacha_orb
+    stage:
+      - {who: zundamon, x: 0.42, tag: "太田", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "夜、[太田|おおた]は最後の一点を見つめていました。"
+        reading: "よる、おおたわさいごのいってんをみつめていました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……この人は、誰なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "案内の絵には、たいてい枠がある。丸で囲うか、四角で囲うか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……でも、囲うと何が起きる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[囲い|かこい]の中の人は、向こう側の人になるのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……絵の中の、他人になる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[囲い|かこい]を閉じなければ、どうなる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "絵の中の空間と、見ている人のいる空間がつながる。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "……走っているのは、見ているあなた自身になる。"
+        telops:
+          - {text: "走っているのは、あなた", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#12261C", glow: "#7ADFA8", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうか。だから、閉じてはいけないのだ。"
+      - speaker: reimu
+        text: "[太田|おおた]は後年、この考えを、見る人の投影、と表現しています。"
+        reading: "おおたわこうねん、このかんがえをみるひとのとうえいとひょうげんしています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。これで出す。"
+
+  - id: kokuji
+    title: "1982・1月20日"
+    background: il_es_shobo
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "消防庁"}
+    cuts:
+      - speaker: reimu
+        text: "1982年1月20日、新しい表示が消防庁から[告示|こくじ]されました。"
+        reading: "せんきゅうひゃくはちじゅうにねんいちがつはつか、あたらしいひょうじがしょうぼうちょうからこくじされました。"
+      - speaker: reimu
+        text: "同じ[年|とし]の4月1日から、全国で使われることになります。"
+        reading: "おなじとしのしがつついたちから、ぜんこくでつかわれることになります。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "先生。決まりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうですか。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……温度差がすごいです。もっと喜ぶところですよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "決まっただけなのだ。まだ、世界に一枚も付いていない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……付いて、はじめて仕事ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうです。展示会に飾る絵じゃないので。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……全国となると、何十万枚になります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……何十万。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "正直、何年かかるか読めません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……急ぎたいところですね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい。ただ、こういうものは、たいてい急がないんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なぜ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "何も起きていないうちは、誰も本気にならないので。"
+
+  - id: newjapan
+    title: "1982・2月8日"
+    background: il_es_hotel
+    bgm: 223am
+    stage:
+      - {who: tsumugi, x: 0.3, tag: "消防庁"}
+      - {who: kacho, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "[告示|こくじ]から19日後の2月8日、東京のホテルで火災が起きました。"
+        reading: "こくじからじゅうくにちごのにがつようか、とうきょうのほてるでかさいがおきました。"
+      - speaker: reimu
+        text: "ホテルニュージャパンの火災です。亡くなった方は33人でした。"
+        reading: "ほてるにゅーじゃぱんのかさいです。なくなったかたわさんじゅうさんにんでした。"
+      - speaker: kacho
+        emotion: sad
+        text: "……施行の、直前だ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……はい。"
+      - speaker: kacho
+        emotion: normal
+        text: "眠っている人が多い時間だった。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "起きて、暗くて、煙が入ってきて、廊下に出る。"
+      - speaker: kacho
+        emotion: sad
+        text: "……そこで、どちらへ行くかを、一瞬で決めないといけない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……決められる表示が、まだ付いていませんでした。"
+      - speaker: kacho
+        emotion: angry
+        text: "……間に合わなかったな。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……はい。"
+
+  - id: torikae
+    title: "1年半で、7割"
+    background: il_es_machi1982
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "消防庁"}
+    cuts:
+      - speaker: reimu
+        text: "1982年4月1日、新しい表示の運用が始まりました。"
+        reading: "せんきゅうひゃくはちじゅうにねんしがつついたち、あたらしいひょうじのうんようがはじまりました。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "先生。……電話が止まりません。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "何がですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "取り替えの依頼です。全国から、いっせいに来ています。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……あれだけ、何年かかるか読めないと言っていたのに。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……二月の火事で、みんな、他人事じゃなくなったんです。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、器具ごと替えなくていいのが効きました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……表示板だけ、差し替えられる。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい。箱はそのままで、中の板を入れ替えるだけです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……安く、速く替えられる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこまで考えて設計されていました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……そこは、褒めてくれていいのだ。有能だろう。"
+      - speaker: reimu
+        text: "運用開始から1年半で、7割を超える誘導灯が新しい表示になりました。"
+        reading: "うんようかいしからいちねんはんで、ななわりをこえるゆうどうとうがあたらしいひょうじになりました。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……七割。一年半で。爆速すぎるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "[日本中|にほんじゅう]の天井が、緑になりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ようやく、仕事になったのだ。"
+
+  - id: iso_teishutsu
+    title: "1980・世界へ出す"
+    background: il_es_shobo
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: tsumugi, x: 0.74, tag: "消防庁"}
+    cuts:
+      - speaker: reimu
+        text: "話は少しさかのぼります。日本案は、1980年に国際規格へ提出されていました。"
+        reading: "はなしわすこしさかのぼります。にほんあんわ、せんきゅうひゃくはちじゅうねんにこくさいきかくえていしゅつされていました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "先生。この絵、日本だけで使うのはもったいないと思うんです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……といいますと。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "外国から来た人は、日本の非常口が読めませんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……逆もありますね。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "逆。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[日本人|にほんじん]が外国のビルにいるとき、そこの文字は読めない。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……同じことが、向こうで起きる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だったら、世界ぜんぶ同じ絵にするしかないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……国際規格に、出しましょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "出しましょう。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ただ、一つ気になることがあります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんでしょう。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "向こうでは、もう別の案で決まりかけているそうです。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……先を越されていたのか。出遅れだぞ。"
+
+  - id: soren
+    title: "もう一つの、走る人"
+    background: il_es_iso
+    bgm: mystery
+    stage:
+      - {who: zundamon, x: 0.28, tag: "太田", flip: true}
+      - {who: iinkai, x: 0.56}
+      - {who: soren, x: 0.80}
+    cuts:
+      - speaker: iinkai
+        emotion: normal
+        text: "日本の提案が、遅れて届いた。どう扱う。"
+      - speaker: soren
+        emotion: angry
+        text: "議論は済んでいる。こちらの案で進めるはずだ。"
+      - speaker: iinkai
+        emotion: thinking
+        text: "……ただ、内容を見てからでも遅くはあるまい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……お時間をいただき、ありがとうございます。"
+      - speaker: iinkai
+        emotion: normal
+        text: "見せてもらおう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これが、日本の案です。"
+      - speaker: soren
+        emotion: surprised
+        se: don
+        text: "……。"
+      - speaker: iinkai
+        emotion: surprised
+        text: "……これは。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……どうされました。"
+      - speaker: iinkai
+        emotion: normal
+        text: "並べてみたまえ。二つの案を。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ほとんど、同じだ。完全に一致してるぞ。"
+      - speaker: soren
+        emotion: surprised
+        text: "……走る人と、扉。こちらもだ。"
+      - speaker: iinkai
+        emotion: thinking
+        text: "示し合わせたのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いいえ。今日、はじめて見ました。"
+      - speaker: soren
+        emotion: normal
+        text: "……こちらもだ。"
+      - speaker: iinkai
+        emotion: surprised
+        text: "……地球の反対側で、同じ答えにたどり着いたということか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうなります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……いや。むしろ、これが答えなのだ。"
+      - speaker: iinkai
+        emotion: thinking
+        text: "どういう意味だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言葉も、文字も、育った国も違う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それでも、逃げろと伝えたいときに、人は同じ絵を描いた。"
+      - speaker: iinkai
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それは、この絵が本当に世界で通じるという証拠です。"
+      - speaker: soren
+        emotion: normal
+        text: "……解釈は一致した。だが、採用は一つだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうですね。"
+      - speaker: iinkai
+        emotion: normal
+        text: "では、どちらを採るかは、好みでは決めん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……ありがたいです。"
+      - speaker: iinkai
+        emotion: normal
+        text: "測る。同じ条件で、両方を。"
+
+  - id: shiken
+    title: "煙の中で、どちらが見えるか"
+    background: il_es_shiken
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "太田", flip: true}
+      - {who: iinkai, x: 0.72}
+    cuts:
+      - speaker: reimu
+        text: "二つの案は、視認テストにかけられました。"
+        reading: "ふたつのあんわ、しにんてすとにかけられました。"
+      - speaker: iinkai
+        emotion: normal
+        text: "まずは、普通の明かりの下で。距離を離していく。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……お願いします。ここが本番なのだ。"
+      - speaker: iinkai
+        emotion: normal
+        text: "十メートル。両方、読める。"
+      - speaker: iinkai
+        emotion: normal
+        text: "二十メートル。……まだ、両方。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ここからが、本当の勝負なのだ。"
+      - speaker: iinkai
+        emotion: surprised
+        text: "三十メートル。……片方が、先にぼやけた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……線の太さの差だと思います。"
+      - speaker: iinkai
+        emotion: normal
+        text: "次だ。煙を入れる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……本番の条件ですね。"
+      - speaker: iinkai
+        emotion: normal
+        text: "そうだ。火事は、明るい部屋では起きん。"
+      - speaker: reimu
+        text: "煙をたいた部屋でも、同じ比較が行われました。"
+        reading: "けむりをたいたへやでも、おなじひかくがおこなわれました。"
+      - speaker: iinkai
+        emotion: surprised
+        text: "……日本案のほうが、先に読める。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: reimu
+        text: "日本案は、普通の明かりで約2割、煙の中では約1割、見やすかったと言われています。"
+        reading: "にほんあんわ、ふつうのあかりでやくにわり、けむりのなかでわやくいちわり、みやすかったといわれています。"
+        telops:
+          - {text: "煙の中でも、日本案が上", size: lg, position: bottom-center, color: "#8FE8B0", stroke: "#0A2A18", glow: "#3FBF77", anim: up}
+      - speaker: iinkai
+        emotion: normal
+        text: "……差は、大きくはない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: iinkai
+        emotion: normal
+        text: "だが、この差が出るのは、人が一秒で判断する場面だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: iinkai
+        emotion: normal
+        text: "一割の見やすさは、一割の生存に効くかもしれん。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……その一割のために、五十八枚描きました。"
+      - speaker: iinkai
+        emotion: surprised
+        text: "……五十八枚。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。ほとんどは、捨てるための絵です。"
+      - speaker: iinkai
+        emotion: normal
+        text: "……なるほど。この差は、偶然ではないな。"
+
+  - id: sekai
+    title: "1987・世界標準"
+    background: il_es_iso
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.28, tag: "太田", flip: true}
+      - {who: iinkai, x: 0.56}
+      - {who: soren, x: 0.80}
+    cuts:
+      - speaker: soren
+        emotion: normal
+        text: "……結果は、見た。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……。"
+      - speaker: soren
+        emotion: normal
+        text: "こちらの案は、取り下げる。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……いいんですか。勝ち確だと思ってなかったので、心臓に悪いのだ。"
+      - speaker: soren
+        emotion: normal
+        text: "測って決めると言ったのは、こちらもだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: soren
+        emotion: normal
+        text: "それに、目的は勝つことではない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……逃げられることですね。"
+      - speaker: soren
+        emotion: normal
+        text: "そうだ。"
+      - speaker: iinkai
+        emotion: happy
+        text: "では、日本案を国際規格の図として採る。"
+      - speaker: reimu
+        text: "1987年、この図は国際規格 ISO 6309 に組み込まれました。"
+        reading: "せんきゅうひゃくはちじゅうななねん、このずわこくさいきかくあいえすおーろくさんまるきゅうにくみこまれました。"
+      - speaker: reimu
+        text: "日本で生まれた非常口の絵が、世界の標準になった瞬間でした。"
+        reading: "にほんでうまれたひじょうぐちのえが、せかいのひょうじゅんになったしゅんかんでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……これで、どこの国のビルでも、同じ絵が待っている。世界一周で通用するぞ。"
+      - speaker: iinkai
+        emotion: normal
+        text: "[太田|おおた]さん。一つ聞いておきたい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: iinkai
+        emotion: thinking
+        text: "規格に載せるということが、どういうことか分かっているか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……誰でも使えるようになる、ということですね。"
+      - speaker: iinkai
+        emotion: normal
+        text: "そうだ。どこの国の、どんな会社でも刷れるようになる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それが、いちばんいいです。"
+      - speaker: iinkai
+        emotion: surprised
+        text: "……いいのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この絵は、一枚でも多く付いたほうが強いので。"
+      - speaker: reimu
+        text: "この図は規格として公開され、いまでは誰でも使える公共のデザインになっています。"
+        reading: "このずわきかくとしてこうかいされ、いまでわだれでもつかえるこうきょうのでざいんになっています。"
+
+  - id: ima
+    title: "いま、あの人がいる場所"
+    background: il_es_ima
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎさん。あの人、ずっとあそこにいたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。1982年から、ずっと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ボク、一度も見上げたことがなかったのだ。ずっと空気だと思ってた。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それでいいんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……えっ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見なくてもいいときは、見なくていいの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "見ないといけない日が来たときに、勝手に目に入ればいい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そのために、緑なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そういうこと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あっ。一つ気づいたことがあるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの人、左に走ってるやつと、右に走ってるやつがある。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "気づいた？ それ、意味があるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……貼る人がミスったんじゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "違うよ。走っている向きが、逃げる方向なの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "ファッ！？ 方向まで教えてくれてたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。だから左向きを見たら、左へ行けばいい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボク、ずっとただの飾りだと思ってたぞ。手のひら返すしかない。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "飾りに五十八枚は描かないでしょ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……五十八枚だったな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。しかも、五十七枚は捨てるための絵。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……捨てたほうが、圧倒的に多いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。でも、捨てた分だけ、残った一枚が強くなってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それは、そう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あと、もう一つ言っておくね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あのマーク、[囲い|かこい]が閉じてないでしょ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……言われてみると、枠がないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "閉じてないから、絵の中と、あなたのいる場所がつながってるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……つまり。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あそこで走ってるのは、あなただよ。"
+        telops:
+          - {text: "走っているのは、あなた", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A18", glow: "#3FBF77", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……ボク！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。最初から、あなたが走ってる絵だったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……名前を知らなかったのも、当たり前なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "どうして。"
+      - speaker: zundamon
+        emotion: happy
+        text: "自分の名前は、看板に書いてないからな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……うまいこと言うね。"
+
+  - id: shime
+    title: ""
+    background: il_es_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日から一つだけ、やってほしいことがあるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "知らない建物に入ったら、緑を一回だけ探してみて。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……入った瞬間にか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。三秒でいい。どっち向きに走ってるかまで見る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……三秒なら、できるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その三秒は、たぶん一生使わない。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……使わないのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "使わないほうがいいでしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……確かに。使う日が来ないのが、いちばんの大勝利なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あのマークも、たぶん同じ気持ちで作られてるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ずっと見られないまま、そこにいるのが理想か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。世界でいちばん、使われないほうがいいデザイン。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……いい仕事なのに、誰にも気づかれないやつなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "報われてるよ。ちゃんと、世界中の天井にいる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……そうか。ずっと待ってくれてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "チャンネル登録も、してくれると嬉しいな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "非常口とちがって、こっちは押してほしいのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うまく落としたね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        duet_with: tsumugi

@@ -55,6 +55,10 @@ VOICED = str.maketrans("ガギグゲゴザジズゼゾダヂヅデドバビブ�
 # （「の受け売り」→ ノオケウリ。単独の ウケウリ と字面が合わなくなる）。
 # 語が文中にあるか調べるときだけ、ウ/オ・イ/エ を同一視して照合する
 LOOSE = str.maketrans("ウイ", "オエ")
+# 連濁は「前に語がくっついているとき」しか起きない。文頭や読点の直後で
+# 頭が濁っていたら、それは連濁ではなく誤読（囲い=ガコイ の実例 2026-08-26）。
+# 直前がこの文字なら複合語の後半になりうる、とみなす
+COMPOUNDABLE = re.compile(r"[一-鿿々ぁ-んァ-ヶー0-9０-９]")
 
 _sud = _jt = _kks = _mode = None
 
@@ -179,18 +183,28 @@ def check(slug: str) -> list:
         if not is_narr and i < len(timings) and timings[i].get("moras"):
             actual = canon("".join(m[0] for m in timings[i]["moras"]))
 
-        def present(y, act=None):
+        def rendaku_ok(surf):
+            """その語が、連濁しうる位置（前に語がくっつく位置）に現れるか。"""
+            for m in re.finditer(re.escape(surf), text):
+                if m.start() and COMPOUNDABLE.match(text[m.start() - 1]):
+                    return True
+            return False
+
+        def present(y, surf=None, act=None):
             act = actual if act is None else act
+            allow_voiced = surf is None or rendaku_ok(surf)
             for tr in (LOOSE, None):
                 a, b = (act.translate(tr), y.translate(tr)) if tr else (act, y)
-                if b in a or b.translate(VOICED) in a.translate(VOICED):
+                if b in a:
+                    return True
+                if allow_voiced and b.translate(VOICED) in a.translate(VOICED):
                     return True
             return False
 
         # ① 3辞書が全会一致なのに VOICEVOX がそう読んでいない語
         if actual is not None:
             for surf, yomi in sorted(agreed.items()):
-                if len(yomi) < MIN_MORA or present(yomi):
+                if len(yomi) < MIN_MORA or present(yomi, surf):
                     continue
                 found.append({"idx": i, "speaker": cut["speaker"], "narr": False,
                               "text": disp_of(cut["text"]), "surf": surf,
@@ -204,7 +218,7 @@ def check(slug: str) -> list:
             verdict = None
             if actual is not None:
                 # 実読の中にどの候補が含まれるか。連濁で頭が濁ることがあるので許す
-                hits = [y for y in set(cand) if present(y)]
+                hits = [y for y in set(cand) if present(y, surf)]
                 if len(hits) == 1 and hits[0] == major and n_major >= 2:
                     continue                     # 多数派どおりに読めている
                 verdict = ("実読が少数派の読み" if hits and hits[0] != major

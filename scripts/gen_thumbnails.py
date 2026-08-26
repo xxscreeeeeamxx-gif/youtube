@@ -295,6 +295,35 @@ def p_fiber(d, s):
             d.ellipse([tx-rr, ty-rr, tx+rr, ty+rr], fill=col)
 
 
+def p_exitsign(d, s):
+    """非常口の標識。緑地に白の走る人と扉。
+
+    実寸168pxで「あの緑のやつ」と分かることだけを狙う。JIS・ISOの規格図形なので
+    誰でも使えるが、ここは正確な複製ではなく、印象を伝えるための簡略な描き起こし。
+    """
+    g, ink = (26, 152, 92), (250, 252, 250)
+    d.rounded_rectangle([s*0.02, s*0.16, s*0.98, s*0.84], radius=s*0.05, fill=g,
+                        outline=(14, 96, 58), width=int(s*0.028))
+    cx, cy = s*0.36, s*0.50
+    u = s * 0.011                              # 人型の基準寸法
+    d.ellipse([cx - 9*u, cy - 30*u, cx + 9*u, cy - 12*u], fill=ink)          # 頭
+    d.polygon([(cx - 15*u, cy - 11*u), (cx + 10*u, cy - 15*u),
+               (cx + 5*u, cy + 10*u), (cx - 19*u, cy + 6*u)], fill=ink)      # 胴
+    d.polygon([(cx + 3*u, cy + 5*u), (cx + 22*u, cy + 27*u),
+               (cx + 11*u, cy + 32*u), (cx - 6*u, cy + 14*u)], fill=ink)     # 前脚
+    d.polygon([(cx - 17*u, cy + 1*u), (cx - 6*u, cy + 27*u),
+               (cx - 19*u, cy + 32*u), (cx - 28*u, cy + 7*u)], fill=ink)     # 後脚
+    d.polygon([(cx - 13*u, cy - 12*u), (cx - 30*u, cy - 2*u),
+               (cx - 34*u, cy - 12*u), (cx - 17*u, cy - 22*u)], fill=ink)    # 腕
+    # 足先の影（これが無いと浮いて見える。本編で語る要点なので必ず描く）
+    d.ellipse([cx + 6*u, cy + 31*u, cx + 26*u, cy + 37*u], fill=(150, 210, 175))
+    d.ellipse([cx - 24*u, cy + 31*u, cx - 4*u, cy + 37*u], fill=(150, 210, 175))
+    # 扉
+    d.rectangle([s*0.60, s*0.26, s*0.86, s*0.76], fill=ink)
+    d.rectangle([s*0.66, s*0.31, s*0.86, s*0.71], fill=g)
+    d.ellipse([s*0.685, s*0.49, s*0.715, s*0.52], fill=ink)
+
+
 def p_needle(d, s):
     """注射針。先が細く根元が太いメガホン型を、斜めに描く。
 
@@ -1669,6 +1698,10 @@ SPECS = {
         bg=((28, 52, 92), (14, 28, 56)), emotion="surprised",
         lines=[("スイスを倒した", W1, None), ("1600社が600社に", W1, None),
                ("クオーツ時計", B1, Y1)]),
+    "exit-sign": dict(prop="p_exitsign", layout="stack",
+        bg=((20, 88, 62), (8, 44, 32)), emotion="surprised",
+        lines=[("描いたのは日本人", W1, None), ("毎日見てるのに知らない", W1, None),
+               ("非常口マーク", B1, Y1)]),
     "nishizawa-fiber": dict(prop="p_fiber", layout="stack",
         bg=((18, 46, 92), (8, 22, 50)), emotion="sad",
         lines=[("金は出せない", W1, None), ("日本が捨てた発明", W1, None),
