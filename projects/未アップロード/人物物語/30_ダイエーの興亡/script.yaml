@@ -1,0 +1,1477 @@
+# ダイエー再現ドラマ・ミーム版（[中内㓛|なかうちいさお]・1922→2005）。投稿前に必ず目視レビュー。
+# ★ジャンル転換の1本目（2026-08-27）。モノの誕生秘話（天井3000回）から、
+#   人物の一代記（そごう178万・ダイエー86万・山内溥43万）へ寄せる実験。
+#   対になる繁栄側は任天堂・山内溥を予定。条件を揃えて比較する
+# ★配役: ずんだもん=中内㓛 / つむぎ=**現代から見ている解説役（殴る役）** / ナレ=ゆっくり
+#   これまでの「つむぎ=主人公の味方」だと批判役が不在になるため、外に出した
+#   （SKILL.md「伸びている4局から取った掛け合いの型」の2を実装）
+# ★ミーム禁止の章: rinngaen（戦場）/ fukuin（復員）/ shinsai（震災）/ owari（晩年・逝去）
+# 裏取り: 中内㓛Wikipedia / 文春オンライン「極限すぎる戦争体験」/ 日本総研「松下幸之助と中内功の信念」/
+#   楽天証券トウシル「1957年9月23日ダイエー1号店オープン」/ 経済界ウェブ
+# 確定事実:
+#   1922-8-2 大阪府西成郡伝法町（現・大阪市此花区伝法）生まれ。父・秀雄は薬屋を経営
+#   神戸三中→1941 兵庫県立神戸高等商業学校を繰り上げ卒業
+#   1943-1 応召。満州国とソ連の国境・綏南に駐屯
+#   1944-7 フィリピン・混成58旅団へ。ルソン島リンガエン湾守備
+#   1945-1-7 榴弾砲が破壊される / 1945-1-23 玉砕命令の直後、山下奉文のゲリラ戦命令で生き延びる
+#   手榴弾の破片で手足を負傷。患部が腐り、ウジが腐食部分を食べたため切断を免れた（本人談）
+#   飢餓を経験。リンガエン湾で死を意識したとき、神戸の家で裸電球の下に家族と
+#     すき焼きを食べた記憶がよみがえり「もう一度すき焼きを腹いっぱい食べたい」と思った。これが原点
+#   1945-11 復員 / 1948 元町高架通の友愛薬局で商売 / 1951-8 弟の設立したサカエ薬品で勤務
+#   1957-4-10 大栄薬品工業株式会社を設立
+#   1957-9-23 大阪市旭区・京阪千林駅前の千林商店街に「主婦の店ダイエー薬局」1号店を開店
+#     「主婦の店」の名は九州・丸和フードセンターの吉田日出男から加盟費抜きで貰った
+#   100g100円が相場だった牛肉を39円に下げ、売切店が続出
+#   1958 神戸三宮にチェーン化第1号店 / 1960 ダイエーみかん / 1961 ダイエーインスタントコーヒー
+#   1962 日商の協力で渡米、流通業を研究
+#   1964 松下電器のテレビを希望小売価格の2割引で販売 → 松下が供給を停止（ダイエー・松下戦争）
+#   1965-3 花王がダイエーへの出荷停止 → 1965-7 花王を公正取引委員会に提訴。
+#     第一工業製薬と組んで洗剤スパットを自前で売った / 1975 住友銀行の斡旋で花王と和解
+#   1975 京都の真々庵で松下幸之助が中内を招いたが中内は応じなかった（Wikipedia）
+#   1994 松下幸之助の没後、松下電器が折れる形で和解。30年戦争が終わる
+#   1971-3 大阪証券取引所第2部に上場（スーパー業界初）
+#   1972 三越を抜き小売業売上高日本一 / 1980-2-16 小売業で日本初の売上高1兆円
+#   1981 髙島屋株を10.7%取得 / 1988 南海ホークスを買収、福岡ダイエーホークス発足
+#   1995-1-17 阪神・淡路大震災。田園調布の自宅で知り、浜松町に対策本部。約2時間で方針を決定。
+#     被害の少ない兵庫県内24店舗に営業を厳命。ダイエーとローソンなど約100店舗が被災。
+#     正社員30名以上が犠牲。「店の明かりをつければ、それだけで被災者たちは力が出る」
+#   1990年代後半 地価下落・ハイパーマートの失敗・消費者の関心が価格から品質へ。
+#     「ダイエーに行けば何でも売っている。でも、欲しいものは何も売っていない」と揶揄された
+#   2001 経営悪化の責任を取り代表取締役を退任。株主総会は2時間36分の大荒れ
+#   2002 プランタン銀座の最高顧問とリクルート名誉会長も辞任
+#   2004-12 中内家の資産管理会社3社が特別清算開始。全株式・不動産を売却処分
+#   2005-8-26 脳梗塞で倒れ、2005-9-19 午前9時30分に神戸市立中央市民病院で死去。享年83
+#   本人の言葉:「消費者以外に頭を下げるのは嫌だ」「借金と元気だけはあるんやで」
+#     「人の幸せとは、まず、物質的な豊かさを満たすことです」
+#     社是「よい品をどんどん安く より豊かな社会を」
+meta:
+  title: "【ダイエーの興亡】すき焼きを願った男が、日本一になり追われるまで【ずんだもん解説】"
+  slug: "nakauchi-daiei"
+  summary: "戦場で死を覚悟したとき、彼が思い出したのは家族と食べたすき焼きでした。生きて帰った男は、100グラム100円の牛肉を39円で売り始めます。ダイエーを作った中内㓛の物語。日本一になった小売業が、なぜ創業者ごと消えたのか。ずんだもんが中内を演じる再現ドラマです。"
+  tags: ["ダイエー", "中内㓛", "流通", "価格破壊", "昭和史", "経営", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "日本一から消えた"
+    bottom: "ダイエーの興亡"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: chichi, label: "父・秀雄", voice: 13, pitch: -0.08, item: mustache}
+    - {id: senyu, label: "戦友", voice: 13, pitch: -0.02}
+    - {id: shufu, label: "主婦", voice: 8, pitch: 0.06}
+    - {id: shain, label: "ダイエー社員", voice: 12, pitch: 0.04}
+    - {id: meekaa, label: "メーカーの人", voice: 13, pitch: -0.06, item: hat}
+    - {id: ginko, label: "銀行の人", voice: 13, pitch: -0.1, item: hat}
+scenes:
+  - id: hook
+    title: ""
+    background: il_dai_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: angry
+        text: "今日はすき焼きにするのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、牛肉買った？"
+      - speaker: zundamon
+        emotion: sad
+        text: "……値札を見て、豚に変更した。"
+      - speaker: zundamon
+        emotion: angry
+        text: "100グラム600円だぞ。強気すぎる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……昔ね、それを39円で売った人がいるの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "39円！？ ……原価どうなってるんだ。"
+        telops:
+          - {text: "100円の牛肉を39円で", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#3A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の相場が100グラム100円。それを39円まで下げた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……喧嘩売ってるだろ、それ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "牛肉が高いのは、いまも昔も同じでね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "だからボクは今日、豚に負けたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。[日本中|にほんじゅう]に喧嘩を売って、日本一になった人だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[中内㓛|なかうちいさお]。ダイエーを作った人。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ダイエー。名前は聞いたことあるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昔は日本一の小売だったの。三越を抜いてね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "三越を抜いた！？ 格が違うって言われてたやつじゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。売上1兆円。日本の小売で初めて。"
+      - speaker: zundamon
+        emotion: happy
+        text: "すごいのだ。じゃあ今も日本一なんだな。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……ううん。会社は残ってるけど、中内さんは追い出された。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "追い出された！？ 自分で作った会社をか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全財産も手放してる。資産管理会社ごと清算されてね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……えぐいのだ。何があったんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "話は、フィリピンの戦場から始まるよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "戦場！？ スーパーの話じゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スーパーの話だよ。ただ、始まりがそこなの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……分かった。聞くのだ。"
+
+  - id: umare
+    title: "1922・大阪、薬屋の子"
+    background: il_dai_kobe1930
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", scale: 0.82, flip: true}
+      - {who: chichi, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1922年8月2日、[中内㓛|なかうちいさお]は大阪府の[伝法|でんぽう]に生まれました。"
+        reading: "せんきゅうひゃくにじゅうにねんはちがつふつか、なかうちいさおわおおさかふのでんぽうにうまれました。"
+      - speaker: reimu
+        text: "父の秀雄は、小さな薬屋を営んでいました。"
+        reading: "ちちのひでおわ、ちいさなくすりやをいとなんでいました。"
+      - speaker: chichi
+        emotion: normal
+        text: "㓛。この薬、いくらで売ると思う。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……分かりません。"
+      - speaker: chichi
+        emotion: normal
+        text: "仕入れが十銭。売るのは三十銭や。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "三倍！？ 儲けすぎじゃないですか。"
+      - speaker: chichi
+        emotion: happy
+        text: "商売っちゅうのはそういうもんや。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……でも、それやったら買えん人が出ますよね。"
+      - speaker: chichi
+        emotion: surprised
+        text: "……妙なことを言う子やな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この会話、後で効いてくるから覚えといて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "解説が急に入ってきたぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "わたしはそういう役だから。"
+      - speaker: reimu
+        text: "神戸三中を経て、1941年に神戸高等商業学校を卒業します。"
+        reading: "こうべさんちゅうをへて、せんきゅうひゃくよんじゅういちねんにこうべこうとうしょうぎょうがっこうをそつぎょうします。"
+      - speaker: reimu
+        text: "戦時中のため、繰り上げの卒業でした。"
+        reading: "せんじちゅうのため、くりあげのそつぎょうでした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "繰り上げ卒業って、要は早く兵隊にするってこと。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……学校の都合じゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。国の都合。"
+
+  - id: sukiyaki
+    title: "裸電球の下で"
+    background: il_dai_kobe1930
+    bgm: amacha_orb
+    stage:
+      - {who: zundamon, x: 0.34, tag: "中内", scale: 0.9, flip: true}
+      - {who: tsumugi, x: 0.76}
+    cuts:
+      - speaker: reimu
+        text: "出征の前、家族で鍋を囲んだ夜がありました。"
+        reading: "しゅっせいのまえ、かぞくでなべをかこんだよるがありました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……すき焼きだ。こんなご時世に、よう手に入りましたね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "肉が、少しだけ入ってる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "裸電球が一個。暗いけど、鍋だけはよう見える。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……うまい。"
+      - speaker: reimu
+        text: "この夜のことを、彼は生涯忘れませんでした。"
+        reading: "このよるのことを、かれわしょうがいわすれませんでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この場面、覚えておいて。ここから全部が始まるから。"
+
+  - id: shussei
+    title: "1943・応召"
+    background: il_dai_senjo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: senyu, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1943年1月、[中内㓛|なかうちいさお]に召集がかかります。"
+        reading: "せんきゅうひゃくよんじゅうさんねんいちがつ、なかうちいさおにしょうしゅうがかかります。"
+      - speaker: reimu
+        text: "はじめは満州国とソ連の国境近く、綏南の駐屯でした。"
+        reading: "はじめわまんしゅうこくとそれんのこっきょうちかく、すいなんのちゅうとんでした。"
+      - speaker: senyu
+        emotion: normal
+        text: "中内。ここは寒いが、まだましな方らしいぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ましな方、ですか。"
+      - speaker: senyu
+        emotion: normal
+        text: "南に行った連中は、帰ってこん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: reimu
+        text: "1944年7月、彼はフィリピンへ送られます。"
+        reading: "せんきゅうひゃくよんじゅうよねんしちがつ、かれわふぃりぴんえおくられます。"
+      - speaker: reimu
+        text: "ルソン島リンガエン湾。上陸してくる敵を、正面で受ける場所でした。"
+        reading: "るそんとうりんがえんわん。じょうりくしてくるてきを、しょうめんでうけるばしょでした。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……さっき戦友が言ってた、帰ってこない南の方だね。"
+
+  - id: rinngaen
+    title: "1945・リンガエン湾"
+    background: il_dai_senjo
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "中内", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1945年1月7日、彼の部隊の[榴弾砲|りゅうだんぽう]が破壊されます。"
+        reading: "せんきゅうひゃくよんじゅうごねんいちがつなのか、かれのぶたいのりゅうだんぽうがはかいされます。"
+      - speaker: reimu
+        text: "戦う道具を失い、あとは山へ退がるしかありませんでした。"
+        reading: "たたかうどうぐをうしない、あとわやまえさがるしかありませんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……手榴弾です。伏せてください。"
+      - speaker: reimu
+        text: "破片が、彼の手と足を裂きました。"
+        reading: "はへんが、かれのてとあしをさきました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……立てない。"
+      - speaker: reimu
+        text: "薬はありません。傷は膿み、腐り始めました。"
+        reading: "くすりわありません。きずわうみ、くさりはじめました。"
+      - speaker: reimu
+        text: "腐った部分を虫が食べたことで、切断を免れたと本人が語っています。"
+        reading: "くさったぶぶんをむしがたべたことで、せつだんをまぬがれたとほんにんがかたっています。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……薬屋の子が、薬のない場所にいる。"
+      - speaker: reimu
+        text: "食べるものもありませんでした。"
+        reading: "たべるものもありませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……腹が減った。"
+      - speaker: zundamon
+        emotion: sad
+        text: "水を飲むと、余計に減る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ああ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "思い出した。"
+      - speaker: zundamon
+        emotion: happy
+        text: "神戸の家。裸電球。鍋。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……もう一度、すき焼きを腹いっぱい食べたい。"
+        telops:
+          - {text: "もう一度、すき焼きを腹いっぱい", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#2A1408", glow: "#E8A05A", anim: up}
+      - speaker: reimu
+        text: "1月23日、玉砕の命令が下ります。"
+        reading: "いちがつにじゅうさんにち、ぎょくさいのめいれいがくだります。"
+      - speaker: reimu
+        text: "その直後、方針が変わり、山に入ってゲリラ戦をせよと命じられました。"
+        reading: "そのちょくご、ほうしんがかわり、やまにはいってげりらせんをせよとめいじられました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "命令が一日ずれていたら、この人はここで死んでる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……生き残ったのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "うん。生き残った人だけが、この先の話をできる。"
+
+  - id: fukuin
+    title: "1945・焼け跡"
+    background: il_dai_yakeato
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "中内", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1945年11月、[中内㓛|なかうちいさお]はフィリピンから復員しました。"
+        reading: "せんきゅうひゃくよんじゅうごねんじゅういちがつ、なかうちいさおわふぃりぴんからふくいんしました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……何も無い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "家も、店も、燃えている。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この時期、[日本中|にほんじゅう]がこうだったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ここで、みんな何を食べてるんですか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "食べてないよ。餓死した人が大勢いる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……戦争が終わっても、腹は減ったままなのか。"
+      - speaker: reimu
+        text: "彼はこのとき、ひとつの考えに行き着きます。"
+        reading: "かれわこのとき、ひとつのかんがえにいきつきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人の幸せいうのは、まず腹が満ちることや。"
+      - speaker: zundamon
+        emotion: normal
+        text: "きれいごとは、その後でええ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……この[一行|いちぎょう]が、あとで[日本|にほん]の物価を動かすことになる。"
+
+  - id: yamiichi
+    title: "1948・元町の高架下"
+    background: il_dai_yamiichi
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.3, tag: "中内", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1948年、彼は神戸・元町の高架通で商売を始めます。"
+        reading: "せんきゅうひゃくよんじゅうはちねん、かれわこうべもとまちのこうかどおりでしょうばいをはじめます。"
+      - speaker: reimu
+        text: "扱ったのは、父の家業と同じ薬でした。"
+        reading: "あつかったのわ、ちちのかぎょうとおなじくすりでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "薬なら分かるのだ。実家が薬屋だからな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみにこの時期の商売、法律的にはかなりグレーだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "言うなよ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "隠すと後で刺さるから先に言っとくの。"
+      - speaker: reimu
+        text: "神戸経済大学の第二学部に入りますが、学費を納められず除籍されています。"
+        reading: "こうべけいざいだいがくのだいにがくぶにはいりますが、がくひをおさめられずじょせきされています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……学費が払えないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "商売はしてるのに、大学は続けられない。そういう時代。"
+      - speaker: reimu
+        text: "1951年、弟が設立したサカエ薬品で働き始めます。"
+        reading: "せんきゅうひゃくごじゅういちねん、おとうとがせつりつしたさかえやくひんではたらきはじめます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "問屋の仕事なのだ。仕入れて、卸す。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ここで、ある数字が気になった。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お、来た。"
+      - speaker: zundamon
+        emotion: normal
+        text: "十銭で仕入れた薬が、店に並ぶと三十銭になる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "間に人が入るたび、値段が上がっていくのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "問屋・卸・小売、って通るたびに乗るからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……間を全部飛ばしたら、どうなる。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……あ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "作った人から直接買って、直接売る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そしたら、腹が減ってる人も買えるのだ。"
+
+  - id: senbayashi
+    title: "1957・千林、主婦の店"
+    background: il_dai_senbayashi
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: shufu, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1957年4月10日、大栄薬品工業株式会社を設立します。"
+        reading: "せんきゅうひゃくごじゅうしちねんしがつとおか、だいえいやくひんこうぎょうかぶしきがいしゃをせつりつします。"
+      - speaker: reimu
+        text: "同じ年の9月23日、大阪の千林商店街に1号店が開きました。"
+        reading: "おなじとしのくがつにじゅうさんにち、おおさかのせんばやししょうてんがいにいちごうてんがひらきました。"
+      - speaker: reimu
+        text: "店の名は、主婦の店ダイエー薬局といいます。"
+        reading: "みせのなわ、しゅふのみせだいえいやっきょくといいます。"
+      - speaker: reimu
+        text: "開店の日、店の前には行列ができました。"
+        reading: "かいてんのひ、みせのまえにわぎょうれつができました。"
+      - speaker: shufu
+        emotion: thinking
+        text: "……なあ、この店ほんまに薬局なん。"
+      - speaker: shufu
+        emotion: surprised
+        text: "石鹸も砂糖も並んどるやないの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "薬局の免許で始めて、置くものはどんどん増やしていったの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "看板は薬局や。中身は自由や。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "言い方！"
+      - speaker: zundamon
+        emotion: happy
+        text: "いらっしゃい！ 安いで！"
+      - speaker: shufu
+        emotion: thinking
+        text: "……この石鹸、こんな値段でええの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ええんです。間を飛ばして仕入れてますから。"
+      - speaker: shufu
+        emotion: surprised
+        text: "ほんまに？ 何か訳ありちゃうの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "訳はあります。安く売りたい、いう訳です。"
+      - speaker: shufu
+        emotion: happy
+        text: "……ほな、もらおかな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに、主婦の店っていう名前は借り物ね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "借り物！？ 自分で考えたんじゃないのか。"
+      - speaker: reimu
+        text: "九州の丸和フードセンターの吉田日出男が提唱した名前でした。"
+        reading: "きゅうしゅうのまるわふーどせんたーのよしだひでおがていしょうしたなまえでした。"
+      - speaker: reimu
+        text: "開店の手伝いに行った縁で、加盟費なしで譲り受けています。"
+        reading: "かいてんのてつだいにいったえんで、かめいひなしでゆずりうけています。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "タダでもらってる。ここ、地味に商売人だよね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "使えるもんは使うのだ。実質無料は正義だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、この店はまだ薬局なの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そうなのだ。薬だけでは、腹は膨れん。"
+
+  - id: gyuniku
+    title: "100円の牛肉を39円に"
+    background: il_dai_seiniku
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "肉を置くぞ。牛肉や。"
+      - speaker: shain
+        emotion: surprised
+        text: "社長、うちは薬局ですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "薬局が肉を売ったらあかんいう法律あるか。"
+      - speaker: shain
+        emotion: thinking
+        text: "……無いですけど。いくらで出すんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "100グラム、39円。"
+      - speaker: shain
+        emotion: surprised
+        se: don
+        text: "39円！？ 相場は100円ですよ！"
+      - speaker: zundamon
+        emotion: happy
+        text: "知ってる。だから39円にするのだ。"
+      - speaker: shain
+        emotion: angry
+        text: "利益、出ませんが！"
+      - speaker: zundamon
+        emotion: normal
+        text: "肉で出さんでええ。人が来たら、ほかも売れる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これ、いまでいう客寄せの目玉商品ね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1品を原価割れで出して、ついでに買わせる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "現代の言葉があると説明が早いのだ。"
+      - speaker: reimu
+        text: "当時、牛肉は100グラム100円が相場でした。"
+        reading: "とうじ、ぎゅうにくわひゃくぐらむひゃくえんがそうばでした。"
+      - speaker: reimu
+        text: "39円という値札に、客が押し寄せます。"
+        reading: "さんじゅうきゅうえんというねふだに、きゃくがおしよせます。"
+      - speaker: shain
+        emotion: surprised
+        text: "社長！ 開店前から行列が！"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうか。並ぶか。"
+      - speaker: shain
+        emotion: surprised
+        text: "……もう売り切れました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "明日も出す。あさっても出す。"
+      - speaker: reimu
+        text: "売り切れる店が、次々に出ました。"
+        reading: "うりきれるみせが、つぎつぎにでました。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。近所の肉屋さんが、怒鳴り込んできています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そらそうやろな。[何て|なんて]言うてる。"
+      - speaker: shain
+        emotion: normal
+        text: "……あんな値段で売られたら、商売あがったりや、と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここ、この人の一番の弱点なんだけど。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんや。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "安くすると、必ず誰かの商売が壊れるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "安く買える人がいる裏で、売れなくなる人がいる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……高い値段で守られとる商売が、正しいんか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "正しくはない。でも、その人にも生活があるでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは、買う側を選ぶ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……うん。ずっとそっちを選び続けた人だよ、この人は。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから支持もされたし、敵も増えた。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ねえ、なんで牛肉だったと思う？"
+      - speaker: zundamon
+        emotion: normal
+        text: "高いからだろ。下げたときの落差がでかい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それもある。でも、この人が戦場で思い出したのは何だった？"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……あっ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "すき焼き。牛肉の鍋だよ。"
+        telops:
+          - {text: "戦場で願った、あの鍋", size: xl, position: bottom-center, color: "#FFD86A", stroke: "#2A1408", glow: "#E8A05A", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "……自分が食いたかったものを、[日本中|にほんじゅう]に配ってるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。この人の商売は、全部そこから出てる。"
+
+  - id: shisou
+    title: "よい品をどんどん安く"
+    background: il_dai_seiniku
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, tag: "中内", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "彼が掲げた言葉は、よい[品|しな]をどんどん安く、より豊かな社会を、でした。"
+        reading: "かれがかかげたことばわ、よいしなをどんどんやすく、よりゆたかなしゃかいを、でした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安いだけやったら、ただの安物や。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よい[品|しな]を、安く。そこが要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "言うのは簡単だけどね。原価は下がらないんだから。"
+      - speaker: zundamon
+        emotion: happy
+        text: "だから、間を飛ばす。"
+      - speaker: reimu
+        text: "1958年、神戸三宮にチェーン化の第1号店を出します。"
+        reading: "せんきゅうひゃくごじゅうはちねん、こうべさんのみやにちぇーんかのだいいちごうてんをだします。"
+      - speaker: reimu
+        text: "1960年にはダイエーみかん、翌年にはダイエーインスタントコーヒー。"
+        reading: "せんきゅうひゃくろくじゅうねんにわだいえいみかん、よくねんにわだいえいいんすたんとこーひー。"
+      - speaker: zundamon
+        emotion: normal
+        text: "自分のとこの名前で、自分で作って、自分で売る。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……いまのプライベートブランドじゃん。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そう呼ぶのか。ボクは間を飛ばしてるだけだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "60年前に始めてるのが怖いんだよ。"
+      - speaker: reimu
+        text: "1962年、彼は日商の協力でアメリカへ渡り、流通業を見て回ります。"
+        reading: "せんきゅうひゃくろくじゅうにねん、かれわにっしょうのきょうりょくであめりかえわたり、りゅうつうぎょうをみてまわります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……なんだこの店の大きさは。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "駐車場が、店より広いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "アメリカのスーパーマーケットね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……日本にも、これを作る。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ここまでは気持ちいい話なんだけどさ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんだ。含みのある言い方だな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人、これから30年かけて喧嘩するの。"
+
+  - id: matsushita
+    title: "1964・30年戦争が始まる"
+    background: il_dai_kaden
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: meekaa, x: 0.52}
+      - {who: shain, x: 0.66}
+      - {who: tsumugi, x: 0.84}
+    cuts:
+      - speaker: reimu
+        text: "1964年、ダイエーはテレビを希望小売価格の2割引で売り出しました。"
+        reading: "せんきゅうひゃくろくじゅうよねん、だいえいわてれびをきぼうこうりかかくのにわりびきでうりだしました。"
+      - speaker: meekaa
+        emotion: angry
+        text: "中内さん。これは何のつもりですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安売りです。うちで買うたもんを、うちの値段で売っとるだけや。"
+      - speaker: meekaa
+        emotion: angry
+        text: "希望小売価格というものがあるでしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "希望、でしょう。命令とは書いてない。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うわ、言い方。"
+      - speaker: meekaa
+        emotion: angry
+        text: "値崩れすれば、街の電器屋が潰れます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "潰れん値段で売ってはる店は、潰れませんやろ。"
+      - speaker: meekaa
+        emotion: angry
+        text: "……分かりました。商品を出すのをやめます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "[止める|やめる]んか。"
+      - speaker: meekaa
+        emotion: normal
+        text: "ええ。ダイエーには、一台も流しません。"
+      - speaker: reimu
+        text: "松下電器は、ダイエーへの供給ルートを止めました。"
+        reading: "まつしたでんきわ、だいえいえのきょうきゅうるーとをとめました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここから、いわゆるダイエー・松下戦争。"
+      - speaker: zundamon
+        emotion: angry
+        text: "上等や。よそから買うたる。"
+      - speaker: reimu
+        text: "1965年3月には、花王もダイエーへの出荷を止めます。"
+        reading: "せんきゅうひゃくろくじゅうごねんさんがつにわ、かおうもだいえいえのしゅっかをとめます。"
+      - speaker: zundamon
+        emotion: angry
+        text: "洗剤も止まったか。"
+      - speaker: shain
+        emotion: sad
+        text: "社長、棚が空きます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ほな、自分で作る。"
+      - speaker: shain
+        emotion: surprised
+        text: "作る！？ 洗剤をですか！"
+      - speaker: reimu
+        text: "第一工業製薬と組み、自前の洗剤スパットを売り出しました。"
+        reading: "だいいちこうぎょうせいやくとくみ、じまえのせんざいすぱっとをうりだしました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "出さんのやったら、こっちで作ればええ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "解決の仕方が力技すぎる。"
+      - speaker: reimu
+        text: "同じ年の7月、ダイエーは花王を公正取引委員会に提訴します。"
+        reading: "おなじとしのしちがつ、だいえいわかおうをこうせいとりひきいいんかいにていそします。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "訴えるとこまで行った。もう完全に戦争。"
+      - speaker: zundamon
+        emotion: normal
+        text: "消費者以外に頭を下げるのは、嫌なのだ。"
+        telops:
+          - {text: "消費者以外に頭を下げるのは嫌だ", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#2A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……かっこいいけど、これ後で効いてくるからね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "また不吉なこと言うぞ。"
+
+  - id: matsushita2
+    title: "30年、下げなかった頭"
+    background: il_dai_honbu
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1970年には、松下の販売店の側で不買の決議まで出ました。"
+        reading: "せんきゅうひゃくななじゅうねんにわ、まつしたのはんばいてんのがわでふばいのけつぎまででました。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。向こうの店が、うちの商品を置かない決議をしたそうです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ほう。組織で来たか。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "いや感心してる場合じゃないでしょ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "こっちも組織や。数なら負けん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人、追い込まれるほど元気になるんだよね。"
+      - speaker: reimu
+        text: "1975年、住友銀行の[斡旋|あっせん]で、花王との争いは和解に至ります。"
+        reading: "せんきゅうひゃくななじゅうごねん、すみともぎんこうのあっせんで、かおうとのあらそいわわかいにいたります。"
+      - speaker: shain
+        emotion: happy
+        text: "洗剤のほうは、話がつきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうか。ほな、あと一社や。"
+      - speaker: reimu
+        text: "同じ年、京都の真々庵で、松下幸之助が中内を招いたと伝えられています。"
+        reading: "おなじとし、きょうとのしんしんあんで、まつしたこうのすけがなかうちをまねいたとつたえられています。"
+      - speaker: shain
+        emotion: surprised
+        text: "社長。松下さんから、お誘いです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何て書いてある。"
+      - speaker: shain
+        emotion: normal
+        text: "京都の[庵|いおり]で、一度お会いしたい、と。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これ、向こうから手を差し出してるんだよ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "経営の神様って呼ばれてた人が、わざわざね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……断る。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "断る！？"
+      - speaker: zundamon
+        emotion: normal
+        text: "行ったら、こっちが折れたことになる。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "いや、そこは大人になろうよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "値段を下げるのをやめる気は無いのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "頭を下げに行って、下げんかったら失礼やろ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……理屈は[通って|とおって]る。[通って|とおって]るけど。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "こういうところが、後で味方をなくすんだよ。"
+      - speaker: reimu
+        text: "対立は、そのまま20年近く続きました。"
+        reading: "たいりつわ、そのままにじゅうねんちかくつづきました。"
+      - speaker: reimu
+        text: "1994年、松下幸之助の没後に、松下電器が折れる形で和解します。"
+        reading: "せんきゅうひゃくきゅうじゅうよねん、まつしたこうのすけのぼつごに、まつしたでんきがおれるかたちでわかいします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……30年か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "30年だよ。人生の3分の1、テレビの値段で喧嘩してたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "テレビの値段やない。誰が値段を決めるか、や。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……そこは、勝ったんだよね。"
+      - speaker: reimu
+        text: "いま、家電に希望小売価格が付いていても、店はもっと安く売ります。"
+        reading: "いま、かでんにきぼうこうりかかくがついていても、みせわもっとやすくうります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それが当たり前になったのは、この喧嘩の[後|あと]なんだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……勝ち確だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "会社は負けるけどね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "毎回それ言うのやめろ！"
+
+  - id: nihonichi
+    title: "1972・三越を抜く"
+    background: il_dai_honbu
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1971年3月、ダイエーは大阪証券取引所の第2部に上場します。"
+        reading: "せんきゅうひゃくななじゅういちねんさんがつ、だいえいわおおさかしょうけんとりひきじょのだいにぶにじょうじょうします。"
+      - speaker: reimu
+        text: "スーパー業界では、初めてのことでした。"
+        reading: "すーぱーぎょうかいでわ、はじめてのことでした。"
+      - speaker: shain
+        emotion: happy
+        text: "社長、出ました。今年の売上です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうや。"
+      - speaker: shain
+        emotion: surprised
+        text: "……三越を、抜いています。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……三越を。"
+      - speaker: reimu
+        text: "1972年、ダイエーは小売業の売上高で日本一になりました。"
+        reading: "せんきゅうひゃくななじゅうにねん、だいえいわこうりぎょうのうりあげだかでにほんいちになりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "百貨店の王様を、15年前まで薬局だった店が抜いたの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……間を飛ばしただけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その一手で日本一まで来たんだから、大した一手だよ。"
+      - speaker: reimu
+        text: "1980年2月16日、小売業として日本で初めて売上高1兆円に達します。"
+        reading: "せんきゅうひゃくはちじゅうねんにがつじゅうろくにち、こうりぎょうとしてにほんではじめてうりあげだかいっちょうえんにたっします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "一兆円だぞ。読み上げるだけで気持ちいいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "この辺が一番いい時期。ここで止まってればね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "止まるわけないやろ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……だよね。"
+
+  - id: bousou
+    title: "止まらない"
+    background: il_dai_dome
+    bgm: mystery
+    stage:
+      - {who: zundamon, x: 0.3, tag: "中内", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここからの十年、この人が何を買ったか並べるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "おう、来い。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1981年、[髙島屋|たかしまや]の株を10.7%。"
+      - speaker: zundamon
+        emotion: happy
+        text: "百貨店も要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "コンビニ。ローソン。"
+      - speaker: zundamon
+        emotion: happy
+        text: "小さい店も要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ホテル。"
+      - speaker: zundamon
+        emotion: happy
+        text: "泊まるとこも要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1988年、南海ホークス。"
+      - speaker: zundamon
+        emotion: happy
+        text: "球団も要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "福岡ドーム。東京ドームより大きいやつ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "でかい方がええに決まってるのだ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "誰かこの人を止めて。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "急に素に戻るな！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だって全部借金だよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "借金と元気だけはあるんやで。"
+        telops:
+          - {text: "借金と元気だけはあるんやで", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A1E3A", glow: "#4AA8E8", anim: up}
+      - speaker: tsumugi
+        emotion: angry
+        text: "元気で借金は返せません。"
+      - speaker: reimu
+        text: "南海ホークスは福岡ダイエーホークスとなり、福岡ドームの建設が始まります。"
+        reading: "なんかいほーくすわふくおかだいえいほーくすとなり、ふくおかどーむのけんせつがはじまります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この頃の合言葉が、規模を大きくすれば安く売れる、なの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうや。たくさん仕入れたら、単価は下がる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "理屈は合ってる。合ってるんだけど。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんや。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それ、地価が上がり続ける前提だよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "土地は上がるもんや。下がったことがあるか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……あるよ。もうすぐね。"
+
+  - id: shinsai
+    title: "1995・1月17日"
+    background: il_dai_shinsai
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1995年1月17日午前5時46分、阪神・淡路大震災が起きました。"
+        reading: "せんきゅうひゃくきゅうじゅうごねんいちがつじゅうしちにちごぜんごじよんじゅうろっぷん、はんしんあわじだいしんさいがおきました。"
+      - speaker: reimu
+        text: "彼が育った神戸が、崩れました。"
+        reading: "かれがそだったこうべが、くずれました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……神戸か。"
+      - speaker: reimu
+        text: "東京の自宅で知った彼は、浜松町に対策本部を置きます。"
+        reading: "とうきょうのじたくでしったかれわ、はままつちょうにたいさくほんぶをおきます。"
+      - speaker: reimu
+        text: "およそ2時間で、方針をすべて決めたと伝えられています。"
+        reading: "およそにじかんで、ほうしんをすべてきめたとつたえられています。"
+      - speaker: shain
+        emotion: sad
+        text: "社長、店も社員もやられています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "被害の少ない兵庫県内の24店。開けろ。"
+      - speaker: shain
+        emotion: surprised
+        text: "開ける！？ こんなときに商売ですか。"
+      - speaker: zundamon
+        emotion: angry
+        text: "商売やない。あそこには、食うもんがない人がおる。"
+      - speaker: shain
+        emotion: normal
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "船とヘリで運べ。関東からでも九州からでもええ。"
+      - speaker: reimu
+        text: "ダイエーとローソンなど、およそ100の店が被災していました。"
+        reading: "だいえいとろーそんなど、およそひゃくのみせがひさいしていました。"
+      - speaker: reimu
+        text: "この震災で、ダイエーの正社員30名以上が亡くなっています。"
+        reading: "このしんさいで、だいえいのせいしゃいんさんじゅうめいいじょうがなくなっています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "店の明かりは、消すな。"
+      - speaker: shain
+        emotion: thinking
+        text: "夜通しですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "明かりがついてるだけで、人は力が出るんや。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……この人、五十年前に同じ暗さの中にいたんだよね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "腹が減って、何も無い場所に。"
+
+  - id: tenraku
+    title: "何でもあるのに、何も無い"
+    background: il_dai_garaten
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "中内", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1990年代の後半、地価が下がり続けます。"
+        reading: "せんきゅうひゃくきゅうじゅうねんだいのこうはん、ちかがさがりつづけます。"
+      - speaker: reimu
+        text: "土地を担保に広げてきた会社に、借金だけが残りました。"
+        reading: "とちをたんぽにひろげてきたかいしゃに、しゃっきんだけがのこりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "さっき言った前提が、崩れたの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……売上を上げれば返せる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その売上も落ちてる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なんでや。安いのに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……そこなんだよね。もう、安いだけじゃ人は来ないの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……安いのに、来んのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "戦後は、安ければ何でも売れた。腹が減ってたから。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも90年代の人は、もう腹が減ってない。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "欲しいのは、安いものじゃなくて、good なもの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "よい[品|しな]をどんどん安く、や。よい[品|しな]も入っとる。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……当時、こう言われてたの。"
+      - speaker: reimu
+        text: "ダイエーに行けば何でも売っている。でも、欲しいものは何も売っていない。"
+        reading: "だいえいにいけばなんでもうっている。でも、ほしいものわなにもうっていない。"
+        telops:
+          - {text: "欲しいものは何も売っていない", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#20202A", glow: "#8A8A9A", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "家電が欲しい人は家電量販店へ行く。服は服屋へ行く。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全部そろってる店って、裏を返せば、どれも一番じゃない店なんだよ。"
+      - speaker: reimu
+        text: "大型店のハイパーマートも、期待した数字には届きませんでした。"
+        reading: "おおがたてんのはいぱーまーとも、きたいしたすうじにわとどきませんでした。"
+      - speaker: zundamon
+        emotion: angry
+        text: "でかい店を作れば、安うできるはずやろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作れば作るほど、借金の利息も増えるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "売上を増やすために借りて、返すために売上を増やす。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……止まったら終わる走り方をしてたの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "止まらんかったらええ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "止まるんだよ。人も会社も、いつかは。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……そんなもん、こっちが一番になったらええ話や。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "その体力が、もう無いの。"
+
+  - id: taijin
+    title: "2001・退任"
+    background: il_dai_kaigi
+    bgm: mystery
+    stage:
+      - {who: zundamon, x: 0.24, tag: "中内", flip: true}
+      - {who: ginko, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: ginko
+        emotion: normal
+        text: "中内さん。もう、数字が持ちません。"
+      - speaker: zundamon
+        emotion: angry
+        text: "まだやれる。"
+      - speaker: ginko
+        emotion: normal
+        text: "やれません。支えているのは、こちらです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: ginko
+        emotion: normal
+        text: "退いていただくのが、会社のためです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "消費者以外に頭を下げるのは嫌だ、って言ってた人がね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……銀行に、言われとる。"
+      - speaker: reimu
+        text: "2001年、彼は経営悪化の責任を取り、代表取締役を退任しました。"
+        reading: "にせんいちねん、かれわけいえいあっかのせきにんをとり、だいひょうとりしまりやくをたいにんしました。"
+      - speaker: reimu
+        text: "この年の株主総会は、2時間36分に及ぶ荒れようだったと伝えられています。"
+        reading: "このとしのかぶぬしそうかいわ、にじかんさんじゅうろっぷんにおよぶあれようだったとつたえられています。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "怒号が飛んで、責任を問われて、ずっと立たされて。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そらそうや。金を出した人らやからな。"
+      - speaker: reimu
+        text: "ところが最後、彼が壇上に戻ると、会場は拍手に包まれたと言われています。"
+        reading: "ところがさいご、かれがだんじょうにもどると、かいじょうわはくしゅにつつまれたといわれています。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……なんで拍手するんや。[責め|せめ]とったやろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その場にいた人にしか分からないと思う。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ただ、この人が何を作ったかは、みんな知ってたんじゃないかな。"
+      - speaker: reimu
+        text: "2002年には、他社の役職もすべて辞しています。"
+        reading: "にせんにねんにわ、たしゃのやくしょくもすべてじしています。"
+      - speaker: reimu
+        text: "2004年12月、中内家の資産管理会社3社が特別清算に入りました。"
+        reading: "にせんよねんじゅうにがつ、なかうちけのしさんかんりがいしゃさんしゃがとくべつせいさんにはいりました。"
+      - speaker: reimu
+        text: "株も不動産も、すべて売却されています。"
+        reading: "かぶもふどうさんも、すべてばいきゃくされています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……全部、無くなったのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "うん。復員したときと、同じところまで戻った。"
+
+  - id: owari
+    title: "2005・9月19日"
+    background: il_dai_sobo
+    bgm: amacha_orb
+    stage:
+      - {who: zundamon, x: 0.42, tag: "中内", flip: true}
+    cuts:
+      - speaker: reimu
+        text: "2005年8月26日、[中内㓛|なかうちいさお]は脳梗塞で倒れました。"
+        reading: "にせんごねんはちがつにじゅうろくにち、なかうちいさおわのうこうそくでたおれました。"
+      - speaker: reimu
+        text: "9月19日午前9時30分、神戸市立中央市民病院で亡くなります。"
+        reading: "くがつじゅうくにちごぜんくじさんじゅっぷん、こうべしりつちゅうおうしみんびょういんでなくなります。"
+      - speaker: reimu
+        text: "享年83。生まれ育った神戸でした。"
+        reading: "きょうねんはちじゅうさん。うまれそだったこうべでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……神戸に、戻ってきたのだ。"
+      - speaker: reimu
+        text: "彼が始めた店は、いまも名前を変えずに営業しています。"
+        reading: "かれがはじめたみせわ、いまもなまえをかえずにえいぎょうしています。"
+
+  - id: ima
+    title: "いま、その値札の前で"
+    background: il_dai_ima
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……つむぎさん。ひとつ聞いていいか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この人、失敗した人ってことになるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "会社の経営としては、そうだよ。借金で潰れかけた。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、いまスーパーで買い物してみて。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……してるぞ。毎週。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "肉も、洗剤も、テレビも、定価より安いでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……安いのが当たり前だと思ってたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当たり前じゃなかったの。誰かが30年かけて喧嘩して、そうなった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……あの30年戦争、そういうことだったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。負けた側の話じゃないんだよ、あれ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクが今日、豚に変えられたのも。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。選べる時点で、もう勝ってるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……戦場では、選べなかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。あの人が欲しかったのは、それだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。決めた。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "なにを。"
+      - speaker: zundamon
+        emotion: happy
+        text: "今日は、牛肉にする。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、奮発するね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "すき焼きにするのだ。ちゃんと、腹いっぱい。"
+        telops:
+          - {text: "今日は、すき焼きにする", size: xl, position: bottom-center, color: "#FFD86A", stroke: "#2A1408", glow: "#E8A05A", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "……いいと思う。"
+
+  - id: shime
+    title: ""
+    background: il_dai_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日から一つだけ、やってほしいことがあるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スーパーで値札を見たとき、一回だけ思い出して。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……この値段が、当たり前じゃなかったことをか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。それだけでいい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……安いって、けっこう重い言葉だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そうだね。腹が減った人が考えた言葉だから。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……会社は取られたけど、値札は残ったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "残ったよ。[日本中|にほんじゅう]に。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……じゃあ、その人は追い出されてないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……うん。そうかもね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "チャンネル登録も、してくれると嬉しいな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "登録は無料なのだ！ 値下げの余地がないぞ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこは価格破壊できないね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        duet_with: tsumugi
