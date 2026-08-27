@@ -248,6 +248,51 @@ def upload(args) -> int:
     return 0
 
 
+def cmd_schedule(args) -> int:
+    """すでに上げてある動画に、あとから公開予約を付ける（または公開に切り替える）。
+
+    videos.update は指定した part を**丸ごと差し替える**ので、
+    いまの status を読んでから publishAt だけ足して送り返す。
+    読まずに送ると made-for-kids やライセンスの設定が消える
+    """
+    yt = service()
+    check_channel(yt, args.channel)
+    vid = args.video
+    if len(vid) != 11:
+        from ytf.config import Config, find_project_dir
+        proj = find_project_dir(Config.load().root, vid)
+        f = proj / "out" / "youtube_video_id.txt" if proj else None
+        if not (f and f.exists()):
+            _fail(f"動画IDが分かりません: {args.video}")
+        vid = f.read_text(encoding="utf-8").strip()
+    items = yt.videos().list(part="snippet,status", id=vid).execute().get("items")
+    if not items:
+        _fail(f"動画が見つかりません: {vid}")
+    v = items[0]
+    st = dict(v["status"])
+    for k in ("uploadStatus", "privacyStatus", "license", "embeddable",
+              "publicStatsViewable", "selfDeclaredMadeForKids"):
+        st.setdefault(k, v["status"].get(k))
+    st.pop("uploadStatus", None)
+    st.pop("rejectionReason", None)
+    st.pop("failureReason", None)
+    if args.publish_at:
+        st["privacyStatus"] = "private"     # 予約は private のままでないと効かない
+        st["publishAt"] = args.publish_at
+    else:
+        st["privacyStatus"] = args.privacy
+        st.pop("publishAt", None)
+    print(f"  {v['snippet']['title'][:44]}")
+    print(f"  {v['status']['privacyStatus']} → {st['privacyStatus']}"
+          + (f" / 予約 {args.publish_at}" if args.publish_at else ""))
+    if args.dry_run:
+        print("--dry-run のため送信しません。")
+        return 0
+    yt.videos().update(part="status", body={"id": vid, "status": st}).execute()
+    print(f"✓ 更新しました: https://youtu.be/{vid}")
+    return 0
+
+
 def resolve_playlist(yt, name_or_id: str) -> str:
     if re.fullmatch(r"[A-Za-z0-9_-]{18,}", name_or_id):
         return name_or_id
@@ -319,6 +364,16 @@ def main() -> int:
     u.add_argument("--no-thumbnail", action="store_true")
     u.add_argument("--dry-run", action="store_true", help="送らずに内容だけ出す")
     u.set_defaults(func=upload)
+
+    sc = sub.add_parser("schedule", help="投稿済みの動画に公開予約を付ける／公開に切り替える")
+    sc.add_argument("video", help="slug・日本語フォルダ名・動画ID")
+    sc.add_argument("--publish-at", help="予約日時 例 2026-09-01T19:00:00+09:00")
+    sc.add_argument("--privacy", default="public",
+                    choices=["private", "unlisted", "public"],
+                    help="--publish-at を付けないときの公開設定")
+    sc.add_argument("--channel", default=EXPECT_CHANNEL)
+    sc.add_argument("--dry-run", action="store_true")
+    sc.set_defaults(func=cmd_schedule)
 
     p = sub.add_parser("playlists", help="再生リストの一覧")
     p.set_defaults(func=cmd_playlists)
