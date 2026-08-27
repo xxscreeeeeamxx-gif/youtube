@@ -1,0 +1,1389 @@
+# 任天堂・山内溥 再現ドラマ・ミーム版（[山内溥|やまうちひろし]・1927→2013）。投稿前に必ず目視レビュー。
+# ★ジャンル転換の実験2本目（繁栄側）。1本目のダイエー回（失敗側）と条件を揃えて比較する:
+#   尺20分台 / 冒頭フック15秒以内 / つむぎ=現代からの解説役（殴る役）/ 再現ドラマ形式
+# ★配役: ずんだもん=山内溥 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★ミーム禁止の章: bannen（逝去）
+# ★重複回避: 既存の 16_ゲームボーイの誕生（横井軍平）が ウルトラハンド〜ゲーム&ウォッチ〜
+#   ゲームボーイ を横井の視点で扱っている。こちらは **経営者の視点で1927〜1983** に絞り、
+#   ゲームボーイには触れない。横井は転機を作った社員として1章だけ出す
+# 裏取り: 山内溥Wikipedia / 任天堂Wiki(Fandom) / ニコニコ大百科
+# 確定事実:
+#   1927-11-7 京都市生まれ。祖父は2代目社長・山内積良（1883-12-10生）
+#   父・山内鹿之丞（婿養子・旧姓 稲葉）が幼少期に近所の女性と駆け落ちして失踪。祖父母に育てられた
+#   早稲田大学専門部法律科で学ぶ / 1947 株式会社丸福の取締役
+#   1949 祖父・積良が病に倒れ、22歳で急遽あとを継ぐ。
+#     「任天堂で働く山内家の者は自分以外に必要ない」と条件を出し、従兄弟たちを退けた
+#   1953 日本初のプラスチック製トランプを開発 / 1959 ディズニートランプが大ヒット
+#   1958 U.S.プレイング・カード社を訪問。「トランプだけではちっぽけな会社で終わってしまう」
+#   多角化: 1960 ダイヤ交通（タクシー）設立→1969撤退 /
+#     1961 近江絹糸と共同出資で三近食品設立→1965撤退 /
+#     1971 家庭用コピー機コピラス発売。10万台売った後、返品の嵐
+#   1965 横井軍平が入社 / 1966 ウルトラハンドを商品化、120万個以上
+#   1970 光線銃SPがヒット / レーザークレー射撃場は全国展開を計画するも
+#     第一次オイルショックで建設撤回が相次ぎ、倒産の危機に直面
+#   1977 テレビゲーム15/6 / 1980 ゲーム&ウオッチ 5000万台、70億円の借金を完済
+#   1983-7 ファミリーコンピュータ発売。1984 累計211万台 / 1985年末 579万台 / 1990 1460万台
+#   1992 シアトル・マリナーズの経営危機に個人資金で出資。MLB史上初の日本人オーナー（保有49%）
+#   2002 岩田聡に社長を譲り取締役相談役へ / 2005 取締役を退任
+#   2013-9-19 肺炎のため京都大学医学部附属病院で死去。享年85
+#   言葉:「面白いか、面白くないかは誰にでもわかる」「娯楽は二番煎じではダメ」
+#     「異業種には絶対手を出すな」（岩田への引き継ぎ時）「人とは同じことをしない」
+meta:
+  title: "【任天堂の再起】タクシーも食品も失敗した男が、世界を取るまで【ずんだもん解説】"
+  slug: "yamauchi-nintendo"
+  summary: "任天堂は花札の会社でした。22歳で社長になった山内溥は、タクシー・食品・コピー機と手を広げ、そのすべてに失敗します。借金は70億円。倒産の一歩手前で、彼は自分の会社が何屋なのかを考え直しました。ずんだもんが山内を演じる再現ドラマです。"
+  tags: ["任天堂", "山内溥", "ファミコン", "経営", "昭和史", "ゲーム", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "全部失敗した"
+    bottom: "任天堂の再起"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: sofu, label: "祖父・積良", voice: 42, pitch: -0.06, item: mustache}
+    - {id: itoko, label: "従兄弟", voice: 13, pitch: 0.02}
+    - {id: shain, label: "社員", voice: 12, pitch: 0.04}
+    - {id: yokoi, label: "横井", voice: 12, pitch: -0.02}
+    - {id: ginko, label: "銀行の人", voice: 13, pitch: -0.1, item: hat}
+    - {id: iwata, label: "岩田", voice: 13, pitch: 0.04}
+scenes:
+  - id: hook
+    title: ""
+    background: il_ym_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "任天堂って、昔から強い会社なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……そうでもないよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "えっ。ずっと勝ってるだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "昔ね、借金が70億円あった。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "70億！？ 倒産するやつじゃないか。"
+        telops:
+          - {text: "借金70億円", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A1E", glow: "#4AC888", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。一歩手前まで行った。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……何で失敗したんだ。ゲームがコケたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ううん。まだゲーム会社じゃなかったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "は？ じゃあ何屋だったんだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "[花札|はなふだ]屋。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "[花札|はなふだ]！？ おじいちゃんが正月にやるやつか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。創業は1889年。ゲームより100年近く前だよ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……で、その[花札|はなふだ]屋がなんで70億も借りたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "タクシー会社をやって、食品会社をやって、コピー機を売った。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "全部関係ないだろ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "全部失敗した。"
+      - speaker: zundamon
+        emotion: angry
+        text: "そりゃそうだ！ 何がしたかったんだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その人がね、22歳で社長になった人なんだけど。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "22歳！？ ボクより若いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[山内溥|やまうちひろし]。任天堂の3代目。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……全部失敗して、そこからどうしたんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自分の会社が何屋なのかを、考え直したの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……聞くのだ。"
+
+  - id: kyoto
+    title: "1927・京都、花札の家"
+    background: il_ym_karuta
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", scale: 0.8, flip: true}
+      - {who: sofu, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1927年11月7日、[山内溥|やまうちひろし]は京都市に生まれました。"
+        reading: "せんきゅうひゃくにじゅうしちねんじゅういちがつなのか、やまうちひろしわきょうとしにうまれました。"
+      - speaker: reimu
+        text: "家は、[花札|はなふだ]とトランプを作る任天堂という会社でした。"
+        reading: "いえわ、はなふだととらんぷをつくるにんてんどうというかいしゃでした。"
+      - speaker: reimu
+        text: "父は彼が幼いころ、家を出て行きました。"
+        reading: "ちちわかれがおさないころ、いえをでていきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……おじいちゃん。お父ちゃんは。"
+      - speaker: sofu
+        emotion: sad
+        text: "……もう、帰ってこん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: sofu
+        emotion: normal
+        text: "溥。この家は、お前が継ぐんや。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この時点で、もう逃げ場がないんだよね。"
+      - speaker: reimu
+        text: "彼は祖父母に育てられます。祖父は2代目社長の[積良|せきりょう]でした。"
+        reading: "かれわそふぼにそだてられます。そふわにだいめしゃちょうのせきりょうでした。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……この札、何枚売ったら家が回るんですか。"
+      - speaker: sofu
+        emotion: surprised
+        text: "……子どもが聞くことやないな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "気になるんです。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "かわいくない子どもだ。"
+      - speaker: reimu
+        text: "やがて彼は、早稲田大学の専門部で法律を学び始めます。"
+        reading: "やがてかれわ、わせだだいがくのせんもんぶでほうりつをまなびはじめます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "京都を出たのだ。東京は広いぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、そんなに長くはいられなかった。"
+
+  - id: shunin
+    title: "1949・22歳の社長"
+    background: il_ym_shacho
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.22, tag: "山内", flip: true}
+      - {who: itoko, x: 0.46}
+      - {who: shain, x: 0.62}
+      - {who: tsumugi, x: 0.82}
+    cuts:
+      - speaker: reimu
+        text: "1949年、祖父の[積良|せきりょう]が病に倒れます。"
+        reading: "せんきゅうひゃくよんじゅうくねん、そふのせきりょうがやまいにたおれます。"
+      - speaker: reimu
+        text: "急きょ呼び戻された溥は、22歳で3代目の社長になりました。"
+        reading: "きゅうきょよびもどされたひろしわ、にじゅうにさいでさんだいめのしゃちょうになりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "大学生がいきなり社長。しかも創業60年の会社。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……引き受けます。ただし、条件があります。"
+      - speaker: itoko
+        emotion: surprised
+        text: "条件？ お前が言う立場か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "任天堂で働く[山内家|やまうちけ]の者は、ボク以外に必要ありません。"
+      - speaker: itoko
+        emotion: angry
+        se: don
+        text: "……なんやと。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "うわ、いきなり親族全員を切りにいった。"
+      - speaker: itoko
+        emotion: angry
+        text: "わしらはこの家のもんやぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうです。だから、居られたら困るんです。"
+      - speaker: itoko
+        emotion: angry
+        text: "……子どもが、何を言うとる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "22歳の社長の言うことを、親戚が聞くと思いますか。"
+      - speaker: itoko
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "聞かへんでしょう。だから、要らんのです。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……理屈は分かる。分かるけど、えぐいなあ。"
+      - speaker: reimu
+        text: "従兄弟たちは、会社を去りました。"
+        reading: "いとこたちわ、かいしゃをさりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人、22歳で味方を全部切ってスタートしてるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……味方やない。上司や。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこを分けられるのが、この人の強いとこであり。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……であり？"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……あとで、相談する相手がいなくなるとこ。"
+      - speaker: reimu
+        text: "社内には、二十代の社長を認めない空気が残りました。"
+        reading: "しゃないにわ、にじゅうだいのしゃちょうをみとめないくうきがのこりました。"
+      - speaker: shain
+        emotion: thinking
+        text: "……社長。この件、先代ならこうされました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先代はもうおらん。ボクが決める。"
+      - speaker: shain
+        emotion: sad
+        text: "……はい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人、決めるのは速いんだけど。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんや。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "止めてくれる人を、自分で全部消したよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……止められたら、決められへん。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "うん。だから、この後めちゃくちゃ突っ走るの。"
+
+  - id: trump
+    title: "1953・プラスチックの札"
+    background: il_ym_karuta
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: shain
+        emotion: sad
+        text: "社長。[花札|はなふだ]は、もう伸びません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かってる。正月にしか出えへんからな。"
+      - speaker: shain
+        emotion: normal
+        text: "トランプもやってますが、紙は破れますし。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……紙やなかったら、どうや。"
+      - speaker: shain
+        emotion: surprised
+        text: "紙じゃない札、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "プラスチックや。破れん。濡れても平気や。"
+      - speaker: shain
+        emotion: thinking
+        text: "……ただ、うちに樹脂を扱える者がおりません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "おらんかったら、覚えたらええ。"
+      - speaker: shain
+        emotion: sad
+        text: "何年かかるか分かりませんが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[花札|はなふだ]は正月しか売れん。待ってたら潰れる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この判断は正しいんだよ。季節商品だけの会社は危ないから。"
+      - speaker: reimu
+        text: "1953年、任天堂は日本で初めてのプラスチック製トランプを開発します。"
+        reading: "せんきゅうひゃくごじゅうさんねん、にんてんどうわにほんではじめてのぷらすちっくせいとらんぷをかいはつします。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これ、地味に大きいの。麻雀とかと違って、汚れても洗える。"
+      - speaker: zundamon
+        emotion: happy
+        text: "水をこぼしても死なん札なのだ。無敵だぞ。"
+      - speaker: reimu
+        text: "1959年には、ディズニーの絵柄を使ったトランプを売り出します。"
+        reading: "せんきゅうひゃくごじゅうくねんにわ、でずにーのえがらをつかったとらんぷをうりだします。"
+      - speaker: shain
+        emotion: happy
+        text: "社長、子どもが買っていきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そらそうや。今までトランプは大人のもんやった。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……お客を増やしたんじゃなくて、増やす相手を変えたのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "人とは同じことをせん。それが信条や。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この頃までは、ほんとに順調なんだよね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……含みのある言い方をするな。"
+
+  - id: america
+    title: "1958・世界一を見た日"
+    background: il_ym_america
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1958年、彼はアメリカへ渡ります。"
+        reading: "せんきゅうひゃくごじゅうはちねん、かれわあめりかえわたります。"
+      - speaker: reimu
+        text: "訪ねたのは、世界最大のトランプ会社、U.S.プレイング・カード社でした。"
+        reading: "たずねたのわ、せかいさいだいのとらんぷがいしゃ、ゆーえすぷれいんぐかーどしゃでした。"
+      - speaker: shain
+        emotion: happy
+        text: "社長、世界一の工場ですよ。さぞ大きいんでしょうね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: shain
+        emotion: thinking
+        text: "……社長？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……これが、世界一か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここ、大事だから注意して聞いてね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でかい。うちより、ずっとでかい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……でも、それだけや。"
+      - speaker: shain
+        emotion: surprised
+        text: "それだけ、とは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "世界の頂点が、この程度の大きさなんや。"
+      - speaker: zundamon
+        emotion: normal
+        text: "つまりトランプいう商売は、これ以上でかならん。"
+        telops:
+          - {text: "世界一でも、この程度か", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A2A1E", glow: "#4AC888", anim: up}
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……世界一を見て、逆に絶望して帰ってきたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "トランプだけでは、ちっぽけな会社で終わってしまう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この焦りが、正しい方向に向けばよかったんだけど。"
+      - speaker: zundamon
+        emotion: angry
+        text: "また不吉なこと言うのやめろ。"
+      - speaker: shain
+        emotion: thinking
+        text: "……社長。帰りの飛行機、ずっと黙っておられますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "考えとる。"
+      - speaker: shain
+        emotion: normal
+        text: "何をです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちは、何をやったらでかなれるか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……問いの立て方が、ちょっとずれてるんだよね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ずれてるか？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。うちは何が得意か、じゃなくて、何ならでかくなれるか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……同じやろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全然ちがう。そこが10年ぶんの差になるの。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "だってここから10年、ずっと失敗するもん。"
+
+  - id: takaku
+    title: "全部やる"
+    background: il_ym_taxi
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "じゃあ、この人がやったことを順番に並べるね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "おう、来い。"
+      - speaker: reimu
+        text: "1960年、タクシー会社のダイヤ交通を設立します。"
+        reading: "せんきゅうひゃくろくじゅうねん、たくしーがいしゃのだいやこうつうをせつりつします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "これからは車の時代や。人を運ぶ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "はい、1個目。"
+      - speaker: reimu
+        text: "1961年、近江絹糸と共同で三近食品を設立します。"
+        reading: "せんきゅうひゃくろくじゅういちねん、おうみけんしときょうどうでさんきんしょくひんをせつりつします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "人は食う。食い物は絶対に売れる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "2個目。ちなみに何を作ったと思う？"
+      - speaker: zundamon
+        emotion: happy
+        text: "インスタントライスや。米をすぐ食えるようにする。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "[花札|はなふだ]の会社が、ご飯を作ってる。"
+      - speaker: reimu
+        text: "1971年には、家庭用のコピー機コピラスを発売しました。"
+        reading: "せんきゅうひゃくななじゅういちねんにわ、かていようのこぴーきこぴらすをはつばいしました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "これからは、家でも書類を写す時代や。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "3個目。ほかにもね、いろいろ手を出してる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ベビーカーも作ったぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "4個目。"
+      - speaker: zundamon
+        emotion: happy
+        text: "掃除機みたいなやつも考えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "5個目。"
+      - speaker: zundamon
+        emotion: happy
+        text: "宿にも手を出した。人は泊まる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "6個目。"
+      - speaker: zundamon
+        emotion: happy
+        text: "とにかく、需要があるとこには全部行く。"
+      - speaker: zundamon
+        emotion: happy
+        text: "やれることは全部やるのだ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "誰かこの人を止めて。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "急に素に戻るな！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、結果を言うね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……どうぞ。"
+
+  - id: zenmetsu
+    title: "全部、消えた"
+    background: il_ym_copyki
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "三近食品は1965年に、ダイヤ交通は1969年に撤退しています。"
+        reading: "さんきんしょくひんわせんきゅうひゃくろくじゅうごねんに、だいやこうつうわせんきゅうひゃくろくじゅうくねんにてったいしています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……二つとも、畳んだのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "コピー機はもっとひどいよ。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。コピラス、10万台売れました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "10万台！ ええやないか。"
+      - speaker: shain
+        emotion: sad
+        text: "……戻ってきています。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "戻る？"
+      - speaker: shain
+        emotion: sad
+        text: "返品です。故障が多くて、直せる人間がおりません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "売る力はあったの。でも、直す力が無かった。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[花札|はなふだ]に修理は要らないでしょ。だからノウハウがゼロなの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……売れたら勝ちやと[思と|おもと]った。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "売ったあとが商売なんだよ、機械は。"
+      - speaker: reimu
+        text: "手を広げた事業は、ことごとく失敗に終わりました。"
+        reading: "てをひろげたじぎょうわ、ことごとくしっぱいにおわりました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……何であかんのや。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全部、うちが得意なことじゃないから。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "タクシーも食品もコピー機も、大きい会社だからやったんでしょ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うちが得意だからやった、じゃないよね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうや。でかなりたかっただけや。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それとね、もう一個ある。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……まだあるんか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "タクシーも食品もコピー機も、生活に要るものでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうや。要るもんは確実に売れる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "要るものは、必ず強い相手が先にいるんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも要るものは、比べられる。安いか、丈夫か、で。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……うちは、どっちも勝てん。"
+
+  - id: yokoi
+    title: "遊びで、社長に呼ばれた男"
+    background: il_ym_kaihatsu
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: yokoi, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1965年、[横井軍平|よこいぐんぺい]という青年が入社しました。"
+        reading: "せんきゅうひゃくろくじゅうごねん、よこいぐんぺいというせいねんがにゅうしゃしました。"
+      - speaker: reimu
+        text: "仕事は、工場の機械を[保守|ほしゅ]することでした。"
+        reading: "しごとわ、こうじょうのきかいをほしゅすることでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……君。この前、何か作ってたやろ。"
+      - speaker: yokoi
+        emotion: surprised
+        text: "……見られてましたか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手が伸びるやつや。あれ、何や。"
+      - speaker: yokoi
+        emotion: sad
+        text: "……暇なときに、遊びで作っただけです。"
+      - speaker: yokoi
+        emotion: sad
+        text: "すみません。仕事中では、ありません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人いま、クビになると思ってるからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あれ、商品にせえ。"
+      - speaker: yokoi
+        emotion: surprised
+        se: don
+        text: "……えっ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "怒られると思ったら、発注された。"
+      - speaker: reimu
+        text: "1966年、その玩具はウルトラハンドとして売り出されます。"
+        reading: "せんきゅうひゃくろくじゅうろくねん、そのがんぐわうるとらはんどとしてうりだされます。"
+      - speaker: reimu
+        text: "売れた数は、120万個を超えました。"
+        reading: "うれたかずわ、ひゃくにじゅうまんこをこえました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……120万。コピー機の10倍以上や。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも作ったのは、機械の[保守|ほしゅ]係が暇つぶしに作ったおもちゃ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここで気づいてれば早かったんだけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……まだ気づかんかったのだ。"
+      - speaker: yokoi
+        emotion: thinking
+        text: "……社長。ひとつ、聞いてもいいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんや。"
+      - speaker: yokoi
+        emotion: normal
+        text: "なぜ、あれを商品にしようと思われたんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……君が、笑いながら作っとったからや。"
+      - speaker: yokoi
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作っとる人間が面白ないもんは、買う人も面白ない。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……判断基準がそれだけなんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それでええ。面白いかどうかは、理屈やない。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。この後もう一回でかいのやらかす。"
+
+  - id: laser
+    title: "1973・止まった工事"
+    background: il_ym_laser
+    bgm: mystery
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1970年、光を使って的を撃つ光線銃SPがヒットします。"
+        reading: "せんきゅうひゃくななじゅうねん、ひかりをつかってまとをうつこうせんじゅうえすぴーがひっとします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "これや。遊びは、うちの得意分野や。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、ようやく戻ってきた。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ほな、これをでかくする。全国に射撃場を作るのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……えっ。"
+      - speaker: reimu
+        text: "レーザークレー射撃場。全国展開が計画されました。"
+        reading: "れーざーくれーしゃげきじょう。ぜんこくてんかいがけいかくされました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボウリング場の跡地を借りる。土地は要らん。"
+      - speaker: shain
+        emotion: happy
+        text: "契約、次々に決まっています！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここまでは、本当に上手くいってたの。"
+      - speaker: reimu
+        text: "ところが1973年、第一次オイルショックが起きます。"
+        reading: "ところがせんきゅうひゃくななじゅうさんねん、だいいちじおいるしょっくがおきます。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。建設の撤回が、相次いでいます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……何件や。"
+      - speaker: shain
+        emotion: sad
+        text: "……次から次にです。もう数えていません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……機械は、もう作ってしもてる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "設備は先に作らないと間に合わないからね。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "作った分だけ、そのまま借金になったの。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。作った機械、どうしますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……置いとくしかない。"
+      - speaker: shain
+        emotion: sad
+        text: "置いておくだけで、金利がかかります。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……分かってる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これ、光線銃自体は当たってたのが余計につらいんだよ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "当たっとったんや。当たっとったのに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当てたものを、でかくしようとして沈んだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……また、それか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。あなた、それ3回目だよ。"
+      - speaker: reimu
+        text: "任天堂は、倒産の危機に立たされました。"
+        reading: "にんてんどうわ、とうさんのききにたたされました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+
+  - id: ginko
+    title: "70億円"
+    background: il_ym_ginko
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: ginko, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: ginko
+        emotion: normal
+        text: "山内さん。数字は分かっておられますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……70億や。"
+      - speaker: ginko
+        emotion: normal
+        text: "会社の規模から見て、返せる額ではありません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: ginko
+        emotion: normal
+        text: "何で返されるおつもりですか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ここ、この人の一番大事な場面だと思う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ひとつ、聞いてもええですか。"
+      - speaker: ginko
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちが今まで当てたもんは、何やったと思います。"
+      - speaker: ginko
+        emotion: thinking
+        text: "……トランプ、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "プラスチックのトランプ。ディズニーの絵柄。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手が伸びるだけのおもちゃ。光で的を撃つ銃。"
+      - speaker: ginko
+        emotion: normal
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全部、遊びです。"
+        telops:
+          - {text: "当てたのは、全部 遊び", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A1E", glow: "#4AC888", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "タクシーも、飯も、コピー機も、一個も当たってません。"
+      - speaker: ginko
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちは、遊びを作る会社です。それしかでけへん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……10年かけて、やっと分かったんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "遠回りしました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "遠回りっていうか、行かなくていい場所を全部行った。"
+      - speaker: ginko
+        emotion: thinking
+        text: "……山内さん。ひとつ、伺ってよろしいか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: ginko
+        emotion: normal
+        text: "遊びで、70億が返せるとお考えですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "返せるとは言うてません。"
+      - speaker: ginko
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ただ、ほかのやり方では、もっと確実にあきません。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……開き直りのようで、たぶん一番正確な判断だよね。"
+      - speaker: ginko
+        emotion: normal
+        text: "……遊びの何を、作られるのです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決まってません。ただ、安うて、誰でも面白いもんです。"
+      - speaker: ginko
+        emotion: thinking
+        text: "……高いものではなく。"
+      - speaker: zundamon
+        emotion: normal
+        text: "遊びは、生きるのに要りません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "要らんもんは、安ないと誰も買いません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、この人の一番の発明かもしれない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……発明？ 何も作ってへんぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "娯楽は安くないと売れない、っていう考え方だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……行かんと、分からんかった。"
+
+  - id: gamewatch
+    title: "1980・5000万台"
+    background: il_ym_kojo
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.22, tag: "山内", flip: true}
+      - {who: yokoi, x: 0.46}
+      - {who: shain, x: 0.62}
+      - {who: tsumugi, x: 0.82}
+    cuts:
+      - speaker: reimu
+        text: "1980年、任天堂はゲーム&ウオッチを発売します。"
+        reading: "せんきゅうひゃくはちじゅうねん、にんてんどうわげーむあんどうぉっちをはつばいします。"
+      - speaker: yokoi
+        emotion: normal
+        text: "電卓の技術です。新しいものは、ひとつも使っていません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それでええ。安うできる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最先端じゃなくて、値段が下がりきった部品を使ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "娯楽は、高かったら誰も買わん。"
+      - speaker: shain
+        emotion: thinking
+        text: "社長。これ、電卓の部品ですよ。今さらでは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今さらの部品は、安い。"
+      - speaker: shain
+        emotion: surprised
+        text: "……安ければ、いいんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "遊びやからな。高かったら、誰も要らん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最新の部品を使うと、値段が上がって子どもが買えないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新しいかどうかは、買う人には関係ない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "面白いかどうかだけや。"
+      - speaker: reimu
+        text: "この小さな機械は、およそ5000万台を売りました。"
+        reading: "このちいさなきかいわ、およそごせんまんだいをうりました。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……5000万。"
+      - speaker: reimu
+        text: "70億円の借金は、これで完済されています。"
+        reading: "ななじゅうおくえんのしゃっきんわ、これでかんさいされています。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……1個の商品で、全部返した。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……遊びは、強い。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "10年かけた失敗を、2年で取り返したんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "取り返してへん。失敗した分は、消えてへん。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ただ、あれが無かったら遊びに戻らんかった。"
+
+  - id: famicom
+    title: "1983・ファミリーコンピュータ"
+    background: il_ym_kojo
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1983年7月、ファミリーコンピュータが発売されます。"
+        reading: "せんきゅうひゃくはちじゅうさんねんしちがつ、ふぁみりーこんぴゅーたがはつばいされます。"
+      - speaker: shain
+        emotion: thinking
+        text: "社長。値段、本当にこれでいいんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ええ。子どもが買える値段やないと、意味がない。"
+      - speaker: shain
+        emotion: sad
+        text: "……本体では、ほとんど儲かりません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "本体で儲けんでええ。ソフトで返ってくる。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……いまのゲーム機のビジネス、全部これだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "現代の言葉があると説明が早いのだ。"
+      - speaker: reimu
+        text: "発売の翌年までに211万台、1985年の末には579万台が売れました。"
+        reading: "はつばいのよくねんまでにひゃくじゅういちまんだい、せんきゅうひゃくはちじゅうごねんのすえにわごひゃくななじゅうきゅうまんだいがうれました。"
+      - speaker: reimu
+        text: "1990年には、累計で1460万台に達しています。"
+        reading: "せんきゅうひゃくきゅうじゅうねんにわ、るいけいでせんよんひゃくろくじゅうまんだいにたっしています。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[花札|はなふだ]の会社が、[日本|にほん]の子ども部屋を全部取ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……面白いか、面白くないか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それは、誰にでも分かる。"
+        telops:
+          - {text: "面白いかどうかは、誰にでも分かる", size: lg, position: bottom-center, color: "#FFFFFF", stroke: "#0A2A1E", glow: "#4AC888", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "専門知識が要らないのが、娯楽の怖いところだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうや。せやから、[二番煎じ|にばんせんじ]はあかん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じもんを出したら、面白ないのは誰でも分かる。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。よそのメーカーが、うちの機械で作りたいと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……よそに作らせるんか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自分のところだけで作るか、外にも開くか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "開く。ただし、条件を付ける。"
+      - speaker: shain
+        emotion: thinking
+        text: "条件、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "面白ないもんは、出させへん。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……品質を自分で握ったんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "つまらんソフトが並んだら、機械ごと死ぬ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実際その通りになった業界があるから、判断は正しいよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……娯楽は、一回飽きられたら戻ってこん。"
+
+  - id: mariners
+    title: "1992・シアトルへ"
+    background: il_ym_shacho
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: shain, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "1992年、アメリカの球団シアトル・マリナーズが経営難に陥ります。"
+        reading: "せんきゅうひゃくきゅうじゅうにねん、あめりかのきゅうだんしあとるまりなーずがけいえいなんにおちいります。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。マリナーズが、身売りするかもしれないそうです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……シアトルか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "任天堂のアメリカ法人が、シアトルにあるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちがアメリカで食えとるのは、あの街のおかげや。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……買う。ボクの金でや。"
+      - speaker: shain
+        emotion: surprised
+        se: don
+        text: "個人でですか！？"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "会社の金じゃなくて、私財を出したの。"
+      - speaker: reimu
+        text: "彼は個人の資金で出資し、MLB史上初の[日本人|にほんじん]オーナーとなりました。"
+        reading: "かれわこじんのしきんでしゅっしし、えむえるびーしじょうはつのにほんじんおーなーとなりました。"
+      - speaker: reimu
+        text: "保有の割合は、49パーセントに抑えられています。"
+        reading: "ほゆうのわりあいわ、よんじゅうきゅうぱーせんとにおさえられています。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ねえ、球団って儲かるの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "儲からん。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "即答した。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これは商売やない。恩返しや。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……多角化で全部失敗した人が、儲からないものを買ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "商売でやるから失敗するんや。これは違う。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……線引きが、できるようになったんだね。"
+
+  - id: iwata
+    title: "2002・引き継ぐ"
+    background: il_ym_shacho
+    bgm: amacha_orb
+    stage:
+      - {who: zundamon, x: 0.24, tag: "山内", flip: true}
+      - {who: iwata, x: 0.52}
+      - {who: tsumugi, x: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "2002年、彼は社長の座を[岩田聡|いわたさとる]に譲ります。"
+        reading: "にせんにねん、かれわしゃちょうのざをいわたさとるにゆずります。"
+      - speaker: reimu
+        text: "53年ぶりの、社長の交代でした。"
+        reading: "ごじゅうさんねんぶりの、しゃちょうのこうたいでした。"
+      - speaker: iwata
+        emotion: normal
+        text: "……何か、言い残すことはありますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ひとつだけや。"
+      - speaker: iwata
+        emotion: normal
+        text: "はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "異業種には、絶対に手を出すな。"
+        telops:
+          - {text: "異業種には、絶対に手を出すな", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#0A2A1E", glow: "#4AC888", anim: up}
+      - speaker: iwata
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これ、成功した人の助言じゃないんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクが、全部やって全部あかんかったからや。"
+      - speaker: iwata
+        emotion: normal
+        text: "……分かりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "22歳で味方を全部切った人が、最後に残したのがこれ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……失敗の話しか、渡せるもんが無いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いや。それがいちばん高いよ。"
+
+  - id: bannen
+    title: "2013・9月19日"
+    background: il_ym_sobo
+    bgm: amacha_orb
+    stage:
+      - {who: zundamon, x: 0.34, tag: "山内", flip: true}
+      - {who: tsumugi, x: 0.76}
+    cuts:
+      - speaker: reimu
+        text: "2013年9月19日、[山内溥|やまうちひろし]は京都で亡くなりました。"
+        reading: "にせんじゅうさんねんくがつじゅうくにち、やまうちひろしわきょうとでなくなりました。"
+      - speaker: reimu
+        text: "肺炎のためでした。享年85。"
+        reading: "はいえんのためでした。きょうねんはちじゅうご。"
+      - speaker: reimu
+        text: "生まれた街で、生涯を終えています。"
+        reading: "うまれたまちで、しょうがいをおえています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……京都から、出んかったのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "会社も、京都から動かさなかったよ。"
+
+  - id: ima
+    title: "いま、手の中にあるもの"
+    background: il_ym_ima
+    bgm: pastel_house
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……つむぎさん。ひとつ聞いていいか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この人、失敗した人なのか。成功した人なのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……どっちだと思う？"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……10年やって全部あかんかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、そのあと世界を取ってる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "順番が大事なんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "順番。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全部やって全部だめだったから、何が得意か分かったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……先に分かってたら、10年浮いたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこなんだけどね。先には分からないんだよ、たぶん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[花札|はなふだ]屋のままだったら、いまも[花札|はなふだ]屋でしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……確かに。動かんかったら、何も分からん。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "動いて、全部外して、最後に元の場所に戻ってきた人だよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……元の場所。遊びか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。1889年から、ずっと同じことをやってる会社なの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……札もゲームも、遊ぶ道具なのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……つむぎさん。もうひとつだけ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この人、22歳で親戚を全部切ったよな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "切ったね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……止めてくれる人がおらんかったから、10年失敗したのか。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……そこ、たぶん両方なんだと思う。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "両方？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "止める人がいたら、10年の失敗はなかった。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、プラスチックのトランプも出てなかったかもしれない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……止めてくれる人は、いいことも止めるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。だから正解はないよ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そういうこと。130年以上、何屋か変わってない。"
+
+  - id: shime
+    title: ""
+    background: il_ym_ima
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "今日から一つだけ、やってほしいことがあるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何かに失敗したとき、一回だけ思い出して。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……70億の借金をか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこまでの人はなかなかいないから、安心していいよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……ちょっと安心したのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "失敗した数だけ、自分が何屋かは分かるってこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……全部やってみんと、分からんのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。あの人は10年かけて、それを確かめた。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……じゃあ、ボクの失敗も経験値なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そうだね。カンストするまで貯めよう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "チャンネル登録も、してくれると嬉しいな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "登録は[二番煎じ|にばんせんじ]じゃないから安心なのだ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うまく回収したね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        duet_with: tsumugi

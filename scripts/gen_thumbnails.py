@@ -349,6 +349,34 @@ def p_pricetag(d, s):
               fill=(255, 214, 40), outline=(150, 110, 10), width=int(s*0.016))
 
 
+def p_hanafuda(d, s):
+    """花札を扇状に広げた図。任天堂が何屋だったかを1枚で示す。
+
+    絵柄を描き込むと実寸168pxで潰れるので、**黒地に赤と白の面**という
+    花札の配色だけで見せる。扇に広げると「札」だと分かりやすい。
+    """
+    import math as _m
+    ox, oy = s * 0.52, s * 1.02        # 扇の要（下側）
+    for k, ang in enumerate((-58, -37, -16, 5, 26)):
+        a = _m.radians(ang - 90)
+        cx = ox + _m.cos(a) * s * 0.30
+        cy = oy + _m.sin(a) * s * 0.30
+        w, h = s * 0.235, s * 0.40
+        # 札（回転は角で近似せず、少しずつずらした矩形で扇に見せる）
+        sh = s * 0.055 * k - s * 0.11
+        d.rounded_rectangle([cx - w / 2 + sh, cy - h / 2, cx + w / 2 + sh, cy + h / 2],
+                            radius=s * 0.028, fill=(26, 24, 26),
+                            outline=(232, 228, 220), width=int(s * 0.016))
+        # 中の図柄は面だけ
+        col = [(206, 46, 40), (232, 216, 96), (206, 46, 40),
+               (86, 152, 96), (232, 216, 96)][k]
+        d.rounded_rectangle([cx - w / 2 + sh + s * 0.045, cy - h / 2 + s * 0.055,
+                             cx + w / 2 + sh - s * 0.045, cy - s * 0.02],
+                            radius=s * 0.018, fill=col)
+        d.ellipse([cx - s * 0.035 + sh, cy + s * 0.05,
+                   cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
+
+
 def p_needle(d, s):
     """注射針。先が細く根元が太いメガホン型を、斜めに描く。
 
@@ -1723,6 +1751,10 @@ SPECS = {
         bg=((28, 52, 92), (14, 28, 56)), emotion="surprised",
         lines=[("スイスを倒した", W1, None), ("1600社が600社に", W1, None),
                ("クオーツ時計", B1, Y1)]),
+    "yamauchi-nintendo": dict(prop="p_hanafuda", layout="stack",
+        bg=((18, 78, 58), (8, 38, 30)), emotion="surprised",
+        lines=[("全部失敗した", W1, None), ("借金70億からの再起", W1, None),
+               ("任天堂", B1, Y1)]),
     "nakauchi-daiei": dict(prop="p_pricetag", layout="stack",
         bg=((104, 20, 26), (48, 8, 12)), emotion="sad",
         lines=[("日本一から消えた", W1, None), ("牛肉を39円で売った男", W1, None),
