@@ -277,7 +277,7 @@ scenes:
         text: "ルソン島リンガエン湾。上陸してくる敵を、正面で受ける場所でした。"
         reading: "るそんとうりんがえんわん。じょうりくしてくるてきを、しょうめんでうけるばしょでした。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……さっき戦友が言ってた、帰ってこない南の方だね。"
 
   - id: rinngaen
@@ -310,7 +310,7 @@ scenes:
         text: "腐った部分を虫が食べたことで、切断を免れたと本人が語っています。"
         reading: "くさったぶぶんをむしがたべたことで、せつだんをまぬがれたとほんにんがかたっています。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……薬屋の子が、薬のない場所にいる。"
       - speaker: reimu
         text: "食べるものもありませんでした。"
@@ -348,7 +348,7 @@ scenes:
         emotion: normal
         text: "……生き残ったのだ。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "うん。生き残った人だけが、この先の話をできる。"
 
   - id: fukuin
@@ -375,7 +375,7 @@ scenes:
         emotion: thinking
         text: "……ここで、みんな何を食べてるんですか。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "食べてないよ。餓死した人が大勢いる。"
       - speaker: zundamon
         emotion: sad
@@ -1150,7 +1150,7 @@ scenes:
         emotion: normal
         text: "明かりがついてるだけで、人は力が出るんや。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……この人、五十年前に同じ暗さの中にいたんだよね。"
       - speaker: tsumugi
         emotion: normal
