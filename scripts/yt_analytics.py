@@ -204,6 +204,51 @@ def cmd_sources(args) -> int:
     return 0
 
 
+# ---------------------------------------------------------------- 維持率カーブ
+def _dur_seconds(iso: str) -> int:
+    import re as _re
+    m = _re.fullmatch(r"PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?", iso or "")
+    if not m:
+        return 0
+    h, mi, se = (int(x) if x else 0 for x in m.groups())
+    return h * 3600 + mi * 60 + se
+
+
+def cmd_retention(args) -> int:
+    """視聴者がどこで抜けたかを見る。制作の直す場所を特定するための主データ。"""
+    yt = service()
+    ya = analytics()
+    vid, title, pub = resolve_video(yt, args.video)
+    v = yt.videos().list(part="contentDetails", id=vid).execute()["items"][0]
+    total = _dur_seconds(v["contentDetails"]["duration"])
+    r = query(ya, pub, date.today().isoformat(),
+              "audienceWatchRatio,relativeRetentionPerformance",
+              dimensions="elapsedVideoTimeRatio", filters=f"video=={vid}",
+              sort="elapsedVideoTimeRatio")
+    rows = r.get("rows") or []
+    if not rows:
+        print("データがありません（再生数が少ない動画は出ません）")
+        return 0
+    print(f"{title}\n尺 {total//60}分{total%60:02d}秒 / 公開 {pub}\n")
+    print("  経過      視聴継続   ")
+    base = rows[0][1] or 1.0
+    step = max(1, len(rows) // 25)
+    for i in range(0, len(rows), step):
+        ratio, watch, rel = rows[i]
+        sec = int(total * ratio)
+        pct = 100 * watch / base
+        print(f"  {sec//60:>2}分{sec%60:02d}秒  {pct:>5.1f}%  "
+              + "█" * max(0, round(pct / 3)))
+    # 最初の30秒・1分・3分で何割残るか
+    def at(sec):
+        t = sec / total if total else 0
+        best = min(rows, key=lambda x: abs(x[0] - t))
+        return 100 * best[1] / base
+    print(f"\n  0:30 で {at(30):.0f}% / 1:00 で {at(60):.0f}% / "
+          f"3:00 で {at(180):.0f}% / 5:00 で {at(300):.0f}% が残っている")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="視聴データを読む")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -215,6 +260,9 @@ def main() -> int:
     w = sub.add_parser("dow", help="曜日別の再生")
     w.add_argument("--days", type=int, default=28)
     w.set_defaults(func=cmd_dow)
+    t = sub.add_parser("retention", help="維持率カーブ（どこで抜けたか）")
+    t.add_argument("video", help="slug・タイトルの一部・動画ID")
+    t.set_defaults(func=cmd_retention)
     s = sub.add_parser("sources", help="流入経路")
     s.add_argument("video", help="slug・タイトルの一部・動画ID")
     s.set_defaults(func=cmd_sources)
