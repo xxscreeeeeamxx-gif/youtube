@@ -41,7 +41,10 @@ CLIENT_SECRET = ROOT / "client_secret.json"
 TOKEN = ROOT / ".youtube_token.json"
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
-          "https://www.googleapis.com/auth/youtube"]
+          "https://www.googleapis.com/auth/youtube",
+          # 視聴データの読み取り（yt_analytics.py が使う）。スコープを増やすと
+          # 既存のトークンは無効になるので、追加したら auth をやり直すこと
+          "https://www.googleapis.com/auth/yt-analytics.readonly"]
 # 投稿先を取り違えないための保険。Studio が別チャンネルで開いていて
 # 危うく他人のチャンネルに投げかけた実績があるので、名前で照合してから送る
 EXPECT_CHANNEL = "日常研究所"
