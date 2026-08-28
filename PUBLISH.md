@@ -483,10 +483,9 @@ python3 scripts/yt_analytics.py daily ダイエー
 
 **ボケの密度を上げる・セリフを短くする、は不要**（すでに2倍速い）。差は密度ではなく型。
 
-## 公開予約の一覧（2026-08-29 時点・19日連続）
+## 公開予約の一覧（2026-08-29 時点・15日連続）
 
-**在庫を全部予約に入れた。08/29〜09/16まで毎日19時に1本ずつ自動公開される。**
-未アップロードは0本。
+**08/29〜09/12まで毎日19時に1本ずつ自動公開される。全部ドラマ（人物物語）。**
 
 | 公開 | 動画 | URL |
 |---|---|---|
@@ -496,23 +495,35 @@ python3 scripts/yt_analytics.py daily ダイエー
 | 08/31(月) | 光ファイバーの誕生 | https://youtu.be/zKkfXwp9Y8g |
 | 09/01(火) | フラッシュメモリの誕生 | https://youtu.be/-eGT1euJ3dM |
 | 09/02(水) | 自動改札機の誕生 | https://youtu.be/3gEtcgIhYC4 |
-| 09/03(木) | お札の秘密 | https://youtu.be/v5QnbhoOI80 |
-| 09/04(金) | エスカレーターの謎 | https://youtu.be/cV8ixMUrTU8 |
-| 09/05(土) | カラオケの誕生 | https://youtu.be/dXAaz2FPJ9c |
-| 09/06(日) | 任天堂の再起 | https://youtu.be/SNyfmm99nYQ |
-| 09/07(月) | 信号機の謎 | https://youtu.be/NsNRpNBKLFY |
-| 09/08(火) | カッターナイフの誕生 | https://youtu.be/24QsdJu8_T0 |
-| 09/09(水) | 自動ドアの謎 | https://youtu.be/r7vtyVWMW-E |
-| 09/10(木) | ウォシュレットの誕生 | https://youtu.be/GmzIDOpVzj4 |
-| 09/11(金) | 味の素の誕生 | https://youtu.be/29rNh0ghWFU |
+| 09/03(木) | カラオケの誕生 | https://youtu.be/dXAaz2FPJ9c |
+| 09/04(金) | 任天堂の再起 | https://youtu.be/SNyfmm99nYQ |
+| 09/05(土) | カッターナイフの誕生 | https://youtu.be/24QsdJu8_T0 |
+| 09/06(日) | ウォシュレットの誕生 | https://youtu.be/GmzIDOpVzj4 |
+| 09/07(月) | 味の素の誕生 | https://youtu.be/29rNh0ghWFU |
+| 09/08(火) | クオーツ時計の誕生 | https://youtu.be/p4Lx_xArMXI |
+| 09/09(水) | プリクラの誕生 | https://youtu.be/UuksMagn0EM |
+| 09/10(木) | シャープペンシルの誕生 | https://youtu.be/RzJiTun1AxQ |
+| 09/11(金) | 痛くない注射針の誕生 | https://youtu.be/3Kh1pRwATDw |
 | 09/12(土) | ゲームボーイの誕生 | https://youtu.be/TkUGl65Qq3M |
-| 09/13(日) | クオーツ時計の誕生 | https://youtu.be/p4Lx_xArMXI |
-| 09/14(月) | プリクラの誕生 | https://youtu.be/UuksMagn0EM |
-| 09/15(火) | シャープペンシルの誕生 | https://youtu.be/RzJiTun1AxQ |
-| 09/16(水) | 痛くない注射針の誕生 | https://youtu.be/3Kh1pRwATDw |
 
-ゲームボーイ回（横井軍平）は 09/06 の任天堂回（山内溥）と題材が近いので、
-6日空けて 09/12 に置いた。
+## ★解説（mode: talk）は作らない・出さない（ユーザー方針 2026-08-29）
+
+**新作は人物物語（mode: drama）のみ。** 解説形式は今後作らない。
+すでに投稿済みの スマホ充電の真実 はそのまま残す（公開済みは編集しない方針）。
+
+予約から外した4本は **アップロード済み・非公開・予約なし** の状態で保管してある。
+削除していないので、方針が変われば予約に戻すだけで出せる:
+
+| 動画 | URL |
+|---|---|
+| お札の秘密 | https://youtu.be/v5QnbhoOI80 |
+| エスカレーターの謎 | https://youtu.be/cV8ixMUrTU8 |
+| 信号機の謎 | https://youtu.be/NsNRpNBKLFY |
+| 自動ドアの謎 | https://youtu.be/r7vtyVWMW-E |
+
+```bash
+python3 scripts/upload_youtube.py schedule banknote --publish-at 2026-09-20T19:00:00+09:00
+```
 
 **割り当ての実測（当初の見積もりは2回とも外れた）**: 「投稿1本=1600ユニット・
 1日枠10000なので1日6本まで」と読んでいたが、実際には24時間で9本、翌日に10本が通った。
@@ -520,8 +531,7 @@ python3 scripts/yt_analytics.py daily ダイエー
 事前に本数を絞る必要はない。**
 
 **次にやること**: 09/03ごろからダイエー回の維持率・流入が読める。
-毎日投稿の効果と、企業の一代記（ダイエー・任天堂）vs 誕生秘話（残り17本）の
-比較が同時に測れる。09/16で在庫が尽きるので、それまでに次の制作方針を決める。
+09/12で在庫が尽きるので、それまでに次の制作方針を決める。
 
 ```bash
 python3 scripts/yt_analytics.py videos
