@@ -109,9 +109,15 @@ def cmd_videos(args) -> int:
             continue
         vid = v["id"]
         pub = v["snippet"]["publishedAt"][:10]
-        r = query(ya, pub, end,
-                  "views,averageViewDuration,averageViewPercentage",
-                  filters=f"video=={vid}")
+        try:
+            r = query(ya, pub, end,
+                      "views,averageViewDuration,averageViewPercentage",
+                      filters=f"video=={vid}")
+        except Exception:
+            # 公開直後の動画は集計が始まっておらず、API が 500 を返すことがある。
+            # 1本のために一覧全体を落とさない
+            print(f"{n:<3}{pub:<12}{'（集計待ち）':>26}  {v['snippet']['title'][:34]}")
+            continue
         row = (r.get("rows") or [[0, 0, 0]])[0]
         views, avg_s, avg_pct = int(row[0]), int(row[1]), float(row[2])
         likes = int(v["statistics"].get("likeCount", 0))
@@ -194,10 +200,10 @@ def cmd_sources(args) -> int:
     rows = r.get("rows") or []
     total = sum(x[1] for x in rows) or 1
     names = {"YT_SEARCH": "YouTube検索", "SUGGESTED_VIDEO": "関連動画",
-             "BROWSE": "ブラウジング機能（ホーム等）", "EXT_URL": "外部サイト",
+             "BROWSE": "ブラウジング機能", "EXT_URL": "外部サイト",
              "NOTIFICATION": "通知", "PLAYLIST": "再生リスト",
              "CHANNEL": "チャンネルページ", "NO_LINK_OTHER": "直接・不明",
-             "SUBSCRIBER": "登録チャンネル欄", "YT_CHANNEL": "チャンネルページ"}
+             "SUBSCRIBER": "ホーム画面・登録フィード", "YT_CHANNEL": "チャンネルページ"}
     print(f"{title}\n流入経路（公開〜現在 / 合計 {total} 回）\n")
     for src, views in rows:
         print(f"  {names.get(src, src):<24}{views:>6} 回  {100*views/total:>5.1f}%")
