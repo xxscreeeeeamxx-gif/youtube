@@ -293,6 +293,41 @@ def cmd_schedule(args) -> int:
     return 0
 
 
+def cmd_thumbnail(args) -> int:
+    """投稿済みの動画のサムネイルだけを差し替える。
+
+    サムネは公開後も何度でも変えられる。CTR は Studio に前後で出るので、
+    **新作を待たずに、母数のある既存動画1本で型の検証ができる**
+    （2026-09-02 に CTR 0.8〜1.3% と判明したのを受けて追加）。
+    """
+    from googleapiclient.http import MediaFileUpload
+    from ytf.config import Config, find_project_dir
+    yt = service()
+    check_channel(yt, args.channel)
+    proj = find_project_dir(Config.load().root, args.video)
+    if proj is None:
+        _fail(f"プロジェクトが見つかりません: {args.video}")
+    vid_file = proj / "out" / "youtube_video_id.txt"
+    if not vid_file.exists():
+        _fail(f"動画IDの控えがありません: {vid_file}")
+    vid = vid_file.read_text(encoding="utf-8").strip()
+    thumb = Path(args.file) if args.file else (proj / "out" / "thumbnail.png")
+    if not thumb.exists():
+        _fail(f"サムネがありません: {thumb}")
+    mb = thumb.stat().st_size / 1024 / 1024
+    if mb > 2:
+        _fail(f"サムネが{mb:.1f}MBで上限2MBを超えます")
+    v = yt.videos().list(part="snippet", id=vid).execute()["items"][0]
+    print(f"  {v['snippet']['title'][:44]}")
+    print(f"  {thumb}（{mb*1024:.0f} KB）")
+    if args.dry_run:
+        print("--dry-run のため送信しません。")
+        return 0
+    yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(str(thumb))).execute()
+    print(f"✓ 差し替えました: https://youtu.be/{vid}")
+    return 0
+
+
 def resolve_playlist(yt, name_or_id: str) -> str:
     if re.fullmatch(r"[A-Za-z0-9_-]{18,}", name_or_id):
         return name_or_id
@@ -374,6 +409,13 @@ def main() -> int:
     sc.add_argument("--channel", default=EXPECT_CHANNEL)
     sc.add_argument("--dry-run", action="store_true")
     sc.set_defaults(func=cmd_schedule)
+
+    tb = sub.add_parser("thumbnail", help="投稿済み動画のサムネを差し替える")
+    tb.add_argument("video", help="slug・日本語フォルダ名")
+    tb.add_argument("--file", help="使う画像（既定は out/thumbnail.png）")
+    tb.add_argument("--channel", default=EXPECT_CHANNEL)
+    tb.add_argument("--dry-run", action="store_true")
+    tb.set_defaults(func=cmd_thumbnail)
 
     p = sub.add_parser("playlists", help="再生リストの一覧")
     p.set_defaults(func=cmd_playlists)
