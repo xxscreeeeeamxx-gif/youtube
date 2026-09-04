@@ -510,8 +510,14 @@ python3 scripts/yt_analytics.py daily ダイエー
 
 `thumbnails.set` は動画アップロードとは別枠で、**連続10本で 429
 （uploadRateLimitExceeded）**になった。Retry-After は返ってこない。
+**枠は1日単位らしい**: 10本通ったあと6時間待っても解除されなかった（02:45→08:52）。
 `thumbnail-all` は済んだ分を `.thumb_synced.json` に控えながら待って再試行するので、
-途中で落ちても投げ直しでレート枠を潰さない。
+途中で落ちても投げ直しでレート枠を潰さない。全28本を入れ替えるには数日かかる前提で組む。
+
+**待つ実装で踏んだ罠**（2026-09-05）: 長く待つと HTTP コネクションが切れ、
+再開直後の1〜2本が Broken pipe / Connection reset で落ちる。これを「失敗」として
+対象から外していたため、14本を静かに取りこぼした。**通信エラーは対象に残して
+繋ぎ直す・レート制限だけ待つ**、と分けること。待ったあとは service() を作り直す。
 
 ```bash
 python3 scripts/upload_youtube.py thumbnail-all --dry-run   # 対象の確認

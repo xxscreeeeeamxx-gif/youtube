@@ -407,6 +407,11 @@ def cmd_thumbnail_all(args) -> int:
     todo = [x for x in jobs if x[0] not in done and
             x[2].stat().st_size / 1024 / 1024 <= 2]
     print(f"済み {len(done)} 本 / これから {len(todo)} 本")
+    # 長く待つとコネクションが切れる。待ったあとは必ずサービスを作り直す
+    # （2026-09-05: Broken pipe / Connection reset を「失敗」として対象から外してしまい、
+    #  14本を取りこぼした。通信エラーは残す・レート制限だけ待つ、と分ける）
+    NET = ("Broken pipe", "Connection reset", "timed out", "ConnectionError",
+           "RemoteDisconnected", "ServerNotFound", "SSLError", "EOF occurred")
     wait, waited = args.wait, 0
     while todo and waited <= args.max_wait:
         stalled = False
@@ -422,19 +427,25 @@ def cmd_thumbnail_all(args) -> int:
                 print(f"  ✓ {slug:<20}{title[:40]}", flush=True)
                 _t.sleep(args.gap)
             except Exception as e:
-                if "uploadRateLimitExceeded" in str(e) or "429" in str(e):
-                    print(f"  … レート制限。{wait//60}分待ちます（残り {len(todo)} 本）",
+                msg = str(e)
+                if "uploadRateLimitExceeded" in msg or "429" in msg:
+                    print(f"  … レート制限。{wait // 60}分待ちます（残り {len(todo)} 本）",
                           flush=True)
                     stalled = True
                     break
-                print(f"  ✗ {slug:<20}{str(e)[:70]}", flush=True)
+                if any(k in msg for k in NET):        # 通信エラーは落とさず繋ぎ直す
+                    print(f"  ↻ {slug:<20}接続を張り直します", flush=True)
+                    yt = service()
+                    continue
+                print(f"  ✗ {slug:<20}{msg[:70]}", flush=True)
                 todo.remove(job)
         if not todo:
             break
         if stalled:
             _t.sleep(wait)
             waited += wait
-            wait = min(int(wait * 1.5), 3600)
+            wait = min(int(wait * 1.5), args.wait_cap)
+            yt = service()                            # 待ったあとは必ず作り直す
     print(f"差し替え完了: {len(done)} 本" + (f" / 残り {len(todo)} 本" if todo else ""))
     return 0
 
@@ -533,6 +544,7 @@ def main() -> int:
     ta.add_argument("--dry-run", action="store_true")
     ta.add_argument("--gap", type=float, default=4.0, help="1本ごとの間隔（秒）")
     ta.add_argument("--wait", type=int, default=900, help="レート制限時の初回待ち（秒）")
+    ta.add_argument("--wait-cap", type=int, default=3600, help="1回の待ちの上限（秒）")
     ta.add_argument("--max-wait", type=int, default=6 * 3600, help="待ちの合計上限（秒）")
     ta.set_defaults(func=cmd_thumbnail_all)
 
