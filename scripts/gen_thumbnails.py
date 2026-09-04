@@ -377,6 +377,48 @@ def p_hanafuda(d, s):
                    cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
 
 
+def p_beefpack(d, s):
+    """牛肉のトレーパック。ダイエー回の「牛肉100円→39円」。
+
+    最初は値札（p_pricetag）を置いたが、実寸だと赤い旗にしか見えなかった。
+    小物は「形だけで何か分かる」ものにする。抽象的な記号は縮めると意味を失う。
+    """
+    cx, cy = s * 0.5, s * 0.5
+    w, h = s * 0.78, s * 0.50
+    x0, y0, x1, y1 = cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2
+    # 発泡トレー（下の厚みを先に描いて立体に見せる）
+    d.rounded_rectangle([x0, y0 + h * 0.10, x1, y1 + h * 0.16], radius=s * 0.04,
+                        fill=(206, 206, 210))
+    d.rounded_rectangle([x0, y0, x1, y1], radius=s * 0.04,
+                        fill=(244, 244, 246), outline=(120, 120, 126), width=int(s * 0.008))
+    # 牛肉のスライス（縁を濃く・中を明るくして霜降りに見せる）
+    import random as _r
+    rnd = _r.Random(7)
+    for i in range(6):
+        px = x0 + w * (0.14 + 0.145 * i)
+        py = cy + (h * 0.06 if i % 2 else -h * 0.05)
+        rw, rh = w * 0.19, h * 0.52
+        d.ellipse([px - rw / 2, py - rh / 2, px + rw / 2, py + rh / 2],
+                  fill=(176, 34, 44), outline=(120, 18, 28), width=int(s * 0.008))
+        for _ in range(5):                       # 霜降り
+            mx = px + rnd.uniform(-rw * 0.28, rw * 0.28)
+            my = py + rnd.uniform(-rh * 0.30, rh * 0.30)
+            d.ellipse([mx - s * 0.012, my - s * 0.006,
+                       mx + s * 0.012, my + s * 0.006], fill=(238, 214, 210))
+    # ラップの光沢
+    d.polygon([(x0 + w * 0.10, y1), (x0 + w * 0.30, y1),
+               (x0 + w * 0.58, y0), (x0 + w * 0.38, y0)], fill=(255, 255, 255, 70))
+    # 値札シール
+    sw, sh = s * 0.26, s * 0.14
+    sx, sy = x1 - sw * 0.82, y1 - sh * 0.30
+    d.rounded_rectangle([sx, sy, sx + sw, sy + sh], radius=s * 0.02,
+                        fill=(255, 222, 40), outline=(60, 44, 8), width=int(s * 0.008))
+    d.line([sx + sw * 0.14, sy + sh * 0.36, sx + sw * 0.86, sy + sh * 0.36],
+           fill=(60, 44, 8), width=int(s * 0.014))
+    d.line([sx + sw * 0.14, sy + sh * 0.66, sx + sw * 0.62, sy + sh * 0.66],
+           fill=(60, 44, 8), width=int(s * 0.014))
+
+
 def p_sukiyaki(d, s):
     """すき焼きの鉄鍋。戦場で願ったもの。"""
     d.ellipse([s*0.04, s*0.30, s*0.96, s*0.86], fill=(52, 48, 48),
@@ -1625,6 +1667,55 @@ def _ttext(d, xy, text, f, fill, **kw):
         x += a * 0.52 if ch in "、。，．" else a
 
 
+def _wrap_chars(f, text, max_w):
+    lines, cur = [], ""
+    for ch in text:
+        if ch == "|":
+            lines.append(cur); cur = ""; continue
+        if _tw(f, cur + ch) <= max_w:
+            cur += ch
+        else:
+            lines.append(cur); cur = ch
+    if cur:
+        lines.append(cur)
+    return lines
+
+
+def _fit_lines(text, fname, max_w, max_size, min_size, max_lines=2):
+    size = max_size
+    while size > min_size:
+        f = font(fname, size)
+        ls = _wrap_chars(f, text, max_w)
+        if len(ls) <= max_lines:
+            return f, ls
+        size -= 2
+    f = font(fname, min_size)
+    return f, _wrap_chars(f, text, max_w)[:max_lines]
+
+
+def _bubble(dr, box, text, tail_x=None):
+    """白い吹き出し。**これが3コマ型の主役**（2026-09-02）。
+
+    最初に作った版はコマに黄ラベル1個だけで、名詞が3つ並んでいるだけだった。
+    伸びている局は例外なく「吹き出しのセリフ」＋「黄ラベルの意味づけ」の2層で、
+    3コマ読むと話が分かる。ラベルだけでは物語にならない。
+    """
+    x0, y0, x1, y1 = box
+    f, lines = _fit_lines(text, "w9", (x1 - x0) - 26, 44, 20, 2)
+    dr.rounded_rectangle(box, radius=14, fill=(255, 255, 255),
+                         outline=(18, 14, 12), width=5)
+    if tail_x is not None:
+        tip = (tail_x + 2, y0 - 26)
+        dr.polygon([(tail_x - 20, y0), (tail_x + 20, y0), tip], fill=(255, 255, 255))
+        dr.line([(tail_x - 20, y0), tip], fill=(18, 14, 12), width=5)
+        dr.line([(tail_x + 20, y0), tip], fill=(18, 14, 12), width=5)
+        dr.line([(tail_x - 15, y0), (tail_x + 15, y0)], fill=(255, 255, 255), width=6)
+    lh = int(f.size * 1.10)
+    ty = (y0 + y1) // 2 - lh * len(lines) // 2
+    for k, ln in enumerate(lines):
+        _ttext(dr, ((x0 + x1) // 2 - _tw(f, ln) // 2, ty + k * lh), ln, f, (20, 16, 12))
+
+
 def layout_panels(spec):
     """3コマ構成。**伸びている局を実測して作った型**（2026-09-02）。
 
@@ -1637,97 +1728,125 @@ def layout_panels(spec):
       - ずんだもんは小さく、各コマに複数
     「情報を足すほど実寸で読めなくなる」という以前の見立ては誤りだった。
     168pxでも、コマ割りと色分けは「何かたくさん起きている」ことを伝える。
+
+    **初版からの作り直し**（同日・実物を並べて比べた結果）:
+      - 各コマに吹き出しを足した。ラベルだけだと名詞が3つ並ぶだけで物語にならない
+      - コマ左上に小タグ（年・立場）。競合は全部これで「誰の話か」を出している
+      - 矢印を太い赤＋白フチにして吹き出しの高さに置いた（小さい三角は実寸で消える）
+      - 下の帯を廃止してコマを縦いっぱいに。題材名は見出しに入れて2色で出す
+      - 立ち絵は左右交互＋反転。同じ絵を3回並べると手抜きに見える
     """
     headline = spec["headline"]
     panels = spec["panels"]
     n = len(panels)
 
     img = Image.new("RGBA", (W, H), (16, 14, 18, 255))
-    d = ImageDraw.Draw(img)
 
-    HEAD_H = int(H * 0.20)
-    FOOT_H = int(H * 0.13)
-    body_top, body_bot = HEAD_H, H - FOOT_H
-    gap = 10
+    HEAD_H = int(H * 0.21)
+    body_top = HEAD_H
+    ph = H - body_top
+    gap = 8
     pw = (W - gap * (n - 1)) // n
+
+    LAB_H, BUB_H, TAG_H = 84, 104, 50
+    lab_y = ph - LAB_H - 8
+    bub_y = lab_y - BUB_H - 10
 
     for i, pn in enumerate(panels):
         x0 = i * (pw + gap)
-        ph = body_bot - body_top
-        # **パネルは必ず独立した画像に描いてから貼る**。
-        # 直接描くとストライプや小物が隣のコマまではみ出して、全面が同じ柄になる
         cell = Image.new("RGBA", (pw, ph), (*pn.get("bg", (60, 60, 68)), 255))
         cd = ImageDraw.Draw(cell, "RGBA")
         for k in range(-ph, pw + ph, 64):
             cd.polygon([(k, ph), (k + 16, ph), (k + 16 + ph, 0), (k + ph, 0)],
-                       fill=(255, 255, 255, 12))
-        # 小物は上寄せで大きく
+                       fill=(255, 255, 255, 22))
+
+        art_top, art_bot = TAG_H - 6, bub_y - 6
+        art_h = art_bot - art_top
+        right = i % 2 == 0
+        # **立ち絵はコマの端で切る**。中に丸ごと収めると小物が隠れ、上半分が空く
+        bu = bust(spec.get("who", "zundamon"), pn.get("emo", "surprised"),
+                  height=int(art_h * 0.78), crop=0.42)
+        if not right:                       # 内側を向かせる（3コマ同じ絵に見せない）
+            bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
+        bx = pw - int(bu.width * 0.66) if right else -int(bu.width * 0.34)
+
         if pn.get("prop") and globals().get(pn["prop"]):
             pl = prop_layer(globals()[pn["prop"]], size=520, tilt=-8)
-            sc = min(pw * 0.80 / pl.width, ph * 0.60 / pl.height)
+            sc = min(pw * 0.70 / pl.width, art_h * 1.0 / pl.height)
             pl = pl.resize((max(1, int(pl.width * sc)), max(1, int(pl.height * sc))),
                            Image.LANCZOS)
-            cell.alpha_composite(pl, ((pw - pl.width) // 2, int(ph * 0.04)))
-        # ずんだもんは右下に小さく
-        bu = bust(spec.get("who", "zundamon"), pn.get("emo", "surprised"),
-                  height=int(ph * 0.46), crop=0.42)
-        cell.alpha_composite(bu, (pw - bu.width + 20, ph - bu.height - int(ph * 0.16)))
-        # 黄枠の小ラベルはコマの最下段いっぱいに敷く（立ち絵と重ならない）
+            px = int(pw * 0.03) if right else pw - pl.width - int(pw * 0.03)
+            py = art_top + (art_h - pl.height) // 2
+            glow = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
+            gd = ImageDraw.Draw(glow)
+            gcx, gcy = px + pl.width // 2, py + pl.height // 2
+            for t in range(24):
+                ang = t * 15.0
+                gd.polygon([(gcx, gcy),
+                            (gcx + math.cos(math.radians(ang)) * 900,
+                             gcy + math.sin(math.radians(ang)) * 900),
+                            (gcx + math.cos(math.radians(ang + 7)) * 900,
+                             gcy + math.sin(math.radians(ang + 7)) * 900)],
+                           fill=(255, 255, 255, 26))
+            cell.alpha_composite(glow)
+            cell.alpha_composite(pl, (px, py))
+
+        cell.alpha_composite(bu, (bx, art_bot - bu.height))
+
+        tag = pn.get("tag", "")
+        if tag:
+            f, _ = _fit_lines(tag, "w9", pw - 40, 34, 20, 1)
+            tw = _tw(f, tag) + 24
+            cd.rounded_rectangle([10, 8, 10 + tw, 8 + TAG_H - 18], radius=6,
+                                 fill=(*pn.get("tag_bg", (255, 120, 30)), 255))
+            _ttext(cd, (22, 8 + (TAG_H - 18 - int(f.size * 1.2)) // 2), tag, f,
+                   (255, 255, 255))
+
+        if pn.get("say"):
+            # 矢印が来る側は空けておく（詰めると矢印が吹き出しの黒フチに埋もれる）
+            bl = 44 if i > 0 else 10
+            br = pw - (44 if i < n - 1 else 10)
+            _bubble(cd, (bl, bub_y, br, bub_y + BUB_H), pn["say"],
+                    tail_x=br - 80 if right else bl + 80)
+
         lab = pn.get("label", "")
         if lab:
-            size = 58
-            while size > 22 and _tw(font("w9", size), lab) > pw - 34:
-                size -= 2
-            f = font("w9", size)
-            lh = int(size * 1.44)
-            ly = ph - lh - 8
-            cd2 = ImageDraw.Draw(cell)
-            cd2.rounded_rectangle([8, ly, pw - 8, ly + lh], radius=8,
-                                  fill=(255, 214, 40), outline=(40, 30, 8), width=5)
-            _ttext(cd2, ((pw - _tw(f, lab)) // 2, ly + int(size * 0.14)), lab, f,
-                   (26, 20, 12))
-        img.paste(cell, (x0, body_top), cell)
-        # コマ間の矢印
-        if i < n - 1:
-            ax = x0 + pw + gap // 2
-            ay = body_top + int(ph * 0.34)
-            d3 = ImageDraw.Draw(img)
-            d3.polygon([(ax - 28, ay - 36), (ax + 32, ay), (ax - 28, ay + 36)],
-                       fill=(255, 120, 30), outline=(255, 255, 255), width=5)
+            f, _ = _fit_lines(lab, "w9", pw - 40, 62, 24, 1)
+            cd.rounded_rectangle([8, lab_y, pw - 8, lab_y + LAB_H], radius=8,
+                                 fill=(255, 214, 40), outline=(30, 22, 6), width=5)
+            _ttext(cd, ((pw - _tw(f, lab)) // 2,
+                        lab_y + (LAB_H - int(f.size * 1.22)) // 2), lab, f, (26, 20, 12))
 
-    # 上の見出し
+        img.paste(cell, (x0, body_top), cell)
+
+        if i < n - 1:                       # 太い赤矢印。小さい三角は実寸で消える
+            ax = x0 + pw + gap // 2
+            ay = body_top + bub_y + BUB_H // 2
+            d3 = ImageDraw.Draw(img)
+            d3.polygon([(ax - 36, ay - 34), (ax + 34, ay), (ax - 36, ay + 34)],
+                       fill=(228, 26, 32))
+
+    # 見出し。題材名だけ色を変える（競合は例外なく2色）
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, W, HEAD_H], fill=(14, 12, 16))
-    size = 128
-    while size > 56 and _tw(font("851", size), headline) > W - 48:
+    hi = spec.get("head_hi", "")
+    base_c = spec.get("head_color", (255, 255, 255))
+    hi_c = spec.get("head_hi_color", (255, 214, 40))
+    if hi and hi in headline:
+        a, b = headline.split(hi, 1)
+        segs = [(t, c) for t, c in ((a, base_c), (hi, hi_c), (b, base_c)) if t]
+    else:
+        segs = [(headline, base_c)]
+    size = 130
+    while size > 56 and sum(_tw(font("851", size), t) for t, _ in segs) > W - 44:
         size -= 4
     f = font("851", size)
-    hw = _tw(f, headline)
-    _ttext(d, ((W - hw) // 2, (HEAD_H - int(size * 1.18)) // 2), headline, f,
-           spec.get("head_color", (255, 241, 90)),
-           stroke_width=max(10, size // 9), stroke_fill=(20, 8, 8))
-
-    # 下の帯（題材＋補足）
-    d.rectangle([0, H - FOOT_H, W, H], fill=(14, 12, 16))
-    topic = spec.get("topic", "")
-    if topic:
-        size = 78
-        while size > 34 and _tw(font("w9", size), topic) > W * 0.42:
-            size -= 3
-        f = font("w9", size)
-        tw = _tw(f, topic) + 34
-        th = int(size * 1.36)
-        ty = H - FOOT_H + (FOOT_H - th) // 2
-        d.rounded_rectangle([22, ty, 22 + tw, ty + th], radius=10, fill=(255, 214, 40))
-        _ttext(d, (39, ty + int(size * 0.10)), topic, f, (26, 20, 12))
-    note = spec.get("note", "")
-    if note:
-        size = 62
-        while size > 28 and _tw(font("w9", size), note) > W * 0.50:
-            size -= 3
-        f = font("w9", size)
-        _ttext(d, (W - _tw(f, note) - 30, H - FOOT_H + (FOOT_H - int(size * 1.2)) // 2),
-               note, f, (255, 255, 255), stroke_width=6, stroke_fill=(20, 8, 8))
+    x = (W - sum(_tw(f, t) for t, _ in segs)) // 2
+    y = (HEAD_H - int(size * 1.18)) // 2
+    for t, c in segs:
+        _ttext(d, (x, y), t, f, c, stroke_width=max(10, size // 9),
+               stroke_fill=(20, 8, 8))
+        x += _tw(f, t)
     return img.convert("RGB")
 
 
@@ -1899,14 +2018,18 @@ SPECS = {
         lines=[("全部失敗した", W1, None), ("借金70億からの再起", W1, None),
                ("任天堂", B1, Y1)]),
     "nakauchi-daiei": dict(layout="panels",
-        headline="日本一が、消えた",
-        topic="ダイエー", note="借金と元気だけ",
+        headline="ダイエーはなぜ消えた", head_hi="ダイエー",
         panels=[
-            dict(prop="p_sukiyaki",  label="戦場で願う",   bg=(58, 50, 46), emo="sad"),
-            dict(prop="p_pricetag",  label="100円→39円", bg=(126, 26, 24), emo="happy"),
-            dict(prop="p_downgraph", label="全財産を失う",   bg=(34, 38, 56), emo="surprised"),
-        ]),
-    "exit-sign": dict(prop="p_exitsign", layout="stack",
+            dict(prop="p_sukiyaki", tag="1943年 戦地", bg=(150, 74, 26),
+                 tag_bg=(60, 44, 30), emo="sad",
+                 say="すき焼きが|食いたいのだ…", label="生きて帰った"),
+            dict(prop="p_beefpack", tag="1957年 大阪", bg=(224, 168, 26),
+                 tag_bg=(150, 30, 20), emo="angry",
+                 say="よそより|安く売るのだ！", label="牛肉 100円→39円"),
+            dict(prop="p_downgraph", tag="2004年", bg=(30, 44, 96),
+                 tag_bg=(18, 26, 60), emo="surprised",
+                 say="借金、1兆円…", label="創業者、追放"),
+        ]),    "exit-sign": dict(prop="p_exitsign", layout="stack",
         bg=((20, 88, 62), (8, 44, 32)), emotion="surprised",
         lines=[("描いたのは日本人", W1, None), ("毎日見てるのに知らない", W1, None),
                ("非常口マーク", B1, Y1)]),
