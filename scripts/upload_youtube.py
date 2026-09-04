@@ -70,9 +70,17 @@ def credentials(interactive: bool = True):
     if creds and creds.valid:
         return creds
     if creds and creds.expired and creds.refresh_token:
-        creds.refresh(Request())
-        TOKEN.write_text(creds.to_json(), encoding="utf-8")
-        return creds
+        # **リフレッシュトークンは7日で失効する**（Google Cloud の公開ステータスが
+        # 「テスト」のあいだ）。ここで例外を投げると auth まで落ちて再認証できなくなるので、
+        # 失敗したら取得済みトークンを捨てて同意フローからやり直す
+        from google.auth.exceptions import RefreshError
+        try:
+            creds.refresh(Request())
+            TOKEN.write_text(creds.to_json(), encoding="utf-8")
+            return creds
+        except RefreshError as e:
+            print(f"⚠ トークンが失効しています（{e.args[0] if e.args else e}）。再認証します。")
+            creds = None
     if not interactive:
         _fail("未認証です。先に `python3 scripts/upload_youtube.py auth` を実行してください")
     if not CLIENT_SECRET.exists():
@@ -328,6 +336,82 @@ def cmd_thumbnail(args) -> int:
     return 0
 
 
+def _channel_videos(yt):
+    """自分のチャンネルの全動画を {videoId: title} で返す。"""
+    ch = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]
+    up = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+    out, tok = {}, None
+    while True:
+        r = yt.playlistItems().list(part="snippet", playlistId=up,
+                                    maxResults=50, pageToken=tok).execute()
+        for it in r["items"]:
+            out[it["snippet"]["resourceId"]["videoId"]] = it["snippet"]["title"]
+        tok = r.get("nextPageToken")
+        if not tok:
+            return out
+
+
+def cmd_thumbnail_all(args) -> int:
+    """全動画のサムネを一括で差し替える。
+
+    動画IDの控え（out/youtube_video_id.txt）が無い初期の動画は、
+    gen_youtube_meta.TITLES の題名でチャンネル上の動画と突き合わせて特定し、
+    見つかったら控えを書き戻す（次回から突き合わせ不要になる）。
+    """
+    import sys as _s
+    from googleapiclient.http import MediaFileUpload
+    _s.path.insert(0, str(ROOT / "scripts"))
+    from gen_youtube_meta import TITLES
+    from ytf.config import Config
+    root = Config.load().root
+    yt = service()
+    check_channel(yt, args.channel)
+    live = _channel_videos(yt)
+    by_title = {t: v for v, t in live.items()}
+
+    jobs, missing = [], []
+    for sy in sorted(root.glob("projects/*/*/*/script.yaml")):
+        proj = sy.parent
+        thumb = proj / "out" / "thumbnail.png"
+        if not thumb.exists():
+            continue
+        import re
+        m = re.search(r'^\s*slug:\s*"?([\w-]+)"?', sy.read_text(encoding="utf-8"), re.M)
+        slug = m.group(1) if m else proj.name
+        idf = proj / "out" / "youtube_video_id.txt"
+        vid = idf.read_text(encoding="utf-8").strip() if idf.exists() else None
+        if not vid:
+            vid = by_title.get(TITLES.get(slug, ""))
+            if vid:
+                idf.write_text(vid, encoding="utf-8")   # 次回から突き合わせ不要
+        if vid and vid in live:
+            jobs.append((slug, vid, thumb, live[vid]))
+        else:
+            missing.append(slug)
+
+    print(f"対象 {len(jobs)} 本" + (f" / 特定できず {len(missing)} 本: {', '.join(missing)}"
+                                     if missing else ""))
+    ok = 0
+    for slug, vid, thumb, title in jobs:
+        mb = thumb.stat().st_size / 1024 / 1024
+        if mb > 2:
+            print(f"  ✗ {slug}: {mb:.1f}MB で上限超過")
+            continue
+        if args.dry_run:
+            print(f"  - {slug:<20}{title[:40]}")
+            ok += 1
+            continue
+        try:
+            yt.thumbnails().set(videoId=vid,
+                                media_body=MediaFileUpload(str(thumb))).execute()
+            ok += 1
+            print(f"  ✓ {slug:<20}{title[:40]}")
+        except Exception as e:
+            print(f"  ✗ {slug:<20}{str(e)[:70]}")
+    print(f"{'差し替え予定' if args.dry_run else '差し替え完了'}: {ok}/{len(jobs)} 本")
+    return 0
+
+
 def resolve_playlist(yt, name_or_id: str) -> str:
     if re.fullmatch(r"[A-Za-z0-9_-]{18,}", name_or_id):
         return name_or_id
@@ -416,6 +500,11 @@ def main() -> int:
     tb.add_argument("--channel", default=EXPECT_CHANNEL)
     tb.add_argument("--dry-run", action="store_true")
     tb.set_defaults(func=cmd_thumbnail)
+
+    ta = sub.add_parser("thumbnail-all", help="全動画のサムネを一括で差し替える")
+    ta.add_argument("--channel", default=EXPECT_CHANNEL)
+    ta.add_argument("--dry-run", action="store_true")
+    ta.set_defaults(func=cmd_thumbnail_all)
 
     p = sub.add_parser("playlists", help="再生リストの一覧")
     p.set_defaults(func=cmd_playlists)

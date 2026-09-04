@@ -377,6 +377,126 @@ def p_hanafuda(d, s):
                    cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
 
 
+def p_goban(d, s):
+    """碁盤。QR回。昼休みの囲碁が「縦横で読む」発想の元になった。"""
+    m = s * 0.13
+    d.rounded_rectangle([m, m, s - m, s - m], radius=s * 0.02,
+                        fill=(226, 186, 106), outline=(120, 84, 30), width=int(s * 0.012))
+    n, sp = 8, (s - 2 * m) / 8
+    for i in range(n + 1):
+        v = m + sp * i
+        d.line([m, v, s - m, v], fill=(70, 48, 18), width=int(s * 0.008))
+        d.line([v, m, v, s - m], fill=(70, 48, 18), width=int(s * 0.008))
+    r = sp * 0.42
+    for gx, gy, col in ((2, 2, 0), (3, 3, 1), (4, 2, 0), (5, 4, 1), (3, 5, 0), (6, 5, 1)):
+        cx, cy = m + sp * gx, m + sp * gy
+        d.ellipse([cx - r, cy - r, cx + r, cy + r],
+                  fill=(24, 24, 26) if col == 0 else (250, 250, 250),
+                  outline=(60, 44, 20), width=int(s * 0.006))
+
+
+def p_chocolate(d, s):
+    """板チョコ。カッターナイフ回。刃を折るという発想の元そのもの。"""
+    m, k = s * 0.16, s * 0.68
+    d.rounded_rectangle([m + s * 0.03, m + s * 0.04, m + k + s * 0.03, m + k * 0.72 + s * 0.04],
+                        radius=s * 0.02, fill=(74, 42, 22))
+    d.rounded_rectangle([m, m, m + k, m + k * 0.72], radius=s * 0.02,
+                        fill=(126, 74, 36), outline=(58, 32, 16), width=int(s * 0.01))
+    cw, ch = k / 4, k * 0.72 / 3
+    for r in range(3):
+        for c in range(4):
+            x, y = m + cw * c, m + ch * r
+            d.rounded_rectangle([x + s * 0.014, y + s * 0.014,
+                                 x + cw - s * 0.014, y + ch - s * 0.014],
+                                radius=s * 0.012, fill=(150, 92, 44),
+                                outline=(66, 36, 18), width=int(s * 0.008))
+    # 折り取った1片
+    d.rounded_rectangle([m + k * 0.86, m + k * 0.60, m + k * 1.16, m + k * 0.86],
+                        radius=s * 0.012, fill=(150, 92, 44),
+                        outline=(58, 32, 16), width=int(s * 0.01))
+
+
+def p_gamewatch(d, s):
+    """ゲーム＆ウオッチ。横井回。ゲームボーイの前段にある「薄い箱」。"""
+    w, h = s * 0.74, s * 0.46
+    x0, y0 = (s - w) / 2, (s - h) / 2
+    d.rounded_rectangle([x0, y0, x0 + w, y0 + h], radius=s * 0.05,
+                        fill=(196, 30, 34), outline=(90, 12, 14), width=int(s * 0.012))
+    d.rounded_rectangle([x0 + w * 0.24, y0 + h * 0.16, x0 + w * 0.76, y0 + h * 0.70],
+                        radius=s * 0.02, fill=(158, 174, 122), outline=(52, 60, 40),
+                        width=int(s * 0.01))
+    for i in range(3):                       # 液晶のドット絵
+        d.rectangle([x0 + w * (0.30 + 0.14 * i), y0 + h * 0.30,
+                     x0 + w * (0.36 + 0.14 * i), y0 + h * 0.56], fill=(46, 54, 36))
+    ax, ay, a = x0 + w * 0.13, y0 + h * 0.46, s * 0.05   # 十字ボタン
+    d.rectangle([ax - a * 0.34, ay - a, ax + a * 0.34, ay + a], fill=(40, 40, 44))
+    d.rectangle([ax - a, ay - a * 0.34, ax + a, ay + a * 0.34], fill=(40, 40, 44))
+    for k in range(2):
+        bx = x0 + w * (0.85 + 0.07 * k)
+        d.ellipse([bx - s * 0.028, ay - s * 0.028, bx + s * 0.028, ay + s * 0.028],
+                  fill=(250, 210, 60), outline=(90, 70, 10), width=int(s * 0.008))
+
+
+def p_ajibottle(d, s):
+    """味の素の卓上瓶。うま味回。赤いキャップで一目で分かる（ロゴは描かない）。"""
+    w, h = s * 0.36, s * 0.56
+    x0, y0 = (s - w) / 2, (s - h) / 2 + s * 0.04
+    d.rounded_rectangle([x0, y0, x0 + w, y0 + h], radius=s * 0.04,
+                        fill=(246, 246, 248), outline=(120, 120, 128), width=int(s * 0.012))
+    d.rounded_rectangle([x0 + w * 0.14, y0 - h * 0.20, x0 + w * 0.86, y0 + h * 0.06],
+                        radius=s * 0.02, fill=(210, 32, 34), outline=(110, 14, 16),
+                        width=int(s * 0.012))
+    for c in range(3):                       # 振り出し穴
+        d.ellipse([x0 + w * (0.30 + 0.18 * c) - s * 0.012, y0 - h * 0.15,
+                   x0 + w * (0.30 + 0.18 * c) + s * 0.012, y0 - h * 0.10],
+                  fill=(120, 14, 16))
+    d.rounded_rectangle([x0 + w * 0.10, y0 + h * 0.30, x0 + w * 0.90, y0 + h * 0.72],
+                        radius=s * 0.015, fill=(214, 34, 36))
+    for c in range(2):
+        d.line([x0 + w * 0.20, y0 + h * (0.44 + 0.16 * c),
+                x0 + w * 0.80, y0 + h * (0.44 + 0.16 * c)],
+               fill=(255, 255, 255), width=int(s * 0.014))
+
+
+def p_quartzfork(d, s):
+    """音叉型の水晶振動子。クオーツ回。腕時計の中で震えている本体。"""
+    cx = s * 0.5
+    top, bot = s * 0.20, s * 0.80
+    d.rounded_rectangle([cx - s * 0.10, bot - s * 0.16, cx + s * 0.10, bot],
+                        radius=s * 0.02, fill=(190, 194, 202),
+                        outline=(90, 94, 104), width=int(s * 0.01))
+    for sgn in (-1, 1):                       # 2本の腕
+        x = cx + sgn * s * 0.075
+        d.rounded_rectangle([x - s * 0.035, top, x + s * 0.035, bot - s * 0.10],
+                            radius=s * 0.03, fill=(232, 234, 240),
+                            outline=(90, 94, 104), width=int(s * 0.01))
+    for k in range(3):                        # 振動の波
+        r = s * (0.20 + 0.07 * k)
+        d.arc([cx - r, s * 0.42 - r, cx + r, s * 0.42 + r], 200, 340,
+              fill=(255, 214, 40), width=int(s * 0.016))
+
+
+def p_stomach(d, s):
+    """胃のシルエット＋中を照らす光。胃カメラ回。"""
+    cx, cy = s * 0.48, s * 0.52
+    d.polygon([(cx - s * 0.06, cy - s * 0.34), (cx + s * 0.12, cy - s * 0.30),
+               (cx + s * 0.26, cy - s * 0.02), (cx + s * 0.18, cy + s * 0.26),
+               (cx - s * 0.08, cy + s * 0.32), (cx - s * 0.24, cy + s * 0.12),
+               (cx - s * 0.20, cy - s * 0.14)],
+              fill=(226, 130, 128), outline=(150, 50, 54), width=int(s * 0.016))
+    d.rounded_rectangle([cx - s * 0.10, cy - s * 0.46, cx - s * 0.01, cy - s * 0.28],
+                        radius=s * 0.02, fill=(214, 112, 110),
+                        outline=(150, 50, 54), width=int(s * 0.014))
+    d.ellipse([cx - s * 0.04, cy - s * 0.06, cx + s * 0.10, cy + s * 0.08],
+              fill=(255, 244, 170), outline=(200, 160, 40), width=int(s * 0.012))
+    for a in (215, 250, 285, 320):            # 光
+        import math as _m
+        d.line([cx + s * 0.03, cy + s * 0.01,
+                cx + s * 0.03 + _m.cos(_m.radians(a)) * s * 0.24,
+                cy + s * 0.01 + _m.sin(_m.radians(a)) * s * 0.24],
+               fill=(255, 240, 150), width=int(s * 0.014))
+
+
 def p_beefpack(d, s):
     """牛肉のトレーパック。ダイエー回の「牛肉100円→39円」。
 
@@ -1763,23 +1883,19 @@ def layout_panels(spec):
         art_top, art_bot = TAG_H - 6, bub_y - 6
         art_h = art_bot - art_top
         right = i % 2 == 0
-        # **立ち絵はコマの端で切る**。中に丸ごと収めると小物が隠れ、上半分が空く
+        has_prop = bool(pn.get("prop") and globals().get(pn["prop"]))
+        # **立ち絵は小物があるならコマの端で切る**。中に丸ごと収めると小物が隠れ上が空く。
+        # 小物が無いコマは逆に大きく中央へ（伸びている局も、山場のコマは顔だけで持たせる）
         bu = bust(spec.get("who", "zundamon"), pn.get("emo", "surprised"),
-                  height=int(art_h * 0.78), crop=0.42)
+                  height=int(art_h * (0.78 if has_prop else 1.0)), crop=0.42)
         if not right:                       # 内側を向かせる（3コマ同じ絵に見せない）
             bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
-        bx = pw - int(bu.width * 0.66) if right else -int(bu.width * 0.34)
+        bx = (pw - int(bu.width * 0.66) if right else -int(bu.width * 0.34)) \
+            if has_prop else (pw - bu.width) // 2
 
-        if pn.get("prop") and globals().get(pn["prop"]):
-            pl = prop_layer(globals()[pn["prop"]], size=520, tilt=-8)
-            sc = min(pw * 0.70 / pl.width, art_h * 1.0 / pl.height)
-            pl = pl.resize((max(1, int(pl.width * sc)), max(1, int(pl.height * sc))),
-                           Image.LANCZOS)
-            px = int(pw * 0.03) if right else pw - pl.width - int(pw * 0.03)
-            py = art_top + (art_h - pl.height) // 2
+        def _burst(gcx, gcy):
             glow = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
             gd = ImageDraw.Draw(glow)
-            gcx, gcy = px + pl.width // 2, py + pl.height // 2
             for t in range(24):
                 ang = t * 15.0
                 gd.polygon([(gcx, gcy),
@@ -1789,7 +1905,18 @@ def layout_panels(spec):
                              gcy + math.sin(math.radians(ang + 7)) * 900)],
                            fill=(255, 255, 255, 26))
             cell.alpha_composite(glow)
+
+        if has_prop:
+            pl = prop_layer(globals()[pn["prop"]], size=520, tilt=-8)
+            sc = min(pw * 0.70 / pl.width, art_h * 1.0 / pl.height)
+            pl = pl.resize((max(1, int(pl.width * sc)), max(1, int(pl.height * sc))),
+                           Image.LANCZOS)
+            px = int(pw * 0.03) if right else pw - pl.width - int(pw * 0.03)
+            py = art_top + (art_h - pl.height) // 2
+            _burst(px + pl.width // 2, py + pl.height // 2)
             cell.alpha_composite(pl, (px, py))
+        else:
+            _burst(pw // 2, art_top + art_h // 2)
 
         cell.alpha_composite(bu, (bx, art_bot - bu.height))
 
@@ -1798,7 +1925,9 @@ def layout_panels(spec):
             f, _ = _fit_lines(tag, "w9", pw - 40, 34, 20, 1)
             tw = _tw(f, tag) + 24
             cd.rounded_rectangle([10, 8, 10 + tw, 8 + TAG_H - 18], radius=6,
-                                 fill=(*pn.get("tag_bg", (255, 120, 30)), 255))
+                                 fill=(*pn.get("tag_bg", tuple(
+                                     int(c * 0.42) for c in pn.get("bg", (60, 60, 68)))),
+                                     255))
             _ttext(cd, (22, 8 + (TAG_H - 18 - int(f.size * 1.2)) // 2), tag, f,
                    (255, 255, 255))
 
@@ -1987,91 +2116,189 @@ W1 = (255, 255, 255, 255)
 B1 = (26, 20, 12, 255)
 Y1 = (255, 214, 40, 255)
 
+# コマの地色。**1枚のうち必ず1コマは明るい色にする**（3コマとも暗いと実寸で沈む）
+NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
+TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
+GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
+INDIGO, ORANGE = (40, 32, 92), (206, 92, 20)
+
+
+def _p(prop, tag, bg, emo, say, label):
+    return dict(prop=prop, tag=tag, bg=bg, emo=emo, say=say, label=label)
+
+
+# 3コマ構成。セリフは台本から裏を取った数字だけを入れている（未確認の数字は書かない）
 SPECS = {
-    # 2026-08のStudio実測でクリック率1.5%だったため、スマホ幅168pxで読めることを
-    # 最優先に全面刷新した。1行7文字以内・2行・要素は文字とキャラだけに絞る
     # ---- 人物物語 ----
-    "momofuku-meme": dict(prop="p_cupnoodle", layout="stack", bg=((160, 44, 24), (98, 22, 12)), emotion="sad",
-    lines=[("47歳で全財産ゼロ", W1, None), ("裏庭の小屋から", W1, None), ("カップ麺", B1, Y1)]),
-    "qr-meme": dict(prop="p_qr", layout="stack", bg=((22, 52, 110), (12, 28, 66)), emotion="surprised",
-    lines=[("疲れたの一言から", W1, None), ("愛知の部品工場で", W1, None), ("QRコード", B1, Y1)]),
-    "kaiten-meme": dict(prop="p_sushilane", layout="stack", bg=((150, 34, 44), (88, 18, 26)), emotion="thinking",
-    lines=[("ヒントはビール工場", W1, None), ("人手が足りない", W1, None), ("回転寿司", B1, Y1)]),
-    "yai-denchi": dict(prop="p_drycell", layout="stack", bg=((60, 30, 96), (34, 16, 58)), emotion="sad",
-    lines=[("5分の遅刻が", W1, None), ("明治の職工が挑む", W1, None), ("乾電池", B1, Y1)]),
-    "tenji-block-meme": dict(prop="p_block", layout="stack", bg=((146, 108, 16), (92, 66, 8)), emotion="sad",
-    lines=[("全財産を道路に", W1, None), ("友の失明がきっかけ", W1, None), ("点字ブロック", B1, Y1)]),
-    "masuoka-flash": dict(prop="p_usb", layout="stack", bg=((26, 60, 104), (14, 32, 62)), emotion="sad",
-    lines=[("金がない、却下", W1, None), ("土日に特許23件", W1, None), ("USBメモリ", B1, Y1)]),
-    "kaisatsu-drama": dict(prop="p_gate", layout="stack", bg=((22, 66, 78), (12, 38, 46)), emotion="surprised",
-    lines=[("1分間に80人", W1, None), ("駅員より速くしろ", W1, None), ("自動改札", B1, Y1)]),
-    "gastro-meme": dict(prop="p_endoscope", layout="stack", bg=((26, 52, 92), (14, 28, 56)), emotion="surprised",
-    lines=[("たった2人で作る", W1, None), ("夜行列車で口説いた", W1, None), ("胃カメラ", B1, Y1)]),
-    "rice-cooker-meme": dict(prop="p_ricecooker", layout="stack", bg=((132, 62, 22), (80, 36, 12)), emotion="sad",
-    lines=[("妻が千回炊いた", W1, None), ("町工場の夫婦が", W1, None), ("炊飯器", B1, Y1)]),
-    "quartz-astron": dict(prop="p_wristwatch", layout="stack",
-        bg=((28, 52, 92), (14, 28, 56)), emotion="surprised",
-        lines=[("スイスを倒した", W1, None), ("1600社が600社に", W1, None),
-               ("クオーツ時計", B1, Y1)]),
-    "yamauchi-nintendo": dict(prop="p_hanafuda", layout="stack",
-        bg=((18, 78, 58), (8, 38, 30)), emotion="surprised",
-        lines=[("全部失敗した", W1, None), ("借金70億からの再起", W1, None),
-               ("任天堂", B1, Y1)]),
-    "nakauchi-daiei": dict(layout="panels",
-        headline="ダイエーはなぜ消えた", head_hi="ダイエー",
-        panels=[
-            dict(prop="p_sukiyaki", tag="1943年 戦地", bg=(150, 74, 26),
-                 tag_bg=(60, 44, 30), emo="sad",
-                 say="すき焼きが|食いたいのだ…", label="生きて帰った"),
-            dict(prop="p_beefpack", tag="1957年 大阪", bg=(224, 168, 26),
-                 tag_bg=(150, 30, 20), emo="angry",
-                 say="よそより|安く売るのだ！", label="牛肉 100円→39円"),
-            dict(prop="p_downgraph", tag="2004年", bg=(30, 44, 96),
-                 tag_bg=(18, 26, 60), emo="surprised",
-                 say="借金、1兆円…", label="創業者、追放"),
-        ]),    "exit-sign": dict(prop="p_exitsign", layout="stack",
-        bg=((20, 88, 62), (8, 44, 32)), emotion="surprised",
-        lines=[("描いたのは日本人", W1, None), ("毎日見てるのに知らない", W1, None),
-               ("非常口マーク", B1, Y1)]),
-    "nishizawa-fiber": dict(prop="p_fiber", layout="stack",
-        bg=((18, 46, 92), (8, 22, 50)), emotion="sad",
-        lines=[("金は出せない", W1, None), ("日本が捨てた発明", W1, None),
-               ("光ファイバー", B1, Y1)]),
-    "okano-needle": dict(prop="p_needle", layout="stack",
-        bg=((16, 74, 84), (8, 40, 48)), emotion="surprised",
-        lines=[("100社が断った", W1, None), ("6人の町工場がやった", W1, None),
-               ("注射針", B1, Y1)]),
-    "sharp-pencil": dict(prop="p_sharppencil", layout="stack",
-        bg=((22, 54, 104), (10, 28, 60)), emotion="sad",
-        lines=[("全部失って大阪へ", W1, None), ("シャープの名前の由来", W1, None),
-               ("シャーペン", B1, Y1)]),
-    "purikura-meme": dict(prop="p_purikura", layout="stack",
-        bg=((150, 26, 88), (86, 12, 50)), emotion="sad",
-        lines=[("持って帰ってどうすんの", W1, None), ("ゲーセンは男の場所", W1, None),
-               ("プリクラ", B1, Y1)]),
-    "karaoke": dict(prop="p_mic", layout="stack", bg=((88, 26, 108), (52, 14, 66)), emotion="sad",
-    lines=[("特許を取らなかった", W1, None), ("手作り11台から", W1, None), ("カラオケ", B1, Y1)]),
-    "yokoi-gunpei": dict(prop="p_gameboy", layout="stack", bg=((36, 44, 74), (20, 26, 46)), emotion="surprised",
-    lines=[("あえて白黒で勝つ", W1, None), ("枯れた技術の水平思考", W1, None), ("ゲームボーイ", B1, Y1)]),
-    "shinkansen-bird": dict(prop="p_shinkansen", layout="stack", bg=((22, 70, 110), (12, 40, 66)), emotion="surprised",
-    lines=[("騒音を鳥が解決", W1, None), ("趣味の野鳥観察が", W1, None), ("新幹線", B1, Y1)]),
-    "cutter-knife": dict(prop="p_blade", layout="stack", bg=((24, 62, 108), (12, 34, 64)), emotion="happy",
-    lines=[("ヒントは板チョコ", W1, None), ("折れば切れる", W1, None), ("カッターナイフ", B1, Y1)]),
-    "washlet": dict(prop="p_toilet", layout="stack", bg=((18, 78, 88), (10, 44, 52)), emotion="surprised",
-    lines=[("社員300人が実験", W1, None), ("日本人の体を測れ", W1, None), ("ウォシュレット", B1, Y1)]),
-    "ajinomoto": dict(prop="p_umami", layout="stack", bg=((110, 76, 20), (66, 44, 10)), emotion="thinking",
+    "momofuku-meme": dict(layout="panels", headline="カップ麺はこうして生まれた",
+        head_hi="カップ麺", panels=[
+        _p("p_downgraph", "1957年 大阪", NAVY, "sad", "全財産、|消えたのだ…", "47歳で無一文"),
+        _p("p_chickenramen", "裏庭の小屋", BROWN, "thinking", "ここから|やり直すのだ", "たった1人でこもる"),
+        _p("p_cupnoodle", "いま", RED, "surprised", "世界で|1000億食…！", "年1000億食"),
+    ]),
+    "qr-meme": dict(layout="panels", headline="QRコードはなぜ四角い",
+        head_hi="QRコード", panels=[
+        _p("p_barcode", "愛知の部品工場", SLATE, "sad", "もう|疲れたのだ…", "現場の一言から"),
+        _p("p_goban", "昼休みの囲碁", GREEN, "thinking", "碁盤なら|一発で読めるのだ", "ヒントは碁盤の目"),
+        _p("p_qr", "世界標準へ", NAVY, "surprised", "特許は|取らないのだ", "無料で開放した"),
+    ]),
+    "kaiten-meme": dict(layout="panels", headline="回転寿司はどこで生まれた",
+        head_hi="回転寿司", panels=[
+        _p("p_sushi", "1皿20円の立ち食い", RED, "sad", "板前が|足りないのだ…", "深刻な人手不足"),
+        _p(None, "ビール工場", GOLD, "surprised", "瓶が|流れてるのだ！", "答えはベルトコンベア"),
+        _p("p_sushilane", "1958年 大阪", TEAL, "happy", "皿を|流すのだ！", "回転寿司、開店"),
+    ]),
+    "gastro-meme": dict(layout="panels", headline="胃カメラはたった2人で作られた",
+        head_hi="胃カメラ", panels=[
+        _p("p_stomach", "戦後の東大病院", INDIGO, "thinking", "開けないと|見えないのだ", "胃の中は誰も見ていない"),
+        _p(None, "夜行列車", BROWN, "happy", "一緒に|作ってほしいのだ", "技師を口説き落とす"),
+        _p("p_endoscope", "世界初", TEAL, "surprised", "胃の中が|写ったのだ！", "飲み込むカメラ"),
+    ]),
+    "rice-cooker-meme": dict(layout="panels", headline="炊飯器を作ったのは町工場の夫婦",
+        head_hi="炊飯器", panels=[
+        _p("p_kamado", "夜明け前", BROWN, "sad", "火の番で|眠れないのだ…", "毎朝の重労働"),
+        _p(None, "大手が匙を投げた", SLATE, "thinking", "うちが|やるのだ", "町工場が引き受ける"),
+        _p("p_ricecooker", "世界初", RED, "happy", "スイッチ|ひとつなのだ！", "妻が千回炊いた"),
+    ]),
+    "tenji-block-meme": dict(layout="panels", headline="点字ブロックは全財産で作られた",
+        head_hi="点字ブロック", panels=[
+        _p("p_cane", "岡山の交差点", SLATE, "surprised", "車道に|入っていくのだ！", "白い杖の人を見た"),
+        _p(None, "友の失明", INDIGO, "sad", "足の裏で|読むのだ…", "何気ない一言から"),
+        _p("p_block", "1967年 原尾島", GOLD, "happy", "自腹で|敷くのだ", "230枚を私費で"),
+    ]),
+    "shinkansen-bird": dict(layout="panels", headline="新幹線の鼻はなぜ長い",
+        head_hi="新幹線", panels=[
+        _p(None, "トンネル出口", SLATE, "angry", "400m先から|苦情なのだ！", "ドン！という爆音"),
+        _p("p_kingfisher", "趣味は野鳥観察", TEAL, "thinking", "カワセミは|水しぶきが出ないのだ", "ヒントは鳥のくちばし"),
+        _p("p_shinkansen", "500系", NAVY, "surprised", "時速300キロ|なのだ！", "世界最速へ"),
+    ]),
+    "yokoi-gunpei": dict(layout="panels", headline="ゲームボーイはなぜ白黒で勝った",
+        head_hi="ゲームボーイ", panels=[
+        _p(None, "任天堂 設備保守係", SLATE, "surprised", "社長に|見つかったのだ…", "暇つぶしの玩具"),
+        _p("p_gamewatch", "1980年", RED, "happy", "商品化しろ|と言われたのだ", "クビ覚悟が大ヒット"),
+        _p("p_gameboy", "1989年", GREEN, "thinking", "あえて|白黒にするのだ", "枯れた技術の水平思考"),
+    ]),
+    "ajinomoto": dict(layout="panels", headline="うま味を見つけたのは日本人",
+        head_hi="うま味", panels=[
+        _p(None, "湯豆腐の夜", BROWN, "thinking", "この味、|4つのどれでもないのだ", "5つ目の味に気づく"),
+        _p(None, "東大の研究室", TEAL, "surprised", "半年かけて|取り出すのだ", "昆布12キロ→30グラム"),
+        _p("p_ajibottle", "1909年 発売", RED, "happy", "世界の言葉に|なったのだ", "umami"),
+    ]),
+    "cutter-knife": dict(layout="panels", headline="カッターナイフの答えは板チョコ",
+        head_hi="カッターナイフ", panels=[
+        _p(None, "大阪の印刷工", SLATE, "angry", "カミソリが|すぐ駄目になるのだ", "毎日、刃を捨てていた"),
+        _p("p_chocolate", "街で見た光景", BROWN, "surprised", "割って|使えばいいのだ！", "ヒントは板チョコ"),
+        _p("p_blade", "1956年", NAVY, "happy", "折れば|切れ味が戻るのだ", "世界中の定番に"),
+    ]),
+    "washlet": dict(layout="panels", headline="ウォシュレットを作った300人",
+        head_hi="ウォシュレット", panels=[
+        _p("p_toilet", "1964年 輸入品", TEAL, "angry", "熱いのだ|熱すぎるのだ！", "米国製は温度が不安定"),
+        _p(None, "社員 約300人", GOLD, "surprised", "頼むから|測らせてほしいのだ", "前代未聞の測定"),
+        _p(None, "答え", NAVY, "happy", "角度は|43度なのだ", "お湯38度・便座36度"),
+    ]),
+    "karaoke": dict(layout="panels", headline="カラオケは特許を取らなかった",
+        head_hi="カラオケ", panels=[
+        _p("p_mic", "神戸のクラブ", PURPLE, "thinking", "楽譜も|読めないのだ", "バンドのドラマー"),
+        _p("p_jukebox", "常連の頼み", MAGENTA, "surprised", "出張先でも|歌いたいのだ？", "手作りで11台"),
+        _p(None, "その後", NAVY, "sad", "特許は|取らなかったのだ", "一円も入らなかった"),
+    ]),
+    "yai-denchi": dict(layout="panels", headline="乾電池を作ったのは日本人",
+        head_hi="乾電池", panels=[
+        _p("p_wetcell", "明治の東京", INDIGO, "angry", "冬になると|凍るのだ！", "液体の電池が使えない"),
+        _p(None, "5分の遅刻", SLATE, "sad", "時計が|止まっていたのだ…", "試験に間に合わなかった"),
+        _p("p_drycell", "1887年", RED, "surprised", "凍らない|電池なのだ！", "特許は5年出せず"),
+    ]),
+    "masuoka-flash": dict(layout="panels", headline="フラッシュメモリは却下された",
+        head_hi="フラッシュメモリ", panels=[
+        _p("p_kyakka", "東芝", SLATE, "angry", "金がない、|却下なのだ", "予算はゼロ"),
+        _p(None, "土日だけ", NAVY, "thinking", "特許を|23件書いたのだ", "仲間は同僚4人"),
+        _p("p_usb", "いま", GOLD, "surprised", "洗濯しても|消えないのだ！", "電気が無くても残る"),
+    ]),
+    "kaisatsu-drama": dict(layout="panels", headline="自動改札は世界が真似しなかった",
+        head_hi="自動改札", panels=[
+        _p("p_hasami", "1960年代", BROWN, "thinking", "駅員が|1枚ずつ切るのだ", "1分間に80人"),
+        _p(None, "無茶な注文", RED, "surprised", "それを|超えろ…！", "機械にできるのか"),
+        _p("p_gate", "1967年 大阪", TEAL, "happy", "切符が|吸い込まれるのだ！", "世界初の自動改札"),
+    ]),
+    "quartz-astron": dict(layout="panels", headline="クオーツ時計はスイスを倒した",
+        head_hi="クオーツ時計", panels=[
+        _p(None, "天文台コンクール", SLATE, "sad", "最下位|だったのだ…", "機械式では勝てない"),
+        _p("p_quartzfork", "長野県 諏訪", TEAL, "thinking", "体積を|30万分の1にするのだ", "無茶な目標"),
+        _p("p_wristwatch", "1969年", NAVY, "surprised", "月に|5秒しかずれないのだ", "スイス1600社→600社"),
+    ]),
+    "purikura-meme": dict(layout="panels", headline="プリクラは会議で一蹴された",
+        head_hi="プリクラ", panels=[
+        _p(None, "1990年代 会議室", SLATE, "sad", "持って帰って|どうすんのだ…", "男性社員に否定される"),
+        _p("p_purikura", "小さなゲーム会社", MAGENTA, "thinking", "シールなら|配れるのだ", "営業がひとりで押した"),
+        _p(None, "1995年", GOLD, "surprised", "行列が|止まらないのだ！", "日本中の女の子が並ぶ"),
+    ]),
+    "sharp-pencil": dict(layout="panels", headline="シャープの名前は商品が先だった",
+        head_hi="シャープ", panels=[
+        _p("p_sharppencil", "1915年 東京", NAVY, "happy", "折れない|芯なのだ！", "21歳で発明"),
+        _p(None, "関東大震災", SLATE, "sad", "全部|失ったのだ…", "家族も工場も"),
+        _p(None, "大阪へ", RED, "thinking", "名前だけ|残ったのだ", "商品名が社名になった"),
+    ]),
+    "okano-needle": dict(layout="panels", headline="痛くない注射針は町工場が作った",
+        head_hi="注射針", panels=[
+        _p(None, "100社以上が断った", SLATE, "angry", "無理だと|言われたのだ", "どこも引き受けない"),
+        _p(None, "墨田区の町工場", TEAL, "happy", "よし、|やるのだ", "従業員6人"),
+        _p("p_needle", "先端0.2ミリ", RED, "surprised", "蚊の口と|同じなのだ！", "刺しても痛くない"),
+    ]),
+    "nishizawa-fiber": dict(layout="panels", headline="光ファイバーを日本は捨てた",
+        head_hi="光ファイバー", panels=[
+        _p(None, "1950年代 仙台", INDIGO, "thinking", "光で|通信するのだ", "20年早すぎた構想"),
+        _p("p_kyakka", "資金の相談", SLATE, "sad", "金は|出せないのだ…", "国内で相手にされず"),
+        _p("p_fiber", "いま", TEAL, "surprised", "髪の毛より|細いのだ！", "動画が見られる理由"),
+    ]),
+    "exit-sign": dict(layout="panels", headline="非常口マークを描いたのは日本人",
+        head_hi="非常口マーク", panels=[
+        _p(None, "1970年代", SLATE, "surprised", "文字だと|逃げられないのだ", "デパート火災で100人超"),
+        _p("p_exitsign", "公募", GREEN, "thinking", "走る人を|描くのだ", "緑の人が生まれる"),
+        _p(None, "世界標準へ", NAVY, "happy", "日本案が|勝ったのだ！", "ソ連案との一騎打ち"),
+    ]),
+    "nakauchi-daiei": dict(layout="panels", headline="ダイエーはなぜ消えた",
+        head_hi="ダイエー", panels=[
+        _p("p_sukiyaki", "1943年 戦地", BROWN, "sad", "すき焼きが|食いたいのだ…", "生きて帰った"),
+        _p("p_beefpack", "1957年 大阪", GOLD, "angry", "よそより|安く売るのだ！", "牛肉 100円→39円"),
+        _p("p_downgraph", "2004年", NAVY, "surprised", "借金、1兆円…", "創業者、追放"),
+    ]),
+    "yamauchi-nintendo": dict(layout="panels", headline="任天堂は花札の会社だった",
+        head_hi="任天堂", panels=[
+        _p("p_hanafuda", "22歳で社長", GREEN, "thinking", "うちは|花札屋なのだ", "創業70年の老舗"),
+        _p("p_downgraph", "多角化", SLATE, "sad", "タクシーも|食品も駄目なのだ…", "借金70億円"),
+        _p("p_gameboy", "1980年代", RED, "surprised", "うちは|おもちゃ屋なのだ！", "そこから世界を取る"),
+    ]),
     # ---- 解説 ----
-    lines=[("5つ目の味を発見", W1, None), ("昆布12キロから", W1, None), ("味の素", B1, Y1)]),
-    "battery-80-duo": dict(prop="p_battery", layout="stack", bg=((150, 30, 34), (92, 16, 22)), emotion="surprised",
-    lines=[("毎晩100%は損", W1, None), ("メーカーが止める機能", W1, None), ("スマホ充電", B1, Y1)]),
-    "banknote": dict(prop="p_bill", layout="stack", bg=((72, 26, 96), (42, 14, 58)), emotion="surprised",
-    lines=[("コピー機が拒否", W1, None), ("偽札は2年で343枚", W1, None), ("お札の秘密", B1, Y1)]),
-    "escalator": dict(prop="p_escalator", layout="stack", bg=((34, 52, 82), (18, 30, 50)), emotion="surprised",
-    lines=[("誰も得しない", W1, None), ("片側空けの謎", W1, None), ("エスカレーター", B1, Y1)]),
-    "traffic-light": dict(prop="p_signal", layout="stack", bg=((20, 62, 60), (10, 36, 36)), emotion="thinking",
-    lines=[("緑なのに青と呼ぶ", W1, None), ("世界で日本だけ", W1, None), ("信号機", B1, Y1)]),
-    "auto-door": dict(prop="p_autodoor", layout="stack", bg=((28, 54, 78), (14, 30, 46)), emotion="angry",
-    lines=[("黒い服だと開かない", W1, None), ("見てるのは人じゃない", W1, None), ("自動ドア", B1, Y1)]),
+    "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
+        head_hi="100%", panels=[
+        _p(None, "毎晩やってる", RED, "happy", "満タンにして|寝るのだ", "実はいちばん減る使い方"),
+        _p(None, "なぜ", SLATE, "surprised", "満タンが|電池を削るのだ？", "膨らんで戻らなくなる"),
+        _p("p_battery", "メーカー自身が", TEAL, "thinking", "80%で|止める機能なのだ", "最初から付いている"),
+    ]),
+    "auto-door": dict(layout="panels", headline="自動ドアがあなたを無視する理由",
+        head_hi="自動ドア", panels=[
+        _p("p_autodoor", "黒い服の日", SLATE, "angry", "開かないのだ！", "反応しないことがある"),
+        _p(None, "見ているもの", NAVY, "surprised", "人を|見てないのだ？", "床の見え方が変わったか"),
+        _p(None, "真横から行くと", TEAL, "thinking", "近づき方で|決まるのだ", "無視されない歩き方"),
+    ]),
+    "banknote": dict(layout="panels", headline="お札はなぜコピーできない",
+        head_hi="お札", panels=[
+        _p("p_bill", "コピー機", PURPLE, "surprised", "印刷を|拒否されるのだ！", "機械が勝手に止まる"),
+        _p(None, "見えない印", NAVY, "thinking", "人には|見えないのだ", "機械にだけ分かる仕掛け"),
+        _p(None, "指で分かる", TEAL, "happy", "触ると|ザラザラなのだ", "世界初の技術も入っている"),
+    ]),
+    "escalator": dict(layout="panels", headline="片側空けは公式ルールじゃない",
+        head_hi="片側空け", panels=[
+        _p("p_escalator", "東京は左・大阪は右", SLATE, "thinking", "どっちが|正しいのだ？", "実は決まりが無い"),
+        _p(None, "作った側は", RED, "surprised", "ずっと|やめてと言ってるのだ", "歩かないでください"),
+        _p(None, "隠れた機能", TEAL, "happy", "ステップが|変形するのだ！", "知られていない仕組み"),
+    ]),
+    "traffic-light": dict(layout="panels", headline="信号の青はどう見ても緑",
+        head_hi="信号の青", panels=[
+        _p("p_signal", "日本だけ", GREEN, "thinking", "緑なのに|青と呼ぶのだ", "法律には緑と書いてあった"),
+        _p(None, "LEDの弱点", SLATE, "surprised", "雪が|溶けないのだ！", "熱を出さないから"),
+        _p(None, "雪国は縦型", NAVY, "happy", "積もらない|ようになのだ", "ちゃんと理由がある"),
+    ]),
 }
 
 
