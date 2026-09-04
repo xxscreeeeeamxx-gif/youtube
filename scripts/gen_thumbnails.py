@@ -2176,7 +2176,7 @@ SPECS = {
         head_hi="ゲームボーイ", panels=[
         _p(None, "任天堂 設備保守係", SLATE, "surprised", "社長に|見つかったのだ…", "暇つぶしの玩具"),
         _p("p_gamewatch", "1980年", RED, "happy", "商品化しろ|と言われたのだ", "クビ覚悟が大ヒット"),
-        _p("p_gameboy", "1989年", GREEN, "thinking", "あえて|白黒にするのだ", "枯れた技術の水平思考"),
+        _p("p_gameboy", "1989年", GREEN, "thinking", "あえて|白黒にするのだ", "白黒のまま1億台"),
     ]),
     "ajinomoto": dict(layout="panels", headline="うま味を見つけたのは日本人",
         head_hi="うま味", panels=[
@@ -2200,7 +2200,7 @@ SPECS = {
         head_hi="カラオケ", panels=[
         _p("p_mic", "神戸のクラブ", PURPLE, "thinking", "楽譜も|読めないのだ", "バンドのドラマー"),
         _p("p_jukebox", "常連の頼み", MAGENTA, "surprised", "出張先でも|歌いたいのだ？", "手作りで11台"),
-        _p(None, "その後", NAVY, "sad", "特許は|取らなかったのだ", "一円も入らなかった"),
+        _p(None, "その後", NAVY, "sad", "特許は|取らなかったのだ", "年1億ドル超とも"),
     ]),
     "yai-denchi": dict(layout="panels", headline="乾電池を作ったのは日本人",
         head_hi="乾電池", panels=[

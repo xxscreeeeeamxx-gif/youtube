@@ -391,24 +391,51 @@ def cmd_thumbnail_all(args) -> int:
 
     print(f"対象 {len(jobs)} 本" + (f" / 特定できず {len(missing)} 本: {', '.join(missing)}"
                                      if missing else ""))
-    ok = 0
-    for slug, vid, thumb, title in jobs:
-        mb = thumb.stat().st_size / 1024 / 1024
-        if mb > 2:
-            print(f"  ✗ {slug}: {mb:.1f}MB で上限超過")
-            continue
-        if args.dry_run:
+    if args.dry_run:
+        for slug, vid, thumb, title in jobs:
             print(f"  - {slug:<20}{title[:40]}")
-            ok += 1
-            continue
-        try:
-            yt.thumbnails().set(videoId=vid,
-                                media_body=MediaFileUpload(str(thumb))).execute()
-            ok += 1
-            print(f"  ✓ {slug:<20}{title[:40]}")
-        except Exception as e:
-            print(f"  ✗ {slug:<20}{str(e)[:70]}")
-    print(f"{'差し替え予定' if args.dry_run else '差し替え完了'}: {ok}/{len(jobs)} 本")
+        print(f"差し替え予定: {len(jobs)}/{len(jobs)} 本")
+        return 0
+
+    # **サムネ差し替えには専用のレート制限がある**（uploadRateLimitExceeded）。
+    # 2026-09-05 の実測では連続10本で 429 になった。Retry-After は返ってこないので、
+    # 済んだ分を控えに残しながら待って再試行する（同じ動画に投げ直して枠を潰さない）
+    import json as _j
+    import time as _t
+    state = ROOT / ".thumb_synced.json"
+    done = set(_j.loads(state.read_text(encoding="utf-8"))) if state.exists() else set()
+    todo = [x for x in jobs if x[0] not in done and
+            x[2].stat().st_size / 1024 / 1024 <= 2]
+    print(f"済み {len(done)} 本 / これから {len(todo)} 本")
+    wait, waited = args.wait, 0
+    while todo and waited <= args.max_wait:
+        stalled = False
+        for job in list(todo):
+            slug, vid, thumb, title = job
+            try:
+                yt.thumbnails().set(videoId=vid,
+                                    media_body=MediaFileUpload(str(thumb))).execute()
+                done.add(slug)
+                todo.remove(job)
+                state.write_text(_j.dumps(sorted(done), ensure_ascii=False),
+                                 encoding="utf-8")
+                print(f"  ✓ {slug:<20}{title[:40]}", flush=True)
+                _t.sleep(args.gap)
+            except Exception as e:
+                if "uploadRateLimitExceeded" in str(e) or "429" in str(e):
+                    print(f"  … レート制限。{wait//60}分待ちます（残り {len(todo)} 本）",
+                          flush=True)
+                    stalled = True
+                    break
+                print(f"  ✗ {slug:<20}{str(e)[:70]}", flush=True)
+                todo.remove(job)
+        if not todo:
+            break
+        if stalled:
+            _t.sleep(wait)
+            waited += wait
+            wait = min(int(wait * 1.5), 3600)
+    print(f"差し替え完了: {len(done)} 本" + (f" / 残り {len(todo)} 本" if todo else ""))
     return 0
 
 
@@ -504,6 +531,9 @@ def main() -> int:
     ta = sub.add_parser("thumbnail-all", help="全動画のサムネを一括で差し替える")
     ta.add_argument("--channel", default=EXPECT_CHANNEL)
     ta.add_argument("--dry-run", action="store_true")
+    ta.add_argument("--gap", type=float, default=4.0, help="1本ごとの間隔（秒）")
+    ta.add_argument("--wait", type=int, default=900, help="レート制限時の初回待ち（秒）")
+    ta.add_argument("--max-wait", type=int, default=6 * 3600, help="待ちの合計上限（秒）")
     ta.set_defaults(func=cmd_thumbnail_all)
 
     p = sub.add_parser("playlists", help="再生リストの一覧")
