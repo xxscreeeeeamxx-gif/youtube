@@ -336,6 +336,136 @@ def cmd_thumbnail(args) -> int:
     return 0
 
 
+# 再生リストの設計（2026-09-05）。
+# 流入の72%が関連動画、再生リスト経由は0.5%・終了画面0.1%しかない＝視聴後の導線が無い。
+# 再生リストの効き目は「一覧から直接来る数」ではなく、**自動再生の連鎖**と
+# チャンネルページの棚。だから細かく割らず、長い1本を主軸にする。
+# 並びは維持率の高い順（実測がある分だけ）。先頭が最初に再生されるので、
+# いちばん離脱しない回を置く。未実測は公開順で後ろに積む。
+PLAYLISTS = {
+    "main": dict(
+        title="日本をつくった人たちの物語｜ずんだもん再現ドラマ",
+        desc="毎日使っているものは、誰かが初めて作ったものです。作った人がいて、"
+             "断られた日があって、それでも続けた理由があります。"
+             "発明した技術者、会社を興した商人。ずんだもんがその人を演じる再現ドラマです。",
+        slugs=["shinkansen-bird", "kaisatsu-drama", "exit-sign", "yai-denchi",
+               "nishizawa-fiber", "nakauchi-daiei", "qr-meme", "kaiten-meme",
+               "gastro-meme", "masuoka-flash", "rice-cooker-meme",
+               "tenji-block-meme", "momofuku-meme", "karaoke", "yamauchi-nintendo",
+               "cutter-knife", "washlet", "ajinomoto", "quartz-astron",
+               "purikura-meme", "sharp-pencil", "okano-needle", "yokoi-gunpei"]),
+    "company": dict(
+        title="企業の栄枯盛衰｜ずんだもん再現ドラマ",
+        desc="日本一になった会社が、なぜ創業者ごと消えたのか。"
+             "花札屋が、どうやって世界を取ったのか。会社の一代記を、"
+             "ずんだもんが当人を演じる再現ドラマでたどります。",
+        slugs=["nakauchi-daiei", "yamauchi-nintendo"]),
+}
+
+
+def cmd_playlist_sync(args) -> int:
+    """再生リストを PLAYLISTS の定義に合わせる（何度流しても同じ結果になる）。
+
+    **非公開の動画は入れない**。予約投稿の分を先に入れると、視聴者側の一覧に
+    「[非公開の動画]」の行がずらりと並んで壊れて見える。公開されてから流し直す。
+    """
+    import sys as _s
+    _s.path.insert(0, str(ROOT / "scripts"))
+    from ytf.config import Config, find_project_dir
+    root = Config.load().root
+    yt = service()
+    check_channel(yt, args.channel)
+
+    mine = {p["snippet"]["title"]: p["id"] for p in
+            yt.playlists().list(part="snippet", mine=True,
+                                maxResults=50).execute()["items"]}
+    # 旧名を引き継ぐ（付け替えると再生リストのURLが変わって既存の導線が切れる）
+    if args.inherit and args.inherit in mine and PLAYLISTS["main"]["title"] not in mine:
+        mine[PLAYLISTS["main"]["title"]] = mine.pop(args.inherit)
+
+    for key, cfg in PLAYLISTS.items():
+        want = []
+        for slug in cfg["slugs"]:
+            proj = find_project_dir(root, slug)
+            idf = proj / "out" / "youtube_video_id.txt" if proj else None
+            if idf and idf.exists():
+                want.append((slug, idf.read_text(encoding="utf-8").strip()))
+        pub = {v["id"] for v in yt.videos().list(
+            part="status", id=",".join(v for _, v in want)).execute()["items"]
+            if v["status"]["privacyStatus"] == "public"}
+        skipped = [s for s, v in want if v not in pub]
+        want = [(s, v) for s, v in want if v in pub]
+
+        pid = mine.get(cfg["title"])
+        if not pid:
+            pid = yt.playlists().insert(part="snippet,status", body={
+                "snippet": {"title": cfg["title"], "description": cfg["desc"],
+                            "defaultLanguage": "ja"},
+                "status": {"privacyStatus": "public"}}).execute()["id"]
+            print(f"＋ 作成: {cfg['title']}")
+            # 作った直後は playlistItems から見えず 404 になる。少し待つ
+            import time as _t
+            for _ in range(10):
+                _t.sleep(3)
+                try:
+                    yt.playlistItems().list(part="id", playlistId=pid,
+                                            maxResults=1).execute()
+                    break
+                except Exception:
+                    continue
+        else:
+            yt.playlists().update(part="snippet", body={
+                "id": pid, "snippet": {"title": cfg["title"],
+                                       "description": cfg["desc"],
+                                       "defaultLanguage": "ja"}}).execute()
+
+        have, tok = [], None
+        while True:
+            r = yt.playlistItems().list(part="snippet,contentDetails",
+                                        playlistId=pid, maxResults=50,
+                                        pageToken=tok).execute()
+            have += [(i["id"], i["contentDetails"]["videoId"]) for i in r["items"]]
+            tok = r.get("nextPageToken")
+            if not tok:
+                break
+        keep = {v for _, v in want}
+        for iid, vid in have:                      # 定義に無いものは外す
+            if vid not in keep:
+                yt.playlistItems().delete(id=iid).execute()
+                print(f"  − 外した: {vid}")
+        pos = {vid: iid for iid, vid in have if vid in keep}
+        for slug, vid in want:
+            if vid not in pos:
+                it = yt.playlistItems().insert(part="snippet", body={"snippet": {
+                    "playlistId": pid, "resourceId": {"kind": "youtube#video",
+                                                      "videoId": vid}}}).execute()
+                pos[vid] = it["id"]
+                print(f"  ＋ {slug}")
+        # **並び順が「手動」でない再生リストは position を受け付けない**
+        # （manualSortRequired）。並び順は Data API では変更できず Studio 側の設定なので、
+        # 失敗したら追加だけ済ませて先に進む（順番のためにリストを作り直さない）
+        sortable = True
+        for n, (slug, vid) in enumerate(want):
+            try:
+                yt.playlistItems().update(part="snippet", body={
+                    "id": pos[vid], "snippet": {
+                        "playlistId": pid, "position": n,
+                        "resourceId": {"kind": "youtube#video",
+                                       "videoId": vid}}}).execute()
+            except Exception as e:
+                if "manualSortRequired" not in str(e):
+                    raise
+                print("  ⚠ 並び順が「手動」でないため並べ替えできません。"
+                      "Studio の再生リスト設定で『手動』にしてから流し直してください")
+                sortable = False
+                break
+        print(f"✓ {cfg['title']}: {len(want)}本"
+              + ("" if sortable else "（並びは未適用）")
+              + (f"（非公開のため見送り {len(skipped)}本）" if skipped else ""))
+        print(f"  https://www.youtube.com/playlist?list={pid}")
+    return 0
+
+
 def cmd_title(args) -> int:
     """投稿済み動画のタイトルだけを差し替える。
 
@@ -586,6 +716,11 @@ def main() -> int:
     tb.add_argument("--channel", default=EXPECT_CHANNEL)
     tb.add_argument("--dry-run", action="store_true")
     tb.set_defaults(func=cmd_thumbnail)
+
+    ps = sub.add_parser("playlist-sync", help="再生リストを定義どおりに揃える")
+    ps.add_argument("--channel", default=EXPECT_CHANNEL)
+    ps.add_argument("--inherit", help="この題名の既存リストを主リストとして引き継ぐ")
+    ps.set_defaults(func=cmd_playlist_sync)
 
     ti = sub.add_parser("title", help="投稿済み動画のタイトルを TITLES に合わせる")
     ti.add_argument("slugs", nargs="*", help="省略すると全動画")
