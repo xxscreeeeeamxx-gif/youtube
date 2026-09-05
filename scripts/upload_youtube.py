@@ -232,6 +232,12 @@ def upload(args) -> int:
     url = f"https://youtu.be/{vid}"
     print(f"✓ 投稿しました: {url}")
 
+    # **動画IDは何よりも先に控える**。これより後の処理（サムネ・再生リスト）で
+    # 落ちると、上がった動画を追えなくなる。2026-09-05 に実際に踏んだ:
+    # サムネがレート制限(429)で例外を投げ、IDが記録されないまま終了した
+    (proj / "out" / "youtube_video_id.txt").write_text(vid + "\n", encoding="utf-8")
+    print("動画ID を out/youtube_video_id.txt に控えました。")
+
     if thumb.exists() and not args.no_thumbnail:
         # サムネの上限は2MB。越えても動画自体は上がっているので、ここでは落とさない
         if thumb.stat().st_size > 2 * 1024 * 1024:
@@ -239,18 +245,24 @@ def upload(args) -> int:
                   "設定を飛ばしました（Studio から手で設定してください）")
         else:
             from googleapiclient.http import MediaFileUpload as MFU
-            yt.thumbnails().set(videoId=vid, media_body=MFU(str(thumb))).execute()
-            print("✓ サムネイルを設定しました")
+            try:
+                yt.thumbnails().set(videoId=vid, media_body=MFU(str(thumb))).execute()
+                print("✓ サムネイルを設定しました")
+            except Exception as e:
+                # サムネには動画とは別枠のレート制限がある。動画は上がっているので
+                # ここでは落とさず、あとから thumbnail-all で拾えるようにする
+                print(f"‼ サムネを設定できませんでした（{str(e)[:80]}）")
+                print("  → あとで `python3 scripts/upload_youtube.py thumbnail-all` を流すこと")
 
     if args.playlist:
-        pid = resolve_playlist(yt, args.playlist)
-        yt.playlistItems().insert(part="snippet", body={"snippet": {
-            "playlistId": pid,
-            "resourceId": {"kind": "youtube#video", "videoId": vid}}}).execute()
-        print(f"✓ 再生リストに追加しました（{args.playlist}）")
-
-    (proj / "out" / "youtube_video_id.txt").write_text(vid + "\n", encoding="utf-8")
-    print(f"\n動画ID を out/youtube_video_id.txt に控えました。")
+        try:
+            pid = resolve_playlist(yt, args.playlist)
+            yt.playlistItems().insert(part="snippet", body={"snippet": {
+                "playlistId": pid,
+                "resourceId": {"kind": "youtube#video", "videoId": vid}}}).execute()
+            print(f"✓ 再生リストに追加しました（{args.playlist}）")
+        except Exception as e:
+            print(f"‼ 再生リストに追加できませんでした（{str(e)[:70]}）")
     if body["status"]["privacyStatus"] == "private" and not args.publish_at:
         print("いまは非公開です。中身を見てから Studio で公開に切り替えてください。")
     return 0
