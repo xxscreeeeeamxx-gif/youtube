@@ -105,7 +105,7 @@ scenes:
         text: "……なんでそんなに狭い車を作るのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "枠が決まってたから。当時の軽自動車の規格。"
+        text: "枠が決まってたから。当時の[軽自動車|けいじどうしゃ]の規格。"
       - speaker: reimu
         text: "長さも幅も排気量も、法律で上限が決められていました。"
         reading: "ながさもはばもはいきりょうも、ほうりつでじょうげんがきめられていました。"
@@ -151,17 +151,18 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: joushi, x: 0.52}
+      - {who: joushi, x: 0.5}
+      - {who: gishi, x: 0.62}
     cuts:
       - speaker: reimu
         text: "[百瀬晋六|ももせしんろく]は1919年2月20日、長野県の[塩尻|しおじり]に生まれました。"
         reading: "ももせしんろくわせんきゅうひゃくじゅうくねんにがつはつか、ながのけんのしおじりにうまれました。"
       - speaker: reimu
-        text: "東京帝国大学の航空学科で、原動機を専攻します。"
+        text: "東京帝国大学の航空学科で、[原動機|げんどうき]を専攻します。"
         reading: "とうきょうていこくだいがくのこうくうがっかで、げんどうきをせんこうします。"
       - speaker: zundamon
         emotion: normal
-        text: "原動機。エンジンのことなのだ。"
+        text: "[原動機|げんどうき]。エンジンのことなのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "そう。飛行機のエンジン屋さんになる進路。"
@@ -170,7 +171,7 @@ scenes:
         reading: "せんきゅうひゃくよんじゅうにねんいちがつ、なかじまひこうきににゅうしゃします。"
       - speaker: joushi
         emotion: normal
-        text: "百瀬くん。担当は、偵察機のエンジンだ。"
+        text: "百瀬くん。担当は、[偵察機|ていさつき]のエンジンだ。"
       - speaker: zundamon
         emotion: normal
         text: "……高いところを飛ぶ機体ですね。"
@@ -242,7 +243,7 @@ scenes:
         text: "そうだ。全部を持てる機体は、無い。"
       - speaker: tsumugi
         emotion: happy
-        text: "……これ、あとで軽自動車でそのまま言うことになるんだよね。"
+        text: "……これ、あとで[軽自動車|けいじどうしゃ]でそのまま言うことになるんだよね。"
       - speaker: zundamon
         emotion: normal
         text: "……何を捨てるか、か。"
@@ -402,8 +403,10 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: ginko, x: 0.5}
-      - {who: keiei, x: 0.62}
+      - {who: ginko, x: 0.46}
+      - {who: keiei, x: 0.55}
+      - {who: gishi, x: 0.63}
+      - {who: gishif, x: 0.70}
     cuts:
       - speaker: reimu
         text: "1954年、自動車に進出するための試作車ができます。"
@@ -518,7 +521,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: normal
-        text: "軽自動車の枠で、大人が四人乗る車を作る。"
+        text: "[軽自動車|けいじどうしゃ]の枠で、大人が四人乗る車を作る。"
       - speaker: gishi
         emotion: surprised
         text: "……四人、ですか。"
@@ -632,7 +635,8 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: gishi, x: 0.52}
+      - {who: gishi, x: 0.5}
+      - {who: gishif, x: 0.62}
     cuts:
       - speaker: gishi
         emotion: happy
@@ -810,7 +814,7 @@ scenes:
         text: "……銀行に断られた、あの大きい車の代わりに。"
       - speaker: tsumugi
         emotion: normal
-        text: "小さいほうで、日本中に届いたの。"
+        text: "小さいほうで、[日本中|にほんじゅう]に届いたの。"
       - speaker: kyaku
         emotion: happy
         text: "……これなら、家族で出かけられるな。"
@@ -852,7 +856,8 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: gishi, x: 0.52}
+      - {who: gishi, x: 0.5}
+      - {who: gishif, x: 0.62}
     cuts:
       - speaker: gishi
         emotion: happy
@@ -962,7 +967,7 @@ scenes:
         text: "……上下の差。"
       - speaker: tsumugi
         emotion: normal
-        text: "飛行機が上で、軽自動車が下、みたいな見方をしなかったの。"
+        text: "飛行機が上で、[軽自動車|けいじどうしゃ]が下、みたいな見方をしなかったの。"
       - speaker: zundamon
         emotion: normal
         text: "……鍋を作れと言われた時期があるからかもしれないぞ。"

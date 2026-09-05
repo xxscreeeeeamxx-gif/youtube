@@ -377,6 +377,43 @@ def p_hanafuda(d, s):
                    cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
 
 
+def p_keicar(d, s):
+    """てんとう虫（スバル360）。角を落とした丸い軽自動車を横から。"""
+    x0, y1 = s * 0.10, s * 0.66
+    w, h = s * 0.80, s * 0.30
+    d.ellipse([x0, y1 - h, x0 + w, y1 + h * 0.34], fill=(232, 198, 96),
+              outline=(146, 116, 44), width=int(s * 0.018))
+    d.ellipse([x0 + w * 0.18, y1 - h * 0.94, x0 + w * 0.82, y1 - h * 0.22],
+              fill=(178, 210, 234), outline=(146, 116, 44), width=int(s * 0.014))
+    d.line([x0 + w * 0.5, y1 - h * 0.94, x0 + w * 0.5, y1 - h * 0.22],
+           fill=(146, 116, 44), width=int(s * 0.014))
+    for cx in (x0 + w * 0.24, x0 + w * 0.78):
+        d.ellipse([cx - s * 0.085, y1 + h * 0.02, cx + s * 0.085, y1 + h * 0.62],
+                  fill=(46, 46, 52))
+        d.ellipse([cx - s * 0.034, y1 + h * 0.20, cx + s * 0.034, y1 + h * 0.44],
+                  fill=(188, 192, 200))
+    d.ellipse([x0 + w * 0.93, y1 - h * 0.52, x0 + w * 1.02, y1 - h * 0.28],
+              fill=(252, 242, 190), outline=(150, 130, 60), width=int(s * 0.01))
+
+
+def p_propeller(d, s):
+    """機首とプロペラ。中島飛行機の記号。"""
+    import math as _m
+    cx, cy = s * 0.44, s * 0.50
+    d.polygon([(cx, cy), (cx + s * 0.40, cy - s * 0.13),
+               (cx + s * 0.40, cy + s * 0.13)],
+              fill=(158, 164, 174), outline=(92, 98, 110), width=int(s * 0.014))
+    for a in (-72, 48, 168):
+        d.polygon([(cx, cy),
+                   (cx + _m.cos(_m.radians(a)) * s * 0.05,
+                    cy + _m.sin(_m.radians(a)) * s * 0.40),
+                   (cx + _m.cos(_m.radians(a + 14)) * s * 0.05,
+                    cy + _m.sin(_m.radians(a + 14)) * s * 0.40)],
+                  fill=(120, 126, 138), outline=(80, 86, 96), width=int(s * 0.01))
+    d.ellipse([cx - s * 0.055, cy - s * 0.075, cx + s * 0.055, cy + s * 0.075],
+              fill=(96, 100, 110), outline=(60, 64, 74), width=int(s * 0.012))
+
+
 def p_rotor(d, s):
     """ロータリーの断面。おにぎり型のローターと繭型ハウジング。赤い点がアペックスシール。"""
     import math as _m
@@ -2418,11 +2455,17 @@ SPECS = {
         _p("p_parcel", "1976年", BROWN, "sad", "初日は|十一個…", "初日 11個"),
         _p("p_gavel", "1986年", RED, "angry", "決めろ、と|言っているのだ", "監督官庁を訴えた"),
     ]),
-    "yamamoto-rotary": dict(layout="panels", headline="世界が捨てたエンジン",
-        head_hi="エンジン", panels=[
+    "yamamoto-rotary": dict(layout="panels", headline="世界が捨てたロータリー",
+        head_hi="ロータリー", panels=[
         _p("p_rotor", "1963年 広島", NAVY, "thinking", "回るだけで|エンジンになるのだ", "47人が集められた"),
         _p("p_scratch", "悪魔の爪痕", SLATE, "surprised", "数十時間で|波打つ…！？", "原因が誰にも分からない"),
         _p(None, "1991年 ル・マン", RED, "happy", "24時間、|止まらなかったのだ", "日本車初の総合優勝"),
+    ]),
+    "momose-subaru360": dict(layout="panels", headline="スバル360は作れないはずだった",
+        head_hi="スバル360", panels=[
+        _p("p_propeller", "1942年", SLATE, "normal", "戦闘機の|エンジン屋なのだ", "飛行機を作れなくなった"),
+        _p(None, "枠は動かせない", NAVY, "angry", "この寸法に|大人4人…！？", "常識では2人乗りが限界"),
+        _p("p_keicar", "1958年", GOLD, "happy", "自分で|何十回も乗ったのだ", "てんとう虫、42万5000円"),
     ]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
