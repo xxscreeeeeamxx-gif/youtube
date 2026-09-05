@@ -38,6 +38,9 @@ class StageMember(BaseModel):
     flip: bool = False      # 左右反転（内側を向かせる用）
     tag: str = ""           # 頭上に出す名札（例: ウィルバー）。モブはlabelが既定
     scale: float = 1.0      # このシーンでの大きさ補正
+    emotion: str = ""       # このシーンの開始時の表情。空なら前シーンから持ち越す
+                            # （表情は明示しない限り持ち越されるので、深刻な章の頭で
+                            #  笑顔が残るのを防ぐために使う）
 
 
 class Meta(BaseModel):

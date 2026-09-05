@@ -728,7 +728,16 @@ def render_frames(
     manifest_used: set[str] = set()
     last_stage_whos: set[str] = set()  # 入場スライド: 直前シーンの舞台メンバー
 
+    cur_scene_id = None
     for ct, scene, cut in flat:
+        # **表情はシーンをまたいで持ち越される**。深刻な章の頭で前章の笑顔が
+        # 残るのを防ぐため、stage 側で表情を指定できるようにした（2026-09-05）。
+        # 指定が無いキャラはこれまでどおり持ち越す
+        if scene.id != cur_scene_id:
+            cur_scene_id = scene.id
+            for m in scene.stage:
+                if getattr(m, "emotion", ""):
+                    emotion_state[m.who] = m.emotion
         prev_emo = emotion_state.get(cut.speaker, "normal")
         emotion_state[cut.speaker] = cut.emotion
         sp = span_of.get(ct.index)

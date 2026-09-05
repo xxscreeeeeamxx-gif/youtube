@@ -1,0 +1,1131 @@
+# 宅急便・再現ドラマ（[小倉昌男|おぐらまさお]・1924→2005）。投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ4本目。山一證券（失敗側）の対になる成功側。
+#   敵が「役所」という構図が明快なので、ダイエー型の転落譚とは別の引きが作れる
+# ★配役: ずんだもん=小倉昌男 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★ミーム禁止の章: kekkaku（4年の療養）/ ichimanen（月1万円）/ swan
+#   （病気と障害者福祉の場面には入れない）
+# 裏取り: 小倉昌男Wikipedia / 日経BOOKプラス「宅急便のヒントになった2つの異業種」/
+#   ダイヤモンド「官僚と闘い官業を食った男」/ 補助金さがすAI「初日わずか11個」/
+#   スワンベーカリー公式「スワンの想い」
+# 確定事実:
+#   1924-12-13 生 / 2005-6-30 没（故人）。父は小倉康臣、大和運輸を営む
+#   東京高等学校（旧制）→東京帝国大学経済学部 1947年卒
+#   1949-2-2 肺結核で入院。4年間の入院生活。1953-7-9 退院
+#   1971-3-30 代表取締役社長に就任
+#   1970年代初頭から経営が悪化。郵便局が独占していた個人向け小口輸送への参入を検討
+#   着想の3つのヒント:
+#     ①吉野家がメニューを牛丼だけに絞って高収益を上げていた →「絞り込み」
+#     ②千葉に住む甥に荷物を送ろうとしたら送る手段が無かった →ターゲットは家庭
+#     ③日本航空「ジャルパック」→商品のパッケージ化という概念
+#   1976年 宅急便を開始。**初日の取扱いは11個**
+#   1979年 創業以来の取引先だった三越へ、ヤマト側から取引停止を通告
+#     （※三越に切られたのではなく、こちらから切った。逆に書かないこと）
+#   1980年代半ば 路線免許は運輸省の認可が必要。申請しても5年待たされた
+#   1986年夏 運輸大臣・橋本龍太郎を相手取り「不作為の違法」で行政訴訟。
+#     「運輸省なんて腐った官庁は要らない」→ 提訴後4か月で免許交付。
+#     路線免許の審査基準の明確化も認めさせた
+#   1991年 相談役 / 1993-9-10 ヤマト福祉財団を設立し理事長 / 1995-6-29 退任
+#   1995年 阪神淡路大震災を機に、障がい者の給料が月1万円に満たない現状を知る。
+#     「障がい者が作ったから」ではなく「良い商品だから」買ってもらえる商売を、と考える
+#   1998年 スワンベーカリー1号店
+#   著書『小倉昌男 経営学』(1999)
+meta:
+  title: "【宅急便の誕生】初日11個。役所を訴えた男が日本の当たり前を作るまで【ずんだもん解説】"
+  slug: "ogura-takkyubin"
+  summary: "いま玄関に届く荷物は、50年前には送る方法がありませんでした。作ったのは、4年間を病室で過ごし、47歳で父の会社を継いだ男です。最初の日に集まった荷物はたった11個。そこから彼は、監督官庁である運輸省を相手に裁判を起こすことになります。ずんだもんが小倉昌男を演じる再現ドラマです。"
+  tags: ["宅急便", "小倉昌男", "ヤマト運輸", "経営", "昭和史", "規制", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "初日、11個"
+    bottom: "宅急便の誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: chichi, label: "父・康臣", voice: 42, pitch: -0.02, item: mustache}
+    - {id: kanja, label: "同じ病室の人", voice: 13, pitch: -0.04}
+    - {id: yakuin, label: "役員", voice: 13, pitch: -0.08, item: hat}
+    - {id: shain, label: "ヤマトの社員", voice: 12, pitch: 0.02}
+    - {id: shufu, label: "主婦", voice: 8, pitch: 0.06}
+    - {id: hyakka, label: "百貨店の人", voice: 13, pitch: -0.02, item: hat}
+    - {id: yakunin, label: "運輸省の人", voice: 13, pitch: -0.1, item: hat}
+    - {id: bengo, label: "弁護士", voice: 13, pitch: 0.0, item: hat}
+    - {id: sagyo, label: "作業所の人", voice: 42, pitch: 0.04}
+scenes:
+  - id: hook
+    title: ""
+    background: il_ogu_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: angry
+        text: "また不在票が入ってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何時に頼んだの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "明日の午前中で頼んだのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……それ、今日の分だよね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "ボクは家にいたぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いたのに受け取れなかったの？"
+      - speaker: zundamon
+        emotion: normal
+        text: "玄関にいなかっただけなのだ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "それは家にいないのと同じ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "次は絶対に受け取る。玄関で待つのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "おお、やる気だね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あ。ちょっとトイレ行ってくる。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "フラグを自分で立てるな。"
+      - speaker: zundamon
+        emotion: sad
+        se: don
+        text: "……不在票が増えたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "三枚目。コレクションになってきたね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "だいたい、なんで家まで持ってきてくれるのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "え、いま文句の向きが変わったよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "当たり前だからな。荷物は家に来るものなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……その当たり前、五十年前は無かったんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "無かった！？ じゃあどうしてたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "駅まで自分で運んで、荷物として預けるの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "重いだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "重いよ。しかも、いつ着くか分からない。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "無理ゲーじゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "個人の小さい荷物は、儲からないから誰もやりたがらなかったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……たしかに。一個ずつ違う家に行くんだもんな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。効率が悪すぎて、業界の常識では「やってはいけない商売」。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰がやったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[小倉昌男|おぐらまさお]。ヤマト運輸の社長。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……当たり前を作った人か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。ちなみにこの人、始めた最初の日の荷物の数、覚えてる？"
+      - speaker: zundamon
+        emotion: happy
+        text: "全国で始めたなら、何万個かなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "十一個。"
+        telops:
+          - {text: "初日、11個", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "十一！？ 個人宅十一軒！？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。そこから始まってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: umare
+    title: "1924・父の会社"
+    background: il_ogu_taisho
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, scale: 0.78}
+      - {who: tsumugi, x: 0.74}
+      - {who: chichi, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1924年12月13日、[小倉昌男|おぐらまさお]が生まれます。"
+        reading: "せんきゅうひゃくにじゅうよねんじゅうにがつじゅうさんにち、おぐらまさおがうまれます。"
+      - speaker: reimu
+        text: "父の[康臣|やすおみ]は、[大和|やまと]運輸という運送会社を営んでいました。"
+        reading: "ちちのやすおみわ、やまとうんゆといううんそうがいしゃをいとなんでいました。"
+      - speaker: chichi
+        emotion: happy
+        text: "うちはな、トラックで物を運ぶ会社だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何を運ぶのだ。"
+      - speaker: chichi
+        emotion: normal
+        text: "百貨店の品物だ。まとめて、決まった所へ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……まとめて。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これが当時の運送の形。大口の荷物を、決まったルートで運ぶ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "効率がいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。安定してるし、儲かる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "じゃあ何も問題ないぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……その安定が、あとで足を引っぱるの。"
+      - speaker: reimu
+        text: "彼は東京高等学校を経て、東京帝国大学の経済学部に進みます。"
+        reading: "かれわとうきょうこうとうがっこうをへて、とうきょうていこくだいがくのけいざいがくぶにすすみます。"
+      - speaker: reimu
+        text: "卒業は1947年。戦争が終わった二年後でした。"
+        reading: "そつぎょうわせんきゅうひゃくよんじゅうななねん。せんそうがおわったにねんごでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "父の会社に入るのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。……でも、そのすぐあとで倒れるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。"
+
+  - id: kekkaku
+    title: "1949・四年の療養"
+    background: il_ogu_byoshitsu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+      - {who: kanja, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1949年2月2日、肺結核で入院します。"
+        reading: "せんきゅうひゃくよんじゅうくねんにがつふつか、はいけっかくでにゅういんします。"
+      - speaker: reimu
+        text: "退院したのは1953年7月9日。四年間の入院生活でした。"
+        reading: "たいいんしたのわせんきゅうひゃくごじゅうさんねんしちがつここのか。よねんかんのにゅういんせいかつでした。"
+        telops:
+          - {text: "4年間、病室で", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "……四年。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "二十四歳から二十八歳まで。いちばん動ける時期。"
+      - speaker: kanja
+        emotion: normal
+        text: "……小倉さん。今日も本かい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "動けないので。読むしかないんです。"
+      - speaker: kanja
+        emotion: normal
+        text: "何を読んでるんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……経済の本です。あと、会社の数字を。"
+      - speaker: kanja
+        emotion: surprised
+        text: "病室で仕事の勉強かい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "外に出られないぶん、考える時間だけはあります。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……この四年、あとから効いてくるんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どういうことなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "現場を走り回ってた人には、立ち止まって考える時間が無いから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……考えるしかない四年間、か。"
+      - speaker: reimu
+        text: "退院後、彼は会社に戻ります。"
+        reading: "たいいんご、かれわかいしゃにもどります。"
+
+  - id: shacho
+    title: "1971・社長就任"
+    background: il_ogu_honsha
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: yakuin, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1971年3月30日、[小倉|おぐら]は社長に就任します。"
+        reading: "せんきゅうひゃくななじゅういちねんさんがつさんじゅうにち、おぐらわしゃちょうにしゅうにんします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "四十六です。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "父の会社を継いだ形だね。"
+      - speaker: yakuin
+        emotion: sad
+        text: "社長。……数字が、よくありません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見せてください。"
+      - speaker: yakuin
+        emotion: sad
+        text: "大口の運送は、他社との値下げ合戦になっています。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……安くしないと、仕事が来ない。"
+      - speaker: yakuin
+        emotion: normal
+        text: "はい。安くすると、利益が消えます。"
+      - speaker: zundamon
+        emotion: angry
+        text: "詰んでるじゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じ商売をみんなでやってると、こうなるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……値段でしか差がつかなくなるのだな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "わかりみが深いね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……誰もやっていない商売は、無いのか。"
+      - speaker: yakuin
+        emotion: surprised
+        text: "個人の荷物、でしょうか。しかしあれは……"
+      - speaker: zundamon
+        emotion: normal
+        text: "儲からない、と。"
+      - speaker: yakuin
+        emotion: normal
+        text: "はい。一個ずつ違う家に行きます。とても合いません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもこの分野、郵便局がほぼ独占してたの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "国の相手か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。誰も入っていかない場所だった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……逆に考えるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰もいない場所なら、値下げ合戦も無い。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……その発想を、この人は本当にやるんだよ。"
+
+  - id: gyudon
+    title: "ヒント①・牛丼"
+    background: il_ogu_gyudon
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "答えのヒントはね、運送業界の外にあったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "外。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "一つ目は、牛丼屋。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "牛丼！？ 荷物と何の関係があるのだ。"
+      - speaker: reimu
+        text: "当時、吉野家はメニューを牛丼だけに絞って高い収益を上げていました。"
+        reading: "とうじ、よしのやわめにゅうをぎゅうどんだけにしぼってたかいしゅうえきをあげていました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……一種類しか出さないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。だから仕込みも、器も、動線も、全部そこに最適化できる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……メニューを減らすと、逆に強くなるのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。絞り込み。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……うちは、なんでも運んでるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "大口も、小口も、長距離も、近場も。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから、どれも中途半端になる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……全部やるのは、優しさじゃなくて弱さなのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "急にいいこと言うじゃん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "牛丼屋に教わったのだ。"
+
+  - id: oi
+    title: "ヒント②・甥"
+    background: il_ogu_yubinkyoku
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shufu, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "二つ目のヒントは、彼自身の用事から来ました。"
+        reading: "ふたつめのひんとわ、かれじしんのようじからきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "千葉の甥に、荷物を送りたいのだ。"
+      - speaker: shufu
+        emotion: thinking
+        text: "……お荷物ですか。中身は何でしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "普通の品です。箱ひとつ。"
+      - speaker: shufu
+        emotion: sad
+        text: "うちでは、そういうのはお受けできません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……受けられない？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時ね、個人が荷物を送る手段って、ほとんど無かったの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "運送会社の社長が、荷物を送れないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこ、ちょっと面白いよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……待て。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "困ってるのは、ボクだけじゃないのだ。"
+        telops:
+          - {text: "困っているのは、家庭だった", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。相手は会社じゃない。家。"
+      - speaker: zundamon
+        emotion: normal
+        text: "家は、日本中にあるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。数だけなら、大口よりずっと多い。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……一個は小さい。でも、数が違う。"
+
+  - id: jalpack
+    title: "ヒント③・パッケージ"
+    background: il_ogu_honsha
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "三つ目のヒントは、旅行。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "また関係ないのが来たぞ。"
+      - speaker: reimu
+        text: "日本航空の「ジャルパック」という商品です。"
+        reading: "にほんこうくうのじゃるぱっくというしょうひんです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "飛行機とホテルと観光を、ひとつの値段にまとめて売るの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ばらばらに買うより分かりやすいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。悩まなくていい。だから売れる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……荷物も、同じにできるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "重さで細かく分けるのをやめる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "面倒な計算もやめる。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "箱の大きさだけで、値段を決めるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "はい優勝。それが商品になるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……絞り込んで、家庭に向けて、分かりやすく売る。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "三つのヒントが、ここで一本になったんだよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "名前も要るな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。「宅急便」。"
+
+  - id: hantai
+    title: "全員、反対"
+    background: il_ogu_kaigi
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: yakuin, x: 0.5}
+      - {who: shain, x: 0.62}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "個人の荷物を、家から家へ運びます。"
+      - speaker: yakuin
+        emotion: surprised
+        text: "……本気ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "本気です。"
+      - speaker: yakuin
+        emotion: angry
+        text: "一個いくらの商売ですよ。トラック一台で何十軒も回る。"
+      - speaker: shain
+        emotion: sad
+        text: "しかも、いつ荷物が出るか分かりません。"
+      - speaker: yakuin
+        emotion: angry
+        text: "空のトラックが走るだけです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……最初は、そうなります。"
+      - speaker: yakuin
+        emotion: surprised
+        text: "認めるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。数が集まるまでは、赤字です。"
+      - speaker: shain
+        emotion: surprised
+        text: "……ではなぜ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "数が集まったら、誰も追いつけなくなるからです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "密度がね、この商売の全部なの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一本の道に荷物が十個あれば、一軒あたりの手間は十分の一なのだ。"
+      - speaker: yakuin
+        emotion: thinking
+        text: "……集まれば、ですが。"
+      - speaker: zundamon
+        emotion: angry
+        text: "集めるんです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "役員はほぼ全員反対。業界も、官庁も、反対。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……四面楚歌なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。そして彼は、大口の商売を減らす決断までする。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "稼ぎ頭を減らすのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "絞り込みだからね。両方は持てないの。"
+
+  - id: shonichi
+    title: "1976・初日11個"
+    background: il_ogu_gaito
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1976年、宅急便が始まりました。"
+        reading: "せんきゅうひゃくななじゅうろくねん、たっきゅうびんがはじまりました。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。本日の集荷、まとまりました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "何個だ。"
+      - speaker: shain
+        emotion: sad
+        text: "……十一個です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……十一。"
+        telops:
+          - {text: "初日 11個", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: shain
+        emotion: sad
+        text: "トラックは、ほとんど空のまま走りました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ここで折れる人が、たぶんほとんどだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "十一個、届いたのか。"
+      - speaker: shain
+        emotion: surprised
+        text: "は、はい。全部、届きました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "なら、いい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "十一人が、便利だと思ったはずだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その人が、次は誰かに話す。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "宣伝費をかけるより、届いた体験のほうが強いって考えたの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "だから、絶対に翌日に届けるぞ。"
+      - speaker: shain
+        emotion: surprised
+        text: "……翌日、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "できないなら、やる意味がない。"
+      - speaker: reimu
+        text: "取扱いの数は、そこから伸びていきます。"
+        reading: "とりあつかいのかずわ、そこからのびていきます。"
+
+  - id: mitsukoshi
+    title: "1979・大口を切る"
+    background: il_ogu_hyakkaten
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: hyakka, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1979年、[小倉|おぐら]はある通告を出します。"
+        reading: "せんきゅうひゃくななじゅうくねん、おぐらわあるつうこくをだします。"
+      - speaker: hyakka
+        emotion: angry
+        text: "……取引を、やめる？ そちらから、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: hyakka
+        emotion: angry
+        text: "うちは創業以来のお得意先ですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "承知しています。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここ、間違えられやすいんだけど。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "切られたんじゃなくて、ヤマトの側から切ってるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "自分から一番の客を切ったのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。条件の要求が続いて、これ以上は無理だと判断した。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……大口を抱えたままだと、宅急便に人を回せないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこも大きいね。牛丼屋になるって、そういうこと。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……退路を、自分で焼いたのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。もう戻れない。"
+      - speaker: hyakka
+        emotion: sad
+        text: "……後悔しますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "するかもしれません。それでも、やります。"
+
+  - id: menkyo
+    title: "免許が下りない"
+    background: il_ogu_unyusho
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: yakunin, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1980年代の半ば、荷物を運ぶ路線には国の免許が必要でした。"
+        reading: "せんきゅうひゃくはちじゅうねんだいのなかば、にもつをはこぶろせんにわくにのめんきょがひつようでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "申請は出しています。返事をください。"
+      - speaker: yakunin
+        emotion: normal
+        text: "……検討中です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "前も、そう聞きました。"
+      - speaker: yakunin
+        emotion: normal
+        text: "検討中です。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この「検討中」がね、五年続くの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "五年！？"
+        telops:
+          - {text: "申請から5年、返事なし", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "却下でもない。許可でもない。ただ、止まってる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……断られたほうがマシなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。理由が分かれば、直せるからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なぜ出ないんですか。基準を教えてください。"
+      - speaker: yakunin
+        emotion: normal
+        text: "……総合的に判断しています。"
+      - speaker: zundamon
+        emotion: angry
+        text: "総合的。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "何も言ってないのと同じだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その間、届けたい家は待っているのだ。"
+
+  - id: teiso
+    title: "1986・監督官庁を訴える"
+    background: il_ogu_hotei
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: angry}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: bengo, x: 0.52}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……訴えます。"
+      - speaker: bengo
+        emotion: surprised
+        text: "訴える、とおっしゃいますと。相手は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "運輸省です。"
+      - speaker: bengo
+        emotion: surprised
+        se: don
+        text: "……監督官庁ですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "知っています。"
+      - speaker: bengo
+        emotion: sad
+        text: "この先ずっと、許認可でお世話になる相手です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、いま直さないといけないんです。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……ここ、たぶん一番ヤバいところ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何がヤバいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "普通の会社は、役所と喧嘩しないの。あとが怖いから。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……あとが怖いから、五年待ったのだ。"
+      - speaker: reimu
+        text: "1986年の夏、彼は行政訴訟に踏み切ります。"
+        reading: "せんきゅうひゃくはちじゅうろくねんのなつ、かれわぎょうせいそしょうにふみきります。"
+      - speaker: reimu
+        text: "訴えの中身は、決めないことそのものが違法だ、というものでした。"
+        reading: "うったえのなかみわ、きめないことそのものがいほうだ、というものでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……許可しろ、とは言っていない。"
+      - speaker: zundamon
+        emotion: angry
+        text: "決めろ、と言っているのだ。"
+        telops:
+          - {text: "「決めないこと」が違法だと訴えた", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……論点の置き方が、うますぎるんだよね。"
+      - speaker: bengo
+        emotion: normal
+        text: "……勝てるかもしれません。"
+
+  - id: shori
+    title: "4か月後"
+    background: il_ogu_unyusho
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: yakunin, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "提訴のあと、免許は四か月で交付されました。"
+        reading: "ていそのあと、めんきょわよんかげつでこうふされました。"
+        telops:
+          - {text: "5年 → 提訴して4か月", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "五年出なかったものが、四か月！？"
+      - speaker: tsumugi
+        emotion: angry
+        text: "つまり、出せたんだよね。ずっと。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……出せたのに、出さなかったのだ。"
+      - speaker: yakunin
+        emotion: sad
+        text: "……交付いたします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ありがとうございます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それと、もうひとつ。"
+      - speaker: yakunin
+        emotion: surprised
+        text: "……まだ何か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "基準を、はっきり決めてください。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自分の免許を取って終わり、にしなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクだけ通っても、意味がないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次に来る誰かが、また五年待つ。"
+      - speaker: reimu
+        text: "路線免許の審査基準は、このあと明確化されます。"
+        reading: "ろせんめんきょのしんさきじゅんわ、このあとめいかくかされます。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "一社の勝ちじゃなくて、ルールが変わった。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……これが本丸なのだ。"
+
+  - id: zenkoku
+    title: "当たり前になるまで"
+    background: il_ogu_track
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: happy}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "宅急便は、そこから全国に広がっていくの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "十一個から始まったのに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。密度が上がると、一気に強くなる商売だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……最初に赤字を覚悟した意味が、ここで出るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。しかもこの人、便利な仕組みをどんどん足していく。"
+      - speaker: zundamon
+        emotion: normal
+        text: "時間を指定して届ける、とかか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そういうの。当たり前の顔してるけど、全部あとから作られたもの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ボクが不在票を三枚ためたのも、この人のおかげなのだ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "それは違う。あなたのせい。"
+      - speaker: reimu
+        text: "1991年に相談役、1995年6月29日に退任します。"
+        reading: "せんきゅうひゃくきゅうじゅういちねんにそうだんやく、せんきゅうひゃくきゅうじゅうごねんろくがつにじゅうくにちにたいにんします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……七十歳か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。ここで終わりだと思うでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "終わりじゃないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人、ここから全然違うことを始めるの。"
+
+  - id: ichimanen
+    title: "月に、一万円"
+    background: il_ogu_sagyosho
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+      - {who: sagyo, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1993年9月10日、彼は福祉の財団を設立し、理事長になります。"
+        reading: "せんきゅうひゃくきゅうじゅうさんねんくがつとおか、かれわふくしのざいだんをせつりつし、りじちょうになります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……運送と関係ないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。無いね。"
+      - speaker: reimu
+        text: "1995年、彼は障がいのある人たちの給料を知ることになります。"
+        reading: "せんきゅうひゃくきゅうじゅうごねん、かれわしょうがいのあるひとたちのきゅうりょうをしることになります。"
+      - speaker: sagyo
+        emotion: normal
+        text: "……うちの作業所ですと、月に一万円ほどです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……一万円。日給ですか。"
+      - speaker: sagyo
+        emotion: sad
+        text: "いえ。月給です。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……。"
+        telops:
+          - {text: "給料は、月に1万円に満たなかった", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "……それでは、暮らせません。"
+      - speaker: sagyo
+        emotion: sad
+        text: "はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……作っているものは、売れているんですか。"
+      - speaker: sagyo
+        emotion: sad
+        text: "……買ってくださる方はいます。同情で。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……同情で。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "ここで、この人の考え方が出るの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それでは、一回きりです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同情は、続かないのだ。"
+
+  - id: swan
+    title: "1998・パン屋"
+    background: il_ogu_pan
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: sagyo, x: 0.52}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……売れるものを、作りましょう。"
+      - speaker: sagyo
+        emotion: surprised
+        text: "売れるもの、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "焼きたてのパンは、どうですか。"
+      - speaker: sagyo
+        emotion: surprised
+        text: "……パン。"
+      - speaker: zundamon
+        emotion: normal
+        text: "美味しければ、毎日買いに来ます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "「障がいのある人が作ったから」ではなく。"
+      - speaker: zundamon
+        emotion: happy
+        text: "「美味しいから」で、買ってもらうのだ。"
+        telops:
+          - {text: "同情ではなく、商品で勝つ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "……これ、宅急便のときと同じ考え方だよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じなのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "十一個の荷物を、ちゃんと翌日に届けた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "商品が良ければ、次がある。"
+      - speaker: reimu
+        text: "1998年、パンの店の一号店が開きます。"
+        reading: "せんきゅうひゃくきゅうじゅうはちねん、ぱんのみせのいちごうてんがひらきます。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "いまはフランチャイズも含めて、全国に三十店ほど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……給料は、上がったのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。ちゃんと働いて、ちゃんともらう形になった。"
+      - speaker: reimu
+        text: "[小倉昌男|おぐらまさお]は、2005年6月30日に亡くなりました。"
+        reading: "おぐらまさおわ、にせんごねんろくがつさんじゅうにちになくなりました。"
+
+  - id: shime
+    title: ""
+    background: il_ogu_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、さっき不在票に文句を言ってたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "三枚ね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……あれ、五十年前は「不在票が来る家」自体が無かったのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。駅まで自分で運んでた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……当たり前って、誰かが赤字を覚悟した跡なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "初日は十一個だったしね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しかも、役所を訴えてまで通した。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、自分の免許だけじゃなくて基準ごと変えさせた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……次に来る誰かのために、か。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。そこがこの人の、いちばん強いところだと思う。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よし。今日は玄関で待つのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "がんばれ。トイレは先に行っておいて。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "次に荷物を受け取るとき、ちょっとだけ思い出してみて。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

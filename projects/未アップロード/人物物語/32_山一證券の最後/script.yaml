@@ -174,7 +174,7 @@ scenes:
         emotion: thinking
         text: "……言い訳するのだな。床が悪いとか。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "ううん。泣きながら、こう言った。"
       - speaker: tsumugi
         emotion: normal
@@ -335,7 +335,7 @@ scenes:
         emotion: angry
         text: "三年目で……ボクは、まだここにいるのだ。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……そして、二十一で大学に入り直すの。"
       - speaker: zundamon
         emotion: surprised
@@ -656,7 +656,7 @@ scenes:
         emotion: surprised
         text: "……えっ。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "そのときは、断られる。"
       - speaker: zundamon
         emotion: sad
@@ -883,7 +883,7 @@ scenes:
         emotion: angry
         text: "聞かされてないのだ！"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……十月。ある日、役員が二人、社長室に来るの。"
 
   - id: kokuhaku
@@ -892,7 +892,7 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
-      - {who: tsumugi, x: 0.74}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
       - {who: joumu, x: 0.5}
       - {who: fukusha, x: 0.62}
     cuts:
@@ -942,7 +942,7 @@ scenes:
         emotion: sad
         text: "……。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "社長になって、二か月。"
       - speaker: zundamon
         emotion: normal
@@ -960,7 +960,7 @@ scenes:
         emotion: normal
         text: "……それでも、判子を押すのはボクなのだな。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……そう。看板を持ってるのは、いま、あなただから。"
 
   - id: ginko
@@ -969,7 +969,7 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
-      - {who: tsumugi, x: 0.74}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
       - {who: ginko, x: 0.52}
     cuts:
       - speaker: zundamon
@@ -987,6 +987,15 @@ scenes:
       - speaker: zundamon
         emotion: sad
         text: "……。"
+
+  - id: ginko2
+    title: ""
+    background: il_yam_ginko
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+    cuts:
       - speaker: reimu
         text: "この年、金融機関の破綻が続いていました。"
         reading: "このとし、きんゆうきかんのはたんがつづいていました。"
@@ -1003,13 +1012,13 @@ scenes:
         emotion: normal
         text: "……三十二年前は、助けてもらったのだ。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "覚えてたんだね。"
       - speaker: zundamon
         emotion: normal
         text: "入社二年目で、列を見てるからな。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……でも、今度はその手は来なかった。"
       - speaker: reimu
         text: "無制限・無担保という言葉は、二度は使われませんでした。"
@@ -1024,7 +1033,7 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
-      - {who: tsumugi, x: 0.74}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
       - {who: okura, x: 0.52}
     cuts:
       - speaker: okura
@@ -1053,6 +1062,15 @@ scenes:
       - speaker: zundamon
         emotion: sad
         text: "……。"
+
+  - id: tsukoku2
+    title: ""
+    background: il_yam_okurasho
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+    cuts:
       - speaker: reimu
         text: "11月19日。大蔵省からの通告でした。"
         reading: "じゅういちがつじゅうくにち。おおくらしょうからのつうこくでした。"
@@ -1075,7 +1093,7 @@ scenes:
         emotion: normal
         text: "……客の[金|かね]は、守るのだな。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "うん。守る。……社員の仕事は、守れない。"
       - speaker: zundamon
         emotion: sad
@@ -1087,7 +1105,7 @@ scenes:
     bgm: kinakusai
     stage:
       - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
-      - {who: tsumugi, x: 0.74}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
       - {who: shain, x: 0.52}
     cuts:
       - speaker: reimu
@@ -1105,6 +1123,15 @@ scenes:
       - speaker: zundamon
         emotion: sad
         text: "……。"
+
+  - id: scoop2
+    title: ""
+    background: il_yam_honsha_yoru
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+    cuts:
       - speaker: tsumugi
         emotion: normal
         text: "社員のほとんどが、新聞で知ったの。"
@@ -1130,7 +1157,7 @@ scenes:
     bgm: 223am
     stage:
       - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
-      - {who: tsumugi, x: 0.74}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
       - {who: kisha, x: 0.52}
     cuts:
       - speaker: reimu
@@ -1151,6 +1178,15 @@ scenes:
       - speaker: zundamon
         emotion: sad
         text: "……。"
+
+  - id: kaiken2
+    title: ""
+    background: il_yam_kaiken
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+    cuts:
       - speaker: zundamon
         emotion: sad
         text: "……これだけは、言いたい。"
@@ -1175,7 +1211,7 @@ scenes:
         text: "彼は、泣きながら話しました。"
         reading: "かれわ、なきながらはなしました。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……この映像、いまも残ってるの。"
       - speaker: zundamon
         emotion: sad
@@ -1187,7 +1223,7 @@ scenes:
         emotion: normal
         text: "……床が悪い、とか。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "うん。でも彼は、一度も外に矢印を向けなかった。"
       - speaker: zundamon
         emotion: normal
@@ -1202,7 +1238,7 @@ scenes:
     bgm: 223am
     stage:
       - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
-      - {who: tsumugi, x: 0.74}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
       - {who: shainf, x: 0.5}
       - {who: shain, x: 0.62}
     cuts:
@@ -1224,6 +1260,15 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "それが、いまの私の仕事です。"
+
+  - id: shain2
+    title: ""
+    background: il_yam_honsha_yoru
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+    cuts:
       - speaker: reimu
         text: "彼は廃業の業務に追われながら、社員の履歴書を持って歩いています。"
         reading: "かれわはいぎょうのぎょうむにおわれながら、しゃいんのりれきしょをもってあるいています。"
@@ -1239,13 +1284,13 @@ scenes:
         emotion: normal
         text: "……どうか、会ってやってください。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……三十年、営業をやってきた人だから。"
       - speaker: zundamon
         emotion: normal
         text: "……頭を下げるのは、慣れてるのだ。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "うん。ただ今度は、自分の数字のためじゃない。"
 
   - id: rirekisho
@@ -1283,7 +1328,7 @@ scenes:
         emotion: thinking
         text: "……もし言い訳してたら。"
       - speaker: tsumugi
-        emotion: sad
+        emotion: thinking
         text: "……たぶん、みんなまとめて疑われてた。"
       - speaker: zundamon
         emotion: sad
