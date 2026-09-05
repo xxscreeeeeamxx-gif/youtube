@@ -15,6 +15,19 @@
 #   （告白から会見以降は一切入れない。人が職を失う場面に笑いを乗せない）
 # 裏取り: 野澤正平Wikipedia / 山一證券Wikipedia / nippon.com「1997年の今日」/
 #   日経「1997年11月24日 山一証券、自主廃業発表」/ テレ東BIZ「破綻から20年」
+# 読み検査で見つけた実誤読（全部タグで修正済み・2026-09-05）:
+#   金=キン ×2（預けた金 / 客の金）→ [金|かね] ※SKILL.md既知の系統
+#   方=ホオ（社員の方には）→ [方|かた] ※「次の方=ツギノホオ」と同じ
+#   は？=ワ（間投詞）→ [は|はぁ]
+#   強いて=ツヨイテ → [強いて|しいて] ※一般語なので readings_common.yaml へ登録した
+#   角=カク（通りの角）→ [角|かど] ※Sudachiだけが カド を出していた
+#   年=ネン（同じ年の2月・ナレ）→ [年|とし]
+#     ★ナレは reading: を見ない（voice.py:327 が is_aq のとき cut.reading を使わない）。
+#       AquesTalkは漢字かな交じりの text を読むので、誤読はタグでしか直せない
+# whisper照合の既知の偽陽性:
+#   idx125「小池国三」…… タグ有り(カナ)は「恋結二堂」、タグ無し(漢字)は「小池区2号」と
+#   書き起こされる。カナを直接渡している以上、音は定義上正しい。
+#   whisperがゆっくり声の珍しい固有名詞を書き起こせないだけ（A/B合成で確認済み）
 # 確定事実:
 #   1938-4-3 長野県長野市川中島付近に生まれる。父は畳職人で農業も営んでいた
 #   長野県屋代東高等学校を卒業後、3年間畑仕事に従事
@@ -98,7 +111,7 @@ scenes:
         text: "出た。都合のいいときだけ別人。"
       - speaker: zundamon
         emotion: normal
-        text: "強いて言えば、重力が悪い。"
+        text: "[強いて|しいて]言えば、重力が悪い。"
       - speaker: tsumugi
         emotion: thinking
         text: "重力を訴えるの？"
@@ -176,7 +189,7 @@ scenes:
         text: "うん。しかもこの社長、その借金を作った人じゃないの。"
       - speaker: zundamon
         emotion: surprised
-        text: "は？ じゃあ誰が作ったのだ。"
+        text: "[は|はぁ]？ じゃあ誰が作ったのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "前の経営陣。社長になって初めて、その存在を知らされた。"
@@ -587,7 +600,7 @@ scenes:
         text: "そう。入社二年目で、会社が傾いた。"
       - speaker: kyaku
         emotion: angry
-        text: "おい！ 預けた金を返してくれ！"
+        text: "おい！ 預けた[金|かね]を返してくれ！"
       - speaker: kyaku
         emotion: angry
         text: "潰れるって新聞に出てるじゃないか！"
@@ -599,7 +612,7 @@ scenes:
         reading: "てんとうにひとがおしよせました。とりつけそうぎです。"
       - speaker: zundamon
         emotion: sad
-        text: "……列が、通りの角まで伸びてるのだ。"
+        text: "……列が、通りの[角|かど]まで伸びてるのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "信用商売でこれが起きたら、もう自力では止まらない。"
@@ -1060,7 +1073,7 @@ scenes:
         text: "そう。自主廃業なら、返しながら閉じられる。"
       - speaker: zundamon
         emotion: normal
-        text: "……客の金は、守るのだな。"
+        text: "……客の[金|かね]は、守るのだな。"
       - speaker: tsumugi
         emotion: sad
         text: "うん。守る。……社員の仕事は、守れない。"
@@ -1134,7 +1147,7 @@ scenes:
         text: "……経営に、あります。"
       - speaker: kisha
         emotion: normal
-        text: "社員の方には、どう説明されますか。"
+        text: "社員の[方|かた]には、どう説明されますか。"
       - speaker: zundamon
         emotion: sad
         text: "……。"
@@ -1279,7 +1292,7 @@ scenes:
         text: "[山一證券|やまいちしょうけん]の清算は、2005年1月の債権者集会をもって終わります。"
         reading: "やまいちしょうけんのせいさんわ、にせんごねんいちがつのさいけんしゃしゅうかいをもっておわります。"
       - speaker: reimu
-        text: "同じ年の2月、破産手続の終結が登記されました。"
+        text: "同じ[年|とし]の2月、破産手続の終結が登記されました。"
         reading: "おなじとしのにがつ、はさんてつづきのしゅうけつがとうきされました。"
       - speaker: zundamon
         emotion: normal
