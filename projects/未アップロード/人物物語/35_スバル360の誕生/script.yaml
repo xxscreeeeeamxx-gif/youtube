@@ -1,0 +1,1035 @@
+# スバル360・再現ドラマ（[百瀬晋六|ももせしんろく]・1919→1997）。投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ6本目。戦闘機の技術者が、戦後に国民車を作る話。
+#   「作れないはずのものを作った」型で、制約（軽自動車規格）が敵になる
+# ★配役: ずんだもん=百瀬晋六 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★ミーム禁止の章: haisen（敗戦・飛行機を取り上げられる場面）
+# 裏取り: 百瀬晋六Wikipedia / スバル・360Wikipedia / COBBY「スバル360はてんとう虫と
+#   呼ばれた国民車」/ CARPRIME「スバル360てんとう虫とはどんな車？」
+# 確定事実:
+#   1919-2-20 生 / 1997-1-21 没（77歳）。長野県塩尻市 出身
+#   松本高等学校(旧制)→東京帝国大学工学部航空学科（1939入学・1941-12卒・原動機専攻）
+#   1942-1 中島飛行機入社。偵察機「彩雲」用「誉」エンジンの改造に従事。
+#     高高度用過給機の追加、ターボとインタークーラーの開発を1944年終戦まで担当
+#   1949 日本初のモノコック構造リアエンジンバス「ふじ号」を開発
+#   1954 すばる1500(コードネームP-1)を開発。モノコックボディ・前輪独立サスペンションの
+#     画期的設計だったが、メインバンクの日本興業銀行が日産自動車の大株主だったため
+#     設備投資の承認が得られず、試作のみで終了。数台は社用車やタクシーとして使用
+#   1955〜 スバル360の開発を主導。1958 発売。1970年まで継続生産
+#     大人4人が乗れるスペースを確保。価格 42万5000円。累計 約39万2000台
+#     愛称「てんとう虫」（VWタイプ1=ビートル＝かぶと虫 に対して）
+#   1961 スバル・サンバー / 1966 スバル1000（水平対向4気筒、D.O.Jを世界初実用化）
+#   1966 自動車技術本部長 / 1968〜 取締役スバル技術本部長
+#   本人の言葉:「図面に書く前にまず絵を描け。良い絵は必ず良い製品になる」
+#   口癖:「技術に上下の差は無い」
+#   逸話: 身長180cm台。自らモックアップに出入りしてダミーの代役をし、居住性を詰めた
+#   ※車重は未確認なので数字を出さない
+meta:
+  title: "【スバル360の誕生】戦闘機のエンジン屋が、国民車を作るまで【ずんだもん解説】"
+  slug: "momose-subaru360"
+  summary: "飛行機を作れなくなった技術者たちがいました。彼らに与えられたのは、長さ3メートル・排気量360ccという厳しい枠です。その中に大人4人を乗せろと言われて、設計者は自分の体でモックアップに出入りしました。ずんだもんが百瀬晋六を演じる再現ドラマです。"
+  tags: ["スバル360", "百瀬晋六", "てんとう虫", "軽自動車", "中島飛行機", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "作れないはずの車"
+    bottom: "スバル360の誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: joushi, label: "上司", voice: 13, pitch: -0.08, item: hat}
+    - {id: gishi, label: "設計の技師", voice: 12, pitch: 0.02}
+    - {id: gishif, label: "設計の技師", voice: 8, pitch: 0.06}
+    - {id: ginko, label: "銀行の人", voice: 13, pitch: -0.04, item: hat}
+    - {id: keiei, label: "経営陣", voice: 13, pitch: -0.02, item: hat}
+    - {id: kyaku, label: "お客", voice: 42, pitch: 0.0}
+scenes:
+  - id: hook
+    title: ""
+    background: il_sub_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: angry
+        text: "つむぎ、この箱に四人入るのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "どの箱。"
+      - speaker: zundamon
+        emotion: happy
+        text: "この段ボールだ。ボクが計算した。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……計算って、面積だけ見てない？"
+      - speaker: zundamon
+        emotion: normal
+        text: "見た。四人ぶんの面積はある。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "人は薄い板じゃないの。頭も膝もあるでしょ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……うっ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "紙の上だと入るんだよね。実物だと入らない。"
+      - speaker: zundamon
+        emotion: angry
+        text: "じゃあ、どうすればいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自分で入ってみるしかないよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……原始的すぎるだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもね、それを本当にやった設計者がいるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "国民車を作った人。身長は百八十センチ台。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "でかいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。その人が自分でモックアップに出たり入ったりして、"
+      - speaker: tsumugi
+        emotion: happy
+        text: "「これなら大人四人が座れる」を決めたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なんでそんなに狭い車を作るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枠が決まってたから。当時の軽自動車の規格。"
+      - speaker: reimu
+        text: "長さも幅も排気量も、法律で上限が決められていました。"
+        reading: "ながさもはばもはいきりょうも、ほうりつでじょうげんがきめられていました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その中に、大人四人。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の常識では、無理。二人乗りがせいぜいと言われてた。"
+      - speaker: zundamon
+        emotion: angry
+        text: "無理ゲーじゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。しかもこの人、もともと車の人じゃないの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "また出たぞ、その展開。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "戦闘機のエンジンをやってた人。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "飛行機！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[百瀬晋六|ももせしんろく]。作った車は「てんとう虫」と呼ばれた。"
+      - speaker: zundamon
+        emotion: happy
+        text: "かわいい名前なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。中身は、飛行機の理屈でできてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: nakajima
+    title: "1942・中島飛行機"
+    background: il_sub_hikoki
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: joushi, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "[百瀬晋六|ももせしんろく]は1919年2月20日、長野県の[塩尻|しおじり]に生まれました。"
+        reading: "ももせしんろくわせんきゅうひゃくじゅうくねんにがつはつか、ながのけんのしおじりにうまれました。"
+      - speaker: reimu
+        text: "東京帝国大学の航空学科で、原動機を専攻します。"
+        reading: "とうきょうていこくだいがくのこうくうがっかで、げんどうきをせんこうします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "原動機。エンジンのことなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。飛行機のエンジン屋さんになる進路。"
+      - speaker: reimu
+        text: "1942年1月、中島飛行機に入社します。"
+        reading: "せんきゅうひゃくよんじゅうにねんいちがつ、なかじまひこうきににゅうしゃします。"
+      - speaker: joushi
+        emotion: normal
+        text: "百瀬くん。担当は、偵察機のエンジンだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……高いところを飛ぶ機体ですね。"
+      - speaker: joushi
+        emotion: normal
+        text: "そうだ。高く飛べば、撃たれにくい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "ですが、高いところは空気が薄い。"
+      - speaker: joushi
+        emotion: normal
+        text: "そこが君の仕事だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、あとで効いてくるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "空気が薄いと、燃やす分が足りないのだ。"
+      - speaker: reimu
+        text: "彼は、空気を押し込む装置と、その熱を冷ます装置を担当しました。"
+        reading: "かれわ、くうきをおしこむそうちと、そのねつをさますそうちをたんとうしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "押し込むと、空気は熱くなる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "熱いままだと薄いのと同じだから、冷ましてから入れるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……いま説明したの、いまの車のターボと同じ理屈だよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "八十年前の話だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。飛行機のほうが先だったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……軽く作る、というのも飛行機の話だな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこが一番大事。一グラムでも軽くしないと飛ばないから。"
+      - speaker: joushi
+        emotion: normal
+        text: "百瀬くん。この機体は、逃げ切るための機体だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……戦うのではなく。"
+      - speaker: joushi
+        emotion: normal
+        text: "写真を撮って、帰る。撃たれる前に離れる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……速さと、高さだけが命ですね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここも効いてくるの。「何を捨てるか」を最初に決める設計。"
+      - speaker: zundamon
+        emotion: normal
+        text: "武装を積めば、そのぶん重くなる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "重くなれば、高く飛べない。"
+      - speaker: gishi
+        emotion: normal
+        text: "……では、積まないと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。全部を持てる機体は、無い。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……これ、あとで軽自動車でそのまま言うことになるんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何を捨てるか、か。"
+
+  - id: haisen
+    title: "1945・飛行機を作れない"
+    background: il_sub_haikyo
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+      - {who: joushi, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "戦争が終わり、日本は航空機を作ることを禁じられます。"
+        reading: "せんそうがおわり、にほんわこうくうきをつくることをきんじられます。"
+      - speaker: joushi
+        emotion: sad
+        text: "……百瀬くん。飛行機は、もう作れない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: joushi
+        emotion: sad
+        text: "設計図も、設備も、残らないだろう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……人は、残ります。"
+      - speaker: joushi
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "薄い空気で力を出す方法も、軽く作る方法も。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全部、頭の中にあります。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……この人たち、行き場を失ったんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……次は、何を作るんですか。"
+      - speaker: joushi
+        emotion: normal
+        text: "……鍋。それから、自転車。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……鍋。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "実際、そういう時代なの。作れるものを作るしかなかった。"
+      - speaker: reimu
+        text: "やがて彼は、バスの車体を任されます。"
+        reading: "やがてかれわ、ばすのしゃたいをまかされます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……バス。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……バス。人を、運ぶのですね。"
+      - speaker: joushi
+        emotion: normal
+        text: "そうだ。空は飛べんが、地面は走れる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……失礼を承知で言いますが。"
+      - speaker: joushi
+        emotion: normal
+        text: "なんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "飛行機とバスは、そんなに遠くありません。"
+      - speaker: joushi
+        emotion: surprised
+        text: "……遠く、ない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どちらも、人を乗せて、軽く、丈夫に作る箱です。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……この言い方ができる人は、たぶん強いよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "扱う空気の速さが違うだけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1949年。日本で初めての、あの構造のバス。"
+
+  - id: fujigo
+    title: "1949・ふじ号"
+    background: il_sub_bus
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.52}
+    cuts:
+      - speaker: gishi
+        emotion: normal
+        text: "バスは、丈夫な骨組みの上に箱を載せて作ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……骨と、皮が別なんですね。"
+      - speaker: gishi
+        emotion: normal
+        text: "はい。骨が強度を持ちます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……重いでしょう。"
+      - speaker: gishi
+        emotion: surprised
+        text: "それは、そうですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "飛行機に、骨組みだけの機体はありません。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……といいますと。"
+      - speaker: reimu
+        text: "飛行機は、外側の板そのものに力を持たせて軽くします。"
+        reading: "ひこうきわ、そとがわのいたそのものにちからをもたせてかるくします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "皮を厚くして、骨を減らすのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これがモノコック。卵の殻みたいに、外側で支える作り方。"
+      - speaker: zundamon
+        emotion: happy
+        text: "卵は、骨が入ってないのに握っても割れないぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。形そのものが強度なの。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……バスで、それをやるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "やります。軽くなれば、同じ力でよく走る。"
+      - speaker: reimu
+        text: "1949年、日本初のモノコック構造のリアエンジンバスができました。"
+        reading: "せんきゅうひゃくよんじゅうくねん、にほんはつのものこっくこうぞうのりああえんじんばすができました。"
+        telops:
+          - {text: "日本初のモノコックバス", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "飛行機の理屈が、そのまま使えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、次に「車をやろう」って話になるの。"
+
+  - id: p1
+    title: "1954・幻の1500"
+    background: il_sub_kaigi
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: ginko, x: 0.5}
+      - {who: keiei, x: 0.62}
+    cuts:
+      - speaker: reimu
+        text: "1954年、自動車に進出するための試作車ができます。"
+        reading: "せんきゅうひゃくごじゅうよねん、じどうしゃにしんしゅつするためのしさくしゃができます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "モノコックで、前輪は独立させました。"
+      - speaker: keiei
+        emotion: surprised
+        text: "……独立、といいますと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "左右の車輪が、別々に動きます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "片側が石を踏んでも、反対側が跳ねません。"
+      - speaker: keiei
+        emotion: happy
+        text: "……乗り心地が、まるで違う。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1954年でこれ。当時としては、かなり進んでるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "作りましょう。"
+      - speaker: ginko
+        emotion: normal
+        text: "……その設備投資は、承認できません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……理由を、伺っても。"
+      - speaker: ginko
+        emotion: normal
+        text: "……お答えできません。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "銀行側の事情なの。"
+      - speaker: reimu
+        text: "メインバンクは、別の自動車会社の大株主でもありました。"
+        reading: "めいんばんくわ、べつのじどうしゃがいしゃのおおかぶぬしでもありました。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……車の出来と、関係ないところで落ちたのか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "うん。技術は問題なかった。"
+      - speaker: reimu
+        text: "試作だけで終わり、数台が社用車やタクシーとして使われました。"
+        reading: "しさくだけでおわり、すうだいがしゃようしゃやたくしいとしてつかわれました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……数台。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……悔しいよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……大きい車は、金がかかるのだ。"
+      - speaker: gishi
+        emotion: sad
+        text: "……部長。あの車、社用車になるそうです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……走らせてもらえるだけ、ましだ。"
+      - speaker: gishi
+        emotion: sad
+        text: "タクシーにも回るとか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……乗った人は、どう言っている。"
+      - speaker: gishi
+        emotion: happy
+        text: "……よく走る、と。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……いちばん効くやつだよね、それ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "設計は、悪くなかったのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……止まったのは、金の話だ。"
+      - speaker: gishif
+        emotion: sad
+        text: "では、どうにもなりません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いや。金の話なら、金がかからない車を作ればいい。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……といいますと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……大きい車は、金がかかるのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なら、小さい車ならどうだ。"
+
+  - id: waku
+    title: "枠の中で戦う"
+    background: il_sub_sekkei
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.5}
+      - {who: gishif, x: 0.62}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "軽自動車の枠で、大人が四人乗る車を作る。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……四人、ですか。"
+      - speaker: gishif
+        emotion: sad
+        text: "あの寸法では、二人がやっとです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、やる意味がある。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枠が厳しいほど、入れた人が総取りになるんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まず、どこが場所を食っているかを出す。"
+      - speaker: gishi
+        emotion: normal
+        text: "エンジンと、車輪と、人です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……人は、削れない。"
+      - speaker: gishif
+        emotion: normal
+        text: "では、エンジンを後ろに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。前に置くと、そのぶん膝が入らない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "後ろに追いやると、前が丸ごと人の場所になるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "次に、骨だ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……バスと、同じですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "同じだ。外側の板で支える。"
+      - speaker: zundamon
+        emotion: normal
+        text: "骨を抜けば、その厚みぶん、内側が広くなる。"
+      - speaker: gishif
+        emotion: surprised
+        text: "……壁が薄くなるということですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。軽くもなる。一石二鳥だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "飛行機で当たり前だったことが、車ではまだ当たり前じゃなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……屋根も、削る。"
+      - speaker: gishi
+        emotion: surprised
+        text: "屋根を、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "布にする。軽いし、そのぶん頭上が稼げる。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "一ミリ単位で削っていくんだよね。"
+      - speaker: gishi
+        emotion: sad
+        text: "……ですが部長。これだけ削ると、荷物が積めません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "積まなくていい。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……いいんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この車で運ぶのは、荷物じゃない。人だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全部を持てる箱は無い、ってさっき言ってたもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "速さも要らない。長距離も要らない。"
+      - speaker: gishif
+        emotion: surprised
+        text: "……ずいぶん、捨てますね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "捨てないと、四人が乗らないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、宅急便の人と同じこと言ってるの、面白いよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……絞り込め、ということか。"
+      - speaker: gishi
+        emotion: normal
+        text: "エンジンは、どこまで小さくしますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "枠の上限まで使う。小さくする理由が無い。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……上限、いっぱいに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "決められた枠は、いっぱいまで使うものだ。"
+
+  - id: mockup
+    title: "自分で、入る"
+    background: il_sub_sekkei
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.52}
+    cuts:
+      - speaker: gishi
+        emotion: happy
+        text: "図面上は、四人入ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……図面上は、な。"
+      - speaker: zundamon
+        emotion: normal
+        text: "木で、実物大を作ってくれ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "模型を、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "座れないと話にならん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、ここからが有名な話。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。私が入る。"
+      - speaker: gishi
+        emotion: surprised
+        se: don
+        text: "部長がですか！？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "この人ね、身長が百八十センチ台あるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いちばん大きい人間が入れれば、たいていの人は入る。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……たしかに。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……頭が、当たる。"
+      - speaker: gishi
+        emotion: sad
+        text: "何ミリ、削りましょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "削るな。座面を下げろ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……下げると、床に当たります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "床の形を変える。足の入る場所だけ、彫り込め。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そんな細かいことまで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……出たり入ったりするしかないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙の上では、人は薄い板になってしまう。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……さっきのボクじゃん。"
+      - speaker: reimu
+        text: "彼はこう言っていたと伝えられています。"
+        reading: "かれわこういっていたとつたえられています。"
+      - speaker: reimu
+        text: "「図面に書く前に、まず絵を描け。良い絵は必ず良い製品になる」。"
+        reading: "ずめんにかくまえに、まずえをかけ。よいえわかならずよいせいひんになる。"
+        telops:
+          - {text: "図面に書く前に、まず絵を描け", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "……絵にすると、無理があるかどうかが先に見えるのだ。"
+      - speaker: gishi
+        emotion: sad
+        text: "……部長。もう三十回は出入りされています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まだ足りん。"
+      - speaker: gishi
+        emotion: surprised
+        text: "どこがですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "私は、乗り方を知っている。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……といいますと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "設計者は、うまく乗れてしまうのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "初めての人は、頭からぶつける。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そこまで見るんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "着物の人も乗る。荷物を持った人も乗る。"
+      - speaker: gishif
+        emotion: normal
+        text: "……では、いろんな人に座ってもらいましょう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうしてくれ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "紙の上の「四人」と、本物の四人は違うからね。"
+
+  - id: hatsubai
+    title: "1958・てんとう虫"
+    background: il_sub_machi
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: happy}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: kyaku, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1958年、スバル360が発売されました。"
+        reading: "せんきゅうひゃくごじゅうはちねん、すばるさんびゃくろくじゅうがはつばいされました。"
+      - speaker: reimu
+        text: "価格は42万5000円です。"
+        reading: "かかくわよんじゅうにまんごせんえんです。"
+        telops:
+          - {text: "42万5000円", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: kyaku
+        emotion: surprised
+        text: "……本当に、四人乗れるのかね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "どうぞ、乗ってみてください。"
+      - speaker: kyaku
+        emotion: surprised
+        text: "……おお。膝が当たらん。"
+      - speaker: kyaku
+        emotion: happy
+        text: "後ろも、大人が座れる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そこは、何度も出たり入ったりしましたので。"
+      - speaker: kyaku
+        emotion: thinking
+        text: "……丸いね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "角を落とすと、同じ寸法でも中が広くなります。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その丸さから、あだ名がついたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なんて呼ばれたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "「てんとう虫」。"
+      - speaker: zundamon
+        emotion: happy
+        text: "かわいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ドイツの大衆車が「かぶと虫」って呼ばれてたから、その並びね。"
+      - speaker: reimu
+        text: "生産は1970年まで続き、およそ39万2000台が作られました。"
+        reading: "せいさんわせんきゅうひゃくななじゅうねんまでつづき、およそさんじゅうきゅうまんにせんだいがつくられました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……四十万台近く。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。日本で最初の、本当の意味での国民車って言われてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……銀行に断られた、あの大きい車の代わりに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "小さいほうで、日本中に届いたの。"
+      - speaker: kyaku
+        emotion: happy
+        text: "……これなら、家族で出かけられるな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そのために作りました。"
+      - speaker: kyaku
+        emotion: thinking
+        text: "うちは四人だ。ちょうどいい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……四人、ですか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その「ちょうど四人」のために、何十回も出入りしたんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時ね、車は一部の人のものだったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……高いですからね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それが、家族で買えるところまで降りてきた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……値段も、枠のうちなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこも設計だよね。"
+
+  - id: fukyu
+    title: "町に、増えていく"
+    background: il_sub_machi
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.52}
+    cuts:
+      - speaker: gishi
+        emotion: happy
+        text: "部長。注文が、追いつきません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……作れるだけ作ろう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "町を走る車の顔ぶれが、ここで変わるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それまでは、誰が乗っていたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "会社と、お金のある人。個人が持つものじゃなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……家の前に、車がある景色。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。それが普通になっていくの。"
+      - speaker: gishi
+        emotion: happy
+        text: "お客さんから、手紙が来ています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……読んでくれ。"
+      - speaker: gishi
+        emotion: happy
+        text: "「はじめて家族で海を見に行きました」と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……四人乗れる、ってそういうことだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……二人乗りでは、家族が置いていかれるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、四人だった。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "モックアップに何十回も入った理由、そこだもんね。"
+      - speaker: gishif
+        emotion: normal
+        text: "……部長。次は何を作りますか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "荷物が積める小さいのを作ろう。商売の車だ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そっちも作るんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "捨てたものは、別の車で拾えばいいのだ。"
+
+  - id: sonogo
+    title: "その後"
+    background: il_sub_kojo
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, tag: "百瀬", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1961年には軽トラック、1966年にはスバル1000が出ます。"
+        reading: "せんきゅうひゃくろくじゅういちねんにわけいとらっく、せんきゅうひゃくろくじゅうろくねんにわすばるせんがでます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "スバル1000でね、世界で初めて実用化した部品があるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "前輪で駆動すると、ハンドルを切ったとき軸に無理がかかるでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……曲がりながら、回さないといけないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その継ぎ手を、なめらかに回るように作り直した。"
+      - speaker: gishi
+        emotion: happy
+        text: "おかげで、前輪駆動の弱点がかなり消えました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……前で駆動できると、後ろの場所が空く。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。また広くなるんだよね。ずっと同じことをやってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……軽く作って、場所を稼ぐ。"
+      - speaker: reimu
+        text: "彼は1966年に技術本部長、1968年からは取締役になりました。"
+        reading: "かれわせんきゅうひゃくろくじゅうろくねんにぎじゅつほんぶちょう、せんきゅうひゃくろくじゅうはちねんからわとりしまりやくになりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "口癖があってね。「技術に上下の差は無い」。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……上下の差。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "飛行機が上で、軽自動車が下、みたいな見方をしなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……鍋を作れと言われた時期があるからかもしれないぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……かもね。"
+      - speaker: reimu
+        text: "[百瀬晋六|ももせしんろく]は、1997年1月21日に亡くなりました。"
+        reading: "ももせしんろくわ、せんきゅうひゃくきゅうじゅうななねんいちがつにじゅういちにちになくなりました。"
+
+  - id: shime
+    title: ""
+    background: il_sub_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、さっき段ボールに四人入ると言ったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "面積だけ見てね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……あの人は、自分で入って確かめてたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "百八十センチの体で、何度も出たり入ったり。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……図面の上では、人は薄い板になってしまうからな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枠は法律で決まってて、動かせなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……動かせないほうを恨まずに、中で工夫したのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "骨を抜いて、屋根を布にして、床を彫って。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……全部、飛行機でやっていたことなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "作れなくなった技術が、別の形で残ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……技術に上下の差は無い、か。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。鍋を作った人が、国民車を作ったんだから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "枠が狭いと思ったときは、中の削り方を探してみて。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

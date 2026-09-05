@@ -1,0 +1,1131 @@
+# ロータリーエンジン・再現ドラマ（[山本健一|やまもとけんいち]・1922→2017）。投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ5本目。技術の壁を1つずつ潰していく型で、図解が映える題材。
+# ★配役: ずんだもん=山本健一 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★ミーム禁止の章: なし（技術と競争の話で、死や逮捕の場面が無い）。
+#   ただしオイルショックの章は生活が苦しい話なので軽口を減らす
+# 裏取り: 山本健一(マツダ)Wikipedia / Webモーターマガジン「山本健一とロータリーエンジン」/
+#   clicccar「最大の難関チャターマークとの戦いと克服」/ マツダ公式ルマン優勝メモリアル
+# 確定事実:
+#   1922-9-16 生 / 2017-12-20 没。熊本県出身
+#   東京帝国大学 第一工学部 機械工学科を1944年9月に繰り上げ卒業
+#   1946-2 東洋工業（現マツダ）入社。変速機の組立工場に配属
+#   1962-12 西ドイツのNSUを訪問 / 1963-3 ロータリーエンジン開発に専念せよと指示される
+#   1963-4 ロータリエンジン研究部を設立。47人が集結し「ロータリー47士」。山本は部長
+#   最大の難関「チャターマーク（悪魔の爪痕）」:
+#     ローター先端のアペックスシールとハウジングの摺動部に出る波状摩耗。
+#     そこから圧縮ガスと燃焼ガスが漏れ、熱効率が落ちて出力と燃費が急激に悪化する
+#     解決①アペックスシールの固有振動数を変えるため、縦と横に穴を開ける「クロスホロー」
+#     解決②日本カーボンが特殊なカーボンパウダーを開発。マツダがそこへアルミを含浸させる
+#        技術を完成させた。このカーボンシールでチャターマークが出なくなった
+#   1967-5 コスモスポーツ発売（世界初の量産ロータリーエンジン車）
+#   1970年代後半 オイルショックで販売不振。「フェニックス計画」燃費40%改善が目標
+#   1984-11 代表取締役社長 / 1987-12 会長
+#   1991年 第59回ル・マン24時間で787Bが日本車初の総合優勝。ロータリー唯一の優勝
+#   本人の言葉:「自分の子供みたいなもの」（愛車について）
+#   ※「元海軍将校」という記述はWikipediaに無いので使わない
+meta:
+  title: "【ロータリーエンジンの誕生】47人が挑んだ「悪魔の爪痕」【ずんだもん解説】"
+  slug: "yamamoto-rotary"
+  summary: "世界中の自動車メーカーが匙を投げたエンジンがありました。動きはするのに、数十時間で内側が波打って壊れる。原因も分からないその傷を、技術者たちは「悪魔の爪痕」と呼びます。広島の会社が集めたのは47人。ずんだもんが山本健一を演じる再現ドラマです。"
+  tags: ["ロータリーエンジン", "マツダ", "山本健一", "ルマン", "自動車", "技術", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "悪魔の爪痕"
+    bottom: "ロータリーエンジン"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: buchou, label: "上司", voice: 13, pitch: -0.08, item: hat}
+    - {id: gishi, label: "研究部の技師", voice: 12, pitch: 0.02}
+    - {id: gishif, label: "研究部の技師", voice: 8, pitch: 0.06}
+    - {id: nsu, label: "NSUの技術者", voice: 13, pitch: -0.04, item: hat}
+    - {id: carbon, label: "カーボン会社の人", voice: 42, pitch: 0.0}
+    - {id: hanbai, label: "販売の人", voice: 13, pitch: -0.02, item: hat}
+    - {id: driver, label: "レースの人", voice: 12, pitch: 0.04}
+scenes:
+  - id: hook
+    title: ""
+    background: il_rot_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ、エンジンって何回転してると思う？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "急にどうしたの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは知ってるのだ。ピストンが上下してるんだろ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。上がって、下がって。"
+      - speaker: zundamon
+        emotion: normal
+        text: "上下運動を、回転に変えてるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "よく知ってるじゃん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……いま自分で言って、気づいたのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "回したいのに、なんで一回上下させるのだ？"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……お。いい引っかかり方したね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "無駄だろ。最初から回せばいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。実はね、それを本当にやったエンジンがあるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "あるのか！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ロータリーエンジン。おにぎりみたいな形のが、中で回ってる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "おにぎり。かわいいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "上下運動が無いから、振動が少なくて、小さくて、よく回る。"
+      - speaker: zundamon
+        emotion: happy
+        text: "完全上位互換じゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……なのに、いま道を走ってる車のほとんどはピストンだよね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あれ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界中のメーカーが挑んで、ほぼ全部が撤退したの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なんでなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "動くには動く。でも数十時間で、内側が波打って壊れる。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "波打つ！？ 金属がか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。しかも、なぜ起きるのか誰にも分からなかった。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……原因不明で壊れるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "現場は、その傷をこう呼んだの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「悪魔の爪痕」。"
+        telops:
+          - {text: "悪魔の爪痕", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "名前が怖すぎるだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それを消したのが、広島の会社。集めた人数は四十七人。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "四十七！ 討ち入りの人数なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。実際、そう呼ばれてる。「ロータリー四十七士」。"
+      - speaker: zundamon
+        emotion: normal
+        text: "率いたのは誰なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[山本健一|やまもとけんいち]。もとは、[変速機|へんそくき]の組立工場にいた人。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "エンジン屋ですらないのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。そこから始まってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: nyusha
+    title: "1946・変速機の工場"
+    background: il_rot_kojo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: buchou, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "[山本健一|やまもとけんいち]は1922年9月16日、熊本県に生まれました。"
+        reading: "やまもとけんいちわせんきゅうひゃくにじゅうにねんくがつじゅうろくにち、くまもとけんにうまれました。"
+      - speaker: reimu
+        text: "東京帝国大学の機械工学科を、1944年9月に繰り上げで卒業します。"
+        reading: "とうきょうていこくだいがくのきかいこうがっかを、せんきゅうひゃくよんじゅうよねんくがつにくりあげでそつぎょうします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "繰り上げ卒業。戦争中だからか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。学業の期間が短くされてた時代。"
+      - speaker: reimu
+        text: "1946年2月、広島の[東洋工業|とうようこうぎょう]に入社します。"
+        reading: "せんきゅうひゃくよんじゅうろくねんにがつ、ひろしまのとうようこうぎょうににゅうしゃします。"
+      - speaker: buchou
+        emotion: normal
+        text: "山本くん。配属は、[変速機|へんそくき]の組立だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……エンジンでは、ないんですね。"
+      - speaker: buchou
+        emotion: normal
+        text: "組立だ。手を動かせ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここ、あとで効いてくるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どこがなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "組立の現場にいた人って、「作れるかどうか」で物を見る癖がつくから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……設計だけしてる人と、違うのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "図面で成立しても、量産できなきゃ商品にならないでしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そこを知ってる人が、あとで責任者になるのだな。"
+
+  - id: shikumi
+    title: "おにぎりが、回る"
+    background: il_rot_kenkyu
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "そもそも、おにぎりが回ると、なぜエンジンになるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "お、いい質問。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "エンジンって、四つのことをやってるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "四つ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "吸って、縮めて、燃やして、吐く。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ピストンだと、上下四回ぶんなのだな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。一往復で二回だから、二往復。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……上がったり下がったりで、そのたびに止まってるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。向きが変わる瞬間は、速さがゼロになる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "止まっては動き、止まっては動き。だから震えるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこが振動の正体。じゃあ、おにぎりだと？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ずっと同じ向きに、回り続けるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。止まる瞬間が無い。"
+      - speaker: reimu
+        text: "おにぎり型の部品が回ると、周りの空間が三つに分かれます。"
+        reading: "おにぎりがたのぶひんがまわると、まわりのくうかんがみっつにわかれます。"
+      - speaker: reimu
+        text: "その一つ一つが、広がったり狭まったりを繰り返します。"
+        reading: "そのひとつひとつが、ひろがったりせばまったりをくりかえします。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……広がったら吸って、狭まったら縮めるのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そういうこと。回るだけで、四つの仕事が順番に起きるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "美しいのだ。無駄が無い。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもね、三つの部屋が同時に別の仕事をしてる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……三人が同時に働いてるようなものか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから小さいのに力が出る。ここまでは、いいことしかない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ここまでは、な。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。問題は、おにぎりの角。"
+      - speaker: zundamon
+        emotion: normal
+        text: "角。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "部屋を仕切ってるのは、角の一点だけなの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……線じゃなくて、点で[密閉|みっぺい]してるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。しかもその点が、内側の壁をこすりながら猛烈に動く。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そこが壊れたら、全部おしまいなのだ。"
+
+  - id: nsu
+    title: "1962・西ドイツ"
+    background: il_rot_nsu
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: nsu, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1962年12月、彼は西ドイツのNSUという会社を訪ねます。"
+        reading: "せんきゅうひゃくろくじゅうにねんじゅうにがつ、かれわにしどいつのえぬえすゆうというかいしゃをたずねます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ロータリーエンジンを発明した人が、いた会社ね。"
+      - speaker: nsu
+        emotion: happy
+        text: "見てください。これが、回るエンジンです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……本当に、回っている。"
+      - speaker: zundamon
+        emotion: happy
+        text: "静かだ。振動が、ほとんど無い。"
+      - speaker: nsu
+        emotion: happy
+        text: "そうです。未来のエンジンです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ひとつ伺っても。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何時間、回りますか。"
+      - speaker: nsu
+        emotion: sad
+        text: "……。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そうですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "動くのは動く。でも、長くはもたなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……止まる理由は、分かっているんですか。"
+      - speaker: nsu
+        emotion: sad
+        text: "……内側に、傷が出ます。"
+      - speaker: nsu
+        emotion: sad
+        text: "波のような形の。理由は、まだ分かりません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: reimu
+        text: "1963年3月、彼はロータリーエンジンの開発に専念するよう指示されます。"
+        reading: "せんきゅうひゃくろくじゅうさんねんさんがつ、かれわろおたりいえんじんのかいはつにせんねんするようしじされます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……世界中が困っているものを、うちがやるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の[東洋工業|とうようこうぎょう]、大きい会社じゃないんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……だからこそ、なのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[他|ほか]と同じものを作っていたら、うちは選ばれない。"
+
+  - id: shijushichishi
+    title: "1963・四十七人"
+    background: il_rot_kenkyu
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.5}
+      - {who: gishif, x: 0.62}
+    cuts:
+      - speaker: reimu
+        text: "1963年4月、ロータリエンジン研究部が作られます。"
+        reading: "せんきゅうひゃくろくじゅうさんねんしがつ、ろおたりえんじんけんきゅうぶがつくられます。"
+      - speaker: reimu
+        text: "集まったのは47人。彼は部長になりました。"
+        reading: "あつまったのわよんじゅうななにん。かれわぶちょうになりました。"
+        telops:
+          - {text: "ロータリー47士", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: gishi
+        emotion: surprised
+        text: "……部長。四十七人、というのは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "たまたまだ。"
+      - speaker: gishif
+        emotion: happy
+        text: "討ち入りみたいですね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……縁起でもない。あれは全員死ぬぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこ気にするんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まず、敵の名前をはっきりさせる。"
+      - speaker: gishi
+        emotion: normal
+        text: "内側に出る、あの傷ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。"
+      - speaker: reimu
+        text: "ローターの先端が、ハウジングの内側をこすりながら回ります。"
+        reading: "ろおたあのせんたんが、はうじんぐのうちがわをこすりながらまわります。"
+      - speaker: reimu
+        text: "その面に、波のような[摩耗|まもう]が現れました。"
+        reading: "そのめんに、なみのようなまもうがあらわれました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……洗濯板みたいだな。"
+      - speaker: gishif
+        emotion: sad
+        text: "はい。等間隔で、きれいに並んでいます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……きれいに、並ぶ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここ、大事なところ。傷ってふつう、でたらめに付くよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……規則正しいなら、原因も規則正しいのだ。"
+      - speaker: gishi
+        emotion: normal
+        text: "しかし、なぜ出るのかが分かりません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分からないなら、出るまで回す。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……回し続けるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊れる瞬間を、こちらが見ていないと話にならん。"
+
+  - id: shiken
+    title: "回して、壊す"
+    background: il_rot_kenkyu
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.5}
+      - {who: gishif, x: 0.62}
+    cuts:
+      - speaker: gishi
+        emotion: sad
+        text: "部長。十七号機、止まりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何時間だ。"
+      - speaker: gishi
+        emotion: sad
+        text: "……四十時間ほどです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分解してくれ。"
+      - speaker: gishif
+        emotion: sad
+        text: "……また、出ています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "記録しろ。何番目の山が、どれだけ深いか。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……深さまで、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全部だ。位置も、間隔も、深さも。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここ、地味だけど大事なところ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……壊れたことだけ書いても、次に繋がらないのだ。"
+      - speaker: gishif
+        emotion: sad
+        text: "……何台、壊せばいいんでしょうか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "出るまでだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "答えが、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いや。規則が、だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "壊れ方に共通点が無いか、ひたすら探したの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ壊れ方をするなら、同じ原因があるのだ。"
+      - speaker: gishif
+        emotion: sad
+        text: "……ただ、社内では言われています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何と。"
+      - speaker: gishif
+        emotion: sad
+        text: "「壊すのが仕事の部署」だと。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……そのとおりだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "認めるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊さないと、どこが弱いか分からん。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……開き直りが強いね。"
+
+  - id: tsumeato
+    title: "悪魔の正体"
+    background: il_rot_kenkyu
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.5}
+      - {who: gishif, x: 0.62}
+    cuts:
+      - speaker: gishi
+        emotion: sad
+        text: "部長。今回も、出ました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何時間だ。"
+      - speaker: gishi
+        emotion: sad
+        text: "……また、数十時間です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "見せてくれ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……同じだ。等間隔で、波打っている。"
+      - speaker: gishif
+        emotion: sad
+        text: "触ると、爪で引っ掻いたような感触です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……爪痕。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この傷が出ると、何が困るか分かる？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……見た目が悪い、では済まないのだな。"
+      - speaker: reimu
+        text: "ローターの先端は、内側の面に押しつけられて回っています。"
+        reading: "ろおたあのせんたんわ、うちがわのめんにおしつけられてまわっています。"
+      - speaker: reimu
+        text: "そこが[密閉|みっぺい]されているから、圧縮も燃焼も成り立ちます。"
+        reading: "そこがみっぺいされているから、あっしゅくもねんしょうもなりたちます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……面が波打つと、隙間ができるのだ。"
+      - speaker: gishi
+        emotion: sad
+        text: "はい。ガスが漏れます。"
+      - speaker: zundamon
+        emotion: angry
+        text: "漏れたら、力が出ない。"
+      - speaker: gishif
+        emotion: sad
+        text: "出力も燃費も、急に落ちます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "エンジンとしては、もう死んでるのと同じだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なぜ波打つのだ。"
+      - speaker: gishi
+        emotion: sad
+        text: "分かりません。[摩耗|まもう]なら、普通は一様に減るはずです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "一様に減らない。等間隔で、並ぶ。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……これは、[摩耗|まもう]じゃないのだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "え。"
+      - speaker: zundamon
+        emotion: normal
+        text: "等間隔ということは、周期があるということだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……振動だ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先端が、震えている。"
+      - speaker: zundamon
+        emotion: angry
+        text: "震えながら当たるから、当たる場所が飛び飛びになる。"
+        telops:
+          - {text: "[摩耗|まもう]ではなく、振動だった", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: gishif
+        emotion: surprised
+        text: "……跳ねながら削っている、ということですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。悪魔は、外から来たんじゃない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "こちらの部品が、自分で震えていたのだ。"
+
+  - id: crosshollow
+    title: "穴を開ける"
+    background: il_rot_kenkyu
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: gishi, x: 0.52}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "原因が分かると、やることは決まるんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "震えを、止める。"
+      - speaker: gishi
+        emotion: normal
+        text: "硬くしますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……硬くすると、今度は相手を削る。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。硬さの勝負にすると、負けたほうが死ぬだけ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……震える速さそのものを、変える。"
+      - speaker: gishi
+        emotion: surprised
+        text: "速さ、ですか。"
+      - speaker: reimu
+        text: "物には、それぞれ震えやすい速さがあります。"
+        reading: "ものにわ、それぞれふるえやすいはやさがあります。"
+      - speaker: reimu
+        text: "形や重さを変えると、その速さも変わります。"
+        reading: "かたちやおもさをかえると、そのはやさもかわります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……部品に、穴を開けるのだ。"
+      - speaker: gishi
+        emotion: surprised
+        se: don
+        text: "穴！？ 弱くなりますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "縦と横に、開ける。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これが「クロスホロー」って呼ばれる形。"
+      - speaker: zundamon
+        emotion: normal
+        text: "重さと形が変われば、震える速さがずれる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "ずれれば、あの等間隔は出ないのだ。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……試します。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "これで、爪痕はかなり減ったの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "[勝った|かった]のだな。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……減った、だけどね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "ゼロじゃないのか。"
+
+  - id: carbon
+    title: "カーボンとアルミ"
+    background: il_rot_carbon
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: carbon, x: 0.5}
+      - {who: gishi, x: 0.62}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……形だけでは、足りない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "材料そのものを変えにいくの。"
+      - speaker: carbon
+        emotion: normal
+        text: "うちで、カーボンの粉を作りました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……炭、ですか。"
+      - speaker: carbon
+        emotion: happy
+        text: "はい。硬すぎず、滑りがいい。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……相手を削らない、ということですか。"
+      - speaker: carbon
+        emotion: normal
+        text: "そうです。ただ、脆い。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……欠けたら、そこで終わりだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "滑るけど、脆い。硬いけど、削る。板挟みだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……両方を、混ぜられないか。"
+      - speaker: carbon
+        emotion: surprised
+        text: "混ぜる、といいますと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "炭の粉に、金属を染み込ませる。"
+      - speaker: reimu
+        text: "カーボンパウダーにアルミを含浸させる技術が、ここで完成します。"
+        reading: "かあぼんぱうだあにあるみをがんしんさせるぎじゅつが、ここでかんせいします。"
+        telops:
+          - {text: "カーボンに、アルミを染み込ませる", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "滑りは炭が、粘りは金属が持つ。"
+      - speaker: carbon
+        emotion: happy
+        text: "……理屈は、通ります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして、このカーボンシールを入れたら。"
+      - speaker: gishi
+        emotion: happy
+        text: "部長！ 出ません！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……何時間だ。"
+      - speaker: gishi
+        emotion: happy
+        text: "回し続けています。爪痕、まったく出ません。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "……消えたのか。"
+        telops:
+          - {text: "悪魔の爪痕が、消えた", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "世界中が匙を投げた壁を、ここで越えたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……形と、材料。どっちが欠けても駄目だったのだ。"
+
+  - id: cosmo
+    title: "1967・コスモスポーツ"
+    background: il_rot_showroom
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: happy}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: hanbai, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1967年5月、コスモスポーツが発売されます。"
+        reading: "せんきゅうひゃくろくじゅうななねんごがつ、こすもすぽーつがはつばいされます。"
+      - speaker: reimu
+        text: "ロータリーエンジンを積んだ、世界で初めての量産車でした。"
+        reading: "ろおたりいえんじんをつんだ、せかいではじめてのりょうさんしゃでした。"
+        telops:
+          - {text: "世界初の量産ロータリー車", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: hanbai
+        emotion: happy
+        text: "部長。お客さんが、みんな同じことを言います。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何を。"
+      - speaker: hanbai
+        emotion: happy
+        text: "「これ、本当に動いてるんですか」と。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……止まっていると思われているのか。"
+      - speaker: hanbai
+        emotion: happy
+        text: "振動が無いので、かかっているか分からないんです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……それは、褒め言葉だ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "四年かけて、悪魔を消した結果がこれ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……売れたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。ここから、ロータリーを積んだ車が増えていくの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "大勝利なのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ここまでは、ね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "またそれか。"
+
+  - id: oilshock
+    title: "1970年代・逆風"
+    background: il_rot_gas
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: hanbai, x: 0.46}
+      - {who: gishi, x: 0.56}
+      - {who: gishif, x: 0.66}
+    cuts:
+      - speaker: reimu
+        text: "1970年代、石油の値段が急に上がります。"
+        reading: "せんきゅうひゃくななじゅうねんだい、せきゆのねだんがきゅうにあがります。"
+      - speaker: hanbai
+        emotion: sad
+        text: "部長。売れません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……理由は。"
+      - speaker: hanbai
+        emotion: sad
+        text: "燃費です。ロータリーは、よく走るぶん、よく飲みます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "強みが、そのまま弱点になったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よく回るエンジンだと言ってきたのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "その回る力が、いま要らないと言われている。"
+      - speaker: hanbai
+        emotion: sad
+        text: "社内でも、やめるべきだという声が出ています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……四年かけて、悪魔を消したのに。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……技術が勝っても、時代が違えば売れないんだよね。"
+      - speaker: reimu
+        text: "彼らは、燃費を四割よくするという目標を立てます。"
+        reading: "かれらわ、ねんぴをよんわりよくするというもくひょうをたてます。"
+        telops:
+          - {text: "燃費を40%改善する", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "四割！？ 一割でも大変だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。無茶だよね。でも、それしか道が無かったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……やめるという選択肢は、無いのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "うちが降りたら、このエンジンは世界から消える。"
+      - speaker: gishi
+        emotion: sad
+        text: "……部長。研究の人数が、減らされます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何人残る。"
+      - speaker: gishi
+        emotion: sad
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かった。残った人数でやる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "四十七人で始めた部署が、細っていくの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……燃費を四割。どこを削る。"
+      - speaker: gishi
+        emotion: normal
+        text: "燃やしきれずに、捨てている分があります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……未燃焼のガスか。"
+      - speaker: reimu
+        text: "回る部屋は細長いため、火が[端|はし]まで届きにくいという弱点がありました。"
+        reading: "まわるへやわほそながいため、ひがはしまでとどきにくいというじゃくてんがありました。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……燃え残るということは、そのぶん捨てているのだ。"
+      - speaker: gishif
+        emotion: normal
+        text: "火をつける場所を、増やしてはどうでしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……二か所から、同時に。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "端まで届かないなら、届く場所を増やす。単純だけど効くの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "捨てていたものを、力に変える。"
+      - speaker: zundamon
+        emotion: angry
+        text: "それが、いちばん大きい四割だ。"
+
+  - id: lemans
+    title: "1991・ル・マン"
+    background: il_rot_lemans
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "山本", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: driver, x: 0.52}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "時間を進めるね。1991年。"
+      - speaker: reimu
+        text: "フランスで、24時間走り続けるレースが開かれます。"
+        reading: "ふらんすで、にじゅうよじかんはしりつづけるれーすがひらかれます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……二十四時間。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。ここ、大事なところ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あの傷は、数十時間で出ていたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "気づいた？ 二十四時間、全開で回り続けるレースなの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……いちばん苦手だった条件じゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。壊れる理由がぜんぶ出る場所。"
+      - speaker: driver
+        emotion: surprised
+        text: "……音が、[他|ほか]と違います。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どう違う。"
+      - speaker: driver
+        emotion: happy
+        text: "コース中で、うちだけすぐ分かるんです。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ピストンが無いから、音の出方が根本的に違うんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……隠れられないということでもあるのだ。"
+      - speaker: driver
+        emotion: normal
+        text: "順位は、いま上位です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……速さは、要らない。"
+      - speaker: driver
+        emotion: surprised
+        text: "え。"
+      - speaker: zundamon
+        emotion: normal
+        text: "二十四時間、止まらないことだけ考えてくれ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……このレース、速い車から順に壊れていくの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちは、壊れない作り方だけをやってきたのだ。"
+      - speaker: driver
+        emotion: happy
+        text: "エンジン、まったく落ちません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何時間走った。"
+      - speaker: driver
+        emotion: happy
+        text: "二十時間を超えました。まだ回ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……回るか。"
+      - speaker: reimu
+        text: "マツダの787Bが、総合優勝しました。"
+        reading: "まつだのななはちななびいが、そうごうゆうしょうしました。"
+        telops:
+          - {text: "日本車として初の総合優勝", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……[勝った|かった]のか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "日本のメーカーとして、初めての総合優勝。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そして、ロータリーで[勝った|かった]のは、いまでもこの一回だけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……二十八年、かかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "四十七人が集まった年から数えると、そうだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……数十時間で壊れていたものが。"
+      - speaker: zundamon
+        emotion: happy
+        text: "二十四時間、誰よりも速く走り切ったのだ。"
+
+  - id: shime
+    title: ""
+    background: il_rot_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: reimu
+        text: "[山本健一|やまもとけんいち]は1984年に社長、1987年に会長になりました。"
+        reading: "やまもとけんいちわせんきゅうひゃくはちじゅうよねんにしゃちょう、せんきゅうひゃくはちじゅうななねんにかいちょうになりました。"
+      - speaker: reimu
+        text: "2017年12月20日に亡くなっています。"
+        reading: "にせんじゅうななねんじゅうにがつはつかになくなっています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……四十七人は、どうなったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全員がずっと残ったわけじゃないよ。減らされた時期もあったし。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、壊した記録は残ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何番目の山が、どれだけ深いか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。あれが無かったら、原因にたどり着けてない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、最初に「完全上位互換」って言ったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "言ってたね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……理屈が正しいだけでは、物にならないのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。世界中が同じ理屈にたどり着いて、全部やめてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "残ったのは、原因を突き止めたところだけなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、傷が「等間隔だ」って気づいたところから始まってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よく見た、というだけの話なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこがいちばん難しいんだけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[変速機|へんそくき]の組立から始めた人だからかもしれないぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "手で触ってた人、だもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うまくいかないものを見たら、まず規則を探してみて。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

@@ -369,7 +369,7 @@ scenes:
     cuts:
       - speaker: tsumugi
         emotion: normal
-        text: "答えのヒントはね、運送業界の外にあったの。"
+        text: "答えのヒントね、運送業界の外にあったの。"
       - speaker: zundamon
         emotion: normal
         text: "外。"
@@ -553,7 +553,7 @@ scenes:
         text: "しかも、いつ荷物が出るか分かりません。"
       - speaker: yakuin
         emotion: angry
-        text: "空のトラックが走るだけです。"
+        text: "[空|から]のトラックが走るだけです。"
       - speaker: zundamon
         emotion: normal
         text: "……最初は、そうなります。"
@@ -670,7 +670,7 @@ scenes:
           - {text: "初日 11個", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
       - speaker: shain
         emotion: sad
-        text: "トラックは、ほとんど空のまま走りました。"
+        text: "トラックは、ほとんど[空|から]のまま走りました。"
       - speaker: zundamon
         emotion: normal
         text: "……そうか。"
@@ -682,7 +682,7 @@ scenes:
         text: "十一個、届いたのか。"
       - speaker: shain
         emotion: surprised
-        text: "は、はい。全部、届きました。"
+        text: "[は|ハ]、はい。全部、届きました。"
       - speaker: zundamon
         emotion: happy
         text: "なら、いい。"
@@ -1154,7 +1154,7 @@ scenes:
         text: "……作っているものは、売れているんですか。"
       - speaker: sagyo
         emotion: sad
-        text: "……買ってくださる方はいます。同情で。"
+        text: "……買ってくださる[方|かた]はいます。同情で。"
       - speaker: zundamon
         emotion: thinking
         text: "……同情で。"

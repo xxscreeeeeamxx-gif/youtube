@@ -377,6 +377,47 @@ def p_hanafuda(d, s):
                    cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
 
 
+def p_rotor(d, s):
+    """ロータリーの断面。おにぎり型のローターと繭型ハウジング。赤い点がアペックスシール。"""
+    import math as _m
+    cx, cy, r = s * 0.5, s * 0.5, s * 0.34
+    pts = []
+    for i in range(120):
+        t = i / 120 * 2 * _m.pi
+        rr = r * (1.0 + 0.30 * _m.cos(2 * t))
+        pts.append((cx + _m.cos(t) * rr, cy + _m.sin(t) * rr * 0.78))
+    d.polygon(pts, fill=(58, 62, 74), outline=(150, 156, 168))
+    tri = []
+    for i in range(3):
+        a = i * 2 * _m.pi / 3 - _m.pi / 2
+        tri.append((cx + _m.cos(a) * r * 0.72, cy + _m.sin(a) * r * 0.56))
+    d.polygon(tri, fill=(206, 212, 222), outline=(110, 116, 128), width=int(s * 0.016))
+    for (px, py) in tri:
+        d.ellipse([px - r * 0.10, py - r * 0.10, px + r * 0.10, py + r * 0.10],
+                  fill=(236, 88, 56), outline=(140, 36, 20), width=int(s * 0.012))
+    d.ellipse([cx - r * 0.16, cy - r * 0.16, cx + r * 0.16, cy + r * 0.16],
+              fill=(96, 100, 112), outline=(150, 156, 168), width=int(s * 0.012))
+
+
+def p_scratch(d, s):
+    """波打った摺動面（悪魔の爪痕）。等間隔の波と、その下の地の線。"""
+    import math as _m
+    base = s * 0.52
+    pts = [(s * 0.12 + i * s * 0.036, base - s * 0.10 * _m.sin(i * 0.9))
+           for i in range(21)]
+    d.line([s * 0.10, base + s * 0.18, s * 0.90, base + s * 0.18],
+           fill=(120, 120, 128), width=int(s * 0.022))
+    d.line(pts, fill=(228, 60, 50), width=int(s * 0.034), joint="curve")
+    for i in range(0, 21, 2):
+        px, py = pts[i]
+        d.line([px, py, px, base + s * 0.18], fill=(196, 196, 202),
+               width=int(s * 0.008))
+    for i in range(1, 20, 4):                 # 爪の記号
+        px, py = pts[i]
+        d.line([px - s * 0.02, py - s * 0.10, px + s * 0.02, py - s * 0.16],
+               fill=(228, 60, 50), width=int(s * 0.014))
+
+
 def p_parcel(d, s):
     """伝票を貼った段ボール箱。宅急便回。"""
     x0, y0, x1, y1 = s * 0.16, s * 0.28, s * 0.84, s * 0.80
@@ -2376,6 +2417,12 @@ SPECS = {
         _p(None, "1949年", TEAL, "thinking", "四年、|病室にいたのだ", "動けない4年間"),
         _p("p_parcel", "1976年", BROWN, "sad", "初日は|十一個…", "初日 11個"),
         _p("p_gavel", "1986年", RED, "angry", "決めろ、と|言っているのだ", "監督官庁を訴えた"),
+    ]),
+    "yamamoto-rotary": dict(layout="panels", headline="世界が捨てたエンジン",
+        head_hi="エンジン", panels=[
+        _p("p_rotor", "1963年 広島", NAVY, "thinking", "回るだけで|エンジンになるのだ", "47人が集められた"),
+        _p("p_scratch", "悪魔の爪痕", SLATE, "surprised", "数十時間で|波打つ…！？", "原因が誰にも分からない"),
+        _p(None, "1991年 ル・マン", RED, "happy", "24時間、|止まらなかったのだ", "日本車初の総合優勝"),
     ]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
