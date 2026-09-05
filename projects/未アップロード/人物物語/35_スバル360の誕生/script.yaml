@@ -51,7 +51,7 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: angry
-        text: "つむぎ、この箱に四人入るのだ。"
+        text: "つむぎ、この箱に[四人|よにん]入るのだ。"
       - speaker: tsumugi
         emotion: surprised
         text: "どの箱。"
@@ -63,7 +63,7 @@ scenes:
         text: "……計算って、面積だけ見てない？"
       - speaker: zundamon
         emotion: normal
-        text: "見た。四人ぶんの面積はある。"
+        text: "見た。[四人|よにん]ぶんの面積はある。"
       - speaker: tsumugi
         emotion: angry
         text: "人は薄い板じゃないの。頭も膝もあるでしょ。"
@@ -99,7 +99,7 @@ scenes:
         text: "うん。その人が自分でモックアップに出たり入ったりして、"
       - speaker: tsumugi
         emotion: happy
-        text: "「これなら大人四人が座れる」を決めたの。"
+        text: "「これなら大人[四人|よにん]が座れる」を決めたの。"
       - speaker: zundamon
         emotion: normal
         text: "……なんでそんなに狭い車を作るのだ。"
@@ -111,7 +111,7 @@ scenes:
         reading: "ながさもはばもはいきりょうも、ほうりつでじょうげんがきめられていました。"
       - speaker: zundamon
         emotion: normal
-        text: "……その中に、大人四人。"
+        text: "……その中に、大人[四人|よにん]。"
       - speaker: tsumugi
         emotion: normal
         text: "当時の常識では、無理。二人乗りがせいぜいと言われてた。"
@@ -133,7 +133,7 @@ scenes:
         text: "飛行機！？"
       - speaker: tsumugi
         emotion: normal
-        text: "[百瀬晋六|ももせしんろく]。作った車は「てんとう虫」と呼ばれた。"
+        text: "[百瀬晋六|ももせしんろく]。作った車は「[てんとう虫|てんとうむし]」と呼ばれた。"
       - speaker: zundamon
         emotion: happy
         text: "かわいい名前なのだ。"
@@ -383,7 +383,7 @@ scenes:
         text: "……バスで、それをやるんですか。"
       - speaker: zundamon
         emotion: normal
-        text: "やります。軽くなれば、同じ力でよく走る。"
+        text: "やります。軽くなれば、同じ[力|ちから]でよく走る。"
       - speaker: reimu
         text: "1949年、日本初のモノコック構造のリアエンジンバスができました。"
         reading: "せんきゅうひゃくよんじゅうくねん、にほんはつのものこっくこうぞうのりああえんじんばすができました。"
@@ -465,7 +465,7 @@ scenes:
         text: "……悔しいよね。"
       - speaker: zundamon
         emotion: normal
-        text: "……大きい車は、金がかかるのだ。"
+        text: "……大きい車は、[金|かね]がかかるのだ。"
       - speaker: gishi
         emotion: sad
         text: "……部長。あの車、社用車になるそうです。"
@@ -492,19 +492,19 @@ scenes:
         text: "設計は、悪くなかったのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "……止まったのは、金の話だ。"
+        text: "……止まったのは、[金|かね]の話だ。"
       - speaker: gishif
         emotion: sad
         text: "では、どうにもなりません。"
       - speaker: zundamon
         emotion: normal
-        text: "……いや。金の話なら、金がかからない車を作ればいい。"
+        text: "……いや。[金|かね]の話なら、[金|かね]がかからない車を作ればいい。"
       - speaker: gishi
         emotion: surprised
         text: "……といいますと。"
       - speaker: zundamon
         emotion: thinking
-        text: "……大きい車は、金がかかるのだ。"
+        text: "……大きい車は、[金|かね]がかかるのだ。"
       - speaker: zundamon
         emotion: thinking
         text: "……なら、小さい車ならどうだ。"
@@ -521,10 +521,10 @@ scenes:
     cuts:
       - speaker: zundamon
         emotion: normal
-        text: "[軽自動車|けいじどうしゃ]の枠で、大人が四人乗る車を作る。"
+        text: "[軽自動車|けいじどうしゃ]の枠で、大人が[四人|よにん]乗る車を作る。"
       - speaker: gishi
         emotion: surprised
-        text: "……四人、ですか。"
+        text: "……[四人|よにん]、ですか。"
       - speaker: gishif
         emotion: sad
         text: "あの寸法では、二人がやっとです。"
@@ -608,7 +608,7 @@ scenes:
         text: "……ずいぶん、捨てますね。"
       - speaker: zundamon
         emotion: angry
-        text: "捨てないと、四人が乗らないのだ。"
+        text: "捨てないと、[四人|よにん]が乗らないのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "……ここ、宅急便の人と同じこと言ってるの、面白いよね。"
@@ -640,7 +640,7 @@ scenes:
     cuts:
       - speaker: gishi
         emotion: happy
-        text: "図面上は、四人入ります。"
+        text: "図面上は、[四人|よにん]入ります。"
       - speaker: zundamon
         emotion: normal
         text: "……図面上は、な。"
@@ -745,7 +745,7 @@ scenes:
         text: "そうしてくれ。"
       - speaker: tsumugi
         emotion: normal
-        text: "紙の上の「四人」と、本物の四人は違うからね。"
+        text: "紙の上の「[四人|よにん]」と、本物の[四人|よにん]は違うからね。"
 
   - id: hatsubai
     title: "1958・てんとう虫"
@@ -766,7 +766,7 @@ scenes:
           - {text: "42万5000円", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
       - speaker: kyaku
         emotion: surprised
-        text: "……本当に、四人乗れるのかね。"
+        text: "……本当に、[四人|よにん]乗れるのかね。"
       - speaker: zundamon
         emotion: happy
         text: "どうぞ、乗ってみてください。"
@@ -793,7 +793,7 @@ scenes:
         text: "……なんて呼ばれたのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "「てんとう虫」。"
+        text: "「[てんとう虫|てんとうむし]」。"
       - speaker: zundamon
         emotion: happy
         text: "かわいいのだ。"
@@ -823,13 +823,13 @@ scenes:
         text: "そのために作りました。"
       - speaker: kyaku
         emotion: thinking
-        text: "うちは四人だ。ちょうどいい。"
+        text: "うちは[四人|よにん]だ。ちょうどいい。"
       - speaker: zundamon
         emotion: happy
-        text: "……四人、ですか。"
+        text: "……[四人|よにん]、ですか。"
       - speaker: tsumugi
         emotion: happy
-        text: "その「ちょうど四人」のために、何十回も出入りしたんだよね。"
+        text: "その「ちょうど[四人|よにん]」のために、何十回も出入りしたんだよね。"
       - speaker: zundamon
         emotion: normal
         text: "……はい。"
@@ -894,13 +894,13 @@ scenes:
         text: "……。"
       - speaker: tsumugi
         emotion: thinking
-        text: "……四人乗れる、ってそういうことだよね。"
+        text: "……[四人|よにん]乗れる、ってそういうことだよね。"
       - speaker: zundamon
         emotion: normal
         text: "……二人乗りでは、家族が置いていかれるのだ。"
       - speaker: zundamon
         emotion: normal
-        text: "だから、四人だった。"
+        text: "だから、[四人|よにん]だった。"
       - speaker: tsumugi
         emotion: normal
         text: "モックアップに何十回も入った理由、そこだもんね。"
@@ -949,7 +949,7 @@ scenes:
         text: "おかげで、前輪駆動の弱点がかなり消えました。"
       - speaker: zundamon
         emotion: normal
-        text: "……前で駆動できると、後ろの場所が空く。"
+        text: "……前で駆動できると、後ろの場所が[空く|あく]。"
       - speaker: tsumugi
         emotion: happy
         text: "そう。また広くなるんだよね。ずっと同じことをやってる。"
@@ -994,7 +994,7 @@ scenes:
         text: "ん。"
       - speaker: zundamon
         emotion: normal
-        text: "ボク、さっき段ボールに四人入ると言ったのだ。"
+        text: "ボク、さっき段ボールに[四人|よにん]入ると言ったのだ。"
       - speaker: tsumugi
         emotion: happy
         text: "面積だけ見てね。"
