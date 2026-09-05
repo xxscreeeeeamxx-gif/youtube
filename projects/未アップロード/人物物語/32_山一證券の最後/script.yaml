@@ -1,0 +1,1362 @@
+# 山一證券・再現ドラマ（[野澤正平|のざわしょうへい]・1938〜）。投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ3本目。ダイエー(失敗)・任天堂(成功)に続く「失敗側」。
+#   ダイエーが1日86再生でチャンネル最高だったため、同じ型を続ける（2026-09-05）
+# ★★★ 主人公は存命人物（1938-4-3生・2026年時点で88歳）★★★
+#   SKILL.md「存命の人物を主人公にするときの線引き」に従う:
+#     - 公表されている経歴と仕事の中身だけを描く
+#     - 家族・私生活・内面の創作はしない（父が畳職人という経歴は公表情報なので
+#       ナレで事実として述べるだけにし、父との会話は作らない）
+#     - 会話は仕事上のやりとりに限る
+#     - 本人が語ったと確認できない美談は書かない
+#   簿外債務を作った前経営陣は「前の経営陣」とだけ呼び、個人名を出さない
+#   （刑事責任を問われた人物を名指しで演じさせない。物語上も必要ない）
+# ★配役: ずんだもん=野澤正平 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★ミーム禁止の章: kokuhaku / tsukoku / kaiken / shain / rirekisho / sonogo
+#   （告白から会見以降は一切入れない。人が職を失う場面に笑いを乗せない）
+# 裏取り: 野澤正平Wikipedia / 山一證券Wikipedia / nippon.com「1997年の今日」/
+#   日経「1997年11月24日 山一証券、自主廃業発表」/ テレ東BIZ「破綻から20年」
+# 確定事実:
+#   1938-4-3 長野県長野市川中島付近に生まれる。父は畳職人で農業も営んでいた
+#   長野県屋代東高等学校を卒業後、3年間畑仕事に従事
+#   その後、法政大学経済学部に入学し1964年卒業
+#   1964-4 山一證券入社。「やったらやっただけ認めてくれる業種は証券しかない」と証券業を選択。
+#     山一を選んだ理由は外資との結びつきが強かったため
+#   歴代社長と違いエリート大学の出身ではなかった
+#   1897 山梨県出身の小池国三が東京兜町に「小池国三商店」を創業。
+#     社名は小池が最も尊敬する若尾逸平の家紋「山に一」から取った
+#   1965-5-21 朝刊で経営悪化が報道され取り付け騒ぎ。
+#     5-28 午後11時30分、日銀が「証券業界が必要とする資金は無制限・無担保で融資する」と発表。
+#     特融は3行経由で、それぞれ80億円までと決められていた
+#   バブル崩壊後、子会社のペーパーカンパニーへ貸し出しつつ買い戻す形で損失補填資金を流した。
+#     外国債は山一オーストラリアへ買い戻す約束で売却（いわゆる「飛ばし」）
+#   簿外債務は日本で1,583億円、世界で1,065億円。最大2,720億円の損失を隠していた
+#   1997-8 前社長ら取締役11人が退任し、野澤が社長に昇格。簿外債務は就任後に初めて知った
+#   1997-10-14 常務と前副社長が富士銀行を訪れ「飛ばし」の存在を明らかにした
+#   1997-11-19 大蔵省が「自主廃業を選択してもらいたい」と通告
+#   1997-11-22 午前3時頃、日本経済新聞が自主廃業を報じた
+#   1997-11-24 午前11時30分、社長の野澤と会長が記者会見。
+#     野澤は号泣しながら「私らが悪いんであって、社員は悪くありませんから」と述べた
+#   約7,500人が職を失った
+#   野澤は簿外債務に関与しておらず起訴されていない
+#   廃業業務に追われながら、自ら社員の履歴書を持って求職活動をした
+#   涙の会見が同情を呼び、社員に多数の求人が集まった
+#   2005-1-26 の債権者集会をもって終了。同年2月に破産手続終結登記
+meta:
+  title: "【山一證券の最後】「社員は悪くありませんから」と泣いた社長【ずんだもん解説】"
+  slug: "yamaichi-nozawa"
+  summary: "1997年11月24日、ひとりの社長がテレビカメラの前で泣きました。畳職人の家に生まれ、高校を出て3年間畑を耕してから大学へ進んだ男が、59歳で100年企業の社長になります。その3か月後、彼は自分が知らなかった2600億円を突きつけられました。ずんだもんが野澤正平を演じる再現ドラマです。"
+  tags: ["山一證券", "野澤正平", "1997年", "金融", "平成史", "経営", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "社員は悪くありませんから"
+    bottom: "山一證券の最後"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: senpai, label: "先輩社員", voice: 13, pitch: -0.04, item: hat}
+    - {id: kyaku, label: "お客", voice: 42, pitch: -0.02}
+    - {id: koike, label: "小池国三", voice: 42, pitch: 0.02, item: mustache}
+    - {id: joumu, label: "常務", voice: 13, pitch: -0.1, item: hat}
+    - {id: fukusha, label: "前副社長", voice: 13, pitch: -0.06, item: hat}
+    - {id: okura, label: "大蔵省の人", voice: 13, pitch: -0.08, item: hat}
+    - {id: ginko, label: "銀行の人", voice: 13, pitch: -0.02, item: hat}
+    - {id: kisha, label: "記者", voice: 12, pitch: 0.02}
+    - {id: shain, label: "山一の社員", voice: 12, pitch: 0.0}
+    - {id: shainf, label: "山一の社員", voice: 8, pitch: 0.08}
+scenes:
+  - id: hook
+    title: ""
+    background: il_yam_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……あっ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "いま何か割れた音した？"
+      - speaker: zundamon
+        emotion: normal
+        text: "コップが落ちたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "落ちた。……自分で落としたんじゃなくて？"
+      - speaker: zundamon
+        emotion: angry
+        text: "ボクは悪くないぞ。置き場所が悪い。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "その置き場所、昨日あなたが決めたよね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "昨日のボクと今日のボクは別人なのだ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "出た。都合のいいときだけ別人。"
+      - speaker: zundamon
+        emotion: normal
+        text: "強いて言えば、重力が悪い。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "重力を訴えるの？"
+      - speaker: zundamon
+        emotion: happy
+        text: "まあ、次から気をつけるのだ。ボクは反省できる子だぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "えらいえらい。じゃあその皿、そーっと運んで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "任せろ。慎重に、丁寧に……"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……あっ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "学習しろ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "今のは床が悪い。傾いてる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……あのね。人って、なかなか自分のせいだって言えないの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "うっ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "コップ一個でこれだもん。もっと大きいものだったら、なおさら。"
+      - speaker: zundamon
+        emotion: normal
+        text: "大きいものって、どのくらいなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……会社。百年続いた、日本で四番目に大きい証券会社。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "スケールが飛びすぎだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1997年。その会社が、なくなったの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "百年続いたのに！？"
+        telops:
+          - {text: "創業100年で、消滅", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "社員は7500人。全員、職を失った。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……7500人。町ひとつじゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その日、社長がテレビカメラの前に立ったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……言い訳するのだな。床が悪いとか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "ううん。泣きながら、こう言った。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「私らが悪いんであって、社員は悪くありませんから」。"
+        telops:
+          - {text: "社員は悪くありませんから", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……自分のせいだって、言ったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。しかもこの社長、その借金を作った人じゃないの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "は？ じゃあ誰が作ったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "前の経営陣。社長になって初めて、その存在を知らされた。"
+      - speaker: zundamon
+        emotion: angry
+        text: "それこそ「ボクは悪くない」案件だろ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だよね。でも彼は言わなかった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんでなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "その理由は、たぶん、この人の来た道にある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[野澤正平|のざわしょうへい]。[山一證券|やまいちしょうけん]、最後の社長。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: umare
+    title: "1938・長野"
+    background: il_yam_kawanakajima
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true, scale: 0.78}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "1938年4月3日、[野澤正平|のざわしょうへい]は長野県に生まれました。"
+        reading: "せんきゅうひゃくさんじゅうはちねんしがつみっか、のざわしょうへいわながのけんにうまれました。"
+      - speaker: reimu
+        text: "長野市の川中島のあたりです。"
+        reading: "ながのしのかわなかじまのあたりです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[川中島|かわなかじま]。聞いたことあるぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "武田と上杉が五回も戦った、あの[川中島|かわなかじま]だね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "戦国オールスターの舞台なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこで四百年後に、静かに畳を作ってる家があったの。"
+      - speaker: reimu
+        text: "父は畳職人でした。あわせて農業も営んでいます。"
+        reading: "ちちわたたみしょくにんでした。あわせてのうぎょうもいとなんでいます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "畳と、畑。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どっちも、手を動かさないと一円にもならない仕事。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そうなのだ。畳は勝手に編まれないからな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこがね、あとで効いてくるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どういうことなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人、やった分だけ返ってくる仕事じゃないと嫌なんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "職人の家の子っぽすぎるだろ。"
+      - speaker: reimu
+        text: "彼は地元の高校に進みます。長野県屋代東高等学校です。"
+        reading: "かれわじもとのこうこうにすすみます。ながのけんやしろひがしこうとうがっこうです。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よし、卒業したら東京だな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ううん。卒業しても、東京には行かなかった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。"
+
+  - id: hatake
+    title: "3年間の畑"
+    background: il_yam_hatake
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true, scale: 0.9}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "高校を出たあと、彼は三年間、畑仕事をしています。"
+        reading: "こうこうをでたあと、かれわさんねんかん、はたけしごとをしています。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "三年！？"
+        telops:
+          - {text: "高校卒業後、3年間 畑仕事", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "三年。十八から二十一まで。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……同級生は大学に行ってる年だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。行ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクなら、腐るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "腐ってたかもしれない。そこは本人しか知らない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……鍬を持つのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "土は、嘘をつかないぞ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "耕した分だけ、返ってくる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……でも、それだけなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……三年って、長いよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一年目は、まだ余裕なのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "二年目で、街の話が聞こえなくなる。"
+      - speaker: zundamon
+        emotion: angry
+        text: "三年目で……ボクは、まだここにいるのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そして、二十一で大学に入り直すの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "入り直した！？"
+      - speaker: reimu
+        text: "法政大学経済学部。卒業は1964年です。"
+        reading: "ほうせいだいがくけいざいがくぶ。そつぎょうわせんきゅうひゃくろくじゅうよねんです。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "三年待って、そこから四年行ったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。同い年の人が就職して三年目に、やっと新卒。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……七年遅れてるようなものだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。だから彼、就職先を選ぶときの基準がはっきりしてた。"
+
+  - id: nyusha
+    title: "1964・兜町"
+    background: il_yam_kabutocho
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: senpai, x: 0.52}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "学歴では、もう勝てないのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "だったら、やった分だけ数える仕事がいい。"
+      - speaker: reimu
+        text: "彼は後年、こう語っています。"
+        reading: "かれわこうねん、こうかたっています。"
+      - speaker: reimu
+        text: "「やったらやっただけ認めてくれる業種は証券しかない」。"
+        reading: "やったらやっただけみとめてくれるぎょうしゅわしょうけんしかない。"
+        telops:
+          - {text: "やったらやっただけ認めてくれる", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "畑と同じ理屈なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。鍬が電話に変わっただけ。"
+      - speaker: reimu
+        text: "1964年4月、[山一證券|やまいちしょうけん]に入社します。"
+        reading: "せんきゅうひゃくろくじゅうよねんしがつ、やまいちしょうけんににゅうしゃします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なぜ[山一|やまいち]だったのだ。"
+      - speaker: reimu
+        text: "外国の会社との結びつきが強かったからだと語られています。"
+        reading: "がいこくのかいしゃとのむすびつきがつよかったからだとかたられています。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の[山一|やまいち]は、四大証券のひとつ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "四大。トップ4なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。野村、大和、日興、[山一|やまいち]。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そうそうたる並びだぞ。"
+      - speaker: senpai
+        emotion: normal
+        text: "野澤くん。歳、いくつだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "二十六です。"
+      - speaker: senpai
+        emotion: surprised
+        text: "……新人にしては、いってるな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。畑にいました。"
+      - speaker: senpai
+        emotion: thinking
+        text: "畑。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三年。だから、遅れた分は歩いて取り返します。"
+      - speaker: senpai
+        emotion: happy
+        text: "……面白いこと言うな。じゃあ回ってこい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この会社ね、社長になる人はだいたいエリート大学の出身だったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクは違うのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。彼は違った。ずっと、営業の人だった。"
+
+  - id: eigyo
+    title: "営業の三十年"
+    background: il_yam_eigyo
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: kyaku, x: 0.52}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "こんにちは。[山一|やまいち]の野澤です。"
+      - speaker: kyaku
+        emotion: normal
+        text: "……間に合ってるよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。では、また来ます。"
+      - speaker: kyaku
+        emotion: surprised
+        text: "また来るのか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "また来ます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "証券の営業ってね、断られるのが仕事みたいなものなの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "百軒回って、一軒。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも一軒取れたら、それは全部自分の数字。"
+      - speaker: zundamon
+        emotion: happy
+        text: "耕した分だけ返ってくる。話が早いのだ。"
+      - speaker: kyaku
+        emotion: thinking
+        text: "……あんた、しつこいね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よく言われます。"
+      - speaker: kyaku
+        emotion: normal
+        text: "……まあ、座りなさい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "こうやって、三十年。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三十年。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "支店を回って、成績を上げて、少しずつ上がっていった。"
+      - speaker: zundamon
+        emotion: happy
+        text: "王道の叩き上げなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。……でね、ここで会社のほうの話をしないといけないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "会社のほう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "彼が入るずっと前から、この会社には歴史があるから。"
+
+  - id: sogyo
+    title: "1897・小池国三商店"
+    background: il_yam_meiji
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: koike, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1897年、東京の[兜町|かぶとちょう]に、ひとつの店ができました。"
+        reading: "せんはっぴゃくきゅうじゅうななねん、とうきょうのかぶとちょうに、ひとつのみせができました。"
+      - speaker: reimu
+        text: "山梨から出てきた[小池国三|こいけくにぞう]の、[小池国三|こいけくにぞう]商店です。"
+        reading: "やまなしからでてきたこいけくにぞうの、こいけくにぞうしょうてんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……自分の名前を、そのまま看板にしたのだな。"
+      - speaker: koike
+        emotion: happy
+        text: "隠すもんが何も無いんでね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもこの店の名前、あとで変わるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんて名前になるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[山一|やまいち]。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……山に、一。なんでその名前なのだ。"
+      - speaker: reimu
+        text: "[小池|こいけ]が最も尊敬していた[若尾逸平|わかおいっぺい]という人の家紋が、"
+        reading: "こいけがもっともそんけいしていたわかおいっぺいというひとのかもんが、"
+      - speaker: reimu
+        text: "「山に一」だったからだと伝えられています。"
+        reading: "やまにいち、だったからだとつたえられています。"
+        telops:
+          - {text: "社名は、恩人の家紋", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "恩人の家紋を、そのまま会社の名前にしたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。自分の名前を下ろして、その人の印を掲げたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……重いのだ。"
+      - speaker: koike
+        emotion: normal
+        text: "看板ってのは、背負うもんですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……背負う。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この感覚、百年後まで残るんだ。"
+      - speaker: reimu
+        text: "店は大きくなり、やがて日本を代表する証券会社のひとつになります。"
+        reading: "みせわおおきくなり、やがてにほんをだいひょうするしょうけんがいしゃのひとつになります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "順風満帆なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ううん。一回、潰れかけてる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。"
+
+  - id: toritsuke
+    title: "1965・取り付け騒ぎ"
+    background: il_yam_toritsuke
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: kyaku, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1965年5月21日の朝刊に、[山一|やまいち]の経営悪化が載りました。"
+        reading: "せんきゅうひゃくろくじゅうごねんごがつにじゅういちにちのちょうかんに、やまいちのけいえいあっかがのりました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ボクが入って、まだ一年ちょっとだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。入社二年目で、会社が傾いた。"
+      - speaker: kyaku
+        emotion: angry
+        text: "おい！ 預けた金を返してくれ！"
+      - speaker: kyaku
+        emotion: angry
+        text: "潰れるって新聞に出てるじゃないか！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "落ち着いてください、まだ何も……"
+      - speaker: reimu
+        text: "店頭に人が押し寄せました。取り付け騒ぎです。"
+        reading: "てんとうにひとがおしよせました。とりつけそうぎです。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……列が、通りの角まで伸びてるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "信用商売でこれが起きたら、もう自力では止まらない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……オワタ、ってやつなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "普通ならね。でもこのときは、国が動いた。"
+      - speaker: reimu
+        text: "5月28日の午後11時30分、日本銀行が発表します。"
+        reading: "ごがつにじゅうはちにちのごごじゅういちじさんじゅっぷん、にほんぎんこうがはっぴょうします。"
+      - speaker: reimu
+        text: "証券業界が必要とする資金は、無制限・無担保で融資する。"
+        reading: "しょうけんぎょうかいがひつようとするしきんわ、むせいげん・むたんぽでゆうしする。"
+        telops:
+          - {text: "無制限・無担保で融資する", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "無制限！？ 上限なしなのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "日銀[特融|とくゆう]。異例中の異例だよ。"
+      - speaker: reimu
+        text: "特融は三つの銀行を通す形で、それぞれ80億円までと決められました。"
+        reading: "とくゆうわみっつのぎんこうをとおすかたちで、それぞれはちじゅうおくえんまでときめられました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "助かったのだ！ 国が味方についたぞ！"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……うん。このときはね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんで含みのある言い方をするのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "三十二年後に、同じことをお願いすることになるから。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……えっ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "そのときは、断られる。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……嫌な伏線を置くんじゃない。"
+
+  - id: bubble
+    title: "バブルという追い風"
+    background: il_yam_bubble
+    bgm: pop
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: kyaku, x: 0.52}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "時間を進めるね。1980年代の後半。"
+      - speaker: zundamon
+        emotion: happy
+        text: "バブルなのだ！"
+      - speaker: kyaku
+        emotion: happy
+        text: "野澤さん、買っといて。全部。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……全部、といいますと。"
+      - speaker: kyaku
+        emotion: happy
+        text: "上がるんだろ？ 上がるって言ったじゃない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……上がると、思います。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この「思います」が、あとで牙をむくの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "怖いこと言うな。"
+      - speaker: reimu
+        text: "証券会社は、大口の客に「これだけは減らさない」と約束することがありました。"
+        reading: "しょうけんがいしゃわ、おおぐちのきゃくにこれだけわへらさないとやくそくすることがありました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……相場で、減らさない約束！？"
+      - speaker: tsumugi
+        emotion: angry
+        text: "うん。それ、できるわけないよね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "無理ゲーだろ。相場は誰にも読めないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、上がってる間は約束が守れちゃうの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……上がってる間は。"
+      - speaker: reimu
+        text: "1990年代に入り、株価は下がり始めます。"
+        reading: "せんきゅうひゃくきゅうじゅうねんだいにはいり、かぶかわさがりはじめます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……約束が、守れなくなるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。ここで会社は、二つのうちどっちかを選ぶことになる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "二つ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "損を出して謝るか。……隠すか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……隠したのだな。"
+
+  - id: tobashi
+    title: "飛ばし"
+    background: il_yam_yakuinshitsu
+    bgm: kinakusai
+    stage:
+      - {who: tsumugi, x: 0.74}
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "「飛ばし」って言葉、聞いたことある？"
+      - speaker: zundamon
+        emotion: normal
+        text: "無いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "決算の日だけ、損した株を別のところに預けるの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……預ける。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「あとで買い戻すから、その日だけ持っててね」って。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "それ、大掃除の日に散らかったものを隣の部屋に押し込むやつだろ！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。それ。完全に一致。"
+      - speaker: zundamon
+        emotion: angry
+        text: "部屋は片付いてないのだ！ 移動しただけだぞ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そうなの。損は消えてない。帳簿から消えただけ。"
+      - speaker: reimu
+        text: "[山一|やまいち]は、子会社のペーパーカンパニーを使いました。"
+        reading: "やまいちわ、こがいしゃのぺーぱーかんぱにーをつかいました。"
+      - speaker: reimu
+        text: "貸し出しては買い戻す形で、損を埋める資金を流していきます。"
+        reading: "かしだしてわかいもどすかたちで、そんをうめるしきんをながしていきます。"
+      - speaker: reimu
+        text: "外国の債券は、オーストラリアの子会社へ、買い戻す約束で売られました。"
+        reading: "がいこくのさいけんわ、おーすとらりあのこがいしゃえ、かいもどすやくそくでうられました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "海の向こうまで飛ばしたのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "遠いほど、見えにくいからね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "見えにくいだけで、あるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。……で、その総額。"
+      - speaker: reimu
+        text: "簿外債務は、日本で1583億円。海外で1065億円ありました。"
+        reading: "ぼがいさいむわ、にほんでせんごひゃくはちじゅうさんおくえん。かいがいでせんろくじゅうごおくえんありました。"
+        telops:
+          - {text: "簿外債務 2648億円", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "合わせて、2600億以上！？"
+      - speaker: reimu
+        text: "隠していた損失は、最大で2720億円にのぼったとされます。"
+        reading: "かくしていたそんしつわ、さいだいでにせんななひゃくにじゅうおくえんにのぼったとされます。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……桁がおかしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そしてこれ、社内でもごく一部しか知らなかった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ごく一部。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。営業一筋で来た人は、知らない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……嫌な予感がするのだ。"
+
+  - id: shacho
+    title: "1997年8月・社長就任"
+    background: il_yam_shachoshitsu
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: senpai, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1997年8月、[山一|やまいち]の取締役11人が、いっせいに退任します。"
+        reading: "せんきゅうひゃくきゅうじゅうななねんはちがつ、やまいちのとりしまりやくじゅういちにんが、いっせいにたいにんします。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "十一人！？ 一気にか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。前の経営陣が、まとめていなくなった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんで辞めたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "それは、あとで分かる。"
+      - speaker: senpai
+        emotion: normal
+        text: "野澤さん。次の社長を、お願いしたい。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……ボクが、ですか。"
+      - speaker: senpai
+        emotion: normal
+        text: "営業を分かっている人でないと、いまは持たない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……五十九です。"
+      - speaker: senpai
+        emotion: normal
+        text: "存じています。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "畑を三年やって、大学出て、営業を三十年。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その先に、社長室があるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "叩き上げの、はい優勝。……のはずだった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "また含みを持たせるのはやめろ。"
+      - speaker: reimu
+        text: "彼は社長になって初めて、簿外債務の存在を知ることになります。"
+        reading: "かれわしゃちょうになってはじめて、ぼがいさいむのそんざいをしることになります。"
+        telops:
+          - {text: "社長になって、初めて知った", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……順番が、逆だろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。普通は、引き継ぐときに聞くよね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "聞かされてないのだ！"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……十月。ある日、役員が二人、社長室に来るの。"
+
+  - id: kokuhaku
+    title: "1997年10月・告白"
+    background: il_yam_shachoshitsu
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: joumu, x: 0.5}
+      - {who: fukusha, x: 0.62}
+    cuts:
+      - speaker: joumu
+        emotion: sad
+        text: "……社長。お話が、あります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: fukusha
+        emotion: sad
+        text: "帳簿に、載っていない借金があります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……載っていない。"
+      - speaker: joumu
+        emotion: sad
+        text: "はい。決算のたびに、外へ回してきました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……いつからだ。"
+      - speaker: fukusha
+        emotion: sad
+        text: "バブルが終わってから、ずっとです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……いくらだ。"
+      - speaker: joumu
+        emotion: sad
+        text: "……二千六百億を、超えます。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……。"
+        telops:
+          - {text: "2600億円", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: reimu
+        text: "10月14日、常務と前副社長が銀行を訪れ、その存在を明かしています。"
+        reading: "じゅうがつじゅうよっか、じょうむとぜんふくしゃちょうがぎんこうをおとずれ、そのそんざいをあかしています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なぜ、いま言ったのだ。"
+      - speaker: joumu
+        emotion: sad
+        text: "……もう、回せないからです。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "社長になって、二か月。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……二か月。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "営業を三十年やってきた人が、初めて聞かされた数字。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……ボクは、一円も使っていないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。関わってない。あとで捜査を受けても、彼は起訴されていない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それでも、判子を押すのはボクなのだな。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……そう。看板を持ってるのは、いま、あなただから。"
+
+  - id: ginko
+    title: "借りられない"
+    background: il_yam_ginko
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: ginko, x: 0.52}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……お願いします。つないでください。"
+      - speaker: ginko
+        emotion: sad
+        text: "……野澤さん。数字は、見ました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: ginko
+        emotion: sad
+        text: "うちだけでは、支えきれません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: reimu
+        text: "この年、金融機関の破綻が続いていました。"
+        reading: "このとし、きんゆうきかんのはたんがつづいていました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "十一月だけで、三洋証券が倒れて、北海道[拓殖|たくしょく]銀行が倒れた。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……同じ月に、二つもか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。もう、誰も誰かを助けられる状態じゃなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……三十二年前は、助けてもらったのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "覚えてたんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "入社二年目で、列を見てるからな。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……でも、今度はその手は来なかった。"
+      - speaker: reimu
+        text: "無制限・無担保という言葉は、二度は使われませんでした。"
+        reading: "むせいげん・むたんぽということばわ、にどわつかわれませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+
+  - id: tsukoku
+    title: "1997年11月19日"
+    background: il_yam_okurasho
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: okura, x: 0.52}
+    cuts:
+      - speaker: okura
+        emotion: normal
+        text: "野澤社長。結論を申し上げます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: okura
+        emotion: normal
+        text: "自主廃業を、選択していただきたい。"
+        telops:
+          - {text: "自主廃業を選択してもらいたい", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……廃業。"
+      - speaker: okura
+        emotion: normal
+        text: "はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……七千五百人、おります。"
+      - speaker: okura
+        emotion: sad
+        text: "……承知しています。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: reimu
+        text: "11月19日。大蔵省からの通告でした。"
+        reading: "じゅういちがつじゅうくにち。おおくらしょうからのつうこくでした。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「潰れる」じゃないの。「自分たちで畳んでくれ」なの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……違うのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "違う。倒産すると、お客さんの資産が凍る。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……預けてるお金が、動かせなくなるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。自主廃業なら、返しながら閉じられる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……客の金は、守るのだな。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "うん。守る。……社員の仕事は、守れない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+
+  - id: scoop
+    title: "1997年11月22日・午前3時"
+    background: il_yam_honsha_yoru
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "11月22日の午前3時ごろ、新聞が自主廃業を報じました。"
+        reading: "じゅういちがつにじゅうににちのごぜんさんじごろ、しんぶんがじしゅはいぎょうをほうじました。"
+      - speaker: shain
+        emotion: surprised
+        text: "社長！ 新聞に出てます！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……もう、出たのか。"
+      - speaker: shain
+        emotion: sad
+        text: "うちの会社が、無くなるって……本当ですか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "社員のほとんどが、新聞で知ったの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……最悪じゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。順番が、めちゃくちゃだった。"
+      - speaker: reimu
+        text: "そして11月24日、営業停止が正式に決まります。"
+        reading: "そしてじゅういちがつにじゅうよっか、えいぎょうていしがせいしきにきまります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……会見を、やる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "午前十一時三十分。東京証券取引所。"
+
+  - id: kaiken
+    title: "1997年11月24日・会見"
+    background: il_yam_kaiken
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: kisha, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "カメラの数は、これまで見たことのない数でした。"
+        reading: "かめらのかずわ、これまでみたことのないかずでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……本日、営業停止を決議いたしました。"
+      - speaker: kisha
+        emotion: normal
+        text: "社長。責任は、どこにあるとお考えですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……経営に、あります。"
+      - speaker: kisha
+        emotion: normal
+        text: "社員の方には、どう説明されますか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……これだけは、言いたい。"
+      - speaker: zundamon
+        emotion: sad
+        text: "私らが悪いんであって……"
+      - speaker: zundamon
+        emotion: sad
+        text: "社員は、悪くありませんから。"
+        telops:
+          - {text: "社員は悪くありませんから", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#0A0A1A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "……お願いします。"
+      - speaker: zundamon
+        emotion: sad
+        text: "みんな、一生懸命やってきたんです。"
+      - speaker: zundamon
+        emotion: sad
+        text: "どうか、優秀な社員を、使ってやってください。"
+      - speaker: reimu
+        text: "彼は、泣きながら話しました。"
+        reading: "かれわ、なきながらはなしました。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……この映像、いまも残ってるの。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "会社が潰れる会見って、普通は言い訳の場になるよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……床が悪い、とか。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "うん。でも彼は、一度も外に矢印を向けなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……自分が作った借金でもないのに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それでも、看板を持っていたのは自分だから。"
+
+  - id: shain
+    title: "七千五百人"
+    background: il_yam_honsha_yoru
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+      - {who: shainf, x: 0.5}
+      - {who: shain, x: 0.62}
+    cuts:
+      - speaker: shainf
+        emotion: sad
+        text: "……社長。私、来月から、どうすれば。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……履歴書を、書いてください。"
+      - speaker: shainf
+        emotion: surprised
+        text: "履歴書……ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。私が、持っていきます。"
+      - speaker: shain
+        emotion: surprised
+        text: "社長がですか。廃業の手続きで、それどころでは……"
+      - speaker: zundamon
+        emotion: normal
+        text: "それが、いまの私の仕事です。"
+      - speaker: reimu
+        text: "彼は廃業の業務に追われながら、社員の履歴書を持って歩いています。"
+        reading: "かれわはいぎょうのぎょうむにおわれながら、しゃいんのりれきしょをもってあるいています。"
+        telops:
+          - {text: "社長自ら、履歴書を持って歩いた", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "……この子は、数字を作れます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この子は、客に信用されています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……どうか、会ってやってください。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……三十年、営業をやってきた人だから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……頭を下げるのは、慣れてるのだ。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "うん。ただ今度は、自分の数字のためじゃない。"
+
+  - id: rirekisho
+    title: "その後"
+    background: il_yam_machi
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, tag: "野澤", flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: reimu
+        text: "会見の映像は、多くの人の心を動かしました。"
+        reading: "かいけんのえいぞうわ、おおくのひとのこころをうごかしました。"
+      - speaker: reimu
+        text: "社長だけでなく、[山一|やまいち]の社員に同情が集まります。"
+        reading: "しゃちょうだけでなく、やまいちのしゃいんにどうじょうがあつまります。"
+      - speaker: reimu
+        text: "そして、社員に対して多くの求人が寄せられました。"
+        reading: "そして、しゃいんにたいしておおくのきゅうじんがよせられました。"
+        telops:
+          - {text: "社員に、求人が殺到した", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……集まったのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。「[山一|やまいち]の営業なら取りたい」って。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あの会見が、効いたのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たぶんね。「この会社の社員は悪くない」って、社長が言い切ったから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……もし言い訳してたら。"
+      - speaker: tsumugi
+        emotion: sad
+        text: "……たぶん、みんなまとめて疑われてた。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: reimu
+        text: "[山一證券|やまいちしょうけん]の清算は、2005年1月の債権者集会をもって終わります。"
+        reading: "やまいちしょうけんのせいさんわ、にせんごねんいちがつのさいけんしゃしゅうかいをもっておわります。"
+      - speaker: reimu
+        text: "同じ年の2月、破産手続の終結が登記されました。"
+        reading: "おなじとしのにがつ、はさんてつづきのしゅうけつがとうきされました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……百年と、八年。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。畳むのにも、八年かかったの。"
+
+  - id: shime
+    title: ""
+    background: il_yam_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、さっきコップを割ったとき、床のせいにしたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "したね。重力も訴えてた。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……あれ、恥ずかしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "コップ一個だからね。あの人は、会社ひとつだった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……しかも、自分で割ってないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。割ったのは前の人たち。彼は片付けを引き継いだだけ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なんで、逃げなかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "看板を持ってたから、じゃないかな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……恩人の家紋を、掲げた会社の。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。百年前から、そういう会社だったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクも、次に何か割ったら。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "床のせいにする前に、ほうきを取るのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それ、けっこう難しいことだよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "難しいから、覚えてる人がいるんだろ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……三十年経っても、あの映像は残ってるもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "あなたの周りにも、黙って片付けてる人がいるかもしれないね。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

@@ -377,6 +377,59 @@ def p_hanafuda(d, s):
                    cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
 
 
+def p_hoe(d, s):
+    """鍬。山一回。高校を出たあと三年間、畑にいたことの記号。"""
+    d.line([s * 0.30, s * 0.82, s * 0.66, s * 0.20], fill=(148, 106, 62),
+           width=int(s * 0.075))
+    d.line([s * 0.30, s * 0.82, s * 0.66, s * 0.20], fill=(186, 140, 84),
+           width=int(s * 0.045))
+    d.polygon([(s * 0.20, s * 0.76), (s * 0.40, s * 0.70),
+               (s * 0.46, s * 0.90), (s * 0.26, s * 0.96)],
+              fill=(150, 156, 166), outline=(78, 84, 94), width=int(s * 0.012))
+    d.polygon([(s * 0.22, s * 0.80), (s * 0.38, s * 0.75),
+               (s * 0.41, s * 0.85), (s * 0.25, s * 0.90)], fill=(184, 190, 200))
+    for k in range(3):                       # 土
+        d.ellipse([s * (0.16 + 0.10 * k), s * 0.95, s * (0.26 + 0.10 * k), s * 1.0],
+                  fill=(122, 96, 66))
+
+
+def p_ledger(d, s):
+    """簿冊の山。山一回。帳簿に載っていない借金＝隠された一冊。"""
+    for k in range(3):
+        y = s * (0.66 - 0.16 * k)
+        col = [(58, 74, 118), (128, 116, 70), (150, 62, 54)][k]
+        d.rounded_rectangle([s * (0.18 + 0.02 * k), y, s * (0.82 - 0.02 * k),
+                             y + s * 0.15], radius=s * 0.012, fill=col,
+                            outline=(40, 34, 30), width=int(s * 0.01))
+        d.rectangle([s * (0.22 + 0.02 * k), y + s * 0.03,
+                     s * (0.78 - 0.02 * k), y + s * 0.05], fill=(240, 238, 230))
+    # いちばん上に、赤い印を押した一枚
+    d.polygon([(s * 0.30, s * 0.14), (s * 0.76, s * 0.10),
+               (s * 0.80, s * 0.44), (s * 0.34, s * 0.48)],
+              fill=(248, 246, 238), outline=(150, 146, 138), width=int(s * 0.01))
+    for k in range(4):
+        d.line([s * 0.36, s * (0.19 + 0.055 * k), s * 0.72, s * (0.175 + 0.055 * k)],
+               fill=(176, 172, 164), width=int(s * 0.014))
+    d.ellipse([s * 0.56, s * 0.24, s * 0.82, s * 0.44], outline=(206, 40, 38),
+              width=int(s * 0.022))
+
+
+def p_mics(d, s):
+    """マイクの束。山一回。会見の記号（社名は描かない）。"""
+    for k in range(5):
+        f = (k - 2) / 2.0
+        tx = s * (0.5 + f * 0.17)
+        ty = s * (0.22 + abs(f) * 0.06)
+        d.line([s * (0.5 + f * 0.05), s * 0.86, tx, ty + s * 0.06],
+               fill=(78, 82, 96), width=int(s * 0.026))
+        d.ellipse([tx - s * 0.055, ty - s * 0.055, tx + s * 0.055, ty + s * 0.055],
+                  fill=(46, 48, 60), outline=(150, 154, 168), width=int(s * 0.012))
+        d.rounded_rectangle([tx - s * 0.03, ty + s * 0.05, tx + s * 0.03,
+                             ty + s * 0.13], radius=s * 0.012, fill=(64, 68, 82))
+    d.rounded_rectangle([s * 0.24, s * 0.84, s * 0.76, s * 0.94], radius=s * 0.02,
+                        fill=(58, 52, 56), outline=(30, 26, 30), width=int(s * 0.012))
+
+
 def p_goban(d, s):
     """碁盤。QR回。昼休みの囲碁が「縦横で読む」発想の元になった。"""
     m = s * 0.13
@@ -2267,6 +2320,12 @@ SPECS = {
         _p("p_hanafuda", "22歳で社長", GREEN, "thinking", "うちは|花札屋なのだ", "創業70年の老舗"),
         _p("p_downgraph", "多角化", SLATE, "sad", "タクシーも|食品も駄目なのだ…", "借金70億円"),
         _p("p_gameboy", "1980年代", RED, "surprised", "うちは|おもちゃ屋なのだ！", "そこから世界を取る"),
+    ]),
+    "yamaichi-nozawa": dict(layout="panels", headline="山一証券、最後の社長",   # 851フォントに「證」が無いので報道表記の「証」
+        head_hi="山一証券", panels=[
+        _p("p_hoe", "1938年 長野", BROWN, "normal", "畑を|三年やったのだ", "畳職人の家に生まれる"),
+        _p("p_ledger", "1997年8月", NAVY, "surprised", "2600億の|借金…！？", "自分は一円も使っていない"),
+        _p("p_mics", "11月24日", SLATE, "sad", "社員は|悪くありませんから", "7500人が職を失った"),
     ]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
