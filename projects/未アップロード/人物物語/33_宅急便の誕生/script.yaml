@@ -251,7 +251,7 @@ scenes:
         text: "二十四歳から二十八歳まで。いちばん動ける時期。"
       - speaker: kanja
         emotion: normal
-        text: "……小倉さん。今日も本かい。"
+        text: "……[小倉|おぐら]さん。今日も本かい。"
       - speaker: zundamon
         emotion: normal
         text: "動けないので。読むしかないんです。"
@@ -463,7 +463,7 @@ scenes:
         text: "そう。相手は会社じゃない。家。"
       - speaker: zundamon
         emotion: normal
-        text: "家は、日本中にあるのだ。"
+        text: "家は、[日本中|にほんじゅう]にあるのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "うん。数だけなら、大口よりずっと多い。"
@@ -524,7 +524,7 @@ scenes:
         text: "名前も要るな。"
       - speaker: tsumugi
         emotion: normal
-        text: "うん。「宅急便」。"
+        text: "うん。「[宅急便|たっきゅうびん]」。"
 
   - id: hantai
     title: "全員、反対"
@@ -596,6 +596,51 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "絞り込みだからね。両方は持てないの。"
+      - speaker: yakuin
+        emotion: sad
+        text: "……社長。数字で見せてください。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いいでしょう。トラック一台が、一日に走れる距離は決まっています。"
+      - speaker: yakuin
+        emotion: normal
+        text: "はい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その道の上に、荷物が一個しか無ければ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一日ぶんの費用を、その一個が背負います。"
+      - speaker: yakuin
+        emotion: sad
+        text: "……とても合いません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ道に、百個あったら。"
+      - speaker: yakuin
+        emotion: surprised
+        text: "……百分の一。"
+      - speaker: zundamon
+        emotion: angry
+        text: "そうです。荷物が増えるほど、一個あたりが安くなる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "普通の商売と逆なんだよね。作れば作るほど安くなる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、最初の赤字は投資なのだ。"
+      - speaker: yakuin
+        emotion: thinking
+        text: "……集まらなければ、ただの赤字です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。そこは、賭けます。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……役員が反対したの、いま聞くと当たり前だよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うん。ボクが役員でも反対するのだ。"
 
   - id: shonichi
     title: "1976・初日11個"
@@ -659,6 +704,33 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "できないなら、やる意味がない。"
+      - speaker: shain
+        emotion: sad
+        text: "……荷物が少ない日でも、走るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "走ります。"
+      - speaker: shain
+        emotion: surprised
+        text: "一個でも、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一個でも。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ここ、地味だけど一番大事なところ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "「たぶん届く」では、誰も次に使わないのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "「必ず届く」でないと、商品にならない。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから赤字の日も走った。積み荷が少ないほど損なのにね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……信用を先に買っているのだ。"
       - speaker: reimu
         text: "取扱いの数は、そこから伸びていきます。"
         reading: "とりあつかいのかずわ、そこからのびていきます。"
@@ -701,7 +773,7 @@ scenes:
         text: "うん。条件の要求が続いて、これ以上は無理だと判断した。"
       - speaker: zundamon
         emotion: normal
-        text: "……大口を抱えたままだと、宅急便に人を回せないのだ。"
+        text: "……大口を抱えたままだと、[宅急便|たっきゅうびん]に人を回せないのだ。"
       - speaker: tsumugi
         emotion: normal
         text: "そこも大きいね。牛丼屋になるって、そういうこと。"
@@ -725,7 +797,8 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: yakunin, x: 0.52}
+      - {who: yakunin, x: 0.5}
+      - {who: shain, x: 0.62}
     cuts:
       - speaker: reimu
         text: "1980年代の半ば、荷物を運ぶ路線には国の免許が必要でした。"
@@ -772,6 +845,30 @@ scenes:
       - speaker: tsumugi
         emotion: angry
         text: "何も言ってないのと同じだよね。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。あの県、まだ配れません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かっている。"
+      - speaker: shain
+        emotion: sad
+        text: "「なぜうちの県だけ来ないのか」と、お問い合わせが。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……申し訳ない、としか言えないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "会社の都合じゃないんだよね。免許が下りてないだけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "トラックはある。人もいる。道もある。"
+      - speaker: zundamon
+        emotion: angry
+        text: "紙が一枚、無いだけなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……五年って、子どもが小学校に入って卒業しかける長さだよ。"
       - speaker: zundamon
         emotion: normal
         text: "……その間、届けたい家は待っているのだ。"
@@ -783,7 +880,8 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: angry}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: bengo, x: 0.52}
+      - {who: bengo, x: 0.5}
+      - {who: yakuin, x: 0.62}
     cuts:
       - speaker: zundamon
         emotion: normal
@@ -793,7 +891,7 @@ scenes:
         text: "訴える、とおっしゃいますと。相手は。"
       - speaker: zundamon
         emotion: normal
-        text: "運輸省です。"
+        text: "[運輸省|うんゆしょう]です。"
       - speaker: bengo
         emotion: surprised
         se: don
@@ -836,6 +934,39 @@ scenes:
       - speaker: tsumugi
         emotion: surprised
         text: "……論点の置き方が、うますぎるんだよね。"
+      - speaker: yakuin
+        emotion: surprised
+        text: "社長。社内でも反対が出ています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でしょうね。"
+      - speaker: yakuin
+        emotion: sad
+        text: "報復されたら、この先の申請が全部止まります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……もう止まっています。"
+      - speaker: yakuin
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "失うものが無い、というより、失い続けてたんだよね。"
+      - speaker: reimu
+        text: "このとき彼は、役所を強い言葉で批判したと伝えられています。"
+        reading: "このときかれわ、やくしょをつよいことばでひはんしたとつたえられています。"
+      - speaker: zundamon
+        emotion: angry
+        text: "決めない役所なら、要らないのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……言い切ったね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "こちらは、荷物を預かっているのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "待たせているのは、役所じゃなくて、うちの名前でだからな。"
       - speaker: bengo
         emotion: normal
         text: "……勝てるかもしれません。"
@@ -847,7 +978,8 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "小倉", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: yakunin, x: 0.52}
+      - {who: yakunin, x: 0.5}
+      - {who: shain, x: 0.62}
     cuts:
       - speaker: reimu
         text: "提訴のあと、免許は四か月で交付されました。"
@@ -883,7 +1015,7 @@ scenes:
         text: "自分の免許を取って終わり、にしなかったの。"
       - speaker: zundamon
         emotion: normal
-        text: "ボクだけ通っても、意味がないのだ。"
+        text: "ボクだけ[通って|とおって]も、意味がないのだ。"
       - speaker: zundamon
         emotion: normal
         text: "次に来る誰かが、また五年待つ。"
@@ -896,6 +1028,33 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "……これが本丸なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "自分の代で得をするのは、免許のほう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも次の世代が得をするのは、基準のほうなんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……五年待つのは、ボクで最後にしたいのだ。"
+      - speaker: shain
+        emotion: happy
+        text: "社長！ あの県、配れます！"
+      - speaker: zundamon
+        emotion: happy
+        text: "……そうか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "待たせた家に、先に行ってくれ。"
+      - speaker: shain
+        emotion: happy
+        text: "はい！"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ちなみにこの裁判、事業者が監督官庁を訴えるって前代未聞だったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰もやらないから、五年も止まっていたのだ。"
 
   - id: zenkoku
     title: "当たり前になるまで"
@@ -907,7 +1066,7 @@ scenes:
     cuts:
       - speaker: tsumugi
         emotion: normal
-        text: "宅急便は、そこから全国に広がっていくの。"
+        text: "[宅急便|たっきゅうびん]は、そこから全国に広がっていくの。"
       - speaker: zundamon
         emotion: happy
         text: "十一個から始まったのに。"
@@ -1043,7 +1202,7 @@ scenes:
           - {text: "同情ではなく、商品で勝つ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
       - speaker: tsumugi
         emotion: normal
-        text: "……これ、宅急便のときと同じ考え方だよね。"
+        text: "……これ、[宅急便|たっきゅうびん]のときと同じ考え方だよね。"
       - speaker: zundamon
         emotion: normal
         text: "同じなのだ。"

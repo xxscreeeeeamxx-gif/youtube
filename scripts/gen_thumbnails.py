@@ -377,6 +377,50 @@ def p_hanafuda(d, s):
                    cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
 
 
+def p_parcel(d, s):
+    """伝票を貼った段ボール箱。宅急便回。"""
+    x0, y0, x1, y1 = s * 0.16, s * 0.28, s * 0.84, s * 0.80
+    d.polygon([(x0, y0), (x1, y0), (x1 - s * 0.08, y0 - s * 0.13),
+               (x0 + s * 0.08, y0 - s * 0.13)], fill=(214, 178, 128))
+    d.rectangle([x0, y0, x1, y1], fill=(196, 158, 108),
+                outline=(132, 100, 60), width=int(s * 0.014))
+    d.line([x0, y0 + (y1 - y0) * 0.02, x1, y0 + (y1 - y0) * 0.02],
+           fill=(132, 100, 60), width=int(s * 0.012))
+    # ガムテープ
+    d.rectangle([(x0 + x1) / 2 - s * 0.045, y0 - s * 0.13,
+                 (x0 + x1) / 2 + s * 0.045, y1], fill=(224, 200, 156))
+    # 伝票
+    d.rectangle([x0 + s * 0.06, y0 + s * 0.14, x0 + s * 0.34, y0 + s * 0.40],
+                fill=(250, 248, 240), outline=(150, 146, 138), width=int(s * 0.01))
+    for k in range(3):
+        d.line([x0 + s * 0.09, y0 + s * (0.19 + 0.06 * k),
+                x0 + s * 0.31, y0 + s * (0.19 + 0.06 * k)],
+               fill=(180, 176, 168), width=int(s * 0.012))
+
+
+def p_gavel(d, s):
+    """法廷の木槌。宅急便回。監督官庁を訴えた場面。"""
+    import math as _m
+    ang = _m.radians(-26)
+    cx, cy = s * 0.52, s * 0.42
+    hw, hh = s * 0.26, s * 0.13
+    for dx, dy in ((0, 0),):
+        pts = []
+        for px, py in ((-hw, -hh), (hw, -hh), (hw, hh), (-hw, hh)):
+            pts.append((cx + px * _m.cos(ang) - py * _m.sin(ang) + dx,
+                        cy + px * _m.sin(ang) + py * _m.cos(ang) + dy))
+        d.polygon(pts, fill=(150, 106, 62), outline=(90, 62, 34),
+                  width=int(s * 0.014))
+    # 柄
+    d.line([cx + s * 0.06, cy + s * 0.06, cx + s * 0.40, cy + s * 0.42],
+           fill=(150, 106, 62), width=int(s * 0.07))
+    d.line([cx + s * 0.06, cy + s * 0.06, cx + s * 0.40, cy + s * 0.42],
+           fill=(186, 140, 88), width=int(s * 0.036))
+    # 台
+    d.rounded_rectangle([s * 0.16, s * 0.78, s * 0.72, s * 0.90], radius=s * 0.02,
+                        fill=(126, 88, 50), outline=(80, 54, 28), width=int(s * 0.014))
+
+
 def p_hoe(d, s):
     """鍬。山一回。高校を出たあと三年間、畑にいたことの記号。"""
     d.line([s * 0.30, s * 0.82, s * 0.66, s * 0.20], fill=(148, 106, 62),
@@ -2326,6 +2370,12 @@ SPECS = {
         _p("p_hoe", "1938年 長野", BROWN, "normal", "畑を|三年やったのだ", "畳職人の家に生まれる"),
         _p("p_ledger", "1997年8月", NAVY, "surprised", "2600億の|借金…！？", "自分は一円も使っていない"),
         _p("p_mics", "11月24日", SLATE, "sad", "社員は|悪くありませんから", "7500人が職を失った"),
+    ]),
+    "ogura-takkyubin": dict(layout="panels", headline="宅急便は役所を訴えて作られた",
+        head_hi="宅急便", panels=[
+        _p(None, "1949年", TEAL, "thinking", "四年、|病室にいたのだ", "動けない4年間"),
+        _p("p_parcel", "1976年", BROWN, "sad", "初日は|十一個…", "初日 11個"),
+        _p("p_gavel", "1986年", RED, "angry", "決めろ、と|言っているのだ", "監督官庁を訴えた"),
     ]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
