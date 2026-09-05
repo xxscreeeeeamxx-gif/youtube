@@ -30,10 +30,10 @@ TITLES = {
     "traffic-light": "【信号機の謎】呼び方に合わせて、法律の方が折れた【ずんだもん解説】",
     # 再現ドラマもの（【〇〇の誕生】+数字先頭フック）
     "momofuku-meme": "【カップ麺の誕生】47歳で全財産ゼロ。裏庭の小屋で世界を変える【ずんだもん解説】",
-    "kaiten-meme": "【回転寿司の誕生】構想10年。人手不足の寿司屋、ビール工場で答えを見つける【ずんだもん解説】",
-    "qr-meme": "【QRコードの誕生】1日1000回の「ピッ」に疲れた工場から、世界標準が生まれた【ずんだもん解説】",
+    "kaiten-meme": "【回転寿司の誕生】人手不足の寿司屋が、ビール工場で答えを見つける【ずんだもん解説】",
+    "qr-meme": "【QRコードの誕生】現場の「疲れた」の一言から、世界標準が生まれた【ずんだもん解説】",
     "gastro-meme": "【胃カメラの誕生】胃の中を撮れ。前例なき無茶な依頼【ずんだもん解説】",
-    "rice-cooker-meme": "【炊飯器の誕生】朝4時起きの重労働を、スイッチ一つに【ずんだもん解説】",
+    "rice-cooker-meme": "【炊飯器の誕生】大手が匙を投げた難題を、町工場の夫婦が【ずんだもん解説】",
     "tenji-block-meme": "【点字ブロックの誕生】なぜ日本の道路は黄色い突起だらけか【ずんだもん解説】",
     "purikura-meme": "【プリクラの誕生】そんなの持って帰ってどうすんの【ずんだもん解説】",
     "sharp-pencil": "【シャープペンシルの誕生】全部失って、大阪へ【ずんだもん解説】",
@@ -50,7 +50,7 @@ TITLES = {
     "yai-denchi": "【乾電池の誕生】5分の遅刻で人生が変わった男が、凍らない電池を作るまで【ずんだもん解説】",
     "masuoka-flash": "【フラッシュメモリの誕生】スマホの記憶を作った男は干された【ずんだもん解説】",
     "kaisatsu-drama": "【自動改札機の誕生】世界が真似しなかった、日本だけの答え【ずんだもん解説】",
-    "quartz-astron": "【クオーツ時計の誕生】144位から始まった、山の中の工場【ずんだもん解説】",
+    "quartz-astron": "【クオーツ時計の誕生】最下位の工場が、スイスを倒すまで【ずんだもん解説】",
     "karaoke": "【カラオケの誕生】年1億ドルの特許料を、受け取らなかった男【ずんだもん解説】",
 }
 
@@ -151,18 +151,21 @@ def build_entry(slug: str, pdir: Path = None):
 
 
 if __name__ == "__main__":
+    import argparse
+    ap = argparse.ArgumentParser(description="概要欄・タイトル・タグを書き出す")
+    ap.add_argument("slugs", nargs="*", help="指定するとその slug だけ書き出す")
+    # 公開済みは既定では触らない（動画は差し替えられないため）。ただし
+    # upload_youtube.py title で YouTube 側のタイトルを直せるようになったので、
+    # ローカルの記録だけ現実に合わせたいときは --refresh-uploaded を使う
+    ap.add_argument("--refresh-uploaded", action="store_true",
+                    help="公開済みの youtube.txt も TITLES に合わせて作り直す")
+    _a = ap.parse_args()
+
     out_all = []
     count = 0
     from ytf.config import Config, iter_projects, is_uploaded
     for p in iter_projects(Config.load().root):
         if not (p / "out" / "video.mp4").exists():
-            continue
-        if is_uploaded(p):
-            # 公開済みは編集しない。既存の youtube.txt をそのまま集約に載せる
-            f = p / "youtube.txt"
-            if f.exists():
-                out_all.append(f"{'=' * 60}\n【{p.name}】(公開済み)\n{'=' * 60}\n{f.read_text()}")
-                count += 1
             continue
         # slug はフォルダ名ではなく script.yaml の meta.slug（TITLES のキー）
         try:
@@ -170,6 +173,14 @@ if __name__ == "__main__":
                     or {}).get("meta", {}).get("slug") or p.name
         except Exception:
             slug = p.name
+        if _a.slugs and slug not in _a.slugs and p.name not in _a.slugs:
+            continue
+        if is_uploaded(p) and not _a.refresh_uploaded:
+            f = p / "youtube.txt"
+            if f.exists():
+                out_all.append(f"{'=' * 60}\n【{p.name}】(公開済み)\n{'=' * 60}\n{f.read_text()}")
+                count += 1
+            continue
         if slug in SKIP:
             continue
         entry = build_entry(slug, p)

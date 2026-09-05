@@ -336,6 +336,54 @@ def cmd_thumbnail(args) -> int:
     return 0
 
 
+def cmd_title(args) -> int:
+    """投稿済み動画のタイトルだけを差し替える。
+
+    `videos.update` は指定した part を丸ごと置き換えるので、いまの snippet を読んで
+    説明文・タグ・カテゴリを載せ直す（title だけ送ると説明文が消える）。
+    read-only の項目（channelId・thumbnails 等）は送らない。
+    """
+    import sys as _s
+    _s.path.insert(0, str(ROOT / "scripts"))
+    from gen_youtube_meta import TITLES
+    yt = service()
+    check_channel(yt, args.channel)
+    from ytf.config import Config, find_project_dir
+    root = Config.load().root
+    slugs = args.slugs or sorted(TITLES)
+    n = 0
+    for slug in slugs:
+        want = TITLES.get(slug)
+        if not want:
+            print(f"  ✗ {slug:<18}TITLES に登録がありません")
+            continue
+        proj = find_project_dir(root, slug)
+        idf = proj / "out" / "youtube_video_id.txt" if proj else None
+        if not (idf and idf.exists()):
+            print(f"  ✗ {slug:<18}動画IDの控えがありません")
+            continue
+        vid = idf.read_text(encoding="utf-8").strip()
+        sn = yt.videos().list(part="snippet", id=vid).execute()["items"][0]["snippet"]
+        if sn["title"] == want:
+            print(f"  = {slug:<18}変更なし")
+            continue
+        print(f"  旧 {sn['title']}")
+        print(f"  新 {want}")
+        if args.dry_run:
+            n += 1
+            continue
+        body = {"title": want, "categoryId": sn["categoryId"],
+                "description": sn.get("description", ""), "tags": sn.get("tags", [])}
+        for k in ("defaultLanguage", "defaultAudioLanguage"):
+            if sn.get(k):
+                body[k] = sn[k]
+        yt.videos().update(part="snippet", body={"id": vid, "snippet": body}).execute()
+        print(f"  ✓ {slug:<18}https://youtu.be/{vid}")
+        n += 1
+    print(f"{'変更予定' if args.dry_run else '変更完了'}: {n} 本")
+    return 0
+
+
 def _channel_videos(yt):
     """自分のチャンネルの全動画を {videoId: title} で返す。"""
     ch = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]
@@ -538,6 +586,12 @@ def main() -> int:
     tb.add_argument("--channel", default=EXPECT_CHANNEL)
     tb.add_argument("--dry-run", action="store_true")
     tb.set_defaults(func=cmd_thumbnail)
+
+    ti = sub.add_parser("title", help="投稿済み動画のタイトルを TITLES に合わせる")
+    ti.add_argument("slugs", nargs="*", help="省略すると全動画")
+    ti.add_argument("--channel", default=EXPECT_CHANNEL)
+    ti.add_argument("--dry-run", action="store_true")
+    ti.set_defaults(func=cmd_title)
 
     ta = sub.add_parser("thumbnail-all", help="全動画のサムネを一括で差し替える")
     ta.add_argument("--channel", default=EXPECT_CHANNEL)
