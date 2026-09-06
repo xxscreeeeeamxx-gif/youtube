@@ -1,0 +1,885 @@
+# 東京ディズニーランド・再現ドラマ（[高橋政知|たかはしまさとも]・1913→2000）。投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ8本目。**題材の認知は最大級なのに、人物はほぼ知られていない**。
+#   ダイエー型の「知っているものの、知らない裏側」でいちばん差分が大きい題材
+# ★配役: ずんだもん=高橋政知 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★注意: ディズニーの作品名・キャラクター名は出さない（商標）。
+#   「あの会社」「向こう」と呼び、記号も描かない。園の中身の描写もしない。
+#   この動画で描くのは、**土地と交渉の話**であって、パークの中身ではない
+# ★ミーム禁止の章: gyogyo（漁民の生活が変わる場面は軽口を減らす）
+# 裏取り: 高橋政知Wikipedia
+# 確定事実:
+#   1913-9-4 福島県福島市 生 / 2000-1-31 没（86歳・東京都港区）
+#   第一東京市立中学→山形高等学校(旧制)→東京帝国大学法学部 1939卒→理研重工業
+#   1940 富士製紙専務・高橋貞三郎の娘 弘子と見合い結婚し高橋姓に改姓
+#   戦後 富士石油販売の役員に招かれ、そこで三井不動産の江戸英雄と出会う。
+#     江戸がオリエンタルランドを紹介した
+#   1961 オリエンタルランド入社。浦安の漁業権交渉を開始
+#     相手は気性の荒い漁師たち。浦安漁業組合は二つに分裂していた
+#     漁民の家を直接訪問して次々にまとめ、料亭に実力者を招いて酒を交わしながら重ねた
+#     常に相手の立場を尊重しながら対話を進めた
+#   埋め立て: 当初申請 約330万m² → 約250万m²の払い下げ → 最終的に約380万m²を取得
+#   1975年から交渉を始め、4年5か月かかった。1979-4-30 基本契約を締結
+#   1978-8 社長に就任（第2代）/ 1988-6-25 会長へ
+#   1983-4-15 東京ディズニーランド開園
+#   本人の言葉:「金に糸目はつけず、本物を造る」
+#     「目先のコストを惜しめば、貧弱なものしかできない」
+#     浦安の土地に愛着が生まれ「ここに国民の幸福に寄与するものを作りたい」
+meta:
+  title: "【東京ディズニーランドの誕生】海だった場所を、20年かけて陸にした男【ずんだもん解説】"
+  slug: "takahashi-urayasu"
+  summary: "いま人が並んでいるあの場所は、もともと海でした。埋め立ての前に、そこで漁をしていた人たちがいます。交渉を任されたのは、法学部を出た会社員でした。二つに割れた漁業組合を相手に、彼は一軒ずつ家を訪ねます。開園までの20年を、ずんだもんが高橋政知を演じる再現ドラマでたどります。"
+  tags: ["東京ディズニーランド", "高橋政知", "浦安", "オリエンタルランド", "埋め立て", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "ここは海だった"
+    bottom: "東京ディズニーランドの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: edo, label: "江戸英雄", voice: 13, pitch: -0.06, item: hat}
+    - {id: ryoshi, label: "漁師", voice: 13, pitch: -0.02}
+    - {id: ryoshi2, label: "漁師", voice: 42, pitch: 0.0}
+    - {id: kumiai, label: "組合の人", voice: 13, pitch: -0.1, item: hat}
+    - {id: yakunin, label: "県の人", voice: 13, pitch: -0.08, item: hat}
+    - {id: shain, label: "会社の人", voice: 12, pitch: 0.02}
+    - {id: mukou, label: "向こうの担当", voice: 13, pitch: 0.04, item: hat}
+scenes:
+  - id: hook
+    title: ""
+    background: il_tdl_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ、来月あそこに行くのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "おお、いいね。何時に出る？"
+      - speaker: zundamon
+        emotion: normal
+        text: "始発だ。並ぶからな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "気合い入ってる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あそこ、なんであんなに広いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "お、いい質問。"
+      - speaker: zundamon
+        emotion: normal
+        text: "都心から近いのに、あれだけの土地が空いてたのはおかしいぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "空いてなかったよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "え。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あそこ、もともと海なの。"
+        telops:
+          - {text: "あの場所は、海だった", size: xl, position: middle-center, color: "#FFF15A", stroke: "#0A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "海！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。浅い海で、貝や海苔が獲れた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……じゃあ、漁師がいたのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いた。だから、埋める前にやることがあったの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……その人たちに、海をやめてもらう。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。[漁業権|ぎょぎょうけん]っていう権利を、手放してもらう交渉。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……無理だろ。仕事を捨てろという話じゃないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもね、地元の組合が二つに割れてたの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "割れてる相手と交渉！？ 二重に無理ゲーだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。任されたのは、法学部を出た会社員。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……喧嘩慣れしてる人じゃないのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しない。その人がやったのは、一軒ずつ家に行くこと。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……足で回ったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。交渉を始めたのが1961年。開園は1983年。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "二十二年かかってるのだ！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[高橋政知|たかはしまさとも]。名前、聞いたことある？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……無いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だよね。行った人はみんな知ってるのに、この人は知られてない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: keireki
+    title: "1913・法学部の男"
+    background: il_tdl_office
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: edo, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1913年9月4日、福島市に生まれます。"
+        reading: "せんきゅうひゃくじゅうさんねんくがつよっか、ふくしましにうまれます。"
+      - speaker: reimu
+        text: "東京帝国大学の法学部を1939年に卒業し、会社に入りました。"
+        reading: "とうきょうていこくだいがくのほうがくぶをせんきゅうひゃくさんじゅうくねんにそつぎょうし、かいしゃにはいりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクは、法律の人間なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "土地の[埋め立て|うめたて]も、遊園地も、専門じゃないんだよね。"
+      - speaker: reimu
+        text: "戦後、石油の販売会社に役員として招かれます。"
+        reading: "せんご、せきゆのはんばいがいしゃにやくいんとしてまねかれます。"
+      - speaker: reimu
+        text: "そこで、三井不動産の[江戸英雄|えどひでお]と出会いました。"
+        reading: "そこで、みついふどうさんのえどひでおとであいました。"
+      - speaker: edo
+        emotion: normal
+        text: "高橋さん。ひとつ、面倒な話があるんですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……面倒、ですか。"
+      - speaker: edo
+        emotion: normal
+        text: "千葉の[浦安|うらやす]沖を[埋め立て|うめたて]て、大きい土地を作る計画です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……海を、埋める。"
+      - speaker: edo
+        emotion: sad
+        text: "ええ。ただ、[漁業権|ぎょぎょうけん]の話が、まったく進んでいない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……誰が、やっているんですか。"
+      - speaker: edo
+        emotion: sad
+        text: "何人か行きました。全員、帰ってきました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "門前払いどころか、追い返されてたの。"
+      - speaker: edo
+        emotion: normal
+        text: "行ってもらえませんか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……条件を、伺っても。"
+      - speaker: edo
+        emotion: normal
+        text: "条件は、あなたが作ってください。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……。"
+      - speaker: reimu
+        text: "1961年、彼はオリエンタルランドに入ります。"
+        reading: "せんきゅうひゃくろくじゅういちねん、かれわおりえんたるらんどにはいります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "四十七歳。ここから二十二年の話が始まるの。"
+
+  - id: gyogyo
+    title: "1961・浦安"
+    background: il_tdl_umi
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+      - {who: ryoshi, x: 0.46}
+      - {who: ryoshi2, x: 0.56}
+      - {who: kumiai, x: 0.66}
+    cuts:
+      - speaker: reimu
+        text: "当時の[浦安|うらやす]の沖は浅く、貝や海苔が獲れる海でした。"
+        reading: "とうじのうらやすのおきわあさく、かいやのりがとれるうみでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……船が、たくさん出ている。"
+      - speaker: ryoshi
+        emotion: angry
+        text: "……あんた、会社の人か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: ryoshi
+        emotion: angry
+        text: "帰れ。海を売る気は無い。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かりました。"
+      - speaker: ryoshi2
+        emotion: surprised
+        text: "……帰るのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "今日は帰ります。また来ます。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……この「また来ます」を、何年もやるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……相手の話を、まず聞かないといけないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、組合が二つに割れてた。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……片方とまとめても、もう片方が反対するのか。"
+      - speaker: kumiai
+        emotion: angry
+        text: "うちは、あちらとは別だ。一緒にするな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "承知しています。別々に伺います。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、この人の一番うまいところ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……まとめて説得しようとすると、両方に嫌われるのだ。"
+      - speaker: reimu
+        text: "彼は漁民の家を直接訪ね、一軒ずつ話をまとめていきました。"
+        reading: "かれわぎょみんのいえをちょくせつたずね、いっけんずつはなしをまとめていきました。"
+        telops:
+          - {text: "一軒ずつ、家を訪ねた", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: ryoshi2
+        emotion: normal
+        text: "……あんた、また来たな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。今日は、話を聞きに来ました。"
+      - speaker: ryoshi2
+        emotion: thinking
+        text: "……海が無くなったら、俺は何をすればいい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そこを、決めずには進めません。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……金額の話じゃないんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "海をやめたあとの生活が見えないと、誰も判は押せないのだ。"
+      - speaker: ryoshi
+        emotion: normal
+        text: "……あんた、うちの海を見たことあるか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……上からしか。"
+      - speaker: ryoshi
+        emotion: angry
+        text: "乗れ。連れてってやる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……よろしいんですか。"
+      - speaker: ryoshi
+        emotion: normal
+        text: "売る相手の顔くらい、見といてやる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……この人、船に乗せてもらうところまで行くんだよね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……浅い。膝くらいしかない。"
+      - speaker: ryoshi
+        emotion: normal
+        text: "そうだ。だから貝が育つ。"
+      - speaker: ryoshi2
+        emotion: normal
+        text: "海苔の棚も、この浅さでないと立たん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……深い海では、できない漁なのだ。"
+      - speaker: ryoshi
+        emotion: angry
+        text: "分かったか。よそへ移れ、で済む話じゃねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ここで理解しちゃったから、余計に長引くの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……押し切れなくなったのだ。"
+
+  - id: matomaru
+    title: "判が押されるまで"
+    background: il_tdl_ryotei
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: kumiai, x: 0.46}
+      - {who: ryoshi, x: 0.56}
+      - {who: shain, x: 0.66}
+    cuts:
+      - speaker: reimu
+        text: "彼は料亭に実力者を招き、酒を交わしながら話し合いを重ねます。"
+        reading: "かれわりょうていにじつりょくしゃをまねき、さけをかわしながらはなしあいをかさねます。"
+      - speaker: kumiai
+        emotion: normal
+        text: "……高橋さん。あんた、酒は強いのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……強くはありません。"
+      - speaker: kumiai
+        emotion: happy
+        text: "正直だな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "嘘をつくと、あとで困りますので。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……この人、押し切ろうとしないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "押し切ったら、判は押されても遺恨が残るのだ。"
+      - speaker: ryoshi
+        emotion: angry
+        text: "……こっちは、代々ここで獲ってきたんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: ryoshi
+        emotion: angry
+        text: "金をもらって終わり、じゃ済まねえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……済ませません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "できた土地で、何が起きるかまで話します。"
+      - speaker: kumiai
+        emotion: surprised
+        text: "……何を作るんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……人が来る場所を、作ります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この時点でね、まだ何を作るか決まってないの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "決まってないのに説得してるのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。だから「人が来る場所」としか言えない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……苦しいのだ。"
+      - speaker: reimu
+        text: "交渉は年単位で続き、少しずつ話がまとまっていきます。"
+        reading: "こうしょうわねんたんいでつづき、すこしずつはなしがまとまっていきます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人ね、だんだん[浦安|うらやす]に情が湧いてくるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……通いすぎたのだ。"
+      - speaker: reimu
+        text: "彼は、この土地に国民の幸福に寄与するものを作りたいと考えるようになります。"
+        reading: "かれわ、このとちにこくみんのこうふくにきよするものをつくりたいとかんがえるようになります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……仕事で来たのに、地元の人間みたいになってきたぞ。"
+      - speaker: shain
+        emotion: sad
+        text: "……高橋さん。本社から、催促が来ています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何と。"
+      - speaker: shain
+        emotion: sad
+        text: "「まだか」と。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……まだだ、と伝えてくれ。"
+      - speaker: shain
+        emotion: surprised
+        text: "……何年、かかりますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分からん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……工期は引けても、人の気持ちには工期が引けないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……急がせると、壊れる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊れたら、また一からだ。"
+      - speaker: kumiai
+        emotion: normal
+        text: "……高橋さん。うちは、まとまった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ありがとうございます。"
+      - speaker: kumiai
+        emotion: normal
+        text: "礼はいい。あんたが何度も来たからだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……回数なんだよね、結局。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……うまい話をしたわけではないのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ話を、何度もしただけだ。"
+
+  - id: umetate
+    title: "海を、陸にする"
+    background: il_tdl_umetate
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: yakunin, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "[埋め立て|うめたて]の申請は、およそ330万平方メートルでした。"
+        reading: "うめたてのしんせいわ、およそさんびゃくさんじゅうまんへいほうめーとるでした。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……三百三十万。ぴんと来ないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "東京ドームがだいたい四万七千くらい。だから七十個分。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "七十個！？"
+        telops:
+          - {text: "東京ドーム 約70個分の海を埋める", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: yakunin
+        emotion: normal
+        text: "……全部は、認められません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……どこまでなら。"
+      - speaker: yakunin
+        emotion: normal
+        text: "二百五十万ほどです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かりました。まず、そこから。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "全部通そうとしないの。通る分から始める。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ゼロで粘るより、[動く|うごく]分を動かすのだ。"
+      - speaker: reimu
+        text: "最終的には、およそ380万平方メートルを取得しています。"
+        reading: "さいしゅうてきにわ、およそさんびゃくはちじゅうまんへいほうめーとるをしゅとくしています。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……最初の申請より、増えているぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。一度で全部取るより、時間をかけたほうが多く取れた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……粘り勝ちなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、陸ができた。ここでやっと本題。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何を作るか、だな。"
+
+  - id: nanika
+    title: "何を作るのか"
+    background: il_tdl_kaigi
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.5}
+      - {who: edo, x: 0.62}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "陸はできた。でも、まだ何を作るか決まってないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……広い土地が、そのまま空いているのだ。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。住宅にしては、という声も出ています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……売れば、すぐ金にはなる。"
+      - speaker: edo
+        emotion: normal
+        text: "早いのは、そちらです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……売ってしまえば、それで終わりです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……漁師さんに[何て|なんて]言ったか、覚えてるからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人が来る場所を作る、と言ったのだ。"
+      - speaker: shain
+        emotion: normal
+        text: "……遊園地、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "普通の遊園地では、続かん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時ね、日本の遊園地って何度も行く場所じゃなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……一度行けば、それで満足してしまう。"
+      - speaker: zundamon
+        emotion: angry
+        text: "何度でも来たくなるものが要るのだ。"
+      - speaker: edo
+        emotion: thinking
+        text: "……そんなものが、どこかにありますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……アメリカに、あります。"
+      - speaker: shain
+        emotion: surprised
+        text: "……買えるんですか、そんなもの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……買うのではなく、来てもらうんです。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……ここからが、もうひと山。"
+
+  - id: koushou
+    title: "1975・向こうとの交渉"
+    background: il_tdl_kaigi
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: mukou, x: 0.52}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "作りたいものは、アメリカにあったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あの会社の遊園地か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。当時、アメリカの外には無かった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……国外初なのか。"
+      - speaker: mukou
+        emotion: normal
+        text: "……率直に申し上げます。難しい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……理由を、伺っても。"
+      - speaker: mukou
+        emotion: normal
+        text: "気候です。冬は寒く、夏は湿気が多い。"
+      - speaker: mukou
+        emotion: normal
+        text: "それに、我々は海の外でやったことがありません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも向こう、そもそも乗り気じゃなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それでも、通う。"
+      - speaker: reimu
+        text: "交渉は1975年から始まり、4年5か月続きました。"
+        reading: "こうしょうわせんきゅうひゃくななじゅうごねんからはじまり、よねんごかげつつづきました。"
+        telops:
+          - {text: "交渉に 4年5か月", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……四年五か月。[漁業権|ぎょぎょうけん]のときと同じやり方だぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。何度も行って、相手の言い分を聞く。"
+      - speaker: mukou
+        emotion: thinking
+        text: "……高橋さん。なぜ、そこまで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あの土地を、海から作りましたので。"
+      - speaker: mukou
+        emotion: surprised
+        text: "……海から。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。漁をしていた人に、頭を下げて回りました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "中途半端なものは、作れません。"
+      - speaker: reimu
+        text: "1979年4月30日、基本契約が結ばれます。"
+        reading: "せんきゅうひゃくななじゅうくねんしがつさんじゅうにち、きほんけいやくがむすばれます。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "海の外で、初めての一件。"
+
+  - id: shacho
+    title: "1978・社長になる"
+    background: il_tdl_office
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1978年8月、彼はオリエンタルランドの社長になります。"
+        reading: "せんきゅうひゃくななじゅうはちねんはちがつ、かれわおりえんたるらんどのしゃちょうになります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……六十四歳だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "普通なら、そろそろ退く年でしょ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……まだ、何も建っていないのだ。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。……借入の額が、相当なことになります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いくらだ。"
+      - speaker: shain
+        emotion: sad
+        text: "会社が、傾く額です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……傾く、で済むならいい。"
+      - speaker: shain
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……失敗したら、[埋め立て|うめたて]の借金だけが残るの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そのときは、私が責任を取る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "判を押してもらった相手の顔が、分かっているからな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……逃げられない立場に、自分で入っていったんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……最初から、逃げ場は無いのだ。"
+
+  - id: honmono
+    title: "本物を造る"
+    background: il_tdl_kensetsu
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: shain
+        emotion: sad
+        text: "社長。……この仕様だと、費用が跳ね上がります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いくら違う。"
+      - speaker: shain
+        emotion: sad
+        text: "桁が変わります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それでいい。"
+      - speaker: shain
+        emotion: surprised
+        text: "よろしいんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "金に糸目はつけない。本物を造れ。"
+        telops:
+          - {text: "金に糸目はつけず、本物を造る", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……普通、社長は逆のことを言うよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……目先の金を惜しめば、貧弱なものしかできんのだ。"
+      - speaker: shain
+        emotion: thinking
+        text: "……ですが、回収は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "安く作って、誰も来なかったら、回収もできん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、賭けなんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……二十年かけた土地だ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "安物を置くために、頭を下げて回ったんじゃない。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……漁師さんの顔が、ずっと残ってるんだと思う。"
+      - speaker: reimu
+        text: "1983年4月15日、開園しました。"
+        reading: "せんきゅうひゃくはちじゅうさんねんしがつじゅうごにち、かいえんしました。"
+        telops:
+          - {text: "1983年4月15日 開園", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……交渉を始めてから、二十二年。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。海だった場所に、人が並んだ。"
+      - speaker: shain
+        emotion: happy
+        text: "社長。……入り口に、列ができています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何人ほどだ。"
+      - speaker: shain
+        emotion: happy
+        text: "……数えきれません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……この人、開園の日に何を思ったんだろうね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あの人たちに、見せたいのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "あの人たち、といいますと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……判を押してくれた人たちだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "海が無くなって、何ができたのかを。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……「人が来る場所を作ります」って言ったもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……二十二年前の約束だ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。ちゃんと来たね、人。"
+
+  - id: shime
+    title: ""
+    background: il_tdl_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: reimu
+        text: "彼は1988年に会長へ退き、2000年1月31日に亡くなりました。"
+        reading: "かれわせんきゅうひゃくはちじゅうはちねんにかいちょうえしりぞき、にせんねんいちがつさんじゅういちにちになくなりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、来月あそこに行くのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "始発でね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あの下は、海だったのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。貝や海苔が獲れてた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その人たちが、判を押してくれたから並べるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこを、押し切らずにまとめた人がいたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……一軒ずつ、家に行った人だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。組合が割れてたから、まとめて説得はできなかった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……近道が、無かったのだな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。二十二年、近道をしなかった人の話。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……並んでる時間が、急に短く思えてきたぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それは言い過ぎ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "次に行くとき、足元が昔は海だったことだけ思い出してみて。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

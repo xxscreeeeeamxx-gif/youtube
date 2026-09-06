@@ -1,0 +1,1057 @@
+# ホンダ・再現ドラマ（[本田宗一郎|ほんだそういちろう]・1906→1991）。投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ7本目。認知は最大級だが、そのぶん競合動画も最も多い題材。
+#   差別化は「宣言から7年」という時間の弧と、藤沢武夫との役割分担の徹底に置く
+# ★配役: ずんだもん=本田宗一郎 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★ミーム禁止の章: なし（死や逮捕の場面が無い）。ただし三河地震の章は軽口を減らす
+# 裏取り: 本田宗一郎Wikipedia / Honda公式「マン島TTレース出場宣言(1954年)〜初出場(1959年)」/
+#   レスポンス「ロードレース世界選手権で通算800勝」/ 二輪文化を伝える会「1961年 悲願の優勝」
+# 確定事実:
+#   1906-11-17 静岡県磐田郡光明村（現・浜松市天竜区）生 / 1991-8-5 没
+#   父は本田儀平、鍛冶屋
+#   1922 高等小学校を卒業し、東京市本郷区湯島の「アート商会」に丁稚奉公。約6年勤務
+#   1928 浜松市にアート商会浜松支店を設立して独立
+#   1937 東海精機重工業の社長に就任
+#   1945 三河地震で浜松工場が倒壊。全株を豊田自動織機に売却
+#   1946-10 本田技術研究所を設立。終戦直後、妻の買い出し自転車に
+#     「エンジンをつけたら楽になる」と思いついたのが始まり
+#   1948 本田技研工業を設立。資本金100万、従業員20人
+#   1949 藤沢武夫と出会う。本田が技術に集中し、経営は藤沢にすべて任せた
+#   1954-3 マン島TTレースへの出場を宣言（社内報）
+#   1959 マン島TTに初出場
+#   1961 マン島TTの125ccと250ccの両クラスで1位から5位を独占
+#   1973 中華人民共和国訪問後に社長を退き、取締役最高顧問へ。
+#     藤沢から「あなたは社長なのか、技術者なのか」と問われ、技術理解の限界を認めたため
+#   本人の言葉:「やってみもせんで、何がわかる」
+#     「人種や家柄や学歴などで人間を判断することを、私は今日まで、徹底してやらなかった」
+meta:
+  title: "【ホンダの誕生】宣言から7年。世界一を口に出した町工場【ずんだもん解説】"
+  slug: "honda-soichiro"
+  summary: "1954年、まだ小さかった会社が「世界最高峰のレースで優勝する」と紙に書いて社員に配りました。当時そのレースに出た日本の会社はありません。書いたのは、鍛冶屋の息子で高等小学校しか出ていない男です。宣言から実際に勝つまでの7年を、ずんだもんが本田宗一郎を演じる再現ドラマでたどります。"
+  tags: ["ホンダ", "本田宗一郎", "藤沢武夫", "マン島TT", "バイク", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "宣言から7年"
+    bottom: "ホンダの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: chichi, label: "父・儀平", voice: 42, pitch: -0.04, item: mustache}
+    - {id: oyakata, label: "アート商会の親方", voice: 13, pitch: -0.08, item: hat}
+    - {id: fujisawa, label: "藤沢武夫", voice: 13, pitch: -0.02, item: hat}
+    - {id: shain, label: "ホンダの社員", voice: 12, pitch: 0.02}
+    - {id: shainf, label: "ホンダの社員", voice: 8, pitch: 0.06}
+    - {id: kisha, label: "記者", voice: 12, pitch: 0.0}
+    - {id: rider, label: "ライダー", voice: 13, pitch: 0.04}
+scenes:
+  - id: hook
+    title: ""
+    background: il_hon_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ、ボクは来年、世界一になるのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……何の。"
+      - speaker: zundamon
+        emotion: happy
+        text: "まだ決めてない。とりあえず宣言したのだ。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "順番がおかしい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言っておけば、あとから体がついてくるぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……まあ、それで本当に世界一になった人はいるけどね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "いるのか！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1954年。ある小さい会社が、紙を一枚配ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何が書いてあったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「世界最高峰のレースに出て、優勝する」。"
+        telops:
+          - {text: "世界最高峰のレースで優勝する", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "威勢がいいのだ。好きだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……その時点で、その会社はまだそのレースに出たことすら無いの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "出たことも無いのに優勝を宣言したのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。日本の会社は、誰も出たことが無かった。"
+      - speaker: zundamon
+        emotion: angry
+        text: "それは宣言じゃなくて、ただの願望なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……で、七年後に本当に優勝する。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "七年で追いついたのか！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、一位から五位まで全部その会社。"
+        telops:
+          - {text: "1位から5位まで独占", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……独占。上位が全部か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。書いた人は、鍛冶屋の息子。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……学校は。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[高等小学校|こうとうしょうがっこう]まで。あとは[丁稚奉公|でっちぼうこう]。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……大学どころじゃないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。だからこの人、学歴で人を見なかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[本田宗一郎|ほんだそういちろう]。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……いま道を走ってるあれか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。会社の名前は、この人の苗字そのもの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: kajiya
+    title: "1906・鍛冶屋の子"
+    background: il_hon_kajiya
+    bgm: haru_kitchen
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, scale: 0.78, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: chichi, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1906年11月17日、静岡県の山あいの村に生まれました。"
+        reading: "せんきゅうひゃくろくねんじゅういちがつじゅうしちにち、しずおかけんのやまあいのむらにうまれました。"
+      - speaker: reimu
+        text: "父の[儀平|ぎへい]は、鍛冶屋を営んでいます。"
+        reading: "ちちのぎへいわ、かじやをいとなんでいます。"
+      - speaker: chichi
+        emotion: normal
+        text: "宗一郎。ふいごを踏め。"
+      - speaker: zundamon
+        emotion: happy
+        text: "はい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "鍛冶屋ってね、鉄を熱して叩いて形にする仕事。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……図面は無いのだ。"
+      - speaker: chichi
+        emotion: normal
+        text: "見て覚えろ。手が覚えたことは、忘れん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この「手が先」という感覚、一生変わらないんだよね。"
+      - speaker: reimu
+        text: "彼は近くに来た自動車を見て、強く惹かれたと語られています。"
+        reading: "かれわちかくにきたじどうしゃをみて、つよくひかれたとかたられています。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……油の匂いがするのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "地面にこぼれた油を、手ですくって嗅いだぞ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そこまでいくと、もう病気だよね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "褒め言葉として受け取るのだ。"
+      - speaker: reimu
+        text: "1922年、[高等小学校|こうとうしょうがっこう]を卒業します。"
+        reading: "せんきゅうひゃくにじゅうにねん、こうとうしょうがっこうをそつぎょうします。"
+      - speaker: zundamon
+        emotion: normal
+        text: "上の学校には行かないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。東京へ、[丁稚奉公|でっちぼうこう]に出る。"
+
+  - id: dechi
+    title: "1922・丁稚奉公"
+    background: il_hon_artshokai
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, scale: 0.88, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: oyakata, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "東京の[湯島|ゆしま]にあった「アート商会」という自動車の修理工場です。"
+        reading: "とうきょうのゆしまにあったあーとしょうかいというじどうしゃのしゅうりこうじょうです。"
+      - speaker: oyakata
+        emotion: normal
+        text: "本田。今日はこれを持って、あっちだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……子守り、ですか。"
+      - speaker: oyakata
+        emotion: normal
+        text: "そうだ。小僧の仕事だ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……はい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最初のうちね、車に触らせてもらえないの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "車をやりに来たのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でも、そこで辞めなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……見てはいる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰がどう直すか、全部見ているぞ。"
+      - speaker: oyakata
+        emotion: surprised
+        text: "……おい。それ、誰に教わった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "教わっていません。見てました。"
+      - speaker: oyakata
+        emotion: thinking
+        text: "……明日から、工場に入れ。"
+      - speaker: reimu
+        text: "彼はここで、およそ六年間働きます。"
+        reading: "かれわここで、およそろくねんかんはたらきます。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "六年。この人の学校は、ここだったの。"
+      - speaker: reimu
+        text: "1928年、浜松に自分の店を出して独立します。"
+        reading: "せんきゅうひゃくにじゅうはちねん、はままつにじぶんのみせをだしてどくりつします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "二十二歳で親方なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。腕はもう本物だからね。"
+
+  - id: jishin
+    title: "1945・全部を手放す"
+    background: il_hon_yakeato
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1937年、彼は[東海精機|とうかいせいき]という会社の社長になります。"
+        reading: "せんきゅうひゃくさんじゅうななねん、かれわとうかいせいきというかいしゃのしゃちょうになります。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "エンジンの部品を作る会社ね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ピストンリングだ。難しいぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最初、全然作れなかったの。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……割れる。何度やっても割れる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "で、この[人|ひと]どうしたと思う？"
+      - speaker: zundamon
+        emotion: normal
+        text: "……学校に行った。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "そう。三十すぎてから、学校に[通って|とおって]金属を習うの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "手で分からんものは、頭で調べるしかないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ちなみに卒業はしてない。必要な授業だけ聞いて帰ったって。"
+      - speaker: zundamon
+        emotion: happy
+        text: "卒業証書は、機械を直してくれないぞ。"
+      - speaker: reimu
+        text: "1945年、三河地震で浜松の工場が倒れます。"
+        reading: "せんきゅうひゃくよんじゅうごねん、みかわじしんではままつのこうじょうがたおれます。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。……工場が、ありません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……。"
+      - speaker: reimu
+        text: "彼は会社の株を全て売却しました。"
+        reading: "かれわかいしゃのかぶをすべてばいきゃくしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……売る。"
+      - speaker: shain
+        emotion: surprised
+        text: "全部、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全部だ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……三十八歳で、手元に何も無くなるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……しばらく、休む。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "実際、一年くらい何もしてないと言われてる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……人間休業だ。"
+
+  - id: jitensha
+    title: "1946・妻の自転車"
+    background: il_hon_koya
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shainf, x: 0.52}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人が動き出すきっかけ、すごく生活に近いの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何があったのだ。"
+      - speaker: reimu
+        text: "終戦直後、妻が買い出しに行く自転車を見て、彼はこう思います。"
+        reading: "しゅうせんちょくご、つまがかいだしにいくじてんしゃをみて、かれわこうおもいます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……坂がきついのだ。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "エンジンをつけたら、楽になるぞ。"
+        telops:
+          - {text: "自転車にエンジンをつける", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "……世界のホンダ、ここから始まってるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "買い物が重いから、が出発点なのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。困ってる人が、すぐそばにいた。"
+      - speaker: shainf
+        emotion: surprised
+        text: "社長。エンジンは、どこから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "軍の払い下げに、小さい発動機がある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あれを自転車にくくりつける。"
+      - speaker: shainf
+        emotion: sad
+        text: "……燃料が、手に入りません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "松の根から取れる油を混ぜて試す。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そこまでやるんだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "無いものは、代わりを探すのだ。"
+      - speaker: reimu
+        text: "1946年10月、本田技術研究所を設立します。"
+        reading: "せんきゅうひゃくよんじゅうろくねんじゅうがつ、ほんだぎじゅつけんきゅうじょをせつりつします。"
+      - speaker: reimu
+        text: "1948年には、本田技研工業を設立しました。"
+        reading: "せんきゅうひゃくよんじゅうはちねんにわ、ほんだぎけんこうぎょうをせつりつしました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "資本金は百万円。社員は二十人。"
+      - speaker: zundamon
+        emotion: happy
+        text: "二十人か。全員の顔が見えるぞ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……ここで、この会社の命運を決める人が来るの。"
+
+  - id: fujisawa
+    title: "1949・藤沢武夫"
+    background: il_hon_kojo
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: fujisawa, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1949年、彼は[藤沢武夫|ふじさわたけお]と出会います。"
+        reading: "せんきゅうひゃくよんじゅうくねん、かれわふじさわたけおとであいます。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "本田さん。売り方の話を、してもいいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……興味が無い。"
+      - speaker: fujisawa
+        emotion: happy
+        text: "でしょうね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……即答か。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "だから私が全部やります。あなたは機械だけ見てください。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[金|かね]の話も、人の話も。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "全部です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いいだろう。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……この分け方、ちょっと異常だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "普通の会社は、社長が全部見るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。でもこの二人は、本当に分けたの。"
+      - speaker: reimu
+        text: "本田は技術に集中し、経営は藤沢に任されました。"
+        reading: "ほんだわぎじゅつにしゅうちゅうし、けいえいわふじさわにまかされました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……ボクは、機械の前にいればいいのだな。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "はい。ただし、条件があります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言ってみろ。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "他社が作れないものを、作ってください。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "同じものなら、値段でしか売れません。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……分かった。作る。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……いい取引だよね。お互いに逃げ道が無い。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "それと、売る相手のことですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……バイク屋だろう。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "いえ。自転車屋に売ります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……自転車屋。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "全国に何万軒とあります。バイク屋より、はるかに多い。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そこに手紙を出したの。何万通も。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "手紙！？"
+      - speaker: fujisawa
+        emotion: normal
+        text: "「うちの品を置きませんか」と。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……売り場を、先に作るのか。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "はい。良い品でも、置く場所が無ければ売れません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクには、思いつかん発想だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "だから二人でやってるんだよね。"
+
+  - id: cub
+    title: "誰が乗るのか"
+    background: il_hon_kojo
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: fujisawa, x: 0.52}
+    cuts:
+      - speaker: fujisawa
+        emotion: normal
+        text: "本田さん。次に作るものの話を、していいですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "速いのを作る。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "いえ。蕎麦屋が乗るものを。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……蕎麦屋。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "出前の途中で、片手が[空く|あく]ものです。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……片手。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時のバイクって、両手両足を使うのが当たり前だったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……左手で握るやつを、無くせということか。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "はい。あと、着物でも乗れるように。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……またぐ場所を、下げるのだな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ここ、スバルの人と同じことしてるよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰が乗るかを、先に決めるのだ。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "そうです。速さは、その次です。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……速いのは、レースでやる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "商売の足と、世界一。両方いくの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "片方だけでは、会社は持たんのだ。"
+
+  - id: sengen
+    title: "1954・宣言"
+    background: il_hon_kojo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.5}
+      - {who: shainf, x: 0.62}
+    cuts:
+      - speaker: reimu
+        text: "1954年3月、彼は社内報にある文章を載せます。"
+        reading: "せんきゅうひゃくごじゅうよねんさんがつ、かれわしゃないほうにあるぶんしょうをのせます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[マン島|まんとう]のTTレースに出る。"
+      - speaker: shain
+        emotion: surprised
+        text: "……[マン島|まんとう]、ですか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "イギリスの島でやる、当時いちばん格の高いバイクのレース。"
+      - speaker: shainf
+        emotion: sad
+        text: "……日本の会社は、まだ一社も出ていません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "知っている。"
+      - speaker: shain
+        emotion: surprised
+        text: "出場、されるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いや。"
+      - speaker: zundamon
+        emotion: angry
+        se: don
+        text: "優勝する、と書く。"
+        telops:
+          - {text: "出場ではなく、優勝すると書いた", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A0A0A", glow: "#E85A4A", anim: up}
+      - speaker: shainf
+        emotion: surprised
+        text: "……ゆ、優勝。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……ここ、けっこうすごいところだからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何がだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「頑張ります」じゃなくて「勝ちます」って先に言ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……逃げられなくするためだ。"
+      - speaker: shain
+        emotion: sad
+        text: "……できなかったら、恥をかきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。だから、やる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "やってみもせんで、何が分かる。"
+        telops:
+          - {text: "やってみもせんで、何がわかる", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人の、いちばん有名な言葉。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……できない理由は、やった人にしか分からんのだ。"
+      - speaker: shainf
+        emotion: normal
+        text: "……では、何から始めますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "まず、見に行く。話はそれからだ。"
+
+  - id: manto
+    title: "1959・初出場"
+    background: il_hon_circuit
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: rider, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "宣言から五年後の1959年、ようやく初出場します。"
+        reading: "せんげんからごねんごのせんきゅうひゃくごじゅうくねん、ようやくはつしゅつじょうします。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……五年もかかったのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。宣言してすぐ出られたわけじゃないの。"
+      - speaker: rider
+        emotion: surprised
+        text: "……相手のバイク、速いです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どのくらい違う。"
+      - speaker: rider
+        emotion: sad
+        text: "……走っている世界が、違います。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この年、優勝はできてない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……完走はしたのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それだけでも当時は大したことだった。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……大したことでは、困るのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "優勝すると書いたのだ。"
+      - speaker: rider
+        emotion: normal
+        text: "……社長。何を直しますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "回転数を上げる。"
+      - speaker: rider
+        emotion: surprised
+        text: "……壊れます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊れる場所が分かる。それでいい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ロータリーの人と、同じこと言ってるね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊さんと、どこが弱いか分からんのだ。"
+
+  - id: yusho
+    title: "1961・独占"
+    background: il_hon_circuit
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: rider, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1961年、[マン島|まんとう]のTTレース。"
+        reading: "せんきゅうひゃくろくじゅういちねん、まんとうのてぃーてぃーれーす。"
+      - speaker: rider
+        emotion: happy
+        text: "社長。125のクラス、一位です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……[勝った|かった]か。"
+      - speaker: rider
+        emotion: happy
+        text: "二位も、うちです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: rider
+        emotion: happy
+        text: "三位、四位、五位も、うちです。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……五位まで、全部か。"
+      - speaker: reimu
+        text: "125と250の両方のクラスで、一位から五位を独占しました。"
+        reading: "ひゃくにじゅうごとにひゃくごじゅうのりょうほうのくらすで、いちいからごいをどくせんしました。"
+        telops:
+          - {text: "2クラスとも 1〜5位を独占", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "……両方か。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "宣言から七年。書いたとおりになったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……七年。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも「優勝」を通り越して「独占」。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……宣言は、越えないと意味が無いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……この勝ち方でね、世界の見る目が一気に変わったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……日本のバイクは安物だ、と言われていたからな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。そこが「速い」に変わった。"
+
+  - id: sekai
+    title: "世界へ出る"
+    background: il_hon_kojo
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: happy}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: fujisawa, x: 0.52}
+    cuts:
+      - speaker: fujisawa
+        emotion: normal
+        text: "本田さん。アメリカに行きます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……売れるのか。あそこは大きいのに乗る国だぞ。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "だから、小さいのを売ります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……逆をやるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時ね、向こうでバイクって「怖い人の乗り物」だったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……イメージが悪いのだな。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "はい。ですから、普通の人が乗っている絵を見せます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……買い物や、通学に。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこが当たって、一気に広がるの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……レースで名前を売って、生活で買ってもらうのか。"
+      - speaker: fujisawa
+        emotion: happy
+        text: "そういう順番です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクは、速いのを作るだけでよかったのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。そのぶん、本気で速くした。"
+
+  - id: gakureki
+    title: "学歴で人を見ない"
+    background: il_hon_kojo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.5}
+      - {who: shainf, x: 0.62}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人の会社ね、採用のときに変わった方針があったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何なのだ。"
+      - speaker: reimu
+        text: "彼は後年、こう語っています。"
+        reading: "かれわこうねん、こうかたっています。"
+      - speaker: reimu
+        text: "人種や家柄や学歴で人を判断することを、徹底してやらなかった、と。"
+        reading: "じんしゅやいえがらやがくれきでひとをはんだんすることを、てっていしてやらなかった、と。"
+        telops:
+          - {text: "学歴で人を判断しなかった", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクは[高等小学校|こうとうしょうがっこう]しか出ていないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。自分が判断されて困る側だった。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。この者、学校を出ておりませんが。"
+      - speaker: zundamon
+        emotion: angry
+        text: "手を見せろ。"
+      - speaker: shainf
+        emotion: surprised
+        text: "……手、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何を触ってきたかは、手に出る。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……鍛冶屋の子だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "図面が読めなくても、直せる人間はいるのだ。"
+      - speaker: shain
+        emotion: thinking
+        text: "……逆に、学校を出ていても。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊せん人間は、いる。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "壊すの前提なんだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "壊さん奴は、[直せん|なおせん]ぞ。"
+
+  - id: taijin
+    title: "1973・辞める"
+    background: il_hon_shachoshitsu
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "本田", flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: thinking}
+      - {who: fujisawa, x: 0.5}
+      - {who: shain, x: 0.62}
+    cuts:
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……そして、この会社のいちばん有名な話が来るの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何がだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "辞め方。"
+      - speaker: reimu
+        text: "1970年代、排気ガスの規制が厳しくなり、技術の中身が変わっていきます。"
+        reading: "せんきゅうひゃくななじゅうねんだい、はいきがすのきせいがきびしくなり、ぎじゅつのなかみがかわっていきます。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……ここは、こう直せばいい。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。……そのやり方では、もう通りません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "手で分かる範囲を、技術が超えていったの。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "本田さん。ひとつ、伺います。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……言え。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "あなたは社長なのか、技術者なのか。"
+        telops:
+          - {text: "あなたは社長なのか、技術者なのか", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……二十四年、経営を全部引き受けてきた人の質問だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……技術者だ。"
+      - speaker: fujisawa
+        emotion: normal
+        text: "……では、社長の椅子は要りませんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……要らん。"
+      - speaker: reimu
+        text: "1973年、彼は社長を退きます。"
+        reading: "せんきゅうひゃくななじゅうさんねん、かれわしゃちょうをしりぞきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……藤沢。あんたも辞めるのか。"
+      - speaker: fujisawa
+        emotion: happy
+        text: "はい。二人で始めたので。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……律儀な男だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じ時に、二人とも退いたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……六十六歳。まだ手は動くぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。でも、会社に必要な手はもう別の形になってた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……居座らんのが、最後の仕事なのだ。"
+
+  - id: shime
+    title: ""
+    background: il_hon_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: reimu
+        text: "[本田宗一郎|ほんだそういちろう]は、1991年8月5日に亡くなりました。"
+        reading: "ほんだそういちろうわ、せんきゅうひゃくきゅうじゅういちねんはちがついつかになくなりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、さっき「来年、世界一になる」と言ったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "何のかも決めずにね。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……あの人は、七年かけて回収したのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、宣言した時点では出たことすら無いレースだった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なぜ、優勝と書いたのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "出場します、で済んだのに。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……たぶん、済ませたくなかったんだと思う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……逃げ道を、自分で潰したのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。しかも社員全員に配ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……全員が見てるところで言ったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこがこの人の、いちばん強いところだと思う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクも、来年の目標は紙に書くのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "いいね。何にする？"
+      - speaker: zundamon
+        emotion: happy
+        text: "……まず、何をやるか決めるところからだな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこからか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "やってみもせんで、何がわかる。今日はこの言葉を置いていくね。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

@@ -1,0 +1,638 @@
+# アシックス・再現ドラマ（[鬼塚喜八郎|おにつかきはちろう]・1918→2007）。投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ10本目。ロータリー回と同じ「技術の壁を1つずつ潰す」型だが、
+#   ヒントが全部**台所と人間の足**から来るのが違い。図解ではなく観察の話にする
+# ★配役: ずんだもん=鬼塚喜八郎 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+# ★商標に配慮: 靴のストライプ意匠やロゴは描かない。背景も一般的な形状のみ
+# ★ミーム禁止の章: なし（死や逮捕の場面が無い）。軍隊の章だけ軽口を減らす
+# 裏取り: 鬼塚喜八郎Wikipedia
+# 確定事実:
+#   1918-5-29 鳥取県気高郡明治村（現・鳥取市松上）生 / 2007-9-29 没
+#   1936 鳥取県立鳥取第一中学校を卒業
+#   1939 徴兵検査に合格し、姫路の陸軍第10師団 輜重兵第10連隊へ配属。
+#     甲種幹部候補生試験に合格し、見習士官から将校に。
+#     1944 松代大本営の守備隊として赴任 / 1945-8 終戦
+#   戦後は神戸の商事会社に勤務
+#   1949-3 個人事業として創業、9月に鬼塚株式会社を設立（兵庫県）。
+#     最初はズック靴や警ら用靴の配給
+#   1951年夏、きゅうりの酢の物にあったタコの足に目がとまり、吸盤にヒントを得て
+#     凹型のソールを考案。「鬼塚式バスケットシューズ」として販売
+#   1953 別府マラソンで選手の足を調査。大阪大学医学部教授から助言を受け、
+#     風通しを良くし、着地時に熱い空気を吐き出し、離地時に冷たい空気が流れ込む構造の
+#     特許シューズを開発
+#   1977 株式会社ジィティオ、ジェレンク株式会社と合併し「株式会社アシックス」となる。
+#     語源は Anima Sana In Corpore Sano（健全なる精神は健全なる肉体に宿る）の略
+#   最も尊敬する経営者は松下幸之助
+meta:
+  title: "【アシックスの誕生】タコの足を見て、靴の裏を考えた男【ずんだもん解説】"
+  slug: "onitsuka-asics"
+  summary: "バスケットの選手が止まれずに転ぶ。その相談を受けた男が答えを見つけたのは、夕食に出たきゅうりの酢の物でした。中に入っていたタコの足です。次にマラソン選手の足を見に行った彼は、靴の中の空気を入れ替える仕組みを作ります。ずんだもんが鬼塚喜八郎を演じる再現ドラマです。"
+  tags: ["アシックス", "鬼塚喜八郎", "オニツカ", "スニーカー", "マラソン", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "タコの足を見て"
+    bottom: "アシックスの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: kantoku, label: "バスケの監督", voice: 13, pitch: -0.04, item: hat}
+    - {id: senshu, label: "選手", voice: 12, pitch: 0.04}
+    - {id: senshuf, label: "選手", voice: 8, pitch: 0.06}
+    - {id: kyoju, label: "大学の先生", voice: 42, pitch: -0.02, item: mustache}
+    - {id: shain, label: "会社の人", voice: 12, pitch: 0.0}
+    - {id: shokunin, label: "職人", voice: 13, pitch: -0.08}
+scenes:
+  - id: hook
+    title: ""
+    background: il_asi_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: angry
+        text: "つむぎ、この靴、滑るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どこで。"
+      - speaker: zundamon
+        emotion: angry
+        text: "体育館だ。止まろうとすると、そのまま行く。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……それ、靴のせいにしてない？"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクの止まり方は完璧なのだ。裏が悪い。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……まあ、実際そこは靴の裏の話ではあるよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "認めてくれるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。昔ね、同じ相談を受けた人がいるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……靴屋か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。バスケの監督から「選手が止まれない」って言われた。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……で、どうしたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "夕飯を食べてて、答えが出た。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "夕飯！？"
+      - speaker: tsumugi
+        emotion: normal
+        text: "きゅうりの酢の物。中に、タコが入ってたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……タコ。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……[吸盤|きゅうばん]か！"
+        telops:
+          - {text: "ヒントは、タコの[吸盤|きゅうばん]", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: happy
+        text: "早い。そう、それ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "[吸盤|きゅうばん]はへこんでる。押しつけると、くっつくのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。それを靴の裏に写した。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……いま履いてる靴の裏、たしかに丸くへこんでるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "その原型が、1951年の日本で作られてるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "誰なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[鬼塚喜八郎|おにつかきはちろう]。会社の名前は、あとで変わる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何に変わるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "アシックス。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……知ってるぞ。えらく身近になったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "しかもあの名前、ラテン語なんだよ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "ラテン語！？ 情報量が増えすぎだろ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: sengo
+    title: "1949・神戸で始める"
+    background: il_asi_yakeato
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "鬼塚", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "[鬼塚喜八郎|おにつかきはちろう]は1918年5月29日、鳥取県に生まれました。"
+        reading: "おにつかきはちろうわせんきゅうひゃくじゅうはちねんごがつにじゅうくにち、とっとりけんにうまれました。"
+      - speaker: reimu
+        text: "軍に入り、終戦は1945年8月を迎えます。"
+        reading: "ぐんにはいり、しゅうせんわせんきゅうひゃくよんじゅうごねんはちがつをむかえます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……帰ってきた。何をすればいい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "神戸の商事会社に勤めるの。そこから独立する。"
+      - speaker: reimu
+        text: "1949年、彼は個人で商売を始め、その年のうちに会社にします。"
+        reading: "せんきゅうひゃくよんじゅうくねん、かれわこじんでしょうばいをはじめ、そのとしのうちにかいしゃにします。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。何を扱いますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……靴だ。"
+      - speaker: shain
+        emotion: surprised
+        text: "靴、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "みんな裸足に近い。まず、履くものが要る。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最初は作るんじゃなくて、配るほうね。ズック靴とか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……物が無い時代だ。運ぶだけで商売になる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……でも、それだと誰でもできるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうだ。売るものを、自分で作らんといかん。"
+      - speaker: shain
+        emotion: normal
+        text: "何を作りますか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……若い者が使うものだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人ね、戦後の若者に体を動かしてほしかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……体が丈夫なら、気持ちも立て直せるのだ。"
+
+  - id: tako
+    title: "1951・タコの足"
+    background: il_asi_taiikukan
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "鬼塚", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: kantoku, x: 0.46}
+      - {who: senshu, x: 0.56}
+      - {who: shokunin, x: 0.66}
+    cuts:
+      - speaker: kantoku
+        emotion: angry
+        text: "鬼塚さん。うちの選手が、止まれんのです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……止まれない。"
+      - speaker: senshu
+        emotion: sad
+        text: "急に止まろうとすると、そのまま滑ります。"
+      - speaker: kantoku
+        emotion: angry
+        text: "転んで怪我をする。これでは、練習にならん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……靴の裏を、見せてください。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……平らだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の靴の裏って、つるっとしてたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ゴムを柔らかくすれば、止まるか。"
+      - speaker: shokunin
+        emotion: sad
+        text: "柔らかくすると、すぐ減ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……硬くすると、滑る。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "板挟みだよね。硬さの勝負にすると、どっちかが死ぬ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……硬さの話ではないのかもしれん。"
+      - speaker: reimu
+        text: "1951年の夏、彼は夕食の席であるものに目を留めます。"
+        reading: "せんきゅうひゃくごじゅういちねんのなつ、かれわゆうしょくのせきであるものにめをとめます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……きゅうりの酢の物だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……タコの足が、皿にくっついている。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……そこで気づくの。"
+      - speaker: zundamon
+        emotion: surprised
+        se: don
+        text: "……[吸盤|きゅうばん]は、へこんでいるぞ。"
+      - speaker: reimu
+        text: "彼はタコの足の[吸盤|きゅうばん]にヒントを得て、凹型のソールを考えました。"
+        reading: "かれわたこのあしのきゅうばんにひんとをえて、おうがたのそーるをかんがえました。"
+        telops:
+          - {text: "へこみが、吸いつく", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: normal
+        text: "平らな面どうしは、滑るのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……へこみがあれば、そこの空気が抜けて吸いつく。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ゴムの硬さを変えずに、形で解いたの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……材料ではなく、形だ。"
+      - speaker: kantoku
+        emotion: surprised
+        text: "……止まります。これは、止まります。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……社長。へこみを深くすると、ゴムが千切れます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……浅いと、吸わん。"
+      - speaker: shokunin
+        emotion: normal
+        text: "何回、試しますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "深さを一つずつ変えて、全部作れ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……全部、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "履いてもらわんと分からん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、体育館に通うの。作っては持っていって。"
+      - speaker: senshu
+        emotion: normal
+        text: "……これは、少し引っかかります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "引っかかるのは、行き過ぎだ。"
+      - speaker: senshu
+        emotion: happy
+        text: "……こっちは、いいです。すっと止まります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……その一足だ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "選手に選ばせたんだよね。自分で決めずに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……履くのは、ボクではないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "「鬼塚式バスケットシューズ」。ここから始まるの。"
+
+  - id: marathon
+    title: "1953・足を見に行く"
+    background: il_asi_road
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "鬼塚", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: senshu, x: 0.5}
+      - {who: senshuf, x: 0.62}
+    cuts:
+      - speaker: reimu
+        text: "1953年、彼は別府のマラソンに行き、選手の足を調べます。"
+        reading: "せんきゅうひゃくごじゅうさんねん、かれわべっぷのまらそんにいき、せんしゅのあしをしらべます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……走り終わった足を、見せてもらえますか。"
+      - speaker: senshu
+        emotion: surprised
+        text: "……足、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。靴の中で、何が起きたかを知りたい。"
+      - speaker: senshu
+        emotion: sad
+        text: "……どうぞ。あまり、きれいではありませんが。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……豆だらけだ。"
+      - speaker: senshuf
+        emotion: sad
+        text: "後半は、痛みとの勝負になります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何人か、見せてください。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "この人ね、一人じゃなくて何人も見て回るの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……豆のできる場所が、みんな同じだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そこに気づくんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ場所にできるなら、原因も同じだ。"
+      - speaker: senshu
+        emotion: normal
+        text: "……汗で、中が蒸れます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……濡れた皮膚は、こすれに弱い。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、ロータリーの人とまったく同じ考え方だよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "規則正しく起きるものには、規則正しい原因があるのだ。"
+
+  - id: kuki
+    title: "空気を、入れ替える"
+    background: il_asi_kojo
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "鬼塚", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: kyoju, x: 0.5}
+      - {who: shokunin, x: 0.62}
+    cuts:
+      - speaker: reimu
+        text: "彼は大学の医学部の先生に助言を求めました。"
+        reading: "かれわだいがくのいがくぶのせんせいにじょげんをもとめました。"
+      - speaker: kyoju
+        emotion: normal
+        text: "豆は、蒸れと[摩擦|まさつ]でできます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……蒸れを止めれば、減りますか。"
+      - speaker: kyoju
+        emotion: normal
+        text: "減ります。ただ、走ると必ず熱がこもる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……熱い空気を、外に出さないといかん。"
+      - speaker: shokunin
+        emotion: normal
+        text: "穴を開けますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……穴だけでは、入れ替わらん。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……そこ、細かいね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "空気は、押し出さないと出ていかんのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……走るとき、足は何をしている。"
+      - speaker: shokunin
+        emotion: normal
+        text: "……地面を、踏みます。"
+      - speaker: zundamon
+        emotion: happy
+        se: don
+        text: "そこだ。踏むたびに、靴はつぶれる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "つぶれたら、中の熱い空気が押し出される。"
+      - speaker: zundamon
+        emotion: normal
+        text: "足が離れたら、靴は戻る。そのとき冷たい空気が入る。"
+        telops:
+          - {text: "踏むたびに、空気が入れ替わる", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: kyoju
+        emotion: surprised
+        text: "……足そのものを、ポンプにするのですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。走っている限り、ずっと動きます。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……電池も要らないし、部品も増えないの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "選手はもう走っている。その動きを、使うだけだ。"
+      - speaker: reimu
+        text: "この構造は特許を取りました。"
+        reading: "このこうぞうわとっきょをとりました。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……タコのときと、やってること同じだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……材料を足すのではなく、形で解くのだ。"
+
+  - id: shinrai
+    title: "選手に、信用される"
+    background: il_asi_road
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "鬼塚", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: senshu, x: 0.5}
+      - {who: senshuf, x: 0.62}
+    cuts:
+      - speaker: senshuf
+        emotion: happy
+        text: "鬼塚さん。……豆が、できませんでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……最後まで、ですか。"
+      - speaker: senshuf
+        emotion: happy
+        text: "はい。足のことを考えずに、走れました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それが、いちばん聞きたかった言葉です。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……速く走れる靴、じゃないんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "痛みを、減らしただけだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……だが、痛みが減れば最後まで走れる。"
+      - speaker: senshu
+        emotion: normal
+        text: "……鬼塚さん。次の大会にも、来ますか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "行きます。また、足を見せてください。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……毎回、足を見に行くの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "机の上では、豆はできんのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……こうやって、選手のあいだで名前が広がっていくの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……宣伝は、してないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。使った人が、次の人に言うんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……宅急便の人と、同じことを言っている気がするのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "十一個の荷物の人ね。届いた体験が強い、って。"
+
+  - id: asics
+    title: "1977・名前が変わる"
+    background: il_asi_kojo
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, tag: "鬼塚", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1977年、二つの会社と合併し、社名が変わります。"
+        reading: "せんきゅうひゃくななじゅうななねん、ふたつのかいしゃとがっぺいし、しゃめいがかわります。"
+      - speaker: shain
+        emotion: normal
+        text: "社長。新しい名前は、どうしますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ラテン語の言葉がある。"
+      - speaker: shain
+        emotion: surprised
+        text: "ラテン語、ですか。"
+      - speaker: reimu
+        text: "アニマ・サナ・イン・コルポレ・サノ。"
+        reading: "あにま・さな・いん・こるぽれ・さの。"
+      - speaker: reimu
+        text: "健全なる精神は健全なる肉体に宿る、という意味です。"
+        reading: "けんぜんなるせいしんわけんぜんなるにくたいにやどる、といういみです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その頭の文字を、並べる。"
+      - speaker: shain
+        emotion: surprised
+        text: "……アシックス。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。あの名前、この一文なの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……戦争のあと、若い者に体を動かしてほしかったのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それが、そのまま社名になっている。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……創業のときの気持ちを、名前にしたんだね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……靴屋の名前ではないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。何のために靴を作るか、のほうを書いてる。"
+
+  - id: shime
+    title: ""
+    background: il_asi_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: reimu
+        text: "[鬼塚喜八郎|おにつかきはちろう]は、2007年9月29日に亡くなりました。"
+        reading: "おにつかきはちろうわ、にせんななねんくがつにじゅうくにちになくなりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボク、さっき「靴が悪い」と言ったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "言ってた。止まり方は完璧だとも言ってた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あの人は、選手の足を見に行ったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、走り終わったあとの足をね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……豆のできる場所が同じだと気づいた。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこから、靴の中の空気の話になった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……タコも、そうだったな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。夕飯の皿にくっついてるのを見ただけ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……見ている量が、違うのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じものを、みんな見てるはずなんだけどね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……困っている人を先に見ているから、目に入るのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……今日いちばんいいこと言った。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "靴の裏、今日ちょっと見てみて。丸くへこんでるはずだから。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

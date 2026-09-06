@@ -1,0 +1,845 @@
+# ソニー・再現ドラマ（[井深大|いぶかまさる]・1908→1997 / [盛田昭夫|もりたあきお]・1921→1999）。
+# 投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ9本目。技術屋と営業の二人組で、ホンダ回と同じ型。
+#   ただし敵が「役所」なのはホンダではなく**こちら**（通産省の外貨割り当て拒否）なので、
+#   ホンダ回とは山場をずらす。ホンダ＝宣言と時間、ソニー＝許可が下りない話
+# ★配役: ずんだもん=井深大 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+#   盛田はモブ（本作の主人公は井深。二人主人公にすると焦点がぼける）
+# ★ミーム禁止の章: なし（死や逮捕の場面が無い）
+# 裏取り: 井深大Wikipedia / 公益社団法人「戦後日本のイノベーション100選 トランジスタラジオ」/
+#   駒澤大学「ソニーによるトランジスターラジオの開発」/ The社史「TR-55を発売（1955年）」
+# 確定事実:
+#   井深大 1908-4-11 栃木県上都賀郡日光町 生 / 1997-12-19 没（89歳・東京都）
+#     早稲田大学理工学部卒。学生時代から奇抜な発明で有名だった
+#   盛田昭夫 1921-1-26 生 / 1999-10-3 没
+#   戦時中、ケ号爆弾の開発中に日本測定器で盛田と知り合う
+#   1945-10 東京・日本橋の旧白木屋店内に、個人企業として東京通信研究所を設立
+#   1946-5 株式会社化し東京通信工業となる
+#     設立趣意書:「真面目ナル技術者ノ技能ヲ、最高度ニ発揮セシムベキ
+#                  自由闊達ニシテ愉快ナル理想工場ノ建設」
+#   1952 井深が渡米し、ウエスタン・エレクトリックが2万5000ドル（約900万円）で
+#     トランジスタの特許を公開していることを知る
+#   通産省は「ちょっとやそっとのことで、トランジスタなんかできないよ」と否定的で、
+#     東通工への外貨割り当てを拒否した
+#   1953 盛田が渡米しWE社を訪問。東通工の技術力が高く評価される。
+#     WE社からの特許使用許可は1953年に下りたが、通産省の外貨使用許可が下りず調印できず。
+#     1953年末にようやく外貨使用の許可が下りた
+#   1955 「SONY」の商標を冠した日本初のトランジスタラジオ TR-55 を発売
+#   井深の言葉:「1990年や2000年でもなく、2010年、2020年にはどうなっているし
+#     どうなるべきだから、という考え方をしないといけない」
+#   ※TR-63 の詳細は裏が取れなかったので使わない
+meta:
+  title: "【ソニーの誕生】焼け跡の研究所から、役所に止められた8年【ずんだもん解説】"
+  slug: "ibuka-sony"
+  summary: "1945年、東京・日本橋のデパートの一室に、20人ほどの会社ができました。設立の紙には「愉快なる理想工場の建設」と書いてあります。7年後、その会社の創業者はアメリカである部品を見つけますが、日本の役所は「できるわけがない」と言って外貨を出しませんでした。ずんだもんが井深大を演じる再現ドラマです。"
+  tags: ["ソニー", "井深大", "盛田昭夫", "トランジスタ", "ラジオ", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "できるわけがない"
+    bottom: "ソニーの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: morita, label: "盛田昭夫", voice: 12, pitch: 0.02, item: hat}
+    - {id: shain, label: "東通工の社員", voice: 12, pitch: 0.04}
+    - {id: shainf, label: "東通工の社員", voice: 8, pitch: 0.06}
+    - {id: yakunin, label: "役所の人", voice: 13, pitch: -0.1, item: hat}
+    - {id: we, label: "WE社の人", voice: 13, pitch: -0.04, item: hat}
+    - {id: kyaku, label: "お客", voice: 42, pitch: 0.0}
+scenes:
+  - id: hook
+    title: ""
+    background: il_son_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true}
+      - {who: tsumugi, x: 0.74}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ、この会社の名前、四文字なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "どの会社。"
+      - speaker: zundamon
+        emotion: happy
+        text: "アルファベット四つ。世界中で通じるぞ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ああ、あそこね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "最初から、あの名前だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ううん。最初は「[東京通信工業|とうきょうつうしんこうぎょう]」。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……漢字七文字。ずいぶん堅いのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。しかも最初の場所、デパートの中。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "デパート！？ 工場がか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "1945年の秋。焼け残ったデパートの一室を借りたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……終戦の、二か月後くらいだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。何を作るかも決まってなかった。"
+      - speaker: zundamon
+        emotion: angry
+        text: "決めてから始めろ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "でもね、設立の紙にはこう書いてあるの。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「[自由闊達|じゆうかったつ]にして愉快なる理想工場の建設」。"
+        telops:
+          - {text: "[自由闊達|じゆうかったつ]にして愉快なる理想工場", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……愉快なる。会社の設立書に書く言葉か？"
+      - speaker: tsumugi
+        emotion: happy
+        text: "書いたの。焼け跡でね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そっちのほうが、ボクは好きだぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、この会社。あとで役所に止められるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "また役所か！"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。アメリカから買いたい特許があったんだけど。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……買わせてもらえなかったのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "役所の言い分が、こう。"
+      - speaker: tsumugi
+        emotion: angry
+        text: "「ちょっとやそっとのことで、そんなものできないよ」。"
+        telops:
+          - {text: "できるわけがない、と言われた", size: xl, position: bottom-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: angry
+        text: "……やる前に言われるやつだ。いちばん腹が立つぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作ったのは、[井深大|いぶかまさる]。学生のころから発明で有名だった人。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……よし。ボク、その人をやるのだ。"
+
+  - id: shirokiya
+    title: "1945・デパートの一室"
+    background: il_son_shirokiya
+    bgm: 223am
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1945年10月、東京・日本橋の旧[白木屋|しろきや]の店内に、"
+        reading: "せんきゅうひゃくよんじゅうごねんじゅうがつ、とうきょう・にほんばしのきゅうしろきやのてんないに、"
+      - speaker: reimu
+        text: "東京通信研究所という個人の会社ができました。"
+        reading: "とうきょうつうしんけんきゅうじょというこじんのかいしゃができました。"
+      - speaker: shain
+        emotion: surprised
+        text: "……所長。ここ、デパートですよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "焼け残っている。それだけで上等だ。"
+      - speaker: shain
+        emotion: sad
+        text: "……何を作るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……決めていない。"
+      - speaker: shain
+        emotion: surprised
+        text: "決めてないんですか！？"
+      - speaker: zundamon
+        emotion: normal
+        text: "作れるものから作る。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "最初のうちね、ラジオを短波が聞けるように直す部品を作ってたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……あるものを、良くする商売だ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。それが売れて、食いつなぐ。"
+      - speaker: reimu
+        text: "1946年5月、株式会社になり、[東京通信工業|とうきょうつうしんこうぎょう]と名乗ります。"
+        reading: "せんきゅうひゃくよんじゅうろくねんごがつ、かぶしきがいしゃになり、とうきょうつうしんこうぎょうとなのります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……設立の趣意書を書いた。"
+      - speaker: shain
+        emotion: normal
+        text: "拝見しても。"
+      - speaker: zundamon
+        emotion: normal
+        text: "真面目な技術者の技能を、最高度に発揮させる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "[自由闊達|じゆうかったつ]にして、愉快なる理想工場を建てる。"
+      - speaker: shain
+        emotion: surprised
+        text: "……愉快なる、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。つまらん工場では、いいものは出ん。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……焼け跡でこれを書いてるの、けっこうすごいと思う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何も無いからこそ、書けるのだ。"
+
+  - id: morita
+    title: "技術屋と、営業"
+    background: il_son_kojo
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: morita, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "戦時中の仕事を通じて、彼は[盛田昭夫|もりたあきお]と知り合っていました。"
+        reading: "せんじちゅうのしごとをつうじて、かれわもりたあきおとしりあっていました。"
+      - speaker: morita
+        emotion: happy
+        text: "井深さん。作ったものは、誰が売るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……考えていない。"
+      - speaker: morita
+        emotion: happy
+        text: "でしょうね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……即答されると、少し傷つくぞ。"
+      - speaker: morita
+        emotion: normal
+        text: "私が売ります。あなたは作ってください。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……この会話、ホンダの回でも見たよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……技術屋と、営業か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。日本の戦後で伸びた会社、けっこうこの形なの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……一人だと、片方が[空く|あく]のだ。"
+      - speaker: morita
+        emotion: normal
+        text: "ひとつ、お願いがあります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言ってくれ。"
+      - speaker: morita
+        emotion: normal
+        text: "他所が作っているものは、作らないでください。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……望むところだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、この会社。最初のころ、けっこう外してるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "外してるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。売れなかったものも、ちゃんとある。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……新しいものを作ると、そうなるのだ。"
+
+  - id: shippai
+    title: "売れなかったもの"
+    background: il_son_kojo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.5}
+      - {who: morita, x: 0.62}
+    cuts:
+      - speaker: shain
+        emotion: happy
+        text: "所長。試作ができました。"
+      - speaker: zundamon
+        emotion: happy
+        text: "見せてくれ。"
+      - speaker: shain
+        emotion: normal
+        text: "……電気で、ご飯が炊けます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いいじゃないか。誰でも要る。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……で、これがうまくいかないの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なぜだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[お米|おこめ]の量や水の量で、炊き上がりが変わっちゃって。"
+      - speaker: shain
+        emotion: sad
+        text: "……固かったり、柔らかかったり。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……商品にならんな。"
+      - speaker: morita
+        emotion: normal
+        text: "井深さん。これは、置いてきましょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かった。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……あっさり切るんだよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作れるものと、売れるものは違うのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ちなみに、この炊飯器を後で完成させたのは別の会社ね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……町工場の夫婦か。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。同じ問題を、別の人が解いたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……こっちは、別のものを探すのだ。"
+      - speaker: morita
+        emotion: normal
+        text: "テープに音を[録る|とる]ものは、どうですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……面白い。ただ、テープが無い。"
+      - speaker: shain
+        emotion: surprised
+        text: "無ければ、どうするんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "作る。紙に、磁石の粉を塗る。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……[紙|かみ]で始めたんだよね、本当に。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……無いものは、作るしかないのだ。"
+
+  - id: transistor
+    title: "1952・アメリカで見つける"
+    background: il_son_america
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: we, x: 0.52}
+    cuts:
+      - speaker: reimu
+        text: "1952年、彼はアメリカへ渡ります。"
+        reading: "せんきゅうひゃくごじゅうにねん、かれわあめりかえわたります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……これは、何ですか。"
+      - speaker: we
+        emotion: normal
+        text: "トランジスタといいます。[真空管|しんくうかん]の代わりです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……こんなに、小さい。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の電気製品ね、[真空管|しんくうかん]っていうガラスの部品で動いてたの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……熱くなるし、大きいし、割れる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。しかも電気を食う。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……これなら、電池で動くぞ。"
+      - speaker: we
+        emotion: normal
+        text: "特許は公開しています。二万五千ドルです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……日本の金で、九百万ほどか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時の九百万円だからね。会社が飛ぶ額。"
+      - speaker: we
+        emotion: thinking
+        text: "ひとつ、申し上げておきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……はい。"
+      - speaker: we
+        emotion: normal
+        text: "これで作れるのは、せいぜい補聴器くらいです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……補聴器。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "向こうも、そのつもりだったの。ラジオは無理だと思ってた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……高い音が出せない、ということか。"
+      - speaker: we
+        emotion: normal
+        text: "そうです。ラジオに使うには、性能が足りません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なら、性能を上げればいい。"
+      - speaker: we
+        emotion: surprised
+        text: "……。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……作った本人に向かって言うんだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ラジオを作る。決めた。"
+      - speaker: we
+        emotion: thinking
+        text: "……なぜ、そこまで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[真空管|しんくうかん]では、持ち歩けないからです。"
+      - speaker: we
+        emotion: surprised
+        text: "ラジオを、持ち歩く。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。人がいる場所に、音が付いていく。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……当時これ、けっこうぶっ飛んだ話だからね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ラジオは、家の真ん中に置くものだったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "家族が集まって、同じものを聞く道具。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……それが一人ずつになるのは、大きい変化だぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。いまの、耳に入れて音楽を聞くやつまで一本の線なの。"
+
+  - id: yakusho
+    title: "許可が下りない"
+    background: il_son_yakusho
+    bgm: kinakusai
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: yakunin, x: 0.46}
+      - {who: morita, x: 0.56}
+      - {who: shain, x: 0.66}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "当時ね、外国に金を払うのに国の許可が要ったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……買いたくても、勝手には買えないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[外貨|がいか]の割り当てっていう制度。日本に[外貨|がいか]が無かったから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……申請します。二万五千ドル。"
+      - speaker: yakunin
+        emotion: normal
+        text: "……何を作るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ラジオです。電池で動く、小さいものを。"
+      - speaker: yakunin
+        emotion: thinking
+        text: "……その部品で、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "はい。"
+      - speaker: yakunin
+        emotion: normal
+        text: "ちょっとやそっとのことで、そんなものできませんよ。"
+        telops:
+          - {text: "「できるわけがない」", size: xl, position: middle-center, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+      - speaker: zundamon
+        emotion: angry
+        text: "……やってみないと、分かりません。"
+      - speaker: yakunin
+        emotion: normal
+        text: "大きい会社でも手を出していない技術です。"
+      - speaker: yakunin
+        emotion: normal
+        text: "[外貨|がいか]は、限りがあります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、けっこう理不尽なんだよね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "自分の金で買うのに、許可が要るのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも断る理由が「できないと思うから」。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……できるかどうかは、こっちが決めるのだ。"
+      - speaker: morita
+        emotion: normal
+        text: "井深さん。私が行きます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……どこへ。"
+      - speaker: morita
+        emotion: normal
+        text: "アメリカへ。先に、向こうを味方にします。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "……順番を変えたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……向こうが認めれば、こっちも断りにくくなる。"
+      - speaker: shain
+        emotion: sad
+        text: "所長。……社内でも、慎重な声が出ています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……当然だ。会社が飛ぶ額だからな。"
+      - speaker: shain
+        emotion: sad
+        text: "失敗したら、どうなりますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……終わる。"
+      - speaker: shain
+        emotion: surprised
+        text: "……。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ただ、やらなくても、いずれ終わる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ここ、大事なところ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "他所と同じものを作っている限り、値段でしか勝負できん。"
+      - speaker: zundamon
+        emotion: angry
+        text: "値段の勝負は、体力のある側が勝つのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……小さい会社は、そこでは勝てないもんね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、まだ誰もやっていない側に行く。"
+
+  - id: choin
+    title: "1953・調印まで"
+    background: il_son_yakusho
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: morita, x: 0.44}
+      - {who: yakunin, x: 0.53}
+      - {who: we, x: 0.62}
+      - {who: shainf, x: 0.70}
+    cuts:
+      - speaker: reimu
+        text: "1953年、[盛田|もりた]が渡米し、相手の会社を訪ねます。"
+        reading: "せんきゅうひゃくごじゅうさんねん、もりたがとべいし、あいてのかいしゃをたずねます。"
+      - speaker: morita
+        emotion: normal
+        text: "……うちの技術を、見ていただけますか。"
+      - speaker: we
+        emotion: surprised
+        text: "……ずいぶん小さい会社だと聞いていましたが。"
+      - speaker: morita
+        emotion: normal
+        text: "小さいです。ただ、作れます。"
+      - speaker: reimu
+        text: "相手は[東通工|とうつうこう]の技術力を高く評価しました。"
+        reading: "あいてわとうつうこうのぎじゅつりょくをたかくひょうかしました。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "特許を使う許可は、その年のうちに下りたの。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……よし。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……でも、調印できない。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なぜだ。相手はいいと言っているぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[外貨|がいか]の許可が、まだ下りてないから。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……こっちの役所か。"
+      - speaker: yakunin
+        emotion: normal
+        text: "……もう少し、検討させてください。"
+      - speaker: zundamon
+        emotion: normal
+        text: "相手は待ってくれません。"
+      - speaker: yakunin
+        emotion: normal
+        text: "……検討中です。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……宅急便の人と、まったく同じ言葉だよね。"
+      - speaker: zundamon
+        emotion: angry
+        text: "……検討中は、返事ではないのだ。"
+      - speaker: reimu
+        text: "1953年の末になり、ようやく[外貨|がいか]の使用許可が下ります。"
+        reading: "せんきゅうひゃくごじゅうさんねんのすえになり、ようやくがいかのしよう きょかがおります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……一年、待たされた。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。その一年で、他所に取られてた可能性もあるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……運が良かった、では済ませたくないぞ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、契約したあとが本番なの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……特許を買っただけでは、物はできん。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかも、買ったのは「補聴器用」の作り方。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ラジオに要る性能は、書いていないのだ。"
+      - speaker: shainf
+        emotion: sad
+        text: "所長。高い音が、どうしても出ません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……作り方から変えるしかない。"
+      - speaker: shainf
+        emotion: surprised
+        text: "買った作り方を、捨てるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "捨てはせん。土台にして、その先を作る。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……お金を払って買ったのは、スタート地点だったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そこから先が、うちの仕事だ。"
+
+  - id: tr55
+    title: "1955・TR-55"
+    background: il_son_kojo
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shain, x: 0.46}
+      - {who: shainf, x: 0.56}
+      - {who: kyaku, x: 0.66}
+    cuts:
+      - speaker: shain
+        emotion: sad
+        text: "所長。……歩留まりが、上がりません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何割だ。"
+      - speaker: shain
+        emotion: sad
+        text: "……使えるのは、ほんのわずかです。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作っても、ほとんど不良品になっちゃうの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……材料は同じだ。作り方が違う。"
+      - speaker: shainf
+        emotion: normal
+        text: "温度でしょうか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "温度も、混ぜ方も、時間も全部だ。全部記録しろ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……ロータリーの人と同じこと言ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……うまくいった日と、いかない日の差を見るのだ。"
+      - speaker: reimu
+        text: "1955年、日本で初めてのトランジスタラジオが発売されます。"
+        reading: "せんきゅうひゃくごじゅうごねん、にほんではじめてのとらんじすたらじおがはつばいされます。"
+      - speaker: reimu
+        text: "[商標|しょうひょう]には、SONY と付けられました。"
+        reading: "しょうひょうにわ、そにー とつけられました。"
+        telops:
+          - {text: "日本初のトランジスタラジオ", size: xl, position: bottom-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ここで、あの四文字が出るのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。世界で読める名前にしたかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[東京通信工業|とうきょうつうしんこうぎょう]では、向こうで読めん。"
+      - speaker: kyaku
+        emotion: surprised
+        text: "……これ、電池で鳴るのかい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "鳴ります。持って歩けます。"
+      - speaker: kyaku
+        emotion: surprised
+        text: "……ラジオを、外に持ち出すのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……当時、ラジオは家具だったの。動かさないもの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……家具を、ポケットに入れたのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "「できるわけがない」って言われたやつがね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。ひとつ気になるのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "特許は公開されていた。誰でも買えたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。二万五千ドル払えばね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……なぜ、他所はやらなかったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……補聴器にしかならない、と思われてたから。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……市場が小さい、と読んだのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。大きい会社ほど、そろばんを弾くの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……こっちは、そろばんが無かったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "……身も蓋もないね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "失うものが無いと、性能を上げるほうに賭けられる。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……で、本当に上げちゃったからね。"
+
+  - id: shime
+    title: ""
+    background: il_son_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: reimu
+        text: "[井深大|いぶかまさる]は1997年12月19日、[盛田昭夫|もりたあきお]は1999年10月3日に亡くなりました。"
+        reading: "いぶかまさるわせんきゅうひゃくきゅうじゅうななねんじゅうにがつじゅうくにち、もりたあきおわせんきゅうひゃくきゅうじゅうくねんじゅうがつみっかになくなりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……つむぎ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "役所は、悪気があったのだろうか。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "……たぶん、無いと思う。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[外貨|がいか]が本当に足りなくて、無駄にできなかったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……その判断のもとが「できるわけがない」だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。そこだけが、間違ってた。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……できるかどうかを、やる前に決めたのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ホンダの人も、似たことを言ってたよね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……やってみもせんで、何が分かる。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。同じ時代に、別々の場所で同じことを言ってる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……焼け跡で「愉快なる工場」と書いた人だからな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "何も無いところから始めた人ほど、無理だと言われても止まらないのかもね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "この動画がよかったら、高評価とチャンネル登録をしてほしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "「できるわけがない」と言われたら、今日の話を思い出してみて。"
+      - speaker: zundamon
+        emotion: happy
+        duet_with: tsumugi
+        text: "ご視聴、ありがとうございました！"

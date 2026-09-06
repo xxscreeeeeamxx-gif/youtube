@@ -377,6 +377,101 @@ def p_hanafuda(d, s):
                    cx + s * 0.035 + sh, cy + s * 0.12], fill=(232, 228, 220))
 
 
+def p_octopus(d, s):
+    """タコの足と吸盤。アシックス回のヒントそのもの。"""
+    import math as _m
+    pts = [(s * 0.10 + i * s * 0.072, s * 0.46 - _m.sin(i * 0.6) * s * 0.13)
+           for i in range(11)]
+    d.line(pts, fill=(210, 96, 96), width=int(s * 0.115), joint="curve")
+    for i, (px, py) in enumerate(pts):
+        if i % 2:
+            continue
+        r = s * 0.042
+        d.ellipse([px - r, py - r + s * 0.026, px + r, py + r + s * 0.026],
+                  fill=(244, 182, 182), outline=(168, 66, 66), width=int(s * 0.012))
+
+
+def p_sole(d, s):
+    """靴底。吸盤型のへこみが並ぶ。意匠は付けない。"""
+    d.rounded_rectangle([s * 0.24, s * 0.10, s * 0.76, s * 0.90], radius=s * 0.22,
+                        fill=(78, 82, 94), outline=(40, 44, 54), width=int(s * 0.018))
+    for r in range(5):
+        for c in range(2 if r in (0, 4) else 3):
+            n = 2 if r in (0, 4) else 3
+            cx = s * (0.50 + (c - (n - 1) / 2) * 0.155)
+            cy = s * (0.22 + r * 0.14)
+            rr = s * 0.048
+            d.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=(50, 54, 66),
+                      outline=(126, 132, 146), width=int(s * 0.012))
+
+
+def p_boat(d, s):
+    """漁船。ディズニーランド回の「ここは海だった」。"""
+    d.polygon([(s * 0.12, s * 0.62), (s * 0.80, s * 0.62), (s * 0.88, s * 0.48),
+               (s * 0.06, s * 0.51)], fill=(166, 134, 92),
+              outline=(100, 78, 48), width=int(s * 0.016))
+    d.rectangle([s * 0.32, s * 0.30, s * 0.54, s * 0.51], fill=(196, 168, 126),
+                outline=(100, 78, 48), width=int(s * 0.014))
+    d.line([s * 0.68, s * 0.50, s * 0.68, s * 0.14], fill=(120, 96, 60),
+           width=int(s * 0.022))
+    # 水面
+    for r in range(3):
+        y = s * (0.70 + 0.08 * r)
+        for k in range(4):
+            d.arc([s * (0.06 + 0.22 * k), y - s * 0.03,
+                   s * (0.22 + 0.22 * k), y + s * 0.03], 200, 340,
+                  fill=(150, 190, 214), width=int(s * 0.018))
+
+
+def p_stamp(d, s):
+    """朱肉と判子。交渉がまとまる記号。"""
+    d.ellipse([s * 0.10, s * 0.52, s * 0.48, s * 0.82], fill=(208, 200, 186),
+              outline=(150, 142, 128), width=int(s * 0.014))
+    d.ellipse([s * 0.15, s * 0.56, s * 0.43, s * 0.78], fill=(196, 40, 36))
+    d.rounded_rectangle([s * 0.60, s * 0.20, s * 0.76, s * 0.66], radius=s * 0.02,
+                        fill=(180, 146, 100), outline=(112, 86, 50),
+                        width=int(s * 0.014))
+    d.ellipse([s * 0.58, s * 0.62, s * 0.78, s * 0.74], fill=(196, 40, 36),
+              outline=(120, 24, 22), width=int(s * 0.012))
+    # 押された跡
+    d.ellipse([s * 0.56, s * 0.84, s * 0.80, s * 0.96], outline=(206, 60, 52),
+              width=int(s * 0.020))
+
+
+def p_paper(d, s):
+    """社内報の紙。ホンダ回の「優勝すると書いた宣言」。"""
+    d.polygon([(s * 0.20, s * 0.14), (s * 0.80, s * 0.10),
+               (s * 0.84, s * 0.86), (s * 0.24, s * 0.90)],
+              fill=(250, 248, 240), outline=(150, 146, 138), width=int(s * 0.014))
+    for r in range(7):
+        w = 0.52 if r % 3 else 0.34
+        d.line([s * 0.28, s * (0.24 + 0.09 * r),
+                s * (0.28 + w), s * (0.235 + 0.09 * r)],
+               fill=(186, 182, 174), width=int(s * 0.016))
+    # 赤で囲った一行＝優勝
+    d.rounded_rectangle([s * 0.26, s * 0.44, s * 0.78, s * 0.58], radius=s * 0.02,
+                        outline=(216, 48, 40), width=int(s * 0.020))
+
+
+def p_trophy(d, s):
+    """優勝カップ。ホンダ回のマン島TT。"""
+    cx = s * 0.5
+    d.polygon([(cx - s * 0.20, s * 0.20), (cx + s * 0.20, s * 0.20),
+               (cx + s * 0.13, s * 0.52), (cx - s * 0.13, s * 0.52)],
+              fill=(238, 196, 72), outline=(150, 112, 26), width=int(s * 0.016))
+    for sgn in (-1, 1):
+        d.arc([cx + sgn * 0.20 * s - s * 0.11, s * 0.20,
+               cx + sgn * 0.20 * s + s * 0.11, s * 0.40],
+              0, 360, fill=(238, 196, 72), width=int(s * 0.026))
+    d.rectangle([cx - s * 0.05, s * 0.52, cx + s * 0.05, s * 0.64],
+                fill=(216, 172, 50))
+    d.rounded_rectangle([cx - s * 0.22, s * 0.64, cx + s * 0.22, s * 0.80],
+                        radius=s * 0.02, fill=(140, 96, 44),
+                        outline=(92, 62, 26), width=int(s * 0.014))
+    d.rectangle([cx - s * 0.14, s * 0.68, cx + s * 0.14, s * 0.76],
+                fill=(232, 220, 196))
+
+
 def p_keicar(d, s):
     """てんとう虫（スバル360）。角を落とした丸い軽自動車を横から。"""
     x0, y1 = s * 0.10, s * 0.66
@@ -2466,6 +2561,30 @@ SPECS = {
         _p("p_propeller", "1942年", SLATE, "normal", "戦闘機の|エンジン屋なのだ", "飛行機を作れなくなった"),
         _p(None, "枠は動かせない", NAVY, "angry", "この寸法に|大人4人…！？", "常識では2人乗りが限界"),
         _p("p_keicar", "1958年", GOLD, "happy", "自分で|何十回も乗ったのだ", "てんとう虫、42万5000円"),
+    ]),
+    "honda-soichiro": dict(layout="panels", headline="ホンダは宣言から始まった",
+        head_hi="ホンダ", panels=[
+        _p(None, "1922年 東京", BROWN, "sad", "車に|触らせてもらえない", "高等小学校を出て丁稚奉公"),
+        _p("p_paper", "1954年", SLATE, "angry", "出場ではなく|優勝と書く", "日本勢はまだ誰も出ていない"),
+        _p("p_trophy", "1961年 マン島", RED, "surprised", "五位まで|全部うち…！？", "2クラスとも1〜5位独占"),
+    ]),
+    "takahashi-urayasu": dict(layout="panels", headline="あの場所は海だった",
+        head_hi="海", panels=[
+        _p("p_boat", "1961年 浦安", TEAL, "normal", "海を売る気は|無いのだ", "漁業組合は二つに割れていた"),
+        _p("p_stamp", "一軒ずつ", BROWN, "thinking", "また来ます、を|何年もやる", "近道が無かった"),
+        _p(None, "1983年 開園", GOLD, "surprised", "並んでる…！|数えきれないのだ", "交渉開始から22年"),
+    ]),
+    "ibuka-sony": dict(layout="panels", headline="ソニーは役所に止められた",
+        head_hi="ソニー", panels=[
+        _p(None, "1945年 日本橋", SLATE, "normal", "作るものは|決めていないのだ", "デパートの一室で創業"),
+        _p(None, "1952年 アメリカ", TEAL, "surprised", "こんなに|小さいのか…！", "真空管に代わる部品"),
+        _p("p_stamp", "役所の返事", RED, "angry", "できるわけが|ないと言われた", "外貨の割り当てを拒否"),
+    ]),
+    "onitsuka-asics": dict(layout="panels", headline="タコを見て靴を作った",
+        head_hi="タコ", panels=[
+        _p(None, "1951年 体育館", BROWN, "angry", "選手が|止まれないのだ", "靴の裏は平らだった"),
+        _p("p_octopus", "夕飯の皿", RED, "surprised", "吸盤は|へこんでいる…！", "きゅうりの酢の物のタコ"),
+        _p("p_sole", "いまの靴", NAVY, "happy", "材料でなく|形で解いたのだ", "靴底のへこみの原型"),
     ]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
