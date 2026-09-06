@@ -222,9 +222,9 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: thinking}
       - {who: tsumugi, x: 0.74, emotion: thinking}
-      - {who: ryoshi, x: 0.46}
-      - {who: ryoshi2, x: 0.56}
-      - {who: kumiai, x: 0.66}
+      - {who: ryoshi, x: 0.44, scale: 0.80}
+      - {who: ryoshi2, x: 0.56, scale: 0.80}
+      - {who: kumiai, x: 0.68, scale: 0.80}
     cuts:
       - speaker: reimu
         text: "当時の[浦安|うらやす]の沖は浅く、貝や海苔が獲れる海でした。"
@@ -347,9 +347,9 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: kumiai, x: 0.46}
-      - {who: ryoshi, x: 0.56}
-      - {who: shain, x: 0.66}
+      - {who: kumiai, x: 0.44, scale: 0.80}
+      - {who: ryoshi, x: 0.56, scale: 0.80}
+      - {who: shain, x: 0.68, scale: 0.80}
     cuts:
       - speaker: reimu
         text: "彼は料亭に実力者を招き、酒を交わしながら話し合いを重ねます。"
@@ -534,8 +534,8 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "高橋", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: shain, x: 0.5}
-      - {who: edo, x: 0.62}
+      - {who: shain, x: 0.48, scale: 0.86}
+      - {who: edo, x: 0.64, scale: 0.86}
     cuts:
       - speaker: tsumugi
         emotion: normal

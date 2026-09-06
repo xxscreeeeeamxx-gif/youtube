@@ -1,4 +1,4 @@
-# アシックス・再現ドラマ（[鬼塚喜八郎|おにつかきはちろう]・1918→2007）。投稿前に必ず目視レビュー。
+# アシックス・再現ドラマ（[鬼塚喜八郎|おにつかきハちろう]・1918→2007）。投稿前に必ず目視レビュー。
 # ★企業の一代記シリーズ10本目。ロータリー回と同じ「技術の壁を1つずつ潰す」型だが、
 #   ヒントが全部**台所と人間の足**から来るのが違い。図解ではなく観察の話にする
 # ★配役: ずんだもん=鬼塚喜八郎 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
@@ -119,7 +119,7 @@ scenes:
         text: "誰なのだ。"
       - speaker: tsumugi
         emotion: normal
-        text: "[鬼塚喜八郎|おにつかきはちろう]。会社の名前は、あとで変わる。"
+        text: "[鬼塚喜八郎|おにつかきハちろう]。会社の名前は、あとで変わる。"
       - speaker: zundamon
         emotion: normal
         text: "何に変わるのだ。"
@@ -149,7 +149,7 @@ scenes:
       - {who: shain, x: 0.52}
     cuts:
       - speaker: reimu
-        text: "[鬼塚喜八郎|おにつかきはちろう]は1918年5月29日、鳥取県に生まれました。"
+        text: "[鬼塚喜八郎|おにつかきハちろう]は1918年5月29日、鳥取県に生まれました。"
         reading: "おにつかきはちろうわせんきゅうひゃくじゅうはちねんごがつにじゅうくにち、とっとりけんにうまれました。"
       - speaker: reimu
         text: "軍に入り、終戦は1945年8月を迎えます。"
@@ -213,7 +213,7 @@ scenes:
     cuts:
       - speaker: kantoku
         emotion: angry
-        text: "鬼塚さん。うちの選手が、止まれんのです。"
+        text: "[鬼塚|おにつか]さん。うちの選手が、[止まれん|とまれん]のです。"
       - speaker: zundamon
         emotion: normal
         text: "……止まれない。"
@@ -324,7 +324,7 @@ scenes:
         text: "……履くのは、ボクではないのだ。"
       - speaker: tsumugi
         emotion: happy
-        text: "「鬼塚式バスケットシューズ」。ここから始まるの。"
+        text: "「[鬼塚|おにつか]式バスケットシューズ」。ここから始まるの。"
 
   - id: marathon
     title: "1953・足を見に行く"
@@ -474,7 +474,7 @@ scenes:
     cuts:
       - speaker: senshuf
         emotion: happy
-        text: "鬼塚さん。……豆が、できませんでした。"
+        text: "[鬼塚|おにつか]さん。……豆が、できませんでした。"
       - speaker: zundamon
         emotion: normal
         text: "……最後まで、ですか。"
@@ -495,7 +495,7 @@ scenes:
         text: "……だが、痛みが減れば最後まで走れる。"
       - speaker: senshu
         emotion: normal
-        text: "……鬼塚さん。次の大会にも、来ますか。"
+        text: "……[鬼塚|おにつか]さん。次の大会にも、来ますか。"
       - speaker: zundamon
         emotion: happy
         text: "行きます。また、足を見せてください。"
@@ -582,7 +582,7 @@ scenes:
       - {who: tsumugi, x: 0.74, emotion: normal}
     cuts:
       - speaker: reimu
-        text: "[鬼塚喜八郎|おにつかきはちろう]は、2007年9月29日に亡くなりました。"
+        text: "[鬼塚喜八郎|おにつかきハちろう]は、2007年9月29日に亡くなりました。"
         reading: "おにつかきはちろうわ、にせんななねんくがつにじゅうくにちになくなりました。"
       - speaker: zundamon
         emotion: normal
