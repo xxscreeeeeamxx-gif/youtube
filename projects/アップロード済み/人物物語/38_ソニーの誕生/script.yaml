@@ -577,10 +577,8 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: morita, x: 0.44}
-      - {who: yakunin, x: 0.53}
-      - {who: we, x: 0.62}
-      - {who: shainf, x: 0.70}
+      - {who: morita, x: 0.5, scale: 0.86}
+      - {who: we, x: 0.64, scale: 0.86}
     cuts:
       - speaker: reimu
         text: "1953年、[盛田|もりた]が渡米し、相手の会社を訪ねます。"
@@ -615,6 +613,16 @@ scenes:
       - speaker: zundamon
         emotion: angry
         text: "……こっちの役所か。"
+
+  - id: choin2
+    title: ""
+    background: il_son_yakusho
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: angry}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: yakunin, x: 0.52, scale: 0.86}
+    cuts:
       - speaker: yakunin
         emotion: normal
         text: "……もう少し、検討させてください。"
@@ -654,6 +662,16 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "……ラジオに要る性能は、書いていないのだ。"
+
+  - id: choin3
+    title: ""
+    background: il_son_kojo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+      - {who: shainf, x: 0.52, scale: 0.86}
+    cuts:
       - speaker: shainf
         emotion: sad
         text: "所長。高い音が、どうしても出ません。"
@@ -680,9 +698,9 @@ scenes:
     stage:
       - {who: zundamon, x: 0.3, tag: "井深", flip: true, emotion: normal}
       - {who: tsumugi, x: 0.74, emotion: normal}
-      - {who: shain, x: 0.46}
-      - {who: shainf, x: 0.56}
-      - {who: kyaku, x: 0.66}
+      - {who: shain, x: 0.44, scale: 0.80}
+      - {who: shainf, x: 0.56, scale: 0.80}
+      - {who: kyaku, x: 0.68, scale: 0.80}
     cuts:
       - speaker: shain
         emotion: sad
