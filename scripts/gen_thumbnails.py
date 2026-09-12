@@ -7,6 +7,8 @@
 - フォントは 源界明朝（崩れ・衝撃）/ 851チカラヅヨク（殴り書き・ツッコミ）/
   ヒラギノW9（極太・基本）を使い分け。ラノベPOP v2 が assets/fonts/ にあれば
   ポップ枠として自動採用
+  ただし**現行の2コマ型（layout_panels）の見出しは w9 固定**。
+  飾りフォントは実寸で字形が崩れ、成功譚がホラーに見える（2026-09-12）
 
 実行: PYTHONPATH=. python3 scripts/gen_thumbnails.py <slug> [...]  # 省略で全部
 出力: projects/<slug>/out/thumbnail.png
@@ -2083,6 +2085,20 @@ def _fit_lines(text, fname, max_w, max_size, min_size, max_lines=2):
     return f, _wrap_chars(f, text, max_w)[:max_lines]
 
 
+# 168px（スマホ一覧の実寸）で読める文字数の上限。**超えると _fit_lines が
+# 黙って縮めて潰れる**ので、生成時に警告を出して台本側を直させる（2026-09-12）
+# 吹き出しは**1行のみ**。2行にすると1行あたりの高さが半分になり、
+# 168px では黄ラベルだけが読めて吹き出しが読めない状態になる（実測）
+LEN_SAY, LEN_LABEL = 8, 8
+_len_warn = []
+
+
+def _budget(kind, text, limit, key=""):
+    body = text.replace("|", "")
+    if len(body) > limit:
+        _len_warn.append(f"  {key:<20} {kind:<6} {len(body):>2}字 {text}")
+
+
 def _bubble(dr, box, text, tail_x=None):
     """白い吹き出し。**これが3コマ型の主役**（2026-09-02）。
 
@@ -2091,7 +2107,9 @@ def _bubble(dr, box, text, tail_x=None):
     3コマ読むと話が分かる。ラベルだけでは物語にならない。
     """
     x0, y0, x1, y1 = box
-    f, lines = _fit_lines(text, "w9", (x1 - x0) - 26, 44, 20, 2)
+    # 1行化したので改行指定「|」は無視する。**残っていると _wrap_chars が
+    # そこで切り、1行目しか描かれない**（ホンダ回が「車に」だけになった 2026-09-12）
+    f, lines = _fit_lines(text.replace("|", ""), "w9", (x1 - x0) - 26, 78, 40, 1)
     dr.rounded_rectangle(box, radius=14, fill=(255, 255, 255),
                          outline=(18, 14, 12), width=5)
     if tail_x is not None:
@@ -2107,27 +2125,35 @@ def _bubble(dr, box, text, tail_x=None):
 
 
 def layout_panels(spec):
-    """3コマ構成。**伸びている局を実測して作った型**（2026-09-02）。
+    """2コマ構成（ビフォー→アフター）。
 
-    それまでの1枚絵（layout_stack）は CTR 1.3%・0.8% で、目安2〜10%の下限を割っていた。
-    ゲーム大好きずんだもん / 世界まる見えずんだもん / ずんだもん末路ストーリー /
-    カカチャンネル の上位サムネを16枚並べて見たところ、全部が逆をやっていた:
-      - 3〜4コマに割って、矢印で「変化」を見せる
-      - 各コマに黄枠の小ラベル。1枚に3〜6個
-      - 数字をほぼ必ず入れる（275万本・61%大暴落・3万人解雇）
-      - ずんだもんは小さく、各コマに複数
-    「情報を足すほど実寸で読めなくなる」という以前の見立ては誤りだった。
-    168pxでも、コマ割りと色分けは「何かたくさん起きている」ことを伝える。
+    経緯（読み違えを2回やっているので全部残す）:
+      1. 最初の1枚絵（layout_stack）は CTR 1.3%・0.8% で目安2〜10%の下限割れ。
+      2. 伸びている局のサムネを16枚並べ「3〜4コマ＋各コマにラベル」を真似て3コマ型にした。
+         このとき「情報を足すほど実寸で読めなくなる」という以前の見立てを誤りと判断した。
+      3. **これも誤りだった**（2026-09-12・ユーザー指摘「3分割わかりづらい／真ん中いらない」）。
+         実際に168pxへ縮めて数えたら、載っている9要素（吹き出し3・黄ラベル3・タグ3）が
+         全部つぶれ、読めるのは見出しだけだった。コマ数を真似ても、
+         **1コマの幅が421pxしかなければ中の文字は届かない**。
+         競合が3〜4コマでも成立していたのは、1コマに文字を1個しか置いていないから。
 
-    **初版からの作り直し**（同日・実物を並べて比べた結果）:
-      - 各コマに吹き出しを足した。ラベルだけだと名詞が3つ並ぶだけで物語にならない
-      - コマ左上に小タグ（年・立場）。競合は全部これで「誰の話か」を出している
-      - 矢印を太い赤＋白フチにして吹き出しの高さに置いた（小さい三角は実寸で消える）
-      - 下の帯を廃止してコマを縦いっぱいに。題材名は見出しに入れて2色で出す
-      - 立ち絵は左右交互＋反転。同じ絵を3回並べると手抜きに見える
+    したがって今の型は「コマは2つ・1コマの中身も減らす」:
+      - 左＝問題／右＝結果。真ん中の転機は見出し側で言う（コマにすると3つ目の情報になる）
+      - 1コマ幅 421→636px。吹き出しもラベルも実寸で読める大きさまで上げた
+      - 文字数の上限をコードで持つ（吹き出し1行8字・ラベル10字）。
+        広げた分を長い文で埋め戻したら同じことになる
+      - 見出しは w9（角ゴ極太）。851（殴り書き）は端が崩れてホラーの題字に見える
+        （同ユーザー指摘）。成功譚に不穏な字面を当てない、は genkai について
+        書いていたルールだが、851 も実寸では同じ失敗をしていた
     """
     headline = spec["headline"]
     panels = spec["panels"]
+    if len(panels) > 2:
+        # **落とすのは真ん中**。頭2つを取ると結末のコマが消えて見出しの答えが無くなる。
+        # ただし題材そのもの（見出しに出てくる物）が真ん中にある回は keep で拾う。
+        # 例: 「カッターナイフの答えは板チョコ」の板チョコ、「タコを見て靴を作った」のタコ
+        a, b = spec.get("keep", (0, -1))
+        panels = [panels[a], panels[b]]
     n = len(panels)
 
     img = Image.new("RGBA", (W, H), (16, 14, 18, 255))
@@ -2138,9 +2164,11 @@ def layout_panels(spec):
     gap = 8
     pw = (W - gap * (n - 1)) // n
 
-    LAB_H, BUB_H, TAG_H = 84, 104, 50
-    lab_y = ph - LAB_H - 8
-    bub_y = lab_y - BUB_H - 10
+    # タグ（年・場所の小さい黒ラベル）は廃止した。168pxでは一度も読めた例がなく、
+    # 読めない要素はコマを狭くするだけの純損失だった（2026-09-12）
+    LAB_H, BUB_H, TAG_H = 112, 112, 0
+    lab_y = ph - LAB_H - 12
+    bub_y = lab_y - BUB_H - 14
 
     for i, pn in enumerate(panels):
         x0 = i * (pw + gap)
@@ -2152,7 +2180,11 @@ def layout_panels(spec):
 
         art_top, art_bot = TAG_H - 6, bub_y - 6
         art_h = art_bot - art_top
-        right = i % 2 == 0
+        # **立ち絵は外側・小物は内側**。3コマ時代は逆（小物が外）だったが、
+        # 2コマだと立ち絵どうしが中央の継ぎ目でくっつき、同じ顔が2つ並んだ
+        # 一つの塊に見えた（2026-09-12）。小物を内側に寄せると、
+        # 矢印を挟んで「前の道具 → 後の道具」が一直線に読める
+        right = i % 2 == 1
         has_prop = bool(pn.get("prop") and globals().get(pn["prop"]))
         # **立ち絵は小物があるならコマの端で切る**。中に丸ごと収めると小物が隠れ上が空く。
         # 小物が無いコマは逆に大きく中央へ（伸びている局も、山場のコマは顔だけで持たせる）
@@ -2190,18 +2222,8 @@ def layout_panels(spec):
 
         cell.alpha_composite(bu, (bx, art_bot - bu.height))
 
-        tag = pn.get("tag", "")
-        if tag:
-            f, _ = _fit_lines(tag, "w9", pw - 40, 34, 20, 1)
-            tw = _tw(f, tag) + 24
-            cd.rounded_rectangle([10, 8, 10 + tw, 8 + TAG_H - 18], radius=6,
-                                 fill=(*pn.get("tag_bg", tuple(
-                                     int(c * 0.42) for c in pn.get("bg", (60, 60, 68)))),
-                                     255))
-            _ttext(cd, (22, 8 + (TAG_H - 18 - int(f.size * 1.2)) // 2), tag, f,
-                   (255, 255, 255))
-
         if pn.get("say"):
+            _budget("say", pn["say"], LEN_SAY, spec.get("_key", ""))
             # 矢印が来る側は空けておく（詰めると矢印が吹き出しの黒フチに埋もれる）
             bl = 44 if i > 0 else 10
             br = pw - (44 if i < n - 1 else 10)
@@ -2210,7 +2232,8 @@ def layout_panels(spec):
 
         lab = pn.get("label", "")
         if lab:
-            f, _ = _fit_lines(lab, "w9", pw - 40, 62, 24, 1)
+            _budget("label", lab, LEN_LABEL, spec.get("_key", ""))
+            f, _ = _fit_lines(lab, "w9", pw - 40, 84, 38, 1)
             cd.rounded_rectangle([8, lab_y, pw - 8, lab_y + LAB_H], radius=8,
                                  fill=(255, 214, 40), outline=(30, 22, 6), width=5)
             _ttext(cd, ((pw - _tw(f, lab)) // 2,
@@ -2236,15 +2259,20 @@ def layout_panels(spec):
         segs = [(t, c) for t, c in ((a, base_c), (hi, hi_c), (b, base_c)) if t]
     else:
         segs = [(headline, base_c)]
-    size = 130
-    while size > 56 and sum(_tw(font("851", size), t) for t, _ in segs) > W - 44:
+    # **w9（角ゴ極太）で組む。851 は使わない**（2026-09-12・ユーザー指摘
+    # 「上の文字がなんでホラーみたいな形なの」）。851チカラヅヨクは端が欠けた
+    # 殴り書きなので、暗い地＋赤黒フチと合わさると恐怖映画の題字になる。
+    # SKILL.md には「genkai は不穏なので成功譚に使わない」とだけ書いていたが、
+    # 851 も同じ穴だった。見出しは字形で語らせず、大きさと2色だけで押す。
+    size = 132
+    while size > 60 and sum(_tw(font("w9", size), t) for t, _ in segs) > W - 44:
         size -= 4
-    f = font("851", size)
+    f = font("w9", size)
     x = (W - sum(_tw(f, t) for t, _ in segs)) // 2
-    y = (HEAD_H - int(size * 1.18)) // 2
+    y = (HEAD_H - int(size * 1.16)) // 2
     for t, c in segs:
-        _ttext(d, (x, y), t, f, c, stroke_width=max(10, size // 9),
-               stroke_fill=(20, 8, 8))
+        _ttext(d, (x, y), t, f, c, stroke_width=max(6, size // 16),
+               stroke_fill=(12, 10, 14))
         x += _tw(f, t)
     return img.convert("RGB")
 
@@ -2402,220 +2430,220 @@ SPECS = {
     # ---- 人物物語 ----
     "momofuku-meme": dict(layout="panels", headline="カップ麺はこうして生まれた",
         head_hi="カップ麺", panels=[
-        _p("p_downgraph", "1957年 大阪", NAVY, "sad", "全財産、|消えたのだ…", "47歳で無一文"),
+        _p("p_downgraph", "1957年 大阪", NAVY, "sad", "全財産が消えた", "47歳で無一文"),
         _p("p_chickenramen", "裏庭の小屋", BROWN, "thinking", "ここから|やり直すのだ", "たった1人でこもる"),
-        _p("p_cupnoodle", "いま", RED, "surprised", "世界で|1000億食…！", "年1000億食"),
+        _p("p_cupnoodle", "いま", RED, "surprised", "1000億食…！", "年1000億食"),
     ]),
     "qr-meme": dict(layout="panels", headline="QRコードはなぜ四角い",
         head_hi="QRコード", panels=[
         _p("p_barcode", "愛知の部品工場", SLATE, "sad", "もう|疲れたのだ…", "現場の一言から"),
         _p("p_goban", "昼休みの囲碁", GREEN, "thinking", "碁盤なら|一発で読めるのだ", "ヒントは碁盤の目"),
-        _p("p_qr", "世界標準へ", NAVY, "surprised", "特許は|取らないのだ", "無料で開放した"),
+        _p("p_qr", "世界標準へ", NAVY, "surprised", "特許は取らない", "無料で開放した"),
     ]),
     "kaiten-meme": dict(layout="panels", headline="回転寿司はどこで生まれた",
         head_hi="回転寿司", panels=[
-        _p("p_sushi", "1皿20円の立ち食い", RED, "sad", "板前が|足りないのだ…", "深刻な人手不足"),
+        _p("p_sushi", "1皿20円の立ち食い", RED, "sad", "板前が足りない", "深刻な人手不足"),
         _p(None, "ビール工場", GOLD, "surprised", "瓶が|流れてるのだ！", "答えはベルトコンベア"),
         _p("p_sushilane", "1958年 大阪", TEAL, "happy", "皿を|流すのだ！", "回転寿司、開店"),
     ]),
     "gastro-meme": dict(layout="panels", headline="胃カメラはたった2人で作られた",
         head_hi="胃カメラ", panels=[
-        _p("p_stomach", "戦後の東大病院", INDIGO, "thinking", "開けないと|見えないのだ", "胃の中は誰も見ていない"),
+        _p("p_stomach", "戦後の東大病院", INDIGO, "thinking", "中が見えないのだ", "誰も見ていない"),
         _p(None, "夜行列車", BROWN, "happy", "一緒に|作ってほしいのだ", "技師を口説き落とす"),
-        _p("p_endoscope", "世界初", TEAL, "surprised", "胃の中が|写ったのだ！", "飲み込むカメラ"),
+        _p("p_endoscope", "世界初", TEAL, "surprised", "胃の中が写った", "飲み込むカメラ"),
     ]),
     "rice-cooker-meme": dict(layout="panels", headline="炊飯器を作ったのは町工場の夫婦",
         head_hi="炊飯器", panels=[
-        _p("p_kamado", "夜明け前", BROWN, "sad", "火の番で|眠れないのだ…", "毎朝の重労働"),
+        _p("p_kamado", "夜明け前", BROWN, "sad", "毎朝眠れないのだ", "毎朝の重労働"),
         _p(None, "大手が匙を投げた", SLATE, "thinking", "うちが|やるのだ", "町工場が引き受ける"),
-        _p("p_ricecooker", "世界初", RED, "happy", "スイッチ|ひとつなのだ！", "妻が千回炊いた"),
+        _p("p_ricecooker", "世界初", RED, "happy", "スイッチ一つ！", "妻が千回炊いた"),
     ]),
     "tenji-block-meme": dict(layout="panels", headline="点字ブロックは全財産で作られた",
         head_hi="点字ブロック", panels=[
-        _p("p_cane", "岡山の交差点", SLATE, "surprised", "車道に|入っていくのだ！", "白い杖の人を見た"),
+        _p("p_cane", "岡山の交差点", SLATE, "surprised", "車道に入っていく", "白い杖の人を見た"),
         _p(None, "友の失明", INDIGO, "sad", "足の裏で|読むのだ…", "何気ない一言から"),
         _p("p_block", "1967年 原尾島", GOLD, "happy", "自腹で|敷くのだ", "230枚を私費で"),
     ]),
-    "shinkansen-bird": dict(layout="panels", headline="新幹線の鼻はなぜ長い",
+    "shinkansen-bird": dict(layout="panels", keep=(1, 2), headline="新幹線の鼻はなぜ長い",
         head_hi="新幹線", panels=[
-        _p(None, "トンネル出口", SLATE, "angry", "400m先から|苦情なのだ！", "ドン！という爆音"),
-        _p("p_kingfisher", "趣味は野鳥観察", TEAL, "thinking", "カワセミは|水しぶきが出ないのだ", "ヒントは鳥のくちばし"),
-        _p("p_shinkansen", "500系", NAVY, "surprised", "時速300キロ|なのだ！", "世界最速へ"),
+        _p(None, "トンネル出口", SLATE, "angry", "爆音で苦情なのだ", "ドン！という爆音"),
+        _p("p_kingfisher", "趣味は野鳥観察", TEAL, "thinking", "水しぶきが出ない", "答えはカワセミ"),
+        _p("p_shinkansen", "500系", NAVY, "surprised", "時速300キロ", "世界最速へ"),
     ]),
     "yokoi-gunpei": dict(layout="panels", headline="ゲームボーイはなぜ白黒で勝った",
         head_hi="ゲームボーイ", panels=[
-        _p(None, "任天堂 設備保守係", SLATE, "surprised", "社長に|見つかったのだ…", "暇つぶしの玩具"),
+        _p(None, "任天堂 設備保守係", SLATE, "surprised", "社長に見つかった", "暇つぶしの玩具"),
         _p("p_gamewatch", "1980年", RED, "happy", "商品化しろ|と言われたのだ", "クビ覚悟が大ヒット"),
-        _p("p_gameboy", "1989年", GREEN, "thinking", "あえて|白黒にするのだ", "白黒のまま1億台"),
+        _p("p_gameboy", "1989年", GREEN, "thinking", "あえて白黒なのだ", "白黒のまま1億台"),
     ]),
     "ajinomoto": dict(layout="panels", headline="うま味を見つけたのは日本人",
         head_hi="うま味", panels=[
-        _p(None, "湯豆腐の夜", BROWN, "thinking", "この味、|4つのどれでもないのだ", "5つ目の味に気づく"),
+        _p(None, "湯豆腐の夜", BROWN, "thinking", "4つの味に無い！", "5つ目の味"),
         _p(None, "東大の研究室", TEAL, "surprised", "半年かけて|取り出すのだ", "昆布12キロ→30グラム"),
-        _p("p_ajibottle", "1909年 発売", RED, "happy", "世界の言葉に|なったのだ", "umami"),
+        _p("p_ajibottle", "1909年 発売", RED, "happy", "世界の言葉に", "umami"),
     ]),
-    "cutter-knife": dict(layout="panels", headline="カッターナイフの答えは板チョコ",
+    "cutter-knife": dict(layout="panels", keep=(1, 2), headline="カッターナイフの答えは板チョコ",
         head_hi="カッターナイフ", panels=[
-        _p(None, "大阪の印刷工", SLATE, "angry", "カミソリが|すぐ駄目になるのだ", "毎日、刃を捨てていた"),
-        _p("p_chocolate", "街で見た光景", BROWN, "surprised", "割って|使えばいいのだ！", "ヒントは板チョコ"),
-        _p("p_blade", "1956年", NAVY, "happy", "折れば|切れ味が戻るのだ", "世界中の定番に"),
+        _p(None, "大阪の印刷工", SLATE, "angry", "刃がすぐ駄目だ", "毎日捨てていた"),
+        _p("p_chocolate", "街で見た光景", BROWN, "surprised", "割って使うのだ！", "ヒントは板チョコ"),
+        _p("p_blade", "1956年", NAVY, "happy", "折れば戻るのだ", "世界中の定番に"),
     ]),
     "washlet": dict(layout="panels", headline="ウォシュレットを作った300人",
         head_hi="ウォシュレット", panels=[
-        _p("p_toilet", "1964年 輸入品", TEAL, "angry", "熱いのだ|熱すぎるのだ！", "米国製は温度が不安定"),
+        _p("p_toilet", "1964年 輸入品", TEAL, "angry", "熱すぎるのだ！", "温度が不安定"),
         _p(None, "社員 約300人", GOLD, "surprised", "頼むから|測らせてほしいのだ", "前代未聞の測定"),
-        _p(None, "答え", NAVY, "happy", "角度は|43度なのだ", "お湯38度・便座36度"),
+        _p(None, "答え", NAVY, "happy", "角度は43度", "お湯38度"),
     ]),
     "karaoke": dict(layout="panels", headline="カラオケは特許を取らなかった",
         head_hi="カラオケ", panels=[
-        _p("p_mic", "神戸のクラブ", PURPLE, "thinking", "楽譜も|読めないのだ", "バンドのドラマー"),
+        _p("p_mic", "神戸のクラブ", PURPLE, "thinking", "楽譜が読めない", "バンドのドラマー"),
         _p("p_jukebox", "常連の頼み", MAGENTA, "surprised", "出張先でも|歌いたいのだ？", "手作りで11台"),
-        _p(None, "その後", NAVY, "sad", "特許は|取らなかったのだ", "年1億ドル超とも"),
+        _p("p_jukebox", "その後", NAVY, "sad", "特許を取らない", "年1億ドル超とも"),
     ]),
     "yai-denchi": dict(layout="panels", headline="乾電池を作ったのは日本人",
         head_hi="乾電池", panels=[
-        _p("p_wetcell", "明治の東京", INDIGO, "angry", "冬になると|凍るのだ！", "液体の電池が使えない"),
+        _p("p_wetcell", "明治の東京", INDIGO, "angry", "冬は凍るのだ！", "冬は使えない"),
         _p(None, "5分の遅刻", SLATE, "sad", "時計が|止まっていたのだ…", "試験に間に合わなかった"),
-        _p("p_drycell", "1887年", RED, "surprised", "凍らない|電池なのだ！", "特許は5年出せず"),
+        _p("p_drycell", "1887年", RED, "surprised", "凍らない電池！", "特許は5年出せず"),
     ]),
     "masuoka-flash": dict(layout="panels", headline="フラッシュメモリは却下された",
         head_hi="フラッシュメモリ", panels=[
-        _p("p_kyakka", "東芝", SLATE, "angry", "金がない、|却下なのだ", "予算はゼロ"),
+        _p("p_kyakka", "東芝", SLATE, "angry", "金がない、却下", "予算はゼロ"),
         _p(None, "土日だけ", NAVY, "thinking", "特許を|23件書いたのだ", "仲間は同僚4人"),
-        _p("p_usb", "いま", GOLD, "surprised", "洗濯しても|消えないのだ！", "電気が無くても残る"),
+        _p("p_usb", "いま", GOLD, "surprised", "洗っても消えない", "電気なしで残る"),
     ]),
     "kaisatsu-drama": dict(layout="panels", headline="自動改札は世界が真似しなかった",
         head_hi="自動改札", panels=[
-        _p("p_hasami", "1960年代", BROWN, "thinking", "駅員が|1枚ずつ切るのだ", "1分間に80人"),
+        _p("p_hasami", "1960年代", BROWN, "thinking", "1枚ずつ手で切る", "1分間に80人"),
         _p(None, "無茶な注文", RED, "surprised", "それを|超えろ…！", "機械にできるのか"),
-        _p("p_gate", "1967年 大阪", TEAL, "happy", "切符が|吸い込まれるのだ！", "世界初の自動改札"),
+        _p("p_gate", "1967年 大阪", TEAL, "happy", "切符が消えた！", "世界初の自動改札"),
     ]),
     "quartz-astron": dict(layout="panels", headline="クオーツ時計はスイスを倒した",
         head_hi="クオーツ時計", panels=[
-        _p(None, "天文台コンクール", SLATE, "sad", "最下位|だったのだ…", "機械式では勝てない"),
+        _p(None, "天文台コンクール", SLATE, "sad", "最下位だったのだ", "機械式に勝てない"),
         _p("p_quartzfork", "長野県 諏訪", TEAL, "thinking", "体積を|30万分の1にするのだ", "無茶な目標"),
-        _p("p_wristwatch", "1969年", NAVY, "surprised", "月に|5秒しかずれないのだ", "スイス1600社→600社"),
+        _p("p_wristwatch", "1969年", NAVY, "surprised", "ずれは月5秒！", "スイスを抜いた"),
     ]),
     "purikura-meme": dict(layout="panels", headline="プリクラは会議で一蹴された",
         head_hi="プリクラ", panels=[
-        _p(None, "1990年代 会議室", SLATE, "sad", "持って帰って|どうすんのだ…", "男性社員に否定される"),
+        _p(None, "1990年代 会議室", SLATE, "sad", "どうすんのだ…", "男性社員は一蹴"),
         _p("p_purikura", "小さなゲーム会社", MAGENTA, "thinking", "シールなら|配れるのだ", "営業がひとりで押した"),
-        _p(None, "1995年", GOLD, "surprised", "行列が|止まらないのだ！", "日本中の女の子が並ぶ"),
+        _p("p_purikura", "1995年", GOLD, "surprised", "行列が止まらない", "日本中で行列"),
     ]),
     "sharp-pencil": dict(layout="panels", headline="シャープの名前は商品が先だった",
         head_hi="シャープ", panels=[
-        _p("p_sharppencil", "1915年 東京", NAVY, "happy", "折れない|芯なのだ！", "21歳で発明"),
+        _p("p_sharppencil", "1915年 東京", NAVY, "happy", "折れない芯だ！", "21歳で発明"),
         _p(None, "関東大震災", SLATE, "sad", "全部|失ったのだ…", "家族も工場も"),
-        _p(None, "大阪へ", RED, "thinking", "名前だけ|残ったのだ", "商品名が社名になった"),
+        _p(None, "大阪へ", RED, "thinking", "名前だけ残った", "商品名が社名に"),
     ]),
     "okano-needle": dict(layout="panels", headline="痛くない注射針は町工場が作った",
         head_hi="注射針", panels=[
-        _p(None, "100社以上が断った", SLATE, "angry", "無理だと|言われたのだ", "どこも引き受けない"),
+        _p(None, "100社以上が断った", SLATE, "angry", "無理だと言われた", "100社が断った"),
         _p(None, "墨田区の町工場", TEAL, "happy", "よし、|やるのだ", "従業員6人"),
-        _p("p_needle", "先端0.2ミリ", RED, "surprised", "蚊の口と|同じなのだ！", "刺しても痛くない"),
+        _p("p_needle", "先端0.2ミリ", RED, "surprised", "蚊の口と同じ！", "刺しても痛くない"),
     ]),
     "nishizawa-fiber": dict(layout="panels", headline="光ファイバーを日本は捨てた",
         head_hi="光ファイバー", panels=[
-        _p(None, "1950年代 仙台", INDIGO, "thinking", "光で|通信するのだ", "20年早すぎた構想"),
+        _p(None, "1950年代 仙台", INDIGO, "thinking", "光で|通信するのだ", "20年早すぎた"),
         _p("p_kyakka", "資金の相談", SLATE, "sad", "金は|出せないのだ…", "国内で相手にされず"),
-        _p("p_fiber", "いま", TEAL, "surprised", "髪の毛より|細いのだ！", "動画が見られる理由"),
+        _p("p_fiber", "いま", TEAL, "surprised", "髪より細いのだ", "今の通信の土台"),
     ]),
     "exit-sign": dict(layout="panels", headline="非常口マークを描いたのは日本人",
         head_hi="非常口マーク", panels=[
-        _p(None, "1970年代", SLATE, "surprised", "文字だと|逃げられないのだ", "デパート火災で100人超"),
+        _p(None, "1970年代", SLATE, "surprised", "文字では読めない", "逃げ遅れが出た"),
         _p("p_exitsign", "公募", GREEN, "thinking", "走る人を|描くのだ", "緑の人が生まれる"),
-        _p(None, "世界標準へ", NAVY, "happy", "日本案が|勝ったのだ！", "ソ連案との一騎打ち"),
+        _p("p_exitsign", "世界標準へ", NAVY, "happy", "日本案が勝った", "ソ連案に勝った"),
     ]),
     "nakauchi-daiei": dict(layout="panels", headline="ダイエーはなぜ消えた",
         head_hi="ダイエー", panels=[
-        _p("p_sukiyaki", "1943年 戦地", BROWN, "sad", "すき焼きが|食いたいのだ…", "生きて帰った"),
+        _p("p_sukiyaki", "1943年 戦地", BROWN, "sad", "すき焼きが…", "生きて帰った"),
         _p("p_beefpack", "1957年 大阪", GOLD, "angry", "よそより|安く売るのだ！", "牛肉 100円→39円"),
         _p("p_downgraph", "2004年", NAVY, "surprised", "借金、1兆円…", "創業者、追放"),
     ]),
     "yamauchi-nintendo": dict(layout="panels", headline="任天堂は花札の会社だった",
         head_hi="任天堂", panels=[
-        _p("p_hanafuda", "22歳で社長", GREEN, "thinking", "うちは|花札屋なのだ", "創業70年の老舗"),
+        _p("p_hanafuda", "22歳で社長", GREEN, "thinking", "うちは花札屋だ", "創業70年の老舗"),
         _p("p_downgraph", "多角化", SLATE, "sad", "タクシーも|食品も駄目なのだ…", "借金70億円"),
-        _p("p_gameboy", "1980年代", RED, "surprised", "うちは|おもちゃ屋なのだ！", "そこから世界を取る"),
+        _p("p_gameboy", "1980年代", RED, "surprised", "おもちゃ屋なのだ", "世界を取った"),
     ]),
     "yamaichi-nozawa": dict(layout="panels", headline="山一証券、最後の社長",   # 851フォントに「證」が無いので報道表記の「証」
         head_hi="山一証券", panels=[
-        _p("p_hoe", "1938年 長野", BROWN, "normal", "畑を|三年やったのだ", "畳職人の家に生まれる"),
+        _p("p_hoe", "1938年 長野", BROWN, "normal", "畑を三年やった", "畳職人の家の子"),
         _p("p_ledger", "1997年8月", NAVY, "surprised", "2600億の|借金…！？", "自分は一円も使っていない"),
-        _p("p_mics", "11月24日", SLATE, "sad", "社員は|悪くありませんから", "7500人が職を失った"),
+        _p("p_mics", "11月24日", SLATE, "sad", "社員は悪くない", "7500人が失職"),
     ]),
-    "ogura-takkyubin": dict(layout="panels", headline="宅急便は役所を訴えて作られた",
+    "ogura-takkyubin": dict(layout="panels", keep=(1, 2), headline="宅急便は役所を訴えて作られた",
         head_hi="宅急便", panels=[
-        _p(None, "1949年", TEAL, "thinking", "四年、|病室にいたのだ", "動けない4年間"),
-        _p("p_parcel", "1976年", BROWN, "sad", "初日は|十一個…", "初日 11個"),
-        _p("p_gavel", "1986年", RED, "angry", "決めろ、と|言っているのだ", "監督官庁を訴えた"),
+        _p(None, "1949年", TEAL, "thinking", "四年、病室で…", "動けない4年間"),
+        _p("p_parcel", "1976年", BROWN, "sad", "初日は十一個…", "初日 11個"),
+        _p("p_gavel", "1986年", RED, "angry", "役所を訴えるのだ", "監督官庁を訴えた"),
     ]),
     "yamamoto-rotary": dict(layout="panels", headline="世界が捨てたロータリー",
         head_hi="ロータリー", panels=[
-        _p("p_rotor", "1963年 広島", NAVY, "thinking", "回るだけで|エンジンになるのだ", "47人が集められた"),
+        _p("p_rotor", "1963年 広島", NAVY, "thinking", "回るだけで動く", "47人が挑んだ"),
         _p("p_scratch", "悪魔の爪痕", SLATE, "surprised", "数十時間で|波打つ…！？", "原因が誰にも分からない"),
-        _p(None, "1991年 ル・マン", RED, "happy", "24時間、|止まらなかったのだ", "日本車初の総合優勝"),
+        _p(None, "1991年 ル・マン", RED, "happy", "24時間走った！", "日本車初の優勝"),
     ]),
     "momose-subaru360": dict(layout="panels", headline="スバル360は作れないはずだった",
         head_hi="スバル360", panels=[
-        _p("p_propeller", "1942年", SLATE, "normal", "戦闘機の|エンジン屋なのだ", "飛行機を作れなくなった"),
+        _p("p_propeller", "1942年", SLATE, "normal", "戦闘機の技術者だ", "飛行機を作れない"),
         _p(None, "枠は動かせない", NAVY, "angry", "この寸法に|大人4人…！？", "常識では2人乗りが限界"),
-        _p("p_keicar", "1958年", GOLD, "happy", "自分で|何十回も乗ったのだ", "てんとう虫、42万5000円"),
+        _p("p_keicar", "1958年", GOLD, "happy", "自分で何十回も", "てんとう虫"),
     ]),
     "honda-soichiro": dict(layout="panels", headline="ホンダは宣言から始まった",
         head_hi="ホンダ", panels=[
-        _p(None, "1922年 東京", BROWN, "sad", "車に|触らせてもらえない", "高等小学校を出て丁稚奉公"),
+        _p(None, "1922年 東京", BROWN, "sad", "車に|触れないのだ", "丁稚奉公から"),
         _p("p_paper", "1954年", SLATE, "angry", "出場ではなく|優勝と書く", "日本勢はまだ誰も出ていない"),
-        _p("p_trophy", "1961年 マン島", RED, "surprised", "五位まで|全部うち…！？", "2クラスとも1〜5位独占"),
+        _p("p_trophy", "1961年 マン島", RED, "surprised", "全部うち…！？", "1〜5位を独占"),
     ]),
     "takahashi-urayasu": dict(layout="panels", headline="あの場所は海だった",
         head_hi="海", panels=[
-        _p("p_boat", "1961年 浦安", TEAL, "normal", "海を売る気は|無いのだ", "漁業組合は二つに割れていた"),
+        _p("p_boat", "1961年 浦安", TEAL, "normal", "海は売らないのだ", "漁協が割れた"),
         _p("p_stamp", "一軒ずつ", BROWN, "thinking", "また来ます、を|何年もやる", "近道が無かった"),
-        _p(None, "1983年 開園", GOLD, "surprised", "並んでる…！|数えきれないのだ", "交渉開始から22年"),
+        _p(None, "1983年 開園", GOLD, "surprised", "数えきれないのだ", "交渉から22年"),
     ]),
     "ibuka-sony": dict(layout="panels", headline="ソニーは役所に止められた",
         head_hi="ソニー", panels=[
-        _p(None, "1945年 日本橋", SLATE, "normal", "作るものは|決めていないのだ", "デパートの一室で創業"),
+        _p(None, "1945年 日本橋", SLATE, "normal", "まだ何も無いのだ", "デパートの一室"),
         _p(None, "1952年 アメリカ", TEAL, "surprised", "こんなに|小さいのか…！", "真空管に代わる部品"),
-        _p("p_stamp", "役所の返事", RED, "angry", "できるわけが|ないと言われた", "外貨の割り当てを拒否"),
+        _p("p_stamp", "役所の返事", RED, "angry", "できるわけない", "役所が拒否した"),
     ]),
-    "onitsuka-asics": dict(layout="panels", headline="タコを見て靴を作った",
+    "onitsuka-asics": dict(layout="panels", keep=(1, 2), headline="タコを見て靴を作った",
         head_hi="タコ", panels=[
-        _p(None, "1951年 体育館", BROWN, "angry", "選手が|止まれないのだ", "靴の裏は平らだった"),
-        _p("p_octopus", "夕飯の皿", RED, "surprised", "吸盤は|へこんでいる…！", "きゅうりの酢の物のタコ"),
-        _p("p_sole", "いまの靴", NAVY, "happy", "材料でなく|形で解いたのだ", "靴底のへこみの原型"),
+        _p(None, "1951年 体育館", BROWN, "angry", "選手が止まれない", "靴の裏は平ら"),
+        _p("p_octopus", "夕飯の皿", RED, "surprised", "吸盤がへこんでる", "酢の物のタコ"),
+        _p("p_sole", "いまの靴", NAVY, "happy", "形で解いたのだ", "靴底のへこみ"),
     ]),
     # ---- 解説 ----
     "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
         head_hi="100%", panels=[
-        _p(None, "毎晩やってる", RED, "happy", "満タンにして|寝るのだ", "実はいちばん減る使い方"),
+        _p(None, "毎晩やってる", RED, "happy", "満タンで寝るのだ", "いちばん減る"),
         _p(None, "なぜ", SLATE, "surprised", "満タンが|電池を削るのだ？", "膨らんで戻らなくなる"),
-        _p("p_battery", "メーカー自身が", TEAL, "thinking", "80%で|止める機能なのだ", "最初から付いている"),
+        _p("p_battery", "メーカー自身が", TEAL, "thinking", "80%で止める", "最初から付属"),
     ]),
     "auto-door": dict(layout="panels", headline="自動ドアがあなたを無視する理由",
         head_hi="自動ドア", panels=[
-        _p("p_autodoor", "黒い服の日", SLATE, "angry", "開かないのだ！", "反応しないことがある"),
+        _p("p_autodoor", "黒い服の日", SLATE, "angry", "開かないのだ！", "反応しない人"),
         _p(None, "見ているもの", NAVY, "surprised", "人を|見てないのだ？", "床の見え方が変わったか"),
-        _p(None, "真横から行くと", TEAL, "thinking", "近づき方で|決まるのだ", "無視されない歩き方"),
+        _p(None, "真横から行くと", TEAL, "thinking", "近づき方なのだ", "歩き方で決まる"),
     ]),
     "banknote": dict(layout="panels", headline="お札はなぜコピーできない",
         head_hi="お札", panels=[
-        _p("p_bill", "コピー機", PURPLE, "surprised", "印刷を|拒否されるのだ！", "機械が勝手に止まる"),
+        _p("p_bill", "コピー機", PURPLE, "surprised", "印刷を拒否される", "機械が止まる"),
         _p(None, "見えない印", NAVY, "thinking", "人には|見えないのだ", "機械にだけ分かる仕掛け"),
-        _p(None, "指で分かる", TEAL, "happy", "触ると|ザラザラなのだ", "世界初の技術も入っている"),
+        _p(None, "指で分かる", TEAL, "happy", "触るとザラザラ", "世界初の技術"),
     ]),
     "escalator": dict(layout="panels", headline="片側空けは公式ルールじゃない",
         head_hi="片側空け", panels=[
-        _p("p_escalator", "東京は左・大阪は右", SLATE, "thinking", "どっちが|正しいのだ？", "実は決まりが無い"),
+        _p("p_escalator", "東京は左・大阪は右", SLATE, "thinking", "どっちが正しい？", "実は決まりが無い"),
         _p(None, "作った側は", RED, "surprised", "ずっと|やめてと言ってるのだ", "歩かないでください"),
-        _p(None, "隠れた機能", TEAL, "happy", "ステップが|変形するのだ！", "知られていない仕組み"),
+        _p(None, "隠れた機能", TEAL, "happy", "ステップが変形！", "知られてない"),
     ]),
     "traffic-light": dict(layout="panels", headline="信号の青はどう見ても緑",
         head_hi="信号の青", panels=[
-        _p("p_signal", "日本だけ", GREEN, "thinking", "緑なのに|青と呼ぶのだ", "法律には緑と書いてあった"),
+        _p("p_signal", "日本だけ", GREEN, "thinking", "緑なのに青と呼ぶ", "法律も緑だった"),
         _p(None, "LEDの弱点", SLATE, "surprised", "雪が|溶けないのだ！", "熱を出さないから"),
-        _p(None, "雪国は縦型", NAVY, "happy", "積もらない|ようになのだ", "ちゃんと理由がある"),
+        _p(None, "雪国は縦型", NAVY, "happy", "雪が積もらない", "理由がある"),
     ]),
 }
 
