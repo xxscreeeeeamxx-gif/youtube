@@ -848,6 +848,29 @@ def p_downgraph(d, s):
     d.polygon([(s*0.88, s*0.92), (s*0.76, s*0.72), (s*1.00, s*0.72)], fill=(214, 44, 38))
 
 
+def p_shutter(d, s):
+    """閉まったシャッターと南京錠。ダイエー回の「消えた」の絵。
+
+    転落を下降グラフで描くとカップ麺回の p_downgraph と同じ絵になり、
+    一覧に並んだとき同じ回に見える（2026-09-14）。小物は回ごとに新造する。
+    店が閉まった一枚絵のほうが「消えた」に直接効く。
+    """
+    d.rounded_rectangle([s*0.06, s*0.08, s*0.94, s*0.80], radius=s*0.02,
+                        fill=(176, 180, 188), outline=(48, 48, 54), width=int(s*0.030))
+    # 波板のスリット。実寸でシャッターと分かる唯一の手がかりなので太く
+    y = s*0.15
+    while y < s*0.76:
+        d.line([s*0.09, y, s*0.91, y], fill=(126, 130, 140), width=int(s*0.020))
+        y += s*0.075
+    d.rounded_rectangle([s*0.03, s*0.78, s*0.97, s*0.88], radius=s*0.02,
+                        fill=(62, 62, 70), outline=(30, 30, 36), width=int(s*0.020))
+    # 南京錠（閉店の記号）
+    d.arc([s*0.42, s*0.80, s*0.58, s*0.94], 180, 360,
+          fill=(232, 232, 236), width=int(s*0.036))
+    d.rounded_rectangle([s*0.38, s*0.88, s*0.62, s*1.00], radius=s*0.02,
+                        fill=(236, 196, 40), outline=(70, 56, 8), width=int(s*0.022))
+
+
 def p_needle(d, s):
     """注射針。先が細く根元が太いメガホン型を、斜めに描く。
 
@@ -2558,7 +2581,7 @@ SPECS = {
         head_hi="ダイエー", panels=[
         _p("p_sukiyaki", "1943年 戦地", BROWN, "sad", "すき焼きが…", "生きて帰った"),
         _p("p_beefpack", "1957年 大阪", GOLD, "angry", "よそより|安く売るのだ！", "牛肉 100円→39円"),
-        _p("p_downgraph", "2004年", NAVY, "surprised", "借金、1兆円…", "創業者、追放"),
+        _p("p_shutter", "2004年", NAVY, "surprised", "借金、1兆円…", "創業者、追放"),
     ]),
     "yamauchi-nintendo": dict(layout="panels", headline="任天堂は花札の会社だった",
         head_hi="任天堂", panels=[
