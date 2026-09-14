@@ -367,13 +367,16 @@ PLAYLISTS = {
                "cutter-knife", "washlet", "ajinomoto", "quartz-astron",
                "purikura-meme", "sharp-pencil", "okano-needle", "yokoi-gunpei",
                "ogura-takkyubin", "yamaichi-nozawa", "momose-subaru360",
-               "yamamoto-rotary"]),
+               "yamamoto-rotary", "takahashi-urayasu", "honda-soichiro",
+               "ibuka-sony", "onitsuka-asics"]),
     "company": dict(
         title="企業の栄枯盛衰｜ずんだもん再現ドラマ",
         desc="日本一になった会社が、なぜ創業者ごと消えたのか。"
              "花札屋が、どうやって世界を取ったのか。会社の一代記を、"
              "ずんだもんが当人を演じる再現ドラマでたどります。",
-        slugs=["nakauchi-daiei", "yamauchi-nintendo", "yamaichi-nozawa"]),
+        slugs=["nakauchi-daiei", "yamauchi-nintendo", "yamaichi-nozawa",
+               "honda-soichiro", "ibuka-sony", "onitsuka-asics",
+               "takahashi-urayasu", "sharp-pencil"]),
 }
 
 
