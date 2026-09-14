@@ -584,6 +584,20 @@ def cmd_thumbnail_all(args) -> int:
         else:
             missing.append(slug)
 
+    # **再生数の多い順に流す**（2026-09-15）。1日10枚の制限に当たると
+    # 途中で止まるので、順番が成果を決める。前回は処理順が再生数と無関係で、
+    # 上位の自動改札・ダイエー・任天堂が未反映のまま打ち切られた
+    try:
+        views = {}
+        for i in range(0, len(jobs), 50):
+            r = yt.videos().list(part="statistics",
+                                 id=",".join(j[1] for j in jobs[i:i + 50])).execute()
+            for it in r["items"]:
+                views[it["id"]] = int(it["statistics"].get("viewCount", 0))
+        jobs.sort(key=lambda j: -views.get(j[1], 0))
+    except Exception as e:                      # 並べ替えは無くても動く
+        print(f"  （再生数を取れなかったので順不同で流します: {str(e)[:50]}）")
+
     print(f"対象 {len(jobs)} 本" + (f" / 特定できず {len(missing)} 本: {', '.join(missing)}"
                                      if missing else ""))
     if args.dry_run:
