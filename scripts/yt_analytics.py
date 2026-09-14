@@ -6,6 +6,15 @@
 できない: **時間帯（何時に見られたか）**。Analytics API にその次元が無い。
   Studio の「視聴者が YouTube にアクセスしている時間帯」だけが情報源で、
   チャンネルが小さいうちは「データ不足」で表示されない（2026-08-27 時点がそれ）
+できない: **インプレッション数とサムネのクリック率（CTR）**。API に指標が無い。
+  サムネの良し悪しを測れる唯一の数字なので、Studio をブラウザで開いて読む:
+    https://studio.youtube.com/channel/<ID>/analytics/tab-content/period-<開始>,<終了>
+  期間はエポックミリ秒2つで、**太平洋時間の午前0時**が境界。終了は「最後に含める日の
+  翌日0時」。日付入力欄はマスク付きで手打ちが通らないので、URL で指定するのが速い
+  （2026-09-14 に判明）。例:
+    python3 -c "import datetime,zoneinfo;PT=zoneinfo.ZoneInfo('America/Los_Angeles');\
+      print(int(datetime.datetime(2026,9,6,tzinfo=PT).timestamp()*1000))"
+  APIのデータは3〜4日遅れるが、**Studio は前日まで見える**。急ぐときもブラウザ
 
 認証は upload_youtube.py と共通のトークンを使う。スコープを増やしたので、
 このスクリプトを初めて使うときは auth をやり直す必要がある:
