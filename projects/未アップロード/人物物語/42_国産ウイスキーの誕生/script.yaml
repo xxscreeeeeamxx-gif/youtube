@@ -1,0 +1,587 @@
+# 国産ウイスキー・再現ドラマ（[鳥井信治郎|とりいしんじろう]・1879→1962）。
+# 投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ12本目。この回だけ**敵がいない**。
+#   ホンダ＝宣言と時間 / ソニー＝役所 / トヨタ＝割れる鋳物 / ブリヂストン＝返品
+#   **サントリー＝味方だった人と別れる話**。二人とも正しくて、それでも分かれる
+# ★配役: ずんだもん=鳥井信治郎 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+#   竹鶴政孝はモブ。**竹鶴を悪く描かない**。どちらが正しいとも言わせない
+# ★ミーム禁止の章: wakare（決別の章）
+# 裏取り:
+#   鳥井信治郎 Wikipedia / コトバンク / サントリー公式「赤玉の歴史」
+#   竹鶴政孝 Wikipedia / 山崎蒸溜所 Wikipedia
+#   JWIC「JW物語」/ ダイヤモンド「国産ウイスキー第1号の記憶」
+# 確定事実:
+#   鳥井信治郎 1879-1-30 生 / 1962-2-20 没（83歳）
+#   1899 独立して店を構える。洋酒を日本人の口に合わせて作る
+#   1906 店の名を寿屋洋酒店に改める
+#   1907-4 赤玉ポートワインの販売を開始。これが事業拡大の土台になった
+#   口ぐせ「やってみなはれ」。のちのサントリーの社是になる
+#   1923 鳥井が竹鶴政孝を招き、山崎に日本初のモルトウイスキー蒸溜所を開く
+#     竹鶴は初代工場長として、日本初の本格スコッチ式ウイスキー製造を指揮
+#   ※竹鶴が適地と考えていたのは山崎ではなく北海道余市（冷涼・湿潤・水・空気）
+#     鳥井は山崎を選んだ。**どちらが正しいとは言わせない**
+#   1929 国産ウイスキー第1号「サントリー白札」発売。予想に反して売れなかった
+#     スコッチ独特のスモーキーな香りが当時の日本人に不評だったとされる
+#   1933-11 寿屋が鶴見工場の売却を発表。工場長の竹鶴に事前の連絡がなく、
+#     竹鶴は寿屋に不信感を持つようになった
+#   1934-3-1 竹鶴が寿屋を退職。理由は、後続の技師が育ったこと／
+#     鳥井の長男・吉太郎への指導を終えたこと／最初の約束の十年が過ぎたこと
+#   1934 竹鶴は北海道余市に大日本果汁株式会社を設立
+#   1936 余市蒸溜所でウイスキーづくりを開始
+#   ※白札の具体的な販売本数・返品率は裏が取れなかったので**数字を言わせない**
+meta:
+  title: "【国産ウイスキーの誕生】売れなかった一本と、出て行った男【ずんだもん解説】"
+  slug: "torii-whisky"
+  summary: "日本で初めてウイスキーを作った男は、スコットランド帰りの技師を破格で雇いました。ところが二人は、作る場所の意見が最初から違っていました。六年かけて出した国産第一号は、まったく売れません。やがて約束の十年が過ぎます。ずんだもんが鳥井信治郎を演じる再現ドラマです。"
+  tags: ["サントリー", "鳥井信治郎", "竹鶴政孝", "ウイスキー", "山崎蒸溜所", "余市", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "売れなかった"
+    bottom: "国産ウイスキーの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: taketsuru, label: "竹鶴政孝", voice: 13, pitch: 0.0, item: hat}
+    - {id: banto, label: "寿屋の番頭", voice: 42, pitch: 0.0}
+    - {id: shain, label: "寿屋の社員", voice: 12, pitch: 0.04}
+    - {id: kyaku, label: "酒屋の主人", voice: 42, pitch: 0.04}
+    - {id: nomi, label: "客", voice: 12, pitch: -0.04}
+    - {id: kichitaro, label: "長男", voice: 12, pitch: 0.06}
+scenes:
+  - id: hook
+    title: ""
+    background: il_wsk_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ。日本のウイスキー、強いらしいのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。世界の賞も取ってるよ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "最初からうまかったのだな。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ううん。第一号、売れなかったの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……売れなかった。"
+        se: don
+        telops:
+          - {text: "国産第一号は売れなかった", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "六年かけて作って、不評だった。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……六年。長いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "しかもね。作った二人は、そのあと別れるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "喧嘩したのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そこがね。喧嘩じゃないの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……どういうことなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "二人とも、正しかったの。"
+
+  - id: akadama
+    title: "1907・赤い玉で稼ぐ"
+    background: il_wsk_mise
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: banto, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "大阪の洋酒店に、鳥井信治郎という主人がいました。"
+        reading: "おおさかの ようしゅてんに とりいしんじろうと いう しゅじんが いました。"
+      - speaker: banto
+        emotion: thinking
+        text: "旦那さん。[葡萄酒|ぶどうしゅ]は、酸っぱいと言われます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうやろな。日本人の口に合わんのや。"
+      - speaker: banto
+        emotion: surprised
+        text: "では、どうします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "甘うするのや。日本人の口に、合わせる。"
+      - speaker: banto
+        emotion: surprised
+        text: "……本場と違うものになりますが。"
+      - speaker: zundamon
+        emotion: angry
+        text: "飲まれへん本物に、何の値打ちがある。"
+      - speaker: reimu
+        text: "1907年、赤玉ポートワインを売り出します。"
+        reading: "せんきゅうひゃくななねん、あかだま ぽーとわいんお うりだします。"
+      - speaker: reimu
+        text: "これが、のちの商売の土台になりました。"
+        reading: "これが のちの しょうばいの どだいに なりました。"
+      - speaker: banto
+        emotion: happy
+        text: "旦那さん。売れてます。よう売れてます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "せやろ。……次は、ウイスキーや。"
+      - speaker: banto
+        emotion: surprised
+        text: "……ウイスキー。日本で、ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "やってみなはれ。"
+        se: don
+
+  - id: yatoi
+    title: "1923・破格で雇う"
+    background: il_wsk_mise
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: taketsuru, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "ウイスキーを作れる日本人は、ほとんどいませんでした。"
+        reading: "ういすきーお つくれる にほんじんわ ほとんど いませんでした。"
+      - speaker: reimu
+        text: "鳥井は、スコットランドで学んだ男を招きます。"
+        reading: "とりいわ すこっとらんどで まなんだ おとこお まねきます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[竹鶴|たけつる]さん。うちに来てほしいのや。"
+      - speaker: taketsuru
+        emotion: surprised
+        text: "……本気ですか。日本でスコッチを。"
+      - speaker: zundamon
+        emotion: normal
+        text: "本気や。金は出す。十年、頼む。"
+      - speaker: taketsuru
+        emotion: thinking
+        text: "十年。……分かりました。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "ただ、場所は私に選ばせてください。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……場所。どこがええんや。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "北海道。[余市|よいち]です。"
+        se: don
+      - speaker: zundamon
+        emotion: surprised
+        text: "……北海道。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "冷たくて、湿っていて、水がいい。"
+      - speaker: taketsuru
+        emotion: happy
+        text: "向こうの土地に、よく似ています。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……似てるのは分かった。"
+
+  - id: yamazaki
+    title: "1923・山崎を選ぶ"
+    background: il_wsk_jozo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: taketsuru, x: 0.58, scale: 0.80}
+      - {who: banto, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "[竹鶴|たけつる]さん。[山崎|やまざき]にするわ。"
+      - speaker: taketsuru
+        emotion: surprised
+        text: "……[山崎|やまざき]。京都の、あの[山崎|やまざき]ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "水はええ。大阪からも近い。"
+      - speaker: taketsuru
+        emotion: thinking
+        text: "近いのは、作る話ではありません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "売る話や。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "……売る話で、味は決まりませんよ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "売れんかったら、二本目が作れん。"
+      - speaker: taketsuru
+        emotion: sad
+        text: "……分かります。分かりますが。"
+      - speaker: banto
+        emotion: thinking
+        text: "旦那さん。北海道は遠すぎます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "せや。運ぶだけで[身代|しんだい]が飛ぶ。"
+      - speaker: reimu
+        text: "山崎に、日本で最初のモルトウイスキーの蒸溜所ができました。"
+        reading: "やまざきに にほんで さいしょの もるとういすきーの じょうりゅうしょが できました。"
+      - speaker: reimu
+        text: "竹鶴政孝が、初代の工場長になります。"
+        reading: "たけつるまさたかが しょだいの こうじょうちょうに なります。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "社長。やるからには、本物を作ります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "やってみなはれ。"
+
+  - id: matsu
+    title: "1924・ただ待つ"
+    background: il_wsk_jozo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: taketsuru, x: 0.58, scale: 0.80}
+      - {who: banto, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "[竹鶴|たけつる]さん。いつ飲めるんや。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "まだです。樽の中で寝ています。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……寝てるて。何もせんのか。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "何もしません。それが仕事です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……待つのが、仕事か。"
+      - speaker: banto
+        emotion: sad
+        text: "旦那さん。[赤玉|あかだま]の儲けが、こっちに消えてます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かってる。全部つぎ込んどる。"
+      - speaker: banto
+        emotion: surprised
+        text: "……何年つぎ込むんです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[竹鶴|たけつる]さんが、ええ言うまでや。"
+      - speaker: reimu
+        text: "ウイスキーは、樽の中で何年も置かなければ飲めません。"
+        reading: "ういすきーわ たるの なかで なんねんも おかなければ のめません。"
+      - speaker: reimu
+        text: "その間、売る物は 一本も できません。"
+        reading: "その あいだ、うるものわ いっぽんも できません。"
+      - speaker: taketsuru
+        emotion: thinking
+        text: "社長。不安ではないのですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "不安や。せやから、見に来とるんやろ。"
+      - speaker: taketsuru
+        emotion: happy
+        text: "……毎月、来られますね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "樽が減ってへんか、数えとるのや。"
+
+  - id: shirofuda
+    title: "1929・白札、出る"
+    background: il_wsk_jozo
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: taketsuru, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "蒸溜所ができてから、六年が過ぎました。"
+        reading: "じょうりゅうしょが できてから ろくねんが すぎました。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "社長。出せます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……できたんか。"
+      - speaker: taketsuru
+        emotion: happy
+        text: "本場と同じ作り方です。胸を張れます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……ようやった。よう待った。"
+      - speaker: reimu
+        text: "1929年、国産ウイスキーの第一号が売り出されます。"
+        reading: "せんきゅうひゃくにじゅうくねん、こくさんういすきーの だいいちごうが うりだされます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "これが、日本で最初の一本や。"
+
+  - id: urenai
+    title: "1929・誰も買わない"
+    background: il_wsk_mise
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: kyaku, x: 0.58, scale: 0.80}
+      - {who: nomi, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: kyaku
+        emotion: sad
+        text: "旦那さん。……戻しますわ、これ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……なんでや。本物やで。"
+      - speaker: kyaku
+        emotion: thinking
+        text: "本物かどうかやのうて、売れんのです。"
+      - speaker: nomi
+        emotion: normal
+        text: "一口もらったけどな。焦げくさい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……焦げくさい。"
+      - speaker: nomi
+        emotion: normal
+        text: "煙の匂いや。薬みたいや、言う人もおる。"
+      - speaker: reimu
+        text: "スコッチ独特の煙の香りが、当時の日本人に不評でした。"
+        reading: "すこっち どくとくの けむりの かおりが、とうじの にほんじんに ふひょうでした。"
+        se: don
+        telops:
+          - {text: "煙の香りが不評だった", size: lg, position: top-center, color: "#FF6B6B", stroke: "#2A0A0A", glow: "#FF2200", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "……本場と同じに作ったんやけどな。"
+      - speaker: kyaku
+        emotion: sad
+        text: "同じやから、売れんのかもしれません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……同じやから。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……[赤玉|あかだま]と、逆のことしとる。"
+
+  - id: kuichigai
+    title: "1929・二人とも正しい"
+    background: il_wsk_jozo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: taketsuru, x: 0.68}
+    cuts:
+      - speaker: zundamon
+        emotion: normal
+        text: "[竹鶴|たけつる]さん。香りを、弱めてくれへんか。"
+      - speaker: taketsuru
+        emotion: surprised
+        text: "……弱める。"
+      - speaker: zundamon
+        emotion: normal
+        text: "日本人の口に、合わせたいのや。"
+      - speaker: taketsuru
+        emotion: angry
+        text: "それは、ウイスキーではなくなります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "飲まれへんもんは、酒やない。"
+      - speaker: taketsuru
+        emotion: angry
+        text: "飲み方のほうが、あとから変わります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……何年待つんや、それ。"
+      - speaker: taketsuru
+        emotion: sad
+        text: "……分かりません。"
+      - speaker: reimu
+        text: "作り手は本物を守りたい。売り手は今日売りたい。"
+        reading: "つくりてわ ほんものお まもりたい。うりてわ きょう うりたい。"
+      - speaker: reimu
+        text: "どちらも、間違ってはいませんでした。"
+        reading: "どちらも まちがっては いませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……[竹鶴|たけつる]さん。すまんな。"
+      - speaker: taketsuru
+        emotion: sad
+        text: "謝らないでください。社長も、正しい。"
+
+  - id: tsurumi
+    title: "1933・知らされなかった"
+    background: il_wsk_mise
+    bgm: serious
+    stage:
+      - {who: taketsuru, x: 0.32}
+      - {who: shain, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "1933年11月、会社が工場をひとつ売ると発表します。"
+        reading: "せんきゅうひゃくさんじゅうさんねん じゅういちがつ、かいしゃが こうじょうお ひとつ うると はっぴょう します。"
+      - speaker: shain
+        emotion: surprised
+        text: "[工場長|こうじょうちょう]。新聞に出ていますが。"
+      - speaker: taketsuru
+        emotion: surprised
+        text: "……何がだ。"
+      - speaker: shain
+        emotion: sad
+        text: "[鶴見|つるみ]の工場を、売ると。"
+      - speaker: taketsuru
+        emotion: surprised
+        text: "……聞いていない。"
+        se: don
+      - speaker: shain
+        emotion: sad
+        text: "……[工場長|こうじょうちょう]にも、ですか。"
+      - speaker: taketsuru
+        emotion: sad
+        text: "私は、[工場長|こうじょうちょう]だ。"
+      - speaker: reimu
+        text: "事前の連絡は、ありませんでした。"
+        reading: "じぜんの れんらくわ ありませんでした。"
+
+  - id: wakare
+    title: "1934・十年が過ぎる"
+    background: il_wsk_jozo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+      - {who: taketsuru, x: 0.58, scale: 0.80}
+      - {who: kichitaro, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: taketsuru
+        emotion: normal
+        text: "社長。十年が、過ぎました。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……過ぎたな。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "技師も育ちました。若い者が回せます。"
+      - speaker: kichitaro
+        emotion: normal
+        text: "[竹鶴|たけつる]さん。私も、一通り教わりました。"
+      - speaker: taketsuru
+        emotion: happy
+        text: "若旦那。あなたはもう大丈夫です。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……引き止めても、あかんのやろな。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "社長。恨んではいません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……せやろか。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "ただ、私の作りたいものは、北にあります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[余市|よいち]か。"
+      - speaker: taketsuru
+        emotion: happy
+        text: "はい。十年、変わりませんでした。"
+      - speaker: reimu
+        text: "1934年3月1日、竹鶴政孝は会社を去りました。"
+        reading: "せんきゅうひゃくさんじゅうよねん さんがつ ついたち、たけつるまさたかわ かいしゃお さりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[竹鶴|たけつる]さん。……やってみなはれ。"
+      - speaker: taketsuru
+        emotion: happy
+        text: "……ありがとうございます。"
+      - speaker: reimu
+        text: "竹鶴は北海道の余市に、自分の会社を作ります。"
+        reading: "たけつるわ ほっかいどうの よいちに じぶんの かいしゃお つくります。"
+      - speaker: reimu
+        text: "二年後、そこでウイスキーづくりを始めました。"
+        reading: "にねんご そこで ういすきーづくりお はじめました。"
+
+  - id: ima
+    title: ""
+    background: il_wsk_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……別れて、両方とも残ったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。[山崎|やまざき]も、[余市|よいち]も、今もある。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……どっちも潰れてないのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "潰れてない。両方、世界で評価されてる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……一緒にいたら、どうなってたのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "たぶん、どっちかを削ってた。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……あ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "別れたから、二つとも残ったの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……喧嘩じゃなかったのだな。"
+
+  - id: shime
+    title: ""
+    background: il_wsk_ima
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "煙くさいと言われた味もね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いまは、それが好きな人がいる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……飲み方のほうが、変わったのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。あの人の言ったとおりに。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……何年かかったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこは、聞かないであげて。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面白かったら、チャンネル登録してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "高評価も頼むのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        duet_with: tsumugi

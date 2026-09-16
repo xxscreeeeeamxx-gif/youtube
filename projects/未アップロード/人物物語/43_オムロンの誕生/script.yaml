@@ -1,0 +1,576 @@
+# オムロン・再現ドラマ（[立石一真|たていしかずま]・1900→1991）。
+# 投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ13本目。
+#   ホンダ＝宣言と時間 / ソニー＝役所 / トヨタ＝割れる鋳物 /
+#   ブリヂストン＝返品 / サントリー＝味方と別れる
+#   **オムロン＝人がやらんでええ仕事を、機械に渡していく話**
+# ★★重大な注意: このチャンネルには既に「自動改札機の誕生」の回がある。
+#   **この回は自動改札の作り方を説明しない**。仕組みの解説をやると内容が丸かぶりする。
+#   自動改札は終盤の一場面だけに留め、「タイマーから始まった線の終点」として置く。
+#   他の回への言及も禁止（各動画は単体で完結させる方針）
+# ★配役: ずんだもん=立石一真 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+#   母はモブ。幼少期の主役は一真本人
+# ★ミーム禁止の章: chichi（父の死と貧困の章）
+# 裏取り:
+#   立石一真 Wikipedia / Weblio / オムロン公式「沿革」「オムロンの歴史」
+#   オムロン公式「第一話 生い立ちから下積み、独立まで」
+#   週刊BCN「1967年 日本初の自動改札機が稼働」/ 北千里駅 Wikipedia
+#   日本経済新聞「世界初の自動改札機、オムロン主導」
+# 確定事実:
+#   立石一真 1900-9-20 熊本市新町 生 / 1991-1-12 没（90歳）
+#   父・立石熊助は伊万里焼の盃を製造販売。一真はその長男
+#   小学1年のときに父が死去。家業は衰退し、貧しい生活になる
+#     母は下宿屋を開業。一真も家を助け、新聞配達をした
+#   1921 熊本高等工業学校 電気科 卒業
+#   1930 京都市で「彩光社」を設立
+#   1933-5 大阪市都島区東野田で「立石電機製作所」を創業
+#     最初の製品は**レントゲン撮影用タイマー**
+#     大日本レントゲン製作所のレントゲンに立石のタイマーを取り付けるOEM契約が成立
+#   1948-5 立石電機株式会社
+#   1959-1 商標を「OMRON」に変更。本社所在地の**御室（おむろ）**にちなむ
+#   1964 近畿日本鉄道と自動改札機の共同開発に着手
+#   1967-3-1 阪急 北千里駅の開業と同時に、世界初の自動改札機を設置
+#     千里ニュータウンの通勤対策と、1970年の大阪万博の大量輸送対策
+#   1990-1 社名をオムロン株式会社に変更
+#   ※創業時の資本金・従業員数は裏が取れなかったので**数字を言わせない**
+#   ※SINIC理論には触れない（この回で説明しきれない）
+meta:
+  title: "【オムロンの誕生】新聞配達の少年が、機械に仕事を渡すまで【ずんだもん解説】"
+  slug: "tateishi-omron"
+  summary: "小学一年で父を亡くした少年は、家を助けるため新聞を配りました。大人になった彼が最初に作ったのは、レントゲンの撮影時間を数えるタイマーです。人が数えなくていい仕事を、機械に渡す。その考え方だけを、彼はずっと続けました。ずんだもんが立石一真を演じる再現ドラマです。"
+  tags: ["オムロン", "立石一真", "タイマー", "京都", "熊本", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "新聞配達の少年が"
+    bottom: "オムロンの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: haha, label: "母・エイ", voice: 8, pitch: 0.06}
+    - {id: geshuku, label: "下宿人", voice: 42, pitch: 0.0}
+    - {id: gishi, label: "立石電機の技師", voice: 12, pitch: 0.04}
+    - {id: rentgen, label: "レントゲン屋", voice: 13, pitch: -0.04, item: hat}
+    - {id: shain, label: "社員", voice: 12, pitch: -0.02}
+    - {id: tetsudo, label: "鉄道の人", voice: 13, pitch: -0.08, item: hat}
+scenes:
+  - id: hook
+    title: ""
+    background: il_omr_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "つむぎ。オムロンって、何の会社なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "体温計とか、血圧計とか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……病院のやつなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。でもそれは、たくさんあるうちの一つ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ほかにもあるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "工場の機械を止めたり、動かしたり。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ばらばらなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう見えるよね。でも、全部同じなの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "同じ。あの二つがか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "人がやらなくていい仕事を、機械に渡す。"
+        se: don
+        telops:
+          - {text: "人がやらなくていい仕事を機械に渡す", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: thinking
+        text: "……それだけで、会社になるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "なったの。最初の商品は、タイマー。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "タイマー。時間を計るだけのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。人が数えなくてよくなる機械。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……そこから始まったのだな。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "作った人はね。小学一年で、父親を亡くしてる。"
+
+  - id: chichi
+    title: "1907・新聞を配る"
+    background: il_omr_kumamoto
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, scale: 0.74, emotion: sad}
+      - {who: haha, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "熊本の新町。立石家は、伊万里焼の盃を売る店でした。"
+        reading: "くまもとの しんまち。たていしけわ いまりやきの さかずきお うる みせでした。"
+      - speaker: reimu
+        text: "一真が小学一年のとき、父が亡くなります。"
+        reading: "かずまが しょうがくいちねんの とき、ちちが なくなります。"
+      - speaker: haha
+        emotion: sad
+        text: "[一真|かずま]。……店は、たたみます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……[盃|さかずき]、売らへんのか。"
+      - speaker: haha
+        emotion: sad
+        text: "売れんのです。お父さんがいないと。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: haha
+        emotion: normal
+        text: "[下宿|げしゅく]を始めます。部屋を貸すの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……ボクも、働くのだ。"
+      - speaker: haha
+        emotion: surprised
+        text: "一年生でしょう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "新聞なら、配れるのだ。"
+      - speaker: reimu
+        text: "母は下宿屋を開き、一真は新聞を配りました。"
+        reading: "ははわ げしゅくやお ひらき、かずまわ しんぶんお くばりました。"
+
+  - id: shinbun
+    title: "1910・毎朝、同じ道"
+    background: il_omr_kumamoto
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, scale: 0.74, emotion: normal}
+      - {who: geshuku, x: 0.68}
+    cuts:
+      - speaker: geshuku
+        emotion: surprised
+        text: "坊主。毎朝、同じ時間に来るな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ道を、同じ順で回ってるのだ。"
+      - speaker: geshuku
+        emotion: thinking
+        text: "……数えてるのか、頭の中で。"
+      - speaker: zundamon
+        emotion: normal
+        text: "数えてる。何軒目で、何時か。"
+      - speaker: geshuku
+        emotion: happy
+        text: "大人でもやらんぞ、そんなこと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……面倒なのだ。数えるのが。"
+      - speaker: geshuku
+        emotion: surprised
+        text: "やめるのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "やめへん。数えんでええ方法を考えるのだ。"
+      - speaker: geshuku
+        emotion: happy
+        text: "……変わった坊主やな。"
+
+  - id: gakko
+    title: "1921・電気を選ぶ"
+    background: il_omr_kumamoto
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: haha, x: 0.68}
+    cuts:
+      - speaker: haha
+        emotion: thinking
+        text: "[一真|かずま]。学校は、何を選んだの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "電気なのだ。"
+      - speaker: haha
+        emotion: surprised
+        text: "……焼き物の家に生まれて、電気。"
+      - speaker: zundamon
+        emotion: normal
+        text: "焼き物は、父ちゃんの手が要った。"
+      - speaker: haha
+        emotion: sad
+        text: "……そうね。あの人しか作れなかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、店がなくなったのだ。"
+      - speaker: haha
+        emotion: surprised
+        text: "……[一真|かずま]。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人が一人おらんようになっても、"
+      - speaker: zundamon
+        emotion: normal
+        text: "止まらんものを作りたいのだ。"
+      - speaker: reimu
+        text: "1921年、電気の学校を出ます。"
+        reading: "せんきゅうひゃくにじゅういちねん、でんきの がっこうお でます。"
+      - speaker: reimu
+        text: "そのあと京都で、小さな会社を興しました。"
+        reading: "そのあと きょうとで、ちいさな かいしゃお おこしました。"
+      - speaker: haha
+        emotion: thinking
+        text: "……うまくいってるの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いってへん。まだ、何屋か決まってへんのだ。"
+
+  - id: dokuritsu
+    title: "1933・タイマーを作る"
+    background: il_omr_koba
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: rentgen, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "1921年、電気の学校を出ます。"
+        reading: "せんきゅうひゃくにじゅういちねん、でんきの がっこうお でます。"
+      - speaker: reimu
+        text: "1933年、大阪に小さな製作所を構えました。"
+        reading: "せんきゅうひゃくさんじゅうさんねん、おおさかに ちいさな せいさくじょお かまえました。"
+      - speaker: rentgen
+        emotion: thinking
+        text: "[立石|たていし]さん。うちの困りごと、聞いてくれますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: rentgen
+        emotion: sad
+        text: "レントゲンの[撮影|さつえい]時間、人が数えとるんです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……人が。声に出してか。"
+      - speaker: rentgen
+        emotion: sad
+        text: "はい。いち、に、さん、と。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ずれますな。それ。"
+      - speaker: rentgen
+        emotion: sad
+        text: "ずれます。写真が濃くなったり、薄くなったり。"
+      - speaker: zundamon
+        emotion: normal
+        text: "数えるのをやめましょう。"
+      - speaker: rentgen
+        emotion: surprised
+        text: "……やめたら、撮れません。"
+      - speaker: zundamon
+        emotion: happy
+        text: "機械に数えさせるのだ。"
+        se: don
+
+  - id: zure
+    title: "1933・まだ、ずれる"
+    background: il_omr_koba
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: gishi, x: 0.68}
+    cuts:
+      - speaker: gishi
+        emotion: sad
+        text: "社長。今日のは、少し長いです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どれくらいだ。"
+      - speaker: gishi
+        emotion: sad
+        text: "……ほんの、わずかです。"
+      - speaker: zundamon
+        emotion: angry
+        text: "わずかでは駄目なのだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "人が数えるより、ずっと正確ですが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人より正確では、意味がないのだ。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……では、何が要るのですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "いつも同じ、が要る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "写真を撮り直したら、体に二度あたる。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……患者さんに、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。だから一回で決めるのだ。"
+      - speaker: reimu
+        text: "ばねの強さが変わると、時間がずれます。"
+        reading: "ばねの つよさが かわると、じかんが ずれます。"
+      - speaker: reimu
+        text: "使ううちに変わる分まで、見込む必要がありました。"
+        reading: "つかう うちに かわる ぶんまで、みこむ ひつようが ありました。"
+      - speaker: gishi
+        emotion: sad
+        text: "社長。何回やればいいんですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "同じになるまでなのだ。"
+
+  - id: timer
+    title: "1933・最初の商品"
+    background: il_omr_koba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: gishi, x: 0.58, scale: 0.80}
+      - {who: rentgen, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: gishi
+        emotion: normal
+        text: "社長。時間どおりに、切れます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "何回やっても同じか。"
+      - speaker: gishi
+        emotion: happy
+        text: "同じです。百回やって、同じでした。"
+      - speaker: rentgen
+        emotion: surprised
+        text: "……人の声より、正確や。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人は疲れる。機械は疲れんのだ。"
+      - speaker: reimu
+        text: "最初の製品は、レントゲン撮影用のタイマーでした。"
+        reading: "さいしょの せいひんわ れんとげん さつえいようの たいまーでした。"
+      - speaker: reimu
+        text: "レントゲンに取り付けて売る約束が、まとまります。"
+        reading: "れんとげんに とりつけて うる やくそくが まとまります。"
+      - speaker: rentgen
+        emotion: happy
+        text: "[立石|たていし]さん。うちの機械に、付けさせてください。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……全部にですか。"
+      - speaker: rentgen
+        emotion: happy
+        text: "全部に。もう、人には数えさせません。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……それが、いちばん嬉しいのだ。"
+
+  - id: omuro
+    title: "1959・地名を世界へ"
+    background: il_omr_koba
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: shain, x: 0.68}
+    cuts:
+      - speaker: shain
+        emotion: thinking
+        text: "社長。外国で使う名前が要ります。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……[立石|たていし]では、あかんか。"
+      - speaker: shain
+        emotion: normal
+        text: "読めません。向こうの人には。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ほな、どこの名前にする。"
+      - speaker: shain
+        emotion: normal
+        text: "本社のある土地は、[御室|おむろ]といいます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "おむろ。……オムロン、か。"
+        se: don
+      - speaker: shain
+        emotion: happy
+        text: "言いやすいです。どこの国でも。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……京都の町の名前が、世界を回るのか。"
+      - speaker: reimu
+        text: "1959年、商標をオムロンに改めます。"
+        reading: "せんきゅうひゃくごじゅうくねん、しょうひょうお おむろんに あらためます。"
+      - speaker: reimu
+        text: "本社のあった御室という地名から取られました。"
+        reading: "ほんしゃの あった おむろと いう ちめいから とられました。"
+
+  - id: kaisatsu
+    title: "1967・線の終点"
+    background: il_omr_eki
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tetsudo, x: 0.68}
+    cuts:
+      - speaker: tetsudo
+        emotion: thinking
+        text: "[立石|たていし]さん。駅の話を、聞いてもらえますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: tetsudo
+        emotion: sad
+        text: "[改札|かいさつ]で、駅員が切符を切っとります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……一枚ずつ、手でですな。"
+      - speaker: tetsudo
+        emotion: sad
+        text: "はい。朝は、列が伸びる一方で。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……人が数えて、人が切って。"
+      - speaker: zundamon
+        emotion: normal
+        text: "またそれか。"
+      - speaker: tetsudo
+        emotion: surprised
+        text: "また、とは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちは三十年、同じことをやっとる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "人がやらんでええ仕事を、機械に渡すのだ。"
+      - speaker: reimu
+        text: "1967年3月1日、北千里駅の開業と同時に、"
+        reading: "せんきゅうひゃくろくじゅうななねん さんがつ ついたち、きたせんりえきの かいぎょうと どうじに、"
+      - speaker: reimu
+        text: "世界で初めての自動改札機が動きはじめました。"
+        reading: "せかいで はじめての じどうかいさつきが うごきはじめました。"
+        se: don
+        telops:
+          - {text: "1967年 世界初の自動改札機", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tetsudo
+        emotion: thinking
+        text: "[立石|たていし]さん。ひとつ、気がかりが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんです。"
+      - speaker: tetsudo
+        emotion: sad
+        text: "切符を切っとった者の、仕事がなくなります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なくなりませんよ。"
+      - speaker: tetsudo
+        emotion: surprised
+        text: "しかし、機械が代わりに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械にできるのは、切ることだけだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "道を聞かれても、答えられんのだ。"
+      - speaker: tetsudo
+        emotion: surprised
+        text: "……ああ。"
+      - speaker: tetsudo
+        emotion: happy
+        text: "……駅員が、切らんでよくなりました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その人らは、どこへ行きました。"
+      - speaker: tetsudo
+        emotion: surprised
+        text: "……ホームです。客に、案内をしとります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それでええのだ。"
+
+  - id: ima
+    title: ""
+    background: il_omr_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……タイマーと[改札|かいさつ]、同じ話だったのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。人が数えるのをやめさせる機械。"
+      - speaker: zundamon
+        emotion: normal
+        text: "体温計も、血圧計も。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そう。全部、人が測らなくていい。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ばらばらに見えてたやつが、一本なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "始まりは、新聞配達だったのかもね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……毎朝、頭の中で数えてたやつか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面倒だと思ったんだと思う。ずっと。"
+
+  - id: shime
+    title: ""
+    background: il_omr_ima
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "明日、[改札|かいさつ]を通るときにね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あそこに立ってた人は、いなくなってる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……いなくなったんじゃないのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。別の場所に、移っただけ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクも面倒なことは機械に任せるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "ずんだもんの場合は、全部だよね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面白かったら、チャンネル登録してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "高評価も頼むのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        duet_with: tsumugi

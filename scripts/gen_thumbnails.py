@@ -393,6 +393,108 @@ def p_octopus(d, s):
                   fill=(244, 182, 182), outline=(168, 66, 66), width=int(s * 0.012))
 
 
+def p_tabi(d, s):
+    """足袋。親指の割れとこはぜ。ブリヂストン回の「もとは足袋屋」。"""
+    d.polygon([(s * 0.10, s * 0.68), (s * 0.72, s * 0.68), (s * 0.90, s * 0.50),
+               (s * 0.84, s * 0.26), (s * 0.34, s * 0.18), (s * 0.10, s * 0.40)],
+              fill=(242, 238, 230), outline=(140, 134, 122), width=int(s * 0.020))
+    d.polygon([(s * 0.62, s * 0.66), (s * 0.90, s * 0.50), (s * 0.84, s * 0.36),
+               (s * 0.62, s * 0.50)], fill=(212, 206, 194),
+              outline=(140, 134, 122), width=int(s * 0.016))
+    for k in range(3):                       # こはぜ
+        d.rectangle([s * 0.13, s * 0.30 + k * s * 0.11, s * 0.21,
+                     s * 0.37 + k * s * 0.11], fill=(198, 192, 178),
+                    outline=(136, 130, 118), width=int(s * 0.012))
+    d.polygon([(s * 0.10, s * 0.68), (s * 0.72, s * 0.68), (s * 0.90, s * 0.52),
+               (s * 0.90, s * 0.62), (s * 0.70, s * 0.80), (s * 0.10, s * 0.80)],
+              fill=(52, 52, 56), outline=(28, 28, 32), width=int(s * 0.016))
+
+
+def p_tyrestack(d, s):
+    """積み上がったタイヤ。ブリヂストン回の「全部返ってきた」。
+    ★溝の模様は商標に触れうるので描かない。黒い輪だけで積む。"""
+    for r, (cx, cy, rr) in enumerate([(0.50, 0.74, 0.26), (0.34, 0.44, 0.22),
+                                      (0.68, 0.42, 0.22), (0.50, 0.18, 0.18)]):
+        d.ellipse([s * (cx - rr), s * (cy - rr * 0.74), s * (cx + rr),
+                   s * (cy + rr * 0.74)], fill=(46, 46, 50),
+                  outline=(24, 24, 28), width=int(s * 0.020))
+        ir = rr * 0.48
+        d.ellipse([s * (cx - ir), s * (cy - ir * 0.74), s * (cx + ir),
+                   s * (cy + ir * 0.74)], fill=(122, 124, 130),
+                  outline=(80, 82, 88), width=int(s * 0.014))
+
+
+def p_whiskybottle(d, s):
+    """角瓶。銘柄の意匠は描かない。琥珀色の中身と無地のラベルだけ。"""
+    d.rounded_rectangle([s * 0.26, s * 0.30, s * 0.74, s * 0.92], radius=s * 0.05,
+                        fill=(216, 208, 192), outline=(140, 132, 116),
+                        width=int(s * 0.020))
+    d.rounded_rectangle([s * 0.31, s * 0.44, s * 0.69, s * 0.86], radius=s * 0.04,
+                        fill=(190, 118, 40))
+    d.rectangle([s * 0.42, s * 0.12, s * 0.58, s * 0.32], fill=(202, 194, 178),
+                outline=(140, 132, 116), width=int(s * 0.016))
+    d.rectangle([s * 0.39, s * 0.05, s * 0.61, s * 0.15], fill=(118, 94, 58))
+    d.rectangle([s * 0.29, s * 0.56, s * 0.71, s * 0.74], fill=(242, 238, 228),
+                outline=(150, 142, 126), width=int(s * 0.016))
+
+
+def p_rtimer(d, s):
+    """撮影用タイマー。丸い文字盤とつまみ。数字は描かない。"""
+    d.rounded_rectangle([s * 0.10, s * 0.28, s * 0.90, s * 0.84], radius=s * 0.05,
+                        fill=(118, 112, 104), outline=(66, 62, 56),
+                        width=int(s * 0.022))
+    cx, cy, r = s * 0.43, s * 0.56, s * 0.20
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(242, 238, 228),
+              outline=(66, 62, 56), width=int(s * 0.020))
+    for k in range(12):                      # 目盛り
+        import math as _m
+        a = k * _m.pi / 6
+        d.line([cx + _m.cos(a) * r * 0.72, cy + _m.sin(a) * r * 0.72,
+                cx + _m.cos(a) * r * 0.90, cy + _m.sin(a) * r * 0.90],
+               fill=(96, 92, 86), width=int(s * 0.012))
+    d.line([cx, cy, cx + r * 0.62, cy - r * 0.54], fill=(206, 56, 46),
+           width=int(s * 0.026))
+    d.ellipse([s * 0.70, s * 0.44, s * 0.84, s * 0.58], fill=(80, 76, 72),
+              outline=(50, 48, 44), width=int(s * 0.016))
+
+
+def p_loom(d, s):
+    """機織り機。縦糸が張られた木の枠。トヨタ回の「もとは織機屋」。"""
+    fr, wd = (150, 116, 72), (108, 82, 48)
+    d.rectangle([s * 0.10, s * 0.14, s * 0.19, s * 0.90], fill=fr, outline=wd,
+                width=int(s * 0.016))
+    d.rectangle([s * 0.81, s * 0.14, s * 0.90, s * 0.90], fill=fr, outline=wd,
+                width=int(s * 0.016))
+    d.rectangle([s * 0.06, s * 0.08, s * 0.94, s * 0.19], fill=(178, 140, 90),
+                outline=wd, width=int(s * 0.016))
+    for k in range(9):                       # 縦糸
+        x = s * (0.23 + k * 0.066)
+        d.line([x, s * 0.19, x, s * 0.66], fill=(240, 236, 224),
+               width=int(s * 0.012))
+    d.rectangle([s * 0.17, s * 0.44, s * 0.83, s * 0.53], fill=(96, 74, 44),
+                outline=(62, 48, 28), width=int(s * 0.014))   # 筬
+    d.rectangle([s * 0.17, s * 0.66, s * 0.83, s * 0.82], fill=(232, 226, 210),
+                outline=(150, 142, 124), width=int(s * 0.014))  # 織り上がった布
+
+
+def p_engineblock(d, s):
+    """割れたエンジンの鋳物。トヨタ回の「9割が屑になる」。
+    ★割れ目をはっきり描く。無傷の四角だと、ただの箱に見えて意味が出ない。"""
+    d.rounded_rectangle([s * 0.14, s * 0.22, s * 0.86, s * 0.84], radius=s * 0.05,
+                        fill=(132, 136, 146), outline=(62, 66, 76),
+                        width=int(s * 0.022))
+    for k in range(3):                       # シリンダーの穴
+        cx = s * (0.30 + k * 0.20)
+        d.ellipse([cx - s * 0.075, s * 0.30, cx + s * 0.075, s * 0.45],
+                  fill=(70, 74, 84), outline=(46, 50, 58), width=int(s * 0.014))
+    # 割れ目（これが主役）
+    d.line([(s * 0.20, s * 0.84), (s * 0.38, s * 0.62), (s * 0.30, s * 0.50),
+            (s * 0.46, s * 0.22)], fill=(30, 32, 38), width=int(s * 0.036),
+           joint="curve")
+    d.line([(s * 0.62, s * 0.22), (s * 0.70, s * 0.52), (s * 0.86, s * 0.60)],
+           fill=(30, 32, 38), width=int(s * 0.030), joint="curve")
+
+
 def p_sole(d, s):
     """靴底。吸盤型のへこみが並ぶ。意匠は付けない。"""
     d.rounded_rectangle([s * 0.24, s * 0.10, s * 0.76, s * 0.90], radius=s * 0.22,
@@ -2638,6 +2740,26 @@ SPECS = {
         _p("p_sole", "いまの靴", NAVY, "happy", "形で解いたのだ", "靴底のへこみ"),
     ]),
     # ---- 解説 ----
+    "ishibashi-bridgestone": dict(layout="panels", headline="ブリヂストンは足袋屋だった",
+        head_hi="ブリヂストン", panels=[
+        _p("p_tabi", "久留米の小さな店", BROWN, "normal", "底にゴムを貼る", "もとは足袋屋"),
+        _p("p_tyrestack", "売った先から", SLATE, "sad", "全部返ってきた", "倉庫が埋まる"),
+    ]),
+    "torii-whisky": dict(layout="panels", headline="国産ウイスキーは売れなかった",
+        head_hi="国産ウイスキー", panels=[
+        _p("p_whiskybottle", "六年待った一本", GOLD, "happy", "日本初の一本", "1929年に出す"),
+        _p(None, "客の反応", NAVY, "sad", "焦げくさい", "誰も買わない"),
+    ]),
+    "tateishi-omron": dict(layout="panels", headline="オムロンは新聞配達から始まった",
+        head_hi="オムロン", panels=[
+        _p(None, "小学一年で父を亡くす", INDIGO, "sad", "毎朝、数えてた", "新聞配達の少年"),
+        _p("p_rtimer", "最初の商品", TEAL, "happy", "機械に数えさせる", "撮影用タイマー"),
+    ]),
+    "toyoda-kiichiro": dict(layout="panels", headline="トヨタは織機の会社だった",
+        head_hi="トヨタ", panels=[
+        _p("p_loom", "1933年 倉庫", BROWN, "normal", "布を織ってた", "もとは織機屋"),
+        _p("p_engineblock", "作っても割れる", SLATE, "sad", "9割が屑なのだ", "エンジンの鋳物"),
+    ]),
     "battery-80-duo": dict(layout="panels", headline="スマホ充電100%は損",
         head_hi="100%", panels=[
         _p(None, "毎晩やってる", RED, "happy", "満タンで寝るのだ", "いちばん減る"),

@@ -1,0 +1,642 @@
+# ブリヂストン・再現ドラマ（[石橋正二郎|いしばししょうじろう]・1889→1976）。
+# 投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ11本目。「町工場が世界へ」の型だが、山場は他回とずらす。
+#   ホンダ＝宣言と時間 / ソニー＝許可が下りない / トヨタ＝作っても割れる
+#   **ブリヂストン＝売ったら返ってくる**。作れたのに、客から戻ってくる話
+# ★配役: ずんだもん=石橋正二郎 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+#   兄・徳次郎はモブ（主人公は正二郎。兄弟を二人主人公にすると焦点がぼける）
+# ★ミーム禁止の章: なし（死や逮捕の場面が無い）
+# 裏取り:
+#   ブリヂストン公式「ブリヂストン物語」第2章第2節・第3節
+#   ブリヂストン公式ブログ「ブリヂストンの社名の由来って？」
+#   石橋正二郎 Wikipedia / コトバンク / 東文研アーカイブ（没年）
+#   The社史「1931年に石橋正二郎がブリッヂストンタイヤ株式会社を創業」
+# 確定事実:
+#   石橋正二郎 1889-2-1 福岡県久留米 生 / 1976-9-11 没（87歳）
+#   実家は仕立物屋。兄・徳次郎とともに家業を継ぐ
+#   1906 久留米商業学校を卒業（17歳）
+#   1907 家業の仕立物業を足袋専業にする
+#   1914 「志まやたび」を「アサヒ足袋」と改称し、20銭均一の販売を実施
+#   1918 日本足袋株式会社を設立、専務取締役
+#   1921 地下足袋の製造を開始
+#   1922 兄弟で貼付式ゴム底足袋を発明 / 1923 「アサヒ地下足袋」として発売
+#   1930 日本足袋のタイヤ部門として発足
+#   1931-3-1 福岡県久留米市にブリッヂストンタイヤ株式会社を設立、取締役社長
+#   1931-4 トラック用タイヤの生産開始、続いてバス用
+#     熟練者の不足・工程の不慣れ・輸入品の模倣を避け独自性を出そうとしたことから
+#     **返品が絶えなかった**。不具合に無料で新品と取り替える「責任保証制」の採用も
+#     返品増加の一因となった
+#   製造技術担当者「タイヤ破損は使用法にも原因がある」vs
+#     販売担当者「わずかな不良品でも当社にとって大打撃である」が日常的な論争だった
+#   石橋正二郎と技師の松平以下の全技術者が品質改良に努力。
+#     改良対象は 工程改善・設備の充実・故障の早期発見。設備資金の投入を惜しまなかった
+#   1932-1 商工省から優良国産品の認定を受ける
+#   社名: 正二郎の言葉「私の姓『石橋』を英訳し、STONE BRIDGE となるが、
+#     これでは語呂が悪いので逆さにして BRIDGESTONE と決定した」
+#     BRIDGESTONE は英語で石の橋を築くときの要石（キーストーン）を意味する
+#   ※創業初期の具体的な返品率・本数は裏が取れなかったので**数字を言わせない**
+meta:
+  title: "【ブリヂストンの誕生】足袋屋がタイヤを作ったら、全部返ってきた【ずんだもん解説】"
+  slug: "ishibashi-bridgestone"
+  summary: "世界でいちばん大きいタイヤの会社は、もともと久留米の足袋屋でした。ゴムの底を貼る技術をタイヤに向けた男は、工場を建てて売り出します。ところが売ったタイヤが、次々に返ってきました。しかも返品を増やしたのは、彼自身が決めたある約束でした。ずんだもんが石橋正二郎を演じる再現ドラマです。"
+  tags: ["ブリヂストン", "石橋正二郎", "足袋", "地下足袋", "タイヤ", "久留米", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "全部返ってきた"
+    bottom: "ブリヂストンの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: tokujiro, label: "兄・徳次郎", voice: 13, pitch: 0.02, item: hat}
+    - {id: shokunin, label: "足袋職人", voice: 42, pitch: 0.0}
+    - {id: gishi, label: "技師", voice: 12, pitch: 0.04}
+    - {id: hanbai, label: "販売の担当者", voice: 13, pitch: -0.06, item: hat}
+    - {id: seizo, label: "製造の担当者", voice: 12, pitch: -0.02}
+    - {id: unten, label: "トラックの運転手", voice: 42, pitch: 0.04}
+    - {id: yakunin, label: "商工省の人", voice: 13, pitch: -0.1, item: hat}
+scenes:
+  - id: hook
+    title: ""
+    background: il_bri_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ。タイヤって、丸いのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……それはそう。"
+      - speaker: zundamon
+        emotion: happy
+        text: "しかも黒いのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "今日は情報が少ないね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは詳しいのだ。ゴムでできてる。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "うん。じゃあ聞くけど。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "世界でいちばん大きいタイヤの会社。"
+      - speaker: zundamon
+        emotion: happy
+        text: "知ってるのだ。日本の会社なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。もとは何屋だったと思う。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……ゴム屋なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "惜しい。もっと足に近い。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "靴屋か。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "[足袋|たび]屋。"
+        se: don
+        telops:
+          - {text: "もとは足袋屋", size: xl, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "たび……あの、親指が分かれてるやつか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。[久留米|くるめ]の、小さな店。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……[足袋|たび]とタイヤ、どこが同じなのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "ゴムを、底に貼るところ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……あ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "でもね。作れたあとが大変だったの。"
+
+  - id: shitate
+    title: "1907・仕立物屋をやめる"
+    background: il_bri_tabiya
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tokujiro, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "福岡県久留米。石橋家は仕立物屋でした。"
+        reading: "ふくおかけん くるめ。いしばしけわ したてものやでした。"
+      - speaker: reimu
+        text: "正二郎は十七歳で学校を出て、家業に入ります。"
+        reading: "しょうじろうわ じゅうななさいで がっこうお でて、かぎょうに はいります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "兄さん。うちは何でも作りすぎなのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "注文が来るものは作る。当たり前だろう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、どれも普通なのだ。"
+      - speaker: tokujiro
+        emotion: thinking
+        text: "……何が言いたい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[足袋|たび]だけにするのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "[足袋|たび]だけ！？ 仕事が減るぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "減る。でも、うまくなるのだ。"
+      - speaker: reimu
+        text: "1907年、石橋家は足袋専業になりました。"
+        reading: "せんきゅうひゃくななねん、いしばしけわ たびせんぎょうに なりました。"
+
+  - id: nijussen
+    title: "1914・二十銭均一"
+    background: il_bri_tabiya
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: tokujiro, x: 0.58, scale: 0.80}
+      - {who: shokunin, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "値段を、全部同じにするのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……全部、ですか。大きさが違うのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "二十銭。どの寸法でも二十銭なのだ。"
+      - speaker: tokujiro
+        emotion: angry
+        text: "大きいのは損が出る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "出る。でも客が迷わないのだ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "……値札を見なくていい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "そう。名前も変えるのだ。アサヒ[足袋|たび]。"
+      - speaker: reimu
+        text: "1914年、「アサヒ足袋」と改め、"
+        reading: "せんきゅうひゃくじゅうよねん、あさひたびと あらため、"
+      - speaker: reimu
+        text: "二十銭均一の売り方を始めます。"
+        reading: "にじっせんきんいつの うりかたお はじめます。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "……[正二郎|しょうじろう]。売れ方がおかしい。"
+      - speaker: zundamon
+        emotion: happy
+        text: "おかしくないのだ。分かりやすいだけなのだ。"
+
+  - id: jika
+    title: "1922・底にゴムを貼る"
+    background: il_bri_tabiya
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: tokujiro, x: 0.58, scale: 0.80}
+      - {who: shokunin, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: shokunin
+        emotion: sad
+        text: "旦那。外で履くと、すぐ破けます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……布だから当たり前なのだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "職人衆は、外で一日中働きますからね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……底を、布じゃなくすのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "何を貼る。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ゴムなのだ。"
+      - speaker: reimu
+        text: "1922年、兄弟は底にゴムを貼る足袋を作ります。"
+        reading: "せんきゅうひゃくにじゅうにねん、きょうだいわ そこに ごむお はる たびお つくります。"
+      - speaker: reimu
+        text: "翌年、「アサヒ地下足袋」として売り出しました。"
+        reading: "よくとし、あさひじかたびと して うりだしました。"
+      - speaker: shokunin
+        emotion: happy
+        text: "旦那。これ、減りません。"
+      - speaker: zundamon
+        emotion: happy
+        text: "地面の上で働く人のための[足袋|たび]なのだ。"
+      - speaker: tokujiro
+        emotion: thinking
+        text: "……ゴムの機械が、うちに増えたな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うむ。ゴムが、うちの本業になってきたのだ。"
+
+  - id: tyre
+    title: "1930・ゴムを丸くする"
+    background: il_bri_kojo
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: tokujiro, x: 0.58, scale: 0.80}
+      - {who: gishi, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "兄さん。次はタイヤをやるのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "……タイヤ。車の、あれか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。日本のタイヤは、ぜんぶ輸入なのだ。"
+      - speaker: tokujiro
+        emotion: angry
+        text: "[足袋|たび]とは大きさが違うぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "やることは同じなのだ。ゴムを形にする。"
+      - speaker: gishi
+        emotion: thinking
+        text: "社長。同じではありません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……どこがだ。"
+      - speaker: gishi
+        emotion: normal
+        text: "[足袋|たび]は人が歩くだけです。タイヤは、"
+      - speaker: gishi
+        emotion: normal
+        text: "何トンもの荷物が、上に乗ります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……乗るな。"
+      - speaker: reimu
+        text: "1931年3月1日、久留米に会社ができました。"
+        reading: "せんきゅうひゃくさんじゅういちねん さんがつ ついたち、くるめに かいしゃが できました。"
+      - speaker: reimu
+        text: "その翌月から、トラック用のタイヤを作り始めます。"
+        reading: "その よくげつから、とらっくようの たいやお つくりはじめます。"
+
+  - id: henpin
+    title: "1931・全部返ってくる"
+    background: il_bri_souko
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: surprised}
+      - {who: hanbai, x: 0.58, scale: 0.80}
+      - {who: unten, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: hanbai
+        emotion: sad
+        text: "社長。また戻ってきました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……戻る。売ったやつがか。"
+      - speaker: hanbai
+        emotion: sad
+        text: "はい。今日の分だけで、これです。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……倉庫が、返品で埋まってるのだ。"
+        se: don
+        telops:
+          - {text: "売ったタイヤが返ってくる", size: lg, position: top-center, color: "#FF6B6B", stroke: "#2A0A0A", glow: "#FF2200", anim: up}
+      - speaker: unten
+        emotion: angry
+        text: "旦那さん。荷を積んだら裂けたんだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……申し訳ないのだ。"
+      - speaker: unten
+        emotion: normal
+        text: "取り替えてくれるんだろ。ただで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "取り替える。約束したのだ。"
+      - speaker: reimu
+        text: "石橋は、不具合があれば無料で新品に替えると決めていました。"
+        reading: "いしばしわ ふぐあいが あれば むりょうで しんぴんに かえると きめて いました。"
+      - speaker: reimu
+        text: "責任保証制といいます。"
+        reading: "せきにんほしょうせいと いいます。"
+      - speaker: hanbai
+        emotion: thinking
+        text: "社長。その約束が、返品を増やしています。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……ボクの約束が、か。"
+        se: don
+      - speaker: hanbai
+        emotion: normal
+        text: "ただで替わると分かれば、皆持ってきます。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……やめるか。"
+      - speaker: hanbai
+        emotion: normal
+        text: "やめれば、返品は止まります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……止まるな。数の上では。"
+      - speaker: hanbai
+        emotion: surprised
+        text: "数の上では、とは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "壊れたタイヤは、どこへ行く。"
+      - speaker: hanbai
+        emotion: thinking
+        text: "……客のところに、残ります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。ボクの手元には来ない。"
+      - speaker: unten
+        emotion: normal
+        text: "旦那さん。うちは捨てちまうよ、そんなの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……捨てるのか。"
+      - speaker: unten
+        emotion: normal
+        text: "使えねえもん置いといても場所取るだけだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……見られなくなるのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "いや。やめないのだ。"
+      - speaker: hanbai
+        emotion: surprised
+        text: "社長。損が増えますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "増える。でも、壊れたやつが集まるのだ。"
+
+  - id: ronsou
+    title: "1931・工場と店の喧嘩"
+    background: il_bri_kojo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: seizo, x: 0.58, scale: 0.80}
+      - {who: hanbai, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: seizo
+        emotion: angry
+        text: "壊れ方を見てください。使い方が乱暴です。"
+      - speaker: hanbai
+        emotion: angry
+        text: "客のせいにするんですか。"
+      - speaker: seizo
+        emotion: angry
+        text: "事実です。[積み|つみ]すぎなんですよ。"
+      - speaker: hanbai
+        emotion: angry
+        text: "少しでも不良が出たら、うちは終わりだ。"
+      - speaker: reimu
+        text: "工場と、売る側の言い争いは毎日続きました。"
+        reading: "こうじょうと、うるがわの いいあらそいわ まいにち つづきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……二人とも、正しいのだ。"
+      - speaker: seizo
+        emotion: surprised
+        text: "社長。両方は無理です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "無理じゃないのだ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "乱暴に使われても壊れなければいいのだ。"
+      - speaker: hanbai
+        emotion: surprised
+        text: "……それは、作る側の話ですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そうだ。[金|かね]は出す。設備を入れるのだ。"
+
+  - id: kaizen
+    title: "1931・三つだけやる"
+    background: il_bri_kojo
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: gishi, x: 0.68}
+    cuts:
+      - speaker: gishi
+        emotion: thinking
+        text: "社長。直す所が多すぎます。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三つに絞るのだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "三つ、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一つ。作る手順を良くする。"
+      - speaker: zundamon
+        emotion: normal
+        text: "二つ。設備を、いいものにする。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三つ。壊れる前に見つける。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……三つ目が、いちばん難しい。"
+      - speaker: zundamon
+        emotion: normal
+        text: "難しいから、書いておくのだ。"
+      - speaker: reimu
+        text: "工程の改善、設備の充実、故障の早めの発見。"
+        reading: "こうていの かいぜん、せつびの じゅうじつ、こしょうの はやめの はっけん。"
+      - speaker: reimu
+        text: "石橋は設備の金を惜しみませんでした。"
+        reading: "いしばしわ せつびの かねお おしみませんでした。"
+      - speaker: gishi
+        emotion: normal
+        text: "社長。返品が、減ってきました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……減ったか。"
+      - speaker: gishi
+        emotion: happy
+        text: "はい。少しずつですが。"
+
+  - id: nintei
+    title: "1932・優良国産品"
+    background: il_bri_souko
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: yakunin, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "1932年1月。"
+        reading: "せんきゅうひゃくさんじゅうにねん いちがつ。"
+      - speaker: yakunin
+        emotion: normal
+        text: "[商工省|しょうこうしょう]です。認定をお持ちしました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……認定。何のだ。"
+      - speaker: yakunin
+        emotion: normal
+        text: "優良[国産品|こくさんひん]。輸入品と並びました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……並んだのか。"
+        se: don
+        telops:
+          - {text: "優良国産品の認定", size: xl, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: yakunin
+        emotion: happy
+        text: "一年前は、返品だらけだったと聞きましたが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……だらけだったのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "でも、返ってきた分だけ直したのだ。"
+
+  - id: name
+    title: "社名・ひっくり返す"
+    background: il_bri_kojo
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: tokujiro, x: 0.68}
+    cuts:
+      - speaker: tokujiro
+        emotion: thinking
+        text: "[正二郎|しょうじろう]。会社の名前だがな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "外国に売るのだ。英語がいいのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "石橋を、英語にするのか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "石が、ストーン。橋が、ブリッジ。"
+      - speaker: tokujiro
+        emotion: normal
+        text: "……ストーンブリッジ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……語呂が悪いのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "そうか。悪いか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ひっくり返すのだ。ブリヂストン。"
+        se: don
+      - speaker: tokujiro
+        emotion: surprised
+        text: "……逆にしただけじゃないか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "逆にすると、言いやすいのだ。"
+      - speaker: reimu
+        text: "石橋を英語にして、ひっくり返した名前です。"
+        reading: "いしばしお えいごに して、ひっくりかえした なまえです。"
+      - speaker: reimu
+        text: "英語では、石の橋を組むときの要の石を指します。"
+        reading: "えいごでわ、いしの はしお くむ ときの かなめの いしお さします。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……要の石。そんな意味があったのか。"
+
+  - id: ima
+    title: ""
+    background: il_bri_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: thinking
+        text: "……返品でよかったのだな。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "変なこと言うね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "返ってこなかったら、直せないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "……ああ。そういうこと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ただで替えると約束したから、戻ってきた。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。壊れた現物が、全部手元に集まった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……それ、いちばん欲しい物なのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "損をする約束が、いちばん効いたの。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "やめなくて、よかったのだ。"
+
+  - id: shime
+    title: ""
+    background: il_bri_ima
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "明日どこかでタイヤを見たらね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれ、[足袋|たび]の底から始まってる。"
+      - speaker: zundamon
+        emotion: happy
+        text: "地面に触る所だけ、ずっと同じなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うまいこと言うね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクは丸くて黒いのも知ってるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこは最初から知ってたね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面白かったら、チャンネル登録してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "高評価も頼むのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        duet_with: tsumugi

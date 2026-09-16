@@ -1,0 +1,842 @@
+# トヨタ・再現ドラマ（[豊田喜一郎|とよだきいちろう]・1894→1952）。
+# 投稿前に必ず目視レビュー。
+# ★企業の一代記シリーズ10本目。ホンダ回・ソニー回と同じ「町工場が世界へ」の型だが、
+#   この回の敵は役所でも大手でもなく**自分の鋳物**。9割が屑になる工程を延々やる話。
+#   ホンダ＝宣言と時間 / ソニー＝許可が下りない / トヨタ＝作っても作っても割れる
+# ★配役: ずんだもん=豊田喜一郎 / つむぎ=現代から見ている解説役 / ナレ=ゆっくり
+#   父・佐吉はモブ（主人公は喜一郎。父子を二人主人公にすると焦点がぼける）
+# ★ミーム禁止の章: shibo（佐吉の死）/ sougi（労働争議と辞任）/ shi（喜一郎の死）
+# 裏取り:
+#   トヨタ自動車75年史 第1部第1章第4節第2項「プラット社との特許権譲渡契約」
+#   同 第2章第2節第1項「自動車製作部門の設置」/ 第3項「A型エンジンとA1型乗用車の試作」
+#   同 第2章第2節第4項「G1型トラックの施策・発表」/ 第6項「AA型乗用車とGA型トラックの発表」
+#   同 第2章第4節第3項「トヨタ自動車工業株式会社の設立と挙母工場の建設」
+#   同 第2章第6節第6項「喜一郎社長の辞任」/ トヨタ産業技術記念館「豊田喜一郎」
+#   トヨタ公式「トヨタマーク」/ GAZOO 自動車人物伝 豊田喜一郎 第1〜3編
+# 確定事実:
+#   豊田喜一郎 1894-6-11 生 / 1952-3-27 没（57歳・脳溢血）
+#   父 豊田佐吉 1867-1930-10-30 没。自動織機の発明家
+#   1929-12-21 英プラット社とG型自動織機の特許権譲渡契約
+#     総額10万ポンドを4回分割、毎年2万5,000ポンド（約25万円）
+#     ※最終的に1934-7に未払い6万1,500ポンドを4万5,000ポンドに減額、総額8万3,500ポンド
+#     ※「その金で自動車をやれ」と佐吉が遺言したという話は社史に無い。**言わせない**
+#   1929 喜一郎が渡欧米。フォードの工場視察と工作機械の調査に没頭
+#   1933-9 豊田自動織機製作所に自動車部を設置
+#   1933 工場の倉庫に板囲いをつくり、33年型シボレーを分解と組み立てで繰り返す
+#   1933-10 33年型シボレー乗用車を分解して部品をスケッチ、エンジン試作用図面
+#   1934-5 A型エンジンのシリンダーブロックとピストンの鋳物の試作を開始
+#     ウオータージャケットの中子の製作に苦労。大島理三郎取締役が米国から持ち帰った
+#     油中子を参考に試行錯誤。織機とは比べものにならないほど複雑で不良品が続出し、
+#     作っても9割以上は廃棄するしかなかった
+#   1934-8 シリンダーブロック鋳物が完成
+#   1934-9-25 試作エンジン第1号が完成
+#   1935-8 G1型トラック完成 / 1935-11 発表
+#   1936 AA型乗用車（1935年試作のA1型を改良した初の量産乗用車）
+#   1936 「トヨダ・マーク」を懸賞付きで一般公募。全国から2万7000点。
+#     「トヨタ」は濁音がなく調子がよい／片仮名の総画数が8画／
+#     創業者の姓から離れ個人の会社から世界的企業へ、という意味
+#   1937-8-27 創立総会 / 8-28 設立登記完了。資本金1,200万円のトヨタ自動車工業株式会社
+#   1950-4-11 労働争議が始まり 6-10 終結。6-5 喜一郎が争議の責を負って社長辞任
+#     喜一郎の言葉「人員整理をできるだけ避けたいということは、私の最高道徳律だ」
+#   1952-3 石田退三が喜一郎を訪ね社長復帰を促し、喜一郎は快諾。3-27 急死
+meta:
+  title: "【トヨタの誕生】9割が屑になる。織機屋がエンジンを作るまで【ずんだもん解説】"
+  slug: "toyoda-kiichiro"
+  summary: "世界でいちばん車を売っている会社は、もともと機織り機の会社でした。父が遺した工場で、その息子はアメリカ車を一台買ってきて、バラバラに分解します。ただ、作り方が分かっても作れるとは限りませんでした。鋳物は割れ、九割が屑になります。ずんだもんが豊田喜一郎を演じる再現ドラマです。"
+  tags: ["トヨタ", "豊田喜一郎", "豊田佐吉", "自動織機", "自動車", "昭和史", "再現ドラマ", "ゆっくり", "ずんだもん", "企業史", "ミーム"]
+  thumbnail:
+    top: "9割が屑になる"
+    bottom: "トヨタの誕生"
+  mode: drama
+  narrator: reimu
+  mobs:
+    - {id: sakichi, label: "父・豊田佐吉", voice: 42, pitch: 0.0}
+    - {id: shain, label: "自動車部の社員", voice: 12, pitch: 0.04}
+    - {id: shainb, label: "鋳物場の職人", voice: 12, pitch: -0.02}
+    - {id: oshima, label: "大島理三郎", voice: 13, pitch: -0.04, item: hat}
+    - {id: ginkou, label: "銀行の人", voice: 13, pitch: -0.1, item: hat}
+    - {id: ishida, label: "石田退三", voice: 13, pitch: 0.02, item: hat}
+    - {id: kumiai, label: "組合の人", voice: 12, pitch: -0.06}
+scenes:
+  - id: hook
+    title: ""
+    background: il_toy_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: happy
+        text: "つむぎ、車を買うのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "免許は。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……まだなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "順番。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも車は、乗るより見るものなのだ。"
+      - speaker: tsumugi
+        emotion: thinking
+        text: "そういう楽しみ方もあるけどね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "よし、じゃあ自分で作るのだ。"
+      - speaker: tsumugi
+        emotion: surprised
+        text: "飛んだね。免許より遠いよ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "作れば免許はあとから付いてくるのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "付いてこないよ。……でもね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "同じことを本気でやった人がいるの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……いるのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "いま世界でいちばん車を売ってる会社。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "あれ、もとは[機織り機|はたおりき]の会社。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "[は|はぁ]、[機織り機|はたおりき]！？"
+        se: don
+        telops:
+          - {text: "もとは機織り機の会社", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。布を織る機械。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……布とエンジン、遠すぎないか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "遠いよ。だから、九割が屑になった。"
+
+  - id: umare
+    title: "1894・発明家の息子"
+    background: il_toy_shokki
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, scale: 0.78, emotion: normal}
+      - {who: sakichi, x: 0.66}
+    cuts:
+      - speaker: reimu
+        text: "豊田[喜一郎|きいちろう]が生まれます。"
+        reading: "とよだきいちろうが うまれます。"
+      - speaker: reimu
+        text: "父の佐吉は、[機織り機|はたおりき]の発明家でした。"
+        reading: "ちちの さきちわ はたおりきの はつめいかでした。"
+      - speaker: sakichi
+        emotion: normal
+        text: "[喜一郎|きいちろう]。この音、分かるか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……糸が切れた音なのだ。"
+      - speaker: sakichi
+        emotion: happy
+        text: "そうだ。切れたら、止まらなあかん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "止めるのか。動いてるのに。"
+      - speaker: sakichi
+        emotion: normal
+        text: "切れたまま織ったら、布が屑になる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……なるほどなのだ。"
+      - speaker: reimu
+        text: "糸が切れたら自分で止まる[織機|しょっき]。"
+        reading: "いとが きれたら じぶんで とまる しょっき。"
+      - speaker: reimu
+        text: "佐吉が作ったのは それでした。"
+        reading: "さきちが つくったのわ それでした。"
+      - speaker: zundamon
+        emotion: happy
+        text: "父ちゃん、それ売れるのか。"
+      - speaker: sakichi
+        emotion: happy
+        text: "売れる。人が一人、[要らん|いらん]ようになる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……[要らん|いらん]ように、か。"
+
+  - id: platt
+    title: "1929・イギリスからの話"
+    background: il_toy_ford
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: oshima, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "イギリスのプラット社が、"
+        reading: "いぎりすの ぷらっとしゃが、"
+      - speaker: reimu
+        text: "佐吉の[織機|しょっき]の特許を買いたいと言ってきます。"
+        reading: "さきちの しょっきの とっきょお かいたいと いってきます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "父ちゃんの機械を、向こうが。"
+      - speaker: oshima
+        emotion: normal
+        text: "十万ポンドだ。四回に分けて払うと。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……十万。"
+        se: don
+        telops:
+          - {text: "総額10万ポンド", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: reimu
+        text: "契約は 1929年12月21日。"
+        reading: "けいやくわ せんきゅうひゃくにじゅうくねん じゅうにがつ にじゅういちにち。"
+      - speaker: reimu
+        text: "毎年 二万五千ポンドずつ、四回に分けて。"
+        reading: "まいとし にまんごせんぽんどずつ、よんかいに わけて。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……向こうが欲しがる機械なのだ。"
+      - speaker: oshima
+        emotion: happy
+        text: "日本の機械が、イギリスに買われる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "大島さん。ついでに寄りたい所があるのだ。"
+      - speaker: oshima
+        emotion: surprised
+        text: "どこだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "アメリカ。車の工場を見たいのだ。"
+
+  - id: ford
+    title: "1929・アメリカの工場"
+    background: il_toy_ford
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.34, emotion: surprised}
+      - {who: oshima, x: 0.7}
+    cuts:
+      - speaker: reimu
+        text: "[喜一郎|きいちろう]は フォードの工場を見に行きます。"
+        reading: "きいちろうわ ふぉーどの こうじょうお みに いきます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……止まらないのだ。"
+      - speaker: oshima
+        emotion: normal
+        text: "何がだ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "流れてる。ずっと、流れてる。"
+      - speaker: oshima
+        emotion: thinking
+        text: "……ああ。組み立ての列か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一台ずつ作ってないのだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "川みたいに、流してる。"
+      - speaker: reimu
+        text: "[喜一郎|きいちろう]は 工作機械の調査にも 没頭しました。"
+        reading: "きいちろうわ こうさくきかいの ちょうさにも ぼっとうしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "大島さん。日本には、これが無いのだ。"
+      - speaker: oshima
+        emotion: normal
+        text: "……無いな。車はぜんぶ、輸入だ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "作りたいのだ。"
+      - speaker: oshima
+        emotion: surprised
+        text: "……[織機|しょっき]の会社がか。"
+
+  - id: shibo
+    title: "1930・父の死"
+    background: il_toy_shokki
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.34, emotion: sad}
+      - {who: sakichi, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "1930年10月30日。"
+        reading: "せんきゅうひゃくさんじゅうねん じゅうがつ さんじゅうにち。"
+      - speaker: reimu
+        text: "父の佐吉が亡くなります。"
+        reading: "ちちの さきちが なくなります。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……父ちゃん。"
+      - speaker: zundamon
+        emotion: sad
+        text: "俺は、布じゃないものを作るのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "止まる機械じゃなくて、走る機械を。"
+      - speaker: reimu
+        text: "[喜一郎|きいちろう]は 三十六歳になっていました。"
+        reading: "きいちろうわ さんじゅうろくさいに なって いました。"
+
+  - id: bunkai
+    title: "1933・買ってきて、ばらす"
+    background: il_toy_itaigakoi
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+      - {who: shain, x: 0.62}
+      - {who: shainb, x: 0.76}
+    cuts:
+      - speaker: reimu
+        text: "[織機|しょっき]工場の倉庫に、板の囲いが作られます。"
+        reading: "しょっきこうじょうの そうこに いたの かこいが つくられます。"
+      - speaker: shain
+        emotion: surprised
+        text: "……部長。この板、[何|なん]ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "自動車部の工場なのだ。"
+      - speaker: shainb
+        emotion: surprised
+        text: "板で囲っただけじゃないですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "中でやることが分かればいいのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "それと、これを買ってきたのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "……車。アメリカの。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三三年型のシボレーなのだ。"
+      - speaker: shainb
+        emotion: happy
+        text: "乗るんですか。"
+      - speaker: zundamon
+        emotion: angry
+        text: "ばらすのだ。"
+        se: don
+      - speaker: shain
+        emotion: surprised
+        text: "ばら……買ったばかりですよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ばらして、寸法を測って、絵に描く。"
+      - speaker: reimu
+        text: "1933年10月。"
+        reading: "せんきゅうひゃくさんじゅうさんねん じゅうがつ。"
+      - speaker: reimu
+        text: "シボレーを 分解して 部品をすべて 写し取りました。"
+        reading: "しぼれーお ぶんかいして ぶひんお すべて うつしとりました。"
+      - speaker: shainb
+        emotion: thinking
+        text: "……分解と組み立て、何回目でしたっけ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "数えてないのだ。手が覚えるまでやる。"
+      - speaker: shain
+        emotion: normal
+        text: "これで、作り方は分かりますね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "分かるのだ。……たぶん。"
+
+  - id: imono
+    title: "1934・九割が屑になる"
+    background: il_toy_imono
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.30, emotion: thinking}
+      - {who: shain, x: 0.58, scale: 0.80}
+      - {who: shainb, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: reimu
+        text: "A型エンジンの [鋳物|いもの]作りが 始まります。"
+        reading: "えーがた えんじんの いものづくりが はじまります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "エンジンの中には、水の通り道があるのだ。"
+      - speaker: shain
+        emotion: thinking
+        text: "冷やすためですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そう。その空洞を、砂で作る。"
+      - speaker: shain
+        emotion: surprised
+        text: "……砂で、空洞を。"
+      - speaker: zundamon
+        emotion: normal
+        text: "[中子|なかご]というのだ。溶けた鉄を流して、"
+      - speaker: zundamon
+        emotion: normal
+        text: "冷めたら砂を掻き出す。"
+      - speaker: shain
+        emotion: happy
+        text: "できそうじゃないですか。"
+      - speaker: reimu
+        text: "できませんでした。"
+        reading: "できませんでした。"
+        se: don
+      - speaker: shain
+        emotion: sad
+        text: "……また割れてます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: shain
+        emotion: sad
+        text: "こっちは、砂が出てきません。"
+      - speaker: zundamon
+        emotion: angry
+        text: "掻き出せ。中に残ったら水が通らん。"
+      - speaker: reimu
+        text: "[織機|しょっき]とは 比べものに ならないほど 複雑でした。"
+        reading: "しょっきとわ くらべものに ならないほど ふくざつでした。"
+      - speaker: reimu
+        text: "不良品が 続出します。"
+        reading: "ふりょうひんが ぞくしゅつします。"
+      - speaker: shainb
+        emotion: sad
+        text: "部長。今日の分、また駄目でした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……何個中、何個だ。"
+      - speaker: shainb
+        emotion: sad
+        text: "……ほとんど全部です。"
+      - speaker: reimu
+        text: "作っても 九割以上は 捨てるしか ありませんでした。"
+        reading: "つくっても きゅうわりいじょうわ すてるしか ありませんでした。"
+        se: don
+        telops:
+          - {text: "9割以上が屑になる", size: lg, position: top-center, color: "#FF6B6B", stroke: "#2A0A0A", glow: "#FF2200", anim: up}
+      - speaker: zundamon
+        emotion: angry
+        text: "もう一回だ。"
+      - speaker: shain
+        emotion: sad
+        text: "……部長。[金|かね]が。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かってる。もう一回なのだ。"
+
+  - id: aburanakago
+    title: "1934・油の中子"
+    background: il_toy_imono
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.30, emotion: thinking}
+      - {who: oshima, x: 0.58, scale: 0.80}
+      - {who: shain, x: 0.74, scale: 0.80}
+    cuts:
+      - speaker: oshima
+        emotion: normal
+        text: "[喜一郎|きいちろう]くん。これを見てくれ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……なんだそれは。"
+      - speaker: oshima
+        emotion: normal
+        text: "アメリカから持って帰った。油の[中子|なかご]だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "砂を、油で固めてるのか。"
+      - speaker: oshima
+        emotion: happy
+        text: "向こうはこれでやっている。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……やってみるのだ。"
+      - speaker: reimu
+        text: "大島理三郎が 持ち帰った [油中子|あぶらなかご]を 手がかりに、"
+        reading: "おおしま りさぶろうが もちかえった あぶらなかごお てがかりに、"
+      - speaker: reimu
+        text: "試行錯誤が 続きました。"
+        reading: "しこうさくごが つづきました。"
+      - speaker: reimu
+        text: "1934年8月。"
+        reading: "せんきゅうひゃくさんじゅうよねん はちがつ。"
+      - speaker: reimu
+        text: "シリンダーブロックの [鋳物|いもの]が 完成します。"
+        reading: "しりんだーぶろっくの いものが かんせいします。"
+      - speaker: shain
+        emotion: happy
+        text: "……割れてない。割れてません！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……水は。水は通るか。"
+      - speaker: shain
+        emotion: happy
+        text: "通ります。抜けました！"
+      - speaker: zundamon
+        emotion: happy
+        text: "……よし。"
+
+  - id: engine
+    title: "1934・第一号が回る"
+    background: il_toy_imono
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.32, emotion: happy}
+      - {who: shain, x: 0.62}
+      - {who: shainb, x: 0.76}
+    cuts:
+      - speaker: reimu
+        text: "1934年9月25日。"
+        reading: "せんきゅうひゃくさんじゅうよねん くがつ にじゅうごにち。"
+      - speaker: reimu
+        text: "試作エンジン 第一号が 完成しました。"
+        reading: "しさく えんじん だいいちごうが かんせいしました。"
+        se: don
+        telops:
+          - {text: "エンジン第一号、完成", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: shainb
+        emotion: surprised
+        text: "……回った。回ってます！"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……音が、する。"
+      - speaker: shain
+        emotion: happy
+        text: "部長、泣いてます？"
+      - speaker: zundamon
+        emotion: angry
+        text: "泣いてないのだ。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……煙が目に入っただけなのだ。"
+      - speaker: shainb
+        emotion: happy
+        text: "煙、出てませんけど。"
+      - speaker: zundamon
+        emotion: angry
+        text: "出てるのだ。"
+
+  - id: truck
+    title: "1935・トラックから始める"
+    background: il_toy_kouba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: shain, x: 0.64}
+      - {who: ginkou, x: 0.78}
+    cuts:
+      - speaker: reimu
+        text: "G1型トラックが 発表されます。"
+        reading: "じーいちがた とらっくが はっぴょう されます。"
+      - speaker: shain
+        emotion: surprised
+        text: "部長。乗用車じゃないんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "トラックが先なのだ。荷物が動けば、[金|かね]が動く。"
+      - speaker: ginkou
+        emotion: thinking
+        text: "……失礼ですが、故障は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "する。しますとも。"
+      - speaker: ginkou
+        emotion: surprised
+        text: "認めるんですか。"
+      - speaker: zundamon
+        emotion: angry
+        text: "直しに行くのだ。壊れた所へ、こっちから。"
+      - speaker: shain
+        emotion: surprised
+        text: "……全部ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "全部だ。直した数だけ、次が良くなる。"
+      - speaker: reimu
+        text: "翌年、初の量産乗用車 AA型が 完成します。"
+        reading: "よくとし はつの りょうさん じょうようしゃ えーえーがたが かんせいします。"
+
+  - id: name
+    title: "1936・濁点を外す"
+    background: il_toy_kouba
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.32, emotion: thinking}
+      - {who: shain, x: 0.66}
+    cuts:
+      - speaker: reimu
+        text: "1936年。会社は 新しいマークを 公募しました。"
+        reading: "せんきゅうひゃくさんじゅうろくねん。かいしゃわ あたらしい まーくお こうぼ しました。"
+      - speaker: shain
+        emotion: happy
+        text: "部長、応募が二万七千点きました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……二万七千。"
+      - speaker: shain
+        emotion: normal
+        text: "選ばれたの、これです。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……トヨタ。濁点が無いのだ。"
+      - speaker: shain
+        emotion: normal
+        text: "はい。トヨダ、ではなく。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "俺の名字は、とよだなのだ。"
+      - speaker: shain
+        emotion: normal
+        text: "濁音が無いほうが、調子がいいそうです。"
+      - speaker: shain
+        emotion: happy
+        text: "片仮名で書くと、画数が八画になります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……八か。"
+      - speaker: reimu
+        text: "もうひとつ 理由が ありました。"
+        reading: "もうひとつ りゆうが ありました。"
+      - speaker: reimu
+        text: "創業者の 名字から 離れること。"
+        reading: "そうぎょうしゃの みょうじから はなれること。"
+      - speaker: reimu
+        text: "個人の会社から 世界の会社へ。"
+        reading: "こじんの かいしゃから せかいの かいしゃえ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……俺の名前を、外すのだな。"
+      - speaker: shain
+        emotion: surprised
+        text: "嫌ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "いや。……そのほうが、長生きするのだ。"
+
+  - id: setsuritsu
+    title: "1937・会社になる"
+    background: il_toy_kouba
+    bgm: you_and_me
+    stage:
+      - {who: zundamon, x: 0.34, emotion: happy}
+      - {who: shain, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "自動車部が 分かれ、"
+        reading: "じどうしゃぶが わかれ、"
+      - speaker: reimu
+        text: "資本金 千二百万円の 会社に なりました。"
+        reading: "しほんきん せんにひゃくまんえんの かいしゃに なりました。"
+      - speaker: shain
+        emotion: happy
+        text: "部長。これで、[織機|しょっき]の中じゃない。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……四年かかったのだ。"
+      - speaker: shain
+        emotion: thinking
+        text: "板の[囲い|かこい]からでしたね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "板はまだ取ってあるのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "取ってあるんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "捨てた九割の中に、混ぜたくないのだ。"
+
+  - id: sougi
+    title: "1950・最高道徳律"
+    background: il_toy_sougi
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+      - {who: ginkou, x: 0.62}
+      - {who: kumiai, x: 0.78}
+    cuts:
+      - speaker: reimu
+        text: "戦後、会社は 資金が 続かなく なります。"
+        reading: "せんご かいしゃわ しきんが つづかなく なります。"
+      - speaker: ginkou
+        emotion: normal
+        text: "条件は二つです。販売を分けること。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……もう一つは。"
+      - speaker: ginkou
+        emotion: normal
+        text: "人を、減らしていただく。"
+      - speaker: zundamon
+        emotion: angry
+        text: "断るのだ。"
+      - speaker: ginkou
+        emotion: surprised
+        text: "……会社が潰れますよ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人員整理を避けたい。それが、"
+      - speaker: zundamon
+        emotion: normal
+        text: "私のいちばん高い[道徳律|どうとくりつ]なのだ。"
+        se: don
+        telops:
+          - {text: "人員整理を避ける", size: xl, position: middle-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: reimu
+        text: "1950年4月11日、労働争議が 始まります。"
+        reading: "せんきゅうひゃくごじゅうねん しがつ じゅういちにち、ろうどうそうぎが はじまります。"
+      - speaker: kumiai
+        emotion: angry
+        text: "社長。話が違うじゃないですか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……違わない。"
+      - speaker: kumiai
+        emotion: sad
+        text: "現に、人が減ってます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうだ。"
+      - speaker: reimu
+        text: "争議は 六月十日に 終わりました。"
+        reading: "そうぎわ ろくがつ とおかに おわりました。"
+      - speaker: reimu
+        text: "その五日前、[喜一郎|きいちろう]は 社長を 辞めています。"
+        reading: "その いつかまえ きいちろうわ しゃちょうお やめて います。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……守れなかったのだ。"
+
+  - id: shi
+    title: "1952・戻る前に"
+    background: il_toy_shokki
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, emotion: normal}
+      - {who: ishida, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "会社の 業績が 戻ります。"
+        reading: "かいしゃの ぎょうせきが もどります。"
+      - speaker: ishida
+        emotion: normal
+        text: "[喜一郎|きいちろう]さん。戻ってきてください。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……俺がか。"
+      - speaker: ishida
+        emotion: normal
+        text: "あなたの会社です。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……辞めた人間だ。"
+      - speaker: ishida
+        emotion: happy
+        text: "辞めた理由を、みんな知っています。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……分かった。やるのだ。"
+      - speaker: ishida
+        emotion: happy
+        text: "では、手続きを進めます。"
+      - speaker: reimu
+        text: "[喜一郎|きいちろう]は 引き受けました。"
+        reading: "きいちろうわ ひきうけました。"
+      - speaker: reimu
+        text: "1952年3月27日。"
+        reading: "せんきゅうひゃくごじゅうにねん さんがつ にじゅうしちにち。"
+      - speaker: reimu
+        text: "立ち寄った先で 倒れ、急に 亡くなりました。"
+        reading: "たちよった さきで たおれ、きゅうに なくなりました。"
+      - speaker: reimu
+        text: "五十七歳。社長に 戻る前でした。"
+        reading: "ごじゅうななさい。しゃちょうに もどる まえでした。"
+
+  - id: ima
+    title: ""
+    background: il_toy_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: zundamon
+        emotion: sad
+        text: "……戻る前に、死んだのか。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。社長席には、座り直してない。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……九割捨てて、作った会社なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "そう。でも名前は残らなかった。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……あ。濁点を外したやつなのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "気づいた。とよだ、じゃなくてトヨタ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "自分の名字から、離した。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "個人の会社で終わらせないために。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……長生きしたのだな。会社のほうが。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。今も走ってる。"
+
+  - id: shime
+    title: ""
+    background: il_toy_ima
+    bgm: shuffle_shuffle
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tsumugi, x: 0.74, emotion: normal}
+    cuts:
+      - speaker: tsumugi
+        emotion: normal
+        text: "明日どこかで車を見たらね。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "一台の裏に、九台捨ててる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……捨てたほうは、誰も見ないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "うん。見えるのは、残った一台だけ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "でもボクは、免許から取るのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "それがいいと思う。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "面白かったら、チャンネル登録してね。"
+      - speaker: zundamon
+        emotion: happy
+        text: "高評価も頼むのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ご視聴、ありがとうございました！"
+        duet_with: tsumugi
