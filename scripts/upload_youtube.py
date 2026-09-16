@@ -360,13 +360,19 @@ PLAYLISTS = {
         desc="毎日使っているものは、誰かが初めて作ったものです。作った人がいて、"
              "断られた日があって、それでも続けた理由があります。"
              "発明した技術者、会社を興した商人。ずんだもんがその人を演じる再現ドラマです。",
-        slugs=["shinkansen-bird", "kaisatsu-drama", "exit-sign", "yai-denchi",
-               "nishizawa-fiber", "nakauchi-daiei", "qr-meme", "kaiten-meme",
-               "gastro-meme", "masuoka-flash", "rice-cooker-meme",
-               "tenji-block-meme", "momofuku-meme", "karaoke", "yamauchi-nintendo",
-               "cutter-knife", "washlet", "ajinomoto", "quartz-astron",
-               "purikura-meme", "sharp-pencil", "okano-needle", "yokoi-gunpei",
-               "ogura-takkyubin", "yamaichi-nozawa", "momose-subaru360",
+        # **並びは維持率の高い順**（2026-09-16 実測）。人気順＝再生数順だと
+        # カップ麺（3,626再生・維持率18.3%＝全体最下位）が先頭に立ち、
+        # 再生リストに入った人が最初の1本で抜ける。最後まで見られている回を前に出す。
+        # Studio 側で「YouTube 内で手動で並べ替え」にしていないと position が効かない。
+        # 数字は動くので、たまに yt_analytics で取り直してこの順を更新すること。
+        # 末尾は公開直後でデータが無いもの（順位が決まり次第くり上げる）
+        slugs=["exit-sign", "quartz-astron", "yai-denchi", "kaisatsu-drama",
+               "yokoi-gunpei", "gastro-meme", "nakauchi-daiei", "washlet",
+               "ajinomoto", "sharp-pencil", "masuoka-flash", "purikura-meme",
+               "qr-meme", "nishizawa-fiber", "okano-needle", "tenji-block-meme",
+               "shinkansen-bird", "ogura-takkyubin", "rice-cooker-meme",
+               "kaiten-meme", "yamauchi-nintendo", "cutter-knife", "karaoke",
+               "momofuku-meme", "yamaichi-nozawa", "momose-subaru360",
                "yamamoto-rotary", "takahashi-urayasu", "honda-soichiro",
                "ibuka-sony", "onitsuka-asics"]),
     "company": dict(
@@ -374,9 +380,9 @@ PLAYLISTS = {
         desc="日本一になった会社が、なぜ創業者ごと消えたのか。"
              "花札屋が、どうやって世界を取ったのか。会社の一代記を、"
              "ずんだもんが当人を演じる再現ドラマでたどります。",
-        slugs=["nakauchi-daiei", "yamauchi-nintendo", "yamaichi-nozawa",
-               "honda-soichiro", "ibuka-sony", "onitsuka-asics",
-               "takahashi-urayasu", "sharp-pencil"]),
+        slugs=["nakauchi-daiei", "sharp-pencil", "yamauchi-nintendo",
+               "yamaichi-nozawa", "honda-soichiro", "ibuka-sony",
+               "onitsuka-asics", "takahashi-urayasu"]),
 }
 
 
