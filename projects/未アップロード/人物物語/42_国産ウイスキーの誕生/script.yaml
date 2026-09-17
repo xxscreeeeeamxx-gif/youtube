@@ -29,6 +29,16 @@
 #   1934 竹鶴は北海道余市に大日本果汁株式会社を設立
 #   1936 余市蒸溜所でウイスキーづくりを開始
 #   ※白札の具体的な販売本数・返品率は裏が取れなかったので**数字を言わせない**
+#   ---- 2026-09-17 追加取材（尺が短すぎたので空白を埋めた） ----
+#   1892（13歳）大阪市東区道修町の薬種問屋・小西儀助商店に丁稚奉公。
+#     ここで、日本に紹介されて間もない葡萄酒やウイスキーの存在を知る
+#   1899（20歳）独立して鳥井商店を創業
+#   1906 寿屋洋酒店に改名。**スペイン産の葡萄酒を売ったが、日本では
+#     外国の酒が浸透しておらず売れなかった**
+#   → 1907 日本人の口に合う赤玉ポートワインを作って当てる
+#   ★この1906年の失敗が、1929年の白札と同じ形。**鳥井は一度学んでいる**。
+#     だから竹鶴に「香りを弱めてくれ」と言う。ここを描かないと対立がただの好みの話になる
+#   1962-2-20 没（83歳）
 meta:
   title: "【国産ウイスキーの誕生】売れなかった一本と、出て行った男【ずんだもん解説】"
   slug: "torii-whisky"
@@ -94,6 +104,112 @@ scenes:
       - speaker: tsumugi
         emotion: normal
         text: "二人とも、正しかったの。"
+
+  - id: detchi
+    title: "1892・十三歳の丁稚"
+    background: il_wsk_mise
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.32, scale: 0.76, emotion: normal}
+      - {who: banto, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "十三歳で、大阪の薬の問屋に奉公に出ます。"
+        reading: "じゅうさんさいで、おおさかの くすりの とんやに ほうこうに でます。"
+      - speaker: banto
+        emotion: normal
+        text: "信治郎。奥の棚は触るな。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……あの、瓶のところですか。"
+      - speaker: banto
+        emotion: normal
+        text: "高い。割ったら、給金では足りん。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "薬やないんですか、あれ。"
+      - speaker: banto
+        emotion: normal
+        text: "酒や。西洋から来たやつ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……酒。色が、ついとる。"
+      - speaker: banto
+        emotion: thinking
+        text: "葡萄の酒と、麦の酒や。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……日本の人は、飲むんですか。"
+      - speaker: banto
+        emotion: happy
+        text: "飲まん。物珍しいだけや。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……もったいないのだ。"
+      - speaker: reimu
+        text: "ここで、西洋の酒を知りました。"
+        reading: "ここで せいようの さけお しりました。"
+
+  - id: shippai
+    title: "1906・本場は、売れない"
+    background: il_wsk_mise
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: banto, x: 0.56}
+      - {who: kyaku, x: 0.78}
+    cuts:
+      - speaker: reimu
+        text: "二十歳で独立し、自分の店を持ちます。"
+        reading: "はたちで どくりつし、じぶんの みせお もちます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "本場の[葡萄酒|ぶどうしゅ]を、仕入れたのや。"
+      - speaker: banto
+        emotion: happy
+        text: "スペインのですね。ええ品です。"
+      - speaker: zundamon
+        emotion: happy
+        text: "これが売れたら、店が変わる。"
+      - speaker: kyaku
+        emotion: thinking
+        text: "……旦那さん。これ、酸っぱいわ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……そういうもんですねん。"
+      - speaker: kyaku
+        emotion: normal
+        text: "そういうもんでも、うまないもんは飲まん。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……本場の味ですねんで。"
+      - speaker: kyaku
+        emotion: normal
+        text: "本場かどうかは、こっちには関係ないわ。"
+      - speaker: reimu
+        text: "外国の酒は、まだ日本に馴染んでいませんでした。"
+        reading: "がいこくの さけわ まだ にほんに なじんで いませんでした。"
+      - speaker: reimu
+        text: "仕入れた葡萄酒は、売れませんでした。"
+        reading: "しいれた ぶどうしゅわ うれませんでした。"
+        se: don
+        telops:
+          - {text: "本場の酒は、売れなかった", size: lg, position: top-center, color: "#FF6B6B", stroke: "#2A0A0A", glow: "#FF2200", anim: up}
+      - speaker: banto
+        emotion: sad
+        text: "旦那さん。棚から、動きません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……分かっとる。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "本物を置いたら、売れると思うとった。"
+      - speaker: banto
+        emotion: thinking
+        text: "……違いましたか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "違う。飲む人が、まだそこにおらん。"
 
   - id: akadama
     title: "1907・赤い玉で稼ぐ"
@@ -306,8 +422,48 @@ scenes:
     bgm: you_and_me
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: happy}
-      - {who: taketsuru, x: 0.68}
+      - {who: taketsuru, x: 0.56}
+      - {who: banto, x: 0.78}
     cuts:
+      - speaker: banto
+        emotion: thinking
+        text: "旦那さん。今年も、出せませんか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[竹鶴|たけつる]さんが、まだや言うとる。"
+      - speaker: banto
+        emotion: sad
+        text: "帳面が、そろそろ限界です。"
+      - speaker: zundamon
+        emotion: normal
+        text: "分かっとる。[赤玉|あかだま]で埋めるのや。"
+      - speaker: banto
+        emotion: surprised
+        text: "……いつまで埋めます。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……聞くな。"
+      - speaker: banto
+        emotion: thinking
+        text: "旦那さん。ひとつだけ、聞かせてください。"
+      - speaker: zundamon
+        emotion: normal
+        text: "なんや。"
+      - speaker: banto
+        emotion: normal
+        text: "なんで、そこまでやりますのん。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……日本人が作った、いうだけで。"
+      - speaker: zundamon
+        emotion: normal
+        text: "飲めるもんが、まだ一本もないのや。"
+      - speaker: banto
+        emotion: surprised
+        text: "……一本も。"
+      - speaker: zundamon
+        emotion: happy
+        text: "せやから、一本目を作るのや。"
       - speaker: reimu
         text: "蒸溜所ができてから、六年が過ぎました。"
         reading: "じょうりゅうしょが できてから ろくねんが すぎました。"
@@ -329,6 +485,33 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "これが、日本で最初の一本や。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "社長。ひとつだけ、言わせてください。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "なんや、めでたい日に。"
+      - speaker: taketsuru
+        emotion: thinking
+        text: "……この味は、たぶん驚かれます。"
+      - speaker: zundamon
+        emotion: happy
+        text: "驚かせたらええ。日本初やで。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "いえ。そういう驚き方やありません。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……どういう意味や。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "本場の味を、飲んだことがない人たちです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……飲んだら分かる。ええもんは、ええのや。"
+      - speaker: taketsuru
+        emotion: sad
+        text: "……そうであってほしいです。"
 
   - id: urenai
     title: "1929・誰も買わない"
@@ -399,6 +582,39 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "飲まれへんもんは、酒やない。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……わし、一回やってしもてるのや。"
+      - speaker: taketsuru
+        emotion: surprised
+        text: "……何をですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "若い頃、本場の[葡萄酒|ぶどうしゅ]を仕入れた。"
+      - speaker: taketsuru
+        emotion: thinking
+        text: "……売れましたか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "一本も動かん。棚で埃かぶっとった。"
+      - speaker: taketsuru
+        emotion: sad
+        text: "……それで、甘い酒に。"
+      - speaker: zundamon
+        emotion: normal
+        text: "せや。口に合わせたら、売れた。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "……社長。それは、[葡萄酒|ぶどうしゅ]の話です。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "同じやろ。"
+      - speaker: taketsuru
+        emotion: normal
+        text: "違います。あれは甘くしても[葡萄酒|ぶどうしゅ]です。"
+      - speaker: taketsuru
+        emotion: angry
+        text: "煙を抜いたら、ウイスキーではなくなる。"
       - speaker: taketsuru
         emotion: angry
         text: "飲み方のほうが、あとから変わります。"
@@ -512,6 +728,96 @@ scenes:
       - speaker: reimu
         text: "二年後、そこでウイスキーづくりを始めました。"
         reading: "にねんご そこで ういすきーづくりお はじめました。"
+
+  - id: nokoru
+    title: "1934・残ったほう"
+    background: il_wsk_jozo
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+      - {who: banto, x: 0.68}
+    cuts:
+      - speaker: banto
+        emotion: sad
+        text: "旦那さん。……[蒸溜所|じょうりゅうしょ]、静かですな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "動いとる。人がおらんだけや。"
+      - speaker: banto
+        emotion: thinking
+        text: "……追いかけんでよかったんですか。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "追いかけて、どうすんねん。"
+      - speaker: banto
+        emotion: sad
+        text: "戻ってくれと、頼めば。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あの人は、作りたいもんがあるのや。"
+      - speaker: zundamon
+        emotion: sad
+        text: "わしは、売りたいもんがある。"
+      - speaker: banto
+        emotion: sad
+        text: "……交わりませんか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "交わらんかったから、十年もったんや。"
+      - speaker: banto
+        emotion: surprised
+        text: "……もった、と言いますか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "十年や。喧嘩しながら、十年続いた。"
+      - speaker: reimu
+        text: "鳥井は、日本人の口に合うウイスキーを作り続けます。"
+        reading: "とりいわ にほんじんの くちに あう ういすきーお つくりつづけます。"
+      - speaker: reimu
+        text: "北へ渡った男は、本場の作り方を通しました。"
+        reading: "きたえ わたった おとこわ ほんばの つくりかたお とおしました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……どっちが正しいかは、客が決めるのや。"
+
+  - id: shi
+    title: "1962・八十三歳"
+    background: il_wsk_mise
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, emotion: normal}
+      - {who: banto, x: 0.68}
+    cuts:
+      - speaker: banto
+        emotion: thinking
+        text: "旦那さん。棚が、いっぱいになりましたな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……昔は、一本も動かんかった棚や。"
+      - speaker: banto
+        emotion: happy
+        text: "覚えてはりますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "忘れるかいな。埃の色まで覚えとる。"
+      - speaker: banto
+        emotion: thinking
+        text: "……あのとき、やめよう思わはりませんでした？"
+      - speaker: zundamon
+        emotion: happy
+        text: "思うたで。毎日思うた。"
+      - speaker: zundamon
+        emotion: happy
+        text: "せやけど、やってみなはれ、言うてな。"
+      - speaker: banto
+        emotion: surprised
+        text: "……自分に言うてはったんですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……そら、そうや。"
+      - speaker: reimu
+        text: "1962年、鳥井信治郎は八十三歳で亡くなりました。"
+        reading: "せんきゅうひゃくろくじゅうにねん、とりいしんじろうわ はちじゅうさんさいで なくなりました。"
 
   - id: ima
     title: ""

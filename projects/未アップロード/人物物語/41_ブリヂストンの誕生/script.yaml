@@ -35,6 +35,20 @@
 #     これでは語呂が悪いので逆さにして BRIDGESTONE と決定した」
 #     BRIDGESTONE は英語で石の橋を築くときの要石（キーストーン）を意味する
 #   ※創業初期の具体的な返品率・本数は裏が取れなかったので**数字を言わせない**
+#   ---- 2026-09-17 追加取材（尺が短すぎたので空白を埋めた） ----
+#   正二郎は**次男**。父・石橋徳次郎とマツの子。家業は「志まや」という仕立屋で、
+#     服や下着を縫っていた
+#   久留米商業学校を卒業後、**父の病気により**、兄（二代目徳次郎を襲名）とともに家業を継ぐ
+#   **その年の暮れ、兄が一年志願兵として入営し、店の経営が全部 正二郎に降りかかった**
+#   そこで正二郎は、シャツなど雑多なものを扱う非効率な仕立業をやめ、
+#     **足袋専業への転換を単独で決断・実行した**（1907年）
+#     ※私は当初これを「兄と議論して決めた」と書いていた。**兄は不在だった**
+#   1923 アサヒ地下足袋を創製・販売。**発売当初は簡単に売れなかった**。
+#     従業員自らが地下足袋を履き、多くの職工が働いていた三池炭鉱や各地の農家を
+#     訪れて営業に励んだ。炭坑夫に人気を博したことから全国的に普及した
+#   1952-1 ブリヂストン美術館（現・アーティゾン美術館）を開設
+#   1956-4 故郷の久留米市に「石橋文化センター」を建設し、寄贈した
+#   1976-9-11 没（87歳）
 meta:
   title: "【ブリヂストンの誕生】足袋屋がタイヤを作ったら、全部返ってきた【ずんだもん解説】"
   slug: "ishibashi-bridgestone"
@@ -47,6 +61,8 @@ meta:
   narrator: reimu
   mobs:
     - {id: tokujiro, label: "兄・徳次郎", voice: 13, pitch: 0.02, item: hat}
+    - {id: chichi, label: "父", voice: 42, pitch: -0.06}
+    - {id: tankou, label: "炭坑夫", voice: 42, pitch: 0.02}
     - {id: shokunin, label: "足袋職人", voice: 42, pitch: 0.0}
     - {id: gishi, label: "技師", voice: 12, pitch: 0.04}
     - {id: hanbai, label: "販売の担当者", voice: 13, pitch: -0.06, item: hat}
@@ -123,44 +139,207 @@ scenes:
         emotion: normal
         text: "でもね。作れたあとが大変だったの。"
 
-  - id: shitate
-    title: "1907・仕立物屋をやめる"
+  - id: umare
+    title: "1889・志まやの次男"
     background: il_bri_tabiya
     bgm: hirusagari
     stage:
-      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: zundamon, x: 0.32, scale: 0.76, emotion: normal}
+      - {who: chichi, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "福岡県久留米。石橋家は「志まや」という仕立屋でした。"
+        reading: "ふくおかけん くるめ。いしばしけわ しまやと いう したてやでした。"
+      - speaker: reimu
+        text: "服も、下着も、頼まれたものは何でも縫います。"
+        reading: "ふくも したぎも たのまれたものわ なんでも ぬいます。"
+      - speaker: reimu
+        text: "正二郎は、その次男として生まれました。"
+        reading: "しょうじろうわ その じなんと して うまれました。"
+      - speaker: chichi
+        emotion: normal
+        text: "[正二郎|しょうじろう]。これは何の注文か分かるか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……寸法がばらばらなのだ。"
+      - speaker: chichi
+        emotion: happy
+        text: "そうじゃ。一人ずつ違う。"
+      - speaker: zundamon
+        emotion: normal
+        text: "だから、一枚ずつ時間がかかるのだ。"
+      - speaker: chichi
+        emotion: normal
+        text: "仕立屋とは、そういうものじゃ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……もったいないのだ。"
+      - speaker: chichi
+        emotion: surprised
+        text: "なんがか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じものを作れば、もっと早いのだ。"
+      - speaker: chichi
+        emotion: happy
+        text: "……変わったことを言う子じゃ。"
+
+  - id: shitate
+    title: "1906・兄が、いない"
+    background: il_bri_tabiya
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: surprised}
       - {who: tokujiro, x: 0.68}
     cuts:
       - speaker: reimu
-        text: "福岡県久留米。石橋家は仕立物屋でした。"
-        reading: "ふくおかけん くるめ。いしばしけわ したてものやでした。"
+        text: "十七歳で商業学校を出ます。"
+        reading: "じゅうななさいで しょうぎょうがっこうお でます。"
       - speaker: reimu
-        text: "正二郎は十七歳で学校を出て、家業に入ります。"
-        reading: "しょうじろうわ じゅうななさいで がっこうお でて、かぎょうに はいります。"
+        text: "父が病に倒れ、兄と二人で店を継ぎました。"
+        reading: "ちちが やまいに たおれ、あにと ふたりで みせお つぎました。"
+      - speaker: tokujiro
+        emotion: normal
+        text: "[正二郎|しょうじろう]。しばらく、店を頼む。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……頼む、とは。"
+      - speaker: tokujiro
+        emotion: normal
+        text: "入営する。一年志願兵だ。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "兄さん。今、父ちゃんが寝とるのだ。"
+      - speaker: tokujiro
+        emotion: sad
+        text: "分かっとる。だが、決まったことだ。"
       - speaker: zundamon
         emotion: thinking
-        text: "兄さん。うちは何でも作りすぎなのだ。"
+        text: "……いつまでなのだ。"
       - speaker: tokujiro
-        emotion: surprised
-        text: "注文が来るものは作る。当たり前だろう。"
+        emotion: normal
+        text: "一年。戻ったら、また二人でやる。"
+      - speaker: reimu
+        text: "その年の暮れ、兄は軍隊へ入ります。"
+        reading: "その としの くれ、あにわ ぐんたいえ はいります。"
+      - speaker: reimu
+        text: "店の切り盛りは、十七歳の弟ひとりに残されました。"
+        reading: "みせの きりもりわ じゅうななさいの おとうとひとりに のこされました。"
+
+  - id: sengyo
+    title: "1907・ひとりで決める"
+    background: il_bri_tabiya
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: shokunin, x: 0.68}
+    cuts:
+      - speaker: shokunin
+        emotion: sad
+        text: "旦那。今月も、寸法違いのやり直しが出ました。"
       - speaker: zundamon
         emotion: normal
-        text: "だから、どれも普通なのだ。"
-      - speaker: tokujiro
+        text: "何枚だ。"
+      - speaker: shokunin
+        emotion: sad
+        text: "……数えたくない枚数です。"
+      - speaker: zundamon
         emotion: thinking
-        text: "……何が言いたい。"
+        text: "……シャツも、股引も、みんな違う寸法なのだ。"
+      - speaker: shokunin
+        emotion: normal
+        text: "注文どおりに縫っておりますが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "縫い方は悪くないのだ。品物が多すぎる。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……減らすのですか。"
       - speaker: zundamon
         emotion: normal
         text: "[足袋|たび]だけにするのだ。"
-      - speaker: tokujiro
+        se: don
+      - speaker: shokunin
         emotion: surprised
-        text: "[足袋|たび]だけ！？ 仕事が減るぞ。"
+        text: "……[足袋|たび]、だけ。"
       - speaker: zundamon
         emotion: normal
-        text: "減る。でも、うまくなるのだ。"
+        text: "ほかは全部やめる。"
+      - speaker: shokunin
+        emotion: sad
+        text: "旦那。お兄さんに、相談は。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……おらんのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "しかし、帰ってこられたときに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "怒られる。それは、そのときなのだ。"
       - speaker: reimu
         text: "1907年、石橋家は足袋専業になりました。"
         reading: "せんきゅうひゃくななねん、いしばしけわ たびせんぎょうに なりました。"
+      - speaker: reimu
+        text: "十七歳の弟が、ひとりで決めたことでした。"
+        reading: "じゅうななさいの おとうとが ひとりで きめた ことでした。"
+
+  - id: kikan
+    title: "1908・帰ってきた兄"
+    background: il_bri_tabiya
+    bgm: hirusagari
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: surprised}
+      - {who: tokujiro, x: 0.68}
+    cuts:
+      - speaker: tokujiro
+        emotion: surprised
+        text: "……[正二郎|しょうじろう]。店の中が、違うぞ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……[足袋|たび]だけにしたのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "だけ、とは。シャツはどうした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "やめた。股引もやめた。"
+      - speaker: tokujiro
+        emotion: angry
+        text: "勝手に決めたのか。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……決めた。"
+      - speaker: tokujiro
+        emotion: angry
+        text: "父さんは、なんと言った。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……寝たままなのだ。"
+      - speaker: tokujiro
+        emotion: sad
+        text: "……そうか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "兄さん。数字を見てほしいのだ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "……見せろ。"
+      - speaker: tokujiro
+        emotion: surprised
+        text: "……増えとる。品物を減らしたのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "減らしたから、早くなったのだ。"
+      - speaker: tokujiro
+        emotion: thinking
+        text: "……怒るところなんだがな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "怒っていいのだ。"
+      - speaker: tokujiro
+        emotion: happy
+        text: "……やめとく。"
 
   - id: nijussen
     title: "1914・二十銭均一"
@@ -250,6 +429,96 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "うむ。ゴムが、うちの本業になってきたのだ。"
+
+  - id: urenai
+    title: "1923・履いて、歩いて売る"
+    background: il_bri_kojo
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: shokunin, x: 0.68}
+    cuts:
+      - speaker: shokunin
+        emotion: sad
+        text: "旦那。並べても、手に取ってもらえません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……減らんのに。"
+      - speaker: shokunin
+        emotion: normal
+        text: "減らんと言われても、皆いままでの[足袋|たび]で足りとると。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……履いたことがないからなのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "はあ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "うちの者が、全員履くのだ。"
+      - speaker: shokunin
+        emotion: surprised
+        text: "……従業員が、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "履いて、歩いて、現場へ行くのだ。"
+      - speaker: shokunin
+        emotion: thinking
+        text: "現場、と言いますと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "炭鉱。それと、田んぼ。"
+      - speaker: reimu
+        text: "従業員は自ら地下足袋を履き、炭鉱や農家を回りました。"
+        reading: "じゅうぎょういんわ みずから じかたびお はき、たんこうや のうかお まわりました。"
+
+  - id: tankou
+    title: "1923・炭坑で減らない"
+    background: il_bri_kojo
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: tankou, x: 0.68}
+    cuts:
+      - speaker: tankou
+        emotion: thinking
+        text: "兄ちゃん。それ、ゴムが付いとるな。"
+      - speaker: zundamon
+        emotion: happy
+        text: "履いてみるのだ。"
+      - speaker: tankou
+        emotion: surprised
+        text: "……滑らんな。濡れとるのに。"
+      - speaker: zundamon
+        emotion: normal
+        text: "底が波になっとるのだ。"
+      - speaker: tankou
+        emotion: thinking
+        text: "……わしらの[足袋|たび]は、三日で穴が開く。"
+      - speaker: zundamon
+        emotion: normal
+        text: "これは、開かんのだ。"
+      - speaker: tankou
+        emotion: surprised
+        text: "ほんとか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ボクが二月履いとる。見るのだ。"
+      - speaker: tankou
+        emotion: surprised
+        text: "……減っとらん。"
+      - speaker: reimu
+        text: "炭坑で働く人たちに、これが広まります。"
+        reading: "たんこうで はたらく ひとたちに、これが ひろまります。"
+      - speaker: reimu
+        text: "やがて、全国で履かれるようになりました。"
+        reading: "やがて ぜんこくで はかれる ように なりました。"
+      - speaker: tankou
+        emotion: happy
+        text: "兄ちゃん。まとめて持ってきてくれ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……その一言が、聞きたかったのだ。"
 
   - id: tyre
     title: "1930・ゴムを丸くする"
@@ -567,6 +836,84 @@ scenes:
       - speaker: zundamon
         emotion: surprised
         text: "……要の石。そんな意味があったのか。"
+
+  - id: kurume
+    title: "1956・久留米へ返す"
+    background: il_bri_ima
+    bgm: warm
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: hanbai, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "会社は大きくなり、正二郎は絵を集めるようになります。"
+        reading: "かいしゃわ おおきく なり、しょうじろうわ えお あつめる ように なります。"
+      - speaker: hanbai
+        emotion: thinking
+        text: "社長。この絵は、どちらへ飾りますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "家やないのだ。"
+      - speaker: hanbai
+        emotion: surprised
+        text: "……では。"
+      - speaker: zundamon
+        emotion: normal
+        text: "建物を建てる。誰でも入れるやつを。"
+      - speaker: hanbai
+        emotion: surprised
+        text: "美術館、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "それと、[久留米|くるめ]にも要るのだ。"
+      - speaker: hanbai
+        emotion: thinking
+        text: "……ご出身の。"
+      - speaker: zundamon
+        emotion: normal
+        text: "あそこで[足袋|たび]を売っとったのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "返すもんが、まだ残っとる。"
+      - speaker: reimu
+        text: "1956年、故郷の久留米に文化の施設を建てて寄贈しました。"
+        reading: "せんきゅうひゃくごじゅうろくねん、こきょうの くるめに ぶんかの しせつお たてて きぞう しました。"
+
+  - id: shi
+    title: "1976・八十七歳"
+    background: il_bri_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, emotion: normal}
+      - {who: tokujiro, x: 0.68}
+    cuts:
+      - speaker: tokujiro
+        emotion: thinking
+        text: "[正二郎|しょうじろう]。あのとき、怒らんでよかったな。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……いつの話なのだ。"
+      - speaker: tokujiro
+        emotion: happy
+        text: "わしが軍隊から帰ってきたときだ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……七十年前なのだ。"
+      - speaker: tokujiro
+        emotion: happy
+        text: "店が[足袋|たび]だらけになっとった。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……怒ってもよかったのだ。"
+      - speaker: tokujiro
+        emotion: normal
+        text: "怒っとったら、タイヤはなかったな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうかもしれんのだ。"
+      - speaker: reimu
+        text: "1976年、石橋正二郎は八十七歳で亡くなりました。"
+        reading: "せんきゅうひゃくななじゅうろくねん、いしばししょうじろうわ はちじゅうななさいで なくなりました。"
 
   - id: ima
     title: ""

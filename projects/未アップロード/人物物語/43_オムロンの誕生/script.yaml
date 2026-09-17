@@ -34,6 +34,14 @@
 #   1990-1 社名をオムロン株式会社に変更
 #   ※創業時の資本金・従業員数は裏が取れなかったので**数字を言わせない**
 #   ※SINIC理論には触れない（この回で説明しきれない）
+#   ---- 2026-09-17 追加取材（尺が短すぎたので空白を埋めた） ----
+#   1930 京都で「彩光社」を設立。**家庭用ズボン・プレッサー**を製造販売し、
+#     その後**ナイフ・グラインダー**を考案して売った。**彩光社の事業はやがて限界に達した**
+#   レントゲン装置を売る友人から、X線撮影用の**20分の1秒**で撮影できるタイマーに
+#     需要があることを知り、これを開発。大手レントゲン機器メーカーへのOEM供給につながった
+#   1945 戦災疎開で京都へ移る
+#   戦後、オートメーションの必要からマイクロスイッチなどを自社開発した
+#   1991-1-12 没（90歳）
 meta:
   title: "【オムロンの誕生】新聞配達の少年が、機械に仕事を渡すまで【ずんだもん解説】"
   slug: "tateishi-omron"
@@ -238,6 +246,120 @@ scenes:
         emotion: normal
         text: "いってへん。まだ、何屋か決まってへんのだ。"
 
+  - id: saikosha
+    title: "1930・売れないものを作る"
+    background: il_omr_koba
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: gishi, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "1930年、京都で小さな会社を興します。"
+        reading: "せんきゅうひゃくさんじゅうねん、きょうとで ちいさな かいしゃお おこします。"
+      - speaker: zundamon
+        emotion: happy
+        text: "ズボンの折り目を、機械で付けるのだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……家庭で、ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "毎朝アイロンをかけるのは面倒なのだ。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……売れますかね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "売れるのだ。面倒は、みんな同じなのだ。"
+      - speaker: reimu
+        text: "売れませんでした。"
+        reading: "うれませんでした。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……次は、包丁を研ぐ機械なのだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "また、家庭用ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "研ぐのも、面倒なのだ。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……社長。面倒という点は、合うてます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "せやろ。"
+      - speaker: gishi
+        emotion: sad
+        text: "ただ、皆そこに金は出しません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そこか。"
+      - speaker: reimu
+        text: "この会社の仕事は、やがて行き詰まります。"
+        reading: "この かいしゃの しごとわ やがて いきづまります。"
+
+  - id: deai
+    title: "1932・友人の困りごと"
+    background: il_omr_koba
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+      - {who: rentgen, x: 0.68}
+    cuts:
+      - speaker: rentgen
+        emotion: thinking
+        text: "[立石|たていし]。しけた顔しとるな。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……仕事が、ないのだ。"
+      - speaker: rentgen
+        emotion: normal
+        text: "うちの商売の話、聞くか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "聞くのだ。"
+      - speaker: rentgen
+        emotion: normal
+        text: "レントゲンを売っとるんやが、困りごとがある。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……機械の話か。"
+      - speaker: rentgen
+        emotion: normal
+        text: "いや。人の話や。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……人。"
+      - speaker: rentgen
+        emotion: sad
+        text: "撮る時間を、人が数えとる。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……何秒だ。"
+      - speaker: rentgen
+        emotion: normal
+        text: "短いときで、二十分の一秒や。"
+        se: don
+        telops:
+          - {text: "20分の1秒を、人が数えている", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: surprised
+        text: "……数えられるわけがないのだ。"
+      - speaker: rentgen
+        emotion: sad
+        text: "せやから、写真がばらつく。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……それだ。"
+      - speaker: rentgen
+        emotion: surprised
+        text: "なんがや。"
+      - speaker: zundamon
+        emotion: happy
+        text: "人が出さんでええ金は、そこにあるのだ。"
+
   - id: dokuritsu
     title: "1933・タイマーを作る"
     background: il_omr_koba
@@ -362,6 +484,42 @@ scenes:
       - speaker: zundamon
         emotion: normal
         text: "人は疲れる。機械は疲れんのだ。"
+      - speaker: gishi
+        emotion: thinking
+        text: "社長。ひとつ、気になることが。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言うてみい。"
+      - speaker: gishi
+        emotion: normal
+        text: "これ、売れたら人が減りますよね。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……数えとった人か。"
+      - speaker: gishi
+        emotion: sad
+        text: "はい。[要らん|いらん]ようになります。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……減らんのだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "しかし、数える係は。"
+      - speaker: zundamon
+        emotion: normal
+        text: "その人は、患者を見とればええのだ。"
+      - speaker: gishi
+        emotion: surprised
+        text: "……見る。"
+      - speaker: zundamon
+        emotion: normal
+        text: "数を数えとる間、人の顔は見えへんのだ。"
+      - speaker: gishi
+        emotion: thinking
+        text: "……確かに、下を向いとります。"
+      - speaker: zundamon
+        emotion: happy
+        text: "顔を上げさせるための機械なのだ。"
       - speaker: reimu
         text: "最初の製品は、レントゲン撮影用のタイマーでした。"
         reading: "さいしょの せいひんわ れんとげん さつえいようの たいまーでした。"
@@ -504,6 +662,123 @@ scenes:
       - speaker: zundamon
         emotion: happy
         text: "それでええのだ。"
+      - speaker: tetsudo
+        emotion: thinking
+        text: "[立石|たていし]さん。ひとつ、伺っても。"
+      - speaker: zundamon
+        emotion: normal
+        text: "どうぞ。"
+      - speaker: tetsudo
+        emotion: thinking
+        text: "次は、何を機械にされますか。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……決めてへんのだ。"
+      - speaker: tetsudo
+        emotion: surprised
+        text: "決めずに、作るんですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "困っとる人が、持ってくるのだ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ボクは三十年、そればっかりやっとる。"
+      - speaker: tetsudo
+        emotion: thinking
+        text: "……自分から、探しに行かんのですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "探さんでも、来るのだ。"
+      - speaker: zundamon
+        emotion: happy
+        text: "人が面倒がっとる所に、必ずあるのだ。"
+
+  - id: sensai
+    title: "1945・焼けて、京都へ"
+    background: il_omr_koba
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+      - {who: shain, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "戦争で工場を追われ、京都に移ります。"
+        reading: "せんそうで こうじょうお おわれ、きょうとに うつります。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。図面は、持ち出せました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……機械は。"
+      - speaker: shain
+        emotion: sad
+        text: "……置いてきました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "図面があるなら、また作れるのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "……一から、ですか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "一からだ。中身は、頭に入っとる。"
+      - speaker: reimu
+        text: "戦後、機械を自分で動かす仕組みが求められます。"
+        reading: "せんご きかいお じぶんで うごかす しくみが もとめられます。"
+      - speaker: reimu
+        text: "立石は、小さなスイッチを自社で作り始めました。"
+        reading: "たていしわ ちいさな すいっちお じしゃで つくりはじめました。"
+      - speaker: shain
+        emotion: thinking
+        text: "社長。これ、タイマーとは違いますね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じなのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "……同じ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "人が見張っとる所に、置くのだ。"
+
+  - id: shi
+    title: "1991・九十歳"
+    background: il_omr_ima
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, emotion: normal}
+      - {who: shain, x: 0.68}
+    cuts:
+      - speaker: shain
+        emotion: thinking
+        text: "社長。新聞配達、覚えてはりますか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……忘れるかいな。"
+      - speaker: shain
+        emotion: normal
+        text: "毎朝、頭の中で数えてはったとか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "何軒目で、何時か。ずっと数えとった。"
+      - speaker: shain
+        emotion: thinking
+        text: "……それが、しんどかったんですね。"
+      - speaker: zundamon
+        emotion: normal
+        text: "しんどいとは思わんかった。"
+      - speaker: zundamon
+        emotion: normal
+        text: "ただ、人がやることやないと思うたのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "……一年生のときに、ですか。"
+      - speaker: zundamon
+        emotion: happy
+        text: "……そのころからなのだ。"
+      - speaker: reimu
+        text: "1991年、立石一真は九十歳で亡くなりました。"
+        reading: "せんきゅうひゃくきゅうじゅういちねん、たていしかずまわ きゅうじゅっさいで なくなりました。"
 
   - id: ima
     title: ""
@@ -528,6 +803,33 @@ scenes:
       - speaker: zundamon
         emotion: surprised
         text: "……ばらばらに見えてたやつが、一本なのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "会社の名前もね。京都の町の名前なの。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……[御室|おむろ]、だったのだ。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "うん。世界中で言われてるけど、もとは地名。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……[熊本|くまもと]の子が、京都の名前を世界に出したのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "本人の名字は、どこにも入ってない。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……[立石|たていし]、入ってないのだ。"
+      - speaker: tsumugi
+        emotion: normal
+        text: "入れなかったんだと思う。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……自分の名前も、面倒だったのか。"
+      - speaker: tsumugi
+        emotion: happy
+        text: "そこは分からないけどね。"
       - speaker: tsumugi
         emotion: normal
         text: "始まりは、新聞配達だったのかもね。"
