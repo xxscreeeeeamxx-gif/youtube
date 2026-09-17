@@ -15,6 +15,47 @@ import sys
 from .config import Config, Project
 
 
+def check_length(cfg, proj) -> bool:
+    """**尺が縮んでいないか機械で止める**（2026-09-17 導入）。
+
+    「圧縮しない・展開する」は SKILL.md に最初から書いてあったが、
+    それでも 30番→43番 で 402カット→138カット まで13本連続で縮んだ。
+    原因は毎回「直前の作品」を基準にしたこと。1本ごとの減りは5〜15%で
+    気づけないが、積み重なると3分の1になる。
+    人間の判断に任せると再発するので、**チャンネルの実績の下位に落ちたら警告する**。
+    """
+    import yaml
+    from statistics import median
+    d = yaml.safe_load((proj.root / "script.yaml").read_text(encoding="utf-8"))
+    if (d.get("meta") or {}).get("mode") != "drama":
+        return True
+    cuts = sum(len(sc.get("cuts") or []) for sc in (d.get("scenes") or []))
+
+    others = []
+    for q in cfg.root.glob("projects/*/人物物語/*/script.yaml"):
+        if q.parent == proj.root:
+            continue
+        try:
+            e = yaml.safe_load(q.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if (e.get("meta") or {}).get("mode") != "drama":
+            continue
+        others.append(sum(len(sc.get("cuts") or []) for sc in (e.get("scenes") or [])))
+    if not others:
+        return True
+    med = median(others)
+    floor = int(med * 0.75)
+    if cuts >= floor:
+        print(f"尺の確認: {cuts}カット（既存の中央値 {int(med)}）")
+        return True
+    print(f"\n⚠️  **短すぎます**: {cuts}カット / 既存{len(others)}本の中央値 {int(med)}カット")
+    print(f"   目安の下限は {floor}カット（中央値の75%）。あと {floor - cuts} カット足りません。")
+    print("   直前の作品を基準にすると気づかないまま縮み続けます。"
+          "生い立ち・失敗・晩年のどこが飛んでいないか見直してください。")
+    return False
+
+
 def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -> bool:
     """ビルド後の読み検査。誤読ゼロが最優先なので make のたびに必ず走らせる。
 
@@ -247,6 +288,7 @@ def main(argv: list[str] | None = None) -> None:
         if not args.skip_shorts:
             render_shorts(cfg, proj, timings)
         ok = run_reading_checks(cfg, proj, skip_whisper=args.skip_reading_check)
+        ok = check_length(cfg, proj) and ok
         if ok:
             print("\n✅ 完了。out/ の中身を確認して投稿してください。")
         else:

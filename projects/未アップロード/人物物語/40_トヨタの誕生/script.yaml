@@ -39,6 +39,28 @@
 #   1950-4-11 労働争議が始まり 6-10 終結。6-5 喜一郎が争議の責を負って社長辞任
 #     喜一郎の言葉「人員整理をできるだけ避けたいということは、私の最高道徳律だ」
 #   1952-3 石田退三が喜一郎を訪ね社長復帰を促し、喜一郎は快諾。3-27 急死
+#   ---- 2026-09-17 追加取材（尺が短すぎたので空白を埋めた） ----
+#   1894 誕生時、佐吉は動力織機の研究に没頭し豊橋と名古屋を往き来していたため、
+#     **喜一郎は吉津村の祖父母のもとで日々を過ごした**。3歳ごろ名古屋の佐吉に引き取られ、
+#     以後は工場の敷地内の居宅で育つ
+#   1908 愛知県立師範学校付属高等小学校を卒業、私立明倫中学校に入学
+#   1914 仙台の第二高等学校 甲組工科へ / 1917 卒業、東京帝国大学へ
+#   1920-7 東京帝国大学 工学部 機械工学科を卒業
+#   1921 父の経営する豊田紡織に入社し、自動織機の研究開発に従事
+#   1925 自動織機が完成 / 1926 豊田自動織機製作所が設立され、喜一郎は常務取締役
+#   喜一郎の言葉（1946-9 講話）:「私にはそんな経験はなかったが幼時より機械に常に
+#     接近していたので訳なく出来てしまった。エンジニアーは機械を身内と考へ
+#     何時も機械にタッチしていることが最も肝要である」
+#   戦後、軍需工場の生産は禁止されたが、民生用トラックはGHQの指令で作ることが許された
+#   1949 ドッジ・ライン → ドッジ不況。1年で1000件以上の倒産、50万人以上の解雇
+#     トラックが売れず、月賦販売の拡大が不渡り手形につながる。**毎月2200万円の赤字**
+#     1949-12 に**2億円の資金不足**が明らかになる
+#   **1949-12-23 トヨタ自工と労働組合は、合理化を進める代わりに
+#     「会社は人員整理を行わない」ことを約した覚書を締結した**
+#   → その約4か月後に銀行が人員整理を要求し、争議になる。喜一郎は自分が結んだ
+#     文書の約束を守れなかった。これが辞任の重さ
+#   朝鮮戦争は1950-6-25 に始まり、特需で業績は好転する。**喜一郎の辞任は6-5**。
+#     回復は、彼が辞めたあとに来た
 meta:
   title: "【トヨタの誕生】9割が屑になる。織機屋がエンジンを作るまで【ずんだもん解説】"
   slug: "toyoda-kiichiro"
@@ -51,6 +73,9 @@ meta:
   narrator: reimu
   mobs:
     - {id: sakichi, label: "父・豊田佐吉", voice: 42, pitch: 0.0}
+    - {id: sofu, label: "祖父", voice: 42, pitch: -0.06}
+    - {id: kumiaiin, label: "組合の委員長", voice: 13, pitch: -0.02}
+    - {id: kaikei, label: "経理の社員", voice: 12, pitch: 0.02}
     - {id: shain, label: "自動車部の社員", voice: 12, pitch: 0.04}
     - {id: shainb, label: "鋳物場の職人", voice: 12, pitch: -0.02}
     - {id: oshima, label: "大島理三郎", voice: 13, pitch: -0.04, item: hat}
@@ -124,8 +149,65 @@ scenes:
         emotion: normal
         text: "遠いよ。だから、九割が屑になった。"
 
+  - id: sofubo
+    title: "1894・父のいない家"
+    background: il_toy_shokki
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.32, scale: 0.74, emotion: normal}
+      - {who: sofu, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "1894年、静岡。豊田喜一郎が生まれます。"
+        reading: "せんはっぴゃくきゅうじゅうよねん、しずおか。とよだきいちろうが うまれます。"
+      - speaker: reimu
+        text: "父の佐吉は、そのころ織機の研究に没頭していました。"
+        reading: "ちちの さきちわ そのころ しょっきの けんきゅうに ぼっとう して いました。"
+      - speaker: reimu
+        text: "豊橋と名古屋を行き来する日々です。"
+        reading: "とよはしと なごやお いきき する ひびです。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じいちゃん。父ちゃんは、今どこなのだ。"
+      - speaker: sofu
+        emotion: thinking
+        text: "……名古屋かのう。今月は帰っとらん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "先月も帰ってないのだ。"
+      - speaker: sofu
+        emotion: sad
+        text: "……機械を直しとるんじゃ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……機械のほうが、大事なのか。"
+      - speaker: sofu
+        emotion: surprised
+        text: "そうは言うとらん。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、機械のところにおるのだ。"
+      - speaker: sofu
+        emotion: normal
+        text: "……そりゃ、そうじゃな。"
+      - speaker: reimu
+        text: "喜一郎は三歳ごろまで、祖父母のもとで育ちました。"
+        reading: "きいちろうわ さんさいごろまで、そふぼの もとで そだちました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "じいちゃん。ボクも機械のところに行くのだ。"
+      - speaker: sofu
+        emotion: surprised
+        text: "……なんでじゃ。"
+      - speaker: zundamon
+        emotion: normal
+        text: "そこにおれば、会えるのだ。"
+      - speaker: sofu
+        emotion: sad
+        text: "……そうか。"
+
   - id: umare
-    title: "1894・発明家の息子"
+    title: "1897・工場の中で育つ"
     background: il_toy_shokki
     bgm: 10do
     stage:
@@ -133,11 +215,14 @@ scenes:
       - {who: sakichi, x: 0.66}
     cuts:
       - speaker: reimu
-        text: "豊田[喜一郎|きいちろう]が生まれます。"
-        reading: "とよだきいちろうが うまれます。"
+        text: "三歳のころ、名古屋の父のもとに引き取られます。"
+        reading: "さんさいの ころ、なごやの ちちの もとに ひきとられます。"
       - speaker: reimu
-        text: "父の佐吉は、[機織り機|はたおりき]の発明家でした。"
-        reading: "ちちの さきちわ はたおりきの はつめいかでした。"
+        text: "住まいは、父の工場の敷地の中にありました。"
+        reading: "すまいわ ちちの こうじょうの しきちの なかに ありました。"
+      - speaker: reimu
+        text: "起きてから寝るまで、機械の音のする場所です。"
+        reading: "おきてから ねるまで、きかいの おとの する ばしょです。"
       - speaker: sakichi
         emotion: normal
         text: "[喜一郎|きいちろう]。この音、分かるか。"
@@ -171,6 +256,109 @@ scenes:
       - speaker: zundamon
         emotion: thinking
         text: "……[要らん|いらん]ように、か。"
+
+  - id: gakusei
+    title: "1917・機械を選ぶ"
+    background: il_toy_shokki
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: sakichi, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "中学を出たあと、仙台の高等学校へ進みます。"
+        reading: "ちゅうがくお でた あと、せんだいの こうとうがっこうえ すすみます。"
+      - speaker: sakichi
+        emotion: thinking
+        text: "[喜一郎|きいちろう]。大学は、何をやる。"
+      - speaker: zundamon
+        emotion: normal
+        text: "機械なのだ。"
+      - speaker: sakichi
+        emotion: surprised
+        text: "……即答か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "考えることがないのだ。"
+      - speaker: sakichi
+        emotion: thinking
+        text: "[織機|しょっき]を継ぐ気か。"
+      - speaker: zundamon
+        emotion: normal
+        text: "継ぐとは言ってないのだ。"
+      - speaker: sakichi
+        emotion: surprised
+        text: "……ほう。"
+      - speaker: zundamon
+        emotion: normal
+        text: "でも、機械は身内みたいなものなのだ。"
+      - speaker: sakichi
+        emotion: surprised
+        text: "……身内。"
+      - speaker: zundamon
+        emotion: normal
+        text: "小さいころから、そばにおったのだ。"
+      - speaker: sakichi
+        emotion: sad
+        text: "……わしがおらんかったからな。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……そうは言ってないのだ。"
+      - speaker: reimu
+        text: "1920年、東京帝国大学の機械工学科を卒業します。"
+        reading: "せんきゅうひゃくにじゅうねん、とうきょうていこくだいがくの きかいこうがっかお そつぎょう します。"
+
+  - id: nyusha
+    title: "1921・父の下で働く"
+    background: il_toy_shokki
+    bgm: curious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: sakichi, x: 0.56}
+      - {who: shain, x: 0.78}
+    cuts:
+      - speaker: reimu
+        text: "翌年、父の会社に入り、自動織機の研究に加わります。"
+        reading: "よくとし、ちちの かいしゃに はいり、じどうしょっきの けんきゅうに くわわります。"
+      - speaker: shain
+        emotion: thinking
+        text: "若旦那。ここはもう、直しました。"
+      - speaker: zundamon
+        emotion: normal
+        text: "直したのは分かる。なぜ壊れたのだ。"
+      - speaker: shain
+        emotion: surprised
+        text: "……そこまでは。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ所がまた壊れるのだ。"
+      - speaker: sakichi
+        emotion: happy
+        text: "[喜一郎|きいちろう]。しつこいのは、ええことじゃ。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……父ちゃんに言われたくないのだ。"
+      - speaker: sakichi
+        emotion: surprised
+        text: "なんじゃと。"
+      - speaker: zundamon
+        emotion: normal
+        text: "三十年、同じ機械をいじっとるのだ。"
+      - speaker: sakichi
+        emotion: happy
+        text: "……そりゃ、しつこいわな。"
+      - speaker: reimu
+        text: "1925年、自動織機が完成します。"
+        reading: "せんきゅうひゃくにじゅうごねん、じどうしょっきが かんせいします。"
+      - speaker: reimu
+        text: "翌年、それを作る会社ができ、喜一郎は役員になりました。"
+        reading: "よくとし、それお つくる かいしゃが でき、きいちろうわ やくいんに なりました。"
+      - speaker: shain
+        emotion: happy
+        text: "若旦那。もう、若旦那やないですね。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……呼び方は、どうでもええのだ。"
 
   - id: platt
     title: "1929・イギリスからの話"
@@ -363,8 +551,8 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.30, emotion: thinking}
-      - {who: shain, x: 0.58, scale: 0.80}
-      - {who: shainb, x: 0.74, scale: 0.80}
+      - {who: shain, x: 0.56}
+      - {who: shainb, x: 0.78}
     cuts:
       - speaker: reimu
         text: "A型エンジンの [鋳物|いもの]作りが 始まります。"
@@ -443,8 +631,8 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.30, emotion: thinking}
-      - {who: oshima, x: 0.58, scale: 0.80}
-      - {who: shain, x: 0.74, scale: 0.80}
+      - {who: oshima, x: 0.56}
+      - {who: shain, x: 0.78}
     cuts:
       - speaker: oshima
         emotion: normal
@@ -659,6 +847,142 @@ scenes:
         emotion: normal
         text: "捨てた九割の中に、混ぜたくないのだ。"
 
+  - id: sengo
+    title: "1945・トラックだけ許される"
+    background: il_toy_kouba
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+      - {who: shain, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "戦争が終わります。"
+        reading: "せんそうが おわります。"
+      - speaker: reimu
+        text: "軍のための生産は、禁じられました。"
+        reading: "ぐんの ための せいさんわ きんじられました。"
+      - speaker: shain
+        emotion: sad
+        text: "社長。もう、作れません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……全部か。"
+      - speaker: shain
+        emotion: normal
+        text: "いえ。トラックだけは、許しが出ました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……トラック。"
+      - speaker: shain
+        emotion: normal
+        text: "荷物を運ぶ分には、構わないと。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……最初に作ったのも、トラックやったな。"
+      - speaker: shain
+        emotion: surprised
+        text: "……そうでした。"
+      - speaker: zundamon
+        emotion: normal
+        text: "同じ所から、もう一回やるのだ。"
+
+  - id: dodge
+    title: "1949・毎月、二千二百万円"
+    background: il_toy_kouba
+    bgm: serious
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+      - {who: kaikei, x: 0.56}
+      - {who: ginkou, x: 0.78}
+    cuts:
+      - speaker: reimu
+        text: "1949年、国の方針が変わり、不景気が来ます。"
+        reading: "せんきゅうひゃくよんじゅうくねん、くにの ほうしんが かわり、ふけいきが きます。"
+      - speaker: reimu
+        text: "一年で千件を超える会社が潰れました。"
+        reading: "いちねんで せんけんお こえる かいしゃが つぶれました。"
+      - speaker: kaikei
+        emotion: sad
+        text: "社長。トラックが、止まりました。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……売れんのか。"
+      - speaker: kaikei
+        emotion: sad
+        text: "はい。月賦で売った分も、返ってきません。"
+      - speaker: zundamon
+        emotion: thinking
+        text: "……手形が、落ちんのだな。"
+      - speaker: kaikei
+        emotion: sad
+        text: "毎月の赤が、二千二百万円です。"
+        se: don
+        telops:
+          - {text: "毎月2200万円の赤字", size: lg, position: top-center, color: "#FF6B6B", stroke: "#2A0A0A", glow: "#FF2200", anim: up}
+      - speaker: zundamon
+        emotion: sad
+        text: "……毎月か。"
+      - speaker: ginkou
+        emotion: normal
+        text: "社長。年内に、二億円足りません。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……二億。"
+      - speaker: ginkou
+        emotion: normal
+        text: "銀行を、回っていただくことになります。"
+      - speaker: zundamon
+        emotion: normal
+        text: "……回るのだ。何軒でも。"
+
+  - id: oboegaki
+    title: "1949・書いた約束"
+    background: il_toy_kouba
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+      - {who: kumiaiin, x: 0.68}
+    cuts:
+      - speaker: kumiaiin
+        emotion: thinking
+        text: "社長。私らの仕事は、どうなりますか。"
+      - speaker: zundamon
+        emotion: normal
+        text: "減らさん。"
+      - speaker: kumiaiin
+        emotion: surprised
+        text: "……口だけでは、信じられません。"
+      - speaker: zundamon
+        emotion: normal
+        text: "せやろな。書くのだ。"
+      - speaker: kumiaiin
+        emotion: surprised
+        text: "……書く。"
+      - speaker: zundamon
+        emotion: normal
+        text: "紙にして、判を押すのだ。"
+      - speaker: kumiaiin
+        emotion: thinking
+        text: "その代わり、こちらは何を。"
+      - speaker: zundamon
+        emotion: normal
+        text: "無駄を削るのに、手を貸してほしいのだ。"
+      - speaker: kumiaiin
+        emotion: normal
+        text: "……分かりました。やりましょう。"
+      - speaker: reimu
+        text: "1949年12月23日、覚書が交わされます。"
+        reading: "せんきゅうひゃくよんじゅうくねん じゅうにがつ にじゅうさんにち、おぼえがきが かわされます。"
+      - speaker: reimu
+        text: "会社は人員整理を行わない、と書かれていました。"
+        reading: "かいしゃわ じんいんせいりお おこなわない、と かかれて いました。"
+        se: don
+        telops:
+          - {text: "人員整理を行わない（覚書）", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+      - speaker: zundamon
+        emotion: happy
+        text: "これで、みんな残れるのだ。"
+
   - id: sougi
     title: "1950・最高道徳律"
     background: il_toy_sougi
@@ -669,8 +993,8 @@ scenes:
       - {who: kumiai, x: 0.78}
     cuts:
       - speaker: reimu
-        text: "戦後、会社は 資金が 続かなく なります。"
-        reading: "せんご かいしゃわ しきんが つづかなく なります。"
+        text: "覚書から、四か月しか経っていませんでした。"
+        reading: "おぼえがきから よんかげつしか たって いませんでした。"
       - speaker: ginkou
         emotion: normal
         text: "条件は二つです。販売を分けること。"
@@ -686,6 +1010,21 @@ scenes:
       - speaker: ginkou
         emotion: surprised
         text: "……会社が潰れますよ。"
+      - speaker: zundamon
+        emotion: angry
+        text: "去年、紙に書いたのだ。判も押した。"
+      - speaker: ginkou
+        emotion: normal
+        text: "存じています。しかし、[金|かね]は出ません。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……書いたものを、破れと言うのか。"
+      - speaker: ginkou
+        emotion: normal
+        text: "破らなければ、全員が職を失います。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうやって、選ばせるのだな。"
       - speaker: zundamon
         emotion: normal
         text: "人員整理を避けたい。それが、"
@@ -719,6 +1058,51 @@ scenes:
       - speaker: zundamon
         emotion: sad
         text: "……守れなかったのだ。"
+
+  - id: tokuju
+    title: "1950・辞めたあとに来た"
+    background: il_toy_kouba
+    bgm: 10do
+    stage:
+      - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+      - {who: shain, x: 0.68}
+    cuts:
+      - speaker: reimu
+        text: "喜一郎が社長を辞めた、その月のことです。"
+        reading: "きいちろうが しゃちょうお やめた、その つきの ことです。"
+      - speaker: reimu
+        text: "隣の国で戦争が始まり、トラックの注文が殺到します。"
+        reading: "となりの くにで せんそうが はじまり、とらっくの ちゅうもんが さっとう します。"
+      - speaker: shain
+        emotion: surprised
+        text: "……社長。いや、その。"
+      - speaker: zundamon
+        emotion: normal
+        text: "社長やないのだ。もう。"
+      - speaker: shain
+        emotion: sad
+        text: "工場が、止まらんのです。夜通し動いてます。"
+      - speaker: zundamon
+        emotion: surprised
+        text: "……売れとるのか。"
+      - speaker: shain
+        emotion: sad
+        text: "売れてます。いくらでも。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……そうか。"
+      - speaker: shain
+        emotion: sad
+        text: "あと半年、待てていたら。"
+      - speaker: zundamon
+        emotion: normal
+        text: "言うな。"
+      - speaker: zundamon
+        emotion: sad
+        text: "……待てんかったから、辞めたのだ。"
+      - speaker: reimu
+        text: "会社は立ち直りました。喜一郎は、そこにいません。"
+        reading: "かいしゃわ たちなおりました。きいちろうわ そこに いません。"
 
   - id: shi
     title: "1952・戻る前に"

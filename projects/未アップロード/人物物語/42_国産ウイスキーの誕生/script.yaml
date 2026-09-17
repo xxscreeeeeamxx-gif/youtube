@@ -199,8 +199,8 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: normal}
-      - {who: taketsuru, x: 0.58, scale: 0.80}
-      - {who: banto, x: 0.74, scale: 0.80}
+      - {who: taketsuru, x: 0.56}
+      - {who: banto, x: 0.78}
     cuts:
       - speaker: zundamon
         emotion: normal
@@ -251,8 +251,8 @@ scenes:
     bgm: 10do
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
-      - {who: taketsuru, x: 0.58, scale: 0.80}
-      - {who: banto, x: 0.74, scale: 0.80}
+      - {who: taketsuru, x: 0.56}
+      - {who: banto, x: 0.78}
     cuts:
       - speaker: zundamon
         emotion: normal
@@ -336,8 +336,8 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: normal}
-      - {who: kyaku, x: 0.58, scale: 0.80}
-      - {who: nomi, x: 0.74, scale: 0.80}
+      - {who: kyaku, x: 0.56}
+      - {who: nomi, x: 0.78}
     cuts:
       - speaker: kyaku
         emotion: sad
@@ -461,8 +461,8 @@ scenes:
     bgm: 10do
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: sad}
-      - {who: taketsuru, x: 0.58, scale: 0.80}
-      - {who: kichitaro, x: 0.74, scale: 0.80}
+      - {who: taketsuru, x: 0.56}
+      - {who: kichitaro, x: 0.78}
     cuts:
       - speaker: taketsuru
         emotion: normal

@@ -344,8 +344,8 @@ scenes:
     bgm: you_and_me
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: happy}
-      - {who: gishi, x: 0.58, scale: 0.80}
-      - {who: rentgen, x: 0.74, scale: 0.80}
+      - {who: gishi, x: 0.56}
+      - {who: rentgen, x: 0.78}
     cuts:
       - speaker: gishi
         emotion: normal

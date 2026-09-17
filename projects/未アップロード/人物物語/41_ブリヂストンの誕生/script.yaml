@@ -168,8 +168,8 @@ scenes:
     bgm: curious
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: happy}
-      - {who: tokujiro, x: 0.58, scale: 0.80}
-      - {who: shokunin, x: 0.74, scale: 0.80}
+      - {who: tokujiro, x: 0.56}
+      - {who: shokunin, x: 0.78}
     cuts:
       - speaker: zundamon
         emotion: happy
@@ -211,8 +211,8 @@ scenes:
     bgm: curious
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
-      - {who: tokujiro, x: 0.58, scale: 0.80}
-      - {who: shokunin, x: 0.74, scale: 0.80}
+      - {who: tokujiro, x: 0.56}
+      - {who: shokunin, x: 0.78}
     cuts:
       - speaker: shokunin
         emotion: sad
@@ -257,8 +257,8 @@ scenes:
     bgm: you_and_me
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: happy}
-      - {who: tokujiro, x: 0.58, scale: 0.80}
-      - {who: gishi, x: 0.74, scale: 0.80}
+      - {who: tokujiro, x: 0.56}
+      - {who: gishi, x: 0.78}
     cuts:
       - speaker: zundamon
         emotion: happy
@@ -303,8 +303,8 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: surprised}
-      - {who: hanbai, x: 0.58, scale: 0.80}
-      - {who: unten, x: 0.74, scale: 0.80}
+      - {who: hanbai, x: 0.56}
+      - {who: unten, x: 0.78}
     cuts:
       - speaker: hanbai
         emotion: sad
@@ -398,8 +398,8 @@ scenes:
     bgm: serious
     stage:
       - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
-      - {who: seizo, x: 0.58, scale: 0.80}
-      - {who: hanbai, x: 0.74, scale: 0.80}
+      - {who: seizo, x: 0.56}
+      - {who: hanbai, x: 0.78}
     cuts:
       - speaker: seizo
         emotion: angry
