@@ -53,16 +53,22 @@ characters:
     color: "#FF6B6B"
     role: "再現ドラマのナレーター。です・ます調で史実・数字・年号を淡々と補足し、ボケには乗らず、時々オチだけ静かに回収する。"
 
-# ゆっくりボイス（AquesTalkPlayer 公式Mac版）。個人・非営利は無償。
-# 再セットアップ: https://www.a-quest.com/products/aquestalkplayer.html のdmgを
-# tools/AquesTalkPlayer.app に展開する（gitには含めない）
-aquestalk:
-  player_path: "tools/AquesTalkPlayer.app/Contents/MacOS/AquesTalkPlayer"
+# ゆっくりボイス（AquesTalkPlayer）。個人・非営利は無償。
+# 入手: https://www.a-quest.com/products/aquestalkplayer.html （gitには含めない）
+#   macOS   … dmg を tools/AquesTalkPlayer.app に展開
+#   Windows … tools/AquesTalkPlayer/AquesTalkPlayer.exe に置く
+# **player_path はここに書かない。** voice.py が sys.platform を見て両OSの既定を
+# 使い分ける（2026-09-18）。ここに書くとその判定を上書きして、もう一方のOSで
+# 必ず失敗する。標準以外の場所に入れたときだけ player_path を書くこと。
+aquestalk: {}
 
 voicevox:
   url: "http://127.0.0.1:50021"
-  # エンジンが落ちていたらここからヘッドレス自動起動（GUIアプリを開く必要なし）
-  engine_path: "/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run"
+  # エンジンが落ちていたらヘッドレス自動起動する（GUIアプリを開く必要なし）。
+  # **engine_path はここに書かない。** voice.py が OS ごとの既定を持つ:
+  #   macOS   … /Applications/VOICEVOX.app/Contents/Resources/vv-engine/run
+  #   Windows … %LOCALAPPDATA%\Programs\VOICEVOX\vv-engine\run.exe
+  # 標準以外の場所に入れたときだけ engine_path を書くこと。
   # セリフ間の無音（秒）。台本側の pause_after で上書き可能
   default_pause: 0.45
   # 再現ドラマ(mode: drama)の間。短文ラリーの畳みかけ用に詰める
