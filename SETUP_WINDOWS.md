@@ -96,14 +96,16 @@ zip -r -q ~/Desktop/ytf-assets.zip \
 
 Windows 側に Claude Code が入っているなら、**人がやるのは3つだけ**:
 
-1. USBメモリを Windows PC に挿す
+1. 素材を Windows PC に持っていく（USBメモリか、自分のクラウドドライブ経由。
+   **共有リンクは作らないこと**。`client_secret.json` が入っている）
 2. Claude Code を開いて、下の1文を貼る
 3. ⑥ でブラウザが開いたら YouTube の承認を押す
 
 ```
 https://github.com/xxscreeeeeamxx-gif/youtube.git を C:\yt にcloneして、
 SETUP_WINDOWS.md のとおりに移行を完了して。素材とclient_secret.jsonは
-USBメモリの「Windows移行用」フォルダにある。⑦の動作確認まで通して。
+「Windows移行用」フォルダにある（場所は貼るときに書き足すこと）。
+⑦の動作確認まで通して。
 ```
 
 ### エージェント向け: 実行順と検証
