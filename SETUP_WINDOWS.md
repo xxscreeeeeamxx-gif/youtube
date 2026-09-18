@@ -14,19 +14,25 @@
 | リポジトリ全体 | **87 GB** | 全部コピーしてはいけない |
 | └ うち生成物（`out/` `frames/` `audio/`） | **85 GB** | **運ばない**。ビルドし直せば再生成される |
 | └ Git管理分 | 50 MB | `git clone` で入る |
-| └ **Git管理外だが必要な素材** | **1.0 GB** | **手で運ぶ**（下表） |
+| └ **Git管理外だが必要な素材** | **80 MB** | **手で運ぶ**（下表） |
 
-**運ぶのは 1.0 GB だけ。** 外付けSSDやUSBメモリで足りる。
+**運ぶのは 80 MB だけ。** どんなUSBメモリでも入る。
 
 ### 手で運ぶもの（USBメモリ等でコピー）
 
 | フォルダ | 容量 | 中身 | 無いとどうなる |
 |---|---|---|---|
-| `assets/clips/` | 934 MB | 実写クリップ・自作アニメ | 解説回のビルドが落ちる |
 | `assets/bgm/` | 75 MB | BGM | **全動画が無音の章だらけになる** |
 | `assets/characters/` | 4.6 MB | 立ち絵PNG（4キャラ×表情6） | **キャラが出ない** |
 | `assets/se/` | 380 KB | 効果音 | 「ドン」などが鳴らない |
 | `client_secret.json` | 数KB | YouTube APIの認証情報 | 投稿できない |
+
+**`assets/clips/`（934MB）は運ばない**（2026-09-18 に調査して除外）。
+実写クリップと自作アニメが入っているが、参照しているのは**公開済みの動画だけ**で、
+それらは方針上ビルドし直さない。新作の人物物語4本（トヨタ・ブリヂストン・
+サントリー・オムロン）を調べたところ `video:` の参照は**0件**だった。
+新作のアニメは `gen_*_extras.py` がその場で作って `assets/clips/` に書き出すので、
+空のフォルダから始めて問題ない。背景389枚は Git 管理下なので clone で入る。
 
 **`tools/` は運ばない。** 中身は ffmpeg / ffprobe / AquesTalkPlayer の
 **Mac用バイナリだけ**なので、Windows では②③で入れ直す。
@@ -59,9 +65,43 @@ REM    ※ tools と assets\fonts は運ばない
 コピーすれば済むが、`projects` は絶対に含めない）:
 
 ```bash
-zip -r -0 -q ~/Desktop/ytf-assets.zip \
-    assets/clips assets/bgm assets/characters assets/se
+zip -r -q ~/Desktop/ytf-assets.zip \
+    assets/bgm assets/characters assets/se
 ```
+
+---
+
+## 手を動かす人が最小で済むやり方（推奨）
+
+Windows 側に Claude Code が入っているなら、**人がやるのは3つだけ**:
+
+1. USBメモリを Windows PC に挿す
+2. Claude Code を開いて、下の1文を貼る
+3. ⑥ でブラウザが開いたら YouTube の承認を押す
+
+```
+https://github.com/xxscreeeeeamxx-gif/youtube.git を C:\yt にcloneして、
+SETUP_WINDOWS.md のとおりに移行を完了して。素材とclient_secret.jsonは
+USBメモリの「Windows移行用」フォルダにある。⑦の動作確認まで通して。
+```
+
+### エージェント向け: 実行順と検証
+
+人の確認を待たずに通してよい。各手順は必ず検証まで行うこと。
+
+| | やること | 通ったと言える条件 |
+|---|---|---|
+| 0 | `winget` で Python 3.12 / Git / VOICEVOX を入れる | **パッケージIDは推測せず `winget search` で実物を確認してから入れる**。`python --version` が 3.12 を返す |
+| 1 | `git clone ... C:\yt` | `C:\yt\ytf\cli.py` が存在する。**置き場所は C:\yt 固定**（日本語フォルダ名があり260文字制限に当たるため） |
+| 2 | USBの `ytf-assets.zip` を `C:\yt` に展開、`client_secret.json` を `C:\yt` 直下へ | `C:\yt\assets\characters\zunda\normal.png` が存在する |
+| 3 | ① venv と `pip install -r requirements.txt` | `.venv\Scripts\python -c "import PIL,yaml,pydantic"` が通る |
+| 4 | ② ffmpeg / ffprobe を `tools\` へ | `.\tools\ffmpeg.exe -version` が出る |
+| 5 | ③ AquesTalkPlayer（Windows版） | **配布ページからの入手は人の操作が要る場合がある。要るなら止めて頼むこと**。置き場所は `tools\AquesTalkPlayer\AquesTalkPlayer.exe` |
+| 6 | ⑥ `upload_youtube.py auth` | **承認は人が押す。代わりに押さない。**ブラウザを開くところまでやって待つ |
+| 7 | ⑦ の動作確認5本 | 5本とも通る |
+
+**触らなくていいもの**: ④フォント（同梱済み）、`channel.yaml` の
+`engine_path`/`player_path`（書くとOS判定を壊す。②③で既定の場所に置けば足りる）。
 
 ---
 
