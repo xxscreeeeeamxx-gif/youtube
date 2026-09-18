@@ -24,7 +24,7 @@
 |---|---|---|---|
 | `assets/clips/` | 934 MB | 実写クリップ・自作アニメ | 解説回のビルドが落ちる |
 | `assets/bgm/` | 75 MB | BGM | **全動画が無音の章だらけになる** |
-| `assets/characters/` | 4.6 MB | 立ち絵PSD | **キャラが出ない** |
+| `assets/characters/` | 4.6 MB | 立ち絵PNG（4キャラ×表情6） | **キャラが出ない** |
 | `assets/se/` | 380 KB | 効果音 | 「ドン」などが鳴らない |
 | `client_secret.json` | 数KB | YouTube APIの認証情報 | 投稿できない |
 
@@ -247,8 +247,10 @@ REM 5. YouTubeに繋がるか（送信はしない）
   ディスクが小さいPCでは、こまめに消す。
 - **faster-whisper が初回だけモデルを落とす**（数百MB）。読み検査の3種目で使う。
   オフラインのPCでは事前にモデルを取得しておくこと。
-- **立ち絵の PSD（`assets/characters/`）は `.gitignore` 対象**。二次配布禁止のため
-  コミットしていない。手で運ぶか、`assets/characters/SOURCES.md` の入手元から
+- **立ち絵（`assets/characters/`）は `.gitignore` 対象**。二次配布禁止のため
+  コミットしていない。中身は PSD ではなく**書き出し済みの PNG**で、
+  `zunda/ tsumugi/ zundamon/ metan/` の下に `normal happy sad surprised thinking angry`
+  の6枚ずつ（計24枚）。手で運ぶか、`assets/characters/SOURCES.md` の入手元から
   落とし直す。無いと `make` がキャラを描けない。
 
 ---
