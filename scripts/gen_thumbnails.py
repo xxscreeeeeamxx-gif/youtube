@@ -31,8 +31,12 @@ W, H = 1280, 720
 cfg = Config.load()
 
 FONT_DIR = Path("assets/fonts")
+from ytf.config import resolve_font  # noqa: E402
+
 FONTS = {
-    "w9": "/System/Library/Fonts/ヒラギノ角ゴシック W9.ttc",
+    # **OS直書きにしない**（2026-09-18 Windows移行の準備）。
+    # 同梱の Noto Sans JP Black があればそれを使い、無ければOS標準を探す
+    "w9": resolve_font("w9", cfg.root),
     "genkai": str(FONT_DIR / "genkai-mincho.ttf"),
     "851": str(FONT_DIR / "851CHIKARA-DZUYOKU_kanaA_004.ttf"),
 }

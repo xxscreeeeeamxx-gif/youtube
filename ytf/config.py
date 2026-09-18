@@ -167,6 +167,56 @@ class Project:
         return Script.model_validate(data)
 
 
+
+# ===== フォントの解決（macOS / Windows 両対応）=====
+# ヒラギノは macOS にしか無い。Windows では同じ重さの和文フォントが標準で入って
+# いないので、**リポジトリ同梱の Noto Sans JP Black を最優先で探す**。
+# これがあれば両OSで見た目が一致する。無い場合だけOS標準にフォールバックする。
+# （2026-09-18 Windows移行の準備で追加）
+FONT_CANDIDATES = {
+    # 極太ゴシック。サムネの見出しと本編のテロップに使う
+    "w9": [
+        "assets/fonts/NotoSansJP-Black.otf",
+        "assets/fonts/NotoSansJP-Black.ttf",
+        "/System/Library/Fonts/ヒラギノ角ゴシック W9.ttc",          # macOS
+        "C:/Windows/Fonts/BIZ-UDPGothicB.ttc",                      # Windows 10/11
+        "C:/Windows/Fonts/YuGothB.ttc",                             # 游ゴシック Bold
+        "C:/Windows/Fonts/meiryob.ttc",                             # メイリオ Bold
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc",      # Linux
+    ],
+    # 太ゴシック。本文・スライド用
+    "w6": [
+        "assets/fonts/NotoSansJP-Bold.otf",
+        "assets/fonts/NotoSansJP-Bold.ttf",
+        "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc",
+        "/System/Library/Fonts/Hiragino Sans GB.ttc",
+        "C:/Windows/Fonts/BIZ-UDPGothicB.ttc",
+        "C:/Windows/Fonts/YuGothB.ttc",
+        "C:/Windows/Fonts/meiryob.ttc",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+    ],
+}
+
+
+def resolve_font(kind: str, root: Path | None = None) -> str:
+    """フォントの実ファイルを探す。見つからなければ何が要るかを具体的に言う。"""
+    root = root or Path.cwd()
+    for cand in FONT_CANDIDATES.get(kind, []):
+        p = Path(cand)
+        if not p.is_absolute():
+            p = root / cand
+        if p.exists():
+            return str(p)
+    raise SystemExit(
+        f"フォント（{kind}）が見つかりません。\n"
+        "  Windows で動かす場合は Noto Sans JP を入れてください:\n"
+        "    https://fonts.google.com/noto/specimen/Noto+Sans+JP から\n"
+        "    Black(900) と Bold(700) を assets/fonts/ に置く\n"
+        "    （ファイル名: NotoSansJP-Black.otf / NotoSansJP-Bold.otf）\n"
+        "  これを入れると macOS と Windows で見た目が一致します。"
+    )
+
+
 def ffmpeg_bin() -> str:
     return os.environ.get("YTF_FFMPEG", "ffmpeg")
 

@@ -120,10 +120,18 @@ subtitles:
 
 # Pillow描画（見出し・スライド・サムネ）用フォントファイルの探索順
 fonts:
+  # 上から順に探して、最初に見つかったものを使う。
+  # **同梱フォントを先頭に置く**ことで、macOSとWindowsで見た目が揃う
+  # （2026-09-18 Windows移行の準備）
   paths:
-    - "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc"
+    - "assets/fonts/NotoSansJP-Bold.otf"
+    - "assets/fonts/NotoSansJP-Bold.ttf"
+    - "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc"        # macOS
     - "/System/Library/Fonts/Hiragino Sans GB.ttc"
-    - "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
+    - "C:/Windows/Fonts/BIZ-UDPGothicB.ttc"                    # Windows 10/11
+    - "C:/Windows/Fonts/YuGothB.ttc"
+    - "C:/Windows/Fonts/meiryob.ttc"
+    - "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"     # Linux
     - "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
 
 llm:

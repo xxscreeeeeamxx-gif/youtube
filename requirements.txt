@@ -1,0 +1,34 @@
+# yt-factory の依存パッケージ
+# Windows / macOS どちらでも入る（プラットフォーム固有のものは無い）
+#
+#   python -m venv .venv
+#   .venv\Scripts\python -m pip install -r requirements.txt   （Windows）
+#   .venv/bin/python -m pip install -r requirements.txt       （macOS）
+#
+# ★Python 3.9 で動かす場合は eval_type_backport が必須（`X | None` 記法のため）。
+#   3.10以降なら無くてもよいが、入れておいて害はない
+
+# --- 画像・動画 ---
+Pillow
+aggdraw                 # gen_*_bgs.py のアンチエイリアス描画
+numpy
+psd-tools               # 立ち絵PSDの読み込み
+qrcode                  # QRコード回の素材生成
+
+# --- 音声・読み検査 ---
+requests                # VOICEVOX エンジンのHTTP API
+pykakasi                # 読みのクロス照合
+Janome                  # 形態素解析（読み検査の多数決）
+jaconv                  # かな変換
+faster-whisper          # ナレーションの書き起こし照合（重い。CPUでも動く）
+
+# --- YouTube ---
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+
+# --- 設定・スキーマ ---
+PyYAML
+pydantic
+eval_type_backport      # Python 3.9 で `X | None` を使うため

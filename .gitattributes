@@ -1,0 +1,14 @@
+# 改行コードを固定する（Windows と macOS を行き来するため。2026-09-18）
+# これが無いと、Git の autocrlf 設定次第で同じファイルが差分だらけになる。
+* text=auto eol=lf
+
+# バイナリは触らせない
+*.png  binary
+*.jpg  binary
+*.mp4  binary
+*.mp3  binary
+*.wav  binary
+*.psd  binary
+*.ttf  binary
+*.otf  binary
+*.ttc  binary

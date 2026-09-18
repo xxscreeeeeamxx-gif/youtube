@@ -46,7 +46,18 @@ class CutTiming:
 
 
 # macOS版VOICEVOXアプリに同梱されているエンジン単体バイナリ（GUI不要で起動できる）
-DEFAULT_ENGINE_BIN = "/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run"
+def _default_engine_bin() -> str:
+    """VOICEVOXエンジンの既定パス。OSで置き場所が違う（2026-09-18 Windows対応）。
+    channel.yaml の voicevox.engine_path で上書きできる。"""
+    import os
+    import sys
+    if sys.platform == "win32":
+        local = os.environ.get("LOCALAPPDATA", "")
+        return str(Path(local) / "Programs" / "VOICEVOX" / "vv-engine" / "run.exe")
+    return "/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run"
+
+
+DEFAULT_ENGINE_BIN = _default_engine_bin()
 
 
 def ensure_engine(cfg) -> "VoicevoxClient":
@@ -191,14 +202,35 @@ def aquestalk_synthe(cfg: Config, text: str, preset: str, speed: float) -> bytes
 
     from .config import ffmpeg_bin
 
-    bin_path = cfg.root / cfg.get(
-        "aquestalk", "player_path",
-        default="tools/AquesTalkPlayer.app/Contents/MacOS/AquesTalkPlayer")
+    # **Windows と macOS でバイナリの場所もオプション形式も違う**（2026-09-18）。
+    #   macOS : AquesTalkPlayer.app/Contents/MacOS/AquesTalkPlayer  -T -P -W
+    #   Windows: AquesTalkPlayer.exe                                /T /P /W
+    # オプションの接頭辞を間違えると、引数が本文として読み上げられる
+    import sys
+    win = sys.platform == "win32"
+    default_bin = ("tools/AquesTalkPlayer/AquesTalkPlayer.exe" if win
+                   else "tools/AquesTalkPlayer.app/Contents/MacOS/AquesTalkPlayer")
+    bin_path = cfg.root / cfg.get("aquestalk", "player_path", default=default_bin)
+    if not bin_path.exists() and win:
+        # 既定のインストール先も見る
+        import os
+        for base in (os.environ.get("ProgramFiles", ""),
+                     os.environ.get("ProgramFiles(x86)", "")):
+            if not base:
+                continue
+            c = Path(base) / "AquesTalkPlayer" / "AquesTalkPlayer.exe"
+            if c.exists():
+                bin_path = c
+                break
     if not bin_path.exists():
         raise SystemExit(
             f"AquesTalkPlayer がありません: {bin_path}\n"
-            "https://www.a-quest.com/products/aquestalkplayer.html の"
-            "Mac版dmgを tools/AquesTalkPlayer.app に展開してください")
+            "https://www.a-quest.com/products/aquestalkplayer.html から入手し、\n"
+            + ("  Windows版を tools/AquesTalkPlayer/ に展開するか、通常どおりインストール\n"
+               "  （channel.yaml の aquestalk.player_path でパスを指定してもよい）"
+               if win else
+               "  Mac版dmgを tools/AquesTalkPlayer.app に展開してください"))
+    opt = "/" if win else "-"
     # 分かち書きのスペースは AquesTalk では1個につき約0.18秒の「間」になり、
     # 1文が細切れに聞こえる（ユーザー指摘 2026-08）。台本は可読性のため
     # スペースを残せるようにし、合成の直前でだけ取り除く
@@ -206,7 +238,7 @@ def aquestalk_synthe(cfg: Config, text: str, preset: str, speed: float) -> bytes
     with tempfile.TemporaryDirectory() as td:
         raw = Path(td) / "raw.wav"
         subprocess.run(
-            [str(bin_path), "-T", text, "-P", preset, "-W", str(raw)],
+            [str(bin_path), f"{opt}T", text, f"{opt}P", preset, f"{opt}W", str(raw)],
             check=True, timeout=120,
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         if not raw.exists():

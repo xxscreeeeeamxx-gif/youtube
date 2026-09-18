@@ -16,7 +16,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
-FP = "/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc"
+from ytf.config import resolve_font  # noqa: E402
+
+FP = resolve_font("w6")
 W, H = 2560, 1440
 SAFE_W, SAFE_H = 1546, 423
 SX0, SY0 = (W - SAFE_W) // 2, (H - SAFE_H) // 2  # 507, 508
