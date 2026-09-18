@@ -46,6 +46,10 @@ tools/AquesTalkPlayer.app/
 assets/fonts/*.ttf
 assets/fonts/*.otf
 assets/fonts/*.ttc
+# Noto Sans JP は SIL OFL（再配布可）。両OSで同じ絵を出すため同梱する
+!assets/fonts/NotoSansJP-Black.otf
+!assets/fonts/NotoSansJP-Bold.otf
+
 
 # YouTube Data API の認証情報（絶対にコミットしない）
 client_secret.json

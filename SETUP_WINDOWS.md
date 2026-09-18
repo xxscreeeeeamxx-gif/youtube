@@ -1,7 +1,8 @@
 # Windows PC への移行手順
 
 このリポジトリを Windows で動かすための手順。
-**コードは両OS対応済み**（2026-09-18）。あとは外部ツールとフォントを入れるだけ。
+**コードもフォントも両OS対応済み**（2026-09-18）。あとは外部ツール3つ
+（ffmpeg / AquesTalkPlayer / VOICEVOX）と素材1.0GBを入れるだけ。
 
 移行で引っかかるのは、コードではなく**リポジトリに入っていないもの**。
 ライセンス上コミットできない素材が多く、`git clone` しただけでは動かない。
@@ -13,28 +14,31 @@
 | リポジトリ全体 | **87 GB** | 全部コピーしてはいけない |
 | └ うち生成物（`out/` `frames/` `audio/`） | **85 GB** | **運ばない**。ビルドし直せば再生成される |
 | └ Git管理分 | 50 MB | `git clone` で入る |
-| └ **Git管理外だが必要な素材** | **1.1 GB** | **手で運ぶ**（下表） |
+| └ **Git管理外だが必要な素材** | **1.0 GB** | **手で運ぶ**（下表） |
 
-**運ぶのは 1.1 GB だけ。** 外付けSSDやUSBメモリで足りる。
+**運ぶのは 1.0 GB だけ。** 外付けSSDやUSBメモリで足りる。
 
 ### 手で運ぶもの（USBメモリ等でコピー）
 
 | フォルダ | 容量 | 中身 | 無いとどうなる |
 |---|---|---|---|
 | `assets/clips/` | 934 MB | 実写クリップ・自作アニメ | 解説回のビルドが落ちる |
-| `tools/` | 138 MB | ffmpeg / AquesTalkPlayer | **何も動かない**（※Windows版に差し替え） |
 | `assets/bgm/` | 75 MB | BGM | **全動画が無音の章だらけになる** |
-| `assets/fonts/` | 26 MB | 源界明朝・851チカラヅヨク | サムネが作れない |
 | `assets/characters/` | 4.6 MB | 立ち絵PSD | **キャラが出ない** |
 | `assets/se/` | 380 KB | 効果音 | 「ドン」などが鳴らない |
 | `client_secret.json` | 数KB | YouTube APIの認証情報 | 投稿できない |
 
-**`tools/` だけは中身を入れ替える**（Mac用バイナリが入っているため。②③参照）。
-ほかはそのままコピーでよい。`.ttf` も `.psd` も `.mp3` もOS非依存。
+**`tools/` は運ばない。** 中身は ffmpeg / ffprobe / AquesTalkPlayer の
+**Mac用バイナリだけ**なので、Windows では②③で入れ直す。
+ほかはそのままコピーでよい。`.psd` も `.mp3` も `.mp4` もOS非依存。
+
+**フォントも運ばなくてよい**（2026-09-18 変更）。Noto Sans JP を
+リポジトリに同梱したので `git clone` で入る。④参照。
 
 ### 運ばないもの
 
 - `projects/**/out/` `frames/` `audio/` — **85GBの正体**。ビルドで再生成される
+- `tools/` — Mac用バイナリ。Windows版を入れ直す（②③）
 - `.venv/` — OSが違うので作り直す（①）
 - `.youtube_token.json` — 2台で共有すると片方が弾かれる。各PCで取り直す（⑥）
 
@@ -46,17 +50,17 @@ git clone <リポジトリのURL> C:\yt
 cd C:\yt
 
 REM 2. Macから素材をコピー（USBメモリ経由）
-REM    assets\clips assets\bgm assets\fonts assets\characters assets\se
-REM    tools（中身は後で入れ替える）
+REM    assets\clips assets\bgm assets\characters assets\se
 REM    client_secret.json
+REM    ※ tools と assets\fonts は運ばない
 ```
 
 **Mac側でUSBに入れるときは、生成物を除いて固めること**（そのまま `assets` を
 コピーすれば済むが、`projects` は絶対に含めない）:
 
 ```bash
-tar czf /Volumes/USB/ytf-assets.tgz assets/clips assets/bgm assets/fonts \
-    assets/characters assets/se client_secret.json
+zip -r -0 -q ~/Desktop/ytf-assets.zip \
+    assets/clips assets/bgm assets/characters assets/se
 ```
 
 ---
@@ -130,34 +134,32 @@ GUI を一度起動して、同じ名前のプリセットがあるか確認す�
 
 ---
 
-## ④ フォント ★ここが一番の落とし穴
+## ④ フォント（作業不要）
 
-**ヒラギノ角ゴシック W9 は macOS 専用**で、Windows には入っていない。
-サムネの見出しと本編のテロップが全部これを使っている。
+**2026-09-18 に解決済み。何もしなくていい。**
 
-### 推奨: Noto Sans JP を入れて両OSで見た目を揃える
-
-https://fonts.google.com/noto/specimen/Noto+Sans+JP から
-**Black (900)** と **Bold (700)** を落とし、`assets\fonts\` に置く。
+以前はここが最大の落とし穴だった（ヒラギノ角ゴシック W9 は macOS 専用で、
+サムネの見出しも本編のテロップも全部これを使っていたため）。
+**Noto Sans JP をリポジトリに同梱した**ので、`git clone` した時点で入っている。
 
 ```
-assets\fonts\NotoSansJP-Black.otf
-assets\fonts\NotoSansJP-Bold.otf
+assets/fonts/NotoSansJP-Black.otf   4.6 MB   w9（見出し・テロップ）
+assets/fonts/NotoSansJP-Bold.otf    4.4 MB   w6（本文・スライド）
 ```
 
-**同梱フォントは探索順の先頭**なので、これを置けば Mac でもこちらが使われ、
-**両OSで完全に同じ絵が出る**。ライセンスは SIL Open Font License（商用可）。
+`resolve_font()` の**探索順の先頭**なので、Mac でもこちらが使われる。
+つまり**どちらのPCで作っても字形が完全に一致する**。
+ライセンスは SIL Open Font License 1.1（再配布可・商用可）。
 
-置かない場合は OS 標準にフォールバックする（BIZ UDPGothic Bold →
-游ゴシック Bold → メイリオ Bold の順）。ただし**ヒラギノ W9 より細いので、
-サムネの印象が変わる**。既存32本と並べたときに浮く。
+ヒラギノ W9 との差は実測で見出し幅924px一致・縦線がわずかに細い程度で、
+サムネの実寸168pxでは見分けがつかない。既存32本と並べても浮かない。
 
-### サムネ用の飾りフォント
+### 飾りフォント（源界明朝・851チカラヅヨク）は要らない
 
-`assets\fonts\SOURCES.md` の入手元から落とし直す（どちらも .ttf なのでOS非依存）。
-
-- `genkai-mincho.ttf` — 源界明朝
-- `851CHIKARA-DZUYOKU_kanaA_004.ttf` — 851チカラヅヨク
+サムネを2分割に作り直した時点（2026-09-12）で**全SPECから外れている**。
+現在はすべて `layout="panels"` ＋ `font("w9")` のみ。
+`gen_thumbnails.py` の `FONTS` 辞書に定義だけ残っているが、どこからも呼ばれない。
+**Windows に持っていく必要はない**（どちらも再配布不可なので Git にも入っていない）。
 
 ---
 
@@ -224,7 +226,9 @@ REM 5. YouTubeに繋がるか（送信はしない）
 ```
 
 **2 でサムネを出したら、Macで作った既存のサムネと並べて見比べること。**
-フォントが違うと字の太さが変わる。同じに見えなければ ④ をやり直す。
+同梱フォントを使うので一致するはずだが、ここがズレていれば
+`assets/fonts/NotoSansJP-Black.otf` が clone されていない
+（＝OS標準フォントに落ちている）。1 の出力で実際のパスが確認できる。
 
 ---
 
