@@ -10,3 +10,28 @@
 
 - `<フォルダ>/<emotion>.png`（normal/happy/surprised/thinking/angry/sad）を置く。無い感情は normal にフォールバック
 - 未入手の間は `ytf assets --init` のプレースホルダーで代用できる
+
+## 失ったときの復旧手順（2026-09-18 追記）
+
+**PSD本体はこのリポジトリにも手元にも残っていない**（確認済み・0個）。
+PNGだけを保持している。復旧は2段階になる。
+
+1. 上表の入手元から PSD を落とす。**ここは手作業**
+   （ずんだもんは getuploader のパスワード入力が要る）
+2. 書き出しは自動化済み:
+
+   ```bash
+   PYTHONPATH=. python3 scripts/export_zundamon_sprites.py <PSDファイル>
+   PYTHONPATH=. python3 scripts/export_tsumugi_sprites.py <PSDファイル>
+   ```
+
+   PSDTool形式のレイヤー可視状態を切り替えて6感情を書き出し、
+   共通bboxで切り抜く。`assets/characters/<キャラ>/<emotion>.png` に出る。
+
+`zunda/` と `metan/` は上の2スクリプトの対象外。失うと復旧手順が無いので、
+**PNGのバックアップを別途持っておくこと**（このフォルダ全体で4.6MB）。
+
+## この素材をコミットしてはいけない
+
+二次配布禁止のため、公開・非公開を問わず GitHub に上げない。
+PC間の移動はUSBメモリか自分のクラウドドライブで行う。
