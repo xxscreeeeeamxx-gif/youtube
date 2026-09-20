@@ -324,6 +324,11 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
     cache_dir.mkdir(parents=True, exist_ok=True)
     dict_sig = json.dumps(load_dictionary(cfg), ensure_ascii=False, sort_keys=True)
 
+    # AquesTalk1（棒読みちゃん同梱DLL）は音声記号列しか受け付けないので、
+    # 漢字→カタカナに自前で直す。その読み台帳はカットごとに読み直さず一度だけ。
+    from . import aq1
+    aq1_ledger = aq1.load_ledger(cfg, proj)
+
     # 章の切替でトランジションを見せるための、先頭カット前の無音（間）
     trans_on = bool(cfg.get("video", "transition", "enabled", default=True))
     trans_lead = float(cfg.get("video", "transition", "lead", default=1.8))
@@ -360,12 +365,22 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 # 誤読の手動修正: 読み上げだけを差し替える（表示は text のまま）
                 spoken = cut.reading
             engine = cfg.character(cut.speaker).get("engine", "voicevox")
+            koe = None
             if engine == "aquestalk":
                 # ゆっくりボイス（ナレーター等）: AquesTalkPlayerのCLIで合成
                 ch = cfg.character(cut.speaker)
                 preset = ch.get("aquestalk_preset", "れいむ")
                 speed = float(ch.get("speed_scale", 1.0))
                 key_src = f"{spoken}|aquestalk|{preset}|{speed}|{tts}|nosp1|kanji1"
+            elif engine == "aquestalk1":
+                # ゆっくりボイス（棒読みちゃん同梱のAquesTalk1 DLLを直接叩く）。
+                # キャッシュキーは変換後の音声記号列で取る。台帳を直したら
+                # 読みが変わるので、そのとき確実に再合成させるため。
+                ch = cfg.character(cut.speaker)
+                aq1_voice = ch.get("aquestalk1_voice", aq1.DEFAULT_VOICE)
+                speed = float(ch.get("speed_scale", 1.0))
+                koe = aq1.to_koe(spoken, aq1_ledger)
+                key_src = f"{koe}|aquestalk1|{aq1_voice}|{speed}|{tts}"
             else:
                 style_id, speed, pitch, intonation = style_for(
                     cfg, cut.speaker, cut.emotion)
@@ -389,6 +404,8 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                     data = dummy_wav(spoken, speed)
                 elif engine == "aquestalk":
                     data = aquestalk_synthe(cfg, spoken, preset, speed)
+                elif engine == "aquestalk1":
+                    data = aq1.synthe(cfg, koe, aq1_voice, speed)
                 else:
                     data = client.synthesize(spoken, style_id, speed, pitch, intonation)
                     moras = extract_moras(client.last_query)

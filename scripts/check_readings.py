@@ -107,7 +107,7 @@ def main(slug: str) -> int:
 
     # ---- 1) 静的検査 ----
     # 名札(stage.tag / mobs.label)は表示専用。読みタグ記法を書くと画面にそのまま出る
-    raw = (Path(proj.root) / "script.yaml").read_text()
+    raw = (Path(proj.root) / "script.yaml").read_text(encoding="utf-8")
     for m in re.finditer(r'(?:tag|label): "(\[[^"]*\])"', raw):
         problems.append(f"名札に読みタグ記法: {m.group(1)} "
                         f"（tag/label は表示名のみ。読みは本文側の [表示|よみ] で指定する）")

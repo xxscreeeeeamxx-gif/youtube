@@ -75,7 +75,7 @@ BASE_TAGS = ["ずんだもん", "春日部つむぎ", "ゆっくり解説", "再
 
 
 def parse_metadata(path: Path):
-    text = path.read_text()
+    text = path.read_text(encoding="utf-8")
     sec = {}
     cur = None
     for line in text.splitlines():
@@ -123,7 +123,7 @@ def build_entry(slug: str, pdir: Path = None):
     if not meta_path.exists() or not script_path.exists():
         return None
     sec = parse_metadata(meta_path)
-    meta = yaml.safe_load(script_path.read_text()).get("meta", {})
+    meta = yaml.safe_load(script_path.read_text(encoding="utf-8")).get("meta", {})
     title = TITLES.get(slug)
     if not title:
         title = sec.get("タイトル", meta.get("title", slug)).strip()
@@ -182,7 +182,7 @@ if __name__ == "__main__":
             continue
         # slug はフォルダ名ではなく script.yaml の meta.slug（TITLES のキー）
         try:
-            slug = (yaml.safe_load((p / "script.yaml").read_text())
+            slug = (yaml.safe_load((p / "script.yaml").read_text(encoding="utf-8"))
                     or {}).get("meta", {}).get("slug") or p.name
         except Exception:
             slug = p.name
@@ -191,7 +191,7 @@ if __name__ == "__main__":
         if is_uploaded(p) and not _a.refresh_uploaded:
             f = p / "youtube.txt"
             if f.exists():
-                out_all.append(f"{'=' * 60}\n【{p.name}】(公開済み)\n{'=' * 60}\n{f.read_text()}")
+                out_all.append(f"{'=' * 60}\n【{p.name}】(公開済み)\n{'=' * 60}\n{f.read_text(encoding="utf-8")}")
                 count += 1
             continue
         if slug in SKIP:
@@ -202,9 +202,10 @@ if __name__ == "__main__":
         title, description, tag_line = entry
         text = (f"■タイトル\n{title}\n\n■説明文\n{description}\n\n"
                 f"■タグ（Studioのタグ欄用・視聴者には見えない）\n{tag_line}\n")
-        (p / "youtube.txt").write_text(text)
+        (p / "youtube.txt").write_text(text, encoding="utf-8")
         out_all.append(f"{'=' * 60}\n【{slug}】\n{'=' * 60}\n{text}")
         count += 1
     Path("assets/branding").mkdir(exist_ok=True)
-    Path("assets/branding/youtube_all.txt").write_text("\n".join(out_all))
+    Path("assets/branding/youtube_all.txt").write_text(
+        "\n".join(out_all), encoding="utf-8")
     print(f"生成: {count} 本 → projects/*/youtube.txt + assets/branding/youtube_all.txt")

@@ -106,7 +106,7 @@ def ensure_mob_sprites(cfg: Config, proj: Project, script) -> None:
         out_dir.mkdir(parents=True, exist_ok=True)
         sig = f"{mob.label}|{mob.hair}|{mob.item}|{mob.photo}|v2"
         sig_file = out_dir / ".sig"
-        if sig_file.exists() and sig_file.read_text() == sig \
+        if sig_file.exists() and sig_file.read_text(encoding="utf-8") == sig \
                 and (out_dir / "normal.png").exists():
             continue
         photo = (proj.root / mob.photo) if mob.photo else None
@@ -115,7 +115,7 @@ def ensure_mob_sprites(cfg: Config, proj: Project, script) -> None:
         img = _draw_mob(mob, photo, font_path)
         for emo in EMOTIONS:
             img.save(out_dir / f"{emo}.png")
-        sig_file.write_text(sig)
+        sig_file.write_text(sig, encoding="utf-8")
         print(f"モブ生成: {mob.id}（{mob.label}）")
 
 

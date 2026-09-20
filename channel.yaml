@@ -45,10 +45,14 @@ characters:
     role: "ちょっとアホな生徒役。語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。視聴者と同じ勘違いをして驚き、質問し、突っ込まれる。"
   reimu:
     display_name: "ナレーター"
-    credit: "AquesTalkPlayer（株式会社アクエスト）"
-    # ゆっくりボイス。VOICEVOXではなくAquesTalkPlayer(公式Mac版)のCLIで合成する
-    engine: aquestalk
-    aquestalk_preset: "中性"   # ユーザー選定（2026-07 サンプル7種から）
+    credit: "AquesTalk（株式会社アクエスト）"
+    # ゆっくりボイス。Windows移行に伴い、AquesTalkPlayer(公式Mac版)から
+    # 棒読みちゃん同梱の AquesTalk1 DLL を直接叩く方式に変更（2026-09-20）。
+    # 旧設定は engine: aquestalk / aquestalk_preset: "中性"（Mac専用・コードは残置）
+    engine: aquestalk1
+    # 声質は8種（f1 f2 m1 m2 r1 dvd jgr imd1）。棒読みちゃんの声質5「中性」に
+    # あたるフォルダ名は公開資料が無く、基本周波数の実測から imd1 と判断した
+    aquestalk1_voice: imd1
     speed_scale: 1.3   # お手本準拠で速め。AquesTalkに話速パラメータはないのでffmpeg atempoで調整
     color: "#FF6B6B"
     role: "再現ドラマのナレーター。です・ます調で史実・数字・年号を淡々と補足し、ボケには乗らず、時々オチだけ静かに回収する。"

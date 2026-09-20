@@ -134,7 +134,7 @@ def check_slug(slug: str) -> int:
     if not tj.exists():
         print(f"({slug}: timing.json なし・スキップ)")
         return 0
-    cuts = json.loads(tj.read_text())
+    cuts = json.loads(tj.read_text(encoding="utf-8"))
     hits = 0
     for i, c in enumerate(cuts):
         moras = c.get("moras") or []

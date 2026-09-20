@@ -85,7 +85,10 @@ def find_project_dir(root: Path, name: str) -> Path | None:
     import yaml as _yaml
     for sp in cands:
         try:
-            meta = (_yaml.safe_load(sp.read_text()) or {}).get("meta", {})
+            # encoding を省くと Windows では cp932 で開かれ、日本語の script.yaml が
+            # UnicodeDecodeError になる。それが except で握り潰され「プロジェクトが
+            # 見つかりません」に化けていた（2026-09-20 Windows移行時に判明）
+            meta = (_yaml.safe_load(sp.read_text(encoding="utf-8")) or {}).get("meta", {})
         except Exception:
             continue
         if meta.get("slug") == name:

@@ -24,8 +24,8 @@ def main() -> None:
     root = find_project_dir(Config.load().root, slug)
     if root is None:
         raise SystemExit(f"プロジェクトが見つかりません: {slug}")
-    t = json.loads((root / "audio" / "timing.json").read_text())
-    s = yaml.safe_load((root / "script.yaml").read_text())
+    t = json.loads((root / "audio" / "timing.json").read_text(encoding="utf-8"))
+    s = yaml.safe_load((root / "script.yaml").read_text(encoding="utf-8"))
     cuts = [c for sc in s["scenes"] for c in sc["cuts"]]
     for i, c in enumerate(cuts):
         v = c.get("video")

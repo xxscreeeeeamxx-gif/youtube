@@ -38,7 +38,7 @@ REACT = ["それな", "その発想はなかった", "完全に一致", "情報�
 def review(slug: str) -> list:
     from ytf.config import Config, find_project_dir
     root = find_project_dir(Config.load().root, slug)
-    y = yaml.safe_load((root / "script.yaml").read_text())
+    y = yaml.safe_load((root / "script.yaml").read_text(encoding="utf-8"))
     meta = y.get("meta") or {}
     cuts = [(s["id"], c) for s in y["scenes"] for c in s["cuts"]]
     out = []
@@ -125,7 +125,7 @@ def main():
     if not slugs:
         slugs = []
         for sp in sorted((cfg.root / "projects" / "未アップロード").rglob("script.yaml")):
-            s = (yaml.safe_load(sp.read_text()).get("meta") or {}).get("slug")
+            s = (yaml.safe_load(sp.read_text(encoding="utf-8")).get("meta") or {}).get("slug")
             if s:
                 slugs.append(s)
     total = 0

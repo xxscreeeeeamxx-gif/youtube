@@ -39,10 +39,11 @@ dist/
 # 立ち絵素材（二次配布禁止のためコミットしない。入手元は assets/characters/SOURCES.md）
 assets/characters/*
 !assets/characters/SOURCES.md
-# 静的ffmpeg/ffprobe（65MB級なのでコミットしない。入手方法は SKILL.md 参照）
-tools/ffmpeg
-tools/ffprobe
-tools/AquesTalkPlayer.app/
+# 外部バイナリ置き場。OSごとに入れ直すものなのでコミットしない（入手方法は SETUP_WINDOWS.md 参照）
+#   旧来は tools/ffmpeg など個別指定だったが、Windows の .exe や
+#   tools/BouyomiChan/ が漏れて公開リポジトリに200MB入りかけたため、丸ごと除外に変更（2026-09-20）
+#   ※ 自作スクリプトは tools/ ではなく scripts/ に置くこと
+tools/
 .DS_Store
 assets/fonts/*.ttf
 assets/fonts/*.otf
@@ -55,3 +56,6 @@ assets/fonts/*.ttc
 # YouTube Data API の認証情報（絶対にコミットしない）
 client_secret.json
 .youtube_token.json
+
+# Mac からの移行時の受け渡しフォルダ（client_secret.json が入る。publicリポジトリのため絶対にコミットしない）
+Windows移行用/

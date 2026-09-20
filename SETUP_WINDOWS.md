@@ -2,7 +2,8 @@
 
 このリポジトリを Windows で動かすための手順。
 **コードもフォントも両OS対応済み**（2026-09-18）。あとは外部ツール3つ
-（ffmpeg / AquesTalkPlayer / VOICEVOX）と素材1.0GBを入れるだけ。
+（ffmpeg / 棒読みちゃん / VOICEVOX）と素材80MBを入れるだけ。
+※ゆっくり音声は AquesTalkPlayer から棒読みちゃん同梱のAquesTalk1に変更した（2026-09-20・③参照）
 
 移行で引っかかるのは、コードではなく**リポジトリに入っていないもの**。
 ライセンス上コミットできない素材が多く、`git clone` しただけでは動かない。
@@ -119,7 +120,7 @@ SETUP_WINDOWS.md のとおりに移行を完了して。素材とclient_secret.j
 | 2 | USBの `ytf-assets.zip` を `C:\yt` に展開、`client_secret.json` を `C:\yt` 直下へ | `C:\yt\assets\characters\zunda\normal.png` が存在する |
 | 3 | ① venv と `pip install -r requirements.txt` | `.venv\Scripts\python -c "import PIL,yaml,pydantic"` が通る |
 | 4 | ② ffmpeg / ffprobe を `tools\` へ | `.\tools\ffmpeg.exe -version` が出る |
-| 5 | ③ AquesTalkPlayer（Windows版） | **配布ページからの入手は人の操作が要る場合がある。要るなら止めて頼むこと**。置き場所は `tools\AquesTalkPlayer\AquesTalkPlayer.exe` |
+| 5 | ③ 棒読みちゃん（同梱のAquesTalk1を使う） | `BouyomiChan.zip` を `tools\BouyomiChan\` に展開。`tools\BouyomiChan\AquesTalk\imd1\AquesTalk.dll` が存在する |
 | 6 | ⑥ `upload_youtube.py auth` | **承認は人が押す。代わりに押さない。**ブラウザを開くところまでやって待つ |
 | 7 | ⑦ の動作確認5本 | 5本とも通る |
 
@@ -166,9 +167,38 @@ https://www.gyan.dev/ffmpeg/builds/ の `ffmpeg-release-essentials.zip` を落�
 
 ---
 
-## ③ AquesTalkPlayer（ゆっくり音声）
+## ③ ゆっくり音声（棒読みちゃん同梱の AquesTalk1）
 
 **人物物語のナレーションは全部これ**。無いとドラマ回が作れない。
+
+**2026-09-20 に AquesTalkPlayer から乗り換えた。** 公式の配布パスが直リンクを
+403 で弾くうえ、収益化したときに商用ライセンス（¥6,380/年）が要るため。
+棒読みちゃんに同梱されている旧版 AquesTalk は、同梱の `AqLicence.txt` に
+「個人利用、商用利用を問わず」使用・再配布できると明記されていて無償で使える。
+
+入手と設置:
+
+1. https://chi.usamimi.info/Program/Application/BouyomiChan/ から
+   `BouyomiChan.zip`（Vector 経由・約1.5MB）を落とす
+2. `tools\BouyomiChan\` に展開する。
+   `tools\BouyomiChan\AquesTalk\imd1\AquesTalk.dll` があれば成功
+
+**棒読みちゃんのGUIは使わない。** WAV保存がGUIのボタン専用でCLIから呼べず、
+出力も8kHz固定のため、63行のナレーションを自動生成できない。代わりに
+同梱の `AquesTalk.dll` を `scripts\aquestalk1.ps1` 経由で直接叩いている。
+
+**DLLは32bit専用。** 本体のPython(64bit)からは呼べないので、32bitプロセスである
+`C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe` を橋渡しに使う。
+追加インストールは要らない。
+
+**`scripts\aquestalk1.ps1` は BOM付きUTF-8で保存すること。** Windows PowerShell 5.1 は
+BOMが無いと日本語コメントをCP932として読み、構文エラーで落ちる。
+
+声質は8種（`f1 f2 m1 m2 r1 dvd jgr imd1`）。棒読みちゃんの声質5「中性」が
+どのフォルダかは公開資料が無く、基本周波数の実測から `imd1` と判断した。
+変えたいときは `channel.yaml` の `aquestalk1_voice` を書き換える。
+
+### 旧: AquesTalkPlayer（Mac期。コードは残置）
 
 https://www.a-quest.com/products/aquestalkplayer.html から **Windows版**を入手し、
 `tools\AquesTalkPlayer\AquesTalkPlayer.exe` に置く（通常インストールでも可）。

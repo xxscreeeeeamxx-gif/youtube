@@ -48,8 +48,8 @@ def spans_from_timing(slug="momofuku-v2"):
     root = find_project_dir(Config.load().root, slug)
     if root is None:
         root = Path(__file__).resolve().parent.parent / "projects" / slug
-    t = json.loads((root / "audio" / "timing.json").read_text())
-    s = yaml.safe_load((root / "script.yaml").read_text())
+    t = json.loads((root / "audio" / "timing.json").read_text(encoding="utf-8"))
+    s = yaml.safe_load((root / "script.yaml").read_text(encoding="utf-8"))
     cuts = [c for sc in s["scenes"] for c in sc["cuts"]]
     out = {}
     for i, (c, ti) in enumerate(zip(cuts, t)):

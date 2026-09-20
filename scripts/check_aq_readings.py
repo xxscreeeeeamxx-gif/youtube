@@ -31,7 +31,7 @@ def main(slug: str) -> int:
         return 1
     from faster_whisper import WhisperModel
 
-    sc = yaml.safe_load((d / "script.yaml").read_text())
+    sc = yaml.safe_load((d / "script.yaml").read_text(encoding="utf-8"))
     cuts = [c for s in sc["scenes"] for c in s["cuts"]]
     narrator = sc["meta"].get("narrator", "reimu")
     model = WhisperModel("small", device="cpu", compute_type="int8")
