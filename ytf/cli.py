@@ -23,34 +23,45 @@ def check_length(cfg, proj) -> bool:
     原因は毎回「直前の作品」を基準にしたこと。1本ごとの減りは5〜15%で
     気づけないが、積み重なると3分の1になる。
     人間の判断に任せると再発するので、**チャンネルの実績の下位に落ちたら警告する**。
+
+    ■ 相対基準をやめて絶対基準にした（2026-09-21）
+    導入時は「既存の中央値の75%」を下限にしたが、これでは止まらなかった。
+    縮んだ実績がそのまま翌回の中央値を下げるので、基準が一緒に落ちていく。
+    実際この検査を入れたあとも 25番28.9分 → 43番9.8分 と半分以下まで縮んだ。
+    そこで channel.yaml の target_length_minutes を絶対の目標として見る。
+
+    ■ カット数ではなく文字数で見る
+    公開済み18本で実測したところ、秒/カットは 2.50〜3.10 とばらつくのに対し、
+    秒/文字は 0.159〜0.176 に収まった。カット数は1カットの長短で化けるが、
+    読み上げ時間は文字数にほぼ比例するため、こちらのほうが尺を当てられる。
     """
     import yaml
-    from statistics import median
     d = yaml.safe_load((proj.root / "script.yaml").read_text(encoding="utf-8"))
-    if (d.get("meta") or {}).get("mode") != "drama":
+    chars = sum(len(c.get("text") or "")
+                for sc in (d.get("scenes") or [])
+                for c in (sc.get("cuts") or []))
+    if not chars:
         return True
     cuts = sum(len(sc.get("cuts") or []) for sc in (d.get("scenes") or []))
 
-    others = []
-    for q in cfg.root.glob("projects/*/人物物語/*/script.yaml"):
-        if q.parent == proj.root:
-            continue
-        try:
-            e = yaml.safe_load(q.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-        if (e.get("meta") or {}).get("mode") != "drama":
-            continue
-        others.append(sum(len(sc.get("cuts") or []) for sc in (e.get("scenes") or [])))
-    if not others:
+    # 公開済みドラマ18本の実測中央値。解説回は突き合わせられる公開尺が無いので
+    # ドラマの値を流用している（読み上げ速度はほぼ同じなので目安として使える）
+    SEC_PER_CHAR = 0.169
+    target_min = float(cfg.get("channel", "target_length_minutes", default=20))
+    est = chars * SEC_PER_CHAR
+    floor = target_min * 60 * 0.85          # 20分目標なら17分を下限にする
+
+    def mmss(sec: float) -> str:
+        return f"{int(sec) // 60}分{int(sec) % 60:02d}秒"
+
+    if est >= floor:
+        print(f"尺の確認: 約{mmss(est)}（{chars:,}文字 / {cuts}カット）"
+              f"・目標 {target_min:.0f}分")
         return True
-    med = median(others)
-    floor = int(med * 0.75)
-    if cuts >= floor:
-        print(f"尺の確認: {cuts}カット（既存の中央値 {int(med)}）")
-        return True
-    print(f"\n⚠️  **短すぎます**: {cuts}カット / 既存{len(others)}本の中央値 {int(med)}カット")
-    print(f"   目安の下限は {floor}カット（中央値の75%）。あと {floor - cuts} カット足りません。")
+    need = int((floor - est) / SEC_PER_CHAR)
+    print(f"\n⚠️  **短すぎます**: 約{mmss(est)}（{chars:,}文字 / {cuts}カット）")
+    print(f"   目標は {target_min:.0f}分、下限は {mmss(floor)}（目標の85%）。"
+          f"あと約 {need:,} 文字足りません。")
     print("   直前の作品を基準にすると気づかないまま縮み続けます。"
           "生い立ち・失敗・晩年のどこが飛んでいないか見直してください。")
     return False
