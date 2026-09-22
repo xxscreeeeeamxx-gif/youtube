@@ -86,13 +86,20 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
     root = str(cfg.root)
     script = proj.load_script()
     slug = script.meta.slug
-    env = {**os.environ, "PYTHONPATH": root}
+    # PYTHONIOENCODING を渡さないと、子プロセスが日本語を出した時点で
+    # Windows のコンソール既定（cp932）で書き出そうとして化ける
+    env = {**os.environ, "PYTHONPATH": root, "PYTHONIOENCODING": "utf-8"}
     print("\n———— 読み検査 ————")
     problems = 0
 
     def _run(name: str) -> list[str]:
+        # **encoding を省かない。** 省くと Windows では cp932 で復号しようとして
+        # 読み取りスレッドが UnicodeDecodeError で落ち、stdout が空になる。
+        # 空の出力は「指摘ゼロ」と区別が付かないので、検査に通ったように見えてしまう
+        # （2026-09-22 のカルピス回で、5種すべてが素通りしていた）
         r = subprocess.run([sys.executable, f"scripts/{name}", slug],
-                           cwd=root, env=env, capture_output=True, text=True)
+                           cwd=root, env=env, capture_output=True, text=True,
+                           encoding="utf-8", errors="replace")
         out = (r.stdout or "") + (r.stderr or "")
         return [ln for ln in out.splitlines()
                 if ln.strip() and "Warning" not in ln and "warnings.warn" not in ln

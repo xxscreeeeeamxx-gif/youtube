@@ -1,0 +1,3498 @@
+meta:
+  title: 【カルピスの誕生】全財産を失った男と、置き忘れられた一本【ずんだもん解説】
+  slug: calpis
+  summary: 大阪の寺に生まれた、ほとんどしゃべれない子。やがて大陸へ渡り、十三年かけて築いたものを革命で全部失います。無一文で帰国した男が作った商品は、売れたのに次々と消えていきました。四度目にたどり着いた答えは、誰も狙っていなかった場所にありました。
+  tags:
+  - カルピス
+  - 三島海雲
+  - 乳酸菌
+  - 内モンゴル
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 明治
+  - 大正
+  thumbnail:
+    top: 置き忘れた一本
+    bottom: カルピスの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: banker
+    label: 銀行の担当
+    voice: 13
+    pitch: -0.04
+  - id: bashou
+    label: 馬商
+    voice: 13
+    pitch: -0.02
+  - id: bokufu
+    label: 牧夫
+    voice: 12
+    pitch: 0.0
+  - id: dokura_goro
+    label: 土倉五郎
+    voice: 12
+    pitch: 0.02
+  - id: dokura_ryujiro
+    label: 土倉龍治郎
+    voice: 13
+    pitch: 0.0
+  - id: dosei_a
+    label: 同級生
+    voice: 12
+    pitch: 0.04
+  - id: dosei_b
+    label: 同級生
+    voice: 12
+    pitch: -0.04
+  - id: hisai
+    label: 被災した人
+    voice: 12
+    pitch: 0.0
+  - id: hojo
+    label: 父・三島法城
+    voice: 42
+    pitch: 0.0
+  - id: janbaru
+    label: ジャンバルジャヴ
+    voice: 13
+    pitch: -0.06
+  - id: kojo_chief
+    label: 工場の責任者
+    voice: 13
+    pitch: 0.02
+  - id: kokubu
+    label: 國分勘兵衛
+    voice: 13
+    pitch: -0.02
+  - id: komaki
+    label: 驪城卓爾
+    voice: 12
+    pitch: 0.0
+  - id: kouri
+    label: 小売店の主人
+    voice: 12
+    pitch: 0.0
+  - id: kurita
+    label: 栗田淳一
+    voice: 12
+    pitch: 0.04
+  - id: maeda
+    label: 前田慧雲
+    voice: 42
+    pitch: -0.02
+  - id: makino
+    label: 牧野良三
+    voice: 13
+    pitch: 0.02
+  - id: milkhall_clerk
+    label: 店員
+    voice: 12
+    pitch: 0.02
+  - id: nakagai
+    label: 仲買人
+    voice: 13
+    pitch: 0.0
+  - id: nakajima
+    label: 中島裁之
+    voice: 13
+    pitch: 0.02
+  - id: official
+    label: 役所の担当
+    voice: 13
+    pitch: -0.04
+  - id: okuma
+    label: 大隈重信
+    voice: 42
+    pitch: -0.04
+  - id: ozoku
+    label: 王族
+    voice: 13
+    pitch: -0.06
+  - id: senden
+    label: 宣伝部員
+    voice: 12
+    pitch: 0.04
+  - id: senin
+    label: 船員
+    voice: 12
+    pitch: 0.04
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.04
+  - id: shoko
+    label: 陸軍の将校
+    voice: 13
+    pitch: -0.04
+  - id: shokunin
+    label: 職人
+    voice: 12
+    pitch: -0.02
+  - id: shonin
+    label: 商人
+    voice: 13
+    pitch: 0.02
+  - id: sojinkan
+    label: 杉村楚人冠
+    voice: 12
+    pitch: 0.0
+  - id: student_cn
+    label: 学生
+    voice: 12
+    pitch: 0.02
+  - id: suzuki
+    label: 鈴木三郎助
+    voice: 13
+    pitch: -0.02
+  - id: takashima
+    label: 高島米峰
+    voice: 42
+    pitch: 0.0
+  - id: tonya
+    label: 問屋の主人
+    voice: 13
+    pitch: -0.02
+  - id: umehara
+    label: 梅原融
+    voice: 42
+    pitch: -0.02
+  - id: wakate
+    label: 若い社員
+    voice: 12
+    pitch: 0.04
+  - id: watanabe
+    label: 渡辺海旭
+    voice: 42
+    pitch: -0.02
+  - id: yakunin
+    label: 役所の担当
+    voice: 13
+    pitch: -0.04
+  - id: yamada
+    label: 山田耕筰
+    voice: 13
+    pitch: 0.0
+scenes:
+- id: cp_chaban_1
+  title: ''
+  background: cp_ima
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: happy
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: ずんだもん、それ、原液よね。
+    emotion: surprised
+  - speaker: zundamon
+    text: 原液なのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: コップに注ぐ気は無いのね。
+    emotion: normal
+  - speaker: zundamon
+    text: 瓶が、コップなのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: 昨日も原液だったでしょ。
+    emotion: angry
+  - speaker: zundamon
+    text: 昨日は牛乳で割ったのだ。
+    emotion: normal
+  - speaker: tsumugi
+    text: ……それ、薄めたことにならないわよ。
+    emotion: thinking
+  - speaker: zundamon
+    text: カルピスは[乳酸菌|にゅうさんきん]なのだ。
+    emotion: happy
+  - speaker: zundamon
+    text: 濃いほど、体にいいに決まってるぞ。
+    emotion: happy
+  - speaker: tsumugi
+    text: 濃いほど、砂糖もそのぶん濃いのよ。
+    emotion: angry
+  - speaker: zundamon
+    text: ボクは毎日カルピス健康生活なのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: 健康って言葉を付ければ健康になると思ってるでしょ。
+    emotion: thinking
+  - speaker: tsumugi
+    text: 今日からは、ちゃんと水で薄めましょうね。
+    emotion: normal
+  - speaker: zundamon
+    text: わかったのだ。今日から体に優しく生きるぞ。
+    emotion: happy
+- id: cp_chaban_2
+  title: ''
+  background: cp_ima
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: happy
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: だから、冷蔵庫からこれを出してきたのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: 缶のカルピスウォーターじゃない。
+    emotion: surprised
+  - speaker: zundamon
+    text: これは、もう水で薄めてあるのだ。
+    emotion: happy
+  - speaker: zundamon
+    text: つまり中身はほとんど水で、カロリーもゼロなのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: ゼロなのは、カルピスから離れる気のほうよ。
+    emotion: angry
+    se: oti
+  - speaker: zundamon
+    text: ……バレた。
+    emotion: surprised
+  - speaker: tsumugi
+    text: でもね、ずんだもん。
+    emotion: normal
+  - speaker: tsumugi
+    text: その、薄めなくていい一本が出てくるまでに、
+    emotion: normal
+  - speaker: tsumugi
+    text: 七十年以上かかってるのよ。
+    emotion: normal
+- id: hook
+  title: ''
+  background: cp_ima
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: でもね。薄めなくていい一本が出るまで、七十年以上よ。
+    emotion: normal
+  - speaker: zundamon
+    text: 七十年。水で薄めるだけなのに。
+    emotion: surprised
+  - speaker: tsumugi
+    text: その薄める前のやつを、ゼロから作った人がいるの。
+    emotion: happy
+  - speaker: zundamon
+    text: 牛乳に砂糖を入れれば、できそうなのだ。
+    emotion: thinking
+  - speaker: tsumugi
+    text: それができなくて、商品をいくつも潰してるの。
+    emotion: thinking
+  - speaker: zundamon
+    text: 潰した。よく会社が残ったのだ。
+    emotion: surprised
+  - speaker: reimu
+    text: カルピス。日本で最初の乳酸菌飲料です。
+    reading: かるぴす。にほんで さいしょの にゅうさんきん いんりょうです。
+  - speaker: reimu
+    text: 作ったのは、大陸で全財産を失って帰ってきた男でした。
+    reading: つくったのわ、たいりくで ぜんざいさんお うしなって かえってきた おとこでした。
+  - speaker: zundamon
+    text: 全財産。急に重いのだ。
+    emotion: thinking
+  - speaker: tsumugi
+    text: 名前は、[三島海雲|みしまかいうん]。大阪の寺の子よ。
+    emotion: normal
+- id: card1878
+  title: ''
+  background: cp_card_1878
+  cuts:
+  - speaker: reimu
+    text: 物語は、1878年の大阪から始まります。
+    reading: ものがたりわ、せんはっぴゃくななじゅうはちねんの おおさかから はじまります。
+- id: ch1_hondo
+  title: 寺に生まれた、しゃべれない子
+  background: cp_hondo
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    scale: 0.85
+    emotion: sad
+  - who: hojo
+    x: 0.64
+    emotion: normal
+  cuts:
+  - speaker: reimu
+    text: 1878年7月2日。大阪の萱野。
+    reading: せんはっぴゃくななじゅうはちねんしちがつふつか。おおさかのかやの。
+  - speaker: reimu
+    text: 水稲山教学寺の十三世住職、三島法城の長男として生まれました。
+    reading: すいとうざんきょうがくじのじゅうさんせいじゅうしょく、みしまほうじょうのちょうなんとしてうまれました。
+  - speaker: hojo
+    text: '[海雲|かいうん]。次の行だ。'
+    emotion: normal
+  - speaker: zundamon
+    text: ……に、に、に。
+    emotion: sad
+  - speaker: zundamon
+    text: 出ないのだ。最初の[一音|いちおん]が、出ない。
+    emotion: sad
+  - speaker: hojo
+    text: そこで止まってよい。父が待つ。
+    emotion: normal
+  - speaker: zundamon
+    text: 父上は、いつもそう言って待つのだ。
+    emotion: sad
+  - speaker: reimu
+    text: 五歳ごろまでほとんどしゃべれなかったと、本人が書き残しています。
+    reading: ごさいごろまでほとんどしゃべれなかったとほんにんがかきのこしています。
+- id: ch1_kawara
+  title: ''
+  background: cp_kawara
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    scale: 0.85
+    emotion: sad
+  - who: tsumugi
+    x: 0.7
+    tag: 母
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: ここなら、だれも聞いていないわ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……寺でやると、父上に聞こえるのだ。
+    emotion: sad
+  - speaker: tsumugi
+    text: だから[河原|かわら]に来たの。水の音が消してくれるわ。
+    emotion: normal
+  - speaker: tsumugi
+    text: ゆっくりでいい。息を先に出して。
+    emotion: normal
+  - speaker: zundamon
+    text: か……か……
+    emotion: sad
+  - speaker: tsumugi
+    text: もう一回。急がなくていいのよ。
+    emotion: normal
+  - speaker: zundamon
+    text: か……か……かあ……
+    emotion: sad
+  - speaker: zundamon
+    text: ……出た。伸ばしたら、出た。
+    emotion: surprised
+  - speaker: tsumugi
+    text: いまの。最初の音を、長く持ったわね。
+    emotion: happy
+  - speaker: zundamon
+    text: かあ……わ。かわ。
+    emotion: normal
+  - speaker: zundamon
+    text: かわ！ 言えたのだ！
+    emotion: happy
+  - speaker: tsumugi
+    text: '[上手|じょうず]よ、[海雲|かいうん]。'
+    emotion: happy
+- id: ch1_kusuri
+  title: ''
+  background: cp_hondo
+  bgm: 10do
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    scale: 0.85
+    emotion: normal
+  - who: tsumugi
+    x: 0.7
+    tag: 母
+    emotion: happy
+  cuts:
+  - speaker: tsumugi
+    text: '[海雲|かいうん]。いいものを聞いてきたわ。'
+    emotion: happy
+  - speaker: zundamon
+    text: いいもの？
+    emotion: normal
+  - speaker: tsumugi
+    text: '[吃音|きつおん]に効く、妙薬ですって。'
+    emotion: happy
+  - speaker: zundamon
+    text: 薬なのだ！ 飲めば読めるのだ！
+    emotion: happy
+  - speaker: tsumugi
+    text: 飲むんじゃなくて、食べるの。
+    emotion: normal
+  - speaker: zundamon
+    text: ……食べる。
+    emotion: normal
+  - speaker: tsumugi
+    text: カタツムリの照り焼き。
+    emotion: happy
+  - speaker: zundamon
+    text: カタツムリ！？
+    emotion: surprised
+  - speaker: zundamon
+    text: ……言葉より先に、食べたものが出そうなのだ。
+    emotion: thinking
+    se: oti
+- id: ch1_card1891
+  title: ''
+  background: cp_card_1891
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1891年ごろ。十三歳で得度します。
+    reading: せんはっぴゃくきゅうじゅういちねんごろ。じゅうさんさいでとくどします。
+- id: ch1_tokudo
+  title: ''
+  background: cp_hondo
+  stage:
+  - who: zundamon
+    x: 0.32
+    flip: true
+    tag: 海雲
+    scale: 0.9
+    emotion: normal
+  - who: hojo
+    x: 0.66
+    emotion: normal
+  cuts:
+  - speaker: hojo
+    text: 頭が寒いか。
+    emotion: normal
+  - speaker: zundamon
+    text: ……寒いのだ。
+    emotion: normal
+  - speaker: hojo
+    text: 今日から、おまえも坊主だ。
+    emotion: normal
+  - speaker: zundamon
+    text: 父上。寺の外には、何があるのですか。
+    emotion: normal
+  - speaker: hojo
+    text: ……知らん。わしは出たことがない。
+    emotion: thinking
+  - speaker: zundamon
+    text: ボクは、出てみたいのだ。
+    emotion: normal
+  - speaker: hojo
+    text: そったばかりの頭で言うことか。
+    emotion: normal
+  - speaker: zundamon
+    text: いま、つっかえずに言えたのだ。
+    emotion: happy
+  - speaker: hojo
+    text: ……そうだな。
+    emotion: happy
+- id: ch2_ryo_class
+  title: はいとだけ答えた男
+  background: cp_kyoshitsu
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: normal
+  - who: dosei_a
+    x: 0.7
+    tag: 同級生
+    emotion: normal
+  cuts:
+  - speaker: reimu
+    text: 1893年。十四の年に、京都の西本願寺文学寮へ入ります。
+    reading: せんはっぴゃくきゅうじゅうさんねん。じゅうよんのとしに、きょうとのにしほんがんじぶんがくりょうえはいります。
+  - speaker: dosei_a
+    text: '[三島|みしま]。また英語の本か。'
+    emotion: normal
+  - speaker: zundamon
+    text: 読めると、外の話が入ってくるのだ。
+    emotion: normal
+  - speaker: dosei_a
+    text: 寺を継ぐのに、横文字が要るのか。
+    emotion: thinking
+  - speaker: zundamon
+    text: 西洋の学問も知る坊主を作る学校だぞ。
+    emotion: happy
+  - speaker: zundamon
+    text: ボクは[経|きょう]より先に、単語を覚えてしまったのだ。
+    emotion: happy
+- id: ch2_rouka
+  title: ''
+  background: cp_rouka
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.18
+    flip: true
+    tag: 三島海雲
+    emotion: normal
+  - who: dosei_a
+    x: 0.42
+    tag: 同級生
+    scale: 0.8
+    emotion: thinking
+  - who: dosei_b
+    x: 0.56
+    tag: 同級生
+    scale: 0.8
+    emotion: thinking
+  - who: sojinkan
+    x: 0.82
+    tag: 杉村楚人冠
+    scale: 0.8
+    emotion: normal
+  cuts:
+  - speaker: sojinkan
+    text: 門限を破った三名。今月は外出を禁じる。
+    emotion: angry
+  - speaker: dosei_a
+    text: 道に迷いまして、戻るのが遅れました。
+    emotion: thinking
+  - speaker: dosei_b
+    text: 私は腹を下して、医者に行っておりました。
+    emotion: thinking
+  - speaker: sojinkan
+    text: ……[三島|みしま]。お前はどうだ。
+    emotion: normal
+  - speaker: zundamon
+    text: はい。
+    emotion: normal
+  - speaker: sojinkan
+    text: はい、それだけか。
+    emotion: surprised
+  - speaker: zundamon
+    text: はい。
+    emotion: normal
+  - speaker: dosei_a
+    text: おい[三島|みしま]、何か言えよ。
+    emotion: surprised
+  - speaker: zundamon
+    text: 遅れたのだから、言うことは無い。
+    emotion: normal
+  - speaker: sojinkan
+    text: ……下がってよし。
+    emotion: normal
+- id: ch2_rouka_ato
+  title: ''
+  background: cp_rouka
+  bgm: 223am
+  stage:
+  - who: sojinkan
+    x: 0.62
+    tag: 杉村楚人冠
+    emotion: thinking
+  cuts:
+  - speaker: sojinkan
+    text: ……言い訳をせん男を、はじめて見た。
+    emotion: thinking
+  - speaker: sojinkan
+    text: あの男は、覚えておく。
+    emotion: normal
+- id: ch2_maeda
+  title: ''
+  background: cp_kyoshitsu
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.32
+    flip: true
+    tag: 三島海雲
+    emotion: normal
+  - who: maeda
+    x: 0.68
+    tag: 前田慧雲
+    emotion: normal
+  cuts:
+  - speaker: maeda
+    text: '[三島|みしま]。学校を出たら、どうする。'
+    emotion: normal
+  - speaker: zundamon
+    text: 寺に戻れと、父上は言っているのだ。
+    emotion: thinking
+  - speaker: zundamon
+    text: ……外がどうなっているか、見てみたいのだ。
+    emotion: normal
+  - speaker: maeda
+    text: 外へ出れば、[金|かね]が要るぞ。
+    emotion: normal
+  - speaker: zundamon
+    text: そこなのだ。ボクには何も無い。
+    emotion: sad
+  - speaker: maeda
+    text: 世の中では、[金|かね]を得るのは難しいという。
+    emotion: normal
+  - speaker: maeda
+    text: だが、案外たやすいものだ。
+    emotion: happy
+  - speaker: zundamon
+    text: たやすい……？
+    emotion: surprised
+  - speaker: maeda
+    text: 必要な[金|かね]は、どこからか湧いてくる。
+    emotion: normal
+  - speaker: zundamon
+    text: ……覚えておくのだ。
+    emotion: thinking
+- id: ch2_yamaguchi
+  title: ''
+  background: cp_kyoshitsu
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: happy
+  - who: kurita
+    x: 0.7
+    tag: 栗田淳一
+    emotion: thinking
+  cuts:
+  - speaker: reimu
+    text: 文学寮を出た海雲は、山口の開導中学で英語を教えます。
+    reading: ぶんがくりょうおでたかいうんわ、やまぐちのかいどうちゅうがくでえいごおおしえます。
+  - speaker: kurita
+    text: 先生。この一語が、どうしても読めません。
+    emotion: thinking
+  - speaker: zundamon
+    text: '[栗田|くりた]。辞書より先に、声に出してみるのだ。'
+    emotion: normal
+  - speaker: zundamon
+    text: ボクも昔、その[一音|いちおん]が出なくて苦労したのだ。
+    emotion: normal
+  - speaker: kurita
+    text: ウォ……ウォーター。読めました、先生。
+    emotion: happy
+  - speaker: zundamon
+    text: それでいい。あとは千回やるだけなのだ。
+    emotion: happy
+  - speaker: reimu
+    text: この一年生が、のちに日本石油の社長となる栗田淳一です。
+    reading: このいちねんせいが、のちににほんせきゆのしゃちょうとなるくりたじゅんいちです。
+- id: ch2_ketsui
+  title: ''
+  background: cp_kyoshitsu
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: thinking
+  - who: kurita
+    x: 0.7
+    tag: 栗田淳一
+    emotion: normal
+  cuts:
+  - speaker: kurita
+    text: 先生。新聞は、大陸の話ばかりですね。
+    emotion: normal
+  - speaker: zundamon
+    text: 海の向こうで、学校を作る日本人がいるらしいぞ。
+    emotion: normal
+  - speaker: kurita
+    text: 先生は、行きたそうな顔をしています。
+    emotion: thinking
+  - speaker: zundamon
+    text: '[金|かね]は無いし、行く当ても無いのだ。'
+    emotion: thinking
+  - speaker: zundamon
+    text: ……だが、湧いてくると言われたのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……ボクは、ここを出る。
+    emotion: normal
+  - speaker: reimu
+    text: 二年つとめたのち、海雲は教職を辞して仏教大学の三年へ入ります。
+    reading: にねんつとめたのち、かいうんわきょうしょくおじしてぶっきょうだいがくのさんねんえはいります。
+- id: ch3_s1
+  title: 北京・教室と馬車
+  background: cp_rouka
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.28
+    tag: 海雲
+    emotion: normal
+  - who: umehara
+    x: 0.62
+    tag: 梅原融
+    emotion: normal
+  cuts:
+  - speaker: umehara
+    text: '[三島|みしま]くん。[北京|ぺきん]に学校を作る先輩がいる。'
+    emotion: normal
+  - speaker: zundamon
+    text: 学校、ですか。
+    emotion: surprised
+  - speaker: umehara
+    text: 日本語を教える。物理も地理もだ。
+    emotion: normal
+  - speaker: zundamon
+    text: ボクは、まだ三年に入ったばかりなのだ。
+    emotion: thinking
+  - speaker: umehara
+    text: 学問は寺でもできる。大陸は、いま動いている。
+    emotion: normal
+  - speaker: zundamon
+    text: ……行きます。
+    emotion: normal
+- id: ch3_s2
+  title: ''
+  background: cp_card_1902
+  cuts:
+  - speaker: reimu
+    text: 1902年2月。海雲は大学をやめ、北京の東文学社へ入ります。
+    reading: せんきゅうひゃくにねんにがつ。かいうんわだいがくおやめ、ぺきんのとうぶんがくしゃえはいります。
+- id: ch3_s3
+  title: ''
+  background: cp_kyoshitsu
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.24
+    tag: 海雲
+    emotion: normal
+  - who: nakajima
+    x: 0.56
+    tag: 中島裁之
+    emotion: normal
+  - who: student_cn
+    x: 0.78
+    tag: 東文学社の学生
+    emotion: normal
+  cuts:
+  - speaker: nakajima
+    text: ここは、授業料を取りません。
+    emotion: normal
+  - speaker: zundamon
+    text: ただで、ですか。
+    emotion: surprised
+  - speaker: nakajima
+    text: 西洋の学問を、日本を通して学ばせたいのです。
+    emotion: normal
+  - speaker: student_cn
+    text: 先生。字は読めます。でも、声が出ません。
+    emotion: thinking
+  - speaker: zundamon
+    text: ゆっくりでいい。息を先に出すのだ。
+    emotion: happy
+  - speaker: zundamon
+    text: ……ボクも、そう習ったのだ。
+    emotion: normal
+- id: ch3_s4
+  title: ''
+  background: cp_jimusho
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 海雲
+    emotion: normal
+  - who: nakajima
+    x: 0.62
+    tag: 中島裁之
+    emotion: thinking
+  cuts:
+  - speaker: nakajima
+    text: '[三島|みしま]さん。今月も[金|かね]が足りません。'
+    emotion: thinking
+  - speaker: zundamon
+    text: 生徒は増えているのに、ですか。
+    emotion: surprised
+  - speaker: nakajima
+    text: 増えるほど苦しい。同じ日本人から[妬|ねた]まれます。
+    emotion: sad
+  - speaker: nakajima
+    text: 日本人の先生どうしも、争っています。
+    emotion: sad
+  - speaker: zundamon
+    text: ……学校では、食えないのだ。
+    emotion: thinking
+- id: ch3_s5
+  title: ''
+  background: cp_beijing_machi
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 海雲
+    emotion: normal
+  - who: dokura_goro
+    x: 0.62
+    tag: 土倉五郎
+    emotion: normal
+  cuts:
+  - speaker: dokura_goro
+    text: '[三島|みしま]先生。教室は、今日も寒いですね。'
+    emotion: normal
+  - speaker: zundamon
+    text: '[土倉|どくら]さん。石炭が買えないのだ。'
+    emotion: thinking
+  - speaker: dokura_goro
+    text: 私も今朝、市場を一回りしてきました。
+    emotion: happy
+  - speaker: zundamon
+    text: 毎日よく歩くのだ。何を見ている。
+    emotion: normal
+  - speaker: dokura_goro
+    text: 日本の品です。[北京|ぺきん]には、足りていませんよ。
+    emotion: happy
+  - speaker: zundamon
+    text: ボクは教師なのだ。商売はやったことがない。
+    emotion: surprised
+  - speaker: dokura_goro
+    text: '[金|かね]は、私の家が出します。'
+    emotion: happy
+  - speaker: dokura_goro
+    text: 荷物は、先生が運んでください。
+    emotion: happy
+  - speaker: zundamon
+    text: ……やってみるぞ。
+    emotion: normal
+- id: ch3_s6
+  title: ''
+  background: cp_beijing_machi
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 海雲
+    emotion: happy
+  - who: dokura_goro
+    x: 0.62
+    tag: 土倉五郎
+    emotion: happy
+  cuts:
+  - speaker: reimu
+    text: 1903年10月。二人は日華洋行という雑貨の店を開きます。
+    reading: せんきゅうひゃくさんねんじゅうがつ。ふたりわにっかようこうというざっかのみせおひらきます。
+  - speaker: zundamon
+    text: 馬車に積めるだけ積んだのだ。
+    emotion: happy
+  - speaker: dokura_goro
+    text: '[紀州|きしゅう]ネルです。日本でよく売れる毛織物ですよ。'
+    emotion: happy
+  - speaker: zundamon
+    text: これが売れたら、学校に[金|かね]を入れられるぞ！
+    emotion: happy
+- id: ch3_s7
+  title: ''
+  background: cp_beijing_machi
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 海雲
+    emotion: sad
+  - who: dokura_goro
+    x: 0.62
+    tag: 土倉五郎
+    emotion: thinking
+  cuts:
+  - speaker: zundamon
+    text: ……[一反|いったん]も、減っていない。
+    emotion: sad
+  - speaker: dokura_goro
+    text: こちらの人は、ネルを着ないんです。
+    emotion: thinking
+  - speaker: zundamon
+    text: 着ないのか。
+    emotion: surprised
+  - speaker: dokura_goro
+    text: 冬は毛皮を着ます。薄い織物は要りません。
+    emotion: thinking
+  - speaker: zundamon
+    text: 日本で売れるものは、ここでも売れると思ったのだ。
+    emotion: sad
+  - speaker: zundamon
+    text: ……思っただけだった。
+    emotion: sad
+- id: ch3_s8
+  title: ''
+  background: cp_beijing_machi
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 海雲
+    emotion: normal
+  - who: dokura_goro
+    x: 0.62
+    tag: 土倉五郎
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 売れているものを、見に行くのだ。
+    emotion: normal
+  - speaker: dokura_goro
+    text: 軍服の飾りですね。[金|きん]モールです。
+    emotion: normal
+  - speaker: zundamon
+    text: ネルで開けた穴は、これで埋めるぞ。
+    emotion: angry
+  - speaker: dokura_goro
+    text: 先生、商人の顔になってきました。
+    emotion: happy
+  - speaker: zundamon
+    text: 教師の顔では、荷物は売れない。
+    emotion: normal
+- id: ch4_s1
+  title: 地図のない高原
+  background: cp_card_1904
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1904年。日露戦争が始まりました。
+    reading: せんきゅうひゃくよねん。にちろせんそうがはじまりました。
+- id: ch4_s2
+  title: ''
+  background: cp_jimusho
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: shoko
+    x: 0.66
+    tag: 陸軍の将校
+    emotion: normal
+  cuts:
+  - speaker: shoko
+    text: '[日華洋行|にっかようこう]の[三島|みしま]さんだな。'
+    emotion: normal
+  - speaker: zundamon
+    text: そうなのだ。雑貨なら何でも運ぶぞ。
+    emotion: happy
+  - speaker: shoko
+    text: 雑貨は要らない。[軍馬|ぐんば]がまるで足りないんだ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……馬なのだ？ボクは雑貨屋だぞ。
+    emotion: surprised
+  - speaker: shoko
+    text: 馬車で北を回っているだろう。道を知っている。
+    emotion: normal
+  - speaker: zundamon
+    text: ……布より、よほど[金|かね]になるのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: 引き受けるぞ。
+    emotion: happy
+- id: ch4_s3
+  title: ''
+  background: cp_manshu
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: nakagai
+    x: 0.66
+    tag: 満洲の商人
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 馬を買いたいのだ。まとまった数でな。
+    emotion: normal
+  - speaker: nakagai
+    text: どの群れも、売り先が決まっているよ。
+    emotion: normal
+  - speaker: zundamon
+    text: '[金|かね]なら出すぞ。言い値でいい。'
+    emotion: normal
+  - speaker: nakagai
+    text: '[金|かね]の話じゃない。大きな商館が、先に押さえた。'
+    emotion: normal
+  - speaker: nakagai
+    text: 戦が始まると聞いた日に、もう人が来ていたよ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……ボクが入る隙は、無いのだ。
+    emotion: sad
+- id: ch4_s4
+  title: ''
+  background: cp_manshu
+  bgm: mystery
+  stage:
+  - who: zundamon
+    x: 0.5
+    flip: true
+    tag: 海雲
+    emotion: thinking
+  cuts:
+  - speaker: zundamon
+    text: 地図を広げるのだ。
+    emotion: thinking
+  - speaker: zundamon
+    text: ……[満洲|まんしゅう]の先が、白い。
+    emotion: surprised
+  - speaker: zundamon
+    text: 道も町も、何も書いていないぞ。
+    emotion: surprised
+  - speaker: zundamon
+    text: 誰も行かない所なら、馬は残っているのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: この白いところへ、行くぞ。
+    emotion: angry
+- id: ch4_s5
+  title: ''
+  background: cp_yuki_sogen
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: bashou
+    x: 0.66
+    tag: 馬商
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: やっと人に会えたのだ。
+    emotion: happy
+  - speaker: bashou
+    text: 雪の中を、よく来たな。
+    emotion: normal
+  - speaker: zundamon
+    text: 馬を買いに来た。数を揃えたいのだ。
+    emotion: happy
+  - speaker: bashou
+    text: 馬なら、秋にみんな売ったよ。
+    emotion: normal
+    se: don
+  - speaker: zundamon
+    text: ……秋？
+    emotion: surprised
+  - speaker: bashou
+    text: 夏の草で肥えて、秋に売る。草原の決まりだ。
+    emotion: normal
+  - speaker: zundamon
+    text: 冬の馬は、痩せているのだ……
+    emotion: sad
+  - speaker: zundamon
+    text: ……地図の白いところまで、来たのに。
+    emotion: sad
+  - speaker: bashou
+    text: 白いのは紙の上だけだ。草原には決まりがある。
+    emotion: normal
+  - speaker: zundamon
+    text: 半年、遅かった。
+    emotion: sad
+- id: ch4_s6
+  title: ''
+  background: cp_card_1905
+  cuts:
+  - speaker: reimu
+    text: 1905年。内モンゴルでの買い付けは、うまくいきませんでした。
+    reading: せんきゅうひゃくごねん。うちもんごるでのかいつけわうまくいきませんでした。
+- id: ch4_s7
+  title: ''
+  background: cp_sogen
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.5
+    flip: true
+    tag: 海雲
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 春になったのだ。[柵|さく]を組むぞ。
+    emotion: normal
+  - speaker: zundamon
+    text: 買えないなら、自分で育てるのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: 秋に売るぞ。今度は、ボクが売る側なのだ。
+    emotion: happy
+- id: ch4_s8
+  title: ''
+  background: cp_sogen
+  bgm: kinakusai
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: ozoku
+    x: 0.66
+    tag: 王族
+    emotion: normal
+  cuts:
+  - speaker: ozoku
+    text: '[三島|みしま]。頼みがある。'
+    emotion: normal
+  - speaker: zundamon
+    text: 茶でも布でも運ぶぞ。何がいる？
+    emotion: happy
+  - speaker: ozoku
+    text: 銃だ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……銃なのだ？
+    emotion: surprised
+  - speaker: ozoku
+    text: 草原は広い。馬も羊も、守るものが要る。
+    emotion: normal
+  - speaker: zundamon
+    text: ……わかった。探してみるのだ。
+    emotion: normal
+  - speaker: reimu
+    text: 商いは雑貨から軍馬へ、そして銃へと広がりました。
+    reading: あきないわざっかからぐんばえそしてじゅうえとひろがりました。
+- id: ch05_pao_a
+  title: パオの中の、白い食べもの
+  background: cp_pao
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 海雲
+    emotion: sad
+  - who: janbaru
+    x: 0.66
+  cuts:
+  - speaker: reimu
+    text: 日露戦争のあと三島は内モンゴルのケシクテン旗へ通います。
+    reading: にちろせんそうのあとみしまわうちもんごるのけしくてんきえかよいます。
+  - speaker: janbaru
+    text: 遠くから来ましたね。今夜は休みなさい。
+    emotion: normal
+  - speaker: zundamon
+    text: ありがたいのだ。馬に揺られて腰が痛い。
+    emotion: sad
+  - speaker: zundamon
+    text: ……腹の調子も良くないのだ。
+    emotion: sad
+  - speaker: janbaru
+    text: 旅の人は、みな同じ顔で来ます。
+    emotion: normal
+  - speaker: janbaru
+    text: 明日の朝、飲ませたいものがあります。
+    emotion: normal
+  - speaker: zundamon
+    text: 薬なのだ？
+    emotion: surprised
+- id: ch05_pao_b
+  title: ''
+  background: cp_pao
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 海雲
+    emotion: surprised
+  - who: janbaru
+    x: 0.66
+  cuts:
+  - speaker: zundamon
+    text: 朝から、器が五つも並んでるのだ。
+    emotion: surprised
+  - speaker: janbaru
+    text: どれも乳です。羊、山羊、牛、馬。
+    emotion: normal
+  - speaker: zundamon
+    text: 全部白くて、どれがどれだか分からない。
+    emotion: normal
+  - speaker: janbaru
+    text: これを。上に浮いた濃いところです。
+    emotion: normal
+  - speaker: janbaru
+    text: '[粟|あわ]を入れて。砂糖もひとつまみ。'
+    emotion: normal
+  - speaker: zundamon
+    text: 混ぜるのか。よし、混ぜるぞ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……甘い。酸っぱい。そして、うまい。
+    emotion: happy
+    se: don
+- id: ch05_pao_c
+  title: ''
+  background: cp_pao
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 海雲
+    emotion: happy
+  - who: janbaru
+    x: 0.66
+  cuts:
+  - speaker: janbaru
+    text: 先祖のジンギスカン時代から伝わる秘薬で、王者の食物です。
+    emotion: normal
+  - speaker: zundamon
+    text: 王者の、食べものなのだ……？
+    emotion: surprised
+  - speaker: janbaru
+    text: これさえ食べていれば、病にもかかりません。
+    emotion: normal
+  - speaker: janbaru
+    text: 年も取らない。[身体|からだ]は丈夫になり、肥ります。
+    emotion: happy
+  - speaker: zundamon
+    text: ……肥るのは、いらないのだ。
+    emotion: thinking
+    se: oti
+  - speaker: zundamon
+    text: よし、毎朝これを飲むぞ。
+    emotion: normal
+- id: ch05_pao_d
+  title: ''
+  background: cp_pao
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: janbaru
+    x: 0.66
+  cuts:
+  - speaker: zundamon
+    text: 二日目なのだ。今日も一杯もらうぞ。
+    emotion: normal
+  - speaker: janbaru
+    text: 昨日より、飲むのが早いですね。
+    emotion: happy
+  - speaker: zundamon
+    text: 舌が慣れてきたのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……腹が、痛くないのだ。
+    emotion: surprised
+  - speaker: janbaru
+    text: 三日目ですね。
+    emotion: normal
+  - speaker: zundamon
+    text: 夜中に一度も目が覚めなかったのだ。
+    emotion: happy
+  - speaker: reimu
+    text: 後年、三島は不老不死の霊薬に遭遇したようだったと語っています。
+    reading: こうねん、みしまわふろうふしのれいやくにそうぐうしたようだったとかたっています。
+  - speaker: reimu
+    text: 三日ばかりで便通がよくなり不眠症も治ったといいます。
+    reading: みっかばかりでべんつうがよくなりふみんしょうもなおったといいます。
+- id: ch05_pao_e
+  title: ''
+  background: cp_pao
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 海雲
+    emotion: happy
+  - who: tsumugi
+    x: 0.7
+    tag: 貴族の妻
+  cuts:
+  - speaker: tsumugi
+    text: 朝の器を作っているのは、わたしよ。
+    emotion: normal
+  - speaker: zundamon
+    text: 毎朝、そこで作っていたのだ。
+    emotion: surprised
+  - speaker: zundamon
+    text: 作り方を、教えてほしいのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: しぼった乳を置いて、浮いたところをすくうのよ。
+    emotion: normal
+  - speaker: zundamon
+    text: 置くだけ。火も使わないのだ？
+    emotion: surprised
+  - speaker: tsumugi
+    text: 使わないわ。あとは[粟|あわ]と砂糖をひとつまみ。
+    emotion: happy
+  - speaker: zundamon
+    text: 覚えたぞ。
+    emotion: happy
+- id: ch05_pao_f
+  title: ''
+  background: cp_pao
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 海雲
+    emotion: happy
+  - who: tsumugi
+    x: 0.7
+    tag: 貴族の妻
+    emotion: surprised
+  cuts:
+  - speaker: tsumugi
+    text: ……帰ったら、器が並んでる。
+    emotion: surprised
+  - speaker: zundamon
+    text: 留守のあいだに、作っておいたのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: 一度教えただけなのに、同じ味ね。
+    emotion: happy
+  - speaker: zundamon
+    text: 毎朝見ていたから、手が覚えたのだ。
+    emotion: happy
+  - speaker: zundamon
+    text: 体が、作り直されていくのだ。
+    emotion: happy
+  - speaker: reimu
+    text: いまのヨーグルトに近いものとも、上澄みのクリームだとも言われます。
+    reading: いまのよーぐるとにちかいものとも、うわずみのくりーむだともいわれます。
+- id: ch6_okuma_gate
+  title: 羊と、革命
+  background: cp_okuma
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: okuma
+    x: 0.66
+    tag: 大隈重信
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: ごめんください。三島[海雲|かいうん]と申します。
+    emotion: normal
+  - speaker: okuma
+    text: 紹介状を、お持ちか。
+    emotion: normal
+  - speaker: zundamon
+    text: ありません。羊の話をしに来たのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: わからないことは、その道の一流に聞く。
+    emotion: normal
+  - speaker: zundamon
+    text: それがボクの流儀なのだ。
+    emotion: happy
+  - speaker: okuma
+    text: ……入りなさい。
+    emotion: surprised
+- id: ch6_okuma_zashiki
+  title: ''
+  background: cp_okuma
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: okuma
+    x: 0.66
+    tag: 大隈重信
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 軍服の羊毛は、オーストラリア頼みなのだ。
+    emotion: normal
+  - speaker: okuma
+    text: 遠い。その[金|かね]は、国の外へ出ていく。
+    emotion: thinking
+  - speaker: zundamon
+    text: だからモンゴルの草原で、羊を育てるのだ。
+    emotion: happy
+  - speaker: okuma
+    text: 草の羊は毛が粗い。日本の羊と掛け合わせなさい。
+    emotion: thinking
+  - speaker: zundamon
+    text: 毛のいい羊を、日本から運ぶぞ！
+    emotion: happy
+- id: ch6_card1909
+  title: ''
+  background: cp_card_1909
+  cuts:
+  - speaker: reimu
+    text: 1909年。三島海雲は、緬羊の改良事業に乗り出します。
+    reading: せんきゅうひゃくきゅうねん。みしまかいうんわめんようのかいりょうじぎょうにのりだします。
+- id: ch6_steppe
+  title: ''
+  background: cp_sogen
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: happy
+  - who: bokufu
+    x: 0.66
+    tag: 牧夫
+    emotion: normal
+  cuts:
+  - speaker: bokufu
+    text: ……ずいぶん、毛の長い羊ですね。
+    emotion: surprised
+  - speaker: zundamon
+    text: 草の羊と掛け合わせて、毛を良くするぞ。
+    emotion: happy
+  - speaker: zundamon
+    text: '[柵|さく]を組む。冬は風よけも立てるのだ。'
+    emotion: normal
+  - speaker: bokufu
+    text: この草地の主は、[清|しん]の役所ですよ。
+    emotion: normal
+  - speaker: zundamon
+    text: 毎年きちんと[金|かね]を納めて、借りているのだ。
+    emotion: normal
+- id: ch6_revolt
+  title: ''
+  background: cp_pao
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: yakunin
+    x: 0.66
+    tag: 役人
+    emotion: normal
+  cuts:
+  - speaker: yakunin
+    text: '[清|しん]が倒れた。革命だ。'
+    emotion: normal
+    se: don
+  - speaker: zundamon
+    text: ……国が、無くなったのだ？
+    emotion: surprised
+  - speaker: yakunin
+    text: 役所はもう無い。この土地は、出てもらう。
+    emotion: normal
+  - speaker: zundamon
+    text: '[柵|さく]はボクが組んだ。羊もまだいるのだ。'
+    emotion: angry
+  - speaker: yakunin
+    text: 借り物だ。もう貸す者がいない。
+    emotion: normal
+  - speaker: zundamon
+    text: ……待ってください。
+    emotion: sad
+  - speaker: reimu
+    text: 1912年。清朝が倒れ、借りていた土地を離れます。
+    reading: せんきゅうひゃくじゅうにねん。しんちょうがたおれかりていたとちおはなれます。
+- id: ch6_wool
+  title: ''
+  background: cp_sogen
+  bgm: kinakusai
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: normal
+  - who: shonin
+    x: 0.66
+    tag: 毛の仲買人
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 土地を移して、三年かけて育てた毛なのだ。
+    emotion: happy
+  - speaker: shonin
+    text: ……[値|ね]が付きません。オーストラリアの毛が船で来ます。
+    emotion: thinking
+  - speaker: zundamon
+    text: ……三年育てて、[値|ね]が付かないのだ。
+    emotion: sad
+  - speaker: shonin
+    text: 次は、何をなさいます。
+    emotion: normal
+  - speaker: zundamon
+    text: '[金|かね]になるなら、何でもやるのだ。'
+    emotion: angry
+- id: ch6_port
+  title: ''
+  background: cp_minato
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: sad
+  - who: senin
+    x: 0.66
+    tag: 船員
+    emotion: normal
+  cuts:
+  - speaker: senin
+    text: お客さん、荷物はそれだけですか。
+    emotion: normal
+  - speaker: zundamon
+    text: これだけです。
+    emotion: sad
+  - speaker: senin
+    text: 大陸は、長かったんですか。
+    emotion: normal
+  - speaker: zundamon
+    text: ……十三年です。
+    emotion: sad
+  - speaker: zundamon
+    text: 羊も、商売も、全部置いてきた。
+    emotion: sad
+- id: ch6_card1915
+  title: ''
+  background: cp_card_1915
+  cuts:
+  - speaker: reimu
+    text: 1915年の春。三島は中国の事業を全て手放して帰国します。
+    reading: せんきゅうひゃくじゅうごねんのはる。みしまわちゅうごくのじぎょうおすべててばなしてきこくします。
+- id: ch7_milkhall
+  title: まずいヨーグルトと、親代わり
+  background: cp_misesaki
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: thinking
+  - who: milkhall_clerk
+    x: 0.66
+    tag: ミルクホールの店員
+    emotion: normal
+  cuts:
+  - speaker: reimu
+    text: 1915年の春。三島は大陸の事業を手放して帰ります。
+    reading: せんきゅうひゃくじゅうごねんのはる。みしまわたいりくのじぎょうおてばなしてかえります。
+  - speaker: milkhall_clerk
+    text: いらっしゃい。ヨーグルトはいかがです。
+    emotion: happy
+  - speaker: zundamon
+    text: ヨーグルト？
+    emotion: surprised
+  - speaker: milkhall_clerk
+    text: '[乳|ちち]を固めたもので、[体|からだ]にいいと評判でしてね。'
+    emotion: happy
+  - speaker: zundamon
+    text: ひとつ、もらうのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……これじゃない。
+    emotion: thinking
+  - speaker: milkhall_clerk
+    text: お口に合いませんでしたか。
+    emotion: thinking
+  - speaker: zundamon
+    text: '[草原|そうげん]で飲んだのは、こんな味ではなかったのだ。'
+    emotion: sad
+  - speaker: zundamon
+    text: もっとうまくて、[体|からだ]にいいものを出すぞ。
+    emotion: angry
+- id: ch7_home
+  title: ''
+  background: cp_jitaku
+  bgm: jitaku_nite
+  stage:
+  - who: zundamon
+    x: 0.24
+    flip: true
+    tag: 海雲
+    emotion: sad
+  - who: zundamon
+    x: 0.52
+    scale: 0.6
+    tag: 子ども
+    emotion: normal
+  - who: tsumugi
+    x: 0.8
+    tag: 妻
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: おかえりなさい。ずいぶん痩せたわね。
+    emotion: normal
+  - speaker: zundamon
+    text: 持って帰れたのは、[体|からだ]だけなのだ。
+    emotion: sad
+  - speaker: zundamon
+    text: おかえりなさい。
+    emotion: happy
+  - speaker: zundamon
+    text: ……ただいま。
+    emotion: normal
+  - speaker: tsumugi
+    text: これから、どうするの。
+    emotion: thinking
+  - speaker: zundamon
+    text: '[無一文|むいちもん]だから、頭を下げに行くのだ。'
+    emotion: normal
+- id: ch7_dokura
+  title: ''
+  background: cp_jitaku
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: sad
+  - who: dokura_ryujiro
+    x: 0.66
+    tag: 土倉龍治郎
+    emotion: normal
+  cuts:
+  - speaker: dokura_ryujiro
+    text: まあ座れ。ひどい顔色だな。
+    emotion: normal
+  - speaker: zundamon
+    text: 海を渡って、そのまま来たのだ。
+    emotion: sad
+  - speaker: dokura_ryujiro
+    text: '[飯|めし]は食ったのか。'
+    emotion: normal
+  - speaker: zundamon
+    text: ……昨日から、何も。
+    emotion: sad
+  - speaker: dokura_ryujiro
+    text: 向こうの[金|かね]は、どうした。
+    emotion: thinking
+  - speaker: zundamon
+    text: 全部、置いてきたのだ。
+    emotion: sad
+  - speaker: zundamon
+    text: '[草原|そうげん]の味だけ、覚えて帰ったのだ。'
+    emotion: normal
+  - speaker: zundamon
+    text: '[乳|ちち]を[発酵|はっこう]させた、白い食べものなのだ。'
+    emotion: normal
+  - speaker: zundamon
+    text: あれを日本で作る。[乳酸菌|にゅうさんきん]の食べものだ。
+    emotion: normal
+  - speaker: dokura_ryujiro
+    text: 作るのはいい。[元手|もとで]はどうする。
+    emotion: normal
+  - speaker: zundamon
+    text: 無い。
+    emotion: normal
+    se: don
+  - speaker: dokura_ryujiro
+    text: ……無いのか。
+    emotion: surprised
+  - speaker: zundamon
+    text: 無い。だから頼みに来たのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: 必要な[金|かね]は、どこからか湧いてくる。
+    emotion: normal
+  - speaker: zundamon
+    text: 学校の先生に、そう教わったのだ。
+    emotion: normal
+  - speaker: dokura_ryujiro
+    text: ……わかった。
+    emotion: normal
+  - speaker: zundamon
+    text: いいのか。
+    emotion: surprised
+  - speaker: dokura_ryujiro
+    text: 心当たりを、当たってみる。
+    emotion: normal
+  - speaker: reimu
+    text: 龍治郎は一族と学友に声をかけ、出資を集めました。
+    reading: りゅうじろうわいちぞくとがくゆうにこえおかけ、しゅっしおあつめました。
+- id: ch7_card1916
+  title: ''
+  background: cp_card_1916
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1916年4月、本郷に醍醐味合資会社ができました。
+    reading: せんきゅうひゃくじゅうろくねんしがつ、ほんごうにだいごみごうしがいしゃができました。
+  - speaker: reimu
+    text: 資本金は2500円でした。
+    reading: しほんきんわにせんごひゃくえんでした。
+- id: ch7_kanban
+  title: ''
+  background: cp_sagyoba
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 海雲
+    emotion: happy
+  - who: dokura_ryujiro
+    x: 0.66
+    tag: 土倉龍治郎
+    emotion: normal
+  cuts:
+  - speaker: dokura_ryujiro
+    text: '[醍醐味|だいごみ]、とはな。'
+    emotion: thinking
+  - speaker: zundamon
+    text: '[仏|ほとけ]の教えに、[五味|ごみ]というものがあるのだ。'
+    emotion: normal
+  - speaker: zundamon
+    text: その一番上が、[醍醐|だいご]なのだ。
+    emotion: happy
+  - speaker: dokura_ryujiro
+    text: 一番うまいもの、ということか。
+    emotion: normal
+  - speaker: zundamon
+    text: そうだ。だから[醍醐味|だいごみ]と名づけたのだ。
+    emotion: happy
+  - speaker: dokura_ryujiro
+    text: 大きく出たな。
+    emotion: happy
+  - speaker: zundamon
+    text: '[金|かね]は、本当に湧いてきたのだ。'
+    emotion: happy
+  - speaker: zundamon
+    text: 親に頼むような気持ちで、頼みに来たのだ。
+    emotion: normal
+  - speaker: dokura_ryujiro
+    text: 親では無いがな。
+    emotion: normal
+  - speaker: zundamon
+    text: ボクには、[親代わり|おやがわり]だ。
+    emotion: happy
+- id: ch8_s1_yield
+  title: 作っては消えた三年
+  background: cp_sagyoba
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 三島海雲
+    emotion: happy
+  - who: shokunin
+    x: 0.66
+    tag: 工場の職人
+    emotion: normal
+  cuts:
+  - speaker: shokunin
+    text: 三島さん。今日も注文が増えています。
+    emotion: happy
+  - speaker: zundamon
+    text: '[醍醐味|だいごみ]は、よく売れているのだ。'
+    emotion: happy
+  - speaker: shokunin
+    text: ですが、乳が。牛は[三頭|さんとう]の家ばかりで。
+    emotion: thinking
+  - speaker: zundamon
+    text: '[五軒|ごけん]回っても、桶が[埋ま|うま]らないのだ。'
+    emotion: thinking
+  - speaker: shokunin
+    text: '[一斗|いっと]ぶん、回しきりました。'
+    emotion: normal
+  - speaker: zundamon
+    text: 十八リットル。瓶は何本だ。
+    emotion: normal
+  - speaker: shokunin
+    text: ……この[一升|いっしょう]だけです。
+    emotion: sad
+  - speaker: zundamon
+    text: 桶いっぱいの乳が、[瓶一本|びんいっぽん]に化けたのだ。
+    emotion: surprised
+    se: don
+- id: ch8_s2_seiko
+  title: ''
+  background: cp_jimusho
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: thinking
+  - who: dokura_ryujiro
+    x: 0.66
+    tag: 土倉龍治郎
+    emotion: thinking
+  cuts:
+  - speaker: dokura_ryujiro
+    text: 売れ行きはいい。帳簿は赤い。
+    emotion: thinking
+  - speaker: zundamon
+    text: うまいものは作れた。数が作れないのだ。
+    emotion: sad
+  - speaker: dokura_ryujiro
+    text: 作るほど[金|かね]が出ていくのか。
+    emotion: sad
+  - speaker: zundamon
+    text: 成功の、失敗なのだ。
+    emotion: sad
+  - speaker: dokura_ryujiro
+    text: 売れて潰れる、か。
+    emotion: sad
+- id: ch8_s3_dassi
+  title: ''
+  background: cp_sagyoba
+  bgm: curious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: normal
+  - who: shokunin
+    x: 0.66
+    tag: 工場の職人
+    emotion: thinking
+  cuts:
+  - speaker: shokunin
+    text: 裏の樽が、また[一杯|いっぱい]です。
+    emotion: thinking
+  - speaker: zundamon
+    text: '[上澄み|うわずみ]を取ったあとの、[脱脂乳|だっしにゅう]なのだ。'
+    emotion: normal
+  - speaker: shokunin
+    text: 毎日これだけ出ます。流しますか。
+    emotion: thinking
+  - speaker: zundamon
+    text: 流すな。[乳酸菌|にゅうさんきん]で[発酵|はっこう]させるのだ。
+    emotion: angry
+  - speaker: shokunin
+    text: ……酸っぱくて、飲めます。
+    emotion: surprised
+  - speaker: zundamon
+    text: '[醍醐素|だいごそ]と名づけるぞ。'
+    emotion: happy
+- id: ch8_s4_mise
+  title: ''
+  background: cp_misesaki
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: happy
+  - who: kouri
+    x: 0.66
+    tag: 小売店の主人
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: これが[醍醐素|だいごそ]なのだ。置いてほしい。
+    emotion: happy
+  - speaker: kouri
+    text: はあ。これは、何にかけるんです。
+    emotion: thinking
+  - speaker: kouri
+    text: 広告には、漬物の[漬け汁|つけじる]にと。
+    emotion: normal
+  - speaker: kouri
+    text: ビフテキにも、てんぷらにもと。
+    emotion: normal
+  - speaker: zundamon
+    text: ……体にいい。どう使ってもいいのだ。
+    emotion: thinking
+    se: oti
+  - speaker: kouri
+    text: 台所か、薬屋か。置き場所が決まりません。
+    emotion: thinking
+  - speaker: zundamon
+    text: 中身ではなく、売り方が決まっていないのだ。
+    emotion: sad
+- id: ch8_s5_card1917
+  title: ''
+  background: cp_card_1917
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1917年10月13日、本郷にラクトー株式会社。
+    reading: せんきゅうひゃくじゅうななねんじゅうがつじゅうさんにち、ほんごうにらくとーかぶしきがいしゃ。
+  - speaker: reimu
+    text: 資本金は25万円。翌年2月、会社は渋谷町へ移ります。
+    reading: しほんきんわにじゅうごまんえん。よくねんにがつかいしゃわしぶやまちえうつります。
+- id: ch8_s6_shibuya
+  title: ''
+  background: cp_kojo
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: normal
+  - who: dokura_ryujiro
+    x: 0.66
+    tag: 土倉龍治郎
+    emotion: normal
+  cuts:
+  - speaker: dokura_ryujiro
+    text: 新しい工場だ。[渋谷町|しぶやまち]は乳も集めやすい。
+    emotion: normal
+  - speaker: zundamon
+    text: ボクは[取締役|とりしまりやく]なのだ。社長ではない。
+    emotion: normal
+  - speaker: dokura_ryujiro
+    text: '[金|かね]は一族で集めた。おまえは作れ。'
+    emotion: happy
+  - speaker: zundamon
+    text: 生きた[乳酸菌|にゅうさんきん]を、[粒|つぶ]の菓子に入れるぞ。
+    emotion: happy
+- id: ch8_s7_card1918
+  title: ''
+  background: cp_card_1918
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1918年4月17日。ラクトーキャラメルの発売です。
+    reading: せんきゅうひゃくじゅうはちねんしがつじゅうしちにち。らくとーきゃらめるのはつばいです。
+- id: ch8_s8_uresuji
+  title: ''
+  background: cp_jimusho
+  bgm: pop
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: happy
+  - who: kouri
+    x: 0.66
+    tag: 小売店の主人
+    emotion: happy
+  cuts:
+  - speaker: kouri
+    text: 三島さん、キャラメルをもう[一箱|ひとハコ]。
+    emotion: happy
+  - speaker: zundamon
+    text: もう無くなったのか。
+    emotion: surprised
+  - speaker: kouri
+    text: 子どもが毎日買いに来ましてね。
+    emotion: happy
+  - speaker: zundamon
+    text: 甘いから、菌の話は誰も気にしないのだ。
+    emotion: happy
+- id: ch8_s9_natsu
+  title: ''
+  background: cp_kojo
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: normal
+  - who: kouri
+    x: 0.66
+    tag: 小売店の主人
+    emotion: sad
+  cuts:
+  - speaker: kouri
+    text: 三島さん。これ、返させてください。
+    emotion: sad
+  - speaker: zundamon
+    text: 箱ごと。何があったのだ。
+    emotion: surprised
+  - speaker: zundamon
+    text: ……[一塊|ひとかたまり]になっている。
+    emotion: surprised
+    se: don
+  - speaker: kouri
+    text: 棚の上で、夏の暑さに溶けてしまって。
+    emotion: sad
+  - speaker: kouri
+    text: うちだけじゃありません。どこの店も同じです。
+    emotion: sad
+  - speaker: zundamon
+    text: 甘みと酸味は合った。夏と、合わなかったのだ。
+    emotion: sad
+- id: ch8_s10_yoru
+  title: ''
+  background: cp_jimusho
+  bgm: 10do
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 三島海雲
+    emotion: sad
+  - who: dokura_ryujiro
+    x: 0.66
+    tag: 土倉龍治郎
+    emotion: thinking
+  cuts:
+  - speaker: dokura_ryujiro
+    text: キャラメルは、[一年|いちねん]で[止める|やめる]しかない。
+    emotion: thinking
+  - speaker: zundamon
+    text: ……[止める|やめる]のだ。
+    emotion: sad
+  - speaker: dokura_ryujiro
+    text: '[醍醐味|だいごみ]も、[醍醐素|だいごそ]も残らなかったな。'
+    emotion: sad
+  - speaker: zundamon
+    text: 三年で、三つ潰したのだ。
+    emotion: sad
+  - speaker: zundamon
+    text: 乳を腐らせずに残す。それだけはできているぞ。
+    emotion: normal
+  - speaker: dokura_ryujiro
+    text: できたことを数えるか。
+    emotion: thinking
+  - speaker: zundamon
+    text: 数えないと、次が作れないのだ。
+    emotion: normal
+  - speaker: reimu
+    text: この間、会社は他にもいくつも商品を出しています。
+    reading: このあいだ、かいしゃわほかにもいくつもしょうひんおだしています。
+  - speaker: reimu
+    text: どれも残りませんでした。
+    reading: どれものこりませんでした。
+- id: ch09_s1
+  title: 七夕の一本
+  background: cp_kojo
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.28
+    tag: 三島海雲
+    emotion: thinking
+  - who: kojo_chief
+    x: 0.66
+    tag: 工場の責任者
+    emotion: thinking
+  cuts:
+  - speaker: kojo_chief
+    text: '[三島|みしま]さん。今月も、帳簿が合いません。'
+    emotion: thinking
+  - speaker: zundamon
+    text: キャラメルが、箱ごと戻ってきたのだ。
+    emotion: sad
+  - speaker: kojo_chief
+    text: 夏の暑さで、全部くっついてしまって。
+    emotion: sad
+  - speaker: zundamon
+    text: 三つ作って、三つとも残らなかったのだ。
+    emotion: sad
+  - speaker: kojo_chief
+    text: ……あの、ひとつお詫びがあります。
+    emotion: thinking
+  - speaker: zundamon
+    text: お詫びなのだ？
+    emotion: surprised
+  - speaker: kojo_chief
+    text: '[醍醐素|だいごそ]に砂糖を入れて、[二日|ふつか]置いてしまって。'
+    emotion: thinking
+  - speaker: zundamon
+    text: 捨てる前に、見せてみるのだ。
+    emotion: normal
+- id: ch09_s2
+  title: ''
+  background: cp_kojo
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.28
+    tag: 三島海雲
+    emotion: normal
+  - who: kojo_chief
+    x: 0.66
+    tag: 工場の責任者
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: ……甘い匂いがするのだ。
+    emotion: surprised
+  - speaker: kojo_chief
+    text: 腐ったのかと思ったんですが、違うんです。
+    emotion: surprised
+  - speaker: zundamon
+    text: '[一口|ひとくち]、もらうぞ。'
+    emotion: normal
+  - speaker: zundamon
+    text: ……うまい。
+    emotion: happy
+    se: don
+  - speaker: zundamon
+    text: 酸っぱさの奥から、香りが立ってるのだ。
+    emotion: happy
+  - speaker: kojo_chief
+    text: 砂糖を入れて、置いただけですよ。
+    emotion: surprised
+  - speaker: zundamon
+    text: 置いただけで、うまくなったのか。
+    emotion: surprised
+  - speaker: reimu
+    text: 空気中の酵母が入り、もう一度発酵していたと考えられています。
+    reading: くうきちゅうのこうぼがはいり、もういちどはっこうしていたとかんがえられています。
+- id: ch09_s3
+  title: ''
+  background: cp_kojo
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.28
+    tag: 三島海雲
+    emotion: normal
+  - who: kojo_chief
+    x: 0.66
+    tag: 工場の責任者
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 同じものを、もう一度作るのだ。
+    emotion: normal
+  - speaker: kojo_chief
+    text: 偶然の[酵母|こうぼ]です。狙って作れますか。
+    emotion: thinking
+  - speaker: zundamon
+    text: 砂糖の量と温度を変えて、[十本|じっぽん]並べるぞ！
+    emotion: happy
+  - speaker: zundamon
+    text: これは酸っぱすぎる。こっちは香りが出ないのだ。
+    emotion: thinking
+  - speaker: zundamon
+    text: ……この[一本|いっぽん]なのだ。
+    emotion: happy
+  - speaker: zundamon
+    text: あとはカルシウムを足すぞ。
+    emotion: normal
+  - speaker: kojo_chief
+    text: 飲みものに、カルシウムをですか。
+    emotion: surprised
+  - speaker: zundamon
+    text: 日本人に足りないと言われているのだ。
+    emotion: normal
+- id: ch09_s4
+  title: ''
+  background: cp_jimusho
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.26
+    tag: 三島海雲
+    emotion: thinking
+  - who: yamada
+    x: 0.56
+    tag: 山田耕筰
+    emotion: normal
+  - who: watanabe
+    x: 0.8
+    tag: 渡辺海旭
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 名前が、まだ決まらないのだ。
+    emotion: thinking
+  - speaker: yamada
+    text: 音は短いほうがいい。耳に残ります。
+    emotion: normal
+  - speaker: zundamon
+    text: カルは、カルシウムから取るのだ。
+    emotion: normal
+  - speaker: watanabe
+    text: あとはサンスクリットですな。
+    emotion: normal
+  - speaker: watanabe
+    text: 最上のものを[醍醐|だいご]、サルピルマンダといいます。
+    emotion: normal
+  - speaker: zundamon
+    text: "[一段下|いちだんした]が[熟酥|じゅくそ]、サルピスなのだ。"
+    emotion: normal
+  - speaker: zundamon
+    text: 本当なら、カルピルにするべきだ。
+    emotion: thinking
+  - speaker: yamada
+    text: カルピル。……音が、止まりませんね。
+    emotion: thinking
+  - speaker: zundamon
+    text: 歯切れが悪いのだ。カルピスにするぞ！
+    emotion: happy
+- id: ch09_s5
+  title: ''
+  background: cp_card_19190707
+  bgm: warm
+  cuts:
+  - speaker: reimu
+    text: 1919年6月8日、三島は専務取締役になります。
+    reading: せんきゅうひゃくじゅうくねんろくがつようか。みしまわせんむとりしまりやくになります。
+  - speaker: reimu
+    text: そのひと月後、1919年7月7日。カルピスが発売されました。
+    reading: そのひとつきご。せんきゅうひゃくじゅうくねんしちがつなのか。かるぴすがはつばいされました。
+- id: ch09_s6
+  title: ''
+  background: cp_misesaki
+  bgm: 10do
+  stage:
+  - who: zundamon
+    x: 0.28
+    tag: 三島海雲
+    emotion: normal
+  - who: tonya
+    x: 0.66
+    tag: 問屋の主人
+    emotion: thinking
+  cuts:
+  - speaker: tonya
+    text: 大びんが[一円六十銭|いちえんろくじっせん]は、高すぎますよ。
+    emotion: thinking
+  - speaker: zundamon
+    text: 牛乳[一本|いっぽん]が[十銭|じっせん]の時代だ。わかっているぞ。
+    emotion: normal
+  - speaker: tonya
+    text: ラムネが[八銭|はっせん]、サイダーで[二十二銭|にじゅうにせん]です。
+    emotion: thinking
+  - speaker: zundamon
+    text: これは水で薄めて飲むものなのだ。
+    emotion: normal
+  - speaker: tonya
+    text: ……それを、お客に言わないと売れません。
+    emotion: thinking
+  - speaker: zundamon
+    text: だからボクが、[一軒|いっけん]ずつ店を回るのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: いくら良いものでも、売る道がなければ終わる。
+    emotion: normal
+  - speaker: reimu
+    text: 百貨店では試飲会が開かれ、初めての味が配られました。
+    reading: ひゃっかてんでわしいんかいがひらかれ、はじめてのあじがくばられました。
+- id: ch10_s1
+  title: 初恋の味と、青い水玉
+  background: cp_jimusho
+  bgm: 10do
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: senden
+    x: 0.62
+    tag: 宣伝部員
+    emotion: normal
+  cuts:
+  - speaker: senden
+    text: 今月の広告です。刷り上がりました。
+    emotion: normal
+  - speaker: senden
+    text: 滋養にすぐれ、病人にも子どもにも、ご婦人にも。
+    emotion: normal
+  - speaker: zundamon
+    text: 嘘は、ひとつも書いていないのだ。
+    emotion: normal
+  - speaker: senden
+    text: ですが、来るのは薬屋をのぞく人ばかりで。
+    emotion: thinking
+  - speaker: zundamon
+    text: 体にいいと言うほど、遠ざかっていくのだ。
+    emotion: thinking
+- id: ch10_s2
+  title: ''
+  background: cp_jimusho
+  bgm: haru_kitchen
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: komaki
+    x: 0.62
+    tag: 驪城卓爾
+    emotion: normal
+  cuts:
+  - speaker: komaki
+    text: ごぶさたしています。[驪城|こまき]です。
+    emotion: normal
+  - speaker: zundamon
+    text: "[文学寮|ぶんがくりょう]で、ボクの後ろにいた[驪城|こまき]か。"
+    emotion: surprised
+  - speaker: komaki
+    text: いまは、中学で英語を教えています。
+    emotion: normal
+  - speaker: zundamon
+    text: 教師なら、ボクも山口でやったのだ。
+    emotion: happy
+  - speaker: komaki
+    text: 先輩の飲みものを、いただきました。
+    emotion: normal
+  - speaker: zundamon
+    text: ほう。どうだったのだ。
+    emotion: happy
+  - speaker: komaki
+    text: 甘くて、酸っぱい。あれは初恋の味です。
+    emotion: happy
+  - speaker: komaki
+    text: その言葉で、売り出しなさい。
+    emotion: normal
+  - speaker: zundamon
+    text: とんでもない。新聞に出せる言葉ではないのだ。
+    emotion: angry
+- id: ch10_s3
+  title: ''
+  background: cp_jimusho
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: thinking
+  - who: komaki
+    x: 0.62
+    tag: 驪城卓爾
+    emotion: normal
+  cuts:
+  - speaker: komaki
+    text: また来ました。三度目です。
+    emotion: normal
+  - speaker: zundamon
+    text: 何度来ても、答えは同じなのだ。
+    emotion: thinking
+  - speaker: zundamon
+    text: カルピスは、子どもも飲むのだ。
+    emotion: thinking
+  - speaker: zundamon
+    text: 初恋の味とは[何だ|なんだ]と聞かれたら、どう答えるのだ。
+    emotion: angry
+  - speaker: komaki
+    text: カルピスの味だと、答えればいい。
+    emotion: normal
+  - speaker: komaki
+    text: 初恋とは、清純で美しいものです。
+    emotion: normal
+  - speaker: komaki
+    text: その言葉には、夢と希望と憧れがある。
+    emotion: happy
+  - speaker: zundamon
+    text: ……夢と、希望と、憧れ。
+    emotion: surprised
+  - speaker: zundamon
+    text: それを、一本の瓶に入れるというのか。
+    emotion: surprised
+  - speaker: komaki
+    text: 入ります。
+    emotion: happy
+  - speaker: zundamon
+    text: ……刷ろう。
+    emotion: normal
+- id: ch10_s4
+  title: ''
+  background: cp_card_1922
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1922年4月29日、東京日日新聞。
+    reading: せんきゅうひゃくにじゅうにねんしがつにじゅうくにち、とうきょうにちにちしんぶん。
+  - speaker: reimu
+    text: 初恋の味という言葉が、初めて新聞に出ました。
+    reading: はつこいのあじということばがはじめてしんぶんにでました。
+- id: ch10_s5
+  title: ''
+  background: cp_jimusho
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: senden
+    x: 0.62
+    tag: 宣伝部員
+    emotion: normal
+  cuts:
+  - speaker: senden
+    text: 包み紙の案です。青地に、白い水玉で。
+    emotion: normal
+  - speaker: zundamon
+    text: 七夕に出したから、天の川なのだ。
+    emotion: happy
+  - speaker: senden
+    text: 星は、わざと散らしてあります。
+    emotion: normal
+  - speaker: zundamon
+    text: そろえるなよ。川に見えなくなるのだ。
+    emotion: normal
+  - speaker: reimu
+    text: 白地に青い水玉になるのは、1949年です。
+    reading: しろじにあおいみずたまになるのわ、せんきゅうひゃくよんじゅうくねんです。
+- id: ch10_s6
+  title: ''
+  background: cp_jimusho
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: senden
+    x: 0.62
+    tag: 宣伝部員
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 戦争のあとで、ヨーロッパの絵描きが食えずにいるらしいのだ。
+    emotion: thinking
+  - speaker: zundamon
+    text: ポスターを、世界から集めるぞ。一等は五百ドルだ。
+    emotion: normal
+  - speaker: senden
+    text: 落ちた絵は、いかがします。
+    emotion: surprised
+  - speaker: zundamon
+    text: 日本で並べて競りにかけ、[金|かね]は本人へ送るのだ。
+    emotion: normal
+  - speaker: senden
+    text: 商品の宣伝には、なりませんが。
+    emotion: thinking
+  - speaker: zundamon
+    text: 会社の顔になる。それでいいのだ。
+    emotion: happy
+  - speaker: senden
+    text: 応募は、千四百点を超えました。
+    emotion: surprised
+- id: ch10_s7
+  title: ''
+  background: cp_card_1923
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1923年9月1日、関東大震災。
+    reading: せんきゅうひゃくにじゅうさんねんくがつついたち、かんとうだいしんさい。
+- id: ch10_s8
+  title: ''
+  background: cp_shinsai
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: thinking
+  - who: senden
+    x: 0.62
+    tag: 宣伝部員
+    emotion: thinking
+  cuts:
+  - speaker: zundamon
+    text: 金庫を開けろ。中の[金|かね]を全部出すのだ。
+    emotion: angry
+    se: don
+  - speaker: senden
+    text: 全部、ですか。
+    emotion: surprised
+  - speaker: zundamon
+    text: トラックを四台借りるぞ。
+    emotion: angry
+  - speaker: senden
+    text: 何を積みましょう。
+    emotion: normal
+  - speaker: zundamon
+    text: 原液を樽で積め。水と氷も要るのだ。
+    emotion: normal
+  - speaker: senden
+    text: 薄めて、配るのですか。
+    emotion: surprised
+  - speaker: zundamon
+    text: 六倍に薄める。ボクも一台に乗るのだ。
+    emotion: normal
+- id: ch10_s9
+  title: ''
+  background: cp_shinsai
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: hisai
+    x: 0.62
+    tag: 被災者
+    emotion: sad
+  cuts:
+  - speaker: hisai
+    text: 水が出ないんだ。どこも出ない。
+    emotion: sad
+  - speaker: zundamon
+    text: 冷たいうちに、飲んでほしいのだ。
+    emotion: normal
+  - speaker: hisai
+    text: これは、なんだい。
+    emotion: surprised
+  - speaker: zundamon
+    text: 甘くて、酸っぱい。カルピスなのだ。
+    emotion: happy
+  - speaker: hisai
+    text: ……甘い。あんた、どこの[人|ひと]だい。
+    emotion: happy
+  - speaker: zundamon
+    text: 作った本人なのだ。
+    emotion: normal
+  - speaker: reimu
+    text: 困っている人びとを助けたい。そう書き残しています。
+    reading: こまっているひとびとをたすけたい。そうかきのこしています。
+- id: ch11_s1
+  title: 会社を取られた日、そして戦争
+  background: cp_jimusho
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: suzuki
+    x: 0.66
+    tag: 鈴木三郎助
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: '[鈴木|すずき]さん。工場を広げたいのだ。'
+    emotion: normal
+  - speaker: suzuki
+    text: カルピスは、よく売れていますな。
+    emotion: normal
+  - speaker: zundamon
+    text: 売れるほど[金|かね]が要る。増資に乗ってほしいのだ。
+    emotion: thinking
+  - speaker: suzuki
+    text: よろしい。味の素で引き受けます。
+    emotion: happy
+- id: ch11_s2
+  title: ''
+  background: cp_card_1937
+  cuts:
+  - speaker: reimu
+    text: 1937年。味の素が株の半分を超え、鈴木三郎助が社長になりました。
+    reading: せんきゅうひゃくさんじゅうななねん。あじのもとがかぶのはんぶんおこえ、すずきさぶろうすけがしゃちょうになりました。
+- id: ch11_s3
+  title: ''
+  background: cp_jimusho
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: surprised
+  - who: suzuki
+    x: 0.66
+    tag: 鈴木三郎助
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: 株主の名簿が、書き換わってるのだ。
+    emotion: surprised
+    se: don
+  - speaker: suzuki
+    text: '[三島|みしま]さん。あなたは取締役のままです。'
+    emotion: normal
+  - speaker: zundamon
+    text: つくったのは、ボクなのだ。
+    emotion: sad
+  - speaker: zundamon
+    text: ……返せ、とは言えないのだ。
+    emotion: sad
+- id: ch11_s4
+  title: ''
+  background: cp_jimusho
+  bgm: 223am
+  stage:
+  - who: takashima
+    x: 0.44
+    scale: 0.8
+    tag: 高島米峰
+    emotion: normal
+  - who: makino
+    x: 0.56
+    scale: 0.8
+    tag: 牧野良三
+    emotion: normal
+  - who: suzuki
+    x: 0.68
+    scale: 0.8
+    tag: 鈴木三郎助
+    emotion: normal
+  cuts:
+  - speaker: suzuki
+    text: おそろいで、なんの御用です。
+    emotion: normal
+  - speaker: takashima
+    text: '[三島|みしま]が、会社に行かなくなりました。'
+    emotion: thinking
+  - speaker: makino
+    text: カルピスは[三島|みしま]がつくった会社です。
+    emotion: normal
+  - speaker: makino
+    text: 返してやってくれませんか。
+    emotion: normal
+  - speaker: suzuki
+    text: ……つくった者が持つ。株は手放します。
+    emotion: normal
+- id: ch11_s5
+  title: ''
+  background: cp_jimusho
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.24
+    tag: 三島海雲
+    emotion: surprised
+  - who: takashima
+    x: 0.52
+    tag: 高島米峰
+    emotion: happy
+  - who: makino
+    x: 0.78
+    tag: 牧野良三
+    emotion: normal
+  cuts:
+  - speaker: takashima
+    text: '[鈴木|すずき]さんが、株を手放してくれたぞ。'
+    emotion: happy
+  - speaker: zundamon
+    text: ……なんで、そこまでするのだ。
+    emotion: surprised
+  - speaker: makino
+    text: 君がつくった会社だからだ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……ありがとう。
+    emotion: sad
+- id: ch11_s6
+  title: ''
+  background: cp_yakusho
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: official
+    x: 0.66
+    tag: 役所の担当者
+    emotion: normal
+  cuts:
+  - speaker: official
+    text: '[三島|みしま]さん。区分が決まりました。'
+    emotion: normal
+  - speaker: zundamon
+    text: 区分、なのだ？
+    emotion: surprised
+  - speaker: official
+    text: 平和物資です。
+    emotion: normal
+  - speaker: zundamon
+    text: 平和。いい言葉なのだ。
+    emotion: happy
+  - speaker: official
+    text: 戦争に要らないもの、という意味です。
+    emotion: normal
+    se: don
+  - speaker: official
+    text: 砂糖も瓶も、回せません。
+    emotion: normal
+  - speaker: zundamon
+    text: ……二十年、広めてきた。
+    emotion: sad
+- id: ch11_s7
+  title: ''
+  background: cp_yakusho
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: thinking
+  - who: official
+    x: 0.66
+    tag: 役所の担当者
+    emotion: normal
+  cuts:
+  - speaker: official
+    text: '[三島|みしま]さん。区分を、直しました。'
+    emotion: normal
+  - speaker: zundamon
+    text: 今度は、なんなのだ。
+    emotion: thinking
+  - speaker: official
+    text: 滋養がある。軍需物資にします。
+    emotion: normal
+  - speaker: official
+    text: 兵隊が飲むなら、要ります。
+    emotion: normal
+  - speaker: zundamon
+    text: 要らない飲みものが、軍では要るのか。
+    emotion: thinking
+- id: ch11_s8
+  title: ''
+  background: cp_card_1943
+  cuts:
+  - speaker: reimu
+    text: 1943年12月24日。三島は取締役社長になります。
+    reading: せんきゅうひゃくよんじゅうさんねんじゅうにがつにじゅうよっか。みしまわとりしまりやくしゃちょうになります。
+- id: ch11_s9
+  title: ''
+  background: cp_kojo
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: sad
+  - who: shain
+    x: 0.66
+    tag: 社員
+    emotion: sad
+  cuts:
+  - speaker: reimu
+    text: 1945年5月22日。本社と東京の工場が焼けました。
+    reading: せんきゅうひゃくよんじゅうごねんごがつにじゅうににち。ほんしゃととうきょうのこうじょうがやけました。
+  - speaker: shain
+    text: 社長。釜も瓶も、残っていません。
+    emotion: sad
+  - speaker: zundamon
+    text: ……人は。みんな無事か。
+    emotion: sad
+  - speaker: shain
+    text: はい。全員そろっています。
+    emotion: normal
+  - speaker: zundamon
+    text: なら、いいのだ。
+    emotion: sad
+  - speaker: reimu
+    text: 7月6日、甲府の工場も焼けました。
+    reading: しちがつむいか、こうふのこうじょうもやけました。
+- id: ch11_s10
+  title: ''
+  background: cp_kojo
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: thinking
+  - who: shain
+    x: 0.66
+    tag: 社員
+    emotion: normal
+  cuts:
+  - speaker: shain
+    text: 社長。砂糖が、どこにもありません。
+    emotion: thinking
+  - speaker: zundamon
+    text: 甘くなければ、カルピスではないのだ。
+    emotion: thinking
+  - speaker: shain
+    text: サッカリンと水飴なら、手に入ります。
+    emotion: normal
+  - speaker: zundamon
+    text: それでも、作るぞ。
+    emotion: normal
+  - speaker: reimu
+    text: 1947年。カルピスの生産が、ようやく戻ります。
+    reading: せんきゅうひゃくよんじゅうななねん。かるぴすのせいさんが、ようやくもどります。
+- id: ch12_s1
+  title: 不渡り、七十八歳の復帰、全財産
+  background: cp_card_1950
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1950年。宣伝につぎ込んだ費用は、売上に結びつきませんでした。
+    reading: せんきゅうひゃくごじゅうねん。せんでんにつぎこんだひようわ、うりあげにむすびつきませんでした。
+- id: ch12_s2
+  title: ''
+  background: cp_jimusho
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: thinking
+  - who: wakate
+    x: 0.62
+    tag: 若い社員
+    emotion: thinking
+  cuts:
+  - speaker: wakate
+    text: 社長。来月の[手形|てがた]が落ちません。
+    emotion: thinking
+  - speaker: zundamon
+    text: 広告は、新聞にも電車にも打ったのだ。
+    emotion: thinking
+  - speaker: wakate
+    text: それでも、売上が動きません。
+    emotion: sad
+  - speaker: zundamon
+    text: ……作れば売れる時代が、終わったのか。
+    emotion: sad
+  - speaker: wakate
+    text: このままだと[不渡り|ふわたり]です。
+    emotion: sad
+  - speaker: zundamon
+    text: 出せば、この会社は死ぬぞ！
+    emotion: surprised
+    se: don
+- id: ch12_s3
+  title: ''
+  background: cp_jimusho
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: thinking
+  - who: banker
+    x: 0.62
+    tag: 銀行の担当
+    emotion: normal
+  cuts:
+  - speaker: banker
+    text: '[協調融資|きょうちょうゆうし]、各行そろいました。'
+    emotion: normal
+  - speaker: zundamon
+    text: ……助かるのだ。
+    emotion: normal
+  - speaker: banker
+    text: ただし、社長の席を外していただきたい。
+    emotion: normal
+  - speaker: zundamon
+    text: ボクが作った会社なのだ。
+    emotion: angry
+  - speaker: banker
+    text: だから、残したいのです。
+    emotion: normal
+  - speaker: zundamon
+    text: ……わかった。代表権は返す。
+    emotion: sad
+- id: ch12_s4
+  title: ''
+  background: cp_jimusho
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: kokubu
+    x: 0.62
+    tag: 國分勘兵衛
+    emotion: normal
+  cuts:
+  - speaker: kokubu
+    text: 問屋の[國分|こくぶ]です。カルピスは長く扱っています。
+    emotion: normal
+  - speaker: zundamon
+    text: 発売のころ、店を回らせてもらったのだ。
+    emotion: normal
+  - speaker: kokubu
+    text: 売る側から見れば、この[品|しな]はまだ死んでいません。
+    emotion: happy
+  - speaker: zundamon
+    text: ……その社長を、お願いします。
+    emotion: normal
+- id: ch12_s5
+  title: ''
+  background: cp_misesaki
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: wakate
+    x: 0.62
+    tag: 若い社員
+    emotion: normal
+  cuts:
+  - speaker: wakate
+    text: 会長。試飲台は、私たちが立ちます。
+    emotion: normal
+  - speaker: zundamon
+    text: ボクが立つ。顔を見て渡したいのだ。
+    emotion: happy
+  - speaker: wakate
+    text: ……[七十|ななじゅう]を過ぎておられます。
+    emotion: surprised
+  - speaker: zundamon
+    text: 売る道がなければ、いい[品|しな]でも終わるのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: '[卸|おろし]も小売も、一軒ずつ回るぞ！'
+    emotion: happy
+- id: ch12_s6
+  title: ''
+  background: cp_jimusho
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: wakate
+    x: 0.62
+    tag: 若い社員
+    emotion: happy
+  cuts:
+  - speaker: wakate
+    text: 砂糖の統制が解除されました。
+    emotion: happy
+  - speaker: zundamon
+    text: ……[全糖|ぜんとう]に戻せるのだ。
+    emotion: happy
+  - speaker: wakate
+    text: 借り入れも、残らず返し終わりました。
+    emotion: happy
+  - speaker: zundamon
+    text: 三年、かかったのだ。
+    emotion: normal
+  - speaker: reimu
+    text: 1953年。債務は完済されました。
+    reading: せんきゅうひゃくごじゅうさんねん。さいむわかんさいされました。
+- id: ch12_s7
+  title: ''
+  background: cp_jimusho
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: kokubu
+    x: 0.62
+    tag: 國分勘兵衛
+    emotion: normal
+  cuts:
+  - speaker: kokubu
+    text: '[三島|みしま]さん。社長の席、お返しします。'
+    emotion: happy
+  - speaker: zundamon
+    text: ……六年ぶりなのだ。
+    emotion: surprised
+  - speaker: kokubu
+    text: あなたが作った会社ですから。
+    emotion: happy
+  - speaker: reimu
+    text: 1956年。三島海雲が七十八歳で社長に戻ります。
+    reading: せんきゅうひゃくごじゅうろくねん。みしまかいうんがななじゅうはっさいでしゃちょうにもどります。
+  - speaker: zundamon
+    text: まだ、やることがあるのだ。
+    emotion: happy
+- id: ch12_s8
+  title: ''
+  background: cp_jimusho
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    tag: 三島海雲
+    emotion: normal
+  - who: wakate
+    x: 0.62
+    tag: 若い社員
+    emotion: normal
+  cuts:
+  - speaker: wakate
+    text: 先生。財産の目録、これで全部です。
+    emotion: normal
+  - speaker: zundamon
+    text: ボクの持ちものを、ぜんぶ書き出したのだ。
+    emotion: normal
+  - speaker: wakate
+    text: ……ぜんぶ、ですか。
+    emotion: surprised
+  - speaker: zundamon
+    text: 全部だ。
+    emotion: normal
+    se: don
+  - speaker: wakate
+    text: 何に使われるのですか。
+    emotion: surprised
+  - speaker: zundamon
+    text: 学者を作るのだ。これからは知力の競争なのだ。
+    emotion: happy
+  - speaker: wakate
+    text: 先生の手元には、何が残りますか。
+    emotion: thinking
+  - speaker: zundamon
+    text: 得た[財物|ざいぶつ]は、ボク一人のものではない。
+    emotion: normal
+  - speaker: zundamon
+    text: 必要な[金|かね]は湧いてくると、教わったのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……ぜんぶ、返すのだ。
+    emotion: normal
+  - speaker: reimu
+    text: 1962年12月。三島海雲は現有の全財産を投じて、財団を設立しました。
+    reading: せんきゅうひゃくろくじゅうにねんじゅうにがつ。みしまかいうんわげんゆうのぜんざいさんおとうじて、ざいだんおせつりつしました。
+- id: ch12_s9
+  title: ''
+  background: cp_card_1974
+  bgm: ambient
+  cuts:
+  - speaker: reimu
+    text: 1974年12月28日。三島海雲が九十六歳で亡くなりました。
+    reading: せんきゅうひゃくななじゅうよねんじゅうにがつにじゅうはちにち。みしまかいうんがきゅうじゅうろくさいでなくなりました。
+  - speaker: reimu
+    text: 翌年1月11日、築地本願寺で社葬が行われました。
+    reading: よくとしいちがつじゅういちにち、つきじほんがんじでしゃそうがおこなわれました。
+- id: ch13_rumor
+  title: 消えたマーク
+  background: cp_ima
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.3
+    emotion: happy
+  - who: tsumugi
+    x: 0.7
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: つむぎ、ネットで見たのだ。
+    emotion: happy
+  - speaker: zundamon
+    text: 原液は、モンゴルから持ち帰ったやつなのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: 帰国して四年、三つ潰して作り直したでしょ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……[醍醐味|だいごみ]も、[醍醐素|だいごそ]も、キャラメルも。
+    emotion: thinking
+  - speaker: zundamon
+    text: 名前も、ヒルピスって山から取ったのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: そう話した歴史家もいる。でも確証は無いの。
+    emotion: thinking
+  - speaker: tsumugi
+    text: カルはカルシウム。ピスはサルピス。
+    emotion: normal
+  - speaker: zundamon
+    text: 本人が、自分で言ってたのだ。
+    emotion: surprised
+- id: ch13_mushiba
+  title: ''
+  background: cp_ima
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.3
+    emotion: thinking
+  - who: tsumugi
+    x: 0.7
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    text: カルピスで虫歯になる、とも聞いたのだ。
+    emotion: thinking
+  - speaker: tsumugi
+    text: 歯医者さんが、虫歯の子の親に聞いたの。
+    emotion: normal
+  - speaker: tsumugi
+    text: 普段は何を飲ませていますか、って。
+    emotion: normal
+  - speaker: zundamon
+    text: ……答えが、カルピス。
+    emotion: surprised
+  - speaker: tsumugi
+    text: それが原因だと取り違えられて、広まったわ。
+    emotion: normal
+  - speaker: tsumugi
+    text: 会社は歯医者さんたちと組んで、冊子を配ったの。
+    emotion: normal
+  - speaker: tsumugi
+    text: 危ないのは、甘いものを口に置き続けること。
+    emotion: normal
+  - speaker: zundamon
+    text: ……瓶に口をつけてる人なのだ。
+    emotion: surprised
+    se: oti
+- id: ch13_mark
+  title: ''
+  background: cp_shiryo
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    emotion: normal
+  - who: tsumugi
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: tsumugi
+    text: ずんだもん。ちゃんと答える話を、ひとつ。
+    emotion: thinking
+  - speaker: tsumugi
+    text: 震災のあった年に、ポスターを公募したでしょ。
+    emotion: normal
+  - speaker: zundamon
+    text: ヨーロッパの絵描きを助けるやつなのだ。
+    emotion: normal
+  - speaker: tsumugi
+    text: 三等が、ドイツの人の[図案|ずあん]だったの。
+    emotion: normal
+  - speaker: zundamon
+    text: パナマ帽をかぶった、黒人の男の人。
+    emotion: normal
+  - speaker: reimu
+    text: 1924年2月18日。新聞広告に使われ、六十六年のマークになります。
+    reading: せんきゅうひゃくにじゅうよねんにがつじゅうはちにち。しんぶんこうこくにつかわれ、ろくじゅうろくねんのまーくになります。
+  - speaker: zundamon
+    text: '[六十六年|ろくじゅうろくねん]も、同じ絵なのだ。'
+    emotion: surprised
+- id: ch13_1988
+  title: ''
+  background: cp_shiryo
+  stage:
+  - who: zundamon
+    x: 0.3
+    emotion: surprised
+  - who: tsumugi
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: reimu
+    text: 1988年7月22日。ワシントン・ポストが日本の商品を批判します。
+    reading: せんきゅうひゃくはちじゅうはちねんしちがつにじゅうににち。わしんとんぽすとがにほんのしょうひんおひはんします。
+  - speaker: zundamon
+    text: 黒人の描き方が、名指しされたのだ。
+    emotion: surprised
+  - speaker: tsumugi
+    text: その記事を、[堺|さかい]の家で読んだ親子がいたの。
+    emotion: normal
+  - speaker: reimu
+    text: 同じ年の8月11日。黒人差別をなくす会ができます。
+    reading: おなじとしのはちがつじゅういちにち。こくじんさべつおなくすかいができます。
+  - speaker: tsumugi
+    text: 会長はお母さん。会員は親子三人だけ。
+    emotion: normal
+  - speaker: tsumugi
+    text: 指摘したのは、九歳の長男よ。
+    emotion: normal
+- id: ch13_shashi
+  title: ''
+  background: cp_shiryo
+  stage:
+  - who: zundamon
+    x: 0.3
+    emotion: thinking
+  - who: tsumugi
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: reimu
+    text: 1990年1月、マークの使用が中止されました。1989年とする資料もあります。
+    reading: せんきゅうひゃくきゅうじゅうねんいちがつ、まーくのしようがちゅうしされました。せんきゅうひゃくはちじゅうきゅうねんとするしりょうもあります。
+  - speaker: tsumugi
+    text: 会社の年表には、自主的に中止とあるの。
+    emotion: normal
+  - speaker: tsumugi
+    text: 会の記録には、中止させた、とあるわ。
+    emotion: thinking
+  - speaker: zundamon
+    text: 同じ出来事なのに、言葉が違う。
+    emotion: thinking
+  - speaker: tsumugi
+    text: '[社史|しゃし]には、黒人も差別も人種も出てこない。'
+    emotion: thinking
+  - speaker: zundamon
+    text: 公募も広告も、年ごとに書いてあるのに？
+    emotion: surprised
+- id: ch13_glass
+  title: ''
+  background: cp_shiryo
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.3
+    emotion: thinking
+  - who: tsumugi
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: reimu
+    text: 善意で始まった公募から生まれた図案が、六十六年使われました。
+    reading: ぜんいではじまったこうぼからうまれたずあんが、ろくじゅうろくねんつかわれました。
+  - speaker: reimu
+    text: そして、九歳の子どもの指摘から消えました。
+    reading: そしてきゅうさいのこどものしてきからきえました。
+  - speaker: reimu
+    text: その六十六年のことは、社史には書かれていません。
+    reading: そのろくじゅうろくねんのことわしゃしにわかかれていません。
+  - speaker: tsumugi
+    text: 書かれていない、という事実があるだけ。
+    emotion: thinking
+  - speaker: zundamon
+    text: でも、この絵にはグラスが残ってるのだ。
+    emotion: normal
+  - speaker: tsumugi
+    text: 朝顔の形のグラスよ。今もパッケージにいる。
+    emotion: normal
+  - speaker: zundamon
+    text: 男の人は消えて、グラスは残ったのだ。
+    emotion: normal
+- id: u16_water
+  title: 薄めなくていい一本
+  background: cp_ima
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: ずんだもん、冷蔵庫から出した缶あるでしょ
+    emotion: normal
+  - speaker: zundamon
+    text: カルピスウォーターなのだ
+    emotion: normal
+  - speaker: tsumugi
+    text: あれが出たのは、会社が赤字の頃よ
+    emotion: normal
+  - speaker: zundamon
+    text: 赤字？あんなに売れてたのにか
+    emotion: surprised
+  - speaker: reimu
+    text: 1988年から、三期続けて営業赤字でした。
+    reading: せんきゅうひゃくはちじゅうはちねんから、さんきつづけてえいぎょうあかじでした。
+  - speaker: zundamon
+    text: 立て直しに、味を変えたのだ？
+    emotion: thinking
+  - speaker: tsumugi
+    text: ううん。何度も試して、5.2倍に薄めただけ
+    emotion: normal
+  - speaker: zundamon
+    text: やめたのは、かき混ぜる手間だけなのだ
+    emotion: thinking
+- id: u16_case
+  title: ''
+  background: cp_kojo
+  bgm: pop
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: reimu
+    text: 1991年2月に発売。想定は四百万ケースでした。
+    reading: せんきゅうひゃくきゅうじゅういちねんにがつにはつばい。そうていわよんひゃくまんけーすでした。
+  - speaker: zundamon
+    text: 四百万は多いのだ？
+    emotion: normal
+  - speaker: tsumugi
+    text: 会社は、そこが上限のつもりだったの
+    emotion: normal
+  - speaker: reimu
+    text: 6月末にそれを超え、その年の8月末には一千万ケース。
+    reading: ろくがつまつにそれをこえ、そのとしのはちがつまつにわいっせんまんけーす。
+  - speaker: zundamon
+    text: 半年で、倍以上いったぞ！
+    emotion: surprised
+  - speaker: tsumugi
+    text: 缶を詰めるラインは社内に二本。よそを足して二十数カ所でも追いつかない
+    emotion: normal
+  - speaker: zundamon
+    text: 味は同じなのに、ここまで変わるのだ
+    emotion: thinking
+- id: u16_shiro
+  title: ''
+  background: cp_ima
+  bgm: curious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: でもね。2007年に、街の人に聞いたのよ
+    emotion: normal
+  - speaker: zundamon
+    text: 何を聞いたのだ
+    emotion: normal
+  - speaker: tsumugi
+    text: カルピスって、どんな飲み物ですかって
+    emotion: normal
+  - speaker: zundamon
+    text: ボクなら、うまいで終わりなのだ
+    emotion: happy
+  - speaker: tsumugi
+    text: 返ってきたのは、子どもの飲み物。カロリーが高そう
+    emotion: thinking
+  - speaker: tsumugi
+    text: それと、白い色は[着色料|ちゃくしょくりょう]でしょって
+    emotion: thinking
+  - speaker: zundamon
+    text: '[着色料|ちゃくしょくりょう]！？[生乳|せいにゅう]と[乳酸菌|にゅうさんきん]なのだ！'
+    emotion: surprised
+    se: don
+  - speaker: tsumugi
+    text: '[発酵|はっこう]させると、あの白さになるのよ'
+    emotion: normal
+  - speaker: reimu
+    text: 発売から九十年。そこは伝わっていませんでした。
+    reading: はつばいからきゅうじゅうねん。そこわつたわっていませんでした。
+- id: u16_hyakunen
+  title: ''
+  background: cp_shiryo
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: 2019年の[七月七日|しちがつなのか]で、ちょうど百年
+    emotion: normal
+  - speaker: zundamon
+    text: '[七夕|たなばた]のまま、百年きたのか'
+    emotion: happy
+  - speaker: tsumugi
+    text: 全国九か所に、カルピスのじゃぐちができたの
+    emotion: normal
+  - speaker: zundamon
+    text: じゃぐちをひねると、カルピスなのだ
+    emotion: happy
+  - speaker: tsumugi
+    text: '[海雲|かいうん]さんの財団も、まだ続いてるの'
+    emotion: normal
+  - speaker: reimu
+    text: 2025年の交付は91件、総額1億3884万円。
+    reading: にせんにじゅうごねんのこうふわきゅうじゅういっけん、そうがくいちおくさんぜんはっぴゃくはちじゅうよんまんえん。
+  - speaker: zundamon
+    text: 全部手放した[金|かね]が、六十年以上回ってるのだ
+    emotion: thinking
+- id: u16_oti
+  title: ''
+  background: cp_ima
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: さっき、カロリーゼロって言ってたでしょ
+    emotion: normal
+  - speaker: zundamon
+    text: 缶のやつは、ほとんど水なのだ
+    emotion: normal
+  - speaker: tsumugi
+    text: 甘さをおさえたのでも、1本99キロカロリー
+    emotion: thinking
+  - speaker: tsumugi
+    text: 甘くないカルピスも、年内に試し売りするって
+    emotion: normal
+  - speaker: zundamon
+    text: 甘くないなら、いくらでも飲めるぞ
+    emotion: happy
+  - speaker: tsumugi
+    text: 薄める気だけは、ずっとゼロなのね
+    emotion: normal
+    se: oti
+- id: shime
+  title: ''
+  background: cp_ima
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.32
+    flip: true
+    emotion: happy
+  - who: tsumugi
+    x: 0.68
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    text: ずんだもん、コップと水を出して。
+    emotion: normal
+  - speaker: zundamon
+    text: ボクは今日も一杯作るのだ。
+    emotion: happy
+  - speaker: tsumugi
+    text: 薄める濃さは、自分で決めていいのよ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……水を足すと、味が遠くなるのだ。
+    emotion: thinking
+  - speaker: tsumugi
+    text: あなたも今日、好きな濃さで一杯どうぞ。
+    emotion: happy
+  - speaker: reimu
+    text: 草原で飲んだ一杯を、日本で作り直そうとした男がいました。
+    reading: そうげんでのんだいっぱいを、にほんでつくりなおそうとしたおとこがいました。
+  - speaker: reimu
+    text: 出した商品は、どれも残りませんでした。
+    reading: だしたしょうひんわどれものこりませんでした。
+  - speaker: zundamon
+    text: ……いくつもつぶして、まだ作ったのか。
+    emotion: surprised
+  - speaker: tsumugi
+    text: そう。最後は、置き忘れた瓶から生まれたのよ。
+    emotion: normal
+  - speaker: zundamon
+    text: 狙って作ったんじゃないのだ。
+    emotion: surprised
+  - speaker: tsumugi
+    text: その一本が、いまも家庭に届いてるの。
+    emotion: happy
+  - speaker: tsumugi
+    text: 2024年の計画で、ブランド全体[3600万箱|さんぜんろっぴゃくまんバコ]を超えるのよ。
+    emotion: normal
+  - speaker: zundamon
+    text: ……ボクの冷蔵庫にも、あるのだ。
+    emotion: normal
+  - speaker: zundamon
+    text: じゃあ今日は、ちゃんと薄めるのだ。
+    emotion: happy
+  - speaker: zundamon
+    text: よし、牛乳でいくぞ。
+    emotion: happy
+  - speaker: tsumugi
+    text: だから、それ薄めてない。
+    emotion: thinking
+    se: oti
+  - speaker: tsumugi
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+    emotion: happy
+  - speaker: zundamon
+    text: ご視聴、ありがとうございました！
+    emotion: happy
+    duet_with: tsumugi
