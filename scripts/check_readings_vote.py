@@ -240,11 +240,42 @@ def verify_narration(cfg, script, hits: list) -> None:
     仮説を人が用意する必要がないのがこの方式の要点。
     """
     import numpy as np
-    from ytf.voice import aquestalk_synthe
     narr_cuts = [c for s_ in script["scenes"] for c in s_["cuts"]]
     ch = cfg.character(script["meta"].get("narrator") or "reimu") or {}
     preset = ch.get("aquestalk_preset", "れいむ")
     speed = float(ch.get("speed_scale", 1.3))
+
+    if ch.get("engine") == "aquestalk1":
+        # AquesTalk1 は読みを ytf/aq1.py が決めるので、実音を測るまでもなく確定する。
+        # 合成して波形を比べる意味が無い（どの候補も同じ変換を通ってしまう）ので、
+        # 実際に DLL へ渡る音声記号列に、どの候補の読みが入っているかで判定する
+        from ytf import aq1
+        from ytf.config import find_project_dir
+
+        class _P:
+            pass
+        p = _P()
+        p.root = find_project_dir(cfg.root, script["meta"]["slug"])
+        ledger = aq1.load_ledger(cfg, p)
+        for h in hits:
+            if not h["narr"]:
+                continue
+            cut = narr_cuts[h["idx"]]
+            spoken = cut.get("reading") or spoken_of(cut["text"])
+            koe = aq1.to_koe(spoken, ledger)
+            cand = sorted(set(v[0] for v in h["votes"].values() if v))
+            found = [y for y in cand if y and y in koe]
+            counts = [v[0] for v in h["votes"].values() if v]
+            major = max(set(counts), key=counts.count) if counts else ""
+            if len(found) == 1:
+                h["audio"] = (f"実読は {found[0]}（音声記号列から確定）"
+                              + ("" if found[0] == major else "  ‼ 多数派と違う"))
+            elif not found:
+                h["audio"] = (f"‼ 候補 {'/'.join(cand)} のどれも実読に無い。"
+                              f"実読: {koe[:40]}")
+            else:
+                h["audio"] = f"候補が複数一致（{'/'.join(found)}）。実読: {koe[:40]}"
+        return
 
     def env(a, n=400):
         e = np.abs(a)

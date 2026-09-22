@@ -17,8 +17,10 @@ qrcode                  # QRコード回の素材生成
 
 # --- 音声・読み検査 ---
 requests                # VOICEVOX エンジンのHTTP API
-pykakasi                # 読みのクロス照合
-Janome                  # 形態素解析（読み検査の多数決）
+pykakasi                # 読みのクロス照合（KAKASI系）
+Janome                  # 形態素解析（読み検査の多数決・IPAdic系）
+SudachiPy               # 同 UniDic系。check_readings_vote.py の3系統目
+SudachiDict-core        # ↑が dict="core" を要求する。無いと主検査が動かない
 jaconv                  # かな変換
 faster-whisper          # ナレーションの書き起こし照合（重い。CPUでも動く）
 

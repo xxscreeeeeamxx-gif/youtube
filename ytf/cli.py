@@ -122,12 +122,18 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
             print("  " + ln)
     problems += len(hit)
 
-    has_aq = any((cfg.character(c.speaker) or {}).get("engine") == "aquestalk"
-                 for sc in script.scenes for c in sc.cuts)
-    if has_aq:
+    # **エンジン名を増やしたらここも足すこと**（2026-09-21に踏んだ）。
+    # aquestalk1 へ移行したとき "aquestalk" だけを見ていたため、ゆっくりナレの
+    # 検査2種が**黙ってスキップ**されていた。検査が落ちたことに気づけないのが最悪なので、
+    # 新しいエンジンを足すときは必ずこの集合に入れる
+    AQ_ENGINES = ("aquestalk", "aquestalk1")
+    engines = {(cfg.character(c.speaker) or {}).get("engine")
+               for sc in script.scenes for c in sc.cuts}
+    aq_engine = next((e for e in AQ_ENGINES if e in engines), None)
+    if aq_engine:
         if skip_whisper:
             print(f"ゆっくりナレ照合: スキップ。投稿前に "
-                  f"python3 scripts/check_aq_readings.py {slug} を必ず実行すること")
+                  f"scripts/check_aq_readings.py {slug} を必ず実行すること")
             problems += 1
         else:
             for ln in _run("check_aq_readings.py"):
@@ -136,13 +142,25 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
                 elif ln.startswith(("‼", "   ")):
                     print("  " + ln)
                     problems += ln.startswith("‼")
-        # 漢字の実音チェックは軽い（該当語のある行だけ合成する）ので常に走らせる
-        for ln in _run("check_aq_kanji.py"):
-            if ln.startswith("‼") or ln.startswith("  - ") or ln.startswith("（要人手"):
-                print(ln if ln.startswith("（") else "  " + ln)
-                problems += ln.startswith("‼")
-            elif ln.startswith("OK:"):
-                print("ナレの漢字読み: " + ln)
+        if aq_engine == "aquestalk1":
+            # AquesTalk1 は読みを ytf/aq1.py が決めるので、**合成される音声記号列を
+            # そのまま読める**。漢字版とかな版の実音を比べる check_aq_kanji は
+            # 両方が同じ変換を通って必ず一致するため、ここでは意味を成さない。
+            # 代わりに変換結果を全行出して目視させる（より直接的で速い）
+            for ln in _run("check_aq1_koe.py"):
+                if ln.startswith("‼"):
+                    print("  " + ln)
+                    problems += 1
+                elif ln.startswith(("ナレ", "  ")):
+                    print(ln)
+        else:
+            # 漢字の実音チェックは軽い（該当語のある行だけ合成する）ので常に走らせる
+            for ln in _run("check_aq_kanji.py"):
+                if ln.startswith("‼") or ln.startswith("  - ") or ln.startswith("（要人手"):
+                    print(ln if ln.startswith("（") else "  " + ln)
+                    problems += ln.startswith("‼")
+                elif ln.startswith("OK:"):
+                    print("ナレの漢字読み: " + ln)
     return problems == 0
 
 

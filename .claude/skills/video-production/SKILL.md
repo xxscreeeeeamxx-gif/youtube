@@ -10,19 +10,32 @@ description: このリポジトリ（yt-factory）で解説動画を1本作る�
 
 ## 環境セットアップ（毎セッション最初に）
 
+**2026-09-20 に Mac から Windows へ移行した。** 以下は Windows の手順。
+Mac時代の手順（`/Users/sasakihideaki/...`、`. .venv/bin/activate`、`tools/ffmpeg`）は
+もう使わない。移行の全記録は SETUP_WINDOWS.md にある。
+
 ```bash
-cd /Users/sasakihideaki/Claude/Projects/Youtube
-. .venv/bin/activate
-export PYTHONPATH=.
-export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
+cd /c/yt
 ```
 
-- Python 3.9 の venv（`eval_type_backport` 導入済みなので `X | None` 記法も動く）
-- ffmpeg/ffprobe は `tools/` の静的バイナリ（arm64、martin-riedl.de のビルド）。
-  無ければ https://ffmpeg.martin-riedl.de/ からダウンロードして tools/ に置き `chmod +x`
-- VOICEVOX は**手動起動不要**。`ensure_engine` がアプリ内蔵エンジン
-  （`/Applications/VOICEVOX.app/Contents/Resources/vv-engine/run`）をヘッドレス自動起動
+- **置き場所は `C:\yt` 固定**。日本語フォルダ名があり、深い場所に置くと260文字制限に当たる
+- **Python は uv 管理の 3.12**。実行は `./.venv/Scripts/python.exe`（`python` は使えない）。
+  パッケージは `uv pip install`（`pip` 直叩きは禁止）
+- ffmpeg/ffprobe は `tools/ffmpeg.exe` / `tools/ffprobe.exe`。
+  **環境変数 YTF_FFMPEG / YTF_FFPROBE はユーザー環境変数に登録済み**なので設定不要
+- 日本語を出すコマンドは `PYTHONIOENCODING=utf-8` を付ける（付けないと文字化けする）
+- VOICEVOX は**手動起動不要**。`ensure_engine` が
+  `%LOCALAPPDATA%\Programs\VOICEVOX\vv-engine\run.exe` をヘッドレス自動起動する
+  （winget版の実体は WinGet\Packages 配下。そこへジャンクションを張ってある）
+- **ゆっくりボイスは棒読みちゃん同梱の AquesTalk1**（`tools/BouyomiChan/`）。
+  AquesTalkPlayer からの乗り換え理由と仕組みは SETUP_WINDOWS.md ③ を参照
 - Pexels APIキーは `.pexels_key`（gitignore済み）から自動で読まれる
+
+コマンド例（このファイル内の `python3 ...` は全部これに読み替える）:
+
+```bash
+cd /c/yt && PYTHONPATH=. PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m ytf.cli make <slug>
+```
 
 ## 全体フロー（1本作る）
 
@@ -76,9 +89,16 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
   重要人物役。その他の登場人物=白モブ（のっぺら白キャラ+名前ラベル。実在人物は実写顔貼りも可）
 - **ナレーション**（`meta.narrator: reimu` = ゆっくりボイス）: です・ます調で史実進行・数字・オチ回収を担当。
   会話は感情・ボケ・生活感だけを担う。解説をセリフに背負わせない
-- **ゆっくりボイスの実装**: AquesTalkPlayer公式Mac版のCLI（`tools/AquesTalkPlayer.app`、
-  再取得URLは channel.yaml の aquestalk 節）。voice.py が `engine: aquestalk` のキャラを
-  CLI合成→24kHz変換する。個人非営利は無償・**収益化を始めたらAQUESTの商用ライセンス購入が必要**
+- **ゆっくりボイスの実装**（2026-09-20 にWindows移行で差し替え）:
+  棒読みちゃん同梱の AquesTalk1 DLL を直接叩く。`engine: aquestalk1` のキャラを
+  `ytf/aq1.py` が「漢字→カタカナ変換 → 32bitブリッジで合成 → 24kHz変換」する。
+  同梱ライセンスに「個人利用、商用利用を問わず」使用可と明記されており、**収益化しても課金不要**。
+  旧実装（`engine: aquestalk` = AquesTalkPlayer公式Mac版）もコードは残置してある
+- **AquesTalk1 は音声記号列（カタカナ）しか受け付けない**ので、`ytf/aq1.py` が変換する。
+  数詞は自前で読む（`1894年`→センハッピャクキュウジュウヨネン、`20日`→ハツカ）。
+  漢字語は pykakasi 任せ。**読みの上書きは readings.yaml と `[表示|よみ]` タグが効く**
+  （旧AquesTalkPlayerと違い、ナレも `reading:` / タグが反映される）。
+  未対応字（ヂ ヅ ヴ ヵ ヶ ヰ ヱ ヲ ！）は自動で言い換えられる
 - **ナレーター話速は1.3**（お手本準拠で速め。1.1では遅くて間延びする）
 - **配役紹介・番組口上は一切禁止**: 「本日は再現ドラマでお送りします」「主演◯◯さん」等は
   お手本には無い。冒頭の茶番→年号カードでそのまま物語に入る（ずんだもんが主人公を演じる説明は
@@ -191,11 +211,13 @@ export YTF_FFMPEG="$PWD/tools/ffmpeg" YTF_FFPROBE="$PWD/tools/ffprobe"
 - **ショート動画は作らない**: scenes に short: true を付けない（ユーザー方針 2026-07）
 - **セリフの字数上限**: 吹き出し=14字×3行（42字で切られる）、ナレ帯=26字×2行（52字）。
   台本検証時に必ず全カットの字数チェックを回す
-- **AquesTalkには漢字かな交じり文を渡す**（2026-08にユーザー指摘「イントネーションが
-  聞きづらい」から判明）。ひらがなだけだと形態素解析の手がかりが無く抑揚が平板になる
-  （実測: 抑揚の指標が 3.10→4.09 と3割改善）。voice.py が text 側を使うので、
-  ナレの `reading:` は AquesTalk では参照されない。読みの上書きは
-  `[表示|よみ]` タグで行う（VOICEVOXと同じ運用に統一）
+- **【旧AquesTalkPlayer時代のルール・現在は逆】AquesTalkには漢字かな交じり文を渡す**
+  （2026-08にユーザー指摘「イントネーションが聞きづらい」から判明。ひらがなだけだと
+  形態素解析の手がかりが無く抑揚が平板になり、実測で抑揚3.10→4.09と3割違った）。
+  **2026-09-20 の AquesTalk1 への移行でこの前提は消えた。** AquesTalk1 DLL は
+  形態素解析をせず音声記号列しか受け付けないので、`ytf/aq1.py` が変換する。
+  そのため**現在はナレの `reading:` が参照される**（下の読み台帳ルール5が正）。
+  ひらがなで書けば字面どおり読まれるので、誤読が構造的に起きない
 - **ただしナレ行にタグを多用してはいけない**（2026-08-25にシャープペンシル回で実測）。
   タグはひらがなに置換されて渡るので、隣り合う語と繋がって形態素解析が崩れる。
   実例: 「1915年、[徳次|とくじ]は[早川|はやかわ]姓に復籍します」→
