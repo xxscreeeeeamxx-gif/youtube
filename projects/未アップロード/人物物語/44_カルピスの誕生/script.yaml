@@ -176,7 +176,7 @@ meta:
     voice: 13
     pitch: 0.0
 scenes:
-- id: cp_chaban_1
+- id: hook
   title: ''
   background: cp_ima
   bgm: shuffle_shuffle
@@ -231,18 +231,6 @@ scenes:
   - speaker: zundamon
     text: わかったのだ。今日から体に優しく生きるぞ。
     emotion: happy
-- id: cp_chaban_2
-  title: ''
-  background: cp_ima
-  stage:
-  - who: zundamon
-    x: 0.3
-    flip: true
-    emotion: happy
-  - who: tsumugi
-    x: 0.74
-    emotion: normal
-  cuts:
   - speaker: zundamon
     text: だから、冷蔵庫からこれを出してきたのだ。
     emotion: happy
@@ -270,22 +258,6 @@ scenes:
     emotion: normal
   - speaker: tsumugi
     text: 七十年以上かかってるのよ。
-    emotion: normal
-- id: hook
-  title: ''
-  background: cp_ima
-  bgm: 223am
-  stage:
-  - who: zundamon
-    x: 0.3
-    flip: true
-    emotion: normal
-  - who: tsumugi
-    x: 0.74
-    emotion: normal
-  cuts:
-  - speaker: tsumugi
-    text: でもね。薄めなくていい一本が出るまで、七十年以上よ。
     emotion: normal
   - speaker: zundamon
     text: 七十年。水で薄めるだけなのに。
@@ -1588,9 +1560,6 @@ scenes:
     tag: ミルクホールの店員
     emotion: normal
   cuts:
-  - speaker: reimu
-    text: 1915年の春。三島は大陸の事業を手放して帰ります。
-    reading: せんきゅうひゃくじゅうごねんのはる。みしまわたいりくのじぎょうおてばなしてかえります。
   - speaker: milkhall_clerk
     text: いらっしゃい。ヨーグルトはいかがです。
     emotion: happy
@@ -2220,7 +2189,7 @@ scenes:
     text: 最上のものを[醍醐|だいご]、サルピルマンダといいます。
     emotion: normal
   - speaker: zundamon
-    text: "[一段下|いちだんした]が[熟酥|じゅくそ]、サルピスなのだ。"
+    text: '[一段下|いちだんした]が[熟酥|じゅくそ]、サルピスなのだ。'
     emotion: normal
   - speaker: zundamon
     text: 本当なら、カルピルにするべきだ。
@@ -2327,7 +2296,7 @@ scenes:
     text: ごぶさたしています。[驪城|こまき]です。
     emotion: normal
   - speaker: zundamon
-    text: "[文学寮|ぶんがくりょう]で、ボクの後ろにいた[驪城|こまき]か。"
+    text: '[文学寮|ぶんがくりょう]で、ボクの後ろにいた[驪城|こまき]か。'
     emotion: surprised
   - speaker: komaki
     text: いまは、中学で英語を教えています。
