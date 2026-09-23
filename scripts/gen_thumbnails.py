@@ -2650,6 +2650,39 @@ def p_nttower(d, s):
                 fill=(250, 246, 238), outline=(200, 190, 176), width=int(s * 0.008))  # 展望台
 
 
+def _gd_bowl(d, s, full):
+    """丼。実在チェーンの器の柄や配色は描かず、黒い丼だけにする。"""
+    d.pieslice([s * 0.12, s * 0.30, s * 0.88, s * 0.92], 0, 180, fill=(44, 42, 48),
+               outline=(20, 20, 24), width=int(s * 0.02))
+    d.ellipse([s * 0.10, s * 0.46, s * 0.90, s * 0.70], fill=(66, 62, 68),
+              outline=(20, 20, 24), width=int(s * 0.02))
+    if full:
+        # 肉は縁の内側に収める（盛り上げると茶色の塊に見えた）。
+        # 玉ねぎと紅しょうがで、縮めても牛丼と分かるようにする
+        d.ellipse([s * 0.14, s * 0.44, s * 0.86, s * 0.68], fill=(150, 92, 54))
+        for k in range(4):                                         # 肉のひだ
+            x = s * (0.27 + k * 0.13)
+            d.arc([x - s * 0.08, s * 0.47, x + s * 0.08, s * 0.61], 200, 340,
+                  fill=(96, 56, 32), width=int(s * 0.022))
+        for k in range(3):                                         # 玉ねぎ
+            x = s * (0.30 + k * 0.15)
+            d.arc([x - s * 0.06, s * 0.50, x + s * 0.06, s * 0.60], 190, 350,
+                  fill=(240, 236, 210), width=int(s * 0.018))
+        d.ellipse([s * 0.64, s * 0.48, s * 0.78, s * 0.56], fill=(220, 50, 60))   # 紅しょうが
+    else:
+        d.ellipse([s * 0.15, s * 0.50, s * 0.85, s * 0.66], fill=(236, 236, 230))
+
+
+def p_gdempty(d, s):
+    """牛丼が消えた日の、空の丼。"""
+    _gd_bowl(d, s, False)
+
+
+def p_gdbowl(d, s):
+    """牛肉の乗った丼。縮めても「牛丼」と分かるよう肉を面で見せる。"""
+    _gd_bowl(d, s, True)
+
+
 NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
 TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
 GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
@@ -2879,6 +2912,11 @@ SPECS = {
         head_hi="東京タワー", panels=[
         _p("p_nttrunk", "1917年 アメリカ", BROWN, "surprised", "仕切りなのだ！", "トランクの仕切り"),
         _p("p_nttower", "1958年 東京", TEAL, "happy", "計算尺で333m", "70歳の構造計算"),
+    ]),
+    "yoshinoya-abe": dict(layout="panels", headline="吉野家から牛丼が消えた",
+        head_hi="牛丼", panels=[
+        _p("p_gdempty", "2004年2月", BROWN, "sad", "牛丼がないのだ", "全国で販売休止"),
+        _p("p_gdbowl", "2006年9月", TEAL, "happy", "同じ味なのだ", "代わりは使わない"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

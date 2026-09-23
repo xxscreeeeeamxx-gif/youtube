@@ -1,0 +1,1424 @@
+meta:
+  title: 【牛丼が消えた日】代わりの肉なら売れた。それでも止めた男【ずんだもん解説】
+  slug: yoshinoya-abe
+  summary: 牛丼しか売っていない店から、牛丼が消えたことがあります。代わりの肉を使えば、売り続けることはできました。それでも、その店は止めました。決めたのは、時給の高さで店を選んだ元アルバイトの社長です。しかも彼が働いてきた会社は、一度潰れていました。明治の魚市場から始まる、一杯の味をめぐる物語です。
+  tags:
+  - 吉野家
+  - 安部修仁
+  - 牛丼
+  - BSE
+  - 会社更生法
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 外食
+  thumbnail:
+    top: 牛丼が消えた
+    bottom: 牛丼が消えた日
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: tencho
+    label: 店長
+    voice: 13
+    pitch: 0.02
+  - id: jinji
+    label: 人事教育部長
+    voice: 13
+    pitch: -0.04
+  - id: mizuho
+    label: 松田瑞穂
+    voice: 13
+    pitch: -0.08
+  - id: douryo
+    label: 同僚
+    voice: 12
+    pitch: 0.02
+  - id: kyaku
+    label: 常連客
+    voice: 42
+    pitch: 0.0
+  - id: masuoka
+    label: 増岡章三
+    voice: 42
+    pitch: -0.04
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.04
+  - id: kakari
+    label: 仕入れ担当
+    voice: 12
+    pitch: -0.04
+  - id: keieisha
+    label: 同業の経営者
+    voice: 13
+    pitch: 0.04
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.06
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.04
+  - id: baito
+    label: アルバイト
+    voice: 12
+    pitch: 0.06
+scenes:
+- id: hook
+  title: ''
+  background: gd_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。今日は、ボクが牛丼を作るのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: いいわね。お肉は、何にしたの？
+  - speaker: zundamon
+    emotion: normal
+    text: 豚肉なのだ。牛肉は、高いのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、豚丼じゃない？
+  - speaker: zundamon
+    emotion: happy
+    text: 丼に乗ってれば、だいたい牛丼なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: だいたいで済ませないで。
+  - speaker: zundamon
+    emotion: normal
+    text: たれも、作るのが面倒だから、粉のスープの素を溶かすぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 手抜きが、二段重ねになってるわよ。
+  - speaker: zundamon
+    emotion: happy
+    text: できたのだ。いただきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……牛丼の味が、しない。
+  - speaker: tsumugi
+    emotion: normal
+    text: そりゃ、そうよ。
+  - speaker: zundamon
+    emotion: angry
+    text: なら今度は、牛肉を奮発するぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: たれは？
+  - speaker: zundamon
+    emotion: normal
+    text: 粉のままなのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……やっぱり、お店の味にならないのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: お肉か、たれか。一つ変えただけで、別の食べ物になるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 牛丼って、代わりがきかないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう考えて、本当に牛丼を止めた人がいるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 止めた？
+  - speaker: tsumugi
+    emotion: normal
+    text: 20年くらい前、[日本中|にほんじゅう]の吉野家から、牛丼が消えたことがあるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 牛丼屋さんから、牛丼が！？
+    se: don
+  - speaker: tsumugi
+    emotion: thinking
+    text: 950日も。
+  - speaker: zundamon
+    emotion: normal
+    text: 代わりのお肉で作れば、よかったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: よその店は、そうしたわ。でも、その店はしなかった。
+  - speaker: zundamon
+    emotion: angry
+    text: お客さんが困るのだ。なんでなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 代わりのお肉だと、うちの味にならないからって。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……さっきのボクの牛丼と、同じ話なのだ。
+  - speaker: reimu
+    text: 牛丼チェーン、吉野家。100年以上続く店です。
+    reading: ぎゅうどん ちぇえん、よしのや。ひゃくねん いじょう つづく みせです。
+  - speaker: reimu
+    text: 牛丼を止めると決めた社長は、アルバイトから入った安部修仁という男でした。
+    reading: ぎゅうどんお とめると きめた しゃちょうわ、あるばいとから はいった あべ しゅうじという おとこでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: アルバイトから、社長！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: しかもその会社、一度潰れてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 波乱が、多すぎるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、明治の魚市場よ。
+- id: card1899
+  title: ''
+  background: gd_card_1899
+  cuts:
+  - speaker: reimu
+    text: 1899年。東京・日本橋の魚市場で、一軒の牛丼の店が始まりました。
+    reading: せんはっぴゃく きゅうじゅうきゅうねん。とうきょう にほんばしの うおいちばで、いっけんの ぎゅうどんの みせが はじまりました。
+- id: ch0_uogashi
+  title: 牛丼しかない店
+  background: gd_uogashi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 魚市場で働く人に、さっと食べてもらう店だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[市場|いちば]の人は、朝が早いのだ。'
+  - speaker: tsumugi
+    emotion: happy
+    text: 店の名前は、創業者が奈良の吉野の桜を好きだったから、と会社は説明してるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 桜なのに、牛丼なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 関東大震災で店が焼けて、[市場|いちば]と一緒に築地へ移るの。
+  - speaker: zundamon
+    emotion: normal
+    text: お客さんに、ついていったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 戦後は、二代目の松田瑞穂さんが、店を大きくしていくわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1959年には、メニューを牛丼一つに絞ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 一つだけ！？ 定食とかは、無いのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 無いの。牛丼だけ。
+  - speaker: zundamon
+    emotion: happy
+    text: 選ぶ手間が、省けるぞ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 作る側も、一つを極められるのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして1968年、2号店を出して、チェーンになっていくの。
+  - speaker: zundamon
+    emotion: surprised
+    text: やっと2号店なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 70年近く、かかったわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: ちょうど同じころ、福岡から一人の若者が上京してくるわ。
+- id: card1968
+  title: ''
+  background: gd_card_1968
+  cuts:
+  - speaker: reimu
+    text: 1968年ごろ。福岡の高校を出た安部修仁が、東京へ出てきます。
+    reading: せんきゅうひゃく ろくじゅうはちねん ごろ。ふくおかの こうこうお でた あべ しゅうじが、とうきょうえ でてきます。
+  - speaker: reimu
+    text: 音楽の道を目指して、R&Bのバンドで活動していました。
+    reading: おんがくの みちお めざして、あーるあんどびーの ばんどで かつどう していました。
+- id: ch1_baito
+  title: 時給で選んだ店
+  background: gd_tenpo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1970年ごろ、安部は吉野家でアルバイトを始めます。
+    reading: せんきゅうひゃく ななじゅうねん ごろ、あべわ よしのやで あるばいとお はじめます。
+  - speaker: tencho
+    emotion: normal
+    text: 君、バンドをやってるんだって？
+  - speaker: zundamon
+    emotion: happy
+    text: そうなのだ。
+  - speaker: tencho
+    emotion: thinking
+    text: それで、どうしてうちに？
+  - speaker: zundamon
+    emotion: normal
+    text: 正直に言うと、時給が高かったからなのだ。
+  - speaker: tencho
+    emotion: happy
+    text: 正直でいいね。
+  - speaker: tencho
+    emotion: normal
+    text: うちは牛丼しかない。覚えることは少ないけど、手は抜けないよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 一つしかないなら、すぐ覚えるぞ。
+  - speaker: tencho
+    emotion: normal
+    text: お客さんを待たせないのが、うちのやり方だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 待たせない。
+  - speaker: tencho
+    emotion: normal
+    text: '[市場|いちば]の人も、会社の人も、急いでるからね。'
+  - speaker: zundamon
+    emotion: thinking
+    text: バンドの練習より、忙しそうなのだ。
+  - speaker: tencho
+    emotion: happy
+    text: 手は、すぐに慣れるよ。
+- id: ch1_seishain
+  title: ''
+  background: gd_tenpo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: jinji, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: jinji
+    emotion: normal
+    text: 安部くん。社員に、ならないか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクが、なのだ？
+  - speaker: jinji
+    emotion: normal
+    text: 働きぶりを、ずっと見てきた。君になら、店を任せられる。
+  - speaker: jinji
+    emotion: happy
+    text: 無理にとは言わない。考えておいてくれ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……考えてみるのだ。
+  - speaker: reimu
+    text: 1972年、安部は正社員になりました。
+    reading: せんきゅうひゃく ななじゅうにねん、あべわ せいしゃいんに なりました。
+  - speaker: reimu
+    text: 最初の半年は、築地の店で基本をたたき込まれます。
+    reading: さいしょの はんとしわ、つきじの みせで きほんお たたきこまれます。
+- id: ch2_tsukiji
+  title: 築地の侍
+  background: gd_tsukiji
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: mizuho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: mizuho
+    emotion: angry
+    text: 遅い。
+  - speaker: zundamon
+    emotion: surprised
+    text: まだ、盛り始めたばかりなのだ。
+  - speaker: mizuho
+    emotion: normal
+    text: 客は待っている。
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。
+  - speaker: mizuho
+    emotion: thinking
+    text: つゆが多い。
+  - speaker: zundamon
+    emotion: thinking
+    text: 多いほうが、お客さんが喜ぶと思ったのだ。
+  - speaker: mizuho
+    emotion: normal
+    text: 決まった味を、毎回出す。それが、うちの約束だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 毎回、同じ味。
+  - speaker: mizuho
+    emotion: normal
+    text: 一杯でも違えば、客はそれを覚えている。
+  - speaker: zundamon
+    emotion: thinking
+    text: 百杯うまくても、一杯まずいと、そっちを覚えられるのだ。
+  - speaker: mizuho
+    emotion: normal
+    text: そうだ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……もう一回、盛るのだ。
+  - speaker: mizuho
+    emotion: normal
+    text: 遅い。
+  - speaker: zundamon
+    emotion: angry
+    text: 今のは、さっきより速かったぞ！
+  - speaker: reimu
+    text: 安部はのちに、この社長を、無口でせっかちな侍のような人だったと振り返っています。
+    reading: あべわ のちに この しゃちょうお、むくちで せっかちな さむらいの ような ひとだったと ふりかえっています。
+- id: ch2_tencho
+  title: ''
+  background: gd_tenpo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: baito, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 安部は入社してまもなく、店長を任されます。
+    reading: あべわ にゅうしゃして まもなく、てんちょうお まかされます。
+  - speaker: baito
+    emotion: thinking
+    text: 店長。つゆを多めにって、頼まれたんですけど。
+  - speaker: zundamon
+    emotion: normal
+    text: 頼まれたら、足していいのだ。
+  - speaker: baito
+    emotion: happy
+    text: じゃあ、ほかのお客さんにも、多めにしときます。
+  - speaker: zundamon
+    emotion: angry
+    text: それはダメなのだ。いつもの一杯は、いつもの量なのだ。
+  - speaker: baito
+    emotion: surprised
+    text: 細かいですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 築地で、さんざん言われたのだ。一杯でも違えば、お客さんは覚えてるって。
+  - speaker: baito
+    emotion: thinking
+    text: 店長も、怒られたんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 遅い、とも言われたぞ。
+  - speaker: baito
+    emotion: happy
+    text: それは、今も言われてそうですね。
+  - speaker: zundamon
+    emotion: angry
+    text: 余計なお世話なのだ。
+- id: ch3_kakudai
+  title: 200店の勢い
+  background: gd_jimusho
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: douryo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 入社から5年後の1977年、安部は九州地区の本部長になります。
+    reading: にゅうしゃから ごねんごの せんきゅうひゃく ななじゅうななねん、あべわ きゅうしゅう ちくの ほんぶちょうに なります。
+  - speaker: douryo
+    emotion: happy
+    text: 安部、聞いたか。店が、もうすぐ200を超えるぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2号店から、10年くらいなのだ。
+  - speaker: douryo
+    emotion: happy
+    text: アメリカにも店を出してる。次は、アメリカで200店だってさ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 大きく出たのだ。
+  - speaker: douryo
+    emotion: normal
+    text: 店を出せば出すほど、売り上げが増えるんだ。
+  - speaker: douryo
+    emotion: happy
+    text: この勢いなら、どこまでも行けるさ。
+- id: ch3_kyushu
+  title: ''
+  background: gd_tenpo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 本部長。来月も、新しい店が開きます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 今月も、開いたばかりなのだ。
+  - speaker: shain
+    emotion: thinking
+    text: 本社からは、もっと出せと言われてます。
+  - speaker: zundamon
+    emotion: happy
+    text: どんどん開けるのだ。
+  - speaker: shain
+    emotion: thinking
+    text: ただ、店長の数が追いつきません。
+  - speaker: zundamon
+    emotion: normal
+    text: 新しい人を、急いで育てるのだ。
+- id: ch3_kojo
+  title: ''
+  background: gd_kojo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.74, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1979年、吉野家は肉を乾かして保存する方法を取り入れ始め、たれも粉に変えました。
+    reading: せんきゅうひゃく ななじゅうくねん、よしのやわ にくお かわかして ほぞんする ほうほうお とりいれはじめ たれも こなに かえました。
+  - speaker: tsumugi
+    emotion: thinking
+    text: たくさん運べて、長く置いておける。店を増やすには、便利よね。
+  - speaker: zundamon
+    emotion: surprised
+    text: それ、さっきボクがやった粉のたれなのだ！
+  - speaker: tsumugi
+    emotion: angry
+    text: 規模が違うけどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 味は、どうなったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 落ちたと、会社自身が振り返ってるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: さらに牛肉の値段が上がって、牛丼も値上げしたの。
+  - speaker: zundamon
+    emotion: sad
+    text: 味が落ちて、値段が上がる……。
+  - speaker: tsumugi
+    emotion: normal
+    text: お客さんは、正直よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……来なくなるのだ。
+- id: ch3_mizuppoi
+  title: ''
+  background: gd_tenpo
+  bgm: 223am
+  stage:
+  - {who: kyaku, x: 0.3, emotion: thinking}
+  - {who: tenin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: thinking
+    text: なあ。最近、ここの牛丼、なんだか水っぽくないか。
+  - speaker: tenin
+    emotion: surprised
+    text: ……そうですか。
+  - speaker: kyaku
+    emotion: thinking
+    text: 肉も、前はもっとうまかった気がする。
+  - speaker: tenin
+    emotion: sad
+    text: 作り方が、少し変わりまして。
+  - speaker: kyaku
+    emotion: angry
+    text: しかも、値上がりだろ。
+  - speaker: tenin
+    emotion: sad
+    text: ……申し訳ありません。
+  - speaker: kyaku
+    emotion: normal
+    text: 悪いけど、しばらくよそで食うよ。
+  - speaker: tenin
+    emotion: sad
+    text: ……また、いらしてください。
+- id: ch4_america
+  title: ''
+  background: gd_america
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そのころ安部は、アメリカで店を増やす計画のため、イリノイ州で英語を学んでいました。
+    reading: そのころ あべわ あめりかで みせお ふやす けいかくの ため、いりのいしゅうで えいごお まなんでいました。
+  - speaker: tsumugi
+    emotion: normal
+    text: 向こうでは、牛丼をビーフボウルという名前で売ってたの。
+  - speaker: zundamon
+    emotion: happy
+    text: ビーフボウル。かっこいいぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、日本の本社のほうが、それどころじゃなくなってきたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 何があったのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: お[金|かね]が回らなくなって、大株主の会社から借りたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それで、経営の主導権もそっちへ移ったとされてるわ。
+  - speaker: reimu
+    text: 1980年の春。予定より3か月早く、帰国の命令が届きます。
+    reading: せんきゅうひゃく はちじゅうねんの はる。よていより さんかげつ はやく、きこくの めいれいが とどきます。
+- id: ch4_kikoku
+  title: 動かない店
+  background: gd_tenpo
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: surprised}
+  - {who: douryo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 戻った安部の肩書は、九州の本部長から、有楽町の店の店長に変わっていました。
+    reading: もどった あべの かたがきわ きゅうしゅうの ほんぶちょうから、ゆうらくちょうの みせの てんちょうに かわっていました。
+  - speaker: douryo
+    emotion: sad
+    text: ……おかえり、安部。
+  - speaker: zundamon
+    emotion: surprised
+    text: 店長から、やり直しなのだ？
+  - speaker: douryo
+    emotion: thinking
+    text: 上が、だいぶ変わったんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 店のみんなは、どうしてるのだ。
+  - speaker: douryo
+    emotion: sad
+    text: ……見ての通りだ。
+  - speaker: zundamon
+    emotion: angry
+    text: 誰も、動いてないぞ。
+  - speaker: douryo
+    emotion: sad
+    text: 何をやっても変わらないって、みんな思ってる。
+  - speaker: zundamon
+    emotion: normal
+    text: お客さんは、まだ来てくれてるのだ。
+  - speaker: douryo
+    emotion: thinking
+    text: 前より、ずいぶん減ったけどな。
+  - speaker: reimu
+    text: 帰国してみると、仲間がまったく働いていなかった、と安部は語っています。
+    reading: きこくしてみると なかまが まったく はたらいていなかったと、あべわ かたっています。
+- id: card1980
+  title: ''
+  background: gd_card_1980
+  cuts:
+  - speaker: reimu
+    text: 1980年7月15日。
+    reading: せんきゅうひゃく はちじゅうねん しちがつ じゅうごにち。
+- id: ch5_tousan
+  title: 潰れた日
+  background: gd_heya
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: sad}
+  - {who: douryo, x: 0.72, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: その日、安部は働きすぎで体を壊し、寝込んでいました。
+    reading: そのひ あべわ はたらきすぎで からだお こわし、ねこんでいました。
+  - speaker: reimu
+    text: 同僚から、電話がかかってきます。
+    reading: どうりょうから、でんわが かかってきます。
+  - speaker: douryo
+    emotion: sad
+    text: もしもし、安部か。……会社が、潰れた。
+  - speaker: zundamon
+    emotion: surprised
+    text: 潰れた……？
+    se: don
+  - speaker: douryo
+    emotion: sad
+    text: 今日、裁判所に、会社更生法を申し立てたって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 店は、どうなるのだ。
+  - speaker: douryo
+    emotion: thinking
+    text: 開けていいのかどうかも、まだ分からない。
+  - speaker: douryo
+    emotion: sad
+    text: ……お前は、休んでろ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……分かったのだ。
+  - speaker: reimu
+    text: 負債はおよそ120億円。店はおよそ260ありました。
+    reading: ふさいわ およそ ひゃくにじゅうおくえん。みせわ およそ にひゃくろくじゅう ありました。
+    telops:
+    - {text: "負債およそ120億円", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 急な出店と、味の低下が重なった結果とされています。
+    reading: きゅうな しゅってんと、あじの ていかが かさなった けっかと されています。
+- id: ch6_masuoka
+  title: 味を戻す
+  background: gd_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: shain, x: 0.56, emotion: sad}
+  - {who: masuoka, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 立て直しを任されたのは、裁判所に選ばれた弁護士、増岡章三でした。
+    reading: たてなおしお まかされたのわ、さいばんしょに えらばれた べんごし ますおか しょうぞうでした。
+  - speaker: masuoka
+    emotion: normal
+    text: 皆さんに聞きます。この会社は、なぜ潰れたと思いますか。
+  - speaker: shain
+    emotion: sad
+    text: 牛丼一本では、もう限界だったんじゃないでしょうか。
+  - speaker: masuoka
+    emotion: thinking
+    text: 私は、そうは思いません。
+  - speaker: zundamon
+    emotion: surprised
+    text: 違うのだ？
+  - speaker: masuoka
+    emotion: normal
+    text: 店を急に増やしすぎた。そして、味を落とした。原因は、その二つです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……粉のたれと、乾かした肉なのだ。
+  - speaker: masuoka
+    emotion: normal
+    text: 牛丼が嫌われたのではない。味の落ちた牛丼が、嫌われたんです。
+  - speaker: shain
+    emotion: surprised
+    text: では、どうすれば。
+  - speaker: masuoka
+    emotion: normal
+    text: まず、味を元に戻しましょう。
+  - speaker: shain
+    emotion: thinking
+    text: 新しい店は、どうしますか。
+  - speaker: masuoka
+    emotion: normal
+    text: 出しません。赤字の店は、閉めます。
+  - speaker: zundamon
+    emotion: sad
+    text: 閉める店には、九州の店も入ってるのだ。
+  - speaker: masuoka
+    emotion: thinking
+    text: あなたが見ていた地域ですね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。
+  - speaker: reimu
+    text: 乾かした肉と粉のたれをやめ、元の作り方に戻します。
+    reading: かわかした にくと こなの たれお やめ、もとの つくりかたに もどします。
+  - speaker: reimu
+    text: 九州と広島の店は、すべて閉めることになりました。
+    reading: きゅうしゅうと ひろしまの みせわ、すべて しめる ことに なりました。
+  - speaker: masuoka
+    emotion: normal
+    text: お客さんを呼び戻すために、セールを開きます。
+  - speaker: masuoka
+    emotion: normal
+    text: 味が戻ったことを、食べて確かめてもらうんです。
+  - speaker: zundamon
+    emotion: normal
+    text: ……やるのだ。
+- id: ch6_sale
+  title: ''
+  background: gd_gyoretsu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 再建のセールの日。
+    reading: さいけんの せえるの ひ。
+  - speaker: kyaku
+    emotion: thinking
+    text: おう。ここ、潰れたって聞いたぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 潰れたけど、店は[開いてる|あいてる]のだ。
+  - speaker: kyaku
+    emotion: surprised
+    text: 妙な商売だな。
+  - speaker: zundamon
+    emotion: happy
+    text: 食べてみてほしいのだ。味を、昔に戻したのだ。
+  - speaker: kyaku
+    emotion: thinking
+    text: ……前に食ったときは、なんだか水っぽかったがな。
+  - speaker: zundamon
+    emotion: normal
+    text: あれは、もう出さないのだ。
+  - speaker: kyaku
+    emotion: happy
+    text: ……うん。これだよ、これ。
+  - speaker: zundamon
+    emotion: happy
+    text: お代わりも、あるぞ。
+  - speaker: kyaku
+    emotion: angry
+    text: 一杯で十分だ。明日も来る。
+  - speaker: zundamon
+    emotion: happy
+    text: 明日も、この味で待ってるのだ。
+- id: ch7_saison
+  title: 資本の流れる先
+  background: gd_shukai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 安部修仁, emotion: thinking}
+  - {who: douryo, x: 0.56, emotion: angry}
+  - {who: mizuho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1980年の秋、西武流通グループ、のちのセゾンが支援することに決まります。
+    reading: せんきゅうひゃく はちじゅうねんの あき、せいぶ りゅうつう ぐるうぷ のちの せぞんが しえんする ことに きまります。
+  - speaker: douryo
+    emotion: angry
+    text: 聞いてないぞ。俺たちは、ダイエーが来てくれると思ってたんだ。
+  - speaker: douryo
+    emotion: angry
+    text: ストでもやって、抵抗しようって声が出てる。
+  - speaker: mizuho
+    emotion: normal
+    text: やめなさい。
+  - speaker: douryo
+    emotion: surprised
+    text: 松田さん……。
+  - speaker: mizuho
+    emotion: normal
+    text: 資本は、安全で有利な方に流れる。
+  - speaker: reimu
+    text: 前の社長がこう言っていさめた、と安部は振り返っています。
+    reading: まえの しゃちょうが こう いって いさめたと、あべわ ふりかえっています。
+  - speaker: reimu
+    text: 一番苦しい時期に、前の社長の家で食事をごちそうになったとも語っています。
+    reading: いちばん くるしい じきに まえの しゃちょうの いえで、しょくじお ごちそうに なったとも かたっています。
+  - speaker: reimu
+    text: それがなければ、会社を辞めていたかもしれない、と。
+    reading: それが なければ、かいしゃお やめていたかも しれないと。
+- id: ch7_kansai
+  title: ''
+  background: gd_jimusho
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: happy}
+  - {who: masuoka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1983年、安部は取締役になります。
+    reading: せんきゅうひゃく はちじゅうさんねん、あべわ とりしまりやくに なります。
+  - speaker: reimu
+    text: 1987年、借金を返し終え、会社の立て直しが終わりました。倒産から、およそ7年でした。
+    reading: せんきゅうひゃく はちじゅうななねん、しゃっきんお かえしおえ かいしゃの たてなおしが おわりました。とうさんから およそ ななねんでした。
+  - speaker: masuoka
+    emotion: happy
+    text: 返し終わりましたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 増岡さんの、おかげなのだ。
+  - speaker: masuoka
+    emotion: normal
+    text: いや。毎日[同じ|おなじ]味を出し続けた、店の人たちのおかげです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 同じ味を、毎日。
+  - speaker: reimu
+    text: 性格は正反対だった前の社長とこの弁護士を、安部はどちらも自分の師だと語っています。
+    reading: せいかくわ せいはんたいだった まえの しゃちょうと この べんごしお、あべわ どちらも じぶんの しだと かたっています。
+  - speaker: reimu
+    text: 1988年、会社はほかの会社と合併し、安部は常務になります。
+    reading: せんきゅうひゃく はちじゅうはちねん、かいしゃわ ほかの かいしゃと がっぺいし あべわ じょうむに なります。
+- id: card1992
+  title: ''
+  background: gd_card_1992
+  cuts:
+  - speaker: reimu
+    text: 1992年。安部は42歳で、社長になりました。
+    reading: せんきゅうひゃく きゅうじゅうにねん。あべわ よんじゅうにさいで、しゃちょうに なりました。
+  - speaker: reimu
+    text: アルバイトで入ってから、20年あまりでした。
+    reading: あるばいとで はいってから、にじゅうねん あまりでした。
+- id: ch8_shacho
+  title: ''
+  background: gd_jimusho
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 社長。アルバイトから社長なんて、聞いたことがありません。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも、聞いたことがないのだ。
+  - speaker: shain
+    emotion: thinking
+    text: どうして、この店を選んだんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 時給で選んだ店なのだ。
+  - speaker: shain
+    emotion: surprised
+    text: ……それ、言っていいんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 本当のことだぞ。
+- id: ch8_nesage
+  title: ''
+  background: gd_tenpo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1998年には、47都道府県すべてに店がそろいます。
+    reading: せんきゅうひゃく きゅうじゅうはちねんにわ、よんじゅうななの とどうふけん すべてに みせが そろいます。
+  - speaker: shain
+    emotion: happy
+    text: 社長。とうとう、全部の都道府県に店がそろいました。
+  - speaker: zundamon
+    emotion: happy
+    text: 北から南まで、牛丼が食べられるのだ。
+- id: ch8_meat
+  title: 世界の肉を調べる
+  background: gd_bokujo
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: kakari, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2001年、並盛を400円から280円に値下げします。
+    reading: にせん いちねん、なみもりお よんひゃくえんから にひゃく はちじゅうえんに ねさげします。
+  - speaker: reimu
+    text: 同じころ、世界中の牛肉の産地を調べる計画も進めていました。
+    reading: おなじころ せかいじゅうの ぎゅうにくの さんちお、しらべる けいかくも すすめていました。
+  - speaker: kakari
+    emotion: normal
+    text: 社長。世界中の牛肉の産地を、ひととおり見てきました。
+  - speaker: zundamon
+    emotion: normal
+    text: どこの肉なら、うちの味が出るのだ。
+  - speaker: kakari
+    emotion: thinking
+    text: やっぱり、アメリカです。
+  - speaker: kakari
+    emotion: normal
+    text: 穀物で育てた牛で、脂の具合がそろっています。量も、桁が違います。
+  - speaker: zundamon
+    emotion: thinking
+    text: オーストラリアは、どうなのだ。
+  - speaker: kakari
+    emotion: normal
+    text: 草で育つ牛が多くて、脂の付き方が違います。
+  - speaker: kakari
+    emotion: thinking
+    text: うちのたれと合わせると、別の味になります。
+  - speaker: zundamon
+    emotion: normal
+    text: 味が変わるなら、使えないのだ。
+- id: card2003
+  title: ''
+  background: gd_card_2003
+  cuts:
+  - speaker: reimu
+    text: 2003年12月24日。
+    reading: にせん さんねん じゅうにがつ にじゅうよっか。
+- id: ch9_bse
+  title: 肉が来ない
+  background: gd_jimusho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: thinking}
+  - {who: kakari, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: アメリカで牛の病気、BSEが見つかり、日本は米国産の牛肉の輸入を止めました。
+    reading: あめりかで うしの びょうき びいえすいいが みつかり、にほんわ べいこくさんの ぎゅうにくの ゆにゅうお とめました。
+  - speaker: kakari
+    emotion: sad
+    text: 社長。アメリカの牛肉が、入ってこなくなりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: いつまでなのだ。
+  - speaker: kakari
+    emotion: thinking
+    text: 分かりません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今ある肉で、どれくらいもつのだ。
+  - speaker: kakari
+    emotion: sad
+    text: 2か月は、もちません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 代わりの肉は、集まるのか。
+  - speaker: kakari
+    emotion: sad
+    text: アメリカ抜きで集められるのは、今の量の1割ほどです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1割……。
+  - speaker: kakari
+    emotion: sad
+    text: 全部の店のうち、1割の店でしか牛丼を出せません。
+  - speaker: reimu
+    text: 当時の吉野家は、およそ1000店。1年に3億5千万杯ほどの牛丼を売っていました。
+    reading: とうじの よしのやわ およそ せんてん。いちねんに さんおく ごせんまんばい ほどの ぎゅうどんお うっていました。
+    telops:
+    - {text: "1年に3億5千万杯", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch9_ketsudan
+  title: ''
+  background: gd_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 社長。ほかの国の肉に切り替えれば、牛丼は続けられます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 続けられるのだ。でも……
+  - speaker: shain
+    emotion: normal
+    text: よその店は、もう切り替えを考えているそうです。
+  - speaker: zundamon
+    emotion: normal
+    text: 肉がなくなったら、牛丼は止めるのだ。
+    se: don
+  - speaker: shain
+    emotion: sad
+    text: 牛丼しかない店で、牛丼を止めるんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 止めるのだ。戻ってきたら、また[同じ|おなじ]味で出すのだ。
+  - speaker: shain
+    emotion: thinking
+    text: ……会社は、もちますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 借金は無いのだ。蓄えも、あるのだ。
+  - speaker: reimu
+    text: 吉野家は、在庫がなくなるまで売り、そこで牛丼をいったん止めると決めました。
+    reading: よしのやわ ざいこが なくなるまで うり、そこで ぎゅうどんお いったん とめると きめました。
+  - speaker: reimu
+    text: 会社が生きるか死ぬかという不安はまったく無かった、と安部は語っています。
+    reading: かいしゃが いきるか しぬかという ふあんわ まったく なかったと、あべわ かたっています。
+- id: ch9_tokumori
+  title: ''
+  background: gd_tenpo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 休止の日までの間、営業時間を短くし、特盛の販売も止めます。
+    reading: きゅうしの ひまでの あいだ えいぎょう じかんお みじかくし、とくもりの はんばいも とめます。
+  - speaker: zundamon
+    emotion: normal
+    text: 一日でも長く、牛丼を出すためなのだ。
+  - speaker: shain
+    emotion: thinking
+    text: お客さんには、肉が足りないと説明します。
+  - speaker: zundamon
+    emotion: normal
+    text: 頼むのだ。
+- id: ch9_keieisha
+  title: ''
+  background: gd_jimusho
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: keieisha, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: keieisha
+    emotion: thinking
+    text: 安部さん。ほかの産地の肉でも、牛丼は作れるでしょう。
+  - speaker: zundamon
+    emotion: normal
+    text: 作れるのだ。牛丼という商品は、出せるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: でも、それだと、吉野家の味は出せないのだ。
+  - speaker: reimu
+    text: 同業の経営者から助言されたとき、安部はこう答えたと語っています。
+    reading: どうぎょうの けいえいしゃから じょげんされた とき、あべわ こう こたえたと かたっています。
+- id: card2004
+  title: ''
+  background: gd_card_2004
+  cuts:
+  - speaker: reimu
+    text: 2004年2月11日。牛丼を売る、最後の日です。
+    reading: にせん よねん にがつ じゅういちにち。ぎゅうどんお うる、さいごの ひです。
+- id: ch10_saigo
+  title: 最後の一杯
+  background: gd_gyoretsu
+  bgm: amacha_hoshizora
+  stage:
+  - {who: kyaku, x: 0.3, emotion: sad}
+  - {who: tenin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 店は、最後の一杯を求める客で混み合いました。
+    reading: みせわ、さいごの いっぱいお もとめる きゃくで こみあいました。
+  - speaker: kyaku
+    emotion: sad
+    text: '[並盛|なみもり]、一つ。……今日で、最後なんだろ。'
+  - speaker: tenin
+    emotion: sad
+    text: はい。この鍋で、最後です。
+  - speaker: kyaku
+    emotion: thinking
+    text: 明日から、何を食えばいいんだ。
+  - speaker: tenin
+    emotion: normal
+    text: ……必ず、また出します。
+  - speaker: kyaku
+    emotion: thinking
+    text: いつになる。
+  - speaker: tenin
+    emotion: sad
+    text: 分かりません。でも、同じ味で出します。
+  - speaker: kyaku
+    emotion: normal
+    text: ……何年でも、待つよ。
+  - speaker: tenin
+    emotion: happy
+    text: ……ありがとうございます。
+  - speaker: reimu
+    text: まもなく店には、牛丼の代わりに豚丼が並びます。
+    reading: まもなく みせにわ、ぎゅうどんの かわりに ぶたどんが ならびます。
+- id: ch10_akaji
+  title: ''
+  background: gd_jimusho
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 吉野家は、本業で赤字に転落します。
+    reading: よしのやわ、ほんぎょうで あかじに てんらくします。
+  - speaker: shain
+    emotion: sad
+    text: 社長。お客さんが、ずいぶん減りました。
+  - speaker: zundamon
+    emotion: thinking
+    text: そうだろうな。
+  - speaker: shain
+    emotion: thinking
+    text: 牛丼はまだかって、毎日のように聞かれます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+  - speaker: reimu
+    text: 2005年2月11日。残っていた在庫で、一日だけ牛丼を出します。
+    reading: にせん ごねん にがつ じゅういちにち。のこっていた ざいこで、いちにちだけ ぎゅうどんお だします。
+  - speaker: reimu
+    text: 1店あたり1500食ほど。数時間で売り切れる店が続きました。
+    reading: いってん あたり せんごひゃくしょく ほど。すうじかんで うりきれる みせが つづきました。
+  - speaker: shain
+    emotion: happy
+    text: 社長。あっという間に、売り切れました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……もう、売り切れたのか。
+- id: ch10_saiteishi
+  title: ''
+  background: gd_jimusho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: kakari, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2005年12月、米国産の牛肉の輸入が再開されます。
+    reading: にせん ごねん じゅうにがつ、べいこくさんの ぎゅうにくの ゆにゅうが さいかいされます。
+  - speaker: kakari
+    emotion: happy
+    text: 社長！ 輸入が、再開されました！
+  - speaker: zundamon
+    emotion: happy
+    text: 準備するのだ。鍋も、たれも、人もなのだ。
+  - speaker: kakari
+    emotion: happy
+    text: 店のみんなに、知らせてきます。
+  - speaker: reimu
+    text: ところが翌月、届いた肉に背骨が混ざっているのが見つかり、輸入はまた止まります。
+    reading: ところが よくげつ とどいた にくに せぼねが まざっているのが みつかり、ゆにゅうわ また とまります。
+  - speaker: kakari
+    emotion: sad
+    text: 社長……また、止まりました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……また、待つのだ。
+  - speaker: kakari
+    emotion: thinking
+    text: 店のみんなに、なんて言えば。
+  - speaker: zundamon
+    emotion: normal
+    text: ……ありのままを、伝えてほしいのだ。
+  - speaker: kakari
+    emotion: sad
+    text: ……はい。
+  - speaker: reimu
+    text: 輸入がもう一度再開されたのは、2006年7月のことでした。
+    reading: ゆにゅうが もう いちど さいかい されたのわ、にせん ろくねん しちがつの ことでした。
+- id: card2006
+  title: ''
+  background: gd_card_2006
+  cuts:
+  - speaker: reimu
+    text: 2006年9月18日。
+    reading: にせん ろくねん くがつ じゅうはちにち。
+- id: ch11_fukkatsu
+  title: 950日
+  background: gd_gyoretsu
+  bgm: amacha_milkyway
+  stage:
+  - {who: kyaku, x: 0.3, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: そして、牛丼が一日限定で戻ってきます。
+    reading: そして、ぎゅうどんが いちにち げんていで もどってきます。
+  - speaker: reimu
+    text: 全国で100万食。牛丼が消えてから、950日目でした。
+    reading: ぜんこくで ひゃくまんしょく。ぎゅうどんが きえてから、きゅうひゃく ごじゅうにちめでした。
+    telops:
+    - {text: "牛丼が消えてから950日", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kyaku
+    emotion: happy
+    text: '[並盛|なみもり]、一つ。……待ったぞ。'
+  - speaker: tenin
+    emotion: happy
+    text: お待たせしました。
+  - speaker: kyaku
+    emotion: thinking
+    text: ……前と、同じ味だ。
+  - speaker: tenin
+    emotion: happy
+    text: 同じ味で出すって、決めてましたから。
+  - speaker: kyaku
+    emotion: happy
+    text: 何年でも待つって、言っただろ。
+  - speaker: tenin
+    emotion: happy
+    text: 2年半、待たせました。
+  - speaker: reimu
+    text: 2008年、牛丼を24時間いつでも出せるようになります。
+    reading: にせん はちねん、ぎゅうどんお にじゅうよじかん いつでも だせる ように なります。
+- id: ch12_ronsou
+  title: 意地を張って損をした？
+  background: gd_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。吉野家は、意地を張って損をしたって。
+  - speaker: tsumugi
+    emotion: normal
+    text: そういう声は、当時からあったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 牛丼しかない店が牛丼を止めたら、倒れるか弱るって、専門家からも疑問が出たの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 実際、赤字になったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: よその店は、別の国の肉に切り替えて、牛丼を出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[米国産|べいこくさん]を使わずに、そのまま何年も出し続けた店もある。'
+  - speaker: zundamon
+    emotion: normal
+    text: お客さんからすると、そっちのほうが助かったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そうね。食べたいときに食べられるのは、大事なことよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、吉野家が間違ってたのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、復活の日に行列ができたのも本当。
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ味を待っていた人が、それだけいたってことよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちも、正しいのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: お店が違えば、守りたいものも違うの。
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも、アメリカの牛肉は、危なくないのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 心配する声は、復活のときにも出たわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 病気のもとは、背骨などの決まった部分にたまりやすいの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大事なのは、そこを取り除く決まりが、守られているかどうか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 背骨の混ざった肉が見つかったときも、輸入はすぐ止まったでしょ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 決まりを破ったら、すぐ止まるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年には、吉野家の倉庫でも背骨が見つかってる。店には出ていないけどね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 吉野家も、完璧じゃないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 完璧なお店はないわ。だから、見張る仕組みがあるのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 大事なのは、どこの国の肉かより、決まりを守れているかなのだ。
+- id: ch13_intai
+  title: 3年後の自分
+  background: gd_jimusho
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 安部修仁, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2014年、安部は22年務めた吉野家の社長を退きました。
+    reading: にせん じゅうよねん、あべわ にじゅうにねん つとめた よしのやの しゃちょうお しりぞきました。
+  - speaker: kisha
+    emotion: normal
+    text: 安部さん。迷ったとき、どうやって決めてきたんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3年後の自分から、今の自分を眺めるのだ。
+  - speaker: kisha
+    emotion: surprised
+    text: 3年後から、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 3年後の自分が見て、納得できるほうを選ぶのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 会社が潰れてから、考え方が変わったのだ。
+  - speaker: reimu
+    text: 倒産を境に、成長を何より優先する経営から、安全を何より優先する経営に変わった、と安部は語っています。
+    reading: とうさんお さかいに せいちょうお なにより ゆうせんする けいえいから、あんぜんお なにより ゆうせんする けいえいに かわったと あべわ かたっています。
+- id: ch14_gendai
+  title: 498円の一杯
+  background: gd_ima
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 吉野家は今、国内に1300店ほど。
+  - speaker: zundamon
+    emotion: thinking
+    text: 牛丼の値段は、どうなったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2001年に280円だった[並盛|なみもり]は、
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年の夏から、498円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 倍近いのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: お肉も、お[米|こめ]も、いろんなものが値上がりしたからね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家で温めるだけの、冷凍の牛丼の具も、これまでに5億食に達してるの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの家の冷凍庫にも、入ってるぞ。
+  - speaker: tsumugi
+    emotion: angry
+    text: それを使えば、さっきの牛丼も助かったのに。
+  - speaker: zundamon
+    emotion: sad
+    text: 豚肉と粉のたれのことは、忘れてほしいのだ。
+- id: shime
+  title: ''
+  background: gd_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今度牛丼を食べるときは、ひと口目の味を覚えておいて。
+  - speaker: zundamon
+    emotion: thinking
+    text: 覚えて、どうするのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次に食べたとき、同じ味だったら、それは誰かが毎日守ってる味よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ味が、当たり前だと思ってたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当たり前にするために、950日も止めた人たちがいたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 変えないために、止めたのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。変えずに待つのは、変えるより大変なのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも、今日から牛丼は変えないのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 何にするの？
+  - speaker: zundamon
+    emotion: happy
+    text: 豚丼なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: ……それは、変えてるのよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

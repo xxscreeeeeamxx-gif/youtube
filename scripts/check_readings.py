@@ -209,7 +209,10 @@ def main(slug: str) -> int:
     # 2026-08にユーザー指摘で発覚。5作品に同じ「〜はね」が残っていた
     MELT = [
         ("助詞が羽根化", lambda d, k: "ハネ" in k and not re.search(r"[羽跳]", d)),
-        ("米がベイ化", lambda d, k: ("ベエ" in k or "ベイ" in k) and "米" in d),
+        # 米国・日米・欧米などはベイが正しいので、除いてから「米」の残りを見る
+        # （2026-09-23 牛丼回で「米国産」を誤検出した）
+        ("米がベイ化", lambda d, k: ("ベエ" in k or "ベイ" in k)
+         and "米" in re.sub(r"米国|米軍|米ドル|[日欧北南中渡訪在全]米", "", d)),
         ("何だがナニ化", lambda d, k: "ナニダ" in k and re.search(r"何(だ|だった|だっけ)", d)),
         ("何てがナニ化", lambda d, k: "ナニテ" in k and "何て" in d),
     ]
