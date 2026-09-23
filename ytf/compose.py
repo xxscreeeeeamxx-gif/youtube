@@ -299,6 +299,7 @@ class Composer:
         caption: str | None = None,        # 再現ドラマ: ナレーション字幕（下部）
         actor: str | None = None,          # 再現ドラマ: 基底に描かず後段で動かす話者
         bubble_layered: bool = False,      # True なら吹き出しは基底に描かない（最前面レイヤー）
+        tag_stage: list[dict] | None = None,  # 名札を描く舞台（入場スライド中の人物も含める）
     ) -> Image.Image:
         if not with_telops:
             telops = []
@@ -326,7 +327,9 @@ class Composer:
             # 話者ありカットは動く話者レイヤーより前面が必要なので
             # 吹き出しレイヤー（bubble_layer）側で描く
             if not bubble_layered:
-                for m in stage:
+                # 入場スライド中の人物は基底の stage から外れるが、名札は出す
+                # （ナレのカットで名札だけ1カット遅れて現れていた。2026-09-23 あんぱん回）
+                for m in (tag_stage if tag_stage is not None else stage):
                     if m.get("tag"):
                         cx, ty = self._tag_pos(m)
                         self._draw_tag(canvas, m["tag"], cx, ty)
@@ -864,7 +867,8 @@ def render_frames(
             [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
              bool(sp), card, full, fg_only, sub, sprite_sig,
-             base_stage, bubble, caption, actor, "tags-top1", "bubble-y134"],
+             base_stage, bubble, caption, actor, "tags-top1", "bubble-y134",
+             sorted(enter_set)],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
@@ -876,7 +880,8 @@ def render_frames(
                                  fg_only=fg_only, with_telops=False,
                                  stage=base_stage, bubble=bubble,
                                  caption=caption, actor=actor,
-                                 bubble_layered=bool(actor)).save(path)
+                                 bubble_layered=bool(actor),
+                                 tag_stage=stage_list).save(path)
         manifest_used.add(key)
 
         # 話者立ち絵レイヤー（透過PNG）と動き。吹き出しは立ち絵より前面のレイヤーに

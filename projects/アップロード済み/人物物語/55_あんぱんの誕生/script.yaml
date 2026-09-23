@@ -1,0 +1,1324 @@
+meta:
+  title: 【あんぱんの誕生】50過ぎで職を失った男が、酒まんじゅうの種でパンを焼いた【ずんだもん解説】
+  slug: kimuraya-anpan
+  summary: コンビニでも100円台で買えるあんぱん。明治のはじめ、パンは硬くて酸っぱい外国の食べ物でした。勤め先を失った50過ぎの男と、その息子は、なぜパン屋を開いたのか。売れない硬いパン、火事、手に入らないパンの種。二人がたどり着いたのは、酒まんじゅうの種でした。明治天皇への献上と、へその桜の由来まで。
+  tags:
+  - あんぱん
+  - 木村屋
+  - 木村安兵衛
+  - 酒種
+  - 菓子パン
+  - 明治
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: まんじゅうの種で焼いた
+    bottom: あんぱんの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: eizaburou
+    label: 英三郎
+    voice: 12
+    pitch: 0.0
+  - id: bun
+    label: 妻・文
+    voice: 8
+    pitch: -0.05
+  - id: shigeyoshi
+    label: 親戚・重義
+    voice: 42
+    pitch: 0.02
+  - id: umekichi
+    label: 職人・梅吉
+    voice: 13
+    pitch: 0.08
+  - id: kyaku
+    label: 客
+    voice: 13
+    pitch: 0.04
+  - id: tesshu
+    label: 山岡鉄舟
+    voice: 13
+    pitch: -0.07
+  - id: gishirou
+    label: 儀四郎
+    voice: 13
+    pitch: 0.1
+  - id: senden
+    label: 宣伝隊
+    voice: 42
+    pitch: 0.08
+  - id: shokunin
+    label: 職人
+    voice: 12
+    pitch: -0.04
+  - id: yuu
+    label: 嫁・ゆう
+    voice: 8
+    pitch: 0.06
+scenes:
+- id: hook
+  title: ''
+  background: an_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、張り込みごっこなのだ。窓の外の、あやしい[鳩|はと]を見張るのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[鳩|はと]の何が、あやしいのよ。'
+  - speaker: zundamon
+    emotion: normal
+    text: ずっと、こっちを見てるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 張り込みといえば、これだ。つぶあんぱんと、牛乳。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 昨日もあんぱんだったじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: 昨日はこしあん、今日はつぶあん。別の食べ物なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 同じあんぱんよ。
+  - speaker: zundamon
+    emotion: happy
+    text: それに、中身はあんこ。つまり実質、和菓子。健康的な和食なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 外側は、どう見てもパンでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ちなみに本物の刑事さんは、張り込みで牛乳はあまり飲まないらしいわよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: そうなのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 夏の車の中だと、傷んじゃうからだって。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、あんぱんも作り話か？
+  - speaker: tsumugi
+    emotion: normal
+    text: あんぱんは、本当に食べるそうよ。においも、パンくずも少ないから。
+  - speaker: zundamon
+    emotion: happy
+    text: よかった。……でも、毎日あんぱんは、さすがに反省するのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 明日からは、酒まんじゅうにするぞ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 中身は、同じあんこよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも酒まんじゅうは、あんぱんのご先祖様みたいなものなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ご先祖様なのだ！？
+  - speaker: reimu
+    text: あんぱん。パンの生地であんこを包んで焼いた食べ物です。
+    reading: あんぱん。ぱんの きじで あんこお つつんで やいた たべものです。
+  - speaker: reimu
+    text: 作ったのは、50歳を過ぎて勤め先を失った男と、その息子でした。
+    reading: つくったのわ ごじゅっさいお すぎて つとめさきお うしなった おとこと そのむすこでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 勤め先を失った男？
+  - speaker: tsumugi
+    emotion: normal
+    text: 硬いパンは売れず、店は1年もたたずに火事。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを救ったのが、酒まんじゅうの種なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、茨城の田んぼよ。
+- id: ch0_mura
+  title: ''
+  background: an_mura
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: sad}
+  - {who: bun, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 木村安兵衛は1817年、今の茨城県牛久市の農家に、次男として生まれました。
+    reading: きむら やすべえわ せんはっぴゃく じゅうななねん、いまの いばらきけん うしくしの のうかに じなんと して うまれました。
+  - speaker: reimu
+    text: 22歳のころ、近くの村の木村家に婿に入り、妻の文と暮らします。
+    reading: にじゅうにさいの ころ ちかくの むらの きむらけに むこに はいり、つまの ぶんと くらします。
+  - speaker: bun
+    emotion: thinking
+    text: また、川があふれたわね。
+  - speaker: zundamon
+    emotion: sad
+    text: 田んぼが、また水の底だ。
+  - speaker: bun
+    emotion: sad
+    text: 今年の[お米|おこめ]も、だめかしら。
+  - speaker: reimu
+    text: 小貝川の水害が続き、安兵衛は、農業に見切りをつけたといいます。
+    reading: こかいがわの すいがいが つづき、やすべえわ のうぎょうに みきりお つけたと いいます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……文。江戸へ、出てみようと思う。
+  - speaker: bun
+    emotion: surprised
+    text: 江戸へ？
+  - speaker: zundamon
+    emotion: normal
+    text: 江戸には、親戚がいる。ここよりは、仕事があるはずだ。
+  - speaker: reimu
+    text: 幕末、一家は江戸に出ます。
+    reading: ばくまつ いっかわ えどに でます。
+  - speaker: reimu
+    text: 安兵衛は、屋敷の米蔵の番をしていたとされます。仕えた藩は、資料によって分かれます。
+    reading: やすべえわ やしきの こめぐらの ばんお していたと されます。つかえた はんわ しりょうに よって わかれます。
+- id: card1868
+  title: ''
+  background: an_card_1868
+  cuts:
+  - speaker: reimu
+    text: 1868年。戦に敗れた幕府が倒れ、明治が始まります。
+    reading: せんはっぴゃく ろくじゅうはちねん。いくさに やぶれた ばくふが たおれ めいじが はじまります。
+- id: ch1_shitsugyou
+  title: 50過ぎの失業
+  background: an_yashiki
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: sad}
+  - {who: eizaburou, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 幕府が倒れ、50歳を過ぎた安兵衛は勤め先を失ったとされます。
+    reading: ばくふが たおれ ごじゅっさいお すぎた やすべえわ つとめさきお うしなったと されます。
+  - speaker: eizaburou
+    emotion: thinking
+    text: 父さん。お屋敷の[米蔵|こめぐら]、明日から閉めるそうです。
+  - speaker: zundamon
+    emotion: sad
+    text: ……知ってる。ボクの勤めも、今日で終わりなのだ。
+  - speaker: eizaburou
+    emotion: thinking
+    text: これから、どうするんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 51にもなって、一からやり直しなのだ……。
+  - speaker: eizaburou
+    emotion: normal
+    text: 父さん。刀の世の中は、もう終わりですよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[英三郎|えいざぶろう]は、あっさり言うな。'
+  - speaker: eizaburou
+    emotion: happy
+    text: 横浜の、外国人の町を見てきました。あっちは、もう別の国みたいです。
+  - speaker: reimu
+    text: 息子の英三郎は、横浜の外国人居留地によく通っていたといいます。
+    reading: むすこの えいざぶろうわ よこはまの がいこくじん きょりゅうちに よく かよっていたと いいます。
+- id: ch1_ie
+  title: ''
+  background: an_ie
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: sad}
+  - {who: bun, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: bun
+    emotion: thinking
+    text: お帰りなさい。……顔色が、悪いわね。
+  - speaker: zundamon
+    emotion: sad
+    text: 文。勤めが、なくなった。
+  - speaker: bun
+    emotion: thinking
+    text: ……そう。
+  - speaker: zundamon
+    emotion: sad
+    text: また、一からだ。すまないのだ。
+  - speaker: bun
+    emotion: normal
+    text: 謝らないで。田んぼを捨てたときも、一からだったじゃない。
+  - speaker: bun
+    emotion: happy
+    text: それに、うちには少しだけ、蓄えがあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 蓄え？
+  - speaker: bun
+    emotion: happy
+    text: いつか、使うときのためよ。
+- id: ch2_jusanjo
+  title: ''
+  background: an_jusanjo
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 木村安兵衛, emotion: normal}
+  - {who: umekichi, x: 0.52, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 安兵衛は親戚を頼り、東京の職業授産所で、事務の仕事に就きます。
+    reading: やすべえわ しんせきお たより、とうきょうの しょくぎょう じゅさんじょで じむの しごとに つきます。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[授産所|じゅさんじょ]は、仕事をなくした人に、新しい仕事を教える所よ。'
+  - speaker: reimu
+    text: そこで出会ったのが、長崎出身のパン職人、梅吉でした。
+    reading: そこで であったのが ながさき しゅっしんの ぱん しょくにん うめきちでした。
+  - speaker: umekichi
+    emotion: happy
+    text: 安兵衛さん。これが、パンってもんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……かたいのだ。石みたいだぞ。
+  - speaker: umekichi
+    emotion: normal
+    text: 西洋のパンは、こういうもんです。外国の人は、これを毎日食べてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: どうやって、ふくらませるのだ？
+  - speaker: umekichi
+    emotion: normal
+    text: パン種ってのを生地に混ぜて、寝かせるんです。
+  - speaker: tsumugi
+    emotion: normal
+    text: パン種は、パンをふくらませる酵母を育てた、種のことよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: このころのパンは、日本では珍しい外国の食べ物。
+  - speaker: tsumugi
+    emotion: normal
+    text: 横浜には、1862年から外国人のパン屋があったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本人は、食べないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 食パンの白い中身だけ食べて、皮は捨てた人もいたそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: もったいないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: パン祖と呼ばれるのは、伊豆の代官、江川太郎左衛門よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1842年、戦のときの保存食として焼いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4月12日のパンの日は、これにちなんでるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: パンは、兵隊の食べ物なのか。
+  - speaker: umekichi
+    emotion: happy
+    text: 長崎の生まれでしてね。パンは、向こうで覚えました。
+  - speaker: zundamon
+    emotion: happy
+    text: 梅吉さんは、長崎仕込みなのだ。
+- id: ch2_teian
+  title: ''
+  background: an_jusanjo
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 木村安兵衛, emotion: normal}
+  - {who: shigeyoshi, x: 0.56, emotion: normal}
+  - {who: eizaburou, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: shigeyoshi
+    emotion: normal
+    text: 安兵衛。あの梅吉を使って、パン屋を開いてみてはどうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: パン屋！？ 51のボクが？
+  - speaker: eizaburou
+    emotion: happy
+    text: やりましょう、父さん。横浜じゃ、パンはもう珍しくありません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 刀の世が終わったなら、しがみついても仕方ない。
+  - speaker: zundamon
+    emotion: happy
+    text: ……やるぞ。パン屋を開くのだ！
+  - speaker: reimu
+    text: 親戚の勧めに英三郎がすぐ乗り、安兵衛もうなずいたと伝えられています。
+    reading: しんせきの すすめに えいざぶろうが すぐ のり、やすべえも うなずいたと つたえられています。
+- id: card1869
+  title: ''
+  background: an_card_1869
+  cuts:
+  - speaker: reimu
+    text: 1869年。東京の芝、今の新橋駅の近くに、小さなパン屋が開きます。
+    reading: せんはっぴゃく ろくじゅうくねん。とうきょうの しば いまの しんばしえきの ちかくに ちいさな ぱんやが ひらきます。
+- id: ch3_bunei
+  title: 文英堂
+  background: an_bunei
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: bun, x: 0.64, emotion: happy}
+  - {who: eizaburou, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: eizaburou
+    emotion: happy
+    text: 窯に火が入りました。梅吉さんが、最初のパンを焼いてます。
+  - speaker: bun
+    emotion: thinking
+    text: お客さん、来てくれるかしら。
+  - speaker: bun
+    emotion: happy
+    text: お店の名前は、決めたの？
+  - speaker: zundamon
+    emotion: happy
+    text: 店の名は文英堂。文の「文」と、[英三郎|えいざぶろう]の「英」だ。
+  - speaker: bun
+    emotion: happy
+    text: あら。わたしの名前も、入ってるのね。
+  - speaker: eizaburou
+    emotion: happy
+    text: 母さんのお金で、開いた店ですからね。
+  - speaker: reimu
+    text: 店の名は妻の文と英三郎から取り、開業の資金は文の蓄えだったといいます。
+    reading: みせの なわ つまの ぶんと えいざぶろうから とり、かいぎょうの しきんわ ぶんの たくわえだったと いいます。
+- id: ch3_kyaku
+  title: ''
+  background: an_bunei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: いらっしゃい。西洋のパンだ！
+  - speaker: kyaku
+    emotion: surprised
+    text: これがパンかい。……かたい。
+  - speaker: kyaku
+    emotion: thinking
+    text: それに、少しすっぱいな。
+  - speaker: kyaku
+    emotion: thinking
+    text: 悪いが、お茶うけにはならんね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……売れないのだ。
+  - speaker: reimu
+    text: 西洋の硬いパンは日本人の口に合わず、なかなか売れませんでした。
+    reading: せいようの かたい ぱんわ にほんじんの くちに あわず、なかなか うれませんでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……甘くしたら、どうなのだ？ 砂糖を入れてみるぞ。
+  - speaker: reimu
+    text: 砂糖を入れたらよかろう。家に伝わる話では、これが菓子パンの始まりとされます。
+    reading: さとうお いれたら よかろう。いえに つたわる はなしでわ これが かしぱんの はじまりと されます。
+  - speaker: kyaku
+    emotion: happy
+    text: 甘いと、ずいぶん食べやすいな。
+  - speaker: zundamon
+    emotion: happy
+    text: 砂糖は、正義なのだ。
+- id: ch3_umi
+  title: ''
+  background: an_umi
+  bgm: 223am
+  stage:
+  - {who: eizaburou, x: 0.24, flip: true, emotion: thinking}
+  - {who: umekichi, x: 0.52, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: eizaburou
+    emotion: thinking
+    text: 梅吉さん。今日のパンも、店には出せません。
+  - speaker: umekichi
+    emotion: surprised
+    text: また焼き直しですかい。
+  - speaker: eizaburou
+    emotion: thinking
+    text: 横浜で食べたパンは、もっと軽かった。
+  - speaker: umekichi
+    emotion: sad
+    text: 若旦那は、目が高すぎますよ。
+  - speaker: reimu
+    text: 英三郎は、気に入らないパンを店に出さず、芝浦の海に投げ込んだとも伝えられています。
+    reading: えいざぶろうわ きに いらない ぱんお みせに ださず、しばうらの うみに なげこんだとも つたえられています。
+  - speaker: tsumugi
+    emotion: angry
+    text: 売れない店が、パンを海に捨てる余裕あるの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: それだけ、本物の味にこだわってたのね。
+- id: ch3_kaji
+  title: ''
+  background: an_kaji
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 木村安兵衛, emotion: sad}
+  - {who: eizaburou, x: 0.56, emotion: sad}
+  - {who: bun, x: 0.78, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 開業から1年もたたずに、店は火事で焼けてしまいます。
+    reading: かいぎょうから いちねんも たたずに みせわ かじで やけて しまいます。
+  - speaker: reimu
+    text: 焼け跡には、石の窯だけが残ったといいます。
+    reading: やけあとにわ いしの かまだけが のこったと いいます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……窯だけ、残った。
+  - speaker: eizaburou
+    emotion: thinking
+    text: 窯があれば、パンは焼けます。
+  - speaker: bun
+    emotion: thinking
+    text: お店も、一から建て直しね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……一からは、慣れてるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 窯が残ったなら、まだやれる。
+  - speaker: reimu
+    text: 1870年、一家は銀座に移り、店を木村屋と改めます。
+    reading: せんはっぴゃく ななじゅうねん いっかわ ぎんざに うつり みせお きむらやと あらためます。
+- id: ch4_kisha
+  title: 汽車とパン
+  background: an_eki
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: kyaku, x: 0.62, emotion: happy}
+  - {who: tsumugi, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1872年、新橋と横浜の間に鉄道が開通します。木村屋は、駅の中に売店を出しました。
+    reading: せんはっぴゃく ななじゅうにねん しんばしと よこはまの あいだに てつどうが かいつう します。きむらやわ えきの なかに ばいてんお だしました。
+  - speaker: kyaku
+    emotion: happy
+    text: パンを1つくれ。汽車の中で食べるんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎度あり！
+  - speaker: kyaku
+    emotion: normal
+    text: パンは、かっけに効くって聞いたぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: かっけ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 脚気は、白い[お米|おこめ]ばかりの食事で起こりやすい病気。
+  - speaker: tsumugi
+    emotion: thinking
+    text: このころは、まだ原因が分かっていなかったの。
+  - speaker: reimu
+    text: パンは脚気に効くという評判でも、売れたといいます。
+    reading: ぱんわ かっけに きくと いう ひょうばんでも うれたと いいます。
+  - speaker: reimu
+    text: 同じ1872年には、海軍を目指す生徒の学校、攻玉社にもパンを納めています。
+    reading: おなじ せんはっぴゃく ななじゅうにねんにわ かいぐんお めざす せいとの がっこう、こうぎょくしゃにも ぱんお おさめています。
+  - speaker: zundamon
+    emotion: happy
+    text: パンが、薬の代わりなのだ。
+- id: ch5_tane
+  title: 酒の種
+  background: an_kobo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村安兵衛, emotion: thinking}
+  - {who: eizaburou, x: 0.56, emotion: thinking}
+  - {who: tsumugi, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: eizaburou
+    emotion: thinking
+    text: 父さん。パンをふくらませる種が、うまくいきません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 西洋のパンは、[何|なに]でふくらませてる？
+  - speaker: eizaburou
+    emotion: thinking
+    text: ホップという草で起こした[種|たね]です。でも、日本人には、なかなか手に入らない。
+  - speaker: reimu
+    text: 当時の西洋のパンに使うホップは、手に入りにくかったとされます。
+    reading: とうじの せいようの ぱんに つかう ほっぷわ てに はいりにくかったと されます。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホップの種は苦みがあって、日本人にはなじみのない味だったとも言われるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本にあるもので、ふくらませられないのか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……酒まんじゅうなのだ！ あれは、[米|こめ]と麹の種で、ふっくらしてる。
+  - speaker: eizaburou
+    emotion: surprised
+    text: 酒の種……。[米|こめ]と麹と水なら、どこにでもある。
+  - speaker: reimu
+    text: 米と麹と水で作る酒種。酒まんじゅうが、ヒントになったとされています。
+    reading: こめと こうじと みずで つくる さかだね。さけまんじゅうが ひんとに なったと されています。
+  - speaker: eizaburou
+    emotion: sad
+    text: ……だめだ。甘酒くらいの種じゃ、砂糖の多い生地はふくらまない。
+  - speaker: eizaburou
+    emotion: sad
+    text: 何度焼いても、酸っぱくなるか、固くなるか……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 何年かかっても、いい。もっと強い種が、要るな。
+  - speaker: eizaburou
+    emotion: normal
+    text: 酒蔵の、もろみを分けてもらいます。
+  - speaker: reimu
+    text: 英三郎は、酒造りのもろみを使って、強い酒種を作ったとも伝えられています。
+    reading: えいざぶろうわ さけづくりの もろみお つかって、つよい さかだねお つくったとも つたえられています。
+  - speaker: reimu
+    text: 古い記録は、英三郎の多年の苦心の結果と伝えています。
+    reading: ふるい きろくわ えいざぶろうの たねんの くしんの けっかと つたえています。
+- id: ch5_shikumi
+  title: ''
+  background: an_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: '[酒種|さかだね]の仕組みを、図で見てみましょう。'
+  - speaker: tsumugi
+    emotion: normal
+    text: まず、麹の力で、[お米|おこめ]のでんぷんが糖に変わるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その糖を酵母が食べて、アルコールと炭酸ガスを出す。
+  - speaker: zundamon
+    emotion: happy
+    text: ガスの泡で、生地がふくらむ！
+  - speaker: zundamon
+    emotion: happy
+    text: パン生地の中で、酵母が宴会してるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 宴会で片づけないでちょうだい。
+  - speaker: tsumugi
+    emotion: normal
+    text: パンのイーストと同じ仕組み。違うのは、麹の香りと、しっとりした食感ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: お酒の種なら、食べたら酔っぱらうのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 焼けば、アルコールはほとんど飛ぶわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 安心なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 木村屋は今も、10日あまりかけて、[酒種|さかだね]のパンを作ってるそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10日も！？ ボクなら、待てないのだ。
+- id: card1874
+  title: ''
+  background: an_card_1874
+  cuts:
+  - speaker: reimu
+    text: 1874年。煉瓦の町並みができた銀座4丁目に、木村屋は店を構えます。
+    reading: せんはっぴゃく ななじゅうよねん。れんがの まちなみが できた ぎんざ よんちょうめに きむらやわ みせお かまえます。
+- id: ch5_ginza
+  title: ''
+  background: an_ginza0
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: normal}
+  - {who: bun, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: bun
+    emotion: happy
+    text: 煉瓦の町並みって、立派ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、道がぬかるんでて、歩きにくい。
+  - speaker: bun
+    emotion: normal
+    text: 家賃は、7円ですって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 7円……。安いのか高いのか、分からないのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 煉瓦の家は、蔵みたいだって、住みたがらない人も多いのだ。
+  - speaker: bun
+    emotion: happy
+    text: だからこそ、ここで名物を作るのよ。
+  - speaker: reimu
+    text: 移った当時の銀座は、霜どけでぬかるむ町だったと、家の話に残っています。
+    reading: うつった とうじの ぎんざわ しもどけで ぬかるむ まちだったと、いえの はなしに のこっています。
+- id: ch5_anpan
+  title: ''
+  background: an_kobo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: eizaburou, x: 0.62, emotion: happy}
+  - {who: bun, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: bun
+    emotion: happy
+    text: 焼けたわ。……あら、いい香り。
+  - speaker: bun
+    emotion: happy
+    text: お酒みたいな、甘い匂いがするわね。
+  - speaker: eizaburou
+    emotion: happy
+    text: '[酒種|さかだね]の香りです、母さん。'
+  - speaker: eizaburou
+    emotion: happy
+    text: 父さん、ふくらみました！ ふんわりして、ほんのり甘い。
+  - speaker: zundamon
+    emotion: thinking
+    text: この生地で、何を包む？
+  - speaker: zundamon
+    emotion: happy
+    text: ……あんこだ。酒まんじゅうと同じに、あんこを包んで、蒸さずに焼くのだ！
+  - speaker: eizaburou
+    emotion: surprised
+    text: パンの中に、あんこ……。
+  - speaker: reimu
+    text: こうして1874年、酒種のあんぱんが売り出されました。
+    reading: こうして せんはっぴゃく ななじゅうよねん さかだねの あんぱんが うりだされました。
+- id: ch5_ureru
+  title: ''
+  background: an_mise0
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: パンの中から、あんこが出た！
+  - speaker: kyaku
+    emotion: happy
+    text: まんじゅうみたいに甘い。これなら、お茶うけにもなる。
+  - speaker: kyaku
+    emotion: normal
+    text: 中には、何が入ってるんだい。
+  - speaker: zundamon
+    emotion: happy
+    text: つぶあんの小倉と、けしの実をのせた、こしあんだ。
+  - speaker: kyaku
+    emotion: happy
+    text: 両方くれ。家のもんにも、食わせてやりたい。
+  - speaker: zundamon
+    emotion: happy
+    text: ……売れたのだ！
+- id: card1875
+  title: ''
+  background: an_card_1875
+  cuts:
+  - speaker: reimu
+    text: 1875年。剣術の縁で知り合っていたとされる、山岡鉄舟が店を訪れます。
+    reading: せんはっぴゃく ななじゅうごねん。けんじゅつの えんで しりあって いたと される、やまおか てっしゅうが みせお おとずれます。
+- id: ch6_tesshu
+  title: 陛下に
+  background: an_mise0
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: tesshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tesshu
+    emotion: normal
+    text: 安兵衛。評判のあんぱんとやらを、1つもらおう。
+  - speaker: zundamon
+    emotion: happy
+    text: 鉄舟さん、どうぞ。
+  - speaker: tesshu
+    emotion: surprised
+    text: ……これ、うまいじゃないか。
+  - speaker: zundamon
+    emotion: happy
+    text: 息子の[英三郎|えいざぶろう]が、苦心した生地なのだ。
+  - speaker: reimu
+    text: 鉄舟は、明治天皇のそばに仕える侍従でした。
+    reading: てっしゅうわ めいじ てんのうの そばに つかえる じじゅうでした。
+  - speaker: tesshu
+    emotion: happy
+    text: お互い、刀を振っていたころが、懐かしいな。
+  - speaker: zundamon
+    emotion: normal
+    text: 鉄舟さんは陛下のおそばで、ボクはパン屋なのだ。
+  - speaker: tesshu
+    emotion: happy
+    text: どちらも、新しい世の仕事だ。
+  - speaker: tesshu
+    emotion: thinking
+    text: 近々、陛下が向島のお屋敷で、花見をなさる。
+  - speaker: tesshu
+    emotion: happy
+    text: このあんぱんを、陛下に召し上がっていただこう。
+  - speaker: zundamon
+    emotion: surprised
+    text: 陛下に！？ パンを、なのだ！？
+- id: ch6_junbi
+  title: ''
+  background: an_kobo
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 木村安兵衛, emotion: thinking}
+  - {who: eizaburou, x: 0.56, emotion: thinking}
+  - {who: gishirou, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 安兵衛と英三郎、三男の儀四郎は、2週間ほど前から酒種の仕込みにかかったといいます。
+    reading: やすべえと えいざぶろう、さんなんの ぎしろうわ にしゅうかん ほど まえから さかだねの しこみに かかったと いいます。
+  - speaker: eizaburou
+    emotion: thinking
+    text: 父さん。献上するなら、いつものあんぱんじゃ物足りない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 花見の席だ。……桜を、乗せるのだ。
+  - speaker: gishirou
+    emotion: surprised
+    text: 桜を、パンに？
+  - speaker: zundamon
+    emotion: happy
+    text: 桜の塩漬けを、真ん中に押し込むのだ。
+  - speaker: eizaburou
+    emotion: happy
+    text: 塩気が、あんの甘さを引き立てますね。
+  - speaker: gishirou
+    emotion: happy
+    text: 花見の席に、ぴったりだ。
+  - speaker: reimu
+    text: 奈良の吉野山から取り寄せたとされる八重桜の塩漬けを、あんぱんのへそに埋め込みました。
+    reading: ならの よしのやまから とりよせたと される やえざくらの しおづけお、あんぱんの へそに うめこみました。
+- id: ch6_matsu
+  title: ''
+  background: an_mise0
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 木村安兵衛, emotion: thinking}
+  - {who: eizaburou, x: 0.56, emotion: normal}
+  - {who: gishirou, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ……今ごろ、陛下の前に、あんぱんが出てるのだ。
+  - speaker: eizaburou
+    emotion: normal
+    text: 父さん。さっきから、店の中を何往復してるんですか。
+  - speaker: gishirou
+    emotion: happy
+    text: もう、10往復目です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 落ち着かないのだ！
+- id: ch6_kenjou
+  title: ''
+  background: an_sakura
+  bgm: amacha_milkyway
+  cuts:
+  - speaker: reimu
+    text: 1875年4月4日。明治天皇は、向島の旧水戸藩の屋敷で花見をしました。
+    reading: せんはっぴゃく ななじゅうごねん しがつ よっか。めいじ てんのうわ むこうじまの きゅう みとはんの やしきで はなみお しました。
+  - speaker: reimu
+    text: この日、天皇は屋敷の桜を前に、歌を詠んでいます。
+    reading: この ひ てんのうわ やしきの さくらお まえに うたお よんでいます。
+  - speaker: reimu
+    text: 花ぐはし桜もあれど此やどの世々のこころを我はとひけり。
+    reading: はなぐわし さくらも あれど このやどの よよの こころお われわ といけり。
+  - speaker: reimu
+    text: 美しい桜もあるが、水戸家に代々続く心こそ訪ねたのだ、という意味です。
+    reading: うつくしい さくらも あるが、みとけに だいだい つづく こころこそ たずねたのだ と いう いみです。
+  - speaker: reimu
+    text: 酒種の桜あんぱんは、その席のお茶菓子として出されたとされています。
+    reading: さかだねの さくら あんぱんわ そのせきの おちゃがしと して だされたと されています。
+  - speaker: reimu
+    text: 店に伝わる話では、両陛下、とりわけ皇后の口に合い、引き続き納めるよう言われたそうです。
+    reading: みせに つたわる はなしでわ りょうへいか とりわけ こうごうの くちに あい、ひきつづき おさめるよう いわれたそうです。
+- id: ch6_yoru
+  title: ''
+  background: an_yoru
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 木村安兵衛, emotion: surprised}
+  - {who: bun, x: 0.56, emotion: happy}
+  - {who: eizaburou, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: eizaburou
+    emotion: happy
+    text: 父さん！ 陛下が、あんぱんを召し上がったそうです！
+  - speaker: bun
+    emotion: happy
+    text: これからも、納めるようにって！
+  - speaker: zundamon
+    emotion: sad
+    text: ……田んぼを捨てて、屋敷を追われて、たどり着いたのが、パンなのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 硬いパンを、まんじゅうの知恵で、やわらかくしたのだ。
+  - speaker: reimu
+    text: その夜、銀座の店は、遅くまで華やいでいたといいます。
+    reading: その よる ぎんざの みせわ おそくまで はなやいでいたと いいます。
+  - speaker: reimu
+    text: この献上で、木村屋は宮中の御用商に加わりました。
+    reading: この けんじょうで きむらやわ きゅうちゅうの ごようしょうに くわわりました。
+- id: ch6_kanban
+  title: ''
+  background: an_mise
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: tesshu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: tesshu
+    emotion: happy
+    text: 安兵衛。祝いに、店の看板を書いてやろう。
+  - speaker: zundamon
+    emotion: surprised
+    text: 鉄舟さんの字で、なのだ！？
+  - speaker: tesshu
+    emotion: happy
+    text: '[木村家|きむらや]と書く。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 屋じゃなくて、家の字なのだ？
+  - speaker: zundamon
+    emotion: happy
+    text: ありがたく、店に掲げるのだ。
+  - speaker: reimu
+    text: 鉄舟は店のために、木村家と大きく書いた看板を贈ったとされます。
+    reading: てっしゅうわ みせの ために、きむらやと おおきく かいた かんばんお おくったと されます。
+  - speaker: reimu
+    text: 看板の字は木村家。店の名の木村屋とは、一字違います。
+    reading: かんばんの じわ きむらや。みせの なの きむらやとわ いちじ ちがいます。
+- id: ch7_meibutsu
+  title: 銀座名物
+  background: an_ginza
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 木村安兵衛, emotion: happy}
+  - {who: senden, x: 0.52, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1877年、陸軍がパンを採り入れ、木村屋は西南戦争の兵のパンも焼きました。
+    reading: せんはっぴゃく ななじゅうななねん りくぐんが ぱんお とりいれ、きむらやわ せいなん せんそうの へいの ぱんも やきました。
+  - speaker: reimu
+    text: 1882年には、あんぱんは銀座の名物になります。値段は1個1銭でした。
+    reading: せんはっぴゃく はちじゅうにねんにわ あんぱんわ ぎんざの めいぶつに なります。ねだんわ いっこ いっせんでした。
+  - speaker: reimu
+    text: 1885年には、楽隊を連れた宣伝の一団、広目屋をいち早く使いました。
+    reading: せんはっぴゃく はちじゅうごねんにわ がくたいお つれた せんでんの いちだん、ひろめやお いちはやく つかいました。
+  - speaker: senden
+    emotion: happy
+    text: パン、パン、木村屋のパン！
+  - speaker: zundamon
+    emotion: happy
+    text: '[大太鼓|おおだいこ]で、パンを売るのだ！'
+  - speaker: tsumugi
+    emotion: normal
+    text: 広目屋は、のちのチンドン屋のもとになった宣伝の仕事よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 売り方まで、新しかったのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: あんぱんは、文明開化の七つ道具のひとつに数えられたそうよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ほかには、何があるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 新聞、郵便、ガス灯、蒸気船……。数えると、七つより多いの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 七つ道具なのに、はみ出してるのだ！
+  - speaker: senden
+    emotion: happy
+    text: 今度は、木村屋が芝居になるってよ！
+  - speaker: zundamon
+    emotion: surprised
+    text: パン屋が、歌舞伎になるのだ！？
+  - speaker: reimu
+    text: 1887年には、木村屋が歌舞伎の題材にまでなりました。
+    reading: せんはっぴゃく はちじゅうななねんにわ きむらやが かぶきの だいざいにまで なりました。
+- id: card1887
+  title: ''
+  background: an_card_1887
+  cuts:
+  - speaker: reimu
+    text: 1887年5月。英三郎が、36歳の若さで亡くなります。
+    reading: せんはっぴゃく はちじゅうななねん ごがつ。えいざぶろうが さんじゅうろくさいの わかさで なくなります。
+- id: ch8_wakare
+  title: ''
+  background: an_yuugure
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 木村安兵衛, emotion: sad}
+  - {who: bun, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: bun
+    emotion: thinking
+    text: あの子が、先に逝くなんて……。
+  - speaker: zundamon
+    emotion: sad
+    text: ……[英三郎|えいざぶろう]。あのパンは、お前の工夫だったのだ。
+  - speaker: bun
+    emotion: thinking
+    text: あの子の[酒種|さかだね]は、職人たちが覚えてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……種は、残ったのか。窯と同じなのだ。
+  - speaker: reimu
+    text: 翌年には山岡鉄舟が、1889年には安兵衛が、73歳で世を去りました。
+    reading: よくねんにわ やまおか てっしゅうが、せんはっぴゃく はちじゅうくねんにわ やすべえが ななじゅうさんさいで よお さりました。
+  - speaker: reimu
+    text: 安兵衛は、東京の東浅草にある東禅寺に眠っています。
+    reading: やすべえわ とうきょうの ひがしあさくさに ある とうぜんじに ねむっています。
+- id: ch8_onna
+  title: ''
+  background: an_kobo
+  bgm: hirusagari
+  stage:
+  - {who: bun, x: 0.2, flip: true, emotion: normal}
+  - {who: yuu, x: 0.4, emotion: normal}
+  - {who: shokunin, x: 0.6, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 儀四郎は家を出ていて、店を守ったのは文と、儀四郎の妻のゆうだったと伝えられています。
+    reading: ぎしろうわ いえお でていて、みせお まもったのわ ぶんと ぎしろうの つまの ゆうだったと つたえられています。
+  - speaker: shokunin
+    emotion: thinking
+    text: おかみさん。今朝は、種の具合が今ひとつです。
+  - speaker: bun
+    emotion: normal
+    text: 今日は冷えるもの。火を、少し足してちょうだい。
+  - speaker: shokunin
+    emotion: surprised
+    text: おかみさんに、種のことまで言われるとは。
+  - speaker: bun
+    emotion: happy
+    text: 主人と[英三郎|えいざぶろう]が毎日やってたのを、ずっと隣で見てたのよ。
+  - speaker: yuu
+    emotion: normal
+    text: '[お義母さん|おかあさん]。帳面は、わたしが見ます。'
+  - speaker: bun
+    emotion: happy
+    text: 頼むわね、ゆう。女二人で、この店を守るのよ。
+- id: ch8_bun
+  title: 帰ってきた三男
+  background: an_mise
+  bgm: 223am
+  stage:
+  - {who: bun, x: 0.3, flip: true, emotion: thinking}
+  - {who: gishirou, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1895年の春、儀四郎が10年ぶりに銀座の店へ戻ってきます。
+    reading: せんはっぴゃく きゅうじゅうごねんの はる、ぎしろうが じゅうねんぶりに ぎんざの みせえ もどってきます。
+  - speaker: gishirou
+    emotion: sad
+    text: 母さん。長いこと留守にして、すみませんでした。
+  - speaker: bun
+    emotion: thinking
+    text: ……どこへ、行っていたの。
+  - speaker: gishirou
+    emotion: normal
+    text: 静岡に、新潟に、金沢。木村屋の店を、出してきました。
+  - speaker: bun
+    emotion: surprised
+    text: お店を……。
+  - speaker: bun
+    emotion: sad
+    text: ……あなたって子は。
+  - speaker: reimu
+    text: 儀四郎は母に無沙汰をわび、当時の金で1万円を差し出したと伝えられています。
+    reading: ぎしろうわ ははに ぶさたお わび、とうじの かねで いちまんえんお さしだしたと つたえられています。
+  - speaker: bun
+    emotion: happy
+    text: お父さんと[英三郎|えいざぶろう]が、きっと喜ぶわ。
+  - speaker: reimu
+    text: 1897年ごろには、あんぱんは全国へ広がりました。
+    reading: せんはっぴゃく きゅうじゅうななねん ごろにわ あんぱんわ ぜんこくえ ひろがりました。
+  - speaker: reimu
+    text: 1日に10万個以上売れ、行列ができた話もあります。
+    reading: いちにちに じゅうまんこ いじょう うれ ぎょうれつが できた はなしも あります。
+  - speaker: reimu
+    text: 文は、1897年の11月に亡くなります。
+    reading: ぶんわ せんはっぴゃく きゅうじゅうななねんの じゅういちがつに なくなります。
+- id: card1900
+  title: ''
+  background: an_card_1900
+  cuts:
+  - speaker: reimu
+    text: 1900年。儀四郎は、新しい菓子パンを売り出します。
+    reading: せんきゅうひゃくねん。ぎしろうわ あたらしい かしぱんお うりだします。
+- id: ch9_jam
+  title: 菓子パンの家族
+  background: an_kobo
+  bgm: pop
+  stage:
+  - {who: shokunin, x: 0.24, emotion: normal}
+  - {who: gishirou, x: 0.52, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: gishirou
+    emotion: happy
+    text: ビスケットにジャムを挟んで焼くのを見て、ひらめいたんです。
+  - speaker: gishirou
+    emotion: happy
+    text: あんの代わりに、ジャムを入れたらどうだろうって。
+  - speaker: shokunin
+    emotion: surprised
+    text: ジャムの、パンですか！
+  - speaker: tsumugi
+    emotion: normal
+    text: ジャムパンも、大評判になったそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1904年、中村屋がクリームパンを作ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あんぱんより、少し高級なものを、と考えたそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初のクリームパンは、切れ目のない柏餅の形だったの。
+  - speaker: tsumugi
+    emotion: happy
+    text: あんぱんから、菓子パンの家族が増えていったのね。
+  - speaker: reimu
+    text: 1923年の関東大震災で銀座の店は焼け、鉄舟の看板の本物も失われました。
+    reading: せんきゅうひゃく にじゅうさんねんの かんとう だいしんさいで ぎんざの みせわ やけ、てっしゅうの かんばんの ほんものも うしなわれました。
+  - speaker: reimu
+    text: 戦争中は、酒種を職人たちに分けて預け、守り抜いたとも伝えられています。
+    reading: せんそうちゅうわ さかだねお しょくにんたちに わけて あずけ、まもりぬいたとも つたえられています。
+  - speaker: tsumugi
+    emotion: normal
+    text: ごはんの代わりのパンが広まったのは、戦後の給食のころ。甘いパンのほうが、先だったの。
+- id: ch10_gendai
+  title: 今のあんぱん
+  background: an_gendai
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 木村屋の[酒種|さかだね]は、代々の種師が、150年以上受け継いでるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: お店のあんぱんは[酒種|さかだね]だけ。スーパー向けは、[酒種|さかだね]とイーストを一緒に使うそうよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 定番は、[何|なに]味なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 桜、小倉、けし、うぐいす、白の5つ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 桜はこしあんに、八重桜の塩漬け。今の桜は、神奈川県産よ。
+  - speaker: zundamon
+    emotion: happy
+    text: へその桜は、献上のときからか！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。献上のあと、お店のあんぱんにも、へそに桜を押すようになったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: へそには、中身を見分ける印の意味もあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 山崎のうぐいすパンは、へそが2つあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: へその数で、中身が分かるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東はこしあん、西はつぶあんが好まれる傾向もあるそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 山崎の薄皮つぶあんぱんも、大人気。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年には5600万個売れたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 5600万個！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 木村屋には、こんな教えもあるそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 生地とあんこは1対1。入れすぎたら、あんこパンだって。
+  - speaker: zundamon
+    emotion: happy
+    text: あんこパンでも、ボクは構わん。
+  - speaker: tsumugi
+    emotion: normal
+    text: カロリーは、桜あんぱん1個で138キロカロリー。
+  - speaker: zundamon
+    emotion: surprised
+    text: 思ったより、軽いのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 明治のあんぱんは、1個1銭だったわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の[酒種|さかだね]の桜あんぱんは、1個300円あまりよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 韓国でも、日本から伝わったあんぱんが、定番のパンになってるそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4月4日はあんぱんの日。献上の日にちなんで、2001年に登録されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年の4月4日、銀座のお店は、名前が木村屋[總本店|そうほんてん]の銀座本店になったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 鉄舟の看板は、今もお店に掲げられてるの。本物は焼けたから、複製だけどね。
+  - speaker: zundamon
+    emotion: happy
+    text: 看板は、焼けても作り直せる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年の朝ドラでは、パン屋のモデルにもなったそうよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: アンパンマンも、木村屋のあんぱんなのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 絵本は1973年。木村屋のあんぱんと、直接の関係は知られていないわ。
+- id: ch11_ronsou
+  title: 本当に元祖？
+  background: an_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: あんぱんは、木村屋が元祖なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: あんこを包んで焼いたパンは、1874年の木村屋が最初、という資料で一致してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、[米|こめ]と麹の種でふくらませて、あんを包む技は、酒まんじゅうにあったもの。
+  - speaker: zundamon
+    emotion: happy
+    text: '[蒸す|むす]か、焼くかの違いだな。'
+  - speaker: tsumugi
+    emotion: normal
+    text: あんぱんの元祖なら、木村屋。でも、日本で最初のパン屋じゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 横浜には、もっと前からパン屋があったから。
+  - speaker: tsumugi
+    emotion: normal
+    text: 酒まんじゅうは、1241年に博多へ伝わったという言い伝えもあるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: あんぱんより、600年以上も先輩なのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: 考えたのは、安兵衛？ [英三郎|えいざぶろう]？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の公式は、親子で考えたとしてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、1913年の新聞に載った家の話は、少し違うの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[英三郎|えいざぶろう]を、実はパンの創業者ともいうべき人、と書いてるわ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 息子の手柄も、大きかったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1875年を、あんぱんの生まれた年とする資料もあるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 献上の年と、混ざったのかもしれないわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 献上の話は、本当なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 天皇が向島で花見をしたことは、確かな記録があるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: あんぱん献上の話は、木村屋に伝わる記録がもとなの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 宮中の側の記録では、確かめられていないわ。
+  - speaker: zundamon
+    emotion: normal
+    text: だから、伝えられています、なのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: そういうこと。
+- id: shime
+  title: ''
+  background: an_ima2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、張り込みの続きだ。今日は、酒まんじゅうにしたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 結局、あんこじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: あんぱんのご先祖様に、敬意を払ってるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: で、[鳩|はと]は？
+  - speaker: zundamon
+    emotion: sad
+    text: ……まんじゅうを食べてる間に、飛んでいったのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 今度あんぱんを食べるときは、へそを見てみて。
+  - speaker: zundamon
+    emotion: happy
+    text: へそに桜がのってたら、こしあんなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 木村屋の桜は、そうね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 勤め先を失った親子が、酒まんじゅうの種で焼いたパンよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 外国のパンに、日本のまんじゅうの知恵を足したのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴ありがとうございました！
+    duet_with: tsumugi

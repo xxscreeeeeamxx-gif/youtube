@@ -2809,6 +2809,30 @@ def p_anpan(d, s):
               width=int(s * 0.01))
 
 
+def p_kkjelly(d, s):
+    """溶けかけた透明の人工クラゲ（皿の上）。"""
+    d.ellipse([s * 0.10, s * 0.62, s * 0.90, s * 0.86], fill=(236, 240, 244), outline=(170, 180, 190),
+              width=int(s * 0.014))
+    d.ellipse([s * 0.22, s * 0.56, s * 0.78, s * 0.76], fill=(200, 226, 240), outline=(150, 190, 214),
+              width=int(s * 0.012))
+    for k in range(4):
+        x = 0.30 + k * 0.12
+        d.line([(s * x, s * 0.60), (s * (x + 0.04), s * 0.72)], fill=(236, 246, 252), width=int(s * 0.02))
+    d.ellipse([s * 0.62, s * 0.34, s * 0.74, s * 0.50], fill=(120, 80, 50))        # 醤油のしずく
+
+
+def p_kkstick(d, s):
+    """刻んだ身と、赤と白のカニカマ。"""
+    for k in range(3):
+        y = 0.30 + k * 0.14
+        d.rounded_rectangle([s * 0.12, s * y, s * 0.88, s * (y + 0.10)], radius=int(s * 0.05),
+                            fill=(248, 244, 236), outline=(190, 180, 170), width=int(s * 0.01))
+        d.rounded_rectangle([s * 0.12, s * y, s * 0.88, s * (y + 0.05)], radius=int(s * 0.03), fill=(220, 70, 56))
+    for k in range(8):
+        x = 0.16 + k * 0.09
+        d.line([(s * x, s * 0.80), (s * (x + 0.05), s * 0.86)], fill=(248, 244, 236), width=int(s * 0.025))
+
+
 def p_mkshell(d, s):
     """開いたアコヤ貝。中は空っぽ。"""
     d.ellipse([s * 0.10, s * 0.44, s * 0.90, s * 0.92], fill=(120, 110, 104), outline=(70, 64, 60),
@@ -3106,6 +3130,11 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "sugiyo-kanikama": dict(layout="panels", headline="カニカマはクラゲの失敗作",
+        head_hi="クラゲ", panels=[
+        _p("p_kkjelly", "1970年 人工クラゲ", SLATE, "sad", "溶けたのだ", "味を付けると溶ける"),
+        _p("p_kkstick", "1972年", RED, "happy", "カニなのだ", "刻んだらカニの身"),
     ]),
     "kimuraya-anpan": dict(layout="panels", headline="あんぱんは酒の種で焼いた",
         head_hi="酒の種", panels=[
