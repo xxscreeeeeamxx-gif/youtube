@@ -1,0 +1,1243 @@
+meta:
+  title: 【蚊取り線香の誕生】40分で燃え尽きた線香を、一晩もたせた渦巻き【ずんだもん解説】
+  slug: mosquito-coil
+  summary: 夏の夜の、あの渦巻き。上山が最初に作った蚊取り線香は、まっすぐな棒でした。一晩使うには、夜中に何度も起きて火をつけ直すしかありません。始まりは、和歌山のミカン農家の男のもとに、アメリカから届いた小さな種の袋。種を配って歩けば詐欺師と呼ばれ、線香にすれば折れる。答えは、家の中から出てきました。
+  tags:
+  - 蚊取り線香
+  - 上山英一郎
+  - 除虫菊
+  - 渦巻き
+  - 夏
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 和歌山
+  thumbnail:
+    top: 渦巻きの理由
+    bottom: 蚊取り線香の誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: fukuzawa
+    label: 福沢諭吉
+    voice: 13
+    pitch: -0.06
+  - id: amoa
+    label: 米国の種苗商
+    voice: 13
+    pitch: 0.06
+  - id: tenin
+    label: 家の者
+    voice: 12
+    pitch: 0.02
+  - id: nouka
+    label: 農家
+    voice: 42
+    pitch: 0.0
+  - id: senkouya
+    label: 線香屋
+    voice: 42
+    pitch: -0.03
+  - id: yuki
+    label: 妻・ゆき
+    voice: 8
+    pitch: -0.02
+  - id: shokunin
+    label: 線香職人
+    voice: 12
+    pitch: -0.04
+  - id: kyaku
+    label: 客
+    voice: 12
+    pitch: 0.05
+  - id: shusshi
+    label: 地元の出資者
+    voice: 13
+    pitch: -0.02
+scenes:
+- id: hook
+  title: ''
+  background: kt_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: つむぎ。ゆうべ、蚊に5か所も刺されたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 蚊取り線香、つけなかったの？
+  - speaker: zundamon
+    emotion: normal
+    text: つけたのだ。でも効くまで待てないから、両はしから火をつけたのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 両はし？
+  - speaker: zundamon
+    emotion: happy
+    text: 2倍の速さで、効くと思ったのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 2倍の速さで、燃え尽きるわよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……夜中の3時に燃え尽きて、そこから刺された。
+  - speaker: tsumugi
+    emotion: normal
+    text: でしょうね。
+  - speaker: zundamon
+    emotion: angry
+    text: なら今夜は、3つ同時につけるぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 煙で、部屋が見えなくなるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……目が、しみるのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あれは、1つで一晩もつように作ってあるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一晩って、何時間なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の標準のもので、1巻およそ7時間。
+  - speaker: zundamon
+    emotion: surprised
+    text: 長いのだ。なんで、あんなぐるぐるなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: まっすぐにしたら、長すぎて置けないでしょ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 伸ばしたら、どれくらいなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 75センチくらい。
+  - speaker: zundamon
+    emotion: surprised
+    text: そんなに長いのか！
+    se: don
+  - speaker: tsumugi
+    emotion: normal
+    text: この人が最初に作った蚊取り線香は、まっすぐな棒で、40分ほどで燃え尽きたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクの両はし作戦より、ずっと短いのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それを渦巻きにしようと言い出したのは、ある家の奥さんだったと伝えられてるわ。
+  - speaker: reimu
+    text: 渦巻きの蚊取り線香。1巻で、ひと晩の眠りを守ります。
+    reading: うずまきの かとり せんこう。いっかんで、ひとばんの ねむりお まもります。
+  - speaker: reimu
+    text: この形を世に出したのは、和歌山のミカン農家に生まれた、上山英一郎という男でした。
+    reading: この かたちお よに だしたのわ わかやまの みかん のうかに うまれた、うえやま えいいちろうという おとこでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: ミカン農家が、蚊取り線香なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、ミカンの苗のお礼に届いた、小さな種の袋よ。
+- id: card1862
+  title: ''
+  background: kt_card_1862
+  cuts:
+  - speaker: reimu
+    text: 1862年。紀州・有田で生まれました。
+    reading: せんはっぴゃく ろくじゅうにねん。きしゅう ありだで うまれました。
+- id: ch0_arida
+  title: ''
+  background: kt_mikan
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 和歌山の[有田|ありだ]は、昔からミカンの産地なの。
+  - speaker: zundamon
+    emotion: happy
+    text: 山が、全部ミカンの木なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 急な斜面に石垣を積んで、段々の畑にしてるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日当たりが、よさそうなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 上山さんの家は、その中でも大きなミカン農家だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: お坊ちゃんか。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、ミカンの人のまま終わらなかったのよ。
+- id: ch1_juku
+  title: 福沢諭吉のもとで
+  background: kt_juku
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, scale: 0.9, emotion: normal}
+  - {who: fukuzawa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10代の終わりに上京し、慶應義塾で福沢諭吉に学びます。
+    reading: じゅうだいの おわりに じょうきょうし、けいおう ぎじゅくで ふくざわ ゆきちに まなびます。
+  - speaker: fukuzawa
+    emotion: normal
+    text: 上山くん。君の家は、ミカンを作っているそうだね。
+  - speaker: zundamon
+    emotion: happy
+    text: '[有田|ありだ]のミカンなのだ。甘さなら、どこにも負けないぞ。'
+  - speaker: fukuzawa
+    emotion: happy
+    text: 学んだことは、家の仕事でこそ生かしたまえ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……はい。
+  - speaker: reimu
+    text: 1884年の暮れ、病気のため故郷へ戻ります。
+    reading: せんはっぴゃく はちじゅうよねんの くれ、びょうきの ため こきょうえ もどります。
+- id: ch1_kikyo
+  title: ''
+  background: kt_ie
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: normal
+    text: 旦那さん。東京から戻られて、体はもう大丈夫ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: だいぶ良くなったのだ。寝てばかりもいられないぞ。
+  - speaker: tenin
+    emotion: surprised
+    text: 何か、始めるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: ミカンを、船で外国へ売るのだ。
+  - speaker: tenin
+    emotion: thinking
+    text: 外国の人が、[有田|ありだ]のミカンを食べますかね。
+  - speaker: zundamon
+    emotion: happy
+    text: 食べたら、きっと気に入るのだ。
+  - speaker: reimu
+    text: 1885年、ミカンを外国へ売るための店を始めました。
+    reading: せんはっぴゃく はちじゅうごねん、みかんお がいこくえ うる ための みせお はじめました。
+  - speaker: tenin
+    emotion: normal
+    text: 旦那さん、東京から手紙です。福沢先生からですよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 先生から？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……アメリカから、ミカンの苗を探しに来る人がいるのだ。面倒を見てほしい、と。
+  - speaker: tenin
+    emotion: surprised
+    text: アメリカの人が、わざわざ。
+  - speaker: zundamon
+    emotion: happy
+    text: 東京まで、迎えに行くぞ。
+- id: ch2_amoa
+  title: ミカンの苗のお返し
+  background: kt_mikan
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: amoa, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 手紙に書かれていた客は、アメリカで苗や種を扱う商人でした。
+    reading: てがみに かかれていた きゃくわ、あめりかで なえや たねお あつかう しょうにんでした。
+  - speaker: amoa
+    emotion: happy
+    text: これは、すばらしい。山一面が、ミカンの木ですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 気に入った苗は、持っていってほしいのだ。
+  - speaker: amoa
+    emotion: surprised
+    text: いいのですか。お代は。
+  - speaker: zundamon
+    emotion: normal
+    text: 先生の紹介なのだ。お代はいらないぞ。
+  - speaker: amoa
+    emotion: normal
+    text: では、国に帰ったら、必ずお礼をします。
+  - speaker: zundamon
+    emotion: happy
+    text: 竹と、シュロと、菊の苗もつけるのだ。
+  - speaker: amoa
+    emotion: happy
+    text: 荷物が、増える一方ですね。
+  - speaker: reimu
+    text: 東京まで迎えに行き、有田のミカン山を案内して、いくつもの苗を贈ったと伝えられています。
+    reading: とうきょうまで むかえに いき ありだの みかんやまお あんないして、いくつもの なえお おくったと つたえられています。
+- id: card1886
+  title: ''
+  background: kt_card_1886
+  cuts:
+  - speaker: reimu
+    text: 1886年。アメリカから、お礼の種が届きます。
+    reading: せんはっぴゃく はちじゅうろくねん。あめりかから、おれいの たねが とどきます。
+- id: ch3_tane
+  title: 虫を落とす花
+  background: kt_ie
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: normal
+    text: 旦那さん。アメリカから、小包です。
+  - speaker: zundamon
+    emotion: happy
+    text: 約束のお礼なのだ。律儀な人だぞ。
+  - speaker: tenin
+    emotion: surprised
+    text: 種の袋が、いくつも入ってますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: この袋だけ、書き付けがついてるのだ。
+  - speaker: tenin
+    emotion: thinking
+    text: なんて書いてあるんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: アメリカでは、この花で大もうけした人が多い、と書いてあるのだ。
+  - speaker: tenin
+    emotion: surprised
+    text: 花で、大もうけ？
+  - speaker: zundamon
+    emotion: normal
+    text: 除虫菊。虫を殺す力のある花なのだ。
+  - speaker: tenin
+    emotion: thinking
+    text: 見た目は、ただの小さな[種|たね]ですけど。
+  - speaker: zundamon
+    emotion: happy
+    text: 植えてみれば、分かるのだ。
+  - speaker: reimu
+    text: 除虫菊の花には、虫の神経に働く成分が含まれています。
+    reading: じょちゅうぎくの はなにわ、むしの しんけいに はたらく せいぶんが ふくまれています。
+  - speaker: reimu
+    text: 日本で最初に植えた人ではありませんが、栽培を広めたのは上山だと言われています。
+    reading: にほんで さいしょに うえた ひとでわ ありませんが、さいばいお ひろめたのわ うえやまだと いわれています。
+- id: ch3_nomi
+  title: ''
+  background: kt_hatake
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 翌年、初めての花が咲きます。
+    reading: よくとし、はじめての はなが さきます。
+  - speaker: tenin
+    emotion: surprised
+    text: 旦那さん。畑が、真っ白です。
+  - speaker: zundamon
+    emotion: happy
+    text: 咲いたのだ。これを乾かして、粉にするぞ。
+  - speaker: tenin
+    emotion: thinking
+    text: 粉にして、どうするんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 布団にまけば、ノミが寄りつかないのだ。
+  - speaker: tenin
+    emotion: surprised
+    text: ノミ取り粉ですか。
+- id: ch3_tamesu
+  title: ''
+  background: kt_ie
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: tenin
+    emotion: thinking
+    text: 本当に、この粉でノミが逃げるんですかね。
+  - speaker: zundamon
+    emotion: normal
+    text: 試してみるのだ。ノミのいる古いむしろに、少しまくぞ。
+  - speaker: tenin
+    emotion: happy
+    text: むしろなら、文句は言いませんね。
+  - speaker: zundamon
+    emotion: happy
+    text: ノミは、文句を言うかもしれないのだ。
+  - speaker: tenin
+    emotion: surprised
+    text: ……旦那さん。ノミが、ぽろぽろ落ちてます。
+  - speaker: zundamon
+    emotion: happy
+    text: 効いた！
+  - speaker: tenin
+    emotion: happy
+    text: これは、売れます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 売るには、花が足りないのだ。[日本中|にほんじゅう]の畑で、作ってもらうのだ。
+- id: ch4_nouka
+  title: 詐欺師と呼ばれて
+  background: kt_nouka
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: nouka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 上山は各地の農家を回り、除虫菊の種を無料で配り始めます。
+    reading: うえやまわ かくちの のうかお まわり、じょちゅうぎくの たねお むりょうで くばりはじめます。
+  - speaker: zundamon
+    emotion: happy
+    text: この種を、畑の隅に植えてほしいのだ。お代はいらないぞ。
+  - speaker: nouka
+    emotion: thinking
+    text: タダで、種をくれる？
+  - speaker: zundamon
+    emotion: normal
+    text: 花が咲いたら、ボクが買い取るのだ。
+  - speaker: nouka
+    emotion: angry
+    text: うまい話には、裏があるもんだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 裏なんて、無いぞ。
+  - speaker: nouka
+    emotion: angry
+    text: 虫を殺す花なんて、聞いたこともない。うまい話でだます山師だろう。
+  - speaker: zundamon
+    emotion: sad
+    text: ……山師じゃない。
+  - speaker: zundamon
+    emotion: normal
+    text: 育て方を書いた本も、置いていくのだ。これもタダだぞ。
+  - speaker: nouka
+    emotion: thinking
+    text: ……本まで、タダか。
+  - speaker: zundamon
+    emotion: happy
+    text: 読んでから、決めてほしいのだ。
+  - speaker: reimu
+    text: 上山は後に、熱心に勧めるほど狂人扱いされ、山師と言われたと書き残しています。
+    reading: うえやまわ のちに ねっしんに すすめるほど きょうじん あつかいされ、やましと いわれたと かきのこしています。
+- id: ch5_ibusu
+  title: 煙だらけの部屋
+  background: kt_ie
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 粉を、火鉢の灰の上でいぶすのだ。草をいぶして蚊を追う、昔のやり方と同じなのだ。
+  - speaker: tenin
+    emotion: normal
+    text: おがくずも、混ぜておきました。
+  - speaker: zundamon
+    emotion: happy
+    text: これで、蚊が落ちるはずだぞ。
+  - speaker: tenin
+    emotion: surprised
+    text: ……旦那さん、前が見えません。
+  - speaker: zundamon
+    emotion: surprised
+    text: 煙が、多すぎるのだ！
+  - speaker: tenin
+    emotion: angry
+    text: 蚊より先に、人が逃げ出しますよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……窓を、開けよう。
+  - speaker: reimu
+    text: 粉をいぶすやり方は、煙が多すぎて、家の中では使いものになりませんでした。
+    reading: こなお いぶす やりかたわ けむりが おおすぎて、いえの なかでわ つかいものに なりませんでした。
+- id: ch6_yado
+  title: 宿で出会った線香屋
+  background: kt_yado
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: thinking}
+  - {who: senkouya, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1888年、上山は東京・本郷の宿で、線香屋の男と泊まり合わせます。
+    reading: せんはっぴゃく はちじゅうはちねん、うえやまわ とうきょう ほんごうの やどで せんこうやの おとこと とまりあわせます。
+  - speaker: senkouya
+    emotion: normal
+    text: お前さん、さっきから何を悩んでるんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 虫よけの粉を、煙を少なく、ゆっくり燃やしたいのだ。
+  - speaker: senkouya
+    emotion: happy
+    text: ゆっくり燃えるものなら、わしの売り物がそれだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……線香なのだ！
+  - speaker: senkouya
+    emotion: normal
+    text: 仏壇の線香は、細く練って、少しずつ燃えるようにしてある。
+  - speaker: zundamon
+    emotion: happy
+    text: その線香に、除虫菊の粉を練り込めばいいのだ。
+  - speaker: senkouya
+    emotion: surprised
+    text: 虫よけの線香か。聞いたことがないな。
+  - speaker: zundamon
+    emotion: happy
+    text: 聞いたことがないから、作るのだ。
+- id: ch6_shisaku
+  title: ''
+  background: kt_koba0
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: shokunin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shokunin
+    emotion: normal
+    text: 仏壇の線香なら、何十年も作ってきました。任せてください。
+  - speaker: zundamon
+    emotion: happy
+    text: 除虫菊の粉を、練り込んでほしいのだ。
+  - speaker: shokunin
+    emotion: thinking
+    text: 粉だけだと、まとまりません。つなぎが要ります。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ミカンの皮を、乾かして粉にしたものはどうなのだ。
+  - speaker: shokunin
+    emotion: surprised
+    text: ミカンの皮？
+  - speaker: zundamon
+    emotion: happy
+    text: うちには、山ほどあるのだ。
+  - speaker: shokunin
+    emotion: happy
+    text: それと糊の粉を混ぜれば、形になりそうです。
+  - speaker: reimu
+    text: 除虫菊の粉に、ミカンの皮の粉と糊の粉を混ぜて、線香が作られました。
+    reading: じょちゅうぎくの こなに みかんの かわの こなと のりの こなお まぜて、せんこうが つくられました。
+- id: card1890
+  title: ''
+  background: kt_card_1890
+  cuts:
+  - speaker: reimu
+    text: 1890年。棒状の蚊取り線香が生まれます。
+    reading: せんはっぴゃく きゅうじゅうねん。ぼうじょうの かとり せんこうが うまれます。
+  - speaker: reimu
+    text: 長さおよそ20センチ。燃えるのは、40分ほどでした。
+    reading: ながさ およそ にじゅっせんち。もえるのわ、よんじゅっぷん ほどでした。
+    telops:
+    - {text: "棒の線香は、40分で燃え尽きた", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch7_kyaku
+  title: ''
+  background: kt_mise0
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: kyaku
+    emotion: angry
+    text: 旦那。あの線香、すぐ燃え尽きちまうよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……40分ほどなのだ。
+  - speaker: kyaku
+    emotion: angry
+    text: こっちは、夜中に何べんも起きて火をつけ直してるんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2本か3本、いっぺんに立てないと、効きにくいのだ。
+  - speaker: kyaku
+    emotion: surprised
+    text: それじゃあ、何本買っても足りないよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……もっと長く燃えるのを、考えるのだ。
+- id: ch7_bou
+  title: 40分の線香
+  background: kt_ie
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: yuki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: yuki
+    emotion: thinking
+    text: あなた。お客さんの言うとおりよ。うちでも、ひと晩に何本も使うわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、長くすればいいのだ。
+  - speaker: yuki
+    emotion: surprised
+    text: 長くしたら、細いぶん折れやすくならない？
+  - speaker: zundamon
+    emotion: sad
+    text: ……試したら、運ぶ途中で折れたのだ。
+  - speaker: yuki
+    emotion: thinking
+    text: 短いと、すぐ燃え尽きる。長いと、折れる。
+  - speaker: zundamon
+    emotion: sad
+    text: どっちも、だめだ。
+  - speaker: yuki
+    emotion: normal
+    text: 長いまま、小さくしまえたらいいのにね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 長いまま、小さく……。
+- id: ch4_shinbun
+  title: ''
+  background: kt_shiryo
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 山師と言われながらも、上山さんは種を配り続けたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 誰にも信じてもらえないのは、つらいのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 1892年には、大阪の新聞が、その取り組みを記事にしてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 新聞に載ったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2年後には、自分で新聞に広告も出してる。除虫菊の種を、大々的に分けます、って。
+  - speaker: zundamon
+    emotion: happy
+    text: 山師から、有名人か。
+  - speaker: tsumugi
+    emotion: normal
+    text: 広島や岡山、北海道でも、作る人が増えていったの。
+- id: ch4_dokusen
+  title: ''
+  background: kt_ie
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: shusshi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shusshi
+    emotion: happy
+    text: 上山さん。除虫菊を、この土地だけの商売にしましょう。
+  - speaker: zundamon
+    emotion: surprised
+    text: この土地だけ、なのだ？
+  - speaker: shusshi
+    emotion: happy
+    text: 種を外に出さなければ、もうけは全部、我々のものだ。
+  - speaker: shusshi
+    emotion: normal
+    text: 会社を作ります。社長は、あなたにお願いしたい。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……種は、外に出さないのか。
+  - speaker: shusshi
+    emotion: normal
+    text: 当然でしょう。
+  - speaker: zundamon
+    emotion: angry
+    text: それなら、社長は引き受けないのだ。
+  - speaker: shusshi
+    emotion: surprised
+    text: なぜです。
+  - speaker: zundamon
+    emotion: normal
+    text: 作る人が増えないと、[日本中|にほんじゅう]の蚊や虫は減らないのだ。
+  - speaker: reimu
+    text: 上山が断ったため、その会社はその日のうちに解散した、と伝えられています。
+    reading: うえやまが ことわった ため、その かいしゃわ そのひの うちに かいさんしたと つたえられています。
+- id: card1895
+  title: ''
+  background: kt_card_1895
+  cuts:
+  - speaker: reimu
+    text: 1895年。
+    reading: せんはっぴゃく きゅうじゅうごねん。
+- id: ch8_hebi
+  title: とぐろの形
+  background: kt_niwa
+  bgm: mystery
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: yuki, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: yuki
+    emotion: surprised
+    text: あなた、見て。蛇がいるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 危ないのだ。離れるのだ。
+  - speaker: yuki
+    emotion: thinking
+    text: 違うの。あの形を見て。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……とぐろを、巻いてるな。
+  - speaker: yuki
+    emotion: happy
+    text: 長い体が、あんなに小さくまとまってる。
+  - speaker: yuki
+    emotion: happy
+    text: ……線香も、こうして巻いたらどうかしら。
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: 巻く……のだ！
+  - speaker: yuki
+    emotion: happy
+    text: 巻けば、長いまま小さくなるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 折れやすい細長いものを、丸めてしまうのだ。
+  - speaker: reimu
+    text: 妻のゆきが、とぐろを巻く蛇を見て思いついた。会社には、そう伝えられています。
+    reading: つまの ゆきが、とぐろお まく へびお みて おもいついた。かいしゃにわ そう つたえられています。
+- id: ch9_shisaku
+  title: 7年かかった渦巻き
+  background: kt_koba
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: thinking}
+  - {who: shokunin, x: 0.56, emotion: sad}
+  - {who: yuki, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: shokunin
+    emotion: sad
+    text: 旦那さん。お菓子の型をまねて木型で抜いてみましたが、外れません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 型から出すときに、渦が崩れるのだ。
+  - speaker: shokunin
+    emotion: thinking
+    text: これでは、一日にいくつも作れません。
+  - speaker: zundamon
+    emotion: normal
+    text: なら、型はやめて、手で巻くのだ。
+  - speaker: shokunin
+    emotion: surprised
+    text: 手で、一本ずつですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 太めの線香を切って、木の芯のまわりに巻きつけるのだ。
+  - speaker: shokunin
+    emotion: sad
+    text: 一本ずつだと、遅くて間に合いません。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、二本を[並べて|ならべて]巻くのだ。
+  - speaker: shokunin
+    emotion: surprised
+    text: 二本いっぺんに。
+  - speaker: zundamon
+    emotion: happy
+    text: 二つの渦が、組み合わさるのだ。手間が半分になるぞ。
+  - speaker: yuki
+    emotion: normal
+    text: 乾かすときは、網の上に置いたらどうかしら。魚を焼く網みたいに。
+  - speaker: shokunin
+    emotion: happy
+    text: 下からも風が[通って|とおって]、早く乾きますね。
+  - speaker: reimu
+    text: 線香を2本並べて巻くこのやり方は、今の渦巻きにも受け継がれています。
+    reading: せんこうお にほん ならべて まく この やりかたわ、いまの うずまきにも うけつがれています。
+  - speaker: reimu
+    text: 1900年には、渦巻き型の特許を出願しました。
+    reading: せんきゅうひゃくねんにわ、うずまきがたの とっきょお しゅつがん しました。
+- id: ch9_nananen
+  title: ''
+  background: kt_koba
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: yuki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: yuki
+    emotion: thinking
+    text: あなた。今日の分も、乾かしたら割れてしまったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……渦の内側が、先に縮むのだ。
+  - speaker: yuki
+    emotion: normal
+    text: 乾かし方を、少しずつ変えてみましょう。
+  - speaker: zundamon
+    emotion: thinking
+    text: 練り方も、太さも、もう一回やり直すのだ。
+  - speaker: yuki
+    emotion: happy
+    text: 一年前より、ずっときれいに巻けてるわよ。
+  - speaker: zundamon
+    emotion: normal
+    text: まだ、売れる形じゃないのだ。
+  - speaker: yuki
+    emotion: normal
+    text: なら、売れる形になるまで、付き合うわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ……頼む。
+- id: card1902
+  title: ''
+  background: kt_card_1902
+  cuts:
+  - speaker: reimu
+    text: 1902年。渦巻きの蚊取り線香が発売されます。
+    reading: せんきゅうひゃく にねん。うずまきの かとり せんこうが はつばい されます。
+  - speaker: reimu
+    text: 思いついてから、7年がたっていました。
+    reading: おもいついてから、ななねんが たっていました。
+- id: ch10_hatsubai
+  title: ''
+  background: kt_mise
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: これが、新しい蚊取り線香ですか。ぐるぐる巻いてある。
+  - speaker: zundamon
+    emotion: happy
+    text: 一つで、ひと晩近くもつのだ。
+  - speaker: kyaku
+    emotion: surprised
+    text: 夜中に起きて、替えなくていいんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 替えなくていいのだ。朝まで、ぐっすり寝てほしいのだ。
+  - speaker: kyaku
+    emotion: happy
+    text: では、夏の分をまとめて。
+  - speaker: reimu
+    text: 初めのころの渦巻きは、長さ60センチほどで、6時間ほど燃えたとされています。
+    reading: はじめの ころの うずまきわ ながさ ろくじゅっせんち ほどで、ろくじかん ほど もえたと されています。
+- id: ch11_boraku
+  title: 約束の値段
+  background: kt_hatake
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: thinking}
+  - {who: nouka, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1903年、除虫菊が大豊作になり、値段が大きく下がったと伝えられています。
+    reading: せんきゅうひゃく さんねん じょちゅうぎくが だいほうさくに なり、ねだんが おおきく さがったと つたえられています。
+  - speaker: nouka
+    emotion: sad
+    text: 上山さん。今年は、どこも花が取れすぎて、値がつかんそうだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 約束の値段で、買い取るのだ。
+  - speaker: nouka
+    emotion: surprised
+    text: 約束の？ 相場より、ずっと高いぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 種を配ったときに、買い取ると言ったのだ。
+  - speaker: nouka
+    emotion: thinking
+    text: それじゃあ、あんたが損をかぶることになる。
+  - speaker: zundamon
+    emotion: sad
+    text: 約束を破ったら、来年は誰も植えてくれないのだ。
+  - speaker: nouka
+    emotion: happy
+    text: ……山師と言ったのは、取り消すよ。
+  - speaker: reimu
+    text: 上山はこのとき、契約どおりの値で買い続けて、店がつぶれかけたと伝えられています。
+    reading: うえやまわ この とき けいやく どおりの ねで かいつづけて、みせが つぶれかけたと つたえられています。
+  - speaker: reimu
+    text: 翌年、日露戦争が始まると、戦地の兵士に除虫菊の粉を送ります。
+    reading: よくねん にちろ せんそうが はじまると、せんちの へいしに じょちゅうぎくの こなお おくります。
+  - speaker: reimu
+    text: それをきっかけに、軍から大量の注文が入ったとされています。
+    reading: それお きっかけに、ぐんから たいりょうの ちゅうもんが はいったと されています。
+  - speaker: nouka
+    emotion: happy
+    text: 上山さん。軍から、大きな注文が来たそうだな。
+  - speaker: zundamon
+    emotion: happy
+    text: 約束を守っておいて、よかったのだ。花は、全部買い取るぞ。
+  - speaker: nouka
+    emotion: happy
+    text: 来年も、植えるよ。
+- id: card1910
+  title: ''
+  background: kt_card_1910
+  cuts:
+  - speaker: reimu
+    text: 1910年。金鳥の商標が登録されます。
+    reading: せんきゅうひゃく じゅうねん。きんちょうの しょうひょうが とうろく されます。
+- id: ch12_kincho
+  title: 鶏の頭と牛のしっぽ
+  background: kt_mise
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 線香の名前に、金の鶏と入れるのだ。
+  - speaker: tenin
+    emotion: thinking
+    text: 旦那さん。どうして、鶏なんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 昔の中国の言葉なのだ。鶏口となるも、牛後となるなかれ。
+  - speaker: tenin
+    emotion: surprised
+    text: けいこう……。
+  - speaker: zundamon
+    emotion: normal
+    text: 大きな牛のしっぽでいるより、小さくても鶏の頭でいろ、という意味なのだ。
+  - speaker: tenin
+    emotion: happy
+    text: うちは、小さな鶏の頭ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 小さいけど、先頭を走るのだ。
+  - speaker: reimu
+    text: 同じ1910年、除虫菊を広めた働きで、国から藍綬褒章を受けています。
+    reading: おなじ せんきゅうひゃく じゅうねん、じょちゅうぎくお ひろめた はたらきで くにから らんじゅほうしょうお うけています。
+- id: ch12_bannen
+  title: ''
+  background: kt_ie
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: 旦那さん。いよいよ、会社ですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 除虫菊の粉を作る会社なのだ。
+  - speaker: tenin
+    emotion: normal
+    text: 種を配って歩いたころが、うそみたいです。
+  - speaker: zundamon
+    emotion: happy
+    text: 山師と言われたのが、懐かしいのだ。
+  - speaker: reimu
+    text: 1919年に会社を作り、のちに社名を大日本除虫菊とします。
+    reading: せんきゅうひゃく じゅうくねんに かいしゃお つくり、のちに しゃめいお だいにほん じょちゅうぎくと します。
+  - speaker: reimu
+    text: 1930年、社長の座を長男に譲りました。
+    reading: せんきゅうひゃく さんじゅうねん、しゃちょうの ざお ちょうなんに ゆずりました。
+  - speaker: reimu
+    text: 1943年、上山英一郎は81歳で亡くなりました。
+    reading: せんきゅうひゃく よんじゅうさんねん、うえやま えいいちろうわ はちじゅういっさいで なくなりました。
+- id: ch13_sanchi
+  title: 日本中に咲いた花
+  background: kt_hatake
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 上山さんが種を配った除虫菊は、[日本中|にほんじゅう]に広がったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1925年には、北海道の石狩だけで、全国の畑の7割近くを占めたそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 北海道が、そんなに！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1935年ごろが、生産が一番多かったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 戦後は、瀬戸内の因島が一面の白い花で有名になったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 見てみたいな。
+- id: ch13_shikumi
+  title: 燃やさずに温める
+  background: kt_uzu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。蚊取り線香って、燃えた煙で蚊を落とすのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 実は、燃えているところからは、成分は出ないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 燃えてないところから、出るのか！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 火のついた先は、700度から800度もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その少し手前、250度くらいに温まったところから、成分が出て煙に乗るのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 燃える前に、温められて飛び出すのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 火は、少しずつ前に進むヒーターみたいなものね。
+  - speaker: zundamon
+    emotion: surprised
+    text: そのヒーターが、ひと晩かけて進むのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの両はし作戦は、火のつく場所を2つにしただけなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。だから、半分の時間で燃え尽きたのよ。
+  - speaker: reimu
+    text: 今の標準の渦巻きは、伸ばすとおよそ75センチ。およそ7時間かけて燃えます。
+    reading: いまの ひょうじゅんの うずまきわ のばすと およそ ななじゅうご せんち。およそ しちじかん かけて もえます。
+    telops:
+    - {text: "伸ばすと75センチ、およそ7時間", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 箱を開けると、2つの渦が組み合わさってるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 手で巻いていたころの、二本[並べて|ならべて]巻くやり方の名残よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つ[一組|ひとくみ]だと折れにくいし、かさも半分で、運ぶのも安く済むの。
+  - speaker: zundamon
+    emotion: happy
+    text: 最初から、よくできてたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 中身も変わったわ。今は、除虫菊の成分に似せて人が作った成分が中心なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 花じゃなくなったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1949年にアメリカで作られて、日本でも作られるようになったのよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 花の成分は、似せて作った成分に置き換わって、日本の畑はほとんど無くなったの。
+  - speaker: zundamon
+    emotion: sad
+    text: さみしいな。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今、除虫菊の花を作っている主な国は、ケニアやオーストラリアよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 作る場所も、ずいぶん変わったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 形のほうも、変わったところがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1957年から、[KINCHO|きんちょう]の渦巻きは左巻きなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 左巻き！？ 何か、わけがあるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 打ち抜く機械を新しくしたときに、左巻きに変わったと会社は説明してるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: なぜ左なのかまでは、はっきり書かれていないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今夜、ボクの家のも確かめるのだ。
+- id: ch14_ronsou
+  title: 煙は体に悪い？
+  background: kt_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。蚊取り線香の煙は、体にすごく悪いって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: よく言われるわね。これは、研究によって結論が分かれてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 分かれてる？
+  - speaker: tsumugi
+    emotion: normal
+    text: 外国の製品を調べて、細かい粒がたくさん出るとした研究があるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方で、健康への悪い影響とまでは言えない、という研究もあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の製品は、どうなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 業界の団体は、閉め切ると目やのどがしみることはある、と説明してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのうえで、体には特に問題はない、という立場よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京都の研究センターは、使う時間を短くして、使ったあとはよく換気するよう勧めてるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 結局、どう使えばいいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: メーカーの説明だと、窓を少し開けて、風上に置くこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 人のほかに、気をつけたいのが、生き物のほう。
+  - speaker: zundamon
+    emotion: surprised
+    text: 人じゃない？
+  - speaker: tsumugi
+    emotion: normal
+    text: この成分は、昆虫や魚にはとても強く効くの。
+  - speaker: tsumugi
+    emotion: normal
+    text: カブトムシや金魚、トカゲなんかを飼ってる部屋では、使わないこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: メーカーも、そう書いてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクの部屋の金魚、危なかったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 今夜から、別の部屋にしてあげて。
+- id: ch15_gendai
+  title: 世界の夜を守る渦
+  background: kt_ima
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 蚊取り線香は、今ではアジアやアフリカ、南米でも使われてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 世界中か。
+  - speaker: tsumugi
+    emotion: normal
+    text: インドネシアだけで、1年に、40億巻ほど売れるそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 40億！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 蚊が病気を運ぶ地域では、夜を守る道具なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本では、電気の蚊取りも増えたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1963年に電気で温めるタイプ、そのあと液体のタイプやスプレーも出てきたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 火を使わないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 渦巻きも、大きいのは12時間、小さいのは3時間ほどの種類があるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 寝る時間に合わせて、選べるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも、渦巻きは今もたくさん売れてるわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 2013年には、国の未来技術遺産にも選ばれたの。
+  - speaker: zundamon
+    emotion: happy
+    text: ブタの入れ物も、昔からあるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京の新宿で、幕末から明治のはじめのものが見つかってるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、どこで生まれたのかは、いくつも説があるの。
+  - speaker: zundamon
+    emotion: normal
+    text: ブタの正体は、なぞのままなのだ。
+- id: shime
+  title: ''
+  background: kt_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: つむぎ。今夜は、片はしだけに火をつけるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 窓を少し開けて、風上に置いてね。
+  - speaker: zundamon
+    emotion: normal
+    text: 金魚は、別の部屋に引っ越したのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 渦の一周一周が、7年かけて見つけた答えなのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 棒のままだったら、今も夜中に起きて替えてたのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 長いまま、小さく。台所の網で、乾かして。
+  - speaker: zundamon
+    emotion: happy
+    text: 答えは、家の中にあったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今夜、火をつけるときは、外側の端っこを見てみて。
+  - speaker: zundamon
+    emotion: happy
+    text: 外の端は……2つあるのだ。両方つけるぞ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 2つくっついたまま、つけないの！ まず外して、1つずつ使うのよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

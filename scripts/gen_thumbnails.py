@@ -2706,6 +2706,31 @@ def p_hsforest(d, s):
         d.rectangle([s * (x - 0.03), s * 0.66, s * (x + 0.03), s * 0.92], fill=(100, 76, 52))
 
 
+def p_ktstick(d, s):
+    """最初の棒状の蚊取り線香。細い緑の棒を3本立て、先に火。"""
+    d.rectangle([s * 0.20, s * 0.84, s * 0.80, s * 0.94], fill=(150, 150, 156),
+                outline=(110, 110, 116), width=int(s * 0.014))             # 灰皿
+    for k, x in enumerate((0.36, 0.50, 0.64)):
+        top = s * (0.20 + k * 0.05)
+        d.rectangle([s * (x - 0.025), top, s * (x + 0.025), s * 0.86], fill=(90, 130, 84),
+                    outline=(60, 96, 58), width=int(s * 0.008))
+        d.ellipse([s * (x - 0.035), top - s * 0.035, s * (x + 0.035), top + s * 0.02],
+                  fill=(255, 130, 50))
+
+
+def p_ktcoil(d, s):
+    """渦巻きの蚊取り線香。外端に火。商標の意匠は描かない。"""
+    import math as _m
+    pts = []
+    for i in range(301):
+        t = i / 300
+        ang = t * 4.2 * 2 * _m.pi
+        rr = s * 0.40 * (1 - t * 0.84)
+        pts.append((s * 0.5 + rr * _m.cos(ang), s * 0.52 + rr * _m.sin(ang) * 0.92))
+    d.line(pts, fill=(80, 124, 78), width=int(s * 0.05), joint="curve")
+    d.ellipse([s * 0.86, s * 0.47, s * 0.96, s * 0.57], fill=(255, 130, 50))
+
+
 NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
 TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
 GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
@@ -2945,6 +2970,11 @@ SPECS = {
         head_hi="人が植えた", panels=[
         _p("p_hsfield", "1915年 代々木", BROWN, "surprised", "ここに森を？", "畑と野原だった"),
         _p("p_hsforest", "いま", GREEN, "happy", "深い森なのだ", "150年後を設計"),
+    ]),
+    "mosquito-coil": dict(layout="panels", headline="蚊取り線香はなぜ渦巻き",
+        head_hi="渦巻き", panels=[
+        _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
+        _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[
