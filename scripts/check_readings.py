@@ -151,8 +151,13 @@ def main(slug: str) -> int:
                 continue
             kana = canon("".join(m[0] for m in ct["moras"]))
             disp = ct["display_text"]
+            # [表示|よみ] タグで読みを明示した語は、台帳より本文の指定を優先する
+            # （台帳の 三重=さんじゅう が「[三重県|みえけん]」に掛かって誤判定された。2026-09-23）
+            tagged = [m.group(1) for m in re.finditer(r"\[([^|\]]+)\|[^\]]+\]", cut.text)]
             for e in ledger:
                 if e["surface"] not in disp:
+                    continue
+                if any(e["surface"] in t for t in tagged):
                     continue
                 expect = canon(e["reading"])
                 if expect not in kana:

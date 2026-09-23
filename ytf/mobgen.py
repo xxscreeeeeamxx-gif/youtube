@@ -20,9 +20,9 @@ EMOTIONS = ["normal", "happy", "surprised", "thinking", "angry", "sad"]
 W, H = 760, 1240          # 生成キャンバス（頭でっかちの可愛い比率）
 # 胴の名前ラベルの長さの上限（キャンバス座標）。ドラマの立ち絵は 1080p で高さ約909px・
 # 上端 y≈217 に置かれ、ラベルは画面 y≈649 から始まる。2行ナレの帯は y≈910 から下なので、
-# 帯に食われないのは画面で約250px＝キャンバスで約340pxまで。5字以上のラベルが
+# 帯に食われないのは画面で約250px。実測で330だと最後の字の下端が帯に10px前後かかったので300にした。5字以上のラベルが
 # 「教室の先」「販売の」で切れていた（2026-09-23 ヤクルト回の検証で発覚）
-LABEL_MAX_H = 330
+LABEL_MAX_H = 300
 OUTLINE = (60, 62, 70)
 BODY = (252, 252, 252)
 
@@ -109,7 +109,7 @@ def ensure_mob_sprites(cfg: Config, proj: Project, script) -> None:
     for mob in script.meta.mobs:
         out_dir = proj.root / "mobs" / mob.id
         out_dir.mkdir(parents=True, exist_ok=True)
-        sig = f"{mob.label}|{mob.hair}|{mob.item}|{mob.photo}|v3"
+        sig = f"{mob.label}|{mob.hair}|{mob.item}|{mob.photo}|v4"
         sig_file = out_dir / ".sig"
         if sig_file.exists() and sig_file.read_text(encoding="utf-8") == sig \
                 and (out_dir / "normal.png").exists():
