@@ -27,6 +27,9 @@ TITLES = {
     "ishibashi-bridgestone": "【ブリヂストンの誕生】足袋屋がタイヤを作ったら、全部返ってきた【ずんだもん解説】",
     "torii-whisky": "【国産ウイスキーの誕生】売れなかった一本と、出て行った男【ずんだもん解説】",
     "tateishi-omron": "【オムロンの誕生】新聞配達の少年が、機械に仕事を渡すまで【ずんだもん解説】",
+    "calpis": "【カルピスの誕生】全財産を失った男と、置き忘れられた一本【ずんだもん解説】",
+    "ykk": "【YKKの誕生】勤め先が潰れて、残ったのは未払いの半製品だった【ずんだもん解説】",
+    "naito-tower": "【東京タワーの誕生】トランクの仕切りから、地震に耐えるビルが生まれた【ずんだもん解説】",
     # 解説もの（【トピック】+数字先頭フック。数字は必ず動画内で語っている実数を使う）
     "banknote": "【お札の秘密】人間の目には見えない仕掛けが入っている【ずんだもん解説】",
     "battery-80-duo": "【スマホ充電の真実】100%は損！80%で止める科学【ずんだもん解説】",
@@ -90,7 +93,7 @@ def parse_metadata(path: Path):
 
 def build_credits(raw: str) -> str:
     """metadata.txtのクレジット行を貼り付け用に整形する。"""
-    voicevox, se = [], "効果音ラボ"
+    voicevox, se, aques = [], "効果音ラボ", ""
     for line in raw.splitlines():
         if line.startswith("※"):
             continue
@@ -104,9 +107,14 @@ def build_credits(raw: str) -> str:
                     voicevox.append(name)
             elif item.startswith("効果音:"):
                 se = item.split(":", 1)[1].strip()
+            elif item.startswith("AquesTalk"):
+                # ゆっくりナレ（channel.yaml の credit）。2026-09-23 までは捨てていた
+                aques = item
     out = ["▼使用素材"]
     if voicevox:
         out.append("音声: VOICEVOX（" + "、".join(voicevox) + "）")
+    if aques:
+        out.append("ナレーション: " + aques)
     out.append(f"効果音: {se} / BGM: DOVA-SYNDROME")
     out.append("※本動画は VOICEVOX の音声合成を使用しています。")
     return "\n".join(out)

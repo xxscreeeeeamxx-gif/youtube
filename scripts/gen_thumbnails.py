@@ -2610,6 +2610,46 @@ def p_cpbottle(d, s):
                 outline=(158, 162, 158), width=int(s * 0.016))
 
 
+def p_nttrunk(d, s):
+    """旅行用のトランク。蓋を開けて、中の仕切り板を見せる。
+    縮めても「箱の中に壁がある」と分かるよう、仕切りを明るい色で太く描く。"""
+    d.rectangle([s * 0.10, s * 0.46, s * 0.90, s * 0.88], fill=(132, 88, 56),
+                outline=(88, 58, 36), width=int(s * 0.026))
+    d.rectangle([s * 0.16, s * 0.50, s * 0.84, s * 0.84], fill=(96, 64, 42))
+    d.rectangle([s * 0.46, s * 0.50, s * 0.54, s * 0.84], fill=(236, 212, 150),
+                outline=(170, 140, 90), width=int(s * 0.012))       # 仕切り板
+    d.polygon([(s * 0.10, s * 0.46), (s * 0.90, s * 0.46),
+               (s * 0.84, s * 0.16), (s * 0.16, s * 0.16)],
+              fill=(150, 104, 66), outline=(88, 58, 36), width=int(s * 0.024))  # 開いた蓋
+    for y in (0.62, 0.78):                                           # 革のベルト
+        d.rectangle([s * 0.10, s * y, s * 0.16, s * (y + 0.05)], fill=(70, 46, 30))
+        d.rectangle([s * 0.84, s * y, s * 0.90, s * (y + 0.05)], fill=(70, 46, 30))
+    d.rectangle([s * 0.44, s * 0.86, s * 0.56, s * 0.93], fill=(200, 170, 90),
+                outline=(130, 104, 50), width=int(s * 0.010))       # 留め金
+
+
+def p_nttower(d, s):
+    """赤と白の電波塔。裾が広がり、上に行くほど細くなるトラス。"""
+    # 先端がコマの上端で切れないよう、塔体は0.18から始めてアンテナを細く足す
+    cx, yb, yt = s * 0.5, s * 0.94, s * 0.18
+    d.line([(cx, s * 0.06), (cx, yt)], fill=(220, 70, 40), width=max(2, int(s * 0.014)))
+    n = 10
+    for i in range(n):
+        ya = yb - (yb - yt) * i / n
+        y2 = yb - (yb - yt) * (i + 1) / n
+        ta, tb = i / n, (i + 1) / n
+        wa = s * (0.02 + 0.28 * (1 - ta) ** 1.8)
+        wb = s * (0.02 + 0.28 * (1 - tb) ** 1.8)
+        col = (220, 70, 40) if i % 2 == 0 else (250, 246, 238)
+        w = max(2, int(s * 0.03 * (1 - ta * 0.6)))
+        d.polygon([(cx - wa, ya), (cx - wb, y2), (cx + wb, y2), (cx + wa, ya)],
+                  outline=col, width=w)
+        d.line([(cx - wa, ya), (cx + wb, y2)], fill=col, width=max(2, w - 2))
+        d.line([(cx + wa, ya), (cx - wb, y2)], fill=col, width=max(2, w - 2))
+    d.rectangle([cx - s * 0.08, s * 0.60, cx + s * 0.08, s * 0.66],
+                fill=(250, 246, 238), outline=(200, 190, 176), width=int(s * 0.008))  # 展望台
+
+
 NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
 TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
 GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
@@ -2834,6 +2874,11 @@ SPECS = {
         head_hi="潰れた店", panels=[
         _p("p_ykbox", "1933年 日本橋", BROWN, "sad", "店をたたむのだ", "未払いの売れ残り"),
         _p("p_ykzip", "世界のズボンへ", TEAL, "happy", "全部同じ三文字", "真似できない技術"),
+    ]),
+    "naito-tower": dict(layout="panels", headline="東京タワーは70歳が計算した",
+        head_hi="東京タワー", panels=[
+        _p("p_nttrunk", "1917年 アメリカ", BROWN, "surprised", "仕切りなのだ！", "トランクの仕切り"),
+        _p("p_nttower", "1958年 東京", TEAL, "happy", "計算尺で333m", "70歳の構造計算"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

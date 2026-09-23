@@ -1,0 +1,1866 @@
+meta:
+  title: 【東京タワーの誕生】トランクの仕切りから、地震に耐えるビルが生まれた【ずんだもん解説】
+  slug: naito-tower
+  summary: 山梨の村に生まれ、船を作るつもりで大学に入った青年がいました。専攻を建築に変えた彼は、地震の国で建物をどう立たせるかという問いを抱えて、アメリカへ渡ります。答えのヒントは、旅の荷物の中にありました。のちに70歳で東京タワーの計算を引き受けることになる、ひとりの構造学者の物語です。
+  tags:
+  - 東京タワー
+  - 内藤多仲
+  - 塔博士
+  - 耐震壁
+  - 関東大震災
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 建築
+  - 構造設計
+  thumbnail:
+    top: 70歳の計算
+    bottom: 東京タワーの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: haha
+    label: 母
+    voice: 8
+    pitch: 0.02
+  - id: sensei
+    label: 中学の先生
+    voice: 13
+    pitch: -0.02
+  - id: doukyu
+    label: 同級生
+    voice: 12
+    pitch: 0.02
+  - id: sano
+    label: 佐野利器
+    voice: 13
+    pitch: -0.04
+  - id: gakusei
+    label: 学生
+    voice: 12
+    pitch: 0.04
+  - id: watanabe
+    label: 渡辺節
+    voice: 13
+    pitch: 0.02
+  - id: kantoku
+    label: 現場監督
+    voice: 42
+    pitch: 0.0
+  - id: ginko
+    label: 銀行員
+    voice: 13
+    pitch: -0.06
+  - id: hoso
+    label: 放送局の人
+    voice: 12
+    pitch: -0.02
+  - id: nagoya
+    label: 名古屋の担当者
+    voice: 13
+    pitch: 0.04
+  - id: maeda
+    label: 前田久吉
+    voice: 42
+    pitch: -0.02
+  - id: gishi
+    label: 日建設計の技師
+    voice: 12
+    pitch: 0.0
+  - id: tobi
+    label: 鳶の若頭
+    voice: 12
+    pitch: -0.04
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.06
+scenes:
+- id: hook
+  title: ''
+  background: nt_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、見るのだ。漫画を全部、箱に詰めてるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 引っ越しでもするの？
+  - speaker: zundamon
+    emotion: normal
+    text: 部屋を片づけるのだ。42巻、ひと箱に入れるぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ひと箱に、全部？
+  - speaker: zundamon
+    emotion: happy
+    text: 大きい箱なら一回で運べる。賢いのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 重くない？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あと5冊、入らない。
+  - speaker: zundamon
+    emotion: normal
+    text: 箱の真ん中の、この板が邪魔なのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: それ、仕切りでしょ。
+  - speaker: zundamon
+    emotion: happy
+    text: 抜いたら全部入った。ボクは天才なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 知らないわよ、どうなっても。
+  - speaker: zundamon
+    emotion: normal
+    text: よいしょ、と。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……箱が、ぐにゃってなった。
+    se: don
+  - speaker: tsumugi
+    emotion: normal
+    text: 横から押されて、ひし形につぶれてるわね。
+  - speaker: zundamon
+    emotion: angry
+    text: 箱が弱いのだ。もっと大きい箱にするぞ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 大きくしたら、もっとつぶれるわよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……今度は、底が抜けたのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: ほら。仕切り、戻してみて。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……箱が、しゃんとした。
+  - speaker: tsumugi
+    emotion: happy
+    text: その板一枚が、箱を支えてたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ただの板なのに、そんなに働くのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ただの板で、ビルを地震から守った人がいるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ビルを。
+  - speaker: tsumugi
+    emotion: normal
+    text: 建ててから3か月後に、関東大震災が来たの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 3か月。できたばかりなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 東京の銀行の本店で、無事だったのはほんの一握り。
+  - speaker: tsumugi
+    emotion: normal
+    text: その一つが、その人が骨組みを計算した銀行だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 運が良かっただけでは。
+  - speaker: tsumugi
+    emotion: normal
+    text: 運じゃないの。壁をどこに入れるか、全部計算してたのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 壁の、入れ方。
+  - speaker: tsumugi
+    emotion: happy
+    text: その人は、窓の外のあれも作ったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……東京タワーなのだ！
+  - speaker: reimu
+    text: 東京タワー、高さ333メートル。
+    reading: とうきょうたわあ、たかさ さんびゃく さんじゅうさん めえとる。
+  - speaker: reimu
+    text: 設計したのは、内藤多仲という70歳の構造学者でした。
+    reading: せっけいしたのわ ないとう たちゅうという ななじゅっさいの こうぞう がくしゃでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: 構造学者って、何をする人なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 建物が倒れないように、骨組みを計算する人よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 骨組みの先生か。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、山梨の小さな村よ。
+- id: card1886
+  title: ''
+  background: nt_card_1886
+  cuts:
+  - speaker: reimu
+    text: 1886年6月12日。山梨県の村に生まれました。
+    reading: せんはっぴゃく はちじゅうろくねん ろくがつ じゅうににち。やまなしけんの むらに うまれました。
+- id: ch1_mura
+  title: 石垣を数える少年
+  background: nt_inaka
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 多仲, scale: 0.8, emotion: normal}
+  - {who: haha, x: 0.68, emotion: normal}
+  cuts:
+  - speaker: haha
+    emotion: normal
+    text: '[多仲|たちゅう]。さっきから、何を数えてるの。'
+  - speaker: zundamon
+    emotion: happy
+    text: 石なのだ。この石垣に、石が何個あるか数えてるのだ。
+  - speaker: haha
+    emotion: surprised
+    text: 数えて、どうするの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 大きい石が下で、小さい石が上なのだ。
+  - speaker: haha
+    emotion: normal
+    text: そりゃあ、そうでしょう。
+  - speaker: zundamon
+    emotion: normal
+    text: 逆に積んだら、どうなるのだ。
+  - speaker: haha
+    emotion: thinking
+    text: 崩れるに決まってるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 試してみるのだ。
+  - speaker: haha
+    emotion: angry
+    text: 試さなくていいの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……崩れた。
+  - speaker: haha
+    emotion: normal
+    text: ほら、言ったでしょう。
+  - speaker: zundamon
+    emotion: thinking
+    text: 上が重いと、下の石が押し出されるのだ。
+  - speaker: haha
+    emotion: surprised
+    text: 崩れ方まで見てたの。
+  - speaker: zundamon
+    emotion: normal
+    text: 見ないと、次に積めないのだ。
+  - speaker: haha
+    emotion: thinking
+    text: 次は、どう積むの。
+  - speaker: zundamon
+    emotion: happy
+    text: 大きいのを下にして、また積む。崩れたら、また積むぞ。
+  - speaker: reimu
+    text: 多仲は、算数の得意な子だったと伝わっています。
+    reading: たちゅうわ さんすうの とくいな こだったと つたわっています。
+- id: ch1_chugaku
+  title: ''
+  background: nt_kyoshitsu
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 多仲, scale: 0.9, emotion: normal}
+  - {who: sensei, x: 0.68, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 甲府の中学へ進んだ多仲は、4年生のとき学校の雑誌に文章を書きます。
+    reading: こうふの ちゅうがくえ すすんだ たちゅうわ、よねんせいの とき がっこうの ざっしに ぶんしょうお かきます。
+  - speaker: sensei
+    emotion: normal
+    text: 内藤。お前の原稿、読んだぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: もう読んでくれたのか！
+  - speaker: sensei
+    emotion: thinking
+    text: 発明について書いたんだな。
+  - speaker: zundamon
+    emotion: happy
+    text: 発明が、どうやって生まれるのか、考えてみたかったのだ。
+  - speaker: sensei
+    emotion: surprised
+    text: 中学生が、発明を論じるのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 新しい物は、誰かが最初に思いつくのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: その最初が、どこから来るのか知りたいのだ。
+  - speaker: sensei
+    emotion: thinking
+    text: 答えは出たのか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……まだだ。
+  - speaker: sensei
+    emotion: happy
+    text: 正直でいい。続きは、大人になってから書け。
+  - speaker: zundamon
+    emotion: happy
+    text: 書くぞ。
+  - speaker: reimu
+    text: この文章が載った雑誌は、今も山梨の博物館に残っています。
+    reading: この ぶんしょうが のった ざっしわ、いまも やまなしの はくぶつかんに のこっています。
+- id: ch2_teidai
+  title: 船から建物へ
+  background: nt_seizu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: doukyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1904年に中学を出た多仲は、一高を経て東京帝国大学へ進みます。
+    reading: せんきゅうひゃく よねんに ちゅうがくお でた たちゅうわ、いちこうお へて とうきょう ていこく だいがくえ すすみます。
+  - speaker: doukyu
+    emotion: surprised
+    text: 内藤。お前、造船に行くんじゃなかったのか。
+  - speaker: zundamon
+    emotion: normal
+    text: そのつもりだったのだ。
+  - speaker: doukyu
+    emotion: thinking
+    text: 船が好きだと、あれほど言ってたのに。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……建築に、移ることにしたのだ。
+  - speaker: doukyu
+    emotion: surprised
+    text: 何かあったのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 思うところが、あるのだ。
+  - speaker: doukyu
+    emotion: angry
+    text: それじゃ、何も分からんぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクにも、まだうまく言えないのだ。
+  - speaker: doukyu
+    emotion: thinking
+    text: 船も建物も、大きな箱みたいなもんだがな。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……箱。
+  - speaker: doukyu
+    emotion: normal
+    text: 船は海に浮かぶ箱、建物は地面に立つ箱だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 立つ箱のほうが、揺らされたら逃げ場がないのだ。
+  - speaker: reimu
+    text: 造船から建築へ移った理由について、本人はほとんど語っていません。
+    reading: ぞうせんから けんちくえ うつった りゆうに ついて、ほんにんわ ほとんど かたっていません。
+  - speaker: reimu
+    text: ただ、ここで生涯の師に出会います。
+    reading: ただ、ここで しょうがいの しに であいます。
+- id: ch2_sano
+  title: ''
+  background: nt_kenkyushitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: sano, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: sano
+    emotion: normal
+    text: 内藤くん。船から移ってきたそうだね。
+  - speaker: zundamon
+    emotion: normal
+    text: はい。建築は、まだ分からないことだらけなのだ。
+  - speaker: sano
+    emotion: thinking
+    text: 一つ聞こう。日本で建物を建てるとき、一番の敵は[何|なん]だと思う。
+  - speaker: zundamon
+    emotion: thinking
+    text: 雨……それとも、火事か。
+  - speaker: sano
+    emotion: normal
+    text: 地震だよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 地震。
+  - speaker: sano
+    emotion: normal
+    text: 我々が読む西洋の本は、地震の少ない国で書かれている。
+  - speaker: sano
+    emotion: thinking
+    text: そのまま真似して建てたら、この国では倒れるかもしれない。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、誰が考えるのだ。
+  - speaker: sano
+    emotion: happy
+    text: 我々だよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……倒れない建物を、計算で作れるのだ？
+  - speaker: sano
+    emotion: normal
+    text: 作れるようにするのが、構造という学問だ。
+  - speaker: zundamon
+    emotion: happy
+    text: それを、やりたいのだ。
+  - speaker: sano
+    emotion: happy
+    text: いい返事だ。地震の国には、君みたいな人間が要る。
+- id: card1910
+  title: ''
+  background: nt_card_1910
+  cuts:
+  - speaker: reimu
+    text: 1910年。大学を出た多仲は、その年のうちに早稲田大学の講師になります。
+    reading: せんきゅうひゃく じゅうねん。だいがくお でた たちゅうわ、そのとしの うちに わせだ だいがくの こうしに なります。
+- id: ch3_waseda
+  title: 大声の先生
+  background: nt_kenkyushitsu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: happy}
+  - {who: gakusei, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: gakusei
+    emotion: surprised
+    text: 先生。廊下の端まで、声が聞こえました。
+  - speaker: zundamon
+    emotion: happy
+    text: '[謡|うたい]の稽古なのだ。能の[節|ふし]を、うなっていたのだ。'
+  - speaker: gakusei
+    emotion: thinking
+    text: 授業の前に、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 教室の一番後ろまで、声を届けないといけないのだ。
+  - speaker: gakusei
+    emotion: happy
+    text: 一番後ろは、寝るための席なんですが。
+  - speaker: zundamon
+    emotion: angry
+    text: だから届けるんだ。
+  - speaker: gakusei
+    emotion: sad
+    text: ……起きてます。
+  - speaker: zundamon
+    emotion: normal
+    text: 今日は、柱と[梁|はり]の話をするぞ。
+  - speaker: gakusei
+    emotion: thinking
+    text: 柱が縦で、[梁|はり]が横ですよね。
+  - speaker: zundamon
+    emotion: normal
+    text: そうなのだ。縦と横で四角い枠を作って、床や屋根を載せるのだ。
+  - speaker: gakusei
+    emotion: normal
+    text: アメリカの高いビルも、そうやって建っていると聞きました。
+  - speaker: zundamon
+    emotion: thinking
+    text: そうなのだ。でも、あっちは地震が少ないのだ。
+  - speaker: gakusei
+    emotion: thinking
+    text: 日本で揺らしたら、どうなるんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……それを、まだ誰も計算しきれていないのだ。
+  - speaker: gakusei
+    emotion: surprised
+    text: 先生でも、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクでも、なのだ。だから研究するのだ。
+  - speaker: reimu
+    text: 多仲は謡を好み、授業で大声を出す稽古も兼ねていたと、教え子が語っています。
+    reading: たちゅうわ うたいお このみ じゅぎょうで おおごえお だす けいこも かねていたと、おしえごが かたっています。
+- id: ch3_keisanjaku
+  title: ''
+  background: nt_kenkyushitsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: sano, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: sano
+    emotion: happy
+    text: 内藤くん。講義は順調かね。
+  - speaker: zundamon
+    emotion: happy
+    text: 声だけは、よく届いているのだ。
+  - speaker: sano
+    emotion: normal
+    text: それは何よりだ。これを使いなさい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 計算尺だ……！
+  - speaker: sano
+    emotion: normal
+    text: 目盛りを滑らせれば、掛け算も割り算もすぐに出る。
+  - speaker: zundamon
+    emotion: happy
+    text: 一生、使うのだ。
+  - speaker: sano
+    emotion: surprised
+    text: 一生とは、大きく出たね。
+  - speaker: zundamon
+    emotion: normal
+    text: 本気だぞ。
+  - speaker: reimu
+    text: 師の佐野利器から贈られた計算尺を、多仲は生涯使い続けたと言われています。
+    reading: しの さの としかたから おくられた けいさんじゃくお、たちゅうわ しょうがい つかいつづけたと いわれています。
+  - speaker: reimu
+    text: 20代の半ばで、多仲は早稲田の教授になりました。
+    reading: にじゅうだいの なかばで、たちゅうわ わせだの きょうじゅに なりました。
+  - speaker: reimu
+    text: 1916年には、結婚もしています。
+    reading: せんきゅうひゃく じゅうろくねんにわ、けっこんも しています。
+- id: card1917
+  title: ''
+  background: nt_card_1917
+  cuts:
+  - speaker: reimu
+    text: 1917年。多仲は、アメリカへ渡ります。
+    reading: せんきゅうひゃく じゅうななねん。たちゅうわ あめりかえ わたります。
+- id: ch4_america
+  title: 地震の少ない国
+  background: nt_america
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 内藤多仲, emotion: surprised}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 見上げても、てっぺんが見えないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時のアメリカは、高いビルが次々に建っていたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 柱と[梁|はり]の骨組みだけで、ここまで高くするのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: この国では、それで十分なのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本に持ち帰るには、何かが足りないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを探しに来たんでしょ。
+  - speaker: zundamon
+    emotion: normal
+    text: そうだったのだ。資料を集めまくるぞ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 集めまくる。
+  - speaker: zundamon
+    emotion: happy
+    text: 本も図面も、持って帰れる分は全部なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……それ、どこに入れるつもり？
+  - speaker: zundamon
+    emotion: happy
+    text: トランクに決まってるぞ。
+- id: ch4_trunk
+  title: トランクの仕切り
+  background: nt_eki
+  bgm: mystery
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 内藤多仲, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ……入りきらない。
+  - speaker: zundamon
+    emotion: happy
+    text: 中の仕切りの板を外せば、もっと入るのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: それ、どこかで見た気がするわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 気のせいなのだ。ぎゅうぎゅうに詰めるぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[留め金|とめがね]が、悲鳴を上げてるわよ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 閉まった。完璧なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: もう一つのトランクは？
+  - speaker: zundamon
+    emotion: normal
+    text: あっちは仕切りを入れたまま、普通に詰めたのだ。
+  - speaker: reimu
+    text: 旅のあいだ、荷物は何度も積み下ろされ、揺られます。
+    reading: たびの あいだ にもつわ なんども つみおろされ、ゆられます。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……トランクが、ゆがんでる！
+    se: don
+  - speaker: tsumugi
+    emotion: normal
+    text: '[角|かど]が押されて、ひし形になってるわね。'
+  - speaker: zundamon
+    emotion: sad
+    text: '[留め金|とめがね]も外れて、中身が飛び出してるのだ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 仕切りを外したからよ。
+  - speaker: zundamon
+    emotion: angry
+    text: 仕切りなんて、ただの板なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: じゃあ、隣のトランクを見て。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……仕切りを入れたままのほうは、平気なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じように揺られたのに？
+  - speaker: zundamon
+    emotion: thinking
+    text: 外の枠は同じなのだ。違うのは、中の板だけなのだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……板が、箱のゆがみを止めてたんだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。横から押されても、中の壁が突っ張るの。
+  - speaker: zundamon
+    emotion: normal
+    text: 建物も、箱なのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 急に話が大きくなったわね。
+  - speaker: zundamon
+    emotion: normal
+    text: 柱と[梁|はり]の枠だけだと、横から押されたら、ひし形になるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: でも、ところどころに丈夫な壁を入れたら、踏ん張るのだ！
+  - speaker: reimu
+    text: 中に壁を入れた箱は、横から押されても形を保ちます。
+    reading: なかに かべお いれた はこわ、よこから おされても かたちお たもちます。
+    telops:
+    - {text: "中の壁が、箱のゆがみを止める", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 帰ったら、これを計算にするのだ。
+  - speaker: reimu
+    text: この話は、資料によって場所や細かい中身が少しずつ違います。
+    reading: この はなしわ しりょうに よって、ばしょや こまかい なかみが すこしずつ ちがいます。
+  - speaker: reimu
+    text: ただ、仕切りの大切さに気づいたという点は、どれも同じです。
+    reading: ただ しきりの たいせつさに きづいたという てんわ、どれも おなじです。
+- id: ch5_riron
+  title: 壁の置き場所
+  background: nt_kenkyushitsu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: gakusei, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1918年に帰国した多仲は、この考えを数字で確かめ始めます。
+    reading: せんきゅうひゃく じゅうはちねんに きこくした たちゅうわ、この かんがえお すうじで たしかめ はじめます。
+  - speaker: gakusei
+    emotion: thinking
+    text: 先生。壁を入れると、どれくらい強くなるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: それを、壁の一枚ごとに数字で出すのだ。
+  - speaker: gakusei
+    emotion: surprised
+    text: 一枚ごとに。
+  - speaker: zundamon
+    emotion: normal
+    text: 地震で横から押されたとき、どの壁が、どれだけ力を受け持つかなのだ。
+  - speaker: gakusei
+    emotion: thinking
+    text: 全部の壁で、均等に分けるんじゃないんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 硬い壁ほど、たくさん力を集めるのだ。
+  - speaker: gakusei
+    emotion: surprised
+    text: 力が、硬いほうへ寄っていく。
+  - speaker: zundamon
+    emotion: normal
+    text: だから硬い壁を片側に固めると、建物がねじれるぞ。
+  - speaker: gakusei
+    emotion: surprised
+    text: ねじれる。
+  - speaker: zundamon
+    emotion: normal
+    text: 壁は、釣り合いよく散らして置くのだ。
+  - speaker: gakusei
+    emotion: thinking
+    text: でも先生。壁が増えたら、窓が減ります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そこだ。
+  - speaker: gakusei
+    emotion: normal
+    text: 建てる人は、明るくて広い部屋を欲しがります。
+  - speaker: zundamon
+    emotion: thinking
+    text: だから壁の数は最小限にして、置き場所で勝負するのだ。
+  - speaker: gakusei
+    emotion: happy
+    text: 計算尺の出番ですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎晩、滑らせているぞ。
+  - speaker: reimu
+    text: 1922年から、多仲はこの理論を建築の専門誌に6回に分けて発表します。
+    reading: せんきゅうひゃく にじゅうにねんから、たちゅうわ この りろんお けんちくの せんもんしに ろっかいに わけて はっぴょうします。
+- id: card1923
+  title: ''
+  background: nt_card_1923
+  cuts:
+  - speaker: reimu
+    text: 1923年。東京の丸の内で、二つの大きなビルが完成します。
+    reading: せんきゅうひゃく にじゅうさんねん。とうきょうの まるのうちで、ふたつの おおきな びるが かんせいします。
+- id: ch6_marubiru
+  title: 急がないビル
+  background: nt_genba
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: watanabe, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: watanabe
+    emotion: surprised
+    text: 内藤くん、聞いたかね。丸ビルが、もうできたそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: アメリカの会社が建てたビルなのだ。
+  - speaker: watanabe
+    emotion: normal
+    text: 向こうのやり方で、どんどん組み上げたらしい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 柱と[梁|はり]の骨組みで、なのだ。
+  - speaker: watanabe
+    emotion: thinking
+    text: うちの銀行は、まだ工事中だというのに。
+  - speaker: zundamon
+    emotion: normal
+    text: 渡辺さん。こっちは、急がないのだ。
+  - speaker: watanabe
+    emotion: surprised
+    text: 急がない？
+  - speaker: zundamon
+    emotion: normal
+    text: 壁の場所を、一枚ずつ計算で決めてあるのだ。
+  - speaker: watanabe
+    emotion: thinking
+    text: 設計した私にも、正直、壁が多く見えるがね。
+  - speaker: zundamon
+    emotion: normal
+    text: 要る分だけなのだ。一枚も減らせないぞ。
+  - speaker: watanabe
+    emotion: happy
+    text: 頑固だねえ。
+  - speaker: zundamon
+    emotion: happy
+    text: 計算は、頑固なものなのだ。
+- id: ch6_genba
+  title: ''
+  background: nt_genba
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: kantoku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kantoku
+    emotion: thinking
+    text: 先生。この壁、ここに要るんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 要る。
+  - speaker: kantoku
+    emotion: surprised
+    text: 部屋のど真ん中ですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 横から押されたとき、ここが踏ん張るのだ。
+  - speaker: kantoku
+    emotion: thinking
+    text: 押されるって、誰にです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 地震だ。
+  - speaker: kantoku
+    emotion: normal
+    text: 地震なんて、いつ来るか分かりませんよ。
+  - speaker: zundamon
+    emotion: normal
+    text: いつ来るか分からないから、今入れるのだ。
+  - speaker: kantoku
+    emotion: thinking
+    text: ……来なかったら、ただの邪魔な壁ですな。
+  - speaker: zundamon
+    emotion: happy
+    text: 来なかったら、それが一番いいのだ。
+  - speaker: kantoku
+    emotion: happy
+    text: ……分かりました。入れましょう。
+  - speaker: reimu
+    text: 1923年6月、日本興業銀行の本店が完成します。
+    reading: せんきゅうひゃく にじゅうさんねん ろくがつ、にほん こうぎょう ぎんこうの ほんてんが かんせいします。
+  - speaker: reimu
+    text: 設計は渡辺節、骨組みの計算は内藤多仲でした。
+    reading: せっけいわ わたなべ せつ、ほねぐみの けいさんわ ないとう たちゅうでした。
+  - speaker: reimu
+    text: 地上7階、地下1階の建物です。
+    reading: ちじょう ななかい ちか いっかいの たてものです。
+- id: ch7_shinsai
+  title: 9月1日
+  background: nt_shinsai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: sad}
+  - {who: gakusei, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 3か月後の9月1日、午前11時58分。
+    reading: さんかげつごの くがつ ついたち、ごぜん じゅういちじ ごじゅうはっぷん。
+  - speaker: reimu
+    text: 関東大震災が起きます。
+    reading: かんとう だいしんさいが おきます。
+  - speaker: reimu
+    text: 10万人を超える人が亡くなりました。
+    reading: じゅうまんにんお こえる ひとが なくなりました。
+  - speaker: gakusei
+    emotion: sad
+    text: 先生。丸の内で、建てている途中のビルが崩れたそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 中にいた人は。
+  - speaker: gakusei
+    emotion: sad
+    text: ……工事の人が、大勢。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+  - speaker: reimu
+    text: 崩れたのは、建設中だった内外ビルディングです。
+    reading: くずれたのわ、けんせつちゅうだった ないがい びるでぃんぐです。
+  - speaker: reimu
+    text: 作業員46人が亡くなったとされています。
+    reading: さぎょういん よんじゅうろくにんが なくなったと されています。
+  - speaker: gakusei
+    emotion: thinking
+    text: 丸ビルも、あちこち傷んだと聞きました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 倒れては、いないのか。
+  - speaker: gakusei
+    emotion: normal
+    text: 倒れてはいません。でも、直すのに長くかかりそうだと。
+  - speaker: reimu
+    text: 丸ビルは倒れませんでしたが、2年半かけて補強工事をすることになります。
+    reading: まるびるわ たおれませんでしたが、にねんはん かけて ほきょう こうじお する ことに なります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 興業銀行は、どうなのだ。
+  - speaker: gakusei
+    emotion: sad
+    text: まだ、誰も見に行けていません。
+  - speaker: zundamon
+    emotion: normal
+    text: ……行くぞ。
+- id: ch7_kogin
+  title: 残った銀行
+  background: nt_ginko
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: thinking}
+  - {who: ginko, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: ginko
+    emotion: surprised
+    text: 内藤先生ですか。こんなときに。
+  - speaker: zundamon
+    emotion: thinking
+    text: 建物の中を、見せてほしいのだ。
+  - speaker: ginko
+    emotion: happy
+    text: どうぞ。ほとんど、何ともありません。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……壁に、ひびがほとんど無いのだ。
+  - speaker: ginko
+    emotion: normal
+    text: 金庫も書類も無事です。
+  - speaker: zundamon
+    emotion: normal
+    text: 壁が、踏ん張ってくれた。
+  - speaker: ginko
+    emotion: thinking
+    text: 周りの銀行は、焼けたり崩れたりで、大変なことになっています。
+  - speaker: ginko
+    emotion: normal
+    text: それで、よその銀行の人たちが、うちに集まってくるんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: よその銀行が。
+  - speaker: ginko
+    emotion: normal
+    text: 話し合える建物が、ほとんど残っていないんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……建物が残ると、人が集まれるのだ。
+  - speaker: ginko
+    emotion: happy
+    text: 一日でも早く、店を開けてみせますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 頼むのだ。お[金|かね]が動かないと、町が直らないのだ。
+  - speaker: reimu
+    text: 東京の主な銀行84行のうち、本店が無事だったのは5行ほどとされています。
+    reading: とうきょうの おもな ぎんこう はちじゅうよんこうの うち ほんてんが ぶじだったのわ、ごこう ほどと されています。
+    telops:
+    - {text: "84行のうち、本店が無事だったのは5行ほど", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 興業銀行は、その一つでした。
+    reading: こうぎょう ぎんこうわ、その ひとつでした。
+  - speaker: reimu
+    text: 地震の5日後、銀行の代表たちは、興業銀行に集まって話し合います。
+    reading: じしんの いつかご ぎんこうの だいひょうたちわ、こうぎょう ぎんこうに あつまって はなしあいます。
+  - speaker: reimu
+    text: 9月8日、興業銀行など7つの銀行が店を開けました。
+    reading: くがつ ようか、こうぎょう ぎんこうなど ななつの ぎんこうが みせお あけました。
+- id: ch7_hakase
+  title: ''
+  background: nt_kenkyushitsu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: sano, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: sano
+    emotion: happy
+    text: 内藤くん。博士号、おめでとう。
+  - speaker: zundamon
+    emotion: happy
+    text: 先生のおかげなのだ。
+  - speaker: sano
+    emotion: thinking
+    text: 国も動くよ。これからは建物に、地震の力を見込んだ計算を求めることになる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 決まりになるのか。
+  - speaker: sano
+    emotion: normal
+    text: 計算していない建物は、建てられなくなるということだ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……計算尺が、もっと忙しくなるのだ。
+  - speaker: sano
+    emotion: happy
+    text: 君の声も、もっと忙しくなる。教える相手が増えるからね。
+  - speaker: reimu
+    text: 1924年、多仲は耐震壁の理論で工学博士になります。
+    reading: せんきゅうひゃく にじゅうよねん、たちゅうわ たいしんへきの りろんで こうがく はかせに なります。
+- id: card1925
+  title: ''
+  background: nt_card_1925
+  cuts:
+  - speaker: reimu
+    text: 1925年。日本でラジオ放送が始まります。
+    reading: せんきゅうひゃく にじゅうごねん。にほんで らじお ほうそうが はじまります。
+- id: ch8_atago
+  title: 壁の入らない建物
+  background: nt_tettou
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: hoso, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: hoso
+    emotion: normal
+    text: 内藤先生。[愛宕山|あたごやま]に、電波を飛ばす鉄塔を建てたいんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 塔なのだ？ ボクは、ビルの人なのだ。
+  - speaker: hoso
+    emotion: thinking
+    text: 地震に強い骨組みといえば先生だと、聞きまして。
+  - speaker: zundamon
+    emotion: thinking
+    text: 塔には、壁が入れられないのだ。
+  - speaker: hoso
+    emotion: surprised
+    text: 入れられませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 壁を立てたら、風をまともに受けてしまうのだ。
+  - speaker: hoso
+    emotion: thinking
+    text: では、どうするんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 鉄の棒を、三角に組むのだ。
+  - speaker: hoso
+    emotion: surprised
+    text: 三角。
+  - speaker: zundamon
+    emotion: normal
+    text: 四角は押されるとひし形になるけど、三角は形が変わらないのだ。
+  - speaker: hoso
+    emotion: happy
+    text: 壁の代わりに、三角が踏ん張るんですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 風は、すき間から抜けていくのだ。
+  - speaker: hoso
+    emotion: normal
+    text: 高さは、45メートルほど欲しいのですが。
+  - speaker: zundamon
+    emotion: normal
+    text: 計算してみるぞ。
+  - speaker: reimu
+    text: これが、内藤多仲の手がけた最初の電波塔とされています。
+    reading: これが、ないとう たちゅうの てがけた さいしょの でんぱとうと されています。
+- id: ch8_jitei
+  title: ''
+  background: nt_jitei
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 内藤多仲, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1926年、多仲は東京の若松町に自分の家を建てます。
+    reading: せんきゅうひゃく にじゅうろくねん、たちゅうわ とうきょうの わかまつちょうに じぶんの いえお たてます。
+  - speaker: tsumugi
+    emotion: surprised
+    text: ねえ。この家、柱が見当たらないんだけど。
+  - speaker: zundamon
+    emotion: happy
+    text: 柱も[梁|はり]も、無いのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 無いのに、立ってるの？
+  - speaker: zundamon
+    emotion: normal
+    text: 壁と床で支えてるのだ。家じゅうが、仕切りの入ったトランクなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 自分の理論に、自分で住むのね。
+  - speaker: zundamon
+    emotion: happy
+    text: 一番信じてるのは、ボクなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 広い部屋もあるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: ここで[謡|うたい]の稽古をするのだ。能も舞えるぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 地震が来ても、ここなら逃げなくていいの？
+  - speaker: zundamon
+    emotion: thinking
+    text: 地震なら逃げないのだ。でも、火事のときは逃げるぞ。
+  - speaker: tsumugi
+    emotion: angry
+    text: そこは自信がないのね。
+  - speaker: zundamon
+    emotion: normal
+    text: 壁は燃えにくいけど、中の家具は燃えるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: ……それは、そうね。
+  - speaker: reimu
+    text: 壁と床で支える鉄筋コンクリートの家として、日本で最初のものとされています。
+    reading: かべと ゆかで ささえる てっきん こんくりいとの いえとして、にほんで さいしょの ものと されています。
+  - speaker: reimu
+    text: この家は今も、内藤多仲博士記念館として残っています。
+    reading: この いえわ いまも、ないとう たちゅう はかせ きねんかんとして のこっています。
+  - speaker: reimu
+    text: その後も多仲は、早稲田で教えながら、建物や塔の骨組みを計算し続けます。
+    reading: そのごも たちゅうわ わせだで おしえながら、たてものや とおの ほねぐみお けいさんし つづけます。
+- id: card1954
+  title: ''
+  background: nt_card_1954
+  cuts:
+  - speaker: reimu
+    text: 1954年。前の年に、日本でテレビ放送が始まっていました。
+    reading: せんきゅうひゃく ごじゅうよねん。まえの としに、にほんで てれび ほうそうが はじまっていました。
+- id: ch9_nagoya
+  title: 塔を一本にまとめる
+  background: nt_terebitou
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: nagoya, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: nagoya
+    emotion: normal
+    text: 先生。名古屋に、テレビの電波塔を建てたいのです。
+  - speaker: zundamon
+    emotion: normal
+    text: 局ごとに、塔を建てるのだ？
+  - speaker: nagoya
+    emotion: happy
+    text: いえ。一本の塔に、いくつもの局のアンテナを載せたいんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 一本に、まとめるのだ。
+  - speaker: nagoya
+    emotion: thinking
+    text: 局の数だけ塔が並んだら、街が針山みたいになります。
+  - speaker: zundamon
+    emotion: happy
+    text: 針山は困るな。
+  - speaker: nagoya
+    emotion: normal
+    text: それに、上に展望台を付けて、人も登らせたいんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 電波の塔に、人を登らせるのだ？
+  - speaker: nagoya
+    emotion: happy
+    text: 名古屋の新しい名物にしたいんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 人が乗るなら、揺れの計算をもう一段厳しくするぞ。
+  - speaker: nagoya
+    emotion: surprised
+    text: 厳しく、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 倒れないだけじゃ足りないのだ。登った人が、怖がらないようにするのだ。
+  - speaker: reimu
+    text: 1954年、高さ180メートルの名古屋テレビ塔が完成します。
+    reading: せんきゅうひゃく ごじゅうよねん、たかさ ひゃくはちじゅう めえとるの なごや てれびとうが かんせいします。
+  - speaker: reimu
+    text: いくつもの局の電波を一本にまとめた塔として、日本で最初のものでした。
+    reading: いくつもの きょくの でんぱお いっぽんに まとめた とうとして、にほんで さいしょの ものでした。
+  - speaker: reimu
+    text: 2022年には、国の重要文化財に指定されています。
+    reading: にせん にじゅうにねんにわ、くにの じゅうよう ぶんかざいに していされています。
+- id: ch9_kyodai
+  title: ''
+  background: nt_terebitou
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 名古屋のあと、塔の依頼が次々に来たの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 塔の注文が、続いたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1956年に、大阪の通天閣。
+  - speaker: zundamon
+    emotion: happy
+    text: 知ってるのだ。串カツ屋さんの真ん中に立ってる塔なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1957年に、別府タワーと、さっぽろテレビ塔。
+  - speaker: zundamon
+    emotion: thinking
+    text: 北から南まで、ばらばらなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: どれも内藤先生が設計に関わったから、タワー6兄弟って呼ばれてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 6兄弟？ まだ4本しか出てきてないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 残りは、博多ポートタワーと、もう1本。
+  - speaker: zundamon
+    emotion: thinking
+    text: もう1本は、どこなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 東京よ。高さ333メートル。
+- id: card1957
+  title: ''
+  background: nt_card_1957
+  cuts:
+  - speaker: reimu
+    text: 1957年。多仲は70歳になっていました。
+    reading: せんきゅうひゃく ごじゅうななねん。たちゅうわ ななじゅっさいに なっていました。
+- id: ch10_maeda
+  title: パリの塔より高く
+  background: nt_jimusho
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: maeda, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: maeda
+    emotion: happy
+    text: 内藤先生。東京に、日本一の塔を建てたいんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本一。
+  - speaker: maeda
+    emotion: normal
+    text: 今、東京ではテレビ局ごとに、自分の鉄塔を建てています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 名古屋で聞いたのと、同じ話なのだ。
+  - speaker: maeda
+    emotion: thinking
+    text: 見る人は、局を変えるたびに、アンテナの向きを変えなきゃならない。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家の屋根で、アンテナを回すのだ？
+  - speaker: maeda
+    emotion: normal
+    text: そうです。これを、一本にまとめたい。
+  - speaker: zundamon
+    emotion: normal
+    text: 関東の隅々まで、一本から電波を届けるのだ。
+  - speaker: maeda
+    emotion: happy
+    text: それに、どうせ建てるなら、エッフェル塔より高いものを。
+  - speaker: zundamon
+    emotion: surprised
+    text: パリの塔より。
+  - speaker: maeda
+    emotion: happy
+    text: 世界一の塔ですよ、先生。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……高さは、見栄じゃなくて計算で決めるのだ。
+  - speaker: maeda
+    emotion: surprised
+    text: 計算で。
+  - speaker: zundamon
+    emotion: normal
+    text: 電波がどこまで届けばいいか。そこから逆に出すのだ。
+  - speaker: maeda
+    emotion: thinking
+    text: ……世界一に、なりますかね。
+  - speaker: zundamon
+    emotion: happy
+    text: 計算した結果が世界一なら、それは嬉しいのだ。
+  - speaker: maeda
+    emotion: happy
+    text: では、お任せします。
+  - speaker: reimu
+    text: 依頼したのは、新聞社の経営者で参議院議員の前田久吉です。
+    reading: いらいしたのわ、しんぶんしゃの けいえいしゃで さんぎいん ぎいんの まえだ ひさきちです。
+  - speaker: reimu
+    text: 1957年5月、塔を建てるための会社が作られました。
+    reading: せんきゅうひゃく ごじゅうななねん ごがつ、とおお たてる ための かいしゃが つくられました。
+- id: ch11_sekkei
+  title: 333メートルの計算
+  background: nt_shosai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: thinking}
+  - {who: gishi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: gishi
+    emotion: normal
+    text: 先生。最初の案では、380メートルでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: 高いほど、電波は遠くまで届くのだ。
+  - speaker: gishi
+    emotion: thinking
+    text: ただ、この高さだと、てっぺんのアンテナが風で揺れすぎます。
+  - speaker: zundamon
+    emotion: normal
+    text: アンテナが揺れたら、電波も揺れるのだ。
+  - speaker: gishi
+    emotion: sad
+    text: テレビの画面が、乱れてしまいます。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、下げよう。
+  - speaker: gishi
+    emotion: surprised
+    text: せっかくの世界一が。
+  - speaker: zundamon
+    emotion: normal
+    text: 揺れる世界一より、ちゃんと映るテレビなのだ。
+  - speaker: reimu
+    text: その後、各局の求めでアンテナを長くし、そのぶん塔の本体を縮めます。
+    reading: そのご かくきょくの もとめで あんてなお ながくし、そのぶん とおの ほんたいお ちぢめます。
+  - speaker: reimu
+    text: そうして決まったのが、333メートルだったと言われています。
+    reading: そうして きまったのが、さんびゃく さんじゅうさん めえとる だったと いわれています。
+  - speaker: gishi
+    emotion: happy
+    text: 先生。3が、三つ並びましたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 覚えやすいのだ。
+  - speaker: gishi
+    emotion: normal
+    text: 次は、風の計算です。
+  - speaker: zundamon
+    emotion: normal
+    text: てっぺんで、秒速90メートルの風を考えるぞ。
+  - speaker: gishi
+    emotion: surprised
+    text: 90メートル。台風よりずっと強いですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 一番ひどい嵐が来ても、倒れちゃいけないのだ。
+  - speaker: reimu
+    text: 塔は、てっぺんで秒速90メートルの風を受けても耐えるように計算されました。
+    reading: とおわ てっぺんで びょうそく きゅうじゅう めえとるの かぜお うけても、たえる ように けいさんされました。
+    telops:
+    - {text: "てっぺんで秒速90メートルの風に耐える", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: gishi
+    emotion: thinking
+    text: 計算の量が、とんでもないことになります。
+  - speaker: zundamon
+    emotion: happy
+    text: 計算尺がある。
+  - speaker: gishi
+    emotion: surprised
+    text: 手で、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: ずっと、これでやってきたのだ。
+  - speaker: gishi
+    emotion: sad
+    text: 先生、昨夜も寝ていないのでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 途中でやめたら、どこまで確かめたか分からなくなるのだ。
+  - speaker: gishi
+    emotion: happy
+    text: では、図面はこちらで引きます。
+  - speaker: zundamon
+    emotion: happy
+    text: 頼むのだ。君たちの図面が、ボクの計算を形にするのだ。
+  - speaker: reimu
+    text: 図面はおよそ1万枚。3か月ほどで描き上げたと言われています。
+    reading: ずめんわ およそ いちまんまい。さんかげつ ほどで かきあげたと いわれています。
+  - speaker: reimu
+    text: 大もとの設計は内藤が、細かい設計は日建設計が受け持ちました。
+    reading: おおもとの せっけいわ ないとうが、こまかい せっけいわ にっけん せっけいが うけもちました。
+- id: ch12_kensetsu
+  title: 鳶の空
+  background: nt_tower_genba
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: surprised}
+  - {who: tobi, x: 0.72, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1957年6月、工事が始まります。
+    reading: せんきゅうひゃく ごじゅうななねん ろくがつ、こうじが はじまります。
+  - speaker: tobi
+    emotion: happy
+    text: 先生！ 現場を見に来たんですか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 高いのだ。下から見上げても、足がすくむぞ。
+  - speaker: tobi
+    emotion: normal
+    text: 上は、もっと揺れますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 風の強い日は、どうしてるのだ。
+  - speaker: tobi
+    emotion: normal
+    text: 鉄骨にしがみついて、止むのを待ちます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……無理は、しないでほしいのだ。
+  - speaker: tobi
+    emotion: happy
+    text: この図面、鉄骨の一本まで決まってますね。
+  - speaker: zundamon
+    emotion: normal
+    text: 一本でも違ったら、計算が変わってしまうのだ。
+  - speaker: tobi
+    emotion: happy
+    text: 図面どおりに組むのが、俺たちの仕事です。
+  - speaker: zundamon
+    emotion: happy
+    text: 空の上は、君たちに任せるのだ。
+  - speaker: tobi
+    emotion: thinking
+    text: それにしても、この鉄骨、思ったより細いんですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 重くしたら、足元に負担がかかるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 軽いのに強いのが、計算なのだ。
+  - speaker: reimu
+    text: 塔の本体に使った鉄は、およそ3600トン。
+    reading: とおの ほんたいに つかった てつわ、およそ さんぜん ろっぴゃくとん。
+  - speaker: reimu
+    text: エッフェル塔より高いのに、鉄の重さは半分ほどとされています。
+    reading: えっふぇるとおより たかいのに、てつの おもさわ はんぶん ほどと されています。
+    telops:
+    - {text: "鉄の重さは、エッフェル塔の半分ほど", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch12_shibou
+  title: ''
+  background: nt_tower_genba
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: sad}
+  - {who: tobi, x: 0.72, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1958年6月30日。作業中の鳶が一人、高さ61メートルから落ちて亡くなりました。
+    reading: せんきゅうひゃく ごじゅうはちねん ろくがつ さんじゅうにち。さぎょうちゅうの とびが ひとり、たかさ ろくじゅういち めえとるから おちて なくなりました。
+  - speaker: reimu
+    text: 建設中の死者は、この一人だけだったとされています。
+    reading: けんせつちゅうの ししゃわ、この ひとりだけだったと されています。
+  - speaker: tobi
+    emotion: sad
+    text: 先生。……仲間を、一人なくしました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……聞いた。
+  - speaker: zundamon
+    emotion: sad
+    text: 計算では、人の足元までは守れないのだ。
+  - speaker: tobi
+    emotion: thinking
+    text: 工事、止めますか。
+  - speaker: zundamon
+    emotion: sad
+    text: 止めるかどうかは、君たちが決めていいのだ。
+  - speaker: tobi
+    emotion: thinking
+    text: ……あいつなら、続けろって言います。
+  - speaker: zundamon
+    emotion: normal
+    text: なら、最後の一本まで、無事に組み上げてほしいのだ。
+  - speaker: tobi
+    emotion: normal
+    text: はい。
+  - speaker: reimu
+    text: 1958年10月、てっぺんにアンテナが取り付けられます。
+    reading: せんきゅうひゃく ごじゅうはちねん じゅうがつ、てっぺんに あんてなが とりつけられます。
+- id: card1958
+  title: ''
+  background: nt_card_1958
+  cuts:
+  - speaker: reimu
+    text: 1958年12月。東京タワーが完成します。
+    reading: せんきゅうひゃく ごじゅうはちねん じゅうにがつ。とうきょうたわあが かんせいします。
+- id: ch13_kansei
+  title: 揺れていい塔
+  background: nt_tower
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.26, flip: true, tag: 内藤多仲, emotion: happy}
+  - {who: kisha, x: 0.76, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 内藤先生。完成した塔を見上げて、今のお気持ちは。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……少し、揺れてるな。
+  - speaker: kisha
+    emotion: surprised
+    text: 揺れてるんですか！
+  - speaker: zundamon
+    emotion: happy
+    text: 揺れていいのだ。揺れる[分|ぶん]まで、計算に入れてあるのだ。
+  - speaker: kisha
+    emotion: thinking
+    text: 揺れても、倒れない。
+  - speaker: zundamon
+    emotion: normal
+    text: 風を、骨組みのすき間から逃がしているのだ。
+  - speaker: kisha
+    emotion: happy
+    text: エッフェル塔を抜いたそうですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 抜いたのは、結果なのだ。
+  - speaker: kisha
+    emotion: happy
+    text: 一言で言うと、どんな塔ですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……積み重ねの塔なのだ。
+  - speaker: kisha
+    emotion: surprised
+    text: 積み重ね。
+  - speaker: zundamon
+    emotion: normal
+    text: '[鳶|とび]も技師も、鉄を一本ずつ積んだのだ。ボクの計算も、その一本なのだ。'
+  - speaker: reimu
+    text: 翌1959年、東京タワーには年間およそ520万人が訪れました。
+    reading: よく せんきゅうひゃく ごじゅうくねん、とうきょうたわあにわ ねんかん およそ ごひゃく にじゅうまんにんが おとずれました。
+- id: ch14_zokusetsu
+  title: 戦車でできた塔？
+  background: nt_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。東京タワーは、戦車でできてるって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: あら。それ、ただの噂でもないのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本当なのだ！？ 戦車が変形して、塔になったのだ？
+  - speaker: tsumugi
+    emotion: angry
+    text: ロボットじゃないのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 朝鮮戦争のあと、アメリカ軍の戦車がスクラップになったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その鉄を溶かして、材料の一部に使ったという話が、何冊もの本に出てくるの。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり戦車じゃないか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただね。何台分なのか、塔のどこに使ったのかは、本によって違うの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 戦車[90台分|きゅうじゅうだいぶん]って、見たのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう書いた本もあるわ。でも、タワーの公式の説明には出てこないの。
+  - speaker: zundamon
+    emotion: sad
+    text: 話を盛られてるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 嘘とも言い切れないの。鉄くずを溶かしてまた使うのは、今も普通のことだから。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、何を信じればいいのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 分かっていることと、分かっていないことを、分けて覚えるの。
+  - speaker: zundamon
+    emotion: normal
+    text: 次は333メートルなのだ。エッフェル塔に勝つために、わざと高くしたって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前田さんは、確かにそう言ってたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり見栄なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも高さを決めたのは、電波を届ける距離と、アンテナの揺れだと言われてるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見栄は、口で言っただけなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 言うのは自由よ。決めるのは計算。
+- id: ch14_jugo
+  title: ''
+  background: nt_shiryo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: もう一つ見たのだ。建物は硬いのはダメで、柔らかいのが正解って。
+  - speaker: tsumugi
+    emotion: normal
+    text: それは、100年くらい前に本当にあった大論争ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 建物を硬くして揺れに耐えるか、柔らかくして揺れを受け流すか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1926年ごろから、専門家の意見が真っ二つに割れたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 内藤先生は、どっちだったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 硬い派の中心だった、佐野先生の弟子よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 壁を入れる理論は、硬く造る考え方を、実際の建物で支えたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、論争の[表|おもて]に立って言い合ったのは、別の先生たちなんだけどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: "[勝った|かった]のは、どっちなのだ。"
+  - speaker: tsumugi
+    emotion: normal
+    text: そのときは硬い派。日本の建物の決まりも、その考えで作られていったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 硬いのが正解なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ところが1968年、霞が関ビルという超高層ビルが、柔らかい造りで建つの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ひっくり返った！
+  - speaker: tsumugi
+    emotion: normal
+    text: 計算を率いたのは[武藤清|むとうきよし]。昔、硬い造りしかないと書いた先生よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ人が！？ 手のひら返しなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: コンピューターで、揺れ方を細かく計算できるようになったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 道具が変わったから、答えも変えたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 前の答えは、間違いだったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 低い建物なら硬く、高い建物なら柔らかく。使い分けられるようになったの。
+  - speaker: tsumugi
+    emotion: happy
+    text: しかも、その霞が関ビルにも、壁の工夫が入っていたのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 壁、しぶといな。
+  - speaker: tsumugi
+    emotion: normal
+    text: それにね、東京タワーも、強い風を受けると少ししなって力を逃がすの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 壁の先生の塔が、しなるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 塔に壁は入らないもの。建てる物に合わせて、答えを変えたのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 硬いか柔らかいかより、何を建てるかが先なのだ。
+- id: ch15_bannen
+  title: 積み重ね
+  background: nt_kenkyushitsu
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 内藤多仲, emotion: normal}
+  - {who: gakusei, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1962年、多仲は文化功労者に選ばれます。
+    reading: せんきゅうひゃく ろくじゅうにねん、たちゅうわ ぶんか こうろうしゃに えらばれます。
+  - speaker: reimu
+    text: その後も塔を手がけ、博多ポートタワーが6兄弟の最後の1本になりました。
+    reading: そのごも とおお てがけ、はかた ぽおと たわあが ろくきょうだいの さいごの いっぽんに なりました。
+  - speaker: gakusei
+    emotion: normal
+    text: 先生。[色紙|しきし]に、何か[一言|ひとこと]いただけませんか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一言か。
+  - speaker: gakusei
+    emotion: happy
+    text: 研究室の壁に、飾りたいんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 壁なら、ちゃんと支えてくれるのだ。
+  - speaker: gakusei
+    emotion: thinking
+    text: '[色紙|しきし]は、そんなに重くないです。'
+  - speaker: zundamon
+    emotion: normal
+    text: ……積み重ね、積み重ねても、また積み重ね。
+  - speaker: reimu
+    text: 多仲が信条にしていた言葉です。
+    reading: たちゅうが しんじょうに していた ことばです。
+    telops:
+    - {text: "積み重ね 積み重ねても また積み重ね", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: gakusei
+    emotion: surprised
+    text: 三回も積むんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 積んだら、崩れることもあるのだ。
+  - speaker: gakusei
+    emotion: thinking
+    text: 崩れたら、どうするんです。
+  - speaker: zundamon
+    emotion: happy
+    text: また積むのだ。石垣も、計算も、塔も、同じなのだ。
+  - speaker: gakusei
+    emotion: happy
+    text: 先生らしいです。
+  - speaker: zundamon
+    emotion: normal
+    text: 計算尺も、まだ現役だぞ。
+  - speaker: gakusei
+    emotion: surprised
+    text: まだ、それを使ってるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 一生使うと、約束したのだ。
+- id: card1970
+  title: ''
+  background: nt_card_1970
+  cuts:
+  - speaker: reimu
+    text: 1970年8月25日。内藤多仲は、84歳で亡くなりました。
+    reading: せんきゅうひゃく ななじゅうねん はちがつ にじゅうごにち。ないとう たちゅうわ、はちじゅうよんさいで なくなりました。
+  - speaker: reimu
+    text: 生涯に手がけた塔は、60を超えると言われています。
+    reading: しょうがいに てがけた とおわ、ろくじゅうお こえると いわれています。
+- id: ch16_gendai
+  title: 控えの塔
+  background: nt_tower
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 今は、スカイツリーがあるのだ。東京タワーは、もう[用済み|ようずみ]なのだ？
+  - speaker: tsumugi
+    emotion: angry
+    text: 失礼ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2013年に、テレビの電波を送る役目はスカイツリーに移ったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: やっぱり、引退か。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、スカイツリーに何かあったときの、予備の電波塔なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 控えの選手なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それに、FMラジオの電波は、今も東京タワーから出てるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 現役だ！
+  - speaker: reimu
+    text: 2024年までに登った人は、合計1億9000万人。
+    reading: にせん にじゅうよねんまでに のぼった ひとわ、ごうけい いちおく きゅうせんまんにん。
+    telops:
+    - {text: "登った人は、合わせて1億9000万人", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本の人口より多いのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 何回も登る人がいるからね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも登りたいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 登る前に、塔の色も見てみて。赤と白のペンキは、何年かごとに塗り直してるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 全部、塗り直すのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ペンキは1回で、3万4000リットル使うと言われてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: お風呂、何杯分なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 170杯くらいね。
+  - speaker: zundamon
+    emotion: happy
+    text: 塗るのも、積み重ねなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そうね。建てて終わりじゃないの。
+- id: shime
+  title: ''
+  background: nt_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。漫画の箱、仕切りを戻して、二つに分けたのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 欲張らなくなったのね。
+  - speaker: zundamon
+    emotion: normal
+    text: ちゃんと持てたのだ。形も崩れないぞ。
+  - speaker: tsumugi
+    emotion: normal
+    text: みんなの家にも、見えない仕切りが入ってるかもしれないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見えない仕切りなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 壁の中よ。家やマンションには、地震に耐えるための壁が入ってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ただの壁だと思ってたぞ。
+  - speaker: tsumugi
+    emotion: normal
+    text: リフォームで壁を抜きたくなったら、その壁が何を支えてるか、必ず確かめてね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 抜いたら、ぐにゃっとなるかもしれないのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 段ボールと同じよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 仕切りは、[邪魔者|じゃまもの]じゃなかったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 箱を支えてたのは、外の枠じゃなくて、中の板だったのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 目立たない所が、一番働いてたのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 窓の外の塔も、今日から少し違って見えるでしょ。
+  - speaker: zundamon
+    emotion: happy
+    text: ……揺れてるように、見えてきたのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 気のせいよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
