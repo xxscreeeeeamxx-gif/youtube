@@ -2769,6 +2769,46 @@ def p_csrelay(d, s):
                         outline=(120, 70, 36), width=int(s * 0.008))
 
 
+def p_frnoise(d, s):
+    """雑音だらけの記録紙。線がぐちゃぐちゃ。"""
+    d.rectangle([s * 0.08, s * 0.16, s * 0.92, s * 0.88], fill=(236, 230, 210), outline=(150, 140, 120),
+                width=int(s * 0.014))
+    import random as _r
+    rnd = _r.Random(1947)
+    for k in range(7):
+        y = 0.28 + k * 0.08
+        pts = [(s * (0.12 + i * 0.042), s * (y + rnd.uniform(-0.06, 0.06))) for i in range(20)]
+        d.line(pts, fill=(80, 70, 130), width=int(s * 0.01))
+
+
+def p_frschool(d, s):
+    """群れが映った記録紙。雲のような濃い影と海底の線。"""
+    d.rectangle([s * 0.08, s * 0.16, s * 0.92, s * 0.88], fill=(236, 230, 210), outline=(150, 140, 120),
+                width=int(s * 0.014))
+    d.ellipse([s * 0.26, s * 0.34, s * 0.74, s * 0.58], fill=(70, 60, 120))
+    d.ellipse([s * 0.32, s * 0.30, s * 0.60, s * 0.46], fill=(70, 60, 120))
+    d.line([(s * 0.10, s * 0.76), (s * 0.40, s * 0.72), (s * 0.70, s * 0.78), (s * 0.90, s * 0.74)],
+           fill=(90, 70, 110), width=int(s * 0.03))
+
+
+def p_anhard(d, s):
+    """硬くて売れない西洋パン（細長い塊）。"""
+    d.rounded_rectangle([s * 0.10, s * 0.40, s * 0.90, s * 0.74], radius=int(s * 0.17), fill=(170, 116, 64),
+                        outline=(110, 72, 36), width=int(s * 0.016))
+    for k in range(3):
+        x = 0.28 + k * 0.22
+        d.line([(s * (x - 0.05), s * 0.47), (s * (x + 0.05), s * 0.66)], fill=(214, 164, 104), width=int(s * 0.03))
+
+
+def p_anpan(d, s):
+    """へそに桜の塩漬けをのせた、丸いあんぱん。"""
+    d.ellipse([s * 0.10, s * 0.30, s * 0.90, s * 0.84], fill=(196, 124, 60), outline=(140, 84, 36),
+              width=int(s * 0.016))
+    d.ellipse([s * 0.20, s * 0.36, s * 0.56, s * 0.56], fill=(220, 156, 90))
+    d.ellipse([s * 0.40, s * 0.48, s * 0.60, s * 0.64], fill=(240, 150, 172), outline=(200, 110, 130),
+              width=int(s * 0.01))
+
+
 def p_mkshell(d, s):
     """開いたアコヤ貝。中は空っぽ。"""
     d.ellipse([s * 0.10, s * 0.44, s * 0.90, s * 0.92], fill=(120, 110, 104), outline=(70, 64, 60),
@@ -3066,6 +3106,16 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "kimuraya-anpan": dict(layout="panels", headline="あんぱんは酒の種で焼いた",
+        head_hi="酒の種", panels=[
+        _p("p_anhard", "1869年 最初のパン", SLATE, "sad", "かたいのだ", "売れないパン"),
+        _p("p_anpan", "1874年", RED, "happy", "ふんわりなのだ", "酒まんじゅうの種"),
+    ]),
+    "furuno-fishfinder": dict(layout="panels", headline="魚の群れを音で見た",
+        head_hi="音で", panels=[
+        _p("p_frnoise", "1947年 五島灘", SLATE, "sad", "ぐちゃぐちゃだ", "雑音で見えない"),
+        _p("p_frschool", "1949年 岩瀬浦", TEAL, "happy", "港で一番なのだ", "最下位の船が1位"),
     ]),
     "casio-kashio": dict(layout="panels", headline="計算機は電話部品で作った",
         head_hi="電話部品", panels=[
