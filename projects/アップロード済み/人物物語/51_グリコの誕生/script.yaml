@@ -1,0 +1,1309 @@
+meta:
+  title: 【グリコの誕生】捨てられていた牡蠣の煮汁から、一粒300メートル【ずんだもん解説】
+  slug: glico-ezaki
+  summary: 赤い箱の、ハート形のキャラメル。原材料の欄には、今も牡蠣のエキスと書かれています。お菓子になぜ牡蠣なのか。始まりは、佐賀の川べりで捨てられていた煮汁でした。貧しい薬屋に生まれ、朝の塩売りから商いを覚えた男は、なぜ薬ではなくお菓子を選んだのか。一粒300メートルとゴールインマークの裏側も。
+  tags:
+  - グリコ
+  - 江崎利一
+  - グリコーゲン
+  - 一粒300メートル
+  - ゴールインマーク
+  - ポッキー
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: お菓子に牡蠣
+    bottom: グリコの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: chichi
+    label: 父
+    voice: 42
+    pitch: 0.0
+  - id: haha
+    label: 母
+    voice: 8
+    pitch: -0.05
+  - id: kyaku
+    label: 村の客
+    voice: 8
+    pitch: 0.03
+  - id: onshi
+    label: 恩師
+    voice: 42
+    pitch: -0.05
+  - id: ryoushi
+    label: 漁師
+    voice: 42
+    pitch: 0.04
+  - id: ishi
+    label: 医者
+    voice: 13
+    pitch: -0.03
+  - id: shain
+    label: 店の者
+    voice: 12
+    pitch: 0.02
+  - id: shain2
+    label: 社員
+    voice: 12
+    pitch: 0.06
+  - id: mitsukoshi
+    label: 三越の担当
+    voice: 13
+    pitch: 0.06
+  - id: tonya
+    label: 問屋
+    voice: 42
+    pitch: -0.02
+  - id: jogakusei
+    label: 女学生
+    voice: 8
+    pitch: 0.09
+scenes:
+- id: hook
+  title: ''
+  background: gl_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、見るのだ。一粒300メートル。1粒で、300メートル走れるぞ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 箱に、ちゃんと書いてあるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 明日のマラソン大会は、3キロだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 10粒食べれば、3キロ走れる計算なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 計算だけは、合ってるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 念のため、ポッキーとビスコも食べておくぞ。お菓子で作る、最強の体なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 走る前に、食べすぎよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……次の日。1キロで、おなかが痛くなった。
+  - speaker: tsumugi
+    emotion: normal
+    text: でしょうね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 次は、走りながら1粒ずつ食べるのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 走りながらキャラメルなんて、のどに詰まるわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: thinking
+    text: そもそも、グリコって名前が、何から来てるか知ってる？
+  - speaker: zundamon
+    emotion: normal
+    text: 走る音だろ。グリグリ、コッコッ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 違うわ。グリコーゲンっていう、栄養の名前よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初のグリコには、牡蠣から取った、その栄養が入ってたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 牡蠣！？ お菓子に、牡蠣なのだ！？
+    se: don
+  - speaker: reimu
+    text: 赤い箱の、ハート形のキャラメル。原材料の欄には、今も牡蠣のエキスが書かれています。
+    reading: あかい はこの はーとがたの きゃらめる。げんざいりょうの らんにわ いまも かきの えきすが かかれています。
+    telops:
+    - {text: "原材料に、今もかきエキス", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 作ったのは、佐賀の貧しい薬屋に生まれた、江崎利一という男でした。
+    reading: つくったのわ さがの まずしい くすりやに うまれた、えざき りいちという おとこでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 薬屋さんが、お菓子を作ったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、川べりで捨てられていた、牡蠣の煮汁なの。
+- id: card1882
+  title: ''
+  background: gl_card_1882
+  cuts:
+  - speaker: reimu
+    text: 1882年。佐賀の蓮池村で薬屋の長男として生まれます。
+    reading: せんはっぴゃく はちじゅうにねん。さがの はすいけむらで くすりやの ちょうなんとして うまれます。
+- id: ch1_ie
+  title: 塩売りの少年
+  background: gl_ie
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, scale: 0.8, emotion: normal}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 父は薬を売り歩く商いをしていましたが、6人きょうだいの暮らしは楽ではありませんでした。
+    reading: ちちわ くすりお うりあるく あきないお していましたが、ろくにん きょうだいの くらしわ らくでわ ありませんでした。
+  - speaker: chichi
+    emotion: normal
+    text: '[利一|りいち]。父さんは、今日も薬を売りに回ってくる。'
+  - speaker: zundamon
+    emotion: normal
+    text: 弟や妹の子守りは、ボクがやっておく。
+  - speaker: chichi
+    emotion: thinking
+    text: いつも、すまんな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 父さん。ボクも、何か売って、家にお[金|かね]を入れたいのだ。
+  - speaker: chichi
+    emotion: surprised
+    text: 売るって、何をだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 塩だ。塩なら、どこの家でも毎日使うのだ。
+  - speaker: chichi
+    emotion: thinking
+    text: 塩屋なら、町にいくらでもあるぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: だから、誰よりも早く売りに行くんだ。
+- id: ch1_shio
+  title: ''
+  background: gl_machi
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, scale: 0.8, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: あら。まだ日も昇りきらないのに、塩売りかい。
+  - speaker: zundamon
+    emotion: happy
+    text: おはようございますなのだ。朝は、どこの家もおかゆを炊くのだ。
+  - speaker: kyaku
+    emotion: happy
+    text: そうそう、茶がゆにも芋がゆにも、塩は要るねえ。
+  - speaker: zundamon
+    emotion: happy
+    text: 炊く前に来れば、ほかの塩屋より先に買ってもらえるのだ。
+  - speaker: kyaku
+    emotion: happy
+    text: ちょうど切れてたんだよ。一升ちょうだい。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎度ありなのだ！
+  - speaker: reimu
+    text: 佐賀では朝におかゆを食べる家が多く、朝一番の塩売りは喜ばれたといいます。
+    reading: さがでわ あさに おかゆお たべる いえが おおく、あさいちばんの しおうりわ よろこばれたと いいます。
+- id: ch1_onshi
+  title: ''
+  background: gl_juku
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, scale: 0.85, emotion: normal}
+  - {who: onshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: onshi
+    emotion: normal
+    text: '[利一|りいち]。塩売りは、もうかっておるか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 朝一番に行けば、よその塩屋に勝てるぞ。
+  - speaker: onshi
+    emotion: thinking
+    text: 勝つ、か。商いは、相手を負かすものではないぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 負かさないで、どうやって儲けるのだ？
+  - speaker: onshi
+    emotion: normal
+    text: 買う者も、売る者も、ともに栄える。それでこそ、商いは長く続く。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……共存共栄、なのだ。
+  - speaker: onshi
+    emotion: happy
+    text: 忘れるでないぞ。
+  - speaker: reimu
+    text: 恩師の楢村佐代吉から教わった共存共栄の考えを、利一は生涯大切にしたとされています。
+    reading: おんしの ならむら さよきちから おそわった きょうぞん きょうえいの かんがえお、りいちわ しょうがい たいせつに したと されています。
+  - speaker: reimu
+    text: 1897年、高等小学校を首席で卒業します。
+    reading: せんはっぴゃく きゅうじゅうななねん こうとう しょうがっこうお しゅせきで そつぎょうします。
+- id: card1901
+  title: ''
+  background: gl_card_1901
+  cuts:
+  - speaker: reimu
+    text: 1901年。父が亡くなり、利一は借金を抱えて一家の主になります。
+    reading: せんきゅうひゃく いちねん。ちちが なくなり、りいちわ しゃっきんお かかえて いっかの あるじに なります。
+- id: ch2_shakkin
+  title: 借金を背負って
+  background: gl_ie
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: sad}
+  - {who: haha, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: haha
+    emotion: thinking
+    text: '[利一|りいち]。お父さんの残した借金、どうしたらいいかねえ。'
+  - speaker: zundamon
+    emotion: normal
+    text: ボクが、全部返す。
+  - speaker: haha
+    emotion: surprised
+    text: まだ10代なのに、そんなことを。
+  - speaker: zundamon
+    emotion: normal
+    text: 役所に出す書類を、代わりに書く仕事を始めるのだ。
+  - speaker: haha
+    emotion: thinking
+    text: そんな仕事、ほかにもやってる人がいるでしょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 税金の額を、すぐ引ける表を作ったのだ。ほかの人より、ずっと早く書けるぞ。
+  - speaker: haha
+    emotion: happy
+    text: あんたは、いつもひと工夫するねえ。
+  - speaker: reimu
+    text: 書類の代書は評判を取り、借金は少しずつ減っていきます。
+    reading: しょるいの だいしょわ ひょうばんお とり、しゃっきんわ すこしずつ へって いきます。
+  - speaker: reimu
+    text: 1904年に日露戦争で看護兵として召集されるまでに、返し終えたとされています。
+    reading: せんきゅうひゃく よねんに にちろ せんそうで かんごへいとして しょうしゅう されるまでに、かえしおえたと されています。
+- id: ch2_budoushu
+  title: ''
+  background: gl_mise
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: happy}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 除隊すると1906年に結婚し、薬を大阪から仕入れて売る商いも始めたといいます。
+    reading: じょたいすると せんきゅうひゃく ろくねんに けっこんし、くすりお おおさかから しいれて うる あきないも はじめたと いいます。
+  - speaker: shain
+    emotion: surprised
+    text: 旦那さん。この大きな樽は、[何|なん]です？
+  - speaker: zundamon
+    emotion: happy
+    text: ぶどう酒なのだ。樽で仕入れて、ここで瓶に詰めるのだ。
+  - speaker: shain
+    emotion: thinking
+    text: 瓶詰めのを仕入れたほうが、楽じゃないですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分で詰めれば、そのぶん安く売れる。
+  - speaker: shain
+    emotion: happy
+    text: 安けりゃ、客は増えますね。
+  - speaker: reimu
+    text: ぶどう酒の商いは当たり、九州でも指折りの業者になったといいます。
+    reading: ぶどうしゅの あきないわ あたり、きゅうしゅうでも ゆびおりの ぎょうしゃに なったと いいます。
+  - speaker: reimu
+    text: 一方で、1918年に母を、翌年には妻のイマを亡くしたとされています。
+    reading: いっぽうで せんきゅうひゃく じゅうはちねんに ははお、よくねんにわ つまの いまお なくしたと されています。
+- id: card1919
+  title: ''
+  background: gl_card_1919
+  cuts:
+  - speaker: reimu
+    text: 1919年。有明海にそそぐ川辺で、利一は足を止めます。
+    reading: せんきゅうひゃく じゅうくねん。ありあけかいに そそぐ かわべで りいちわ あしお とめます。
+- id: ch3_kaki
+  title: 捨てられた煮汁
+  background: gl_kawara
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: thinking}
+  - {who: ryoushi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: その大きな釜は、何を煮てるのだ？
+  - speaker: ryoushi
+    emotion: normal
+    text: 牡蠣だよ。ここらじゃ、たくさん取れるからな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 煮たあとの汁は、どうするのだ？
+  - speaker: ryoushi
+    emotion: normal
+    text: 捨てるさ。使い道なんか、ありゃしない。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……待つのだ。薬の新聞で、読んだことがあるのだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 牡蠣には、グリコーゲンがたくさん入ってるって。
+    se: don
+  - speaker: ryoushi
+    emotion: thinking
+    text: ぐりこ……[何|なん]だって？
+  - speaker: zundamon
+    emotion: normal
+    text: 体を動かす力の、もとになる栄養なのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: その煮汁、分けてくれないか。
+  - speaker: ryoushi
+    emotion: happy
+    text: 捨てるもんだ。好きなだけ持っていきな。
+  - speaker: reimu
+    text: 煮汁を煮詰めて九州の大学で調べてもらうと、グリコーゲンがたっぷり含まれていました。
+    reading: にじるお につめて きゅうしゅうの だいがくで しらべて もらうと、ぐりこーげんが たっぷり ふくまれていました。
+- id: ch3_byouki
+  title: ''
+  background: gl_ie_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: sad}
+  - {who: ishi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: そのころ、長男の誠一がチフスにかかり、医者も見放すほど弱っていました。
+    reading: その ころ ちょうなんの せいいちが ちふすに かかり、いしゃも みはなすほど よわっていました。
+  - speaker: ishi
+    emotion: thinking
+    text: 江崎さん。もう、手は尽くしました。あとは、この子の体力しだいです。
+  - speaker: zundamon
+    emotion: sad
+    text: 先生。牡蠣から取った、この栄養を飲ませてもいいのだ？
+  - speaker: ishi
+    emotion: surprised
+    text: 牡蠣のエキスですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 少しでも、力をつけてやりたい。
+  - speaker: ishi
+    emotion: normal
+    text: ……害にはならんでしょう。やってみなさい。
+  - speaker: reimu
+    text: 牡蠣のエキスを飲ませると、誠一は持ち直したと伝えられています。
+    reading: かきの えきすお のませると、せいいちわ もちなおしたと つたえられています。
+- id: ch3_yobou
+  title: ''
+  background: gl_ie
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: happy}
+  - {who: ishi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: ishi
+    emotion: happy
+    text: よく持ち直しましたな。
+  - speaker: zundamon
+    emotion: happy
+    text: 先生、牡蠣の栄養が効いたのだ！
+  - speaker: ishi
+    emotion: thinking
+    text: 何が効いたのかまでは、分かりません。
+  - speaker: ishi
+    emotion: normal
+    text: ただね、江崎さん。病気は、治すより、かからないようにするほうがいい。
+  - speaker: zundamon
+    emotion: thinking
+    text: かからないように……。
+  - speaker: ishi
+    emotion: normal
+    text: 病人より、元気な人のほうがずっと多い。ふだんから体に力をつけるほうが、役に立ちます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 薬は、病気の人しか飲まないのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 元気な子どもが毎日口にするものに、入れればいいのだ。
+  - speaker: reimu
+    text: 予防こそが治療に勝る。医者のこの助言で、利一は薬ではなく食べ物にしようと決めたとされています。
+    reading: よぼうこそが ちりょうに まさる。いしゃの この じょげんで、りいちわ くすりでわ なく たべものに しようと きめたと されています。
+- id: ch3_shisaku
+  title: ''
+  background: gl_mise
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 旦那さん。つくだ煮に入れてみましたけど、どうです？
+  - speaker: zundamon
+    emotion: sad
+    text: 子どもが、喜んで食べる味じゃないのだ。
+  - speaker: shain
+    emotion: normal
+    text: じゃあ、ふりかけにしますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ご飯のときしか、食べないな。
+  - speaker: shain
+    emotion: thinking
+    text: 子どもが、ご飯のほかに毎日欲しがるものといったら……。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……お菓子なのだ！
+  - speaker: shain
+    emotion: surprised
+    text: お菓子に、牡蠣を？
+  - speaker: zundamon
+    emotion: happy
+    text: キャラメルに練り込めば、子どもは喜んで食べるのだ。
+  - speaker: reimu
+    text: つくだ煮やふりかけも試したうえで、キャラメルに落ち着いたといいます。
+    reading: つくだにや ふりかけも ためした うえで、きゃらめるに おちついたと いいます。
+  - speaker: reimu
+    text: 妻を亡くしたあと、エキという女性と再婚したとされています。
+    reading: つまお なくした あと、えきという じょせいと さいこんしたと されています。
+- id: ch4_glycogen
+  title: グリコーゲンとは
+  background: gl_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。グリコーゲンって、結局[何|なん]なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ブドウ糖がたくさんつながって、枝分かれした形の栄養よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 体の中で、エネルギーをためておくときの形なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ブドウ糖のまま、ためておけばいいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ブドウ糖のままだと、細胞の中が濃くなりすぎるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 濃いと水を引き込んで、細胞がもたないのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: だから、つなげて1つの大きなかたまりにするのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。枝分かれしてるのは、取り出しやすくするためよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ブドウ糖は、枝の先から外していくの。枝が多いほど、一度にたくさん外せるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 急に走り出しても、燃料がすぐ出てくるわけか。
+  - speaker: tsumugi
+    emotion: normal
+    text: ためてる場所は、肝臓と筋肉なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 量は、肝臓に100グラム、筋肉に250グラムくらい。
+  - speaker: tsumugi
+    emotion: normal
+    text: 肝臓の分は、血の中の糖を保つために使うの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 脳は、1日に120グラムくらいのブドウ糖を使うのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 脳は、食いしん坊なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 筋肉の分は、筋肉が自分で使う専用の燃料。血の中には出せないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 走ると、筋肉のグリコーゲンが減っていくのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 減ってくると、疲れやすくなると言われてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 牡蠣は、なんでそんなにグリコーゲンを持ってるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 夏の産卵に向けて、秋から春にかけてためこむの。多いのは、2月から4月ごろよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 冬の牡蠣は、栄養の貯金箱なのだ。
+- id: ch5_mark
+  title: ゴールする姿
+  background: gl_jinja
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 旦那さん。神社のかけっこを、じっと見て、どうしたんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 見るのだ。子どもたちが、両手を上げてゴールしてるのだ。
+  - speaker: shain
+    emotion: happy
+    text: みんな、いい顔してますね。
+  - speaker: zundamon
+    emotion: happy
+    text: 元気な体の、一番いい瞬間だ。これを、箱の絵にするのだ。
+  - speaker: shain
+    emotion: thinking
+    text: 絵の案なら、ほかにも象やペンギン、花の絵もありますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: どれがいいかは、子どもたちに決めてもらうのだ。
+  - speaker: reimu
+    text: 故郷の神社でのかけっこから、両手を上げてゴールする姿のマークが生まれたとされています。
+    reading: こきょうの じんじゃでの かけっこから、りょうてお あげて ごーるする すがたの まーくが うまれたと されています。
+  - speaker: reimu
+    text: 絵の候補は、小学校の子どもたちの人気投票でも確かめたといいます。
+    reading: えの こうほわ、しょうがっこうの こどもたちの にんき とうひょうでも たしかめたと いいます。
+- id: card1921
+  title: ''
+  background: gl_card_1921
+  cuts:
+  - speaker: reimu
+    text: 1921年。38歳の利一は一家そろって大阪へ移ります。
+    reading: せんきゅうひゃく にじゅういちねん。さんじゅうはっさいの りいちわ いっか そろって おおさかえ うつります。
+- id: ch5_osaka
+  title: 赤い箱とハート
+  background: gl_koba0
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: happy}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 旦那さん。キャラメルの名前は、どうします？
+  - speaker: zundamon
+    emotion: happy
+    text: グリコーゲンの、頭の3文字を取って、グリコなのだ。
+  - speaker: shain
+    emotion: thinking
+    text: グリコキャラメルのほうが、[何|なん]の菓子か分かりやすくないですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 短いほうが、子どもも覚えやすい。
+  - speaker: shain
+    emotion: normal
+    text: 箱の色は。よそのキャラメルは、黄色の箱が多いですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、赤にするのだ。黄色の中に赤があったら、目立つぞ。
+  - speaker: shain
+    emotion: thinking
+    text: 粒の形は、四角でいいですか。
+  - speaker: zundamon
+    emotion: normal
+    text: '[角|かど]のない、ハートの形にしよう。小さい子でも、なめやすいのだ。'
+  - speaker: shain
+    emotion: surprised
+    text: ハート形の型なんて、どこにも売ってませんよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 売ってないなら、ローラーから作るぞ。
+  - speaker: reimu
+    text: ハート形の粒を作るローラーは、自分たちで作り上げたといいます。
+    reading: はーとがたの つぶお つくる ろーらーわ、じぶんたちで つくりあげたと いいます。
+- id: ch5_300m
+  title: ''
+  background: gl_koba0
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 体に力がつくお菓子だと、ひと目で分かる言葉が欲しいのだ。
+  - speaker: shain
+    emotion: happy
+    text: 佐賀には、博多までっていう名前のあめがありましたね。
+  - speaker: zundamon
+    emotion: surprised
+    text: それなのだ！ 1粒で、どこまで行けるかを書くのだ。
+  - speaker: shain
+    emotion: normal
+    text: 500メートルでは、どうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 大げさだ。100メートルでは、弱いのだ。
+  - speaker: shain
+    emotion: thinking
+    text: その[間|あいだ]を取って……。
+  - speaker: zundamon
+    emotion: happy
+    text: 300メートル。一粒300メートルなのだ。
+  - speaker: reimu
+    text: 距離は、1粒の栄養で走れる長さに合うよう、軍医にも相談して決めたとされています。
+    reading: きょりわ ひとつぶの えいようで はしれる ながさに あうよう、ぐんいにも そうだんして きめたと されています。
+- id: card1922
+  title: ''
+  background: gl_card_1922
+  cuts:
+  - speaker: reimu
+    text: 1922年。利一は、大阪の三越に通い詰めます。
+    reading: せんきゅうひゃく にじゅうにねん。りいちわ おおさかの みつこしに かよいつめます。
+- id: ch6_mitsukoshi
+  title: 三越に十何回
+  background: gl_depart0
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: normal}
+  - {who: mitsukoshi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 今日も来たのだ。グリコを、売り場に置いてほしいのだ。
+  - speaker: mitsukoshi
+    emotion: thinking
+    text: 江崎さん。これで、何回目ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 十何回目なのだ。
+  - speaker: mitsukoshi
+    emotion: surprised
+    text: 数えてもいないんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 一番の百貨店に並べば、あとは山の上から転がすように、下へ広がっていくのだ。
+  - speaker: mitsukoshi
+    emotion: thinking
+    text: うちは、看板の代わりですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 三越に並んでいる菓子なら、誰でも安心する。
+  - speaker: mitsukoshi
+    emotion: happy
+    text: ……根負けしました。置いてみましょう。
+  - speaker: reimu
+    text: 十数回頼み込んだ末に、三越の売り場に並んだと伝えられています。
+    reading: じゅうすうかい たのみこんだ すえに、みつこしの うりばに ならんだと つたえられています。
+  - speaker: reimu
+    text: 1922年2月11日のことでした。この日は今も、会社の創立記念日です。
+    reading: せんきゅうひゃく にじゅうにねん にがつ じゅういちにちの ことでした。この ひわ いまも かいしゃの そうりつ きねんびです。
+- id: ch6_tonya
+  title: ''
+  background: gl_tonya
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: normal}
+  - {who: tonya, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: tonya
+    emotion: angry
+    text: 聞いたこともない菓子は、うちでは扱えませんな。
+  - speaker: zundamon
+    emotion: surprised
+    text: 三越にも、並んでいるんだぞ。
+  - speaker: tonya
+    emotion: normal
+    text: 三越は三越。町の菓子屋が売れるかどうかは、別の話ですわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……食べてもらえば、分かるのに。
+  - speaker: zundamon
+    emotion: thinking
+    text: そうか。まず、食べてもらえばいいのだ。
+  - speaker: reimu
+    text: 最初は問屋が扱ってくれず、売れ行きも伸びませんでした。
+    reading: さいしょわ とんやが あつかって くれず うれゆきも のびませんでした。
+  - speaker: reimu
+    text: 利一は試食の小袋や、割引券つきのちらしを配って、少しずつ客を増やしていきます。
+    reading: りいちわ ししょくの こぶくろや わりびきけんつきの ちらしお くばって、すこしずつ きゃくお ふやして いきます。
+- id: ch7_kao
+  title: ''
+  background: gl_mise_osaka
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: normal}
+  - {who: jogakusei, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: jogakusei
+    emotion: thinking
+    text: おじさん。この箱の走ってる人、顔が怖いです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 怖い？ 一生懸命、走ってる顔なのだ。
+  - speaker: jogakusei
+    emotion: normal
+    text: 一生懸命すぎて、苦しそうに見えます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ゴールした瞬間は、うれしいはずなのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 笑った顔に、描き直すのだ。
+  - speaker: reimu
+    text: 女学生にそう言われたのは、1923年ごろと伝えられています。
+    reading: じょがくせいに そう いわれたのわ、せんきゅうひゃく にじゅうさんねん ごろと つたえられています。
+  - speaker: reimu
+    text: 笑顔のマークに描き直されたのは、1928年のことでした。
+    reading: えがおの まーくに えがきなおされたのわ、せんきゅうひゃく にじゅうはちねんの ことでした。
+- id: ch6_henpin
+  title: ''
+  background: gl_koba
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: happy}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1924年には初めて黒字になり、1日に1万個を作るまでになったとされています。
+    reading: せんきゅうひゃく にじゅうよねんにわ はじめて くろじに なり、いちにちに いちまんこお つくるまでに なったと されています。
+  - speaker: zundamon
+    emotion: happy
+    text: 売れてるぞ。もっと作るのだ！
+  - speaker: shain
+    emotion: sad
+    text: 旦那さん……。店から、箱が戻ってきてます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 戻ってきた？
+  - speaker: shain
+    emotion: sad
+    text: 作りすぎて、売り切れなかった分です。返品の山ですよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……売れる数より先に、作る数を増やしてしまったのだ。
+  - speaker: reimu
+    text: 増産が裏目に出て、会社はふたたび赤字に戻りました。
+    reading: ぞうさんが うらめに でて かいしゃわ ふたたび あかじに もどりました。
+- id: ch7_omocha
+  title: 二大天職
+  background: gl_koba
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 子どもが、また買いたくなる工夫がいるのだ。
+  - speaker: shain
+    emotion: normal
+    text: 今は、箱に絵のカードを入れてますね。
+  - speaker: zundamon
+    emotion: happy
+    text: カードの次は、おもちゃを入れる。
+  - speaker: shain
+    emotion: surprised
+    text: おもちゃですか。そのぶん、[金|かね]がかかりますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 食べることと遊ぶことは、子どもの二大天職なのだ。
+  - speaker: shain
+    emotion: thinking
+    text: 二大、天職……。
+  - speaker: zundamon
+    emotion: happy
+    text: 体を作るのがキャラメルで、心を育てるのがおもちゃなのだ。
+  - speaker: shain
+    emotion: normal
+    text: ただし、口に入れて危ないものは入れられませんね。
+  - speaker: zundamon
+    emotion: normal
+    text: 当たり前だ。子どものためにならないものも、入れないぞ。
+  - speaker: reimu
+    text: 1927年から、箱におもちゃを入れ始めます。
+    reading: せんきゅうひゃく にじゅうななねんから はこに おもちゃお いれはじめます。
+    telops:
+    - {text: "子どもの二大天職", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch8_kaisha
+  title: ビスコの名前
+  background: gl_koba
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: happy}
+  - {who: shain2, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1929年、おもちゃ専用の小箱をつけ始め、会社を株式会社にして社長になります。
+    reading: せんきゅうひゃく にじゅうくねん おもちゃ せんようの こばこお つけはじめ、かいしゃお かぶしきがいしゃに して しゃちょうに なります。
+  - speaker: shain2
+    emotion: happy
+    text: 社長。酵母を入れたビスケットが、焼き上がりました。
+  - speaker: zundamon
+    emotion: happy
+    text: 酵母入りのビスケットだから、コービスなのだ。
+  - speaker: shain2
+    emotion: thinking
+    text: コービス……。少し、言いにくくないですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、言いやすく、ビスコにしよう。
+  - speaker: shain2
+    emotion: happy
+    text: ビスコ。子どもでも、すぐ覚えられますね。
+  - speaker: reimu
+    text: ビスコは、1933年に売り出されました。
+    reading: びすこわ せんきゅうひゃく さんじゅうさんねんに うりだされました。
+  - speaker: reimu
+    text: 1934年には私財5万円を出して、母と子の健康を守る協会も作りました。
+    reading: せんきゅうひゃく さんじゅうよねんにわ しざい ごまんえんお だして、ははと この けんこうお まもる きょうかいも つくりました。
+- id: ch8_neon
+  title: 道頓堀の看板
+  background: gl_dotonbori
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: happy}
+  - {who: shain2, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shain2
+    emotion: surprised
+    text: 社長。道頓堀に、こんな大きな看板を立てたんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 高さ33メートル。ゴールするあのマークが、夜の空で光るのだ。
+  - speaker: shain2
+    emotion: surprised
+    text: 色が、どんどん変わっていきますね。
+  - speaker: zundamon
+    emotion: happy
+    text: 6色に変わって、1分に19回ぴかぴか光るのだ。
+  - speaker: shain2
+    emotion: happy
+    text: 川沿いを歩く人が、みんな見上げてますよ。
+  - speaker: reimu
+    text: 1935年、道頓堀にグリコの看板が立ちました。
+    reading: せんきゅうひゃく さんじゅうごねん どうとんぼりに ぐりこの かんばんが たちました。
+    telops:
+    - {text: "初代は高さ33メートル", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch8_senji
+  title: ''
+  background: gl_koba0
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: thinking}
+  - {who: shain2, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 戦争が進むと材料が手に入らなくなり、ビスコもグリコも作れなくなります。
+    reading: せんそうが すすむと ざいりょうが てに はいらなく なり、びすこも ぐりこも つくれなく なります。
+  - speaker: shain2
+    emotion: sad
+    text: 社長。砂糖が、もう手に入りません。
+  - speaker: zundamon
+    emotion: thinking
+    text: お菓子が作れないなら、乾パンを作るのだ。
+  - speaker: shain2
+    emotion: thinking
+    text: 乾パン、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 機械を止めずに、今作れるものを作るのだ。
+  - speaker: reimu
+    text: 1942年には衆議院選挙に出ましたが、落選したとされています。
+    reading: せんきゅうひゃく よんじゅうにねんにわ しゅうぎいん せんきょに でましたが、らくせんしたと されています。
+  - speaker: reimu
+    text: 道頓堀の看板も、鉄を国に差し出すため、1943年に取り外されました。
+    reading: どうとんぼりの かんばんも てつお くにに さしだす ため、せんきゅうひゃく よんじゅうさんねんに とりはずされました。
+- id: card1945
+  title: ''
+  background: gl_card_1945
+  cuts:
+  - speaker: reimu
+    text: 1945年。大阪と東京の工場が、空襲で焼けます。
+    reading: せんきゅうひゃく よんじゅうごねん。おおさかと とうきょうの こうじょうが くうしゅうで やけます。
+- id: ch9_yakeato
+  title: 焼けなかったもの
+  background: gl_yakeato
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: sad}
+  - {who: shain2, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain2
+    emotion: sad
+    text: 社長。工場は、全部焼けてしまいました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……見れば、分かる。
+  - speaker: shain2
+    emotion: sad
+    text: 機械も、材料も、何も残っていません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 焼け残った食堂がある。今日から、あそこが社長室なのだ。
+  - speaker: shain2
+    emotion: surprised
+    text: 食堂で、仕事をするんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: みんなを集めてくれ。話があるのだ。
+- id: ch9_enzetsu
+  title: ''
+  background: gl_yakeato
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: normal}
+  - {who: shain2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 工場は焼けたのだ。でも、焼けなかったものがある。
+  - speaker: shain2
+    emotion: thinking
+    text: 焼けなかったもの……？
+  - speaker: zundamon
+    emotion: normal
+    text: グリコという名前。ゴールするあのマーク。それと、みんなで守ってきた、のれんなのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: それが残っていれば、また始められるのだ。
+  - speaker: shain2
+    emotion: happy
+    text: ……はい。
+  - speaker: reimu
+    text: 62歳の利一は焼け跡で社員にそう語ったとされています。
+    reading: ろくじゅうにさいの りいちわ やけあとで しゃいんに そう かたったと されています。
+    telops:
+    - {text: "焼けなかったのは、名前とマークとのれん", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 戦前に大連に作った工場など、国の外の財産も、敗戦ですべて失いました。
+    reading: せんぜんに だいれんに つくった こうじょう など、くにの そとの ざいさんも はいせんで すべて うしないました。
+  - speaker: reimu
+    text: 戦後は、公職追放も受けたとされています。
+    reading: せんごわ こうしょく ついほうも うけたと されています。
+- id: ch9_saiken
+  title: ''
+  background: gl_koba
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: happy}
+  - {who: shain2, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain2
+    emotion: happy
+    text: 社長。おもちゃが、また作れるようになりました。
+  - speaker: zundamon
+    emotion: happy
+    text: '[何|なに]でできてるのだ？'
+  - speaker: shain2
+    emotion: normal
+    text: 紙と、粘土と、ゴムです。まだ、ろくな材料がなくて。
+  - speaker: zundamon
+    emotion: happy
+    text: それでいい。子どもが開けたときに、何か入っていることが大事なのだ。
+  - speaker: reimu
+    text: 1950年には、牡蠣のエキスで持ち直した長男の誠一を、39歳で亡くしたとされています。
+    reading: せんきゅうひゃく ごじゅうねんにわ、かきの えきすで もちなおした ちょうなんの せいいちお さんじゅうきゅうさいで なくしたと されています。
+  - speaker: reimu
+    text: 1951年に大阪と東京の工場を建て直し、1953年には故郷の佐賀にも工場を作ります。
+    reading: せんきゅうひゃく ごじゅういちねんに おおさかと とうきょうの こうじょうお たてなおし、せんきゅうひゃく ごじゅうさんねんにわ こきょうの さがにも こうじょうお つくります。
+  - speaker: shain2
+    emotion: thinking
+    text: 社長。ハートの粒は、作るのに手間がかかります。
+  - speaker: zundamon
+    emotion: thinking
+    text: たくさん作るなら、四角のほうが早いか……。
+  - speaker: reimu
+    text: 1953年から、粒は四角になります。
+    reading: せんきゅうひゃく ごじゅうさんねんから つぶわ しかくに なります。
+  - speaker: reimu
+    text: 1955年には、1粒で2度おいしいアーモンドグリコが生まれます。
+    reading: せんきゅうひゃく ごじゅうごねんにわ、ひとつぶで にど おいしい あーもんど ぐりこが うまれます。
+  - speaker: reimu
+    text: 1963年にはプリッツを売り出し、翌年には売れ筋に絞るため、商品の数を8割以上減らしました。
+    reading: せんきゅうひゃく ろくじゅうさんねんにわ ぷりっつお うりだし、よくねんにわ うれすじに しぼる ため しょうひんの かずお はちわり いじょう へらしました。
+- id: card1966
+  title: ''
+  background: gl_card_1966
+  cuts:
+  - speaker: reimu
+    text: 1966年。細いプレッツェルにチョコをかけた、新しい菓子が試験販売されます。
+    reading: せんきゅうひゃく ろくじゅうろくねん。ほそい ぷれっつぇるに ちょこお かけた、あたらしい かしが しけん はんばい されます。
+- id: ch10_pocky
+  title: ポッキンと鳴る
+  background: gl_kaigi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江崎利一, emotion: thinking}
+  - {who: shain2, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain2
+    emotion: happy
+    text: 社長。チョコをかけた細い棒の試作品です。名前の案は、チョコテックです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 端っこだけ、チョコがかかってないのだ。
+  - speaker: shain2
+    emotion: normal
+    text: そこを持てば、手が汚れません。
+  - speaker: zundamon
+    emotion: happy
+    text: かじると、ポッキンといい音がするな。
+  - speaker: shain2
+    emotion: surprised
+    text: 実はその音から、ポッキーという名前も考えているんです。
+  - speaker: zundamon
+    emotion: happy
+    text: チョコテックより、ずっと覚えやすいのだ。
+  - speaker: reimu
+    text: 名前は、はじめのチョコテックから、全国で売り出すまでにポッキーへ変わりました。
+    reading: なまえわ はじめの ちょこてっくから、ぜんこくで うりだすまでに ぽっきーえ かわりました。
+  - speaker: reimu
+    text: 1968年に、全国で売り出されます。
+    reading: せんきゅうひゃく ろくじゅうはちねんに ぜんこくで うりだされます。
+  - speaker: reimu
+    text: 1973年、利一は社長を退いて会長になります。
+    reading: せんきゅうひゃく ななじゅうさんねん りいちわ しゃちょうお しりぞいて かいちょうに なります。
+- id: ch10_shi
+  title: ''
+  background: gl_kawara
+  bgm: amacha_hoshizora
+  cuts:
+  - speaker: reimu
+    text: 1980年2月、江崎利一は97歳で亡くなりました。
+    reading: せんきゅうひゃく はちじゅうねん にがつ えざき りいちわ きゅうじゅうななさいで なくなりました。
+- id: ch11_keisan
+  title: 300メートルの計算
+  background: gl_track
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。一粒300メートルって、今もちゃんと計算してあるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の説明だと、1粒のエネルギーは16.5キロカロリー。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[20歳|はたち]の男の人が、分速160メートルで走るとするの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 分速160メートルって、どれくらいの速さなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1キロを6分ちょっとで走る速さ。ジョギングくらいね。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクには、それでもけっこうきついのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのとき使うエネルギーは、1分ごとに8.71キロカロリーよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 16.5を8.71で割ると……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1.89分。その[間|あいだ]に走れるのが、だいたい300メートルよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほんとに、300メートルなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、使うエネルギーは体重で変わるわ。体の大きい人ほど、同じ距離でたくさん使うの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、大きい人は300メートルより手前でゴールなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そういうこと。目安の数字なのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの10粒作戦も、目安だったのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 目安より先に、走る前に食べすぎないことよ。
+- id: ch12_ronsou
+  title: モデルは誰？
+  background: gl_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。あの走る人のモデルは、昔の有名な選手だって。
+  - speaker: tsumugi
+    emotion: normal
+    text: よく言われる話ね。フィリピンのカタロン選手だっていう説もあるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり、本物の選手なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも会社は、特定のモデルはいないと答えてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: いないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: かけっこのゴール姿がもとで、当時の選手の姿も参考にしたという説明よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一人じゃなくて、みんなのゴールなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 顔や体つきも、時代に合わせて何度も描き直されてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: マークは何度も変わったのに、中身の牡蠣は今も入ってるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 入ってるわ。原材料に、かきエキスと書いてあるの。量は公表されてないけどね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、2004年に、植物のでんぷんからグリコーゲンを大量に作る方法も開発してるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 牡蠣がなくても、作れるようになったのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それでも、キャラメルのグリコは、今も牡蠣のエキスのままよ。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、たくさん食べれば、たくさん元気になるのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: それが一番の勘違いよ。キャラメルは、砂糖のお菓子なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: むし歯を防ぐには、砂糖の量だけじゃなく、食べる回数を減らすのが大事なの。
+  - speaker: zundamon
+    emotion: sad
+    text: ちょこちょこ食べるのが、一番よくないのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それと、小さい子ののど詰まり。
+  - speaker: tsumugi
+    emotion: normal
+    text: 食べ物がのどに詰まって亡くなった14歳までの子のうち、9割は5歳以下なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 9割も！
+  - speaker: tsumugi
+    emotion: normal
+    text: 小さい子があめを食べるときは、大人が目を離さないで。
+  - speaker: tsumugi
+    emotion: angry
+    text: 走りながらは、もちろんだめよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの、走りながら作戦……。
+- id: ch13_gendai
+  title: 55億個のおもちゃ
+  background: gl_sekai
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: グリコのおもちゃは、これまでにおよそ3万種類、55億個も作られてきたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 55億個！ 世界の人口の、3分の2くらいなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 会社の中では、おまけとは呼ばないそうよ。お菓子と同じ、商品の一部だから。
+  - speaker: zundamon
+    emotion: happy
+    text: 二大天職の、遊ぶほうなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今のグリコには、木でできたおもちゃが入ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 粒は1953年から34年間、四角だったの。1987年に、ハート形に戻ったのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ハートの形にも、歴史があるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 道頓堀の看板は、今は6代目。2014年から、LEDで光ってるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 今も、あのマークが川に映ってるのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ポッキーは、今どれくらい売れてるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: およそ30の国と地域で売られていて、2015年ごろで1年に5億箱ほど。
+  - speaker: zundamon
+    emotion: surprised
+    text: 5億箱！
+  - speaker: tsumugi
+    emotion: normal
+    text: ヨーロッパでは、ミカドっていう名前で売られてるの。
+  - speaker: tsumugi
+    emotion: happy
+    text: 2020年には、ギネス世界記録にも認められたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: チョコがけビスケットのブランドで、売り上げ世界一ってね。
+  - speaker: zundamon
+    emotion: happy
+    text: 11月11日は、ポッキーとプリッツの日なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年には、ポッキーの形そのものが、立体商標にもなったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 始まりは、捨てられていた牡蠣の煮汁。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それが100年たっても売られてるのは、どうしてだと思う？
+  - speaker: zundamon
+    emotion: thinking
+    text: 薬じゃなくて、子どもが毎日欲しがるお菓子にしたからなのだ。
+- id: shime
+  title: ''
+  background: gl_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: つむぎ。今日は、1粒だけ食べて、300メートル歩いてみるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: いいわね。歩きながらじゃなくて、食べてからね。
+  - speaker: zundamon
+    emotion: happy
+    text: 残りの粒は、ちゃんと箱に戻したぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: おもちゃの箱のほうは？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……もう、開けて遊んでたのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 遊ぶほうの天職は、もう果たしてるのね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 今度グリコの箱を開けたら、原材料の欄を見てみて。かきエキスって、書いてあるから。
+  - speaker: zundamon
+    emotion: normal
+    text: 捨てられた煮汁が、100年たっても箱の中にあるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
