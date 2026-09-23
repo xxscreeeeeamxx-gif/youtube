@@ -18,6 +18,11 @@ from .config import Config, Project
 
 EMOTIONS = ["normal", "happy", "surprised", "thinking", "angry", "sad"]
 W, H = 760, 1240          # 生成キャンバス（頭でっかちの可愛い比率）
+# 胴の名前ラベルの長さの上限（キャンバス座標）。ドラマの立ち絵は 1080p で高さ約909px・
+# 上端 y≈217 に置かれ、ラベルは画面 y≈649 から始まる。2行ナレの帯は y≈910 から下なので、
+# 帯に食われないのは画面で約250px＝キャンバスで約340pxまで。5字以上のラベルが
+# 「教室の先」「販売の」で切れていた（2026-09-23 ヤクルト回の検証で発覚）
+LABEL_MAX_H = 330
 OUTLINE = (60, 62, 70)
 BODY = (252, 252, 252)
 
@@ -87,11 +92,11 @@ def _draw_mob(mob, photo_path: Path | None, font_path: str) -> Image.Image:
         f = ImageFont.truetype(font_path, size, index=0)
         total_h = size * len(label) + 8 * (len(label) - 1)
         y = head_cy + head_r + 40
-        max_h = H - 90 - y
-        if total_h > max_h:
-            size = max(int(size * max_h / total_h), 34)
-            f = ImageFont.truetype(font_path, size, index=0)
+        max_h = min(H - 90 - y, LABEL_MAX_H)
+        while total_h > max_h and size > 34:
+            size -= 2
             total_h = size * len(label) + 8 * (len(label) - 1)
+        f = ImageFont.truetype(font_path, size, index=0)
         for i, ch in enumerate(label):
             wch = d.textlength(ch, font=f)
             d.text((cx - wch / 2, y + i * (size + 8)), ch, font=f, fill=(30, 32, 40))
@@ -104,7 +109,7 @@ def ensure_mob_sprites(cfg: Config, proj: Project, script) -> None:
     for mob in script.meta.mobs:
         out_dir = proj.root / "mobs" / mob.id
         out_dir.mkdir(parents=True, exist_ok=True)
-        sig = f"{mob.label}|{mob.hair}|{mob.item}|{mob.photo}|v2"
+        sig = f"{mob.label}|{mob.hair}|{mob.item}|{mob.photo}|v3"
         sig_file = out_dir / ".sig"
         if sig_file.exists() and sig_file.read_text(encoding="utf-8") == sig \
                 and (out_dir / "normal.png").exists():
