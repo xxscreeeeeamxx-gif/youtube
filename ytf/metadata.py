@@ -25,9 +25,10 @@ def build_metadata(cfg: Config, proj: Project, timings: list[CutTiming]) -> dict
     if chapters and not chapters[0].startswith("0:00"):
         chapters.insert(0, f"0:00 {script.meta.title}")
 
-    credits = " / ".join(
-        cfg.character(s)["credit"] for s in script.speakers_used()
-    )
+    # モブは同じ話者のピッチ違いが多いので、重複と空欄を除いて並べる
+    credits = " / ".join(dict.fromkeys(
+        c for c in (cfg.character(s)["credit"] for s in script.speakers_used()) if c
+    ))
     # 効果音を使っていれば効果音ラボのクレジットを添える（商用可・任意表記）
     uses_se = any(c.se for _, _, c in script.all_cuts()) or (
         cfg.get("video", "transition", "enabled", default=True)

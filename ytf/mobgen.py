@@ -124,13 +124,36 @@ def ensure_mob_sprites(cfg: Config, proj: Project, script) -> None:
         print(f"モブ生成: {mob.id}（{mob.label}）")
 
 
+# モブの声のクレジット（VOICEVOX の規約で、使った話者は全員表記が要る）。
+# 空欄にしていたため、50〜53本目の概要欄でモブの声が抜けていた（2026-09-23）。
+VOICE_CREDITS = {
+    3: "VOICEVOX:ずんだもん",
+    8: "VOICEVOX:春日部つむぎ",
+    12: "VOICEVOX:白上虎太郎",
+    13: "VOICEVOX:青山龍星",
+    42: "VOICEVOX:ちび式じい",
+}
+
+
+def _voice_credit(cfg: Config, style_id: int) -> str:
+    """スタイルIDから話者名のクレジットを引く。表に無いIDは VOICEVOX に問い合わせる。"""
+    if style_id in VOICE_CREDITS:
+        return VOICE_CREDITS[style_id]
+    from .voice import VoicevoxClient
+    url = cfg.get("voicevox", "url", default="http://127.0.0.1:50021")
+    for sp in VoicevoxClient(url).speakers():
+        if any(st["id"] == style_id for st in sp["styles"]):
+            return f"VOICEVOX:{sp['name']}"
+    raise SystemExit(f"モブの声 {style_id} の話者名が分かりません（クレジットに必要）")
+
+
 def register_mobs(cfg: Config, proj: Project, script) -> None:
     """mobs を cfg.characters に動的登録する（音声・立ち絵の既存経路に乗せる）。"""
     ensure_mob_sprites(cfg, proj, script)
     for mob in script.meta.mobs:
         cfg.characters[mob.id] = {
             "display_name": mob.label,
-            "credit": "",
+            "credit": _voice_credit(cfg, mob.voice),
             # モブは名前を胴体に焼き込んでいるので左右反転してはいけない。
             # のっぺら白キャラには向きが無く、反転しても得るものが無いのに
             # 名前だけが鏡文字になる（stage の flip: true で「原野」が鏡像化した。2026-08）

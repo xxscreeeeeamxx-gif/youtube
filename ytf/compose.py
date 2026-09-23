@@ -439,7 +439,8 @@ class Composer:
         bw, bh = int(tw + pad_x * 2), lh * len(lines) + pad_y * 2
         cx = int(self.lay.w * x_frac)
         x0 = max(16, min(cx - bw // 2, self.lay.w - bw - 16))
-        y0 = 120
+        # 章タブの下端は y=124。120 だと4px食い込んでいた（2026-09-23 カシオ回で39カット）
+        y0 = 134
         d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], radius=18,
                             fill=(255, 255, 255, 245), outline=edge_rgb, width=5)
         # しっぽ（話者の方向へ）
@@ -863,7 +864,7 @@ def render_frames(
             [bg_name, header, chars,
              cut.slide.model_dump() if cut.slide else None, cut.image,
              bool(sp), card, full, fg_only, sub, sprite_sig,
-             base_stage, bubble, caption, actor, "tags-top1"],
+             base_stage, bubble, caption, actor, "tags-top1", "bubble-y134"],
             ensure_ascii=False, sort_keys=True, default=str,
         )
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
