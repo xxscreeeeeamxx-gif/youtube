@@ -1,0 +1,1623 @@
+meta:
+  title: 【YKKの誕生】勤め先が潰れて、残ったのは未払いの半製品だった【ずんだもん解説】
+  slug: ykk
+  summary: ズボンのファスナーに刻まれた三文字。あれが何の略か、考えたことはあるでしょうか。 小学校を出ただけの少年が東京へ出て、四年働いた店は潰れます。 整理した店に残っていたのは、代金も払っていない半端な品物でした。 そこから始めた男が、最後にたどり着いた考え方の話です。
+  tags:
+  - YKK
+  - 吉田忠雄
+  - ファスナー
+  - 善の巡環
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 富山
+  - 黒部
+  thumbnail:
+    top: 残ったのは未払い品
+    bottom: YKKの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: haha
+    label: 母
+    voice: 8
+    pitch: 0.02
+  - id: sensei
+    label: 小学校の先生
+    voice: 13
+    pitch: -0.02
+  - id: furuya
+    label: 古谷商店の主人
+    voice: 42
+    pitch: 0.0
+  - id: senpai
+    label: 店の先輩
+    voice: 12
+    pitch: 0.02
+  - id: shiire
+    label: 仕入れ先の主人
+    voice: 13
+    pitch: -0.04
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.04
+  - id: shokunin
+    label: 鉄工所の職人
+    voice: 12
+    pitch: -0.02
+  - id: ginko
+    label: 銀行の担当
+    voice: 13
+    pitch: -0.06
+  - id: shosha
+    label: 商社の担当
+    voice: 13
+    pitch: 0.02
+  - id: kyaku
+    label: 取引先
+    voice: 12
+    pitch: 0.0
+scenes:
+- id: hook
+  title: ''
+  background: yk_ima
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。ズボンに知らない三文字が書いてあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ファスナーのつまみのところでしょ。
+  - speaker: zundamon
+    emotion: surprised
+    text: エヌ、じゃなくて、ワイ、ケイ、ケイ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 読めてるじゃない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 誰かがボクのズボンに落書きしたのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 最初から付いてるの。作った会社の名前よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会社の名前。じゃあ何の略なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……それ、答えると先が長くなるんだけど。
+  - speaker: zundamon
+    emotion: happy
+    text: いいのだ。ボクは今日ひまだぞ。
+  - speaker: tsumugi
+    emotion: normal
+    text: じゃあ、上着のファスナーも見てみて。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……同じ三文字なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カバンは。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ。
+  - speaker: zundamon
+    emotion: angry
+    text: 全部同じところが作ってるのか。手抜きなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 逆よ。よそが真似できなかったの。
+  - speaker: zundamon
+    emotion: normal
+    text: ファスナーなんて、誰が作っても同じだと思うのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: じゃあ聞くけど、途中で引っかかったことある？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……最近は、無い。
+  - speaker: tsumugi
+    emotion: normal
+    text: その無いが、ものすごく難しいの。
+  - speaker: reimu
+    text: ファスナーは、金属やプラスチックの歯を布に植えて作ります。
+    reading: ふぁすなあわ、きんぞくやぷらすちっくのはお ぬのに うえて つくります。
+  - speaker: reimu
+    text: 歯の間隔が少しでも狂うと、そこで噛み合わなくなります。
+    reading: はの かんかくが すこしでも くるうと、そこで かみあわなく なります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 少しって、どのくらいなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 髪の毛より細い単位の話よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ボクのズボンに、そんな技術が。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを作った会社を始めた人がいるの。
+  - speaker: zundamon
+    emotion: happy
+    text: さぞ立派な工場から始めたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 始まりは、潰れた店に残っていた売れ残りよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売れ残り。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも、代金を払っていない品物だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: それ、持ち出したらまずいのでは。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから頭を下げに行ったのよ。仕入れ先に。
+  - speaker: reimu
+    text: 名前は、吉田忠雄。富山の魚津で生まれた男です。
+    reading: なまえわ、よしだ ただお。とやまの うおづで うまれた おとこです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 吉田。あの三文字と、関係あるのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: 最後まで聞いたら分かるわ。
+- id: card1908
+  title: ''
+  background: yk_card_1908
+  cuts:
+  - speaker: reimu
+    text: 1908年9月19日。富山県の魚津に生まれました。
+    reading: せんきゅうひゃくはちねん くがつ じゅうくにち。とやまけんの うおづに うまれました。
+- id: ch1_ie
+  title: カーネギーを読んだ少年
+  background: yk_uozu_ie
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 忠雄
+    scale: 0.8
+    emotion: normal
+  - who: haha
+    x: 0.68
+    emotion: normal
+  cuts:
+  - speaker: haha
+    emotion: normal
+    text: 忠雄。また本を借りてきたのかい。
+  - speaker: zundamon
+    emotion: happy
+    text: 先生が貸してくれたのだ。
+  - speaker: haha
+    emotion: thinking
+    text: 難しそうな本だねえ。
+  - speaker: zundamon
+    emotion: happy
+    text: アメリカの、鉄の商売をした人の話だぞ。
+  - speaker: haha
+    emotion: normal
+    text: 鉄。うちとは縁のない話だね。
+  - speaker: zundamon
+    emotion: normal
+    text: でも、面白いことが書いてあるのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 金は、ひとりじめするものではない、と。
+  - speaker: haha
+    emotion: surprised
+    text: 商売の本で、そんなことを言うのかい。
+  - speaker: zundamon
+    emotion: normal
+    text: 人の[得|とく]にならんと、自分も続かん、とも書いてある。
+  - speaker: haha
+    emotion: thinking
+    text: ……よく分からないけど、覚えておおき。
+- id: ch1_kyoshitsu
+  title: ''
+  background: yk_kyoshitsu
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 忠雄
+    scale: 0.8
+    emotion: normal
+  - who: sensei
+    x: 0.68
+    emotion: normal
+  cuts:
+  - speaker: sensei
+    emotion: normal
+    text: 吉田。その本、三度目だな。
+  - speaker: zundamon
+    emotion: happy
+    text: 面白いのだ。何度でも読むぞ。
+  - speaker: sensei
+    emotion: thinking
+    text: 上の学校へ行く気はあるか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……家に、そんな余裕はないのだ。
+  - speaker: sensei
+    emotion: normal
+    text: そうか。
+  - speaker: zundamon
+    emotion: normal
+    text: 先生。商売は、学校を出ないとできないのですか。
+  - speaker: sensei
+    emotion: thinking
+    text: いや。やった者ができる。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、やるのだ。
+  - speaker: reimu
+    text: 忠雄は、魚津の高等小学校を出ただけでした。
+    reading: ただおわ、うおづの こうとう しょうがっこうお でただけでした。
+  - speaker: reimu
+    text: 進学はせず、家のそばで働きながら二十歳になります。
+    reading: しんがくわ せず、いえの そばで はたらきながら はたちに なります。
+- id: card1928
+  title: ''
+  background: yk_card_1928
+  cuts:
+  - speaker: reimu
+    text: 1928年。忠雄は東京へ出ます。
+    reading: せんきゅうひゃく にじゅうはちねん。ただおわ とうきょうえ でます。
+- id: ch2_mise
+  title: 日本橋の奉公
+  background: yk_nihonbashi
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: furuya
+    x: 0.7
+    emotion: normal
+  cuts:
+  - speaker: furuya
+    emotion: normal
+    text: 富山から来たのか。日本橋は初めてか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 人が多いのだ。歩くだけで疲れるぞ。
+  - speaker: furuya
+    emotion: happy
+    text: うちは中国から焼き物を仕入れて売る店だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 焼き物。壊れやすいのだ。
+  - speaker: furuya
+    emotion: normal
+    text: そうだ。だから箱の詰め方から覚えてもらう。
+  - speaker: zundamon
+    emotion: happy
+    text: 覚えるぞ。
+  - speaker: furuya
+    emotion: normal
+    text: 朝は五時だ。寝坊したら置いていく。
+  - speaker: zundamon
+    emotion: normal
+    text: ……はい。
+- id: ch2_shanghai
+  title: ''
+  background: yk_shanghai
+  bgm: curious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 吉田忠雄
+    emotion: surprised
+  - who: senpai
+    x: 0.7
+    emotion: normal
+  cuts:
+  - speaker: senpai
+    emotion: normal
+    text: 吉田。お前、上海まで買い付けに行ってこい。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクが。まだ入って二年なのだ。
+  - speaker: senpai
+    emotion: happy
+    text: 箱の詰め方を一番早く覚えたのはお前だ。
+  - speaker: zundamon
+    emotion: happy
+    text: ……行くぞ。
+  - speaker: reimu
+    text: 忠雄は上海へ渡り、仕入れの現場を覚えます。
+    reading: ただおわ しゃんはいえ わたり、しいれの げんばお おぼえます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 同じ焼き物でも、店によって値が違うのだ。
+  - speaker: senpai
+    emotion: normal
+    text: そこを見抜けるようになったら一人前だ。
+  - speaker: zundamon
+    emotion: happy
+    text: 四年で一人前になってみせるぞ。
+- id: ch2_yoru
+  title: ''
+  background: yk_nihonbashi
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: senpai
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: senpai
+    emotion: thinking
+    text: 最近、主人の機嫌が悪い。
+  - speaker: zundamon
+    emotion: normal
+    text: 荷は、いつもどおり動いているのだ。
+  - speaker: senpai
+    emotion: thinking
+    text: 動いてはいる。[金|かね]が戻ってこないだけだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……売れているのに？
+  - speaker: senpai
+    emotion: sad
+    text: 売った先が、払わん。
+  - speaker: zundamon
+    emotion: thinking
+    text: それは、店のせいではないのだ。
+  - speaker: senpai
+    emotion: sad
+    text: 誰のせいでも、[金|かね]は戻らんよ。
+- id: card1933
+  title: ''
+  background: yk_card_1933
+  cuts:
+  - speaker: reimu
+    text: 上京から四年。店が行き詰まります。
+    reading: じょうきょうから よねん。みせが ゆきづまります。
+- id: ch3_tencho
+  title: 店が消えた日
+  background: yk_nihonbashi
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: surprised
+  - who: furuya
+    x: 0.7
+    emotion: sad
+  cuts:
+  - speaker: furuya
+    emotion: sad
+    text: 吉田。店をたたむ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……たたむ。
+  - speaker: furuya
+    emotion: sad
+    text: 払えんものは払えん。それだけだ。
+  - speaker: zundamon
+    emotion: angry
+    text: まだ売れる品があるのだ。売って回るぞ。
+  - speaker: furuya
+    emotion: thinking
+    text: 売っても、戻ってこん。
+  - speaker: zundamon
+    emotion: sad
+    text: ……四年、働いたのだ。
+  - speaker: furuya
+    emotion: sad
+    text: 知っている。よく働いた。
+  - speaker: zundamon
+    emotion: sad
+    text: 朝五時に起きて、箱を詰めて、上海まで行った。
+  - speaker: furuya
+    emotion: sad
+    text: それも知っている。
+  - speaker: zundamon
+    emotion: sad
+    text: ……それが、全部なくなるのだ。
+  - speaker: furuya
+    emotion: normal
+    text: 店はなくなる。お前の四年はなくならん。
+  - speaker: zundamon
+    emotion: sad
+    text: 慰めは、いらないぞ。
+- id: ch3_seiri
+  title: ''
+  background: yk_soko
+  bgm: 223am
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 吉田忠雄
+    emotion: sad
+  - who: senpai
+    x: 0.7
+    emotion: sad
+  cuts:
+  - speaker: senpai
+    emotion: sad
+    text: 棚の裏まで出しきったか。
+  - speaker: zundamon
+    emotion: normal
+    text: 焼き物は全部、箱に戻したのだ。
+  - speaker: senpai
+    emotion: thinking
+    text: ……その木箱は[何だ|なんだ]。焼き物じゃないな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 軽いのだ。中で、じゃらじゃら鳴るぞ。
+  - speaker: senpai
+    emotion: normal
+    text: 開けてみろ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……金具の付いた、細長い布なのだ。
+  - speaker: senpai
+    emotion: normal
+    text: ファスナーだ。主人が副業で手を出していた。
+  - speaker: zundamon
+    emotion: thinking
+    text: 副業。
+  - speaker: senpai
+    emotion: sad
+    text: まだ半分しか出来ていない品だ。売り物にならん。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……これ、[代金|だいきん]は。
+  - speaker: senpai
+    emotion: sad
+    text: 払っとらん。仕入れ先には、頭が上がらんよ。
+- id: card1934
+  title: ''
+  background: yk_card_1934
+  cuts:
+  - speaker: reimu
+    text: 1934年。忠雄は二十五歳になっていました。
+    reading: せんきゅうひゃく さんじゅうよねん。ただおわ にじゅうごさいに なっていました。
+- id: ch4_shiire
+  title: 未払いの半製品
+  background: yk_shiire
+  bgm: pop
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shiire
+    x: 0.7
+    emotion: angry
+  cuts:
+  - speaker: shiire
+    emotion: angry
+    text: 古谷さんとこの小僧か。[金|かね]を取りに来たんじゃない。
+  - speaker: zundamon
+    emotion: normal
+    text: 逆なのだ。払えていないのは、こちらだぞ。
+  - speaker: shiire
+    emotion: angry
+    text: 分かってるなら、何しに来た。
+  - speaker: zundamon
+    emotion: normal
+    text: あの半製品を、ボクに扱わせてほしいのだ。
+  - speaker: shiire
+    emotion: surprised
+    text: 払えん[店|みせ]の小僧が、何を言っている。
+  - speaker: zundamon
+    emotion: normal
+    text: いま払う[金|かね]はない。それは本当だ。
+  - speaker: shiire
+    emotion: angry
+    text: 正直なだけの男に、品は渡せんよ。
+  - speaker: zundamon
+    emotion: normal
+    text: あれを仕上げて売れば、あなたにも[金|かね]が回るのだ。
+  - speaker: shiire
+    emotion: thinking
+    text: ……回る、か。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクだけ儲かる話なら、続かないぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 子どものころ読んだ本に、そう書いてあったのだ。
+  - speaker: shiire
+    emotion: surprised
+    text: 商売の話をしに来て、本の話をする奴があるか。
+  - speaker: zundamon
+    emotion: happy
+    text: でも、そのとおりだと思うのだ。
+  - speaker: shiire
+    emotion: thinking
+    text: ……ひと箱だけだ。売れたら、また来い。
+  - speaker: zundamon
+    emotion: happy
+    text: 来るぞ。必ず来る。
+- id: ch4_sanes
+  title: ''
+  background: yk_koba
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.32
+    flip: true
+    tag: 吉田忠雄
+    emotion: happy
+  cuts:
+  - speaker: reimu
+    text: 1934年。忠雄はファスナーの加工と販売を始めます。
+    reading: せんきゅうひゃく さんじゅうよねん。ただおわ ふぁすなあの かこうと はんばいお はじめます。
+  - speaker: zundamon
+    emotion: normal
+    text: 半端な品を、ひとつずつ仕上げるのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 歯の並びが、そろっていないぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 指で押して、間を直す。それだけなのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: ……動いた。ちゃんと閉まるぞ。
+  - speaker: reimu
+    text: この店の名を、サンエス商会といいました。
+    reading: この みせの なお、さんえす しょうかいと いいました。
+- id: ch4b_sannin
+  title: 三人から八十人へ
+  background: yk_koba
+  bgm: pop
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 吉田忠雄
+    emotion: happy
+  - who: shain
+    x: 0.7
+    emotion: normal
+  cuts:
+  - speaker: reimu
+    text: 始めたとき、働いていたのは忠雄を入れて三人でした。
+    reading: はじめた とき、はたらいていたのわ ただおお いれて さんにんでした。
+  - speaker: shain
+    emotion: normal
+    text: 社長。今日の[分|ぶん]、仕上げ終わりました。
+  - speaker: zundamon
+    emotion: happy
+    text: 早いぞ。もう指が覚えたのだ。
+  - speaker: shain
+    emotion: thinking
+    text: 三人だと、手が足りません。
+  - speaker: zundamon
+    emotion: normal
+    text: 足りないなら、増やすのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 増やす。払えますか。
+  - speaker: zundamon
+    emotion: happy
+    text: 増やして売れば、払えるようになるぞ。
+  - speaker: reimu
+    text: 1938年。店の名を吉田工業所と改め、東京の小松川に工場を建てます。
+    reading: せんきゅうひゃく さんじゅうはちねん。みせの なお よしだ こうぎょうしょと あらため、とうきょうの こまつがわに こうじょうお たてます。
+  - speaker: reimu
+    text: 働く人は、八十人ほどになっていました。
+    reading: はたらく ひとわ、はちじゅうにん ほどに なっていました。
+  - speaker: zundamon
+    emotion: happy
+    text: 四年前は三人だったのだ。
+  - speaker: shain
+    emotion: happy
+    text: 机も足りません。
+  - speaker: zundamon
+    emotion: happy
+    text: いい足りなさだぞ。
+- id: ch4c_tousei
+  title: ''
+  background: yk_jimusho
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: thinking
+  - who: shain
+    x: 0.7
+    emotion: sad
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。銅が、入らなくなりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 買えないのか。
+  - speaker: shain
+    emotion: sad
+    text: 買う買わないの話ではありません。国が押さえています。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……弾を作るほうに、回るのだ。
+  - speaker: shain
+    emotion: sad
+    text: アルミも同じです。ファスナー屋は、どこも止まります。
+  - speaker: zundamon
+    emotion: normal
+    text: 止まったら、八十人はどうなる。
+  - speaker: shain
+    emotion: sad
+    text: ……[帰す|かえす]しかありません。
+  - speaker: zundamon
+    emotion: angry
+    text: '[帰さ|かえさ]んぞ。'
+  - speaker: shain
+    emotion: surprised
+    text: ですが、材料が。
+  - speaker: zundamon
+    emotion: thinking
+    text: 軍の仕事にすれば、材料は回るのではないか。
+  - speaker: shain
+    emotion: surprised
+    text: 海軍の指定を受ける、ということですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 作り続けられるなら、そうするのだ。
+  - speaker: reimu
+    text: 会社は海軍の指定工場となり、生産を続けました。
+    reading: かいしゃわ かいぐんの していこうじょうと なり、せいさんお つづけました。
+  - speaker: reimu
+    text: そして1945年3月、その工場が焼けます。
+    reading: そして せんきゅうひゃく よんじゅうごねん さんがつ、その こうじょうが やけます。
+- id: card1945
+  title: ''
+  background: yk_card_1945
+  cuts:
+  - speaker: reimu
+    text: 1945年3月。東京に、大きな空襲がありました。
+    reading: せんきゅうひゃく よんじゅうごねん さんがつ。とうきょうに おおきな くうしゅうが ありました。
+- id: ch5_yakeato
+  title: 焼けた工場
+  background: yk_yakeato
+  bgm: mystery
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    tag: 吉田忠雄
+    emotion: sad
+  - who: shain
+    x: 0.68
+    emotion: sad
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。小松川の工場、残っていません。
+  - speaker: zundamon
+    emotion: sad
+    text: ……機械は。
+  - speaker: shain
+    emotion: sad
+    text: 溶けています。形が分かりません。
+  - speaker: zundamon
+    emotion: normal
+    text: 人は。
+  - speaker: shain
+    emotion: normal
+    text: みな、逃げられました。
+  - speaker: zundamon
+    emotion: normal
+    text: ……そうか。ならいい。
+  - speaker: shain
+    emotion: surprised
+    text: いい、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 機械はまた買える。人は買えないのだ。
+  - speaker: shain
+    emotion: sad
+    text: ですが、買う[金|かね]が。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……十一年で、また[一箱|ひとハコ]からなのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 一度やったことだ。二度目はもっと早いぞ。
+- id: ch6_uozu
+  title: 故郷へ
+  background: yk_uozu_kojo
+  bgm: kinakusai
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shokunin
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: reimu
+    text: 1945年6月。忠雄は故郷の魚津へ戻ります。
+    reading: せんきゅうひゃく よんじゅうごねん ろくがつ。ただおわ こきょうの うおづえ もどります。
+  - speaker: shokunin
+    emotion: thinking
+    text: ここは鉄工所だ。ファスナー屋じゃない。
+  - speaker: zundamon
+    emotion: normal
+    text: 知っているのだ。この鉄工所を、買いたい。
+  - speaker: shokunin
+    emotion: surprised
+    text: 買う。この時勢にか。
+  - speaker: zundamon
+    emotion: normal
+    text: 鉄を扱える人が、ここには居るのだ。
+  - speaker: shokunin
+    emotion: thinking
+    text: 東京から来て、いきなり何を作らせる気だ。
+  - speaker: zundamon
+    emotion: happy
+    text: 小さい金具を、たくさん作ってもらうぞ。
+  - speaker: shokunin
+    emotion: angry
+    text: うちは、そんな細かい仕事はせん。
+  - speaker: zundamon
+    emotion: normal
+    text: 細かいから、よそが真似できないのだ。
+  - speaker: shokunin
+    emotion: surprised
+    text: ……真似できない。
+  - speaker: zundamon
+    emotion: happy
+    text: そこで食っていくぞ。
+  - speaker: reimu
+    text: 6月26日に鉄工所を買い取り、8月に社名を変えます。
+    reading: ろくがつ にじゅうろくにちに てっこうじょお かいとり、はちがつに しゃめいお かえます。
+  - speaker: reimu
+    text: 吉田工業株式会社。三文字の由来は、ここにあります。
+    reading: よしだ こうぎょう かぶしき がいしゃ。さんもじの ゆらいわ、ここに あります。
+- id: ch6b_saikai
+  title: ''
+  background: yk_uozu_kojo
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shokunin
+    x: 0.7
+    emotion: normal
+  cuts:
+  - speaker: shokunin
+    emotion: normal
+    text: 社長。一本、通りました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……見せてくれ。
+  - speaker: shokunin
+    emotion: normal
+    text: 端から端まで、引っかからずに動きます。
+  - speaker: zundamon
+    emotion: happy
+    text: 動くぞ。ちゃんと閉まる。
+  - speaker: shokunin
+    emotion: happy
+    text: 鉄工所で、ファスナーが出来ました。
+  - speaker: zundamon
+    emotion: normal
+    text: 春に、東京で全部焼けたのだ。
+  - speaker: shokunin
+    emotion: normal
+    text: 覚えています。
+  - speaker: zundamon
+    emotion: happy
+    text: それが、十一月にはまた一本できたぞ。
+  - speaker: reimu
+    text: 生産が動きだしたのは、1945年の11月でした。
+    reading: せいさんが うごきだしたのわ、せんきゅうひゃく よんじゅうごねんの じゅういちがつでした。
+- id: card1950
+  title: ''
+  background: yk_card_1950
+  cuts:
+  - speaker: reimu
+    text: 1950年。忠雄は、アメリカから一台の機械を買います。
+    reading: せんきゅうひゃく ごじゅうねん。ただおわ、あめりかから いちだいの きかいお かいます。
+- id: ch7_kikai
+  title: 機械が来ない
+  background: yk_kikai
+  bgm: curious
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: happy
+  - who: shain
+    x: 0.7
+    emotion: surprised
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 社長。本当に買ったんですか、これ。
+  - speaker: zundamon
+    emotion: happy
+    text: 自動で歯を植える機械だ。アメリカ製だぞ。
+  - speaker: shain
+    emotion: thinking
+    text: うちの一年の[売上|うりあげ]より高いのでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 高い。だが、手でやる速さでは勝てないのだ。
+  - speaker: shain
+    emotion: normal
+    text: 動かしてみます。
+  - speaker: zundamon
+    emotion: happy
+    text: 見ているぞ。
+  - speaker: shain
+    emotion: surprised
+    text: ……速い。ひとりで何十人ぶんです。
+  - speaker: zundamon
+    emotion: happy
+    text: これで追いつけるのだ。
+  - speaker: shain
+    emotion: thinking
+    text: ですが社長。ひとつ気になります。
+  - speaker: zundamon
+    emotion: normal
+    text: 何だ。
+  - speaker: shain
+    emotion: thinking
+    text: 歯の間が、たまに広がります。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……広がる。
+- id: ch7_kowareru
+  title: ''
+  background: yk_kikai
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: thinking
+  - who: shain
+    x: 0.7
+    emotion: sad
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 百本に一本くらい、途中で噛みません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 百本に一本。
+  - speaker: shain
+    emotion: normal
+    text: その程度なら、よそも同じです。
+  - speaker: zundamon
+    emotion: angry
+    text: よそと同じで、うちを選ぶ理由があるか。
+  - speaker: shain
+    emotion: surprised
+    text: ……ありません。
+  - speaker: zundamon
+    emotion: normal
+    text: 買った人には、百本のうちの一本ではないのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: その人にとっては、全部なのだ。
+  - speaker: shain
+    emotion: thinking
+    text: では、どうしますか。作った国に直させますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 待っていたら何年かかる。自分で直すぞ。
+  - speaker: shain
+    emotion: surprised
+    text: アメリカの機械を、うちで。
+  - speaker: zundamon
+    emotion: happy
+    text: 鉄工所を買ったのは、このためなのだ。
+- id: card1953
+  title: ''
+  background: yk_card_1953
+  cuts:
+  - speaker: reimu
+    text: 1953年。歯を等しい間隔で植える仕組みができます。
+    reading: せんきゅうひゃく ごじゅうさんねん。はお ひとしい かんかくで うえる しくみが できます。
+  - speaker: reimu
+    text: これが、この会社で最初の特許になりました。
+    reading: これが、この かいしゃで さいしょの とっきょに なりました。
+- id: ch8_ikkan
+  title: 原料から作る
+  background: yk_kurobe
+  bgm: pop
+  stage:
+  - who: zundamon
+    x: 0.26
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shain
+    x: 0.54
+    emotion: thinking
+  - who: ginko
+    x: 0.8
+    emotion: surprised
+  cuts:
+  - speaker: ginko
+    emotion: surprised
+    text: 銅の工場を建てたい、と伺いましたが。
+  - speaker: zundamon
+    emotion: normal
+    text: 建てるのだ。糸の工場も建てるぞ。
+  - speaker: ginko
+    emotion: surprised
+    text: 御社はファスナー屋さんですよね。
+  - speaker: zundamon
+    emotion: normal
+    text: そうだ。だから材料から作るのだ。
+  - speaker: ginko
+    emotion: thinking
+    text: 材料は、買えばよろしいのでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 買うと、届いた材料の出来に左右されるのだ。
+  - speaker: shain
+    emotion: thinking
+    text: 銅の混ぜ物が変わると、歯の硬さが変わります。
+  - speaker: zundamon
+    emotion: normal
+    text: 硬さが変われば、噛み合いも変わるぞ。
+  - speaker: ginko
+    emotion: thinking
+    text: ……そこまで、気になさいますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 百本に一本を無くすには、そこまで戻るしかない。
+  - speaker: ginko
+    emotion: normal
+    text: 正直に申し上げます。無茶です。
+  - speaker: zundamon
+    emotion: happy
+    text: 無茶をやると、よそが付いてこられないのだ。
+  - speaker: reimu
+    text: 忠雄は黒部に、銅を延ばす工場と糸の工場を建てます。
+    reading: ただおわ くろべに、どうお のばす こうじょうと いとの こうじょうお たてます。
+  - speaker: reimu
+    text: 材料から製品まで、自分の手の内に入れていきました。
+    reading: ざいりょうから せいひんまで、じぶんの ての うちに いれて いきました。
+- id: card1959
+  title: ''
+  background: yk_card_1959
+  cuts:
+  - speaker: reimu
+    text: 1959年。会社は、初めて海の外へ出ます。
+    reading: せんきゅうひゃく ごじゅうきゅうねん。かいしゃわ、はじめて うみの そとえ でます。
+- id: ch9_kaigai
+  title: 海を渡る
+  background: yk_kaigai
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shosha
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: shosha
+    emotion: thinking
+    text: インドに機械を売る、というお話でしたね。
+  - speaker: zundamon
+    emotion: normal
+    text: 機械だけ送っても、動かせる人が要るのだ。
+  - speaker: shosha
+    emotion: surprised
+    text: 人まで出すのですか。技術が流れますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 流れていい。
+  - speaker: shosha
+    emotion: surprised
+    text: ……本気でおっしゃっていますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 向こうで仕事が生まれれば、買う人も増えるのだ。
+  - speaker: shosha
+    emotion: thinking
+    text: 目先は、こちらが損をします。
+  - speaker: zundamon
+    emotion: happy
+    text: 相手が損をする話は、結局こっちに返ってくるぞ。
+  - speaker: shosha
+    emotion: thinking
+    text: それは、商売としては珍しい考え方です。
+  - speaker: zundamon
+    emotion: normal
+    text: 珍しくはないのだ。本に書いてあったことだ。
+  - speaker: reimu
+    text: 同じ年、ニュージーランドに初めての海外の会社を作ります。
+    reading: おなじ とし、にゅうじいらんどに はじめての かいがいの かいしゃお つくります。
+- id: ch9b_kinko
+  title: 社長室に呼ばない男
+  background: yk_jimusho
+  bgm: hirusagari
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shain
+    x: 0.7
+    emotion: sad
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。出張先まで来て、申し訳ありません。
+  - speaker: zundamon
+    emotion: surprised
+    text: わざわざ来たのか。何があった。
+  - speaker: shain
+    emotion: sad
+    text: 会社に泥棒が入りまして。金庫が、盗まれました。
+  - speaker: zundamon
+    emotion: normal
+    text: ……盗られたものは、戻るのか。
+  - speaker: shain
+    emotion: sad
+    text: 戻りません。
+  - speaker: zundamon
+    emotion: angry
+    text: なら、ここへ来た時間のぶん、損が増えたぞ。
+  - speaker: shain
+    emotion: surprised
+    text: ……お叱りは、覚悟の上です。
+  - speaker: zundamon
+    emotion: normal
+    text: 叱ってはいないのだ。済んだことは仕方がない。
+  - speaker: zundamon
+    emotion: normal
+    text: だが、報告のために人が動くのは無駄だぞ。
+  - speaker: shain
+    emotion: thinking
+    text: では、どうすれば。
+  - speaker: zundamon
+    emotion: normal
+    text: 次の手を打ってから、あとで教えてくれ。
+  - speaker: shain
+    emotion: normal
+    text: ……はい。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクは用があるとき、社長室には呼ばないのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 社長のほうが、出向かれますね。
+  - speaker: zundamon
+    emotion: normal
+    text: 持ち場を離れさせるほうが、もったいないぞ。
+- id: ch9c_shinrin
+  title: ''
+  background: yk_kurobe
+  bgm: you_and_me
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shain
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 社長。人が増えて、目が届かなくなってきました。
+  - speaker: zundamon
+    emotion: normal
+    text: 届かなくていいのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 管理しなくて、いいんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 会社を、森だと思ってみるぞ。
+  - speaker: shain
+    emotion: thinking
+    text: 森。
+  - speaker: zundamon
+    emotion: normal
+    text: 社員のひとりひとりが、一本の木なのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 木が自分で伸びようとすれば、森全体が育つ。
+  - speaker: shain
+    emotion: thinking
+    text: 上から言われて伸びる木は、ありませんね。
+  - speaker: zundamon
+    emotion: happy
+    text: そういうことだぞ。
+- id: ch10_zen
+  title: 善の巡環
+  background: yk_jimusho
+  bgm: amacha_milkyway
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: shain
+    x: 0.7
+    emotion: thinking
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 社長。会社の考え方を、一言で書けと言われまして。
+  - speaker: zundamon
+    emotion: normal
+    text: 一言か。
+  - speaker: shain
+    emotion: normal
+    text: 品質第一、あたりでどうでしょう。
+  - speaker: zundamon
+    emotion: thinking
+    text: それは、やり方の話だ。理由になっていないのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 理由、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: なぜ、いい物を作るのか。そこだぞ。
+  - speaker: shain
+    emotion: thinking
+    text: ……売れるから、では。
+  - speaker: zundamon
+    emotion: normal
+    text: 売れるのは結果だ。順番が逆なのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 相手が[得|とく]をすると、こちらに返ってくる。
+  - speaker: shain
+    emotion: thinking
+    text: 仕入れ先や、買った人に。
+  - speaker: zundamon
+    emotion: happy
+    text: そうだ。回ってくるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: だから、うちだけが儲かる形にはしないぞ。
+  - speaker: shain
+    emotion: normal
+    text: では、こう書きます。
+  - speaker: reimu
+    text: 他人の利益を図らずして、自らの繁栄はない。
+    reading: たにんの りえきお はからずして、みずからの はんえいわ ない。
+  - speaker: reimu
+    text: 会社はこの考え方を、善の巡環と呼びます。
+    reading: かいしゃわ この かんがえかたお、ぜんの じゅんかんと よびます。
+  - speaker: zundamon
+    emotion: happy
+    text: 子どものころ読んだ本と、同じことなのだ。
+  - speaker: shain
+    emotion: surprised
+    text: あの、アメリカの鉄の人の。
+  - speaker: zundamon
+    emotion: normal
+    text: 富は、ひとりじめするものではない。
+  - speaker: zundamon
+    emotion: happy
+    text: 半世紀かけて、同じ場所に戻ってきたぞ。
+- id: ch10b_oil
+  title: ''
+  background: yk_jimusho
+  bgm: kinakusai
+  stage:
+  - who: zundamon
+    x: 0.26
+    flip: true
+    tag: 吉田忠雄
+    emotion: normal
+  - who: kyaku
+    x: 0.54
+    emotion: thinking
+  - who: shain
+    x: 0.8
+    emotion: surprised
+  cuts:
+  - speaker: kyaku
+    emotion: thinking
+    text: 原料が上がっています。うちも値を上げざるを得ません。
+  - speaker: zundamon
+    emotion: normal
+    text: 上げないでほしいのだ。
+  - speaker: kyaku
+    emotion: surprised
+    text: そちらも苦しいはずです。どうやって。
+  - speaker: zundamon
+    emotion: normal
+    text: 損は、うちがかぶるぞ。
+  - speaker: shain
+    emotion: surprised
+    text: 社長。それは、いくらになるか。
+  - speaker: zundamon
+    emotion: normal
+    text: 百億と聞いた。
+  - speaker: shain
+    emotion: surprised
+    text: ……百億を、かぶるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: ここで値を上げたら、みんなが上げる。
+  - speaker: zundamon
+    emotion: normal
+    text: 上がったものは、下がらないのだ。
+  - speaker: kyaku
+    emotion: thinking
+    text: ……なぜ、そこまで。
+  - speaker: zundamon
+    emotion: happy
+    text: あなたが立ち行かんと、うちも続かないからだぞ。
+  - speaker: reimu
+    text: この負担はおよそ百億円と言われています。
+    reading: この ふたんわ およそ ひゃくおくえんと いわれています。
+- id: ch12b_bannen
+  title: 車椅子の社長
+  background: yk_jimusho
+  bgm: amacha_hoshizora
+  stage:
+  - who: zundamon
+    x: 0.28
+    flip: true
+    tag: 吉田忠雄
+    emotion: sad
+  - who: shain
+    x: 0.7
+    emotion: sad
+  cuts:
+  - speaker: reimu
+    text: 1986年9月3日。忠雄は脳の血管を詰まらせて倒れます。
+    reading: せんきゅうひゃく はちじゅうろくねん くがつ みっか。ただおわ のうの けっかんお つまらせて たおれます。
+  - speaker: shain
+    emotion: sad
+    text: 社長。今日は、お休みになってください。
+  - speaker: zundamon
+    emotion: normal
+    text: ……行くぞ。
+  - speaker: shain
+    emotion: surprised
+    text: まだ歩けないのに、どこへ。
+  - speaker: zundamon
+    emotion: normal
+    text: 工場だ。押してくれ。
+  - speaker: shain
+    emotion: sad
+    text: 社長室に呼べばいいじゃないですか。
+  - speaker: zundamon
+    emotion: angry
+    text: 用があるほうが、出向くのだ。昔からそうだぞ。
+  - speaker: shain
+    emotion: sad
+    text: ……変わりませんね。
+  - speaker: reimu
+    text: 一年の治療とリハビリのあと、忠雄は車椅子で会社へ通いました。
+    reading: いちねんの ちりょうと りはびりの あと、ただおわ くるまいすで かいしゃえ かよいました。
+  - speaker: zundamon
+    emotion: normal
+    text: 歯の間は、そろっているか。
+  - speaker: shain
+    emotion: happy
+    text: そろっています。もう、狂いません。
+  - speaker: zundamon
+    emotion: happy
+    text: ……なら、いい。
+- id: card1993
+  title: ''
+  background: yk_card_1993
+  cuts:
+  - speaker: reimu
+    text: 1993年7月3日。吉田忠雄は八十四歳で亡くなりました。
+    reading: せんきゅうひゃく きゅうじゅうさんねん しちがつ みっか。よしだ ただおわ はちじゅうよんさいで なくなりました。
+- id: ch11_rumor
+  title: 三文字のあと
+  background: yk_ima
+  bgm: shuffle_shuffle
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 分かったのだ。吉田工業株式会社の頭文字だぞ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そういうこと。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、ひとつ気になることがあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: どうぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: どこのメーカーも同じ会社のを使ってるのだろ。
+  - speaker: zundamon
+    emotion: normal
+    text: それって、値段を好きに決められるのでは。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……いい[所|ところ]に気づいたわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 実際、そこを疑われたことがあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 疑われた。
+  - speaker: reimu
+    text: 2007年。ヨーロッパの委員会が、この会社に決定を通知します。
+    reading: にせんななねん。よおろっぱの いいんかいが、この かいしゃに けっていお つうちします。
+  - speaker: reimu
+    text: 競争相手と値段の情報をやり取りした、という内容でした。
+    reading: きょうそう あいてと ねだんの じょうほうお やりとりした、という ないようでした。
+  - speaker: zundamon
+    emotion: sad
+    text: ……善の[巡環|じゅんかん]は、どこへ行ったのだ。
+- id: ch11_ryoron
+  title: ''
+  background: yk_shiryo
+  bgm: serious
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: thinking
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ここは、片方だけ言うと嘘になるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 片方。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、その決定を受け入れなかったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 受け入れない。
+  - speaker: reimu
+    text: 会社は2007年12月7日、ヨーロッパの裁判所へ訴えを起こします。
+    reading: かいしゃわ にせんななねん じゅうにがつ なのか、よおろっぱの さいばんしょえ うったえお おこします。
+  - speaker: zundamon
+    emotion: thinking
+    text: つまり、争ったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。だから決着まで含めて見ないと分からない。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクは、どっちが正しいか知らないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでいいの。分かっているのは事実だけよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 指摘されたことと、争ったこと。その両方。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……きれいな話だけでは、終わらないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が大きくなるって、そういうことよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、ひとつ引っかかるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: どうぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 善の[巡環|じゅんかん]って、きれいな言葉なのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: それを掲げていれば、疑われないのでは。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 逆よ。掲げた側は、そこを見られるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……厳しくなるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。言った以上は、そこで測られる。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、言わないほうが楽なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 楽ね。でも、それだと何も残らないわ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……言葉が残ったから、比べられるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたがいま引っかかったのも、そのおかげよ。
+- id: ch12_ima
+  title: いまのファスナー
+  background: yk_ima
+  bgm: warm
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: それで、いまも黒部で作っているのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ええ。富山は、いまも会社の中心のひとつよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 東京で焼けて、帰った場所なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 帰った場所に、工場が残ったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あのとき、東京で建て直していたら。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 別の会社になっていたでしょうね。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクのズボンの三文字も、違ったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そうね。吉田工業の三文字だもの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 最初は、潰れた店の売れ残りだったのに。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも、代金を払っていない品物ね。
+  - speaker: zundamon
+    emotion: happy
+    text: そこから、世界中のズボンに付いたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 頭を下げて分けてもらった、ひと箱からね。
+- id: ch12c_kurobe
+  title: ''
+  background: yk_kurobe
+  bgm: amacha_milkyway
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: thinking
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: それでね。話はここで終わらないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 創業者は亡くなったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 息子の代になってから、会社が決めたことがあるの。
+  - speaker: zundamon
+    emotion: normal
+    text: 何を決めたのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 本社の働きの一部を、黒部に移したのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 東京から、富山へ。逆なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ふつうは逆よね。都会へ出ていくものだもの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 焼けて帰った場所に、戻ったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 工場があって、人がいて、暮らしがある場所にね。
+- id: shime
+  title: ''
+  background: yk_ima
+  bgm: haru_kitchen
+  stage:
+  - who: zundamon
+    x: 0.3
+    flip: true
+    emotion: normal
+  - who: tsumugi
+    x: 0.74
+    emotion: normal
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今日、ファスナーを上げるとき、つまみを見てみて。
+  - speaker: zundamon
+    emotion: happy
+    text: 三文字が書いてあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 書いてなくても、それはそれで面白いわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: よその会社ということなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。真似できないと言われた所に、追いついた会社よ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……百本に一本を、無くしにいった人がいたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 買った人には、その一本が全部だからね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクのズボンも、ちゃんと閉まるぞ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: ……ずんだもん。それ、さっきから開いてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 機械のせいではないのだ。ボクのせいなのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

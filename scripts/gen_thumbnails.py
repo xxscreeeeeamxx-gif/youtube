@@ -2544,6 +2544,41 @@ B1 = (26, 20, 12, 255)
 Y1 = (255, 214, 40, 255)
 
 # コマの地色。**1枚のうち必ず1コマは明るい色にする**（3コマとも暗いと実寸で沈む）
+def p_ykbox(d, s):
+    """潰れた店に残っていた木箱。中身は半端なファスナー。
+    実在の意匠は描かず、木箱と覗いた金具だけで「売れ残り」を出す。"""
+    d.polygon([(s * 0.12, s * 0.40), (s * 0.88, s * 0.40),
+               (s * 0.80, s * 0.90), (s * 0.20, s * 0.90)],
+              fill=(150, 116, 80), outline=(104, 78, 52), width=int(s * 0.026))
+    d.rectangle([s * 0.20, s * 0.56, s * 0.80, s * 0.64], fill=(120, 92, 62))
+    # 開いた蓋
+    d.polygon([(s * 0.10, s * 0.40), (s * 0.90, s * 0.40),
+               (s * 0.84, s * 0.26), (s * 0.16, s * 0.26)],
+              fill=(168, 134, 96), outline=(104, 78, 52), width=int(s * 0.022))
+    # はみ出した半製品
+    for i, x in enumerate((0.30, 0.48, 0.66)):
+        d.rectangle([s * x, s * (0.30 + i * 0.01), s * (x + 0.06), s * 0.42],
+                    fill=(216, 212, 200), outline=(158, 152, 140), width=int(s * 0.012))
+
+
+def p_ykzip(d, s):
+    """ファスナー。左右の務歯がかみ合い、下にスライダー。"""
+    for side in (0, 1):
+        x0 = s * (0.22 if side == 0 else 0.56)
+        d.rectangle([x0, s * 0.10, x0 + s * 0.22, s * 0.66], fill=(206, 202, 192),
+                    outline=(150, 146, 136), width=int(s * 0.016))
+        for k in range(7):
+            y = s * (0.14 + k * 0.072)
+            d.rectangle([x0 + (s * 0.16 if side == 0 else 0), y,
+                         x0 + (s * 0.24 if side == 0 else s * 0.08), y + s * 0.042],
+                        fill=(178, 182, 188), outline=(132, 136, 142), width=int(s * 0.010))
+    # スライダー
+    d.rounded_rectangle([s * 0.34, s * 0.62, s * 0.66, s * 0.80], radius=s * 0.04,
+                        fill=(170, 176, 182), outline=(120, 126, 132), width=int(s * 0.018))
+    d.rounded_rectangle([s * 0.42, s * 0.78, s * 0.58, s * 0.94], radius=s * 0.03,
+                        fill=(150, 156, 162), outline=(110, 116, 122), width=int(s * 0.016))
+
+
 def p_cpbowl(d, s):
     """草原の器。内モンゴルでふるまわれた、乳を発酵させた白い食べもの。
     民族意匠は特定できないので、無地の木の器と白い中身だけで描く。"""
@@ -2794,6 +2829,11 @@ SPECS = {
         head_hi="トヨタ", panels=[
         _p("p_loom", "1933年 倉庫", BROWN, "normal", "布を織ってた", "もとは織機屋"),
         _p("p_engineblock", "作っても割れる", SLATE, "sad", "9割が屑なのだ", "エンジンの鋳物"),
+    ]),
+    "ykk": dict(layout="panels", headline="YKKは潰れた店から始まった",
+        head_hi="潰れた店", panels=[
+        _p("p_ykbox", "1933年 日本橋", BROWN, "sad", "店をたたむのだ", "未払いの売れ残り"),
+        _p("p_ykzip", "世界のズボンへ", TEAL, "happy", "全部同じ三文字", "真似できない技術"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[
