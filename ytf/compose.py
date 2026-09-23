@@ -426,10 +426,12 @@ class Composer:
         text = split_reading(text)[0]
         d = ImageDraw.Draw(canvas, "RGBA")
         f = self.font(38)
-        # 12〜14文字で折り返し（句読点優先ではなく単純分割で十分短い前提）
+        # 14文字で折り返す。行頭に句読点や小さい仮名が来るときは前の行へぶら下げる
+        # （単純分割だと「、日本中に」「。」だけの行ができていた。2026-09-23）
         limit = 14
-        lines = [text[i:i + limit] for i in range(0, len(text), limit)][:3]
-        if len(text) > limit * 3:
+        all_lines = _split_bubble_lines(text, limit)
+        lines = all_lines[:3]
+        if len(all_lines) > 3:
             lines[-1] = lines[-1][:limit - 1] + "…"
         lh = 52
         tw = max(d.textlength(ln, font=f) for ln in lines)
@@ -455,8 +457,9 @@ class Composer:
         d = ImageDraw.Draw(canvas, "RGBA")
         f = self.font(42)
         limit = 26
-        lines = [text[i:i + limit] for i in range(0, len(text), limit)][:2]
-        if len(text) > limit * 2:
+        all_lines = _split_bubble_lines(text, limit)
+        lines = all_lines[:2]
+        if len(all_lines) > 2:
             lines[-1] = lines[-1][:limit - 1] + "…"
         lh = 58
         tw = max(d.textlength(ln, font=f) for ln in lines)
@@ -515,6 +518,21 @@ def _cover(img: Image.Image, w: int, h: int) -> Image.Image:
     x = (img.width - w) // 2
     y = (img.height - h) // 2
     return img.crop((x, y, x + w, y + h))
+
+
+_NO_LINE_HEAD = "、。，．！？!?…）」』ー・ぁぃぅぇぉっゃゅょァィゥェォッャュョ"
+
+
+def _split_bubble_lines(text: str, limit: int) -> list[str]:
+    """吹き出しを limit 文字で割る。行頭禁則の文字は2文字までぶら下げる。"""
+    lines, i = [], 0
+    while i < len(text):
+        j = min(i + limit, len(text))
+        while j < len(text) and text[j] in _NO_LINE_HEAD and j - i < limit + 2:
+            j += 1
+        lines.append(text[i:j])
+        i = j
+    return lines
 
 
 def _wrap(d: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
