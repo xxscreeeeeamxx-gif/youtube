@@ -1,0 +1,1348 @@
+meta:
+  title: 【明治神宮の森の誕生】畑の上に、150年後の森を設計した男【ずんだもん解説】
+  slug: honda-seiroku
+  summary: 東京の真ん中にある、あの深い森。実は100年ちょっと前に、人が植えた森です。計画を立てたのは、学校で最下位を取ったこともある林学者でした。杉の森にしろという声に、彼は何と答えたのか。月給の4分の1を必ず先に取っておいた男が、自分では見られない先の森の姿まで描いていた話です。
+  tags:
+  - 明治神宮
+  - 本多静六
+  - 日比谷公園
+  - 首かけイチョウ
+  - 森づくり
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 林学
+  - 貯金
+  thumbnail:
+    top: 人が植えた森
+    bottom: 明治神宮の森の誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: haha
+    label: 母
+    voice: 8
+    pitch: 0.02
+  - id: shujin
+    label: 書生先の主人
+    voice: 13
+    pitch: -0.02
+  - id: doukyu
+    label: 同級生
+    voice: 12
+    pitch: 0.02
+  - id: senko
+    label: 妻・銓子
+    voice: 8
+    pitch: -0.03
+  - id: kyoju
+    label: ミュンヘンの教授
+    voice: 13
+    pitch: -0.06
+  - id: tatsuno
+    label: 辰野金吾
+    voice: 13
+    pitch: 0.02
+  - id: hoshi
+    label: 星亨
+    voice: 42
+    pitch: 0.0
+  - id: okuma
+    label: 大隈重信
+    voice: 42
+    pitch: -0.04
+  - id: hongo
+    label: 本郷高徳
+    voice: 12
+    pitch: -0.02
+  - id: uehara
+    label: 上原敬二
+    voice: 12
+    pitch: 0.06
+  - id: seinen
+    label: 青年団員
+    voice: 12
+    pitch: 0.03
+  - id: shokunin
+    label: 植木職人
+    voice: 42
+    pitch: 0.02
+scenes:
+- id: hook
+  title: ''
+  background: hs_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、見るのだ。公園でドングリを拾って、植えたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 鉢植えね。何を育てるの？
+  - speaker: zundamon
+    emotion: happy
+    text: 森なのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 森。
+  - speaker: zundamon
+    emotion: happy
+    text: 明日には、森になってるぞ。
+  - speaker: tsumugi
+    emotion: angry
+    text: ならないわよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 水をたっぷりあげたら、早く伸びるのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 鉢から、水があふれてる。
+  - speaker: zundamon
+    emotion: happy
+    text: 肥料も、袋ごと入れるのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: やりすぎよ！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……一晩たったけど、芽が出ない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当たり前よ。
+  - speaker: zundamon
+    emotion: angry
+    text: なら今度は、大きな木を買ってきて、並べるぞ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは森じゃなくて、植木屋さんよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……森って、どうやったらできるのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 何十年も、何百年もかかるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: そんなに、待てないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 待てないのを分かっていて、森を作った人がいるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 誰だ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京の真ん中にある、明治神宮の森。あれは、人が植えた森なのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: あれ、大昔からある森じゃないのか！？
+    se: don
+  - speaker: tsumugi
+    emotion: thinking
+    text: 100年ちょっと前は、ほとんどが畑と野原だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 畑！？
+  - speaker: reimu
+    text: 明治神宮の森、およそ70ヘクタール。
+    reading: めいじ じんぐうの もり、およそ ななじゅう へくたある。
+  - speaker: reimu
+    text: この森づくりの中心にいたのは、本多静六という林学者でした。
+    reading: この もりづくりの ちゅうしんに いたのわ、ほんだ せいろくという りんがくしゃでした。
+  - speaker: tsumugi
+    emotion: happy
+    text: しかもその人、月給の4分の1を、必ず先に貯金してた人でもあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 森と貯金が、どうつながるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが、ちゃんとつながるのよ。始まりは、埼玉の小さな村。
+- id: card1866
+  title: ''
+  background: hs_card_1866
+  cuts:
+  - speaker: reimu
+    text: 1866年。埼玉県の村に生まれました。
+    reading: せんはっぴゃく ろくじゅうろくねん。さいたまけんの むらに うまれました。
+  - speaker: reimu
+    text: 地元の資料によると、名主を務める農家の六男で、もとの名字は折原でした。
+    reading: じもとの しりょうに よると なぬしお つとめる のうかの ろくなんで、もとの みょうじわ おりはらでした。
+- id: ch1_mura
+  title: 借金を背負った家
+  background: hs_nouka
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 静六, scale: 0.8, emotion: normal}
+  - {who: haha, x: 0.68, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 9歳のころ、父が急に亡くなり、家は借金を抱えます。
+    reading: きゅうさいの ころ ちちが きゅうに なくなり、いえわ しゃっきんお かかえます。
+  - speaker: haha
+    emotion: sad
+    text: '[静六|せいろく]。父さんの残した借金が、まだたくさんあるの。'
+  - speaker: zundamon
+    emotion: normal
+    text: ボクも、働く。
+  - speaker: haha
+    emotion: thinking
+    text: お前は、まだ小さいでしょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 田んぼなら、手伝えるぞ。
+  - speaker: haha
+    emotion: thinking
+    text: 勉強は、どうするの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……働きながら、するのだ。
+  - speaker: haha
+    emotion: surprised
+    text: 欲張りな子だね。
+  - speaker: zundamon
+    emotion: happy
+    text: 両方、ほしいのだ。
+- id: ch1_jokyo
+  title: ''
+  background: hs_nouka
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 静六, scale: 0.85, emotion: normal}
+  - {who: haha, x: 0.68, emotion: thinking}
+  cuts:
+  - speaker: haha
+    emotion: thinking
+    text: 東京の家に、住み込みで行くんだって？
+  - speaker: zundamon
+    emotion: normal
+    text: 書生になるのだ。家の用事をしながら、勉強させてもらうのだ。
+  - speaker: haha
+    emotion: sad
+    text: 田植えと稲刈りは、どうするの。
+  - speaker: zundamon
+    emotion: happy
+    text: その時期は、帰ってくるのだ。半分ずつなのだ。
+  - speaker: haha
+    emotion: surprised
+    text: 東京と村を、行ったり来たり？
+  - speaker: zundamon
+    emotion: normal
+    text: 借金は、村で返す。勉強は、東京でするのだ。
+  - speaker: haha
+    emotion: happy
+    text: ……本当に、両方取るつもりなんだね。
+  - speaker: zundamon
+    emotion: happy
+    text: 欲張りだから、なのだ。
+- id: ch1_shosei
+  title: ''
+  background: hs_shosei
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 静六, scale: 0.9, emotion: normal}
+  - {who: shujin, x: 0.68, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 14歳で、東京の家に書生として住み込みます。
+    reading: じゅうよんさいで、とうきょうの いえに しょせいとして すみこみます。
+  - speaker: shujin
+    emotion: normal
+    text: '[静六|せいろく]。田植えの時期だろう。村に帰っていいぞ。'
+  - speaker: zundamon
+    emotion: normal
+    text: また半年、村で働いてくるのだ。
+  - speaker: shujin
+    emotion: thinking
+    text: 戻ったら、また勉強か。
+  - speaker: zundamon
+    emotion: happy
+    text: 帰ったら、まず田植えなのだ。
+  - speaker: shujin
+    emotion: happy
+    text: 忙しい若者だな。
+  - speaker: zundamon
+    emotion: normal
+    text: 本は、村に持って帰るぞ。
+  - speaker: shujin
+    emotion: surprised
+    text: 田んぼで読むのか。
+  - speaker: zundamon
+    emotion: happy
+    text: 休みの時間に、読むのだ。
+  - speaker: reimu
+    text: 半年は東京で学び、半年は村で働く。この暮らしを3年続けました。
+    reading: はんとしわ とうきょうで まなび、はんとしわ むらで はたらく。この くらしお さんねん つづけました。
+- id: ch1_erabu
+  title: ''
+  background: hs_shosei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 静六, emotion: normal}
+  - {who: shujin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shujin
+    emotion: thinking
+    text: どの学校を受けるか、決めたのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 山林学校にするのだ。
+  - speaker: shujin
+    emotion: surprised
+    text: 山林？ 木の学校か。
+  - speaker: zundamon
+    emotion: thinking
+    text: 正直に言うと、学費が安いのだ。
+  - speaker: shujin
+    emotion: happy
+    text: 正直でいい。
+  - speaker: zundamon
+    emotion: normal
+    text: それに、村の山なら、ずっと見てきたのだ。
+  - speaker: shujin
+    emotion: normal
+    text: 好きなものと、払えるものが同じなら、迷うことはない。
+  - speaker: zundamon
+    emotion: happy
+    text: 迷わないぞ。
+  - speaker: reimu
+    text: 学費の安さで選んだと、本人がのちに語ったとも伝えられています。
+    reading: がくひの やすさで えらんだと、ほんにんが のちに かたったとも つたえられています。
+- id: card1884
+  title: ''
+  background: hs_card_1884
+  cuts:
+  - speaker: reimu
+    text: 1884年。東京山林学校に入学します。
+    reading: せんはっぴゃく はちじゅうよねん。とうきょう さんりん がっこうに にゅうがくします。
+- id: ch2_rakudai
+  title: 最下位からの逆転
+  background: hs_gakko
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 静六, emotion: sad}
+  - {who: doukyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ところが成績は最下位。落第も経験します。
+    reading: ところが せいせきわ さいかい。らくだいも けいけんします。
+  - speaker: doukyu
+    emotion: normal
+    text: '[折原|おりはら]。また、一番下だったな。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……一番下なのだ。
+  - speaker: doukyu
+    emotion: thinking
+    text: どうする。やめるか。
+  - speaker: zundamon
+    emotion: angry
+    text: やめない。
+  - speaker: doukyu
+    emotion: surprised
+    text: 何か、手はあるのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 人より遅いなら、人より長くやるのだ。
+  - speaker: doukyu
+    emotion: surprised
+    text: 寝ないつもりか。
+  - speaker: zundamon
+    emotion: normal
+    text: 寝るけど、ほかの時間は全部、勉強にするぞ。
+  - speaker: doukyu
+    emotion: thinking
+    text: 遊ぶ時間は。
+  - speaker: zundamon
+    emotion: happy
+    text: 勉強が、遊びになるまでやるのだ。
+- id: ch3_muko
+  title: ''
+  background: hs_honke
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: senko, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 在学中の1889年、静六は本多家の娘と結婚し、婿養子に入りました。
+    reading: ざいがくちゅうの せんはっぴゃく はちじゅうくねん、せいろくわ ほんだけの むすめと けっこんし むこようしに はいりました。
+  - speaker: reimu
+    text: 妻は、日本で4人目の、公認の女性の医師でした。
+    reading: つまわ、にほんで よにんめの こうにんの じょせいの いしでした。
+  - speaker: senko
+    emotion: happy
+    text: 医者の家に、山の学問をするお婿さんね。
+  - speaker: zundamon
+    emotion: normal
+    text: 人のお医者さんと、木のお医者さんなのだ。
+  - speaker: senko
+    emotion: surprised
+    text: 木にも、お医者さんが要るの？
+  - speaker: zundamon
+    emotion: normal
+    text: 木も病気になるし、けがもするのだ。
+  - speaker: senko
+    emotion: happy
+    text: なら、同業ね。
+  - speaker: zundamon
+    emotion: happy
+    text: 同業だぞ。
+- id: card1890
+  title: ''
+  background: hs_card_1890
+  cuts:
+  - speaker: reimu
+    text: 1890年。静六は、帝国大学の農科大学を首席で卒業します。
+    reading: せんはっぴゃく きゅうじゅうねん。せいろくわ、ていこく だいがくの のうか だいがくお しゅせきで そつぎょうします。
+    telops:
+    - {text: "最下位から、首席で卒業", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: そしてその年、ドイツへ留学します。
+    reading: そして その とし、どいつえ りゅうがくします。
+- id: ch3_shuppatsu
+  title: ''
+  background: hs_honke
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: senko, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: senko
+    emotion: normal
+    text: ドイツへは、どれくらい行くの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 博士になるまでなのだ。何年かかるかは、分からないぞ。
+  - speaker: senko
+    emotion: thinking
+    text: その[間|あいだ]、家は私が守るわね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 診察も、あるのに。
+  - speaker: senko
+    emotion: happy
+    text: 家で患者さんを診るわ。医者は、どこでも医者だもの。
+  - speaker: zundamon
+    emotion: sad
+    text: ……頼むのだ。
+  - speaker: senko
+    emotion: normal
+    text: その代わり、木のお医者さんとして、ちゃんと帰ってきて。
+  - speaker: zundamon
+    emotion: happy
+    text: 一番いい薬を、覚えて帰るのだ。
+- id: ch4_doitsu
+  title: 孫が見る森
+  background: hs_doitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: kyoju, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ターラントの山林学校で学んだあと、ミュンヘン大学へ移ります。
+    reading: たあらんとの さんりん がっこうで まなんだ あと、みゅんへん だいがくえ うつります。
+  - speaker: kyoju
+    emotion: normal
+    text: 君は、日本から来たのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 森の育て方を、学びに来たのだ。
+  - speaker: kyoju
+    emotion: normal
+    text: この国では、森は何十年、何百年も先を考えて計画する。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分が生きてるうちに、終わらないのだ。
+  - speaker: kyoju
+    emotion: happy
+    text: 植えた者は、見られない。孫が見る。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……それでも、植えるのか。
+  - speaker: kyoju
+    emotion: normal
+    text: それでも植える。それが、森の仕事だ。
+  - speaker: zundamon
+    emotion: normal
+    text: 孫のために、今日の計画を立てるのだ。
+  - speaker: reimu
+    text: 静六は、およそ2年で博士の学位を取りました。
+    reading: せいろくわ、およそ にねんで はかせの がくいお とりました。
+  - speaker: reimu
+    text: 途中で家からの仕送りが途絶え、学位を急いだとも伝えられています。
+    reading: とちゅうで いえからの しおくりが とだえ、がくいお いそいだとも つたえられています。
+- id: ch5_chokin
+  title: 4分の1の天引き
+  background: hs_honke
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: senko, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1892年ごろ帰国した静六は、母校で教え始めます。
+    reading: せんはっぴゃく きゅうじゅうにねん ごろ きこくした せいろくわ、ぼこうで おしえはじめます。
+  - speaker: senko
+    emotion: normal
+    text: 今月のお給料は、58円ね。
+  - speaker: zundamon
+    emotion: normal
+    text: まず、4分の1を貯金に回すのだ。
+  - speaker: senko
+    emotion: surprised
+    text: 先に？ 残ったら、じゃなくて？
+  - speaker: zundamon
+    emotion: normal
+    text: 残ったらでは、いつまでも残らないのだ。
+  - speaker: senko
+    emotion: thinking
+    text: 家族はこれから増えるのよ。残りで、やっていける？
+  - speaker: zundamon
+    emotion: normal
+    text: やっていけるように、やりくりするのだ。
+  - speaker: senko
+    emotion: angry
+    text: やりくりするのは、主に私よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……いつも、ありがとうなのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 原稿料みたいな、臨時の収入は、全部貯金するぞ。
+  - speaker: senko
+    emotion: surprised
+    text: 全部！？
+  - speaker: zundamon
+    emotion: happy
+    text: 無かったものと思えば、痛くないのだ。
+  - speaker: reimu
+    text: 月給の4分の1を、先に天引きして貯金する。
+    reading: げっきゅうの よんぶんの いちお、さきに てんびきして ちょきんする。
+    telops:
+    - {text: "月給の4分の1を、先に天引き", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 貯まったお金は、山林や株に回しました。
+    reading: たまった おかねわ、さんりんや かぶに まわしました。
+  - speaker: reimu
+    text: 1899年には、日本で最初の林学博士にもなっています。
+    reading: せんはっぴゃく きゅうじゅうくねんにわ、にほんで さいしょの りんがく はかせにも なっています。
+- id: card1901
+  title: ''
+  background: hs_card_1901
+  cuts:
+  - speaker: reimu
+    text: 1901年。
+    reading: せんきゅうひゃく いちねん。
+- id: ch6_hibiya
+  title: 決まらない公園
+  background: hs_akichi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: tatsuno, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 東京の日比谷に公園を作る計画は、いくつも設計案が出されては、通らずにいました。
+    reading: とうきょうの ひびやに こうえんお つくる けいかくわ いくつも せっけいあんが だされてわ、とおらずに いました。
+  - speaker: tatsuno
+    emotion: normal
+    text: 本多くん。日比谷の公園、君に頼みたい。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクは、林学の人間なのだ。
+  - speaker: tatsuno
+    emotion: thinking
+    text: 西洋の町の公園を、君はその目で見てきただろう。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ドイツで、見てきたのだ。
+  - speaker: tatsuno
+    emotion: happy
+    text: 建物のことなら私が分かる。木と庭は、君だ。
+  - speaker: zundamon
+    emotion: normal
+    text: やるぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: 花壇と、池と、広い芝生。誰でも[入れる|はいれる]公園にするぞ。
+  - speaker: tatsuno
+    emotion: happy
+    text: 頼もしいね。
+  - speaker: reimu
+    text: 建築家の辰野金吾の推薦で、静六が設計を任されたとされています。
+    reading: けんちくかの たつの きんごの すいせんで、せいろくが せっけいお まかされたと されています。
+- id: ch6_ichou
+  title: 首をかける
+  background: hs_ichou
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.26, flip: true, tag: 本多静六, emotion: normal}
+  - {who: hoshi, x: 0.76, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: そのころ、道を広げるため、大きなイチョウが切られることになっていました。
+    reading: そのころ みちお ひろげる ため、おおきな いちょうが きられる ことに なっていました。
+  - speaker: reimu
+    text: 立ちはだかったのは、東京市の有力者、星亨です。
+    reading: たちはだかったのわ、とうきょうしの ゆうりょくしゃ ほし とおるです。
+  - speaker: hoshi
+    emotion: angry
+    text: 道を広げる。このイチョウは、切る。
+  - speaker: zundamon
+    emotion: normal
+    text: 移せば、まだ生きられるのだ。
+  - speaker: hoshi
+    emotion: angry
+    text: こんな大木を動かして、枯れたら誰が責任を取る。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクが、判を押して保証するのだ。
+  - speaker: hoshi
+    emotion: angry
+    text: 判では、足りん。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……なら、首をかけるのだ。
+    se: don
+  - speaker: hoshi
+    emotion: surprised
+    text: 首を。
+  - speaker: zundamon
+    emotion: normal
+    text: 枯れたら、この首をやるのだ。
+  - speaker: hoshi
+    emotion: thinking
+    text: ……そこまで言うなら、やってみろ。
+- id: ch6_unpan
+  title: ''
+  background: hs_ichou
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: shokunin, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: レールを敷き、およそ450メートルを25日かけて運びました。
+    reading: れえるお しき、およそ よんひゃく ごじゅう めえとるお にじゅうごにち かけて はこびました。
+    telops:
+    - {text: "450メートルを25日かけて運んだ", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shokunin
+    emotion: normal
+    text: 先生。今日は、ここまでです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 何メートル、進んだのだ。
+  - speaker: shokunin
+    emotion: sad
+    text: 20メートルに、届きません。
+  - speaker: zundamon
+    emotion: normal
+    text: それでいいのだ。急いで根を痛めたら、それこそ首が飛ぶのだ。
+  - speaker: shokunin
+    emotion: surprised
+    text: 冗談に、聞こえませんね。
+  - speaker: zundamon
+    emotion: normal
+    text: 冗談じゃないのだ。
+  - speaker: shokunin
+    emotion: happy
+    text: 明日も、同じだけ進めます。
+  - speaker: zundamon
+    emotion: happy
+    text: 25日かかっても、生きて着けば勝ちなのだ。
+  - speaker: reimu
+    text: 首かけイチョウと呼ばれるこの木は、今も日比谷公園に立っています。
+    reading: くびかけ いちょうと よばれる この きわ、いまも ひびや こうえんに たっています。
+  - speaker: reimu
+    text: 1903年6月1日、日比谷公園が開園しました。
+    reading: せんきゅうひゃく さんねん ろくがつ ついたち、ひびや こうえんが かいえん しました。
+- id: ch6_kaien
+  title: ''
+  background: hs_akichi
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: それまでの東京には、誰でも自由に[入れる|はいれる]、洋風の公園はほとんど無かったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 公園って、昔からあるものじゃないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: お寺や神社の境内で、休むことはあったわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: でも、花壇と芝生と池を、散歩のために作った場所は、珍しかったのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 散歩のための場所なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日比谷公園は、その後の日本の公園づくりの手本の一つになったと言われてるわ。
+- id: ch5_rishi
+  title: ''
+  background: hs_honke
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: senko, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 40歳のころには、利子や配当のほうが、給料より多くなったといいます。
+    reading: よんじゅっさいの ころにわ りしや はいとうの ほうが、きゅうりょうより おおく なったと いいます。
+  - speaker: senko
+    emotion: surprised
+    text: あなた。今月は、利子と配当のほうが、お給料より多いわ。
+  - speaker: zundamon
+    emotion: happy
+    text: とうとう、お[金|かね]が働き始めたのだ。
+  - speaker: senko
+    emotion: thinking
+    text: 最初のころは、本当に苦しかったわね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……大勢の家族を、残りのお[金|かね]で養ったのだ。
+  - speaker: senko
+    emotion: happy
+    text: でも、ちゃんと暮らせたわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 先に取っておけば、残りでなんとかするのだ。人は、そういうふうにできてるのだ。
+  - speaker: senko
+    emotion: normal
+    text: 森と同じね。先に植えて、あとは待つ。
+  - speaker: zundamon
+    emotion: happy
+    text: その通りだ。
+- id: card1912
+  title: ''
+  background: hs_card_1912
+  cuts:
+  - speaker: reimu
+    text: 1912年7月。明治天皇が亡くなります。
+    reading: せんきゅうひゃく じゅうにねん しちがつ。めいじ てんのうが なくなります。
+  - speaker: reimu
+    text: 東京では、天皇を身近にまつりたいという声が上がります。
+    reading: とうきょうでわ、てんのうお みぢかに まつりたいという こえが あがります。
+- id: ch7_seigan
+  title: ''
+  background: hs_yoyogi
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 亡くなったその日のうちに、東京の市長が、お墓を東京にと願い出たの。
+  - speaker: zundamon
+    emotion: surprised
+    text: その日のうちに！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、お墓は京都に決まったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その代わりに、東京には天皇をまつる神社を建てることになったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 場所は、どこにしたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 候補の土地は、いくつも挙がったそうよ。
+- id: ch7_yoyogi
+  title: 畑の上の森
+  background: hs_yoyogi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 場所に選ばれたのは、代々木にあった皇室の土地よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: そこに、森はあったのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: ほとんどが畑で、荒れ地みたいな場所だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 畑の上に、神社を建てるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 神社のまわりには、森が要る。でも、その森が無いの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 森ごと、作るのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。その森づくりの中心にいたのが、本多静六たちよ。
+  - speaker: zundamon
+    emotion: normal
+    text: ドイツの教授が言ってた、孫が見る森なのだ。
+  - speaker: reimu
+    text: 1915年、神社を建てる工事が始まります。
+    reading: せんきゅうひゃく じゅうごねん、じんじゃお たてる こうじが はじまります。
+- id: ch7_hyouhon
+  title: ''
+  background: hs_yoyogi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: normal}
+  - {who: hongo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: hongo
+    emotion: normal
+    text: 先生。この辺りの杉を、何本も切って調べました。
+  - speaker: zundamon
+    emotion: normal
+    text: 年輪は、どうだったのだ。
+  - speaker: hongo
+    emotion: thinking
+    text: よその土地の杉に比べて、育ちが悪いです。
+  - speaker: zundamon
+    emotion: thinking
+    text: やっぱり、そうか。
+  - speaker: hongo
+    emotion: surprised
+    text: 分かっていたんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 分かっていても、数字がないと、人は納得しないのだ。
+  - speaker: hongo
+    emotion: normal
+    text: では、この標本を持っていきましょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 持っていくのだ。
+- id: ch8_okuma
+  title: 杉の森にしろ
+  background: hs_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 本多静六, emotion: normal}
+  - {who: hongo, x: 0.56, emotion: normal}
+  - {who: okuma, x: 0.8, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 当時の有力な政治家だった大隈重信は、杉の森を望んだと伝わっています。
+    reading: とうじの ゆうりょくな せいじかだった おおくま しげのぶわ、すぎの もりお のぞんだと つたわっています。
+  - speaker: okuma
+    emotion: normal
+    text: 本多くん。神宮の森は、杉にしたまえ。日光のような、立派な杉の森だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 杉は、この土地では育ちが良くないのだ。
+  - speaker: okuma
+    emotion: angry
+    text: では、[雑木|ぞうき]の藪にするつもりか。
+  - speaker: hongo
+    emotion: normal
+    text: 代々木の周りの杉を、切って調べてきました。
+  - speaker: zundamon
+    emotion: normal
+    text: これが、その標本なのだ。年輪の幅を見てほしいのだ。
+  - speaker: okuma
+    emotion: surprised
+    text: ……年輪の間が狭い。育ちが遅い、ということか。
+  - speaker: zundamon
+    emotion: normal
+    text: それに、近くを汽車の煙が通るのだ。杉は、煙に弱いのだ。
+  - speaker: okuma
+    emotion: thinking
+    text: ……では、何を植える。
+  - speaker: zundamon
+    emotion: normal
+    text: 最後は、カシやシイ、クスの森にするのだ。
+  - speaker: okuma
+    emotion: thinking
+    text: 地味な木だな。
+  - speaker: zundamon
+    emotion: happy
+    text: 地味だけど、人が植えなくても、自分で次の木を育てる森になるのだ。
+  - speaker: okuma
+    emotion: surprised
+    text: 人が植えなくても、か。
+  - speaker: reimu
+    text: 林学者たちの説明を聞き、大隈は最後に納得したと伝えられています。
+    reading: りんがくしゃたちの せつめいお きき、おおくまわ さいごに なっとく したと つたえられています。
+- id: ch9_keikaku
+  title: 150年後の予想図
+  background: hs_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 本多静六, emotion: normal}
+  - {who: hongo, x: 0.56, emotion: normal}
+  - {who: uehara, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: hongo
+    emotion: normal
+    text: 先生。森の移り変わりを、4枚の絵にしました。
+  - speaker: zundamon
+    emotion: normal
+    text: 植えたとき、50年後、100年後、150年後なのだ。
+  - speaker: uehara
+    emotion: surprised
+    text: 150年後。ここにいる誰も、見られませんね。
+  - speaker: zundamon
+    emotion: normal
+    text: 見られないから、絵にしておくのだ。
+  - speaker: hongo
+    emotion: normal
+    text: 最初は、一番上にマツ。その下に、ヒノキやスギを植えます。
+  - speaker: uehara
+    emotion: surprised
+    text: 杉は、断ったのでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 主役にしないだけなのだ。途中までの、脇役なら使うのだ。
+  - speaker: hongo
+    emotion: normal
+    text: 一番下には、将来の主役の、カシやシイ、クスを植えます。
+  - speaker: uehara
+    emotion: thinking
+    text: でも、背の高いマツが、下の木の日差しをさえぎりませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: それでいいのだ。カシやシイは、日陰でも育つ木なのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: マツは逆に、日なたでないと、次の世代が育たないのだ。
+  - speaker: uehara
+    emotion: surprised
+    text: だから森の中で、下の木がマツを追い抜いていく。
+  - speaker: hongo
+    emotion: normal
+    text: 何十年かでヒノキが上に立ち、百年ほどでカシやシイが森を覆います。
+  - speaker: uehara
+    emotion: thinking
+    text: 落ち葉は、掃除して運び出しますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 持ち出さないのだ。落ち葉が土になって、森を育てるのだ。
+  - speaker: hongo
+    emotion: thinking
+    text: 最後は、人が手をかけなくても続く森、ということですね。
+  - speaker: zundamon
+    emotion: happy
+    text: そうなのだ。植え替えも、肥料も、いらない森なのだ。
+  - speaker: uehara
+    emotion: surprised
+    text: 手入れのお[金|かね]も、かからない。
+  - speaker: zundamon
+    emotion: happy
+    text: 最初に手間をかけて、あとは森に任せる。天引きと同じなのだ。
+  - speaker: reimu
+    text: のちにまとめられた計画書には、植えたときから150年後まで、4枚の予想図が描かれています。
+    reading: のちに まとめられた けいかくしょにわ うえた ときから ひゃくごじゅうねんごまで、よんまいの よそうずが えがかれています。
+    telops:
+    - {text: "150年後の森まで、予想図に描いた", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 計画書を書いたのは本郷高徳、現場を指揮したのは上原敬二です。
+    reading: けいかくしょお かいたのわ ほんごう たかのり、げんばお しきしたのわ うえはら けいじです。
+- id: ch10_kenboku
+  title: 10万本の献木
+  background: hs_genba
+  bgm: you_and_me
+  stage:
+  - {who: uehara, x: 0.3, emotion: normal}
+  - {who: seinen, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 木は、全国から寄せられました。北は樺太から、南は台湾から。
+    reading: きわ ぜんこくから よせられました。きたわ からふとから、みなみわ たいわんから。
+  - speaker: reimu
+    text: その数、およそ10万本です。
+    reading: その かず、およそ じゅうまんぼんです。
+    telops:
+    - {text: "全国から寄せられた木、およそ10万本", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 植える作業には、全国の青年団が、延べおよそ11万人加わりました。
+    reading: うえる さぎょうにわ ぜんこくの せいねんだんが、のべ およそ じゅういちまんにん くわわりました。
+  - speaker: seinen
+    emotion: happy
+    text: 故郷の山から、木を運んできました。
+  - speaker: uehara
+    emotion: happy
+    text: ありがとう。遠かったでしょう。
+  - speaker: seinen
+    emotion: normal
+    text: 汽車を、何本も乗り継ぎました。
+  - speaker: uehara
+    emotion: normal
+    text: この木は、あそこの列に植えましょう。
+  - speaker: seinen
+    emotion: thinking
+    text: この木が大きくなるのは、いつですか。
+  - speaker: uehara
+    emotion: normal
+    text: 100年ほど、先です。
+  - speaker: seinen
+    emotion: surprised
+    text: 100年……。
+  - speaker: uehara
+    emotion: happy
+    text: あなたの孫が、この木の下を歩きますよ。
+  - speaker: seinen
+    emotion: happy
+    text: なら、しっかり植えます。
+- id: card1920
+  title: ''
+  background: hs_card_1920
+  cuts:
+  - speaker: reimu
+    text: 1920年11月1日。明治神宮に、神様がまつられました。
+    reading: せんきゅうひゃく にじゅうねん じゅういちがつ ついたち。めいじ じんぐうに、かみさまが まつられました。
+  - speaker: reimu
+    text: この日の参拝者は、50万人を超えました。
+    reading: この ひの さんぱいしゃわ、ごじゅうまんにんお こえました。
+- id: ch11_chinza
+  title: ''
+  background: hs_shaden
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 本多静六, emotion: happy}
+  - {who: uehara, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: uehara
+    emotion: happy
+    text: 先生。人が、どこまでも並んでいます。
+  - speaker: zundamon
+    emotion: happy
+    text: こんなに来てくれたのだ。……森は、まだ若いけどな。
+  - speaker: uehara
+    emotion: thinking
+    text: 木が、まだ細いですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 50年待てば、見違えるのだ。
+  - speaker: uehara
+    emotion: happy
+    text: そのころ、私は80を過ぎています。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、見られるぞ。
+  - speaker: uehara
+    emotion: surprised
+    text: 先生は。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクは、絵で見たから十分なのだ。
+  - speaker: reimu
+    text: 翌1921年、妻が亡くなります。
+    reading: よく せんきゅうひゃく にじゅういちねん、つまが なくなります。
+- id: ch12_kifu
+  title: 貯めたお金の行き先
+  background: hs_chichibu
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1927年、静六は大学を定年で退きます。
+    reading: せんきゅうひゃく にじゅうななねん、せいろくわ だいがくお ていねんで しりぞきます。
+  - speaker: tsumugi
+    emotion: normal
+    text: このとき、貯めてきた財産を、名前を出さずに寄付したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: せっかく貯めたのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 3年後には、秩父の山林を、埼玉県に寄付してるわ。県によると、2600ヘクタールほど。
+  - speaker: zundamon
+    emotion: thinking
+    text: 山ごと、あげたのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 使い道の条件は、学生の奨学金と、奥秩父の自然を守ること。
+  - speaker: reimu
+    text: この奨学金は、今も埼玉県の学生を支えています。
+    reading: この しょうがくきんわ、いまも さいたまけんの がくせいお ささえています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 貯めたのは、配るためだったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 考え方が分かる言葉なら、残ってるわ。人生即努力、努力即幸福。
+  - speaker: zundamon
+    emotion: surprised
+    text: 頑張ること自体が、幸せなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: もう一つ、職業の道楽化、という言葉もあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 仕事を、遊びにするのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: 夢中になれるまで打ち込めば、仕事が楽しみに変わる、って考え方よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 学校で、勉強が遊びになるまでやった話と同じなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう考えた人だったの。貯めるのも、植えるのも、その先を楽しんでたのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 森も貯金も、すぐには結果が出ないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから、先に始めた人が勝つのよ。
+- id: card1945
+  title: ''
+  background: hs_card_1945
+  cuts:
+  - speaker: reimu
+    text: 1945年4月。空襲で、明治神宮の本殿と拝殿が焼けました。
+    reading: せんきゅうひゃく よんじゅうごねん しがつ。くうしゅうで、めいじ じんぐうの ほんでんと はいでんが やけました。
+- id: ch13_kuushu
+  title: ''
+  background: hs_kuushu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.74, emotion: thinking}
+  cuts:
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、森は大きな被害を受けずに残ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 近くの人たちが、森に逃げ込んだとも言われてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 森が、燃えなかったのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 葉に水気の多い木が多かったから、とも言われてる。でも、はっきりとは分かってないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 植え始めてから、30年くらいなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: まだ若い森が、人を守ったのかもしれないわね。
+  - speaker: reimu
+    text: 戦後の1952年、本多静六は85歳で亡くなりました。
+    reading: せんごの せんきゅうひゃく ごじゅうにねん、ほんだ せいろくわ はちじゅうごさいで なくなりました。
+- id: ch14_ronsou
+  title: 天然の森じゃないの？
+  background: hs_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。明治神宮の森は、ほったらかしだから深いって。
+  - speaker: tsumugi
+    emotion: normal
+    text: ほったらかしに見えるのは、そう計画したからよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: わざと、なのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: 人が手をかけなくても続く森。それが、最初からのゴールだったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: もう一つ見たのだ。神宮の木が、再開発で切られてるって。
+  - speaker: tsumugi
+    emotion: normal
+    text: それは、神宮外苑のほうの話ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 外苑は、この森とは別の場所に、別に造られた区域なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ明治神宮なのに、別なのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 森があるのは渋谷区の内苑。イチョウ並木があるのは、新宿区や港区の外苑よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 外苑の再開発は、木を切ることの是非をめぐって、議論が続いてるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: ごちゃ混ぜにしちゃ、いけないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 内苑の森には、昔から続く決まりがあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決まり？
+  - speaker: tsumugi
+    emotion: normal
+    text: 落ち葉も枝も、森の外へ持ち出さない。それが、この森を育てる決まりなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 拾って帰ったら、ダメなのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 森の栄養を、持って帰ることになるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 見るだけにするぞ。
+- id: ch14_chokin
+  title: ''
+  background: hs_shiryo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: もう一つ見たのだ。給料の4分の1を貯金なんて、今は無理だって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本多さんの時代も、楽ではなかったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 月給58円のうち、14円50銭を先に取って、残りで一家9人が暮らしたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 9人で、4分の3なのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 4分の1という割合は、本多さんが自分で決めたルールよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大事なところは、割合より、先に取るという順番のほう。
+  - speaker: zundamon
+    emotion: normal
+    text: 大事なのは、順番なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、臨時の収入は全部貯金。無かったものと思う、ってやり方ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクのお年玉は、いつも全部使ってたのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そこが、森ができるかどうかの分かれ目ね。
+- id: ch15_gendai
+  title: 計画より早い森
+  background: hs_mori
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 森の広さは、70ヘクタールほど。
+  - speaker: zundamon
+    emotion: thinking
+    text: 東京ドーム、何個分なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 15個分くらいね。
+  - speaker: reimu
+    text: 2011年からの調査では、2800種あまりの生き物が見つかりました。
+    reading: にせん じゅういちねんからの ちょうさでわ、にせん はっぴゃくしゅ あまりの いきものが みつかりました。
+    telops:
+    - {text: "見つかった生き物、2800種あまり", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 畑だった場所に！？
+  - speaker: tsumugi
+    emotion: happy
+    text: 森の移り変わりも、予想より早く進んでいるとも言われてるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 計画より、森のほうが急いでるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 初詣に来る人の数も、全国で一番と言われてきたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 警察が数を出していた最後の年、2009年でも一番よ。
+  - speaker: zundamon
+    emotion: happy
+    text: お参りのついでに、森も歩けるのだ。
+- id: ch15_koen
+  title: ''
+  background: hs_ichou
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 日比谷公園の首かけイチョウも、今も毎年、黄色く色づくわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 首は、飛ばずにすんだのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本多さんは、ほかにもいろんな公園の計画に関わってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 埼玉の大宮公園、秩父の羊山公園、長野の[臥竜|がりゅう]公園。
+  - speaker: zundamon
+    emotion: surprised
+    text: あちこちにあるな。
+  - speaker: tsumugi
+    emotion: happy
+    text: あなたの近所の公園も、調べてみると面白いわよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 今度、入口の看板を読んでみるのだ。
+- id: shime
+  title: ''
+  background: hs_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。ボクのドングリ、まだ芽が出ないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 森は、そんなにすぐには育たないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本多さんのやり方って、森も貯金も同じだったのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 先に植えて、先に取っておくのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。残ったら、じゃなくて、先に。
+  - speaker: tsumugi
+    emotion: normal
+    text: 明治神宮を歩くときは、一度、上を見上げてみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 高い木の下で、次の世代の若い木が育ってるから。
+  - speaker: zundamon
+    emotion: normal
+    text: 足元の落ち葉は、持って帰らないのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それが、100年前の人との約束よ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクのドングリも、100年後に誰かが見るのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その前に、鉢の中を見てみたら？
+  - speaker: zundamon
+    emotion: sad
+    text: ……水のやりすぎで、根が腐ってたのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
