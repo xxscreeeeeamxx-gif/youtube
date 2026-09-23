@@ -2731,6 +2731,51 @@ def p_ktcoil(d, s):
     d.ellipse([s * 0.86, s * 0.47, s * 0.96, s * 0.57], fill=(255, 130, 50))
 
 
+def p_srdish(d, s):
+    """培養皿を重ねた絵。上の皿にだけ、生き残った菌の粒。"""
+    for k, y in enumerate((0.78, 0.60, 0.42)):
+        d.ellipse([s * 0.14, s * (y - 0.10), s * 0.86, s * (y + 0.10)], fill=(214, 224, 220),
+                  outline=(130, 146, 142), width=int(s * 0.016))
+        d.ellipse([s * 0.20, s * (y - 0.07), s * 0.80, s * (y + 0.07)], fill=(236, 226, 190))
+    for x, y in ((0.40, 0.41), (0.56, 0.44), (0.48, 0.38)):
+        d.ellipse([s * (x - 0.03), s * (y - 0.02), s * (x + 0.03), s * (y + 0.02)], fill=(230, 170, 60))
+
+
+def p_glkaki(d, s):
+    """牡蠣の殻と、煮汁の入った大釜。"""
+    d.ellipse([s * 0.10, s * 0.56, s * 0.90, s * 0.96], fill=(70, 66, 62), outline=(40, 38, 36),
+              width=int(s * 0.016))                                           # 大釜
+    d.ellipse([s * 0.16, s * 0.58, s * 0.84, s * 0.72], fill=(214, 196, 150))    # 煮汁
+    for x, y, r in ((0.34, 0.34, 0.16), (0.62, 0.30, 0.14)):                   # 牡蠣の殻
+        d.ellipse([s * (x - r), s * (y - r * 0.7), s * (x + r), s * (y + r * 0.7)], fill=(170, 166, 156),
+                  outline=(110, 106, 98), width=int(s * 0.012))
+        d.ellipse([s * (x - r * 0.55), s * (y - r * 0.35), s * (x + r * 0.55), s * (y + r * 0.35)],
+                  fill=(236, 226, 206))
+
+
+def p_glbox(d, s):
+    """赤い小箱と、ハート形の粒（文字や絵柄は入れない）。"""
+    d.rectangle([s * 0.10, s * 0.26, s * 0.56, s * 0.92], fill=(206, 40, 44), outline=(130, 20, 24),
+                width=int(s * 0.014))
+    d.rectangle([s * 0.10, s * 0.26, s * 0.56, s * 0.36], fill=(236, 200, 60))
+    cx, cy, r = s * 0.74, s * 0.60, s * 0.10                                    # ハート
+    d.ellipse([cx - r * 1.9, cy - r, cx, cy + r * 0.9], fill=(196, 134, 70))
+    d.ellipse([cx, cy - r, cx + r * 1.9, cy + r * 0.9], fill=(196, 134, 70))
+    d.polygon([(cx - r * 1.85, cy + r * 0.2), (cx + r * 1.85, cy + r * 0.2), (cx, cy + r * 2.2)],
+              fill=(196, 134, 70))
+
+
+def p_srbottle(d, s):
+    """小瓶。胴はまっすぐの汎用の形にする（実在の容器の形は描かない）。"""
+    for x, h, sc in ((0.30, 0.50, 0.8), (0.70, 0.50, 0.8), (0.50, 0.62, 1.0)):
+        w = 0.16 * sc
+        top = s * (0.92 - h)
+        d.rounded_rectangle([s * (x - w / 2), top, s * (x + w / 2), s * 0.92], radius=int(s * 0.05 * sc),
+                            fill=(240, 228, 196), outline=(150, 134, 108), width=int(s * 0.014))
+        d.rectangle([s * (x - w / 2 + 0.02), top - s * 0.06 * sc, s * (x + w / 2 - 0.02), top + s * 0.02],
+                    fill=(210, 50, 44))
+
+
 NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
 TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
 GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
@@ -2975,6 +3020,16 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "glico-ezaki": dict(layout="panels", headline="グリコは牡蠣から生まれた",
+        head_hi="牡蠣", panels=[
+        _p("p_glkaki", "1919年 佐賀", BROWN, "surprised", "煮汁を捨ててる", "牡蠣の煮汁"),
+        _p("p_glbox", "1922年 大阪", RED, "happy", "お菓子にしたのだ", "一粒300m"),
+    ]),
+    "yakult-shirota": dict(layout="panels", headline="ヤクルトの菌は胃液に勝つ",
+        head_hi="胃液に勝つ", panels=[
+        _p("p_srdish", "1930年 京都", NAVY, "sad", "また全滅なのだ", "酸で菌が死ぬ"),
+        _p("p_srbottle", "いま", RED, "happy", "毎日1本なのだ", "腸まで生きて届く"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

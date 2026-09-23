@@ -1,0 +1,1333 @@
+meta:
+  title: 【ヤクルトの誕生】胃液で死ぬ菌を、生きたまま腸に届けた医学者【ずんだもん解説】
+  slug: yakult-shirota
+  summary: 毎日飲む、あの小さな容器。中にいる乳酸菌は、どこにでもいる乳酸菌ではありません。口から飲んだ菌の多くは、胃液で死んでしまいます。それでも菌を届けたかったのが、長野の山あいで、腹の病気で死んでいく子どもたちを見て育った京都の医学者でした。大学の研究室から始まった菌は、どうやって毎日の1本になったのか。
+  tags:
+  - ヤクルト
+  - 代田稔
+  - 乳酸菌
+  - シロタ株
+  - ヤクルトレディ
+  - 予防医学
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: 胃液に勝つ菌
+    bottom: ヤクルトの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: chichi
+    label: 父
+    voice: 42
+    pitch: 0.0
+  - id: doukyu
+    label: 同級生
+    voice: 12
+    pitch: 0.08
+  - id: senpai
+    label: 教室の先輩
+    voice: 12
+    pitch: -0.03
+  - id: nagamatsu
+    label: 永松昇
+    voice: 13
+    pitch: 0.02
+  - id: hanbai
+    label: 販売店の主人
+    voice: 42
+    pitch: -0.04
+  - id: shain
+    label: 社員
+    voice: 13
+    pitch: 0.06
+  - id: lady
+    label: 販売の女性
+    voice: 8
+    pitch: 0.06
+  - id: okyaku
+    label: お客さん
+    voice: 8
+    pitch: -0.07
+  - id: obaa
+    label: おばあさん
+    voice: 8
+    pitch: -0.08
+scenes:
+- id: hook
+  title: ''
+  background: sr_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、見るのだ。冷蔵庫に、ヤクルトを10本並べたぞ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: それ、全部今日飲むつもり？
+  - speaker: zundamon
+    emotion: happy
+    text: 1本に、菌が200億個も入ってるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 10本なら2000億。ボクのおなかは、無敵なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 飲む量の目安は、1日1本よ。
+  - speaker: zundamon
+    emotion: normal
+    text: 健康のためなら、甘いものも飲み放題なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 健康のために、糖分を10倍とるの？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……甘いのは、糖分なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1本で、50キロカロリーくらい。10本なら500よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ご飯2杯分くらいなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: だいたい、そのくらいね。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、今日は1本だけにする。
+  - speaker: zundamon
+    emotion: happy
+    text: そのかわり、この1000って書いてあるやつにするのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 1000本分なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 違うわ。菌が1000億個入ってるって意味よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1000億！？ 2000億には、ちょっと足りないのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 数で勝負しないの。
+    se: oti
+  - speaker: tsumugi
+    emotion: thinking
+    text: ずんだもん。その菌って、飲んだあと、どこへ行くと思う？
+  - speaker: zundamon
+    emotion: normal
+    text: そりゃ、おなかだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その前に、胃を通るの。胃の中は、強い酸でいっぱいなのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 菌が、溶けちゃうのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: ふつうの菌なら、ほとんど生き残れないわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: でもヤクルトの菌は、生きたまま腸まで届くように、選び抜かれた菌なの。
+  - speaker: reimu
+    text: ヤクルトの乳製品は、世界で1日に3800万本以上飲まれています。
+    reading: やくるとの にゅうせいひんわ、せかいで いちにちに さんぜん はっぴゃくまんぼん いじょう のまれています。
+    telops:
+    - {text: "世界で1日3800万本以上", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 胃液に負けない菌を選び出したのは、長野生まれの代田稔という医学者でした。
+    reading: いえきに まけない きんお えらびだしたのわ、ながの うまれの しろた みのるという いがくしゃでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 医学者？ 会社の社長さんじゃないのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、子どものころに見た、村の病気なの。
+- id: card1899
+  title: ''
+  background: sr_card_1899
+  cuts:
+  - speaker: reimu
+    text: 1899年。長野県の、今の飯田市で生まれます。
+    reading: せんはっぴゃく きゅうじゅうくねん。ながのけんの いまの いいだしで うまれます。
+- id: ch1_mura
+  title: 村の子どもたち
+  background: sr_ie
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, scale: 0.8, emotion: normal}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 家は、紙を扱う問屋と、蚕を育てる仕事をしていたと伝えられています。
+    reading: いえわ かみお あつかう とんやと、かいこお そだてる しごとお していたと つたえられています。
+  - speaker: chichi
+    emotion: normal
+    text: '[稔|みのる]。桑の葉を、蚕のところへ運んでくれ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 分かった。蚕は、よく食べるのだ。
+  - speaker: chichi
+    emotion: happy
+    text: 食べた分だけ、いい糸を吐く。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……父さん。となりの家の子が、今日も寝込んでるのだ。
+  - speaker: chichi
+    emotion: thinking
+    text: 腹を下して、もう何日もたつそうだな。
+  - speaker: zundamon
+    emotion: sad
+    text: お医者さんには、診てもらわないのだ？
+  - speaker: chichi
+    emotion: thinking
+    text: 医者を呼ぶ[金|かね]も、滋養のある物を食べさせる余裕も、ない家なんだ。
+  - speaker: zundamon
+    emotion: sad
+    text: 食べる物があれば、治るのだ？
+  - speaker: chichi
+    emotion: normal
+    text: 体に力があれば、持ちこたえる子も多い。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……うちの蚕のほうが、よく食べてる。
+- id: ch1_mura2
+  title: ''
+  background: sr_mura
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, scale: 0.8, emotion: sad}
+  - {who: chichi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 村では、赤痢や疫痢で、幼い子どもが命を落とすことが珍しくありませんでした。
+    reading: むらでわ せきりや えきりで、おさない こどもが いのちお おとすことが めずらしく ありませんでした。
+  - speaker: zundamon
+    emotion: sad
+    text: ……あの子、助からなかった。
+  - speaker: chichi
+    emotion: thinking
+    text: ……そうか。
+  - speaker: zundamon
+    emotion: sad
+    text: 栄養があれば、治ったかもしれないのに。
+  - speaker: chichi
+    emotion: thinking
+    text: 貧しい家ほど、子どもが先に弱る。
+  - speaker: zundamon
+    emotion: normal
+    text: 父さん。ボクは、医者になるのだ。
+  - speaker: chichi
+    emotion: surprised
+    text: 医者に？
+  - speaker: zundamon
+    emotion: normal
+    text: 死ぬ子を、一人でも減らしたい。
+  - speaker: chichi
+    emotion: normal
+    text: ……勉強は、きついぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: やってみせる。
+  - speaker: reimu
+    text: 周りの子どもたちの死が、医学を志すきっかけになったと伝えられています。
+    reading: まわりの こどもたちの しが いがくお こころざす きっかけに なったと つたえられています。
+- id: ch1_gakkou
+  title: ''
+  background: sr_michi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, scale: 0.88, emotion: happy}
+  - {who: doukyu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1913年、飯田の中学に入り、片道8キロの道を毎日歩いて通ったと伝えられています。
+    reading: せんきゅうひゃく じゅうさんねん いいだの ちゅうがくに はいり、かたみち はちきろの みちお まいにち あるいて かよったと つたえられています。
+  - speaker: doukyu
+    emotion: surprised
+    text: '[稔|みのる]。毎日、こんな遠くから歩いてるのか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 行って帰って、16キロなのだ。足なら、誰にも負けないぞ。
+  - speaker: doukyu
+    emotion: thinking
+    text: 雨の日もか。
+  - speaker: zundamon
+    emotion: normal
+    text: 雨の日も、雪の日もだ。
+  - speaker: doukyu
+    emotion: thinking
+    text: '[何|なん]のために、そこまでするんだ。'
+  - speaker: zundamon
+    emotion: normal
+    text: 医者になるには、勉強がいるのだ。
+  - speaker: doukyu
+    emotion: happy
+    text: なら、歩きながら単語でも覚えろよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……その手があったのだ。
+  - speaker: reimu
+    text: 1918年には、仙台の第二高等学校に進みます。
+    reading: せんきゅうひゃく じゅうはちねんにわ せんだいの だいに こうとう がっこうに すすみます。
+- id: card1921
+  title: ''
+  background: sr_card_1921
+  cuts:
+  - speaker: reimu
+    text: 1921年。京都帝国大学の医学部に入ります。
+    reading: せんきゅうひゃく にじゅういちねん。きょうと ていこく だいがくの いがくぶに はいります。
+- id: ch2_kyoto
+  title: 胃で死ぬ菌
+  background: sr_kyoshitsu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1925年に卒業すると、微生物を研究する教室に残り、助手になります。
+    reading: せんきゅうひゃく にじゅうごねんに そつぎょうすると、びせいぶつお けんきゅうする きょうしつに のこり じょしゅに なります。
+  - speaker: senpai
+    emotion: normal
+    text: '[代田|しろた]くん。患者を診る医者にならずに、菌の研究か。'
+  - speaker: zundamon
+    emotion: normal
+    text: 病気を治すより、病気にならない方法を探したいのだ。
+  - speaker: senpai
+    emotion: thinking
+    text: 予防か。ワクチンでも作るつもりかい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 腸なのだ。ボクの村では、腹の病気で死ぬ子どもが多かった。
+  - speaker: senpai
+    emotion: normal
+    text: 腸の中には、菌が山ほど住んでいるからな。
+  - speaker: zundamon
+    emotion: normal
+    text: 体にいい菌も、悪い菌もいる。
+  - speaker: zundamon
+    emotion: happy
+    text: いい菌を増やして悪い菌を抑えれば、病気になりにくい腸になるはずなのだ。
+  - speaker: senpai
+    emotion: thinking
+    text: いい菌を、どうやって増やす。
+  - speaker: zundamon
+    emotion: happy
+    text: 外から、口で飲めばいいのだ。
+  - speaker: senpai
+    emotion: normal
+    text: 飲んだ菌は、胃で死ぬぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……胃で？
+  - speaker: senpai
+    emotion: normal
+    text: 胃液は、強い酸だ。ほとんどの菌は、あそこで死ぬ。
+  - speaker: senpai
+    emotion: thinking
+    text: 運よく抜けても、次は胆汁が待っている。
+  - speaker: zundamon
+    emotion: sad
+    text: ……飲ませた菌が、腸に着く前に全滅する。
+  - speaker: senpai
+    emotion: happy
+    text: 菌を飲ませて病気を防ぐなんて、夢物語だよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……なら、胃液にも胆汁にも負けない菌を、探せばいいのだ。
+  - speaker: senpai
+    emotion: surprised
+    text: 簡単に言うね。
+- id: ch2_ikan
+  title: ''
+  background: sr_chou
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。胃液って、そんなに強い酸なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 空腹のときの胃液は、pH1から2くらい。レモン汁より強い酸と言われてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: レモン汁より！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 食べ物についてきた菌を、ここでまとめて殺すのが、胃の仕事の一つなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 悪い菌から、体を守ってるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。でも、いい菌まで一緒に殺されちゃう。
+  - speaker: zundamon
+    emotion: sad
+    text: 胃には、菌の見分けがつかないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 胃を抜けると、今度は胆汁がかかるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 胆汁って、何をする液なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 脂を溶かす液よ。菌の体を包む膜も、脂でできてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 膜が、溶かされるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 酸で弱らせて、そのあと膜を壊す。体の入り口は、[二段構え|にだんがまえ]なのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 菌にとっては、命がけの通り道なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 代田さんは、その二つに勝つ菌を探し始めたの。
+- id: ch3_baiyou
+  title: 酸の中の選抜
+  background: sr_baichi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 代田は、自然の中から集めた多くの菌を強い酸の中で育て、生き残るものを選んでいきました。
+    reading: しろたわ しぜんの なかから あつめた おおくの きんお つよい さんの なかで そだて、いきのこる ものお えらんで いきました。
+  - speaker: senpai
+    emotion: surprised
+    text: '[代田|しろた]くん、まだいたのか。もう夜中だぞ。'
+  - speaker: zundamon
+    emotion: sad
+    text: この皿も、全滅だ。
+  - speaker: senpai
+    emotion: thinking
+    text: 酸を、また強くしたのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 弱い酸で生き残っても、胃の中では役に立たないのだ。
+  - speaker: senpai
+    emotion: normal
+    text: これまで、何種類試したんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……数えるのを、やめたのだ。
+  - speaker: senpai
+    emotion: happy
+    text: 研究者の答えじゃないな。
+  - speaker: zundamon
+    emotion: normal
+    text: 生き残ったのがいたら、それを育てて、また酸に入れるのだ。
+  - speaker: senpai
+    emotion: thinking
+    text: 気の長い話だ。
+  - speaker: zundamon
+    emotion: normal
+    text: 急いでも、菌は育たないのだ。
+  - speaker: senpai
+    emotion: normal
+    text: 博士の論文は、どうした。
+  - speaker: zundamon
+    emotion: happy
+    text: そっちも、ちゃんと書いてるぞ。
+  - speaker: reimu
+    text: 1930年に医学博士となりますが、その論文は乳酸菌ではなく、血清を使った検査の研究でした。
+    reading: せんきゅうひゃく さんじゅうねんに いがく はかせと なりますが、その ろんぶんわ にゅうさんきんでわ なく けっせいお つかった けんさの けんきゅうでした。
+- id: card1930
+  title: ''
+  background: sr_card_1930
+  cuts:
+  - speaker: reimu
+    text: 1930年。胃液にも胆汁にも負けない乳酸菌の、強化培養に成功します。
+    reading: せんきゅうひゃく さんじゅうねん。いえきにも たんじゅうにも まけない にゅうさんきんの きょうか ばいように せいこう します。
+- id: ch3_seikou
+  title: ''
+  background: sr_baichi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: surprised}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: ……生きてる。
+  - speaker: senpai
+    emotion: thinking
+    text: 何がだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 胃液と同じくらいの酸に入れたのに、この菌だけ生きてるのだ！
+    se: don
+  - speaker: senpai
+    emotion: surprised
+    text: 本当か。胆汁のほうは。
+  - speaker: zundamon
+    emotion: happy
+    text: そっちでも、残った！
+  - speaker: senpai
+    emotion: happy
+    text: やったな、[代田|しろた]くん。
+  - speaker: zundamon
+    emotion: happy
+    text: 乳酸菌だから、腸に着いたら、そこで乳酸を作るのだ。
+  - speaker: senpai
+    emotion: normal
+    text: 夢物語と言ったのは、取り消すよ。
+  - speaker: reimu
+    text: 生きて腸まで届く乳酸菌の強化培養は、世界で初めてだったと言われています。
+    reading: いきて ちょうまで とどく にゅうさんきんの きょうか ばいようわ、せかいで はじめてだったと いわれています。
+    telops:
+    - {text: "胃液にも胆汁にも負けない乳酸菌", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: この年の暮れ、代田は講師になっています。
+    reading: この としの くれ しろたわ こうしに なっています。
+- id: ch4_nedan
+  title: ''
+  background: sr_kyoshitsu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: senpai
+    emotion: happy
+    text: これで論文を書けば、君の名前は学界に残るぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 論文だけでは、村の子どもには届かないのだ。
+  - speaker: senpai
+    emotion: thinking
+    text: なら、薬にして売るか。薬なら、高く売れる。
+  - speaker: zundamon
+    emotion: normal
+    text: 高いと、[金|かね]のない家の子は買えないのだ。
+  - speaker: senpai
+    emotion: surprised
+    text: じゃあ、どうするんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎日飲める、安い飲み物にするのだ。
+  - speaker: senpai
+    emotion: thinking
+    text: 大学の先生が、飲み物屋を始めるのか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……作り方も、売り方も、分からないのだ。
+  - speaker: senpai
+    emotion: happy
+    text: 菌を育てるのとは、わけが違うからな。
+  - speaker: reimu
+    text: 代田の考えは、のちにこう言い表されます。誰もが願う健康を、誰もが手に入れられる価格で。
+    reading: しろたの かんがえわ のちに こう いいあらわされます。だれもが ねがう けんこうお、だれもが てにいれられる かかくで。
+    telops:
+    - {text: "誰もが願う健康を、誰もが手に入れられる価格で", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch4_nagamatsu
+  title: 菌を分けてください
+  background: sr_kyoshitsu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: normal}
+  - {who: nagamatsu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そのころ、乳酸菌を分けてほしいと、何度も大学を訪ねてくる男がいました。
+    reading: その ころ にゅうさんきんお わけて ほしいと、なんども だいがくお たずねてくる おとこが いました。
+  - speaker: nagamatsu
+    emotion: normal
+    text: ごめんください。乳酸菌を研究されている先生は、こちらでしょうか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクだ。どちらさまなのだ？
+  - speaker: nagamatsu
+    emotion: happy
+    text: '[永松|ながまつ]と申します。何度も伺って、ようやくお会いできました。'
+  - speaker: nagamatsu
+    emotion: normal
+    text: 乳酸菌の飲み物を作って、売る仕事をしています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 飲み物屋さんが、[何|なん]の用なのだ。
+  - speaker: nagamatsu
+    emotion: normal
+    text: 先生が育てた菌を、分けていただきたいのです。
+  - speaker: zundamon
+    emotion: normal
+    text: この菌は、ただのおいしい飲み物のための菌じゃないのだ。
+  - speaker: nagamatsu
+    emotion: surprised
+    text: と、おっしゃいますと。
+  - speaker: zundamon
+    emotion: normal
+    text: 病気にならない体を作るための菌だ。腸を丈夫にすれば、長生きできるのだ。
+  - speaker: nagamatsu
+    emotion: thinking
+    text: 病気になってから飲む薬ではなく、なる前に飲むもの……。
+  - speaker: zundamon
+    emotion: normal
+    text: だから毎日、誰でも買える値段でないと、意味がないのだ。
+  - speaker: nagamatsu
+    emotion: surprised
+    text: 毎日、誰でも……。
+  - speaker: nagamatsu
+    emotion: happy
+    text: ……先生。その考えに、私は乗ります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 乗る？
+  - speaker: nagamatsu
+    emotion: happy
+    text: 作るのと売るのは、私にやらせてください。先生は、菌を守ってください。
+  - speaker: zundamon
+    emotion: happy
+    text: ……頼む。
+  - speaker: reimu
+    text: 実業家の永松昇は、代田の考えに感動して、事業を引き受けたと伝えられています。
+    reading: じつぎょうかの ながまつ のぼるわ しろたの かんがえに かんどうして、じぎょうお ひきうけたと つたえられています。
+- id: card1935
+  title: ''
+  background: sr_card_1935
+  cuts:
+  - speaker: reimu
+    text: 1935年。福岡で、ヤクルトの製造と販売が始まります。
+    reading: せんきゅうひゃく さんじゅうごねん。ふくおかで やくるとの せいぞうと はんばいが はじまります。
+- id: ch5_fukuoka
+  title: 7倍に薄める瓶
+  background: sr_tonin
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 代田稔, emotion: happy}
+  - {who: nagamatsu, x: 0.52, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: nagamatsu
+    emotion: happy
+    text: 先生。ここが、福岡の唐人町の工場です。
+  - speaker: zundamon
+    emotion: happy
+    text: 最初のヤクルトは、どんな形なのだ？
+  - speaker: nagamatsu
+    emotion: normal
+    text: 大きなガラス瓶に、濃い原液を入れるんです。
+  - speaker: nagamatsu
+    emotion: normal
+    text: 720ミリリットルの瓶です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 大きいな。一気に飲むのだ？
+  - speaker: nagamatsu
+    emotion: angry
+    text: 飲みません。7倍に薄めて飲むんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 家で、水で薄めるのか。
+  - speaker: nagamatsu
+    emotion: normal
+    text: そうです。原液は各地の販売店に配って、店で瓶に詰めて、家まで届けます。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎日、家まで届くのだ。
+  - speaker: reimu
+    text: 名前はヤクルト。エスペラント語で、ヨーグルトを意味するヤフルトから作られました。
+    reading: なまえわ やくると。えすぺらんとごで よーぐるとお いみする やふるとから つくられました。
+    telops:
+    - {text: "名前はエスペラント語から", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: エスペラント語は、国をこえて誰でも使えるように作られた言葉よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 世界の人に、通じる名前なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 誰がどんな思いで付けたかは、はっきりしないの。
+  - speaker: reimu
+    text: 1938年には、ヤクルトの名前が商標登録されます。
+    reading: せんきゅうひゃく さんじゅうはちねんにわ やくるとの なまえが しょうひょう とうろく されます。
+  - speaker: reimu
+    text: 同じ1938年、代田は京都の大学を離れています。
+    reading: おなじ せんきゅうひゃく さんじゅうはちねん しろたわ きょうとの だいがくお はなれています。
+  - speaker: reimu
+    text: 満洲のハルビンの医科大学に移り、翌年には下関に研究所を開いたとされています。
+    reading: まんしゅうの はるびんの いかだいがくに うつり、よくねんにわ しものせきに けんきゅうじょお ひらいたと されています。
+- id: ch5_bin
+  title: ''
+  background: sr_hanbai
+  bgm: pop
+  stage:
+  - {who: nagamatsu, x: 0.3, flip: true, emotion: normal}
+  - {who: hanbai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: hanbai
+    emotion: thinking
+    text: '[永松|ながまつ]さん。瓶が、足りません。'
+  - speaker: nagamatsu
+    emotion: surprised
+    text: 足りない？
+  - speaker: hanbai
+    emotion: normal
+    text: 小分けの瓶が手に入らんので、ビール瓶や牛乳瓶に詰めてます。
+  - speaker: nagamatsu
+    emotion: thinking
+    text: ビール瓶で、ヤクルトを……。
+  - speaker: hanbai
+    emotion: sad
+    text: それでも足りなくて、目薬の瓶や、注射薬の瓶まで使ってます。
+  - speaker: nagamatsu
+    emotion: surprised
+    text: 注射薬の瓶！？
+  - speaker: hanbai
+    emotion: happy
+    text: 病院の薬みたいで、よく効きそうだと言われますよ。
+  - speaker: nagamatsu
+    emotion: angry
+    text: 薬と間違えられては、困ります。
+    se: oti
+  - speaker: reimu
+    text: 1940年ごろからは、販売を受け持つ普及会が各地に作られ、多いときには500社を超えたとされています。
+    reading: せんきゅうひゃく よんじゅうねん ごろからわ はんばいお うけもつ ふきゅうかいが かくちに つくられ、おおいときにわ ごひゃくしゃお こえたと されています。
+    telops:
+    - {text: "販売の普及会、多いときは500社超", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: card1941
+  title: ''
+  background: sr_card_1941
+  cuts:
+  - speaker: reimu
+    text: 1941年。太平洋戦争が始まります。
+    reading: せんきゅうひゃく よんじゅういちねん。たいへいよう せんそうが はじまります。
+- id: ch6_sensou
+  title: 牛乳がない
+  background: sr_senji
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: thinking}
+  - {who: nagamatsu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: nagamatsu
+    emotion: thinking
+    text: 先生。牛乳が、もう手に入りません。
+  - speaker: zundamon
+    emotion: sad
+    text: 菌を育てる元が、ないのだ。
+  - speaker: nagamatsu
+    emotion: normal
+    text: 代わりに、蚕のさなぎを使ってみます。
+  - speaker: zundamon
+    emotion: surprised
+    text: さなぎ？
+  - speaker: nagamatsu
+    emotion: normal
+    text: 糸を取ったあとのさなぎなら、まだ手に入るんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……子どものころ、家で毎日見ていた。
+  - speaker: reimu
+    text: 牛乳の代わりに蚕のさなぎを使ったものの、それも尽きて、事業は縮んでいったと伝えられています。
+    reading: ぎゅうにゅうの かわりに かいこの さなぎお つかった ものの それも つきて、じぎょうわ ちぢんで いったと つたえられています。
+  - speaker: nagamatsu
+    emotion: sad
+    text: 先生。作れる量が、どんどん減っています。
+  - speaker: zundamon
+    emotion: sad
+    text: ……菌だけは、絶やさないのだ。
+  - speaker: nagamatsu
+    emotion: normal
+    text: いつか、また一から始めましょう。
+- id: ch6_sengo
+  title: ''
+  background: sr_omuta
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: normal}
+  - {who: nagamatsu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 戦争が終わると、代田と永松は、散り散りになった仲間を集め直したとされています。
+    reading: せんそうが おわると、しろたと ながまつわ ちりぢりに なった なかまお あつめなおしたと されています。
+  - speaker: nagamatsu
+    emotion: happy
+    text: 先生。ここが、大牟田の新しい工場です。
+  - speaker: zundamon
+    emotion: happy
+    text: また、作れるのだ。
+  - speaker: nagamatsu
+    emotion: normal
+    text: 戦前の販売店にも、声をかけています。戻ってくれる店も多い。
+  - speaker: zundamon
+    emotion: happy
+    text: 待っていてくれたのだ。
+  - speaker: nagamatsu
+    emotion: thinking
+    text: ただ、瓶の大きさは、店ごとにばらばらのままです。
+  - speaker: zundamon
+    emotion: thinking
+    text: いつか、そろえないとな。
+  - speaker: reimu
+    text: 1951年には、福岡の大牟田で工場が動き始めたとされています。
+    reading: せんきゅうひゃく ごじゅういちねんにわ ふくおかの おおむたで こうじょうが うごきはじめたと されています。
+- id: card1955
+  title: ''
+  background: sr_card_1955
+  cuts:
+  - speaker: reimu
+    text: 1955年。東京に、ヤクルト本社ができます。
+    reading: せんきゅうひゃく ごじゅうごねん。とうきょうに やくると ほんしゃが できます。
+- id: ch7_honsha
+  title: 65ミリリットル
+  background: sr_honsha
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: normal}
+  - {who: nagamatsu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: nagamatsu
+    emotion: happy
+    text: 先生。会長は先生、社長は私。これで決まりです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクは、研究のほうがいいのだ。
+  - speaker: nagamatsu
+    emotion: normal
+    text: 研究は、京都でどうぞ。研究所も作ります。
+  - speaker: zundamon
+    emotion: happy
+    text: それなら、引き受けよう。
+  - speaker: nagamatsu
+    emotion: thinking
+    text: それと、瓶の大きさを、いよいよそろえます。
+  - speaker: zundamon
+    emotion: normal
+    text: ビール瓶も目薬の瓶も、おしまいなのだ。
+  - speaker: nagamatsu
+    emotion: normal
+    text: 小さい30ミリと、大きい65ミリ。この2種類にします。
+  - speaker: zundamon
+    emotion: thinking
+    text: 65ミリは、どういう量なのだ？
+  - speaker: nagamatsu
+    emotion: normal
+    text: 毎日飲んでも飽きなくて、一度で飲み切れる量です。
+  - speaker: zundamon
+    emotion: happy
+    text: 飲み切れば、残りが傷む心配もないのだ。
+  - speaker: nagamatsu
+    emotion: happy
+    text: 子どもでも、お年寄りでも、飲み切れます。
+  - speaker: reimu
+    text: このとき決まった65ミリリットルは、今のヤクルトにも受け継がれています。
+    reading: この とき きまった ろくじゅうご みりりっとるわ、いまの やくるとにも うけつがれています。
+    telops:
+    - {text: "65ミリは1955年から", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: card1963
+  title: ''
+  background: sr_card_1963
+  cuts:
+  - speaker: reimu
+    text: 1963年。永松が退き、代田が2代目の社長になります。
+    reading: せんきゅうひゃく ろくじゅうさんねん。ながまつが しりぞき しろたが にだいめの しゃちょうに なります。
+- id: ch8_lady
+  title: 届ける人
+  background: sr_kaigi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 社長。買ってくださるお客さんの多くは、家にいる奥さんたちです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 毎日飲んでもらうには、毎日届けないといけないのだ。
+  - speaker: shain
+    emotion: normal
+    text: それに、冷やしておいてくださいと、ひと言添える人が要ります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 瓶を置いていくだけじゃ、だめだな。
+  - speaker: shain
+    emotion: happy
+    text: 近所の奥さんたちに、届ける側になってもらうのはどうでしょう。
+  - speaker: zundamon
+    emotion: surprised
+    text: お客さんと同じ、奥さんたちに？
+  - speaker: shain
+    emotion: normal
+    text: 同じ立場なら、話も通じます。家のことの合間に、働けますし。
+  - speaker: zundamon
+    emotion: happy
+    text: いいぞ。やってみるのだ。
+  - speaker: reimu
+    text: この年に始まった婦人販売店の仕組みが、のちのヤクルトレディにつながります。
+    reading: この としに はじまった ふじん はんばいてんの しくみが、のちの やくるとれでぃに つながります。
+- id: ch8_haitatsu
+  title: ''
+  background: sr_danchi
+  bgm: honwaka_puppu
+  stage:
+  - {who: lady, x: 0.3, flip: true, emotion: happy}
+  - {who: okyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: lady
+    emotion: happy
+    text: こんにちは。ヤクルトです。
+  - speaker: okyaku
+    emotion: happy
+    text: あら、今日もありがとう。
+  - speaker: lady
+    emotion: normal
+    text: 冷蔵庫に入れて、冷やして飲んでくださいね。
+  - speaker: okyaku
+    emotion: surprised
+    text: 冷やすと、何か違うの？
+  - speaker: lady
+    emotion: normal
+    text: 菌が、元気なまま長持ちするんです。
+  - speaker: okyaku
+    emotion: thinking
+    text: うちの子にも、毎日飲ませたいわ。
+  - speaker: lady
+    emotion: happy
+    text: では、明日からお子さんの分も、1本増やしますね。
+  - speaker: okyaku
+    emotion: happy
+    text: 毎日来てくれると、話し相手ができて助かるわ。
+  - speaker: reimu
+    text: 子どもを預けて働けるように、販売会社は保育所も用意しています。今では750か所を超えます。
+    reading: こどもお あずけて はたらけるように、はんばい がいしゃわ ほいくしょも よういしています。いまでわ ななひゃく ごじゅっかしょお こえます。
+- id: ch9_youki
+  title: くびれた容器
+  background: sr_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。配達の人たちから、瓶が重いという声が多くて。
+  - speaker: zundamon
+    emotion: thinking
+    text: ガラス瓶は、重いうえに割れるのだ。
+  - speaker: shain
+    emotion: normal
+    text: 空き瓶の回収も大変です。集めて、洗って、また詰めて。
+  - speaker: zundamon
+    emotion: normal
+    text: 一度きりの容器にすれば、回収はいらないのだ。
+  - speaker: shain
+    emotion: thinking
+    text: 軽くて、割れなくて、中身が傷まない容器……。
+  - speaker: zundamon
+    emotion: happy
+    text: 作れないなら、材料から作るぞ。
+  - speaker: reimu
+    text: 1964年には初めての海外として、台湾で販売が始まりました。
+    reading: せんきゅうひゃく ろくじゅうよねんにわ はじめての かいがいとして たいわんで はんばいが はじまりました。
+  - speaker: reimu
+    text: 新しい容器は、樹脂も型も詰める機械も独自に作り、完成まで5年ほどかかりました。
+    reading: あたらしい ようきわ じゅしも かたも つめる きかいも どくじに つくり、かんせいまで ごねんほど かかりました。
+    telops:
+    - {text: "完成まで5年がかり", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 1967年には、研究の拠点が東京の国立に移ります。
+    reading: せんきゅうひゃく ろくじゅうななねんにわ けんきゅうの きょてんが とうきょうの くにたちに うつります。
+- id: card1968
+  title: ''
+  background: sr_card_1968
+  cuts:
+  - speaker: reimu
+    text: 1968年。ガラス瓶がプラスチックの容器に変わります。
+    reading: せんきゅうひゃく ろくじゅうはちねん。がらすびんが ぷらすちっくの ようきに かわります。
+- id: ch9_kubire
+  title: ''
+  background: sr_youki
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 形を手がけたのは剣持勇のデザイン研究所です。
+    reading: かたちお てがけたのわ けんもち いさおの でざいん けんきゅうじょです。
+  - speaker: reimu
+    text: 瓶の回収がいらなくなって配達が軽くなり、販売は大きく伸びました。
+    reading: びんの かいしゅうが いらなく なって はいたつが かるくなり、はんばいわ おおきく のびました。
+  - speaker: reimu
+    text: 同じ1968年の暮れには、プロ野球の球団の経営も引き継ぎます。のちのヤクルトスワローズです。
+    reading: おなじ せんきゅうひゃく ろくじゅうはちねんの くれにわ、ぷろやきゅうの きゅうだんの けいえいも ひきつぎます。のちの やくると すわろーずです。
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。あの容器、なんで真ん中がくびれてるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の説明だと、持ちやすくて、一気に口へ流れ込まないためよ。
+  - speaker: zundamon
+    emotion: happy
+    text: こけしの形をまねした、って聞いたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その話は、確かな裏付けが見つからないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: こけし説、証拠がないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: デザインした側は、決まった量と高さの中で、工場の機械に合わせた結果だと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ガラス瓶より、大きく見せたいという注文もあったそうよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 小さいのに、大きく見える形なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: この形は、2011年に立体商標にも登録されてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 形だけで、ヤクルトだと分かるのだ。
+- id: ch10_bannen
+  title: 研究に戻る
+  background: sr_enkai
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 代田稔, emotion: happy}
+  - {who: lady, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1970年に社長を退くと、代田は経営より研究に力を注いだと言われています。
+    reading: せんきゅうひゃく ななじゅうねんに しゃちょうお しりぞくと、しろたわ けいえいより けんきゅうに ちからお そそいだと いわれています。
+  - speaker: reimu
+    text: 販売の女性たちの慰労会には、欠かさず顔を出したと伝えられています。
+    reading: はんばいの じょせいたちの いろうかいにわ、かかさず かおお だしたと つたえられています。
+  - speaker: lady
+    emotion: happy
+    text: '[代田|しろた]先生。今年も、来てくださったんですね。'
+  - speaker: zundamon
+    emotion: happy
+    text: みんなが届けてくれるから、菌が家まで行けるのだ。
+  - speaker: lady
+    emotion: normal
+    text: 私たちは、ただ配っているだけですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 一度きりじゃなく、毎日届くのが一番大事なのだ。
+  - speaker: lady
+    emotion: happy
+    text: では、明日も配ります。
+- id: ch10_houmon
+  title: 愛の訪問
+  background: sr_genkan
+  bgm: amacha_hoshizora
+  stage:
+  - {who: lady, x: 0.3, flip: true, emotion: normal}
+  - {who: obaa, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1972年、福島県の郡山。販売の女性が、一人暮らしのお年寄りの孤独死の話に心を痛めます。
+    reading: せんきゅうひゃく ななじゅうにねん ふくしまけんの こおりやま。はんばいの じょせいが ひとりぐらしの おとしよりの こどくしの はなしに こころお いためます。
+  - speaker: lady
+    emotion: normal
+    text: おばあちゃん、ヤクルトです。
+  - speaker: obaa
+    emotion: surprised
+    text: あら。うちは、頼んでないよ。
+  - speaker: lady
+    emotion: happy
+    text: 私からです。お代は、いりません。
+  - speaker: obaa
+    emotion: thinking
+    text: どうして、そこまでしてくれるんだい。
+  - speaker: lady
+    emotion: normal
+    text: 毎日、顔を見に来たいんです。
+  - speaker: obaa
+    emotion: happy
+    text: ……じゃあ、明日も待ってるよ。
+  - speaker: reimu
+    text: 一人暮らしのお年寄りの様子を確かめる、愛の訪問活動の始まりです。
+    reading: ひとりぐらしの おとしよりの ようすお たしかめる、あいの ほうもん かつどうの はじまりです。
+  - speaker: reimu
+    text: 自分のお金で届け始めたこの訪問は、今では100を超える自治体に広がっています。
+    reading: じぶんの おかねで とどけはじめた この ほうもんわ、いまでわ ひゃくお こえる じちたいに ひろがっています。
+    telops:
+    - {text: "100を超える自治体へ", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch10_shi
+  title: ''
+  background: sr_baichi
+  cuts:
+  - speaker: reimu
+    text: 1982年3月、代田稔は82歳で亡くなりました。
+    reading: せんきゅうひゃく はちじゅうにねん さんがつ しろた みのるわ はちじゅうにさいで なくなりました。
+- id: ch11_shikumi
+  title: 腸の中の菌
+  background: sr_chou
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。代田さんの菌は、今のヤクルトにも入ってるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 入ってるわ。乳酸菌シロタ株。代田さんの名前がついてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前入りなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 菌の分類の名前は何度か変わったけど、シロタの名前はずっと残ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ふつうのヤクルト1本に、菌がおよそ200億個いるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 飲んだら、どれくらい生き残るのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 100億個を、3日続けて飲んでもらった実験があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: うんちを調べると、1グラムあたり、生きた菌が1000万くらい見つかったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 生きたまま、出口まで来てるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 腸に着いた菌は、乳酸を作って、腸の中を酸っぱくするの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 酸っぱいと、どうなるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 酸っぱいのが苦手な悪い菌は、増えにくくなるわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: ビフィズス菌みたいな良い菌は、逆に増えやすくなるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 腸の中で、味方を増やしてくれるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、ずっと住み着くわけじゃないの。[数日|すうじつ]で、外に出ていっちゃう。
+  - speaker: zundamon
+    emotion: surprised
+    text: 出ていくのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 飲むのをやめて2週間たつと、ほとんどの人で元どおりになった研究もあるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どっちも、会社の研究者が加わった研究だけどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: だから、毎日なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 毎日届けるやり方と、ちょうど噛み合ってるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ところで、ヤクルトのあの色は、[何|なん]の色なのだ？ 色をつけてるのか？
+  - speaker: tsumugi
+    emotion: normal
+    text: 色は足してないの。牛乳の成分と糖を温めたときに、自然につく色なのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: パンの焼き色と、同じなのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。どっちも、糖とたんぱく質の仲間が反応してできる色ね。
+- id: ch12_ronsou
+  title: 飲んでも意味ない？
+  background: sr_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。乳酸菌は胃酸で死ぬから、飲んでも意味ないって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 多くの乳酸菌は、たしかに胃でかなり死ぬわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: でもシロタ株は、まさにそこを生き残るように選ばれた菌なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 代田さんが、酸の中で選んだ菌なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、死んだ菌やその成分にも働きがある、という考え方もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2021年には、専門家の学会がポストバイオティクスとして定義をまとめたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 死んでも、働いてるのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、ヤクルト1000を飲めば、ぐっすり眠れるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ストレスがかかるときの、睡眠の質を高める。そういう表示が届け出されてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大事な試験を控えた、医学部の4年生が対象よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 飲んだ48人と、よく似た偽の飲み物を飲んだ46人を比べたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 合わせて94人で、決まったのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 人数が少ないし、対象が医学生に偏ってる、という指摘もあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに機能性表示食品は、国が一つずつ審査したものじゃないの。薬でもないわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 飲めば必ず眠れる薬じゃ、ないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に気をつけたいのは、糖分のほうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ふつうのヤクルト1本で、炭水化物が11.5グラム。
+  - speaker: tsumugi
+    emotion: normal
+    text: 原材料の一番はじめに書いてあるのは、ぶどう糖果糖液糖なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 砂糖の仲間が、一番はじめなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: WHOは、食べ物に足す糖を1日25グラム未満にするのが望ましいとしてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 炭水化物には牛乳の糖も入ってるから、全部が足した糖じゃないけどね。
+  - speaker: zundamon
+    emotion: sad
+    text: 10本飲んだら、炭水化物だけで115グラムなのだ……。
+  - speaker: tsumugi
+    emotion: angry
+    text: だから目安は、1日1本。たくさん飲んでも、そのぶん効くわけじゃないの。
+  - speaker: zundamon
+    emotion: normal
+    text: 1本を、毎日。
+  - speaker: tsumugi
+    emotion: happy
+    text: 少しを、毎日。最初から、そういう飲み物なのよ。
+- id: ch13_gendai
+  title: 世界の1日
+  background: sr_sekai
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ヤクルトは今、40の国と地域で売られてるの。[日本|にほん]も含めてね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 40も！
+  - speaker: tsumugi
+    emotion: normal
+    text: 海外で一番多く飲まれてるのは、インドネシアよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: インドネシアでは、1日に何本なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 乳製品を合わせて、1日におよそ580万本。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[日本|にほん]の外で、そんなに飲まれてるのだ！'
+  - speaker: tsumugi
+    emotion: normal
+    text: 届ける女性たちも、国内におよそ3万1000人、海外に5万人近くいるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 海外のほうが、多いじゃないか。
+  - speaker: tsumugi
+    emotion: happy
+    text: ヤクルト1000は、2022年に品薄になるほど売れたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 流行語のトップテンにも入ったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの冷蔵庫にも、今あるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年には、世界最大の乳酸菌飲料ブランドとして、ギネス世界記録にも認められたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ギネスなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 始まりは、京都の研究室で、酸の中を生き残った菌だったのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 村の子どもを、助けたかったのだ。
+- id: shime
+  title: ''
+  background: sr_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: つむぎ。残りの10本は、明日から1本ずつ飲むのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 10日で、ちょうど飲み切るのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 賞味期限、見た？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あさってまでなのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 買いすぎよ。家族で1本ずつ分けなさい。
+    se: oti
+  - speaker: zundamon
+    emotion: happy
+    text: みんなで、1本ずつなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 胃液をくぐり抜ける菌を、毎日買える値段で。それが、代田さんの答えだったのね。
+  - speaker: tsumugi
+    emotion: happy
+    text: あなたが今日飲む1本にも、その菌が入ってるのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 甘いのは、ほどほどにする。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
