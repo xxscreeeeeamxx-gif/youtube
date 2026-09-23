@@ -1,0 +1,1185 @@
+meta:
+  title: 【養殖真珠の誕生】うどん屋の息子が、貝に真珠を作らせるまで【ずんだもん解説】
+  slug: mikimoto-pearl
+  summary: 真珠は昔、海に潜って開けた貝の中から、たまたま見つかる宝石でした。それを、貝に作らせる仕事に変えた男がいます。鳥羽のうどん屋に生まれ、野菜の行商から身を起こした男が、なぜ真珠に賭けたのか。赤潮で貝が全滅しても、海外で偽物と呼ばれても、やめなかった理由。真珠が光る仕組みと、今の真珠の海も。
+  tags:
+  - 真珠
+  - 御木本幸吉
+  - 養殖真珠
+  - アコヤ貝
+  - ミキモト
+  - 鳥羽
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: 貝に作らせた
+    bottom: 養殖真珠の誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: chichi
+    label: 父
+    voice: 42
+    pitch: 0.0
+  - id: suihei
+    label: 英国の水兵
+    voice: 13
+    pitch: 0.08
+  - id: shounin
+    label: 貿易商
+    voice: 13
+    pitch: -0.04
+  - id: ume
+    label: 妻・うめ
+    voice: 8
+    pitch: -0.02
+  - id: yanagi
+    label: 柳楢悦
+    voice: 42
+    pitch: -0.03
+  - id: mitsukuri
+    label: 箕作佳吉
+    voice: 12
+    pitch: -0.03
+  - id: ama
+    label: 海女
+    voice: 8
+    pitch: 0.05
+  - id: tenin
+    label: 店の者
+    voice: 12
+    pitch: 0.04
+  - id: edison
+    label: エジソン
+    voice: 42
+    pitch: -0.06
+  - id: kumiai
+    label: 組合の者
+    voice: 42
+    pitch: 0.04
+scenes:
+- id: hook
+  title: ''
+  background: mk_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、見るのだ。アサリを、10個も買ってきたぞ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今夜はお味噌汁ね。
+  - speaker: zundamon
+    emotion: happy
+    text: 違うぞ。この中に、砂を1粒ずつ入れていくのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 砂抜きしたアサリに、わざわざ砂を？
+  - speaker: zundamon
+    emotion: happy
+    text: 貝は、中に入った砂を包んで、真珠にするのだ。1か月後には、真珠が10個なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その話、どこで聞いたの？
+  - speaker: zundamon
+    emotion: normal
+    text: みんな言ってるぞ。アサリで作る、家庭の真珠工場なのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……1か月後。全部、口を開けて動かない。
+  - speaker: tsumugi
+    emotion: normal
+    text: アサリは、水から出したら長くはもたないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 次は、もっと大きいハマグリに、砂利を入れる。
+  - speaker: tsumugi
+    emotion: angry
+    text: 大きくすれば解決、じゃないのよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 真珠を作るのは、貝の中の、ある細胞なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今のお店に並ぶ真珠は、ほとんどが人の手で貝に手術をして作らせたものよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 貝に、手術なのだ！？
+    se: don
+  - speaker: reimu
+    text: 真珠。昔は、海に潜って貝を開け、たまたま見つかるのを待つしかない宝石でした。
+    reading: しんじゅ。むかしわ うみに もぐって かいお あけ、たまたま みつかるのお まつしか ない ほうせきでした。
+  - speaker: reimu
+    text: それを、貝に作らせる仕事に変えたのは、鳥羽のうどん屋に生まれた、御木本幸吉という男でした。
+    reading: それお かいに つくらせる しごとに かえたのわ、とばの うどんやに うまれた みきもと こうきちという おとこでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: うどん屋さんが、真珠なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、野菜の行商と、港に来た外国の船よ。
+- id: card1858
+  title: ''
+  background: mk_card_1858
+  cuts:
+  - speaker: reimu
+    text: 1858年。志摩の鳥羽で、うどん屋の長男に生まれます。
+    reading: せんはっぴゃく ごじゅうはちねん。しまの とばで うどんやの ちょうなんに うまれます。
+- id: ch1_udon
+  title: 足で回す傘
+  background: mk_udonya
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, scale: 0.8, emotion: normal}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 家は、阿波幸という名のうどん屋でした。
+    reading: いえわ あわこうという なの うどんやでした。
+  - speaker: reimu
+    text: 幼い名は、吉松といいました。
+    reading: おさない なわ きちまつと いいました。
+  - speaker: reimu
+    text: 学校には、ほとんど通わなかったといいます。
+    reading: がっこうにわ ほとんど かよわなかったと いいます。
+  - speaker: chichi
+    emotion: normal
+    text: '[吉松|きちまつ]。店の手伝いが済んだら、今日は何をする。'
+  - speaker: zundamon
+    emotion: happy
+    text: 野菜を、売り歩いてくる。
+  - speaker: chichi
+    emotion: surprised
+    text: うどん屋の息子が、青物の行商か。
+  - speaker: zundamon
+    emotion: normal
+    text: うどんは、店に来た人にしか売れないのだ。野菜なら、こっちから売りに行ける。
+  - speaker: chichi
+    emotion: happy
+    text: 商いの才は、じいさんに似たな。
+  - speaker: reimu
+    text: 1871年ごろから、家業のかたわら、青物の行商を始めたとされています。
+    reading: せんはっぴゃく ななじゅういちねん ごろから、かぎょうの かたわら あおものの ぎょうしょうお はじめたと されています。
+- id: ch1_fune
+  title: ''
+  background: mk_minato
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, scale: 0.85, emotion: happy}
+  - {who: suihei, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1875年、鳥羽の港にイギリスの船が入ります。
+    reading: せんはっぴゃく ななじゅうごねん とばの みなとに いぎりすの ふねが はいります。
+  - speaker: zundamon
+    emotion: happy
+    text: 卵と野菜なのだ。取れたてだぞ。
+  - speaker: suihei
+    emotion: normal
+    text: ノー、サンキュー。
+  - speaker: zundamon
+    emotion: thinking
+    text: 断られたのだ……。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、見せるのだ。
+  - speaker: reimu
+    text: 吉松は水兵たちの前で仰向けに寝ころび、足で蛇の目傘をくるくると回してみせました。
+    reading: きちまつわ すいへいたちの まえで あおむけに ねころび、あしで じゃのめがさお くるくると まわして みせました。
+  - speaker: suihei
+    emotion: surprised
+    text: ワオ！ ワンダフル！
+  - speaker: zundamon
+    emotion: happy
+    text: 人が集まってきた。今のうちに、卵なのだ。
+  - speaker: suihei
+    emotion: happy
+    text: ハウマッチ？
+  - speaker: zundamon
+    emotion: happy
+    text: 全部、買ってくれたのだ！
+  - speaker: reimu
+    text: 足の芸で人を集め、船に卵や野菜を売り込んだと伝えられています。
+    reading: あしの げいで ひとお あつめ、ふねに たまごや やさいお うりこんだと つたえられています。
+- id: card1878
+  title: ''
+  background: mk_card_1878
+  cuts:
+  - speaker: reimu
+    text: 1878年。家を継ぎ、名を幸吉と改めます。
+    reading: せんはっぴゃく ななじゅうはちねん。いえお つぎ なお こうきちと あらためます。
+- id: ch2_yokohama
+  title: 志摩の海は宝の山
+  background: mk_yokohama
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: normal}
+  - {who: shounin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 家を継いだその年、幸吉は東京と横浜を見て回ります。
+    reading: いえお ついだ その とし こうきちわ とうきょうと よこはまお みて まわります。
+  - speaker: shounin
+    emotion: normal
+    text: お前さん、志摩から来たのか。あそこの海の物は、よく売れるよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 志摩の海の物が、売れるのだ？
+  - speaker: shounin
+    emotion: happy
+    text: 干しアワビに、ナマコ。[清国|しんこく]へ持っていけば、いい値がつく。
+  - speaker: zundamon
+    emotion: thinking
+    text: 志摩には、真珠もあるのだ。
+  - speaker: shounin
+    emotion: happy
+    text: なら、志摩の海は宝の山だな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 取れば、減る。当たり前なのだ。
+  - speaker: reimu
+    text: 天然の真珠は高値で取り引きされ、真珠を生むアコヤ貝は取り尽くされかけていました。
+    reading: てんねんの しんじゅわ たかねで とりひき され、しんじゅお うむ あこやがいわ とりつくされかけていました。
+  - speaker: reimu
+    text: 翌年には大阪や神戸も見て回り、真珠など志摩の海の物が外国へ売れると確信したとされています。
+    reading: よくねんにわ おおさかや こうべも みて まわり、しんじゅなど しまの うみの ものが がいこくえ うれると かくしんしたと されています。
+- id: ch2_ume
+  title: ''
+  background: mk_ie
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: normal}
+  - {who: ume, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1881年、元鳥羽藩士の娘、17歳のうめと結婚します。
+    reading: せんはっぴゃく はちじゅういちねん もと とばはんしの むすめ じゅうななさいの うめと けっこんします。
+  - speaker: ume
+    emotion: normal
+    text: 旦那さま。また、海の物の帳面をつけてらっしゃるの。
+  - speaker: zundamon
+    emotion: normal
+    text: 横浜で聞いてきたのだ。海の物は、海の外で売れる。
+  - speaker: ume
+    emotion: thinking
+    text: うどん屋は、どうなさるの。
+  - speaker: zundamon
+    emotion: happy
+    text: うどんも続ける。でも、海のほうが大きいぞ。
+  - speaker: ume
+    emotion: happy
+    text: 大きな話ほど、楽しそうになさるのね。
+- id: card1888
+  title: ''
+  background: mk_card_1888
+  cuts:
+  - speaker: reimu
+    text: 1888年。東京の水産品評会に志摩の海産物を出します。
+    reading: せんはっぴゃく はちじゅうはちねん。とうきょうの すいさん ひんぴょうかいに しまの かいさんぶつお だします。
+- id: ch3_yanagi
+  title: 貝を育てる
+  background: mk_hinpyoukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: normal}
+  - {who: yanagi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: yanagi
+    emotion: normal
+    text: 御木本くん。2等とは、立派なものだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 先生。真珠の貝が、年々減っているのだ。このままでは、志摩の海から消えてしまう。
+  - speaker: yanagi
+    emotion: thinking
+    text: 取るばかりでは、いずれそうなる。
+  - speaker: zundamon
+    emotion: thinking
+    text: どうすればいいのだ。
+  - speaker: yanagi
+    emotion: normal
+    text: 増やせばいい。貝を、育てるのだよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 貝を、育てる……？
+  - speaker: yanagi
+    emotion: happy
+    text: 畑で作物を育てるように、海で貝を育てる。これからは、そういう時代だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 海の中に、畑を作るのだ。
+  - speaker: yanagi
+    emotion: normal
+    text: 貝が増えれば、海女も困らん。真珠も、また取れるようになる。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、まず育ててみるぞ。
+  - speaker: reimu
+    text: 大日本水産会の柳楢悦に勧められ、幸吉はこの年、アコヤ貝を海で育て始めます。
+    reading: だいにほん すいさんかいの やなぎ ならよしに すすめられ、こうきちわ この とし あこやがいお うみで そだてはじめます。
+- id: ch3_mitsukuri
+  title: ''
+  background: mk_rinkai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: thinking}
+  - {who: mitsukuri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1890年には、東京帝国大学の箕作佳吉を、海辺の実験所に訪ねます。
+    reading: せんはっぴゃく きゅうじゅうねんにわ、とうきょう ていこく だいがくの みつくり かきちお うみべの じっけんじょに たずねます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 先生。貝を育てるだけじゃなく、真珠も作らせたいのだ。
+  - speaker: mitsukuri
+    emotion: thinking
+    text: 真珠を、人の手で作らせる、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: できるのか、できないのか、教えてほしい。
+  - speaker: mitsukuri
+    emotion: normal
+    text: 学問の理屈の上では、できるはずです。
+  - speaker: zundamon
+    emotion: happy
+    text: できるのだ！
+  - speaker: mitsukuri
+    emotion: thinking
+    text: ただ、理屈どおりにいくかは、やってみないと分かりません。
+  - speaker: zundamon
+    emotion: normal
+    text: なら、やってみるのだ。
+- id: ch4_ama
+  title: 海女と貝
+  background: mk_ikada
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: happy}
+  - {who: ama, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: ama
+    emotion: surprised
+    text: 旦那、また貝を買うのかい。真珠の入ってない貝だよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 入ってない貝がいいんだ。こっちで、入れるのだ。
+  - speaker: ama
+    emotion: thinking
+    text: 入れるって、何を。
+  - speaker: zundamon
+    emotion: normal
+    text: 貝の中に、小さな玉を入れるのだ。貝が、それを包んでくれるはずなのだ。
+  - speaker: ama
+    emotion: happy
+    text: はずって、やってみないと分からんのかい。
+  - speaker: zundamon
+    emotion: normal
+    text: だから、やってみる。入れたら、海に戻してほしいのだ。
+  - speaker: reimu
+    text: 海女から貝を買い、囲いの中で育て、幸吉自身も海に入って貝の世話をしたといいます。
+    reading: あまから かいお かい かこいの なかで そだて、こうきち じしんも うみに はいって かいの せわお したと いいます。
+  - speaker: reimu
+    text: 実験は、英虞湾の神明浦と、鳥羽の相島の2か所で進められました。
+    reading: じっけんわ あごわんの しんめいうらと、とばの おじまの にかしょで すすめられました。
+- id: ch4_shippai
+  title: ''
+  background: mk_ie
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: sad}
+  - {who: ume, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ume
+    emotion: thinking
+    text: 旦那さま。今日開けた貝は、どうでした。
+  - speaker: zundamon
+    emotion: sad
+    text: ……今日も、1粒も入ってないのだ。
+  - speaker: ume
+    emotion: normal
+    text: 入れた玉は、どうなっていたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 貝が吐き出したり、玉を入れた貝が弱って死んだりするのだ。
+  - speaker: ume
+    emotion: thinking
+    text: 今日は、もう休んで。貝は、明日また開ければいいわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 全部、帳面につけて、少しずつ変えていくしかない。
+  - speaker: reimu
+    text: 核にする小さな玉は、四日市の焼き物の職人の力も借りて作ったとされています。
+    reading: かくに する ちいさな たまわ、よっかいちの やきものの しょくにんの ちからも かりて つくったと されています。
+- id: card1892
+  title: ''
+  background: mk_card_1892
+  cuts:
+  - speaker: reimu
+    text: 1892年。英虞湾に、赤潮が広がります。
+    reading: せんはっぴゃく きゅうじゅうにねん。あごわんに あかしおが ひろがります。
+- id: ch5_akashio
+  title: 赤い海
+  background: mk_akashio
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: sad}
+  - {who: ama, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: ama
+    emotion: sad
+    text: 旦那……。海が、赤い。
+  - speaker: zundamon
+    emotion: surprised
+    text: 貝は、どうなってるのだ！
+  - speaker: ama
+    emotion: sad
+    text: '[囲い|かこい]の貝、みんな[口|くち]を開けて死んでるよ。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……何年もかけて育てた貝が、一晩で。
+  - speaker: ama
+    emotion: thinking
+    text: 赤潮が来たら、どうにもならん。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[相島|おじま]の貝は、どうなんだ。'
+  - speaker: ama
+    emotion: normal
+    text: あっちの海は、赤くなってないって聞いたよ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……まだ、全部は終わってないのだ。
+  - speaker: reimu
+    text: 英虞湾の貝はほぼ全滅しましたが、相島の貝は赤潮を免れていました。
+    reading: あごわんの かいわ ほぼ ぜんめつしましたが、おじまの かいわ あかしおお まぬがれていました。
+- id: card1893
+  title: ''
+  background: mk_card_1893
+  cuts:
+  - speaker: reimu
+    text: 1893年7月。相島の貝の中から、半円の真珠が見つかります。
+    reading: せんはっぴゃく きゅうじゅうさんねん しちがつ。おじまの かいの なかから はんえんの しんじゅが みつかります。
+- id: ch6_hanen
+  title: 半分の真珠
+  background: mk_ikada
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 見つかった真珠は5個。どれも貝殻にくっついた、半分だけ丸い形でした。
+    reading: みつかった しんじゅわ ごこ。どれも かいがらに くっついた はんぶんだけ まるい かたちでした。
+    telops:
+    - {text: "実験で初めて取れた5個", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。半分だけ丸いって、どういう真珠なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 入れた玉が、貝殻の内側に当たったまま包まれたの。半円真珠っていうのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 貝殻にくっついてるから、丸くならなかったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 片側は貝殻、片側は真珠。削り取って、裏を加工して使うの。
+  - speaker: zundamon
+    emotion: happy
+    text: 半分でも、貝が作った真珠なのだ。
+  - speaker: reimu
+    text: 1896年、この半円真珠の作り方で特許が認められます。
+    reading: せんはっぴゃく きゅうじゅうろくねん この はんえん しんじゅの つくりかたで とっきょが みとめられます。
+  - speaker: zundamon
+    emotion: happy
+    text: 次は、どこにもくっつかない、まん丸の真珠が目標なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ここから、まん丸になるまでが、また長いのよ。
+- id: ch6_ume_shi
+  title: ''
+  background: mk_ie_yoru
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 同じ1896年、妻のうめが32歳で亡くなります。5人の子が残されました。
+    reading: おなじ せんはっぴゃく きゅうじゅうろくねん つまの うめが さんじゅうにさいで なくなります。ごにんの こが のこされました。
+  - speaker: reimu
+    text: 幸吉は再婚せず、うめの位牌をなでるのを欠かさなかったと伝えられています。
+    reading: こうきちわ さいこんせず、うめの いはいお なでるのお かかさなかったと つたえられています。
+- id: ch7_ginza
+  title: 値引きしない店
+  background: mk_mise
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1899年、銀座の裏通りに御木本真珠店を開きます。
+    reading: せんはっぴゃく きゅうじゅうくねん ぎんざの うらどおりに みきもと しんじゅてんお ひらきます。
+  - speaker: tenin
+    emotion: thinking
+    text: 旦那さま。お客さんが、もう少し負けてくれと言っています。
+  - speaker: zundamon
+    emotion: normal
+    text: 負けない。値段は、値札に書いてあるとおりなのだ。
+  - speaker: tenin
+    emotion: surprised
+    text: 宝石の店で、値引きしないんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 人によって値段が変わったら、真珠そのものが信用されなくなるのだ。
+  - speaker: tenin
+    emotion: thinking
+    text: 誰が買っても、同じ値段……。
+  - speaker: zundamon
+    emotion: happy
+    text: そうだ。子どもが買いに来ても、同じ値段なのだ。
+  - speaker: reimu
+    text: 値札どおりに売る、正札販売をとりました。
+    reading: ねふだ どおりに うる しょうふだ はんばいお とりました。
+- id: card1905
+  title: ''
+  background: mk_card_1905
+  cuts:
+  - speaker: reimu
+    text: 1905年1月。多徳島の養殖場を、また赤潮が襲います。
+    reading: せんきゅうひゃく ごねん いちがつ。たとくじまの ようしょくじょうお また あかしおが おそいます。
+- id: ch8_fuyu
+  title: 冬の海の赤潮
+  background: mk_fuyu_umi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: angry}
+  - {who: ama, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 海女さんたちを、ありったけ集めるのだ！ 生きてる貝を、赤くない海へ移すのだ。
+  - speaker: ama
+    emotion: surprised
+    text: 旦那、この寒さでかい。1月の海だよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 分かってる。だから、[日当|にっとう]は5割増しにするのだ。
+  - speaker: ama
+    emotion: thinking
+    text: ……5割増しなら、行くしかないね。
+  - speaker: reimu
+    text: 冬の海に200人の海女を集め、貝を救わせたと、幸吉の娘が書き残しています。
+    reading: ふゆの うみに にひゃくにんの あまお あつめ、かいお すくわせたと こうきちの むすめが かきのこしています。
+  - speaker: reimu
+    text: それでも、養殖していた貝のおよそ5分の4、85万個が死にました。
+    reading: それでも ようしょく していた かいの およそ ごぶんの よん、はちじゅうごまんこが しにました。
+    telops:
+    - {text: "85万個の貝が死んだ", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch8_shinen
+  title: ''
+  background: mk_fuyu_umi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: sad}
+  - {who: ama, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ama
+    emotion: thinking
+    text: 旦那。死んだ貝、ひとつずつ開けてるのかい。
+  - speaker: zundamon
+    emotion: sad
+    text: 捨てる前に、中を確かめたいのだ。
+  - speaker: ama
+    emotion: surprised
+    text: ……旦那、これ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 丸い……。貝殻にくっついてない、まん丸の真珠なのだ！
+    se: don
+  - speaker: reimu
+    text: 死んだ貝の中から、まん丸の真珠が5個見つかったとされています。
+    reading: しんだ かいの なかから、まんまるの しんじゅが ごこ みつかったと されています。
+- id: ch8_haietsu
+  title: ''
+  background: mk_mise
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 同じ1905年、伊勢神宮を訪れた明治天皇に拝謁した幸吉は、こう言ったと伝えられています。
+    reading: おなじ せんきゅうひゃく ごねん いせじんぐうお おとずれた めいじ てんのうに はいえつした こうきちわ、こう いったと つたえられています。
+  - speaker: reimu
+    text: 世界中の女性の首を、真珠でしめてごらんにいれます。
+    reading: せかいじゅうの じょせいの くびお しんじゅで しめて ごらんに いれます。
+    telops:
+    - {text: "世界中の女性の首を、真珠で", size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 1906年には、店を銀座4丁目の表通りへ移します。
+    reading: せんきゅうひゃく ろくねんにわ みせお ぎんざ よんちょうめの おもてどおりえ うつします。
+  - speaker: reimu
+    text: 1907年には、真珠を宝飾品に仕立てる金細工の工場も作りました。
+    reading: せんきゅうひゃく ななねんにわ、しんじゅお ほうしょくひんに したてる きんざいくの こうじょうも つくりました。
+- id: ch9_hatsumei
+  title: 誰が作ったのか
+  background: mk_shiryo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。まん丸の真珠は、御木本さんが作り方を見つけたのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは、今も意見が分かれてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 分かれてるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1907年ごろ、まん丸の真珠を作る方法で、3人がそれぞれ特許を出してるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 御木本さんと、娘の夫で水産の技師だった西川藤吉、それに[見瀬|みせ][辰平|たつへい]という人よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3人で、同じものを目指してたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 西川は、貝の体の一部を核と一緒に入れるやり方。[見瀬|みせ]は、核を入れる細い針を工夫したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 西川と[見瀬|みせ]の間では、特許をめぐる争いもあって、1908年に和解したとされるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 御木本さんも、1908年に自分のやり方で特許を取ってるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 西川は、1909年に35歳で亡くなってる。
+  - speaker: zundamon
+    emotion: sad
+    text: 若いのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 御木本さんは、1919年にも別の方法で特許を取ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の業界は、1907年を、まん丸の真珠が生まれた年としてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 英虞湾の賢島には、3人の名前を刻んだ記念碑もあるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 1人の手柄じゃなくて、3人の名前なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 御木本さんが大きかったのは、それを産業にして、世界で売ったことね。
+- id: ch10_london
+  title: 偽物と呼ばれて
+  background: mk_mise
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1913年にはロンドンに店を出し、1919年には、まん丸の真珠を天然より安く売り出したとされます。
+    reading: せんきゅうひゃく じゅうさんねんにわ ろんどんに みせお だし、せんきゅうひゃく じゅうくねんにわ まんまるの しんじゅお てんねんより やすく うりだしたと されます。
+  - speaker: reimu
+    text: 1921年、ロンドンで騒ぎが起きます。
+    reading: せんきゅうひゃく にじゅういちねん ろんどんで さわぎが おきます。
+  - speaker: tenin
+    emotion: sad
+    text: 社長。ロンドンの新聞が、うちの真珠を詐欺の真珠だと書いたそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 詐欺……？
+  - speaker: tenin
+    emotion: sad
+    text: パリの宝石商たちも、日本の真珠は偽物だと言い出しました。
+  - speaker: zundamon
+    emotion: angry
+    text: 偽物じゃない。貝が、自分の体で巻いた真珠なのだ。
+  - speaker: tenin
+    emotion: thinking
+    text: 天然の真珠が売れなくなるのを、恐れているんでしょう。
+  - speaker: zundamon
+    emotion: normal
+    text: なら、学者に調べてもらうのだ。中身を見れば、分かる。
+  - speaker: reimu
+    text: 学者たちは、天然と養殖の真珠層に本質的な違いはないと証言します。
+    reading: がくしゃたちわ、てんねんと ようしょくの しんじゅそうに ほんしつてきな ちがいわ ないと しょうげんします。
+  - speaker: reimu
+    text: パリの代理店が、偽物と言いふらした宝石商の組合を訴え、裁判になりました。
+    reading: ぱりの だいりてんが、にせものと いいふらした ほうせきしょうの くみあいお うったえ さいばんに なりました。
+  - speaker: reimu
+    text: 1924年、裁判は組合側の負けで終わり、組合は判決を新聞に載せる費用まで払わされました。
+    reading: せんきゅうひゃく にじゅうよねん さいばんわ くみあいがわの まけで おわり、くみあいわ はんけつお しんぶんに のせる ひようまで はらわされました。
+    telops:
+    - {text: "宝石商の組合が敗訴", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch10_banpaku
+  title: ''
+  background: mk_mise
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1924年には貴族院の議員にもなりましたが、翌年には辞めています。
+    reading: せんきゅうひゃく にじゅうよねんにわ きぞくいんの ぎいんにも なりましたが、よくねんにわ やめています。
+  - speaker: tenin
+    emotion: surprised
+    text: 社長。アメリカの博覧会に、真珠で五重塔を作るんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 真珠を、1万2000個以上使うのだ。
+  - speaker: tenin
+    emotion: thinking
+    text: そんなに使ったら、売る分がなくなりますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 世界の人に、日本の真珠を一度に見てもらうのだ。これも、商売なのだ。
+  - speaker: reimu
+    text: 1926年、アメリカの博覧会に、1万2760個の真珠で作った五重塔を出しました。
+    reading: せんきゅうひゃく にじゅうろくねん あめりかの はくらんかいに、いちまん にせん ななひゃく ろくじゅっこの しんじゅで つくった ごじゅうのとうお だしました。
+- id: ch10_edison
+  title: ''
+  background: mk_edison
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: happy}
+  - {who: edison, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1927年、アメリカで発明王エジソンに会います。渋沢栄一の紹介状を持っていました。
+    reading: せんきゅうひゃく にじゅうななねん あめりかで はつめいおう えじそんに あいます。しぶさわ えいいちの しょうかいじょうお もっていました。
+  - speaker: edison
+    emotion: normal
+    text: ミスター・ミキモト。あなたの真珠を、見せてもらった。
+  - speaker: zundamon
+    emotion: happy
+    text: 貝に作らせた真珠なのだ。
+  - speaker: edison
+    emotion: happy
+    text: 私の研究所でも、作れなかったものが2つある。ダイヤモンドと、真珠だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 発明王にも、作れなかったのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 貝と海が、作ってくれたのだ。
+  - speaker: reimu
+    text: 英語のできない幸吉と、耳の遠いエジソン。言葉は、通訳を通してのやり取りでした。
+    reading: えいごの できない こうきちと みみの とおい えじそん。ことばわ つうやくお とおしての やりとりでした。
+  - speaker: reimu
+    text: エジソンの言葉は、ミキモトの記録にも残っています。
+    reading: えじそんの ことばわ みきもとの きろくにも のこっています。
+- id: card1932
+  title: ''
+  background: mk_card_1932
+  cuts:
+  - speaker: reimu
+    text: 1932年。幸吉は、真珠を燃やします。
+    reading: せんきゅうひゃく さんじゅうにねん。こうきちわ しんじゅお もやします。
+- id: ch11_yaku
+  title: 真珠を燃やす
+  background: mk_kobe
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: angry}
+  - {who: kumiai, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kumiai
+    emotion: surprised
+    text: 組合長。この真珠を、本当に燃やすんですか。
+  - speaker: zundamon
+    emotion: angry
+    text: 質の悪い真珠なのだ。
+  - speaker: kumiai
+    emotion: thinking
+    text: 安く売れば、それでも売れますよ。
+  - speaker: zundamon
+    emotion: angry
+    text: 売ってはいけない。これが出回ったら、日本の真珠は全部、安物と思われるのだ。
+  - speaker: kumiai
+    emotion: sad
+    text: せっかく、パリの裁判にも[勝った|かった]のに……。
+  - speaker: zundamon
+    emotion: normal
+    text: だから、燃やす。いい真珠だけを、世界に出すのだ。
+  - speaker: reimu
+    text: 神戸の商工会議所の前で、質の悪い真珠を焼き捨てたとされています。
+    reading: こうべの しょうこう かいぎしょの まえで、しつの わるい しんじゅお やきすてたと されています。
+  - speaker: reimu
+    text: 量は、およそ135キログラムと伝えられています。
+    reading: りょうわ およそ ひゃくさんじゅうご きろぐらむと つたえられています。
+    telops:
+    - {text: "質の悪い真珠を焼き捨てた", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: それ以前から、出来の悪い真珠は土に埋め、取れた真珠の2割以上は市場に出さなかったとされています。
+    reading: それ いぜんから できの わるい しんじゅわ つちに うめ、とれた しんじゅの にわり いじょうわ しじょうに ださなかったと されています。
+- id: ch11_banpaku2
+  title: ''
+  background: mk_mise
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 御木本幸吉, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: tenin
+    emotion: surprised
+    text: 社長。パリの博覧会に出す帯留が、仕上がりました。
+  - speaker: zundamon
+    emotion: happy
+    text: 矢車なのだ。うちの金細工の工場で、仕立てたのだ。
+  - speaker: tenin
+    emotion: happy
+    text: 次は、ニューヨークの博覧会ですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 今度は、真珠で自由の鐘を作るぞ。
+  - speaker: reimu
+    text: 1937年のパリの博覧会には帯留の矢車を、1939年のニューヨークの博覧会には自由の鐘を出しました。
+    reading: せんきゅうひゃく さんじゅうななねんの ぱりの はくらんかいにわ おびどめの やぐるまお、せんきゅうひゃく さんじゅうくねんの にゅーよーくの はくらんかいにわ じゆうの かねお だしました。
+- id: ch11_bannen
+  title: ''
+  background: mk_ikada
+  bgm: amacha_hoshizora
+  cuts:
+  - speaker: reimu
+    text: 1940年、ぜいたく品を禁じる決まりで、養殖場は閉鎖や縮小に追い込まれます。
+    reading: せんきゅうひゃく よんじゅうねん ぜいたくひんお きんじる きまりで、ようしょくじょうわ へいさや しゅくしょうに おいこまれます。
+  - speaker: reimu
+    text: 自分が今日あるのは、海女たちのおかげだ。晩年の幸吉は、そう語ったと伝えられています。
+    reading: じぶんが こんにち あるのわ あまたちの おかげだ。ばんねんの こうきちわ そう かたったと つたえられています。
+  - speaker: reimu
+    text: 1954年9月、御木本幸吉は、多徳島の自宅で96歳の生涯を閉じました。
+    reading: せんきゅうひゃく ごじゅうよねん くがつ、みきもと こうきちわ たとくじまの じたくで きゅうじゅうろくさいの しょうがいお とじました。
+- id: ch12_shikumi
+  title: 光るのはなぜ
+  background: mk_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。結局、貝はなんで真珠を作るのだ？ 砂じゃないのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 砂が入ってできる、というのは言い伝え。天然真珠を調べても、[砂粒|すなつぶ]はまず見つからないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当のきっかけは、貝殻を作る細胞が、体の奥に入り込むこと。
+  - speaker: zundamon
+    emotion: thinking
+    text: 貝殻を作る細胞なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 外套膜っていう、貝殻の内側を作る膜の細胞よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: これが体の中で袋になって、内側に貝殻と同じ層を重ねるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 体の中に、小さな貝殻工場ができるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: その袋を、真珠袋っていうの。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから養殖では、核と一緒に、別の貝の外套膜を2ミリ角くらい切って入れるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 核だけじゃ、だめなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 核は、ただの芯。巻いてくれるのは、その細胞のほうよ。袋は、1か月ほどでできるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 核は、[何|なに]でできてるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカの川でとれる貝の殻を、丸く削ったもの。削るのは、淡路島の職人さんたちよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 貝の中に、別の貝の殻を入れるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 巻きが0.4ミリなら、7ミリの真珠は、体積の7割くらいが核なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほとんど、中身は殻なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、真珠は袋の中で、ゆっくり回りながら巻かれていくの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 黒い真珠を作る貝の実験では、平均4時間43分で[1回転|いっかいてん]していたそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 袋の中で、真珠が回ってるのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、あの光り方は、どこから来るのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 真珠の層は、とても薄い結晶の板が重なってできてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 板1枚の厚さは、0.5マイクロメートルくらい。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1ミリで、およそ2000枚も重なってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2000枚！ まるでミルフィーユだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 板の厚さが、光の波の長さとほぼ同じなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから光が重なり合って、虹のような色とつやが出るのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 色を塗ってるんじゃなくて、薄さで光ってるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。シャボン玉が虹色に見えるのと、同じ仲間の仕組みよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 冬の冷たい海だと、きめの細かい層ができるの。だから、取り出すのは12月から1月ごろ。
+  - speaker: zundamon
+    emotion: happy
+    text: 最後に、冬の海でお化粧か。
+  - speaker: tsumugi
+    emotion: happy
+    text: 本当に、化粧巻きって呼ぶのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 手術から浜に揚げるまでは、半年から1年半くらいね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の養殖では、毎年8400万個くらいの[稚貝|ちがい]から始めるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[母貝|ぼがい]まで育つのが5600万個。手術をして、最後に浜に揚がるのは2800万個ほどよ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 3分の1になってるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 手術した貝のうち、4割から5割は、育てている間に死んでしまうの。
+  - speaker: zundamon
+    emotion: sad
+    text: 半分近くも……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 質のいい真珠のうち、最上級の[花珠|はなだま]と呼ばれるのは、1割くらいと言われてるわ。
+- id: ch13_ronsou
+  title: 養殖は偽物？
+  background: mk_shiryo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。養殖の真珠は、人が作った偽物だって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 100年前のヨーロッパと、同じことを言ってるわね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 人がしたのは、きっかけを作ることだけ。真珠の層を巻いたのは、貝自身よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 偽物と呼ぶべきなのは、模造真珠のほうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ガラスなどの玉に、魚のうろこから作った塗料を塗ったものなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 貝が一度も関わってないのが、模造なのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: パリの裁判で、天然と同じだと認められたのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: よくそう言われるけど、判決は、科学的に同じかどうかは研究を待つ、としてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのうえで、偽物と呼んで回るのは許されない、と読める判決だったと言われてるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 同じとは言ってないけど、偽物とも言わせなかったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そういうこと。アコヤの養殖真珠は、中に核が入ってるのが、天然との違いね。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、真珠は酢で溶けるって話は？ クレオパトラが、酢に溶かして飲んだって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 酸に弱いのは本当。でも、酢に入れてすぐ溶けるわけじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 酢につけて、溶けるまで丸1日以上かかった実験があるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その場で溶かして飲んだ、というのは話を盛りすぎね。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、真珠は丈夫なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: そこが油断よ。本当に気をつけたいのは、毎日の汗や化粧品なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 使ったら、柔らかい乾いた布で拭く。香水や整髪料は、つけてから真珠を着ける。
+  - speaker: tsumugi
+    emotion: normal
+    text: 酢やレモンの汁、除光液もだめ。家の超音波の洗浄機にも入れないで。
+  - speaker: zundamon
+    emotion: sad
+    text: 貝が1年ほどかけて巻いた層が、毎日少しずつ傷むのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 真珠の層は、1ミリもない薄さ。削れたら、戻らないのよ。
+- id: ch14_gendai
+  title: 今の真珠の海
+  background: mk_hama
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本のアコヤ真珠は、2024年でおよそ12.5トン。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一番多いのは長崎県、次が愛媛県、そして[三重県|みえけん]よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 御木本さんの[三重県|みえけん]が、3番目なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 一番多かったのは1967年で、125トン。今の10倍よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10分の1になったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1990年代には、[アコヤ貝|あこやがい]が大量に死ぬ病気が広がったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1995年に63トンあった生産が、1999年には25トンまで落ちたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 4年で、半分以下なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 真珠を育てる家も、30年で4分の1ほどに減ったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2019年からも、また貝が大量に死んでいるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年に、新しいウイルスが原因だと分かったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 赤潮のあとも、貝の戦いは続いてるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 輸出は2025年で、412億円ほど。
+  - speaker: tsumugi
+    emotion: normal
+    text: 多くが香港に渡って、そこから世界の市場に出ていくの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 世界の真珠は、今も日本が一番なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は、タヒチの黒い真珠や、南の海の大きな白い真珠、中国の川の真珠もあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも、アコヤの真珠は、大半が日本で作られてるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 真珠の重さって、グラムで量るのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: 世界の取り引きでは、今も匁が使われてるの。1匁は3.75グラムよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本の昔の単位が、世界の単位なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本の真珠は、1800年ほど前の中国の歴史書にも出てくるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 倭の国から、真珠を5000個贈った、という記録よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 昔から、真珠の国だったのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 鳥羽の[真珠島|しんじゅしま]では、今も海女さんが潜ってるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。貝を採り、貝を運んで守ったと伝わる人たちの仕事を、見せてくれるのよ。
+- id: shime
+  title: ''
+  background: mk_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: つむぎ。アサリを買い直してきたのだ。今度は、お味噌汁にするのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それが一番よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 真珠は、[アコヤ貝|あこやがい]に任せるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: で、ハマグリ計画は？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ベランダで、砂利と一緒に待機中なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 今すぐ片付けなさい。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 今度、真珠を見かけたら、あの光を近くで見てみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1ミリに2000枚もの層が、光を重ねてるのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 貝が何か月もかけて、1枚ずつ巻いた光なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

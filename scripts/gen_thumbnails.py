@@ -2741,6 +2741,52 @@ def p_srdish(d, s):
         d.ellipse([s * (x - 0.03), s * (y - 0.02), s * (x + 0.03), s * (y + 0.02)], fill=(230, 170, 60))
 
 
+def p_csgear(d, s):
+    """歯車で動く大きな計算機。"""
+    import math as _m
+    d.rectangle([s * 0.12, s * 0.30, s * 0.88, s * 0.92], fill=(120, 116, 110), outline=(70, 66, 62),
+                width=int(s * 0.016))
+    for cx, cy, r in ((0.36, 0.56, 0.16), (0.62, 0.66, 0.12), (0.62, 0.42, 0.09)):
+        pts = []
+        for i in range(32):
+            a = i / 32 * 2 * _m.pi
+            rr = r * (1.0 if i % 2 == 0 else 0.8)
+            pts.append((s * (cx + rr * _m.cos(a)), s * (cy + rr * _m.sin(a))))
+        d.polygon(pts, fill=(196, 170, 90), outline=(120, 100, 50))
+        d.ellipse([s * (cx - r * 0.25), s * (cy - r * 0.25), s * (cx + r * 0.25), s * (cy + r * 0.25)],
+                  fill=(120, 100, 50))
+
+
+def p_csrelay(d, s):
+    """リレーを並べた計算機の中身。細長い箱が整列し、上に数字の窓。"""
+    d.rectangle([s * 0.10, s * 0.14, s * 0.90, s * 0.92], fill=(200, 204, 200), outline=(120, 124, 120),
+                width=int(s * 0.016))
+    d.rectangle([s * 0.16, s * 0.20, s * 0.84, s * 0.32], fill=(40, 44, 40))
+    for r in range(4):
+        for c in range(6):
+            x, y = 0.18 + c * 0.11, 0.40 + r * 0.12
+            d.rectangle([s * x, s * y, s * (x + 0.07), s * (y + 0.09)], fill=(180, 110, 60),
+                        outline=(120, 70, 36), width=int(s * 0.008))
+
+
+def p_mkshell(d, s):
+    """開いたアコヤ貝。中は空っぽ。"""
+    d.ellipse([s * 0.10, s * 0.44, s * 0.90, s * 0.92], fill=(120, 110, 104), outline=(70, 64, 60),
+              width=int(s * 0.016))
+    d.ellipse([s * 0.18, s * 0.50, s * 0.82, s * 0.86], fill=(214, 206, 214))
+    d.chord([s * 0.10, s * 0.06, s * 0.90, s * 0.54], 180, 360, fill=(120, 110, 104), outline=(70, 64, 60),
+            width=int(s * 0.016))
+
+
+def p_mkpearl(d, s):
+    """開いたアコヤ貝の中に、光る真珠1粒。"""
+    p_mkshell(d, s)
+    cx, cy, r = s * 0.5, s * 0.66, s * 0.14
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(240, 236, 234), outline=(190, 184, 186),
+              width=int(s * 0.01))
+    d.ellipse([cx - r * 0.55, cy - r * 0.6, cx - r * 0.05, cy - r * 0.15], fill=(255, 255, 255))
+
+
 def p_glkaki(d, s):
     """牡蠣の殻と、煮汁の入った大釜。"""
     d.ellipse([s * 0.10, s * 0.56, s * 0.90, s * 0.96], fill=(70, 66, 62), outline=(40, 38, 36),
@@ -3020,6 +3066,16 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "casio-kashio": dict(layout="panels", headline="計算機は電話部品で作った",
+        head_hi="電話部品", panels=[
+        _p("p_csgear", "1949年 歯車の計算機", SLATE, "sad", "うるさいのだ", "車と同じ値段"),
+        _p("p_csrelay", "1957年 14-A", TEAL, "happy", "静かなのだ", "リレー約340個"),
+    ]),
+    "mikimoto-pearl": dict(layout="panels", headline="真珠は貝に作らせた",
+        head_hi="作らせた", panels=[
+        _p("p_mkshell", "1892年 赤潮", NAVY, "sad", "貝が全滅なのだ", "何年も空っぽ"),
+        _p("p_mkpearl", "1893年", TEAL, "happy", "光ってるのだ", "貝が巻いた真珠"),
     ]),
     "glico-ezaki": dict(layout="panels", headline="グリコは牡蠣から生まれた",
         head_hi="牡蠣", panels=[
