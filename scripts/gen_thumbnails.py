@@ -2891,6 +2891,34 @@ def p_wmwalk(d, s):
         d.ellipse([s * (x - 0.06), s * 0.44, s * (x + 0.06), s * 0.58], fill=(240, 140, 40))
 
 
+def p_pcparis(d, s):
+    """ガラスケースに並んだ外国の鉛筆。"""
+    d.rectangle([s * 0.08, s * 0.30, s * 0.92, s * 0.78], fill=(220, 236, 244), outline=(120, 110, 90),
+                width=int(s * 0.014))
+    cols = [(200, 170, 60), (40, 90, 60), (140, 40, 40), (40, 60, 120)]
+    for k in range(4):
+        y = s * (0.38 + k * 0.10)
+        d.rectangle([s * 0.14, y - s * 0.025, s * 0.72, y + s * 0.025], fill=cols[k])
+        d.polygon([(s * 0.72, y - s * 0.025), (s * 0.84, y), (s * 0.72, y + s * 0.025)], fill=(224, 190, 140))
+        d.polygon([(s * 0.80, y - s * 0.008), (s * 0.86, y), (s * 0.80, y + s * 0.008)], fill=(50, 50, 56))
+
+
+def p_pcmark(d, s):
+    """家紋の三鱗と、3本の鉛筆。"""
+    d.ellipse([s * 0.24, s * 0.12, s * 0.76, s * 0.64], fill=(250, 248, 240), outline=(170, 160, 150),
+              width=int(s * 0.012))
+    size = s * 0.18
+    h = size * 0.866
+    cx, cy = s * 0.5, s * 0.38
+    tri = lambda x, y: [(x, y - h / 2), (x - size / 2, y + h / 2), (x + size / 2, y + h / 2)]
+    for x, y in ((cx, cy - h / 2), (cx - size / 2, cy + h / 2), (cx + size / 2, cy + h / 2)):
+        d.polygon(tri(x, y), fill=(40, 40, 44))
+    for k in range(3):
+        y = s * (0.72 + k * 0.07)
+        d.rectangle([s * 0.16, y - s * 0.022, s * 0.72, y + s * 0.022], fill=(122, 30, 48))
+        d.polygon([(s * 0.72, y - s * 0.022), (s * 0.84, y), (s * 0.72, y + s * 0.022)], fill=(224, 190, 140))
+
+
 def p_mkshell(d, s):
     """開いたアコヤ貝。中は空っぽ。"""
     d.ellipse([s * 0.10, s * 0.44, s * 0.90, s * 0.92], fill=(120, 110, 104), outline=(70, 64, 60),
@@ -3188,6 +3216,11 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "masaki-pencil": dict(layout="panels", headline="三菱鉛筆は三菱じゃない",
+        head_hi="三菱じゃない", panels=[
+        _p("p_pcparis", "1878年 パリ", SLATE, "surprised", "なんなのだ？", "初めて見た鉛筆"),
+        _p("p_pcmark", "1903年", BROWN, "happy", "マークなのだ", "家紋と3本の鉛筆"),
     ]),
     "sony-walkman": dict(layout="panels", headline="初代ウォークマンは録音できない",
         head_hi="録音できない", panels=[

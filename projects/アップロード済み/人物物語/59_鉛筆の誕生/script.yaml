@@ -1,0 +1,1004 @@
+meta:
+  title: 【鉛筆の誕生】財閥より先に「三菱」を登録した男が、独学で作った国産の鉛筆【ずんだもん解説】
+  slug: masaki-pencil
+  summary: 三菱鉛筆は、三菱グループの会社ではありません。しかもそのマークは、三菱財閥より10年以上早く登録されていました。明治11年、パリ万博の会場の片すみで鉛筆に出会った、佐賀出身の眞崎仁六。持ち帰った手がかりは、芯は黒鉛と粘土を混ぜたものらしい、ということだけでした。師匠のいない鉛筆づくりを、再現ドラマでたどります。
+  tags:
+  - 鉛筆
+  - 三菱鉛筆
+  - 眞崎仁六
+  - uni
+  - 文房具
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 雑学
+  thumbnail:
+    top: 三菱より先に登録
+    bottom: 鉛筆の誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kakari
+    label: 会場の係員
+    voice: 13
+    pitch: 0.1
+  - id: kouin
+    label: 工員
+    voice: 12
+    pitch: 0.12
+  - id: tonya
+    label: 問屋
+    voice: 42
+    pitch: 0.1
+  - id: yakunin
+    label: 役人
+    voice: 13
+    pitch: -0.04
+  - id: ichikawa
+    label: 市川商店
+    voice: 12
+    pitch: -0.04
+scenes:
+- id: hook
+  title: ''
+  background: pc_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、見るのだ。三菱の鉛筆なのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 三菱って、あの大きな会社の仲間なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: それが、違うの。三菱鉛筆は、三菱グループじゃないのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前まで同じなのに、違う会社なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: マークの登録は、三菱財閥より10年以上も早いの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 登録だけなら、鉛筆のほうが先なのだ！？
+  - speaker: reimu
+    text: 日本で初めて、鉛筆を工業として作り始めた人がいます。
+    reading: にほんで はじめて えんぴつお こうぎょうと して つくりはじめた ひとが います。
+  - speaker: reimu
+    text: 眞崎仁六。今の三菱鉛筆の、創業者です。
+    reading: まさき にろく。いまの みつびし えんぴつの そうぎょうしゃです。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、パリの万博で見た、鉛筆の展示だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: それまで、鉛筆を知らなかったのだ？
+- id: ch0_zenshi
+  title: 家康の鉛筆
+  background: pc_kunozan
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 実は日本には、もっと古い鉛筆が残ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 静岡の久能山東照宮には、家康の鉛筆があるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今残っている、日本で一番古い鉛筆とされてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家康も、鉛筆で書いてたのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 先に使った跡はあるけど、ケースに削った跡がなくて、あまり使われなかったみたい。
+  - speaker: tsumugi
+    emotion: normal
+    text: 和紙には、書きにくかったのかもしれないわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: スペインの使者が、贈ったと考えられてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 芯の黒鉛は、メキシコ産なんですって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 海の向こうから来た鉛筆なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 伊達政宗のお墓からも、筆のような形の鉛筆が、1974年の調査で見つかってるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 殿様たちの、珍しい道具だったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 幕末には、ペリーの贈り物の中にも、鉛筆があったと伝わるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 明治に入ると、鉛筆を作ってみた人も何人かいたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1873年のウィーン万博へ学びに行った人たちが、作り方を持ち帰ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 翌年には、小池卯八郎という人が、鉛筆の工房を開いてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 仁六より、先に作った人がいたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: のちのトンボ鉛筆につながる職人も、このころ独学で鉛筆を作り始めてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、工業として作り始めたのは眞崎仁六だ、と三菱鉛筆は説明してるわ。
+- id: ch1_saga
+  title: ''
+  background: pc_saga
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 眞崎仁六は、1848年、今の佐賀市に生まれました。
+    reading: まさき にろくわ せんはっぴゃく よんじゅうはちねん いまの さがしに うまれました。
+  - speaker: reimu
+    text: 18歳で長崎へ出て、英語を学びます。
+    reading: じゅうはっさいで ながさきえ でて えいごお まなびます。
+  - speaker: reimu
+    text: 明治に入ると東京へ出て、まず汽船の会社で、書記として働きました。
+    reading: めいじに はいると とうきょうえ でて、まず きせんの かいしゃで しょきと して はたらきました。
+  - speaker: reimu
+    text: その後、同じ佐賀出身の大隈重信の紹介で、美術工芸品を海外に売る会社に入ります。
+    reading: その ご おなじ さが しゅっしんの おおくま しげのぶの しょうかいで、びじゅつ こうげいひんお かいがいに うる かいしゃに はいります。
+  - speaker: reimu
+    text: 起立工商会社。仁六は、そこで技師長を務めます。
+    reading: きりつ こうしょう がいしゃ。にろくわ そこで ぎしちょうお つとめます。
+  - speaker: reimu
+    text: 社長の松尾儀助も、佐賀の出身でした。
+    reading: しゃちょうの まつお ぎすけも さがの しゅっしんでした。
+  - speaker: reimu
+    text: 1876年には、アメリカのフィラデルフィア万博を見て、驚いたと伝わります。
+    reading: せんはっぴゃく ななじゅうろくねんにわ あめりかの ふぃらでるふぃあ ばんぱくお みて、おどろいたと つたわります。
+  - speaker: reimu
+    text: 翌年、上野の博覧会を見ても、アメリカと比べて、失望するばかりだったといいます。
+    reading: よくねん うえのの はくらんかいお みても あめりかと くらべて、しつぼう するばかりだったと いいます。
+- id: card1878
+  title: ''
+  background: pc_card_1878
+  cuts:
+  - speaker: reimu
+    text: 1878年。パリで、万国博覧会が開かれます。
+    reading: せんはっぴゃく ななじゅうはちねん。ぱりで ばんこく はくらんかいが ひらかれます。
+- id: ch2_paris
+  title: パリの鉛筆
+  background: pc_paris
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: normal}
+  - {who: kakari, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 仁六は30歳。会社の仕事で、パリへ出かけました。
+    reading: にろくわ さんじゅっさい。かいしゃの しごとで ぱりえ でかけました。
+  - speaker: reimu
+    text: 万博は、5月から11月まで開かれた大きな催しでした。
+    reading: ばんぱくわ ごがつから じゅういちがつまで ひらかれた おおきな もよおしでした。
+  - speaker: reimu
+    text: 会場の片すみに、いろいろな鉛筆が並んでいました。
+    reading: かいじょうの かたすみに いろいろな えんぴつが ならんでいました。
+  - speaker: zundamon
+    emotion: surprised
+    text: これは、[何|なん]なのだ？ 筆でもないし、墨も付けていないのだ。
+  - speaker: kakari
+    emotion: happy
+    text: 鉛筆です。削れば、どこでもすぐに書けますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: これは、どこの国で作っているのだ？
+  - speaker: kakari
+    emotion: normal
+    text: ドイツやイギリス、フランスの鉛筆ですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の鉛筆は、ここには並んでいないのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 墨をすらなくても、すぐに書けるのだ……。
+  - speaker: zundamon
+    emotion: happy
+    text: こんなに便利なもの、日本でも作りたいのだ。
+  - speaker: reimu
+    text: 仁六は、このとき初めて鉛筆を見た、と三菱鉛筆は説明しています。
+    reading: にろくわ この とき はじめて えんぴつお みたと みつびし えんぴつわ せつめい しています。
+  - speaker: reimu
+    text: 会場の片すみの鉛筆が、仁六の一生を決めた。鉛筆の業界団体の歴史には、そう書かれています。
+    reading: かいじょうの かたすみの えんぴつが にろくの いっしょうお きめた。えんぴつの ぎょうかい だんたいの れきしにわ そう かかれています。
+- id: ch2_kigen
+  title: ''
+  background: pc_sekai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも鉛筆は、どこで生まれたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 16世紀のイギリスで、とても質のいい黒鉛が見つかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 羊飼いが、倒れた木の下で見つけた、という言い伝えもあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒鉛をそのまま棒に切って、書くのに使ったのが始まりよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1565年ごろには、スイスの学者が、筒の先に黒鉛を入れた筆記具を書き残してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒鉛は大砲の弾の型にも使われて、とても大事にされたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 掘る期間を決めて、運ぶときは兵隊が守った、という話まで伝わってるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 天然の、鉛筆の芯なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きく変わったのは1795年。フランスのコンテという人が特許を取ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: イギリスと戦争になって、黒鉛が手に入らなくなったからよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒鉛の粉に粘土を混ぜて焼けば、芯になる。混ぜる割合で、濃さも変えられる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 今の作り方と、同じなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: ほぼ同じころ、ハルトムートという、ウィーンの人も同じような芯を作ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカでは、作家のソローの家が、鉛筆工場を営んでいたこともあるのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 明治のはじめの日本では、木の筆と書いて、[木筆|ぼくひつ]とも呼ばれていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本は、鉛筆をほとんど輸入に頼っていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1885年には、2万5000グロス以上を輸入したという記録もあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1グロスは144本。つまり、360万本以上なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、仁六には、作り方を教えてくれる[人|ひと]がいなかったの。
+- id: ch3_shin
+  title: 黒鉛と粘土
+  background: pc_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 持ち帰った知識は、芯は黒鉛と粘土を混ぜたものらしい、ということだけでした。
+    reading: もちかえった ちしきわ しんわ こくえんと ねんどお まぜた ものらしいと いう ことだけでした。
+  - speaker: reimu
+    text: 仁六は会社勤めを続けながら、今の銀座にあった自宅で、芯の研究を始めます。
+    reading: にろくわ かいしゃづとめお つづけながら、いまの ぎんざに あった じたくで しんの けんきゅうお はじめます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 黒鉛と粘土を混ぜるらしいのだ。でも、どれくらい混ぜればいいのだ？
+  - speaker: zundamon
+    emotion: sad
+    text: ……ぽろぽろ、崩れてしまったのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 粘土を増やすと、硬くなって、色が薄くなるのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: 黒鉛を増やすと、今度はすぐに折れてしまうのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 焼き方も、変えてみるのだ。
+  - speaker: reimu
+    text: 師匠はいません。仁六は、材料も作り方も、自分で探していきました。
+    reading: ししょうわ いません。にろくわ ざいりょうも つくりかたも じぶんで さがして いきました。
+  - speaker: reimu
+    text: たどり着いたのは、鹿児島の加世田の黒鉛と、栃木の烏山の粘土でした。
+    reading: たどりついたのわ かごしまの かせだの こくえんと、とちぎの からすやまの ねんどでした。
+  - speaker: zundamon
+    emotion: happy
+    text: この黒鉛と粘土なら、なめらかに書けるのだ！
+- id: ch3_kaisetsu
+  title: ''
+  background: pc_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の芯も、黒鉛と粘土を混ぜて、焼き固めて作るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒鉛が多いほど、黒くて柔らかい。粘土が多いほど、硬くて薄くなるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: HBなら、黒鉛と粘土はおよそ7対3よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 料理の、レシピみたいなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1000度から1200度で焼いて、最後に熱い油をしみこませるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 油で、なめらかにするのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 仁六は、この割合を、誰にも教わらずに探したのね。
+- id: ch3_jiku
+  title: ''
+  background: pc_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 次は、芯を包む木です。
+    reading: つぎわ しんお つつむ きです。
+  - speaker: reimu
+    text: 石油の缶を包んでいた外国の木の板も、試してみたと伝わります。
+    reading: せきゆの かんお つつんでいた がいこくの きの いたも ためして みたと つたわります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 削りやすくて、曲がりにくい木はないのだ……。
+  - speaker: zundamon
+    emotion: happy
+    text: 北海道のアララギなのだ！ よく削れて、まっすぐなのだ！
+  - speaker: reimu
+    text: アララギは、イチイの北海道での呼び名です。
+    reading: あららぎわ いちいの ほっかいどうでの よびなです。
+  - speaker: reimu
+    text: 明治の終わりの本は、誰にも師事することなく、自分で考えた機械で作っている、と書いています。
+    reading: めいじの おわりの ほんわ だれにも しじ する ことなく、じぶんで かんがえた きかいで つくっていると かいています。
+  - speaker: zundamon
+    emotion: happy
+    text: 先生がいないなら、自分で作るしかないのだ。
+  - speaker: reimu
+    text: 芯だけで約5年。木と機械にも、さらに数年かかりました。
+    reading: しんだけで やく ごねん。きと きかいにも さらに すうねん かかりました。
+- id: card1887
+  title: ''
+  background: pc_card_1887
+  cuts:
+  - speaker: reimu
+    text: 1887年。仁六は会社を辞め、東京の内藤新宿に、鉛筆の工場を開きます。
+    reading: せんはっぴゃく はちじゅうななねん。にろくわ かいしゃお やめ とうきょうの ないとう しんじゅくに えんぴつの こうじょうお ひらきます。
+  - speaker: reimu
+    text: パリで鉛筆を見てから、およそ9年がたっていました。
+    reading: ぱりで えんぴつお みてから およそ きゅうねんが たっていました。
+- id: ch4_suisha
+  title: 竹やぶの水車
+  background: pc_suisha
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 玉川上水から分かれた流れで、水車を回す工場でした。
+    reading: たまがわ じょうすいから わかれた ながれで すいしゃお まわす こうじょうでした。
+  - speaker: reimu
+    text: 1914年の雑誌の記事は、その様子をこう書いています。
+    reading: せんきゅうひゃく じゅうよねんの ざっしの きじわ その ようすお こう かいています。
+  - speaker: reimu
+    text: 一面の竹やぶで、昼間から狐や狸が出る。水車の軒は傾いている。
+    reading: いちめんの たけやぶで ひるまから きつねや たぬきが でる。すいしゃの のきわ かたむいている。
+  - speaker: reimu
+    text: 壁は落ち、雨は漏り、風は吹き込む。
+    reading: かべわ おち あめわ もり かぜわ ふきこむ。
+  - speaker: kouin
+    emotion: surprised
+    text: 親方、また狸が出ました！
+  - speaker: zundamon
+    emotion: happy
+    text: 狸も、鉛筆を見に来たのだ。
+    se: oti
+  - speaker: kouin
+    emotion: sad
+    text: ……雨漏りのほうを、なんとかしてほしいです。
+  - speaker: kouin
+    emotion: thinking
+    text: 親方、この機械は、どこで買ったんですか？
+  - speaker: zundamon
+    emotion: happy
+    text: 買ってないのだ。自分で作ったのだ。
+  - speaker: reimu
+    text: 鉛筆そのものでも、らせん状の金具で芯を押さえる仕組みの特許を取っています。
+    reading: えんぴつ そのものでも らせんじょうの かなぐで しんお おさえる しくみの とっきょお とっています。
+  - speaker: reimu
+    text: 今の新宿御苑の隣です。跡地の小さな公園には、鉛筆の製造を始めた所だと記す碑があります。
+    reading: いまの しんじゅく ぎょえんの となりです。あとちの ちいさな こうえんにわ、えんぴつの せいぞうお はじめた ところだと しるす ひが あります。
+  - speaker: reimu
+    text: その記事の見出しには、耐え忍ぶ素人、という言葉が使われました。
+    reading: その きじの みだしにわ たえしのぶ しろうとと いう ことばが つかわれました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 素人だから、自分で考えるしかないのだ。
+- id: ch4_tonya
+  title: 売れない鉛筆
+  background: pc_nihonbashi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: normal}
+  - {who: tonya, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: ところが、鉛筆はなかなか売れません。
+    reading: ところが えんぴつわ なかなか うれません。
+  - speaker: tonya
+    emotion: thinking
+    text: うちは、ドイツの鉛筆を扱ってるからねえ。
+  - speaker: tonya
+    emotion: normal
+    text: 国産の鉛筆は、ちょっと引き受けられないよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 一度だけでいいから、使ってみてほしいのだ。
+  - speaker: tonya
+    emotion: thinking
+    text: ドイツの鉛筆に慣れたお客さんは、なかなか変えないよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……また、断られたのだ。
+  - speaker: reimu
+    text: 日本橋の問屋を歩いても、どこも引き受けてくれなかったといいます。
+    reading: にほんばしの とんやお あるいても、どこも ひきうけて くれなかったと いいます。
+  - speaker: reimu
+    text: 初めのころの鉛筆は、木に逆目が多く、削りにくかったそうです。
+    reading: はじめの ころの えんぴつわ きに さかめが おおく けずりにくかったそうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 削りにくい鉛筆は、使ってもらえないのだ。直すのだ。
+- id: card1901
+  title: ''
+  background: pc_card_1901
+  cuts:
+  - speaker: reimu
+    text: 1901年。仁六の鉛筆が、逓信省に採用されます。
+    reading: せんきゅうひゃく いちねん。にろくの えんぴつが ていしんしょうに さいよう されます。
+- id: ch5_teishin
+  title: 局用鉛筆
+  background: pc_teishin
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: normal}
+  - {who: yakunin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 逓信省は、郵便や電信を受け持つ役所です。
+    reading: ていしんしょうわ ゆうびんや でんしんお うけもつ やくしょです。
+  - speaker: yakunin
+    emotion: normal
+    text: 局用の鉛筆を、1号、2号、3号の3種類、納めてもらいたい。
+  - speaker: zundamon
+    emotion: happy
+    text: 承知したのだ！
+  - speaker: yakunin
+    emotion: happy
+    text: 輸入品より安いのは、助かるよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 品質も、輸入品に負けないのだ。
+  - speaker: reimu
+    text: 品川区史によると、1号が2B、2号がHB、3号が2Hでした。
+    reading: しながわ くしに よると いちごうが にびー にごうが えいちびー さんごうが にえいちでした。
+  - speaker: reimu
+    text: 全国の郵便局で使われる鉛筆です。
+    reading: ぜんこくの ゆうびんきょくで つかわれる えんぴつです。
+  - speaker: reimu
+    text: 輸入品より、3割ほど安かったといいます。
+    reading: ゆにゅうひんより さんわりほど やすかったと いいます。
+  - speaker: zundamon
+    emotion: happy
+    text: 国産の鉛筆が、国の役所で使われるのだ！
+- id: ch6_mark
+  title: 三菱マークの正体
+  background: pc_zukai2
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 仁六は、この3種類の局用鉛筆を記念して、マークを作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 元にしたのは、[眞崎家|まさきけ]の家紋、[三鱗|みつうろこ]よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 三つの、うろこなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1903年に、三菱という名前とマークを、登録したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 三菱財閥が、自分たちのマークを登録したのは1914年。
+  - speaker: zundamon
+    emotion: surprised
+    text: 登録は、鉛筆のほうが10年以上早いのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、財閥のマークそのものは、1870年から船の旗に使われていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 鉛筆が先だったのは、登録のほうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 財閥のマークは、土佐の[山内家|やまうちけ]と、[岩崎家|いわさきけ]の家紋が元よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 形は似てるけど、生まれはまったく別なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 三菱鉛筆は今も、三菱グループとは関係のない、独立した会社なの。
+- id: ch7_sekai
+  title: 世界へ
+  background: pc_kojo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: happy}
+  - {who: kouin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1904年、日本橋の輸入品の店、市川商店と手を組み、売り先が広がります。
+    reading: せんきゅうひゃく よねん にほんばしの ゆにゅうひんの みせ いちかわ しょうてんと てお くみ、うりさきが ひろがります。
+  - speaker: kouin
+    emotion: happy
+    text: 親方、東京の博覧会で、2等の銀牌です！
+  - speaker: kouin
+    emotion: surprised
+    text: 親方！ ロンドンの博覧会で、1等の金牌です！
+  - speaker: zundamon
+    emotion: happy
+    text: パリで見た鉛筆に、ロンドンで追いついたのだ！
+  - speaker: reimu
+    text: 1910年のロンドンに続いて、1914年の大正博覧会でも、1等の金牌を受けました。
+    reading: せんきゅうひゃく じゅうねんの ろんどんに つづいて、せんきゅうひゃく じゅうよねんの たいしょう はくらんかいでも いっとうの きんぱいお うけました。
+  - speaker: kouin
+    emotion: thinking
+    text: 工場も、もっと広い所に移らないと、手が足りませんね。
+  - speaker: reimu
+    text: 1916年には、工場を大井町へ移します。
+    reading: せんきゅうひゃく じゅうろくねんにわ こうじょうお おおいまちえ うつします。
+  - speaker: reimu
+    text: 第一次世界大戦でドイツの鉛筆が届かなくなると、日本の鉛筆が世界へ出ていきました。
+    reading: だいいちじ せかい たいせんで どいつの えんぴつが とどかなくなると、にほんの えんぴつが せかいえ でて いきました。
+  - speaker: reimu
+    text: 講和会議の鉛筆はすべて日本製だった、という話も語り継がれていますが、確かな記録はありません。
+    reading: こうわ かいぎの えんぴつわ すべて にほんせいだったと いう はなしも かたりつがれていますが、たしかな きろくわ ありません。
+- id: ch7_kaisetsu
+  title: ''
+  background: pc_sekai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 戦前は、日本で作った鉛筆の半分近くが、海外へ売られていたそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカでは、日本製が1本1セント。ドイツ製は5セントだったとも言われてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 安くて、たくさん売れたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京には鉛筆を作る家が増えて、1912年には組合もできたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 明治の終わりには、40軒あまりあったそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 組合の会長によると、今も多くが東京の下町にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 三河島の駅に、木材が集まったからだそうよ。
+- id: ch8_ketsubetsu
+  title: 品質第一
+  background: pc_mise
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 眞崎仁六, emotion: normal}
+  - {who: ichikawa, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: ところが戦争が終わると、不景気で高い鉛筆が売れなくなります。
+    reading: ところが せんそうが おわると ふけいきで たかい えんぴつが うれなくなります。
+  - speaker: ichikawa
+    emotion: thinking
+    text: 眞崎さん。もう少し、安い鉛筆にできませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 品質は、落とせないのだ。
+  - speaker: ichikawa
+    emotion: thinking
+    text: うちの[月星|つきぼし]の名前で、たくさん売ってきたじゃないですか。
+  - speaker: zundamon
+    emotion: normal
+    text: たくさん売るより、いい鉛筆を作るのが先なのだ。
+  - speaker: ichikawa
+    emotion: sad
+    text: 高い鉛筆は、今は売れないんですよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ここで質を落としたら、外国の鉛筆に負けてしまうのだ。
+  - speaker: reimu
+    text: 品質第一を貫く仁六と、売る側の市川。1921年、両者は決裂します。
+    reading: ひんしつ だいいちお つらぬく にろくと うる がわの いちかわ。せんきゅうひゃく にじゅういちねん りょうしゃわ けつれつ します。
+- id: ch9_saigo
+  title: 見届けられなかった合併
+  background: pc_yuugure
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.5, flip: true, tag: 眞崎仁六, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 仁六は、横浜の大和鉛筆との合併を進めました。
+    reading: にろくわ よこはまの やまと えんぴつとの がっぺいお すすめました。
+  - speaker: reimu
+    text: 大和鉛筆は、生糸の商人、原三溪がお金を出した、色鉛筆の会社です。
+    reading: やまと えんぴつわ きいとの しょうにん はら さんけいが おかねお だした、いろえんぴつの かいしゃです。
+  - speaker: zundamon
+    emotion: normal
+    text: 一緒になれば、もっといい鉛筆が作れるのだ。
+- id: ch9_yamato
+  title: ''
+  background: pc_yuugure
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 合併の相手の大和鉛筆も、楽ではなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1922年には、技術者がごっそり引き抜かれて、作れなくなったそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[数原三郎|すはらさぶろう]という人が、立て直しを任されたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 別の会社で、技師長をしていた人よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 工場の草むらから、夏はカエルが跳び出してきた、と品川区史は伝えてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 狸の工場と、いい勝負なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その工場も、1924年に火事で焼けてしまうの。
+- id: ch9_saigo2
+  title: ''
+  background: pc_yuugure
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.5, flip: true, tag: 眞崎仁六, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そして1925年1月、仁六は合併を見届けることなく、亡くなります。数えで78歳でした。
+    reading: そして せんきゅうひゃく にじゅうごねん いちがつ、にろくわ がっぺいお みとどける ことなく なくなります。かぞえで ななじゅうはっさいでした。
+  - speaker: reimu
+    text: その3か月後、眞崎大和鉛筆が生まれました。
+    reading: その さんかげつご まさき やまと えんぴつが うまれました。
+  - speaker: reimu
+    text: 息子の眞崎六郎も、役員として加わったとされます。
+    reading: むすこの まさき ろくろうも やくいんと して くわわったと されます。
+- id: ch10_uni
+  title: 1本50円の鉛筆
+  background: pc_uni
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 合併の記念に売り出した、回るガラスの鉛筆立ては、目標の5倍ほど売れたそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 戦争が終わった1945年、鉛筆の工場は、空襲でほとんど焼けてしまったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が、三菱鉛筆という名前になったのは1952年よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 翌年、技術部長の[数原洋二|すはらようじ]が、ヨーロッパとアメリカを見て回ったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこで、日本の鉛筆の評価が、意外に低いと知ったのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1955年、日本全体の生産は、年に9億本以上まで戻ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ライバルのトンボは、1本30円の高級鉛筆を出していたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 5年かけて、1958年10月に出たのがユニよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京タワーが、333メートルの高さになったのと[同じ|おなじ][月|つき]ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 値段は、1本50円だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ほかの鉛筆は、1本5円から、20円。かけそばが25円のころね。
+  - speaker: zundamon
+    emotion: surprised
+    text: かけそば2杯分の、鉛筆なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 大学を出た人の初任給は、1万3500円くらいだったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 高いけど、それだけ自信があったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 目指したのは、Bの黒さで、Hの硬さ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前は英語のユニーク。ただ一つ、という意味から来てるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: あの軸の色は、工業デザイナーの秋岡芳夫が選んだそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1966年にはハイユニ。今は、10Hから10Bまで、22の硬さがあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は1ダースで1980円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 22本並べたら、グラデーションなのだ。
+- id: ch11_shikumi
+  title: 鉛筆のしくみ
+  background: pc_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 軸の木は、今はインセンスシダーという、北米の木が中心よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 芯の材料も、今は黒鉛が主に中国、粘土が主にドイツから来てるのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 板に溝を9本彫って、芯を並べて、もう1枚の板で挟むの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 削って切り分けると、一度に9本できるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 鉛筆って、サンドイッチなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 六角形なのは、転がりにくいから。それに、3本の指で持つから、3の倍数なんですって。
+  - speaker: tsumugi
+    emotion: normal
+    text: Hはハードで硬い。Bはブラックで黒い。Fはファームで、HとHBの間よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ちなみに鉛筆には、鉛は入っていないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前に鉛が入っているのに、なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 英語でも昔は、黒鉛を黒い鉛と呼んでたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 鉛の仲間だと、思い違いしてたのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1本で引ける線の長さは、なんと約50キロ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただし機械で、削らずに芯を全部使った場合の数字よ。
+  - speaker: zundamon
+    emotion: happy
+    text: フルマラソンより、長いのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: シャーペンの芯なら、1本で約240メートルよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 鉛筆の200分の1なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 国の規格では、6Bから9Hまでの17段階。
+  - speaker: tsumugi
+    emotion: normal
+    text: 長さも、172ミリ以上と決まってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 鉛筆の規格は、1951年にできたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 身の回りの品の中では、かなり早かったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 規格の印が付いた鉛筆は、一時は9割近くにもなったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大学入学共通テストのマークは、H、F、HBの鉛筆に限られてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: Fの出番が、ちゃんとあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 選挙の[投票所|とうひょうじょ]に鉛筆が置いてあるのは、法律で決まってるからじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 投票用紙は特別な紙で、インクだと乾きにくく、にじむおそれがあるからよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: しかもその紙は、折っても自然に開くようにできてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 数えやすくなってるのだ！
+- id: ch11_uchu
+  title: ''
+  background: pc_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: アメリカは宇宙用のペンに大金をかけ、ソ連は鉛筆で済ませた、って聞いたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 大金の話は、作り話。最初は、アメリカもソ連も鉛筆を使ってたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 無重力だと、折れた芯のかけらが漂って、機械に入り込むおそれがあるのよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1967年に宇宙船の火事の事故が起きてからは、燃えやすさも心配されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: NASAが1965年に買ったシャーペンは、1本128ドル余り。批判を浴びたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 宇宙で書けるペンは、アメリカの民間の会社が、自分のお金で作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: NASAは1967年から、そのペンを1本2ドル39セントで買ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ソ連も、1969年にはそのペンを買ってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 鉛筆にも、苦手な場所があったのだ。
+- id: ch12_gendai
+  title: 今の鉛筆
+  background: pc_gendai
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本の鉛筆の生産が一番多かったのは、1966年。約13億8500万本よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年は約1億600万本。一番多かったころの、1割もないの。
+  - speaker: zundamon
+    emotion: sad
+    text: シャーペンに、押されてるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 子どもの数も減ってるの。小学生は、1958年の半分以下よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1992年には、トンボの鉛筆が、鉛筆で初めてエコマークを取ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年には、国内で作る本数より、輸入する本数のほうが多くなったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 売り上げではシャーペンが上。でも作る本数では、まだ鉛筆が少しだけ多いのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 子ども向けでは、1979年から2Bが一番売れている、とメーカーの人は話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 昔は仕事や図面で、HBがたくさん使われてたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: パソコンの時代になって、それが減ったのも大きいのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 子どもの力が弱くなったから、2Bなのかと思ったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 書写の研究者は、筆圧が下がった傾向は見られない、と話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: シャーペンでは、2008年に出たクルトガが、15年続けて一番売れたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年には、三菱鉛筆の新しい工場が、山形県で動き出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年の9月からは、ユニやハイユニの箱が、プラスチックから紙に変わり始めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界全体では、年に140億本以上作られている、という数字もあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 鉛筆は、まだまだ現役なのだ。
+- id: shime
+  title: ''
+  background: pc_ima2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、この紙のマーク、もう一回よく見るのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家紋の三つのうろこと、3種類の鉛筆ね。
+  - speaker: zundamon
+    emotion: happy
+    text: 三菱より先に登録された、三菱なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 手がかりは、黒鉛と粘土を混ぜたものらしい、という一言だけだったのよね。
+  - speaker: zundamon
+    emotion: normal
+    text: 竹やぶの[水車小屋|すいしゃごや]から、今の鉛筆につながってるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次に鉛筆を削るときは、六角形と、木のにおいを気にしてみて。
+  - speaker: zundamon
+    emotion: happy
+    text: 明治の人が、手探りで作った道具なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴ありがとうございました！
+    duet_with: tsumugi
