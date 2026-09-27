@@ -439,7 +439,7 @@ class Composer:
         # 14文字で折り返す。行頭に句読点や小さい仮名が来るときは前の行へぶら下げる
         # （単純分割だと「、日本中に」「。」だけの行ができていた。2026-09-23）
         limit = 14
-        all_lines = _split_bubble_lines(text, limit)
+        all_lines = _split_bubble_lines(text, limit, max_lines=3)
         lines = all_lines[:3]
         if len(all_lines) > 3:
             lines[-1] = lines[-1][:limit - 1] + "…"
@@ -468,7 +468,7 @@ class Composer:
         d = ImageDraw.Draw(canvas, "RGBA")
         f = self.font(42)
         limit = 26
-        all_lines = _split_bubble_lines(text, limit)
+        all_lines = _split_bubble_lines(text, limit, max_lines=2)
         lines = all_lines[:2]
         if len(all_lines) > 2:
             lines[-1] = lines[-1][:limit - 1] + "…"
@@ -534,8 +534,40 @@ def _cover(img: Image.Image, w: int, h: int) -> Image.Image:
 _NO_LINE_HEAD = "、。，．！？!?…）」』ー・ぁぃぅぇぉっゃゅょァィゥェォッャュョ"
 
 
-def _split_bubble_lines(text: str, limit: int) -> list[str]:
-    """吹き出しを limit 文字で割る。行頭禁則の文字は2文字までぶら下げる。"""
+_DIGITS = set("0123456789０１２３４５６７８９")
+_NUM_JOIN = set(".,．，")
+_NUM_KANJI = set("万億兆")
+_UNITS = set("年月日時分秒本個台円号倍回歳人%％度枚杯軒階割位番巻冊点件歩代期")
+
+
+def _char_class(ch: str) -> str | None:
+    if ch in _DIGITS:
+        return "d"
+    if "゠" <= ch <= "ヿ":        # カタカナ（ー・も含む）
+        return "k"
+    if ch.isascii() and ch.isalpha():
+        return "a"
+    return None
+
+
+def _bad_break(a: str, b: str) -> bool:
+    """a と b の間で改行すると、数字・数字と単位・カタカナ語・英字が割れるか。"""
+    ca, cb = _char_class(a), _char_class(b)
+    if ca == "d" and (cb in ("d", "k", "a") or b in _NUM_KANJI or b in _UNITS or b in _NUM_JOIN):
+        return True
+    if a in _NUM_KANJI and (cb == "d" or b in _UNITS):
+        return True
+    if a in _NUM_JOIN and cb == "d":
+        return True
+    if ca == "k" and cb == "k":
+        return True
+    if ca == "a" and cb in ("a", "d"):
+        return True
+    return False
+
+
+def _split_plain(text: str, limit: int) -> list[str]:
+    """limit 文字で割る。行頭禁則の文字は2文字までぶら下げる。"""
     lines, i = [], 0
     while i < len(text):
         j = min(i + limit, len(text))
@@ -544,6 +576,42 @@ def _split_bubble_lines(text: str, limit: int) -> list[str]:
         lines.append(text[i:j])
         i = j
     return lines
+
+
+def _split_words(text: str, limit: int) -> list[str]:
+    """_split_plain と同じだが、数字や「3号」「1セント」、カタカナ語の途中では割らない
+    （最大4文字まで手前に戻して、切れ目のよい所で改行する）。"""
+    lines, i, n = [], 0, len(text)
+    while i < n:
+        j = min(i + limit, n)
+        if j < n and _bad_break(text[j - 1], text[j]):
+            k = j - 1
+            while k > max(i, i + limit - 4) and _bad_break(text[k - 1], text[k]):
+                k -= 1
+            if k > max(i, i + limit - 4):
+                j = k
+        while j < n and text[j] in _NO_LINE_HEAD and j - i < limit + 2:
+            j += 1
+        lines.append(text[i:j])
+        i = j
+    return lines
+
+
+def _split_bubble_lines(text: str, limit: int, max_lines: int | None = None) -> list[str]:
+    """吹き出し・ナレ帯の行分け。語を割らない分け方で行数が増えすぎるときは単純に割る。
+    （「3｜号」「1万｜3500円」「ズワ｜イガニ」の割れが検証で毎回出ていた。2026-09-27 鉛筆回）"""
+    plain = _split_plain(text, limit)
+    words = _split_words(text, limit)
+
+    def orphan(lines: list[str]) -> bool:
+        # 最後の行が句読点を除いて1文字（ナレ帯は2文字）だけになる
+        return len(lines) > 1 and len(lines[-1].rstrip("、。！？…")) <= (2 if limit >= 20 else 1)
+
+    if orphan(words) and not orphan(plain):
+        return plain
+    if len(words) <= len(plain) or (max_lines is not None and len(words) <= max_lines):
+        return words
+    return plain
 
 
 def _wrap(d: ImageDraw.ImageDraw, text: str, font, max_w: int) -> list[str]:
@@ -870,7 +938,7 @@ def render_frames(
                       if enter_set else stage_list)
         cap_png = None
         if enters and caption:
-            ckey = hashlib.sha1(json.dumps(["cap1", caption, sub],
+            ckey = hashlib.sha1(json.dumps(["cap2", caption, sub],
                                 ensure_ascii=False).encode()).hexdigest()[:16]
             cap_png = f"frames/cap_{ckey}.png"
             cp = proj.root / cap_png
@@ -887,7 +955,7 @@ def render_frames(
         key_list = [bg_name, header, chars,
                     cut.slide.model_dump() if cut.slide else None, cut.image,
                     bool(sp), card, full, fg_only, sub, sprite_sig,
-                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134",
+                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap2",
                     sorted(enter_set)]
         if ent_tag_whos:
             key_list.append(["enttag1", sorted(ent_tag_whos)])
@@ -945,7 +1013,7 @@ def render_frames(
                     mark_y = max(10, actor_y + 26)
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
-                    [bubble, stage_list, sprite_sig, "bub2"],
+                    [bubble, stage_list, sprite_sig, "bub3"],
                     ensure_ascii=False, sort_keys=True,
                     default=str).encode()).hexdigest()[:16]
                 bubble_png = f"frames/bub_{bkey}.png"
