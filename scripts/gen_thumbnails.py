@@ -2891,6 +2891,41 @@ def p_wmwalk(d, s):
         d.ellipse([s * (x - 0.06), s * 0.44, s * (x + 0.06), s * 0.58], fill=(240, 140, 40))
 
 
+def p_tgfish(d, s):
+    """パソコンの画面の中で泳ぐ熱帯魚。"""
+    d.rounded_rectangle([s * 0.10, s * 0.14, s * 0.90, s * 0.74], radius=int(s * 0.04), fill=(214, 208, 190),
+                        outline=(150, 144, 130), width=int(s * 0.012))
+    d.rectangle([s * 0.17, s * 0.20, s * 0.83, s * 0.66], fill=(30, 90, 150))
+    for fx, fy, c in ((0.26, 0.30, (240, 140, 40)), (0.52, 0.46, (240, 220, 60)), (0.62, 0.28, (120, 220, 200))):
+        d.ellipse([s * fx, s * fy, s * (fx + 0.14), s * (fy + 0.07)], fill=c)
+        d.polygon([(s * fx, s * (fy + 0.035)), (s * (fx - 0.05), s * fy), (s * (fx - 0.05), s * (fy + 0.07))], fill=c)
+    d.rectangle([s * 0.42, s * 0.74, s * 0.58, s * 0.82], fill=(190, 184, 168))
+    d.rectangle([s * 0.26, s * 0.82, s * 0.74, s * 0.87], fill=(200, 196, 180))
+
+
+def p_tgegg(d, s):
+    """卵形の携帯ゲーム機。画面に小さなお墓（文字なし）。"""
+    col = (236, 120, 150)
+    d.ellipse([s * 0.16, s * 0.20, s * 0.84, s * 0.94], fill=col, outline=(170, 80, 100), width=int(s * 0.014))
+    d.ellipse([s * 0.24, s * 0.10, s * 0.76, s * 0.60], fill=col)
+    d.rounded_rectangle([s * 0.30, s * 0.32, s * 0.70, s * 0.62], radius=int(s * 0.02), fill=(250, 248, 240))
+    d.rectangle([s * 0.34, s * 0.35, s * 0.66, s * 0.59], fill=(186, 200, 170))
+    ink = (40, 46, 40)
+    d.rounded_rectangle([s * 0.37, s * 0.42, s * 0.49, s * 0.57], radius=int(s * 0.05), fill=ink)   # 墓石
+    d.rectangle([s * 0.35, s * 0.55, s * 0.51, s * 0.58], fill=ink)
+    d.rectangle([s * 0.423, s * 0.45, s * 0.437, s * 0.53], fill=(186, 200, 170))      # 墓石の十字
+    d.rectangle([s * 0.40, s * 0.475, s * 0.46, s * 0.489], fill=(186, 200, 170))
+    d.ellipse([s * 0.53, s * 0.37, s * 0.63, s * 0.47], fill=(250, 250, 250), outline=ink, width=2)  # おばけ
+    d.polygon([(s * 0.53, s * 0.42), (s * 0.63, s * 0.42), (s * 0.64, s * 0.53), (s * 0.60, s * 0.50),
+               (s * 0.58, s * 0.54), (s * 0.55, s * 0.50), (s * 0.52, s * 0.53)], fill=(250, 250, 250), outline=ink)
+    d.polygon([(s * 0.555, s * 0.375), (s * 0.605, s * 0.375), (s * 0.58, s * 0.405)], fill=ink)      # 三角の布
+    d.ellipse([s * 0.555, s * 0.42, s * 0.565, s * 0.43], fill=ink)
+    d.ellipse([s * 0.595, s * 0.42, s * 0.605, s * 0.43], fill=ink)
+    for k in (-1, 0, 1):
+        bx, by, r = s * (0.5 + k * 0.13), s * (0.76 + (0 if k else 0.03)), s * 0.035
+        d.ellipse([bx - r, by - r, bx + r, by + r], fill=(250, 214, 80), outline=(160, 130, 40), width=2)
+
+
 def p_pcparis(d, s):
     """ガラスケースに並んだ外国の鉛筆。"""
     d.rectangle([s * 0.08, s * 0.30, s * 0.92, s * 0.78], fill=(220, 236, 244), outline=(120, 110, 90),
@@ -3216,6 +3251,11 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "tamagotchi-yokoi": dict(layout="panels", headline="たまごっちはわざと死ぬ",
+        head_hi="わざと死ぬ", panels=[
+        _p("p_tgfish", "1995年 パソコンの魚", SLATE, "thinking", "生きてるのだ", "人間と同じ時間"),
+        _p("p_tgegg", "1996年 発売", RED, "surprised", "死んだのだ！？", "世話しないと死ぬ"),
     ]),
     "masaki-pencil": dict(layout="panels", headline="三菱鉛筆は三菱じゃない",
         head_hi="三菱じゃない", panels=[
