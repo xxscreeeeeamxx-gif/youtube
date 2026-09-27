@@ -333,8 +333,11 @@ def _render_one_segment(
                            "-frames:v", str(n), "-an", "-c:v", *enc]
     if enc[0] == "libx264":
         cmd += ["-crf", crf]
-    cmd += [out_rel]
+    # キャッシュは「ファイルがあるか」で判定するので、途中で止まった書きかけを残さない
+    tmp_rel = out_rel[:-4] + ".part.mp4"
+    cmd += [tmp_rel]
     _run(cmd, cwd=proj.root)
+    (proj.root / tmp_rel).replace(proj.root / out_rel)
 
 
 def _count_inputs(args: list[str]) -> int:
