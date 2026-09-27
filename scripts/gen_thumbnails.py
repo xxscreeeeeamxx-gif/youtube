@@ -2833,6 +2833,37 @@ def p_kkstick(d, s):
         d.line([(s * x, s * 0.80), (s * (x + 0.05), s * 0.86)], fill=(248, 244, 236), width=int(s * 0.025))
 
 
+def p_oscap(d, s):
+    """牛乳瓶の紙のフタ。3枚重ねて、片面に黒い紙。"""
+    for k in range(3):
+        x, y = 0.10 + k * 0.28, 0.50
+        for j in range(3):
+            yy = y - j * 0.03
+            d.ellipse([s * x, s * yy, s * (x + 0.24), s * (yy + 0.16)], fill=(150, 146, 136))
+            d.ellipse([s * x, s * (yy - 0.02), s * (x + 0.24), s * (yy + 0.14)],
+                      fill=(24, 24, 26) if (k == 1 and j == 2) else (248, 246, 238))
+        if k != 1:
+            d.ellipse([s * (x + 0.03), s * (y - 0.07), s * (x + 0.21), s * (y + 0.05)],
+                      outline=(90, 130, 200), width=int(s * 0.012))
+    d.rectangle([s * 0.18, s * 0.74, s * 0.82, s * 0.84], fill=(24, 24, 26))      # 黒い紙
+
+
+def p_osboard(d, s):
+    """緑の盤に黒と白の石。"""
+    x0, y0, w = s * 0.12, s * 0.22, s * 0.76
+    d.rectangle([x0 - s * 0.03, y0 - s * 0.03, x0 + w + s * 0.03, y0 + w + s * 0.03], fill=(30, 30, 30))
+    d.rectangle([x0, y0, x0 + w, y0 + w], fill=(38, 120, 70))
+    c = w / 8
+    for i in range(9):
+        d.line([(x0 + i * c, y0), (x0 + i * c, y0 + w)], fill=(22, 80, 46), width=max(1, int(s * 0.006)))
+        d.line([(x0, y0 + i * c), (x0 + w, y0 + i * c)], fill=(22, 80, 46), width=max(1, int(s * 0.006)))
+    st = {(3, 3): 1, (4, 4): 1, (3, 4): 0, (4, 3): 0, (2, 3): 0, (2, 4): 1, (5, 2): 0, (4, 5): 1}
+    for (r, cc), wht in st.items():
+        x, y = x0 + (cc + 0.5) * c, y0 + (r + 0.5) * c
+        rr = c * 0.4
+        d.ellipse([x - rr, y - rr, x + rr, y + rr], fill=(244, 242, 236) if wht else (24, 24, 26))
+
+
 def p_mkshell(d, s):
     """開いたアコヤ貝。中は空っぽ。"""
     d.ellipse([s * 0.10, s * 0.44, s * 0.90, s * 0.92], fill=(120, 110, 104), outline=(70, 64, 60),
@@ -3130,6 +3161,11 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "othello-hasegawa": dict(layout="panels", headline="オセロの石は牛乳瓶のフタ",
+        head_hi="牛乳瓶のフタ", panels=[
+        _p("p_oscap", "1964年 試作品", BROWN, "thinking", "3枚重ねるのだ", "牛乳瓶の紙のフタ"),
+        _p("p_osboard", "1973年 発売", GREEN, "happy", "オセロなのだ", "フタと同じ大きさ"),
     ]),
     "sugiyo-kanikama": dict(layout="panels", headline="カニカマはクラゲの失敗作",
         head_hi="クラゲ", panels=[
