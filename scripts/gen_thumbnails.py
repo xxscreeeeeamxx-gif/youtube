@@ -2986,6 +2986,35 @@ def p_spomu(d, s):
     d.line([(s * 0.30, s * 0.40), (s * 0.50, s * 0.34), (s * 0.70, s * 0.40)], fill=(200, 40, 30), width=int(s * 0.03))
 
 
+def _yagi(d, x0, x1, y, h, col, w):
+    """横から見た八木アンテナ。左端が反射器、右へ導波器が短くなっていく。"""
+    d.line([(x0, y), (x1, y)], fill=col, width=w)
+    n = 6
+    for k in range(n):
+        x = x0 + (x1 - x0) * k / (n - 1)
+        hh = h * (1.0 if k == 0 else 0.86 if k == 1 else 0.74 - 0.05 * (k - 2))
+        d.line([(x, y - hh / 2), (x, y + hh / 2)], fill=col, width=w)
+
+
+def p_ygant(d, s):
+    """屋上の柱に付けた八木アンテナと、右へ飛ぶ電波。"""
+    d.rectangle([s * 0.26, s * 0.48, s * 0.30, s * 0.94], fill=(110, 110, 120))
+    _yagi(d, s * 0.14, s * 0.62, s * 0.48, s * 0.36, (60, 64, 76), int(s * 0.018))
+    for k in range(3):
+        r = s * (0.10 + k * 0.08)
+        d.arc([s * 0.66 - r, s * 0.48 - r, s * 0.66 + r, s * 0.48 + r], -40, 40, fill=(230, 120, 40),
+              width=int(s * 0.02))
+
+
+def p_ygradar(d, s):
+    """八木アンテナを4段積み重ねた、戦時中のレーダー。"""
+    frame = (70, 74, 64)
+    d.rectangle([s * 0.46, s * 0.24, s * 0.50, s * 0.86], fill=frame)
+    d.rectangle([s * 0.30, s * 0.84, s * 0.70, s * 0.92], fill=(90, 92, 80))
+    for k in range(4):
+        _yagi(d, s * 0.14, s * 0.86, s * (0.28 + k * 0.15), s * 0.11, (40, 44, 40), int(s * 0.012))
+
+
 def p_pcparis(d, s):
     """ガラスケースに並んだ外国の鉛筆。"""
     d.rectangle([s * 0.08, s * 0.30, s * 0.92, s * 0.78], fill=(220, 236, 244), outline=(120, 110, 90),
@@ -3316,6 +3345,11 @@ SPECS = {
         head_hi="妻のオムレツ", panels=[
         _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
         _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
+    ]),
+    "yagi-uda-antenna": dict(layout="panels", headline="八木アンテナを敵から教わった",
+        head_hi="敵から教わった", panels=[
+        _p("p_ygant", "1926年 仙台", SLATE, "happy", "遠くまで届くのだ", "棒を並べただけ"),
+        _p("p_ygradar", "1942年 シンガポール", RED, "surprised", "日本の発明なのだ！", "敵のレーダーの部品"),
     ]),
     "ohira-megastar": dict(layout="panels", headline="プラネタリウムを7畳間で作った",
         head_hi="7畳間", panels=[

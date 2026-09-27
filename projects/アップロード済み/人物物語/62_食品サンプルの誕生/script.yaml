@@ -1,0 +1,1114 @@
+meta:
+  title: 【食品サンプルの誕生】妻が焼いたシワだらけのオムレツを、ロウでそっくり写した男【ずんだもん解説】
+  slug: iwasaki-sample
+  summary: 飲食店の店先に並ぶ食品サンプル。これを最初に商売にしたのは、岐阜県郡上八幡に生まれた岩崎瀧三でした。子どものころ見た、水に落ちて花のように開くロウ。妻のすゞが焼いたシワだらけのオムレツ。本物の10倍の値段で月ぎめで貸すという売り方。戦争で陳列が禁じられても、故郷で作り続けた男と、日本独特の食品サンプル文化の歩みを、再現ドラマでたどります。
+  tags:
+  - 食品サンプル
+  - 岩崎瀧三
+  - 郡上八幡
+  - いわさき
+  - 合羽橋
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 雑学
+  thumbnail:
+    top: 妻のオムレツを写した
+    bottom: 食品サンプルの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: shujin
+    label: 主人
+    voice: 42
+    pitch: 0.04
+  - id: itoko
+    label: いとこ
+    voice: 12
+    pitch: 0.04
+  - id: tenshu
+    label: 店主
+    voice: 42
+    pitch: 0.1
+  - id: hyakka
+    label: 百貨店
+    voice: 13
+    pitch: 0.02
+  - id: yakunin
+    label: 役人
+    voice: 13
+    pitch: -0.06
+  - id: kouin
+    label: 工員
+    voice: 8
+    pitch: 0.04
+  - id: shinnyu
+    label: 新入社員
+    voice: 12
+    pitch: 0.18
+scenes:
+- id: hook
+  title: ''
+  background: sp_mise
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、このお店にするのだ。このオムライス、すごくおいしそうなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 店先の食品サンプルね。
+  - speaker: zundamon
+    emotion: happy
+    text: すみません、このサンプルと同じのをくださいなのだ。
+- id: hook2
+  title: ''
+  background: sp_table
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ……来たけど、サンプルより、ちょっと小さい気がするのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 気のせいよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 決めたのだ。次からは、サンプルのほうを食べるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、食べられないわよ。
+  - speaker: zundamon
+    emotion: happy
+    text: だったら、サンプルを買って帰るのだ。ずっとおいしそうなままなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 実はサンプルも、1年ほどで色があせてくるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: サンプルにも、賞味期限があるのだ！？
+    se: oti
+  - speaker: reimu
+    text: 食品サンプル。飲食店の店先に並ぶ、料理の見本です。
+    reading: しょくひん さんぷる。いんしょくてんの みせさきに ならぶ りょうりの みほんです。
+  - speaker: reimu
+    text: 国内の市場は、2009年の推計で約80億円でした。
+    reading: こくないの しじょうわ にせんきゅうねんの すいけいで やく はちじゅうおくえんでした。
+  - speaker: reimu
+    text: これを最初に商売にしたのは、岐阜県郡上八幡生まれの、岩崎瀧三という男でした。
+    reading: これお さいしょに しょうばいに したのわ、ぎふけん ぐじょうはちまん うまれの いわさき たきぞうと いう おとこでした。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初の一品は、奥さんが焼いたオムレツだったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: オムライスじゃなくて、オムレツなのだ！？
+- id: card1895
+  title: ''
+  background: sp_card_1895
+  cuts:
+  - speaker: reimu
+    text: 1895年。岐阜県の城下町、郡上八幡で、岩崎瀧三が生まれます。
+    reading: せんはっぴゃく きゅうじゅうごねん。ぎふけんの じょうかまち ぐじょうはちまんで いわさき たきぞうが うまれます。
+- id: ch1_rou
+  title: ロウの花
+  background: sp_jinja
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, scale: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3歳のとき顔にやけどを負い、家で絵や字をかいて遊ぶ子どもだったといいます。
+    reading: さんさいの とき かおに やけどお おい、いえで えや じお かいて あそぶ こどもだったと いいます。
+  - speaker: reimu
+    text: ある日、近所の神社で、ろうそくを灯す行事がありました。
+    reading: あるひ きんじょの じんじゃで ろうそくお ともす ぎょうじが ありました。
+  - speaker: zundamon
+    emotion: normal
+    text: ろうそくのロウが、水たまりに落ちたのだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……水の中で、白い花みたいに開いたのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: 熱いロウが、水で冷えると、形が固まるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: もう一回、落としてみるのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: こっちの畳にも、ロウがこぼれてるのだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 畳に落ちたロウには、畳の目が、そのまま写ってるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: ロウは、触れたものの形を、写し取るのだ。
+  - speaker: reimu
+    text: 畳に落ちたロウに畳の目が写っていた、という話も、会社の人によって語られています。
+    reading: たたみに おちた ろうに たたみの めが うつって いたと いう はなしも、かいしゃの ひとに よって かたられて います。
+  - speaker: reimu
+    text: 梅の花びらのような、白いロウの花。この光景が、強く心に残ったと伝わります。
+    reading: うめの はなびらの ような しろい ろうの はな。この こうけいが つよく こころに のこったと つたわります。
+- id: ch1_hoko
+  title: 大阪へ
+  background: sp_hoko
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, scale: 0.9, emotion: normal}
+  - {who: shujin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 15歳のころ、瀧三は柳行李ひとつを担いで、大阪へ奉公に出ます。
+    reading: じゅうごさいの ころ、たきぞうわ やなぎごうり ひとつお かついで おおさかえ ほうこうに でます。
+  - speaker: shujin
+    emotion: normal
+    text: 郡上から来た子やな。今日から、しっかり働いてもらうで。
+  - speaker: zundamon
+    emotion: happy
+    text: はい。大阪で、一旗あげるのだ。
+  - speaker: shujin
+    emotion: thinking
+    text: 一旗なあ。まずは、店の掃除からや。
+  - speaker: reimu
+    text: ところが、体を壊したり、新しい商売に挑んでは失敗したりの日々が続きました。
+    reading: ところが からだお こわしたり、あたらしい しょうばいに いどんでわ しっぱい したりの ひびが つづきました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……今度も、うまくいかなかったのだ。
+  - speaker: shujin
+    emotion: normal
+    text: 落ち込んでも、腹は減るやろ。ほれ、飯や。
+  - speaker: zundamon
+    emotion: normal
+    text: ……いつか、自分にしかできない商売を見つけるのだ。
+- id: card1931
+  title: ''
+  background: sp_card_1931
+  cuts:
+  - speaker: reimu
+    text: 1931年。36歳の瀧三は、大阪で妻のすゞと暮らしていました。
+    reading: せんきゅうひゃく さんじゅういちねん。さんじゅうろくさいの たきぞうわ おおさかで つまの すずと くらして いました。
+- id: ch2_itoko
+  title: いとこが持ってきた肉
+  background: sp_ie
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: itoko, x: 0.52, emotion: normal}
+  - {who: tsumugi, x: 0.8, tag: 岩崎すゞ, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 瀧三は、弁当や仕出しの仕事をしていたといいます。家には、すゞのいとこが住みついていました。
+    reading: たきぞうわ べんとうや しだしの しごとお して いたと いいます。いえにわ すずの いとこが すみついて いました。
+  - speaker: itoko
+    emotion: happy
+    text: 瀧三さん、本物そっくりの肉の模型を、見たことがありますか？
+  - speaker: zundamon
+    emotion: thinking
+    text: 肉の、模型なのだ？
+  - speaker: itoko
+    emotion: normal
+    text: 学校で使う教材でね。すき焼きの肉が、本物にしか見えないんですよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……それは、ロウでできているのだ。ぼくには分かるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それより、家賃がまた払われてないのよ。
+  - speaker: itoko
+    emotion: sad
+    text: ……す、すみません。
+- id: ch2_itoko_kie
+  title: ''
+  background: sp_ie
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: thinking}
+  - {who: tsumugi, x: 0.7, tag: 岩崎すゞ, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: いとこは家賃を払わないまま、姿を消してしまいます。
+    reading: いとこわ やちんお はらわない まま すがたお けして しまいます。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……あの子、とうとう出ていったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: あの肉の模型だけは、気になるのだ。
+- id: ch2_itoko2
+  title: ''
+  background: sp_ie2
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: itoko, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ところがしばらくして、その模型と作り方を持って、戻ってきたのです。
+    reading: ところが しばらく して、その もけいと つくりかたお もって もどってきたのです。
+  - speaker: zundamon
+    emotion: angry
+    text: ……家賃も払わずに、どこへ行ってたのだ。
+  - speaker: itoko
+    emotion: sad
+    text: すみません。でも、これを見てください。
+  - speaker: itoko
+    emotion: normal
+    text: これが、その肉と、グリーンピースの模型です。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……やっぱり、ロウなのだ！
+  - speaker: reimu
+    text: 模型を扱う知人が会社のお金を使い込み、その穴埋めのために、模型と作り方を手放したのだと伝わります。
+    reading: もけいお あつかう ちじんが かいしゃの おかねお つかいこみ、その あなうめの ために もけいと つくりかたお てばなしたのだと つたわります。
+- id: ch2_hint
+  title: 毎日捨てられる料理
+  background: sp_shokudo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: tenshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そのころの食堂は、毎日わざわざ本物の料理を作って、店先に並べていました。
+    reading: その ころの しょくどうわ、まいにち わざわざ ほんものの りょうりお つくって みせさきに ならべて いました。
+  - speaker: tenshu
+    emotion: thinking
+    text: 夏場は、並べた料理がすぐ傷んでな。毎日作っては、捨てとるんや。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見本の料理を、毎日捨てるのだ？
+  - speaker: tenshu
+    emotion: normal
+    text: 見本がないと、客は[何|なん]の料理か分からんからな。
+  - speaker: zundamon
+    emotion: happy
+    text: ……腐らない見本があれば、ほしいのだ？
+  - speaker: tenshu
+    emotion: surprised
+    text: そんなもんがあったら、誰でもほしいわ。
+  - speaker: reimu
+    text: 料理の見本には需要がある。瀧三は、そう確信します。
+    reading: りょうりの みほんにわ じゅようが ある。たきぞうわ そう かくしん します。
+- id: ch2_shisaku
+  title: 夜中の試作
+  background: sp_shisaku
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: 岩崎すゞ, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 仕事から帰ると、夜中まで試作を続けたといいます。
+    reading: しごとから かえると よなかまで しさくお つづけたと いいます。
+  - speaker: zundamon
+    emotion: normal
+    text: 本物の料理から、型を取るのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゼラチン、寒天、石膏……。
+  - speaker: zundamon
+    emotion: happy
+    text: 一番よく写るのは、寒天なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その型に、ロウを流すのね。
+  - speaker: zundamon
+    emotion: happy
+    text: 色を溶かしたロウを流して、固まったら取り出すのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: あなた、もう夜中の2時よ。
+  - speaker: zundamon
+    emotion: normal
+    text: あと一つだけなのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……あっ、割れたのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ロウは本物らしく見えるけど、もろすぎるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 障子を紙で裏から張るみたいに、内側に紙や[綿|わた]を貼って、補強したらどうかしら。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……裏打ちなのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: 割れないのだ！ すゞ、大手柄なのだ！
+  - speaker: reimu
+    text: 紙や綿の裏打ちで、見本は割れにくくなりました。すゞの思いつきだったとも伝わります。
+    reading: かみや わたの うらうちで みほんわ われにくく なりました。すずの おもいつきだったとも つたわります。
+- id: ch2_omu
+  title: 記念オム
+  background: sp_omu1
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: happy}
+  - {who: tsumugi, x: 0.7, tag: 岩崎すゞ, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1932年の春。すゞが焼いたオムレツを、型に取ることにしました。
+    reading: せんきゅうひゃく さんじゅうにねんの はる。すずが やいた おむれつお かたに とる ことに しました。
+  - speaker: tsumugi
+    emotion: sad
+    text: ごめんなさい。シワが寄って、きれいに焼けなかったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: いいのだ。このシワも、そのまま写すのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: シワまで？
+  - speaker: zundamon
+    emotion: normal
+    text: 焼き色も、ケチャップも、全部ロウで作るのだ。中は[綿|わた]で裏打ちして、空洞にするのだ。
+- id: ch2_omu2
+  title: ''
+  background: sp_omu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: happy}
+  - {who: tsumugi, x: 0.7, tag: 岩崎すゞ, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: できたのだ。すゞ、どっちが本物か、当ててみるのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: ……分からないわ。どっちが本物なの？
+  - speaker: zundamon
+    emotion: happy
+    text: 右が、ロウのオムレツなのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: シワの形まで、私が焼いたのと同じね。
+  - speaker: zundamon
+    emotion: happy
+    text: 最初の一品は、記念のオムレツ。記念オムと呼ぶのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: これで、商売になるのだ！
+  - speaker: reimu
+    text: シワまで写したので、かえって本物らしくなったそうです。
+    reading: しわまで うつしたので かえって ほんものらしく なったそうです。
+  - speaker: reimu
+    text: 本物そっくりの出来に、夫婦でたいそう喜んだそうです。
+    reading: ほんものそっくりの できに ふうふで たいそう よろこんだそうです。
+- id: card1932
+  title: ''
+  background: sp_card_1932
+  cuts:
+  - speaker: reimu
+    text: 1932年6月1日。大阪の老松町で、岩崎製作所が始まります。
+    reading: せんきゅうひゃく さんじゅうにねん ろくがつ ついたち。おおさかの おいまつちょうで いわさき せいさくしょが はじまります。
+- id: ch3_kashi
+  title: 月に本物の10倍
+  background: sp_shokudo2
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: happy}
+  - {who: tenshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 瀧三は、見本を入れた桐の箱を両手に持って、食堂を回りました。
+    reading: たきぞうわ みほんお いれた きりの はこお りょうてに もって しょくどうお まわりました。
+  - speaker: zundamon
+    emotion: happy
+    text: この箱の中を、見てほしいのだ。
+  - speaker: tenshu
+    emotion: surprised
+    text: ……なんや、うまそうなオムレツやな。
+  - speaker: zundamon
+    emotion: happy
+    text: ロウでできた、腐らない見本なのだ。
+  - speaker: tenshu
+    emotion: thinking
+    text: ほう。けど、こんな[細工物|さいくもの]、高いんやろ？
+  - speaker: zundamon
+    emotion: normal
+    text: 売るんじゃないのだ。月ぎめで、貸すのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 1か月の貸し賃は、本物の料理の10倍なのだ。
+  - speaker: tenshu
+    emotion: surprised
+    text: 10倍！？
+  - speaker: zundamon
+    emotion: happy
+    text: 毎日作って捨てるより、ずっと安いのだ。汚れたら、すぐ取り替えるのだ。
+  - speaker: tenshu
+    emotion: thinking
+    text: 貸してもらうんなら、傷んでも、こっちの損にはならんな。
+  - speaker: zundamon
+    emotion: happy
+    text: そうなのだ。手入れも、ぼくの仕事なのだ。
+  - speaker: tenshu
+    emotion: happy
+    text: ……それなら、置いてみるか。
+  - speaker: reimu
+    text: この貸し付けの仕組みは、今も続く、独自の売り方です。
+    reading: この かしつけの しくみわ いまも つづく どくじの うりかたです。
+- id: ch3_sogo
+  title: 百貨店の大食堂
+  background: sp_sogo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: hyakka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この年、大阪の十合百貨店が、瀧三の見本を採用します。
+    reading: この とし おおさかの そごう ひゃっかてんが たきぞうの みほんお さいよう します。
+  - speaker: hyakka
+    emotion: normal
+    text: 岩崎さん、大食堂のケースに、この見本を並べましょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 百貨店の食堂なら、たくさんの人が見るのだ。
+  - speaker: hyakka
+    emotion: happy
+    text: 初めて見る洋食でも、見本があれば、お客さんが迷いませんからね。
+  - speaker: reimu
+    text: 流行の先端だった百貨店で人目に触れたことが、転機になりました。
+    reading: りゅうこうの せんたんだった ひゃっかてんで ひとめに ふれた ことが てんきに なりました。
+  - speaker: hyakka
+    emotion: surprised
+    text: 岩崎さん、うちの見本を見て、よその百貨店からも問い合わせが来てますよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: よその百貨店からも、なのだ！？
+  - speaker: hyakka
+    emotion: happy
+    text: 見本の前で足を止めるお客さんが、多いんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 大阪から、全国に広げるのだ！
+  - speaker: reimu
+    text: ほかの百貨店からも、注文が相次ぎました。
+    reading: ほかの ひゃっかてんからも ちゅうもんが あいつぎました。
+- id: ch3_shucchou
+  title: 出張して作る
+  background: sp_shucchou
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: tenshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1933年からは、店に出向いて、その場で作る出張製作を始めます。
+    reading: せんきゅうひゃく さんじゅうさんねんからわ、みせに でむいて その ばで つくる しゅっちょう せいさくお はじめます。
+  - speaker: tenshu
+    emotion: normal
+    text: うちの名物は、この店の盛り付けなんや。よそと同じ見本じゃ困るで。
+  - speaker: zundamon
+    emotion: happy
+    text: だから、この店の料理から、型を取らせてほしいのだ。
+  - speaker: tenshu
+    emotion: surprised
+    text: うちの料理を、写すんか。
+  - speaker: zundamon
+    emotion: happy
+    text: 盛り付けも、器も、そっくりにするのだ。
+  - speaker: reimu
+    text: 数年のうちに、九州にも支店を開いたといいます。
+    reading: すうねんの うちに きゅうしゅうにも してんお ひらいたと いいます。
+- id: ch3_kigen
+  title: 本当の元祖は？
+  background: sp_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、食品サンプルを発明したのは、瀧三さんなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 実は、それより前から、料理の模型はあったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 記録で一番古いのは、1917年の京都。栄養の指導に使う料理の模型よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 作ったのは、島津製作所で標本を作っていた、西尾惣次郎たちなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 京都が、先だったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1923年には、東京の白木屋という百貨店の食堂が、
+  - speaker: tsumugi
+    emotion: normal
+    text: 料理の見本を並べて、食券を売り始めたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見本を作ったのは、人体や生き物の模型を作っていた、[須藤|すどう]勉という職人よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見本を見て食券を買うから、席の回転が速くなって、売上が4倍になったそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 見本だけで、4倍なのだ！？
+  - speaker: zundamon
+    emotion: surprised
+    text: 瀧三さんより、先の人たちがいたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 記者の野瀬泰申さんは、京都、東京、大阪で、それぞれ別に生まれたと見ているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 野瀬さん自身は、起源はおそらく京都、とも話しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その中で、見本づくりを初めから商売にしたのが、瀧三さんなのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 発明した人じゃなくて、広めた人なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 野瀬さんによると、関西では早くから、町の小さな店もサンプルを置いたようなの。
+- id: card1939
+  title: ''
+  background: sp_card_1939
+  cuts:
+  - speaker: reimu
+    text: 1939年。材料のパラフィンが、国の統制品になります。
+    reading: せんきゅうひゃく さんじゅうきゅうねん。ざいりょうの ぱらふぃんが くにの とうせいひんに なります。
+- id: ch4_senji
+  title: 陳列の禁止
+  background: sp_kara
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: thinking}
+  - {who: yakunin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: パラフィンは、火薬の原料にもなるためでした。
+    reading: ぱらふぃんわ かやくの げんりょうにも なる ためでした。
+  - speaker: reimu
+    text: 業界は、配給を受けるための組合を作って、しのぎます。
+    reading: ぎょうかいわ はいきゅうお うける ための くみあいお つくって しのぎます。
+  - speaker: reimu
+    text: 1944年、大阪府内で、食品模型の陳列が全面禁止になります。
+    reading: せんきゅうひゃく よんじゅうよねん おおさかふないで しょくひん もけいの ちんれつが ぜんめん きんしに なります。
+  - speaker: yakunin
+    emotion: normal
+    text: 時局柄、食べ物の模型を店先に飾るのは禁止だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 見本を、並べられないのだ？
+  - speaker: zundamon
+    emotion: sad
+    text: ……分かったのだ。
+  - speaker: reimu
+    text: 空襲も迫り、瀧三は故郷の郡上八幡へ疎開します。
+    reading: くうしゅうも せまり たきぞうわ こきょうの ぐじょうはちまんえ そかい します。
+- id: ch4_gujo
+  title: 故郷の工房
+  background: sp_senji
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kouin
+    emotion: thinking
+    text: 岩崎さん、今は何を作るんです？
+  - speaker: zundamon
+    emotion: normal
+    text: 戦死した人の、霊前に供える料理の模型なのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 本物の食べ物は、もう供えられない家が多いのだ。
+  - speaker: kouin
+    emotion: sad
+    text: ……うちの近所でも、葬式が続いてます。
+  - speaker: zundamon
+    emotion: normal
+    text: お膳の料理を、ひとつずつ写すのだ。ご飯も、お吸い物も。
+  - speaker: kouin
+    emotion: normal
+    text: 食べ物がない時でも、お膳だけは整えてあげられますね。
+  - speaker: zundamon
+    emotion: normal
+    text: パラフィンは、ほとんど手に入らないのだ。少ない量で作る工夫をするのだ。
+  - speaker: reimu
+    text: 戦争に動員されていない女性たちを雇い、供え物の模型を作って売ったといいます。
+    reading: せんそうに どういん されていない じょせいたちお やとい、そなえものの もけいお つくって うったと いいます。
+  - speaker: zundamon
+    emotion: happy
+    text: 形は、珪藻土で作るのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: ロウは、表面に吹き付けるだけにするのだ。
+  - speaker: kouin
+    emotion: surprised
+    text: それなら、ロウがほんの少しで済みますね。
+  - speaker: reimu
+    text: 珪藻土で形を作り、パラフィンを吹き付ける方法で、ロウを大きく節約したとされます。
+    reading: けいそうどで かたちお つくり、ぱらふぃんお ふきつける ほうほうで ろうお おおきく せつやく したと されます。
+- id: card1948
+  title: ''
+  background: sp_card_1948
+  cuts:
+  - speaker: reimu
+    text: 1948年。瀧三は、大阪へ戻ります。
+    reading: せんきゅうひゃく よんじゅうはちねん。たきぞうわ おおさかえ もどります。
+- id: ch5_fukkatsu
+  title: 焼け跡の食堂
+  background: sp_yakeato
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: tenshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1950年、瀧三は大阪の阿倍野で、仕事を立て直します。
+    reading: せんきゅうひゃく ごじゅうねん たきぞうわ おおさかの あべので しごとお たてなおします。
+  - speaker: tenshu
+    emotion: normal
+    text: 焼け跡から、やっと店を開けたんや。
+  - speaker: zundamon
+    emotion: happy
+    text: また、店先に見本を並べられるのだ。
+  - speaker: tenshu
+    emotion: thinking
+    text: 見本があったら、客も入りやすいわな。
+  - speaker: zundamon
+    emotion: happy
+    text: 昔と同じように、月ぎめで貸すのだ。
+  - speaker: tenshu
+    emotion: happy
+    text: 岩崎さんの見本が、戻ったな。
+- id: ch5_sengo
+  title: サンプルと呼ばれて
+  background: sp_kojo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 戦後の求人のちらしには、イワサキ・サンプルズと書かれていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 料理の模型が、サンプルと呼ばれるようになったのは、戦後のことなのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 食品サンプルという名前は、戦後生まれなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1952年には、東京に支店を出したわ。
+- id: ch5_kojo
+  title: 故郷に工場を
+  background: sp_kojo
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1955年、瀧三は故郷の郡上八幡に工場を作ります。
+    reading: せんきゅうひゃく ごじゅうごねん たきぞうわ こきょうの ぐじょうはちまんに こうじょうお つくります。
+  - speaker: kouin
+    emotion: happy
+    text: 岩崎さん、郡上に工場ができるんですね。
+  - speaker: zundamon
+    emotion: happy
+    text: ここでは、どの店でも使える、決まった形の見本を作るのだ。
+  - speaker: kouin
+    emotion: normal
+    text: また、みんなで働けます。
+  - speaker: zundamon
+    emotion: normal
+    text: 故郷の役に立ちたいのだ。
+  - speaker: reimu
+    text: 1958年には、アメリカへステーキの模型を3000個送っています。ビール会社の宣伝の品でした。
+    reading: せんきゅうひゃく ごじゅうはちねんにわ あめりかえ すてーきの もけいお さんぜんこ おくっています。びーるがいしゃの せんでんの しなでした。
+  - speaker: reimu
+    text: 1960年に大阪へ移るまで、会社の本社は郡上に置かれていました。
+    reading: せんきゅうひゃく ろくじゅうねんに おおさかえ うつるまで、かいしゃの ほんしゃわ ぐじょうに おかれて いました。
+- id: card1963
+  title: ''
+  background: sp_card_1963
+  cuts:
+  - speaker: reimu
+    text: 1963年。郡上八幡の工場が、岩崎模型製造として独立します。
+    reading: せんきゅうひゃく ろくじゅうさんねん。ぐじょうはちまんの こうじょうが いわさき もけい せいぞうと して どくりつ します。
+- id: ch5_ryote
+  title: 両手を使え
+  background: sp_kojo
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 岩崎瀧三, emotion: normal}
+  - {who: shinnyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この年、中学を卒業したばかりの少年が入社します。1961年に社長を譲った瀧三は、会長になっていました。
+    reading: この とし ちゅうがくお そつぎょう したばかりの しょうねんが にゅうしゃ します。せんきゅうひゃく ろくじゅういちねんに しゃちょうお ゆずった たきぞうわ かいちょうに なって いました。
+  - speaker: shinnyu
+    emotion: normal
+    text: 会長、この色付け、なかなかうまくいきません。
+  - speaker: zundamon
+    emotion: normal
+    text: 必ず両手を使え。とにかく工夫しろ。
+  - speaker: shinnyu
+    emotion: surprised
+    text: 両手を、ですか？
+  - speaker: shinnyu
+    emotion: normal
+    text: ……はい。やってみます。
+  - speaker: zundamon
+    emotion: normal
+    text: いつか、郡上八幡を、サンプルの町にするのだ。
+  - speaker: reimu
+    text: 必ず両手を使え、とにかく工夫しろ。瀧三の口ぐせとして、この少年が後に語った言葉です。
+    reading: かならず りょうてお つかえ とにかく くふうしろ。たきぞうの くちぐせと して この しょうねんが のちに かたった ことばです。
+- id: ch5_shi
+  title: ''
+  background: sp_kojo_mono
+  bgm: amacha_hoshizora
+  cuts:
+  - speaker: reimu
+    text: 少年が入社した2年後の1965年、岩崎瀧三は亡くなりました。
+    reading: しょうねんが にゅうしゃ した にねんごの せんきゅうひゃく ろくじゅうごねん いわさき たきぞうわ なくなりました。
+- id: ch5_ayumi
+  title: 職人の工夫
+  background: sp_koubou
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 瀧三さんの晩年から、職人たちの新しい工夫が続くの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1964年には、ご飯の新しい作り方で特許が取られたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ヒントは、[河原|かわら]の小石だったそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 小石が、[お米|おこめ]になったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: いわさきグループでは、1966年から、社内の製作コンクールを毎年開いてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1972年には、愛知の職人が、フォークが宙に浮くスパゲティを考え出したわ。
+  - speaker: zundamon
+    emotion: happy
+    text: あれは、手品みたいで目が止まるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 店の反応は最初は薄かったけど、お客さんに受けて、売上が伸びたそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1975年には、アメリカに会社を作って、シカゴの博物館の展示用にも納めたわ。
+- id: ch6_gijutsu
+  title: 今の作り方
+  background: sp_koubou
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1970年代から少しずつ、ロウは使われなくなったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の主な材料は、塩化ビニルよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ロウじゃ、だめだったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ロウは熱に弱くて、夏の店先で溶けたり、色が変わったりしたのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ、ロウは溶かせばやり直せる。樹脂は、一度固めたらやり直せないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 樹脂のほうが、一発勝負なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は、本物の料理からシリコンで型を取って、塩ビを流し込んで、熱で固めるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 色は、スプレーや筆で一つずつ付けて、最後につやを出すのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 棚の部品が、すごい数なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大阪の工場には、キャベツや麺、むきエビまで、約1000種類の部品があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ご飯の粒のように、専門の会社から仕入れる部品もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一皿は、型取りから仕上げまで、原則一人の職人が作るの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一つ作るのに、どのくらいかかるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 注文してから届くまで、3週間ほどが目安だそうよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一番難しいのは色付け。一人前まで何年もかかるそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 手作業だから、100個作れば、100個とも違うそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 同じ料理でも、一つずつ顔が違うのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: のり巻きのかんぴょうは、関東と関西で色を変えるそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 地域の味つけの色まで、写してるのだ！
+- id: ch6_tempura
+  title: 天ぷらとレタス
+  background: sp_zukai2
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 郡上八幡の体験工房では、昔ながらのロウで、天ぷらとレタスを作れるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 天ぷらの衣は、溶かしたロウを、ぬるま湯に垂らして作るのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 瀧三さんが子どものころに見た、ロウの花なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: レタスは、白と緑のロウをお湯に流して、沈めながら手でたぐり寄せるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: すると、本物みたいなシワと葉脈ができるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: お湯の中で、野菜が育っていくのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ、今のプロの天ぷらは、樹脂を振りかけて、熱い風を当てて作るそうよ。
+- id: ch7_nazo
+  title: 本物よりおいしそう？
+  background: sp_mise
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: やっぱり、サンプルのほうがおいしそうに見えるのだ。気のせいなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 気のせいじゃないわ。本物よりおいしそうに作るのが、[作り手|つくりて]の目標なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 店の照明が当たったときに、一番よく見えるように計算してるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: わざと、なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 具を少し大きくしたり、盛りを高くしたり、本物より少し大げさに作ることもあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: だから、来た料理が小さく見えたのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、高いお店ほど、豪華なサンプルを置くのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: それが逆なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2002年の野瀬さんの調べでは、最低1000円以上の店には、サンプルがないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 高級なお店は、見本がなくても入ってもらえるのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ところで、サンプルは、本物の料理にプラスチックをかぶせてるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう思っていた外国の観光客もいるけど、違うわ。本物は、型を取るのに使うだけよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 最初のサンプルはオムライス、って聞いたこともあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう書いてある資料もあるけど、会社の公式の説明では、オムレツなの。
+  - speaker: zundamon
+    emotion: happy
+    text: ぼくが最初に指さしたのも、オムライスだったのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 昔の人は、字が読めなかったから、サンプルが広まったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言われることもあるけど、根拠は弱いの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 洋食みたいに、初めて聞く料理は、名前だけじゃ想像できなかったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見本を見て選んで、食券を買う。食堂の混雑を減らすのにも役立ったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 字が読めても、オムレツの形は分からないのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: サンプルって、日本にしかないのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 韓国では、1988年のソウルオリンピックをきっかけに広まったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、店先にメニューとして並べる文化は、日本生まれ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今も日本で、一番根付いてるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ところで、1個いくらくらいするのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 値段は、注文で作ると、一品6000円から1万円くらいが目安よ。
+- id: ch8_gendai
+  title: 世界のサンプル
+  background: sp_gendai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 国内のシェアは、いわさきグループで7割ほどだそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 郡上八幡は、日本の食品サンプルの約6割を作っている、ともいわれるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 本当に、サンプルの町になったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 郡上のサンプル会社の多くは、岩崎模型製造で学んで独立した人たちだそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: バブルが崩れて仕事が減った1990年代からは、観光客の作る体験が増えたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 天ぷらとレタスの体験なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2007年ごろには、岩崎模型製造の体験だけで、年間1万人以上が来ていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京の合羽橋でも、2010年から、ロウの製作体験が始まったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 合羽橋の店では、キーホルダーやマグネットが、外国の観光客に人気よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年の9月12日には、瀧三さんの誕生日に、グーグルのトップの絵にもなったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界中の人が、瀧三さんを見たのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年には、記念オムを、今の職人がロウで再現したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3月26日は、サン、プ、ルの語呂合わせで、食品サンプルの日として登録されてるの。
+  - speaker: zundamon
+    emotion: happy
+    text: サンプルの記念日なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年からは、ロンドンで食品サンプルの展覧会も開かれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 47都道府県の料理を、新しく作って並べたそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 宮城のずんだ餅も、ロンドンに行ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そのあと、ロサンゼルスでも展示されたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年には、瀧三さんの息子が作ったクジラの模型が、30年ぶりに公開されたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: クジラまで、作ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 全長16メートルのザトウクジラで、作るのに10年かかったそうよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ最近は、コストを抑えるため、サンプルをポスターに替える店もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それで今は、医療用の模型や、栄養指導の教材にも、技術を広げてるそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 両手を使って、工夫を続けてるのだ。
+- id: shime
+  title: ''
+  background: sp_table2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、また同じお店なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今日は、サンプルを食べないの？
+  - speaker: zundamon
+    emotion: happy
+    text: 今日は、本物のオムレツを頼んだのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 本物のシワも、よく見るのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 瀧三さんみたいね。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……見てるうちに、冷めたのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴ありがとうございました！
+    duet_with: tsumugi
