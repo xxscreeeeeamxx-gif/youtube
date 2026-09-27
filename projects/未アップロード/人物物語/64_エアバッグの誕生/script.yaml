@@ -1,7 +1,7 @@
 meta:
   title: 【エアバッグの誕生】14か国で特許を取ったのに、1台も使われなかった発明家【ずんだもん解説】
   slug: kobori-airbag
-  summary: ハンドルの真ん中に入っている、エアバッグ。1964年、東京の寺の境内にある小さな仕事場で、この仕組みの開発を始めた発明家がいました。小堀保三郎。クレーン会社の経営を譲ったあとの挑戦で、特許を出願したときは65歳でした。大学や防衛庁の実験隊の協力を得て、14の国で特許を取り、ヤナセの梁瀬次郎は実験フィルムを持ってベンツを訪ねます。それでも、保三郎の特許を使う会社は現れませんでした。保三郎の生涯と、世界の車にエアバッグが積まれるまでを、再現ドラマでたどります。
+  summary: ハンドルの真ん中に入っている、エアバッグ。1964年、東京の寺の境内にある小さな仕事場で、この仕組みの開発を始めた発明家がいました。クレーン会社の経営を譲ったあとの小堀保三郎です。大学や防衛庁の実験隊の協力を得て、ぶつかった瞬間に袋をふくらませる装置を形にしていきます。その発明は、世界の自動車会社にどう受け止められたのか。仕組みの解説とあわせて、再現ドラマでたどります。
   tags:
   - エアバッグ
   - 小堀保三郎
@@ -801,7 +801,7 @@ scenes:
     emotion: thinking
     text: ……取るにも、守るにも、お[金|かね]がかかるのだ。
   - speaker: tsumugi
-    emotion: sad
+    emotion: thinking
     text: 研究のお[金|かね]も、うちの財産から出してるんですから。
   - speaker: zundamon
     emotion: normal
@@ -810,7 +810,7 @@ scenes:
     text: 1970年、日本の交通事故の死者は、1万6765人になりました。
     reading: せんきゅうひゃく ななじゅうねん にほんの こうつう じこの ししゃわ いちまん ろくせん ななひゃく ろくじゅう ごにんに なりました。
   - speaker: tsumugi
-    emotion: sad
+    emotion: thinking
     text: 交通戦争、なんて呼ばれてるそうですよ。
   - speaker: zundamon
     emotion: sad
@@ -845,7 +845,7 @@ scenes:
     emotion: sad
     text: ……でも、ぼくの特許を使ってくれた会社は、まだ無いのだ。
   - speaker: tsumugi
-    emotion: sad
+    emotion: thinking
     text: ……そうですね。
   - speaker: reimu
     text: 保三郎の特許を使う会社は、最後まで現れませんでした。
@@ -1114,7 +1114,7 @@ scenes:
     emotion: sad
     text: 赤ちゃんに、あの勢いで袋が当たったら、大変なのだ。
   - speaker: tsumugi
-    emotion: sad
+    emotion: thinking
     text: アメリカでは、助手席のエアバッグで、子どもが亡くなる事故が続いたの。
   - speaker: tsumugi
     emotion: normal
@@ -1146,7 +1146,7 @@ scenes:
     emotion: normal
     text: 世界中で、大規模なリコールになったわ。
   - speaker: tsumugi
-    emotion: sad
+    emotion: thinking
     text: タカタは、2017年に経営破綻したの。
   - speaker: zundamon
     emotion: sad

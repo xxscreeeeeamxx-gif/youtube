@@ -2996,6 +2996,34 @@ def _yagi(d, x0, x1, y, h, col, w):
         d.line([(x, y - hh / 2), (x, y + hh / 2)], fill=col, width=w)
 
 
+def p_fxleaf(d, s):
+    """緑の葉と赤い紅葉、その横に試験管。"""
+    import math
+    def leaf(cx, cy, r, col):
+        pts = []
+        for k in range(10):
+            a = -math.pi / 2 + k * math.pi / 5
+            rr = r if k % 2 == 0 else r * 0.45
+            pts.append((cx + rr * math.cos(a), cy + rr * math.sin(a)))
+        d.polygon(pts, fill=col)
+        d.line([(cx, cy), (cx, cy + r * 1.1)], fill=(110, 70, 40), width=int(s * 0.012))
+    leaf(s * 0.28, s * 0.36, s * 0.20, (90, 160, 70))
+    leaf(s * 0.52, s * 0.50, s * 0.22, (220, 50, 40))
+    d.rounded_rectangle([s * 0.74, s * 0.18, s * 0.86, s * 0.84], radius=int(s * 0.06), outline=(160, 170, 180), width=int(s * 0.015))
+    d.rounded_rectangle([s * 0.755, s * 0.50, s * 0.845, s * 0.83], radius=int(s * 0.045), fill=(220, 60, 50))
+
+
+def p_fxpen(d, s):
+    """ボールペンと、途中から消えた線。"""
+    d.line([(s * 0.08, s * 0.30), (s * 0.48, s * 0.30)], fill=(40, 50, 90), width=int(s * 0.03))
+    for k in range(5):
+        x = s * (0.52 + k * 0.08)
+        d.line([(x, s * 0.30), (x + s * 0.04, s * 0.30)], fill=(200, 205, 220), width=int(s * 0.03))
+    d.rounded_rectangle([s * 0.14, s * 0.56, s * 0.86, s * 0.68], radius=int(s * 0.06), fill=(40, 60, 120))
+    d.polygon([(s * 0.86, s * 0.58), (s * 0.96, s * 0.62), (s * 0.86, s * 0.66)], fill=(200, 200, 206))
+    d.rounded_rectangle([s * 0.04, s * 0.57, s * 0.16, s * 0.67], radius=int(s * 0.03), fill=(236, 236, 230))
+
+
 def _tcub(d, s, body, shield, seat, demae=False):
     """サムネ用の横向きカブ（prop の座標系 0〜1）。"""
     k = s / 440
@@ -3413,6 +3441,11 @@ SPECS = {
         head_hi="妻のオムレツ", panels=[
         _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
         _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
+    ]),
+    "frixion-metamo": dict(layout="panels", headline="紅葉から生まれた消えるペン",
+        head_hi="紅葉", panels=[
+        _p("p_fxleaf", "1970年 渓谷の紅葉", SLATE, "surprised", "色が変わるのだ！", "試験管で作りたい"),
+        _p("p_fxpen", "2006年 ヨーロッパ", RED, "happy", "消えるのだ！", "30年後にボールペンへ"),
     ]),
     "fujisawa-supercub": dict(layout="panels", headline="「月に3万台売れる」と言った男",
         head_hi="月に3万台", panels=[
