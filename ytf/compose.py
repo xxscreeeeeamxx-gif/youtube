@@ -374,6 +374,13 @@ class Composer:
         self._draw_caption(canvas, text)
         return canvas
 
+    def tag_layer(self, m: dict) -> Image.Image:
+        """1人分の名札だけの透過レイヤー（入場スライドの立ち絵と一緒に動かす用）。"""
+        canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
+        cx, ty = self._tag_pos(m)
+        self._draw_tag(canvas, m["tag"], cx, ty)
+        return canvas
+
     def bubble_layer(self, bubble: dict,
                      stage: list[dict] | None = None) -> Image.Image:
         """吹き出し+名札の透過レイヤー（動く立ち絵より前面に重ねる用）。
@@ -825,6 +832,7 @@ def render_frames(
                 enter_set = cur_whos - last_stage_whos
             last_stage_whos = cur_whos
         enters = None
+        ent_tag_whos: list[str] = []
         if enter_set:
             ent_list = []
             for m in stage_list:
@@ -842,7 +850,20 @@ def render_frames(
                     sp2.save(ep)
                 manifest_used.add(ekey)
                 x0 = -sp2.width if float(m["x"]) < 0.5 else composer.lay.w
-                ent_list.append({"png": erel, "x": tx, "y": ty, "x0": x0})
+                ent = {"png": erel, "x": tx, "y": ty, "x0": x0}
+                if m.get("tag") and not actor_member:
+                    # ナレのカットでは名札が基底に焼かれ、滑り込む立ち絵の髪に隠れていた
+                    # （2026-09-27 オセロ回）。名札も立ち絵と一緒に動く前面レイヤーにする
+                    tkey = hashlib.sha1(json.dumps(
+                        [m, sprite_sig, "enttag1"], ensure_ascii=False,
+                        sort_keys=True, default=str).encode()).hexdigest()[:16]
+                    trel = f"frames/tag_{tkey}.png"
+                    if tkey not in manifest_used and not (proj.root / trel).exists():
+                        composer.tag_layer(m).save(proj.root / trel)
+                    manifest_used.add(tkey)
+                    ent["tag_png"] = trel
+                    ent_tag_whos.append(m["who"])
+                ent_list.append(ent)
             enters = ent_list or None
         base_stage = ([m for m in stage_list if m["who"] not in enter_set
                        or (actor_member and m["who"] == actor_member["who"])]
@@ -863,14 +884,14 @@ def render_frames(
             # 全画面動画（年号カード・図解アニメ）では章タブを消す（見出しと干渉するため）
             header = ""
         # ベースはテロップ抜きで合成（テロップは別レイヤーで動かす）
-        key_src = json.dumps(
-            [bg_name, header, chars,
-             cut.slide.model_dump() if cut.slide else None, cut.image,
-             bool(sp), card, full, fg_only, sub, sprite_sig,
-             base_stage, bubble, caption, actor, "tags-top1", "bubble-y134",
-             sorted(enter_set)],
-            ensure_ascii=False, sort_keys=True, default=str,
-        )
+        key_list = [bg_name, header, chars,
+                    cut.slide.model_dump() if cut.slide else None, cut.image,
+                    bool(sp), card, full, fg_only, sub, sprite_sig,
+                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134",
+                    sorted(enter_set)]
+        if ent_tag_whos:
+            key_list.append(["enttag1", sorted(ent_tag_whos)])
+        key_src = json.dumps(key_list, ensure_ascii=False, sort_keys=True, default=str)
         key = hashlib.sha1(key_src.encode()).hexdigest()[:16]
         rel = f"frames/{sub}_{key}.png"
         path = proj.root / rel
@@ -881,7 +902,8 @@ def render_frames(
                                  stage=base_stage, bubble=bubble,
                                  caption=caption, actor=actor,
                                  bubble_layered=bool(actor),
-                                 tag_stage=stage_list).save(path)
+                                 tag_stage=[m for m in stage_list
+                                            if m["who"] not in ent_tag_whos]).save(path)
         manifest_used.add(key)
 
         # 話者立ち絵レイヤー（透過PNG）と動き。吹き出しは立ち絵より前面のレイヤーに

@@ -245,6 +245,15 @@ def _render_one_segment(
         out = nxt()
         fc += f";{cur}[{ti}:v]overlay=x='{xe}':y='{ye}':eval=frame,format=yuv420p{out}"
         cur = out
+        if en.get("tag_png"):
+            # 名札は立ち絵と同じ動きで、立ち絵より前面に重ねる（後ろ髪に隠れない）
+            ti = _count_inputs(inputs)
+            inputs += ["-loop", "1", "-framerate", str(fps), "-i", en["tag_png"]]
+            dx = f"({x0}-{xt})*pow(max(0,1-{tv}/0.6),2)"
+            dy = f"-7*abs(sin(14*{tv}))*lt({tv},0.62)"
+            out = nxt()
+            fc += f";{cur}[{ti}:v]overlay=x='{dx}':y='{dy}':eval=frame,format=yuv420p{out}"
+            cur = out
 
     if item.caption_png:
         # 入場スライドで隠れないよう、ナレ字幕を入場キャラより前面に重ねる
@@ -381,7 +390,9 @@ def render_segments(
             vsig += f"|cap:{item.caption_png}"
         if item.enters:
             vsig += "|ent2:" + ",".join(
-                f"{e['png']}:{e['x']}:{e['x0']}" for e in item.enters)
+                f"{e['png']}:{e['x']}:{e['x0']}"
+                + (f":{e['tag_png']}" if e.get("tag_png") else "")
+                for e in item.enters)
         if item.mark_png:
             vsig += f"|mk1:{item.mark_png}:{item.mark_x}:{item.mark_y}"
         if item.impact_png:
