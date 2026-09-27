@@ -1,0 +1,1249 @@
+meta:
+  title: 【ウォークマンの誕生】録音できない再生専用機が、世界の言葉になった【ずんだもん解説】
+  slug: sony-walkman
+  summary: 歩きながら音楽を聴く。今では当たり前のこの習慣は、1979年に発売された小さな機械から始まりました。きっかけは、出張の多いソニーの名誉会長、井深大のちょっとした頼みごと。録音もできず、スピーカーもない再生専用機を、会長の盛田昭夫は夏休み前に出すと決めます。社内の反対、50グラムのヘッドホン、変な和製英語と言われた名前。その裏側を、再現ドラマでたどります。
+  tags:
+  - ウォークマン
+  - ソニー
+  - 盛田昭夫
+  - 井深大
+  - カセットテープ
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 雑学
+  thumbnail:
+    top: 録音できないテレコ
+    bottom: ウォークマンの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: ibuka
+    label: 井深大
+    voice: 42
+    pitch: 0.0
+  - id: ooga
+    label: 大賀典雄
+    voice: 13
+    pitch: 0.04
+  - id: gishi
+    label: 若手技術者
+    voice: 12
+    pitch: 0.1
+  - id: gishi2
+    label: 技術者
+    voice: 12
+    pitch: -0.04
+  - id: eigyo
+    label: 営業担当
+    voice: 13
+    pitch: -0.06
+  - id: osone
+    label: 大曽根幸三
+    voice: 13
+    pitch: -0.02
+  - id: koujou
+    label: 工場の女性
+    voice: 8
+    pitch: 0.14
+  - id: tsuma
+    label: 妻・良子
+    voice: 8
+    pitch: -0.04
+  - id: shouji
+    label: 庄司薫
+    voice: 13
+    pitch: 0.08
+  - id: senden
+    label: 宣伝部員
+    voice: 12
+    pitch: 0.06
+  - id: shain
+    label: 社員
+    voice: 42
+    pitch: 0.08
+  - id: shinjin
+    label: 新入社員
+    voice: 12
+    pitch: 0.14
+  - id: wakamono
+    label: 若者
+    voice: 8
+    pitch: 0.2
+  - id: marui
+    label: 丸井の社員
+    voice: 12
+    pitch: -0.06
+  - id: tenshu
+    label: 電器店主
+    voice: 42
+    pitch: 0.12
+  - id: kuroki
+    label: 黒木靖夫
+    voice: 13
+    pitch: 0.1
+  - id: chijin
+    label: 欧州の知人
+    voice: 42
+    pitch: -0.06
+scenes:
+- id: hook
+  title: ''
+  background: wm_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、見るのだ。歩きながら、好きな音楽を聴いてるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: イヤホンね。今は、当たり前の光景よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 当たり前じゃなかった時代が、あるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 昔は、いい音はスピーカーで聴くもの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 外なら、ラジオやラジカセくらいだったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 歩きながらステレオは、無理だったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1979年に、それを変えた機械が出たの。
+  - speaker: reimu
+    text: ウォークマン。カセットテープを聴くためだけの、小さな機械です。
+    reading: うぉーくまん。かせっとてーぷお きく ためだけの ちいさな きかいです。
+  - speaker: reimu
+    text: 録音はできません。スピーカーも付いていません。
+    reading: ろくおんわ できません。すぴーかーも ついていません。
+  - speaker: zundamon
+    emotion: surprised
+    text: 録音もできないテレコなんて、売れるのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 社内でも、そう言われたわ。売れるはずがない、って。
+  - speaker: reimu
+    text: 発売した月に売れたのは、約3000台でした。
+    reading: はつばい した つきに うれたのわ やく さんぜんだいでした。
+  - speaker: reimu
+    text: ここから、全部の型を合わせて、およそ4億台が売れていきます。
+    reading: ここから ぜんぶの かたお あわせて およそ よんおくだいが うれて いきます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 3000台から、4億台なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: きっかけは、ある名誉会長の、ちょっとした頼みごとだったの。
+- id: card1978
+  title: ''
+  background: wm_card_1978
+  cuts:
+  - speaker: reimu
+    text: 1978年。ソニーの名誉会長、井深大は70歳でした。
+    reading: せんきゅうひゃく ななじゅうはちねん。そにーの めいよ かいちょう いぶか まさるわ ななじゅっさいでした。
+- id: ch0_kinai
+  title: 出張のお供
+  background: wm_kinai
+  bgm: hirusagari
+  stage:
+  - {who: ibuka, x: 0.3, flip: true, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 井深の楽しみは、海外への出張の機内で、ヘッドホンで音楽を聴くことでした。
+    reading: いぶかの たのしみわ かいがいえの しゅっちょうの きないで、へっどほんで おんがくお きく ことでした。
+  - speaker: reimu
+    text: 愛用していたのは、その年に出たばかりの、TC-D5という録音機。10万円前後する、本格的な機械です。
+    reading: あいよう していたのわ その としに でたばかりの てぃーしー でぃーふぁいぶと いう ろくおんき。じゅうまんえん ぜんご する ほんかくてきな きかいです。
+  - speaker: ibuka
+    emotion: happy
+    text: うん、いい音だ。
+  - speaker: ibuka
+    emotion: sad
+    text: ……だが、重くてかなわない。
+  - speaker: ibuka
+    emotion: thinking
+    text: 音楽を聴くだけなら、録音の仕掛けなど、いらんのだがなあ。
+- id: ch0_ooga
+  title: ''
+  background: wm_yakuin0
+  bgm: hirusagari
+  stage:
+  - {who: ibuka, x: 0.28, flip: true, emotion: normal}
+  - {who: ooga, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 次の出張の前、井深は副社長の大賀典雄に声をかけます。
+    reading: つぎの しゅっちょうの まえ いぶかわ ふくしゃちょうの おおが のりおに こえお かけます。
+  - speaker: ibuka
+    emotion: normal
+    text: 大賀くん。また出張なんだが。
+  - speaker: ibuka
+    emotion: happy
+    text: プレスマンに、再生だけでいいから、ステレオ回路を入れたのを作ってくれんかな。
+  - speaker: reimu
+    text: プレスマンは、同じ年に出た、手のひらほどのモノラルの小型録音機です。
+    reading: ぷれすまんわ おなじ としに でた てのひらほどの ものらるの こがた ろくおんきです。
+  - speaker: ooga
+    emotion: happy
+    text: 分かりました。テープレコーダーの事業部に、頼んでみましょう。
+  - speaker: reimu
+    text: 大賀が電話をかけると、事業部長の大曽根幸三は、二つ返事で引き受けました。
+    reading: おおがが でんわお かけると、じぎょうぶちょうの おおそね こうぞうわ ふたつへんじで ひきうけました。
+- id: ch1_kaizou
+  title: 大きなヘッドホン
+  background: wm_koba
+  bgm: pop
+  stage:
+  - {who: gishi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: プレスマンから録音の機能を外し、ステレオで再生できるように作り替えます。
+    reading: ぷれすまんから ろくおんの きのうお はずし、すてれおで さいせい できるように つくりかえます。
+  - speaker: gishi
+    emotion: thinking
+    text: 録音の回路とスピーカーを外せば、ステレオの回路が入るぞ。
+  - speaker: reimu
+    text: ヘッドホンは、有り合わせの大きなものを付けました。
+    reading: へっどほんわ ありあわせの おおきな ものお つけました。
+  - speaker: gishi
+    emotion: happy
+    text: 大きなヘッドホンを付けた、小さなプレスマンの出来上がりだ。
+- id: ch1_shibaura
+  title: ''
+  background: wm_koba
+  bgm: pop
+  stage:
+  - {who: ibuka, x: 0.28, flip: true, emotion: normal}
+  - {who: gishi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1978年10月ごろ。井深が、芝浦の職場にふらりと現れます。
+    reading: せんきゅうひゃく ななじゅうはちねん じゅうがつごろ。いぶかが しばうらの しょくばに ふらりと あらわれます。
+  - speaker: ibuka
+    emotion: normal
+    text: 大賀くんに頼んでおいたけれど、連中、やってくれているかな。
+  - speaker: ibuka
+    emotion: happy
+    text: おっ、これか。どれ、聴かせてもらおう。
+  - speaker: ibuka
+    emotion: surprised
+    text: ほー。小さいくせに、良い音が出るじゃないか。
+  - speaker: ibuka
+    emotion: happy
+    text: 本当に良い音を聴くには、無駄なく音を再現するヘッドホンがいいんだよなあ。
+  - speaker: reimu
+    text: 井深は、1952年にアメリカで、ヘッドホンで立体的な録音を聴いたときの感動を、思い出していました。
+    reading: いぶかわ せんきゅうひゃく ごじゅうにねんに あめりかで へっどほんで りったいてきな ろくおんお きいた ときの かんどうお、おもいだしていました。
+- id: ch1_denchi
+  title: ''
+  background: wm_akiba
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: この試作機には、こんな[話|はなし]も残ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 動かすのに、特殊な電池が2個必要だったのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 部員が[秋葉原中|あきはばらじゅう]を走り回って、やっと手に入れたそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 井深さんの出張に、間に合ったのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ところが出張先の井深から、連絡が届いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 聴いている途中で電池が切れて、こちらで探したけど見つからなかったよ、って。
+  - speaker: zundamon
+    emotion: sad
+    text: 秋葉原での苦労が……。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: みんな、がっかりしたそうよ。
+- id: ch2_morita
+  title: 歩きながら聴けたら
+  background: wm_yakuin
+  bgm: you_and_me
+  stage:
+  - {who: ibuka, x: 0.28, flip: true, emotion: happy}
+  - {who: zundamon, x: 0.7, tag: 盛田昭夫, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 井深は、大きなヘッドホンを付けた試作機を、盛田昭夫の部屋へ持って行きます。
+    reading: いぶかわ おおきな へっどほんお つけた しさくきお、もりた あきおの へやえ もっていきます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 井深さん。そのヘッドホンは、[何|なん]なのだ？
+  - speaker: ibuka
+    emotion: happy
+    text: 盛田くん。これ、聴いてみてくれんかね。
+  - speaker: ibuka
+    emotion: normal
+    text: 歩きながら聴ける、ステレオのカセットプレーヤーがあったら、いいと思うんだが。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……週末に、家でじっくり試してみるのだ。
+  - speaker: reimu
+    text: 盛田は当時57歳。井深とソニーを興した、もう一人の創業者です。
+    reading: もりたわ とうじ ごじゅうななさい。いぶかと そにーお おこした もう ひとりの そうぎょうしゃです。
+- id: ch2_jitaku
+  title: ''
+  background: wm_jitaku0
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 盛田昭夫, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 確かに、スピーカーで聴くのとは、違った良さがあるのだ。
+  - speaker: reimu
+    text: 盛田の家でも、子どもたちは帰るとまず、ステレオのスイッチを入れていました。
+    reading: もりたの いえでも こどもたちわ かえると まず、すてれおの すいっちお いれていました。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[1日中|いちにちじゅう]、音楽を楽しんでいたい若者が、たくさんいるのだ。'
+  - speaker: zundamon
+    emotion: happy
+    text: これは、ひょっとすると、ひょっとするのだ！
+- id: card1979
+  title: ''
+  background: wm_card_1979
+  cuts:
+  - speaker: reimu
+    text: 1979年2月。盛田は、若手の社員たちを本社の会議室に集めます。
+    reading: せんきゅうひゃく ななじゅうくねん にがつ。もりたわ わかての しゃいんたちお ほんしゃの かいぎしつに あつめます。
+- id: ch3_kaigi
+  title: 録音できないテレコ
+  background: wm_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: normal}
+  - {who: gishi2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: この製品は、[1日中|いちにちじゅう]音楽を楽しんでいたい、若者の願いを満たすものなのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 音楽を、外へ持って出られるのだ。録音機能は、いらないのだ。
+  - speaker: gishi2
+    emotion: thinking
+    text: 再生専用機なんて、聞いたことがありません。
+  - speaker: gishi2
+    emotion: sad
+    text: 録音機能が付いていないと、絶対に売れませんよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 録音できないカーステレオを、何百万人もが買っているのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 自分のクビをかけてでも、やる決意なのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 若者、つまり学生が相手だから、夏休みの前に発売するのだ。
+  - speaker: reimu
+    text: 当時の慣例では、発売日は21日。6月21日なら、残りは正味4か月です。
+    reading: とうじの かんれいでわ はつばいびわ にじゅういちにち。ろくがつ にじゅういちにちなら のこりわ しょうみ よんかげつです。
+  - speaker: gishi2
+    emotion: thinking
+    text: ……困難ですが、不可能ではありません。
+  - speaker: gishi2
+    emotion: happy
+    text: やってみましょう。
+  - speaker: reimu
+    text: 出席者は難色を示しながらも、心のどこかで、使ってみたいと思っていたといいます。
+    reading: しゅっせきしゃわ なんしょくお しめしながらも、こころの どこかで つかってみたいと おもっていたと いいます。
+- id: ch3_kakaku
+  title: 33周年で3万3000円
+  background: wm_kaigi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: normal}
+  - {who: eigyo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 値段は、プレスマンと同じくらい。4万円を切るつもりでいくのだ。
+  - speaker: eigyo
+    emotion: normal
+    text: 実売で3万円を切るなら、売れます。
+  - speaker: reimu
+    text: ところが、かかるお金から考えると、4万8000円は必要でした。
+    reading: ところが かかる おかねから かんがえると よんまん はっせんえんわ ひつようでした。
+  - speaker: eigyo
+    emotion: thinking
+    text: 無理を承知で、3万5000円でどうでしょう。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今年は、ソニーの創立33周年なのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 価格も、3万3000円でいくのだ！
+  - speaker: eigyo
+    emotion: thinking
+    text: ……それで、最初は何台作りますか？
+  - speaker: zundamon
+    emotion: normal
+    text: 3万台なのだ。
+  - speaker: eigyo
+    emotion: surprised
+    text: 一番売れているテレコでも、月に1万5000台ですよ！
+- id: ch3_nedan
+  title: ''
+  background: wm_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 3万3000円は、当時の大学卒の初任給の、3割くらいよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 今の初任給で考えると、8万円前後の感覚ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 高いけど、手が届かないほどじゃないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 井深の録音機は、10万円前後だったから、その3分の1ね。
+  - speaker: zundamon
+    emotion: happy
+    text: 学生でも、がんばれば買える値段なのだ。
+- id: ch4_headphone
+  title: 50グラムのヘッドホン
+  background: wm_yakuin
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: thinking}
+  - {who: ibuka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 本体より大きいヘッドホンが付いていては、スマートじゃないのだ。
+  - speaker: ibuka
+    emotion: thinking
+    text: そういえば、2、3か月前に聞いたぞ。
+  - speaker: ibuka
+    emotion: thinking
+    text: 研究所で、軽いヘッドホンを作っているそうだ。
+  - speaker: zundamon
+    emotion: happy
+    text: すぐ、一緒にやらせるのだ！
+  - speaker: reimu
+    text: 1979年3月。研究所で別に作られていたヘッドホンが、合流します。
+    reading: せんきゅうひゃく ななじゅうくねん さんがつ。けんきゅうじょで べつに つくられていた へっどほんが ごうりゅう します。
+- id: ch4_zukai
+  title: ''
+  background: wm_zukai2
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: それまでのヘッドホンは、重さが300から400グラム。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しいヘッドホンは、たったの50グラムだったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 6分の1から、8分の1なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 音を出す部品も、直径56ミリくらいから、23ミリに小さくしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前は、[H・AIR|ヘアー]。髪のように、空気のように軽い、という意味よ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 開発の合言葉は、ゼロフィット、だったんですって。
+  - speaker: zundamon
+    emotion: happy
+    text: これなら、頭に乗せて歩いても疲れないのだ。
+- id: ch5_eiyatsu
+  title: えいやっ
+  background: wm_koba
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: normal}
+  - {who: osone, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 作るのは、大曽根の事業部です。発売まで、3か月ほどしかありません。
+    reading: つくるのわ おおそねの じぎょうぶです。はつばいまで さんかげつほどしか ありません。
+  - speaker: zundamon
+    emotion: normal
+    text: 若者と音楽のつながりを増すこの機械は、きっと売れるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: '[金型|かながた]は、流用すればいいのだ。夏休みの前に、間に合わせてほしいのだ。'
+  - speaker: osone
+    emotion: happy
+    text: はい、やります。
+  - speaker: reimu
+    text: 大曽根は、いつも笑ってこう言っていたといいます。
+    reading: おおそねわ いつも わらって こう いっていたと いいます。
+  - speaker: osone
+    emotion: normal
+    text: 冷静に検討を重ねると、難しい問題はいくらでも出てくる。
+  - speaker: osone
+    emotion: happy
+    text: だから検討する前に、えいやっと返事をしなくちゃ、話は始まらないよ。
+  - speaker: osone
+    emotion: thinking
+    text: 初めて世に出して、コンセプトを問う1号機に、故障があっては絶対に駄目だ。
+  - speaker: osone
+    emotion: thinking
+    text: 故障が多いと、そのコンセプト自体が否定される。
+  - speaker: reimu
+    text: そこで、すでに50万台を作った実績のある、プレスマンの仕組みをそのまま使いました。
+    reading: そこで すでに ごじゅうまんだいお つくった じっせきの ある、ぷれすまんの しくみお そのまま つかいました。
+  - speaker: reimu
+    text: 徹夜は週に2日から3日。それでも、笑いとジョークが絶えなかったといいます。
+    reading: てつやわ しゅうに ふつかから みっか。それでも わらいと じょーくが たえなかったと いいます。
+- id: ch5_line
+  title: ''
+  background: wm_line
+  bgm: 223am
+  stage:
+  - {who: koujou, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ただ、社内の目は冷たいものでした。
+    reading: ただ しゃないの めわ つめたい ものでした。
+  - speaker: reimu
+    text: 大曽根はのちに、上司をはじめ、社内のあちこちから中傷されて、つらかったと振り返っています。
+    reading: おおそねわ のちに じょうしお はじめ しゃないの あちこちから ちゅうしょう されて、つらかったと ふりかえっています。
+  - speaker: reimu
+    text: 仲間とは、売れなかったら東芝か松下にでも入るか、と話したそうです。
+    reading: なかまとわ うれなかったら とうしばか まつしたにでも はいるかと はなしたそうです。
+  - speaker: reimu
+    text: そんな中で、製造ラインの若い女性たちが、こうつぶやきました。
+    reading: そんな なかで せいぞう らいんの わかい じょせいたちが こう つぶやきました。
+  - speaker: koujou
+    emotion: happy
+    text: 私たちも、これ欲しいな。
+  - speaker: reimu
+    text: 反対の声が多い中で、この言葉が支えになったといいます。
+    reading: はんたいの こえが おおい なかで この ことばが ささえに なったと いいます。
+- id: ch5_mise
+  title: ''
+  background: wm_mise
+  bgm: 223am
+  stage:
+  - {who: eigyo, x: 0.28, flip: true, emotion: normal}
+  - {who: tenshu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 販売店の反応も、冷ややかでした。
+    reading: はんばいてんの はんのうも ひややかでした。
+  - speaker: tenshu
+    emotion: thinking
+    text: '[何で|なんで]、録音機能がないの？'
+  - speaker: tenshu
+    emotion: thinking
+    text: これ、どうやって使うの？
+  - speaker: eigyo
+    emotion: normal
+    text: 歩きながら、音楽を聴くんです。
+  - speaker: tenshu
+    emotion: sad
+    text: ……こんな[半端物|はんぱもの]、置けないよ。
+- id: ch6_jack
+  title: 2つの差し込み口
+  background: wm_jitaku
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: happy}
+  - {who: tsuma, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 盛田は、試作機を家に持ち帰ります。
+    reading: もりたわ しさくきお いえに もちかえります。
+  - speaker: zundamon
+    emotion: happy
+    text: ……うん、いい音なのだ。
+  - speaker: reimu
+    text: ヘッドホンで聴き入る盛田のそばで、妻の良子は、のけ者にされた気分だったといいます。
+    reading: へっどほんで ききいる もりたの そばで、つまの よしこわ のけものに された きぶんだったと いいます。
+  - speaker: tsuma
+    emotion: sad
+    text: ……一人で、楽しそうですね。
+  - speaker: zundamon
+    emotion: surprised
+    text: これは、いけないのだ。2人で聴けるようにするのだ！
+  - speaker: reimu
+    text: 翌週には、ヘッドホンの差し込み口が2つある試作機ができていました。
+    reading: よくしゅうにわ へっどほんの さしこみぐちが ふたつ ある しさくきが できていました。
+  - speaker: reimu
+    text: 差し込み口には、ガイズ・アンド・ドールズと書かれていました。初めのころの製品だけです。
+    reading: さしこみぐちにわ がいず あんど どーるずと かかれていました。はじめの ころの せいひん だけです。
+- id: ch6_kuruma
+  title: ''
+  background: wm_kuruma
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: happy}
+  - {who: shouji, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ある日、ゴルフ場へ向かう車の中で、盛田は作家の庄司薫に、もう一つのヘッドホンを渡しました。
+    reading: あるひ ごるふじょうえ むかう くるまの なかで、もりたわ さっかの しょうじ かおるに もう ひとつの へっどほんお わたしました。
+  - speaker: reimu
+    text: 流れてきたのは、庄司の妻、中村紘子が弾く、グリーグのピアノ協奏曲でした。
+    reading: ながれてきたのわ しょうじの つま なかむら ひろこが ひく、ぐりーぐの ぴあの きょうそうきょくでした。
+  - speaker: shouji
+    emotion: surprised
+    text: 盛田さん、これは……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ん？ [何|なに]か、言ったのだ？
+  - speaker: zundamon
+    emotion: surprised
+    text: ヘッドホンをしていると、隣の人と話せないのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: ボタンで話せるマイクを付けるのだ！
+  - speaker: reimu
+    text: ホットラインと呼ばれるボタンです。
+    reading: ほっとらいんと よばれる ぼたんです。
+  - speaker: reimu
+    text: 中村紘子は、このころの車中のやりとりを、こう振り返っています。
+    reading: なかむら ひろこわ この ころの しゃちゅうの やりとりお こう ふりかえっています。
+  - speaker: zundamon
+    emotion: sad
+    text: 実は、会社のみんなに、こんなの売れませんって反対されてるのだ。
+  - speaker: shouji
+    emotion: happy
+    text: これ、いいじゃないですか。
+  - speaker: reimu
+    text: この一言に、盛田は勇気づけられたといいます。
+    reading: この ひとことに もりたわ ゆうきづけられたと いいます。
+- id: ch7_namae
+  title: 変な名前
+  background: wm_senden
+  bgm: kinakusai
+  stage:
+  - {who: shain, x: 0.24, flip: true, emotion: angry}
+  - {who: zundamon, x: 0.52, tag: 盛田昭夫, emotion: normal}
+  - {who: senden, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 名前は、宣伝部の若手が考えました。
+    reading: なまえわ せんでんぶの わかてが かんがえました。
+  - speaker: reimu
+    text: 命名した宣伝部の河野透によると、最初の案はウォーキー。ところが、東芝の商標でした。
+    reading: めいめい した せんでんぶの こうの とおるに よると さいしょの あんわ うぉーきー。ところが とうしばの しょうひょうでした。
+  - speaker: senden
+    emotion: happy
+    text: スーパーマンと、プレスマン。それで、ウォークマンです！
+  - speaker: shain
+    emotion: angry
+    text: こんな変な和製英語は、とんでもない！
+  - speaker: zundamon
+    emotion: thinking
+    text: 使うのは、若い人なのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 若い人たちが、それでいいと言うのだから、いいのだ。
+  - speaker: senden
+    emotion: happy
+    text: 英語でなければ、エスペラント語だと思ってください。
+  - speaker: reimu
+    text: ソニーの社史では、盛田はこう言って、若手の名前を守ったとされています。
+    reading: そにーの しゃしでわ もりたわ こう いって、わかての なまえお まもったと されています。
+  - speaker: reimu
+    text: パッケージもポスターも、もう準備ができていました。
+    reading: ぱっけーじも ぽすたーも もう じゅんびが できていました。
+- id: ch7_kuroki
+  title: ''
+  background: wm_senden
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: normal}
+  - {who: kuroki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 企画やデザイン、宣伝をまとめたのは、黒木靖夫です。のちに、ミスター・ウォークマンと呼ばれます。
+    reading: きかくや でざいん せんでんお まとめたのわ くろき やすおです。のちに みすたー うぉーくまんと よばれます。
+  - speaker: kuroki
+    emotion: happy
+    text: 色は、ブルージーンズに合う、青い金属の色にしました。
+  - speaker: zundamon
+    emotion: happy
+    text: 若者の服に、よく似合うのだ。
+  - speaker: reimu
+    text: ソニーは、この機械で特許を一つも取りませんでした。
+    reading: そにーわ この きかいで とっきょお ひとつも とりませんでした。
+  - speaker: zundamon
+    emotion: normal
+    text: ヘッドホンの差し込みの形も、公開するのだ。
+  - speaker: reimu
+    text: 決めたのは盛田です。黒木は、心の底から同意することはできなかった、と書き残しています。
+    reading: きめたのわ もりたです。くろきわ こころの そこから どうい する ことわ できなかったと かきのこしています。
+- id: ch7_kuichigai
+  title: ''
+  background: wm_shiryo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、盛田本人の本には、ちょっと違うことが書いてあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当は、この名前が好きではなかった、って。
+  - speaker: tsumugi
+    emotion: normal
+    text: 出張から戻って変えるように言ったけど、もう手遅れだと言われたんですって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 資料によって、話が逆なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 社史と本人の本で、食い違ってるのよね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 始まりの話も、社史と盛田の本と、黒木の回想で、少しずつ違うのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: みんな、自分から始まったと思ってるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: それだけ、たくさんの人が関わった機械だったのね。
+- id: card1979b
+  title: ''
+  background: wm_card_1979
+  cuts:
+  - speaker: reimu
+    text: 1979年6月22日。いよいよ、ウォークマンの発表会が開かれます。
+    reading: せんきゅうひゃく ななじゅうくねん ろくがつ にじゅうににち。いよいよ うぉーくまんの はっぴょうかいが ひらかれます。
+- id: ch8_yoyogi
+  title: 音のない発表会
+  background: wm_koen
+  bgm: pop
+  stage:
+  - {who: senden, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 雑誌の記者たちは、銀座からバスに乗せられ、代々木公園へ向かいます。
+    reading: ざっしの きしゃたちわ ぎんざから ばすに のせられ よよぎ こうえんえ むかいます。
+  - speaker: reimu
+    text: 車内で配られたのは、ウォークマン。
+    reading: しゃないで くばられたのわ うぉーくまん。
+  - speaker: senden
+    emotion: happy
+    text: 再生ボタンを、押してください！
+  - speaker: senden
+    emotion: happy
+    text: ヘッドホンから、音楽と説明が流れます！
+  - speaker: senden
+    emotion: happy
+    text: ご覧ください！
+  - speaker: senden
+    emotion: happy
+    text: 自転車の2人も、ウォークマンを楽しんでいます！
+  - speaker: reimu
+    text: ヘッドホンを外すと、何の音もしない発表会でした。
+    reading: へっどほんお はずすと なんの おとも しない はっぴょうかいでした。
+  - speaker: reimu
+    text: そして、目標の6月21日から10日遅れの7月1日、発売です。
+    reading: そして もくひょうの ろくがつ にじゅういちにちから とおか おくれの しちがつ ついたち はつばいです。
+- id: ch8_3000
+  title: 3000台
+  background: wm_senden
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: normal}
+  - {who: eigyo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 新聞は、ほとんど取り上げませんでした。
+    reading: しんぶんわ ほとんど とりあげませんでした。
+  - speaker: reimu
+    text: 7月の終わりまでに売れたのは、約3000台。初めに作った3万台の、1割です。
+    reading: しちがつの おわりまでに うれたのわ やく さんぜんだい。はじめに つくった さんまんだいの いちわりです。
+  - speaker: eigyo
+    emotion: sad
+    text: やはり、駄目なのか……。
+  - speaker: zundamon
+    emotion: happy
+    text: 聴いてもらえば、分かるはずなのだ。
+  - speaker: reimu
+    text: 宣伝部と営業の社員は、ウォークマンを付けて、山手線を一日中ぐるぐる回りました。
+    reading: せんでんぶと えいぎょうの しゃいんわ うぉーくまんお つけて、やまのてせんお いちにちじゅう ぐるぐる まわりました。
+- id: ch8_hokoten
+  title: ''
+  background: wm_hokoten
+  bgm: pop
+  stage:
+  - {who: wakamono, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 日曜日には、4月に入ったばかりの新人が、歩行者天国で声をかけます。
+    reading: にちようびにわ しがつに はいったばかりの しんじんが、ほこうしゃ てんごくで こえお かけます。
+  - speaker: shinjin
+    emotion: happy
+    text: ちょっと、聴いてみませんか？ 聴いてみてください！
+  - speaker: wakamono
+    emotion: surprised
+    text: ……わっ。耳の中で、音楽が鳴ってる！
+  - speaker: reimu
+    text: 高校や大学の文化祭にも、出かけていきました。
+    reading: こうこうや だいがくの ぶんかさいにも でかけて いきました。
+  - speaker: reimu
+    text: 雑誌の明星には、ウォークマンを付けてローラースケートをする、西城秀樹さんの写真も載りました。
+    reading: ざっしの みょうじょうにわ うぉーくまんお つけて ろーらーすけーとお する、さいじょう ひできさんの しゃしんも のりました。
+- id: ch8_marui
+  title: ''
+  background: wm_marui
+  bgm: pop
+  stage:
+  - {who: eigyo, x: 0.28, flip: true, emotion: normal}
+  - {who: marui, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 売れ行きが鈍いなか、丸井の若い仕入れ担当は違いました。
+    reading: うれゆきが にぶい なか まるいの わかい しいれ たんとうわ ちがいました。
+  - speaker: marui
+    emotion: happy
+    text: これは、絶対に売れるよ。
+  - speaker: marui
+    emotion: happy
+    text: 1万台、注文するよ。
+  - speaker: reimu
+    text: 8月の終わりには、最初の3万台が売り切れ。品切れは、6か月続きました。
+    reading: はちがつの おわりにわ さいしょの さんまんだいが うりきれ。しなぎれわ ろっかげつ つづきました。
+  - speaker: eigyo
+    emotion: surprised
+    text: 足りません！ 作っても、作っても、足りません！
+- id: ch8_kaisetsu
+  title: ''
+  background: wm_hokoten
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 盛田は、若いカップルを雇って、日曜の銀座を歩かせた、とも書いてるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 歩く宣伝なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初に買ったのは、20代半ばのオーディオ好き。そこから、若者に広がったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[大曽根|おおそね]は、丸井だけが注文してくれた、あの恩は忘れない、と語ってるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 品薄のときも、丸井には1万台を、最優先で回したそうよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 発売から1年ほどで、申し訳ないほど儲かるようになった、とも言ってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 申し訳ないほど、なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 作る技術は、ほとんど今あるものの組み合わせ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 難しかったのは、売れると信じることだったのかもね。
+- id: card1980
+  title: ''
+  background: wm_card_1980
+  cuts:
+  - speaker: reimu
+    text: 1980年。ウォークマンは、海外でも売り出されます。
+    reading: せんきゅうひゃく はちじゅうねん。うぉーくまんわ かいがいでも うりだされます。
+- id: ch9_namae
+  title: 世界のウォークマン
+  background: wm_sekai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 海外での名前は、[国|くに]ごとに違ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカは、サウンドアバウト。
+  - speaker: tsumugi
+    emotion: normal
+    text: イギリスでは、ストウアウェイ。密航者、という意味よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: こっそり乗り込む人なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 取扱説明書は、9つの言葉で書かれていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 盛田の本によると、カラヤンやズービン・メータといった音楽家も、欲しがったそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界の指揮者まで、欲しがったのだ！
+- id: ch9_sekai
+  title: ''
+  background: wm_europe
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 盛田昭夫, emotion: normal}
+  - {who: chijin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: ある日、盛田はヨーロッパで、知人からこう頼まれます。
+    reading: あるひ もりたわ よーろっぱで ちじんから こう たのまれます。
+  - speaker: chijin
+    emotion: happy
+    text: 盛田さん。息子がどうしても、ウォークマンが欲しいと言うんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……今、ウォークマン、と言ったのだ？
+  - speaker: reimu
+    text: 日本に来た外国の人や客室乗務員が、お土産に買って帰り、その名前が先に広まっていたのです。
+    reading: にほんに きた がいこくの ひとや きゃくしつ じょうむいんが おみやげに かって かえり、その なまえが さきに ひろまっていたのです。
+- id: ch9_denwa
+  title: ''
+  background: wm_europe_denwa
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 盛田昭夫, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 盛田は、日本の大曽根に電話をかけます。
+    reading: もりたわ にほんの おおそねに でんわお かけます。
+  - speaker: zundamon
+    emotion: happy
+    text: 海外でも、ウォークマンという名前で[通って|とおって]いるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界中全部、ウォークマンに統一するのだ！
+- id: ch9_jisho
+  title: ''
+  background: wm_sekai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ウォークマンという言葉は、辞書にも載ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: まず1981年、フランスの辞書に載ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: オックスフォード英語辞典にも、1986年に載ったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 変な和製英語が、辞書に載る英語になったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 盛田は、英語として認められたことを、何より喜んだそうよ。
+- id: ch10_shikumi
+  title: 小さくできた理由
+  background: wm_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、ウォークマンの何が新しかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 録音の回路とスピーカーをなくして、空いた場所をステレオの再生に回したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ヘッドホンで聴くから、大きな音を出す力もいらないの。
+  - speaker: zundamon
+    emotion: happy
+    text: いらないものを、捨てたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 重さは390グラム。単3電池2本で、アルカリなら約8時間聴けたそうよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 実は、持ち歩けるステレオの録音機なら、ソニーにはもうあったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 井深さんが、重いと言ってたやつなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しかったのは、組み合わせよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 再生だけ、ヘッドホンだけ、手のひらの大きさで、3万円台。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい発明というより、引き算の発想だったのね。
+- id: ch10_bunka
+  title: ''
+  background: wm_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: みんな、自分専用を欲しがったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だからホットラインは無くなり、[差し込み口|さしこみぐち]も1つになったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2人で聴くより、1人で聴きたかったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 若者が殻にこもる、という批判もあったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、音楽学者の細川周平は、それは孤立じゃない、と反論したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 歩きながら、街を自分だけの舞台に変える装置だ、って。
+  - speaker: tsumugi
+    emotion: normal
+    text: 何を聴いているかは、周りには分からない。秘密の劇場、と呼んだの。
+  - speaker: zundamon
+    emotion: happy
+    text: 通学路が、ミュージックビデオになるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1982年のアメリカには、道を渡るときなどのヘッドホンを、禁じた町まで現れたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 町の決まりまで、変えたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 罰金は、最大50ドルだったんですって。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのころのアメリカでは、こうした機械が、約650万台も使われていたそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: たった3年で、そんなに広がったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: オーストリアの最高裁判所が、2002年に判断したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ウォークマンは、もう一般的な言葉だ、って。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前が、有名になりすぎたのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 宇宙を舞台にしたアメリカ映画でも、主人公が、この初代の型を持ってるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 宇宙にまで、[行った|いった]のだ！
+- id: ch10_pavel
+  title: ''
+  background: wm_shiryo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: thinking
+    text: 実は、似たアイデアを先に考えていた人もいるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アンドレアス・パヴェルという、ドイツ出身の人よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人の話では、1972年に、スイスで試したそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ベルトに付けてヘッドホンで聴く機械を考えて、1977年に特許を出していたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 先に、考えていたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 製品にはならなかったの。でも、ソニーとは長く争ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: イギリスの裁判では、彼の特許が取り消されたこともあったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも2004年に、ソニーとの和解の契約が結ばれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 金額は、公表されていないの。
+- id: ch11_gendai
+  title: 今のウォークマン
+  background: wm_gendai
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 発売から10年で5000万台。13年で1億台を超えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1981年の2号機は、先に形を決めて、それに合わせて中身を作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1983年には、カセットのケースと、ほとんど同じ大きさの型まで出たわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1984年には、CDを持ち歩けるプレーヤーも出たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 盛田が、5万円を切れと言って、かかるお金の半分の値段で売り出したんですって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売るたびに、赤字なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 目標にしたのは、CDのケース4枚分の大きさの、木の模型だったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 木の模型から、始まったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも、1年半で黒字になったそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1992年には、録音もできる、MDの型も出たわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 今度は、録音できるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1999年には、ネットで買った曲を入れられる型も出たの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2001年からは、アップルの[iPod|アイポッド]との競争になったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本のお店の集計では、週ごとの首位を取り返した年もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2009年と、2010年よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2010年3月までに、全部の型を合わせて約4億台。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのうちカセットの型だけで、約2億2000万台よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 出だしは3000台。それが、4億台なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ2010年、カセット型のウォークマンは、国内での販売を終えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前は残って、今も売られているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ソニーの音楽プレーヤーの名前として、ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 40周年の2019年、銀座に歴代の約230台が並んだわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 記念の型には、初代の見た目のケース付き。
+  - speaker: tsumugi
+    emotion: normal
+    text: 画面の中では、カセットの絵が回ったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 中身は新しくても、見た目は初代なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: イギリスでは、カセットテープの売り上げが、また伸びた年もあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: カセットが、もう一度はやるかもしれないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2023年の型は、32ギガで約4900曲入るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1曲を4分として、ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 60分のテープなら、何本分なのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: 1本に15曲で、約330本分よ。積み上げると、4メートルくらいね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 天井を突き抜けるのだ！
+    se: oti
+- id: shime
+  title: ''
+  background: wm_ima2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、一緒に音楽を聴くのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: 2つのヘッドホンで聴くのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: ガイズ・アンド・ドールズね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あれ？ つむぎが[何|なに]か言ってるけど、聞こえないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホットラインが要るわね。
+    se: oti
+  - speaker: zundamon
+    emotion: normal
+    text: 録音もできない。スピーカーもない。
+  - speaker: zundamon
+    emotion: happy
+    text: いらないものを捨てたら、歩きながら聴くのが、当たり前になったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初は、出張の機内で音楽を聴きたい、という一人の頼みごとだったのよね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴ありがとうございました！
+    duet_with: tsumugi

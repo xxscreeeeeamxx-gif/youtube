@@ -2864,6 +2864,33 @@ def p_osboard(d, s):
         d.ellipse([x - rr, y - rr, x + rr, y + rr], fill=(244, 242, 236) if wht else (24, 24, 26))
 
 
+def p_wmheavy(d, s):
+    """重い録音機と、大きな黒いヘッドホン。"""
+    d.rounded_rectangle([s * 0.08, s * 0.50, s * 0.56, s * 0.86], radius=int(s * 0.03),
+                        fill=(176, 178, 184), outline=(90, 92, 98), width=int(s * 0.012))
+    for k in range(3):
+        d.ellipse([s * (0.14 + k * 0.13), s * 0.56, s * (0.22 + k * 0.13), s * 0.64], fill=(60, 60, 64))
+    d.rectangle([s * 0.14, s * 0.70, s * 0.50, s * 0.78], fill=(40, 44, 50))
+    d.arc([s * 0.46, s * 0.14, s * 0.94, s * 0.66], 190, 350, fill=(40, 40, 44), width=int(s * 0.05))
+    for x in (0.46, 0.84):
+        d.rounded_rectangle([s * (x - 0.04), s * 0.34, s * (x + 0.12), s * 0.58], radius=int(s * 0.04),
+                            fill=(30, 30, 34))
+
+
+def p_wmwalk(d, s):
+    """青い再生機と、オレンジの軽いヘッドホン。"""
+    d.rounded_rectangle([s * 0.10, s * 0.34, s * 0.46, s * 0.86], radius=int(s * 0.03),
+                        fill=(70, 110, 170), outline=(40, 60, 90), width=int(s * 0.012))
+    d.rounded_rectangle([s * 0.15, s * 0.42, s * 0.41, s * 0.62], radius=int(s * 0.02), fill=(30, 36, 44))
+    for x in (0.22, 0.34):
+        d.ellipse([s * (x - 0.03), s * 0.49, s * (x + 0.03), s * 0.55], outline=(200, 200, 200),
+                  width=int(s * 0.008))
+    d.ellipse([s * 0.30, s * 0.70, s * 0.38, s * 0.78], fill=(240, 140, 40))
+    d.arc([s * 0.50, s * 0.22, s * 0.92, s * 0.70], 190, 350, fill=(150, 156, 166), width=int(s * 0.02))
+    for x in (0.52, 0.90):
+        d.ellipse([s * (x - 0.06), s * 0.44, s * (x + 0.06), s * 0.58], fill=(240, 140, 40))
+
+
 def p_mkshell(d, s):
     """開いたアコヤ貝。中は空っぽ。"""
     d.ellipse([s * 0.10, s * 0.44, s * 0.90, s * 0.92], fill=(120, 110, 104), outline=(70, 64, 60),
@@ -3161,6 +3188,11 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "sony-walkman": dict(layout="panels", headline="初代ウォークマンは録音できない",
+        head_hi="録音できない", panels=[
+        _p("p_wmheavy", "1978年", SLATE, "sad", "重すぎるのだ", "10万円の録音機"),
+        _p("p_wmwalk", "1979年", TEAL, "happy", "歩いて聴けるのだ", "3万3000円"),
     ]),
     "othello-hasegawa": dict(layout="panels", headline="オセロの石は牛乳瓶のフタ",
         head_hi="牛乳瓶のフタ", panels=[
