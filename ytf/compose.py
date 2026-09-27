@@ -578,17 +578,48 @@ def _split_plain(text: str, limit: int) -> list[str]:
     return lines
 
 
+# 改行で割らない語（ひらがなの商品名など、字種では判定できないもの）。1行1語、# はコメント
+_NOBREAK_FILE = Path(__file__).resolve().parent.parent / "assets" / "nobreak_words.txt"
+_BACKOFF = 8     # 語の途中にかかったとき、手前に戻してよい最大文字数
+
+
+def _nobreak_words() -> list[str]:
+    try:
+        lines = _NOBREAK_FILE.read_text(encoding="utf-8").splitlines()
+    except OSError:
+        return []
+    return [w.strip() for w in lines if w.strip() and not w.strip().startswith("#")]
+
+
+def _nobreak_positions(text: str) -> set[int]:
+    """登録語の内側（語頭を除く各文字の直前）の位置。ここで改行すると語が割れる。"""
+    bad: set[int] = set()
+    for w in _nobreak_words():
+        start = text.find(w)
+        while start >= 0:
+            bad.update(range(start + 1, start + len(w)))
+            start = text.find(w, start + 1)
+    return bad
+
+
 def _split_words(text: str, limit: int) -> list[str]:
-    """_split_plain と同じだが、数字や「3号」「1セント」、カタカナ語の途中では割らない
-    （最大4文字まで手前に戻して、切れ目のよい所で改行する）。"""
+    """_split_plain と同じだが、数字や「3号」「1セント」、カタカナ語、登録語の途中では割らない
+    （最大 _BACKOFF 文字まで手前に戻して、切れ目のよい所で改行する）。
+    4文字では「ボールチェー｜ン」「デジタルモ｜ンスター」が戻りきれなかった（2026-09-27 たまごっち回）。"""
+    guard = _nobreak_positions(text)
+
+    def bad(k: int) -> bool:
+        return k in guard or _bad_break(text[k - 1], text[k])
+
     lines, i, n = [], 0, len(text)
     while i < n:
         j = min(i + limit, n)
-        if j < n and _bad_break(text[j - 1], text[j]):
+        if j < n and bad(j):
+            floor = max(i, i + limit - _BACKOFF)
             k = j - 1
-            while k > max(i, i + limit - 4) and _bad_break(text[k - 1], text[k]):
+            while k > floor and bad(k):
                 k -= 1
-            if k > max(i, i + limit - 4):
+            if k > floor:
                 j = k
         while j < n and text[j] in _NO_LINE_HEAD and j - i < limit + 2:
             j += 1
@@ -938,7 +969,7 @@ def render_frames(
                       if enter_set else stage_list)
         cap_png = None
         if enters and caption:
-            ckey = hashlib.sha1(json.dumps(["cap2", caption, sub],
+            ckey = hashlib.sha1(json.dumps(["cap3", caption, sub],
                                 ensure_ascii=False).encode()).hexdigest()[:16]
             cap_png = f"frames/cap_{ckey}.png"
             cp = proj.root / cap_png
@@ -955,7 +986,7 @@ def render_frames(
         key_list = [bg_name, header, chars,
                     cut.slide.model_dump() if cut.slide else None, cut.image,
                     bool(sp), card, full, fg_only, sub, sprite_sig,
-                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap2",
+                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap3",
                     sorted(enter_set)]
         if ent_tag_whos:
             key_list.append(["enttag1", sorted(ent_tag_whos)])
@@ -1013,7 +1044,7 @@ def render_frames(
                     mark_y = max(10, actor_y + 26)
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
-                    [bubble, stage_list, sprite_sig, "bub3"],
+                    [bubble, stage_list, sprite_sig, "bub4"],
                     ensure_ascii=False, sort_keys=True,
                     default=str).encode()).hexdigest()[:16]
                 bubble_png = f"frames/bub_{bkey}.png"
