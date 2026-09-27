@@ -2996,6 +2996,36 @@ def _yagi(d, x0, x1, y, h, col, w):
         d.line([(x, y - hh / 2), (x, y + hh / 2)], fill=col, width=w)
 
 
+def p_kbcar(d, s):
+    """横から見た車と、車内の袋（運転席の前・天井・後ろ）。"""
+    body = [(0.06, 0.74), (0.10, 0.60), (0.30, 0.57), (0.40, 0.38), (0.70, 0.38), (0.82, 0.57),
+            (0.94, 0.60), (0.96, 0.74)]
+    d.polygon([(s * x, s * y) for x, y in body], fill=(200, 206, 214), outline=(90, 96, 110))
+    d.polygon([(s * 0.32, s * 0.57), (s * 0.41, s * 0.41), (s * 0.54, s * 0.41), (s * 0.54, s * 0.57)], fill=(236, 240, 244))
+    d.polygon([(s * 0.56, s * 0.57), (s * 0.56, s * 0.41), (s * 0.69, s * 0.41), (s * 0.79, s * 0.57)], fill=(236, 240, 244))
+    bag = (250, 206, 110)
+    d.ellipse([s * 0.33, s * 0.44, s * 0.45, s * 0.58], fill=bag, outline=(200, 140, 40), width=3)
+    d.ellipse([s * 0.40, s * 0.37, s * 0.72, s * 0.45], fill=bag, outline=(200, 140, 40), width=3)
+    d.ellipse([s * 0.72, s * 0.44, s * 0.80, s * 0.58], fill=bag, outline=(200, 140, 40), width=3)
+    for cx in (0.26, 0.78):
+        r = 0.08
+        d.ellipse([s * (cx - r), s * (0.74 - r), s * (cx + r), s * (0.74 + r)], fill=(40, 40, 44))
+        d.ellipse([s * (cx - r / 2), s * (0.74 - r / 2), s * (cx + r / 2), s * (0.74 + r / 2)], fill=(170, 170, 176))
+
+
+def p_kbwheel(d, s):
+    """運転席から見たハンドルと、真ん中から大きくふくらんだ白い袋。"""
+    cx, cy, r = s * 0.5, s * 0.70, s * 0.30
+    ink = (40, 40, 46)
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=ink, width=int(s * 0.05))
+    d.line([(cx - r, cy + s * 0.03), (cx + r, cy + s * 0.03)], fill=ink, width=int(s * 0.045))
+    d.rectangle([cx - s * 0.025, cy, cx + s * 0.025, cy + r], fill=ink)
+    d.ellipse([cx - s * 0.09, cy - s * 0.06, cx + s * 0.09, cy + s * 0.08], fill=(70, 70, 78))
+    d.ellipse([s * 0.20, s * 0.08, s * 0.80, s * 0.66], fill=(248, 248, 244), outline=(180, 180, 176), width=int(s * 0.012))
+    for k in range(3):
+        d.arc([s * (0.30 + k * 0.1), s * 0.26, s * (0.40 + k * 0.1), s * 0.40], 200, 340, fill=(200, 200, 196), width=3)
+
+
 def p_ygant(d, s):
     """屋上の柱に付けた八木アンテナと、右へ飛ぶ電波。"""
     d.rectangle([s * 0.26, s * 0.48, s * 0.30, s * 0.94], fill=(110, 110, 120))
@@ -3345,6 +3375,11 @@ SPECS = {
         head_hi="妻のオムレツ", panels=[
         _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
         _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
+    ]),
+    "kobori-airbag": dict(layout="panels", headline="エアバッグを考えた日本人がいた",
+        head_hi="日本人", panels=[
+        _p("p_kbcar", "1964年 東京", SLATE, "thinking", "袋で守るのだ", "14か国で特許"),
+        _p("p_kbwheel", "1980年 西ドイツ", RED, "surprised", "積まれたのだ！", "特許は使われず"),
     ]),
     "yagi-uda-antenna": dict(layout="panels", headline="八木アンテナを敵から教わった",
         head_hi="敵から教わった", panels=[

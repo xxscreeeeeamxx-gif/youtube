@@ -1,0 +1,1076 @@
+meta:
+  title: 【八木アンテナの誕生】実験したのは宇田だった。日本が見落とし、敵のレーダーで知った発明【ずんだもん解説】
+  slug: yagi-uda-antenna
+  summary: 屋根の上の、魚の骨のようなテレビアンテナ。正式には八木・宇田アンテナと呼ばれます。1924年、東北帝国大学の実験室で、学生が電流計のおかしな振れに気づきました。教授の八木秀次が考えを示し、講師の宇田新太郎が真鍮の棒を並べて実験を重ねます。ところが日本ではほとんど使われず、戦争中、占領したシンガポールで見つけた英軍の手帳に、YAGIの文字がありました。二人の研究者と、世界中の屋根に立ったアンテナの100年を、再現ドラマでたどります。
+  tags:
+  - 八木アンテナ
+  - 八木・宇田アンテナ
+  - 宇田新太郎
+  - 八木秀次
+  - 東北大学
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 技術史
+  - 雑学
+  thumbnail:
+    top: 実験したのは宇田
+    bottom: 八木アンテナの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: yagi
+    label: 八木秀次
+    voice: 13
+    pitch: -0.08
+  - id: nishimura
+    label: 学生
+    voice: 12
+    pitch: 0.14
+  - id: joshu
+    label: 助手
+    voice: 12
+    pitch: 0.02
+  - id: douryou
+    label: 同僚
+    voice: 42
+    pitch: 0.04
+  - id: shoukou
+    label: 日本軍将校
+    voice: 13
+    pitch: 0.02
+  - id: eihei
+    label: 英国兵
+    voice: 12
+    pitch: -0.06
+  - id: shain
+    label: 会社の人
+    voice: 13
+    pitch: 0.1
+scenes:
+- id: hook
+  title: ''
+  background: yg_yane
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ、おばあちゃんの家のテレビが、ザーザーしか映らないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 屋根のアンテナを、見てみましょうか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 屋根に、魚の骨があるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: あれがテレビのアンテナよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 分かったのだ。映らないのは、電波が照れてるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 電波は照れないわよ。
+  - speaker: zundamon
+    emotion: happy
+    text: だったら、骨をもっと増やすのだ。骨が多いほど、よく映る気がするのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 実はそれ、少し合ってるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 合ってるのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、そのアンテナ、電波塔と逆を[向|む]いてるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……骨より、向きだったのだ。
+    se: oti
+  - speaker: reimu
+    text: 屋根の上の、魚の骨のようなアンテナ。正式には、八木・宇田アンテナと呼ばれます。
+    reading: やねの うえの さかなの ほねの ような あんてな。せいしきにわ やぎ うだ あんてなと よばれます。
+  - speaker: reimu
+    text: 生まれたのは、およそ100年前の仙台。東北帝国大学の実験室でした。
+    reading: うまれたのわ およそ ひゃくねんまえの せんだい。とうほく ていこく だいがくの じっけんしつでした。
+  - speaker: tsumugi
+    emotion: normal
+    text: ところがこの発明、日本ではほとんど使われなかったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 日本がその価値に気づいたのは、戦争中。敵のレーダーの中だったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分の国の発明なのに、なのだ！？
+- id: card1896
+  title: ''
+  background: yg_card_1896
+  cuts:
+  - speaker: reimu
+    text: 1896年。富山県で、宇田新太郎が生まれます。
+    reading: せんはっぴゃく きゅうじゅうろくねん。とやまけんで うだ しんたろうが うまれます。
+- id: ch1_uda
+  title: 先生から大学生へ
+  background: yg_gakkou
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: douryou, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 両親は学校の先生で、転勤に合わせて、小学3年から魚津の町で育ちます。
+    reading: りょうしんわ がっこうの せんせいで、てんきんに あわせて しょうがく さんねんから うおづの まちで そだちます。
+  - speaker: reimu
+    text: 広島の高等師範学校を出ると、中学校の先生になりました。
+    reading: ひろしまの こうとう しはん がっこうお でると ちゅうがっこうの せんせいに なりました。
+  - speaker: douryou
+    emotion: surprised
+    text: 宇田先生、学校を辞めて、大学に入り直すんですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 電気のことを、もっと深く学びたいのだ。
+  - speaker: douryou
+    emotion: thinking
+    text: 先生になってから、また学生とは、思い切りましたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 仙台の東北帝国大学に、電気の学科があるのだ。
+  - speaker: reimu
+    text: 1921年、宇田は25歳で、東北帝国大学の電気工学科に入学します。
+    reading: せんきゅうひゃく にじゅういちねん、うだわ にじゅうごさいで とうほく ていこく だいがくの でんき こうがっかに にゅうがく します。
+  - speaker: reimu
+    text: 同じ魚津ゆかりの博士たちと合わせて、魚津の三太郎博士と呼ばれることになります。
+    reading: おなじ うおづ ゆかりの はかせたちと あわせて、うおづの さんたろう はかせと よばれる ことに なります。
+- id: ch1_yagi
+  title: 弱い電気の時代
+  background: yg_lab
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 大学で待っていたのが、八木秀次という教授よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 八木さんは1886年、大阪の生まれ。東京帝国大学で電気工学を学んだの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1913年からは、3つの国に留学したの。ドイツ、イギリス、アメリカよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 3つの国を回ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: ドイツにいる間に、第一次世界大戦が始まって、イギリスへ移ったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこで八木さんは、これからは通信のような弱い電気の時代だ、と確信したそうよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 強い電気のほうが、すごそうなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時は、発電所やモーターのような強い電気が、電気工学の主役だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 八木さんは雑誌に文章を書いて、弱い電気の研究も大事だと訴えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1919年、東北帝国大学に工学部ができると、教授になったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 仙台の財団から、毎年4万円という大きな研究費も出たの。
+  - speaker: zundamon
+    emotion: happy
+    text: 仙台に、電波の研究の拠点ができたのだ。
+- id: card1924
+  title: ''
+  background: yg_card_1924
+  cuts:
+  - speaker: reimu
+    text: 1924年。八木の研究室で、一人の学生が実験をしていました。
+    reading: せんきゅうひゃく にじゅうよねん。やぎの けんきゅうしつで ひとりの がくせいが じっけんお して いました。
+- id: ch2_kizuki
+  title: 電流計のおかしな振れ
+  background: yg_lab
+  bgm: 223am
+  stage:
+  - {who: nishimura, x: 0.28, emotion: thinking}
+  - {who: yagi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: nishimura
+    emotion: thinking
+    text: 先生、短い電波の受け方を調べていたんですが、どうも変なんです。
+  - speaker: yagi
+    emotion: normal
+    text: 変とは、どういうことだね。
+  - speaker: nishimura
+    emotion: normal
+    text: 近くに置いた金属の棒の位置で、電流計の振れ方が変わるんです。
+  - speaker: yagi
+    emotion: thinking
+    text: 棒の、位置でか。
+  - speaker: nishimura
+    emotion: surprised
+    text: はい。棒を動かすと、急に大きく振れるときがあります。
+  - speaker: yagi
+    emotion: happy
+    text: ……それは面白い。そのまま、詳しく調べてみなさい。
+  - speaker: nishimura
+    emotion: thinking
+    text: ただの、測り間違いかもしれませんよ。
+  - speaker: yagi
+    emotion: normal
+    text: 間違いかどうかも、測って確かめるのだ。おかしな数字ほど、大事にしなさい。
+  - speaker: reimu
+    text: 学生の西村雄二が気づいた、電流計のおかしな振れ。ここが、始まりだったとされます。
+    reading: がくせいの にしむら ゆうじが きづいた でんりゅうけいの おかしな ふれ。ここが はじまりだったと されます。
+- id: ch2_koushi
+  title: 電波を導く棒
+  background: yg_lab
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: yagi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その年の春に卒業した宇田は、秋に講師となり、アンテナの研究を始めます。
+    reading: その としの はるに そつぎょう した うだわ、あきに こうしと なり あんてなの けんきゅうお はじめます。
+  - speaker: yagi
+    emotion: normal
+    text: 宇田くん、電波の後ろに棒を置くと、電波が前へ返されるのは知っているね。
+  - speaker: zundamon
+    emotion: normal
+    text: はい、反射器ですね。
+  - speaker: yagi
+    emotion: thinking
+    text: では、前に置いた棒が、電波を導くことはないだろうか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 前に置いた棒が、電波を……導く、のだ？
+  - speaker: yagi
+    emotion: normal
+    text: 西村くんの測定が、それを示しているように思うのだ。君が確かめてくれ。
+  - speaker: zundamon
+    emotion: happy
+    text: やってみるのだ！
+  - speaker: reimu
+    text: 八木は後に、自分が導く働きの考えを示し、宇田が多くの実験を重ねた、と振り返っています。
+    reading: やぎわ のちに じぶんが みちびく はたらきの かんがえお しめし、うだが おおくの じっけんお かさねたと ふりかえっています。
+- id: ch2_jikken
+  title: 真鍮の棒を並べて
+  background: yg_jikken
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: joshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 当時は、電波を出す装置も、波長を測る計器も、売っていませんでした。
+    reading: とうじわ でんぱお だす そうちも はちょうお はかる けいきも うって いませんでした。
+  - speaker: zundamon
+    emotion: normal
+    text: 真空管で、電波を出す装置から作るのだ。
+  - speaker: joshu
+    emotion: thinking
+    text: 波長は、どうやって測るんです？
+  - speaker: zundamon
+    emotion: normal
+    text: 2本の電線に電波を流して、強い所と弱い所の間を測るのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 波長は4.4メートル。これで実験を始めるのだ。
+  - speaker: joshu
+    emotion: thinking
+    text: 受けた電波の強さは、どう見るんです？
+  - speaker: zundamon
+    emotion: normal
+    text: 鉱石の検波器につないで、検流計の針の振れで見るのだ。
+  - speaker: joshu
+    emotion: happy
+    text: 針が大きく振れるほど、電波が強いんですね。
+  - speaker: joshu
+    emotion: normal
+    text: 棒は、どう並べましょう。
+  - speaker: zundamon
+    emotion: normal
+    text: 後ろに、少し長い棒を1本。前には、少し短い棒を並べていくのだ。
+  - speaker: joshu
+    emotion: surprised
+    text: 前の棒を増やすたびに、電流計の針が上がっていきます！
+  - speaker: zundamon
+    emotion: happy
+    text: 短い棒が、電波を前へ前へと、導いているのだ！
+  - speaker: reimu
+    text: 180センチの真鍮の棒を、150センチおきに、最大25本まで並べて測ったといいます。
+    reading: ひゃくはちじっせんちの しんちゅうの ぼうお、ひゃくごじっせんちおきに さいだい にじゅうごほんまで ならべて はかったと いいます。
+  - speaker: reimu
+    text: 反射器と導波器を組み合わせることを思いついた、と宇田は振り返っています。
+    reading: はんしゃきと どうはきお くみあわせる ことお おもいついたと、うだわ ふりかえっています。
+  - speaker: joshu
+    emotion: happy
+    text: 電波が、一つの方向に、ぎゅっと集まってますね。
+  - speaker: zundamon
+    emotion: happy
+    text: 電波の、ビームなのだ！
+- id: ch2_kyori
+  title: 4キロ、10キロ、60キロ
+  background: yg_kaigan
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: joshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 宇田は受信機を持ち出して、少しずつ距離を延ばしていきます。
+    reading: うだわ じゅしんきお もちだして すこしずつ きょりお のばして いきます。
+  - speaker: joshu
+    emotion: happy
+    text: 先生、4キロ先の台原でも、受かりました！
+  - speaker: zundamon
+    emotion: happy
+    text: 次は、10キロ先の岩切なのだ。
+  - speaker: joshu
+    emotion: surprised
+    text: 塩釜の15キロも、松島の20キロも、届いてます！
+  - speaker: zundamon
+    emotion: normal
+    text: 電波を絞れば、弱い電波でも、遠くまで届くのだ。
+  - speaker: joshu
+    emotion: thinking
+    text: 次は、海の向こうの[金華山|きんかさん]ですか。60キロですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 試してみるのだ！
+  - speaker: reimu
+    text: 台原から金華山まで、宇田たちは距離を延ばしながら、電波の届き方を調べました。
+    reading: だいのはらから きんかさんまで、うだたちわ きょりお のばしながら でんぱの とどきかたお しらべました。
+- id: ch2_shikumi
+  title: 魚の骨のしくみ
+  background: yg_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 真ん中の、電線がつながった棒が、電波を出したり受けたりする本体よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その後ろの、少し長い棒が反射器。電波を前へ跳ね返すの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前に並ぶ、少し短い棒が導波器。電波を、前へ前へと導くのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 骨の長さが、ちょっとずつ違ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 導波器の列を、二人は電波の運河、と名付けたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 電波が、運河を進んでいくのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 導波器を増やすほど、電波は細く、鋭いビームになるの。
+  - speaker: zundamon
+    emotion: happy
+    text: だから、骨を増やすと、少し合ってたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その代わり、決まった方向しか受けられないの。だから、向きが大事なのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: おばあちゃんの家のは、逆を[向|む]いてたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、うまく働く電波の幅も、あまり広くないの。
+- id: card1925
+  title: ''
+  background: yg_card_1925
+  cuts:
+  - speaker: reimu
+    text: 1925年12月。宇田は、6行ほどの短い報告を、学会の雑誌に載せます。
+    reading: せんきゅうひゃく にじゅうごねん じゅうにがつ。うだわ ろくぎょうほどの みじかい ほうこくお がっかいの ざっしに のせます。
+- id: ch3_tokkyo
+  title: 一人の名前の特許
+  background: yg_lab
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ12月の28日、八木さんは特許を出願したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前は、電波指向方式。電波の向きを決める仕組み、という意味ね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 出願したのは、八木さん一人の名前だったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 実験をしたのは、宇田さんなのに、なのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: なぜ宇田さんの名前が入らなかったのかは、今もはっきりしないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者の間でも、いくつかの見方があるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1926年の2月には、二人の連名で、英語の論文も出てるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 特許は8月に登録されたの。アメリカにも出願したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 論文は二人。特許は一人。ちょっと複雑なのだ。
+- id: ch3_kaigi
+  title: 電波の灯台
+  background: yg_kaijou
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: yagi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1926年、東京で、太平洋の国々の学者が集まる会議が開かれました。
+    reading: せんきゅうひゃく にじゅうろくねん、とうきょうで たいへいようの くにぐにの がくしゃが あつまる かいぎが ひらかれました。
+  - speaker: yagi
+    emotion: normal
+    text: 宇田くん、この会議で、二人で発表しよう。
+  - speaker: zundamon
+    emotion: happy
+    text: 題は、新しい電波の投射器と、無線の灯台なのだ。
+  - speaker: yagi
+    emotion: thinking
+    text: 灯台、か。
+  - speaker: zundamon
+    emotion: normal
+    text: 灯台の光みたいに、電波を決まった方向へ送れば、船や飛行機の道しるべになるのだ。
+  - speaker: yagi
+    emotion: happy
+    text: 電波で、道を照らすわけだな。
+  - speaker: reimu
+    text: 二人はこの会議で、アンテナの研究を発表しています。
+    reading: ふたりわ この かいぎで あんてなの けんきゅうお はっぴょう しています。
+- id: ch3_ronbun
+  title: 11本の論文
+  background: yg_lab
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: joshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: joshu
+    emotion: happy
+    text: 宇田先生、また論文ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: '[短波長|たんはちょう]ビームについて、その続きなのだ。'
+  - speaker: joshu
+    emotion: surprised
+    text: これで、何本目ですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 1929年までに、11本になるのだ。
+  - speaker: reimu
+    text: 宇田は実験の結果を、11本の論文にまとめました。
+    reading: うだわ じっけんの けっかお じゅういっぽんの ろんぶんに まとめました。
+  - speaker: reimu
+    text: 1928年、八木はアメリカの学会誌に、一人の名前で英語の論文を発表します。
+    reading: せんきゅうひゃく にじゅうはちねん、やぎわ あめりかの がっかいしに ひとりの なまえで えいごの ろんぶんお はっぴょう します。
+  - speaker: reimu
+    text: その中で八木は、実験は宇田が行い、成功は主に宇田と岡部の工夫による、と書いています。
+    reading: その なかで やぎわ、じっけんわ うだが おこない せいこうわ おもに うだと おかべの くふうに よると かいています。
+  - speaker: joshu
+    emotion: normal
+    text: アメリカの専門家が、この論文は古典になるだろう、と言ったそうですよ。
+  - speaker: joshu
+    emotion: happy
+    text: 飛行機の着陸を導くのに使えないか、という話まで来たとか。
+  - speaker: zundamon
+    emotion: happy
+    text: 海の向こうで、ちゃんと読まれているのだ。
+  - speaker: reimu
+    text: この英語の論文から、欧米では、このアンテナをヤギと呼ぶようになりました。
+    reading: この えいごの ろんぶんから おうべいでわ この あんてなお やぎと よぶ ように なりました。
+- id: ch3_tsushin
+  title: 海を越える電話
+  background: yg_oka
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: joshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1929年、宇田は、仙台と松島の大高森の間で、とても短い電波の通信に成功します。
+    reading: せんきゅうひゃく にじゅうきゅうねん、うだわ せんだいと まつしまの おおたかもりの あいだで とても みじかい でんぱの つうしんに せいこう します。
+  - speaker: joshu
+    emotion: surprised
+    text: 先生、仙台からの声が、はっきり聞こえます！
+  - speaker: zundamon
+    emotion: happy
+    text: 30キロ離れても、声が届いたのだ！
+  - speaker: reimu
+    text: 当時、この種類の電波としては、世界で一番長い距離だったとされます。
+    reading: とうじ この しゅるいの でんぱと してわ、せかいで いちばん ながい きょりだったと されます。
+  - speaker: joshu
+    emotion: normal
+    text: 次は、海の向こうの島ですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 新潟から佐渡、酒田から飛島。海を越えて、電話をつなぐのだ。
+  - speaker: reimu
+    text: 1933年には、どちらも実用になりました。佐渡は警察、飛島は一般の人の電話です。
+    reading: せんきゅうひゃく さんじゅうさんねんにわ どちらも じつように なりました。さどわ けいさつ とびしまわ いっぱんの ひとの でんわです。
+  - speaker: reimu
+    text: 1930年には、送受信機とアンテナが、ベルギーの博覧会にも出品されています。
+    reading: せんきゅうひゃく さんじゅうねんにわ そうじゅしんきと あんてなが、べるぎーの はくらんかいにも しゅっぴん されています。
+  - speaker: reimu
+    text: 1932年、宇田は、この超短波の研究で、帝国学士院の賞を受けました。
+    reading: せんきゅうひゃく さんじゅうにねん、うだわ この ちょうたんぱの けんきゅうで ていこく がくしいんの しょうお うけました。
+  - speaker: zundamon
+    emotion: happy
+    text: 次は、アメリカの研究所を見てくるのだ。
+  - speaker: reimu
+    text: 宇田はその後アメリカへ渡り、ベル研究所などを見て回っています。
+    reading: うだわ その ご あめりかえ わたり、べる けんきゅうじょ などお みて まわって います。
+- id: ch3_hanno
+  title: 日本の反応
+  background: yg_zukai2
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 島とも話せるなら、[日本中|にほんじゅう]で使われたのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 戦争の前に使われたのは、この2か所くらいだったそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 特許庁も、考えが早すぎて、当時の日本では理解されなかった、と説明してるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 特許はほとんど使われずに、1941年ごろに切れたの。
+  - speaker: zundamon
+    emotion: sad
+    text: もったいないのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方でイギリスは、1940年から、飛行機のレーダーにこのアンテナを使ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 海の上の船を、空から探すためのレーダーよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本の発明が、よその国のレーダーに使われてたのだ！
+- id: card1942
+  title: ''
+  background: yg_card_1942
+  cuts:
+  - speaker: reimu
+    text: 1942年2月、日本軍はシンガポールを占領します。
+    reading: せんきゅうひゃく よんじゅうにねん にがつ にほんぐんわ しんがぽーるお せんりょう します。
+- id: ch4_singapore
+  title: YAGIとは何か
+  background: yg_singapore
+  bgm: amacha_hoshizora
+  stage:
+  - {who: shoukou, x: 0.28, emotion: thinking}
+  - {who: eihei, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3月20日、日本の陸軍の将校が、イギリス軍の高射砲陣地の跡で、1冊の手帳を見つけます。
+    reading: さんがつ はつか、にほんの りくぐんの しょうこうが いぎりすぐんの こうしゃほう じんちの あとで いっさつの てちょうお みつけます。
+  - speaker: reimu
+    text: レーダーについて書かれた、イギリス兵ニューマンの手帳でした。
+    reading: れーだーに ついて かかれた いぎりすへい にゅーまんの てちょうでした。
+  - speaker: shoukou
+    emotion: thinking
+    text: 送信のアンテナは、ヤギ・アレイ……。
+  - speaker: shoukou
+    emotion: thinking
+    text: 受信にも、ヤギ・アレイを4つ。このヤギとは、[何|なん]のことだ。
+  - speaker: shoukou
+    emotion: normal
+    text: 捕虜に聞いてみよう。おい、このヤギとは[何|なん]だ。
+  - speaker: eihei
+    emotion: surprised
+    text: ……あなたの国の人の、名前ですよ。
+  - speaker: shoukou
+    emotion: surprised
+    text: 日本人の、名前だと！？
+  - speaker: reimu
+    text: このやりとりは、後に宇田が書いた回想などで伝わる話です。細かな言葉は、語る人によって違います。
+    reading: この やりとりわ のちに うだが かいた かいそう などで つたわる はなしです。こまかな ことばわ かたる ひとに よって ちがいます。
+- id: ch4_bunsho
+  title: ニューマン文書
+  background: yg_singapore
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 手帳の中身は、6月に、57ページの冊子にまとめられたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ニューマン文書と呼ばれて、陸軍の技術者が読み解き、配ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 英語の翻訳には、東北大学の研究者も関わったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 八木さんたちの大学なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: その年の10月、陸軍はこれを参考にしたレーダーを作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 送信に1基、受信に4基、八木アンテナを使ってたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 敵のレーダーから、自分の国の発明を学び直したのだ。
+- id: ch4_sensou
+  title: 戦争とアンテナ
+  background: yg_zukai2
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 海軍の13号電探は、およそ2000台作られたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 八木型のアンテナを、4段に積み重ねた形だったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東北大学も、陸軍のレーダーの開発に加わったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 宇田さんは、アンテナを受け持ったそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 八木さんは1944年、国の技術行政をまとめる、技術院の総裁になったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1945年1月の国会では、こんな趣旨の答弁をしているの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 必死ではなく必中の兵器を目指したが、間に合わなかった、と。
+  - speaker: zundamon
+    emotion: sad
+    text: 特攻に頼る戦争に、なってしまっていたのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 広島と長崎の原爆にも、高さを測るレーダーがあったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこにも、八木型のアンテナが付いていたとされるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……同じアンテナが、いろんな所で使われてしまったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 戦後、八木さんは大阪帝国大学の総長になったけど、公職追放で辞めたの。
+- id: card1951
+  title: ''
+  background: yg_card_1951
+  cuts:
+  - speaker: reimu
+    text: 1951年。宇田は、再びアメリカへ渡ります。
+    reading: せんきゅうひゃく ごじゅういちねん。うだわ ふたたび あめりかえ わたります。
+- id: ch5_sf
+  title: 屋根の上のアンテナ
+  background: yg_sf
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: サンフランシスコの港に着いた宇田は、家々の屋根を見上げました。
+    reading: さんふらんしすこの みなとに ついた うだわ、いえいえの やねお みあげました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……屋根という屋根に、あのアンテナが立っているのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: テレビの電波を受けるために、並べてくれているのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 御木本さんは、世界の女の人の首を、真珠で飾ると言ったのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: ぼくのアンテナは、狙わなくても、世界中の家に立ったのだ。
+  - speaker: reimu
+    text: 敵の兵器に使われた悔しさと比べて、心が躍った。宇田はそう語ったと伝わります。
+    reading: てきの へいきに つかわれた くやしさと くらべて こころが おどった。うだわ そう かたったと つたわります。
+- id: ch5_tv
+  title: テレビの時代
+  background: yg_kaisha
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1952年、八木は、八木アンテナ株式会社を作り、社長になります。67歳でした。
+    reading: せんきゅうひゃく ごじゅうにねん、やぎわ やぎ あんてな かぶしき がいしゃお つくり しゃちょうに なります。ろくじゅうななさいでした。
+  - speaker: reimu
+    text: 翌年の1953年、日本でテレビの本放送が始まりました。
+    reading: よくねんの せんきゅうひゃく ごじゅうさんねん にほんで てれびの ほんほうそうが はじまりました。
+  - speaker: shain
+    emotion: normal
+    text: 宇田先生、テレビ用のアンテナの設計を、お願いできますか。
+  - speaker: zundamon
+    emotion: happy
+    text: もちろんなのだ。テレビの電波に合わせて、棒の長さと間隔を決めるのだ。
+  - speaker: shain
+    emotion: thinking
+    text: ただ、テレビの受信契約は、始まったときはまだ866件だそうです。
+  - speaker: shain
+    emotion: happy
+    text: でも、駅前の街頭テレビには、黒山の人だかりですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: みんなで、一つの画面を見上げてるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: これから、[日本中|にほんじゅう]の屋根に立つのだ。
+  - speaker: reimu
+    text: 1950年代、宇田は八木アンテナ社のテレビ用アンテナを設計しています。
+    reading: せんきゅうひゃく ごじゅうねんだい、うだわ やぎ あんてなしゃの てれびよう あんてなお せっけい しています。
+  - speaker: reimu
+    text: 八木アンテナという名の会社ができたことが、呼び名を決めた、と宇田は後に語っています。
+    reading: やぎ あんてなと いう なの かいしゃが できた ことが よびなお きめたと、うだわ のちに かたっています。
+- id: ch5_mirai
+  title: テレビの未来図
+  background: yg_kenkyushitsu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: joshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 宇田は1954年、弟子と英語の本を出し、1955年からはインドで電波の研究をします。
+    reading: うだわ せんきゅうひゃく ごじゅうよねん でしと えいごの ほんお だし、せんきゅうひゃく ごじゅうごねんからわ いんどで でんぱの けんきゅうお します。
+  - speaker: reimu
+    text: 1960年に東北大学を退いた後、1964年に、テレビの未来図という文章を書きました。
+    reading: せんきゅうひゃく ろくじゅうねんに とうほく だいがくお しりぞいた あと、せんきゅうひゃく ろくじゅうよねんに てれびの みらいずと いう ぶんしょうお かきました。
+  - speaker: joshu
+    emotion: surprised
+    text: 先生、手のひらに乗るテレビなんて、本当にできるんですか？
+  - speaker: zundamon
+    emotion: happy
+    text: いつか、できるのだ。光で映すテレビも、できるかもしれないのだ。
+  - speaker: joshu
+    emotion: thinking
+    text: 便利になりすぎるのも、ちょっと怖い気がします。
+  - speaker: zundamon
+    emotion: normal
+    text: 機械は、自分で増えたりしないのだ。どう使うかは、人間次第なのだ。
+  - speaker: reimu
+    text: 機械をどう使うかは人間次第だ、という宇田の言葉は、東北大学の展示でも紹介されています。
+    reading: きかいお どう つかうかわ にんげん しだいだと いう うだの ことばわ、とうほく だいがくの てんじでも しょうかい されています。
+- id: card1976
+  title: ''
+  background: yg_card_1976
+  cuts:
+  - speaker: reimu
+    text: 1976年1月19日。八木秀次が、89歳で亡くなります。
+    reading: せんきゅうひゃく ななじゅうろくねん いちがつ じゅうくにち。やぎ ひでつぐが はちじゅうきゅうさいで なくなります。
+- id: ch6_hibun
+  title: 八木宇田アンテナ
+  background: yg_hibun
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 宇田新太郎, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 八木は1956年に文化勲章を受け、宇田も1961年に紫綬褒章を受けていました。
+    reading: やぎわ せんきゅうひゃく ごじゅうろくねんに ぶんか くんしょうお うけ、うだも せんきゅうひゃく ろくじゅういちねんに しじゅ ほうしょうお うけていました。
+  - speaker: reimu
+    text: 葬儀では教え子の松前重義が、八木を、春より先に咲く寒梅にたとえました。
+    reading: そうぎでわ おしえごの まつまえ しげよしが、やぎお はるより さきに さく かんばいに たとえました。
+  - speaker: reimu
+    text: 今の日本の電子工業という満開の桜の、先駆けだったというのです。
+    reading: いまの にほんの でんし こうぎょうと いう まんかいの さくらの さきがけだったと いうのです。
+  - speaker: reimu
+    text: その年の5月、東北大学の青葉山に、八木の像が建てられました。
+    reading: その としの ごがつ とうほく だいがくの あおばやまに やぎの ぞうが たてられました。
+  - speaker: shain
+    emotion: normal
+    text: 宇田先生、像の碑文を、お願いできますか。
+  - speaker: zundamon
+    emotion: normal
+    text: ……分かったのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 先生は、八木[宇田|うだ]アンテナを発明し……。
+  - speaker: reimu
+    text: 碑文を書いたのは宇田でした。そこには、八木宇田アンテナを発明し、と刻まれています。
+    reading: ひぶんお かいたのわ うだでした。そこにわ やぎ うだ あんてなお はつめいしと きざまれています。
+  - speaker: reimu
+    text: その3か月後の8月18日、宇田も80歳で亡くなりました。
+    reading: その さんかげつごの はちがつ じゅうはちにち うだも はちじゅっさいで なくなりました。
+  - speaker: reimu
+    text: 墓にアンテナを建てたいという願いは、墓誌にアンテナの形を刻むことで、かなえられたそうです。
+    reading: はかに あんてなお たてたいと いう ねがいわ、ぼしに あんてなの かたちお きざむ ことで かなえられたそうです。
+- id: ch7_ronsou
+  title: 本当はどっち？
+  background: yg_zukai2
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、八木さんが一人で発明したのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: それは違うわ。八木さん自身が、実験は宇田さんだと論文に書いてるもの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、宇田さんの発明を、八木さんが横取りしたのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうとも言い切れないの。始まりは学生の測定で、八木さんが考えを示したのも確かよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから今の正式な名前は、八木・宇田アンテナなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 特許は、延長を断られて切れたと聞いたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 期限が切れたのは確かだけど、断られたという話は、確かな資料が見つかっていないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 特許が、外国の会社に売られた、という話もあるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカの特許は、アメリカの会社に譲られてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: イギリスの会社に売られた、という話は、確かめられていないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: テレビのアンテナは、全部これなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 地上波のアンテナはほとんどがそうだけど、衛星放送はお皿の形のパラボラよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の人は、誰も知らなかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 島との電話もあったうえに、宇田さんは賞も受けてた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 知らなかったのは、主に軍の人たちね。
+- id: ch8_gendai
+  title: 100年目のアンテナ
+  background: yg_gendai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1985年、特許庁は八木さんを、日本の十大発明家の一人に選んだわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1995年には、電気の国際的な学会が、歴史的な業績として認定したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アジアで初めての認定よ。記念の銘板は、東北大学にあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年には、国の未来技術遺産にも登録されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ年の1月28日、八木さんの生誕130年には、グーグルのトップの絵にもなったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界中の人が、八木さんのアンテナを見たのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ベルギーの博覧会に出した、当時のアンテナが残ってるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100年近く前の、本物のアンテナなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年には、東北大学で、発明100周年の記念の会も開かれたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年は、特許の登録と最初の英語の論文から、ちょうど100年。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして、八木さんと宇田さんが亡くなって、50年の年でもあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 八木さんが作った会社も、名前を変えて今も続いてるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 今も、アマチュア無線やテレビで、たくさん使われているのだ。
+- id: ch8_chideji
+  title: 屋根の付け替え
+  background: yg_yane3
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年、多くの地域で、テレビのアナログ放送が終わったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: テレビが、映らなくなったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 地上デジタル放送に、切り替わったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 使う電波が変わったから、屋根のアンテナを付け替えた家も多かったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 新しいアンテナは、どんな形なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 骨が短くて、数の多いアンテナよ。これも八木式なの。
+  - speaker: zundamon
+    emotion: happy
+    text: 電波が変わると、骨の長さも変わるのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。棒の長さは、波長に合わせて決めるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 骨が多いほどよく映るっていう、ぼくの説も合ってたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 半分、当たりね。この骨を、素子と呼ぶの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電波の弱い所ほど、素子の多いアンテナを使うのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 14素子や、20素子のアンテナも売られてるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり、骨を増やせば解決なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただし、向きが合っていればね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……結局、向きなのだ。
+    se: oti
+- id: ch8_mori
+  title: 電波の来る方向
+  background: yg_mori
+  motion: none
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 八木アンテナは、屋根の上だけじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 野生の動物を調べる研究でも、使われてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 動物に、テレビを見せるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 見せないわよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 動物の首輪に、小さな発信器を付けるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その電波を、手に持った八木アンテナで受けるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 一つの方向によく効くから、向けた方向で強さが変わるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。受信の音が一番大きくなる方向に、動物がいるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 森の中の、かくれんぼなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: アマチュア無線にも、隠した発信器を探し出す競技があるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: みんなでアンテナを振りながら、野山を走るのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。フォックスハンティング、とも呼ばれてるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: キツネは、どこにもいないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 隠れた発信器を、キツネに見立てているの。
+  - speaker: zundamon
+    emotion: happy
+    text: 島まで電波を届けたアンテナが、今は森の中で、動物を探してるのだ。
+- id: shime
+  title: ''
+  background: yg_yane2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、アンテナを、電波塔のほうに向け直したのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: テレビ、きれいに映ったわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 短い骨が、電波を前へ前へ導いてるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 今日からこれは、八木・宇田アンテナと呼ぶのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: おばあちゃんにも、教えてあげてね。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……おばあちゃん、もうテレビを見て寝てるのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴ありがとうございました！
+    duet_with: tsumugi
