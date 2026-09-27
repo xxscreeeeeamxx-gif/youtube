@@ -101,7 +101,7 @@ def heya():
     d = _d(img)
     _window(d, 780, 110, 1140, 360, sky=(180, 214, 236))
     _table(d, 700, 1220, 620, col=(170, 136, 100))
-    _notebook(d, 760, 440, 300, 180)
+    _notebook(d, 760, 440, 300, 180, written=False)
     _pen(d, 1080, 600, 150, body=(40, 60, 120))
     d.rectangle([1100, 520, 1180, 600], fill=(220, 90, 90))                     # 付箋の手帳
     return img
@@ -273,7 +273,7 @@ def zukai1():
     """図解: 色を保つ温度の幅（ヒステリシス）。キャラの間に収める。"""
     img = vgrad((W, H), (244, 244, 238), (226, 230, 226))
     d = _d(img)
-    x0, x1, y = 520, 1400, 560
+    x0, x1, y = 520, 1400, 600
     d.line([(x0, y), (x1, y)], fill=INK, width=5)
     d.polygon([(x1, y - 12), (x1 + 24, y), (x1, y + 12)], fill=INK)
     t2x = lambda t: x0 + (t + 30) / 105 * (x1 - x0)                          # noqa: E731

@@ -36,7 +36,7 @@ meta:
     voice: 12
     pitch: 0.1
   - id: eigyou
-    label: 営業
+    label: 先輩社員
     voice: 13
     pitch: -0.04
   - id: oushu
@@ -110,8 +110,8 @@ scenes:
     emotion: thinking
     text: それより、消えた字が、どうして冷やすと戻るのだ？
   - speaker: reimu
-    text: フリクションボール。世界で累計50億本を超えた、消せるボールペンです。
-    reading: ふりくしょんぼーる。せかいで るいけい ごじゅうおくほんお こえた けせる ぼーるぺんです。
+    text: 消せるボールペン、フリクション。シリーズの累計は、世界で50億本を超えました。
+    reading: けせる ぼーるぺん ふりくしょん。しりーずの るいけいわ せかいで ごじゅうおくほんお こえました。
   - speaker: tsumugi
     emotion: normal
     text: 実はこのインク、もとはボールペンのために作られたものじゃないの。
@@ -135,8 +135,8 @@ scenes:
     text: 中筋憲一は、三重県四日市市の出身です。
     reading: なかすじ のりかずわ みえけん よっかいちしの しゅっしんです。
   - speaker: reimu
-    text: 高校生のころ、町では大きな石油化学の工場群が作られていました。
-    reading: こうこうせいの ころ、まちでわ おおきな せきゆ かがくの こうじょうぐんが つくられて いました。
+    text: 高校生のころ、町では、石油化学コンビナートの建設が進んでいました。
+    reading: こうこうせいの ころ まちでわ、せきゆかがく こんびなーとの けんせつが すすんで いました。
   - speaker: zundamon
     emotion: surprised
     text: パイプとタンクが、どこまでも並んでるのだ。
@@ -144,8 +144,8 @@ scenes:
     emotion: happy
     text: きれいだ……。ぼく、化学を勉強したいのだ。
   - speaker: reimu
-    text: 建設中のコンビナートの美しさに惹かれて、化学を学びたいと思った、と本人は語っています。
-    reading: けんせつちゅうの こんびなーとの うつくしさに ひかれて、かがくお まなびたいと おもったと ほんにんわ かたって います。
+    text: コンビナートの美しさに惹かれて、化学を学ぼうと思った、と本人は語っています。
+    reading: こんびなーとの うつくしさに ひかれて、かがくお まなぼうと おもったと ほんにんわ かたって います。
 - id: ch1_akahon
   title: 赤本の一文
   background: fx_heya2
@@ -280,10 +280,10 @@ scenes:
     text: 中筋くん、まだ残ってたのか。
   - speaker: zundamon
     emotion: sad
-    text: 部長……。すみません、まだ何も出ていないのだ。
+    text: 部長……。すみません、まだ成果が出ていないのだ。
   - speaker: buchou
     emotion: happy
-    text: もうそろそろ、大きな仕事をしていい頃だな。
+    text: もうそろそろ大きな仕事をしていい頃だな。
   - speaker: zundamon
     emotion: surprised
     text: ……大きな仕事。よし、やるぞ！
@@ -310,14 +310,14 @@ scenes:
     emotion: happy
     text: 試験管の中で、紅葉が起きたぞ！
   - speaker: reimu
-    text: パイロットの記録では、紅葉の着想から約1年での発見でした。
-    reading: ぱいろっとの きろくでわ こうようの ちゃくそうから やく いちねんでの はっけんでした。
+    text: パイロットの記録では、着想から約1年での発見でした。
+    reading: ぱいろっとの きろくでわ ちゃくそうから やく いちねんでの はっけんでした。
   - speaker: reimu
     text: アメリカの特許には、発明者として、中筋を含む4人の名前が並んでいます。
     reading: あめりかの とっきょにわ はつめいしゃとして、なかすじお ふくむ よにんの なまえが ならんで います。
   - speaker: reimu
-    text: 1972年に特許を出願し、1975年に特許を取りました。
-    reading: せんきゅうひゃく ななじゅうにねんに とっきょお しゅつがんし せんきゅうひゃく ななじゅうごねんに とっきょお とりました。
+    text: 日本では1972年に特許を出願し、1975年に特許を取りました。
+    reading: にほんでわ せんきゅうひゃく ななじゅうにねんに とっきょお しゅつがんし せんきゅうひゃく ななじゅうごねんに とっきょお とりました。
   - speaker: reimu
     text: 名前は、変身を意味するメタモルフォーゼから取って、メタモカラーとなりました。
     reading: なまえわ へんしんお いみする めたもるふぉーぜから とって、めたもからーと なりました。
@@ -343,10 +343,7 @@ scenes:
     text: 書いた字が変わったら、困る人がいるのだ？
   - speaker: eigyou
     emotion: thinking
-    text: 契約書の字の色が、暑い日に変わったらどうする。大騒ぎだよ。
-  - speaker: zundamon
-    emotion: sad
-    text: ……たしかに、それは困る。
+    text: 契約書の字の色が、暑い日に変わったら、大騒ぎだよ。
   - speaker: reimu
     text: 社内では、主力事業の筆記具には応用できないと言われた、と本人は語っています。
     reading: しゃないでわ しゅりょく じぎょうの ひっきぐにわ おうよう できないと いわれたと ほんにんわ かたって います。
@@ -390,7 +387,7 @@ scenes:
     text: 中筋さん、売り込みも契約の交渉も、うちでやるんですよね。
   - speaker: zundamon
     emotion: normal
-    text: 自分たちの食い扶持は、自分たちで稼ぐのだ。
+    text: うちの食い扶持は、自分たちで稼ぐのだ。
   - speaker: douryou
     emotion: surprised
     text: 特許の裁判まで、自分たちでやるんですか。
@@ -431,7 +428,7 @@ scenes:
     text: 冷やすと色が出るインクを、使ってるのよ。
   - speaker: tsumugi
     emotion: normal
-    text: 1988年からは、アメリカのおもちゃの会社と、お化粧できる人形も作ったの。
+    text: アメリカのおもちゃの会社とは、お化粧できる人形も作ったの。
   - speaker: tsumugi
     emotion: normal
     text: 1992年には、36度以上のお湯で、髪の色が変わるお人形も出たわ。
@@ -458,7 +455,7 @@ scenes:
     text: 最初のメタモカラーは、温めて色が変わっても、少し冷めるとすぐ戻ったの。
   - speaker: zundamon
     emotion: thinking
-    text: 変わる温度と戻る温度が、近すぎるのだ？
+    text: 変わる温度と戻る温度が、とても近いのだ？
   - speaker: tsumugi
     emotion: normal
     text: そう。差はわずか数度で、境目もあいまいだったそうよ。
@@ -480,7 +477,7 @@ scenes:
     text: 温めて消したら、少し冷めても、消えたままなのだ？
   - speaker: tsumugi
     emotion: happy
-    text: そう。これを、ヒステリシスって言うの。温度の履歴で、色が決まるのよ。
+    text: そう。ヒステリシスって言うの。温度の履歴で、色が決まるのよ。
   - speaker: zundamon
     emotion: thinking
     text: 今の温度だけじゃなくて、前にどうだったかで決まるのだ。
@@ -537,7 +534,7 @@ scenes:
     text: 消せる、ボールペン……。
   - speaker: oushu
     emotion: normal
-    text: フランスの学校では、子どもたちは万年筆で書いています。
+    text: フランスの学校では、みんな万年筆で書いています。
   - speaker: oushu
     emotion: sad
     text: 間違えたら、インク消しで消す。でも、消した所には、同じペンでは書けない。
@@ -557,12 +554,13 @@ scenes:
     text: 中筋も、ある日、ボールペンで消えるインクができないかという要望があった、と語っています。
     reading: なかすじも あるひ、ぼーるぺんで きえる いんくが できないかと いう ようぼうが あったと かたって います。
   - speaker: reimu
-    text: 2004年、消せるボールペンの商品化が決まります。開発を率いたのは、千賀邦行でした。
-    reading: にせんよねん けせる ぼーるぺんの しょうひんかが きまります。かいはつお ひきいたのわ せんが くにゆきでした。
+    text: 消せるボールペンの開発を率いたのは、千賀邦行でした。
+    reading: けせる ぼーるぺんの かいはつお ひきいたのわ せんが くにゆきでした。
 - id: ch5_ink
   title: 第4のインキ
   background: fx_zukai3
   bgm: pop
+  motion: none
   stage:
   - {who: zundamon, x: 0.14, flip: true, emotion: normal}
   - {who: tsumugi, x: 0.86, emotion: normal}
@@ -572,7 +570,7 @@ scenes:
     text: ボールペンのインクには、それまで3つの種類があったの。
   - speaker: tsumugi
     emotion: normal
-    text: 油性は、粘りが強くて、にじみにくい。
+    text: 油性のインクは、粘りが強くて、にじみにくい。
   - speaker: tsumugi
     emotion: normal
     text: 水性は、さらさら書けるけど、にじみやすいの。
@@ -584,7 +582,7 @@ scenes:
     text: でも、どれも一度書いたら、消えないのだ。
   - speaker: tsumugi
     emotion: happy
-    text: だからパイロットは、消せるインクを、第4のインキと呼んでるの。
+    text: パイロットは、消せるインクを、第4のインキと呼んでるの。
 - id: ch5_kaihatsu
   title: 夏にも冬にも負けない
   background: fx_fuyajo
@@ -609,8 +607,8 @@ scenes:
     emotion: normal
     text: 温度を決める成分を、また新しく作ってみます。
   - speaker: reimu
-    text: 温度を決める成分は、オリジナルの化合物を1000種類以上作って、探し出したといいます。
-    reading: おんどお きめる せいぶんわ、おりじなるの かごうぶつお せんしゅるい いじょう つくって さがしだしたと いいます。
+    text: 温度を決める成分は、1000種類以上のオリジナルの化合物を作って、探し出したといいます。
+    reading: おんどお きめる せいぶんわ、せんしゅるい いじょうの おりじなるの かごうぶつお つくって さがしだしたと いいます。
   - speaker: kenkyu2
     emotion: happy
     text: できました！ 実験室では、うまくいきました。
@@ -618,11 +616,11 @@ scenes:
     emotion: sad
     text: でも、工場で大量に作ると、同じ品質にならないんだ。
   - speaker: reimu
-    text: 生産ラインで同じ品質のインキを大量に作るのは、至難の業だったといいます。
-    reading: せいさん らいんで おなじ ひんしつの いんきお たいりょうに つくるのわ、しなんの わざだったと いいます。
+    text: 2004年に商品化が決まっても、同じ品質のインキを工場で大量に作るのは、至難の業でした。
+    reading: にせんよねんに しょうひんかが きまっても、おなじ ひんしつの いんきお こうじょうで たいりょうに つくるのわ しなんの わざでした。
   - speaker: kenkyu1
     emotion: normal
-    text: 研究室と工場を、行ったり来たりの毎日だよ。
+    text: 毎日、研究室と工場の往復だよ。
   - speaker: kenkyu2
     emotion: thinking
     text: 今夜も、帰れそうにないですね。
@@ -630,8 +628,8 @@ scenes:
     emotion: happy
     text: この研究室の社内でのあだ名、知ってるかい。不夜城だよ。
   - speaker: reimu
-    text: 研究室が社内で不夜城と呼ばれていたことは、開発を率いた千賀が明かしています。
-    reading: けんきゅうしつが しゃないで ふやじょうと よばれて いた ことわ、かいはつお ひきいた せんがが あかして います。
+    text: 研究室は社内で不夜城と呼ばれていた、と開発を率いた千賀は明かしています。
+    reading: けんきゅうしつわ しゃないで ふやじょうと よばれて いたと かいはつお ひきいた せんがわ あかして います。
 - id: ch5_fuyajo
   title: マイナス20度と65度
   background: fx_zukai1
@@ -732,8 +730,8 @@ scenes:
     emotion: normal
     text: もしもし、工場ですか。ペンを、新幹線で運んでください！
   - speaker: reimu
-    text: 名古屋の工場から、新幹線で何度も追加のペンが運ばれたといいます。
-    reading: なごやの こうじょうから しんかんせんで なんども ついかの ぺんが はこばれたと いいます。
+    text: 名古屋の工場から、新幹線で何度も追加を運んだそうです。
+    reading: なごやの こうじょうから しんかんせんで なんども ついかお はこんだ そうです。
   - speaker: tenin
     emotion: happy
     text: 3日間で、予定の3倍近く売れました。
@@ -778,7 +776,7 @@ scenes:
     text: キャップを、なくさなくて済むのだ。
   - speaker: tsumugi
     emotion: thinking
-    text: ノック式は、ペン先が乾きやすくて、難しいと言われてたの。
+    text: ノック式は、ペン先が乾くから、難しいと言われてたの。
   - speaker: tsumugi
     emotion: normal
     text: ペン先の中の形を細かく作り直して、ようやく成功したそうよ。
@@ -858,13 +856,14 @@ scenes:
   title: 使ってはいけない書類
   background: fx_ronsou
   bgm: mystery
+  motion: none
   stage:
   - {who: zundamon, x: 0.2, flip: true, emotion: normal}
   - {who: tsumugi, x: 0.8, emotion: normal}
   cuts:
   - speaker: zundamon
     emotion: thinking
-    text: 消せるボールペンって、何にでも使っていいのだ？
+    text: 消せるボールペンは、何にでも使っていいのだ？
   - speaker: tsumugi
     emotion: normal
     text: 証書や履歴書、宛名には使わないで、とパイロット自身が書いてるの。
@@ -906,9 +905,9 @@ scenes:
     text: 温度でインクを透明にして消す仕組みを、ペンで広めたのが、フリクションね。
   - speaker: zundamon
     emotion: normal
-    text: 消せるペンにも、いろんな消し方があったのだ。
+    text: 消せるペンにも、いろいろな消し方があったのだ。
 - id: ch9_metamo
-  title: 消せるコピー用紙
+  title: 消せるトナー
   background: fx_gendai
   bgm: you_and_me
   stage:
@@ -950,7 +949,7 @@ scenes:
     text: 東芝テックは、焼き付ける温度を100度以下に下げたわ。
   - speaker: zundamon
     emotion: happy
-    text: ペンは60度、トナーは100度より上。使う場所で、消える温度を変えてるのだ。
+    text: ペンは65度、トナーは100度より上。使う場所で、消える温度を変えてるのだ。
 - id: ch10_gendai
   title: 世界で50億本
   background: fx_gendai2
@@ -961,7 +960,7 @@ scenes:
   cuts:
   - speaker: tsumugi
     emotion: normal
-    text: 蛍光ペンや色鉛筆、スタンプまで、約40の商品に広がったわ。
+    text: 今では、蛍光ペンや色鉛筆、スタンプまで、約40の商品に広がったわ。
   - speaker: tsumugi
     emotion: normal
     text: 2022年には、濃い色で書ける、ノックゾーンも出たわ。
@@ -1000,7 +999,7 @@ scenes:
     text: 紅葉を見てから、ボールペンになるまで、30年以上なのだ。
   - speaker: tsumugi
     emotion: happy
-    text: 人は好きなことは続けられるし、その気になれば何でもできる。中筋さんの言葉よ。
+    text: 人は好きなことは続けられるし、その気になれば[何|なん]でもできる。中筋さんの言葉よ。
 - id: shime
   title: ''
   background: fx_heya
@@ -1020,7 +1019,7 @@ scenes:
     text: テストの答案も、ちゃんと鉛筆で書くぞ。
   - speaker: tsumugi
     emotion: normal
-    text: そうね。消えちゃいけない物は、消えないペンか鉛筆でね。
+    text: そうね。消えちゃいけない書類は、消えないペンで書いてね。
   - speaker: tsumugi
     emotion: thinking
     text: で、うっすら戻ってきた落書きは、[何|なん]だったの？
