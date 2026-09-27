@@ -1,0 +1,1271 @@
+meta:
+  title: 【メガスターの誕生】「個人には無理」と言われたプラネタリウムを、7畳の自室で作った会社員【ずんだもん解説】
+  slug: ohira-megastar
+  summary: 昔のプラネタリウムが映せた星は、数千個から3万個ほどでした。1998年、ロンドンの国際会議で100万個を超える星を映したのは、ソニーの若い社員が実家の7畳の自室で作った機械でした。電話帳でレンズ会社を探した小学生時代、卒業式のロケット、秋葉原の電源メーカーでのアルバイトと自作の露光装置。0.7ミクロンの穴で星を描いた大平貴之とメガスターの歩みを、再現ドラマでたどります。
+  tags:
+  - プラネタリウム
+  - メガスター
+  - 大平貴之
+  - 星空
+  - 天の川
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 雑学
+  - ものづくり
+  thumbnail:
+    top: 7畳の自室で作った
+    bottom: メガスターの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: doukyu
+    label: 同級生
+    voice: 12
+    pitch: 0.2
+  - id: shokuin
+    label: 科学館職員
+    voice: 42
+    pitch: 0.02
+  - id: lens
+    label: レンズ会社
+    voice: 13
+    pitch: 0.04
+  - id: buin
+    label: 部員
+    voice: 12
+    pitch: 0.1
+  - id: sensei
+    label: 先生
+    voice: 42
+    pitch: -0.06
+  - id: baito
+    label: バイト先
+    voice: 42
+    pitch: 0.12
+  - id: nakama
+    label: 仲間
+    voice: 12
+    pitch: 0.02
+  - id: gaikoku
+    label: 海外の技師
+    voice: 13
+    pitch: 0.14
+  - id: koba
+    label: 町工場
+    voice: 42
+    pitch: -0.02
+  - id: staff
+    label: スタッフ
+    voice: 8
+    pitch: 0.06
+  - id: joushi
+    label: 上司
+    voice: 13
+    pitch: -0.06
+  - id: gangu
+    label: 玩具会社
+    voice: 12
+    pitch: -0.04
+  - id: kyujo
+    label: イベント会社
+    voice: 13
+    pitch: 0.04
+  - id: denki
+    label: 電機メーカー
+    voice: 13
+    pitch: -0.02
+scenes:
+- id: hook
+  title: ''
+  background: mg_beranda
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、今夜は星を数えるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……東京の空で？
+  - speaker: zundamon
+    emotion: normal
+    text: 1、2、3……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……終わったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つね。
+  - speaker: zundamon
+    emotion: happy
+    text: 都会の星は、少数精鋭なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 物は言いようね。
+  - speaker: zundamon
+    emotion: happy
+    text: だったら、プラネタリウムに行くのだ。数えきれない星が見られるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 昔のプラネタリウムが映せた星は、数千個から3万個くらいだったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 頑張れば、数えられるのだ！？
+    se: oti
+  - speaker: reimu
+    text: プラネタリウム。ドームの天井に、夜空を映す機械です。
+    reading: ぷらねたりうむ。どーむの てんじょうに よぞらお うつす きかいです。
+  - speaker: reimu
+    text: 肉眼で見える星は、全天でおよそ8600個とされます。
+    reading: にくがんで みえる ほしわ ぜんてんで およそ はっせんろっぴゃっこと されます。
+  - speaker: reimu
+    text: 1998年、ロンドンの国際会議で、100万個を超える星を映す機械が発表されました。
+    reading: せんきゅうひゃく きゅうじゅうはちねん、ろんどんの こくさい かいぎで ひゃくまんこお こえる ほしお うつす きかいが はっぴょう されました。
+  - speaker: reimu
+    text: 作ったのは、大平貴之。28歳の、ソニーの社員でした。
+    reading: つくったのわ おおひら たかゆき。にじゅうはっさいの そにーの しゃいんでした。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも作った場所は、実家の、7畳の自分の部屋なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会社じゃなくて、自分の部屋なのだ！？
+- id: ch0_rekishi
+  title: プラネタリウムの始まり
+  background: mg_rekishi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: プラネタリウムの始まりは、1923年のドイツなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: レンズの会社、ツァイスの技術者が作ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 天井の星が、本物の空のように動いて見える。見た人は、イエナの驚異と呼んだそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100年も前から、あったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本|にほん]で最初のプラネタリウムは、1937年に大阪にできたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 52年間で、1100万人以上が見たわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 漫画家の手塚治虫も、少年のころ、月に1回ほど[通って|かよって]いたそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 手塚治虫も、同じ星空を見上げてたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 翌年には東京の有楽町にもできたけど、戦争の空襲で焼けてしまったの。
+  - speaker: zundamon
+    emotion: sad
+    text: ……7年もたたずに、なくなったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのころの機械が映した星は、9000個ほど。
+  - speaker: tsumugi
+    emotion: normal
+    text: 肉眼で見える星と、ほとんど同じ数ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見える星は、ちゃんと全部映してたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。見える星を映せば十分、というのが、長い間の常識だったの。
+- id: card1970
+  title: ''
+  background: mg_card_1970
+  cuts:
+  - speaker: reimu
+    text: 1970年。神奈川県川崎市で、大平貴之が生まれます。
+    reading: せんきゅうひゃく ななじゅうねん。かながわけん かわさきしで おおひら たかゆきが うまれます。
+- id: ch1_yakou
+  title: 天井の星座
+  background: mg_heya70
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.8, emotion: happy}
+  - {who: doukyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 実験や工作に夢中で、7畳の自室は実験室のようになっていました。
+    reading: じっけんや こうさくに むちゅうで、ななじょうの じしつわ じっけんしつの ように なっていました。
+  - speaker: reimu
+    text: 小学4年のころ、文房具店で夜光塗料を見つけます。
+    reading: しょうがく よねんの ころ ぶんぼうぐてんで やこう とりょうお みつけます。
+  - speaker: zundamon
+    emotion: happy
+    text: 紙に塗って、丸く切って、天井に貼ったのだ。
+  - speaker: doukyu
+    emotion: thinking
+    text: 天井に？ 何を貼ったの？
+  - speaker: zundamon
+    emotion: happy
+    text: 電気を消してみるのだ。
+- id: ch1_yakou2
+  title: ''
+  background: mg_heya70d
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.8, emotion: happy}
+  - {who: doukyu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: doukyu
+    emotion: surprised
+    text: わあ、天井に星がある！
+  - speaker: zundamon
+    emotion: happy
+    text: あれがオリオン座で、こっちが冬の大三角なのだ。
+  - speaker: doukyu
+    emotion: happy
+    text: 大平くん、すごいね！
+  - speaker: reimu
+    text: 家族や近所の人に見せて、星座を解説すると喜ばれた、と本人は話しています。
+    reading: かぞくや きんじょの ひとに みせて せいざお かいせつ すると よろこばれたと、ほんにんわ はなしています。
+  - speaker: zundamon
+    emotion: normal
+    text: 次は、紙のドームに穴をあけて、電球で映すのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ぼやけて、星に見えないのだ！
+  - speaker: doukyu
+    emotion: thinking
+    text: 光が、にじんじゃってるね。
+  - speaker: zundamon
+    emotion: happy
+    text: 本の付録の型紙で作ったら、ぼんやりだけど映ったのだ！
+  - speaker: doukyu
+    emotion: surprised
+    text: 小さな穴から、光がもれてるんだね。
+  - speaker: zundamon
+    emotion: happy
+    text: 型紙を3倍に大きくしたら、もっとくっきりしたのだ。
+  - speaker: reimu
+    text: 小さな穴から光を漏らす、ピンホール式と呼ばれるプラネタリウムです。
+    reading: ちいさな あなから ひかりお もらす ぴんほーるしきと よばれる ぷらねたりうむです。
+- id: ch1_kagakukan
+  title: 科学館の少年
+  background: mg_kagakukan
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.8, emotion: normal}
+  - {who: shokuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 近くの川崎市青少年科学館では、プラネタリウムを見ることができました。
+    reading: ちかくの かわさきし せいしょうねん かがくかんでわ、ぷらねたりうむお みる ことが できました。
+  - speaker: shokuin
+    emotion: happy
+    text: 君が、プラネタリウムに夢中だっていう子かい？
+  - speaker: zundamon
+    emotion: happy
+    text: そうなのだ。この機械のことが、知りたいのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 中の電球は、何ワットなのだ？ モーターは、いくつ入ってるのだ？
+  - speaker: shokuin
+    emotion: surprised
+    text: 星じゃなくて、機械の質問ばかりだね。
+  - speaker: zundamon
+    emotion: normal
+    text: 夕焼けは、どうやって映してるのだ？
+  - speaker: shokuin
+    emotion: happy
+    text: じゃあ、この解説台のダイヤルを、回してごらん。
+  - speaker: zundamon
+    emotion: surprised
+    text: 星が、動いたのだ……！
+  - speaker: reimu
+    text: 科学館の職員は後に、少年はメカの質問ばかりしてきた、と振り返っています。
+    reading: かがくかんの しょくいんわ のちに しょうねんわ めかの しつもんばかり してきたと、ふりかえっています。
+- id: ch1_lens
+  title: 電話帳のレンズ会社
+  background: mg_heya70
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.85, emotion: normal}
+  - {who: lens, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 小学6年では、レンズで映すプラネタリウムの設計図を描きます。
+    reading: しょうがく ろくねんでわ れんずで うつす ぷらねたりうむの せっけいずお かきます。
+  - speaker: zundamon
+    emotion: normal
+    text: レンズが要るのだ。電話帳で、レンズの会社を探すのだ。
+  - speaker: lens
+    emotion: normal
+    text: はい、こちら営業部ですが……。
+  - speaker: zundamon
+    emotion: happy
+    text: プラネタリウムを作りたいので、レンズを分けてほしいのだ！
+  - speaker: lens
+    emotion: surprised
+    text: ……[君|きみ]、小学生かい？
+  - speaker: lens
+    emotion: thinking
+    text: 悪いけど、うちでは無理だね。
+  - speaker: zundamon
+    emotion: normal
+    text: ……分かったのだ。次の会社に電話するのだ。
+  - speaker: reimu
+    text: 断られても次の会社に電話をかけ、レンズを分けてくれる会社を見つけました。
+    reading: ことわられても つぎの かいしゃに でんわお かけ、れんずお わけてくれる かいしゃお みつけました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……レンズはもらえたけど、うまく映らないのだ。
+- id: ch1_renji
+  title: 電子レンジの自由研究
+  background: mg_heya70
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.85, emotion: happy}
+  - {who: denki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 夏休みの自由研究は、電子レンジを作るのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 作り方は、メーカーに聞けばいいのだ。
+  - speaker: denki
+    emotion: normal
+    text: はい、お客様相談室です。
+  - speaker: zundamon
+    emotion: happy
+    text: 電子レンジを、自分で作りたいのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 部品は、どこで買えるのだ？
+  - speaker: denki
+    emotion: surprised
+    text: ……作る？ 電子レンジを、ですか？
+  - speaker: denki
+    emotion: angry
+    text: 危険ですから、やめてください！
+  - speaker: zundamon
+    emotion: sad
+    text: ……止められたのだ。
+    se: oti
+  - speaker: reimu
+    text: 大手の電機メーカーに電話して、止められたという話も、本人が語っています。
+    reading: おおての でんき めーかーに でんわして、とめられたと いう はなしも ほんにんが かたっています。
+- id: ch1_rocket
+  title: 夕焼けのロケット
+  background: mg_kawara
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.85, emotion: normal}
+  - {who: doukyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 手作りのロケットにも挑みました。火薬の調合に苦労し、何百回も失敗したといいます。
+    reading: てづくりの ろけっとにも いどみました。かやくの ちょうごうに くろうし なんびゃっかいも しっぱい したと いいます。
+  - speaker: doukyu
+    emotion: thinking
+    text: 大平くん、これで何回目？
+  - speaker: zundamon
+    emotion: normal
+    text: 何百回か、もう数えてないのだ。
+  - speaker: doukyu
+    emotion: surprised
+    text: 何百回！？
+  - speaker: zundamon
+    emotion: normal
+    text: 火薬の混ぜ方を、また変えたのだ。3、2、1……！
+- id: ch1_rocket2
+  title: ''
+  background: mg_kawara2
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.85, emotion: happy}
+  - {who: doukyu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: doukyu
+    emotion: surprised
+    text: 飛んだ！
+  - speaker: zundamon
+    emotion: happy
+    text: 夕焼けの空に、消えたのだ……！
+  - speaker: reimu
+    text: 中学2年で、初めて打ち上げに成功します。その光景が忘れられない、と本人は話しています。
+    reading: ちゅうがく にねんで はじめて うちあげに せいこう します。その こうけいが わすれられないと ほんにんわ はなしています。
+- id: card1986
+  title: ''
+  background: mg_card_1986
+  cuts:
+  - speaker: reimu
+    text: 1986年。物理部の天文班にいた高校生の大平は、ハレー彗星を見にオーストラリアへ向かいます。
+    reading: せんきゅうひゃく はちじゅうろくねん。ぶつりぶの てんもんはんに いた こうこうせいの おおひらわ、はれー すいせいお みに おーすとらりあえ むかいます。
+- id: ch2_amanogawa
+  title: 南半球の天の川
+  background: mg_australia
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 大平貴之, scale: 0.9, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: ……空が、星で埋まってるのだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 天の川が、ただの光の帯じゃないのだ。
+  - speaker: reimu
+    text: 南半球で見た天の川の迫力が、のちの開発の原動力になった、と本人は語っています。
+    reading: みなみはんきゅうで みた あまのがわの はくりょくが、のちの かいはつの げんどうりょくに なったと ほんにんわ かたっています。
+- id: ch2_bunkasai
+  title: 1万6000個の星
+  background: mg_bunkasai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.9, emotion: normal}
+  - {who: buin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 高校2年の秋、2台目を文化祭に出します。
+    reading: こうこう にねんの あき にだいめお ぶんかさいに だします。
+  - speaker: buin
+    emotion: normal
+    text: 大平、去年の文化祭は6300個だったよな。今年は何個なんだ？
+  - speaker: zundamon
+    emotion: happy
+    text: 1万6000個なのだ。去年の、倍以上なのだ。
+  - speaker: buin
+    emotion: surprised
+    text: そんなにか！？
+  - speaker: zundamon
+    emotion: normal
+    text: 直径3メートルのドームの中を、真っ暗にするのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 音楽を流して、ぼくが解説するのだ。
+  - speaker: reimu
+    text: 当時のプラネタリウムでも、多いもので3万個ほどだった、と本人は話しています。
+    reading: とうじの ぷらねたりうむでも おおい もので さんまんこほど だったと、ほんにんわ はなしています。
+  - speaker: zundamon
+    emotion: normal
+    text: 次は、レンズで映すのを作りたいのだ。
+  - speaker: buin
+    emotion: thinking
+    text: レンズで映すやつって、個人で作れるのか？
+  - speaker: zundamon
+    emotion: angry
+    text: 無理と言われるほど、作りたくなるのだ。
+  - speaker: reimu
+    text: 個人には無理だと言われたことが、かえってやる気に火をつけた、と本人は語っています。
+    reading: こじんにわ むりだと いわれた ことが、かえって やるきに ひお つけたと ほんにんわ かたっています。
+- id: ch2_sotsugyou
+  title: 卒業式のロケット
+  background: mg_kousha
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.9, emotion: happy}
+  - {who: sensei, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 1988年、高校の卒業式の日。
+    reading: せんきゅうひゃく はちじゅうはちねん。こうこうの そつぎょうしきの ひ。
+  - speaker: zundamon
+    emotion: happy
+    text: 3、2、1……発射なのだ！
+- id: ch2_sotsugyou2
+  title: ''
+  background: mg_kousha2
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, scale: 0.9, emotion: surprised}
+  - {who: sensei, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: sensei
+    emotion: angry
+    text: 大平！ 卒業式の日に、校庭で何を飛ばしてるんだ！
+  - speaker: zundamon
+    emotion: surprised
+    text: ロ、ロケットなのだ……。
+  - speaker: sensei
+    emotion: angry
+    text: 卒業証書は、没収だ！
+  - speaker: zundamon
+    emotion: sad
+    text: ご、ごめんなさいなのだ！
+    se: oti
+  - speaker: reimu
+    text: 職員室で、必死に謝ったそうです。
+    reading: しょくいんしつで ひっしに あやまったそうです。
+  - speaker: reimu
+    text: 卒業証書は、無事にもらえたそうです。
+    reading: そつぎょう しょうしょわ ぶじに もらえたそうです。
+- id: ch3_akiba
+  title: 秋葉原のアルバイト
+  background: mg_akiba
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: baito, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 日本大学の生産工学部に進んだ大平は、2年を終えると、1年間休学します。
+    reading: にほん だいがくの せいさん こうがくぶに すすんだ おおひらわ、にねんお おえると いちねんかん きゅうがく します。
+  - speaker: reimu
+    text: 求人誌で見つけた、秋葉原の電源装置のメーカーで働き始めました。
+    reading: きゅうじんしで みつけた、あきはばらの でんげん そうちの めーかーで はたらき はじめました。
+  - speaker: baito
+    emotion: happy
+    text: 大平くん、修理の腕がいいね。
+  - speaker: zundamon
+    emotion: normal
+    text: お願いがあるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 仕事の後、ここの設備を使わせてほしいのだ。
+  - speaker: baito
+    emotion: thinking
+    text: 何を作るんだい？
+  - speaker: zundamon
+    emotion: happy
+    text: プラネタリウムの電源なのだ。
+  - speaker: baito
+    emotion: happy
+    text: 面白い。部品も、好きに使っていいよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうなのだ！
+  - speaker: reimu
+    text: 修理係から技術の助手になり、仕事の後は設備や部品を自由に使わせてもらえたそうです。
+    reading: しゅうりがかりから ぎじゅつの じょしゅに なり、しごとの あとわ せつびや ぶひんお じゆうに つかわせて もらえたそうです。
+  - speaker: reimu
+    text: 1990年、星の穴を焼き付ける装置、マイクロプロッターを作ります。
+    reading: せんきゅうひゃく きゅうじゅうねん、ほしの あなお やきつける そうち まいくろぷろったーお つくります。
+- id: ch3_astroliner
+  title: アストロライナー
+  background: mg_daigaku
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: nakama, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 大学3年の秋、レンズで映すプラネタリウム、アストロライナーが完成します。
+    reading: だいがく さんねんの あき、れんずで うつす ぷらねたりうむ あすとろらいなーが かんせい します。
+  - speaker: nakama
+    emotion: happy
+    text: 大平、ドームに空気が入ったぞ！
+  - speaker: zundamon
+    emotion: happy
+    text: この直径8メートルのドームも、手作りなのだ。
+  - speaker: nakama
+    emotion: normal
+    text: 文化祭が始まる前に、中で投影機を確かめようぜ。
+- id: ch3_astroliner_in
+  title: ''
+  background: mg_airdome_in
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: nakama, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 投影機の電源、入れるのだ。
+  - speaker: nakama
+    emotion: surprised
+    text: ……星が、くっきりしてる。
+  - speaker: zundamon
+    emotion: happy
+    text: レンズで映すと、星が針の先みたいに鋭くなるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 星は3万個以上。空を32に分けて、それぞれのレンズで映すのだ。
+  - speaker: nakama
+    emotion: happy
+    text: 文化祭の後も、あちこちで上映しようぜ。
+  - speaker: reimu
+    text: 改良を重ねながら、11回の移動公演を行いました。
+    reading: かいりょうお かさねながら じゅういっかいの いどう こうえんお おこないました。
+  - speaker: reimu
+    text: ただ、休学の影響で就職が決まらず、1年浪人してから大学院へ進みます。
+    reading: ただ きゅうがくの えいきょうで しゅうしょくが きまらず、いちねん ろうにん してから だいがくいんえ すすみます。
+- id: card1996
+  title: ''
+  background: mg_card_1996
+  cuts:
+  - speaker: reimu
+    text: 1996年。大平は、ソニーに入社します。
+    reading: せんきゅうひゃく きゅうじゅうろくねん。おおひらわ そにーに にゅうしゃ します。
+- id: ch4_osaka
+  title: 学生が一人で
+  background: mg_kaijou
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: gaikoku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その年の7月、大阪でプラネタリウムの国際会議が開かれました。
+    reading: その としの しちがつ おおさかで ぷらねたりうむの こくさい かいぎが ひらかれました。
+  - speaker: reimu
+    text: 大平は、学生時代のアストロライナーを発表します。
+    reading: おおひらわ がくせい じだいの あすとろらいなーお はっぴょう します。
+  - speaker: zundamon
+    emotion: normal
+    text: ……以上が、学生時代に一人で作った、ぼくのプラネタリウムなのだ。
+  - speaker: gaikoku
+    emotion: surprised
+    text: 本当に、学生が一人で作ったのかい？
+  - speaker: zundamon
+    emotion: happy
+    text: そうなのだ。部屋で作ったのだ。
+  - speaker: gaikoku
+    emotion: happy
+    text: うちの会社に来ないか？
+  - speaker: reimu
+    text: 発表は大きな反響を呼び、アメリカの会社から誘いも受けましたが、断っています。
+    reading: はっぴょうわ おおきな はんきょうお よび、あめりかの かいしゃから さそいも うけましたが ことわっています。
+  - speaker: zundamon
+    emotion: angry
+    text: 次の国際会議で、もっと驚かせるのだ。
+- id: ch4_heya
+  title: 7畳の開発室
+  background: mg_heya96
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: koba, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 開発の場所は、実家の2階にある7畳の自室でした。
+    reading: かいはつの ばしょわ じっかの にかいに ある ななじょうの じしつでした。
+  - speaker: reimu
+    text: 80キロのアストロライナーは、玄関まで運ぶのも大変だったといいます。
+    reading: はちじゅっきろの あすとろらいなーわ げんかんまで はこぶのも たいへんだったと いいます。
+  - speaker: zundamon
+    emotion: normal
+    text: 次の機械は、車に積める大きさにするのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 小学生のころから、ずっとこの部屋で作ってきたのだ。
+  - speaker: koba
+    emotion: normal
+    text: 大平さん、頼まれてた部品、できましたよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうなのだ。この精度なら、星がずれないのだ。
+  - speaker: koba
+    emotion: thinking
+    text: しかし、個人の注文で、ここまで細かい部品は珍しいですよ。
+  - speaker: reimu
+    text: 学生のころから、部品は図面を描いて、町工場に特注していました。
+    reading: がくせいの ころから ぶひんわ ずめんお かいて、まちこうばに とくちゅう して いました。
+  - speaker: zundamon
+    emotion: normal
+    text: 星の数は、100万個を目指すのだ。
+  - speaker: koba
+    emotion: surprised
+    text: 100万個！？ そんなに穴を、あけられるんですか？
+  - speaker: zundamon
+    emotion: happy
+    text: 今度はレーザーで、もっと小さく焼き付けるのだ。
+- id: ch5_ana
+  title: 星の穴の大きさ
+  background: mg_zukai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: レンズ式のプラネタリウムは、スライドの映写機に近いの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 星の位置に小さな穴をあけた板に、[中|なか]から光を当てて、レンズでドームに映すのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 明るい星と暗い星は、どうやって分けるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 穴の大きさよ。明るい星ほど、大きな穴にするの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 星の明るさは、1等級ちがうと、約2.5倍ちがうわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 5等級ちがうと、100倍。穴の直径は、[10分の1|じゅうぶんのいち]になるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 暗い星ほど、どんどん小さな穴が要るのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 学生時代の計算だと、[7等星|ななとうせい]の穴は13マイクロメートル。
+  - speaker: tsumugi
+    emotion: normal
+    text: シャーペンの芯の、[40分の1|よんじゅうぶんのいち]くらいよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ドリルであけられるのは、細くても0.2ミリくらい。
+  - speaker: zundamon
+    emotion: thinking
+    text: だから、写真みたいに焼き付けるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 半導体と同じように、光で焼き付けて溶かす方法よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ゴミが付くと余計な穴になるから、部屋にクリーンルームまで作ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 部屋に、クリーンルームまで作ったのだ！？
+- id: ch5_ana2
+  title: 0.7ミクロンの穴
+  background: mg_zukai2
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1998年には、レーザーで焼き付ける装置を作り直したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最小の穴は、0.7ミクロン。[1万分の7|いちまんぶんのなな]ミリよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 髪の毛より、ずっと細いのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 小さな板32枚に、合わせて100万個を超える穴が並ぶの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 星の位置は、ヒッパルコスという人工衛星が測ったデータを使ったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 宇宙から測った地図を、7畳の部屋で焼き付けたのだ。
+- id: card1998
+  title: ''
+  background: mg_card_1998
+  cuts:
+  - speaker: reimu
+    text: 1998年6月。ロンドンで、プラネタリウムの国際会議が開かれます。
+    reading: せんきゅうひゃく きゅうじゅうはちねん ろくがつ。ろんどんで ぷらねたりうむの こくさい かいぎが ひらかれます。
+- id: ch6_party
+  title: ソーリー、パードン？
+  background: mg_london
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: gaikoku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 機械は、飛行機の手荷物として持ち込みました。
+    reading: きかいわ ひこうきの てにもつと して もちこみました。
+  - speaker: gaikoku
+    emotion: happy
+    text: やあ、大阪で発表した君だね。明日は何を見せてくれるんだい？
+  - speaker: zundamon
+    emotion: happy
+    text: 持ち運べるプラネタリウムなのだ。星は、100万個なのだ。
+  - speaker: gaikoku
+    emotion: surprised
+    text: ソーリー、パードン？
+  - speaker: zundamon
+    emotion: normal
+    text: 100万個なのだ。ワン、ミリオンなのだ。
+  - speaker: gaikoku
+    emotion: thinking
+    text: ……ワン、サウザンドの、言い間違いだろう？
+  - speaker: reimu
+    text: 前夜のパーティーで話すと、誰もが聞き返したといいます。
+    reading: ぜんやの ぱーてぃーで はなすと だれもが ききかえしたと いいます。
+  - speaker: reimu
+    text: 英語が下手で、桁を間違えたと思われた、と本人は振り返っています。
+    reading: えいごが へたで けたお まちがえたと おもわれたと、ほんにんわ ふりかえっています。
+- id: ch6_joen
+  title: 星でできた天の川
+  background: mg_dome
+  bgm: amacha_milkyway
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: gaikoku, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 翌日の上映は、ほぼ完璧に動きました。
+    reading: よくじつの じょうえいわ ほぼ かんぺきに うごきました。
+  - speaker: gaikoku
+    emotion: surprised
+    text: 天の川が……ぼんやりした帯じゃない。
+  - speaker: gaikoku
+    emotion: surprised
+    text: 一つ一つの、星でできている……！
+  - speaker: zundamon
+    emotion: happy
+    text: 暗い星まで映すと、天の川は、星の集まりに見えるのだ。
+  - speaker: reimu
+    text: 予定を変えて、2回の追加上映が行われたそうです。
+    reading: よていお かえて にかいの ついか じょうえいが おこなわれたそうです。
+  - speaker: reimu
+    text: 発表した時点の星は150万個。帰国した後、170万個で完成させます。
+    reading: はっぴょう した じてんの ほしわ ひゃくごじゅうまんこ。きこく した あと ひゃくななじゅうまんこで かんせい させます。
+  - speaker: reimu
+    text: この機械は、のちにメガスターと名付けられました。
+    reading: この きかいわ のちに めがすたーと なづけられました。
+- id: card2000
+  title: ''
+  background: mg_card_2000
+  cuts:
+  - speaker: reimu
+    text: 2000年12月。メガスターが、国内で初めて一般公開されます。
+    reading: にせんねん じゅうにがつ。めがすたーが こくないで はじめて いっぱん こうかい されます。
+- id: ch7_spiral
+  title: 解説のない星空
+  background: mg_spiral
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: staff, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 会場は、東京・表参道のギャラリーでした。
+    reading: かいじょうわ とうきょう おもてさんどうの ぎゃらりーでした。
+  - speaker: staff
+    emotion: thinking
+    text: 大平さん、星座の説明は、しないんですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 今回は、波と風の音だけにするのだ。
+  - speaker: staff
+    emotion: thinking
+    text: あの、光の帯みたいなのは、[何|なん]ですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 天の川なのだ。ぼくたちの銀河を、[中|なか]から見た姿なのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 近くで見ると、一つ一つが星なのだ。遠くからだと、帯に見えるのだ。
+  - speaker: staff
+    emotion: surprised
+    text: ……じゃあ、私たちも、あの中にいるんですね。
+  - speaker: reimu
+    text: 宇宙の中に自分もいると感じたとき、感動は大きくなる。大平は、そう気づいたといいます。
+    reading: うちゅうの なかに じぶんも いると かんじた とき かんどうわ おおきく なる。おおひらわ そう きづいたと いいます。
+- id: ch8_futatsu
+  title: 会社員と作り手
+  background: mg_sony
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: staff, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2002年、大平は渋谷の、閉館したプラネタリウムのドームで、1か月あまりの上映を引き受けます。
+    reading: にせんにねん、おおひらわ しぶやの へいかん した ぷらねたりうむの どーむで いっかげつ あまりの じょうえいお ひきうけます。
+  - speaker: staff
+    emotion: thinking
+    text: 大平さん、もし平日に機械が止まったら、どうしましょう？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……会社を抜けて、駆けつけるわけにはいかないのだ。
+  - speaker: staff
+    emotion: normal
+    text: お客さんは、毎日来ますからね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社員のままだと、作った機械を守れないのだ……。
+  - speaker: reimu
+    text: 会社員と、プラネタリウムの作り手。二つの立場の矛盾に、耐えられなくなったといいます。
+    reading: かいしゃいんと ぷらねたりうむの つくりて。ふたつの たちばの むじゅんに たえられなく なったと いいます。
+- id: ch8_jishu
+  title: 手作りのドーム
+  background: mg_airdome
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: staff, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 同じ2002年、会社員のまま、お台場の日本科学未来館で上映会を開きます。
+    reading: おなじ にせんにねん、かいしゃいんの まま おだいばの にほん かがく みらいかんで じょうえいかいお ひらきます。
+  - speaker: staff
+    emotion: happy
+    text: 大平さん、今日のドームも満席です！
+  - speaker: zundamon
+    emotion: happy
+    text: 手伝ってくれるみんなのおかげなのだ。
+  - speaker: staff
+    emotion: normal
+    text: 直径10メートルのドームに、60人しか入れませんからね。
+  - speaker: zundamon
+    emotion: normal
+    text: その60人に、170万個の星を見せるのだ。
+  - speaker: reimu
+    text: 夏とクリスマスに開いた上映会は、ボランティアが運営を手伝っていたそうです。
+    reading: なつと くりすますに ひらいた じょうえいかいわ、ぼらんてぃあが うんえいお てつだって いたそうです。
+  - speaker: reimu
+    text: 館長の毛利衛からは、未来館で一緒に育てていきましょう、と声がかかります。
+    reading: かんちょうの もうり まもるからわ、みらいかんで いっしょに そだてて いきましょうと こえが かかります。
+  - speaker: reimu
+    text: 2003年5月、大平はソニーを退社します。
+    reading: にせんさんねん ごがつ おおひらわ そにーお たいしゃ します。
+  - speaker: reimu
+    text: 前例がなく、未来館への常設が決まったのは、2003年の夏の終わりでした。
+    reading: ぜんれいが なく、みらいかんえの じょうせつが きまったのわ にせんさんねんの なつの おわりでした。
+- id: card2004
+  title: ''
+  background: mg_card_2004
+  cuts:
+  - speaker: reimu
+    text: 2004年7月11日。日本科学未来館で、メガスターの常設の投影が始まります。
+    reading: にせんよねん しちがつ じゅういちにち。にほん かがく みらいかんで めがすたーの じょうせつの とうえいが はじまります。
+- id: ch9_miraikan
+  title: 国の施設の主役
+  background: mg_miraikan
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 国の施設の、主役の機械なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その重圧は大きかった、と大平さんは話してるわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: これでプレッシャーを感じないのは、よほど肝が据わってるか、のんきかのどちらか。
+  - speaker: tsumugi
+    emotion: happy
+    text: 大平さんは、そう笑って話してるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 大平さんは、感じるほうなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 毛利さんには、あなたが事故に遭ったらどうなるのか、とも聞かれたそうよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 作れる人が、一人しかいないからなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 映した星は、500万個を超えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 宇宙飛行士でもある毛利さんは、宇宙で見た星空そのものだ、と評したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本物の宇宙を見た人の、お墨付きなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: この年、ギネス世界記録にも認定されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界で最も先進的なプラネタリウムの投影機、としてね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: このころの大平さんは、こう話していたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 高校生のとき以来、オーストラリアの天の川は見に行けていない、って。
+  - speaker: zundamon
+    emotion: surprised
+    text: どうしてなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本物を見て、自分の星空と違っていたらショックだから、見ないほうが幸せかも、って。
+  - speaker: zundamon
+    emotion: thinking
+    text: 作った人ならではの悩みなのだ。
+- id: ch10_teian
+  title: 家の中の星空
+  background: mg_giken
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: gangu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: gangu
+    emotion: normal
+    text: 大平さん、家で使えるプラネタリウムを、一緒に作りませんか。
+  - speaker: zundamon
+    emotion: surprised
+    text: おもちゃの会社から、声がかかったのだ！
+  - speaker: reimu
+    text: 持ちかけたのは、玩具メーカーのセガトイズでした。
+    reading: もちかけたのわ がんぐ めーかーの せがといずでした。
+  - speaker: gangu
+    emotion: thinking
+    text: 仕事で疲れた帰り道、ふと星が見たいと思ったんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 家に帰れば星空がある、というのはいいのだ。
+- id: ch10_homestar
+  title: ''
+  background: mg_homestar
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: gangu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: この試作機の大きさで、星を1万個映すのだ。
+  - speaker: gangu
+    emotion: normal
+    text: 値段は、2万790円にします。
+  - speaker: zundamon
+    emotion: thinking
+    text: おもちゃにしては、高い値段なのだ。売れるのだ？
+  - speaker: reimu
+    text: 2005年2月、大平は大平技研という会社を作ります。
+    reading: にせんごねん にがつ おおひらわ おおひら ぎけんと いう かいしゃお つくります。
+  - speaker: reimu
+    text: 2005年、家庭用の光学式プラネタリウム、ホームスターが発売されます。
+    reading: にせんごねん かていようの こうがくしき ぷらねたりうむ ほーむすたーが はつばい されます。
+  - speaker: reimu
+    text: 当初は、1000台売れれば上出来という見込みだったといいます。
+    reading: とうしょわ せんだい うれれば じょうできと いう みこみだったと いいます。
+  - speaker: reimu
+    text: ところが、2015年に100万台、2021年には170万台を超えました。
+    reading: ところが にせんじゅうごねんに ひゃくまんだい、にせんにじゅういちねんにわ ひゃくななじゅうまんだいお こえました。
+  - speaker: reimu
+    text: 同じ2005年には、大平の半生がテレビドラマにもなっています。
+    reading: おなじ にせんごねんにわ おおひらの はんせいが てれび どらまにも なっています。
+- id: ch12_shinka
+  title: 10億の星
+  background: mg_zukai3
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 星の数は、そのあとも増え続けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年には、施設向けのプラネタリウムで初めて、光源にLEDを使ったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 電球を取り替えなくて、よくなったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。今のLEDは、3万時間ほど持つそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年には、2200万個を映す機械を発表したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年には、子どものころに[通った|かよった]川崎の科学館に、新しいメガスターが入ったの。
+  - speaker: zundamon
+    emotion: happy
+    text: ダイヤルを回させてもらった、あの科学館なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: レンズで映す星とデジタルの映像を重ねて、映像と重なる所だけ星を消せる機械よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年には、ソニーのグループ会社と、ブルーレイの技術で星の板を作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 穴の大きさは、200ナノメートル。映せる星は、10億個を超えたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10億個！？
+- id: ch11_kyujo
+  title: 球場いっぱいの星
+  background: mg_giken
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: kyujo, x: 0.56, emotion: normal}
+  - {who: staff, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kyujo
+    emotion: normal
+    text: 今度、ドーム球場でコンサートがあるんです。
+  - speaker: kyujo
+    emotion: normal
+    text: 天井いっぱいに、星を映せませんか？
+  - speaker: zundamon
+    emotion: thinking
+    text: 天井いっぱい、なのだ……？
+  - speaker: staff
+    emotion: thinking
+    text: さすがに、それは……。
+  - speaker: zundamon
+    emotion: happy
+    text: ……できるのだ。ぜひ、やらせてほしいのだ！
+  - speaker: staff
+    emotion: surprised
+    text: えっ！？
+    se: oti
+  - speaker: reimu
+    text: 断るつもりの席で、思わずできますと言ってしまった、と本人は振り返っています。
+    reading: ことわる つもりの せきで おもわず できますと いって しまったと、ほんにんわ ふりかえっています。
+- id: ch11_giganium
+  title: ''
+  background: mg_stadium
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大平貴之, emotion: normal}
+  - {who: staff, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: staff
+    emotion: thinking
+    text: ……で、どう映すんですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 小さな鏡を、球にたくさん貼るのだ。鏡1枚が、星1つになるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 鏡は約6000枚。直径32センチの球に、貼っていくのだ。
+  - speaker: staff
+    emotion: surprised
+    text: 球場の天井が、星でいっぱい……！
+  - speaker: reimu
+    text: 2019年8月、埼玉の球場で、約1万人が同じ星空を見上げました。
+    reading: にせんじゅうきゅうねん はちがつ、さいたまの きゅうじょうで やく いちまんにんが おなじ ほしぞらお みあげました。
+  - speaker: reimu
+    text: 2022年には、横浜の科学館に、約12億個の星を映す機械が入ります。
+    reading: にせんにじゅうにねんにわ よこはまの かがくかんに やく じゅうにおくこの ほしお うつす きかいが はいります。
+  - speaker: reimu
+    text: 2023年には、横浜の機械が星の数で、この球場の星空が投影の広さで、ギネス世界記録に認められました。
+    reading: にせんにじゅうさんねんにわ よこはまの きかいが ほしの かずで、この きゅうじょうの ほしぞらが とうえいの ひろさで ぎねす せかい きろくに みとめられました。
+- id: ch13_ronsou
+  title: 見えない星は嘘？
+  background: mg_zukai4
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、目で見えない星まで映したら、嘘の星空にならないのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう思う人も、いるかもね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大平さんは、星を足してるわけじゃない、と説明してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本物どおりの暗さで、小さな点として映しているだけ、って。
+  - speaker: tsumugi
+    emotion: normal
+    text: 実際、ドームの中で双眼鏡をのぞくと、本物の空と同じように暗い星が見えるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 見えない星も、ちゃんとそこにあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、見えない星がたくさん集まるから、天の川はぼんやり光って見えるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 肉眼だと、全部で何個なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 全天でおよそ8600個。地平線の上に出ているのは、その半分ほどね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[日本|にほん]の人口の約7割は、天の川が見えない場所に住んでるの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 街の明かりのせいね。そういう研究があるの。
+  - speaker: zundamon
+    emotion: sad
+    text: 東京で3つしか見えなかったのは、そのせいなのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、星の数の世界一は、ずっとメガスターなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そこは、争いが続いてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年には、[日本|にほん]の[五藤光学|ごとうこうがく]の機械が、ギネスの記録を塗り替えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は、星の数を競う記録が、部門ごとに分かれてるのよ。
+- id: ch14_gendai
+  title: 14の国と地域へ
+  background: mg_gendai
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本|にほん]で今動いているプラネタリウムは、298か所。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 数ではアメリカが1位で、[日本|にほん]は2位とみられてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界最大のドームも、名古屋の科学館にあるの。直径35メートルよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: プラネタリウム大国なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: メガスターは、14の国と地域で、47以上の施設に入ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年の6月には、福岡でプラネタリウムの国際会議が開かれたの。
+  - speaker: zundamon
+    emotion: happy
+    text: 大阪で発表した会議が、また[日本|にほん]に来たのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 星を見に行って彼女ができた、という声が嬉しい、と大平さんは話してるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 7畳の部屋の星空が、世界中に広がったのだ。
+- id: shime
+  title: ''
+  background: mg_beranda2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、もう一回、星を数えるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: また3つでしょ？
+  - speaker: zundamon
+    emotion: happy
+    text: 今日は、双眼鏡があるのだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1、2、3、4、5……増えたのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 見えなかった星も、ちゃんとそこにあったのね。
+  - speaker: zundamon
+    emotion: happy
+    text: 都会の星は、少数精鋭じゃなかったのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……数えきれないから、プラネタリウムに行くのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴ありがとうございました！
+    duet_with: tsumugi

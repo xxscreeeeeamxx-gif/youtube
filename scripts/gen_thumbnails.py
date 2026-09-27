@@ -2926,6 +2926,66 @@ def p_tgegg(d, s):
         d.ellipse([bx - r, by - r, bx + r, by + r], fill=(250, 214, 80), outline=(160, 130, 40), width=2)
 
 
+def p_mgroom(d, s):
+    """7畳の部屋の作業台に置いた、レンズの付いた恒星球。"""
+    d.rectangle([s * 0.10, s * 0.74, s * 0.90, s * 0.80], fill=(120, 100, 80))
+    d.rectangle([s * 0.16, s * 0.80, s * 0.22, s * 0.96], fill=(100, 84, 66))
+    d.rectangle([s * 0.78, s * 0.80, s * 0.84, s * 0.96], fill=(100, 84, 66))
+    cx, cy, r = s * 0.5, s * 0.40, s * 0.24
+    d.rectangle([cx - s * 0.03, cy + r, cx + s * 0.03, s * 0.74], fill=(80, 80, 90))
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(60, 64, 76), outline=(30, 30, 36), width=int(s * 0.01))
+    for i in range(-2, 3):
+        for j in range(-2, 3):
+            if i * i + j * j <= 5:
+                x, y, rr = cx + i * r * 0.36, cy + j * r * 0.36, r * 0.12
+                d.ellipse([x - rr, y - rr, x + rr, y + rr], fill=(170, 200, 230))
+
+
+def p_mgdome(d, s):
+    """星でいっぱいのドーム。天の川も星の粒。"""
+    import random
+    d.chord([s * 0.04, s * 0.16, s * 0.96, s * 1.08], 180, 360, fill=(14, 18, 44))
+    rnd = random.Random(7)
+    for _ in range(900):
+        x, y = rnd.uniform(s * 0.08, s * 0.92), rnd.uniform(s * 0.20, s * 0.60)
+        if (x - s * 0.5) ** 2 / (s * 0.46) ** 2 + (y - s * 0.62) ** 2 / (s * 0.46) ** 2 > 1:
+            continue
+        r = rnd.random() ** 4 * s * 0.008 + 1
+        d.ellipse([x - r, y - r, x + r, y + r], fill=(250, 250, 255))
+    for _ in range(700):
+        t = rnd.uniform(-1, 1)
+        x, y = s * 0.5 + t * s * 0.4, s * 0.40 - t * s * 0.12 + rnd.gauss(0, s * 0.03)
+        if (x - s * 0.5) ** 2 / (s * 0.46) ** 2 + (y - s * 0.62) ** 2 / (s * 0.46) ** 2 > 1 or y > s * 0.60:
+            continue
+        d.ellipse([x - 1.2, y - 1.2, x + 1.2, y + 1.2], fill=(210, 214, 255))
+    d.rectangle([s * 0.04, s * 0.60, s * 0.96, s * 0.66], fill=(30, 32, 50))
+
+
+def p_sprou(d, s):
+    """水たまりに落ちて、花のように開いた白いロウ。"""
+    d.ellipse([s * 0.10, s * 0.50, s * 0.90, s * 0.90], fill=(80, 110, 160))
+    import math
+    for cx, cy, r in ((s * 0.38, s * 0.66, s * 0.10), (s * 0.62, s * 0.72, s * 0.08), (s * 0.50, s * 0.58, s * 0.07)):
+        for k in range(5):
+            a = k * 2 * math.pi / 5
+            x, y = cx + r * math.cos(a), cy + r * 0.6 * math.sin(a)
+            d.ellipse([x - r * 0.7, y - r * 0.45, x + r * 0.7, y + r * 0.45], fill=(250, 248, 240))
+        d.ellipse([cx - r * 0.3, cy - r * 0.2, cx + r * 0.3, cy + r * 0.2], fill=(240, 230, 200))
+    d.rectangle([s * 0.47, s * 0.12, s * 0.53, s * 0.40], fill=(250, 246, 236))   # ろうそく
+    d.ellipse([s * 0.46, s * 0.02, s * 0.54, s * 0.13], fill=(255, 200, 80))
+
+
+def p_spomu(d, s):
+    """皿の上の、シワのあるオムレツ（ケチャップつき）。"""
+    d.ellipse([s * 0.06, s * 0.58, s * 0.94, s * 0.86], fill=(250, 250, 246), outline=(190, 190, 186), width=int(s * 0.01))
+    d.chord([s * 0.16, s * 0.26, s * 0.84, s * 0.86], 180, 360, fill=(246, 206, 80), outline=(210, 160, 50), width=int(s * 0.012))
+    d.rectangle([s * 0.16, s * 0.54, s * 0.84, s * 0.58], fill=(246, 206, 80))
+    for k in range(4):
+        x = s * (0.30 + k * 0.13)
+        d.arc([x - s * 0.05, s * 0.36, x + s * 0.05, s * 0.50], 200, 340, fill=(200, 150, 50), width=int(s * 0.012))
+    d.line([(s * 0.30, s * 0.40), (s * 0.50, s * 0.34), (s * 0.70, s * 0.40)], fill=(200, 40, 30), width=int(s * 0.03))
+
+
 def p_pcparis(d, s):
     """ガラスケースに並んだ外国の鉛筆。"""
     d.rectangle([s * 0.08, s * 0.30, s * 0.92, s * 0.78], fill=(220, 236, 244), outline=(120, 110, 90),
@@ -3251,6 +3311,16 @@ SPECS = {
         head_hi="渦巻き", panels=[
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
+    "iwasaki-sample": dict(layout="panels", headline="食品サンプルの元は妻のオムレツ",
+        head_hi="妻のオムレツ", panels=[
+        _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
+        _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
+    ]),
+    "ohira-megastar": dict(layout="panels", headline="プラネタリウムを7畳間で作った",
+        head_hi="7畳間", panels=[
+        _p("p_mgroom", "1996年 実家の自室", SLATE, "thinking", "自分で作るのだ", "会社員の趣味"),
+        _p("p_mgdome", "1998年 ロンドン", NAVY, "surprised", "100万個なのだ！", "パードン？と聞き返された"),
     ]),
     "tamagotchi-yokoi": dict(layout="panels", headline="たまごっちはわざと死ぬ",
         head_hi="わざと死ぬ", panels=[
