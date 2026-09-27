@@ -537,7 +537,7 @@ _NO_LINE_HEAD = "、。，．！？!?…）」』ー・ぁぃぅぇぉっゃゅ�
 _DIGITS = set("0123456789０１２３４５６７８９")
 _NUM_JOIN = set(".,．，")
 _NUM_KANJI = set("万億兆")
-_UNITS = set("年月日時分秒本個台円号倍回歳人%％度枚杯軒階割位番巻冊点件歩代期")
+_UNITS = set("年月日時分秒本個台円号倍回歳人%％度枚杯軒階割位番巻冊点件歩代期畳等級坪周着通")
 
 
 def _char_class(ch: str) -> str | None:
@@ -547,11 +547,13 @@ def _char_class(ch: str) -> str | None:
         return "k"
     if ch.isascii() and ch.isalpha():
         return "a"
+    if "一" <= ch <= "鿿" or ch in "々〆":   # 漢字
+        return "h"
     return None
 
 
 def _bad_break(a: str, b: str) -> bool:
-    """a と b の間で改行すると、数字・数字と単位・カタカナ語・英字が割れるか。"""
+    """a と b の間で改行すると、数字・数字と単位・カタカナ語・漢字の熟語・英字が割れるか。"""
     ca, cb = _char_class(a), _char_class(b)
     if ca == "d" and (cb in ("d", "k", "a") or b in _NUM_KANJI or b in _UNITS or b in _NUM_JOIN):
         return True
@@ -560,6 +562,8 @@ def _bad_break(a: str, b: str) -> bool:
     if a in _NUM_JOIN and cb == "d":
         return True
     if ca == "k" and cb == "k":
+        return True
+    if ca == "h" and cb == "h":      # 漢字の熟語（大｜平・名｜古屋・日｜本 が割れていた。2026-09-27 メガスター回）
         return True
     if ca == "a" and cb in ("a", "d"):
         return True
@@ -969,7 +973,7 @@ def render_frames(
                       if enter_set else stage_list)
         cap_png = None
         if enters and caption:
-            ckey = hashlib.sha1(json.dumps(["cap3", caption, sub],
+            ckey = hashlib.sha1(json.dumps(["cap4", caption, sub],
                                 ensure_ascii=False).encode()).hexdigest()[:16]
             cap_png = f"frames/cap_{ckey}.png"
             cp = proj.root / cap_png
@@ -986,7 +990,7 @@ def render_frames(
         key_list = [bg_name, header, chars,
                     cut.slide.model_dump() if cut.slide else None, cut.image,
                     bool(sp), card, full, fg_only, sub, sprite_sig,
-                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap3",
+                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap4",
                     sorted(enter_set)]
         if ent_tag_whos:
             key_list.append(["enttag1", sorted(ent_tag_whos)])
@@ -1044,7 +1048,7 @@ def render_frames(
                     mark_y = max(10, actor_y + 26)
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
-                    [bubble, stage_list, sprite_sig, "bub4"],
+                    [bubble, stage_list, sprite_sig, "bub5"],
                     ensure_ascii=False, sort_keys=True,
                     default=str).encode()).hexdigest()[:16]
                 bubble_png = f"frames/bub_{bkey}.png"
