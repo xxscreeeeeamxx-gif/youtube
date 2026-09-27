@@ -561,6 +561,8 @@ def _bad_break(a: str, b: str) -> bool:
         return True
     if a in _NUM_JOIN and cb == "d":
         return True
+    if a in "約計" and cb == "d":     # 「約｜1万5000店」のように概数の頭で割れていた（2026-09-27 スーパーカブ回）
+        return True
     if ca == "k" and cb == "k":
         return True
     if ca == "h" and cb == "h":      # 漢字の熟語（大｜平・名｜古屋・日｜本 が割れていた。2026-09-27 メガスター回）
@@ -1003,7 +1005,7 @@ def render_frames(
                       if enter_set else stage_list)
         cap_png = None
         if enters and caption:
-            ckey = hashlib.sha1(json.dumps(["cap5", caption, sub],
+            ckey = hashlib.sha1(json.dumps(["cap6", caption, sub],
                                 ensure_ascii=False).encode()).hexdigest()[:16]
             cap_png = f"frames/cap_{ckey}.png"
             cp = proj.root / cap_png
@@ -1020,7 +1022,7 @@ def render_frames(
         key_list = [bg_name, header, chars,
                     cut.slide.model_dump() if cut.slide else None, cut.image,
                     bool(sp), card, full, fg_only, sub, sprite_sig,
-                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap5",
+                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap6",
                     sorted(enter_set)]
         if ent_tag_whos:
             key_list.append(["enttag1", sorted(ent_tag_whos)])
@@ -1078,7 +1080,7 @@ def render_frames(
                     mark_y = max(10, actor_y + 26)
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
-                    [bubble, stage_list, sprite_sig, "bub6"],
+                    [bubble, stage_list, sprite_sig, "bub7"],
                     ensure_ascii=False, sort_keys=True,
                     default=str).encode()).hexdigest()[:16]
                 bubble_png = f"frames/bub_{bkey}.png"

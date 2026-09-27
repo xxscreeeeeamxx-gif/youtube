@@ -1,0 +1,1305 @@
+meta:
+  title: 【スーパーカブの誕生】「月に3万台売れる」と言い切った男。本田宗一郎に50ccを頼んだ経営者【ずんだもん解説】
+  slug: fujisawa-supercub
+  summary: 郵便、新聞、そば屋の出前。働く人を乗せて走るスーパーカブは、1958年の発売から累計1億台を超えました。この二輪車を「作ってくれ」と頼み、「月に3万台売れる」と言い切ったのは、技術者ではなく、ホンダの経営を任された藤沢武夫でした。鋼材のセールスマンから材木屋を経て、本田宗一郎と組んだ男は、自転車屋への手紙、材木屋や乾物屋を販売店にする作戦、資本金の何倍もの工場、そしてアメリカへと、売る仕組みを作り続けます。藤沢武夫の生涯と、スーパーカブの60年あまりを再現ドラマでたどります。
+  tags:
+  - スーパーカブ
+  - 藤沢武夫
+  - 本田宗一郎
+  - ホンダ
+  - バイク
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 経営
+  - 雑学
+  thumbnail:
+    top: 月に3万台
+    bottom: スーパーカブの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: chichi
+    label: 父
+    voice: 13
+    pitch: -0.1
+  - id: tenshu
+    label: 店主
+    voice: 42
+    pitch: 0.0
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.08
+  - id: takeshima
+    label: 竹島弘
+    voice: 13
+    pitch: 0.06
+  - id: honda
+    label: 本田宗一郎
+    voice: 13
+    pitch: -0.06
+  - id: designer
+    label: デザイナー
+    voice: 12
+    pitch: 0.02
+  - id: zaimoku
+    label: 材木屋
+    voice: 42
+    pitch: 0.04
+  - id: sobaya
+    label: そば屋
+    voice: 42
+    pitch: -0.04
+  - id: keiri
+    label: 経理
+    voice: 13
+    pitch: 0.12
+  - id: nishida
+    label: 西田通弘
+    voice: 12
+    pitch: -0.08
+  - id: kumiai
+    label: 組合員
+    voice: 12
+    pitch: 0.14
+  - id: kenkyuin
+    label: 研究員
+    voice: 12
+    pitch: -0.02
+  - id: koukoku
+    label: 広告担当
+    voice: 12
+    pitch: 0.1
+scenes:
+- id: hook
+  title: ''
+  background: sc_machi
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ぼく、そば屋さんで出前のアルバイトを始めるのだ！
+  - speaker: tsumugi
+    emotion: surprised
+    text: バイクの免許は？
+  - speaker: zundamon
+    emotion: happy
+    text: 原付の免許を、取ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: えらいわね。で、どうやって運ぶの？
+  - speaker: zundamon
+    emotion: happy
+    text: 片手で天ぷらそばを持って、もう片手で運転するのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 片手運転は、危ないわよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、おそばは頭の上にのせるのだ！
+  - speaker: tsumugi
+    emotion: surprised
+    text: もっと危ないわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 出前のバイクには、おそばをつるす専用の台があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、あの赤い郵便のバイクも、実は同じ仲間なのよ。
+  - speaker: reimu
+    text: スーパーカブ。1958年の発売から、シリーズ累計1億台を超えた二輪車です。
+    reading: すーぱーかぶ。せんきゅうひゃく ごじゅうはちねんの はつばいから しりーず るいけい いちおくだいお こえた にりんしゃです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1億台！ 作ったのは、本田宗一郎さんなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 作ったのは、本田さんたち技術者ね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、こういうのを作ってくれと頼んで、月に3万台売れると言い切った人がいるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダのお[金|かね]と売り方を任された、藤沢武夫さんよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 作った人じゃなくて、売る人の話なのだ！？
+- id: card1910
+  title: ''
+  background: sc_card_1910
+  cuts:
+  - speaker: reimu
+    text: 1910年。東京の小石川で、藤沢武夫が生まれます。
+    reading: せんきゅうひゃく じゅうねん。とうきょうの こいしかわで ふじさわ たけおが うまれます。
+- id: ch1_shinsai
+  title: 震災と受験の失敗
+  background: sc_ie
+  bgm: warm
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, scale: 0.85, emotion: normal}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 父の秀四郎は、広告にかかわる仕事をしていました。
+    reading: ちちの ひでしろうわ こうこくに かかわる しごとお して いました。
+  - speaker: reimu
+    text: 1923年の関東大震災のあと、一家の暮らしは苦しくなります。
+    reading: せんきゅうひゃく にじゅうさんねんの かんとう だいしんさいの あと いっかの くらしわ くるしく なります。
+  - speaker: chichi
+    emotion: sad
+    text: 武夫、すまんな。しばらくは、ぜいたくはできん。
+  - speaker: zundamon
+    emotion: normal
+    text: 分かってる。ぼくも、何か手伝うのだ。
+  - speaker: chichi
+    emotion: thinking
+    text: 手伝うより、まずは学校を出なさい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 学校を出たら、自分でお[金|かね]を稼いで、家を楽にするのだ。
+  - speaker: reimu
+    text: 1928年に京華中学を卒業しますが、東京高等師範学校の受験には失敗しました。
+    reading: せんきゅうひゃく にじゅうはちねんに けいか ちゅうがくお そつぎょう しますが、とうきょう こうとう しはん がっこうの じゅけんにわ しっぱい しました。
+  - speaker: reimu
+    text: その後、兵役を経て、働き口を探すことになります。
+    reading: そのご へいえきお へて はたらきぐちお さがす ことに なります。
+- id: card1934
+  title: ''
+  background: sc_card_1934
+  cuts:
+  - speaker: reimu
+    text: 1934年。23歳の武夫は、東京・日本橋の鋼材店に入ります。
+    reading: せんきゅうひゃく さんじゅうよねん。にじゅうさんさいの たけおわ とうきょう にほんばしの こうざいてんに はいります。
+- id: ch1_kouzai
+  title: 鋼材のセールスマン
+  background: sc_kouzai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: tenshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tenshu
+    emotion: normal
+    text: 藤沢くん、今日も工場回りかね。
+  - speaker: zundamon
+    emotion: happy
+    text: 鉄の棒や板を使う工場に、売り込みに行ってくるのだ。
+  - speaker: tenshu
+    emotion: thinking
+    text: 月給は15円だ。売れなくても、同じだぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 売れたら、店が大きくなる。それでいいのだ。
+  - speaker: tenshu
+    emotion: surprised
+    text: ……店のことまで考えとるのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: まず、工場の人が、どんな鉄で困ってるかを聞くのだ。
+  - speaker: tenshu
+    emotion: happy
+    text: 商売の筋がいいな、君は。
+- id: card1939
+  title: ''
+  background: sc_card_1939
+  cuts:
+  - speaker: reimu
+    text: 1939年。武夫は、自分の会社を立ち上げます。
+    reading: せんきゅうひゃく さんじゅうきゅうねん。たけおわ じぶんの かいしゃお たちあげます。
+- id: ch1_kiko
+  title: 終戦の日の工場
+  background: sc_kiko
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 名前は日本機工研究所。金属を削る刃物を作る会社です。
+    reading: なまえわ にほん きこう けんきゅうじょ。きんぞくお けずる はものお つくる かいしゃです。
+  - speaker: reimu
+    text: 戦争の終わりが近づくと、空襲を避けて、工場を福島へ移すことにします。
+    reading: せんそうの おわりが ちかづくと、くうしゅうお さけて こうじょうお ふくしまえ うつす ことに します。
+  - speaker: shain
+    emotion: normal
+    text: 社長、最後の機械、福島に運び込みました！
+  - speaker: zundamon
+    emotion: happy
+    text: よし、これでまた刃物が作れるのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 社長、ラジオを……。戦争が、終わったそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……今日、運び終えたばかりなのに。
+  - speaker: reimu
+    text: 機械を運び込んだその日に、終戦を迎えたと伝わります。
+    reading: きかいお はこびこんだ その ひに しゅうせんお むかえたと つたわります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 刃物は、もう売れないのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: でも、焼けた町には家が要る。家には材木が要るのだ。
+  - speaker: reimu
+    text: 戦後、武夫は福島の二本松で、材木を扱う製材業を始めました。
+    reading: せんご たけおわ ふくしまの にほんまつで ざいもくお あつかう せいざいぎょうお はじめました。
+- id: card1949
+  title: ''
+  background: sc_card_1949
+  cuts:
+  - speaker: reimu
+    text: 1949年8月。東京・阿佐ヶ谷の、ある家の座敷。
+    reading: せんきゅうひゃく よんじゅうきゅうねん はちがつ。とうきょう あさがやの ある いえの ざしき。
+- id: ch2_deai
+  title: 二人の出会い
+  background: sc_zashiki
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: takeshima, x: 0.56, emotion: normal}
+  - {who: honda, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 前の年、武夫は旧知の竹島弘と再会し、東京で材木店を開いていました。
+    reading: まえの とし、たけおわ きゅうちの たけしま ひろしと さいかいし とうきょうで ざいもくてんお ひらいて いました。
+  - speaker: reimu
+    text: 竹島は、戦時中は飛行機の会社にいて、このころは国の技官でした。
+    reading: たけしまわ せんじちゅうわ ひこうきの かいしゃに いて、この ころわ くにの ぎかんでした。
+  - speaker: takeshima
+    emotion: normal
+    text: 藤沢くん、紹介するよ。浜松でオートバイを作っている、本田宗一郎さんだ。
+  - speaker: honda
+    emotion: happy
+    text: 本田です。エンジンの話なら、いくらでもしますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 藤沢です。機械のことは、まるで分かりません。
+  - speaker: honda
+    emotion: thinking
+    text: じゃあ、あんたは何ができる？
+  - speaker: zundamon
+    emotion: happy
+    text: お[金|かね]を集めて、作った物を売ることなら、できるのだ。
+  - speaker: honda
+    emotion: surprised
+    text: ……それは、おれの一番苦手なことだ。
+  - speaker: zundamon
+    emotion: normal
+    text: だったら、お[金|かね]と売ることは、ぼくが引き受ける。
+  - speaker: zundamon
+    emotion: normal
+    text: 本田さんは、技術に集中してほしいのだ。
+  - speaker: honda
+    emotion: happy
+    text: そいつは、助かる。
+  - speaker: reimu
+    text: 本田は42歳、藤沢は38歳でした。
+    reading: ほんだわ よんじゅうにさい ふじさわわ さんじゅうはっさいでした。
+  - speaker: reimu
+    text: 二人とも、自分に無いものを相手が持っていた、と後に語っています。
+    reading: ふたりとも、じぶんに ない ものお あいてが もって いたと のちに かたって います。
+  - speaker: reimu
+    text: この年の10月、武夫は本田技研工業の常務になりました。
+    reading: この としの じゅうがつ たけおわ ほんだ ぎけん こうぎょうの じょうむに なりました。
+- id: ch2_tegami
+  title: 5万通の手紙
+  background: sc_honsha
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1952年、ホンダは自転車に取り付ける小さなエンジン、カブF型を出します。
+    reading: せんきゅうひゃく ごじゅうにねん、ほんだわ じてんしゃに とりつける ちいさな えんじん かぶ えふがたお だします。
+  - speaker: shain
+    emotion: thinking
+    text: 専務、これを売るには、オートバイ屋が足りませんよ。
+  - speaker: zundamon
+    emotion: normal
+    text: オートバイ屋じゃない。自転車屋さんに頼むのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 自転車屋さん、ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 自転車屋さんなら、全国に何万軒もある。そこに手紙を出すのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 全部に、ですか！？
+  - speaker: zundamon
+    emotion: normal
+    text: 文面は、こうするのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: あなた[方|がた]のご先祖は、日露戦争の後、勇気をもって輸入自転車を売る決心をされた。
+  - speaker: zundamon
+    emotion: normal
+    text: 今、お客さまは、エンジンの付いたものを求めている。
+  - speaker: zundamon
+    emotion: happy
+    text: そのエンジンを、ホンダがつくりました。
+  - speaker: reimu
+    text: 手紙は、全国の自転車店5万軒以上に送られました。
+    reading: てがみわ ぜんこくの じてんしゃてん ごまんけん いじょうに おくられました。
+  - speaker: shain
+    emotion: surprised
+    text: 専務、3万軒以上から、返事が来ました！
+  - speaker: zundamon
+    emotion: normal
+    text: 1軒に1台ずつ、申し込み順に送る。
+  - speaker: zundamon
+    emotion: normal
+    text: 卸値は、1万9000円にする。
+  - speaker: zundamon
+    emotion: normal
+    text: 代金は、郵便為替か、銀行への振り込みで先に受け取る。
+  - speaker: shain
+    emotion: surprised
+    text: 先にお[金|かね]をもらうんですか！？
+  - speaker: reimu
+    text: すぐに約5000軒から送金があり、最終的に約1万5000店の販売網ができました。
+    reading: すぐに やく ごせんけんから そうきんが あり、さいしゅうてきに やく いちまん ごせんてんの はんばいもうが できました。
+  - speaker: zundamon
+    emotion: happy
+    text: 良い品も、置く場所が無ければ売れないのだ。
+- id: ch2_kiki
+  title: 1954年の危機
+  background: sc_honsha
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: thinking}
+  - {who: keiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1954年、ジュノオやドリームなど、主力の商品がそろって問題を抱えます。
+    reading: せんきゅうひゃく ごじゅうよねん、じゅのおや どりーむなど しゅりょくの しょうひんが そろって もんだいお かかえます。
+  - speaker: keiri
+    emotion: sad
+    text: 専務、ドリームは販売を止めて、在庫の山です。
+  - speaker: keiri
+    emotion: sad
+    text: 輸入した機械の支払いも、止まっています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 協力してくれる会社には、支払いを少し待ってもらうしかない。
+  - speaker: zundamon
+    emotion: normal
+    text: 銀行には、包み隠さず全部話すのだ。
+  - speaker: keiri
+    emotion: thinking
+    text: 組合からは、手当をもっと出せ、という声が出ています。
+  - speaker: zundamon
+    emotion: normal
+    text: 組合には、ぼくが自分で話す。
+- id: ch2_kumiai
+  title: ''
+  background: sc_kumiai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: kumiai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 組合員1800人の前に、藤沢は自分で立ちました。
+    reading: くみあいいん せんはっぴゃくにんの まえに ふじさわわ じぶんで たちました。
+  - speaker: zundamon
+    emotion: normal
+    text: もう少し出せたとしても、後で会社がつぶれたら、
+  - speaker: zundamon
+    emotion: normal
+    text: なぜあの時頑張らなかったのか、と言われる。
+  - speaker: zundamon
+    emotion: sad
+    text: それでは、経営者として誠に申し訳ないことになる。
+  - speaker: kumiai
+    emotion: normal
+    text: ……。
+  - speaker: kumiai
+    emotion: happy
+    text: 頼むぞ！ 専務、頼むぞ！
+    se: don
+  - speaker: reimu
+    text: 組合員たちは、大きな拍手で応えたといいます。
+    reading: くみあいいんたちわ おおきな はくしゅで こたえたと いいます。
+- id: card1956
+  title: ''
+  background: sc_card_1956
+  cuts:
+  - speaker: reimu
+    text: 1956年の暮れ。本田と藤沢は、ヨーロッパへ視察に向かいます。
+    reading: せんきゅうひゃく ごじゅうろくねんの くれ。ほんだと ふじさわわ よーろっぱえ しさつに むかいます。
+- id: ch3_kinai
+  title: 機内の頼み
+  background: sc_kinai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: honda, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 本田さん。自転車に付けるエンジンでは、もうだめなのだ。
+  - speaker: honda
+    emotion: thinking
+    text: じゃあ、何を作れと言うんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 車体ごと作った、50ccのバイクなのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 誰でも扱えて、特に女の人が乗りたくなるようなもの。
+  - speaker: zundamon
+    emotion: normal
+    text: エンジンがむき出しでないものが、いい。
+  - speaker: honda
+    emotion: surprised
+    text: 女の人が乗るバイク、か。
+  - speaker: zundamon
+    emotion: normal
+    text: 誰でも買える品がないと、会社に先はないのだ。
+  - speaker: honda
+    emotion: thinking
+    text: 50ccが、そんなに売れるか。
+  - speaker: zundamon
+    emotion: happy
+    text: 自転車に乗ってる人が、みんなお客さんになるのだ。
+  - speaker: honda
+    emotion: surprised
+    text: ……大きく出たな。
+  - speaker: zundamon
+    emotion: happy
+    text: 作ってくれたら、ぼくが必ず売る！
+  - speaker: honda
+    emotion: normal
+    text: ……よし。ヨーロッパで、じっくり見てこよう。
+  - speaker: reimu
+    text: 藤沢は著書で、欧州へ向かう機内で、50ccを何度も頼んだと書いています。
+    reading: ふじさわわ ちょしょで おうしゅうえ むかう きないで、ごじゅっしーしーお なんども たのんだと かいて います。
+- id: ch3_europe
+  title: ヨーロッパの町で
+  background: sc_europe
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: honda, x: 0.76, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 自転車にエンジンを付けたような乗り物が、たくさん走ってるのだ。
+  - speaker: honda
+    emotion: thinking
+    text: モペッドだな。こっちは、スクーターか。
+  - speaker: zundamon
+    emotion: thinking
+    text: どれも、日本の道で乗るには、ちょっと違う気がする。
+  - speaker: honda
+    emotion: normal
+    text: ああ。モペッドでもスクーターでもない、日本人に合うものを作る。
+  - speaker: reimu
+    text: この視察で、作るべきバイクの考えが固まりつつあった、とホンダは記しています。
+    reading: この しさつで つくるべき ばいくの かんがえが かたまりつつ あったと ほんだわ しるして います。
+- id: ch4_nendo
+  title: 手のうちに入るもの
+  background: sc_kenkyujo
+  bgm: honwaka_puppu
+  stage:
+  - {who: designer, x: 0.28, flip: true, emotion: normal}
+  - {who: honda, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 帰国した本田は、若いデザイナーたちと、実物大の粘土の模型を作り始めます。
+    reading: きこくした ほんだわ、わかい でざいなーたちと じつぶつだいの ねんどの もけいお つくり はじめます。
+  - speaker: honda
+    emotion: normal
+    text: 日本の道路は悪い。エンジンは、4馬力はないとだめだ。
+  - speaker: honda
+    emotion: normal
+    text: 悪い道でも乗りやすい、頑丈なものにしなきゃならん。
+  - speaker: designer
+    emotion: surprised
+    text: 社長、ご自分で粘土を削るんですか。
+  - speaker: honda
+    emotion: happy
+    text: 実物大なら、見た瞬間に分かる。計算も試作も[要らん|いらん]。
+  - speaker: honda
+    emotion: normal
+    text: いいか、風はこう来て、こう飛ぶんだ。
+  - speaker: honda
+    emotion: surprised
+    text: '[痛て|いて]！'
+    se: oti
+  - speaker: designer
+    emotion: surprised
+    text: 社長、粘土の中の金網が、指に刺さってます！
+  - speaker: honda
+    emotion: normal
+    text: なんのこれしき。まだ削るぞ。
+  - speaker: designer
+    emotion: thinking
+    text: ……刺さっても、手が止まらない。
+  - speaker: honda
+    emotion: happy
+    text: いいか。手のうちに入るものを作れ。
+  - speaker: designer
+    emotion: thinking
+    text: 誰でも簡単に扱える、小さなもの、ですね。
+  - speaker: honda
+    emotion: happy
+    text: そうだ。
+  - speaker: reimu
+    text: この話は、担当のデザイナーが後に語ったものです。
+    reading: この はなしわ たんとうの でざいなーが のちに かたった ものです。
+- id: ch4_shikumi
+  title: クラッチの無いバイク
+  background: sc_zukai
+  bgm: pop
+  motion: none
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 開発では、たくさんの工夫が重ねられたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: まず、左手でにぎるクラッチのレバーが無いのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 無いのだ！？ ギアを変えるとき、どうするのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 自動遠心クラッチ、という仕組みよ。ギアは足で変えるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: クラッチは、足の操作とエンジンの回転で、自動で切れるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 8つの案から3つを試作して、やっと完成したそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 左手が[空く|あく]から、出前も持てるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは昔の話。今は、両手で運転してね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 燃料のタンクは座席の下。前が低くて、スカートのままでもまたげるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 足元の大きなカバーは、軽いポリエチレンの樹脂。跳ねた泥から足を守るの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 樹脂のカバーなんて、当時は珍しかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きな成形は初めての会社に、ホンダが型を用意して、作ってもらったそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: エンジンは、50ccの4ストローク。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の小さいバイクは、2ストロークが普通だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 丈夫で、静かで、排気もきれい。そのかわり、仕組みが複雑になるの。
+  - speaker: tsumugi
+    emotion: happy
+    text: 本田さんの4馬力の注文には、4.5馬力で応えたのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: タイヤは17インチ。日本人の体に合わせて選んだ大きさよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、その大きさのタイヤは、当時の日本に無かったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 無いのに、どう試したのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 18インチのタイヤを、1インチ切り詰めて試作したんですって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きなメーカーには断られて、小さなタイヤメーカーが引き受けてくれたそうよ。
+  - speaker: reimu
+    text: そば屋の出前持ちが、片手で運転できるバイク。本田の言葉として、よく語られるコンセプトです。
+    reading: そばやの でまえもちが かたてで うんてん できる ばいく。ほんだの ことばとして よく かたられる こんせぷとです。
+- id: card1957
+  title: ''
+  background: sc_card_1957
+  cuts:
+  - speaker: reimu
+    text: 1957年の暮れ。試作車が、できあがります。
+    reading: せんきゅうひゃく ごじゅうななねんの くれ。しさくしゃが できあがります。
+- id: ch5_sanman
+  title: 月に3万台
+  background: sc_mockup
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: designer, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: designer
+    emotion: normal
+    text: 専務、これが試作車です。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……これは、いいのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 前から見ても、横から見ても、エンジンが目立たない。
+  - speaker: zundamon
+    emotion: happy
+    text: これなら、3万台売れるのだ。
+  - speaker: designer
+    emotion: happy
+    text: 3万台！ 年間で、ですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 月間で。
+  - speaker: designer
+    emotion: surprised
+    text: げ、月間！？
+    se: don
+  - speaker: reimu
+    text: 当時、日本の二輪車は、業界全体でも月に約4万2000台でした。
+    reading: とうじ にほんの にりんしゃわ、ぎょうかい ぜんたいでも つきに やく よんまん にせんだいでした。
+  - speaker: designer
+    emotion: surprised
+    text: 業界の全部を合わせた数に、近いじゃないですか。
+  - speaker: zundamon
+    emotion: happy
+    text: バイクに乗らなかった人が、買うのだ。
+  - speaker: designer
+    emotion: thinking
+    text: 自転車の人や、歩いている人が、ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: だから、月に3万台なのだ。
+- id: card1958
+  title: ''
+  background: sc_card_1958
+  cuts:
+  - speaker: reimu
+    text: 1958年8月。スーパーカブが発売されます。値段は5万5000円でした。
+    reading: せんきゅうひゃく ごじゅうはちねん はちがつ。すーぱーかぶが はつばい されます。ねだんわ ごまん ごせんえんでした。
+- id: ch5_zaimoku
+  title: 材木屋への手紙
+  background: sc_zaimoku
+  bgm: honwaka_puppu
+  stage:
+  - {who: zaimoku, x: 0.28, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: おかみさん, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 発売の反響を受けて、藤沢はまた手紙を書きます。
+    reading: はつばいの はんきょうお うけて ふじさわわ また てがみお かきます。
+  - speaker: reimu
+    text: 宛先は、材木屋や乾物屋、しいたけ栽培など、自分で商売をする人たちでした。
+    reading: あてさきわ ざいもくやや かんぶつや、しいたけ さいばいなど じぶんで しょうばいお する ひとたちでした。
+  - speaker: zaimoku
+    emotion: surprised
+    text: おい、ホンダから手紙だ。うちで、バイクを売らないかとさ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 材木屋で、バイクを？
+  - speaker: zaimoku
+    emotion: thinking
+    text: バイクのことなんぞ、なんにも分からんがなあ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 手紙には、[何|なん]て書いてあるの？
+  - speaker: zaimoku
+    emotion: normal
+    text: 誰にでも乗れて、壊れにくい。お客は、町の人たちだとさ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 町の人なら、うちに材木を買いに来る人たちじゃないの。
+  - speaker: zaimoku
+    emotion: happy
+    text: ……なるほど。それなら、わしにも売れるかもしれん。
+  - speaker: reimu
+    text: 応募は約3500通。その中から、約600店が選ばれました。
+    reading: おうぼわ やく さんぜんごひゃくつう。その なかから やく ろっぴゃくてんが えらばれました。
+  - speaker: reimu
+    text: その後も申し込みは相次ぎ、販売店は倍増しました。
+    reading: その ごも もうしこみわ あいつぎ はんばいてんわ ばいぞう しました。
+- id: ch5_okyaku
+  title: スカートのまま
+  background: sc_hanbaiten
+  stage:
+  - {who: zaimoku, x: 0.28, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: お客さん, emotion: normal}
+  cuts:
+  - speaker: zaimoku
+    emotion: happy
+    text: いらっしゃい。これが、ホンダの新しいバイクですよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 主人がバイクを欲しいって言うから、見に来たの。
+  - speaker: zaimoku
+    emotion: normal
+    text: 奥さんも乗れますよ。前が低いから、スカートのままでまたげます。
+  - speaker: tsumugi
+    emotion: surprised
+    text: あら、本当。エンジンも、ほとんど見えないのね。
+  - speaker: zaimoku
+    emotion: normal
+    text: 左手のクラッチも無い。自転車に乗れる人なら、すぐ乗れます。
+  - speaker: tsumugi
+    emotion: happy
+    text: 5万5000円……。わたしも乗れるなら、買っていいわ。
+  - speaker: zaimoku
+    emotion: happy
+    text: 毎度ありがとうございます！
+  - speaker: tsumugi
+    emotion: happy
+    text: 主人には、わたしから言っておくわ。
+  - speaker: reimu
+    text: 奥さんが買っていいと言ってくれるバイク。藤沢は、そんな商品を求めていたといいます。
+    reading: おくさんが かって いいと いって くれる ばいく。ふじさわわ そんな しょうひんお もとめて いたと いいます。
+- id: ch5_hatsubai
+  title: 工場が追いつかない
+  background: sc_honsha
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 専務、5万5000円で、本当に利益が出るんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: たくさん作れば出る。だから、値段は先に決めたのだ。
+  - speaker: reimu
+    text: 生産は、1958年に約2万4000台。翌年には約16万7000台に増えます。
+    reading: せいさんわ せんきゅうひゃく ごじゅうはちねんに やく にまん よんせんだい。よくねんにわ やく じゅうろくまん ななせんだいに ふえます。
+  - speaker: shain
+    emotion: surprised
+    text: 専務、工場が、まったく追いつきません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 月に3万台を作るには、今の工場では足りないのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 新しい工場を建てる。カブを作るための工場を。
+- id: ch5_america
+  title: 一番難しい国へ
+  background: sc_honsha
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 専務、輸出するなら、近いアジアの方が売りやすいのでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 世界の経済の中心は、アメリカなのだ。そこで売れれば、世界で売れる。
+  - speaker: zundamon
+    emotion: normal
+    text: 一番難しいことに、最初に立ち向かう。それがホンダだ。
+  - speaker: reimu
+    text: 藤沢は反対を押し切り、1959年6月、ロサンゼルスに現地の会社を作ります。
+    reading: ふじさわわ はんたいお おしきり、せんきゅうひゃく ごじゅうきゅうねん ろくがつ ろさんぜるすに げんちの かいしゃお つくります。
+- id: ch6_koukoku0
+  title: ソバも元気だ
+  background: sc_koukoku
+  bgm: honwaka_puppu
+  stage:
+  - {who: koukoku, x: 0.28, flip: true, emotion: normal}
+  - {who: honda, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 最初は大きな広告を出しませんでしたが、1960年からは、藤沢の指揮で雑誌の広告を始めます。
+    reading: さいしょわ おおきな こうこくお だしませんでしたが、せんきゅうひゃく ろくじゅうねんからわ ふじさわの しきで ざっしの こうこくお はじめます。
+  - speaker: koukoku
+    emotion: normal
+    text: 社長、週刊誌に載せる、最初の広告です。
+  - speaker: koukoku
+    emotion: happy
+    text: 題は、ソバも元気だ、おっかさん。出前の小僧さんが、カブに乗ってます。
+  - speaker: honda
+    emotion: happy
+    text: いいね！ そば屋の小僧さんが、嬉しそうな顔をしているのがいい。
+  - speaker: koukoku
+    emotion: happy
+    text: 出前迅速、そばはのびない。そんな言葉も添えました。
+- id: ch6_koukoku
+  title: ''
+  background: sc_soba
+  stage:
+  - {who: sobaya, x: 0.28, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: おかみさん, emotion: normal}
+  cuts:
+  - speaker: sobaya
+    emotion: surprised
+    text: ソバも元気だ、おっかさん……？ こりゃ、バイクの広告だな。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そば屋に、バイクの広告？
+  - speaker: sobaya
+    emotion: normal
+    text: 左の手でクラッチを握らなくていいんだとさ。
+  - speaker: tsumugi
+    emotion: happy
+    text: じゃあ、せいろを持ったままでも走れるわね。
+  - speaker: sobaya
+    emotion: thinking
+    text: 自転車の出前だと、坂道でそばが伸びちまうからなあ。
+  - speaker: tsumugi
+    emotion: happy
+    text: あんた、うちも1台、頼んでみようよ。
+  - speaker: sobaya
+    emotion: happy
+    text: よし、注文だ。
+  - speaker: reimu
+    text: この広告のあと、そば屋などから、約4000軒の注文があったとホンダは記しています。
+    reading: この こうこくの あと そばやなどから、やく よんせんけんの ちゅうもんが あったと ほんだわ しるして います。
+- id: card1960
+  title: ''
+  background: sc_card_1960
+  cuts:
+  - speaker: reimu
+    text: 1960年。三重県の鈴鹿に、カブを作るための工場が建てられます。
+    reading: せんきゅうひゃく ろくじゅうねん。みえけんの すずかに かぶお つくる ための こうじょうが たてられます。
+- id: ch6_suzuka
+  title: 資本金の何倍もの工場
+  background: sc_suzuka
+  bgm: beat
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: keiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: keiri
+    emotion: surprised
+    text: 専務、会社の資本金は、14億4000万円ですよ。
+  - speaker: keiri
+    emotion: surprised
+    text: 工場の見積もりは、70億から100億円です！
+  - speaker: zundamon
+    emotion: normal
+    text: 分かってるのだ。
+  - speaker: keiri
+    emotion: sad
+    text: もし売れなかったら、会社がつぶれます。
+  - speaker: zundamon
+    emotion: normal
+    text: 投資の額に、上限は決めない。
+  - speaker: zundamon
+    emotion: happy
+    text: その代わり、2年で回収する。
+  - speaker: keiri
+    emotion: surprised
+    text: 2年で！？
+  - speaker: zundamon
+    emotion: happy
+    text: 月に何万台も売れるバイクなら、できるのだ。
+  - speaker: reimu
+    text: 工場は1960年4月に発足し、その年の11月には、月に6万台を作れる体制になりました。
+    reading: こうじょうわ せんきゅうひゃく ろくじゅうねん しがつに ほっそくし、その としの じゅういちがつにわ つきに ろくまんだいお つくれる たいせいに なりました。
+  - speaker: reimu
+    text: 1960年の生産は約56万4000台。月にならすと、約4万7000台でした。
+    reading: せんきゅうひゃく ろくじゅうねんの せいさんわ やく ごじゅうろくまん よんせんだい。つきに ならすと やく よんまん ななせんだいでした。
+  - speaker: keiri
+    emotion: surprised
+    text: ……月に3万台を、超えてる。
+- id: ch7_america
+  title: アメリカで売れたのは
+  background: sc_la
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初は、アメリカで苦戦したの。
+  - speaker: tsumugi
+    emotion: sad
+    text: 大きなバイクは、広い国で速く走り続けて、故障が続いたのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: いきなり、つまずいたのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 代わりに売れたのが、カブよ。釣りやキャンプ、学生の足として人気が出たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: スポーツ用品店でも、売られるようになったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: バイク屋さんじゃないお店で、売ったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本の自転車屋や材木屋と、少し似てるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: バイク屋にこだわらないのが、日本と似てるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1963年には、ホンダに乗ると、素敵な人に出会える、という広告が始まるの。
+  - speaker: zundamon
+    emotion: happy
+    text: バイクは怖い人の乗り物、という見方を変えたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1964年には、アカデミー賞の中継で、外国の会社として初めてCMを流したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ビーチ・ボーイズも、リトル・ホンダを歌ってるの。
+- id: ch8_suirei
+  title: 社長として残るか
+  background: sc_honsha2
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: thinking}
+  - {who: kenkyuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1969年ごろ。車のエンジンを空気で冷やすか、水で冷やすかで、社内の意見が割れます。
+    reading: せんきゅうひゃく ろくじゅうきゅうねんごろ。くるまの えんじんお くうきで ひやすか みずで ひやすかで、しゃないの いけんが われます。
+  - speaker: kenkyuin
+    emotion: sad
+    text: 副社長、排ガスの規制には、水冷でないと間に合いません。
+  - speaker: kenkyuin
+    emotion: sad
+    text: でも、社長は空冷だと言って聞かないんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……分かった。ぼくが、社長と話す。
+- id: ch8_ronsou1
+  title: ''
+  background: sc_honsha2
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: thinking}
+  - {who: honda, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honda
+    emotion: angry
+    text: 水で冷やしても、その水を空気で冷やすんだ。最初から空冷でいい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 本田さん。社長として残りますか。それとも、技術屋として残りますか。
+  - speaker: honda
+    emotion: surprised
+    text: ……。
+  - speaker: honda
+    emotion: sad
+    text: ……やっぱり、おれは社長として残るよ。
+  - speaker: reimu
+    text: 本田は社長として残る道を選び、水冷の開発を若い技術者に任せました。
+    reading: ほんだわ しゃちょうとして のこる みちお えらび、すいれいの かいはつお わかい ぎじゅつしゃに まかせました。
+- id: card1973
+  title: ''
+  background: sc_card_1973
+  cuts:
+  - speaker: reimu
+    text: 1973年3月。藤沢は、ひとつの決心をします。
+    reading: せんきゅうひゃく ななじゅうさんねん さんがつ。ふじさわわ ひとつの けっしんお します。
+- id: ch8_intai
+  title: 二人の退任
+  background: sc_honsha2
+  bgm: ambient
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: nishida, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 西田くん。ぼくは今季限りで辞めるよ。本田社長に、そう伝えてくれ。
+  - speaker: nishida
+    emotion: surprised
+    text: お辞めになるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: そろそろ、若い人たちに任せる時なのだ。
+  - speaker: nishida
+    emotion: thinking
+    text: 社長が、[何|なん]とおっしゃるか。
+  - speaker: zundamon
+    emotion: normal
+    text: そのまま伝えてくれ。決めるのは、社長だ。
+  - speaker: nishida
+    emotion: sad
+    text: ……分かりました。お伝えします。
+- id: ch8_intai2
+  title: ''
+  background: sc_honsha2
+  stage:
+  - {who: nishida, x: 0.28, flip: true, emotion: normal}
+  - {who: honda, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: nishida
+    emotion: sad
+    text: 社長。藤沢副社長が、今季限りで辞めると。
+  - speaker: honda
+    emotion: thinking
+    text: ……そうか。
+  - speaker: honda
+    emotion: normal
+    text: おれは藤沢武夫あっての社長だ。
+  - speaker: honda
+    emotion: normal
+    text: 副社長が辞めるなら、おれも一緒。辞めるよ。
+  - speaker: reimu
+    text: 1973年10月、66歳の本田と62歳の藤沢は、そろって経営の第一線を退きました。
+    reading: せんきゅうひゃく ななじゅうさんねん じゅうがつ、ろくじゅうろくさいの ほんだと ろくじゅうにさいの ふじさわわ そろって けいえいの だいいっせんお しりぞきました。
+- id: ch8_saigo
+  title: まあまあだな
+  background: sc_kaigou
+  bgm: warm
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: honda, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 退任が決まったあとの、ある集まり。本田は目で合図をして、藤沢と連れ立って席を外しました。
+    reading: たいにんが きまった あとの ある あつまり。ほんだわ めで あいずお して ふじさわと つれだって せきお はずしました。
+  - speaker: honda
+    emotion: normal
+    text: まあまあだな。
+  - speaker: zundamon
+    emotion: normal
+    text: そう、まあまあさ。
+  - speaker: honda
+    emotion: happy
+    text: 幸せだったな。
+  - speaker: zundamon
+    emotion: happy
+    text: 本当に幸せでした。心からお礼を言います。
+  - speaker: honda
+    emotion: happy
+    text: 俺も礼を言うよ。良い人生だったな。
+  - speaker: reimu
+    text: このやりとりは、藤沢自身が書き残したものです。
+    reading: この やりとりわ ふじさわ じしんが かきのこした ものです。
+- id: ch9_bannen
+  title: 和服の骨董屋
+  background: sc_kotto
+  bgm: warm
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 晩年の藤沢は、東京・六本木の自宅で、骨董の店を開きました。
+    reading: ばんねんの ふじさわわ とうきょう ろっぽんぎの じたくで こっとうの みせお ひらきました。
+  - speaker: tsumugi
+    emotion: normal
+    text: いつも和服で、常磐津っていう、三味線で語る芸を習ってたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: バイクの会社の副社長が、和服で三味線なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 歌舞伎やオペラも好きで、車は自分で運転しなかったそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 乗り物の会社なのに、運転しないのだ！？
+  - speaker: tsumugi
+    emotion: happy
+    text: 作る人と、売る人。本田さんとは正反対ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 藤沢さんは、2001年に日本の、2023年にはアメリカの自動車殿堂に入ったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 作った人だけじゃなく、売った人も、ちゃんと残ったのだ。
+- id: card1988
+  title: ''
+  background: sc_card_1988
+  bgm: ambient
+  cuts:
+  - speaker: reimu
+    text: 1988年12月30日。藤沢武夫は、78歳で亡くなりました。
+    reading: せんきゅうひゃく はちじゅうはちねん じゅうにがつ さんじゅうにち。ふじさわ たけおわ ななじゅうはっさいで なくなりました。
+  - speaker: reimu
+    text: 本田宗一郎が亡くなるのは、1991年のことです。
+    reading: ほんだ そういちろうが なくなるのわ せんきゅうひゃく きゅうじゅういちねんの ことです。
+- id: ch10_ronsou
+  title: 誰の言葉か
+  background: sc_ronsou
+  bgm: mystery
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: そば屋の出前持ちが片手で乗れる、って言ったのは、本田さんなのだ？ 藤沢さんなのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 藤沢さんの言葉として書かれることもあるけど、ホンダの資料では、そうされてないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダ自身は、本田宗一郎の言葉として、よく語られる、と書いているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 資料にある藤沢さんの注文は、女の人が乗りたくなるバイクよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 有名な言葉ほど、誰が言ったか、あいまいになるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカで売れた話にも、二つの語り方があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社員がカブで走っていたら、たまたま注目された、という話があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者が、当時の人に聞き取りをして、広まった話よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダ自身は、アメリカには狙って挑んだ、と書いているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 偶然と計画、どっちもあったのかもしれないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、1億台という数には、ウェーブなど、形の近い兄弟車も入ってるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 家族みんなで、1億台なのだ。
+- id: ch10_nenpi
+  title: 1リットルで何キロ
+  background: sc_nenpi
+  bgm: pop
+  motion: none
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: カブって、ガソリンはどれくらいで走るのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初のカブは、1リットルで90キロ走ると言われてたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 東京から、小田原くらいまで行けるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1983年のカブは、決まった速さで走る測り方で、1リットル180キロよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 静岡まで、行けちゃうのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、測り方が今と違うの。今の測り方だと、110のカブは1リットル約68キロね。
+  - speaker: zundamon
+    emotion: happy
+    text: それでも、車よりずっと少ないガソリンで走れるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから、毎日何十キロも走る、郵便や新聞の配達にぴったりなのよ。
+- id: ch11_gendai
+  title: 働くバイクの今
+  background: sc_gendai
+  bgm: you_and_me
+  motion: none
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1971年には、郵便のための赤いカブが登場したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年からは、電動のバイクに替わり始めてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 出前のおそばをつるす台は、東京のそば屋さんが考えたものなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: そば屋さんが、自分で発明したのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 目黒の祐天寺にあった、大朝日というお店のご主人よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ばねで吊るして、揺れても汁がこぼれにくいようにしてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1964年の東京オリンピックでは、その台が聖火の予備のランプを運んだそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: おそばの台が、オリンピックに出たのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: ベトナムでは、どこの会社のバイクでも、ホンダと呼ばれるほど広まったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年には、形そのものが立体商標になったの。二輪車では初めてよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 形を見ただけで、カブだと分かるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2017年10月、世界の累計生産が1億台を超えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのころは15の国で作られて、160以上の国で売られてたの。
+  - speaker: tsumugi
+    emotion: sad
+    text: ただ、50ccのカブは、2025年に生産を終えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい排ガスの決まりに、50ccで合わせるのが難しかったの。
+  - speaker: zundamon
+    emotion: sad
+    text: えっ。ぼくの原付の免許で乗れるカブは、もう無いのだ？
+  - speaker: tsumugi
+    emotion: happy
+    text: 大丈夫。2025年からは、決まりが変わったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 125cc以下でも、力を抑えたバイクなら、原付の免許で乗れるのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダは、スーパーカブ110ライトを出してるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: よかった！ 出前のアルバイト、続けられるのだ！
+- id: shime
+  title: ''
+  background: sc_machi2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、お店のカブに、出前の台を付けてもらったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: これで、両手でハンドルを握れるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: クラッチのレバーも無いから、運転も楽なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 60年以上前に、それを売れると見抜いた人がいたのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 月に3万杯、おそばを届ける！
+  - speaker: tsumugi
+    emotion: thinking
+    text: まずは、1杯目をこぼさずにね。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴ありがとうございました！
+    duet_with: tsumugi

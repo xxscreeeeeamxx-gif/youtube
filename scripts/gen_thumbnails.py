@@ -2996,6 +2996,44 @@ def _yagi(d, x0, x1, y, h, col, w):
         d.line([(x, y - hh / 2), (x, y + hh / 2)], fill=col, width=w)
 
 
+def _tcub(d, s, body, shield, seat, demae=False):
+    """サムネ用の横向きカブ（prop の座標系 0〜1）。"""
+    k = s / 440
+    x0, yg = 40 * k, 360 * k
+    r = 62 * k
+    rx, fx = x0 + 70 * k, x0 + 330 * k
+    cy = yg - r
+    P = lambda pts: [(x0 + a * k, cy + b * k) for a, b in pts]  # noqa: E731
+    for cx in (rx, fx):
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(40, 40, 44))
+        d.ellipse([cx - r * 0.72, cy - r * 0.72, cx + r * 0.72, cy + r * 0.72], outline=(170, 170, 176), width=3)
+    d.polygon(P([(10, -40), (60, -112), (205, -118), (222, -48), (150, -18)]), fill=body)
+    d.rounded_rectangle([x0 + 70 * k, cy - 138 * k, x0 + 205 * k, cy - 110 * k], radius=int(10 * k), fill=seat)
+    d.ellipse([x0 + 165 * k, cy - 40 * k, x0 + 255 * k, cy + 8 * k], fill=(150, 150, 156))
+    d.polygon(P([(205, -62), (262, -42), (302, -165), (286, -175)]), fill=body)
+    d.polygon(P([(248, -14), (266, -150), (298, -182), (322, -150), (304, -18)]), fill=shield)
+    d.line([(x0 + 306 * k, cy - 175 * k), (fx, cy)], fill=(90, 90, 96), width=int(8 * k) + 1)
+    d.chord([fx - r * 1.08, cy - r * 1.08, fx + r * 1.08, cy + r * 1.08], 205, 335, fill=shield)
+    d.polygon(P([(282, -205), (336, -210), (342, -186), (288, -182)]), fill=body)
+    d.ellipse([x0 + 328 * k, cy - 210 * k, x0 + 354 * k, cy - 184 * k], fill=(250, 240, 180))
+    if demae:
+        d.rectangle([x0 + 30 * k, cy - 250 * k, x0 + 38 * k, cy - 120 * k], fill=(70, 70, 76))
+        d.rounded_rectangle([x0 - 20 * k, cy - 320 * k, x0 + 90 * k, cy - 252 * k], radius=6, fill=(150, 90, 50),
+                            outline=(100, 60, 30), width=3)
+
+
+def p_scclay(d, s):
+    """粘土の実物大模型（土色のカブ）。"""
+    clay = (176, 146, 112)
+    _tcub(d, s, clay, clay, (146, 116, 88))
+    d.rectangle([s * 0.04, s * 0.84, s * 0.96, s * 0.90], fill=(110, 90, 70))
+
+
+def p_sccub(d, s):
+    """青いカブ。"""
+    _tcub(d, s, (96, 150, 200), (238, 238, 230), (130, 40, 60))
+
+
 def p_kbcar(d, s):
     """横から見た車と、車内の袋（運転席の前・天井・後ろ）。"""
     body = [(0.06, 0.74), (0.10, 0.60), (0.30, 0.57), (0.40, 0.38), (0.70, 0.38), (0.82, 0.57),
@@ -3375,6 +3413,11 @@ SPECS = {
         head_hi="妻のオムレツ", panels=[
         _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
         _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
+    ]),
+    "fujisawa-supercub": dict(layout="panels", headline="「月に3万台売れる」と言った男",
+        head_hi="月に3万台", panels=[
+        _p("p_scclay", "1957年 粘土の模型", SLATE, "happy", "月間で、なのだ", "業界全体で月4万台の時代"),
+        _p("p_sccub", "2017年", RED, "surprised", "1億台なのだ！", "世界の働くバイクに"),
     ]),
     "kobori-airbag": dict(layout="panels", headline="エアバッグを考えた日本人がいた",
         head_hi="日本人", panels=[
