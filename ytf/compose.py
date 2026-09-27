@@ -606,11 +606,36 @@ def _nobreak_positions(text: str) -> set[int]:
     return bad
 
 
+_TOKENIZER = None
+
+
+def _token_inner_positions(text: str) -> set[int]:
+    """形態素（janome）の内側の位置。送り仮名（生｜まれます）や、ひらがなの語（お｜いしそう）を
+    割らないために使う。janome が無い環境では空（字種だけで判定する）。2026-09-27 食品サンプル回"""
+    global _TOKENIZER
+    try:
+        if _TOKENIZER is None:
+            from janome.tokenizer import Tokenizer
+            _TOKENIZER = Tokenizer()
+        tokens = [t.surface for t in _TOKENIZER.tokenize(text)]
+    except Exception:
+        return set()
+    bad: set[int] = set()
+    pos = 0
+    for tok in tokens:
+        start = text.find(tok, pos)
+        if start < 0:
+            continue
+        bad.update(range(start + 1, start + len(tok)))
+        pos = start + len(tok)
+    return bad
+
+
 def _split_words(text: str, limit: int) -> list[str]:
     """_split_plain と同じだが、数字や「3号」「1セント」、カタカナ語、登録語の途中では割らない
     （最大 _BACKOFF 文字まで手前に戻して、切れ目のよい所で改行する）。
     4文字では「ボールチェー｜ン」「デジタルモ｜ンスター」が戻りきれなかった（2026-09-27 たまごっち回）。"""
-    guard = _nobreak_positions(text)
+    guard = _nobreak_positions(text) | _token_inner_positions(text)
 
     def bad(k: int) -> bool:
         return k in guard or _bad_break(text[k - 1], text[k])
@@ -644,6 +669,11 @@ def _split_bubble_lines(text: str, limit: int, max_lines: int | None = None) -> 
 
     if orphan(words) and not orphan(plain):
         return plain
+    if limit >= 20 and len(words) == 2 and len(words[1].rstrip("、。！？…")) <= 6:
+        # ナレ帯の2行目が数文字だけになるときは、1行目の後ろの方の読点で割る
+        k = words[0].rfind("、")
+        if k >= len(words[0]) - 14 and k + 1 < len(words[0]) and len(text) - (k + 1) <= limit + 2:
+            words = [text[:k + 1], text[k + 1:]]
     if len(words) <= len(plain) or (max_lines is not None and len(words) <= max_lines):
         return words
     return plain
@@ -973,7 +1003,7 @@ def render_frames(
                       if enter_set else stage_list)
         cap_png = None
         if enters and caption:
-            ckey = hashlib.sha1(json.dumps(["cap4", caption, sub],
+            ckey = hashlib.sha1(json.dumps(["cap5", caption, sub],
                                 ensure_ascii=False).encode()).hexdigest()[:16]
             cap_png = f"frames/cap_{ckey}.png"
             cp = proj.root / cap_png
@@ -990,7 +1020,7 @@ def render_frames(
         key_list = [bg_name, header, chars,
                     cut.slide.model_dump() if cut.slide else None, cut.image,
                     bool(sp), card, full, fg_only, sub, sprite_sig,
-                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap4",
+                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap5",
                     sorted(enter_set)]
         if ent_tag_whos:
             key_list.append(["enttag1", sorted(ent_tag_whos)])
@@ -1048,7 +1078,7 @@ def render_frames(
                     mark_y = max(10, actor_y + 26)
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
-                    [bubble, stage_list, sprite_sig, "bub5"],
+                    [bubble, stage_list, sprite_sig, "bub6"],
                     ensure_ascii=False, sort_keys=True,
                     default=str).encode()).hexdigest()[:16]
                 bubble_png = f"frames/bub_{bkey}.png"
