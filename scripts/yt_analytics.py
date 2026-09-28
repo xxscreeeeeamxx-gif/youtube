@@ -73,8 +73,13 @@ def all_videos(yt):
         tok = r.get("nextPageToken")
         if not tok:
             break
-    vs = yt.videos().list(part="snippet,statistics,status,contentDetails",
-                          id=",".join(ids)).execute()["items"]
+    # videos.list は1回50件まで（50本を超えて 400 invalidFilters になった。2026-09-28）。
+    # アップロード一覧に同じIDが重複して入ることもあるので、先に重複を落とす
+    ids = list(dict.fromkeys(ids))
+    vs = []
+    for k in range(0, len(ids), 50):
+        vs += yt.videos().list(part="snippet,statistics,status,contentDetails",
+                               id=",".join(ids[k:k + 50])).execute()["items"]
     vs.sort(key=lambda v: v["snippet"]["publishedAt"])
     return vs
 
