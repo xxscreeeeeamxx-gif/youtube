@@ -404,7 +404,7 @@ PLAYLISTS = {
                "othello-hasegawa", "sony-walkman", "masaki-pencil",
                "tamagotchi-yokoi", "ohira-megastar", "iwasaki-sample",
                "yagi-uda-antenna", "kobori-airbag", "fujisawa-supercub",
-               "frixion-metamo"]),
+               "frixion-metamo", "famicom-uemura"]),
     # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
     # こちらはチャンネルページと検索結果に並ぶ入口。関連動画の隣人が
     # 「会社の興亡」「ゲーム」「クルマ」のように題材ごとに固まっているので、
@@ -428,7 +428,7 @@ PLAYLISTS = {
              "試作から世界に広がるまでを、ずんだもんが当人を演じる再現ドラマでたどります。",
         follow_main=True,
         slugs=["yokoi-gunpei", "yamauchi-nintendo", "purikura-meme", "karaoke",
-               "othello-hasegawa", "tamagotchi-yokoi"]),
+               "othello-hasegawa", "tamagotchi-yokoi", "famicom-uemura"]),
     "food": dict(
         title="食べ物と飲み物の誕生｜ずんだもん再現ドラマ",
         desc="カップ麺、味の素、カルピス。毎日口にしているものにも、最初に作った人がいます。"

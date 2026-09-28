@@ -3024,6 +3024,29 @@ def p_fxpen(d, s):
     d.rounded_rectangle([s * 0.04, s * 0.57, s * 0.16, s * 0.67], radius=int(s * 0.03), fill=(236, 236, 230))
 
 
+def p_fcphone(d, s):
+    """夜の窓と月、机の上の黒電話。"""
+    d.rectangle([s * 0.08, s * 0.08, s * 0.52, s * 0.46], fill=(20, 24, 54), outline=(90, 76, 60), width=int(s * 0.02))
+    d.ellipse([s * 0.34, s * 0.14, s * 0.46, s * 0.26], fill=(242, 236, 200))
+    d.rectangle([s * 0.10, s * 0.80, s * 0.90, s * 0.86], fill=(110, 80, 56))
+    d.rounded_rectangle([s * 0.36, s * 0.60, s * 0.84, s * 0.80], radius=int(s * 0.05), fill=(30, 30, 34))
+    d.ellipse([s * 0.50, s * 0.62, s * 0.70, s * 0.79], fill=(200, 200, 200))
+    d.ellipse([s * 0.57, s * 0.68, s * 0.63, s * 0.74], fill=(30, 30, 34))
+    d.rounded_rectangle([s * 0.32, s * 0.50, s * 0.88, s * 0.59], radius=int(s * 0.04), fill=(30, 30, 34))
+
+
+def p_fcbox(d, s):
+    """回収された段ボールの山と、えんじと白のゲーム機。"""
+    for r in range(3):
+        for k in range(3 - r):
+            x, y = s * (0.06 + k * 0.2 + r * 0.1), s * (0.62 - r * 0.17)
+            d.rectangle([x, y, x + s * 0.19, y + s * 0.16], fill=(186, 150, 104), outline=(120, 90, 60), width=int(s * 0.008) + 1)
+    x, y, w, h = s * 0.56, s * 0.52, s * 0.40, s * 0.16
+    d.rounded_rectangle([x, y, x + w, y + h], radius=int(s * 0.02), fill=(236, 228, 208))
+    d.rectangle([x, y + h * 0.62, x + w, y + h], fill=(128, 30, 42))
+    d.rectangle([x + w * 0.33, y - s * 0.08, x + w * 0.67, y + s * 0.01], fill=(210, 190, 60))
+
+
 def _tcub(d, s, body, shield, seat, demae=False):
     """サムネ用の横向きカブ（prop の座標系 0〜1）。"""
     k = s / 440
@@ -3441,6 +3464,11 @@ SPECS = {
         head_hi="妻のオムレツ", panels=[
         _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
         _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
+    ]),
+    "famicom-uemura": dict(layout="panels", headline="発売の年末、ファミコン全品回収",
+        head_hi="全品回収", panels=[
+        _p("p_fcphone", "1981年 夜の電話", SLATE, "thinking", "3年なんて無理なのだ", "社長から家に電話"),
+        _p("p_fcbox", "1983年 年末", RED, "surprised", "全部引き取るのだ！？", "クリスマス直前に回収"),
     ]),
     "frixion-metamo": dict(layout="panels", headline="紅葉から生まれた消えるペン",
         head_hi="紅葉", panels=[
