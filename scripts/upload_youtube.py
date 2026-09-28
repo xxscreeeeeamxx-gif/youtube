@@ -156,6 +156,24 @@ def _slug_of(proj: Path) -> str:
     return yaml.safe_load((proj / "script.yaml").read_text(encoding="utf-8"))["meta"]["slug"]
 
 
+# 動画IDの控えはプロジェクト直下（git 管理）に置く。out/ は容量のために掃除するので、
+# そこにしか無いと古い回のIDが消える。2026-09-28 に 01〜39 回の控えが全部消えていて、
+# playlist-sync を流すと「定義に無い」扱いで再生リストから31本外すところだった
+def read_video_id(proj: Path | None) -> str | None:
+    if proj is None:
+        return None
+    for f in (proj / "youtube_video_id.txt", proj / "out" / "youtube_video_id.txt"):
+        if f.exists() and f.read_text(encoding="utf-8").strip():
+            return f.read_text(encoding="utf-8").strip()
+    return None
+
+
+def write_video_id(proj: Path, vid: str) -> None:
+    (proj / "youtube_video_id.txt").write_text(vid + "\n", encoding="utf-8")
+    if (proj / "out").is_dir():
+        (proj / "out" / "youtube_video_id.txt").write_text(vid + "\n", encoding="utf-8")
+
+
 # ---------------------------------------------------------------- 投稿
 def upload(args) -> int:
     from googleapiclient.errors import HttpError
@@ -235,8 +253,8 @@ def upload(args) -> int:
     # **動画IDは何よりも先に控える**。これより後の処理（サムネ・再生リスト）で
     # 落ちると、上がった動画を追えなくなる。2026-09-05 に実際に踏んだ:
     # サムネがレート制限(429)で例外を投げ、IDが記録されないまま終了した
-    (proj / "out" / "youtube_video_id.txt").write_text(vid + "\n", encoding="utf-8")
-    print("動画ID を out/youtube_video_id.txt に控えました。")
+    write_video_id(proj, vid)
+    print("動画ID を youtube_video_id.txt に控えました。")
 
     if thumb.exists() and not args.no_thumbnail:
         # サムネの上限は2MB。越えても動画自体は上がっているので、ここでは落とさない
@@ -280,11 +298,9 @@ def cmd_schedule(args) -> int:
     vid = args.video
     if len(vid) != 11:
         from ytf.config import Config, find_project_dir
-        proj = find_project_dir(Config.load().root, vid)
-        f = proj / "out" / "youtube_video_id.txt" if proj else None
-        if not (f and f.exists()):
+        vid = read_video_id(find_project_dir(Config.load().root, vid))
+        if not vid:
             _fail(f"動画IDが分かりません: {args.video}")
-        vid = f.read_text(encoding="utf-8").strip()
     items = yt.videos().list(part="snippet,status", id=vid).execute().get("items")
     if not items:
         _fail(f"動画が見つかりません: {vid}")
@@ -327,10 +343,9 @@ def cmd_thumbnail(args) -> int:
     proj = find_project_dir(Config.load().root, args.video)
     if proj is None:
         _fail(f"プロジェクトが見つかりません: {args.video}")
-    vid_file = proj / "out" / "youtube_video_id.txt"
-    if not vid_file.exists():
-        _fail(f"動画IDの控えがありません: {vid_file}")
-    vid = vid_file.read_text(encoding="utf-8").strip()
+    vid = read_video_id(proj)
+    if not vid:
+        _fail(f"動画IDの控えがありません: {proj}")
     thumb = Path(args.file) if args.file else (proj / "out" / "thumbnail.png")
     if not thumb.exists():
         _fail(f"サムネがありません: {thumb}")
@@ -366,23 +381,70 @@ PLAYLISTS = {
         # Studio 側で「YouTube 内で手動で並べ替え」にしていないと position が効かない。
         # 数字は動くので、たまに yt_analytics で取り直してこの順を更新すること。
         # 末尾は公開直後でデータが無いもの（順位が決まり次第くり上げる）
-        slugs=["exit-sign", "quartz-astron", "yai-denchi", "kaisatsu-drama",
-               "yokoi-gunpei", "gastro-meme", "nakauchi-daiei", "washlet",
-               "ajinomoto", "sharp-pencil", "masuoka-flash", "purikura-meme",
-               "qr-meme", "nishizawa-fiber", "okano-needle", "tenji-block-meme",
-               "shinkansen-bird", "ogura-takkyubin", "rice-cooker-meme",
-               "kaiten-meme", "yamauchi-nintendo", "cutter-knife", "karaoke",
-               "momofuku-meme", "yamaichi-nozawa", "momose-subaru360",
-               "yamamoto-rotary", "takahashi-urayasu", "honda-soichiro",
-               "ibuka-sony", "onitsuka-asics"]),
+        # 2026-09-28 更新: **200再生以上の回だけで維持率順**に並べ、その後ろに
+        # 200未満を維持率順で置く。前回は98再生の非常口（45.5%）が先頭だったが、
+        # 母数が小さい維持率は当てにならない
+        slugs=[# 200再生以上・維持率順（2026-09-28 実測）
+               "quartz-astron", "nishizawa-fiber", "momose-subaru360",
+               "yai-denchi", "nakauchi-daiei", "yokoi-gunpei", "toyoda-kiichiro",
+               "kaisatsu-drama", "purikura-meme", "tateishi-omron", "ibuka-sony",
+               "yamamoto-rotary", "okano-needle", "yamaichi-nozawa", "qr-meme",
+               "onitsuka-asics", "ogura-takkyubin", "sharp-pencil",
+               "ishibashi-bridgestone", "ajinomoto", "tenji-block-meme",
+               "shinkansen-bird", "rice-cooker-meme", "yamauchi-nintendo",
+               "takahashi-urayasu", "cutter-knife", "momofuku-meme",
+               # 200再生未満・維持率順
+               "exit-sign", "torii-whisky", "ykk", "honda-soichiro",
+               "gastro-meme", "masuoka-flash", "washlet", "kaiten-meme",
+               "calpis", "karaoke",
+               # 未実測・公開順（予約分は公開されるまで同期で自動的に見送られる）
+               "naito-tower", "yoshinoya-abe", "honda-seiroku", "mosquito-coil",
+               "yakult-shirota", "glico-ezaki", "mikimoto-pearl", "casio-kashio",
+               "furuno-fishfinder", "kimuraya-anpan", "sugiyo-kanikama",
+               "othello-hasegawa", "sony-walkman", "masaki-pencil",
+               "tamagotchi-yokoi", "ohira-megastar", "iwasaki-sample",
+               "yagi-uda-antenna", "kobori-airbag", "fujisawa-supercub",
+               "frixion-metamo"]),
+    # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
+    # こちらはチャンネルページと検索結果に並ぶ入口。関連動画の隣人が
+    # 「会社の興亡」「ゲーム」「クルマ」のように題材ごとに固まっているので、
+    # 同じ題材を続けて見る人に次の1本を出す。並びは main の順に従う（follow_main）
     "company": dict(
         title="企業の栄枯盛衰｜ずんだもん再現ドラマ",
         desc="日本一になった会社が、なぜ創業者ごと消えたのか。"
              "花札屋が、どうやって世界を取ったのか。会社の一代記を、"
              "ずんだもんが当人を演じる再現ドラマでたどります。",
-        slugs=["nakauchi-daiei", "sharp-pencil", "yamauchi-nintendo",
-               "yamaichi-nozawa", "honda-soichiro", "ibuka-sony",
-               "onitsuka-asics", "takahashi-urayasu"]),
+        follow_main=True,
+        slugs=["nakauchi-daiei", "yamaichi-nozawa", "yamauchi-nintendo",
+               "yoshinoya-abe", "ogura-takkyubin", "sharp-pencil", "ibuka-sony",
+               "honda-soichiro", "toyoda-kiichiro", "ishibashi-bridgestone",
+               "tateishi-omron", "onitsuka-asics", "torii-whisky",
+               "takahashi-urayasu", "calpis", "ykk", "yakult-shirota",
+               "glico-ezaki", "mikimoto-pearl", "casio-kashio",
+               "fujisawa-supercub"]),
+    "play": dict(
+        title="ゲームと遊びの誕生｜ずんだもん再現ドラマ",
+        desc="ゲームボーイ、プリクラ、カラオケ。遊びの道具にも、最初に作った人がいます。"
+             "試作から世界に広がるまでを、ずんだもんが当人を演じる再現ドラマでたどります。",
+        follow_main=True,
+        slugs=["yokoi-gunpei", "yamauchi-nintendo", "purikura-meme", "karaoke",
+               "othello-hasegawa", "tamagotchi-yokoi"]),
+    "food": dict(
+        title="食べ物と飲み物の誕生｜ずんだもん再現ドラマ",
+        desc="カップ麺、味の素、カルピス。毎日口にしているものにも、最初に作った人がいます。"
+             "作った人の一代記を、ずんだもんが当人を演じる再現ドラマでたどります。",
+        follow_main=True,
+        slugs=["momofuku-meme", "kaiten-meme", "ajinomoto", "torii-whisky",
+               "calpis", "yoshinoya-abe", "yakult-shirota", "glico-ezaki",
+               "kimuraya-anpan", "sugiyo-kanikama", "iwasaki-sample"]),
+    "vehicle": dict(
+        title="クルマと乗り物の誕生｜ずんだもん再現ドラマ",
+        desc="スバル360、ロータリーエンジン、新幹線。戦後の日本で乗り物を作った"
+             "技術者と経営者を、ずんだもんが当人を演じる再現ドラマでたどります。",
+        follow_main=True,
+        slugs=["momose-subaru360", "yamamoto-rotary", "honda-soichiro",
+               "toyoda-kiichiro", "ishibashi-bridgestone", "shinkansen-bird",
+               "kobori-airbag", "fujisawa-supercub"]),
 }
 
 
@@ -399,23 +461,31 @@ def cmd_playlist_sync(args) -> int:
     yt = service()
     check_channel(yt, args.channel)
 
-    mine = {p["snippet"]["title"]: p["id"] for p in
-            yt.playlists().list(part="snippet", mine=True,
-                                maxResults=50).execute()["items"]}
+    lists = yt.playlists().list(part="snippet", mine=True,
+                                maxResults=50).execute()["items"]
+    mine = {p["snippet"]["title"]: p["id"] for p in lists}
+    desc_now = {p["id"]: p["snippet"].get("description", "") for p in lists}
     # 旧名を引き継ぐ（付け替えると再生リストのURLが変わって既存の導線が切れる）
     if args.inherit and args.inherit in mine and PLAYLISTS["main"]["title"] not in mine:
         mine[PLAYLISTS["main"]["title"]] = mine.pop(args.inherit)
 
+    main_rank = {s: n for n, s in enumerate(PLAYLISTS["main"]["slugs"])}
     for key, cfg in PLAYLISTS.items():
-        want = []
-        for slug in cfg["slugs"]:
-            proj = find_project_dir(root, slug)
-            idf = proj / "out" / "youtube_video_id.txt" if proj else None
-            if idf and idf.exists():
-                want.append((slug, idf.read_text(encoding="utf-8").strip()))
-        pub = {v["id"] for v in yt.videos().list(
-            part="status", id=",".join(v for _, v in want)).execute()["items"]
-            if v["status"]["privacyStatus"] == "public"}
+        slugs = cfg["slugs"]
+        if cfg.get("follow_main"):
+            slugs = sorted(slugs, key=lambda s: main_rank.get(s, len(main_rank)))
+        want, missing_id = [], []
+        for slug in slugs:
+            vid = read_video_id(find_project_dir(root, slug))
+            if vid:
+                want.append((slug, vid))
+            else:
+                missing_id.append(slug)
+        pub = set()
+        for k in range(0, len(want), 50):          # videos.list は1回50件まで
+            pub |= {v["id"] for v in yt.videos().list(
+                part="status", id=",".join(v for _, v in want[k:k + 50])).execute()["items"]
+                if v["status"]["privacyStatus"] == "public"}
         skipped = [s for s, v in want if v not in pub]
         want = [(s, v) for s, v in want if v in pub]
 
@@ -436,7 +506,7 @@ def cmd_playlist_sync(args) -> int:
                     break
                 except Exception:
                     continue
-        else:
+        elif desc_now.get(pid) != cfg["desc"]:     # 変わっていなければ送らない（枠の節約）
             yt.playlists().update(part="snippet", body={
                 "id": pid, "snippet": {"title": cfg["title"],
                                        "description": cfg["desc"],
@@ -452,8 +522,13 @@ def cmd_playlist_sync(args) -> int:
             if not tok:
                 break
         keep = {v for _, v in want}
+        if missing_id:
+            # IDの分からない回がある間は外す処理をしない（控えが消えただけで
+            # 本当は定義に入っている回を、リストから落としてしまうため）
+            print(f"  ⚠ 動画IDの控えが無い {len(missing_id)}本: {', '.join(missing_id)}"
+                  "（外す処理は見送り）")
         for iid, vid in have:                      # 定義に無いものは外す
-            if vid not in keep:
+            if vid not in keep and not missing_id:
                 yt.playlistItems().delete(id=iid).execute()
                 print(f"  − 外した: {vid}")
         pos = {vid: iid for iid, vid in have if vid in keep}
@@ -468,7 +543,12 @@ def cmd_playlist_sync(args) -> int:
         # （manualSortRequired）。並び順は Data API では変更できず Studio 側の設定なので、
         # 失敗したら追加だけ済ませて先に進む（順番のためにリストを作り直さない）
         sortable = True
-        for n, (slug, vid) in enumerate(want):
+        # 並べ替えは1本ごとに50単位かかる。いまの並び（既存＋末尾に足した分）が
+        # すでに定義どおりなら送らない。新作は末尾に足すだけなので大半はここで済む
+        had = {v for _, v in have}
+        now = [v for _, v in have if v in keep] + [v for _, v in want if v not in had]
+        todo = [] if now == [v for _, v in want] else list(enumerate(want))
+        for n, (slug, vid) in todo:
             try:
                 yt.playlistItems().update(part="snippet", body={
                     "id": pos[vid], "snippet": {
@@ -510,12 +590,10 @@ def cmd_title(args) -> int:
         if not want:
             print(f"  ✗ {slug:<18}TITLES に登録がありません")
             continue
-        proj = find_project_dir(root, slug)
-        idf = proj / "out" / "youtube_video_id.txt" if proj else None
-        if not (idf and idf.exists()):
+        vid = read_video_id(find_project_dir(root, slug))
+        if not vid:
             print(f"  ✗ {slug:<18}動画IDの控えがありません")
             continue
-        vid = idf.read_text(encoding="utf-8").strip()
         sn = yt.videos().list(part="snippet", id=vid).execute()["items"][0]["snippet"]
         if sn["title"] == want:
             print(f"  = {slug:<18}変更なし")
@@ -579,12 +657,11 @@ def cmd_thumbnail_all(args) -> int:
         import re
         m = re.search(r'^\s*slug:\s*"?([\w-]+)"?', sy.read_text(encoding="utf-8"), re.M)
         slug = m.group(1) if m else proj.name
-        idf = proj / "out" / "youtube_video_id.txt"
-        vid = idf.read_text(encoding="utf-8").strip() if idf.exists() else None
+        vid = read_video_id(proj)
         if not vid:
             vid = by_title.get(TITLES.get(slug, ""))
             if vid:
-                idf.write_text(vid, encoding="utf-8")   # 次回から突き合わせ不要
+                write_video_id(proj, vid)               # 次回から突き合わせ不要
         if vid and vid in live:
             jobs.append((slug, vid, thumb, live[vid]))
         else:

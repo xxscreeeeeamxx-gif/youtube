@@ -54,6 +54,10 @@ cd /c/yt && PYTHONPATH=. PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m yt
    API で既存の予約を確認し、最終日の翌日 10:00 に入れる:
    `python scripts/upload_youtube.py upload <slug> --publish-at <YYYY-MM-DD>T10:00:00+09:00`。
    投稿後に API で予約を確かめ、`projects/アップロード済み/` へ移し、PUBLISH.md の予約表を更新してコミット。
+   **再生リスト**: 新作の slug を `scripts/upload_youtube.py` の PLAYLISTS に足す（main の「未実測・公開順」の
+   末尾と、合う題材別の棚）。投稿のたびに `python scripts/upload_youtube.py playlist-sync` を流す
+   （予約分は非公開のあいだ見送られ、公開済みになった回がここで入る）。
+   動画IDの控えはプロジェクト直下の `youtube_video_id.txt`（git 管理）。out/ は掃除で消えるので頼らない
    チャンネル違い・認証切れなどの異常時だけ止めて知らせる（OAuth の承認はユーザーの代わりに押さない）
 
 ## 動画の型（確立済みフォーマット）

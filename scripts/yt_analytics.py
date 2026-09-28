@@ -94,10 +94,10 @@ def resolve_video(yt, key: str) -> tuple:
     try:
         from ytf.config import Config, find_project_dir
         proj = find_project_dir(Config.load().root, key)
-        if proj is not None:
-            f = proj / "out" / "youtube_video_id.txt"
-            if f.exists():
-                return resolve_video(yt, f.read_text(encoding="utf-8").strip())
+        from upload_youtube import read_video_id
+        vid = read_video_id(proj)
+        if vid:
+            return resolve_video(yt, vid)
     except Exception:
         pass
     for v in all_videos(yt):
