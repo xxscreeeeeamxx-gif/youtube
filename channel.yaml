@@ -84,21 +84,23 @@ voicevox:
   # ↑の2値は drama_gaps が無いときの旧方式。2026-09-29 から再現ドラマは drama_gaps で
   # 文脈ごとに間を決める（ユーザー聞き比べで決定: 「ずっと同じ間」を解消し、
   # 普段は詰めて、答え・ツッコミ・余韻・場面の変わり目でだけ一拍置く）。
-  # 判定は ytf/voice.py の drama_gap。台本の pause_after が最優先
+  # 判定は ytf/voice.py の drama_gap。台本の pause_after が最優先。
+  # 2026-09-29 夜: 聞き比べEの値で1本通したら「少しテンポ速すぎ」→ 行間・読点の間・前後余白を
+  # すべて E の 1.2 倍に（話す速さ 1.2 はそのまま。ユーザー指定）
   drama_gaps:
-    same: 0.06        # 同じ人が続けて話す
-    switch: 0.12      # 話者が替わる
-    reaction: 0.08    # 次が短い反応（8字以下）: 間髪入れずに返す
-    answer: 0.20      # 問いかけ（？で終わる）への答え
-    oti: 0.45         # 次がオチ・ツッコミ（se: oti）や宣告（se: don）
-    ellipsis: 0.50    # 「……」で終わる / 「……」で始まる
-    narration: 0.25   # セリフとナレーションの切り替わり
-    scene: 0.60       # 見出しの無い場面転換
+    same: 0.072       # 同じ人が続けて話す
+    switch: 0.144     # 話者が替わる
+    reaction: 0.096   # 次が短い反応（8字以下）: 間髪入れずに返す
+    answer: 0.24      # 問いかけ（？で終わる）への答え
+    oti: 0.54         # 次がオチ・ツッコミ（se: oti）や宣告（se: don）
+    ellipsis: 0.60    # 「……」で終わる / 「……」で始まる
+    narration: 0.30   # セリフとナレーションの切り替わり
+    scene: 0.72       # 見出しの無い場面転換
   # 声そのものの間（VOICEVOX の audio_query を上書き）。既定は前後 0.1 秒ずつの余白が
-  # 付き、行間に毎回足されて単調になっていた。読点の間も 0.6 倍に詰める
-  pause_length_scale: 0.6
-  pre_phoneme_length: 0.03
-  post_phoneme_length: 0.03
+  # 付き、行間に毎回足されて単調になっていた。読点の間は 0.6 倍に詰めた後、1.2 倍に戻して 0.72
+  pause_length_scale: 0.72
+  pre_phoneme_length: 0.036
+  post_phoneme_length: 0.036
   # 抑揚（キャラに intonation_scale が無ければこれ。モブもこれに乗る）
   intonation_scale: 1.15
   # 読み間違い対策のユーザー辞書（起動時に自動登録）

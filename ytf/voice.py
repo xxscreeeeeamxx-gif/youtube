@@ -315,16 +315,17 @@ def voice_shape(cfg: Config) -> dict:
 # 再現ドラマの行間（秒）の既定値。channel.yaml の voicevox.drama_gaps で上書きできる。
 # 伸びている局（カカチャンネル・ゲーム大好きずんだもん・ずんだもん末路ストーリー）は
 # 話す速さ自体は日常研究所と同じ（約6字/秒）で、違いは間の緩急だった（2026-09-29 実測）。
-# 普段は詰め、答え・ツッコミ・余韻・場面の変わり目でだけ一拍置く
+# 普段は詰め、答え・ツッコミ・余韻・場面の変わり目でだけ一拍置く。
+# 値は聞き比べEの1.2倍（Eで1本通したら「少しテンポ速すぎ」とユーザー指摘、2026-09-29）
 DRAMA_GAPS = {
-    "same": 0.06,       # 同じ人が続けて話す
-    "switch": 0.12,     # 話者が替わる
-    "reaction": 0.08,   # 次が短い反応（8字以下）: 間髪入れずに返す
-    "answer": 0.20,     # 問いかけ（？で終わる）への答え
-    "oti": 0.45,        # 次がオチ・ツッコミ（se: oti）や宣告（se: don）
-    "ellipsis": 0.50,   # 「……」で終わる / 「……」で始まる（余韻・ためらい）
-    "narration": 0.25,  # セリフとナレーションの切り替わり
-    "scene": 0.60,      # 次のカットが別のシーン（章の見出しが無い場面転換）
+    "same": 0.072,      # 同じ人が続けて話す
+    "switch": 0.144,    # 話者が替わる
+    "reaction": 0.096,  # 次が短い反応（8字以下）: 間髪入れずに返す
+    "answer": 0.24,     # 問いかけ（？で終わる）への答え
+    "oti": 0.54,        # 次がオチ・ツッコミ（se: oti）や宣告（se: don）
+    "ellipsis": 0.60,   # 「……」で終わる / 「……」で始まる（余韻・ためらい）
+    "narration": 0.30,  # セリフとナレーションの切り替わり
+    "scene": 0.72,      # 次のカットが別のシーン（章の見出しが無い場面転換）
 }
 
 
@@ -418,14 +419,20 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
         else:
             print(f"注意: OPが未生成のためスキップ（ytf op で生成）: {op_file}")
 
+    # OPは導入（先出し＋茶番）の直後。先出し（コールドオープン）を別シーンにするときは
+    # id を co_ で始める。co_ のシーンは導入に数えず、その次のシーン（茶番）の後ろにOPを入れる
+    # （2026-09-29: 先出しと茶番の間にOPが挟まり、導入が途切れていた）
+    first_main = next((i for i, sc in enumerate(script.scenes)
+                       if not sc.id.startswith("co_")), 0)
+    op_si = first_main + 1
     timings: list[CutTiming] = []
     t = 0.0
     idx = 0
     hits = 0
     for si, scene in enumerate(script.scenes):
         for ci, cut in enumerate(scene.cuts):
-            # OPは2番目のシーンの頭（導入→OP→解説）
-            op_gap = op_dur if (si == 1 and ci == 0) else 0.0
+            # OPは導入の次のシーンの頭（導入→OP→解説）
+            op_gap = op_dur if (si == op_si and ci == 0) else 0.0
             if op_gap:
                 t += op_gap
             # 章の頭（最初のシーンを除く）に無音の間を入れる

@@ -65,12 +65,15 @@ scenes:
   - {who: nouka, x: 0.56, emotion: thinking}
   - {who: tsumugi, x: 0.8, emotion: thinking}
   cuts:
+  - speaker: reimu
+    text: 明治の半ば。ある男が、見たこともない花の種をタダで配って歩いていました。
+    reading: めいじの なかば。ある おとこが みたことも ない はなの たねお ただで くばって あるいて いました。
   - speaker: nouka
     emotion: thinking
     text: タダで種をくれる？ うまい話には、裏があるもんだ。
   - speaker: zundamon
     emotion: normal
-    text: 裏なんてありません。花が咲いたら、ボクが買い取ります。
+    text: 虫を殺す花なんです。咲いたら、ボクが買い取ります。
   - speaker: nouka
     emotion: angry
     text: 虫を殺す花なんて、聞いたこともない。
@@ -81,10 +84,9 @@ scenes:
   - speaker: zundamon
     emotion: sad
     text: ……山師じゃ、ないのだ。
-  - speaker: tsumugi
-    emotion: thinking
-    text: 種をタダで配って、山師呼ばわり。割に合わないわね。
-    se: oti
+  - speaker: reimu
+    text: この男は、上山英一郎。この花から、渦巻きの蚊取り線香が生まれます。
+    reading: この おとこわ うえやま えいいちろう。この はなから うずまきの かとり せんこうが うまれます。
 - id: hook
   title: ''
   background: kt_ima
@@ -93,43 +95,31 @@ scenes:
   - {who: zundamon, x: 0.2, flip: true, emotion: normal}
   - {who: tsumugi, x: 0.8, emotion: normal}
   cuts:
-  - speaker: reimu
-    text: その花から生まれたのが、渦巻きの蚊取り線香です。
-    reading: その はなから うまれたのが うずまきの かとり せんこうです。
-  - speaker: reimu
-    text: インドネシアだけで、年40億巻ほど売れると言われます。
-    reading: いんどねしあ だけで ねん よんじゅうおくかん ほど うれると いわれます。
   - speaker: zundamon
     emotion: surprised
-    text: 40億！？ 山師どころか、大発明なのだ。
+    text: 蚊取り線香って、夏のあのぐるぐるの？
   - speaker: tsumugi
     emotion: normal
-    text: でも最初は、まっすぐな棒。40分ほどで燃え尽きたの。
-  - speaker: tsumugi
-    emotion: thinking
-    text: それがなんで、あのぐるぐるになったと思う？
+    text: そう。でも最初は、まっすぐな棒。40分ほどで燃え尽きたの。
   - speaker: zundamon
-    emotion: thinking
-    text: ……ぐるぐるといえば、ゆうべ蚊に5か所刺されたのだ。
-  - speaker: tsumugi
     emotion: surprised
-    text: 話の曲がり方がすごいわね。
-  - speaker: zundamon
-    emotion: happy
-    text: 早く効くように、両はしから火をつけたのだ。
+    text: 40分！？ じゃあ夜中は？
   - speaker: tsumugi
     emotion: normal
-    text: 2倍速で燃え尽きるだけよ。
+    text: 何度も起きて、火をつけ直すのよ。
   - speaker: zundamon
-    emotion: sad
-    text: ……夜中の3時に燃え尽きて、そこから刺され放題。
+    emotion: happy
+    text: なら両はしに火をつけて、2倍効かせるのだ！
   - speaker: tsumugi
     emotion: happy
-    text: 自分で、刺され放題コースを選んだのね。
+    text: 2倍の速さで、燃え尽きるだけよ。
     se: oti
   - speaker: tsumugi
+    emotion: thinking
+    text: その棒が、どうしてあのぐるぐるになったのか。
+  - speaker: tsumugi
     emotion: normal
-    text: 答えは和歌山のミカン農家の男と、その奥さんが持ってるわ。
+    text: 答えを持ってるのは、さっきの男とその奥さんよ。
 - id: card1862
   title: ''
   background: kt_card_1862
@@ -1608,7 +1598,7 @@ scenes:
     emotion: surprised
     text: 2つくっついたまま、つけないの！ まず外して、1つずつ使うのよ。
     se: oti
-    pause_after: 0.45
+    pause_after: 0.54
   - speaker: tsumugi
     emotion: happy
     text: 面白かったら、高評価とチャンネル登録をお願いします。
