@@ -398,7 +398,7 @@ PLAYLISTS = {
                "gastro-meme", "masuoka-flash", "washlet", "kaiten-meme",
                "calpis", "karaoke",
                # 未実測・公開順（予約分は公開されるまで同期で自動的に見送られる）
-               "naito-tower", "yoshinoya-abe", "honda-seiroku", "mosquito-coil",
+               "naito-tower", "yoshinoya-abe", "honda-seiroku", "mosquito-coil-v2",
                "yakult-shirota", "glico-ezaki", "mikimoto-pearl", "casio-kashio",
                "furuno-fishfinder", "kimuraya-anpan", "sugiyo-kanikama",
                "othello-hasegawa", "sony-walkman", "masaki-pencil",

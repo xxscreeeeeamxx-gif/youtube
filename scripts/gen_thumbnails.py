@@ -3460,6 +3460,11 @@ SPECS = {
         _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
         _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
     ]),
+    "mosquito-coil-v2": dict(layout="panels", headline="蚊取り線香はなぜ渦巻き",
+        head_hi="渦巻き", panels=[
+        _p("p_ktstick", "1890年 最初の線香", BROWN, "sad", "40分で消えた", "まっすぐな棒"),
+        _p("p_ktcoil", "1902年", GREEN, "happy", "朝までもつのだ", "巻けば長いまま"),
+    ]),
     "iwasaki-sample": dict(layout="panels", headline="食品サンプルの元は妻のオムレツ",
         head_hi="妻のオムレツ", panels=[
         _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
