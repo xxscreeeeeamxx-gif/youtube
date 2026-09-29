@@ -218,6 +218,18 @@ SE_SOURCES = {
     "levelup": "anime/mp3/levelup1.mp3",     # テッテレー（達成・正解感）
     "pinpon": "voice/mp3/info-girl1/info-girl1-seikai1.mp3",  # 「正解」
     "bubu": "voice/mp3/info-girl1/info-girl1-bubu1.mp3",      # 「ブッブー」
+    # 2026-09-29 追加（ユーザー「ちゃんちゃん多用しすぎ。種類を多くして散らばらせて」）
+    "tsukkomi": "anime/mp3/tsukkomi-1.mp3",      # ビシッ（鋭いツッコミ）
+    "hammer": "anime/mp3/pico-pico-hammer1.mp3", # ピコッ（軽いツッコミ）
+    "zukko": "anime/mp3/fall-down1.mp3",         # ドテーン（ずっこける・呆れる）
+    "chin": "anime/mp3/tin1.mp3",                # チーン（失敗・がっかり）
+    "manuke": "anime/mp3/stupid5.mp3",           # 気の抜ける音（しょうもないボケ）
+    "gaan": "anime/mp3/shock2.mp3",              # ピアノでガーン（ショック）
+    "bikkuri": "anime/mp3/surprise1.mp3",        # 頭に「！」（驚き）
+    "hirameki": "anime/mp3/flash1.mp3",          # ひらめき
+    "tenten": "anime/mp3/stunned1.mp3",          # 目が点・カァカァ（しらけ）
+    "shobon": "anime/mp3/cute-sad1.mp3",         # しょげる
+    "namida": "anime/mp3/teardrop1.mp3",         # 涙のしずく（しんみり）
 }
 
 

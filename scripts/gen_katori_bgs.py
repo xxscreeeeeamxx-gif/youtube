@@ -106,6 +106,32 @@ def juku():
     return img
 
 
+def geshuku():
+    """東京の下宿の夜。畳に布団、文机に積んだ本とランプ。病気で寝込む場面用。"""
+    img = base((120, 112, 104), (84, 78, 74))
+    d = _d(img)
+    tatami_floor(img, FLOOR)
+    _window(d, 1340, 170, 1760, 560, sky=(40, 52, 84), frame=(60, 52, 46))
+    d.ellipse([1600, 220, 1660, 280], fill=(236, 230, 200))           # 月
+    top = FLOOR - 130                                                   # 文机（畳の上）
+    d.rectangle([140, top, 620, top + 28], fill=(110, 84, 60))
+    for lx in (160, 580):
+        d.rectangle([lx, top + 28, lx + 22, FLOOR], fill=(92, 70, 50))
+    for i, (w, col) in enumerate(((220, (170, 60, 50)), (200, (60, 80, 120)),
+                                  (240, (200, 190, 160)), (190, (80, 110, 70)))):
+        y = top - 30 - i * 30
+        d.rectangle([180, y, 180 + w, y + 28], fill=col)            # 積んだ本
+    d.rectangle([530, top - 70, 560, top], fill=(90, 70, 50))          # ランプ
+    d.ellipse([505, top - 130, 585, top - 60], fill=(250, 214, 140))
+    _glow(img, 545, top - 95, 170, (255, 200, 120), alpha=90)
+    d = _d(img)
+    d.polygon([(780, FLOOR + 24), (1460, FLOOR + 24), (1540, FLOOR + 130),
+               (700, FLOOR + 130)], fill=(214, 220, 232))              # 畳に敷いた布団
+    d.polygon([(780, FLOOR + 24), (1000, FLOOR + 24), (960, FLOOR + 130),
+               (700, FLOOR + 130)], fill=(236, 240, 246))              # 枕側の掛け布団の折り返し
+    return img
+
+
 def ie():
     """明治の商家の座敷。上山家。"""
     img = base((204, 188, 160), (170, 152, 126))
@@ -276,6 +302,7 @@ LOCATIONS = {
     "kt_ima": ima, "kt_mikan": mikan, "kt_juku": juku, "kt_ie": ie, "kt_hatake": hatake,
     "kt_nouka": nouka, "kt_yado": yado, "kt_koba": koba, "kt_niwa": niwa, "kt_mise": mise,
     "kt_uzu": uzu, "kt_shiryo": shiryo, "kt_koba0": koba0, "kt_mise0": mise0,
+    "kt_geshuku": geshuku,
 }
 
 CARDS = ["1862", "1886", "1890", "1895", "1902", "1910"]

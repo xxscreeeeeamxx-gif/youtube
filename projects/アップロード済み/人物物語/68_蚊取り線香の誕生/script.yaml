@@ -113,7 +113,7 @@ scenes:
   - speaker: tsumugi
     emotion: happy
     text: 2倍の速さで、燃え尽きるだけよ。
-    se: oti
+    se: tsukkomi
   - speaker: tsumugi
     emotion: thinking
     text: その棒が、どうしてあのぐるぐるになったのか。
@@ -159,7 +159,6 @@ scenes:
   - speaker: zundamon
     emotion: thinking
     text: ……ベランダに、プランターが一つあるのだ。
-    se: oti
   - speaker: tsumugi
     emotion: normal
     text: 上山さんは、ミカンの人のままでは終わらなかったの。
@@ -196,16 +195,75 @@ scenes:
   - speaker: tsumugi
     emotion: happy
     text: 元・一万円札の人に、ミカンを売り込んでるわ。
-    se: oti
+    beat: true
   - speaker: fukuzawa
     emotion: normal
     text: 学んだことは、家の仕事でこそ生かしたまえ。
   - speaker: zundamon
     emotion: normal
     text: ……はい。
+- id: ch1_byoki
+  title: ''
+  background: kt_geshuku
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: sad}
+  - {who: fukuzawa, x: 0.56, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: sad}
+  cuts:
   - speaker: reimu
-    text: 1884年の暮れ、病気のため故郷へ戻ります。
-    reading: せんはっぴゃく はちじゅうよねんの くれ びょうきの ため こきょうえ もどります。
+    text: ところが上山は、東京で病気にかかってしまいます。
+    reading: ところが うえやまわ とうきょうで びょうきに かかって しまいます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……今日も、講義に出られなかったのだ。
+  - speaker: tsumugi
+    emotion: sad
+    text: 読みかけの本が、枕元に積みっぱなしね。
+  - speaker: fukuzawa
+    emotion: normal
+    text: 上山くん。一度、国へ帰って養生しなさい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 先生。まだ、学びたいことが山ほど……
+  - speaker: fukuzawa
+    emotion: normal
+    text: 学問は、どこにいてもできる。体は、代わりがきかないよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……分かりました。
+    se: namida
+  - speaker: reimu
+    text: 1884年の暮れ。上山は学びの途中で、故郷の和歌山へ戻ります。
+    reading: せんはっぴゃく はちじゅうよねんの くれ。うえやまわ まなびの とちゅうで こきょうの わかやまえ もどります。
+- id: ch1_kaeru
+  title: ''
+  background: kt_ie
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: sad}
+  - {who: tenin, x: 0.56, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: surprised
+    text: 旦那さん！ 顔が真っ青じゃないですか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ただいま。しばらく、世話になる。
+  - speaker: tenin
+    emotion: normal
+    text: 布団、すぐ敷きますね。
+  - speaker: zundamon
+    emotion: sad
+    text: 東京で学んだこと、全部むだになったのだ。
+  - speaker: tenin
+    emotion: normal
+    text: むだかどうかは、治ってから決めればいいんです。
+  - speaker: tsumugi
+    emotion: happy
+    text: 家の人のほうが、よっぽど先生みたいね。
+    beat: true
 - id: ch1_kikyo
   title: ''
   background: kt_ie
@@ -215,6 +273,9 @@ scenes:
   - {who: tenin, x: 0.56, emotion: normal}
   - {who: tsumugi, x: 0.8, emotion: normal}
   cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 年が明けて。
   - speaker: tenin
     emotion: normal
     text: 旦那さん。東京から戻られて、体はもう大丈夫ですか。
@@ -242,7 +303,7 @@ scenes:
   - speaker: tsumugi
     emotion: happy
     text: 寝てる間に、計画だけは元気になってたのね。
-    se: oti
+    se: hammer
   - speaker: reimu
     text: 1885年、ミカンを外国へ売るための店を始めました。
     reading: せんはっぴゃく はちじゅうごねん みかんお がいこくえ うる ための みせお はじめました。
@@ -318,7 +379,7 @@ scenes:
   - speaker: amoa
     emotion: thinking
     text: ……船より先に、私の腕が限界です。
-    se: oti
+    se: zukko
   - speaker: tsumugi
     emotion: thinking
     text: お土産の量が、もう引っ越しね。
@@ -382,7 +443,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: 怪しいと言った本人が、一番乗り気ね。
-    se: oti
+    beat: true
   - speaker: reimu
     text: 除虫菊の花には、虫の神経に働く成分が含まれています。
     reading: じょちゅうぎくの はなにわ むしの しんけいに はたらく せいぶんが ふくまれて います。
@@ -465,7 +526,7 @@ scenes:
   - speaker: tenin
     emotion: surprised
     text: '[日本中|にほんじゅう]！？ 話が、いきなり大きくなりました。'
-    se: oti
+    se: bikkuri
 - id: ch4_nouka
   title: 山師と呼ばれて
   background: kt_nouka
@@ -521,7 +582,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: タダを重ねるほど、怪しさが増していくわ。
-    se: oti
+    beat: true
   - speaker: zundamon
     emotion: normal
     text: 読んでから、決めてください。
@@ -696,7 +757,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: 蚊より先に、財布が刺されるわ。
-    se: oti
+    se: chin
   - speaker: kyaku
     emotion: angry
     text: 火の番で、こっちは寝不足だよ。
@@ -779,7 +840,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: タダ配りの規模が、新聞サイズになっただけとも言えるけどね。
-    se: oti
+    se: tenten
   - speaker: tsumugi
     emotion: normal
     text: 広島や岡山、北海道でも作る人が増えていったの。
@@ -830,7 +891,7 @@ scenes:
   - speaker: tsumugi
     emotion: surprised
     text: 社長の椅子を、即お断りね。
-    se: oti
+    beat: true
   - speaker: reimu
     text: 上山が断ったため、その会社はその日のうちに解散した、と伝えられています。
     reading: うえやまが ことわった ため その かいしゃわ その ひの うちに かいさんしたと つたえられて います。
@@ -874,7 +935,7 @@ scenes:
   - speaker: yuki
     emotion: happy
     text: ……線香も、こうして巻いたらどうかしら。
-    se: don
+    se: hirameki
   - speaker: zundamon
     emotion: surprised
     text: 巻く……！
@@ -1030,7 +1091,7 @@ scenes:
   - speaker: tsumugi
     emotion: happy
     text: 40分おきの目覚まし生活から、やっと卒業ね。
-    se: oti
+    se: levelup
   - speaker: kyaku
     emotion: thinking
     text: ところで旦那。これ、どこから火をつけるんで？
@@ -1040,7 +1101,7 @@ scenes:
   - speaker: tsumugi
     emotion: happy
     text: 発売初日から、両はし禁止のお知らせね。
-    se: oti
+    beat: true
   - speaker: reimu
     text: 初めのころの渦巻きは、長さ60センチほどで、6時間ほど燃えたとされています。
     reading: はじめの ころの うずまきわ ながさ ろくじゅっせんち ほどで、ろくじかん ほど もえたと されて います。
@@ -1191,7 +1252,7 @@ scenes:
   - speaker: tenin
     emotion: thinking
     text: それはもう、鶏じゃないですね。
-    se: oti
+    se: tsukkomi
   - speaker: tsumugi
     emotion: happy
     text: 走り出しはタダ配り、ゴールは[金|きん]の鶏ね。
@@ -1247,10 +1308,11 @@ scenes:
   - speaker: zundamon
     emotion: surprised
     text: 北海道が！？ 和歌山は！？
+    se: gaan
   - speaker: tsumugi
     emotion: thinking
     text: 7割よ。ほぼ北海道の花ね。
-    se: oti
+    beat: true
   - speaker: tsumugi
     emotion: normal
     text: 1935年ごろが、生産が一番多かったの。
@@ -1307,7 +1369,7 @@ scenes:
   - speaker: zundamon
     emotion: sad
     text: 先を越されてたのだ。
-    se: oti
+    se: shobon
   - speaker: zundamon
     emotion: thinking
     text: ボクの両はし作戦は、火のつく場所を2つにしただけなのだ。
@@ -1328,7 +1390,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: 比べる相手が、おかしいのよ。
-    se: oti
+    beat: true
   - speaker: zundamon
     emotion: surprised
     text: 箱を開けると、2つの渦が組み合わさってる。
@@ -1341,7 +1403,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: 演じただけでしょ。
-    se: oti
+    beat: true
   - speaker: tsumugi
     emotion: normal
     text: 2つ[一組|ひとくみ]だと折れにくいし、かさも半分で運ぶのも安く済むの。
@@ -1446,7 +1508,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: それ、蚊を招き入れながら煙だけ出してるわ。
-    se: oti
+    se: zukko
   - speaker: tsumugi
     emotion: normal
     text: 人のほかに、気をつけたいのが生き物のほう。
@@ -1506,7 +1568,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: まず金魚の引っ越しが先ね。
-    se: oti
+    se: manuke
   - speaker: tsumugi
     emotion: normal
     text: 蚊が病気を運ぶ地域では、夜を守る道具なの。
@@ -1522,7 +1584,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: 60年前に生まれてから[言って|いって]。
-    se: oti
+    beat: true
   - speaker: tsumugi
     emotion: normal
     text: 渦巻きも、大きいのは12時間で小さいのは3時間ほどの種類があるの。

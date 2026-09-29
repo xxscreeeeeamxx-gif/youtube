@@ -135,6 +135,9 @@ class Cut(BaseModel):
     slide: Slide | None = None
     stat: Stat | None = None  # 数字カウントアップのアニメ図解
     se: str | None = None     # 効果音（pop/don/jaan/tsuru/pinpon/bubu など assets/se/の名前）
+    # 再現ドラマで、この行の前に一拍（drama_gaps の oti）置く。SE を付けないオチ・ツッコミ用。
+    # ツッコミ系の SE（oti/tsukkomi/zukko 等）が付いた行は指定しなくても一拍入る
+    beat: bool = False
     image: str | None = None  # プロジェクト相対 or assets相対の画像パス
     video: str | None = None  # 動画クリップ（音は使わずナレーション優先）
     video_span: int = 1       # この動画を何カット分にまたがって連続再生するか

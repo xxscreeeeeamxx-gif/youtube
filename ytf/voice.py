@@ -329,6 +329,11 @@ DRAMA_GAPS = {
 }
 
 
+# 前に一拍置かない SE（驚きの即反応・軽い合図）。これ以外の SE が付いた行は
+# オチ・ツッコミ・宣告・しんみりの行なので、前に drama_gaps の oti を置く
+NO_BEAT_SE = {"bikkuri", "pop"}
+
+
 def drama_gap(cfg: Config, gaps: dict, cur, nxt, cur_disp: str, nxt_disp: str,
               new_scene: bool, titled_next: bool) -> float:
     """再現ドラマで、カット cur の直後に置く無音を台本の情報だけから決める。"""
@@ -342,7 +347,8 @@ def drama_gap(cfg: Config, gaps: dict, cur, nxt, cur_disp: str, nxt_disp: str,
     tail = _re.sub(r"[。、！？!?」』\s]+$", "", cur_disp)
     if tail.endswith("……") or nxt_disp.lstrip().startswith("……"):
         return gaps["ellipsis"]
-    if getattr(nxt, "se", None) in ("oti", "don"):
+    nse = getattr(nxt, "se", None)
+    if getattr(nxt, "beat", False) or (nse and nse not in NO_BEAT_SE):
         return gaps["oti"]
 
     def _is_narr(sp: str) -> bool:
