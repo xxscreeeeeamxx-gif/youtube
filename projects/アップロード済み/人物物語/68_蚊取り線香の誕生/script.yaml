@@ -61,9 +61,8 @@ scenes:
   background: kt_nouka
   bgm: mystery
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: nouka, x: 0.56, emotion: thinking}
-  - {who: tsumugi, x: 0.8, emotion: thinking}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: nouka, x: 0.7, emotion: thinking}
   cuts:
   - speaker: reimu
     text: 明治の半ば。ある男が、見たこともない花の種をタダで配って歩いていました。
@@ -167,9 +166,8 @@ scenes:
   background: kt_juku
   bgm: hirusagari
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: fukuzawa, x: 0.56, emotion: normal}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: fukuzawa, x: 0.7, emotion: normal}
   cuts:
   - speaker: reimu
     text: 10代の終わりに上京し、慶應義塾で福沢諭吉に学びます。
@@ -192,10 +190,6 @@ scenes:
   - speaker: zundamon
     emotion: happy
     text: 一番甘いのを、選んでまいります。
-  - speaker: tsumugi
-    emotion: happy
-    text: 元・一万円札の人に、ミカンを売り込んでるわ。
-    beat: true
   - speaker: fukuzawa
     emotion: normal
     text: 学んだことは、家の仕事でこそ生かしたまえ。
@@ -207,9 +201,8 @@ scenes:
   background: kt_geshuku
   bgm: serious
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: sad}
-  - {who: fukuzawa, x: 0.56, emotion: normal}
-  - {who: tsumugi, x: 0.8, emotion: sad}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: sad}
+  - {who: fukuzawa, x: 0.7, emotion: normal}
   cuts:
   - speaker: reimu
     text: ところが上山は、東京で病気にかかってしまいます。
@@ -217,9 +210,9 @@ scenes:
   - speaker: zundamon
     emotion: sad
     text: ……今日も、講義に出られなかったのだ。
-  - speaker: tsumugi
-    emotion: sad
-    text: 読みかけの本が、枕元に積みっぱなしね。
+  - speaker: fukuzawa
+    emotion: normal
+    text: 枕元に、本を積んだままだね。
   - speaker: fukuzawa
     emotion: normal
     text: 上山くん。一度、国へ帰って養生しなさい。
@@ -241,9 +234,8 @@ scenes:
   background: kt_ie
   bgm: hirusagari
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: sad}
-  - {who: tenin, x: 0.56, emotion: surprised}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: sad}
+  - {who: tenin, x: 0.7, emotion: surprised}
   cuts:
   - speaker: tenin
     emotion: surprised
@@ -260,25 +252,17 @@ scenes:
   - speaker: tenin
     emotion: normal
     text: むだかどうかは、治ってから決めればいいんです。
-  - speaker: tsumugi
-    emotion: happy
-    text: 家の人のほうが、よっぽど先生みたいね。
-    beat: true
 - id: ch1_kikyo
   title: ''
   background: kt_ie
   bgm: hirusagari
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: tenin, x: 0.56, emotion: normal}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: normal}
   cuts:
-  - speaker: tsumugi
-    emotion: normal
-    text: 年が明けて。
   - speaker: tenin
     emotion: normal
-    text: 旦那さん。東京から戻られて、体はもう大丈夫ですか。
+    text: 旦那さん。年も明けましたけど、体はもう大丈夫ですか。
   - speaker: zundamon
     emotion: happy
     text: だいぶ良くなった。寝てばかりもいられないぞ。
@@ -300,9 +284,9 @@ scenes:
   - speaker: zundamon
     emotion: happy
     text: 外国の人も、食べたらきっと気に入るのだ。
-  - speaker: tsumugi
+  - speaker: tenin
     emotion: happy
-    text: 寝てる間に、計画だけは元気になってたのね。
+    text: 寝込んでる間に、計画だけ元気になってたんですね。
     se: hammer
   - speaker: reimu
     text: 1885年、ミカンを外国へ売るための店を始めました。
@@ -328,17 +312,13 @@ scenes:
   - speaker: zundamon
     emotion: happy
     text: 先生の頼みなら、どこへでも行くのだ。
-  - speaker: tsumugi
-    emotion: thinking
-    text: 和歌山から東京まで、大移動ね。
 - id: ch2_amoa
   title: ミカンの苗のお返し
   background: kt_mikan
   bgm: you_and_me
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: happy}
-  - {who: amoa, x: 0.56, emotion: normal}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: amoa, x: 0.7, emotion: normal}
   cuts:
   - speaker: reimu
     text: 手紙に書かれていた客は、アメリカで苗や種を扱う商人でした。
@@ -380,9 +360,6 @@ scenes:
     emotion: thinking
     text: ……船より先に、私の腕が限界です。
     se: zukko
-  - speaker: tsumugi
-    emotion: thinking
-    text: お土産の量が、もう引っ越しね。
   - speaker: reimu
     text: 東京まで迎えに行き、有田のミカン山を案内して、いくつもの苗を贈ったと伝えられています。
     reading: とうきょうまで むかえに いき ありだの みかんやまお あんないして、いくつもの なえお おくったと つたえられて います。
@@ -398,9 +375,8 @@ scenes:
   background: kt_ie
   bgm: curious
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: tenin, x: 0.56, emotion: normal}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: normal}
   cuts:
   - speaker: tenin
     emotion: happy
@@ -440,10 +416,6 @@ scenes:
   - speaker: zundamon
     emotion: normal
     text: 楽かどうかは、咲いてからだ。
-  - speaker: tsumugi
-    emotion: thinking
-    text: 怪しいと言った本人が、一番乗り気ね。
-    beat: true
   - speaker: reimu
     text: 除虫菊の花には、虫の神経に働く成分が含まれています。
     reading: じょちゅうぎくの はなにわ むしの しんけいに はたらく せいぶんが ふくまれて います。
@@ -532,9 +504,8 @@ scenes:
   background: kt_nouka
   bgm: kinakusai
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: nouka, x: 0.56, emotion: thinking}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: nouka, x: 0.7, emotion: thinking}
   cuts:
   - speaker: reimu
     text: 上山は各地の農家を回り、除虫菊の種を無料で配り始めます。
@@ -570,36 +541,31 @@ scenes:
   - speaker: zundamon
     emotion: sad
     text: ……じゃあ、何と言えば。
-  - speaker: tsumugi
+  - speaker: nouka
     emotion: thinking
-    text: 何を言っても怪しまれる、詰み状態ね。
+    text: 何を言っても、怪しいもんは怪しい。
   - speaker: zundamon
     emotion: normal
     text: 育て方を書いた本も、置いていきます。これもタダです。
   - speaker: nouka
     emotion: surprised
     text: ……本まで、タダか。
-  - speaker: tsumugi
-    emotion: thinking
-    text: タダを重ねるほど、怪しさが増していくわ。
-    beat: true
   - speaker: zundamon
     emotion: normal
     text: 読んでから、決めてください。
   - speaker: reimu
     text: 上山は後に、熱心に勧めるほど狂人扱いされ、山師と言われたと書き残しています。
     reading: うえやまわ のちに ねっしんに すすめるほど きょうじんあつかい され、やましと いわれたと かきのこして います。
-  - speaker: tsumugi
-    emotion: normal
-    text: それでも次の村また次の村へと、種を配って回ったの。
+  - speaker: reimu
+    text: それでも上山は、次の村また次の村へと種を配って回りました。
+    reading: それでも うえやまわ つぎの むら また つぎの むらえと たねお くばって まわりました。
 - id: ch5_ibusu
   title: 煙だらけの部屋
   background: kt_ie
   bgm: pop
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: happy}
-  - {who: tenin, x: 0.56, emotion: normal}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: normal}
   cuts:
   - speaker: zundamon
     emotion: happy
@@ -625,9 +591,9 @@ scenes:
   - speaker: tenin
     emotion: thinking
     text: 蚊より先に、人が逃げ出します。
-  - speaker: tsumugi
-    emotion: happy
-    text: 蚊取りじゃなく、人取り線香ね。
+  - speaker: tenin
+    emotion: thinking
+    text: 蚊取りじゃなくて、人取り線香ですよ。
     se: oti
   - speaker: zundamon
     emotion: thinking
@@ -643,9 +609,8 @@ scenes:
   background: kt_yado
   bgm: curious
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: thinking}
-  - {who: senkouya, x: 0.56, emotion: normal}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: thinking}
+  - {who: senkouya, x: 0.7, emotion: normal}
   cuts:
   - speaker: reimu
     text: 1888年、上山は東京・本郷の宿で、線香屋の男と泊まり合わせます。
@@ -676,9 +641,6 @@ scenes:
   - speaker: zundamon
     emotion: happy
     text: 聞いたことがないから、作るんです。
-  - speaker: tsumugi
-    emotion: happy
-    text: 泊まった宿で、答えを拾ってくる人ね。
 - id: ch6_shisaku
   title: ''
   background: kt_koba0
@@ -735,9 +697,8 @@ scenes:
   background: kt_mise0
   bgm: serious
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: thinking}
-  - {who: kyaku, x: 0.56, emotion: angry}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: thinking}
+  - {who: kyaku, x: 0.7, emotion: angry}
   cuts:
   - speaker: kyaku
     emotion: angry
@@ -754,9 +715,9 @@ scenes:
   - speaker: kyaku
     emotion: surprised
     text: それじゃあ、何本買っても足りないよ。
-  - speaker: tsumugi
-    emotion: thinking
-    text: 蚊より先に、財布が刺されるわ。
+  - speaker: kyaku
+    emotion: sad
+    text: 蚊より先に、財布が刺されちまう。
     se: chin
   - speaker: kyaku
     emotion: angry
@@ -849,9 +810,8 @@ scenes:
   background: kt_ie
   bgm: kinakusai
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: shusshi, x: 0.56, emotion: happy}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: shusshi, x: 0.7, emotion: happy}
   cuts:
   - speaker: shusshi
     emotion: happy
@@ -888,10 +848,6 @@ scenes:
     text: 作る人が増えないと、[日本中|にほんじゅう]の虫は減らないからです。
     telops:
     - {text: 独占より、広げる, size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#6BA3E0", anim: up}
-  - speaker: tsumugi
-    emotion: surprised
-    text: 社長の椅子を、即お断りね。
-    beat: true
   - speaker: reimu
     text: 上山が断ったため、その会社はその日のうちに解散した、と伝えられています。
     reading: うえやまが ことわった ため その かいしゃわ その ひの うちに かいさんしたと つたえられて います。
@@ -907,9 +863,8 @@ scenes:
   background: kt_niwa
   bgm: 223am
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: yuki, x: 0.56, emotion: surprised}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: yuki, x: 0.7, emotion: surprised}
   cuts:
   - speaker: yuki
     emotion: surprised
@@ -947,9 +902,6 @@ scenes:
   - speaker: zundamon
     emotion: happy
     text: 折れやすい細長いものを、丸めてしまうのだ！
-  - speaker: tsumugi
-    emotion: happy
-    text: 蛇を見て、発明を思いつく奥さん。強いわ。
   - speaker: reimu
     text: 妻のゆきが、とぐろを巻く蛇を見て思いついた。会社には、そう伝えられています。
     reading: つまの ゆきが とぐろお まく へびお みて おもいついた。かいしゃにわ そう つたえられて います。
@@ -1069,9 +1021,8 @@ scenes:
   background: kt_mise
   bgm: pop
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: happy}
-  - {who: kyaku, x: 0.56, emotion: surprised}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: surprised}
   cuts:
   - speaker: kyaku
     emotion: surprised
@@ -1088,9 +1039,9 @@ scenes:
   - speaker: kyaku
     emotion: happy
     text: では、夏の分をまとめて。
-  - speaker: tsumugi
+  - speaker: kyaku
     emotion: happy
-    text: 40分おきの目覚まし生活から、やっと卒業ね。
+    text: これで、40分おきに起きなくて済む！
     se: levelup
   - speaker: kyaku
     emotion: thinking
@@ -1098,10 +1049,6 @@ scenes:
   - speaker: zundamon
     emotion: happy
     text: 外側の端からです。……片方だけですよ。
-  - speaker: tsumugi
-    emotion: happy
-    text: 発売初日から、両はし禁止のお知らせね。
-    beat: true
   - speaker: reimu
     text: 初めのころの渦巻きは、長さ60センチほどで、6時間ほど燃えたとされています。
     reading: はじめの ころの うずまきわ ながさ ろくじゅっせんち ほどで、ろくじかん ほど もえたと されて います。
@@ -1112,9 +1059,8 @@ scenes:
   background: kt_hatake
   bgm: serious
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: nouka, x: 0.56, emotion: thinking}
-  - {who: tsumugi, x: 0.8, emotion: thinking}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: nouka, x: 0.7, emotion: thinking}
   cuts:
   - speaker: reimu
     text: 1903年、除虫菊が大豊作になり、値段が大きく下がったと伝えられています。
@@ -1140,17 +1086,13 @@ scenes:
   - speaker: nouka
     emotion: thinking
     text: ……山師と言ったのは、取り消すよ。
-  - speaker: tsumugi
-    emotion: thinking
-    text: 山師の汚名が、大損と引き換えに消えたわ。
 - id: ch11_kura
   title: ''
   background: kt_ie
   bgm: serious
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: thinking}
-  - {who: tenin, x: 0.56, emotion: sad}
-  - {who: tsumugi, x: 0.8, emotion: thinking}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: thinking}
+  - {who: tenin, x: 0.7, emotion: sad}
   cuts:
   - speaker: tenin
     emotion: sad
@@ -1170,9 +1112,6 @@ scenes:
   - speaker: zundamon
     emotion: sad
     text: ……それでも、約束は約束だ。
-  - speaker: tsumugi
-    emotion: thinking
-    text: 正しさとお[金|かね]の残りが、真っ向勝負してるわ。
   - speaker: reimu
     text: 上山はこのとき、契約どおりの値で買い続けて、店がつぶれかけたと伝えられています。
     reading: うえやまわ この とき けいやく どおりの ねで かいつづけて、みせが つぶれかけたと つたえられて います。
@@ -1181,9 +1120,8 @@ scenes:
   background: kt_hatake
   bgm: you_and_me
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: normal}
-  - {who: nouka, x: 0.56, emotion: surprised}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: nouka, x: 0.7, emotion: surprised}
   cuts:
   - speaker: reimu
     text: 翌年、日露戦争が始まると、戦地の兵士に除虫菊の粉を送ります。
@@ -1200,9 +1138,6 @@ scenes:
   - speaker: nouka
     emotion: happy
     text: 来年も、植えるよ。
-  - speaker: tsumugi
-    emotion: happy
-    text: 損して[得|とく]取れ、を地で行ったわ。
 - id: card1910
   title: ''
   background: kt_card_1910
@@ -1215,9 +1150,8 @@ scenes:
   background: kt_mise
   bgm: you_and_me
   stage:
-  - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: happy}
-  - {who: tenin, x: 0.56, emotion: thinking}
-  - {who: tsumugi, x: 0.8, emotion: normal}
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: thinking}
   cuts:
   - speaker: zundamon
     emotion: happy
@@ -1253,9 +1187,6 @@ scenes:
     emotion: thinking
     text: それはもう、鶏じゃないですね。
     se: tsukkomi
-  - speaker: tsumugi
-    emotion: happy
-    text: 走り出しはタダ配り、ゴールは[金|きん]の鶏ね。
   - speaker: reimu
     text: 同じ1910年、除虫菊を広めた働きで、国から藍綬褒章を受けています。
     reading: おなじ せんきゅうひゃく じゅうねん、じょちゅうぎくお ひろめた はたらきで くにから らんじゅ ほうしょうお うけて います。
