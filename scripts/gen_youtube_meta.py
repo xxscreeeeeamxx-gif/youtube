@@ -189,7 +189,28 @@ def build_entry(slug: str, pdir: Path = None):
             tags.append(t)
     tag_line = ",".join(tags)
 
-    desc_parts = [body, note, credits]
+    # 章立て（YouTube のチャプター）。compose が metadata.txt に書く目次を使う。
+    # 伸びている局（カカチャンネル・世界まる見えずんだもん）は概要欄に章立てを入れていて、
+    # 日常研究所は 0本だった（2026-09-29 に追加）。YouTube の条件: 先頭が 0:00・3つ以上・
+    # 各章 10 秒以上。先頭行は動画タイトルが入っているので「オープニング」に置き換える
+    chapters = ""
+    raw = sec.get("概要欄", "")
+    if "▼ 目次" in raw:
+        rows = []
+        for ln in raw.split("▼ 目次", 1)[1].split("▼", 1)[0].splitlines():
+            m = re.match(r"^\s*(\d+):(\d{2})\s+(.+)$", ln)
+            if m:
+                rows.append((int(m.group(1)) * 60 + int(m.group(2)), m.group(3).strip()))
+        if rows and rows[0][0] == 0:
+            rows[0] = (0, "オープニング")
+            kept = [rows[0]]
+            for sec_, name in rows[1:]:
+                if sec_ - kept[-1][0] >= 10:
+                    kept.append((sec_, name))
+            if len(kept) >= 3:
+                chapters = "▼ 目次\n" + "\n".join(f"{s // 60}:{s % 60:02d} {n}" for s, n in kept)
+
+    desc_parts = [body, chapters, note, credits]
     description = "\n\n".join(p for p in desc_parts if p)
     return title, description, tag_line
 

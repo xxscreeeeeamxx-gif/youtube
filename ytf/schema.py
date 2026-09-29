@@ -24,7 +24,7 @@ class Mob(BaseModel):
     id: str                 # cut.speaker に書くID（半角英数）
     label: str              # 胴体に縦書き表示する名前（例: 先生）
     voice: int = 13         # VOICEVOXスタイルID（既定: 青山龍星ノーマル）
-    speed: float = 1.15
+    speed: float = 1.2      # 2026-09-29 ずんだもん・つむぎに合わせて 1.15→1.2
     pitch: float = 0.0      # 声の高さオフセット（同じ声の使い回し感を減らす）
     hair: str = "none"      # none / twintail / short / bun
     item: str = "none"      # none / bible / hat / mustache / book

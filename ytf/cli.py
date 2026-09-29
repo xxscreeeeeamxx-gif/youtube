@@ -44,9 +44,10 @@ def check_length(cfg, proj) -> bool:
         return True
     cuts = sum(len(sc.get("cuts") or []) for sc in (d.get("scenes") or []))
 
-    # 公開済みドラマ18本の実測中央値。解説回は突き合わせられる公開尺が無いので
-    # ドラマの値を流用している（読み上げ速度はほぼ同じなので目安として使える）
-    SEC_PER_CHAR = 0.169
+    # 2026-09-29 に話速 1.15→1.2・行間を文脈で詰める方式へ変えた後の実測
+    # （ファミコン回の台本 7,932字で 19分29秒）。それ以前は 0.169（公開済みドラマ18本の中央値）。
+    # 同じ台本でも約1割短くなるので、20分なら約8,150字要る
+    SEC_PER_CHAR = 0.147
     target_min = float(cfg.get("channel", "target_length_minutes", default=20))
     est = chars * SEC_PER_CHAR
     floor = target_min * 60 * 0.85          # 20分目標なら17分を下限にする

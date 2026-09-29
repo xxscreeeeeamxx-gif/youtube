@@ -29,22 +29,22 @@ characters:
     display_name: "春日部つむぎ"
     credit: "VOICEVOX:春日部つむぎ"
     voicevox_style: 8   # ノーマル固定（スタイル切替はしない: 聞き取りやすさ優先）
-    speed_scale: 1.15
+    speed_scale: 1.2    # 2026-09-29 聞き比べで 1.15→1.2（ユーザー「早くなっていい感じ」）
     color: "#F5A623"
     sprite_dir: assets/characters/tsumugi
     position: right
-    role: "解説役の先生。明るいお姉さん口調でテンポよく核心を突く。生徒のずんだもんを軽くいじりつつ、最後は必ず分かりやすくまとめる。奇をてらった言い回しは使わず、誰でも分かる素直な表現で話す。"
+    role: "解説役。明るいお姉さん口調でテンポよく核心を突く。ずんだもんや登場人物には遠慮なくツッコみ、その場の造語で茶化す（せっかちの世界チャンピオン等）。説明そのものは誰でも分かる素直な表現で話す。"
   zundamon:
     display_name: "ずんだもん"
     credit: "VOICEVOX:ずんだもん"
     voicevox_style: 3   # ノーマル固定（スタイル切替はしない: 聞き取りやすさ優先）
-    speed_scale: 1.15
+    speed_scale: 1.2    # 2026-09-29 聞き比べで 1.15→1.2
     color: "#5AC85A"
     sprite_dir: assets/characters/zundamon
     position: left
     sprite_scale: 1.0    # つむぎと身長を揃える（同じ表示高さ）
     sprite_flip: true    # 素材が外向きなので反転して内側（つむぎ側）を向かせる
-    role: "ちょっとアホな生徒役。語尾は必ず「〜なのだ」「〜のだ」。一人称はボク。視聴者と同じ勘違いをして驚き、質問し、突っ込まれる。"
+    role: "ちょっとアホな役。一人称はボク。語尾は役に合わせ（目上には敬語）、「〜なのだ」「〜のだ」は3割程度で感情の山・ボケ・独り言に使う。欲や見栄で余計な一言を言い、勘違いして驚き、突っ込まれる。"
   reimu:
     display_name: "ナレーター"
     credit: "AquesTalk（株式会社アクエスト）"
@@ -81,6 +81,26 @@ voicevox:
   drama_pause: 0.15
   # 再現ドラマで話者が交代する瞬間の間（会話の呼吸）
   drama_pause_switch: 0.3
+  # ↑の2値は drama_gaps が無いときの旧方式。2026-09-29 から再現ドラマは drama_gaps で
+  # 文脈ごとに間を決める（ユーザー聞き比べで決定: 「ずっと同じ間」を解消し、
+  # 普段は詰めて、答え・ツッコミ・余韻・場面の変わり目でだけ一拍置く）。
+  # 判定は ytf/voice.py の drama_gap。台本の pause_after が最優先
+  drama_gaps:
+    same: 0.06        # 同じ人が続けて話す
+    switch: 0.12      # 話者が替わる
+    reaction: 0.08    # 次が短い反応（8字以下）: 間髪入れずに返す
+    answer: 0.20      # 問いかけ（？で終わる）への答え
+    oti: 0.45         # 次がオチ・ツッコミ（se: oti）や宣告（se: don）
+    ellipsis: 0.50    # 「……」で終わる / 「……」で始まる
+    narration: 0.25   # セリフとナレーションの切り替わり
+    scene: 0.60       # 見出しの無い場面転換
+  # 声そのものの間（VOICEVOX の audio_query を上書き）。既定は前後 0.1 秒ずつの余白が
+  # 付き、行間に毎回足されて単調になっていた。読点の間も 0.6 倍に詰める
+  pause_length_scale: 0.6
+  pre_phoneme_length: 0.03
+  post_phoneme_length: 0.03
+  # 抑揚（キャラに intonation_scale が無ければこれ。モブもこれに乗る）
+  intonation_scale: 1.15
   # 読み間違い対策のユーザー辞書（起動時に自動登録）
   dictionary:
     - { surface: "Wi-Fi", pronunciation: "ワイファイ", accent_type: 3 }

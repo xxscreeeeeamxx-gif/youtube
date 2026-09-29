@@ -144,7 +144,8 @@ class VoicevoxClient:
                                  params=params, timeout=10).raise_for_status()
 
     def synthesize(self, text: str, style_id: int, speed: float,
-                   pitch: float = 0.0, intonation: float = 1.0) -> bytes:
+                   pitch: float = 0.0, intonation: float = 1.0,
+                   shape: dict | None = None) -> bytes:
         q = requests.post(
             f"{self.base}/audio_query",
             params={"text": text, "speaker": style_id},
@@ -155,6 +156,10 @@ class VoicevoxClient:
         query["speedScale"] = speed
         query["pitchScale"] = pitch          # 声の高さ（±。低音にしたいなら負の値）
         query["intonationScale"] = intonation  # 抑揚（1.0が標準。下げると平坦・落ち着く）
+        # 読点の間・声の前後の余白（channel.yaml の voicevox で指定したものだけ上書き）
+        for k, v in (shape or {}).items():
+            if k in query:
+                query[k] = v
         query["outputSamplingRate"] = SAMPLE_RATE
         query["outputStereo"] = False
         # モーラ単位のタイミング抽出用に直近クエリを保持（whisper不要の単語同期の土台）
@@ -283,8 +288,73 @@ def style_for(cfg: Config, speaker: str, emotion: str) -> tuple[int, float, floa
         int(style),
         float(ch.get("speed_scale", 1.0)),
         float(ch.get("pitch_scale", 0.0)),
-        float(ch.get("intonation_scale", 1.0)),
+        # キャラに指定が無ければ channel.yaml の voicevox.intonation_scale（モブもこれに乗る）
+        float(ch.get("intonation_scale",
+                     cfg.get("voicevox", "intonation_scale", default=1.0))),
     )
+
+
+def voice_shape(cfg: Config) -> dict:
+    """VOICEVOX の audio_query に上書きする「間」の設定（読点の間・前後の余白）。
+
+    2026-09-29 のユーザー聞き比べで決定: 前後の余白（既定 0.1 秒ずつ）が
+    行間に毎回足されて、話者交代のたびに約 0.5 秒の同じ無音が入り、
+    テンポが単調に聞こえていた。余白を削り、行間は drama_gaps で文脈ごとに決める。
+    """
+    keys = {"pause_length_scale": "pauseLengthScale",
+            "pre_phoneme_length": "prePhonemeLength",
+            "post_phoneme_length": "postPhonemeLength"}
+    out = {}
+    for k, q in keys.items():
+        v = cfg.get("voicevox", k, default=None)
+        if v is not None:
+            out[q] = float(v)
+    return out
+
+
+# 再現ドラマの行間（秒）の既定値。channel.yaml の voicevox.drama_gaps で上書きできる。
+# 伸びている局（カカチャンネル・ゲーム大好きずんだもん・ずんだもん末路ストーリー）は
+# 話す速さ自体は日常研究所と同じ（約6字/秒）で、違いは間の緩急だった（2026-09-29 実測）。
+# 普段は詰め、答え・ツッコミ・余韻・場面の変わり目でだけ一拍置く
+DRAMA_GAPS = {
+    "same": 0.06,       # 同じ人が続けて話す
+    "switch": 0.12,     # 話者が替わる
+    "reaction": 0.08,   # 次が短い反応（8字以下）: 間髪入れずに返す
+    "answer": 0.20,     # 問いかけ（？で終わる）への答え
+    "oti": 0.45,        # 次がオチ・ツッコミ（se: oti）や宣告（se: don）
+    "ellipsis": 0.50,   # 「……」で終わる / 「……」で始まる（余韻・ためらい）
+    "narration": 0.25,  # セリフとナレーションの切り替わり
+    "scene": 0.60,      # 次のカットが別のシーン（章の見出しが無い場面転換）
+}
+
+
+def drama_gap(cfg: Config, gaps: dict, cur, nxt, cur_disp: str, nxt_disp: str,
+              new_scene: bool, titled_next: bool) -> float:
+    """再現ドラマで、カット cur の直後に置く無音を台本の情報だけから決める。"""
+    import re as _re
+    if nxt is None:
+        return gaps["scene"]
+    if new_scene:
+        # 見出しのある章は voice 側でトランジションの間（lead）が入るので足さない
+        return gaps["switch"] if titled_next else gaps["scene"]
+    # 「全部……。」のように「……」の後ろに句読点が付く行も余韻として扱う
+    tail = _re.sub(r"[。、！？!?」』\s]+$", "", cur_disp)
+    if tail.endswith("……") or nxt_disp.lstrip().startswith("……"):
+        return gaps["ellipsis"]
+    if getattr(nxt, "se", None) in ("oti", "don"):
+        return gaps["oti"]
+
+    def _is_narr(sp: str) -> bool:
+        return (cfg.character(sp) or {}).get("engine") in ("aquestalk", "aquestalk1")
+
+    switched = cur.speaker != nxt.speaker
+    if switched and (_is_narr(cur.speaker) or _is_narr(nxt.speaker)):
+        return gaps["narration"]
+    if switched and _re.search(r"[？?]$", cur_disp.strip()):
+        return gaps["answer"]
+    if switched and len(nxt_disp.strip()) <= 8:
+        return gaps["reaction"]
+    return gaps["switch"] if switched else gaps["same"]
 
 
 def load_dictionary(cfg: Config) -> list[dict]:
@@ -319,6 +389,12 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
         default_pause = float(cfg.get("voicevox", "drama_pause", default=0.15))
         switch_pause = float(cfg.get("voicevox", "drama_pause_switch", default=0.3))
     next_speaker = [c.speaker for _, _, c in script.all_cuts()][1:] + [None]
+    # 再現ドラマの行間は文脈で決める（drama_gaps があるときだけ。無ければ従来の2値）
+    gap_cfg = cfg.get("voicevox", "drama_gaps", default=None) if drama else None
+    gaps = {**DRAMA_GAPS, **{k: float(v) for k, v in (gap_cfg or {}).items()}} if gap_cfg else None
+    flat = [(scene, cut) for scene in script.scenes for cut in scene.cuts]
+    shape = voice_shape(cfg)
+    shape_sig = json.dumps(shape, sort_keys=True) if shape else ""
     # 同一セリフ・同一声設定のWAVはキャッシュ再利用（台本の一部修正後の再合成を高速化）
     cache_dir = proj.audio_dir / "cache"
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -385,7 +461,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 style_id, speed, pitch, intonation = style_for(
                     cfg, cut.speaker, cut.emotion)
                 key_src = (f"{spoken}|{style_id}|{speed}|{pitch}|{intonation}"
-                           f"|{tts}|{dict_sig}")
+                           f"|{tts}|{dict_sig}" + (f"|{shape_sig}" if shape_sig else ""))
             wav_name = f"{idx:04d}_{cut.speaker}.wav"
             wav_path = proj.audio_dir / wav_name
 
@@ -407,7 +483,8 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 elif engine == "aquestalk1":
                     data = aq1.synthe(cfg, koe, aq1_voice, speed)
                 else:
-                    data = client.synthesize(spoken, style_id, speed, pitch, intonation)
+                    data = client.synthesize(spoken, style_id, speed, pitch, intonation,
+                                             shape=shape)
                     moras = extract_moras(client.last_query)
                     mora_cache.write_text(json.dumps(moras, ensure_ascii=False),
                                           encoding="utf-8")
@@ -418,7 +495,8 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 d_style, d_speed, d_pitch, d_int = style_for(
                     cfg, cut.duet_with, cut.emotion)
                 dkey = hashlib.sha1(
-                    f"{spoken}|{d_style}|{d_speed}|{d_pitch}|{d_int}|{tts}|{dict_sig}".encode()
+                    (f"{spoken}|{d_style}|{d_speed}|{d_pitch}|{d_int}|{tts}|{dict_sig}"
+                     + (f"|{shape_sig}" if shape_sig else "")).encode()
                 ).hexdigest()[:16]
                 dcached = cache_dir / f"{dkey}.wav"
                 if dcached.exists():
@@ -426,7 +504,7 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
                 else:
                     if client is not None:
                         ddata = client.synthesize(spoken, d_style, d_speed,
-                                                  d_pitch, d_int)
+                                                  d_pitch, d_int, shape=shape)
                     else:
                         ddata = dummy_wav(spoken, d_speed)
                     dcached.write_bytes(ddata)
@@ -436,6 +514,13 @@ def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTimi
             dur = wav_duration(wav_path)
             if cut.pause_after is not None:
                 pause = cut.pause_after
+            elif gaps is not None:
+                nscene, ncut = flat[idx + 1] if idx + 1 < len(flat) else (None, None)
+                pause = drama_gap(
+                    cfg, gaps, cut, ncut, display,
+                    split_reading(ncut.text)[0] if ncut is not None else "",
+                    new_scene=(nscene is not None and nscene is not scene),
+                    titled_next=bool(nscene is not None and trans_on and nscene.title))
             elif (switch_pause is not None
                     and next_speaker[idx] not in (None, cut.speaker)):
                 pause = switch_pause
