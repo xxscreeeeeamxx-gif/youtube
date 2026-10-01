@@ -52,10 +52,6 @@ meta:
     label: 部下
     voice: 12
     pitch: 0.14
-  - id: musuko
-    label: 息子
-    voice: 12
-    pitch: 0.22
   - id: ricoh
     label: リコーの人
     voice: 13
@@ -132,14 +128,17 @@ scenes:
   - speaker: tsumugi
     emotion: normal
     text: それにフーフーは、端子がさびる原因なの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのゲーム機、発売した年の暮れに全部回収されてるのよ。
   - speaker: zundamon
     emotion: thinking
-    text: ……でも全部回収されたゲーム機が、どうして6191万台も売れたの？
+    text: えっ。全部回収されたのに、どうして6191万台も売れたの？
     telops:
     - {text: 全品回収から6191万台, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
   - speaker: tsumugi
     emotion: normal
-    text: 作ったのは、上村雅之さん。始まりは、テレビに夢中な少年よ。
+    text: 作ったのは、上村雅之さん。始まりは、ラジオを組み立てた少年よ。
 - id: card1943
   title: ''
   background: fc_card_1943
@@ -148,32 +147,29 @@ scenes:
     text: 1943年。東京で、上村雅之が生まれます。米子を経て、京都で育ちました。
     reading: せんきゅうひゃく よんじゅうさんねん。とうきょうで うえむら まさゆきが うまれます。よなごお へて、きょうとで そだちました。
 - id: ch1_kyoto
-  title: テレビを作る人になりたい
+  title: ラジオから音が出た
   background: fc_denkiya
   bgm: hirusagari
   stage:
   - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, scale: 0.85, emotion: happy}
   - {who: denkiya, x: 0.7, emotion: normal}
   cuts:
-  - speaker: reimu
-    text: 1953年に東京でテレビ放送が始まり、翌年には大阪でも始まります。
-    reading: せんきゅうひゃく ごじゅうさんねんに とうきょうで てれび ほうそうが はじまり、よくねんにわ おおさかでも はじまります。
   - speaker: zundamon
     emotion: happy
-    text: おじさん。このテレビ、裏を開けて見せてほしいのだ！
+    text: おじさん。ラジオの部品、ください！
   - speaker: denkiya
     emotion: surprised
-    text: 裏！？ みんな、表の画面を見とるんやで。
+    text: また坊主か。この前の部品は、どないした。
   - speaker: zundamon
-    emotion: thinking
-    text: 箱の中で、どうやって絵が動いてるのか知りたい。
+    emotion: happy
+    text: ラジオになったのだ！ ちゃんと、音が出たのだ！
   - speaker: denkiya
     emotion: thinking
-    text: 番組より中身が気になる子なんて、初めて見たわ。
+    text: ……ほんまに鳴ったんか。
     beat: true
   - speaker: reimu
-    text: 少年のころ自分で組み立てたラジオから音が出て、強く心を動かされたと語っています。
-    reading: しょうねんの ころ じぶんで くみたてた らじおから おとが でて、つよく こころお うごかされたと かたって います。
+    text: 自分で組み立てたラジオから音が出て、強く心を動かされたと本人は語っています。
+    reading: じぶんで くみたてた らじおから おとが でて、つよく こころお うごかされたと ほんにんわ かたって います。
   - speaker: reimu
     text: 雅之は千葉工業大学に進み、テレビの技術者を目指して電子回路を学びます。
     reading: まさゆきわ ちば こうぎょう だいがくに すすみ、てれびの ぎじゅつしゃお めざして でんし かいろお まなびます。
@@ -194,20 +190,19 @@ scenes:
   cuts:
   - speaker: zundamon
     emotion: normal
-    text: 課長。光のセンサーを売る部署に、行かせてください。
+    text: 課長。東京じゃなくて、関西で働きたいんです。
   - speaker: jinji
     emotion: surprised
-    text: もう決まった配属を、変えろと言うんか。
+    text: 東京のコンピューターの部署やぞ。花形やで。
   - speaker: zundamon
-    emotion: happy
-    text: 行きたい人と、入れ替えてもらえれば。
+    emotion: normal
+    text: 関西に残れるなら、どこでもかまいません。
   - speaker: jinji
     emotion: thinking
-    text: ……入社早々、人事に掛け合う新人は初めてや。
-    beat: true
+    text: ……ちょうど、東京に行きたいという新人がおる。入れ替えるか。
   - speaker: reimu
-    text: 雅之は人事課長に掛け合ってほかの人と配属を入れ替え、光センサーの販売に就きます。
-    reading: まさゆきわ じんじ かちょうに かけあって ほかの ひとと はいぞくお いれかえ、ひかり せんさーの はんばいに つきます。
+    text: 入れ替わった先が、たまたま光センサーの販売でした。
+    reading: いれかわった さきが、たまたま ひかり せんさーの はんばいでした。
 - id: ch1_sharp
   title: ''
   background: fc_sharp
@@ -476,42 +471,26 @@ scenes:
   - speaker: zundamon
     emotion: thinking
     text: しかも君しかおらんって、うちの部は5人しかいないのだ。
-- id: ch3_yokuasa
-  title: ''
-  background: fc_denwa
-  stage:
-  - {who: musuko, x: 0.28, scale: 0.8, emotion: normal}
-  - {who: yamauchi, x: 0.7, emotion: normal}
-  cuts:
-  - speaker: reimu
-    text: 翌朝。上村家の電話が鳴ります。
-    reading: よくあさ。うえむらけの でんわが なります。
-  - speaker: musuko
-    emotion: normal
-    text: もしもし、上村です。
-  - speaker: yamauchi
-    emotion: normal
-    text: おはよう。お父さん、おるか。
-  - speaker: musuko
-    emotion: surprised
-    text: ……お父さん！ 社長さんから！
-  - speaker: reimu
-    text: 山内は朝から上村家に電話をかけ、息子と話したこともありました。
-    reading: やまうちわ あさから うえむらけに でんわお かけ、むすこと はなした ことも ありました。
 - id: ch3_yokuasa2
   title: ''
-  background: fc_denwa
+  background: fc_shachoshitsu
   stage:
   - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
   - {who: yamauchi, x: 0.7, emotion: normal}
   cuts:
+  - speaker: reimu
+    text: 翌朝。出社すると、さっそく社長に呼ばれます。
+    reading: よくあさ。しゅっしゃすると、さっそく しゃちょうに よばれます。
   - speaker: yamauchi
     emotion: normal
     text: 上村くん、あれ、どないなった？
   - speaker: zundamon
     emotion: surprised
-    text: 一晩！？ まだ寝ぐせも直ってないのだ！
+    text: 一晩！？ まだカバンも置いてないのだ！
     se: bikkuri
+  - speaker: reimu
+    text: 山内は雅之が家を出たあとに家へ電話をかけて、息子と話すこともありました。
+    reading: やまうちわ まさゆきが いえお でた あとに いええ でんわお かけて、むすこと はなす ことも ありました。
 - id: ch3_sannen
   title: 3年間、保つようにしろ
   background: fc_denwa
@@ -574,7 +553,7 @@ scenes:
     text: 3年真似されない機械を1万円以下で、1年足らずで……。
   - speaker: zundamon
     emotion: sad
-    text: 注文の数が、部下の数より多いのだ。
+    text: 無茶の数だけは、部下の数に負けてないのだ。
     beat: true
 - id: ch3_kotowari
   title: 断られ続けて
@@ -625,9 +604,6 @@ scenes:
   - speaker: zundamon
     emotion: thinking
     text: 仕様書は書けません。このゲームと同じに動けば、それでいい。
-  - speaker: ricoh
-    emotion: surprised
-    text: 目標が、ゲームそのものですか。……やりましょう。
   - speaker: reimu
     text: その技術者は、やろうやろうと乗ってくれたと雅之は語っています。頭の部分には、6502が提案されます。
     reading: その ぎじゅつしゃわ、やろう やろうと のって くれたと まさゆきわ かたって います。あたまの ぶぶんにわ ろくごーまるにが ていあん されます。
@@ -765,13 +741,13 @@ scenes:
     text: 上村くん。これは、あかん。
   - speaker: zundamon
     emotion: surprised
-    text: ……あかん、ですか。
+    text: ……いちばん安くできる案なのに。
   - speaker: yamauchi
     emotion: normal
-    text: 子どもは、本体を抱えて遊ばれへんやろ。
+    text: ……あかんもんは、あかん。
   - speaker: reimu
-    text: デザインは、横井のチームに移されます。
-    reading: でざいんわ、よこいの ちーむに うつされます。
+    text: 横井も異を唱え、デザインは横井のチームに移されます。
+    reading: よこいも いお となえ、でざいんわ よこいの ちーむに うつされます。
 - id: ch4_juji
   title: 十字のボタン
   background: fc_kaihatsu2
@@ -902,16 +878,10 @@ scenes:
     reading: まさゆき ほんにんわ、この はつばいびの ことお おぼえて いないと かたって います。
   - speaker: eigyo
     emotion: sad
-    text: 部長、それと修理の山です。ボタンが押し込まれたまま、戻らないって。
+    text: 部長。工場から、動かへんって連絡が次々に来てます。
   - speaker: zundamon
     emotion: surprised
-    text: 100万回押す試験に、通ったボタンなのに！？
-  - speaker: eigyo
-    emotion: thinking
-    text: みんな、ボタンを斜め前に押し込むように押すんです。
-  - speaker: zundamon
-    emotion: thinking
-    text: 試験の機械は、まっすぐにしか押さないのだ……。
+    text: 発売したばかりなのに……！
     se: chin
 - id: ch5_fuguai
   title: 消える白線
@@ -1046,26 +1016,32 @@ scenes:
     reading: うれはじめると、ぼたんが もどらない せんが きれる てれびが うつらないの みつどもえが おきます。
   - speaker: omochaya
     emotion: angry
-    text: 上村さん。テレビが映らんって、うちに苦情が山ほどや。
+    text: 上村さん。ボタンが戻らん線が切れたって、返品の山や。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100万回押す試験に、通ったボタンなのに……。
+  - speaker: omochaya
+    emotion: thinking
+    text: 子どもは、斜め前に押し込むように押すんや。
   - speaker: zundamon
     emotion: thinking
-    text: ビデオの端子が付いたテレビは、まだ1割ほど。アンテナにつなぐしかないんです。
+    text: 試験の機械は、まっすぐにしか押さないのだ……。
   - speaker: zundamon
     emotion: normal
     text: 直し方の手引きを作ります。お店で、直してもらえませんか。
   - speaker: omochaya
     emotion: surprised
     text: おもちゃ屋が、ゲーム機を修理するんかいな！
-  - speaker: zundamon
-    emotion: normal
-    text: おもちゃ屋さんの歴史で、初めてのことかもしれません。
   - speaker: omochaya
     emotion: thinking
     text: ……おもちゃ屋に、ドライバーが要る時代か。
     beat: true
   - speaker: reimu
-    text: 任天堂は修理の手引きを作り、おもちゃ屋が自分の店で直しました。近所の電器屋も、走り回りました。
-    reading: にんてんどうわ しゅうりの てびきお つくり、おもちゃやが じぶんの みせで なおしました。きんじょの でんきやも はしりまわりました。
+    text: テレビは、ビデオの端子が付いたものがまだ1割ほど。
+    reading: てれびわ、びでおの たんしが ついた ものが まだ いちわりほど。
+  - speaker: reimu
+    text: アンテナへの接続は、近所の電器屋が走り回って直しました。
+    reading: あんてなえの せつぞくわ、きんじょの でんきやが はしりまわって なおしました。
 - id: ch6_namco
   title: 中身を読まれた
   background: fc_kaihatsu
@@ -1105,8 +1081,7 @@ scenes:
   background: fc_heya
   bgm: honwaka_puppu
   stage:
-  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
-  - {who: musuko, x: 0.7, scale: 0.85, emotion: happy}
+  - {who: zundamon, x: 0.4, flip: true, tag: 上村雅之, emotion: surprised}
   cuts:
   - speaker: reimu
     text: 忙しかった雅之はスーパーマリオの開発を知らず、テレビのコマーシャルで初めて知りました。
@@ -1114,42 +1089,16 @@ scenes:
   - speaker: zundamon
     emotion: surprised
     text: ……うちの会社の、新しいゲームなのだ！？
-  - speaker: musuko
-    emotion: happy
-    text: お父さん、学校でみんな言ってるよ。マリオ、持って帰ってきて！
-  - speaker: zundamon
-    emotion: thinking
-    text: マリオ……。誰なのだ、それは。
-  - speaker: musuko
-    emotion: surprised
-    text: お父さんの会社の、ゲームだよ！
+  - speaker: reimu
+    text: 小学6年の息子と中学生の娘は学校でうわさを聞き、持って帰ってきてとせがみます。
+    reading: しょうがく ろくねんの むすこと ちゅうがくせいの むすめわ がっこうで うわさお きき、もって かえって きてと せがみます。
   - speaker: zundamon
     emotion: thinking
     text: 作ってる会社の人間が、子どもに教わるとは。
     beat: true
   - speaker: reimu
-    text: 持ち帰ると、小学6年の息子と中学生の娘は夢中になりました。
-    reading: もちかえると、しょうがく ろくねんの むすこと ちゅうがくせいの むすめわ むちゅうに なりました。
-- id: ch6_urikire
-  title: ''
-  background: fc_toyshop
-  stage:
-  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
-  - {who: omochaya, x: 0.7, emotion: happy}
-  cuts:
-  - speaker: omochaya
-    emotion: happy
-    text: 上村さん、見てや。張り紙を出したで。
-    background: fc_toyshop_urikire
-  - speaker: zundamon
-    emotion: surprised
-    text: マリオとポートピアは売り切れ、入荷未定……！
-  - speaker: reimu
-    text: 雅之はこの張り紙の写真を、のちの取材にも持ってきました。
-    reading: まさゆきわ この はりがみの しゃしんお、のちの しゅざいにも もって きました。
-  - speaker: reimu
-    text: このとき本体は、すでに400万台以上売れていました。
-    reading: この とき ほんたいわ、すでに よんひゃくまんだい いじょう うれて いました。
+    text: 持ち帰ると、子どもたちは夢中になりました。本体は、すでに400万台以上売れていました。
+    reading: もちかえると、こどもたちわ むちゅうに なりました。ほんたいわ、すでに よんひゃくまんだい いじょう うれて いました。
 - id: ch6_hotel
   title: ''
   background: fc_hotel
@@ -1170,6 +1119,23 @@ scenes:
   - speaker: zundamon
     emotion: happy
     text: ……2年前の年末が、うそみたいだ。
+- id: ch6_urikire
+  title: ''
+  background: fc_toyshop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: omochaya, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: omochaya
+    emotion: happy
+    text: 上村さん、見てや。張り紙を出したで。
+    background: fc_toyshop_urikire
+  - speaker: zundamon
+    emotion: surprised
+    text: マリオとポートピアは売り切れ、入荷未定……！
+  - speaker: reimu
+    text: 雅之はこの張り紙の写真を、のちの取材にも持ってきました。
+    reading: まさゆきわ この はりがみの しゃしんお、のちの しゅざいにも もって きました。
 - id: ch6_nes
   title: アメリカで相手にされない
   background: fc_eigyo
@@ -1190,13 +1156,6 @@ scenes:
   - speaker: zundamon
     emotion: sad
     text: 5万台のうち、3割が売れ残ったのか……。
-  - speaker: eigyo
-    emotion: thinking
-    text: 部長。アメリカの人は、それを大成功と言ってます。
-  - speaker: zundamon
-    emotion: surprised
-    text: 3割売れ残って、大成功！？
-    beat: true
   - speaker: reimu
     text: がっかりした雅之でしたが、実はこれでも大成功でした。
     reading: がっかりした まさゆきでしたが、じつわ これでも だいせいこうでした。
@@ -1308,9 +1267,6 @@ scenes:
   - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
   - {who: buka, x: 0.7, emotion: thinking}
   cuts:
-  - speaker: reimu
-    text: 1989年、任天堂はスーパーファミコンにファミコンのソフトを差すアダプタは作らないと発表します。
-    reading: せんきゅうひゃく はちじゅうきゅうねん、にんてんどうわ すーぱーふぁみこんに ふぁみこんの そふとお さす あだぷたわ つくらないと はっぴょう します。
   - speaker: buka
     emotion: thinking
     text: 部長、音の部品はソニーのものに決まりましたね。
@@ -1336,11 +1292,11 @@ scenes:
   - {who: yamauchi, x: 0.7, emotion: thinking}
   cuts:
   - speaker: reimu
-    text: 1998年。京都府の仲立ちで、立命館大学の研究者がゲームを残す計画を持ってきます。
-    reading: せんきゅうひゃく きゅうじゅうはちねん。きょうとふの なかだちで、りつめいかん だいがくの けんきゅうしゃが げーむお のこす けいかくお もって きます。
+    text: 1998年。立命館大学と京都府の人たちが、ゲームの人材育成への協力を求めて任天堂に通ってきます。
+    reading: せんきゅうひゃく きゅうじゅうはちねん。りつめいかん だいがくと きょうとふの ひとたちが、げーむの じんざい いくせいえの きょうりょくお もとめて にんてんどうに かよって きます。
   - speaker: zundamon
     emotion: normal
-    text: 社長。作ったゲームを、大学と一緒に記録して残したいんです。
+    text: 社長、協力しましょう。その代わり、昔のゲームの資料を大学で整理してもらいます。
   - speaker: yamauchi
     emotion: thinking
     text: 売る物を作るんやのうて、残すんか。
@@ -1358,8 +1314,8 @@ scenes:
     text: 立命館の細井浩一たちは何度も任天堂に通い、雅之は会社と社長を説得しました。
     reading: りつめいかんの ほそい こういちたちわ なんども にんてんどうに かよい、まさゆきわ かいしゃと しゃちょうお せっとく しました。
   - speaker: reimu
-    text: 2004年。雅之は任天堂を離れ、立命館大学の教授になります。
-    reading: にせんよねん。まさゆきわ にんてんどうお はなれ、りつめいかん だいがくの きょうじゅに なります。
+    text: 2004年。雅之は定年で開発の一線を退き、立命館大学の教授になります。
+    reading: にせんよねん。まさゆきわ ていねんで かいはつの いっせんお しりぞき、りつめいかん だいがくの きょうじゅに なります。
 - id: ch8_daigaku
   title: ''
   background: fc_daigaku
@@ -1373,16 +1329,19 @@ scenes:
     reading: けんきゅうしつにわ、すーぱーまりおより あとに うまれた がくせいたちが あつまります。
   - speaker: gakusei
     emotion: happy
-    text: 先生、ありがとうございました！ 3回遊んで、やっと分かりました。
+    text: 先生、ありがとうございました！ 3回とも、めっちゃ楽しかったです。
   - speaker: zundamon
     emotion: happy
     text: 3回遊ぶと、みんなお礼を言って帰っていくのだ。
   - speaker: gakusei
     emotion: thinking
-    text: 先生。この上のボタン、何に使うんですか。
+    text: ジャンプのとき、つい十字ボタンの上も押してました。
   - speaker: zundamon
     emotion: happy
-    text: マリオでは使わないボタンだ。それでも押してしまう。そこが面白い。
+    text: マリオの上は、つるを登るときだけ。それでも押すのは、ほかのゲームの癖だ。
+  - speaker: zundamon
+    emotion: happy
+    text: そこが、面白いのだ。
   - speaker: zundamon
     emotion: normal
     text: 100年後に、このゲームがどう遊ばれてるか。それが見たい。
