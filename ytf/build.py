@@ -623,21 +623,71 @@ def collect_se_events(cfg: Config, proj: Project,
     return events
 
 
+# BGM の下ごしらえ。2026-09-30 公開の蚊取り線香で「BGMが無い」「序盤BGM無い」と言われた。
+# 原因は mystery（ytf assets --init のシンセ生成）が低音ばかりの曲で、スマホやイヤホンで
+# 鳴る 250Hz より上だけを測ると -28.4 LUFS（DOVA の曲は -11〜-19）。全体の音量は普通でも
+# 聞こえていなかった。曲ごとの「聞こえる帯域の大きさ」も最大17dB違ったので、
+# 250Hz より上の大きさでそろえる（頭の無音も飛ばす）
+BGM_TARGET_HP_LUFS = -16.0   # 250Hz より上の大きさ。DOVA の手持ち曲の中央値
+# 低音だけで聞こえない自作のシンセ曲。使うとビルドを止める
+BGM_BANNED = {"mystery", "ambient", "warm", "beat"}
+
+
+def _hp_loudness(path: str) -> float | None:
+    """250Hz より上だけの統合ラウドネス（LUFS）。"""
+    import re
+    r = subprocess.run(
+        [ffmpeg_bin(), "-hide_banner", "-nostats", "-i", path, "-af",
+         "highpass=f=250,highpass=f=250,loudnorm=print_format=summary", "-f", "null", "-"],
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    m = re.search(r"Input Integrated:\s+(-?[\d.]+)", r.stderr)
+    return float(m.group(1)) if m else None
+
+
+def prepare_bgm(cfg: Config, src: str) -> str:
+    """頭の無音を飛ばし、250Hz より上の大きさを BGM_TARGET_HP_LUFS にそろえた WAV を返す。
+
+    build/bgm_cache に保存し、元ファイルが変わらなければ使い回す。
+    """
+    p = Path(src)
+    st = p.stat()
+    key = hashlib.sha1(f"{p.resolve()}|{st.st_size}|{st.st_mtime_ns}|"
+                       f"{BGM_TARGET_HP_LUFS}|v2".encode()).hexdigest()[:12]
+    out = cfg.root / "build" / "bgm_cache" / f"{p.stem}_{key}.wav"
+    if out.exists():
+        return str(out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    hp = _hp_loudness(str(p))
+    gain = 0.0 if hp is None else BGM_TARGET_HP_LUFS - hp
+    tmp = out.with_suffix(".tmp.wav")
+    subprocess.run(
+        [ffmpeg_bin(), "-y", "-hide_banner", "-loglevel", "error", "-i", str(p), "-af",
+         "silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.05,"
+         f"volume={gain:.2f}dB,alimiter=limit=0.89:level=false",
+         "-ar", "48000", "-ac", "2", str(tmp)], check=True)
+    tmp.replace(out)
+    print(f"BGM下ごしらえ: {p.name}（250Hz以上 {hp} LUFS → {gain:+.1f}dB）")
+    return str(out)
+
+
 def collect_bgm_regions(cfg: Config, proj: Project,
                         timings: list[CutTiming]) -> list[tuple[float, float, str]]:
     """シーンの bgm: 指定から (開始, 終了, ファイル) のリージョン列を作る。
 
     未指定シーンは直前の曲を継続。切り替わりは章トランジションの頭
-    （カット開始 - lead）に合わせる。
+    （カット開始 - lead）に合わせる。ファイルは prepare_bgm で下ごしらえした物。
     """
     def resolve(name: str) -> str | None:
+        if Path(name).stem in BGM_BANNED:
+            raise SystemExit(f"BGM「{name}」は低音だけでスマホでは聞こえないので使わない"
+                             "（SKILL.md「BGMの選び方」から選び直す）")
         if "/" in name:
             p = cfg.root / name
-            return str(p) if p.exists() else None
+            return prepare_bgm(cfg, str(p)) if p.exists() else None
         for ext in ("mp3", "wav", "m4a"):
             p = cfg.root / "assets" / "bgm" / f"{name}.{ext}"
             if p.exists():
-                return str(p)
+                return prepare_bgm(cfg, str(p))
         return None
 
     script = proj.load_script()

@@ -14,7 +14,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from PIL import Image, ImageDraw, ImageFont  # noqa: E402
+from PIL import Image, ImageDraw, ImageFilter, ImageFont  # noqa: E402
 
 from scripts.gen_drama_bgs import (  # noqa: E402
     H, OUT, W, base, glow, hanging_bulb, tatami_floor, vgrad, wood_floor,
@@ -144,6 +144,32 @@ def ie():
     d.rectangle([1360, 460, 1560, 520], fill=(236, 230, 214))          # 帳面
     hanging_bulb(img, 960, warm=True, ly=40)
     return img
+
+
+def ie_kemuri():
+    """上山家の座敷が除虫菊の煙でもくもく。火鉢でいぶして失敗する場面用。"""
+    import random
+    img = ie().convert("RGBA")
+    rnd = random.Random(7)
+
+    def puff_layer(col, alpha, blur, n, rmin, rmax, ymin, ymax, dy=0):
+        lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        d = ImageDraw.Draw(lay)
+        for _ in range(n):                                          # 丸を寄せた雲の塊
+            cx, cy = rnd.randint(-80, W + 80), rnd.randint(ymin, ymax)
+            for _ in range(6):
+                r = rnd.randint(rmin, rmax)
+                ox, oy = rnd.randint(-r, r), rnd.randint(-r // 2, r // 2)
+                d.ellipse([cx + ox - r, cy + oy + dy - r, cx + ox + r, cy + oy + dy + r],
+                          fill=(*col, alpha))
+        return lay.filter(ImageFilter.GaussianBlur(blur))
+
+    img = Image.alpha_composite(img, Image.new("RGBA", img.size, (150, 150, 146, 60)))
+    rnd.seed(7)
+    img = Image.alpha_composite(img, puff_layer((120, 120, 118), 150, 14, 26, 70, 130, 60, FLOOR, dy=14))
+    rnd.seed(7)
+    img = Image.alpha_composite(img, puff_layer((236, 236, 232), 200, 10, 26, 64, 120, 60, FLOOR))
+    return img.convert("RGB")
 
 
 def hatake():
@@ -302,7 +328,7 @@ LOCATIONS = {
     "kt_ima": ima, "kt_mikan": mikan, "kt_juku": juku, "kt_ie": ie, "kt_hatake": hatake,
     "kt_nouka": nouka, "kt_yado": yado, "kt_koba": koba, "kt_niwa": niwa, "kt_mise": mise,
     "kt_uzu": uzu, "kt_shiryo": shiryo, "kt_koba0": koba0, "kt_mise0": mise0,
-    "kt_geshuku": geshuku,
+    "kt_geshuku": geshuku, "kt_ie_kemuri": ie_kemuri,
 }
 
 CARDS = ["1862", "1886", "1890", "1895", "1902", "1910"]

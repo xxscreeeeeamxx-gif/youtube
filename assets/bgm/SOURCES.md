@@ -38,12 +38,13 @@ PC間の移動はUSBメモリか自分のクラウドドライブで行う（自
 - ほのぼの・日常・ゆる解説: 10do(10℃) / haru_kitchen(春のキッチン) / pastel_house / honwaka_puppu / jitaku_nite
 - 軽快・楽しい・テンポよく: shuffle_shuffle / natsuyasumi / hirusagari / you_and_me
 - しんみり・感動・開発秘話: 223am(2:23 AM)
-- 怪しい・注意喚起・詐欺の話: kinakusai(むむ・・・きな臭いぞ！！)
+- 怪しい・注意喚起・詐欺の話: kinakusai(むむ・・・きな臭いぞ！！)。現代の解説の章には使わない（暗い）
 - シリアス・緊張感: serious(シリアス)
 
 ## 自作（コミット不要・再生成可能）
 
-- ambient / mystery / warm / beat: `ytf assets --init` のシンセ生成
+- ambient / mystery / warm / beat: `ytf assets --init` のシンセ生成。**使わない**（低音ばかりでスマホでは
+  聞こえない。2026-10-01 に「BGMがない」と言われた。build.py の BGM_BANNED でビルドが止まる）
 - pop: MusicGen生成（`ytf bgm`）
 
 切り替えは channel.yaml の video.bgm.file か、`ytf edit` の 🎵BGM ピッカーから。

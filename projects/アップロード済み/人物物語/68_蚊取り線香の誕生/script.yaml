@@ -59,7 +59,7 @@ scenes:
 - id: co_yamashi
   title: ''
   background: kt_nouka
-  bgm: mystery
+  bgm: kinakusai
   stage:
   - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
   - {who: nouka, x: 0.7, emotion: thinking}
@@ -361,8 +361,8 @@ scenes:
     text: ……船より先に、私の腕が限界です。
     se: zukko
   - speaker: reimu
-    text: 東京まで迎えに行き、有田のミカン山を案内して、いくつもの苗を贈ったと伝えられています。
-    reading: とうきょうまで むかえに いき ありだの みかんやまお あんないして、いくつもの なえお おくったと つたえられて います。
+    text: 上山は東京まで迎えに行き、ミカン山を案内して苗を贈りました。
+    reading: うえやまわ とうきょうまで むかえに いき、みかんやまお あんないして なえお おくりました。
 - id: card1886
   title: ''
   background: kt_card_1886
@@ -420,8 +420,8 @@ scenes:
     text: 除虫菊の花には、虫の神経に働く成分が含まれています。
     reading: じょちゅうぎくの はなにわ むしの しんけいに はたらく せいぶんが ふくまれて います。
   - speaker: reimu
-    text: 日本で最初に植えた人ではありませんが、栽培を広めたのは上山だと言われています。
-    reading: にほんで さいしょに うえた ひとでわ ありませんが、さいばいお ひろめたのわ うえやまだと いわれて います。
+    text: 日本で最初に植えた人ではありませんが、栽培を全国に広めたのは上山です。
+    reading: にほんで さいしょに うえた ひとでわ ありませんが、さいばいお ぜんこくに ひろめたのわ うえやまです。
 - id: ch3_nomi
   title: ''
   background: kt_hatake
@@ -573,12 +573,16 @@ scenes:
   - speaker: tenin
     emotion: normal
     text: おがくずも、混ぜておきました。
-  - speaker: zundamon
-    emotion: happy
-    text: これで、蚊が落ちるはずだぞ。
   - speaker: tenin
     emotion: thinking
-    text: ……旦那さん、前が見えません。
+    text: ……でも旦那さん。夏に火鉢って、暑くないですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 蚊を落とすためだ。がまんなのだ。
+  - speaker: tenin
+    emotion: surprised
+    text: ゴホッ！ ……旦那さん、前が見えません。
+    background: kt_ie_kemuri
   - speaker: zundamon
     emotion: surprised
     text: どこだ！ 蚊はどこだ！
@@ -586,24 +590,32 @@ scenes:
     emotion: surprised
     text: 旦那さんこそ、どこですか！
   - speaker: zundamon
-    emotion: surprised
-    text: 煙が、多すぎるのだ！
+    emotion: sad
+    text: 目が……目がしみるのだ……！
   - speaker: tenin
-    emotion: thinking
-    text: 蚊より先に、人が逃げ出します。
-  - speaker: tenin
-    emotion: thinking
-    text: 蚊取りじゃなくて、人取り線香ですよ。
-    se: oti
+    emotion: sad
+    text: ゴホッ、ゴホッ！ 灰まで、顔に飛んできました！
   - speaker: zundamon
-    emotion: thinking
+    emotion: surprised
+    text: うちわだ！ うちわで、煙を追い出すのだ！
+  - speaker: tenin
+    emotion: surprised
+    text: あおいだら、灰が全部こっちに来ます！
+    beat: true
+  - speaker: tenin
+    emotion: sad
+    text: 蚊取りじゃなくて、人取り線香ですよ。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
     text: ……窓を、開けよう。
   - speaker: tenin
     emotion: sad
     text: 旦那さん。蚊は落ちませんでしたけど、私が落ちそうです。
+    se: oti
   - speaker: reimu
-    text: 粉をいぶすやり方は、煙が多すぎて、家の中では使いものになりませんでした。
-    reading: こなお いぶす やりかたわ けむりが おおすぎて、いえの なかでわ つかいものに なりませんでした。
+    text: 粉をいぶすやり方は煙と灰がひどく、家の中では使いものになりませんでした。
+    reading: こなお いぶす やりかたわ けむりと はいが ひどく、いえの なかでわ つかいものに なりませんでした。
 - id: ch6_yado
   title: 宿で出会った線香屋
   background: kt_yado
@@ -769,7 +781,7 @@ scenes:
 - id: ch4_shinbun
   title: 山師から有名人へ
   background: kt_shiryo
-  bgm: mystery
+  bgm: hirusagari
   stage:
   - {who: zundamon, x: 0.2, flip: true, emotion: normal}
   - {who: tsumugi, x: 0.8, emotion: normal}
@@ -821,13 +833,13 @@ scenes:
     text: この土地だけ、ですか。
   - speaker: shusshi
     emotion: happy
-    text: 種を外に出さなければ、もうけは全部我々のものだ。
+    text: 種は、よそに渡さない。そうすれば、もうけは全部我々のものだ。
   - speaker: shusshi
     emotion: normal
     text: 会社を作ります。社長は、あなたにお願いしたい。
   - speaker: zundamon
     emotion: thinking
-    text: ……種は、外に出さないと。
+    text: ……種を、よそには渡さないんですね。
   - speaker: shusshi
     emotion: happy
     text: 当然でしょう。
@@ -849,8 +861,8 @@ scenes:
     telops:
     - {text: 独占より、広げる, size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#6BA3E0", anim: up}
   - speaker: reimu
-    text: 上山が断ったため、その会社はその日のうちに解散した、と伝えられています。
-    reading: うえやまが ことわった ため その かいしゃわ その ひの うちに かいさんしたと つたえられて います。
+    text: 上山が社長を断り、会社はその日のうちに解散しました。
+    reading: うえやまが しゃちょうお ことわり、かいしゃわ その ひの うちに かいさん しました。
 - id: card1895
   title: ''
   background: kt_card_1895
@@ -903,12 +915,12 @@ scenes:
     emotion: happy
     text: 折れやすい細長いものを、丸めてしまうのだ！
   - speaker: reimu
-    text: 妻のゆきが、とぐろを巻く蛇を見て思いついた。会社には、そう伝えられています。
-    reading: つまの ゆきが とぐろお まく へびお みて おもいついた。かいしゃにわ そう つたえられて います。
+    text: 妻のゆきは、とぐろを巻く蛇を見てこの形を思いつきました。
+    reading: つまの ゆきわ、とぐろお まく へびお みて この かたちお おもいつきました。
 - id: ch9_shisaku
   title: 7年かかった渦巻き
   background: kt_koba
-  bgm: mystery
+  bgm: jitaku_nite
   stage:
   - {who: zundamon, x: 0.24, flip: true, tag: 上山英一郎, emotion: thinking}
   - {who: shokunin, x: 0.56, emotion: thinking}
@@ -1050,8 +1062,8 @@ scenes:
     emotion: happy
     text: 外側の端からです。……片方だけですよ。
   - speaker: reimu
-    text: 初めのころの渦巻きは、長さ60センチほどで、6時間ほど燃えたとされています。
-    reading: はじめの ころの うずまきわ ながさ ろくじゅっせんち ほどで、ろくじかん ほど もえたと されて います。
+    text: 初めのころの渦巻きは長さ60センチほどで、6時間ほど燃えました。
+    reading: はじめの ころの うずまきわ ながさ ろくじゅっせんち ほどで、ろくじかん ほど もえました。
     telops:
     - {text: 40分 → およそ6時間, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
 - id: ch11_boraku
@@ -1063,8 +1075,8 @@ scenes:
   - {who: nouka, x: 0.7, emotion: thinking}
   cuts:
   - speaker: reimu
-    text: 1903年、除虫菊が大豊作になり、値段が大きく下がったと伝えられています。
-    reading: せんきゅうひゃく さんねん、じょちゅうぎくが だいほうさくに なり ねだんが おおきく さがったと つたえられて います。
+    text: 1903年。除虫菊が大豊作になり、値段が大きく下がります。
+    reading: せんきゅうひゃく さんねん。じょちゅうぎくが だいほうさくに なり、ねだんが おおきく さがります。
   - speaker: nouka
     emotion: thinking
     text: 上山さん。今年はどこも花が取れすぎて、値がつかんそうだ。
@@ -1113,8 +1125,8 @@ scenes:
     emotion: sad
     text: ……それでも、約束は約束だ。
   - speaker: reimu
-    text: 上山はこのとき、契約どおりの値で買い続けて、店がつぶれかけたと伝えられています。
-    reading: うえやまわ この とき けいやく どおりの ねで かいつづけて、みせが つぶれかけたと つたえられて います。
+    text: 上山は契約どおりの値で買い続け、店は破産寸前まで追い込まれました。
+    reading: うえやまわ けいやく どおりの ねで かいつづけ、みせわ はさん すんぜんまで おいこまれました。
 - id: ch11_senso
   title: ''
   background: kt_hatake
@@ -1127,8 +1139,11 @@ scenes:
     text: 翌年、日露戦争が始まると、戦地の兵士に除虫菊の粉を送ります。
     reading: よくねん にちろ せんそうが はじまると せんちの へいしに じょちゅうぎくの こなお おくります。
   - speaker: reimu
-    text: それをきっかけに、軍から大量の注文が入ったとされます。
-    reading: それお きっかけに ぐんから たいりょうの ちゅうもんが はいったと されます。
+    text: それをきっかけに、軍から大量の注文が入りました。
+    reading: それお きっかけに、ぐんから たいりょうの ちゅうもんが はいりました。
+  - speaker: reimu
+    text: この年はヨーロッパの除虫菊が大凶作になり、海外からも注文が届きます。
+    reading: この としわ よーろっぱの じょちゅうぎくが だいきょうさくに なり、かいがいからも ちゅうもんが とどきます。
   - speaker: nouka
     emotion: surprised
     text: 上山さん。軍から、大きな注文が来たそうだな。
@@ -1216,16 +1231,116 @@ scenes:
   - speaker: reimu
     text: 1919年に会社を作り、のちに大日本除虫菊とします。
     reading: せんきゅうひゃく じゅうきゅうねんに かいしゃお つくり のちに だいにほん じょちゅうぎくと します。
+- id: ch12_ryoji
+  title: 花のふるさとから
+  background: kt_mise
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: surprised}
+  cuts:
   - speaker: reimu
-    text: 1930年、社長の座を長男に譲りました。
-    reading: せんきゅうひゃく さんじゅうねん しゃちょうの ざお ちょうなんに ゆずりました。
+    text: 1929年。上山のもとに、ユーゴスラビアから知らせが届きます。
+    reading: せんきゅうひゃく にじゅうきゅうねん。うえやまの もとに ゆーごすらびあから しらせが とどきます。
+  - speaker: tenin
+    emotion: surprised
+    text: 旦那さん。ユーゴスラビアって、どこの国です？
+  - speaker: zundamon
+    emotion: happy
+    text: 除虫菊の、ふるさとの国だ。
+  - speaker: tenin
+    emotion: thinking
+    text: 花のふるさとが、旦那さんに何の用です？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……大阪で、うちの国の名誉領事をやってほしいと。
+  - speaker: tenin
+    emotion: surprised
+    text: 領事！？ ミカン屋の旦那さんが、外国の代表ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 除虫菊の使い道を広げて、たくさん作れるようにしたお礼なのだ。
+  - speaker: tenin
+    emotion: happy
+    text: 山師から、領事さん。出世の幅が広すぎます。
+    beat: true
   - speaker: reimu
-    text: 1943年、上山英一郎は81歳で亡くなりました。
-    reading: せんきゅうひゃく よんじゅうさんねん うえやま えいいちろうわ はちじゅういっさいで なくなりました。
+    text: 上山は、大阪駐在のユーゴスラビア名誉領事に任命されました。
+    reading: うえやまわ おおさか ちゅうざいの ゆーごすらびあ めいよ りょうじに にんめい されました。
+- id: ch12_jinja
+  title: 生きているうちに神様
+  background: kt_hatake
+  bgm: amacha_hoshizora
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: normal}
+  - {who: nouka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1930年。広島県尾道の向島で、除虫菊を育てる農家の人たちが神社を建てます。
+    reading: せんきゅうひゃく さんじゅうねん。ひろしまけん おのみちの むかいしまで じょちゅうぎくお そだてる のうかの ひとたちが じんじゃお たてます。
+  - speaker: nouka
+    emotion: happy
+    text: 上山さん。島のみんなで、神社を建てたよ。
+  - speaker: zundamon
+    emotion: happy
+    text: それは、めでたい。何の神様ですか。
+  - speaker: nouka
+    emotion: happy
+    text: あんただよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボ、ボクが神様！？ まだ生きてるのだ！
+    se: bikkuri
+  - speaker: nouka
+    emotion: normal
+    text: 除虫菊のおかげで、島の暮らしが楽になった。そのお礼だ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……種を配って、山師と呼ばれたころもあったのに。
+  - speaker: nouka
+    emotion: happy
+    text: 山師から神様まで、えらい出世だな。
+    beat: true
+  - speaker: reimu
+    text: 除虫菊神社は今も向島にあり、毎年5月にお祭りが開かれています。
+    reading: じょちゅうぎく じんじゃわ いまも むかいしまに あり、まいとし ごがつに おまつりが ひらかれて います。
+  - speaker: reimu
+    text: 同じ1930年、上山は社長の座を長男の勘太郎に譲りました。
+    reading: おなじ せんきゅうひゃく さんじゅうねん、うえやまわ しゃちょうの ざお ちょうなんの かんたろうに ゆずりました。
+- id: ch12_wakare
+  title: ''
+  background: kt_ie
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上山英一郎, emotion: sad}
+  - {who: tenin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1942年。社長の勘太郎が、出張先のシンガポールで飛行機の事故に遭い亡くなります。
+    reading: せんきゅうひゃく よんじゅうにねん。しゃちょうの かんたろうが しゅっちょうさきの しんがぽーるで ひこうきの じこに あい なくなります。
+  - speaker: tenin
+    emotion: sad
+    text: ……旦那さん。シンガポールから、知らせが。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+  - speaker: zundamon
+    emotion: sad
+    text: 親より先に行くやつが、あるか。
+    se: namida
+  - speaker: reimu
+    text: 1943年、三男の英夫が社長を継ぎます。
+    reading: せんきゅうひゃく よんじゅうさんねん、さんなんの ひでおが しゃちょうお つぎます。
+  - speaker: reimu
+    text: 同じ年、上山は蚊取り線香を発明した功績で勲六等瑞宝章を受けます。
+    reading: おなじ とし、うえやまわ かとりせんこうお はつめいした こうせきで くんろくとう ずいほうしょうお うけます。
+  - speaker: reimu
+    text: そしてその年の9月、上山英一郎は81歳で亡くなりました。
+    reading: そして その としの くがつ、うえやま えいいちろうわ はちじゅういっさいで なくなりました。
 - id: ch13_sanchi
   title: 日本中に咲いた花
   background: kt_hatake
-  bgm: kinakusai
+  bgm: pastel_house
   stage:
   - {who: zundamon, x: 0.2, flip: true, emotion: normal}
   - {who: tsumugi, x: 0.8, emotion: normal}
@@ -1235,18 +1350,20 @@ scenes:
     text: 上山さんが種を配った除虫菊は、[日本中|にほんじゅう]に広がったの。
   - speaker: tsumugi
     emotion: normal
-    text: 1925年には北海道の石狩だけで、全国の畑の7割近くを占めたそうよ。
+    text: 1925年には、北海道の石狩だけで全国の畑の7割近くを占めたの。
   - speaker: zundamon
     emotion: surprised
     text: 北海道が！？ 和歌山は！？
-    se: gaan
   - speaker: tsumugi
     emotion: thinking
     text: 7割よ。ほぼ北海道の花ね。
     beat: true
   - speaker: tsumugi
     emotion: normal
-    text: 1935年ごろが、生産が一番多かったの。
+    text: 1935年には、日本の除虫菊が世界の生産の9割を占めたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 世界の9割！？ 山師の種が、世界一なのだ。
   - speaker: tsumugi
     emotion: normal
     text: 戦後は瀬戸内の因島が、一面の白い花で有名になったわ。
@@ -1256,7 +1373,7 @@ scenes:
 - id: ch13_shikumi
   title: 燃やさずに温める
   background: kt_uzu
-  bgm: curious
+  bgm: 10do
   stage:
   - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
   - {who: tsumugi, x: 0.8, emotion: normal}
@@ -1386,7 +1503,7 @@ scenes:
 - id: ch14_ronsou
   title: 煙は体に悪い？
   background: kt_shiryo
-  bgm: mystery
+  bgm: shuffle_shuffle
   stage:
   - {who: zundamon, x: 0.2, flip: true, emotion: happy}
   - {who: tsumugi, x: 0.8, emotion: normal}
@@ -1439,7 +1556,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: それ、蚊を招き入れながら煙だけ出してるわ。
-    se: zukko
+    se: tenten
   - speaker: tsumugi
     emotion: normal
     text: 人のほかに、気をつけたいのが生き物のほう。
@@ -1469,10 +1586,10 @@ scenes:
     text: ボクには平気なのに、金魚には効くのだ？
   - speaker: tsumugi
     emotion: normal
-    text: 人の体は、この成分を早く分解できると言われてるの。
+    text: 人の体は、この成分を早く分解できるの。
   - speaker: tsumugi
     emotion: normal
-    text: 虫や魚は、それが苦手とされてるわ。
+    text: 虫や魚は、それが苦手なの。
   - speaker: zundamon
     emotion: sad
     text: 金魚、ごめんなのだ。
@@ -1492,7 +1609,7 @@ scenes:
     text: 世界中か。
   - speaker: tsumugi
     emotion: normal
-    text: インドネシアだけで、1年で40億巻ほどらしいわ。
+    text: インドネシアだけで、1年に40億巻ほど売れてるの。
   - speaker: zundamon
     emotion: happy
     text: ボクも作って売ったら、大金持ちなのだ。
