@@ -142,6 +142,22 @@ def mura():
     return img
 
 
+def fudo():
+    """栃木・多功の不動尊。小さなお堂と、境内の大きな榎（棟方志功が歓喜木と名付けた）。"""
+    img = vgrad((W, H), (168, 204, 228), (226, 232, 220))
+    d = _d(img)
+    d.polygon([(0, 560), (500, 420), (1100, 500), (1920, 400), (W, 600), (0, 600)], fill=(122, 150, 128))
+    d.rectangle([0, 600, W, H], fill=(196, 182, 150))                       # 境内の土
+    d.rectangle([1180, 440, 1640, 700], fill=(150, 92, 60))                 # お堂
+    d.polygon([(1120, 450), (1410, 330), (1700, 450)], fill=(80, 70, 66))   # 屋根
+    d.rectangle([1340, 560, 1480, 700], fill=(70, 44, 34))
+    d.rectangle([1150, 700, 1670, 730], fill=(170, 160, 140))               # 石段
+    d.rectangle([330, 300, 420, 720], fill=(104, 82, 60))                   # 榎の幹
+    for cx, cy, r in ((380, 260, 210), (240, 330, 150), (520, 320, 160), (380, 150, 150)):
+        d.ellipse([cx - r, cy - r * 0.8, cx + r, cy + r * 0.8], fill=(78, 120, 72))
+    return img
+
+
 def tsushin():
     """大正の通信社の部屋。机、原稿の山、ろうそく立て型の電話。"""
     img = _rgb(base((222, 212, 192), (200, 190, 170)))
@@ -565,8 +581,75 @@ def hotel():
     return img
 
 
+# ---- 場面の途中で差し替える「状況が変わった」背景（2026-10-01 ユーザー「煙の演出いいね。こういうの増やしたい」）
+def mingei_afure():
+    """民芸の座敷。器が棚に入りきらず、畳の上まであふれている。"""
+    img = mingei()
+    d = _d(img)
+    cols = [(120, 80, 50), (60, 80, 110), (170, 140, 90), (90, 110, 90), (150, 70, 50)]
+    k = 0
+    for row, y in enumerate((830, 760, 900)):                                    # 畳の上に並ぶ器
+        for x in range(120 + row * 40, 1800, 150):
+            if 700 < x < 1220 and y < 880:
+                continue
+            col = cols[k % len(cols)]
+            k += 1
+            d.ellipse([x, y - 80, x + 80, y], fill=col)
+            d.rectangle([x + 22, y - 98, x + 58, y - 72], fill=col)
+    for x, y in ((820, 470), (900, 420), (1000, 470), (1080, 430)):              # 棚の上にも積む
+        col = cols[(x // 10) % len(cols)]
+        d.ellipse([x, y - 70, x + 70, y], fill=col)
+    return img
+
+
+def zukai_fukuro():
+    """図解: 袋をつけすぎて、車の中が袋でぱんぱん。窓から袋がはみ出している。"""
+    img = zukai()
+    d = _d(img)
+    x0, y0, w = 620, 720, 800
+    s = w / 1000
+    for cx, cy, r in ((450, -230, 120), (620, -240, 130), (300, -200, 90), (760, -200, 100),
+                      (540, -330, 110), (380, -330, 80), (700, -320, 90), (880, -150, 70)):
+        d.ellipse([x0 + (cx - r) * s, y0 + (cy - r * 0.8) * s, x0 + (cx + r) * s, y0 + (cy + r * 0.8) * s],
+                  fill=(250, 206, 110), outline=(200, 140, 40), width=4)
+    return img
+
+
+def jikken_mae():
+    """実験施設。作動の前で、袋はまだたたまれている。"""
+    img = jikken()
+    d = _d(img)
+    d.rectangle([915, 430, 1090, 630], fill=(196, 198, 202))                     # ふくらんだ袋を消す
+    d.rectangle([1050, 600, 1100, 660], fill=(240, 236, 220), outline=(170, 160, 140), width=3)  # たたんだ袋
+    return img
+
+
+def gic3_seikyu():
+    """GIC の机。特許証の上に、特許料と研究費の請求書が山積み。"""
+    img = gic3()
+    d = _d(img)
+    for pile, (px, n) in enumerate(((760, 16), (960, 22))):                    # 机の上に2つの山
+        for k in range(n):
+            x, y = px + ((k * 7) % 5 - 2) * 6, 600 - k * 16
+            d.rectangle([x, y, x + 170, y + 16], fill=(246, 244, 236), outline=(150, 140, 120), width=2)
+            d.line([(x + 14, y + 8), (x + 120, y + 8)], fill=(190, 60, 50), width=3)
+    return img
+
+
+def crash_yama():
+    """衝突試験場。ぶつけた試験車が何台も並んでいる。"""
+    img = crash()
+    d = _d(img)
+    for k, x in enumerate((60, 330, 1300, 1560)):
+        _car_side(d, x, 780 + (k % 2) * 30, 240, col=(196 - k * 8, 196, 204), win=(210, 224, 232))
+        d.line([(x + 230, 700 + (k % 2) * 30), (x + 200, 760 + (k % 2) * 30)], fill=(40, 40, 44), width=6)
+    return img
+
+
 LOCATIONS = {
-    "kb_kuruma": kuruma, "kb_kuruma2": kuruma2, "kb_mura": mura, "kb_tsushin": tsushin,
+    "kb_kuruma": kuruma, "kb_kuruma2": kuruma2, "kb_mura": mura, "kb_tsushin": tsushin, "kb_fudo": fudo,
+    "kb_mingei_afure": mingei_afure, "kb_zukai_fukuro": zukai_fukuro, "kb_jikken_mae": jikken_mae,
+    "kb_gic3_seikyu": gic3_seikyu, "kb_crash_yama": crash_yama,
     "kb_kojo": kojo, "kb_kojo2": kojo2, "kb_jimusho": jimusho, "kb_mingei": mingei,
     "kb_gic": gic, "kb_gic2": gic2, "kb_gic3": gic3, "kb_gic_mono": gic_mono, "kb_hikouki": hikouki,
     "kb_zukai": zukai, "kb_yanase": yanase, "kb_jikken": jikken, "kb_benz": benz,

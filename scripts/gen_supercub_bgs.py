@@ -433,6 +433,38 @@ def kotto():
     return img
 
 
+def kuko():
+    """羽田空港のロビー（1950〜70年代）。大きな窓の外に旅客機、長椅子。"""
+    img = _rgb(base((214, 214, 206), (196, 196, 188)))
+    wood_floor(img, FLOOR, col=(150, 146, 136), line=(130, 126, 118))
+    d = _d(img)
+    d.rectangle([120, 150, 1800, 620], fill=(176, 206, 230))                    # 大きな窓
+    for x in range(120, 1801, 280):
+        d.line([(x, 150), (x, 620)], fill=(90, 90, 96), width=10)
+    d.rectangle([120, 150, 1800, 620], outline=(90, 90, 96), width=12)
+    d.ellipse([700, 430, 1260, 500], fill=(236, 238, 240))                       # 旅客機の胴体
+    d.polygon([(900, 460), (1060, 460), (1000, 360), (960, 360)], fill=(214, 216, 220))
+    d.polygon([(1220, 470), (1300, 380), (1320, 470)], fill=(214, 216, 220))
+    d.rectangle([0, 600, W, 630], fill=(150, 150, 140))                          # 滑走路
+    for x in (200, 1460):                                                        # 長椅子
+        d.rectangle([x, 760, x + 300, 800], fill=(110, 90, 70))
+    return img
+
+
+def butsudan():
+    """藤沢の家の座敷。仏壇と位牌。本田が殿堂のメダルを掛ける場面。"""
+    img = _rgb(base((214, 202, 180), (196, 184, 160)))
+    tatami_floor(img, FLOOR)
+    d = _d(img)
+    d.rectangle([760, 180, 1160, 700], fill=(70, 46, 30))                       # 仏壇
+    d.rectangle([800, 220, 1120, 660], fill=(120, 84, 40))
+    d.rectangle([930, 300, 990, 520], fill=(30, 24, 20))                         # 位牌
+    d.rectangle([920, 290, 1000, 310], fill=(190, 150, 70))
+    d.ellipse([850, 560, 900, 610], fill=(196, 160, 80))                         # 花立て・香炉
+    d.ellipse([1020, 560, 1070, 610], fill=(196, 160, 80))
+    return img
+
+
 def nenpi():
     """図解: 1リットルで何キロ走るか。キャラの間（x600〜1320）に収める。"""
     img = vgrad((W, H), (244, 244, 238), (226, 230, 226))
@@ -513,6 +545,85 @@ def koukoku():
     return img
 
 
+# ---- 場面の途中で差し替える「状況が変わった」背景（2026-10-01 ユーザー「煙の演出いいね。こういうの増やしたい」）
+def ie_hikkou():
+    """座敷のちゃぶ台に、宛名書きの封筒の山と筆と硯。"""
+    img = ie()
+    d = _d(img)
+    for pile, (px, n) in enumerate(((835, 12), (975, 16))):                     # ちゃぶ台の上に2つの山
+        for k in range(n):
+            x, y = px + ((k * 5) % 3 - 1) * 5, 700 - k * 14
+            d.rectangle([x, y, x + 120, y + 14], fill=(236, 226, 200), outline=(170, 150, 120))
+    d.rectangle([1150, 950, 1230, 970], fill=(40, 40, 44))                       # 硯（畳の上）
+    d.line([(1240, 960), (1320, 930)], fill=(60, 40, 30), width=6)               # 筆
+    return img
+
+
+def honsha_henji():
+    """本社の机に、全国の自転車店からの返事の封筒が山になっている。"""
+    img = honsha()
+    d = _d(img)
+    import random as _r
+    rnd = _r.Random(8)
+    for _ in range(160):
+        x, y = rnd.uniform(560, 1360), rnd.uniform(420, 900)
+        if y < 600 and not (700 < x < 1220):
+            continue
+        d.rectangle([x, y, x + 90, y + 56], fill=rnd.choice([(236, 226, 200), (244, 240, 230), (226, 214, 190)]),
+                    outline=(170, 150, 120))
+    return img
+
+
+def kinai_yoru():
+    """夜の客室。明かりを落とし、窓の外は真っ暗。"""
+    img = kinai()
+    d = _d(img)
+    for x in (720, 1040):
+        d.rounded_rectangle([x, 200, x + 160, 380], radius=60, fill=(24, 30, 60), outline=(120, 116, 110), width=10)
+    d.ellipse([760, 230, 790, 260], fill=(240, 240, 210))                        # 窓の月
+    from PIL import Image as _I
+    veil = _I.new("RGB", img.size, (30, 34, 60))
+    return _I.blend(img, veil, 0.45)
+
+
+def koukoku_mae():
+    """広告の事務所。原画の板はまだ白紙。"""
+    img = koukoku()
+    d = _d(img)
+    d.rectangle([728, 128, 1192, 512], fill=(250, 248, 240))
+    return img
+
+
+def koukoku_yama():
+    """広告の事務所。白紙の板の前に、丸めたボツ案が山になっている。"""
+    img = koukoku_mae()
+    d = _d(img)
+    import random as _r
+    rnd = _r.Random(4)
+    for _ in range(70):
+        x, y = rnd.uniform(560, 1360), rnd.uniform(760, 960)
+        r = rnd.uniform(26, 44)
+        d.ellipse([x - r, y - r * 0.8, x + r, y + r * 0.8], fill=(246, 244, 236), outline=(170, 166, 156), width=3)
+        d.line([(x - r * 0.5, y), (x + r * 0.3, y - r * 0.3)], fill=(190, 186, 176), width=2)
+    for k in range(10):                                                          # 製図台の上にも
+        x = 820 + k * 32
+        d.ellipse([x, 590 - (k % 3) * 18, x + 50, 630 - (k % 3) * 18], fill=(246, 244, 236), outline=(170, 166, 156), width=3)
+    return img
+
+
+def suzuka_full():
+    """鈴鹿製作所が完成。工場の前に、できたてのスーパーカブがずらりと並ぶ。"""
+    img = suzuka()
+    d = _d(img)
+    d.rectangle([700, 420, 1240, 700], fill=(220, 222, 226))                    # 壁を張った工場
+    for x in range(720, 1240, 90):
+        d.rectangle([x, 480, x + 50, 540], fill=(160, 190, 220))
+    for row in range(2):
+        for k in range(9):
+            _cub(d, 120 + k * 200 + row * 60, 860 + row * 100, 0.55)
+    return img
+
+
 LOCATIONS = {
     "sc_machi": machi, "sc_machi2": machi2, "sc_ie": ie, "sc_kouzai": kouzai, "sc_kiko": kiko,
     "sc_zashiki": zashiki, "sc_honsha": honsha, "sc_honsha2": honsha2, "sc_kinai": kinai,
@@ -520,6 +631,9 @@ LOCATIONS = {
     "sc_zaimoku": zaimoku, "sc_hanbaiten": hanbaiten, "sc_soba": soba, "sc_suzuka": suzuka,
     "sc_la": la, "sc_kaigou": kaigou, "sc_kotto": kotto, "sc_nenpi": nenpi, "sc_ronsou": ronsou,
     "sc_gendai": gendai, "sc_kumiai": kumiai, "sc_koukoku": koukoku,
+    "sc_kuko": kuko, "sc_butsudan": butsudan, "sc_ie_hikkou": ie_hikkou, "sc_honsha_henji": honsha_henji,
+    "sc_kinai_yoru": kinai_yoru, "sc_koukoku_mae": koukoku_mae, "sc_koukoku_yama": koukoku_yama,
+    "sc_suzuka_full": suzuka_full,
 }
 
 CARDS = ["1910", "1934", "1939", "1949", "1956", "1957", "1958", "1960", "1973", "1988"]

@@ -1,0 +1,1432 @@
+meta:
+  title: 【エアバッグの誕生】14か国で特許を取ったのに、1台も使われなかった発明家【ずんだもん解説】
+  slug: kobori-airbag-v2
+  summary: ハンドルの真ん中に入っている、エアバッグ。1960年代、東京の寺の境内にある小さな仕事場で、この仕組みに取り組んだ発明家がいました。クレーン会社の経営を譲ったあとの小堀保三郎です。大学や防衛庁の実験隊の協力を得て、ぶつかった瞬間に袋をふくらませる装置を形にしていきます。その発明は、世界の自動車会社や国にどう受け止められたのか。仕組みの解説とあわせて、再現ドラマでたどります。
+  tags:
+  - エアバッグ
+  - 小堀保三郎
+  - 自動車
+  - 交通安全
+  - 発明
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 技術史
+  - 雑学
+  thumbnail:
+    top: 14か国で特許
+    bottom: エアバッグの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: chichi
+    label: 父
+    voice: 13
+    pitch: -0.1
+  - id: senpai
+    label: 先輩記者
+    voice: 13
+    pitch: 0.04
+  - id: kouin
+    label: 工員
+    voice: 12
+    pitch: 0.1
+  - id: joumuin
+    label: 乗務員
+    voice: 8
+    pitch: 0.1
+  - id: oguchi
+    label: 小口泰平
+    voice: 12
+    pitch: 0.02
+  - id: yanase
+    label: 梁瀬次郎
+    voice: 13
+    pitch: -0.04
+  - id: taiin
+    label: 隊員
+    voice: 12
+    pitch: -0.06
+  - id: gishi
+    label: 技師
+    voice: 13
+    pitch: 0.08
+  - id: yakunin
+    label: 役人
+    voice: 13
+    pitch: 0.12
+  - id: munakata
+    label: 棟方志功
+    voice: 12
+    pitch: 0.06
+scenes:
+- id: co_zenrei
+  title: ''
+  background: kb_unyusho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: yakunin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1960年代の東京。60代の発明家が、事故のときにふくらむ袋を国の役所へ持ち込みます。
+    reading: せんきゅうひゃく ろくじゅうねんだいの とうきょう。ろくじゅうだいの はつめいかが、じこの ときに ふくらむ ふくろお くにの やくしょえ もちこみます。
+  - speaker: zundamon
+    emotion: normal
+    text: この袋があれば、事故のけがを減らせるはずです。
+  - speaker: yakunin
+    emotion: thinking
+    text: なるほど。で、これはアメリカやヨーロッパでやってるの？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……え？
+  - speaker: yakunin
+    emotion: normal
+    text: 前例がないんじゃ、ねえ。
+    se: don
+  - speaker: zundamon
+    emotion: sad
+    text: ……前例がないから、特許なんです。
+  - speaker: reimu
+    text: この男は、小堀保三郎。14の国で特許を取ったエアバッグは、1台の車にも積まれませんでした。
+    reading: この おとこわ こぼり やすざぶろう。じゅうよんの くにで とっきょお とった えあばっぐわ、いちだいの くるまにも つまれませんでした。
+- id: hook
+  title: ''
+  background: kb_kuruma
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: エアバッグって、ハンドルの真ん中に入ってるあれ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。今は、ほとんどの車に付いてるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ふかふかなら、昼寝の枕にちょうどいいのだ。ここを押せば出てくる？
+  - speaker: tsumugi
+    emotion: surprised
+    text: 待って、そこは……
+  - speaker: zundamon
+    emotion: surprised
+    text: ……プーって鳴ったのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: それはクラクション。袋は、ぶつかったときしか出ないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は当たり前のこの袋を、60年前に考えた[日本人|にほんじん]がいたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: なのに、1台も使われなかったのか。
+    telops:
+    - {text: なぜ使われなかった？, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: どうしてそうなったのか。始まりは、栃木の農村よ。
+- id: card1899
+  title: ''
+  background: kb_card_1899
+  cuts:
+  - speaker: reimu
+    text: 1899年。栃木県の農村で、小堀保三郎が生まれます。
+    reading: せんはっぴゃく きゅうじゅうきゅうねん。とちぎけんの のうそんで こぼり やすざぶろうが うまれます。
+- id: ch1_mura
+  title: 三男の奉公
+  background: kb_mura
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, scale: 0.85, emotion: normal}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 今の上三川町のあたりです。保三郎は、小堀家の三男でした。
+    reading: いまの かみのかわまちの あたりです。やすざぶろうわ こぼりけの さんなんでした。
+  - speaker: chichi
+    emotion: normal
+    text: 保三郎。小学校を出たら、奉公に行くことになったぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家を、出るのだ？
+  - speaker: chichi
+    emotion: thinking
+    text: お前は三男だ。外へ出て、自分の力で身を立てなさい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 奉公って、何をするの？
+  - speaker: chichi
+    emotion: normal
+    text: よその家に住み込んで、働きながら仕事を覚えるんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 住み込み……ごはんは、出る？
+  - speaker: chichi
+    emotion: surprised
+    text: ……まず、そこか。
+    se: hammer
+  - speaker: zundamon
+    emotion: happy
+    text: 大事なことなのだ。おかわりできるかも、聞いておいて。
+  - speaker: chichi
+    emotion: thinking
+    text: 奉公先に、おかわりの交渉をする親がいるか。
+    beat: true
+  - speaker: reimu
+    text: 1912年。小学校を終えた保三郎は、奉公に出ます。
+    reading: せんきゅうひゃく じゅうにねん。しょうがっこうお おえた やすざぶろうわ ほうこうに でます。
+- id: card1924
+  title: ''
+  background: kb_card_1924
+  cuts:
+  - speaker: reimu
+    text: 1924年。保三郎は大阪の通信社で、記者になっていました。
+    reading: せんきゅうひゃく にじゅうよねん。やすざぶろうわ おおさかの つうしんしゃで きしゃに なって いました。
+- id: ch1_kisha
+  title: 通信社の記者
+  background: kb_tsushin
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: senpai
+    emotion: angry
+    text: 小堀くん、原稿はまだか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 今、[書き上がりました|かきあがりました]！
+  - speaker: senpai
+    emotion: normal
+    text: どれどれ……また工場の記事か。
+  - speaker: zundamon
+    emotion: happy
+    text: 大きな機械が、重い鉄をひょいと持ち上げてたんです。
+  - speaker: senpai
+    emotion: thinking
+    text: 君の記事は、いつも人より機械のほうが詳しいな。
+  - speaker: zundamon
+    emotion: happy
+    text: 社長の名前は忘れましたけど、モーターの馬力は覚えてます。
+  - speaker: senpai
+    emotion: angry
+    text: 逆だ。記者なら、名前を先に覚えろ。
+    se: tsukkomi
+  - speaker: senpai
+    emotion: happy
+    text: ……君は、記者より作る側のほうが向いてるんじゃないか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 作る側……。
+  - speaker: reimu
+    text: 1934年には、大阪電気鉄道の嘱託として働きます。
+    reading: せんきゅうひゃく さんじゅうよねんにわ おおさか でんき てつどうの しょくたくとして はたらきます。
+- id: card1937
+  title: ''
+  background: kb_card_1937
+  cuts:
+  - speaker: reimu
+    text: 1937年。保三郎は尼崎で、自分の工場を始めます。
+    reading: せんきゅうひゃく さんじゅうななねん。やすざぶろうわ あまがさきで じぶんの こうじょうお はじめます。
+- id: ch2_kojo
+  title: クレーンの工場
+  background: kb_kojo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kouin
+    emotion: happy
+    text: 社長。大阪工機製作所の看板、掛け終わりました！
+  - speaker: zundamon
+    emotion: happy
+    text: 今日から、ここでクレーンを作るぞ！
+    beat: true
+  - speaker: kouin
+    emotion: normal
+    text: 天井のクレーン、試しに動かしてみますか。
+  - speaker: zundamon
+    emotion: happy
+    text: 動かせ！ 人が持てない物を、上から吊って運ぶんだ。
+  - speaker: kouin
+    emotion: normal
+    text: 鉄の塊を[担いだら|かついだら]、腰を痛めますからね。
+  - speaker: zundamon
+    emotion: normal
+    text: 機械に任せれば、けがをする人も減る。
+  - speaker: kouin
+    emotion: happy
+    text: 社長、記者だったのに機械に詳しいですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 記者のころから、工場ばかり見て回ってたからな。
+  - speaker: kouin
+    emotion: thinking
+    text: ……それ、記者の仕事はしてたんですか。
+    beat: true
+- id: ch2_munakata
+  title: 民芸の仲間
+  background: kb_mingei
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: munakata, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1939年ごろから、保三郎は民芸の人たちと付き合うようになります。
+    reading: せんきゅうひゃく さんじゅうきゅうねんごろから、やすざぶろうわ みんげいの ひとたちと つきあう ように なります。
+  - speaker: reimu
+    text: 名もない職人が作る、毎日の道具の美しさを大事にする考え方です。
+    reading: なも ない しょくにんが つくる、まいにちの どうぐの うつくしさお だいじに する かんがえかたです。
+  - speaker: munakata
+    emotion: surprised
+    text: 小堀さん、また器が増えましたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎日使う器こそ、きれいなんだ。
+  - speaker: munakata
+    emotion: happy
+    text: 分かります。使う人の手に、なじんだ形ですから。
+  - speaker: zundamon
+    emotion: happy
+    text: ……ただ、棚にもう入りきらない。
+    background: kb_mingei_afure
+  - speaker: munakata
+    emotion: thinking
+    text: 使う前に、置く場所が要りますね。
+    beat: true
+  - speaker: reimu
+    text: 保三郎は版画家の棟方志功を、まだ売れないころから支えました。
+    reading: やすざぶろうわ はんがかの むなかた しこうお、まだ うれない ころから ささえました。
+  - speaker: reimu
+    text: 民芸運動を始めた柳宗悦や、陶芸家の浜田庄司とも親しくしました。
+    reading: みんげい うんどうお はじめた やなぎ むねよしや、とうげいかの はまだ しょうじとも したしく しました。
+- id: ch2_kojo2
+  title: 飛行機のエンジン
+  background: kb_kojo2
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1941年、工場を大阪の城東区へ移します。
+    reading: せんきゅうひゃく よんじゅういちねん、こうじょうお おおさかの じょうとうくえ うつします。
+  - speaker: reimu
+    text: 作ったのは、軍用機のエンジンを取り付けるための小さなクレーンでした。
+    reading: つくったのわ、ぐんようきの えんじんお とりつける ための ちいさな くれーんでした。
+  - speaker: kouin
+    emotion: surprised
+    text: 社長！ 飛行機の工場から、また注文です！
+  - speaker: zundamon
+    emotion: thinking
+    text: エンジンは重いのに、ぴったりの位置に下ろさなきゃいけない。
+  - speaker: kouin
+    emotion: thinking
+    text: 少しでもずれたら、ボルトの穴が合いませんからね。
+  - speaker: zundamon
+    emotion: happy
+    text: だから、ゆっくり細かく動くクレーンを作る。
+- id: ch2_sengo
+  title: 炭鉱の機械
+  background: kb_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 戦争が終わると、保三郎は炭鉱の機械の研究会を作ります。
+    reading: せんそうが おわると やすざぶろうわ たんこうの きかいの けんきゅうかいお つくります。
+  - speaker: kouin
+    emotion: surprised
+    text: 社長、今度は炭鉱ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 石炭を掘らなきゃ、工場も汽車も動かないからな。
+- id: ch2_tako
+  title: 歓喜木
+  background: kb_fudo
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: happy}
+  - {who: munakata, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 昭和20年代。保三郎は棟方志功を、栃木の実家に招きます。
+    reading: しょうわ にじゅうねんだい。やすざぶろうわ むなかた しこうお とちぎの じっかに まねきます。
+  - speaker: reimu
+    text: 多功の不動尊は、保三郎が昭和10年代に私財で直したお堂です。
+    reading: たこうの ふどうそんわ、やすざぶろうが しょうわ じゅうねんだいに しざいで なおした おどうです。
+  - speaker: zundamon
+    emotion: happy
+    text: 棟方さん。ここなら静かで、版画に打ち込めるだろう。
+  - speaker: munakata
+    emotion: happy
+    text: ありがとうございます。……あの大きな木は、何の木です？
+  - speaker: zundamon
+    emotion: normal
+    text: 榎だ。子どものころから、ずっとここに立ってる。
+  - speaker: munakata
+    emotion: surprised
+    text: 枝が、両手を上げて喜んでるみたいだ。
+  - speaker: munakata
+    emotion: happy
+    text: この木は、歓喜木です。今日から、そう呼びましょう。
+  - speaker: zundamon
+    emotion: surprised
+    text: 人の家の木に、もう名前を付けたのだ。
+    beat: true
+  - speaker: reimu
+    text: 棟方は長く逗留し、この榎を歓喜木と名付けました。
+    reading: むなかたわ ながく とうりゅうし、この えのきお かんきぼくと なづけました。
+- id: ch2_kiyomoto
+  title: 清元の声
+  background: kb_hotel
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: 小堀艶子, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1959年11月。保三郎は、帝国ホテルで清元を披露します。
+    reading: せんきゅうひゃく ごじゅうきゅうねん じゅういちがつ。やすざぶろうわ ていこく ほてるで きよもとお ひろう します。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなた、そろそろ出番ですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: '[艶子|つやこ]、今日の声はばっちりだ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 三味線に合わせて語る清元は、あなたの一番の楽しみですものね。
+  - speaker: zundamon
+    emotion: happy
+    text: 機械の次に……いや、機械と同じくらい好きだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 工場の機械の音より、ずっといい声ですよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……それは、比べるものじゃないのだ。
+    se: zukko
+  - speaker: reimu
+    text: 短歌も詠み、自作の歌集を2冊残しています。
+    reading: たんかも よみ じさくの かしゅうお にさつ のこして います。
+- id: ch2_yuzuru
+  title: 会社を譲る
+  background: kb_jimusho
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1957年と1960年、ほかの会社の資本を受け入れるたびに社名が変わります。
+    reading: せんきゅうひゃく ごじゅうななねんと せんきゅうひゃく ろくじゅうねん、ほかの かいしゃの しほんお うけいれる たびに しゃめいが かわります。
+  - speaker: kouin
+    emotion: thinking
+    text: 社長。また、看板を掛け替えるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 大同輸送機工業の次は、関西輸送機だ。
+  - speaker: kouin
+    emotion: sad
+    text: 名前を覚えたころに、変わりますね。
+    beat: true
+  - speaker: reimu
+    text: 1962年。保三郎は経営権のすべてを、石川島播磨重工業に譲ります。
+    reading: せんきゅうひゃく ろくじゅうにねん。やすざぶろうわ けいえいけんの すべてお、いしかわじま はりま じゅうこうぎょうに ゆずります。
+  - speaker: kouin
+    emotion: sad
+    text: 社長、本当に会社を譲ってしまうんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: ああ。クレーンは、もう任せられる人がいる。
+  - speaker: kouin
+    emotion: thinking
+    text: じゃあ社長は、これから何をするんです？
+  - speaker: zundamon
+    emotion: happy
+    text: 思いついたアイデアを、形にする仕事だ。
+  - speaker: kouin
+    emotion: surprised
+    text: 62歳で、一から始めるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: アイデアに、歳は関係ないのだ。
+  - speaker: kouin
+    emotion: thinking
+    text: ……その元気、少し分けてほしいです。
+    beat: true
+- id: card1962
+  title: ''
+  background: kb_card_1962
+  cuts:
+  - speaker: reimu
+    text: 1962年。保三郎は東京の伊皿子で、新しい仕事場を開きます。
+    reading: せんきゅうひゃく ろくじゅうにねん。やすざぶろうわ とうきょうの いさらごで あたらしい しごとばお ひらきます。
+- id: ch3_gic
+  title: グッドアイデアセンター
+  background: kb_gic
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: 小堀艶子, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 住まいの近く、玉鳳寺の境内にある木造の一軒家を借りました。
+    reading: すまいの ちかく、ぎょくほうじの けいだいに ある もくぞうの いっけんやお かりました。
+  - speaker: tsumugi
+    emotion: thinking
+    text: あなた。お寺の中で、いったい何を始めるんです？
+  - speaker: zundamon
+    emotion: happy
+    text: ここを、グッドアイデアセンターと名付ける。略して、[GIC|じーあいしー]だ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……お寺に、横文字の看板ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 思いついたアイデアを、ここで形にして特許を取る。
+  - speaker: tsumugi
+    emotion: normal
+    text: それで、最初のアイデアは？
+  - speaker: zundamon
+    emotion: happy
+    text: サンドイッチを、自動で作る機械なのだ！
+  - speaker: tsumugi
+    emotion: surprised
+    text: サンドイッチを、機械で？
+  - speaker: zundamon
+    emotion: happy
+    text: パンと具を入れれば、機械がはさんでくれる。
+  - speaker: tsumugi
+    emotion: happy
+    text: お昼の支度が、楽になりそうね。
+  - speaker: zundamon
+    emotion: happy
+    text: まずは、ボクのお昼の分を作るのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 結局、あなたのお昼なのね。
+    se: oti
+  - speaker: reimu
+    text: ここでは、サンドイッチの自動製造機をはじめ多くの特許を取っています。
+    reading: ここでわ、さんどいっちの じどう せいぞうきお はじめ おおくの とっきょお とって います。
+- id: ch3_hikouki
+  title: 揺れる機内
+  background: kb_hikouki
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: joumuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ある日、保三郎は旅客機に乗っていました。
+    reading: あるひ やすざぶろうわ りょかくきに のって いました。
+  - speaker: joumuin
+    emotion: surprised
+    text: ただいま、気流の悪いところを通過しております。
+  - speaker: zundamon
+    emotion: surprised
+    text: 揺れる！ 体が、ふわっと浮くぞ！
+  - speaker: reimu
+    text: 飛行機がエアポケットに入ると、機体は大きく上下します。
+    reading: ひこうきが えあぽけっとに はいると きたいわ おおきく じょうげ します。
+  - speaker: zundamon
+    emotion: surprised
+    text: テーブルに伏せて、荷物を抱えるのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……こうしていると、不思議とどこも痛くない。
+  - speaker: joumuin
+    emotion: normal
+    text: お客様、揺れは収まりました。お怪我はございませんか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 体とぶつかる物のあいだに、やわらかい物があれば……。
+  - speaker: reimu
+    text: 手伝っていた小口泰平は、これが思いついたきっかけだったと語っています。
+    reading: てつだって いた おぐち やすへいわ、これが おもいついた きっかけだったと かたって います。
+- id: card1964
+  title: ''
+  background: kb_card_1964
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1964年。保三郎は、自動車の安全ネットを作り始めます。
+    reading: せんきゅうひゃく ろくじゅうよねん。やすざぶろうわ じどうしゃの あんぜん ねっとお つくりはじめます。
+  - speaker: reimu
+    text: 東京で、オリンピックが開かれた年でした。
+    reading: とうきょうで おりんぴっくが ひらかれた としでした。
+- id: ch4_net
+  title: 硬い物にぶつかる
+  background: kb_gic2
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: oguchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 伊皿子の仕事場には、若い技術者の小口泰平が手伝いに通っていました。
+    reading: いさらごの しごとばにわ、わかい ぎじゅつしゃの おぐち やすへいが てつだいに かよって いました。
+  - speaker: zundamon
+    emotion: normal
+    text: まずは、ぶつかったときに網で体を受け止める。
+  - speaker: oguchi
+    emotion: thinking
+    text: 車の中に、網を張るんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: サーカスの、空中ブランコの下の網と同じだ。
+  - speaker: oguchi
+    emotion: thinking
+    text: 運転中、ずっと[網|あみ]の中ですか……。
+  - speaker: zundamon
+    emotion: normal
+    text: 大学の先生たちに、力を借りよう。
+  - speaker: reimu
+    text: 保三郎は、東京大学をはじめ大学の教授たちに協力を求めました。
+    reading: やすざぶろうわ、とうきょう だいがくお はじめ だいがくの きょうじゅたちに きょうりょくお もとめました。
+  - speaker: reimu
+    text: 開発のお金は、自分の財産から出しています。
+    reading: かいはつの おかねわ じぶんの ざいさんから だして います。
+  - speaker: reimu
+    text: 1964年11月1日。小口は、ニューヨーク・タイムズの記事を目にします。
+    reading: せんきゅうひゃく ろくじゅうよねん じゅういちがつ ついたち。おぐちわ にゅーよーく たいむずの きじお めに します。
+  - speaker: oguchi
+    emotion: surprised
+    text: 小堀さん、この新聞を見てください。
+  - speaker: oguchi
+    emotion: normal
+    text: ニューヨーク・タイムズに、こんな提言が載っています。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[何|なん]て書いてある？'
+  - speaker: oguchi
+    emotion: normal
+    text: ビルの屋上から落ちること。それ自体は、危険ではない。
+  - speaker: zundamon
+    emotion: surprised
+    text: 危ないに、決まってるのだ！
+  - speaker: oguchi
+    emotion: normal
+    text: 続きがあります。硬い地面にぶつかることに、命の危険があると。
+  - speaker: oguchi
+    emotion: normal
+    text: 車の事故も同じで、車の中の硬い物に激突するのが問題だと。
+  - speaker: zundamon
+    emotion: thinking
+    text: 落ちるより、硬い物に急にぶつかって止まるのが危ない……。
+  - speaker: zundamon
+    emotion: happy
+    text: ……なら[網|あみ]より、もっとやわらかい袋なのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: 体と車のあいだに、袋をはさむ。サンドイッチと同じなのだ！
+    se: hirameki
+    telops:
+    - {text: 体と車のあいだに袋, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: oguchi
+    emotion: thinking
+    text: ……具が、人間なんですけどね。
+    beat: true
+  - speaker: reimu
+    text: 小口泰平は、のちにこの記事のことを書き残しています。
+    reading: おぐち やすへいわ、のちに この きじの ことお かきのこして います。
+- id: ch4_sekkei
+  title: 車の中を袋で守る
+  background: kb_zukai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.17, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: oguchi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 前と後ろのバンパーに、ぶつかったのを感じる装置を付ける。
+  - speaker: oguchi
+    emotion: thinking
+    text: 衝撃を感じたら、どうするんです？
+  - speaker: zundamon
+    emotion: happy
+    text: ガスの入れ物に合図を送って、一気に袋をふくらませる。
+  - speaker: oguchi
+    emotion: thinking
+    text: 袋は、運転席の前だけですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 助手席にも、後ろの席にも。天井と、横にも付ける。
+  - speaker: oguchi
+    emotion: surprised
+    text: 車の中が、袋だらけですね。
+    background: kb_zukai_fukuro
+  - speaker: zundamon
+    emotion: happy
+    text: 前から、後ろから、横から。どこからでも守るのだ。
+  - speaker: oguchi
+    emotion: thinking
+    text: 人の乗る場所が、残ってるといいですけど。
+    beat: true
+  - speaker: reimu
+    text: 保三郎の図では、天井の袋が約270リットル。前の席の袋が約220リットルです。
+    background: kb_zukai
+    reading: やすざぶろうの ずでわ、てんじょうの ふくろが やく にひゃく ななじゅう りっとる。まえの せきの ふくろが やく にひゃく にじゅう りっとるです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 時速50キロでぶつかると、体が中の物に当たるまで0.04秒あまりだ。
+  - speaker: oguchi
+    emotion: surprised
+    text: そのあいだに開ききらなかったら、間に合いませんね。
+  - speaker: reimu
+    text: 特許の説明には、袋が0.008秒から0.017秒で開くと書かれています。
+    reading: とっきょの せつめいにわ、ふくろが れいてん れいれいはちびょうから れいてん れいいちななびょうで ひらくと かかれて います。
+    telops:
+    - {text: 0.008秒で開く, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: card1965
+  title: ''
+  background: kb_card_1965
+  cuts:
+  - speaker: reimu
+    text: 1965年6月。65歳の保三郎は、この仕組みの特許を日本で出願します。
+    reading: せんきゅうひゃく ろくじゅうごねん ろくがつ。ろくじゅうごさいの やすざぶろうわ、この しくみの とっきょお にほんで しゅつがん します。
+- id: ch5_yanase
+  title: 輸入車の社長
+  background: kb_yanase
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: yanase, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ年、保三郎はソニーの井深大から一人の経営者を紹介されます。
+    reading: おなじ とし、やすざぶろうわ そにーの いぶか まさるから ひとりの けいえいしゃお しょうかい されます。
+  - speaker: reimu
+    text: 外国の車を輸入して売る会社の社長、梁瀬次郎です。
+    reading: がいこくの くるまお ゆにゅうして うる かいしゃの しゃちょう、やなせ じろうです。
+  - speaker: yanase
+    emotion: normal
+    text: 小堀さんですね。井深さんから、お話は伺っています。
+  - speaker: zundamon
+    emotion: normal
+    text: 車がぶつかった瞬間に袋をふくらませて、乗っている人を守る装置です。
+  - speaker: yanase
+    emotion: thinking
+    text: ぶつかってから、ふくらむんですか。間に合うのでしょうか。
+  - speaker: zundamon
+    emotion: happy
+    text: 少しの火薬で、液体のガスを一気に気体にします。
+  - speaker: yanase
+    emotion: surprised
+    text: 火薬で……。車の中で、爆発させるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: ほんの少しです。それで、一瞬で袋が開きます。
+  - speaker: yanase
+    emotion: thinking
+    text: 外国の車をたくさん見てきましたが、こんな装置は初めてです。
+  - speaker: yanase
+    emotion: happy
+    text: これは、きっと役に立つ。私にも、手伝わせてください。
+  - speaker: reimu
+    text: 梁瀬は、この発明が役に立つと確信しました。
+    reading: やなせわ、この はつめいが やくに たつと かくしん しました。
+- id: ch5_jikken
+  title: 1000分の1秒の写真
+  background: kb_jikken_mae
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: taiin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1965年12月。立川にある防衛庁の航空医学実験隊で、作動の実験が行われます。
+    reading: せんきゅうひゃく ろくじゅうごねん じゅうにがつ。たちかわに ある ぼうえいちょうの こうくう いがく じっけんたいで さどうの じっけんが おこなわれます。
+  - speaker: taiin
+    emotion: normal
+    text: 準備ができました。いつでも作動させられます。
+  - speaker: zundamon
+    emotion: thinking
+    text: カメラは、回っていますか。
+  - speaker: taiin
+    emotion: normal
+    text: はい。1000分の1秒ごとに撮れるカメラです。
+    telops:
+    - {text: 1000分の1秒ごとに撮影, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: taiin
+    emotion: normal
+    text: では、いきます。3、2、1……作動！
+    background: kb_jikken
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: 開いた！ 目で追えない……！
+  - speaker: taiin
+    emotion: happy
+    text: 写真を並べると、袋が少しずつ広がっていくのが分かりますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 一瞬に見えても、ちゃんと順番にふくらんでいる……。
+  - speaker: taiin
+    emotion: normal
+    text: 記録は、ばっちり取れました。
+  - speaker: zundamon
+    emotion: happy
+    text: この映像を見せれば、きっと分かってもらえる。
+  - speaker: reimu
+    text: この実験を記録した16ミリフィルムは、今も残っています。
+    reading: この じっけんお きろくした じゅうろく みり ふぃるむわ、いまも のこって います。
+- id: ch6_benz
+  title: フィルムを持って
+  background: kb_benz
+  bgm: curious
+  stage:
+  - {who: yanase, x: 0.28, emotion: normal}
+  - {who: gishi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 梁瀬は実験のフィルムを持って、西ドイツのダイムラー・ベンツを訪ねます。
+    reading: やなせわ じっけんの ふぃるむお もって、にし どいつの だいむらー べんつお たずねます。
+  - speaker: yanase
+    emotion: normal
+    text: 日本の発明家が考えた、衝突のときの安全装置です。
+  - speaker: gishi
+    emotion: surprised
+    text: ……袋が、一瞬でふくらむのですね。
+  - speaker: yanase
+    emotion: normal
+    text: 特許も、世界の国々に出しています。
+  - speaker: gishi
+    emotion: thinking
+    text: 興味深いです。ただ、契約はすぐにはできません。
+  - speaker: yanase
+    emotion: sad
+    text: ……そうですか。
+  - speaker: reimu
+    text: アメリカのGMやフォード、クライスラーにも社員を送りました。
+    reading: あめりかの じーえむや ふぉーど、くらいすらーにも しゃいんお おくりました。
+  - speaker: reimu
+    text: どの会社も強い関心を示しましたが、契約には至りませんでした。
+    reading: どの かいしゃも つよい かんしんお しめしましたが、けいやくにわ いたりませんでした。
+- id: ch6_unyusho
+  title: 前例はあるか
+  background: kb_unyusho
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: yakunin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 保三郎は国の運輸省にも、使うことを考えてほしいと頼みに行きます。
+    reading: やすざぶろうわ くにの うんゆしょうにも、つかう ことお かんがえて ほしいと たのみに いきます。
+  - speaker: zundamon
+    emotion: normal
+    text: この袋があれば、事故のけがを減らせるはずです。
+  - speaker: zundamon
+    emotion: normal
+    text: 大学の先生にも、防衛庁の実験隊にも確かめてもらいました。
+  - speaker: yakunin
+    emotion: thinking
+    text: なるほど。で、これはアメリカやヨーロッパでやってるの？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……え？
+  - speaker: yakunin
+    emotion: normal
+    text: 前例がないんじゃ、ねえ。
+    se: gaan
+    telops:
+    - {text: 前例がない, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……前例がないから、特許なんです。
+  - speaker: yakunin
+    emotion: normal
+    text: 外国で使われたら、また来てください。
+  - speaker: zundamon
+    emotion: sad
+    text: ……外国で使われてからじゃ、遅いんです。
+  - speaker: reimu
+    text: 手伝っていた小口は、前例を聞かれてそれで終わったと振り返っています。
+    reading: てつだって いた おぐちわ、ぜんれいお きかれて それで おわったと ふりかえって います。
+- id: ch6_nhk
+  title: 歩く人も守りたい
+  background: kb_tv
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: 小堀艶子, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1967年、エアバッグがNHKの科学番組に登場します。
+    reading: せんきゅうひゃく ろくじゅうななねん、えあばっぐが えぬえいちけーの かがく ばんぐみに とうじょう します。
+  - speaker: tsumugi
+    emotion: surprised
+    text: あなた、テレビにあなたの袋が映ってますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 安全自動車をめざして、という番組だ。
+  - speaker: tsumugi
+    emotion: happy
+    text: たくさんの人が、見てますね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクの顔も、もう少し映してほしいのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 主役は、袋ですから。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: それで、今度は何を描いてるんです？
+  - speaker: zundamon
+    emotion: normal
+    text: 車の外の、歩いている人も守りたい。
+  - speaker: zundamon
+    emotion: normal
+    text: バンパーに人が当たったら、棒の形の袋と網を広げる。
+  - speaker: zundamon
+    emotion: happy
+    text: ボンネットに倒れ込む前に、網ですくい上げるんだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 車の外にも、袋を出すんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 車に乗ってない人も、ぶつかったら大けがだからな。
+- id: ch6_makura
+  title: むち打ちを防ぐ枕
+  background: kb_gic2
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: oguchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1967年からは、追突されたときのむち打ちを防ぐ網の枕も特許にしていきます。
+    reading: せんきゅうひゃく ろくじゅうななねんからわ、ついとつ された ときの むちうちお ふせぐ あみの まくらも とっきょに して いきます。
+  - speaker: zundamon
+    emotion: normal
+    text: 後ろからぶつけられると、首が後ろへのけぞる。
+  - speaker: oguchi
+    emotion: thinking
+    text: それで、首を痛めるんですね。
+  - speaker: zundamon
+    emotion: happy
+    text: だから頭の後ろに網を張って、受け止める。
+  - speaker: oguchi
+    emotion: surprised
+    text: 頭の傾きが、73度から45度に減りました！
+    se: levelup
+    telops:
+    - {text: 73度→45度, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 袋だけで、終わりにはしないぞ。
+  - speaker: oguchi
+    emotion: thinking
+    text: ……小堀さん、今年でおいくつでしたっけ。
+  - speaker: zundamon
+    emotion: happy
+    text: 数えるのは、とっくにやめたのだ。
+    beat: true
+- id: ch6_tokkyo
+  title: 交通戦争
+  background: kb_gic3
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: 小堀艶子, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: あなた。デンマークとカナダから、特許の書類が届きましたよ。
+  - speaker: zundamon
+    emotion: happy
+    text: これで、10か国を超えたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 特許を取るたびに、お[金|かね]も出ていきますね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……取るにも守るにも、お[金|かね]がかかる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 研究のお[金|かね]も、うちの財産から出してるんですよ。
+    background: kb_gic3_seikyu
+  - speaker: zundamon
+    emotion: normal
+    text: 分かってる。それでも、いつか必ず車に積まれる日が来る。
+  - speaker: reimu
+    text: 1970年、日本の交通事故の死者は1万6765人になりました。
+    reading: せんきゅうひゃく ななじゅうねん、にほんの こうつう じこの ししゃわ いちまん ろくせん ななひゃく ろくじゅうごにんに なりました。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 交通戦争なんて、新聞に書かれてますよ。
+  - speaker: zundamon
+    emotion: sad
+    text: 袋があれば、助かる人がいるかもしれないのに。
+  - speaker: reimu
+    text: 1973年には、アメリカのGMがエアバッグ付きの車1000台を試しに走らせます。
+    reading: せんきゅうひゃく ななじゅうさんねんにわ、あめりかの じーえむが えあばっぐつきの くるま せんだいお ためしに はしらせます。
+  - speaker: reimu
+    text: 1974年からは、客にも売り始めます。
+    reading: せんきゅうひゃく ななじゅうよねんからわ、きゃくにも うりはじめます。
+- id: ch6_1974
+  title: 使われない特許
+  background: kb_gic3
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: normal}
+  - {who: tsumugi, x: 0.7, tag: 小堀艶子, emotion: thinking}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: あなた。オランダからも、特許が届きましたよ。
+  - speaker: zundamon
+    emotion: normal
+    text: これで、14の国だ。
+  - speaker: reimu
+    text: 特許は日本を含む14の国で認められました。アメリカや西ドイツ、イギリスなどです。
+    reading: とっきょわ にほんお ふくむ じゅうよんの くにで みとめられました。あめりかや にしどいつ、いぎりすなどです。
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカでは、袋を積んだ車が売られ始めましたね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……でも、ボクの特許を使ってくれた会社はまだ無いのだ。
+    se: namida
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……そうですね。
+  - speaker: reimu
+    text: 保三郎の特許を使う会社は、最後まで現れませんでした。
+    reading: やすざぶろうの とっきょお つかう かいしゃわ、さいごまで あらわれませんでした。
+- id: ch6_mouii
+  title: ''
+  background: kb_gic3
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 小堀保三郎, emotion: sad}
+  - {who: oguchi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 晩年の保三郎は、手伝ってきた小口にこう告げます。
+    reading: ばんねんの やすざぶろうわ、てつだって きた おぐちに こう つげます。
+  - speaker: zundamon
+    emotion: sad
+    text: 小口くん。
+  - speaker: oguchi
+    emotion: thinking
+    text: はい。
+  - speaker: zundamon
+    emotion: normal
+    text: ……もういい。やるべきことは、全部やった。
+  - speaker: oguchi
+    emotion: sad
+    text: 小堀さん……。
+- id: card1975
+  title: ''
+  background: kb_card_1975
+  cuts:
+  - speaker: reimu
+    text: 1975年8月30日。小堀保三郎は、76歳で亡くなりました。
+    reading: せんきゅうひゃく ななじゅうごねん はちがつ さんじゅうにち。こぼり やすざぶろうわ ななじゅうろくさいで なくなりました。
+- id: ch7_nikki
+  title: ''
+  background: kb_gic_mono
+  cuts:
+  - speaker: reimu
+    text: 支えたヤナセの記録には、失意のうちに亡くなったとあります。
+    reading: ささえた やなせの きろくにわ、しついの うちに なくなったと あります。
+  - speaker: reimu
+    text: 特許は実用化されないまま、期限を終えていきました。
+    reading: とっきょわ じつようか されない まま、きげんお おえて いきました。
+  - speaker: reimu
+    text: 梁瀬はのちに著書で、保三郎は命をエアバッグに捧げたと書いています。
+    reading: やなせわ のちに ちょしょで、やすざぶろうわ いのちお えあばっぐに ささげたと かいて います。
+  - speaker: reimu
+    text: 残された日記には、こんな言葉が書かれています。
+    reading: のこされた にっきにわ、こんな ことばが かかれて います。
+  - speaker: reimu
+    text: 力強く己が営み拓くべし。貧しくともよし。正しくあれば。
+    reading: ちからづよく おのが いとなみ ひらくべし。まずしくとも よし。ただしく あれば。
+- id: card1980
+  title: ''
+  background: kb_card_1980
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1980年12月。西ドイツで、エアバッグを積んだ車が客のもとへ届きます。
+    reading: せんきゅうひゃく はちじゅうねん じゅうにがつ。にしどいつで えあばっぐお つんだ くるまが きゃくの もとえ とどきます。
+- id: ch8_benz
+  title: ベルトと一緒に
+  background: kb_crash
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: メルセデス・ベンツの、Sクラスという車よ。
+  - speaker: zundamon
+    emotion: sad
+    text: 保三郎さんが亡くなって、5年後か。
+  - speaker: tsumugi
+    emotion: normal
+    text: GMの袋は肩のベルトの代わりとして売られたけど、3年で約1万台だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ベンツは、どこが違ったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: ベンツは1960年代の後半から、自分たちで開発を続けてたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本物の車をぶつける試験が約250回。台車に載せた試験は、2500回以上よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2500回も、ぶつけたのだ！
+    background: kb_crash_yama
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクなら、3回目で泣いてるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 泣く前に、ベルトを締めて。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きな工夫は、シートベルトと一緒に使うことだったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ベルトで体を止めるから、袋は小さくてすむのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 保三郎さんの天井の袋は、270リットルもあった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 袋だけで全部を受け止めようとすると、大きくなるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: あ！ だからハンドルに、SRSって書いてあるのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。SRSは、補助の安全装置という意味。
+  - speaker: tsumugi
+    emotion: normal
+    text: 主役はシートベルト。エアバッグは、その助っ人なの。
+    telops:
+    - {text: 主役はシートベルト, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 枕でも、主役でもなかったのだ。
+    se: tenten
+- id: card1987
+  title: ''
+  background: kb_card_1987
+  cuts:
+  - speaker: reimu
+    text: 1987年9月。日本でも、エアバッグを積んだ車が発売されます。
+    reading: せんきゅうひゃく はちじゅうななねん くがつ。にほんでも えあばっぐお つんだ くるまが はつばい されます。
+- id: ch8_legend
+  title: 20万円の安全
+  background: kb_showroom
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダのレジェンド。国産の車で、初めてエアバッグを積んだ車よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 付いたのは運転席だけ。ホンダは1970年代の初めから、16年かけて作ったの。
+  - speaker: zundamon
+    emotion: happy
+    text: みんな、すぐに付けた？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一番上の型には最初から付いてたけど、ほかの多くの型は20万円高くなったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 20万円……ボクのおこづかいの、何年分なのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 袋は0.03秒ほどで、約60リットルにふくらむの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 保三郎さんの、前の席の袋の4分の1くらいだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1992年には、エアバッグの付いた車の保険料を安くする割引もできたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 90年代の後半に一気に広がって、2002年には走る車の約半分に付いていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカでは1998年型の車から、前の2つの席で義務になったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 今は、新しい車ならほとんど付いてるもんな。
+- id: ch9_ronsou
+  title: 世界初は誰か
+  background: kb_nenpyo
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあエアバッグを世界で初めて考えたのは、保三郎さんなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう書かれることも多いけど、実はもっと前があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1951年、西ドイツのリンデラーがふくらむ袋の特許を出願してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1952年には、アメリカのヘトリックも出願してるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 保三郎さんより、10年以上も前！
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: ヘトリックは海軍の魚雷の圧縮空気をヒントに、台所のテーブルで試作したの。
+  - speaker: zundamon
+    emotion: happy
+    text: 発明は、台所でも始まるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ、どちらも圧縮空気でふくらませる仕組みで実用にはならなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 保三郎さんの特許は、火薬を合図に一瞬でふくらませる仕組みよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから正確には、火薬で一気に開く方式を早くに特許にした先駆けの一人ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 世界初、と言い切るのは言い過ぎか。
+  - speaker: tsumugi
+    emotion: normal
+    text: ベンツが保三郎さんの設計を使った話もあるけど、それを示す資料は無いの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ベンツは1971年に、自社の特許を出願してるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 有名な話ほど、確かめるのが大事だな。
+- id: ch10_shikumi
+  title: まばたきの間に
+  background: kb_shikumi
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今のエアバッグの仕組みを、見てみましょう。
+  - speaker: tsumugi
+    emotion: normal
+    text: まずセンサーが強い衝撃を感じて、本当にふくらませるかを判断するの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 決まったら、ガスを作る装置に火をつけるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 保三郎さんの特許と、流れは同じだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 火がつくまで約0.03秒、ふくらむのに約0.03秒。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後は、袋の裏の穴からガスが抜けてしぼむの。
+  - speaker: zundamon
+    emotion: surprised
+    text: せっかくふくらんだのに、しぼんじゃうの？
+  - speaker: tsumugi
+    emotion: normal
+    text: しぼまないと前が見えないし、体を跳ね返してしまうでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 全部で約0.11秒。まばたきのあいだに、終わってしまうの。
+    telops:
+    - {text: 全部で約0.11秒, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: そんなに一瞬で、どうして助かるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 硬い物にぶつかると、体は一瞬で止まるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 袋に当たると、ほんの少しだけ時間をかけて止まるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 止まるまでの時間が長いほど、体にかかる力は小さくなるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ゆっくり止まるほど、痛くないのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ふくらむ勢いは、どれくらい？
+  - speaker: tsumugi
+    emotion: normal
+    text: 時速100キロから300キロにもなるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: そんな勢いで、顔に当たるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: だから、正しい姿勢で座るのが大事なの。ハンドルからは25センチ以上離れてね。
+  - speaker: zundamon
+    emotion: normal
+    text: 運転席を、前に出しすぎない。
+  - speaker: tsumugi
+    emotion: normal
+    text: ふくらんだ直後の袋は熱くなってるから、すぐに触っちゃだめよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 熱い袋……さわらないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 子どもは、後ろの席に乗せてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 後ろ向きのチャイルドシートは、助手席に付けてはいけないの。
+  - speaker: zundamon
+    emotion: sad
+    text: 赤ちゃんにあの勢いで袋が当たったら、大変だ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカでは、助手席のエアバッグで子どもが亡くなる事故が続いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それで1997年から、弱めにふくらむエアバッグが認められたのよ。
+- id: ch10_kusuri
+  title: ガスを作る薬
+  background: kb_shikumi2
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ガスを作る薬も、時代とともに変わってきたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初は毒のある薬が使われてたけど、[日本|にほん]では1999年ごろに使われなくなったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 車の中に、毒があったのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2008年からは、タカタのエアバッグで大きな問題が起きたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 薬が暑さと湿気で傷んで、ふくらませるときに装置が破裂することがあったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界中で、大規模なリコールになったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: タカタは、2017年に経営破綻したの。
+  - speaker: zundamon
+    emotion: sad
+    text: 命を守る装置だからこそ、中の薬まで確かじゃなきゃいけないのだ。
+- id: ch11_gendai
+  title: 歩く人を守る袋
+  background: kb_gendai
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年、保三郎さんは[日本自動車殿堂|にほんじどうしゃでんどう]に入ったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前が、ちゃんと残ったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 保三郎さんの図にあった、横からの袋や天井の袋。
+  - speaker: tsumugi
+    emotion: normal
+    text: 形は違うけど、今は多くの車に付いてるわ。サイドエアバッグや、カーテンエアバッグね。
+  - speaker: zundamon
+    emotion: happy
+    text: 横からぶつかっても、守ってくれるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年には、スウェーデンのボルボが歩く人のためのエアバッグを出したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: バンパーのセンサーが人の足を感じると、ボンネットの後ろで[袋|ふくろ]がふくらむの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 保三郎さんが描いてた、歩く人を守る袋だ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 形は違うけど、バンパーで人を感じるところは同じ考え方ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 交通事故で亡くなる人は、1970年には1万6765人いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが2024年には、2663人まで減ってるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 道路や救急、ベルトや袋。たくさんの工夫が重なったんだな。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年8月30日、亡くなって50年の日には新聞のコラムにも載ったわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 60年前、お寺の一軒家で同じような袋を描いた人がいたのだ。
+- id: shime
+  title: ''
+  background: kb_kuruma2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。今日のボクは、後ろの席に座るのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: あら、えらいわね。
+  - speaker: zundamon
+    emotion: happy
+    text: シートベルトも、ちゃんと締めた。主役は、ベルトだからな。
+  - speaker: tsumugi
+    emotion: normal
+    text: よく覚えてたわね。じゃあ、出発しましょうか。
+  - speaker: zundamon
+    emotion: happy
+    text: 出発の合図に、クラクションを鳴らすのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 合図で鳴らすのは、違反よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そもそも後ろの席からだと、手が届かないのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

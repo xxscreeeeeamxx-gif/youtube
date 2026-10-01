@@ -464,12 +464,68 @@ def gendai2():
     return img
 
 
+# ---- 場面の途中で差し替える「状況が変わった」背景（2026-10-01 ユーザー「煙の演出いいね。こういうの増やしたい」）
+def kenkyu2_kouyou():
+    """夜の研究室。試験管が全部、紅葉の赤と黄色に染まり、まわりに葉が舞う。"""
+    img = kenkyu2()
+    d = _d(img)
+    for k, col in enumerate([(220, 50, 40), (240, 120, 40), (250, 190, 60), (200, 40, 40)]):
+        _test_tube(d, 780 + k * 60, 440, 150, col)
+    rnd = random.Random(3)
+    for _ in range(40):                                                         # 舞う紅葉
+        x, y = rnd.uniform(700, 1260), rnd.uniform(240, 580)
+        r = rnd.uniform(10, 22)
+        d.ellipse([x - r, y - r * 0.7, x + r, y + r * 0.7],
+                  fill=rnd.choice([(220, 60, 40), (240, 120, 40), (250, 190, 60)]))
+    return img
+
+
+def shouhin_cups():
+    """商品の台。試しに飲んだ紙コップが、台いっぱいに並んでいる。"""
+    img = shouhin()
+    d = _d(img)
+    for k in range(9):
+        x, y = 700 + k * 58, 560 - (k % 2) * 40
+        col = [(120, 170, 230), (240, 150, 190), (240, 240, 236)][k % 3]
+        d.polygon([(x, y), (x + 60, y), (x + 52, y + 80), (x + 8, y + 80)], fill=col, outline=(150, 150, 156))
+    return img
+
+
+def fuyajo_tetsuya():
+    """夜の研究室。壁の時計は午前3時、床に寝袋、机にカップ麺の空き容器。"""
+    img = fuyajo()
+    d = _d(img)
+    d.ellipse([320, 140, 480, 300], fill=(244, 244, 240), outline=(60, 60, 66), width=8)   # 時計（3時）
+    d.line([(400, 220), (400, 152)], fill=(30, 30, 34), width=6)
+    d.line([(400, 220), (444, 220)], fill=(30, 30, 34), width=10)
+    d.rounded_rectangle([200, 820, 640, 900], radius=40, fill=(80, 110, 170))     # 寝袋
+    d.ellipse([170, 815, 260, 905], fill=(90, 120, 180))
+    for k in range(4):                                                            # カップ麺の容器
+        x = 1000 + k * 50
+        d.polygon([(x, 560), (x + 44, 560), (x + 38, 600), (x + 6, 600)], fill=(240, 236, 226), outline=(200, 60, 50))
+    return img
+
+
+def bunguten_full():
+    """文房具店の売り場。発売前、棚いっぱいに消せるボールペンが並んでいる。"""
+    img = bunguten()
+    d = _d(img)
+    for r in range(4):
+        y = 300 + r * 120
+        for k in range(6):
+            _pen(d, 740 + k * 72, y - 30, 50, body=[(40, 60, 120), (200, 60, 60), (40, 130, 80)][(k + r) % 3], w=10)
+            _pen(d, 744 + k * 72, y - 52, 50, body=[(60, 60, 66), (40, 60, 120), (200, 60, 60)][(k + r) % 3], w=10)
+    return img
+
+
 LOCATIONS = {
     "fx_heya": heya, "fx_heya2": heya2, "fx_kombinat": kombinat, "fx_daigaku": daigaku,
     "fx_kenkyu": kenkyu, "fx_kenkyu2": kenkyu2, "fx_kouyou": kouyou, "fx_kaigi": kaigi,
     "fx_shouhin": shouhin, "fx_shouhin2": shouhin2, "fx_zukai1": zukai1, "fx_zukai0": zukai0, "fx_office": office,
     "fx_zukai3": zukai3, "fx_fuyajo": fuyajo, "fx_france": france, "fx_bunguten": bunguten,
     "fx_zukai2": zukai2, "fx_ronsou": ronsou, "fx_gendai": gendai, "fx_gendai2": gendai2,
+    "fx_kenkyu2_kouyou": kenkyu2_kouyou, "fx_shouhin_cups": shouhin_cups,
+    "fx_fuyajo_tetsuya": fuyajo_tetsuya, "fx_bunguten_full": bunguten_full,
 }
 
 CARDS = ["1966", "1970", "1976", "2002", "2006", "2007"]

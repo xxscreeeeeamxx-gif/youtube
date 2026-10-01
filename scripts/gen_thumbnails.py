@@ -3475,7 +3475,17 @@ SPECS = {
         _p("p_fcphone", "1981年 夜の電話", SLATE, "thinking", "3年なんて無理なのだ", "社長から家に電話"),
         _p("p_fcbox", "1983年 年末", RED, "surprised", "全部引き取るのだ！？", "クリスマス直前に回収"),
     ]),
+    "famicom-uemura-v2": dict(layout="panels", headline="発売の年末、ファミコン全品回収",
+        head_hi="全品回収", panels=[
+        _p("p_fcphone", "1981年 夜の電話", SLATE, "thinking", "3年なんて無理なのだ", "社長から家に電話"),
+        _p("p_fcbox", "1983年 年末", RED, "surprised", "全部引き取るのだ！？", "クリスマス直前に回収"),
+    ]),
     "frixion-metamo": dict(layout="panels", headline="紅葉から生まれた消えるペン",
+        head_hi="紅葉", panels=[
+        _p("p_fxleaf", "1970年 渓谷の紅葉", SLATE, "surprised", "色が変わるのだ！", "試験管で作りたい"),
+        _p("p_fxpen", "2006年 ヨーロッパ", RED, "happy", "消えるのだ！", "30年後にボールペンへ"),
+    ]),
+    "frixion-metamo-v2": dict(layout="panels", headline="紅葉から生まれた消えるペン",
         head_hi="紅葉", panels=[
         _p("p_fxleaf", "1970年 渓谷の紅葉", SLATE, "surprised", "色が変わるのだ！", "試験管で作りたい"),
         _p("p_fxpen", "2006年 ヨーロッパ", RED, "happy", "消えるのだ！", "30年後にボールペンへ"),
@@ -3485,7 +3495,17 @@ SPECS = {
         _p("p_scclay", "1957年 粘土の模型", SLATE, "happy", "月間で、なのだ", "業界全体で月4万台の時代"),
         _p("p_sccub", "2017年", RED, "surprised", "1億台なのだ！", "世界の働くバイクに"),
     ]),
+    "fujisawa-supercub-v2": dict(layout="panels", headline="「月に3万台売れる」と言った男",
+        head_hi="月に3万台", panels=[
+        _p("p_scclay", "1957年 粘土の模型", SLATE, "happy", "月間で、なのだ", "業界全体で月4万台の時代"),
+        _p("p_sccub", "2017年", RED, "surprised", "1億台なのだ！", "世界の働くバイクに"),
+    ]),
     "kobori-airbag": dict(layout="panels", headline="エアバッグを考えた日本人がいた",
+        head_hi="日本人", panels=[
+        _p("p_kbcar", "1964年 東京", SLATE, "thinking", "袋で守るのだ", "14か国で特許"),
+        _p("p_kbwheel", "1980年 西ドイツ", RED, "surprised", "積まれたのだ！", "特許は使われず"),
+    ]),
+    "kobori-airbag-v2": dict(layout="panels", headline="エアバッグを考えた日本人がいた",
         head_hi="日本人", panels=[
         _p("p_kbcar", "1964年 東京", SLATE, "thinking", "袋で守るのだ", "14か国で特許"),
         _p("p_kbwheel", "1980年 西ドイツ", RED, "surprised", "積まれたのだ！", "特許は使われず"),

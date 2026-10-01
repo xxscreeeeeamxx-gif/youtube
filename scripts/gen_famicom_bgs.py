@@ -583,6 +583,58 @@ def ronsou():
     return img
 
 
+# ---- 場面の途中で差し替える「状況が変わった」背景（2026-10-01 ユーザー「煙の演出いいね。こういうの増やしたい」）
+def setsumeikai_ura():
+    """説明会の台の布がめくれて、台の下に隠した本物の試作機と配線が見える。"""
+    img = setsumeikai()
+    d = _d(img)
+    d.rectangle([600, 650, 1000, FLOOR + 30], fill=(30, 30, 36))                  # 布をめくった台の中
+    d.polygon([(600, 650), (700, 650), (640, 720)], fill=(40, 60, 110))           # めくれた布の端
+    d.rectangle([660, 720, 980, 860], fill=(60, 120, 70), outline=(30, 60, 36), width=4)   # むき出しの基板
+    for k in range(6):
+        d.rectangle([690 + k * 46, 750, 720 + k * 46, 780], fill=(30, 30, 34))
+    for k in range(4):                                                             # テレビへの配線
+        d.line([(900 + k * 12, 720), (760 + k * 30, 500)], fill=(200, 60, 50) if k % 2 else (240, 240, 230), width=4)
+    return img
+
+
+def toyshop_urikire():
+    """おもちゃ屋の棚が空っぽ。売り切れ・入荷未定の張り紙。"""
+    img = _rgb(base((236, 230, 214), (220, 214, 198)))
+    wood_floor(img, FLOOR, col=(150, 120, 90), line=(130, 104, 78))
+    d = _d(img)
+    for k in range(3):
+        y = 260 + k * 170
+        d.rectangle([640, y, 1300, y + 16], fill=(120, 90, 60))
+    d.rectangle([760, 300, 1180, 560], fill=(252, 250, 240), outline=(200, 60, 50), width=8)   # 張り紙
+    _text_c(d, 970, 330, "売り切れ", 76, (200, 50, 40))
+    _text_c(d, 970, 440, "入荷未定", 64, (60, 60, 66))
+    return img
+
+
+def kojo_yama():
+    """年の瀬の工場。回収品の段ボールが天井近くまで積み上がる。"""
+    img = kojo()
+    d = _d(img)
+    _boxes(d, 40, FLOOR, n=7, rows=6)
+    _boxes(d, 1200, FLOOR, n=7, rows=6)
+    _boxes(d, 520, FLOOR, n=3, rows=2)
+    return img
+
+
+def kaihatsu_tetsuya():
+    """夜の開発室。壁の時計は午前4時、机に缶コーヒーの山。"""
+    img = kaihatsu(night=True)
+    d = _d(img)
+    d.ellipse([300, 140, 460, 300], fill=(240, 240, 234), outline=(60, 60, 66), width=8)   # 時計（4時）
+    d.line([(380, 220), (380, 152)], fill=(30, 30, 34), width=6)
+    d.line([(380, 220), (418, 242)], fill=(30, 30, 34), width=10)
+    for k in range(9):                                                            # 缶コーヒー
+        x, y = 920 + (k % 5) * 40, 600 - (k // 5) * 50
+        d.rectangle([x, y, x + 28, y + 44], fill=(150, 90, 50), outline=(90, 50, 30), width=2)
+    return img
+
+
 LOCATIONS = {
     "fc_heya": heya, "fc_heya_on": heya_on, "fc_denkiya": denkiya, "fc_sharp": sharp, "fc_nintendo68": nintendo68,
     "fc_ousetsu": ousetsu, "fc_bowling": bowling, "fc_kaihatsu77": kaihatsu77,
@@ -591,6 +643,8 @@ LOCATIONS = {
     "fc_ricoh": ricoh, "fc_arcade": arcade, "fc_setsumeikai": setsumeikai, "fc_toyshop": toyshop,
     "fc_kojo": kojo, "fc_eigyo": eigyo, "fc_hotel": hotel, "fc_daigaku": daigaku, "fc_gendai": gendai,
     "fc_zukai_chip": zukai_chip, "fc_zukai_sales": zukai_sales, "fc_ronsou": ronsou,
+    "fc_setsumeikai_ura": setsumeikai_ura, "fc_toyshop_urikire": toyshop_urikire,
+    "fc_kojo_yama": kojo_yama, "fc_kaihatsu_tetsuya": kaihatsu_tetsuya,
 }
 
 CARDS = ["1943", "1967", "1968", "1971", "1977", "1981", "1983", "1984", "1985", "1990"]
