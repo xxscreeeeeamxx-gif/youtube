@@ -771,7 +771,8 @@ def render_frames(
     """全カットのベースPNGを frames/ に生成し、描画計画のリストを返す。
 
     キャラの表情はセリフをまたいで持続する（最後に指定された表情を維持）。
-    motion 未指定のカットは zoom-in / zoom-out を交互に割り当てて常時微動させる。
+    motion 未指定のカットは zoom-in / zoom-out を交互に割り当てて常時微動させる
+    （再現ドラマは自動では動かさず、motion を書いた場面だけ動かす）。
     """
     script = proj.load_script()
     drama = getattr(script.meta, "mode", "talk") == "drama"
@@ -849,7 +850,10 @@ def render_frames(
     shot_motion: dict[int, str] = {}
     for si, idxs in enumerate(shots):
         scene0, cut0 = by_index[idxs[0]]
-        shot_motion[si] = cut0.motion or scene0.motion or auto_cycle[si % len(auto_cycle)]
+        # 再現ドラマは背景を自動では動かさない（2026-10-01 ユーザー「止まってるはずなのに
+        # 背景動かさないでいい」）。台本で motion を書いた場面だけ動かす
+        auto = "none" if drama else auto_cycle[si % len(auto_cycle)]
+        shot_motion[si] = cut0.motion or scene0.motion or auto
     # モーションのタイムライン（各カットのショット内開始秒とショート総尺）は
     # 実測長を持つ timings（total_dur）から作る
     shot_total: dict[int, float] = {si: 0.0 for si in range(len(shots))}

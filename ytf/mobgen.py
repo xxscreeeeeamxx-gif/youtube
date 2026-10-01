@@ -257,9 +257,13 @@ def ensure_mob_sprites(cfg: Config, proj: Project, script) -> None:
 VOICE_CREDITS = {
     3: "VOICEVOX:ずんだもん",
     8: "VOICEVOX:春日部つむぎ",
+    11: "VOICEVOX:玄野武宏",
     12: "VOICEVOX:白上虎太郎",
     13: "VOICEVOX:青山龍星",
     42: "VOICEVOX:ちび式じい",
+    67: "VOICEVOX:栗田まろん",
+    73: "VOICEVOX:満別花丸",
+    100: "VOICEVOX:黒沢冴白",
 }
 
 

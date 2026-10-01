@@ -39,8 +39,8 @@ meta:
     color: '#4a4038'
   - id: douryo
     label: 同僚
-    voice: 12
-    pitch: 0.1
+    voice: 67
+    pitch: 0.0
     outfit: suit
     color: '#2f3a52'
   - id: jinji
@@ -62,8 +62,8 @@ meta:
     color: '#3e4a5c'
   - id: buka
     label: 部下
-    voice: 12
-    pitch: 0.14
+    voice: 11
+    pitch: 0.0
     outfit: suit
     color: '#4a5060'
   - id: ricoh
@@ -74,8 +74,8 @@ meta:
     color: '#7a8a7a'
   - id: gakusei
     label: 学生
-    voice: 12
-    pitch: 0.2
+    voice: 100
+    pitch: 0.0
   - id: tonya
     label: 問屋
     voice: 42

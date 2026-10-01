@@ -32,8 +32,8 @@ meta:
     outfit: suit
   - id: kouin
     label: 工員
-    voice: 12
-    pitch: 0.1
+    voice: 11
+    pitch: 0.0
     outfit: work
   - id: joumuin
     label: 乗務員
@@ -73,7 +73,7 @@ meta:
   - id: munakata
     label: 棟方志功
     voice: 12
-    pitch: 0.06
+    pitch: 0.04
     outfit: kimono
     color: '#3b3f4f'
 scenes:

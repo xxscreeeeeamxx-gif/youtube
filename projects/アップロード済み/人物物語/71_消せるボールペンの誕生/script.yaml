@@ -36,8 +36,8 @@ meta:
     outfit: suit
   - id: douryou
     label: 同僚
-    voice: 12
-    pitch: 0.1
+    voice: 11
+    pitch: 0.0
     outfit: labcoat
   - id: eigyou
     label: 先輩社員
@@ -53,8 +53,8 @@ meta:
     color: '#3e4a5c'
   - id: shain
     label: 開発責任者
-    voice: 12
-    pitch: 0.08
+    voice: 67
+    pitch: 0.0
     outfit: suit
     color: '#5a4a3a'
   - id: eigyou2

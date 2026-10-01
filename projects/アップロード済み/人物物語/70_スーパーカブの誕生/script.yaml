@@ -37,8 +37,8 @@ meta:
     outfit: work
   - id: shain
     label: 社員
-    voice: 12
-    pitch: 0.08
+    voice: 11
+    pitch: 0.0
     outfit: suit
     color: '#3e4a5c'
   - id: takeshima
@@ -83,8 +83,8 @@ meta:
     outfit: suit
   - id: kumiai
     label: 組合員
-    voice: 12
-    pitch: 0.14
+    voice: 67
+    pitch: 0.0
     outfit: work
     color: '#e8ebee'
   - id: kenkyuin
@@ -95,14 +95,14 @@ meta:
     color: '#e8ebee'
   - id: koukoku
     label: 広告担当
-    voice: 12
-    pitch: 0.1
+    voice: 100
+    pitch: 0.0
     outfit: suit
     color: '#5a4a3a'
   - id: mago
     label: 孫
-    voice: 12
-    pitch: 0.2
+    voice: 73
+    pitch: 0.0
 scenes:
 - id: co_sanman
   title: ''
