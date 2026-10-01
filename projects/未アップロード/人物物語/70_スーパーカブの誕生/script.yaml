@@ -102,17 +102,14 @@ scenes:
     emotion: happy
     text: どうだい、専務。これなら、どれくらい売れる？
   - speaker: zundamon
+    emotion: normal
+    text: まあ、3万台だな。
+  - speaker: designer
+    emotion: surprised
+    text: 年間3万台、ですか？
+  - speaker: zundamon
     emotion: happy
     text: バカ言え。月に3万台だよ！
-  - speaker: designer
-    emotion: surprised
-    text: 3万台！？ 年間で、ですか？
-  - speaker: zundamon
-    emotion: normal
-    text: 月間で。
-  - speaker: designer
-    emotion: surprised
-    text: げ、月間！？
     se: don
   - speaker: reimu
     text: 当時の日本の二輪車の生産は、業界全体でも月に約4万2000台でした。
@@ -152,7 +149,7 @@ scenes:
     text: 出前のバイクには、そばを吊るす台があるの。そのバイクが、スーパーカブよ。
   - speaker: zundamon
     emotion: thinking
-    text: でも売る前から月に3万台って、どうして言い切れたの？
+    text: 売る前から月に3万台って、どうして言い切れたの？
     telops:
     - {text: なぜ月3万台と言えた？, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
   - speaker: tsumugi
@@ -495,6 +492,43 @@ scenes:
   - speaker: zundamon
     emotion: normal
     text: 組合には、私が自分で話す。
+- id: ch2_kuko
+  title: ホンダは絶対つぶさない
+  background: sc_kuko
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
+  - {who: honda, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 危機のさなか、本田はヨーロッパのオートバイレースを見に行くことになります。
+    reading: ききの さなか、ほんだわ よーろっぱの おーとばい れーすお みに いく ことに なります。
+  - speaker: honda
+    emotion: thinking
+    text: 藤沢くん。おれがいなくても、大丈夫か？
+  - speaker: zundamon
+    emotion: normal
+    text: 行ってきてください。会社は、私が預かります。
+  - speaker: reimu
+    text: そして帰国の日。藤沢は空港まで、本田を迎えに行きます。
+    reading: そして きこくの ひ。ふじさわわ くうこうまで、ほんだお むかえに いきます。
+  - speaker: honda
+    emotion: thinking
+    text: ……会社は、どうなった。
+  - speaker: zundamon
+    emotion: happy
+    text: もう大丈夫です。ホンダは絶対つぶさないから、安心してくれ。
+  - speaker: honda
+    emotion: sad
+    text: ……そうか。……そうか。
+    se: namida
+  - speaker: reimu
+    text: 本田は、その場で泣きました。
+    reading: ほんだわ その ばで なきました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……本田さん、ここ空港だ。みんな見てるのだ。
+    beat: true
 - id: ch2_kumiai
   title: ''
   background: sc_kumiai
@@ -524,43 +558,6 @@ scenes:
   - speaker: reimu
     text: 組合員たちは、大きな拍手で応えました。
     reading: くみあいいんたちわ、おおきな はくしゅで こたえました。
-- id: ch2_kuko
-  title: ホンダは絶対つぶさない
-  background: sc_kuko
-  bgm: 223am
-  stage:
-  - {who: zundamon, x: 0.28, flip: true, tag: 藤沢武夫, emotion: normal}
-  - {who: honda, x: 0.7, emotion: thinking}
-  cuts:
-  - speaker: reimu
-    text: 危機のさなか、本田はヨーロッパのオートバイレースを見に行くことになります。
-    reading: ききの さなか、ほんだわ よーろっぱの おーとばい れーすお みに いく ことに なります。
-  - speaker: honda
-    emotion: thinking
-    text: 藤沢くん。おれがいなくても、大丈夫か？
-  - speaker: zundamon
-    emotion: normal
-    text: 行ってきてください。会社は、私が預かります。
-  - speaker: reimu
-    text: そして帰国の日。藤沢は空港まで、本田を迎えに行きます。
-    reading: そして きこくの ひ。ふじさわわ くうこうまで、ほんだお むかえに いきます。
-  - speaker: honda
-    emotion: thinking
-    text: ……会社は、どうなった。
-  - speaker: zundamon
-    emotion: happy
-    text: ホンダは、絶対つぶさないから。安心してくれ。
-  - speaker: honda
-    emotion: sad
-    text: ……そうか。……そうか。
-    se: namida
-  - speaker: reimu
-    text: 本田は、その場で泣きました。
-    reading: ほんだわ その ばで なきました。
-  - speaker: zundamon
-    emotion: surprised
-    text: 泣くのは、まだ早いのだ。会社がもとに戻ってからだ。
-    beat: true
 - id: card1956
   title: ''
   background: sc_card_1956
@@ -790,29 +787,26 @@ scenes:
     emotion: happy
     text: どうだい、専務。これなら、どれくらい売れる？
   - speaker: zundamon
+    emotion: normal
+    text: まあ、3万台だな。
+  - speaker: designer
+    emotion: surprised
+    text: 年間3万台、ですか？
+  - speaker: zundamon
     emotion: happy
     text: バカ言え。月に3万台だよ！
-  - speaker: designer
-    emotion: surprised
-    text: 3万台！？ 年間で、ですか？
-  - speaker: zundamon
-    emotion: normal
-    text: 月間で。
-  - speaker: designer
-    emotion: surprised
-    text: げ、月間！？
     se: gaan
     telops:
     - {text: 月に3万台, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
-  - speaker: designer
-    emotion: surprised
-    text: 業界の全部を合わせた数に、近いじゃないですか。
+  - speaker: reimu
+    text: 業界の全部を合わせた数に近い数字に、本田も一瞬目をむきました。
+    reading: ぎょうかいの ぜんぶお あわせた かずに ちかい すうじに、ほんだも いっしゅん めお むきました。
   - speaker: zundamon
     emotion: happy
     text: バイクに乗らなかった人が、買うんだ。
-  - speaker: designer
+  - speaker: honda
     emotion: thinking
-    text: 自転車の人や歩いている人が、ですか。
+    text: 自転車の人や、歩いてる人か。
   - speaker: zundamon
     emotion: happy
     text: だから、月に3万台なのだ。
@@ -964,10 +958,10 @@ scenes:
     background: sc_koukoku
   - speaker: zundamon
     emotion: happy
-    text: いいじゃないか！ 出前の小僧さんが、嬉しそうなのがいい。
+    text: ……これで行こう。
   - speaker: reimu
-    text: 藤沢は何十回もだめを出したあと、この広告に上機嫌でした。
-    reading: ふじさわわ なんじゅっかいも だめお だした あと、この こうこくに じょうきげんでした。
+    text: 藤沢は何十案にもだめを出し、そば屋の案で決まりました。
+    reading: ふじさわわ なんじゅうあんにも だめお だし、そばやの あんで きまりました。
 - id: ch6_koukoku
   title: ''
   background: sc_soba
@@ -997,8 +991,8 @@ scenes:
     emotion: happy
     text: よし、注文だ。
   - speaker: reimu
-    text: この広告のあと、そば屋などから約4000軒の注文があったとホンダは記しています。
-    reading: この こうこくの あと、そばやなどから やく よんせんけんの ちゅうもんが あったと ほんだわ しるして います。
+    text: この広告のあと、そば屋などから約4000軒の注文が来ました。藤沢は上機嫌でした。
+    reading: この こうこくの あと、そばやなどから やく よんせんけんの ちゅうもんが きました。ふじさわわ じょうきげんでした。
 - id: card1960
   title: ''
   background: sc_card_1960
@@ -1059,16 +1053,13 @@ scenes:
     reading: せんきゅうひゃく ろくじゅういちねん。ほんだと ふじさわわ、おかねに こまる がくせいお ささえる かいお つくります。なまえわ さっこうかいです。
   - speaker: honda
     emotion: normal
-    text: 学生に、学費を出す。返さなくていい。
+    text: 学生にお[金|かね]を出したい。どんな会にする？
   - speaker: zundamon
     emotion: normal
-    text: ただし、誰が出しているかは知らせない。
+    text: 使い道は自由で、返さなくていい。ただし、誰が出しているかは知らせない。
   - speaker: honda
     emotion: surprised
     text: 名前も、出さないのか。
-  - speaker: zundamon
-    emotion: happy
-    text: 名前を出したら、恩を売ることになるのだ。
   - speaker: honda
     emotion: happy
     text: ……あんたらしいな。
@@ -1163,18 +1154,18 @@ scenes:
     reading: ほんだわ しゃちょうとして のこる みちお えらび、すいれいの かいはつお わかい ぎじゅつしゃに まかせました。
 - id: ch8_soba
   title: ''
-  background: sc_soba
+  background: sc_kenkyujo
   bgm: 223am
   stage:
   - {who: nishida, x: 0.28, emotion: thinking}
   - {who: honda, x: 0.7, emotion: normal}
   cuts:
   - speaker: reimu
-    text: 1971年。西田通弘は、本田とそばを食べながら切り出します。
-    reading: せんきゅうひゃく ななじゅういちねん。にしだ みちひろわ、ほんだと そばお たべながら きりだします。
+    text: 1971年の春。研究所の昼食に、西田通弘は本田とそばを食べながら切り出します。
+    reading: せんきゅうひゃく ななじゅういちねんの はる。けんきゅうじょの ちゅうしょくに、にしだ みちひろわ ほんだと そばお たべながら きりだします。
   - speaker: nishida
     emotion: thinking
-    text: 社長。研究所の社長を、降りていただけませんか。
+    text: 社長。そろそろ、バトンタッチを考えていただけないでしょうか。
   - speaker: honda
     emotion: surprised
     text: ……。
@@ -1208,7 +1199,7 @@ scenes:
     text: お辞めになるんですか。社長は今、中国ですよ。
   - speaker: zundamon
     emotion: normal
-    text: 帰ってきたら、伝えてくれ。決めるのは、社長だ。
+    text: 帰ってきたら、伝えてくれ。社長には、ゆっくり考えてもらいたい。
   - speaker: nishida
     emotion: sad
     text: ……分かりました。
@@ -1232,8 +1223,8 @@ scenes:
     emotion: normal
     text: おれは藤沢武夫あっての社長だ。副社長が辞めるなら、おれも一緒に辞めるよ。
   - speaker: reimu
-    text: 藤沢はのちに、本田に直接言わなかったのは初めての大きな誤りだったと振り返っています。
-    reading: ふじさわわ のちに、ほんだに ちょくせつ いわなかったのわ はじめての おおきな あやまりだったと ふりかえって います。
+    text: 報告を聞いた藤沢は、本田に直接言わなかったのは初めての大きな誤りだと感じました。
+    reading: ほうこくお きいた ふじさわわ、ほんだに ちょくせつ いわなかったのわ はじめての おおきな あやまりだと かんじました。
   - speaker: reimu
     text: 1973年10月。66歳の本田と62歳の藤沢は、そろって退任しました。
     reading: せんきゅうひゃく ななじゅうさんねん じゅうがつ。ろくじゅうろくさいの ほんだと ろくじゅうにさいの ふじさわわ そろって たいにん しました。
@@ -1280,21 +1271,18 @@ scenes:
   - speaker: reimu
     text: 店に立ったのは、夫人と息子。藤沢はいつも和服で、夜は常磐津の稽古をしました。
     reading: みせに たったのわ ふじんと むすこ。ふじさわわ いつも わふくで、よるわ ときわずの けいこお しました。
+  - speaker: reimu
+    text: ある日藤沢がお手伝いさんにお茶を頼むと、孫も横から頼みました。
+    reading: ある ひ ふじさわが おてつだいさんに おちゃお たのむと、まごも よこから たのみました。
   - speaker: mago
     emotion: happy
-    text: おじいちゃん。お手伝いさんに、お茶を頼んじゃった。
+    text: 僕も。
   - speaker: zundamon
     emotion: angry
-    text: 自分で入れなさい。
-  - speaker: mago
-    emotion: surprised
-    text: でも、おじいちゃんも頼んでるよ。
+    text: ちょっと待て。おれは脚が悪いから、お願いしたんだ。
   - speaker: zundamon
     emotion: normal
-    text: おれは脚が悪いから、お願いしたんだ。お前の脚は、元気だろう。
-  - speaker: mago
-    emotion: sad
-    text: ……はい。
+    text: お手伝いさんも、家に帰れば一城の主だ。
     beat: true
   - speaker: reimu
     text: 孫が描いた絵を、祖母の帯に仕立てて励ましたこともありました。
@@ -1370,7 +1358,7 @@ scenes:
     text: カブって、ガソリンはどれくらいで走るの？
   - speaker: tsumugi
     emotion: normal
-    text: 最初のカブのカタログには、1リットルで90キロとあるの。
+    text: 発売当時の広告では、1リットルで90キロとうたっていたの。
   - speaker: zundamon
     emotion: surprised
     text: 東京から、小田原くらいまで行けるのだ！
