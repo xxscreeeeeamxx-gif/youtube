@@ -554,7 +554,7 @@ scenes:
   - speaker: kumiai
     emotion: happy
     text: 頼むぞ！ 専務、頼むぞ！
-    se: jaan
+    beat: true
   - speaker: reimu
     text: 組合員たちは、大きな拍手で応えました。
     reading: くみあいいんたちわ、おおきな はくしゅで こたえました。
@@ -599,7 +599,7 @@ scenes:
   - speaker: honda
     emotion: angry
     text: 起きて一言目が、それか！
-    se: tsukkomi
+    beat: true
   - speaker: zundamon
     emotion: normal
     text: 自転車に乗ってる人が、みんなお客になる。
@@ -668,7 +668,6 @@ scenes:
   - speaker: honda
     emotion: surprised
     text: '[痛て|いて]！'
-    se: bikkuri
   - speaker: designer
     emotion: surprised
     text: 社長！ 粘土の中の金網が、指に刺さってます！
@@ -951,7 +950,7 @@ scenes:
     se: tenten
   - speaker: zundamon
     emotion: normal
-    text: 社長が、スーパーカブはそば屋に向いてると言ってる。そこから考えてくれ。
+    text: 社長が、スーパーカブはそば屋に[向いてる|むいてる]と言ってる。そこから考えてくれ。
   - speaker: koukoku
     emotion: happy
     text: ……そば屋。題は、ソバも元気だ おっかさん。
@@ -1282,7 +1281,7 @@ scenes:
     text: ちょっと待て。おれは脚が悪いから、お願いしたんだ。
   - speaker: zundamon
     emotion: normal
-    text: お手伝いさんも、家に帰れば一城の主だ。
+    text: お手伝いさんも、家に帰れば[一城の主|いちじょうのあるじ]だ。
     beat: true
   - speaker: reimu
     text: 孫が描いた絵を、祖母の帯に仕立てて励ましたこともありました。
@@ -1329,7 +1328,7 @@ scenes:
     text: そば屋の出前持ちが片手で乗れる、って言ったのは本田さん？ 藤沢さん？
   - speaker: tsumugi
     emotion: normal
-    text: 本田さんよ。開発の責任者だった原田義郎さんが、最初からそう言ってたと話してるの。
+    text: 本田さんよ。開発の責任者だった原田さんが、最初からそう言ってたと話してるの。
   - speaker: tsumugi
     emotion: normal
     text: 藤沢さんの注文は、奥さんが買ってもいいと言うバイク。それと、どうしても50cc。
