@@ -1,0 +1,1457 @@
+meta:
+  title: 【ゴジラの誕生】150キロの着ぐるみは、角材1本もまたげなかった【ずんだもん解説】
+  slug: godzilla-tsuburaya
+  summary: 福島の須賀川で、空にあこがれた少年がいました。のちの特撮の神様、円谷英二です。飛行学校は教官の墜落で消え、映画の世界では部下のいない課長から始まり、戦後は仕事を追われます。1954年、水爆実験の年。公開まで3か月しかない怪獣映画の撮影所で、最初の着ぐるみは角材1本もまたげませんでした。ゴジラが生まれるまでを、再現ドラマでたどります。
+  tags:
+  - ゴジラ
+  - 円谷英二
+  - 特撮
+  - 東宝
+  - 中島春雄
+  - 怪獣映画
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 雑学
+  thumbnail:
+    top: 動けない怪獣
+    bottom: ゴジラの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: nakajima
+    label: 中島春雄
+    voice: 11
+    pitch: 0.0
+    outfit: work
+    color: '#7a7560'
+  - id: tanaka
+    label: 田中友幸
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+  - id: ifukube
+    label: 伊福部昭
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#4a4038'
+  - id: arikawa
+    label: 有川貞昌
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#5d6b45'
+  - id: ichiro
+    label: 叔父・一郎
+    voice: 13
+    pitch: -0.04
+    outfit: kimono
+    color: '#5a4a3a'
+  - id: natsu
+    label: 祖母・ナツ
+    voice: 8
+    pitch: -0.08
+    outfit: kimono
+    color: '#4a4a5a'
+  - id: tamai
+    label: 玉井教官
+    voice: 13
+    pitch: 0.08
+    outfit: work
+    color: '#6a5a48'
+  - id: edamasa
+    label: 枝正義郎
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#3e4450'
+  - id: kokabu
+    label: 古株の技師
+    voice: 42
+    pitch: -0.04
+    outfit: work
+    color: '#6b6f78'
+  - id: masano
+    label: 妻・マサノ
+    voice: 8
+    pitch: 0.06
+    outfit: kimono
+    color: '#9a4f5a'
+  - id: mori
+    label: 森岩雄
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3e4a5c'
+  - id: kaigun
+    label: 海軍の士官
+    voice: 13
+    pitch: 0.12
+    outfit: gakuran
+    color: '#26304a'
+  - id: keikan
+    label: 警官
+    voice: 100
+    pitch: 0.0
+    outfit: gakuran
+    color: '#2a3550'
+  - id: joshu
+    label: 助手
+    voice: 12
+    pitch: 0.04
+    outfit: work
+    color: '#8a8070'
+  - id: murabito
+    label: 村の人
+    voice: 42
+    pitch: 0.1
+    outfit: kimono
+    color: '#5a6a7a'
+  - id: gishi
+    label: 撮影技師
+    voice: 13
+    pitch: -0.1
+    outfit: work
+    color: '#4a5a6a'
+  - id: kumiai
+    label: 組合員
+    voice: 13
+    pitch: 0.1
+    outfit: work
+    color: '#7a5a4a'
+  - id: nikkatsu
+    label: 日活の技師
+    voice: 11
+    pitch: 0.0
+    outfit: work
+    color: '#5a6070'
+  - id: touchoku
+    label: 当直の警官
+    voice: 13
+    pitch: 0.06
+    outfit: gakuran
+    color: '#3a3a40'
+  - id: jokantoku
+    label: 助監督
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#6a6a5a'
+  - id: wakate
+    label: 若手社員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+scenes:
+- id: co_suit
+  title: ''
+  background: gz_stage
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: thinking}
+  - {who: nakajima, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1954年の夏。東京の撮影所で、ある男が怪獣の着ぐるみを試していました。
+    reading: せんきゅうひゃく ごじゅうよねんの なつ。とうきょうの さつえいじょで、ある おとこが かいじゅうの きぐるみお ためして いました。
+  - speaker: zundamon
+    emotion: normal
+    text: よし、中島くん。歩いてみろ。
+  - speaker: nakajima
+    emotion: thinking
+    text: ……足が、上がりません。
+  - speaker: zundamon
+    emotion: surprised
+    text: 角材1本だぞ。またぐだけだ。
+  - speaker: nakajima
+    emotion: sad
+    text: 重すぎて、無理です！ 倒れたら、自分じゃ起きられません。
+  - speaker: zundamon
+    emotion: sad
+    text: ……公開は11月3日。あと3か月しかないのだ。
+    se: gaan
+  - speaker: reimu
+    text: 重さはおよそ150キロ。この最初の着ぐるみは、試しの日に壊れました。
+    reading: おもさわ およそ ひゃくごじゅっきろ。この さいしょの きぐるみわ、ためしの ひに こわれました。
+  - speaker: reimu
+    text: この男は円谷英二。作り直した怪獣ゴジラは、およそ961万人を映画館に呼びます。
+    reading: この おとこわ つぶらや えいじ。つくりなおした かいじゅう ごじらわ、およそ きゅうひゃくろくじゅういちまんにんお えいがかんに よびます。
+- id: hook
+  title: ''
+  background: gz_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ見て！ 段ボールで町を作ったのだ。今から怪獣になって全部壊すぞ！
+  - speaker: zundamon
+    emotion: surprised
+    text: ガオー！ ……あれ、箱が硬くてぜんぜんつぶれないのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 自分で作った町に、負けてるじゃない。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 70年前、それを本気でやった人がいるの。最初は、角材もまたげない着ぐるみからね。
+  - speaker: zundamon
+    emotion: thinking
+    text: またげない着ぐるみから、どうやって怪獣映画にしたの？
+    telops:
+    - {text: 動けない着ぐるみから961万人, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 作ったのは、[円谷|つぶらや]英二さん。始まりは、空にあこがれた少年よ。
+- id: card1901
+  title: ''
+  background: gz_card_1901
+  cuts:
+  - speaker: reimu
+    text: 1901年。福島県の須賀川で、英一という男の子が生まれます。のちの円谷英二です。
+    reading: せんきゅうひゃくいちねん。ふくしまけんの すかがわで、えいいちと いう おとこのこが うまれます。のちの つぶらや えいじです。
+  - speaker: reimu
+    text: 1904年に母が亡くなり、英一は祖母のナツに育てられました。
+    reading: せんきゅうひゃくよねんに ははが なくなり、えいいちわ そぼの なつに そだてられました。
+- id: ch1_kura
+  title: 蔵の二階の飛行機少年
+  background: gz_kura
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, scale: 0.85, emotion: happy}
+  - {who: natsu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1910年、東京で日本初の動力飛行が成功します。英一は、その記事に夢中になりました。
+    reading: せんきゅうひゃくじゅうねん、とうきょうで にほん はつの どうりょく ひこうが せいこうします。えいいちわ、その きじに むちゅうに なりました。
+  - speaker: natsu
+    emotion: normal
+    text: '[英一|えいいち]。また蔵の二階にこもって、何をしてるんだい。'
+  - speaker: zundamon
+    emotion: happy
+    text: おっかさん、飛行機だよ！ 新聞の写真1枚で、作ってみせる！
+  - speaker: natsu
+    emotion: surprised
+    text: 写真1枚で、こんなもんを作ったのかい。
+  - speaker: zundamon
+    emotion: happy
+    text: 大きくなったら、飛行機で世界を回るのだ！
+  - speaker: natsu
+    emotion: normal
+    text: 世界の前に、まずこの散らかった机を片付けなさい。
+    se: hammer
+  - speaker: zundamon
+    emotion: happy
+    text: それと見て！ 貯金で、子ども用の映写機を買ったんだ！
+  - speaker: natsu
+    emotion: thinking
+    text: 飛行機の次は、活動写真の機械かい。[英一|えいいち]の頭の中は、忙しいねえ。
+  - speaker: zundamon
+    emotion: happy
+    text: 映る絵より、映る仕組みが面白いんだよ。
+  - speaker: reimu
+    text: 1912年。写真1枚から作った英一の模型飛行機は、地元の新聞に取り上げられました。
+    reading: せんきゅうひゃくじゅうにねん。しゃしん いちまいから つくった えいいちの もけい ひこうきわ、じもとの しんぶんに とりあげられました。
+- id: card1916
+  title: ''
+  background: gz_card_1916
+  cuts:
+  - speaker: reimu
+    text: 1916年。15歳の英一は、東京の羽田にできたばかりの飛行学校へ行きたいと言い出します。
+    reading: せんきゅうひゃくじゅうろくねん。じゅうごさいの えいいちわ、とうきょうの はねだに できたばかりの ひこう がっこうえ いきたいと いいだします。
+- id: ch1_oji
+  title: 600円の飛行学校
+  background: gz_ie
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, scale: 0.9, emotion: sad}
+  - {who: ichiro, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ichiro
+    emotion: thinking
+    text: '[英一|えいいち]。飛行学校の費用は、600円だぞ。家が2軒建つ。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……みんな、危ないから行くなって言うんです。
+  - speaker: ichiro
+    emotion: normal
+    text: 危ないのは、本当だ。
+  - speaker: zundamon
+    emotion: sad
+    text: 叔父さんも、反対ですか。
+  - speaker: ichiro
+    emotion: happy
+    text: ……おれが出す。そのかわり、途中で投げ出すなよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 叔父さん……！
+  - speaker: reimu
+    text: 費用を工面したのは、英一より5歳年上の叔父の一郎でした。
+    reading: ひようお くめんしたのわ、えいいちより ごさい としうえの おじの いちろうでした。
+- id: ch1_haneda
+  title: 海岸の飛行学校
+  background: gz_haneda
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, scale: 0.9, emotion: happy}
+  - {who: tamai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 学校といっても、羽田の海岸に建つヨシズ張りの小屋でした。
+    reading: がっこうと いっても、はねだの かいがんに たつ よしずばりの こやでした。
+  - speaker: tamai
+    emotion: normal
+    text: '[円谷|つぶらや]くん。今日も、エンジンの修理からだ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: また修理ですか。昨日も、半日かかったのに。
+  - speaker: tamai
+    emotion: happy
+    text: 飛ぶ日より、直す日のほうが多い。それが飛行機だ。
+  - speaker: tamai
+    emotion: normal
+    text: 縁日で飛ばしてみせて、学校の稼ぎにする。
+  - speaker: zundamon
+    emotion: thinking
+    text: 縁日で、飛ばなかったら？
+  - speaker: tamai
+    emotion: thinking
+    text: ……お客さんに、袋叩きだ。
+    se: tenten
+  - speaker: zundamon
+    emotion: surprised
+    text: 命がけなのは、空の上だけじゃないのだ。
+  - speaker: tamai
+    emotion: happy
+    text: それでも、空はいいぞ。[円谷|つぶらや]くんも、いつか自分の手で飛ばせ。
+  - speaker: zundamon
+    emotion: happy
+    text: はい！ いつか自分の飛行機で、[須賀川|すかがわ]の空を飛ぶのだ！
+- id: ch1_tsuiraku
+  title: ''
+  background: gz_haneda
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, scale: 0.9, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1917年5月20日。教官の玉井清太郎が、東京の芝浦で墜落して亡くなります。
+    reading: せんきゅうひゃくじゅうななねん ごがつ はつか。きょうかんの たまい せいたろうが、とうきょうの しばうらで ついらくして なくなります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……先生が、落ちた？
+  - speaker: reimu
+    text: 教官は、玉井ひとりだけでした。残る1機も、秋の高潮で格納庫ごと流されます。
+    reading: きょうかんわ、たまい ひとり だけでした。のこる いっきも、あきの たかしおで かくのうこごと ながされます。
+    background: gz_haneda_kara
+  - speaker: zundamon
+    emotion: sad
+    text: ……飛行機も先生も、なくなってしまった。
+  - speaker: reimu
+    text: 学校は、それきり消えました。英一は東京に残り、おもちゃ会社で働き始めます。
+    reading: がっこうわ、それきり きえました。えいいちわ とうきょうに のこり、おもちゃ がいしゃで はたらき はじめます。
+- id: card1919
+  title: ''
+  background: gz_card_1919
+  cuts:
+  - speaker: reimu
+    text: 1919年。英一はおもちゃの発明で、特許料500円を手にします。
+    reading: せんきゅうひゃくじゅうきゅうねん。えいいちわ おもちゃの はつめいで、とっきょりょう ごひゃくえんお てに します。
+- id: ch2_hanami
+  title: 花見の喧嘩
+  background: gz_hanami
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: edamasa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: みんな、今日はボクのおごりだ！ [飛鳥山|あすかやま]で花見だぞ！
+  - speaker: reimu
+    text: ところが連れてきた職人たちが、隣の席と喧嘩を始めます。
+    reading: ところが つれてきた しょくにんたちが、となりの せきと けんかお はじめます。
+  - speaker: zundamon
+    emotion: surprised
+    text: ちょ、ちょっと待った！ 桜の下で殴り合いはなしなのだ！
+  - speaker: zundamon
+    emotion: normal
+    text: こちらの者が、失礼しました。どうか、ここは収めてください。
+  - speaker: edamasa
+    emotion: surprised
+    text: ……[君|きみ]、いくつだ。
+  - speaker: zundamon
+    emotion: normal
+    text: まだ、駆け出しの若造です。
+  - speaker: edamasa
+    emotion: happy
+    text: その若さで、大人の喧嘩を収めたか。……うちで、活動写真を撮ってみないか。
+  - speaker: reimu
+    text: 隣の席にいたのは、映画会社の天活の枝正義郎でした。
+    reading: となりの せきに いたのわ、えいがかいしゃ てんかつの えだまさ よしろうでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 喧嘩を止めたら、仕事が決まったのだ。
+- id: ch2_kuusatsu
+  title: 誰もやらない空撮
+  background: gz_satsueijo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: kokabu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kokabu
+    emotion: thinking
+    text: 飛行機に乗って、上から撮れだと？ 落ちたら死ぬぞ。誰も行かねえよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクが行きます！ 飛行機なら、任せてください。
+  - speaker: kokabu
+    emotion: angry
+    text: 新入りが、何を言ってやがる。
+  - speaker: zundamon
+    emotion: happy
+    text: 飛行学校にいました。半分は修理でしたけど。
+  - speaker: kokabu
+    emotion: surprised
+    text: 半分修理じゃ、余計に心配だろうが。
+    se: tsukkomi
+  - speaker: reimu
+    text: 英一は飛行機からの撮影に成功し、撮影技師に引き上げられます。
+    reading: えいいちわ ひこうきからの さつえいに せいこうし、さつえい ぎしに ひきあげられます。
+  - speaker: zundamon
+    emotion: happy
+    text: 空の上から、カメラを回したぞ！
+    beat: true
+- id: card1930
+  title: ''
+  background: gz_card_1930
+  cuts:
+  - speaker: reimu
+    text: 1930年。京都の撮影所で働く英一は、やがて円谷英二と名乗るようになります。
+    reading: せんきゅうひゃくさんじゅうねん。きょうとの さつえいじょで はたらく えいいちわ、やがて つぶらや えいじと なのるように なります。
+- id: ch3_crane
+  title: 手作りのクレーン
+  background: gz_kyoto_set
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: masano, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 英二は自分のお金で、木の撮影用クレーンを作りました。
+    reading: えいじわ じぶんの おかねで、きの さつえいよう くれーんお つくりました。
+  - speaker: zundamon
+    emotion: happy
+    text: 上から撮れば、立ち回りが全部見える。もう少し高く……。
+  - speaker: reimu
+    text: 撮影の最中に、英二はクレーンから落ちてけがをします。
+    reading: さつえいの さいちゅうに、えいじわ くれーんから おちて けがお します。
+    background: gz_byoshitsu
+  - speaker: masano
+    emotion: thinking
+    text: '[円谷|つぶらや]さん。クレーンから落ちたんですって？'
+  - speaker: zundamon
+    emotion: sad
+    text: 落ちたんじゃない。……高さを確かめただけなのだ。
+  - speaker: masano
+    emotion: angry
+    text: 確かめ方が、命がけです。
+    se: hammer
+  - speaker: reimu
+    text: 看病してくれた19歳の荒木マサノと、英二は結婚します。
+    reading: かんびょうして くれた じゅうきゅうさいの あらき まさのと、えいじわ けっこん します。
+- id: ch3_kekkon
+  title: ''
+  background: gz_ie_kyoto
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: masano, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、ロケに行ってくる！
+  - speaker: masano
+    emotion: surprised
+    text: 式の次の日に、もうお仕事ですか。
+  - speaker: masano
+    emotion: sad
+    text: '[須賀川|すかがわ]から、お祝いのお餅が届いたのに。……ひとりで食べるんですね。'
+  - speaker: reimu
+    text: その日マサノは、祝いの餅を泣きながらひとりで食べました。
+    reading: その ひ まさのわ、いわいの もちお なきながら ひとりで たべました。
+  - speaker: masano
+    emotion: angry
+    text: 給料日は、会社の前で待ってますからね。寄り道させませんよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……帰り道に、楽しみが無くなったのだ。
+    beat: true
+- id: ch3_kong
+  title: 大きな猿の衝撃
+  background: gz_shishitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: surprised}
+  - {who: nikkatsu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1933年。英二は、アメリカ映画のキング・コングを見ます。
+    reading: せんきゅうひゃくさんじゅうさんねん。えいじわ、あめりか えいがの きんぐ こんぐお みます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 大きな猿が、ビルに登ってる……。どうやって撮ったんだ！？
+  - speaker: nikkatsu
+    emotion: normal
+    text: 外国のトリックだろ。日本じゃ、とても無理だよ。
+  - speaker: zundamon
+    emotion: angry
+    text: 無理かどうかは、調べてみるまで分からない。
+  - speaker: zundamon
+    emotion: normal
+    text: フィルムを取り寄せて、[1コマ|ひとこま]ずつ見てやる。
+  - speaker: nikkatsu
+    emotion: surprised
+    text: '[1コマ|ひとこま]ずつって、何万コマあると思ってるんだ。'
+  - speaker: reimu
+    text: 英二はフィルムを取り寄せ、1コマずつ調べ上げました。
+    reading: えいじわ ふぃるむお とりよせ、ひとこまずつ しらべあげました。
+- id: card1937
+  title: ''
+  background: gz_card_1937
+  cuts:
+  - speaker: reimu
+    text: 1937年。新しく東宝という映画会社ができ、英二は東京の撮影所へ移ります。
+    reading: せんきゅうひゃくさんじゅうななねん。あたらしく とうほうと いう えいがかいしゃが でき、えいじわ とうきょうの さつえいじょえ うつります。
+- id: ch4_zubora
+  title: 部下のいない課長
+  background: gz_toho_rouka
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: gishi, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: gishi
+    emotion: angry
+    text: おう、ズボラヤ。また妙な機械を持ち込んだのか。
+  - speaker: zundamon
+    emotion: angry
+    text: ツブラヤです！
+  - speaker: gishi
+    emotion: normal
+    text: トリックなんぞ、映画の邪魔だ。うちの組には入れんぞ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……名前くらい、ちゃんと呼んでくれてもいいのに。
+    se: shobon
+  - speaker: reimu
+    text: 撮影技師たちは英二と組むのを嫌い、仕事から締め出しました。
+    reading: さつえい ぎしたちわ えいじと くむのお きらい、しごとから しめだしました。
+- id: ch4_kacho
+  title: ''
+  background: gz_tokugi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: mori, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: mori
+    emotion: normal
+    text: '[円谷|つぶらや]くん。特殊技術課を作った。[君|きみ]が課長だ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 課長！ ありがとうございます。部下は、何人ですか？
+  - speaker: mori
+    emotion: thinking
+    text: ……ゼロだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 部下のいない課長なのだ！？
+    beat: true
+  - speaker: mori
+    emotion: normal
+    text: 課の名前があれば、研究の予算は取れる。部下は、そのうちだ。
+  - speaker: reimu
+    text: 英二はアメリカの専門書を訳してもらい、映像を合成する機械を自分で組み立てました。
+    reading: えいじわ あめりかの せんもんしょお やくして もらい、えいぞうお ごうせいする きかいお じぶんで くみたてました。
+- id: card1942
+  title: ''
+  background: gz_card_1942
+  cuts:
+  - speaker: reimu
+    text: 1942年。戦争のさなか、英二は海軍の映画の特撮を任されます。
+    reading: せんきゅうひゃくよんじゅうにねん。せんそうの さなか、えいじわ かいぐんの えいがの とくさつお まかされます。
+- id: ch5_shinjuwan
+  title: 写真のない港
+  background: gz_shinjuwan
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: kaigun, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 港を作るのに、本物の写真を見せていただけませんか。
+  - speaker: kaigun
+    emotion: angry
+    text: 軍の資料は、一切[出せん|だせん]。
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: 写真なしで、港を作れと言うんですか！？
+  - speaker: kaigun
+    emotion: thinking
+    text: 映画屋は、信用できんからな。
+  - speaker: zundamon
+    emotion: angry
+    text: ……雑誌の写真でも何でも集めて、作ってやる。
+  - speaker: reimu
+    text: 集めた写真を頼りに、撮影所の野外に1800坪の港のミニチュアが組まれました。
+    reading: あつめた しゃしんお たよりに、さつえいじょの やがいに せんはっぴゃくつぼの みなとの みにちゅあが くまれました。
+    background: gz_shinjuwan_full
+  - speaker: kaigun
+    emotion: surprised
+    text: ……実物も見ないで、ここまで作るのか。
+- id: ch5_ryuchi
+  title: ''
+  background: gz_ryuchijo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: sad}
+  - {who: touchoku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 試写は大成功でした。その夜、英二は飲みすぎます。
+    reading: ししゃわ だいせいこうでした。その よる、えいじわ のみすぎます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……頭が痛い。ここ、どこだ？
+  - speaker: touchoku
+    emotion: normal
+    text: 渋谷の警察署だ。タクシーと喧嘩したのを、覚えてないのか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクが！？
+    beat: true
+  - speaker: reimu
+    text: のちに英二が、監督の本多猪四郎に話した失敗談です。
+    reading: のちに えいじが、かんとくの ほんだ いしろうに はなした しっぱいだんです。
+- id: ch5_bokugou
+  title: 防空壕の大ダコ
+  background: gz_bokugou
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: thinking}
+  - {who: masano, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1945年、東京は空襲を受けます。英二は家族と、庭の防空壕に逃げ込みました。
+    reading: せんきゅうひゃくよんじゅうごねん、とうきょうわ くうしゅうお うけます。えいじわ かぞくと、にわの ぼうくうごうに にげこみました。
+  - speaker: masano
+    emotion: thinking
+    text: ……あなた。こんなときに、何を考えてるんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 大きなタコが、町を襲う映画だよ。
+  - speaker: masano
+    emotion: surprised
+    text: タコ！？ 今、ここで！？
+  - speaker: zundamon
+    emotion: normal
+    text: 戦争の恐ろしさを、いつか書いてみたいんだ。
+  - speaker: masano
+    emotion: thinking
+    text: ……生きて出られたら、聞かせてください。
+- id: ch5_sougi
+  title: バリケードの向こう
+  background: gz_barricade
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: kumiai, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 戦後の東宝では大きな労働争議が起こり、撮影所の門にバリケードが築かれます。
+    reading: せんごの とうほうでわ おおきな ろうどう そうぎが おこり、さつえいじょの もんに ばりけーどが きずかれます。
+  - speaker: kumiai
+    emotion: angry
+    text: おい、[円谷|つぶらや]さん。どこへ行く気だ。
+  - speaker: zundamon
+    emotion: normal
+    text: 編集の仕事が残ってる。フィルムは、待ってくれないんだ。
+  - speaker: kumiai
+    emotion: angry
+    text: みんな[手|て]を止めてるんだぞ。あんたは、スト破りか！
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクは、映画を作りたいだけだ。
+  - speaker: reimu
+    text: 英二はバリケードを越えて編集を続け、スト破りと呼ばれて仲間から締め出されました。
+    reading: えいじわ ばりけーどお こえて へんしゅうお つづけ、すとやぶりと よばれて なかまから しめだされました。
+- id: card1947
+  title: ''
+  background: gz_card_1947
+  cuts:
+  - speaker: reimu
+    text: 1947年。戦争が終わり、日本では飛行機を作ることも飛ばすことも禁じられていました。
+    reading: せんきゅうひゃくよんじゅうななねん。せんそうが おわり、にほんでわ ひこうきお つくる ことも とばす ことも きんじられて いました。
+- id: ch6_arikawa
+  title: 撮れなくなった男
+  background: gz_soshigaya
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: arikawa, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: arikawa
+    emotion: sad
+    text: '[円谷|つぶらや]さん。海軍で、飛行機に乗っていた有川です。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ……我々日本人は、もう飛行機には乗れない。
+  - speaker: arikawa
+    emotion: sad
+    text: ……はい。
+  - speaker: zundamon
+    emotion: happy
+    text: でも映画なら、また飛行機を飛ばせられる。
+  - speaker: arikawa
+    emotion: surprised
+    text: 映画で、ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: ミニチュアの飛行機なら、誰にも止められんぞ。
+  - speaker: arikawa
+    emotion: happy
+    text: ……やらせてください。
+    beat: true
+- id: ch6_tsuihou
+  title: ''
+  background: gz_prefab
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: sad}
+  - {who: masano, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1948年。戦争の映画で特撮をした英二は公職追放の指定を受け、東宝を去ります。
+    reading: せんきゅうひゃく よんじゅうはちねん。せんそうの えいがで とくさつお した えいじわ こうしょく ついほうの していお うけ、とうほうお さります。
+  - speaker: reimu
+    text: 英二は自宅の庭に小屋を建て、名前を出さずに他社の特撮を請け負いました。
+    reading: えいじわ じたくの にわに こやお たて、なまえお ださずに たしゃの とくさつお うけおいました。
+  - speaker: masano
+    emotion: thinking
+    text: 名前を出さない仕事で、子どもたちを食べさせていけるんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……食べさせてみせる。
+  - speaker: zundamon
+    emotion: normal
+    text: 名前は出せなくても、腕は出せるのだ。
+  - speaker: masano
+    emotion: happy
+    text: じゃあその腕で、まず庭の小屋の雨漏りを直してください。
+    se: zukko
+- id: ch6_izakaya
+  title: 名乗らない飲み仲間
+  background: gz_koryoriya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: ifukube, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 京都の小料理屋で、英二はひとりの男と飲み友達になります。
+    reading: きょうとの こりょうりやで、えいじわ ひとりの おとこと のみともだちに なります。
+  - speaker: zundamon
+    emotion: happy
+    text: やあ、また会いましたね。今夜も一杯、ごちそうになっていいかな。
+  - speaker: ifukube
+    emotion: thinking
+    text: ……あなた、何の仕事をしてる人なんです？
+  - speaker: zundamon
+    emotion: normal
+    text: それはまあ、いろいろなのだ。
+  - speaker: ifukube
+    emotion: thinking
+    text: 名前も知らない人に、もう何杯おごったんだか。
+    beat: true
+  - speaker: reimu
+    text: 二人は名前も仕事も明かさないまま、何年も飲み続けました。
+    reading: ふたりわ なまえも しごとも あかさない まま、なんねんも のみ つづけました。
+- id: card1954
+  title: ''
+  background: gz_card_1954
+  cuts:
+  - speaker: reimu
+    text: 1952年に英二の追放は解かれ、東宝に戻ります。そして1954年。
+    reading: せんきゅうひゃく ごじゅうにねんに えいじの ついほうわ とかれ、とうほうに もどります。そして せんきゅうひゃく ごじゅうよねん。
+  - speaker: reimu
+    text: 3月。アメリカの水爆実験で、日本の漁船の第五福竜丸が被ばくします。
+    reading: さんがつ。あめりかの すいばく じっけんで、にほんの ぎょせんの だいご ふくりゅうまるが ひばくします。
+- id: ch7_kikaku
+  title: タコか、恐竜か
+  background: gz_kaigishitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: tanaka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じころ東宝のプロデューサー田中友幸は、海外との合作映画が流れて困っていました。
+    reading: おなじ ころ とうほうの ぷろでゅーさー たなか ともゆきわ、かいがいとの がっさく えいがが ながれて こまって いました。
+  - speaker: tanaka
+    emotion: normal
+    text: '[円谷|つぶらや]さん。水爆で目を覚ました怪獣が、東京を襲う映画をやりたい。'
+  - speaker: zundamon
+    emotion: happy
+    text: 怪獣なら、大きなタコはどうですか！
+  - speaker: tanaka
+    emotion: thinking
+    text: タコ……。いや、太古の恐竜にしましょう。今の世の中には、そのほうが合う。
+  - speaker: zundamon
+    emotion: sad
+    text: ……タコ、いいと思ったのに。
+    se: shobon
+  - speaker: reimu
+    text: 映画はG作品という暗号で呼ばれ、ひそかに準備が進みます。
+    reading: えいがわ じー さくひんと いう あんごうで よばれ、ひそかに じゅんびが すすみます。
+  - speaker: zundamon
+    emotion: normal
+    text: 怪獣は、人形を[1コマ|ひとこま]ずつ動かして撮りたい。大きな猿の映画と同じやり方で。
+  - speaker: tanaka
+    emotion: surprised
+    text: それだと、何年かかります？ 公開は11月3日と、もう決まってますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……人が中に入る着ぐるみしかないか。
+  - speaker: reimu
+    text: 中島春雄はのちに、人形なら7年かかるが人なら3か月と口説かれたと振り返っています。
+    reading: なかじま はるおわ のちに、にんぎょうなら ななねん かかるが ひとなら さんかげつと くどかれたと ふりかえって います。
+- id: ch7_happyou
+  title: 製作発表の再会
+  background: gz_happyou
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: ifukube, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月、映画の製作発表。壇上に並んだ顔ぶれに、英二は目を疑います。
+    reading: しちがつ、えいがの せいさく はっぴょう。だんじょうに ならんだ かおぶれに、えいじわ めお うたがいます。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あ、あなた！ 京都の、小料理屋の！
+  - speaker: ifukube
+    emotion: surprised
+    text: '[飲み代|のみだい]を払ってた、あの私です。音楽を担当する、[伊福部|いふくべ]です。'
+  - speaker: zundamon
+    emotion: surprised
+    text: と、特撮の[円谷|つぶらや]です……。
+  - speaker: ifukube
+    emotion: thinking
+    text: 名前を聞くまで、5年かかりましたね。
+    se: oti
+- id: ch8_suit
+  title: 10メートル歩けた男
+  background: gz_stage
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: nakajima, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 主役の怪獣役は、元プロ野球選手の手塚勝巳の予定でした。
+    reading: しゅやくの かいじゅうやくわ、もと ぷろやきゅう せんしゅの てづか かつみの よていでした。
+  - speaker: reimu
+    text: 着ぐるみの歩行テストで手塚は3メートルほどで倒れ、中島は10メートル歩けました。
+    reading: きぐるみの ほこう てすとで てづかわ さんめーとるほどで たおれ、なかじまわ じゅうめーとる あるけました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 中島くん、10メートルも歩けたのか。
+  - speaker: nakajima
+    emotion: happy
+    text: はい！ 歩けました！
+  - speaker: zundamon
+    emotion: happy
+    text: よし！ 主役の怪獣は、[君|きみ]に任せる！
+    beat: true
+  - speaker: reimu
+    text: 最初の着ぐるみが壊れて半月。軽くした2つ目の着ぐるみができあがります。
+    reading: さいしょの きぐるみが こわれて はんつき。かるく した ふたつめの きぐるみが できあがります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 中島くん。毎日、どこへ行ってるんだ？
+  - speaker: nakajima
+    emotion: normal
+    text: 上野の動物園です。象と熊の歩き方を、見に行ってます。
+    background: gz_ueno
+  - speaker: nakajima
+    emotion: happy
+    text: 怪獣の歩き方の、お手本探しです！
+  - speaker: zundamon
+    emotion: normal
+    text: '[中|なか]は暑くて重い。どんなときにも、弱音をはくなよ。'
+    background: gz_stage
+  - speaker: nakajima
+    emotion: happy
+    text: 大丈夫です！
+  - speaker: nakajima
+    emotion: thinking
+    text: ……ただ、[中|なか]は暑くて3分が限界です。
+  - speaker: zundamon
+    emotion: normal
+    text: 3分撮ったら、すぐに出して冷やすぞ。
+  - speaker: reimu
+    text: 着ぐるみの中は60度近くになり、中島は撮影中に体重が9キロ減ったと語っています。
+    reading: きぐるみの なかわ ろくじゅうど ちかくに なり、なかじまわ さつえいちゅうに たいじゅうが きゅうきろ へったと かたって います。
+- id: ch8_ijika
+  title: 山の向こうの怪獣
+  background: gz_ijika
+  bgm: natsuyasumi
+  stage:
+  - {who: jokantoku, x: 0.56, emotion: happy}
+  - {who: murabito, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 8月に本編の撮影隊が三重県の漁村の石鏡でロケをし、村の人およそ300人が出演しました。
+    reading: はちがつに ほんぺんの さつえいたいが みえけんの ぎょそんの いじかで ろけお し、むらの ひと およそ さんびゃくにんが しゅつえん しました。
+  - speaker: jokantoku
+    emotion: happy
+    text: 皆さん！ あの山の向こうからゴジラが顔を出しますから、驚いてください！
+  - speaker: murabito
+    emotion: thinking
+    text: そんな、馬鹿な。
+  - speaker: murabito
+    emotion: surprised
+    text: そのゴジラとやらはここにおらんのに、どうやって撮るんです？
+  - speaker: jokantoku
+    emotion: thinking
+    text: ……そこは、気持ちで驚いてください。
+    beat: true
+- id: ch9_ginza
+  title: 銀座を壊す下見
+  background: gz_ginza_okujo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: joshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 特撮班は壊す町の下見に、本物の銀座のビルの屋上へ上がります。
+    reading: とくさつはんわ こわす まちの したみに、ほんものの ぎんざの びるの おくじょうえ あがります。
+  - speaker: zundamon
+    emotion: happy
+    text: あそこのビルを燃やそうか。いや、あっちのビルを倒すのもいいな。
+  - speaker: joshu
+    emotion: surprised
+    text: '[円谷|つぶらや]さん、声が大きいです……。'
+  - speaker: zundamon
+    emotion: happy
+    text: 時計台は、最後にとっておこう。
+- id: ch9_keikan
+  title: ''
+  background: gz_ginza_okujo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: surprised}
+  - {who: keikan, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: keikan
+    emotion: angry
+    text: ちょっと、君たち。ビルを燃やすって、どういうことだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ち、違います！ 映画の、怪獣の話なんです！
+  - speaker: keikan
+    emotion: thinking
+    text: 怪獣……？ 署で、ゆっくり聞こうか。
+    se: zukko
+  - speaker: reimu
+    text: 図面のもらえないビルは、10センチごとに紅白に塗った棒を当てて寸法を測りました。
+    reading: ずめんの もらえない びるわ、じゅっせんちごとに こうはくに ぬった ぼうお あてて すんぽうお はかりました。
+- id: ch10_minia
+  title: 画面の外まで作る
+  background: gz_minia
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: joshu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 撮影所に、銀座の町がまるごとミニチュアで作られます。縮尺は25分の1です。
+    reading: さつえいじょに、ぎんざの まちが まるごと みにちゅあで つくられます。しゅくしゃくわ にじゅうごぶんの いちです。
+  - speaker: zundamon
+    emotion: normal
+    text: 新入りは、まずキング・コングを見てこい。話はそれからだ。
+  - speaker: joshu
+    emotion: thinking
+    text: また、その映画ですか。[円谷|つぶらや]さん、毎日見てますよね。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎日見ても、毎日発見があるのだ。
+  - speaker: joshu
+    emotion: happy
+    text: それより、電線を張り終わりました！ カメラに映るところだけですけど。
+  - speaker: zundamon
+    emotion: angry
+    text: それじゃダメだ。ボクが欲しいのは、画面の外なんだ。
+  - speaker: joshu
+    emotion: surprised
+    text: 映らないところまで、ですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 怪獣がどこまで歩いても、町が続いてなきゃ嘘になる。
+  - speaker: joshu
+    emotion: thinking
+    text: ……国会議事堂まで壊すんですよね。本当に、できるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: できるよ。
+  - speaker: reimu
+    text: 国会議事堂のミニチュアは撮る前に壊れて作り直し、本番は3回目でようやく撮れました。
+    reading: こっかい ぎじどうの みにちゅあわ とる まえに こわれて つくりなおし、ほんばんわ さんかいめで ようやく とれました。
+  - speaker: joshu
+    emotion: surprised
+    text: できるよって、3回目ですけど……。
+  - speaker: zundamon
+    emotion: normal
+    text: 3回目で、できたのだ。
+    beat: true
+  - speaker: reimu
+    text: 撮影は夕方5時ごろに始まり、朝の5時ごろまで続きました。
+    reading: さつえいわ ゆうがた ごじごろに はじまり、あさの ごじごろまで つづきました。
+  - speaker: zundamon
+    emotion: happy
+    text: 次は、[4べえ|よんべえ]で撮るぞ！
+  - speaker: joshu
+    emotion: surprised
+    text: よ、よんべえ……？
+  - speaker: zundamon
+    emotion: normal
+    text: 4倍の速さで撮るんだ。福島じゃ、倍をべえって言うのだ。
+  - speaker: joshu
+    emotion: thinking
+    text: あっ、[円谷|つぶらや]さん。今のカット、ピアノ線が写ってます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あとで、ボクに釜飯おごれ。
+  - speaker: joshu
+    emotion: surprised
+    text: 見つけたのはボクなのに、おごるのもボクなんですか！？
+    se: tsukkomi
+- id: ch10_tokei
+  title: ''
+  background: gz_minia
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: thinking}
+  - {who: nakajima, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 銀座の時計台を壊す場面で、中島は最初に時計台を無造作に壊してしまいます。
+    reading: ぎんざの とけいだいお こわす ばめんで、なかじまわ さいしょに とけいだいお むぞうさに こわして しまいます。
+    background: gz_minia_kowareta
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あっけなさすぎる。
+  - speaker: nakajima
+    emotion: sad
+    text: すみません……。
+  - speaker: zundamon
+    emotion: normal
+    text: 作り直そう。石膏が乾くまで、1か月待つ。
+  - speaker: nakajima
+    emotion: surprised
+    text: い、1か月！？
+    beat: true
+  - speaker: reimu
+    text: 撮り直しでは、怪獣が時計の鐘に振り向いてから壊す芝居に変えました。
+    reading: とりなおしでわ、かいじゅうが とけいの かねに ふりむいてから こわす しばいに かえました。
+    background: gz_minia
+  - speaker: zundamon
+    emotion: happy
+    text: 怪獣にも、気持ちがあるんだよ。
+- id: ch10_pool
+  title: ''
+  background: gz_pool
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: surprised}
+  - {who: nakajima, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 秋。冷たいプールでの撮影中に水の底のケーブルが漏電し、中島は気を失います。
+    reading: あき。つめたい ぷーるでの さつえいちゅうに みずの そこの けーぶるが ろうでんし、なかじまわ きお うしないます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 中島くん！？ 中島くん！
+  - speaker: nakajima
+    emotion: sad
+    text: ……[円谷|つぶらや]さん。まだ、撮れます。
+  - speaker: zundamon
+    emotion: angry
+    text: 弱音をはくなとは言ったけど、無茶をしろとは言ってないのだ！
+- id: ch11_ongaku
+  title: 真っ白な怪獣に曲を
+  background: gz_shishitsu54
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: ifukube, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 特撮が間に合わず、英二は怪獣の場面を白く抜いたまま伊福部昭に見せました。
+    reading: とくさつが まにあわず、えいじわ かいじゅうの ばめんお しろく ぬいた まま いふくべ あきらに みせました。
+  - speaker: ifukube
+    emotion: angry
+    text: '[円谷|つぶらや]さん。肝心の怪獣が、真っ白で何も映ってませんよ。'
+  - speaker: zundamon
+    emotion: happy
+    text: ここで山の向こうから、ぐわーっと出るんだ！
+  - speaker: ifukube
+    emotion: thinking
+    text: ……ぐわーっと、に曲をつけろと。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: そう！ ぐわーっと、なのだ。
+  - speaker: reimu
+    text: 伊福部は怪獣の姿を一度も見ないまま、曲を書き上げました。
+    reading: いふくべわ かいじゅうの すがたお いちども みない まま、きょくお かきあげました。
+- id: ch11_matsuri
+  title: 怪獣を祭る
+  background: gz_nakaniwa
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: joshu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 10月25日、映画が完成します。
+    reading: じゅうがつ にじゅうごにち、えいがが かんせい します。
+  - speaker: reimu
+    text: 出演した宝田明は、初めての試写で怪獣がかわいそうで泣いたと書いています。
+    reading: しゅつえんした たからだ あきらわ、はじめての ししゃで かいじゅうが かわいそうで ないたと かいて います。
+  - speaker: zundamon
+    emotion: surprised
+    text: 怖がらせるつもりが、泣かせたか。
+  - speaker: reimu
+    text: 撮影所の中庭では、着ぐるみを祭ってお祝いをしました。
+    reading: さつえいじょの なかにわでわ、きぐるみお まつって おいわいお しました。
+  - speaker: joshu
+    emotion: happy
+    text: 俳優さんが神主で、女優さんが巫女ですって。本格的ですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 150キロから始まった怪獣だ。拝んでおいて、損はないぞ。
+  - speaker: joshu
+    emotion: thinking
+    text: 拝む相手、怪獣で合ってますか。
+    beat: true
+- id: ch12_shonichi
+  title: 道玄坂までの列
+  background: gz_eigakan
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: thinking}
+  - {who: tanaka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1954年11月3日。ゴジラが公開されます。
+    reading: せんきゅうひゃく ごじゅうよねん じゅういちがつ みっか。ごじらが こうかい されます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……お客さん、来てくれるかな。
+  - speaker: tanaka
+    emotion: surprised
+    text: '[円谷|つぶらや]さん！ 渋谷の劇場の列が、道玄坂まで伸びてます！'
+    background: gz_eigakan_retsu
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: 道玄坂まで！？
+  - speaker: tanaka
+    emotion: happy
+    text: 手が足りない。私も、入口で切符を切ってきます！
+  - speaker: zundamon
+    emotion: surprised
+    text: プロデューサーが、もぎりを！？
+  - speaker: reimu
+    text: 観客はおよそ961万人。当時の日本の、ほぼ10人に1人でした。
+    reading: かんきゃくわ およそ きゅうひゃくろくじゅういちまんにん。とうじの にほんの、ほぼ じゅうにんに ひとりでした。
+    telops:
+    - {text: 観客およそ961万人, size: xl, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 動けなかった怪獣が、日本中を歩いたのだ！
+  - speaker: reimu
+    text: 東宝は特撮班を重役室に招き、ビールと洋酒でねぎらいました。
+    reading: とうほうわ とくさつはんお じゅうやくしつに まねき、びーると ようしゅで ねぎらいました。
+    background: gz_juyakushitsu
+  - speaker: tanaka
+    emotion: happy
+    text: '[円谷|つぶらや]さん、今夜は好きなだけ飲んでください。'
+  - speaker: zundamon
+    emotion: happy
+    text: 釜飯じゃなくて、洋酒か。ピアノ線を見つけた助手にも、飲ませてやってくれ。
+  - speaker: reimu
+    text: 1955年、英二は日本で初めて特技監督という肩書きを得ます。
+    reading: せんきゅうひゃく ごじゅうごねん、えいじわ にほんで はじめて とくぎ かんとくと いう かたがきお えます。
+  - speaker: reimu
+    text: 1956年には、手を加えた版がアメリカでも公開されました。
+    reading: せんきゅうひゃく ごじゅうろくねんにわ、てお くわえた はんが あめりかでも こうかい されました。
+- id: card1963
+  title: ''
+  background: gz_card_1963
+  cuts:
+  - speaker: reimu
+    text: 1963年。61歳の英二は、自分の会社の円谷特技プロダクションを作ります。
+    reading: せんきゅうひゃく ろくじゅうさんねん。ろくじゅういっさいの えいじわ、じぶんの かいしゃの つぶらや とくぎ ぷろだくしょんお つくります。
+- id: ch13_pro
+  title: テレビに怪獣を
+  background: gz_tsuburayapro
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: wakate, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: wakate
+    emotion: surprised
+    text: 社長！ アメリカから、映像を合成する機械が届きました。これ、いくらしたんです？
+  - speaker: zundamon
+    emotion: happy
+    text: 4000万円だ！
+  - speaker: wakate
+    emotion: surprised
+    text: 会社の誰にも、相談せずにですか！？
+    beat: true
+  - speaker: reimu
+    text: 予定していた番組は流れ、機械は長男の一の口利きでテレビ局のTBSが引き取りました。
+    reading: よていして いた ばんぐみわ ながれ、きかいわ ちょうなんの はじめの くちききで てれびきょくの てぃーびーえすが ひきとりました。
+  - speaker: reimu
+    text: 1966年。ウルトラQに続いて、ウルトラマンの放送が始まります。
+    reading: せんきゅうひゃく ろくじゅうろくねん。うるとら きゅーに つづいて、うるとらまんの ほうそうが はじまります。
+  - speaker: wakate
+    emotion: happy
+    text: 社長。怪獣の着ぐるみをデパートの催しに貸せば、もうかりますよ。
+  - speaker: zundamon
+    emotion: angry
+    text: 映画の大事な小道具を、見世物にはできん。
+    beat: true
+- id: ch13_ultra
+  title: ''
+  background: gz_tv_set
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 巨大なヒーローの中に入る若い俳優に、英二はこう言いました。
+    reading: きょだいな ひーろーの なかに はいる わかい はいゆうに、えいじわ こう いいました。
+  - speaker: zundamon
+    emotion: happy
+    text: 子どもに、夢を与える仕事なんだよ。
+  - speaker: reimu
+    text: ウルトラマンの視聴率は、最高で42.8%。英二は、特撮の神様と呼ばれるようになります。
+    reading: うるとらまんの しちょうりつわ、さいこうで よんじゅうに てん はち ぱーせんと。えいじわ、とくさつの かみさまと よばれるように なります。
+    telops:
+    - {text: 視聴率 最高42.8%, size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch13_sake
+  title: スポイトで1滴
+  background: gz_soshigaya
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: happy}
+  - {who: masano, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 晩年の英二は糖尿病で、医者から酒を止められます。
+    reading: ばんねんの えいじわ とうにょうびょうで、いしゃから さけお とめられます。
+  - speaker: masano
+    emotion: angry
+    text: あなた。お酒は、お医者さんに止められてますよね。
+  - speaker: zundamon
+    emotion: happy
+    text: 分かってる。だから水に、焼酎をスポイトで1滴だけだ。
+  - speaker: masano
+    emotion: thinking
+    text: ……それ、もう水ですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 気持ちは焼酎なのだ。さあ、乾杯！
+    se: manuke
+- id: card1969
+  title: ''
+  background: gz_card_1969
+  cuts:
+  - speaker: reimu
+    text: 1969年、英二は撮影先の鳴門で倒れます。12月、伊豆の伊東の別荘で静養に入りました。
+    reading: せんきゅうひゃくろくじゅうきゅうねん、えいじわ さつえいさきの なるとで たおれます。じゅうにがつ、いずの いとうの べっそうで せいように はいりました。
+- id: ch14_bessou
+  title: 別荘の灯り
+  background: gz_bessou_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 円谷英二, emotion: normal}
+  - {who: masano, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: マサノ。ちょっと、庭に出てごらん。
+  - speaker: masano
+    emotion: thinking
+    text: こんな寒い夜に、[何|なん]です？ 体に障りますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: いいから、そこに立って。こっちを[向いてて|むいてて]くれ。
+  - speaker: reimu
+    text: 英二は別荘じゅうの灯りをつけ、庭に立つマサノに見せました。
+    reading: えいじわ べっそうじゅうの あかりお つけ、にわに たつ まさのに みせました。
+    background: gz_bessou_akari
+  - speaker: zundamon
+    emotion: happy
+    text: ……どうだ。
+  - speaker: masano
+    emotion: happy
+    text: ……きれい。
+  - speaker: reimu
+    text: 苦労をかけ続けた妻への、ただ一度の恩返しだったと親族は語っています。
+    reading: くろうお かけつづけた つまえの、ただ いちどの おんがえしだったと しんぞくわ かたって います。
+  - speaker: reimu
+    text: 1970年1月25日、円谷英二は68歳で亡くなりました。
+    reading: せんきゅうひゃくななじゅうねん いちがつ にじゅうごにち、つぶらや えいじわ ろくじゅうはっさいで なくなりました。
+  - speaker: reimu
+    text: 最後まで練っていた企画のひとつは、ニッポン・ヒコーキ野郎という題でした。
+    reading: さいごまで ねって いた きかくの ひとつわ、にっぽん ひこーき やろうと いう だいでした。
+    se: namida
+- id: ch15_gendai
+  title: 70年後のゴジラ
+  background: gz_gendai
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ゴジラの映画は、日本とアメリカを合わせてこれまでに38本作られているの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 38本！
+  - speaker: tsumugi
+    emotion: happy
+    text: 2024年には、ゴジラマイナスワンがアカデミー賞の視覚効果賞を取ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本の映画が、この賞を取ったのは初めてよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 動けない着ぐるみから、アカデミー賞まで来たのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年には、アメリカの視覚効果協会の殿堂に日本人で初めて[円谷|つぶらや]さんが入ったの。
+  - speaker: tsumugi
+    emotion: happy
+    text: 生まれた[須賀川|すかがわ]には、2019年に[円谷英二|つぶらやえいじ]ミュージアムができたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 蔵の二階の飛行機少年が、ミュージアムになったんだね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年には、撮影に使ったミニチュアを残す特撮アーカイブセンターもできたの。
+  - speaker: tsumugi
+    emotion: happy
+    text: '[円谷|つぶらや]さんが自分の誕生日にしていた7月7日は、特撮の日になってるわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 七夕なのに、特撮の日なのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 短冊に、怪獣の願い事を書いてもいいのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ段ボールの町がつぶれますように、なのだ。
+- id: ch16_ronsou
+  title: ゴジラは何から生まれた
+  background: gz_ronsou
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ゴジラって、水爆から生まれた怪獣なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 企画のきっかけは、第五福竜丸の事件よ。最初の台本には、事件を思わせる場面もあったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 監督の本多さんは、いちばんの被害者はいつも民衆だと話しているわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ただ怖いだけの怪獣じゃ、なかったんだね。
+  - speaker: zundamon
+    emotion: normal
+    text: あと、ネットで見たのだ。ゴジラは、ゴリラとクジラを合わせた名前だって。
+  - speaker: tsumugi
+    emotion: normal
+    text: プロデューサーの田中さんは、東宝の社員のあだ名から付けたと話しているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: その人、どんな人だったの？
+  - speaker: tsumugi
+    emotion: happy
+    text: クジラが好物で、顔がゴリラに似ていたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……なんか、ゴリラさんに失礼なのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ本多監督の奥さんは、[撮影所|さつえいじょ]の裏方は作り話が好きだったと話していたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、あだ名の話も作り話かもしれないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 決め手は無いの。映画の中では、[大戸島|おどしま]の伝説の怪物の[呉爾羅|ごじら]が由来になってるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前の由来まで、特撮かもしれないのだ。
+- id: shime
+  title: ''
+  background: gz_heya2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ！ 段ボールの町を、画面の外まで広げたのだ！
+  - speaker: tsumugi
+    emotion: surprised
+    text: 部屋が全部、町になってるじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: これで怪獣がどこまで歩いても、嘘にならないよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……で、ずんだもんは今夜どこで寝るの？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あ。
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

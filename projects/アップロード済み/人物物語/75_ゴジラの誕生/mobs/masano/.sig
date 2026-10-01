@@ -1,0 +1,1 @@
+妻・マサノ|none|none||v4|kimono|#9a4f5a|o1

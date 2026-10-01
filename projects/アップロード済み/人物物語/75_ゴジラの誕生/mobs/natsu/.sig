@@ -1,0 +1,1 @@
+祖母・ナツ|none|none||v4|kimono|#4a4a5a|o1

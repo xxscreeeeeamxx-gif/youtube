@@ -3047,6 +3047,117 @@ def p_fcbox(d, s):
     d.rectangle([x + w * 0.33, y - s * 0.08, x + w * 0.67, y + s * 0.01], fill=(210, 190, 60))
 
 
+
+def p_gzsuit(d, s):
+    """撮影所の床の角材と、形の分からない黒いゴムの着ぐるみ（背中のファスナーで着ぐるみと分かる）。
+    怪獣のデザインは権利があるので、頭・背びれ・尻尾は描かない。"""
+    body = (58, 62, 60)
+    d.rounded_rectangle([s * 0.26, s * 0.16, s * 0.74, s * 0.80], radius=int(s * 0.16), fill=body)
+    d.ellipse([s * 0.16, s * 0.34, s * 0.34, s * 0.52], fill=body)
+    d.ellipse([s * 0.66, s * 0.34, s * 0.84, s * 0.52], fill=body)
+    d.line([(s * 0.50, s * 0.22), (s * 0.50, s * 0.74)], fill=(170, 170, 170), width=int(s * 0.012) + 1)
+    for k in range(9):
+        y = s * (0.24 + k * 0.055)
+        d.line([(s * 0.48, y), (s * 0.52, y)], fill=(170, 170, 170), width=int(s * 0.006) + 1)
+    d.rectangle([s * 0.04, s * 0.82, s * 0.96, s * 0.90], fill=(176, 132, 84), outline=(110, 80, 50), width=int(s * 0.008) + 1)
+    d.polygon([(s * 0.78, s * 0.06), (s * 0.96, s * 0.06), (s * 0.96, s * 0.22), (s * 0.78, s * 0.22)], fill=(236, 226, 196))
+    d.rectangle([s * 0.81, s * 0.11, s * 0.93, s * 0.13], fill=(80, 70, 60))
+    d.rectangle([s * 0.81, s * 0.16, s * 0.90, s * 0.18], fill=(80, 70, 60))
+
+
+def p_gzqueue(d, s):
+    """映画館の正面と、坂の上まで続く行列。"""
+    d.polygon([(0, s * 0.92), (s, s * 0.92), (s, s * 0.80), (0, s * 0.40)], fill=(150, 140, 126))
+    d.rectangle([s * 0.62, s * 0.20, s * 0.98, s * 0.86], fill=(196, 170, 130), outline=(110, 90, 66), width=int(s * 0.01) + 1)
+    d.rectangle([s * 0.66, s * 0.26, s * 0.94, s * 0.40], fill=(236, 226, 196))
+    d.rectangle([s * 0.72, s * 0.58, s * 0.88, s * 0.86], fill=(70, 56, 46))
+    for k in range(11):
+        t = k / 10
+        x = s * (0.60 - t * 0.54)
+        y = s * (0.80 - t * 0.36)
+        r = s * (0.030 - t * 0.010)
+        d.ellipse([x - r, y - r * 3.4, x + r, y - r * 1.4], fill=(40, 40, 46))
+        d.rounded_rectangle([x - r * 1.3, y - r * 1.6, x + r * 1.3, y + r * 1.4], radius=int(r), fill=(60, 60, 72))
+
+
+def p_yhorgan(d, s):
+    """明治の足踏みオルガン（木の箱・鍵盤・ペダル）。"""
+    wood, dark = (150, 96, 56), (96, 60, 34)
+    d.rectangle([s * 0.16, s * 0.18, s * 0.84, s * 0.40], fill=wood, outline=dark, width=int(s * 0.012) + 1)
+    d.rectangle([s * 0.10, s * 0.40, s * 0.90, s * 0.86], fill=wood, outline=dark, width=int(s * 0.012) + 1)
+    d.rectangle([s * 0.14, s * 0.42, s * 0.86, s * 0.52], fill=(244, 240, 228))
+    for k in range(14):
+        x = s * (0.14 + 0.72 * k / 14)
+        d.line([(x, s * 0.42), (x, s * 0.52)], fill=dark, width=1)
+        if k % 7 not in (2, 6):
+            d.rectangle([x + s * 0.03, s * 0.42, x + s * 0.055, s * 0.48], fill=(30, 30, 30))
+    d.rectangle([s * 0.26, s * 0.66, s * 0.44, s * 0.80], fill=dark)
+    d.rectangle([s * 0.56, s * 0.66, s * 0.74, s * 0.80], fill=dark)
+    d.ellipse([s * 0.42, s * 0.24, s * 0.58, s * 0.34], fill=dark)
+
+
+def p_yhpiano(d, s):
+    """黒いグランドピアノを横から。"""
+    blk = (24, 24, 28)
+    d.polygon([(s * 0.10, s * 0.40), (s * 0.62, s * 0.40), (s * 0.90, s * 0.52), (s * 0.90, s * 0.62),
+               (s * 0.10, s * 0.62)], fill=blk)
+    d.line([(s * 0.12, s * 0.40), (s * 0.70, s * 0.12)], fill=blk, width=int(s * 0.03))
+    d.rectangle([s * 0.10, s * 0.56, s * 0.30, s * 0.60], fill=(244, 240, 228))
+    for x in (0.16, 0.48, 0.84):
+        d.rectangle([s * (x - 0.02), s * 0.62, s * (x + 0.02), s * 0.88], fill=blk)
+
+
+def p_pnsocket(d, s):
+    """売れ残ったソケットの山と、裸電球。"""
+    d.line([(s * 0.50, 0), (s * 0.50, s * 0.12)], fill=(60, 60, 60), width=int(s * 0.012) + 1)
+    d.rectangle([s * 0.45, s * 0.12, s * 0.55, s * 0.20], fill=(60, 50, 40))
+    d.ellipse([s * 0.40, s * 0.18, s * 0.60, s * 0.38], fill=(250, 236, 160), outline=(200, 170, 80), width=int(s * 0.008) + 1)
+    for r in range(4):
+        for k in range(5 - r):
+            x = s * (0.10 + k * 0.17 + r * 0.085)
+            y = s * (0.80 - r * 0.10)
+            d.rounded_rectangle([x, y, x + s * 0.13, y + s * 0.10], radius=int(s * 0.02), fill=(70, 52, 40),
+                                outline=(40, 30, 22), width=int(s * 0.006) + 1)
+            d.ellipse([x + s * 0.04, y + s * 0.02, x + s * 0.09, y + s * 0.06], fill=(190, 170, 120))
+
+
+def p_pnbuilding(d, s):
+    """窓がたくさん並ぶ大きな会社のビル。"""
+    d.rectangle([s * 0.12, s * 0.16, s * 0.88, s * 0.90], fill=(214, 220, 228), outline=(110, 120, 134), width=int(s * 0.012) + 1)
+    for r in range(7):
+        for k in range(6):
+            x, y = s * (0.17 + k * 0.12), s * (0.21 + r * 0.095)
+            d.rectangle([x, y, x + s * 0.08, y + s * 0.06], fill=(70, 110, 160))
+    d.rectangle([s * 0.42, s * 0.78, s * 0.58, s * 0.90], fill=(90, 96, 106))
+
+
+def p_sawasher(d, s):
+    """昭和の丸い洗濯機（上から水が渦を巻く）。"""
+    d.rounded_rectangle([s * 0.22, s * 0.30, s * 0.78, s * 0.86], radius=int(s * 0.10), fill=(236, 238, 240),
+                        outline=(140, 146, 152), width=int(s * 0.012) + 1)
+    d.ellipse([s * 0.26, s * 0.18, s * 0.74, s * 0.42], fill=(210, 214, 218), outline=(140, 146, 152), width=int(s * 0.012) + 1)
+    d.ellipse([s * 0.32, s * 0.22, s * 0.68, s * 0.38], fill=(120, 170, 220))
+    d.arc([s * 0.38, s * 0.25, s * 0.62, s * 0.35], 200, 520, fill=(240, 248, 255), width=int(s * 0.012) + 1)
+    d.rectangle([s * 0.30, s * 0.52, s * 0.70, s * 0.58], fill=(100, 130, 170))
+    for x in (0.30, 0.66):
+        d.rectangle([s * x, s * 0.86, s * (x + 0.04), s * 0.92], fill=(90, 90, 96))
+
+
+def p_sasign(d, s):
+    """ビルの屋上の看板から、無地の文字の板をクレーンで1枚ずつ下ろす。"""
+    d.rectangle([s * 0.04, s * 0.60, s * 0.70, s * 0.94], fill=(196, 200, 206), outline=(120, 124, 130), width=int(s * 0.01) + 1)
+    for k in range(4):
+        x = s * (0.08 + k * 0.15)
+        d.rectangle([x, s * 0.70, x + s * 0.10, s * 0.80], fill=(110, 140, 180))
+    d.rectangle([s * 0.06, s * 0.42, s * 0.66, s * 0.58], outline=(90, 90, 96), width=int(s * 0.01) + 1)
+    for k in range(3):
+        x = s * (0.10 + k * 0.17)
+        d.rectangle([x, s * 0.44, x + s * 0.12, s * 0.56], fill=(30, 70, 150))
+    d.line([(s * 0.86, s * 0.94), (s * 0.86, s * 0.08)], fill=(230, 170, 30), width=int(s * 0.03))
+    d.line([(s * 0.86, s * 0.08), (s * 0.58, s * 0.08)], fill=(230, 170, 30), width=int(s * 0.025))
+    d.line([(s * 0.62, s * 0.08), (s * 0.62, s * 0.24)], fill=(60, 60, 60), width=int(s * 0.006) + 1)
+    d.rectangle([s * 0.56, s * 0.24, s * 0.68, s * 0.36], fill=(30, 70, 150))
+
 def _tcub(d, s, body, shield, seat, demae=False):
     """サムネ用の横向きカブ（prop の座標系 0〜1）。"""
     k = s / 440
@@ -3479,6 +3590,26 @@ SPECS = {
         head_hi="全品回収", panels=[
         _p("p_fcphone", "1981年 夜の電話", SLATE, "thinking", "3年なんて無理なのだ", "社長から家に電話"),
         _p("p_fcbox", "1983年 年末", RED, "surprised", "全部引き取るのだ！？", "クリスマス直前に回収"),
+    ]),
+    "matsushita-socket": dict(layout="panels", headline="ソケット100個から18万人の会社へ",
+        head_hi="18万人", panels=[
+        _p("p_pnsocket", "1917年 冬", SLATE, "sad", "100個だけ…", "売れないソケット"),
+        _p("p_pnbuilding", "いま", RED, "surprised", "18万人！？", "パナソニックに"),
+    ]),
+    "yamaha-torakusu": dict(layout="panels", headline="酷評のオルガンが年4653億円に",
+        head_hi="4653億円", panels=[
+        _p("p_yhorgan", "1887年 東京", SLATE, "sad", "使用にたえない…", "手作りのオルガン"),
+        _p("p_yhpiano", "いま", RED, "surprised", "世界のヤマハ！？", "年4653億円"),
+    ]),
+    "sanyo-end": dict(layout="panels", headline="10万人の会社が消えた日",
+        head_hi="消えた", panels=[
+        _p("p_sawasher", "1953年", SLATE, "happy", "売れたのだ！", "噴流式の洗濯機"),
+        _p("p_sasign", "2011年", RED, "sad", "看板が降りる…", "最盛期10万人"),
+    ]),
+    "godzilla-tsuburaya": dict(layout="panels", headline="動けない怪獣が961万人を呼んだ",
+        head_hi="961万人", panels=[
+        _p("p_gzsuit", "1954年 撮影所", SLATE, "sad", "またげない…", "重さ150キロ"),
+        _p("p_gzqueue", "1954年 公開初日", RED, "surprised", "道玄坂まで列！？", "観客961万人"),
     ]),
     "frixion-metamo": dict(layout="panels", headline="紅葉から生まれた消えるペン",
         head_hi="紅葉", panels=[

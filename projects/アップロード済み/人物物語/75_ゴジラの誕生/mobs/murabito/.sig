@@ -1,0 +1,1 @@
+村の人|none|none||v4|kimono|#5a6a7a|o1
