@@ -1,1 +1,1 @@
-組合員|none|none||v4
+組合員|none|none||v4|work|#e8ebee|o1

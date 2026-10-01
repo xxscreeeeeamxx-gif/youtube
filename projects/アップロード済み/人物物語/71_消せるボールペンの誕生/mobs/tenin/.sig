@@ -1,1 +1,1 @@
-店員|none|none||v4
+店員|none|none||v4|apron||o1

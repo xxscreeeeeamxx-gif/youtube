@@ -1,1 +1,1 @@
-工場主|none|none||v4
+工場主|none|none||v4|work||o1

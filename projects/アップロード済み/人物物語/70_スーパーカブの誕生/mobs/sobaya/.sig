@@ -1,1 +1,1 @@
-そば屋|none|none||v4
+そば屋|none|none||v4|apron||o1

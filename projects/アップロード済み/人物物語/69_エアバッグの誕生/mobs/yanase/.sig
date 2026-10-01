@@ -1,1 +1,1 @@
-梁瀬次郎|none|none||v4
+梁瀬次郎|none|none||v4|suit|#4a4038|o1

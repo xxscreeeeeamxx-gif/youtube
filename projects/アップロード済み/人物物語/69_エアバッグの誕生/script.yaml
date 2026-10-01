@@ -23,42 +23,59 @@ meta:
     label: 父
     voice: 13
     pitch: -0.1
+    outfit: kimono
+    color: '#6b5a44'
   - id: senpai
     label: 先輩記者
     voice: 13
     pitch: 0.04
+    outfit: suit
   - id: kouin
     label: 工員
     voice: 12
     pitch: 0.1
+    outfit: work
   - id: joumuin
     label: 乗務員
     voice: 8
     pitch: 0.1
+    outfit: suit
+    color: '#2f4a7a'
   - id: oguchi
     label: 小口泰平
     voice: 12
     pitch: 0.02
+    outfit: suit
+    color: '#5a5f6a'
   - id: yanase
     label: 梁瀬次郎
     voice: 13
     pitch: -0.04
+    outfit: suit
+    color: '#4a4038'
   - id: taiin
     label: 隊員
     voice: 12
     pitch: -0.06
+    outfit: work
+    color: '#5d6b45'
   - id: gishi
     label: 技師
     voice: 13
     pitch: 0.08
+    outfit: work
   - id: yakunin
     label: 役人
     voice: 13
     pitch: 0.12
+    outfit: suit
+    color: '#3e4450'
   - id: munakata
     label: 棟方志功
     voice: 12
     pitch: 0.06
+    outfit: kimono
+    color: '#3b3f4f'
 scenes:
 - id: co_zenrei
   title: ''
@@ -217,7 +234,7 @@ scenes:
     se: tsukkomi
   - speaker: senpai
     emotion: happy
-    text: ……君は、記者より作る側のほうが向いてるんじゃないか。
+    text: ……[君|きみ]は、記者より作る側のほうが向いてるんじゃないか。
   - speaker: zundamon
     emotion: thinking
     text: 作る側……。

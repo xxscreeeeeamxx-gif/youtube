@@ -1,0 +1,1442 @@
+meta:
+  title: 【ファミコンの誕生】「ファミコンは死んでしまう」クリスマス直前の全品回収【ずんだもん解説】
+  slug: famicom-uemura-v2
+  summary: 押し入れから出てきた赤と白のゲーム機。あの本体を作ったのは、シャープから任天堂に移った技術者、上村雅之でした。ある夜、社長の山内溥から電話がかかってきます。無茶な条件を並べられ、大手の半導体メーカーには断られ、部下にも反対されながら、5人ほどで始めた開発。その末に生まれたゲーム機は、発売した年の暮れに思わぬ事態を迎えます。ファミリーコンピュータの誕生を、再現ドラマでたどります。
+  tags:
+  - ファミコン
+  - 上村雅之
+  - 任天堂
+  - 山内溥
+  - ゲーム機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 雑学
+  thumbnail:
+    top: 全品回収
+    bottom: ファミコンの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: yamauchi
+    label: 山内溥
+    voice: 13
+    pitch: -0.07
+    item: mustache
+    outfit: suit
+  - id: yokoi
+    label: 横井軍平
+    voice: 12
+    pitch: -0.02
+    outfit: suit
+    color: '#545b66'
+  - id: sawai
+    label: 沢井専務
+    voice: 42
+    pitch: 0.02
+    outfit: suit
+    color: '#4a4038'
+  - id: douryo
+    label: 同僚
+    voice: 12
+    pitch: 0.1
+    outfit: suit
+    color: '#2f3a52'
+  - id: jinji
+    label: 人事課長
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#3e4450'
+  - id: denkiya
+    label: 電器屋
+    voice: 42
+    pitch: -0.06
+    outfit: apron
+  - id: shain
+    label: 社員
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#3e4a5c'
+  - id: buka
+    label: 部下
+    voice: 12
+    pitch: 0.14
+    outfit: suit
+    color: '#4a5060'
+  - id: ricoh
+    label: リコーの人
+    voice: 13
+    pitch: 0.02
+    outfit: work
+    color: '#7a8a7a'
+  - id: gakusei
+    label: 学生
+    voice: 12
+    pitch: 0.2
+  - id: tonya
+    label: 問屋
+    voice: 42
+    pitch: -0.04
+    outfit: suit
+    color: '#5a4a3a'
+  - id: eigyo
+    label: 営業
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#2f3a52'
+  - id: kojocho
+    label: 工場長
+    voice: 42
+    pitch: 0.06
+    outfit: work
+  - id: omochaya
+    label: おもちゃ屋
+    voice: 42
+    pitch: 0.1
+    outfit: apron
+    color: '#5a4632'
+scenes:
+- id: co_kaishu
+  title: ''
+  background: fc_shachoshitsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: yamauchi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1983年の暮れ。京都の任天堂で、発売したばかりのゲーム機に不具合が見つかります。
+    reading: せんきゅうひゃく はちじゅうさんねんの くれ。きょうとの にんてんどうで、はつばいした ばかりの げーむきに ふぐあいが みつかります。
+  - speaker: yamauchi
+    emotion: thinking
+    text: おもちゃ屋で、直せるんか？
+  - speaker: zundamon
+    emotion: sad
+    text: ……工場に戻さないと、直せません。
+  - speaker: yamauchi
+    emotion: normal
+    text: ほな、出荷は止める。店に出たもんも、全部引き取れ。
+    se: don
+  - speaker: zundamon
+    emotion: sad
+    text: ……ファミコンが、死んでしまうのだ。
+  - speaker: reimu
+    text: この技術者は、上村雅之。回収されたゲーム機は、世界で6191万台売れることになります。
+    reading: この ぎじゅつしゃわ うえむら まさゆき。かいしゅう された げーむきわ、せかいで ろくせん ひゃくきゅうじゅういちまんだい うれる ことに なります。
+- id: hook
+  title: ''
+  background: fc_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。押し入れから、古いゲーム機が出てきたのだ！ でも、映らない。
+  - speaker: zundamon
+    emotion: happy
+    text: だから、カセットをフーフーするのだ！ ……まだ映らない。本体もフーフー！
+  - speaker: zundamon
+    emotion: happy
+    text: 最後の手段。コントローラーもフーフーするのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは、吹いても何も変わらないわよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: それにフーフーは、端子がさびる原因なの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのゲーム機、発売した年の暮れに全部回収されてるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: えっ。全部回収されたのに、どうして6191万台も売れたの？
+    telops:
+    - {text: 全品回収から6191万台, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 作ったのは、上村雅之さん。始まりは、ラジオを組み立てた少年よ。
+- id: card1943
+  title: ''
+  background: fc_card_1943
+  cuts:
+  - speaker: reimu
+    text: 1943年。東京で、上村雅之が生まれます。米子を経て、京都で育ちました。
+    reading: せんきゅうひゃく よんじゅうさんねん。とうきょうで うえむら まさゆきが うまれます。よなごお へて、きょうとで そだちました。
+- id: ch1_kyoto
+  title: ラジオから音が出た
+  background: fc_denkiya
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, scale: 0.85, emotion: happy}
+  - {who: denkiya, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: おじさん。ラジオの部品、ください！
+  - speaker: denkiya
+    emotion: surprised
+    text: また坊主か。この前の部品は、どないした。
+  - speaker: zundamon
+    emotion: happy
+    text: ラジオになったのだ！ ちゃんと、音が出たのだ！
+  - speaker: denkiya
+    emotion: thinking
+    text: ……ほんまに鳴ったんか。
+    beat: true
+  - speaker: reimu
+    text: 自分で組み立てたラジオから音が出て、強く心を動かされたと本人は語っています。
+    reading: じぶんで くみたてた らじおから おとが でて、つよく こころお うごかされたと ほんにんわ かたって います。
+  - speaker: reimu
+    text: 雅之は千葉工業大学に進み、テレビの技術者を目指して電子回路を学びます。
+    reading: まさゆきわ ちば こうぎょう だいがくに すすみ、てれびの ぎじゅつしゃお めざして でんし かいろお まなびます。
+- id: card1967
+  title: ''
+  background: fc_card_1967
+  cuts:
+  - speaker: reimu
+    text: 1967年。雅之は、大阪の早川電機に入ります。今のシャープです。
+    reading: せんきゅうひゃく ろくじゅうななねん。まさゆきわ おおさかの はやかわ でんきに はいります。いまの しゃーぷです。
+- id: ch1_jinji
+  title: 光のセンサーを売る
+  background: fc_sharp
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: jinji, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 課長。東京じゃなくて、関西で働きたいんです。
+  - speaker: jinji
+    emotion: surprised
+    text: 東京のコンピューターの部署やぞ。花形やで。
+  - speaker: zundamon
+    emotion: normal
+    text: 関西に残れるなら、どこでもかまいません。
+  - speaker: jinji
+    emotion: thinking
+    text: ……ちょうど、東京に行きたいという新人がおる。入れ替えるか。
+  - speaker: reimu
+    text: 入れ替わった先が、たまたま光センサーの販売でした。
+    reading: いれかわった さきが、たまたま ひかり せんさーの はんばいでした。
+- id: ch1_sharp
+  title: ''
+  background: fc_sharp
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: douryo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: douryo
+    emotion: normal
+    text: 上村、今週も出張か。
+  - speaker: zundamon
+    emotion: happy
+    text: 九州から静岡まで、工場回りだ！
+  - speaker: douryo
+    emotion: surprised
+    text: 担当の地域、広すぎやろ。
+  - speaker: zundamon
+    emotion: normal
+    text: 製鉄所でも織機の工場でも、光のセンサーは使える。売りに行けば、欲しい物が分かるんだ。
+- id: card1968
+  title: ''
+  background: fc_card_1968
+  cuts:
+  - speaker: reimu
+    text: 1968年5月。雅之は、京都のおもちゃ会社を訪ねます。
+    reading: せんきゅうひゃく ろくじゅうはちねん ごがつ。まさゆきわ、きょうとの おもちゃがいしゃお たずねます。
+- id: ch1_kousenju
+  title: 光線銃のセンサー
+  background: fc_nintendo68
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: yamauchi, x: 0.56, emotion: normal}
+  - {who: yokoi, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: yamauchi
+    emotion: normal
+    text: 任天堂の山内です。こっちは、開発の横井。
+  - speaker: yokoi
+    emotion: happy
+    text: 光線銃を作ってるんです。光を当てたら、[的|まと]が反応するおもちゃです。
+  - speaker: zundamon
+    emotion: normal
+    text: 今日は、うちの光の部品をいろいろ持ってきました。
+  - speaker: yokoi
+    emotion: thinking
+    text: 今の[的|まと]の部品は、反応がちょっと遅いんです。
+  - speaker: yokoi
+    emotion: surprised
+    text: ……この太陽電池、光線銃に使えるんちゃうか。
+    se: hirameki
+  - speaker: zundamon
+    emotion: surprised
+    text: 太陽電池を、センサーに？ たしかに、光が当たった瞬間に電気が流れます。
+  - speaker: reimu
+    text: 12月には試作機ができ、1970年に光線銃SPシリーズが発売されます。
+    reading: じゅうにがつにわ しさくきが でき、せんきゅうひゃく ななじゅうねんに こうせんじゅう えすぴー しりーずが はつばい されます。
+  - speaker: reimu
+    text: シリーズは、およそ160万丁が売れました。
+    reading: しりーずわ、およそ ひゃくろくじゅうまんちょうが うれました。
+- id: ch1_udon
+  title: ''
+  background: fc_nintendo68
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: yokoi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 雅之は外回りの最後に任天堂へ寄り、横井と夜食をとりながら話し込みました。
+    reading: まさゆきわ そとまわりの さいごに にんてんどうえ より、よこいと やしょくお とりながら はなしこみました。
+  - speaker: yokoi
+    emotion: happy
+    text: 上村さん、鍋焼きうどん来たで。
+  - speaker: zundamon
+    emotion: happy
+    text: いただきます。……で、さっきの的の話ですけど。
+  - speaker: yokoi
+    emotion: thinking
+    text: 食べながらでも、話は止まらへんのやな。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[熱っ|あつっ]！ ……うどんより、話のほうが熱いのだ。'
+    se: bikkuri
+    beat: true
+  - speaker: reimu
+    text: 部品は自分で車に積み、国道24号を走って任天堂へ届けました。
+    reading: ぶひんわ じぶんで くるまに つみ、こくどう にじゅうよんごうお はしって にんてんどうえ とどけました。
+- id: card1971
+  title: ''
+  background: fc_card_1971
+  cuts:
+  - speaker: reimu
+    text: 1971年。雅之に、任天堂から声がかかります。
+    reading: せんきゅうひゃく ななじゅういちねん。まさゆきに、にんてんどうから こえが かかります。
+- id: ch2_sasoi
+  title: おもちゃの会社へ
+  background: fc_ousetsu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: sawai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: sawai
+    emotion: normal
+    text: 上村くん、うちに来てくれんか。任天堂も、これから変わらんといかん。
+  - speaker: sawai
+    emotion: happy
+    text: 軍平くんも、君が来るのを望んどる。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……少し、考えさせてください。
+  - speaker: reimu
+    text: 声をかけたのは、専務の沢井末造でした。
+    reading: こえお かけたのわ、せんむの さわい すえぞうでした。
+- id: ch2_douryo
+  title: ''
+  background: fc_sharp
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: douryo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: douryo
+    emotion: surprised
+    text: なんでお前、花札とおもちゃの会社に行くんや。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分の力を、試してみたいんだ。
+  - speaker: douryo
+    emotion: thinking
+    text: 大きい会社におったほうが、安泰やで。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……結婚したばかりなのに、アメリカに行ってICを[学べ|まなべ]と言われたんだ。
+  - speaker: douryo
+    emotion: surprised
+    text: そっちが、本音か。
+    se: zukko
+  - speaker: reimu
+    text: 1971年、雅之は任天堂に移りました。
+    reading: せんきゅうひゃく ななじゅういちねん、まさゆきわ にんてんどうに うつりました。
+- id: ch2_clay
+  title: 空いたボウリング場
+  background: fc_bowling
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1973年。京都の元ボウリング場に、光線銃で遊ぶ射撃場ができます。
+    reading: せんきゅうひゃく ななじゅうさんねん。きょうとの もと ぼうりんぐじょうに こうせんじゅうで あそぶ しゃげきじょうが できます。
+  - speaker: zundamon
+    emotion: happy
+    text: 飛んでいく皿の映像を、光線銃で撃ち落とすのだ！
+  - speaker: shain
+    emotion: happy
+    text: 上村さん。よその遊び場からも、注文が来てますよ！
+  - speaker: zundamon
+    emotion: happy
+    text: どんどん作るぞ！ 空いたボウリング場が、全部射撃場になる。
+  - speaker: reimu
+    text: ところが、この年の秋に石油ショックが起こります。
+    reading: ところが、この としの あきに せきゆ しょっくが おこります。
+  - speaker: shain
+    emotion: sad
+    text: 上村さん……。注文が、次々に取り消しです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 取り消し！？ 全部か！？
+  - speaker: shain
+    emotion: thinking
+    text: 景気が悪くなって、遊びにお[金|かね]を出す余裕が無いそうです。
+  - speaker: zundamon
+    emotion: sad
+    text: ……大量に頼んだ部品が、宙に浮いてしまうのだ。
+    se: shobon
+- id: ch2_tv15
+  title: テレビの雑音
+  background: fc_kaihatsu77
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1977年。任天堂は三菱電機と組んで、家のテレビにつなぐゲーム機を出します。
+    reading: せんきゅうひゃく ななじゅうななねん。にんてんどうわ みつびし でんきと くんで、いえの てれびに つなぐ げーむきお だします。
+  - speaker: shain
+    emotion: thinking
+    text: 上村さん、また苦情です。テレビの映りが悪いって。
+  - speaker: zundamon
+    emotion: thinking
+    text: アンテナの線につなぐから、雑音が入るのか……。
+  - speaker: shain
+    emotion: sad
+    text: お店で直してくれ、と言われても。
+  - speaker: zundamon
+    emotion: sad
+    text: 家のテレビは、一軒ごとに違う。ここが一番難しい。
+  - speaker: reimu
+    text: この苦労から、家庭用のテレビゲームにかなり悲観的になったと雅之は書いています。
+    reading: この くろうから、かていようの てれびげーむに かなり ひかんてきに なったと まさゆきわ かいて います。
+- id: ch2_radar
+  title: 5人の開発第二部
+  background: fc_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1979年、雅之は開発第二部の部長になります。
+    reading: せんきゅうひゃく ななじゅうきゅうねん、まさゆきわ かいはつ だいにぶの ぶちょうに なります。
+  - speaker: reimu
+    text: 1980年、アメリカに送った業務用のゲーム機が売れ残ります。作り変えは、横井の開発一部に任されました。
+    reading: せんきゅうひゃく はちじゅうねん、あめりかに おくった ぎょうむようの げーむきが うれのこります。つくりかえわ、よこいの かいはつ いちぶに まかされました。
+  - speaker: reimu
+    text: この作り変えで、宮本茂が考えたのがドンキーコングです。
+    reading: この つくりかえで、みやもと しげるが かんがえたのが どんきーこんぐです。
+  - speaker: buka
+    emotion: sad
+    text: 部長、今日もゲーム&ウオッチの手伝いに行ってきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……残ったのは、ボクを入れて5人くらいなのだ。
+  - speaker: buka
+    emotion: thinking
+    text: 部長なのに、部下がほとんどいませんね。
+    beat: true
+- id: card1981
+  title: ''
+  background: fc_card_1981
+  cuts:
+  - speaker: reimu
+    text: 1981年11月。ある日の夜。
+    reading: せんきゅうひゃく はちじゅういちねん じゅういちがつ。ある ひの よる。
+- id: ch3_denwa
+  title: 夜の電話
+  background: fc_denwa
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: yamauchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: yamauchi
+    emotion: normal
+    text: 上村くん、ゲーム&ウオッチの次、考えんとあかんのや。
+  - speaker: zundamon
+    emotion: thinking
+    text: はあ。
+  - speaker: yamauchi
+    emotion: normal
+    text: 家のテレビにつなぐゲーム機、作ってくれ。
+  - speaker: yamauchi
+    emotion: happy
+    text: 君しかおらん。頼んだで。
+  - speaker: zundamon
+    emotion: surprised
+    text: テ、テレビのですか。あれはちょっと……
+  - speaker: zundamon
+    emotion: surprised
+    text: ……社長？ 社長！
+  - speaker: zundamon
+    emotion: sad
+    text: 切れた。言うだけ言って、切られたのだ。
+    se: oti
+  - speaker: zundamon
+    emotion: thinking
+    text: しかも君しかおらんって、うちの部は5人しかいないのだ。
+- id: ch3_yokuasa2
+  title: ''
+  background: fc_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: yamauchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌朝。出社すると、さっそく社長に呼ばれます。
+    reading: よくあさ。しゅっしゃすると、さっそく しゃちょうに よばれます。
+  - speaker: yamauchi
+    emotion: normal
+    text: 上村くん、あれ、どないなった？
+  - speaker: zundamon
+    emotion: surprised
+    text: 一晩！？ まだカバンも置いてないのだ！
+  - speaker: reimu
+    text: 山内は雅之が家を出たあとに家へ電話をかけて、息子と話すこともありました。
+    reading: やまうちわ まさゆきが いえお でた あとに いええ でんわお かけて、むすこと はなす ことも ありました。
+- id: ch3_sannen
+  title: 3年間、保つようにしろ
+  background: fc_denwa
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: yamauchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 何日かして、また電話。
+    reading: なんにちか して、また でんわ。
+  - speaker: yamauchi
+    emotion: normal
+    text: 上村くん。3年は[保つ|もつ]ようにしろ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 3年？ 壊れないように、ですか？
+  - speaker: yamauchi
+    emotion: normal
+    text: ちゃう。3年間、よそに真似されへん機械や。
+  - speaker: zundamon
+    emotion: surprised
+    text: む、無理ですって社長！
+  - speaker: yamauchi
+    emotion: thinking
+    text: ゲーム&ウオッチ見とったら分かる。3年や。
+  - speaker: yamauchi
+    emotion: happy
+    text: 君のとこ、ヒマやろ。頼むわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ヒマなのは、図星なのだ。
+    se: tenten
+    telops:
+    - {text: 3年真似されない機械, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch3_jouken
+  title: ''
+  background: fc_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: yamauchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 研究を始めると、社長からさらに条件が出ます。
+    reading: けんきゅうお はじめると、しゃちょうから さらに じょうけんが でます。
+  - speaker: yamauchi
+    emotion: normal
+    text: 上村くん。半導体は、シャープ以外に頼んでくれ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクの古巣は、使えないんですか？
+  - speaker: yamauchi
+    emotion: thinking
+    text: シャープさんは、ゲーム&ウオッチの部品で手一杯なんや。
+  - speaker: yamauchi
+    emotion: normal
+    text: それと、おもちゃは1万円を超えたら売れへん。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3年真似されない機械を1万円以下で、1年足らずで……。
+  - speaker: zundamon
+    emotion: sad
+    text: 無茶の数だけは、部下の数に負けてないのだ。
+    beat: true
+- id: ch3_kotowari
+  title: 断られ続けて
+  background: fc_kaihatsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: buka
+    emotion: sad
+    text: 部長。大きい半導体メーカーは、どこもだめでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……困った。部品が無いと、何も始まらない。
+  - speaker: buka
+    emotion: surprised
+    text: 部長、リコーさんから電話です。工場を見に来てほしいって。
+  - speaker: zundamon
+    emotion: surprised
+    text: リコーって、コピー機の会社なのだ？
+  - speaker: buka
+    emotion: normal
+    text: 半導体も作ってるんです。ただ、今は工場が空いてるとか。
+- id: ch3_ricoh
+  title: 稼働率1割の工場
+  background: fc_ricoh
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: ricoh, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 大阪府池田市にある、リコーの半導体工場です。
+    reading: おおさかふ いけだしに ある、りこーの はんどうたい こうじょうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 機械が、ほとんど止まってる。
+  - speaker: ricoh
+    emotion: thinking
+    text: 稼働率は、1割ほどでして。
+  - speaker: reimu
+    text: 工場には、テレビゲームで世話になった元三菱電機の技術者がいました。
+    reading: こうじょうにわ、てれびげーむで せわに なった もと みつびし でんきの ぎじゅつしゃが いました。
+  - speaker: zundamon
+    emotion: normal
+    text: ドンキーコングが家のテレビで動く部品を、作ってほしいんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 仕様書は書けません。このゲームと同じに動けば、それでいい。
+  - speaker: reimu
+    text: その技術者は、やろうやろうと乗ってくれたと雅之は語っています。頭の部分には、6502が提案されます。
+    reading: その ぎじゅつしゃわ、やろう やろうと のって くれたと まさゆきわ かたって います。あたまの ぶぶんにわ ろくごーまるにが ていあん されます。
+- id: zukai_chip
+  title: 2つの専用チップ
+  background: fc_zukai_chip
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ファミコンの中心は、2つの専用チップよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つは[CPU|しーぴーゆー]。ゲームの決まりどおりに計算する、頭の係ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: もう1つは[PPU|ぴーぴーゆー]。テレビに映す絵を描く係よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 絵を描くだけの係が、別にいるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 背景の上に、動くキャラを重ねて描くの。そのキャラを、スプライトって呼ぶわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 背景とキャラを別々に描くから、キャラだけ動かせるのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[6502|ろくごーまるに]は、チップの面積が社内で使ってた型の4分の1ほどで済んだの。'
+  - speaker: zundamon
+    emotion: happy
+    text: 小さいと、安く作れるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それに当時の日本では、[6502|ろくごーまるに]はあまり使われてなかったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 真似されにくくするのが狙いだったかは、本人の話でも分かれるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: どっちなのだ！？
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 2010年には狙いだったと話して、2013年には偶然みたいなものと話してるわ。
+- id: ch3_hanpatsu
+  title: 社内の反対
+  background: fc_kaihatsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: shain, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 部長。[6502|ろくごーまるに]なんて、うちの誰も使ったことないですよ。
+  - speaker: shain
+    emotion: angry
+    text: 上村部長はゲームを作ってないから、そんな判断をするんです。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そう言われると、返す言葉がない。
+  - speaker: zundamon
+    emotion: normal
+    text: でも、安くて小さい部品じゃないと1万円に近づけない。使える人は、外から探す。
+  - speaker: zundamon
+    emotion: happy
+    text: 近くの大学に、アルバイト募集のビラを貼ってくるのだ！
+- id: ch3_gakusei
+  title: ''
+  background: fc_kaihatsu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: gakusei, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 集まったのは、たった一人でした。
+    reading: あつまったのわ、たった ひとりでした。
+  - speaker: gakusei
+    emotion: normal
+    text: ビラを見て来ました。[6502|ろくごーまるに]なら、分かります。
+  - speaker: zundamon
+    emotion: happy
+    text: 採用！ 明日から来てほしいのだ。
+  - speaker: gakusei
+    emotion: surprised
+    text: えっ、面接とかは……？
+  - speaker: zundamon
+    emotion: happy
+    text: 今のが、面接なのだ。
+    se: hammer
+- id: ch3_mecopy
+  title: 目で写す
+  background: fc_arcade
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: buka, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ゲームセンターのプログラムを、そのまま移せばいい。
+  - speaker: buka
+    emotion: sad
+    text: 部長、これはあきまへんわ。移すと、えらい手間です。
+  - speaker: buka
+    emotion: normal
+    text: 画面を見て、動きを目で写しながら一から作ります。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゴリラが樽を投げるまで……今、何秒だった？
+  - speaker: buka
+    emotion: happy
+    text: もう一回、見ましょう。
+  - speaker: zundamon
+    emotion: happy
+    text: よし、もう一回！ ……あと100円、崩してくるのだ。
+    beat: true
+- id: ch4_stick
+  title: 棒か、ボタンか
+  background: fc_shachoshitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: yamauchi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 社長。本体から棒が出ていて、これで操作します。
+  - speaker: yamauchi
+    emotion: thinking
+    text: 上村くん。これは、あかん。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……いちばん安くできる案なのに。
+  - speaker: yamauchi
+    emotion: normal
+    text: ……あかんもんは、あかん。
+  - speaker: reimu
+    text: 横井も異を唱え、デザインは横井のチームに移されます。
+    reading: よこいも いお となえ、でざいんわ よこいの ちーむに うつされます。
+- id: ch4_juji
+  title: 十字のボタン
+  background: fc_kaihatsu2
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: buka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: buka
+    emotion: happy
+    text: 部長。沢野さんが、ゲーム&ウオッチのボタンを試作機につなぎました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ゲーム&ウオッチのボタンで、テレビのゲームが動くのだ！
+  - speaker: buka
+    emotion: normal
+    text: 親指だけで、上下左右が押せます。
+  - speaker: zundamon
+    emotion: happy
+    text: 棒より安いし、手になじむ。子どもが踏んでも、けがをしにくい。
+  - speaker: reimu
+    text: 十字ボタンは、横井軍平がゲーム&ウオッチのために考えたものです。使おうと言ったのは部下の沢野貴夫でした。
+    reading: じゅうじ ぼたんわ、よこい ぐんぺいが げーむあんどうおっちの ために かんがえた ものです。つかおうと いったのわ ぶかの さわの たかおでした。
+  - speaker: buka
+    emotion: thinking
+    text: 部長、コントローラーの線は本体から外せるようにしますか？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……差し込みの部品は、けっこう高い。本体に、[直|じか]につなぐ。
+- id: ch4_color
+  title: 社長のマフラー
+  background: fc_shachoshitsu2
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: yamauchi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: yamauchi
+    emotion: happy
+    text: 上村くん、色はこれや。
+  - speaker: zundamon
+    emotion: surprised
+    text: 机の上の、それ……社長のマフラーですか？
+  - speaker: yamauchi
+    emotion: happy
+    text: このマフラーの色や。ええ色やろ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゲーム機の色を、マフラーで決めるのか……。
+    beat: true
+  - speaker: reimu
+    text: 赤に近いえんじ色は、山内が決めました。ほかの色は、デザイナーが決めています。
+    reading: あかに ちかい えんじいろわ やまうちが きめました。ほかの いろわ、でざいなーが きめて います。
+- id: ch4_name
+  title: ファミコンは却下
+  background: fc_shachoshitsu2
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: yamauchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 家で雅之がファミリーコンピュータかなと話すと、妻はすぐにファミコンやねと縮めました。
+    reading: いえで まさゆきが ふぁみりー こんぴゅーたかなと はなすと、つまわ すぐに ふぁみこんやねと ちぢめました。
+  - speaker: zundamon
+    emotion: happy
+    text: 社長、ファミコンという名前でどうでしょう。
+  - speaker: yamauchi
+    emotion: angry
+    text: 却下！
+    se: gaan
+  - speaker: zundamon
+    emotion: surprised
+    text: 一秒で、なのだ！？
+  - speaker: reimu
+    text: 正式な名前はファミリーコンピュータ。それでも世の中は、みんなファミコンと呼びました。
+    reading: せいしきな なまえわ ふぁみりー こんぴゅーた。それでも よのなかわ、みんな ふぁみこんと よびました。
+- id: card1983
+  title: ''
+  background: fc_card_1983
+  cuts:
+  - speaker: reimu
+    text: 1983年6月。問屋を集めた、発売前の説明会です。
+    reading: せんきゅうひゃく はちじゅうさんねん ろくがつ。とんやお あつめた、はつばいまえの せつめいかいです。
+- id: ch5_setsumei
+  title: 台の下の試作機
+  background: fc_setsumeikai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: tonya, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: こちらが、家庭用のテレビゲームです。
+  - speaker: tonya
+    emotion: surprised
+    text: ほう、よう動くな。
+  - speaker: reimu
+    text: 台の上の本体は空の箱で、本物の試作機は台の下に隠してありました。
+    reading: だいの うえの ほんたいわ からの はこで、ほんものの しさくきわ だいの したに かくして ありました。
+    background: fc_setsumeikai_ura
+  - speaker: zundamon
+    emotion: normal
+    text: 値段は、1万4800円です。
+  - speaker: tonya
+    emotion: surprised
+    text: 1万4800円！？ ゲームセンターのゲームが、その値段で？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……1万円は、切れなかった。本体は安くして、カセットで採算を取ります。
+- id: ch5_hatsubai
+  title: 静かな発売日
+  background: fc_toyshop
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: eigyo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1983年7月15日。ファミリーコンピュータが発売されます。
+    reading: せんきゅうひゃく はちじゅうさんねん しちがつ じゅうごにち。ふぁみりー こんぴゅーたが はつばい されます。
+  - speaker: eigyo
+    emotion: thinking
+    text: 部長、新聞に発売の記事がひとつも載ってません。
+  - speaker: reimu
+    text: 雅之本人は、この発売日のことを覚えていないと語っています。
+    reading: まさゆき ほんにんわ、この はつばいびの ことお おぼえて いないと かたって います。
+  - speaker: eigyo
+    emotion: sad
+    text: 部長。工場から、動かへんって連絡が次々に来てます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 発売したばかりなのに……！
+    se: chin
+- id: ch5_fuguai
+  title: 消える白線
+  background: fc_kaihatsu_yoru
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 12月。新しく出た野球のソフトで、おかしなことが起こります。
+    reading: じゅうにがつ。あたらしく でた やきゅうの そふとで、おかしな ことが おこります。
+  - speaker: buka
+    emotion: surprised
+    text: 部長、ベースボールでグラウンドの白い線が消えるそうです！
+  - speaker: zundamon
+    emotion: surprised
+    text: 線が、消える……？
+  - speaker: buka
+    emotion: sad
+    text: 投げたボールまで、途中で見えなくなるって。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ソフトのせいじゃない。本体なのだ。
+  - speaker: reimu
+    text: 原因は、絵を描く係のPPUでした。熱がこもって、うまく描けなくなっていたのです。
+    reading: げんいんわ、えお かく かかりの ぴーぴーゆーでした。ねつが こもって、うまく かけなく なって いたのです。
+- id: ch5_kaishu
+  title: 出荷を止めろ
+  background: fc_shachoshitsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: yamauchi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: クリスマスの商戦が、目の前に迫っていました。
+    reading: くりすますの しょうせんが、めの まえに せまって いました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長。店に出ている分にも、同じ不具合が出るかもしれません。
+  - speaker: yamauchi
+    emotion: thinking
+    text: おもちゃ屋で、直せるんか？
+  - speaker: zundamon
+    emotion: sad
+    text: ……工場に戻さないと、直せません。
+  - speaker: yamauchi
+    emotion: normal
+    text: ほな、出荷は止める。店に出たもんも、全部引き取れ。
+    se: don
+    telops:
+    - {text: 出荷停止・全品回収, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: クリスマスの直前に、全部……。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ファミコンが、死んでしまうのだ。
+- id: ch5_shuri
+  title: 年の瀬の工場
+  background: fc_kojo
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: sad}
+  - {who: kojocho, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 雅之は車で外注先を走り回り、在庫と回収品を運び込んでは直しました。
+    reading: まさゆきわ くるまで がいちゅうさきお はしりまわり、ざいこと かいしゅうひんお はこびこんでわ なおしました。
+  - speaker: zundamon
+    emotion: sad
+    text: 工場長。回収した分と在庫を、全部直させてください。
+  - speaker: kojocho
+    emotion: surprised
+    text: この年の瀬に、この山を全部かいな！
+    background: fc_kojo_yama
+  - speaker: kojocho
+    emotion: angry
+    text: 上村さん、こっちの段取りも考えてもらわんと困りますわ！
+  - speaker: zundamon
+    emotion: sad
+    text: ……すみません。お願いします。
+  - speaker: reimu
+    text: 任天堂の工場長には散々どやしつけられたと、本人は書いています。
+    reading: にんてんどうの こうじょうちょうにわ さんざん どやしつけられたと、ほんにんわ かいて います。
+  - speaker: reimu
+    text: 1983年の出荷は、およそ44万台にとどまりました。
+    reading: せんきゅうひゃく はちじゅうさんねんの しゅっかわ、およそ よんじゅうよんまんだいに とどまりました。
+- id: card1984
+  title: ''
+  background: fc_card_1984
+  cuts:
+  - speaker: reimu
+    text: 1984年1月。
+    reading: せんきゅうひゃく はちじゅうよねん いちがつ。
+- id: ch6_shimei
+  title: 名指しで買いに来る客
+  background: fc_eigyo
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: eigyo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: eigyo
+    emotion: surprised
+    text: 部長！ 店に品物が無いのに、入ったら売ってくれってお客さんが来てます！
+  - speaker: zundamon
+    emotion: surprised
+    text: 回収してる間に、欲しい人が増えてたのか！？
+  - speaker: eigyo
+    emotion: happy
+    text: 名指しで、ファミコンをくれって言うんです。
+  - speaker: zundamon
+    emotion: happy
+    text: ……死んでなかったのだ。
+    se: levelup
+  - speaker: reimu
+    text: 発売から11か月で、ファミコンは100万台に届きます。
+    reading: はつばいから じゅういっかげつで、ふぁみこんわ ひゃくまんだいに とどきます。
+- id: ch6_mitsudomoe
+  title: 三つどもえ
+  background: fc_toyshop
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: thinking}
+  - {who: omochaya, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 売れ始めると、ボタンが戻らない・線が切れる・テレビが映らないの三つどもえが起きます。
+    reading: うれはじめると、ぼたんが もどらない せんが きれる てれびが うつらないの みつどもえが おきます。
+  - speaker: omochaya
+    emotion: angry
+    text: 上村さん。ボタンが戻らん線が切れたって、返品の[山|やま]や。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100万回押す試験に、通ったボタンなのに……。
+  - speaker: omochaya
+    emotion: thinking
+    text: 子どもは、斜め前に押し込むように押すんや。
+  - speaker: zundamon
+    emotion: thinking
+    text: 試験の機械は、まっすぐにしか押さないのだ……。
+  - speaker: zundamon
+    emotion: normal
+    text: 直し方の手引きを作ります。お店で、直してもらえませんか。
+  - speaker: omochaya
+    emotion: surprised
+    text: おもちゃ屋が、ゲーム機を修理するんかいな！
+  - speaker: omochaya
+    emotion: thinking
+    text: ……おもちゃ屋に、ドライバーが要る時代か。
+    beat: true
+  - speaker: reimu
+    text: テレビは、ビデオの端子が付いたものがまだ1割ほど。
+    reading: てれびわ、びでおの たんしが ついた ものが まだ いちわりほど。
+  - speaker: reimu
+    text: アンテナへの接続は、近所の電器屋が走り回って直しました。
+    reading: あんてなえの せつぞくわ、きんじょの でんきやが はしりまわって なおしました。
+- id: ch6_namco
+  title: 中身を読まれた
+  background: fc_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 初めは、ソフトもすべて任天堂が作る方針でした。
+    reading: はじめわ、そふとも すべて にんてんどうが つくる ほうしんでした。
+  - speaker: shain
+    emotion: surprised
+    text: 部長。ナムコが、うちの機械の中身を自分で調べ上げたそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……誰にも、教えてないのに！
+  - speaker: shain
+    emotion: thinking
+    text: これは[6502|ろくごーまるに]やないか、って見抜いたとか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3年真似されないはずが、1年たたずに中身を読まれたのか。
+    se: tenten
+  - speaker: reimu
+    text: ナムコはギャラクシアンやゼビウスを、ファミコンで出していきます。
+    reading: なむこわ ぎゃらくしあんや ぜびうすお、ふぁみこんで だして いきます。
+- id: card1985
+  title: ''
+  background: fc_card_1985
+  cuts:
+  - speaker: reimu
+    text: 1985年9月。スーパーマリオブラザーズが出ます。
+    reading: せんきゅうひゃく はちじゅうごねん くがつ。すーぱーまりお ぶらざーずが でます。
+- id: ch6_mario
+  title: テレビで知ったマリオ
+  background: fc_heya
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 上村雅之, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 忙しかった雅之はスーパーマリオの開発を知らず、テレビのコマーシャルで初めて知りました。
+    reading: いそがしかった まさゆきわ すーぱーまりおの かいはつお しらず、てれびの こまーしゃるで はじめて しりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……うちの会社の、新しいゲームなのだ！？
+  - speaker: reimu
+    text: 小学6年の息子と中学生の娘は学校でうわさを聞き、持って帰ってきてとせがみます。
+    reading: しょうがく ろくねんの むすこと ちゅうがくせいの むすめわ がっこうで うわさお きき、もって かえって きてと せがみます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 作ってる会社の人間が、子どもに教わるとは。
+    beat: true
+  - speaker: reimu
+    text: 持ち帰ると、子どもたちは夢中になりました。本体は、すでに400万台以上売れていました。
+    reading: もちかえると、こどもたちわ むちゅうに なりました。ほんたいわ、すでに よんひゃくまんだい いじょう うれて いました。
+- id: ch6_hotel
+  title: ''
+  background: fc_hotel
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: yamauchi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: その秋。東京のホテルで、雅之は山内に呼ばれます。
+    reading: その あき。とうきょうの ほてるで まさゆきわ やまうちに よばれます。
+  - speaker: yamauchi
+    emotion: happy
+    text: 上村くん、本社から電話や。マリオが、えらい売れそうやて。
+  - speaker: zundamon
+    emotion: surprised
+    text: そうかっ……！
+  - speaker: zundamon
+    emotion: happy
+    text: ……2年前の年末が、うそみたいだ。
+    se: namida
+- id: ch6_urikire
+  title: ''
+  background: fc_toyshop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: omochaya, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: omochaya
+    emotion: happy
+    text: 上村さん、見てや。張り紙を出したで。
+    background: fc_toyshop_urikire
+  - speaker: zundamon
+    emotion: surprised
+    text: マリオとポートピアは売り切れ、入荷未定……！
+  - speaker: reimu
+    text: 雅之はこの張り紙の写真を、のちの取材にも持ってきました。
+    reading: まさゆきわ この はりがみの しゃしんお、のちの しゅざいにも もって きました。
+- id: ch6_nes
+  title: アメリカで相手にされない
+  background: fc_eigyo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: sad}
+  - {who: eigyo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 雅之は何度もアメリカに渡りますが、ゲーム機を売る店に相手にされません。
+    reading: まさゆきわ なんども あめりかに わたりますが、げーむきお うる みせに あいてに されません。
+  - speaker: eigyo
+    emotion: sad
+    text: どこへ行っても、まともに話を聞いてもらえません。
+  - speaker: reimu
+    text: 興味を示したのは、トイザらスだけ。1985年10月、ニューヨークで売り出します。
+    reading: きょうみお しめしたのわ といざらすだけ。せんきゅうひゃく はちじゅうごねん じゅうがつ、にゅーよーくで うりだします。
+  - speaker: zundamon
+    emotion: sad
+    text: 5万台のうち、3割が売れ残ったのか……。
+  - speaker: reimu
+    text: がっかりした雅之でしたが、実はこれでも大成功でした。
+    reading: がっかりした まさゆきでしたが、じつわ これでも だいせいこうでした。
+- id: ch6_disk
+  title: データが全部消えた
+  background: fc_kaihatsu_yoru
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: surprised}
+  - {who: buka, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1986年。書き換えのできるディスクで遊ぶ、ディスクシステムの出荷直前のことです。
+    reading: せんきゅうひゃく はちじゅうろくねん。かきかえの できる でぃすくで あそぶ、でぃすく しすてむの しゅっか ちょくぜんの ことです。
+  - speaker: buka
+    emotion: sad
+    text: 部長……。データが、全部消えました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 全部！？ 出荷は、もうすぐなのに！
+    se: gaan
+  - speaker: zundamon
+    emotion: sad
+    text: 原因が分かるまで、帰れないのだ。
+    background: fc_kaihatsu_tetsuya
+  - speaker: reimu
+    text: 雅之は真っ青になり、何日も徹夜して原因を探しました。
+    reading: まさゆきわ まっさおに なり、なんにちも てつや して げんいんお さがしました。
+- id: zukai_sales
+  title: 44万台から
+  background: fc_zukai_sales
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 国内の出荷を、年末ごとの累計で並べてみるわ。1983年の暮れで、44万台。
+  - speaker: tsumugi
+    emotion: normal
+    text: 翌年の暮れに211万台、その次は579万台。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1986年は、969万台！ 回収の年の、20倍以上なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界では6191万台。ソフトは5億本を超えたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 5億本！ 押し入れのカセットも、その1本なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ちなみにコントローラーが本体から外せないのは、部品代の節約のため。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあボクがフーフーしたコントローラーには、吹く端子が無い……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 二重に無駄だったわね。
+    se: oti
+- id: ch7_zokusetsu
+  title: よくある話は本当か
+  background: fc_ronsou
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。ファミコンの赤と白は、一番安い色だったから！
+  - speaker: tsumugi
+    emotion: normal
+    text: その話は、上村さん本人が否定してるの。赤は、社長のマフラーの色よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: さっきのマフラーなのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、これはどうだ。ファミコンは、発売してすぐに大ヒットした！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 出足は悪かったの。100万台まで、11か月かかってるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ネット知識、全滅なのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に気をつけたいのは、押し入れのファミコンを動かすとき。
+  - speaker: tsumugi
+    emotion: normal
+    text: フーフーはやめて、専用のクリーニング用品でほこりを取るのが安心よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクの息、けっこう湿ってた……。
+    beat: true
+- id: card1990
+  title: ''
+  background: fc_card_1990
+  cuts:
+  - speaker: reimu
+    text: 1990年11月。雅之が開発を率いた、スーパーファミコンが発売されます。
+    reading: せんきゅうひゃく きゅうじゅうねん じゅういちがつ。まさゆきが かいはつお ひきいた、すーぱーふぁみこんが はつばい されます。
+- id: ch7_sfc
+  title: ピコピコ音の次へ
+  background: fc_kaihatsu2
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: buka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: buka
+    emotion: thinking
+    text: 部長、音の部品はソニーのものに決まりましたね。
+  - speaker: reimu
+    text: ソニーの久夛良木健がフロッピーの売り込みに来たのがきっかけで、ソニー製の音源が使われます。
+    reading: そにーの くたらぎ けんが ふろっぴーの うりこみに きたのが きっかけで、そにーせいの おんげんが つかわれます。
+  - speaker: zundamon
+    emotion: happy
+    text: 久夛良木さんは、ファミコンのピコピコ音が我慢ならなかったようなのだ。
+  - speaker: buka
+    emotion: thinking
+    text: ……作った本人が、それを言いますか。
+    se: tsukkomi
+  - speaker: reimu
+    text: その後ソニーと共同で進めた、CDの読める機械の計画は実を結びませんでした。
+    reading: その ご そにーと きょうどうで すすめた、しーでぃーの よめる きかいの けいかくわ みお むすびませんでした。
+- id: ch8_hozon
+  title: ゲームを残す
+  background: fc_shachoshitsu2
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: normal}
+  - {who: yamauchi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1998年。立命館大学と京都府の人たちが、ゲームの人材育成への協力を求めて任天堂に通ってきます。
+    reading: せんきゅうひゃく きゅうじゅうはちねん。りつめいかん だいがくと きょうとふの ひとたちが、げーむの じんざい いくせいえの きょうりょくお もとめて にんてんどうに かよって きます。
+  - speaker: zundamon
+    emotion: normal
+    text: 社長、協力しましょう。その代わり、昔のゲームの資料を大学で整理してもらいます。
+  - speaker: yamauchi
+    emotion: thinking
+    text: 売る物を作るんやのうて、残すんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 作った人間がいるうちに残さないと、誰にも分からなくなります。
+  - speaker: yamauchi
+    emotion: thinking
+    text: ……昔のゲームを、学者が遊ぶんか。
+  - speaker: zundamon
+    emotion: happy
+    text: 遊ばないと、研究になりませんから。
+    beat: true
+  - speaker: reimu
+    text: 立命館の細井浩一たちは何度も任天堂に通い、雅之は会社と社長を説得しました。
+    reading: りつめいかんの ほそい こういちたちわ なんども にんてんどうに かよい、まさゆきわ かいしゃと しゃちょうお せっとく しました。
+  - speaker: reimu
+    text: 2004年。雅之は定年で開発の一線を退き、立命館大学の教授になります。
+    reading: にせんよねん。まさゆきわ ていねんで かいはつの いっせんお しりぞき、りつめいかん だいがくの きょうじゅに なります。
+- id: ch8_daigaku
+  title: ''
+  background: fc_daigaku
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 上村雅之, emotion: happy}
+  - {who: gakusei, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 研究室には、スーパーマリオより後に生まれた学生たちが集まります。
+    reading: けんきゅうしつにわ、すーぱーまりおより あとに うまれた がくせいたちが あつまります。
+  - speaker: gakusei
+    emotion: happy
+    text: 先生、ありがとうございました！ 3回とも、めっちゃ楽しかったです。
+  - speaker: zundamon
+    emotion: happy
+    text: 3回遊ぶと、みんなお礼を言って帰っていくのだ。
+  - speaker: gakusei
+    emotion: thinking
+    text: ジャンプのとき、つい十字ボタンの上も押してました。
+  - speaker: zundamon
+    emotion: happy
+    text: マリオの上は、つるを登るときだけ。それでも押すのは、ほかのゲームの癖だ。
+  - speaker: zundamon
+    emotion: happy
+    text: そこが、面白いのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 100年後に、このゲームがどう遊ばれてるか。それが見たい。
+  - speaker: reimu
+    text: 2011年からは、立命館大学ゲーム研究センターの初代センター長を務めました。
+    reading: にせん じゅういちねんからわ、りつめいかん だいがく げーむ けんきゅう せんたーの しょだい せんたーちょうお つとめました。
+  - speaker: reimu
+    text: 発売30年の取材では、60周年には絶対生きていないと笑っていました。
+    reading: はつばい さんじゅうねんの しゅざいでわ、ろくじゅっしゅうねんにわ ぜったい いきて いないと わらって いました。
+  - speaker: reimu
+    text: 2015年度には、文化庁メディア芸術祭の功労賞を受けています。
+    reading: にせん じゅうごねんどにわ、ぶんかちょう めでぃあ げいじゅつさいの こうろうしょうお うけて います。
+  - speaker: reimu
+    text: 2021年12月6日、上村雅之は78歳で亡くなりました。
+    reading: にせん にじゅういちねん じゅうにがつ むいか、うえむら まさゆきわ ななじゅうはっさいで なくなりました。
+- id: ch9_gendai
+  title: 今も残るもの
+  background: fc_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年には京都で、上村さんの遊びの世界という展示が開かれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今のゲーム機のコントローラーにも、十字のボタンが残ってるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクのコントローラーにも、ちゃんと付いてるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: ゲーム機をまとめてファミコンと呼ぶ人も、まだいるくらいよ。
+  - speaker: zundamon
+    emotion: happy
+    text: おじいちゃんも、ボクの新しいゲーム機をファミコンって呼んでた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、あの夜の電話。そこから1年8か月で発売したのよ。
+- id: shime
+  title: ''
+  background: fc_heya_on
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。クリーニング用品で掃除したら、映ったのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: よかったわね。[何|なん]のゲーム？
+  - speaker: zundamon
+    emotion: happy
+    text: ベースボール！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……白い線、ちゃんと出てる？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……消えないか、ずっと見張るのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

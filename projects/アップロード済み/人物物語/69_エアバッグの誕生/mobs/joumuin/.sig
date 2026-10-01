@@ -1,1 +1,1 @@
-乗務員|none|none||v4
+乗務員|none|none||v4|suit|#2f4a7a|o1

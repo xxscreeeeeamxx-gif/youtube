@@ -29,6 +29,11 @@ class Mob(BaseModel):
     hair: str = "none"      # none / twintail / short / bun
     item: str = "none"      # none / bible / hat / mustache / book
     photo: str = ""         # 実写顔画像（あれば頭に丸抜きで貼る）
+    # 服（2026-10-01 ユーザー「技師とか色んな人出てくるけど、服着せれないの?」）
+    # none / suit（背広）/ work（作業着）/ labcoat（白衣）/ kimono / haori（着物+羽織）/
+    # apron（前掛け）/ gakuran（学生服）。color で地の色を変えられる（例 "#9a4f5a"）
+    outfit: str = "none"
+    color: str = ""
 
 
 class StageMember(BaseModel):

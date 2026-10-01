@@ -1,6 +1,7 @@
 """白モブキャラの立ち絵を自動生成する（再現ドラマモード用）。
 
 お手本準拠のミニマル造形: 白い頭・白い胴体・黒細フチ・胴体に縦書きの名前。
+outfit で服（背広・作業着・白衣・着物・羽織・前掛け・学生服）を着せられる。
 hair / item / photo の差分で見分けを付ける。
 
 生成先: projects/<slug>/mobs/<id>/<emotion>.png（6感情とも同じ絵。表情は付けない）
@@ -26,6 +27,117 @@ LABEL_MAX_H = 300
 OUTLINE = (60, 62, 70)
 BODY = (252, 252, 252)
 
+# 服の既定の地色（mob.color で上書きできる）
+OUTFIT_COLORS = {
+    "suit": (52, 62, 96),        # 紺の背広
+    "work": (104, 128, 150),     # 灰青の作業着
+    "labcoat": (250, 250, 250),  # 白衣
+    "kimono": (74, 70, 96),      # 藍鼠の着物
+    "haori": (60, 56, 60),       # 黒っぽい羽織
+    "apron": (44, 62, 110),      # 紺の前掛け
+    "gakuran": (34, 36, 46),     # 学生服
+}
+
+
+def _hex(c: str) -> tuple[int, int, int]:
+    c = c.lstrip("#")
+    return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))  # type: ignore[return-value]
+
+
+def _shade(rgb, k: float) -> tuple[int, int, int]:
+    return tuple(max(0, min(255, int(v * k))) for v in rgb)  # type: ignore[return-value]
+
+
+def _draw_outfit(img: Image.Image, outfit: str, color, box: list[int], cx: int) -> str:
+    """胴の上に服を描く（胴のシルエットでマスクして、はみ出さない）。
+    名前ラベルは胴の真ん中に縦書きで乗るので、真ん中の縦帯（cx±110・y590〜890）には
+    ボタンや紐を置かない。返り値はラベルの下地の明るさ 'light' / 'dark'。"""
+    if outfit not in OUTFIT_COLORS:
+        raise SystemExit(f"モブの outfit が不明です: {outfit}（{' / '.join(OUTFIT_COLORS)}）")
+    mask = Image.new("L", (W, H), 0)
+    ImageDraw.Draw(mask).rounded_rectangle(box, radius=190, fill=255)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    top = box[1]
+    base = color or OUTFIT_COLORS[outfit]
+    under = base  # ラベルの真下に来る地の色
+
+    if outfit in ("suit", "labcoat"):
+        d.rectangle(box, fill=base)
+        # 胸元のシャツ（ラベルはここに乗る）。白衣の下は水色のシャツ
+        shirt = (250, 250, 250) if outfit == "suit" else (196, 214, 234)
+        d.polygon([(cx - 112, top), (cx + 112, top), (cx + 70, 980), (cx - 70, 980)], fill=shirt)
+        lap = _shade(base, 0.86) if outfit == "suit" else (238, 240, 244)
+        for s in (-1, 1):
+            d.polygon([(cx + s * 112, top), (cx + s * 200, top + 40),
+                       (cx + s * 150, top + 210), (cx + s * 96, top + 250)],
+                      fill=lap, outline=OUTLINE)
+            d.line([(cx + s * 112, top), (cx + s * 70, 980)], fill=OUTLINE, width=6)
+        for by in (1030, 1110):
+            d.ellipse([cx - 16, by - 16, cx + 16, by + 16],
+                      fill=_shade(base, 0.6) if outfit == "suit" else (200, 204, 210),
+                      outline=OUTLINE, width=3)
+        if outfit == "labcoat":
+            for s in (-1, 1):
+                x0, x1 = sorted((cx + s * 100, cx + s * 200))
+                d.rectangle([x0, 900, x1, 990], outline=OUTLINE, width=5)
+            d.rectangle([cx + 110, 700, cx + 200, 780], outline=OUTLINE, width=5)
+            d.rectangle([cx + 130, 670, cx + 144, 720], fill=(60, 90, 170))
+        under = shirt
+
+    elif outfit == "work":
+        d.rectangle(box, fill=base)
+        d.line([(cx, top), (cx, H)], fill=_shade(base, 0.72), width=8)  # 前立て
+        for s in (-1, 1):
+            d.polygon([(cx, top + 70), (cx + s * 150, top + 10), (cx + s * 170, top + 90),
+                       (cx + s * 40, top + 130)], fill=_shade(base, 1.15), outline=OUTLINE)
+            x0, x1 = sorted((cx + s * 100, cx + s * 196))
+            d.rectangle([x0, 700, x1, 800], fill=_shade(base, 0.92), outline=OUTLINE, width=5)
+            d.line([(x0, 724), (x1, 724)], fill=OUTLINE, width=4)
+
+    elif outfit in ("kimono", "haori"):
+        kim = base if outfit == "kimono" else (96, 92, 100)
+        d.rectangle(box, fill=kim)
+        under = kim
+        # 半衿と衿。右前なので、見て右側の衿が上に重なる
+        vy = top + 170
+        eri = (245, 242, 232)
+        d.polygon([(cx - 150, top), (cx - 90, top), (cx + 30, vy + 40), (cx - 30, vy + 90)],
+                  fill=eri, outline=OUTLINE)
+        d.polygon([(cx + 150, top), (cx + 90, top), (cx - 30, vy + 40), (cx + 30, vy + 90)],
+                  fill=eri, outline=OUTLINE)
+        d.polygon([(cx + 190, top + 20), (cx + 120, top), (cx - 20, vy + 110),
+                   (cx + 40, vy + 150)], fill=_shade(kim, 0.8), outline=OUTLINE)
+        d.rectangle([box[0], 930, box[2], 1010], fill=(176, 146, 86), outline=OUTLINE, width=5)
+        if outfit == "haori":
+            for s in (-1, 1):
+                d.polygon([(cx + s * 120, top), (cx + s * 240, top), (cx + s * 240, H),
+                           (cx + s * 110, H), (cx + s * 110, 800)], fill=base, outline=OUTLINE)
+            # 羽織紐はラベルの下（帯の上）に結ぶ
+            d.line([(cx - 110, 916), (cx + 110, 916)], fill=eri, width=10)
+            d.ellipse([cx - 18, 898, cx + 18, 934], fill=eri, outline=OUTLINE, width=3)
+
+    elif outfit == "apron":
+        d.rectangle(box, fill=BODY)
+        d.rectangle([cx - 200, 860, cx + 200, H], fill=base, outline=OUTLINE, width=6)
+        d.rectangle([box[0], 846, box[2], 876], fill=_shade(base, 0.8))  # 腰ひも
+        under = BODY
+
+    elif outfit == "gakuran":
+        d.rectangle(box, fill=base)
+        d.rectangle([cx - 120, top, cx + 120, top + 120], fill=_shade(base, 1.3),
+                    outline=OUTLINE, width=5)  # 詰襟
+        for by in (950, 1030, 1110):
+            d.ellipse([cx - 18, by - 18, cx + 18, by + 18], fill=(214, 178, 70),
+                      outline=OUTLINE, width=3)
+
+    clip = Image.new("L", (W, H), 0)
+    clip.paste(layer.split()[3], (0, 0), mask)
+    img.paste(layer, (0, 0), clip)
+    # 白い作業着（本田技研など）もあるので、字の色は地の明るさで決める
+    lum = 0.299 * under[0] + 0.587 * under[1] + 0.114 * under[2]
+    return "light" if lum > 165 else "dark"
+
 
 def _draw_mob(mob, photo_path: Path | None, font_path: str) -> Image.Image:
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -35,8 +147,15 @@ def _draw_mob(mob, photo_path: Path | None, font_path: str) -> Image.Image:
     head_cy = 300
 
     # 胴体（肩の丸いずんぐりシルエット）
-    d.rounded_rectangle([cx - 230, head_cy + head_r - 60, cx + 230, H - 24],
-                        radius=190, fill=BODY, outline=OUTLINE, width=7)
+    body_box = [cx - 230, head_cy + head_r - 60, cx + 230, H - 24]
+    d.rounded_rectangle(body_box, radius=190, fill=BODY, outline=OUTLINE, width=7)
+    outfit = getattr(mob, "outfit", "none") or "none"
+    label_bg = None
+    if outfit != "none":
+        color = _hex(mob.color) if getattr(mob, "color", "") else None
+        label_bg = _draw_outfit(img, outfit, color, body_box, cx)
+        d = ImageDraw.Draw(img)
+        d.rounded_rectangle(body_box, radius=190, outline=OUTLINE, width=7)
     # 頭
     d.ellipse([cx - head_r, head_cy - head_r, cx + head_r, head_cy + head_r],
               fill=BODY, outline=OUTLINE, width=7)
@@ -97,9 +216,16 @@ def _draw_mob(mob, photo_path: Path | None, font_path: str) -> Image.Image:
             size -= 2
             total_h = size * len(label) + 8 * (len(label) - 1)
         f = ImageFont.truetype(font_path, size, index=0)
+        # 服の上では縁取りを付ける（濃い地は白字、明るい地は黒字に白フチ）
+        if label_bg == "dark":
+            kw = dict(fill=(255, 255, 255), stroke_width=6, stroke_fill=(30, 32, 40))
+        elif label_bg == "light":
+            kw = dict(fill=(30, 32, 40), stroke_width=4, stroke_fill=(255, 255, 255))
+        else:
+            kw = dict(fill=(30, 32, 40))
         for i, ch in enumerate(label):
             wch = d.textlength(ch, font=f)
-            d.text((cx - wch / 2, y + i * (size + 8)), ch, font=f, fill=(30, 32, 40))
+            d.text((cx - wch / 2, y + i * (size + 8)), ch, font=f, **kw)
     return img
 
 
@@ -110,6 +236,8 @@ def ensure_mob_sprites(cfg: Config, proj: Project, script) -> None:
         out_dir = proj.root / "mobs" / mob.id
         out_dir.mkdir(parents=True, exist_ok=True)
         sig = f"{mob.label}|{mob.hair}|{mob.item}|{mob.photo}|v4"
+        if mob.outfit != "none":
+            sig += f"|{mob.outfit}|{mob.color}|o1"
         sig_file = out_dir / ".sig"
         if sig_file.exists() and sig_file.read_text(encoding="utf-8") == sig \
                 and (out_dir / "normal.png").exists():

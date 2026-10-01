@@ -1,1 +1,1 @@
-先輩|none|none||v4
+先輩|none|none||v4|labcoat||o1

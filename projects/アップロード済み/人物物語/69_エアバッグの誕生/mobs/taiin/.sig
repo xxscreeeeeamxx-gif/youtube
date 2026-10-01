@@ -1,1 +1,1 @@
-隊員|none|none||v4
+隊員|none|none||v4|work|#5d6b45|o1

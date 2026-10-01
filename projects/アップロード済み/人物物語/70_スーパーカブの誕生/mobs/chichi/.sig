@@ -1,1 +1,1 @@
-父|none|none||v4
+父|none|none||v4|kimono|#6b5a44|o1

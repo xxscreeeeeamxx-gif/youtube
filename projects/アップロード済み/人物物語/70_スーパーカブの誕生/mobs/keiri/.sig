@@ -1,1 +1,1 @@
-経理|none|none||v4
+経理|none|none||v4|suit|#4a5060|o1

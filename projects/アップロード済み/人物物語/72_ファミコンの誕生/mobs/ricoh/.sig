@@ -1,0 +1,1 @@
+リコーの人|none|none||v4|work|#7a8a7a|o1

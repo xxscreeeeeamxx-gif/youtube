@@ -1,1 +1,1 @@
-棟方志功|none|none||v4
+棟方志功|none|none||v4|kimono|#3b3f4f|o1

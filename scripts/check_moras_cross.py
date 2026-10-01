@@ -73,6 +73,9 @@ CONTEXT = [
     (r"男の方" + _NOT_KATA, "オトコノカタ"),
     (r"何人", "ナンニン"), (r"何回", "ナンカイ"), (r"何度", "ナンド"),
     (r"今日は", "キョオワ"), (r"明日は", "アシタワ"),
+    # 文頭・「……」のあとの君は「〜くん」の続きと取られてクンになる
+    # （2026-10-01 エアバッグ回「……君は、記者より」= クンワ をユーザー指摘）
+    (r"(?:^|[。、！？!?…」\s])君(?=[はがのをにもと])", "キミ"),
 ]
 
 
@@ -127,9 +130,10 @@ def strip_tags(text: str) -> str:
     return re.sub(r"\[([^|]+)\|[^\]]+\]", r"\1", text)
 
 
-def check_slug(slug: str) -> int:
+def check_slug(slug: str, d: Path | None = None) -> int:
     from ytf.config import Config, find_project_dir
-    d = find_project_dir(Config.load().root, slug)
+    if d is None:
+        d = find_project_dir(Config.load().root, slug)
     tj = (d / "audio" / "timing.json") if d else Path("nonexistent")
     if not tj.exists():
         print(f"({slug}: timing.json なし・スキップ)")
@@ -176,7 +180,8 @@ if __name__ == "__main__":
         from ytf.config import Config, iter_projects
         for p in iter_projects(Config.load().root):
             if (p / "audio" / "timing.json").exists():
-                total += check_slug(p.name)
+                # 名前で引き直すと番号違いの同名フォルダ（64/69_エアバッグ等）を取り違えるので、パスを渡す
+                total += check_slug(p.name, p)
         print(f"\n不一致 合計 {total} 件（全件を目視判定すること）")
     else:
         n = check_slug(sys.argv[1])

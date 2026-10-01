@@ -1,1 +1,1 @@
-文具店の主人|none|none||v4
+文具店の主人|none|none||v4|apron|#5a4632|o1

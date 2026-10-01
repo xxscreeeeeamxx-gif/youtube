@@ -1,1 +1,1 @@
-開発部長|none|none||v4
+開発部長|none|none||v4|suit||o1

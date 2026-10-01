@@ -23,46 +23,61 @@ meta:
     label: 平林先生
     voice: 42
     pitch: 0.0
+    outfit: labcoat
   - id: senpai
     label: 先輩
     voice: 13
     pitch: 0.06
+    outfit: labcoat
   - id: buchou
     label: 開発部長
     voice: 42
     pitch: 0.04
+    outfit: suit
   - id: douryou
     label: 同僚
     voice: 12
     pitch: 0.1
+    outfit: labcoat
   - id: eigyou
     label: 先輩社員
     voice: 13
     pitch: -0.04
+    outfit: suit
+    color: '#4a5060'
   - id: oushu
     label: 欧州担当
     voice: 13
     pitch: 0.1
+    outfit: suit
+    color: '#3e4a5c'
   - id: shain
     label: 開発責任者
     voice: 12
     pitch: 0.08
+    outfit: suit
+    color: '#5a4a3a'
   - id: eigyou2
     label: 営業担当
     voice: 13
     pitch: 0.1
+    outfit: suit
+    color: '#2f3a52'
   - id: tenin
     label: 店員
     voice: 8
     pitch: 0.1
+    outfit: apron
   - id: kenkyu1
     label: 研究員
     voice: 12
     pitch: -0.04
+    outfit: labcoat
   - id: kenkyu2
     label: 研究員
     voice: 8
     pitch: 0.04
+    outfit: labcoat
   - id: gakusei
     label: パリの学生
     voice: 8
@@ -75,6 +90,8 @@ meta:
     label: 文具店の主人
     voice: 42
     pitch: 0.06
+    outfit: apron
+    color: '#5a4632'
 scenes:
 - id: co_tsukaenai
   title: ''

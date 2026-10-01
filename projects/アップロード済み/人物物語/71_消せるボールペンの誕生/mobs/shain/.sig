@@ -1,1 +1,1 @@
-開発責任者|none|none||v4
+開発責任者|none|none||v4|suit|#5a4a3a|o1

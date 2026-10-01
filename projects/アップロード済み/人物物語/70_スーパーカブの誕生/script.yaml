@@ -23,58 +23,82 @@ meta:
     label: 父
     voice: 13
     pitch: -0.1
+    outfit: kimono
+    color: '#6b5a44'
   - id: tenshu
     label: 店主
     voice: 42
     pitch: 0.0
+    outfit: apron
   - id: kojonushi
     label: 工場主
     voice: 13
     pitch: -0.12
+    outfit: work
   - id: shain
     label: 社員
     voice: 12
     pitch: 0.08
+    outfit: suit
+    color: '#3e4a5c'
   - id: takeshima
     label: 竹島弘
     voice: 13
     pitch: 0.06
+    outfit: work
+    color: '#e8ebee'
   - id: honda
     label: 本田宗一郎
     voice: 13
     pitch: -0.06
+    outfit: work
+    color: '#e8ebee'
   - id: designer
     label: デザイナー
     voice: 12
     pitch: 0.02
+    outfit: work
+    color: '#e8ebee'
   - id: zaimoku
     label: 材木屋
     voice: 42
     pitch: 0.04
+    outfit: apron
+    color: '#5a4632'
   - id: sobaya
     label: そば屋
     voice: 42
     pitch: -0.04
+    outfit: apron
   - id: keiri
     label: 経理
     voice: 13
     pitch: 0.12
+    outfit: suit
+    color: '#4a5060'
   - id: nishida
     label: 西田通弘
     voice: 12
     pitch: -0.08
+    outfit: suit
   - id: kumiai
     label: 組合員
     voice: 12
     pitch: 0.14
+    outfit: work
+    color: '#e8ebee'
   - id: kenkyuin
     label: 研究員
     voice: 12
     pitch: -0.02
+    outfit: work
+    color: '#e8ebee'
   - id: koukoku
     label: 広告担当
     voice: 12
     pitch: 0.1
+    outfit: suit
+    color: '#5a4a3a'
   - id: mago
     label: 孫
     voice: 12

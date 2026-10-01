@@ -120,7 +120,7 @@ class Composer:
         d.rounded_rectangle([x0, y0, x1, y1], radius=14, fill=(22, 26, 38, 230))
         d.rounded_rectangle([x0 + 10, y0 + 12, x0 + 10 + bar_w, y1 - 12],
                             radius=6, fill=(*self.accent, 255))
-        d.text((x0 + 10 + bar_w + gap, y0 + (h - size) / 2 - 2), title,
+        d.text((x0 + 10 + bar_w + gap, _text_y(d, f, y0, y1)), title,
                font=f, fill=(245, 247, 252))
 
     def _card_box(self) -> tuple[int, int, int, int]:
@@ -426,8 +426,8 @@ class Composer:
         y0 = max(96, y_top - 48)
         d.rounded_rectangle([x0, y0, x0 + tw + 36, y0 + 46], radius=10,
                             fill=(238, 120, 34, 255), outline=(255, 255, 255), width=3)
-        d.text((x0 + 18, y0 + 7), text, font=f, fill=(255, 255, 255),
-               stroke_width=2, stroke_fill=(90, 40, 8))
+        d.text((x0 + 18, _text_y(d, f, y0, y0 + 46, stroke=2)), text, font=f,
+               fill=(255, 255, 255), stroke_width=2, stroke_fill=(90, 40, 8))
 
     def _draw_bubble(self, canvas: Image.Image, text: str, x_frac: float,
                      edge: str | None = None) -> None:
@@ -459,8 +459,9 @@ class Composer:
                    (tip_x, y0 + bh + 26)], fill=edge_rgb)
         d.polygon([(tip_x - 10, y0 + bh - 4), (tip_x + 10, y0 + bh - 4),
                    (tip_x, y0 + bh + 16)], fill=(255, 255, 255))
+        ty = _text_y(d, f, y0, y0 + bh, lines=len(lines), lh=lh)
         for i, ln in enumerate(lines):
-            d.text((x0 + pad_x, y0 + pad_y + i * lh), ln, font=f, fill=(24, 26, 34))
+            d.text((x0 + pad_x, ty + i * lh), ln, font=f, fill=(24, 26, 34))
 
     def _draw_caption(self, canvas: Image.Image, text: str) -> None:
         """ナレーション字幕（下部・暗帯+白文字に琥珀フチ）。最大2行。"""
@@ -480,9 +481,10 @@ class Composer:
         x0 = int(self.lay.w / 2 - tw / 2 - 34)
         x1 = int(self.lay.w / 2 + tw / 2 + 34)
         d.rounded_rectangle([x0, y0, x1, y1], radius=14, fill=(12, 14, 22, 175))
+        ty = _text_y(d, f, y0, y1, stroke=3, lines=len(lines), lh=lh)
         for i, ln in enumerate(lines):
             lw = d.textlength(ln, font=f)
-            d.text((self.lay.w / 2 - lw / 2, y0 + 16 + i * lh), ln, font=f,
+            d.text((self.lay.w / 2 - lw / 2, ty + i * lh), ln, font=f,
                    fill=(255, 252, 240), stroke_width=3, stroke_fill=(140, 96, 20))
 
     def telop_layer(self, telops: list[Telop]) -> Image.Image:
@@ -513,9 +515,19 @@ class Composer:
         d.rounded_rectangle([w / 2 - half, cy + size / 2 + 27,
                              w / 2 + half, cy + size / 2 + 34], radius=3,
                             fill=(*self.accent, 255))
-        d.text(((w - tw) / 2, cy - size / 2 - 4), title, font=f,
-               fill=(245, 247, 252))
+        d.text(((w - tw) / 2, _text_y(d, f, cy - size / 2 - 27, cy + size / 2 + 27)), title,
+               font=f, fill=(245, 247, 252))
         return canvas
+
+
+def _text_y(d: ImageDraw.ImageDraw, f, top: float, bottom: float, *,
+            stroke: int = 0, lines: int = 1, lh: int = 0) -> float:
+    """lines 行の字の塊を top〜bottom の真ん中に置くときの、1行目の描画 y。
+    PIL はフォントの上の余白ぶん下に字を描くので、「国」の実際の外形で測る。
+    上端から決め打ちにしていたため、名札は下にはみ出し、章タブ・吹き出し・ナレ帯・
+    章切替の字も下に寄っていた（2026-10-01 ユーザー指摘「名前が毎回ズレてる」）"""
+    _, t, _, b = d.textbbox((0, 0), "国", font=f, stroke_width=stroke)
+    return (top + bottom - (b - t) - (lines - 1) * lh) / 2 - t
 
 
 def _hex_rgb(color: str) -> tuple[int, int, int]:
@@ -990,7 +1002,7 @@ def render_frames(
                     # ナレのカットでは名札が基底に焼かれ、滑り込む立ち絵の髪に隠れていた
                     # （2026-09-27 オセロ回）。名札も立ち絵と一緒に動く前面レイヤーにする
                     tkey = hashlib.sha1(json.dumps(
-                        [m, sprite_sig, "enttag1"], ensure_ascii=False,
+                        [m, sprite_sig, "enttag2"], ensure_ascii=False,
                         sort_keys=True, default=str).encode()).hexdigest()[:16]
                     trel = f"frames/tag_{tkey}.png"
                     if tkey not in manifest_used and not (proj.root / trel).exists():
@@ -1005,7 +1017,7 @@ def render_frames(
                       if enter_set else stage_list)
         cap_png = None
         if enters and caption:
-            ckey = hashlib.sha1(json.dumps(["cap6", caption, sub],
+            ckey = hashlib.sha1(json.dumps(["cap7", caption, sub],
                                 ensure_ascii=False).encode()).hexdigest()[:16]
             cap_png = f"frames/cap_{ckey}.png"
             cp = proj.root / cap_png
@@ -1022,7 +1034,7 @@ def render_frames(
         key_list = [bg_name, header, chars,
                     cut.slide.model_dump() if cut.slide else None, cut.image,
                     bool(sp), card, full, fg_only, sub, sprite_sig,
-                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap6",
+                    base_stage, bubble, caption, actor, "tags-top1", "bubble-y134", "wrap6", "textmid1",
                     sorted(enter_set)]
         if ent_tag_whos:
             key_list.append(["enttag1", sorted(ent_tag_whos)])
@@ -1080,7 +1092,7 @@ def render_frames(
                     mark_y = max(10, actor_y + 26)
             if bubble:
                 bkey = hashlib.sha1(json.dumps(
-                    [bubble, stage_list, sprite_sig, "bub7"],
+                    [bubble, stage_list, sprite_sig, "bub8"],
                     ensure_ascii=False, sort_keys=True,
                     default=str).encode()).hexdigest()[:16]
                 bubble_png = f"frames/bub_{bkey}.png"
@@ -1113,7 +1125,7 @@ def render_frames(
         trans_png = None
         if (trans_on and not vertical and ct.index in scene_first_idx
                 and scene.title):
-            xkey = hashlib.sha1(f"trans|{scene.title}|{sub}".encode()).hexdigest()[:16]
+            xkey = hashlib.sha1(f"trans2|{scene.title}|{sub}".encode()).hexdigest()[:16]
             trans_png = f"frames/trans_{xkey}.png"
             xp = proj.root / trans_png
             if xkey not in manifest_used and not xp.exists():

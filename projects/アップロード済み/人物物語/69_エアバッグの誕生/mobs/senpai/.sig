@@ -1,1 +1,1 @@
-先輩記者|none|none||v4
+先輩記者|none|none||v4|suit||o1

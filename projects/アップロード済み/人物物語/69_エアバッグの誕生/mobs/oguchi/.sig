@@ -1,1 +1,1 @@
-小口泰平|none|none||v4
+小口泰平|none|none||v4|suit|#5a5f6a|o1
