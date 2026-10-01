@@ -319,7 +319,7 @@ scenes:
     text: 部長……。すみません、まだ成果が出ていません。
   - speaker: buchou
     emotion: happy
-    text: もうそろそろ、大きな仕事をしていい頃だな。
+    text: もうそろそろ、大きな仕事を[していい頃|していいころ]だな。
   - speaker: zundamon
     emotion: surprised
     text: ……大きな仕事。よし、やるぞ！
@@ -555,7 +555,7 @@ scenes:
   - speaker: tsumugi
     emotion: thinking
     text: 自分で言わないの。
-    se: oti
+    beat: true
   - speaker: tsumugi
     emotion: normal
     text: この1988年のメモリータイプが、変わった色をそのまま保てるインクよ。
@@ -760,10 +760,10 @@ scenes:
   cuts:
   - speaker: shain
     emotion: thinking
-    text: 本体の柄は、どうしましょう。
+    text: 本体の[柄|がら]は、どうしましょう。
   - speaker: oushu
     emotion: happy
-    text: タトゥーの柄にしましょう。
+    text: タトゥーの[柄|がら]にしましょう。
   - speaker: shain
     emotion: surprised
     text: ボールペンに、タトゥーですか！？
@@ -931,7 +931,7 @@ scenes:
   cuts:
   - speaker: tsumugi
     emotion: normal
-    text: 日本で出てから、わずか半年で細い0.5ミリも出たの。
+    text: '[日本|にほん]で出てから、わずか半年で細い0.5ミリも出たの。'
   - speaker: zundamon
     emotion: thinking
     text: どうして、急いで細くしたの？
