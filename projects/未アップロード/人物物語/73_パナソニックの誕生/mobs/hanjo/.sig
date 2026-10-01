@@ -1,0 +1,1 @@
+繁盛さん|bun|none||v4|apron|#7a5a4a|o1

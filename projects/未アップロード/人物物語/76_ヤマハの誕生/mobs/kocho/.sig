@@ -1,0 +1,1 @@
+校長|none|none||v4|haori|#5a4a3a|o1

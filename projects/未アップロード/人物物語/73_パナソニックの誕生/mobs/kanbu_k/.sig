@@ -1,0 +1,1 @@
+工場の幹部|none|none||v4|suit|#4a4a4a|o1

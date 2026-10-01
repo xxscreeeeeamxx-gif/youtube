@@ -3598,7 +3598,7 @@ SPECS = {
     ]),
     "yamaha-torakusu": dict(layout="panels", headline="酷評のオルガンが年4653億円に",
         head_hi="4653億円", panels=[
-        _p("p_yhorgan", "1887年 東京", SLATE, "sad", "使用にたえない…", "手作りのオルガン"),
+        _p("p_yhorgan", "1887年 東京", SLATE, "sad", "使用にはたえない", "手作りのオルガン"),
         _p("p_yhpiano", "いま", RED, "surprised", "世界のヤマハ！？", "年4653億円"),
     ]),
     "sanyo-end": dict(layout="panels", headline="10万人の会社が消えた日",

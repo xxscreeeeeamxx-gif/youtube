@@ -1,0 +1,1 @@
+母・とく枝|bun|none||v4|kimono|#6a5a7a|o1

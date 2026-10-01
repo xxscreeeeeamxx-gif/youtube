@@ -1,0 +1,1745 @@
+meta:
+  title: 【ヤマハの誕生】「調律が不正確で使用にはたえない」酷評の手作りオルガン【ずんだもん解説】
+  slug: yamaha-torakusu
+  summary: ピアノのふたに書かれた、ヤマハの文字。それは、紀州藩の天文係の家に生まれた男、山葉寅楠の名字です。明治の浜松で、鳴らなくなった45円のアメリカ製オルガンを直した寅楠は、錺職の河合喜三郎と二人で、オルガンを一から作り始めます。ところが、お金も評判も無い二人を東京で待っていたのは、厳しいひと言でした。そこから何が始まったのか。再現ドラマでたどります。
+  tags:
+  - ヤマハ
+  - 山葉寅楠
+  - 河合喜三郎
+  - オルガン
+  - ピアノ
+  - 浜松
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: 使用にはたえない
+    bottom: ヤマハの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: isawa
+    label: 伊沢修二
+    voice: 13
+    pitch: 0.03
+    outfit: suit
+    color: '#2f3a52'
+  - id: kisaburo
+    label: 河合喜三郎
+    voice: 11
+    pitch: 0.0
+    outfit: apron
+    color: '#5a4632'
+  - id: tsuma
+    label: 河合の妻
+    voice: 8
+    pitch: -0.03
+    outfit: kimono
+    color: '#7a4a5a'
+  - id: fukushima
+    label: 福島豊策
+    voice: 13
+    pitch: -0.08
+    outfit: haori
+    color: '#3a3a44'
+  - id: chichi
+    label: 父
+    voice: 42
+    pitch: -0.04
+    outfit: haori
+    color: '#4a4038'
+  - id: tokeishi
+    label: 時計師
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#545b66'
+  - id: kawachiya
+    label: 河内屋主人
+    voice: 42
+    pitch: 0.06
+    outfit: apron
+    color: '#3e4a5c'
+  - id: kocho
+    label: 校長
+    voice: 13
+    pitch: 0.12
+    outfit: haori
+    color: '#5a4a3a'
+  - id: sakanaya
+    label: 魚屋
+    voice: 67
+    pitch: 0.0
+    outfit: apron
+    color: '#2f5a7a'
+  - id: kyoshi
+    label: 師範の先生
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5060'
+  - id: daiku
+    label: 大工
+    voice: 100
+    pitch: -0.04
+    outfit: apron
+    color: '#6a5a3a'
+  - id: kyaku
+    label: 見物の客
+    voice: 42
+    pitch: -0.08
+    outfit: kimono
+    color: '#4a5a4a'
+  - id: koichi
+    label: 河合小市
+    voice: 73
+    pitch: 0.0
+    outfit: apron
+    color: '#7a6a4a'
+  - id: mago
+    label: 孫
+    voice: 8
+    pitch: 0.12
+    outfit: kimono
+    color: '#9a6a7a'
+  - id: shokunin
+    label: 職人
+    voice: 21
+    pitch: 0.04
+    outfit: apron
+    color: '#4a5a3a'
+  - id: kabunushi
+    label: 株主
+    voice: 13
+    pitch: 0.06
+    outfit: haori
+    color: '#2e3440'
+scenes:
+- id: co_isawa
+  title: ''
+  background: yh_torishirabe
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: thinking}
+  - {who: isawa, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1887年。東京・上野の音楽取調所に、浜松の男が手作りのオルガンを持ち込みます。
+    reading: せんはっぴゃく はちじゅうななねん。とうきょう うえのの おんがく とりしらべじょに、はままつの おとこが てづくりの おるがんお もちこみます。
+  - speaker: isawa
+    emotion: normal
+    text: どれ、弾いてみよう。
+  - speaker: isawa
+    emotion: thinking
+    text: ……形は、いい。
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうございます！
+  - speaker: isawa
+    emotion: normal
+    text: だが、調律が不正確で使用にはたえない。
+    se: don
+  - speaker: zundamon
+    emotion: sad
+    text: ……使用には、たえない。
+  - speaker: reimu
+    text: この男は、山葉寅楠。ヤマハという名前は、この人の名字です。
+    reading: この おとこわ やまは とらくす。やまはと いう なまえわ、この ひとの みょうじです。
+  - speaker: reimu
+    text: 使えないと言われたオルガンの会社は今、1年に4653億円を売り上げます。
+    reading: つかえないと いわれた おるがんの かいしゃわ いま、いちねんに よんせん ろっぴゃく ごじゅうさんおくえんお うりあげます。
+- id: hook
+  title: ''
+  background: yh_ongakushitsu
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。音楽室のピアノ、耳だけで調律したのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ドがレになってるわ。調律が不正確で、使用にはたえないわね。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: さっきの人と、同じことを言われたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あっちは、そこから学び直したけどね。
+  - speaker: zundamon
+    emotion: surprised
+    text: ダメ出しされた人が、どうして今のヤマハに？
+    telops:
+    - {text: 酷評のオルガンから年4653億円, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、機械いじりが好きな少年よ。
+- id: card1851
+  title: ''
+  background: yh_card_1851
+  cuts:
+  - speaker: reimu
+    text: 1851年。紀州藩の天文係の家に、山葉寅楠が生まれます。
+    reading: せんはっぴゃく ごじゅういちねん。きしゅうはんの てんもんがかりの いえに、やまは とらくすが うまれます。
+- id: ch1_kishu
+  title: 天文係の家の少年
+  background: yh_kishu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, scale: 0.85, emotion: happy}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: chichi
+    emotion: normal
+    text: '[寅楠|とらくす]。わしの測量の道具を、また広げておるな。'
+  - speaker: zundamon
+    emotion: happy
+    text: 父上。この目盛りは、どうやって刻んだのですか！
+  - speaker: chichi
+    emotion: thinking
+    text: それより、そこのからくり人形の首はどうした。
+  - speaker: zundamon
+    emotion: happy
+    text: 中が見たくて、外しました。
+  - speaker: chichi
+    emotion: angry
+    text: 外したのなら、元に戻せ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……戻したら、首が後ろを向きました。
+  - speaker: chichi
+    emotion: surprised
+    text: 人形が、振り返っておるではないか！
+    se: zukko
+  - speaker: chichi
+    emotion: normal
+    text: 仕組みが分かるまで、二度と外すでないぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: 分かるためなら、外してもいいのですね！
+  - speaker: chichi
+    emotion: thinking
+    text: ……そうは、言っておらん。
+    beat: true
+  - speaker: reimu
+    text: 父は天文係のほかに、地図作りや橋の工事も手がけた技師でした。
+    reading: ちちわ てんもんがかりの ほかに、ちずづくりや はしの こうじも てがけた ぎしでした。
+  - speaker: reimu
+    text: 家には天体観測や測量の本と器具があふれ、寅楠は機械いじりを遊び代わりに育ちます。
+    reading: いえにわ てんたいかんそくや そくりょうの ほんと きぐが あふれ、とらくすわ きかいいじりお あそびがわりに そだちます。
+- id: ch1_nagasaki
+  title: 長崎で時計を学ぶ
+  background: yh_nagasaki
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: tokeishi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 明治の初め。寅楠は長崎で、イギリス人から時計の直し方と作り方を学びます。
+    reading: めいじの はじめ。とらくすわ ながさきで、いぎりすじんから とけいの なおしかたと つくりかたお まなびます。
+  - speaker: tokeishi
+    emotion: normal
+    text: '[山葉|やまハ]さん。このネジは、米粒より小さいです。息を止めて。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 息を、止めて……。
+  - speaker: tokeishi
+    emotion: normal
+    text: まだです。まだ止めて。
+  - speaker: zundamon
+    emotion: surprised
+    text: ぷはっ！ ……ネジが、どこかへ飛んでいった。
+  - speaker: tokeishi
+    emotion: thinking
+    text: 時計より先に、肺をきたえましょう。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: でも先生。歯車が噛み合って回るのは、何度見ても飽きません。
+  - speaker: tokeishi
+    emotion: happy
+    text: その顔なら、きっといい時計屋になります。
+- id: ch1_osaka
+  title: 医療器械の修理工
+  background: yh_osaka
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: kawachiya, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その後寅楠は、大阪の医療器械の店に住み込んで修理工になります。
+    reading: そのご とらくすわ、おおさかの いりょうきかいの みせに すみこんで しゅうりこうに なります。
+  - speaker: kawachiya
+    emotion: normal
+    text: '[山葉|やまハ]はん。浜松の病院の器械、見てきてくれへんか。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 浜松ですか。東海道を、どのくらい歩くんです？
+  - speaker: kawachiya
+    emotion: happy
+    text: 時計の直せる男や。歩き方も、正確やろ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 歩き方と時計は、関係ないのです……。
+    se: zukko
+- id: ch2_byoin
+  title: 浜松病院の院長
+  background: yh_byoin
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: fukushima, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 寅楠は浜松に住み、医療器械を直して回ります。浜松病院の院長は、福島豊策でした。
+    reading: とらくすわ はままつに すみ、いりょうきかいお なおして まわります。はままつ びょういんの いんちょうわ、ふくしま ほうさくでした。
+  - speaker: fukushima
+    emotion: happy
+    text: '[山葉|やまハ]くん。この器械は、もう動かんと思っておったよ。'
+  - speaker: zundamon
+    emotion: happy
+    text: バネを一つ、替えただけです。院長先生。
+  - speaker: fukushima
+    emotion: normal
+    text: ところで、宿はどこだね。
+  - speaker: zundamon
+    emotion: normal
+    text: '[板屋町|いたやまち]の清水屋です。[六畳間|ろくじょうま]で、時計の修理もしてます。'
+  - speaker: fukushima
+    emotion: surprised
+    text: 病院の器械に、時計の修理まで？
+  - speaker: zundamon
+    emotion: sad
+    text: 器械の修理だけでは、食べていけないのです。
+  - speaker: fukushima
+    emotion: thinking
+    text: 腕のいい男が、[六畳間|ろくじょうま]で時計を直しておるのか……。
+  - speaker: fukushima
+    emotion: happy
+    text: 困ったことがあったら、いつでも来なさい。
+- id: card1887
+  title: ''
+  background: yh_card_1887
+  cuts:
+  - speaker: reimu
+    text: 1887年。浜松の小学校で、アメリカ製のオルガンが鳴らなくなります。
+    reading: せんはっぴゃく はちじゅうななねん。はままつの しょうがっこうで、あめりかせいの おるがんが ならなく なります。
+- id: ch3_gakko
+  title: 鳴らないオルガン
+  background: yh_gakko
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: kocho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kocho
+    emotion: normal
+    text: 福島院長のご紹介の、[山葉|やまハ]さんですな。こちらへ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 教室に、鍵がかかってるんですか。
+  - speaker: kocho
+    emotion: happy
+    text: アメリカから来たオルガンです。見るのにも、許可証が要ります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 見るだけで、許可証……！
+  - speaker: kocho
+    emotion: thinking
+    text: なにしろ45円。新米の先生の給料の、9か月分です。
+    telops:
+    - {text: 45円＝新米の先生の給料9か月分, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: それが、鳴らなくなったと。
+  - speaker: kocho
+    emotion: sad
+    text: 唱歌の時間が、ずっとお休みでして。
+  - speaker: zundamon
+    emotion: normal
+    text: 開けて、中を見てもいいですか。
+  - speaker: kocho
+    emotion: surprised
+    text: 45円を、開けるんですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 開けてみないと、どこが悪いか分かりません。
+  - speaker: kocho
+    emotion: surprised
+    text: 部品が……机いっぱいに！
+    background: yh_gakko_bunkai
+  - speaker: zundamon
+    emotion: surprised
+    text: ……悪いのは、折れたバネが2本だけです。
+  - speaker: kocho
+    emotion: surprised
+    text: 2本！？ 45円のオルガンが、バネ2本で黙ってたんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: バネを替えれば、また鳴ります。
+- id: ch3_zumen
+  title: ''
+  background: yh_gakko_bunkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: kocho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 寅楠は直しながら、部品を一つずつ図面に写していきます。
+    reading: とらくすわ なおしながら、ぶひんお ひとつずつ ずめんに うつして いきます。
+  - speaker: kocho
+    emotion: thinking
+    text: '[山葉|やまハ]さん。直すだけなら、写さなくてもいいでしょう。'
+  - speaker: zundamon
+    emotion: happy
+    text: 写しておけば、同じものが作れます。
+  - speaker: kocho
+    emotion: surprised
+    text: 作る！？ これを、浜松で？
+  - speaker: zundamon
+    emotion: happy
+    text: これくらいなら、3円で作れる気がするのだ。
+    telops:
+    - {text: 45円のオルガンを3円で？, size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#6BA3E0", anim: up}
+  - speaker: kocho
+    emotion: thinking
+    text: ……45円を、3円で。
+  - speaker: kocho
+    emotion: normal
+    text: '[山葉|やまハ]さん。値段の桁が、一つ減っておりますぞ。'
+    se: tenten
+  - speaker: zundamon
+    emotion: normal
+    text: 外国から買わずに日本で作れば、全国の学校に置けるのだ。
+  - speaker: kocho
+    emotion: thinking
+    text: ……修理の人が、急に大きな話を始めましたな。
+    beat: true
+- id: ch4_kawai
+  title: 錺職・河合喜三郎
+  background: yh_kawai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: kisaburo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 寅楠が頼ったのは、池町の錺職の河合喜三郎でした。
+    reading: とらくすが たよったのわ、いけまちの かざりしょくの かわい きさぶろうでした。
+  - speaker: kisaburo
+    emotion: surprised
+    text: オルガンを作る！？ わしは、かんざしや金具を作る職人だに。
+  - speaker: zundamon
+    emotion: normal
+    text: 細かい金物を作れる人が、どうしても要るんです。
+  - speaker: kisaburo
+    emotion: thinking
+    text: 図面は、あるだか。
+  - speaker: zundamon
+    emotion: happy
+    text: 学校のオルガンを、全部写してきました。
+  - speaker: kisaburo
+    emotion: surprised
+    text: この紙の束、全部かね！
+  - speaker: zundamon
+    emotion: sad
+    text: ただ、ボクには[一文|いちもん]もありません。
+  - speaker: kisaburo
+    emotion: thinking
+    text: ……図面はあって、[金|かね]は無い。
+  - speaker: kisaburo
+    emotion: happy
+    text: 面白いじゃん。やらまいか。
+  - speaker: zundamon
+    emotion: happy
+    text: やらまいか、なのだ！
+  - speaker: reimu
+    text: 道具と材料のお金は、喜三郎が借金をして用意しました。
+    reading: どうぐと ざいりょうの おかねわ、きさぶろうが しゃっきんお して よういしました。
+- id: ch4_shisaku
+  title: 39鍵の1台目
+  background: yh_kawai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 二人は河合の家を仕事場にして、2か月ほどで1台目を組み上げます。
+    reading: ふたりわ かわいの いえお しごとばに して、にかげつ ほどで いちだいめお くみあげます。
+  - speaker: kisaburo
+    emotion: happy
+    text: 鍵盤は39。音も、ちゃんと出るだに。
+  - speaker: zundamon
+    emotion: happy
+    text: 音の良し悪しは、三味線の名人に聞いてもらおう。
+- id: ch4_sakanaya
+  title: ''
+  background: yh_kawai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.56, emotion: happy}
+  - {who: sakanaya, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: sakanaya
+    emotion: happy
+    text: '[肴町|さかなまち]の魚屋だよ。三味線なら、毎晩弾いてらあ。'
+  - speaker: kisaburo
+    emotion: thinking
+    text: 名人っていうか、魚屋さんだら。
+  - speaker: sakanaya
+    emotion: thinking
+    text: どれ。下の音から、順に鳴らしてみな。
+  - speaker: sakanaya
+    emotion: thinking
+    text: ……この音、ちょいと低いな。三味線なら、糸を締めるとこだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 糸を締める……。オルガンには、糸が無いのだ。
+  - speaker: sakanaya
+    emotion: happy
+    text: じゃあ、魚屋に聞くこっちゃねえや。
+    se: manuke
+- id: ch4_fuhyo
+  title: オルガンの形をした箱
+  background: yh_shihan
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: thinking}
+  - {who: kyoshi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1台目は、浜松の小学校と静岡の師範学校で弾いてもらいます。
+    reading: いちだいめわ、はままつの しょうがっこうと しずおかの しはんがっこうで ひいて もらいます。
+  - speaker: kyoshi
+    emotion: thinking
+    text: '[山葉|やまハ]さん。これは、オルガンの形をした箱ですね。'
+  - speaker: zundamon
+    emotion: surprised
+    text: ハ、箱……！？
+  - speaker: kyoshi
+    emotion: normal
+    text: 見た目は立派です。ただ、音が合っていません。
+  - speaker: zundamon
+    emotion: sad
+    text: 浜松の学校でも、同じことを言われました。
+  - speaker: kyoshi
+    emotion: thinking
+    text: でしょうね。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: ……こうなったら、東京の[音楽取調所|おんがくとりしらべじょ]に見てもらいます。
+  - speaker: kyoshi
+    emotion: surprised
+    text: 東京まで、この箱を？
+- id: ch4_shakkin
+  title: 残ったのは借金だけ
+  background: yh_kawai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: sad}
+  - {who: kisaburo, x: 0.56, emotion: sad}
+  - {who: tsuma, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: tsuma
+    emotion: thinking
+    text: あんた。東京まで運ぶ旅費、どうするだね。
+  - speaker: kisaburo
+    emotion: sad
+    text: ……また、親戚に頭を下げるしか無いら。
+  - speaker: tsuma
+    emotion: angry
+    text: 親戚は、もう誰も戸を開けてくれんよ。
+  - speaker: zundamon
+    emotion: sad
+    text: すみません。ボクが、[一文|いちもん]無しなばっかりに。
+  - speaker: tsuma
+    emotion: angry
+    text: タンスも売った。鍋も売った。
+    background: yh_kawai_garan
+  - speaker: tsuma
+    emotion: thinking
+    text: うちに残ってるのは、オルガンと借金だけだに。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: ……オルガンは、売らないでほしいのだ。
+  - speaker: tsuma
+    emotion: angry
+    text: 売れるもんなら、とっくに売っとるに。
+    se: oti
+- id: ch5_hakone
+  title: 箱根の山を越えて
+  background: yh_hakone_katsugi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: thinking}
+  - {who: kisaburo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: ヤマハに伝わる話では、二人はオルガンを天秤棒で担いで箱根を越えます。
+    reading: やまはに つたわる はなしでわ、ふたりわ おるがんお てんびんぼうで かついで はこねお こえます。
+  - speaker: kisaburo
+    emotion: sad
+    text: '[寅楠|とらくす]さん。石畳が、すべるだに。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 棒が、肩に食い込む……。
+  - speaker: kisaburo
+    emotion: surprised
+    text: 揺らしたら、また音が狂うだら！
+  - speaker: zundamon
+    emotion: surprised
+    text: もう狂ってるから、東京に見てもらいに行くんです！
+  - speaker: kisaburo
+    emotion: thinking
+    text: ……それを言われると、担ぐ気が失せるに。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 峠を越えたら、あとは下りなのだ！
+  - speaker: kisaburo
+    emotion: sad
+    text: 下りのほうが、膝にくるだに……。
+- id: ch5_isawa
+  title: 使用にはたえない
+  background: yh_torishirabe
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: thinking}
+  - {who: kisaburo, x: 0.56, emotion: thinking}
+  - {who: isawa, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 東京に着いた二人は、旅の支度も解かずに伊沢修二を訪ねます。
+    reading: とうきょうに ついた ふたりわ、たびの したくも とかずに いさわ しゅうじお たずねます。
+  - speaker: isawa
+    emotion: normal
+    text: 浜松から、オルガンを？ どれ、弾いてみよう。
+  - speaker: kisaburo
+    emotion: thinking
+    text: '[寅楠|とらくす]さん。わしの手、震えとるに。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 静岡では、箱と言われたのだ。今度こそ……。
+  - speaker: isawa
+    emotion: thinking
+    text: ……形は、いい。
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうございます！
+  - speaker: isawa
+    emotion: normal
+    text: だが、調律が不正確で使用にはたえない。
+    se: don
+    telops:
+    - {text: 調律が不正確で使用にはたえない, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisaburo
+    emotion: surprised
+    text: 使用には、たえない……。
+  - speaker: zundamon
+    emotion: sad
+    text: ……浜松から、ここまで運んできたのに。
+  - speaker: isawa
+    emotion: normal
+    text: 音の高さが、あちこちずれておる。音の決まりを知らずに作ったな。
+  - speaker: zundamon
+    emotion: sad
+    text: ……知りません。時計の直し方しか。
+  - speaker: isawa
+    emotion: thinking
+    text: ならば、ここで学んでいくといい。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ。……ここで、ですか。
+- id: ch5_benkyo
+  title: 音叉で学び直す
+  background: yh_torishirabe
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: isawa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 寅楠は伊沢の好意で、1か月あまり音楽の決まりと調律を学びます。
+    reading: とらくすわ いさわの こういで、いっかげつ あまり おんがくの きまりと ちょうりつお まなびます。
+  - speaker: isawa
+    emotion: normal
+    text: これが音叉だ。たたくと、いつも同じ高さの音が鳴る。
+  - speaker: zundamon
+    emotion: happy
+    text: ポーン……。何回たたいても、同じなのだ。
+  - speaker: isawa
+    emotion: normal
+    text: オルガンは、中の薄い金属の板が震えて鳴る。
+  - speaker: isawa
+    emotion: normal
+    text: その板を少しずつ削って、音叉の音に合わせていく。
+  - speaker: zundamon
+    emotion: thinking
+    text: 削りすぎたら、どうなるんです？
+  - speaker: isawa
+    emotion: happy
+    text: 作り直しだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 鍵盤は、39もあるのに……！
+    beat: true
+  - speaker: isawa
+    emotion: happy
+    text: なら、39回耳を澄ませばよい。
+  - speaker: zundamon
+    emotion: sad
+    text: 耳より先に、頭が鳴りそうです。
+  - speaker: reimu
+    text: 音叉を手に調律を学んだこの経験が、のちの音叉のマークにつながったとヤマハは見ています。
+    reading: おんさお てに ちょうりつお まなんだ この けいけんが、のちの おんさの まーくに つながったと やまはわ みて います。
+- id: ch6_fukushima
+  title: 院長の家屋敷
+  background: yh_byoin
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: sad}
+  - {who: kisaburo, x: 0.56, emotion: sad}
+  - {who: fukushima, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 浜松に戻った二人に、2台目を作るお金はもう残っていませんでした。
+    reading: はままつに もどった ふたりに、にだいめお つくる おかねわ もう のこって いませんでした。
+  - speaker: zundamon
+    emotion: sad
+    text: 院長先生。材料を買うお[金|かね]が、尽きました。
+  - speaker: kisaburo
+    emotion: sad
+    text: うちは、もう売るもんも借りる先も無いだに。
+  - speaker: fukushima
+    emotion: thinking
+    text: ……二人とも、東京で何を学んできた。
+  - speaker: zundamon
+    emotion: normal
+    text: 音の決まりと、調律です。次は、必ず合わせます。
+  - speaker: fukushima
+    emotion: normal
+    text: なら、わしの[家屋敷|いえやしき]を抵当に入れよう。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[家屋敷|いえやしき]を！？ 院長先生のお家ですよ！'
+    se: bikkuri
+  - speaker: fukushima
+    emotion: happy
+    text: 家は、また建てられる。腕のいい職人は、めったにおらん。
+  - speaker: kisaburo
+    emotion: sad
+    text: ……院長さん。わし、泣いてもいいだか。
+  - speaker: fukushima
+    emotion: happy
+    text: 泣くのは、いい音が鳴ってからにしなさい。
+- id: ch6_nidaime
+  title: 朝5時から夜中まで
+  background: yh_kawai_yoru
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: kisaburo, x: 0.56, emotion: happy}
+  - {who: tsuma, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 寅楠は河合の家に住み込み、朝5時から夜中まで2台目に取り組みます。
+    reading: とらくすわ かわいの いえに すみこみ、あさ ごじから よなかまで にだいめに とりくみます。
+  - speaker: tsuma
+    emotion: thinking
+    text: 夜中に、ポーンポーン鳴らさんでおくれ。
+  - speaker: zundamon
+    emotion: normal
+    text: すみません。この板、あと少しだけ削ります。
+  - speaker: tsuma
+    emotion: angry
+    text: そのあと少しを、晩から30回は聞いとるに。
+  - speaker: kisaburo
+    emotion: happy
+    text: 鍵盤は、牛の骨を磨いて作ってみたら。
+  - speaker: tsuma
+    emotion: thinking
+    text: 骨で鍵盤……。指が、だしの味になりそうだに。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 白くて硬くて、象牙の代わりにちょうどいいのだ！
+  - speaker: kisaburo
+    emotion: thinking
+    text: 象牙なんて、わしは見たことも無いけどな。
+- id: ch6_gokaku
+  title: 舶来品にも代わり得る
+  background: yh_torishirabe
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: thinking}
+  - {who: kisaburo, x: 0.56, emotion: thinking}
+  - {who: isawa, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2台目のオルガンを持って、二人は再び伊沢を訪ねます。
+    reading: にだいめの おるがんお もって、ふたりわ ふたたび いさわお たずねます。
+  - speaker: isawa
+    emotion: normal
+    text: どれ。もう一度、弾いてみよう。
+  - speaker: kisaburo
+    emotion: thinking
+    text: '[寅楠|とらくす]さん。今度は、膝まで震えとるに。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクは、心臓が音叉みたいに鳴ってるのだ。
+  - speaker: isawa
+    emotion: thinking
+    text: ……前の欠点は、すっかり取り除かれておる。
+  - speaker: isawa
+    emotion: happy
+    text: これなら、舶来品にも代わりうる。
+    telops:
+    - {text: 舶来品にも代わり得る, size: lg, position: top-right, color: "#FFFFFF", stroke: "#3A2A10", glow: "#E0A040", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……ありがとう、ございます。
+    se: namida
+  - speaker: kisaburo
+    emotion: sad
+    text: 院長さんに、泣いていいと言われとるでな……。
+  - speaker: isawa
+    emotion: normal
+    text: 銀座の共益商社に、紹介状を書いておこう。売り先も要るだろう。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売り先まで……！
+- id: ch7_chumon
+  title: 最初の注文
+  background: yh_kawai_garan
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kyoshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kyoshi
+    emotion: normal
+    text: '[山葉|やまハ]さん。静岡の師範学校で、オルガンを買いたいのです。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 前に、オルガンの形をした箱と言った学校ですよね。
+  - speaker: kyoshi
+    emotion: thinking
+    text: ……箱は、取り消します。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 初めての注文なのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: ただ、この仕事場では狭すぎる。
+- id: ch7_fudaiji
+  title: 廃寺の工場
+  background: yh_fudaiji
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.56, emotion: thinking}
+  - {who: daiku, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 仮の工場にしたのは、坂の上にある廃寺の庫裏でした。
+    reading: かりの こうじょうに したのわ、さかの うえに ある はいじの くりでした。
+  - speaker: kisaburo
+    emotion: thinking
+    text: お寺の台所で、オルガン作りだに。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前は、[山葉|やまハ][風琴|ふうきん]製造所。風の琴と書いて、オルガンだ。
+  - speaker: daiku
+    emotion: happy
+    text: 大工の仲間も、連れてきやした。
+  - speaker: reimu
+    text: 注文が増え、職人は10人ほどになります。
+    reading: ちゅうもんが ふえ、しょくにんわ じゅうにん ほどに なります。
+    background: yh_fudaiji_full
+  - speaker: zundamon
+    emotion: normal
+    text: 仕事の始めと終わりは、時間どおりだ。
+  - speaker: daiku
+    emotion: happy
+    text: 親方、昼休みですぜ。
+  - speaker: zundamon
+    emotion: happy
+    text: よし。昼休みは、剣術の稽古だ！
+  - speaker: daiku
+    emotion: surprised
+    text: 飯の時間じゃねえんですか！？
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: happy
+    text: 16のころ、[大和|やまと]で習ったのだ。構え！
+  - speaker: daiku
+    emotion: sad
+    text: 腹が減って、竹刀より先に腰が折れやす……。
+    beat: true
+  - speaker: reimu
+    text: 寅楠は職人たちに、昼休みに剣術の稽古をさせました。
+    reading: とらくすわ しょくにんたちに、ひるやすみに けんじゅつの けいこお させました。
+- id: ch7_hosho
+  title: ''
+  background: yh_fudaiji_full
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: thinking}
+  - {who: kisaburo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisaburo
+    emotion: surprised
+    text: '[寅楠|とらくす]さん。同じ浜松の鳥居さんが、新聞で保証8か月だと。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 8か月……。なら、うちは1年半だ。
+  - speaker: kisaburo
+    emotion: surprised
+    text: 倍以上だに！
+  - speaker: zundamon
+    emotion: happy
+    text: 今月中に買えば、2年にしよう。
+  - speaker: kisaburo
+    emotion: thinking
+    text: ……壊れたら、2年ぶん直しに行くのは誰だら。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクなのだ。
+    beat: true
+  - speaker: reimu
+    text: 鳥居の広告から20日後、山葉は保証1年半の広告を出して張り合いました。
+    reading: とりいの こうこくから はつかご、やまはわ ほしょう いちねんはんの こうこくお だして はりあいました。
+  - speaker: reimu
+    text: やがて伊沢の紹介状から、東京の共益商社と大阪の三木佐助がオルガンを売ってくれることになりました。
+    reading: やがて いさわの しょうかいじょうから、とうきょうの きょうえき しょうしゃと おおさかの みき さすけが おるがんお うって くれる ことに なりました。
+- id: card1890
+  title: ''
+  background: yh_card_1890
+  cuts:
+  - speaker: reimu
+    text: 1890年。東京・上野で、内国勧業博覧会が開かれます。
+    reading: せんはっぴゃく きゅうじゅうねん。とうきょう うえので、ないこく かんぎょう はくらんかいが ひらかれます。
+- id: ch7_hakurankai
+  title: 日本式の西洋戸棚
+  background: yh_hakurankai
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.56, emotion: happy}
+  - {who: kyaku, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: kisaburo
+    emotion: happy
+    text: '[寅楠|とらくす]さん。オルガンが二等の賞だに！ オルガンでは一番上だら。'
+  - speaker: zundamon
+    emotion: happy
+    text: やったのだ！ ……ピアノのほうは、どうです？
+  - speaker: kyaku
+    emotion: thinking
+    text: このピアノ、押しても鳴りが悪いな。
+  - speaker: kyaku
+    emotion: normal
+    text: 見た目は、日本式の西洋戸棚だ。
+    telops:
+    - {text: 日本式の西洋戸棚, size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#6BA3E0", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: と、戸棚……！？
+    se: tenten
+  - speaker: kisaburo
+    emotion: thinking
+    text: 箱の次は、戸棚と言われたに。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……家具としては、出世してるのだ。
+    beat: true
+  - speaker: reimu
+    text: このピアノは三等の賞。喜三郎が作ったオルガンも、三等の賞を受けました。
+    reading: この ぴあのわ さんとうの しょう。きさぶろうが つくった おるがんも、さんとうの しょうお うけました。
+- id: ch8_koichi
+  title: 11歳の弟子
+  background: yh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: koichi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: やがて、11歳の少年が弟子入りします。車大工の子、河合小市です。
+    reading: やがて、じゅういっさいの しょうねんが でしいり します。くるまだいくの こ、かわい こいちです。
+  - speaker: koichi
+    emotion: happy
+    text: 音を出す機械を作るところって、ここですか！
+  - speaker: zundamon
+    emotion: happy
+    text: そうだ。[君|きみ]は、何が作れる？
+  - speaker: koichi
+    emotion: happy
+    text: '[木切れ|こぎれ]で客馬車を作って、犬に引かせて乗ってました！'
+  - speaker: zundamon
+    emotion: surprised
+    text: 犬に、引かせた！？
+  - speaker: koichi
+    emotion: happy
+    text: 犬は、嫌がってました。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: よし、住み込みで来なさい。犬は、休ませてやるのだ。
+  - speaker: koichi
+    emotion: happy
+    text: はい、師匠！
+- id: card1897
+  title: ''
+  background: yh_card_1897
+  cuts:
+  - speaker: reimu
+    text: 1897年。
+    reading: せんはっぴゃく きゅうじゅうななねん。
+- id: ch8_kaisha
+  title: 日本楽器製造
+  background: yh_jimusho
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kisaburo
+    emotion: happy
+    text: '[寅楠|とらくす]さん。職人は100人、オルガンは1年に1400台を超えたに。'
+  - speaker: zundamon
+    emotion: happy
+    text: 作り始めてから、もう1万台近い。
+  - speaker: kisaburo
+    emotion: thinking
+    text: うちの仕事場で始めたのが、うそみたいだら。
+  - speaker: zundamon
+    emotion: normal
+    text: 会社にします。名前は、[日本楽器製造|にっぽんがっきせいぞう]。
+  - speaker: kisaburo
+    emotion: surprised
+    text: 日本と来たか。浜松の、じゃなくて？
+  - speaker: zundamon
+    emotion: happy
+    text: '[日本中|にほんじゅう]の学校に、日本のオルガンを届けたいんです。'
+  - speaker: kisaburo
+    emotion: thinking
+    text: で、社長は？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクで、いいですか。
+  - speaker: kisaburo
+    emotion: happy
+    text: ほかに誰がおるだね。
+    beat: true
+  - speaker: reimu
+    text: 資本金10万円の、日本楽器製造株式会社が生まれます。
+    reading: しほんきん じゅうまんえんの、にっぽん がっき せいぞう かぶしきがいしゃが うまれます。
+  - speaker: zundamon
+    emotion: normal
+    text: 会社の印は、これにします。
+    se: jaan
+  - speaker: kisaburo
+    emotion: surprised
+    text: 音叉！？ 東京で覚えてきた、あれだら。
+  - speaker: zundamon
+    emotion: happy
+    text: 音の基準なのだ。この会社の、基準にもする。
+  - speaker: reimu
+    text: 1898年、音叉を社章に定めました。
+    reading: せんはっぴゃく きゅうじゅうはちねん、おんさお しゃしょうに さだめました。
+- id: card1899
+  title: ''
+  background: yh_card_1899
+  cuts:
+  - speaker: reimu
+    text: 1899年。寅楠は、ピアノを学びにアメリカへ渡ります。
+    reading: せんはっぴゃく きゅうじゅうきゅうねん。とらくすわ、ぴあのお まなびに あめりかえ わたります。
+- id: ch8_america
+  title: アメリカのピアノ工場
+  background: yh_america
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 山葉寅楠, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 文部省の嘱託としての旅で、およそ5か月の間に100か所以上を見て回ります。
+    reading: もんぶしょうの しょくたくと しての たびで、およそ ごかげつの あいだに ひゃっかしょ いじょうお みて まわります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 作りかけのピアノが、ずらりと並んでる……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 職工が、誰もよそ見をしない。
+  - speaker: zundamon
+    emotion: sad
+    text: 全くよく働く。日本の職工は、遠く及ばない……。
+  - speaker: reimu
+    text: 寅楠は日記に、アメリカの職工には遠く及ばないと書き残しています。
+    reading: とらくすわ にっきに、あめりかの しょっこうにわ とおく およばないと かきのこして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 機械も買って帰るぞ。日本で、ピアノを作る。
+- id: ch8_kangei
+  title: 1時間の土産話
+  background: yh_kangeikai
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1899年10月。浜松で、寅楠の帰国を祝う会が開かれます。
+    reading: せんはっぴゃく きゅうじゅうきゅうねん じゅうがつ。はままつで、とらくすの きこくお いわう かいが ひらかれます。
+  - speaker: kisaburo
+    emotion: happy
+    text: 社長、お帰り。洋式の楽隊まで呼んだだに。
+  - speaker: zundamon
+    emotion: happy
+    text: では、アメリカの工場の話をします。まず、シカゴのピアノ工場では……。
+  - speaker: kisaburo
+    emotion: thinking
+    text: 社長。もう、1時間たっとるに。
+  - speaker: zundamon
+    emotion: surprised
+    text: まだ、一つ目の工場の話なのだ！
+  - speaker: kisaburo
+    emotion: sad
+    text: 料理が、すっかり冷めとるだに……。
+    se: chin
+  - speaker: reimu
+    text: 会は洋式の楽隊の演奏で始まり、寅楠は1時間あまりアメリカの工業を報告しました。
+    reading: かいわ ようしきの がくたいの えんそうで はじまり、とらくすわ いちじかん あまり あめりかの こうぎょうお ほうこく しました。
+- id: ch9_kikai
+  title: 読めない説明書
+  background: yh_kojo_kikai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: koichi, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1900年。日本楽器は、工場でピアノの製造を始めます。
+    reading: せんきゅうひゃくねん。にっぽん がっきわ、こうじょうで ぴあのの せいぞうお はじめます。
+  - speaker: koichi
+    emotion: sad
+    text: 師匠。アメリカの穴あけ機械、説明書どおりにしても動きません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 英語の説明書が、読めたのか？
+  - speaker: koichi
+    emotion: sad
+    text: ……一文字も、読めません。
+  - speaker: zundamon
+    emotion: surprised
+    text: 読めずに、説明書どおりにしたのか！？
+    beat: true
+  - speaker: koichi
+    emotion: happy
+    text: 絵を見ました。今夜から、機械の横で寝ます。
+    background: yh_kojo_futon
+  - speaker: reimu
+    text: 小市は寝具を持ち込んで機械と格闘し、とうとう動かしました。
+    reading: こいちわ しんぐお もちこんで きかいと かくとうし、とうとう うごかしました。
+  - speaker: zundamon
+    emotion: happy
+    text: 動いた！ 説明書より、[小市|こいち]のほうが頼りになるのだ。
+  - speaker: reimu
+    text: それでも1900年に作れたピアノは、たった2台でした。
+    reading: それでも せんきゅうひゃくねんに つくれた ぴあのわ、たった にだいでした。
+    telops:
+    - {text: 1900年のピアノは2台, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 2台……。オルガンは、1年に千台を超えるのに。
+- id: ch9_action
+  title: 師匠と弟子の握手
+  background: yh_kojo_yoru
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: koichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: '[小市|こいち]。ピアノの心臓、アクションを任せたい。'
+  - speaker: koichi
+    emotion: surprised
+    text: 鍵盤を押すと、ハンマーが[弦|げん]をたたく。あの仕掛けですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 今は、外国から買っている。それを、うちで作る。
+  - speaker: koichi
+    emotion: happy
+    text: ……やってみます。
+  - speaker: reimu
+    text: 小市は寝る間も惜しんで、アクションを作り上げます。
+    reading: こいちわ ねる まも おしんで、あくしょんお つくりあげます。
+  - speaker: koichi
+    emotion: happy
+    text: 師匠！ アクションが、できました！
+  - speaker: zundamon
+    emotion: surprised
+    text: 本当か！ ……打った。ハンマーが、ちゃんと戻ってくる。
+  - speaker: zundamon
+    emotion: happy
+    text: '[小市|こいち]……！'
+  - speaker: reimu
+    text: 寅楠は報告に来た小市の手を、強く握りしめました。
+    reading: とらくすわ ほうこくに きた こいちの てお、つよく にぎりしめました。
+  - speaker: koichi
+    emotion: happy
+    text: 師匠、手が痛いです……。
+    beat: true
+- id: card1902
+  title: ''
+  background: yh_card_1902
+  cuts:
+  - speaker: reimu
+    text: 1902年3月4日。寅楠は、緑綬褒章を受けます。
+    reading: せんきゅうひゃく にねん さんがつ よっか。とらくすわ、りょくじゅ ほうしょうお うけます。
+- id: ch10_iwai
+  title: 褒章の24日後
+  background: yh_kojo_iwai
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.56, emotion: happy}
+  - {who: koichi, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: kisaburo
+    emotion: happy
+    text: 社長、おめでとう。褒章だに！
+  - speaker: koichi
+    emotion: happy
+    text: 師匠のお名前が、官報に載りました！
+  - speaker: zundamon
+    emotion: happy
+    text: 困難に[屈せず|くっせず]、と書いてあったのだ。
+  - speaker: kisaburo
+    emotion: happy
+    text: 辛苦に耐え、困難に[屈せず|くっせず]。わしらのことだら。
+  - speaker: zundamon
+    emotion: happy
+    text: 今年は、いい一年になるぞ。
+  - speaker: reimu
+    text: 24日後の3月28日。乾燥室から火が出ます。
+    reading: にじゅうよっかごの さんがつ にじゅうはちにち。かんそうしつから ひが でます。
+  - speaker: koichi
+    emotion: surprised
+    text: 師匠！ 乾燥室から、火が！
+    background: yh_kojo_kaji
+    se: gaan
+  - speaker: kisaburo
+    emotion: surprised
+    text: 木を乾かす部屋だに！ 燃えるもんしか無いら！
+  - speaker: zundamon
+    emotion: surprised
+    text: ピアノを運び出せ！ 一台でもいい！
+  - speaker: reimu
+    text: 火は、工場の半分以上を焼きました。
+    reading: ひわ、こうじょうの はんぶん いじょうお やきました。
+    telops:
+    - {text: 褒章の24日後、工場の過半が焼失, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A0A0A", glow: "#FF5A3A", anim: up}
+- id: ch10_yakeato
+  title: ''
+  background: yh_yakeato
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: sad}
+  - {who: kisaburo, x: 0.56, emotion: sad}
+  - {who: koichi, x: 0.78, emotion: sad}
+  cuts:
+  - speaker: koichi
+    emotion: sad
+    text: 師匠……。ピアノの部屋も、全部……。
+  - speaker: zundamon
+    emotion: sad
+    text: ……褒章をもらって、24日でこれか。
+  - speaker: kisaburo
+    emotion: thinking
+    text: 社長。焼け跡から、金庫が出てきたに。
+  - speaker: zundamon
+    emotion: thinking
+    text: 開けてみよう。
+  - speaker: koichi
+    emotion: surprised
+    text: お札も書類も、無事です！
+  - speaker: kisaburo
+    emotion: happy
+    text: 工場は燃えても、金庫は褒章ものだら。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 書類が無事なら、注文も分かる。建て直すぞ。
+- id: card1903
+  title: ''
+  background: yh_card_1903
+  cuts:
+  - speaker: reimu
+    text: 1903年。大阪で、内国勧業博覧会が開かれます。
+    reading: せんきゅうひゃく さんねん。おおさかで、ないこく かんぎょう はくらんかいが ひらかれます。
+- id: ch10_osaka
+  title: 皇后のお買い上げ
+  background: yh_hakurankai03
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: koichi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: koichi
+    emotion: happy
+    text: 師匠、オルガンが一等の賞です！
+  - speaker: zundamon
+    emotion: happy
+    text: 火事の翌年に、一等か。
+  - speaker: koichi
+    emotion: surprised
+    text: それと、グランドピアノをお買い上げになる方が。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1000円のピアノを！？ どなたです。
+  - speaker: koichi
+    emotion: surprised
+    text: 皇后さまです！
+    se: levelup
+  - speaker: zundamon
+    emotion: surprised
+    text: こ、皇后さま……！ 膝が、震えて立てないのだ。
+  - speaker: reimu
+    text: このグランドピアノは、今も東京の港区立郷土歴史館に残っています。
+    reading: この ぐらんど ぴあのわ、いまも とうきょうの みなとくりつ きょうど れきしかんに のこって います。
+- id: ch10_shinkoku
+  title: 清国での見当違い
+  background: yh_jimusho
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: thinking}
+  - {who: kisaburo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: この年は清国の皇族も工場を見学し、ピアノを買い求めました。
+    reading: この としわ しんこくの こうぞくも こうじょうお けんがくし、ぴあのお かいもとめました。
+  - speaker: reimu
+    text: 寅楠は北京まで出向き、そのピアノを離宮に据え付けます。
+    reading: とらくすわ ぺきんまで でむき、その ぴあのお りきゅうに すえつけます。
+  - speaker: kisaburo
+    emotion: happy
+    text: お帰り、社長。[清国|しんこく]でも、ピアノを売り込んできただか。
+  - speaker: zundamon
+    emotion: thinking
+    text: それが、上海で西洋の楽器屋が繁盛してたんだ。
+  - speaker: zundamon
+    emotion: sad
+    text: 西洋の楽器だけは、あっちに無いと思ってた。とんだ見当違いだ。
+  - speaker: kisaburo
+    emotion: thinking
+    text: 売り込みに行って、よその店を見学してきただけだら。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……いい勉強には、なったのだ。
+  - speaker: reimu
+    text: 寅楠はこの見当違いを、帰ってからの報告会で正直に話しています。
+    reading: とらくすわ この けんとうちがいお、かえってからの ほうこくかいで しょうじきに はなして います。
+- id: ch10_tanome
+  title: 研究は小市に頼め
+  background: yh_kojo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: shokunin, x: 0.56, emotion: thinking}
+  - {who: koichi, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1904年。アメリカのセントルイス万博で、ピアノとオルガンが賞を受けました。
+    reading: せんきゅうひゃく よねん。あめりかの せんとるいす ばんぱくで、ぴあのと おるがんが しょうお うけました。
+  - speaker: shokunin
+    emotion: thinking
+    text: 社長。新しい仕掛けを考えたいんですが、誰に相談すれば。
+  - speaker: zundamon
+    emotion: normal
+    text: 研究や発明のことは、[小市|こいち]に頼め。
+  - speaker: koichi
+    emotion: surprised
+    text: えっ、私ですか。
+  - speaker: shokunin
+    emotion: thinking
+    text: 社長に聞くより、そっちが早いってことですかい。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……そういうことだ。
+    beat: true
+  - speaker: reimu
+    text: このころ、小市は18歳でした。
+    reading: この ころ、こいちわ じゅうはっさいでした。
+- id: card1912
+  title: ''
+  background: yh_card_1912
+  cuts:
+  - speaker: reimu
+    text: 1912年。前の年に浜松市会の副議長となった寅楠が、大きな損を出します。
+    reading: せんきゅうひゃく じゅうにねん。まえの としに はままつ しかいの ふくぎちょうと なった とらくすが、おおきな そんお だします。
+- id: ch11_jindai
+  title: 掘っても出ない杉
+  background: yh_kabunushi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: sad}
+  - {who: kabunushi, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 化粧板に使う神代杉を掘り出そうとして、うまくいかなかったのです。
+    reading: けしょういたに つかう じんだいすぎお ほりだそうと して、うまく いかなかったのです。
+  - speaker: kabunushi
+    emotion: angry
+    text: 社長。土に埋まった杉を掘って大損とは、どういうことです。
+  - speaker: zundamon
+    emotion: sad
+    text: ……掘っても、使える杉が出なかったのです。
+  - speaker: kabunushi
+    emotion: angry
+    text: 責任は、どう取るおつもりか！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……そのことで、ご報告があります。
+  - speaker: zundamon
+    emotion: normal
+    text: 浜名郡の郡長、[天野千代丸|あまのちよまる]さんを会社に迎える話を進めています。
+  - speaker: kabunushi
+    emotion: surprised
+    text: 郡長を、会社に！？
+  - speaker: kabunushi
+    emotion: thinking
+    text: ……話をうまく、すり替えられた気がしますな。
+    se: hammer
+  - speaker: reimu
+    text: 翌年、天野が副社長になって経営を任されます。
+    reading: よくねん、あまのが ふくしゃちょうに なって けいえいお まかされます。
+- id: ch11_on
+  title: 男の中の男
+  background: yh_zashiki
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: normal}
+  - {who: mago, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 福島豊策は、1903年に亡くなっていました。晩年の寅楠は、子や孫に福島の話をします。
+    reading: ふくしま ほうさくわ、せんきゅうひゃく さんねんに なくなって いました。ばんねんの とらくすわ、こや まごに ふくしまの はなしお します。
+  - speaker: mago
+    emotion: normal
+    text: おじいさま。福島先生って、どんな人だったの？
+  - speaker: zundamon
+    emotion: normal
+    text: ボクが[一文|いちもん]無しのとき、[家屋敷|いえやしき]を抵当に入れてくれた人だ。
+  - speaker: mago
+    emotion: surprised
+    text: おうちを！？ よその人のために！？
+  - speaker: zundamon
+    emotion: normal
+    text: 事業というのは、男に惚れられてこそうまくいく。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクにとって男の中の男が、福島先生だった。
+  - speaker: mago
+    emotion: thinking
+    text: おじいさまも、惚れてたんだね。
+  - speaker: zundamon
+    emotion: happy
+    text: ……ああ。一番に、惚れたのだ。
+- id: card1916
+  title: ''
+  background: yh_card_1916
+  cuts:
+  - speaker: reimu
+    text: 1916年。寅楠は、浜松の中沢町に広い土地を買います。
+    reading: せんきゅうひゃく じゅうろくねん。とらくすわ、はままつの なかざわちょうに ひろい とちお かいます。
+- id: ch11_nakazawa
+  title: 完成を見なかった工場
+  background: yh_nakazawa
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: happy}
+  - {who: kisaburo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisaburo
+    emotion: surprised
+    text: '[寅楠|とらくす]さん。この原っぱ、全部うちの工場になるだか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 6万平方メートルだ。ピアノもオルガンも、ここで作る。
+  - speaker: kisaburo
+    emotion: happy
+    text: うちの仕事場の、何個分だら。
+  - speaker: zundamon
+    emotion: happy
+    text: 数えきれないのだ。
+  - speaker: kisaburo
+    emotion: thinking
+    text: ……最初は、借金とバネ2本だったに。
+  - speaker: zundamon
+    emotion: happy
+    text: それと、[喜三郎|きさぶろう]さんの奥さんの小言なのだ。
+  - speaker: kisaburo
+    emotion: happy
+    text: あれは今も、毎日続いとるに。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: '[喜三郎|きさぶろう]さん。ここが建ったら、また二人で見に来よう。'
+- id: ch11_wakare
+  title: ''
+  background: yh_zashiki_natsu
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山葉寅楠, emotion: sad}
+  - {who: kisaburo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: その年の夏、寅楠は病を得ます。
+    reading: その としの なつ、とらくすわ やまいお えます。
+  - speaker: kisaburo
+    emotion: thinking
+    text: '[寅楠|とらくす]さん。起きとって、平気だか。'
+  - speaker: zundamon
+    emotion: normal
+    text: '[喜三郎|きさぶろう]さんの顔を見たら、少し楽になった。'
+  - speaker: kisaburo
+    emotion: happy
+    text: わしの顔が薬になるなら、毎日来るだに。
+  - speaker: reimu
+    text: 寅楠の長男の正雄は、河合喜三郎の養子になっていました。
+    reading: とらくすの ちょうなんの まさおわ、かわい きさぶろうの ようしに なって いました。
+  - speaker: zundamon
+    emotion: normal
+    text: '[正雄|まさお]は、ちゃんとやってますか。'
+  - speaker: kisaburo
+    emotion: happy
+    text: うちの自慢の息子だに。心配いらん。
+  - speaker: zundamon
+    emotion: happy
+    text: ……[喜三郎|きさぶろう]さんが相棒で、よかったのだ。
+    se: namida
+  - speaker: kisaburo
+    emotion: sad
+    text: ……それは、こっちの台詞だら。
+  - speaker: reimu
+    text: 1916年8月。新しい工場の完成を見ることなく、山葉寅楠は亡くなりました。
+    reading: せんきゅうひゃく じゅうろくねん はちがつ。あたらしい こうじょうの かんせいお みる ことなく、やまは とらくすわ なくなりました。
+  - speaker: reimu
+    text: その2か月後、河合喜三郎も亡くなります。
+    reading: その にかげつご、かわい きさぶろうも なくなります。
+- id: ch12_ronsou
+  title: 箱根越えは本当か
+  background: yh_ronsou
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。日本で最初にオルガンを作ったのは、[山葉|やまハ]さん！
+  - speaker: tsumugi
+    emotion: normal
+    text: 実は横浜の[西川虎吉|にしかわとらきち]さんが、1884年に作ってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 先輩がいたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[松阪|まつさか]にも、同じころから作ってた人がいたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: '[山葉|やまハ]さんは、オルガン作りを日本の産業に育てた人ね。'
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、これは本当だ。オルガンを担いで、箱根を越えた！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは、ヤマハに伝わる話よ。1929年に、銅像の台座のレリーフになったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 出来事から、40年以上もあとだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 地元の研究者は、担いだ証拠は見つかっていないと書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の東海道には乗合馬車があって、それを使った見込みが高いって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 箱根の坂は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 箱根は、[人足|にんそく]か馬で越えたんじゃないかって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 近くの港から、船で運んだのではという疑問も出てるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[担いだり|かついだり]馬車に乗ったり、船に乗ったり……。'
+  - speaker: zundamon
+    emotion: thinking
+    text: そのオルガン、ボクより旅慣れてるのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: normal
+    text: それに1887年の7月には、[国府津|こうづ]から新橋まで汽車が[通って|とおって]たの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 汽車があったのに、担いだのか……？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に担いだかは、今も確かめようがないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 創業の年も、資料によって1885年から1887年まで分かれてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 伝説も年号も、バラバラなのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の新聞にも、最初は伊沢さんに音の狂いを言われたと書いてあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 作り直した2度目は、[精巧無比|せいこうむひ]とほめられてるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 担いだオルガンより、そっちのほうが重いのだ。
+- id: ch12_sonogo
+  title: 弟子の独立とオートバイ
+  background: yh_sonogo
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: '[寅楠|とらくす]さんが亡くなって11年後、[小市|こいち]さんは会社を離れたの。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 弟子が、出ていったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1927年に7人の弟子と、河合楽器研究所を作ったの。今のカワイよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ピアノのカワイは、ヤマハの弟子が作ったのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[小市|こいち]さんの信条は、楽器を売る前にまず技術を売れ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 説明書が読めなくても、機械を動かした人の言葉なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ヤマハは1921年から、軍に頼まれて木のプロペラも作ってたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1955年には、そのプロペラを作る機械を活かしてオートバイを出したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ピアノの会社が、バイク！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そのオートバイの部門が同じ年に独立して、ヤマハ発動機になったの。
+- id: ch13_gendai
+  title: 今のヤマハと浜松
+  background: yh_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今のヤマハの売上は、1年で4653億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのうちピアノは400億円で、電子楽器は1054億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ピアノより、電子楽器のほうが多いのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 楽器の売上では世界一だと、ヤマハ自身が発表してるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 使用にはたえないから、世界一……！
+  - speaker: tsumugi
+    emotion: normal
+    text: 音楽教室に通う人は、国内で約30万人と海外で約16万人。
+  - speaker: tsumugi
+    emotion: normal
+    text: ちなみにヤマハ発動機の売上は、2兆5342億円。
+    telops:
+    - {text: 発動機の売上は2兆5342億円, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 弟のバイクのほうが、5倍以上大きいのだ！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: どちらも、3本の音叉のマークを使ってるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3本あるのは、なんでなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 技術と製造と販売の3つが、手を組むという意味もあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 考える人と作る人と、売る人なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あの廃寺の工場があった坂は、今もオルガン坂と呼ばれてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 浜松は2014年に、ユネスコの創造都市に音楽の分野で加わったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: バネ2本の修理から、楽器の町が始まったのだ。
+- id: shime
+  title: ''
+  background: yh_ongakushitsu
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。今度は音叉を借りて、ラの音を合わせたのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。ほかの音は？
+  - speaker: zundamon
+    emotion: happy
+    text: ラだけは、完ぺきなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 残りの[87鍵|はちじゅうななけん]は、調律師さんにお願いしましょう。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: ピアノを見かけたら、鍵盤のふたに書いてある名前を見てみて。
+  - speaker: zundamon
+    emotion: happy
+    text: 使えないと言われた人の名字が、書いてあるかもしれないのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

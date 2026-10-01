@@ -1,0 +1,1 @@
+見物の客|none|none||v4|kimono|#4a5a4a|o1

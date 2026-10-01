@@ -1,0 +1,1847 @@
+meta:
+  title: 【パナソニックの誕生】「売れたんは100個ほどや」妻が着物を質に入れた冬【ずんだもん解説】
+  slug: matsushita-socket
+  summary: 電灯の差し込み口を、1つから2つに。その差し込みを安く売って会社を大きくしたのが、和歌山生まれの松下幸之助でした。9歳で大阪へ奉公に出て、火鉢を磨き、自転車を売り、電気工事の見習いへ。独立して作ったソケットは、10日歩いて100個ほどしか売れません。仲間は去り、妻は着物を質に入れます。その冬、小さな借家に思いがけない注文が届きました。パナソニックの誕生を、再現ドラマでたどります。
+  tags:
+  - パナソニック
+  - 松下幸之助
+  - 二股ソケット
+  - 松下電器
+  - 創業
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 雑学
+  thumbnail:
+    top: 売れないソケット
+    bottom: パナソニック誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: haha
+    label: 母・とく枝
+    voice: 8
+    pitch: -0.05
+    hair: bun
+    outfit: kimono
+    color: '#6a5a7a'
+  - id: chichi
+    label: 父・政楠
+    voice: 42
+    pitch: -0.04
+    outfit: kimono
+    color: '#4a4a52'
+  - id: joukyaku
+    label: 乗客
+    voice: 13
+    pitch: 0.04
+    outfit: haori
+    color: '#5a5040'
+  - id: hibachiya
+    label: 火鉢屋
+    voice: 13
+    pitch: -0.03
+    outfit: apron
+    color: '#6a4a32'
+  - id: godai
+    label: 五代音吉
+    voice: 42
+    pitch: 0.04
+    outfit: apron
+    color: '#3a4a5a'
+  - id: kozo
+    label: 小僧仲間
+    voice: 73
+    pitch: 0.0
+    outfit: apron
+    color: '#5a6a4a'
+  - id: kaya
+    label: 蚊帳問屋
+    voice: 13
+    pitch: 0.08
+    outfit: haori
+    color: '#4a3a2a'
+  - id: minarai
+    label: 見習工
+    voice: 21
+    pitch: 0.0
+    outfit: work
+    color: '#5a6a7a'
+  - id: shunin
+    label: 主任
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#3a4250'
+  - id: ane
+    label: 姉・イワ
+    voice: 8
+    pitch: -0.08
+    hair: bun
+    outfit: kimono
+    color: '#5a4a3a'
+  - id: gikei
+    label: 義兄
+    voice: 42
+    pitch: -0.02
+    outfit: haori
+    color: '#3a3a44'
+  - id: mumeno
+    label: むめの
+    voice: 8
+    pitch: 0.03
+    hair: bun
+    outfit: kimono
+    color: '#8a4a5a'
+  - id: iue
+    label: 井植歳男
+    voice: 73
+    pitch: 0.04
+    outfit: apron
+    color: '#4a5a6a'
+  - id: hayashi
+    label: 同僚・林
+    voice: 100
+    pitch: 0.0
+    outfit: work
+    color: '#4a5560'
+  - id: morita
+    label: 同僚・森田
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#6a5a40'
+  - id: kawakita
+    label: 川北電気
+    voice: 13
+    pitch: 0.05
+    outfit: suit
+    color: '#2f3a4a'
+  - id: hanjo
+    label: 繁盛さん
+    voice: 8
+    pitch: 0.12
+    hair: bun
+    outfit: apron
+    color: '#7a5a4a'
+  - id: tonya_tokyo
+    label: 東京の問屋
+    voice: 13
+    pitch: -0.06
+    outfit: haori
+    color: '#2a2a30'
+  - id: tonya
+    label: 問屋
+    voice: 42
+    pitch: -0.06
+    outfit: suit
+    color: '#4a4038'
+  - id: jitenshaya
+    label: 自転車屋
+    voice: 67
+    pitch: 0.04
+    outfit: apron
+    color: '#5a4632'
+  - id: kanbu_h
+    label: 販売の幹部
+    voice: 13
+    pitch: 0.02
+    outfit: suit
+    color: '#2f3a52'
+  - id: kanbu_k
+    label: 工場の幹部
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#4a4a4a'
+  - id: tenin
+    label: 店員
+    voice: 21
+    pitch: 0.03
+    outfit: gakuran
+  - id: shikai
+    label: 司会
+    voice: 100
+    pitch: 0.02
+    outfit: suit
+    color: '#3e4a5c'
+  - id: gun
+    label: 軍の担当
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#4a5236'
+  - id: kumiai
+    label: 組合員
+    voice: 21
+    pitch: -0.03
+    outfit: work
+    color: '#5a5a50'
+  - id: kumiai2
+    label: 若い組合員
+    voice: 100
+    pitch: 0.04
+    outfit: work
+    color: '#6a6a5a'
+  - id: iue2
+    label: 井植歳男
+    voice: 11
+    pitch: -0.03
+    outfit: suit
+    color: '#3a3a3a'
+  - id: dairiten
+    label: 代理店主
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3a46'
+  - id: hansha
+    label: 販社の社長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#4a3a3a'
+  - id: shujii
+    label: 主治医
+    voice: 13
+    pitch: 0.0
+    outfit: labcoat
+  - id: jimu_shunin
+    label: 事務の主任
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#4a4436'
+  - id: kanbu48
+    label: 幹部
+    voice: 67
+    pitch: -0.02
+    outfit: suit
+    color: '#3a4040'
+scenes:
+- id: co_urenai
+  title: ''
+  background: pn_ikaino
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: thinking}
+  - {who: hayashi, x: 0.56, emotion: sad}
+  - {who: mumeno, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1917年の冬。大阪・猪飼野の借家で、若い夫婦が売れないソケットを作っていました。
+    reading: せんきゅうひゃく じゅうななねんの ふゆ。おおさか いかいのの しゃくやで、わかい ふうふが うれない そけっとお つくって いました。
+  - speaker: hayashi
+    emotion: sad
+    text: 松下君。10日回って、売れたんは100個ほどや。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……100個。
+  - speaker: hayashi
+    emotion: thinking
+    text: すまん。わしらは、抜けさせてもらう。
+    se: don
+  - speaker: mumeno
+    emotion: normal
+    text: あなた。この着物、質屋さんに持っていきますね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……すまん。
+- id: co_chumon
+  title: ''
+  background: pn_ikaino
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: kawakita, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kawakita
+    emotion: normal
+    text: ごめんください。扇風機の[碍盤|がいばん]、1,000枚。年内に頼めますか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1,000枚……！
+  - speaker: reimu
+    text: この男は、松下幸之助。5人で始めた仕事場は今、18万人あまりが働くパナソニックです。
+    reading: この おとこわ まつした こうのすけ。ごにんで はじめた しごとばわ いま、じゅうはちまんにん あまりが はたらく ぱなそにっくです。
+- id: hook
+  title: ''
+  background: pn_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ストーブもドライヤーも、延長コードに延長コードでつなぐのだ！
+  - speaker: tsumugi
+    emotion: surprised
+    text: タコ足の先に、またタコ。もうイカより足が多いわよ。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも、1つの穴を2つに増やしたのは誰なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: それを安く売って大きくなったのが、松下[幸之助|こうのすけ]よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100個しか売れなかったのに、どうやって？
+    telops:
+    - {text: '100個から18万人へ', size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: card1894
+  title: ''
+  background: pn_card_1894
+  cuts:
+  - speaker: reimu
+    text: 1894年。和歌山の村で、松下幸之助が生まれます。8人きょうだいの末っ子でした。
+    reading: せんはっぴゃく きゅうじゅうよねん。わかやまの むらで まつした こうのすけが うまれます。はちにん きょうだいの すえっこでした。
+- id: ch1_wasa
+  title: 大きな松の家
+  background: pn_wasa
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, scale: 0.85, emotion: happy}
+  - {who: haha, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 家は大きな松のある旧家でした。ところが4歳のとき、父が米の相場で失敗します。
+    reading: いえわ おおきな まつの ある きゅうかでした。ところが よんさいの とき、ちちが こめの そうばで しっぱい します。
+  - speaker: haha
+    emotion: sad
+    text: '[幸之助|こうのすけ]。この家も田んぼも、手放すことになったんよ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: あの大きな松も、置いていくのだ？
+  - speaker: haha
+    emotion: thinking
+    text: 松は持っていかれへん。町に出て、下駄屋をするんよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 下駄屋！ じゃあボク、毎日新しい下駄をはけるのだ！
+  - speaker: haha
+    emotion: thinking
+    text: 売りもんやから、はいたらあかんよ。
+    se: tenten
+- id: ch1_nagaya
+  title: ''
+  background: pn_nagaya
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, scale: 0.85, emotion: sad}
+  - {who: haha, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: haha
+    emotion: sad
+    text: 下駄屋は、2年でたたむことになったわ。狭い長屋で[堪忍|かんにん]な。
+  - speaker: reimu
+    text: 1900年から翌年にかけて、兄2人と姉1人が次々に亡くなります。
+    reading: せんきゅうひゃくねんから よくねんに かけて、あに ふたりと あね ひとりが つぎつぎに なくなります。
+  - speaker: haha
+    emotion: sad
+    text: ……兄ちゃんらの分まで、元気でおってな。
+  - speaker: zundamon
+    emotion: sad
+    text: ……うん。
+  - speaker: haha
+    emotion: thinking
+    text: お父さんは一人で大阪へ出て、[盲唖院|もうあいん]で働いてはる。
+  - speaker: haha
+    emotion: thinking
+    text: 学校は、卒業まであと4か月やのにな。
+  - speaker: zundamon
+    emotion: normal
+    text: ……大阪で、がんばってきます。
+- id: card1904
+  title: ''
+  background: pn_card_1904
+  cuts:
+  - speaker: reimu
+    text: 1904年11月。9歳の幸之助は小学校をやめ、一人で大阪へ向かいます。
+    reading: せんきゅうひゃく よねん じゅういちがつ。きゅうさいの こうのすけわ しょうがっこうお やめ、ひとりで おおさかえ むかいます。
+- id: ch1_kinokawa
+  title: 紀ノ川駅の別れ
+  background: pn_kinokawa
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, scale: 0.85, emotion: sad}
+  - {who: haha, x: 0.56, emotion: thinking}
+  - {who: joukyaku, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: haha
+    emotion: thinking
+    text: すんまへん。この子、大阪まで一人で行きますんや。
+  - speaker: haha
+    emotion: thinking
+    text: 向こうに着いたら、迎えが来てます。どうか途中を、よろしく頼みます。
+  - speaker: joukyaku
+    emotion: surprised
+    text: 坊、一人かいな。
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。一人です。
+  - speaker: haha
+    emotion: thinking
+    text: すんまへん。この子のこと、どうかよろしゅうに。
+  - speaker: joukyaku
+    emotion: happy
+    text: おかみさん、それもう3回目やで。ちゃんと見とくさかい。
+    beat: true
+  - speaker: haha
+    emotion: sad
+    text: '[幸之助|こうのすけ]。体に気をつけてな。'
+  - speaker: haha
+    emotion: sad
+    text: 先方のご主人に、かわいがってもらうんやで。
+  - speaker: zundamon
+    emotion: sad
+    text: ……行ってきます。
+    se: namida
+  - speaker: reimu
+    text: 汽車が動き出します。満10歳の誕生日の、4日前のことでした。
+    reading: きしゃが うごきだします。まん じゅっさいの たんじょうびの、よっかまえの ことでした。
+- id: ch2_hibachi
+  title: 火鉢を磨く9歳
+  background: pn_hibachi
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, scale: 0.85, emotion: normal}
+  - {who: hibachiya, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 奉公先は、大阪・八幡筋の火鉢店。拭き掃除に子守り、そして火鉢磨きが仕事です。
+    reading: ほうこうさきわ、おおさか はちまんすじの ひばちてん。ふきそうじに こもり、そして ひばちみがきが しごとです。
+  - speaker: hibachiya
+    emotion: normal
+    text: 坊。高い火鉢は、一日中トクサで磨くんやで。
+  - speaker: zundamon
+    emotion: normal
+    text: はい、旦那さん。
+  - speaker: zundamon
+    emotion: sad
+    text: ……手の皮がすりむけて、腫れてきました。
+  - speaker: hibachiya
+    emotion: thinking
+    text: 磨くのは火鉢や。手ぇ磨いてどないすんねん。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……夜になると、お母さんの顔ばかり浮かぶのだ。
+  - speaker: hibachiya
+    emotion: happy
+    text: 坊、半月ごくろうさん。給料をあげよう。
+  - speaker: zundamon
+    emotion: surprised
+    text: ご、5銭の白銅！
+  - speaker: zundamon
+    emotion: happy
+    text: お[金|かね]をもらったら、涙が止まったのだ。
+  - speaker: hibachiya
+    emotion: thinking
+    text: 現金な子やな。
+    beat: true
+  - speaker: reimu
+    text: 90歳のころ本人は、生涯でいちばんうれしかったことにこの5銭を挙げています。
+    reading: きゅうじゅっさいの ころ ほんにんわ、しょうがいで いちばん うれしかった ことに この ごせんお あげて います。
+- id: ch2_manju
+  title: ''
+  background: pn_hibachi
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 松下幸之助, scale: 0.85, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 子守りの赤ちゃんを背負ったまま、鉄ごまで遊ぶのだ！
+  - speaker: zundamon
+    emotion: surprised
+    text: あっ……！ 赤ちゃんの頭を、床にぶつけてしまった！
+  - speaker: zundamon
+    emotion: sad
+    text: 泣きやまない……。お饅頭を、買ってくるのだ！
+  - speaker: reimu
+    text: 饅頭は1つ1銭。給金の3日分でした。
+    reading: まんじゅうわ ひとつ いっせん。きゅうきんの みっかぶんでした。
+  - speaker: zundamon
+    emotion: sad
+    text: 3日分の給金が、一口で消えたのだ……。
+    se: chin
+- id: ch2_godai
+  title: 煙草の買いおき
+  background: pn_godai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, scale: 0.85, emotion: normal}
+  - {who: godai, x: 0.56, emotion: normal}
+  - {who: kozo, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1905年2月。火鉢店が閉まり、幸之助は船場の五代自転車商会へ移ります。
+    reading: せんきゅうひゃく ごねん にがつ。ひばちてんが しまり、こうのすけわ せんばの ごだい じてんしゃ しょうかいえ うつります。
+  - speaker: godai
+    emotion: normal
+    text: '[幸吉ッとん|こうきっとん]。ちょっと煙草を[買うて|こうて]きてんか、ってお客さんが。'
+  - speaker: zundamon
+    emotion: normal
+    text: はい！ 手を洗って、走ってきます！
+  - speaker: zundamon
+    emotion: thinking
+    text: 毎回これでは、お客さんを待たせる。……給金で、箱ごと買っておこう。
+  - speaker: zundamon
+    emotion: happy
+    text: 20個入りを箱で買うと、1個おまけが付くんです！
+  - speaker: zundamon
+    emotion: happy
+    text: 月に50個から60個売れて、もうけが給金の4分の1の月もあるのだ！
+  - speaker: kozo
+    emotion: angry
+    text: '[幸吉ッとん|こうきっとん]だけ、ずるいわ。お客さんの用事で、小遣い稼いどる。'
+  - speaker: godai
+    emotion: sad
+    text: おまえ、もうやめとけ。
+  - speaker: godai
+    emotion: sad
+    text: 皆があれこれ言うんで、わしもつらいんや。
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。今日で、やめます。
+    se: shobon
+- id: ch2_chichi
+  title: 学校か、商売か
+  background: pn_tenma
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, scale: 0.85, emotion: normal}
+  - {who: haha, x: 0.56, emotion: happy}
+  - {who: chichi, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1906年。母と姉が、大阪の天満に移ってきます。
+    reading: せんきゅうひゃく ろくねん。ははと あねが、おおさかの てんまに うつって きます。
+  - speaker: haha
+    emotion: happy
+    text: 姉さんの勤め先の貯金局で、給仕を探してるんやて。
+  - speaker: haha
+    emotion: happy
+    text: 給仕をしながら、夜学へ通うたらええ。
+  - speaker: zundamon
+    emotion: happy
+    text: また、学校に行けるのだ？
+  - speaker: chichi
+    emotion: normal
+    text: わしは反対じゃ。奉公を続けて、やがて商売で身を立てよ。
+  - speaker: chichi
+    emotion: normal
+    text: 手紙一本よう書かん人でも、商売で多くの人を使うとる例はたくさんある。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……はい。奉公を、続けます。
+  - speaker: reimu
+    text: この年は姉2人に続いて、9月に父が51歳で亡くなります。
+    reading: この としわ あね ふたりに つづいて、くがつに ちちが ごじゅういっさいで なくなります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……商売で身を立てる。お父さんとの、約束です。
+- id: ch2_hatsuuri
+  title: 初めて売った自転車
+  background: pn_kaya
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, scale: 0.85, emotion: happy}
+  - {who: kaya, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1908年。13歳の幸之助は、初めて一人で自転車を売りに行きます。
+    reading: せんきゅうひゃく はちねん。じゅうさんさいの こうのすけわ、はじめて ひとりで じてんしゃお うりに いきます。
+  - speaker: zundamon
+    emotion: happy
+    text: この自転車、よく走ります！ 乗り心地も、ばつぐんです！
+  - speaker: kaya
+    emotion: thinking
+    text: 熱心な小僧さんやな。……よっしゃ、[買うたろ|こうたろ]。
+  - speaker: kaya
+    emotion: happy
+    text: その代わり、一割まけとき。
+  - speaker: zundamon
+    emotion: happy
+    text: はい！ 一割引きで、ありがとうございます！
+- id: ch2_hatsuuri2
+  title: ''
+  background: pn_godai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, scale: 0.85, emotion: happy}
+  - {who: godai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 旦那さん！ 一割引きで、売れました！
+  - speaker: godai
+    emotion: surprised
+    text: 一割も引いたんか。[五分|ごぶ]だけ引く、ともう一度言うてこい。
+  - speaker: zundamon
+    emotion: sad
+    text: ……い、言えません。もう一割でと、言ってしまったのだ……。
+  - speaker: zundamon
+    emotion: sad
+    text: うわあああん！
+  - speaker: godai
+    emotion: angry
+    text: 泣いてどないすんねん。おまえは、どっちの店員か。
+    se: tsukkomi
+  - speaker: reimu
+    text: 結局、自転車は五分引きで売れました。
+    reading: けっきょく、じてんしゃわ ごぶびきで うれました。
+- id: ch2_hatsuuri3
+  title: ''
+  background: pn_kaya
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, scale: 0.85, emotion: sad}
+  - {who: kaya, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kaya
+    emotion: happy
+    text: この小僧さんがおるうちは、自転車はおまえのとこから[買うたろ|こうたろ]。
+  - speaker: zundamon
+    emotion: happy
+    text: ……ありがとうございます！
+- id: card1910
+  title: ''
+  background: pn_card_1910
+  cuts:
+  - speaker: reimu
+    text: 1910年。大阪の町には、電気で走る市電が通っていました。
+    reading: せんきゅうひゃく じゅうねん。おおさかの まちにわ、でんきで はしる しでんが とおって いました。
+- id: ch3_shiden
+  title: 電気の仕事へ
+  background: pn_shiden
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 松下幸之助, scale: 0.85, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 馬も引いてないのに、電車がこんなに走ってる……！
+  - speaker: zundamon
+    emotion: happy
+    text: これからは、電気の仕事なのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、旦那さんに辞めたいと言い出せないのだ……。
+  - speaker: reimu
+    text: 幸之助はハハビョウキの電報を打ってもらい、着替え1枚を持って店を出ました。
+    reading: こうのすけわ ははびょうきの でんぽうお うって もらい、きがえ いちまいお もって みせお でました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……旦那さん、ごめんなさい。おわびの手紙は、あとで書きます。
+- id: ch3_dento
+  title: 16歳の工事担当者
+  background: pn_dento
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: minarai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1910年10月。大阪電灯に、内線見習工として入ります。日給は37銭でした。
+    reading: せんきゅうひゃく じゅうねん じゅうがつ。おおさか でんとうに、ないせん みならいこうとして はいります。にっきゅうわ さんじゅうななせんでした。
+  - speaker: minarai
+    emotion: normal
+    text: 担当さん。材料、車に積みました。
+  - speaker: zundamon
+    emotion: happy
+    text: よし。現場へ行くぞ。
+  - speaker: minarai
+    emotion: thinking
+    text: 入って3か月で担当なんて、最年少でっせ。年はいくつです？
+  - speaker: zundamon
+    emotion: normal
+    text: 16です。
+  - speaker: minarai
+    emotion: surprised
+    text: わし、[二十歳|はたち]過ぎやで。年下のあとから、車を引くんか……。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 3か月前は、ボクが引いてたのだ。
+    se: hammer
+- id: ch3_ji
+  title: 字が書けない事務員
+  background: pn_dento_jimu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: thinking}
+  - {who: jimu_shunin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: あるとき、事務員に抜擢されます。ところが、字がうまく書けません。
+    reading: あるとき、じむいんに ばってき されます。ところが、じが うまく かけません。
+  - speaker: jimu_shunin
+    emotion: thinking
+    text: きみ、学校へ行ってないのか。もっと字をけいこせないかんよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……主任。私を、もう一度元のところに戻してください。
+  - speaker: jimu_shunin
+    emotion: surprised
+    text: 自分から、降りるんかいな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 手紙一本よう書かん人でも、商売はできる。……父の言葉です。
+  - speaker: reimu
+    text: 1913年には夜学に入りますが、本科の授業は口述筆記。書き取れずにやめました。
+    reading: せんきゅうひゃく じゅうさんねんにわ やがくに はいりますが、ほんかの じゅぎょうわ こうじゅつ ひっき。かきとれずに やめました。
+- id: ch3_haha
+  title: 母との別れ
+  background: pn_butsuma
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 松下幸之助, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1913年8月14日。母のとく枝が、57歳で亡くなります。
+    reading: せんきゅうひゃく じゅうさんねん はちがつ じゅうよっか。ははの とくえが、ごじゅうななさいで なくなります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……[紀ノ川|きのかわ]駅で、体に気をつけてなって言ってくれたのに。
+  - speaker: zundamon
+    emotion: sad
+    text: お母さんのほうが、先に行ってしまったのだ。
+- id: card1915
+  title: ''
+  background: pn_card_1915
+  cuts:
+  - speaker: reimu
+    text: 1915年5月。大阪・松島の芝居小屋、八千代座の前。
+    reading: せんきゅうひゃく じゅうごねん ごがつ。おおさか まつしまの しばいごや、やちよざの まえ。
+- id: ch4_miai
+  title: 横顔だけの見合い
+  background: pn_yachiyoza
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: thinking}
+  - {who: ane, x: 0.56, emotion: normal}
+  - {who: gikei, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: ane
+    emotion: normal
+    text: '[幸之助|こうのすけ]。お父さんもお母さんも、もうおらん。'
+  - speaker: ane
+    emotion: thinking
+    text: うちにはご先祖の位牌が、47もあるんや。あんたが跡を継いで祀ってな。
+  - speaker: zundamon
+    emotion: surprised
+    text: 47！？
+  - speaker: gikei
+    emotion: happy
+    text: ほれ、来たで。あの娘さんや。見よ、見よ。[幸之助|こうのすけ]、見よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……恥ずかしくて、顔が上げられないのだ。
+  - speaker: gikei
+    emotion: surprised
+    text: 見よって！ もう通り過ぎてまうがな！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……横顔しか、見えなかった。
+  - speaker: gikei
+    emotion: happy
+    text: あらええで。もろとき、もろとき。
+  - speaker: zundamon
+    emotion: surprised
+    text: もろときって……横顔だけで、決めるんですか！？
+    beat: true
+  - speaker: reimu
+    text: 9月、井植むめのと結婚します。幸之助20歳、むめの19歳でした。
+    reading: くがつ、いうえ むめのと けっこん します。こうのすけ はたち、むめの じゅうきゅうさいでした。
+- id: ch4_socket
+  title: 実用にならないソケット
+  background: pn_dento_jimu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: shunin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 主任。電灯のソケットを、自分で考えて作り直してみました。
+  - speaker: shunin
+    emotion: thinking
+    text: ……こんなものは、実用にならん。
+    se: gaan
+  - speaker: zundamon
+    emotion: surprised
+    text: ……直して、また持ってきます！
+  - speaker: reimu
+    text: 直して出し直しましたが、また不採用でした。
+    reading: なおして だしなおしましたが、また ふさいようでした。
+  - speaker: zundamon
+    emotion: sad
+    text: このソケットは、作れば売れる。絶対に、売れるのだ……。
+- id: ch4_kesshin
+  title: 95円で独立
+  background: pn_nikai
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: mumeno, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: '[むめの|ムメノ]。会社を辞めて、ソケットを自分で作る。'
+  - speaker: mumeno
+    emotion: surprised
+    text: 最年少で、検査員になったばっかりやのに？
+  - speaker: zundamon
+    emotion: normal
+    text: 作れば、売れる。会社が使わないなら、自分で売るのだ。
+  - speaker: mumeno
+    emotion: thinking
+    text: 日給83銭のお勤めを辞めて、お[金|かね]はどないしますの？
+  - speaker: zundamon
+    emotion: normal
+    text: 退職金が33円20銭。会社の積立金が42円。それに、貯金が20円ほど。
+  - speaker: zundamon
+    emotion: happy
+    text: 全部で、95円ちょっとだ！
+  - speaker: mumeno
+    emotion: thinking
+    text: それで機械も材料も、そろえるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 足りない分は、やる気で埋める！
+  - speaker: mumeno
+    emotion: thinking
+    text: やる気は、質屋さんでは引き取ってくれへんよ。
+    beat: true
+- id: card1917
+  title: ''
+  background: pn_card_1917
+  cuts:
+  - speaker: reimu
+    text: 1917年の夏。大阪・猪飼野の借家で、ソケット作りが始まります。
+    reading: せんきゅうひゃく じゅうななねんの なつ。おおさか いかいのの しゃくやで、そけっとづくりが はじまります。
+- id: ch5_ikaino
+  title: 5人の仕事場
+  background: pn_ikaino
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: hayashi, x: 0.56, emotion: happy}
+  - {who: morita, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: hayashi
+    emotion: happy
+    text: 松下君がやるなら、われわれも手伝おう。
+  - speaker: morita
+    emotion: happy
+    text: 大阪電灯の仲間や。腕は確かやで。
+  - speaker: zundamon
+    emotion: happy
+    text: 2畳と[4畳半|よじょうはん]。[4畳半|よじょうはん]の半分は、土間の仕事場です。
+  - speaker: morita
+    emotion: thinking
+    text: せまっ。寝返り打ったら、仕事場に落ちるで。
+  - speaker: reimu
+    text: ほかに妻のむめのと、むめのの弟で14歳の井植歳男。5人での船出でした。
+    reading: ほかに つまの むめのと、むめのの おとうとで じゅうよんさいの いうえ としお。ごにんでの ふなででした。
+  - speaker: zundamon
+    emotion: thinking
+    text: 困った。ソケットの胴に使う、[煉物|ねりもの]の作り方が分からない。
+  - speaker: hayashi
+    emotion: surprised
+    text: 松下君、どこ行くんや。
+  - speaker: zundamon
+    emotion: happy
+    text: '[煉物|ねりもの]工場の周りで、原料のかけらを拾ってくるのだ！'
+  - speaker: morita
+    emotion: thinking
+    text: ……それ、ただのゴミ拾いやないか。
+  - speaker: zundamon
+    emotion: normal
+    text: 研究なのだ。
+    se: manuke
+  - speaker: reimu
+    text: かけらを調べては試し、10月半ばにソケットができあがります。
+    reading: かけらお しらべてわ ためし、じゅうがつ なかばに そけっとが できあがります。
+- id: ch5_urenai
+  title: 10日で100個
+  background: pn_ikaino
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: hayashi, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同僚は見本を持って大阪中を回り、夕方遅くに浮かない顔で帰ってきます。
+    reading: どうりょうわ みほんお もって おおさかじゅうお まわり、ゆうがた おそくに うかない かおで かえって きます。
+  - speaker: hayashi
+    emotion: sad
+    text: 松下君。10日回って、売れたんは100個ほどや。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100個……。売り上げは？
+  - speaker: hayashi
+    emotion: sad
+    text: 10円にもならん。
+    background: pn_ikaino_yama
+    telops:
+    - {text: '10日で100個・10円足らず', size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……作ったソケットが、山になってるのだ。
+  - speaker: hayashi
+    emotion: thinking
+    text: すまん。わしらも、食べていかなあかん。
+  - speaker: hayashi
+    emotion: sad
+    text: わしらは、抜けさせてもらう。
+  - speaker: reimu
+    text: 林と森田は去り、残ったのは3人でした。
+    reading: はやしと もりたわ さり、のこったのわ さんにんでした。
+- id: ch5_shichi
+  title: ''
+  background: pn_ikaino_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: mumeno, x: 0.56, emotion: normal}
+  - {who: iue, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: mumeno
+    emotion: normal
+    text: あなた。この着物、質屋さんに持っていきますね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……指輪も、もう質屋なのに。すまん。
+  - speaker: iue
+    emotion: happy
+    text: 姉さん、風呂行こ。
+  - speaker: mumeno
+    emotion: thinking
+    text: ……[歳男|としお]。それより、明日の仕事の話やけどな。
+  - speaker: iue
+    emotion: thinking
+    text: 姉さん、昨日もその話でそらしたで。
+  - speaker: mumeno
+    emotion: happy
+    text: あら、もう風呂屋さん閉まってもうたわ。今日は行水にしよか。
+  - speaker: iue
+    emotion: sad
+    text: 風呂代の2銭も、ないんか……。
+    beat: true
+  - speaker: reimu
+    text: このころの質屋の通い帳は、今も残っています。
+    reading: この ころの しちやの かよいちょうわ、いまも のこって います。
+- id: ch5_gaiban
+  title: 扇風機の碍盤1,000枚
+  background: pn_ikaino
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: kawakita, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月。川北電気から、思いがけない注文が来ます。
+    reading: じゅうにがつ。かわきた でんきから、おもいがけない ちゅうもんが きます。
+  - speaker: kawakita
+    emotion: normal
+    text: 扇風機の[碍盤|がいばん]、1,000枚。年内に頼めますか。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[煉物|ねりもの]で作る、電気を通さない板ですね。……やります！'
+  - speaker: kawakita
+    emotion: thinking
+    text: 道具は、そろってますの？
+  - speaker: zundamon
+    emotion: normal
+    text: 型押しのポンスと、[煉物|ねりもの]を煮る鍋。……それだけです。
+  - speaker: kawakita
+    emotion: surprised
+    text: それだけ！？
+  - speaker: zundamon
+    emotion: happy
+    text: 型押しは、ボクが全部やります！
+- id: ch5_gaiban2
+  title: ''
+  background: pn_ikaino_yoru
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: iue, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: iue
+    emotion: happy
+    text: '[義兄さん|にいさん]、磨き終わったで！'
+  - speaker: zundamon
+    emotion: happy
+    text: '[歳男|としお]、次の束も頼む！ 型押しは、まだまだあるぞ！'
+  - speaker: iue
+    emotion: sad
+    text: '[義兄さん|にいさん]、手ぇ真っ黒や。顔まで黒いで。'
+  - speaker: zundamon
+    emotion: happy
+    text: 年内に1,000枚。顔を洗うのは、来年なのだ！
+  - speaker: reimu
+    text: 碍盤は160円になり、80円の利益が残りました。
+    reading: がいばんわ ひゃくろくじゅうえんに なり、はちじゅうえんの りえきが のこりました。
+    telops:
+    - {text: '碍盤1,000枚・利益80円', size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: iue
+    emotion: surprised
+    text: '[義兄さん|にいさん]！ 年明けに、また2,000枚やて！'
+    se: levelup
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ソケットより、[碍盤|がいばん]のほうが売れてるのだ。
+    beat: true
+- id: card1918
+  title: ''
+  background: pn_card_1918
+  cuts:
+  - speaker: reimu
+    text: 1918年3月7日。大阪の大開町で、松下電気器具製作所が始まります。
+    reading: せんきゅうひゃく じゅうはちねん さんがつ なのか。おおさかの おおひらきちょうで、まつした でんききぐ せいさくしょが はじまります。
+- id: ch6_ohiraki
+  title: 3割から5割安く
+  background: pn_ohiraki
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: mumeno, x: 0.56, emotion: happy}
+  - {who: iue, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: mumeno
+    emotion: happy
+    text: あなたが23で、私が22。[歳男|としお]が15。3人だけの会社やね。
+  - speaker: zundamon
+    emotion: happy
+    text: 1階が仕事場、2階が住まい。前の家より、ずっと広いのだ！
+  - speaker: mumeno
+    emotion: happy
+    text: これなら寝返り打っても、仕事場に落ちへんね。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 作るのは、アタッチメントプラグ。電灯のソケットにはめて、電気を取る差し込みだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 値段は、よその品より3割から5割安くする！
+    telops:
+    - {text: '市価より3〜5割安く', size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: mumeno
+    emotion: surprised
+    text: そんなに安うして、もうかりますの？
+  - speaker: zundamon
+    emotion: happy
+    text: たくさん売れば、もうかるのだ。
+  - speaker: iue
+    emotion: surprised
+    text: '[義兄さん|にいさん]！ アタッチメントプラグの注文が、また来たで！'
+  - speaker: iue
+    emotion: sad
+    text: 3人で夜中まで作っても、追いつかへん。
+  - speaker: zundamon
+    emotion: happy
+    text: 人を雇うぞ！
+- id: ch6_hanjo
+  title: ''
+  background: pn_ohiraki
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: hanjo, x: 0.56, emotion: normal}
+  - {who: iue, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: hanjo
+    emotion: normal
+    text: 今日からお世話になります。繁盛と申します。
+  - speaker: zundamon
+    emotion: surprised
+    text: ハ、繁盛さん！？
+  - speaker: zundamon
+    emotion: happy
+    text: 大きく開く[大開町|おおひらきちょう]で、繁盛さんが来てくれた！ 縁起がいいのだ！
+  - speaker: hanjo
+    emotion: thinking
+    text: ……名前で、雇いはったんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 繁盛さんに子どもができたら、繁盛が2人なのだ！
+  - speaker: hanjo
+    emotion: thinking
+    text: ……気ぃ早すぎますわ。
+    se: oti
+  - speaker: zundamon
+    emotion: normal
+    text: 狭いなら、棚を吊って上と下で作業するぞ！
+    background: pn_ohiraki_tana
+  - speaker: iue
+    emotion: happy
+    text: 得意先のおっちゃんが、蒸気船の船室みたいやて。
+  - speaker: zundamon
+    emotion: happy
+    text: 船室でも、作れればいいのだ。
+  - speaker: reimu
+    text: 年末には、働く人は20人あまりになりました。
+    reading: ねんまつにわ、はたらく ひとわ にじゅうにん あまりに なりました。
+- id: ch6_tokyo
+  title: 原価は20銭です
+  background: pn_tonya_tokyo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: tonya_tokyo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 二灯用差込みプラグ、いわゆる二股ソケットを持って初めての東京出張です。
+    reading: にとうよう さしこみ ぷらぐ、いわゆる ふたまた そけっとお もって はじめての とうきょう しゅっちょうです。
+  - speaker: tonya_tokyo
+    emotion: thinking
+    text: 電灯の口1つで、2つ使えるやつだね。
+  - speaker: tonya_tokyo
+    emotion: thinking
+    text: 二股なら、東京にもあるよ。よく売れてる品だ。
+  - speaker: zundamon
+    emotion: normal
+    text: うちのは、それを改良しました。値段は25銭です。
+  - speaker: tonya_tokyo
+    emotion: normal
+    text: 二十三銭にしたまえ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 原価は20銭ですから、23銭にできないことはありません。
+  - speaker: zundamon
+    emotion: normal
+    text: しかし、ご主人。この品は、私も従業員も朝から晩まで働いて作ったものです。
+  - speaker: tonya_tokyo
+    emotion: surprised
+    text: ……原価まで、明かすのかね。
+  - speaker: tonya_tokyo
+    emotion: happy
+    text: 分かった。25銭で買おう。
+    se: levelup
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうございます！
+  - speaker: reimu
+    text: 1921年には、長女の幸子が生まれます。
+    reading: せんきゅうひゃく にじゅういちねんにわ、ちょうじょの さちこが うまれます。
+- id: card1923
+  title: ''
+  background: pn_card_1923
+  cuts:
+  - speaker: reimu
+    text: 1923年3月。砲弾の形をした、電池式の自転車ランプを売り出します。
+    reading: せんきゅうひゃく にじゅうさんねん さんがつ。ほうだんの かたちお した、でんちしきの じてんしゃ らんぷお うりだします。
+- id: ch7_tonya
+  title: 売れない電池ランプ
+  background: pn_tonya_osaka
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: tonya, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: このランプは、何十時間も点きます！
+  - speaker: tonya
+    emotion: thinking
+    text: 電池ランプは、売れまへん。
+  - speaker: zundamon
+    emotion: surprised
+    text: これまでのは数時間。これは、10倍ほどもつんです！
+  - speaker: tonya
+    emotion: angry
+    text: 電池ランプはすぐ切れる。みんな、そう思うとります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……問屋さんが、どこも取り合ってくれないのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら店に置いて、点けっぱなしにする。何時間もつか、見てもらうのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 1万個、タダで置く。これがだめなら、工場はつぶれる。
+- id: ch7_mise
+  title: ''
+  background: pn_jitenshaya
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: jitenshaya, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: ご主人。このランプ、お代は要りません。店先で点けっぱなしにさせてください。
+  - speaker: jitenshaya
+    emotion: surprised
+    text: タダで？ [何|なん]の魂胆や。
+  - speaker: zundamon
+    emotion: normal
+    text: 何時間もつか見て、良ければ買ってください。
+  - speaker: jitenshaya
+    emotion: thinking
+    text: ……ほな、点けとくで。
+  - speaker: reimu
+    text: 日が暮れても、ランプは店先で点いたままです。
+    reading: ひが くれても、らんぷわ みせさきで ついた ままです。
+    background: pn_jitenshaya_yoru
+  - speaker: jitenshaya
+    emotion: surprised
+    text: 10時間……20時間……。松下さん、まだ点いとるがな！
+    se: bikkuri
+  - speaker: jitenshaya
+    emotion: happy
+    text: これは売れる。うちで、売らせてんか！
+    telops:
+    - {text: '数十時間 点きっぱなし', size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: ……タダで置いたランプが、売り物になったのだ！
+  - speaker: reimu
+    text: ランプは2、3か月で月に2,000個売れるようになります。
+    reading: らんぷわ にさんかげつで つきに にせんこ うれるように なります。
+- id: ch7_koichi
+  title: 長男の幸一
+  background: pn_ie
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: mumeno, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1926年6月。長男の幸一が生まれます。
+    reading: せんきゅうひゃく にじゅうろくねん ろくがつ。ちょうなんの こういちが うまれます。
+  - speaker: mumeno
+    emotion: happy
+    text: あなた、男の子ですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: '[幸一|こういち]……！ 松下の家の、跡取りなのだ！'
+- id: ch7_koichi2
+  title: ''
+  background: pn_ie
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: mumeno, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 翌年の2月。幸一は、生後8か月ほどで亡くなりました。
+    reading: よくねんの にがつ。こういちわ、せいご はちかげつ ほどで なくなりました。
+  - speaker: mumeno
+    emotion: sad
+    text: ……あなた。
+  - speaker: zundamon
+    emotion: sad
+    text: ……抱いてやれたのは、8か月だけか。
+- id: card1929
+  title: ''
+  background: pn_card_1929
+  cuts:
+  - speaker: reimu
+    text: 1929年の暮れ。世界中が不景気に襲われます。幸之助は、病気で寝込んでいました。
+    reading: せんきゅうひゃく にじゅうきゅうねんの くれ。せかいじゅうが ふけいきに おそわれます。こうのすけわ、びょうきで ねこんで いました。
+- id: ch8_byosho
+  title: 一人も解雇しない
+  background: pn_byosho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: kanbu_h, x: 0.56, emotion: thinking}
+  - {who: kanbu_k, x: 0.78, emotion: sad}
+  cuts:
+  - speaker: kanbu_h
+    emotion: thinking
+    text: オヤジさん。寝てはるとこ、すんまへん。
+  - speaker: kanbu_h
+    emotion: sad
+    text: 販売が半分に減り、倉庫は在庫の山です。
+  - speaker: kanbu_k
+    emotion: sad
+    text: 乗り切るには、従業員を半分にするしかありません。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……半分、か。
+  - speaker: zundamon
+    emotion: normal
+    text: 一人といえども、解雇したらあかん。
+    se: don
+    telops:
+    - {text: '一人も解雇しない', size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kanbu_h
+    emotion: surprised
+    text: えっ……。
+  - speaker: zundamon
+    emotion: normal
+    text: 生産はすぐ半分にして、工場は半日勤務にする。
+  - speaker: zundamon
+    emotion: normal
+    text: しかし、給料は全額払う。
+  - speaker: kanbu_k
+    emotion: surprised
+    text: 半日の勤務で、全額ですか！？
+  - speaker: zundamon
+    emotion: normal
+    text: その代わり、店員は休みを返上して在庫を売ってもらおう。
+- id: ch8_soko
+  title: ''
+  background: pn_soko
+  bgm: you_and_me
+  stage:
+  - {who: kanbu_h, x: 0.3, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: tenin
+    emotion: sad
+    text: 箱が、まだ天井まで積んであります……。
+  - speaker: kanbu_h
+    emotion: normal
+    text: 売るで。オヤジさんは、給料を全額払う言うてはるんや。
+  - speaker: tenin
+    emotion: happy
+    text: ……さすがは、オヤジさんや。
+  - speaker: reimu
+    text: 2か月後。
+    reading: にかげつご。
+    background: pn_soko_kara
+  - speaker: tenin
+    emotion: surprised
+    text: ……倉庫が、空っぽです！
+  - speaker: kanbu_h
+    emotion: happy
+    text: オヤジさんに、知らせてくるわ！
+- id: card1932
+  title: ''
+  background: pn_card_1932
+  cuts:
+  - speaker: reimu
+    text: 1932年3月。幸之助は、奈良の天理教の本部を見学します。
+    reading: せんきゅうひゃく さんじゅうにねん さんがつ。こうのすけわ、ならの てんりきょうの ほんぶお けんがく します。
+- id: ch9_tenri
+  title: 水道の水のように
+  background: pn_tenri
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 松下幸之助, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 材木を運ぶ人たちが、みんな喜んで働いてる……。
+  - speaker: reimu
+    text: 帰りの電車の中で、幸之助は考え込みます。
+    reading: かえりの でんしゃの なかで、こうのすけわ かんがえこみます。
+    background: pn_densha
+  - speaker: zundamon
+    emotion: thinking
+    text: '[四百四病|しひゃくしびょう]の[病|やまい]より、[貧|ひん]ほどつらいものはない……。'
+  - speaker: zundamon
+    emotion: normal
+    text: 貧しさがなくなるまで、物を行き渡らせる。それが、ボクらの仕事だ。
+- id: ch9_meichi
+  title: ''
+  background: pn_kodo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: shikai, x: 0.56, emotion: normal}
+  - {who: tenin, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1932年5月5日。大阪・堂島の講堂に、店員168人が集められます。
+    reading: せんきゅうひゃく さんじゅうにねん ごがつ いつか。おおさか どうじまの こうどうに、てんいん ひゃくろくじゅうはちにんが あつめられます。
+  - speaker: zundamon
+    emotion: normal
+    text: 物を水道の水のように、安くたっぷり届ける。これが、我々の使命だ。
+  - speaker: zundamon
+    emotion: normal
+    text: 物だけではない。心の安心が加わって、人生は完成するのだ。
+    telops:
+    - {text: '水道の水のごとく', size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: これを、250年かけてやり遂げる！
+  - speaker: tenin
+    emotion: surprised
+    text: 250年！？ ここにいる誰も、生きてまへんで。
+  - speaker: zundamon
+    emotion: happy
+    text: 今年を、[命知|めいち]元年とする！
+  - speaker: reimu
+    text: 話が終わると、店員たちは次々に壇上へ駆け上がります。
+    reading: はなしが おわると、てんいんたちわ つぎつぎに だんじょうえ かけあがります。
+  - speaker: tenin
+    emotion: happy
+    text: 私にも、話させてください！
+  - speaker: shikai
+    emotion: thinking
+    text: お一人、3分まで！
+  - speaker: shikai
+    emotion: surprised
+    text: ……2分！ いや、1分！
+    se: hammer
+  - speaker: reimu
+    text: 司会がドラを鳴らして時間を区切り、式は朝10時から夕方6時まで続きました。
+    reading: しかいが どらお ならして じかんお くぎり、しきわ あさ じゅうじから ゆうがた ろくじまで つづきました。
+- id: ch10_senso
+  title: 戦争と木の船
+  background: pn_zosen
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: thinking}
+  - {who: gun, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1938年ごろから、会社は分に応じて軍需にも協力する方針をとります。
+    reading: せんきゅうひゃく さんじゅうはちねん ごろから、かいしゃわ ぶんに おうじて ぐんじゅにも きょうりょくする ほうしんお とります。
+  - speaker: gun
+    emotion: normal
+    text: 松下さん。軍のために、木の船を作ってもらいたい。
+  - speaker: zundamon
+    emotion: surprised
+    text: うちは、電気の会社です。
+  - speaker: gun
+    emotion: normal
+    text: 流れ作業なら、お手のものでしょう。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……分かりました。
+  - speaker: reimu
+    text: 1943年に松下造船を作り、終戦までに木の船を56隻つくります。飛行機の会社も作りました。
+    reading: せんきゅうひゃく よんじゅうさんねんに まつした ぞうせんお つくり、しゅうせんまでに きの ふねお ごじゅうろくせき つくります。ひこうきの かいしゃも つくりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 電気の会社が、船と飛行機を作っているのだ……。
+  - speaker: reimu
+    text: 1945年8月、戦争が終わります。翌日には、暮らしの品作りに戻る方針を示しました。
+    reading: せんきゅうひゃく よんじゅうごねん はちがつ、せんそうが おわります。よくじつにわ、くらしの しなづくりに もどる ほうしんお しめしました。
+- id: card1946
+  title: ''
+  background: pn_card_1946
+  cuts:
+  - speaker: reimu
+    text: 1946年1月30日。大阪・中之島の中央公会堂で、労働組合の結成大会が開かれます。
+    reading: せんきゅうひゃく よんじゅうろくねん いちがつ さんじゅうにち。おおさか なかのしまの ちゅうおう こうかいどうで、ろうどう くみあいの けっせい たいかいが ひらかれます。
+- id: ch11_kumiai
+  title: 招かれていない祝辞
+  background: pn_kokaido
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: kumiai, x: 0.56, emotion: angry}
+  - {who: kumiai2, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 組合員は1万5,000人。幸之助は、この大会に招かれていませんでした。
+    reading: くみあいいんわ いちまん ごせんにん。こうのすけわ、この たいかいに まねかれて いませんでした。
+  - speaker: kumiai
+    emotion: angry
+    text: 社長が、なんで来とるんや！
+  - speaker: zundamon
+    emotion: normal
+    text: お祝いを、言わせてください。
+  - speaker: kumiai
+    emotion: angry
+    text: やめとけ！ 出ていけ！
+  - speaker: kumiai2
+    emotion: normal
+    text: いや、聞いてやれ！
+  - speaker: kumiai2
+    emotion: normal
+    text: ……ほな、採決や。
+  - speaker: zundamon
+    emotion: normal
+    text: 正しい経営と正しい組合は、必ず一致すると信じます。
+  - speaker: kumiai2
+    emotion: surprised
+    text: ……社長が、組合を祝いに来よった。
+  - speaker: reimu
+    text: その夜に訪ねてきた社会党の代議士は、こんなことはあなたが初めてだと言いました。
+    reading: その よるに たずねて きた しゃかいとうの だいぎしわ、こんな ことわ あなたが はじめてだと いいました。
+- id: ch11_tangan
+  title: 組合の嘆願書
+  background: pn_jimusho
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: iue2, x: 0.56, emotion: sad}
+  - {who: kumiai, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この年から、会社はGHQの制限を次々に受けます。11月、幸之助は公職追放の指定を受けました。
+    reading: この としから、かいしゃわ じーえいちきゅーの せいげんお つぎつぎに うけます。じゅういちがつ、こうのすけわ こうしょく ついほうの していお うけました。
+  - speaker: iue2
+    emotion: sad
+    text: '[義兄さん|にいさん]。わしも追放で、会社を出ることになった。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……[歳男|としお]。[猪飼野|いかいの]から、ずっと一緒だったのに。
+  - speaker: iue2
+    emotion: normal
+    text: 自分で会社を作るわ。[義兄さん|にいさん]に、負けへんやつを。
+  - speaker: reimu
+    text: 井植は翌年、三洋電機製作所を作ります。
+    reading: いうえわ よくねん、さんよう でんき せいさくしょお つくります。
+  - speaker: kumiai
+    emotion: normal
+    text: 社長。追放をやめてくれと、組合で嘆願書を集めました。
+    background: pn_jimusho_tangan
+  - speaker: zundamon
+    emotion: surprised
+    text: ……この[束|たば]、全部か！？
+  - speaker: kumiai
+    emotion: happy
+    text: 組合員と家族で、1万通を超えとります。
+    telops:
+    - {text: '嘆願書 1万通超え', size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 結成大会では、出ていけと言われたのに……。
+  - speaker: kumiai
+    emotion: thinking
+    text: あの時は、あの時です。
+    beat: true
+  - speaker: reimu
+    text: 経営者の追放を求める組合が多い中で、異例の嘆願でした。1947年5月、追放の指定は解かれます。
+    reading: けいえいしゃの ついほうお もとめる くみあいが おおい なかで、いれいの たんがんでした。せんきゅうひゃく よんじゅうななねん ごがつ、ついほうの していわ とかれます。
+- id: ch11_sukiyaki
+  title: もう、しまいやな
+  background: pn_niwa
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: kanbu48, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1948年の秋。幹部を集めて、すき焼きの慰労会が開かれます。
+    reading: せんきゅうひゃく よんじゅうはちねんの あき。かんぶお あつめて、すきやきの いろうかいが ひらかれます。
+  - speaker: kanbu48
+    emotion: sad
+    text: オヤジさん。給料も、分けて払うしかない月があります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……松下電器も、もうしまいやな。
+  - speaker: kanbu48
+    emotion: surprised
+    text: オヤジさん……。
+  - speaker: zundamon
+    emotion: normal
+    text: わしの経営が間違っていてこうなったんとは違うから、ええよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国の政治が、悪かったからや。
+  - speaker: reimu
+    text: 1949年には初めて希望退職者を募り、翌年は567人を待命休職にします。
+    reading: せんきゅうひゃく よんじゅうきゅうねんにわ はじめて きぼう たいしょくしゃお つのり、よくねんわ ごひゃく ろくじゅうななにんお たいめい きゅうしょくに します。
+  - speaker: reimu
+    text: 1951年に再び開業すると宣言し、1961年には社長を娘婿の正治に譲って会長になります。
+    reading: せんきゅうひゃく ごじゅういちねんに ふたたび かいぎょう すると せんげんし、せんきゅうひゃく ろくじゅういちねんにわ しゃちょうお むすめむこの まさはるに ゆずって かいちょうに なります。
+- id: card1964
+  title: ''
+  background: pn_card_1964
+  cuts:
+  - speaker: reimu
+    text: 1964年7月。熱海のホテルに、全国の販売会社と代理店の社長が集まります。
+    reading: せんきゅうひゃく ろくじゅうよねん しちがつ。あたみの ほてるに、ぜんこくの はんばい がいしゃと だいりてんの しゃちょうが あつまります。
+- id: ch12_atami
+  title: 熱海会談
+  background: pn_atami
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: dairiten, x: 0.56, emotion: angry}
+  - {who: hansha, x: 0.78, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 集まった170社のうち、黒字は20数社だけでした。
+    reading: あつまった ひゃくななじゅっしゃの うち、くろじわ にじゅうすうしゃ だけでした。
+  - speaker: dairiten
+    emotion: angry
+    text: 親の代から松下の代理店をやっているのに、赤字続きだ。
+  - speaker: dairiten
+    emotion: angry
+    text: いったい松下は、どうしてくれるんだ。
+  - speaker: zundamon
+    emotion: angry
+    text: 皆さんは、松下電器に甘えている部分がありはしませんか。
+  - speaker: hansha
+    emotion: angry
+    text: 甘えとるやと！？
+  - speaker: reimu
+    text: 会長の幸之助と代理店の言い合いは、2日続きます。
+    reading: かいちょうの こうのすけと だいりてんの いいあいわ、ふつか つづきます。
+- id: ch12_atami3
+  title: ''
+  background: pn_atami
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: dairiten, x: 0.56, emotion: thinking}
+  - {who: hansha, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 3日目。
+    reading: みっかめ。
+  - speaker: zundamon
+    emotion: sad
+    text: よくよく考えてみますと、結局は松下電器が悪かったのです。
+  - speaker: zundamon
+    emotion: sad
+    text: この[一語|いちご]に、尽きます。
+    telops:
+    - {text: '結局は松下電器が悪かった', size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: dairiten
+    emotion: surprised
+    text: ……会長。
+  - speaker: zundamon
+    emotion: sad
+    text: 昔、電球を売り込んだとき……。将来はきっと横綱になってみせますと、頼んで……。
+    se: namida
+  - speaker: reimu
+    text: 話の途中で、幸之助は言葉に詰まりました。会場は、静まり返ります。
+    reading: はなしの とちゅうで、こうのすけわ ことばに つまりました。かいじょうわ、しずまりかえります。
+  - speaker: reimu
+    text: 最後に、共存共栄と書いた色紙を一人ずつに手渡します。色紙は前もって200枚書いてありました。
+    reading: さいごに、きょうぞん きょうえいと かいた しきしお ひとりずつに てわたします。しきしわ まえもって にひゃくまい かいて ありました。
+  - speaker: hansha
+    emotion: surprised
+    text: ……一人ずつ、手書きで。
+  - speaker: reimu
+    text: 3日間で、幸之助が壇上に立った時間は延べ13時間でした。
+    reading: みっかかんで、こうのすけが だんじょうに たった じかんわ のべ じゅうさんじかんでした。
+- id: ch13_gojunen
+  title: 奥さん、ありがとう
+  background: pn_taiikukan
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: happy}
+  - {who: mumeno, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1968年、創業50周年の式典です。
+    reading: せんきゅうひゃく ろくじゅうはちねん、そうぎょう ごじっしゅうねんの しきてんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 3人で始めた会社が、50年になりました。
+  - speaker: zundamon
+    emotion: normal
+    text: 奥さん。長いあいだ、どうもありがとう。
+  - speaker: mumeno
+    emotion: surprised
+    text: ……あなた。みんなの前で、急にどないしたん。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2銭の風呂代も、なかったころから……。
+  - speaker: mumeno
+    emotion: happy
+    text: 風呂屋が閉まるまで、話そらしてましたなあ。
+    beat: true
+- id: ch13_juku
+  title: 84歳の塾
+  background: pn_zashiki
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: normal}
+  - {who: mumeno, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1973年に会長を退いて相談役となり、1979年6月に私財70億円で松下政経塾を作ります。
+    reading: せんきゅうひゃく ななじゅうさんねんに かいちょうお しりぞいて そうだんやくと なり、せんきゅうひゃく ななじゅうきゅうねん ろくがつに しざい ななじゅうおくえんで まつした せいけいじゅくお つくります。
+  - speaker: mumeno
+    emotion: surprised
+    text: 70億円！？ 84にもなって、まだ新しいこと始めはりますの？
+  - speaker: zundamon
+    emotion: normal
+    text: 政治と経済を学ぶ塾だ。若い人を、ここで育てる。
+  - speaker: mumeno
+    emotion: thinking
+    text: 相談役って、ヒマなお仕事やなかったんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: ヒマだから、作るのだ。
+    beat: true
+  - speaker: reimu
+    text: 翌年の第1期には約900人が応募し、合格は20人あまりでした。
+    reading: よくねんの だいいっきにわ やく きゅうひゃくにんが おうぼし、ごうかくわ にじゅうにん あまりでした。
+- id: ch13_saigo
+  title: お願いするのは私です
+  background: pn_byoin
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 松下幸之助, emotion: sad}
+  - {who: shujii, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1989年4月。94歳の幸之助は、気管支肺炎にかかります。
+    reading: せんきゅうひゃく はちじゅうきゅうねん しがつ。きゅうじゅうよんさいの こうのすけわ、きかんし はいえんに かかります。
+  - speaker: reimu
+    text: 4月20日。管を喉に入れる前に、主治医が苦しいでしょうがご辛抱くださいと声をかけます。
+    reading: しがつ はつか。くだお のどに いれる まえに、しゅじいが くるしいでしょうが ごしんぼう くださいと こえお かけます。
+  - speaker: zundamon
+    emotion: normal
+    text: いやいや。お願いするのは、私です。
+  - speaker: reimu
+    text: これが、最期の言葉になりました。4月27日、松下幸之助は94歳で亡くなります。
+    reading: これが、さいごの ことばに なりました。しがつ にじゅうしちにち、まつした こうのすけわ きゅうじゅうよんさいで なくなります。
+  - speaker: reimu
+    text: 合同葬には、約2万人が参列しました。
+    reading: ごうどうそうにわ、やく にまんにんが さんれつ しました。
+- id: ch14_gendai
+  title: 今のパナソニック
+  background: pn_gendai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 5人の仕事場は今、グループで18万人あまりが働くパナソニックよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 18万人！ [猪飼野|いかいの]の借家、何軒分なのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[4畳半|よじょうはん]には、まず入らないわね。'
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: 売り上げは、1年で8兆円を超えてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: この春には、家電や自転車などを手がける新しいパナソニック株式会社もできたの。
+  - speaker: zundamon
+    emotion: happy
+    text: 自転車！ [幸之助|こうのすけ]さんが丁稚のころに売ってたのと、同じなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大阪の[門真|かどま]にある松下幸之助歴史館は、入館無料よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 政経塾からは、首相が2人出てるわ。[野田佳彦|のだよしひこ]さんと、[高市早苗|たかいちさなえ]さんよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 84歳で作った塾から、総理大臣が2人も！
+- id: ch15_ronsou
+  title: 二股ソケットは発明か
+  background: pn_ronsou
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。二股ソケットは、松下幸之助の大発明！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人の自伝には、東京と京都でもう作られてよく売れてた品だと書いてあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ええっ。発明じゃないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: まだ良くできると考えて、工夫して実用新案を取った。改良品なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを3割から5割安く売ったのが、松下の手柄よ。
+    telops:
+    - {text: '発明ではなく改良と安さ', size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 東京や京都で、もう売れてたのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それに二股ソケットとしてよく載る写真は、別の商品なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 写真まで、別人なのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 1968年の社史に載った写真から、取り違えが広まったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 正式な名前は、[二灯用|にとうよう]差込みプラグ。大正の三大発明という呼び方も、わりと新しいの。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、これは本当なのだ。経営の神様は、一人もクビにしなかった！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1929年は、そのとおり。生産を半分にしても、給料は全額払ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも戦後の1949年には、初めて希望退職を募ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1950年には、4,438人のうち567人を[待命|たいめい]休職にしたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 神様の会社でも、減らした年があったのか！？
+  - speaker: tsumugi
+    emotion: normal
+    text: GHQの制限を受けて、会社が傾いてた時期よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 戦前は守って、戦後は減らした。どちらも事実なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 水道の話も、物だけじゃなかったし……。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。水道哲学って呼び方も、世間がつけた名前なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に気をつけたいのは、あなたの家の二股のほう。
+  - speaker: tsumugi
+    emotion: normal
+    text: 延長コードには、つないでいい電気の量が書いてあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 壁のコンセントも、2つの口を合わせて1500ワットまでよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電気をたくさん使う家電には、延長コードを使わないでと書いてある物もあるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクのタコ足、ストーブもドライヤーもつながってるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 今日のうちに、説明書を読みなさい。
+    beat: true
+- id: shime
+  title: ''
+  background: pn_heya
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ストーブは、壁のコンセントに直接つないだのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。タコ足のほうは？
+  - speaker: zundamon
+    emotion: happy
+    text: 穴が足りない分は、やる気で埋めるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: やる気は、コンセントには挿さらないわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたの家のタコ足も、今夜一度見てみてね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 始まりは、10日で100個しか売れなかったソケットなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、着物を[質|しち]に入れて支えた奥さんね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

@@ -1,0 +1,1 @@
+孫|none|none||v4|kimono|#9a6a7a|o1

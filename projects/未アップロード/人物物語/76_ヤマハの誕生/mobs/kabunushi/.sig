@@ -1,0 +1,1 @@
+株主|none|none||v4|haori|#2e3440|o1

@@ -1,0 +1,1 @@
+師範の先生|none|none||v4|suit|#4a5060|o1

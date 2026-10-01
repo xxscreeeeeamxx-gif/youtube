@@ -1,0 +1,1 @@
+軍の担当|none|none||v4|suit|#4a5236|o1

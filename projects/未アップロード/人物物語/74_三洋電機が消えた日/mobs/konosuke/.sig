@@ -1,0 +1,1 @@
+松下幸之助|none|none||v4|kimono|#3e4a5c|o1

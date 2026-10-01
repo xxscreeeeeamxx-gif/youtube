@@ -1,0 +1,1674 @@
+meta:
+  title: 【三洋電機が消えた日】看板が1文字ずつ降りた、10万人の会社の最後【ずんだもん解説】
+  slug: sanyo-end
+  summary: 大阪・守口の本社ビルから、ある冬の朝、看板の文字が1文字ずつ下ろされていきました。その会社の始まりは、戦後すぐの小さな工場です。義兄の松下幸之助の会社を離れた井植歳男は、自転車のランプから出直し、主婦の重労働だった洗濯を変える機械を世に出します。三つの海の名を持つ会社は、なぜ看板を下ろすことになったのか。ずんだもんが創業者と社員を演じる再現ドラマで、三洋電機の歩みをたどります。
+  tags:
+  - 三洋電機
+  - 井植歳男
+  - 松下幸之助
+  - パナソニック
+  - SANYO
+  - エネループ
+  - 洗濯機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 看板が降りた日
+    bottom: 三洋電機の最後
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: sagyo
+    label: 作業員
+    voice: 67
+    pitch: -0.04
+    outfit: work
+    color: '#7a6a4a'
+  - id: moto
+    label: 元社員
+    voice: 42
+    pitch: -0.06
+    outfit: suit
+    color: '#5a5a60'
+  - id: shima
+    label: 島の人
+    voice: 42
+    pitch: 0.04
+    outfit: work
+    color: '#5a6a7a'
+  - id: konosuke
+    label: 松下幸之助
+    voice: 13
+    pitch: -0.04
+    outfit: kimono
+    color: '#3e4a5c'
+  - id: mumeno
+    label: 姉むめの
+    voice: 8
+    pitch: 0.04
+    hair: bun
+    outfit: kimono
+    color: '#8a4a5a'
+  - id: mshain
+    label: 松下の社員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: kumiai
+    label: 組合員
+    voice: 100
+    pitch: 0.0
+    outfit: work
+    color: '#6a7280'
+  - id: goto
+    label: 後藤清一
+    voice: 11
+    pitch: -0.02
+    outfit: work
+  - id: shokunin
+    label: 職人
+    voice: 42
+    pitch: -0.04
+    outfit: apron
+    color: '#5a4632'
+  - id: shonin
+    label: 知人の商人
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#5a4a3a'
+  - id: gishi
+    label: 技術者
+    voice: 21
+    pitch: 0.0
+    outfit: labcoat
+  - id: jitensha
+    label: 自転車屋
+    voice: 42
+    pitch: 0.08
+    outfit: apron
+  - id: shuto
+    label: 姑
+    voice: 8
+    pitch: -0.12
+    hair: bun
+    outfit: kimono
+    color: '#4a4448'
+  - id: yuro
+    label: 井植祐郎
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#4a4038'
+  - id: kodomo
+    label: 子ども
+    voice: 73
+    pitch: 0.0
+  - id: douryo
+    label: 同僚
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#3e4a5c'
+  - id: gishi2
+    label: 工場の技師
+    voice: 11
+    pitch: 0.04
+    outfit: labcoat
+  - id: kosan
+    label: 古参の工員
+    voice: 42
+    pitch: -0.02
+    outfit: work
+    color: '#7a8a9a'
+  - id: kanbu
+    label: 幹部
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2e3a'
+  - id: otsubo
+    label: 大坪文雄
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#2f3a52'
+  - id: sano
+    label: 佐野精一郎
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#4a5060'
+  - id: eigyo
+    label: 営業
+    voice: 100
+    pitch: 0.02
+    outfit: suit
+    color: '#2f4a5a'
+  - id: senpai
+    label: 工場の先輩
+    voice: 42
+    pitch: 0.06
+    outfit: work
+    color: '#8a9aa8'
+scenes:
+- id: co_kanban
+  title: ''
+  background: sa_kanban
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 三洋の社員, emotion: sad}
+  - {who: sagyo, x: 0.56, emotion: normal}
+  - {who: moto, x: 0.78, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2011年12月23日の朝。大阪・守口の本社ビルから、SANYOの看板が1文字ずつ下ろされます。
+    reading: にせん じゅういちねん じゅうにがつ にじゅうさんにちの あさ。おおさか もりぐちの ほんしゃ びるから、さんよーの かんばんが ひともじずつ おろされます。
+  - speaker: sagyo
+    emotion: normal
+    text: 次の[1文字|ひともじ]、吊るすで。50キロはあるからな、気ぃつけや！
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクの会社の名前が、[空|そら]から降りてくるのだ。
+  - speaker: moto
+    emotion: sad
+    text: 覚悟をしていたことではあるが……。
+  - speaker: moto
+    emotion: sad
+    text: 自分が働いていた場所から、[SANYO|さんよー]のロゴが消えるのは寂しい。
+  - speaker: reimu
+    text: 一番大きかった頃、この会社では世界で10万人が働いていました。
+    reading: いちばん おおきかった ころ、この かいしゃでわ せかいで じゅうまんにんが はたらいて いました。
+  - speaker: reimu
+    text: 会社の名前は、三洋電機。始まりは、自転車のランプでした。
+    reading: かいしゃの なまえわ さんよう でんき。はじまりわ、じてんしゃの らんぷでした。
+- id: hook
+  title: ''
+  background: sa_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。リモコンが動かないから、電池を替えるのだ！
+  - speaker: zundamon
+    emotion: surprised
+    text: 引き出しの電池……これも[空|から]、これも[空|から]。
+  - speaker: zundamon
+    emotion: happy
+    text: 使い切った電池も、とりあえずしまっておく主義なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それ、充電すれば何度も使える電池よ。充電器は？
+  - speaker: zundamon
+    emotion: happy
+    text: 充電器も、大事にどこかへしまったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: しまい込むことにかけては、天才ね。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: その電池、もとは三洋電機という会社が作ったのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: さんよう？ 聞いたことないぞ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界で10万人が働いてた会社。今は、看板も残ってないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10万人もいたのに、どうして消えちゃったの？
+    telops:
+    - {text: 10万人の会社が消えた, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、淡路島の船乗りの家に生まれた男よ。
+- id: card1917
+  title: ''
+  background: sa_card_1917
+  cuts:
+  - speaker: reimu
+    text: 1917年、淡路島。船乗りの家に育った井植歳男は、14歳でした。
+    reading: せんきゅうひゃく じゅうななねん、あわじしま。ふなのりの いえに そだった いうえ としおわ、じゅうよんさいでした。
+- id: ch1_awaji
+  title: 姉からの手紙
+  background: sa_awaji
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, scale: 0.85, emotion: happy}
+  - {who: shima, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shima
+    emotion: normal
+    text: '[歳男|としお]。学校を出たら、どないするんや。'
+  - speaker: zundamon
+    emotion: happy
+    text: 大阪の姉ちゃんから、手紙が来たのだ！
+  - speaker: shima
+    emotion: surprised
+    text: むめのちゃんか。大阪へ嫁いだ子やな。
+  - speaker: zundamon
+    emotion: happy
+    text: '[義兄さん|にいさん]が、電気の器具を作る商売を始める。手伝いに来いって。'
+  - speaker: shima
+    emotion: thinking
+    text: 海の男の息子が、陸で電気をいじるんか。
+  - speaker: zundamon
+    emotion: happy
+    text: 大阪で、ひと山当てるんだ！
+  - speaker: shima
+    emotion: thinking
+    text: まだ14やろ。当てる前に、迷子になるなよ。
+    beat: true
+- id: card1918
+  title: ''
+  background: sa_card_1918
+  cuts:
+  - speaker: reimu
+    text: 1918年3月。大阪の小さな借家で、松下電気器具製作所が始まります。
+    reading: せんきゅうひゃく じゅうはちねん さんがつ。おおさかの ちいさな しゃくやで、まつした でんき きぐ せいさくしょが はじまります。
+- id: ch1_shakuya
+  title: 3人だけの会社
+  background: sa_shakuya
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 井植歳男, scale: 0.85, emotion: surprised}
+  - {who: konosuke, x: 0.56, emotion: happy}
+  - {who: mumeno, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: konosuke
+    emotion: happy
+    text: '[歳男|としお]くん。今日から、ここが松下電気器具製作所や。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 製作所……。ここ、[義兄さん|にいさん]の家ですよね。
+  - speaker: mumeno
+    emotion: normal
+    text: 住むのも作るのも、ここなんよ。ぼさっとせんと、手ぇ動かし！
+  - speaker: zundamon
+    emotion: normal
+    text: 姉ちゃん、社員は何人いるの？
+  - speaker: mumeno
+    emotion: normal
+    text: うちの人とうちと、あんたの3人や。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3人……。しかも全員、親戚なのだ。
+    beat: true
+  - speaker: konosuke
+    emotion: happy
+    text: 小さく始めて、大きくしたらええんや。
+  - speaker: zundamon
+    emotion: happy
+    text: はい、[義兄さん|にいさん]！ 何から作りますか。
+  - speaker: konosuke
+    emotion: normal
+    text: 電気の器具や。まずは、わしの手元をよう見とき。
+  - speaker: mumeno
+    emotion: angry
+    text: 見とるだけやったら、ご飯は出えへんで。
+  - speaker: zundamon
+    emotion: sad
+    text: 姉ちゃん、家でも仕事場でも厳しい……。
+  - speaker: reimu
+    text: 23歳の幸之助と妻のむめの、15歳の歳男の3人でした。
+    reading: にじゅうさんさいの こうのすけと つまの むめの、じゅうごさいの としおの さんにんでした。
+- id: ch1_senmu
+  title: 肩書きが増えていく
+  background: sa_matsushita
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: normal}
+  - {who: mshain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1920年。17歳の歳男は東京の駐在員として、ひとりで送り出されます。
+    reading: せんきゅうひゃく にじゅうねん。じゅうななさいの としおわ とうきょうの ちゅうざいいんとして、ひとりで おくりだされます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 17で、東京にひとり……。
+    beat: true
+  - speaker: reimu
+    text: 1935年。会社は松下電器産業になり、歳男は専務になりました。
+    reading: せんきゅうひゃく さんじゅうごねん。かいしゃわ まつした でんき さんぎょうに なり、としおわ せんむに なりました。
+  - speaker: mshain
+    emotion: normal
+    text: 専務。今日は、松下無線の社長として行かれますか。
+  - speaker: mshain
+    emotion: thinking
+    text: それとも、松下乾電池の専務として？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……今日のボクは、どのボクなのだ。
+    se: manuke
+  - speaker: mshain
+    emotion: normal
+    text: どれで行かれても、お顔は同じですけど。
+    beat: true
+  - speaker: reimu
+    text: 1943年には松下造船の社長も兼ね、木の船を造りました。
+    reading: せんきゅうひゃく よんじゅうさんねんにわ まつした ぞうせんの しゃちょうも かね、きの ふねお つくりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 船乗りの息子が、今度は船を造るのか。
+  - speaker: mshain
+    emotion: surprised
+    text: 電気の会社が、船までですか。
+- id: ch2_seigen
+  title: 戦争が終わって
+  background: sa_matsushita_sengo
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: thinking}
+  - {who: kumiai, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 1946年。松下電器は、GHQから制限会社に指定されるなど7つの制限を受けます。
+    reading: せんきゅうひゃく よんじゅうろくねん。まつした でんきわ、じーえいちきゅーから せいげん がいしゃに してい されるなど ななつの せいげんお うけます。
+  - speaker: reimu
+    text: 社長の幸之助も、公職追放の指定を受けました。
+    reading: しゃちょうの こうのすけも こうしょく ついほうの していお うけました。
+  - speaker: kumiai
+    emotion: angry
+    text: この時期に会社再建の支柱である[社主|しゃしゅ]を失うことは、会社の崩壊を意味する！
+  - speaker: kumiai
+    emotion: angry
+    text: '[社主|しゃしゅ]の追放解除を、GHQに嘆願しよう！'
+  - speaker: zundamon
+    emotion: surprised
+    text: 組合のみんなが、[義兄さん|にいさん]を守ろうとしてる……。
+  - speaker: kumiai
+    emotion: normal
+    text: 専務。わしら、代理店さんとも一緒に動きます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……頼む。
+  - speaker: reimu
+    text: 組合や代理店の嘆願は実り、幸之助の追放は翌年に解かれます。
+    reading: くみあいや だいりてんの たんがんわ みのり、こうのすけの ついほうわ よくねんに とかれます。
+- id: ch2_yameru
+  title: 松下を去る
+  background: sa_matsushita_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: thinking}
+  - {who: goto, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1946年12月。歳男は、松下電器の専務を辞めます。
+    reading: せんきゅうひゃく よんじゅうろくねん じゅうにがつ。としおわ、まつした でんきの せんむお やめます。
+  - speaker: reimu
+    text: 長男の敏は、父もGHQの追放を受けて辞めたと書いています。
+    reading: ちょうなんの さとしわ、ちちも じーえいちきゅーの ついほうお うけて やめたと かいて います。
+  - speaker: goto
+    emotion: surprised
+    text: 専務、ほんまに松下を出はるんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……もう、決めたことだ。
+  - speaker: goto
+    emotion: sad
+    text: 14の時から、30年近くおったのに。
+  - speaker: zundamon
+    emotion: sad
+    text: 人生の3分の2を、ここで過ごしたな。
+  - speaker: goto
+    emotion: thinking
+    text: これから、どないしはるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分の会社を作る。……元手は、まだ無いけどな。
+  - speaker: goto
+    emotion: surprised
+    text: 一番大事なとこが、[空|から]っぽやないですか！
+    beat: true
+  - speaker: goto
+    emotion: normal
+    text: ……工場がでけたら、わしも呼んでください。
+  - speaker: zundamon
+    emotion: happy
+    text: その時は、真っ先に呼ぶ。
+- id: ch2_rakkasan
+  title: 落下傘で傘を作る
+  background: sa_sagyoba
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: happy}
+  - {who: shokunin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見てくれ。軍が使ってた落下傘だ。もう誰も使わないのだ。
+  - speaker: shokunin
+    emotion: surprised
+    text: そんなもん集めて、どないしますねん。
+  - speaker: zundamon
+    emotion: happy
+    text: これは絹だ。ほどいて、傘にする！
+  - speaker: shokunin
+    emotion: thinking
+    text: '[空|そら]から落ちる道具で、雨を防ぐんかいな。'
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: normal
+    text: 落ちるのを、ゆっくりにする布だ。雨くらい、なんてことない。
+  - speaker: shokunin
+    emotion: thinking
+    text: 理屈は分かりませんけど、縫うのはわしですな。
+  - speaker: zundamon
+    emotion: happy
+    text: 落下傘は、まだまだあるぞ。どんどん縫ってくれ！
+  - speaker: shokunin
+    emotion: sad
+    text: わしの指が、先に落ちてまいますわ。
+  - speaker: reimu
+    text: 落下傘の絹は、本当に傘になりました。
+    reading: らっかさんの きぬわ、ほんとうに かさに なりました。
+    background: sa_sagyoba_kasa
+  - speaker: shokunin
+    emotion: surprised
+    text: ……ほんまに、傘がずらっと並んでもうた。
+  - speaker: zundamon
+    emotion: happy
+    text: 次は、進駐軍の兵隊さんに電気スタンドを売る。
+  - speaker: shokunin
+    emotion: thinking
+    text: 松下の専務さんが、傘屋とスタンド屋ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: '[元専務|もとせんむ]だ。元手が無いから、何でも売る。'
+  - speaker: reimu
+    text: 戦争の残り物を元手に変えて、歳男は新しい会社の準備を進めました。
+    reading: せんそうの のこりものお もとでに かえて、としおわ あたらしい かいしゃの じゅんびお すすめました。
+- id: card1947
+  title: ''
+  background: sa_card_1947
+  cuts:
+  - speaker: reimu
+    text: 1947年2月1日。歳男は大阪の守口で、三洋電機製作所を始めます。
+    reading: せんきゅうひゃく よんじゅうななねん にがつ ついたち。としおわ おおさかの もりぐちで、さんよう でんき せいさくしょお はじめます。
+- id: ch3_hojo
+  title: 17番目のランプ屋
+  background: sa_hojo
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: happy}
+  - {who: goto, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 同じ年。歳男は幸之助から、北条工場と発電ランプを作る権利を譲られます。
+    reading: おなじ とし。としおわ こうのすけから、ほうじょう こうじょうと はつでん らんぷお つくる けんりお ゆずられます。
+  - speaker: goto
+    emotion: happy
+    text: 社長。兵庫の[北条|ほうじょう]の工場、ほんまに譲ってもらえたんですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 工場長は、後藤くんだ。自転車のランプを作りまくるぞ！
+  - speaker: goto
+    emotion: thinking
+    text: けど社長。発電ランプを作ってる会社、もう16社ありますよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……うちは、17番目なのだ。
+    telops:
+    - {text: 17番目のランプ屋, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: goto
+    emotion: thinking
+    text: 完全に、出遅れてますな。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 自転車は、国民の足になっている。その自転車には、[灯り|あかり]がいる。
+  - speaker: zundamon
+    emotion: happy
+    text: 後から来ても、いい物を作れば勝てる。
+  - speaker: goto
+    emotion: normal
+    text: ほんで、ランプに付ける名前は？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……しばらくは、[義兄さん|にいさん]の会社のナショナルで売る。
+  - speaker: goto
+    emotion: surprised
+    text: 独立したのに、看板は借り物ですか！
+    beat: true
+- id: ch3_namae
+  title: ''
+  background: sa_hojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: normal}
+  - {who: goto, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: goto
+    emotion: thinking
+    text: 社長。うちの名前のさんようって、山に太陽の山陽ですか。
+  - speaker: zundamon
+    emotion: angry
+    text: 違うのだ！ 数字の三に、海の洋だ。
+  - speaker: zundamon
+    emotion: happy
+    text: 太平洋・大西洋・インド洋。3つの海をまたいで、世界で商売するのだ！
+    se: jaan
+  - speaker: goto
+    emotion: thinking
+    text: 世界の前に、まずこの工場のランプを売りましょ。
+  - speaker: zundamon
+    emotion: normal
+    text: 名前だけ、先に世界へ行かせておくんだ。
+  - speaker: reimu
+    text: 発電ランプは1949年に、国内の6割を占めるまでになります。
+    reading: はつでん らんぷわ せんきゅうひゃく よんじゅうきゅうねんに、こくないの ろくわりお しめるまでに なります。
+  - speaker: reimu
+    text: 1950年4月、三洋電機株式会社を設立。資本金は2000万円でした。
+    reading: せんきゅうひゃく ごじゅうねん しがつ、さんよう でんき かぶしきがいしゃお せつりつ。しほんきんわ にせんまんえんでした。
+- id: ch4_shonin
+  title: 一番の重労働
+  background: sa_shonin
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: normal}
+  - {who: shonin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shonin
+    emotion: happy
+    text: '[井植|いうえ]さん。うちの家内は、20年前から洗濯機を[使てます|つこてます]ねん。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 20年前から！？
+  - speaker: shonin
+    emotion: happy
+    text: おかげで家内は、洗濯の苦労を全然知りまへん。
+  - speaker: zundamon
+    emotion: thinking
+    text: 全然……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の[御婦人方|ごふじんがた]にとって、一番の重労働は洗濯だなあ。
+  - speaker: shonin
+    emotion: surprised
+    text: 急に遠い目をして、どないしはったんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: うちで、洗濯機を作ります！
+    se: hirameki
+  - speaker: shonin
+    emotion: surprised
+    text: ランプの会社が、洗濯機を！？
+- id: ch4_kakuhan
+  title: 試作機を捨てる
+  background: sa_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: thinking}
+  - {who: gishi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1953年1月。丸い形の、かき回して洗う洗濯機の試作に成功します。
+    reading: せんきゅうひゃく ごじゅうさんねん いちがつ。まるい かたちの、かきまわして あらう せんたくきの しさくに せいこう します。
+  - speaker: gishi
+    emotion: happy
+    text: 社長！ 丸型の試作機、ちゃんと回りました！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……うん。これは、やめよう。
+  - speaker: gishi
+    emotion: surprised
+    text: はあ！？ 数千万円かけた試作ですよ！
+  - speaker: zundamon
+    emotion: normal
+    text: この型は、回す向きを逆にする仕掛けがいる。だから原価が高い。
+  - speaker: zundamon
+    emotion: normal
+    text: 壊れやすいし、洗うのに時間もかかる。
+  - speaker: gishi
+    emotion: angry
+    text: それ、回る前に言うてください！
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 四角い箱にして、噴き出す水の流れで洗う。[噴流式|ふんりゅうしき]に切り替えるぞ！
+    telops:
+    - {text: 数千万円の試作をやめた, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: gishi
+    emotion: sad
+    text: ……一から、やり直しや。
+  - speaker: gishi
+    emotion: thinking
+    text: '[噴流式|ふんりゅうしき]なんて、国内ではまだ誰も作ってまへんで。'
+  - speaker: zundamon
+    emotion: happy
+    text: だから、うちが最初に作るんだ。
+- id: ch4_rugby
+  title: 泥だらけのシャツ
+  background: sa_niwa
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: ある日。長男の敏が、泥だらけのラグビーシャツで帰ってきます。
+    reading: ある ひ。ちょうなんの さとしが、どろだらけの らぐびー しゃつで かえって きます。
+  - speaker: zundamon
+    emotion: happy
+    text: これは、試作機の出番なのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: ……ほら、泥が落ちた。
+  - speaker: zundamon
+    emotion: happy
+    text: '[敏|さとし]、もういっぺん走ってこい！'
+  - speaker: reimu
+    text: 敏はのちに、この日の父の姿を文章に書き残しています。
+    reading: さとしわ のちに、この ひの ちちの すがたお ぶんしょうに かきのこして います。
+- id: ch4_jitensha
+  title: 自転車屋で洗濯機
+  background: sa_jitenshaya
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 井植歳男, emotion: happy}
+  - {who: jitensha, x: 0.56, emotion: surprised}
+  - {who: shuto, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1953年8月、国産初の噴流式洗濯機SW-53が発売されます。値段は3万円を切りました。
+    reading: せんきゅうひゃく ごじゅうさんねん はちがつ、こくさんはつの ふんりゅうしき せんたくき えすだぶりゅー ごじゅうさんが はつばい されます。ねだんわ さんまんえんお きりました。
+    telops:
+    - {text: 国産初の噴流式洗濯機, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 洗濯機は、全国の自転車店の店先でも実演して売りました。
+    reading: せんたくきわ、ぜんこくの じてんしゃてんの みせさきでも じつえん して うりました。
+  - speaker: jitensha
+    emotion: surprised
+    text: 社長、うちは自転車屋でっせ。なんで洗濯機ですねん。
+  - speaker: zundamon
+    emotion: happy
+    text: ランプを買いに来るお客さんに、見てもらいたいんです。
+  - speaker: shuto
+    emotion: thinking
+    text: なんや、この四角い箱は。
+  - speaker: zundamon
+    emotion: happy
+    text: 汚れ物を入れたら、水の流れが洗ってくれるんです。
+  - speaker: shuto
+    emotion: angry
+    text: 近頃の若い嫁は、楽をすることばかり考えて……。
+  - speaker: shuto
+    emotion: angry
+    text: けしからん！
+    se: gaan
+  - speaker: zundamon
+    emotion: angry
+    text: 楽をして、何が悪いのだ！
+  - speaker: jitensha
+    emotion: angry
+    text: 社長、お客さんにケンカ売らんといてください。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: ……お母さん。洗濯で、手が荒れてませんか。
+  - speaker: shuto
+    emotion: thinking
+    text: ……そら、荒れとるけど。
+  - speaker: zundamon
+    emotion: happy
+    text: 嫁さんの手もお母さんの手も、守れる箱なんです。
+  - speaker: shuto
+    emotion: thinking
+    text: ……ちょっと、中を見せてみ。
+  - speaker: reimu
+    text: 1953年12月にはテレビにも乗り出し、翌年には株式を上場しました。
+    reading: せんきゅうひゃく ごじゅうさんねん じゅうにがつにわ てれびにも のりだし、よくねんにわ かぶしきお じょうじょう しました。
+- id: card1963
+  title: ''
+  background: sa_card_1963
+  cuts:
+  - speaker: reimu
+    text: 1963年。故郷の淡路島に、歳男が始めたフェリーが走り出します。
+    reading: せんきゅうひゃく ろくじゅうさんねん。こきょうの あわじしまに、としおが はじめた ふぇりーが はしりだします。
+- id: ch5_ferry
+  title: 故郷に船を出す
+  background: sa_minato
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: happy}
+  - {who: shima, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shima
+    emotion: happy
+    text: '[歳男|としお]さん。えらい立派な船やな。'
+  - speaker: zundamon
+    emotion: happy
+    text: 船乗りの息子が、島に船を走らせたのだ。
+  - speaker: shima
+    emotion: surprised
+    text: 次は、本州と四国を橋でつなぐ運動もしてるんやて？
+  - speaker: zundamon
+    emotion: happy
+    text: そうだ。島を通る橋なら、船を待たずに渡れるからな。
+  - speaker: shima
+    emotion: surprised
+    text: 電機の社長が、橋まで架けるんかいな。
+    se: hammer
+  - speaker: zundamon
+    emotion: happy
+    text: 頼まれなくても、口は出す。
+  - speaker: shima
+    emotion: happy
+    text: 口を出すのは、昔から得意やったな。
+  - speaker: reimu
+    text: 同じ年には、日本経済新聞の私の履歴書を27回連載しています。
+    reading: おなじ としにわ、にほん けいざい しんぶんの わたしの りれきしょお にじゅうななかい れんさい して います。
+- id: ch5_yuzuru
+  title: 弟に社長を譲る
+  background: sa_shachoshitsu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井植歳男, emotion: normal}
+  - {who: yuro, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1968年。65歳の歳男は、社長の座を弟に譲ります。
+    reading: せんきゅうひゃく ろくじゅうはちねん。ろくじゅうごさいの としおわ、しゃちょうの ざお おとうとに ゆずります。
+  - speaker: zundamon
+    emotion: normal
+    text: 社長は、お前がやってくれ。
+  - speaker: yuro
+    emotion: surprised
+    text: 兄さんは、どないするんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクは会長になる。……まあ、口はまだ出すけどな。
+  - speaker: yuro
+    emotion: thinking
+    text: それ、辞めたうちに入るんですか。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: 島を出てから、もう50年か。
+  - speaker: yuro
+    emotion: normal
+    text: 兄さんが走り通した50年です。あとは、任せてください。
+  - speaker: zundamon
+    emotion: happy
+    text: ……頼んだぞ。
+- id: card1969
+  title: ''
+  background: sa_card_1969
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1969年7月16日。井植歳男は、66歳で亡くなりました。
+    reading: せんきゅうひゃく ろくじゅうきゅうねん しちがつ じゅうろくにち。いうえ としおわ、ろくじゅうろくさいで なくなりました。
+- id: ch5_shi
+  title: 創業者のいない部屋
+  background: sa_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 若い社員, emotion: sad}
+  - {who: goto, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: goto
+    emotion: sad
+    text: ……創業者が、亡くならはった。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……会長が。
+  - speaker: goto
+    emotion: sad
+    text: 66やった。まだまだ、口を出してもらうつもりやったのに。
+  - speaker: zundamon
+    emotion: sad
+    text: この部屋で、弟さんに社長を譲ったばかりですよね……。
+  - speaker: goto
+    emotion: thinking
+    text: 17番目のランプ屋や、言われた日から22年や。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ランプの[灯り|あかり]が、ここまで来たんですね。
+- id: ch6_banpaku
+  title: 人間洗濯機
+  background: sa_banpaku
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 万博の案内係, emotion: happy}
+  - {who: kodomo, x: 0.7, scale: 0.85, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 翌1970年、大阪万博。三洋のパビリオンに、変わった機械が並びます。
+    reading: よくとし せんきゅうひゃく ななじゅうねん、おおさか ばんぱく。さんようの ぱびりおんに、かわった きかいが ならびます。
+  - speaker: kodomo
+    emotion: surprised
+    text: このカプセル、なんの機械なん？
+  - speaker: zundamon
+    emotion: happy
+    text: 人間洗濯機だぞ！ 座るだけで、体が洗えるんだ。
+  - speaker: kodomo
+    emotion: surprised
+    text: 人を、洗濯するん！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: 超音波と、マッサージのボールで洗うんだ。
+  - speaker: kodomo
+    emotion: thinking
+    text: ……ぼく、おふろでええわ。
+    beat: true
+  - speaker: kodomo
+    emotion: happy
+    text: ほな、お兄さんが先に入ってみてや。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ボクは、見る係なのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 洗濯機の会社が、とうとう人まで洗い始めたのだ。
+- id: ch6_heater
+  title: ファンヒーターの回収
+  background: sa_uketsuke
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: thinking}
+  - {who: douryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1971年からは、弟の薫が社長を務めます。
+    reading: せんきゅうひゃく ななじゅういちねんからわ、おとうとの かおるが しゃちょうお つとめます。
+  - speaker: reimu
+    text: 1985年。前の年に作った石油ファンヒーターで、一酸化炭素中毒の事故が起きます。
+    reading: せんきゅうひゃく はちじゅうごねん。まえの としに つくった せきゆ ふぁんひーたーで、いっさんかたんそ ちゅうどくの じこが おきます。
+  - speaker: reimu
+    text: 中毒になった人のうち、4人が亡くなりました。
+    reading: ちゅうどくに なった ひとの うち、よにんが なくなりました。
+  - speaker: douryo
+    emotion: thinking
+    text: はい、三洋電機です。その型のヒーターは、使わずに置いといてください。
+  - speaker: douryo
+    emotion: sad
+    text: 引き取りに伺います。……本当に、申し訳ありません。
+  - speaker: zundamon
+    emotion: sad
+    text: 1台でも残ってたら、また誰かが……。
+  - speaker: douryo
+    emotion: thinking
+    text: 最後の1台まで、探すんや。
+  - speaker: reimu
+    text: 7月に回収を始め、翌年にはテレビのCMでも呼びかけました。
+    reading: しちがつに かいしゅうお はじめ、よくねんにわ てれびの しーえむでも よびかけました。
+- id: ch6_honsha
+  title: 新しい本社の看板
+  background: sa_honsha
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: happy}
+  - {who: douryo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1986年からは、歳男の長男の敏が社長を務めます。
+    reading: せんきゅうひゃく はちじゅうろくねんからわ、としおの ちょうなんの さとしが しゃちょうお つとめます。
+  - speaker: reimu
+    text: 一番大きかった頃、売上はおよそ2兆5000億円に届きました。
+    reading: いちばん おおきかった ころ、うりあげわ およそ にちょう ごせんおくえんに とどきました。
+  - speaker: reimu
+    text: 1999年8月。守口の本社ビルが建て替わり、SANYOの文字が掲げられます。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねん はちがつ。もりぐちの ほんしゃ びるが たてかわり、さんよーの もじが かかげられます。
+  - speaker: douryo
+    emotion: happy
+    text: 見てみ。新しい本社に、でっかい[SANYO|さんよー]や。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクらの看板なのだ！
+  - speaker: douryo
+    emotion: thinking
+    text: あの[1文字|ひともじ]、どのくらい重いんやろな。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクより、重そうなのだ。
+    beat: true
+  - speaker: douryo
+    emotion: happy
+    text: お前と比べてどないすんねん。
+  - speaker: reimu
+    text: 翌2000年。子会社が、出力の足りない太陽電池を偽って売っていたと分かります。
+    reading: よくとし にせんねん。こがいしゃが、しゅつりょくの たりない たいようでんちお いつわって うって いたと わかります。
+  - speaker: reimu
+    text: 当時の社長は、辞任を表明しました。
+    reading: とうじの しゃちょうわ、じにんお ひょうめい しました。
+  - speaker: zundamon
+    emotion: sad
+    text: 看板を掲げた次の年に、これか……。
+- id: card2004
+  title: ''
+  background: sa_card_2004
+  cuts:
+  - speaker: reimu
+    text: 2004年10月23日、土曜日の夕方。新潟県小千谷の、三洋グループの半導体工場です。
+    reading: にせんよねん じゅうがつ にじゅうさんにち、どようびの ゆうがた。にいがたけん おじやの、さんよう ぐるーぷの はんどうたい こうじょうです。
+- id: ch7_jishin
+  title: 中越地震の夕方
+  background: sa_cleanroom
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: normal}
+  - {who: gishi2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: gishi2
+    emotion: normal
+    text: ここは、ほこりひとつで半導体がだめになる部屋や。
+  - speaker: zundamon
+    emotion: normal
+    text: 分かってます。そーっと歩きます。
+  - speaker: gishi2
+    emotion: thinking
+    text: そーっとでも、もうちょいはよ歩き。
+  - speaker: reimu
+    text: 夕方5時56分。新潟県中越地震が起きます。
+    reading: ゆうがた ごじ ごじゅうろっぷん。にいがたけん ちゅうえつ じしんが おきます。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……揺れてる！？ 立っていられない！
+    se: don
+    background: sa_cleanroom_jishin
+  - speaker: gishi2
+    emotion: surprised
+    text: 露光装置が、何十センチも動いとる！
+  - speaker: zundamon
+    emotion: surprised
+    text: テスターが、倒れた！
+  - speaker: gishi2
+    emotion: sad
+    text: フォトマスクが、棚ごと倒れて散らばっとる……。
+  - speaker: zundamon
+    emotion: sad
+    text: ……外へ出よう。今は、それしかない。
+  - speaker: reimu
+    text: 上下の揺れは820ガル。阪神・淡路大震災のおよそ2.5倍でした。
+    reading: じょうげの ゆれわ はっぴゃく にじゅうがる。はんしん あわじ だいしんさいの およそ にてんごばいでした。
+- id: ch7_soto
+  title: ''
+  background: sa_kojo_soto
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: sad}
+  - {who: gishi2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 余震が続き、社員は工場の中に入ることができません。
+    reading: よしんが つづき、しゃいんわ こうじょうの なかに はいる ことが できません。
+  - speaker: gishi2
+    emotion: thinking
+    text: 中の機械、どないなっとるんや。
+  - speaker: zundamon
+    emotion: sad
+    text: 入れないから、確かめようがない……。
+  - speaker: gishi2
+    emotion: sad
+    text: 目の前に工場があるのに、何もできんのか。
+  - speaker: reimu
+    text: 5本あった生産ラインのうち、1本は使えなくなりました。
+    reading: ごほん あった せいさん らいんの うち、いっぽんわ つかえなく なりました。
+  - speaker: reimu
+    text: しばらくして。
+    reading: しばらく して。
+  - speaker: gishi2
+    emotion: thinking
+    text: 群馬と岐阜の工場で、代わりに作ることになった。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクも、応援に行きます！
+  - speaker: gishi2
+    emotion: thinking
+    text: 1500人のうち、応援は200人あまりや。家で待つ人も、380人おる。
+  - speaker: zundamon
+    emotion: sad
+    text: ……待つほうも、つらいですね。
+  - speaker: reimu
+    text: 11月8日に群馬と岐阜で代わりの生産が始まり、12月22日には一部のラインが動き出します。
+    reading: じゅういちがつ ようかに ぐんまと ぎふで かわりの せいさんが はじまり、じゅうにがつ にじゅうににちにわ いちぶの らいんが うごきだします。
+- id: ch7_higai
+  title: 保険金なし
+  background: sa_office
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: thinking}
+  - {who: douryo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: douryo
+    emotion: sad
+    text: 地震の被害、全部で503億円やて。
+  - speaker: zundamon
+    emotion: thinking
+    text: 503億……。でも、保険でだいぶ戻ってくるだろ。
+  - speaker: douryo
+    emotion: sad
+    text: 保険金は、なしや。
+  - speaker: zundamon
+    emotion: surprised
+    text: なし！？
+    se: gaan
+    telops:
+    - {text: 被害503億円・保険金なし, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#E85A4A", anim: up}
+  - speaker: douryo
+    emotion: thinking
+    text: 1円も出えへん。全部、会社がかぶるんや。
+  - speaker: zundamon
+    emotion: sad
+    text: ……壊れた機械の分だけ、そのまま穴になるのか。
+  - speaker: reimu
+    text: 三洋の常務は、復旧で技術者の腕が上がり歩留まりも良くなったと語っています。
+    reading: さんようの じょうむわ、ふっきゅうで ぎじゅつしゃの うでが あがり ぶどまりも よく なったと かたって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 転んでも、ただでは起きなかったのか。
+  - speaker: douryo
+    emotion: sad
+    text: けど、503億の穴はそのままや。
+- id: card2005
+  title: ''
+  background: sa_card_2005
+  cuts:
+  - speaker: reimu
+    text: 2005年4月。三洋は、1371億円の赤字を発表します。
+    reading: にせんごねん しがつ。さんようわ、せん さんびゃく ななじゅういちおくえんの あかじお はっぴょう します。
+- id: ch8_akaji
+  title: 創業以来の赤字
+  background: sa_office
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: sad}
+  - {who: douryo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: douryo
+    emotion: sad
+    text: 会社の発表、読むで。創業以来、類をみない大変厳しい経営環境。
+  - speaker: zundamon
+    emotion: sad
+    text: 会社が、自分でそう書くのか……。
+  - speaker: reimu
+    text: 6月。キャスター出身の野中ともよが会長に、井植敏雅が社長になります。
+    reading: ろくがつ。きゃすたー しゅっしんの のなか ともよが かいちょうに、いうえ としまさが しゃちょうに なります。
+  - speaker: douryo
+    emotion: thinking
+    text: 社長は、創業家の3代目や。
+  - speaker: zundamon
+    emotion: normal
+    text: 会長は、テレビで見てた人だな。
+  - speaker: reimu
+    text: 7月。会社は、再建の計画Think GAIAを発表します。
+    reading: しちがつ。かいしゃわ、さいけんの けいかく しんく がいあお はっぴょう します。
+  - speaker: douryo
+    emotion: surprised
+    text: 会長が、会見でこう言うたで。
+  - speaker: douryo
+    emotion: surprised
+    text: 不要なDNAは聖域をもうけずに切る、やて。
+  - speaker: zundamon
+    emotion: thinking
+    text: 不要なDNAって、どこのことなのだ……。
+  - speaker: douryo
+    emotion: thinking
+    text: うちは、中小企業の集まりのようだとも言うてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10万人いるのに、中小企業！？
+    se: tenten
+  - speaker: douryo
+    emotion: thinking
+    text: 大きさの話やない。ばらばらに動いとる、いうことや。
+  - speaker: reimu
+    text: 3年で、社員の15%にあたる1万4000人を減らす計画でした。
+    reading: さんねんで、しゃいんの じゅうごぱーせんとに あたる いちまん よんせんにんお へらす けいかくでした。
+  - speaker: douryo
+    emotion: sad
+    text: 1万4000人。わしらの誰かも、入っとるんやろな。
+- id: ch8_hojo
+  title: 創業の地を閉じる
+  background: sa_hojo_2005
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: sad}
+  - {who: kosan, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 9月。減らす人数は1万5000人に増え、閉じる工場の中に北條工場が入ります。
+    reading: くがつ。へらす にんずうわ いちまん ごせんにんに ふえ、とじる こうじょうの なかに ほうじょう こうじょうが はいります。
+  - speaker: kosan
+    emotion: sad
+    text: '[北條|ほうじょう]が閉まるんか。創業者が、松下幸之助さんから譲ってもろた工場やで。'
+  - speaker: zundamon
+    emotion: sad
+    text: 自転車のランプを作った、創業の地ですよね……。
+  - speaker: kosan
+    emotion: thinking
+    text: 社長は、会見でこう言うてはった。
+  - speaker: kosan
+    emotion: thinking
+    text: スリム化には時間をかけず、できるだけ早く実行する。
+  - speaker: zundamon
+    emotion: sad
+    text: 創業の地まで、閉じるのか。
+    se: namida
+  - speaker: kosan
+    emotion: sad
+    text: ……[灯り|あかり]は、ここから始まったんやけどな。
+  - speaker: reimu
+    text: 北條工場は2006年に閉じ、跡地は2008年に商業施設になりました。
+    reading: ほうじょう こうじょうわ にせんろくねんに とじ、あとちわ にせんはちねんに しょうぎょう しせつに なりました。
+    background: sa_hojo_ato
+- id: ch8_eneloop
+  title: エネループの名前
+  background: sa_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 三洋の社員, emotion: happy}
+  - {who: kanbu, x: 0.56, emotion: thinking}
+  - {who: douryo, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2005年の秋。再建の第1号の候補になった、新しい充電池の報告会です。
+    reading: にせんごねんの あき。さいけんの だいいちごうの こうほに なった、あたらしい じゅうでんちの ほうこくかいです。
+  - speaker: zundamon
+    emotion: happy
+    text: 新しい充電池の名前は、[NANDOMO|なんども]です！
+  - speaker: kanbu
+    emotion: thinking
+    text: ……なんども？
+  - speaker: zundamon
+    emotion: happy
+    text: 何度も使えるから、[NANDOMO|なんども]なんです！
+  - speaker: kanbu
+    emotion: normal
+    text: グローバルな視点を持ったものに、変えてほしい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 発表まで、あと2か月なのだ！？
+  - speaker: douryo
+    emotion: thinking
+    text: 充電池が第1号ではインパクトに欠ける、いう声もあるで。
+  - speaker: zundamon
+    emotion: sad
+    text: 名前はだめ、中身は地味……。
+    beat: true
+  - speaker: reimu
+    text: それでも会長の野中は、この充電池を第1号に選びます。
+    reading: それでも かいちょうの のなかわ、この じゅうでんちお だいいちごうに えらびます。
+  - speaker: reimu
+    text: 2005年11月、eneloopの名前で発売。1000回くり返して使えました。
+    reading: にせんごねん じゅういちがつ、えねるーぷの なまえで はつばい。せんかい くりかえして つかえました。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前は変わっても、何度も使えるのは残った。
+  - speaker: douryo
+    emotion: happy
+    text: 1000回やで。お前のやる気より長持ちや。
+    se: tsukkomi
+- id: ch8_zoshi
+  title: 3000億円の代わりに
+  background: sa_office
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: surprised}
+  - {who: douryo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月。金融の3社から、3000億円の出資を受けると決まります。
+    reading: じゅうにがつ。きんゆうの さんしゃから、さんぜんおくえんの しゅっしお うけると きまります。
+  - speaker: douryo
+    emotion: normal
+    text: '[大和|だいわ]とゴールドマン・サックス、それに三井住友銀行や。'
+  - speaker: zundamon
+    emotion: happy
+    text: 3000億円！ これで、助かったな。
+  - speaker: douryo
+    emotion: thinking
+    text: その代わり、3社の議決権が6割を超えるんや。
+  - speaker: zundamon
+    emotion: thinking
+    text: 6割……。会社の行き先を、よそが決めるってことか。
+  - speaker: douryo
+    emotion: normal
+    text: 銀行から来た副社長は、こう言うてはるで。
+  - speaker: douryo
+    emotion: normal
+    text: V字回復に向けた[発射台|はっしゃだい]の準備が整った。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[発射台|はっしゃだい]は、できた。あとは、飛べるかどうか……。'
+  - speaker: reimu
+    text: 2006年2月。井植敏は取締役を退き、3社から5人の取締役が入りました。
+    reading: にせんろくねん にがつ。いうえ さとしわ とりしまりやくお しりぞき、さんしゃから ごにんの とりしまりやくが はいりました。
+  - speaker: reimu
+    text: 2006年3月期の決算は2056億円の赤字。2期続けての赤字でした。
+    reading: にせんろくねん さんがつきの けっさんわ にせん ごじゅうろくおくえんの あかじ。にき つづけての あかじでした。
+  - speaker: douryo
+    emotion: sad
+    text: 地震の年から、ずっと穴が[埋まらへん|うまらへん]な。
+- id: ch9_hodo
+  title: 朝刊の見出し
+  background: sa_office
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: surprised}
+  - {who: douryo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2007年2月23日。朝日新聞が、三洋の決算に巨額粉飾の疑いと報じます。
+    reading: にせんななねん にがつ にじゅうさんにち。あさひ しんぶんが、さんようの けっさんに きょがく ふんしょくの うたがいと ほうじます。
+  - speaker: douryo
+    emotion: surprised
+    text: 地震の前の決算で、損の処理を小さくしとったって書いてある。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1900億円の損を考えて、500億円しか処理してないって……。
+  - speaker: douryo
+    emotion: thinking
+    text: 疑い、や。まだ決まったわけやない。
+  - speaker: zundamon
+    emotion: sad
+    text: 疑いでも、新聞に出たらお客さんは見るよ。
+- id: ch9_jinin
+  title: ''
+  background: sa_office
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: surprised}
+  - {who: douryo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 3月。会社の上の人たちが、続けて入れ替わります。
+    reading: さんがつ。かいしゃの うえの ひとたちが、つづけて いれかわります。
+  - speaker: reimu
+    text: 会長の野中は辞任します。理由は、一身上の都合でした。
+    reading: かいちょうの のなかわ じにん します。りゆうわ、いっしんじょうの つごうでした。
+  - speaker: reimu
+    text: 社長の井植敏雅も辞任を発表し、金融機関の継続的信任を得られなかったと述べました。
+    reading: しゃちょうの いうえ としまさも じにんお はっぴょうし、きんゆう きかんの けいぞくてき しんにんお えられなかったと のべました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会長も社長も、いっぺんにいなくなるのか。
+  - speaker: douryo
+    emotion: sad
+    text: 創業家の社長が、おらんようになるんか。
+  - speaker: zundamon
+    emotion: sad
+    text: 1947年から、60年なのだ……。
+    se: shobon
+  - speaker: reimu
+    text: 新しい社長は、佐野精一郎です。12月には、三洋は過去の決算を訂正しました。
+    reading: あたらしい しゃちょうわ、さの せいいちろうです。じゅうにがつにわ、さんようわ かこの けっさんお ていせい しました。
+  - speaker: reimu
+    text: 2008年3月には、創業家の役員が1人もいなくなりました。
+    reading: にせんはちねん さんがつにわ、そうぎょうけの やくいんが ひとりも いなく なりました。
+- id: card2008
+  title: ''
+  background: sa_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年10月。松下電器産業は、パナソニックに名前を変えます。
+    reading: にせんはちねん じゅうがつ。まつした でんき さんぎょうわ、ぱなそにっくに なまえお かえます。
+- id: ch10_kaiken
+  title: パナソニックの傘下へ
+  background: sa_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 三洋の社員, emotion: thinking}
+  - {who: otsubo, x: 0.56, emotion: normal}
+  - {who: sano, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月7日、大阪のホテル。パナソニックと三洋の社長が、提携の話し合いを始めると発表します。
+    reading: じゅういちがつ なのか、おおさかの ほてる。ぱなそにっくと さんようの しゃちょうが、ていけいの はなしあいお はじめると はっぴょう します。
+  - speaker: otsubo
+    emotion: normal
+    text: 三洋電機は日本の電機産業界における貴重な財産。
+  - speaker: sano
+    emotion: normal
+    text: 金融危機で優先株問題について考えるべきタイミングが早まった。
+  - speaker: sano
+    emotion: normal
+    text: パナソニックは明確に条件に合致する。
+  - speaker: otsubo
+    emotion: normal
+    text: お互い苦しい時代を乗り切ってきたので、
+  - speaker: otsubo
+    emotion: normal
+    text: 三洋電機のブランドや雇用についての気持はよく理解できる。
+  - speaker: otsubo
+    emotion: thinking
+    text: しかし、経営というものは勝ち残って初めて意味があり
+  - speaker: otsubo
+    emotion: thinking
+    text: 甘い話だけというのはあり得ない。
+  - speaker: zundamon
+    emotion: sad
+    text: 甘い話は、無い……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 創業者の義理の兄さんの会社に、62年たって入るのか。
+    telops:
+    - {text: 松下を出て62年, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch10_tob
+  title: ''
+  background: sa_office
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: surprised}
+  - {who: douryo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: douryo
+    emotion: surprised
+    text: うちの株を買い取る値段、[1株|ひとかぶ]131円やて。
+  - speaker: zundamon
+    emotion: surprised
+    text: 発表の前は、228円あったんだぞ！
+  - speaker: douryo
+    emotion: sad
+    text: 4割以上も安いやないか。
+  - speaker: reimu
+    text: 2009年12月。パナソニックは三洋の株の半分を超えて持ち、子会社にしました。
+    reading: にせんきゅうねん じゅうにがつ。ぱなそにっくわ さんようの かぶの はんぶんお こえて もち、こがいしゃに しました。
+  - speaker: reimu
+    text: 2010年7月には、三洋を完全子会社にすると発表します。
+    reading: にせんじゅうねん しちがつにわ、さんようお かんぜん こがいしゃに すると はっぴょう します。
+  - speaker: douryo
+    emotion: normal
+    text: 向こうの社長は、会見でこう言うてはる。
+  - speaker: douryo
+    emotion: normal
+    text: '[リストラ＝人員削減|りすとらいこーるじんいんさくげん]は全く念頭にない。事業構造改革だと考えている。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 人を減らすのが目的じゃない、ってことか。
+  - speaker: douryo
+    emotion: thinking
+    text: どっちにしても、完全にパナソニックの一部になるっちゅうことや。
+- id: ch10_gopan
+  title: 最後のヒット
+  background: sa_eigyo
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: happy}
+  - {who: eigyo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2010年11月。三洋から、お米からパンが焼ける機械が出ます。
+    reading: にせんじゅうねん じゅういちがつ。さんようから、おこめから ぱんが やける きかいが でます。
+  - speaker: eigyo
+    emotion: surprised
+    text: 主任！ お[米|こめ]からパンが焼ける[GOPAN|ごぱん]、注文が止まりません！
+    background: sa_eigyo_yama
+  - speaker: zundamon
+    emotion: happy
+    text: 久しぶりの大ヒットなのだ！ どんどん作るぞ！
+  - speaker: eigyo
+    emotion: sad
+    text: 発売から2週間で、注文の受け付けを止めることになりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売れすぎて、止めるのか！？
+  - speaker: eigyo
+    emotion: thinking
+    text: それと……来年の型は、[Panasonic|ぱなそにっく]の名前で出ます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……やっと出たヒットが、よその名前で続くのか。
+    se: shobon
+  - speaker: reimu
+    text: GOPANは、実質2か月で10万台を出荷しました。
+    reading: ごぱんわ、じっしつ にかげつで じゅうまんだいお しゅっか しました。
+- id: card2011
+  title: ''
+  background: sa_card_2011
+  cuts:
+  - speaker: reimu
+    text: 2011年4月1日。三洋電機は、パナソニックの完全子会社になります。
+    reading: にせん じゅういちねん しがつ ついたち。さんよう でんきわ、ぱなそにっくの かんぜん こがいしゃに なります。
+- id: ch11_haier
+  title: 洗濯機は海の向こうへ
+  background: sa_sentaku_kojo
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三洋の社員, emotion: sad}
+  - {who: senpai, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 7月。冷蔵庫と洗濯機の事業を、中国のハイアールに譲ると決まりました。
+    reading: しちがつ。れいぞうこと せんたくきの じぎょうお、ちゅうごくの はいあーるに ゆずると きまりました。
+  - speaker: senpai
+    emotion: sad
+    text: パナソニックに買われて、今度はハイアールに売られるんか。
+  - speaker: zundamon
+    emotion: sad
+    text: 洗濯機は、創業者が主婦のために作った機械ですよ……。
+  - speaker: senpai
+    emotion: thinking
+    text: 創業者が、[姑|しゅうとめ]さんにけしからん言われながら売った機械やで。
+  - speaker: zundamon
+    emotion: sad
+    text: ……それが、海の向こうの会社へ行くのか。
+  - speaker: senpai
+    emotion: normal
+    text: 行った先で作り続けられるなら、それでええ。
+  - speaker: reimu
+    text: ハイアールは、およそ3100人の社員を受け入れると発表しました。
+    reading: はいあーるわ、およそ さんぜん ひゃくにんの しゃいんお うけいれると はっぴょう しました。
+- id: ch11_kanban
+  title: 看板が降りる日
+  background: sa_kanban
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 三洋の社員, emotion: sad}
+  - {who: sagyo, x: 0.56, emotion: normal}
+  - {who: moto, x: 0.78, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2011年12月23日、朝8時。守口の本社で、看板を下ろす作業が始まります。
+    reading: にせん じゅういちねん じゅうにがつ にじゅうさんにち、あさ はちじ。もりぐちの ほんしゃで、かんばんお おろす さぎょうが はじまります。
+  - speaker: reimu
+    text: 看板の大きさは縦3メートル、横9.3メートルでした。
+    reading: かんばんの おおきさわ たて さんめーとる、よこ きゅうてんさん めーとるでした。
+  - speaker: sagyo
+    emotion: normal
+    text: '[1文字|ひともじ]で50キロから60キロある。10人がかりで行くで！'
+  - speaker: sagyo
+    emotion: normal
+    text: クレーン、ゆっくりや！ 次の[1文字|ひともじ]、吊るすで。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクの会社の名前が、[空|そら]から降りてくるのだ。
+  - speaker: moto
+    emotion: sad
+    text: 覚悟をしていたことではあるが……。
+  - speaker: moto
+    emotion: sad
+    text: 自分が働いていた場所から、[SANYO|さんよー]のロゴが消えるのは寂しい。
+  - speaker: sagyo
+    emotion: normal
+    text: あと[1文字|ひともじ]や。最後まで、気ぃ抜くなよ！
+  - speaker: zundamon
+    emotion: sad
+    text: ……やっぱり、ボクより重かったのだ。
+    se: namida
+  - speaker: reimu
+    text: 作業は、夕方の4時半まで続きました。
+    reading: さぎょうわ、ゆうがたの よじはんまで つづきました。
+    background: sa_kanban_kara
+    telops:
+    - {text: SANYOの5文字が降りた, size: md, position: top-right, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……[空|から]っぽだ。
+  - speaker: reimu
+    text: 25日からは、横13.4メートルのPanasonicの看板への付け替えが始まりました。
+    reading: にじゅうごにちからわ、よこ じゅうさんてんよん めーとるの ぱなそにっくの かんばんえの つけかえが はじまりました。
+- id: ch12_ronsou
+  title: 地震で潰れたのか
+  background: sa_ronsou
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。三洋は、地震のせいで潰れたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 引き金になったのは本当よ。被害は503億円で、保険金はなし。
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり、地震が悪いのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、問題はその前からあったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2007年に直した決算は、2001年3月期までさかのぼるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 地震より、3年以上も前の決算！？
+    telops:
+    - {text: 地震は引き金・問題はその前から, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、事業を広げすぎてたの。テレビも洗濯機も、半導体も金融もね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 洗濯機の会社が、金融まで！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2005年の計画では、その4つを中心から外す事業にしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[井植敏|いうえさとし]さんも、我々はライバルを知ることを怠ったと語ってるわ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、決算のほうは粉飾だったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは、答えが分かれてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国は虚偽の記載と認めて、830万円の課徴金を命じたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも株主が起こした裁判で、裁判所は違法な配当とは認めなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 地裁は、会計処理の経営判断が不合理だったとは言えないと判断したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国と裁判所で、答えが違うのだ……。
+    se: tenten
+  - speaker: tsumugi
+    emotion: thinking
+    text: 地震の前の2000年には、太陽電池の出力を偽って売っていた問題も出てたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 地震は、きっかけ。弱っていたのは、その前からだったのよ。
+- id: ch13_ima
+  title: 今も残るもの
+  background: sa_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 一番多い頃は10万人。2014年に、パナソニックに残ってたのは9000人よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10人に1人も、残ってない……。
+    telops:
+    - {text: 10万人から9000人へ, size: md, position: top-right, color: "#FFFFFF", stroke: "#1A1A2A", glow: "#7AA8FF", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年4月には、三洋電機の社員約7000人がパナソニック側へ移ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社員が移ったあとも、三洋電機という会社そのものは残されたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[守口|もりぐち]の本社ビルは、2017年から[守口|もりぐち]市役所になってるわ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 看板の降りたビルで、今は住民票が取れるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 洗濯機と冷蔵庫は、ハイアールの[AQUA|あくあ]という名前で続いてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[北條|ほうじょう]の跡地には、三洋電機発祥の地の[碑|ひ]が立ってるわ。'
+  - speaker: zundamon
+    emotion: normal
+    text: ランプの工場の場所で、今はみんなが買い物してるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 散らばった人たちも、それぞれの場所で物を作ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: デジカメの部門は、ザクティという会社になって大阪の[大東市|だいとうし]にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電池の技術者だった人は、淡路島の[洲本|すもと]でコンサルティングの会社を作ったのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 創業者の島に、三洋の技術が帰ってきたのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 気をつけたいのは、家に古い三洋の家電がある人。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家庭用の修理と部品の受け付けは、2024年9月で終わってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 壊れたら、もう直してもらえないの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: メーカーの修理は、もう受けてもらえないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年の万博では、別の会社が新しい人間洗濯機を出したわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 55年たって、人がまた洗われたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、あの充電池。20年で、6億本を超えたの。
+  - speaker: zundamon
+    emotion: happy
+    text: 却下された何度も電池が、6億本！
+- id: shime
+  title: ''
+  background: sa_heya_jyuden
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ！ 充電器、冷蔵庫の上にあったのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 充電すれば、引き出しの電池も全部使えるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 何度も使える……つまり、[NANDOMO|なんども]なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: その名前、発表の2か月前に却下されてるわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたの家の引き出しにも、使いかけの電池が眠ってない？
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

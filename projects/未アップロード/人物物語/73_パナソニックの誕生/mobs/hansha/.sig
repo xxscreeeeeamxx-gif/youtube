@@ -1,0 +1,1 @@
+販社の社長|none|none||v4|suit|#4a3a3a|o1
