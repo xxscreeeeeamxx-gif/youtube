@@ -156,6 +156,23 @@ def build_credits(raw: str) -> str:
 VOICE_NAMES = {8: "春日部つむぎ", 12: "白上虎太郎", 13: "青山龍星", 42: "ちび式じい"}
 
 
+def hashtag_line(meta: dict) -> str:
+    """概要欄の末尾に置くハッシュタグ3つ（題材・#ずんだもん解説・#再現ドラマ か #雑学）。
+
+    2026-10-03 ユーザー指示「概要欄にハッシュタグを3つ」。YouTube は概要欄の最初の3つを
+    タイトルの上に出し、検索の手がかりにもする。題材は script.yaml の tags の先頭
+    （ゴジラ・ファミコンなど検索される言葉）。空白や記号はハッシュタグを切るので取り除く。
+    """
+    topic = ((meta.get("tags") or [""])[0] or "").strip()
+    if not topic:
+        m = re.search(r"【([^】]+)】", meta.get("title", ""))
+        topic = m.group(1) if m else ""
+    topic = re.sub(r"[^\wー]", "", topic)
+    third = "再現ドラマ" if meta.get("mode") == "drama" else "雑学"
+    tags = [t for t in (topic, "ずんだもん解説", third) if t]
+    return " ".join("#" + t for t in tags)
+
+
 def build_entry(slug: str, pdir: Path = None):
     pdir = pdir or Path(f"projects/{slug}")
     meta_path = pdir / "out" / "metadata.txt"
@@ -219,7 +236,7 @@ def build_entry(slug: str, pdir: Path = None):
             if len(kept) >= 3:
                 chapters = "▼ 目次\n" + "\n".join(f"{s // 60}:{s % 60:02d} {n}" for s, n in kept)
 
-    desc_parts = [body, chapters, note, credits]
+    desc_parts = [body, chapters, note, credits, hashtag_line(meta)]
     description = "\n\n".join(p for p in desc_parts if p)
     return title, description, tag_line
 

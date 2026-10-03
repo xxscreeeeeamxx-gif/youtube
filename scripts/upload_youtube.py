@@ -788,6 +788,96 @@ def cmd_playlists(args) -> int:
             return 0
 
 
+def cmd_hashtags(args) -> int:
+    """投稿済み・予約中の動画の概要欄の末尾に、ハッシュタグ3つの行を足す。
+
+    2026-10-03 ユーザー指示「概要欄にハッシュタグを3つ」。行は gen_youtube_meta.hashtag_line
+    （新作の概要欄と同じ）。説明文の他の部分は触らず、末尾に1行足すだけにする。
+    `videos.update` は snippet を丸ごと置き換えるので、cmd_title と同じく今の snippet を
+    載せ直す。差し替えで非公開にした旧版（publishAt の無い private）は飛ばす。
+    """
+    import re as _re
+    import sys as _s
+    import yaml as _yaml
+    _s.path.insert(0, str(ROOT / "scripts"))
+    from gen_youtube_meta import TITLES, hashtag_line
+    from ytf.config import Config
+    root = Config.load().root
+    yt = service()
+    check_channel(yt, args.channel)
+    live = _channel_videos(yt)
+    by_title = {t: v for v, t in live.items()}
+    jobs = {}
+    for sy in sorted(list(root.glob("projects/*/*/*/script.yaml")) + list(root.glob("projects/*/*/script.yaml"))):
+        try:
+            meta = (_yaml.safe_load(sy.read_text(encoding="utf-8")) or {}).get("meta", {})
+        except Exception:
+            continue
+        slug = meta.get("slug") or sy.parent.name
+        if args.slugs and slug not in args.slugs:
+            continue
+        vid = read_video_id(sy.parent) or by_title.get(TITLES.get(slug, ""))
+        if vid and vid in live and vid not in jobs:
+            jobs[vid] = (slug, hashtag_line(meta))
+    ids = list(jobs)
+    n = skip = 0
+    for i in range(0, len(ids), 50):
+        r = yt.videos().list(part="snippet,status", id=",".join(ids[i:i + 50])).execute()
+        for it in r["items"]:
+            vid, sn, st = it["id"], it["snippet"], it["status"]
+            slug, line = jobs[vid]
+            if st.get("privacyStatus") == "private" and not st.get("publishAt"):
+                skip += 1
+                continue                       # 差し替えで退けた旧版
+            desc = sn.get("description", "")
+            if _re.search(r"(^|\s)#\S", desc):
+                print(f"  = {slug:<22}ハッシュタグあり")
+                continue
+            print(f"  + {slug:<22}{line}")
+            n += 1
+            if args.dry_run:
+                continue
+            body = {"title": sn["title"], "categoryId": sn["categoryId"],
+                    "description": desc.rstrip() + "\n\n" + line, "tags": sn.get("tags", [])}
+            for k in ("defaultLanguage", "defaultAudioLanguage"):
+                if sn.get(k):
+                    body[k] = sn[k]
+            yt.videos().update(part="snippet", body={"id": vid, "snippet": body}).execute()
+    print(f"{'追加予定' if args.dry_run else '追加完了'}: {n} 本（旧版で飛ばした {skip} 本）")
+    return 0
+
+
+CHANNEL_KEYWORDS = [
+    # 2026-10-03 ユーザー指示「チャンネルのキーワード設定に、具体的な言葉を入れる」。
+    # 抽象的な単語より、誰に向けた何のチャンネルかが分かる具体的な言葉を入れる
+    "ずんだもん", "ずんだもん解説", "春日部つむぎ", "再現ドラマ", "誕生秘話", "開発秘話",
+    "創業者", "企業の歴史", "会社の歴史", "日本の発明", "発明家", "商品の歴史",
+    "企業の栄枯盛衰", "昭和の歴史", "ゆっくり解説", "雑学",
+]
+
+
+def cmd_keywords(args) -> int:
+    """チャンネルのキーワード（brandingSettings.channel.keywords）を設定する。
+
+    `channels.update` は brandingSettings を丸ごと置き換え、送らなかった項目は消える。
+    今の brandingSettings を読んで keywords だけ差し替えて送り返す。
+    """
+    yt = service()
+    check_channel(yt, args.channel)
+    ch = yt.channels().list(part="brandingSettings", mine=True).execute()["items"][0]
+    bs = ch["brandingSettings"]
+    words = " ".join(f'"{w}"' if " " in w else w for w in CHANNEL_KEYWORDS)
+    print(f"  旧 {bs.get('channel', {}).get('keywords')}")
+    print(f"  新 {words}")
+    if args.dry_run:
+        return 0
+    bs.setdefault("channel", {})["keywords"] = words
+    yt.channels().update(part="brandingSettings", body={"id": ch["id"], "brandingSettings": bs}).execute()
+    got = yt.channels().list(part="brandingSettings", mine=True).execute()["items"][0]
+    print(f"  ✓ 設定後 {got['brandingSettings'].get('channel', {}).get('keywords')}")
+    return 0
+
+
 def cmd_quota(args) -> int:
     """残り枠は API から取れないので、消費の目安だけ出す。"""
     print("投稿1本=1600ユニット / 既定の1日枠=10000ユニット → 1日6本まで")
@@ -856,6 +946,15 @@ def main() -> int:
     p = sub.add_parser("playlists", help="再生リストの一覧")
     p.set_defaults(func=cmd_playlists)
 
+    hs = sub.add_parser("hashtags", help="投稿済み・予約中の動画の概要欄にハッシュタグ3つを足す")
+    hs.add_argument("slugs", nargs="*", help="省略すると全動画")
+    hs.add_argument("--dry-run", action="store_true")
+    hs.add_argument("--channel", default=EXPECT_CHANNEL)
+    hs.set_defaults(func=cmd_hashtags)
+    kw = sub.add_parser("keywords", help="チャンネルのキーワード設定を CHANNEL_KEYWORDS にそろえる")
+    kw.add_argument("--dry-run", action="store_true")
+    kw.add_argument("--channel", default=EXPECT_CHANNEL)
+    kw.set_defaults(func=cmd_keywords)
     q = sub.add_parser("quota", help="割り当ての目安")
     q.set_defaults(func=cmd_quota)
 
