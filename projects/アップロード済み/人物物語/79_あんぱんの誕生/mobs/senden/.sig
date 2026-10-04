@@ -1,0 +1,1 @@
+広目屋|none|none||v4|kimono|#b04a3a|o1

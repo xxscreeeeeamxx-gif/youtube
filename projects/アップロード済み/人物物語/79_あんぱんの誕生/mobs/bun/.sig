@@ -1,0 +1,1 @@
+妻・文|none|none||v4|kimono|#7a4a5a|o1

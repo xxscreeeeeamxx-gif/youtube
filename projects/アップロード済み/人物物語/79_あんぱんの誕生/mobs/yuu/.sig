@@ -1,0 +1,1 @@
+嫁・ゆう|none|none||v4|kimono|#8a5a4a|o1

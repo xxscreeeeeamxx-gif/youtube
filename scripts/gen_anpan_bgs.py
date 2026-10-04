@@ -446,11 +446,219 @@ def shiryo():
     return img
 
 
+# ------------------------------------------------------------ 作り直し版（79_あんぱんの誕生 / kimuraya-anpan-v2）で足した背景
+# 場面の途中の差し替え用は「元の背景を呼んで要素を足す」形にして、切り替わった瞬間に差が分かるようにする。
+
+def _flat_bread(d, cx, cy, r, burnt=False):
+    """ふくらまなかった失敗パン（ぺしゃんこの円盤）。burnt=True なら焦げ。"""
+    col = (70, 52, 40) if burnt else (184, 150, 104)
+    edge = (40, 30, 24) if burnt else (140, 108, 70)
+    d.ellipse([cx - r, cy - r * 0.28, cx + r, cy + r * 0.28], fill=col, outline=edge, width=3)
+    if not burnt:
+        d.line([(cx - r * 0.5, cy - 2), (cx + r * 0.4, cy + 2)], fill=(150, 116, 76), width=3)
+
+
+def ima_pan():
+    """つかみとシメの窓辺。机の上に、あんこを挟んだフランスパンと、あんこの器。"""
+    img = base((236, 232, 222), (214, 208, 196))
+    d = _d(img)
+    wood_floor(img, FLOOR, col=(170, 140, 104), line=(150, 122, 90))
+    d = _d(img)
+    _window(d, 700, 120, 1220, 470, sky=(176, 210, 232))
+    d.rectangle([700, 400, 1220, 416], fill=(120, 110, 100))              # 手すり
+    d.rectangle([640, 600, 1280, 650], fill=(180, 150, 110))              # 机
+    d.rounded_rectangle([700, 536, 1120, 600], radius=30, fill=(200, 140, 70), outline=(140, 90, 40), width=4)
+    d.rounded_rectangle([720, 560, 1100, 584], radius=12, fill=(96, 50, 56))   # 切れ目からのぞくあんこ
+    for k in range(4):                                                    # クープ（皮の切れ目）
+        x = 760 + k * 90
+        d.line([(x, 544), (x + 50, 556)], fill=(236, 196, 130), width=6)
+    d.ellipse([1150, 560, 1250, 604], fill=(236, 236, 240), outline=(180, 180, 190), width=3)   # 器
+    d.ellipse([1162, 562, 1238, 586], fill=(96, 50, 56))                  # 器のあんこ
+    return img
+
+
+def machi():
+    """明治はじめの芝の通り。瓦屋根の町家と土の道。真ん中に、パンを並べた台。"""
+    img = Image.new("RGB", (W, H))
+    img.paste(vgrad((W, H), (176, 200, 220), (222, 218, 206)), (0, 0))
+    d = _d(img)
+    d.rectangle([0, 700, W, H], fill=(168, 146, 112))                    # 土の道
+    for x0, x1 in ((0, 300), (300, 620), (1300, 1620), (1620, W)):       # 町家
+        d.rectangle([x0 + 6, 360, x1 - 6, 700], fill=(110, 82, 58))
+        d.polygon([(x0 - 10, 380), (x0 + 40, 300), (x1 - 40, 300), (x1 + 10, 380)], fill=(84, 84, 92))
+        for xx in range(x0 + 30, x1 - 20, 34):                           # 格子
+            d.line([(xx, 470), (xx, 640)], fill=(80, 58, 40), width=5)
+        d.rectangle([x0 + 60, 400, x1 - 60, 450], fill=(40, 52, 90))     # のれん（文字なし）
+    d.rectangle([840, 610, 1100, 630], fill=(120, 90, 60))               # 台
+    for x in (860, 1076):
+        d.rectangle([x, 630, x + 14, 720], fill=(100, 74, 50))
+    d.ellipse([830, 560, 1110, 626], fill=(196, 170, 120), outline=(140, 116, 76), width=4)   # ざる
+    for k in range(3):
+        _hard_bread(d, 900 + k * 70, 584, 90, 34)
+    return img
+
+
+def bunei_yama():
+    """文英堂の店先が、売れ残りの硬いパンで埋まった状態（an_bunei に足す）。"""
+    img = bunei()
+    d = _d(img)
+    for y in (120, 230):                                                  # 壁一面の棚まで、ぎっしり
+        d.rectangle([600, y + 60, 1860, y + 74], fill=(110, 84, 58))
+        for k in range(10):
+            _hard_bread(d, 660 + k * 122, y + 32, 110, 40)
+    for k in range(4):                                                    # 窯の上にも積む
+        _hard_bread(d, 770 + (k % 2) * 140, 352 - (k // 2) * 34, 120, 36)
+    rows = ((1100, 900, 7), (1130, 856, 6), (1160, 812, 5), (1190, 768, 4), (1220, 724, 3), (1250, 680, 2))
+    for x0, y, n in rows:                                                 # 床の山
+        for k in range(n):
+            _hard_bread(d, x0 + k * 96 - 300, y, 100, 40)
+    return img
+
+
+def bunei_kaji():
+    """文英堂が火事で燃えている状態（an_bunei に炎と煙を足す）。"""
+    img = bunei().convert("RGBA")
+    over = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(over)
+    for y in range(H):                                                    # 赤い照り返し
+        a = int(150 * (1 - y / H)) + 40
+        od.line([(0, y), (W, y)], fill=(220, 70, 30, a))
+    img.alpha_composite(over)
+    d = ImageDraw.Draw(img)
+    for k in range(9):                                                    # 天井の黒い煙
+        cx = 120 + k * 220
+        d.ellipse([cx - 180, -120, cx + 180, 150 + (k % 3) * 30], fill=(50, 40, 40))
+    flames = ((60, 300, 260), (300, 280, 300), (620, 320, 240), (1160, 300, 280), (1480, 310, 260), (1760, 290, 300))
+    for cx, base_y, h in flames:                                          # 炎
+        for col, sc in (((240, 90, 30), 1.0), ((255, 170, 50), 0.7), ((255, 236, 140), 0.4)):
+            w = 110 * sc
+            d.polygon([(cx - w, base_y), (cx - w * 0.5, base_y - h * sc * 0.6), (cx - w * 0.2, base_y - h * sc * 0.4),
+                       (cx, base_y - h * sc), (cx + w * 0.3, base_y - h * sc * 0.5), (cx + w * 0.6, base_y - h * sc * 0.7),
+                       (cx + w, base_y)], fill=col)
+    return img.convert("RGB")
+
+
+def kobo_manju():
+    """工房の台に、盆にのせた酒まんじゅうと湯のみ（an_kobo に足す）。"""
+    img = kobo()
+    d = _d(img)
+    d.rectangle([612, 540, 908, 600], fill=(150, 116, 80))                # 生地を片づけた台の上
+    d.ellipse([616, 556, 904, 612], fill=(120, 40, 36), outline=(80, 26, 22), width=3)   # 朱塗りの盆
+    for cx, cy in ((690, 560), (810, 560), (750, 514)):                    # 積んだ酒まんじゅう
+        d.ellipse([cx - 56, cy - 46, cx + 56, cy + 40], fill=(248, 242, 226), outline=(206, 194, 168), width=4)
+        d.ellipse([cx - 30, cy - 36, cx + 6, cy - 16], fill=(255, 252, 244))   # つや
+    for cx in (560, 950):                                                 # 湯のみ
+        d.rounded_rectangle([cx - 24, 552, cx + 24, 600], radius=8, fill=(110, 140, 100), outline=(70, 90, 60), width=3)
+    return img
+
+
+def kobo_shippai():
+    """工房が、ふくらまなかった失敗パンの山になった状態（an_kobo に足す）。"""
+    img = kobo()
+    d = _d(img)
+    for y in (110, 220):                                                  # 壁の棚（2段とも失敗作）
+        d.rectangle([160, y, 1780, y + 14], fill=(110, 84, 58))
+        for k in range(15):
+            _flat_bread(d, 210 + k * 110, y - 14, 50, burnt=((k + y) % 4 == 1))
+            _flat_bread(d, 240 + k * 110, y - 34, 46, burnt=((k + y) % 5 == 3))
+    for j in range(12):                                                   # 人物の間に積み上がった塔
+        _flat_bread(d, 1306, 760 - j * 24, 52, burnt=(j % 3 == 1))
+    for k in range(6):                                                    # 台の上
+        _flat_bread(d, 690 + (k % 3) * 80, 590 - (k // 3) * 22, 48, burnt=(k == 4))
+    for j in range(7):                                                    # 米俵の上の塔
+        for cx in (1010, 1120):
+            _flat_bread(d, cx, 470 - j * 22, 54, burnt=((j + cx) % 3 == 0))
+    for j in range(5):                                                    # 窯の前
+        _flat_bread(d, 1250, 640 - j * 22, 50, burnt=(j % 2 == 0))
+    for k in range(4):                                                    # 窯から細い煙
+        r = 30 + k * 16
+        d.ellipse([1480 - r + k * 30, 250 - k * 60 - r, 1480 + r + k * 30, 250 - k * 60 + r], fill=(160, 156, 150))
+    return img
+
+
+def ginza_retsu():
+    """銀座の通りに、あんぱんを待つ長い行列（an_ginza に足す）。"""
+    img = ginza()
+    d = _d(img)
+    cols = ((60, 70, 110), (110, 70, 60), (70, 100, 80), (120, 100, 70), (90, 80, 110), (60, 60, 70))
+    def person(x, foot, h, k):
+        body = cols[k % len(cols)]
+        d.rounded_rectangle([x - h * 0.2, foot - h * 0.78, x + h * 0.2, foot], radius=int(h * 0.12), fill=body)
+        d.ellipse([x - h * 0.15, foot - h * 1.05, x + h * 0.15, foot - h * 0.75], fill=(236, 214, 190))
+        d.ellipse([x - h * 0.16, foot - h * 1.08, x + h * 0.16, foot - h * 0.9], fill=(40, 36, 36))   # 髪
+    for k in range(40):                                                   # 奥の列（小さく、通りの端まで）
+        person(20 + k * 48, 738, 110, k + 3)
+    for k in range(17):                                                   # 手前の列（店の前で折り返す）
+        person(600 + k * 52, 800, 160, k)
+    return img
+
+
+def mise_kanban():
+    """鉄舟が書いた看板を掲げたあとの店内（an_mise の無地の看板に「木村家」の字を入れる）。
+    当時の扁額は右から読ませることもあるが、視聴者が読める左から右で書く。"""
+    img = mise()
+    d = _d(img)
+    font = None
+    for cand in ("C:/Windows/Fonts/yumindb.ttf", "C:/Windows/Fonts/BIZ-UDMinchoM.ttc", "C:/Windows/Fonts/msmincho.ttc"):
+        if Path(cand).exists():
+            font = ImageFont.truetype(cand, 92)
+            break
+    if font is None:
+        from ytf.config import Config, resolve_font
+        Config.load()
+        font = ImageFont.truetype(resolve_font("w9"), 86)
+    text = "木村家"
+    bb = d.textbbox((0, 0), text, font=font)
+    tw, th = bb[2] - bb[0], bb[3] - bb[1]
+    x = 960 - tw // 2 - bb[0]
+    y = 140 - th // 2 - bb[1]
+    d.text((x, y), text, font=font, fill=(226, 190, 96), stroke_width=2, stroke_fill=(120, 90, 30))
+    return img
+
+
+def ginza_shinsai():
+    """1923年の関東大震災で燃える銀座（an_ginza の通りから宣伝の旗と太鼓を除き、炎と煙を足す）。"""
+    img = Image.new("RGB", (W, H))
+    img.paste(vgrad((W, H), (180, 206, 228), (220, 218, 210)), (0, 0))
+    d0 = _d(img)
+    _brick_wall(d0, 0, 220, 620, 720)
+    _brick_wall(d0, 1300, 220, W, 720)
+    d0.rectangle([0, 720, W, H], fill=(176, 164, 140))
+    img = img.convert("RGBA")
+    over = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(over)
+    for y in range(H):                                                    # 赤い空と照り返し
+        a = int(170 * (1 - y / H)) + 30
+        od.line([(0, y), (W, y)], fill=(200, 60, 30, a))
+    img.alpha_composite(over)
+    d = ImageDraw.Draw(img)
+    for k in range(10):                                                   # 空をおおう黒い煙
+        cx = 80 + k * 200
+        d.ellipse([cx - 200, -160, cx + 200, 170 + (k % 3) * 40], fill=(46, 38, 38))
+    flames = ((120, 230, 260), (380, 230, 300), (560, 240, 220), (1360, 230, 280), (1600, 220, 320), (1840, 240, 260))
+    for cx, base_y, h in flames:                                          # 煉瓦の建物の屋根から上がる炎
+        for col, sc in (((240, 90, 30), 1.0), ((255, 170, 50), 0.7), ((255, 236, 140), 0.4)):
+            w = 120 * sc
+            d.polygon([(cx - w, base_y), (cx - w * 0.5, base_y - h * sc * 0.6), (cx - w * 0.2, base_y - h * sc * 0.4),
+                       (cx, base_y - h * sc), (cx + w * 0.3, base_y - h * sc * 0.5), (cx + w * 0.6, base_y - h * sc * 0.7),
+                       (cx + w, base_y)], fill=col)
+    for x0, x1 in ((640, 760), (1180, 1300)):                             # 道に崩れた煉瓦
+        for k in range(6):
+            bx = x0 + (k * 37) % (x1 - x0)
+            by = 760 + (k % 3) * 22
+            d.rectangle([bx, by, bx + 46, by + 18], fill=(150, 76, 58), outline=(100, 50, 40), width=2)
+    return img.convert("RGB")
+
+
 LOCATIONS = {
     "an_ima": ima, "an_ima2": ima2, "an_mura": mura, "an_yashiki": yashiki, "an_ie": ie,
     "an_jusanjo": jusanjo, "an_bunei": bunei, "an_umi": umi, "an_kaji": kaji, "an_eki": eki,
     "an_ginza0": ginza0, "an_kobo": kobo, "an_zukai": zukai, "an_mise": mise, "an_mise0": mise0, "an_sakura": sakura,
     "an_yoru": yoru, "an_ginza": ginza, "an_yuugure": yuugure, "an_gendai": gendai, "an_shiryo": shiryo,
+    # 79_あんぱんの誕生（kimuraya-anpan-v2）で足した背景
+    "an_ima_pan": ima_pan, "an_machi": machi, "an_bunei_yama": bunei_yama, "an_bunei_kaji": bunei_kaji,
+    "an_kobo_manju": kobo_manju, "an_kobo_shippai": kobo_shippai, "an_ginza_retsu": ginza_retsu,
+    "an_mise_kanban": mise_kanban, "an_ginza_shinsai": ginza_shinsai,
 }
 
 CARDS = ["1868", "1869", "1874", "1875", "1887", "1900"]

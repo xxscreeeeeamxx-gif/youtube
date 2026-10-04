@@ -1,0 +1,1 @@
+山岡鉄舟|none|none||v4|haori|#2a2a30|o1
