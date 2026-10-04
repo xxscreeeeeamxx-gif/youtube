@@ -1,0 +1,1 @@
+欧州の知人|none|none||v4|suit|#5a4a3a|o1

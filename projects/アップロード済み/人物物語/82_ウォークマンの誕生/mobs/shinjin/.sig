@@ -1,0 +1,1 @@
+新入社員|none|none||v4|suit|#3a4a6a|o1

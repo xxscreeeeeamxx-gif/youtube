@@ -1,0 +1,1 @@
+同級生|none|none||v4|gakuran|#2a2f3a|o1

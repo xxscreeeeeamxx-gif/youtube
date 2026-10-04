@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """カニカマの誕生・スギヨ回（56_カニカマの誕生 / slug=sugiyo-kanikama）の背景を生成する。
+作り直し版（80_カニカマの誕生 / slug=sugiyo-kanikama-v2）の差し替え背景・社長室・年号カードもここで描く。
 
 gen_drama_bgs.py の共通部品を使い、この回の場所背景と
 章替わりの年号カードを書き出す。方針はあんぱん回（gen_anpan_bgs.py）と同じ。
@@ -488,7 +489,161 @@ def shiryo():
     return img
 
 
+# ---- 作り直し版（80_カニカマの誕生 / slug=sugiyo-kanikama-v2）で足した背景
+# 場面の途中で差し替える「状況が変わった」背景は、元の背景を呼んで要素を足す（同じ構図で差が一目で分かる）。
+SOY = (120, 74, 40)          # 醤油色の溶けた失敗作
+
+
+def kenkyu_dorodoro():
+    """研究室。溶けた人工クラゲのバットが台にも床にもあふれ、醤油色の水たまりができている。
+    元のバットとビーカーは描かず（隙間から見えないように）、汚れは人物の立たない台の左右と床に寄せる。"""
+    img = base((226, 230, 234), (196, 200, 206))
+    d = _lab(img)
+    img = img.convert("RGB")
+    d = _d(img)
+    d.rectangle([560, 600, 1420, 650], fill=(200, 204, 210), outline=(150, 156, 164), width=4)   # 実験台を広げる
+    for x in (580, 1376):
+        d.rectangle([x, 650, x + 22, FLOOR], fill=(150, 156, 164))
+    for x, y in ((570, 544), (740, 544), (910, 544), (1080, 544), (1250, 544), (650, 486), (1160, 486)):   # 台の上のバット
+        d.rectangle([x, y, x + 150, y + 56], fill=(160, 170, 180), outline=(110, 120, 130), width=4)
+        d.rectangle([x + 8, y + 8, x + 142, y + 30], fill=SOY)
+    for x in (600, 700, 790, 1130, 1230, 1340):                            # 台の縁から垂れる（左右に寄せる）
+        d.polygon([(x, 650), (x + 24, 650), (x + 14, 770)], fill=SOY)
+        d.ellipse([x - 4, 762, x + 30, 790], fill=SOY)
+    for x, y, w in ((520, 930, 320), (1120, 940, 340), (60, 960, 260), (1640, 950, 260),
+                    (780, 1000, 260), (1300, 1010, 220), (250, 1020, 200)):   # 床の水たまり
+        d.ellipse([x, y, x + w, y + w // 4], fill=SOY)
+        d.ellipse([x + 30, y + 6, x + w // 2, y + w // 10], fill=(160, 110, 70))
+    for x in (600, 730, 1160, 1290):                                       # 床に並べたバット
+        d.rectangle([x, 945, x + 110, 985], fill=(160, 170, 180), outline=(110, 120, 130), width=3)
+        d.rectangle([x + 6, 951, x + 104, 965], fill=SOY)
+    for k in range(5):                                                     # 棚の瓶も茶色に
+        x = 110 + k * 90
+        d.rectangle([x + 4, 420, x + 46, 466], fill=SOY)
+    d.polygon([(330, 480), (350, 480), (342, 560)], fill=SOY)              # 棚からも垂れる
+    return img
+
+
+def truck_kara():
+    """夜の荷さばき場。荷台の扉が開いて、中はもう空っぽ。"""
+    img = truck().convert("RGB")
+    d = _d(img)
+    d.rectangle([1110, 430, 1690, 750], fill=(52, 50, 58))                 # 空の荷台の中
+    for k in range(5):
+        d.line([(1110, 470 + k * 60), (1690, 470 + k * 60)], fill=(70, 68, 78), width=3)
+    d.rectangle([1110, 730, 1690, 750], fill=(90, 86, 92))                 # 荷台の床
+    d.polygon([(1100, 420), (960, 380), (960, 800), (1100, 760)], fill=(200, 200, 208), outline=(150, 150, 160))   # 開いた扉
+    for x, y in ((700, 860), (840, 910), (980, 870)):                     # 散らばった空の木箱
+        d.rectangle([x, y, x + 110, y + 64], fill=(120, 96, 66), outline=(186, 150, 104), width=6)
+        d.rectangle([x + 12, y + 12, x + 98, y + 52], fill=(70, 56, 40))
+    return img
+
+
+def chikuwa_kurai():
+    """ちくわ工場。人が出払って火も電球も消え、真っ暗。"""
+    img = chikuwa().convert("RGB")
+    dark = Image.new("RGB", (W, H), (10, 12, 22))
+    img = Image.blend(img, dark, 0.82)
+    d = _d(img)
+    d.ellipse([928, 60, 992, 136], fill=(60, 60, 64))                      # 消えた電球（元の位置）
+    d.rectangle([945, 44, 975, 72], fill=(50, 48, 46))
+    d.rectangle([1180, 560, 1400, 700], outline=(70, 72, 90), width=3)     # 冷えた焼き台の輪郭
+    for k in range(3):                                                     # 窓から差す月明かり
+        d.polygon([(200 + k * 60, 0), (240 + k * 60, 0), (420 + k * 60, FLOOR), (380 + k * 60, FLOOR)],
+                  fill=(60, 66, 92))
+    return img
+
+
+def _label(d, x, y, w, h, crossed):
+    """ラベルの試し刷り（文字は描かない）。赤い帯と灰色の行。"""
+    d.rectangle([x, y, x + w, y + h], fill=(250, 248, 240), outline=(170, 160, 150), width=2)
+    d.rectangle([x, y, x + w, y + h // 4], fill=RED)
+    for k in range(3):
+        d.rectangle([x + 8, y + h // 4 + 8 + k * 10, x + w - 8 - k * 12, y + h // 4 + 12 + k * 10], fill=(150, 140, 130))
+    if crossed:
+        d.line([(x + 4, y + 4), (x + w - 4, y + h - 4)], fill=(200, 40, 40), width=5)
+        d.line([(x + w - 4, y + 4), (x + 4, y + h - 4)], fill=(200, 40, 40), width=5)
+
+
+def jimusho_label():
+    """事務所。作り直したラベル14枚が壁に並び、机と床に紙が山になっている。"""
+    img = jimusho().convert("RGB")
+    d = _d(img)
+    for k in range(14):                                                    # 壁に貼った14枚（最後の1枚以外は×）
+        x, y = 662 + (k % 7) * 86, 406 + (k // 7) * 72                 # 机の電話・書類にかからない高さ
+        _label(d, x, y, 78, 62, crossed=k < 13)
+    for px in (760, 1000):                                                 # 床に積んだ試し刷りの山
+        for k in range(14):
+            x = px + ((k * 7) % 5 - 2) * 6
+            d.rectangle([x, 1000 - k * 8, x + 170, 1008 - k * 8], fill=(246, 244, 236), outline=(150, 140, 120), width=1)
+            if k % 4 == 0:
+                d.rectangle([x, 1000 - k * 8, x + 170, 1003 - k * 8], fill=RED)
+    for x, y in ((660, 960), (960, 1010), (1200, 975), (1250, 1030), (640, 1030)):   # 丸めた紙
+        d.ellipse([x, y, x + 60, y + 48], fill=(240, 236, 226), outline=(170, 160, 150), width=3)
+        d.line([(x + 14, y + 20), (x + 44, y + 28)], fill=(190, 180, 170), width=3)
+    return img
+
+
+def shachou():
+    """1980年代の社長室。大きな窓の外に七尾湾と島、机に手帳とカニカマの皿。"""
+    img = base((222, 214, 198), (192, 184, 168))
+    wood_floor(img, FLOOR, col=(120, 92, 66), line=(100, 76, 54))
+    img = img.convert("RGB")
+    sea = Image.new("RGB", (W, H))
+    sea.paste(vgrad((W, 260), (168, 202, 228), (214, 224, 230)), (0, 0))
+    sea.paste(vgrad((W, 200), (70, 130, 160), (52, 104, 134)), (0, 260))
+    img.paste(sea.crop((560, 0, 1360, 400)), (560, 120))                  # 窓の外（空と海）
+    d = _d(img)
+    d.ellipse([820, 330, 1180, 420], fill=(96, 122, 94))                   # 湾に浮かぶ島
+    d.rectangle([560, 120, 1360, 520], outline=(90, 74, 60), width=14)     # 窓枠
+    d.line([(960, 120), (960, 520)], fill=(90, 74, 60), width=10)
+    d.rectangle([600, 640, 1320, 690], fill=(110, 78, 52))                 # 大きな机
+    d.rectangle([620, 690, 660, 860], fill=(90, 64, 44))
+    d.rectangle([1260, 690, 1300, 860], fill=(90, 64, 44))
+    d.rectangle([700, 600, 800, 640], fill=(60, 50, 44))                   # 手帳
+    d.line([(712, 610), (788, 610)], fill=(150, 130, 110), width=3)
+    d.ellipse([1060, 604, 1220, 640], fill=(246, 246, 246), outline=(190, 190, 190), width=3)   # 皿
+    for k in range(3):
+        _stick(d, 1080, 608 + k * 8, w=120, h=14)
+    return img
+
+
+def kenkyu1995():
+    """1995年の試作室。台の上にパテの型と切り分けたパテ、こんにゃく、ミキサー、閉じた手帳。"""
+    img = base((236, 238, 240), (208, 212, 216))
+    wood_floor(img, FLOOR, col=(160, 160, 158), line=(140, 140, 138))
+    img = img.convert("RGB")
+    d = _d(img)
+    d.rectangle([640, 260, 1280, 290], fill=(190, 176, 150))               # 壁の棚
+    for k in range(7):
+        x = 670 + k * 86
+        d.rectangle([x, 196, x + 50, 260], fill=(214, 226, 236), outline=(140, 150, 160), width=3)
+        d.rectangle([x + 4, 226, x + 46, 256], fill=(200, 170, 120) if k % 2 else (230, 214, 170))
+    d.ellipse([900, 330, 1020, 450], fill=(250, 250, 250), outline=(120, 120, 126), width=6)   # 壁の時計
+    d.line([(960, 390), (960, 350)], fill=(60, 60, 64), width=5)
+    d.line([(960, 390), (990, 400)], fill=(60, 60, 64), width=5)
+    d.rectangle([560, 600, 1400, 650], fill=(230, 232, 234), outline=(160, 166, 172), width=4)  # 試作台
+    for x in (580, 1356):
+        d.rectangle([x, 650, x + 24, FLOOR], fill=(170, 176, 182))
+    d.rectangle([740, 556, 830, 600], fill=(120, 120, 116))                # こんにゃく
+    for k in range(10):
+        xx, yy = 748 + (k * 23) % 76, 562 + (k * 13) % 32
+        d.ellipse([xx, yy, xx + 6, yy + 6], fill=(70, 70, 68))
+    d.rectangle([850, 570, 940, 600], fill=(52, 46, 42))                   # 閉じた手帳
+    d.line([(860, 578), (930, 578)], fill=(150, 130, 110), width=3)
+    d.rectangle([960, 540, 1130, 600], fill=(176, 120, 70), outline=(120, 80, 44), width=4)   # パテの型
+    d.rectangle([972, 548, 1118, 568], fill=(214, 168, 140))
+    d.ellipse([1150, 572, 1290, 604], fill=(250, 250, 250), outline=(190, 190, 190), width=3)   # 切り分けた皿
+    for k in range(3):
+        d.rectangle([1170 + k * 36, 566, 1200 + k * 36, 588], fill=(214, 168, 140), outline=(170, 120, 96), width=2)
+    d.rectangle([640, 520, 700, 600], fill=(246, 246, 246), outline=(150, 150, 156), width=3)  # ミキサー
+    d.rectangle([648, 470, 692, 520], fill=(214, 230, 240), outline=(150, 160, 170), width=3)
+    return img
+
+
 LOCATIONS = {
+    "kk_kenkyu_dorodoro": kenkyu_dorodoro, "kk_truck_kara": truck_kara, "kk_chikuwa_kurai": chikuwa_kurai,
+    "kk_jimusho_label": jimusho_label, "kk_shachou": shachou, "kk_kenkyu1995": kenkyu1995,
     "kk_ima": ima, "kk_nanao": nanao, "kk_kamaboko": kamaboko, "kk_chikuwa": chikuwa,
     "kk_zukai": zukai, "kk_jimusho": jimusho, "kk_kenkyu": kenkyu, "kk_kenkyu2": kenkyu2,
     "kk_zukai2": zukai2, "kk_koba": koba, "kk_tsukiji": tsukiji, "kk_tonya": tonya,
@@ -497,7 +652,7 @@ LOCATIONS = {
     "kk_gendai": gendai, "kk_shiryo": shiryo,
 }
 
-CARDS = ["1952", "1970", "1972", "1974"]
+CARDS = ["1952", "1970", "1972", "1974", "1986", "2003"]   # 1986・2003 は作り直し版で追加
 
 
 def year_card(text: str) -> Image.Image:

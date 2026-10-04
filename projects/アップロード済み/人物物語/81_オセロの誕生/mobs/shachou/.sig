@@ -1,0 +1,1 @@
+社長|none|none||v4|suit|#3a3a40|o1

@@ -1,0 +1,1 @@
+将棋部員|none|none||v4|gakuran|#26304a|o1

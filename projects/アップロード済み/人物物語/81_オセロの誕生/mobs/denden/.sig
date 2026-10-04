@@ -1,0 +1,1 @@
+電電公社|none|none||v4|suit|#4a5060|o1

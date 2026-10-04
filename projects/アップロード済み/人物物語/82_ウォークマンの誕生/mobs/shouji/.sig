@@ -1,0 +1,1 @@
+庄司薫|none|none||v4|suit|#4a5a4a|o1

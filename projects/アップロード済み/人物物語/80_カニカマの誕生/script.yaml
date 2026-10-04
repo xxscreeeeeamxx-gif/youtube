@@ -1,0 +1,1575 @@
+meta:
+  title: 【カニカマの誕生】人工クラゲを作るはずが、失敗作を刻んだらカニになった【ずんだもん解説】
+  slug: sugiyo-kanikama-v2
+  summary: スーパーでおなじみのカニカマ。最初からカニを目指したわけではありませんでした。1970年、能登・七尾のちくわ屋に「人工のクラゲを作れないか」という依頼が舞い込みます。開発をまとめたのは、食べた物を何でも手帳に書く食通の専務、杉野芳人。醤油であえると溶けてしまう失敗作を前に、彼は何に気づいたのか。築地での門前払いや「インチキ」と呼ばれた日々も含めて、再現ドラマでたどります。
+  tags:
+  - カニカマ
+  - かに風味かまぼこ
+  - スギヨ
+  - 杉野芳人
+  - すり身
+  - かまぼこ
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: クラゲの失敗作
+    bottom: カニカマの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: shokunin
+    label: 職人
+    voice: 42
+    pitch: 0.0
+    outfit: apron
+    color: '#5a6a7a'
+  - id: kenkyu
+    label: 研究者
+    voice: 21
+    pitch: 0.0
+    outfit: labcoat
+  - id: chinmi
+    label: 珍味問屋
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#5a4a3a'
+  - id: tonya
+    label: 築地の問屋
+    voice: 13
+    pitch: 0.1
+    outfit: apron
+    color: '#3e4a5c'
+  - id: wakaishu
+    label: 若い衆
+    voice: 11
+    pitch: 0.0
+    outfit: apron
+    color: '#6a5a48'
+  - id: jougai
+    label: 場外の問屋
+    voice: 100
+    pitch: 0.0
+    outfit: apron
+    color: '#7a3a3a'
+  - id: itamae
+    label: 板前
+    voice: 67
+    pitch: 0.0
+    outfit: apron
+    color: '#e8e6e0'
+  - id: nakaoroshi
+    label: 仲卸
+    voice: 13
+    pitch: -0.1
+    outfit: apron
+    color: '#2f3a52'
+  - id: untenshu
+    label: 運転手
+    voice: 11
+    pitch: 0.0
+    outfit: work
+    color: '#4a5a6a'
+  - id: kyaku
+    label: 客
+    voice: 8
+    pitch: 0.15
+    outfit: apron
+    color: '#b07a6a'
+  - id: tenin
+    label: 店員
+    voice: 12
+    pitch: 0.04
+    outfit: apron
+    color: '#3a6a4a'
+  - id: shain
+    label: 社員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: tetsuya
+    label: 長男・哲也
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e4450'
+  - id: kenkyuin
+    label: 研究員
+    voice: 8
+    pitch: 0.04
+    outfit: labcoat
+scenes:
+- id: co_kurage
+  title: ''
+  background: kk_kenkyu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: thinking}
+  - {who: shokunin, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 1970年代の初め、能登の七尾。のちにカニカマを生むちくわ屋が、人工のクラゲを作っていました。
+    reading: せんきゅうひゃく ななじゅうねんだいの はじめ、のとの ななお。のちに かにかまお うむ ちくわやが、じんこうの くらげお つくって いました。
+  - speaker: shokunin
+    emotion: angry
+    text: 専務。醤油のタレであえたら……また溶けたわい。
+  - speaker: zundamon
+    emotion: surprised
+    text: これで、[何|なん]回目だ。
+  - speaker: shokunin
+    emotion: thinking
+    text: 数えとらん。こんなもん、もう捨てるしかないげん。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……待て。捨てる前に、刻んで食べてみる。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……この歯ざわり。カニの脚の身じゃないか！
+    se: don
+  - speaker: shokunin
+    emotion: surprised
+    text: クラゲを作っとって、カニけ！？
+    beat: true
+  - speaker: reimu
+    text: この男は、杉野芳人。失敗作から生まれたかにあしは、2か月でトラック1日5便でも足りなくなります。
+    reading: この おとこわ すぎの よしと。しっぱいさくから うまれた かにあしわ、にかげつで とらっく いちにち ごびんでも たりなく なります。
+- id: hook
+  title: ''
+  background: kk_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、今日はカニ食べ放題パーティーなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……それ、全部カニカマよね。
+  - speaker: zundamon
+    emotion: happy
+    text: カニカマは実質カニ。殻をむかなくていい、進化したカニなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 進化どころか、もとはクラゲの失敗作よ。
+    beat: true
+  - speaker: zundamon
+    emotion: surprised
+    text: クラゲ！？ そもそも、なんでちくわ屋がクラゲを作ってたの？
+    telops:
+    - {text: なぜちくわ屋がクラゲを？, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、ちくわ屋に届いた無茶な注文よ。
+- id: ch0_nanao
+  title: ''
+  background: kk_nanao
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 能登半島の七尾。杉野家は江戸時代から、網元として魚をとってきました。
+    reading: のとはんとうの ななお。すぎのけわ えどじだいから、あみもとと して さかなお とって きました。
+  - speaker: reimu
+    text: 1907年、初代の杉野作太郎がちくわを作り始めます。
+    reading: せんきゅうひゃく ななねん、しょだいの すぎの さくたろうが ちくわお つくり はじめます。
+  - speaker: reimu
+    text: すり身を竹の串に巻いて、炭火で焼く手作りでした。
+    reading: すりみお たけの くしに まいて、すみびで やく てづくりでした。
+  - speaker: reimu
+    text: 1923年には気仙沼から職人を招き、サメの身でもちくわを作ります。
+    reading: せんきゅうひゃく にじゅうさんねんにわ けせんぬまから しょくにんお まねき、さめの みでも ちくわお つくります。
+- id: card1952
+  title: ''
+  background: kk_card_1952
+  cuts:
+  - speaker: reimu
+    text: 1952年。七尾のちくわが、ビタミンちくわとして売り出されます。
+    reading: せんきゅうひゃく ごじゅうにねん。ななおの ちくわが、びたみん ちくわと して うりだされます。
+- id: ch1_chikuwa
+  title: 能登のちくわ屋
+  background: kk_chikuwa
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: happy}
+  - {who: shokunin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shokunin
+    emotion: happy
+    text: 若旦那。長野から、また注文やぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 海のない長野で、うちのちくわが売れてる！
+  - speaker: shokunin
+    emotion: normal
+    text: 戦争のあとで、みんなビタミンが足りんがや。
+  - speaker: zundamon
+    emotion: happy
+    text: ビタミンの名前が、効いてるんだな。
+  - speaker: reimu
+    text: ビタミンちくわは今も、売り上げの約7割が長野県です。
+    reading: びたみん ちくわわ いまも、うりあげの やく ななわりが ながのけんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今日の昼のそば、つゆが甘かった。手帳に書いておこう。
+  - speaker: shokunin
+    emotion: surprised
+    text: 若旦那、食べた物を全部書いとるがけ？
+  - speaker: zundamon
+    emotion: normal
+    text: 全部だ。朝のみそ汁の具までな。
+  - speaker: shokunin
+    emotion: thinking
+    text: ……若旦那の手帳、もう[何|なん]冊目や。
+  - speaker: zundamon
+    emotion: happy
+    text: 冊数は数えてない。食べた物なら、全部言える。
+  - speaker: shokunin
+    emotion: angry
+    text: 覚えるとこが、逆やろ。
+    se: hammer
+  - speaker: reimu
+    text: 芳人は列車が出る間際でも、見知らぬ食堂やそば屋を見つけると寄って食べました。
+    reading: よしとわ れっしゃが でる まぎわでも、みしらぬ しょくどうや そばやお みつけると よって たべました。
+  - speaker: zundamon
+    emotion: happy
+    text: 列車は次のが来る。でも、あのそば屋には今しか入れない。
+  - speaker: shokunin
+    emotion: thinking
+    text: 若旦那の頭の中は、食べ物でいっぱいやな。
+    beat: true
+  - speaker: reimu
+    text: 1959年には、人工のカラスミも作り始めます。
+    reading: せんきゅうひゃく ごじゅうくねんにわ、じんこうの からすみも つくり はじめます。
+  - speaker: shokunin
+    emotion: surprised
+    text: 今度は、カラスミまで作り物け。
+  - speaker: zundamon
+    emotion: happy
+    text: 似せて作るのは、練り物屋の腕の見せどころだ。
+- id: ch2_irai
+  title: クラゲを作れ
+  background: kk_jimusho
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: normal}
+  - {who: chinmi, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1960年代の終わり。中国からの食用クラゲの輸入が止まります。
+    reading: せんきゅうひゃく ろくじゅうねんだいの おわり。ちゅうごくからの しょくよう くらげの ゆにゅうが とまります。
+  - speaker: chinmi
+    emotion: surprised
+    text: 杉野さん、えらいこっちゃ。中華のクラゲが入ってきまへん。
+  - speaker: chinmi
+    emotion: sad
+    text: 前菜のクラゲが出されへんて、料理屋さんが泣いてはります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 中国の、文化大革命のあおりですか。
+  - speaker: chinmi
+    emotion: normal
+    text: そうです。そこで、お宅にお願いや。
+  - speaker: chinmi
+    emotion: happy
+    text: 人工のカラスミを作りはったでしょ。ほな、人工のクラゲもいけまっしゃろ。
+  - speaker: zundamon
+    emotion: surprised
+    text: カラスミとクラゲは、だいぶ違いますよ。
+  - speaker: chinmi
+    emotion: happy
+    text: どっちも珍味ですやん。
+    se: zukko
+  - speaker: zundamon
+    emotion: thinking
+    text: ……そもそも、クラゲって[何|なに]でできてるんです？
+  - speaker: chinmi
+    emotion: normal
+    text: ほとんど水ですわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 水を、コリコリにしろと？
+  - speaker: chinmi
+    emotion: happy
+    text: そうです。ほな、頼みましたで！
+  - speaker: zundamon
+    emotion: surprised
+    text: まだ、引き受けるとは言ってません。
+  - speaker: chinmi
+    emotion: happy
+    text: 顔に、やるって書いてありますで。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: ……正直、ちょっと面白そうなのだ。
+- id: card1970
+  title: ''
+  background: kk_card_1970
+  cuts:
+  - speaker: reimu
+    text: 1970年。人工クラゲの開発が始まります。
+    reading: せんきゅうひゃく ななじゅうねん。じんこう くらげの かいはつが はじまります。
+- id: ch3_team
+  title: 人工クラゲ
+  background: kk_kenkyu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 杉野芳人, emotion: normal}
+  - {who: kenkyu, x: 0.52, emotion: normal}
+  - {who: shokunin, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 開発をまとめるのは、専務の杉野芳人。水産試験場の研究者も力を貸します。
+    reading: かいはつお まとめるのわ せんむの すぎの よしと。すいさん しけんじょうの けんきゅうしゃも ちからお かします。
+  - speaker: shokunin
+    emotion: thinking
+    text: 専務。ちくわ屋がクラゲを作るなんて、聞いたことないわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 誰も聞いたことがないから、やるんだ。
+  - speaker: shokunin
+    emotion: angry
+    text: 面白がっとるのは、専務だけやぞ。
+    beat: true
+  - speaker: kenkyu
+    emotion: normal
+    text: 使うのは、海藻のぬめりのもと。アルギン酸ナトリウムです。
+  - speaker: shokunin
+    emotion: thinking
+    text: 海藻のぬるぬるで、クラゲになるがけ？
+  - speaker: kenkyu
+    emotion: normal
+    text: これを、カルシウムの液に落とします。
+  - speaker: zundamon
+    emotion: surprised
+    text: 落ちたところから、固まっていく！
+  - speaker: kenkyu
+    emotion: happy
+    text: これに、卵白も合わせます。
+  - speaker: zundamon
+    emotion: thinking
+    text: なんで、カルシウムに触れると固まるんです？
+  - speaker: kenkyu
+    emotion: normal
+    text: アルギン酸は、長い鎖のような形をしています。
+  - speaker: kenkyu
+    emotion: normal
+    text: カルシウムが、鎖と鎖をつなぐ[留め金|とめがね]になるんです。
+  - speaker: shokunin
+    emotion: normal
+    text: '[留め金|とめがね]で網になって、水を閉じ込めるがか。'
+  - speaker: kenkyu
+    emotion: happy
+    text: そうです。人工のイクラも、同じ仕組みです。
+  - speaker: zundamon
+    emotion: happy
+    text: 透き[通って|とおって]、つるつる。見た目はクラゲそっくりだ！
+  - speaker: shokunin
+    emotion: thinking
+    text: 見た目だけなら、ゼリー屋にもできるわ。
+    beat: true
+- id: ch3_shippai
+  title: ''
+  background: kk_kenkyu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 杉野芳人, emotion: happy}
+  - {who: kenkyu, x: 0.52, emotion: normal}
+  - {who: shokunin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: shokunin
+    emotion: normal
+    text: 中華の味付けにするぞ。醤油のタレで、あえてみるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: どれ、自慢のコリコリを……あれ？
+  - speaker: zundamon
+    emotion: surprised
+    text: コリコリが、消えていく！
+  - speaker: kenkyu
+    emotion: thinking
+    text: 溶けています。味を付けると、形が保てません。
+    telops:
+    - {text: 味を付けると溶ける, size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: タレを、うんと薄めてみる。
+  - speaker: kenkyu
+    emotion: thinking
+    text: 薄めても、やっぱり溶けます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……じゃあ、タレをかけずに出そう。
+  - speaker: shokunin
+    emotion: angry
+    text: 味のないクラゲを、誰が食うがや。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、タレは食べる直前にかけてもらう。
+  - speaker: kenkyu
+    emotion: thinking
+    text: かけた所から、溶けていきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 配合を変えよう。もっと固めにするんだ！
+  - speaker: kenkyu
+    emotion: sad
+    text: ……固めにしても、溶けました。
+    se: chin
+  - speaker: zundamon
+    emotion: angry
+    text: なら量で勝負だ。全部のバットに、一度にタレを！
+  - speaker: shokunin
+    emotion: angry
+    text: 今度はドロドロや。バットが全部、汁物になったわい。
+    background: kk_kenkyu_dorodoro
+  - speaker: shokunin
+    emotion: thinking
+    text: 箸より先に、皿の上で溶けるクラゲやな。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: クラゲへの道は、遠いのだ……。
+  - speaker: reimu
+    text: 見た目と歯ごたえは近づいても、味を付けると溶ける。試作は失敗が続きました。
+    reading: みためと はごたえわ ちかづいても、あじお つけると とける。しさくわ しっぱいが つづきました。
+- id: ch3_hirameki
+  title: ''
+  background: kk_kenkyu2
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 杉野芳人, emotion: sad}
+  - {who: shokunin, x: 0.52, emotion: thinking}
+  - {who: kenkyu, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: kenkyu
+    emotion: sad
+    text: 珍味問屋さんには、お断りするしかなさそうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あと一晩だけ、考えさせてくれ。
+  - speaker: shokunin
+    emotion: thinking
+    text: 専務。この失敗作、どうするがや。捨てるけ？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……もったいない。刻んで、食べてみる。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……この歯ざわり。カニの脚の身じゃないか！
+    se: hirameki
+    telops:
+    - {text: 失敗作を刻んだらカニの身, size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shokunin
+    emotion: surprised
+    text: クラゲを作っとって、カニけ！？
+  - speaker: kenkyu
+    emotion: thinking
+    text: 刻んだ筋の切れ方が、カニの身のほぐれ方に似ています。
+  - speaker: reimu
+    text: 能登では香箱ガニが、子どものおやつになるほど身近でした。
+    reading: のとでわ こうばこがにが、こどもの おやつに なるほど みぢかでした。
+  - speaker: shokunin
+    emotion: happy
+    text: カニの身なら、能登のもんは子どもの時から食べ慣れとるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、クラゲの材料じゃ味を付けたら溶ける……。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……待てよ。うちの本業は、かまぼこだ！
+  - speaker: shokunin
+    emotion: normal
+    text: すり身なら、味を付けても溶けんわ。毎日こねとるがやぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: '[灯台下暗し|とうだいもとくらし]だ。近くに立派な原料があったのに、すぐには気付かなんだ。'
+  - speaker: shokunin
+    emotion: thinking
+    text: 気付くまでに、どんだけクラゲを溶かしたがや。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 手帳に書いておこう。失敗作、カニの歯ざわり。
+  - speaker: shokunin
+    emotion: surprised
+    text: 失敗作まで、書くがけ。
+- id: card1972
+  title: ''
+  background: kk_card_1972
+  cuts:
+  - speaker: reimu
+    text: 1972年7月。すり身の、かにあしが生まれます。
+    reading: せんきゅうひゃく ななじゅうにねん しちがつ。すりみの かにあしが うまれます。
+- id: ch4_kaniashi
+  title: かにあし誕生
+  background: kk_koba
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: happy}
+  - {who: shokunin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shokunin
+    emotion: happy
+    text: 昆布とかつおの[出汁|だし]で、すり身に味を付けたぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: それを細く刻んで、カニの脚の身をほぐしたみたいにする。
+  - speaker: shokunin
+    emotion: thinking
+    text: 包丁で全部刻んどったら、日が暮れるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 刻むのは、機械に任せよう。
+  - speaker: zundamon
+    emotion: happy
+    text: ……どうだ。ほぐれ方まで、カニの脚の身だ！
+  - speaker: shokunin
+    emotion: happy
+    text: 塩気も、ちょうどいいわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前は、かにあしにしよう。
+  - speaker: shokunin
+    emotion: thinking
+    text: カニは一切入っとらんのに、カニの足け。
+  - speaker: zundamon
+    emotion: normal
+    text: 脚の身に似てるんだから、かにあしだ。
+  - speaker: reimu
+    text: 売り出す名前は、珍味かまぼこ・かにあし。スギヨは、これを世界初のカニカマとしています。
+    reading: うりだす なまえわ ちんみ かまぼこ かにあし。すぎよわ、これお せかいはつの かにかまと して います。
+  - speaker: zundamon
+    emotion: happy
+    text: これは、10年に一度の発明だぞ！
+    se: jaan
+    telops:
+    - {text: 10年に一度の発明, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shokunin
+    emotion: happy
+    text: 10年に一度なら、10年は売れるがやな。
+  - speaker: zundamon
+    emotion: happy
+    text: 10年売れたら、上出来だ。
+  - speaker: reimu
+    text: 同じ年の9月に日中の国交が正常化し、本物のクラゲが入ってきます。
+    reading: おなじ としの くがつに にっちゅうの こっこうが せいじょうかし、ほんものの くらげが はいって きます。
+  - speaker: shokunin
+    emotion: thinking
+    text: ……人工クラゲは、もういらんがやな。
+  - speaker: zundamon
+    emotion: happy
+    text: いらなくなる前に、カニになっててよかったのだ。
+    beat: true
+- id: ch5_tsukiji
+  title: 刻んだかまぼこは売れない
+  background: kk_tsukiji
+  bgm: kinakusai
+  stage:
+  - {who: tonya, x: 0.3, emotion: thinking}
+  - {who: wakaishu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 営業の担当者は、かにあしを持って築地の問屋を回ります。
+    reading: えいぎょうの たんとうしゃわ、かにあしお もって つきじの とんやお まわります。
+  - speaker: tonya
+    emotion: thinking
+    text: 能登のかまぼこ屋が、また見本を置いてったぞ。
+  - speaker: wakaishu
+    emotion: surprised
+    text: なんです、この細切れ。
+  - speaker: tonya
+    emotion: normal
+    text: カニの脚に似せた、かまぼこなんだとよ。
+  - speaker: wakaishu
+    emotion: thinking
+    text: 刻んだかまぼこ？ そんなの、売れませんよ。
+  - speaker: tonya
+    emotion: angry
+    text: 食わなくても分かる。カニが欲しけりゃ、客はカニを買うんだ。
+  - speaker: wakaishu
+    emotion: thinking
+    text: 一口くらい、食べてみても……
+  - speaker: tonya
+    emotion: angry
+    text: 食ったら情が移るだろうが。返してこい！
+  - speaker: wakaishu
+    emotion: surprised
+    text: 情が移るって、相手はかまぼこですよ。
+    se: tsukkomi
+  - speaker: reimu
+    text: 全国の問屋でも、刻んだかまぼこなど売れないと門前払いが続きました。
+    reading: ぜんこくの とんやでも、きざんだ かまぼこなど うれないと もんぜんばらいが つづきました。
+- id: ch5_denwa
+  title: ''
+  background: kk_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: happy}
+  - {who: shokunin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shokunin
+    emotion: thinking
+    text: 専務。東京の営業から、また電話や。
+  - speaker: zundamon
+    emotion: happy
+    text: どうだった。売れたか。
+  - speaker: shokunin
+    emotion: sad
+    text: 今日も全部、門前払いやと。
+  - speaker: zundamon
+    emotion: surprised
+    text: 一口食べてもらえれば、分かるのに……。
+  - speaker: shokunin
+    emotion: thinking
+    text: 食べる前に、断られとるがや。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……いっそ、刻まずに売るか。
+  - speaker: shokunin
+    emotion: angry
+    text: それは、ただのかまぼこや。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……だよな。刻んでこそ、カニなのだ。
+- id: ch5_jougai
+  title: ''
+  background: kk_jougai
+  bgm: you_and_me
+  stage:
+  - {who: jougai, x: 0.3, emotion: thinking}
+  - {who: itamae, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 断られ続けたある日。築地の場外の問屋が、かにあしに目を留めます。
+    reading: ことわられ つづけた あるひ。つきじの じょうがいの とんやが、かにあしに めお とめます。
+  - speaker: jougai
+    emotion: thinking
+    text: 能登のかまぼこ屋か。あちこちで断られてるって聞いたぞ。
+  - speaker: jougai
+    emotion: thinking
+    text: 刻んだかまぼこで、カニの代わりか。
+  - speaker: itamae
+    emotion: surprised
+    text: かまぼこで、カニ？
+  - speaker: jougai
+    emotion: happy
+    text: ……なかなか、面白い着想だ。
+  - speaker: jougai
+    emotion: normal
+    text: 板さん。ちょっと、食べてみてくれ。
+  - speaker: itamae
+    emotion: surprised
+    text: ……ほう。こりゃ、刻んだカニの代わりにちょうどいい。
+  - speaker: itamae
+    emotion: happy
+    text: 酢の物にも和え物にも使える。値段は、本物よりずっと安い。
+  - speaker: jougai
+    emotion: happy
+    text: よし。売ってみようじゃないか。
+    se: levelup
+  - speaker: itamae
+    emotion: happy
+    text: 仲間の店にも、教えてやるよ。
+  - speaker: reimu
+    text: 板前たちの評判で、かにあしは築地の場内でも売れ始めます。
+    reading: いたまえたちの ひょうばんで、かにあしわ つきじの じょうないでも うれ はじめます。
+- id: ch5_yoru
+  title: ''
+  background: kk_truck
+  bgm: pop
+  stage:
+  - {who: nakaoroshi, x: 0.3, emotion: angry}
+  - {who: untenshu, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2か月ほどで、大きなトラックが1日5回運んでも足りなくなりました。
+    reading: にかげつ ほどで、おおきな とらっくが いちにち ごかい はこんでも たりなく なりました。
+    telops:
+    - {text: トラック1日5便でも足りない, size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: nakaoroshi
+    emotion: angry
+    text: まだか！ こっちは夜中から、寝ないで待ってんだ。
+  - speaker: untenshu
+    emotion: surprised
+    text: お、お待たせしました。今、荷台を開けますんで……
+  - speaker: nakaoroshi
+    emotion: angry
+    text: どけどけ！ 自分で降ろす！
+  - speaker: untenshu
+    emotion: surprised
+    text: ……あれ。荷物に、一度も触ってないんですけど。
+    background: kk_truck_kara
+  - speaker: nakaoroshi
+    emotion: happy
+    text: 触る前に、売れちまうんだよ！
+  - speaker: nakaoroshi
+    emotion: angry
+    text: ……おい、うちの分がたったこれだけか。スギヨを恨むぞ！
+  - speaker: untenshu
+    emotion: thinking
+    text: おれの仕事、運転しか残ってないですね。
+    beat: true
+- id: ch5_hit
+  title: ''
+  background: kk_koba
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: surprised}
+  - {who: shokunin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shokunin
+    emotion: surprised
+    text: 専務！ 築地から電話や。もっと送れと！
+  - speaker: zundamon
+    emotion: happy
+    text: 門前払いの次は、注文の山なのだ！
+  - speaker: shokunin
+    emotion: surprised
+    text: 1日5便でも、追いつかんわ！
+  - speaker: zundamon
+    emotion: happy
+    text: 機械を、あと3台増やせ！
+  - speaker: shokunin
+    emotion: thinking
+    text: 機械を増やしても、動かす人が足らん。
+  - speaker: zundamon
+    emotion: normal
+    text: ちくわ工場の人も、こっちに回してくれ。
+  - speaker: shokunin
+    emotion: surprised
+    text: ちくわは、どうするがや。
+  - speaker: zundamon
+    emotion: happy
+    text: ちくわには、ちょっと待ってもらう！
+- id: ch5_kurai
+  title: ''
+  background: kk_chikuwa
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: thinking}
+  - {who: shokunin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ちくわ工場に、誰もいない。
+  - speaker: shokunin
+    emotion: normal
+    text: 全員、カニの方や。電気も消しとくぞ。
+    background: kk_chikuwa_kurai
+  - speaker: reimu
+    text: 真っ暗なちくわ工場を見て、スギヨは危ないのではとささやかれました。
+    reading: まっくらな ちくわ こうじょうお みて、すぎよわ あぶないのでわと ささやかれました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 危ないどころか、忙しくて目が回ってるのに！
+  - speaker: shokunin
+    emotion: thinking
+    text: 外から見たら、どっちも真っ暗や。
+    beat: true
+- id: ch6_inchiki
+  title: インチキと言われて
+  background: kk_mise
+  bgm: kinakusai
+  stage:
+  - {who: kyaku, x: 0.3, emotion: angry}
+  - {who: tenin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 売れるほどに、別の声も届き始めます。
+    reading: うれるほどに、べつの こえも とどき はじめます。
+  - speaker: kyaku
+    emotion: angry
+    text: ちょっと。これ、カニじゃないじゃない！
+  - speaker: tenin
+    emotion: surprised
+    text: あ、はい。かまぼこです。
+  - speaker: kyaku
+    emotion: angry
+    text: カニだと思って買ったのよ。だまされたわ！
+  - speaker: tenin
+    emotion: thinking
+    text: でも、名前はかにあしと……
+  - speaker: kyaku
+    emotion: angry
+    text: だから、カニの足でしょ！
+    se: zukko
+  - speaker: tenin
+    emotion: sad
+    text: ……名前が、一番カニなんです。
+    beat: true
+  - speaker: reimu
+    text: 本物のカニだと思った人から、インチキだと抗議が殺到し新聞にも書かれました。
+    reading: ほんものの かにだと おもった ひとから、いんちきだと こうぎが さっとうし しんぶんにも かかれました。
+- id: ch6_label
+  title: ''
+  background: kk_jimusho
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 専務。とうとう、新聞にまで書かれました。
+  - speaker: zundamon
+    emotion: thinking
+    text: なんて書いてある。
+  - speaker: shain
+    emotion: normal
+    text: 油断するとすぐこんな例に引っかけられる、と。
+  - speaker: zundamon
+    emotion: sad
+    text: ……上手に、似せすぎたのか。
+  - speaker: shain
+    emotion: thinking
+    text: 似せないと、売れません。似せると、怒られます。
+  - speaker: zundamon
+    emotion: sad
+    text: どっちに転んでも、カニのハサミに挟まれるのだ。
+    beat: true
+  - speaker: reimu
+    text: 公正取引委員会の指導を受けて、ラベルの作り直しが始まります。
+    reading: こうせい とりひき いいんかいの しどうお うけて、らべるの つくりなおしが はじまります。
+  - speaker: shain
+    emotion: normal
+    text: まず、ラベルからカニの絵を外しました。
+  - speaker: zundamon
+    emotion: thinking
+    text: カニの絵のない、かにあしか……。
+  - speaker: shain
+    emotion: normal
+    text: それと、かには入っておりませんと書き足します。
+  - speaker: zundamon
+    emotion: sad
+    text: 正直すぎて、買う気がなくなるな。
+  - speaker: shain
+    emotion: normal
+    text: 名前も変えます。磯の味、です。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[何|なん]の味か、分からない。
+  - speaker: shain
+    emotion: happy
+    text: 次の案です。これスキなのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[何|なに]が好きなのか、もっと分からないのだ！'
+  - speaker: shain
+    emotion: thinking
+    text: ……これで、14回目の作り直しです。
+    background: kk_jimusho_label
+  - speaker: reimu
+    text: ほんの1年か2年で、ラベルは14回変わりました。名前は結局、かにあしに戻ります。
+    reading: ほんの いちねんか にねんで、らべるわ じゅうよんかい かわりました。なまえわ けっきょく、かにあしに もどります。
+    telops:
+    - {text: ラベル作り直し14回, size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 14回も回り道して、元の名前なのだ。
+    se: oti
+  - speaker: reimu
+    text: 林家こん平さんがカニのポーズで歌うテレビCMが、全国に流れます。
+    background: kk_jimusho
+    reading: はやしや こんぺいさんが かにの ぽーずで うたう てれび しーえむが、ぜんこくに ながれます。
+  - speaker: zundamon
+    emotion: happy
+    text: カニじゃないと正直に言っても、売れる物は売れるんだ。
+- id: ch7_sekai
+  title: 空を飛ぶかにあし
+  background: kk_sekai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1975年、スギヨは棒の形のゴールデンかにあしを出します。
+    reading: せんきゅうひゃく ななじゅうごねん、すぎよわ ぼうの かたちの ごーるでん かにあしお だします。
+  - speaker: zundamon
+    emotion: happy
+    text: 今度は、カニの脚みたいな棒の形にしたぞ。
+  - speaker: shain
+    emotion: happy
+    text: 細切れより、ずっと本物の脚に近いですね。
+  - speaker: reimu
+    text: 1976年、スギヨはアメリカへ売り込みを始めます。
+    reading: せんきゅうひゃく ななじゅうろくねん、すぎよわ あめりかえ うりこみお はじめます。
+  - speaker: shain
+    emotion: thinking
+    text: アメリカの人に、かまぼこが通じますかね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 練り物と言ったら、変わった日本の食べ物に見られるな。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら日本の店じゃなく、アメリカの人が普段食べる所から出そう。
+  - speaker: shain
+    emotion: happy
+    text: たとえば、飛行機の機内食です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 空の上で、かにあしを！？
+    se: bikkuri
+  - speaker: reimu
+    text: 1977年、ユナイテッド航空の機内食で試しに使われました。
+    reading: せんきゅうひゃく ななじゅうななねん、ゆないてっど こうくうの きないしょくで ためしに つかわれました。
+  - speaker: zundamon
+    emotion: happy
+    text: 刻んだかまぼこは売れないと言われたのに、空まで飛んだのだ。
+  - speaker: reimu
+    text: 1980年、芳人はすり身でエビの身を作る発明も出願します。
+    reading: せんきゅうひゃく はちじゅうねん、よしとわ すりみで えびの みお つくる はつめいも しゅつがん します。
+  - speaker: shain
+    emotion: thinking
+    text: クラゲの次はカニ、カニの次はエビですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 海の物は、全部すり身で作ってみせる。
+  - speaker: shain
+    emotion: thinking
+    text: ……ちくわの出番が、なくなりそうですね。
+    beat: true
+  - speaker: reimu
+    text: 1983年には、七尾に輸出専用の工場を建てます。
+    reading: せんきゅうひゃく はちじゅうさんねんにわ、ななおに ゆしゅつ せんようの こうじょうお たてます。
+- id: card1986
+  title: ''
+  background: kk_card_1986
+  cuts:
+  - speaker: reimu
+    text: 1986年。スギヨは、アメリカのワシントン州に工場を作ります。
+    reading: せんきゅうひゃく はちじゅうろくねん。すぎよわ、あめりかの わしんとんしゅうに こうじょうお つくります。
+- id: ch8_noto
+  title: 能登だからこそ
+  background: kk_shachou
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: normal}
+  - {who: tetsuya, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: アメリカの工場の場所を選んだのは、長男の哲也です。
+    reading: あめりかの こうじょうの ばしょお えらんだのわ、ちょうなんの てつやです。
+  - speaker: reimu
+    text: その哲也が、父の芳人にこう持ちかけます。
+    reading: その てつやが、ちちの よしとに こう もちかけます。
+  - speaker: tetsuya
+    emotion: normal
+    text: 本社を、東京に移してはどうですか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……なんだと。
+  - speaker: zundamon
+    emotion: angry
+    text: うちは、能登だからこそやっていけるんだ！
+    se: don
+    telops:
+    - {text: 能登だからこそ, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: カニに気付けたのも、能登の舌があったからだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 魚も職人も、能登にいる。東京に出たら、どっちも遠くなる。
+  - speaker: reimu
+    text: この話は、芳人の孫が取材で明かしています。
+    reading: この はなしわ、よしとの まごが しゅざいで あかして います。
+  - speaker: reimu
+    text: 1988年、哲也が社長を継ぎます。
+    reading: せんきゅうひゃく はちじゅうはちねん、てつやが しゃちょうお つぎます。
+  - speaker: zundamon
+    emotion: happy
+    text: 社長は任せる。ボクは、まだ新しい物を考えるのだ。
+- id: ch8_pate
+  title: 64歳の発明
+  background: kk_kenkyu1995
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 杉野芳人, emotion: happy}
+  - {who: kenkyuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1990年には、3代目のカニカマとなるロイヤルカリブを出します。
+    reading: せんきゅうひゃく きゅうじゅうねんにわ、さんだいめの かにかまと なる ろいやる かりぶお だします。
+  - speaker: reimu
+    text: 1995年。64歳になった芳人は、新しい発明に名を連ねます。
+    reading: せんきゅうひゃく きゅうじゅうごねん。ろくじゅうよんさいに なった よしとわ、あたらしい はつめいに なお つらねます。
+  - speaker: kenkyuin
+    emotion: happy
+    text: ロイヤルカリブは、これ以上のカニカマは無いって評判ですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: なら次は、カニカマじゃない物を作る。
+  - speaker: zundamon
+    emotion: happy
+    text: すり身で、フランスのパテを作るぞ。
+  - speaker: kenkyuin
+    emotion: surprised
+    text: パテって、あの脂っこいレバーのですか？
+  - speaker: zundamon
+    emotion: normal
+    text: 脂を減らして、軽く仕上げたい。
+  - speaker: kenkyuin
+    emotion: thinking
+    text: でも、すり身に油を混ぜると分かれてしまいます。
+  - speaker: zundamon
+    emotion: happy
+    text: あいだに、こんにゃくのマンナンを入れてつなぐんだ。
+  - speaker: kenkyuin
+    emotion: surprised
+    text: こんにゃくで、フランス料理を！？
+  - speaker: zundamon
+    emotion: happy
+    text: クラゲの失敗から、カニができたんだ。[何|なに]が化けるか分からん。
+  - speaker: kenkyuin
+    emotion: thinking
+    text: その発想、どこから出てくるんです？
+  - speaker: zundamon
+    emotion: happy
+    text: 全部、手帳の中だ。食べた物は一つ残らず書いてある。
+  - speaker: kenkyuin
+    emotion: thinking
+    text: ……その手帳、もう[何|なん]冊目なんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 数えるより、食べるほうが忙しくてな。
+    se: manuke
+  - speaker: kenkyuin
+    emotion: happy
+    text: いつか、その手帳を読ませてください。
+  - speaker: zundamon
+    emotion: happy
+    text: 読んだら、腹が減るぞ。
+- id: card2003
+  title: ''
+  background: kk_card_2003
+  cuts:
+  - speaker: reimu
+    text: 2003年10月24日。会長の杉野芳人は、72歳で亡くなりました。
+    reading: にせん さんねん じゅうがつ にじゅうよっか。かいちょうの すぎの よしとわ、ななじゅうにさいで なくなりました。
+- id: ch9_shi
+  title: 100年に一度のヒット
+  background: kk_yuugure
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 業界の新聞は訃報の中で、かにあしを100年に一度の大ヒット商品と書きました。
+    reading: ぎょうかいの しんぶんわ ふほうの なかで、かにあしお ひゃくねんに いちどの だいひっと しょうひんと かきました。
+    telops:
+    - {text: 100年に一度の大ヒット, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 10年に一度と喜んだ発明は、30年たっても売れ続けていました。
+    reading: じゅうねんに いちどと よろこんだ はつめいわ、さんじゅうねん たっても うれつづけて いました。
+  - speaker: reimu
+    text: 11月7日に七尾で社葬が営まれ、喪主は長男の哲也が務めました。
+    reading: じゅういちがつ なのかに ななおで しゃそうが いとなまれ、もしゅわ ちょうなんの てつやが つとめました。
+- id: ch9_kaoribako
+  title: 刻むから束ねるへ
+  background: kk_kaoribako
+  stage:
+  - {who: kenkyuin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 翌2004年、スギヨは香り箱という高級なカニカマを出します。
+    reading: よく にせん よねん、すぎよわ かおりばこと いう こうきゅうな かにかまお だします。
+  - speaker: kenkyuin
+    emotion: thinking
+    text: 会長に、見せたかったな。今度は刻まずに束ねたんです。
+  - speaker: kenkyuin
+    emotion: normal
+    text: 0.6ミリの細い筋を、葉っぱの筋みたいに束ねて……。
+  - speaker: reimu
+    text: 香り箱は練り物として初めて、スーパーの鮮魚売り場に並びました。
+    reading: かおりばこわ ねりものと して はじめて、すーぱーの せんぎょ うりばに ならびました。
+  - speaker: kenkyuin
+    emotion: happy
+    text: 名前は、能登の[香箱|こうばこ]ガニからもらった。
+  - speaker: kenkyuin
+    emotion: normal
+    text: 刻むから束ねるまで、30年あまりか……。
+  - speaker: kenkyuin
+    emotion: thinking
+    text: ……一口、食べてほしかったな。
+    se: namida
+  - speaker: reimu
+    text: 2006年には、農林水産祭で天皇杯を受けます。
+    reading: にせん ろくねんにわ、のうりん すいさんさいで てんのうはいお うけます。
+- id: ch10_shikumi
+  title: カニカマの作り方
+  background: kk_zukai3
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今のカニカマは、こうやって作るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: すり身を薄いシートにのばして、熱で固める。
+  - speaker: zundamon
+    emotion: thinking
+    text: まず、紙みたいにするのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこに細かい筋を入れて、糸みたいにほぐすの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 糸を束ねたら、赤いすり身を塗ったフィルムで巻いて切るのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: なんで、わざわざ糸みたいにするのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: カニの脚の身は、細い筋の束でできてるからよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤いのは、外側だけなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。フィルムの赤を、表面に写してるの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボク、赤いところだけはがして食べる派なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一番手間のかかった所から、はがしてるわね。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも、かまぼこはなんでプリプリなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 塩を入れてすりつぶすと、魚のたんぱく質が溶けて絡み合うの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを熱すると、網の目のように固まって弾力が出る。これを、かまぼこの足と言うの。
+  - speaker: zundamon
+    emotion: happy
+    text: かまぼこにも、足があるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 足があっても、歩いてはいかないわよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 塩は2〜3パーセント。少ないと固まらず、多いとしょっぱい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 塩加減が、ぎりぎりなのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 製造機は山口県の会社のものが、2011年の時点で世界の約7割だったの。
+- id: ch10_kamaboko
+  title: ''
+  background: kk_kamaboko
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ちくわとかまぼこって、親戚なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 親戚どころか、昔はちくわの形をかまぼこと呼んでたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一番古い記録は1115年。平安時代の[宴|うたげ]の献立よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 竹に巻いて焼いた形が、[蒲|がま]の穂という水辺の草に似てたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[蒲|がま]の穂に似てるから、かまぼこ！'
+  - speaker: tsumugi
+    emotion: normal
+    text: 板付きが広まってから、元の形を[竹輪|ちくわ]と呼び分けたのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ちくわの方が、お兄さんだったのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: かまぼこの日は11月15日。1115年にちなんでるの。
+- id: ch10_surimi
+  title: ''
+  background: kk_zukai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: カニカマの土台には、もう一つ大事な発明があるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 土台？
+  - speaker: tsumugi
+    emotion: normal
+    text: 冷凍すり身よ。1960年ごろ、北海道の水産試験場のチームが作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: すり身をそのまま凍らせると、スポンジみたいになって足が出なくなるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 冷凍できないのに、どうしたの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 身を水でよく洗って、砂糖と[リン酸塩|りんさんえん]を混ぜてから凍らせたの。
+  - speaker: zundamon
+    emotion: happy
+    text: 砂糖が、身を守るのか！
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの体も砂糖でいっぱいだから、冬でも平気なのだ！
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは、ただのおやつの食べすぎよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 凍るときに、たんぱく質が傷むのを防いでくれるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: これでスケトウダラのすり身を、一年中使えるようになったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 冷凍すり身は1960年に250トン。1976年には45万トンまで増えたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 16年で、1800倍なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1972年、スケトウダラの漁獲は日本だけで304万トンあったの。
+  - speaker: zundamon
+    emotion: happy
+    text: かにあしが生まれた年なのだ！
+- id: ch11_sekai
+  title: 世界のSURIMI
+  background: kk_sekai
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: カニカマは今、アジアにもヨーロッパにもアメリカにも工場があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2021年に日本で食べた量は、約5万トン。
+  - speaker: tsumugi
+    emotion: normal
+    text: フランスも、約5万トンよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 同じくらいなのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: でもフランスの人口は、日本の半分くらいなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1人あたりなら、フランスの勝ちなのだ！
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 作る力が世界一のカニカマ工場は、リトアニアにあるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: リトアニアって、どこなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: バルト海に面した、ヨーロッパの国よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカでは、カクテルソースを付けてスポーツ観戦のおつまみにするの。
+  - speaker: zundamon
+    emotion: happy
+    text: アメフトを見ながら、カニカマなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 英語では、まねしたカニという意味の名前で売られることもあるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: まねっこなのを、隠してないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 材料の名前のまま、[SURIMI|すりみ]と呼ぶ国もあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: すり身が、世界の言葉になったのか。
+- id: ch12_ronsou
+  title: 元祖はどっち？
+  background: kk_shiryo
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ネットで見たのだ。失敗作を酢の物にしたら、カニの味がしたって。
+  - speaker: tsumugi
+    emotion: normal
+    text: スギヨが話しているのは、刻んで食べたら食感がカニだったということよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、酢の物の話は？
+  - speaker: tsumugi
+    emotion: thinking
+    text: スギヨの話には、酢の物は出てこないの。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボク、昨日カニカマを酢の物にしたのに。
+  - speaker: tsumugi
+    emotion: happy
+    text: それは、ただのおいしい一品ね。
+    se: hammer
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、カニカマの元祖は能登なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 刻んだ形で最初に売ったのは、1972年のスギヨ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今よく見る棒の形を最初に出したのは、1974年の広島の大崎水産よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 珍味を作る機械に残ったすり身に、カニの汁が混ざっていたのを味見したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 広島でも、機械の残りから生まれたのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初の名前はカニスチック。のちに、フィッシュスチックに改めたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: カニから、魚に戻ったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2代目の社長は機械いじりが好きで、棒を作るラインを自分で設計したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 社長が自分で！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 組み立ては、隣にあった小さな鉄工所が手伝ったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1978年には、全自動の製造ラインを完成させたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1973年に、カニ棒という商品を出した会社もあるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 元祖が、3つもあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 今のスギヨの社長は、カニカマに特許が無かったから広がったと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: よその会社が真似して競争したから、香り箱も生まれたって。
+  - speaker: zundamon
+    emotion: happy
+    text: 誰でも作れたから、世界中のカニになったのか。
+- id: ch13_eiyou
+  title: カニカマはヘルシー？
+  background: kk_gendai
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: カニカマはヘルシーで、糖質も少ないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 糖質は、本物のカニよりむしろ多いのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ゆでたズワイガニの炭水化物は、100グラムで0.1グラム。
+  - speaker: tsumugi
+    emotion: normal
+    text: カニカマは、9.2グラムあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 90倍以上なのだ！？
+    se: gaan
+    telops:
+    - {text: 炭水化物はカニの90倍以上, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: でん粉や砂糖が入ってるからね。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのかわり、たんぱく質が12グラムあって手軽なたんぱく源になるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: カニカマに、カニは入ってないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 商品によるの。カニのエキスを使うものも、魚介のエキスだけのものもあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カニのアレルギーがある人は、袋の表示を必ず見てね。
+  - speaker: zundamon
+    emotion: normal
+    text: 名前より、裏の表示を見るのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: スギヨは公正取引委員会と約20年かけて、パッケージの表示の決まりを作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1990年には、国が風味かまぼこの表示の決まりを作ったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 14回のラベルが、ちゃんと形になったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その決まりは2009年に、国の基準としては廃止されたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: もう、カニと間違える[人|ひと]がいないのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 今でも、本物のカニと誤解させる表示はだめよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎月22日は、カニカマの日。漢字の[二二|にに]が、カニのハサミに見えるからよ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ毎月22日は、カニカマ食べ放題なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただし6月だけはお休み。6月22日は、本物のかにの日だから。
+  - speaker: zundamon
+    emotion: surprised
+    text: カニカマ、本物に遠慮してるの！？
+    beat: true
+- id: ch14_noto
+  title: 今も能登で
+  background: kk_noto
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年、カニカマは生まれて50年を迎えたの。
+  - speaker: zundamon
+    emotion: happy
+    text: 10年に一度どころか、50年も売れてるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 記念に、カニカマが英国紳士になって歴史を語る動画も作られたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: カニカマに、紳士の役は荷が重いのだ。
+    se: tenten
+  - speaker: tsumugi
+    emotion: normal
+    text: チームで一番若かった開発の主任は、50年目にこう振り返ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 失敗に終わりそうな時、ふっと横を見たら別の道が見えたって。
+  - speaker: zundamon
+    emotion: happy
+    text: 横の道が、カニだったのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2024年の元日、能登半島地震が起きたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: スギヨの本社と、3つの工場が被災したわ。
+  - speaker: zundamon
+    emotion: sad
+    text: カニカマの、ふるさとが……。
+  - speaker: tsumugi
+    emotion: normal
+    text: スギヨは工場の地下水を、町の人に無料で開放したの。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分たちも被災してるのに……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも2月の末には、カニカマの生産を再開したの。
+    telops:
+    - {text: 2月末にカニカマ再開, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 5月の末には、3つの工場がすべて動き出したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ちくわは？
+  - speaker: tsumugi
+    emotion: normal
+    text: ビタミンちくわも5月31日に、[七尾|ななお]で5か月ぶりに作り始めたの。
+  - speaker: tsumugi
+    emotion: happy
+    text: 6月1日には長野のスーパーに、おかえりの札と一緒に並んだわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年には、[芳人|よしと]さんの孫が新しい社長になったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京の話を明かしたのも、この孫の社長よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 能登だからこそ、なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カニカマは、今も能登で作られてるの。
+- id: shime
+  title: ''
+  background: kk_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ！ 今日はカニカマで、中華のクラゲの和え物を作ったのだ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: カニカマで、クラゲ？
+  - speaker: zundamon
+    emotion: happy
+    text: 進化したカニを、もう一回クラゲに進化させるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 進化の向きが、ぐるっと一周してるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 細く切って、醤油と酢であえれば……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……で、味は？
+  - speaker: zundamon
+    emotion: sad
+    text: ……ただの、カニカマの酢の物なのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 今度カニカマを食べるときは、ほぐして中の筋を見てみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 溶けてしまうクラゲを捨てずに刻んだ人がいたから、そこにあるのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 失敗作も、刻み方しだいなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

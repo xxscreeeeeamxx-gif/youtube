@@ -229,8 +229,13 @@ class Composer:
                 d.text((bx + indent, y), ln, font=f, fill=self.ink)
                 y += lh
 
-    def _draw_telop(self, canvas: Image.Image, t: Telop) -> None:
-        """キーワードテロップ。縁取り＋（任意で）光彩付きの大文字を指定位置に描く。"""
+    def _draw_telop(self, canvas: Image.Image, t: Telop,
+                    avoid: tuple[int, int, int, int] | None = None) -> None:
+        """キーワードテロップ。縁取り＋（任意で）光彩付きの大文字を指定位置に描く。
+
+        avoid に吹き出しの枠を渡すと、上段のテロップが重なるときは吹き出しの反対側へ寄せ、
+        収まる大きさまで縮める（2026-10-04 ウォークマン回などで吹き出しの字が隠れていた）。
+        """
         text = split_reading(t.text)[0]
         size = int(self.lay.w * TELOP_SIZE_RATIO.get(t.size, 0.060))
         d = ImageDraw.Draw(canvas)
@@ -252,6 +257,23 @@ class Composer:
             "middle": (self.lay.h - size) / 2,
             "bottom": self.lay.h - size * 1.45 - margin,
         }[vert]
+        if avoid and vert == "top":
+            bx0, by0, bx1, by1 = avoid
+            gap = 28
+            if x < bx1 + gap and x + tw > bx0 - gap and y < by1 and y + size * 1.3 > by0:
+                if (bx0 + bx1) / 2 < self.lay.w / 2:   # 吹き出しが左 → 右へ
+                    room = self.lay.w - margin - (bx1 + gap)
+                    right_side = True
+                else:                                   # 吹き出しが右 → 左へ（章タブの下）
+                    room = bx0 - gap - margin
+                    right_side = False
+                while d.textlength(text, font=f) > room and size > 40:
+                    size -= 4
+                    f = self.font(size)
+                tw = d.textlength(text, font=f)
+                x = self.lay.w - tw - margin if right_side else margin
+                if not right_side:
+                    y = max(y, 134)
         stroke_w = max(3, size // 14)
 
         if t.glow:
@@ -429,12 +451,8 @@ class Composer:
         d.text((x0 + 18, _text_y(d, f, y0, y0 + 46, stroke=2)), text, font=f,
                fill=(255, 255, 255), stroke_width=2, stroke_fill=(90, 40, 8))
 
-    def _draw_bubble(self, canvas: Image.Image, text: str, x_frac: float,
-                     edge: str | None = None) -> None:
-        """話者の上に出す吹き出し（白地・話者色フチ・黒太字）。短文前提で最大3行。"""
-        edge_rgb = _hex_rgb(edge) if edge else (46, 174, 92)
-        text = split_reading(text)[0]
-        d = ImageDraw.Draw(canvas, "RGBA")
+    def _bubble_geom(self, d: ImageDraw.ImageDraw, text: str, x_frac: float):
+        """吹き出しの行・左上・幅・高さ。描画とテロップのよけ判定で共用。"""
         f = self.font(38)
         # 14文字で折り返す。行頭に句読点や小さい仮名が来るときは前の行へぶら下げる
         # （単純分割だと「、日本中に」「。」だけの行ができていた。2026-09-23）
@@ -451,6 +469,21 @@ class Composer:
         x0 = max(16, min(cx - bw // 2, self.lay.w - bw - 16))
         # 章タブの下端は y=124。120 だと4px食い込んでいた（2026-09-23 カシオ回で39カット）
         y0 = 134
+        return f, lines, lh, pad_x, cx, x0, y0, bw, bh
+
+    def bubble_rect(self, text: str, x_frac: float) -> tuple[int, int, int, int]:
+        """吹き出し（しっぽ込み）の外枠 (x0, y0, x1, y1)。"""
+        d = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
+        _, _, _, _, _, x0, y0, bw, bh = self._bubble_geom(d, split_reading(text)[0], x_frac)
+        return x0, y0, x0 + bw, y0 + bh + 26
+
+    def _draw_bubble(self, canvas: Image.Image, text: str, x_frac: float,
+                     edge: str | None = None) -> None:
+        """話者の上に出す吹き出し（白地・話者色フチ・黒太字）。短文前提で最大3行。"""
+        edge_rgb = _hex_rgb(edge) if edge else (46, 174, 92)
+        text = split_reading(text)[0]
+        d = ImageDraw.Draw(canvas, "RGBA")
+        f, lines, lh, pad_x, cx, x0, y0, bw, bh = self._bubble_geom(d, text, x_frac)
         d.rounded_rectangle([x0, y0, x0 + bw, y0 + bh], radius=18,
                             fill=(255, 255, 255, 245), outline=edge_rgb, width=5)
         # しっぽ（話者の方向へ）
@@ -487,11 +520,12 @@ class Composer:
             d.text((self.lay.w / 2 - lw / 2, ty + i * lh), ln, font=f,
                    fill=(255, 252, 240), stroke_width=3, stroke_fill=(140, 96, 20))
 
-    def telop_layer(self, telops: list[Telop]) -> Image.Image:
+    def telop_layer(self, telops: list[Telop],
+                    avoid: tuple[int, int, int, int] | None = None) -> Image.Image:
         """テロップだけを描いた透過フレーム（build でアニメ付き overlay に使う）。"""
         canvas = Image.new("RGBA", (self.lay.w, self.lay.h), (0, 0, 0, 0))
         for t in telops:
-            self._draw_telop(canvas, t)
+            self._draw_telop(canvas, t, avoid)
         return canvas
 
     def transition_layer(self, title: str) -> Image.Image:
@@ -1109,13 +1143,15 @@ def render_frames(
         telop_png = None
         telop_anim = "up"
         if cut.telops:
+            avoid = (composer.bubble_rect(bubble["text"], float(bubble["x"]))
+                     if bubble else None)
             tkey = hashlib.sha1(json.dumps(
-                [[t.model_dump() for t in cut.telops], sub],
+                [[t.model_dump() for t in cut.telops], sub, avoid, "telav1"],
                 ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:16]
             telop_png = f"frames/tel_{tkey}.png"
             tp = proj.root / telop_png
             if tkey not in manifest_used and not tp.exists():
-                composer.telop_layer(cut.telops).save(tp)
+                composer.telop_layer(cut.telops, avoid).save(tp)
             manifest_used.add(tkey)
             telop_anim = cut.telops[0].anim
 

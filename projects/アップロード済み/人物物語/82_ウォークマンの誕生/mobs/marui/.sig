@@ -1,0 +1,1 @@
+仕入れ係|none|none||v4|suit|#6a3a3a|o1

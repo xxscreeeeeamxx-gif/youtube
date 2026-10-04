@@ -1,0 +1,1633 @@
+meta:
+  title: 【オセロの誕生】製薬会社の営業マンが、牛乳瓶のフタで作ったゲーム【ずんだもん解説】
+  slug: othello-hasegawa-v2
+  summary: 挟んで裏返すだけのオセロ。考えた本人が語る始まりは、1945年、空襲で焼けた水戸の青空教室の10分休みでした。約6年の療養を越えて製薬会社の営業マンになった長谷川五郎は、牛乳瓶のフタで駒を作ります。弁護士の夢を断った事故のあと、持ち込んだおもちゃ会社で言われたのは、30秒で説明できないと売れないという一言。英文学者の父が付けた名前、家の頭金をつぎ込んだ大会まで、再現ドラマでたどります。
+  tags:
+  - オセロ
+  - 長谷川五郎
+  - リバーシ
+  - ボードゲーム
+  - ツクダ
+  - 水戸
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 雑学
+  thumbnail:
+    top: 牛乳瓶のフタの駒
+    bottom: オセロの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: doukyu
+    label: 同級生
+    voice: 73
+    pitch: 0.0
+    outfit: gakuran
+    color: '#2a2f3a'
+  - id: kyuyu
+    label: 級友
+    voice: 67
+    pitch: 0.04
+    outfit: gakuran
+    color: '#3a3328'
+  - id: ishi
+    label: 医師
+    voice: 42
+    pitch: -0.04
+    outfit: labcoat
+  - id: buin
+    label: 将棋部員
+    voice: 100
+    pitch: 0.0
+    outfit: gakuran
+    color: '#26304a'
+  - id: shain_s
+    label: 女子社員S
+    voice: 8
+    pitch: 0.12
+    outfit: suit
+    color: '#8a5a6a'
+  - id: shain_y
+    label: 女子社員Y
+    voice: 8
+    pitch: 0.02
+    outfit: suit
+    color: '#4f6a7a'
+  - id: ikyoku
+    label: 医局長
+    voice: 42
+    pitch: 0.06
+    outfit: labcoat
+    color: '#e4e8ea'
+  - id: kanja
+    label: 患者
+    voice: 13
+    pitch: -0.04
+    outfit: kimono
+    color: '#7a8a9a'
+  - id: douryou
+    label: 同僚
+    voice: 13
+    pitch: 0.02
+    outfit: suit
+    color: '#4a5a6a'
+  - id: kangofu
+    label: 看護婦
+    voice: 8
+    pitch: 0.1
+    outfit: labcoat
+    color: '#f2f0ec'
+  - id: riji
+    label: 連盟理事
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#34405a'
+  - id: haha
+    label: 母
+    voice: 8
+    pitch: -0.08
+    outfit: kimono
+    color: '#5a4a5a'
+  - id: chichi
+    label: 父・四郎
+    voice: 42
+    pitch: -0.08
+    outfit: haori
+    color: '#3f3a34'
+  - id: wakui
+    label: 企画部長
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: shachou
+    label: 社長
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#3a3a40'
+  - id: ooyama
+    label: 大山康晴
+    voice: 21
+    pitch: -0.04
+    outfit: kimono
+    color: '#3b3f4f'
+  - id: okusan
+    label: 奥さん
+    voice: 8
+    pitch: 0.08
+    outfit: apron
+    color: '#c08060'
+  - id: denden
+    label: 電電公社
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#4a5060'
+  - id: jitsuen
+    label: 実演係
+    voice: 8
+    pitch: 0.14
+    outfit: apron
+    color: '#d08a9a'
+  - id: kyaku
+    label: お客さん
+    voice: 42
+    pitch: 0.1
+    outfit: suit
+    color: '#5a4a3a'
+  - id: kisha
+    label: 記者
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e4450'
+scenes:
+- id: co_tsukuda
+  title: ''
+  background: os_tsukuda
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: normal}
+  - {who: wakui, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1972年10月。手作りのオセロを抱えた製薬会社の営業マンが、東京のおもちゃ会社を訪ねます。
+    reading: せんきゅうひゃく ななじゅうにねん じゅうがつ。てづくりの おせろお かかえた せいやく がいしゃの えいぎょうまんが、とうきょうの おもちゃ がいしゃお たずねます。
+  - speaker: zundamon
+    emotion: normal
+    text: 駒は、牛乳瓶のフタです。やってみてください。
+  - speaker: wakui
+    emotion: thinking
+    text: 新しいゲームは、30秒で説明できないと売れませんよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 30秒も、いりません。挟んだら、全部返す。それだけです。
+  - speaker: wakui
+    emotion: normal
+    text: ……お預かりしましょう。
+  - speaker: zundamon
+    emotion: surprised
+    text: お、お預かり……ですか。
+    se: gaan
+  - speaker: reimu
+    text: この男は、長谷川五郎。最初に作られたオセロは、たった3000個でした。
+    reading: この おとこわ はせがわ ごろう。さいしょに つくられた おせろわ、たった さんぜんこでした。
+  - speaker: reimu
+    text: それが3年目には、1年で280万個も売れます。
+    reading: それが さんねんめにわ、いちねんで にひゃく はちじゅうまんこも うれます。
+- id: hook
+  title: ''
+  background: os_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: オセロは30秒で覚えたのだ。もう負けないぞ！
+  - speaker: tsumugi
+    emotion: normal
+    text: じゃあ、ずんだもんの番ね。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あれ？ 置ける所が、1つもないのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 序盤に取りすぎよ。覚えるのと勝つのは、別の話。
+  - speaker: zundamon
+    emotion: thinking
+    text: こんな意地悪なゲームが、3000個から280万個？
+    telops:
+    - {text: なぜ280万個も売れた？, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 作ったのは薬の営業マン。本人が語る始まりは、戦争が終わった年の焼け跡よ。
+- id: card1932
+  title: ''
+  background: os_card_1932
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1932年、長谷川五郎は水戸で生まれます。父の四郎は、英文学者でした。
+    reading: せんきゅうひゃく さんじゅうにねん、はせがわ ごろうわ みとで うまれます。ちちの しろうわ、えいぶんがくしゃでした。
+- id: card1945
+  title: ''
+  background: os_card_1945
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1945年8月2日の未明。水戸は空襲を受け、五郎の家も中学校も焼けました。
+    reading: せんきゅうひゃく よんじゅうごねん はちがつ ふつかの みめい。みとわ くうしゅうお うけ、ごろうの いえも ちゅうがっこうも やけました。
+- id: ch1_yakeato
+  title: ''
+  background: os_mito
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, scale: 0.85, emotion: sad}
+  - {who: haha, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 朝になって、五郎は家のあった場所へ戻りました。
+    reading: あさに なって、ごろうわ いえの あった ばしょえ もどりました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……家も学校も、灰になってるのだ。
+    background: os_mito_yake
+  - speaker: haha
+    emotion: surprised
+    text: 五郎！ 無事だったのね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 母さん！ みんなは？
+  - speaker: haha
+    emotion: happy
+    text: 全員、無事よ。それだけで[十分|じゅうぶん]。
+  - speaker: zundamon
+    emotion: sad
+    text: 電気もラジオも、新聞も無いのだ……。
+  - speaker: reimu
+    text: 広島と長崎の新型爆弾もソ連の参戦も、人づてに聞きました。
+    reading: ひろしまと ながさきの しんがた ばくだんも それんの さんせんも、ひとづてに ききました。
+- id: ch1_aozora
+  title: 焼け跡の10分休み
+  background: os_aozora
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 長谷川五郎, scale: 0.85, emotion: sad}
+  - {who: doukyu, x: 0.56, emotion: happy}
+  - {who: kyuyu, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 9月。土手の下に黒板を1枚置いて、青空授業が始まりました。
+    reading: くがつ。どての したに こくばんお いちまい おいて、あおぞら じゅぎょうが はじまりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 配給は、カボチャばかり。みんなの顔が、黄色いのだ。
+  - speaker: doukyu
+    emotion: happy
+    text: 長谷川、碁石があるぞ。10分休みに囲碁やろうぜ。
+  - speaker: kyuyu
+    emotion: thinking
+    text: 囲碁って、相手の石を囲んだら取るんだっけ？
+  - speaker: doukyu
+    emotion: angry
+    text: ほら囲んだ！ この石、もらうぞ！
+  - speaker: kyuyu
+    emotion: angry
+    text: まだ囲めてない！ そこ、すき間あるだろ！
+  - speaker: doukyu
+    emotion: angry
+    text: すき間なんか、ない！
+  - speaker: kyuyu
+    emotion: angry
+    text: あるって！ ほら、ここ！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ルールを説明してたら、10分休みが終わるな。
+  - speaker: zundamon
+    emotion: happy
+    text: 面倒だ。挟んだら、取れることにしよう！
+    se: hirameki
+    telops:
+    - {text: 挟んだら取る, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: doukyu
+    emotion: surprised
+    text: 挟むだけ？ それなら、すぐ分かる！
+  - speaker: kyuyu
+    emotion: normal
+    text: 取った所には、自分の石を置き直すんだな。
+  - speaker: doukyu
+    emotion: thinking
+    text: 置き直し、置き直し……。休み時間が終わっちゃうぞ！
+  - speaker: zundamon
+    emotion: thinking
+    text: いちいち置き直すのは、手間だな。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、[表|おもて]と裏を黒と白に塗った紙にする。ひっくり返すだけだ！
+  - speaker: kyuyu
+    emotion: surprised
+    text: 返すだけなら、10分で1局終わる！
+  - speaker: reimu
+    text: 五郎は、石が黒と白なのは碁石から始まったからだと書いています。
+    reading: ごろうわ、いしが くろと しろなのわ ごいしから はじまったからだと かいて います。
+- id: ch1_m
+  title: ''
+  background: os_kyoushitsu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, scale: 0.9, emotion: normal}
+  - {who: doukyu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1948年、高校1年。芸術家肌の友人のM君が、家で大きな駒を作ってきました。
+    reading: せんきゅうひゃく よんじゅうはちねん、こうこう いちねん。げいじゅつか はだの ゆうじんの えむくんが、いえで おおきな こまお つくって きました。
+  - speaker: doukyu
+    emotion: surprised
+    text: 長谷川、見ろよ。M君の駒、でかいぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 直径3.5センチ……。きれいなのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: この駒で打つと、一段と楽しいな！
+  - speaker: doukyu
+    emotion: happy
+    text: 返すときの手ざわりが、ぜんぜん違う。
+  - speaker: doukyu
+    emotion: happy
+    text: 長谷川の紙の駒より、ずっと立派だな。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ひと言、多いのだ。
+    beat: true
+  - speaker: reimu
+    text: この3.5センチが、のちのオセロの石の大きさになります。
+    reading: この さんてんご せんちが、のちの おせろの いしの おおきさに なります。
+- id: ch2_ryouyou
+  title: 6年の療養
+  background: os_byouin
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: sad}
+  - {who: ishi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そのあと五郎は、栄養失調で体を壊します。療養は、約6年におよびました。
+    reading: その あと ごろうわ、えいよう しっちょうで からだお こわします。りょうようわ、やく ろくねんに およびました。
+  - speaker: zundamon
+    emotion: sad
+    text: 先生。ボクは、いつ学校に戻れますか。
+  - speaker: ishi
+    emotion: normal
+    text: 焦ってはいかん。
+  - speaker: ishi
+    emotion: happy
+    text: 長い人生だ。3年や5年、なんでもない。ゆっくりやりなさい。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……同級生は、もう卒業してしまいました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ゆっくり、ですか。
+  - speaker: reimu
+    text: 回復の決め手は、新しい薬でした。五郎は奇跡的に治り、学校に戻ります。
+    reading: かいふくの きめてわ、あたらしい くすりでした。ごろうわ きせきてきに なおり、がっこうに もどります。
+  - speaker: zundamon
+    emotion: happy
+    text: 先生、治りました！ 学校に戻れます！
+  - speaker: ishi
+    emotion: happy
+    text: ほら。なんでもなかっただろう。
+    beat: true
+  - speaker: reimu
+    text: 医師に支えられたこの経験から、五郎はのちに医師と話せる仕事を選びます。
+    reading: いしに ささえられた この けいけんから、ごろうわ のちに いしと はなせる しごとお えらびます。
+- id: ch2_daigaku
+  title: 盤もルールも決まらない
+  background: os_bushitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: happy}
+  - {who: buin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 茨城大学に進んだ五郎は、2年で囲碁部の主将になります。
+    reading: いばらき だいがくに すすんだ ごろうわ、にねんで いごぶの しゅしょうに なります。
+  - speaker: buin
+    emotion: thinking
+    text: 長谷川。囲碁部と将棋部の勝負って、[何|なに]で勝負するんだよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 挟んで返す遊びだ。これなら、どっちの部も初めてだろ？
+  - speaker: buin
+    emotion: surprised
+    text: ……おい、本当に互角じゃないか。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ次は、こっちの盤でやろう。
+  - speaker: buin
+    emotion: surprised
+    text: 縦が8で横が9？ 昨日は8マス四方だったろ。
+    background: os_bushitsu_ban
+  - speaker: zundamon
+    emotion: happy
+    text: 明日は9と10の盤。角が8つある盤もあるぞ。
+  - speaker: buin
+    emotion: angry
+    text: 盤の形から変わるのかよ！
+    se: zukko
+  - speaker: zundamon
+    emotion: normal
+    text: ルールも日替わりだ。挟んでも、1個しか返せない日がある。
+  - speaker: buin
+    emotion: thinking
+    text: ……で、今日はどのルールなんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 打ちながら決める。
+  - speaker: buin
+    emotion: angry
+    text: 決まってないのは、お前の頭のほうだ。
+    beat: true
+  - speaker: reimu
+    text: 盤もルールも決まらないまま、この遊びは卒業とともに消えていきました。
+    reading: ばんも るーるも きまらない まま、この あそびわ そつぎょうと ともに きえて いきました。
+  - speaker: reimu
+    text: 五郎は大学を首席で卒業し、製薬会社の営業マンになります。
+    reading: ごろうわ だいがくお しゅせきで そつぎょうし、せいやく がいしゃの えいぎょうまんに なります。
+- id: card1964
+  title: ''
+  background: os_card_1964
+  cuts:
+  - speaker: reimu
+    text: 1964年。五郎は製薬会社で働きながら、弁護士を目指して勉強していました。
+    reading: せんきゅうひゃく ろくじゅうよねん。ごろうわ せいやく がいしゃで はたらきながら、べんごしお めざして べんきょう して いました。
+- id: ch3_kaisha
+  title: 囲碁半年、将棋3か月
+  background: os_kaisha_shogi
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 長谷川五郎, emotion: normal}
+  - {who: shain_s, x: 0.56, emotion: happy}
+  - {who: shain_y, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 結婚した五郎は、まず妻に囲碁を教えます。1か月もたたずに、挫折しました。
+    reading: けっこん した ごろうわ、まず つまに いごお おしえます。いっかげつも たたずに、ざせつ しました。
+  - speaker: shain_s
+    emotion: happy
+    text: 長谷川さん。私たちも囲碁か将棋を、ぜひ覚えたいので教えてください！
+  - speaker: zundamon
+    emotion: thinking
+    text: 囲碁は、うちで失敗したばかりで……。将棋にしましょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 歩は前に1つ。香車は前にどこまでも。桂馬は、斜め前に跳びます。
+  - speaker: zundamon
+    emotion: happy
+    text: 銀は斜め後ろに下がれて、[金|きん]は真後ろに下がれます。
+  - speaker: zundamon
+    emotion: happy
+    text: 飛車と角は、成ると動きが変わって……。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……二人とも、目が点なのだ。
+    se: tenten
+  - speaker: reimu
+    text: 将棋も、1か月もたたずに挫折しました。
+    reading: しょうぎも、いっかげつも たたずに ざせつ しました。
+  - speaker: zundamon
+    emotion: sad
+    text: 囲碁は半年で将棋は3か月、麻雀でも2週間。覚えるまでが長すぎるのだ。
+- id: ch3_futa
+  title: 牛乳瓶のフタ
+  background: os_yoru
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 5分で覚えられる遊びは、ないものか……。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あった。焼け跡の10分休みの、あれだ！
+  - speaker: reimu
+    text: 当時は、瓶の牛乳が毎朝家に届いた時代。紙のフタは、どこの家にもありました。
+    reading: とうじわ、びんの ぎゅうにゅうが まいあさ いえに とどいた じだい。かみの ふたわ、どこの いえにも ありました。
+  - speaker: zundamon
+    emotion: happy
+    text: このフタ、M君の駒と同じくらいの大きさだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 片面に[黒い紙|くろいかみ]を貼る。……1枚だと、ぺらぺらで返しにくい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2枚。……まだ、薄い。
+  - speaker: zundamon
+    emotion: surprised
+    text: 4枚！ ……これは、積み木なのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 3枚！ 持ちやすくて、返しやすいぞ！
+    telops:
+    - {text: フタ3枚で石1個, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 石は64個いる。1個にフタが3枚だから……。
+  - speaker: zundamon
+    emotion: surprised
+    text: 192枚！？
+    background: os_yoru_futa
+    se: bikkuri
+  - speaker: zundamon
+    emotion: sad
+    text: ……うちの牛乳、何日分なのだ。
+    beat: true
+  - speaker: reimu
+    text: ルールは、挟んだ石は全部返す。盤は8マス四方に決めました。
+    reading: るーるわ、はさんだ いしわ ぜんぶ かえす。ばんわ はちます しほうに きめました。
+  - speaker: reimu
+    text: 妻に見せると、たちまち夢中になりました。
+    reading: つまに みせると、たちまち むちゅうに なりました。
+- id: ch3_shain
+  title: ''
+  background: os_kaisha
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 長谷川五郎, emotion: happy}
+  - {who: shain_s, x: 0.56, emotion: normal}
+  - {who: shain_y, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日。五郎は、手作りのセットを会社に持っていきます。
+    reading: よくじつ。ごろうわ、てづくりの せっとお かいしゃに もって いきます。
+  - speaker: zundamon
+    emotion: happy
+    text: 挟んだら、全部返す。ルールは、これだけです。
+  - speaker: shain_y
+    emotion: happy
+    text: ワッ、面白い！
+  - speaker: zundamon
+    emotion: happy
+    text: そのセット、お二人にあげます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ゆうべ、フタを192枚貼ったやつですけど。
+    beat: true
+  - speaker: reimu
+    text: 出張から戻ると、本社でも東京支店でも女子社員たちが昼休みに打っていました。
+    reading: しゅっちょうから もどると、ほんしゃでも とうきょう してんでも じょし しゃいんたちが ひるやすみに うって いました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本人の半分は女性……。これは、大変なことなのだ！
+    se: hirameki
+- id: ch3_ikyoku
+  title: 医局長の太鼓判
+  background: os_byouin2
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 長谷川五郎, emotion: normal}
+  - {who: ikyoku, x: 0.56, emotion: thinking}
+  - {who: kanja, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 五郎は、営業で回る病院の医局長にも見せました。
+    reading: ごろうわ、えいぎょうで まわる びょういんの いきょくちょうにも みせました。
+  - speaker: zundamon
+    emotion: normal
+    text: 先生、5分で覚えられます。1局いかがですか。
+  - speaker: ikyoku
+    emotion: thinking
+    text: 牛乳瓶のフタか。……どれ。
+  - speaker: ikyoku
+    emotion: happy
+    text: このゲームには、華がある。
+  - speaker: ikyoku
+    emotion: normal
+    text: 頭と指を使って、人と向き合う。
+  - speaker: ikyoku
+    emotion: happy
+    text: 社会復帰を目指す患者さんの、リハビリにぴったりだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 病院でも、遊んでもらえるのだ！
+  - speaker: kanja
+    emotion: happy
+    text: 牛乳のフタなら、毎朝1枚ずつたまるぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1日1枚だと、192枚で半年かかります。
+  - speaker: kanja
+    emotion: happy
+    text: なあに。入院は、まだまだ長いからな。
+    beat: true
+  - speaker: reimu
+    text: ある国立病院の医長は、大工に頼んで直径3.5センチの木の駒まで作りました。
+    reading: ある こくりつ びょういんの いちょうわ、だいくに たのんで ちょっけい さんてんご せんちの きの こままで つくりました。
+- id: card1968
+  title: ''
+  background: os_card_1968
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1968年。五郎は交通事故にあいます。妻のお腹には、子どもがいました。
+    reading: せんきゅうひゃく ろくじゅうはちねん。ごろうわ こうつう じこに あいます。つまの おなかにわ、こどもが いました。
+- id: ch4_jiko
+  title: 弁護士の夢
+  background: os_benkyou
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 療養で遅れた6年。弁護士になって、取り返すつもりだった。
+  - speaker: zundamon
+    emotion: sad
+    text: ……もうすぐ、子どもも生まれる。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……悔しいのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: 夢を追うのは、ここまでだ。
+    se: namida
+  - speaker: reimu
+    text: この事故で、五郎は弁護士の夢をあきらめました。
+    reading: この じこで、ごろうわ べんごしの ゆめお あきらめました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……残ったのは、牛乳瓶のフタの盤か。
+  - speaker: zundamon
+    emotion: normal
+    text: この遊びだけは、続けてみよう。
+  - speaker: reimu
+    text: その年、五郎は手作りのセットを持って水戸の実家へ泊まりに行きます。
+    reading: その とし、ごろうわ てづくりの せっとお もって みとの じっかえ とまりに いきます。
+- id: ch4_jikka
+  title: 名付け親は父
+  background: os_jikka
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 長谷川五郎, emotion: happy}
+  - {who: haha, x: 0.56, emotion: thinking}
+  - {who: chichi, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 実家では、英文学者の父の四郎と母が2人で暮らしていました。
+    reading: じっかでわ、えいぶんがくしゃの ちちの しろうと ははが ふたりで くらして いました。
+  - speaker: zundamon
+    emotion: happy
+    text: 母さん。挟んで返すだけの遊びなんだ。やってみて。
+  - speaker: haha
+    emotion: thinking
+    text: 囲碁も将棋も、私は一生やらないって決めてるのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 5分で覚えられるから。
+  - speaker: haha
+    emotion: surprised
+    text: ……あら、簡単。お父さん、1局どうですか。
+  - speaker: chichi
+    emotion: normal
+    text: どれ。
+  - speaker: haha
+    emotion: happy
+    text: はい、もう1局。
+  - speaker: chichi
+    emotion: surprised
+    text: まだやるのか。
+  - speaker: haha
+    emotion: happy
+    text: もう1局。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一生やらないって、言ってなかった？
+  - speaker: haha
+    emotion: normal
+    text: これは、囲碁じゃないもの。
+    beat: true
+  - speaker: chichi
+    emotion: happy
+    text: このゲームは実に面白いし、[波瀾万丈|はらんばんじょう]だ。
+  - speaker: chichi
+    emotion: normal
+    text: 盤は、やっぱり緑がいい。
+  - speaker: zundamon
+    emotion: normal
+    text: 父さん。この遊びに、名前を付けてほしいんだ。
+  - speaker: chichi
+    emotion: thinking
+    text: 黒と白が、めまぐるしく寝返る……。シェイクスピアの、オセロだな。
+  - speaker: zundamon
+    emotion: happy
+    text: オセロ……。いい名前なのだ！
+    se: jaan
+    telops:
+    - {text: 名付け親は父・四郎, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 黒い肌の将軍オセロと、白い肌の妻デズデモーナ。敵と味方が入れ替わる物語です。
+    reading: くろい はだの しょうぐん おせろと、しろい はだの つま でずでもーな。てきと みかたが いれかわる ものがたりです。
+  - speaker: haha
+    emotion: happy
+    text: 名前も決まったし、もう1局ね。
+    beat: true
+- id: ch4_goraku
+  title: 送別オセロ大会
+  background: os_goraku
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: happy}
+  - {who: douryou, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1970年12月26日。会社の娯楽室で、送別のオセロ大会が開かれます。
+    reading: せんきゅうひゃく ななじゅうねん じゅうにがつ にじゅうろくにち。かいしゃの ごらくしつで、そうべつの おせろ たいかいが ひらかれます。
+  - speaker: douryou
+    emotion: happy
+    text: 長谷川さん。送別会なのに、送られる二人まで夢中で打ってますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 幹事として、うれしい限りです。
+  - speaker: douryou
+    emotion: thinking
+    text: でも長谷川さんは強すぎるから、隅を1つ渡してから打ってくださいね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 隅を1つ！？ ……それは、かなり痛いのだ。
+  - speaker: douryou
+    emotion: happy
+    text: 考えた人なんですから、それくらい当然です。
+  - speaker: zundamon
+    emotion: sad
+    text: 考えた人ほど、損をするゲームなのだ……。
+    beat: true
+  - speaker: reimu
+    text: 盤も駒も手作り。記録には、五郎だけ隅を1つ渡すハンデ付きと残っています。
+    reading: ばんも こまも てづくり。きろくにわ、ごろうだけ すみお ひとつ わたす はんでつきと のこって います。
+  - speaker: reimu
+    text: この大会の2位は、のちに全日本選手権の決勝を戦う人でした。
+    reading: この たいかいの にいわ、のちに ぜんにほん せんしゅけんの けっしょうお たたかう ひとでした。
+- id: card1972
+  title: ''
+  background: os_card_1972
+  cuts:
+  - speaker: reimu
+    text: 1972年10月。五郎は社長の評判を聞いて、おもちゃ会社のツクダに電話をかけます。
+    reading: せんきゅうひゃく ななじゅうにねん じゅうがつ。ごろうわ しゃちょうの ひょうばんお きいて、おもちゃ がいしゃの つくだに でんわお かけます。
+- id: ch5_tsukuda
+  title: 30秒で説明できるか
+  background: os_tsukuda
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: normal}
+  - {who: wakui, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 駒は、牛乳瓶のフタです。やってみてください。
+  - speaker: wakui
+    emotion: thinking
+    text: 新しいゲームは、30秒で説明できないと売れませんよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 30秒も、いりません。挟んだら、全部返す。それだけです。
+  - speaker: zundamon
+    emotion: happy
+    text: 将棋の駒は8種類ですが、これは1種類。[表|おもて]が白で、裏が黒……。
+  - speaker: zundamon
+    emotion: thinking
+    text: いや、[表|おもて]が黒で……。どっちが[表|おもて]なのだ？
+    se: chin
+  - speaker: reimu
+    text: 部長はのちに、説明はうまくないがゲームには引き込まれたと振り返っています。
+    reading: ぶちょうわ のちに、せつめいわ うまく ないが げーむにわ ひきこまれたと ふりかえって います。
+  - speaker: wakui
+    emotion: normal
+    text: ……お預かりしましょう。
+  - speaker: zundamon
+    emotion: surprised
+    text: お、お預かり……ですか。
+  - speaker: reimu
+    text: まずはボール紙で盤を作り、社内で遊ばせてみることになりました。
+    reading: まずわ ぼーるがみで ばんお つくり、しゃないで あそばせて みる ことに なりました。
+- id: ch5_keiyaku
+  title: 10年の契約
+  background: os_tsukuda
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: normal}
+  - {who: shachou, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shachou
+    emotion: thinking
+    text: 長谷川さん。これは、キャラクターのおもちゃじゃないね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……はい。白と黒の、丸い石だけです。
+  - speaker: shachou
+    emotion: normal
+    text: それでも、うちは使用料を払う。
+  - speaker: zundamon
+    emotion: surprised
+    text: 使用料を……！？
+  - speaker: shachou
+    emotion: happy
+    text: おもちゃは、アイデアだからね。
+  - speaker: zundamon
+    emotion: happy
+    text: 形の無いアイデアに、お[金|かね]を……。
+  - speaker: reimu
+    text: おもちゃの契約は、普通は1年。オセロは最初から10年でした。
+    reading: おもちゃの けいやくわ、ふつうわ いちねん。おせろわ さいしょから じゅうねんでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10年……！
+    se: levelup
+  - speaker: reimu
+    text: 当時はパンダブーム。小さくして、ランランカンカンと名付ける案も有力でした。
+    reading: とうじわ ぱんだ ぶーむ。ちいさく して、らんらん かんかんと なづける あんも ゆうりょくでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: ランランカンカン！？
+  - speaker: zundamon
+    emotion: normal
+    text: ……名前は、オセロです。父が付けた名前です。
+  - speaker: zundamon
+    emotion: normal
+    text: それと盤の緑は、フェルトにしてください。石を置いた手ごたえが、いいんです。
+  - speaker: shachou
+    emotion: thinking
+    text: 注文の多い発明家だね。
+  - speaker: zundamon
+    emotion: happy
+    text: 緑にしろと言ったのは、父ですけど。
+    beat: true
+  - speaker: reimu
+    text: 2人用なので大人向けにと、箱の写真にはたばことライターを置きました。
+    reading: ふたりようなので おとなむけにと、はこの しゃしんにわ たばこと らいたーお おきました。
+- id: ch5_chuosen
+  title: 帰りの中央線
+  background: os_densha
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: normal}
+  - {who: wakui, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 帰りの中央線。部長は隣で、五郎にこう話しました。
+    reading: かえりの ちゅうおうせん。ぶちょうわ となりで、ごろうに こう はなしました。
+  - speaker: wakui
+    emotion: normal
+    text: この業界では、5万台出ればヒット商品といえます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 5万台……。
+  - speaker: wakui
+    emotion: happy
+    text: オセロはじっくり10年かけて育て上げ、合計で50万台は売ってみせますよ。
+    telops:
+    - {text: 10年で50万台, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 50万台！？
+  - speaker: wakui
+    emotion: happy
+    text: そして現在1000人のオセロファンを、10年後には1000万人にしましょう。
+  - speaker: zundamon
+    emotion: surprised
+    text: せ、1000万人……！
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: ……降りる駅、乗り過ごしそうです。
+    beat: true
+- id: card1973
+  title: ''
+  background: os_card_1973
+  cuts:
+  - speaker: reimu
+    text: 1973年1月、日本オセロ連盟ができます。連絡先の電話は、五郎の家の番号でした。
+    reading: せんきゅうひゃく ななじゅうさんねん いちがつ、にほん おせろ れんめいが できます。れんらくさきの でんわわ、ごろうの いえの ばんごうでした。
+  - speaker: reimu
+    text: 4月7日。発売を前に、帝国ホテルで第1回全日本オセロ選手権が開かれます。
+    reading: しがつ なのか。はつばいお まえに、ていこく ほてるで だいいっかい ぜんにほん おせろ せんしゅけんが ひらかれます。
+- id: ch6_teikoku
+  title: 家の頭金で帝国ホテル
+  background: os_hotel
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 長谷川五郎, emotion: happy}
+  - {who: kangofu, x: 0.56, emotion: happy}
+  - {who: ooyama, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 費用は、家の頭金にと夫婦で貯めてきた100万円。全財産でした。
+    reading: ひようわ、いえの あたまきんにと ふうふで ためて きた ひゃくまんえん。ぜんざいさんでした。
+  - speaker: zundamon
+    emotion: happy
+    text: 妻が言うのだ。どうせやるなら、日本一のホテルでって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 家は……あとでも建つ。たぶん。
+    beat: true
+  - speaker: kangofu
+    emotion: happy
+    text: 長谷川さん。病院の仲間も、みんなで来ましたよ。
+  - speaker: kangofu
+    emotion: surprised
+    text: 牛乳のフタだった石が、こんなに立派になって……。
+  - speaker: zundamon
+    emotion: happy
+    text: 緑の盤に、3.5センチの石。これが、本式のオセロです。
+  - speaker: ooyama
+    emotion: thinking
+    text: 挟んで、返す……。なるほど。
+  - speaker: zundamon
+    emotion: happy
+    text: 将棋の大山先生が、オセロを打ってくれてるのだ！
+  - speaker: ooyama
+    emotion: happy
+    text: 長谷川さん。黒と白が、よく映える盤ですな。
+- id: ch6_denwa
+  title: 鳴りやまない電話
+  background: os_denwa
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月25日。三越と伊勢丹で実演販売が始まり、三越では1日で57台が売れます。
+    reading: しがつ にじゅうごにち。みつこしと いせたんで じつえん はんばいが はじまり、みつこしでわ いちにちで ごじゅうななだいが うれます。
+  - speaker: reimu
+    text: 4月29日、全国で発売。その朝の新聞に、オセロの記事が載りました。
+    reading: しがつ にじゅうくにち、ぜんこくで はつばい。その あさの しんぶんに、おせろの きじが のりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 電話だ。はい、長谷川です。
+  - speaker: zundamon
+    emotion: normal
+    text: ……オセロはどこで売ってるか、ですか？ 三越と伊勢丹です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 切ったら、また鳴った！ はい長谷川……はい、三越です。
+  - speaker: zundamon
+    emotion: thinking
+    text: 受話器を置く[暇|ひま]が、ないのだ……。
+- id: ch6_okusan
+  title: ''
+  background: os_denwa
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: thinking}
+  - {who: okusan, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11時過ぎ。今度は、玄関のチャイムが鳴りました。
+    reading: じゅういちじ すぎ。こんどわ、げんかんの ちゃいむが なりました。
+  - speaker: okusan
+    emotion: normal
+    text: 読売新聞を見ました。何度電話しても、[話し中|はなしちゅう]で通じません。
+  - speaker: okusan
+    emotion: happy
+    text: 調べたら同じ団地なので、直接お伺いしました。
+  - speaker: okusan
+    emotion: happy
+    text: オセロを1台、売っていただけますか？
+  - speaker: zundamon
+    emotion: surprised
+    text: 電話がつながらないから、家まで来たのだ！？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……うちは、売り場じゃないんですが。
+    se: manuke
+- id: ch6_yuu
+  title: ''
+  background: os_denwa
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: はい、長谷川……。はい、三越です……。はい、伊勢丹です……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……はい。オセロ連盟の番号も、うちです……。
+  - speaker: reimu
+    text: ベルが止んだのは、午後4時。朝の8時から、8時間鳴り続けました。
+    reading: べるが やんだのわ、ごご よじ。あさの はちじから、はちじかん なりつづけました。
+    background: os_denwa_yuu
+    telops:
+    - {text: 電話は8時間, size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……やっと、静かになったのだ。
+- id: ch6_denden
+  title: ''
+  background: os_denwa_yuu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: sad}
+  - {who: denden, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: ……また鳴った。はい、長谷川です。
+  - speaker: denden
+    emotion: surprised
+    text: おや、通じるんですね。電電公社の者ですが。
+  - speaker: denden
+    emotion: normal
+    text: 何度かけても通じないという、多数の問い合わせが来ているんですが。
+  - speaker: denden
+    emotion: happy
+    text: なるほど、そういうわけだったんですね。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……苦情まで、[話し中|はなしちゅう]だったのだ。
+    se: oti
+- id: ch6_depart
+  title: 3000個が消えた
+  background: os_depart
+  bgm: pop
+  stage:
+  - {who: jitsuen, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: デパートの売り場では、アルバイトの女子大生が実演して見せました。
+    reading: でぱーとの うりばでわ、あるばいとの じょしだいせいが じつえん して みせました。
+  - speaker: jitsuen
+    emotion: happy
+    text: 挟んだら、裏返します。覚えるのは、これだけです。
+  - speaker: kyaku
+    emotion: thinking
+    text: 囲碁は30年やっても勝てんが……どれ。
+  - speaker: kyaku
+    emotion: surprised
+    text: ……お嬢さんに、全部ひっくり返されたわい。
+  - speaker: jitsuen
+    emotion: happy
+    text: もう1局、いかがですか。
+  - speaker: kyaku
+    emotion: happy
+    text: いや、1台もらおう。うちで孫と打つ。
+  - speaker: reimu
+    text: 最初の3000個は、ゴールデンウイークのうちに売り切れました。
+    reading: さいしょの さんぜんこわ、ごーるでん ういーくの うちに うりきれました。
+    background: os_depart_kara
+  - speaker: jitsuen
+    emotion: surprised
+    text: ……あの、見本の1台しか残ってません。
+    beat: true
+- id: ch6_oil
+  title: ''
+  background: os_tsukuda
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: happy}
+  - {who: wakui, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 10月にテレビCMを流すと、年末までの3か月で30万個を超えました。
+    reading: じゅうがつに てれび しーえむお ながすと、ねんまつまでの さんかげつで さんじゅうまんこお こえました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 部長。オイルショックで、材料が足りないんですか。
+  - speaker: wakui
+    emotion: thinking
+    text: 足らない、足らない……。
+  - speaker: zundamon
+    emotion: happy
+    text: 部長。10年で50万台の目標は、どうなりました？
+  - speaker: reimu
+    text: 2年目は120万個。3年目は、280万個が売れました。
+    reading: にねんめわ ひゃく にじゅうまんこ。さんねんめわ、にひゃく はちじゅうまんこが うれました。
+    telops:
+    - {text: 3年目は280万個, size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 10年分の目標を、2年目で追い越したのだ！
+- id: ch6_london
+  title: 床屋とチェス王者
+  background: os_sekai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: normal}
+  - {who: riji, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1976年10月。ロンドンで、全英チェス王者と全日本オセロ王者の三番勝負が開かれます。
+    reading: せんきゅうひゃく ななじゅうろくねん じゅうがつ。ろんどんで、ぜんえい ちぇす おうじゃと ぜんにほん おせろ おうじゃの さんばん しょうぶが ひらかれます。
+  - speaker: riji
+    emotion: thinking
+    text: 長谷川さん。チェスの王者から、準備に2か月くれと言ってきました。
+  - speaker: zundamon
+    emotion: normal
+    text: どうぞ、と伝えてください。
+  - speaker: riji
+    emotion: surprised
+    text: こっちの王者は、静岡の床屋さんですよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2か月、お店で髪を切りながら待つのだ……。
+  - speaker: reimu
+    text: 結果は2勝1敗。床屋の藤田が勝ち、BBCが世界に放送しました。
+    reading: けっかわ にしょう いっぱい。とこやの ふじたが かち、びーびーしーが せかいに ほうそう しました。
+  - speaker: zundamon
+    emotion: happy
+    text: はさみを使う仕事だから、挟むのが得意なのだ！
+  - speaker: riji
+    emotion: thinking
+    text: うまいこと言ったつもりですか。
+    se: tsukkomi
+  - speaker: reimu
+    text: これがきっかけで、翌年から世界選手権が始まります。
+    reading: これが きっかけで、よくねんから せかい せんしゅけんが はじまります。
+- id: card1977
+  title: ''
+  background: os_card_1977
+  cuts:
+  - speaker: reimu
+    text: 1977年10月。帝国ホテルで、第1回の世界オセロ選手権が開かれます。
+    reading: せんきゅうひゃく ななじゅうななねん じゅうがつ。ていこく ほてるで、だいいっかいの せかい おせろ せんしゅけんが ひらかれます。
+- id: ch7_sekai
+  title: 4石差の決勝
+  background: os_hotel
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 14か国の予選を勝ち抜いた5人。決勝は、日本の井上博とノルウェーのヘイバーグです。
+    reading: じゅうよんかこくの よせんお かちぬいた ごにん。けっしょうわ、にほんの いのうえ ひろしと のるうぇーの へいばーぐです。
+  - speaker: zundamon
+    emotion: happy
+    text: 井上くん、序盤はリードしてるぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 相手はノルウェーの、チェスの名人。読みが深いのだ……。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……じりじり、追い上げてくる！
+  - speaker: zundamon
+    emotion: thinking
+    text: 残りの石を数えたいけど、怖くて数えられないのだ。
+  - speaker: reimu
+    text: 結果は34対30。わずか4つの差で、井上が初代の世界王者になりました。
+    reading: けっかわ さんじゅうよん たい さんじゅう。わずか よっつの さで、いのうえが しょだいの せかい おうじゃに なりました。
+    telops:
+    - {text: 34対30, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 初代の世界王者は、日本だ！
+    se: jaan
+  - speaker: zundamon
+    emotion: sad
+    text: ……見てるだけで、寿命が縮んだぞ。
+    beat: true
+  - speaker: reimu
+    text: 1979年の第3回はローマ。ローマ法王に、オセロが贈られました。
+    reading: せんきゅうひゃく ななじゅうきゅうねんの だいさんかいわ ろーま。ろーま ほうおうに、おせろが おくられました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 焼け跡の10分休みが、ローマまで来たのだ。
+- id: ch8_tegami
+  title: 明けない夜はない
+  background: os_shosai
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 晩年。家族がつらい時期を迎えたとき、五郎は直筆の言葉を贈りました。
+    reading: ばんねん。かぞくが つらい じきお むかえた とき、ごろうわ じきひつの ことばお おくりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 明けない夜はない。……シェイクスピアの言葉だ。
+  - speaker: zundamon
+    emotion: normal
+    text: 待て、しかして希望せよ。……こっちは、デュマ。
+  - speaker: zundamon
+    emotion: happy
+    text: 英文学の父さんなら、もっといい言葉を知ってたかな。
+  - speaker: zundamon
+    emotion: normal
+    text: 父さんが付けたオセロも、シェイクスピアだったな。
+  - speaker: reimu
+    text: 息子の武は、その言葉に祖父の四郎の教えが重なっていたと書いています。
+    reading: むすこの たけしわ、その ことばに そふの しろうの おしえが かさなって いたと かいて います。
+- id: card2006
+  title: ''
+  background: os_card_2006
+  bgm: jitaku_nite
+  cuts:
+  - speaker: reimu
+    text: 2006年。生まれ故郷の水戸で、第30回の世界選手権が開かれます。
+    reading: にせん ろくねん。うまれこきょうの みとで、だいさんじゅっかいの せかい せんしゅけんが ひらかれます。
+  - speaker: reimu
+    text: 大会では日本代表の6人が、父の四郎が文を書いた鐘を鳴らしました。
+    reading: たいかいでわ にほん だいひょうの ろくにんが、ちちの しろうが ぶんお かいた かねお ならしました。
+- id: ch8_kakumei
+  title: ゲーム革命
+  background: os_shosai
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その年の暮れ、五郎は新聞の取材を受けます。
+    reading: その としの くれ、ごろうわ しんぶんの しゅざいお うけます。
+  - speaker: kisha
+    emotion: normal
+    text: 第1回の全日本大会は、帝国ホテルでしたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 費用は、全部ボクの自腹です。
+  - speaker: kisha
+    emotion: surprised
+    text: 全部、ですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: それで、取材に来た新聞社は2社だけ。
+  - speaker: kisha
+    emotion: thinking
+    text: ……今日は、私1人ですけど。
+    se: zukko
+  - speaker: zundamon
+    emotion: normal
+    text: オセロは、これまでに2200万台売れました。
+  - speaker: kisha
+    emotion: normal
+    text: 次は、[何|なに]をなさるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 来年、新しいボードゲームを発表します。
+  - speaker: zundamon
+    emotion: happy
+    text: ゲーム革命、起こしますよ。
+  - speaker: kisha
+    emotion: surprised
+    text: 74歳で、ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: オセロを売り出したのも、40歳でしたから。
+  - speaker: reimu
+    text: 五郎は100マスのグランドオセロなど、いくつもの盤のゲームを考えました。
+    reading: ごろうわ ひゃくますの ぐらんど おせろなど、いくつもの ばんの げーむお かんがえました。
+  - speaker: reimu
+    text: 2009年には、水戸市から文化栄誉賞が贈られています。
+    reading: にせん きゅうねんにわ、みとしから ぶんか えいよしょうが おくられて います。
+- id: card2016
+  title: ''
+  background: os_card_2016
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2016年3月。囲碁のトップ棋士が、コンピューターに敗れます。
+    reading: にせん じゅうろくねん さんがつ。いごの とっぷ きしが、こんぴゅーたーに やぶれます。
+- id: ch8_saigo
+  title: 最後の原稿
+  background: os_shosai
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 長谷川五郎, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 囲碁まで、コンピューターに負けたか……。
+  - speaker: reimu
+    text: 83歳の五郎は、11月に水戸で開かれる第40回の世界選手権に向けて原稿を書いていました。
+    reading: はちじゅうさんさいの ごろうわ、じゅういちがつに みとで ひらかれる だいよんじゅっかいの せかい せんしゅけんに むけて げんこうお かいて いました。
+  - speaker: zundamon
+    emotion: normal
+    text: 誰もが分かるゲームを、人と人が打ってこそ面白い。
+  - speaker: zundamon
+    emotion: happy
+    text: そんな時代が、きっとやってくる。
+  - speaker: zundamon
+    emotion: happy
+    text: 小学生の福地くんも、大人に負けない腕前なのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 焼け跡の話も、書き残しておこう。どんなことも、時が風化させてしまう。
+  - speaker: zundamon
+    emotion: normal
+    text: 一人でも多くの人に、オセロを末永く楽しんでほしい。
+- id: ch8_saigo2
+  title: ''
+  background: os_shosai_kara
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2016年6月20日。長谷川五郎は、83歳で亡くなりました。
+    reading: にせん じゅうろくねん ろくがつ はつか。はせがわ ごろうわ、はちじゅうさんさいで なくなりました。
+  - speaker: reimu
+    text: 亡くなる当日まで、オセロの原稿を書き続けていました。
+    reading: なくなる とうじつまで、おせろの げんこうお かきつづけて いました。
+    se: namida
+  - speaker: reimu
+    text: その年の11月、目指していた第40回の世界選手権が水戸で開かれました。
+    reading: その としの じゅういちがつ、めざして いた だいよんじゅっかいの せかい せんしゅけんが みとで ひらかれました。
+- id: ch9_gendai
+  title: 11歳の世界王者
+  background: os_senshu
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 五郎さんが原稿で名前を挙げた、小学生の福地くん。
+  - speaker: tsumugi
+    emotion: happy
+    text: 2018年、11歳で世界チャンピオンになったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 原稿の小学生が、世界一なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: それまでの最年少は、1982年に15歳で優勝した谷田邦彦さん。
+  - speaker: tsumugi
+    emotion: happy
+    text: 帰りの飛行機の機長が、その谷田さんだったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……え？
+  - speaker: tsumugi
+    emotion: normal
+    text: 機内放送で、新しい最年少の王者にお祝いを送ったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 記録を抜かれた人が、操縦してたのだ！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界選手権は2025年までに47回。そのうち36回は日本人の優勝よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほとんど日本なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: テレビのCMには、のちに王貞治選手も出たのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ホームラン王も、挟んで返したのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: オセロは2011年3月までに、累計で2370万個が売れたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界オセロ連盟には、70を超える国と地域が入ってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 地球が、盤みたいなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 販売元のメガハウスの見積もりでは、世界で約6億人が遊んでいるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 部長が中央線で言った1000万人が、6億人なのだ！
+- id: ch9_computer
+  title: 神様どうしは引き分け
+  background: os_computer
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 盤面の形は、多めに見積もると10の28乗通りあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 数えきれないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 打ち方の組み合わせで数えると、10の58乗。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……0が、58個？
+  - speaker: tsumugi
+    emotion: normal
+    text: 囲碁の打ち方は、10の360乗ほど。桁がまるで違うの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 360！？
+  - speaker: tsumugi
+    emotion: normal
+    text: だからオセロは、囲碁より先にコンピューターに追いつかれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1997年には、コンピューターが人間の世界王者に6戦全勝したわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 6回やって、人間は1回も勝てないのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2023年、日本の研究者が計算で示したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 両方が完璧に打ち続けると、引き分けになる。
+    telops:
+    - {text: 完璧なら引き分け, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 神様どうしが打つと、引き分けなのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 発表の時点では、論文の審査の前だったけどね。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも人間に、その手順は覚えきれない。人と人の勝負は続くわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 五郎さんが原稿に書いたとおりだね。
+- id: ch10_rule
+  title: 取りすぎると負ける
+  background: os_zukai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ところでボク、最初の勝負はなんで負けたの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 盤は8マス四方。真ん中に白と黒を2つずつ、斜めに置いて始めるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 相手の石を挟める所にしか、打てない。打てる所がないなら、パスよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 序盤に取りすぎると、相手の打てる所が増えて自分の打てる所が減るの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 取るほど、相手に場所をあげてたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: だから強い人ほど、序盤はわざと少なく返すの。
+  - speaker: zundamon
+    emotion: thinking
+    text: わざと取らないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。相手の打てる所を減らして、終盤に隅と石をまとめて取るのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 隅の石は、二度と裏返らない。だから隅は大事なの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ隅を取れば勝ち、とまでは言えないのが奥深いところね。
+  - speaker: zundamon
+    emotion: normal
+    text: 覚えるのは1分、極めるのは一生。
+  - speaker: tsumugi
+    emotion: happy
+    text: その言葉は、アメリカで売り出すときに考えられたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 部長の30秒より、ちょっとだけ長いわね。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 部長は、親と子どもでも互角に戦えるのがオセロのいいところと話してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 互角すぎて、もめそうなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: もめたの。87歳の女性が、こんな投書を新聞に寄せたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 夫にオセロで[勝った|かった]ら、機嫌を損ねて待ったをされた。
+  - speaker: zundamon
+    emotion: surprised
+    text: 待った！？
+  - speaker: tsumugi
+    emotion: happy
+    text: それで結婚以来はじめて、口答えをした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 夫婦の形勢まで、ひっくり返ったのだ！
+- id: ch11_ronsou
+  title: 本当に日本生まれ？
+  background: os_shiryo
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ネットで見たのだ。オセロは、イギリスのゲームのまねだって。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこは、正面から見てみましょう。
+  - speaker: tsumugi
+    emotion: normal
+    text: リバーシという挟んで裏返すゲームが、1883年のロンドンで売り出されてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本でも明治から、[源平碁|げんぺいご]という名前で遊ばれていたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: そっくりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 五郎さんも1971年に、[源平碁|げんぺいご]の改良として実用新案を出願してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: この出願は、認められなかったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本人も、似てると分かってたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 発売のころは、兄が遊んでいた[源平碁|げんぺいご]を改良したと書いていたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 焼け跡で生まれた、と強く語るようになったのは2000年ごろからよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ、あとから！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1年目の数も、本人は100万台で部長は30万個強。話が食い違うの。
+  - speaker: zundamon
+    emotion: sad
+    text: 始まりの話が、どんどん増えるのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: ツクダの部長も、リバーシや[源平碁|げんぺいご]があるのは知っていたと話してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあオセロは、[何|なに]が新しかったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりの石の置き方を1つに決めて、緑の盤と黒と白の石をそろえたこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 盤の緑は、将軍オセロが戦う緑の平原だと五郎さんは説明してるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもお芝居の舞台は、ヴェネツィアとキプロス。平原の戦いは出てこないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 緑の平原は、五郎さんの想像だったのだ！
+    se: tenten
+  - speaker: tsumugi
+    emotion: normal
+    text: 一番大きいのは、大会を開いて遊ぶ人の輪を世界に広げたことね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1973年の新聞も、オセロを新しいゲームとして大きく取り上げているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: スマホのリバーシも、オセロと同じなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: オセロという名前は、商標なの。だから、ほかの会社はリバーシと呼ぶのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 遊ぶ場所ごと作ったから、名前が残ったんだね。
+- id: shime
+  title: ''
+  background: os_ima2
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、もう1局なのだ。今度は、取りすぎないぞ。
+  - speaker: tsumugi
+    emotion: normal
+    text: いい心がけね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 少しだけ取って……隅は、渡さない……。
+  - speaker: tsumugi
+    emotion: surprised
+    text: ……数えるわよ。32対32。
+  - speaker: zundamon
+    emotion: surprised
+    text: 引き分けなのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 完璧に打つと、引き分け。私たち、神様の域ね。
+    se: oti
+  - speaker: zundamon
+    emotion: happy
+    text: たまたまだけど、悪い気はしないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今度オセロを打つときは、石の大きさを見てみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 牛乳瓶のフタを3枚重ねた、あの大きさなのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 3.5センチの中に、焼け跡の10分休みが入ってるんだね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

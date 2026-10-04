@@ -5,9 +5,15 @@ gen_drama_bgs.py の共通部品を使い、この回の場所背景と
 章替わりの年号カードを書き出す。方針はカニカマ回（gen_kanikama_bgs.py）と同じ。
 実在メーカーの商標（ロゴ・商品名の文字）は描かない。
 
+81_オセロの誕生（slug=othello-hasegawa-v2・作り直し）では、既存の絵は変えずに
+場面の途中で差し替える絵（os_mito_yake / os_bushitsu_ban / os_yoru_futa / os_denwa_yuu / os_depart_kara）と
+新しい場面の絵（os_kaisha_shogi / os_benkyou / os_densha / os_shosai / os_shosai_kara）、
+年号カード 1932・2006・2016 を足した。足した絵だけを書き出すときは名前を指定して実行する。
+
 実行: PYTHONPATH=. python scripts/gen_othello_bgs.py [名前...]
 """
 
+import math
 import sys
 from pathlib import Path
 
@@ -626,6 +632,309 @@ def gendai():
     return img
 
 
+# ------------------------------------------------------------ 81_オセロの誕生（othello-hasegawa-v2）で足した絵
+# 既存の絵はそのまま。場面の途中で差し替える絵は「元の背景を呼んで要素を足す」形で作る
+# （同じ構図なので切り替わりの差が一目で分かる）。
+def _wall_patch(img, box, top, bottom):
+    """壁のグラデーションで矩形を塗り直す（元の絵に置いてあった物を消す）。"""
+    x0, y0, x1, y1 = box
+    img.paste(vgrad((W, H), top, bottom).crop((x0, y0, x1, y1)), (x0, y0))
+
+
+def _flat_grid(d, x0, y0, cw, rows, cols, col=GREEN, line=GREEN_D, frame=(30, 30, 30)):
+    """真正面から見た rows×cols の盤（壁に掛けた試作の盤）。"""
+    w, h = cw * cols, cw * rows
+    d.rectangle([x0 - 10, y0 - 10, x0 + w + 10, y0 + h + 10], fill=frame)
+    d.rectangle([x0, y0, x0 + w, y0 + h], fill=col)
+    for i in range(cols + 1):
+        d.line([(x0 + i * cw, y0), (x0 + i * cw, y0 + h)], fill=line, width=3)
+    for i in range(rows + 1):
+        d.line([(x0, y0 + i * cw), (x0 + w, y0 + i * cw)], fill=line, width=3)
+
+
+def _octagon_board(img, cx, cy, size, col=(236, 230, 214), line=(90, 84, 76), frame=(150, 140, 120)):
+    """角が8つある八角形の盤（大学時代に試した 88 の盤）。"""
+    s = size + 20
+    layer = Image.new("RGB", (s, s), frame)
+    ld = ImageDraw.Draw(layer)
+    c = size / 8
+    ld.rectangle([10, 10, 10 + size, 10 + size], fill=col)
+    for i in range(9):
+        ld.line([(10 + i * c, 10), (10 + i * c, 10 + size)], fill=line, width=3)
+        ld.line([(10, 10 + i * c), (10 + size, 10 + i * c)], fill=line, width=3)
+    k = s * 0.29
+    pts = [(k, 0), (s - k, 0), (s, k), (s, s - k), (s - k, s), (k, s), (0, s - k), (0, k)]
+    mask = Image.new("L", (s, s), 0)
+    ImageDraw.Draw(mask).polygon(pts, fill=255)
+    ox, oy = int(cx - s / 2), int(cy - s / 2)
+    img.paste(layer, (ox, oy), mask)
+    _d(img).polygon([(ox + x, oy + y) for x, y in pts], outline=frame, width=8)
+
+
+def _memo(d, x, y, w=90, h=60, tilt=0):
+    """走り書きのメモ用紙（字は描かず線だけ）。"""
+    d.polygon([(x, y + tilt), (x + w, y), (x + w, y + h), (x, y + h + tilt)], fill=(248, 246, 236),
+              outline=(170, 166, 156))
+    for k in range(3):
+        yy = y + 14 + k * 15
+        d.line([(x + 10, yy + tilt * 0.6), (x + w - 14 - (k % 2) * 20, yy)], fill=(70, 70, 90), width=3)
+
+
+def bushitsu_ban():
+    """大学の部室。盤の形もルールも日替わりで、8×9・9×10・八角形の盤と、×だらけのルールの紙。"""
+    img = bushitsu()
+    d = _d(img)
+    paper = dict(col=(236, 230, 214), line=(90, 84, 76), frame=(150, 140, 120))
+    _flat_grid(d, 800, 150, 26, 8, 9, **paper)                              # 壁の中央: 8×9
+    _flat_grid(d, 1275, 140, 20, 9, 10, **paper)                            # 壁の右: 9×10
+    _octagon_board(img, 455, 230, 150)                                      # 壁の左: 八角形
+    d = _d(img)
+    for k, (x0, y0) in enumerate(((700, 950), (860, 985), (1010, 945), (1150, 990))):   # 床に散らばるルールの紙
+        d.polygon([(x0, y0 + 8 * (k % 2)), (x0 + 130, y0), (x0 + 136, y0 + 70), (x0 + 6, y0 + 78)],
+                  fill=(246, 242, 228), outline=(170, 160, 140))
+        for j in range(3):
+            d.line([(x0 + 16, y0 + 18 + j * 18), (x0 + 110 - (j % 2) * 26, y0 + 16 + j * 18)],
+                   fill=(80, 70, 60), width=3)
+        d.line([(x0 + 24, y0 + 64), (x0 + 112, y0 + 12)], fill=(190, 50, 50), width=5)   # 赤のバツ
+        d.line([(x0 + 24, y0 + 12), (x0 + 112, y0 + 64)], fill=(190, 50, 50), width=5)
+    for k in range(14):                                                     # 散らばった紙の駒
+        x, y = 680 + (k * 97) % 560, 1035 + (k * 37) % 36
+        d.ellipse([x, y, x + 34, y + 18], fill=BLACK if k % 2 else WHITE, outline=(80, 70, 60))
+    return img
+
+
+def yoru_futa():
+    """1964年の夜の机。石64個ぶんで、フタ192枚。机も床も牛乳瓶とフタだらけ。"""
+    img = yoru()
+    d = _d(img)
+    import random
+    rnd = random.Random(81)
+    for k in range(6):                                                      # 床の空き瓶（左）
+        _bottle(d, 700 + k * 64, 960, h=100)
+    for k in range(9):                                                      # 床の空き瓶（右）
+        _bottle(d, 1270 + k * 70, 960, h=110)
+    for _ in range(90):                                                     # 床のフタ
+        _cap(d, rnd.randint(640, 1880), rnd.randint(975, 1060), r=20, black=rnd.random() < 0.3)
+    for _ in range(40):                                                     # 机の手前のフタ
+        _cap(d, rnd.randint(860, 1720), rnd.randint(626, 640), r=17, black=rnd.random() < 0.4)
+    for i in range(4):                                                      # 積み上げたフタの塔
+        for j in range(9):
+            _cap(d, 1135 + i * 52, 612 - j * 7, r=21, black=(j % 3 == 2))
+    return img
+
+
+def denwa_yuu():
+    """同じ部屋の午後4時。ベルは止み（赤い呼び出しの線を消す）、西日、時計は4時、問い合わせのメモの山。"""
+    img = denwa()
+    wall = ((222, 210, 186), (200, 186, 160))                               # denwa() の壁と同じグラデーション
+    _wall_patch(img, (750, 370, 1230, 489), *wall)                          # 電話の上の呼び出しの線
+    _wall_patch(img, (750, 489, 889, 600), *wall)                           # 電話の左
+    _wall_patch(img, (1091, 489, 1230, 600), *wall)                         # 電話の右
+    img = Image.blend(img, Image.new("RGB", (W, H), (255, 150, 70)), 0.22)
+    _glow(img, 1650, 260, 420, (255, 190, 120), 90)
+    d = _d(img)
+    cx, cy, r = 1300, 210, 62                                               # 壁の時計（4時）
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(240, 236, 226), outline=(90, 80, 70), width=6)
+    d.line([(cx, cy), (cx, cy - 48)], fill=(40, 40, 40), width=5)
+    a = math.radians(30)
+    d.line([(cx, cy), (cx + 34 * math.cos(a), cy + 34 * math.sin(a))], fill=(40, 40, 40), width=8)
+    for j in range(6):                                                      # 電話台の上のメモの山
+        _memo(d, 850 + (j % 2) * 6, 586 - j * 9, w=80, h=50, tilt=(j % 3) - 1)
+        _memo(d, 1046 - (j % 2) * 6, 586 - j * 9, w=80, h=50, tilt=1 - (j % 3))
+    for k in range(12):                                                     # 畳に散らばるメモ
+        _memo(d, 640 + (k * 113) % 640, 950 + (k * 41) % 80, tilt=(k % 5) - 2)
+    return img
+
+
+def mito_yake():
+    """1945年8月2日の朝の水戸。os_mito と同じ構図の町並みが焼け野原になり、煙と残り火が残っている。"""
+    from PIL import ImageFilter
+    img = Image.new("RGB", (W, H))
+    img.paste(vgrad((W, 620), (118, 108, 106), (196, 168, 138)), (0, 0))      # 煙でくすんだ空
+    img.paste(vgrad((W, H - 620), (110, 98, 84), (84, 74, 62)), (0, 620))     # 焼けた地面
+    d = _d(img)
+    d.ellipse([-300, 420, 900, 760], fill=(92, 92, 72))                       # 焦げた丘（os_mito と同じ位置）
+    d.ellipse([1000, 440, 2300, 780], fill=(88, 86, 68))
+    for k in range(9):                                                        # 家の跡（os_mito の家と同じ位置）
+        x0 = 60 + k * 210
+        h = 130 + (k * 37) % 60
+        d.polygon([(x0 - 14, 640), (x0 + 30, 598), (x0 + 82, 614), (x0 + 128, 586), (x0 + 184, 640)],
+                  fill=(54, 48, 46))                                          # がれきの山
+        for j, dx in enumerate((8, 78, 150)):                                 # 焼け残った柱
+            top = 640 - h + (j * 37 + k * 23) % 70
+            d.polygon([(x0 + dx, 640), (x0 + dx, top + 10), (x0 + dx + 7, top), (x0 + dx + 16, top + 14),
+                       (x0 + dx + 16, 640)], fill=(30, 26, 26))
+        d.line([(x0 + 18, 640 - h * 0.4), (x0 + 162, 632)], fill=(38, 32, 30), width=12)   # 倒れた梁
+        for e in range(3):                                                    # 残り火
+            ex, ey = x0 + 44 + e * 46, 626 - (e * 7) % 15
+            d.ellipse([ex - 6, ey - 4, ex + 6, ey + 4], fill=(232, 120, 50))
+    d.rectangle([0, 640, W, 690], fill=(122, 110, 94))                        # 道
+    for x in range(40, W, 180):                                               # 焦げた電柱（傾いたものもある）
+        tilt = 34 if (x // 180) % 3 == 1 else 0
+        d.line([(x, 700), (x + tilt, 470)], fill=(34, 30, 28), width=8)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))                           # 立ちのぼる煙
+    ld = ImageDraw.Draw(layer)
+    for x in (180, 620, 1010, 1430, 1780):
+        for j in range(5):
+            r, cy = 50 + j * 26, 540 - j * 92
+            ld.ellipse([x + j * 18 - r, cy - r * 0.7, x + j * 18 + r, cy + r * 0.7], fill=(70, 66, 64, 92 - j * 14))
+    layer = layer.filter(ImageFilter.GaussianBlur(18))
+    return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
+
+
+def depart_kara():
+    """売り場の棚から、オセロの箱だけが消えた。台の上の見本が1台だけ残っている。"""
+    img = depart()
+    d = _d(img)
+    x0, y = 1480, 170 + 150                                                 # 右の棚の2段目（オセロの箱の段）
+    for k in range(3):
+        bx = x0 + 20 + k * 126
+        d.rectangle([bx - 3, y - 3, bx + 113, y + 103], fill=(200, 180, 150))
+    from ytf.config import Config, resolve_font
+    Config.load()
+    font = ImageFont.truetype(resolve_font("w9"), 40)
+    label = "売り切れ"
+    bb = d.textbbox((0, 0), label, font=font)
+    tw, th = bb[2] - bb[0], bb[3] - bb[1]
+    tx, ty = 1680 - (tw + 40) // 2, 344
+    d.rectangle([tx, ty, tx + tw + 40, ty + th + 26], fill=(200, 40, 40))
+    d.text((tx + 20 - bb[0], ty + 13 - bb[1]), label, font=font, fill=(255, 255, 255))
+    return img
+
+
+def kaisha_shogi():
+    """1964年の会社の事務所。机の上は将棋盤（手作りのオセロの盤はまだ無い）。"""
+    img = kaisha()
+    _wall_patch(img, (760, 520, 1170, 650), (218, 216, 206), (196, 194, 184))
+    d = _d(img)
+    d.rectangle([770, 650, 1150, 700], fill=(120, 130, 136))                # 机の天板を描き直す
+    top, bot, xl0, xr0, xl1, xr1 = 566, 638, 870, 1050, 846, 1074
+    d.polygon([(xl0, top), (xr0, top), (xr1, bot), (xl1, bot)], fill=(214, 176, 110))
+    d.rectangle([xl1, bot, xr1, bot + 12], fill=(170, 130, 76))             # 盤の厚み
+    for i in range(10):
+        f = i / 9
+        d.line([(xl0 + (xr0 - xl0) * f, top), (xl1 + (xr1 - xl1) * f, bot)], fill=(110, 80, 40), width=2)
+        y = top + (bot - top) * f
+        d.line([(xl0 + (xl1 - xl0) * f, y), (xr0 + (xr1 - xr0) * f, y)], fill=(110, 80, 40), width=2)
+    for k, (fx, fy) in enumerate(((0.15, 0.15), (0.45, 0.2), (0.7, 0.3), (0.3, 0.75), (0.6, 0.8), (0.85, 0.7))):
+        y = top + (bot - top) * fy
+        xa = xl0 + (xl1 - xl0) * fy
+        xb = xr0 + (xr1 - xr0) * fy
+        x = xa + (xb - xa) * fx
+        d.polygon([(x, y - 9), (x + 8, y - 4), (x + 7, y + 6), (x - 7, y + 6), (x - 8, y - 4)],
+                  fill=(236, 214, 160), outline=(120, 90, 50))
+    return img
+
+
+def benkyou():
+    """1968年の夜の机。閉じた分厚い法律の本の山と、手作りのオセロ盤。"""
+    img = _rgb(base((62, 58, 70), (40, 38, 46)))
+    wood_floor(img, FLOOR, col=(84, 68, 58), line=(68, 56, 48))
+    _glow(img, 1500, 430, 260, (255, 210, 140), 80)
+    d = _d(img)
+    d.rectangle([760, 640, 1720, 690], fill=(120, 90, 66))                  # 机
+    d.rectangle([790, 690, 814, 900], fill=(96, 72, 54))
+    d.rectangle([1666, 690, 1690, 900], fill=(96, 72, 54))
+    d.line([(1580, 640), (1580, 450)], fill=(60, 60, 64), width=8)          # 電気スタンド
+    d.polygon([(1500, 450), (1660, 450), (1620, 390), (1540, 390)], fill=(60, 110, 90))
+    y1 = 640
+    for w, h, col in ((320, 72, (110, 40, 40)), (300, 64, (60, 50, 44)), (320, 76, (120, 56, 40)),
+                      (290, 62, (40, 50, 70))):                             # 法律の本（字は描かない）
+        x0 = 1130 + (320 - w) // 2
+        d.rectangle([x0, y1 - h, x0 + w, y1], fill=col, outline=(30, 26, 24), width=3)
+        d.line([(x0 + 14, y1 - h // 2), (x0 + w - 14, y1 - h // 2)], fill=(200, 170, 90), width=3)
+        y1 -= h
+    _board(d, 930, 566, 632, 150, 190, START | {(2, 3): 'b', (5, 4): 'w'},
+           col=(236, 230, 214), line=(90, 84, 76), frame=(150, 140, 120))   # 手作りの盤
+    for k in range(4):
+        _cap(d, 1030 + k * 26, 628, r=13, black=k % 2 == 0)
+    return img
+
+
+def densha():
+    """1972年の中央線の車内。ロングシートと吊り革、窓の外は夕方の街。"""
+    img = _rgb(base((206, 220, 204), (186, 200, 184)))
+    d = _d(img)
+    d.rectangle([0, 0, W, 110], fill=(232, 236, 228))                       # 天井
+    for x in (360, 960, 1560):                                              # 扇風機
+        d.ellipse([x - 60, 20, x + 60, 90], fill=(210, 214, 206), outline=(150, 156, 150), width=4)
+    for x0 in (60, 540, 1020, 1500):                                        # 窓と夕方の街
+        x1 = x0 + 380
+        img.paste(vgrad((x1 - x0, 300), (236, 160, 104), (250, 214, 160)), (x0, 210))
+        d = _d(img)
+        for k in range(7):
+            bx = x0 + 10 + k * 54
+            bh = 60 + (k * 37 + x0) % 110
+            d.rectangle([bx, 510 - bh, bx + 44, 510], fill=(120, 96, 110))
+        d.rectangle([x0, 210, x1, 510], outline=(150, 160, 150), width=12)
+    d.line([(0, 140), (W, 140)], fill=(160, 160, 160), width=8)             # 吊り革
+    for x in range(70, W, 120):
+        d.line([(x, 140), (x, 196)], fill=(220, 220, 220), width=6)
+        d.ellipse([x - 18, 194, x + 18, 230], outline=(244, 244, 244), width=6)
+    d.rectangle([0, 600, W, 660], fill=(70, 92, 130))                       # ロングシート
+    d.rectangle([0, 660, W, 740], fill=(56, 76, 112))
+    d.rectangle([0, 740, W, 790], fill=(120, 124, 120))
+    d.rectangle([0, 790, W, H], fill=(150, 140, 122))                       # 床
+    for x in range(0, W, 160):
+        d.line([(x, 790), (x - 80, H)], fill=(136, 126, 110), width=4)
+    return img
+
+
+def shosai():
+    """晩年の書斎。本棚と窓、机の上に原稿用紙・万年筆・オセロ盤。"""
+    img = _rgb(base((222, 212, 194), (198, 186, 166)))
+    wood_floor(img, FLOOR, col=(140, 108, 80), line=(118, 90, 66))
+    d = _d(img)
+    for x0 in (40, 1500):                                                   # 本棚
+        d.rectangle([x0, 100, x0 + 380, 880], fill=(120, 88, 60))
+        for row in range(5):
+            y = 120 + row * 150
+            d.rectangle([x0 + 14, y + 128, x0 + 366, y + 140], fill=(90, 66, 46))
+            for k in range(17):
+                bx = x0 + 18 + k * 20
+                h = 96 + (k * 17 + row * 7) % 30
+                colr = ((130, 50, 46), (46, 66, 110), (60, 96, 70), (170, 140, 90), (96, 70, 56))[(k + row) % 5]
+                d.rectangle([bx, y + 128 - h, bx + 16, y + 128], fill=colr)
+    _window(d, 780, 130, 1140, 420, sky=(170, 200, 224), frame=(110, 84, 60))
+    d.rectangle([700, 640, 1220, 690], fill=(110, 76, 50))                  # 机
+    d.rectangle([720, 690, 744, 900], fill=(90, 62, 40))
+    d.rectangle([1176, 690, 1200, 900], fill=(90, 62, 40))
+    d.polygon([(905, 598), (1075, 598), (1092, 636), (888, 636)], fill=(248, 246, 238))   # 原稿用紙
+    for k in range(1, 10):
+        f = k / 10
+        d.line([(905 + 170 * f, 598), (888 + 204 * f, 636)], fill=(210, 120, 110), width=2)
+    for k in range(1, 4):
+        y = 598 + 38 * k / 4
+        d.line([(905 - 17 * k / 4, y), (1075 + 17 * k / 4, y)], fill=(210, 120, 110), width=2)
+    d.line([(1046, 592), (1104, 566)], fill=(30, 30, 34), width=7)          # 万年筆
+    d.line([(1180, 640), (1180, 470)], fill=(60, 60, 64), width=8)          # 電気スタンド
+    d.polygon([(1110, 470), (1250, 470), (1215, 412), (1145, 412)], fill=(60, 110, 90))
+    _board(d, 800, 592, 636, 110, 140, START | {(2, 3): 'b', (5, 4): 'w', (2, 4): 'w'})   # オセロ盤
+    for k, col in enumerate(((60, 50, 44), (110, 40, 40), (46, 66, 110))):  # 積んだ本
+        d.rectangle([1110, 624 - k * 16, 1170, 640 - k * 16], fill=col, outline=(30, 26, 24))
+    return img
+
+
+def shosai_kara():
+    """主のいない書斎の夜。スタンドの灯りの下に書きかけの原稿と万年筆、引かれたままの椅子。"""
+    from PIL import ImageEnhance
+    img = shosai()
+    d = _d(img)
+    _window(d, 780, 130, 1140, 420, sky=(28, 36, 64), frame=(110, 84, 60))
+    img = ImageEnhance.Brightness(img).enhance(0.6)
+    _glow(img, 1180, 520, 300, (255, 214, 150), 120)
+    d = _d(img)
+    cx = 1000                                                               # 机から引かれたままの椅子（後ろから見た形）
+    for x in (cx - 70, cx + 62):
+        d.rectangle([x, 820, x + 10, 960], fill=(64, 44, 30))               # 脚
+    d.rectangle([cx - 80, 800, cx + 80, 826], fill=(92, 64, 42))            # 座面
+    d.rectangle([cx - 74, 690, cx - 60, 806], fill=(80, 54, 36))            # 背もたれの柱
+    d.rectangle([cx + 60, 690, cx + 74, 806], fill=(80, 54, 36))
+    d.rectangle([cx - 74, 690, cx + 74, 730], fill=(96, 66, 44))            # 背もたれの板
+    d.rectangle([cx - 60, 752, cx + 60, 766], fill=(96, 66, 44))
+    return img
+
+
 LOCATIONS = {
     "os_ima": ima, "os_ima2": ima2, "os_senshu": senshu, "os_mito": mito, "os_aozora": aozora, "os_kyoushitsu": kyoushitsu,
     "os_byouin": byouin, "os_bushitsu": bushitsu, "os_yoru": yoru, "os_kaisha": kaisha,
@@ -633,9 +942,15 @@ LOCATIONS = {
     "os_tsukuda": tsukuda, "os_hako": hako, "os_zukai": zukai, "os_computer": computer,
     "os_hotel": hotel, "os_kiji": kiji, "os_denwa": denwa, "os_depart": depart,
     "os_sekai": sekai, "os_yuugure": yuugure, "os_shiryo": shiryo, "os_gendai": gendai,
+    # 81_オセロの誕生（othello-hasegawa-v2）
+    "os_bushitsu_ban": bushitsu_ban, "os_yoru_futa": yoru_futa, "os_denwa_yuu": denwa_yuu,
+    "os_depart_kara": depart_kara, "os_kaisha_shogi": kaisha_shogi, "os_benkyou": benkyou,
+    "os_densha": densha, "os_shosai": shosai, "os_shosai_kara": shosai_kara,
+    "os_mito_yake": mito_yake,
 }
 
-CARDS = ["1945", "1964", "1968", "1972", "1973", "1977"]
+CARDS = ["1945", "1964", "1968", "1972", "1973", "1977",
+         "1932", "2006", "2016"]                                            # 下の3枚は 81 で追加
 
 
 def year_card(text: str) -> Image.Image:
