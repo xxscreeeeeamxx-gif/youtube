@@ -1,0 +1,1681 @@
+meta:
+  title: 【魚群探知機の誕生】インチキと呼ばれ海に落とされた男が、イワシの神様に【ずんだもん解説】
+  slug: furuno-fishfinder-v2
+  summary: 釣り船にもスマホにもつながる、魚群探知機。その始まりは、長崎の島原半島にある小さな電器屋の兄弟でした。船頭の「魚のおるところには泡が出る」という一言から、兄弟は海軍が手放した古い測深機を作り変えます。ところが試験は雑音だらけ、クラゲの群れを魚と取り違え、売れば返品の山。インチキと呼ばれた機械は、どうやって漁師に信じてもらえたのか。兄弟の晩年まで、再現ドラマでたどります。
+  tags:
+  - 魚群探知機
+  - 古野電気
+  - 古野清賢
+  - 古野清孝
+  - 魚探
+  - 漁業
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 雑学
+  thumbnail:
+    top: 海に落とされた男
+    bottom: 魚群探知機の誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kiyotaka
+    label: 兄・清孝
+    voice: 13
+    pitch: -0.03
+    outfit: work
+    color: '#5a6070'
+  - id: kiyotaka_s
+    label: 兄・清孝
+    voice: 13
+    pitch: -0.03
+    outfit: suit
+    color: '#3e4450'
+  - id: sendou
+    label: 船頭
+    voice: 42
+    pitch: 0.02
+    outfit: kimono
+    color: '#3a4a5a'
+  - id: kurage
+    label: 船頭
+    voice: 13
+    pitch: -0.12
+    outfit: work
+    color: '#6b5a44'
+  - id: ryoushi
+    label: 漁師
+    voice: 100
+    pitch: 0.0
+    outfit: work
+    color: '#6a6a5a'
+  - id: senchou
+    label: 船長
+    voice: 21
+    pitch: 0.0
+    outfit: work
+    color: '#4a5a6a'
+  - id: senshu
+    label: 船主
+    voice: 67
+    pitch: 0.0
+    outfit: kimono
+    color: '#5a6a7a'
+  - id: tobikomi
+    label: 船主
+    voice: 42
+    pitch: 0.1
+    outfit: work
+    color: '#7a5a4a'
+  - id: shain
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: masuda
+    label: 船主・桝田
+    voice: 42
+    pitch: -0.06
+    outfit: kimono
+    color: '#4a4038'
+  - id: sendou3
+    label: 船頭
+    voice: 13
+    pitch: 0.06
+    outfit: work
+    color: '#6a5d4e'
+  - id: wakashu
+    label: 若い漁師
+    voice: 21
+    pitch: 0.05
+    outfit: work
+    color: '#556a7a'
+  - id: hachinohe
+    label: 八戸の船主
+    voice: 13
+    pitch: 0.1
+    outfit: work
+    color: '#5d6b45'
+scenes:
+- id: co_kurage
+  title: ''
+  background: fr_kurage0
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: happy}
+  - {who: kurage, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1948年ごろの長崎で、ある若者が自作の魚群探知機を漁船に積んで試していました。
+    reading: せんきゅうひゃく よんじゅうはちねん ごろの ながさきで、ある わかものが じさくの ぎょぐん たんちきお ぎょせんに つんで ためして いました。
+  - speaker: zundamon
+    emotion: happy
+    text: 大きな影が出ました！ この下に、イワシの大群がいます！
+  - speaker: kurage
+    emotion: surprised
+    text: よし、[網|あみ]ば入れろ！
+  - speaker: kurage
+    emotion: happy
+    text: ……[重たか|おもたか]。こりゃ大漁たい！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……なんだか、ぷよぷよしてるのだ。
+    background: fr_kurage_ami
+  - speaker: kurage
+    emotion: angry
+    text: クラゲやなかか！
+  - speaker: kurage
+    emotion: angry
+    text: なにが探知機か！ こんなもんはインチキたい！
+  - speaker: zundamon
+    emotion: surprised
+    text: ま、待ってください。影は本当に映って……
+  - speaker: kurage
+    emotion: angry
+    text: お前も、海で頭ば冷やしてこい！
+    background: fr_kurage_umi
+    se: don
+  - speaker: reimu
+    text: 海へ放り込まれた若者は、古野清賢。1年後、港で一番獲れない船がこの機械で3か月続けて一番になります。
+    reading: うみえ ほうりこまれた わかものわ、ふるの きよかた。いちねんご、みなとで いちばん とれない ふねが この きかいで さんかげつ つづけて いちばんに なります。
+- id: hook
+  title: ''
+  background: fr_ima_hook
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ見て！ 魚探に雲みたいな影なのだ。イワシの大群だぞ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 昔、それで海に投げ込まれた人がいるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ボクのも、クラゲかもしれないのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: その人が、のちにイワシの神様と呼ばれるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: インチキから神様に！？ [何|なに]があったの？
+    telops:
+    - {text: インチキから神様へ, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、島原半島の小さな電器屋さんよ。
+- id: card1938
+  title: ''
+  background: fr_card_1938
+  cuts:
+  - speaker: reimu
+    text: 1938年。長崎の島原半島の口之津で、17歳の古野清孝が電気の店を開きます。
+    reading: せんきゅうひゃく さんじゅうはちねん。ながさきの しまばら はんとうの くちのつで、じゅうななさいの ふるの きよたかが でんきの みせお ひらきます。
+- id: ch1_mise
+  title: 口之津の電器屋
+  background: fr_mise
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, scale: 0.85, emotion: happy}
+  - {who: kiyotaka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さん！ このラジオ、また声が出たぞ！
+  - speaker: kiyotaka
+    emotion: happy
+    text: 真空管を取り替えたからな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 遠くの放送が、なんでこの箱から聞こえるの？
+  - speaker: kiyotaka
+    emotion: normal
+    text: 目に見えない電波を拾って、音に戻してるんだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 見えない波を、拾うのか……。
+  - speaker: kiyotaka
+    emotion: normal
+    text: うちは兄弟が多いけん、おれが稼がんとな。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 港の漁船の、集魚灯の修理も引き受けた。
+  - speaker: zundamon
+    emotion: thinking
+    text: 集魚灯って、この笠のついた電球？
+  - speaker: kiyotaka
+    emotion: normal
+    text: 夜の海を照らして、魚を集める明かりだ。イワシやアジは光に寄ってくる。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあボクも明かりの下に立てば、魚にモテるのだ！
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 寄ってくるのは、蚊だけだ。
+    se: hammer
+  - speaker: kiyotaka
+    emotion: happy
+    text: '[口之津|くちのつ]は漁船が多い。電気の分かる者は少ないけん、仕事はいくらでもある。'
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さん、ボクにも直し方を教えて！
+  - speaker: kiyotaka
+    emotion: happy
+    text: よし。直した集魚灯を、港の船に付けに行くぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: 船に乗れるのだ！
+- id: ch1_shingaku
+  title: ''
+  background: fr_mise
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, scale: 0.9, emotion: normal}
+  - {who: kiyotaka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: やがて清賢も、学校を終える年ごろになります。
+    reading: やがて きよかたも がっこうお おえる としごろに なります。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: '[清賢|きよかた]。お前、上の学校に行きたいか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 行きたい。電気の勉強を、もっとしたいのだ。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: ……おれは、いつ兵隊に取られるか分からん。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: そうなったら店を任せられるのは、お前しかおらん。
+  - speaker: zundamon
+    emotion: sad
+    text: ……学校、あきらめろってこと？
+  - speaker: kiyotaka
+    emotion: thinking
+    text: すまん。店を、継いでくれ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……分かった。店は、ボクが守る。
+  - speaker: reimu
+    text: 兄に説得され、清賢は高等小学校で進学をあきらめました。
+    reading: あにに せっとく され、きよかたわ こうとう しょうがっこうで しんがくお あきらめました。
+  - speaker: reimu
+    text: 1941年。15歳の清賢は、ラジオ技術士の検定に最年少で合格します。
+    reading: せんきゅうひゃく よんじゅういちねん。じゅうごさいの きよかたわ、らじお ぎじゅつしの けんていに さいねんしょうで ごうかく します。
+  - speaker: kiyotaka
+    emotion: surprised
+    text: 15で合格か。大人に混じって、よくやった。
+  - speaker: zundamon
+    emotion: happy
+    text: これで、兄さんの代わりが務まるぞ。
+  - speaker: reimu
+    text: 翌年の1942年には、甲種電気工事士の資格も取ります。
+    reading: よくねんの せんきゅうひゃく よんじゅうにねんにわ、こうしゅ でんき こうじしの しかくも とります。
+- id: card1943
+  title: ''
+  background: fr_card_1943
+  cuts:
+  - speaker: reimu
+    text: 1943年ごろ。兄の清孝は22歳。戦争のさなか、橘湾で集魚灯の工事をしていました。
+    reading: せんきゅうひゃく よんじゅうさんねん ごろ。あにの きよたかわ にじゅうにさい。せんそうの さなか、たちばなわんで しゅうぎょとうの こうじお して いました。
+- id: ch2_awa
+  title: 魚のいる所には泡
+  background: fr_tachibana
+  bgm: jitaku_nite
+  stage:
+  - {who: kiyotaka, x: 0.3, flip: true, emotion: normal}
+  - {who: sendou, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: sendou
+    emotion: angry
+    text: こら電気屋。この前の明かりは、一晩でつかんごとなったぞ。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 潮で電線が傷んでました。今度は、しっかり巻いておきます。
+  - speaker: sendou
+    emotion: angry
+    text: 明かりの[無かと|なかと]、商売にならんとよ。
+  - speaker: sendou
+    emotion: normal
+    text: 急げ。今夜はイワシの来そうな気のするけん。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 船頭さん。魚が来るって、どうして分かるんです？
+  - speaker: sendou
+    emotion: happy
+    text: 長年の勘たい。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 勘、ですか。
+  - speaker: sendou
+    emotion: normal
+    text: それにな。魚のおるところには、必ず泡が出るばい。
+    telops:
+    - {text: 魚のいる所には泡が出る, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kiyotaka
+    emotion: surprised
+    text: 泡？
+  - speaker: sendou
+    emotion: normal
+    text: 群れの上の海が、ぷつぷつ泡立つ。そこば狙って[網|あみ]ば入れるとさ。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 泡の見えない夜は、どうするんです？
+  - speaker: sendou
+    emotion: happy
+    text: だけん明かりで呼ぶとたい。それでもおらん[日|ひ]は、運の悪かったと思え。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 勘と、運……。
+  - speaker: sendou
+    emotion: angry
+    text: 考え事より先に、明かりば直さんか！
+    se: tsukkomi
+  - speaker: reimu
+    text: 船頭のこの言葉を、兄の清孝は忘れませんでした。
+    reading: せんどうの この ことばお、あにの きよたかわ わすれませんでした。
+- id: card1945
+  title: ''
+  background: fr_card_1945
+  cuts:
+  - speaker: reimu
+    text: 1945年12月。戦争が終わり、兄の清孝は旧海軍が手放した音響測深機を手に入れます。
+    reading: せんきゅうひゃく よんじゅうごねん じゅうにがつ。せんそうが おわり、あにの きよたかわ きゅう かいぐんが てばなした おんきょう そくしんきお てに いれます。
+- id: ch3_sokushin
+  title: 音で深さを測る
+  background: fr_kenkyu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: surprised}
+  - {who: kiyotaka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 兄さん、この鉄の箱は[何|なん]です？
+  - speaker: kiyotaka
+    emotion: normal
+    text: 海軍の[音響測深機|おんきょうそくしんき]だ。海の深さを、音で測る。
+  - speaker: zundamon
+    emotion: thinking
+    text: 音で、深さが分かるんですか。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 船の底から音を出して、海底で跳ね返って戻るまでの時間を計るんだ。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 水の中の音は、1秒に約1500メートル進む。
+  - speaker: zundamon
+    emotion: happy
+    text: なら1秒で戻ったら、深さは1500メートルなのだ！
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 行って帰るから、半分の750メートルだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……往復を、忘れてたのだ。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、なんで音なんです？ 明かりで照らせば見えるのに。
+  - speaker: kiyotaka
+    emotion: normal
+    text: '[光|ひかり]は[水|みず]の中じゃ、すぐ弱まる。遠くまで届くのは音だけだ。'
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 海底が映るなら、魚も映るかもしれん。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも魚の体は、ほとんど水です。音は素通りするはずです。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: ……[橘湾|たちばなわん]の船頭さんが言ってたんだ。魚のいる所には、泡が出るって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 泡の中は空気だ。空気なら、音が跳ね返るのだ！
+    se: hirameki
+  - speaker: kiyotaka
+    emotion: happy
+    text: やってみる価値は、あるな。
+  - speaker: reimu
+    text: 実際、浮き袋のある魚では跳ね返る音の9割以上が浮き袋のガスから来ます。
+    reading: じっさい、うきぶくろの ある さかなでわ はねかえる おとの きゅうわり いじょうが うきぶくろの がすから きます。
+    telops:
+    - {text: 跳ね返る音の9割は浮き袋から, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 魚の中にも、泡が入ってたのだ！
+- id: card1947
+  title: ''
+  background: fr_card_1947
+  cuts:
+  - speaker: reimu
+    text: 1947年4月。兄弟は1年かけて作り変えた機械を船に積み、五島灘で初めて試します。
+    reading: せんきゅうひゃく よんじゅうななねん しがつ。きょうだいわ いちねん かけて つくりかえた きかいお ふねに つみ、ごとうなだで はじめて ためします。
+- id: ch4_goto
+  title: 雑音の海
+  background: fr_goto
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 古野清賢, emotion: happy}
+  - {who: kiyotaka, x: 0.52, emotion: normal}
+  - {who: ryoushi, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: ryoushi
+    emotion: thinking
+    text: で、その箱で魚の分かるとね？
+  - speaker: zundamon
+    emotion: happy
+    text: 海の中が、この紙に写るんです。
+  - speaker: kiyotaka
+    emotion: normal
+    text: スイッチを入れます。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……線が、ぐちゃぐちゃだ。
+  - speaker: ryoushi
+    emotion: angry
+    text: なんね、この落書きは。うちの子の方がまだ上手か。
+  - speaker: zundamon
+    emotion: thinking
+    text: エンジンとスクリューの音まで、拾ってるのだ。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 船が立てる泡の音も入ってるな。
+  - speaker: zundamon
+    emotion: surprised
+    text: 今、魚みたいな影が出ました！
+  - speaker: ryoushi
+    emotion: surprised
+    text: どこね。[網|あみ]ば入れるか？
+  - speaker: zundamon
+    emotion: sad
+    text: ……雑音に[埋もれて|うもれて]、消えました。
+    se: chin
+  - speaker: ryoushi
+    emotion: angry
+    text: 落書きと魚の見分けもつかんなら、網は入れられん。
+  - speaker: ryoushi
+    emotion: thinking
+    text: その箱、[漬物石|つけものいし]にはちょうどよかね。
+    beat: true
+  - speaker: reimu
+    text: この日の試験では、魚を獲るところまでは届きませんでした。
+    reading: この ひの しけんでわ、さかなお とる ところまでわ とどきませんでした。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: でも、魚みたいな影は確かに出た。
+  - speaker: zundamon
+    emotion: thinking
+    text: 雑音さえ消せれば、魚は見えるはずなのだ。
+- id: ch4_kairyou
+  title: ''
+  background: fr_kenkyu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: thinking}
+  - {who: kiyotaka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 雑音を、どう減らすかだな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 音を出す所を、船の底から突き出して[付けたら|つけたら]どうです？
+  - speaker: kiyotaka
+    emotion: surprised
+    text: 船の底に穴を開けるのか。漁師は嫌がるぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: それでも、やるしかないのだ。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 戻ってくる小さな音を、もっと大きくする仕掛けも要るな。
+  - speaker: zundamon
+    emotion: happy
+    text: 記録紙は、電気が流れると青紫に染まる紙にします。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 青紫……ヨウ素とでんぷんか。理科の実験だな。
+  - speaker: zundamon
+    emotion: happy
+    text: 海の中の魚が、理科の実験の色で浮かび上がるんです。
+  - speaker: reimu
+    text: 使った音は14.5キロヘルツ。最初の試験より、雑音はぐっと減りました。
+    reading: つかった おとわ じゅうよん てん ご きろへるつ。さいしょの しけんより、ざつおんわ ぐっと へりました。
+- id: card1948
+  title: ''
+  background: fr_card_1948
+  cuts:
+  - speaker: reimu
+    text: 1948年5月。弟の清賢は、改良した機械を積んだ長生丸という漁船に乗り込みます。
+    reading: せんきゅうひゃく よんじゅうはちねん ごがつ。おとうとの きよかたわ、かいりょうした きかいお つんだ ちょうせいまると いう ぎょせんに のりこみます。
+- id: ch5_chousei
+  title: 紙の上の影
+  background: fr_chousei
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: surprised}
+  - {who: senchou, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 記録紙に、濃い影が出ました。この下に群れがいます！
+  - speaker: senchou
+    emotion: thinking
+    text: こげん所で明かりばつけても、無駄たい。いつもの[漁場|ぎょじょう]は、まだ先ぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 一度だけ、ここで集魚灯をつけてください。
+  - speaker: senchou
+    emotion: angry
+    text: 紙の上の染みで、魚の分かるもんか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 外れたら、網はボクが一晩じゅう引きます。
+  - speaker: senchou
+    emotion: thinking
+    text: ……一度だけぞ。
+  - speaker: senchou
+    emotion: angry
+    text: 外れたら、明日の朝飯はお前の分なしぞ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……それは、外せないのだ。
+    beat: true
+  - speaker: reimu
+    text: 集魚灯をともして網を入れると、かかったのはイワシの大群でした。
+    reading: しゅうぎょとうお ともして あみお いれると、かかったのわ いわしの たいぐんでした。
+  - speaker: senchou
+    emotion: surprised
+    text: ……ほんなこつ、おった。
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: 音で、魚が見えたのだ！
+  - speaker: senchou
+    emotion: happy
+    text: 紙の染みが、イワシに化けたばい！
+  - speaker: reimu
+    text: 古野電気はこの1948年を、魚群探知機の世界初の実用化の年としています。
+    reading: ふるの でんきわ この せんきゅうひゃく よんじゅうはちねんお、ぎょぐん たんちきの せかいはつの じつようかの としと して います。
+- id: ch5_houkoku
+  title: ''
+  background: fr_kenkyu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: happy}
+  - {who: kiyotaka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さん、獲れました！ 紙の影の下に、本当にイワシがいたのだ！
+  - speaker: kiyotaka
+    emotion: happy
+    text: 船頭さんの泡の話は、本当だったな。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: でも1回獲れただけじゃ、まだ信じてもらえん。
+  - speaker: zundamon
+    emotion: normal
+    text: なら、もっといろんな船で試します。
+- id: ch5_kurage
+  title: ''
+  background: fr_kurage0
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: happy}
+  - {who: kurage, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: ほかの漁船でも、試験が続きます。
+    reading: ほかの ぎょせんでも、しけんが つづきます。
+  - speaker: zundamon
+    emotion: happy
+    text: 大きな影が出ました！ イワシの大群がいます！
+  - speaker: kurage
+    emotion: happy
+    text: よし、[網|あみ]ば入れろ！
+  - speaker: kurage
+    emotion: angry
+    text: ……クラゲやなかか！
+    background: fr_kurage_ami
+  - speaker: kurage
+    emotion: angry
+    text: お前も、海で頭ば冷やしてこい！
+    background: fr_kurage_umi
+    se: don
+  - speaker: zundamon
+    emotion: sad
+    text: ……ぷはっ。影の大きさは、合ってたのだ。
+  - speaker: kurage
+    emotion: angry
+    text: 大きさの合うても、中身の違うたら意味なか！
+    beat: true
+  - speaker: kurage
+    emotion: angry
+    text: クラゲもイワシも、あんたの紙じゃ同じ染みたい。
+  - speaker: zundamon
+    emotion: sad
+    text: ……染みの読み方は、まだ勉強中なんです。
+  - speaker: zundamon
+    emotion: happy
+    text: ……今度こそイワシです！ 当たりました！
+    background: fr_kurage0
+  - speaker: kurage
+    emotion: angry
+    text: ……その機械ば、持って帰れ！
+  - speaker: zundamon
+    emotion: surprised
+    text: 当たったのに！？
+  - speaker: kurage
+    emotion: angry
+    text: 機械に[漁|りょう]ば教わったら、船頭の顔の[立たん|たたん]たい！
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: 外しても怒られて、当てても怒られるのだ……。
+- id: ch6_kaisha
+  title: 売れない魚探
+  background: fr_jimusho
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: kiyotaka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1948年12月。兄弟は長崎駅の前に、合資会社古野電気工業所を作ります。
+    reading: せんきゅうひゃく よんじゅうはちねん じゅうにがつ。きょうだいわ ながさきえきの まえに、ごうし がいしゃ ふるの でんき こうぎょうしょお つくります。
+  - speaker: kiyotaka
+    emotion: happy
+    text: '[清賢|きよかた]。今日から、うちは会社だ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 会社！？ [何人|なんにん]でやるんです？
+  - speaker: kiyotaka
+    emotion: normal
+    text: 7人だ。魚探を作って売る。
+  - speaker: zundamon
+    emotion: happy
+    text: 7人で、海の中を見る機械を売るのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 兄さん、1台いくらにするんです？
+  - speaker: kiyotaka
+    emotion: normal
+    text: 60万円だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 60万円！？
+  - speaker: reimu
+    text: 当時の会社員の年収は、12万円ほどでした。
+    reading: とうじの かいしゃいんの ねんしゅうわ、じゅうにまんえん ほどでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 給料の、5年分なのだ！
+    se: bikkuri
+    telops:
+    - {text: 1台60万円＝年収の5年分, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 高いのは分かってる。獲れるようになれば、元は取れる。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……獲れるって、信じてもらえればですけど。
+- id: ch6_henpin
+  title: ''
+  background: fr_henpin
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: senshu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: senshu
+    emotion: thinking
+    text: 古野さん。あの機械、返しに来たばい。
+  - speaker: zundamon
+    emotion: surprised
+    text: どこか、壊れましたか。
+  - speaker: senshu
+    emotion: thinking
+    text: 壊れちゃおらん。ばってん、魚は獲れん。
+  - speaker: senshu
+    emotion: thinking
+    text: 紙に線の出るだけじゃ、[網|あみ]ば入れる気にならんとよ。
+  - speaker: zundamon
+    emotion: sad
+    text: 線の下に、魚がいるんです……。
+  - speaker: senshu
+    emotion: angry
+    text: 漁師はみんな、あれはインチキって言いよるばい。
+  - speaker: reimu
+    text: 機械は次々と返され、工業所には返品の山ができました。
+    reading: きかいわ つぎつぎと かえされ、こうぎょうしょにわ へんぴんの やまが できました。
+    background: fr_henpin_yama
+  - speaker: zundamon
+    emotion: sad
+    text: ……売った数より、返ってきた数のほうが多い気がするのだ。
+    beat: true
+  - speaker: reimu
+    text: 海に電気が流れて卵や稚魚が死ぬ。そんな噂まで立ちました。
+    reading: うみに でんきが ながれて たまごや ちぎょが しぬ。そんな うわさまで たちました。
+- id: ch6_tobikomi
+  title: 体を張った船主
+  background: fr_hatoba
+  bgm: honwaka_puppu
+  stage:
+  - {who: shain, x: 0.3, emotion: normal}
+  - {who: tobikomi, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: ある港で、古野の社員が船主に魚探を売り込みます。
+    reading: ある みなとで、ふるのの しゃいんが せんしゅに ぎょたんお うりこみます。
+  - speaker: shain
+    emotion: normal
+    text: この機械は、電気じゃなくて音を使います。
+  - speaker: tobikomi
+    emotion: angry
+    text: 嘘ば言え。海に電気の流れて、稚魚のみんな死ぬって聞いたぞ。
+  - speaker: shain
+    emotion: normal
+    text: 流れません。音が、海の底で跳ね返るだけです。
+  - speaker: tobikomi
+    emotion: thinking
+    text: ……よか。おいが海に飛び込むけん、スイッチば入れろ！
+  - speaker: shain
+    emotion: surprised
+    text: えっ。お客さんが、ですか！？
+  - speaker: tobikomi
+    emotion: normal
+    text: 腰に縄ば巻け。しびれたら、すぐ引き上げろよ。
+  - speaker: reimu
+    text: 船主は体に縄をつけて、本当に海へ飛び込みました。
+    reading: せんしゅわ からだに なわお つけて、ほんとうに うみえ とびこみました。
+    background: fr_hatoba_tobikomi
+  - speaker: shain
+    emotion: surprised
+    text: ……スイッチ、入れます！
+  - speaker: tobikomi
+    emotion: angry
+    text: まだか！ はよ入れんか！
+  - speaker: shain
+    emotion: surprised
+    text: もう、とっくに入ってます！
+  - speaker: shain
+    emotion: thinking
+    text: 船主さん！？ 生きてますか！？
+  - speaker: tobikomi
+    emotion: thinking
+    text: ……ビリビリせん。
+  - speaker: tobikomi
+    emotion: happy
+    text: 買うた！
+    se: oti
+  - speaker: shain
+    emotion: thinking
+    text: ……説明より、飛び込むほうが早かったのか。
+    beat: true
+  - speaker: reimu
+    text: しびれないことが分かり、売り込みは成功しました。
+    reading: しびれない ことが わかり、うりこみわ せいこう しました。
+- id: ch6_kouka
+  title: ''
+  background: fr_henpin_yama
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: sad}
+  - {who: kiyotaka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 兄さん。機械は、ちゃんと魚を見てるんです。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 機械が魚を見つけても、網を入れるのは漁師だ。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: 箱を売るだけじゃ、だめなんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、ボクが船に乗って獲ってみせます。
+  - speaker: kiyotaka
+    emotion: happy
+    text: そうだ。[獲れる|とれる]ところを、見せるしかない。
+  - speaker: reimu
+    text: 兄の清孝はのちに、客は機械の箱ではなく効果を買っていると語っています。
+    reading: あにの きよたかわ のちに、きゃくわ きかいの はこでわ なく こうかお かって いると かたって います。
+- id: card1949
+  title: ''
+  background: fr_card_1949
+  cuts:
+  - speaker: reimu
+    text: 1949年5月。五島列島の岩瀬浦で、港で一番獲れない船が魚探に賭けます。
+    reading: せんきゅうひゃく よんじゅうくねん ごがつ。ごとう れっとうの いわせうらで、みなとで いちばん とれない ふねが ぎょたんに かけます。
+- id: ch7_masutomi
+  title: 最下位の船
+  background: fr_minato
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: masuda, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: masuda
+    emotion: thinking
+    text: うちの[桝富丸|ますとみまる]は、この港で一番[獲れん|とれん][船|ふね]たい。
+  - speaker: masuda
+    emotion: thinking
+    text: その機械で、ほんなこつ[獲れる|とれる]ごとなるとか。
+  - speaker: masuda
+    emotion: angry
+    text: 港に戻るたびに、うちの船は笑いもんたい。
+  - speaker: zundamon
+    emotion: normal
+    text: なら今度は、港じゅうを驚かせましょう。
+  - speaker: masuda
+    emotion: thinking
+    text: 聞いたぞ。船の底に、穴ば開けるとやろ。
+  - speaker: zundamon
+    emotion: normal
+    text: 音を出す所を、船の底に付けたいんです。
+  - speaker: masuda
+    emotion: angry
+    text: 船乗りにとって、[船底|ふなぞこ]の穴は命取りぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……それでも、お願いします。
+  - speaker: masuda
+    emotion: thinking
+    text: ……最下位なら、これ以上は落ちようのなかか。
+    beat: true
+  - speaker: masuda
+    emotion: happy
+    text: よか。やってみんね。
+  - speaker: reimu
+    text: 船主の桝田富一郎は、船底に穴を開けての取り付けを認めました。
+    reading: せんしゅの ますだ とみいちろうわ、ふなぞこに あなお あけての とりつけお みとめました。
+- id: ch7_sendou
+  title: ''
+  background: fr_minato
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: masuda, x: 0.56, emotion: normal}
+  - {who: sendou3, x: 0.78, emotion: angry}
+  cuts:
+  - speaker: sendou3
+    emotion: angry
+    text: なんね、この箱は。おいへの[当てつけ|あてつけ]か！
+  - speaker: masuda
+    emotion: normal
+    text: 当てつけやなか。試しに積むだけたい。
+  - speaker: sendou3
+    emotion: angry
+    text: 機械に[網|あみ]の指図ばさるる船には、乗らん！
+  - speaker: zundamon
+    emotion: surprised
+    text: ……船頭さんが、降りてしまったのだ。
+    se: tenten
+- id: ch7_shiki
+  title: ''
+  background: fr_minato
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: surprised}
+  - {who: masuda, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: masuda
+    emotion: thinking
+    text: ……あんたが、指図ばしてくれ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクが、ですか！？
+  - speaker: reimu
+    text: 清賢は一時、漁の指揮をとる漁労長としてこの船に乗り込みました。
+    reading: きよかたわ いちじ、りょうの しきお とる ぎょろうちょうと して この ふねに のりこみました。
+- id: ch7_ryou
+  title: ''
+  background: fr_masutomi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: thinking}
+  - {who: masuda, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 影が、だんだん濃くなってきた……。
+  - speaker: masuda
+    emotion: thinking
+    text: 漁労長、網はまだか。
+  - speaker: zundamon
+    emotion: thinking
+    text: まだです。群れの真上まで、もう少し。
+  - speaker: masuda
+    emotion: angry
+    text: 電気屋の若いのに、網の指図ばされるとはな。
+  - speaker: masuda
+    emotion: thinking
+    text: 外れたら、穴の[開いた|あいた]船だけが残るとぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……外れません。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……クラゲの影とは、形が違う。
+  - speaker: zundamon
+    emotion: happy
+    text: ……今です！ 明かりをつけて、網を入れてください！
+  - speaker: masuda
+    emotion: happy
+    text: よし、[網|あみ]ば入れろ！
+  - speaker: masuda
+    emotion: surprised
+    text: ……[入っとる|はいっとる]。いっぱい[入っとるぞ|はいっとるぞ]！
+  - speaker: zundamon
+    emotion: happy
+    text: 紙の影と、同じ所にいたのだ！
+  - speaker: zundamon
+    emotion: normal
+    text: '[網|あみ]は、小さめに巻いてください。'
+  - speaker: masuda
+    emotion: surprised
+    text: なんでね！ まだ、いっぱいおるとに！
+  - speaker: zundamon
+    emotion: normal
+    text: イワシは獲りすぎると網の目が詰まって、[破れる|やぶれる]んです。
+  - speaker: zundamon
+    emotion: normal
+    text: 少しずつ、1日に[何回|なんかい]も入れたほうが獲れます。
+  - speaker: reimu
+    text: ほかの船が網の掃除や修理をする間に、桝富丸は1日に何度も漁に出ました。
+    reading: ほかの ふねが あみの そうじや しゅうりお する あいだに、ますとみまるわ いちにちに なんども りょうに でました。
+- id: ch7_kekka
+  title: ''
+  background: fr_mizuage
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: happy}
+  - {who: masuda, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: masuda
+    emotion: happy
+    text: 9月の水揚げ、1万869箱！ 港で一番たい！
+  - speaker: zundamon
+    emotion: happy
+    text: 一番です！
+  - speaker: masuda
+    emotion: happy
+    text: 10月、9914箱！ また一番！
+  - speaker: zundamon
+    emotion: happy
+    text: また一番です！
+  - speaker: masuda
+    emotion: surprised
+    text: 11月、1万1834箱！
+  - speaker: zundamon
+    emotion: happy
+    text: 3か月続けて、一番なのだ！
+    se: levelup
+    telops:
+    - {text: 最下位から3か月連続1位, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: masuda
+    emotion: happy
+    text: 一番獲れん船が、一番獲れる船になってしもうた……。
+  - speaker: masuda
+    emotion: happy
+    text: 古野さん。あんたの機械は、本物たい。
+  - speaker: reimu
+    text: 10月には、岩瀬浦のすべての船団が魚探を積みました。
+    reading: じゅうがつにわ、いわせうらの すべての せんだんが ぎょたんお つみました。
+  - speaker: reimu
+    text: 岩瀬浦の船団の平均の水揚げは、同じ五島の奈良尾の約2倍になりました。
+    reading: いわせうらの せんだんの へいきんの みずあげわ、おなじ ごとうの ならおの やく にばいに なりました。
+  - speaker: zundamon
+    emotion: happy
+    text: 最下位の船の賭けが、港ごと変えたのだ。
+- id: ch7_shidou
+  title: 影の読み方
+  background: fr_chousei
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: wakashu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 清賢は毎晩のように漁船に乗り込み、魚探の使い方を教えて回りました。
+    reading: きよかたわ まいばんの ように ぎょせんに のりこみ、ぎょたんの つかいかたお おしえて まわりました。
+  - speaker: wakashu
+    emotion: thinking
+    text: 漁労長さん、この雲のごたる影は[何|なん]ね？
+  - speaker: zundamon
+    emotion: normal
+    text: それが群れです。濃いほど、ぎっしり詰まってます。
+  - speaker: wakashu
+    emotion: thinking
+    text: そんなら、下の太か線の下にも魚のおるとね？
+  - speaker: zundamon
+    emotion: surprised
+    text: そこは海の底です。網を入れたら[破れます|やぶれます]。
+  - speaker: wakashu
+    emotion: surprised
+    text: 危なか。底まで[網|あみ]ば入れるとこやった。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: 影の形は、クラゲで[何回|なんかい]も痛い目を見て覚えましたから。
+  - speaker: wakashu
+    emotion: happy
+    text: 漁労長さんも、海に落とされたとね？
+  - speaker: zundamon
+    emotion: sad
+    text: ……その話、港じゅうに広まってるんですか。
+- id: ch8_chumon
+  title: イワシの神様
+  background: fr_koujou
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: kiyotaka, x: 0.52, emotion: normal}
+  - {who: senshu, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1950年1月。長崎の新聞が、桝富丸の大漁を記事にします。
+    reading: せんきゅうひゃく ごじゅうねん いちがつ。ながさきの しんぶんが、ますとみまるの たいりょうお きじに します。
+  - speaker: reimu
+    text: 工業所の前には、注文に来た船主たちの列ができました。
+    reading: こうぎょうしょの まえにわ、ちゅうもんに きた せんしゅたちの れつが できました。
+    background: fr_koujou_retsu
+  - speaker: senshu
+    emotion: happy
+    text: 古野さん！ あの機械、もういっぺんうちの船に付けてくれ！
+  - speaker: kiyotaka
+    emotion: surprised
+    text: ありがとうございます。ただ、今は月に20台ほどしか作れんのです。
+  - speaker: senshu
+    emotion: happy
+    text: 待つ。[何か月|なんかげつ]でも[待つけん|まつけん]。
+  - speaker: senshu
+    emotion: happy
+    text: '[金|かね]なら持ってきたばい。100円札で、リュックがぱんぱんたい。'
+  - speaker: zundamon
+    emotion: surprised
+    text: リュックが、札束で太ってるのだ！
+    se: jaan
+    telops:
+    - {text: 100円札のリュックで行列, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 兄さん。100円札を数えるだけで、日が暮れます。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 数えるより先に、機械を作れ。
+  - speaker: senshu
+    emotion: thinking
+    text: この前は、機械ば返して悪かったな。
+  - speaker: zundamon
+    emotion: surprised
+    text: 前は、返品の山だったのに……。
+  - speaker: senshu
+    emotion: happy
+    text: あんたが、イワシの神様か。
+  - speaker: zundamon
+    emotion: surprised
+    text: か、神様！？
+  - speaker: kiyotaka
+    emotion: happy
+    text: クラゲで海に落とされた男が、神様か。
+  - speaker: zundamon
+    emotion: happy
+    text: 神様だって、クラゲくらい間違えるのだ。
+    beat: true
+  - speaker: reimu
+    text: 清賢は、イワシの神様と呼ばれるようになりました。
+    reading: きよかたわ、いわしの かみさまと よばれる ように なりました。
+- id: ch9_kobe
+  title: 燃えた工場
+  background: fr_kobe
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: happy}
+  - {who: kiyotaka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1950年9月。注文に追いつくため、神戸に魚探を作る専門の工場ができます。
+    reading: せんきゅうひゃく ごじゅうねん くがつ。ちゅうもんに おいつく ため、こうべに ぎょたんお つくる せんもんの こうじょうが できます。
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さん、ここなら月に20台どころじゃないのだ！
+  - speaker: kiyotaka
+    emotion: happy
+    text: 待たせてる船主さんたちに、やっと顔向けできるな。
+  - speaker: zundamon
+    emotion: happy
+    text: リュックの列も、これで短くなります。
+- id: ch9_yake
+  title: ''
+  background: fr_kobe
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: sad}
+  - {who: kiyotaka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 半年後の1951年3月。その工場は、火事で焼けてしまいます。
+    reading: はんとしごの せんきゅうひゃく ごじゅういちねん さんがつ。その こうじょうわ、かじで やけて しまいます。
+    background: fr_kobe_yake
+    telops:
+    - {text: 開業から半年で焼失, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……全部、燃えてしまった。
+    se: gaan
+  - speaker: kiyotaka
+    emotion: thinking
+    text: …………。
+  - speaker: zundamon
+    emotion: sad
+    text: 注文は、まだ山ほど残ってるのに……。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: ……燃えたのは、工場だけだ。
+  - speaker: kiyotaka
+    emotion: normal
+    text: 作り方は、おれたちの頭に残ってる。
+  - speaker: kiyotaka
+    emotion: thinking
+    text: まずは、待ってくれてる船主さんたちに頭を下げに行こう。
+  - speaker: zundamon
+    emotion: thinking
+    text: リュックで並んでくれた人たちですもんね。
+  - speaker: zundamon
+    emotion: normal
+    text: ……また一から、組み立てるのだ。
+  - speaker: reimu
+    text: 2か月後の5月。神戸に、あとを継ぐ水産電気工業ができました。
+    reading: にかげつごの ごがつ。こうべに、あとお つぐ すいさん でんき こうぎょうが できました。
+- id: ch9_hachinohe
+  title: 八戸の船主
+  background: fr_hachinohe
+  bgm: kinakusai
+  stage:
+  - {who: shain, x: 0.3, emotion: normal}
+  - {who: hachinohe, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1952年。古野は現場で集めた記録を、魚探資料にまとめます。魚の種類の見分け方まで載せました。
+    reading: せんきゅうひゃく ごじゅうにねん。ふるのわ げんばで あつめた きろくお、ぎょたん しりょうに まとめます。さかなの しゅるいの みわけかたまで のせました。
+  - speaker: reimu
+    text: やがて古野の社員は、東北の八戸まで魚探を売りに行きます。
+    reading: やがて ふるのの しゃいんわ、とうほくの はちのへまで ぎょたんお うりに いきます。
+  - speaker: hachinohe
+    emotion: thinking
+    text: 長崎から、わざわざ売りに来たってか。
+  - speaker: shain
+    emotion: normal
+    text: はい。この機械で、海の中の魚が見えます。
+  - speaker: hachinohe
+    emotion: angry
+    text: インチキ業者は近くで売れねえから、遠くさ来るんだべ。
+  - speaker: shain
+    emotion: surprised
+    text: ち、近くでも売れてます！ ……最近は。
+  - speaker: hachinohe
+    emotion: angry
+    text: 最近かい！
+    se: tsukkomi
+  - speaker: shain
+    emotion: normal
+    text: 船主さんは、[漁場|ぎょじょう]をどうやって選んでるんです？
+  - speaker: hachinohe
+    emotion: normal
+    text: 糸の先さ[錘|おもり]つけて、深さ測るんだ。1か所に30分から1時間かかる。
+  - speaker: shain
+    emotion: happy
+    text: この機械なら、スイッチを入れたらすぐ海の底まで見えます。
+  - speaker: hachinohe
+    emotion: surprised
+    text: ……すぐ？ 1時間が？
+  - speaker: hachinohe
+    emotion: thinking
+    text: ほんとに見えるんだら、1時間早く家さ帰れるな。
+  - speaker: shain
+    emotion: happy
+    text: はい。寝る時間も増えます。
+  - speaker: hachinohe
+    emotion: angry
+    text: それを先に言わねえか。
+    beat: true
+  - speaker: hachinohe
+    emotion: thinking
+    text: ……んだども、口だけなら誰でも言える。船さ乗って見せてみろ。
+  - speaker: shain
+    emotion: normal
+    text: はい。[網|あみ]を入れるまで、一緒に乗ります。
+  - speaker: reimu
+    text: 社員は八戸でも漁船に乗り込み、使い方を教えて漁に付き合いました。
+    reading: しゃいんわ はちのへでも ぎょせんに のりこみ、つかいかたお おしえて りょうに つきあいました。
+  - speaker: reimu
+    text: 大漁が続くと疑っていた船も寄ってきて、八戸に魚探のブームが起きました。
+    reading: たいりょうが つづくと うたがって いた ふねも よって きて、はちのへに ぎょたんの ぶーむが おきました。
+- id: card1955
+  title: ''
+  background: fr_card_1955
+  cuts:
+  - speaker: reimu
+    text: 1955年3月。兄の清孝は、世界のフルノを目指すと宣言します。
+    reading: せんきゅうひゃく ごじゅうごねん さんがつ。あにの きよたかわ、せかいの ふるのお めざすと せんげん します。
+- id: ch10_sekai
+  title: 世界のフルノ
+  background: fr_jimusho55
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: kiyotaka_s, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kiyotaka_s
+    emotion: happy
+    text: これからは、日本の海だけじゃない。世界の海だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 世界！？ うちはまだ、長崎の小さな会社ですよ。
+  - speaker: kiyotaka_s
+    emotion: normal
+    text: 大手が[東大出|とうだいで]をそろえて背広を着ても、恐ろしくはない。
+  - speaker: zundamon
+    emotion: thinking
+    text: どうしてです？
+  - speaker: kiyotaka_s
+    emotion: happy
+    text: 理論は分かっても、魚を知らんからな。
+  - speaker: zundamon
+    emotion: happy
+    text: 魚なら、毎晩船の上で見てきたのだ。
+  - speaker: kiyotaka_s
+    emotion: normal
+    text: 魚は世界じゅうの海にいる。漁師も、世界じゅうにいる。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界の漁師に、海の中を見せるぞ！
+    se: jaan
+  - speaker: reimu
+    text: この年の8月に古野電気株式会社ができ、翌年には輸出も始まります。
+    reading: この としの はちがつに ふるの でんき かぶしき がいしゃが でき、よくねんにわ ゆしゅつも はじまります。
+  - speaker: reimu
+    text: 1958年にはアメリカへ。1969年までに、ハンブルクやニューヨークにも駐在所を置きます。
+    reading: せんきゅうひゃく ごじゅうはちねんにわ あめりかえ。せんきゅうひゃく ろくじゅうくねんまでに、はんぶるくや にゅーよーくにも ちゅうざいじょお おきます。
+  - speaker: reimu
+    text: 1964年には、本社を兵庫県の西宮へ移しました。
+    reading: せんきゅうひゃく ろくじゅうよねんにわ、ほんしゃお ひょうごけんの にしのみやえ うつしました。
+- id: ch11_baton
+  title: 兄から弟へ
+  background: fr_shachoshitsu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: normal}
+  - {who: kiyotaka_s, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1987年。清孝は会長になり、社長の座を弟の清賢に譲ります。
+    reading: せんきゅうひゃく はちじゅうななねん。きよたかわ かいちょうに なり、しゃちょうの ざお おとうとの きよかたに ゆずります。
+  - speaker: kiyotaka_s
+    emotion: normal
+    text: '[清賢|きよかた]。社長は、今日からお前だ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクが、社長ですか。
+  - speaker: kiyotaka_s
+    emotion: thinking
+    text: 店を頼んだあの日は、学校をあきらめさせたな。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……覚えてたんですか。
+  - speaker: kiyotaka_s
+    emotion: thinking
+    text: 忘れたことはない。
+  - speaker: kiyotaka_s
+    emotion: happy
+    text: その店の魚探が、今は世界の海で使われてる。
+  - speaker: zundamon
+    emotion: happy
+    text: 学校には行けなかったけど、船の上で毎晩勉強しました。
+  - speaker: kiyotaka_s
+    emotion: happy
+    text: ……今度は、会社を頼む。
+  - speaker: zundamon
+    emotion: happy
+    text: はい。……クラゲにも、気をつけます。
+  - speaker: kiyotaka_s
+    emotion: thinking
+    text: それは、40年近く前に気をつけてくれ。
+    se: hammer
+  - speaker: reimu
+    text: 清賢は翌年に藍綬褒章を受け、1992年に会長になりました。
+    reading: きよかたわ よくねんに らんじゅほうしょうお うけ、せんきゅうひゃく きゅうじゅうにねんに かいちょうに なりました。
+- id: ch12_kokyou
+  title: ふるさとの海
+  background: fr_kokyou
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: happy}
+  - {who: kiyotaka_s, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2009年。ふるさとの南島原市が、兄弟を名誉市民に選びます。
+    reading: にせん きゅうねん。ふるさとの みなみしまばらしが、きょうだいお めいよ しみんに えらびます。
+  - speaker: kiyotaka_s
+    emotion: happy
+    text: '[清賢|きよかた]。[島原|しまばら]の海は、変わらんな。'
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さんが店を開いてから、70年あまりですね。
+  - speaker: kiyotaka_s
+    emotion: happy
+    text: ラジオ屋の兄弟が、名誉市民か。
+  - speaker: zundamon
+    emotion: happy
+    text: 集魚灯を直してたころは、考えもしなかったのだ。
+  - speaker: kiyotaka_s
+    emotion: thinking
+    text: 泡の話をしてくれた船頭さんにも、見せたかったな。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あの一言が、全部の始まりでしたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 名誉市民になったら、港の船にただで乗せてもらえますかね。
+  - speaker: kiyotaka_s
+    emotion: surprised
+    text: その歳で、まだ船に乗る気か。
+    beat: true
+  - speaker: reimu
+    text: 市は今も、子どもたちのために古野賞科学技術展を毎年開いています。
+    reading: しわ いまも、こどもたちの ために ふるのしょう かがく ぎじゅつてんお まいとし ひらいて います。
+- id: ch12_wakare
+  title: ''
+  background: fr_yuuhi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古野清賢, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2013年10月。兄の清孝が、92歳で亡くなります。
+    reading: にせん じゅうさんねん じゅうがつ。あにの きよたかが、きゅうじゅうにさいで なくなります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……兄さん。
+  - speaker: zundamon
+    emotion: sad
+    text: 店を継げと言われた日から、ずっと兄さんの背中を見てきました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……泡の話を聞いてきたのも、兄さんでしたね。
+  - speaker: reimu
+    text: 11月、神戸でお別れの会が開かれました。
+    reading: じゅういちがつ、こうべで おわかれの かいが ひらかれました。
+  - speaker: reimu
+    text: 2024年6月。弟の清賢も、98歳で亡くなりました。
+    reading: にせん にじゅうよねん ろくがつ。おとうとの きよかたも、きゅうじゅうはっさいで なくなりました。
+  - speaker: reimu
+    text: 9月のお別れの会には、約800人が集まりました。
+    reading: くがつの おわかれの かいにわ、やく はっぴゃくにんが あつまりました。
+    se: namida
+- id: ch13_ieee
+  title: 75年前の新聞記事
+  background: fr_meiban
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: '[清賢|きよかた]さんのお別れの会の前の日、ある知らせが届いたの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: なんの知らせ？
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカに本部がある、[IEEE|あいとりぷるいー]という学会からよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 魚群探知機の商品化を、技術の歴史に残る業績と認めたの。
+  - speaker: zundamon
+    emotion: sad
+    text: お別れの会の、前の日に……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 決め手になったのは、1950年1月の新聞記事だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[桝富丸|ますとみまる]の大漁を伝えた記事を、長崎新聞社が古い紙面から見つけ出したのよ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 船主たちがリュックで並んだ、きっかけの記事なのだ！
+    telops:
+    - {text: 決め手は1950年の新聞記事, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: happy
+    text: 2025年4月、記念の銘板が[西宮|にしのみや]の本社に贈られたわ。
+- id: ch14_shikumi
+  title: 画面の影の正体
+  background: fr_zukai
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも、なんで画面に魚の形が出るの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 船の底から出た音は、懐中電灯みたいに下へ広がっていくの。
+  - speaker: zundamon
+    emotion: happy
+    text: 音の懐中電灯か。
+  - speaker: tsumugi
+    emotion: normal
+    text: 途中の群れに当たった音は、海底より先に戻ってくるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 浅い所で跳ね返るから、早く戻るのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 戻るまでの時間を、紙の上に順番に並べていくの。
+  - speaker: zundamon
+    emotion: happy
+    text: 紙の上に、海の断面ができるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 深さ200メートルでは、光は海面の0.1%しか残らないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほぼ真っ暗なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから水の中を探るのは、昔から音の役目なのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 音で海を探る研究は、タイタニック号の事故のあと氷山を見つけるために進んだの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 氷山を、音で見つけるのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: 画面は1966年にブラウン管になって、今はカラーの液晶ね。
+    background: fr_shinka
+  - speaker: tsumugi
+    emotion: normal
+    text: 古野電気は1986年に、海鳥の群れを見つけるレーダーも出したの。世界初よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 魚の次は、鳥なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 海鳥が群れる下には、たいてい魚の群れがいるの。鳥山っていうのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 昔の漁師の探し方を、電波でやってるのか。
+- id: ch15_ronsou
+  title: 本当に世界初？
+  background: fr_shiryo
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも魚探って、本当に世界初なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 魚の群れを音でとらえた記録は、ほかの国にもあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1935年にはノルウェーで、タラの群れが記録されてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1943年には、カナダでもニシンの群れが記録されてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 古野兄弟より、先じゃないか！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも浅い海のぎっしり詰まった群れが、たまたま映った程度だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: たまたまの1枚と、毎日使える道具は別物か。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[IEEE|あいとりぷるいー]も、ほかの国に似た開発があったことは認めてるの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: そのうえで、漁の道具として使える形にした点を評価したのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 年も、1948年と1949年の2つあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、[長生丸|ちょうせいまる]で獲れた1948年を実用化の年にしてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[IEEE|あいとりぷるいー]は、商品として広まった1949年ね。'
+  - speaker: zundamon
+    emotion: happy
+    text: どっちも、間違いじゃないわけか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 12月3日は、魚群探知機の日よ。2021年に決まったの。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、海に投げ込まれた日も記念日にしてほしいのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 誰が祝うのよ、その日。
+    se: zukko
+- id: ch16_gendai
+  title: 見えすぎる魚探
+  background: fr_bridge
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の試算では、漁業向けの機器で世界の49%を占めてるわ。
+    telops:
+    - {text: 漁業向けの機器で世界の49%, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 世界の漁船の、2隻に1隻なのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 売り上げから出した割合よ。船の数じゃないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 売り上げの7割以上は、海外なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 7割が海外！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は、魚の大きさを測ったり種類を見分けたりできる機種もあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 浮き袋があるかどうかまで、分かる機種もあるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: '[清賢|きよかた]さんが聞いたら、泣いて喜ぶのだ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 音の高さも使い分けるの。低い音は深く広く届いて、高い音は細かく見えるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 遠くを見る目と、近くを見る目があるわけか。
+  - speaker: tsumugi
+    emotion: normal
+    text: スマホにつなぐ魚探なら、軽いもので75グラムほどよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 60万円の箱が、ポケットに入ったのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、そんなに見えたら獲りすぎちゃわない？
+    background: fr_gyokou
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは、本当に心配されてるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 魚探やGPSが広まって、漁船の[獲る|とる]力は35年で2倍になるという研究もあるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 魚は2倍に増えないのに……。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカのバス[釣り|つり]のプロの大会では、前を映す最新のソナーを制限し始めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年は、使えるのは9試合中5試合までよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見えすぎるのも、ずるいってことか。
+  - speaker: zundamon
+    emotion: happy
+    text: 残りの4試合は、勘と運の勝負なのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本の漁業と養殖の生産量は、1984年の1282万トンがピークなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年は約358万トン。ピークの3割ほどよ。
+  - speaker: zundamon
+    emotion: sad
+    text: 減ってるのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 理由は獲りすぎだけじゃなく、海の変化も重なってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は獲っていい量を決めて守る仕組みを、国が広げてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 調査船は魚探の技術で、海にどれだけ魚がいるかも調べてるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 魚を[獲る|とる]機械が、魚を守るのにも使われてるんだね。
+- id: shime
+  title: ''
+  background: fr_ima_shime
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。今度は、への字の影が出たのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: への字は1匹の魚ね。魚が音の下を通り過ぎると、そう映るの。
+  - speaker: zundamon
+    emotion: happy
+    text: 雲みたいなのは群れ。真っ赤なのは海底。もうクラゲとは間違えないぞ。
+  - speaker: tsumugi
+    emotion: happy
+    text: ちゃんと読めるようになったじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: への字の真ん中に、投げ込むぞ！
+  - speaker: zundamon
+    emotion: surprised
+    text: ……来た！ 今度こそ魚だ！
+    background: fr_ima_shime2
+  - speaker: zundamon
+    emotion: sad
+    text: ……イワシ、1匹。
+  - speaker: tsumugi
+    emotion: happy
+    text: への字は1匹って、言ったでしょ。
+    se: oti
+  - speaker: zundamon
+    emotion: sad
+    text: イワシの神様は、まだ遠いのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 釣り船や釣具店で魚探を見かけたら、画面をのぞいてみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: インチキと呼ばれた兄弟の機械が、今も海の中を見てるのよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

@@ -603,6 +603,262 @@ def hatoba():
     return img
 
 
+# ------------------------------------------------------------ 作り直し版（78_魚群探知機の誕生 / furuno-fishfinder-v2）で足した絵
+def _splash(img, cx, base_y, h=280, w=230, seed=1):
+    """海面から上がる水しぶき（人が落ちた・飛び込んだ跡）。"""
+    rnd = random.Random(seed)
+    d = ImageDraw.Draw(img, "RGBA")
+    for k in range(3):                                                    # 波紋
+        rx, ry = w * (0.7 + k * 0.45), 26 + k * 12
+        d.ellipse([cx - rx, base_y - ry, cx + rx, base_y + ry], outline=(236, 244, 250, 200 - k * 50), width=6)
+    for k in range(9):                                                    # しぶきの柱
+        t = k / 8
+        y = base_y - t * h
+        rx = w * (0.5 - 0.3 * t) + rnd.uniform(-10, 10)
+        ry = 40 - 14 * t
+        d.ellipse([cx - rx + rnd.uniform(-20, 20), y - ry, cx + rx + rnd.uniform(-20, 20), y + ry],
+                  fill=(244, 250, 255, 230))
+    for k in range(26):                                                   # 飛び散る粒
+        a = rnd.uniform(math.pi * 1.05, math.pi * 1.95)
+        r = rnd.uniform(w * 0.4, w * 1.1)
+        x = cx + math.cos(a) * r
+        y = base_y - h * 0.45 + math.sin(a) * r * 0.9
+        s = rnd.uniform(6, 16)
+        d.ellipse([x - s, y - s, x + s, y + s], fill=(236, 246, 255, 220))
+
+
+def kurage_ami():
+    """kurage0 の魚探の箱を残したまま、クラゲの網を足した甲板（差し替えの前後で箱が消えないように）。"""
+    return _kurage_deck(splash=False)
+
+
+def kurage_umi():
+    """kurage_ami に、若者が放り込まれた海の大きな水しぶきを足す。"""
+    return _kurage_deck(splash=True)
+
+
+def _kurage_deck(splash):
+    """クラゲの網と魚探の箱はそのまま（kurage0・kurage と同じ位置）。splash=True で船べりの向こうに水しぶき。"""
+    img = Image.new("RGB", (W, H))
+    _sky_sea(img, 470, (236, 170, 120), (240, 206, 170), (90, 100, 130), (50, 64, 90))
+    d = _d(img)
+    _islands(d, 480, (90, 90, 96))
+    if splash:
+        _splash(img, 1130, 745, h=290, w=170, seed=1948)                # 船べりの向こうの海
+    d = _d(img)
+    _deck(d, 800)
+    d = ImageDraw.Draw(img, "RGBA")
+    d.ellipse([560, 700, 1000, 900], fill=(90, 110, 90, 255))            # 網（kurage と同じ）
+    for k in range(12):
+        cx = 610 + (k * 97) % 340
+        cy = 740 + (k * 53) % 120
+        d.ellipse([cx - 44, cy - 30, cx + 44, cy + 26], fill=(230, 230, 250, 200))
+        d.ellipse([cx - 16, cy - 12, cx + 16, cy + 8], fill=(240, 190, 220, 220))
+    for x in range(560, 1000, 34):
+        d.line([(x, 700), (x + 40, 900)], fill=(60, 80, 60, 180), width=2)
+    x, y, s = 830, 580, 0.9                                               # 魚探の箱（kurage0 と同じ）
+    w = int(260 * s)
+    d.rectangle([x, y, x + w, y + int(230 * s)], fill=(96, 104, 100), outline=(56, 60, 58), width=4)
+    d.rectangle([x + 22, y + 22, x + w - 22, y + 135], fill=(236, 230, 210))
+    d.ellipse([x + 40, y + 50, x + w - 40, y + 110], fill=(80, 70, 120))
+    d.line([(x + 22, y + 120), (x + w - 22, y + 120)], fill=(90, 70, 110), width=5)
+    for k in range(3):
+        cx = x + 54 + k * 63
+        d.ellipse([cx - 14, y + 153, cx + 14, y + 181], fill=(40, 42, 44))
+    return img
+
+
+def henpin_yama():
+    """返品の木箱が天井まで積み上がった工業所（henpin に箱を足す）。"""
+    img = henpin()
+    d = _d(img)
+    _crates(d, 60, FLOOR - 440, 4, 3)
+    _crates(d, 700, FLOOR - 220, 3, 5, col=(160, 126, 86))
+    _crates(d, 1260, FLOOR - 330, 4, 4)
+    for x, y, a in ((330, 120, 12), (1000, 110, -10), (1560, 130, 8)):   # てっぺんで傾いた箱
+        w, h = 150, 104
+        c, s = math.cos(math.radians(a)), math.sin(math.radians(a))
+        pts = [(x + px * c - py * s, y + px * s + py * c) for px, py in ((-w / 2, -h / 2), (w / 2, -h / 2), (w / 2, h / 2), (-w / 2, h / 2))]
+        d.polygon(pts, fill=(176, 140, 94), outline=(110, 84, 56))
+    return img
+
+
+def hatoba_tobikomi():
+    """よその港の岸壁。体に縄をつけた船主が海へ飛び込んだしぶきと、係船柱から伸びる縄。"""
+    img = hatoba()
+    d = _d(img)
+    d.rounded_rectangle([700, 770, 770, 850], radius=18, fill=(80, 84, 90))   # 係船柱
+    _splash(img, 960, 760, h=250, w=200, seed=1949)
+    d = _d(img)
+    pts = [(735, 786), (800, 776), (860, 772), (910, 760), (950, 700), (962, 620)]   # 縄（しぶきの中へ）
+    d.line(pts, fill=(176, 140, 84), width=12, joint="curve")
+    return img
+
+
+def _person(d, x, feet, h=210, body=(84, 92, 108), seed=0):
+    """行列の人（のっぺらの人影）と、100円札でふくらんだリュック。"""
+    rnd = random.Random(seed)
+    head = h * 0.16
+    d.ellipse([x + 46, feet - h - 6, x + 46 + head * 2.1, feet - h + head * 2], fill=(124, 108, 96, 255))  # リュック
+    d.rounded_rectangle([x + 40, feet - h + head * 1.5, x + 120, feet - h * 0.42], radius=26, fill=(130, 104, 70, 255))
+    for k in range(3):                                                    # はみ出す札
+        bx = x + 52 + k * 20
+        d.rectangle([bx, feet - h + head * 1.1 - rnd.uniform(0, 14), bx + 16, feet - h + head * 1.8],
+                    fill=(196, 186, 146, 255), outline=(150, 138, 100, 255))
+    d.rounded_rectangle([x, feet - h + head * 2, x + 74, feet], radius=24, fill=body + (255,))      # 体
+    d.ellipse([x + 4, feet - h, x + 4 + head * 2, feet - h + head * 2], fill=(214, 196, 176, 255))   # 頭
+
+
+def koujou_retsu():
+    """工業所の前に、札でふくらんだリュックを背負った船主たちの行列（koujou に人を足す）。"""
+    img = koujou()
+    d = ImageDraw.Draw(img, "RGBA")
+    bodies = [(84, 92, 108), (110, 96, 80), (70, 84, 76), (96, 88, 110), (120, 110, 96)]
+    for k, x in enumerate(range(1090, 1900, 140)):
+        _person(d, x, 930 - (k % 2) * 14, h=230 - k * 6, body=bodies[k % 5], seed=k)
+    for k, x in enumerate(range(80, 840, 150)):
+        _person(d, x, 940 - (k % 2) * 14, h=210 + k * 4, body=bodies[(k + 2) % 5], seed=10 + k)
+    return img
+
+
+def kobe():
+    """1950年の神戸の魚探工場の中。長い作業台に、組み立て中の魚探が並ぶ。"""
+    img = base((206, 202, 190), (170, 164, 152))
+    d = _d(img)
+    img.paste(vgrad((W, H - FLOOR), (128, 122, 112), (104, 98, 90)), (0, FLOOR))   # 土間
+    d = _d(img)
+    for k in range(5):                                                    # 高い窓
+        x = 120 + k * 360
+        _window(d, x, 90, x + 260, 300, sky=(176, 200, 216))
+    d.rectangle([80, 640, 1840, 690], fill=(130, 102, 74))               # 作業台
+    for x in (120, 940, 1780):
+        d.rectangle([x, 690, x + 24, FLOOR], fill=(100, 78, 56))
+    for k in range(6):
+        _sounder(d, 140 + k * 300, 480, 0.6)
+    _crates(d, 1500, FLOOR, 2, 1, w=150, h=100, col=(176, 146, 100))
+    hanging_bulb(img, 560, ly=330)
+    hanging_bulb(img, 1360, ly=330)
+    return img
+
+
+def kobe_yake():
+    """焼けた神戸の工場（kobe を黒く焦がし、梁を落として煙を足す）。"""
+    img = kobe()
+    dark = Image.new("RGB", (W, H), (26, 22, 20))
+    img = Image.blend(img.convert("RGB"), dark, 0.62)
+    d = ImageDraw.Draw(img, "RGBA")
+    for k in range(5):                                                    # 割れた窓
+        x = 120 + k * 360
+        d.rectangle([x + 10, 100, x + 250, 290], fill=(20, 18, 18, 255))
+        d.polygon([(x + 40, 100), (x + 120, 100), (x + 70, 200)], fill=(70, 70, 76, 255))
+    for x0, y0, x1, y1 in ((60, 180, 900, 620), (1000, 120, 1860, 560), (600, 300, 1300, 700)):   # 落ちた梁
+        d.line([(x0, y0), (x1, y1)], fill=(16, 12, 10, 255), width=34)
+        d.line([(x0, y0 - 14), (x1, y1 - 14)], fill=(60, 36, 24, 255), width=6)
+    rnd = random.Random(1951)
+    for k in range(14):                                                   # 立ちのぼる煙
+        cx = rnd.uniform(100, 1820)
+        cy = rnd.uniform(60, 520)
+        r = rnd.uniform(70, 160)
+        d.ellipse([cx - r, cy - r * 0.7, cx + r, cy + r * 0.7], fill=(110, 108, 106, 90))
+    for k in range(40):                                                   # 床の灰と炭
+        x = rnd.uniform(0, W)
+        y = rnd.uniform(FLOOR - 20, H)
+        d.ellipse([x - 22, y - 8, x + 22, y + 8], fill=(14, 12, 12, 200))
+    return img
+
+
+def hachinohe():
+    """冬の東北の港・八戸。雪をかぶった山と、灰色の空、岸壁の雪。"""
+    img = Image.new("RGB", (W, H))
+    _sky_sea(img, 540, (150, 160, 176), (204, 208, 214), (60, 78, 94), (40, 56, 70))
+    d = _d(img)
+    for x0, w, h in ((-100, 700, 220), (500, 600, 160), (1200, 820, 240)):     # 雪の山
+        top = (x0 + w // 2, 540 - h)
+        d.polygon([(x0, 540), top, (x0 + w, 540)], fill=(108, 116, 128))
+        d.polygon([(top[0] - w * 0.16, 540 - h * 0.62), top, (top[0] + w * 0.16, 540 - h * 0.62)], fill=(236, 240, 244))
+    _boat(d, 260, 660, 0.85, col=(96, 84, 74))
+    _boat(d, 1250, 690, 0.7, col=(88, 78, 70))
+    d.rectangle([0, 800, W, H], fill=(150, 150, 152))                    # 岸壁
+    d.line([(0, 800), (W, 800)], fill=(110, 110, 114), width=8)
+    rnd = random.Random(8)
+    for k in range(22):                                                   # 岸壁の雪
+        x = rnd.uniform(0, W)
+        y = rnd.uniform(820, H - 20)
+        d.ellipse([x - 70, y - 14, x + 70, y + 14], fill=(236, 238, 242))
+    for k in range(120):                                                  # 舞う雪
+        x, y = rnd.uniform(0, W), rnd.uniform(0, 780)
+        d.ellipse([x - 4, y - 4, x + 4, y + 4], fill=(240, 242, 246))
+    return img
+
+
+def shachoshitsu():
+    """1987年の西宮の本社・社長室。板張りの壁、大きな窓の外に海と大きな船、重い机。"""
+    img = base((150, 116, 84), (120, 92, 66))
+    d = _d(img)
+    for x in range(0, W, 160):                                            # 板張り
+        d.line([(x, 0), (x, FLOOR)], fill=(126, 96, 70), width=4)
+    wx0, wy0, wx1, wy1 = 640, 110, 1280, 470
+    img.paste(vgrad((wx1 - wx0, 200), (170, 204, 230), (210, 224, 232)), (wx0, wy0))
+    img.paste(vgrad((wx1 - wx0, wy1 - wy0 - 200), (80, 130, 168), (60, 104, 140)), (wx0, wy0 + 200))
+    d = _d(img)
+    d.polygon([(760, 300), (1060, 300), (1040, 336), (780, 336)], fill=(70, 74, 86))      # 大きな船
+    d.rectangle([960, 262, 1030, 300], fill=(226, 228, 232))
+    d.line([(1160, 310), (1160, 200), (1240, 200)], fill=(170, 80, 60), width=8)        # 港のクレーン
+    d.rectangle([wx0, wy0, wx1, wy1], outline=(80, 60, 44), width=14)
+    d.line([((wx0 + wx1) // 2, wy0), ((wx0 + wx1) // 2, wy1)], fill=(80, 60, 44), width=10)
+    d.rectangle([180, 180, 440, 360], fill=(236, 230, 214), outline=(110, 84, 56), width=10)  # 額の漁船の絵
+    d.rectangle([194, 280, 426, 346], fill=(90, 140, 170))
+    _boat(d, 220, 270, 0.42)
+    wood_floor(img, FLOOR, col=(96, 70, 50), line=(80, 58, 42))
+    d = _d(img)
+    d.rectangle([700, 640, 1220, 700], fill=(92, 62, 40))                 # 机
+    d.rectangle([720, 700, 1200, 800], fill=(80, 54, 36))
+    d.ellipse([1560, 640, 1700, 700], fill=(70, 110, 70))                 # 観葉植物
+    d.rectangle([1600, 690, 1660, 800], fill=(150, 110, 80))
+    return img
+
+
+def kokyou():
+    """2009年の南島原の海辺。雲仙の山、穏やかな海、瓦屋根の家並み。"""
+    img = Image.new("RGB", (W, H))
+    _sky_sea(img, 560, (140, 190, 232), (214, 230, 238), (70, 140, 176), (50, 112, 150))
+    d = _d(img)
+    d.polygon([(-200, 560), (300, 250), (520, 300), (760, 200), (1100, 560)], fill=(96, 116, 120))   # 雲仙の山
+    d.polygon([(-200, 560), (200, 400), (600, 440), (1100, 560)], fill=(88, 132, 96))
+    for x0, h in ((1180, 120), (1360, 150), (1540, 110), (1700, 140)):   # 瓦屋根の家
+        d.rectangle([x0, 640 - h, x0 + 150, 640], fill=(224, 220, 208))
+        d.polygon([(x0 - 16, 650 - h), (x0 + 75, 600 - h), (x0 + 166, 650 - h)], fill=(70, 76, 88))
+    d.rectangle([1100, 640, W, 690], fill=(176, 172, 160))               # 岸
+    for x, s in ((360, 0.5), (720, 0.45)):                                # 今の白い漁船
+        d.polygon([(x, 700), (x + 300 * s, 700), (x + 270 * s, 740), (x + 30 * s, 740)], fill=(232, 234, 236))
+        d.rectangle([x + 110 * s, 650, x + 200 * s, 700], fill=(240, 240, 242))
+    d.rectangle([0, 860, W, H], fill=(200, 192, 172))                    # 海沿いの道
+    d.line([(0, 860), (W, 860)], fill=(150, 144, 130), width=8)
+    return img
+
+
+def meiban():
+    """今の本社のロビー。壁に記念の銘板（文字は描かない）。"""
+    img = base((226, 226, 222), (196, 196, 192))
+    d = _d(img)
+    for x in range(0, W, 320):                                            # 石の壁
+        d.line([(x, 0), (x, FLOOR)], fill=(206, 206, 202), width=4)
+    for y in range(160, FLOOR, 240):
+        d.line([(0, y), (W, y)], fill=(206, 206, 202), width=4)
+    img.paste(vgrad((W, H - FLOOR), (170, 168, 164), (140, 138, 134)), (0, FLOOR))
+    d = _d(img)
+    x0, y0, x1, y1 = 740, 200, 1180, 560
+    d.rectangle([x0 - 12, y0 - 12, x1 + 12, y1 + 12], fill=(90, 70, 40))   # 銘板
+    d.rectangle([x0, y0, x1, y1], fill=(120, 92, 52), outline=(200, 170, 100), width=8)
+    d.ellipse([x0 + 170, y0 + 30, x0 + 270, y0 + 130], outline=(214, 186, 112), width=8)
+    for k in range(6):
+        yy = y0 + 160 + k * 32
+        w = 340 if k % 3 else 260
+        d.rectangle([x0 + (x1 - x0 - w) // 2, yy, x0 + (x1 - x0 + w) // 2, yy + 12], fill=(206, 178, 108))
+    _glow(img, 960, 380, 340, (255, 244, 210), 50)
+    return img
+
+
 LOCATIONS = {
     "fr_ima_hook": ima_hook, "fr_ima_hook2": ima_hook2, "fr_ima_shime": ima_shime, "fr_ima_shime2": ima_shime2, "fr_machi": machi, "fr_mise": mise, "fr_tachibana": tachibana,
     "fr_kenkyu": kenkyu, "fr_goto": goto, "fr_chousei": chousei, "fr_kurage0": kurage0, "fr_kurage": kurage,
@@ -610,6 +866,10 @@ LOCATIONS = {
     "fr_koujou": koujou, "fr_zukai": zukai, "fr_shinka": shinka, "fr_bridge": bridge,
     "fr_gyokou": gyokou, "fr_shiryo": shiryo, "fr_yuuhi": yuuhi,
     "fr_masutomi": masutomi, "fr_hatoba": hatoba,
+    # 作り直し版（furuno-fishfinder-v2）で足した絵
+    "fr_kurage_ami": kurage_ami, "fr_kurage_umi": kurage_umi, "fr_henpin_yama": henpin_yama, "fr_hatoba_tobikomi": hatoba_tobikomi,
+    "fr_koujou_retsu": koujou_retsu, "fr_kobe": kobe, "fr_kobe_yake": kobe_yake,
+    "fr_hachinohe": hachinohe, "fr_shachoshitsu": shachoshitsu, "fr_kokyou": kokyou, "fr_meiban": meiban,
 }
 
 CARDS = ["1938", "1943", "1945", "1947", "1948", "1949", "1955"]

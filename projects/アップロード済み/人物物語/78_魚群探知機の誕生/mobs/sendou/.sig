@@ -1,0 +1,1 @@
+船頭|none|none||v4|kimono|#3a4a5a|o1
