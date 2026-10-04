@@ -1,0 +1,1 @@
+海外の技師|none|none||v4|suit|#4a3e5c|o1

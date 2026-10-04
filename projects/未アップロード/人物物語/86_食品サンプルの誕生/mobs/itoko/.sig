@@ -1,0 +1,1 @@
+いとこ|none|none||v4|kimono|#5a6a5a|o1

@@ -1,0 +1,1 @@
+大学の人|none|none||v4|suit|#3a3a40|o1

@@ -1,0 +1,1 @@
+陸軍の将校|none|none||v4|suit|#4a4a32|o1

@@ -1,0 +1,1 @@
+お客|none|none||v4|suit|#7a5a6a|o1

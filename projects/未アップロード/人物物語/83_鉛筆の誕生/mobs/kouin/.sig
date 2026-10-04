@@ -1,0 +1,1 @@
+工員|none|none||v4|apron|#5a4a3a|o1

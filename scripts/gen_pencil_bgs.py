@@ -6,6 +6,11 @@ gen_drama_bgs.py の共通部品を使い、この回の場所背景と
 実在メーカーの商標（ロゴ・マーク・商品名の文字）は描かない。
 マークの話は、元になった家紋「三鱗」と3本の鉛筆で表す。
 
+83_鉛筆の誕生（slug=masaki-pencil-v2・作り直し）では、既存の絵は変えずに
+場面の途中で差し替える絵（pc_yoru_shippai / pc_yoru_mark / pc_suisha_ame / pc_mise_kinpai /
+pc_kojo_bunkatsu）と、新しい場面の絵（pc_zashiki / pc_kiritsu / pc_phila / pc_kojo_yuu）、
+年号カード 1848・1925 を足した。足した絵だけを書き出すときは名前を指定して実行する。
+
 実行: PYTHONPATH=. python scripts/gen_pencil_bgs.py [名前...]
 """
 
@@ -419,14 +424,283 @@ def gendai():
     return img
 
 
+# ------------------------------------------------------------ 83_鉛筆の誕生（masaki-pencil-v2）で足した絵
+# 既存の絵はそのまま。場面の途中で差し替える絵は「元の背景を呼んで要素を足す」形で作る
+# （同じ構図なので切り替わりの差が一目で分かる）。
+def _shoji(d, x0, y0, x1, y1, frame=(150, 120, 84), paper=(240, 234, 216)):
+    """障子。枠と格子だけ。"""
+    d.rectangle([x0, y0, x1, y1], fill=paper, outline=frame, width=10)
+    for k in range(1, 4):
+        x = x0 + (x1 - x0) * k / 4
+        d.line([(x, y0), (x, y1)], fill=frame, width=4)
+    for k in range(1, 6):
+        y = y0 + (y1 - y0) * k / 6
+        d.line([(x0, y), (x1, y)], fill=frame, width=4)
+
+
+def _vase(d, cx, base_y, h=110, col=(236, 238, 244), pat=(50, 80, 150)):
+    """染付の花びん（胴のふくらんだ形）。"""
+    w = h * 0.55
+    d.ellipse([cx - w / 2, base_y - h * 0.75, cx + w / 2, base_y], fill=col, outline=(150, 150, 160), width=2)
+    d.rectangle([cx - w * 0.16, base_y - h, cx + w * 0.16, base_y - h * 0.6], fill=col, outline=(150, 150, 160), width=2)
+    d.ellipse([cx - w * 0.24, base_y - h - 6, cx + w * 0.24, base_y - h + 8], fill=col, outline=(150, 150, 160), width=2)
+    d.arc([cx - w * 0.36, base_y - h * 0.6, cx + w * 0.36, base_y - h * 0.2], 0, 180, fill=pat, width=5)
+    d.arc([cx - w * 0.3, base_y - h * 0.5, cx + w * 0.3, base_y - h * 0.08], 180, 360, fill=pat, width=4)
+
+
+def _lacquer(d, x, y, w=90, h=46):
+    """蒔絵の漆の箱（黒地に金の線）。"""
+    d.rounded_rectangle([x, y - h, x + w, y], radius=6, fill=(30, 22, 22))
+    d.line([(x + 8, y - h * 0.55), (x + w - 8, y - h * 0.55)], fill=(214, 176, 80), width=3)
+    d.arc([x + w * 0.3, y - h * 0.95, x + w * 0.7, y - h * 0.3], 200, 340, fill=(214, 176, 80), width=3)
+
+
+def _bronze(d, cx, base_y, h=80):
+    """銅器（香炉の形）。"""
+    col, dark = (128, 104, 64), (90, 72, 44)
+    d.ellipse([cx - h * 0.5, base_y - h * 0.7, cx + h * 0.5, base_y - h * 0.1], fill=col, outline=dark, width=3)
+    d.rectangle([cx - h * 0.4, base_y - h * 0.82, cx + h * 0.4, base_y - h * 0.66], fill=dark)
+    for s in (-1, 0, 1):
+        d.rectangle([cx + s * h * 0.3 - 5, base_y - h * 0.18, cx + s * h * 0.3 + 5, base_y], fill=dark)
+
+
+def _us_flag(d, x, y, w=300, h=160):
+    """アメリカの旗（赤白の縞と、白い点を散らした青い角）。"""
+    for k in range(13):
+        d.rectangle([x, y + k * h / 13, x + w, y + (k + 1) * h / 13], fill=(200, 40, 50) if k % 2 == 0 else (244, 244, 244))
+    d.rectangle([x, y, x + w * 0.42, y + h * 7 / 13], fill=(40, 60, 130))
+    for r in range(4):
+        for c in range(6):
+            cx, cy = x + 12 + c * w * 0.42 / 6.2, y + 12 + r * h * 7 / 13 / 4.4
+            d.ellipse([cx - 3, cy - 3, cx + 3, cy + 3], fill=(244, 244, 244))
+
+
+def zashiki():
+    """幕末の佐賀の武家の座敷。床の間に掛け軸（字は無い）と刀掛け、左右に障子。"""
+    img = _rgb(base((216, 202, 172), (192, 176, 146)))
+    tatami_floor(img, FLOOR)
+    d = _d(img)
+    d.rectangle([0, 150, W, 178], fill=(120, 92, 60))                               # 長押
+    _shoji(d, 50, 210, 590, FLOOR - 4)
+    _shoji(d, 1330, 210, 1870, FLOOR - 4)
+    d.rectangle([700, 200, 1220, 820], fill=(170, 150, 118))                         # 床の間
+    d.rectangle([700, 200, 1220, 220], fill=(110, 84, 56))
+    d.rectangle([690, 200, 712, FLOOR], fill=(110, 84, 56))                          # 床柱
+    d.rectangle([680, 800, 1230, 840], fill=(96, 70, 46))                            # 床板
+    d.rectangle([900, 240, 1020, 600], fill=(246, 242, 230), outline=(120, 96, 64), width=6)   # 掛け軸
+    d.polygon([(915, 560), (950, 470), (975, 520), (1000, 450), (1008, 560)], fill=(110, 110, 112))  # 山の墨絵
+    d.ellipse([965, 300, 995, 330], fill=(190, 60, 50))                              # 朝日
+    d.rectangle([892, 600, 1028, 616], fill=(120, 96, 64))
+    d.rectangle([830, 760, 850, 800], fill=(60, 40, 30))                             # 刀掛け
+    d.rectangle([1070, 760, 1090, 800], fill=(60, 40, 30))
+    d.rectangle([820, 752, 1100, 762], fill=(60, 40, 30))
+    for k, y in enumerate((732, 708)):                                               # 刀（大小）
+        x0, x1 = 800 - k * 10, 1120 + k * 10
+        d.line([(x0, y + 6), ((x0 + x1) / 2, y - 6), (x1, y + 6)], fill=(30, 30, 34), width=12, joint="curve")
+        d.rectangle([x1 - 70, y - 2, x1 - 60, y + 14], fill=(170, 140, 60))          # 鍔
+    return img
+
+
+def kiritsu():
+    """明治のはじめの商社の事務所。工芸品を並べたガラス戸棚と、帳場の机。"""
+    img = _rgb(base((228, 216, 192), (202, 188, 160)))
+    wood_floor(img, FLOOR, col=(130, 100, 70), line=(108, 82, 58))
+    d = _d(img)
+    for x in (110, 1510):                                                            # 縦長の洋窓
+        d.rectangle([x, 200, x + 300, 620], fill=(176, 204, 222))
+        d.pieslice([x, 120, x + 300, 280], 180, 360, fill=(176, 204, 222))
+        d.rectangle([x, 200, x + 300, 620], outline=(110, 80, 56), width=12)
+        d.arc([x, 120, x + 300, 280], 180, 360, fill=(110, 80, 56), width=12)
+        d.line([(x + 150, 130), (x + 150, 620)], fill=(110, 80, 56), width=8)
+        d.line([(x, 410), (x + 300, 410)], fill=(110, 80, 56), width=8)
+    d.rectangle([680, 170, 1240, 760], fill=(120, 86, 56))                           # ガラス戸棚
+    d.rectangle([700, 190, 1220, 740], fill=(214, 226, 230))
+    for y in (370, 560, 740):
+        d.rectangle([700, y - 10, 1220, y], fill=(120, 86, 56))
+    _vase(d, 760, 360, 120)
+    _vase(d, 1150, 360, 100, pat=(150, 60, 50))
+    _lacquer(d, 830, 360, 120, 50)
+    _lacquer(d, 980, 360, 120, 64)
+    _bronze(d, 790, 550, 100)
+    _bronze(d, 1150, 550, 80)
+    _vase(d, 975, 550, 150, col=(240, 236, 226), pat=(60, 110, 90))
+    for k in range(3):                                                               # 下の段の反物
+        d.rounded_rectangle([730 + k * 160, 640, 860 + k * 160, 730], radius=20,
+                            fill=((150, 60, 70), (60, 80, 120), (170, 140, 70))[k])
+    d.line([(960, 190), (960, 740)], fill=(120, 86, 56), width=8)                    # 戸のさん
+    d.rectangle([740, 800, 1180, 840], fill=(110, 78, 50))                           # 帳場の机
+    d.rectangle([760, 840, 784, 990], fill=(90, 62, 40))
+    d.rectangle([1136, 840, 1160, 990], fill=(90, 62, 40))
+    d.rectangle([800, 770, 900, 800], fill=(240, 236, 220), outline=(150, 140, 120), width=2)   # 帳面
+    d.rectangle([960, 776, 1120, 800], fill=(60, 60, 64))                            # そろばん
+    for k in range(8):
+        d.ellipse([970 + k * 18, 782, 982 + k * 18, 796], fill=(180, 140, 90))
+    return img
+
+
+def phila():
+    """1876年の万博の大きな展示館。星条旗と、日本の工芸品の陳列台。"""
+    img = _rgb(base((230, 226, 214), (206, 200, 186)))
+    wood_floor(img, FLOOR, col=(150, 130, 100), line=(130, 110, 82))
+    d = _d(img)
+    for k in range(7):                                                               # 木の大屋根のトラス
+        x = k * 320
+        d.line([(x, 0), (x + 160, 260)], fill=(130, 100, 70), width=10)
+        d.line([(x + 320, 0), (x + 160, 260)], fill=(130, 100, 70), width=10)
+    d.rectangle([0, 260, W, 280], fill=(130, 100, 70))
+    for k in range(6):                                                               # 高窓
+        d.rectangle([60 + k * 320, 300, 220 + k * 320, 380], fill=(200, 220, 234), outline=(130, 100, 70), width=6)
+    _us_flag(d, 60, 420)
+    _us_flag(d, 1560, 420)
+    d.rectangle([700, 380, 1220, 420], fill=(60, 50, 44))                            # 日本の出品の看板（字は無い）
+    d.rectangle([720, 420, 736, 640], fill=(60, 50, 44))
+    d.rectangle([1184, 420, 1200, 640], fill=(60, 50, 44))
+    d.rectangle([700, 640, 1220, 690], fill=(120, 86, 56))                           # 陳列台
+    d.rectangle([720, 690, 1200, 900], fill=(96, 70, 46))
+    _vase(d, 960, 640, 170)                                                          # まん中の花びん
+    _vase(d, 790, 640, 110, pat=(150, 60, 50))
+    _lacquer(d, 1040, 640, 120, 54)
+    _bronze(d, 1160, 640, 70)
+    return img
+
+
+def yoru_shippai():
+    """同じ夜の机。炉の煙が部屋に広がり、壁はすすで黒く、机と畳は折れた芯と黒い粉だらけ。"""
+    img = yoru()
+    import random
+    rnd = random.Random(83)
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ld = ImageDraw.Draw(layer)
+    for k in range(9):                                                               # 炉から壁へ上がるすす
+        x = 1180 + k * 18
+        ld.polygon([(x, 590), (x + 14, 590), (x - 120 + k * 40, 120), (x - 150 + k * 40, 120)],
+                   fill=(14, 12, 12, 120))
+    for _ in range(26):                                                              # 煙のかたまり
+        cx, cy, r = rnd.randint(620, 1880), rnd.randint(140, 620), rnd.randint(60, 150)
+        ld.ellipse([cx - r, cy - r * 0.7, cx + r, cy + r * 0.7], fill=(150, 146, 140, 90))
+    for _ in range(14):                                                              # 壁の黒いしみ
+        cx, cy, r = rnd.randint(640, 1880), rnd.randint(150, 600), rnd.randint(20, 60)
+        ld.ellipse([cx - r, cy - r * 0.6, cx + r, cy + r * 0.6], fill=(10, 10, 10, 150))
+    from PIL import ImageFilter
+    rgba = img.convert("RGBA")
+    rgba.alpha_composite(layer.filter(ImageFilter.GaussianBlur(14)))
+    img = rgba.convert("RGB")
+    d = _d(img)
+    for _ in range(40):                                                              # 机の上の折れた芯
+        x, y = rnd.randint(840, 1740), rnd.randint(606, 636)
+        d.line([(x, y), (x + rnd.randint(14, 30), y - rnd.randint(-8, 8))], fill=GRAPHITE, width=6)
+    for _ in range(9):                                                               # 崩れた芯のかたまり
+        x, y = rnd.randint(860, 1700), rnd.randint(612, 636)
+        d.ellipse([x, y, x + 26, y + 12], fill=(70, 70, 76))
+    for _ in range(16):                                                              # 畳の黒い粉の山
+        x, y = rnd.randint(640, 1880), rnd.randint(960, 1060)
+        w = rnd.randint(40, 110)
+        d.ellipse([x, y, x + w, y + w * 0.3], fill=(26, 26, 30))
+    for _ in range(30):                                                              # 畳に散った芯
+        x, y = rnd.randint(640, 1880), rnd.randint(950, 1070)
+        d.line([(x, y), (x + rnd.randint(16, 34), y + rnd.randint(-6, 6))], fill=(20, 20, 24), width=7)
+    return img
+
+
+def yoru_mark():
+    """同じ夜の机。壁に眞崎家の家紋の三鱗を描いた紙を貼り、下に局用鉛筆の3種類（濃さ違い）を並べた図。"""
+    img = yoru()
+    d = _d(img)
+    d.rectangle([860, 170, 1180, 540], fill=(246, 242, 228), outline=(170, 160, 140), width=4)   # 貼り紙
+    for x in (872, 1168):
+        d.ellipse([x - 7, 178, x + 7, 192], fill=(170, 60, 50))                     # 留め鋲
+    d.ellipse([920, 200, 1120, 400], outline=(40, 40, 44), width=5)
+    _uroko(d, 1020, 300, 70)
+    for k in range(3):                                                               # 1号・2号・3号の3種類（濃さ違い）
+        _pencil(d, 900, 440 + k * 30, 240, 18, ((40, 40, 44), (80, 80, 86), (130, 130, 136))[k])
+    for k, (x, y) in enumerate(((1420, 612), (1330, 618), (1620, 610))):             # 机の上の丸めた下書き
+        d.ellipse([x, y, x + 34, y + 26], fill=(236, 232, 220), outline=(170, 160, 140))
+    return img
+
+
+def suisha_ame():
+    """同じ水車小屋の雨の日。空が暗く、雨が降り、軒から雨がしたたり、桶がいくつも並ぶ。"""
+    img = Image.blend(suisha(), Image.new("RGB", (W, H), (70, 84, 104)), 0.38)
+    import random
+    rnd = random.Random(1887)
+    d = _d(img)
+    for _ in range(420):                                                             # 雨すじ
+        x, y = rnd.randint(-100, W), rnd.randint(-40, H)
+        L = rnd.randint(30, 60)
+        d.line([(x, y), (x + L * 0.35, y + L)], fill=(206, 216, 232), width=2)
+    for x in range(760, 1180, 34):                                                   # 軒からのしずく
+        for j in range(3):
+            y = 380 + j * 60 + (x % 3) * 10
+            d.ellipse([x - 4, y, x + 4, y + 14], fill=(200, 220, 240))
+    for cx, cy, w in ((560, 960, 240), (1250, 1000, 320), (1600, 940, 200), (300, 1030, 260)):   # 水たまり
+        d.ellipse([cx - w / 2, cy - w * 0.12, cx + w / 2, cy + w * 0.12], fill=(120, 140, 170))
+    for k, x in enumerate((790, 880, 1040, 1150)):                                   # 雨漏りを受ける桶
+        y = 690 + (k % 2) * 10
+        d.polygon([(x - 34, y - 50), (x + 34, y - 50), (x + 26, y), (x - 26, y)], fill=(150, 112, 70), outline=(90, 66, 40))
+        d.line([(x - 31, y - 30), (x + 31, y - 30)], fill=(70, 70, 76), width=4)
+        d.ellipse([x - 30, y - 56, x + 30, y - 44], fill=(120, 150, 190))
+    return img
+
+
+def mise_kinpai():
+    """同じ問屋の帳場。棚の中央に賞状の額（字は無い）と金牌・銀牌が飾られている。"""
+    img = mise()
+    d = _d(img)
+    d.rectangle([660, 130, 1260, 450], fill=(150, 116, 80))                          # 飾り板
+    for k, x in enumerate((690, 890, 1090)):                                         # 賞状の額
+        d.rectangle([x, 160, x + 140, 330], fill=(190, 150, 60))
+        d.rectangle([x + 12, 172, x + 128, 318], fill=(248, 244, 232))
+        d.rectangle([x + 30, 190, x + 110, 210], fill=(200, 60, 50) if k == 1 else (90, 90, 100))
+        for j in range(4):
+            d.line([(x + 30, 236 + j * 18), (x + 110, 236 + j * 18)], fill=(170, 166, 156), width=3)
+    for k, (x, col) in enumerate(((760, (226, 186, 70)), (960, (226, 186, 70)), (1160, (196, 198, 206)))):   # 金牌・金牌・銀牌
+        d.polygon([(x - 18, 340), (x + 18, 340), (x + 10, 380), (x - 10, 380)], fill=(190, 40, 50))
+        d.ellipse([x - 34, 372, x + 34, 440], fill=col, outline=tuple(int(c * 0.7) for c in col), width=4)
+        d.ellipse([x - 20, 386, x + 20, 426], outline=tuple(int(c * 0.8) for c in col), width=3)
+    return img
+
+
+def kojo_bunkatsu():
+    """同じ大井の工場。2台の機械のあいだに仕切りの板塀が立ち、床にも杭と縄で境目が引かれている。"""
+    img = kojo()
+    d = _d(img)
+    x0, x1 = 1088, 1172
+    d.rectangle([x0, 150, x1, FLOOR + 6], fill=(150, 116, 80), outline=(100, 76, 52), width=4)   # 仕切りの板塀
+    for x in range(x0 + 21, x1, 21):
+        d.line([(x, 154), (x, FLOOR + 2)], fill=(116, 88, 60), width=3)
+    for y in (260, 560, 840):
+        d.rectangle([x0 - 6, y, x1 + 6, y + 16], fill=(100, 76, 52))
+    d.polygon([(1112, FLOOR + 6), (1148, FLOOR + 6), (1200, H), (1140, H)], fill=(236, 232, 220))   # 床の境目の白線
+    return img
+
+
+def kojo_yuu():
+    """同じ大井の工場の夕方（1921年に敷地を分けた後なので仕切りの塀がある）。西日で部屋全体が赤く染まる。"""
+    img = Image.blend(kojo_bunkatsu(), Image.new("RGB", (W, H), (230, 130, 70)), 0.26)
+    d = _d(img)
+    for x in (120, 1500):                                                            # 窓の夕焼け
+        sky = vgrad((280, 260), (236, 150, 100), (250, 206, 150))
+        img.paste(sky, (x + 10, 130))
+        d = _d(img)
+        d.rectangle([x, 120, x + 300, 400], outline=(110, 90, 80), width=10)
+        d.line([(x + 150, 120), (x + 150, 400)], fill=(110, 90, 80), width=8)
+    _glow(img, 1650, 300, 420, (255, 180, 110), 80)
+    _glow(img, 270, 300, 300, (255, 180, 110), 60)
+    return img
+
+
 LOCATIONS = {
     "pc_ima": ima, "pc_ima2": ima2, "pc_kunozan": kunozan, "pc_saga": saga, "pc_paris": paris,
     "pc_sekai": sekai, "pc_yoru": yoru, "pc_zukai": zukai, "pc_zukai2": zukai2, "pc_suisha": suisha,
     "pc_nihonbashi": nihonbashi, "pc_teishin": teishin, "pc_kojo": kojo, "pc_mise": mise,
     "pc_yuugure": yuugure, "pc_uni": uni, "pc_gendai": gendai,
+    # 83_鉛筆の誕生（masaki-pencil-v2）で足した絵
+    "pc_zashiki": zashiki, "pc_kiritsu": kiritsu, "pc_phila": phila,
+    "pc_yoru_shippai": yoru_shippai, "pc_yoru_mark": yoru_mark, "pc_suisha_ame": suisha_ame,
+    "pc_mise_kinpai": mise_kinpai, "pc_kojo_bunkatsu": kojo_bunkatsu, "pc_kojo_yuu": kojo_yuu,
 }
 
-CARDS = ["1878", "1887", "1901"]
+CARDS = ["1878", "1887", "1901", "1848", "1925"]
 
 
 def year_card(text: str) -> Image.Image:

@@ -1,0 +1,1 @@
+見物客|none|none||v4|suit|#6a4a6a|o1

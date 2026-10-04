@@ -1,0 +1,1 @@
+食堂の主|none|none||v4|apron|#6a5a4a|o1

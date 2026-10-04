@@ -433,6 +433,190 @@ def year_card(text: str) -> Image.Image:
     return img
 
 
+# ------------------------------------------------------------ 作り直し版（87_八木アンテナの誕生 / yagi-uda-antenna-v2）で足した背景
+# 既存の絵は変えない。場面の途中の差し替え用は「元の背景を呼んで要素を足す」形にして、
+# 同じ構図のまま状態の変化が一目で分かるようにする。
+INK = (40, 52, 90)
+
+
+def singapore_note():
+    """singapore の陣地を暗くし、拾ったノートの1ページを空中に大写しで重ねた絵。YAGI の字が並ぶ。
+    ノートは地平線から浮かせて少し傾け、地面に立つ看板ではなく手元の大写しに見せる。"""
+    img = singapore().convert("RGBA")
+    img = Image.alpha_composite(img, Image.new("RGBA", (W, H), (20, 18, 14, 120)))  # 背景を落とす
+    pw, ph = 500, 540
+    page = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
+    d = ImageDraw.Draw(page)
+    d.rectangle([0, 0, pw - 1, ph - 1], fill=(244, 238, 216), outline=(150, 136, 104), width=4)
+    d.rectangle([0, 0, 34, ph - 1], fill=(120, 96, 70))                             # 綴じ
+    for y in range(60, ph - 10, 44):                                                # 罫線
+        d.line([(50, y), (pw - 16, y)], fill=(176, 196, 214), width=2)
+    cx = pw // 2 + 14
+    _text_c(d, cx, 26, "TRANSMITTER", 40, INK)
+    _text_c(d, cx, 86, "YAGI ARRAY", 66, INK)
+    d.line([(110, 166), (pw - 80, 166)], fill=(200, 50, 40), width=6)
+    _text_c(d, cx, 200, "RECEIVER", 40, INK)
+    _text_c(d, cx, 258, "4 × YAGI", 66, INK)
+    d.line([(150, 338), (pw - 120, 338)], fill=(200, 50, 40), width=6)
+    _yagi(d, 110, 440, 290, n=5, facing=1, col=INK, w=4, scale=1.1)                # 手描きの図
+    _text_c(d, pw - 64, 380, "?", 70, (200, 50, 40))
+    page = page.rotate(-5, resample=Image.BICUBIC, expand=True)
+    shadow = Image.new("RGBA", page.size, (0, 0, 0, 0))
+    shadow.paste((0, 0, 0, 110), mask=page.split()[3])
+    px, py = (W - page.width) // 2, 60                                              # 地平線(700)より上で止める
+    img.alpha_composite(shadow, (px + 22, py + 26))
+    img.alpha_composite(page, (px, py))
+    return img.convert("RGB")
+
+
+def jikken_bou():
+    """jikken の実験場が、真鍮の棒だらけになった状態（列が奥まで伸び、壁にも床にも棒）。"""
+    img = jikken()
+    d = _d(img)
+    y = 470
+    d.line([(1280, y), (W, y)], fill=(120, 110, 100), width=4)                     # 列の続き
+    for k in range(12, 26):
+        x = 660 + k * 52
+        h = 104
+        d.line([(x, y - h), (x, y + h)], fill=BRASS, width=6)
+        d.line([(x, y + h), (x, 760)], fill=(110, 90, 70), width=3)
+    rnd = random.Random(11)
+    for k in range(14):                                                            # 壁に立てかけた棒
+        x = 60 + k * 30 + rnd.randint(-6, 6)
+        d.line([(x, 880), (x + 70, 300 + rnd.randint(-20, 30))], fill=BRASS, width=7)
+    for k in range(10):
+        x = 1560 + k * 32 + rnd.randint(-6, 6)
+        d.line([(x, 880), (x - 60, 330 + rnd.randint(-20, 30))], fill=BRASS, width=7)
+    for r in range(6):                                                             # 床に積んだ棒
+        for k in range(8):
+            yy = 930 + r * 14
+            x = 40 + rnd.randint(0, 30)
+            d.line([(x + k * 3, yy), (x + 520 + k * 3, yy - 4)], fill=BRASS if (k + r) % 3 else (176, 146, 64), width=6)
+    return img
+
+
+def souchou(packed=False):
+    """1946年の大阪帝大の総長室。packed=True で本棚が空になり、荷造りの箱が積まれた状態。"""
+    img = _rgb(base((150, 112, 80), (120, 88, 62)))
+    wood_floor(img, FLOOR, col=(96, 70, 50), line=(80, 58, 42))
+    d = _d(img)
+    for x in range(0, W, 160):                                                     # 腰板
+        d.rectangle([x + 6, 560, x + 150, FLOOR - 10], outline=(100, 72, 50), width=4)
+    _window(d, 740, 100, 1180, 400, sky=(186, 206, 220), frame=(90, 66, 46))
+    for x in (60, 1500):                                                           # 本棚
+        d.rectangle([x, 160, x + 360, FLOOR - 10], fill=(110, 80, 56))
+        for r in range(5):
+            yy = 250 + r * 130
+            d.rectangle([x, yy, x + 360, yy + 12], fill=(84, 60, 42))
+            if packed:
+                continue
+            for k in range(11):
+                d.rectangle([x + 14 + k * 31, yy - 80 + (k % 3) * 6, x + 40 + k * 31, yy],
+                            fill=((150, 50, 46), (50, 74, 120), (190, 160, 90), (70, 100, 70))[(k + r) % 4])
+    _table(d, 720, 1200, 640, col=(100, 66, 44))                                   # 大きな机
+    d.rectangle([1040, 600, 1100, 640], fill=(230, 226, 214))                      # 書類
+    if packed:
+        rnd = random.Random(5)
+        for bx, by, n in ((470, FLOOR + 20, 3), (1270, FLOOR + 20, 3), (760, 640, 2), (300, FLOOR + 40, 2)):
+            for i in range(n):                                                     # 縄をかけた本の箱
+                w = rnd.randint(150, 190)
+                hh = 90
+                top = by - (i + 1) * hh
+                d.rectangle([bx, top, bx + w, top + hh], fill=(186, 150, 100), outline=(120, 90, 56), width=4)
+                d.line([(bx + w // 2, top), (bx + w // 2, top + hh)], fill=(90, 70, 44), width=5)
+                d.line([(bx, top + hh // 2), (bx + w, top + hh // 2)], fill=(90, 70, 44), width=5)
+    return img
+
+
+def souchou_kara():
+    return souchou(packed=True)
+
+
+def gikai():
+    """1945年の衆議院の委員会室。板張りの壁、厚いカーテンの窓、緑の布を掛けた机の列。"""
+    img = _rgb(base((120, 96, 76), (92, 72, 56)))
+    wood_floor(img, FLOOR, col=(80, 60, 46), line=(66, 50, 38))
+    d = _d(img)
+    for x in (120, 760, 1400):                                                     # 縦長の窓と厚いカーテン
+        d.rectangle([x, 80, x + 400, 470], fill=(150, 160, 170))
+        d.rectangle([x, 80, x + 400, 470], outline=(70, 52, 38), width=10)
+        d.rectangle([x - 30, 60, x + 70, 500], fill=(110, 40, 40))
+        d.rectangle([x + 330, 60, x + 430, 500], fill=(110, 40, 40))
+    d.rectangle([0, 40, W, 70], fill=(90, 68, 50))
+    for r in range(3):                                                             # 委員の机の列
+        y = 560 + r * 100
+        d.rectangle([60, y, W - 60, y + 40], fill=(50, 90, 66))
+        d.rectangle([60, y + 40, W - 60, y + 56], fill=(70, 52, 38))
+        for c in range(12):
+            x = 120 + c * 150
+            d.rectangle([x, y - 50, x + 60, y], fill=(90, 66, 50))                 # 椅子の背
+    d.rectangle([860, 640, 1060, 760], fill=(110, 80, 56), outline=(70, 50, 36), width=4)   # 答弁の台
+    return img
+
+
+def gaitou():
+    """1953年の駅前の街頭テレビ。高い台の上のテレビと、それを見上げる黒山の人だかり。"""
+    img = vgrad((W, H), (236, 190, 150), (200, 170, 160))
+    d = _d(img)
+    for k in range(8):                                                             # 町並み
+        x = k * 250 - 30
+        h = 300 + (k % 3) * 80
+        d.rectangle([x, 620 - h, x + 230, 620], fill=((170, 150, 130), (150, 140, 136), (186, 164, 140))[k % 3])
+        for r in range(3):
+            for c in range(3):
+                d.rectangle([x + 30 + c * 66, 640 - h + r * 80, x + 66 + c * 66, 680 - h + r * 80], fill=(236, 220, 170))
+    d.rectangle([944, 330, 976, 620], fill=(80, 70, 60))                           # 台の柱
+    d.rectangle([820, 150, 1100, 340], fill=(70, 56, 44), outline=(40, 32, 26), width=8)    # 箱のテレビ
+    d.rectangle([850, 176, 1030, 312], fill=(190, 214, 226))
+    d.ellipse([1046, 200, 1080, 234], fill=(160, 140, 110))
+    d.ellipse([1046, 250, 1080, 284], fill=(160, 140, 110))
+    d.ellipse([900, 220, 960, 280], fill=(90, 100, 110))                            # 画面の中の人影
+    d.rectangle([910, 270, 950, 312], fill=(90, 100, 110))
+    rnd = random.Random(3)
+    for row in range(9):                                                           # 人だかり（頭の列）
+        y = 600 + row * 52
+        for k in range(26):
+            x = k * 78 + (row % 2) * 39 - 20 + rnd.randint(-8, 8)
+            col = (40 + rnd.randint(0, 20), 36 + rnd.randint(0, 16), 34 + rnd.randint(0, 14))
+            d.ellipse([x, y, x + 56, y + 62], fill=col)
+            d.rectangle([x - 6, y + 50, x + 62, y + 120], fill=(70 + rnd.randint(0, 40), 66 + rnd.randint(0, 30), 60 + rnd.randint(0, 30)))
+            if rnd.random() < 0.25:                                                # 帽子
+                d.rectangle([x - 6, y + 2, x + 62, y + 14], fill=(110, 96, 70))
+    return img
+
+
+def boshi():
+    """宇田の墓。墓石の横の墓誌に、八木・宇田アンテナの形が刻まれている。"""
+    img = vgrad((W, H), (176, 206, 226), (220, 230, 226))
+    d = _d(img)
+    d.rectangle([0, 700, W, H], fill=(140, 140, 120))
+    for x in (100, 330, 1500, 1730):                                               # 木々
+        d.rectangle([x, 300, x + 30, 700], fill=(100, 80, 60))
+        d.ellipse([x - 110, 160, x + 140, 420], fill=(80, 130, 80))
+    stone = (150, 150, 152)
+    d.rectangle([740, 640, 1180, 720], fill=(130, 130, 132))                       # 台石
+    d.rectangle([800, 580, 1120, 640], fill=(140, 140, 142))
+    d.rectangle([860, 300, 1060, 580], fill=stone, outline=(110, 110, 112), width=4)   # 竿石
+    d.rectangle([1200, 470, 1430, 700], fill=(120, 122, 126), outline=(96, 96, 100), width=4)   # 墓誌
+    _yagi(d, 1236, 560, 160, n=4, facing=1, col=(206, 208, 212), w=4, scale=0.9)    # 刻まれたアンテナ
+    for k in range(3):
+        d.line([(1236, 630 + k * 18), (1396, 630 + k * 18)], fill=(150, 152, 156), width=3)
+    d.rectangle([700, 680, 760, 720], fill=(110, 110, 112))                        # 花立て
+    d.rectangle([1160, 680, 1200, 720], fill=(110, 110, 112))
+    for x in (712, 1166):
+        d.line([(x + 10, 680), (x, 620)], fill=(80, 140, 70), width=6)
+        d.ellipse([x - 14, 600, x + 14, 628], fill=(230, 220, 120))
+    return img
+
+
+LOCATIONS.update({
+    "yg_singapore_note": singapore_note, "yg_jikken_bou": jikken_bou,
+    "yg_souchou": souchou, "yg_souchou_kara": souchou_kara, "yg_gikai": gikai,
+    "yg_gaitou": gaitou, "yg_boshi": boshi,
+})
+CARDS += ["1929", "1944"]
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
     only = set(sys.argv[1:])

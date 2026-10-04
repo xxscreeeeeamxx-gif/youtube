@@ -1,0 +1,1 @@
+学生|none|none||v4|gakuran|#26304a|o1

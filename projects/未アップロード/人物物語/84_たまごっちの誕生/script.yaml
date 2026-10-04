@@ -1,0 +1,1569 @@
+meta:
+  title: 【たまごっちの誕生】「刺激が強すぎる」と言われた死ぬおもちゃが1億個【ずんだもん解説】
+  slug: tamagotchi-yokoi-v2
+  summary: 1996年に発売された、手のひらの卵の中で生き物を育てるおもちゃ、たまごっち。企画したのは、バンダイを飛び出して小さな会社を開いた横井昭裕です。パソコンの画面で泳ぐ熱帯魚から「人間と同じ時間で生きるペット」を思いつき、世話をしないと死ぬ仕組みを入れました。社内で「刺激が強すぎる」と言われた企画は、どうやって世に出たのか。行列と品切れの裏側まで、再現ドラマでたどります。
+  tags:
+  - たまごっち
+  - 横井昭裕
+  - バンダイ
+  - ウィズ
+  - おもちゃ
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 雑学
+  thumbnail:
+    top: 死ぬおもちゃ
+    bottom: たまごっちの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: joushi
+    label: 上司
+    voice: 42
+    pitch: 0.04
+    outfit: suit
+    color: '#4a4a52'
+  - id: shain
+    label: ウィズ社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4a6a'
+  - id: bandai
+    label: バンダイ
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#2f3a52'
+  - id: bucho
+    label: 事業部長
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#33363d'
+  - id: designer
+    label: デザイナー
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a7a'
+  - id: joshi
+    label: 女子高生
+    voice: 8
+    pitch: 0.1
+    outfit: suit
+    color: '#2a3550'
+  - id: henshu
+    label: 編集者
+    voice: 8
+    pitch: -0.04
+    outfit: suit
+    color: '#6a4a5a'
+  - id: tenin
+    label: 店員
+    voice: 100
+    pitch: 0.0
+    outfit: apron
+  - id: kyaku
+    label: お客
+    voice: 8
+    pitch: 0.04
+    outfit: suit
+    color: '#7a5a6a'
+  - id: haisou
+    label: 配送係
+    voice: 67
+    pitch: 0.0
+    outfit: work
+  - id: bandai2
+    label: バンダイ
+    voice: 67
+    pitch: 0.06
+    outfit: suit
+    color: '#3e4a5c'
+  - id: yakuin
+    label: 役員
+    voice: 42
+    pitch: -0.06
+    outfit: suit
+    color: '#4a4038'
+scenes:
+- id: co_shinu
+  title: ''
+  background: tg_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: bandai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1995年、のちのたまごっちの企画書を持った小さな会社の社長がバンダイを訪ねます。
+    reading: せんきゅうひゃく きゅうじゅうごねん、のちの たまごっちの きかくしょお もった ちいさな かいしゃの しゃちょうが ばんだいお たずねます。
+  - speaker: zundamon
+    emotion: normal
+    text: 卵の形の時計の中で、生き物を育てるおもちゃです。
+  - speaker: bandai
+    emotion: happy
+    text: 育てるおもちゃ、いいですね。
+  - speaker: zundamon
+    emotion: normal
+    text: ただ、世話をしないと死にます。
+  - speaker: bandai
+    emotion: surprised
+    text: ……死ぬ！？ おもちゃが、ですか！？
+  - speaker: bandai
+    emotion: thinking
+    text: 面白い。……でも死ぬのは、社内で刺激が強すぎるって言われますよ。
+  - speaker: bandai
+    emotion: thinking
+    text: 死ぬところだけ、なしにできませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: そこは、譲れません。
+    se: don
+  - speaker: reimu
+    text: この男は、横井昭裕。刺激が強すぎると言われたたまごっちは、30年で1億個を超えました。
+    reading: この おとこわ よこい あきひろ。しげきが つよすぎると いわれた たまごっちわ、さんじゅうねんで いちおくこお こえました。
+- id: hook
+  title: ''
+  background: tg_ima
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: つむぎ、たまごっちが死んだのだ。一日出かけてただけなのに！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一日、ごはんも掃除もしなかったのね。
+    beat: true
+  - speaker: zundamon
+    emotion: angry
+    text: なんで、止めるボタンが無いのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: わざと付けなかったの。その死ぬおもちゃが、1億個売れたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 死ぬのに、なんで1億個も売れるの？
+    telops:
+    - {text: 死ぬおもちゃが1億個？, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、生き物好きなおもちゃ会社の新人よ。
+- id: card1977
+  title: ''
+  background: tg_card_1977
+  cuts:
+  - speaker: reimu
+    text: 1977年。東京のおもちゃ会社バンダイに、22歳の新人が入ります。
+    reading: せんきゅうひゃく ななじゅうななねん。とうきょうの おもちゃ がいしゃ ばんだいに、にじゅうにさいの しんじんが はいります。
+- id: ch1_bandai
+  title: 女の子向けの占い
+  background: tg_bandai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: joushi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 横井昭裕は東京の生まれ。子どものころから、生き物を飼うのが好きでした。
+    reading: よこい あきひろわ とうきょうの うまれ。こどもの ころから いきものお かうのが すきでした。
+  - speaker: reimu
+    text: 入社した横井は、バンダイのキャラクターを使った小さな液晶ゲームを手がけます。
+    reading: にゅうしゃした よこいわ、ばんだいの きゃらくたーお つかった ちいさな えきしょう げーむお てがけます。
+  - speaker: joushi
+    emotion: normal
+    text: 横井。次の企画はあるか？
+  - speaker: zundamon
+    emotion: normal
+    text: はい。女の子向けの、電子の占いです。
+  - speaker: joushi
+    emotion: surprised
+    text: 占い！？
+  - speaker: joushi
+    emotion: thinking
+    text: 占いは売れないんだ。前に出した占いの機械も、売れなかっただろ。
+  - speaker: zundamon
+    emotion: normal
+    text: 倉庫で、その機械を見てきました。
+  - speaker: zundamon
+    emotion: normal
+    text: あれは男の子っぽく作ったから、売れなかったんです。
+  - speaker: joushi
+    emotion: angry
+    text: 売れなかった物は、全部ダメなんだよ。
+  - speaker: joushi
+    emotion: normal
+    text: この山を見ろ。売れそうにない企画は、全部ボツだ。
+    background: tg_bandai_botsu
+  - speaker: joushi
+    emotion: thinking
+    text: ……一番上のは、おれが出したやつだがな。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 占いは、女の子に人気があります。女の子向けに作れば、売れます。
+  - speaker: joushi
+    emotion: thinking
+    text: ……お前がそこまで言うなら、やってみろ。
+  - speaker: joushi
+    emotion: angry
+    text: その代わり、ボツの山を1枚増やすなよ。
+    se: hammer
+  - speaker: reimu
+    text: 女の子向けに作ったハートの形の占いのゲームは、売れました。
+    reading: おんなのこむけに つくった はーとの かたちの うらないの げーむわ、うれました。
+- id: ch1_kanban
+  title: 自分の力か看板の力か
+  background: tg_bandai
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: thinking}
+  - {who: joushi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 入社から10年ほど。横井の企画は、売れるようになっていました。
+    reading: にゅうしゃから じゅうねんほど。よこいの きかくわ、うれる ように なって いました。
+  - speaker: joushi
+    emotion: happy
+    text: 横井、この前のやつ売れてるぞ。お前の手柄だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……本当に、ボクの力でしょうか。
+  - speaker: joushi
+    emotion: surprised
+    text: '[は|はぁ]？'
+  - speaker: zundamon
+    emotion: thinking
+    text: バンダイの看板の力かもしれません。
+  - speaker: joushi
+    emotion: thinking
+    text: どっちでもいいだろ。売れたんだから。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクには、そこが分からなくなりました。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分の会社でやって、確かめてみたいんです。
+    telops:
+    - {text: 自分の力か 看板の力か, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: joushi
+    emotion: surprised
+    text: 辞めるのか！？
+  - speaker: joushi
+    emotion: thinking
+    text: 看板を下ろしたら、誰も話なんか聞いてくれんぞ。
+  - speaker: joushi
+    emotion: sad
+    text: ……それに、次の占いは誰が作るんだ。
+    beat: true
+  - speaker: reimu
+    text: 1986年、31歳でウィズという会社を作ります。翌年バンダイを辞め、社長になりました。
+    reading: せんきゅうひゃく はちじゅうろくねん さんじゅういっさいで うぃずと いう かいしゃお つくります。よくねん ばんだいお やめ、しゃちょうに なりました。
+- id: ch2_wiz
+  title: 食うため7割・夢3割
+  background: tg_wiz
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 独立しても、おもちゃの仕事はすぐには来ません。
+    reading: どくりつ しても おもちゃの しごとわ すぐにわ きません。
+  - speaker: shain
+    emotion: happy
+    text: 社長、仕事が取れました！ スーパーのチラシです。
+  - speaker: zundamon
+    emotion: normal
+    text: 引き受けよう。家賃と給料がいる。
+  - speaker: shain
+    emotion: normal
+    text: 次は商品の箱のデザイン。その次は、会議で使うパネルです。
+    background: tg_wiz_chirashi
+  - speaker: zundamon
+    emotion: normal
+    text: それも、やろう。
+  - speaker: shain
+    emotion: normal
+    text: その次は、また別のスーパーのチラシです。
+  - speaker: shain
+    emotion: thinking
+    text: ……社長。うちって、おもちゃを考える会社でしたよね。
+  - speaker: shain
+    emotion: angry
+    text: これじゃ、チラシを考える会社です。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: thinking
+    text: ……分かった。決まりを作ろう。
+  - speaker: zundamon
+    emotion: normal
+    text: 仕事は、食うためが7割。夢のためが3割だ。
+  - speaker: shain
+    emotion: surprised
+    text: 3割は、おもちゃの企画をやれるんですね！
+  - speaker: zundamon
+    emotion: happy
+    text: その3割で、勝負するのだ。
+  - speaker: shain
+    emotion: thinking
+    text: ……で、7割のほうのチラシは今夜中です。
+  - speaker: zundamon
+    emotion: normal
+    text: ……やろう。
+    beat: true
+  - speaker: reimu
+    text: 最初の3年ほどは勢いで乗り切りましたが、5年目ごろから苦しくなります。
+    reading: さいしょの さんねんほどわ いきおいで のりきりましたが、ごねんめごろから くるしく なります。
+- id: card1995
+  title: ''
+  background: tg_card_1995
+  cuts:
+  - speaker: reimu
+    text: 1995年。業績の落ちていたバンダイから、ウィズに依頼が届きます。
+    reading: せんきゅうひゃく きゅうじゅうごねん。ぎょうせきの おちて いた ばんだいから、うぃずに いらいが とどきます。
+- id: ch3_irai
+  title: 当たるものなら何でも
+  background: tg_wiz
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: bandai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: bandai
+    emotion: normal
+    text: 横井さん。来年に出す企画を、何か持ってきてもらえませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 来年の、ですか。
+  - speaker: bandai
+    emotion: thinking
+    text: 正直、うちの会社の調子が良くないんです。
+  - speaker: zundamon
+    emotion: normal
+    text: どんなものが、いいでしょう。
+  - speaker: bandai
+    emotion: happy
+    text: 当たるものなら、なんでも。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……なんでも、ですか。
+  - speaker: bandai
+    emotion: normal
+    text: ええ。当たるものなら。
+  - speaker: bandai
+    emotion: thinking
+    text: ……当たらないものは、困ります。
+    beat: true
+  - speaker: reimu
+    text: ウィズでは週に1回、情報会議を開いていました。
+    reading: うぃずでわ しゅうに いっかい じょうほう かいぎお ひらいて いました。
+  - speaker: reimu
+    text: 決まりは一つ。おもちゃやゲームの外から、話を持ってくることです。
+    reading: きまりわ ひとつ。おもちゃや げーむの そとから はなしお もってくる ことです。
+- id: ch3_kaigi
+  title: パソコンの熱帯魚
+  background: tg_pc
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 今週は、面白い話はあるか。
+  - speaker: shain
+    emotion: happy
+    text: 社長。新聞に、パソコンで熱帯魚を飼うソフトが流行ってるって出てました。
+  - speaker: zundamon
+    emotion: surprised
+    text: パソコンで、魚を？
+  - speaker: shain
+    emotion: normal
+    text: 画面の水槽の中で、24時間ずっと泳いでるんです。
+  - speaker: shain
+    emotion: happy
+    text: うちのチームにも、はまってる人がいます。
+  - speaker: shain
+    emotion: thinking
+    text: 夜中も気になって見ちゃうから、魚より人間のほうが寝不足です。
+    beat: true
+  - speaker: reimu
+    text: そのソフトは、アクアゾーンという名前でした。
+    reading: その そふとわ、あくあぞーんと いう なまえでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ゲームの中は、ふつうゲームの時間で動く。
+  - speaker: zundamon
+    emotion: thinking
+    text: 何年もの時間が、あっという間に過ぎたりする。
+  - speaker: zundamon
+    emotion: surprised
+    text: でもこの魚は、人間と同じ時間で生きてる。
+  - speaker: zundamon
+    emotion: happy
+    text: 同じ時間で生きてると、本当に生きてるように感じるんだ！
+    se: hirameki
+    telops:
+    - {text: 人間と同じ時間で生きる, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 横井は、この気づきがたまごっちの出発点になったと話しています。
+    reading: よこいわ この きづきが たまごっちの しゅっぱつてんに なったと はなして います。
+- id: ch3_katachi
+  title: 卵とウォッチ
+  background: tg_wiz
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、パソコンじゃ持ち歩けない。
+  - speaker: shain
+    emotion: thinking
+    text: 24時間一緒にいるなら、持ち歩ける大きさですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 前に作った液晶ゲームくらいの、手のひらの大きさにしよう。
+  - speaker: shain
+    emotion: thinking
+    text: 手のひらに乗る、生き物……。
+  - speaker: zundamon
+    emotion: normal
+    text: しかも時計にする。時間を見るついでに、世話もできる。
+  - speaker: shain
+    emotion: normal
+    text: 形は、どうします？
+  - speaker: zundamon
+    emotion: normal
+    text: 動物は、卵から生まれる。卵の形にしよう。
+  - speaker: zundamon
+    emotion: normal
+    text: それに、卵の形のおもちゃは外れが少ないんだ。
+  - speaker: shain
+    emotion: thinking
+    text: 卵の形の、時計……。
+  - speaker: reimu
+    text: たまごとウォッチを合わせて、名前はたまごっちになりました。
+    reading: たまごと うぉっちお あわせて、なまえわ たまごっちに なりました。
+  - speaker: shain
+    emotion: happy
+    text: たまごっち！ 言いやすいです！
+    se: jaan
+- id: ch3_chara
+  title: 変わっていく生き物
+  background: tg_sketch
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: designer, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 中に住む生き物は、犬や猫にはしない。
+  - speaker: designer
+    emotion: thinking
+    text: この小さな画面だと、本物の動物は嘘っぽくなりますもんね。
+  - speaker: zundamon
+    emotion: normal
+    text: 見たことのない、架空の生き物にしよう。
+  - speaker: zundamon
+    emotion: thinking
+    text: クワガタは幼虫からさなぎ、成虫と姿が変わる。
+  - speaker: zundamon
+    emotion: normal
+    text: 育つたびに、形ががらっと変わる生き物にしたい。
+  - speaker: designer
+    emotion: happy
+    text: 次に何になるか、楽しみになりますね。
+  - speaker: designer
+    emotion: normal
+    text: じゃあ最初は、これでどうです？ 殻に入った不格好なやつ。
+  - speaker: designer
+    emotion: thinking
+    text: ……正直、かわいくないって言われそうですけど。
+  - speaker: zundamon
+    emotion: happy
+    text: いや、これでいこう。
+  - speaker: designer
+    emotion: surprised
+    text: いくんですか！？
+    se: manuke
+- id: ch4_shi
+  title: かわいいのは2割
+  background: tg_wiz
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: もう一つ、どうしても入れたいことがある。
+  - speaker: shain
+    emotion: surprised
+    text: まだあるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクは熱帯魚からフクロウまで、いろんな生き物を飼ってきた。
+  - speaker: shain
+    emotion: thinking
+    text: ……社長、それもう動物園の人ですよ。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: ペットがかわいいのは、2割か3割。
+  - speaker: zundamon
+    emotion: thinking
+    text: 残りは、面倒な世話なんだ。
+    telops:
+    - {text: かわいいのは2割, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shain
+    emotion: thinking
+    text: 水替えに、えさやりに掃除……。
+  - speaker: zundamon
+    emotion: sad
+    text: 海の魚は、どんなに工夫しても2週間ほどで死なせてしまった。
+  - speaker: zundamon
+    emotion: normal
+    text: だから死なせないように、必死で世話をした。
+  - speaker: zundamon
+    emotion: normal
+    text: 大変だからこそ、かわいいと感じるんだ。
+  - speaker: shain
+    emotion: thinking
+    text: でもおもちゃって、面倒をなくす方向でやってきましたよね。
+  - speaker: zundamon
+    emotion: normal
+    text: だから、あえて入れる。
+  - speaker: zundamon
+    emotion: normal
+    text: 世話をしないと、死んでしまうペットにする。
+  - speaker: shain
+    emotion: surprised
+    text: 死ぬおもちゃ！？
+    se: bikkuri
+  - speaker: reimu
+    text: 面倒と、死。どちらも、それまでのおもちゃが避けてきたものでした。
+    reading: めんどうと し。どちらも、それまでの おもちゃが さけて きた ものでした。
+- id: ch4_teian
+  title: 刺激が強すぎる
+  background: tg_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: bandai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1995年6月。横井は、バンダイの男の子向けの部署に企画書を出します。
+    reading: せんきゅうひゃく きゅうじゅうごねん ろくがつ。よこいわ、ばんだいの おとこのこむけの ぶしょに きかくしょお だします。
+  - speaker: zundamon
+    emotion: normal
+    text: 卵の形の時計の中で、生き物を育てるおもちゃです。
+  - speaker: bandai
+    emotion: happy
+    text: 育てるおもちゃ、いいですね。
+  - speaker: zundamon
+    emotion: normal
+    text: ただ、世話をしないと死にます。
+  - speaker: bandai
+    emotion: surprised
+    text: ……死ぬ！？ おもちゃが、ですか！？
+  - speaker: bandai
+    emotion: thinking
+    text: 面白い。……でも死ぬのは、社内で刺激が強すぎるって言われますよ。
+  - speaker: bandai
+    emotion: thinking
+    text: 死ぬところだけ、なしにできませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: そこは、譲れません。
+    beat: true
+  - speaker: bandai
+    emotion: thinking
+    text: ……分かりました。上には、かけてみます。
+  - speaker: bandai
+    emotion: sad
+    text: ……部長の顔が、目に浮かびます。
+    beat: true
+  - speaker: reimu
+    text: 社内からも、刺激が強すぎるという声が出ました。
+    reading: しゃないからも、しげきが つよすぎると いう こえが でました。
+- id: ch4_bucho
+  title: 自分の勘と逆に
+  background: tg_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: bucho, x: 0.28, emotion: thinking}
+  - {who: bandai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: bandai
+    emotion: normal
+    text: 卵の形の時計で、中の生き物を育てる企画です。
+  - speaker: bucho
+    emotion: thinking
+    text: 育てる。で？
+  - speaker: bandai
+    emotion: normal
+    text: 世話をしないと、死にます。
+  - speaker: bucho
+    emotion: surprised
+    text: 死ぬのか。
+  - speaker: bucho
+    emotion: thinking
+    text: ちょっと、残酷じゃないか。
+  - speaker: bucho
+    emotion: normal
+    text: 見送りだな。
+  - speaker: bandai
+    emotion: sad
+    text: ……ですよね。
+  - speaker: bucho
+    emotion: thinking
+    text: ……待て。最近は、おれがいけると思った企画ほど当たらん。
+  - speaker: bucho
+    emotion: normal
+    text: なら、逆に賭けてみるか。
+  - speaker: bandai
+    emotion: surprised
+    text: え。そんな決め方で、いいんですか！？
+    se: zukko
+  - speaker: reimu
+    text: 当時のバンダイの社長は、事業部長は初め却下するつもりだったと振り返っています。
+    reading: とうじの ばんだいの しゃちょうわ、じぎょうぶちょうわ はじめ きゃっか する つもりだったと ふりかえって います。
+  - speaker: reimu
+    text: ゴーサインの決め手は、自分の勘と逆に張ることでした。
+    reading: ごーさいんの きめてわ、じぶんの かんと ぎゃくに はる ことでした。
+    telops:
+    - {text: 自分の勘と逆に賭けた, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 横井も、バンダイの調子が良ければこの企画は世に出なかったと語っています。
+    reading: よこいも、ばんだいの ちょうしが よければ この きかくわ よに でなかったと かたって います。
+- id: ch5_chosa
+  title: 原宿の女子高生
+  background: tg_harajuku
+  bgm: natsuyasumi
+  stage:
+  - {who: bandai, x: 0.28, flip: true}
+  - {who: joshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 企画した部署では、初めは誰もが売れないと思っていました。
+    reading: きかくした ぶしょでわ、はじめわ だれもが うれないと おもって いました。
+  - speaker: reimu
+    text: バンダイが渋谷や原宿で意見を聞くと、一番反応が良かったのは女子高生でした。
+    reading: ばんだいが しぶやや はらじゅくで いけんお きくと、いちばん はんのうが よかったのわ じょしこうせいでした。
+  - speaker: joshi
+    emotion: surprised
+    text: え、これって中で何か育てるんですか？
+  - speaker: bandai
+    emotion: normal
+    text: 卵から生まれて、世話をすると育ちます。
+  - speaker: joshi
+    emotion: happy
+    text: かわいい！ カバンに付けたい！
+  - speaker: bandai
+    emotion: surprised
+    text: カバンに、ですか。
+  - speaker: joshi
+    emotion: happy
+    text: 友だちと見せ合って、どっちが長生きか競争したい！
+  - speaker: joshi
+    emotion: thinking
+    text: あ、でも死んだら泣くかも。お葬式とかするかも。
+  - speaker: bandai
+    emotion: thinking
+    text: お葬式……。
+  - speaker: reimu
+    text: 男の子向けだった企画は、女子高生向けに大きく切り替わります。
+    reading: おとこのこむけだった きかくわ、じょしこうせいむけに おおきく きりかわります。
+  - speaker: bandai
+    emotion: normal
+    text: 色は、どれがいいと思います？
+  - speaker: joshi
+    emotion: happy
+    text: この色がいい！ こっちもかわいい！
+  - speaker: bandai
+    emotion: thinking
+    text: ……全部、ですか。
+  - speaker: joshi
+    emotion: happy
+    text: 全部！ 友だちと色違いで持ちたい！
+    beat: true
+- id: ch5_kusari
+  title: 腕時計をやめる
+  background: tg_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: bandai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: bandai
+    emotion: thinking
+    text: 横井さん。腕時計の形は、やめにしませんか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 時計じゃ、なくなるんですか。
+  - speaker: bandai
+    emotion: normal
+    text: 安い部品で作ると、腕時計には大きすぎるんです。
+  - speaker: bandai
+    emotion: normal
+    text: カバンに付ける、ボールチェーンにしましょう。
+  - speaker: zundamon
+    emotion: thinking
+    text: 時計なら、時間を見るたびに世話ができたんですが。
+  - speaker: bandai
+    emotion: happy
+    text: カバンに付ければ、目に入るたびに世話ができますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……分かりました。
+  - speaker: bandai
+    emotion: normal
+    text: 値段は、1980円にします。
+  - speaker: reimu
+    text: 当時のラーメンなら、4杯ほどの値段です。
+    reading: とうじの らーめんなら よんはいほどの ねだんです。
+  - speaker: bandai
+    emotion: thinking
+    text: 最初に作る数は、6万個の予定でした。
+  - speaker: bandai
+    emotion: happy
+    text: でも、たくさん作れば1個の値段を下げられます。30万個にします！
+  - speaker: zundamon
+    emotion: surprised
+    text: 30万個！？
+  - speaker: bandai
+    emotion: happy
+    text: '[清水|きよみず]の舞台から、飛び降りるつもりですよ。'
+  - speaker: bandai
+    emotion: thinking
+    text: ……着地のことは、あとで考えます。
+    beat: true
+- id: card1996
+  title: ''
+  background: tg_card_1996
+  cuts:
+  - speaker: reimu
+    text: 1996年10月10日。東京と大阪で、試しに売り出します。
+    reading: せんきゅうひゃく きゅうじゅうろくねん じゅうがつ とおか。とうきょうと おおさかで、ためしに うりだします。
+- id: ch6_test
+  title: 6万個から100万個へ
+  background: tg_kaigi
+  bgm: pop
+  stage:
+  - {who: bucho, x: 0.28, emotion: normal}
+  - {who: bandai, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: bandai
+    emotion: surprised
+    text: 部長！ 試しの販売で、女の子たちがどんどん買っていきます！
+  - speaker: bucho
+    emotion: surprised
+    text: 本当か。
+  - speaker: bandai
+    emotion: happy
+    text: 思った以上の勢いです。最初の注文を、増やしましょう！
+  - speaker: bucho
+    emotion: thinking
+    text: 30万個でも、[清水|きよみず]の舞台だったんだぞ。
+  - speaker: bandai
+    emotion: happy
+    text: 100万個です。
+    background: tg_kaigi_kazu
+    se: levelup
+  - speaker: bucho
+    emotion: surprised
+    text: ひゃ、100万！？
+  - speaker: bandai
+    emotion: happy
+    text: '[清水|きよみず]の舞台の、さらに上から飛び降ります。'
+  - speaker: bucho
+    emotion: thinking
+    text: ……もう、それは崖だ。
+    beat: true
+  - speaker: reimu
+    text: 最初の数は、6万個から30万個へ。試しの販売を見て、100万個に増やしました。
+    reading: さいしょの かずわ、ろくまんこから さんじゅうまんこえ。ためしの はんばいお みて、ひゃくまんこに ふやしました。
+    telops:
+    - {text: 6万→30万→100万個, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch6_zasshi
+  title: 宣伝のお金がない
+  background: tg_henshu
+  bgm: honwaka_puppu
+  stage:
+  - {who: bandai, x: 0.28, flip: true, emotion: normal}
+  - {who: henshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ただ、宣伝にかけるお金はほとんどありません。社員が自分の足で出版社を回りました。
+    reading: ただ せんでんに かける おかねわ ほとんど ありません。しゃいんが じぶんの あしで しゅっぱんしゃお まわりました。
+  - speaker: bandai
+    emotion: normal
+    text: 今度出る、たまごっちです。ぜひ雑誌で紹介してください。
+  - speaker: henshu
+    emotion: thinking
+    text: 卵の中で、ペットを育てるんですか。
+  - speaker: bandai
+    emotion: normal
+    text: 世話をしないと、死んじゃうんです。
+  - speaker: henshu
+    emotion: surprised
+    text: 死んじゃうの！？
+  - speaker: henshu
+    emotion: happy
+    text: ……それ、うちの読者の女の子に受けますよ。
+  - speaker: bandai
+    emotion: surprised
+    text: 受けるんですか。社内では、刺激が強すぎるって言われたのに。
+  - speaker: henshu
+    emotion: happy
+    text: 女子高生は、刺激が強いほうが好きなんです。
+    beat: true
+  - speaker: reimu
+    text: 11月23日、全国で発売されます。
+    reading: じゅういちがつ にじゅうさんにち、ぜんこくで はつばい されます。
+  - speaker: reimu
+    text: 12月には、女子高生に大人気と盛んに報じられるようになります。
+    reading: じゅうにがつにわ、じょしこうせいに だいにんきと さかんに ほうじられる ように なります。
+- id: ch6_mise
+  title: 入荷未定
+  background: tg_mise
+  bgm: shuffle_shuffle
+  stage:
+  - {who: kyaku, x: 0.28, flip: true, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: すみません。たまごっち、ありますか？
+  - speaker: tenin
+    emotion: sad
+    text: 申し訳ありません。売り切れで、次の入荷は未定です。
+  - speaker: kyaku
+    emotion: sad
+    text: また売り切れ……。昨日も来たのに。
+  - speaker: tenin
+    emotion: thinking
+    text: 入荷した日は、朝から行列なんです。
+    background: tg_mise_retsu
+  - speaker: tenin
+    emotion: normal
+    text: 50個の抽選に、整理券が4000枚出たお店もあるんですよ。
+  - speaker: kyaku
+    emotion: surprised
+    text: 50個に、4000人！？
+  - speaker: tenin
+    emotion: thinking
+    text: 80人に1人ですね。
+  - speaker: kyaku
+    emotion: sad
+    text: ……並ぶより、宝くじを買うほうが早いかも。
+    beat: true
+  - speaker: reimu
+    text: 1997年2月。ラジオ番組でたまごっちのプレゼントを告げると、15万通の応募が届きました。
+    reading: せんきゅうひゃく きゅうじゅうななねん にがつ。らじお ばんぐみで たまごっちの ぷれぜんとお つげると、じゅうごまんつうの おうぼが とどきました。
+  - speaker: kyaku
+    emotion: thinking
+    text: 白いのは、もっと高いって聞きました。
+  - speaker: tenin
+    emotion: normal
+    text: 白は数が少ないって、噂ですからね。
+  - speaker: reimu
+    text: 白は珍しいという噂が広まり、1個9万円で取引されたこともあります。
+    reading: しろわ めずらしいと いう うわさが ひろまり、いっこ きゅうまんえんで とりひき された ことも あります。
+    telops:
+    - {text: 白は1個9万円, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 色を塗って白に見せかけた品は、18万円で売られました。
+    reading: いろお ぬって しろに みせかけた しなわ、じゅうはちまんえんで うられました。
+  - speaker: kyaku
+    emotion: surprised
+    text: 塗っただけで、倍の値段！？
+    se: tenten
+- id: ch6_soko
+  title: 名前を消した箱
+  background: tg_soko
+  bgm: curious
+  stage:
+  - {who: bandai, x: 0.28, flip: true, emotion: thinking}
+  - {who: haisou, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: bandai
+    emotion: thinking
+    text: 段ボールのたまごっちの文字は、全部消しました。
+  - speaker: haisou
+    emotion: surprised
+    text: 商品の名前を消したんですか？
+  - speaker: bandai
+    emotion: sad
+    text: 運ぶ途中で、盗まれるんです。
+  - speaker: bandai
+    emotion: normal
+    text: 会社の車も、マークを見ただけで人が駆け寄ってくるんです。
+  - speaker: haisou
+    emotion: thinking
+    text: ……おもちゃじゃなくて、金塊でも運んでる気分です。
+    beat: true
+  - speaker: reimu
+    text: 紙袋を持って歩く社員が、知らない人に売ってくれと声をかけられることもありました。
+    reading: かみぶくろお もって あるく しゃいんが、しらない ひとに うってくれと こえお かけられる ことも ありました。
+  - speaker: reimu
+    text: バンダイへの問い合わせは、1日に1万件を超えました。
+    reading: ばんだいえの といあわせわ、いちにちに いちまんけんお こえました。
+  - speaker: haisou
+    emotion: surprised
+    text: '[1万件|いちまんけん]！？ 電話、鳴りっぱなしじゃないですか。'
+  - speaker: bandai
+    emotion: sad
+    text: 受話器を置いた瞬間に、次が鳴ります。
+  - speaker: reimu
+    text: 買えない人に向けて、おわびの広告まで出しています。
+    reading: かえない ひとに むけて、おわびの こうこくまで だして います。
+- id: ch6_zousan
+  title: 作っても足りない
+  background: tg_wiz
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: bandai, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: bandai
+    emotion: sad
+    text: 横井さん、全然足りません。作っても作っても、すぐ売り切れです。
+  - speaker: zundamon
+    emotion: normal
+    text: 工場の数を、増やすしかありませんね。
+  - speaker: bandai
+    emotion: normal
+    text: 工場と下請けを増やして、月に200万個ほど作れるようにします。
+  - speaker: zundamon
+    emotion: surprised
+    text: 月に、200万個……。
+  - speaker: bandai
+    emotion: angry
+    text: それと、形も画面もそっくりな偽物が出回ってます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[放って|ほうって]おけませんね。
+  - speaker: bandai
+    emotion: normal
+    text: 形の登録は、まだ審査中です。まずは今ある法律で止めにいきます。
+  - speaker: reimu
+    text: 1997年4月。バンダイは8つの会社を相手に、偽物を売らせない仮処分を申し立てました。
+    reading: せんきゅうひゃく きゅうじゅうななねん しがつ。ばんだいわ やっつの かいしゃお あいてに、にせものお うらせない かりしょぶんお もうしたてました。
+- id: ch7_pause
+  title: 止めるボタン
+  background: tg_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: bandai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: bandai
+    emotion: thinking
+    text: 横井さん。止めるボタンを付けてほしいって声が、山ほど来てます。
+  - speaker: zundamon
+    emotion: normal
+    text: 止めるボタン、ですか。
+  - speaker: bandai
+    emotion: normal
+    text: 学校にいる間に、たまごっちが死んでしまうって。
+  - speaker: zundamon
+    emotion: normal
+    text: 止めるボタンは、付けません。
+  - speaker: zundamon
+    emotion: normal
+    text: 好きなときに止められたら、生き物じゃなくなります。
+  - speaker: bandai
+    emotion: sad
+    text: ……じゃあ、届いた声の山は。
+  - speaker: zundamon
+    emotion: normal
+    text: そこは、譲れません。
+  - speaker: bandai
+    emotion: thinking
+    text: ……また、それですか。
+    beat: true
+  - speaker: reimu
+    text: 横井は、止めるボタンに猛反対しました。
+    reading: よこいわ、とめる ぼたんに もうはんたい しました。
+- id: ch7_kazoku
+  title: 家族みんなで世話をする
+  background: tg_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: じゃあ子どもたちは、学校に行く間どうしたと思う？
+  - speaker: zundamon
+    emotion: thinking
+    text: こっそり、カバンに入れていくのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: お母さんに預けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのお母さんは、おじいちゃんやおばあちゃんに預けたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家族みんなで、世話してたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 止めるボタンが無かったから、世代を超えて広がった。横井さんの言葉よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクも出かける前に、つむぎに預ければよかったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 30年前の子どものほうが、よっぽどしっかりしてたわね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: ふつうのゲームは、遊ぶ人が好きなときにやめられるでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: たまごっちは、向こうから呼んでくるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: スイッチを入れたら、たまごっちのほうが主役なのだ。
+- id: ch7_kaigai
+  title: 海を渡ったたまごっち
+  background: tg_ny
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1997年5月1日、アメリカでも発売されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: サンフランシスコのお店は、発売日の午後3時に3000個が売り切れ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ニューヨークの大きなおもちゃ屋さんでは、次の日の昼前までに1万個売れたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: アメリカでも、行列なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、死んだときの見せ方は国によって変えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本版|にほんばん]は、お墓と頭に三角の布を付けたおばけ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 海外では、天使になったり故郷の星へ帰ったりするの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国によって、死の考え方が違うからなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ハワイでは、持ち込みを禁止した学校もあったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 授業中に、うんちの呼び出しが鳴るのだ。
+    beat: true
+- id: ch7_shou
+  title: たまごっちの父と母
+  background: tg_gendai
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 初代は、発売から1年で1000万個を超えたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 最初は、6万個の予定だったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1997年の流行語大賞でも、トップテンに入ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 受け取ったのは、バンダイで担当していた[真板亜紀|まいたあき]さんよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: その年は、イグ・ノーベル賞の経済学賞も取ってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: イグ・ノーベル賞なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 横井さんと[真板|まいた]さんが、たまごっちの父と母として選ばれたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 理由は、何百万時間もの仕事の時間を仮想のペットの世話に使わせたこと。
+  - speaker: zundamon
+    emotion: happy
+    text: 褒めてるのか、困ってるのか分からないのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: normal
+    text: 男の子向けの部署からは、戦うたまごっちが欲しいって声も出たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが1997年6月に、デジタルモンスターとして発売されたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: たまごっちの、弟なのだ！
+- id: card1998
+  title: ''
+  background: tg_card_1998
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1998年。たまごっちは、急に売れなくなります。
+    reading: せんきゅうひゃく きゅうじゅうはちねん。たまごっちわ、きゅうに うれなく なります。
+- id: ch8_houkai
+  title: 止まらない工場
+  background: tg_soko
+  bgm: serious
+  stage:
+  - {who: bucho, x: 0.28, emotion: angry}
+  - {who: bandai, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: bucho
+    emotion: angry
+    text: おい。あれだけ足りなかったのに、なんで売れ残ってるんだ。
+  - speaker: bandai
+    emotion: sad
+    text: 足りないって毎日せっつかれて、工場を増やしたんです。
+  - speaker: bandai
+    emotion: sad
+    text: そこへ、似たおもちゃが世界中に出回って……。
+  - speaker: bucho
+    emotion: thinking
+    text: 予約は、あんなにあったじゃないか。
+  - speaker: bandai
+    emotion: thinking
+    text: お客さんは、何軒ものお店に予約を入れていたんです。
+  - speaker: bucho
+    emotion: surprised
+    text: 1人で3軒に予約したら、3人いるように見えるわけか。
+  - speaker: bucho
+    emotion: angry
+    text: ……じゃあ、今すぐ作るのをやめろ。
+  - speaker: bandai
+    emotion: sad
+    text: 部品は、3か月前から頼んであるんです。
+  - speaker: bandai
+    emotion: sad
+    text: 月に200万個の、3か月分。今止めても、600万個できてしまいます。
+    background: tg_soko_yama
+    se: gaan
+  - speaker: bucho
+    emotion: surprised
+    text: 600万！？
+  - speaker: bucho
+    emotion: thinking
+    text: ……あの行列は、どこへ行ったんだ。
+  - speaker: reimu
+    text: 1999年3月。バンダイは在庫250万個を処分し、約60億円の特別損失を出しました。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねん さんがつ。ばんだいわ ざいこ にひゃくごじゅうまんこお しょぶんし、やく ろくじゅうおくえんの とくべつ そんしつお だしました。
+    telops:
+    - {text: 特別損失 約60億円, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 新しいたまごっちの出荷は、2004年まで止まります。
+    reading: あたらしい たまごっちの しゅっかわ、にせんよねんまで とまります。
+- id: ch8_ronsou
+  title: ブームはなぜ終わった
+  background: tg_ima
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ブームが終わったのは、ポケモンに押されたからって聞いたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ポケモンのブームと、時期は重なってたわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも当時のバンダイのトップが挙げてるのは、似た商品が世界中に出回ったことよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それに作る数を一気に増やしたから、止めたくても止まらなかったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 足りなすぎて、作りすぎたのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 初代の担当者も、[日本|にほん]で何万個要るのかつかめなかったと話してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも、たまごっちを考えたのは横井さんなのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこも、話が分かれてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1997年の海外の雑誌では、[真板|まいた]さんが自分の発案として話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 横井さんは、1995年6月に自分が企画書を出したと本に書いてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 言ってることが、違うのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: イグ・ノーベル賞は、2人を父と母としてそろって選んでるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 父と母がそろって、たまごっちが生まれたのだ。
+- id: card2003
+  title: ''
+  background: tg_card_2003
+  cuts:
+  - speaker: reimu
+    text: 2003年。止まっていたたまごっちが、動き出します。
+    reading: にせんさんねん。とまって いた たまごっちが、うごきだします。
+- id: ch9_fukkatsu
+  title: かえってきたたまごっち
+  background: tg_kaigi2
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: bandai2, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 昔のたまごっちで遊ぶ高校生がいる、という話がバンダイに届きます。
+    reading: むかしの たまごっちで あそぶ こうこうせいが いると いう はなしが ばんだいに とどきます。
+  - speaker: bandai2
+    emotion: happy
+    text: 横井さん。たまごっちを、もう一度やりませんか。
+  - speaker: zundamon
+    emotion: surprised
+    text: もう一度、ですか。
+  - speaker: bandai2
+    emotion: normal
+    text: 今度は、小学生の女の子に向けたいんです。
+  - speaker: bandai2
+    emotion: normal
+    text: 赤外線で、友だちのたまごっちと通信できるようにします。
+  - speaker: zundamon
+    emotion: thinking
+    text: 通信して、仲良くなったら……。
+  - speaker: bandai2
+    emotion: happy
+    text: 結婚して、子どもが生まれます。
+  - speaker: zundamon
+    emotion: happy
+    text: 世代が、つながっていくんですね。
+  - speaker: bandai2
+    emotion: normal
+    text: 形は、あえて昔と同じ卵です。
+  - speaker: zundamon
+    emotion: thinking
+    text: 新しくしないんですか。
+  - speaker: bandai2
+    emotion: normal
+    text: 昔の形のまま出せば、登録した形の権利で偽物を止められるんです。
+  - speaker: bandai2
+    emotion: happy
+    text: 今度は、そっくりさんに好きにはさせません。
+  - speaker: reimu
+    text: 2004年3月、新しいたまごっちが発売されます。
+    reading: にせんよねん さんがつ、あたらしい たまごっちが はつばい されます。
+  - speaker: reimu
+    text: 1年で200万個の計画に対し、約500万個が売れました。
+    reading: いちねんで にひゃくまんこの けいかくに たいし、やく ごひゃくまんこが うれました。
+  - speaker: bandai2
+    emotion: surprised
+    text: 計画の、2倍半です！
+    se: bikkuri
+- id: ch10_mikan
+  title: ミカン箱で始めなさい
+  background: tg_wiz2009
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: thinking}
+  - {who: yakuin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2005年、ウィズは株式を上場します。
+    reading: にせんごねん、うぃずわ かぶしきお じょうじょう します。
+  - speaker: reimu
+    text: ところが2008年5月期から、2期続けて赤字になります。
+    reading: ところが にせんはちねん ごがつきから、にき つづけて あかじに なります。
+  - speaker: yakuin
+    emotion: thinking
+    text: 社長。上場のころ70人だった社員が、今は150人です。
+  - speaker: yakuin
+    emotion: normal
+    text: 売るための会社を先に作って、よその会社も買いました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……上場してから、いろんなものにお[金|かね]を掛けすぎた。
+  - speaker: zundamon
+    emotion: normal
+    text: バンダイの創業者が、よく言ってたんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 新しい事業は、ミカン箱で始めなさい。
+    telops:
+    - {text: ミカン箱で始めなさい, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: yakuin
+    emotion: surprised
+    text: ミカン箱、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 最初から、[大舞台|おおぶたい]でやるなということだ。
+  - speaker: zundamon
+    emotion: sad
+    text: その精神が、欠けていた。
+  - speaker: zundamon
+    emotion: normal
+    text: 一度、振り出しに戻す。
+  - speaker: reimu
+    text: 2009年までにウィズは30人の社員を減らし、横井が自ら現場をまとめる形に改めました。
+    reading: にせんきゅうねんまでに うぃずわ さんじゅうにんの しゃいんお へらし、よこいが みずから げんばお まとめる かたちに あらためました。
+  - speaker: yakuin
+    emotion: thinking
+    text: ……ヒットは、また出せますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 出せる自信はある。ただ、いつ出るかは何とも言えない。
+- id: ch10_tainin
+  title: 30年目の区切り
+  background: tg_wiz2009
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 横井昭裕, emotion: normal}
+  - {who: yakuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2016年。バンダイナムコが、ウィズを子会社にすると発表します。
+    reading: にせんじゅうろくねん。ばんだいなむこが、うぃずお こがいしゃに すると はっぴょう します。
+  - speaker: yakuin
+    emotion: normal
+    text: 社長。バンダイナムコの子会社になる話、まとまりました。
+  - speaker: zundamon
+    emotion: normal
+    text: ……そうか。
+  - speaker: yakuin
+    emotion: thinking
+    text: 30年前に、バンダイを出て作った会社ですね。
+  - speaker: zundamon
+    emotion: normal
+    text: ああ。
+  - speaker: reimu
+    text: 創業から30年。横井は、ウィズの社長を退きました。
+    reading: そうぎょうから さんじゅうねん。よこいわ、うぃずの しゃちょうお しりぞきました。
+- id: ch10_douga
+  title: ''
+  background: tg_wiz2009
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 横井昭裕, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2020年。横井は自分の動画で、仕事の話を語り始めます。
+    reading: にせんにじゅうねん。よこいわ じぶんの どうがで、しごとの はなしお かたりはじめます。
+  - speaker: zundamon
+    emotion: normal
+    text: 失敗を恐れるな。ただし、大きな失敗はするな。
+- id: ch11_shikumi
+  title: 小さな卵の中身
+  background: tg_zukai
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも、あの小さな卵の中はどうなってるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 初代の画面は、横32と縦16の白黒の点でできてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 点が、たった512個なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 上と下には、ごはんやトイレなど8個のアイコンが並んでるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 中の頭脳は、4ビットの小さなマイコン。中身を解析した人たちが調べてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 4ビット！？ ファミコンより小さいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 時計を合わせると、5分ほどで卵がかえるのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこからは、おおむね1日で1歳ずつ年をとるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 夜になると眠って、朝になると起きる。本物の時計で暮らしてるの。
+  - speaker: zundamon
+    emotion: happy
+    text: パソコンの熱帯魚と同じ、人間の時間なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 全長は5センチほど。ボタン電池で動いて、電源を切るスイッチは無いわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: スイッチが無いから、出かけてる間も時間が進むのか。
+- id: ch11_sodachi
+  title: ''
+  background: tg_zukai2
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 何に育つかは、お世話の仕方で変わるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: お腹がすいたり機嫌が悪くなったりすると、呼び出しが鳴るわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを[放って|ほうって]おくと、お世話ミスになるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ミスの数やしつけ具合で、大人の姿が変わるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: クワガタみたいに、姿ががらっと変わるのだ。
+  - speaker: zundamon
+    emotion: happy
+    text: まめっちになるか、くちぱっちになるかなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 隠れキャラの、おやじっちもいたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: せっかく育てておやじっちになったら、ちょっと複雑なのだ。
+    se: chin
+- id: ch12_gendai
+  title: 30年目のたまごっち
+  background: tg_gendai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年には、画面がカラーになったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2021年には、腕時計の形も初めて出たのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 最初は、腕時計にするつもりだったのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 25年たって、やっと最初の形が出たのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年のパラダイスは、親の特徴が子に受け継がれるの。見た目は5万通り以上よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年7月には、出荷の合計が1億個を超えたわ。
+    telops:
+    - {text: 出荷の合計1億個, size: xl, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 最初の6万個から、1億個なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年の3月末には、1億300万個になってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: まだ増えてるのだ！
+    se: levelup
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年の7月には、パラダイスの形が全国発明表彰の発明賞を受けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: パラダイスは6380円。今のラーメンなら、10杯ほどね。
+  - speaker: zundamon
+    emotion: happy
+    text: 初代は、4杯分だったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年の5月には、ちょっと変わったお知らせも出たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: パラダイスで256歳を超えて育てた子が死ぬと、年齢の表示がおかしくなるんですって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 256歳まで、育てられるのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこまで育てた人がいるかは、分からないけどね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 初代の担当者は、30年後の再ブームは全く想像にもなかったと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 企画したのはウィズで、作って売ったのはバンダイ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 看板の力か、自分の力か。……両方だったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 11月23日で、発売から30年。来年2月には、指輪の形のたまごっちも出るの。
+  - speaker: zundamon
+    emotion: happy
+    text: 指にはめて、世話をするのだ！
+- id: shime
+  title: ''
+  background: tg_ima
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ！ 新しい卵がかえったのだ。今度は、ちゃんと世話するのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。ごはんも掃除も？
+  - speaker: zundamon
+    emotion: happy
+    text: ばっちりなのだ。それで昼間は、つむぎに預けて出かけるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……それ、昼の世話をするのは私よね。
+  - speaker: zundamon
+    emotion: normal
+    text: かわいいのは2割、残りは世話。残りは、つむぎの担当なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: おいしい2割だけ、持っていかないで。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも面倒な世話ほど、自分の手でやってみて。かわいさは、そこから育つのよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

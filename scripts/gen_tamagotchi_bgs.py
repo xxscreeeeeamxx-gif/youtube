@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 """たまごっちの誕生・横井昭裕回（60_たまごっちの誕生 / slug=tamagotchi-yokoi）の背景を生成する。
+作り直し版（84_たまごっちの誕生 / slug=tamagotchi-yokoi-v2）の差し替え背景と2009年の事務所もここで描く。
+既存の絵を描き直さないよう、作り直し版の分は名前を指定して実行する:
+  PYTHONPATH=. python scripts/gen_tamagotchi_bgs.py tg_bandai_botsu tg_wiz_chirashi tg_kaigi_kazu \
+      tg_mise_retsu tg_soko_yama tg_wiz2009
 
 gen_drama_bgs.py の共通部品を使い、この回の場所背景と
 章替わりの年号カードを書き出す。方針は鉛筆回（gen_pencil_bgs.py）と同じ。
@@ -465,14 +469,189 @@ def gendai():
     return img
 
 
+# ---- 作り直し版（84_たまごっちの誕生 / slug=tamagotchi-yokoi-v2）で足した背景
+# 場面の途中で差し替える「状況が変わった」背景は、元の背景を呼んで要素を足す（同じ構図で差が一目で分かる）。
+RED = (210, 50, 50)
+
+
+def _sheet(d, x, y, w, h, angle_dx=0, lines=4, col=(250, 248, 238)):
+    """企画を書いた紙（字は描かず灰色の行だけ）。angle_dx で少し傾ける。"""
+    d.polygon([(x, y), (x + w, y + angle_dx), (x + w - angle_dx, y + h + angle_dx), (x - angle_dx, y + h)],
+              fill=col, outline=(170, 164, 150))
+    for k in range(lines):
+        yy = y + 14 + k * (h - 24) // max(1, lines)
+        d.line([(x + 10, yy), (x + w - 16 - (k % 2) * 20, yy + angle_dx // 2)], fill=(150, 150, 160), width=3)
+
+
+def _batsu(d, cx, cy, r, w=7):
+    d.line([(cx - r, cy - r), (cx + r, cy + r)], fill=RED, width=w)
+    d.line([(cx + r, cy - r), (cx - r, cy + r)], fill=RED, width=w)
+
+
+def bandai_botsu():
+    """1977年の企画室。机の上と床に、赤い×の付いたボツの企画書が山になっている。"""
+    img = bandai()
+    d = _d(img)
+    for k in range(16):                                                    # 机の上に積み上がった紙の山
+        x = 790 + ((k * 37) % 5 - 2) * 8
+        y = 620 - k * 14
+        _sheet(d, x, y, 300, 26, angle_dx=((k * 5) % 3 - 1) * 4, lines=1)
+        if k % 3 == 0:
+            _batsu(d, x + 250, y + 13, 10, 4)
+    for x, y, a in ((700, 840, 6), (860, 900, -4), (1010, 860, 5), (1150, 910, -6), (760, 960, 3),
+                    (930, 990, -3), (1090, 975, 4), (640, 920, -5), (1230, 850, 2)):   # 床に散らばったボツ
+        _sheet(d, x, y, 130, 90, angle_dx=a, lines=3)
+        _batsu(d, x + 65, y + 45, 30)
+    for x, y in ((820, 1020), (990, 1040), (1180, 1010), (700, 1030)):     # 丸めた紙
+        d.ellipse([x, y, x + 54, y + 44], fill=(240, 236, 226), outline=(170, 160, 150), width=3)
+        d.line([(x + 12, y + 18), (x + 40, y + 26)], fill=(190, 180, 170), width=3)
+    return img
+
+
+def _flyer(d, x, y, w, h, col):
+    """スーパーのチラシ（文字は描かず、色の帯と商品の丸だけ）。"""
+    d.rectangle([x, y, x + w, y + h], fill=(250, 248, 240), outline=(180, 176, 166), width=2)
+    d.rectangle([x, y, x + w, y + h // 5], fill=col)
+    for r in range(2):
+        for c in range(3):
+            cx = x + 14 + c * (w - 28) // 3
+            cy = y + h // 5 + 12 + r * (h * 2 // 5)
+            d.ellipse([cx, cy, cx + (w - 40) // 4, cy + (w - 40) // 4], fill=((240, 200, 90), (220, 120, 100), (140, 200, 140))[(r + c) % 3])
+            d.rectangle([cx, cy + (w - 40) // 4 + 6, cx + (w - 40) // 4, cy + (w - 40) // 4 + 14], fill=RED)
+
+
+def wiz_chirashi():
+    """ウィズの事務所。水槽の前までチラシと箱のデザインと会議のパネルで埋まっている。"""
+    img = wiz()
+    d = _d(img)
+    cols = [(220, 60, 60), (240, 160, 40), (60, 120, 200), (60, 160, 90)]
+    for x in (60, 1460):                                                   # 両側の机の紙の山をチラシの塔に
+        for k in range(10):
+            _flyer(d, x + 30 + (k % 4) * 90, 560 - (k // 4) * 120, 84, 112, cols[k % 4])
+    for k in range(7):                                                     # 水槽の前に立てかけたパネル
+        x = 700 + k * 80
+        d.rectangle([x, 560 + (k % 2) * 20, x + 150, 800], fill=(236, 234, 228), outline=(130, 126, 118), width=4)
+        d.rectangle([x + 14, 580 + (k % 2) * 20, x + 136, 640 + (k % 2) * 20], fill=cols[(k + 1) % 4])
+        for j in range(3):
+            d.rectangle([x + 14, 660 + j * 36, x + 120 - j * 14, 676 + j * 36], fill=(150, 150, 160))
+    for x, y in ((640, 840), (820, 880), (1000, 850), (1180, 890), (740, 960), (960, 980), (1150, 970)):   # 床のチラシ
+        _flyer(d, x, y, 120, 150, cols[(x // 10) % 4])
+    for k in range(3):                                                     # 箱のデザインの見本
+        x = 600 + k * 260
+        d.rectangle([x, 990, x + 120, 1070], fill=(196, 160, 110), outline=(140, 110, 70), width=3)
+        d.rectangle([x + 20, 1004, x + 100, 1040], fill=cols[k])
+    return img
+
+
+def kaigi_kazu():
+    """会議室。ホワイトボードに貼った紙に、6万個と30万個を消して100万個と書いてある。"""
+    img = kaigi()
+    d = _d(img)
+    d.rectangle([770, 140, 1150, 470], fill=(252, 250, 240), outline=(170, 164, 150), width=4)
+    for x in (790, 1130):                                                  # 留めたテープ
+        d.rectangle([x - 20, 130, x + 20, 156], fill=(230, 220, 160))
+    f_small, f_big = _font(48), _font(78)
+    rows = (("6万個", 160, f_small), ("30万個", 248, f_small), ("100万個", 362, f_big))
+    for t, y, f in rows:
+        bb = d.textbbox((0, 0), t, font=f)
+        x = 960 - (bb[2] - bb[0]) // 2 - bb[0]
+        d.text((x, y - bb[1]), t, font=f, fill=(40, 60, 120))
+        if f is f_small:                                                   # 消した数には線を2本
+            midy = y + (bb[3] - bb[1]) // 2
+            d.line([(x - 10, midy - 6), (x + bb[2] - bb[0] + 10, midy - 6)], fill=RED, width=6)
+            d.line([(x - 10, midy + 6), (x + bb[2] - bb[0] + 10, midy + 6)], fill=RED, width=6)
+        else:
+            d.ellipse([x - 30, y - 22, x + bb[2] - bb[0] + 30, y + bb[3] - bb[1] + 22], outline=RED, width=8)
+    for y in (218, 306):                                                   # 次の数への矢印（下向き）
+        d.polygon([(944, y), (976, y), (960, y + 20)], fill=(40, 60, 120))
+    return img
+
+
+def _person(d, cx, foot, h, col):
+    """行列の人（顔は描かないシルエット）。cx は中心、foot は足元の y、h は身長。"""
+    hr = h * 0.12
+    d.ellipse([cx - hr, foot - h, cx + hr, foot - h + hr * 2], fill=col)
+    d.rounded_rectangle([cx - h * 0.16, foot - h + hr * 2 + 4, cx + h * 0.16, foot - h * 0.42], radius=int(h * 0.06), fill=col)
+    d.rectangle([cx - h * 0.12, foot - h * 0.44, cx - h * 0.02, foot], fill=col)
+    d.rectangle([cx + h * 0.02, foot - h * 0.44, cx + h * 0.12, foot], fill=col)
+
+
+def mise_retsu():
+    """おもちゃ屋の売り場。入荷した日。抽選の札の前から右の外まで、人の列が続いている。"""
+    img = mise()
+    d = _d(img)
+    d.rectangle([810, 330, 1110, 520], fill=(250, 246, 236), outline=(200, 60, 60), width=10)   # 札を描き替える
+    f = _font(58)
+    for i, t in enumerate(("本日入荷", "抽選50個")):
+        bb = d.textbbox((0, 0), t, font=f)
+        d.text((960 - (bb[2] - bb[0]) // 2 - bb[0], 352 + i * 80), t, font=f, fill=(200, 50, 50))
+    cols = [(92, 100, 126), (120, 96, 110), (84, 112, 104), (110, 104, 92), (96, 92, 120)]
+    for k in range(14):                                                    # 奥の列（小さめ）
+        cx = 700 + k * 62
+        _person(d, cx, 760, 230 - (k % 3) * 14, tuple(int(c * 1.25) for c in cols[k % 5]))
+    for k in range(12):                                                    # 手前の列（右の外へ続く）
+        cx = 640 + k * 118
+        _person(d, cx, 1000 + (k % 2) * 10, 330 - (k % 4) * 16, cols[(k + 2) % 5])
+    return img
+
+
+def soko_yama():
+    """倉庫。名前を消した段ボールが、天井まで隙間なく積み上がっている。"""
+    img = soko()
+    d = _d(img)
+    for r in range(8):
+        for c in range(11):
+            x = c * 196 - (r % 2) * 90
+            y = FLOOR - 145 - r * 140
+            if y < -150:
+                continue
+            _box(d, x, y, 190, 138)
+    d.rectangle([0, 0, W, 26], fill=(150, 146, 138))                       # 天井の梁
+    return img
+
+
+def wiz2009():
+    """2009年ごろのウィズの事務所。並んだ机と薄型の画面、棚に卵形の試作品。"""
+    img = _rgb(base((236, 238, 240), (214, 218, 222)))
+    wood_floor(img, FLOOR, col=(150, 150, 154), line=(132, 132, 136))
+    d = _d(img)
+    for k in range(3):                                                     # 窓
+        _window(d, 640 + k * 220, 110, 840 + k * 220, 330, sky=(178, 206, 228), frame=(120, 124, 130))
+    d.rectangle([660, 380, 1260, 600], fill=(180, 170, 156))               # 試作品の棚
+    for r in range(2):
+        _shelf(d, 660, 1260, 480 + r * 104, col=(130, 120, 108))
+        for k in range(6):
+            c = ((236, 120, 150), (120, 180, 230), (250, 214, 80), (140, 210, 140), (190, 140, 220), (240, 240, 236))[(k + r) % 6]
+            _egg(d, 712 + k * 98, 440 + r * 104, 70, c, chain=False)
+    for x in (60, 1480):                                                   # 両側の机と画面
+        for k in range(2):
+            y = 640 + k * 150
+            d.rectangle([x, y, x + 380, y + 30], fill=(200, 200, 204))
+            d.rectangle([x + 20, y + 30, x + 34, y + 140], fill=(150, 150, 156))
+            d.rectangle([x + 346, y + 30, x + 360, y + 140], fill=(150, 150, 156))
+            for j in range(2):
+                mx = x + 40 + j * 180
+                d.rectangle([mx, y - 110, mx + 140, y - 20], fill=(40, 44, 52))
+                d.rectangle([mx + 8, y - 102, mx + 132, y - 28], fill=(90, 130, 170))
+                d.rectangle([mx + 62, y - 20, mx + 78, y], fill=(60, 60, 66))
+    d.rectangle([760, 680, 1160, 720], fill=(110, 100, 90))                # 社長の机
+    d.rectangle([780, 720, 800, 860], fill=(90, 82, 74))
+    d.rectangle([1120, 720, 1140, 860], fill=(90, 82, 74))
+    for k in range(5):                                                     # 机の上の書類
+        d.rectangle([800 + k * 6, 650 - k * 6, 920 + k * 6, 680 - k * 6], fill=(246, 244, 236), outline=(170, 166, 156))
+    return img
+
+
 LOCATIONS = {
+    "tg_bandai_botsu": bandai_botsu, "tg_wiz_chirashi": wiz_chirashi, "tg_kaigi_kazu": kaigi_kazu,
+    "tg_mise_retsu": mise_retsu, "tg_soko_yama": soko_yama, "tg_wiz2009": wiz2009,
     "tg_ima": ima, "tg_bandai": bandai, "tg_wiz": wiz, "tg_pc": pc, "tg_sketch": sketch,
     "tg_kaigi": kaigi, "tg_kaigi2": kaigi2, "tg_harajuku": harajuku, "tg_henshu": henshu,
     "tg_mise": mise, "tg_soko": soko, "tg_ny": ny, "tg_zaiko": zaiko, "tg_zukai": zukai,
     "tg_zukai2": zukai2, "tg_gendai": gendai,
 }
 
-CARDS = ["1977", "1995", "1996", "1998", "2004"]
+CARDS = ["1977", "1995", "1996", "1998", "2003", "2004"]   # 2003 は作り直し版で追加
 
 
 def year_card(text: str) -> Image.Image:

@@ -1,0 +1,1 @@
+家の者|none|none||v4|kimono|#7a5a4a|o1

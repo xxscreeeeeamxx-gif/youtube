@@ -1,0 +1,1 @@
+近所の人|none|none||v4|apron|#7a5a4a|o1

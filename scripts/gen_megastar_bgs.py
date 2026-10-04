@@ -5,6 +5,10 @@ gen_drama_bgs.py の共通部品を使い、この回の場所背景と
 章替わりの年号カードを書き出す。方針はたまごっち回（gen_tamagotchi_bgs.py）と同じ。
 実在メーカーの商標（ロゴ・商品名の文字）は描かない。投影機は汎用の形にとどめる。
 
+85_メガスターの誕生（slug=ohira-megastar-v2・作り直し）では、既存の絵は変えずに
+場面の途中で差し替える絵（mg_heya96_clean / mg_homestar_hako / mg_stadium_akari）と
+新しい場面の絵（mg_kenkyushitsu）を足した。足した絵だけを書き出すときは名前を指定して実行する。
+
 実行: PYTHONPATH=. python scripts/gen_megastar_bgs.py [名前...]
 """
 
@@ -627,6 +631,136 @@ def gendai():
     return img
 
 
+# ------------------------------------------------------------ 85_メガスターの誕生（ohira-megastar-v2）で足した絵
+# 既存の絵はそのまま。場面の途中で差し替える絵は「元の背景を呼んで要素を足す」形で作る
+# （同じ構図なので切り替わりの差が一目で分かる）。
+def _overlay(img, draw_fn):
+    """半透明の要素を RGBA の別レイヤーに描いて重ねる。"""
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    draw_fn(ImageDraw.Draw(layer))
+    return Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
+
+
+def heya96_clean():
+    """7畳の自室の作業台を、アルミの枠とビニールの幕で囲った簡易クリーンルーム。上に送風の箱。"""
+    img = heya96()
+    frame = (186, 190, 198)
+    edge = (120, 124, 134)
+
+    def vinyl(d):
+        d.rectangle([690, 262, 1230, 928], fill=(200, 226, 240, 70))          # 透けるビニールの幕
+        for x in range(716, 1230, 46):                                       # 幕のひだ
+            d.line([(x, 266), (x + 8, 924)], fill=(255, 255, 255, 120), width=4)
+            d.line([(x + 18, 266), (x + 24, 924)], fill=(150, 180, 200, 70), width=3)
+        d.rectangle([930, 262, 990, 928], fill=(200, 226, 240, 30))          # 合わせ目（出入りのすき間）
+
+    img = _overlay(img, vinyl)
+    d = _d(img)
+    for x in (684, 1222):                                                    # アルミの柱
+        d.rectangle([x, 250, x + 14, 930], fill=frame, outline=edge, width=2)
+    d.rectangle([684, 250, 1236, 266], fill=frame, outline=edge, width=2)    # 上の梁
+    d.rounded_rectangle([760, 170, 1160, 252], radius=8, fill=(224, 226, 230), outline=edge, width=4)  # 送風の箱
+    for k in range(3):                                                       # 送風機の羽根
+        cx = 860 + k * 100
+        d.ellipse([cx - 32, 179, cx + 32, 243], fill=(150, 156, 166), outline=edge, width=3)
+        d.line([(cx - 24, 211), (cx + 24, 211)], fill=(90, 94, 104), width=4)
+        d.line([(cx, 187), (cx, 235)], fill=(90, 94, 104), width=4)
+    for x in range(780, 1150, 16):                                           # 吹き出し口のすき間
+        d.line([(x, 252), (x, 262)], fill=edge, width=3)
+    return img
+
+
+def homestar_hako():
+    """同じ会議室が、家庭用プラネタリウムの箱で埋まる。机の両わきと床に箱の山（字は描かない）。"""
+    img = homestar()
+    d = _d(img)
+
+    def box(x, y, w=110, h=78):
+        d.rectangle([x, y, x + w, y + h], fill=(36, 44, 86), outline=(16, 18, 34), width=3)
+        d.rectangle([x, y + h - 16, x + w, y + h], fill=(70, 84, 150))      # 帯
+        cx, cy = x + w // 2, y + h // 2 - 4                                  # 箱の絵: ドームと星
+        d.chord([cx - 22, cy - 16, cx + 22, cy + 28], 180, 360, fill=(30, 30, 40), outline=(190, 200, 240), width=2)
+        for sx, sy in ((-30, -20), (-12, -26), (14, -24), (32, -16), (0, -30)):
+            d.ellipse([cx + sx - 2, cy + sy - 2, cx + sx + 2, cy + sy + 2], fill=(250, 246, 200))
+
+    # 箱の柱は立ち絵（x=0.28 と 0.7）に隠れないよう、画面の 0.40〜0.60（768〜1152px）に寄せる
+    for x0, n in ((656, 5), (1154, 5)):                                      # 外側の低い柱（半分は立ち絵の後ろ）
+        for k in range(n):
+            box(x0 + (k % 2) * 4, 846 - k * 78)
+    for x0, n in ((768, 8), (1042, 8)):                                      # 投影機の両わきの高い柱
+        for k in range(n):
+            box(x0 + (k % 2) * 4, 846 - k * 78)
+    for x in range(600, 1300, 120):                                          # 机の手前の床に並ぶ箱
+        box(x, 940, w=116, h=84)
+    for x in range(0, W, 128):                                               # 画面の端の床の箱
+        if 480 < x < 1400:
+            continue
+        box(x, 940, w=118, h=84)
+    return img
+
+
+def stadium_akari():
+    """投影の前のドーム球場。照明がついた白い屋根と、まだ星のない天井。鏡の球の位置は同じ。"""
+    img = stadium()
+    roof = vgrad((W, 640), (196, 200, 208), (150, 156, 168))
+    rd = _d(roof)                                                            # 屋根の骨（屋根の中だけに描く）
+    for k in range(9):
+        x = -200 + k * 290
+        rd.line([(x, 0), (960 + (x - 960) * 0.35, 640)], fill=(128, 134, 146), width=6)
+    for k in range(4):
+        y = 90 + k * 130
+        rd.arc([-600 - k * 60, y - 900, W + 600 + k * 60, y + 300], 20, 160, fill=(136, 142, 154), width=5)
+    img.paste(roof, (0, 0))
+    d = _d(img)
+    for k in range(10):                                                      # 照明の列
+        x = 120 + k * 186
+        y = 420 + int(40 * math.sin(k / 9 * math.pi))
+        d.rounded_rectangle([x - 46, y - 14, x + 46, y + 14], radius=6, fill=(255, 252, 230), outline=(160, 160, 150), width=2)
+    light = Image.new("RGB", img.size, (255, 255, 240))
+    img = Image.blend(img, light, 0.06)
+    d = _d(img)
+    d.rectangle([0, 760, W, H], fill=(62, 140, 74))                          # 照らされた芝
+    cx, cy, r = 960, 600, 70                                                 # 鏡の球（stadium と同じ）
+    d.rectangle([cx - 8, cy + r, cx + 8, 780], fill=(120, 120, 130))
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(170, 176, 190), outline=(90, 90, 100), width=3)
+    for i in range(-3, 4):
+        for j in range(-3, 4):
+            if i * i + j * j <= 10:
+                x, y = cx + i * 17, cy + j * 17
+                d.rectangle([x - 6, y - 6, x + 6, y + 6], fill=(230, 236, 250) if (i + j) % 2 else (140, 150, 170))
+    return img
+
+
+def kenkyushitsu():
+    """1993年春の大学の研究室。黒板、紙の貼られた掲示板、机の上に賞状の額と書類の山。"""
+    img = _rgb(base((222, 224, 216), (200, 202, 194)))
+    wood_floor(img, FLOOR, col=(140, 120, 96), line=(122, 104, 82))
+    d = _d(img)
+    d.rectangle([160, 150, 700, 470], fill=(46, 82, 64), outline=(120, 96, 70), width=14)   # 黒板
+    for k, (x, y, w) in enumerate(((210, 210, 260), (210, 280, 340), (210, 350, 200), (480, 230, 160))):
+        d.line([(x, y), (x + w, y + (k % 2) * 6)], fill=(226, 230, 220), width=4)   # 板書（字ではなく線）
+    d.arc([500, 300, 640, 440], 200, 340, fill=(226, 230, 220), width=4)
+    d.rectangle([780, 150, 1140, 430], fill=(176, 140, 96), outline=(110, 84, 56), width=8)  # 掲示板
+    rnd = random.Random(93)
+    for k in range(7):                                                       # 貼り紙（求人の紙）
+        x = 800 + (k % 4) * 84 + rnd.randint(-6, 6)
+        y = 172 + (k // 4) * 128 + rnd.randint(-6, 6)
+        d.rectangle([x, y, x + 70, y + 98], fill=(246, 244, 236), outline=(180, 176, 166))
+        for j in range(4):
+            d.line([(x + 10, y + 20 + j * 18), (x + 58 - (j % 2) * 14, y + 20 + j * 18)], fill=(90, 90, 100), width=3)
+        d.ellipse([x + 30, y - 4, x + 40, y + 6], fill=(200, 60, 60))       # 画びょう
+    _window(d, 1300, 160, 1640, 440, sky=(186, 214, 236))
+    _table(d, 760, 1160, 640, col=(150, 120, 86))
+    for k in range(6):                                                       # 書類の山
+        d.rectangle([790 + (k % 2) * 4, 618 - k * 8, 920 + (k % 2) * 4, 628 - k * 8], fill=(246, 244, 236), outline=(170, 166, 156))
+    d.rectangle([980, 520, 1130, 636], fill=(196, 160, 70), outline=(130, 100, 40), width=4)   # 賞状の額
+    d.rectangle([996, 536, 1114, 620], fill=(250, 248, 240))
+    for j in range(4):
+        d.line([(1010, 552 + j * 15), (1100 - (j % 2) * 20, 552 + j * 15)], fill=(70, 70, 80), width=3)
+    d.ellipse([1076, 590, 1100, 614], fill=(200, 60, 50))                     # 朱の印
+    return img
+
+
 LOCATIONS = {
     "mg_beranda": beranda, "mg_beranda2": beranda2, "mg_kawara2": kawara2, "mg_kousha2": kousha2,
     "mg_heya70d": heya70d, "mg_airdome_in": airdome_in, "mg_giken": giken, "mg_rekishi": rekishi, "mg_heya70": heya70, "mg_kagakukan": kagakukan,
@@ -635,6 +769,9 @@ LOCATIONS = {
     "mg_zukai": zukai, "mg_zukai2": zukai2, "mg_london": london, "mg_dome": dome, "mg_spiral": spiral,
     "mg_airdome": airdome, "mg_sony": sony, "mg_miraikan": miraikan, "mg_homestar": homestar,
     "mg_stadium": stadium, "mg_zukai3": zukai3, "mg_zukai4": zukai4, "mg_gendai": gendai,
+    # 85_メガスターの誕生（ohira-megastar-v2）
+    "mg_heya96_clean": heya96_clean, "mg_homestar_hako": homestar_hako,
+    "mg_stadium_akari": stadium_akari, "mg_kenkyushitsu": kenkyushitsu,
 }
 
 CARDS = ["1970", "1986", "1996", "1998", "2000", "2004"]
