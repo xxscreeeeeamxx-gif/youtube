@@ -1,0 +1,1 @@
+父・茂|none|none||v4|kimono|#5a4a3a|o1

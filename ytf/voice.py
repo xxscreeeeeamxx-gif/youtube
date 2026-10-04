@@ -379,13 +379,14 @@ def load_dictionary(cfg: Config) -> list[dict]:
 
 def run_voice(cfg: Config, proj: Project, tts: str = "voicevox") -> list[CutTiming]:
     script = proj.load_script()
+    client = None
+    if tts == "voicevox":
+        # モブ登録が表に無い声番号の話者名を VOICEVOX に聞くので、先に起動しておく
+        client = ensure_engine(cfg)  # 落ちていればヘッドレスで自動起動
+        client.sync_dictionary(load_dictionary(cfg))
     if getattr(script.meta, "mode", "talk") == "drama":
         from .mobgen import register_mobs
         register_mobs(cfg, proj, script)
-    client = None
-    if tts == "voicevox":
-        client = ensure_engine(cfg)  # 落ちていればヘッドレスで自動起動
-        client.sync_dictionary(load_dictionary(cfg))
 
     default_pause = float(cfg.get("voicevox", "default_pause", default=0.3))
     drama = getattr(script.meta, "mode", "talk") == "drama"

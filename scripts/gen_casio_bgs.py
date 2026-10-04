@@ -315,6 +315,458 @@ LOCATIONS = {
 CARDS = ["1946", "1949", "1954", "1956", "1957", "1964", "1972"]
 
 
+# ------------------------------------------------------------ 作り直し版（77_カシオの誕生 / casio-kashio-v2）で足した背景
+# 既存の絵は変えない。場面の途中の差し替え用は「元の背景を呼んで要素を足す」形にして、
+# 同じ構図のまま状態の変化が一目で分かるようにする。
+def _small_calc(d, x, y, s=1.0, body=(60, 64, 72), key=(200, 200, 204)):
+    """手のひらの電卓。左上が x, y（文字は描かない）。"""
+    d.rounded_rectangle([x, y, x + 120 * s, y + 80 * s], radius=int(10 * s), fill=body)
+    d.rectangle([x + 14 * s, y + 10 * s, x + 106 * s, y + 30 * s], fill=(170, 186, 160))
+    for r in range(3):
+        for c in range(4):
+            kx, ky = x + 14 * s + c * 24 * s, y + 38 * s + r * 13 * s
+            d.rectangle([kx, ky, kx + 16 * s, ky + 8 * s], fill=key)
+
+
+def ima3():
+    """現代の勉強机に、100円の電卓が3台。"""
+    img = ima()
+    d = _d(img)
+    _small_calc(d, 560, 560, 1.0, body=(70, 120, 190))
+    _small_calc(d, 1180, 560, 1.0, body=(232, 228, 220), key=(150, 150, 156))
+    return img
+
+
+def shousha_shisaku():
+    """商社の応接の机に、ランドセルほどの試作機。"""
+    img = shousha()
+    d = _d(img)
+    x0, x1, y0, y1 = 820, 1100, 500, 660
+    d.rectangle([x0, y0, x1, y1], fill=(120, 132, 120), outline=(70, 80, 70), width=5)
+    d.rectangle([x0 + 30, y0 + 22, x1 - 30, y0 + 52], fill=(40, 44, 40))
+    for c in range(7):                                                     # けたごとのキーの列
+        for r in range(3):
+            cx, cy = x0 + 36 + c * 32, y0 + 70 + r * 26
+            d.ellipse([cx, cy, cx + 18, cy + 18], fill=(226, 220, 204))
+    d.line([(x1, y1 - 30), (x1 + 60, y1 - 4)], fill=(30, 30, 30), width=5)    # 電源コード
+    return img
+
+
+def _relay_rack(d, x0, y0, cols=10, rows=4):
+    """リレーをぎっしり並べた枠（銅色のコイルと黒い台）。"""
+    d.rectangle([x0 - 16, y0 - 16, x0 + cols * 38 + 6, y0 + rows * 44 + 4], fill=(70, 74, 72), outline=(40, 42, 40), width=4)
+    for r in range(rows):
+        for c in range(cols):
+            x, y = x0 + c * 38, y0 + r * 44
+            d.rectangle([x, y, x + 26, y + 30], fill=(36, 36, 38))
+            d.rectangle([x + 6, y + 4, x + 20, y + 22], fill=(184, 112, 62))
+
+
+def koba_haisen():
+    """町工場の真ん中の作業台に、ふたを開けたリレー計算機と色つきの配線の束。"""
+    img = koba()
+    d = _d(img)
+    d.rectangle([720, 700, 1200, 736], fill=(130, 100, 72))                 # 作業台
+    d.rectangle([740, 736, 770, FLOOR], fill=(100, 76, 54))
+    d.rectangle([1150, 736, 1180, FLOOR], fill=(100, 76, 54))
+    _relay_rack(d, 770, 500, cols=10, rows=4)
+    cols = [(210, 60, 60), (240, 240, 236), (60, 100, 200), (236, 206, 60), (70, 160, 80),
+            (140, 80, 170), (30, 30, 30), (140, 96, 60), (236, 140, 50), (150, 150, 150)]
+    for k in range(20):                                                    # 台から垂れる配線
+        c = cols[k % 10]
+        x = 760 + k * 22
+        d.line([(x, 700), (x + 10, 760), (x - 6, 820 + (k % 5) * 14)], fill=c, width=5)
+    return img
+
+
+def koba_yama():
+    """koba_haisen の作業台と床に、相談の図面と書類が山になった状態。"""
+    img = koba_haisen()
+    d = _d(img)
+    import random
+    rnd = random.Random(7)
+    for bx, by, n in ((700, 700, 14), (880, 500, 10), (1060, 700, 16), (640, FLOOR + 10, 18),
+                      (1140, FLOOR + 20, 20), (900, FLOOR + 30, 12)):
+        y = by
+        for i in range(n):                                                 # 書類の束を積む
+            w = rnd.randint(150, 200)
+            off = rnd.randint(-14, 14)
+            d.rectangle([bx + off, y - 16, bx + off + w, y], fill=(246, 244, 236), outline=(170, 166, 156), width=2)
+            if i % 3 == 0:
+                d.line([(bx + off + 12, y - 8), (bx + off + w - 20, y - 8)], fill=(120, 140, 190), width=2)
+            y -= 16
+    for k in range(6):                                                     # 丸めた図面
+        x = 760 + k * 70
+        d.rounded_rectangle([x, 640 - k % 2 * 30, x + 160, 664 - k % 2 * 30], radius=12,
+                            fill=(214, 226, 240), outline=(120, 140, 170), width=2)
+    return img
+
+
+def toko():
+    """畳の部屋に敷いた布団。障子の窓。"""
+    img = base((214, 204, 184), (182, 170, 150))
+    d = ImageDraw.Draw(img, "RGBA")
+    fy = 700                                                               # この部屋は床を高めに取る
+    tatami_floor(img, fy)
+    d.rectangle([660, 120, 1260, 420], fill=(240, 236, 222), outline=(120, 96, 70), width=10)   # 障子
+    for x in range(660, 1260, 100):
+        d.line([(x, 120), (x, 420)], fill=(140, 116, 88), width=4)
+    for y in range(120, 420, 75):
+        d.line([(660, y), (1260, y)], fill=(140, 116, 88), width=4)
+    d.polygon([(720, 740), (1200, 740), (1290, 900), (630, 900)], fill=(246, 246, 240))         # 敷き布団
+    d.polygon([(735, 790), (1185, 790), (1265, 900), (655, 900)], fill=(110, 130, 170))         # 掛け布団
+    d.line([(735, 790), (1185, 790)], fill=(236, 236, 230), width=10)
+    d.rounded_rectangle([880, 730, 1040, 776], radius=18, fill=(236, 226, 200))                 # 枕
+    d.rectangle([1300, 760, 1420, 796], fill=(120, 90, 60))                                     # 盆と湯のみ
+    d.rectangle([1340, 730, 1372, 762], fill=(220, 214, 200))
+    return img.convert("RGB")
+
+
+def _machine_box(d, x, y, s=0.45):
+    """倉庫の棚に置く、売れ残りのリレー計算機。下端中央が x, y。"""
+    _big_calc(d, x, y, s)
+
+
+def soko(full=False):
+    """内田洋行の倉庫。棚にリレー計算機。full=True で天井まで積み上がった状態。"""
+    img = base((150, 150, 146), (116, 116, 112))
+    d = _d(img)
+    d.rectangle([0, FLOOR, W, H], fill=(120, 118, 112))
+    d.line([(0, FLOOR), (W, FLOOR)], fill=(80, 80, 76), width=6)
+    for x in range(0, W, 320):                                             # 天井の梁
+        d.line([(x, 0), (x + 160, 90)], fill=(96, 96, 92), width=10)
+    d.rectangle([0, 80, W, 100], fill=(96, 96, 92))
+    shelves = ((60, 520), (720, 1200), (1400, 1860))
+    levels = (300, 480, 660, 840)
+    for x0, x1 in shelves:                                                 # 金属の棚
+        for xx in (x0, x1):
+            d.rectangle([xx, 200, xx + 16, FLOOR], fill=(70, 80, 96))
+        for ly in levels:
+            d.rectangle([x0, ly, x1 + 16, ly + 14], fill=(84, 94, 110))
+    for (x0, x1) in shelves:
+        span = x1 - x0
+        n = max(2, span // 150)
+        for li, ly in enumerate(levels):
+            for k in range(n):
+                if not full and (k + li) % 3 == 0:
+                    continue
+                _machine_box(d, x0 + 80 + k * (span - 80) / max(1, n - 1) * 0.86, ly, 0.42)
+    if full:
+        for x0, x1 in shelves:                                             # 棚の上にも積む
+            for k in range(3):
+                for j in range(2):
+                    _machine_box(d, x0 + 90 + k * (x1 - x0 - 80) / 2.4, 200 - j * 90, 0.42)
+        import random
+        rnd = random.Random(3)
+        for row in range(8):                                               # 床から天井まで段ボールの山
+            y = FLOOR - row * 100
+            for k in range(5 - row // 3):
+                x = 560 + row * 18 + k * 170 + rnd.randint(-10, 10)
+                d.rectangle([x, y - 96, x + 160, y], fill=(196, 160, 112), outline=(140, 108, 70), width=4)
+                d.line([(x, y - 60), (x + 160, y - 60)], fill=(170, 136, 92), width=6)
+    return img
+
+
+def soko_yama():
+    return soko(full=True)
+
+
+def bunguten(kara=False):
+    """昭和の文房具屋。奥の棚の真ん中の段に小さな電卓。kara=True で電卓の段が空っぽ。"""
+    img = base((232, 222, 200), (206, 194, 170))
+    d = _d(img)
+    wood_floor(img, FLOOR, col=(150, 120, 88), line=(128, 102, 74))
+    d.rectangle([160, 120, 1760, 600], fill=(150, 112, 76), outline=(100, 74, 50), width=8)   # 奥の棚
+    for y in (240, 360, 480):
+        d.rectangle([160, y, 1760, y + 12], fill=(100, 74, 50))
+    import random
+    rnd = random.Random(5)
+    pal = [(200, 60, 60), (60, 110, 190), (236, 196, 60), (70, 150, 90), (240, 240, 236)]
+    for x in range(180, 1740, 26):                                         # 上の段: ノート
+        if 700 < x < 1220:
+            continue
+        d.rectangle([x, 150, x + 20, 238], fill=rnd.choice(pal))
+    for x in range(190, 1740, 14):                                         # 2段目: 鉛筆
+        if 700 < x < 1220:
+            continue
+        h = rnd.randint(60, 100)
+        d.rectangle([x, 358 - h, x + 7, 358], fill=rnd.choice(pal))
+    for x in range(180, 1740, 60):                                         # 3段目: 消しゴムの箱
+        d.rectangle([x, 440, x + 50, 478], fill=(236, 232, 220), outline=(60, 110, 190), width=4)
+    d.rectangle([700, 130, 1220, 370], fill=(250, 236, 180), outline=(200, 60, 60), width=8)   # 真ん中: 電卓の段（明るい台紙）
+    d.rectangle([706, 244, 1214, 256], fill=(100, 74, 50))
+    if not kara:
+        for row, y in enumerate((150, 268)):
+            for k in range(5):
+                _small_calc(d, 724 + k * 98, y, 0.76, body=(54, 58, 66) if (k + row) % 2 else (70, 120, 190))
+    else:
+        for x, y in ((760, 238), (1010, 238), (880, 358), (1110, 358)):    # 空いた箱が転がっているだけ
+            d.polygon([(x, y), (x + 80, y), (x + 92, y - 44), (x - 12, y - 44)], fill=(214, 196, 160), outline=(150, 130, 96))
+    d.rectangle([640, 660, 1280, 800], fill=(190, 210, 214), outline=(110, 90, 66), width=8)   # ガラスの陳列台
+    d.rectangle([640, 800, 1280, FLOOR], fill=(130, 100, 72))
+    for k in range(5):
+        d.rectangle([680 + k * 120, 700, 760 + k * 120, 760], fill=rnd.choice(pal))
+    return img
+
+
+def bunguten_kara():
+    return bunguten(kara=True)
+
+
+def hamura(asa=False):
+    """技術センターの会長室。夜は窓が暗く机の灯りだけ。asa=True で窓が白んで紙くずが増える。"""
+    img = base((206, 208, 212), (176, 178, 184)) if asa else base((96, 100, 112), (66, 70, 80))
+    d = _d(img)
+    wood_floor(img, FLOOR, col=(130, 116, 100) if asa else (80, 72, 64), line=(110, 98, 84) if asa else (64, 58, 52))
+    if asa:
+        win = vgrad((1320, 420), (250, 214, 170), (196, 220, 240))
+    else:
+        win = vgrad((1320, 420), (20, 26, 52), (40, 48, 84))
+    img.paste(win, (300, 120))
+    d = _d(img)
+    d.rectangle([300, 120, 1620, 540], outline=(60, 60, 64), width=12)
+    for x in (630, 960, 1290):
+        d.line([(x, 120), (x, 540)], fill=(60, 60, 64), width=8)
+    if not asa:
+        for x, y in ((380, 470), (520, 500), (700, 480), (1100, 490), (1400, 470), (1530, 505)):
+            d.ellipse([x, y, x + 8, y + 8], fill=(255, 220, 140))
+    else:
+        d.ellipse([1380, 400, 1500, 520], fill=(255, 236, 190))
+    d.rectangle([660, 660, 1260, 700], fill=(120, 96, 72))                  # 机
+    d.rectangle([690, 700, 730, FLOOR], fill=(96, 76, 58))
+    d.rectangle([1190, 700, 1230, FLOOR], fill=(96, 76, 58))
+    d.line([(1160, 660), (1160, 560), (1100, 530)], fill=(40, 40, 44), width=8)   # 電気スタンド
+    d.polygon([(1060, 520), (1130, 500), (1140, 550), (1080, 560)], fill=(50, 52, 58))
+    _glow(img, 1060, 640, 200, (255, 214, 150), 110 if not asa else 50)
+    d = _d(img)
+    for k in range(4):                                                     # 紙の束と鉛筆
+        d.rectangle([760 + k * 6, 640 - k * 6, 940 + k * 6, 656 - k * 6], fill=(246, 244, 236), outline=(170, 166, 156))
+    for k in range(3):
+        d.line([(980 + k * 22, 650), (1040 + k * 22, 620)], fill=(220, 180, 60), width=6)
+    balls = ((800, 600), (1000, 610), (1210, 640), (560, 990), (640, 1010), (1300, 1000), (900, 1030)) if asa else ((820, 610), (1220, 640))
+    for x, y in balls:                                                     # 丸めた紙
+        d.ellipse([x, y, x + 46, y + 40], fill=(240, 238, 230), outline=(160, 156, 148), width=3)
+    return img
+
+
+def hamura_yoru():
+    return hamura(asa=False)
+
+
+def hamura_asa():
+    return hamura(asa=True)
+
+
+def hotel_haisen():
+    """札幌の宿。計算機をばらして、配線と部品が座卓から畳一面に広がった状態。
+
+    座卓の本体はキーと表示を外して中身がのぞく形にし、外したキーと表示は畳の上に置く。
+    配線は座卓の縁から垂れて、畳の上を這わせる（壁の前で宙に浮かせない）。
+    """
+    img = hotel()
+    d = _d(img)
+    import random
+    rnd = random.Random(11)
+    d.rectangle([836, 476, 1084, 640], fill=(170, 176, 170), outline=(110, 116, 110), width=5)   # キーと表示を外した本体
+    d.rectangle([862, 496, 1058, 624], fill=(46, 48, 46))
+    for r in range(3):                                                     # のぞいているリレー
+        for c in range(6):
+            x, y = 874 + c * 30, 508 + r * 36
+            d.rectangle([x, y, x + 20, y + 24], fill=(36, 36, 38))
+            d.rectangle([x + 5, y + 3, x + 15, y + 18], fill=(184, 112, 62))
+    cols = [(210, 60, 60), (240, 240, 236), (60, 110, 210), (236, 206, 60), (70, 170, 90),
+            (150, 90, 180), (230, 140, 50), (160, 160, 160)]
+    floor_top = FLOOR + 6
+    for k in range(80):                                                    # 畳の上を這う配線（宙には浮かせない）
+        c = rnd.choice(cols)
+        x0 = rnd.randint(-60, W + 60)
+        y0 = rnd.randint(floor_top, H)
+        x1 = rnd.randint(-60, W + 60)
+        y1 = rnd.randint(floor_top, H)
+        xm = (x0 + x1) / 2 + rnd.randint(-160, 160)
+        ym = rnd.randint(floor_top, H)
+        d.line([(x0, y0), (xm, ym), (x1, y1)], fill=c, width=rnd.choice((3, 4, 5)), joint="curve")
+    for k in range(26):                                                    # 外したリレー（畳の上）
+        x, y = rnd.randint(80, W - 120), rnd.randint(floor_top + 10, H - 40)
+        d.rectangle([x, y, x + 26, y + 30], fill=(36, 36, 38))
+        d.rectangle([x + 6, y + 4, x + 20, y + 22], fill=(184, 112, 62))
+    d.rectangle([1420, 960, 1700, 1050], fill=(170, 176, 170), outline=(110, 116, 110), width=4)  # 外したキーの部分
+    for r in range(2):
+        for c in range(5):
+            d.rectangle([1442 + c * 50, 974 + r * 34, 1478 + c * 50, 998 + r * 34], fill=(230, 226, 214))
+    d.rectangle([220, 970, 480, 1040], fill=(40, 44, 40), outline=(110, 116, 110), width=4)       # 外した表示の部分
+    return img
+
+
+def zashiki(yoru=False):
+    """畳の座敷。床の間に掛け軸と白い花（遺影は描かない）。yoru=True で夜の灯りの別の絵。"""
+    img = base((196, 186, 168), (160, 150, 134)) if not yoru else base((120, 108, 92), (78, 70, 62))
+    d = ImageDraw.Draw(img, "RGBA")
+    tatami_floor(img, FLOOR)
+    d.rectangle([720, 120, 1200, FLOOR - 4], fill=(170, 156, 132) if not yoru else (112, 100, 84),
+                outline=(96, 76, 56), width=12)                            # 床の間
+    d.rectangle([700, 100, 1220, 130], fill=(96, 76, 56))
+    d.rectangle([700, FLOOR - 70, 1220, FLOOR - 40], fill=(110, 84, 60))    # 床板
+    sx = 900 if not yoru else 880
+    d.rectangle([sx, 170, sx + 120, 640], fill=(232, 226, 210) if not yoru else (190, 182, 166))   # 掛け軸
+    d.rectangle([sx - 10, 160, sx + 130, 176], fill=(80, 60, 44))
+    d.rectangle([sx - 10, 634, sx + 130, 650], fill=(80, 60, 44))
+    if not yoru:
+        d.line([(sx + 40, 230), (sx + 60, 380), (sx + 50, 560)], fill=(60, 60, 60), width=8)   # 墨の一筆
+        for x in (790, 1130):                                              # 白い菊
+            d.rectangle([x - 18, 700, x + 18, FLOOR - 70], fill=(60, 70, 60))
+            for k in range(7):
+                fx, fy = x - 40 + (k % 4) * 26, 610 + (k // 4) * 40
+                d.ellipse([fx, fy, fx + 34, fy + 34], fill=(246, 244, 236))
+    else:
+        d.ellipse([sx + 30, 260, sx + 90, 320], outline=(70, 66, 60), width=6)   # 丸の一筆
+        d.rectangle([980, 760, 1040, FLOOR - 70], fill=(70, 80, 70))       # 白百合を一輪
+        d.line([(1010, 760), (1010, 620)], fill=(70, 110, 70), width=6)
+        d.polygon([(1010, 620), (980, 570), (1010, 590), (1040, 570)], fill=(246, 244, 236))
+        d.rectangle([380, 600, 470, 760], fill=(236, 220, 180), outline=(96, 76, 56), width=6)   # 行灯
+        d.rectangle([410, 760, 440, FLOOR], fill=(96, 76, 56))
+    out = img
+    if yoru:
+        _glow(out, 425, 680, 260, (255, 210, 140), 120)
+    return out.convert("RGB")
+
+
+def zashiki_yoru():
+    return zashiki(yoru=True)
+
+
+def setsumei_2dai():
+    """説明会の演台に、リレー式の81型と、研究中の電子式の電卓を並べた状態。"""
+    img = setsumei()
+    d = _d(img)
+    d.rectangle([700, 560, 1220, 700], fill=(130, 100, 72), outline=(100, 76, 54), width=4)   # 広げた演台
+    _big_calc(d, 820, 560, 0.62)                                           # 左: リレー式の81型
+    x0, x1, y0, y1 = 950, 1190, 430, 560                                   # 右: 研究中の電子式
+    d.rectangle([x0, y0, x1, y1], fill=(222, 214, 196), outline=(140, 132, 116), width=5)
+    d.rectangle([x0 + 18, y0 + 14, x1 - 18, y0 + 50], fill=(30, 26, 24))
+    for k in range(10):                                                    # 光る表示管
+        cx = x0 + 30 + k * 19
+        d.ellipse([cx, y0 + 21, cx + 11, y0 + 43], fill=(255, 150, 60))
+    for r in range(3):
+        for c in range(5):
+            kx, ky = x0 + 34 + c * 38, y0 + 62 + r * 22
+            d.rectangle([kx, ky, kx + 26, ky + 14], fill=(90, 92, 98))
+    _glow(img, 1070, y0 + 32, 70, (255, 170, 90), 90)
+    return img
+
+
+def bowling():
+    """1970年代のボウリング場。奥にピン、手前の小机に手書きのスコア用紙。"""
+    img = base((70, 96, 110), (52, 70, 82))
+    d = _d(img)
+    d.rectangle([0, 0, W, 90], fill=(236, 140, 60))                        # 70年代のオレンジの天井帯
+    back = 430
+    d.rectangle([0, back - 120, W, back], fill=(26, 30, 36))               # ピンの奥の暗がり
+    d.rectangle([0, back, W, H], fill=(196, 160, 112))                     # レーンの床
+    vx = W / 2
+    for i in range(-4, 5):                                                 # 遠近のレーンの溝
+        xb = vx + i * 520
+        xt = vx + i * 150
+        d.line([(xt, back), (xb, H)], fill=(120, 96, 66), width=8)
+    for lane in (-1, 0, 1):                                                # ピン（三角に10本）
+        cx = vx + lane * 150 + 75 * (1 if lane >= 0 else -1) * 0 + (75 if lane == 0 else 0) - 75
+        cx = vx + (lane - 0.5) * 150 + 75
+        for row in range(4):
+            for j in range(row + 1):
+                px = cx + (j - row / 2) * 22
+                py = back - 18 - (3 - row) * 12
+                d.ellipse([px - 7, py - 22, px + 7, py], fill=(246, 244, 238))
+                d.line([(px - 6, py - 15), (px + 6, py - 15)], fill=(200, 40, 40), width=2)
+    for x, c in ((220, (40, 80, 160)), (300, (160, 40, 40)), (380, (30, 30, 30))):   # 球を戻す台
+        d.ellipse([x, 700, x + 70, 770], fill=c)
+    d.rectangle([180, 770, 480, 800], fill=(90, 90, 96))
+    d.rectangle([780, 760, 1140, 800], fill=(120, 96, 72))                 # 手前の小机とスコア用紙
+    d.rectangle([800, 790, 830, FLOOR], fill=(96, 76, 58))
+    d.rectangle([1090, 790, 1120, FLOOR], fill=(96, 76, 58))
+    d.polygon([(830, 700), (1090, 700), (1110, 762), (810, 762)], fill=(248, 246, 238), outline=(150, 146, 136))
+    for k in range(1, 10):
+        x = 830 + k * 26
+        d.line([(x, 702), (x + 2, 760)], fill=(150, 146, 136), width=2)
+    d.line([(822, 730), (1100, 730)], fill=(150, 146, 136), width=2)
+    for k in range(6):                                                     # 書きなぐった数字の跡
+        x = 838 + k * 26
+        d.line([(x, 740), (x + 10, 752)], fill=(60, 60, 140), width=3)
+    return img
+
+
+def ousetsu():
+    """1970年代の会社の応接室。壁の真ん中に丸い掛け時計、ソファと低い机。"""
+    img = base((226, 216, 196), (198, 186, 164))
+    d = _d(img)
+    wood_floor(img, FLOOR, col=(120, 92, 66), line=(100, 76, 54))
+    d.rectangle([0, 600, W, FLOOR], fill=(150, 112, 76))                   # 腰の板張り
+    for x in range(0, W, 120):
+        d.line([(x, 600), (x, FLOOR)], fill=(128, 94, 62), width=3)
+    cx, cy, r = 960, 300, 120                                              # 丸い掛け時計
+    d.ellipse([cx - r - 14, cy - r - 14, cx + r + 14, cy + r + 14], fill=(110, 80, 52))
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(248, 246, 238))
+    import math
+    for i in range(12):
+        a = i / 12 * 2 * math.pi
+        d.line([(cx + (r - 22) * math.sin(a), cy - (r - 22) * math.cos(a)),
+                (cx + (r - 8) * math.sin(a), cy - (r - 8) * math.cos(a))], fill=(60, 56, 52), width=6)
+    d.line([(cx, cy), (cx + 60, cy - 30)], fill=(40, 40, 40), width=8)
+    d.line([(cx, cy), (cx - 10, cy - 90)], fill=(40, 40, 40), width=5)
+    d.rounded_rectangle([640, 640, 1280, 780], radius=30, fill=(130, 70, 50))     # ソファ
+    d.rounded_rectangle([620, 700, 1300, 840], radius=24, fill=(150, 82, 58))
+    d.rectangle([760, 860, 1160, 900], fill=(90, 66, 46))                  # 低い机
+    d.rectangle([780, 900, 800, FLOOR + 30], fill=(70, 52, 36))
+    d.rectangle([1120, 900, 1140, FLOOR + 30], fill=(70, 52, 36))
+    for x in (860, 1020):                                                  # 湯のみ
+        d.rectangle([x, 830, x + 30, 860], fill=(236, 230, 214))
+    return img
+
+
+def gakki():
+    """1970年代末の開発室。作業台に試作の鍵盤、棚にオシロスコープ。"""
+    img = base((214, 218, 220), (186, 190, 194))
+    d = _d(img)
+    wood_floor(img, FLOOR, col=(140, 136, 128), line=(120, 116, 108))
+    d.rectangle([560, 140, 1360, 480], fill=(196, 182, 150))               # 有孔ボード
+    for y in range(160, 480, 30):
+        for x in range(580, 1360, 30):
+            d.ellipse([x, y, x + 6, y + 6], fill=(150, 136, 108))
+    d.rectangle([600, 360, 1320, 380], fill=(110, 96, 80))                 # 棚
+    d.rectangle([660, 240, 860, 360], fill=(80, 86, 92), outline=(50, 54, 58), width=4)   # オシロスコープ
+    d.rectangle([680, 256, 800, 340], fill=(20, 40, 30))
+    import math
+    pts = [(684 + t, 298 - 26 * math.exp(-t / 40) * math.sin(t / 4)) for t in range(0, 112, 2)]
+    d.line(pts, fill=(110, 255, 150), width=3)
+    d.rectangle([1100, 250, 1220, 360], fill=(60, 56, 52))                 # スピーカー
+    d.ellipse([1124, 270, 1196, 342], fill=(30, 28, 26))
+    d.rectangle([600, 640, 1320, 680], fill=(130, 110, 86))                # 作業台
+    d.rectangle([630, 680, 670, FLOOR], fill=(100, 84, 66))
+    d.rectangle([1250, 680, 1290, FLOOR], fill=(100, 84, 66))
+    kx0, kx1, ky0, ky1 = 680, 1240, 560, 640                               # 試作の鍵盤
+    d.rectangle([kx0 - 20, ky0 - 30, kx1 + 20, ky1], fill=(70, 72, 78))
+    n = 28
+    w = (kx1 - kx0) / n
+    for i in range(n):
+        d.rectangle([kx0 + i * w, ky0, kx0 + (i + 1) * w - 2, ky1 - 4], fill=(246, 246, 242))
+    for i in range(n - 1):
+        if i % 7 in (0, 1, 3, 4, 5):
+            bx = kx0 + (i + 1) * w - w * 0.3
+            d.rectangle([bx, ky0, bx + w * 0.6, ky0 + 46], fill=(30, 30, 34))
+    d.line([(1240, 600), (1300, 640), (1330, 700)], fill=(30, 30, 30), width=5)    # 配線
+    return img
+
+
+LOCATIONS.update({
+    "cs_hotel_haisen": hotel_haisen,
+    "cs_ima3": ima3, "cs_shousha_shisaku": shousha_shisaku, "cs_koba_haisen": koba_haisen,
+    "cs_koba_yama": koba_yama, "cs_toko": toko, "cs_soko": soko, "cs_soko_yama": soko_yama,
+    "cs_setsumei_denshi": setsumei_2dai, "cs_bunguten": bunguten, "cs_bunguten_kara": bunguten_kara,
+    "cs_zashiki": zashiki, "cs_hamura_yoru": hamura_yoru, "cs_hamura_asa": hamura_asa,
+    "cs_zashiki_yoru": zashiki_yoru, "cs_bowling": bowling, "cs_ousetsu": ousetsu, "cs_gakki": gakki,
+})
+CARDS += ["1974", "1988"]
+
+
 def year_card(text: str) -> Image.Image:
     """黒地に年号だけのカード。キャラと同居させない単独シーンで使う。"""
     img = Image.new("RGB", (W, H), (18, 18, 20))

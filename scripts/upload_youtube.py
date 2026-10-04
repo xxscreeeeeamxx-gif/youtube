@@ -399,11 +399,11 @@ PLAYLISTS = {
                "calpis", "karaoke",
                # 未実測・公開順（予約分は公開されるまで同期で自動的に見送られる）
                "naito-tower", "yoshinoya-abe", "honda-seiroku", "mosquito-coil-v2",
-               "yakult-shirota", "glico-ezaki", "mikimoto-pearl", "casio-kashio",
-               "furuno-fishfinder", "kimuraya-anpan", "sugiyo-kanikama",
-               "othello-hasegawa", "sony-walkman", "masaki-pencil",
-               "tamagotchi-yokoi", "ohira-megastar", "iwasaki-sample",
-               "yagi-uda-antenna", "kobori-airbag-v2", "fujisawa-supercub-v2",
+               "yakult-shirota", "glico-ezaki", "mikimoto-pearl", "casio-kashio-v2",
+               "furuno-fishfinder-v2", "kimuraya-anpan-v2", "sugiyo-kanikama-v2",
+               "othello-hasegawa-v2", "sony-walkman-v2", "masaki-pencil-v2",
+               "tamagotchi-yokoi-v2", "ohira-megastar-v2", "iwasaki-sample-v2",
+               "yagi-uda-antenna-v2", "kobori-airbag-v2", "fujisawa-supercub-v2",
                "frixion-metamo-v2", "famicom-uemura-v2", "matsushita-socket",
                "sanyo-end", "godzilla-tsuburaya", "yamaha-torakusu"]),
     # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
@@ -421,7 +421,7 @@ PLAYLISTS = {
                "honda-soichiro", "toyoda-kiichiro", "ishibashi-bridgestone",
                "tateishi-omron", "onitsuka-asics", "torii-whisky",
                "takahashi-urayasu", "calpis", "ykk", "yakult-shirota",
-               "glico-ezaki", "mikimoto-pearl", "casio-kashio",
+               "glico-ezaki", "mikimoto-pearl", "casio-kashio-v2",
                "fujisawa-supercub-v2", "matsushita-socket", "sanyo-end",
                "yamaha-torakusu"]),
     "play": dict(
@@ -430,7 +430,7 @@ PLAYLISTS = {
              "試作から世界に広がるまでを、ずんだもんが当人を演じる再現ドラマでたどります。",
         follow_main=True,
         slugs=["yokoi-gunpei", "yamauchi-nintendo", "purikura-meme", "karaoke",
-               "othello-hasegawa", "tamagotchi-yokoi", "famicom-uemura-v2"]),
+               "othello-hasegawa-v2", "tamagotchi-yokoi-v2", "famicom-uemura-v2"]),
     "food": dict(
         title="食べ物と飲み物の誕生｜ずんだもん再現ドラマ",
         desc="カップ麺、味の素、カルピス。毎日口にしているものにも、最初に作った人がいます。"
@@ -438,7 +438,7 @@ PLAYLISTS = {
         follow_main=True,
         slugs=["momofuku-meme", "kaiten-meme", "ajinomoto", "torii-whisky",
                "calpis", "yoshinoya-abe", "yakult-shirota", "glico-ezaki",
-               "kimuraya-anpan", "sugiyo-kanikama", "iwasaki-sample"]),
+               "kimuraya-anpan-v2", "sugiyo-kanikama-v2", "iwasaki-sample-v2"]),
     "vehicle": dict(
         title="クルマと乗り物の誕生｜ずんだもん再現ドラマ",
         desc="スバル360、ロータリーエンジン、新幹線。戦後の日本で乗り物を作った"

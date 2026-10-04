@@ -2769,6 +2769,22 @@ def p_csrelay(d, s):
                         outline=(120, 70, 36), width=int(s * 0.008))
 
 
+def p_csmini(d, s):
+    """手のひらサイズの電卓。緑の数字窓と4列のキー。"""
+    d.rounded_rectangle([s * 0.24, s * 0.10, s * 0.76, s * 0.92], radius=int(s * 0.04),
+                        fill=(70, 74, 80), outline=(40, 42, 46), width=int(s * 0.014))
+    d.rectangle([s * 0.30, s * 0.17, s * 0.70, s * 0.32], fill=(24, 40, 30))
+    for i in range(6):
+        x = 0.33 + i * 0.06
+        d.rectangle([s * x, s * 0.21, s * (x + 0.035), s * 0.28], fill=(90, 230, 150))
+    for r in range(5):
+        for c in range(4):
+            x, y = 0.30 + c * 0.10, 0.40 + r * 0.10
+            col = (230, 120, 60) if c == 3 else (226, 226, 220)
+            d.rounded_rectangle([s * x, s * y, s * (x + 0.08), s * (y + 0.075)],
+                                radius=int(s * 0.012), fill=col)
+
+
 def p_frnoise(d, s):
     """雑音だらけの記録紙。線がぐちゃぐちゃ。"""
     d.rectangle([s * 0.08, s * 0.16, s * 0.92, s * 0.88], fill=(236, 230, 210), outline=(150, 140, 120),
@@ -3581,6 +3597,11 @@ SPECS = {
         _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
         _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
     ]),
+    "iwasaki-sample-v2": dict(layout="panels", headline="食品サンプルの元は妻のオムレツ",
+        head_hi="妻のオムレツ", panels=[
+        _p("p_sprou", "少年時代 郡上八幡", SLATE, "surprised", "花になったのだ！", "水に落ちたロウ"),
+        _p("p_spomu", "1932年 第1号", RED, "happy", "シワまで写すのだ", "本物と見分けがつかない"),
+    ]),
     "famicom-uemura": dict(layout="panels", headline="発売の年末、ファミコン全品回収",
         head_hi="全品回収", panels=[
         _p("p_fcphone", "1981年 夜の電話", SLATE, "thinking", "3年なんて無理なのだ", "社長から家に電話"),
@@ -3646,7 +3667,17 @@ SPECS = {
         _p("p_ygant", "1926年 仙台", SLATE, "happy", "遠くまで届くのだ", "棒を並べただけ"),
         _p("p_ygradar", "1942年 シンガポール", RED, "surprised", "日本の発明なのだ！", "敵のレーダーの部品"),
     ]),
+    "yagi-uda-antenna-v2": dict(layout="panels", headline="八木アンテナを敵から教わった",
+        head_hi="敵から教わった", panels=[
+        _p("p_ygant", "1926年 仙台", SLATE, "happy", "遠くまで届くのだ", "棒を並べただけ"),
+        _p("p_ygradar", "1942年 シンガポール", RED, "surprised", "日本の発明なのだ！", "敵のレーダーの部品"),
+    ]),
     "ohira-megastar": dict(layout="panels", headline="プラネタリウムを7畳間で作った",
+        head_hi="7畳間", panels=[
+        _p("p_mgroom", "1996年 実家の自室", SLATE, "thinking", "自分で作るのだ", "会社員の趣味"),
+        _p("p_mgdome", "1998年 ロンドン", NAVY, "surprised", "100万個なのだ！", "パードン？と聞き返された"),
+    ]),
+    "ohira-megastar-v2": dict(layout="panels", headline="プラネタリウムを7畳間で作った",
         head_hi="7畳間", panels=[
         _p("p_mgroom", "1996年 実家の自室", SLATE, "thinking", "自分で作るのだ", "会社員の趣味"),
         _p("p_mgdome", "1998年 ロンドン", NAVY, "surprised", "100万個なのだ！", "パードン？と聞き返された"),
@@ -3656,7 +3687,17 @@ SPECS = {
         _p("p_tgfish", "1995年 パソコンの魚", SLATE, "thinking", "生きてるのだ", "人間と同じ時間"),
         _p("p_tgegg", "1996年 発売", RED, "surprised", "死んだのだ！？", "世話しないと死ぬ"),
     ]),
+    "tamagotchi-yokoi-v2": dict(layout="panels", headline="たまごっちはわざと死ぬ",
+        head_hi="わざと死ぬ", panels=[
+        _p("p_tgfish", "1995年 パソコンの魚", SLATE, "thinking", "生きてるのだ", "人間と同じ時間"),
+        _p("p_tgegg", "1996年 発売", RED, "surprised", "死んだのだ！？", "世話しないと死ぬ"),
+    ]),
     "masaki-pencil": dict(layout="panels", headline="三菱鉛筆は三菱じゃない",
+        head_hi="三菱じゃない", panels=[
+        _p("p_pcparis", "1878年 パリ", SLATE, "surprised", "なんなのだ？", "初めて見た鉛筆"),
+        _p("p_pcmark", "1903年", BROWN, "happy", "マークなのだ", "家紋と3本の鉛筆"),
+    ]),
+    "masaki-pencil-v2": dict(layout="panels", headline="三菱鉛筆は三菱じゃない",
         head_hi="三菱じゃない", panels=[
         _p("p_pcparis", "1878年 パリ", SLATE, "surprised", "なんなのだ？", "初めて見た鉛筆"),
         _p("p_pcmark", "1903年", BROWN, "happy", "マークなのだ", "家紋と3本の鉛筆"),
@@ -3666,7 +3707,17 @@ SPECS = {
         _p("p_wmheavy", "1978年", SLATE, "sad", "重すぎるのだ", "10万円の録音機"),
         _p("p_wmwalk", "1979年", TEAL, "happy", "歩いて聴けるのだ", "3万3000円"),
     ]),
+    "sony-walkman-v2": dict(layout="panels", headline="初代ウォークマンは録音できない",
+        head_hi="録音できない", panels=[
+        _p("p_wmheavy", "1978年", SLATE, "sad", "重すぎるのだ", "10万円の録音機"),
+        _p("p_wmwalk", "1979年", TEAL, "happy", "歩いて聴けるのだ", "3万3000円"),
+    ]),
     "othello-hasegawa": dict(layout="panels", headline="オセロの石は牛乳瓶のフタ",
+        head_hi="牛乳瓶のフタ", panels=[
+        _p("p_oscap", "1964年 試作品", BROWN, "thinking", "3枚重ねるのだ", "牛乳瓶の紙のフタ"),
+        _p("p_osboard", "1973年 発売", GREEN, "happy", "オセロなのだ", "フタと同じ大きさ"),
+    ]),
+    "othello-hasegawa-v2": dict(layout="panels", headline="オセロの石は牛乳瓶のフタ",
         head_hi="牛乳瓶のフタ", panels=[
         _p("p_oscap", "1964年 試作品", BROWN, "thinking", "3枚重ねるのだ", "牛乳瓶の紙のフタ"),
         _p("p_osboard", "1973年 発売", GREEN, "happy", "オセロなのだ", "フタと同じ大きさ"),
@@ -3676,8 +3727,18 @@ SPECS = {
         _p("p_kkjelly", "1970年 人工クラゲ", SLATE, "sad", "溶けたのだ", "味を付けると溶ける"),
         _p("p_kkstick", "1972年", RED, "happy", "カニなのだ", "刻んだらカニの身"),
     ]),
+    "sugiyo-kanikama-v2": dict(layout="panels", headline="カニカマはクラゲの失敗作",
+        head_hi="クラゲ", panels=[
+        _p("p_kkjelly", "1970年 人工クラゲ", SLATE, "sad", "溶けたのだ", "味を付けると溶ける"),
+        _p("p_kkstick", "1972年", RED, "happy", "カニなのだ", "刻んだらカニの身"),
+    ]),
     "kimuraya-anpan": dict(layout="panels", headline="あんぱんは酒の種で焼いた",
         head_hi="酒の種", panels=[
+        _p("p_anhard", "1869年 最初のパン", SLATE, "sad", "かたいのだ", "売れないパン"),
+        _p("p_anpan", "1874年", RED, "happy", "ふんわりなのだ", "酒まんじゅうの種"),
+    ]),
+    "kimuraya-anpan-v2": dict(layout="panels", headline="売れないパンが天皇の茶菓子に",
+        head_hi="天皇の茶菓子", panels=[
         _p("p_anhard", "1869年 最初のパン", SLATE, "sad", "かたいのだ", "売れないパン"),
         _p("p_anpan", "1874年", RED, "happy", "ふんわりなのだ", "酒まんじゅうの種"),
     ]),
@@ -3686,10 +3747,20 @@ SPECS = {
         _p("p_frnoise", "1947年 五島灘", SLATE, "sad", "ぐちゃぐちゃだ", "雑音で見えない"),
         _p("p_frschool", "1949年 岩瀬浦", TEAL, "happy", "港で一番なのだ", "最下位の船が1位"),
     ]),
+    "furuno-fishfinder-v2": dict(layout="panels", headline="「インチキ」と海に落とされた",
+        head_hi="インチキ", panels=[
+        _p("p_frnoise", "1948年 長崎", SLATE, "sad", "クラゲだったのだ…", "海へ放り込まれる"),
+        _p("p_frschool", "1949年 岩瀬浦", TEAL, "happy", "港で一番なのだ", "最下位の船が1位"),
+    ]),
     "casio-kashio": dict(layout="panels", headline="計算機は電話部品で作った",
         head_hi="電話部品", panels=[
         _p("p_csgear", "1949年 歯車の計算機", SLATE, "sad", "うるさいのだ", "車と同じ値段"),
         _p("p_csrelay", "1957年 14-A", TEAL, "happy", "静かなのだ", "リレー約340個"),
+    ]),
+    "casio-kashio-v2": dict(layout="panels", headline="動かない計算機が1000万台に",
+        head_hi="1000万台", panels=[
+        _p("p_csrelay", "1956年 札幌", SLATE, "sad", "動かないのだ…", "発表会の前の晩"),
+        _p("p_csmini", "1972年 カシオミニ", TEAL, "happy", "手のひらなのだ！", "シリーズ1000万台"),
     ]),
     "mikimoto-pearl": dict(layout="panels", headline="真珠は貝に作らせた",
         head_hi="作らせた", panels=[

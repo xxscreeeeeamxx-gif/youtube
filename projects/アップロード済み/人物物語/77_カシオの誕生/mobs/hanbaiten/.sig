@@ -1,0 +1,1 @@
+販売店主|none|none||v4|suit|#6a5a48|o1

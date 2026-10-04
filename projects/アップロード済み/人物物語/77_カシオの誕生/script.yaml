@@ -1,0 +1,1686 @@
+meta:
+  title: 【カシオの誕生】発表会で動かなかった計算機から、1000万台の電卓へ【ずんだもん解説】
+  slug: casio-kashio-v2
+  summary: 手のひらの電卓が生まれる前、計算機は自動車ほどの値段で、歯車の音を立てて動く機械でした。東京・三鷹の小さな町工場で、たばこを指輪にはめる道具を作っていた四兄弟が、なぜ計算機に挑んだのか。電話の交換機のスイッチで組み直した試作機は、札幌の発表会の前の晩に思わぬ事態に見舞われます。兄弟が家まで賭けた転機と、電卓戦争と呼ばれた時代を、再現ドラマでたどります。
+  tags:
+  - カシオ
+  - 電卓
+  - 樫尾俊雄
+  - 樫尾四兄弟
+  - カシオミニ
+  - 計算機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: 動かない計算機
+    bottom: カシオの誕生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: tadao
+    label: 長男・忠雄
+    voice: 13
+    pitch: -0.04
+    outfit: work
+    color: '#5f6656'
+  - id: tadao2
+    label: 社長・忠雄
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3e4450'
+  - id: kazuo
+    label: 三男・和雄
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a6e'
+  - id: chichi
+    label: 父・茂
+    voice: 42
+    pitch: 0.0
+    outfit: kimono
+    color: '#5a4a3a'
+  - id: hacchuu
+    label: 発注元
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#6b5a44'
+  - id: shousha
+    label: 商社の担当
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: taiyo
+    label: 出資元
+    voice: 42
+    pitch: 0.05
+    outfit: suit
+    color: '#4a4038'
+  - id: uchida
+    label: 内田洋行
+    voice: 42
+    pitch: -0.03
+    outfit: suit
+    color: '#3b3f4f'
+  - id: tantou
+    label: 内田の担当
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#5a5f6a'
+  - id: kouin
+    label: 工員
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#7a7560'
+  - id: hanbaiten
+    label: 販売店主
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#6a5a48'
+  - id: yakuin
+    label: 役員
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#26304a'
+  - id: bunguten
+    label: 文具店主
+    voice: 42
+    pitch: 0.08
+    outfit: apron
+    color: '#5d6b45'
+  - id: tokei
+    label: 時計会社
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#4a4a5a'
+  - id: gishi
+    label: 若手技術者
+    voice: 12
+    pitch: 0.02
+    outfit: labcoat
+  - id: buka
+    label: 開発部員
+    voice: 100
+    pitch: 0.04
+    outfit: labcoat
+    color: '#dfe6ee'
+scenes:
+- id: co_sapporo
+  title: ''
+  background: cs_hotel_haisen
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: sad}
+  - {who: kazuo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1956年の札幌。のちにカシオを作る兄弟が、宿で計算機の配線をつなぎ直していました。
+    reading: せんきゅうひゃく ごじゅうろくねんの さっぽろ。のちに かしおお つくる きょうだいが、やどで けいさんきの はいせんお つなぎなおして いました。
+  - speaker: kazuo
+    emotion: sad
+    text: 兄さん……もう、夜が明けます。
+  - speaker: zundamon
+    emotion: sad
+    text: 足し算は動いた。でも、かけ算と割り算が戻らないのだ……。
+  - speaker: kazuo
+    emotion: thinking
+    text: 発表会まで、あと数時間です。
+  - speaker: zundamon
+    emotion: sad
+    text: ……動かない分は、スライドで説明するしかない。
+    se: gaan
+  - speaker: reimu
+    text: この男は、樫尾俊雄。16年後、兄弟の会社は1万2800円の電卓を売り出します。
+    reading: この おとこわ かしお としお。じゅうろくねんご、きょうだいの かいしゃわ いちまん にせん はっぴゃくえんの でんたくお うりだします。
+  - speaker: reimu
+    text: カシオミニ。シリーズで、1000万台が作られました。
+    reading: かしおみに。しりーずで いっせんまんだいが つくられました。
+- id: hook
+  title: ''
+  background: cs_ima3
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ見て！ 100円の電卓、3台も買ったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 3台も、何に使うのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 1台が間違えたときの、答え合わせ用。
+  - speaker: tsumugi
+    emotion: angry
+    text: 間違えるのは、電卓じゃなくて押す人よ。
+    beat: true
+  - speaker: zundamon
+    emotion: surprised
+    text: 発表会で動かなかった計算機から、なんで1000万台も売れたの？
+    telops:
+    - {text: 動かなかった計算機が1000万台に？, size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、東京の町工場の四兄弟よ。
+- id: ch0_senban
+  title: 旋盤工の長男
+  background: cs_koba
+  bgm: hirusagari
+  stage:
+  - {who: tadao, x: 0.5, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 樫尾家は高知の出身です。関東大震災のあと、一家で東京へ移りました。
+    reading: かしおけわ こうちの しゅっしんです。かんとう だいしんさいの あと、いっかで とうきょうえ うつりました。
+  - speaker: reimu
+    text: 1931年。長男の忠雄は14歳で、旋盤工の見習いになります。
+    reading: せんきゅうひゃく さんじゅういちねん。ちょうなんの ただおわ じゅうよんさいで、せんばんこうの みならいに なります。
+  - speaker: tadao
+    emotion: happy
+    text: 鉄が、思ったとおりの形に削れていく……。
+  - speaker: tadao
+    emotion: happy
+    text: よし。これは、おれの天職だ。
+  - speaker: reimu
+    text: 次男の俊雄は15歳で電機学校を出て、国の逓信省の技術者になります。
+    reading: じなんの としおわ じゅうごさいで でんき がっこうお でて、くにの ていしんしょうの ぎじゅつしゃに なります。
+- id: ch0_kyujitsu
+  title: ''
+  background: cs_koba
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: tadao, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1942年に忠雄は独立し、自分の旋盤で仕事を始めていました。
+    reading: せんきゅうひゃく よんじゅうにねんに ただおわ どくりつし、じぶんの せんばんで しごとお はじめて いました。
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さん。今日は役所が休みだから、手伝いに来たよ。
+  - speaker: tadao
+    emotion: thinking
+    text: 休みの日くらい、家で寝てろ。
+  - speaker: zundamon
+    emotion: happy
+    text: 寝てるより、旋盤を見てるほうが面白いんだ。
+  - speaker: tadao
+    emotion: thinking
+    text: ……変わったやつだな。じゃあ、床の掃除からだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 手伝いって、掃除のほうなのだ？
+    beat: true
+  - speaker: reimu
+    text: 俊雄は1945年に、モールス信号を速く送る装置で特許を出願しています。
+    reading: としおわ せんきゅうひゃく よんじゅうごねんに、もーるす しんごうお はやく おくる そうちで とっきょお しゅつがん して います。
+- id: card1946
+  title: ''
+  background: cs_card_1946
+  cuts:
+  - speaker: reimu
+    text: 1946年。東京の三鷹で、長男の忠雄が樫尾製作所を開きます。
+    reading: せんきゅうひゃく よんじゅうろくねん。とうきょうの みたかで、ちょうなんの ただおが かしお せいさくしょお ひらきます。
+- id: ch1_koba
+  title: 役所を辞めた次男
+  background: cs_koba
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: normal}
+  - {who: tadao, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 兄さん。ボク、役所を辞めてきました。
+  - speaker: tadao
+    emotion: surprised
+    text: ……[は|はぁ]？
+  - speaker: zundamon
+    emotion: happy
+    text: 明日から、兄さんの工場で働かせてください。
+  - speaker: tadao
+    emotion: angry
+    text: ばか言え。役所の技術者なら、一生食うに困らんだろうが。
+  - speaker: zundamon
+    emotion: normal
+    text: もう、辞表は出しちゃいました。
+  - speaker: tadao
+    emotion: angry
+    text: 出してから相談するやつがあるか！
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さん。ボクが何か考えるから、兄さんがそれを作ればいい。
+  - speaker: tadao
+    emotion: thinking
+    text: ……うちは、顕微鏡の部品と歯車の下請けだぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: 下請けの仕事も、ちゃんとやります。そのうち、もっと面白い物を作るのだ。
+  - speaker: tadao
+    emotion: normal
+    text: ……しかたない。明日から来い。
+    beat: true
+  - speaker: reimu
+    text: 工場では、顕微鏡の部品や歯車を作りました。鍋や釜、電熱器や自転車のランプもです。
+    reading: こうじょうでわ、けんびきょうの ぶひんや はぐるまお つくりました。なべや かま、でんねつきや じてんしゃの らんぷもです。
+- id: ch1_nesage
+  title: 値下げを申し出る職人
+  background: cs_koba
+  stage:
+  - {who: tadao, x: 0.3, flip: true, emotion: normal}
+  - {who: hacchuu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tadao
+    emotion: normal
+    text: 鉄の玉を削る仕事ですが、1日50個が200個できるようになりました。
+  - speaker: hacchuu
+    emotion: happy
+    text: 4倍か。それは助かる。注文を増やそう。
+  - speaker: tadao
+    emotion: normal
+    text: ですから、1個あたりの値段を下げてください。
+  - speaker: hacchuu
+    emotion: surprised
+    text: ……値下げ？ こっちが頼むならともかく、あんたから？
+  - speaker: tadao
+    emotion: thinking
+    text: このままじゃ、うちがもうけすぎますから。
+  - speaker: hacchuu
+    emotion: thinking
+    text: 値段を下げに来る職人なんて、生まれて初めて見たよ。
+  - speaker: hacchuu
+    emotion: happy
+    text: '[樫尾|かしお]さん。あんたは、正直の上にばかがつくね。'
+    se: zukko
+  - speaker: reimu
+    text: 手間が減ったぶん、値段を下げる。忠雄は、そういう商売をする職人でした。
+    reading: てまが へった ぶん、ねだんお さげる。ただおわ そういう しょうばいお する しょくにんでした。
+- id: ch1_pipe
+  title: 指輪パイプ
+  background: cs_koba
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 父さん。たばこを差しこむ指輪を、考えたのだ。
+  - speaker: chichi
+    emotion: surprised
+    text: 指輪に、たばこ？ なんじゃそりゃ。
+  - speaker: zundamon
+    emotion: happy
+    text: 指にはめたまま吸えるから、両手で仕事ができるんだ。
+  - speaker: chichi
+    emotion: thinking
+    text: ふむ……。仕事をしながら、一服できるがか。
+  - speaker: zundamon
+    emotion: normal
+    text: 兄さんが、旋盤で削ってくれたんだ。
+  - speaker: chichi
+    emotion: happy
+    text: よし。わしが、売り歩いてくるき。
+  - speaker: reimu
+    text: 指輪パイプは、よく売れました。売り歩いたのは、父の茂です。
+    reading: ゆびわ ぱいぷわ よく うれました。うりあるいたのわ、ちちの しげるです。
+  - speaker: chichi
+    emotion: happy
+    text: '[俊雄|としお]。持って出た分は、みんな売れたぜよ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: もう！？ 兄さんに、今夜も旋盤を回してもらうのだ！
+  - speaker: chichi
+    emotion: happy
+    text: 明日は、倍持っていくき。まっこと、ええ指輪じゃ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……父さん、売るたびに一服してないよね？
+    beat: true
+  - speaker: reimu
+    text: このもうけが、のちの計算機づくりの元手になります。
+    reading: この もうけが、のちの けいさんき づくりの もとでに なります。
+- id: card1949
+  title: ''
+  background: cs_card_1949
+  cuts:
+  - speaker: reimu
+    text: 1949年。俊雄と忠雄は、銀座のビジネスショウを見に行きます。
+    reading: せんきゅうひゃく よんじゅうくねん。としおと ただおわ、ぎんざの びじねす しょうお みに いきます。
+- id: ch2_ginza
+  title: 歯車の計算機
+  background: cs_tenji0
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: surprised}
+  - {who: tadao, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 兄さん。あの機械、ガチャガチャうるさいね。
+  - speaker: tadao
+    emotion: normal
+    text: 外国の計算機だ。モーターで、歯車を回して計算してる。
+  - speaker: zundamon
+    emotion: thinking
+    text: かけ算ひとつに、ずいぶん待たされるな。
+  - speaker: tadao
+    emotion: thinking
+    text: 値段を聞いてきた。自動車が買えるぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 遅くてうるさいのに、自動車と同じ値段！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: 兄さん、計算機をやってみよう。
+  - speaker: tadao
+    emotion: surprised
+    text: ……うちで、計算機を？
+  - speaker: zundamon
+    emotion: happy
+    text: 歯車をやめて、電気で動かす。速くて静かな計算機を作るのだ。
+  - speaker: tadao
+    emotion: thinking
+    text: うちはその歯車を削って、食ってるんだぞ。
+    beat: true
+  - speaker: reimu
+    text: 歯車の計算機は、かけ算や割り算に平均で10秒ほどかかりました。
+    reading: はぐるまの けいさんきわ、かけざんや わりざんに へいきんで じゅうびょう ほど かかりました。
+  - speaker: reimu
+    text: 1950年に三男の和雄が、1952年に四男の幸雄が加わります。
+    reading: せんきゅうひゃく ごじゅうねんに さんなんの かずおが、せんきゅうひゃく ごじゅうにねんに よなんの ゆきおが くわわります。
+- id: card1954
+  title: ''
+  background: cs_card_1954
+  cuts:
+  - speaker: reimu
+    text: 1954年。兄弟は、最初の試作機を完成させます。
+    reading: せんきゅうひゃく ごじゅうよねん。きょうだいわ、さいしょの しさくきお かんせい させます。
+- id: ch3_shisaku
+  title: あと5年早ければ
+  background: cs_shousha_shisaku
+  bgm: curious
+  stage:
+  - {who: kazuo, x: 0.3, flip: true, emotion: happy}
+  - {who: shousha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 三男の和雄がオートバイを運転し、後ろの幸雄が抱えて商社へ運びます。
+    reading: さんなんの かずおが おーとばいお うんてんし、うしろの ゆきおが かかえて しょうしゃえ はこびます。
+  - speaker: kazuo
+    emotion: happy
+    text: 兄が作った30キロの計算機です。ぜひ、見てください。
+  - speaker: shousha
+    emotion: surprised
+    text: 30キロを、オートバイで？
+  - speaker: kazuo
+    emotion: normal
+    text: 弟が後ろで、ずっと抱えてました。
+  - speaker: shousha
+    emotion: thinking
+    text: 計算機より先に、弟さんの腕が壊れますよ。
+    beat: true
+  - speaker: shousha
+    emotion: normal
+    text: ほう……。モーターの音が、しませんね。
+  - speaker: kazuo
+    emotion: happy
+    text: 電磁石の力で動かす仕掛けです。歯車の機械より、ずっと静かです。
+  - speaker: shousha
+    emotion: normal
+    text: かけ算の答えにまたかける、[連乗|れんじょう]はできますか。
+  - speaker: kazuo
+    emotion: sad
+    text: ……それは、まだできません。
+  - speaker: shousha
+    emotion: thinking
+    text: 惜しいですね。あと5年早ければ、売れたでしょう。
+    se: chin
+  - speaker: kazuo
+    emotion: sad
+    text: 5年前のうちは、指輪パイプを削ってました……。
+- id: ch3_relay
+  title: 電話のスイッチで計算
+  background: cs_koba
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: thinking}
+  - {who: tadao, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1956年。連乗もできるように直し、量産はもう目の前でした。
+    reading: せんきゅうひゃく ごじゅうろくねん。れんじょうも できるように なおし、りょうさんわ もう めのまえでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: 兄さん。昨日のボクは、ばかだったのだ。
+  - speaker: tadao
+    emotion: surprised
+    text: 朝から、[何|なん]の話だ。
+  - speaker: zundamon
+    emotion: normal
+    text: この計算機、最初から作り直したいんです。
+  - speaker: tadao
+    emotion: angry
+    text: 今からか！ 量産の準備は、もう始めてるんだぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 準備は、昨日のボクがしたことなので。
+  - speaker: tadao
+    emotion: angry
+    text: 都合のいいときだけ、昨日の自分のせいにするな！
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 機械で動く部分が、複雑すぎるんです。これじゃ、たくさん作れません。
+  - speaker: tadao
+    emotion: thinking
+    text: じゃあ、[何|なに]で作るんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: リレーです。電話の交換機に、山ほど入ってるスイッチです。
+  - speaker: tadao
+    emotion: surprised
+    text: 電話のスイッチで、計算ができるのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 電気を流すと電磁石が板を引き寄せて、別の回路がつながるんです。
+  - speaker: tadao
+    emotion: surprised
+    text: ……電気が、電気のスイッチを押すのか。
+  - speaker: zundamon
+    emotion: happy
+    text: 動くのは小さな板だけ。歯車も、モーターも要らない。
+  - speaker: tadao
+    emotion: thinking
+    text: スイッチだけで、どうやって数字を覚える。
+  - speaker: zundamon
+    emotion: normal
+    text: 入ってるか、切れてるか。その組み合わせで、数字を表します。
+  - speaker: zundamon
+    emotion: normal
+    text: 5の玉があるかないかと、残りの玉で1けたを表すんです。
+  - speaker: tadao
+    emotion: surprised
+    text: ……そろばんか。それなら、おれにも分かる。
+  - speaker: zundamon
+    emotion: happy
+    text: そろばんの玉を、電気で動かすのだ。
+  - speaker: tadao
+    emotion: normal
+    text: ……分かった。一からやり直しだ。
+    telops:
+    - {text: 電話のスイッチで一から作り直す, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 昨日のおれはばかだった。前の考えをすぐ捨てるこの言葉は、俊雄の口ぐせでした。
+    reading: きのうの おれわ ばかだった。まえの かんがえお すぐ すてる この ことばわ、としおの くちぐせでした。
+- id: card1956
+  title: ''
+  background: cs_card_1956
+  cuts:
+  - speaker: reimu
+    text: 1956年。札幌で、リレー式計算機の発表会が開かれます。
+    reading: せんきゅうひゃく ごじゅうろくねん。さっぽろで、りれーしき けいさんきの はっぴょうかいが ひらかれます。
+- id: ch4_haneda
+  title: 札幌で動かない
+  background: cs_haneda
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: kazuo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 開発のお金を出していたのは、札幌の大洋セールスという会社でした。
+    reading: かいはつの おかねお だして いたのわ、さっぽろの たいよう せーるすと いう かいしゃでした。
+  - speaker: kazuo
+    emotion: surprised
+    text: 兄さん。この大きさだと、飛行機に積めないと言われました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 積めない！？ ここまで来て！？
+  - speaker: kazuo
+    emotion: thinking
+    text: キーと表示の部分を外して、別に送りましょう。
+  - speaker: zundamon
+    emotion: sad
+    text: ……外したら、向こうでつなぎ直すのか。
+  - speaker: kazuo
+    emotion: normal
+    text: 兄さんなら、配線は全部頭に入ってますよね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 入ってる。……たぶん。
+    beat: true
+- id: ch4_yoru
+  title: ''
+  background: cs_hotel
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: normal}
+  - {who: kazuo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 札幌の宿。発表会の前の晩です。
+    reading: さっぽろの やど。はっぴょうかいの まえの ばんです。
+  - speaker: zundamon
+    emotion: normal
+    text: よし、つなぎ直すぞ。まずは、この束からだ。
+  - speaker: kazuo
+    emotion: thinking
+    text: 兄さん。その線は、どこにつなぐんです？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……どこだったかな。
+  - speaker: kazuo
+    emotion: surprised
+    text: 頭に入ってるって、言いましたよね！？
+    se: tenten
+  - speaker: zundamon
+    emotion: sad
+    text: 入ってる。入ってるけど、出てこないのだ。
+  - speaker: zundamon
+    emotion: angry
+    text: 全部外して、一本ずつ確かめるぞ！
+    background: cs_hotel_haisen
+  - speaker: kazuo
+    emotion: surprised
+    text: 部屋じゅう、線だらけですよ……。
+  - speaker: kazuo
+    emotion: thinking
+    text: 兄さん、足の下のは踏まないでくださいね。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……今、何か踏んだのだ。
+  - speaker: kazuo
+    emotion: sad
+    text: それ、僕の足です。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 足し算……動いた！
+  - speaker: kazuo
+    emotion: happy
+    text: 動きましたね！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……かけ算と割り算が、戻らない。
+  - speaker: kazuo
+    emotion: sad
+    text: 兄さん……もう、夜が明けます。
+  - speaker: zundamon
+    emotion: sad
+    text: 動かない分は、スライドで説明するしかない。
+  - speaker: reimu
+    text: 会場からは、失望の声が上がりました。
+    reading: かいじょうからわ、しつぼうの こえが あがりました。
+- id: ch4_hadan
+  title: ''
+  background: cs_setsumei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: sad}
+  - {who: taiyo, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: taiyo
+    emotion: angry
+    text: '[樫尾|かしお]さん。お客さんの前で動かない機械は、売れません。'
+  - speaker: zundamon
+    emotion: sad
+    text: 東京では、ちゃんと動いていたんです。
+  - speaker: taiyo
+    emotion: angry
+    text: 東京で動いても、札幌のお客さんは見に行けませんよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……返す言葉も、ありません。
+    se: shobon
+  - speaker: taiyo
+    emotion: normal
+    text: 残念ですが、これ以上のお[金|かね]は出せません。
+  - speaker: reimu
+    text: 大洋セールスとの話は、ここで立ち消えになりました。
+    reading: たいよう せーるすとの はなしわ、ここで たちぎえに なりました。
+- id: ch4_bane
+  title: ''
+  background: cs_koba
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: thinking}
+  - {who: kazuo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: kazuo
+    emotion: sad
+    text: 兄さん……。お[金|かね]を出してくれる所が、なくなりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[和雄|かずお]。バネは、縮みきったら次は伸びるしかないのだ。'
+  - speaker: kazuo
+    emotion: thinking
+    text: ……今が、一番縮んでるってことですか。
+  - speaker: zundamon
+    emotion: happy
+    text: そう。ここから、一気に伸ばす。
+  - speaker: kazuo
+    emotion: thinking
+    text: 伸びる前に、折れないといいですけど。
+    beat: true
+- id: ch4_uchida
+  title: 名乗り出た商社
+  background: cs_koba
+  bgm: you_and_me
+  stage:
+  - {who: tadao, x: 0.3, flip: true, emotion: thinking}
+  - {who: uchida, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: uchida
+    emotion: happy
+    text: '[樫尾|かしお]さん。あの計算機、うちでぜひ扱わせてください。'
+  - speaker: tadao
+    emotion: surprised
+    text: 札幌では、動かなかった機械ですよ。
+  - speaker: uchida
+    emotion: normal
+    text: 創業のころ、顕微鏡の部品でお取引がありました。[樫尾|かしお]さんの部品は、確かでしたから。
+  - speaker: tadao
+    emotion: happy
+    text: ……ありがとうございます。
+  - speaker: tadao
+    emotion: normal
+    text: もうけすぎたら、こっちから値下げを言いますからね。
+  - speaker: uchida
+    emotion: thinking
+    text: ……それは、ぜひ契約書に書いておきましょう。
+    beat: true
+  - speaker: reimu
+    text: 事務機の商社、内田洋行が名乗り出ます。顕微鏡の部品で得た信頼が、ここで生きました。
+    reading: じむきの しょうしゃ うちだようこうが なのりでます。けんびきょうの ぶひんで えた しんらいが、ここで いきました。
+- id: card1957
+  title: ''
+  background: cs_card_1957
+  cuts:
+  - speaker: reimu
+    text: 1957年6月。兄弟は、樫尾計算機という会社を作ります。
+    reading: せんきゅうひゃく ごじゅうななねん ろくがつ。きょうだいわ、かしお けいさんきと いう かいしゃお つくります。
+- id: ch5_kaisha
+  title: 父が社長の会社
+  background: cs_jimusho
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: chichi, x: 0.56, emotion: normal}
+  - {who: tadao, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: tadao
+    emotion: normal
+    text: 父さん。新しい会社の社長は、父さんにお願いします。
+  - speaker: chichi
+    emotion: surprised
+    text: わしが社長かえ！？ 計算機のことは、なんちゃあ分からんぜよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 計算機はボクが作る。売るのは[和雄|かずお]、作る段取りは[幸雄|ゆきお]だ。
+  - speaker: tadao
+    emotion: normal
+    text: おれは、お[金|かね]の勘定を受け持ちます。
+  - speaker: chichi
+    emotion: thinking
+    text: ほんなら、わしは何をするがじゃ。
+  - speaker: zundamon
+    emotion: happy
+    text: 社長の席に、どんと座っててください。
+  - speaker: chichi
+    emotion: happy
+    text: 座るだけなら、指輪パイプを売り歩くより楽じゃのう。
+    beat: true
+  - speaker: reimu
+    text: 資本金は20万円で、社員は20人。社長には、父の茂が就きました。
+    reading: しほんきんわ にじゅうまんえんで、しゃいんわ にじゅうにん。しゃちょうにわ、ちちの しげるが つきました。
+  - speaker: reimu
+    text: 最初の商品は14-A。値段は48万5000円でした。
+    reading: さいしょの しょうひんわ じゅうよん えー。ねだんわ よんじゅうはちまん ごせんえんでした。
+    telops:
+    - {text: 14-A 48万5000円, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch5_happyo
+  title: ''
+  background: cs_tenji
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: uchida, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1957年11月。東京の大手町で、14-Aの発表会が開かれます。
+    reading: せんきゅうひゃく ごじゅうななねん じゅういちがつ。とうきょうの おおてまちで、じゅうよん えーの はっぴょうかいが ひらかれます。
+  - speaker: uchida
+    emotion: surprised
+    text: '[樫尾|かしお]さん。かけ算が、もう終わったんですか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 歯車がないから、待たなくていいんです。
+  - speaker: uchida
+    emotion: surprised
+    text: 音も、カシャカシャと小さいだけですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 今度は、ちゃんと動いたのだ！
+    se: jaan
+  - speaker: uchida
+    emotion: happy
+    text: 札幌の分まで、取り返しましたね。
+  - speaker: uchida
+    emotion: happy
+    text: 官庁のお客さんも大きな会社のお客さんも、大喜びですよ。
+  - speaker: reimu
+    text: 14-Aはリレーをおよそ340個使い、重さは100キロを超えました。
+    reading: じゅうよん えーわ りれーお およそ さんびゃく よんじゅっこ つかい、おもさわ ひゃっきろお こえました。
+  - speaker: reimu
+    text: 数字のキーを10個並べる今の電卓の打ち方を、14-Aはもう取り入れていました。
+    reading: すうじの きーお じゅっこ ならべる いまの でんたくの うちかたお、じゅうよん えーわ もう とりいれて いました。
+- id: ch5_haisen
+  title: 名字で覚える配線
+  background: cs_koba_haisen
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: normal}
+  - {who: kouin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: はじめのころ、作れたのはひと月に20台ほどでした。
+    reading: はじめの ころ、つくれたのわ ひとつきに にじゅうだい ほどでした。
+  - speaker: kouin
+    emotion: thinking
+    text: '[樫尾|かしお]さん。線が多すぎて、どれがどれだか分かりません。'
+  - speaker: zundamon
+    emotion: normal
+    text: 線に、色のついたゴムをかぶせよう。
+  - speaker: kouin
+    emotion: thinking
+    text: 色が10色もあったら、順番を覚えられませんよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 語呂で覚えるのだ。カシオキミムクチダネ。
+  - speaker: kouin
+    emotion: surprised
+    text: ……[樫尾|かしお]、[君|きみ]無口だね？
+  - speaker: zundamon
+    emotion: happy
+    text: カは赤。シは白。オは青。キは黄色だ。
+  - speaker: kouin
+    emotion: thinking
+    text: 赤は、アカですよね？
+  - speaker: zundamon
+    emotion: normal
+    text: カシオのカが、赤なんだ。
+  - speaker: kouin
+    emotion: surprised
+    text: ご自分の名字で、覚えさせるんですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 名字なら、忘れようがないだろう。
+  - speaker: kouin
+    emotion: thinking
+    text: 毎日、[樫尾|かしお]さんに無口だねって言い続けるんですね……。
+    se: manuke
+  - speaker: reimu
+    text: スイッチの当たりを確かにする2つの接点は、四男の幸雄が考えました。
+    reading: すいっちの あたりお たしかに する ふたつの せってんわ、よなんの ゆきおが かんがえました。
+- id: ch5_taoreru
+  title: 倒れた発明家
+  background: cs_koba_haisen
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: thinking}
+  - {who: kouin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kouin
+    emotion: normal
+    text: '[樫尾|かしお]さん、この配線を見てください。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ……そこに置いといて。順番に見る。
+  - speaker: kouin
+    emotion: normal
+    text: それと、こっちの図面もお願いします。
+  - speaker: kouin
+    emotion: thinking
+    text: あと、検査の人たちも聞きたいことがあるそうで。
+    background: cs_koba_yama
+  - speaker: zundamon
+    emotion: sad
+    text: ……全部、ボクのところに来るのか。
+  - speaker: kouin
+    emotion: surprised
+    text: '[樫尾|かしお]さん？ 顔が真っ青ですよ……。'
+  - speaker: reimu
+    text: 技術の相談は、すべて俊雄ひとりに集まっていました。俊雄は、過労で倒れます。
+    reading: ぎじゅつの そうだんわ、すべて としお ひとりに あつまって いました。としおわ、かろうで たおれます。
+- id: ch5_toko
+  title: ''
+  background: cs_toko
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: sad}
+  - {who: tadao, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: tadao
+    emotion: thinking
+    text: 起きなくていい。今日は寝てろ。
+  - speaker: zundamon
+    emotion: sad
+    text: 兄さん……。工場は、どうなってますか。
+  - speaker: tadao
+    emotion: sad
+    text: お前ひとりに、相談を全部しょわせすぎた。
+  - speaker: tadao
+    emotion: normal
+    text: 今は[幸雄|ゆきお]が、お前の図面をみんなに教えてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ボクがいなくても、工場が回るのか。
+  - speaker: tadao
+    emotion: normal
+    text: 回るようにしとくから、安心して寝てろ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……それはそれで、ちょっと寂しいのだ。
+    beat: true
+  - speaker: tadao
+    emotion: happy
+    text: 寂しがるのは、治してからにしろ。
+  - speaker: reimu
+    text: 幸雄は図面を研究し、計算機の分かる社員を増やしていきました。
+    reading: ゆきおわ ずめんお けんきゅうし、けいさんきの わかる しゃいんお ふやして いきました。
+  - speaker: reimu
+    text: 1959年には平方根も出せる14-Bを売り出し、1960年に社名をカシオ計算機に改めます。
+    reading: せんきゅうひゃく ごじゅうくねんにわ へいほうこんも だせる じゅうよん びーお うりだし、せんきゅうひゃく ろくじゅうねんに しゃめいお かしお けいさんきに あらためます。
+  - speaker: reimu
+    text: 同じ年に忠雄が社長になり、社員はおよそ200人に増えていました。
+    reading: おなじ としに ただおが しゃちょうに なり、しゃいんわ およそ にひゃくにんに ふえて いました。
+- id: card1964
+  title: ''
+  background: cs_card_1964
+  cuts:
+  - speaker: reimu
+    text: 1964年。トランジスタを使う電子式の計算機が、次々に現れます。
+    reading: せんきゅうひゃく ろくじゅうよねん。とらんじすたお つかう でんししきの けいさんきが、つぎつぎに あらわれます。
+- id: ch6_soko
+  title: 倉庫に積もる計算機
+  background: cs_soko
+  bgm: serious
+  stage:
+  - {who: kazuo, x: 0.3, flip: true, emotion: happy}
+  - {who: tantou, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 業績が伸びるなか、四兄弟はゴルフに夢中になり2日に1回はコースに出ていました。
+    reading: ぎょうせきが のびる なか、よんきょうだいわ ごるふに むちゅうに なり ふつかに いっかいわ こーすに でて いました。
+  - speaker: tantou
+    emotion: thinking
+    text: '[和雄|かずお]さん。ちょっと、倉庫を見てもらえますか。'
+  - speaker: kazuo
+    emotion: happy
+    text: このあと兄弟でゴルフなんで、手短にお願いします。
+  - speaker: tantou
+    emotion: angry
+    text: '[和雄|かずお]さん。ゴルフの話は、倉庫を見てからにしてください。'
+    beat: true
+  - speaker: kazuo
+    emotion: surprised
+    text: これ……全部、うちの計算機ですか。
+  - speaker: tantou
+    emotion: normal
+    text: リレー式が、売れ残ってるんです。奥の棚も、その上もです。
+    background: cs_soko_yama
+  - speaker: kazuo
+    emotion: sad
+    text: 天井まで、うちの計算機だ……。
+  - speaker: tantou
+    emotion: thinking
+    text: お客さんは、よその電子式を待ってるんですよ。
+  - speaker: kazuo
+    emotion: thinking
+    text: うちの新しい81型は、前の5倍速いんですが。
+  - speaker: tantou
+    emotion: sad
+    text: 5倍速いリレーより、音のしない電子式なんです。
+    se: gaan
+  - speaker: kazuo
+    emotion: sad
+    text: ……それでも兄さんは、81型で行くって言うだろうな。
+- id: ch6_setsumei
+  title: 開発途中の電子式
+  background: cs_setsumei_denshi
+  bgm: kinakusai
+  stage:
+  - {who: kazuo, x: 0.3, flip: true, emotion: normal}
+  - {who: hanbaiten, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1965年の春。和雄と幸雄は、販売店の人たちに81型の説明会を開きます。
+    reading: せんきゅうひゃく ろくじゅうごねんの はる。かずおと ゆきおわ、はんばいてんの ひとたちに はちじゅういちがたの せつめいかいお ひらきます。
+  - speaker: hanbaiten
+    emotion: thinking
+    text: '[樫尾|かしお]さん。今さらリレーの新型かい。'
+  - speaker: kazuo
+    emotion: normal
+    text: 前の5倍の速さで計算できるんです。
+  - speaker: hanbaiten
+    emotion: thinking
+    text: そういう時代じゃないよ。……もう帰ろうか。
+  - speaker: kazuo
+    emotion: surprised
+    text: 待ってください！ うちで研究中の電卓を、お見せします。
+  - speaker: hanbaiten
+    emotion: surprised
+    text: 途中の物を、客の前に出すのかい。
+  - speaker: kazuo
+    emotion: normal
+    text: 弟の[幸雄|ゆきお]が、実際に計算してみせます。
+  - speaker: hanbaiten
+    emotion: surprised
+    text: ……音がしない。もう、答えが出てる。
+  - speaker: kazuo
+    emotion: happy
+    text: 81型と同じ、10けたの計算ができます。
+  - speaker: hanbaiten
+    emotion: happy
+    text: ……分かった。[樫尾|かしお]さん、これでいきましょう！
+  - speaker: reimu
+    text: 電卓を見せたのは、和雄のとっさの判断でした。
+    reading: でんたくお みせたのわ、かずおの とっさの はんだんでした。
+- id: ch6_yameru
+  title: ''
+  background: cs_koba_haisen
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: kazuo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: '[和雄|かずお]、説明会はどうだった？ 81型は、前の5倍の速さだぞ。'
+  - speaker: kazuo
+    emotion: sad
+    text: 兄さん。販売店が飛びついたのは、81型じゃなくて研究中の電卓でした。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……81型じゃ、ないのか。
+  - speaker: zundamon
+    emotion: sad
+    text: 5倍速くしても、もう選んでもらえないのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……リレー式は、もうやめよう。電子式に、全部切り替える。
+  - speaker: kazuo
+    emotion: surprised
+    text: 兄さんの自慢の、リレーをですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 昨日のボクは、ばかだったのだ。
+  - speaker: kazuo
+    emotion: thinking
+    text: その口ぐせ、今日はやけに重いですね。
+    beat: true
+- id: ch6_tanpo
+  title: 家を担保に
+  background: cs_jimusho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 樫尾俊雄, emotion: normal}
+  - {who: tadao2, x: 0.56, emotion: thinking}
+  - {who: kazuo, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1965年6月。内田洋行は、総代理店の契約を打ち切ります。
+    reading: せんきゅうひゃく ろくじゅうごねん ろくがつ。うちだようこうわ、そうだいりてんの けいやくお うちきります。
+  - speaker: tadao2
+    emotion: thinking
+    text: 内田さんの倉庫の在庫は、うちで全部引き取る。
+  - speaker: kazuo
+    emotion: surprised
+    text: 全部って……そんなお[金|かね]、どこにあるんです。
+  - speaker: tadao2
+    emotion: normal
+    text: 家と土地を、担保に入れた。
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: 兄さんの家を！？
+  - speaker: tadao2
+    emotion: thinking
+    text: 7年売れ続けて、ゴルフばかりだった。おれたちは、油断してたんだ。
+  - speaker: tadao2
+    emotion: normal
+    text: 電子式ができるまで、在庫を売ってしのぐ。
+  - speaker: kazuo
+    emotion: normal
+    text: 日本を4つに分けて、4人で販売店を回りましょう。
+  - speaker: tadao2
+    emotion: thinking
+    text: それと、借りてるビルからも出ていってくれとさ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 悪い知らせは、どうしてまとめて来るのだ……。
+    beat: true
+  - speaker: reimu
+    text: リレー式をやめると決めて、わずか4か月。1965年9月、カシオ初の電子式計算機001が出ます。
+    reading: りれーしきお やめると きめて、わずか よんかげつ。せんきゅうひゃく ろくじゅうごねん くがつ、かしお はつの でんししき けいさんき ぜろぜろいちが でます。
+    telops:
+    - {text: わずか4か月で電子式へ, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 値段は38万円、重さは17キロ。リレーの14-Aより、ずっと軽くなりました。
+    reading: ねだんわ さんじゅうはちまんえん、おもさわ じゅうななきろ。りれーの じゅうよん えーより、ずっと かるく なりました。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前は[001|ぜろぜろいち]。電子の時代を、ゼロから出直すのだ。
+- id: ch7_bowling
+  title: 紙で足すスコア
+  background: cs_bowling
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: kazuo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1970年代の初め、日本はボウリングの大ブームでした。
+    reading: せんきゅうひゃく ななじゅうねんだいの はじめ、にほんわ ぼうりんぐの だいぶーむでした。
+  - speaker: kazuo
+    emotion: happy
+    text: 兄さん、ストライク！ で、今いくつです？
+  - speaker: zundamon
+    emotion: thinking
+    text: 待て。前がスペアだから、10にこの球を足して……。
+  - speaker: kazuo
+    emotion: thinking
+    text: さっき足したのと、答えが違いますよ。
+  - speaker: zundamon
+    emotion: angry
+    text: '[和雄|かずお]の字が汚いからだ。'
+  - speaker: kazuo
+    emotion: thinking
+    text: 書いたのは、兄さんです。
+    se: zukko
+  - speaker: zundamon
+    emotion: sad
+    text: ……計算機の会社の人間が、紙で足し算してるのだ。
+    beat: true
+  - speaker: reimu
+    text: これを見ていた四男の幸雄が、小さくて安い電卓を思いつきます。
+    reading: これお みて いた よなんの ゆきおが、ちいさくて やすい でんたくお おもいつきます。
+- id: card1972
+  title: ''
+  background: cs_card_1972
+  cuts:
+  - speaker: reimu
+    text: 1972年。電卓を作る会社は、50社を超えていました。
+    reading: せんきゅうひゃく ななじゅうにねん。でんたくお つくる かいしゃわ、ごじゅっしゃお こえて いました。
+- id: ch7_mini
+  title: おもちゃみたいな電卓
+  background: cs_kaigi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 樫尾俊雄, emotion: normal}
+  - {who: yakuin, x: 0.56, emotion: thinking}
+  - {who: kazuo, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: kazuo
+    emotion: happy
+    text: 小さくて安い、1人に1台の電卓を出しましょう。
+  - speaker: yakuin
+    emotion: thinking
+    text: 表示は、何けただ。
+  - speaker: kazuo
+    emotion: normal
+    text: 6けたです。
+  - speaker: yakuin
+    emotion: angry
+    text: 6けた！？ そんなおもちゃみたいな電卓、誰が買うんだ。
+  - speaker: kazuo
+    emotion: normal
+    text: 家で使うお[金|かね]の計算なら、99万9999円まで出せば足ります。
+  - speaker: yakuin
+    emotion: thinking
+    text: ……で、値段は。
+  - speaker: zundamon
+    emotion: normal
+    text: 目標は、1万円を切ることです。
+  - speaker: yakuin
+    emotion: surprised
+    text: 今の電卓は、3万も4万もするんだぞ！
+  - speaker: kazuo
+    emotion: happy
+    text: キーは[幸雄|ゆきお]が、1枚の金属の板で作ります。部品がぐんと減るんです。
+  - speaker: kazuo
+    emotion: happy
+    text: 月に10万台、売ってみせます。
+  - speaker: yakuin
+    emotion: angry
+    text: 10万！？ 当たっても、月に1万台の時代だぞ。
+  - speaker: kazuo
+    emotion: happy
+    text: おもちゃで結構です。家の机に、1台ずつ置いてもらうんです。
+  - speaker: yakuin
+    emotion: thinking
+    text: ……兄弟そろって、本気なんだな。
+    beat: true
+  - speaker: reimu
+    text: 表示を6けたに増やしたぶん、1万円は切れませんでした。
+    reading: ひょうじお ろっけたに ふやした ぶん、いちまんえんわ きれませんでした。
+  - speaker: reimu
+    text: 1972年8月、カシオミニは1万2800円で出ます。
+    reading: せんきゅうひゃく ななじゅうにねん はちがつ、かしおみにわ いちまん にせん はっぴゃくえんで でます。
+    telops:
+    - {text: カシオミニ 1万2800円, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch7_bunguten
+  title: 文房具屋の電卓
+  background: cs_bunguten
+  bgm: natsuyasumi
+  stage:
+  - {who: kazuo, x: 0.3, flip: true, emotion: happy}
+  - {who: bunguten, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 和雄が作った文房具屋の売り場に、カシオミニが並びます。
+    reading: かずおが つくった ぶんぼうぐやの うりばに、かしおみにが ならびます。
+  - speaker: bunguten
+    emotion: thinking
+    text: カシオさん。置いてはみたけど、うちは鉛筆とノートの店だよ。
+  - speaker: kazuo
+    emotion: happy
+    text: 鉛筆を買いに来たお客さんが、電卓も一緒に買っていくんです。
+  - speaker: bunguten
+    emotion: thinking
+    text: 計算機なんて、会社で使うもんだろう。
+  - speaker: kazuo
+    emotion: happy
+    text: これからは、一家に1台です。[答一発|こたえいっぱつ]、カシオミニ！
+  - speaker: bunguten
+    emotion: surprised
+    text: ……なんだい、急に。
+    beat: true
+  - speaker: kazuo
+    emotion: normal
+    text: ご主人。その後、売れ行きはどうですか。
+  - speaker: bunguten
+    emotion: angry
+    text: どうもこうもないよ。この棚を見ておくれ。
+    background: cs_bunguten_kara
+  - speaker: bunguten
+    emotion: angry
+    text: 空っぽだよ！ 早く、次を持ってきておくれ！
+    se: levelup
+  - speaker: kazuo
+    emotion: happy
+    text: すぐにお持ちします！
+  - speaker: reimu
+    text: カシオミニは、発売から10か月で100万台を売りました。
+    reading: かしおみにわ、はつばいから じゅっかげつで ひゃくまんだいお うりました。
+    telops:
+    - {text: 10か月で100万台, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 激しい値下げ合戦の中で、電卓の会社は次々に姿を消していきます。
+    reading: はげしい ねさげ がっせんの なかで、でんたくの かいしゃわ つぎつぎに すがたお けして いきます。
+- id: card1974
+  title: ''
+  background: cs_card_1974
+  cuts:
+  - speaker: reimu
+    text: 1974年。カシオは、腕時計づくりに乗り出します。
+    reading: せんきゅうひゃく ななじゅうよねん。かしおわ、うでどけい づくりに のりだします。
+- id: ch8_tokei
+  title: 時間は足し算
+  background: cs_ousetsu
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: normal}
+  - {who: tokei, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 大手の時計会社のグループから、ひとりの社長が俊雄を訪ねてきました。
+    reading: おおての とけいがいしゃの ぐるーぷから、ひとりの しゃちょうが としおお たずねて きました。
+  - speaker: tokei
+    emotion: thinking
+    text: '[樫尾|かしお]さん。計算機の会社が、時計まで作るおつもりですか。'
+  - speaker: zundamon
+    emotion: normal
+    text: はい。作ります。
+  - speaker: tokei
+    emotion: normal
+    text: 時計は、職人が長い年月をかけて育てた商売ですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: デジタルの技術で、今までにない多機能の時計を作りたいんです。
+  - speaker: tokei
+    emotion: surprised
+    text: 多機能？ 時計は、時間が分かれば十分でしょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 時間は、1秒ずつの足し算です。足し算なら、ボクらの得意技なんです。
+    se: hirameki
+  - speaker: zundamon
+    emotion: happy
+    text: 月の終わりが30日か31日かも、時計が自分で計算するんです。
+  - speaker: tokei
+    emotion: surprised
+    text: 時計に、カレンダーを覚えさせる気ですか。
+  - speaker: reimu
+    text: 1974年11月、カシオトロンが出ます。月末の日付を自分で合わせる、世界で初めての腕時計です。
+    reading: せんきゅうひゃく ななじゅうよねん じゅういちがつ、かしおとろんが でます。げつまつの ひづけお じぶんで あわせる、せかいで はじめての うでどけいです。
+- id: ch8_tone
+  title: 楽器にも子音と母音
+  background: cs_gakki
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: buka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: buka
+    emotion: thinking
+    text: '[樫尾|かしお]さん。楽器の音を、どうやって電気で作るんです？'
+  - speaker: zundamon
+    emotion: happy
+    text: 言葉と同じなのだ。音にも、子音と母音がある。
+  - speaker: buka
+    emotion: surprised
+    text: 楽器に、子音ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 鳴った瞬間の音が子音で、そのあと伸びる響きが母音だ。
+  - speaker: buka
+    emotion: thinking
+    text: ……それで、ピアノの音になるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 分けて作って、あとで足す。足し算は、うちの得意技だ。
+  - speaker: reimu
+    text: 1980年1月、29の音色を持つカシオトーンが出ます。55歳の俊雄が取り組んだ楽器でした。
+    reading: せんきゅうひゃく はちじゅうねん いちがつ、にじゅうきゅうの ねいろお もつ かしおとーんが でます。ごじゅうごさいの としおが とりくんだ がっきでした。
+  - speaker: reimu
+    text: 1980年には、55歳の俊雄が取り組んだ電子楽器カシオトーンが生まれます。
+    reading: せんきゅうひゃく はちじゅうねんにわ、ごじゅうごさいの としおが とりくんだ でんし がっき かしおとーんが うまれます。
+  - speaker: reimu
+    text: 1983年には、落としても壊れない腕時計のG-SHOCKが続きました。
+    reading: せんきゅうひゃく はちじゅうさんねんにわ、おとしても こわれない うでどけいの じーしょっくが つづきました。
+  - speaker: reimu
+    text: 必要は発明の母、という言葉は古い。発明が必要の母だ。俊雄は、そう語っています。
+    reading: ひつようわ はつめいの はは、と いう ことばわ ふるい。はつめいが ひつようの ははだ。としおわ、そう かたって います。
+    telops:
+    - {text: 発明は必要の母, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch8_chichi
+  title: 父との別れ
+  background: cs_zashiki
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: sad}
+  - {who: tadao2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1986年8月。初代の社長を務めた父の茂が、87歳で亡くなりました。
+    reading: せんきゅうひゃく はちじゅうろくねん はちがつ。しょだいの しゃちょうお つとめた ちちの しげるが、はちじゅうななさいで なくなりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 兄さん。ボクらの物を最初に売ってくれたのは、父さんだった。
+  - speaker: tadao2
+    emotion: thinking
+    text: 指輪パイプを、一つ残らず売ってきたな。
+  - speaker: tadao2
+    emotion: normal
+    text: 社長の席に座っててくれと言ったら、本当に座っててくれた。
+  - speaker: zundamon
+    emotion: sad
+    text: ……座り心地、聞いておけばよかったのだ。
+- id: card1988
+  title: ''
+  background: cs_card_1988
+  cuts:
+  - speaker: reimu
+    text: 1988年。71歳の社長の忠雄は、退くことを決めます。
+    reading: せんきゅうひゃく はちじゅうはちねん。ななじゅういっさいの しゃちょうの ただおわ、しりぞく ことお きめます。
+- id: ch9_shacho
+  title: 社長を断った発明家
+  background: cs_kaigi
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 樫尾俊雄, emotion: normal}
+  - {who: tadao2, x: 0.56, emotion: normal}
+  - {who: kazuo, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: tadao2
+    emotion: normal
+    text: おれは、社長を退く。順番からいえば、次はお前だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクが、社長ですか！？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……兄さん。ボクは、発明が天職なんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 発明を続けるほうが、会社のためになるのだ。
+  - speaker: tadao2
+    emotion: thinking
+    text: 天職か。旋盤のときのおれと、同じことを言うな。
+  - speaker: kazuo
+    emotion: normal
+    text: ……じゃあ、僕がやるよ。
+  - speaker: tadao2
+    emotion: surprised
+    text: お前、手を挙げるのが早すぎないか。
+    se: hammer
+  - speaker: reimu
+    text: 三男の和雄が社長になり、俊雄は会長になりました。
+    reading: さんなんの かずおが しゃちょうに なり、としおわ かいちょうに なりました。
+- id: ch9_wakare
+  title: 長男との別れ
+  background: cs_zashiki_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: sad}
+  - {who: kazuo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1993年3月。長男の忠雄が、75歳で亡くなりました。
+    reading: せんきゅうひゃく きゅうじゅうさんねん さんがつ。ちょうなんの ただおが、ななじゅうごさいで なくなりました。
+  - speaker: kazuo
+    emotion: sad
+    text: 兄さん……。一番上の兄さんが、いなくなってしまいました。
+  - speaker: zundamon
+    emotion: sad
+    text: 役所を辞めた日、ボクは兄さんにこう言ったんだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクが考えるから、兄さんがそれを作ればいいって。
+  - speaker: zundamon
+    emotion: sad
+    text: 兄さんは、本当に全部作ってくれた。
+  - speaker: kazuo
+    emotion: sad
+    text: ……鍋も釜も、計算機も。
+  - speaker: zundamon
+    emotion: sad
+    text: 社長になっても、取引先には頭を下げる人だったのだ。
+  - speaker: reimu
+    text: 物を買うときは売っていただく、売るときは買っていただく。忠雄は、社員にそう教えていました。
+    reading: ものお かう ときわ うって いただく。うる ときわ かって いただく。ただおわ、しゃいんに そう おしえて いました。
+- id: ch10_hamura
+  title: 80歳の徹夜
+  background: cs_hamura_yoru
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 樫尾俊雄, emotion: happy}
+  - {who: gishi, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 80歳を過ぎた俊雄は、東京の羽村にある技術センターに会長室を置いていました。
+    reading: はちじゅっさいお すぎた としおわ、とうきょうの はむらに ある ぎじゅつ せんたーに かいちょうしつお おいて いました。
+  - speaker: gishi
+    emotion: surprised
+    text: 会長！ まだ、残ってたんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 新しい考えが出てきて、止まらないんだ。
+  - speaker: gishi
+    emotion: thinking
+    text: 会長室を本社に置かないの、会長くらいですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: ここのほうが、作る人の近くにいられるからな。
+  - speaker: gishi
+    emotion: thinking
+    text: で、[何|なに]を使って考えてたんです？
+  - speaker: zundamon
+    emotion: happy
+    text: 紙と鉛筆だ。これさえあれば、発明はできるのだ。
+  - speaker: gishi
+    emotion: surprised
+    text: ……会長、窓の外が明るいです。
+    background: cs_hamura_asa
+  - speaker: zundamon
+    emotion: surprised
+    text: もう朝なのだ！？
+  - speaker: gishi
+    emotion: thinking
+    text: 徹夜は昨日でやめるって、言いましたよね。
+  - speaker: zundamon
+    emotion: happy
+    text: 昨日のボクは、ばかだったのだ。
+    se: oti
+  - speaker: reimu
+    text: 発明は1パーセントのひらめきと49パーセントの努力、そして50パーセントの天運。俊雄の言葉です。
+    reading: はつめいわ いっ ぱーせんとの ひらめきと よんじゅうきゅう ぱーせんとの どりょく。そして ごじゅっ ぱーせんとの てんうん。としおの ことばです。
+- id: ch10_shi
+  title: ''
+  background: cs_kinenkan
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2012年5月15日。樫尾俊雄は、87歳で亡くなりました。
+    reading: にせん じゅうにねん ごがつ じゅうごにち。かしお としおわ、はちじゅうななさいで なくなりました。
+  - speaker: reimu
+    text: 持っていた特許は、共同のものを含めて313件にのぼります。
+    reading: もって いた とっきょわ、きょうどうの ものお ふくめて さんびゃく じゅうさんけんに のぼります。
+    telops:
+    - {text: 特許313件, size: lg, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: ちょうど1年後、成城の自宅が樫尾俊雄発明記念館として開かれました。
+    reading: ちょうど いちねんご、せいじょうの じたくが かしお としお はつめい きねんかんとして ひらかれました。
+  - speaker: reimu
+    text: 14-Aは今もそこで動き、予約をすれば計算する姿を見られます。
+    reading: じゅうよん えーわ いまも そこで うごき、よやくお すれば けいさん する すがたお みられます。
+  - speaker: reimu
+    text: 2018年には、三男の和雄が89歳で亡くなりました。
+    reading: にせん じゅうはちねんにわ、さんなんの かずおが はちじゅうきゅうさいで なくなりました。
+  - speaker: reimu
+    text: 四男の幸雄は、兄弟の仕事をこう振り返っています。
+    reading: よなんの ゆきおわ、きょうだいの しごとお こう ふりかえって います。
+  - speaker: reimu
+    text: 一人では何もできなかった。全員合わせて、一人前。
+    reading: ひとりでわ なにも できなかった。ぜんいん あわせて、いちにんまえ。
+    se: namida
+- id: ch11_chiisaku
+  title: 100キロが手のひらへ
+  background: cs_zukai
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。100キロの計算機は、どうやって手のひらまで縮んだの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 部品を減らす。まとめる。電気を減らす。この3つよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1964年の国産の電子式は、トランジスタを500個以上使ってたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: それが、なんで急に小さく安くなったの？
+  - speaker: tsumugi
+    emotion: happy
+    text: たくさんの部品を小さな板1枚に焼きつける、ICやLSIが出てきたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 部品を、まとめて1個にしちゃうのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電卓の国内生産は、1965年でわずか4000台。それが1970年には、100万台よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 5年で、250倍なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 次は、電気。[14-A|じゅうよんエー]は、多いときで300ワットも使ってたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 60ワットの電球、5個分なのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 1973年の液晶の電卓は、単三の電池1本で100時間動いたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 電池1本で、100時間！？
+  - speaker: tsumugi
+    emotion: happy
+    text: そこに太陽電池がついて、電池なしでも動くようになったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1983年には、厚さ0.8ミリのカードの形の電卓も出たわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100キロから、カード1枚！
+  - speaker: tsumugi
+    emotion: happy
+    text: 2006年の暮れには、[001|ぜろぜろいち]から数えたカシオの電卓が10億台を超えたわ。
+    telops:
+    - {text: 2006年の暮れ 累計10億台, size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 3台買ったボクも、ちょっとだけ貢献したのだ。
+- id: ch12_ronsou
+  title: 本当に世界初？
+  background: cs_shiryo
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。ネットで見たのだ。[14-A|じゅうよんエー]は、世界初の計算機だって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは、言い方に気をつけたほうがいいわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: リレーで計算する機械なら、富士通が1954年に作った大型の計算機が先にあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 先があったのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: 部屋いっぱいの大きさで、リレーは4500個くらい。机に置く物じゃないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電子式の卓上計算機なら、世界初は1961年のイギリスの機械よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、[14-A|じゅうよんエー]は[何|なん]の世界初なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の説明は、小型の純電気式計算機として世界初。条件つきの一番なの。
+    telops:
+    - {text: 小型の純電気式で世界初, size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 条件を足せば、ボクもクラスで一番になれるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[何|なん]の一番よ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 電卓を3台持ってる、ずんだもんの中で一番。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、1人しかいないじゃない。
+    se: tenten
+  - speaker: zundamon
+    emotion: thinking
+    text: ところで電卓と電話のボタンの並びが逆なのは、なんで？
+  - speaker: tsumugi
+    emotion: normal
+    text: 電卓はレジの並びを受け継いで、よく使う0が手前にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電話は、ダイヤルの1から順に並べた形を受け継いだのよ。決めた規格も、別々なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 生まれた家が、違うわけか。
+- id: ch13_waza
+  title: 1たす2かける3は？
+  background: cs_ima3
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 電卓の使い方も、少しだけ見ておきましょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 1たす2かける3は、9なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本当は、かけ算が先で7よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 電卓は、9って言ってるのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: ふつうの電卓は、押した順に計算するの。1たす2で3、それに3をかけて9。
+  - speaker: tsumugi
+    emotion: normal
+    text: かけ算を先にしたいなら、2かける3を先に押してから1を足すのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: 間違えてたのは、押したボクのほうだったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 関数電卓なら、1たす2かける3でちゃんと7が出るのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カシオの関数電卓は、今も1年に2200万台ほどが100以上の国へ出ていくの。
+  - speaker: zundamon
+    emotion: happy
+    text: '[三鷹|みたか]の町工場の計算機が、世界中の教室にあるのだ。'
+- id: shime
+  title: ''
+  background: cs_ima3
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。間違えるのは押す人だって、よく分かったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: あら、えらいわね。
+  - speaker: zundamon
+    emotion: happy
+    text: だから押す人も、3人そろえることにした。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……電卓の次は、人を増やしてどうするのよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 今度電卓を使うときは、数字のキーの並びを見てみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 10個の数字キーで打つやり方は、[14-A|じゅうよんエー]にもう入ってたのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 手のひらの電卓に、100キロの計算機の打ち方が残ってるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

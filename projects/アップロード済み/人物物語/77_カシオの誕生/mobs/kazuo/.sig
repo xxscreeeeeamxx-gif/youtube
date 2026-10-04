@@ -1,0 +1,1 @@
+三男・和雄|none|none||v4|suit|#4a5a6e|o1
