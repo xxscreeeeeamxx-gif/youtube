@@ -260,6 +260,7 @@ VOICE_CREDITS = {
     11: "VOICEVOX:玄野武宏",
     12: "VOICEVOX:白上虎太郎",
     13: "VOICEVOX:青山龍星",
+    21: "VOICEVOX:剣崎雌雄",
     42: "VOICEVOX:ちび式じい",
     67: "VOICEVOX:栗田まろん",
     73: "VOICEVOX:満別花丸",

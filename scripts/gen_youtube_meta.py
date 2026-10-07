@@ -155,13 +155,18 @@ def build_credits(raw: str) -> str:
                 aques = item
     out = ["▼使用素材"]
     if voicevox:
-        out.append("音声: VOICEVOX（" + "、".join(voicevox) + "）")
+        # 規約の例（VOICEVOX:ずんだもん、VOICEVOX:四国めたん）どおり1人ずつ書く。
+        # 2026-10-07 まで「VOICEVOX（ずんだもん、…）」とまとめていたのを全本直した
+        out.append("音声: " + " / ".join(f"VOICEVOX:{n}" for n in voicevox))
     if aques:
         out.append("ナレーション: " + aques)
     out.append(f"効果音: {se} / BGM: DOVA-SYNDROME")
     out.append("※本動画は VOICEVOX の音声合成を使用しています。")
     return "\n".join(out)
 
+
+MAIN_PLAYLIST_URL = "https://www.youtube.com/playlist?list=PLGcuoPXiBiXY"
+SUBSCRIBE_URL = "https://www.youtube.com/channel/UCViEuweB2O9b-bCCgm428zQ?sub_confirmation=1"
 
 # モブのvoice ID→VOICEVOXキャラ名（metadata.txtの空スロット補完用）
 VOICE_NAMES = {8: "春日部つむぎ", 12: "白上虎太郎", 13: "青山龍星", 42: "ちび式じい"}
@@ -247,7 +252,10 @@ def build_entry(slug: str, pdir: Path = None):
             if len(kept) >= 3:
                 chapters = "▼ 目次\n" + "\n".join(f"{s // 60}:{s % 60:02d} {n}" for s, n in kept)
 
-    desc_parts = [body, chapters, note, credits, hashtag_line(meta)]
+    # 再生リストとチャンネル登録の入口（2026-10-07 追加。登録率 0.4% が収益化の壁だったため）
+    links = ("▼ ほかの再現ドラマ（まとめて見る）\n" + MAIN_PLAYLIST_URL +
+             "\n▼ チャンネル登録\n" + SUBSCRIBE_URL)
+    desc_parts = [body, chapters, links, note, credits, hashtag_line(meta)]
     description = "\n\n".join(p for p in desc_parts if p)
     return title, description, tag_line
 
