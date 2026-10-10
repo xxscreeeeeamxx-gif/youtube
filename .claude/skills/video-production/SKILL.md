@@ -57,6 +57,9 @@ cd /c/yt && PYTHONPATH=. PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m yt
    API で既存の予約を確認し、最終日の翌日 10:00 に入れる:
    `python scripts/upload_youtube.py upload <slug> --publish-at <YYYY-MM-DD>T10:00:00+09:00`。
    投稿後に API で予約を確かめ、`projects/アップロード済み/` へ移し、PUBLISH.md の予約表を更新してコミット。
+   **終了画面は API で付けられない**ので、予約したら Studio で鉛筆回の終了画面をインポートする
+   （再生リスト＋チャンネル登録。手順は PUBLISH.md「終了画面（2026-10-11 に全本そろえた）」）。
+   ブラウザが使えないときは、付け忘れの回として完成報告に書いておく
    **再生リスト**: 新作の slug を `scripts/upload_youtube.py` の PLAYLISTS に足す（main の「未実測・公開順」の
    末尾と、合う題材別の棚）。投稿のたびに `python scripts/upload_youtube.py playlist-sync` を流す
    （予約分は非公開のあいだ見送られ、公開済みになった回がここで入る）。
