@@ -59,3 +59,6 @@ client_secret.json
 
 # Mac からの移行時の受け渡しフォルダ（client_secret.json が入る。publicリポジトリのため絶対にコミットしない）
 Windows移行用/
+
+# Reporting API から落としたレポート（生データ。measure.py pull で再取得できる）
+analytics/reports/
