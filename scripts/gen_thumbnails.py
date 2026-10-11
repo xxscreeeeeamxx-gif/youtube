@@ -2406,6 +2406,206 @@ def layout_panels(spec):
     return img.convert("RGB")
 
 
+# ---------------------------------------------------------------- 対立型（2026-10-11）
+# 調査（docs/再生を伸ばす調査_2026-10-11.md）で、伸びている同ジャンル15枚のうち11枚が
+# 「相手の台詞の吹き出し」、10枚が before→after、表情はコマで激変（ドヤ→青ざめ）、
+# 色は赤・黒・黄だった。2コマ型（layout_panels）は吹き出しが本人の薄い独り言
+# （「マークなのだ」）、表情の差が小さい、地が茶と灰、の3点で外れていた。
+# 立ち絵は6表情しか無い（PSD 無し）ので、青ざめ・汗・キラキラ・怒りマークを上から描いて差を付ける。
+PANEL_BG = {
+    "dark": ((18, 20, 34), (52, 24, 40)),     # 窮地。黒〜暗い赤紫
+    "red": ((196, 22, 28), (255, 120, 20)),   # 逆転・衝撃。赤〜橙の集中線
+    "yellow": ((255, 196, 20), (255, 240, 120)),
+    "blue": ((14, 40, 96), (40, 110, 190)),   # 冷たい結末（転落回の右コマ）
+}
+
+
+def _panel_bg(pw, ph, kind):
+    c0, c1 = PANEL_BG.get(kind, PANEL_BG["dark"])
+    img = Image.new("RGBA", (pw, ph), (*c0, 255))
+    d = ImageDraw.Draw(img, "RGBA")
+    cx, cy = pw * 0.5, ph * 0.45
+    for t in range(36):                       # 集中線
+        a0 = math.radians(t * 10)
+        a1 = math.radians(t * 10 + 4.5)
+        d.polygon([(cx, cy), (cx + math.cos(a0) * 1400, cy + math.sin(a0) * 1400),
+                   (cx + math.cos(a1) * 1400, cy + math.sin(a1) * 1400)],
+                  fill=(*c1, 70))
+    glow = Image.new("RGBA", (pw, ph), (0, 0, 0, 0))
+    ImageDraw.Draw(glow).ellipse([pw * 0.15, ph * 0.1, pw * 0.85, ph * 0.8], fill=(*c1, 90))
+    img.alpha_composite(glow.filter(ImageFilter.GaussianBlur(60)))
+    return img
+
+
+def _fx(bu, kind, inner_left=False):
+    """立ち絵に効果を重ねる。座標は bust(crop=0.40) の顔位置に合わせてある。
+    汗・キラキラ・「!?」はコマの内側（画面中央寄り）に置く。外側はコマの端で切れる。"""
+    if not kind:
+        return bu
+    w, h = bu.size
+
+    def X(fx):                                 # 内側が左なら左右を反転
+        return w * (1 - fx) if inner_left else w * fx
+    out = bu.copy()
+    d = ImageDraw.Draw(out, "RGBA")
+    if kind == "gloom":                       # 青ざめ: 額から下へ青、頭の上に縦線
+        tint = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        td = ImageDraw.Draw(tint)
+        for y in range(int(h * 0.12), int(h * 0.56)):
+            t = (y - h * 0.12) / (h * 0.44)
+            al = int(175 * min(1.0, t / 0.25) * (1 - max(0.0, t - 0.25) / 0.75))
+            td.line([(0, y), (w, y)], fill=(70, 60, 200, max(0, al)))
+        mask = bu.split()[3]
+        tint.putalpha(Image.composite(tint.split()[3], Image.new("L", (w, h), 0), mask))
+        out.alpha_composite(tint)
+        d = ImageDraw.Draw(out, "RGBA")
+        for k in range(6):
+            x = w * (0.34 + k * 0.064)
+            d.line([(x, h * 0.24), (x, h * 0.40)], fill=(40, 30, 120, 235), width=max(5, w // 60))
+        kind = "sweat"
+    if kind == "sweat":
+        for (fx, fy, s) in ((0.80, 0.30, 0.07), (0.86, 0.42, 0.05)):
+            x, y, r = X(fx), h * fy, w * s
+            d.polygon([(x, y - r * 1.6), (x - r * 0.7, y), (x + r * 0.7, y)], fill=(120, 200, 255, 255))
+            d.ellipse([x - r * 0.7, y - r * 0.7, x + r * 0.7, y + r * 0.7], fill=(120, 200, 255, 255),
+                      outline=(20, 60, 140, 255), width=3)
+    elif kind == "sparkle":                   # ドヤ: 頭のまわりにキラキラ
+        for (fx, fy, s) in ((0.12, 0.18, 0.10), (0.88, 0.14, 0.12), (0.92, 0.46, 0.07), (0.06, 0.48, 0.07)):
+            x, y, r = X(fx), h * fy, w * s
+            pts = []
+            for i in range(8):
+                a = math.radians(i * 45)
+                rr = r if i % 2 == 0 else r * 0.28
+                pts.append((x + math.cos(a) * rr, y + math.sin(a) * rr))
+            d.polygon(pts, fill=(255, 236, 60, 255), outline=(120, 70, 0, 255))
+    elif kind == "anger":                     # 怒りマーク
+        x, y, r = X(0.78), h * 0.16, w * 0.09
+        for sx, sy in ((-1, -1), (1, -1), (-1, 1), (1, 1)):
+            d.arc([x + sx * r * 0.2 - r * 0.6, y + sy * r * 0.2 - r * 0.6,
+                   x + sx * r * 0.2 + r * 0.6, y + sy * r * 0.2 + r * 0.6],
+                  start={(-1, -1): 0, (1, -1): 90, (-1, 1): 270, (1, 1): 180}[(sx, sy)],
+                  end={(-1, -1): 90, (1, -1): 180, (-1, 1): 360, (1, 1): 270}[(sx, sy)],
+                  fill=(230, 20, 30, 255), width=max(6, w // 40))
+    elif kind == "shock":                     # 衝撃: 頭の横に「!?」と放射線
+        f = font("w9", int(w * 0.22))
+        tx = X(0.70) - (f.getlength("!?") if inner_left else 0)
+        d.text((tx, h * 0.10), "!?", font=f, fill=(255, 230, 40, 255),
+               stroke_width=8, stroke_fill=(20, 10, 10, 255))
+    return out
+
+
+def _shout(dr, box, text, by=""):
+    """ギザギザの叫び吹き出し（相手の怒鳴り・宣告）。"""
+    x0, y0, x1, y1 = box
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    rx, ry = (x1 - x0) / 2, (y1 - y0) / 2
+    pts = []
+    n = 22
+    for i in range(n):
+        a = 2 * math.pi * i / n
+        k = 1.12 if i % 2 == 0 else 0.90
+        pts.append((cx + math.cos(a) * rx * k, cy + math.sin(a) * ry * k))
+    dr.polygon(pts, fill=(255, 255, 255), outline=(18, 14, 12), width=6)
+    f, lines = _fit_lines(text, "w9", int(rx * 1.55), 86, 40, 1)
+    _ttext(dr, (cx - _tw(f, lines[0]) / 2, cy - f.size * 0.62), lines[0], f, (210, 18, 24))
+    if by:
+        fb = font("w9", 30)
+        bw = _tw(fb, by) + 24
+        dr.rounded_rectangle([x0 + 6, y0 - 18, x0 + 6 + bw, y0 + 26], radius=8, fill=(18, 14, 12))
+        _ttext(dr, (x0 + 18, y0 - 16), by, fb, (255, 255, 255))
+
+
+def layout_conflict(spec):
+    """対立型2コマ。見出し（問いか対立）＋各コマに吹き出し1つ・表情の差・ラベル1つ。"""
+    panels = spec["panels"]
+    img = Image.new("RGBA", (W, H), (10, 10, 12, 255))
+    HEAD_H = int(H * 0.22)
+    gap = 10
+    pw = (W - gap) // 2
+    ph = H - HEAD_H
+    LAB_H = 104
+    lab_y = ph - LAB_H - 10
+    for i, pn in enumerate(panels[:2]):
+        right = i == 1
+        cell = _panel_bg(pw, ph, pn.get("bg", "dark" if i == 0 else "red"))
+        has_prop = bool(pn.get("prop") and globals().get(pn["prop"]))
+        art_bot = lab_y - 4
+        # 立ち絵は大きく外側。顔が168pxでも見える大きさまで上げる
+        bu = bust(spec.get("who", "zundamon"), pn.get("emo", "surprised"),
+                  height=int(ph * 0.68), crop=0.40)
+        if not right:
+            bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
+        bu = _fx(bu, pn.get("fx"), inner_left=right)
+        if has_prop:
+            pl = prop_layer(globals()[pn["prop"]], size=520, tilt=-8 if right else 8)
+            sc = min(pw * 0.58 / pl.width, ph * 0.50 / pl.height)
+            pl = pl.resize((max(1, int(pl.width * sc)), max(1, int(pl.height * sc))), Image.LANCZOS)
+            px = int(pw * 0.02) if right else pw - pl.width - int(pw * 0.02)
+            py = art_bot - pl.height - 6
+            cell.alpha_composite(pl, (px, py))
+        bx = (pw - int(bu.width * 0.78)) if right else -int(bu.width * 0.22)
+        if not has_prop:
+            bx = (pw - bu.width) // 2
+        cell.alpha_composite(bu, (bx, art_bot - bu.height))
+        cd = ImageDraw.Draw(cell, "RGBA")
+        say = pn.get("say", "")
+        if say:
+            _budget("say", say, LEN_SAY, spec.get("_key", ""))
+            bw_ = int(pw * 0.74)
+            bx0 = (pw - bw_ - 14) if not right else 14
+            if not has_prop:
+                bx0 = (pw - bw_) // 2
+            box = (bx0, 18, bx0 + bw_, 18 + 124)
+            if pn.get("shout"):
+                _shout(cd, box, say, pn.get("by", ""))
+            else:
+                _bubble(cd, box, say, tail_x=(box[2] - 90) if right else (box[0] + 90))
+                if pn.get("by"):
+                    fb = font("w9", 30)
+                    bw2 = _tw(fb, pn["by"]) + 24
+                    cd.rounded_rectangle([box[0] + 6, box[1] - 16, box[0] + 6 + bw2, box[1] + 28],
+                                         radius=8, fill=(18, 14, 12))
+                    _ttext(cd, (box[0] + 18, box[1] - 14), pn["by"], fb, (255, 255, 255))
+        lab = pn.get("label", "")
+        if lab:
+            _budget("label", lab, LEN_LABEL, spec.get("_key", ""))
+            f, _ = _fit_lines(lab, "w9", pw - 40, 84, 38, 1)
+            fill = (255, 214, 40) if not right else (255, 255, 255)
+            cd.rounded_rectangle([8, lab_y, pw - 8, lab_y + LAB_H], radius=8,
+                                 fill=fill, outline=(20, 14, 6), width=6)
+            # 数字は赤で抜く（「1000万台」「0台」が一番先に目に入るように）
+            x = (pw - _tw(f, lab)) // 2
+            y = lab_y + (LAB_H - int(f.size * 1.22)) // 2
+            for ch in lab:
+                col = (214, 20, 26) if (ch.isdigit() or ch in "万億千百%") else (20, 14, 6)
+                cd.text((x, y), ch, font=f, fill=col)
+                x += f.getlength(ch) * (0.52 if ch in "、。" else 1)
+        img.alpha_composite(cell, (i * (pw + gap), HEAD_H))
+    # 中央の矢印（黄に黒フチ）
+    d = ImageDraw.Draw(img)
+    ax, ay = pw + gap // 2, HEAD_H + int(ph * 0.52)
+    d.polygon([(ax - 46, ay - 60), (ax + 50, ay), (ax - 46, ay + 60)],
+              fill=(255, 214, 40), outline=(14, 10, 6), width=6)
+    # 見出し。1語だけ黄（head_hi_color で赤にもできる）
+    d.rectangle([0, 0, W, HEAD_H], fill=(8, 8, 10))
+    headline, hi = spec["headline"], spec.get("head_hi", "")
+    base_c, hi_c = (255, 255, 255), spec.get("head_hi_color", (255, 214, 40))
+    segs = [(headline, base_c)]
+    if hi and hi in headline:
+        a, b = headline.split(hi, 1)
+        segs = [(t, c) for t, c in ((a, base_c), (hi, hi_c), (b, base_c)) if t]
+    size = 136
+    while size > 60 and sum(_tw(font("w9", size), t) for t, _ in segs) > W - 40:
+        size -= 4
+    f = font("w9", size)
+    x = (W - sum(_tw(f, t) for t, _ in segs)) // 2
+    y = (HEAD_H - int(size * 1.16)) // 2
+    for t, c in segs:
+        _ttext(d, (x, y), t, f, c, stroke_width=max(6, size // 14), stroke_fill=(0, 0, 0))
+        x += _tw(f, t)
+    return img.convert("RGB")
+
+
 def layout_stack(spec):
     """上下分割型。文字は横幅いっぱい・顔は右下に大きく。
 
@@ -3823,6 +4023,7 @@ def render(slug, out_path=None):
            "bold": layout_bold, "face": layout_face,
            "punch": layout_punch,
            "stack": layout_stack,
+           "conflict": layout_conflict,
            "panels": layout_panels}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
