@@ -405,7 +405,7 @@ PLAYLISTS = {
                "tamagotchi-yokoi-v2", "ohira-megastar-v2", "iwasaki-sample-v2",
                "yagi-uda-antenna-v2", "kobori-airbag-v2", "fujisawa-supercub-v2",
                "frixion-metamo-v2", "famicom-uemura-v2", "matsushita-socket",
-               "sanyo-end", "godzilla-tsuburaya", "yamaha-torakusu"]),
+               "sanyo-end", "godzilla-tsuburaya", "yamaha-torakusu", "sega-dreamcast"]),
     # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
     # こちらはチャンネルページと検索結果に並ぶ入口。関連動画の隣人が
     # 「会社の興亡」「ゲーム」「クルマ」のように題材ごとに固まっているので、
@@ -423,14 +423,15 @@ PLAYLISTS = {
                "takahashi-urayasu", "calpis", "ykk", "yakult-shirota",
                "glico-ezaki", "mikimoto-pearl", "casio-kashio-v2",
                "fujisawa-supercub-v2", "matsushita-socket", "sanyo-end",
-               "yamaha-torakusu"]),
+               "yamaha-torakusu", "sega-dreamcast"]),
     "play": dict(
         title="ゲームと遊びの誕生｜ずんだもん再現ドラマ",
         desc="ゲームボーイ、プリクラ、カラオケ。遊びの道具にも、最初に作った人がいます。"
              "試作から世界に広がるまでを、ずんだもんが当人を演じる再現ドラマでたどります。",
         follow_main=True,
         slugs=["yokoi-gunpei", "yamauchi-nintendo", "purikura-meme", "karaoke",
-               "othello-hasegawa-v2", "tamagotchi-yokoi-v2", "famicom-uemura-v2"]),
+               "othello-hasegawa-v2", "tamagotchi-yokoi-v2", "famicom-uemura-v2",
+               "sega-dreamcast"]),
     "food": dict(
         title="食べ物と飲み物の誕生｜ずんだもん再現ドラマ",
         desc="カップ麺、味の素、カルピス。毎日口にしているものにも、最初に作った人がいます。"

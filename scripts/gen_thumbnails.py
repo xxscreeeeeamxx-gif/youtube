@@ -3542,6 +3542,53 @@ def p_srbottle(d, s):
                     fill=(210, 50, 44))
 
 
+def p_dcwhite(d, s):
+    """白いゲーム機（セガ回）。四角い本体に丸いふた。実在の機械のロゴ・渦巻きは描かない。"""
+    w = s * 0.86
+    x0, y0 = s * 0.07, s * 0.42
+    d.rounded_rectangle([x0, y0, x0 + w, y0 + s * 0.34], radius=int(s * 0.08), fill=(240, 240, 236),
+                        outline=(150, 152, 156), width=int(s * 0.016))
+    d.ellipse([x0 + w * 0.2, y0 - s * 0.08, x0 + w * 0.8, y0 + s * 0.22], fill=(226, 226, 222),
+              outline=(160, 162, 166), width=int(s * 0.014))
+    for k in range(4):
+        px = x0 + w * (0.12 + k * 0.215)
+        d.rounded_rectangle([px, y0 + s * 0.25, px + w * 0.13, y0 + s * 0.3], radius=4, fill=(130, 132, 136))
+
+
+def p_dcboxes(d, s):
+    """白い箱の山（在庫）。"""
+    for r in range(4):
+        for k in range(4 - r):
+            x = s * (0.04 + k * 0.23 + r * 0.115)
+            y = s * (0.74 - r * 0.2)
+            d.rectangle([x, y, x + s * 0.22, y + s * 0.19], fill=(244, 244, 238), outline=(150, 150, 150),
+                        width=int(s * 0.01))
+            d.ellipse([x + s * 0.08, y + s * 0.08, x + s * 0.14, y + s * 0.14], fill=(222, 120, 60))
+
+
+def p_psblack(d, s):
+    """黒い箱（相手のゲーム機）。実在の機械の形・ロゴは描かない。"""
+    d.rectangle([s * 0.16, s * 0.18, s * 0.84, s * 0.86], fill=(30, 30, 36), outline=(90, 90, 100),
+                width=int(s * 0.016))
+    d.rectangle([s * 0.22, s * 0.24, s * 0.78, s * 0.4], fill=(50, 70, 150))
+
+
+def p_wafer(d, s):
+    """チップのウエハー。良品（黄）が数個だけ。"""
+    c, r = s * 0.5, s * 0.44
+    d.ellipse([c - r, c - r, c + r, c + r], fill=(150, 156, 176), outline=(220, 224, 236), width=int(s * 0.016))
+    step = s * 0.1
+    good = {(1, 2), (3, 4), (4, 1), (2, 5)}
+    for i in range(-3, 4):
+        for j in range(-3, 4):
+            x, y = c + i * step, c + j * step
+            if (x - c) ** 2 + (y - c) ** 2 > (r - step * 0.6) ** 2:
+                continue
+            g = ((i + 3) % 6, (j + 3) % 6) in good
+            d.rectangle([x - step * 0.4, y - step * 0.4, x + step * 0.4, y + step * 0.4],
+                        fill=(250, 210, 80) if g else (110, 116, 134))
+
+
 NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
 TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
 GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
@@ -3976,6 +4023,12 @@ SPECS = {
         head_hi="胃液に勝つ", panels=[
         _p("p_srdish", "1930年 京都", NAVY, "sad", "また全滅なのだ", "酸で菌が死ぬ"),
         _p("p_srbottle", "いま", RED, "happy", "毎日1本なのだ", "腸まで生きて届く"),
+    ]),
+    # A/B テストの A（対照＝今の型）。B・C は scripts/ab_variants.json
+    "sega-dreamcast": dict(layout="panels", headline="在庫203万台で撤退",
+        head_hi="203万台", panels=[
+        _p("p_dcwhite", "1998年", NAVY, "surprised", "売り切れ！？", "発売日に品切れ"),
+        _p("p_dcboxes", "2001年", SLATE, "sad", "打ち切ります", "在庫203万台"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

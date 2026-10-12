@@ -1,0 +1,1713 @@
+meta:
+  title: ドリームキャスト、在庫203万台で撤退　作った本人が幕を引いた日【ずんだもん解説】
+  slug: sega-dreamcast
+  summary: 押し入れから出てきた白いゲーム機、ドリームキャスト。作ったのは、就職先が決まらないまま、飛び込みでセガに入った技術者、佐藤秀樹でした。テレビで遊ぶピンポンに衝撃を受け、ファミコンと同じ日にゲーム機を出し、やがて世界を相手にします。しかし1998年、セガは新聞の一面で自らに問いかけるほど追い込まれていました。ゲーム機をやめると報じられた日、なぜ株価は上がったのか。再現ドラマでたどります。
+  tags:
+  - ドリームキャスト
+  - セガ
+  - 佐藤秀樹
+  - 大川功
+  - セガサターン
+  - メガドライブ
+  - ソニック
+  - プレイステーション2
+  - ゲーム機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 在庫203万台
+    bottom: ドリキャス撤退
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: okawa
+    label: 大川功
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2f3a'
+  - id: yukawa
+    label: 湯川専務
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#3e4450'
+  - id: kodomo
+    label: 子ども
+    voice: 73
+    pitch: 0.0
+  - id: kodomo2
+    label: 子ども
+    voice: 73
+    pitch: 0.05
+  - id: kantoku
+    label: 監督
+    voice: 13
+    pitch: 0.1
+    outfit: work
+  - id: eigyo
+    label: 営業
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: buka
+    label: 部下
+    voice: 67
+    pitch: 0.0
+    outfit: work
+  - id: kojo
+    label: 工場の人
+    voice: 13
+    pitch: 0.06
+    outfit: work
+    color: '#e8ebee'
+  - id: tenin
+    label: 店員
+    voice: 100
+    pitch: 0.0
+    outfit: apron
+  - id: kyaku
+    label: 客
+    voice: 21
+    pitch: 0.0
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#4a4a52'
+  - id: irimajiri
+    label: 入交昭一郎
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#3a3f4a'
+  - id: kayama
+    label: 香山哲
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#454a55'
+  - id: douryo
+    label: 同僚
+    voice: 12
+    pitch: 0.03
+    outfit: suit
+    color: '#3e4a5c'
+  - id: jinji
+    label: 人事課長
+    voice: 21
+    pitch: -0.03
+    outfit: suit
+    color: '#4a4038'
+  - id: buchou
+    label: 開発部長
+    voice: 42
+    pitch: -0.04
+    outfit: suit
+    color: '#5a5a60'
+  - id: kanri
+    label: 工作係
+    voice: 11
+    pitch: -0.04
+    outfit: work
+    color: '#7a6a4a'
+  - id: kenkyu
+    label: 研究員
+    voice: 100
+    pitch: -0.03
+    outfit: suit
+    color: '#2f3a52'
+  - id: kyoryoku
+    label: 協力会社
+    voice: 13
+    pitch: 0.04
+    outfit: work
+    color: '#6a7280'
+  - id: sushiten
+    label: 寿司店員
+    voice: 8
+    pitch: 0.04
+    hair: bun
+    outfit: apron
+  - id: kanbu
+    label: セガ幹部
+    voice: 13
+    pitch: -0.02
+    outfit: suit
+    color: '#2f3440'
+scenes:
+- id: co_kaiken
+  title: ''
+  background: sg_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: kayama, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2001年1月31日。東京で、セガがゲーム機の製造中止を発表します。
+    reading: にせんいちねん いちがつ さんじゅういちにち。とうきょうで、せがが げーむきの せいぞう ちゅうしお はっぴょう します。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3月31日をもって、ドリームキャストの製造を打ち切ります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……尋常な状態では、ありません。
+  - speaker: kayama
+    emotion: sad
+    text: 申し訳ないの[一言|ひとこと]しかない。
+  - speaker: reimu
+    text: この技術者は、佐藤秀樹。在庫は203万台。
+    reading: この ぎじゅつしゃわ、さとう ひでき。ざいこわ にひゃくさんまんだい。
+  - speaker: reimu
+    text: 発売から2年あまりで、自分の作ったゲーム機を終わらせることになります。
+    reading: はつばいから にねん あまりで、じぶんの つくった げーむきお おわらせる ことに なります。
+- id: hook
+  title: ''
+  background: sg_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ソニックの映画、3作とも見たのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: あれ、もとはセガのゲームよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: セガって、ゲーム機も作ってたの？
+  - speaker: tsumugi
+    emotion: happy
+    text: 押し入れの奥、見てごらん。
+  - speaker: zundamon
+    emotion: surprised
+    text: 白いゲーム機が出てきた！
+    background: sg_heya_dc
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: ドリームキャスト。セガ最後のゲーム機よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: やめると報じられたら、株価が4日連続ストップ高。
+    telops:
+    - {text: "撤退報道で株価4日連続ストップ高", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: やめるのに、なんで上がるの！？
+- id: card1950
+  title: ''
+  background: sg_card_1950
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1950年。北海道の炭鉱町、芦別で、佐藤秀樹が生まれます。
+    reading: せんきゅうひゃく ごじゅうねん。ほっかいどうの たんこうまち あしべつで、さとう ひできが うまれます。
+  - speaker: reimu
+    text: 父は製材所ののこぎりを研ぐ職人で、腕を買われては1、2年で引っ越します。
+    reading: ちちわ せいざいじょの のこぎりお とぐ しょくにんで、うでお かわれてわ いちにねんで ひっこします。
+  - speaker: reimu
+    text: 転校をくり返したすえ、中学1年で一家は東京の八王子へ移りました。
+    reading: てんこうお くりかえした すえ、ちゅうがく いちねんで いっかわ とうきょうの はちおうじえ うつりました。
+  - speaker: reimu
+    text: 高校では物理部でうそ発見器を作り、やがて都立工業短大の電気科へ進みます。
+    reading: こうこうでわ ぶつりぶで うそ はっけんきお つくり、やがて とりつ こうぎょう たんだいの でんきかえ すすみます。
+- id: card1971
+  title: ''
+  background: sg_card_1971
+  cuts:
+  - speaker: reimu
+    text: 1971年3月の末。短大を出た佐藤には、まだ就職先がありません。
+    reading: せんきゅうひゃく ななじゅういちねん さんがつの すえ。たんだいお でた さとうにわ、まだ しゅうしょくさきが ありません。
+  - speaker: reimu
+    text: アメリカで農業を学ぶ研修に応募し、面接で試験問題がなっとらんと言って落ちていたのです。
+    reading: あめりかで のうぎょうお まなぶ けんしゅうに おうぼ し、めんせつで しけん もんだいが なっとらんと いって おちて いたのです。
+- id: ch1_jinji
+  title: 飛び込みの就職
+  background: sg_kaisha70
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: happy}
+  - {who: jinji, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: jinji
+    emotion: surprised
+    text: 約束もなしに来て、就職したい？ もう3月の末だよ。
+  - speaker: jinji
+    emotion: normal
+    text: 募集はとっくに終わって、こっちは入社式の準備だけだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 学校の先生にも、今ごろ来て何を言ってやがんだって怒られました。
+  - speaker: jinji
+    emotion: thinking
+    text: だろうね。
+  - speaker: zundamon
+    emotion: normal
+    text: スイッチを作る会社を紹介されたんですけど、つまんないって言っちゃって。
+  - speaker: jinji
+    emotion: surprised
+    text: 紹介を、断ったの？
+  - speaker: zundamon
+    emotion: sad
+    text: 先生は、もう知らんって。自分で探せって。
+  - speaker: zundamon
+    emotion: normal
+    text: おもちゃの会社にも電話したら、もう締め切りでした。
+  - speaker: jinji
+    emotion: thinking
+    text: それで、うちに来たと。
+  - speaker: zundamon
+    emotion: happy
+    text: セガは、金曜が半ドンで土日が休み。給料も3万2000円。
+  - speaker: zundamon
+    emotion: happy
+    text: しかも学校のある[鮫洲|さめず]から、電車ですぐなんです。
+  - speaker: jinji
+    emotion: thinking
+    text: ……選んだ理由が、全部ゆるいな。
+    beat: true
+  - speaker: jinji
+    emotion: normal
+    text: 学校は？
+  - speaker: zundamon
+    emotion: normal
+    text: 都立の短大です。
+  - speaker: jinji
+    emotion: happy
+    text: 都立か。ぼくも都立大の出なんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、会社の中を案内してもらえますか。
+  - speaker: jinji
+    emotion: surprised
+    text: 入る前から、見学するのかい。
+  - speaker: jinji
+    emotion: happy
+    text: ……まあいいか。ちょうど暇だしな。
+  - speaker: jinji
+    emotion: normal
+    text: 工場から開発まで、ひと通り見せたけど。どうだった？
+  - speaker: zundamon
+    emotion: happy
+    text: 開発か生産技術部だったら、入ってもいいです。
+  - speaker: jinji
+    emotion: surprised
+    text: 入っても、いい？
+    se: zukko
+  - speaker: jinji
+    emotion: thinking
+    text: ……開発は3人募集して、2人しか来なかったんだ。部長と話してきて。
+- id: ch1_mensetsu
+  title: ''
+  background: sg_kaisha70
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: buchou, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: buchou
+    emotion: normal
+    text: 佐藤君。入っても、すぐには開発の仕事はできないよ。
+  - speaker: buchou
+    emotion: normal
+    text: 最初は鉄板を曲げたり穴を開けたり、木を切ったりだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 嫌いじゃないです。昔から、プラモデルが好きなんです。
+  - speaker: buchou
+    emotion: happy
+    text: そうか。じゃあ、人事に戻ってくれ。
+- id: ch1_saiyo
+  title: ''
+  background: sg_kaisha70
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: happy}
+  - {who: jinji, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: jinji
+    emotion: happy
+    text: 部長から電話があったよ。採用だ。
+  - speaker: zundamon
+    emotion: happy
+    text: やったのだ！
+  - speaker: jinji
+    emotion: normal
+    text: じゃあ、成績証明書を出して。
+  - speaker: zundamon
+    emotion: thinking
+    text: 持ってきてません。
+  - speaker: jinji
+    emotion: thinking
+    text: 健康診断書は？
+  - speaker: zundamon
+    emotion: thinking
+    text: 受けてません。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……書類も試験も無しで、入れちゃったのだ。
+    beat: true
+  - speaker: reimu
+    text: 1971年4月。佐藤はセガの開発部に入ります。当時のセガは、アメリカ資本の会社でした。
+    reading: せんきゅうひゃく ななじゅういちねん しがつ。さとうわ せがの かいはつぶに はいります。とうじの せがわ、あめりか しほんの かいしゃでした。
+- id: ch1_kousaku
+  title: 最初の仕事は金具
+  background: sg_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: kenkyu, x: 0.56, emotion: normal}
+  - {who: kanri, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kenkyu
+    emotion: normal
+    text: 佐藤くん、ちょうどいい。ドライブゲームの金具だ、図面どおりに作ってくれ。
+  - speaker: zundamon
+    emotion: normal
+    text: はい。これ、どこが一番大事なんですか？
+  - speaker: kenkyu
+    emotion: normal
+    text: チェーンに留める穴の間隔。そこがずれると、はまらない。
+  - speaker: zundamon
+    emotion: normal
+    text: 幅のほうは？
+  - speaker: kenkyu
+    emotion: happy
+    text: 模型の車を乗せるだけだ。2、3ミリずれても構わん。
+  - speaker: kanri
+    emotion: surprised
+    text: おい佐藤。もうできたのか。
+  - speaker: kanri
+    emotion: angry
+    text: ……10センチのはずが、10.5センチあるぞ。やり直しだ。
+  - speaker: zundamon
+    emotion: happy
+    text: いいんです、そこは。大事なのは穴の間隔だけです。
+  - speaker: kanri
+    emotion: angry
+    text: んなわけあるか！ 聞いてくる！
+  - speaker: kanri
+    emotion: thinking
+    text: ……いいって言ってたわ。
+    se: hammer
+  - speaker: kanri
+    emotion: happy
+    text: おまえ、手の抜きどころが分かってるな。
+  - speaker: zundamon
+    emotion: happy
+    text: 決めるところだけ、決めるのだ。
+  - speaker: reimu
+    text: やがて佐藤は、リレーで動くピンボールの電気回路を任されます。
+    reading: やがて さとうわ、りれーで うごく ぴんぼーるの でんき かいろお まかされます。
+- id: card1973
+  title: ''
+  background: sg_card_1973
+  cuts:
+  - speaker: reimu
+    text: 1973年ごろ。セガの開発に、テレビの画面で遊ぶピンポンのゲームがやってきます。
+    reading: せんきゅうひゃく ななじゅうさんねん ごろ。せがの かいはつに、てれびの がめんで あそぶ ぴんぽんの げーむが やって きます。
+- id: ch1_pong
+  title: テレビで遊ぶ
+  background: sg_kaihatsu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: douryo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: douryo
+    emotion: happy
+    text: 佐藤、これやってみろよ。テレビの中で、球を打ち返すんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: テレビって、番組を見るものだろ。
+  - speaker: douryo
+    emotion: normal
+    text: いいから、つまみを回してみろって。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あ、返した。また来た。だんだん速くなる！
+  - speaker: zundamon
+    emotion: happy
+    text: たかがピンポンなのに、めちゃくちゃ面白い！
+  - speaker: douryo
+    emotion: normal
+    text: 中の基板、見たか？ 見たことない部品がびっしりだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: IC……。番号しか書いてないぞ。
+  - speaker: reimu
+    text: 佐藤は、アメリカの半導体会社が出した、黄色いデータブックを読み込みます。
+    reading: さとうわ あめりかの はんどうたい がいしゃが だした、きいろい でーたぶっくお よみこみます。
+  - speaker: zundamon
+    emotion: thinking
+    text: リレーを直列につなげば[AND|アンド]、並列なら[OR|オア]……。
+  - speaker: zundamon
+    emotion: surprised
+    text: ICも同じだ。しかも、ずっと使いやすいのだ！
+    se: hirameki
+  - speaker: douryo
+    emotion: surprised
+    text: もう分かったのか。
+  - speaker: zundamon
+    emotion: happy
+    text: リレーの回路なら、毎日[組んでた|くんでた]からな。
+  - speaker: reimu
+    text: テレビのゲームが開発の中心になり、1976年には佐藤が回路を工夫したレースゲームも出ます。
+    reading: てれびの げーむが かいはつの ちゅうしんに なり、せんきゅうひゃく ななじゅうろくねんにわ さとうが かいろお くふうした れーすげーむも でます。
+- id: ch2_sc3000
+  title: 3万円のパソコン
+  background: sg_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: kyoryoku, x: 0.56, emotion: happy}
+  - {who: douryo, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1980年代のはじめ。セガはフォスター電機と組み、家で使う安いパソコンを作ります。
+    reading: せんきゅうひゃく はちじゅうねんだいの はじめ。せがわ ふぉすたー でんきと くみ、いえで つかう やすい ぱそこんお つくります。
+  - speaker: kyoryoku
+    emotion: happy
+    text: 佐藤さん、試作の基板です。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[何|なん]だこれは。ホッチキスだらけじゃないか！'
+  - speaker: kyoryoku
+    emotion: normal
+    text: 片面だけの、紙の基板です。線がぶつかる所だけ、ホッチキスで飛ばします。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちはずっと、ガラスエポキシの両面基板なんだけど……。
+  - speaker: kyoryoku
+    emotion: happy
+    text: 両面より、ずっと安くできますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……安い。悔しいけど、安い。
+    beat: true
+  - speaker: reimu
+    text: 2万9800円のパソコン、SC-3000の誕生です。
+    reading: にまん きゅうせん はっぴゃくえんの ぱそこん、えすしー さんぜんの たんじょうです。
+  - speaker: douryo
+    emotion: thinking
+    text: 3000って、[何|なん]の数字だ？
+  - speaker: zundamon
+    emotion: happy
+    text: 値段が3万円くらいだから、3000。
+  - speaker: douryo
+    emotion: thinking
+    text: 決め方が、ざっくりすぎるだろ。
+    beat: true
+  - speaker: zundamon
+    emotion: surprised
+    text: 任天堂の人に、[ゲーム&ウオッチ|ゲームアンドウオッチ]の数を聞いてきた。10万個くらいかと思ったら……
+  - speaker: douryo
+    emotion: thinking
+    text: 何個だって？
+  - speaker: zundamon
+    emotion: surprised
+    text: 500万個だって。
+  - speaker: douryo
+    emotion: surprised
+    text: 500万！？ 家で遊ぶ物は、桁が違うな。
+  - speaker: douryo
+    emotion: surprised
+    text: 佐藤、任天堂がテレビにつなぐゲーム機を出すらしいぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゲームだけなら……[SC-3000|エスシーさんぜん]から、キーボードを取ってしまえばいい。
+  - speaker: zundamon
+    emotion: happy
+    text: カートリッジを挿せば、ゲームは動くんだから。
+  - speaker: douryo
+    emotion: surprised
+    text: 引き算で、ゲーム機を作るのか。
+  - speaker: reimu
+    text: アメリカの経営陣はアタリショックの後で反対しましたが、中山隼雄が説き伏せます。
+    reading: あめりかの けいえいじんわ あたり しょっくの あとで はんたい しましたが、なかやま はやおが ときふせます。
+  - speaker: reimu
+    text: 名前のGは、ゲーム。こうしてSG-1000が生まれました。
+    reading: なまえの じーわ、げーむ。こうして えすじー せんが うまれました。
+- id: card1983
+  title: ''
+  background: sg_card_1983
+  cuts:
+  - speaker: reimu
+    text: 1983年7月15日。SG-1000が発売されます。任天堂のファミコンと、同じ日でした。
+    reading: せんきゅうひゃく はちじゅうさんねん しちがつ じゅうごにち。えすじー せんが はつばい されます。にんてんどうの ふぁみこんと、おなじ ひでした。
+- id: ch2_sg1000
+  title: セガのファミコン
+  background: sg_kaihatsu
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: happy}
+  - {who: douryo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: douryo
+    emotion: happy
+    text: 佐藤、年末のデパートの手伝いはどうだった？
+  - speaker: zundamon
+    emotion: happy
+    text: ファミコンくださいってお客さんが、次々に来たよ。
+  - speaker: douryo
+    emotion: surprised
+    text: よそのゲーム機じゃないか。
+  - speaker: zundamon
+    emotion: happy
+    text: でもファミコンは売り切れ。だから、はいこれがセガのファミコンですって。
+  - speaker: douryo
+    emotion: angry
+    text: それ、ほぼ詐欺だぞ！
+    se: tsukkomi
+  - speaker: reimu
+    text: 佐藤の話では、SG-1000は最初の年に16万台売れました。
+    reading: さとうの はなしでわ、えすじー せんわ さいしょの としに じゅうろくまんだい うれました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 業務用のゲーム機なら、1600台売れたら大騒ぎなのに。
+  - speaker: douryo
+    emotion: thinking
+    text: 桁が、二つ違う。
+  - speaker: douryo
+    emotion: thinking
+    text: でも本体の形、お墓みたいって言われてるぞ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……来年、形を変える。
+    beat: true
+- id: card1984
+  title: ''
+  background: sg_card_1984
+  cuts:
+  - speaker: reimu
+    text: 1984年。CSKがセガに資本参加し、その創業者の大川功が会長に就きます。
+    reading: せんきゅうひゃく はちじゅうよねん。しーえすけーが せがに しほん さんか し、その そうぎょうしゃの おおかわ いさおが かいちょうに つきます。
+  - speaker: reimu
+    text: 1985年にはマークIII、1988年にはメガドライブが発売されます。
+    reading: せんきゅうひゃく はちじゅうごねんにわ まーくすりー、せんきゅうひゃく はちじゅうはちねんにわ めがどらいぶが はつばい されます。
+- id: ch3_mega
+  title: 海の向こうで勝つ
+  background: sg_kaihatsu_mega
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: buka
+    emotion: happy
+    text: 佐藤さん、メガドライブが海の向こうでよく売れてます！
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本では、任天堂にかなわないのにな……。
+  - speaker: reimu
+    text: 1991年にはソニックが登場し、北米ではその年の11月からメガドライブに付いてきました。
+    reading: せんきゅうひゃく きゅうじゅういちねんにわ そにっくが とうじょう し、ほくべいでわ その としの じゅういちがつから めがどらいぶに ついて きました。
+  - speaker: buka
+    emotion: surprised
+    text: ゲームを、本体にタダで付けちゃうんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 本体を買えば、ソニックも付いてくる。そりゃ欲しくなる。
+  - speaker: buka
+    emotion: thinking
+    text: 速すぎて、目で追えないゲームですけどね。
+  - speaker: zundamon
+    emotion: happy
+    text: 速いのが、セガなんだ。
+  - speaker: reimu
+    text: メガドライブは日本で358万台、世界では3075万台が売れました。
+    reading: めがどらいぶわ にほんで さんびゃく ごじゅうはちまんだい、せかいでわ さんぜん ななじゅうごまんだいが うれました。
+    telops:
+    - {text: "メガドライブ 世界3075万台", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch4_sh
+  title: CPUの名はSH
+  background: sg_kaihatsu
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: buka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: buka
+    emotion: happy
+    text: 佐藤さん。サターンに載せる日立のCPU、名前の件です。
+  - speaker: zundamon
+    emotion: normal
+    text: インテルみたいに、格好いい名前を考えてくれって頼んだやつだな。
+  - speaker: buka
+    emotion: thinking
+    text: いろいろ調べたけど、いい名前が残ってないそうで……[SH|エスエイチ]でどうかと。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[SH|エスエイチ]？ それのどこが格好いいんだ。'
+  - speaker: buka
+    emotion: happy
+    text: '[SH|エスエイチ]は、[佐藤秀樹|さとうひでき]の[SH|エスエイチ]でもあるそうです。'
+  - speaker: buka
+    emotion: happy
+    text: あと、商売繁盛の[SH|エスエイチ]でもあるそうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……まあ、しょうがねえな。いいよ。
+  - speaker: buka
+    emotion: surprised
+    text: それで決まるんですか。
+    beat: true
+- id: card1994
+  title: ''
+  background: sg_card_1994
+  cuts:
+  - speaker: reimu
+    text: 1994年11月22日。セガサターンが、4万4800円で発売されます。
+    reading: せんきゅうひゃく きゅうじゅうよねん じゅういちがつ にじゅうににち。せがさたーんが、よんまん よんせん はっぴゃくえんで はつばい されます。
+  - speaker: reimu
+    text: 11日後、ソニーのプレイステーションが3万9800円で続きました。
+    reading: じゅういちにちご、そにーの ぷれいすてーしょんが さんまん きゅうせん はっぴゃくえんで つづきました。
+- id: ch4_saturn
+  title: 売るほど赤字
+  background: sg_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: eigyo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: eigyo
+    emotion: thinking
+    text: 佐藤さん。サターンは1台売るごとに、5000円から6000円の損が出ます。
+    telops:
+    - {text: "1台売るごとに5000〜6000円の損", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 売れば売るほど、赤字か。
+  - speaker: eigyo
+    emotion: normal
+    text: ですから、本体の出荷を絞ります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 絞ったら、店に並ばない。お店もソフト会社も、よそへ行くぞ。
+  - speaker: eigyo
+    emotion: sad
+    text: でも、出せば出すほど損なんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ソフト会社に渡す、開発の道具もそろってない……。
+  - speaker: eigyo
+    emotion: thinking
+    text: 作りにくい、売っていない。それじゃ、ソフトも来ませんね。
+  - speaker: zundamon
+    emotion: sad
+    text: '[貧すれば鈍する|ひんすればどんする]、だ。'
+    se: shobon
+  - speaker: reimu
+    text: 1998年3月期。セガは上場以来初めての赤字を出し、純損失は356億円でした。
+    reading: せんきゅうひゃく きゅうじゅうはちねん さんがつき。せがわ じょうじょう いらい はじめての あかじお だし、じゅんそんしつわ さんびゃく ごじゅうろくおくえんでした。
+    telops:
+    - {text: "上場以来初の赤字 356億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: サターンは世界で926万台。プレイステーションは、1億台を超えていきます。
+    reading: さたーんわ せかいで きゅうひゃく にじゅうろくまんだい。ぷれいすてーしょんわ、いちおくだいお こえて いきます。
+- id: card1997
+  title: ''
+  background: sg_card_1997
+  cuts:
+  - speaker: reimu
+    text: 1997年ごろ。セガは次のゲーム機を、日本と米国の2つのチームに競わせていました。
+    reading: せんきゅうひゃく きゅうじゅうななねん ごろ。せがわ つぎの げーむきお、にほんと べいこくの ふたつの ちーむに きそわせて いました。
+- id: ch5_mae
+  title: 95パーセント負ける
+  background: sg_kaihatsu_yoru
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: buka
+    emotion: thinking
+    text: 佐藤さん。明日の役員会、どっちに決まりますかね。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちの日本案は、日立とNECとヤマハのチップを組み合わせた機械だ。
+  - speaker: buka
+    emotion: thinking
+    text: 米国案は、アメリカの画像チップの会社と組んでますよね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……95パーセント、こっちが負けると思ってる。
+  - speaker: buka
+    emotion: surprised
+    text: 自分の案なのに、ですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……明日になれば、分かる。
+- id: ch5_yakuin
+  title: ''
+  background: sg_yakuinkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: okawa, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 翌日の役員会。日本案と米国案で、議論になりました。
+    reading: よくじつの やくいんかい。にほんあんと べいこくあんで、ぎろんに なりました。
+  - speaker: okawa
+    emotion: thinking
+    text: ……佐藤で行け。
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ。……ボクの案で、いいんですか。
+  - speaker: reimu
+    text: 佐藤が伝え聞いた理由は、いっぱい失敗した佐藤ならいっぱい学んでいるだろうというものでした。
+    reading: さとうが つたえきいた りゆうわ、いっぱい しっぱい した さとうなら いっぱい まなんで いるだろうと いう ものでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: 失敗の数で、選ばれた……。
+  - speaker: zundamon
+    emotion: happy
+    text: 数なら、誰にも負けないのだ。
+    beat: true
+- id: card1998
+  title: ''
+  background: sg_card_1998
+  cuts:
+  - speaker: reimu
+    text: 1998年5月21日。朝日新聞の朝刊に、セガの一面広告が載ります。
+    reading: せんきゅうひゃく きゅうじゅうはちねん ごがつ にじゅういちにち。あさひ しんぶんの ちょうかんに、せがの いちめん こうこくが のります。
+- id: ch6_koukoku
+  title: 倒れたままなのか
+  background: sg_shinbun
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 書かれていたのは、セガは、倒れたままなのか？ という一文でした。
+    reading: かかれて いたのわ、せがわ たおれた ままなのか という いちぶんでした。
+    telops:
+    - {text: "セガは、倒れたままなのか？", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: buka
+    emotion: surprised
+    text: 自分で、倒れたって書いちゃってますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 倒れてるのは、本当だからな。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 今日の午後は、新しいゲーム機の発表会だ。
+- id: ch6_happyo
+  title: ''
+  background: sg_happyokai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: irimajiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 都内のホテルで、ドリームキャストが発表されます。発売は11月20日の予定、値段は未定でした。
+    reading: とないの ほてるで、どりーむきゃすとが はっぴょう されます。はつばいわ じゅういちがつ はつかの よてい、ねだんわ みていでした。
+  - speaker: irimajiri
+    emotion: normal
+    text: これだけの機能を持ったゲームを[2万～3万円|にまんからさんまんえん]のハードで遊べる時代となった。
+  - speaker: reimu
+    text: 会場には、マイクロソフトのビル・ゲイツ会長からビデオレターも届きます。
+    reading: かいじょうにわ、まいくろそふとの びる げいつ かいちょうから びでお れたーも とどきます。
+  - speaker: zundamon
+    emotion: happy
+    text: マイクロソフトのウィンドウズCEも、載せられるようにした機械だ。
+- id: ch7_cm1
+  title: 専務が出るCM
+  background: sg_cm_machi
+  bgm: pop
+  stage:
+  - {who: yukawa, x: 0.24, flip: true, emotion: normal}
+  - {who: kodomo, x: 0.56, emotion: happy}
+  - {who: kodomo2, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 6月、湯川英一専務が自ら出るCMが始まります。全8話で、仕掛けたのは秋元康でした。
+    reading: ろくがつ、ゆかわ ひでかず せんむが みずから でる しーえむが はじまります。ぜんはちわで、しかけたのわ あきもと やすしでした。
+  - speaker: kodomo
+    emotion: happy
+    text: セガなんてだっせえよな！
+  - speaker: kodomo2
+    emotion: happy
+    text: プレステの[方|ほう]がおもしろいよな！
+  - speaker: yukawa
+    emotion: sad
+    text: ……そうなのか。
+    beat: true
+- id: ch7_cm2
+  title: ''
+  background: sg_cm_kuruma
+  stage:
+  - {who: kantoku, x: 0.28, flip: true, emotion: normal}
+  - {who: yukawa, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: yukawa
+    emotion: sad
+    text: ここで止めてくれ。ひとりになりたいんだ。
+  - speaker: kantoku
+    emotion: thinking
+    text: カット！ 湯川さん、ちょっとイントネーションが違いますね。
+    se: hammer
+  - speaker: yukawa
+    emotion: surprised
+    text: ……そうなのか。
+  - speaker: kantoku
+    emotion: normal
+    text: そのセリフは、もう撮りました。車の場面をもう一回お願いします。
+  - speaker: yukawa
+    emotion: sad
+    text: ここで、止めてくれ。……ひとりに、なりたいんだ。
+  - speaker: kantoku
+    emotion: happy
+    text: ……今のは、本当に落ち込んで見えますね。
+    beat: true
+- id: ch7_cm3
+  title: ''
+  background: sg_cm_machi
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: yukawa, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 湯川専務、出演料はいくらなんですか。
+  - speaker: yukawa
+    emotion: happy
+    text: もちろんノーギャラです。
+  - speaker: yukawa
+    emotion: happy
+    text: なにせ大川会長がケチなので。
+  - speaker: yukawa
+    emotion: surprised
+    text: ……いや、これは冗談ですが。
+    beat: true
+  - speaker: kisha
+    emotion: thinking
+    text: それ、記事に書いていいんですか。
+    beat: true
+- id: ch8_browser
+  title: 会長とネット
+  background: sg_kaichoshitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: okawa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 佐藤の話では、ブラウザを作る会社への出資を大川に何度か頼んでいました。
+    reading: さとうの はなしでわ、ぶらうざお つくる かいしゃえの しゅっしお おおかわに なんどか たのんで いました。
+  - speaker: zundamon
+    emotion: normal
+    text: 会長。ドリームキャストには、ネットにつなぐモデムを入れます。
+  - speaker: zundamon
+    emotion: normal
+    text: ネットを見るブラウザは、[ACCESS|アクセス]という小さな会社に作ってもらいます。
+  - speaker: zundamon
+    emotion: normal
+    text: その会社への出資を、お願いできませんか。
+  - speaker: okawa
+    emotion: thinking
+    text: 佐藤さん。ブラウザは、やっぱりネットスケープじゃなきゃ駄目だよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: いや、ゲーム機に合わせて作れるのは……
+  - speaker: okawa
+    emotion: normal
+    text: わしゃあ、せん。
+    se: chin
+  - speaker: zundamon
+    emotion: sad
+    text: ……何度頼んでも、これなのだ。
+- id: ch8_tv
+  title: ''
+  background: sg_kaichoshitsu_net
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: okawa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 出荷の前。佐藤は41インチのテレビで、大川にネットを見せます。
+    reading: しゅっかの まえ。さとうわ よんじゅういちいんちの てれびで、おおかわに ねっとお みせます。
+  - speaker: zundamon
+    emotion: normal
+    text: 会長、これがドリームキャストで開いたホームページです。
+  - speaker: okawa
+    emotion: surprised
+    text: ほう。大きい画面だと、よう見えるな。
+  - speaker: zundamon
+    emotion: thinking
+    text: ただ、子どもに見せたくないページも見えてしまいます。
+  - speaker: okawa
+    emotion: thinking
+    text: ……しょうがないんじゃないの。
+  - speaker: zundamon
+    emotion: happy
+    text: ……会長が腹をくくるなら、[出せます|だせます]。
+    beat: true
+- id: ch9_chip
+  title: チップが足りない
+  background: sg_kojo
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: kojo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1998年の秋。熊本の工場で、絵を描くためのチップが作られていました。
+    reading: せんきゅうひゃく きゅうじゅうはちねんの あき。くまもとの こうじょうで、えお かく ための ちっぷが つくられて いました。
+  - speaker: zundamon
+    emotion: normal
+    text: ウエハー1枚から、チップはいくつ取れますか。
+  - speaker: kojo
+    emotion: thinking
+    text: 8インチのウエハー1枚から、取れるのは5個から10個です。
+    telops:
+    - {text: "ウエハー1枚から5〜10個", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: たった、それだけ！？
+    background: sg_kojo_wafer
+    se: bikkuri
+  - speaker: kojo
+    emotion: sad
+    text: 使えるのは、光っているこれだけです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 年末には、山ほど要るのに……。
+  - speaker: kojo
+    emotion: thinking
+    text: '[歩留まり|ぶどまり]が、なかなか上がらなくて。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……発売日に、並べる数が足りない。
+- id: ch9_yakuin
+  title: ''
+  background: sg_yakuinkai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: okawa, x: 0.56, emotion: thinking}
+  - {who: eigyo, x: 0.8, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 佐藤の話では、チップ不足を聞いた大川は発売を遅らせようとしました。
+    reading: さとうの はなしでわ、ちっぷ ぶそくお きいた おおかわわ はつばいお おくらせようと しました。
+  - speaker: okawa
+    emotion: thinking
+    text: 数が足りんのなら、販売を遅らせろ。
+  - speaker: eigyo
+    emotion: angry
+    text: 会長、年末を逃したら[SCE|エスシーイー]に先を越されます！
+  - speaker: okawa
+    emotion: normal
+    text: ……しょうがないな。年末に[出せ|だせ]。
+- id: ch9_kakaku
+  title: ''
+  background: sg_happyokai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: okawa, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 10月6日。値段は2万9800円、発売は1週間遅れの11月27日と発表されます。
+    reading: じゅうがつ むいか。ねだんわ にまん きゅうせん はっぴゃくえん、はつばいわ いっしゅうかん おくれの じゅういちがつ にじゅうしちにちと はっぴょう されます。
+  - speaker: okawa
+    emotion: happy
+    text: ゲーム機だけにとどまらず、情報端末として大きく発展していく家電商品となる。
+  - speaker: reimu
+    text: モデムを内蔵し、全国5000店とコンビニで売られます。起動音は、坂本龍一の作でした。
+    reading: もでむお ないぞう し、ぜんこく ごせんてんと こんびにで うられます。きどうおんわ、さかもと りゅういちの さくでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: 家電の顔はできた。あとは、チップの数だ。
+  - speaker: reimu
+    text: 初回の出荷は大きく減り、予約のキャンペーンも急に取りやめになりました。
+    reading: しょかいの しゅっかわ おおきく へり、よやくの きゃんぺーんも きゅうに とりやめに なりました。
+- id: ch10_hatsubai
+  title: 発売日の棚
+  background: sg_mise
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: tenin, x: 0.56, emotion: happy}
+  - {who: kyaku, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 11月27日。ドリームキャストが発売されます。同時に出たソフトは4本でした。
+    reading: じゅういちがつ にじゅうしちにち。どりーむきゃすとが はつばい されます。どうじに でた そふとわ よんほんでした。
+  - speaker: kyaku
+    emotion: happy
+    text: ドリームキャスト、ひとつください！
+  - speaker: tenin
+    emotion: happy
+    text: はい、こちらに……
+  - speaker: tenin
+    emotion: surprised
+    text: ……あ。今ので、最後でした。
+    background: sg_mise_urikire
+    se: gaan
+  - speaker: kyaku
+    emotion: surprised
+    text: 発売日なのに、もう売り切れ！？
+  - speaker: tenin
+    emotion: thinking
+    text: 次の入荷が、いつになるか分からないんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 並べる数が、そもそも足りないのだ……。
+  - speaker: kyaku
+    emotion: angry
+    text: 売る物が無いのに、CMはやってるんですね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……耳が、痛いのだ。
+    beat: true
+  - speaker: reimu
+    text: 品切れのあと、湯川は降格をネタにしたCMに出て、呼び名は湯川元専務になります。
+    reading: しなぎれの あと、ゆかわわ こうかくお ねたに した しーえむに でて よびなわ ゆかわ もとせんむに なります。
+- id: card1999
+  title: ''
+  background: sg_card_1999
+  cuts:
+  - speaker: reimu
+    text: 1999年3月。SCEが、次のプレイステーションの仕様を公開します。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねん さんがつ。えすしーいーが、つぎの ぷれいすてーしょんの しようお こうかい します。
+- id: ch11_nesage
+  title: 1万9900円に値下げ
+  background: sg_happyokai
+  bgm: curious
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: irimajiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月1日。国内で100万台に届いたセガは、本体を1万9900円に下げると発表します。
+    reading: ろくがつ ついたち。こくないで ひゃくまんだいに とどいた せがわ、ほんたいお いちまん きゅうせん きゅうひゃくえんに さげると はっぴょう します。
+  - speaker: irimajiri
+    emotion: normal
+    text: 短期的には厳しいが、長期的には今回の事業展開が優れていると言える。
+  - speaker: kisha
+    emotion: normal
+    text: 次のプレイステーションを、どう見ていますか。
+  - speaker: irimajiri
+    emotion: thinking
+    text: 一般に普及する2万円以下、200ドル以下は難しいだろう。
+- id: ch11_okawa
+  title: ''
+  background: sg_happyokai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: okawa, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: okawa
+    emotion: happy
+    text: ビル・ゲイツと喧嘩したり手を握ったりしながら、やってきた。
+  - speaker: zundamon
+    emotion: surprised
+    text: 喧嘩と握手を、両方ですか。
+    beat: true
+- id: ch12_america
+  title: アメリカで発売
+  background: sg_america
+  bgm: natsuyasumi
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1999年9月9日。北米で199ドルのドリームキャストが発売されます。予約は30万台でした。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねん くがつ ここのか。ほくべいで ひゃく きゅうじゅうきゅうどるの どりーむきゃすとが はつばい されます。よやくわ さんじゅうまんだいでした。
+  - speaker: kyaku
+    emotion: happy
+    text: 予約したドリームキャスト、受け取りに来たよ！
+  - speaker: tenin
+    emotion: happy
+    text: 今夜は、ずっとこの行列ですよ！
+  - speaker: kyaku
+    emotion: happy
+    text: 9が並ぶ日に発売なんて、覚えやすいね！
+- id: ch12_houkoku
+  title: ''
+  background: sg_kaihatsu_yoru
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: buka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: buka
+    emotion: happy
+    text: 佐藤さん、アメリカから連絡です！ 発売から24時間の売上が、9790万ドル！
+    telops:
+    - {text: "24時間で9790万ドル", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 9790万ドル！？
+    se: levelup
+  - speaker: buka
+    emotion: happy
+    text: 日本の品切れの分まで、取り返せそうですね！
+  - speaker: zundamon
+    emotion: happy
+    text: よし。ここから巻き返すのだ！
+- id: ch12_ps2
+  title: ''
+  background: sg_kaihatsu_yoru
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: buka, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 9月13日。
+    reading: くがつ じゅうさんにち。
+  - speaker: buka
+    emotion: sad
+    text: ……佐藤さん。ソニーが、プレイステーション2を発表しました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 値段は？
+  - speaker: buka
+    emotion: thinking
+    text: 3万9800円で、来年の3月4日に発売です。
+  - speaker: buka
+    emotion: thinking
+    text: DVDが見られて、今のプレステのソフトも遊べます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……DVDまで、見られるのか。
+- id: card2000
+  title: ''
+  background: sg_card_2000
+  cuts:
+  - speaker: reimu
+    text: 2000年2月28日。セガは、業績の見通しを引き下げます。
+    reading: にせんねん にがつ にじゅうはちにち。せがわ、ぎょうせきの みとおしお ひきさげます。
+- id: ch13_kaigi
+  title: 計画の半分
+  background: sg_kaigi_akaji
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: eigyo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: eigyo
+    emotion: sad
+    text: 国内の販売は、60万台の見込みです。計画は110万台でした。
+    telops:
+    - {text: "国内60万台（計画110万台）", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 計画の、半分ちょっとか。
+  - speaker: eigyo
+    emotion: sad
+    text: 赤字の予想も、198億円から449億円に増えます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 倍以上……。
+- id: ch13_ps2
+  title: ''
+  background: sg_mise_ps2
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: tenin, x: 0.56, emotion: happy}
+  - {who: kyaku, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 3月4日に出たPS2は、3日間で98万台。店頭で60万台、ネットで38万台でした。
+    reading: さんがつ よっかに でた ぴーえすつーわ、みっかかんで きゅうじゅうはちまんだい。てんとうで ろくじゅうまんだい、ねっとで さんじゅうはちまんだいでした。
+  - speaker: tenin
+    emotion: happy
+    text: プレステ2、本日の分はまもなく終わりでーす！
+  - speaker: kyaku
+    emotion: surprised
+    text: 朝から並んだのに！
+  - speaker: zundamon
+    emotion: sad
+    text: ……今度は、向こうが品切れか。
+- id: ch13_byoki
+  title: 値下げと会長の病
+  background: sg_kaichoshitsu
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: okawa, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2000年6月。社長の入交昭一郎が副会長に退き、大川が社長を兼ねます。
+    reading: にせんねん ろくがつ。しゃちょうの いりまじり しょういちろうが ふくかいちょうに しりぞき、おおかわが しゃちょうお かねます。
+  - speaker: reimu
+    text: 7月、大川は食道がんと診断されます。本人によると、9月の半ばに消えました。
+    reading: しちがつ、おおかわわ しょくどうがんと しんだん されます。ほんにんに よると、くがつの なかばに きえました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会長。アメリカの値段も、149ドル95セントまで下げます。
+  - speaker: okawa
+    emotion: normal
+    text: 世界で、どれだけ出た。
+  - speaker: zundamon
+    emotion: normal
+    text: 世界で、およそ500万台です。来年の3月までに、1000万台を目指します。
+- id: ch13_nenmatsu
+  title: ''
+  background: sg_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: eigyo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 11月、メディアファクトリーから香山哲が、特別顧問としてセガに入ります。
+    reading: じゅういちがつ、めでぃあ ふぁくとりーから かやま てつが とくべつ こもんと して せがに はいります。
+  - speaker: eigyo
+    emotion: sad
+    text: 佐藤さん。4月から12月の販売は、世界で232万台です。
+  - speaker: eigyo
+    emotion: sad
+    text: 計画より、44パーセント少ないです。
+  - speaker: zundamon
+    emotion: sad
+    text: 年末の、一番売れる時期にか。
+  - speaker: eigyo
+    emotion: thinking
+    text: ソフトも815万本で、34パーセント少ないです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……値段を下げても、届かないのか。
+- id: card2001
+  title: ''
+  background: sg_card_2001
+  cuts:
+  - speaker: reimu
+    text: 2001年1月。セガがゲーム機から手を引くと、報じられます。
+    reading: にせんいちねん いちがつ。せがが げーむきから てお ひくと、ほうじられます。
+- id: ch14_kabuka
+  title: 株価が上がった日
+  background: sg_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: eigyo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: eigyo
+    emotion: surprised
+    text: 佐藤さん、株価がまたストップ高です。これで4日連続です。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゲーム機をやめると書かれて、株が上がる……。
+  - speaker: eigyo
+    emotion: normal
+    text: 黒字のソフトの仕事に絞る方針が、好感されたそうです。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクらの作った機械は、無いほうがいいってことか。
+    se: shobon
+- id: ch14_kaiken
+  title: 撤退の会見
+  background: sg_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: kayama, x: 0.56, emotion: thinking}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月31日。取締役会で、ドリームキャストの製造中止が決まりました。
+    reading: いちがつ さんじゅういちにち。とりしまりやくかいで、どりーむきゃすとの せいぞう ちゅうしが きまりました。
+  - speaker: reimu
+    text: 夕方の会見に、大川は来ませんでした。幹部は、風邪で自宅療養中だと説明しました。
+    reading: ゆうがたの かいけんに、おおかわわ きませんでした。かんぶわ かぜで じたく りょうようちゅうだと せつめい しました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3月31日をもって、ドリームキャストの製造を打ち切ります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今後はプレイステーション2とゲームボーイアドバンスにも、ソフトを出します。
+  - speaker: reimu
+    text: 副社長の佐藤は、資料をほぼ棒読みで読み上げていきました。
+    reading: ふくしゃちょうの さとうわ、しりょうお ほぼ ぼうよみで よみあげて いきました。
+  - speaker: kisha
+    emotion: normal
+    text: 今の状況を、どう受け止めていますか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……尋常な状態では、ありません。
+  - speaker: kayama
+    emotion: sad
+    text: 申し訳ないの[一言|ひとこと]しかない。
+    beat: true
+  - speaker: kisha
+    emotion: normal
+    text: ドリームキャストの在庫は、どれだけ残っていますか。
+  - speaker: kayama
+    emotion: thinking
+    text: 現在、ドリキャスの手持ち在庫は203万台ある。
+    telops:
+    - {text: "在庫203万台", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 今期の最終赤字は、583億円になる見込みでした。
+    reading: こんきの さいしゅう あかじわ、ごひゃく はちじゅうさんおくえんに なる みこみでした。
+- id: ch15_shizai
+  title: 会長の850億円
+  background: sg_kaichoshitsu
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: kanbu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1月の末から2月にかけて、大川は私財およそ850億円をセガに贈ります。
+    reading: いちがつの すえから にがつに かけて、おおかわわ しざい およそ はっぴゃく ごじゅうおくえんお せがに おくります。
+    telops:
+    - {text: "私財およそ850億円", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 持っていたセガの株およそ2000万株のすべてと、関連会社の株でした。
+    reading: もって いた せがの かぶ およそ にせんまんかぶの すべてと、かんれん がいしゃの かぶでした。
+  - speaker: kanbu
+    emotion: thinking
+    text: 株主にセガが本気で再建を目指すことを、意思表示すると同時に……
+  - speaker: kanbu
+    emotion: sad
+    text: 経営陣にとっては、大きな激励になった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会長の席に、誰もいない。
+- id: ch14_soko
+  title: 203万台の箱
+  background: sg_soko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: buka
+    emotion: sad
+    text: 佐藤さん……。箱が、天井まで積まれてます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 203万台。全部、ボクらが作った機械だ。
+  - speaker: reimu
+    text: 2月26日、セガは国内で希望退職300人の受け付けを始めます。
+    reading: にがつ にじゅうろくにち、せがわ こくないで きぼう たいしょく さんびゃくにんの うけつけお はじめます。
+  - speaker: reimu
+    text: 3月1日。国内の値段は、9900円になりました。
+    reading: さんがつ ついたち。こくないの ねだんわ、きゅうせん きゅうひゃくえんに なりました。
+  - speaker: buka
+    emotion: sad
+    text: 発売したときの、3分の1です。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクらの機械に、9900円の札か。
+  - speaker: reimu
+    text: 3月16日。大川功は、心不全で亡くなりました。74歳でした。
+    reading: さんがつ じゅうろくにち。おおかわ いさおわ、しんふぜんで なくなりました。ななじゅうよんさいでした。
+- id: ch15_jukkai
+  title: ''
+  background: sg_kaihatsu_yoru
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: のちに佐藤は、1983年から作り続けたゲーム機との別れをこう振り返っています。
+    reading: のちに さとうわ、せんきゅうひゃく はちじゅうさんねんから つくりつづけた げーむきとの わかれお こう ふりかえって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 生んで育った子を、自分で弔う。
+    se: namida
+- id: ch16_chip
+  title: 余ったチップの行き先
+  background: sg_kaihatsu
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2001年5月、佐藤はセガの社長になります。
+    reading: にせんいちねん ごがつ、さとうわ せがの しゃちょうに なります。
+  - speaker: buka
+    emotion: thinking
+    text: 社長。ドリームキャストのチップが、山ほど余ってます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 山ほど……。あれだけ足りなかったのに、今度は余るのか。
+  - speaker: buka
+    emotion: sad
+    text: 捨てるしか、ないですかね。
+  - speaker: zundamon
+    emotion: happy
+    text: サミーさんが、買ってくれることになった。パチスロに載せるそうだ。
+  - speaker: buka
+    emotion: surprised
+    text: ゲーム機のチップが、パチスロに！？
+  - speaker: reimu
+    text: チップはサミーのパチスロ北斗の拳に使われ、売った数はおよそ150万個でした。
+    reading: ちっぷわ さみーの ぱちすろ ほくとの けんに つかわれ、うった かずわ およそ ひゃくごじゅうまんこでした。
+- id: ch16_sushi
+  title: ''
+  background: sg_sushi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: normal}
+  - {who: sushiten, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: ドリームキャストの基板は、回転寿司の注文用の画面にも使われました。
+    reading: どりーむきゃすとの きばんわ、かいてんずしの ちゅうもんようの がめんにも つかわれました。
+  - speaker: sushiten
+    emotion: sad
+    text: セガさん。注文の画面が、また動かないんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: おかしいな。中のディスクのドライブが、やられてる……。
+  - speaker: sushiten
+    emotion: thinking
+    text: 原因、分かりました？
+  - speaker: zundamon
+    emotion: surprised
+    text: '[酢|す]です。お寿司の[酢|す]の成分で、[GD-ROM|ジーディーロム]が壊れてます。'
+    background: sg_sushi_kowareta
+  - speaker: sushiten
+    emotion: surprised
+    text: ……寿司屋で、[酢|す]を使うなと言われても。
+    se: oti
+- id: ch16_sonic
+  title: 他社のゲーム機へ
+  background: sg_kaihatsu_mega
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 佐藤秀樹, emotion: happy}
+  - {who: eigyo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: eigyo
+    emotion: happy
+    text: 社長。ソニックの新作は、任天堂のゲームキューブに出ます。
+  - speaker: zundamon
+    emotion: happy
+    text: ずっと戦ってきた相手なのにな。
+  - speaker: eigyo
+    emotion: happy
+    text: ソニックが、よその家へ遊びに行くみたいですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 速いハリネズミは、どの家でも走れるのだ。
+  - speaker: reimu
+    text: 2001年12月20日に出たソニックアドベンチャー2バトルは、250万本以上売れました。
+    reading: にせんいちねん じゅうにがつ はつかに でた そにっく あどべんちゃー つー ばとるわ、にひゃく ごじゅうまんぼん いじょう うれました。
+  - speaker: reimu
+    text: 2002年3月期、営業利益は142億円の黒字に。ドリームキャストの在庫も売り切りました。
+    reading: にせんにねん さんがつき、えいぎょう りえきわ ひゃく よんじゅうにおくえんの くろじに。どりーむきゃすとの ざいこも うりきりました。
+  - speaker: zundamon
+    emotion: happy
+    text: 203万台、全部いなくなったか。
+  - speaker: eigyo
+    emotion: happy
+    text: 社長。黒字の数字を見て、泣いてます？
+  - speaker: zundamon
+    emotion: surprised
+    text: 泣いてない。目にほこりが入っただけだ。
+    beat: true
+  - speaker: reimu
+    text: 2003年に佐藤は会長へ移り、2004年にはセガサミーホールディングスが生まれます。
+    reading: にせんさんねんに さとうわ かいちょうえ うつり、にせんよねんにわ せがさみー ほーるでぃんぐすが うまれます。
+- id: ch17_ronso
+  title: 本当の敗因
+  background: sg_heya_dc
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。会長が、ビル・ゲイツに[直談判|じかだんぱん]したって！
+  - speaker: tsumugi
+    emotion: normal
+    text: その場面を確かめられる資料は、見つからないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 確かなのは、喧嘩したり手を握ったりという大川さん本人の言葉。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それと、マイクロソフトが[Xbox|エックスボックス]の前にセガの買収を考えてたという証言ね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 買収！？ セガが、買われそうだったの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 考えた、という元幹部の話よ。[直談判|じかだんぱん]とは別の話。
+  - speaker: tsumugi
+    emotion: normal
+    text: ドリームキャストがウィンドウズCEを載せられたのは、本当だけどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、負けた本当の理由は[何|なん]なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 一つじゃないわ。まず、サターンで信用をなくしたこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1台売るごとに損が出るから、出荷を絞った。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを見て、お店もソフト会社も離れていったの。
+  - speaker: zundamon
+    emotion: sad
+    text: '[貧すれば鈍する|ひんすればどんする]、だったのだ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 次に、品切れ。ウエハー1枚から、チップが5個から10個。
+  - speaker: tsumugi
+    emotion: normal
+    text: 数がそろったときには、お客さんの関心が薄れていたとセガの人も振り返ってる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 年末に、並べられなかったから……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初のソフトは4本だけ。大作のシェンムーは、延期を重ねて1999年の暮れ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこへDVDも見られて昔のソフトも遊べる[PS2|ピーエスツー]が、3万9800円。
+  - speaker: zundamon
+    emotion: sad
+    text: ドリームキャストは、DVDが見られない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 独自の[GD-ROM|ジーディーロム]っていう、1ギガバイトのディスクだったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに当時の日本は、つないだ時間だけお[金|かね]がかかるネットだった。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自慢のネットが、高くついたのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 根っこにあったのは、売るほど赤字になる形とお[金|かね]の体力。
+  - speaker: tsumugi
+    emotion: normal
+    text: 赤字は4期続いて、手元の現預金は約200億円だったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 値下げすればするほど、苦しくなる……。
+  - speaker: tsumugi
+    emotion: normal
+    text: ハードとソフトの釣り合いを保つのが難しいと、セガ自身も説明してるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: だからソフトに絞るって聞いて、株が上がったのか！
+  - speaker: tsumugi
+    emotion: happy
+    text: そういうこと。[直談判|じかだんぱん]の噂より、数字のほうがずっと多くを語ってるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ネットの噂より、決算書のほうが面白いなんて……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 決算書は、話を盛ると捕まるからね。
+    se: tsukkomi
+- id: ch18_gendai
+  title: 今も走るハリネズミ
+  background: sg_eigakan
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ゲーム機をやめたセガは、ソフトの会社として続いたの。
+  - speaker: tsumugi
+    emotion: happy
+    text: ソニックの映画は3作で、世界の興行収入が10億ドルを超えたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクが見た3作なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 4作目は、2027年3月にアメリカで公開の予定よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、[龍が如く|りゅうがごとく]のシリーズは累計2770万本。2024年にはドラマにもなったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2770万本！ ドリームキャストの台数より、ずっと多い。
+  - speaker: tsumugi
+    emotion: normal
+    text: ゲーム機のほうは、世界でおよそ913万台だったわね。
+- id: ch18_net
+  title: ''
+  background: sg_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ドリームキャストには、最初から電話線につなぐモデムが入ってた。
+  - speaker: tsumugi
+    emotion: normal
+    text: ネットのぐるぐる温泉には、2000年8月までにのべ220万人が集まったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 今なら当たり前のネットの遊びを、1998年に箱に入れてたのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 少し、早すぎたのかもしれないわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会長がいなかったら、セガはどうなってたのかな。
+  - speaker: tsumugi
+    emotion: normal
+    text: セガのクリエイターだった[小玉理恵子|こだまりえこ]さんは、2019年にこう[話してる|はなしてる]。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大川さんがいなかったら、たぶんセガという会社はないはずです。
+  - speaker: reimu
+    text: 佐藤秀樹は、2026年2月13日に亡くなりました。75歳でした。
+    reading: さとう ひできわ、にせん にじゅうろくねん にがつ じゅうさんにちに なくなりました。ななじゅうごさいでした。
+- id: shime
+  title: ''
+  background: sg_heya_dc
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 押し入れのゲーム機、捨てる前に一度だけ電源を入れてみて。
+  - speaker: zundamon
+    emotion: happy
+    text: 入れてみる！ ……あ、起動の音が鳴った！
+  - speaker: tsumugi
+    emotion: happy
+    text: その音を作ったのは、[坂本龍一|さかもとりゅういち]さんよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: こんなに短い音に、そんなすごい人が……。
+  - speaker: zundamon
+    emotion: happy
+    text: よし。映画の4作目まで、このゲーム機で遊んで待つのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2027年まで、ずっと押し入れの前にいる気？
+    se: oti
+  - speaker: tsumugi
+    emotion: thinking
+    text: 佐藤さんは、自分で育てたゲーム機を自分で弔うと言ったけど。
+  - speaker: tsumugi
+    emotion: normal
+    text: ネットで遊ぶこともソニックも、今は当たり前になったわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 弔ったあとも、ちゃんと走ってるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

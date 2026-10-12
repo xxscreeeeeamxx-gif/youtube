@@ -1903,5 +1903,98 @@
     "text": "技術と製造と販売の3つが、手を組むという意味もあるの。"
    }
   ]
+ },
+ {
+  "slug": "sega-dreamcast",
+  "video_id": "_uuNsyoF7mc",
+  "title_a": "【ドリームキャストの撤退】在庫203万台。作った本人が幕を引いた日【ずんだもん解説】",
+  "title_b": "自社CMで「セガなんてだっせえよな」。2年半後、セガはゲーム機をやめた【ずんだもん解説】",
+  "title_c": "ドリームキャストをやめると報じられた日、なぜセガの株価は上がったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "セガ、ゲーム機をやめる",
+   "head_hi": "やめる",
+   "panels": [
+    {
+     "prop": null,
+     "bg": "dark",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "だっせえよな！",
+     "by": "子ども",
+     "shout": true,
+     "label": "1998年のCM"
+    },
+    {
+     "prop": "p_dcboxes",
+     "bg": "blue",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "打ち切ります",
+     "by": "",
+     "shout": false,
+     "label": "在庫203万台"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "conflict",
+   "headline": "やめたら株価が上がる？",
+   "head_hi": "株価",
+   "panels": [
+    {
+     "prop": "p_dcwhite",
+     "bg": "dark",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "株が上がる…",
+     "by": "",
+     "shout": false,
+     "label": "撤退の報道"
+    },
+    {
+     "prop": null,
+     "bg": "red",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "ストップ高です",
+     "by": "営業",
+     "shout": false,
+     "label": "4日連続で上昇"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "CMの子どもの台詞",
+    "scene": "ch7_cm1",
+    "text": "セガなんてだっせえよな！"
+   },
+   {
+    "claim": "製造打ち切り",
+    "scene": "ch14_kaiken",
+    "text": "3月31日をもって、ドリームキャストの製造を打ち切ります。"
+   },
+   {
+    "claim": "在庫203万台",
+    "scene": "ch14_kaiken",
+    "text": "現在、ドリキャスの手持ち在庫は203万台ある。"
+   },
+   {
+    "claim": "株価4日連続ストップ高",
+    "scene": "ch14_kabuka",
+    "text": "佐藤さん、株価がまたストップ高です。これで4日連続です。"
+   },
+   {
+    "claim": "発売日に売り切れ",
+    "scene": "ch10_hatsubai",
+    "text": "発売日なのに、もう売り切れ！？"
+   },
+   {
+    "claim": "CM放映1998-06と撤退発表2001-01（2年半あまり）",
+    "scene": "card1998/card2001",
+    "text": "台帳 Y1・E1"
+   }
+  ]
  }
 ]
