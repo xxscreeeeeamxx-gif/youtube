@@ -2099,5 +2099,113 @@
     "text": "貸している金融機関は、155にのぼります。"
    }
   ]
+ },
+ {
+  "slug": "fujifilm-komori",
+  "video_id": "ta5ZO5v9Gi4",
+  "title_a": "【富士フイルムの逆転】フィルム需要が10分の1に。それでも過去最高益になった写真の会社【ずんだもん解説】",
+  "title_b": "写真フィルムが10分の1に。富士フイルムの社長は「経営者としてはとても幸せだ」と言った【ずんだもん解説】",
+  "title_c": "同じ嵐でコダックは破綻。なぜ富士フイルムは過去最高益になれたのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "本業を失って最高益",
+   "head_hi": "最高益",
+   "panels": [
+    {
+     "prop": "p_fffilm",
+     "bg": "blue",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "武者震いがした",
+     "by": "",
+     "shout": false,
+     "label": "需要10分の1"
+    },
+    {
+     "prop": "p_ffcosme",
+     "bg": "yellow",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "全員反対は面白い",
+     "by": "研究所長",
+     "shout": true,
+     "label": "化粧品で逆転"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "conflict",
+   "headline": "なぜ富士だけ生き残った？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "prop": "p_kdfilm",
+     "bg": "dark",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "あのコダックが…",
+     "by": "客",
+     "shout": false,
+     "label": "コダック破綻"
+    },
+    {
+     "prop": "p_ffcamera",
+     "bg": "red",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "写真が首位！？",
+     "by": "",
+     "shout": false,
+     "label": "過去最高益"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "経営者としてはとても幸せだ（古森・2016年の取材。本文の発言）",
+    "scene": "ch15_shiawase",
+    "text": "私は、経営者としてはとても幸せだ。"
+   },
+   {
+    "claim": "需要10分の1",
+    "scene": "co_",
+    "text": "写真フィルムの需要は、10年で10分の1以下になります。"
+   },
+   {
+    "claim": "過去最高益",
+    "scene": "co_/gendai",
+    "text": "営業利益は3502億円、純利益は2767億円。どっちも過去最高。"
+   },
+   {
+    "claim": "コダック破綻",
+    "scene": "2012",
+    "text": "2012年1月19日。アメリカのコダックが、連邦破産法11条の適用を申請します。"
+   },
+   {
+    "claim": "武者震い（古森ののちの回想）",
+    "scene": "2000",
+    "text": "武者震いがして、やってやるという気持ちでした。"
+   },
+   {
+    "claim": "全員反対は面白い（戸田研究所長）",
+    "scene": "keshohin",
+    "text": "全員が全員反対するのは、面白い。"
+   },
+   {
+    "claim": "あのコダックが（客）",
+    "scene": "2012",
+    "text": "あのコダックが……。"
+   },
+   {
+    "claim": "写真が利益トップ",
+    "scene": "gendai",
+    "text": "写真が、利益のトップ！？"
+   },
+   {
+    "claim": "写真が首位（利益のいちばんはイメージング）",
+    "scene": "gendai",
+    "text": "ところが利益のいちばんは、そのイメージング。"
+   }
+  ]
  }
 ]

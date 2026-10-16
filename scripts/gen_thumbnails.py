@@ -3622,6 +3622,42 @@ def p_soshutter(d, s):
     d.rectangle([s * 0.42, s * 0.66, s * 0.58, s * 0.8], fill=(250, 250, 246), outline=(150, 150, 150))
 
 
+def p_fffilm(d, s):
+    """写真フィルムの箱と缶（富士フイルム回）。社名・意匠は描かず、緑の箱と黒い缶だけ。"""
+    d.rectangle([s * 0.12, s * 0.3, s * 0.62, s * 0.86], fill=(40, 140, 80), outline=(20, 70, 40), width=int(s * 0.014))
+    d.rectangle([s * 0.18, s * 0.38, s * 0.5, s * 0.5], fill=(250, 250, 250))
+    d.rounded_rectangle([s * 0.6, s * 0.46, s * 0.86, s * 0.86], radius=int(s * 0.04), fill=(36, 36, 40),
+                        outline=(90, 90, 96), width=int(s * 0.012))
+    d.rectangle([s * 0.63, s * 0.4, s * 0.83, s * 0.48], fill=(70, 70, 76))
+
+
+def p_kdfilm(d, s):
+    """黄色いフィルムの箱と缶（富士フイルム回のコダック側）。社名・意匠は描かない。"""
+    d.rectangle([s * 0.12, s * 0.3, s * 0.62, s * 0.86], fill=(244, 196, 30), outline=(150, 110, 10), width=int(s * 0.014))
+    d.rectangle([s * 0.18, s * 0.38, s * 0.5, s * 0.5], fill=(250, 250, 250))
+    d.rounded_rectangle([s * 0.6, s * 0.46, s * 0.86, s * 0.86], radius=int(s * 0.04), fill=(36, 36, 40),
+                        outline=(90, 90, 96), width=int(s * 0.012))
+    d.rectangle([s * 0.63, s * 0.4, s * 0.83, s * 0.48], fill=(70, 70, 76))
+
+
+def p_ffcosme(d, s):
+    """赤い化粧品の瓶（富士フイルム回）。製品名は描かない。"""
+    for x, h, c in ((0.28, 0.5, (236, 200, 210)), (0.5, 0.64, (200, 30, 50)), (0.72, 0.44, (220, 60, 70))):
+        w = 0.16
+        top = s * (0.9 - h)
+        d.rounded_rectangle([s * (x - w / 2), top, s * (x + w / 2), s * 0.9], radius=int(s * 0.04), fill=c,
+                            outline=(130, 40, 50), width=int(s * 0.012))
+        d.rectangle([s * (x - 0.05), top - s * 0.08, s * (x + 0.05), top], fill=(220, 220, 226))
+
+
+def p_ffcamera(d, s):
+    """インスタントカメラ風（富士フイルム回）。"""
+    d.rounded_rectangle([s * 0.12, s * 0.26, s * 0.88, s * 0.82], radius=int(s * 0.08), fill=(160, 200, 240),
+                        outline=(90, 110, 140), width=int(s * 0.016))
+    d.ellipse([s * 0.34, s * 0.36, s * 0.66, s * 0.68], fill=(40, 40, 50), outline=(230, 230, 236), width=int(s * 0.02))
+    d.rectangle([s * 0.68, s * 0.32, s * 0.82, s * 0.42], fill=(250, 250, 240))
+
+
 NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
 TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
 GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
@@ -4067,6 +4103,11 @@ SPECS = {
         head_hi="転落", panels=[
         _p("p_sostore", "1991年", NAVY, "happy", "3店からここまで", "売上日本一"),
         _p("p_soshutter", "2000年", SLATE, "sad", "倒れた…", "民事再生へ"),
+    ]),
+    "fujifilm-komori": dict(layout="panels", headline="需要10分の1から最高益",
+        head_hi="最高益", panels=[
+        _p("p_fffilm", "2000年", SLATE, "sad", "フィルムが減る…", "10年で10分の1"),
+        _p("p_ffcosme", "2007年", TEAL, "happy", "化粧品も作れる！", "技術の使い回し"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

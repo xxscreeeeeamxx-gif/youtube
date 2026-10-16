@@ -1,0 +1,1570 @@
+meta:
+  title: 富士フイルム、需要10分の1から過去最高益へ　コダックとの分かれ道【ずんだもん解説】
+  slug: fujifilm-komori
+  summary: 2000年、写真フィルムの需要が頂点に達したその年に、富士写真フイルムの社長になった古森重隆。写真は売上の半分以上、利益の3分の2を稼ぐ本業でした。同じ嵐の中にいたのは、最初のデジタルカメラを作ったアメリカのコダック。2つの会社は、どこで道が分かれたのか。社内の賛成が2〜3％だった化粧品、600ページの反論書、そして会見で読み上げた数字。再現ドラマでたどります。
+  tags:
+  - 富士フイルム
+  - 古森重隆
+  - コダック
+  - 写真フィルム
+  - 写ルンです
+  - チェキ
+  - アスタリフト
+  - 富士ゼロックス
+  - 戸田雄三
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 需要は10分の1以下
+    bottom: 富士フイルム逆転
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: toda
+    label: 戸田雄三
+    voice: 67
+    pitch: 0.0
+    outfit: labcoat
+  - id: onishi
+    label: 大西實
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#4a4a52'
+  - id: buchou
+    label: 営業部長
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: kenkyu
+    label: 研究員
+    voice: 11
+    pitch: 0.0
+    outfit: labcoat
+  - id: shain
+    label: 社員
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#6a5a48'
+  - id: tenin
+    label: 店主
+    voice: 42
+    pitch: 0.06
+    outfit: apron
+  - id: kyaku
+    label: 客
+    voice: 100
+    pitch: 0.0
+  - id: miyazaki
+    label: 宮﨑剛
+    voice: 12
+    pitch: 0.02
+    outfit: suit
+    color: '#2a3a4a'
+scenes:
+- id: co_baka1
+  title: ''
+  background: ff_kenkyujo
+  bgm: curious
+  stage:
+  - {who: toda, x: 0.28, flip: true, emotion: happy}
+  - {who: buchou, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2000年代の半ば。写真フィルムの会社で、化粧品を作る話が持ち上がります。
+    reading: にせんねんだいの なかば。しゃしん ふぃるむの かいしゃで、けしょうひんお つくる はなしが もちあがります。
+  - speaker: toda
+    emotion: happy
+    text: 部長。悪いけど、[バカ1|ばかいち]になってくれないか。
+  - speaker: buchou
+    emotion: surprised
+    text: ばか、いち？
+  - speaker: toda
+    emotion: happy
+    text: 化粧品をやるんだ。最初に乗ってくれる、バカの1号さ。
+  - speaker: buchou
+    emotion: normal
+    text: お断りします。
+    beat: true
+  - speaker: toda
+    emotion: sad
+    text: ……せめて、考えるふりくらいしてくれよ。
+  - speaker: reimu
+    text: この会社は、富士フイルム。写真フィルムの需要は、10年で10分の1以下になります。
+    reading: この かいしゃわ、ふじ ふぃるむ。しゃしん ふぃるむの じゅようわ じゅうねんで じゅうぶんの いち いかに なります。
+  - speaker: reimu
+    text: それでも、のちに過去最高益を出すまでに。なぜ、そんなことができたのか。
+    reading: それでも のちに かこ さいこうえきお だすまでに。なぜ そんな ことが できたのか。
+- id: hook
+  title: ''
+  background: ff_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ チェキで撮った写真なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1枚だけ？
+  - speaker: zundamon
+    emotion: happy
+    text: 壁を見るのだ！
+    background: ff_heya_photo
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……全部、ずんだもんの自撮りじゃない。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: その会社、今は医療や化粧品もやってるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 写真フィルムなんて、売上の1％もないわ。
+    telops:
+    - {text: "写真フィルムは売上の1％未満", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: フィルムの会社なのに！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカのコダックは、破綻したのにね。
+  - speaker: zundamon
+    emotion: surprised
+    text: なんで富士は、潰れなかったの！？
+- id: card1934
+  title: ''
+  background: ff_card_1934
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1934年1月。大日本セルロイドの写真フィルム部を引き継いで、富士写真フイルムが生まれます。
+    reading: せんきゅうひゃく さんじゅうよねん いちがつ。だいにっぽん せるろいどの しゃしん ふぃるむぶお ひきついで、ふじ しゃしん ふぃるむが うまれます。
+  - speaker: reimu
+    text: 目的は、写真フィルムの国産化。2月には、神奈川の足柄工場で製造が始まります。
+    reading: もくてきわ、しゃしん ふぃるむの こくさんか。にがつにわ かながわの あしがら こうじょうで せいぞうが はじまります。
+- id: ch1_kojo
+  title: 国産の写真フィルム
+  background: ff_kojo
+  bgm: honwaka_puppu
+  stage:
+  - {who: kenkyu, x: 0.28, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 暗い！ 工場なのに、真っ暗じゃないですか。
+  - speaker: kenkyu
+    emotion: normal
+    text: フィルムは光に当たると、そこで写ってしまうからな。
+  - speaker: shain
+    emotion: thinking
+    text: じゃあ、どうやって作るんです？
+  - speaker: kenkyu
+    emotion: happy
+    text: 目をつぶっても動けるように、体で覚えるんだ。
+  - speaker: shain
+    emotion: happy
+    text: 外国製に頼らない、国産の写真フィルムですもんね。
+  - speaker: kenkyu
+    emotion: happy
+    text: ああ。日本の写真を、日本のフィルムで撮るんだ。
+  - speaker: shain
+    emotion: thinking
+    text: ……ところで、僕のメガネはどこでしょう。
+    se: manuke
+  - speaker: kenkyu
+    emotion: thinking
+    text: 暗いから、誰にも見えん。
+    beat: true
+- id: card1963
+  title: ''
+  background: ff_card_1963
+  cuts:
+  - speaker: reimu
+    text: 1963年4月。東京大学の経済学部を出た古森重隆が、入社します。
+    reading: せんきゅうひゃく ろくじゅうさんねん しがつ。とうきょう だいがくの けいざい がくぶお でた こもり しげたかが、にゅうしゃ します。
+  - speaker: reimu
+    text: 長崎県の出身。最初の配属は、経営企画部でした。
+    reading: ながさきけんの しゅっしん。さいしょの はいぞくわ、けいえい きかくぶでした。
+- id: ch2_nyusha
+  title: 営業に行かせてください
+  background: ff_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: '[古森|こもり]くん、話があるって？'
+  - speaker: zundamon
+    emotion: normal
+    text: はい。営業に、移らせてください。
+  - speaker: shain
+    emotion: surprised
+    text: 経営企画部から、営業へ？
+  - speaker: zundamon
+    emotion: normal
+    text: 希望を出しました。
+  - speaker: shain
+    emotion: thinking
+    text: 企画の机を離れて、外回りか。物好きだな。
+  - speaker: zundamon
+    emotion: normal
+    text: はい。物好きで、すみません。
+  - speaker: shain
+    emotion: thinking
+    text: 外回りは、靴がすぐ減るぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: 靴代くらいは、売ってきます。
+  - speaker: shain
+    emotion: happy
+    text: ……大きく出たな。
+    beat: true
+  - speaker: reimu
+    text: 古森は、本人の希望で営業に移りました。
+    reading: こもりわ、ほんにんの きぼうで えいぎょうに うつりました。
+- id: card1975
+  title: ''
+  background: ff_card_1975
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1975年。アメリカのコダックで、最初のデジタルカメラが生まれます。
+    reading: せんきゅうひゃく ななじゅうごねん。あめりかの こだっくで、さいしょの でじたる かめらが うまれます。
+- id: ch2_kodak
+  title: コダックの試作機
+  background: ff_kaigai_office
+  cuts:
+  - speaker: reimu
+    text: 作ったのは、コダックの技術者スティーブ・サッソンです。
+    reading: つくったのわ、こだっくの ぎじゅつしゃ すてぃーぶ さっそんです。
+  - speaker: reimu
+    text: 重さは3.6キロ。白黒で1万画素、1枚をカセットテープに記録するのに23秒かかりました。
+    reading: おもさわ さんてんろく きろ。しろくろで いちまん がそ、いちまいお かせっと てーぷに きろく するのに にじゅうさんびょう かかりました。
+- id: card1986
+  title: ''
+  background: ff_card_1986
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1986年7月。世界初のレンズ付きフィルム、写ルンですが発売されます。
+    reading: せんきゅうひゃく はちじゅうろくねん しちがつ。せかいはつの れんずつき ふぃるむ、うつるんですが はつばい されます。
+- id: ch3_utsurun
+  title: フィルムにレンズが付いた
+  background: ff_genzosho
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: 店主さん！ このフィルム、レンズが付いてるよ。
+  - speaker: tenin
+    emotion: happy
+    text: '[写ルンです|うつるんです]。カメラを持ってなくても、それで撮れますよ。'
+  - speaker: kyaku
+    emotion: surprised
+    text: カメラを買わずに、写真が撮れるのか。
+  - speaker: tenin
+    emotion: happy
+    text: 撮り終わったら、そのまま店に持ってきてください。
+  - speaker: tenin
+    emotion: happy
+    text: 現像は、うちでやりますから。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ3個ちょうだい。旅行と運動会と、孫の分。
+  - speaker: tenin
+    emotion: thinking
+    text: お孫さん、まだ撮る側じゃないでしょう。
+  - speaker: kyaku
+    emotion: happy
+    text: 撮られる側の分だよ。
+    beat: true
+  - speaker: reimu
+    text: 写ルンですは、最初の1年で300万本。世界では、累計17億本を超えています。
+    reading: うつるんですわ、さいしょの いちねんで さんびゃくまんぼん。せかいでわ るいけい じゅうななおくほんお こえて います。
+- id: card1995
+  title: ''
+  background: ff_card_1995
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1995年5月18日。コダックが、アメリカの通商法301条にもとづく申し立てをします。
+    reading: せんきゅうひゃく きゅうじゅうごねん ごがつ じゅうはちにち。こだっくが あめりかの つうしょうほう さんびゃく いちじょうに もとづく もうしたてお します。
+- id: ch4_301
+  title: コダックの申し立て
+  background: ff_shachoshitsu
+  stage:
+  - {who: onishi, x: 0.28, flip: true, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 社長！ コダックが、アメリカの通商代表部に申し立てました！
+  - speaker: onishi
+    emotion: thinking
+    text: 中身は。
+  - speaker: shain
+    emotion: normal
+    text: 日本のフィルム[市場|しじょう]は、閉ざされていると。
+  - speaker: onishi
+    emotion: thinking
+    text: 申立書の厚さは、どれくらいだ。
+  - speaker: shain
+    emotion: normal
+    text: 約300ページです。
+  - speaker: onishi
+    emotion: angry
+    text: 1ページ残らず、全部答えてやれ。
+  - speaker: shain
+    emotion: surprised
+    text: ぜ、全部ですか。
+    beat: true
+- id: ch4_hanron
+  title: 600ページの反論書
+  background: ff_shachoshitsu
+  stage:
+  - {who: onishi, x: 0.28, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 7月31日。富士は、通商代表部に反論書を出します。題は、歴史の改ざん。
+    reading: しちがつ さんじゅういちにち。ふじわ、つうしょう だいひょうぶに はんろんしょお だします。だいわ、れきしの かいざん。
+  - speaker: shain
+    emotion: thinking
+    text: 社長、できました。600ページです。
+    telops:
+    - {text: "反論書 600ページ", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shain
+    emotion: surprised
+    text: コダックの申立書の、倍の厚さです。
+  - speaker: onishi
+    emotion: normal
+    text: 前書きは、わたしの名前で出す。
+  - speaker: onishi
+    emotion: angry
+    text: コダックの主張は、全くのでたらめだ。
+    se: don
+  - speaker: onishi
+    emotion: angry
+    text: 制裁を求めて、政治の圧力を不当に使う。
+  - speaker: onishi
+    emotion: angry
+    text: ビジネスの倫理として、到底許されるものではない。
+  - speaker: shain
+    emotion: surprised
+    text: 前書きから、全力ですね……。
+  - speaker: onishi
+    emotion: thinking
+    text: 600ページ、向こうにも全部読んでもらう。
+  - speaker: shain
+    emotion: thinking
+    text: 読むほうも、大変ですね。
+    beat: true
+- id: card1996
+  title: ''
+  background: ff_card_1996
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 1996年。古森は、富士フイルムヨーロッパの社長になります。
+    reading: せんきゅうひゃく きゅうじゅうろくねん。こもりわ、ふじ ふぃるむ よーろっぱの しゃちょうに なります。
+- id: ch5_europe
+  title: ナンバーツーで満足するな
+  background: ff_hotel_yoru
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、ようこそヨーロッパへ！ 長旅、お疲れさまでした。
+  - speaker: zundamon
+    emotion: normal
+    text: よろしく。さっそくだが、こちらでのうちの順位は。
+  - speaker: shain
+    emotion: happy
+    text: 2番手です。なかなかのものでしょう。
+  - speaker: zundamon
+    emotion: angry
+    text: ナンバーツーで、満足するな。
+    se: tsukkomi
+  - speaker: shain
+    emotion: surprised
+    text: ……ほめてもらえると、思ったのに。
+  - speaker: zundamon
+    emotion: normal
+    text: 2番手のままでいい理由は、どこにもない。
+  - speaker: shain
+    emotion: thinking
+    text: ……拍手の準備、しまっておきます。
+    beat: true
+- id: ch6_wto
+  title: WTOの判断
+  background: ff_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1996年10月。アメリカ政府の訴えで、WTOに小委員会ができます。
+    reading: せんきゅうひゃく きゅうじゅうろくねん じゅうがつ。あめりか せいふの うったえで、だぶりゅー てぃー おーに しょういいんかいが できます。
+  - speaker: reimu
+    text: 1997年12月。小委員会が、中間の報告を出します。
+    reading: せんきゅうひゃく きゅうじゅうななねん じゅうにがつ。しょういいんかいが、ちゅうかんの ほうこくお だします。
+  - speaker: kisha
+    emotion: normal
+    text: 富士として、中間報告をどう受け止めますか。
+  - speaker: shain
+    emotion: happy
+    text: 今回の[WTO|ダブリューティーオー]パネルの裁定は、日本に有利なものであります。
+  - speaker: shain
+    emotion: normal
+    text: この理不尽な紛争の終結に、一歩近づきました。
+  - speaker: kisha
+    emotion: surprised
+    text: 理不尽、とまで言いますか。
+  - speaker: shain
+    emotion: thinking
+    text: 反論書は、600ページ書きましたので。
+  - speaker: kisha
+    emotion: thinking
+    text: ページの数で、気持ちを測らないでください。
+    beat: true
+  - speaker: reimu
+    text: 1998年3月31日。小委員会が、最終の報告を出します。
+    reading: せんきゅうひゃく きゅうじゅうはちねん さんがつ さんじゅういちにち。しょういいんかいが、さいしゅうの ほうこくお だします。
+  - speaker: reimu
+    text: 日本の16の措置すべてで、アメリカは立証できなかった。報告は、そのまま採択されました。
+    reading: にほんの じゅうろくの そち すべてで、あめりかわ りっしょう できなかった。ほうこくわ そのまま さいたく されました。
+  - speaker: kisha
+    emotion: surprised
+    text: 16の、全部で……。
+  - speaker: shain
+    emotion: happy
+    text: こちらの言い分が、通りました。
+    se: levelup
+  - speaker: reimu
+    text: 同じ1998年、富士は国内でインスタントカメラのチェキを売り出しています。
+    reading: おなじ せんきゅうひゃく きゅうじゅうはちねん、ふじわ こくないで いんすたんと かめらの ちぇきお うりだして います。
+- id: card2000
+  title: ''
+  background: ff_card_2000
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2000年6月。ヨーロッパの社長だった古森が、富士写真フイルムの社長になります。
+    reading: にせんねん ろくがつ。よーろっぱの しゃちょうだった こもりが、ふじ しゃしん ふぃるむの しゃちょうに なります。
+  - speaker: reimu
+    text: 写真フィルムの世界の需要は、この年が頂点でした。
+    reading: しゃしん ふぃるむの せかいの じゅようわ、この としが ちょうてんでした。
+- id: ch7_shacho
+  title: 売上の半分以上、利益の3分の2
+  background: ff_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、ご就任おめでとうございます！
+  - speaker: zundamon
+    emotion: normal
+    text: ありがとう。まず、数字を見せてくれ。
+  - speaker: shain
+    emotion: happy
+    text: フィルムは今年も、よく売れています！
+  - speaker: zundamon
+    emotion: thinking
+    text: 写真で、売上の半分以上。利益の[3分の2|さんぶんのに]か。
+    telops:
+    - {text: "写真で売上の半分以上・利益の3分の2", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shain
+    emotion: happy
+    text: はい。うちの[稼ぎ頭|かせぎがしら]です！
+  - speaker: zundamon
+    emotion: normal
+    text: デジタルカメラのほうは。
+  - speaker: shain
+    emotion: happy
+    text: そちらも伸びてます。うちは両方で稼げますよ。
+    beat: true
+  - speaker: reimu
+    text: 写真フィルムの需要は、この年を境に減り始めます。
+    reading: しゃしん ふぃるむの じゅようわ、この としお さかいに へりはじめます。
+- id: ch7_kaiko
+  title: ''
+  background: ff_shachoshitsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 古森重隆, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 古森はのちに、このころのことをこう語っています。
+    reading: こもりわ のちに、この ころの ことお こう かたって います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 写真フィルムの需要のピークは、私が社長に就任した2000年でした。
+  - speaker: zundamon
+    emotion: normal
+    text: 相当思い切ったことをやらないと会社が救えないと考えた時は、うれしかったです。
+  - speaker: zundamon
+    emotion: happy
+    text: '[武者震い|むしゃぶるい]がして、やってやるという気持ちでした。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 人生最後の[通信簿|つうしんぼ]になるとも、思いました。
+    telops:
+    - {text: "人生最後の通信簿", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: card2001
+  title: ''
+  background: ff_card_2001
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2001年3月。1962年にイギリスの会社と作った富士ゼロックスを、連結子会社にします。
+    reading: にせんいちねん さんがつ。せんきゅうひゃく ろくじゅうにねんに いぎりすの かいしゃと つくった ふじ ぜろっくすお れんけつ こがいしゃに します。
+  - speaker: reimu
+    text: 同じころ、古森は研究部門の責任者たちと、技術の棚卸しを始めます。
+    reading: おなじ ころ こもりわ けんきゅう ぶもんの せきにんしゃ たちと、ぎじゅつの たなおろしお はじめます。
+- id: ch8_tanaoroshi
+  title: 技術の棚卸し
+  background: ff_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: kenkyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: うちが持っている技術を、全部書き出してくれ。
+  - speaker: kenkyu
+    emotion: surprised
+    text: 全部、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 全部だ。小さなものも残さずに。
+  - speaker: kenkyu
+    emotion: thinking
+    text: コラーゲンの扱いに、色あせを防ぐ技術。細かい粒を混ぜる技術……。
+  - speaker: kenkyu
+    emotion: sad
+    text: 書き出したら、[表|ひょう]が壁からはみ出しそうです。
+  - speaker: zundamon
+    emotion: normal
+    text: それを、4つのます目に分ける。
+  - speaker: zundamon
+    emotion: normal
+    text: 技術が今のものか新しいものか。[市場|しじょう]が今のものか新しいものか。
+  - speaker: kenkyu
+    emotion: surprised
+    text: 写真の技術を、写真じゃない[市場|しじょう]に？
+    se: hirameki
+  - speaker: zundamon
+    emotion: normal
+    text: そうだ。行き先を選ぶ基準は、3つある。
+  - speaker: zundamon
+    emotion: normal
+    text: '[市場|しじょう]に成長性があるか？'
+  - speaker: zundamon
+    emotion: normal
+    text: 当社の技術を活かすことができるか？
+  - speaker: zundamon
+    emotion: normal
+    text: 継続的に競争力を持ち続けられるか？
+  - speaker: kenkyu
+    emotion: thinking
+    text: ……3つとも満たす所なんて、あるんでしょうか。
+  - speaker: zundamon
+    emotion: normal
+    text: それを探すんだ。研究開発の費用は、削らない。
+  - speaker: kenkyu
+    emotion: happy
+    text: 研究所に戻って、すぐ書き出します！
+  - speaker: reimu
+    text: 富士は苦しい時期も、研究開発に毎年2000億円ほどを出し続けました。
+    reading: ふじわ くるしい じきも、けんきゅう かいはつに まいとし にせんおくえん ほどお だしつづけました。
+- id: ch8_kaisetsu
+  title: フィルムの技術の行き先
+  background: ff_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 4つのます目を、ずんだもんで考えてみようか。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの得意料理は、ずんだ餅なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の技術は、ずんだ餅。今の[市場|しじょう]は、和菓子屋さんのお客さん。
+  - speaker: tsumugi
+    emotion: normal
+    text: ずんだ餅をケーキ屋さんで売れば、今の技術で新しい[市場|しじょう]。
+  - speaker: zundamon
+    emotion: happy
+    text: ずんだのショートケーキ、売れそうなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 富士は、それをフィルムの技術でやったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: たとえば写真フィルムの材料には、コラーゲンを使ってたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: コラーゲン！？ 肌がぷるぷるになる、あれ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。肌の主な成分と同じ仲間よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それから、写真の色あせを防ぐ技術。
+  - speaker: tsumugi
+    emotion: normal
+    text: 切ったリンゴが茶色くなるのと同じで、色あせにも酸化が関わってるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: サビないように、守るってこと？
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。抗酸化っていうの。
+  - speaker: tsumugi
+    emotion: normal
+    text: もう一つが、細かい粒を混ぜて安定させる技術。ナノ化ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: ドレッシングは振っても、すぐに油と酢に分かれるでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 粒をうんと細かくすると、混ざったままでいやすいの。
+  - speaker: zundamon
+    emotion: surprised
+    text: フィルムの技術で、化粧品が作れるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: "[表|ひょう]から見つかった行き先は、化粧品と薬と液晶用のフィルム。"
+  - speaker: tsumugi
+    emotion: normal
+    text: 液晶用のフィルムは、売上が約20億円から20年で約2000億円になったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100倍！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 医療でも1983年に、レントゲンの画像をデジタルにする装置を出してたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 写真の会社は、写すもの全部が守備範囲なのか。
+- id: ch9_kiki
+  title: 車がなくなったら
+  background: ff_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2003年、古森は社長兼CEOになります。
+    reading: にせんさんねん、こもりわ しゃちょうけん しーいーおーに なります。
+  - speaker: shain
+    emotion: thinking
+    text: 社長。フィルムの需要の数字が、出ました。
+  - speaker: shain
+    emotion: sad
+    text: 前の年より、また大きく落ちています。
+    background: ff_kaigi_akaji
+    telops:
+    - {text: "フィルム需要が急減", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: shain
+    emotion: sad
+    text: この先も同じなら、数年で半分です。
+  - speaker: zundamon
+    emotion: angry
+    text: トヨタ自動車は、車がなくなったらどうするのか。
+  - speaker: zundamon
+    emotion: angry
+    text: '[新日本製鐵|しんにっぽんせいてつ]は、鉄がなくなったらどうするのか。'
+  - speaker: zundamon
+    emotion: normal
+    text: われわれは、それほどの危機に直面しているんだ。
+    se: don
+  - speaker: shain
+    emotion: surprised
+    text: 車のない、トヨタ……。
+  - speaker: shain
+    emotion: sad
+    text: ……想像しただけで、胃が痛いです。
+    beat: true
+  - speaker: reimu
+    text: 翌年2月、古森は中期計画のVISION75を発表します。
+    reading: よくねん にがつ、こもりわ ちゅうき けいかくの びじょん ななじゅうごお はっぴょう します。
+  - speaker: zundamon
+    emotion: normal
+    text: 柱は3つ。徹底的な構造改革と、新しい成長戦略。
+  - speaker: zundamon
+    emotion: normal
+    text: そして、連結経営の強化だ。
+- id: card2006
+  title: ''
+  background: ff_card_2006
+  cuts:
+  - speaker: reimu
+    text: 2006年の初め。古森は、社内報にこう書きます。
+    reading: にせんろくねんの はじめ。こもりわ、しゃないほうに こう かきます。
+- id: ch10_shanaiho
+  title: まったなしの社内報
+  background: ff_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.5, tag: 古森重隆, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: イメージング事業は100億円近く減少、50億円の赤字。
+  - speaker: zundamon
+    emotion: angry
+    text: まったなし。
+  - speaker: zundamon
+    emotion: normal
+    text: '[背水の陣|はいすいのじん]で、挑む。'
+- id: ch10_happyo
+  title: 5000人を減らす
+  background: ff_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月31日。古森は、写真部門の構造改革を発表します。
+    reading: いちがつ さんじゅういちにち。こもりわ、しゃしん ぶもんの こうぞう かいかくお はっぴょう します。
+  - speaker: kisha
+    emotion: normal
+    text: 減らす人数は。
+  - speaker: zundamon
+    emotion: thinking
+    text: 約5000人です。
+  - speaker: kisha
+    emotion: surprised
+    text: 5000人……。費用は。
+  - speaker: zundamon
+    emotion: normal
+    text: 構造改革の費用は、総額1650億円。2年に分けて計上します。
+    telops:
+    - {text: "約5000人削減・1650億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 今期の利益は。
+  - speaker: zundamon
+    emotion: thinking
+    text: 純利益の見通しを、850億円から200億円に下げます。
+  - speaker: kisha
+    emotion: surprised
+    text: '[4分の1|よんぶんのいち]以下……。'
+    se: gaan
+  - speaker: kisha
+    emotion: thinking
+    text: フィルムの会社が、フィルムを縮める……。
+  - speaker: reimu
+    text: 写真フィルムの需要は、このころ2000年の半分になっていました。
+    reading: しゃしん ふぃるむの じゅようわ このころ にせんねんの はんぶんに なって いました。
+- id: ch10_genzosho
+  title: 現像に来ない客
+  background: ff_genzosho
+  bgm: 223am
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: いらっしゃい！ 現像ですか。
+  - speaker: kyaku
+    emotion: normal
+    text: いや、電池だけちょうだい。デジカメのね。
+  - speaker: tenin
+    emotion: thinking
+    text: ……デジカメの、電池。
+  - speaker: kyaku
+    emotion: happy
+    text: 撮ったらパソコンで見るから、現像は要らないんだ。
+  - speaker: tenin
+    emotion: sad
+    text: 気がついたら、棚もお客さんも……。
+    background: ff_genzosho_kara
+  - speaker: kyaku
+    emotion: thinking
+    text: ……電池、2個にしとくよ。
+    beat: true
+  - speaker: reimu
+    text: 1998年に出したチェキも、2002年の100万台から、1年に10万台ほどまで落ちていました。
+    reading: せんきゅうひゃく きゅうじゅうはちねんに だした ちぇきも にせんにねんの ひゃくまんだいから、いちねんに じゅうまんだい ほどまで おちて いました。
+- id: ch11_hantai
+  title: 賛同は社内の2〜3％
+  background: ff_kenkyujo
+  bgm: curious
+  stage:
+  - {who: toda, x: 0.28, flip: true, emotion: happy}
+  - {who: kenkyu, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同じころ、研究所長の戸田雄三は、化粧品の開発を進めていました。
+    reading: おなじ ころ、けんきゅう しょちょうの とだ ゆうぞうわ けしょうひんの かいはつお すすめて いました。
+  - speaker: kenkyu
+    emotion: sad
+    text: 所長、社内は反対の声ばかりです。
+  - speaker: toda
+    emotion: normal
+    text: 新規事業に本当に賛同してくれるのは、社内でも[2〜3％|にからさんパーセント]だ。
+  - speaker: kenkyu
+    emotion: surprised
+    text: 100人いて、2人か3人！？
+  - speaker: toda
+    emotion: thinking
+    text: 残りは、無党派と無関心派さ。
+  - speaker: kenkyu
+    emotion: thinking
+    text: 無関心なら、反対よりましでは。
+  - speaker: toda
+    emotion: normal
+    text: いや。結局は、反対と同じだ。
+  - speaker: toda
+    emotion: happy
+    text: だから、その2人を探しに行く。
+  - speaker: kenkyu
+    emotion: thinking
+    text: 2人見つかるまでに、何人に断られるんでしょう。
+  - speaker: toda
+    emotion: happy
+    text: 98人だな。
+    beat: true
+- id: ch11_baka1
+  title: バカ1になってくれ
+  background: ff_kenkyujo
+  stage:
+  - {who: toda, x: 0.28, flip: true, emotion: happy}
+  - {who: buchou, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: toda
+    emotion: happy
+    text: 部長。悪いけど、[バカ1|ばかいち]になってくれないか。
+  - speaker: buchou
+    emotion: surprised
+    text: ばか、いち？
+  - speaker: toda
+    emotion: happy
+    text: 化粧品をやるんだ。最初に乗ってくれる、バカの1号さ。
+  - speaker: buchou
+    emotion: normal
+    text: お断りします。
+    beat: true
+  - speaker: toda
+    emotion: sad
+    text: ……せめて、考えるふりくらいしてくれよ。
+    se: zukko
+  - speaker: buchou
+    emotion: thinking
+    text: ……なれません。
+  - speaker: toda
+    emotion: thinking
+    text: 断られるのも、[2〜3％|にからさんパーセント]の計算のうちだ。
+  - speaker: buchou
+    emotion: thinking
+    text: ……計算が合ってるのが、なおさら怖いです。
+    beat: true
+- id: ch11_shamei
+  title: 社名を入れるか
+  background: ff_kenkyujo
+  stage:
+  - {who: toda, x: 0.28, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 所長。商品に社名を入れる案ですが、外の専門家の多くが反対です。
+  - speaker: toda
+    emotion: happy
+    text: 全員が全員反対するのは、面白い。
+  - speaker: shain
+    emotion: surprised
+    text: 面白い、ですか。
+  - speaker: toda
+    emotion: happy
+    text: だったら、絶対にやってやろうじゃないか。
+  - speaker: toda
+    emotion: normal
+    text: 社名は入れる。フィルムの会社の化粧品だから、面白いんだ。
+  - speaker: shain
+    emotion: thinking
+    text: 面白がってる場合ですか。それより、この机……。
+  - speaker: shain
+    emotion: surprised
+    text: 研究所の机が、化粧品の瓶だらけです！
+    background: ff_kenkyujo_cosme
+  - speaker: toda
+    emotion: thinking
+    text: 顕微鏡の置き場所が、無くなったな。
+    beat: true
+  - speaker: reimu
+    text: 2006年9月、富士は化粧品の通信販売を始めます。
+    reading: にせんろくねん くがつ、ふじわ けしょうひんの つうしん はんばいお はじめます。
+  - speaker: reimu
+    text: 2007年9月には、スキンケアのアスタリフトを売り出し、店頭での販売も始めました。
+    reading: にせんななねん くがつにわ すきんけあの あすたりふとお うりだし、てんとうでの はんばいも はじめました。
+- id: ch11_tenpo
+  title: フィルムの会社の化粧品
+  background: ff_tenpo
+  bgm: natsuyasumi
+  stage:
+  - {who: shain, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: これって、富士フイルムの化粧品？
+  - speaker: shain
+    emotion: happy
+    text: はい。アスタリフトです。
+  - speaker: kyaku
+    emotion: thinking
+    text: フィルムを、顔に貼るの？
+  - speaker: shain
+    emotion: thinking
+    text: 貼りません。
+    beat: true
+  - speaker: shain
+    emotion: happy
+    text: 写真フィルムの材料にも、コラーゲンを使ってきたんです。
+  - speaker: kyaku
+    emotion: surprised
+    text: 写真とお肌が、親戚だったなんて。
+  - speaker: shain
+    emotion: happy
+    text: 写真の色あせを防ぐ技術も、使っています。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ、わたしも色あせないのね。
+  - speaker: shain
+    emotion: thinking
+    text: ……それは、お約束できません。
+    se: hammer
+- id: card2008
+  title: ''
+  background: ff_card_2008
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 2008年2月13日。富士は、医薬品の会社、富山化学工業の買収を発表します。
+    reading: にせんはちねん にがつ じゅうさんにち。ふじわ いやくひんの かいしゃ、とやま かがく こうぎょうの ばいしゅうお はっぴょう します。
+- id: ch12_toyama
+  title: 写真の会社が薬を
+  background: ff_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 写真の会社が、なぜ薬の会社を。
+  - speaker: zundamon
+    emotion: normal
+    text: 技術的シナジーの大きさが、[富山化学|とやまかがく]をパートナーに選んだ最大の理由です。
+  - speaker: kisha
+    emotion: thinking
+    text: シナジー、ですか。
+  - speaker: kisha
+    emotion: normal
+    text: 出資の割合は。
+  - speaker: zundamon
+    emotion: normal
+    text: 富士が66％、[大正製薬|たいしょうせいやく]が34％の計画です。
+  - speaker: reimu
+    text: 富士は会見で、2018年をめどに1兆円規模の総合ヘルスケア企業を目指すとしました。
+    reading: ふじわ かいけんで、にせん じゅうはちねんお めどに いっちょうえん きぼの そうごう へるすけあ きぎょうお めざすと しました。
+  - speaker: reimu
+    text: 3月、富士は株式の公開買い付けで、富山化学を子会社にします。
+    reading: さんがつ、ふじわ かぶしきの こうかい かいつけで とやま かがくお こがいしゃに します。
+- id: ch13_sakugen2
+  title: 2回目の5000人
+  background: ff_shachoshitsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2008年3月期。売上高は約2兆8500億円、営業利益は約2070億円で、当時の過去最高でした。
+    reading: にせんはちねん さんがつき。うりあげだかわ やく にちょう はっせん ごひゃくおくえん、えいぎょう りえきわ やく にせん ななじゅうおくえんで とうじの かこ さいこうでした。
+  - speaker: reimu
+    text: 2008年の暮れ。世界同時不況で、業績はまた落ち込みます。
+    reading: にせんはちねんの くれ。せかい どうじ ふきょうで、ぎょうせきわ また おちこみます。
+  - speaker: reimu
+    text: 2009年度から2010年度にかけて、2回目の削減に踏み切ります。
+    reading: にせん きゅうねんどから にせん じゅうねんどに かけて、にかいめの さくげんに ふみきります。
+  - speaker: shain
+    emotion: surprised
+    text: 社長。また、人を減らすんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 間接部門と研究開発の部門などで、約5000人だ。
+  - speaker: shain
+    emotion: surprised
+    text: 研究開発も、ですか。
+  - speaker: shain
+    emotion: thinking
+    text: 研究の費用は、削らないはずでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 費用は、削らない。
+  - speaker: shain
+    emotion: sad
+    text: ……人は、減るのに。
+    beat: true
+  - speaker: reimu
+    text: 2度の削減は、合わせて約1万人の規模になりました。
+    reading: にどの さくげんわ、あわせて やく いちまんにんの きぼに なりました。
+- id: card2012
+  title: ''
+  background: ff_card_2012
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2012年1月19日。アメリカのコダックが、連邦破産法11条の適用を申請します。
+    reading: にせん じゅうにねん いちがつ じゅうくにち。あめりかの こだっくが、れんぽう はさんほう じゅういちじょうの てきようお しんせい します。
+- id: ch14_kodak
+  title: コダックの破綻
+  background: ff_america
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 資産は51億ドル。負債は67.5億ドルです。
+    telops:
+    - {text: "コダック破綻　負債67.5億ドル", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kyaku
+    emotion: surprised
+    text: あのコダックが……。
+  - speaker: kisha
+    emotion: thinking
+    text: 社員は世界で約1万7000人。ピークの1980年代前半は、約13万人でした。
+  - speaker: kyaku
+    emotion: sad
+    text: 13万人が、1万7000人に……。
+    se: namida
+- id: ch14_interview
+  title: コダックの破綻をどう見たか
+  background: ff_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月、古森は会長兼CEOになり、社長には中嶋成博が就きます。
+    reading: ろくがつ、こもりわ かいちょうけん しーいーおーに なり しゃちょうにわ なかじま しげひろが つきます。
+  - speaker: reimu
+    text: 7月。古森は、雑誌の取材に答えます。
+    reading: しちがつ。こもりわ、ざっしの しゅざいに こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: コダックの破綻を、どう見ていますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: コダックを悪く言うつもりはありません。
+  - speaker: zundamon
+    emotion: normal
+    text: デジタルとは、標準化を意味しますから。
+  - speaker: kisha
+    emotion: thinking
+    text: 誰が作っても同じような物になる、と？
+  - speaker: zundamon
+    emotion: normal
+    text: 過当競争になりがちです。
+  - speaker: kisha
+    emotion: thinking
+    text: ……作る側にとっては、厳しい波ですね。
+  - speaker: reimu
+    text: 2013年9月、コダックは破産手続きを終え、商業印刷を中心とする会社として再出発しました。
+    reading: にせん じゅうさんねん くがつ、こだっくわ はさん てつづきお おえ しょうぎょう いんさつお ちゅうしんと する かいしゃと して さいしゅっぱつ しました。
+- id: ch15_shiawase
+  title: 本業を失うという機会
+  background: ff_gendai
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2016年。社長は中嶋成博から、助野健児に替わります。
+    reading: にせん じゅうろくねん。しゃちょうわ なかじま しげひろから、すけの けんじに かわります。
+  - speaker: reimu
+    text: この年、古森は取材にこう語っています。
+    reading: この とし、こもりわ しゅざいに こう かたって います。
+  - speaker: kisha
+    emotion: normal
+    text: 本業の写真フィルムを、ほとんど失いましたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 私は、経営者としてはとても幸せだ。
+  - speaker: kisha
+    emotion: surprised
+    text: 幸せ、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 本業を失うという機会に巡り合える経営者は、そうはいないから。
+    telops:
+    - {text: "本業を失うという機会に巡り合えた", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: ……失ったのに、機会。
+    beat: true
+- id: card2018
+  title: ''
+  background: ff_card_2018
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2018年1月31日。富士は、アメリカのゼロックスとの経営統合を発表します。
+    reading: にせん じゅうはちねん いちがつ さんじゅういちにち。ふじわ、あめりかの ぜろっくすとの けいえい とうごうお はっぴょう します。
+- id: ch16_xerox
+  title: ゼロックスとの統合
+  background: ff_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: ゼロックスの株を、どれだけ持つんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 50.1％です。約6700億円になります。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界最大規模の、ドキュメントカンパニーになる。
+  - speaker: kisha
+    emotion: thinking
+    text: ドキュメント……。書類の会社、ですか。
+  - speaker: reimu
+    text: 同時に、富士ゼロックスで1万人規模を減らす計画も示しました。
+    reading: どうじに、ふじ ぜろっくすで いちまんにん きぼお へらす けいかくも しめしました。
+  - speaker: reimu
+    text: 5月13日、ゼロックスは契約を終わらせると通知します。6月、富士は損害賠償を求めて訴えました。
+    reading: ごがつ じゅうさんにち、ぜろっくすわ けいやくお おわらせると つうち します。ろくがつ、ふじわ そんがい ばいしょうお もとめて うったえました。
+  - speaker: kisha
+    emotion: surprised
+    text: ……統合の話が、消えた？
+    se: chin
+- id: ch16_xerox2
+  title: ゼロックス統合の白紙
+  background: ff_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2019年11月5日。富士は、ゼロックスが持つ富士ゼロックス株25％を買い取ることで合意します。
+    reading: にせん じゅうきゅうねん じゅういちがつ いつか。ふじわ、ぜろっくすが もつ ふじ ぜろっくす かぶ にじゅうご ぱーせんとお かいとる ことで ごうい します。
+  - speaker: reimu
+    text: 支払いは計23億ドル。訴えは取り下げました。
+    reading: しはらいわ けい にじゅうさんおく どる。うったえわ とりさげました。
+  - speaker: kisha
+    emotion: normal
+    text: ゼロックスとの統合は、もう一度目指しますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 経営統合は、もう考えない。
+  - speaker: kisha
+    emotion: thinking
+    text: 前の統合案と比べて、どうですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 率直に言うと、今回の案はベターだ。
+  - speaker: kisha
+    emotion: thinking
+    text: ……前の案より、いいと。
+    beat: true
+- id: ch17_cheki
+  title: チェキが戻ってきた
+  background: ff_camera_ten
+  bgm: you_and_me
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: チェキって、こんなに色があるの！？
+  - speaker: tenin
+    emotion: happy
+    text: 去年は1年で、1002万台も売れたそうですよ。
+    se: levelup
+  - speaker: kyaku
+    emotion: surprised
+    text: 1002万台！？
+  - speaker: tenin
+    emotion: thinking
+    text: 15年ほど前は、1年で10万台そこそこでしたけどね。
+  - speaker: kyaku
+    emotion: happy
+    text: 撮ったその場で、写真が出てくるのがいいの。
+  - speaker: kyaku
+    emotion: thinking
+    text: おじさん、ずいぶん詳しいね。
+  - speaker: tenin
+    emotion: happy
+    text: フィルムを売って、40年ですから。
+  - speaker: tenin
+    emotion: happy
+    text: 一度はがらんとした棚に、すっかり色が戻りましたよ。
+- id: ch17_miyazaki
+  title: ''
+  background: ff_camera_ten
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: miyazaki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2019年。富士フイルムのイメージング事業部長が、取材に答えます。
+    reading: にせん じゅうきゅうねん。ふじ ふぃるむの いめーじんぐ じぎょう ぶちょうが、しゅざいに こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: フィルムが落ち込んだ時期に、写真をやめなかったのはなぜですか。
+  - speaker: miyazaki
+    emotion: normal
+    text: 当時、[古森|こもり]は日本の写真文化を切り開いてきた企業としての
+  - speaker: miyazaki
+    emotion: normal
+    text: 使命感を強く[抱いて|いだいて]いたのでしょう。
+  - speaker: kisha
+    emotion: thinking
+    text: 使命感、ですか。
+    beat: true
+- id: card2021
+  title: ''
+  background: ff_card_2021
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2021年3月31日。81歳の古森が、退任を発表します。
+    reading: にせん にじゅういちねん さんがつ さんじゅういちにち。はちじゅういっさいの こもりが、たいにんお はっぴょう します。
+- id: ch18_tainin
+  title: 強い組織になった
+  background: ff_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 古森重隆, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 退任を決めた理由を、聞かせてください。
+  - speaker: zundamon
+    emotion: normal
+    text: 強い組織になった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 私がやるべきことは、終わったのではないかと感じた。
+  - speaker: kisha
+    emotion: thinking
+    text: トップになってから、21年でした。
+  - speaker: reimu
+    text: 6月、古森は取締役を退いて最高顧問に。社長兼CEOには、後藤禎一が就きます。
+    reading: ろくがつ、こもりわ とりしまりやくお しりぞいて さいこう こもんに。しゃちょうけん しーいーおーにわ、ごとう ていいちが つきます。
+  - speaker: reimu
+    text: 2022年6月には最高顧問も退き、経営から完全に離れました。
+    reading: にせん にじゅうにねん ろくがつにわ さいこう こもんも しりぞき、けいえいから かんぜんに はなれました。
+- id: ch19_ronso
+  title: コダックはデジカメを隠したのか
+  background: ff_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。コダックはデジカメを発明したのに、隠して潰れたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 発明したのは本当よ。1975年の、3.6キロの試作機ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 白黒で1万画素。1枚をテープに記録するのに23秒。
+  - speaker: zundamon
+    emotion: happy
+    text: 次の1枚まで、カップ麺の[8分の1|はちぶんのいち]は待つのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その計算、いま要る？
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: でも、それを隠したんでしょ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 隠したかどうかより、大事な数字があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: コダックは2001年にイージーシェアを出して、2年ほどでアメリカの首位に立ってる。
+  - speaker: zundamon
+    emotion: surprised
+    text: デジカメで、勝ってるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[古森|こもり]さんによると、富士も2000年代の初めは世界の30％を取ってたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 1988年には、デジカメの試作機も発表してる。売ってはいないけどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 両方とも、デジカメは強かったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。分かれ道は、デジカメのあとにあったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[古森|こもり]さんは、デジタルとは標準化だと言ってたでしょ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 誰が作っても同じような物になって、値段の[叩き合い|たたきあい]になるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: デジカメの次の[稼ぎ口|かせぎぐち]を、探さなきゃいけないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 実はコダックも、薬には早くから手を出してたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1988年に製薬会社を51億ドルで買って、1994年に売ってる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 薬なら、富士より20年も早いのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2007年には医療機器の部門も売って、インクジェットのプリンターに力を移したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 外から招いたトップが替わるたびに、探す分野が変わった。研究者は、そう分析してる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 宝の地図を、船長が替わるたびに描き直したのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[古森|こもり]さんは、アメリカの投資家が目先の成果を求めたことも理由に挙げてる。'
+  - speaker: tsumugi
+    emotion: normal
+    text: うちの[方|ほう]が多角化における幅と深さがあった、とも言ってるわ。
+- id: ch19_honto
+  title: 本当の分かれ道
+  background: ff_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 富士の分かれ道は、3つあったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つ目は、持ってる技術を全部棚卸しして新しい[市場|しじょう]を探したこと。
+  - speaker: zundamon
+    emotion: happy
+    text: ずんだ餅を、ケーキ屋さんで売る作戦なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つ目は、いちばんの[稼ぎ頭|かせぎがしら]だった写真を早く大きく縮めたこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2回で約1万人。痛みは、小さくなかったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[稼ぎ頭|かせぎがしら]を、自分の手で小さくしたのか……。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つ目は、苦しいときも研究開発に毎年2000億円ほどを出し続けたこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: コダックは、トップが替わるたびに行き先が変わった。そこが違ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 富士は、同じ畑に種をまき続けたのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: '[古森|こもり]さんは2019年の講演で、こう言ってるわ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 真のライバルは、コダックではなくデジタル技術だった。
+    telops:
+    - {text: "真のライバルはデジタル技術", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 戦う相手は、時代そのものだったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本業が元気なうちに、次の柱を探す。それがいちばん難しいの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 売れてるうちは、誰もやめたくないもんね。
+- id: ch20_gendai
+  title: 過去最高の富士フイルム
+  background: ff_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: tsumugi
+    emotion: happy
+    text: 2026年3月期の決算。売上高は3兆3570億円で、過去最高よ。
+    telops:
+    - {text: "売上高3兆3570億円 過去最高", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 営業利益は3502億円、純利益は2767億円。どっちも過去最高。
+  - speaker: zundamon
+    emotion: surprised
+    text: フィルムの需要が、[10分の1|じゅうぶんのいち]以下になったのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 売上のいちばんは、事務機のビジネスイノベーションで35％。
+  - speaker: tsumugi
+    emotion: normal
+    text: 富士ゼロックスが、2021年に名前を変えた会社よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: あのコピー機の！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 次がヘルスケアで33％。2024年度に、初めて1兆円を超えたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: '[富山化学|とやまかがく]の会見で目指した1兆円、来たのだ！'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 10年のつもりが、16年かかったけどね。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 写真のイメージングは19％。エレクトロニクスが14％ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 写真は、もう脇役なのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: ところが利益のいちばんは、そのイメージング。1600億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 写真が、利益のトップ！？
+  - speaker: tsumugi
+    emotion: happy
+    text: チェキは2025年4月に、累計で1億台を超えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年度のチェキの売上は2852億円。9割は海外よ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの自撮り、世界の流行の最先端だったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 流行ってるのは、チェキのほうね。
+    beat: true
+- id: ch20_byoin
+  title: ''
+  background: ff_byoin
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 医療では、バイオ医薬品の製造を請け負う会社も買ってきたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[iPS|アイピーエス]細胞の会社も日立の画像診断の事業も、富士の仲間になったわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 写真の会社が、病院の検査室にまでいるのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、いい話ばかりじゃないの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2026年の4月から6月は、売上が10.3％増えた一方で営業利益は32％減ったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 減ってる！？
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも1年の売上の予想は、3兆5600億円に上げてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: コダックも、商業印刷の会社として続いてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちも、まだ途中なのか。
+- id: shime
+  title: ''
+  background: ff_heya_photo
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも一度、自分の持ち物を棚卸ししてみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 得意なことの使い道は、思ってるより広いかもしれないよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも、チェキの写真を棚卸しするのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 自撮りが300枚、ずんだ餅が2枚……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[稼ぎ頭|かせぎがしら]に、頼りすぎね。'
+  - speaker: zundamon
+    emotion: happy
+    text: よし、新しい[市場|しじょう]を開拓する。次は、つむぎの変顔なのだ！
+  - speaker: tsumugi
+    emotion: angry
+    text: その[市場|しじょう]は、許可が下りないわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: いちばんの[稼ぎ頭|かせぎがしら]が、消えていく。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを、機会と呼んだ経営者がいたのね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

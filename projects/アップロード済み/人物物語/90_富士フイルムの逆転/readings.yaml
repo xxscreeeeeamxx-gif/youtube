@@ -1,0 +1,38 @@
+# fujifilm-komori 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 宮﨑剛は読みが未確認のため、名札（表示）にだけ使い、声には出していない。
+# 人名
+- {surface: 古森重隆, reading: こもりしげたか}
+- {surface: 古森, reading: こもり}
+- {surface: 重隆, reading: しげたか}
+- {surface: 戸田雄三, reading: とだゆうぞう}
+- {surface: 戸田, reading: とだ}
+- {surface: 雄三, reading: ゆうぞう}
+- {surface: 大西實, reading: おおにしみのる}
+- {surface: 中嶋成博, reading: なかじましげひろ}
+- {surface: 助野健児, reading: すけのけんじ}
+- {surface: 後藤禎一, reading: ごとうていいち}
+- {surface: スティーブ・サッソン, reading: すてぃーぶさっそん}
+# 社名・機関・地名
+- {surface: 富士写真フイルム, reading: ふじしゃしんふぃるむ}
+- {surface: 大日本セルロイド, reading: だいにっぽんせるろいど}
+- {surface: 足柄, reading: あしがら}
+- {surface: 富山化学工業, reading: とやまかがくこうぎょう}
+- {surface: 富山化学, reading: とやまかがく}
+- {surface: 大正製薬, reading: たいしょうせいやく}
+- {surface: 新日本製鐵, reading: しんにっぽんせいてつ}
+- {surface: WTO, reading: だぶりゅーてぃーおー}
+# 商品名
+- {surface: 写ルンです, reading: うつるんです}
+- {surface: VISION75, reading: びじょんななじゅうご}
+# 専門語・言い回し
+- {surface: 武者震い, reading: むしゃぶるい}
+- {surface: 通信簿, reading: つうしんぼ}
+- {surface: 背水の陣, reading: はいすいのじん}
+- {surface: バカ1, reading: ばかいち}
+- {surface: 稼ぎ頭, reading: かせぎがしら}
+- {surface: 市場, reading: しじょう}
+- {surface: 2〜3％, reading: にからさんぱあせんと}
+- {surface: 稼ぎ口, reading: かせぎぐち}
+- {surface: 叩き合い, reading: たたきあい}
