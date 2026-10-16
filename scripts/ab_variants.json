@@ -2207,5 +2207,103 @@
     "text": "ところが利益のいちばんは、そのイメージング。"
    }
   ]
+ },
+ {
+  "slug": "blue-led-nakamura",
+  "video_id": "DDzu1KFnaeg",
+  "title_a": "【青色LEDの裁判】社内の褒賞は2万円。地裁はその発明の対価を604億円と認めた【ずんだもん解説】",
+  "title_b": "「怒り以外に何もない」。ノーベル賞の中村修二が、勤め先と争った青色LEDの裁判【ずんだもん解説】",
+  "title_c": "地裁は対価604億円と認めた。青色LEDの裁判は、なぜ約8億円の和解で終わったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "怒り以外に何もない",
+   "head_hi": "怒り",
+   "panels": [
+    {
+     "prop": "p_ledblue",
+     "bg": "yellow",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "夢を与える判決だ",
+     "by": "",
+     "shout": false,
+     "label": "地裁604億円"
+    },
+    {
+     "prop": "p_tenbin",
+     "bg": "blue",
+     "emo": "angry",
+     "fx": "anger",
+     "say": "完全な敗訴です",
+     "by": "",
+     "shout": true,
+     "label": "和解8億円"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "conflict",
+   "headline": "なぜ和解は8億円？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "prop": "p_ledblue",
+     "bg": "dark",
+     "emo": "thinking",
+     "fx": "sweat",
+     "say": "貢献度は100％",
+     "by": "",
+     "shout": false,
+     "label": "中村の主張"
+    },
+    {
+     "prop": "p_tenbin",
+     "bg": "red",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "多くても5％",
+     "by": "日亜",
+     "shout": false,
+     "label": "会社の主張"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "怒り以外に何もない（2014-10-07 会見）",
+    "scene": "ch20_kaiken",
+    "text": "怒り以外に何もない。"
+   },
+   {
+    "claim": "日本の技術者に夢を与える判決だ（2004-01-30 会見）",
+    "scene": "ch16_kaiken",
+    "text": "日本の技術者に、夢を与える判決だ。"
+   },
+   {
+    "claim": "完全な敗訴（2005-01-12 会見）",
+    "scene": "ch18_kusatte",
+    "text": "和解は、完全な敗訴です。"
+   },
+   {
+    "claim": "地裁の対価の認定604億円・和解8億4391万円（全発明が対象）",
+    "scene": "ch16_hanketsu/ch17_wakai",
+    "text": "認めた対価は、604億3006万円。／合わせて8億4391万円です。"
+   },
+   {
+    "claim": "貢献度100％（中村の主張）",
+    "scene": "ch16_kaisetsu",
+    "text": "中村さんは、自分の貢献度は100％と主張してたわ。"
+   },
+   {
+    "claim": "多くても5％（日亜の主張）",
+    "scene": "ch16_kaisetsu",
+    "text": "日亜は、対価はゼロ。貢献度は多くても5％と主張してた。"
+   },
+   {
+    "claim": "社内の褒賞2万円（特許1件）",
+    "scene": "ch10_seicho",
+    "text": "登録の褒賞で、また1万円。出願と合わせて2万円やな。"
+   }
+  ]
  }
 ]

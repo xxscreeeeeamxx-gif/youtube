@@ -1,0 +1,40 @@
+# blue-led-nakamura 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 中村修二 / label: 小川信雄・日亜の広報）は表示専用なのでタグを付けていない。
+# 人名
+- {surface: 中村修二, reading: なかむらしゅうじ}
+- {surface: 小川信雄, reading: おがわのぶお}
+- {surface: 小川英治, reading: おがわえいじ}
+- {surface: 赤﨑勇, reading: あかさきいさむ}
+- {surface: 赤﨑, reading: あかさき}
+- {surface: 天野浩, reading: あまのひろし}
+- {surface: 天野, reading: あまの}
+# 社名・機関・地名
+- {surface: 日亜化学工業, reading: にちあかがくこうぎょう}
+- {surface: 日亜, reading: にちあ}
+- {surface: 阿南, reading: あなん}
+- {surface: 豊田合成, reading: とよだごうせい}
+- {surface: 名城大学, reading: めいじょうだいがく}
+- {surface: 工務課, reading: こうむか}
+# 特許・裁判の言葉
+- {surface: 404特許, reading: よんまるよんとっきょ}
+- {surface: 譲渡証書, reading: じょうとしょうしょ}
+- {surface: 持分, reading: もちぶん}
+- {surface: 申立, reading: もうしたて}
+- {surface: 稀有, reading: けう}
+- {surface: 賜物, reading: たまもの}
+- {surface: 35条3，4項, reading: さんじゅうごじょうさんこうよんこう}
+# 技術の言葉
+- {surface: 石英管, reading: せきえいかん}
+- {surface: リン化ガリウム, reading: りんかがりうむ}
+- {surface: ヒ化ガリウム, reading: ひかがりうむ}
+- {surface: 窒化ガリウム, reading: ちっかがりうむ}
+- {surface: 窒化物, reading: ちっかぶつ}
+- {surface: p型, reading: ぴーがた}
+- {surface: n型, reading: えぬがた}
+# 実際の音声で誤読が見つかった語（2026-10-17 見直し）
+- {surface: 裏紙, reading: うらがみ}        # ウラシ と読まれた
+- {surface: 怒り, reading: いかり}          # オコリ と読まれた
+- {surface: 博士課程, reading: はくしかてい}  # ハカセ と読まれた
+- {surface: 博士号, reading: はくしごう}      # ハカセ と読まれた

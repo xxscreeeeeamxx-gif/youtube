@@ -3640,6 +3640,40 @@ def p_kdfilm(d, s):
     d.rectangle([s * 0.63, s * 0.4, s * 0.83, s * 0.48], fill=(70, 70, 76))
 
 
+def p_ledblue(d, s):
+    """光る青いLED（青色LED回）。丸い頭と2本の足。"""
+    for r, a in ((0.42, 40), (0.34, 70), (0.27, 110)):
+        d.ellipse([s * (0.5 - r), s * (0.4 - r), s * (0.5 + r), s * (0.4 + r)], fill=(80, 140, 255, a))
+    d.rounded_rectangle([s * 0.36, s * 0.24, s * 0.64, s * 0.62], radius=int(s * 0.14), fill=(90, 150, 255),
+                        outline=(30, 60, 160), width=int(s * 0.014))
+    d.rectangle([s * 0.33, s * 0.6, s * 0.67, s * 0.66], fill=(70, 120, 230), outline=(30, 60, 160))
+    d.ellipse([s * 0.42, s * 0.3, s * 0.5, s * 0.38], fill=(230, 240, 255))
+    d.line([(s * 0.44, s * 0.66), (s * 0.44, s * 0.92)], fill=(170, 170, 180), width=int(s * 0.02))
+    d.line([(s * 0.56, s * 0.66), (s * 0.56, s * 0.86)], fill=(170, 170, 180), width=int(s * 0.02))
+
+
+def p_tenbin(d, s):
+    """天秤（青色LED回の裁判）。"""
+    gold, dark = (220, 170, 40), (130, 90, 20)
+    d.rectangle([s * 0.47, s * 0.2, s * 0.53, s * 0.84], fill=gold, outline=dark, width=int(s * 0.01))
+    d.rectangle([s * 0.3, s * 0.82, s * 0.7, s * 0.9], fill=gold, outline=dark, width=int(s * 0.01))
+    d.line([(s * 0.14, s * 0.3), (s * 0.86, s * 0.26)], fill=dark, width=int(s * 0.03))
+    d.ellipse([s * 0.45, s * 0.14, s * 0.55, s * 0.24], fill=gold, outline=dark, width=int(s * 0.01))
+    for x, y in ((0.18, 0.3), (0.82, 0.26)):
+        d.line([(s * x, s * y), (s * (x - 0.1), s * (y + 0.26))], fill=dark, width=int(s * 0.01))
+        d.line([(s * x, s * y), (s * (x + 0.1), s * (y + 0.26))], fill=dark, width=int(s * 0.01))
+        d.chord([s * (x - 0.14), s * (y + 0.16), s * (x + 0.14), s * (y + 0.36)], 0, 180, fill=gold, outline=dark,
+                width=int(s * 0.01))
+
+
+def p_fuutou(d, s):
+    """白い封筒（青色LED回の報奨金）。文字は描かない。"""
+    d.rectangle([s * 0.16, s * 0.28, s * 0.84, s * 0.78], fill=(250, 250, 246), outline=(150, 150, 150),
+                width=int(s * 0.014))
+    d.line([(s * 0.16, s * 0.28), (s * 0.5, s * 0.54), (s * 0.84, s * 0.28)], fill=(170, 170, 170), width=int(s * 0.012))
+    d.ellipse([s * 0.44, s * 0.48, s * 0.56, s * 0.6], fill=(200, 40, 40))
+
+
 def p_ffcosme(d, s):
     """赤い化粧品の瓶（富士フイルム回）。製品名は描かない。"""
     for x, h, c in ((0.28, 0.5, (236, 200, 210)), (0.5, 0.64, (200, 30, 50)), (0.72, 0.44, (220, 60, 70))):
@@ -4108,6 +4142,11 @@ SPECS = {
         head_hi="最高益", panels=[
         _p("p_fffilm", "2000年", SLATE, "sad", "フィルムが減る…", "10年で10分の1"),
         _p("p_ffcosme", "2007年", TEAL, "happy", "化粧品も作れる！", "技術の使い回し"),
+    ]),
+    "blue-led-nakamura": dict(layout="panels", headline="2万円の発明に604億円",
+        head_hi="604億円", panels=[
+        _p("p_fuutou", "1990年", SLATE, "angry", "1万円だけで！？", "特許の褒賞"),
+        _p("p_tenbin", "2004年", NAVY, "surprised", "604億円！？", "地裁の認定"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

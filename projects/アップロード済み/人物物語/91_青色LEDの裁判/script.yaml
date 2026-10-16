@@ -1,0 +1,1697 @@
+meta:
+  title: 青色LED、褒賞2万円の特許に地裁が認めた対価は604億円　中村修二と日亜【ずんだもん解説】
+  slug: blue-led-nakamura
+  summary: 1990年の秋、徳島の化学の会社で、ひとりの技術者が特許の書類に鉛筆でサインしました。社内の褒賞は、出願と登録で合わせて2万円。のちにその技術者と会社は、発明の対価をめぐって東京地裁で争います。研究を始めたのは誰か。その特許は本当に大事な技術だったのか。会社は正面から反論しました。裁判所は何を認め、最後に何が払われたのか。双方の言い分を並べて、再現ドラマでたどります。
+  tags:
+  - 青色LED
+  - 中村修二
+  - 日亜化学工業
+  - 職務発明
+  - 特許
+  - 裁判
+  - ノーベル賞
+  - 赤﨑勇
+  - 天野浩
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 社内の褒賞は2万円
+    bottom: 青色LEDの裁判
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: ogawa
+    label: 小川信雄
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#4a4a52'
+  - id: joushi
+    label: 上司
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: joushi2
+    label: 他部の上司
+    voice: 13
+    pitch: -0.02
+    outfit: suit
+    color: '#4a3a2f'
+  - id: douryo
+    label: 同僚
+    voice: 11
+    pitch: 0.0
+    outfit: work
+  - id: tokkyo
+    label: 特許の担当
+    voice: 12
+    pitch: 0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: buka
+    label: 部下
+    voice: 21
+    pitch: 0.0
+    outfit: labcoat
+  - id: gakusei
+    label: 学生
+    voice: 12
+    pitch: 0.05
+    outfit: labcoat
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#1a1a1a'
+  - id: saibancho2
+    label: 高裁裁判長
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#1a1a1a'
+  - id: bengoshi
+    label: 弁護士
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#2a3a4a'
+  - id: kouhou
+    label: 日亜の広報
+    voice: 8
+    pitch: -0.04
+    outfit: suit
+    color: '#5a4a5a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+scenes:
+- id: co_shomei
+  title: ''
+  background: led_jimusho
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: tokkyo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1990年の秋。徳島の会社で、技術者が特許の書類にサインを求められます。
+    reading: せんきゅうひゃく きゅうじゅうねんの あき。とくしまの かいしゃで、ぎじゅつしゃが とっきょの しょるいに さいんお もとめられます。
+  - speaker: tokkyo
+    emotion: normal
+    text: 裏の[譲渡証書|じょうとしょうしょ]にも、サインを。
+  - speaker: zundamon
+    emotion: angry
+    text: なんで1万円くれるだけで、特許を会社に譲り渡さなあかんのじゃ！
+    beat: true
+  - speaker: tokkyo
+    emotion: sad
+    text: そ、そんな……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 鉛筆で、ええですか。
+  - speaker: tokkyo
+    emotion: surprised
+    text: え、鉛筆！？
+  - speaker: reimu
+    text: 本人がのちに、裁判所に書いた場面です。
+    reading: ほんにんが のちに、さいばんしょに かいた ばめんです。
+  - speaker: reimu
+    text: この特許の対価を、東京地裁は604億円と認めます。
+    reading: この とっきょの たいかお、とうきょう ちさいわ ろっぴゃくよんおくえんと みとめます。
+  - speaker: reimu
+    text: でも最後に払われたのは、ほかの発明も含めて約8億4000万円。なぜでしょう。
+    reading: でも さいごに はらわれたのわ、ほかの はつめいも ふくめて やく はちおく よんせんまんえん。なぜでしょう。
+- id: hook
+  title: ''
+  background: led_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 改善提案の賞金、1000円なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 何の提案？
+  - speaker: zundamon
+    emotion: happy
+    text: '[裏紙|うらがみ]を、メモ帳にする案！'
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 青色LEDの研究で出た特許1件の、社内の褒賞は2万円だったのよ。
+    telops:
+    - {text: "特許1件の社内の褒賞　2万円", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクの20倍！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこじゃないの。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: その特許の対価を、東京地裁は604億円と認めたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: どっちが正しいのだ！？
+- id: card1979
+  title: ''
+  background: led_card_1979
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1979年4月。中村修二が、徳島県阿南市の日亜化学工業に入社します。
+    reading: せんきゅうひゃく ななじゅうくねん しがつ。なかむら しゅうじが とくしまけん あなんしの にちあ かがく こうぎょうに にゅうしゃ します。
+  - speaker: reimu
+    text: 創業者は小川信雄。蛍光体の原料を作る会社で、社員は約180人でした。
+    reading: そうぎょうしゃわ おがわ のぶお。けいこうたいの げんりょうお つくる かいしゃで、しゃいんわ やく ひゃくはちじゅうにんでした。
+- id: ch1_nyusha
+  title: 社員180人の会社
+  background: led_kojo_soto
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: douryo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: douryo
+    emotion: happy
+    text: 新人さんか。開発課へ、ようこそ。
+  - speaker: zundamon
+    emotion: happy
+    text: よろしくお願いします。開発課は、何人ですか。
+  - speaker: douryo
+    emotion: normal
+    text: 2人や。
+  - speaker: zundamon
+    emotion: surprised
+    text: ふ、2人。
+  - speaker: douryo
+    emotion: happy
+    text: 小さい会社やからな。売上も、数十億円や。
+  - speaker: zundamon
+    emotion: normal
+    text: 最初は、何を作るんですか。
+  - speaker: douryo
+    emotion: normal
+    text: '[リン化ガリウム|りんかがりうむ]や。'
+- id: ch1_bakuhatsu
+  title: 石英管が爆発する
+  background: led_jikken
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: douryo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: douryo
+    emotion: normal
+    text: 中村、それ何しよるんや。
+  - speaker: zundamon
+    emotion: normal
+    text: '[石英管|せきえいかん]に原料を入れて、口を溶接して封じとるんじゃ。'
+  - speaker: douryo
+    emotion: normal
+    text: 封じて、どうするんや？
+  - speaker: zundamon
+    emotion: normal
+    text: 熱する。
+  - speaker: douryo
+    emotion: thinking
+    text: 熱して、大丈夫なんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 毎日、やっとる。
+  - speaker: douryo
+    emotion: happy
+    text: そろそろ、定時やな。
+  - speaker: zundamon
+    emotion: surprised
+    text: 管が、破裂した！
+    background: led_jikken_kemuri
+  - speaker: douryo
+    emotion: surprised
+    text: 部屋が真っ白や！ 何も見えん！
+  - speaker: douryo
+    emotion: surprised
+    text: 中村！ どこや！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ここじゃ。
+  - speaker: douryo
+    emotion: thinking
+    text: 声しか、聞こえへんけど。
+    beat: true
+- id: ch1_mata
+  title: ''
+  background: led_jimusho
+  stage:
+  - {who: douryo, x: 0.5, emotion: surprised}
+  cuts:
+  - speaker: douryo
+    emotion: surprised
+    text: また中村んとこや！ 見てくる！
+  - speaker: douryo
+    emotion: thinking
+    text: ……3回目か。また、中村んとこやな。
+  - speaker: douryo
+    emotion: normal
+    text: 6回目や。……お、ちょうど定時や。
+  - speaker: douryo
+    emotion: happy
+    text: ほな、お先に〜。
+    se: manuke
+- id: ch1_shokunin
+  title: ''
+  background: led_jikken_kemuri
+  stage:
+  - {who: zundamon, x: 0.5, tag: 中村修二, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: この爆発の話を、中村はのちに寄稿に書いています。このころ、自分にこう言い聞かせていた、と。
+    reading: この ばくはつの はなしお なかむらわ のちに きこうに かいて います。この ころ じぶんに こう いいきかせて いた、と。
+  - speaker: zundamon
+    emotion: thinking
+    text: ワシは、職人じゃ。
+- id: ch2_nokogiri
+  title: 鉄板用のノコギリ
+  background: led_jimusho
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: joushi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 中村の寄稿によれば、こんなこともありました。
+    reading: なかむらの きこうに よれば、こんな ことも ありました。
+  - speaker: zundamon
+    emotion: normal
+    text: '[ヒ化ガリウム|ひかがりうむ]の結晶を切る機械を、買ってください。'
+  - speaker: joushi
+    emotion: normal
+    text: なんぼするんや。
+  - speaker: zundamon
+    emotion: normal
+    text: 約1500万円です。
+  - speaker: joushi
+    emotion: surprised
+    text: 高い！
+  - speaker: joushi
+    emotion: normal
+    text: '[工務課|こうむか]に、鉄板を切るノコギリがあるやろ。あれ使え。'
+  - speaker: zundamon
+    emotion: surprised
+    text: て、鉄板用ですか。
+  - speaker: joushi
+    emotion: normal
+    text: 切れたら、一緒や。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……では、切ってみせます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ほら。これでは、使えません。
+  - speaker: joushi
+    emotion: thinking
+    text: ……あかんな。
+    beat: true
+  - speaker: joushi
+    emotion: thinking
+    text: ……買うたるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: それと青色のLEDも、やらせてください。
+  - speaker: joushi
+    emotion: surprised
+    text: 何考えてんねん。
+    beat: true
+  - speaker: joushi
+    emotion: angry
+    text: こんな田舎の[金|かね]もない人もいないところで、そんなことできるか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……はい、そうですね。
+    beat: true
+- id: ch2_shataku
+  title: わしらが稼いだカネ
+  background: led_shataku
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: joushi2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 入社7〜8年目。出張先で、蛍光体の部門の上司と同じ部屋に泊まった夜です。
+    reading: にゅうしゃ ななはちねんめ。しゅっちょうさきで けいこうたいの ぶもんの じょうしと おなじ へやに とまった よるです。
+  - speaker: joushi2
+    emotion: normal
+    text: 中村、ビール買うてきてくれ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……はい。
+  - speaker: zundamon
+    emotion: normal
+    text: 買うてきました。
+  - speaker: joushi2
+    emotion: angry
+    text: お前の部署は、どうなっているんだ。
+  - speaker: joushi2
+    emotion: angry
+    text: わしらが稼いだ[金|かね]は、全部パーになる。
+    se: gaan
+  - speaker: zundamon
+    emotion: sad
+    text: ……ビール、ここに置いときます。
+  - speaker: reimu
+    text: 中村が10年ほどで製品にしたのは、リン化ガリウムなど3つ。どれも後発で、大きくは売れませんでした。
+    reading: なかむらが じゅうねん ほどで せいひんに したのわ、りんか がりうむなど みっつ。どれも こうはつで おおきくわ うれませんでした。
+    background: led_soko
+- id: card1988
+  title: ''
+  background: led_card_1988
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1988年。中村は、創業者の社長室を訪ねます。ここからは、中村がのちに寄稿に書いた回想です。
+    reading: せんきゅうひゃく はちじゅうはちねん。なかむらわ そうぎょうしゃの しゃちょうしつお たずねます。ここからわ なかむらが のちに きこうに かいた かいそうです。
+- id: ch3_shacho
+  title: 青色LEDをやらせてください
+  background: led_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: ogawa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 社長。青色LEDの開発を、やらせてください。
+  - speaker: ogawa
+    emotion: normal
+    text: いいよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……え？
+  - speaker: zundamon
+    emotion: normal
+    text: 予算も、数億円掛かりますよ。
+  - speaker: ogawa
+    emotion: happy
+    text: それもいいよ。
+    se: tenten
+- id: ch3_kaisha
+  title: 会社の説明は違う
+  background: led_kojo_soto
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: ここまでは、中村の回想です。会社の説明は違います。
+    reading: ここまでわ なかむらの かいそうです。かいしゃの せつめいわ ちがいます。
+  - speaker: reimu
+    text: 徳島大学の教授が共同研究を提案し、中村が窓口として、当時専務の小川英治に提案した、と。
+    reading: とくしま だいがくの きょうじゅが きょうどう けんきゅうお ていあんし、なかむらが まどぐちと して とうじ せんむの おがわ えいじに ていあん した と。
+  - speaker: reimu
+    text: 地裁は、中村が一貫して自分から動き、会社がそれを認めてきた、と判断しました。
+    reading: ちさいわ なかむらが いっかんして じぶんから うごき、かいしゃが それお みとめて きたと はんだん しました。
+- id: ch4_florida
+  title: フロリダの10か月
+  background: led_daigaku_us
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: gakusei, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1988年3月から約1年、中村はフロリダ大学に留学します。勧めたのはその教授で、費用は会社持ちでした。
+    reading: せんきゅうひゃく はちじゅうはちねん さんがつから やく いちねん、なかむらわ ふろりだ だいがくに りゅうがく します。すすめたのわ その きょうじゅで ひようわ かいしゃもちでした。
+  - speaker: gakusei
+    emotion: happy
+    text: ようこそ。[君|きみ]も、[博士課程|はくしかてい]の人？
+  - speaker: zundamon
+    emotion: normal
+    text: いえ。会社から来た技術者です。
+  - speaker: gakusei
+    emotion: normal
+    text: 論文は、何本？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ありません。
+  - speaker: gakusei
+    emotion: thinking
+    text: '[博士号|はくしごう]は？'
+  - speaker: zundamon
+    emotion: thinking
+    text: ……持ってません。
+  - speaker: gakusei
+    emotion: happy
+    text: なんだ。じゃあ、ただの技術の人だね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……技術の人。
+    se: shobon
+  - speaker: reimu
+    text: 装置はまだ組み上がっておらず、中村は1年のうち約10か月を、配管と石英の溶接に使いました。
+    reading: そうちわ まだ くみあがって おらず、なかむらわ いちねんの うち やく じゅっかげつお はいかんと せきえいの ようせつに つかいました。
+  - speaker: reimu
+    text: 中村は34歳。ノーベル財団の経歴は、見下されて腹が立ったという本人の言葉を引いています。
+    reading: なかむらわ さんじゅうよんさい。のーべる ざいだんの けいれきわ、みくだされて はらが たったと いう ほんにんの ことばお ひいて います。
+- id: ch5_kaizo
+  title: 朝改造、午後実験
+  background: led_jikken
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: douryo, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: douryo
+    emotion: surprised
+    text: 中村！ 買うたばっかりの装置、もうバラしとるんか！
+  - speaker: zundamon
+    emotion: normal
+    text: このままじゃ、ええ膜ができんのじゃ。
+  - speaker: douryo
+    emotion: surprised
+    text: 1億3900万円もしたんやで！？
+  - speaker: zundamon
+    emotion: normal
+    text: 配管とヒーターを、作り替える。
+  - speaker: zundamon
+    emotion: normal
+    text: 朝に改造して、午後に実験じゃ。
+  - speaker: douryo
+    emotion: thinking
+    text: 毎日か。
+  - speaker: zundamon
+    emotion: normal
+    text: 毎日じゃ。
+  - speaker: douryo
+    emotion: sad
+    text: 装置の形が、毎朝ちがう……。
+    beat: true
+- id: ch5_meirei
+  title: 研究中止の命令はあったか
+  background: led_jimusho
+  cuts:
+  - speaker: reimu
+    text: 1990年3月末のことは、中村と会社で言い分が分かれます。
+    reading: せんきゅうひゃく きゅうじゅうねん さんがつまつの ことわ、なかむらと かいしゃで いいぶんが わかれます。
+  - speaker: reimu
+    text: 中村は、社長から文書で、青色をやめてヒ化ガリウムをやれと命じられ、無視したと主張しています。
+    reading: なかむらわ しゃちょうから ぶんしょで あおいろお やめて ひか がりうむお やれと めいじられ、むし したと しゅちょう して います。
+  - speaker: reimu
+    text: 2004年の地裁判決も、経営陣がヒ化ガリウムの開発を命じ、中村が指示に反して研究を続けたと認めました。
+    reading: にせんよねんの ちさい はんけつも けいえいじんが ひか がりうむの かいはつお めいじ、なかむらが しじに はんして けんきゅうお つづけたと みとめました。
+  - speaker: reimu
+    text: 会社は否定しています。社長に身に覚えはなく、命令を無視したのなら処分があったはずだ、と。
+    reading: かいしゃわ ひてい して います。しゃちょうに みに おぼえわ なく、めいれいお むし したのなら しょぶんが あった はずだ と。
+- id: card1990
+  title: ''
+  background: led_card_1990
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1990年9月ごろ。中村は、作り替えた装置で新しいガスの流し方を試します。
+    reading: せんきゅうひゃく きゅうじゅうねん くがつ ごろ。なかむらわ つくりかえた そうちで あたらしい がすの ながしかたお ためします。
+- id: ch6_twoflow
+  title: ガスを2方向から流す
+  background: led_jikken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: douryo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 原料のガスは、基板に沿って横から流す。
+  - speaker: douryo
+    emotion: normal
+    text: いつもどおりやな。
+  - speaker: zundamon
+    emotion: normal
+    text: その上から、押さえのガスを真下に吹き付けるんじゃ。
+  - speaker: douryo
+    emotion: surprised
+    text: 上から、押さえる！？
+  - speaker: zundamon
+    emotion: happy
+    text: 流れが2つやから、ツーフローじゃ。
+  - speaker: douryo
+    emotion: thinking
+    text: 名前、そのまんまやな。
+    se: hammer
+  - speaker: zundamon
+    emotion: happy
+    text: '[窒化物|ちっかぶつ]の膜が、育っとる。'
+  - speaker: douryo
+    emotion: surprised
+    text: ほんまや……。
+- id: ch6_shutsugan
+  title: 褒賞は1万円
+  background: led_jimusho
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: tokkyo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: ここからは、中村がのちに裁判所に出した陳述書の場面です。
+    reading: ここからわ、なかむらが のちに さいばんしょに だした ちんじゅつしょの ばめんです。
+  - speaker: tokkyo
+    emotion: happy
+    text: 出願の依頼書、受け付けます。発明者は中村さん、出願人は会社です。
+  - speaker: tokkyo
+    emotion: happy
+    text: 褒賞は、出願で1万円です。
+  - speaker: zundamon
+    emotion: normal
+    text: ……どうも。
+  - speaker: tokkyo
+    emotion: normal
+    text: それと、依頼書の裏にもサインをお願いします。
+  - speaker: zundamon
+    emotion: surprised
+    text: 裏？
+  - speaker: tokkyo
+    emotion: normal
+    text: '[譲渡証書|じょうとしょうしょ]です。'
+  - speaker: zundamon
+    emotion: angry
+    text: なんで1万円くれるだけで、特許を会社に譲り渡さなあかんのじゃ！
+    beat: true
+  - speaker: tokkyo
+    emotion: sad
+    text: そ、そう言われましても……。
+  - speaker: tokkyo
+    emotion: sad
+    text: ……書いてもらわんと、わたしが困るんです……。
+  - speaker: reimu
+    text: 中村は陳述書に、相手の泣きそうな顔を見て、友情のためにサインした、と書いています。
+    reading: なかむらわ ちんじゅつしょに あいての なきそうな かおお みて、ゆうじょうの ために さいん したと かいて います。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……鉛筆で、ええですか。
+  - speaker: tokkyo
+    emotion: surprised
+    text: え、鉛筆！？
+  - speaker: tokkyo
+    emotion: thinking
+    text: ……鉛筆でも、署名は署名ですから。
+    se: oti
+  - speaker: reimu
+    text: 日亜はのちに、中村が譲渡の書類と知らなかったと主張を変えたのは矛盾だ、と反論しています。
+    reading: にちあわ のちに、なかむらが じょうとの しょるいと しらなかったと しゅちょうお かえたのわ むじゅんだと はんろん して います。
+- id: card1991
+  title: ''
+  background: led_card_1991
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1991年1月。中村は、膜の中を電子がどれだけ動きやすいかを測っていました。
+    reading: せんきゅうひゃく きゅうじゅういちねん いちがつ。なかむらわ まくの なかお でんしが どれだけ うごきやすいかお はかって いました。
+- id: ch7_kofun
+  title: 人生で最も興奮した日
+  background: led_jikken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 中村修二, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 移動度を、測ったんじゃが……。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名古屋大学の記録の、2倍以上じゃ！
+  - speaker: reimu
+    text: このとき、実験室には中村ひとり。のちに、人生で最も興奮した日だったと振り返っています。
+    reading: この とき じっけんしつにわ なかむら ひとり。のちに じんせいで もっとも こうふん した ひだったと ふりかえって います。
+- id: ch8_ptype
+  title: 熱でp型に
+  background: led_jikken
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: buka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1991年12月ごろ。次の壁は、p型の膜でした。
+    reading: せんきゅうひゃく きゅうじゅういちねん じゅうにがつ ごろ。つぎの かべわ、ぴーがたの まくでした。
+  - speaker: buka
+    emotion: normal
+    text: 名古屋大学は、電子線を当てて[p型|ぴーがた]にしたんですよね。
+  - speaker: zundamon
+    emotion: normal
+    text: そうじゃ。じゃが電子線では、量産に向かん。
+  - speaker: buka
+    emotion: thinking
+    text: じゃあ、どうします。
+  - speaker: zundamon
+    emotion: thinking
+    text: 電子線で変わるのは、熱のせいかもしれん。
+  - speaker: zundamon
+    emotion: normal
+    text: マグネシウムを入れた膜を、熱で処理してみよう。
+  - speaker: buka
+    emotion: surprised
+    text: じゃあ、熱の条件を変えて試してみます。
+  - speaker: buka
+    emotion: surprised
+    text: ……[p型|ぴーがた]に、なってます！
+    se: levelup
+  - speaker: reimu
+    text: 判決は、この方法を中村と当時の部下との、共同の発明と認めています。
+    reading: はんけつわ この ほうほうお なかむらと とうじの ぶかとの、きょうどうの はつめいと みとめて います。
+- id: ch8_kaisetsu
+  title: LEDはなぜ光るのか
+  background: led_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[p型|ぴーがた]って、何なのだ？'
+  - speaker: tsumugi
+    emotion: normal
+    text: LEDは、性質の違う2種類の材料をくっつけて作るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電子が余ってる[n型|えぬがた]と、電子の座る席が空いてる[p型|ぴーがた]。
+  - speaker: zundamon
+    emotion: thinking
+    text: 満員の電車と、ガラガラの電車？
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。電気を流すと、余った電子が空いた席に座りに行くの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つが出会うところで座るときに、余ったエネルギーが光になるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 座るだけで、光るのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから光らせるには、[p型|ぴーがた]と[n型|えぬがた]の両方が要るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[窒化ガリウム|ちっかがりうむ]で、そこを切り開いたのが名古屋大学の[赤﨑勇|あかさきいさむ]さんと[天野浩|あまのひろし]さん。'
+  - speaker: tsumugi
+    emotion: normal
+    text: ガタガタの土台に薄い下敷きを敷いて、質のいい結晶を育てる方法を論文にしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1986年のことよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 1989年には、電子線を当てて[p型|ぴーがた]を作ったと発表したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 中村さんより、先なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 中村さんたちは、それを量産できる熱のやり方に変えたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 道を開いた人と、道を広げた人なのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: どっちが欠けても、青は光らなかったのね。
+- id: card1993
+  title: ''
+  background: led_card_1993
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 1993年11月。中村たちは、明るい青色LEDを作り上げます。
+    reading: せんきゅうひゃく きゅうじゅうさんねん じゅういちがつ。なかむらたちわ あかるい あおいろ えるいーでぃーお つくりあげます。
+- id: ch9_aoi
+  title: 明るさ100倍
+  background: led_jikken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: buka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: buka
+    emotion: normal
+    text: 中村さん、部屋の明かりを消しますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 頼む。
+  - speaker: buka
+    emotion: surprised
+    text: ……青い。
+    background: led_jikken_ao
+    se: jaan
+  - speaker: buka
+    emotion: surprised
+    text: 青が、こんなに明るく光ってる……！
+  - speaker: buka
+    emotion: happy
+    text: 中村さん、日経産業新聞の1面トップです！
+  - speaker: buka
+    emotion: happy
+    text: 見出しは、明るさ100倍！ それまでの青の100倍です！
+    telops:
+    - {text: "青色LED　明るさ100倍", size: md, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 12月から、サンプルを出すぞ。
+  - speaker: reimu
+    text: 翌年2月の続報は、歩留まり80％、1個500円。4月から、月に百万個の単位で作るとしました。
+    reading: よくねん にがつの ぞくほうわ ぶどまり はちじゅっぱーせんと、いっこ ごひゃくえん。しがつから つきに ひゃくまんこの たんいで つくると しました。
+  - speaker: buka
+    emotion: surprised
+    text: 月に、百万個……。
+    beat: true
+- id: ch10_seicho
+  title: 会社が大きくなる
+  background: led_jimusho
+  bgm: natsuyasumi
+  stage:
+  - {who: douryo, x: 0.28, flip: true, emotion: happy}
+  - {who: buka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: douryo
+    emotion: happy
+    text: 1994年に、日本で初めてのLED信号機が付いたそうや。愛知と徳島や。
+  - speaker: buka
+    emotion: normal
+    text: うちの売上、1995年12月期で206億円です。
+  - speaker: reimu
+    text: 同じころ、赤﨑の技術を使う豊田合成も量産を始め、日亜と約6年、特許を争います。
+    reading: おなじ ころ、あかさきの ぎじゅつお つかう とよだ ごうせいも りょうさんお はじめ にちあと やく ろくねん とっきょお あらそいます。
+  - speaker: buka
+    emotion: happy
+    text: 1996年9月には、青色LEDと蛍光体で白色LEDもできました。
+  - speaker: reimu
+    text: 白色LEDを誰が発明したかは、資料によって説明が分かれます。
+    reading: はくしょく えるいーでぃーお だれが はつめい したかわ、しりょうに よって せつめいが わかれます。
+  - speaker: buka
+    emotion: normal
+    text: 1997年4月、中村さんの特許が登録されました。
+  - speaker: reimu
+    text: ツーフローの特許は、番号の最後をとって404特許と呼ばれます。
+    reading: つーふろーの とっきょわ ばんごうの さいごお とって、よんまるよん とっきょと よばれます。
+  - speaker: douryo
+    emotion: normal
+    text: 登録の褒賞で、また1万円。出願と合わせて2万円やな。
+  - speaker: reimu
+    text: これは給与とは別の褒賞です。会社は、辞める前の中村の給与は役員の平均より上だった、と説明しています。
+    reading: これわ きゅうよとわ べつの ほうしょうです。かいしゃわ、やめる まえの なかむらの きゅうよわ やくいんの へいきんより うえだったと せつめい して います。
+- id: ch11_kenkyujo
+  title: 研究所の所長と辞職
+  background: led_jimusho
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: douryo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1999年9月。中村は、窒化物半導体研究所の所長を兼ねます。
+    reading: せんきゅうひゃく きゅうじゅうくねん くがつ。なかむらわ、ちっかぶつ はんどうたい けんきゅうじょの しょちょうお かねます。
+  - speaker: douryo
+    emotion: happy
+    text: 所長、おめでとうさん。所員は、何人や。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ワシ、ひとりじゃ。
+  - speaker: douryo
+    emotion: surprised
+    text: ひとり！？
+    se: bikkuri
+  - speaker: reimu
+    text: 中村側の評伝では、所員は中村ひとり。日亜での仕事は終わったと感じた、とあります。
+    reading: なかむらがわの ひょうでんでわ しょいんわ なかむら ひとり。にちあでの しごとわ おわったと かんじた、と あります。
+  - speaker: reimu
+    text: 会社の説明では、所長は部長待遇の最高職。予算も人も出すつもりだったが、本人はもう辞める気だった、と。
+    reading: かいしゃの せつめいでわ しょちょうわ ぶちょう たいぐうの さいこうしょく。よさんも ひとも だす つもりだったが、ほんにんわ もう やめる きだった と。
+  - speaker: reimu
+    text: 12月27日。中村は辞職願を出し、日亜を去ります。
+    reading: じゅうにがつ にじゅうしちにち。なかむらわ じしょくねがいお だし、にちあお さります。
+  - speaker: douryo
+    emotion: surprised
+    text: アメリカの大学10校と、会社5社から誘いが来とるって……。
+- id: card2000
+  title: ''
+  background: led_card_2000
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2000年2月。中村は、カリフォルニア大学サンタバーバラ校の教授になります。
+    reading: にせんねん にがつ。なかむらわ、かりふぉるにあ だいがく さんたばーばらこうの きょうじゅに なります。
+- id: ch12_mail
+  title: 退社のあとのメール
+  background: led_daigaku_us
+  stage:
+  - {who: zundamon, x: 0.5, tag: 中村修二, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月。中村は日亜の特許部長あてに、発明の対価を求めるメールを書きます。
+    reading: ろくがつ。なかむらわ にちあの とっきょ ぶちょう あてに、はつめいの たいかお もとめる めーるお かきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: わたしが[日亜|にちあ]で発明した特許の代償が、ほぼゼロですから。
+  - speaker: zundamon
+    emotion: normal
+    text: この特許法[35条3，4項|さんじゅうごじょうさんこうよんこう]を守ることが、日本のサラリーマンの地位向上です。
+  - speaker: reimu
+    text: その年の暮れ。報道によれば、日亜はアメリカで、秘密を他社に漏らしたとして中村を訴えます。
+    reading: その としの くれ。ほうどうに よれば にちあわ あめりかで、ひみつお たしゃに もらしたと して なかむらお うったえます。
+  - speaker: reimu
+    text: 中村の説明では、秘密を守る契約への署名を大学の助言で断ったあとのことでした。
+    reading: なかむらの せつめいでわ、ひみつお まもる けいやくえの しょめいお だいがくの じょげんで ことわった あとの ことでした。
+- id: card2001
+  title: ''
+  background: led_card_2001
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2001年8月23日。中村は東京地裁に、日亜を訴えます。
+    reading: にせんいちねん はちがつ にじゅうさんにち。なかむらわ とうきょう ちさいに、にちあお うったえます。
+- id: ch13_teiso
+  title: 請求は20億円
+  background: led_bengoshi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: bengoshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: bengoshi
+    emotion: normal
+    text: 確認します。求めるのは、2つのうちどちらかです。
+  - speaker: bengoshi
+    emotion: normal
+    text: '[404特許|よんまるよんとっきょ]の[持分|もちぶん]を移してもらうか、対価を払ってもらうか。'
+  - speaker: bengoshi
+    emotion: normal
+    text: 対価なら、まず一部として20億円を求めます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 一部で、20億円……。
+  - speaker: reimu
+    text: 日亜の広報は、訴状を受け取っていないが会社は正しいと信じている、と話しました。
+    reading: にちあの こうほうわ そじょうお うけとって いないが、かいしゃわ ただしいと しんじて いると はなしました。
+  - speaker: reimu
+    text: 提訴した2001年、日亜の売上は約800億円になっていました。
+    reading: ていそ した にせんいちねん、にちあの うりあげわ やく はっぴゃくおくえんに なって いました。
+- id: card2002
+  title: ''
+  background: led_card_2002
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2002年9月6日。日亜の創業者、小川信雄が90歳で亡くなります。
+    reading: にせんにねん くがつ むいか。にちあの そうぎょうしゃ、おがわ のぶおが きゅうじゅっさいで なくなります。
+  - speaker: reimu
+    text: 9月17日、日亜は豊田合成との特許の争いを和解します。
+    reading: くがつ じゅうななにち、にちあわ とよだ ごうせいとの とっきょの あらそいお わかい します。
+  - speaker: reimu
+    text: 共同の発表は、青色LEDが赤﨑勇教授の先駆的かつ基本的技術がベースになって開発された、と書きました。
+    reading: きょうどうの はっぴょうわ、あおいろ えるいーでぃーが あかさき いさむ きょうじゅの せんくてき かつ きほんてき ぎじゅつが べーすに なって かいはつ されたと かきました。
+- id: ch14_chukan
+  title: 特許は会社のもの
+  background: led_houtei
+  bgm: serious
+  stage:
+  - {who: saibancho, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 小川信雄の死から13日後の、9月19日。東京地裁が、中間の判決を出します。
+    reading: おがわ のぶおの しから じゅうさんにちごの、くがつ じゅうくにち。とうきょう ちさいが ちゅうかんの はんけつお だします。
+  - speaker: reimu
+    text: 社内の決まりや譲渡の書類があり、異議も10年以上なかった。特許は会社のもの、という判断です。
+    reading: しゃないの きまりや じょうとの しょるいが あり、いぎも じゅうねん いじょう なかった。とっきょわ かいしゃの もの、と いう はんだんです。
+    telops:
+    - {text: "中間判決　特許は会社のもの", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch14_nichia
+  title: ''
+  background: led_kaiken
+  stage:
+  - {who: kouhou, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[日亜|にちあ]として、判決をどう受け止めますか。'
+  - speaker: kouhou
+    emotion: normal
+    text: 正当な判決が下されたことに、敬意を表します。
+  - speaker: kouhou
+    emotion: normal
+    text: 事実無根の研究中止命令等を理由にした原告の[申立|もうしたて]が認められなかったのは、当然です。
+  - speaker: kisha
+    emotion: surprised
+    text: 研究中止の命令は、無かったというお立場ですね。
+- id: ch14_gakuzen
+  title: ''
+  background: led_daigaku_us
+  stage:
+  - {who: zundamon, x: 0.5, tag: 中村修二, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 中村はのちに、著書の章の題にこう書いています。
+    reading: なかむらわ のちに、ちょしょの しょうの だいに こう かいて います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 東京地裁の中間判決には、愕然とした。
+- id: ch15_ichibu
+  title: 一部請求ってなに
+  background: led_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判はそのあと、対価がいくらかを争う段階に進むの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2003年、中村さんは請求の額を引き上げていくわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 6月17日に50億円。2日後に100億円。9月には200億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2日で倍！？
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、なんで最初に全部の額を請求しないのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: これは、一部請求っていうやり方なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 友達に1万円貸してて、とりあえず3000円返してって訴えたとするね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判所が貸したのは1万円だと認めても、命じられるのは3000円までなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 頼んだ額が、上限になるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 中村さんの200億円も、対価のうちの一部として請求したものなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ裁判所の見積もりは、200億円より上かもしれないのか。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの賞金も、2日で倍にしてほしいのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[裏紙|うらがみ]のアイデアは、2日じゃ倍にならないわよ。'
+    se: hammer
+- id: card2004
+  title: ''
+  background: led_card_2004
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2004年1月30日。東京地裁が、判決を言い渡します。
+    reading: にせんよねん いちがつ さんじゅうにち。とうきょう ちさいが、はんけつお いいわたします。
+- id: ch16_hanketsu
+  title: 200億円の判決
+  background: led_houtei
+  stage:
+  - {who: saibancho, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 小企業の貧弱な研究環境の下で、産業界待望の世界的発明をなしとげた。
+  - speaker: saibancho
+    emotion: normal
+    text: 職務発明としては、全く[稀有|けう]な事例である。
+    beat: true
+  - speaker: reimu
+    text: 判決は中村の貢献度を50％とし、対価を604億3006万円と認めました。
+    reading: はんけつわ なかむらの こうけんどお ごじゅっぱーせんとと し、たいかお ろっぴゃくよんおく さんぜんろくまんえんと みとめました。
+    telops:
+    - {text: "対価の認定　604億円", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: ただ、請求は200億円。日亜に命じたのは、200億円と遅延損害金の支払いでした。
+    reading: ただ せいきゅうわ にひゃくおくえん。にちあに めいじたのわ、にひゃくおくえんと ちえん そんがいきんの しはらいでした。
+    telops:
+    - {text: "支払い命令　200億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: ch16_kaiken
+  title: ''
+  background: led_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 中村さん、判決をどう受け止めますか。
+  - speaker: zundamon
+    emotion: happy
+    text: 日本の技術者に、夢を与える判決だ。
+  - speaker: kisha
+    emotion: surprised
+    text: 夢、ですか……。
+- id: ch16_nichia
+  title: ''
+  background: led_kaiken
+  stage:
+  - {who: kouhou, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[日亜|にちあ]として、判決へのコメントを。'
+  - speaker: kouhou
+    emotion: normal
+    text: 他の多数の研究開発者および企業の貢献を正当に評価しない、不当な判決です。
+  - speaker: kisha
+    emotion: thinking
+    text: ……真っ向から、反論ですね。
+    beat: true
+  - speaker: reimu
+    text: 日亜は控訴します。社長の小川英治は、4月の新聞で研究環境についてこう反論しました。
+    reading: にちあわ こうそ します。しゃちょうの おがわ えいじわ、しがつの しんぶんで けんきゅう かんきょうに ついて こう はんろん しました。
+  - speaker: reimu
+    text: 決して馬小屋から産れた発明ではない。
+    reading: けっして うまごやから うまれた はつめいでわ ない。
+    telops:
+    - {text: "日亜社長　決して馬小屋から産れた発明ではない", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch16_kaisetsu
+  title: 604億円はどう出たか
+  background: led_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 604億円って、2万円の……約300万倍なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: のちの高裁の文書でも、対価が1億円を超えた例は2件だけなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1億円と、604億円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 604億円は、1208億円の半分。中村さんの貢献度を50％と見たの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1208億円は、[日亜|にちあ]のもうけ？
+  - speaker: tsumugi
+    emotion: angry
+    text: 違うの。売上でも、実際のもうけでもないわ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: ずんだもんが、自分だけのずんだ餅のレシピを持ってるとするね。
+  - speaker: zundamon
+    emotion: happy
+    text: 秘伝のレシピなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: よその店にレシピを貸していたら、使用料が入ったはずでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1208億円は、その使用料を裁判所が見積もった額なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 貸してないのに、貸したつもりの額？
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。特許で独り占めできた分の値打ちね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2010年までの、青色LEDなどの売上の見込みが約1兆2086億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 特許がなければその半分は、よその会社に取られていたはずと見たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこに使用料の率20％を掛けて、1208億円。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[2分の1|にぶんのいち]に20％に50％……。掛け算が3回なのだ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 中村さんは、自分の貢献度は100％と主張してたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[日亜|にちあ]は、対価はゼロ。貢献度は多くても5％と主張してた。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2001年までの関連の製品は、14億9000万円の赤字だったとも言ってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100％とゼロ！？ 真逆なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日亜|にちあ]は会社の規模からすれば、大きな危険を背負ったとも主張したの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 地裁は、負担の重さじゃなく実際の寄与で決めると答えたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 200億円は、それで払われたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ううん。[日亜|にちあ]が控訴したから、払われないまま高裁へ行くの。
+- id: ch17_kankoku
+  title: 高裁の考え
+  background: led_saibansho_mae
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2004年12月。東京高裁が和解を勧めます。報道によれば、上限6億円の案でした。
+    reading: にせんよねん じゅうにがつ。とうきょう こうさいが わかいお すすめます。ほうどうに よれば じょうげん ろくおくえんの あんでした。
+- id: ch17_kangae
+  title: ''
+  background: led_houtei
+  stage:
+  - {who: saibancho2, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: saibancho2
+    emotion: normal
+    text: 対価は、発明へのインセンティブとなるのに十分なものであるべきだ。
+  - speaker: saibancho2
+    emotion: normal
+    text: 同時に企業が厳しい競争に打ち勝ち、発展していくことを可能とするものであるべきだ。
+  - speaker: reimu
+    text: 高裁は中村の貢献度を5％とし、在職中のすべての職務発明をまとめて評価しました。
+    reading: こうさいわ なかむらの こうけんどお ごぱーせんとと し、ざいしょくちゅうの すべての しょくむ はつめいお まとめて ひょうか しました。
+  - speaker: reimu
+    text: 登録された特許191件、出願中の112件などで、合わせて300件を超えます。
+    reading: とうろく された とっきょ ひゃくきゅうじゅういっけん しゅつがんちゅうの ひゃくじゅうにけんなどで、あわせて さんびゃっけんお こえます。
+  - speaker: reimu
+    text: 使用料の率も、地裁の20％に対して10％か7％と見ました。
+    reading: しようりょうの りつも、ちさいの にじゅっぱーせんとに たいして じゅっぱーせんとか ななぱーせんとと みました。
+  - speaker: reimu
+    text: 高裁も、中村の発明全体の貢献を前例のない例外的なものと評価しています。
+    reading: こうさいも なかむらの はつめい ぜんたいの こうけんお、ぜんれいの ない れいがいてきな ものと ひょうか して います。
+- id: ch17_bengoshi
+  title: ''
+  background: led_bengoshi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: thinking}
+  - {who: bengoshi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: bengoshi
+    emotion: thinking
+    text: 高裁の案は、全部の発明で6億円が上限です。
+  - speaker: zundamon
+    emotion: angry
+    text: 和解案が覆る可能性が1％でもあるなら、最高裁で争いたい。
+  - speaker: bengoshi
+    emotion: thinking
+    text: 最高裁は法律論を示すだけで、高裁の基準は変わりません。
+  - speaker: bengoshi
+    emotion: thinking
+    text: 最高裁まで争っても、勝ち目は薄いと思います。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……6億円。
+- id: card2005
+  title: ''
+  background: led_card_2005
+  cuts:
+  - speaker: reimu
+    text: 2005年1月11日。東京高裁で、和解が成立します。
+    reading: にせんごねん いちがつ じゅういちにち。とうきょう こうさいで、わかいが せいりつ します。
+- id: ch17_wakai
+  title: 和解は8億4391万円
+  background: led_saibansho_mae
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 日亜が払うのは、対価6億0857万円と遅延損害金で、合わせて8億4391万円です。
+    reading: にちあが はらうのわ たいか ろくおく はっぴゃくごじゅうななまんえんと ちえん そんがいきんで、あわせて はちおく よんせん さんびゃく きゅうじゅういちまんえんです。
+    telops:
+    - {text: "和解　全発明で8億4391万円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 中村さん、和解を受け入れた理由は。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[金額|きんがく]には全く満足していないが、弁護士の勧めもあって受け入れることにした。'
+- id: ch17_nichia
+  title: ''
+  background: led_kaiken
+  stage:
+  - {who: kouhou, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kouhou
+    emotion: normal
+    text: 社長のコメントを、読み上げます。
+  - speaker: kouhou
+    emotion: normal
+    text: 当社の主張を、ほぼ裁判所にご理解いただけた。
+  - speaker: kouhou
+    emotion: normal
+    text: 青色LED発明が一人でなく、多くの人々の努力・工夫の[賜物|たまもの]である事を
+  - speaker: kouhou
+    emotion: normal
+    text: ご理解いただけた点は、大きな成果。
+  - speaker: kouhou
+    emotion: normal
+    text: ここからは、会社としての発表です。
+  - speaker: kouhou
+    emotion: normal
+    text: 従業員はリスクを共有する共同事業者とは異なることが、明確に認識されました。
+  - speaker: reimu
+    text: 日亜も、6億円は過大で納得していないが、争いを終わらせ本業に専念するため受け入れた、としました。
+    reading: にちあも ろくおくえんわ かだいで なっとく して いないが、あらそいお おわらせ ほんぎょうに せんねん するため うけいれたと しました。
+  - speaker: reimu
+    text: 和解で裁判が終わったため、地裁の判決の認定は確定していません。
+    reading: わかいで さいばんが おわった ため、ちさいの はんけつの にんていわ かくてい して いません。
+  - speaker: kisha
+    emotion: thinking
+    text: どちらも、満足はしていない……。
+    beat: true
+- id: ch18_kusatte
+  title: 和解の翌日の会見
+  background: led_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: angry}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 和解の翌日ですが、今のお気持ちを。
+  - speaker: zundamon
+    emotion: angry
+    text: 日本の司法制度は腐っている。
+    se: don
+    telops:
+    - {text: "中村　日本の司法制度は腐っている", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: angry
+    text: 一連の裁判が終わったので、言いたいことを言わせてもらう。
+  - speaker: kisha
+    emotion: surprised
+    text: ど、どこが腐っていると。
+  - speaker: zundamon
+    emotion: angry
+    text: 高裁は、600億円の[100分の1|ひゃくぶんのいち]の6億円程度が妥当だと数字を先に決めてから
+  - speaker: zundamon
+    emotion: angry
+    text: 貢献度などを、それに合わせている。
+  - speaker: kisha
+    emotion: thinking
+    text: 最高裁で争う道は、なかったんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 弁護団の助言で、和解に応じるしか手段がなかった。
+  - speaker: zundamon
+    emotion: angry
+    text: 和解は、完全な敗訴です。
+  - speaker: kisha
+    emotion: surprised
+    text: 8億円で、敗訴……。
+  - speaker: zundamon
+    emotion: normal
+    text: ただ多くの企業が報奨金の上限をなくすなど、大きな前進があった。
+- id: ch19_hoki
+  title: 404特許の放棄
+  background: led_kojo_soto
+  bgm: hirusagari
+  stage:
+  - {who: kouhou, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2006年3月8日。日亜は、404特許を放棄すると発表します。
+    reading: にせんろくねん さんがつ ようか。にちあわ、よんまるよん とっきょお ほうき すると はっぴょう します。
+  - speaker: kouhou
+    emotion: normal
+    text: '[404特許|よんまるよんとっきょ]とその外国の特許は、維持を必要としなくなりました。'
+  - speaker: kisha
+    emotion: surprised
+    text: 地裁が対価604億円と認めた特許を、手放すんですか！？
+    se: bikkuri
+  - speaker: kouhou
+    emotion: normal
+    text: 当社は1997年の前半までに、この方法を使うのをやめています。
+  - speaker: reimu
+    text: 中村は著書で、404特許は青色LEDの基本技術だ、と書いています。
+    reading: なかむらわ ちょしょで、よんまるよん とっきょわ あおいろ えるいーでぃーの きほん ぎじゅつだと かいて います。
+  - speaker: reimu
+    text: 発表文は、中村の言うダイヤモンドの原石のような価値は、この特許にはないと書きました。
+    reading: はっぴょうぶんわ、なかむらの いう だいやもんどの げんせきの ような かちわ この とっきょにわ ないと かきました。
+  - speaker: reimu
+    text: 一方で地裁は、日亜の今の方法も404特許の範囲に入る、と判断していました。
+    reading: いっぽうで ちさいわ、にちあの いまの ほうほうも よんまるよん とっきょの はんいに はいると はんだん して いました。
+- id: ch20_nobel
+  title: ノーベル物理学賞
+  background: led_stockholm
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 2014年10月7日。ノーベル物理学賞が、赤﨑勇、天野浩、中村修二の3人に決まります。
+    reading: にせん じゅうよねん じゅうがつ なのか。のーべる ぶつりがくしょうが、あかさき いさむ あまの ひろし なかむら しゅうじの さんにんに きまります。
+  - speaker: reimu
+    text: 日本出身の3人です。中村は、このときアメリカの国籍でした。
+    reading: にほん しゅっしんの さんにんです。なかむらわ、この とき あめりかの こくせきでした。
+- id: ch20_kaiken
+  title: ''
+  background: led_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 中村さん、受賞の今のお気持ちを。
+  - speaker: zundamon
+    emotion: happy
+    text: '[小川信雄|おがわのぶお]さんは、私のギャンブルを支持してくれた。'
+  - speaker: kisha
+    emotion: normal
+    text: 研究を続けてこられた理由を、聞かせてください。
+  - speaker: zundamon
+    emotion: angry
+    text: '[怒り|いかり]以外に何もない。'
+    beat: true
+    telops:
+    - {text: "中村　怒り以外に何もない", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: い、[怒り|いかり]……。
+- id: ch20_nichia
+  title: ''
+  background: led_kojo_soto
+  stage:
+  - {who: kouhou, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[日亜|にちあ]として、受賞へのコメントを。'
+  - speaker: kouhou
+    emotion: happy
+    text: 日本人がノーベル賞を受賞したことは、大変喜ばしいことです。
+  - speaker: kouhou
+    emotion: normal
+    text: とりわけ受賞理由が、中村氏を含む多くの[日亜|にちあ]化学社員と企業努力によって実現した
+  - speaker: kouhou
+    emotion: happy
+    text: 青色LEDであることは、光関連技術の[日亜|にちあ]化学にとっても誇らしいことです。
+  - speaker: kouhou
+    emotion: normal
+    text: 今後とも関係者各位のご活躍を、お祈り申し上げます。
+- id: ch20_nakanaori
+  title: けんかしたまま死にたくない
+  background: led_kaiken
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 中村修二, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月3日。文化勲章を受けた中村は、会見で日亜に呼びかけます。
+    reading: じゅういちがつ みっか。ぶんか くんしょうお うけた なかむらわ、かいけんで にちあに よびかけます。
+  - speaker: zundamon
+    emotion: normal
+    text: われわれのノーベル賞には、[日亜|にちあ]化学の貢献が大きい。
+  - speaker: zundamon
+    emotion: normal
+    text: '[小川英治|おがわえいじ]社長と、一緒に開発した6人の部下と全社員に感謝している。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 人生は短い。私も60歳だ。
+  - speaker: zundamon
+    emotion: sad
+    text: けんかしたまま死にたくない。
+  - speaker: zundamon
+    emotion: normal
+    text: できれば[小川英治|おがわえいじ]社長と直接会って、ざっくばらんに話したい。
+  - speaker: kisha
+    emotion: surprised
+    text: ……仲直りの、呼びかけですか。
+- id: ch20_kotowari
+  title: ''
+  background: led_kojo_soto
+  stage:
+  - {who: kouhou, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日、日亜はコメントを出します。感謝の言葉で十分だ、として。
+    reading: よくじつ、にちあわ こめんとお だします。かんしゃの ことばで じゅうぶんだ と して。
+  - speaker: kouhou
+    emotion: normal
+    text: 貴重な時間を、弊社への挨拶などに費やすことなく……。
+  - speaker: reimu
+    text: 研究に打ち込まれるよう祈る、と面会を断りました。
+    reading: けんきゅうに うちこまれる よう いのる、と めんかいお ことわりました。
+  - speaker: kisha
+    emotion: thinking
+    text: ……会わない、ということですね。
+    beat: true
+  - speaker: reimu
+    text: その後の関係について、公の発表はありません。
+    reading: その ごの かんけいに ついて、おおやけの はっぴょうわ ありません。
+- id: ch21_ronso
+  title: 青色LEDはひとりで作ったのか
+  background: led_heya
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: 青色LEDは中村さんがひとりで発明して、会社は2万円しか払わなかったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そのまま信じると、3つ間違えるわよ。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 3つも！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つ目。ノーベル賞は、[赤﨑|あかさき]さんと[天野|あまの]さんと中村さんの3人よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 質のいい結晶も[p型|ぴーがた]も、名古屋大学の2人が先に作ってたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日亜|にちあ]は、多くの社員の技術が積み重なってできたと言ってるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 中村さんも、一緒に開発した6人の部下に感謝してたでしょ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ひとりじゃ、なかったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つ目。2万円は、特許1件の社内の褒賞。給料は別よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日亜|にちあ]は40代半ばで、役員の平均を上回る給料だったと説明してる。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 研究成果を2万円で取り上げたかのような言い方は、適切ではないともね。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ地裁の判決も高裁の考えも、対価は褒賞よりずっと大きいと見たの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 給料は、別でもらってたのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つ目。8億円は、[404特許|よんまるよんとっきょ]だけの値段じゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 在職中の、300件を超える発明をまとめた額よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1件あたりだと、ずっと小さい！
+  - speaker: tsumugi
+    emotion: thinking
+    text: しかも、どっちも満足してない。中村さんは完全な敗訴、[日亜|にちあ]は過大だって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 両方とも、負けた顔をしてるのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+- id: ch21_chui
+  title: 発明は誰のものか
+  background: led_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 職務発明の法律は、この裁判と同じ時期に見直しが進んだの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2005年4月からは手続きが合理的なら、会社の決めた対価が原則として尊重されるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: あの裁判で、変わったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2003年のオリンパスの最高裁の判決とか、同じような訴えが増えてたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: この裁判だけで変わった、とは言えないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあボクが仕事で発明したら、会社のものなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年からは、会社が決まりを作れば仕事でした発明を最初から会社のものにできるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 最初から！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: そのかわり会社は、相当の利益を渡すの。お[金|かね]じゃなくてもいいのよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 中村さんはこの改正に、[怒り|いかり]を感じると反対してたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ずんだもんの場合は、会社の決まりしだいね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社によっては、職務発明の規程っていう決まりがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 発明が誰のものになって、何がもらえるか。そこに書いてあるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 裁判の前に、まず規程なのだ。
+- id: ch22_gendai
+  title: 青い光の今
+  background: led_machi_yoru
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: tsumugi
+    emotion: happy
+    text: 今、全国の信号の明かりの約83.1％がLEDよ。2026年3月末の数字ね。
+    telops:
+    - {text: "信号の明かりの約83.1％がLED", size: md, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 20年ちょっと前は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2003年3月末は、1.3％。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほぼゼロから！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 電気は電球の約[6分の1|ろくぶんのいち]で、寿命は6年から8年もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電球のほうは、半年から1年だったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 蛍光灯も、作るのと輸出入が順に禁止されていくの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電球の形のものは2026年1月から。まっすぐな管も2028年までに。
+  - speaker: zundamon
+    emotion: sad
+    text: うちの台所の蛍光灯、どうするのだ！？
+    se: shobon
+  - speaker: tsumugi
+    emotion: happy
+    text: 今ある分は、売るのも使うのも大丈夫よ。
+  - speaker: zundamon
+    emotion: happy
+    text: ……セーフなのだ。
+- id: ch22_hito
+  title: ''
+  background: led_machi_yoru
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日亜|にちあ]は、2025年12月期の売上が3640億円。社員は9509人よ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 180人の会社が！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 中村さんは今も、カリフォルニア大学サンタバーバラ校の教授。
+  - speaker: tsumugi
+    emotion: happy
+    text: 2026年6月には、オックスフォード大学から名誉学位を受けたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年には核融合の会社を仲間と立ち上げて、トップを務めてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 青い光の次は、太陽を作るのか！
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[赤﨑|あかさき]さんは2021年に、92歳で亡くなったわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: '[天野|あまの]さんは2026年4月に、[名城大学|めいじょうだいがく]の学術アドバイザーになったの。'
+- id: shime
+  title: ''
+  background: led_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも、会社の規程を読んでみたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: どうだった？
+  - speaker: zundamon
+    emotion: thinking
+    text: 改善提案の賞金は、1件1000円って書いてあったのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 規程どおりね。
+    beat: true
+  - speaker: zundamon
+    emotion: angry
+    text: でも[裏紙|うらがみ]のおかげで、会社は紙代が浮いてるのだ。貢献度を計算し直すのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[裏紙|うらがみ]の、使用料の見積もりから始める気？'
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも一度、自分の会社の規程を読んでおいてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2万円と604億円と、8億円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どの数字に納得するかは、どこに立って見るかで変わるのね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
