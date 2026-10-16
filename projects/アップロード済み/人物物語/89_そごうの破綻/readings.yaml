@@ -1,0 +1,51 @@
+# sogo-mizushima 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 人名
+- {surface: 水島廣雄, reading: みずしまひろお}
+- {surface: 水島, reading: みずしま}
+- {surface: 廣雄, reading: ひろお}
+- {surface: 中山素平, reading: なかやまそへい}
+- {surface: 西村正雄, reading: にしむらまさお}
+- {surface: 黒澤洋, reading: くろさわよう}
+- {surface: 堀江鐵彌, reading: ほりえてつや}
+- {surface: 山田恭一, reading: やまだきょういち}
+- {surface: 正力松太郎, reading: しょうりきまつたろう}
+- {surface: 和田繁明, reading: わだしげあき}
+- {surface: 亀井静香, reading: かめいしずか}
+# 地名
+- {surface: 成生, reading: なりう}
+- {surface: 舞鶴, reading: まいづる}
+- {surface: 有楽町, reading: ゆうらくちょう}
+- {surface: 立川, reading: たちかわ}
+- {surface: 川口, reading: かわぐち}
+- {surface: 池袋, reading: いけぶくろ}
+# 社名・機関
+- {surface: 日本興業銀行, reading: にっぽんこうぎょうぎんこう}
+- {surface: 興銀, reading: こうぎん}
+- {surface: 長銀, reading: ちょうぎん}
+- {surface: 新生銀行, reading: しんせいぎんこう}
+- {surface: 預金保険機構, reading: よきんほけんきこう}
+- {surface: セブン&アイ, reading: せぶんあんどあい}
+# 専門語・言い回し
+- {surface: 漁礁, reading: ぎょしょう}
+- {surface: 浮動担保, reading: ふどうたんぽ}
+- {surface: 浮動, reading: ふどう}
+- {surface: 企業担保法, reading: きぎょうたんぽほう}
+- {surface: 砂金, reading: さきん}
+- {surface: 薄氷, reading: はくひょう}
+- {surface: 評価替え, reading: ひょうかがえ}
+- {surface: 含み益, reading: ふくみえき}
+- {surface: 縁続き, reading: えんつづき}
+- {surface: 画鋲, reading: がびょう}
+- {surface: 連結決算, reading: れんけつけっさん}
+- {surface: 債務超過, reading: さいむちょうか}
+- {surface: 瑕疵担保特約, reading: かしたんぽとくやく}
+- {surface: 放漫, reading: ほうまん}
+- {surface: 逢いましょう, reading: あいましょう}
+- {surface: 逢えない, reading: あえない}
+- {surface: 強制執行妨害, reading: きょうせいしっこうぼうがい}
+- {surface: 百寿, reading: ひゃくじゅ}
+- {surface: あなた方, reading: あなたがた}
+- {surface: 23行, reading: にじゅうさんこう}
+- {surface: 73行, reading: ななじゅうさんこう}

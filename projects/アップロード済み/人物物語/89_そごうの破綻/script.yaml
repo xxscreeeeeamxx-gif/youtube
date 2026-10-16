@@ -1,0 +1,1646 @@
+meta:
+  title: そごう、日本一から負債1兆8700億円へ　店を増やし続けた男の漁礁理論【ずんだもん解説】
+  slug: sogo-mizushima
+  summary: 1992年、売上で日本一になった百貨店、そごう。率いていたのは、銀行員と法学博士の顔を持つ水島廣雄でした。社長になったとき、店は大阪・神戸・東京の3つだけ。それがなぜ、社長室の地図が画鋲で埋まるほどに増えたのか。大きな漁礁ほど魚が集まる、と語った男の店の増やし方と、その仕組みに隠れていたものを、再現ドラマでたどります。
+  tags:
+  - そごう
+  - 水島廣雄
+  - 百貨店
+  - 日本興業銀行
+  - 長銀
+  - 債権放棄
+  - 民事再生法
+  - そごう・西武
+  - バブル
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 負債1兆8700億円
+    bottom: そごう破綻
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: nishimura
+    label: 西村正雄
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: nakayama
+    label: 中山素平
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#5a5a60'
+  - id: kurosawa
+    label: 黒澤洋
+    voice: 13
+    pitch: 0.02
+    outfit: suit
+    color: '#2f3a52'
+  - id: horie
+    label: 堀江鐵彌
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#4a4038'
+  - id: shain
+    label: 社員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: ginko
+    label: 銀行員
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#454a55'
+  - id: ginko2
+    label: 取引銀行
+    voice: 13
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4f5f'
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#6a5a48'
+  - id: tenin
+    label: 店員
+    voice: 100
+    pitch: 0.0
+    outfit: apron
+  - id: kyaku
+    label: 客
+    voice: 21
+    pitch: 0.0
+  - id: yamada
+    label: 山田恭一
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#3a3f4a'
+  - id: fukushacho
+    label: 副社長
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3440'
+  - id: gichou
+    label: 委員
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#5a4a3a'
+scenes:
+- id: co_shuzai
+  title: ''
+  background: so_shachoshitsu_pins
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1992年。売上日本一の百貨店、そごうの社長が取材を受けていました。
+    reading: せんきゅうひゃく きゅうじゅうにねん。うりあげ にほんいちの ひゃっかてん、そごうの しゃちょうが しゅざいお うけて いました。
+  - speaker: kisha
+    emotion: normal
+    text: 店を30以上に増やした秘訣は、[何|なん]ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: '[漁礁|ぎょしょう]です。大きな[漁礁|ぎょしょう]ほど、魚は集まるでしょう。'
+  - speaker: zundamon
+    emotion: happy
+    text: 大きな店を建てれば、客は集まるんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 累積赤字は、土地の[評価替え|ひょうかがえ]で消せます。
+  - speaker: reimu
+    text: この男は、水島廣雄。8年後、そごうは負債1兆8700億円で倒れます。
+    reading: この おとこわ、みずしま ひろお。はちねんご、そごうわ ふさい いっちょう はっせん ななひゃくおくえんで たおれます。
+- id: hook
+  title: ''
+  background: so_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ デパートの紙袋。持ってるだけで、お[金|かね]持ちに見えるのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 中身は？
+  - speaker: zundamon
+    emotion: normal
+    text: ……靴下1足。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 袋のほうが、本体なのね。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 売上で日本一だった百貨店のそごうも、中身が外から見えなかったの。
+    telops:
+    - {text: "売上日本一 → 負債1兆8700億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本一の百貨店が、なんで潰れたの！？
+- id: card1912
+  title: ''
+  background: so_card_1912
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1912年。京都府の成生という漁村で、水島廣雄が生まれます。今の舞鶴市です。
+    reading: せんきゅうひゃく じゅうにねん。きょうとふの なりうと いう ぎょそんで、みずしま ひろおが うまれます。いまの まいづるしです。
+- id: card1936
+  title: ''
+  background: so_card_1936
+  cuts:
+  - speaker: reimu
+    text: 1936年。中央大学の法学部を出た水島は、日本興業銀行に入ります。
+    reading: せんきゅうひゃく さんじゅうろくねん。ちゅうおう だいがくの ほうがくぶお でた みずしまわ、にっぽん こうぎょう ぎんこうに はいります。
+- id: ch1_kogin
+  title: 興銀の新人
+  background: so_ginkou
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: happy}
+  - {who: ginko, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: ginko
+    emotion: normal
+    text: 新人の[水島|みずしま]くんか。[興銀|こうぎん]へようこそ。
+  - speaker: zundamon
+    emotion: happy
+    text: '[水島|みずしま]です。よろしくお願いします！'
+  - speaker: ginko
+    emotion: thinking
+    text: 法学部の出だってね。法律屋が、銀行で何をするんだい。
+  - speaker: zundamon
+    emotion: normal
+    text: お[金|かね]を貸すにも、法律が要ります。
+  - speaker: zundamon
+    emotion: normal
+    text: 返してもらえなかったら、何を押さえるか。担保の決まりです。
+  - speaker: ginko
+    emotion: surprised
+    text: 担保ねえ。
+  - speaker: ginko
+    emotion: thinking
+    text: 若いのに、ずいぶん地味な所が好きなんだな。
+  - speaker: zundamon
+    emotion: happy
+    text: 地味な所ほど、大きなお[金|かね]が動くんです。
+  - speaker: ginko
+    emotion: happy
+    text: ……新人のくせに、言うねえ。
+    beat: true
+- id: card1953
+  title: ''
+  background: so_card_1953
+  cuts:
+  - speaker: reimu
+    text: 1953年。水島は、中央大学から法学博士を受けます。
+    reading: せんきゅうひゃく ごじゅうさんねん。みずしまわ、ちゅうおう だいがくから ほうがく はくしお うけます。
+  - speaker: reimu
+    text: 銀行に勤めながら書いた論文の題は、浮動担保ノ研究でした。
+    reading: ぎんこうに つとめながら かいた ろんぶんの だいわ、ふどう たんぽの けんきゅうでした。
+- id: ch1_ronbun
+  title: 昼は銀行員、夜は学者
+  background: so_kenkyushitsu_yoru
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: happy}
+  - {who: ginko, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: ginko
+    emotion: happy
+    text: '[水島|みずしま]くん、博士になったんだってね。おめでとう。'
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうございます。夜に書きためた論文です。
+  - speaker: ginko
+    emotion: normal
+    text: 題は、ふどう担保だっけ。土地や建物の担保か。
+  - speaker: zundamon
+    emotion: normal
+    text: いえ。動かない不動ではなく、浮いて動くほうの[浮動|ふどう]です。
+  - speaker: ginko
+    emotion: surprised
+    text: 浮いて動く担保？ ……ずいぶん、ふわふわしてるな。
+    se: manuke
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社の財産を、中身が入れ替わってもまとめて担保にする考えです。
+  - speaker: ginko
+    emotion: thinking
+    text: 在庫も機械も、まとめて一つの担保か。
+  - speaker: zundamon
+    emotion: happy
+    text: はい。会社をまるごと、ひとかたまりで見るんです。
+  - speaker: ginko
+    emotion: happy
+    text: 昼は銀行員で、夜は学者。二足のわらじだな。
+  - speaker: zundamon
+    emotion: happy
+    text: わらじは、2足とも履きつぶすつもりです。
+    beat: true
+  - speaker: reimu
+    text: 水島は銀行に勤めながら、東洋大学で法律も教えました。
+    reading: みずしまわ ぎんこうに つとめながら、とうよう だいがくで ほうりつも おしえました。
+- id: card1957
+  title: ''
+  background: so_card_1957
+  cuts:
+  - speaker: reimu
+    text: 1957年5月。大阪と神戸に店を持つそごうが、東京の有楽町に店を開きます。
+    reading: せんきゅうひゃく ごじゅうななねん ごがつ。おおさかと こうべに みせお もつ そごうが、とうきょうの ゆうらくちょうに みせお ひらきます。
+- id: ch2_yurakucho
+  title: 有楽町で逢いましょう
+  background: so_kaitenshiki
+  bgm: natsuyasumi
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: '[有楽町|ゆうらくちょう]で、[逢いましょう|あいましょう]！ そごう東京店、開店です！'
+  - speaker: kyaku
+    emotion: surprised
+    text: '[逢いましょう|あいましょう]って、誰とだい。'
+  - speaker: tenin
+    emotion: happy
+    text: どなたとでも！ 待ち合わせは、ぜひそごうで！
+  - speaker: kyaku
+    emotion: happy
+    text: デパートで待ち合わせか。しゃれてるねえ。
+  - speaker: tenin
+    emotion: happy
+    text: お待ちのあいだに、お買い物もどうぞ！
+  - speaker: kyaku
+    emotion: thinking
+    text: ……そっちが本音だな。
+    beat: true
+  - speaker: reimu
+    text: 有楽町で逢いましょうという標語は、のちに同じ題の歌になり、映画にもなりました。
+    reading: ゆうらくちょうで あいましょうと いう ひょうごわ、のちに おなじ だいの うたに なり えいがにも なりました。
+- id: card1958
+  title: ''
+  background: so_card_1958
+  cuts:
+  - speaker: reimu
+    text: 1958年4月。会社の財産をまとめて社債の担保にする、企業担保法ができます。
+    reading: せんきゅうひゃく ごじゅうはちねん しがつ。かいしゃの ざいさんお まとめて しゃさいの たんぽに する、きぎょう たんぽほうが できます。
+  - speaker: reimu
+    text: 水島の研究は、この法律の土台になったとされます。
+    reading: みずしまの けんきゅうわ、この ほうりつの どだいに なったと されます。
+  - speaker: reimu
+    text: 同じ年。水島は興銀を辞め、そごうの副社長になります。
+    reading: おなじ とし。みずしまわ こうぎんお やめ、そごうの ふくしゃちょうに なります。
+- id: ch2_jishoku
+  title: 興銀を辞める
+  background: so_ginkou
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: normal}
+  - {who: ginko, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: ginko
+    emotion: surprised
+    text: '[水島|みずしま]くん、[興銀|こうぎん]を辞めるって本当か。'
+  - speaker: zundamon
+    emotion: normal
+    text: はい。そごうの副社長になります。
+  - speaker: ginko
+    emotion: surprised
+    text: デパートの？ 法学博士が、なんでまた。
+  - speaker: zundamon
+    emotion: normal
+    text: そごうの一族から、頼まれまして。
+  - speaker: zundamon
+    emotion: normal
+    text: 妻の実家が、大株主の一族と[縁続き|えんつづき]なんです。
+  - speaker: ginko
+    emotion: thinking
+    text: '[縁続き|えんつづき]……。ずいぶん遠回しな親戚だな。'
+    beat: true
+  - speaker: ginko
+    emotion: normal
+    text: じゃあ[興銀|こうぎん]から、送り込まれるわけじゃないんだな。
+  - speaker: zundamon
+    emotion: normal
+    text: ええ。辞めて、行くんです。
+  - speaker: ginko
+    emotion: thinking
+    text: 担保の学者が、デパートで何を売るんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: さあ。売り場に立てば、分かるでしょう。
+- id: ch2_sakin
+  title: あなた方は砂金だ
+  background: so_uriba
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: normal}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 副社長。わたしたち、何をやっても駄目なんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 駄目かどうかは、まだ分かりません。
+  - speaker: zundamon
+    emotion: happy
+    text: '[あなた方|あなたがた]は、[砂金|さきん]です。'
+  - speaker: shain
+    emotion: surprised
+    text: さきん？ ……砂のほうですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 砂の中に混じって光る、金の粒です。
+  - speaker: zundamon
+    emotion: happy
+    text: 洗えば、ちゃんと光るんです。
+  - speaker: shain
+    emotion: thinking
+    text: 洗われるのは、ちょっと痛そうですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……そこは、たとえです。
+    se: hammer
+  - speaker: reimu
+    text: 水島はこう語って、落ち込んだ社員を立て直しました。
+    reading: みずしまわ こう かたって、おちこんだ しゃいんお たてなおしました。
+- id: ch2_yachin
+  title: 家賃を下げてほしい
+  background: so_shachoshitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[有楽町|ゆうらくちょう]店の家賃、下げてもらえないか頼みに行く。'
+  - speaker: shain
+    emotion: surprised
+    text: 家賃を、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: うちは、あの建物を借りている身だからな。
+  - speaker: shain
+    emotion: surprised
+    text: 家主は読売新聞社ですよ。社主は、あの[正力松太郎|しょうりきまつたろう]さんです！
+  - speaker: zundamon
+    emotion: normal
+    text: 相手が大物でも、家賃は家賃だ。
+  - speaker: shain
+    emotion: thinking
+    text: 副社長。交渉に、法学博士の肩書きは効くんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 効かなかったら、論文を置いてくる。
+  - speaker: shain
+    emotion: angry
+    text: 論文なんて、置いてきても重しにしかなりません！
+    se: zukko
+  - speaker: reimu
+    text: 水島は、家主の読売新聞社と家賃の引き下げを交渉しました。
+    reading: みずしまわ、やぬしの よみうり しんぶんしゃと やちんの ひきさげお こうしょう しました。
+- id: card1962
+  title: ''
+  background: so_card_1962
+  cuts:
+  - speaker: reimu
+    text: 1962年。水島は、そごうの社長になります。
+    reading: せんきゅうひゃく ろくじゅうにねん。みずしまわ、そごうの しゃちょうに なります。
+- id: ch3_shacho
+  title: 店は3つだけ
+  background: so_shachoshitsu_pin3
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、ご就任おめでとうございます！
+  - speaker: zundamon
+    emotion: thinking
+    text: 店は大阪と神戸と東京。地図の[画鋲|がびょう]は、3本だけか。
+    telops:
+    - {text: "社長になったとき 店は3つ", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shain
+    emotion: happy
+    text: 3店もあれば、十分じゃないですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 日本は、こんなに広いんだぞ。
+  - speaker: shain
+    emotion: thinking
+    text: 社長。[画鋲|がびょう]を見る目が、ちょっと怖いです。
+  - speaker: zundamon
+    emotion: happy
+    text: ……もっと、刺したいのだ。
+    beat: true
+- id: card1967
+  title: ''
+  background: so_card_1967
+  cuts:
+  - speaker: reimu
+    text: 1967年。そごうは、千葉に新しい店を開きます。
+    reading: せんきゅうひゃく ろくじゅうななねん。そごうわ、ちばに あたらしい みせお ひらきます。
+- id: ch3_chiba
+  title: 店ごとに別の会社
+  background: so_shachoshitsu_pin3
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: '[千葉|ちば]の店で、そごうも4店目ですね。'
+  - speaker: zundamon
+    emotion: normal
+    text: いや。[千葉|ちば]そごうという、別の会社にする。
+  - speaker: shain
+    emotion: surprised
+    text: 同じそごうなのに、わざわざ別の会社に？
+  - speaker: zundamon
+    emotion: happy
+    text: 失敗しても、本体に響かないようにだ。
+    se: hirameki
+  - speaker: shain
+    emotion: thinking
+    text: 開く前から、失敗の話ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 法律屋は、悪いほうから考えるんだ。
+  - speaker: shain
+    emotion: thinking
+    text: ……博士の考えることは、よく分かりません。
+  - speaker: zundamon
+    emotion: happy
+    text: 今は分からなくても、いいんです。[画鋲|がびょう]が増えれば分かります。
+- id: ch3_kaisha
+  title: 保証人のバトン
+  background: so_ginkou_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 水島廣雄, emotion: normal}
+  - {who: ginko2, x: 0.56, emotion: normal}
+  - {who: shain, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1969年。そごうは、横浜そごうの会社を作ります。店が開くのは、16年後です。
+    reading: せんきゅうひゃく ろくじゅうきゅうねん。そごうわ、よこはま そごうの かいしゃお つくります。みせが ひらくのわ、じゅうろくねんごです。
+  - speaker: shain
+    emotion: surprised
+    text: 16年後！？ 今生まれた子が、高校生になってますよ！
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 店を出す何年も前に、別の会社の名前で土地を安く買っておくんだ。
+  - speaker: shain
+    emotion: thinking
+    text: そごうの名前を出したら、値段が上がりますもんね。
+  - speaker: ginko2
+    emotion: normal
+    text: それで、新しい会社の資本金は？
+  - speaker: zundamon
+    emotion: normal
+    text: 1億円ほどです。
+  - speaker: ginko2
+    emotion: surprised
+    text: 1億円の会社に、何十億円も貸せと？
+  - speaker: zundamon
+    emotion: happy
+    text: 保証人は、そごう本社が引き受けます。
+  - speaker: ginko2
+    emotion: thinking
+    text: ……それなら、低い金利でお貸しできます。
+  - speaker: shain
+    emotion: surprised
+    text: 本社の信用で、新しい会社が借りられるんですね。
+  - speaker: reimu
+    text: 1970年、店はまだ4つ。翌年、古巣の興銀と初めて取引を始めます。
+    reading: せんきゅうひゃく ななじゅうねん、みせわ まだ よっつ。よくねん、ふるすの こうぎんと はじめて とりひきお はじめます。
+- id: ch3_kaisetsu
+  title: 店が増える仕組み
+  background: so_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 店ごとに、資本金1億円ほどの会社を作るの。いわば別の財布ね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 財布が、店の数だけあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも小さな財布だけじゃ、銀行は大金を貸してくれない。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこで本社やグループの会社が、保証人になるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 兄ちゃんが判子を押すから、弟が借りられるのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。しかも低い金利でね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 店ができると、周りの土地の値段が上がる。
+  - speaker: tsumugi
+    emotion: normal
+    text: たとえば10億円で買った土地が30億円になれば、20億円の[含み益|ふくみえき]。
+  - speaker: tsumugi
+    emotion: normal
+    text: その[含み益|ふくみえき]を帳簿に載せて、開店してからの赤字を消せたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤字が消える！？ 魔法の消しゴムなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 帳簿を消しても、借りたお[金|かね]は消えてないからね。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒字になった会社は、今度は次の店の保証人になる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 弟が兄ちゃんになって、また弟を作るのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: トランプのタワーみたいに、上へ上へと積んでいくの。
+  - speaker: zundamon
+    emotion: thinking
+    text: いちばん下で、全部を支えてるのは何？
+  - speaker: tsumugi
+    emotion: normal
+    text: 土地の値上がりよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……下の段が、もし抜けたら？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 値上がりが続くうちは、誰も困らなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、株を上場してたのは本社の3店だけ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ほかの店の会社は、グループの[連結決算|れんけつけっさん]に入ってなかったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: れんけつ……？
+  - speaker: tsumugi
+    emotion: normal
+    text: グループ全体の成績表のことよ。そこに載らないから、外からは全体が見えにくい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 財布はいっぱいあるのに、中身が見えないのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: まとめ役は[千葉|ちば]そごう。その株の約5割を、[水島|みずしま]さんが持ってたの。
+- id: card1985
+  title: ''
+  background: so_card_1985
+  cuts:
+  - speaker: reimu
+    text: 1985年。横浜駅の裏手で、横浜そごうの開店が近づいていました。
+    reading: せんきゅうひゃく はちじゅうごねん。よこはまえきの うらてで、よこはま そごうの かいてんが ちかづいて いました。
+- id: ch4_yushi
+  title: 23の銀行が貸した590億円
+  background: so_ginkou_kaigi
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 水島廣雄, emotion: happy}
+  - {who: ginko, x: 0.56, emotion: normal}
+  - {who: shain, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: ginko
+    emotion: normal
+    text: 横浜の開店資金は、約590億円。[興銀|こうぎん]を中心に、[23行|にじゅうさんこう]でお貸しします。
+    telops:
+    - {text: "開店資金 約590億円・23行が協調融資", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: '[23行|にじゅうさんこう]も。銀行の運動会ですね。'
+  - speaker: ginko
+    emotion: thinking
+    text: '[1行|いっこう]では、とても抱えきれない額ですから。'
+  - speaker: zundamon
+    emotion: happy
+    text: 大きな店には、大きなお[金|かね]が要るんです。
+  - speaker: shain
+    emotion: thinking
+    text: 社長。不動産屋に、魚相手に商売するのかと笑われましたよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 魚？
+  - speaker: shain
+    emotion: sad
+    text: 駅の裏で、海に面した場所ですから。
+  - speaker: zundamon
+    emotion: happy
+    text: 魚が買い物に来てくれたら、それも立派なお客さんだ。
+  - speaker: shain
+    emotion: angry
+    text: 魚は、財布を持ってません！
+    se: tsukkomi
+- id: ch4_kaiten
+  title: ''
+  background: so_kaitenshiki
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 9月。横浜そごうが開店します。売場面積は約6万8400平方メートルで、当時の日本一でした。
+    reading: くがつ。よこはま そごうが かいてん します。うりば めんせきわ やく ろくまん はっせん よんひゃく へいほう めーとるで、とうじの にほんいちでした。
+  - speaker: kyaku
+    emotion: surprised
+    text: 広い！ 端から端まで歩いたら、日が暮れるよ。
+  - speaker: kyaku
+    emotion: thinking
+    text: 店員さん、出口はどっちだい。
+  - speaker: tenin
+    emotion: happy
+    text: わたしも、まだ覚えきれてません！
+  - speaker: kyaku
+    emotion: angry
+    text: 店員さんが迷ってどうするんだ。
+    beat: true
+- id: ch4_nihonichi
+  title: 地図が画鋲で埋まる
+  background: so_shachoshitsu_pin3
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長。1979年に10店で、1987年には20店でした。
+  - speaker: shain
+    emotion: happy
+    text: そして1991年の秋、[川口|かわぐち]の店で30店目です！
+  - speaker: zundamon
+    emotion: happy
+    text: よし。30本目の[画鋲|がびょう]だ。
+  - speaker: shain
+    emotion: surprised
+    text: 地図が、[画鋲|がびょう]で真っ赤ですよ。
+    background: so_shachoshitsu_pins
+  - speaker: zundamon
+    emotion: thinking
+    text: まだ、[空いて|あいて]いる所があるのだ。
+  - speaker: shain
+    emotion: thinking
+    text: もう、海くらいしか[空いて|あいて]ません！
+  - speaker: zundamon
+    emotion: happy
+    text: 海の向こうにも、タイやシンガポールに出してるぞ。
+  - speaker: shain
+    emotion: thinking
+    text: ……[画鋲|がびょう]が、地図からはみ出してます。
+    beat: true
+  - speaker: reimu
+    text: 1991年度。グループの売上は約1兆4000億円になり、百貨店で日本一になります。
+    reading: せんきゅうひゃく きゅうじゅういちねんど。ぐるーぷの うりあげわ やく いっちょう よんせんおくえんに なり、ひゃっかてんで にほんいちに なります。
+    telops:
+    - {text: "百貨店で売上日本一 約1兆4000億円", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 日本一……。3店から、ここまで来たのだ。
+    se: levelup
+  - speaker: reimu
+    text: 10年前の1981年度は、3500億円に届いていませんでした。
+    reading: じゅうねんまえの せんきゅうひゃく はちじゅういちねんどわ、さんぜん ごひゃくおくえんに とどいて いませんでした。
+- id: card1992
+  title: ''
+  background: so_card_1992
+  cuts:
+  - speaker: reimu
+    text: 1992年6月。そごうは、着工中の店のほかは出店をゆるめると宣言します。
+    reading: せんきゅうひゃく きゅうじゅうにねん ろくがつ。そごうわ、ちゃっこうちゅうの みせの ほかわ しゅってんお ゆるめると せんげん します。
+  - speaker: reimu
+    text: 店は海外を含めて、35店になっていました。
+    reading: みせわ かいがいお ふくめて、さんじゅうごてんに なって いました。
+- id: ch5_shuzai
+  title: 漁礁理論
+  background: so_shachoshitsu_pins
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 店を30以上に増やした秘訣は、[何|なん]ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: '[漁礁|ぎょしょう]です。大きな[漁礁|ぎょしょう]ほど、魚は集まるでしょう。'
+  - speaker: zundamon
+    emotion: happy
+    text: 大きな店を建てれば、客は集まるんです。
+  - speaker: kisha
+    emotion: thinking
+    text: '[漁礁|ぎょしょう]というと、海に沈める廃船ですか。'
+  - speaker: zundamon
+    emotion: happy
+    text: ええ。小さな[漁礁|ぎょしょう]には、魚は来やしません。
+  - speaker: reimu
+    text: 漁村の成生に生まれた水島が、店の出し方を語るのに選んだのは魚の話でした。
+    reading: ぎょそんの なりうに うまれた みずしまが、みせの だしかたお かたるのに えらんだのわ さかなの はなしでした。
+  - speaker: kisha
+    emotion: normal
+    text: 店ごとに別の会社を作るやり方は、どうですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 最初は、そんなやり方では成功しないと笑われました。
+  - speaker: kisha
+    emotion: surprised
+    text: 今は？
+  - speaker: zundamon
+    emotion: happy
+    text: どこの百貨店も、今は別の会社でやっていますよ。
+  - speaker: kisha
+    emotion: thinking
+    text: でも、大きな店ほど赤字も大きいのでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 累積赤字は、土地の[評価替え|ひょうかがえ]で消せます。
+    telops:
+    - {text: "累積赤字は土地の評価替えで消せる", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 出店をゆるめるのは、なぜですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 時勢がこうですから。建築費も上がりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 新しい店が黒字になるまで、7年から8年かかります。
+  - speaker: kisha
+    emotion: thinking
+    text: 行き詰まった、と書くところもありますが。
+  - speaker: zundamon
+    emotion: angry
+    text: 冗談じゃありません。
+    se: don
+- id: ch5_nakayama
+  title: ''
+  background: so_ginkou_kaigi
+  stage:
+  - {who: ginko, x: 0.28, flip: true, emotion: surprised}
+  - {who: nakayama, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ginko
+    emotion: normal
+    text: そごうが出店をゆるめたこと、どうご覧になりますか。
+  - speaker: nakayama
+    emotion: thinking
+    text: 進むときは楽だ。引くときが、難しい。
+  - speaker: nakayama
+    emotion: happy
+    text: ……[水島|みずしま]君を、見直した。
+  - speaker: ginko
+    emotion: surprised
+    text: 見直した、ですか。
+    beat: true
+- id: card1994
+  title: ''
+  background: so_card_1994
+  cuts:
+  - speaker: reimu
+    text: 1994年4月18日。水島は社長を退き、会長になると発表します。
+    reading: せんきゅうひゃく きゅうじゅうよねん しがつ じゅうはちにち。みずしまわ しゃちょうお しりぞき、かいちょうに なると はっぴょう します。
+- id: ch6_kaiken
+  title: 社長を退く
+  background: so_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 32年の社長生活を、どう振り返りますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 百貨店経営は、[薄氷|はくひょう]を踏む思いでした。
+  - speaker: kisha
+    emotion: thinking
+    text: 会長になっても、代表権は持ち続けるんですね。
+    telops:
+    - {text: "社長は退く・代表権は残す", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: ええ。会長として、代表権は持ちます。
+  - speaker: kisha
+    emotion: surprised
+    text: ……退いたのか、退いてないのか。
+    se: zukko
+  - speaker: reimu
+    text: 興銀と長銀は、そごうに副社長を送り込みます。
+    reading: こうぎんと ちょうぎんわ、そごうに ふくしゃちょうお おくりこみます。
+- id: ch6_sansha
+  title: 経営会議に出ないでほしい
+  background: so_ginkou_kaigi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 水島廣雄, emotion: thinking}
+  - {who: kurosawa, x: 0.56, emotion: normal}
+  - {who: horie, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1994年11月。興銀と長銀の頭取が、水島と向き合います。
+    reading: せんきゅうひゃく きゅうじゅうよねん じゅういちがつ。こうぎんと ちょうぎんの とうどりが、みずしまと むきあいます。
+  - speaker: kurosawa
+    emotion: normal
+    text: '[水島|みずしま]会長。今後は、経営会議に出ないでいただきたい。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 経営会議に、出るなと？
+  - speaker: horie
+    emotion: normal
+    text: 人事も、社長にお任せいただきたい。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……分かりました。会議には、出ません。
+    beat: true
+- id: card1995
+  title: ''
+  background: so_card_1995
+  cuts:
+  - speaker: reimu
+    text: 1995年1月。阪神・淡路大震災で、そごうの神戸店が被災します。
+    reading: せんきゅうひゃく きゅうじゅうごねん いちがつ。はんしん あわじ だいしんさいで、そごうの こうべてんが ひさい します。
+- id: ch7_shinsai
+  title: 稼ぎ頭の神戸店
+  background: so_shachoshitsu_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 会長……。神戸店が、被災しました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 神戸は、グループでいちばん稼ぐ店だぞ。
+  - speaker: shain
+    emotion: sad
+    text: 立て直すには、会長のお力が要ります。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……分かった。わたしが、先頭に立つ。
+  - speaker: reimu
+    text: 80歳を過ぎた水島に、再び権力が集まっていきます。
+    reading: はちじゅっさいお すぎた みずしまに、ふたたび けんりょくが あつまって いきます。
+- id: card1998
+  title: ''
+  background: so_card_1998
+  cuts:
+  - speaker: reimu
+    text: 1998年10月。準メインバンクの長銀が破綻し、国の管理下に入ります。
+    reading: せんきゅうひゃく きゅうじゅうはちねん じゅうがつ。じゅん めいんばんくの ちょうぎんが はたん し、くにの かんりかに はいります。
+- id: ch7_chogin
+  title: 長銀が倒れる
+  background: so_shachoshitsu_yoru
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: normal}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 会長！ [長銀|ちょうぎん]が、破綻しました！
+  - speaker: zundamon
+    emotion: surprised
+    text: '[長銀|ちょうぎん]が！？'
+    se: gaan
+  - speaker: zundamon
+    emotion: thinking
+    text: うちが、2番目に頼ってきた銀行だぞ……。
+  - speaker: shain
+    emotion: sad
+    text: 貸してくれる側が、先に倒れるなんて。
+  - speaker: reimu
+    text: 1999年4月、山田恭一が社長に就きます。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねん しがつ、やまだ きょういちが しゃちょうに つきます。
+  - speaker: reimu
+    text: 8月、グループの借入は1兆7270億円にのぼっていました。
+    reading: はちがつ、ぐるーぷの かりいれわ いっちょう ななせん にひゃく ななじゅうおくえんに のぼって いました。
+- id: card2000
+  title: ''
+  background: so_card_2000
+  cuts:
+  - speaker: reimu
+    text: 2000年3月。長銀はアメリカの投資会社のグループに売られ、6月に新生銀行となります。
+    reading: にせんねん さんがつ。ちょうぎんわ あめりかの とうし がいしゃの ぐるーぷに うられ、ろくがつに しんせい ぎんこうと なります。
+  - speaker: reimu
+    text: 売る契約には、瑕疵担保特約という約束が付いていました。
+    reading: うる けいやくにわ、かし たんぽ とくやくと いう やくそくが ついて いました。
+- id: ch8_kaigi
+  title: 借金1兆7000億円
+  background: so_ginkou_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: thinking}
+  - {who: ginko, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ginko
+    emotion: thinking
+    text: '[水島|みずしま]会長。2月末の借入は、1兆7144億円です。'
+  - speaker: ginko
+    emotion: thinking
+    text: 貸している金融機関は、155にのぼります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 155……。
+  - speaker: ginko
+    emotion: thinking
+    text: 大きな[漁礁|ぎょしょう]には、銀行も集まったわけです。
+  - speaker: ginko
+    emotion: sad
+    text: 借入は、売上の約1.6倍。利子を払うだけで、赤字です。
+    background: so_ginkou_kaigi_akaji
+  - speaker: ginko
+    emotion: sad
+    text: 地価が下がって、土地で赤字を消す手も使えません。
+  - speaker: ginko
+    emotion: sad
+    text: 監査法人の求めで、グループへの保証の分を本体の損に積みました。
+  - speaker: ginko
+    emotion: sad
+    text: そごう本体は、1230億円の[債務超過|さいむちょうか]です。
+  - speaker: zundamon
+    emotion: sad
+    text: ……本体には、響かないはずだったのだ。
+    se: shobon
+- id: ch8_kaiken
+  title: 6390億円のお願い
+  background: so_kaiken
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: yamada, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2000年4月6日。東京会館で、山田社長が会見を開きます。
+    reading: にせんねん しがつ むいか。とうきょう かいかんで、やまだ しゃちょうが かいけんお ひらきます。
+  - speaker: yamada
+    emotion: sad
+    text: 取引銀行の[73行|ななじゅうさんこう]に、6390億円の免除をお願いする予定でございます。
+    telops:
+    - {text: "債権放棄の要請 6390億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 6390億円……。
+  - speaker: yamada
+    emotion: sad
+    text: どうも、申し訳ございません。
+  - speaker: reimu
+    text: 並んだ役員が、頭を下げました。
+    reading: ならんだ やくいんが、あたまお さげました。
+  - speaker: kisha
+    emotion: normal
+    text: '[水島|みずしま]会長は、いつ退任されるんですか。'
+  - speaker: reimu
+    text: 経営陣は、退任の時期をはっきりとは答えませんでした。
+    reading: けいえいじんわ、たいにんの じきお はっきりとわ こたえませんでした。
+- id: ch8_kaibutsu
+  title: ''
+  background: so_kaiken
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: fukushacho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 会見のあと。副社長は会場を出ながら、ひとこと言い残しました。
+    reading: かいけんの あと。ふくしゃちょうわ かいじょうお でながら、ひとこと いいのこしました。
+  - speaker: fukushacho
+    emotion: thinking
+    text: ……[水島廣雄|みずしまひろお]は、怪物ですよ。
+    se: don
+  - speaker: kisha
+    emotion: surprised
+    text: 怪物……。
+- id: ch8_zasshi
+  title: 雑誌に載った言葉
+  background: so_gaikan_yoru
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: ginko, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 経済誌に、[水島|みずしま]会長の激白という記事が載りました。
+  - speaker: ginko
+    emotion: thinking
+    text: どんな中身だ。
+  - speaker: kisha
+    emotion: normal
+    text: 一体そごうの借金を多くしたのは誰だ、と。
+  - speaker: ginko
+    emotion: sad
+    text: ……貸した側には、耳の痛い話だな。
+    beat: true
+  - speaker: kisha
+    emotion: normal
+    text: 法人は死せず、とも。
+  - speaker: ginko
+    emotion: thinking
+    text: 会社は死なない、か。
+  - speaker: reimu
+    text: ただ西村頭取は国会で、本人は取材を否定していると述べています。
+    reading: ただ にしむら とうどりわ こっかいで、ほんにんわ しゅざいお ひてい して いると のべて います。
+- id: ch8_jinin
+  title: 株をすべて手放す
+  background: so_shachoshitsu_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: sad}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 4月。銀行は放棄の条件として、水島にすべての役職を退き、株をただで渡すよう求めます。
+    reading: しがつ。ぎんこうわ ほうきの じょうけんと して みずしまに すべての やくしょくお しりぞき、かぶお ただで わたすよう もとめます。
+  - speaker: zundamon
+    emotion: sad
+    text: 持っている株は、すべてそごうに渡す。
+  - speaker: shain
+    emotion: surprised
+    text: 全部、ですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 全部だ。代わりのお[金|かね]は、一円も受け取らない。
+  - speaker: shain
+    emotion: sad
+    text: ……あの[千葉|ちば]そごうの株も、ですか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……全部だ。
+  - speaker: reimu
+    text: 預金保険機構の理事長はのちに国会で、水島の株を全部出すことが条件だったと述べています。
+    reading: よきん ほけん きこうの りじちょうわ のちに こっかいで、みずしまの かぶお ぜんぶ だすことが じょうけんだったと のべて います。
+- id: ch9_kuni
+  title: 税金で救うのか
+  background: so_uriba
+  bgm: kinakusai
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: sad}
+  - {who: kyaku, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 6月28日。新生銀行は特約にもとづき、そごう向けの債権を国の預金保険機構に引き取るよう求めます。
+    reading: ろくがつ にじゅうはちにち。しんせい ぎんこうわ とくやくに もとづき、そごう むけの さいけんお くにの よきん ほけん きこうに ひきとるよう もとめます。
+  - speaker: reimu
+    text: 6月30日。金融再生委員会は、国がその債権を放棄することを認めます。
+    reading: ろくがつ さんじゅうにち。きんゆう さいせい いいんかいわ、くにが その さいけんお ほうき する ことお みとめます。
+  - speaker: kyaku
+    emotion: angry
+    text: 税金で、デパートの借金を棒引きにするのか？
+  - speaker: tenin
+    emotion: sad
+    text: いえ、あの……。
+  - speaker: kyaku
+    emotion: angry
+    text: 棒引きって、借金をなかったことにするんだろう？
+  - speaker: tenin
+    emotion: thinking
+    text: 国が引き取った分の債権を、放棄するそうで……。
+  - speaker: kyaku
+    emotion: angry
+    text: 私企業を税金で救うなんて、おかしいだろう。
+  - speaker: tenin
+    emotion: surprised
+    text: ……また電話。抗議の電話が、鳴りやまないんです。
+  - speaker: kyaku
+    emotion: angry
+    text: お中元は、よその店で買わせてもらうよ。
+    se: chin
+  - speaker: tenin
+    emotion: sad
+    text: 中元の、書き入れどきなのに……。
+  - speaker: reimu
+    text: 抗議の電話や不買の動きが広がり、中元商戦に響きました。
+    reading: こうぎの でんわや ふばいの うごきが ひろがり、ちゅうげん しょうせんに ひびきました。
+- id: ch9_josen
+  title: ''
+  background: so_gaikan_yoru
+  cuts:
+  - speaker: reimu
+    text: 西村頭取によると7月、自民党の亀井静香政調会長がそごうに持ちかけます。
+    reading: にしむら とうどりに よると しちがつ、じみんとうの かめい しずか せいちょう かいちょうが そごうに もちかけます。
+  - speaker: reimu
+    text: 国への放棄の要請を、取り下げてはどうかと。
+    reading: くにえの ほうきの ようせいお、とりさげてわ どうかと。
+  - speaker: reimu
+    text: 山田社長はすぐに、興銀へ相談に来ました。
+    reading: やまだ しゃちょうわ すぐに、こうぎんえ そうだんに きました。
+  - speaker: reimu
+    text: 森首相はのちに国会で、亀井氏に検討を頼み、その助言もあってそごうが自ら判断したと答えています。
+    reading: もり しゅしょうわ のちに こっかいで かめいしに けんとうお たのみ、その じょげんも あって そごうが みずから はんだん したと こたえて います。
+- id: ch9_saisei
+  title: 負債1兆8700億円
+  background: so_gaikan
+  bgm: serious
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: sad}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 7月12日。そごうは民事再生法の適用を申請し、債権放棄の要請を取り下げます。
+    reading: しちがつ じゅうににち。そごうわ みんじ さいせいほうの てきようお しんせい し、さいけん ほうきの ようせいお とりさげます。
+  - speaker: reimu
+    text: 負債は1兆8700億円。グループ26社が、法的な手続きに入りました。
+    reading: ふさいわ いっちょう はっせん ななひゃくおくえん。ぐるーぷ にじゅうろくしゃが、ほうてきな てつづきに はいりました。
+    telops:
+    - {text: "負債1兆8700億円・26社", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kyaku
+    emotion: surprised
+    text: そごうが潰れたって、本当かい！
+  - speaker: tenin
+    emotion: sad
+    text: お店は開けたまま、立て直すそうです。
+  - speaker: kyaku
+    emotion: surprised
+    text: うちにある商品券は、まだ使えるのかい！？
+    se: bikkuri
+  - speaker: tenin
+    emotion: thinking
+    text: わたしにも、まだ何も……。
+  - speaker: reimu
+    text: 取引先は約1万社、働く人は約5万人。出回っていた商品券は、約360億円でした。
+    reading: とりひきさきわ やく いちまんしゃ、はたらく ひとわ やく ごまんにん。でまわって いた しょうひんけんわ、やく さんびゃく ろくじゅうおくえんでした。
+  - speaker: reimu
+    text: 全国に店を持つ百貨店として、戦後初めての倒産でした。
+    reading: ぜんこくに みせお もつ ひゃっかてんと して、せんご はじめての とうさんでした。
+- id: ch10_kokkai
+  title: 銀行の限界
+  background: so_kokkai
+  bgm: serious
+  stage:
+  - {who: gichou, x: 0.28, flip: true, emotion: angry}
+  - {who: nishimura, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 7月から8月。国会に、興銀の西村正雄頭取が呼ばれます。
+    reading: しちがつから はちがつ。こっかいに、こうぎんの にしむら まさお とうどりが よばれます。
+  - speaker: gichou
+    emotion: angry
+    text: '[興銀|こうぎん]は、[水島|みずしま]さんを送り込んだ銀行ではないのですか。'
+  - speaker: nishimura
+    emotion: thinking
+    text: それは誤解です。[水島|みずしま]さんは、そごうの一族です。
+  - speaker: nishimura
+    emotion: normal
+    text: 一族に頼まれて、[興銀|こうぎん]を辞めて行かれたのです。
+  - speaker: nishimura
+    emotion: normal
+    text: '[水島|みずしま]さんは休日も、各店の食料品売り場まで足を運ばれました。'
+  - speaker: nishimura
+    emotion: normal
+    text: 従業員とも、十分に会話をされていたのです。
+  - speaker: gichou
+    emotion: angry
+    text: では、経営に注文はつけなかったのですか。
+  - speaker: nishimura
+    emotion: thinking
+    text: 近代的な経営にしていただくよう、求めてまいりました。
+  - speaker: nishimura
+    emotion: sad
+    text: しかし、最後まで耳に入れていただけませんでした。
+  - speaker: gichou
+    emotion: angry
+    text: 出店は、止めなかったのですか。
+  - speaker: nishimura
+    emotion: thinking
+    text: お断りしておりました。[立川|たちかわ]の店が、その一例です。
+  - speaker: nishimura
+    emotion: thinking
+    text: JR東日本の社長に、わたしと[水島|みずしま]会長のどちらを信じればいいのかと聞かれまして。
+  - speaker: nishimura
+    emotion: normal
+    text: わたしを信じてくれと申し上げ、店はできませんでした。
+  - speaker: gichou
+    emotion: thinking
+    text: グループ全体の借金は、つかんでいたのですか。
+  - speaker: nishimura
+    emotion: thinking
+    text: グループの店の3分の2とは、取引がありませんでした。
+  - speaker: gichou
+    emotion: surprised
+    text: 3分の2も、ですか。
+  - speaker: nishimura
+    emotion: sad
+    text: 全体は、つかめておりませんでした。
+  - speaker: gichou
+    emotion: angry
+    text: '[水島|みずしま]さんの株の整理は、なぜできなかったのですか。'
+  - speaker: nishimura
+    emotion: sad
+    text: それは、銀行の限界でございました。
+    telops:
+    - {text: "銀行の限界", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 7月の参考人質疑に、水島本人は出ていません。
+    reading: しちがつの さんこうにん しつぎに、みずしま ほんにんわ でて いません。
+- id: ch10_heiten
+  title: 有楽町の最後の日
+  background: so_uriba
+  bgm: 223am
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: sad}
+  - {who: kyaku, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 8月、そごうは西武百貨店の元会長、和田繁明を特別顧問に迎えます。
+    reading: はちがつ、そごうわ せいぶ ひゃっかてんの もと かいちょう わだ しげあきお とくべつ こもんに むかえます。
+  - speaker: reimu
+    text: 9月24日。有楽町店が、閉店の日を迎えます。
+    reading: くがつ にじゅうよっか。ゆうらくちょうてんが、へいてんの ひお むかえます。
+  - speaker: kyaku
+    emotion: sad
+    text: '[有楽町|ゆうらくちょう]のそごうも、今日で終わりか。'
+  - speaker: tenin
+    emotion: sad
+    text: 43年間、ありがとうございました。
+  - speaker: kyaku
+    emotion: thinking
+    text: '[有楽町|ゆうらくちょう]で[逢いましょう|あいましょう]、の店だったのにな。'
+  - speaker: tenin
+    emotion: sad
+    text: 棚も、もう[空っぽ|からっぽ]です。
+    background: so_uriba_kara
+  - speaker: kyaku
+    emotion: sad
+    text: ……もう、ここでは[逢えない|あえない]んだな。
+    se: namida
+  - speaker: reimu
+    text: そごうは年内に9店を閉め、3100人を減らす計画でした。
+    reading: そごうわ ねんないに きゅうてんお しめ、さんぜん ひゃくにんお へらす けいかくでした。
+- id: ch10_shutter
+  title: ''
+  background: so_gaikan
+  stage:
+  - {who: tenin, x: 0.5, emotion: sad}
+  cuts:
+  - speaker: tenin
+    emotion: sad
+    text: シャッター、下ろします。
+    background: so_gaikan_heiten
+  - speaker: tenin
+    emotion: sad
+    text: ……長いあいだ、お世話になりました。
+- id: ch11_houtei
+  title: 初めての法廷
+  background: so_saibansho
+  stage:
+  - {who: zundamon, x: 0.5, tag: 水島廣雄, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 9月から10月。新しい経営陣は、水島ら旧役員19人に約112億円の賠償を求めます。
+    reading: くがつから じゅうがつ。あたらしい けいえいじんわ、みずしまら きゅう やくいん じゅうきゅうにんに やく ひゃく じゅうにおくえんの ばいしょうお もとめます。
+  - speaker: reimu
+    text: 11月2日。88歳の水島が、東京地裁に初めて出廷します。
+    reading: じゅういちがつ ふつか。はちじゅうはっさいの みずしまが、とうきょう ちさいに はじめて しゅってい します。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[放漫|ほうまん]経営と言われますが、そうではありません。'
+  - speaker: zundamon
+    emotion: sad
+    text: 経営の責任は、自覚しております。
+- id: card2001
+  title: ''
+  background: so_card_2001
+  cuts:
+  - speaker: reimu
+    text: 2001年5月25日。水島は、強制執行妨害の疑いで逮捕されます。89歳でした。
+    reading: にせんいちねん ごがつ にじゅうごにち。みずしまわ、きょうせい しっこう ぼうがいの うたがいで たいほ されます。はちじゅうきゅうさいでした。
+- id: ch11_taiho
+  title: 89歳の逮捕
+  background: so_gaikan_yoru
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: ginko, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ginko
+    emotion: thinking
+    text: 89歳で、逮捕か……。
+  - speaker: kisha
+    emotion: normal
+    text: 去年の7月に、1億5000万円の資産を隠した疑いです。
+  - speaker: kisha
+    emotion: normal
+    text: '[興銀|こうぎん]の差し押さえを、逃れようとしたと。'
+  - speaker: ginko
+    emotion: surprised
+    text: 破綻した、その月にか。
+  - speaker: reimu
+    text: 水島は、興銀の融資約110億円の個人保証をしていました。
+    reading: みずしまわ、こうぎんの ゆうし やく ひゃくじゅうおくえんの こじん ほしょうお して いました。
+  - speaker: reimu
+    text: 6月7日に保釈され、保釈金は4000万円でした。2006年、有罪が確定します。
+    reading: ろくがつ なのかに ほしゃく され、ほしゃくきんわ よんせんまんえんでした。にせんろくねん、ゆうざいが かくてい します。
+- id: card2012
+  title: ''
+  background: so_card_2012
+  cuts:
+  - speaker: reimu
+    text: 2012年4月15日。水島は、100歳の誕生日を迎えます。
+    reading: にせん じゅうにねん しがつ じゅうごにち。みずしまわ、ひゃくさいの たんじょうびお むかえます。
+- id: ch12_hyakuju
+  title: 百歳の誕生日
+  background: so_enkaijo
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水島廣雄, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kyaku
+    emotion: happy
+    text: '[水島|みずしま]さん、100歳おめでとうございます！'
+  - speaker: kyaku
+    emotion: happy
+    text: お祝いの会に、250人ほど集まってますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうございます。
+  - speaker: zundamon
+    emotion: happy
+    text: 皆さんに生かされて百歳を迎えることができた。
+  - speaker: kyaku
+    emotion: normal
+    text: 100年って、どんな感じでしたか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 百歳は、あっという間でした。
+    beat: true
+  - speaker: reimu
+    text: 裁判の話には、一切触れませんでした。
+    reading: さいばんの はなしにわ、いっさい ふれませんでした。
+- id: ch12_shikyo
+  title: ''
+  background: so_gaikan_yoru
+  cuts:
+  - speaker: reimu
+    text: 2014年7月28日。水島廣雄は、心不全で亡くなりました。102歳でした。
+    reading: にせん じゅうよねん しちがつ にじゅうはちにち。みずしま ひろおわ、しんふぜんで なくなりました。ひゃくにさいでした。
+- id: ch13_ronso
+  title: 税金で救われたのか
+  background: so_heya_tv
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。そごうは、税金で救われたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 国が借金を棒引きにする話は、一度は了承されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[長銀|ちょうぎん]が売られたときの約束で、そごう向けの債権を国が引き取ってたから。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 国が、引き取る？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[瑕疵担保特約|かしたんぽとくやく]。条件によっては、買った債権を国に引き取ってもらえる約束よ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 返品できる福袋みたいなのだ！
+    se: hammer
+  - speaker: tsumugi
+    emotion: thinking
+    text: その債権は1999年に、国の委員会が健全と判定してたものなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 健全なのに、棒引き！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 国が引き取ったのは、額面で約2000億円。実際の価値は約1000億円と見られてた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法的整理にすると、国の損は200億円以上増える。
+  - speaker: tsumugi
+    emotion: normal
+    text: 金融再生委員会は、そう試算してたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、放棄したほうが国は得だったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 試算だけ見れば、そうね。でも、税金で私企業を救うのかという声のほうが強かった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 不買まで広がって、そごうは要請を取り下げたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 首相は国会で、政調会長の助言もあったと答えてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 救われる前に、自分で降りたのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 降りたけど、民事再生だと国の負担はかえって増えると見られてたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 降りたほうが、国の損は大きいのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。でも本当の問題は、別のところにあるの。
+- id: ch13_honto
+  title: 本当の問題
+  background: so_heya_tv
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: tsumugi
+    emotion: thinking
+    text: 借入は、売上のおよそ1.6倍。利子を払うだけで赤字になってた。
+    telops:
+    - {text: "借入は売上の約1.6倍", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 稼ぐより、利子のほうが重い……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 給料の大半が、ローンの利子で消えていく家みたいなものね。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも本社以外の店は[連結決算|れんけつけっさん]の外で、[興銀|こうぎん]は3分の2の店と取引がなかった。
+  - speaker: zundamon
+    emotion: surprised
+    text: 貸してる銀行にも、全体が見えてなかったのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: それに会長に退いたあとも、株を通じて[水島|みずしま]さんに力が集まってた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして、あのトランプのタワー。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 土地の値段が下がると、赤字を消す仕組みが働かなくなったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 店を増やした仕組みと、潰れた仕組みが……同じなのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 上がってるあいだは日本一の仕組み。下がったら、借金だけが残る仕組み。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこへ建築費の高騰に震災、[長銀|ちょうぎん]の破綻まで重なったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[水島|みずしま]さんは、やっぱり悪い人だったの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は、破綻の責任はあるが決して[放漫|ほうまん]経営ではなかったと言ってたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 言い分は、正反対なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[興銀|こうぎん]は、担保のない債権の99パーセントを放棄するつもりだったの。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 貸した側も、ほとんど返ってこないのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 誰が悪いかを決める前に、何が起きたかを見ておきたいわね。
+  - speaker: zundamon
+    emotion: normal
+    text: 人より先に、仕組みを見るのだ。
+- id: ch14_gendai
+  title: そごう・西武のその後
+  background: so_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 民事再生の手続きは、2003年の1月に終わったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その年の6月には、西武百貨店と経営を統合したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長は、[有楽町|ゆうらくちょう]店が閉まる前に招かれた[和田繁明|わだしげあき]さんよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 西武と、一緒になったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年には、[セブン&アイ|せぶんあんどあい]の子会社になったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2009年に合併して、そごう・西武という会社になったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前が、二つ並んだのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[有楽町|ゆうらくちょう]で[逢いましょう|あいましょう]の開店から、半世紀あまりね。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 店は減っても、名前は残ったのだ。
+- id: ch14_strike
+  title: ''
+  background: so_heya_tv
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2023年の8月31日には、西武[池袋|いけぶくろ]本店で労働組合がストライキをしたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 百貨店のストライキは、61年ぶりだったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 61年ぶり！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 働く人たちが、仕事を止めて声を上げたのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次の日、そごう・西武はアメリカのフォートレスに売られたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 売るときに[セブン&アイ|せぶんあんどあい]は、約916億円の債権を放棄したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: また、債権放棄なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 23年たって、また放棄で次の持ち主へ渡ったのね。
+- id: shime
+  title: ''
+  background: so_heya
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 紙袋を見せびらかす前に、中身もちゃんと見てね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 袋より、中身なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社も同じ。大きさより、中身が見えるかどうかよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 紙袋の値上がりを当てにして、靴下を借りて買い足すのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 値上がりを当てに、借りて増やす。……それ、そごうと同じよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きな[漁礁|ぎょしょう]ほど、魚は集まる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもその[漁礁|ぎょしょう]は、上がり続ける土地の値段の上に建ってたのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 海の底が下がったら、[漁礁|ぎょしょう]ごと沈むのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

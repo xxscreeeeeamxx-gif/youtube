@@ -3589,6 +3589,39 @@ def p_wafer(d, s):
                         fill=(250, 210, 80) if g else (110, 116, 134))
 
 
+def p_sobag(d, s):
+    """百貨店の赤い紙袋（そごう回）。社名・マークは描かない。"""
+    d.rectangle([s * 0.24, s * 0.36, s * 0.76, s * 0.92], fill=(196, 36, 56), outline=(120, 20, 30),
+                width=int(s * 0.014))
+    d.arc([s * 0.36, s * 0.18, s * 0.64, s * 0.5], 180, 360, fill=(80, 20, 30), width=int(s * 0.03))
+    d.rectangle([s * 0.32, s * 0.56, s * 0.68, s * 0.62], fill=(244, 234, 224))
+
+
+def p_sostore(d, s, lights=True):
+    """百貨店の建物。窓の列と垂れ幕（文字なし）。"""
+    d.rectangle([s * 0.1, s * 0.12, s * 0.9, s * 0.92], fill=(228, 222, 208), outline=(140, 136, 126),
+                width=int(s * 0.014))
+    for r in range(5):
+        for k in range(6):
+            x, y = s * (0.16 + k * 0.12), s * (0.18 + r * 0.11)
+            d.rectangle([x, y, x + s * 0.07, y + s * 0.07], fill=(250, 230, 150) if lights else (140, 150, 160))
+    if lights:
+        for k, c in enumerate(((200, 40, 50), (40, 90, 170))):
+            x = s * (0.2 + k * 0.48)
+            d.rectangle([x, s * 0.16, x + s * 0.1, s * 0.6], fill=c)
+    d.rectangle([s * 0.4, s * 0.74, s * 0.6, s * 0.92], fill=(60, 60, 70))
+
+
+def p_soshutter(d, s):
+    """閉じたシャッターと貼り紙。"""
+    p_sostore(d, s, lights=False)
+    d.rectangle([s * 0.26, s * 0.58, s * 0.74, s * 0.92], fill=(156, 158, 162))
+    for k in range(8):
+        y = s * (0.6 + k * 0.04)
+        d.line([(s * 0.26, y), (s * 0.74, y)], fill=(118, 120, 124), width=int(s * 0.008))
+    d.rectangle([s * 0.42, s * 0.66, s * 0.58, s * 0.8], fill=(250, 250, 246), outline=(150, 150, 150))
+
+
 NAVY, RED, GOLD = (26, 38, 84), (178, 30, 36), (224, 168, 26)
 TEAL, PURPLE, BROWN = (16, 86, 92), (74, 32, 110), (140, 72, 26)
 GREEN, MAGENTA, SLATE = (22, 96, 64), (150, 26, 88), (48, 54, 68)
@@ -4029,6 +4062,11 @@ SPECS = {
         head_hi="203万台", panels=[
         _p("p_dcwhite", "1998年", NAVY, "surprised", "売り切れ！？", "発売日に品切れ"),
         _p("p_dcboxes", "2001年", SLATE, "sad", "打ち切ります", "在庫203万台"),
+    ]),
+    "sogo-mizushima": dict(layout="panels", headline="日本一から転落",
+        head_hi="転落", panels=[
+        _p("p_sostore", "1991年", NAVY, "happy", "3店からここまで", "売上日本一"),
+        _p("p_soshutter", "2000年", SLATE, "sad", "倒れた…", "民事再生へ"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

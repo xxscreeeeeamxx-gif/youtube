@@ -1996,5 +1996,108 @@
     "text": "台帳 Y1・E1"
    }
   ]
+ },
+ {
+  "slug": "sogo-mizushima",
+  "video_id": "vJYY-ybdqLc",
+  "title_a": "【そごうの破綻】3店から売上日本一。負債1兆8700億円で倒れた百貨店【ずんだもん解説】",
+  "title_b": "そごうは「大きな漁礁ほど魚は集まる」で日本一に。8年後、負債1兆8700億円【ずんだもん解説】",
+  "title_c": "売上日本一の百貨店そごうは、なぜ8年で負債1兆8700億円になったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "日本一の百貨店が倒れた",
+   "head_hi": "倒れた",
+   "panels": [
+    {
+     "prop": "p_sostore",
+     "bg": "yellow",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "魚は集まる",
+     "by": "",
+     "shout": false,
+     "label": "売上日本一"
+    },
+    {
+     "prop": "p_soshutter",
+     "bg": "blue",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "税金で救うのか",
+     "by": "客",
+     "shout": true,
+     "label": "民事再生へ"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "conflict",
+   "headline": "日本一がなぜ潰れた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "prop": "p_sobag",
+     "bg": "dark",
+     "emo": "thinking",
+     "fx": "sweat",
+     "say": "3店で十分では",
+     "by": "社員",
+     "shout": false,
+     "label": "3店からの出発"
+    },
+    {
+     "prop": "p_sostore",
+     "bg": "red",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "耳に入れず…",
+     "by": "頭取",
+     "shout": false,
+     "label": "155の金融機関"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "漁礁理論",
+    "scene": "co_/ch8",
+    "text": "大きな漁礁ほど、魚は集まるでしょう。"
+   },
+   {
+    "claim": "8年後に負債1兆8700億円",
+    "scene": "co_",
+    "text": "この男は、水島廣雄。8年後、そごうは負債1兆8700億円で倒れます。"
+   },
+   {
+    "claim": "売上日本一",
+    "scene": "1991",
+    "text": "1991年度。グループの売上は約1兆4000億円になり、百貨店で日本一になります。"
+   },
+   {
+    "claim": "3店から",
+    "scene": "1991",
+    "text": "日本一……。3店から、ここまで来たのだ。"
+   },
+   {
+    "claim": "税金で救うのか（客）",
+    "scene": "2000",
+    "text": "私企業を税金で救うなんて、おかしいだろう。"
+   },
+   {
+    "claim": "3店で十分（社員）",
+    "scene": "1962",
+    "text": "3店もあれば、十分じゃないですか。"
+   },
+   {
+    "claim": "耳に入れていただけなかった（西村頭取）",
+    "scene": "kokkai",
+    "text": "しかし、最後まで耳に入れていただけませんでした。"
+   },
+   {
+    "claim": "155の金融機関",
+    "scene": "2000",
+    "text": "貸している金融機関は、155にのぼります。"
+   }
+  ]
  }
 ]

@@ -115,8 +115,16 @@ def cmd_pull() -> None:
 
 
 def _rows(kind: str):
-    for f in sorted((REPORT_DIR / kind).glob("*.csv")):
-        with f.open(encoding="utf-8") as fh:
+    """同じ日のレポートは、新しい版（id の大きい方）だけを使う。
+    YouTube は数字を後から直すと同じ日のレポートを出し直す（2026-10-16 に 10/02〜10/08 で2本ずつあった）。
+    両方を足すと二重に数える。"""
+    latest = {}
+    for f in (REPORT_DIR / kind).glob("*.csv"):
+        day, rid = f.stem.split("_", 1)
+        if day not in latest or int(rid) > int(latest[day].stem.split("_", 1)[1]):
+            latest[day] = f
+    for day in sorted(latest):
+        with latest[day].open(encoding="utf-8") as fh:
             yield from csv.DictReader(fh)
 
 
@@ -176,6 +184,19 @@ def _retention30(ya, vid: str, pub: str, dur: int):
     return 100 * best[1] / base
 
 
+def _avd(ya, vid: str, pub: date) -> str:
+    """初週の平均視聴時間。Reporting API の watch_time_minutes は Studio と大きくずれた
+    （オセロ回: Studio 5:01 に対し 0:43）ので、Studio と同じ値が出る Analytics API で取る。"""
+    from yt_analytics import query
+    end = min(pub + timedelta(days=7), date.today())
+    try:
+        r = query(ya, pub.isoformat(), end.isoformat(), "views,averageViewDuration", filters=f"video=={vid}")
+    except Exception:
+        return ""
+    rows = r.get("rows") or []
+    return _mmss(rows[0][1]) if rows and rows[0][0] else ""
+
+
 def _mmss(sec: float) -> str:
     sec = int(round(sec))
     return f"{sec // 60}:{sec % 60:02d}"
@@ -226,7 +247,7 @@ def cmd_report() -> None:
         r30 = _retention30(ya, v["id"], v["pub_jst"].isoformat(), v["dur"])
         ctr1 = f"{100 * i1[1] / i1[0]:.1f}%" if i1[0] else ""
         ctr7 = f"{100 * i7[1] / i7[0]:.1f}%" if i7[0] else ""
-        avd = _mmss(60 * b7[1] / b7[0]) if b7[0] else ""
+        avd = _avd(ya, v["id"], v["pub_jst"])
         lines.append(f"| {v['pub_jst']:%m/%d} | {name} | {kind} | {age}日 | {i1[0] or ''} | {ctr1} | "
                      f"{i7[0] or ''} | {ctr7} | {b7[0] or ''} | {avd} | "
                      f"{f'{r30:.0f}%' if r30 is not None else ''} | {e7[1] if e7[0] else ''} | {b7[2] or ''} |")
