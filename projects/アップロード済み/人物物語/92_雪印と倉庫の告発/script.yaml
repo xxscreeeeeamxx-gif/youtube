@@ -1,0 +1,1597 @@
+meta:
+  title: 雪印食品の牛肉偽装を告発した倉庫は、荷物の9割を失った【ずんだもん解説】
+  slug: snowbrand-mizutani
+  summary: 2002年1月、兵庫県西宮市の冷蔵倉庫で、社長が新聞記者の前で箱を開けました。国産と書かれた箱の中身は、輸入の牛肉。取引先だった雪印食品の偽装を、倉庫の社長・水谷洋一が告発したのです。その1年半前には、親会社の雪印乳業が集団食中毒を起こしていました。情報が上に上がらない大きな組織と、取引先の小さな倉庫。告発のあと、倉庫に何が起きたのか。国と本人の言い分を並べて、再現ドラマでたどります。
+  tags:
+  - 雪印
+  - 西宮冷蔵
+  - 水谷洋一
+  - 雪印食品
+  - 雪印乳業
+  - 牛肉偽装
+  - 集団食中毒
+  - 告発
+  - 公益通報者保護法
+  - BSE
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 偽装を告発した倉庫は
+    bottom: 荷物の9割を失った
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kacho
+    label: 製造課長
+    voice: 12
+    pitch: 0.0
+    outfit: work
+  - id: torishimari
+    label: 取締役
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#2f3a52'
+  - id: kojocho
+    label: 工場長
+    voice: 13
+    pitch: -0.02
+    outfit: work
+  - id: hokenjo
+    label: 保健所
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shacho
+    label: 社長
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3a42'
+  - id: center
+    label: センター長
+    voice: 13
+    pitch: 0.04
+    outfit: work
+  - id: yshain
+    label: センター員
+    voice: 11
+    pitch: 0.04
+    outfit: work
+    color: '#5a6e62'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: ninushi
+    label: 荷主
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#4a3a2f'
+  - id: daijin
+    label: 国交相
+    voice: 8
+    pitch: -0.06
+    outfit: suit
+    color: '#5a3a4a'
+  - id: giin
+    label: 議員
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#2a3a4a'
+  - id: tsukonin
+    label: 通行人
+    voice: 100
+    pitch: 0.0
+  - id: ouen
+    label: 応援の社員
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#7a8a96'
+  - id: buchou
+    label: 部長
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#3a4a3a'
+  - id: leader
+    label: リーダー
+    voice: 13
+    pitch: 0.04
+    outfit: work
+  - id: hatsuni
+    label: 初荷の荷主
+    voice: 12
+    pitch: 0.03
+    outfit: suit
+    color: '#2f4a5a'
+  - id: hinsho
+    label: 品質担当
+    voice: 11
+    pitch: -0.03
+    outfit: suit
+    color: '#4a4a5a'
+scenes:
+# ---- 先出し（2002年1月23日の冷凍倉庫） ----
+- id: co_kaiken
+  title: ''
+  background: sb_soko
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2002年1月。兵庫県西宮市の冷蔵倉庫に、新聞記者たちが集められます。
+    reading: にせんにねん いちがつ。ひょうごけん にしのみやしの れいぞう そうこに、しんぶん きしゃたちが あつめられます。
+  - speaker: zundamon
+    emotion: normal
+    text: この箱を、見てください。国産牛肉用の箱です。
+  - speaker: kisha
+    emotion: normal
+    text: 国産、と書いてありますね。
+  - speaker: zundamon
+    emotion: normal
+    text: 私どもの知るところ、これはオーストラリアの牛肉でございます。
+    beat: true
+  - speaker: kisha
+    emotion: surprised
+    text: 中身が、違う……。
+  - speaker: reimu
+    text: 告発したこの倉庫の社長は、このあと、荷物の9割を失います。なぜでしょうか。
+    reading: こくはつした この そうこの しゃちょうわ このあと、にもつの きゅうわりお うしないます。なぜ でしょうか。
+# ---- 茶番（今の部屋） ----
+- id: hook
+  title: ''
+  background: sb_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 冷蔵庫の奥のずんだ餅、期限が先週なのだ……。
+  - speaker: zundamon
+    emotion: normal
+    text: ……そっと戻しとこ。
+  - speaker: tsumugi
+    emotion: angry
+    text: 今、黙って戻したよね。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 見たのに黙る人と、言う人。言った人がどうなったか、知ってる？
+  - speaker: zundamon
+    emotion: happy
+    text: 褒められる！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 牛肉の偽装を新聞に話した倉庫は、国から営業停止を受けたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 話したのに、止められたのだ！？
+# ---- 1995年 震災と雪印食品 ----
+- id: card1995
+  title: ''
+  background: sb_card_1995
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1995年1月17日、阪神・淡路大震災。西宮市の[西宮浜|にしのみやはま]にある、1937年創業の冷蔵倉庫です。
+    reading: せんきゅうひゃく きゅうじゅうごねん いちがつ じゅうしちにち、はんしん あわじ だいしんさい。にしのみやしの にしのみやはまに ある せんきゅうひゃく さんじゅうななねん そうぎょうの れいぞう そうこです。
+  - speaker: reimu
+    text: 西宮冷蔵。社長は3代目の、[水谷洋一|みずたによういち]です。
+    reading: にしのみや れいぞう。しゃちょうわ さんだいめの みずたに よういちです。
+- id: ch1_sanran
+  title: 震災のあとの倉庫
+  background: sb_soko_sanran
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 水谷洋一, emotion: surprised}
+  - {who: ouen, x: 0.52, emotion: happy}
+  - {who: leader, x: 0.80, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 荷物が、全部崩れとる……。
+  - speaker: zundamon
+    emotion: thinking
+    text: どれが誰の荷物か、もう分からへん。
+  - speaker: ouen
+    emotion: happy
+    text: '[西宮冷蔵|にしのみやれいぞう]さん！ 雪印食品です！'
+  - speaker: zundamon
+    emotion: surprised
+    text: 雪印さん！？
+  - speaker: ouen
+    emotion: happy
+    text: 東京の本社から、応援に来ました！
+  - speaker: zundamon
+    emotion: surprised
+    text: 東京から！？ 遠いとこ、すんません。
+  - speaker: ouen
+    emotion: normal
+    text: うちの荷物も、この中ですから。
+  - speaker: leader
+    emotion: normal
+    text: '[水谷|みずたに]社長。片付けは、私らに任せてください。'
+  - speaker: reimu
+    text: 水谷の話では、応援部隊を率いたのは、のちの関西ミートセンター長です。
+    reading: みずたにの はなしでわ おうえん ぶたいお ひきいたのわ、のちの かんさい みーと せんたーちょうです。
+  - speaker: zundamon
+    emotion: happy
+    text: ほんまに、おおきに。
+  - speaker: ouen
+    emotion: sad
+    text: 5000トン入る倉庫が、こんなことに……。
+  - speaker: zundamon
+    emotion: sad
+    text: 92年に、建てたばっかりやのに。
+  - speaker: leader
+    emotion: normal
+    text: 箱の印で、荷主ごとに分けましょう。
+  - speaker: zundamon
+    emotion: happy
+    text: 助かります。ほな、こっちの山から。
+  - speaker: ouen
+    emotion: happy
+    text: よいしょ。積み直しました！
+  - speaker: zundamon
+    emotion: surprised
+    text: 高い高い！ そんなに積んだら、また崩れる！
+  - speaker: ouen
+    emotion: surprised
+    text: ……崩れました。
+    se: zukko
+  - speaker: leader
+    emotion: thinking
+    text: 低う積むんが、基本や。
+  - speaker: ouen
+    emotion: sad
+    text: ……はい。
+  - speaker: zundamon
+    emotion: normal
+    text: 冷凍の部屋は寒いんで、上着を着てってください。
+  - speaker: ouen
+    emotion: surprised
+    text: さ、さむっ！ 箱が、手にくっつく！
+  - speaker: zundamon
+    emotion: normal
+    text: 手袋も、どうぞ。
+  - speaker: ouen
+    emotion: sad
+    text: 雪印なのに、寒さに弱いんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前負けや。
+    beat: true
+# ---- 第1部 2000年 雪印乳業の集団食中毒 ----
+- id: card2000
+  title: ''
+  background: sb_card_2000
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2000年3月31日。雪印食品の親会社、雪印乳業の北海道の[大樹|たいき]工場です。
+    reading: にせんねん さんがつ さんじゅういちにち。ゆきじるし しょくひんの おやがいしゃ、ゆきじるし にゅうぎょうの ほっかいどうの たいき こうじょうです。
+- id: p1_teiden
+  title: 大樹工場の停電
+  background: sb_kojo
+  stage:
+  - {who: kacho, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: kacho
+    emotion: normal
+    text: 温めた生乳を、分離機にかけます。
+  - speaker: kacho
+    emotion: surprised
+    text: 停電だ！ 午前10時57分！
+    background: sb_kojo_teiden
+  - speaker: kacho
+    emotion: surprised
+    text: 氷の塊が落ちて、電気室の屋根に穴が！
+  - speaker: kacho
+    emotion: thinking
+    text: 工場が、全部止まった……。
+  - speaker: kacho
+    emotion: thinking
+    text: 温めた生乳が、機械とタンクの中で止まったままだ。
+  - speaker: kacho
+    emotion: normal
+    text: ……やっと戻った。3時間か。
+  - speaker: reimu
+    text: タンクの乳の一部は約40℃のまま、9時間以上冷やされずに置かれました。
+    reading: たんくの にゅうの いちぶわ やく よんじゅうどの まま、くじかん いじょう ひやされずに おかれました。
+  - speaker: kacho
+    emotion: normal
+    text: 北海道支社ですか。[大樹|たいき]工場で、停電がありました。
+  - speaker: kacho
+    emotion: thinking
+    text: ……はい。指示は、特に無しですね。
+  - speaker: reimu
+    text: 課長は当日、支社に電話で報告しました。ただ具体的な指示はなく、話は引き継がれませんでした。
+    reading: かちょうわ とうじつ ししゃに でんわで ほうこく しました。ただ ぐたいてきな しじわ なく、はなしわ ひきつがれませんでした。
+- id: p1_daijobu
+  title: 殺菌すれば大丈夫
+  background: sb_kojo
+  cuts:
+  - speaker: reimu
+    text: 停電の翌日の脱脂粉乳は、細菌が国の基準を超えていました。4月10日、うち449袋が粉に作り直されます。
+    reading: ていでんの よくじつの だっし ふんにゅうわ、さいきんが くにの きじゅんお こえて いました。しがつ とおか、うち よんひゃく よんじゅうきゅう ふくろが こなに つくりなおされます。
+  - speaker: reimu
+    text: 北海道の発表では、工場は殺菌すれば大丈夫と考えていました。停電の手順書も、ありませんでした。
+    reading: ほっかいどうの はっぴょうでわ、こうじょうわ さっきん すれば だいじょうぶと かんがえて いました。ていでんの てじゅんしょも ありませんでした。
+- id: p1_kaisetsu
+  title: 菌は死んでも毒は残る
+  background: sb_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 殺菌したなら、大丈夫じゃないの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 菌は、熱で死ぬの。でも菌が出した毒素は、熱では消えないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 死んだのに、毒だけ残る！？
+  - speaker: tsumugi
+    emotion: normal
+    text: ペンで、ノートに字を書いたとするね。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのペンを壊しても、書いた字は消えないでしょ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 菌がペンで、毒素が字……。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。粉を溶かして熱をかけ直しても、字は残ったままなの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 当時の現場は、菌がなければ毒素はないと考えていたって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 雪印の幹部が、あとでそう話してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 菌を調べて、いなければ安心……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 誰か一人の悪意じゃなくて、現場の思い込みだったのね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 毒素がどこでできたかは、最終報告でも決まってないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 停電の日の生乳が、粉になって……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その粉が、6月20日に大阪工場へ届くの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 大阪で、何に使われたの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[低脂肪乳|ていしぼうにゅう]などの原料よ。'
+- id: p1_todokede
+  title: 6月27日の届け出
+  background: sb_yakusho
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 6月27日の午前。低脂肪乳を飲んで嘔吐や下痢などの食中毒の症状が出ている、と大阪市に届け出が入ります。
+    reading: ろくがつ にじゅうしちにちの ごぜん。ていしぼうにゅうお のんで おうとや げりなどの しょくちゅうどくの しょうじょうが でて いると、おおさかしに とどけでが はいります。
+- id: p1_sapporo
+  title: 札幌の株主総会の日
+  background: sb_kaigi
+  stage:
+  - {who: torishimari, x: 0.28, flip: true, emotion: normal}
+  - {who: kojocho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月28日。役員の多くは、株主総会で札幌にいました。雪印の社内報告には、こんな電話が残っています。
+    reading: ろくがつ にじゅうはちにち。やくいんの おおくわ、かぶぬし そうかいで さっぽろに いました。ゆきじるしの しゃない ほうこくにわ、こんな でんわが のこって います。
+  - speaker: torishimari
+    emotion: normal
+    text: 大阪工場長か。[低脂肪乳|ていしぼうにゅう]の苦情の件は、どうなってる。
+  - speaker: kojocho
+    emotion: normal
+    text: お客様からの苦情は入っていない。製品検査は全てＯＫである。
+  - speaker: kojocho
+    emotion: normal
+    text: 微生物検査に異常は見られない。
+  - speaker: reimu
+    text: 工場長はこのとき別の会議中で、保健所の立ち入りしか知りませんでした。
+    reading: こうじょうちょうわ このとき べつの かいぎちゅうで、ほけんじょの たちいりしか しりませんでした。
+  - speaker: torishimari
+    emotion: normal
+    text: ……そうか。
+  - speaker: torishimari
+    emotion: thinking
+    text: 夕方の時点で、苦情は7件か。
+  - speaker: torishimari
+    emotion: thinking
+    text: 1日に約7万本を作る中の、7件……。
+  - speaker: torishimari
+    emotion: thinking
+    text: 期限も場所も、ばらばら。出荷の検査も、異常なし。
+  - speaker: reimu
+    text: 役員たちは、製造の工程が原因とは判断しません。社長の[石川哲郎|いしかわてつろう]は、この日、何も知らされていませんでした。
+    reading: やくいんたちわ、せいぞうの こうていが げんいんとわ はんだん しません。しゃちょうの いしかわ てつろうわ このひ、なにも しらされて いませんでした。
+- id: p1_shinya
+  title: 深夜の協議
+  background: sb_yakusho
+  stage:
+  - {who: hokenjo, x: 0.28, flip: true, emotion: normal}
+  - {who: kojocho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じ日の夜10時45分。大阪市の保健所で、工場長との協議が始まります。
+    reading: おなじ ひの よる じゅうじ よんじゅうごふん。おおさかしの ほけんじょで、こうじょうちょうとの きょうぎが はじまります。
+  - speaker: hokenjo
+    emotion: normal
+    text: 製品の自主回収と、新聞の[社告|しゃこく]。両方をお願いします。
+  - speaker: kojocho
+    emotion: thinking
+    text: 自主回収については了解するが、[社告|しゃこく]掲載については社内で検討させてほしい。
+  - speaker: hokenjo
+    emotion: surprised
+    text: 社内で、検討……。
+  - speaker: hokenjo
+    emotion: thinking
+    text: ……もう、夜中の1時を回りましたよ。
+  - speaker: reimu
+    text: 専務は勧告ならやむを得ないとしつつ、原因不明のうちのお詫び広告には納得できませんでした。
+    reading: せんむわ かんこくなら やむお えないと しつつ、げんいん ふめいの うちの おわび こうこくにわ なっとく できませんでした。
+- id: p1_kuko
+  title: 千歳空港で知る社長
+  background: sb_kuko
+  stage:
+  - {who: shacho, x: 0.28, flip: true, emotion: normal}
+  - {who: hinsho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 6月29日の午前10時半ごろ。帰京のため千歳空港にいた社長に、初めて報告が届きます。
+    reading: ろくがつ にじゅうくにちの ごぜん じゅうじはん ごろ。ききょうの ため ちとせ くうこうに いた しゃちょうに、はじめて ほうこくが とどきます。
+  - speaker: hinsho
+    emotion: thinking
+    text: 社長。大阪工場の[低脂肪乳|ていしぼうにゅう]で、食中毒の疑いが出ています。
+  - speaker: hinsho
+    emotion: thinking
+    text: 保健所から、回収と[社告|しゃこく]を求められました。
+  - speaker: reimu
+    text: 会社が知ってから、約1日後のことでした。社長はのちに、会見でこう話しています。
+    reading: かいしゃが しってから やく いちにちごの ことでした。しゃちょうわ のちに、かいけんで こう はなして います。
+  - speaker: shacho
+    emotion: thinking
+    text: 私が知っていれば、素早く対応できたかも。
+- id: p1_kimi
+  title: 会見で初めて知った事実
+  background: sb_kaiken
+  stage:
+  - {who: shacho, x: 0.28, flip: true, emotion: normal}
+  - {who: kojocho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月1日。雪印の記者会見で、質疑の途中に大阪工場長が話し始めます。
+    reading: しちがつ ついたち。ゆきじるしの きしゃ かいけんで、しつぎの とちゅうに おおさか こうじょうちょうが はなしはじめます。
+  - speaker: kojocho
+    emotion: normal
+    text: 29日のバルブに[乳固形物|にゅうこけいぶつ]が見つかり、大きさは[十円玉|じゅうえんだま]ぐらい。
+  - speaker: kojocho
+    emotion: normal
+    text: 3週間も、洗浄していなかった。
+  - speaker: shacho
+    emotion: surprised
+    text: '[君|きみ]、それ本当か。'
+    beat: true
+  - speaker: reimu
+    text: 重大な事実が、会見の席で初めて社長の耳に入りました。報道陣からも、気の毒という声が出ます。
+    reading: じゅうだいな じじつが かいけんの せきで はじめて しゃちょうの みみに はいりました。ほうどうじんからも、きのどくと いう こえが でます。
+  - speaker: reimu
+    text: 厚生省の記録には、記者会見時に、社内不一致が判明、とあります。
+    reading: こうせいしょうの きろくにわ、きしゃ かいけんじに しゃない ふいっちが はんめい と あります。
+    telops:
+    - {text: "厚生省の記録　会見で社内の不一致が判明", size: sm, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: p1_owabi
+  title: ''
+  background: sb_kaiken
+  stage:
+  - {who: shacho, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 7月4日の夜。大阪工場の全製品の回収を発表する会見です。
+    reading: しちがつ よっかの よる。おおさか こうじょうの ぜんせいひんの かいしゅうお はっぴょう する かいけんです。
+  - speaker: shacho
+    emotion: thinking
+    text: ご迷惑をかけ、改めておわび申し上げます。
+- id: p1_elevator
+  title: ''
+  background: sb_kaiken_mae
+  stage:
+  - {who: shacho, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 社長は会見を途中で終え、エレベーターに向かいます。会見の再開を求める報道陣と、もみ合いになりました。
+    reading: しゃちょうわ かいけんお とちゅうで おえ、えれべーたーに むかいます。かいけんの さいかいお もとめる ほうどうじんと もみあいに なりました。
+  - speaker: shacho
+    emotion: thinking
+    text: 私は寝ていないんだ。
+  - speaker: kisha
+    emotion: angry
+    text: 病院で苦しんで寝ている子供たちのことを、考えたことがないのか。
+  - speaker: reimu
+    text: 社長は、しぶしぶ会見の再開に応じました。会見の席ではなく、エレベーターの前での言葉でした。
+    reading: しゃちょうわ しぶしぶ かいけんの さいかいに おうじました。かいけんの せきでわ なく、えれべーたーの まえでの ことばでした。
+- id: p1_jinin
+  title: 辞任と、止まった工場
+  background: sb_kaigi
+  bgm: 223am
+  stage:
+  - {who: shacho, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 7月6日。雪印は、社長の辞任を発表します。
+    reading: しちがつ むいか。ゆきじるしわ、しゃちょうの じにんお はっぴょう します。
+  - speaker: shacho
+    emotion: thinking
+    text: 混乱の責任をとって、本日辞任を決意致しました。
+- id: p1_tana
+  title: ''
+  background: sb_kouri
+  cuts:
+  - speaker: reimu
+    text: 7月11日。大阪工場のほかの、直営の20工場も操業を自粛します。
+    reading: しちがつ じゅういちにち。おおさか こうじょうの ほかの ちょくえいの にじゅっこうじょうも、そうぎょうお じしゅく します。
+  - speaker: reimu
+    text: 売り場から、雪印の商品が消えていきます。
+    reading: うりばから、ゆきじるしの しょうひんが きえて いきます。
+    background: sb_kouri_kara
+  - speaker: reimu
+    text: 後任の社長は国会で、危機管理のマニュアルは誰が決めるのかが不透明だったと述べました。
+    reading: こうにんの しゃちょうわ こっかいで、ききかんりの まにゅあるわ だれが きめるのかが ふとうめいだったと のべました。
+- id: p1_genin
+  title: 本当の原因
+  background: sb_kojo
+  cuts:
+  - speaker: reimu
+    text: 8月、大樹工場の脱脂粉乳から毒素が見つかります。原因はバルブではなく、停電の日の乳で作った粉でした。
+    reading: はちがつ たいき こうじょうの だっし ふんにゅうから どくそが みつかります。げんいんわ ばるぶでわ なく、ていでんの ひの にゅうで つくった こなでした。
+  - speaker: reimu
+    text: 12月の最終報告は、公表の遅れで被害者が増えたことも指摘しました。
+    reading: じゅうにがつの さいしゅう ほうこくわ、こうひょうの おくれで ひがいしゃが ふえた ことも してき しました。
+  - speaker: reimu
+    text: 届け出た人は約1万4800人。そのうち約1万3400人は、飲んだ製品との関係が認められました。
+    reading: とどけでた ひとわ やく いちまん よんせん はっぴゃくにん。その うち やく いちまん さんぜん よんひゃくにんわ、のんだ せいひんとの かんけいが みとめられました。
+    telops:
+    - {text: "最終報告　関係が認められた人 約1万3400人", size: sm, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: p1_keishi
+  title: 品質管理を軽視した
+  background: sb_kaiken
+  cuts:
+  - speaker: reimu
+    text: 12月22日。社内調査の発表の最後に、雪印の幹部が声を震わせて述べました。
+    reading: じゅうにがつ にじゅうににち。しゃない ちょうさの はっぴょうの さいごに、ゆきじるしの かんぶが こえお ふるわせて のべました。
+  - speaker: reimu
+    text: 効率性追求のため、品質管理を軽視した。いつしか、企業体質が変容してしまった。
+    reading: こうりつせい ついきゅうの ため ひんしつ かんりお けいし した。いつしか きぎょう たいしつが へんよう して しまった。
+    telops:
+    - {text: "雪印の幹部　品質管理を軽視した", size: sm, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 第2部 2001年 BSEと買い取り ----
+- id: card2001
+  title: ''
+  background: sb_card_2001
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2001年9月。千葉県の牛に、BSEの疑いがあると発表されます。
+    reading: にせんいちねん くがつ。ちばけんの うしに、びーえすいーの うたがいが あると はっぴょう されます。
+- id: p2_kaisetsu
+  title: 国が牛肉を買い取る
+  background: sb_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: '[BSE|びーえすいー]は、牛の病気。10月18日から、肉にする牛を全部検査することになったの。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 全部の牛を！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 困ったのは、検査が始まる前に肉にした国産の牛肉なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 検査してない肉ってこと？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。国の対策で、業界の団体が買い取って冷凍で保管することになったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 買い取り！？ ボクも牛肉を売りに行くのだ！
+  - speaker: tsumugi
+    emotion: angry
+    text: 持ってないでしょ。国産の肉を在庫で持ってる業者だけよ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 買い上げの値段は、1キロ1114円。
+  - speaker: zundamon
+    emotion: thinking
+    text: 雪印食品も、在庫を持ってたの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 持ってたわ。雪印食品は、売上約920億円で従業員約2100人の会社よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[西宮冷蔵|にしのみやれいぞう]は、年商約2億円。雪印食品は、大口の取引先だったの。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 象と、アリなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 雪印食品の荷物は、その売上の約1割を占めてたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1割は、大きいお客さんだね。
+- id: p2_kaisetsu2
+  title: ''
+  background: sb_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも国産かどうかは、どうやって確かめるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 隔離した肉は、全部で約92万箱。
+  - speaker: zundamon
+    emotion: surprised
+    text: 92万箱！？ 開けてたら、年が明けるのだ！
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: thinking
+    text: 雪印食品の部長たちも、全部の検査は事実上不可能と考えたって判決にあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 買い取りの条件は、倉庫業者の[在庫証明|ざいこしょうめい]でよいとされたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[在庫証明|ざいこしょうめい]って？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 倉庫が、この荷物をなんキロ預かっていますって書く証明書よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 倉庫の書類が、通行手形なのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう。だから倉庫の証明は、商売の信用のもとなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 箱の中身が、国産じゃなかったら？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 全部の箱を開けない限り、見抜くのは難しいわね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 書類だけで、通っちゃう……。
+- id: p2_torishimarikai
+  title: 噂が出た取締役会
+  background: sb_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: buchou, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 判決によると、10月26日の午前、雪印食品の常勤の取締役会で、買い取り事業の説明がありました。
+    reading: はんけつに よると じゅうがつ にじゅうろくにちの ごぜん、ゆきじるし しょくひんの じょうきんの とりしまりやくかいで かいとり じぎょうの せつめいが ありました。
+  - speaker: buchou
+    emotion: normal
+    text: 買い取りの事業の概要は、以上です。
+  - speaker: buchou
+    emotion: thinking
+    text: 業界には偽装しようとしている業者がいる、という噂もあります。
+  - speaker: reimu
+    text: 雪印食品の社長以下、出席した役員の誰からも、不正をしないようにという指示も意見も出ませんでした。
+    reading: ゆきじるし しょくひんの しゃちょう いか しゅっせき した やくいんの だれからも、ふせいお しない ように と いう しじも いけんも でませんでした。
+    telops:
+    - {text: "判決　不正をするなと言う役員はいなかった", size: sm, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: p2_tsumekae
+  title: 誰も入れない倉庫
+  background: sb_soko
+  stage:
+  - {who: center, x: 0.28, flip: true, emotion: normal}
+  - {who: yshain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月29日。西宮冷蔵の担当社員は、豪州の牛肉を国産牛にするよう指示された、と備忘録に残しています。
+    reading: じゅうがつ にじゅうくにち。にしのみや れいぞうの たんとう しゃいんわ ごうしゅうの ぎゅうにくお こくさんぎゅうに する よう しじ されたと、びぼうろくに のこして います。
+  - speaker: reimu
+    text: 10月31日。水谷の説明では、この日、水谷は倉庫にいませんでした。
+    reading: じゅうがつ さんじゅういちにち。みずたにの せつめいでわ、このひ みずたにわ そうこに いませんでした。
+  - speaker: center
+    emotion: normal
+    text: 今日の作業は、うちの者だけでやります。
+  - speaker: center
+    emotion: normal
+    text: 誰一人、立ち入らせないようにお願いします。
+  - speaker: yshain
+    emotion: normal
+    text: 国産用の箱、ここに置きます。
+  - speaker: center
+    emotion: normal
+    text: 中身を詰め替えて、全部の箱に国産のラベルを貼る。
+  - speaker: yshain
+    emotion: thinking
+    text: ……はい。
+  - speaker: center
+    emotion: normal
+    text: 関西の分は、13.8トンや。
+  - speaker: yshain
+    emotion: thinking
+    text: ……全部、詰め替えます。
+  - speaker: reimu
+    text: 水谷の説明では、普段は倉庫の者が立ち会います。この日は、社員が取引先を信じて了承しました。
+    reading: みずたにの せつめいでわ ふだんわ そうこの ものが たちあいます。このひわ、しゃいんが とりひきさきお しんじて りょうしょう しました。
+  - speaker: reimu
+    text: 農水省のまとめでも、作業は雪印食品の社員だけでした。
+    reading: のうすいしょうの まとめでも、さぎょうわ ゆきじるし しょくひんの しゃいんだけでした。
+- id: p2_misu
+  title: ミスでしたと言ってください
+  background: sb_soko_jimusho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: angry}
+  - {who: yshain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 雪印さん。うちの倉庫の箱、中身が違うやないですか。
+  - speaker: yshain
+    emotion: thinking
+    text: それは……。
+  - speaker: zundamon
+    emotion: angry
+    text: 買い上げ申請の牛に、間違いで[輸入牛|ゆにゅうぎゅう]が混じっとった。
+  - speaker: zundamon
+    emotion: normal
+    text: そう謝って、国に直してください。
+  - speaker: yshain
+    emotion: thinking
+    text: ……私の一存では、なんとも。
+  - speaker: zundamon
+    emotion: angry
+    text: ミスでした、で済むうちに言うたほうがええ。
+  - speaker: yshain
+    emotion: thinking
+    text: 上に、伝えます。
+  - speaker: reimu
+    text: 雪印食品に求められて、倉庫の証明書に事実と違う中身が書かれました。書いた人は、資料からは分かりません。
+    reading: ゆきじるし しょくひんに もとめられて、そうこの しょうめいしょに じじつと ちがう なかみが かかれました。かいた ひとわ しりょうからわ わかりません。
+  - speaker: reimu
+    text: 水谷の説明では、雪印食品は応じず、年末に電話で中止を求めても断られました。
+    reading: みずたにの せつめいでわ ゆきじるし しょくひんわ おうじず、ねんまつに でんわで ちゅうしお もとめても ことわられました。
+# ---- 2002年 告発 ----
+- id: card2002
+  title: ''
+  background: sb_card_2002
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2002年1月17日。震災から、ちょうど7年の日。水谷の話では、センター長から電話が入ります。
+    reading: にせんにねん いちがつ じゅうしちにち。しんさいから ちょうど ななねんの ひ。みずたにの はなしでわ、せんたーちょうから でんわが はいります。
+- id: p2_denwa
+  title: 震災の日の電話
+  background: sb_soko_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: normal}
+  - {who: center, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: center
+    emotion: happy
+    text: 今日は阪神大震災の日やな。
+  - speaker: center
+    emotion: happy
+    text: 懐かしいなあ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……あのときは、ほんまに助かりました。
+  - speaker: center
+    emotion: happy
+    text: ほな、また。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……はい。
+- id: p2_yugata
+  title: ''
+  background: sb_soko_jimusho_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 水谷洋一, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じ日の夕方、横浜市で隔離牛肉の焼却が始まったと、水谷は知ります。
+    reading: おなじ ひの ゆうがた よこはまして かくり ぎゅうにくの しょうきゃくが はじまったと、みずたにわ しります。
+  - speaker: reimu
+    text: 水谷は、電話を完全犯罪の勝利宣言だったと受け取ります。のちに、こう振り返っています。
+    reading: みずたにわ でんわお かんぜん はんざいの しょうり せんげんだったと うけとります。のちに、こう ふりかえって います。
+  - speaker: zundamon
+    emotion: angry
+    text: こんなことが許されてええはずがない。
+    se: don
+  - speaker: zundamon
+    emotion: angry
+    text: なめとんな。おのれ、みておれ。
+  - speaker: reimu
+    text: センター長本人の言い分は、見つかっていません。
+    reading: せんたーちょう ほんにんの いいぶんわ、みつかって いません。
+- id: p2_kisha
+  title: よっしゃ、書いてええぞ
+  background: sb_soko_jimusho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月22日。水谷は、毎日新聞と朝日新聞の記者に経緯を話します。
+    reading: いちがつ にじゅうににち。みずたにわ、まいにち しんぶんと あさひ しんぶんの きしゃに けいいお はなします。
+  - speaker: kisha
+    emotion: normal
+    text: 詰め替えた肉は、まだ倉庫にあるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: あります。焼かれる前の肉が、そのまま残っとる。
+  - speaker: kisha
+    emotion: surprised
+    text: 証拠が、まるごと……。
+  - speaker: kisha
+    emotion: normal
+    text: 記事にして、いいですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ちょっと、待ってください。
+  - speaker: reimu
+    text: 水谷は、世間が味方してくれるか、名誉毀損で訴えられないかを心配した、と話しています。
+    reading: みずたにわ せけんが みかた して くれるか、めいよ きそんで うったえられないかお しんぱい した と はなして います。
+  - speaker: kisha
+    emotion: thinking
+    text: ……社長？
+  - speaker: zundamon
+    emotion: normal
+    text: よっしゃ、書いてええぞ。
+    se: don
+    telops:
+    - {text: "水谷　よっしゃ、書いてええぞ", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: わ、分かりました！
+- id: p2_kaiken
+  title: 冷凍倉庫の会見
+  background: sb_soko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月23日。朝日新聞と毎日新聞の朝刊1面。水谷は社員服で、記者たちを冷凍倉庫に集めます。
+    reading: いちがつ にじゅうさんにち。あさひ しんぶんと まいにち しんぶんの ちょうかん いちめん。みずたにわ しゃいんふくで、きしゃたちお れいとう そうこに あつめます。
+  - speaker: kisha
+    emotion: surprised
+    text: さ、寒い……。
+  - speaker: zundamon
+    emotion: normal
+    text: 冷凍倉庫ですから。すぐ済みます。
+  - speaker: kisha
+    emotion: normal
+    text: 夜中の1時半に、雪印食品のセンター長が事実を認めたそうです。
+  - speaker: kisha
+    emotion: normal
+    text: お名前と顔、出して大丈夫ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: かまいません。
+  - speaker: zundamon
+    emotion: normal
+    text: この箱を、見てください。国産牛肉用の箱です。
+  - speaker: kisha
+    emotion: normal
+    text: 国産、と書いてありますね。
+  - speaker: zundamon
+    emotion: normal
+    text: 開けますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 私どもの知るところ、これはオーストラリアの牛肉でございます。
+    telops:
+    - {text: "水谷　これはオーストラリアの牛肉でございます", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 中身が、違う……。
+  - speaker: kisha
+    emotion: normal
+    text: 倉庫の社長として、ひと言お願いします。
+  - speaker: zundamon
+    emotion: thinking
+    text: このような社会悪が、私たちの倉庫で行われたのは[遺憾|いかん]です。
+- id: p2_shometsu
+  title: 雪印食品が消える
+  background: sb_tv
+  bgm: 223am
+  stage:
+  - {who: kisha, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 1月23日の11時半、雪印食品は関西の13.8トンを認めました。
+  - speaker: kisha
+    emotion: normal
+    text: 夕方には、神戸の生協が雪印食品の商品を全部下げました。
+  - speaker: kisha
+    emotion: normal
+    text: 雪印食品は、主要なスーパーとの取引がすべて止まりました。
+  - speaker: kisha
+    emotion: normal
+    text: 1月29日、社長と専務が辞任しました。
+  - speaker: reimu
+    text: 農林水産大臣の[武部勤|たけべつとむ]は、国会で、言語道断、国民に対する背信行為と述べました。
+    reading: のうりん すいさん だいじんの たけべ つとむわ こっかいで、ごんごどうだん こくみんに たいする はいしん こういと のべました。
+  - speaker: kisha
+    emotion: thinking
+    text: 2月の最初の10日間、売上は前の年の約2割です。
+  - speaker: kisha
+    emotion: thinking
+    text: 2月22日、取締役会が解散を決めました。
+  - speaker: kisha
+    emotion: thinking
+    text: 4月30日、雪印食品は解散しました。
+  - speaker: reimu
+    text: 判決では、約2000名の従業員が全員職を失いました。偽装に関わっていない社員も、そこにいました。
+    reading: はんけつでわ やく にせんめいの じゅうぎょういんが、ぜんいん しょくお うしないました。ぎそうに かかわって いない しゃいんも そこに いました。
+- id: p2_nimotsu
+  title: 荷が消える倉庫
+  background: sb_soko
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: happy}
+  - {who: ninushi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 告発のあと、雪印食品の荷物は消えます。水谷は、売上の1割ならすぐ取り返せると見込んでいました。
+    reading: こくはつの あと ゆきじるし しょくひんの にもつわ きえます。みずたにわ、うりあげの いちわり なら すぐ とりかえせると みこんで いました。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎度！ 次の荷物は、いつ入れはります？
+  - speaker: ninushi
+    emotion: thinking
+    text: '[水谷|みずたに]さん。申し訳ないけど、もう預けられない。'
+    se: gaan
+  - speaker: zundamon
+    emotion: surprised
+    text: え……なんでですの。
+  - speaker: ninushi
+    emotion: thinking
+    text: ……すまんな。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ほな、新しい荷主さんを探さな。
+- id: p2_nimotsu_b
+  title: ''
+  background: sb_soko
+  stage:
+  - {who: zundamon, x: 0.5, tag: 水谷洋一, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: はい、[西宮冷蔵|にしのみやれいぞう]です。……え、お宅も引き上げ？
+  - speaker: zundamon
+    emotion: surprised
+    text: はい、[西宮冷蔵|にしのみやれいぞう]です。……お宅もですか。
+  - speaker: zundamon
+    emotion: sad
+    text: はい、[西宮冷蔵|にしのみやれいぞう]……まだ名乗っただけやのに！
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……どなたも、雪印さんの荷やないのに。
+  - speaker: reimu
+    text: 水谷の話では、西宮冷蔵は荷物の9割を失いました。のちに、こう話しています。
+    reading: みずたにの はなしでわ、にしのみや れいぞうわ にもつの きゅうわりお うしないました。のちに こう はなして います。
+    background: sb_soko_kara
+    telops:
+    - {text: "水谷の話　荷物の9割が消えた", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 畜産業界全体を、敵に回してしまったんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 他社も同じような偽装をしていて、
+  - speaker: zundamon
+    emotion: thinking
+    text: あそこに預けたらチクられると恐れたのかもしれませんね。
+- id: p2_shobun
+  title: 告発した倉庫に営業停止
+  background: sb_soko_jimusho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 水谷洋一, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2002年11月。国土交通省は倉庫業法にもとづき、西宮冷蔵に7日間の営業停止を命じます。
+    reading: にせんにねん じゅういちがつ。こくど こうつうしょうわ そうこぎょうほうに もとづき、にしのみや れいぞうに なのかかんの えいぎょう ていしお めいじます。
+  - speaker: reimu
+    text: 国は、事実と違う中身が書かれた在庫証明書を、処分の理由にしました。水谷は、こう話しています。
+    reading: くにわ じじつと ちがう なかみが かかれた ざいこ しょうめいしょお しょぶんの りゆうに しました。みずたにわ、こう はなして います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 不正を告発したんだから、てっきり国から感謝されるもんだと思ってたんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 営業停止は、[青天のへきれき|せいてんのへきれき]でした。
+    se: gaan
+  - speaker: reimu
+    text: 水谷は、この処分を巨大企業に弓を引いた者への見せしめだと受け止めています。
+    reading: みずたにわ この しょぶんお、きょだい きぎょうに ゆみお ひいた ものえの みせしめだと うけとめて います。
+- id: p2_hanketsu
+  title: ''
+  background: sb_houtei
+  cuts:
+  - speaker: reimu
+    text: 同じ11月、神戸地裁は偽装を実行した雪印食品の社員5人に、懲役2年、執行猶予3年を言い渡します。
+    reading: おなじ じゅういちがつ こうべ ちさいわ ぎそうお じっこう した ゆきじるし しょくひんの しゃいん ごにんに、ちょうえき にねん しっこう ゆうよ さんねんお いいわたします。
+  - speaker: reimu
+    text: 判決は、国のBSE対策の買い取り制度を悪用して、代金をだまし取ったと認めました。
+    reading: はんけつわ くにの びーえすいー たいさくの かいとり せいどお あくよう して、だいきんお だまし とったと みとめました。
+# ---- 2003年 国会 ----
+- id: card2003
+  title: ''
+  background: sb_card_2003
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2003年1月29日、参議院の予算委員会。国土交通大臣の[扇千景|おうぎちかげ]が、処分の理由を答えます。
+    reading: にせんさんねん いちがつ にじゅうくにち、さんぎいんの よさん いいんかい。こくど こうつう だいじんの おうぎ ちかげが、しょぶんの りゆうお こたえます。
+- id: p2_kokkai1
+  title: 国会で問われた処分
+  background: sb_kokkai
+  stage:
+  - {who: daijin, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: daijin
+    emotion: normal
+    text: '[在庫証明|ざいこしょうめい]書というのが第三者にいかに影響を与えるか、これは信用の問題でございます。'
+  - speaker: daijin
+    emotion: normal
+    text: 本来は一か月というものが、今までの例。
+  - speaker: reimu
+    text: 扇は、雪印食品に強要された部分があった、とも述べます。
+    reading: おうぎわ、ゆきじるし しょくひんに きょうよう された ぶぶんが あったとも のべます。
+  - speaker: daijin
+    emotion: normal
+    text: 自ら警察に、当局にこのことを明らかにした。
+  - speaker: daijin
+    emotion: normal
+    text: 情状を[参酌|さんしゃく]して、七日間。
+    telops:
+    - {text: "国交相　情状を参酌して七日間", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 同じ日、農林水産大臣の[大島理森|おおしまただもり]は、告発で雪印食品の申請分の約6億4300万円が不要になったと答えます。
+    reading: おなじ ひ のうりん すいさん だいじんの おおしま ただもりわ、こくはつで ゆきじるし しょくひんの しんせいぶんの やく ろくおく よんせん さんびゃくまんえんが ふように なったと こたえます。
+    telops:
+    - {text: "農水相　約6億4300万円が不要に", size: sm, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: p2_kokkai2
+  title: ''
+  background: sb_kokkai
+  stage:
+  - {who: giin, x: 0.28, flip: true, emotion: angry}
+  - {who: daijin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2月17日、衆議院の予算委員会。議員が、西宮冷蔵の社員の備忘録を示します。
+    reading: にがつ じゅうしちにち、しゅうぎいんの よさん いいんかい。ぎいんが にしのみや れいぞうの しゃいんの びぼうろくお しめします。
+  - speaker: giin
+    emotion: angry
+    text: '[西宮冷蔵|にしのみやれいぞう]の社員は、これを迷いながらも'
+  - speaker: giin
+    emotion: angry
+    text: 従わざるを得ないのか、いやこんなことはだめかという
+  - speaker: giin
+    emotion: angry
+    text: かんかんがくがくの議論をしています。
+  - speaker: giin
+    emotion: angry
+    text: 政治家からの働きかけ、これはございましたか。
+  - speaker: daijin
+    emotion: normal
+    text: 私が[決裁|けっさい]をいたしました。
+  - speaker: daijin
+    emotion: normal
+    text: だれの指示も[受けては|うけてわ]おりません。
+  - speaker: daijin
+    emotion: angry
+    text: なぜ済んでから、改めてこれを告発されたのか。
+  - speaker: daijin
+    emotion: angry
+    text: '[十月の二十九日|じゅうがつのにじゅうくにち]に、偽造の倉庫証明を[出せ|だせ]と雪印に言われたときに'
+  - speaker: daijin
+    emotion: angry
+    text: なぜ告発しないんですか。
+  - speaker: reimu
+    text: 国は、誰の指示も受けず、これまでの例と事情から処分を決めた、と説明しています。
+    reading: くにわ だれの しじも うけず、これまでの れいと じじょうから しょぶんお きめたと せつめい して います。
+- id: p3_teiden
+  title: 電気が止まった倉庫
+  background: sb_soko_soto
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 水谷洋一, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2003年5月。休業中の西宮冷蔵は、電気代が払えなくなります。
+    reading: にせんさんねん ごがつ。きゅうぎょうちゅうの にしのみや れいぞうわ、でんきだいが はらえなく なります。
+  - speaker: reimu
+    text: 倉庫の電気が、止まりました。
+    reading: そうこの でんきが、とまりました。
+    background: sb_soko_soto_shimatta
+- id: p3_rikkyo
+  title: 陸橋のカンパ
+  background: sb_rikkyo
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: normal}
+  - {who: tsukonin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: '[西宮冷蔵|にしのみやれいぞう]です。再建のカンパを、お願いします。'
+  - speaker: tsukonin
+    emotion: normal
+    text: こんなとこで、本売ってはるの？
+  - speaker: zundamon
+    emotion: normal
+    text: 本を売って、倉庫の再建に充てとります。
+  - speaker: tsukonin
+    emotion: normal
+    text: のぼりに、[負けへんで|まけヘンで]って書いてあるな。
+  - speaker: zundamon
+    emotion: happy
+    text: はい。[負けへんで|まけヘンで]、です。
+  - speaker: tsukonin
+    emotion: thinking
+    text: 何に負けへんの？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……いろいろです。
+    se: tenten
+  - speaker: tsukonin
+    emotion: happy
+    text: ほな、本を1冊もらおか。
+  - speaker: zundamon
+    emotion: happy
+    text: おおきに！
+  - speaker: tsukonin
+    emotion: thinking
+    text: 冷蔵倉庫の社長が、なんで陸橋におるん？
+  - speaker: zundamon
+    emotion: normal
+    text: 倉庫の電気が、止まってもうたんです。
+  - speaker: tsukonin
+    emotion: surprised
+    text: 冷蔵倉庫やのに！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 冷蔵倉庫やのに、です。
+  - speaker: tsukonin
+    emotion: happy
+    text: ……もう1冊、もらおか。
+  - speaker: zundamon
+    emotion: happy
+    text: お、おおきに！
+  - speaker: reimu
+    text: 陸橋に立ったのは、2003年9月から。2004年2月、再建に必要な800万円が集まります。
+    reading: りっきょうに たったのわ にせんさんねん くがつから。にせんよねん にがつ、さいけんに ひつような はっぴゃくまんえんが あつまります。
+# ---- 2004年 再開 ----
+- id: card2004
+  title: ''
+  background: sb_card_2004
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 2004年3月。倉庫に、電気が戻ります。
+    reading: にせんよねん さんがつ。そうこに、でんきが もどります。
+- id: p3_saikai
+  title: 再開の日
+  background: sb_soko
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: happy}
+  - {who: hatsuni, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 冷えとる！ 冷凍室、ちゃんと冷えとる！
+  - speaker: hatsuni
+    emotion: happy
+    text: '[水谷|みずたに]さん。4月から再開やて？'
+  - speaker: zundamon
+    emotion: happy
+    text: はい。従業員5人で、やり直しです。
+    se: levelup
+  - speaker: hatsuni
+    emotion: happy
+    text: ほな、初荷を持ってきたで。
+  - speaker: zundamon
+    emotion: surprised
+    text: 初荷！ 中身は？
+  - speaker: hatsuni
+    emotion: happy
+    text: アイスクリームや。無添加のな。
+  - speaker: zundamon
+    emotion: happy
+    text: 冷凍倉庫の初荷が、アイス。
+  - speaker: hatsuni
+    emotion: normal
+    text: 溶かしたら、あかんで。
+  - speaker: zundamon
+    emotion: happy
+    text: 溶かしません。うちは、冷凍倉庫ですから。
+  - speaker: hatsuni
+    emotion: happy
+    text: それは、知っとる。
+    beat: true
+  - speaker: reimu
+    text: 国会では、社員は給料なしで再建に取り組み、2年4か月ぶりに給料を渡せた、と紹介されました。
+    reading: こっかいでわ しゃいんわ きゅうりょう なしで さいけんに とりくみ、にねん よんかげつぶりに きゅうりょうお わたせたと しょうかい されました。
+    telops:
+    - {text: "国会での紹介　2年4か月ぶりの給料", size: md, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+- id: p3_muzai
+  title: ''
+  background: sb_houtei
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2004年7月、神戸地裁は雪印食品の元専務と元常務に、証拠が足りないとして無罪を言い渡します。
+    reading: にせんよねん しちがつ こうべ ちさいわ ゆきじるし しょくひんの もと せんむと もと じょうむに、しょうこが たりないと して むざいお いいわたします。
+- id: p3_sorekara
+  title: それから
+  background: sb_soko_jimusho
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 水谷洋一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 会社の年表では、2010年7月に従業員は9人。業績は、告発前の7割ほどに戻りました。
+    reading: かいしゃの ねんぴょうでわ にせんじゅうねん しちがつに じゅうぎょういんわ きゅうにん。ぎょうせきわ、こくはつまえの ななわり ほどに もどりました。
+  - speaker: reimu
+    text: 2014年5月、西宮冷蔵は再び休業。水谷の説明では、売上の6割を占めた業者との取引が止まったためです。
+    reading: にせん じゅうよねん ごがつ、にしのみや れいぞうわ ふたたび きゅうぎょう。みずたにの せつめいでわ、うりあげの ろくわりお しめた ぎょうしゃとの とりひきが とまった ためです。
+  - speaker: kisha
+    emotion: normal
+    text: 輸入の検査が済んでない冷凍野菜を出せと言われて、断ったそうですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言われるまま出荷してたら、何のために雪印を告発したのか分からんようになる。
+  - speaker: kisha
+    emotion: normal
+    text: 告発から15年です。同じことが起きたら、どうしますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 同じことが起きたらどっちみち、同じことやるでしょう。
+  - speaker: zundamon
+    emotion: thinking
+    text: いや、次はもうちょっとうまくやるかな。
+  - speaker: kisha
+    emotion: surprised
+    text: うまく、ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 少なくとも、国から営業停止くらわんように。
+# ---- 論争の章 ----
+- id: ronso
+  title: 告発した人は守られるのか
+  background: sb_heya
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ネットで見たのだ。今は法律があるから、告発した人は守られるんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 半分合ってて、半分は違うの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2004年に[公益通報者保護法|こうえきつうほうしゃほごほう]ができて、2006年から使われてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その国会の審議で、[西宮冷蔵|にしのみやれいぞう]の名前が何度も出たの。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、[水谷|みずたに]さんがきっかけの法律！
+  - speaker: tsumugi
+    emotion: angry
+    text: そこは、言い切れないの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 政府が出した提案の理由には、雪印の名前は出てこないのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ふーん。でも、守られはするんでしょ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 守られるのは、働く人。取引先の会社そのものは、対象外なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[西宮冷蔵|にしのみやれいぞう]って、取引先じゃん！'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国会でも、[西宮冷蔵|にしのみやれいぞう]のような弱い立場の取引事業者は保護されないと言われてたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年の改正で、やめて1年以内の人や役員が加わったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年の改正では、仕事を請け負うフリーランスも加わるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも取引先の会社そのものが加わったとは、読めないの。
+- id: ronso_b
+  title: ''
+  background: sb_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 今でも、[西宮冷蔵|にしのみやれいぞう]みたいな会社は……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2025年の国会に[参考人|さんこうにん]で呼ばれた、別の会社の告発者の言葉よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 泥棒を突き出したら、突き出した本人が逮捕されてしまったというかのごとき事案。
+  - speaker: zundamon
+    emotion: surprised
+    text: 泥棒を突き出した人が、止められる！？
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ国は、例なら1か月の停止を7日に軽くしたと説明してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見せしめと見るか、決まりどおりと見るか。どっちの言い分も、記録に残ってるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクは、どっちを信じれば……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+- id: ronso2
+  title: 告発する前に
+  background: sb_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つ目は、記録を残すこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[西宮冷蔵|にしのみやれいぞう]の担当の社員は、指示された日のことを[備忘録|びぼうろく]に書いてたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: それが、国会で示されたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: メモが、国会まで！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: いつ誰に何を言われたか。書いておけば、あとで自分を守る材料になるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日付と相手と、言われたこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つ目は、相談する順番。
+  - speaker: tsumugi
+    emotion: normal
+    text: 相談先には、会社の窓口と行政と報道があるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どこに、どの順で話すか。先に考えておくの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[水谷|みずたに]さんも、まず雪印に直すよう求めてから記者に話してるわ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: いきなり新聞じゃ、ないのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 次は誰も信じられない前提で、策を練ってから告発する。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[水谷|みずたに]さんは、そうも話してるわ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国は、指示された10月29日になぜ告発しないのかと問うたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: おかしいと思ったら、早めに相談することね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 記録と順番と、早さと作戦……。
+# ---- 現代の章 ----
+- id: gendai
+  title: 今の雪印メグミルク
+  background: sb_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の[雪印メグミルク|ゆきじるしめぐみるく]は、事件を起こした雪印乳業や雪印食品とは別の会社よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2009年に、雪印乳業と[日本ミルクコミュニティ|にほんミルクコミュニティ]が作った会社なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 別の会社なら、事件は関係ないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、2つの事件を自分たちの歴史として説明してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎年6月と1月に、食の責任を誓う日の活動を続けてるの。2025年度で46回よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 6月と、1月……。
+  - speaker: zundamon
+    emotion: surprised
+    text: 食中毒が6月で、偽装の記事が出たのが1月！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 6月は、事件の映像を見て振り返るんだって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 毎年、見るの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎年よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[HACCP|ハサップ]に沿った衛生管理は、2021年から原則すべての食品事業者の決まりよ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ハサップ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 食品の工場の、衛生管理のやり方よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 実は雪印乳業の大阪工場も、[HACCP|ハサップ]で国の承認を受けた工場だったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも工程を無断で変えていたとして、事件のあと取り消されたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 承認があっても、守らなきゃ意味ないのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: '[雪印メグミルク|ゆきじるしめぐみるく]の売上は、2026年3月期で6157億円よ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 6000億円超え！？
+- id: gendai2
+  title: 西宮冷蔵の今
+  background: sb_soko_soto_shimatta
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[西宮冷蔵|にしのみやれいぞう]は、今どうしてるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年から、休業したままなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも会社のサイトには、今も再建に向けて歩みを進めてるとあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年12月にも、[水谷|みずたに]さんは取材に応じてるの。
+  - speaker: tsumugi
+    emotion: happy
+    text: 会社のサイトによると、2024年に東京大学の教科書に載ったそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 教科書に！？
+  - speaker: zundamon
+    emotion: happy
+    text: 倉庫の話が、勉強の材料になったのだ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: sb_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ。言わなきゃいけないことがあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: なに？
+  - speaker: zundamon
+    emotion: sad
+    text: 冷蔵庫の期限切れのずんだ餅を黙って奥に戻したの、ボクなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 知ってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 知ってて、黙ってたの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: いつ誰が何を戻したか、ちゃんとメモしてあるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[備忘録|びぼうろく]が、ボクの冷蔵庫に！？'
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 言えて、えらいわ。捨てて、拭いておいてね。
+  - speaker: zundamon
+    emotion: happy
+    text: 期限の近い物から、前に並べるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも、おかしいと思ったことは記録して相談先を考えておいてね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 言った側を守る仕組みは、まだ取引先の会社までは届いてないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 参考になったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

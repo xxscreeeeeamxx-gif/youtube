@@ -1,0 +1,44 @@
+# snowbrand-mizutani 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている（初出の人名・地名は text 側にもタグを付けた）。
+# 名札（tag: 水谷洋一 / label: センター長・雪印の社員 など）は表示専用なのでタグを付けていない。
+# 人名
+- {surface: 水谷洋一, reading: みずたによういち}
+- {surface: 水谷, reading: みずたに}
+- {surface: 石川哲郎, reading: いしかわてつろう}
+- {surface: 扇千景, reading: おうぎちかげ}
+- {surface: 武部勤, reading: たけべつとむ}
+- {surface: 大島理森, reading: おおしまただもり}
+# 社名・地名
+- {surface: 西宮冷蔵, reading: にしのみやれいぞう}
+- {surface: 西宮浜, reading: にしのみやはま}
+- {surface: 大樹, reading: たいき}
+- {surface: 千歳, reading: ちとせ}
+- {surface: 豪州, reading: ごうしゅう}
+- {surface: 雪印メグミルク, reading: ゆきじるしめぐみるく}
+- {surface: 日本ミルクコミュニティ, reading: にほんミルクコミュニティ}  # 2026-10-17 見直しでタグに合わせた
+# 食中毒の言葉
+- {surface: 脱脂粉乳, reading: だっしふんにゅう}
+- {surface: 低脂肪乳, reading: ていしぼうにゅう}
+- {surface: 乳固形物, reading: にゅうこけいぶつ}
+- {surface: 十円玉, reading: じゅうえんだま}
+- {surface: 社告, reading: しゃこく}
+# 牛肉偽装・処分・法律の言葉
+- {surface: BSE, reading: びーえすいー}
+- {surface: 在庫証明, reading: ざいこしょうめい}
+- {surface: 倉庫業法, reading: そうこぎょうほう}
+- {surface: 参酌, reading: さんしゃく}
+- {surface: 決裁, reading: けっさい}
+- {surface: 十月の二十九日, reading: じゅうがつのにじゅうくにち}
+- {surface: 備忘録, reading: びぼうろく}
+- {surface: 遺憾, reading: いかん}
+- {surface: 青天のへきれき, reading: せいてんのへきれき}
+- {surface: 名誉毀損, reading: めいよきそん}
+- {surface: 言語道断, reading: ごんごどうだん}
+- {surface: 背信行為, reading: はいしんこうい}
+- {surface: 公益通報者保護法, reading: こうえきつうほうしゃほごほう}
+- {surface: HACCP, reading: ハサップ}  # はさっぷ だと「は」が助詞に読まれてワサップになる
+# 実際の音声・見直しで直した語（2026-10-17）
+- {surface: 参考人, reading: さんこうにん}  # サンコウジン と読まれた
+- {surface: 輸入牛, reading: ゆにゅうぎゅう}
+- {surface: 負けへんで, reading: まけヘンで}  # 「へ」が助詞に読まれないようカタカナ

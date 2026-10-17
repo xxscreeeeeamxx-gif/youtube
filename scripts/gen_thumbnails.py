@@ -3674,6 +3674,33 @@ def p_fuutou(d, s):
     d.ellipse([s * 0.44, s * 0.48, s * 0.56, s * 0.6], fill=(200, 40, 40))
 
 
+def p_ykmilk(d, s):
+    """牛乳の紙パック（雪印回）。文字・マークは描かない。"""
+    d.rectangle([s * 0.3, s * 0.32, s * 0.7, s * 0.9], fill=(250, 250, 250), outline=(150, 150, 150), width=int(s * 0.014))
+    d.polygon([(s * 0.3, s * 0.32), (s * 0.5, s * 0.16), (s * 0.7, s * 0.32)], fill=(236, 236, 236), outline=(150, 150, 150))
+    d.rectangle([s * 0.42, s * 0.11, s * 0.58, s * 0.17], fill=(236, 236, 236), outline=(150, 150, 150))
+    d.rectangle([s * 0.3, s * 0.56, s * 0.7, s * 0.68], fill=(70, 130, 200))
+
+
+def p_ykniku(d, s):
+    """肉の段ボール箱（雪印回）。中身は描かず、箱と貼られた紙だけ。"""
+    for k, (x, y) in enumerate(((0.14, 0.5), (0.5, 0.5), (0.32, 0.18))):
+        d.rectangle([s * x, s * y, s * (x + 0.36), s * (y + 0.32)], fill=(206, 168, 112), outline=(120, 90, 60),
+                    width=int(s * 0.012))
+        d.line([(s * x, s * (y + 0.1)), (s * (x + 0.36), s * (y + 0.1))], fill=(170, 130, 86), width=int(s * 0.012))
+        d.rectangle([s * (x + 0.08), s * (y + 0.15), s * (x + 0.28), s * (y + 0.26)], fill=(250, 250, 246))
+
+
+def p_ykshutter(d, s):
+    """シャッターの下りた倉庫（雪印回）。"""
+    d.rectangle([s * 0.1, s * 0.2, s * 0.9, s * 0.9], fill=(220, 222, 226), outline=(140, 142, 146), width=int(s * 0.014))
+    d.rectangle([s * 0.2, s * 0.38, s * 0.8, s * 0.9], fill=(150, 156, 162))
+    for k in range(9):
+        y = s * (0.42 + k * 0.053)
+        d.line([(s * 0.2, y), (s * 0.8, y)], fill=(120, 126, 132), width=int(s * 0.01))
+    d.rectangle([s * 0.38, s * 0.48, s * 0.62, s * 0.6], fill=(250, 250, 240), outline=(150, 150, 140))
+
+
 def p_ffcosme(d, s):
     """赤い化粧品の瓶（富士フイルム回）。製品名は描かない。"""
     for x, h, c in ((0.28, 0.5, (236, 200, 210)), (0.5, 0.64, (200, 30, 50)), (0.72, 0.44, (220, 60, 70))):
@@ -4147,6 +4174,11 @@ SPECS = {
         head_hi="604億円", panels=[
         _p("p_fuutou", "1990年", SLATE, "angry", "1万円だけで！？", "特許の褒賞"),
         _p("p_tenbin", "2004年", NAVY, "surprised", "604億円！？", "地裁の認定"),
+    ]),
+    "snowbrand-mizutani": dict(layout="panels", headline="告発した倉庫に営業停止",
+        head_hi="営業停止", panels=[
+        _p("p_ykniku", "2002年", NAVY, "surprised", "中身は豪州の牛肉", "偽装を告発"),
+        _p("p_ykshutter", "2003年", SLATE, "sad", "電気が止まった…", "荷物の9割を失う"),
     ]),
     "calpis": dict(layout="panels", headline="カルピスは偶然に生まれた",
         head_hi="偶然", panels=[

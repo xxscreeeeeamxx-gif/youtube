@@ -2305,5 +2305,103 @@
     "text": "登録の褒賞で、また1万円。出願と合わせて2万円やな。"
    }
   ]
+ },
+ {
+  "slug": "snowbrand-mizutani",
+  "video_id": "DVoc1N7Rw7A",
+  "title_a": "【雪印の牛肉偽装】告発した倉庫は荷物の9割を失い、国から営業停止に【ずんだもん解説】",
+  "title_b": "「てっきり国から感謝されるもんだと思ってた」。雪印の牛肉偽装を告発した倉庫の社長【ずんだもん解説】",
+  "title_c": "雪印の牛肉偽装を告発した倉庫は、なぜ荷物の9割を失ったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "感謝されると思ってた",
+   "head_hi": "感謝",
+   "panels": [
+    {
+     "prop": "p_ykniku",
+     "bg": "yellow",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "書いてええぞ",
+     "by": "",
+     "shout": false,
+     "label": "偽装を告発"
+    },
+    {
+     "prop": "p_ykshutter",
+     "bg": "blue",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "なぜ告発しない",
+     "by": "国交相",
+     "shout": true,
+     "label": "営業停止7日"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "conflict",
+   "headline": "なぜ告発した側が？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "prop": "p_ykniku",
+     "bg": "dark",
+     "emo": "thinking",
+     "fx": "sweat",
+     "say": "もう預けられない",
+     "by": "荷主",
+     "shout": false,
+     "label": "荷物9割減"
+    },
+    {
+     "prop": "p_ykshutter",
+     "bg": "red",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "営業停止！？",
+     "by": "",
+     "shout": false,
+     "label": "国の処分"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "てっきり国から感謝されるもんだと思ってた（水谷・Yahoo 2017）",
+    "scene": "p2_shobun",
+    "text": "不正を告発したんだから、てっきり国から感謝されるもんだと思ってたんです。"
+   },
+   {
+    "claim": "よっしゃ、書いてええぞ（水谷・デイリー新潮）",
+    "scene": "p2_kisha",
+    "text": "よっしゃ、書いてええぞ。"
+   },
+   {
+    "claim": "なぜ告発しないんですか（扇国交相・2003-02-17 衆院予算委）",
+    "scene": "p2_kokkai",
+    "text": "国会会議録［D2］"
+   },
+   {
+    "claim": "営業停止7日（国交省・倉庫業法）",
+    "scene": "p2_kokkai1",
+    "text": "情状を参酌して、七日間。"
+   },
+   {
+    "claim": "もう預けられない（荷主・日経ビジネス）",
+    "scene": "p2_nimotsu",
+    "text": "台帳 場面20［P4］"
+   },
+   {
+    "claim": "荷物の9割（水谷の話）",
+    "scene": "p2_nimotsu",
+    "text": "水谷の話では、西宮冷蔵は荷物の9割を失いました。"
+   },
+   {
+    "claim": "これは豪州の牛肉（2002-01-23 会見）",
+    "scene": "p2_kaiken",
+    "text": "私どもの知るところ、これはオーストラリアの牛肉でございます。"
+   }
+  ]
  }
 ]
