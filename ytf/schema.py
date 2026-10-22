@@ -52,6 +52,8 @@ class Meta(BaseModel):
     title: str
     slug: str
     summary: str = ""
+    hook_line: str = ""     # 概要欄の1行目の引き（40字まで。問いか対比の一文）
+    sources: list[str] = Field(default_factory=list)   # 概要欄の「主な参考資料」（「名前 URL」）
     tags: list[str] = Field(default_factory=list)
     thumbnail: Thumbnail = Field(default_factory=Thumbnail)
     # --- 再現ドラマモード ---

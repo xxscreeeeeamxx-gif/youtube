@@ -261,7 +261,16 @@ def build_entry(slug: str, pdir: Path = None):
     # 再生リストとチャンネル登録の入口（2026-10-07 追加。登録率 0.4% が収益化の壁だったため）
     links = ("▼ ほかの再現ドラマ（まとめて見る）\n" + MAIN_PLAYLIST_URL +
              "\n▼ チャンネル登録\n" + SUBSCRIBE_URL)
-    desc_parts = [body, chapters, links, note, credits, hashtag_line(meta)]
+    # 1行目の引き（2026-10-22。同ジャンルの1行目の中央値は22字で、問いか対比の一文。
+    # 日常研究所は137字の段落だった。検索結果や動画の下で最初に見えるのはこの1行）
+    hook = re.sub(r"\[([^|\]]+)\|[^\]]+\]", r"\1", (meta.get("hook_line") or "")).strip()
+    if hook:
+        body = hook + "\n\n" + body
+    # 主な参考資料（2026-10-22。同ジャンルの54%が出典を載せ、日常研究所は0%だった。
+    # 再生への効き目は測れていないが、裏取りを見せる。meta.sources に「名前 URL」を並べる）
+    srcs = [str(x).strip() for x in (meta.get("sources") or []) if str(x).strip()]
+    sources = ("▼ 主な参考資料\n" + "\n".join(srcs)) if srcs else ""
+    desc_parts = [body, chapters, links, note, sources, credits, hashtag_line(meta)]
     description = "\n\n".join(p for p in desc_parts if p)
     return title, description, tag_line
 

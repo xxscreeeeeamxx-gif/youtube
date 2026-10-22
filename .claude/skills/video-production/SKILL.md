@@ -805,6 +805,7 @@ cd /c/yt && PYTHONPATH=. PYTHONIOENCODING=utf-8 ./.venv/Scripts/python.exe -m yt
   2行の実寸を先に測り、画面下端から56pxの位置に置く
 - **文字はキャラの実体に被らせない**。立ち絵のアルファ境界を測り、
   その手前で改行幅を止める（顔に文字が乗ると一気に安っぽく見える）
+- **★2026-10-22 から、題名と概要欄の型と手順は `.claude/skills/title-description/SKILL.md` に従う**（「台詞→結果」型が標準。先頭【】と問いだけの題名は避ける。根拠 docs/題名と概要欄の型_2026-10-22.md）
 - **★2026-10-22 から、サムネの型と手順は `.claude/skills/thumbnail/SKILL.md` に従う**（場面型 layout="scene" が標準）。
   根拠は docs/サムネの型_2026-10-22.md（同ジャンル9局の上位・下位94枚）。以下の対立型・2コマ型は経緯として残す
 - **（旧）2026-10-11 から、サムネは対立型（layout="conflict"）で作る**。
