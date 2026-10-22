@@ -48,7 +48,7 @@ def render(slugs: list[str]) -> None:
         for k in ("b", "c"):
             spec = dict(v[f"thumb_{k}"])
             spec["_key"] = f'{v["slug"]}#{k}'
-            g.layout_conflict(spec).save(out / f"thumbnail_{k}.png")
+            {"scene": g.layout_scene}.get(spec.get("layout"), g.layout_conflict)(spec).save(out / f"thumbnail_{k}.png")
         print("生成:", v["slug"])
     if g._len_warn:
         print("⚠️ 字数の上限を超えた要素があります（実寸でつぶれる）:")

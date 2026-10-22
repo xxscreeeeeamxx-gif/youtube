@@ -2606,6 +2606,144 @@ def layout_conflict(spec):
     return img.convert("RGB")
 
 
+# ---------------------------------------------------------------- 場面型（2026-10-22）
+# 同ジャンル9局の長尺の上位6本・下位4本（計94枚、docs/サムネの型_2026-10-22.md）を並べて分かったこと:
+#   - 同じ局の中では当たりも外れも同じ作り。作りは「ジャンルの最低ライン」で、当たり外れは題材と言葉。
+#   - 最低ラインのうち日常研究所に欠けていたのは、(1) コマの背景が「何の話か」分かる絵になっている
+#     （店・倉庫・工場・製品）、(2) コマの上に「年・数字」の札があり矢印で前後をつなぐ、の2つ。
+# なので対立型の地（縞と集中線）を、その回のドラマ背景（assets/backgrounds）に差し替え、札を上に出す。
+BG_DIR = Path(__file__).resolve().parent.parent / "assets" / "backgrounds"
+SCENE_TINT = {"dark": (24, 14, 48), "red": (170, 20, 20), "blue": (12, 40, 120), "yellow": (210, 160, 20)}
+
+
+def _scene_bg(pw, ph, name, tint=None):
+    """ドラマ背景をコマの大きさに切り抜き、彩度と明暗を上げ、色をかぶせて周りを暗くする。
+    tint="mono" は白黒にする（転落の後のコマ。全国チェーン興亡史の「後」のコマが白黒の写真）。"""
+    from PIL import ImageEnhance
+    src = Image.open(BG_DIR / f"{name}.png").convert("RGB")
+    sc = max(pw / src.width, ph / src.height)
+    src = src.resize((int(src.width * sc) + 1, int(src.height * sc) + 1), Image.LANCZOS)
+    x0, y0 = (src.width - pw) // 2, (src.height - ph) // 2
+    img = src.crop((x0, y0, x0 + pw, y0 + ph))
+    img = ImageEnhance.Color(img).enhance(0.0 if tint == "mono" else 1.4)
+    img = ImageEnhance.Contrast(img).enhance(1.2).convert("RGBA")
+    if tint in SCENE_TINT:
+        img.alpha_composite(Image.new("RGBA", (pw, ph), (*SCENE_TINT[tint], 92)))
+    vg = Image.new("L", (pw, ph), 0)
+    ImageDraw.Draw(vg).ellipse([-pw * 0.25, -ph * 0.2, pw * 1.25, ph * 1.3], fill=255)
+    vg = vg.filter(ImageFilter.GaussianBlur(70))
+    dark = Image.new("RGBA", (pw, ph), (0, 0, 0, 150))
+    dark.putalpha(ImageOps.invert(vg).point(lambda v: int(v * 0.6)))
+    img.alpha_composite(dark)
+    return img
+
+
+def _tag_box(dr, box, text, fill):
+    """コマの上の札（年・数字）。数字と単位は赤で抜く。"""
+    x0, y0, x1, y1 = box
+    dr.rounded_rectangle(box, radius=8, fill=fill, outline=(14, 10, 6), width=5)
+    f, _ = _fit_lines(text, "w9", (x1 - x0) - 28, 58, 30, 1)
+    x = (x0 + x1 - _tw(f, text)) // 2
+    y = (y0 + y1 - int(f.size * 1.22)) // 2
+    for ch in text:
+        col = (214, 20, 26) if (ch.isdigit() or ch in "万億千百%割") else (20, 14, 6)
+        dr.text((x, y), ch, font=f, fill=col)
+        x += f.getlength(ch)
+
+
+def _side_bubble(dr, box, text, tail_to):
+    """横向きのしっぽが付いた白い吹き出し（立ち絵の口元へ向ける）。"""
+    x0, y0, x1, y1 = box
+    f, lines = _fit_lines(text.replace("|", ""), "w9", (x1 - x0) - 30, 70, 36, 1)
+    tx, ty = tail_to
+    # しっぽは吹き出しの下の辺から、立ち絵の頭の方へ短く出す（長いと線に見える）
+    sx = min(max(tx, x0 + 40), x1 - 40)
+    vx, vy = tx - sx, ty - y1
+    n = max(1.0, (vx * vx + vy * vy) ** 0.5)
+    tip = (sx + vx / n * 56, y1 + vy / n * 56)
+    tail = [(sx - 22, y1 - 4), (sx + 22, y1 - 4), tip]
+    dr.polygon(tail, fill=(255, 255, 255))
+    dr.line([tail[0], tip], fill=(18, 14, 12), width=5)
+    dr.line([tail[1], tip], fill=(18, 14, 12), width=5)
+    dr.rounded_rectangle(box, radius=16, fill=(255, 255, 255), outline=(18, 14, 12), width=5)
+    dr.line([(sx - 18, y1 - 2), (sx + 18, y1 - 2)], fill=(255, 255, 255), width=8)
+    my = (y0 + y1) // 2
+    _ttext(dr, ((x0 + x1) // 2 - _tw(f, lines[0]) // 2, my - int(f.size * 0.62)), lines[0], f, (20, 16, 12))
+
+
+def layout_scene(spec):
+    """場面型2コマ。見出し＋各コマ: 場面の背景・上の札（年と数字）・吹き出し・表情・（小物）。"""
+    panels = spec["panels"]
+    img = Image.new("RGBA", (W, H), (10, 10, 12, 255))
+    HEAD_H = int(H * 0.21)
+    gap = 10
+    pw = (W - gap) // 2
+    ph = H - HEAD_H
+    TAG_H = 78
+    for i, pn in enumerate(panels[:2]):
+        right = i == 1
+        cell = _scene_bg(pw, ph, pn["scene"], pn.get("tint"))
+        bu = bust(spec.get("who", "zundamon"), pn.get("emo", "surprised"), height=int(ph * 0.56), crop=0.40)
+        if not right:
+            bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
+        bu = _fx(bu, pn.get("fx"), inner_left=right)
+        prop = pn.get("prop")
+        if prop and globals().get(prop):
+            pl = prop_layer(globals()[prop], size=480, tilt=-8 if right else 8)
+            sc = min(pw * 0.44 / pl.width, ph * 0.40 / pl.height)
+            pl = pl.resize((max(1, int(pl.width * sc)), max(1, int(pl.height * sc))), Image.LANCZOS)
+            px = int(pw * 0.04) if right else pw - pl.width - int(pw * 0.04)
+            cell.alpha_composite(pl, (px, ph - pl.height - 8))
+        bx = (pw - int(bu.width * 0.86)) if right else -int(bu.width * 0.14)
+        cell.alpha_composite(bu, (bx, ph - bu.height))
+        cd = ImageDraw.Draw(cell, "RGBA")
+        tag = pn.get("tag", "")
+        if tag:
+            _budget("tag", tag, 11, spec.get("_key", ""))
+            _tag_box(cd, (14, 12, pw - 14, 12 + TAG_H), tag, (255, 214, 40) if not right else (255, 255, 255))
+        say = pn.get("say", "")
+        if say:
+            _budget("say", say, LEN_SAY + 1, spec.get("_key", ""))
+            bw_ = int(pw * 0.64)
+            by0 = 12 + TAG_H + 26
+            bx0 = 18 if right else pw - bw_ - 18
+            box = (bx0, by0, bx0 + bw_, by0 + 104)
+            head = (bx + int(bu.width * (0.30 if right else 0.70)), ph - bu.height + int(bu.height * 0.30))
+            if pn.get("shout"):
+                _shout(cd, box, say, pn.get("by", ""))
+            else:
+                _side_bubble(cd, box, say, head)
+                if pn.get("by"):
+                    fb = font("w9", 30)
+                    bw2 = _tw(fb, pn["by"]) + 24
+                    cd.rounded_rectangle([box[0] + 6, box[1] - 18, box[0] + 6 + bw2, box[1] + 26],
+                                         radius=8, fill=(18, 14, 12))
+                    _ttext(cd, (box[0] + 18, box[1] - 16), pn["by"], fb, (255, 255, 255))
+        img.alpha_composite(cell, (i * (pw + gap), HEAD_H))
+    d = ImageDraw.Draw(img)
+    # 札どうしをつなぐ橙の矢印
+    ax, ay = pw + gap // 2, HEAD_H + 12 + TAG_H // 2
+    d.polygon([(ax - 40, ay - 30), (ax - 4, ay - 30), (ax - 4, ay - 50), (ax + 52, ay), (ax - 4, ay + 50),
+               (ax - 4, ay + 30), (ax - 40, ay + 30)], fill=(255, 120, 20), outline=(14, 10, 6), width=5)
+    d.rectangle([0, 0, W, HEAD_H], fill=(8, 8, 10))
+    headline, hi = spec["headline"], spec.get("head_hi", "")
+    base_c, hi_c = (255, 255, 255), spec.get("head_hi_color", (255, 40, 40))
+    segs = [(headline, base_c)]
+    if hi and hi in headline:
+        a, b = headline.split(hi, 1)
+        segs = [(t, c) for t, c in ((a, base_c), (hi, hi_c), (b, base_c)) if t]
+    size = 136
+    while size > 60 and sum(_tw(font("w9", size), t) for t, _ in segs) > W - 40:
+        size -= 4
+    f = font("w9", size)
+    x = (W - sum(_tw(f, t) for t, _ in segs)) // 2
+    y = (HEAD_H - int(size * 1.16)) // 2
+    for t, c in segs:
+        _ttext(d, (x, y), t, f, c, stroke_width=max(6, size // 14), stroke_fill=(0, 0, 0))
+        x += _tw(f, t)
+    return img.convert("RGB")
+
+
 def layout_stack(spec):
     """上下分割型。文字は横幅いっぱい・顔は右下に大きく。
 
@@ -4227,6 +4365,7 @@ def render(slug, out_path=None):
            "punch": layout_punch,
            "stack": layout_stack,
            "conflict": layout_conflict,
+           "scene": layout_scene,
            "panels": layout_panels}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
