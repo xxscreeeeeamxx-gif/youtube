@@ -4310,7 +4310,7 @@ SPECS = {
     ]),
     "blue-led-nakamura": dict(layout="panels", headline="2万円の発明に604億円",
         head_hi="604億円", panels=[
-        _p("p_fuutou", "1990年", SLATE, "angry", "1万円だけで！？", "特許の褒賞"),
+        _p("p_fuutou", "1997年", SLATE, "angry", "褒賞は計2万円", "特許1件の褒賞"),
         _p("p_tenbin", "2004年", NAVY, "surprised", "604億円！？", "地裁の認定"),
     ]),
     "snowbrand-mizutani": dict(layout="panels", headline="告発した倉庫に営業停止",
