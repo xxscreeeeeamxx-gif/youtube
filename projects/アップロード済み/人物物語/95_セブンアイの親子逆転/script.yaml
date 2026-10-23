@@ -1,0 +1,1482 @@
+meta:
+  title: 「あんなものやっていけるのか」と言われたセブン、半世紀後にかつての親ヨーカ堂を売却【ずんだもん解説】
+  slug: seven-i-suzuki
+  hook_line: 親の会社の小さな新規事業だったセブン-イレブンは、なぜ親を超えたのか。
+  summary: 1972年、イトーヨーカ堂の創業者・伊藤雅俊は、コンビニを「あんなものやっていけるのか」と言いました。押し切ったのは、本の問屋から転職してきた鈴木敏文。小さな新規事業だったセブン-イレブンは、やがて利益で親を上回ります。稼ぐのは子、株を持つのは親と創業家。そのねじれに、物言う株主や外国の買い手が手を伸ばしていきます。2016年の取締役会で何が起きたのか。経営者・創業家・会社・買い手、それぞれの言い分を並べて、再現ドラマでたどります。
+  sources:
+  - Alimentation Couche-Tard「ALIMENTATION COUCHE-TARD ANNOUNCES WITHDRAWAL OF PROPOSAL TO ACQUIRE SEVEN & I HOLDINGS DUE TO LACK OF ENGAGEMENT」2025年7月16日 https://corporate.couche-tard.com/2025-07-16-ALIMENTATION-COUCHE-TARD-ANNOUNCES-WITHDRAWAL-OF-PROPOSAL-TO-ACQUIRE-SEVEN-I-HOLDINGS-DUE-TO-LACK-OF-ENGAGEMENT
+  - セブン&アイ・ホールディングス「アリマンタシォン・クシュタール社からの法的拘束力のない初期的な提案への回答」2024年9月6日 https://www2.jpx.co.jp/disc/33820/140120240906581871.pdf
+  - セブン&アイ・ホールディングス「アリマンタシォン・クシュタール社のプレスリリースに関する当社の見解について」2025年7月17日 https://www.7andi.com/company/news/release/202507170913.html
+  - セブン&アイ・ホールディングス「2027年2月期 第2四半期（中間期）決算サマリー」2026年10月8日 https://www.7andi.com/company/news/release/202610081530.html
+  - 日経ビジネス「伊藤と鈴木、『緊張関係』が生む絶妙バランス」1996年9月30日号 https://business.nikkei.com/atcl/report/16/011100100/011600016/
+  - 日本経済新聞「流通のカリスマ退場 セブン&アイ鈴木氏『私の不徳』」2016年4月8日 https://www.nikkei.com/article/DGXLZO99421390Y6A400C1EA2000/
+  tags:
+  - セブンイレブン
+  - セブン&アイ
+  - イトーヨーカドー
+  - 鈴木敏文
+  - 伊藤雅俊
+  - コンビニ
+  - クシュタール
+  - 買収提案
+  - 物言う株主
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: あんなものやっていけるのか
+    bottom: セブンの親子逆転
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: ito
+    label: 伊藤雅俊
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3a42'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: akutsu
+    label: 阿久津知洋
+    voice: 11
+    pitch: 0.02
+    outfit: suit
+    color: '#2f3a52'
+  - id: southland
+    label: 本家の社長
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a3a4a'
+  - id: tsuyaku
+    label: 通訳
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a6a'
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: tenshu
+    label: 酒屋の青年
+    voice: 100
+    pitch: 0.0
+    outfit: apron
+  - id: kyaku
+    label: 客
+    voice: 11
+    pitch: -0.03
+  - id: kanbu
+    label: 幹部
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#4a3a2f'
+  - id: torishimari
+    label: 取締役
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#2f3a52'
+  - id: shagai
+    label: 社外取締役
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#4a4a5a'
+  - id: isaka
+    label: 井阪隆一
+    voice: 13
+    pitch: 0.14
+    outfit: suit
+    color: '#1f2a3a'
+  - id: kabunushi
+    label: 株主
+    voice: 8
+    pitch: -0.06
+    outfit: suit
+    color: '#5a4a5a'
+  - id: nishi
+    label: 西直史
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#2a2a2a'
+  - id: junro
+    label: 伊藤順朗
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#3a3a52'
+scenes:
+# ---- 先出し（2026年10月8日の決算会見） ----
+- id: co_kaiken
+  title: ''
+  background: sv_kaiken
+  bgm: serious
+  stage:
+  - {who: akutsu, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月8日。セブン-イレブン・ジャパンの社長が、決算の会見に臨みます。
+    reading: にせんにじゅうろくねん じゅうがつ ようか。せぶんいれぶん じゃぱんの しゃちょうが けっさんの かいけんに のぞみます。
+  - speaker: kisha
+    emotion: normal
+    text: '[上期|かみき]の営業利益は9.3%減。[下期|しもき]は、どう立て直しますか。'
+  - speaker: akutsu
+    emotion: normal
+    text: やや高いというイメージがある我々の売り場に対して、
+  - speaker: akutsu
+    emotion: normal
+    text: 食卓のニーズに[資する|しする]商品を提供していく。
+    telops:
+    - {text: "阿久津社長　やや高いというイメージ", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: やや高い、と……。
+  - speaker: reimu
+    text: 持ち込むのは、イトーヨーカドーなどで売ってきた安いPB、セブン・ザ・プライスです。
+    reading: もちこむのわ いとーよーかどーなどで うってきた やすい ぴーびー、せぶん ざ ぷらいすです。
+  - speaker: reimu
+    text: 50年あまり前。このコンビニは、そのヨーカ堂でやっていけるのかと言われた事業でした。
+    reading: ごじゅうねん あまり まえ。この こんびにわ その よーかどうで やっていけるのかと いわれた じぎょうでした。
+  - speaker: reimu
+    text: 子は、なぜ親を超え、親を手放すまでになったのでしょうか。
+    reading: こわ なぜ おやお こえ、おやお てばなす までに なったのでしょうか。
+# ---- 茶番（今の部屋） ----
+- id: hook
+  title: ''
+  background: sv_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 今日もコンビニのおにぎりなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ヨーカドーで買うんじゃなかったの？
+  - speaker: zundamon
+    emotion: sad
+    text: 駅前のヨーカドー、閉まったのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのヨーカドーを含む事業を、[セブン&アイ|せぶんあんどあい]は去年売ったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: セブンが、ヨーカドーを！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[ヨーカ堂|よーかどう]は、セブンの親だったのにね。'
+  - speaker: zundamon
+    emotion: angry
+    text: 子どもが、親を売ったのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: thinking
+    text: 株は35%、残してるけどね。
+    beat: true
+# ---- 0:50〜 仕組み：稼ぐ子と、株を持つ親（1996年の取材） ----
+- id: op_shuzai
+  title: 稼ぐ子と、株を持つ親
+  background: sv_kaigi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1996年。イトーヨーカ堂の社長で、セブン-イレブンを育てた鈴木敏文が、雑誌の取材を受けます。
+    reading: せんきゅうひゃく きゅうじゅうろくねん。いとーよーかどうの しゃちょうで せぶんいれぶんお そだてた すずき としふみが、ざっしの しゅざいお うけます。
+  - speaker: kisha
+    emotion: normal
+    text: 収益力で見れば、[セブン-イレブン|せぶんいれぶん]が親の[ヨーカ堂|よーかどう]をしのぎましたね。
+  - speaker: zundamon
+    emotion: normal
+    text: 営業利益は、1994年2月期に抜いた。
+  - speaker: kisha
+    emotion: surprised
+    text: 子が、親を。
+  - speaker: kisha
+    emotion: happy
+    text: ライバル会社の幹部は、こう言ってますよ。
+  - speaker: kisha
+    emotion: happy
+    text: 伊藤[ヨーカ堂|よーかどう]が、鈴木[ヨーカ堂|よーかどう]になった。
+    telops:
+    - {text: "ライバル幹部　伊藤ヨーカ堂が鈴木ヨーカ堂に", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 実際どうなんです。もう、鈴木さんの会社では？
+  - speaker: zundamon
+    emotion: angry
+    text: 違う。
+  - speaker: kisha
+    emotion: normal
+    text: '[伊藤家|いとうけ]は、[伊藤興業|いとうこうぎょう]などと合わせて株の約15%を持つオーナーですもんね。'
+  - speaker: kisha
+    emotion: thinking
+    text: 大事な決定は、今も伊藤さんの判断を仰ぐそうで。
+  - speaker: zundamon
+    emotion: happy
+    text: うちのおやじは、仕事を任せてくれる。
+  - speaker: kisha
+    emotion: surprised
+    text: おやじ。
+  - speaker: zundamon
+    emotion: normal
+    text: 僕は、あの人の下だから仕事ができている。
+  - speaker: kisha
+    emotion: thinking
+    text: 稼ぐのは子のセブン。株を持つのは親の[ヨーカ堂|よーかどう]と、[伊藤家|いとうけ]。
+  - speaker: kisha
+    emotion: thinking
+    text: 率いるのは、雇われ社長の鈴木さん。ややこしいですね。
+  - speaker: zundamon
+    emotion: angry
+    text: ややこしくない。それで回っている。
+    se: hammer
+  - speaker: kisha
+    emotion: normal
+    text: では、もし伊藤さんに反対されたら？
+  - speaker: zundamon
+    emotion: thinking
+    text: オーナーが、僕のやり方がどうしても気に食わないとなれば
+  - speaker: zundamon
+    emotion: normal
+    text: 僕はいつでも、この場所からいなくなる。
+    beat: true
+    telops:
+    - {text: "鈴木　僕はいつでも、この場所からいなくなる", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: ……いなくなる。
+  - speaker: reimu
+    text: このとき、まだ誰も、この言葉が20年後に本当になるとは思っていません。
+    reading: この とき まだ だれも、この ことばが にじゅうねんごに ほんとうに なるとわ おもって いません。
+- id: op_tsunahiki
+  title: 稼ぐ子の綱引き
+  background: sv_gendai
+  cuts:
+  - speaker: reimu
+    text: このねじれに、のちに物言う株主と外国の買い手が手を伸ばし、創業家も動きます。
+    reading: この ねじれに のちに ものいう かぶぬしと がいこくの かいてが てお のばし、そうぎょうけも うごきます。
+    slide:
+      title: 稼ぐ子を引っぱる綱
+      bullets:
+      - 創業家と、雇われの経営者
+      - 物言う株主（米国のファンド）
+      - 外国からの買収提案
+  - speaker: reimu
+    text: 綱引きの末の2025年。ヨーカ堂を含む事業は、ファンドに売られます。
+    reading: つなひきの すえの にせんにじゅうごねん。よーかどうお ふくむ じぎょうわ ふぁんどに うられます。
+  - speaker: reimu
+    text: 子は、どうやって親を超えたのか。始まりは、1972年の夏です。
+    reading: こわ どうやって おやお こえたのか。はじまりわ せんきゅうひゃく ななじゅうにねんの なつです。
+# ---- 1972年 ハワイ ----
+- id: card1972
+  title: ''
+  background: sv_card_1972
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1972年7月、ハワイ。のちに鈴木が語った、ヨーカ堂の創業者の伊藤雅俊とのやりとりです。
+    reading: せんきゅうひゃく ななじゅうにねん しちがつ、はわい。のちに すずきが かたった よーかどうの そうぎょうしゃ いとう まさとしとの やりとりです。
+  - speaker: reimu
+    text: 鈴木はこのとき39歳。本の問屋から転職して約9年で、売り場に立ったことはありませんでした。
+    reading: すずきわ この とき さんじゅうきゅうさい。ほんの とんやから てんしょく して やく くねんで うりばに たった ことわ ありませんでした。
+- id: ch1_hawaii
+  title: あんなものやっていけるのか
+  background: sv_yakuin
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: ito, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: おやじさん。日本でも、コンビニをやらせてください。
+  - speaker: ito
+    emotion: thinking
+    text: あれは日本の[10銭|じっせん]ストアか雑貨屋に毛の生えたみたいなものだな。
+  - speaker: zundamon
+    emotion: surprised
+    text: 雑貨屋に、毛。
+    se: manuke
+  - speaker: ito
+    emotion: thinking
+    text: あんなものやっていけるのか。
+    telops:
+    - {text: "伊藤雅俊　あんなものやっていけるのか", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: おやじさんがそこまで乗り気でないならば、断ってきますよ。
+  - speaker: ito
+    emotion: thinking
+    text: 今、ここでダメというのももったいないな。
+  - speaker: ito
+    emotion: normal
+    text: そこはあんたたちがよく考えて……。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……え？
+  - speaker: zundamon
+    emotion: happy
+    text: おやじは100%反対ではない。3割程度は脈があるかもしれない。
+  - speaker: reimu
+    text: つまり、7割は反対です。
+    reading: つまり ななわりわ はんたいです。
+    beat: true
+  - speaker: reimu
+    text: この3割の脈から生まれた店が、約20年後、利益で親を抜きます。
+    reading: この さんわりの みゃくから うまれた みせが、やく にじゅうねんご りえきで おやお ぬきます。
+# ---- 1973年 ダラス ----
+- id: ch1_dallas
+  title: 冗談ではない
+  background: sv_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: tsuyaku, x: 0.52, emotion: normal}
+  - {who: southland, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1973年7月、アメリカのダラス。本家のセブン-イレブンを営む、サウスランド社との最後の交渉です。
+    reading: せんきゅうひゃく ななじゅうさんねん しちがつ、あめりかの だらす。ほんけの せぶんいれぶんお いとなむ さうすらんどしゃとの さいごの こうしょうです。
+  - speaker: southland
+    emotion: normal
+    text: ロイヤルティーは、売上高の1%。これは譲れません。
+  - speaker: tsuyaku
+    emotion: normal
+    text: 売上の1%を、払ってほしいそうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 千円売れるたびに、10円が海を渡るのか。
+  - speaker: zundamon
+    emotion: angry
+    text: 冗談ではない。こんな条件では交渉にならない！
+    se: don
+  - speaker: reimu
+    text: 鈴木はのちに新聞の連載で、テーブルをたたいて一歩も退かなかったと書いています。
+    reading: すずきわ のちに しんぶんの れんさいで てーぶるお たたいて いっぽも ひかなかったと かいて います。
+  - speaker: southland
+    emotion: thinking
+    text: ……0.6%。これで、どうだ。
+  - speaker: tsuyaku
+    emotion: happy
+    text: 1%から、0.6%まで下がりました！
+    telops:
+    - {text: "ロイヤルティー　1%→0.6%", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 千円で、6円。
+  - speaker: reimu
+    text: このとき払う側だった日本が、18年後には本家の株を買います。
+    reading: この とき はらう がわだった にほんが、じゅうはちねんごにわ ほんけの かぶお かいます。
+# ---- 1973〜1974年 1号店 ----
+- id: ch1_tegami
+  title: 最初から加盟店で
+  background: sv_yakuin
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1973年11月、ヨーカ堂はヨークセブンを作ります。今のセブン-イレブン・ジャパンです。
+    reading: せんきゅうひゃく ななじゅうさんねん じゅういちがつ、よーかどうわ よーくせぶんお つくります。いまの せぶんいれぶん じゃぱんです。
+  - speaker: shain
+    emotion: normal
+    text: 最初の何店かは、[直営|ちょくえい]でやりましょう。
+  - speaker: zundamon
+    emotion: normal
+    text: いや。最初から、加盟店でやる。
+  - speaker: shain
+    emotion: surprised
+    text: 1号店からですか！？
+  - speaker: zundamon
+    emotion: normal
+    text: 1号店からだ。
+  - speaker: shain
+    emotion: thinking
+    text: 1号店から失敗したら、どうするんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: そのときは、僕が責任を取る。
+  - speaker: shain
+    emotion: surprised
+    text: 社長でもないのに！？
+    beat: true
+  - speaker: shain
+    emotion: thinking
+    text: ……あの、手紙が来てます。新聞を見た、[江東区|こうとうく]の酒屋さんからです。
+  - speaker: shain
+    emotion: happy
+    text: やってみたい、と。
+  - speaker: zundamon
+    emotion: happy
+    text: 来たか。
+  - speaker: reimu
+    text: 手紙の主は、江東区の酒屋の青年、山本憲司。20代前半でした。
+    reading: てがみの ぬしわ こうとうくの さかやの せいねん やまもと けんじ。にじゅうだい ぜんはんでした。
+- id: ch1_yakusoku
+  title: ''
+  background: sv_conbini_1974
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: tenshu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 鈴木は、この青年にこう約束しました。
+    reading: すずきわ この せいねんに こう やくそく しました。
+  - speaker: zundamon
+    emotion: happy
+    text: ぜひ一緒にやりましょう。
+  - speaker: zundamon
+    emotion: normal
+    text: もし3年後に失敗していたら、私が責任を持ってお店を元通りにしてお返しします。
+- id: card1974
+  title: ''
+  background: sv_card_1974
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1974年5月15日。東京の豊洲に、1号店が開きます。酒屋を改装した、約20坪の店です。
+    reading: せんきゅうひゃく ななじゅうよねん ごがつ じゅうごにち。とうきょうの とよすに いちごうてんが ひらきます。さかやお かいそう した やく にじゅっつぼの みせです。
+- id: ch1_kaiten
+  title: 最初に売れたもの
+  background: sv_conbini_1974
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 開店だ。……あいにくの[雨模様|あまもよう]だが。
+  - speaker: kyaku
+    emotion: normal
+    text: すみません。これ、ください。
+  - speaker: zundamon
+    emotion: happy
+    text: 最初のお客様だ。何を……。
+  - speaker: zundamon
+    emotion: surprised
+    text: サングラス！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: thinking
+    text: ……この[雨模様|あまもよう]の日に。
+    beat: true
+  - speaker: reimu
+    text: 最初に売れたのは、800円のサングラス。鈴木は、今も忘れられないと書いています。
+    reading: さいしょに うれたのわ はっぴゃくえんの さんぐらす。すずきわ いまも わすれられないと かいて います。
+  - speaker: reimu
+    text: この20坪の店から、27年後に国内の小売りの1位が生まれます。
+    reading: この にじゅっつぼの みせから、にじゅうななねんごに こくないの こうりの いちいが うまれます。
+# ---- 1982年 業革とPOS ----
+- id: card1982
+  title: ''
+  background: sv_card_1982
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1982年。鈴木は親のヨーカ堂で業務改革を始め、10月には子のセブン-イレブンがPOSの導入を始めます。
+    reading: せんきゅうひゃく はちじゅうにねん。すずきわ おやの よーかどうで ぎょうむ かいかくお はじめ、じゅうがつにわ こ の せぶんいれぶんが ぽすの どうにゅうお はじめます。
+- id: ch2_gyokaku
+  title: 売れない品は減らす
+  background: sv_gms
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kanbu
+    emotion: thinking
+    text: 創業以来はじめての減益です……。
+  - speaker: kanbu
+    emotion: happy
+    text: でも、うちの自慢は[品数|しなかず]の多さです。
+  - speaker: zundamon
+    emotion: normal
+    text: 売れない品は、減らす。
+  - speaker: kanbu
+    emotion: surprised
+    text: 棚が、さびしくなります！
+  - speaker: zundamon
+    emotion: normal
+    text: 売れない品は、棚で眠っているだけだ。
+  - speaker: kanbu
+    emotion: thinking
+    text: ……でも[品数|しなかず]は、うちの看板で。
+  - speaker: zundamon
+    emotion: angry
+    text: 看板より、売れる品だ。
+  - speaker: zundamon
+    emotion: normal
+    text: 何がいつ何個売れたか。[セブン-イレブン|せぶんいれぶん]は、レジでつかもうとしている。
+  - speaker: kanbu
+    emotion: thinking
+    text: 子会社のやり方を、親がまねるんですか……。
+    beat: true
+# ---- 1991年 本家を買う ----
+- id: ch2_honke
+  title: 本家を買う
+  background: sv_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: ito, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1991年3月。経営が破綻した本家のサウスランド社の株を、ヨーカ堂とセブン-イレブンで約7割買います。
+    reading: せんきゅうひゃく きゅうじゅういちねん さんがつ。けいえいが はたんした ほんけの さうすらんどしゃの かぶお よーかどうと せぶんいれぶんで やく ななわり かいます。
+  - speaker: zundamon
+    emotion: normal
+    text: 4億ドル以上は投資しない。
+  - speaker: zundamon
+    emotion: normal
+    text: 失敗したらなくなるが、授業料として考えてほしい。
+  - speaker: reimu
+    text: 鈴木は、こう言って伊藤を説き伏せたと説明しています。伊藤の説明は、少し違います。
+    reading: すずきわ こう いって いとうお ときふせたと せつめい して います。いとうの せつめいわ すこし ちがいます。
+  - speaker: ito
+    emotion: normal
+    text: '[セブン-イレブン|せぶんいれぶん]というブランドを守るために救済した。'
+  - speaker: reimu
+    text: 雑誌は2人の関係を、確執ではなく緊張と書きました。伊藤は、大事なことへの拒否権を持ち続けます。
+    reading: ざっしわ ふたりの かんけいお かくしつでわ なく きんちょうと かきました。いとうわ だいじな ことえの きょひけんお もちつづけます。
+# ---- 1992〜2001年 子が親を抜く ----
+- id: ch2_gyakuten
+  title: 子が親を抜く
+  background: sv_kaigi
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: torishimari, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1992年10月。総会屋への利益供与事件で伊藤がヨーカ堂の社長を辞め、副社長の鈴木が継ぎます。
+    reading: せんきゅうひゃく きゅうじゅうにねん じゅうがつ。そうかいやえの りえき きょうよ じけんで いとうが よーかどうの しゃちょうお やめ、ふくしゃちょうの すずきが つぎます。
+  - speaker: torishimari
+    emotion: normal
+    text: 1994年2月期の決算です。
+  - speaker: torishimari
+    emotion: surprised
+    text: '[セブン-イレブン|せぶんいれぶん]の営業利益が、[ヨーカ堂|よーかどう]を上回りました！'
+    background: sv_kaigi_up
+    telops:
+    - {text: "1994年2月期　子が親を抜く", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: ……そうか。
+  - speaker: torishimari
+    emotion: happy
+    text: 子会社が、親会社より稼いでます！
+  - speaker: torishimari
+    emotion: surprised
+    text: ……あ。ここ、親会社の会議でした。
+    beat: true
+  - speaker: torishimari
+    emotion: thinking
+    text: '[ヨーカ堂|よーかどう]のほうは、前の年の839億円が最高でしたが……。'
+  - speaker: torishimari
+    emotion: thinking
+    text: ……そこから、下り坂です。
+    beat: true
+  - speaker: reimu
+    text: 1996年。業務改革の会議は、毎週火曜に開かれていました。
+    reading: せんきゅうひゃく きゅうじゅうろくねん。ぎょうむ かいかくの かいぎわ まいしゅう かようびに ひらかれて いました。
+  - speaker: zundamon
+    emotion: angry
+    text: そんな簡単なことを、なぜしていないんだ。
+  - speaker: zundamon
+    emotion: angry
+    text: '[セブン-イレブン|せぶんいれぶん]では、先週からやっているぞ。'
+    se: tsukkomi
+  - speaker: reimu
+    text: 約160人の幹部が、黙りました。
+    reading: やく ひゃくろくじゅうにんの かんぶが だまりました。
+  - speaker: torishimari
+    emotion: thinking
+    text: ……先週から。
+    beat: true
+  - speaker: reimu
+    text: 2001年2月、チェーン全店の売上で国内の小売業の1位に。4月には、のちのセブン銀行も作ります。
+    reading: にせんいちねん にがつ、ちぇーん ぜんてんの うりあげで こくないの こうりぎょうの いちいに。しがつにわ のちの せぶん ぎんこうも つくります。
+# ---- 2005年 親と子が兄弟に（今の部屋） ----
+- id: ch2_kaisetsu
+  title: 薄い財布と分厚い財布
+  background: sv_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 子が親より稼ぐと、何が困るの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 親が、安く買われるかもしれないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2004年の末よ。親の[ヨーカ堂|よーかどう]は、子の[セブン-イレブン|せぶんいれぶん]の株を半分ほど持ってたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者の計算よ。[ヨーカ堂|よーかどう]の値段から子会社などの株の分を引くと、残りは3643億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 子の[セブン-イレブン|せぶんいれぶん]の値段は、2兆6579億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 親が、子の14%しかないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 薄い財布の中に、分厚い財布が半分入ってる感じね。
+  - speaker: zundamon
+    emotion: happy
+    text: 薄いほうごと買えば、分厚いほうも付いてくるのだ！
+  - speaker: tsumugi
+    emotion: angry
+    text: おまけ付きのお菓子みたいに言わないで。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: thinking
+    text: 研究者も、その危険があったと見てるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2005年9月、3社は持株会社の[セブン&アイ|せぶんあんどあい]・ホールディングスの下にそろうの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 親と子が、同じ親の下の兄弟になったのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: 家系図に描いたら、大混乱ね。
+  - speaker: zundamon
+    emotion: thinking
+    text: お年玉は、誰が誰にあげるのだ？
+  - speaker: tsumugi
+    emotion: angry
+    text: そこは考えなくていいの。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の発表は、目的を変化への対応と基本の徹底と書いてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 買収の心配には、触れてないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者は、この形で鈴木さんの権限が絶対的なものになったと見てる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 全部の上に、鈴木さん。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その上にも、株主がいるのよ。
+# ---- 2015〜2016年 ファンドの手紙と、井阪への打診 ----
+- id: ch3_fund
+  title: ファンドの手紙
+  background: sv_kaigi_akaji
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: thinking}
+  - {who: torishimari, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2015年10月。ヨーカ堂は上期だけで、90億円の営業赤字を出します。
+    reading: にせんじゅうごねん じゅうがつ。よーかどうわ かみきだけで きゅうじゅうおくえんの えいぎょう あかじお だします。
+  - speaker: torishimari
+    emotion: thinking
+    text: アメリカのファンドが、うちの株を買ったと公表しました。
+  - speaker: torishimari
+    emotion: normal
+    text: '[ヨーカ堂|よーかどう]はグループから離れ、独立した企業として経営を見直すべきだと。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[ヨーカ堂|よーかどう]を、切り離せと。
+  - speaker: torishimari
+    emotion: thinking
+    text: サード・ポイントです。百貨店などの買収も、誤りだったと。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……外からも、綱が伸びてきたか。
+    beat: true
+- id: ch3_dashin
+  title: 最高益の社長を替える
+  background: sv_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: shagai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2016年2月。鈴木は、セブン-イレブン・ジャパンの社長の井阪隆一に、交代を打診します。
+    reading: にせんじゅうろくねん にがつ。すずきわ せぶんいれぶん じゃぱんの しゃちょうの いさか りゅういちに こうたいお だしん します。
+  - speaker: reimu
+    text: 井阪は2日後に、受け入れられないと答えます。3月末、話は人事の委員会へ。
+    reading: いさかわ ふつかごに うけいれられないと こたえます。さんがつまつ はなしわ じんじの いいんかいえ。
+  - speaker: zundamon
+    emotion: normal
+    text: '[セブン-イレブン|せぶんいれぶん]の経営に、[新しい機軸|あたらしいきじく]が出ていない。'
+  - speaker: shagai
+    emotion: thinking
+    text: 5期続けて、最高益です。
+  - speaker: shagai
+    emotion: normal
+    text: 最高益の社長を[退かせる|しりぞかせる]理由が、ありません。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……最高益でも、だ。
+  - speaker: reimu
+    text: 社外取締役の2人が反対し、委員会では結論が出ません。
+    reading: しゃがい とりしまりやくの ふたりが はんたいし、いいんかいでわ けつろんが でません。
+# ---- 2016年4月7日 取締役会 ----
+- id: card2016
+  title: ''
+  background: sv_card_2016
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2016年4月7日。取締役会で、鈴木の人事案が採決にかけられます。
+    reading: にせんじゅうろくねん しがつ なのか。とりしまりやくかいで すずきの じんじあんが さいけつに かけられます。
+- id: ch4_saiketsu
+  title: 7対6、白票2
+  background: sv_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: normal}
+  - {who: torishimari, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: torishimari
+    emotion: normal
+    text: 議題は、[セブン-イレブン|せぶんいれぶん]・ジャパンの社長の交代です。
+  - speaker: torishimari
+    emotion: normal
+    text: 取締役は15人。可決には、8人の賛成が要ります。
+  - speaker: torishimari
+    emotion: normal
+    text: 投票は、無記名です。
+  - speaker: zundamon
+    emotion: normal
+    text: 始めてくれ。
+  - speaker: torishimari
+    emotion: thinking
+    text: では、開票します。
+  - speaker: torishimari
+    emotion: normal
+    text: 賛成、7。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……7か。
+  - speaker: torishimari
+    emotion: surprised
+    text: 反対、6。
+  - speaker: torishimari
+    emotion: thinking
+    text: '[白票|はくひょう]、2。'
+  - speaker: torishimari
+    emotion: thinking
+    text: 8人に届きません。否決です。
+    se: don
+    telops:
+    - {text: "賛成7・反対6・白票2", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[白票|はくひょう]が、2つ。
+  - speaker: reimu
+    text: 同じ日に出た決算で、ヨーカ堂は約140億円の営業赤字でした。
+    reading: おなじ ひに でた けっさんで、よーかどうわ やく ひゃくよんじゅうおくえんの えいぎょう あかじでした。
+    background: sv_kaigi_akaji
+  - speaker: reimu
+    text: 株価も、この日の午前に一時9%安まで売られています。
+    reading: かぶかも この ひの ごぜんに いちじ きゅうぱーせんと やすまで うられて います。
+- id: ch4_kaiken
+  title: 世代が変わった
+  background: sv_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 鈴木敏文, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ日の午後4時半。鈴木は会見で、すべての役職から退くと表明します。
+    reading: おなじ ひの ごご よじはん。すずきわ かいけんで すべての やくしょくから しりぞくと ひょうめい します。
+  - speaker: kisha
+    emotion: normal
+    text: 鈴木会長、なぜ退任を。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今までは、[伊藤家|いとうけ]と良好な関係にあった。でも今回は違った。
+  - speaker: zundamon
+    emotion: thinking
+    text: もはや信任されていない。
+  - speaker: kisha
+    emotion: surprised
+    text: 信任、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: これまで私が提案したことを、拒否されたことはない。
+  - speaker: zundamon
+    emotion: sad
+    text: しかし世代が変わった。
+    beat: true
+    telops:
+    - {text: "鈴木　しかし世代が変わった", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: 世代……。
+  - speaker: reimu
+    text: 鈴木は会見で、井阪から1人でセブンの成長を支えてきたという趣旨の発言があったと述べました。
+    reading: すずきわ かいけんで、いさかから ひとりで せぶんの せいちょうお ささえて きたと いう しゅしの はつげんが あったと のべました。
+  - speaker: reimu
+    text: 井阪は、この発言を否定しています。
+    reading: いさかわ この はつげんお ひてい して います。
+  - speaker: kisha
+    emotion: thinking
+    text: ……どちらの記憶が、正しいのか。
+  - speaker: kisha
+    emotion: normal
+    text: 後継は、どなたに。
+  - speaker: zundamon
+    emotion: normal
+    text: 後継指名は、しない。
+  - speaker: kisha
+    emotion: surprised
+    text: 誰も、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: しない。
+  - speaker: zundamon
+    emotion: sad
+    text: 引退するのは私の[不徳|ふとく]のいたすところ。
+  - speaker: zundamon
+    emotion: sad
+    text: こんな説明をしなければならないのはざんきに[堪えない|たえない]。
+  - speaker: reimu
+    text: 同じ会見で、当時の社長は、名誉会長の伊藤から人事案をはっきり断られたと説明しました。
+    reading: おなじ かいけんで とうじの しゃちょうわ、めいよ かいちょうの いとうから じんじあんお はっきり ことわられたと せつめい しました。
+  - speaker: reimu
+    text: 伊藤がなぜ承諾しなかったのか。本人の公の説明は、見つかっていません。
+    reading: いとうが なぜ しょうだく しなかったのか。ほんにんの おおやけの せつめいわ みつかって いません。
+  - speaker: reimu
+    text: 20年前の取材の言葉どおり、鈴木はこの場所を去ります。
+    reading: にじゅうねん まえの しゅざいの ことば どおり、すずきわ この ばしょお さります。
+- id: ch4_heiten
+  title: 3日後の閉店
+  background: sv_gms_soto
+  bgm: 223am
+  stage:
+  - {who: kyaku, x: 0.5, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 3日後の4月10日。ヨーカドーの1号店だった、北千住のザ・プライス千住店が最後の日を迎えます。
+    reading: みっかごの しがつ とおか。よーかどーの いちごうてん だった きたせんじゅの ざ ぷらいす せんじゅてんが さいごの ひお むかえます。
+  - speaker: kyaku
+    emotion: sad
+    text: ここ、閉まっちゃうのか……。
+    background: sv_gms_soto_heiten
+  - speaker: reimu
+    text: 前の年の秋に決めた閉店の計画が、ここから進みます。
+    reading: まえの としの あきに きめた へいてんの けいかくが、ここから すすみます。
+  - speaker: reimu
+    text: 5月、鈴木は名誉顧問に退き、井阪が持株会社の社長に。秋の計画に、ヨーカ堂の切り離しは入りませんでした。
+    reading: ごがつ すずきわ めいよ こもんに しりぞき、いさかが もちかぶ がいしゃの しゃちょうに。あきの けいかくに よーかどうの きりはなしわ はいりませんでした。
+# ---- 2023年 祖業の衣料から撤退 ----
+- id: card2023
+  title: ''
+  background: sv_card_2023
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2023年3月9日。社長の井阪が、ヨーカドーの立て直しの計画を発表します。
+    reading: にせんにじゅうさんねん さんがつ ここのか。しゃちょうの いさかが よーかどーの たてなおしの けいかくお はっぴょう します。
+- id: ch5_uriba
+  title: 祖業の衣料から撤退
+  background: sv_gms
+  stage:
+  - {who: kyaku, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ヨーカドーは、肌着を除く衣料品から撤退。店も、126店から93店に減らします。
+    reading: よーかどーわ はだぎお のぞく いりょうひんから てったい。みせも ひゃくにじゅうろくてんから きゅうじゅうさんてんに へらします。
+  - speaker: kyaku
+    emotion: surprised
+    text: 服の売り場が、なくなる……。
+    background: sv_gms_kara
+  - speaker: kyaku
+    emotion: thinking
+    text: ……肌着は、残るのか。
+- id: ch5_kaiken
+  title: ''
+  background: sv_kaiken
+  stage:
+  - {who: isaka, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: '[祖業|そぎょう]の衣料から、撤退……。なぜですか。'
+  - speaker: isaka
+    emotion: normal
+    text: アパレルについては、事業ドメインが広がり過ぎていて
+  - speaker: isaka
+    emotion: thinking
+    text: 本来、強みがないところで
+  - speaker: isaka
+    emotion: normal
+    text: こだわってしまったのが、構造改革の成果が出なかった大きな理由という分析をしている。
+    beat: true
+- id: ch5_shi
+  title: ''
+  background: sv_card_2023
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 翌日の3月10日。伊藤雅俊が、98歳で亡くなります。
+    reading: よくじつの さんがつ とおか。いとう まさとしが きゅうじゅうはっさいで なくなります。
+    se: namida
+# ---- 2023年5月 物言う株主 ----
+- id: ch5_sokai
+  title: 賛成率は76%
+  background: sv_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: kabunushi, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2023年5月の株主総会。米国のファンドのバリューアクトが、井阪ら4人の交代を求めます。
+    reading: にせんにじゅうさんねん ごがつの かぶぬし そうかい。べいこくの ふぁんどの ばりゅーあくとが、いさから よにんの こうたいお もとめます。
+  - speaker: kabunushi
+    emotion: normal
+    text: 伊藤名誉会長の[逝去|せいきょ]に際し、グループをどのように率いていくのか。
+  - speaker: kisha
+    emotion: normal
+    text: ファンドの候補4人は、全員否決です。
+  - speaker: kisha
+    emotion: surprised
+    text: でも、[井阪|いさか]社長の賛成率は76.36%。前の年は、94.73%でした。
+  - speaker: kabunushi
+    emotion: thinking
+    text: 4人に1人近くが、賛成しなかった……。
+    beat: true
+  - speaker: kisha
+    emotion: thinking
+    text: 提案したファンドの持ち株は、2%にも届かないんですけどね。
+  - speaker: reimu
+    text: その後、会社はそごう・西武を売り、スーパーの切り離しへ進みます。ファンドの提案と同じ方向でした。
+    reading: そのご かいしゃわ そごう せいぶお うり、すーぱーの きりはなしえ すすみます。ふぁんどの ていあんと おなじ ほうこうでした。
+# ---- 2024年 カナダからの手紙と、創業家の提案 ----
+- id: card2024
+  title: ''
+  background: sv_card_2024
+  cuts:
+  - speaker: reimu
+    text: 2024年8月。カナダのコンビニ大手、アリマンタシォン・クシュタールの買収提案が明らかになります。
+    reading: にせんにじゅうよねん はちがつ。かなだの こんびに おおて、ありまんたしおん くしゅたーるの ばいしゅう ていあんが あきらかに なります。
+- id: ch6_teian
+  title: カナダからの手紙
+  background: sv_gendai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: surprised}
+  - {who: kabunushi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 会社は、法的拘束力の無い初期的な提案を受けたと認めました。
+  - speaker: kisha
+    emotion: normal
+    text: 9月。会社が特別委員長のデイカスさんの名前で、回答の書簡を出しました。
+  - speaker: kisha
+    emotion: thinking
+    text: 書き出しは……アラン様。
+    se: tenten
+  - speaker: kabunushi
+    emotion: thinking
+    text: 下の名前に、様。
+  - speaker: kisha
+    emotion: normal
+    text: 提案は1株14.86ドル。全部の株を、現金で。
+  - speaker: kisha
+    emotion: normal
+    text: '[貴方|あなた]の提案はタイミングを計った機会主義的なもの。'
+  - speaker: kisha
+    emotion: normal
+    text: 株主の価値を著しく過小評価し、米国の競争法の課題も適切に考慮していないと。
+  - speaker: reimu
+    text: 10月には、提案が約7兆円に引き上げられたと報じられます。会社は、条件を公表していません。
+    reading: じゅうがつにわ ていあんが やく ななちょうえんに ひきあげられたと ほうじられます。かいしゃわ じょうけんお こうひょう して いません。
+- id: ch6_mbo
+  title: 創業家の提案
+  background: sv_gendai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: kabunushi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月。今度は創業者の次男で副社長の伊藤順朗と、伊藤家の会社が、非公開化を提案します。
+    reading: じゅういちがつ。こんどわ そうぎょうしゃの じなんで ふくしゃちょうの いとう じゅんろうと いとうけの かいしゃが、ひこうかいかお ていあん します。
+  - speaker: kisha
+    emotion: surprised
+    text: '[創業家|そうぎょうけ]が、会社ごと買い取る提案……！'
+  - speaker: kisha
+    emotion: normal
+    text: '[伊藤順朗|いとうじゅんろう]さんは、会社での審議からすべて外れたそうです。'
+  - speaker: kisha
+    emotion: normal
+    text: 報道では総額8兆から9兆円。[伊藤忠商事|いとうちゅうしょうじ]が、最大の出資者になる予定だとか。
+  - speaker: kabunushi
+    emotion: surprised
+    text: 8兆円……。
+    beat: true
+  - speaker: reimu
+    text: 2025年2月、創業家側から、資金調達の目途が立たなくなったと連絡が入ります。
+    reading: にせんにじゅうごねん にがつ、そうぎょうけがわから しきん ちょうたつの めどが たたなく なったと れんらくが はいります。
+  - speaker: kabunushi
+    emotion: thinking
+    text: 白紙、ですか。
+# ---- 2025年3月 祖業を売る ----
+- id: card2025
+  title: ''
+  background: sv_card_2025
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2025年3月6日。ヨーカ堂など約30社をまとめた会社を、ファンドのベインキャピタルに売る契約です。
+    reading: にせんにじゅうごねん さんがつ むいか。よーかどうなど やく さんじゅっしゃお まとめた かいしゃお、ふぁんどの べいん きゃぴたるに うる けいやくです。
+- id: ch6_baikyaku
+  title: 祖業を売る
+  background: sv_kaiken
+  stage:
+  - {who: isaka, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: '[売値|うりね]は8147億円。[祖業|そぎょう]を、売るんですね。'
+  - speaker: kisha
+    emotion: normal
+    text: 同じ日に、[井阪|いさか]社長の退任も発表です。理由は。
+  - speaker: isaka
+    emotion: normal
+    text: 総合小売業から転換し、国内の[CVS|しーぶいえす]事業にフォーカスした。
+  - speaker: isaka
+    emotion: normal
+    text: 国内グループ構造の最適化に一定のメドがついた。
+  - speaker: kisha
+    emotion: thinking
+    text: '[CVS|しーぶいえす]って、コンビニのことですよね。'
+  - speaker: reimu
+    text: 売ったあとも、セブン&アイは株の35.07%を持ち、創業家も4.93%を持ちます。
+    reading: うった あとも せぶん あんど あいわ かぶの さんじゅうごてん れいななぱーせんとお もち、そうぎょうけも よんてん きゅうさんぱーせんとお もちます。
+  - speaker: kisha
+    emotion: normal
+    text: 次の社長は、社外取締役のデイカスさんです。
+  - speaker: kisha
+    emotion: surprised
+    text: 前身の会社を含めて、初めての外国人のトップ……！
+  - speaker: reimu
+    text: デイカスは、市場シェアを一部失った事実を謙虚に受け止める、と述べました。
+    reading: でいかすわ しじょう しぇあお いちぶ うしなった じじつお けんきょに うけとめると のべました。
+# ---- 2025年7月 撤回の手紙 ----
+- id: ch6_tekkai
+  title: 撤回の手紙
+  background: sv_gendai
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: kabunushi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年7月16日。クシュタールが、取締役会あての書簡とともに撤回を発表します。
+    reading: にせんにじゅうごねん しちがつ じゅうろくにち。くしゅたーるが とりしまりやくかい あての しょかんと ともに てっかいお はっぴょう します。
+  - speaker: kisha
+    emotion: normal
+    text: 貴社には本提案についての誠実で建設的な協議には応じていただけませんでした。
+  - speaker: kisha
+    emotion: normal
+    text: 全く[真摯|しんし]な協議がなされない状況が続いていることを理由に
+  - speaker: kisha
+    emotion: surprised
+    text: 当社は、本提案を撤回します。
+    se: gaan
+    telops:
+    - {text: "クシュタール　本提案を撤回します", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: 10週間で渡された米国事業の資料は計14件だった、とも書いています。
+  - speaker: kisha
+    emotion: normal
+    text: 今年の初めには1株2600円を提案していた、とも明かしました。
+  - speaker: kisha
+    emotion: normal
+    text: 翌日の、[セブン&アイ|せぶんあんどあい]の見解です。
+  - speaker: kisha
+    emotion: normal
+    text: '[ACT|えーしーてぃー]社の決定については不本意ではあり'
+  - speaker: kisha
+    emotion: normal
+    text: '[ACT|えーしーてぃー]社が発表したリリース上の数多くの誤った記述について賛同しかねるものの'
+  - speaker: kisha
+    emotion: normal
+    text: 想定され[得た|えた]ものとして受け止めております。
+  - speaker: reimu
+    text: 会社は、誠実かつ建設的な協議を行ってきたとし、米国の独占禁止法の極めて高いハードルを挙げました。
+    reading: かいしゃわ せいじつ かつ けんせつてきな きょうぎお おこなって きたと し、べいこくの どくせん きんしほうの きわめて たかい はーどるお あげました。
+  - speaker: kabunushi
+    emotion: thinking
+    text: 言い分が、真っ向から食い違う……。
+    beat: true
+# ---- 2025年9月 ハトのマーク ----
+- id: ch6_hato
+  title: ハトのマークの値段
+  background: sv_gms_soto
+  bgm: hirusagari
+  stage:
+  - {who: nishi, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年9月1日、売却が完了します。2日後の戦略の発表で、ベインキャピタルの西直史が語ります。
+    reading: にせんにじゅうごねん くがつ ついたち、ばいきゃくが かんりょう します。ふつかごの せんりゃくの はっぴょうで べいん きゃぴたるの にし なおふみが かたります。
+  - speaker: kisha
+    emotion: normal
+    text: なぜ、ヨーカドーを買ったんですか。
+  - speaker: nishi
+    emotion: normal
+    text: 買収の決め手は、100年以上続くハトのマークへのお客様の信頼度だった。
+  - speaker: kisha
+    emotion: surprised
+    text: ハトの、マーク……。
+  - speaker: kisha
+    emotion: normal
+    text: '[ヨーカ堂|よーかどう]は2027年度から、食品とドラッグに専念するそうですね。'
+  - speaker: kisha
+    emotion: thinking
+    text: '[祖業|そぎょう]の服は、もう戻らないのか……。'
+    beat: true
+# ---- 2026年5月 訃報 ----
+- id: card2026
+  title: ''
+  background: sv_card_2026
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2026年5月18日。鈴木敏文が、93歳で亡くなります。会社の発表は、1週間後でした。
+    reading: にせんにじゅうろくねん ごがつ じゅうはちにち。すずき としふみが きゅうじゅうさんさいで なくなります。かいしゃの はっぴょうわ いっしゅうかんごでした。
+    se: namida
+- id: ch7_sokai
+  title: 2026年5月の総会
+  background: sv_kaiken
+  stage:
+  - {who: junro, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 5月27日の株主総会。冒頭で、創業者の次男の伊藤順朗会長があいさつに立ちます。
+    reading: ごがつ にじゅうしちにちの かぶぬし そうかい。ぼうとうで そうぎょうしゃの じなんの いとう じゅんろう かいちょうが あいさつに たちます。
+  - speaker: junro
+    emotion: thinking
+    text: '[名誉顧問|めいよこもん]の[鈴木敏文|すずきとしふみ]氏が私たちに残してくださったのは'
+  - speaker: junro
+    emotion: normal
+    text: 仕事に向き合う姿勢や価値観、その根底に流れる挑戦の精神であると受け止めています。
+  - speaker: junro
+    emotion: normal
+    text: これらをしっかりと受け継ぎ、進化させられるか。
+  - speaker: junro
+    emotion: thinking
+    text: 私たちに課せられた責任の重さを深く認識しています。
+  - speaker: reimu
+    text: 10年前に経営の場を去った鈴木を、創業者の息子が会長として悼みました。
+    reading: じゅうねん まえに けいえいの ばお さった すずきお、そうぎょうしゃの むすこが かいちょうと して いたみました。
+  - speaker: reimu
+    text: この総会では、株主から厳しい質問が相次ぎました。
+    reading: この そうかいでわ かぶぬしから きびしい しつもんが あいつぎました。
+  - speaker: reimu
+    text: 9月のお別れの会では、柳井正さんや孫正義さんたちが、弔辞を読みました。
+    reading: くがつの おわかれの かいでわ やない ただしさんや そん まさよしさんたちが、ちょうじお よみました。
+# ---- 論争の章 ----
+- id: ch8_ronso
+  title: コンビニはもう飽和なのか
+  background: sv_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！ コンビニは、もう飽和してるって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 数字で見てみよう。国内の[セブン-イレブン|せぶんいれぶん]は、2026年8月末で2万1748店。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年度は200店増やす計画で、[上期|かみき]に増えたのは26店なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 26店！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 200のつもりが、26……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しく開いたのは210店。差し引くと、180店あまりを閉めてるのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 開けて、閉めて……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 閉めた分だけ開けてるから、数だけで飽和とは言えないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 9月の既存店は、客数が4.1%減。売上は、0.5%増えたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: お客さんが減って、売上が増えた？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1回の買い物の額が、上がってるってことね。
+  - speaker: zundamon
+    emotion: angry
+    text: つまり、値上がりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは言い切れないの。会社が言ってるのは、高いというイメージよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年には当時の社長が、低価格の訴求が半年遅れたと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の1万人の調査では、63.9%がコンビニは割高と答えたそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほぼ3人に2人！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 当時の社長は、価格が高いというイメージを[払拭|ふっしょく]すると言ってたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあヨーカドーは、セブンのお荷物だったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者が、2005年度から2017年度までを足し合わせてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: コンビニの営業利益は、約2兆8000億円。スーパーは、約2700億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10倍！？
+  - speaker: tsumugi
+    emotion: normal
+    text: なのにスーパーへの設備投資は、約6800億円。稼いだ額より多いの。
+  - speaker: zundamon
+    emotion: angry
+    text: 子が稼いで、親が使う家なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者も、コンビニの超過利益がスーパーや百貨店に投じられてきたと見てるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただお[金|かね]の流れを正確に追った分析ではないと、本人も断ってるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: お荷物とまでは、言い切れないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の説明では、[ヨーカ堂|よーかどう]は2026年2月期に単体で6年ぶりの最終黒字よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会長の[真船|まふね]さんは、当たり前のことがないがしろにされていたと話してる。
+  - speaker: zundamon
+    emotion: happy
+    text: 当たり前のこと……ボクの部屋の掃除みたいなものなのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: それは今すぐやって。
+    se: zukko
+  - speaker: zundamon
+    emotion: surprised
+    text: あと、アメリカでは645店も閉店するって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 645店は、2026年度に北米で減らす計画の数ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 不採算店の閉店のほかに、ガソリンスタンドの[卸|おろし]への切り替えも含むの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 全部が閉店、ってわけじゃないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 北米には、1万3000店を超える店があるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1万3000のうちの、645。
+  - speaker: tsumugi
+    emotion: normal
+    text: 約5%ね。新しく開く店も、200店あまりあるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本当の注意点は、別にあるの。
+- id: ch8_chui
+  title: 近くの店の選び方
+  background: sv_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: コンビニで払ってるのは、近さと時間の分でもあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎日買う物ほど、一度だけ近所のスーパーと値札を比べてみて。
+  - speaker: zundamon
+    emotion: thinking
+    text: おにぎり1個でも？
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎日1個なら、1年で365個よ。差が10円でも、3650円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 3650円！？
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、夜中に急に食べたくなったら？
+  - speaker: tsumugi
+    emotion: happy
+    text: そのときは、近さを買えばいいのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: コンビニの側も、安さを売りにした品を増やしてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年9月には、手ごろな価格の品を270品に広げたの。
+  - speaker: tsumugi
+    emotion: happy
+    text: 急がない物はスーパーで。急ぐ物と夜の買い物は、コンビニで。
+  - speaker: zundamon
+    emotion: happy
+    text: 使い分け、なのだ。
+# ---- 現代の章 ----
+- id: ch9_gendai
+  title: セブンのこれから
+  background: sv_conbini
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年7月。[セブン&アイ|せぶんあんどあい]は、ソフトバンクなど3社から出資を受けると決めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[PayPay|ぺいぺい]と三井住友カードも入って、合わせて3000億円。1株2070円よ。'
+    telops:
+    - {text: "1株2,070円で計3000億円の出資", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: クシュタールの提案は、1株2600円だったのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: 高いほうを、断ったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会社ごと買う値段と一部の株を渡す値段は、同じ物差しで測れないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 断ったかどうかも、会社とクシュタールで言い分が違うわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ日、クシュタールはポーランドのコンビニ最大手を約87億ドルで買うと発表したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[セブン&アイ|せぶんあんどあい]が出資を検討して、7月に見送った会社よ。'
+  - speaker: zundamon
+    emotion: sad
+    text: 逃した魚が、向こうの網に……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 魚じゃなくて、1万3000店のチェーンよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: クジラなのだ！
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカの子会社の上場は、最短で27年度に延びたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: デイカス社長は、最も身近で最初に選ばれる店舗を目指すと話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会員のIDも、[PayPay|ぺいぺい]のIDにまとめていく予定よ。
+  - speaker: zundamon
+    emotion: happy
+    text: ヨーカドーで売ってた安いPBも、セブンの棚に来るのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[下期|しもき]から、順に増やす予定ね。2026年10月の時点では、まだ動いてる話よ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: '[ヨーカ堂|よーかどう]を含む会社の株も、35%は持ったまま。今も関係は続いてるの。'
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: sv_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ヨーカドーで売ってた安いPBを、セブンで買うのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[下期|しもき]からの予定よ。まだ並んでないかも。'
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあそれまでは、駅前のヨーカドーで……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 閉まったって、言ってたでしょ。
+    se: oti
+  - speaker: zundamon
+    emotion: sad
+    text: ……今日も、コンビニのおにぎりなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 子の店ばかり、稼がせてるわね。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの財布は、薄くなる一方なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも一度、近所のお店の値札を比べてみてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: やっていけるのかと言われた小さな店が、20年で親を抜いたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 稼ぐ子を、誰が持つのか。その綱引きは、今も続いてるのね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

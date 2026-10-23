@@ -1,0 +1,1479 @@
+meta:
+  title: 「販売台数、販売台数、販売台数」を追った日産、最終赤字が2年続き追浜工場の生産終了へ【ずんだもん解説】
+  slug: nissan-oppama
+  summary: 2025年7月、日産の社長は60年以上続いた追浜工場の車づくりを終えると発表しました。最終損益は2年続けて赤字です。1999年にルノーと組み、数字で立ち直ったはずの会社に何が起きていたのか。1999年から日産を追ってきた記者の目で、拡大の時代の「台数」、会長の逮捕とトップの交代、ホンダとの52日の統合協議、そして再建のいままでを、経営者の会見の言葉と双方の言い分を並べて再現ドラマでたどります。（2026年10月時点）
+  hook_line: 技術の日産は、なぜ2年で約1兆2000億円の最終赤字を出したのか。
+  sources:
+  - 日産「追浜工場の車両生産を日産自動車九州に統合へ」2025年7月15日 https://global.nissannews.com/ja-JP/releases/250715-01-j
+  - 日産「2025年度通期決算」2026年5月13日 https://global.nissannews.com/ja-JP/releases/260513-01-j
+  - 日産「経営再建計画 Re:Nissanを発表」2025年5月13日 https://global.nissannews.com/ja-JP/releases/250513-02-j
+  - 日産「日産リバイバルプラン」1999年10月18日 https://www.nissan-global.com/JP/DOCUMENT/PDF/FINANCIAL/REVIVAL/DETAIL/1999/fs_re_detail1999h.pdf
+  - 日産「Hondaとの経営統合の検討に関する基本合意書」2024年12月23日 https://global.nissannews.com/ja-JP/releases/241223-01-j
+  - 日産「2026年度第1四半期決算」2026年8月3日 https://global.nissannews.com/ja-JP/releases/260803-01-j
+  tags:
+  - 日産
+  - 追浜工場
+  - 日産自動車
+  - カルロス・ゴーン
+  - エスピノーサ
+  - リバイバルプラン
+  - Re:Nissan
+  - ホンダ
+  - 経営統合
+  - e-POWER
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 販売台数を追った
+    bottom: 追浜工場の生産終了
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: espinosa
+    label: 日産社長
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: ghosn
+    label: ゴーン
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2a32'
+  - id: saikawa
+    label: 西川社長
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#3a4a5a'
+  - id: uchida
+    label: 内田社長
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#4a3a2f'
+  - id: kisha2
+    label: 他社の記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: dealer
+    label: 販売店
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#7a4a3a'
+  - id: shain
+    label: 追浜の社員
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+scenes:
+# ---- 先出し（2025年7月15日の会見） ----
+- id: co_kaiken
+  title: ''
+  background: ns_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: espinosa, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2025年7月15日。日産の社長が、追浜工場の車づくりを終えると発表します。
+    reading: にせんにじゅうごねん しちがつ じゅうごにち。にっさんの しゃちょうが、おっぱま こうじょうの くるまづくりお おえると はっぴょう します。
+  - speaker: espinosa
+    emotion: thinking
+    text: '[追浜|オッパマ]は何十回も足を運んだ工場ですし、まさに日産のアイコンなのです。'
+  - speaker: espinosa
+    emotion: thinking
+    text: なのでこの判断についてはキャリアでも一番の苦渋の決断でした。
+    telops:
+    - {text: "日産社長（通訳）　一番の苦渋の決断", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: ……60年以上、車を作ってきた工場です。
+  - speaker: reimu
+    text: 日産の最終損益は2年続けて赤字。合わせて約1兆2000億円です。
+    reading: にっさんの さいしゅう そんえきわ にねん つづけて あかじ。あわせて やく いっちょう にせんおくえんです。
+    telops:
+    - {text: "最終赤字　2年で約1兆2000億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 技術の日産に、何が起きたのでしょうか。
+    reading: ぎじゅつの にっさんに、なにが おきたのでしょうか。
+# ---- 今の部屋（車の鍵） ----
+- id: hook
+  title: ''
+  background: ns_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ ボクの車の鍵なのだ。日産のノートなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そのノート、今は[追浜|オッパマ]工場で作ってるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 車づくりをやめる工場なのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: thinking
+    text: 最終赤字が2年続いて、1兆2000億円。そのなかで決めたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 技術の日産が、なんでそこまで……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 答えは今の社長の、ある一言にあるの。
+# ---- 仕組み：とにかく販売台数 ----
+- id: ch1_volume
+  title: とにかく販売台数
+  background: ns_yakuin
+  bgm: curious
+  stage:
+  - {who: espinosa, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2026年7月。エスピノーサ社長は通信社の取材で、以前の日産をこう語りました。
+    reading: にせんにじゅうろくねん しちがつ。えすぴのーさ しゃちょうわ つうしんしゃの しゅざいで、いぜんの にっさんお こう かたりました。
+  - speaker: espinosa
+    emotion: thinking
+    text: 以前は『とにかく販売台数、販売台数、販売台数』という感じだった。
+    telops:
+    - {text: "日産社長　以前は「とにかく販売台数」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: espinosa
+    emotion: normal
+    text: これは自動車会社の運営として好ましい方法ではない
+- id: ch1_power88
+  title: ''
+  background: ns_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年6月。日産は新しい中期計画を発表します。名前は、日産パワー88。
+    reading: にせん じゅういちねん ろくがつ。にっさんわ あたらしい ちゅうき けいかくお はっぴょう します。なまえわ にっさん ぱわー えいてぃえいと。
+  - speaker: kisha2
+    emotion: normal
+    text: '[88|エイティエイト]って、[何|なん]の数字だ。'
+  - speaker: zundamon
+    emotion: normal
+    text: 世界シェア8%と、営業利益率8%。2016年度までにです。
+    telops:
+    - {text: "パワー88　世界シェア8%・利益率8%", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha2
+    emotion: thinking
+    text: 利益率8%って、どのくらいだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 100円売って、8円もうけます。
+    se: hirameki
+  - speaker: kisha2
+    emotion: normal
+    text: シェア8%は？
+  - speaker: zundamon
+    emotion: normal
+    text: 世界で売れる車の、100台に8台です。
+  - speaker: kisha2
+    emotion: thinking
+    text: 台数を、一気に増やす計画か。
+  - speaker: reimu
+    text: どちらの8%にも、日産は届きませんでした。
+    reading: どちらの はちぱーせんとにも、にっさんわ とどきませんでした。
+  - speaker: reimu
+    text: この計画の投資が余った生産能力を残した、と会社はのちに説明します。
+    reading: この けいかくの とうしが あまった せいさん のうりょくお のこしたと、かいしゃわ のちに せつめい します。
+- id: ch1_america
+  title: 値引きとレンタカー
+  background: ns_america
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: dealer, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2020年ごろ。アメリカの日産の販売店です。
+    reading: にせんにじゅうねん ごろ。あめりかの にっさんの はんばいてんです。
+  - speaker: dealer
+    emotion: happy
+    text: いらっしゃい！ 今ならローグが3000ドル引きだよ！
+  - speaker: zundamon
+    emotion: surprised
+    text: 3000ドル！？ 新車ですよね。
+  - speaker: dealer
+    emotion: normal
+    text: 新車さ。モデルが出てから、だいぶたってるけどね。
+  - speaker: zundamon
+    emotion: normal
+    text: どのくらいですか。
+  - speaker: dealer
+    emotion: normal
+    text: 日産の車は平均で5年以上。業界のふつうは4年くらいだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 古くなった分を、値引きで売る……。
+  - speaker: dealer
+    emotion: happy
+    text: それに日産は、レンタカー会社にもまとめて売ってるんだ！
+  - speaker: zundamon
+    emotion: surprised
+    text: まとめて！？
+  - speaker: dealer
+    emotion: happy
+    text: 台数は出るよ。台数だけは。
+    beat: true
+  - speaker: reimu
+    text: 2019年、当時の社長は値引きとレンタカー向けに頼り、ブランドの価値が下がったと説明しています。
+    reading: にせん じゅうくねん とうじの しゃちょうわ ねびきと れんたかーむけに たより、ぶらんどの かちが さがったと せつめい して います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 安く売るほど、日産の名前が安くなるのだ……。
+- id: ch1_hybrid
+  title: ''
+  background: ns_showroom
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: dealer, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2024年。アメリカでは、ハイブリッド車の人気が急に高まります。
+    reading: にせん にじゅうよねん。あめりかでわ、はいぶりっどしゃの にんきが きゅうに たかまります。
+  - speaker: dealer
+    emotion: thinking
+    text: お客さんがみんな、ハイブリッドはあるかって聞くんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 日産の答えは。
+  - speaker: dealer
+    emotion: sad
+    text: ……うちには、無い。
+    background: ns_showroom_kara
+    se: chin
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本には、[e-POWER|イーパワー]があるのに！？
+  - speaker: dealer
+    emotion: sad
+    text: アメリカには、まだ来てないんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 技術の日産なのに、売れ筋が無い……。
+  - speaker: reimu
+    text: 北米の上期の営業損益は、前の年の2414億円の黒字から、41億円の赤字に変わります。
+    reading: ほくべいの かみきの えいぎょう そんえきわ まえの としの にせん よんひゃく じゅうよんおくえんの くろじから、よんじゅういちおくえんの あかじに かわります。
+- id: ch1_tsukon
+  title: 痛恨の極み
+  background: ns_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: uchida, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2024年11月7日。上期の決算で、営業利益は前の年の約1割に落ちました。
+    reading: にせん にじゅうよねん じゅういちがつ なのか。かみきの けっさんで、えいぎょう りえきわ まえの としの やく いちわりに おちました。
+  - speaker: zundamon
+    emotion: normal
+    text: 北米の赤字について、お聞かせください。
+  - speaker: uchida
+    emotion: thinking
+    text: 厳しい状況を迎えていることは痛恨の極み。
+    telops:
+    - {text: "内田社長　痛恨の極み", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: uchida
+    emotion: thinking
+    text: 顧客ニーズに応える商品をタイムリーに提供できていないことも課題
+  - speaker: zundamon
+    emotion: normal
+    text: ハイブリッドが、無いということですか。
+  - speaker: reimu
+    text: 日産は、アメリカで急に伸びたハイブリッドなどを持っていない、と説明しました。
+    reading: にっさんわ あめりかで きゅうに のびた はいぶりっどなどお もって いないと、せつめい しました。
+  - speaker: reimu
+    text: 9000人の削減と、世界の生産能力の2割削減も発表します。
+    reading: きゅうせんにんの さくげんと、せかいの せいさん のうりょくの にわり さくげんも はっぴょう します。
+  - speaker: uchida
+    emotion: normal
+    text: 今回の結果を踏まえ経営としての責任を示すため、私の報酬を今月から50％返上する。
+  - speaker: zundamon
+    emotion: thinking
+    text: 台数のために広げた工場を、今度は減らすのだ……。
+    se: shobon
+  - speaker: reimu
+    text: この年度の営業利益率は0.6%。100円売って、残るのは60銭です。
+    reading: この ねんどの えいぎょう りえきりつわ れいてんろく ぱーせんと。ひゃくえん うって、のこるのわ ろくじっせんです。
+  - speaker: reimu
+    text: なぜ、ここまで来たのか。日産が一度目の立て直しに挑んだ、1999年から見ていきます。
+    reading: なぜ ここまで きたのか。にっさんが いちどめの たてなおしに いどんだ、せんきゅうひゃく きゅうじゅうくねんから みて いきます。
+# ---- 1999年 リバイバルプラン ----
+- id: card1999
+  title: ''
+  background: ns_card_1999
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1999年3月。赤字の年が続いていた日産は、フランスのルノーから36.8%の出資を受けます。
+    reading: せんきゅうひゃく きゅうじゅうくねん さんがつ。あかじの としが つづいて いた にっさんわ、ふらんすの るのーから さんじゅうろくてんはち ぱーせんとの しゅっしお うけます。
+- id: ch2_renault
+  title: ''
+  background: ns_paris
+  cuts:
+  - speaker: reimu
+    text: 6月、カルロス・ゴーン氏がCOOに。9月には、ルノーから17人の管理職が来ます。
+    reading: ろくがつ かるろす ごーんしが しーおーおーに。くがつにわ、るのーから じゅうななにんの かんりしょくが きます。
+- id: ch2_plan
+  title: 2万1000人と5つの工場
+  background: ns_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: surprised}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月18日。日産が再建の計画を発表します。記者は、この年に入ったばかりの新人でした。
+    reading: じゅうがつ じゅうはちにち。にっさんが さいけんの けいかくお はっぴょう します。きしゃわ この としに はいった ばかりの しんじんでした。
+  - speaker: kisha2
+    emotion: normal
+    text: おい新人。資料の数字、読み上げてみろ。
+  - speaker: zundamon
+    emotion: surprised
+    text: はいっ！ 人員の削減、2万1000人……。
+  - speaker: kisha2
+    emotion: normal
+    text: それから。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[村山|ムラヤマ]工場など、5つの工場を閉鎖……。'
+    telops:
+    - {text: "1999年　2万1000人削減・5工場閉鎖", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha2
+    emotion: normal
+    text: 部品を買う会社も、1145社から600社に絞るそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほぼ半分！？
+  - speaker: kisha2
+    emotion: normal
+    text: 約束も3つある。2000年度に黒字、2002年度に利益率4.5%超え。
+  - speaker: kisha2
+    emotion: normal
+    text: それに借金を半分。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1つでも外れたら、どうなるんですか。
+  - speaker: reimu
+    text: 報道によれば、1つでも外れたら経営陣が全員辞める、という約束でした。
+    reading: ほうどうに よれば ひとつでも はずれたら けいえいじんが ぜんいん やめる という やくそくでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 全員！？ 本気なのだ……。
+  - speaker: kisha2
+    emotion: thinking
+    text: 新人。お前が辞めるわけじゃないぞ。
+    beat: true
+  - speaker: reimu
+    text: 26年後。日産はもう一度、2万人と工場の閉鎖を発表することになります。
+    reading: にじゅうろくねんご。にっさんわ もう いちど、にまんにんと こうじょうの へいさお はっぴょう する ことに なります。
+- id: ch2_vji
+  title: V字回復
+  background: ns_kaigi
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: ghosn, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1999年度の最終損益は、6844億円の赤字でした。そして2001年5月の決算です。
+    reading: せんきゅうひゃく きゅうじゅうくねんどの さいしゅう そんえきわ、ろくせん はっぴゃく よんじゅうよんおくえんの あかじでした。そして にせんいちねん ごがつの けっさんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2000年度の最終利益……3311億円！？
+    background: ns_kaigi_up
+    se: levelup
+    telops:
+    - {text: "最終利益3311億円　過去最高", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: ghosn
+    emotion: happy
+    text: 我々は[NRP|エヌアールピー]発表後の一年目に、我々の知り得る限り
+  - speaker: ghosn
+    emotion: happy
+    text: 当社の歴史上最高の業績をあげる事ができた。
+  - speaker: zundamon
+    emotion: surprised
+    text: 6844億円の赤字から、1年で……。
+  - speaker: reimu
+    text: 翌年には、3つの約束を1年早く達成したと説明します。
+    reading: よくねんにわ、みっつの やくそくお いちねん はやく たっせい したと せつめい します。
+  - speaker: zundamon
+    emotion: happy
+    text: 数字で約束して、数字で返す。覚えたのだ！
+  - speaker: reimu
+    text: 次の計画の約束には、販売を100万台増やすことが入りました。
+    reading: つぎの けいかくの やくそくにわ、はんばいお ひゃくまんだい ふやす ことが はいりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 次は、台数の約束……。
+  - speaker: reimu
+    text: 数字で立ち直った会社は、なぜ数字で崩れていったのか。
+    reading: すうじで たちなおった かいしゃわ、なぜ すうじで くずれて いったのか。
+# ---- 2016年 追浜のe-POWER ----
+- id: card2016
+  title: ''
+  background: ns_card_2016
+  cuts:
+  - speaker: reimu
+    text: 2016年11月。追浜工場で作るノートe-POWERが、発売されます。
+    reading: にせん じゅうろくねん じゅういちがつ。おっぱま こうじょうで つくる のーと いーぱわーが、はつばい されます。
+- id: ch3_epower
+  title: 追浜のe-POWER
+  background: ns_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: '[追浜|オッパマ]工場は、いつからあるんですか。'
+  - speaker: shain
+    emotion: happy
+    text: 1961年です。最初はダットサン ブルーバードでした。
+  - speaker: shain
+    emotion: normal
+    text: 2010年からは、量産型のEVのリーフも作ってます。
+  - speaker: zundamon
+    emotion: surprised
+    text: EVまで！？
+  - speaker: shain
+    emotion: happy
+    text: それに11月は、ノートの販売が国内で1位だったんです！
+  - speaker: zundamon
+    emotion: surprised
+    text: 軽自動車も入れて、ですか！？
+  - speaker: shain
+    emotion: happy
+    text: はい。日産の車が月間で1位なのは、30年2か月ぶりだそうです。
+  - speaker: zundamon
+    emotion: happy
+    text: 30年……。前の1位のとき、ボクはまだ記者じゃないのだ。
+    se: manuke
+  - speaker: zundamon
+    emotion: normal
+    text: これ、アメリカでも売るんですか。
+  - speaker: shain
+    emotion: thinking
+    text: ……さあ、どうなんでしょう。
+  - speaker: reimu
+    text: e-POWERを積んだ車がアメリカで売られるのは、10年後の2026年秋です。
+    reading: いーぱわーお つんだ くるまが あめりかで うられるのわ、じゅうねんごの にせん にじゅうろくねん あきです。
+  - speaker: reimu
+    text: 2017年度。日産の世界販売は577万台に達します。いまも、これが日産の最高です。
+    reading: にせん じゅうななねんど。にっさんの せかい はんばいわ ごひゃく ななじゅうななまんだいに たっします。いまも これが にっさんの さいこうです。
+# ---- 2018年 逮捕の夜 ----
+- id: card2018
+  title: ''
+  background: ns_card_2018
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2018年11月19日の夜。
+    reading: にせん じゅうはちねん じゅういちがつ じゅうくにちの よる。
+- id: ch4_taiho
+  title: ''
+  background: ns_kuko
+  cuts:
+  - speaker: reimu
+    text: 東京地検特捜部が、日産のゴーン会長とケリー代表取締役を逮捕します。
+    reading: とうきょう ちけん とくそうぶが、にっさんの ごーん かいちょうと けりー だいひょう とりしまりやくお たいほ します。
+  - speaker: reimu
+    text: 容疑は、ゴーン会長の報酬を有価証券報告書に少なく書いた、金融商品取引法違反でした。
+    reading: ようぎわ ごーん かいちょうの ほうしゅうお ゆうか しょうけん ほうこくしょに すくなく かいた、きんゆう しょうひん とりひきほう いはんでした。
+  - speaker: reimu
+    text: ゴーン氏はのちに、容疑は事実無根だと主張します。
+    reading: ごーんしわ のちに、ようぎわ じじつ むこんだと しゅちょう します。
+- id: ch4_saikawa
+  title: ゴーン統治の負の側面
+  background: ns_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: surprised}
+  - {who: saikawa, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じ日の夜遅く、西川社長がひとりで会見に立ちます。
+    reading: おなじ ひの よる おそく、さいかわ しゃちょうが ひとりで かいけんに たちます。
+  - speaker: saikawa
+    emotion: thinking
+    text: 非常識の時間の会見で申し訳ありません
+  - speaker: zundamon
+    emotion: normal
+    text: 会社は、何を見つけたんですか。
+  - speaker: reimu
+    text: 日産は、内部通報を受けて数か月、社内で調べてきたと発表しました。
+    reading: にっさんわ ないぶ つうほうお うけて すうかげつ、しゃないで しらべて きたと はっぴょう しました。
+  - speaker: reimu
+    text: 日産が挙げた不正は、報酬の過少な記載と、目的を偽った投資資金や私的な経費の支出です。
+    reading: にっさんが あげた ふせいわ ほうしゅうの かしょうな きさいと、もくてきお いつわった とうし しきんや してきな けいひの ししゅつです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今の、お気持ちは。
+  - speaker: saikawa
+    emotion: angry
+    text: 残念という言葉ではなく、強い憤りということ。
+  - speaker: saikawa
+    emotion: thinking
+    text: 私としては落胆ということを強く覚えています
+  - speaker: zundamon
+    emotion: normal
+    text: なぜ、止められなかったんですか。
+  - speaker: saikawa
+    emotion: thinking
+    text: ふり返ると、2005年にルノーと日産の[CEO|シーイーオー]を兼務することになり
+  - speaker: saikawa
+    emotion: thinking
+    text: その結果として将来的に何が起きるのかということをあまり議論しませんでした。
+  - speaker: saikawa
+    emotion: normal
+    text: その中で権力が集中していったと言えるのではないかと思っています
+  - speaker: saikawa
+    emotion: angry
+    text: 長年にわたるゴーン統治の[負|ふ]の側面と言わざるを得ません
+    se: don
+    telops:
+    - {text: "西川社長　ゴーン統治の負の側面", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: ……20年近く、日産の顔だった人なのだ。
+  - speaker: reimu
+    text: 3日後、取締役会はゴーン氏の会長職を解きます。
+    reading: みっかご、とりしまりやくかいわ ごーんしの かいちょうしょくお ときます。
+- id: ch4_kotai
+  title: トップが次々に替わる
+  background: ns_yakuin
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2019年9月。株価に連動する報酬の上乗せを、西川社長も受けていたと分かります。
+    reading: にせん じゅうくねん くがつ。かぶかに れんどう する ほうしゅうの うわのせお、さいかわ しゃちょうも うけて いたと わかります。
+  - speaker: reimu
+    text: 違法性はないとされましたが、取締役会は辞任を求めました。
+    reading: いほうせいわ ないと されましたが、とりしまりやくかいわ じにんお もとめました。
+  - speaker: kisha2
+    emotion: surprised
+    text: '[西川|さいかわ]社長が、辞任か！'
+  - speaker: zundamon
+    emotion: normal
+    text: 12月からは、[内田|うちだ]社長の新しい体制です。
+  - speaker: kisha2
+    emotion: normal
+    text: 副[COO|シーオーオー]は、1か月足らずで辞めたぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名刺を作り直す前に！？
+    beat: true
+- id: ch4_lebanon
+  title: レバノンからの声明
+  background: ns_kaiken
+  bgm: serious
+  stage:
+  - {who: ghosn, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2019年12月29日。保釈中のゴーン氏が、出国の記録の無いまま日本を出ます。
+    reading: にせん じゅうくねん じゅうにがつ にじゅうくにち。ほしゃくちゅうの ごーんしが、しゅっこくの きろくの ない まま にほんお でます。
+  - speaker: reimu
+    text: 31日、ゴーン氏は声明を出しました。
+    reading: さんじゅういちにち、ごーんしわ せいめいお だしました。
+  - speaker: ghosn
+    emotion: normal
+    text: 私はいまレバノンにいる。
+  - speaker: ghosn
+    emotion: angry
+    text: 私は正義から逃げたのではない。不公正と政治的迫害から逃れたのだ
+  - speaker: reimu
+    text: 年が明けて1月7日。日産は、日本の司法制度を無視した行為であり、極めて遺憾、と声明を出しました。
+    reading: としが あけて いちがつ なのか。にっさんわ にほんの しほう せいどお むし した こういで あり、きわめて いかんと せいめいお だしました。
+- id: ch5_next
+  title: 2度目の大赤字
+  background: ns_kaigi_akaji
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: uchida, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2020年5月。2019年度の最終損益は6712億円の赤字。20年ぶりの大きさです。
+    reading: にせんにじゅうねん ごがつ。にせん じゅうくねんどの さいしゅう そんえきわ ろくせん ななひゃく じゅうにおくえんの あかじ。にじゅうねんぶりの おおきさです。
+  - speaker: reimu
+    text: 世界の生産能力は720万台から540万台へ。車種も2割減らします。
+    reading: せかいの せいさん のうりょくわ ななひゃく にじゅうまんだいから ごひゃく よんじゅうまんだいえ。しゃしゅも にわり へらします。
+  - speaker: zundamon
+    emotion: surprised
+    text: 180万台分も、減らすんですか。
+  - speaker: uchida
+    emotion: thinking
+    text: 失敗を認め、正しい方向に向かうことが欠かせない
+  - speaker: reimu
+    text: 翌月、内田社長は経済誌の取材にこう語っています。
+    reading: よくげつ うちだ しゃちょうわ、けいざいしの しゅざいに こう かたって います。
+  - speaker: uchida
+    emotion: thinking
+    text: 手を広げた上で、きちんと売っていく体制をつくれなかった
+  - speaker: zundamon
+    emotion: thinking
+    text: ……手を、広げた。
+# ---- 2024〜2025年 ホンダとの52日 ----
+- id: card2024
+  title: ''
+  background: ns_card_2024
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2024年12月23日。
+    reading: にせん にじゅうよねん じゅうにがつ にじゅうさんにち。
+- id: ch6_honda
+  title: 52日の婚約
+  background: ns_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: surprised}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 日産とホンダが、経営統合の検討で基本合意します。
+    reading: にっさんと ほんだが、けいえい とうごうの けんとうで きほん ごうい します。
+  - speaker: kisha2
+    emotion: normal
+    text: 共同の[持株会社|モチカブガイシャ]をつくって、両社がその下に並ぶ形だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売上高30兆円、営業利益3兆円超えを目指す……。
+  - speaker: kisha2
+    emotion: thinking
+    text: ただ[持株会社|モチカブガイシャ]の社長と取締役の過半は、ホンダが指名する。
+  - speaker: reimu
+    text: ホンダの三部社長は会見で、こう述べました。はっきり申し上げるのは救済ではないということ。
+    reading: ほんだの みべ しゃちょうわ かいけんで こう のべました。はっきり もうしあげるのわ、きゅうさいでわ ないと いう こと。
+  - speaker: zundamon
+    emotion: thinking
+    text: 救済ではない……。
+- id: ch6_kogaisha
+  title: ''
+  background: ns_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年2月。ホンダが日産に子会社になる案を示した、と報じられ、日産の株価は急落します。
+    reading: にせんにじゅうごねん にがつ。ほんだが にっさんに こがいしゃに なる あんお しめしたと ほうじられ、にっさんの かぶかわ きゅうらく します。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[持株会社|モチカブガイシャ]の下に、並ぶ話でしたよね！？'
+    se: bikkuri
+  - speaker: kisha2
+    emotion: thinking
+    text: 並ぶ話が、ぶら下がる話になったわけだ。
+    beat: true
+- id: ch6_kaiyaku
+  title: ''
+  background: ns_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: uchida, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2月13日。両社は基本合意を解約し、両社長が別々に会見します。
+    reading: にがつ じゅうさんにち。りょうしゃわ きほん ごういお かいやく し、りょうしゃちょうが べつべつに かいけん します。
+  - speaker: reimu
+    text: ホンダの三部社長は、スピード感を踏まえると危機感を覚えた、と語りました。
+    reading: ほんだの みべ しゃちょうわ、すぴーどかんお ふまえると ききかんお おぼえたと かたりました。
+  - speaker: zundamon
+    emotion: normal
+    text: 子会社化の提案を、なぜ受けなかったんですか。
+  - speaker: uchida
+    emotion: thinking
+    text: ホンダから提案のあった完全子会社化は日産自動車の自主性や強みが
+  - speaker: uchida
+    emotion: thinking
+    text: 発揮できる形になるのか非常に悩んだ。
+  - speaker: zundamon
+    emotion: normal
+    text: プライドの問題だ、という見方もありますが。
+  - speaker: uchida
+    emotion: normal
+    text: 日産がプライドにこだわっているといった見方もあるが、そうした事実はない。
+  - speaker: zundamon
+    emotion: thinking
+    text: この先、1社でやっていけますか。
+  - speaker: uchida
+    emotion: thinking
+    text: 我々が将来的に[個社で（生き残る）|こしゃで]というのは厳しいと思っている。
+  - speaker: reimu
+    text: 合意から解約まで、52日でした。
+    reading: ごういから かいやくまで、ごじゅうに にちでした。
+    telops:
+    - {text: "合意から解約まで52日", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 1社では厳しい。でも、子会社にはならない……。
+# ---- 2025年 新社長、Re:Nissan、追浜 ----
+- id: card2025
+  title: ''
+  background: ns_card_2025
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2025年3月11日。
+    reading: にせんにじゅうごねん さんがつ じゅういちにち。
+- id: ch7_konnamono
+  title: 日産はこんなものではない
+  background: ns_kaiken
+  stage:
+  - {who: zundamon, x: 0.22, flip: true, tag: 記者, emotion: normal}
+  - {who: uchida, x: 0.56, emotion: normal}
+  - {who: espinosa, x: 0.8, tag: 新社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 内田社長の退任と、次の社長が発表されます。
+    reading: うちだ しゃちょうの たいにんと、つぎの しゃちょうが はっぴょう されます。
+  - speaker: uchida
+    emotion: normal
+    text: 今月末をもって職を退くことになりました。
+  - speaker: uchida
+    emotion: normal
+    text: 日産はこの先必ず復活できると確信しています。
+  - speaker: zundamon
+    emotion: normal
+    text: 新しい社長に、伺います。
+  - speaker: espinosa
+    emotion: normal
+    text: この会社に安定性と成長を取り戻していきたいと考えております。
+  - speaker: espinosa
+    emotion: happy
+    text: 日産はこんなものではないと心から信じております。
+    se: jaan
+  - speaker: reimu
+    text: エスピノーサ氏は2003年にメキシコ日産に入った、商品企画の出身です。
+    reading: えすぴのーさしわ にせんさんねんに めきしこ にっさんに はいった、しょうひん きかくの しゅっしんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: こんなものではない……。その先を、見届けるのだ。
+- id: ch7_renissan
+  title: ''
+  background: ns_kaigi_akaji
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 5月13日。2024年度の最終損益は6709億円の赤字。日産は再建計画を出します。
+    reading: ごがつ じゅうさんにち。にせん にじゅうよねんどの さいしゅう そんえきわ ろくせん ななひゃく きゅうおくえんの あかじ。にっさんわ さいけん けいかくお だします。
+- id: ch8_oppama
+  title: 追浜の決断
+  background: ns_kaiken
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.22, flip: true, tag: 記者, emotion: thinking}
+  - {who: kisha2, x: 0.56, emotion: normal}
+  - {who: espinosa, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 7月15日。追浜工場の車の生産を、2027年度末で終えると発表されます。
+    reading: しちがつ じゅうごにち。おっぱま こうじょうの くるまの せいさんお、にせん にじゅうななねんどまつで おえると はっぴょう されます。
+  - speaker: espinosa
+    emotion: thinking
+    text: リーダーとしてこんなことは最もやりたくない仕事。
+  - speaker: espinosa
+    emotion: thinking
+    text: そして同時に、私がやらなければならない仕事です。
+  - speaker: espinosa
+    emotion: sad
+    text: 最後になりますが、従業員に深くお詫びしたいと思います
+  - speaker: zundamon
+    emotion: normal
+    text: なぜ、[追浜|オッパマ]なんですか。
+  - speaker: kisha2
+    emotion: normal
+    text: 会社の説明だと、国内の工場の稼働率は約6割だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 6割しか、動いてない……。
+  - speaker: kisha2
+    emotion: normal
+    text: '[追浜|オッパマ]の分を九州に移せば、九州はほぼ100%。国内の生産コストも約15%下がるそうだ。'
+  - speaker: kisha2
+    emotion: thinking
+    text: 国内でこの規模の削減は、2001年の[村山|ムラヤマ]工場以来だそうだ。
+  - speaker: zundamon
+    emotion: sad
+    text: '[村山|ムラヤマ]……。新人のとき、資料で読んだ名前なのだ。'
+  - speaker: zundamon
+    emotion: normal
+    text: 国内の工場は、まだ減るんですか。
+  - speaker: espinosa
+    emotion: normal
+    text: 日本でのこれ以上の車両生産集約はありません
+  - speaker: espinosa
+    emotion: normal
+    text: ここで生産されたクルマは技術の日産の象徴であり、誇りであり、宝物です。
+    telops:
+    - {text: "日産社長（通訳）　“技術の日産”の象徴", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha2
+    emotion: normal
+    text: 跡地は、どうされるんですか。
+  - speaker: espinosa
+    emotion: normal
+    text: 丸ごと敷地を買いたい人がいれば売るかもしれないし、新しい何かをするかもしれない。
+  - speaker: kisha2
+    emotion: normal
+    text: 働く約2400人は、2027年度の終わりまで[追浜|オッパマ]で勤めるそうだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 研究所やテストコースは、どうなりますか。
+  - speaker: kisha2
+    emotion: normal
+    text: そっちは残る。終わるのは車の生産だけだ。
+- id: ch8_renissan
+  title: 26年ぶりの2万人
+  background: ns_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: thinking}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha2
+    emotion: normal
+    text: おい、ベテラン。5月の再建計画の数字、読み上げてみろ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[Re:Nissan|リニッサン]。人員の削減、2万人……。'
+  - speaker: kisha2
+    emotion: thinking
+    text: それから。
+  - speaker: zundamon
+    emotion: thinking
+    text: 車の工場を、17から10に……。
+  - speaker: zundamon
+    emotion: sad
+    text: 26年前と、ほとんど同じ数字なのだ……。
+    se: gaan
+    slide:
+      title: 26年前と今
+      bullets:
+      - 1999年　2万1000人・5工場
+      - 2025年　2万人・7拠点
+  - speaker: kisha2
+    emotion: thinking
+    text: 生産をやめる7つの拠点のうちの1つが、[追浜|オッパマ]だったわけだ。
+  - speaker: kisha2
+    emotion: normal
+    text: 違うのは、1999年はルノーの出資があったことだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今度は、ホンダとの話が壊れたあとの自力の再建……。
+  - speaker: kisha2
+    emotion: normal
+    text: 約束は、2026年度までに車の事業の営業利益を黒字にすることだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 数字で約束する。そこは、26年前と同じですね。
+  - speaker: kisha2
+    emotion: thinking
+    text: 守れなかったら、また読み上げることになるぞ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……3度目は、読みたくないのだ。
+- id: ch8_kojo
+  title: ''
+  background: ns_kojo
+  bgm: 223am
+  stage:
+  - {who: shain, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1961年のブルーバードから、追浜で作った車は1780万台を超えます。
+    reading: せんきゅうひゃく ろくじゅういちねんの ぶるーばーどから、おっぱまで つくった くるまわ せんななひゃく はちじゅうまんだいお こえます。
+  - speaker: shain
+    emotion: normal
+    text: 今日も、ラインは動いてます。
+  - speaker: reimu
+    text: その車づくりは、2028年3月に終わります。
+    reading: その くるまづくりわ、にせん にじゅうはちねん さんがつに おわります。
+    background: ns_kojo_teishi
+  - speaker: reimu
+    text: '[追浜|オッパマ]の車づくりは、2028年3月まで続きます。'
+    reading: おっぱまの くるまづくりわ、にせんにじゅうはちねん さんがつまで つづきます。
+    se: namida
+- id: ch9_honsha
+  title: 本社を売って借りる
+  background: ns_yakuin
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年は、お金の手当ても続きます。
+    reading: にせんにじゅうごねんわ、おかねの てあても つづきます。
+  - speaker: kisha2
+    emotion: normal
+    text: 7月の社債などは約8600億円。利率は最大[8.125%|はってんいちにーごパーセント]、日産で過去最高だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 高い利子でも、借りるんですね。
+  - speaker: kisha2
+    emotion: thinking
+    text: 11月には、横浜の本社を970億円で売った。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本社を！？ 出ていくんですか。
+  - speaker: kisha2
+    emotion: normal
+    text: いや。20年借りて、そのまま使うそうだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 自分の家を売って、家賃を払って住むのと同じですか。
+  - speaker: kisha2
+    emotion: normal
+    text: そういうことだ。海外の格付けも、投資に向かない水準まで下がった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 家賃を払いながら、立て直す……。
+  - speaker: kisha2
+    emotion: thinking
+    text: 26年前は出資で立て直した。今度は売って借りて、立て直す。
+  - speaker: zundamon
+    emotion: thinking
+    text: 立て直し方も、時代で変わるんですね。
+- id: card2026
+  title: ''
+  background: ns_card_2026
+  cuts:
+  - speaker: reimu
+    text: 2026年5月13日。
+    reading: にせんにじゅうろくねん ごがつ じゅうさんにち。
+- id: ch9_kessan
+  title: 2年で1兆2000億円
+  background: ns_kaigi_akaji
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2025年度の最終損益は、5331億円の赤字でした。
+    reading: にせん にじゅうごねんどの さいしゅう そんえきわ、ごせん さんびゃく さんじゅういちおくえんの あかじでした。
+  - speaker: kisha2
+    emotion: thinking
+    text: 2年で合わせて、約1兆2000億円か。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1兆2000億円って、どのくらいなのだ……。
+  - speaker: kisha2
+    emotion: normal
+    text: 1日あたりにすると、約16億円の赤字だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1日で、16億……。
+  - speaker: zundamon
+    emotion: normal
+    text: でも本業の営業損益は、580億円の黒字です。
+  - speaker: kisha2
+    emotion: normal
+    text: 赤字の多くは、工場の統廃合や減損といった一度きりの損失だそうだ。
+  - speaker: kisha2
+    emotion: thinking
+    text: 本業の足を一番引っぱったのは、アメリカの関税。2860億円だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 関税だけで、2860億円……。
+  - speaker: kisha2
+    emotion: thinking
+    text: 向かい風の中で、本業の黒字は守ったわけだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1999年から、もう27年なのだ……。
+  - speaker: kisha2
+    emotion: happy
+    text: お互い、[白髪|しらが]が増えたな。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクの髪は、ずっと緑です。
+    beat: true
+# ---- 論争の章（今の部屋） ----
+- id: ch10_ronso
+  title: ゴーン氏がいなくなったから？
+  background: ns_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: 日産が傾いたのは、ゴーンさんがいなくなったからだって！
+  - speaker: tsumugi
+    emotion: normal
+    text: ゴーンさんの時代に、V字回復したのは本当よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 577万台の最高も2017年度。2018年の秋に、会長は逮捕されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、ゴーンさん本人も近いことを言ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の日産は自らの弱さと失敗によって疎外されてしまった、って。
+  - speaker: zundamon
+    emotion: happy
+    text: 本人が言うなら、間違いないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは、ゴーンさんの言い分ね。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の社長は、10年ほど前の経営陣が800万台を目指したことを挙げてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年には[西川|さいかわ]社長が、値引き頼みと余った工場の問題を説明してたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 言ってることが、正反対！
+  - speaker: tsumugi
+    emotion: normal
+    text: どっちか1人のせいにはできないの。いくつも重なったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: いくつも？
+  - speaker: tsumugi
+    emotion: normal
+    text: 台数を追って広げた工場と、値引き。トップが次々に替わった混乱。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカのハイブリッドの遅れに、中国の変化。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 中国の販売は2018年の156万台から、2024年は約70万台よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分以下！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 中国では新エネルギー車が急に伸びて、値下げの競争も激しくなったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 安売りの戦いに、今度は巻き込まれる側……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今はアメリカの関税やインフレも、利益を削ってるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 原因は、1つじゃないのか……。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、台数なんて追わなきゃいいのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 売れなかったら、工場はもっと余るわよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……難しいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから工場のほうを、売れる台数に合わせて減らしてるの。
+- id: ch10_saiban
+  title: ゴーン氏の裁判は
+  background: ns_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそもゴーンさんは、有罪になったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: なってないわ。日本では、裁判が開かれてないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 開かれてない！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 国外に出たから、起訴されたまま裁判ができないのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一審|いっしん]と二審で有罪とされたのは、一緒に起訴されたケリー元代表取締役。'
+    background: ns_houtei
+  - speaker: tsumugi
+    emotion: normal
+    text: それも2017年度の分だけで、執行猶予つき。日産の会社としては罰金2億円よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 本人じゃないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: その判決で裁判所は、ゴーンさんの未払いの報酬約91億円を認めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 退任後に払う予定で、報告書に書くべきだったお[金|かね]ってこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ゴーンさんは、報酬は決まっていないし払われてもいないと主張してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 特別背任のほうは、一度も審理されてないわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 一度も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: ゴーンさんは、日産と検察の共謀で逮捕が仕組まれたと主張してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日産は陰謀を否定して、社内調査で不正の証拠が見つかったと言ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年に日産は、約100億円の賠償を求めてゴーンさんを訴えたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 長い拘束の扱いも、国内外で議論になったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言い分は、ぶつかったままなのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: フランスでは別の件の裁判が開かれて、判決は2027年1月の予定よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: まだ、終わってない話なのか。
+- id: ch10_ev
+  title: EVで出遅れたから？
+  background: ns_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、EVで出遅れたからなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 半分は違うの。日産は2010年に、[追浜|オッパマ]で量産型のEVのリーフを作り始めてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 早いほう！？
+  - speaker: zundamon
+    emotion: happy
+    text: 知ってるのだ。リーフは、世界初のEVなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: EVはもっと前からあるの。日産の言い方は、量産型よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……盛ったのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカで足りなかったのは、EVよりハイブリッドよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 販売店の人が、うちには無いって言ってたやつ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本の[e-POWER|イーパワー]がアメリカで売られるのは、2026年の秋。
+  - speaker: zundamon
+    emotion: angry
+    text: 日本で1位になってから、10年もかかったのだ！？
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: そのあいだに、アメリカのシェアは約9%から6%強に下がったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 11台に1台が、16台に1台くらい……。
+- id: ch10_chui
+  title: もうすぐ潰れる？
+  background: ns_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ネットには、日産はもうすぐ潰れるって書いてあったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年11月に英紙は、日産に近い幹部の言葉としてこう報じたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 12か月か14か月で、生き残らなければならない。
+  - speaker: zundamon
+    emotion: surprised
+    text: もう2年近くたってるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月末で、車の事業の手元の現金は2兆2000億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2兆円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本業の営業損益も、2年とも黒字だったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ海外の大手3社の格付けは、投資に向かない水準まで下がってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: すぐ潰れる説も、もう安心説も言い過ぎってことね。
+  - speaker: zundamon
+    emotion: angry
+    text: どっちなのだ！？ はっきりしてほしいのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: はっきりしないのが、再建の途中ってことよ。
+    se: hammer
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、ボクのノートはどうなるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[追浜|オッパマ]の車づくりは、九州に移るの。研究所やテストコースは残るわ。'
+    background: hd_test
+  - speaker: zundamon
+    emotion: surprised
+    text: 全部なくなるわけじゃ、ないのか。
+- id: ch10_chui2
+  title: 本当の注意点
+  background: ns_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。車種を56から45に減らす計画よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 乗ってる車に次のモデルが出るのか。下取りや部品のことも、販売店で確かめるのが確実ね。
+  - speaker: zundamon
+    emotion: happy
+    text: ネットのうわさより、販売店なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それとね、見るべき数字は1つ。台数よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 台数！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 台数を追ったのが、失敗だったんじゃ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒字は、削って作ることもできる。でも台数は、お客さんが決めるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前は、値引きで台数を作った。これからは、売れる車で作れるかが勝負よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 同じ台数でも、中身が違うのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。値引きの1台と、選ばれた1台は違うのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクのノートは、選ばれた1台なのだ！
+# ---- 現代の章 ----
+- id: ch11_kessan
+  title: 黒字に戻った、けれど
+  background: ns_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.22, flip: true, tag: 記者, emotion: normal}
+  - {who: kisha2, x: 0.56, emotion: normal}
+  - {who: espinosa, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年8月3日。4月から6月の決算で、日産は最終損益も黒字に戻ります。
+    reading: にせんにじゅうろくねん はちがつ みっか。しがつから ろくがつの けっさんで、にっさんわ さいしゅう そんえきも くろじに もどります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 営業利益779億円、純利益38億円……。
+  - speaker: kisha2
+    emotion: thinking
+    text: 純利益は、3か月で38億円か。
+  - speaker: zundamon
+    emotion: normal
+    text: 販売の見込みは、どうですか。
+  - speaker: kisha2
+    emotion: thinking
+    text: 年間で330万台の見込みを、315万台に下げた。中国が理由だ。
+  - speaker: espinosa
+    emotion: normal
+    text: 中国や中東を中心に厳しい事業環境が続いていますが、私たちの進むべき方向は明確です。
+  - speaker: zundamon
+    emotion: thinking
+    text: 黒字に戻っても、台数は戻らない……。
+  - speaker: reimu
+    text: 今年度の最終損益は、200億円の黒字を見込みます。3年ぶりですが、まだ見込みです。
+    reading: こんねんどの さいしゅう そんえきわ、にひゃくおくえんの くろじお みこみます。さんねんぶりですが まだ みこみです。
+  - speaker: kisha2
+    emotion: normal
+    text: 増益の中心は、コストの改善だ。為替の追い風と、関税がらみの一時的な利益も効いてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 本物かどうかは、次の決算から……。
+  - speaker: reimu
+    text: 次の決算は、11月11日に出る予定です。
+    reading: つぎの けっさんわ じゅういちがつ じゅういちにちに でる よていです。
+- id: ch11_oppama
+  title: ''
+  background: ns_kojo
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年9月。追浜で作っているキックスも、九州に移すと決まります。
+    reading: にせんにじゅうろくねん くがつ。おっぱまで つくって いる きっくすも、きゅうしゅうに うつすと きまります。
+  - speaker: zundamon
+    emotion: normal
+    text: いまも、ラインは動いてますか。
+  - speaker: shain
+    emotion: normal
+    text: 動いてますよ。2028年3月までは。
+  - speaker: zundamon
+    emotion: normal
+    text: 日産は、日本で1年に100万台を作る目標も出しました。
+  - speaker: shain
+    emotion: thinking
+    text: 100万台……。大きな数字ですね。
+  - speaker: reimu
+    text: 九州はグローバル・モデル・ハブ、栃木はハイテク・ハブと位置づけられました。
+    reading: きゅうしゅうわ ぐろーばる もでる はぶ、とちぎわ はいてく はぶと いちづけられました。
+- id: ch11_dealer
+  title: ''
+  background: ns_showroom
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 記者, emotion: normal}
+  - {who: dealer, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: そして2026年の秋。アメリカの販売店です。
+    reading: そして にせんにじゅうろくねんの あき。あめりかの はんばいてんです。
+  - speaker: zundamon
+    emotion: normal
+    text: ハイブリッドは、ありますか。
+  - speaker: dealer
+    emotion: happy
+    text: 11月から入ってくるよ！ ローグ ハイブリッドだ！
+    se: jaan
+  - speaker: dealer
+    emotion: happy
+    text: アメリカで初めて、[e-POWER|イーパワー]を使う車さ。
+  - speaker: zundamon
+    emotion: happy
+    text: 日本でノートが1位になってから、10年ですね。
+  - speaker: dealer
+    emotion: thinking
+    text: 10年か。……待たせたね。
+- id: ch11_ima
+  title: 再建の途中
+  background: ns_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 8月には、ホンダと次の世代の車の部品とソフトを一緒に開発する契約も結んだわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 52日で別れたのに！？
+  - speaker: tsumugi
+    emotion: happy
+    text: 統合はやめても、協業は続いてたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[追浜|オッパマ]の跡地は、どうなったのだ？'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 10月の時点でも、まだ決まってないの。報道では、いくつかの会社の名前が出たわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも日産も[横須賀|よこすか]市も、決まったことはないと言ってるの。
+  - speaker: zundamon
+    emotion: normal
+    text: 決まってないことは、決まってない。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: グループの社員は、2026年3月末までの1年で1万2711人減ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2030年度にはアメリカと中国で100万台ずつ、日本で55万台が目標よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: また台数の目標なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 車種を45に減らしたうえでの数字よ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: ns_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 日産のために、ボクがもう1台買うのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 駐車場は？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……1台分しかないのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 行き場の無い台数。前の日産と同じね。
+    se: oti
+  - speaker: zundamon
+    emotion: sad
+    text: うっ……。じゃあ、この鍵の車に長く乗るのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それも立派な応援ね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクのノートも、[追浜|オッパマ]生まれなのだ。大事にするのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本業は黒字に戻った。でも、台数はまだ増えてない。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 再建が本物かどうかは、これから決まるのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたもニュースで黒字と聞いたら、台数も見てみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

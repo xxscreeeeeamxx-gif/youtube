@@ -1,0 +1,23 @@
+# nissan-oppama 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 記者・新社長 / label: 日産社長・西川社長・内田社長 ほか）は表示専用なのでタグを付けていない。
+# 人名
+- {surface: 西川, reading: さいかわ}          # にしかわ と読まれやすい
+- {surface: 内田, reading: うちだ}
+- {surface: 三部, reading: みべ}              # ナレだけに出る
+# 地名・工場
+- {surface: 追浜, reading: おっぱま}
+- {surface: 村山, reading: むらやま}
+- {surface: 横須賀, reading: よこすか}
+# 社名・計画・技術の名前
+- {surface: e-POWER, reading: いーぱわー}
+- {surface: Re:Nissan, reading: りにっさん}
+- {surface: パワー88, reading: ぱわーえいてぃえいと}
+- {surface: NRP, reading: えぬあーるぴー}
+- {surface: CEO, reading: しーいーおー}
+- {surface: COO, reading: しーおーおー}
+# 決算・会社の言葉
+- {surface: 上期, reading: かみき}            # じょうき と読まれやすい
+- {surface: 持株会社, reading: もちかぶがいしゃ}
+- {surface: 個社, reading: こしゃ}

@@ -1,0 +1,55 @@
+# seven-i-suzuki 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 鈴木敏文 / label: 伊藤雅俊・阿久津知洋 など）は表示専用なのでタグを付けていない。
+# 人名
+- {surface: 鈴木敏文, reading: すずきとしふみ}
+- {surface: 伊藤雅俊, reading: いとうまさとし}
+- {surface: 伊藤順朗, reading: いとうじゅんろう}
+- {surface: 井阪隆一, reading: いさかりゅういち}
+- {surface: 井阪, reading: いさか}
+- {surface: 阿久津知洋, reading: あくつともひろ}
+- {surface: 阿久津, reading: あくつ}
+- {surface: 西直史, reading: にしなおふみ}
+- {surface: 山本憲司, reading: やまもとけんじ}
+- {surface: 真船, reading: まふね}
+- {surface: 柳井正, reading: やないただし}
+- {surface: 孫正義, reading: そんまさよし}
+- {surface: 伊藤家, reading: いとうけ}
+- {surface: 創業家, reading: そうぎょうけ}
+# 社名・地名
+- {surface: セブン&アイ, reading: せぶんあんどあい}
+- {surface: セブン-イレブン, reading: せぶんいれぶん}
+- {surface: イトーヨーカ堂, reading: いとおよおかどう}
+- {surface: ヨーカ堂, reading: よおかどう}
+- {surface: 伊藤興業, reading: いとうこうぎょう}
+- {surface: 伊藤忠商事, reading: いとうちゅうしょうじ}
+- {surface: 江東区, reading: こうとうく}
+- {surface: 豊洲, reading: とよす}
+- {surface: 北千住, reading: きたせんじゅ}
+- {surface: PayPay, reading: ぺいぺい}
+- {surface: CVS, reading: しいぶいえす}
+- {surface: ACT, reading: ええしいてぃい}
+# 会社・経営の言葉
+- {surface: 上期, reading: かみき}
+- {surface: 下期, reading: しもき}
+- {surface: 資する, reading: しする}
+- {surface: 祖業, reading: そぎょう}
+- {surface: 直営, reading: ちょくえい}
+- {surface: 品数, reading: しなかず}
+- {surface: 売値, reading: うりね}
+- {surface: 機軸, reading: きじく}
+- {surface: 退かせる, reading: しりぞかせる}
+- {surface: 白票, reading: はくひょう}
+- {surface: 不徳, reading: ふとく}
+- {surface: 堪えない, reading: たえない}
+- {surface: 逝去, reading: せいきょ}
+- {surface: 名誉顧問, reading: めいよこもん}
+- {surface: 貴方, reading: あなた}
+- {surface: 真摯, reading: しんし}
+- {surface: 得た, reading: えた}
+- {surface: 卸, reading: おろし}
+- {surface: 総会屋, reading: そうかいや}
+# 台詞の中の言い回し
+- {surface: 10銭, reading: じっせん}
+- {surface: 雨模様, reading: あまもよう}
