@@ -3839,6 +3839,24 @@ def p_ykshutter(d, s):
     d.rectangle([s * 0.38, s * 0.48, s * 0.62, s * 0.6], fill=(250, 250, 240), outline=(150, 150, 140))
 
 
+def p_evcar(d, s):
+    """電気自動車と充電プラグ（ホンダ回など）。車種の形・ロゴは描かない。"""
+    body = (236, 236, 242)
+    d.rounded_rectangle([s * 0.06, s * 0.46, s * 0.86, s * 0.72], radius=int(s * 0.06), fill=body,
+                        outline=(60, 60, 70), width=int(s * 0.014))
+    d.polygon([(s * 0.24, s * 0.46), (s * 0.34, s * 0.30), (s * 0.62, s * 0.30), (s * 0.72, s * 0.46)], fill=body,
+              outline=(60, 60, 70))
+    d.polygon([(s * 0.29, s * 0.45), (s * 0.36, s * 0.33), (s * 0.47, s * 0.33), (s * 0.47, s * 0.45)], fill=(150, 196, 230))
+    d.polygon([(s * 0.50, s * 0.45), (s * 0.50, s * 0.33), (s * 0.60, s * 0.33), (s * 0.67, s * 0.45)], fill=(150, 196, 230))
+    for wx in (0.24, 0.68):
+        d.ellipse([s * (wx - 0.08), s * 0.64, s * (wx + 0.08), s * 0.80], fill=(30, 30, 34))
+    d.line([(s * 0.86, s * 0.56), (s * 0.94, s * 0.56), (s * 0.94, s * 0.30)], fill=(30, 30, 34), width=int(s * 0.03))
+    d.rounded_rectangle([s * 0.88, s * 0.14, s * 0.99, s * 0.32], radius=int(s * 0.02), fill=(40, 140, 220),
+                        outline=(20, 60, 120), width=int(s * 0.01))
+    d.polygon([(s * 0.95, s * 0.17), (s * 0.91, s * 0.24), (s * 0.94, s * 0.24), (s * 0.92, s * 0.30), (s * 0.97, s * 0.22),
+               (s * 0.94, s * 0.22)], fill=(255, 230, 60))
+
+
 def p_ffcosme(d, s):
     """赤い化粧品の瓶（富士フイルム回）。製品名は描かない。"""
     for x, h, c in ((0.28, 0.5, (236, 200, 210)), (0.5, 0.64, (200, 30, 50)), (0.72, 0.44, (220, 60, 70))):
@@ -4312,6 +4330,28 @@ SPECS = {
         head_hi="604億円", panels=[
         _p("p_fuutou", "1997年", SLATE, "angry", "褒賞は計2万円", "特許1件の褒賞"),
         _p("p_tenbin", "2004年", NAVY, "surprised", "604億円！？", "地裁の認定"),
+    ]),
+    # いまの話題4本（2026-10-28〜31）。A は場面型（.claude/skills/thumbnail）
+    "toysrus-japan": dict(layout="scene", headline="市場は最高なのに民事再生", head_hi="民事再生", panels=[
+        dict(scene="tr_mise", tint="yellow", tag="1992年 大統領が来店", emo="happy", fx="sparkle",
+             say="石の上にも三年", by="大統領"),
+        dict(scene="tr_mise_soto_heiten", tint="mono", tag="2026年 民事再生", emo="sad", fx="gloom", say="お金はガチャへ…"),
+    ]),
+    "nissan-oppama": dict(layout="scene", headline="日産、追浜の生産終了へ", head_hi="生産終了", panels=[
+        dict(scene="ns_america", tint="yellow", tag="販売台数を追った", emo="surprised", fx="sweat",
+             say="3000ドル引き", by="販売店"),
+        dict(scene="ns_kojo_teishi", tint="mono", tag="最終赤字1.2兆円", emo="sad", fx="gloom",
+             say="日産のアイコン", by="社長"),
+    ]),
+    "seven-i-suzuki": dict(layout="scene", headline="親のヨーカ堂を売却", head_hi="売却", panels=[
+        dict(scene="sv_conbini_1974", tint="yellow", tag="小さな新規事業", emo="surprised", fx="sweat",
+             say="やっていけるのか", by="伊藤"),
+        dict(scene="sv_gms_soto_heiten", tint="mono", tag="2025年 ヨーク売却", emo="sad", fx="gloom",
+             say="祖業を売るんですね", by="記者"),
+    ]),
+    "honda-ev-sanbe": dict(layout="scene", headline="EV100%宣言から5年で撤回", head_hi="撤回", panels=[
+        dict(scene="hd_kaiken", tint="yellow", tag="2021年 EV100%", emo="happy", fx="sparkle", say="100%を目指す"),
+        dict(scene="hd_kaigi_akaji", tint="red", tag="2026年 営業赤字", emo="sad", fx="gloom", say="断腸の想い"),
     ]),
     "snowbrand-mizutani": dict(layout="panels", headline="告発した倉庫に営業停止",
         head_hi="営業停止", panels=[

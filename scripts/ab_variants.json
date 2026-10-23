@@ -2403,5 +2403,346 @@
     "text": "私どもの知るところ、これはオーストラリアの牛肉でございます。"
    }
   ]
+ },
+ {
+  "slug": "toysrus-japan",
+  "video_id": "x68Y70H14nE",
+  "title_a": "「石の上にも三年」と米大統領が称えたトイザらス、負債132億円で民事再生【ずんだもん解説】",
+  "title_b": "【日本トイザらス】おもちゃ市場は過去最高なのに、民事再生で負債132億円【ずんだもん解説】",
+  "title_c": "おもちゃ市場は過去最高なのに、なぜトイザらスは民事再生になったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "市場は過去最高なのに",
+   "head_hi": "過去最高",
+   "panels": [
+    {
+     "prop": "p_trophy",
+     "bg": "yellow",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "5年連続で最高",
+     "by": "記者",
+     "shout": false,
+     "label": "市場は46%増"
+    },
+    {
+     "prop": "p_downgraph",
+     "bg": "red",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "負債132億円",
+     "by": "",
+     "shout": true,
+     "label": "売上は46%減"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ王者が倒れた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "tr_mise",
+     "tint": "yellow",
+     "tag": "市場は過去最高",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "過去最高！？"
+    },
+    {
+     "scene": "tr_mise_soto_heiten",
+     "tint": "mono",
+     "tag": "2026年 民事再生",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "なぜ倒れた？"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "石の上にも三年（ブッシュ大統領・1992-01-07）",
+    "scene": "ch3_bush",
+    "text": "石の上にも三年。トイザらスは、まさにそれを[地|じ]で行った。"
+   },
+   {
+    "claim": "負債約132億円・民事再生（2026-10-01）",
+    "scene": "co_misesaki",
+    "text": "負債は約132億円。事業は、ドン・キホーテを持つPPIHのグループが引き継ぐ予定です。"
+   },
+   {
+    "claim": "市場は5年連続で過去最高・約46％増（日本玩具協会）",
+    "scene": "ch1_kagami",
+    "text": "おもちゃの市場は昨年度、1兆1664億円。5年連続で過去最高なんですよ。"
+   },
+   {
+    "claim": "売上は1394億円→752億円で約46％減",
+    "scene": "ch1_kagami",
+    "text": "こちらは、約46％減です。"
+   },
+   {
+    "claim": "1992年 大統領が来店",
+    "scene": "ch3_bush",
+    "text": "台帳［米国の公式記録］"
+   }
+  ]
+ },
+ {
+  "slug": "honda-ev-sanbe",
+  "video_id": "",
+  "title_a": "「グローバルで100％」とEVに賭けたホンダ、その結果は初の営業赤字【ずんだもん解説】",
+  "title_b": "【ホンダのEV撤回】「2040年に100％」から5年、EV関連の損失は1兆5778億円【ずんだもん解説】",
+  "title_c": "2040年に新車をすべてEVにと宣言したホンダは、なぜ5年で取り下げたのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "EV損失1兆5778億円",
+   "head_hi": "1兆5778億円",
+   "panels": [
+    {
+     "prop": "p_evcar",
+     "bg": "yellow",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "グローバルで100%",
+     "by": "",
+     "shout": false,
+     "label": "2021年の宣言"
+    },
+    {
+     "prop": "p_downgraph",
+     "bg": "red",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "取り下げたい",
+     "by": "",
+     "shout": false,
+     "label": "初の営業赤字"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ5年で取り下げた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "hd_kaiken",
+     "tint": "yellow",
+     "tag": "2021年 宣言",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "100%を目指す"
+    },
+    {
+     "scene": "hd_kaigi_akaji",
+     "tint": "red",
+     "tag": "2026年 取り下げ",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "現実的ではない"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "グローバルで100％（三部・2021-04-23 会見）",
+    "scene": "sengen",
+    "text": "2040年には、グローバルで100％を目指します。"
+   },
+   {
+    "claim": "初の営業赤字（26/3期 営業損益▲4143億円、日経）",
+    "scene": "card0514",
+    "text": "営業損益は4143億円の赤字。日経は決算の前から、上場以来初の営業赤字と報じていました。"
+   },
+   {
+    "claim": "EV関連の損失1兆5778億円（26/3期）",
+    "scene": "card0514",
+    "text": "EVに関わる損失は1兆5778億円を計上。"
+   },
+   {
+    "claim": "現実的ではない。いったん取り下げたい（2026-05-14）",
+    "scene": "torisage",
+    "text": "現実的ではない。いったん取り下げたい。"
+   },
+   {
+    "claim": "断腸の想い（2026-03-12）",
+    "scene": "dancho",
+    "text": "会社の将来にとっても最善ではないと、断腸の想いで決断を下しました。"
+   }
+  ]
+ },
+ {
+  "slug": "nissan-oppama",
+  "video_id": "",
+  "title_a": "「販売台数、販売台数、販売台数」を追った日産、最終赤字が2年続き追浜工場の生産終了へ【ずんだもん解説】",
+  "title_b": "【日産・追浜工場】最終赤字が2年で約1兆2000億円、60年以上続いた工場の生産終了へ【ずんだもん解説】",
+  "title_c": "技術の日産は、なぜ2年で約1兆2000億円の最終赤字を出したのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "2年で最終赤字1.2兆円",
+   "head_hi": "1.2兆円",
+   "panels": [
+    {
+     "prop": "p_pricetag",
+     "bg": "yellow",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "3000ドル引き",
+     "by": "販売店",
+     "shout": false,
+     "label": "販売台数を追う"
+    },
+    {
+     "prop": "p_shutter",
+     "bg": "red",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "日産のアイコン",
+     "by": "社長",
+     "shout": false,
+     "label": "追浜の生産終了"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "技術の日産に何が？",
+   "head_hi": "何が",
+   "panels": [
+    {
+     "scene": "ns_kojo",
+     "tint": "yellow",
+     "tag": "60年以上の工場",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "生産終了！？"
+    },
+    {
+     "scene": "ns_kaigi_akaji",
+     "tint": "red",
+     "tag": "最終赤字1.2兆円",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "なぜなのだ…"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "とにかく販売台数、販売台数、販売台数（エスピノーサ社長・ロイター日本語版 2026-07-02 の訳）",
+    "scene": "ch1_volume",
+    "text": "以前は『とにかく販売台数、販売台数、販売台数』という感じだった。"
+   },
+   {
+    "claim": "最終赤字が2年で約1兆2000億円（6709億円＋5331億円）",
+    "scene": "ch9_kessan",
+    "text": "2年で合わせて、約1兆2000億円か。"
+   },
+   {
+    "claim": "まさに日産のアイコン（2025-07-15 会見）",
+    "scene": "co_kaiken",
+    "text": "[追浜|オッパマ]は何十回も足を運んだ工場ですし、まさに日産のアイコンなのです。"
+   },
+   {
+    "claim": "ローグ3000ドル引き（日経ビジネス 2020-06）",
+    "scene": "ch1_america",
+    "text": "いらっしゃい！ 今ならローグが3000ドル引きだよ！"
+   },
+   {
+    "claim": "追浜の車両生産は2028年3月に終了（日産の発表）",
+    "scene": "ch8_kojo",
+    "text": "[追浜|オッパマ]の車づくりは、2028年3月まで続きます。"
+   }
+  ]
+ },
+ {
+  "slug": "seven-i-suzuki",
+  "video_id": "",
+  "title_a": "「あんなものやっていけるのか」と言われたセブン、半世紀後にかつての親ヨーカ堂を売却【ずんだもん解説】",
+  "title_b": "【セブン&アイ】コンビニが親を超えた半世紀、祖業のヨーカ堂を含む事業を8147億円で売却【ずんだもん解説】",
+  "title_c": "親の会社の小さな新規事業だったセブン-イレブンは、なぜ親を超えたのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "親を超えたコンビニ",
+   "head_hi": "超えた",
+   "panels": [
+    {
+     "prop": "p_pricetag",
+     "bg": "yellow",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "やっていけるのか",
+     "by": "伊藤",
+     "shout": false,
+     "label": "小さな新規事業"
+    },
+    {
+     "prop": "p_shutter",
+     "bg": "red",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "売るんですね",
+     "by": "記者",
+     "shout": false,
+     "label": "8147億円売却"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ子が親を超えた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "sv_conbini_1974",
+     "tint": "yellow",
+     "tag": "1974年 20坪の店",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "1号店からだ"
+    },
+    {
+     "scene": "sv_kaigi_up",
+     "tint": "blue",
+     "tag": "2001年 小売り1位",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "親を抜いた！"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "あんなものやっていけるのか（伊藤雅俊・日経ビジネス1996）",
+    "scene": "ch1_hawaii",
+    "text": "あんなものやっていけるのか。"
+   },
+   {
+    "claim": "ヨーク・ホールディングスを8147億円で売却（ヨーカ堂を含む）",
+    "scene": "ch6_baikyaku",
+    "text": "[売値|うりね]は8147億円。[祖業|そぎょう]を、売るんですね。"
+   },
+   {
+    "claim": "売却後も35.07%を保有（「完全に手放した」とは言わない）",
+    "scene": "ch6_baikyaku",
+    "text": "売ったあとも、セブン&アイは株の35.07%を持ち、創業家も4.93%を持ちます。"
+   },
+   {
+    "claim": "1974年5月15日 豊洲に約20坪の1号店",
+    "scene": "card1974",
+    "text": "1974年5月15日。東京の豊洲に、1号店が開きます。酒屋を改装した、約20坪の店です。"
+   },
+   {
+    "claim": "2001年2月 全店売上で国内小売業1位",
+    "scene": "ch2_gyakuten",
+    "text": "2001年2月、チェーン全店の売上で国内の小売業の1位に。"
+   },
+   {
+    "claim": "営業利益で親を抜いたのは1994年2月期",
+    "scene": "op_shuzai",
+    "text": "営業利益は、1994年2月期に抜いた。"
+   }
+  ]
  }
 ]

@@ -1,0 +1,1525 @@
+meta:
+  title: 「石の上にも三年」と米大統領が称えたトイザらス、負債132億円で民事再生【ずんだもん解説】
+  slug: toysrus-japan
+  hook_line: おもちゃ市場は5年連続で過去最高。なのに、なぜトイザらスは倒れたのか。
+  summary: 2026年10月1日、日本トイザらスが民事再生を申し立てました。おもちゃの市場は5年連続で過去最高なのに、なぜ。子どものころから通う「お客さん」の目で、35年を見ていきます。国会を揺らした上陸、大統領が来た開店の日、そしておもちゃのお金が流れる先の移り変わり。会社・PPIH・報道、それぞれの見方を並べて、再現ドラマでたどります。2026年10月時点の情報です。
+  sources:
+  - 日本トイザらス「民事再生手続開始の申立て及び事業譲渡契約締結についてのお知らせ」（2026年10月1日） https://www.toysrus.co.jp/on/demandware.static/-/Sites-ToysRUs_JP-Library/default/01-tru-jp/corporate/pressroom/pdf/news_261001_01.pdf
+  - PPIH「日本トイザらス株式会社との事業譲渡契約の締結」質疑応答要旨（2026年10月1日） https://ppih.co.jp/ir/library/earnings/pdf/8815da4ed3daf477d7bef631b0cb1ee7.pdf
+  - 日本玩具協会「2025年度 国内玩具市場規模」（2026年6月22日） https://www.toys.or.jp/toukei_siryou_data.html
+  - 帝国データバンク「玩具店（おもちゃ店）」業界動向調査（2026年10月1日） https://news.yahoo.co.jp/articles/f058faefe5fc3c03614a42a38caf008b272b790d
+  - 国会会議録 衆議院予算委員会（1990年4月21日） https://kokkai.ndl.go.jp/txt/111805261X01319900421/80
+  - Public Papers of the Presidents, George H. W. Bush "Remarks at the Opening of Toys-R-Us in Kashihara, Japan"（1992年1月7日） https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg47.htm
+  tags:
+  - トイザらス
+  - 日本トイザらス
+  - 民事再生
+  - ドン・キホーテ
+  - PPIH
+  - おもちゃ
+  - ガチャ
+  - トレカ
+  - 大店法
+  - 藤田田
+  - ブッシュ大統領
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 市場は過去最高なのに
+    bottom: トイザらス民事再生
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: tencho
+    label: 店長
+    voice: 11
+    pitch: 0.0
+    outfit: apron
+    color: '#b03a2e'
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.06
+    outfit: apron
+    color: '#2e6fb0'
+  - id: narabi
+    label: 並ぶ客
+    voice: 12
+    pitch: 0.0
+  - id: shoten
+    label: 店主
+    voice: 42
+    pitch: 0.0
+    outfit: apron
+    color: '#6a5a3a'
+  - id: giin
+    label: 議員
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#2a3a4a'
+  - id: kanryo
+    label: 通産省
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#3e4a5c'
+  - id: takaoka
+    label: 西友会長
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#3a3a42'
+  - id: bush
+    label: 大統領
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#1f2a44'
+  - id: kinjo
+    label: 近所の人
+    voice: 8
+    pitch: -0.08
+  - id: daijin
+    label: 通産大臣
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#4a3a2f'
+  - id: denki
+    label: 量販店員
+    voice: 67
+    pitch: 0.0
+    outfit: apron
+    color: '#d9a400'
+  - id: keiri
+    label: 経理
+    voice: 8
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: kodomo
+    label: 子ども
+    voice: 73
+    pitch: 0.0
+  - id: shacho
+    label: 社長
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#30343c'
+  - id: ppih
+    label: PPIH
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#1a1a1a'
+  - id: jomu
+    label: 常務
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2b3440'
+scenes:
+# ---- 先出し（2026年10月1日の店先） ----
+- id: co_misesaki
+  title: ''
+  background: tr_mise_soto
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: お客さん, emotion: normal}
+  - {who: kisha, x: 0.56, emotion: normal}
+  - {who: tencho, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月1日。全国に約150の店を持つ、日本トイザらスの店先です。
+    reading: にせん にじゅうろくねん じゅうがつ ついたち。ぜんこくに やく ひゃくごじゅうの みせお もつ、にほん といざらすの みせさきです。
+  - speaker: kisha
+    emotion: normal
+    text: 民事再生を申し立てたそうですね。お店は、どうなりますか。
+  - speaker: tencho
+    emotion: normal
+    text: 平常どおり、営業しております。
+  - speaker: zundamon
+    emotion: surprised
+    text: 倒産したのに、開いてるんですか！？
+    se: bikkuri
+  - speaker: tencho
+    emotion: happy
+    text: はい。……いらっしゃいませ。
+  - speaker: zundamon
+    emotion: thinking
+    text: こ、この状況で接客を……。
+    beat: true
+  - speaker: reimu
+    text: 負債は約132億円。事業は、ドン・キホーテを持つPPIHのグループが引き継ぐ予定です。
+    reading: ふさいわ やく ひゃくさんじゅうにおくえん。じぎょうわ どんきほーてお もつ ぴーぴーあいえいちの ぐるーぷが ひきつぐ よていです。
+    telops:
+    - {text: "負債　約132億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: おもちゃの市場は、過去最高なのに。なぜ、トイザらスは倒れたのでしょうか。
+    reading: おもちゃの しじょうわ かこ さいこう なのに。なぜ といざらすわ たおれたのでしょうか。
+# ---- 茶番（今の部屋） ----
+- id: hook
+  title: ''
+  background: tr_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ ガチャのカプセル、今日だけで12個なのだ！
+  - speaker: tsumugi
+    emotion: surprised
+    text: 12回も回したの！？
+  - speaker: zundamon
+    emotion: happy
+    text: '[推し|おし]が出るまで回す。それが大人の財力なのだ。'
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのお[金|かね]、子どものころならどこで使ってた？
+  - speaker: zundamon
+    emotion: normal
+    text: ……[トイザらス|トイザラス]。ボク、小学生のころから[通って|かよって]たよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今は、行ってないのね。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクのお[金|かね]、どこへ行ったのだ！？
+# ---- 仕組み1：鏡写しの数字（2026年10月1日の店内） ----
+- id: ch1_kagami
+  title: 市場は過去最高なのに
+  background: tr_mise
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: お客さん, emotion: normal}
+  - {who: kisha, x: 0.56, emotion: normal}
+  - {who: tencho, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 子どものころは、この通路が人でぎっしりだったんです。
+  - speaker: kisha
+    emotion: normal
+    text: おもちゃの市場は昨年度、1兆1664億円。5年連続で過去最高なんですよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 過去最高！？
+  - speaker: kisha
+    emotion: normal
+    text: '[日本玩具協会|にほんがんぐきょうかい]の数字です。2017年度の約8000億円から、約46％増えました。'
+  - speaker: kisha
+    emotion: thinking
+    text: 一方でトイザらスの売上は、8年前の1394億円から752億円へ。
+  - speaker: kisha
+    emotion: thinking
+    text: こちらは、約46％減です。
+    telops:
+    - {text: "市場＋46％　トイザらス−46％", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tencho
+    emotion: thinking
+    text: ……鏡に映したみたいですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: もうちょっと、分かりやすく言うと？
+  - speaker: kisha
+    emotion: normal
+    text: おもちゃ全体の財布に、1000円入っていたとします。8年で約1460円に増えました。
+  - speaker: kisha
+    emotion: normal
+    text: 同じ8年で、トイザらスのレジの1000円は約540円に。
+  - speaker: zundamon
+    emotion: surprised
+    text: 財布は太ったのに、レジだけ痩せた！？
+    se: gaan
+  - speaker: tencho
+    emotion: sad
+    text: ……うちのレジ、ダイエット中なんです。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ増えた分のお[金|かね]は、どこへ行ったんですか。
+  - speaker: kisha
+    emotion: normal
+    text: 駅前に、行ってみましょう。
+# ---- 仕組み2：駅前のガチャの行列 ----
+- id: ch1_ekimae
+  title: 伸びたのはガチャとトレカ
+  background: led_machi_yoru
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: お客さん, emotion: surprised}
+  - {who: kisha, x: 0.56, emotion: normal}
+  - {who: narabi, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: ガチャの専門店に、行列が！
+  - speaker: narabi
+    emotion: happy
+    text: 並ぶのは、慣れてるんで。
+  - speaker: kisha
+    emotion: normal
+    text: 帝国データバンクだと、おもちゃ屋の売上の合計も7620億円。この10年で最高です。
+  - speaker: kisha
+    emotion: normal
+    text: 引っぱったのが、ガチャの専門店とトレカの専門店。
+  - speaker: kisha
+    emotion: normal
+    text: 2020年度を100とすると、ガチャの店は385。トレカの店は307です。
+    telops:
+    - {text: "ガチャ店385　トレカ店307", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 4倍近くと、3倍！？
+  - speaker: kisha
+    emotion: normal
+    text: 従来型のおもちゃ屋も151。こちらも伸びてはいるんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、トイザらスは？
+  - speaker: kisha
+    emotion: thinking
+    text: 伸びたのが、別の場所だったんです。
+  - speaker: kisha
+    emotion: normal
+    text: 大人は欲しいキャラを狙う[指名買い|しめいがい]。ガチャは、引くこと自体が楽しみ。
+  - speaker: narabi
+    emotion: happy
+    text: 欲しいのは決まってるんで。棚を見て回るとか、しないっす。
+  - speaker: kisha
+    emotion: normal
+    text: 帝国データバンクは、こう分析しています。
+  - speaker: kisha
+    emotion: normal
+    text: 棚を見て回りながら選ぶ従来型のおもちゃ店とは、相性が必ずしも良いとは言い切れない。
+  - speaker: zundamon
+    emotion: sad
+    text: 棚を見て選ぶ店って、トイザらスそのものだ……。
+  - speaker: kisha
+    emotion: normal
+    text: 会社は申し立ての理由に、ネット通販などとの激しい価格競争も挙げています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 子どものころはトイザらス。学生のころは家電量販店。
+  - speaker: zundamon
+    emotion: thinking
+    text: 親になったらネットで、今は駅前のガチャ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクのお[金|かね]、何回も引っ越してたのだ！
+    se: hirameki
+  - speaker: narabi
+    emotion: normal
+    text: お兄さん、列が進みましたよ。
+    beat: true
+  - speaker: reimu
+    text: おもちゃにお金を使う場所が、少しずつ変わっていきました。
+    reading: おもちゃに おかねお つかう ばしょが すこしずつ かわって いきました。
+  - speaker: reimu
+    text: このお客さんの、最初の行き先。それが35年前に上陸した、トイザらスでした。
+    reading: この おきゃくさんの さいしょの いきさき。それが さんじゅうごねんまえに じょうりく した といざらすでした。
+# ---- 上り坂：1989年 ----
+- id: card1989
+  title: ''
+  background: tr_card_1989
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1989年11月。日本トイザらスが生まれます。アメリカのトイザらスと、日本マクドナルドの合弁でした。
+    reading: せんきゅうひゃく はちじゅうくねん じゅういちがつ。にほん といざらすが うまれます。あめりかの といざらすと にほん まくどなるどの ごうべんでした。
+  - speaker: reimu
+    text: 日本側の責任者は、日本マクドナルドを始めた藤田田。店を出す土地選びも、日本マクドナルドが手伝いました。
+    reading: にほんがわの せきにんしゃわ、にほん まくどなるどお はじめた ふじた でん。みせお だす とちえらびも にほん まくどなるどが てつだいました。
+  - speaker: reimu
+    text: 同じ年の3月。東京の府中では、ドン・キホーテの1号店が開いていました。
+    reading: おなじ としの さんがつ。とうきょうの ふちゅうでわ、どんきほーての いちごうてんが ひらいて いました。
+  - speaker: reimu
+    text: このとき、まだ誰も、この2つの店がいつか1つになろうとは思っていません。
+    reading: この とき まだ だれも、この ふたつの みせが いつか ひとつに なろうとわ おもって いません。
+# ---- 新潟の商店街（1990年） ----
+- id: ch2_niigata
+  title: 新潟の商店街
+  background: tr_kaigi
+  stage:
+  - {who: shoten, x: 0.28, flip: true, emotion: angry}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1990年1月。トイザらスは、新潟市に店を出すと表明します。
+    reading: せんきゅうひゃく きゅうじゅうねん いちがつ。といざらすわ、にいがたしに みせお だすと ひょうめい します。
+  - speaker: kisha
+    emotion: normal
+    text: トイザらスの出店に、反対なさってるそうですね。
+  - speaker: shoten
+    emotion: angry
+    text: 当たり前だ。大きな店を出すには、地元と話し合う決まりがある。
+  - speaker: shoten
+    emotion: angry
+    text: '[大店法|だいてんほう]だ。それをアメリカが、話し合いの期間を縮めろと言ってきた。'
+  - speaker: kisha
+    emotion: normal
+    text: どのくらい、縮まるんですか。
+  - speaker: shoten
+    emotion: angry
+    text: 2年の目安が、1年半。法律を変えたら、1年だそうだ。
+  - speaker: kisha
+    emotion: surprised
+    text: 半分に……。
+  - speaker: kisha
+    emotion: normal
+    text: 新潟では、出店を表明した11社の説明を一斉に進めると決まりました。
+  - speaker: shoten
+    emotion: angry
+    text: トイザらスにジャスコに、イトーヨーカ堂。こっちには相談もなしだ。
+  - speaker: shoten
+    emotion: angry
+    text: 日程を勝手に決めよって。まるで問答無用だ！
+  - speaker: kisha
+    emotion: surprised
+    text: それで、抗議を。
+  - speaker: shoten
+    emotion: normal
+    text: 商店街の連盟と、トイザラス対策協議会でな。
+  - speaker: shoten
+    emotion: thinking
+    text: うちみたいな小さなおもちゃ屋は、どうなるんだ。
+# ---- 国会（1990年4月） ----
+- id: ch2_kokkai
+  title: たった一社のために
+  background: tr_kokkai
+  stage:
+  - {who: giin, x: 0.28, flip: true, emotion: angry}
+  - {who: kanryo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月の国会。共産党の小沢和秋議員が、通産省に迫ります。
+    reading: しがつの こっかい。きょうさんとうの おざわ かずあき ぎいんが つうさんしょうに せまります。
+  - speaker: kanryo
+    emotion: thinking
+    text: アメリカはトイザラスの件も頭にあることは事実だと思います。
+  - speaker: reimu
+    text: 通産省は、アメリカの主張はもっと大きな立場からのものだ、とも答えました。
+    reading: つうさんしょうわ あめりかの しゅちょうわ もっと おおきな たちばからの ものだとも こたえました。
+  - speaker: giin
+    emotion: angry
+    text: トイザラスたった一社のために我が国の[大店法|だいてんほう]の運用を変えろ。
+  - speaker: giin
+    emotion: angry
+    text: 将来は法律を変えろ。これは余りにも日本をばかにした要求ではないか。
+    se: don
+    telops:
+    - {text: "議員　トイザラスたった一社のために", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: giin
+    emotion: angry
+    text: 多くの[商店主|しょうてんしゅ]が生まれて初めて団結という鉢巻きを締めて立ち上がった。
+  - speaker: kanryo
+    emotion: thinking
+    text: ……。
+  - speaker: reimu
+    text: 5月の国会では、日米の交渉そのものを、黒船来襲だと言った議員もいました。
+    reading: ごがつの こっかいでわ、にちべいの こうしょう そのものお くろふね らいしゅうだと いった ぎいんも いました。
+# ---- 国会（1991年4月）：藤田田の友人 ----
+- id: ch2_takaoka
+  title: マクドナルドの藤田君
+  background: tr_kokkai
+  stage:
+  - {who: takaoka, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1991年4月の国会。西友会長の高丘季昭が、アメリカの大使とのやり取りを明かします。
+    reading: せんきゅうひゃく きゅうじゅういちねん しがつの こっかい。せいゆう かいちょうの たかおか すえあきが、あめりかの たいしとの やりとりお あかします。
+  - speaker: takaoka
+    emotion: happy
+    text: トイザラスについては、日本側の責任者であるマクドナルドの[藤田君|ふじたくん]と私は
+  - speaker: takaoka
+    emotion: happy
+    text: 実は大学時代からの友人でございます。それは応援しますよということは申し上げました。
+  - speaker: reimu
+    text: 外圧を利用したのでは、と問われると、こう答えました。
+    reading: がいあつお りよう したのでわと とわれると、こう こたえました。
+  - speaker: takaoka
+    emotion: normal
+    text: 外圧を利用して私どもに有利な展開をしてほしいというようなことは
+  - speaker: takaoka
+    emotion: normal
+    text: 私は申しておりません。
+    beat: true
+  - speaker: reimu
+    text: その年の5月、大店法を変える法律が成立します。
+    reading: その としの ごがつ、だいてんほうお かえる ほうりつが せいりつ します。
+  - speaker: reimu
+    text: 12月。茨城県阿見町のショッピングセンターの中に、国内の1号店が開きました。
+    reading: じゅうにがつ。いばらきけん あみまちの しょっぴんぐ せんたーの なかに、こくないの いちごうてんが ひらきました。
+  - speaker: reimu
+    text: トイザらスが開けたこの風穴は、のちに思わぬ相手も通していきます。
+    reading: といざらすが あけた この かざあなわ、のちに おもわぬ あいても とおして いきます。
+# ---- 1992年：大統領が来た店 ----
+- id: card1992
+  title: ''
+  background: tr_card_1992
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 1992年1月7日。奈良県橿原市の2号店に、ヘリコプターで客がやって来ます。
+    reading: せんきゅうひゃく きゅうじゅうにねん いちがつ なのか。ならけん かしはらしの にごうてんに、へりこぷたーで きゃくが やってきます。
+- id: ch3_bush
+  title: 大統領が来た店
+  background: tr_mise_soto
+  stage:
+  - {who: bush, x: 0.5, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: アメリカのブッシュ大統領です。トイザらスを始めたラザラス会長の紹介で、開店の式に立ちました。
+    reading: あめりかの ぶっしゅ だいとうりょうです。といざらすお はじめた らざらす かいちょうの しょうかいで、かいてんの しきに たちました。
+  - speaker: bush
+    emotion: happy
+    text: 孫たちは、この旅のハイライトはトイザらスだと思っていた。
+  - speaker: bush
+    emotion: sad
+    text: でもバーバラに、おこづかいを減らされてね。何も買ってあげられない。
+    se: manuke
+  - speaker: reimu
+    text: 会場の笑いを取ると、大統領は日本の大店法の改正をたたえ、ことわざを引きます。
+    reading: かいじょうの わらいお とると だいとうりょうわ にほんの だいてんほうの かいせいお たたえ、ことわざお ひきます。
+  - speaker: bush
+    emotion: normal
+    text: 石の上にも三年。トイザらスは、まさにそれを[地|じ]で行った。
+    telops:
+    - {text: "大統領　石の上にも三年", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: bush
+    emotion: normal
+    text: 60億ドルの日本のおもちゃ市場をこじ開けた、3年の戦いから学ぶことは多い。
+  - speaker: reimu
+    text: 日米の貿易については、こうも言いました。
+    reading: にちべいの ぼうえきに ついてわ、こうも いいました。
+  - speaker: bush
+    emotion: thinking
+    text: これまでの成果は喜んでいるが、個別の合意だけでは満足していない。
+- id: ch3_kinjo
+  title: ''
+  background: tr_mise_soto
+  stage:
+  - {who: kinjo, x: 0.28, flip: true, emotion: surprised}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kinjo
+    emotion: surprised
+    text: 大きいヘリコプターでやって[来|き]はったよ。
+  - speaker: kisha
+    emotion: surprised
+    text: 大統領が、おもちゃ屋の開店に……。
+  - speaker: kinjo
+    emotion: happy
+    text: 大統領さん、何かこうてくれはったんやろか。
+  - speaker: kisha
+    emotion: thinking
+    text: おこづかいを、減らされたそうです。
+  - speaker: kinjo
+    emotion: surprised
+    text: 大統領でも、こづかい制なんや……。
+    beat: true
+  - speaker: kisha
+    emotion: normal
+    text: 翌日は一般の開店。見出しは、初日の人出どっと二万四千人。
+  - speaker: kisha
+    emotion: surprised
+    text: 別の見出しは、予想通りの大渋滞。路線バス一時間遅れも。
+  - speaker: kinjo
+    emotion: thinking
+    text: うちの前の道、ちっとも動かへん。
+    beat: true
+- id: ch3_daijin
+  title: ''
+  background: tr_kokkai
+  stage:
+  - {who: daijin, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 開店の式には、通産大臣の渡部恒三も出ていました。
+    reading: かいてんの しきにわ、つうさん だいじんの わたなべ こうぞうも でて いました。
+  - speaker: reimu
+    text: 3月の国会。議員は、周りのおもちゃ屋の嘆きを報じた記事を紹介します。
+    reading: さんがつの こっかい。ぎいんわ、まわりの おもちゃやの なげきお ほうじた きじお しょうかい します。
+  - speaker: reimu
+    text: こちらにも、宮澤さんが来てくれたら。
+    reading: こちらにも みやざわさんが きて くれたら。
+  - speaker: reimu
+    text: 宮澤さんは、当時の首相です。議員は、大臣が周りの店にも寄ったのかと尋ねました。
+    reading: みやざわさんわ とうじの しゅしょうです。ぎいんわ だいじんが まわりの みせにも よったのかと たずねました。
+  - speaker: daijin
+    emotion: thinking
+    text: あの日は時間が非常に限られておりまして。
+    se: tenten
+# ---- 1992年：相模原の店 ----
+- id: ch3_sagami_open
+  title: 30分のバスが3時間
+  background: tr_mise_soto
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 3月。神奈川県の相模原に、初めての単独店が開きます。
+    reading: さんがつ。かながわけんの さがみはらに、はじめての たんどくてんが ひらきます。
+- id: ch3_sagami_bus
+  title: ''
+  background: tr_mise_soto
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: お客さん, scale: 0.8, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 着いたのだ！
+  - speaker: tenin
+    emotion: happy
+    text: いらっしゃいませ。小学生ひとりで、ずいぶんお疲れですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[相模大野|さがみおおの]からバスに乗ったら、3時間かかりました。'
+  - speaker: tenin
+    emotion: surprised
+    text: いつもは30分ですよね！？
+  - speaker: zundamon
+    emotion: normal
+    text: 国道16号が、ずっと車でぎっしりでした。
+  - speaker: tenin
+    emotion: sad
+    text: それは……すみません。
+    beat: true
+- id: ch3_sagami_naka
+  title: 倉庫のない店
+  background: tr_mise
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: お客さん, scale: 0.8, emotion: surprised}
+  - {who: tenin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 棚が、天井まであるのだ！
+  - speaker: tenin
+    emotion: happy
+    text: うちは裏に倉庫を持たないんです。在庫は、売り場の高い棚に。
+  - speaker: zundamon
+    emotion: surprised
+    text: お店が、倉庫なんですか！？
+  - speaker: tenin
+    emotion: happy
+    text: 問屋さんを通さずに、メーカーから直接仕入れています。
+  - speaker: tenin
+    emotion: normal
+    text: コストを下げて、安く売るんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 安くて大きくて、なんでもある……。ボク、ここに住むのだ！
+  - speaker: tenin
+    emotion: thinking
+    text: お住まいには、なれません。
+    se: hammer
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、毎週来るのだ！
+  - speaker: tenin
+    emotion: happy
+    text: それは、ぜひ。
+- id: ch3_sagami_kiroku
+  title: ''
+  background: tr_mise
+  cuts:
+  - speaker: reimu
+    text: この相模原の店は、のちに世界中のトイザらスで、1日と1年の売上の最高記録を作ります。
+    reading: この さがみはらの みせわ、のちに せかいじゅうの といざらすで いちにちと いちねんの うりあげの さいこう きろくお つくります。
+    telops:
+    - {text: "全世界のトイザらスで最高の売上", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 大きな店と、安い値段。この2つで、トイザらスは広がっていきます。
+    reading: おおきな みせと やすい ねだん。この ふたつで といざらすわ ひろがって いきます。
+  - speaker: reimu
+    text: その安さの勝負で、のちに自分が追われる側に回るとは、まだ誰も思っていません。
+    reading: その やすさの しょうぶで、のちに じぶんが おわれる がわに まわるとわ まだ だれも おもって いません。
+- id: ch3_niigata1994
+  title: ''
+  background: tr_mise_soto
+  stage:
+  - {who: shoten, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 1994年9月。新潟の店が、ついに開きましたね。
+  - speaker: kisha
+    emotion: normal
+    text: 出店の表明から、4年8か月です。
+  - speaker: shoten
+    emotion: thinking
+    text: 長かったのか、短かったのか……。
+  - speaker: shoten
+    emotion: normal
+    text: まあ、うちはうちのやり方で売るだけだ。
+    beat: true
+  - speaker: reimu
+    text: 1997年、経済誌はトイザらスを、平成の黒船と書きます。
+    reading: せんきゅうひゃく きゅうじゅうななねん、けいざいしわ といざらすお へいせいの くろふねと かきます。
+# ---- 2000年代：家電量販店 ----
+- id: card2000
+  title: ''
+  background: tr_card_2000
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2000年11月。店は100店になりました。同じ年には、ネットで売る会社も作っています。
+    reading: にせんねん じゅういちがつ。みせわ ひゃくてんに なりました。おなじ としにわ ねっとで うる かいしゃも つくって います。
+- id: ch4_denki
+  title: 家電量販店のおもちゃ売り場
+  background: tr_denki
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: お客さん, emotion: happy}
+  - {who: denki, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2000年代。規制がゆるんだあと、家電量販店などもおもちゃの販売を強めていきます。
+    reading: にせんねんだい。きせいが ゆるんだ あと、かでん りょうはんてんなども おもちゃの はんばいお つよめて いきます。
+  - speaker: zundamon
+    emotion: surprised
+    text: テレビを見に来たのに、ゲーム機もあるんですね！
+  - speaker: denki
+    emotion: happy
+    text: はい。テレビの隣で、ゲームもおもちゃも売ってます。
+  - speaker: zundamon
+    emotion: happy
+    text: 大学の帰りに、寄れる！
+  - speaker: denki
+    emotion: happy
+    text: 新しいソフトも、ここで予約できますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、ここで予約していきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: テレビを見に来ただけなのに、ゲームを予約してるのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……トイザらス、最近行ってないな。
+    beat: true
+  - speaker: reimu
+    text: 日経新聞は、のちにこう書きます。トイザらスは出店規制に風穴を開けたが、
+    reading: にっけい しんぶんわ のちに こう かきます。といざらすわ しゅってん きせいに かざあなお あけたが、
+  - speaker: reimu
+    text: 規制緩和を追い風に育った家電量販店に、おもちゃの需要を奪われた、と。
+    reading: きせい かんわお おいかぜに そだった かでん りょうはんてんに おもちゃの じゅようお うばわれた、と。
+- id: ch4_mac
+  title: ''
+  background: tr_yakuin
+  cuts:
+  - speaker: reimu
+    text: 2004年4月。日本トイザらスを始めた一人、藤田田が78歳で亡くなります。
+    reading: にせんよねん しがつ。にほん といざらすお はじめた ひとり、ふじた でんが ななじゅうはっさいで なくなります。
+- id: ch4_choten
+  title: 売上が最高の年
+  background: tr_kaigi
+  bgm: serious
+  stage:
+  - {who: keiri, x: 0.28, flip: true, emotion: happy}
+  - {who: tencho, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2006年11月。日本トイザらスは、日本マクドナルドとのサービス契約を解約します。
+    reading: にせんろくねん じゅういちがつ。にほん といざらすわ にほん まくどなるどとの さーびす けいやくお かいやく します。
+  - speaker: keiri
+    emotion: happy
+    text: 2007年1月期の売上は、約1944億円。過去最高です！
+  - speaker: tencho
+    emotion: happy
+    text: やった！ 今夜は打ち上げだ！
+  - speaker: keiri
+    emotion: thinking
+    text: ただ、最終損益は約12億円の赤字です。
+    background: tr_kaigi_akaji
+    se: chin
+    telops:
+    - {text: "売上最高の年に最終赤字", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: tencho
+    emotion: surprised
+    text: 最高なのに、赤字！？
+  - speaker: keiri
+    emotion: thinking
+    text: 打ち上げは、割り勘でお願いします。
+    beat: true
+  - speaker: reimu
+    text: 日本マクドナルドは契約はまだ有効だとして訴え、2008年に和解。日本トイザらスが、20億円を払いました。
+    reading: にほん まくどなるどわ けいやくわ まだ ゆうこうだと して うったえ、にせんはちねんに わかい。にほん といざらすが にじゅうおくえんお はらいました。
+  - speaker: reimu
+    text: 2009年1月期。ゲーム機やソフトなどの売上が、おもちゃの売上より大きくなっていました。
+    reading: にせんくねん いちがつき。げーむきや そふとなどの うりあげが、おもちゃの うりあげより おおきく なって いました。
+  - speaker: tencho
+    emotion: surprised
+    text: うちは、おもちゃ屋ですよね！？
+  - speaker: keiri
+    emotion: thinking
+    text: そのゲームなどの売上が、21％減りました。
+  - speaker: tencho
+    emotion: sad
+    text: ……おもちゃより、大きかったのに。
+  - speaker: reimu
+    text: 2010年、日本トイザらスは上場をやめ、アメリカの親会社の完全な子会社になります。
+    reading: にせん じゅうねん、にほん といざらすわ じょうじょうお やめ あめりかの おやがいしゃの かんぜんな こがいしゃに なります。
+# ---- 2010年代：スマホで買う ----
+- id: ch5_net
+  title: スマホで一番安い店
+  background: tr_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: お客さん, emotion: normal}
+  - {who: kodomo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2010年代。あのお客さんは、親になっていました。
+    reading: にせん じゅうねんだい。あの おきゃくさんわ おやに なって いました。
+  - speaker: kodomo
+    emotion: happy
+    text: 誕生日、このおもちゃがいい！
+  - speaker: zundamon
+    emotion: happy
+    text: よし。スマホで、一番安いところを探すのだ。
+  - speaker: kodomo
+    emotion: surprised
+    text: お店に、見に行かないの？
+  - speaker: zundamon
+    emotion: normal
+    text: 見なくても、写真があるから大丈夫。……はい、注文。
+  - speaker: kodomo
+    emotion: surprised
+    text: もう、注文したの！？
+  - speaker: zundamon
+    emotion: happy
+    text: 一番安いところで、ポチッとな。
+  - speaker: kodomo
+    emotion: sad
+    text: トイザらス、行きたかったのに。
+    se: shobon
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクも昔は、バスで3時間かけて行ったんだけどな。
+  - speaker: kodomo
+    emotion: thinking
+    text: じゃあ、ボクも3時間かけて行く。
+  - speaker: zundamon
+    emotion: surprised
+    text: そこは、まねしなくていいのだ。
+    beat: true
+  - speaker: reimu
+    text: おもちゃのお金は、ネット通販の倉庫へも流れていきます。
+    reading: おもちゃの おかねわ ねっと つうはんの そうこえも ながれて いきます。
+    background: tr_butsuryu
+# ---- 2017〜2018年：本国の破綻 ----
+- id: card2017
+  title: ''
+  background: tr_card_2017
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2017年9月。アメリカのトイザらスが、約50億ドルの負債を抱えて破綻します。
+    reading: にせん じゅうななねん くがつ。あめりかの といざらすが、やく ごじゅうおくどるの ふさいお かかえて はたん します。
+- id: ch6_america
+  title: 本国の破綻
+  background: tr_america
+  cuts:
+  - speaker: reimu
+    text: 2005年に投資ファンドが、借金で買い取った会社でした。
+    reading: にせんごねんに とうし ふぁんどが しゃっきんで かいとった かいしゃでした。
+- id: ch6_nihon
+  title: ''
+  background: tr_mise
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: surprised}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: surprised
+    text: 店長！ アメリカのトイザらスが、破綻したって！
+  - speaker: tencho
+    emotion: surprised
+    text: うちの店は、どうなるんだ。
+  - speaker: tenin
+    emotion: normal
+    text: 日本はアメリカの立て直しの影響は受けない、と発表がありました。
+  - speaker: tencho
+    emotion: thinking
+    text: ……ひとまず、明日も店は開けられるな。
+    beat: true
+- id: ch6_habel
+  title: まだ届いていない地域へ
+  background: tr_yakuin
+  bgm: hirusagari
+  stage:
+  - {who: shacho, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2018年3月。アメリカの735店を閉めることが決まります。
+    reading: にせん じゅうはちねん さんがつ。あめりかの ななひゃく さんじゅうごてんお しめる ことが きまります。
+  - speaker: reimu
+    text: その約1週間後。橿原でブッシュ大統領を案内したラザラスが、94歳で亡くなりました。
+    reading: その やく いっしゅうかんご。かしはらで ぶっしゅ だいとうりょうお あんない した らざらすが、きゅうじゅうよんさいで なくなりました。
+  - speaker: reimu
+    text: 同じ3月。日本トイザらスのハーベル社長が、取材に答えます。
+    reading: おなじ さんがつ。にほん といざらすの はーべる しゃちょうが しゅざいに こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: アメリカの本社は破綻しました。日本は大丈夫ですか。
+  - speaker: shacho
+    emotion: normal
+    text: 米国と違って日本は堅調に推移している。
+  - speaker: reimu
+    text: 翌月の、別のインタビューです。
+    reading: よくげつの べつの いんたびゅーです。
+  - speaker: kisha
+    emotion: normal
+    text: 子どもの数は、これから減っていきますが。
+  - speaker: shacho
+    emotion: normal
+    text: 人口動態の変化はさほど心配していない。
+  - speaker: shacho
+    emotion: normal
+    text: 少子高齢化や人口減少は、今に始まったことではありません。
+  - speaker: shacho
+    emotion: normal
+    text: 日本の市場にはむしろ、私たちがリーチできていない地理的エリアはまだあります。
+    telops:
+    - {text: "社長　リーチできていないエリアはまだある", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 小さな都市型の店や、店の中のアイパッドで注文できる仕組みなど、3つの戦略も語っています。
+    reading: ちいさな としがたの みせや みせの なかの あいぱっどで ちゅうもん できる しくみなど、みっつの せんりゃくも かたって います。
+  - speaker: kisha
+    emotion: normal
+    text: 2016年には、初めての常設の小さな店も開きましたね。
+  - speaker: shacho
+    emotion: normal
+    text: 小型化した店舗と都市部に近い立地の組み合わせは、重要だと考えています。
+# ---- 2019〜2025年：8期連続の赤字 ----
+- id: ch6_akaji
+  title: 8期連続の赤字
+  background: tr_kaigi
+  bgm: serious
+  stage:
+  - {who: keiri, x: 0.28, flip: true, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: keiri
+    emotion: thinking
+    text: 次の決算、2019年1月期です。
+  - speaker: keiri
+    emotion: thinking
+    text: 最終損益は、約33億円の赤字です。
+    background: tr_kaigi_akaji
+    se: gaan
+  - speaker: tencho
+    emotion: surprised
+    text: 前の期は、黒字でしたよね。
+  - speaker: keiri
+    emotion: thinking
+    text: はい。約22億円の黒字でした。……それが、最後の黒字です。
+  - speaker: reimu
+    text: ここから最終赤字が、8期続きます。決算の月を変えた、11か月の期も入れて8期です。
+    reading: ここから さいしゅう あかじが はっき つづきます。けっさんの つきお かえた じゅういっかげつの きも いれて はっきです。
+  - speaker: keiri
+    emotion: thinking
+    text: 2022年12月期は、最終赤字が約69億円。次の年も、約69億円です。
+  - speaker: tencho
+    emotion: sad
+    text: 2年続けて、ほぼ同じ額……。
+  - speaker: keiri
+    emotion: thinking
+    text: 2023年12月期は、本業の営業赤字も約56億円。この8期で一番です。
+  - speaker: keiri
+    emotion: sad
+    text: 積み上げてきた利益の残りも、とうとうマイナスになりました。
+  - speaker: tencho
+    emotion: surprised
+    text: 積み上げた儲けが、全部消えたのか……。
+    beat: true
+  - speaker: tencho
+    emotion: thinking
+    text: そういえば、社長も何回か替わりましたよね。
+  - speaker: keiri
+    emotion: thinking
+    text: 2017年からの8年あまりで、5人です。
+  - speaker: tencho
+    emotion: surprised
+    text: 5人！？
+  - speaker: keiri
+    emotion: thinking
+    text: 2025年12月期の売上は、752億円。頂点の、約4割です。
+  - speaker: tencho
+    emotion: sad
+    text: ……4割。
+    beat: true
+# ---- 2026年：申し立て ----
+- id: card2026
+  title: ''
+  background: tr_card_2026
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2026年9月。熊本の店が閉まります。
+    reading: にせん にじゅうろくねん くがつ。くまもとの みせが しまります。
+- id: ch7_scoop
+  title: ドンキが買収？
+  background: tr_mise
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: surprised}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月29日の夜。日経新聞が、ドンキがトイザらスの日本の事業を買収、と報じます。
+    reading: くがつ にじゅうくにちの よる。にっけい しんぶんが、どんきが といざらすの にほんの じぎょうお ばいしゅうと ほうじます。
+  - speaker: tenin
+    emotion: surprised
+    text: 店長！ ネットのニュースに、ドンキがうちを買収って！
+    se: bikkuri
+  - speaker: tencho
+    emotion: surprised
+    text: ドンキって、あのドン・キホーテか！？
+  - speaker: tenin
+    emotion: thinking
+    text: PPIHの答えは、当社から回答できることはない。
+  - speaker: tencho
+    emotion: thinking
+    text: ……回答できることは、ない。
+  - speaker: tencho
+    emotion: normal
+    text: とにかく、明日も店は開けるぞ。
+- id: ch7_heiten
+  title: ''
+  background: tr_mise_soto_heiten
+  cuts:
+  - speaker: reimu
+    text: 9月30日。甲府の店が閉まり、トイザらスは山梨県から撤退しました。
+    reading: くがつ さんじゅうにち。こうふの みせが しまり、といざらすわ やまなしけんから てったい しました。
+- id: ch7_riyu
+  title: 申し立ての理由
+  background: tr_mise
+  bgm: 223am
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 10月1日。日本トイザらスは、東京地裁に民事再生を申し立てました。
+    reading: じゅうがつ ついたち。にほん といざらすわ、とうきょう ちさいに みんじ さいせいお もうしたてました。
+  - speaker: tencho
+    emotion: thinking
+    text: 会社のお知らせを、読むぞ。
+  - speaker: tencho
+    emotion: thinking
+    text: 少子化を踏まえた事業転換の遅れや、EC企業[等|とう]の[競業|きょうぎょう]他社との激しい価格競争[等|とう]により
+    telops:
+    - {text: "会社　少子化を踏まえた事業転換の遅れ", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tencho
+    emotion: thinking
+    text: 売上が低迷しました。経費削減[等|とう]の取組みを継続してまいりましたが
+  - speaker: tencho
+    emotion: thinking
+    text: 売上の減少が止まらず、自力での事業継続が困難となりました。
+  - speaker: tenin
+    emotion: thinking
+    text: 少子化そのものじゃなくて、それを踏まえた転換の遅れなんですね。
+  - speaker: tencho
+    emotion: normal
+    text: ネットとの、値段の勝負もな。
+  - speaker: tenin
+    emotion: sad
+    text: 安さで広がった店が、安さで追われるなんて……。
+    se: namida
+  - speaker: reimu
+    text: 代表のシャッツ社長は、コメントを出しました。
+    reading: だいひょうの しゃっつ しゃちょうわ こめんとお だしました。
+  - speaker: reimu
+    text: 長年にわたり、日本全国で何世代にもわたる子どもたちとそのご家族に
+    reading: ながねんに わたり、にほん ぜんこくで なんせだいにも わたる こどもたちと その ごかぞくに
+  - speaker: reimu
+    text: サービスを提供できたことを、光栄に思います。
+    reading: さーびすお ていきょう できた ことお、こうえいに おもいます。
+# ---- 2026年：PPIHの会見 ----
+- id: ch7_ppih
+  title: PPIHの会見
+  background: tr_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: ppih, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ日。ドン・キホーテを持つPPIHが会見を開きます。森屋秀樹社長です。
+    reading: おなじ ひ。どんきほーてお もつ ぴーぴーあいえいちが かいけんお ひらきます。もりや ひでき しゃちょうです。
+  - speaker: kisha
+    emotion: normal
+    text: トイザらスを引き継ぐ狙いを、教えてください。
+  - speaker: ppih
+    emotion: normal
+    text: 乳幼児やファミリー層との顧客接点が加わり、事業領域を拡大できる。
+  - speaker: reimu
+    text: 常務は、こうも話しました。
+    reading: じょうむわ こうも はなしました。
+- id: ch7_jomu
+  title: ''
+  background: tr_kaiken
+  stage:
+  - {who: jomu, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: jomu
+    emotion: happy
+    text: リアル店舗の[玩具|がんぐ]市場において、
+  - speaker: jomu
+    emotion: happy
+    text: 圧倒的ナンバーワンのポジションを獲得することができる。
+    se: jaan
+  - speaker: kisha
+    emotion: surprised
+    text: 両社のおもちゃの売上は、合わせて約1500億円ですね。
+  - speaker: reimu
+    text: PPIHは、おもちゃを買う場所から、アソビ業態へ、と説明しました。
+    reading: ぴーぴーあいえいちわ、おもちゃお かう ばしょから あそび ぎょうたいえ と せつめい しました。
+  - speaker: reimu
+    text: アナリストからは、千坪ほどの大きな店が多い、という質問も出ました。
+    reading: あなりすとからわ せんつぼ ほどの おおきな みせが おおい、と いう しつもんも でました。
+  - speaker: reimu
+    text: PPIHは、ドン・キホーテなどへの業態の転換も、選択肢の一つとして検討している、と答えています。
+    reading: ぴーぴーあいえいちわ どんきほーて などえの ぎょうたいの てんかんも、せんたくしの ひとつと して けんとう して いると こたえて います。
+  - speaker: kisha
+    emotion: surprised
+    text: 大きな店が、ドンキに……。
+    beat: true
+  - speaker: reimu
+    text: 1989年3月に生まれたドン・キホーテと、11月に生まれた日本トイザらス。
+    reading: せんきゅうひゃく はちじゅうくねん さんがつに うまれた どんきほーてと、じゅういちがつに うまれた にほん といざらす。
+  - speaker: reimu
+    text: 同じ年に生まれた2つの店が、1つになろうとしています。
+    reading: おなじ としに うまれた ふたつの みせが、ひとつに なろうと して います。
+# ---- 2026年：店先のお客さん ----
+- id: ch7_kyaku
+  title: ''
+  background: tr_mise
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: お客さん, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 店長さん。ここ、ドンキになっちゃうんですか。
+  - speaker: tencho
+    emotion: normal
+    text: まだ、決まっていません。
+  - speaker: zundamon
+    emotion: thinking
+    text: トイザらスの名前は、残るんですか。
+  - speaker: tencho
+    emotion: normal
+    text: 残せるように努める、と聞いています。こちらも、話し合いしだいです。
+  - speaker: zundamon
+    emotion: sad
+    text: 子どものころから、ずっとこの看板だったのに……。
+  - speaker: tencho
+    emotion: thinking
+    text: 私も、この看板の下で働いてきました。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、ポイントは！？
+  - speaker: tencho
+    emotion: happy
+    text: ポイントもギフトカードも、引き続き使えます。
+  - speaker: zundamon
+    emotion: happy
+    text: よかったのだ！ じゃあ、また来ます！
+    se: levelup
+  - speaker: tencho
+    emotion: happy
+    text: はい。……いらっしゃいませ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 帰るところなんですけど……。
+    beat: true
+# ---- 論争：少子化だから仕方ない？ ----
+- id: ch8_ronso
+  title: 少子化だから仕方ない？
+  background: tr_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: normal
+    text: トイザらスは、少子化とアマゾンに負けた。仕方なかったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 半分だけ、合ってるわね。
+    beat: true
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 生まれた子どもは、1991年に約122万人。2025年は約67万人よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 子どもも、ほぼ半分！？
+  - speaker: tsumugi
+    emotion: normal
+    text: でもおもちゃの市場は、5年連続で過去最高だったでしょ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 子どもが減ったのに、なんで？
+  - speaker: tsumugi
+    emotion: normal
+    text: トレカだけで3384億円。市場の約3割なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 10年前の、約3.5倍よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 3.5倍！？
+  - speaker: tsumugi
+    emotion: normal
+    text: PPIHの説明だと、市場は子どものための[玩具|がんぐ]から広がったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分の好きに、お[金|かね]と時間を使う市場にね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの[推し活|おしかつ]のことなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ずんだもんの12個くらいじゃ、市場は動かないわよ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: それと会社自身も、少子化のせいとは書いてないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 書いてないの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 少子化を踏まえた事業転換の遅れ。そう書いたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 子どもが減るのに合わせて、変わりきれなかった……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社も、都市型の小さな店への切り替えは進めてたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 変わろうとは、してたんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあ、アマゾンは？
+  - speaker: tsumugi
+    emotion: normal
+    text: ネット通販との価格競争は、会社も理由に挙げてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 帝国データバンクは、家電量販店との競争や流行への対応の遅れも挙げてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家電量販店まで！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: PPIHは十分な成長投資が行われていなかった、と見てるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 原因が、いっぱいなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: どれか1つが本当の理由、とは言えないのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: アメリカの本社が潰れたせいでも、ないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本国が破綻したとき、日本は影響を受けないと発表したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 申し立ては、その9年後よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも昔は、トイザらスが街のおもちゃ屋を潰したって聞いたよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それも、数字では言い切れないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 通産省は1993年の国会で、当初は多少の影響があったとしたうえで
+  - speaker: tsumugi
+    emotion: normal
+    text: 徐々に客足も戻ってきておると聞いている、と答えたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 戻ってきたのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一方で[橿原|かしハら]の周りのおもちゃ屋は、1割以上の売上減と報じられたこともあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 心配した人がいたのは、本当なんだね。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。そして今は、従来型のおもちゃ屋も売上を伸ばしてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 街の店も、伸びてるんだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 比べた2020年度は、コロナの年で低かった分も割り引いてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 伸びたのは、ガチャとトレカの店。なんでもそろう大きな店じゃなかったのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 財布は太ったのに、レジが痩せたのは……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 財布の中身が、別のレジへ流れたからね。
+  - speaker: zundamon
+    emotion: thinking
+    text: おもちゃにお[金|かね]を使う場所が、変わったのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと本当の注意点は、あなたの財布の中にあるかもしれないの。
+# ---- 本当の注意点：ギフトカード ----
+- id: ch8_chui
+  title: ギフトカードはどうなる
+  background: tr_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 財布の中？
+  - speaker: tsumugi
+    emotion: normal
+    text: トイザらスのギフトカードやポイント、持ってない？
+  - speaker: zundamon
+    emotion: happy
+    text: ある！ 誕生日にもらったギフトカード！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年10月時点で、ギフトカードもポイントも引き続き使えるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ事業の譲渡のあとは、使えなくなる可能性もあるって。
+  - speaker: zundamon
+    emotion: surprised
+    text: ええっ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: その場合は、PPIH側が同じような代わりの手段を出す予定よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ギフトカードの返金を望むなら、11月5日までに債権の届け出が要るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ポイントは、返金されないの。
+  - speaker: zundamon
+    emotion: sad
+    text: ポイントは、だめなのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 返ってくる額も時期も、まだ決まってないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 届け出より、使うほうが早いね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 迷ったら、会社のお知らせで最新の情報を確かめてね。
+  - speaker: zundamon
+    emotion: happy
+    text: よし、今日使ってくるのだ！ 駅前のガチャで！
+  - speaker: tsumugi
+    emotion: angry
+    text: トイザらスのカードは、トイザらスで使うのよ。
+    se: tsukkomi
+# ---- 現代：これからの店 ----
+- id: ch9_gendai
+  title: これからのトイザらス
+  background: tr_gekiyasu
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 手続きは10月6日に始まって、事業の譲渡は10月30日の予定。
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判所の許可が出ることが、前提よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: お店は、どうなるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: PPIHは閉める予定の店を除いて、全部の店の引き継ぎを目指してるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 閉める店の数は、まだ公表されてないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 約3900人の従業員も、できる限り全員の引き継ぎを目指してる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 全員！？
+  - speaker: tsumugi
+    emotion: happy
+    text: 資料には、トイザらスの従業員こそが最大の資産とまで書いてあるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: あの店長さんも、残れるかもしれないのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ負債の132億円は、ドンキが払うの？
+  - speaker: tsumugi
+    emotion: normal
+    text: そこは、誤解しやすいの。
+  - speaker: tsumugi
+    emotion: normal
+    text: PPIHは過去の借入金などを、そのまま引き継ぐわけじゃないと説明してる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 肩代わりじゃ、ないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 引き継ぐのは、商品の代金や運転資金など事業に要るものの予定よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 買う値段は、いくらなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 公表されてないわ。PPIHは、譲渡の対価そのものは限定的と言ってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 売り場の約1割は、体験できる遊び場にする計画。
+  - speaker: zundamon
+    emotion: surprised
+    text: 遊び場！？
+  - speaker: tsumugi
+    emotion: normal
+    text: PPIHの大型店約110店を候補に、中にも店を出すと日経は報じてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日経は、今の店を改装して大人向けの商品も増やす計画だと報じてる。
+  - speaker: zundamon
+    emotion: happy
+    text: 大人向け！ ボクの出番なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ずんだもんの出番は、財布の中身しだいね。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: PPIHのおもちゃの売上は、2025年度に2020年度の約2.5倍まで伸びたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ時期に、トイザらスは減ってたのに！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 同じおもちゃでも、売る場所で結果は分かれたのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: トイザらスの名前は、残るの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2000年の契約では、名前を使う代わりに総収入の3％をアメリカ側に払ってたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前を、借りてたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: PPIHは名前を使い続けられるよう努めたいけど、関係各所との協議が必要と言ってる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: だから名前が残るかは、まだ決まってないのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 看板は、まだ分からないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 11月には、全部の店でクリスマスの企画をする予定よ。
+  - speaker: zundamon
+    emotion: happy
+    text: クリスマスは、行列に並ぶぞ！
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: tr_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、決めたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 何を？
+  - speaker: zundamon
+    emotion: sad
+    text: 先に聞いて。さっきのガチャ12個、全部ダブりだったのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[推し|おし]は？'
+  - speaker: zundamon
+    emotion: sad
+    text: 出なかった。
+  - speaker: zundamon
+    emotion: happy
+    text: だからギフトカードで、トイザらスの棚を見て選ぶのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: あら。[指名買い|しめいがい]じゃないのね。
+  - speaker: zundamon
+    emotion: happy
+    text: '[推し|おし]が出ないから、棚で出会うしかないのだ。'
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 日経新聞の社説は、こう書いたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 規制が変わり、競争条件が整っても、最終的に企業の命運を握るのは消費者である。
+    telops:
+    - {text: "日経社説　命運を握るのは消費者", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 消費者って、お客さん。ボクのことか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 35年で、おもちゃのお[金|かね]は何度も引っ越したの。
+  - speaker: tsumugi
+    emotion: happy
+    text: 次の行き先を決めるのも、あなたの財布ね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

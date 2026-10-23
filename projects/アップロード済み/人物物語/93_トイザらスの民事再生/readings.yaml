@@ -1,0 +1,28 @@
+# toysrus-japan 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: お客さん / label: 店長・PPIH など）は表示専用なのでタグを付けていない。
+# 人名（ナレだけに出る人も、読みを控えておく）
+- {surface: 藤田田, reading: ふじたでん}
+- {surface: 藤田, reading: ふじた}
+- {surface: 小沢和秋, reading: おざわかずあき}
+- {surface: 渡部恒三, reading: わたなべこうぞう}
+- {surface: 高丘季昭, reading: たかおかすえあき}
+- {surface: 森屋秀樹, reading: もりやひでき}
+# 地名
+- {surface: 橿原, reading: かしはら}   # セリフのタグは [橿原|かしハら]（よみ側の「は」がワに化けるため）
+- {surface: 相模原, reading: さがみはら}
+- {surface: 相模大野, reading: さがみおおの}
+- {surface: 阿見町, reading: あみまち}
+- {surface: 府中, reading: ふちゅう}
+- {surface: 甲府, reading: こうふ}
+# 制度・業界の言葉
+- {surface: 大店法, reading: だいてんほう}
+- {surface: 日本玩具協会, reading: にほんがんぐきょうかい}   # ニッポンオモチャキョウカイ と読まれた（見直し 3）
+- {surface: 玩具, reading: がんぐ}                         # オモチャ と読まれた（見直し 3）
+- {surface: 商店主, reading: しょうてんしゅ}               # ショウテンヌシ と読まれた（見直し 3）
+- {surface: 競業, reading: きょうぎょう}
+- {surface: 指名買い, reading: しめいがい}
+# 言い回し（文脈で読みが割れる語）
+- {surface: 推し, reading: おし}
+- {surface: 来はった, reading: きはった}
