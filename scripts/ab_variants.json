@@ -2744,5 +2744,332 @@
     "text": "営業利益は、1994年2月期に抜いた。"
    }
   ]
+ },
+ {
+  "slug": "hitachi-kaden",
+  "video_id": "",
+  "title_a": "値段を取り戻そうとした日立、2年半後に「メーカーに忖度しない」ノジマへ家電事業を売る【ずんだもん解説】",
+  "title_b": "【日立の家電とノジマ】値引きを止めた日立、2年半後に家電事業を量販店へ【ずんだもん解説】",
+  "title_c": "値段を取り戻そうとした日立は、なぜ“売る店”ノジマに家電事業を売るのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "値引きを止めた日立",
+   "head_hi": "値引き",
+   "panels": [
+    {
+     "prop": "p_pricetag",
+     "bg": "yellow",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "値引きできません",
+     "by": "店員",
+     "shout": false,
+     "label": "指定価格を導入"
+    },
+    {
+     "prop": "p_downgraph",
+     "bg": "red",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "忖度しない",
+     "by": "ノジマ",
+     "shout": false,
+     "label": "家電を売却へ"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ売る店に買われた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "hk_omise",
+     "tint": "yellow",
+     "tag": "日立のお店",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "足で負けるな",
+     "by": "父"
+    },
+    {
+     "scene": "hk_kaiken",
+     "tint": "red",
+     "tag": "2026年 売却発表",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "うちの看板は！？"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "メーカーに忖度しない（野島廣司・2026-04-21 会見）",
+    "scene": "ch6_nojima",
+    "text": "ノジマの最大の特徴は、メーカーに忖度しないという点である。"
+   },
+   {
+    "claim": "80.1％を約1100億円で取得する予定（日立・ノジマの発表）",
+    "scene": "co_kaiken",
+    "text": "ノジマは、日立の家電を受け継ぐ新会社の80.1％を、約1100億円で買う予定です。"
+   },
+   {
+    "claim": "お値引きができないんです（東洋経済2022の売り場の場面）",
+    "scene": "ch1_ryohan",
+    "text": "こちらの商品は、メーカーとの関係でお値引きができないんです。"
+   },
+   {
+    "claim": "2023年10月に指定価格→2026年4月に売却発表で「2年半」",
+    "scene": "card2023",
+    "text": "2023年10月4日。…日立は指定価格の第1号を発表します。"
+   }
+  ]
+ },
+ {
+  "slug": "nengajo-otoshidama",
+  "video_id": "",
+  "title_a": "「今年も出しとこ、年賀状。」と呼びかけた日本郵便、発行はピークの約8分の1に【ずんだもん解説】",
+  "title_b": "【年賀はがき】発行はピークの約8分の1　値上げするほど減る郵便の仕組み【ずんだもん解説】",
+  "title_c": "郵便の赤字を埋める呼び水の役目もあった年賀はがきは、なぜピークの8分の1まで減ったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "値上げするほど減る",
+   "head_hi": "減る",
+   "panels": [
+    {
+     "prop": "p_paper",
+     "bg": "yellow",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "50枚4250円",
+     "by": "客",
+     "shout": false,
+     "label": "はがき85円"
+    },
+    {
+     "prop": "p_downgraph",
+     "bg": "red",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "元日34%減",
+     "by": "",
+     "shout": false,
+     "label": "8分の1に"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ8分の1に？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "ng_madoguchi",
+     "tint": "yellow",
+     "tag": "1949年 誕生",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "お年玉つき！"
+    },
+    {
+     "scene": "ng_madoguchi_kara",
+     "tint": "mono",
+     "tag": "2027年用5.6億枚",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "なぜ減った？"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "今年も出しとこ、年賀状。（日本郵便 2026-08-31 のキャッチコピー）",
+    "scene": "ch6_catch",
+    "text": "今年も出しとこ、年賀状。"
+   },
+   {
+    "claim": "2027年用の当初発行5億5593万枚＝2004年用の約44億6千万枚の約8分の1",
+    "scene": "ch6_catch",
+    "text": "発行は、5億5593万枚です。／約8分の1、ですね。"
+   },
+   {
+    "claim": "50枚で3150円→4250円（63円→85円）",
+    "scene": "ch5_madoguchi",
+    "text": "4250円！？ 去年は3150円だったわよ！"
+   },
+   {
+    "claim": "値上げ後の元日配達は34％減（2025年元日 4億91百万通、前年比66.0％）",
+    "scene": "ch1_kyukei",
+    "text": "ところが値上げのあとの元日、年賀状は前の年より34％減った。"
+   }
+  ]
+ },
+ {
+  "slug": "seiyu-trial",
+  "video_id": "mytquMkrrqE",
+  "title_a": "「地域でいちばん安いお店をめざします」の西友、17年後に九州のトライアルの下で客が戻る【ずんだもん解説】",
+  "title_b": "【西友とトライアル】大株主が5回替わった老舗、利益率を下げて客が戻るまで【ずんだもん解説】",
+  "title_c": "西友を買ったトライアルは、なぜ利益を削って客を取りに行ったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "利益を削って客を取る",
+   "head_hi": "客を取る",
+   "panels": [
+    {
+     "prop": "p_trophy",
+     "bg": "blue",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "業界トップレベル",
+     "by": "前社長",
+     "shout": false,
+     "label": "利益率4.9%"
+    },
+    {
+     "prop": "p_pricetag",
+     "bg": "yellow",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "かつ重299円",
+     "by": "",
+     "shout": false,
+     "label": "客数が増加"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ客が戻った？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "sy_soto_heiten",
+     "tint": "mono",
+     "tag": "大株主が5回交代",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "また替わる…"
+    },
+    {
+     "scene": "sy_soto_yoru",
+     "tint": "yellow",
+     "tag": "24時間で再開",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "客が増えた！"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "地域でいちばん安いお店をめざします（西友 2008-12-03）",
+    "scene": "ch4_shokai",
+    "text": "12月3日。西友は、地域でいちばん安いお店をめざします、と掲げます。"
+   },
+   {
+    "claim": "大株主・親会社の顔ぶれが25年で5回替わった（台帳の数え方）",
+    "scene": "ch1_kaigi2",
+    "text": "2000年からの25年で、西友の筆頭株主や親会社の顔ぶれは5回替わりました。"
+   },
+   {
+    "claim": "業界トップレベル（大久保社長 2024-05）",
+    "scene": "ch6_toplevel",
+    "text": "23年12月期の連結営業利益は315億円と、業界トップレベル。"
+   },
+   {
+    "claim": "利益率4.9%（2024年の本州事業）",
+    "scene": "ch1_kaigi_b",
+    "text": "台帳［P20］"
+   },
+   {
+    "claim": "ロースかつ重 税込299円",
+    "scene": "ch8_souzai",
+    "text": "本体277円の、税込みで299円です。"
+   },
+   {
+    "claim": "既存店の客数・売上が前年を上回る（2025年10月〜）",
+    "scene": "ch11_kaigi",
+    "text": "9月の既存店の客数は6.9％増。売上は12カ月続けて、前の年を上回りました。"
+   }
+  ]
+ },
+ {
+  "slug": "toshiba-delisting",
+  "video_id": "",
+  "title_a": "東芝が社内で「チャレンジ」と呼んだ利益目標、その先で74年の上場に幕【ずんだもん解説】",
+  "title_b": "【東芝の上場廃止】「チャレンジ」と原発の損失、名門が74年の上場に幕を引くまで【ずんだもん解説】",
+  "title_c": "日本の電機の名門・東芝は、なぜ74年の上場をやめるまでになったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "conflict",
+   "headline": "名門の東芝に何が",
+   "head_hi": "何が",
+   "panels": [
+    {
+     "prop": "p_ledger",
+     "bg": "yellow",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "チャレンジ！？",
+     "by": "",
+     "shout": false,
+     "label": "3日で120億円"
+    },
+    {
+     "prop": "p_downgraph",
+     "bg": "red",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "上場廃止…",
+     "by": "",
+     "shout": false,
+     "label": "74年で幕"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ上場をやめた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "tb_sekkei",
+     "tint": "yellow",
+     "tag": "1991年 入社",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "名門なのだ！"
+    },
+    {
+     "scene": "tb_shoken",
+     "tint": "mono",
+     "tag": "2023年 上場廃止",
+     "emo": "surprised",
+     "fx": "shock",
+     "say": "なぜ…？"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "チャレンジ（第三者委員会の報告書の言葉）",
+    "scene": "ch1_challenge",
+    "text": "そこで社長が示す収益改善の目標を、社内でチャレンジと呼んでた。"
+   },
+   {
+    "claim": "残り3日で120億円（報告書 p.228）",
+    "scene": "ch1_getsurei",
+    "text": "報告書によると、社長は残り3日での120億円の利益改善を強く求めました。"
+   },
+   {
+    "claim": "74年の上場に幕（2023-12-20 上場廃止、前日終値4590円）",
+    "scene": "ch7_owarine",
+    "text": "翌20日。74年の上場の歴史に、幕が下りました。"
+   },
+   {
+    "claim": "上場廃止は経営破綻ではなくTOBによる非公開化",
+    "scene": "ronso1",
+    "text": "上場廃止は、株の買い付けによる非公開化。"
+   }
+  ]
  }
 ]

@@ -2734,9 +2734,10 @@ def layout_scene(spec):
                 if pn.get("by"):
                     fb = font("w9", 30)
                     bw2 = _tw(fb, pn["by"]) + 24
-                    cd.rounded_rectangle([box[0] + 6, box[1] - 18, box[0] + 6 + bw2, box[1] + 26],
+                    # 札は吹き出しの上の線にまたがらせる（下に寄せると、短い台詞の大きな字に重なる）
+                    cd.rounded_rectangle([box[0] + 6, box[1] - 30, box[0] + 6 + bw2, box[1] + 12],
                                          radius=8, fill=(18, 14, 12))
-                    _ttext(cd, (box[0] + 18, box[1] - 16), pn["by"], fb, (255, 255, 255))
+                    _ttext(cd, (box[0] + 18, box[1] - 27), pn["by"], fb, (255, 255, 255))
         img.alpha_composite(cell, (i * (pw + gap), HEAD_H))
     d = ImageDraw.Draw(img)
     # 札どうしをつなぐ橙の矢印
@@ -4348,6 +4349,27 @@ SPECS = {
         head_hi="604億円", panels=[
         _p("p_fuutou", "1997年", SLATE, "angry", "褒賞は計2万円", "特許1件の褒賞"),
         _p("p_tenbin", "2004年", NAVY, "surprised", "604億円！？", "地裁の認定"),
+    ]),
+    # いまの話題 第2弾（2026-11-01〜04）。A は場面型
+    "hitachi-kaden": dict(layout="scene", headline="日立の家電、ノジマへ", head_hi="ノジマへ", panels=[
+        dict(scene="hk_ryohan", tint="yellow", tag="2023年 指定価格", emo="surprised", fx="sweat",
+             say="値引きできません", by="店員"),
+        dict(scene="hk_kaiken", tint="red", tag="2026年 売却を発表", emo="surprised", fx="shock",
+             say="忖度しない", by="ノジマ"),
+    ]),
+    "nengajo-otoshidama": dict(layout="scene", headline="年賀はがき8分の1", head_hi="8分の1", panels=[
+        dict(scene="ng_kubun", tint="yellow", tag="ピーク44.6億枚", emo="surprised", fx="sweat", say="かばんが重い！"),
+        dict(scene="ng_shuppatsu_sukunai", tint="mono", tag="2027年用5.6億枚", emo="sad", fx="gloom",
+             say="かばんが軽い", by="後輩"),
+    ]),
+    "toshiba-delisting": dict(layout="scene", headline="東芝、74年の上場に幕", head_hi="上場に幕", panels=[
+        dict(scene="tb_getsurei_akaji", tint="red", tag="残り3日で120億", emo="surprised", fx="sweat", say="チャレンジ！？"),
+        dict(scene="tb_shoken", tint="mono", tag="2023年 上場廃止", emo="sad", fx="gloom", say="名門なのに…"),
+    ]),
+    "seiyu-trial": dict(layout="scene", headline="西友に客が戻った", head_hi="客が戻った", panels=[
+        dict(scene="sy_uriba", tint="blue", tag="2008年 値下げ", emo="surprised", fx="sweat",
+             say="いちばん安い店へ", by="西友"),
+        dict(scene="sy_souzai", tint="yellow", tag="2026年 客数増", emo="happy", fx="sparkle", say="かつ重299円"),
     ]),
     # いまの話題4本（2026-10-28〜31）。A は場面型（.claude/skills/thumbnail）
     "toysrus-japan": dict(layout="scene", headline="市場は最高なのに民事再生", head_hi="民事再生", panels=[

@@ -1,0 +1,1505 @@
+meta:
+  title: 「地域でいちばん安いお店をめざします」の西友、17年後に九州のトライアルの下で客が戻る【ずんだもん解説】
+  slug: seiyu-trial
+  hook_line: 大株主が25年で5回替わった西友。なぜトライアルの下で客が戻ったのか。
+  summary: 2026年10月、西友は楽天ポイントカードの終了を知らせました。25年で筆頭株主や親会社の顔ぶれが5回替わり、いまの持ち主は九州のディスカウント店トライアル。新しい持ち主は、店の物差しを「利益率」から「客数」に替えます。1995年入社の店長の目で、ウォルマートの「毎日安い」、ファンドと楽天の時代、今の売場までを、会社の発表と報道をもとにした再現ドラマでたどります。（2026年10月時点）
+  sources:
+  - トライアルホールディングス「株式会社西友の株式の取得（完全子会社化）に関するお知らせ」（2025年3月5日） https://trial-holdings.inc/news/release/67c7e56725df23ba67b568c5/
+  - トライアルホールディングス「本決算説明資料 2026年6月期」（2026年8月13日） https://pdf.irpocket.com/C141A/xoA3/MuFf/T9TP/zgQJ.pdf
+  - トライアルホールディングス 適時開示「株式会社西友の一部不動産流動化に伴う子会社（孫会社）間の吸収分割…に関するお知らせ」（2026年8月21日） https://pdf.irpocket.com/C141A/xoA3/tx0r/Mj8g/hOsH.pdf
+  - 西友「楽天ポイントカードのサービス終了に関するお知らせ」（2026年10月1日） https://www.seiyu.co.jp/assets/images/RakutenPoints_ServiceEnd_261001.pdf
+  - KKR「KKR、西友株式をトライアルホールディングスへ譲渡」（2025年3月5日） https://www.kkr.com/content/dam/kkr/country-sites/jp/press-release/2025/20250305-press-release-regarding-seiyu.pdf
+  - 流通ニュース「西友／他社チラシ価格照合など低価格路線を宣言」（2008年12月3日） https://www.ryutsuu.biz/backnumber/strategy/%E8%A5%BF%E5%8F%8B%EF%BC%8F%E4%BB%96%E7%A4%BE%E3%83%81%E3%83%A9%E3%82%B7%E4%BE%A1%E6%A0%BC%E7%85%A7%E5%90%88%E3%81%AA%E3%81%A9%E4%BD%8E%E4%BE%A1%E6%A0%BC%E8%B7%AF%E7%B7%9A%E3%82%92%E5%AE%A3%E8%A8%80.html
+  tags:
+  - 西友
+  - トライアル
+  - トライアル西友
+  - ウォルマート
+  - KKR
+  - 楽天ポイント
+  - スーパー
+  - ロースかつ重
+  - 永田洋幸
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 利益率より客数
+    bottom: 西友とトライアル
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kyaku
+    label: お客さん
+    voice: 8
+    pitch: -0.12
+  - id: honbu
+    label: 本部
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: jicho
+    label: 先輩
+    voice: 13
+    pitch: -0.04
+    outfit: apron
+    color: '#2e5a3a'
+  - id: buka
+    label: 部下
+    voice: 12
+    pitch: 0.0
+    outfit: apron
+    color: '#2e6fb0'
+  - id: shacho
+    label: 大久保社長
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#3a3a42'
+  - id: nagata
+    label: 永田洋幸
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#1a1a1a'
+  - id: shacho2
+    label: 西友社長
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2b3440'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+scenes:
+# ---- 先出し（2026年10月1日のサービスカウンター） ----
+- id: co_counter
+  title: ''
+  background: sy_reji
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月1日。東京郊外の西友の、サービスカウンターです。
+    reading: にせんにじゅうろくねん じゅうがつ ついたち。とうきょう こうがいの せいゆうの さーびす かうんたーです。
+  - speaker: kyaku
+    emotion: angry
+    text: 店長さん。この貼り紙、なんなの？
+  - speaker: zundamon
+    emotion: normal
+    text: 楽天ポイントカードの、サービス終了のお知らせです。
+  - speaker: kyaku
+    emotion: surprised
+    text: 終わっちゃうの！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: normal
+    text: 2027年の[4月4日|シガツヨッカ]までは、お使いいただけます。
+  - speaker: kyaku
+    emotion: angry
+    text: ポイントも無しで、どうやってお客を呼ぶのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[ロースかつ重|ロースカツジュウ]、ですかね。
+  - speaker: kyaku
+    emotion: thinking
+    text: '[かつ重|カツジュウ]ねえ。……今日も2つ買ったけど。'
+    beat: true
+  - speaker: reimu
+    text: 西友の既存店の売上は、2025年10月から12カ月続けて前の年を上回りました。
+    reading: せいゆうの きぞんてんの うりあげわ、にせんにじゅうごねん じゅうがつから じゅうにかげつ つづけて まえの としお うわまわりました。
+    telops:
+    - {text: "既存店売上　12カ月連続で前年超え", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 持ち主が次々と替わった老舗に、なぜ九州のディスカウント店の下で客が戻ったのでしょう。
+    reading: もちぬしが つぎつぎと かわった しにせに、なぜ きゅうしゅうの でぃすかうんとてんの もとで きゃくが もどったのでしょう。
+# ---- 茶番（今の部屋） ----
+- id: hook
+  title: ''
+  background: sy_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ [ロースかつ重|ロースカツジュウ]が299円！ 3つ買ったのだ！
+  - speaker: tsumugi
+    emotion: surprised
+    text: 3つも……。どこで？
+  - speaker: zundamon
+    emotion: happy
+    text: '[西友|せいゆう]。トライアルの名物なんだって。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 西友は去年、トライアルに買われたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[大株主|おおかぶぬし]が替わるのは、25年で5回目。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 替わりすぎなのだ！
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: なのに今は、客が増えてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: なんで九州のお店の[下|もと]で、客が戻ったのだ！？
+# ---- 仕組み1：物差しを替える（2025年7月の店長会議） ----
+- id: ch1_kaigi
+  title: 物差しを替える
+  background: sy_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年7月。トライアルの子会社になった西友で、店長たちが本部の会議に呼ばれます。
+    reading: にせんにじゅうごねん しちがつ。とらいあるの こがいしゃに なった せいゆうで、てんちょうたちが ほんぶの かいぎに よばれます。
+  - speaker: honbu
+    emotion: normal
+    text: 皆さん。壁の目標を、見てください。
+  - speaker: zundamon
+    emotion: normal
+    text: 営業利益率、ですね。
+  - speaker: honbu
+    emotion: normal
+    text: これを、はがします。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[は|ハ]、はがす！？'
+  - speaker: honbu
+    emotion: normal
+    text: 新しい目標は、[既存店|きぞんてん]客数です。
+    se: don
+    telops:
+    - {text: "目標　利益率→既存店客数", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 客の、数ですか。
+  - speaker: honbu
+    emotion: normal
+    text: 従来の収益性重視から、お客さま支持の向上を軸とする経営へ転換します。
+  - speaker: honbu
+    emotion: normal
+    text: 最重要[KPI|ケーピーアイ]は、[既存店|きぞんてん]客数です。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも前の社長は、うちの利益は業界トップレベルだって……。
+  - speaker: honbu
+    emotion: normal
+    text: お客さま起点の売場づくりを、徹底します。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……利益より、客なんですね。
+- id: ch1_kaigi_b
+  title: ''
+  background: sy_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: thinking}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: お客さんが1000円買ってくれたら、会社に残るのは49円。
+  - speaker: zundamon
+    emotion: happy
+    text: これが、うちの自慢だったんです。
+  - speaker: honbu
+    emotion: normal
+    text: お客さまの数を、増やします。
+  - speaker: zundamon
+    emotion: thinking
+    text: 49円は、どうなるんですか。
+  - speaker: reimu
+    text: 1年後、西友の営業利益率は3.0％に下がります。会社は次の年の計画を、2.0％にしました。
+    reading: いちねんご せいゆうの えいぎょう りえきりつわ さんてんぜろ ぱーせんとに さがります。かいしゃわ つぎの としの けいかくお、にてんぜろ ぱーせんとに しました。
+    background: sy_kaigi_akaji
+  - speaker: zundamon
+    emotion: surprised
+    text: 49円が30円……20円！？
+    se: gaan
+    telops:
+    - {text: "1000円で残るのは　49円→20円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: その間に、店に来る客の数は、前の年より1割ほど増えていきます。
+    reading: その あいだに みせに くる きゃくの かずわ、まえの としより いちわり ほど ふえて いきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 利益を削って、客を呼んでるのか……。
+  - speaker: reimu
+    text: 業界トップレベルの利益を出していた西友で、なぜ物差しを替えたら客が増えたのでしょう。
+    reading: ぎょうかい とっぷ れべるの りえきお だして いた せいゆうで、なぜ ものさしお かえたら きゃくが ふえたのでしょう。
+# ---- 仕組み2：同じ「毎日安い」 ----
+- id: ch1_kaigi2
+  title: 同じ毎日安い
+  background: sy_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 来月から、トライアルの名物を西友の2店で試します。
+  - speaker: zundamon
+    emotion: normal
+    text: 名物って、なんですか。
+  - speaker: honbu
+    emotion: happy
+    text: '[三元豚|サンゲントン]の[ロースかつ重|ロースカツジュウ]。税込みで299円です。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 299円！？
+  - speaker: honbu
+    emotion: normal
+    text: '[Every Day Low Price|エブリデイ・ロープライス]で、インフレ時代に高い集客力を実現。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 毎日安い、ですか。それなら2008年にも、うちでやりましたよ。
+  - speaker: zundamon
+    emotion: normal
+    text: チラシをやめて、10円下げて。
+  - speaker: honbu
+    emotion: normal
+    text: トライアルも、毎日安いです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……同じ言葉じゃないですか。
+    se: tenten
+  - speaker: reimu
+    text: 2008年の西友も、毎日安いを掲げて苦しみました。今度は、何が違ったのでしょう。
+    reading: にせんはちねんの せいゆうも まいにち やすいお かかげて くるしみました。こんどわ なにが ちがったのでしょう。
+  - speaker: reimu
+    text: 2000年からの25年で、西友の筆頭株主や親会社の顔ぶれは5回替わりました。
+    reading: にせんねんからの にじゅうごねんで、せいゆうの ひっとう かぶぬしや おやがいしゃの かおぶれわ ごかい かわりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 育てた会社も店も、次々と手放してきました。
+  - speaker: zundamon
+    emotion: sad
+    text: 決めるのは、いつも上の人でしたね。
+  - speaker: reimu
+    text: トライアルから来た西友の社長は、のちに言います。ウォルマートの傘下にいたから、なじみやすかったと。
+    reading: とらいあるから きた せいゆうの しゃちょうわ のちに いいます。うぉるまーとの さんかに いたから なじみやすかったと。
+  - speaker: zundamon
+    emotion: surprised
+    text: ウォルマートの18年が、役に立った……？
+# ---- 1963〜2000：生んだもの、手放したもの ----
+- id: card1963
+  title: ''
+  background: sy_card_1963
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 1963年。西武流通グループが、チェーンストアの西友ストアーを始めます。
+    reading: せんきゅうひゃく ろくじゅうさんねん。せいぶ りゅうつう ぐるーぷが、ちぇーん すとあの せいゆう すとあーお はじめます。
+  - speaker: reimu
+    text: 率いたのは、のちのセゾングループの堤清二でした。
+    reading: ひきいたのわ、のちの せぞん ぐるーぷの つつみ せいじでした。
+- id: ch2_shinjin
+  title: 西友が生んだもの
+  background: sy_uriba
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 新人, emotion: happy}
+  - {who: jicho, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1995年4月。のちの店長は、新人として郊外の大型店に入りました。
+    reading: せんきゅうひゃく きゅうじゅうごねん しがつ。のちの てんちょうわ、しんじんと して こうがいの おおがたてんに はいりました。
+  - speaker: jicho
+    emotion: happy
+    text: 新人、うちの売り場は広いぞ。服も家電も、食べ物もある。
+  - speaker: zundamon
+    emotion: happy
+    text: なんでもあるんですね。
+  - speaker: jicho
+    emotion: normal
+    text: 物を運ぶ仕組みも、うちは早かった。
+  - speaker: jicho
+    emotion: normal
+    text: 1969年には[府中|ふちゅう]に、小売業で初めての本格的な流通センターを作った。
+  - speaker: zundamon
+    emotion: normal
+    text: 運ぶところから、ですか。
+  - speaker: jicho
+    emotion: happy
+    text: ファミリーマートも[無印良品|ムジルシリョウヒン]も、うちから生まれたんだぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: コンビニも！？
+  - speaker: jicho
+    emotion: normal
+    text: ファミマの1号店は1973年、埼玉の[狭山|サヤマ]だ。
+  - speaker: jicho
+    emotion: normal
+    text: 無印は1980年に、うちの商品として始まった。
+  - speaker: zundamon
+    emotion: happy
+    text: 先輩。うちって、すごい会社なんですね！
+  - speaker: jicho
+    emotion: happy
+    text: 新人は、まず品出しだ。
+    beat: true
+  - speaker: reimu
+    text: この新人はまだ、育てた子どもを手放す日が来るとは思っていません。
+    reading: この しんじんわ まだ、そだてた こどもお てばなす ひが くるとわ おもって いません。
+- id: ch2_famima
+  title: 子どもを手放す
+  background: sy_kyukei
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社員, emotion: normal}
+  - {who: jicho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1998年2月。西友は、ファミリーマートの株2862万株を、伊藤忠グループに売ります。
+    reading: せんきゅうひゃく きゅうじゅうはちねん にがつ。せいゆうわ ふぁみりーまーとの かぶ にせん はっぴゃく ろくじゅうにまんかぶお いとうちゅう ぐるーぷに うります。
+  - speaker: jicho
+    emotion: thinking
+    text: 1350億円だそうだ。[伊藤忠|イトーチュー]が、筆頭株主になる。
+  - speaker: zundamon
+    emotion: surprised
+    text: うちが生んだコンビニを、売っちゃうんですか！？
+  - speaker: jicho
+    emotion: thinking
+    text: セゾングループの不良債権を圧縮して、経営の立て直しを急ぐんだと。
+  - speaker: zundamon
+    emotion: sad
+    text: 育てた子どもで、借金の穴埋め……。
+    se: shobon
+  - speaker: jicho
+    emotion: thinking
+    text: '[無印良品|むじるしりょうひん]の会社の株も、大半を売るそうだ。'
+  - speaker: reimu
+    text: 2000年、西友は日本で初めてのネットスーパーを始めます。同じ年、住友商事が筆頭株主になりました。
+    reading: にせんねん、せいゆうわ にほんで はじめての ねっと すーぱーお はじめます。おなじ とし すみとも しょうじが ひっとう かぶぬしに なりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 持ち主が、替わり始めた……。
+# ---- ウォルマート（2002〜2020） ----
+- id: card2002
+  title: ''
+  background: sy_card_2002
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2002年3月。アメリカの小売りの大手、ウォルマートが西友と提携します。
+    reading: にせんにねん さんがつ。あめりかの こうりの おおて、うぉるまーとが せいゆうと ていけい します。
+- id: ch3_america
+  title: 黒船が来た
+  background: sy_america
+  cuts:
+  - speaker: reimu
+    text: ウォルマートは株の6.1％を取り、将来は66.7％まで増やせる取り決めでした。
+    reading: うぉるまーとわ かぶの ろくてんいち ぱーせんとお とり、しょうらいわ ろくじゅうろくてんなな ぱーせんとまで ふやせる とりきめでした。
+- id: ch3_kurofune
+  title: ''
+  background: sy_kyukei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社員, emotion: normal}
+  - {who: jicho, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: jicho
+    emotion: surprised
+    text: 黒船到来だって、どこも大騒ぎだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 黒船って、ペリーの？
+  - speaker: jicho
+    emotion: angry
+    text: 今度はアメリカの、スーパーの船だ！
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: スーパーが、海を渡ってきた……。
+  - speaker: reimu
+    text: 2005年には子会社に。2007年には、残りの株を1株140円で買い集めると発表します。
+    reading: にせんごねんにわ こがいしゃに。にせんななねんにわ、のこりの かぶお ひとかぶ ひゃくよんじゅうえんで かいあつめると はっぴょう します。
+  - speaker: reimu
+    text: このとき西友は約400店。6期続けての赤字が見込まれていました。
+    reading: この とき せいゆうわ やく よんひゃくてん。ろっき つづけての あかじが みこまれて いました。
+  - speaker: jicho
+    emotion: thinking
+    text: 赤字の会社を、丸ごと買うのか……。
+  - speaker: zundamon
+    emotion: normal
+    text: アメリカのやり方、教えてもらえるんですかね。
+- id: card2008
+  title: ''
+  background: sy_card_2008
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 2008年。ウォルマートの完全子会社になった西友は、毎日安いに舵を切ります。
+    reading: にせんはちねん。うぉるまーとの かんぜん こがいしゃに なった せいゆうわ、まいにち やすいに かじお きります。
+- id: ch4_chirashi
+  title: チラシをやめる
+  background: sy_uriba
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 主任, emotion: normal}
+  - {who: jicho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: jicho
+    emotion: normal
+    text: 主任。今日から折り込みチラシは無しだ。特売もやめる。
+  - speaker: zundamon
+    emotion: surprised
+    text: チラシ無しで、どうやってお客さんを呼ぶんですか！？
+  - speaker: jicho
+    emotion: normal
+    text: 毎日安い。エブリデイ・ロープライスだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 特売の日に来てくれてたお客さんは……？
+  - speaker: jicho
+    emotion: happy
+    text: 毎日が、特売みたいなもんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 毎日が特売なら、特売の日は無いってことですよね。
+  - speaker: jicho
+    emotion: thinking
+    text: ……理屈では、そうなるな。
+    beat: true
+  - speaker: reimu
+    text: 11月10日。西友は約1700品目を値下げします。名前は、KYでした。
+    reading: じゅういちがつ とおか。せいゆうわ やく せんななひゃく ひんもくお ねさげ します。なまえわ けーわいでした。
+  - speaker: jicho
+    emotion: happy
+    text: ポスターを貼るぞ。[KY|けーわい]でいこう！
+  - speaker: zundamon
+    emotion: surprised
+    text: '[KY|けーわい]って、空気読めないの[KY|けーわい]ですか？'
+  - speaker: jicho
+    emotion: angry
+    text: 価格を安く、の頭文字だ！
+    se: tsukkomi
+  - speaker: jicho
+    emotion: normal
+    text: 2リットルの飲み物は、178円から168円。
+  - speaker: jicho
+    emotion: normal
+    text: アメリカ産の牛のステーキは、237円から187円だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 飲み物は、10円……。
+  - speaker: reimu
+    text: 同じころ、ダイエーは4000品目、イオンは2000品目を値下げしていました。
+    reading: おなじ ころ だいえーわ よんせん ひんもく、いおんわ にせん ひんもくお ねさげ して いました。
+- id: ch4_shokai
+  title: よその店のチラシ
+  background: sy_reji
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 主任, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 12月3日。西友は、地域でいちばん安いお店をめざします、と掲げます。
+    reading: じゅうにがつ みっか。せいゆうわ ちいきで いちばん やすい おみせお めざしますと かかげます。
+    telops:
+    - {text: "西友「地域でいちばん安いお店をめざします」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 翌日からは、よその店のチラシの方が安ければ、その値段で売ると決めました。
+    reading: よくじつからわ よその みせの ちらしの ほうが やすければ、その ねだんで うると きめました。
+  - speaker: kyaku
+    emotion: happy
+    text: 主任さん、これ。よそのチラシ。
+  - speaker: zundamon
+    emotion: normal
+    text: 拝見します。……確かに、こちらの方が安いですね。
+  - speaker: zundamon
+    emotion: normal
+    text: では、この値段でお売りします。
+  - speaker: kyaku
+    emotion: happy
+    text: 話が早いわね。じゃあ、これも。これも。
+  - speaker: zundamon
+    emotion: surprised
+    text: チラシが、5枚も！？
+  - speaker: kyaku
+    emotion: happy
+    text: 今朝の新聞に、たくさん入ってたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちのチラシは、入ってませんでしたよね……。
+  - speaker: kyaku
+    emotion: normal
+    text: だって、やめたんでしょ？
+    se: oti
+  - speaker: reimu
+    text: 値下げの元手は、ウォルマートの仕入れの網や、物流の見直しでした。
+    reading: ねさげの もとでわ うぉるまーとの しいれの あみや、ぶつりゅうの みなおしでした。
+- id: ch5_heiten
+  title: 30店を閉める
+  background: sy_uriba
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 主任, emotion: normal}
+  - {who: jicho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2014年。西友は、もうからない約30店を閉め、約50店を改装すると発表します。
+    reading: にせんじゅうよねん。せいゆうわ もうからない やく さんじゅってんお しめ、やく ごじゅってんお かいそう すると はっぴょう します。
+  - speaker: jicho
+    emotion: thinking
+    text: 主任。閉める店の、片付けの応援だ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……うちと同じ作りの店ですね。
+  - speaker: jicho
+    emotion: thinking
+    text: 閉店セールの垂れ幕は、もう出してある。
+  - speaker: zundamon
+    emotion: sad
+    text: 棚が、どんどん空いていく……。
+    background: sy_uriba_kara
+    beat: true
+  - speaker: jicho
+    emotion: thinking
+    text: 毎日安いの看板も、ここで下ろすのか。
+  - speaker: reimu
+    text: 西友の店は、2014年の373店から、2018年には335店に減っていきます。
+    reading: せいゆうの みせわ にせんじゅうよねんの さんびゃく ななじゅうさんてんから、にせんじゅうはちねんにわ さんびゃく さんじゅうごてんに へって いきます。
+- id: ch5_baikyaku
+  title: 売るのか、売らないのか
+  background: sy_kyukei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: jicho, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2018年7月。ウォルマートが西友を売ることを考えている、と報じられます。
+    reading: にせんじゅうはちねん しちがつ。うぉるまーとが せいゆうお うる ことお かんがえて いると ほうじられます。
+  - speaker: jicho
+    emotion: surprised
+    text: 店長、ニュース見ましたか。うち、売られるかもって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 店長になって、まだ3年なのに……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 本社は、なんて言ってるんですか。
+  - speaker: jicho
+    emotion: normal
+    text: 広報は、こうだそうです。
+  - speaker: jicho
+    emotion: normal
+    text: 売却について報道があったことは把握しているが、噂や憶測についてはコメントしない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 噂、ですか……。
+    beat: true
+  - speaker: reimu
+    text: ウォルマートは、売却の決定を下していない、としました。
+    reading: うぉるまーとわ ばいきゃくの けっていお くだして いないと しました。
+  - speaker: reimu
+    text: この年、ある分析記事は、西友の値段は格別安いわけではない、と書いています。
+    reading: この とし ある ぶんせき きじわ、せいゆうの ねだんわ かくべつ やすい わけでわ ないと かいて います。
+  - speaker: jicho
+    emotion: sad
+    text: 毎日安いって、10年言ってきたんですけどね。
+  - speaker: reimu
+    text: 2020年11月。ウォルマートは、株の85％をファンドのKKRと楽天に売ると決めます。
+    reading: にせんにじゅうねん じゅういちがつ。うぉるまーとわ かぶの はちじゅうごぱーせんとお ふぁんどの けーけーあーると らくてんに うると きめます。
+  - speaker: zundamon
+    emotion: thinking
+    text: また、持ち主が替わるのか……。
+# ---- ファンドと楽天（2021〜2024） ----
+- id: card2021
+  title: ''
+  background: sy_card_2021
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2021年3月。KKRが65％、楽天が20％、ウォルマートが15％を持つ西友が始まります。
+    reading: にせんにじゅういちねん さんがつ。けーけーあーるが ろくじゅうごぱーせんと らくてんが にじゅっぱーせんと、うぉるまーとが じゅうごぱーせんとお もつ せいゆうが はじまります。
+- id: ch6_rakuten
+  title: 楽天ポイントが来た
+  background: sy_reji
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 店長, emotion: happy}
+  - {who: buka, x: 0.56, emotion: happy}
+  - {who: kyaku, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2022年4月26日。全国の西友で、楽天ポイントカードが使えるようになります。
+    reading: にせんにじゅうにねん しがつ にじゅうろくにち。ぜんこくの せいゆうで らくてん ぽいんと かーどが つかえる ように なります。
+  - speaker: buka
+    emotion: happy
+    text: 店長！ 楽天ポイント、税抜き200円で1ポイントです！
+    se: jaan
+  - speaker: kyaku
+    emotion: happy
+    text: あら、貯まるの？ じゃあ、こっちで買おうかしら。
+  - speaker: zundamon
+    emotion: happy
+    text: ぜひ、お願いします。
+  - speaker: kyaku
+    emotion: thinking
+    text: 店長さん。私、チラシの時から[通って|かよって]るのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: あのときの、5枚のお客様！
+  - speaker: buka
+    emotion: happy
+    text: 店長、ポイントでお客さんが増えそうですね。
+  - speaker: reimu
+    text: 翌2023年5月。楽天は、持っていた20％をKKRに売ります。協業は続ける、としました。
+    reading: よく にせんにじゅうさんねん ごがつ。らくてんわ もって いた にじゅっぱーせんとお けーけーあーるに うります。きょうぎょうわ つづけると しました。
+- id: ch6_toplevel
+  title: 業界トップレベル
+  background: sy_yakuin
+  bgm: hirusagari
+  stage:
+  - {who: shacho, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年5月。西友の社長、大久保恒夫が、経済誌の取材に相次いで答えます。
+    reading: にせんにじゅうよねん ごがつ。せいゆうの しゃちょう おおくぼ つねおが、けいざいしの しゅざいに あいついで こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: 業績は、いかがですか。
+  - speaker: shacho
+    emotion: happy
+    text: 当社は21年に発表した中期経営計画の目標を3年で達成しました。
+  - speaker: shacho
+    emotion: happy
+    text: 23年12月期の連結営業利益は315億円と、業界トップレベル。
+  - speaker: shacho
+    emotion: normal
+    text: 本州に集中して効率化を図って利益率を高め、規模を大きくしようと思います。
+  - speaker: reimu
+    text: 日経ビジネスの記事の見出しは、首都圏で安売り脱却。データ分析で特売を減らす、でした。
+    reading: にっけい びじねすの きじの みだしわ、しゅとけんで やすうり だっきゃく。でーた ぶんせきで とくばいお へらす、でした。
+  - speaker: kisha
+    emotion: thinking
+    text: 北海道と九州の店を手放すのは、なぜですか。
+  - speaker: shacho
+    emotion: normal
+    text: これは[株主（KKR）|カブヌシ]が判断したこと。
+    telops:
+    - {text: "大久保「これは株主（KKR）が判断したこと」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shacho
+    emotion: normal
+    text: 私は経営者なので、ニュートラル。
+  - speaker: kisha
+    emotion: surprised
+    text: ニュートラル、ですか。
+    beat: true
+  - speaker: reimu
+    text: 北海道の9店はイオン北海道へ、九州の69店はイズミの側へ移りました。
+    reading: ほっかいどうの きゅうてんわ いおん ほっかいどうえ、きゅうしゅうの ろくじゅうきゅうてんわ いずみの がわえ うつりました。
+- id: ch6_kyukei
+  title: ''
+  background: sy_kyukei
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: buka
+    emotion: thinking
+    text: 店長。九州の店は、明日から別の会社なんですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決めたのは、株主だそうだ。
+  - speaker: buka
+    emotion: sad
+    text: 上が決めて、店は従うだけ……。
+  - speaker: zundamon
+    emotion: normal
+    text: 入社してから、ずっとそうだったな。
+    beat: true
+  - speaker: reimu
+    text: 店の側から見ると、決めるのはいつも上の持ち主でした。その持ち主が、翌年また替わります。
+    reading: みせの がわから みると、きめるのわ いつも うえの もちぬしでした。その もちぬしが よくねん また かわります。
+# ---- トライアル（2025〜） ----
+- id: card2025
+  title: ''
+  background: sy_card_2025
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2025年3月5日。西友の株をすべて買う会社が、発表されます。
+    reading: にせんにじゅうごねん さんがつ いつか。せいゆうの かぶお すべて かう かいしゃが、はっぴょう されます。
+- id: ch7_kaiken
+  title: 買い手は九州から
+  background: sy_kaiken
+  stage:
+  - {who: nagata, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 買い手は、福岡のトライアル。会見では、創業者の長男で取締役の永田洋幸が話します。
+    reading: かいてわ ふくおかの とらいある。かいけんでわ、そうぎょうしゃの ちょうなんで とりしまりやくの ながた ひろゆきが はなします。
+  - speaker: nagata
+    emotion: normal
+    text: 今回両社のパートナーシップの目的は
+  - speaker: nagata
+    emotion: normal
+    text: 地域の生活拠点としてお客様に寄り添い続ける基盤づくり。
+  - speaker: kisha
+    emotion: surprised
+    text: 株の取得額は3800億円。費用を入れて、3826億円……！
+    telops:
+    - {text: "買収額　3826億円（費用込み）", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 売り手は、KKRとウォルマートでした。楽天は、2年前に株を手放しています。
+    reading: うりてわ けーけーあーると うぉるまーとでした。らくてんわ にねんまえに かぶお てばなして います。
+  - speaker: nagata
+    emotion: normal
+    text: 西友の優秀な人材を当社グループの人材と融合させ、
+  - speaker: nagata
+    emotion: happy
+    text: 大きなシナジーが生まれると考えている。
+  - speaker: reimu
+    text: トライアルは九州を中心に343店。西友の242店と合わせて、585店になります。
+    reading: とらいあるわ きゅうしゅうお ちゅうしんに さんびゃく よんじゅうさんてん。せいゆうの にひゃく よんじゅうにてんと あわせて ごひゃく はちじゅうごてんに なります。
+  - speaker: reimu
+    text: 西友の大久保社長は会見を欠席し、西友としては大変喜ばしい、とコメントしました。
+    reading: せいゆうの おおくぼ しゃちょうわ かいけんお けっせきし、せいゆうと してわ たいへん よろこばしいと こめんと しました。
+- id: ch7_kyukei
+  title: リサイクルショップから
+  background: sy_kyukei
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: buka
+    emotion: happy
+    text: 店長！ うちを買うトライアルって、どんな会社か調べました！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……どんな会社だ。
+  - speaker: buka
+    emotion: normal
+    text: 1974年に、福岡のリサイクルショップから始まったそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: リサイクルショップが、うちを買うのか！？
+  - speaker: buka
+    emotion: normal
+    text: 1984年にはソフトの開発室を作って、レジのシステムを請け負って。
+  - speaker: buka
+    emotion: normal
+    text: アメリカのウォルマートを視察して、刺激を受けたんだそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: ウォルマートって、うちの親会社だったところじゃないか！
+    se: hirameki
+  - speaker: buka
+    emotion: normal
+    text: 1992年に、福岡の[大野城市|おおのじょうし]でディスカウントストアの1号店です。
+  - speaker: buka
+    emotion: happy
+    text: 福岡の[新宮町|しんぐうまち]の店には、[AI|えーあい]カメラが1500台。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1500台！？ 店じゅう見られてるじゃないか。
+  - speaker: buka
+    emotion: normal
+    text: 創業者は2019年の取材で、こう言ってます。
+  - speaker: buka
+    emotion: normal
+    text: なぜとか言っている段階ではない。リテールで[AI|えーあい]をやらないという選択肢はない。
+  - speaker: zundamon
+    emotion: thinking
+    text: ウォルマートを見て育った会社が、ウォルマートの手放した店を買う……。
+  - speaker: buka
+    emotion: thinking
+    text: 親戚みたいな、ものですかね。
+    beat: true
+- id: ch8_kansei
+  title: ともに進めていきたい
+  background: sy_kaiken
+  bgm: you_and_me
+  stage:
+  - {who: nagata, x: 0.28, flip: true, emotion: happy}
+  - {who: shacho2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年7月2日。統合の会見で、西友の会長に就いた永田洋幸が話します。
+    reading: にせんにじゅうごねん しちがつ ふつか。とうごうの かいけんで、せいゆうの かいちょうに ついた ながた ひろゆきが はなします。
+  - speaker: nagata
+    emotion: happy
+    text: 流通情報革命をともに進めていきたい。
+  - speaker: reimu
+    text: 西友の新しい社長は、1987年にトライアルに入り、トライアルを率いてきた人物です。
+    reading: せいゆうの あたらしい しゃちょうわ、せんきゅうひゃく はちじゅうななねんに とらいあるに はいり とらいあるお ひきいて きた じんぶつです。
+  - speaker: shacho2
+    emotion: normal
+    text: 最大のシナジー効果が出るように全身全霊精進してまいります。
+  - speaker: shacho2
+    emotion: normal
+    text: 都市部の知見が豊富な西友と一緒になることで、
+  - speaker: shacho2
+    emotion: happy
+    text: トライアルがこれまで苦手だった小型店の出店を実現していける。
+  - speaker: reimu
+    text: 店の名前もPBの名前も変えず、雇用は守る。統合を理由にした閉店は計画していない、としました。
+    reading: みせの なまえも ぴーびーの なまえも かえず こようわ まもる。とうごうお りゆうに した へいてんわ けいかく して いないと しました。
+  - speaker: reimu
+    text: 会社がのちに、収益性重視からの転換と呼ぶ1年は、この月に始まりました。
+    reading: かいしゃが のちに しゅうえきせい じゅうしからの てんかんと よぶ いちねんわ、この つきに はじまりました。
+- id: ch8_souzai
+  title: ロースかつ重が来た
+  background: sy_souzai
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: buka, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 8月。西友の2店で、トライアルの惣菜とPBが試しに並びます。
+    reading: はちがつ。せいゆうの にてんで、とらいあるの そうざいと ぴーびーが ためしに ならびます。
+  - speaker: buka
+    emotion: happy
+    text: 店長！ [西荻窪|ニシオギクボ]店の惣菜売り場に、[ロースかつ重|ロースカツジュウ]のコーナーです！
+  - speaker: zundamon
+    emotion: normal
+    text: 本当に、299円なのか。
+  - speaker: buka
+    emotion: happy
+    text: 本体277円の、税込みで299円です。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちの店には、まだ来ないのか……。
+  - speaker: buka
+    emotion: thinking
+    text: それと店長。今月の売上、前の年より下です。
+  - speaker: zundamon
+    emotion: sad
+    text: 去年の夏は、災害の備えでたくさん売れたからな……。
+  - speaker: reimu
+    text: この8月が、西友の既存店の売上の底でした。
+    reading: この はちがつが、せいゆうの きぞんてんの うりあげの そこでした。
+  - speaker: reimu
+    text: 会社は、トライアル出身の社長が毎週メッセージを出し、8月までに全従業員と面談したと書いています。
+    reading: かいしゃわ、とらいある しゅっしんの しゃちょうが まいしゅう めっせーじお だし はちがつまでに ぜん じゅうぎょういんと めんだん したと かいて います。
+  - speaker: buka
+    emotion: surprised
+    text: 社長から、今週もメッセージが来てます。
+  - speaker: zundamon
+    emotion: normal
+    text: 毎週、律儀だな。
+    beat: true
+- id: ch8_kanshasai
+  title: 合同感謝祭
+  background: sy_uriba
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 店長, emotion: happy}
+  - {who: buka, x: 0.56, emotion: happy}
+  - {who: kyaku, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 10月。トライアルと西友の、合同の感謝祭が始まります。
+    reading: じゅうがつ。とらいあると せいゆうの、ごうどうの かんしゃさいが はじまります。
+  - speaker: kyaku
+    emotion: happy
+    text: 店長さん、今日は混んでるわね。
+  - speaker: zundamon
+    emotion: happy
+    text: 合同の感謝祭です。トライアルの[PB|ピービー]も、並び始めました。
+  - speaker: kyaku
+    emotion: normal
+    text: あら。九州の[かつ重|カツジュウ]は？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……うちには、まだです。
+  - speaker: buka
+    emotion: surprised
+    text: 店長！ 10月の売上、前の年を超えました！
+    se: levelup
+  - speaker: zundamon
+    emotion: surprised
+    text: 超えた！？ ずっと下だったのに！？
+  - speaker: reimu
+    text: この10月から、西友の既存店の売上と客数は、前の年を上回り続けます。
+    reading: この じゅうがつから、せいゆうの きぞんてんの うりあげと きゃくすうわ まえの としお うわまわり つづけます。
+- id: ch9_heiten
+  title: 24時間のトライアル西友
+  background: sy_soto
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 店長。ここが、最初に作り替える店です。
+  - speaker: zundamon
+    emotion: normal
+    text: '[小平|こだいら]の、[花小金井|はなこがねい]店ですね。'
+  - speaker: reimu
+    text: 2025年10月26日。花小金井店は、いったん店を閉めました。
+    reading: にせんにじゅうごねん じゅうがつ にじゅうろくにち。はなこがねいてんわ いったん みせお しめました。
+    background: sy_soto_heiten
+  - speaker: zundamon
+    emotion: sad
+    text: シャッターが、閉まってる……。
+  - speaker: honbu
+    emotion: normal
+    text: 1か月で、作り替えます。
+- id: ch9_yoru
+  title: ''
+  background: sy_soto_yoru
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: surprised}
+  - {who: honbu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 11月28日。花小金井店は、24時間営業のトライアル西友として開きます。
+    reading: じゅういちがつ にじゅうはちにち。はなこがねいてんわ、にじゅうよじかん えいぎょうの とらいある せいゆうと して ひらきます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 夜中なのに、明かりが消えない……。
+  - speaker: honbu
+    emotion: happy
+    text: 夜も、お客さまが来ます。
+- id: ch9_naka
+  title: ''
+  background: sy_trial
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 品数は約1万5000点から、2万5000点に増やしました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1万点も！？
+  - speaker: honbu
+    emotion: normal
+    text: 九州の明太子や馬刺し、[資さんうどん|すけさんうどん]も置いています。
+  - speaker: honbu
+    emotion: happy
+    text: 子どもには、ブラックモンブランを[1日|いちにち]500本無料で。
+  - speaker: zundamon
+    emotion: happy
+    text: ボク、子どもに戻りたいです。
+    se: manuke
+  - speaker: honbu
+    emotion: normal
+    text: それと、このカートです。[Skip Cart|スキップカート]が80台。
+  - speaker: zundamon
+    emotion: thinking
+    text: カートに、画面がついてる……？
+  - speaker: honbu
+    emotion: normal
+    text: 専用のプリペイドカードを登録して、自分でバーコードを読みます。
+  - speaker: honbu
+    emotion: normal
+    text: 専用のゲートを通れば、会計は終わりです。
+  - speaker: zundamon
+    emotion: surprised
+    text: レジに、並ばなくていいんですか！？
+  - speaker: honbu
+    emotion: happy
+    text: 惣菜売り場には、[ロースかつ重|ロースカツジュウ]。税込み299円です。
+  - speaker: reimu
+    text: 転換から2か月で、売上は約42％、客数は約36％増えました。深夜と夜の利用も伸びました。
+    reading: てんかんから にかげつで うりあげわ やく よんじゅうにぱーせんと、きゃくすうわ やく さんじゅうろくぱーせんと ふえました。しんやと よるの りようも のびました。
+  - speaker: honbu
+    emotion: normal
+    text: 店長の店も、トライアル西友に変わります。
+  - speaker: zundamon
+    emotion: surprised
+    text: うちの店も、24時間に！？
+- id: ch9_higashi
+  title: 西友の跡に、トライアル
+  background: sy_kyukei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: buka, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 12月10日。8月に閉めた西友東松山店の建物に、メガセンタートライアルが開きます。
+    reading: じゅうにがつ とおか。はちがつに しめた せいゆう ひがしまつやまてんの たてものに、めが せんたー とらいあるが ひらきます。
+  - speaker: buka
+    emotion: surprised
+    text: 西友のころと比べて、最初の1か月の売上は約2.7倍です。
+  - speaker: buka
+    emotion: surprised
+    text: お客さんの数は、約2倍。
+  - speaker: zundamon
+    emotion: sad
+    text: トライアルになったら2.7倍……。
+    se: gaan
+  - speaker: buka
+    emotion: thinking
+    text: 店長、落ち込まないでください。うちも、これからです。
+- id: ch10_nagata
+  title: 絶対に成し遂げるべきもの
+  background: sy_gendai
+  bgm: serious
+  stage:
+  - {who: nagata, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ12月。トライアルの社長になった永田洋幸は、業界誌のインタビューに答えます。
+    reading: おなじ じゅうにがつ。とらいあるの しゃちょうに なった ながた ひろゆきわ、ぎょうかいしの いんたびゅーに こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: 買収の金額には、厳しい見方もありますが。
+  - speaker: nagata
+    emotion: normal
+    text: 相応の買収金額だったこともあり、市場では賛否両論あるのは認識しています。
+  - speaker: nagata
+    emotion: normal
+    text: 西友の買収は絶対に成し遂げるべきものでした。
+    telops:
+    - {text: "永田「西友の買収は絶対に成し遂げるべきものでした」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#CC5500", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 絶対に、ですか。
+  - speaker: nagata
+    emotion: normal
+    text: 今は安定していても、トライアル単独での成長にはいずれ限界が来ます。
+  - speaker: nagata
+    emotion: normal
+    text: ここでリスクをとって前進しなければ、
+  - speaker: nagata
+    emotion: thinking
+    text: われわれがずっとやりたかったことが、できなくなってしまうかもしれない。
+  - speaker: kisha
+    emotion: thinking
+    text: 守りではなく、攻めの買い物ということですね。
+    beat: true
+# ---- いま（2026年） ----
+- id: card2026
+  title: ''
+  background: sy_card_2026
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2026年2月。トライアルは、3年で西友の30店をトライアル西友に変える計画を出します。
+    reading: にせんにじゅうろくねん にがつ。とらいあるわ さんねんで せいゆうの さんじゅってんお とらいある せいゆうに かえる けいかくお だします。
+- id: ch11_kessan
+  title: 1年目の通信簿
+  background: sy_kaiken
+  stage:
+  - {who: shacho2, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月13日。トライアルの傘下で1年目の決算です。西友の売上は4610億円、営業利益は138億円でした。
+    reading: はちがつ じゅうさんにち。とらいあるの さんかで いちねんめの けっさんです。せいゆうの うりあげわ よんせん ろっぴゃく じゅうおくえん、えいぎょう りえきわ ひゃくさんじゅうはちおくえんでした。
+  - speaker: kisha
+    emotion: normal
+    text: 西友の業績が良かった理由は、なんですか。
+  - speaker: shacho2
+    emotion: happy
+    text: トライアル流の棚割りの導入など相次いで実施し、顧客の支持が拡大した。
+  - speaker: shacho2
+    emotion: normal
+    text: 西友が以前ウォルマートの傘下にあったことからトライアル流になじみやすく
+    telops:
+    - {text: "西友社長「トライアル流になじみやすく」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shacho2
+    emotion: normal
+    text: 高い適応力と実行力で新たな戦略を早期に展開できた。
+  - speaker: kisha
+    emotion: surprised
+    text: ウォルマートの時代が、役に立ったと……。
+    beat: true
+- id: ch11_kaigi
+  title: ''
+  background: sy_kaigi
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: thinking}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 1年目の結果です。西友の営業利益率は3.0％。今期の計画は2.0％です。
+  - speaker: honbu
+    emotion: happy
+    text: 1年目の最大の成果は、お客さま支持の大幅な回復です。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1000円で、残るのは20円……。
+  - speaker: honbu
+    emotion: normal
+    text: 今期は、先行投資のピークです。
+  - speaker: honbu
+    emotion: normal
+    text: 一時的な減益になりますが、客数と売上高のさらなる成長を目指します。
+  - speaker: honbu
+    emotion: happy
+    text: '[既存店|きぞんてん]の客数は、前の年を上回り続けています。'
+    background: sy_kaigi_up
+  - speaker: honbu
+    emotion: happy
+    text: '[ロースかつ重|ロースカツジュウ]は、約230店に広がりました。'
+  - speaker: zundamon
+    emotion: happy
+    text: うちの店にも、やっと来ました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2008年に覚えた毎日安いが、今になって役に立つなんて。
+  - speaker: zundamon
+    emotion: happy
+    text: あの10円も、むだじゃなかったのだ。
+    se: namida
+  - speaker: reimu
+    text: 9月の既存店の客数は6.9％増。売上は12カ月続けて、前の年を上回りました。
+    reading: くがつの きぞんてんの きゃくすうわ ろくてんきゅう ぱーせんと ぞう。うりあげわ じゅうにかげつ つづけて、まえの としお うわまわりました。
+- id: ch12_kumikae
+  title: 会社の中身が替わる
+  background: sy_kyukei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: buka, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 8月21日。トライアルは、西友の不動産の一部を売って借り戻し、約170億円を得ると発表します。
+    reading: はちがつ にじゅういちにち。とらいあるわ せいゆうの ふどうさんの いちぶお うって かりもどし、やく ひゃくななじゅうおくえんお えると はっぴょう します。
+  - speaker: buka
+    emotion: surprised
+    text: 店長、西友が売られるってネットに書いてあります！
+  - speaker: zundamon
+    emotion: normal
+    text: 売られるのとは、ちょっと違う。
+  - speaker: zundamon
+    emotion: normal
+    text: トライアル西友を運営してきた会社が、西友の事業を継ぐんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 11月1日から、その会社が株式会社西友を名乗る予定と発表されてる。
+  - speaker: buka
+    emotion: thinking
+    text: じゃあ、もとの西友の会社は？
+  - speaker: zundamon
+    emotion: normal
+    text: 1946年からの古い会社は名前を変えて、不動産の一部と外に出る予定だ。
+  - speaker: buka
+    emotion: thinking
+    text: お店は、どうなるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: これに伴う店舗閉鎖はありません。会社は、そう書いてる。
+  - speaker: buka
+    emotion: happy
+    text: 会社の名前も、西友のままなんですね。
+    beat: true
+  - speaker: reimu
+    text: 報道によると、町田店と巣鴨店は転換のため閉まり、京都の山科店は53年の営業を終えました。
+    reading: ほうどうに よると まちだてんと すがもてんわ てんかんの ため しまり、きょうとの やましなてんわ ごじゅうさんねんの えいぎょうお おえました。
+  - speaker: reimu
+    text: そして10月1日。西友は、あのお知らせを出しました。
+    reading: そして じゅうがつ ついたち。せいゆうわ、あの おしらせお だしました。
+# ---- 論争の章（今の部屋） ----
+- id: ch13_ronso
+  title: 戻ったのは利益か、客か
+  background: sy_heya
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: normal
+    text: つぶれかけの西友を、トライアルが救ったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そこから、もう違うの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: '[KKR|ケーケーアール]のころの2023年、西友の営業利益は315億円。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年の本州の店だけで見ても、利益率は4.9％よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[KKR|ケーケーアール]は、[PB|ピービー]のお墨付きやセルフレジと自動の発注を成果に挙げてるわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 元気だったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: トライアルの[下|もと]では、それが3.0％。今期は2.0％の計画よ。
+    telops:
+    - {text: "利益率　4.9％→3.0％→2.0％（計画）", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は3.0％を、計画を上回ったと説明してるけどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 救ったのに、利益が減ってるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 戻ったのは、利益じゃなくて客なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[KKR|ケーケーアール]のころは、特売を減らして利益率を高める方針だった。'
+  - speaker: tsumugi
+    emotion: normal
+    text: トライアルは、利益を削ってでも客を取りに行ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 逆なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会社は2029年6月期に、利益率を3.1％へ上げる計画よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どっちのやり方が正しいかは、まだ決まらないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 救ったんじゃなくて、客を取り戻したのか。
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、西友をダメにしたのはウォルマートなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それも、そう単純じゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 西友の苦しさは、ウォルマートが来る前から始まってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 前から！？
+  - speaker: tsumugi
+    emotion: normal
+    text: グループの不良債権を減らすために、1998年にはファミマの株を売ったでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2010年の[CEO|シーイーオー]も赤字の原因に、ウォルマート参加前の[負の遺産|ふのいさん]を挙げてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ウォルマートは2007年の買い増しだけで、最大1000億円を用意したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、毎日安いはうまくいかなかったのか？
+  - speaker: tsumugi
+    emotion: normal
+    text: 非常に安いと見る客は約3倍になったと、当時の担当者は書いてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、西友に足りないのはむしろ価格競争力。そう書いた記事もあったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 毎日安いを掲げても、毎日安く運べる仕組みが追いつかなかったのね。
+- id: ch13_naze
+  title: 同じ毎日安いの違い
+  background: sy_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: トライアルの毎日安いは、何が違うのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: レジもカメラもカートも、自分たちで作る[IT|あいてぃー]が土台なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 撤退した大型スーパーの建物に、居抜きで店を出してきたのも安さの元よ。
+  - speaker: tsumugi
+    emotion: happy
+    text: そして、[ロースかつ重|ロースカツジュウ]みたいな売れる名物を持ち込んだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 10円下げるんじゃなくて、売れる物を持ってきたのだ！
+    se: hirameki
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあトライアルになったら、全部安くなるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: それも違うの。トライアル自身は2025年6月から、値段の付け方を変えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 安さで呼ぶ品と、価値で選んでもらう品に分けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[粗利率|アラリリツ]は、19.7％から22.1％に上がったわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: でも客数は一時、前の年の94.6％まで落ちたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: トライアルでも、客が減ったことがあるのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: 品質が上がった、下がったを測った資料は見つからないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: お墨付きは残って、トライアルの店でも売られてるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3826億円は、高い買い物だったのか？
+  - speaker: tsumugi
+    emotion: thinking
+    text: トライアルの1年の営業利益211億円の、約18年分ね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 買ったときに生まれた、のれんの償却は1年で153億円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 西友の1年の営業利益138億円より、大きいの。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[1日|いちにち]あたり、約4200万円……！'
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方でグループの営業利益は、過去最高だったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: トライアルの[永田|ナガタ]社長は、ポジティブなディールであったとしか思っていないって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 高かったか安かったかは、まだ決まっていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+- id: ch14_chui
+  title: 楽天ポイントはいつまで
+  background: sy_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 西友の店で楽天ポイントカードが使えるのは、2027年[4月4日|シガツヨッカ]まで。
+    telops:
+    - {text: "西友の店の楽天ポイントカード　2027年4月4日まで", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: ポイントが増える日などのキャンペーンは、2026年12月末までに順に終わるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[増量日|ゾウリョウビ]も、終わるのか！？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 税抜きで毎週5000円買う人なら、1年で約1300ポイントになるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 貯めたポイントは、終わる前に使い道を考えておいてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ、西友ネットスーパーでは楽天ポイントが続くの。
+  - speaker: zundamon
+    emotion: normal
+    text: ネットは続くのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2027年1月以降に、トライアルの会員プログラムの新しいサービスが始まる予定。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 中身は、まだ発表されてないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 近所の西友も、トライアル西友になるのか？
+  - speaker: tsumugi
+    emotion: normal
+    text: 大型店73店のうち30店を、3年で変える計画よ。全部じゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 変わる店は、いったん閉まるわ。[花小金井|はなこがねい]店は、約1か月だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 閉まる店もあるから、近くの店の貼り紙は見ておいてね。
+  - speaker: zundamon
+    emotion: happy
+    text: 貼り紙は、ちゃんと読むのだ。
+# ---- 締め（店長の目で） ----
+- id: ch15_mise
+  title: ''
+  background: sy_reji
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店長, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月。あのサービスカウンターです。
+    reading: にせんにじゅうろくねん じゅうがつ。あの さーびす かうんたーです。
+  - speaker: kyaku
+    emotion: normal
+    text: 店長さん。ポイントが終わったら、どうやってお客を呼ぶの？
+  - speaker: zundamon
+    emotion: normal
+    text: 毎日安い、です。
+  - speaker: kyaku
+    emotion: thinking
+    text: それ、2008年にも聞いたわよ。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 今度は、安くできる仕掛けごとです。
+  - speaker: zundamon
+    emotion: happy
+    text: それと、[ロースかつ重|ロースカツジュウ]があります。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ、明日も来るわ。
+  - speaker: reimu
+    text: この店も、いずれトライアル西友に変わります。物差しを替えた老舗の転換は、まだ途中です。
+    reading: この みせも いずれ とらいある せいゆうに かわります。ものさしお かえた しにせの てんかんわ、まだ とちゅうです。
+- id: shime
+  title: ''
+  background: sy_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ボク、[ロースかつ重|ロースカツジュウ]で楽天ポイントを貯めるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1個で1ポイントね。
+  - speaker: zundamon
+    emotion: happy
+    text: '[4月4日|シガツヨッカ]まで、毎日食べるのだ！'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 150ポイント貯まるころには、[かつ重|カツジュウ]を150個食べてるわよ。
+  - speaker: zundamon
+    emotion: sad
+    text: '[かつ重|カツジュウ]だけに、おなかが重いのだ……。'
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも近くの西友の貼り紙と、ポイントの残りを見ておいてね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 利益より、客を物差しにした西友。答えが出るのは、これからね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

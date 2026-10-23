@@ -1,0 +1,51 @@
+# seiyu-trial 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 店長・新人・社員・主任 / label: 永田洋幸・大久保社長・西友社長 など）とテロップは表示専用なのでタグを付けていない。
+# 「西友」は3つの辞書がそろって セイユウ と読むので台帳に入れず、セリフの初出（茶番）だけタグを付けた。
+# 見直し（2026-10-23）で、セリフのタグの読みを一部カタカナにした（ロースカツジュウ・カツジュウ・シガツヨッカ・
+# サンゲントン・ニシオギクボ・ゾウリョウビ・イトーチュー・サヤマ・ムジルシリョウヒン・アラリリツ・英字の略語）。
+# 「これは[株主（KKR）|カブヌシ]が…」は、括弧の KKR を読ませない。台帳の読みは発音が同じなのでそのまま。
+# 人名（ナレだけに出る人も、読みを控えておく）
+- {surface: 永田洋幸, reading: ながたひろゆき}
+- {surface: 永田, reading: ながた}
+- {surface: 大久保恒夫, reading: おおくぼつねお}
+- {surface: 堤清二, reading: つつみせいじ}
+# 地名・店名
+- {surface: 府中, reading: ふちゅう}
+- {surface: 狭山, reading: さやま}
+- {surface: 小平, reading: こだいら}
+- {surface: 花小金井, reading: はなこがねい}
+- {surface: 西荻窪, reading: にしおぎくぼ}
+- {surface: 大野城市, reading: おおのじょうし}
+- {surface: 新宮町, reading: しんぐうまち}
+- {surface: 東松山, reading: ひがしまつやま}
+- {surface: 巣鴨, reading: すがも}
+- {surface: 山科, reading: やましな}
+# 社名・商品名
+- {surface: 伊藤忠, reading: いとうちゅう}            # janome が イトウタダシ と読む
+- {surface: 無印良品, reading: むじるしりょうひん}
+- {surface: 良品計画, reading: りょうひんけいかく}
+- {surface: ロースかつ重, reading: ろーすかつじゅう}
+- {surface: かつ重, reading: かつじゅう}              # janome が カツオモ と読む
+- {surface: 三元豚, reading: さんげんとん}            # 3辞書とも サンゲンブタ
+- {surface: 資さんうどん, reading: すけさんうどん}    # 3辞書とも シサンウドン
+- {surface: Skip Cart, reading: すきっぷかーと}
+- {surface: Every Day Low Price, reading: えぶりでいろーぷらいす}
+# 英字の略語
+- {surface: KKR, reading: けーけーあーる}
+- {surface: KPI, reading: けーぴーあい}
+- {surface: KY, reading: けーわい}
+- {surface: PB, reading: ぴーびー}
+- {surface: CEO, reading: しーいーおー}
+- {surface: AI, reading: えーあい}
+- {surface: IT, reading: あいてぃー}
+# 会社・経営の言葉
+- {surface: 既存店, reading: きぞんてん}              # janome が キソンテン と読む
+- {surface: 大株主, reading: おおかぶぬし}            # janome が ダイカブヌシ と読む
+- {surface: 粗利率, reading: あらりりつ}              # janome が ソリリツ と読む
+- {surface: 負の遺産, reading: ふのいさん}            # janome が マケノイサン と読む
+- {surface: 増量日, reading: ぞうりょうび}
+- {surface: 屋号, reading: やごう}
+# 日付
+- {surface: 4月4日, reading: しがつよっか}            # janome が 4ツキ4ニチ と出す
