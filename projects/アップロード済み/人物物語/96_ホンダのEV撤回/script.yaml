@@ -1,0 +1,1375 @@
+meta:
+  title: 「グローバルで100％」とEVに賭けたホンダ、その結果は初の営業赤字【ずんだもん解説】
+  slug: honda-ev-sanbe
+  hook_line: 2040年に新車をすべてEV・FCVに。ホンダはなぜ5年で取り下げたのか。
+  summary: 2021年4月、社長に就いたばかりのホンダの三部敏宏は、2040年に世界で売る新車をすべてEVと燃料電池車にすると宣言しました。規制と補助金、そして将来世代への責務。その前提の上に、GM・LG・ソニーとの提携と、10年で約10兆円の計画が積み上がっていきます。5年後、ホンダはEV3車種の中止を発表しました。50年前、宣言して勝ったCVCCと何が違ったのか。会社の言葉と報道を並べて、再現ドラマでたどります。（2026年10月時点）
+  sources:
+  - ホンダ「社長就任会見 代表取締役社長 三部敏宏スピーチ概要」（2021年4月23日） https://global.honda/jp/news/2021/c210423.html
+  - ホンダ「四輪電動化戦略の見直しに伴う損失の発生および通期連結業績予想の修正と今後の方向性について」（2026年3月12日） https://global.honda/jp/news/2026/c260312.html
+  - ホンダ「2026年3月期 決算説明会」（2026年5月14日） https://global.honda/jp/investors/library/financialresult/main/00/teaserItems1/01117/linkList/03/link/FYE202603_4Q_financial_presentation_script_j_1.pdf
+  - ホンダ「2026 ビジネスアップデート 説明概要」（2026年5月14日） https://global.honda/jp/news/2026/c260514b.html
+  - Honda 75年史「CVCCエンジン」 https://global.honda/jp/guide/history-digest/75years-history/chapter3/section2_3/
+  - 共同通信「ホンダ社長、脱ガソリン車目標を取り下げ」（2026年5月14日） https://www.saga-s.co.jp/articles/-/1708127
+  tags:
+  - ホンダ
+  - 三部敏宏
+  - EV
+  - 電気自動車
+  - 脱エンジン
+  - ハイブリッド
+  - 本田宗一郎
+  - CVCC
+  - マスキー法
+  - 日産
+  - ソニー・ホンダモビリティ
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: 2040年に100％のはずが
+    bottom: EV3車種を中止
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: yakuin
+    label: 役員
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: kenkyu
+    label: 研究員
+    voice: 11
+    pitch: 0.0
+    outfit: labcoat
+  - id: soichiro
+    label: 本田宗一郎
+    voice: 42
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: gishi
+    label: 技術者
+    voice: 12
+    pitch: 0.02
+    outfit: work
+    color: '#e8ebee'
+  - id: tencho
+    label: 店長
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: kyaku
+    label: 米国の客
+    voice: 100
+    pitch: 0.0
+    outfit: none
+scenes:
+- id: co_kaiken
+  title: ''
+  background: hd_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三部敏宏, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年3月12日。ホンダの社長、三部敏宏が会見を開きます。
+    reading: にせん にじゅうろくねん さんがつ じゅうににち。ほんだの しゃちょう みべ としひろが かいけんお ひらきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: この3モデルを事業成立が困難な状況のまま世に送り出すことは、
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社の将来にとっても最善ではないと、断腸の想いで決断を下しました。
+    telops:
+    - {text: "三部「断腸の想いで決断を下しました」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 発売前のEVを、3車種も……！？
+  - speaker: reimu
+    text: 北米向けのEV3車種の、開発と発売の中止。損失は最大2兆5000億円と見込みました。
+    reading: ほくべい むけの いーぶい さんしゃしゅの かいはつと はつばいの ちゅうし。そんしつわ さいだい にちょう ごせんおくえんと みこみました。
+  - speaker: reimu
+    text: 5年前。この会社は、2040年に売る新車をすべてEVと燃料電池車にすると宣言していました。
+    reading: ごねんまえ。この かいしゃわ にせん よんじゅうねんに うる しんしゃお すべて いーぶいと ねんりょう でんちしゃに すると せんげん して いました。
+  - speaker: reimu
+    text: なぜ、5年でこうなったのでしょう。
+    reading: なぜ ごねんで こう なったのでしょう。
+- id: hook
+  title: ''
+  background: hd_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 次の車はEVなのだ！ ホンダのゼロのSUVなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そのEV、ホンダは3車種やめたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ！？ まだ免許も取ってないのに！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 心配する順番が逆よ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 2040年に全部EVって宣言してたのにね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 宣言したのに、なんでやめたのだ！？
+- id: card2021
+  title: ''
+  background: hd_card_2021
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2021年4月23日。社長に就いて3週間の三部敏宏が、就任会見に立ちます。
+    reading: にせん にじゅういちねん しがつ にじゅうさんにち。しゃちょうに ついて さんしゅうかんの みべ としひろが、しゅうにん かいけんに たちます。
+  - speaker: reimu
+    text: 1987年入社。エンジン開発を中心に歩んできた技術者です。
+    reading: せんきゅうひゃく はちじゅうななねん にゅうしゃ。えんじん かいはつお ちゅうしんに あゆんで きた ぎじゅつしゃです。
+- id: sengen
+  title: 2040年に100％
+  background: hd_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三部敏宏, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: '[Honda|ホンダ]は幅広い製品を提供するモビリティカンパニーであり、'
+  - speaker: zundamon
+    emotion: normal
+    text: 世界一のパワーユニットメーカーでもあります。
+  - speaker: zundamon
+    emotion: normal
+    text: 先進国全体でのEV・FCVの販売比率を、2030年に40％。
+  - speaker: zundamon
+    emotion: normal
+    text: 2035年には80％。
+  - speaker: zundamon
+    emotion: normal
+    text: 2040年には、グローバルで100％を目指します。
+    telops:
+    - {text: "三部「2040年には、グローバルで100％」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: ひゃ、100％！？ ハイブリッドも入れずに？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: normal
+    text: 今日時点では狙いがボケないように、あえてEV・FCVという言い方をしました。
+  - speaker: kisha
+    emotion: thinking
+    text: 19年で100％……根拠は？
+  - speaker: zundamon
+    emotion: normal
+    text: クルマは約10年間使用される。
+  - speaker: zundamon
+    emotion: normal
+    text: 2050年のカーボンニュートラルを実現するためには、
+  - speaker: zundamon
+    emotion: normal
+    text: その10年前の段階で新車のカーボンニュートラルを達成する必要がある。
+  - speaker: kisha
+    emotion: surprised
+    text: 50年から逆算して、40年か……。
+  - speaker: reimu
+    text: 2040年に100％という目標を、三部は5年後に自分の口で取り下げます。
+    reading: にせん よんじゅうねんに ひゃくぱーせんとと いう もくひょうお、みべわ ごねんごに じぶんの くちで とりさげます。
+- id: hashira
+  title: 規制と補助金という柱
+  background: hd_denchi
+  bgm: curious
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: normal}
+  - {who: kenkyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌2022年。アメリカで、EVの追い風になる決まりが2つ生まれます。
+    reading: よく にせん にじゅうにねん。あめりかで いーぶいの おいかぜに なる きまりが ふたつ うまれます。
+  - speaker: yakuin
+    emotion: normal
+    text: アメリカで、EVを買う人に1台最大7500ドルの税の控除が決まった。
+  - speaker: kenkyu
+    emotion: happy
+    text: 7500ドル！ ボクにもください！
+  - speaker: yakuin
+    emotion: thinking
+    text: 買う人がもらうんだ。お前は作る側だ。
+    se: hammer
+  - speaker: yakuin
+    emotion: normal
+    text: カリフォルニア州は、2035年に新車を全部ゼロエミッションにすると決めた。
+  - speaker: kenkyu
+    emotion: normal
+    text: 守れなかったら？
+  - speaker: yakuin
+    emotion: normal
+    text: '[未達|みたつ]なら、1台あたり最大2万ドルが科される。'
+  - speaker: kenkyu
+    emotion: surprised
+    text: 1ドル150円なら、1台で300万円！？
+    telops:
+    - {text: "未達なら1台最大2万ドル", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: yakuin
+    emotion: normal
+    text: 補助金がアメで、罰金がムチだ。どっちもEVを売れと言っている。
+  - speaker: kenkyu
+    emotion: normal
+    text: うちのEVの計画は、このアメとムチが前提なんですね。
+  - speaker: yakuin
+    emotion: normal
+    text: そうだ。規制と補助金、この2本が柱だ。
+  - speaker: yakuin
+    emotion: normal
+    text: GMも2035年までに、排出ゼロを目指すと言っている。
+  - speaker: kenkyu
+    emotion: thinking
+    text: みんな、同じ方向を向いてますね。
+  - speaker: yakuin
+    emotion: normal
+    text: だから会社は、この柱の上に積む。
+  - speaker: yakuin
+    emotion: normal
+    text: GMとは、数百万台規模のEVの共同開発。LGとは、オハイオに約44億ドルの電池工場。
+  - speaker: yakuin
+    emotion: normal
+    text: ソニーとは、折半で新しいモビリティの会社だ。
+  - speaker: kenkyu
+    emotion: thinking
+    text: 全部、同じ1本の前提に乗ってますね。EVが売れる、っていう。
+  - speaker: kenkyu
+    emotion: thinking
+    text: もし柱が倒れたら、どうなるんです？
+  - speaker: yakuin
+    emotion: happy
+    text: どっちも、国と州が決めたことだ。そう簡単には倒れない。
+    beat: true
+  - speaker: reimu
+    text: 規制と補助金の2本の柱は、のちに半年で両方なくなります。
+    reading: きせいと ほじょきんの にほんの はしらわ、のちに はんとしで りょうほう なくなります。
+  - speaker: reimu
+    text: 3本目の柱は、将来世代への責務でした。三部がそれを語り直すのは、5年後にEV3車種を止める日です。
+    reading: さんぼんめの はしらわ しょうらい せだいえの せきむでした。みべが それお かたりなおすのわ、ごねんごに いーぶい さんしゃしゅお とめる ひです。
+- id: card1971
+  title: ''
+  background: hd_card_1971
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: ホンダには、50年前にも大きな宣言をした日がありました。
+    reading: ほんだにわ ごじゅうねん まえにも おおきな せんげんお した ひが ありました。
+  - speaker: reimu
+    text: 1971年。アメリカでは前の年の暮れ、排出ガスを10分の1にせよというマスキー法が発効していました。
+    reading: せんきゅうひゃく ななじゅういちねん。あめりかでわ まえの としの くれ、はいしゅつ がすお じゅうぶんの いちに せよと いう ますきーほうが はっこう して いました。
+- id: cvcc
+  title: 50年前の宣言
+  background: hd_kenkyujo
+  stage:
+  - {who: gishi, x: 0.28, flip: true, emotion: surprised}
+  - {who: soichiro, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: gishi
+    emotion: surprised
+    text: 社長、本当に発表するんですか！？
+  - speaker: soichiro
+    emotion: normal
+    text: 1975年の規制値を満足させるエンジンの、めどが立った。
+  - speaker: soichiro
+    emotion: happy
+    text: 1973年から商品化する。そう発表する。
+  - speaker: gishi
+    emotion: surprised
+    text: めどは立ちましたけど、まだ研究の途中です！
+  - speaker: gishi
+    emotion: surprised
+    text: 特許の申請も、途中ですよ！
+  - speaker: gishi
+    emotion: thinking
+    text: アメリカの大手3社が、達成するのは不可能だと言ってる規制ですよ！
+  - speaker: soichiro
+    emotion: normal
+    text: じゃあ、いつなら完成だ。
+  - speaker: gishi
+    emotion: thinking
+    text: ……もう少し、です。
+  - speaker: soichiro
+    emotion: angry
+    text: それだ。
+    beat: true
+  - speaker: soichiro
+    emotion: normal
+    text: '[君|きみ]たちに聞いても、もうこれで完成したとはいつまでたっても言うはずがない。'
+  - speaker: soichiro
+    emotion: angry
+    text: それを待っていたのでは、会社がつぶれる。
+    telops:
+    - {text: "宗一郎「待っていたのでは会社がつぶれる」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#CC5500", anim: up}
+  - speaker: gishi
+    emotion: sad
+    text: 2階に上げて、はしごを外す気だ……。
+    beat: true
+  - speaker: reimu
+    text: 2月12日、経団連会館。宗一郎は、めどが立ったと発表します。
+    reading: にがつ じゅうににち けいだんれん かいかん。そういちろうわ めどが たったと はっぴょう します。
+  - speaker: reimu
+    text: 1972年12月。CVCCエンジンは、アメリカの環境保護庁のテストに臨みます。
+    reading: せんきゅうひゃく ななじゅうにねん じゅうにがつ。しーぶいしーしー えんじんわ、あめりかの かんきょう ほごちょうの てすとに のぞみます。
+    background: hd_test
+  - speaker: gishi
+    emotion: happy
+    text: 合格です！ [マスキー法|ますきーほう]の、合格第1号です！
+    se: levelup
+  - speaker: soichiro
+    emotion: happy
+    text: よし。
+  - speaker: reimu
+    text: 技術は、トヨタやフォードなどにも提供されました。翌年の12月には、シビックCVCCが発売されます。
+    reading: ぎじゅつわ とよたや ふぉーど などにも ていきょう されました。よくねんの じゅうにがつにわ しびっく しーぶいしーしーが はつばい されます。
+- id: cvcc_chigai
+  title: ''
+  background: hd_test
+  cuts:
+  - speaker: reimu
+    text: このとき規制は、もう法律として発効していました。間に合わせたのは、手元のエンジンの改良です。
+    reading: この とき きせいわ、もう ほうりつと して はっこう して いました。まに あわせたのわ、てもとの えんじんの かいりょうです。
+  - speaker: reimu
+    text: 2021年の宣言が賭けたのは、これから続くはずの規制と補助金。そして、まだない市場でした。
+    reading: にせん にじゅういちねんの せんげんが かけたのわ、これから つづく はずの きせいと ほじょきん。そして まだ ない しじょうでした。
+  - speaker: reimu
+    text: 同じ宣言でも、立っている地面が違いました。その地面は、どう崩れたのでしょう。
+    reading: おなじ せんげんでも たって いる じめんが ちがいました。その じめんわ どう くずれたのでしょう。
+- id: gm2023
+  title: GMとの安いEVをやめる
+  background: hd_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三部敏宏, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2023年10月。三部はブルームバーグの取材に、GMとの量販価格帯のEVの共同開発をやめたと明かします。
+    reading: にせん にじゅうさんねん じゅうがつ。みべわ ぶるーむばーぐの しゅざいに、じーえむとの りょうはん かかくたいの いーぶいの きょうどう かいはつお やめたと あかします。
+  - speaker: kisha
+    emotion: normal
+    text: 3万ドル前後の、安いEVの計画でしたよね。
+  - speaker: zundamon
+    emotion: thinking
+    text: コストや商品性を考えて、この段階ではビジネス化は難しいと判断した。
+  - speaker: kisha
+    emotion: thinking
+    text: では、2040年の100％は？
+  - speaker: reimu
+    text: 目標は、動かしませんでした。見直しの節目は3回あり、これが1回目です。
+    reading: もくひょうわ うごかしませんでした。みなおしの ふしめわ さんかい あり、これが いっかいめです。
+  - speaker: kisha
+    emotion: thinking
+    text: ……そのまま、ですか。
+    beat: true
+- id: card2024
+  title: ''
+  background: hd_card_2024
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2024年1月。ラスベガスの展示会で、ホンダは新しいEVの名前を発表します。
+    reading: にせん にじゅうよねん いちがつ。らすべがすの てんじかいで ほんだわ あたらしい いーぶいの なまえお はっぴょう します。
+- id: zero
+  title: ゼロから作るEV
+  background: hd_test
+  stage:
+  - {who: kenkyu, x: 0.28, flip: true, emotion: happy}
+  - {who: yakuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kenkyu
+    emotion: happy
+    text: '[Honda 0|ホンダゼロ]シリーズ！ ゼロから全く新しいEVを創造していく、ですって！'
+  - speaker: yakuin
+    emotion: normal
+    text: 2026年から、北米を皮切りに出す計画だ。
+  - speaker: kenkyu
+    emotion: surprised
+    text: '[H|えいち]のマークまで、新しくなってます！'
+  - speaker: yakuin
+    emotion: happy
+    text: ゼロから、だからな。
+  - speaker: kenkyu
+    emotion: happy
+    text: ボク、ゼロシリーズのために貯金を始めました！
+  - speaker: yakuin
+    emotion: thinking
+    text: 研究員の給料でか。
+  - speaker: kenkyu
+    emotion: normal
+    text: ……10年計画です。
+    se: manuke
+  - speaker: yakuin
+    emotion: normal
+    text: 目標も変わらない。2040年に、EVと燃料電池車で100％だ。
+- id: canada
+  title: カナダにも工場を
+  background: hd_kojo
+  stage:
+  - {who: kenkyu, x: 0.28, flip: true, emotion: surprised}
+  - {who: yakuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kenkyu
+    emotion: surprised
+    text: 4月の発表、見ました！ カナダにもEVと電池の工場を作るって！
+  - speaker: yakuin
+    emotion: normal
+    text: 最大150億カナダドル。日本円で1兆7000億円ほどの計画だ。
+  - speaker: kenkyu
+    emotion: surprised
+    text: ボクの貯金の、何倍ですか。
+  - speaker: yakuin
+    emotion: thinking
+    text: 比べる相手を選べ。
+    beat: true
+  - speaker: kenkyu
+    emotion: normal
+    text: 柱の上に、どんどん積みますね。
+  - speaker: yakuin
+    emotion: happy
+    text: 2028年に動かす予定だ。
+  - speaker: reimu
+    text: カナダの計画は、2年後に無期限で凍結されます。
+    reading: かなだの けいかくわ、にねんごに むきげんで とうけつ されます。
+- id: juccho
+  title: 10兆円と確信
+  background: hd_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三部敏宏, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年5月。三部が説明に立ち、2030年度までの10年でEVなどに約10兆円を投じると発表します。
+    reading: にせん にじゅうよねん ごがつ。みべが せつめいに たち、にせん さんじゅうねんど までの じゅうねんで いーぶい などに やく じゅっちょうえんお とうじると はっぴょう します。
+  - speaker: kisha
+    emotion: surprised
+    text: 10兆円！？
+  - speaker: kisha
+    emotion: thinking
+    text: 1年あたり、1兆円ですか……。
+  - speaker: zundamon
+    emotion: normal
+    text: 一部地域では、足元のEV市場の成長について減速感を指摘する声もあります。
+  - speaker: kisha
+    emotion: thinking
+    text: 伸びが、鈍ってますよね。
+  - speaker: zundamon
+    emotion: normal
+    text: 長期的視点で見れば、EVシフトは着実に進んでいくと確信しています。
+  - speaker: kisha
+    emotion: normal
+    text: では、2040年の目標は？
+  - speaker: reimu
+    text: 発表資料は、2040年に100％とする目標に変化はない、としました。
+    reading: はっぴょう しりょうわ にせん よんじゅうねんに ひゃくぱーせんとと する もくひょうに へんかわ ない、と しました。
+  - speaker: reimu
+    text: 会見のあと、専門誌の記者がエンジンのことを聞きました。
+    reading: かいけんの あと、せんもんしの きしゃが えんじんの ことお ききました。
+  - speaker: kisha
+    emotion: normal
+    text: エンジン開発は、どうなるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: まず、エンジン開発は完全にやめることはない。
+  - speaker: zundamon
+    emotion: normal
+    text: 何かあったらまた作れるように一部隊は残すと決めている。
+  - speaker: zundamon
+    emotion: thinking
+    text: しかし、メインのシナリオにエンジンを置くのはもう難しい。
+  - speaker: reimu
+    text: メインのシナリオは、EVのまま。2回目の節目も、目標は据え置きでした。
+    reading: めいんの しなりおわ いーぶいの まま。にかいめの ふしめも もくひょうわ すえおきでした。
+- id: nissan
+  title: 日産と組む、組めない
+  background: hd_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三部敏宏, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年12月23日。ホンダと日産は、経営統合の検討に入る基本合意書を結びます。
+    reading: にせん にじゅうよねん じゅうにがつ にじゅうさんにち。ほんだと にっさんわ、けいえい とうごうの けんとうに はいる きほん ごういしょお むすびます。
+  - speaker: reimu
+    text: 両社は、知能化・電動化の時代に競争力を保つための選択肢だとしました。
+    reading: りょうしゃわ ちのうか でんどうかの じだいに きょうそうりょくお たもつ ための せんたくしだと しました。
+  - speaker: kisha
+    emotion: surprised
+    text: ホンダと[日産|にっさん]が合併、決まりですか！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: normal
+    text: 経営統合そのものを決定したものではありません。
+  - speaker: reimu
+    text: 協議の中でホンダは、日産を子会社にする案を出します。2025年2月13日、合意書は解約されました。
+    reading: きょうぎの なかで ほんだわ、にっさんお こがいしゃに する あんお だします。にせん にじゅうごねん にがつ じゅうさんにち、ごういしょわ かいやく されました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 両社が納得できる合意点を見いだせなかったのは大変残念だと思っている。
+  - speaker: kisha
+    emotion: thinking
+    text: 2か月足らずで、白紙ですか。
+    beat: true
+- id: card2025
+  title: ''
+  background: hd_card_2025
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2025年。ワシントンで、前提が動き始めます。
+    reading: にせん にじゅうごねん。わしんとんで ぜんていが うごきはじめます。
+- id: kieru
+  title: 柱が2本とも消える
+  background: hd_kaigi
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: thinking}
+  - {who: kenkyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: yakuin
+    emotion: thinking
+    text: 4月。アメリカが輸入車に、25％の追加の関税をかけた。日本車は計27.5％だ。
+  - speaker: kenkyu
+    emotion: surprised
+    text: '[4分の1|よんぶんのいち]より上！？'
+  - speaker: yakuin
+    emotion: normal
+    text: 5月。うちは10兆円の計画を、7兆円に減らした。
+  - speaker: kenkyu
+    emotion: normal
+    text: で、2040年の目標は？
+  - speaker: yakuin
+    emotion: normal
+    text: 据え置きだ。
+  - speaker: kenkyu
+    emotion: angry
+    text: ……3回目です！
+    se: tsukkomi
+  - speaker: yakuin
+    emotion: thinking
+    text: 数えなくていい。
+  - speaker: reimu
+    text: 日経の見出しは、40年に脱ガソリンは維持、でした。
+    reading: にっけいの みだしわ よんじゅうねんに だつがそりんわ いじ、でした。
+- id: kieru2
+  title: ''
+  background: hd_kaigi
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: thinking}
+  - {who: kenkyu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: yakuin
+    emotion: thinking
+    text: 6月。カリフォルニアの規制を無効にする決議に、大統領が署名。
+  - speaker: kenkyu
+    emotion: surprised
+    text: ムチが……！
+  - speaker: kenkyu
+    emotion: thinking
+    text: 州が決めた規制なのに、国が止められるんですか。
+  - speaker: yakuin
+    emotion: thinking
+    text: 州の規制には、国の許しが要る。その許しを取り消したんだ。
+  - speaker: yakuin
+    emotion: thinking
+    text: 7月。EVの税の控除を9月30日で打ち切る法律が、成立した。
+  - speaker: yakuin
+    emotion: thinking
+    text: 燃費の規制の罰金も、なくなる。
+  - speaker: kenkyu
+    emotion: surprised
+    text: アメも……！？
+  - speaker: yakuin
+    emotion: sad
+    text: アメもムチも、半年で消えた。
+    background: hd_kaigi_akaji
+    beat: true
+    telops:
+    - {text: "規制も補助金も半年で消えた", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kenkyu
+    emotion: sad
+    text: 柱が、2本とも……。
+  - speaker: reimu
+    text: カリフォルニア州などは、これを裁判に訴えました。
+    reading: かりふぉるにあしゅう などわ これお さいばんに うったえました。
+- id: america
+  title: 補助金が終わった店
+  background: hd_america_ev
+  bgm: kinakusai
+  stage:
+  - {who: tencho, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月から9月は駆け込みで、アメリカのEV販売は過去最高。10月から、流れが変わります。
+    reading: しちがつから くがつわ かけこみで、あめりかの いーぶい はんばいわ かこ さいこう。じゅうがつから ながれが かわります。
+  - speaker: tencho
+    emotion: happy
+    text: お客さん。ホンダのEV、プロローグはいかがですか。
+  - speaker: tencho
+    emotion: happy
+    text: 今なら充電器も、ほら。こんなに空いてます！
+  - speaker: kyaku
+    emotion: thinking
+    text: 空いてるのが、売り文句になるのかい。
+    beat: true
+  - speaker: kyaku
+    emotion: normal
+    text: それに税の控除は、もう終わったんだろ？
+  - speaker: tencho
+    emotion: thinking
+    text: 9月30日で……。
+  - speaker: kyaku
+    emotion: normal
+    text: じゃあ急いで買う理由もないな。来年また考えるよ。
+  - speaker: tencho
+    emotion: sad
+    text: ……お待ちしてます。
+    se: chin
+  - speaker: reimu
+    text: GMが作るホンダのプロローグは、12月の販売が932台。前の年の同じ月より88％減りました。
+    reading: じーえむが つくる ほんだの ぷろろーぐわ、じゅうにがつの はんばいが きゅうひゃく さんじゅうにだい。まえの としの おなじ つきより はちじゅうはっぱーせんと へりました。
+  - speaker: tencho
+    emotion: sad
+    text: 全米で、1日30台ほど……。
+- id: card2026
+  title: ''
+  background: hd_card_2026
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2026年2月。ホンダはまだ、この年度の営業利益を5500億円の黒字と見込んでいました。
+    reading: にせん にじゅうろくねん にがつ。ほんだわ まだ この ねんどの えいぎょう りえきお、ごせん ごひゃくおくえんの くろじと みこんで いました。
+  - speaker: reimu
+    text: 3月12日。急な呼びかけで、三部の会見が開かれます。
+    reading: さんがつ じゅうににち。きゅうな よびかけで みべの かいけんが ひらかれます。
+- id: dancho
+  title: 断腸の想い
+  background: hd_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三部敏宏, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 急なお声掛けにもかかわらずお集まりいただき、ありがとうございます。
+  - speaker: reimu
+    text: 三部はまず、5年前に宣言した理由を語りました。
+    reading: みべわ まず ごねんまえに せんげんした りゆうお かたりました。
+  - speaker: zundamon
+    emotion: normal
+    text: 未来のこどもたち、将来世代に対して
+  - speaker: zundamon
+    emotion: normal
+    text: モビリティカンパニーとしての責務がある、と強い意志を持って決断した。
+  - speaker: reimu
+    text: そのうえで、ゼロシリーズのSUVとサルーン、アキュラのRSX。3車種の開発と発売の中止です。
+    reading: その うえで ぜろ しりーずの えすゆーぶいと さるーん、あきゅらの あーるえすえっくす。さんしゃしゅの かいはつと はつばいの ちゅうしです。
+  - speaker: zundamon
+    emotion: thinking
+    text: この3モデルを事業成立が困難な状況のまま世に送り出すことは、
+  - speaker: zundamon
+    emotion: thinking
+    text: 早期に生産中止とした場合に、ブランド価値の[毀損|きそん]などの面で
+  - speaker: zundamon
+    emotion: thinking
+    text: お客様にご心配、ご迷惑をお掛けする可能性があると受け止めており
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社の将来にとっても最善ではないと、断腸の想いで決断を下しました。
+  - speaker: kisha
+    emotion: normal
+    text: 当初の想定と比べて、今のEVの販売は？
+  - speaker: zundamon
+    emotion: thinking
+    text: 半分以下に冷え込んでいる。
+  - speaker: kisha
+    emotion: thinking
+    text: なぜ、ここまで読みが外れたんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 米国では環境規制の緩和が進み、EV補助金が廃止されたことで
+  - speaker: zundamon
+    emotion: thinking
+    text: 市場成長のスピードが大きく鈍化しており、この傾向は当面継続すると見ています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 政策動向の変化に対応する柔軟性、言い換えれば
+  - speaker: zundamon
+    emotion: thinking
+    text: 複数シナリオのようなものを持って、戦略を修正しきれなかったことが反省すべき課題だ。
+  - speaker: kisha
+    emotion: surprised
+    text: 複数の、シナリオ……。
+    beat: true
+- id: dancho2
+  title: ''
+  background: hd_kaiken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 三部敏宏, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 損失は最大2兆5000億円。財務の責任者は、上限の見積もりだと説明しました。
+    reading: そんしつわ さいだい にちょう ごせんおくえん。ざいむの せきにんしゃわ、じょうげんの みつもりだと せつめい しました。
+    telops:
+    - {text: "損失の見込み 最大2.5兆円（上限）", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 社長と副社長は、月額報酬の30％を3か月返上します。
+    reading: しゃちょうと ふくしゃちょうわ、げつがく ほうしゅうの さんじゅっぱーせんとお さんかげつ へんじょう します。
+  - speaker: zundamon
+    emotion: thinking
+    text: 私たち経営に求められていることは、過去を取り繕うことではなく
+  - speaker: zundamon
+    emotion: normal
+    text: この現実を正面から受け止め、
+  - speaker: zundamon
+    emotion: normal
+    text: '[四輪|よんりん]事業を中長期的に成長できる構造へと転換することだと考えています。'
+  - speaker: reimu
+    text: 同じ日の投資家向けの説明では、こうも話しています。
+    reading: おなじ ひの とうしかむけの せつめいでわ、こうも はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 今回の判断は、EVをやめるということではなく
+  - speaker: zundamon
+    emotion: normal
+    text: '[四輪|よんりん]事業の構造そのものを変える必要があるという認識に基づくものです。'
+  - speaker: reimu
+    text: 2040年の目標を取り下げると言うのは、2か月後の5月14日です。
+    reading: にせん よんじゅうねんの もくひょうお とりさげると いうのわ、にかげつごの ごがつ じゅうよっかです。
+- id: afeela
+  title: また前提が変わる
+  background: hd_yakuin
+  bgm: 223am
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: thinking}
+  - {who: kenkyu, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: kenkyu
+    emotion: sad
+    text: ゼロのSUVも、サルーンも中止……。
+  - speaker: kenkyu
+    emotion: sad
+    text: ボクの貯金の、行き先が……。
+    se: shobon
+  - speaker: yakuin
+    emotion: normal
+    text: 貯金は消えてない。消えたのは前提だ。
+    beat: true
+  - speaker: reimu
+    text: 3月25日。ソニーとホンダは、AFEELAの開発と発売の中止を発表します。
+    reading: さんがつ にじゅうごにち。そにーと ほんだわ、あふぃーらの かいはつと はつばいの ちゅうしお はっぴょう します。
+  - speaker: kenkyu
+    emotion: surprised
+    text: ソニーと作ってた車まで！？
+  - speaker: yakuin
+    emotion: normal
+    text: 8万9900ドルからの車だ。カリフォルニアで予約を受けていた。
+  - speaker: kenkyu
+    emotion: thinking
+    text: ボクの貯金じゃ、どっちみち……。
+  - speaker: yakuin
+    emotion: thinking
+    text: ホンダからの提供を想定していた技術やアセットの活用など、
+  - speaker: yakuin
+    emotion: thinking
+    text: 重要な前提条件に大きな変化があった、とある。
+  - speaker: kenkyu
+    emotion: surprised
+    text: また、前提……。
+  - speaker: reimu
+    text: 予約金は全額返金。2社の合弁会社は、4月に事業の縮小を決めます。
+    reading: よやくきんわ ぜんがく へんきん。にしゃの ごうべん がいしゃわ、しがつに じぎょうの しゅくしょうお きめます。
+- id: showroom
+  title: 店から消える車
+  background: hd_showroom
+  stage:
+  - {who: tencho, x: 0.28, flip: true, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月。カナダのEV工場の計画凍結と、GMとの共同開発車の販売終了が報じられます。
+    reading: しがつ。かなだの いーぶい こうじょうの けいかく とうけつと、じーえむとの きょうどう かいはつしゃの はんばい しゅうりょうが ほうじられます。
+  - speaker: kyaku
+    emotion: normal
+    text: ゼロシリーズのSUVは、いつ入るんだい？
+  - speaker: tencho
+    emotion: thinking
+    text: それが、発売の前に中止になりまして……。
+  - speaker: kyaku
+    emotion: surprised
+    text: じゃあ、プロローグは？
+  - speaker: tencho
+    emotion: sad
+    text: プロローグも、売るのは終わりだと報じられまして……。
+    background: ns_showroom_kara
+  - speaker: kyaku
+    emotion: surprised
+    text: この店のEVが、どんどん消えていく……。
+  - speaker: tencho
+    emotion: happy
+    text: ハイブリッドなら、すぐご案内できます！
+    se: tenten
+- id: card0514
+  title: ''
+  background: hd_card_2026
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 5月14日。決算の発表です。
+    reading: ごがつ じゅうよっか。けっさんの はっぴょうです。
+  - speaker: reimu
+    text: 営業損益は4143億円の赤字。日経は決算の前から、上場以来初の営業赤字と報じていました。
+    reading: えいぎょう そんえきわ よんせん ひゃくよんじゅうさんおくえんの あかじ。にっけいわ けっさんの まえから、じょうじょう いらい はつの えいぎょう あかじと ほうじて いました。
+    telops:
+    - {text: "営業損益 4143億円の赤字", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: EVに関わる損失は1兆5778億円を計上。1月から3月だけで、営業損益は1兆58億円の赤字でした。
+    reading: いーぶいに かかわる そんしつわ いっちょう ごせん ななひゃく ななじゅう はちおくえんお けいじょう。いちがつから さんがつ だけで えいぎょう そんえきわ いっちょう ごじゅう はちおくえんの あかじでした。
+- id: nirin
+  title: 穴を埋めた二輪
+  background: hd_kaigi_akaji
+  bgm: hirusagari
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: thinking}
+  - {who: kenkyu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kenkyu
+    emotion: thinking
+    text: これだけの赤字で、うちはよく持ちこたえてますね。
+  - speaker: yakuin
+    emotion: normal
+    text: 二輪だ。
+  - speaker: reimu
+    text: 二輪は販売2210万1千台、営業利益7319億円。どちらも過去最高でした。
+    reading: にりんわ はんばい にせん にひゃく じゅうまん せんだい、えいぎょう りえき ななせん さんびゃく じゅうきゅうおくえん。どちらも かこ さいこうでした。
+  - speaker: kenkyu
+    emotion: surprised
+    text: エンジンのバイクが、過去最高……！
+  - speaker: yakuin
+    emotion: normal
+    text: '[四輪|よんりん]の赤字の半分ほどを、エンジンの二輪が埋めた形だ。'
+  - speaker: kenkyu
+    emotion: thinking
+    text: 社長が就任会見で言ってましたね。世界一のパワーユニットメーカーって。
+  - speaker: yakuin
+    emotion: thinking
+    text: その言葉が、こういう形で効くとはな。
+    beat: true
+- id: torisage
+  title: いったん取り下げたい
+  background: hd_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 三部敏宏, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ日、三部はこれからの方針を発表します。
+    reading: おなじ ひ、みべわ これからの ほうしんお はっぴょう します。
+  - speaker: zundamon
+    emotion: normal
+    text: 元々、EVが本格的に普及する2030年までは引き続き
+  - speaker: zundamon
+    emotion: normal
+    text: 我々の強みであるハイブリッドが環境対応の主力になる、との考えのもと開発を進めており
+  - speaker: zundamon
+    emotion: normal
+    text: 2027年からは計画通り、次世代ハイブリッド車の投入を開始します。
+  - speaker: reimu
+    text: これから3年は、ハイブリッドを中心に立て直します。カナダの計画は、無期限の凍結です。
+    reading: これから さんねんわ、はいぶりっどお ちゅうしんに たてなおします。かなだの けいかくわ むきげんの とうけつです。
+  - speaker: kisha
+    emotion: normal
+    text: では2040年の100％は、どうするんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 現実的ではない。いったん取り下げたい。
+    se: don
+    telops:
+    - {text: "三部「いったん取り下げたい」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: では、EVから撤退ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: '[Honda|ホンダ]はEVから撤退するのかというと、決してそうではありません。'
+  - speaker: kisha
+    emotion: thinking
+    text: 取り下げても、撤退ではない……。
+- id: soukai
+  title: 株主総会
+  background: hd_kaiken
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 三部敏宏, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 6月26日の株主総会。三部は冒頭で、こう述べました。
+    reading: ろくがつ にじゅうろくにちの かぶぬし そうかい。みべわ ぼうとうで こう のべました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 前期の決算が赤字となり、株主の皆さまに心配とご迷惑をかけ
+  - speaker: zundamon
+    emotion: thinking
+    text: 深くおわび申し上げます。
+  - speaker: reimu
+    text: 三部の再任への賛成は90.08％。前の年より2.91ポイント下がりました。
+    reading: みべの さいにんえの さんせいわ きゅうじゅってん ぜろはち ぱーせんと。まえの としより にてん きゅういち ぽいんと さがりました。
+  - speaker: reimu
+    text: 取締役会の議長は、社外の取締役に替わりました。社長が議長を兼ねる形をやめたのです。
+    reading: とりしまりやくかいの ぎちょうわ しゃがいの とりしまりやくに かわりました。しゃちょうが ぎちょうお かねる かたちお やめたのです。
+- id: ronso
+  title: EVはもう終わり？
+  background: hd_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: ホンダはEVで2兆5000億円も失って、EVから撤退したって！
+  - speaker: zundamon
+    emotion: angry
+    text: EVはもう終わりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それ、3か所ちがうわよ。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 3か所も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つ目。2兆5000億円は、損失の上限の見積もりなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 実際に計上したのが1兆5778億円。今の年度に見込んでるのが5200億円。
+  - speaker: zundamon
+    emotion: thinking
+    text: 足すと……2兆1000億円くらい？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。それでも、とんでもない額だけどね。
+    telops:
+    - {text: "計上1兆5778億円＋見込み5200億円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: でも売る前にやめたのに、なんでそんなに損が出るのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 売るつもりで用意した開発の成果や設備が、使い道をなくすからなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その[除却|じょきゃく]と[減損|げんそん]だけで、6439億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 文化祭が中止になったら、買っておいた材料が無駄になるでしょ。あれのすごく大きい版ね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 文化祭の材料で、6400億円……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 全部の1兆5778億円を、[四輪|よんりん]の販売台数で割ると……1台47万円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 割るとそうなるわね。1台ごとに払ったお[金|かね]じゃないけど。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つ目。やめたのは、北米向けのEV3車種。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本では今年4月に、新型EVの[INSIGHT|インサイト]を出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2028年には[N-BOX|エヌボックス]のEVも出す計画よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[N-BOX|エヌボックス]まで！？'
+  - speaker: tsumugi
+    emotion: normal
+    text: インドと日本向けの小さいEV、[0 α|ゼロアルファ]も続けるって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 撤退じゃ、なかったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: ついでに言うと、脱エンジンも報道の呼び名よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が掲げたのは、EVと燃料電池車の販売比率100％なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[三部|みべ]さんも2024年に、エンジンの研究は止めないと話してるわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: エンジンをやめる宣言じゃ、なかったのか！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、メインのシナリオに置くのはもう難しいとも言ってたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 研究は残すけど、主役じゃないってことか。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、ハイブリッド車も数に入らない目標だったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つ目。EVが終わったかどうか。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカのEVのシェアは、去年の7月から9月が10.5％で過去最高。
+  - speaker: tsumugi
+    emotion: normal
+    text: 補助金が切れた10月から12月は、5.8％。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分近くに……！
+  - speaker: tsumugi
+    emotion: normal
+    text: でもゼロじゃない。1年を通すと7.8％よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい政権も、EVを売るのを禁止したわけじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: なくしたのは、補助金と規制と罰金。
+  - speaker: zundamon
+    emotion: thinking
+    text: 終わったんじゃなくて、支えが外れたのか。
+  - speaker: tsumugi
+    emotion: happy
+    text: そういうこと。
+- id: ronso2
+  title: 日本のメーカーは時代遅れ？
+  background: hd_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあ、日本のメーカーは時代遅れって話は？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは、耳の痛い数字もあるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ホンダの中国の販売は、2020年に約163万台。去年は約65万台。
+  - speaker: zundamon
+    emotion: surprised
+    text: 6割も減ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダ自身が、新しいEVメーカーと比べて値段に見合う商品を出せなかったと書いてるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: やっぱり、負けてるのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダは、勝負の中身が車の作りからソフトに移ったとも説明してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 車が、走るスマホになったってこと？
+  - speaker: tsumugi
+    emotion: normal
+    text: 近いわね。ただ中国で負けたことと、世界で負けたことは別の話よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方で2026年3月までの1年のハイブリッドは、世界で92万9千台。
+  - speaker: tsumugi
+    emotion: normal
+    text: EVは7万3千台だから、10倍以上よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ハイブリッドは、売れてる！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本の政府の2035年の目標は、ハイブリッドを含めた電動車で100％なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダの100％は、そのハイブリッドを数に入れなかったのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 中国では負けて、ハイブリッドでは売れてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: どっちも本当なの。だから、時代遅れの一言では片付かないわ。
+- id: ronso3
+  title: 判断は遅かったのか
+  background: hd_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも、見直しの節目が3回もあったのだ。経営が下手だっただけなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 評価は、分かれてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダは、売ってから撤退するより量産の前に止めたほうがブランドを守れると説明したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 投資家向けの説明会でも、ここまで大きくやったのはポジティブだという声が出たの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一方で日経ビジネスは、[三部|みべ]さんへの不信が広がると書いたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ほめる人と、[責める|せめる]人がいるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 政策がいきなり変わったのも本当。見直しの節目で目標を据え置いたのも本当。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[三部|みべ]さん自身は、複数のシナリオを持てなかったことを反省すべき課題に挙げてたわね。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 1本のシナリオに、全部を積んじゃったのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 責任は、どう取ったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長と副社長の報酬は、1年で基準の25から30％減。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それで[十分|じゅうぶん]かを決めるのは、株主ね。総会では、9割が再任に賛成したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 9割の賛成でも、前の年よりは下がったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+- id: chui
+  title: 車を選ぶ人の注意点
+  background: hd_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つ目は補助金。補助金が切れたあと、プロローグは12月に932台まで落ちたでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 補助金は政策しだいで、いきなり変わることがあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 補助金の期限を、先に確かめる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つ目は充電。家や近くで充電できるかで、毎日の使い勝手が変わるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: うちのアパート、駐車場もないのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: まず車を置く場所からね。
+    se: zukko
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、ボクにはハイブリッドが向いてるのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ハイブリッドも、置く場所は要るのよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つ目は下取り。何年か後にいくらで売れそうか、販売店に聞いておくの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと予約するなら、返金の条件も確かめてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[AFEELA|アフィーラ]の予約金は、全額返金だったけど。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 発売前に、なくなる車もあるのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きな会社の計画も、前提が変われば変わるの。
+  - speaker: tsumugi
+    emotion: happy
+    text: だからあなたの車選びも、1本に決め打ちしないでね。
+- id: gendai
+  title: 2026年10月のホンダ
+  background: hd_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: tsumugi
+    emotion: happy
+    text: 2026年10月時点の、ホンダを見てみるね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 8月の決算では、4月から6月の営業利益が5307億円。前の年の2倍を超えたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤字から、もう戻ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1年の見通しも、6500億円の黒字に引き上げたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、EVの損失は今の年度も5200億円を見込んでるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: まだ、続くのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: これからの3年の使い道は、EVに0.8兆円。エンジンとハイブリッドに4.4兆円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 5倍以上！
+  - speaker: tsumugi
+    emotion: normal
+    text: でもEVもゼロじゃないの。3年で0.8兆円は続けるのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 二輪のほうは、インドの生産能力を625万台から2028年に約800万台へ増やすの。
+  - speaker: zundamon
+    emotion: happy
+    text: バイクのほうは、攻めてるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 10月9日には、次のハイブリッドの名前を[Honda Hybrid|ホンダハイブリッド]に決めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2027年から出して、2029年度までに15車種よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 15車種も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2023年のモデルと比べて、コストを30％以上下げて燃費を10％以上よくするって。
+  - speaker: zundamon
+    emotion: happy
+    text: 安くて、燃費もいいのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2029年3月期には、営業利益1兆4000億円以上を目指してるわ。過去最高の水準よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤字の3年後に、過去最高を目指すのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 100％を目指すと言ってから5年。EVは、ホンダの[四輪|よんりん]の販売の約2％だったの。
+    telops:
+    - {text: "EVは四輪販売の約2％（2026年3月期）", size: md, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 100％を目指して5年で、まだ2％……。
+    se: gaan
+- id: gendai_f1
+  title: ''
+  background: hd_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: もうひとつ、日付を並べてみるね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年。カーボンニュートラルの研究に力を回すため、F1をやめると発表。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2023年。カーボンニュートラルの方向性に合うとして、F1に戻ると発表。
+  - speaker: zundamon
+    emotion: surprised
+    text: やめた理由と戻る理由が、同じなのだ！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しいF1は、出力の半分を電動のモーターで出す決まりなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダは、電動化の技術を磨く場になると説明してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ややこしいけど、筋は[通ってる|とおってる]のか。
+- id: shime
+  title: ''
+  background: hd_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ。ボクも、複数シナリオで次の車を選ぶのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: どんな？
+  - speaker: zundamon
+    emotion: happy
+    text: EVのシナリオ。ハイブリッドのシナリオ。
+  - speaker: zundamon
+    emotion: happy
+    text: ゼロのSUVはなくなったけど、日本向けの小さいゼロを待つシナリオもあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 補助金と充電と下取りも、ちゃんと確かめるのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: もちろん。シナリオは、いくつあってもいいのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: で、免許を取るシナリオは？
+    se: oti
+  - speaker: zundamon
+    emotion: sad
+    text: ……教習所の予約から、なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 55年前の宣言は、もう決まった法律に手元のエンジンで間に合わせた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 5年前の宣言は、これから続くはずの政策に賭けた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 同じ宣言でも、立っている地面が違ったのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも大きな買い物をするときは、もしもの道を2つ3つ用意しておいてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

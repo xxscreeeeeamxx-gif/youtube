@@ -1,0 +1,29 @@
+# honda-ev-sanbe 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 三部敏宏 / label: 本田宗一郎・米国の客 など）とテロップは表示専用なのでタグを付けていない。
+# 人名
+- {surface: 三部敏宏, reading: みべとしひろ}
+- {surface: 三部, reading: みべ}
+- {surface: 本田宗一郎, reading: ほんだそういちろう}
+- {surface: 宗一郎, reading: そういちろう}
+# 社名・機関・地名・商品名
+- {surface: 日産, reading: にっさん}
+- {surface: Honda Hybrid, reading: ほんだはいぶりっど}
+- {surface: Honda 0, reading: ほんだぜろ}
+- {surface: Honda, reading: ほんだ}
+- {surface: AFEELA, reading: あふぃーら}
+- {surface: INSIGHT, reading: いんさいと}
+- {surface: N-BOX, reading: えぬぼっくす}
+- {surface: 0 α, reading: ぜろあるふぁ}
+- {surface: 経団連会館, reading: けいだんれんかいかん}
+- {surface: 環境保護庁, reading: かんきょうほごちょう}
+# 技術・法律・会計の言葉
+- {surface: CVCC, reading: しーぶいしーしー}
+- {surface: マスキー法, reading: ますきーほう}
+- {surface: 四輪, reading: よんりん}
+- {surface: 除却, reading: じょきゃく}
+- {surface: 減損, reading: げんそん}
+- {surface: 毀損, reading: きそん}
+# 実際の音声で誤読が見つかった語（2026-10-23 見直し）
+- {surface: 十分, reading: じゅうぶん}        # ジュップン と読まれた
