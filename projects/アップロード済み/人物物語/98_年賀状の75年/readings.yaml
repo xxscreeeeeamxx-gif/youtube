@@ -1,0 +1,25 @@
+# nengajo-otoshidama 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 局員 / label: 林正治・根岸社長・審議会委員 など）は表示専用なのでタグを付けていない。
+# 人名（ナレだけに出る人も、読みを控えておく）
+- {surface: 林正治, reading: はやしまさじ}
+- {surface: 根岸一行, reading: ねぎしかずゆき}
+- {surface: 根岸, reading: ねぎし}
+# 社名・役所・団体
+- {surface: 日本郵政, reading: にっぽんゆうせい}   # ニホンユウセイ と読ませない
+- {surface: 日本郵便, reading: にっぽんゆうびん}   # ニホンユウビン と読ませない
+- {surface: 郵政審議会, reading: ゆうせいしんぎかい}
+- {surface: 郵政博物館, reading: ゆうせいはくぶつかん}
+- {surface: 西日本新聞, reading: にしにっぽんしんぶん}
+- {surface: 帝国データバンク, reading: ていこくでーたばんく}
+# 地名・場所
+- {surface: 心斎橋, reading: しんさいばし}
+- {surface: 日比谷公会堂, reading: ひびやこうかいどう}
+- {surface: 新宿郵便局, reading: しんじゅくゆうびんきょく}
+# 郵便の言葉
+- {surface: 区分棚, reading: くぶんだな}
+- {surface: 抽せん, reading: ちゅうせん}
+# 言い回し・カタカナ語
+- {surface: 推し活, reading: おしかつ}
+- {surface: Gemini, reading: じぇみに}

@@ -1,0 +1,1500 @@
+meta:
+  title: 「今年も出しとこ、年賀状。」と呼びかけた日本郵便、発行はピークの約8分の1に【ずんだもん解説】
+  slug: nengajo-otoshidama
+  hook_line: 郵便の赤字を埋める呼び水の役目もあった年賀はがきは、なぜ8分の1まで減ったのか。
+  summary: 2026年の元日に配られた年賀状は3億6300万通。2008年の元日は20億通でした。なぜ、ここまで減ったのか。1993年に入った郵便局員の目で、局の休憩室の会話から「減るほど値上げが要り、値上げするほど減る」仕組みを見ていきます。1949年、赤字の郵便の呼び水の役目も担って生まれた年賀はがき。その75年後に何が起きたのかを、日本郵便・総務省・内閣府の資料と会見の言葉を並べて、再現ドラマでたどります。2026年10月時点の情報です。
+  sources:
+  - 日本郵便「2027（令和9）年用年賀はがき等の発行概要」（2026年8月31日） https://files.japanpost.jp/assets/34d9d11432734cfaa759e78fe395b688/159168aef19d465baf3350d358e46fa9/20260831_02_06.pdf
+  - 日本郵便「2026（令和8）年年賀郵便物元日配達物数」（2026年1月1日） https://www.post.japanpost.jp/notification/pressrelease/2026/00_honsha/0101_01_01.pdf
+  - 日本郵便「郵便料金の改定および新料額の普通切手の発行などについて」（2024年6月13日） https://www.post.japanpost.jp/notification/pressrelease/2024/00_honsha/0613_01_01.pdf
+  - 総務省「25g以下の定形郵便物等の上限料金の改定について」（2024年） https://www.soumu.go.jp/main_content/000951527.pdf
+  - 日本郵政 社長会見（2026年5月15日） https://www.japanpost.jp/news/publication/20260515/
+  - 郵政博物館 研究紀要 第8号「新たに発見された『お年玉付き年賀はがきの見本』」（2017年3月） https://www.postalmuseum.jp/publication/research/research_08_09.pdf
+  tags:
+  - 年賀状
+  - 年賀はがき
+  - お年玉付き年賀はがき
+  - 日本郵便
+  - 日本郵政
+  - 郵便局
+  - 郵便料金
+  - 値上げ
+  - 年賀状じまい
+  - 林正治
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 発行はピークの約8分の1
+    bottom: 年賀状の75年
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kyokucho
+    label: 局長
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: 0.0
+    outfit: work
+    color: '#2f4a6a'
+  - id: kohai
+    label: 後輩
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#4a6a8a'
+  - id: kyaku
+    label: お客さん
+    voice: 8
+    pitch: -0.06
+  - id: hayashi
+    label: 林正治
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4a3a'
+  - id: shingikai
+    label: 審議会委員
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#3a3a42'
+  - id: negishi
+    label: 根岸社長
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#1f2a44'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+scenes:
+# ---- 先出し（2026年元日の出発式） ----
+- id: co_shuppatsu
+  title: ''
+  background: ng_shuppatsu_sukunai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: normal}
+  - {who: kyokucho, x: 0.56, emotion: happy}
+  - {who: kohai, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年1月1日の朝。郵便局の前で、年賀状を配りに出る出発式です。
+    reading: にせん にじゅうろくねん いちがつ ついたちの あさ。ゆうびんきょくの まえで、ねんがじょうお くばりに でる しゅっぱつしきです。
+  - speaker: kyokucho
+    emotion: happy
+    text: 年賀状の配達、出発！
+  - speaker: kohai
+    emotion: surprised
+    text: 先輩、かばんが軽いです！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……30年前は、肩に食い込む重さだったんだけどな。
+  - speaker: reimu
+    text: この朝、全国で配った年賀状は3億6300万通。
+    reading: この あさ、ぜんこくで くばった ねんがじょうわ さんおく ろくせん さんびゃくまんつう。
+    telops:
+    - {text: "元日の年賀状　3億6300万通", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 18年前、2008年の元日は、20億通でした。
+    reading: じゅうはちねんまえ、にせん はちねんの がんじつわ にじゅうおくつうでした。
+  - speaker: reimu
+    text: 年賀状は、なぜここまで減ったのでしょうか。
+    reading: ねんがじょうわ、なぜ ここまで へったのでしょうか。
+# ---- 茶番（今の部屋） ----
+- id: hook
+  title: ''
+  background: ng_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 来年の年賀状は、LINEのスタンプで全員に送るのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 机のはがきの束は？
+  - speaker: zundamon
+    emotion: normal
+    text: 今年の余り。だって1枚85円もするんだよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 郵便局は、それでもまた値上げを考えてるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 減ってるのに値上げ！？ 年賀状、なんでこんなに減ったのだ！？
+# ---- 仕組み（2026年5月の休憩室） ----
+- id: ch1_kyukei
+  title: 減ったのに、なぜ値上げ
+  background: ng_kyukei
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: normal}
+  - {who: senpai, x: 0.56, emotion: normal}
+  - {who: kohai, x: 0.78, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2026年5月。同じ郵便局の休憩室です。
+    reading: にせん にじゅうろくねん ごがつ。おなじ ゆうびんきょくの きゅうけいしつです。
+  - speaker: kohai
+    emotion: surprised
+    text: 先輩！ [日本郵政|にっぽんゆうせい]の社長が、また郵便料金を上げたいって。
+  - speaker: kohai
+    emotion: normal
+    text: 早ければ来年度中にも何かできないか、ですって。
+  - speaker: zundamon
+    emotion: surprised
+    text: また！？ おととしの秋に、上げたばっかりだぞ。
+  - speaker: kohai
+    emotion: thinking
+    text: 去年の元日なんて、年賀状が[3分の1|さんぶんのいち]も減ったのに。
+  - speaker: zundamon
+    emotion: angry
+    text: 減ってるのに、なんで上げるんだ？
+  - speaker: kohai
+    emotion: normal
+    text: 先輩の先輩に、聞いてみましょうよ。
+  - speaker: senpai
+    emotion: normal
+    text: 逆だよ。減ったから、上げるんだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 逆！？
+  - speaker: senpai
+    emotion: normal
+    text: 国の資料だと、郵便の費用の約[4分の3|よんぶんのさん]は人にかかるお[金|かね]だ。
+  - speaker: kohai
+    emotion: surprised
+    text: 人？
+  - speaker: senpai
+    emotion: normal
+    text: 配る人と仕分ける人、それに窓口の人だ。
+  - speaker: senpai
+    emotion: normal
+    text: 年賀状が10通の家も1通の家も、配達は同じ道を回るだろ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 回ります。坂の上の1軒にも、1通のために。
+  - speaker: senpai
+    emotion: normal
+    text: 通数が減っても、道と人の費用はすぐには減らない。
+  - speaker: senpai
+    emotion: normal
+    text: だから1通あたりの費用が、どんどん高くなる。
+  - speaker: kohai
+    emotion: thinking
+    text: それで、値上げ……。
+  - speaker: senpai
+    emotion: thinking
+    text: ところがな。年賀は、値上げにいちばん弱い郵便なんだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 弱い？
+  - speaker: senpai
+    emotion: normal
+    text: 国は、値上げでどれだけ減るかを郵便の種類ごとに見積もってる。
+  - speaker: senpai
+    emotion: normal
+    text: 年賀は、値上げで減る割合がふつうのはがきの約3倍って数字だ。
+  - speaker: senpai
+    emotion: normal
+    text: 2024年の値上げのとき、国は年賀が4.9％余計に減ると見てた。
+  - speaker: senpai
+    emotion: normal
+    text: いつもの減りと合わせて、17％ほどの見込みだ。
+  - speaker: senpai
+    emotion: thinking
+    text: ところが値上げのあとの元日、年賀状は前の年より34％減った。
+  - speaker: zundamon
+    emotion: surprised
+    text: 17％の見込みが、34％！？
+  - speaker: senpai
+    emotion: normal
+    text: 全部が値上げのせいとは言えないぞ。前から毎年1割か2割は減ってた。
+  - speaker: senpai
+    emotion: thinking
+    text: それでも、減り方が倍になったんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 減ると、値上げ。値上げすると、いちばん弱い年賀が減る。
+  - speaker: zundamon
+    emotion: surprised
+    text: で、減ったらまた値上げ……。ぐるぐる回ってるのだ！
+    se: gaan
+    telops:
+    - {text: "減る→値上げ→また減る", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kohai
+    emotion: sad
+    text: 年賀状50枚で、3150円が4250円。うちの親は、それもあってやめました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……1000円以上か。
+  - speaker: senpai
+    emotion: thinking
+    text: 皮肉なもんだよ。年賀はがきは、もともと郵便の赤字を埋める呼び水だったのにな。
+  - speaker: zundamon
+    emotion: surprised
+    text: 呼び水？
+  - speaker: senpai
+    emotion: normal
+    text: 井戸のポンプは、上から水を少し注ぐと下から水が上がってくるだろ。
+  - speaker: senpai
+    emotion: normal
+    text: 年賀状で郵便を使ってもらって、郵便全体を増やそうとしたんだ。
+  - speaker: kohai
+    emotion: surprised
+    text: 赤字を埋めるための年賀状が、今は赤字のせいで値上げ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: それ、誰が考えたんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 始まりは、ひとりの洋服屋さんの思いつきだ。
+# ---- 1949年：思いつき ----
+- id: card1949
+  title: ''
+  background: ng_card_1949
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 1949年6月。京都に住み、大阪の心斎橋で洋服の店を営む林正治、42歳。
+    reading: せんきゅうひゃく よんじゅうくねん ろくがつ。きょうとに すみ おおさかの しんさいばしで ようふくの みせお いとなむ、はやし まさじ よんじゅうにさい。
+- id: ch2_hayashi
+  title: 洋服屋の思いつき
+  background: ng_mise_1949
+  stage:
+  - {who: hayashi, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: hayashi
+    emotion: thinking
+    text: 終戦後、打ちひしがれた中で通信が途絶えた。
+  - speaker: hayashi
+    emotion: normal
+    text: 年賀状が復活すれば、お互いの消息が分かるのに。
+  - speaker: hayashi
+    emotion: happy
+    text: それに、くじのお年玉をつける。
+  - speaker: hayashi
+    emotion: happy
+    text: さらに寄付金を加えれば夢もあり、社会福祉のためにもなる！
+    se: hirameki
+  - speaker: reimu
+    text: 林は、見本のはがきに宣伝のポスター、賞品の案まで自分で作りました。
+    reading: はやしわ みほんの はがきに せんでんの ぽすたー、しょうひんの あんまで じぶんで つくりました。
+  - speaker: hayashi
+    emotion: happy
+    text: ポスターの案には、特賞50万円。1等は、ミシン！
+  - speaker: reimu
+    text: 林は大阪の郵政局で紹介状をもらい、7月に上京して郵政省へ向かいます。
+    reading: はやしわ おおさかの ゆうせいきょくで しょうかいじょうお もらい、しちがつに じょうきょう して ゆうせいしょうえ むかいます。
+# ---- 1949年：郵政審議会 ----
+- id: ch2_shingikai
+  title: 郵政審議会の反対
+  background: ng_shingikai
+  bgm: kinakusai
+  stage:
+  - {who: shingikai, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1949年の夏。郵政審議会で、林の案が話し合われます。
+    reading: せんきゅうひゃく よんじゅうくねんの なつ。ゆうせい しんぎかいで、はやしの あんが はなしあわれます。
+  - speaker: shingikai
+    emotion: thinking
+    text: 面白い案だが日本は今、疲弊して食べるものも食べられない時代。
+  - speaker: shingikai
+    emotion: angry
+    text: 送った相手にクジが当たるなんて……。
+  - speaker: shingikai
+    emotion: angry
+    text: そんなのんびりしたことができる状態ではないでしょう。
+    beat: true
+  - speaker: reimu
+    text: それでも曲折の末、くじ付きの年賀はがきが決まります。8月には、大阪で申込書ができていました。
+    reading: それでも きょくせつの すえ、くじつきの ねんがはがきが きまります。はちがつにわ おおさかで もうしこみしょが できて いました。
+  - speaker: reimu
+    text: 郵政省の事情もありました。郵便は、戦争の痛手と利用の少なさで赤字に苦しんでいたのです。
+    reading: ゆうせいしょうの じじょうも ありました。ゆうびんわ、せんそうの いたでと りようの すくなさで あかじに くるしんで いたのです。
+  - speaker: reimu
+    text: 郵便の量を増やす呼び水として、年賀状を勧めることにした。郵政博物館の紀要は、そう書いています。
+    reading: ゆうびんの りょうお ふやす よびみずと して、ねんがじょうお すすめる ことに した。ゆうせい はくぶつかんの きようわ、そう かいて います。
+    telops:
+    - {text: "郵便の赤字を埋める呼び水", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 1949年12月：発売と最初の抽せん会 ----
+- id: ch2_chusen
+  title: 最初の抽せん会
+  background: ng_chusen
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 1949年12月1日に発売。2円のはがき3000万枚と、寄付金1円付きの1億5000万枚でした。
+    reading: せんきゅうひゃく よんじゅうくねん じゅうにがつ ついたちに はつばい。にえんの はがき さんぜんまんまいと、きふきん いちえんつきの いちおく ごせんまんまいでした。
+  - speaker: reimu
+    text: 郵政博物館の紀要によれば、世界で初めての、くじ付きの郵便物でした。
+    reading: ゆうせい はくぶつかんの きように よれば、せかいで はじめての くじつきの ゆうびんぶつでした。
+  - speaker: reimu
+    text: 翌年1月20日、日比谷公会堂で最初の抽せん会。特等はミシン、1等は純毛の洋服地でした。
+    reading: よくねん いちがつ はつか、ひびや こうかいどうで さいしょの ちゅうせんかい。とくとうわ みしん いっとうわ じゅんもうの ようふくじでした。
+  - speaker: reimu
+    text: 初年度の売れ行きは微々たるもので、林は売れ残りを買い取ったという話も残っています。
+    reading: しょねんどの うれゆきわ びびたる もので、はやしわ うれのこりお かいとったと いう はなしも のこって います。
+  - speaker: reimu
+    text: 年賀状には、郵便の赤字を埋める呼び水の役目もありました。それが、75年後に裏返ります。
+    reading: ねんがじょうにわ、ゆうびんの あかじお うめる よびみずの やくめも ありました。それが ななじゅうごねんごに うらがえります。
+# ---- 全盛：1990年代の窓口 ----
+- id: card1993
+  title: ''
+  background: ng_card_1993
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1993年の春。ひとりの新人が、郵便局に入ります。
+    reading: せんきゅうひゃく きゅうじゅうさんねんの はる。ひとりの しんじんが、ゆうびんきょくに はいります。
+- id: ch3_madoguchi
+  title: 年末の窓口
+  background: ng_madoguchi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: happy}
+  - {who: senpai, x: 0.56, emotion: normal}
+  - {who: kyaku, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1990年代の半ば、12月の窓口です。はがきは1994年から、1枚50円になっていました。
+    reading: せんきゅうひゃく きゅうじゅうねんだいの なかば、じゅうにがつの まどぐちです。はがきわ せんきゅうひゃく きゅうじゅうよねんから いちまい ごじゅうえんに なって いました。
+  - speaker: kyaku
+    emotion: happy
+    text: 年賀はがき、50枚ちょうだい。
+  - speaker: zundamon
+    emotion: happy
+    text: はい！ 50枚で、2500円です！
+  - speaker: kyaku
+    emotion: happy
+    text: 来年もよろしくね、新人さん。
+  - speaker: zundamon
+    emotion: happy
+    text: 先輩、ボク窓口の才能があるかもしれません。さっきから売れて売れて！
+  - speaker: senpai
+    emotion: thinking
+    text: お前が売ってるんじゃない。お客さんが、買いに来てるんだ。
+    se: hammer
+  - speaker: zundamon
+    emotion: thinking
+    text: ……同じじゃないんですか？
+  - speaker: senpai
+    emotion: normal
+    text: そのうち分かる。
+    beat: true
+- id: ch3_kubun
+  title: 元日に届ける仕組み
+  background: ng_kubun
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: surprised}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月の半ば。年賀状の受け付けが始まると、区分の作業場は箱で埋まります。
+    reading: じゅうにがつの なかば。ねんがじょうの うけつけが はじまると、くぶんの さぎょうばわ はこで うまります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 先輩、箱が減りません！
+  - speaker: senpai
+    emotion: normal
+    text: 年賀は12月のうちに預かって、元日の朝にまとめて届ける。
+  - speaker: senpai
+    emotion: normal
+    text: 明治のころからの仕組みだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 元日に届くのって、当たり前だと思ってました。
+  - speaker: senpai
+    emotion: happy
+    text: 年が明けた朝に届くから、ありがたいんだよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 先輩！ この箱、全部入れ終わりました！
+  - speaker: senpai
+    emotion: thinking
+    text: ……それ、隣の町の棚だ。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: やり直しなのだ……。
+  - speaker: reimu
+    text: この作業場の箱が数えるほどになるのは、30年ほどあとのことです。
+    reading: この さぎょうばの はこが かぞえるほどに なるのわ、さんじゅうねん ほど あとの ことです。
+# ---- 全盛：過去最多の年 ----
+- id: ch3_peak
+  title: 過去最多の年
+  background: ng_madoguchi
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: happy}
+  - {who: senpai, x: 0.56, emotion: normal}
+  - {who: kyaku, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2003年に売り出された2004年用の年賀はがきは、約44億6千万枚。これが、過去最多です。
+    reading: にせん さんねんに うりだされた にせん よねんようの ねんがはがきわ、やく よんじゅうよんおく ろくせんまんまい。これが かこ さいたです。
+    telops:
+    - {text: "2004年用　約44億6千万枚", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: その翌年、2004年の秋の窓口です。
+    reading: その よくねん、にせん よねんの あきの まどぐちです。
+  - speaker: kyaku
+    emotion: happy
+    text: 子どもの写真入りの年賀状、家のプリンターで刷るのよ。100枚ちょうだい。
+  - speaker: zundamon
+    emotion: happy
+    text: インクジェット用、100枚ですね！
+  - speaker: senpai
+    emotion: normal
+    text: 今年の2005年用は、半分を超える約22億7千万枚がインクジェット用だそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分も！？ 年賀状は、家で刷る時代なんですね。
+  - speaker: kyaku
+    emotion: happy
+    text: 1等には、ハワイ旅行もあるんですって！
+  - speaker: zundamon
+    emotion: happy
+    text: 当たったら、お土産お願いします！
+  - speaker: senpai
+    emotion: angry
+    text: お客さんに、お土産をねだるな。
+    se: tsukkomi
+  - speaker: reimu
+    text: お年玉の賞品は、ミシンから家電へ。そして旅行へと移っていきました。
+    reading: おとしだまの しょうひんわ みしんから かでんえ。そして りょこうえと うつって いきました。
+# ---- 全盛：2008年の元日 ----
+- id: ch3_2008
+  title: 20億通の元日
+  background: ng_shuppatsu
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: happy}
+  - {who: kyokucho, x: 0.56, emotion: happy}
+  - {who: senpai, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2008年1月1日。入局から15年目の元日です。前の年の10月、郵政は民営化されていました。
+    reading: にせん はちねん いちがつ ついたち。にゅうきょくから じゅうごねんめの がんじつです。まえの としの じゅうがつ、ゆうせいわ みんえいか されて いました。
+  - speaker: kyokucho
+    emotion: happy
+    text: 年賀状の配達、出発！
+  - speaker: zundamon
+    emotion: happy
+    text: かばんが、肩に食い込むのだ！
+  - speaker: senpai
+    emotion: happy
+    text: それが、年賀の重さだ。
+  - speaker: reimu
+    text: この朝に配った年賀状は、20億3300万通。一人当たり、約16通です。
+    reading: この あさに くばった ねんがじょうわ、にじゅうおく さんぜん さんびゃくまんつう。ひとり あたり やく じゅうろくつうです。
+  - speaker: senpai
+    emotion: normal
+    text: 今朝の年賀は、去年より6.5％多いそうだ。
+  - speaker: zundamon
+    emotion: happy
+    text: まだまだ増えるのだ！
+  - speaker: senpai
+    emotion: thinking
+    text: ただな。手紙やはがき全体の数は、2001年度から減ってるんだぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 年賀は、こんなに重いのに？
+  - speaker: senpai
+    emotion: thinking
+    text: 年賀は、まだ踏ん張ってるんだ。
+  - speaker: reimu
+    text: このとき、まだ誰も、18年後の元日に3億通台まで減るとは思っていません。
+    reading: この とき まだ だれも、じゅうはちねんごの がんじつに さんおくつうだいまで へるとわ おもって いません。
+# ---- 減りはじめ ----
+- id: ch4_tana
+  title: 減りはじめた棚
+  background: ng_madoguchi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 局員, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 年賀はがきの当初の発行枚数は、2012年用から毎年減っていきます。
+    reading: ねんがはがきの とうしょの はっこう まいすうわ、にせん じゅうにねんようから まいとし へって いきます。
+    background: ng_madoguchi_kara
+  - speaker: zundamon
+    emotion: thinking
+    text: 棚が、年ごとに広くなっていくな……。
+    beat: true
+- id: ch4_mokuhyo
+  title: 販売の目標
+  background: ng_kyukei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: kyokucho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2010年代の半ば。局の休憩室です。
+    reading: にせん じゅうねんだいの なかば。きょくの きゅうけいしつです。
+  - speaker: kyokucho
+    emotion: normal
+    text: 今年の年賀の、販売の目標だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: こ、この枚数を……ですか。
+  - speaker: kyokucho
+    emotion: thinking
+    text: ……頼んだぞ。
+    beat: true
+- id: ch4_uwasa
+  title: ''
+  background: ng_kyukei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 先輩。売り切れなかったら、どうなるんですか。
+  - speaker: senpai
+    emotion: thinking
+    text: ……自分で買って、金券ショップに持ってくやつもいるって話だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分で買う！？
+    se: bikkuri
+  - speaker: senpai
+    emotion: angry
+    text: 俺はやらん。お前もやるなよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……はい。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……売ってたんじゃない。買いに来てもらってたんだ。
+- id: ch4_tenji
+  title: 見本のはがき
+  background: ng_tenji
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.5, tag: 局員, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 郵政博物館の年賀状展。2016年度には、林正治が作った見本のはがきが並びました。
+    reading: ゆうせい はくぶつかんの ねんがじょうてん。にせん じゅうろくねんどにわ、はやし まさじが つくった みほんの はがきが ならびました。
+  - speaker: zundamon
+    emotion: surprised
+    text: くじの番号に、売り出しの期間。賞品の受け取り方まで書いてある……。
+  - speaker: zundamon
+    emotion: happy
+    text: 洋服屋さんが、ここまで作って持ち込んだのか。
+  - speaker: reimu
+    text: 林は1987年、雑誌のインタビューでこう話しています。
+    reading: はやしわ せんきゅうひゃく はちじゅうななねん、ざっしの いんたびゅーで こう はなして います。
+  - speaker: reimu
+    text: お年玉年賀はがきが、こんなにまで続くとはねェ。物のない2、3年のことと考えていましたよ。
+    reading: おとしだま ねんがはがきが こんなにまで つづくとわ ねえ。ものの ない にさんねんの ことと かんがえて いましたよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2年か3年のつもりが、もう67年……。
+  - speaker: zundamon
+    emotion: sad
+    text: なのにボクの棚は、年々さみしくなっていくのだ。
+    se: shobon
+- id: ch4_suezoki
+  title: 年賀だけ52円
+  background: ng_madoguchi_kara
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2017年6月、ふつうのはがきは52円から62円に上がります。その秋の窓口です。
+    reading: にせん じゅうななねん ろくがつ、ふつうの はがきわ ごじゅうにえんから ろくじゅうにえんに あがります。その あきの まどぐちです。
+  - speaker: kyaku
+    emotion: surprised
+    text: あら。年賀はがきは、52円のままなの？
+  - speaker: zundamon
+    emotion: happy
+    text: はい。年賀だけは、据え置きなんです。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ今年は、いつもより多めに買っとこうかしら。
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうございます！ 来年も、ぜひ。
+  - speaker: reimu
+    text: ところが翌2018年、年賀はがきも62円に上がります。
+    reading: ところが よく にせん じゅうはちねん、ねんがはがきも ろくじゅうにえんに あがります。
+  - speaker: reimu
+    text: 国はのちに、このときの減り方から、年賀は値上げにいちばん弱い郵便だと見積もりました。
+    reading: くにわ のちに このときの へりかたから、ねんがわ ねあげに いちばん よわい ゆうびんだと みつもりました。
+- id: ch4_shihyo
+  title: 指標の廃止
+  background: ng_kyukei
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2018年9月。西日本新聞は、日本郵便が年賀はがきの販売枚数の指標をやめる方針だと報じます。
+    reading: にせん じゅうはちねん くがつ。にしにっぽん しんぶんわ、にっぽん ゆうびんが ねんがはがきの はんばい まいすうの しひょうお やめる ほうしんだと ほうじます。
+  - speaker: reimu
+    text: 記事は、売れなかった局員が自分で買い、金券ショップに持ち込む行為が起きていたとしています。
+    reading: きじわ、うれなかった きょくいんが じぶんで かい きんけん しょっぷに もちこむ こういが おきて いたと して います。
+  - speaker: senpai
+    emotion: normal
+    text: 指標、なくなるんだってな。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……少し、ほっとしました。
+- id: ch4_kubun2022
+  title: がらんとした作業場
+  background: ng_kubun_kara
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: kohai, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2022年の暮れ。局には、新しい後輩が入っていました。
+    reading: にせん にじゅうにねんの くれ。きょくにわ あたらしい こうはいが はいって いました。
+  - speaker: kohai
+    emotion: happy
+    text: 先輩。年賀の仕分けって、思ったより楽ですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 昔はこの作業場、天井まで箱だったんだぞ。
+  - speaker: kohai
+    emotion: happy
+    text: またまた。盛ってません？
+  - speaker: zundamon
+    emotion: angry
+    text: 盛ってない！ [区分棚|くぶんだな]の前で、年を越しかけたこともあるのだ！
+  - speaker: kohai
+    emotion: normal
+    text: 先輩の昔話、毎年1割ずつ増えてません？
+    beat: true
+  - speaker: reimu
+    text: 元日に配る年賀状は、2020年の12億8700万通から、毎年1割を超えて減っていました。
+    reading: がんじつに くばる ねんがじょうわ、にせん にじゅうねんの じゅうにおく はっせん ななひゃくまんつうから まいとし いちわりお こえて へって いました。
+- id: ch4_akaji
+  title: 民営化後初の赤字
+  background: ng_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: normal}
+  - {who: kyokucho, x: 0.56, emotion: thinking}
+  - {who: kohai, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2022年度。郵便事業の成績は、民営化のあと初めて赤字になります。
+    reading: にせん にじゅうにねんど。ゆうびん じぎょうの せいせきわ、みんえいかの あと はじめて あかじに なります。
+  - speaker: kyokucho
+    emotion: thinking
+    text: 郵便事業が、赤字だ。211億円。
+    background: ng_kaigi_akaji
+    se: chin
+  - speaker: kohai
+    emotion: surprised
+    text: 民営化してから、初めてですよね。
+  - speaker: kyokucho
+    emotion: normal
+    text: 費用の約[4分の3|よんぶんのさん]が人件費だ。数が減っても、すぐには減らせん。
+  - speaker: zundamon
+    emotion: thinking
+    text: 年賀状が減っても、配る道は同じですからね。
+  - speaker: reimu
+    text: その前の4年は黒字でした。ただ455億円から78億円まで、年々細っていたのです。
+    reading: その まえの よねんわ くろじでした。ただ よんひゃく ごじゅうごおくえんから ななじゅうはちおくえんまで、ねんねん ほそって いたのです。
+- id: ch4_naikakufu
+  title: 内閣府の資料
+  background: ng_kyukei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: thinking}
+  - {who: kohai, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2023年11月、内閣府の会議の資料が、自爆営業の例に年賀はがきを挙げました。年が明けた休憩室です。
+    reading: にせん にじゅうさんねん じゅういちがつ、ないかくふの かいぎの しりょうが じばく えいぎょうの れいに ねんがはがきお あげました。としが あけた きゅうけいしつです。
+  - speaker: kohai
+    emotion: surprised
+    text: 先輩、この資料。郵便局で、1万枚の目標が示された例だそうです。
+  - speaker: kohai
+    emotion: surprised
+    text: 売り切れない分は、社員が自費で買い取ってたって。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[日本郵便|にっぽんゆうびん]は、どう言ってる。
+  - speaker: kohai
+    emotion: normal
+    text: 取材に、販売目標の設定は全般的に廃止しているって答えてます。
+  - speaker: kohai
+    emotion: normal
+    text: 続いているという事実は、確認されていないそうです。
+  - speaker: kohai
+    emotion: thinking
+    text: 資料と会社で、言ってることが違いますね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 両方を並べて、読むしかないな。
+# ---- 値上げ（本題） ----
+- id: card2024
+  title: ''
+  background: ng_card_2024
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2024年6月13日。日本郵便が、郵便料金の値上げを発表します。
+    reading: にせん にじゅうよねん ろくがつ じゅうさんにち。にっぽん ゆうびんが、ゆうびん りょうきんの ねあげお はっぴょう します。
+- id: ch5_chorei
+  title: はがき63円から85円へ
+  background: ng_kyukei
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: normal}
+  - {who: kyokucho, x: 0.56, emotion: normal}
+  - {who: kohai, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: kyokucho
+    emotion: normal
+    text: 朝礼を始める。本社の発表だ。
+  - speaker: kyokucho
+    emotion: normal
+    text: 郵便物数は、2001年度をピークに大きく減少しており……。
+  - speaker: kyokucho
+    emotion: normal
+    text: 郵便料金の引上げをお願いせざるを得ない状況にあります。
+  - speaker: kyokucho
+    emotion: thinking
+    text: 10月1日から、はがきは63円から85円だ。
+    se: don
+    telops:
+    - {text: "はがき　63円→85円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kohai
+    emotion: surprised
+    text: 22円も！？
+  - speaker: zundamon
+    emotion: thinking
+    text: はがきは、7年前にも上がったばかりなのに……。
+  - speaker: kohai
+    emotion: thinking
+    text: 上げたら、年賀がまた減りますよね。
+  - speaker: kyokucho
+    emotion: thinking
+    text: 総務省は、最小限の値上げ幅にすると言ってる。
+  - speaker: kyokucho
+    emotion: normal
+    text: 経営状況に応じて短期間に再度見直すことも念頭に、だそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: それって、もう次の値上げの話ですか！？
+  - speaker: kyokucho
+    emotion: thinking
+    text: 総務省の試算だと、値上げしても黒字になるのは2025年度の1年だけだ。
+  - speaker: kohai
+    emotion: surprised
+    text: たった1年！？
+  - speaker: kyokucho
+    emotion: thinking
+    text: そのあとは、また赤字に戻る見通しだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 上げても、1年しかもたない……。
+    beat: true
+  - speaker: reimu
+    text: 1949年、年賀はがきは郵便の赤字を埋める呼び水の役目も担って生まれました。
+    reading: せんきゅうひゃく よんじゅうくねん、ねんがはがきわ ゆうびんの あかじお うめる よびみずの やくめも になって うまれました。
+  - speaker: reimu
+    text: それから75年。今度は郵便の赤字が、年賀はがきの値段を押し上げます。
+    reading: それから ななじゅうごねん。こんどわ ゆうびんの あかじが、ねんがはがきの ねだんお おしあげます。
+- id: ch5_madoguchi
+  title: 50枚で4250円
+  background: ng_madoguchi_kara
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2024年10月1日、はがきは85円になりました。その秋、85円の年賀はがきが窓口に並びます。
+    reading: にせん にじゅうよねん じゅうがつ ついたち、はがきわ はちじゅうごえんに なりました。その あき、はちじゅうごえんの ねんがはがきが まどぐちに ならびます。
+  - speaker: kyaku
+    emotion: happy
+    text: いつもの年賀はがき、50枚ね。
+  - speaker: zundamon
+    emotion: normal
+    text: 4250円です。
+  - speaker: kyaku
+    emotion: surprised
+    text: 4250円！？ 去年は3150円だったわよ！
+    se: bikkuri
+  - speaker: zundamon
+    emotion: sad
+    text: 1枚、85円になりまして……。
+  - speaker: kyaku
+    emotion: thinking
+    text: じゃあ、30枚にしとくわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 2550円です。
+  - speaker: kyaku
+    emotion: thinking
+    text: 来年は、もっと上がるの？
+  - speaker: zundamon
+    emotion: thinking
+    text: それは、まだ何も決まってなくて……。
+  - speaker: kyaku
+    emotion: thinking
+    text: 来年は、どうしようかしらね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 50枚が、30枚に……。
+    beat: true
+- id: ch5_kubun
+  title: ''
+  background: ng_kubun_kara
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: kohai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2024年の12月。年賀状の受け付けが始まった作業場です。
+    reading: にせん にじゅうよねんの じゅうにがつ。ねんがじょうの うけつけが はじまった さぎょうばです。
+  - speaker: kohai
+    emotion: thinking
+    text: 先輩。値上げで、年賀状ってどのくらい減るんですかね。
+  - speaker: zundamon
+    emotion: normal
+    text: 箱を数えれば分かるさ。
+  - speaker: kohai
+    emotion: sad
+    text: 数えるほど、ないです。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: ……元日の朝に、はっきりするな。
+- id: card2025
+  title: ''
+  background: ng_card_2025
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2025年1月1日。値上げのあと、初めての元日です。
+    reading: にせん にじゅうごねん いちがつ ついたち。ねあげの あと はじめての がんじつです。
+- id: ch5_ganjitsu
+  title: 3分の1が消えた朝
+  background: ng_shuppatsu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: normal}
+  - {who: kyokucho, x: 0.56, emotion: normal}
+  - {who: kohai, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: kyokucho
+    emotion: normal
+    text: 年賀状の配達、出発！
+  - speaker: kohai
+    emotion: surprised
+    text: 先輩、配る束が……薄いです。
+  - speaker: reimu
+    text: この朝に配った年賀状は、4億9100万通。前の年の66％でした。
+    reading: この あさに くばった ねんがじょうわ、よんおく きゅうせん ひゃくまんつう。まえの としの ろくじゅうろく ぱーせんとでした。
+    background: ng_shuppatsu_sukunai
+    telops:
+    - {text: "元日の年賀状　前年の66％", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: '[3分の1|さんぶんのいち]が、消えたのだ……。'
+    se: gaan
+  - speaker: kohai
+    emotion: thinking
+    text: 値上げの前は、毎年1割か2割の減り方だったのに。
+  - speaker: reimu
+    text: 値上げだけが理由とは言い切れません。ただ減り方は、それまでの倍ほどになりました。
+    reading: ねあげだけが りゆうとわ いいきれません。ただ へりかたわ、それまでの ばいほどに なりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 赤字を埋めるための値上げの年に、年賀状がこんなに……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 赤字を埋める呼び水だったはずが、逆向きに回ってる。
+  - speaker: kyokucho
+    emotion: normal
+    text: ……行くぞ。待ってる家がある限り、配るのが仕事だ。
+# ---- いま：年賀状じまい ----
+- id: ch6_jimai
+  title: 年賀状じまい
+  background: ng_madoguchi_kara
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年の暮れ。帝国データバンクの調べでは、企業の58.1％が、すでに年賀状じまいをしていました。
+    reading: にせん にじゅうごねんの くれ。ていこく でーた ばんくの しらべでわ、きぎょうの ごじゅうはってんいち ぱーせんとが すでに ねんがじょうじまいお して いました。
+  - speaker: reimu
+    text: ある企業は、取引先からのじまいの案内や郵便の値上げもあって、やめると決めたと答えています。
+    reading: ある きぎょうわ、とりひきさきからの じまいの あんないや ゆうびんの ねあげも あって やめると きめたと こたえて います。
+  - speaker: kyaku
+    emotion: normal
+    text: 年賀はがき、10枚だけちょうだい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10枚、ですか。
+  - speaker: kyaku
+    emotion: sad
+    text: 今年で、年賀状じまいにしようと思って。
+  - speaker: kyaku
+    emotion: thinking
+    text: 孫はみんなLINEだし、はがきも高くなったしね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 毎年、ここで買ってくださってましたよね。
+  - speaker: kyaku
+    emotion: happy
+    text: 覚えてたの？ 新人さんだったあなたから、ずっとよ。
+  - speaker: kyaku
+    emotion: normal
+    text: 最後の10枚は、お世話になった人にだけ出すわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……長い間、ありがとうございました。
+    se: namida
+- id: card2026
+  title: ''
+  background: ng_card_2026
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2026年1月1日。値上げのあと、2度目の元日です。
+    reading: にせん にじゅうろくねん いちがつ ついたち。ねあげの あと にどめの がんじつです。
+- id: ch6_ganjitsu
+  title: ''
+  background: ng_shuppatsu_sukunai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: thinking}
+  - {who: kohai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 東京の新宿郵便局の出発式には、来賓に総務大臣が招かれました。
+    reading: とうきょうの しんじゅく ゆうびんきょくの しゅっぱつしきにわ、らいひんに そうむ だいじんが まねかれました。
+  - speaker: reimu
+    text: この日に配った年賀状は、3億6300万通。一人当たり、約3通です。
+    reading: この ひに くばった ねんがじょうわ、さんおく ろくせん さんびゃくまんつう。ひとり あたり やく さんつうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一人3通か。15年目の元日は、一人16通だった。
+  - speaker: kohai
+    emotion: surprised
+    text: 16通！？ 今の5倍以上じゃないですか。
+  - speaker: kohai
+    emotion: thinking
+    text: 先輩。来年も、ここに並びますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 並ぶさ。……かばんが、どんなに軽くなってもな。
+# ---- いま：社長の会見 ----
+- id: ch6_kaiken
+  title: 早ければ来年度中にも
+  background: ng_kaiken
+  bgm: serious
+  stage:
+  - {who: negishi, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年5月15日。日本郵政の根岸一行社長が、会見で郵便料金に触れます。
+    reading: にせん にじゅうろくねん ごがつ じゅうごにち。にっぽん ゆうせいの ねぎし かずゆき しゃちょうが、かいけんで ゆうびん りょうきんに ふれます。
+  - speaker: kisha
+    emotion: normal
+    text: 料金はいつごろ、どのくらいの値上げが必要ですか。
+  - speaker: negishi
+    emotion: normal
+    text: 今年度、2026年度も1000億円の赤字でございますので
+  - speaker: negishi
+    emotion: normal
+    text: 可能な限り速やかにお願いしたいと考えております。
+  - speaker: negishi
+    emotion: thinking
+    text: ただ制度的なこともございますので
+  - speaker: negishi
+    emotion: thinking
+    text: できれば、早ければ来年度中にも何かできないかということで考えておりますが
+  - speaker: negishi
+    emotion: normal
+    text: これは制度次第ということになります。
+    telops:
+    - {text: "根岸社長　早ければ来年度中にも", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 来年度中にも……。
+    beat: true
+  - speaker: reimu
+    text: 会社の試算は、はがきも封書も20円上げる前提でした。決まった値上げではありません。
+    reading: かいしゃの しさんわ、はがきも ふうしょも にじゅうえん あげる ぜんていでした。きまった ねあげでわ ありません。
+  - speaker: reimu
+    text: 6月12日、封書の料金を変えやすくする改正郵便法が成立します。
+    reading: ろくがつ じゅうににち、ふうしょの りょうきんお かえやすく する かいせい ゆうびんほうが せいりつ します。
+# ---- いま：黒字のはずの1年 ----
+- id: ch6_akaji
+  title: 黒字のはずの1年
+  background: ng_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: normal}
+  - {who: kyokucho, x: 0.56, emotion: thinking}
+  - {who: kohai, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年7月28日。2025年度の郵便事業の成績が出ます。
+    reading: にせん にじゅうろくねん しちがつ にじゅうはちにち。にせん にじゅうごねんどの ゆうびん じぎょうの せいせきが でます。
+  - speaker: kyokucho
+    emotion: thinking
+    text: 国の試算では、黒字になるはずの年だったな。
+  - speaker: zundamon
+    emotion: normal
+    text: 67億円の黒字の見込みでした。
+  - speaker: kyokucho
+    emotion: sad
+    text: 結果は、322億円の赤字だ。
+    background: ng_kaigi_akaji
+    se: chin
+    telops:
+    - {text: "黒字の見込みが　322億円の赤字", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kohai
+    emotion: surprised
+    text: 4年連続の赤字……。
+  - speaker: kohai
+    emotion: thinking
+    text: 値上げしたのに、収入は増えなかったんですか？
+  - speaker: kyokucho
+    emotion: normal
+    text: 増えたさ。国内の郵便の収入は、533億円の増収だ。
+  - speaker: kyokucho
+    emotion: thinking
+    text: ただ賃上げなどで、費用も186億円膨らんだ。
+  - speaker: kyokucho
+    emotion: thinking
+    text: 前の年は630億円の赤字だ。それが半分になっただけだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: それでも足りなかった……。
+  - speaker: reimu
+    text: 日本郵便は、どこかのタイミングで郵便料金の改定をお願いせざるを得ない、としています。
+    reading: にっぽん ゆうびんわ、どこかの たいみんぐで ゆうびん りょうきんの かいていお おねがい せざるお えないと して います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 上げても赤字。それで、また値上げの話か……。
+# ---- いま：今年も出しとこ ----
+- id: ch6_catch
+  title: 今年も出しとこ、年賀状。
+  background: ng_kyukei
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 局員, emotion: normal}
+  - {who: kohai, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2026年8月31日。日本郵便が、2027年用の年賀はがきを発表します。
+    reading: にせん にじゅうろくねん はちがつ さんじゅういちにち。にっぽん ゆうびんが、にせん にじゅうななねんようの ねんがはがきお はっぴょう します。
+  - speaker: kohai
+    emotion: happy
+    text: 先輩、今年のキャッチコピーです。
+  - speaker: kohai
+    emotion: happy
+    text: 今年も出しとこ、年賀状。
+    telops:
+    - {text: "日本郵便　今年も出しとこ、年賀状。", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 出しとこって、ずいぶん軽いな。
+  - speaker: kohai
+    emotion: normal
+    text: 年賀状じまいを考えている[方|かた]も今年も大切なあの人へ想いを伝えてみませんか、って。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……刺さる人には、刺さるな。
+  - speaker: kohai
+    emotion: normal
+    text: 発行は、5億5593万枚です。
+  - speaker: zundamon
+    emotion: surprised
+    text: ピークの2004年用は、約44億6千万枚だぞ！？
+  - speaker: kohai
+    emotion: thinking
+    text: 約[8分の1|はちぶんのいち]、ですね。
+    beat: true
+  - speaker: reimu
+    text: 当初の発行枚数は、16年連続で減りました。
+    reading: とうしょの はっこう まいすうわ、じゅうろくねん れんぞくで へりました。
+# ---- 論争：値上げのせいで減ったのか ----
+- id: ch7_ronso
+  title: 値上げのせいで減ったのか
+  background: ng_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: 年賀状が減ったのは、郵便局が値上げしたせいだって！
+  - speaker: tsumugi
+    emotion: normal
+    text: それだと、順番が逆よ。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 逆！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 発行のピークは2004年用。減り始めたのは、値上げのずっと前よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当初の発行は2012年用から、16年連続で減ってるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 値上げの12年も前から！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 元日の年賀状も、値上げの前から毎年1割か2割ずつ減ってたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ値上げのあとの元日は、34％減。減り方が倍になったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国も、年賀は値上げにいちばん弱いと見てたしね。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、値上げしなければよかったのに。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本郵便|にっぽんゆうびん]は、郵便を安定して届け続けるための値上げだと説明してたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 総務省の見通しでは、値上げしないと郵便事業の赤字は膨らむ一方。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2028年度には、3439億円の赤字になるはずだったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 上げても地獄、上げなくても地獄なのだ……。
+    beat: true
+- id: ch7_mouke
+  title: ほかでもうけているのでは
+  background: ng_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも郵便局って、ほかでもうけてるんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本郵便|にっぽんゆうびん]全体の営業利益は、2025年度に222億円の黒字よ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも郵便と物流の事業だけで見ると、118億円の赤字なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも郵便の料金は、郵便の費用をまかなう額にする決まりなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ほかのもうけで、埋め合わせちゃだめなのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年の改正で、ほかの事業の収支も考えに入れられるようになるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国からも、毎年650億円程度の交付金が入る予定よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国のお[金|かね]！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 元は、国が持つ[日本郵政|にっぽんゆうせい]の株の配当などね。
+- id: ch7_daremo
+  title: もう誰も出していないのか
+  background: ng_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: でも年賀状なんて、もう誰も出してないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社員396人の調査では、年賀状を出すと答えた人は36.4％。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、少ない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 出さない理由の1位は、LINEなどでの代用。65.1％よ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクと同じだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも同じ調査で、年賀状が届くとうれしい人は73.7％。
+  - speaker: tsumugi
+    emotion: normal
+    text: 手書きの年賀状をもらうとうれしい人は、96.0％もいるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: もらうのは、うれしいのか！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 年賀状じまいをするつもりはない人も71.7％。なのに、出す人は36.4％。
+  - speaker: zundamon
+    emotion: thinking
+    text: やめるとは言わずに、なんとなく出さなくなってるのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう読める数字ね。会社員だけの調査だから、全体の割合じゃないけど。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクも、まさにそれだ。
+    se: manuke
+# ---- 本当の注意点 ----
+- id: ch7_chui
+  title: 年賀状の本当の注意点
+  background: ng_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に気をつけたいのは、出す日なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2027年用は、年賀状の受け付けが12月20日から。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 19日までに出すと、年賀状の扱いにならずに年内に届いちゃうの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 早く出したら、年内に！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 元日に届けたいなら、12月20日から27日の間に出してね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 去年より、遅いのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 去年までの目安は25日。遅く出す人に合わせて、繰り下げたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: はがきも、2027年1月15日まで買えるわ。去年までより5日ほど長いの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 書き損じたはがきは、1枚6円の手数料で新しいはがきや切手に替えられるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 喪中で使えなくなったら、販売期間中は手数料なしで切手などに替えられるの。
+  - speaker: zundamon
+    emotion: happy
+    text: くじは？ 1等の30万円、狙うのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1等は、100万本に1本。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2等は今年から10万本に1本で、去年の10倍当たりにくいわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 10倍！？
+    se: shobon
+  - speaker: tsumugi
+    emotion: happy
+    text: 3等の切手シートは、100本に3本よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[抽せん|ちゅうせん]は1月25日。くじの部分は切り取らずに、郵便局へ持っていってね。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 懸賞の応募に、年賀はがきを使うときは？
+  - speaker: tsumugi
+    emotion: normal
+    text: 年賀の字を、二重線で消して出すの。そうすれば、元日まで止められないわ。
+# ---- 現代：これから ----
+- id: ch8_gendai
+  title: 年賀状のこれから
+  background: ng_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 国内の郵便料金の次の値上げは、2026年10月の時点では決まってないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[根岸|ねぎし]社長は早ければ来年度中にも、と言ったけど制度次第とも話してる。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 交付金で値上げ幅が抑制されることが想定される、とも話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 20円という数字も、試算の前提よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国内の郵便も、2001年度の262億通から2022年度は144億通。45％減ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 年賀状だけじゃ、ないのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 年賀状のほうは、どうなるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本郵便|にっぽんゆうびん]は、次の手を打ってるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: AIの[Gemini|ジェミニ]で作る年賀状に、[推し活|おしかつ]年賀。
+  - speaker: tsumugi
+    emotion: happy
+    text: 年賀状じまいしません、っていうデザインまであるの。
+    se: jaan
+  - speaker: zundamon
+    emotion: surprised
+    text: じまいしません宣言！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 印刷会社と一緒に、年賀状つなぎっていうマークも作ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次の山は、2027年の元日。配る数が、3億6300万通を割るかどうかね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 答えは、元日の朝まで分からないのか。
+# ---- 2026年11月2日、販売の朝 ----
+- id: ch9_hanbai
+  title: 11月2日、販売の朝
+  background: ng_madoguchi_kara
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 局員, emotion: normal}
+  - {who: kohai, x: 0.56, emotion: happy}
+  - {who: kyaku, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2026年11月2日、朝9時。2027年用の年賀はがきの販売が始まります。
+    reading: にせん にじゅうろくねん じゅういちがつ ふつか、あさ くじ。にせん にじゅうななねんようの ねんがはがきの はんばいが はじまります。
+  - speaker: kohai
+    emotion: happy
+    text: 先輩、窓口を開けますよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ああ。……棚、ずいぶん広くなったな。
+  - speaker: kyaku
+    emotion: happy
+    text: 年賀はがき、1枚ちょうだい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1枚、ですか。
+  - speaker: kyaku
+    emotion: thinking
+    text: 年賀状じまいって決めたんだけどね。ひとりだけ、どうしても出したい人がいて。
+  - speaker: zundamon
+    emotion: happy
+    text: ……85円です。
+  - speaker: kyaku
+    emotion: happy
+    text: 遠くの人なんだけど、ちゃんと元日に届く？
+  - speaker: zundamon
+    emotion: happy
+    text: 12月20日から27日に出していただければ、元日に届く目安です。
+  - speaker: kyaku
+    emotion: happy
+    text: 来年のことは、来年決めるわ。
+  - speaker: reimu
+    text: 1987年、林正治は、物のない2、3年のことと考えていましたよ、と話しました。
+    reading: せんきゅうひゃく はちじゅうななねん、はやし まさじわ ものの ない にさんねんの ことと かんがえて いましたよと はなしました。
+    telops:
+    - {text: "林正治　物のない2、3年のことと考えていましたよ", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 最初の発売から、まもなく77年です。
+    reading: さいしょの はつばいから、まもなく ななじゅうななねんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2年か3年のつもりが、77年か。
+  - speaker: kohai
+    emotion: normal
+    text: 来年の今ごろ、この棚はどうなってますかね。
+  - speaker: zundamon
+    emotion: normal
+    text: さあな。……でも今日も、1枚は売れたぞ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: ng_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、決めたのだ！ 来年の年賀状、1枚だけはがきで出す！
+  - speaker: tsumugi
+    emotion: happy
+    text: あら。LINEのスタンプじゃないのね。
+  - speaker: zundamon
+    emotion: happy
+    text: 相手は、つむぎだよ。
+  - speaker: tsumugi
+    emotion: surprised
+    text: 毎日ここで会ってるじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: 年が明けた朝に届くから、ありがたいんだって。
+  - speaker: tsumugi
+    emotion: happy
+    text: じゃあ、12月20日から27日の間に出してね。
+  - speaker: zundamon
+    emotion: happy
+    text: 待ちきれないから、19日に出すのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 年内に届くわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 郵便の赤字を埋める呼び水の役目もあった、年賀はがき。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年は誰に、何枚出すか。決めるのは、あなたよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
