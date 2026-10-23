@@ -45,11 +45,29 @@ if _lanobe:
     FONTS["pop"] = str(_lanobe[0])
 
 
+class _InkFont(ImageFont.FreeTypeFont):
+    """描く位置だけを上へずらすフォント（2026-10-23 ユーザー「サムネの文字ズレてない？」）。
+    各レイアウトの縦位置は「字の中心が描画位置から字の大きさの約0.6倍下」という前提で
+    組んである（見出し 1.16/2、札 1.22/2、吹き出し 0.62）。Noto Sans JP Black は字の上に
+    余白が大きく中心が約0.8倍下にあるので、全部の字が0.2倍ぶん下に沈み、見出しは黒帯から
+    はみ出し、札と下の帯は字が枠の下の線にかかっていた。測る側（getlength）はそのまま。"""
+    ink_dy = 0
+
+    def getmask2(self, text, mode="", *args, **kwargs):
+        im, (ox, oy) = super().getmask2(text, mode, *args, **kwargs)
+        return im, (ox, oy - self.ink_dy)
+
+
 def font(kind: str, size: int) -> ImageFont.FreeTypeFont:
     path = FONTS.get(kind) or FONTS["w9"]
     if not Path(path).exists():
         path = FONTS["w9"]
-    return ImageFont.truetype(path, size)
+    if path != FONTS["w9"]:
+        return ImageFont.truetype(path, size)
+    f = _InkFont(path, size)
+    top, bottom = f.getbbox("国")[1::2]
+    f.ink_dy = round((top + bottom) / 2 - size * 0.60)
+    return f
 
 
 def _cmap(path: str) -> set:
