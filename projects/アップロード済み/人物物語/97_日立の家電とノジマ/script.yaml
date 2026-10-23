@@ -1,0 +1,1433 @@
+meta:
+  title: 値段を取り戻そうとした日立、2年半後に「メーカーに忖度しない」ノジマへ家電事業を売る【ずんだもん解説】
+  slug: hitachi-kaden
+  hook_line: 値段を取り戻そうとした日立の家電は、なぜ“売る店”に買われることになったのか。
+  summary: 2026年4月、家電量販店のノジマが、日立の家電事業を受け継ぐ新会社の80.1％を約1100億円で買うと発表しました。その2年半前、日立は高い家電の値段を自分で決める「指定価格」を始めていました。値段を決めるのは、作った会社か、売る店か。町の「日立のお店」の2代目店主（架空）の目で、60年の売り場の移り変わりを追います。日立・ノジマ・報道、それぞれの言い分を並べた再現ドラマです。（2026年10月23日時点）
+  sources:
+  - 日立製作所・日立グローバルライフソリューションズ「日立の家電事業のさらなる成長に向け、ノジマと戦略的パートナーシップに基づく新会社を設立」（2026年4月21日） https://www.hitachi.com/ja-jp/press/articles/2026/04/0421b/
+  - 日立グローバルライフソリューションズ「日立ブランドの家電事業を担う新会社の商号を『KADENOVA(カデノヴァ)株式会社』に内定」（2026年10月22日） https://www.hitachi.com/ja-jp/press/articles/2026/10/1022/
+  - ノジマ「日立グローバルライフソリューションズ株式会社が設立する新会社（名称未定）の株式取得（子会社化）に関するお知らせ」（2026年4月21日） https://www.nojima.co.jp/wp-content/uploads/2026/04/adc9564a3c7e08ed4988c2e5661fc5f6.pdf
+  - 日立グローバルライフソリューションズ「『日立家電品正規取扱店』制度を開始」（2023年9月26日） https://www.hitachi.com/ja-jp/press/articles/2023/09/0926/
+  - 公正取引委員会「独占禁止法に関する相談事例集（令和元年度）」事例5 https://www.jftc.go.jp/dk/soudanjirei/r2/r1nendomokuji/r1nendo05.html
+  - 家電Watch「日立の家電、ノジマ傘下で新たなスタート『製造業の手本に』」（2026年4月23日） https://kaden.watch.impress.co.jp/docs/news/2103772.html
+  tags:
+  - 日立
+  - ノジマ
+  - 日立の家電
+  - 指定価格
+  - 家電量販店
+  - 日立のお店
+  - 日立チェーンストール
+  - KADENOVA
+  - 野島廣司
+  - 白物家電
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 値引きを止めた2年半後
+    bottom: 日立の家電とノジマ
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: nojima
+    label: 野島廣司
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#1a1a1a'
+  - id: amiya
+    label: 網谷憲晴
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: yamada
+    label: 山田三紀夫
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3a42'
+  - id: tsuzaka
+    label: 津坂明宏
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#3e5c4a'
+  - id: kawamura
+    label: 川村隆
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#30343c'
+  - id: kyaku
+    label: 常連さん
+    voice: 8
+    pitch: -0.08
+  - id: wakai
+    label: 若い客
+    voice: 21
+    pitch: -0.02
+  - id: okusan
+    label: 奥さん
+    voice: 8
+    pitch: 0.06
+    outfit: apron
+    color: '#c8a2a8'
+  - id: tenin
+    label: 店員
+    voice: 67
+    pitch: 0.0
+    outfit: apron
+    color: '#d9a400'
+  - id: chichi
+    label: 初代店主
+    voice: 42
+    pitch: 0.0
+    outfit: apron
+    color: '#6a5a3a'
+  - id: kaihatsu
+    label: 開発者
+    voice: 12
+    pitch: 0.03
+    outfit: labcoat
+  - id: bucho
+    label: 部長
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#3e4a5c'
+scenes:
+# ---- 先出し（2026年4月21日の会見） ----
+- id: co_kaiken
+  title: ''
+  background: hk_kaiken
+  bgm: serious
+  stage:
+  - {who: nojima, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年4月21日。家電量販店ノジマの社長、野島廣司が会見に立ちます。
+    reading: にせん にじゅうろくねん しがつ にじゅういちにち。かでん りょうはんてん のじまの しゃちょう のじま ひろしが かいけんに たちます。
+  - speaker: nojima
+    emotion: normal
+    text: 日立はすばらしい技術を持ち、すばらしい商品を作っている。
+  - speaker: nojima
+    emotion: normal
+    text: だが、社会に対する伝え方がうまくない。
+  - speaker: reimu
+    text: ノジマは、日立の家電を受け継ぐ新会社の80.1％を、約1100億円で買う予定です。
+    reading: のじまわ ひたちの かでんお うけつぐ しんがいしゃの はちじゅってんいち ぱーせんとお、やく せんひゃくおくえんで かう よていです。
+    telops:
+    - {text: "新会社の80.1％を約1100億円で", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 先出し（同じ日の、町の日立のお店） ----
+- id: co_omise
+  title: ''
+  background: hk_omise
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: 店主さん！ ノジマが日立の家電を買うって！
+  - speaker: zundamon
+    emotion: surprised
+    text: うちの看板、日立なんだけど！？
+    se: gaan
+  - speaker: reimu
+    text: ここは町の日立のお店。そしてノジマも、創業のころは日立の系列の店だったと報じられています。
+    reading: ここわ まちの ひたちの おみせ。そして のじまも そうぎょうの ころわ、ひたちの けいれつの みせだったと ほうじられて います。
+  - speaker: reimu
+    text: 家電を作る会社が、売る店に買われる。なぜでしょうか。
+    reading: かでんお つくる かいしゃが うる みせに かわれる。なぜでしょうか。
+# ---- 茶番（今の部屋） ----
+- id: hook
+  title: ''
+  background: hk_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 洗濯機は、1年待ってから買うのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: なんで1年？
+  - speaker: zundamon
+    emotion: happy
+    text: 3割安くなるから。待てる男なのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: その値下がりを止めて、自分で値段を決めようとしたのが日立よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 値段って、お店が決めるんじゃないの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう、決めてたのは店。その店に、日立の家電は買われることになったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: なんでそうなるのだ！？
+# ---- 仕組み1：量販店の売り場（2023年11月） ----
+- id: ch1_ryohan
+  title: 1年たてば3割引き
+  background: hk_ryohan
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 店主, emotion: thinking}
+  - {who: wakai, x: 0.56, emotion: normal}
+  - {who: tenin, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2023年11月。郊外の家電量販店です。
+    reading: にせん にじゅうさんねん じゅういちがつ。こうがいの かでん りょうはんてんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 敵情視察なのだ。日立のお店の店主だってことは、内緒。
+  - speaker: tenin
+    emotion: happy
+    text: こちら去年の型なら、3割引きです。
+  - speaker: wakai
+    emotion: surprised
+    text: 3割も！？
+  - speaker: tenin
+    emotion: normal
+    text: '[白物|しろもの]は発売から1年ほどで、3割から4割下がることもありますので。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 見渡すかぎり、値下げの[札|ふだ]なのだ……。
+    background: hk_ryohan_nesage
+  - speaker: wakai
+    emotion: normal
+    text: じゃあ、この新しいビッグドラムも……。
+  - speaker: tenin
+    emotion: normal
+    text: こちらの商品は、メーカーとの関係でお値引きができないんです。
+  - speaker: wakai
+    emotion: surprised
+    text: ……え？
+  - speaker: zundamon
+    emotion: surprised
+    text: 量販店でも、ほんとに値引きなし！？
+    se: bikkuri
+  - speaker: tenin
+    emotion: normal
+    text: 値段は、メーカーが決めておりますので。
+  - speaker: wakai
+    emotion: thinking
+    text: 37万円なら、今までは1年で22万円から26万円になってたのに……。
+    telops:
+    - {text: "今までなら　37万円→1年で22万〜26万円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 1年待てば、11万円から15万円も安かったのに……。
+    beat: true
+# ---- 仕組み2：系列店の店頭（同じ週） ----
+- id: ch1_omise
+  title: どこで買っても同じ値段
+  background: hk_omise
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: happy}
+  - {who: wakai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: wakai
+    emotion: normal
+    text: このビッグドラム、ここだといくらですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 量販店さんと、同じ値段です。
+  - speaker: wakai
+    emotion: surprised
+    text: 値段って、お店が決めるんじゃないんですか？
+  - speaker: zundamon
+    emotion: normal
+    text: この商品は、日立が決めてます。
+  - speaker: wakai
+    emotion: thinking
+    text: メーカーが決めて、いいんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 売れ残ったら、日立が引き取る約束なんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 在庫の損は日立がかぶるので、店は売るのを取り次ぐだけ。
+  - speaker: zundamon
+    emotion: normal
+    text: この形なら問題ないと、公正取引委員会も答えてます。
+  - speaker: wakai
+    emotion: thinking
+    text: 返品を全部引き受けるから、値段は決めさせて……ってことか。
+  - speaker: zundamon
+    emotion: happy
+    text: それが、指定価格です。
+  - speaker: wakai
+    emotion: normal
+    text: 指定価格……。初めて聞きました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……やっぱり、知られてないのだ。
+    se: shobon
+  - speaker: reimu
+    text: 1年半後、日経MJの調査では、1000人の84％がこの制度を知りませんでした。
+    reading: いちねんはんご、にっけい えむじぇいの ちょうさでわ せんにんの はちじゅうよん ぱーせんとが この せいどお しりませんでした。
+  - speaker: reimu
+    text: 大手量販7社のうち5社は改善すべき点があると答え、対象の拡大を望む会社はゼロでした。
+    reading: おおて りょうはん ななしゃの うち ごしゃわ かいぜん すべき てんが あると こたえ、たいしょうの かくだいお のぞむ かいしゃわ ぜろでした。
+  - speaker: reimu
+    text: 日経MJが伝えた量販側の声です。本音でいうと、非常に厳しい制度。
+    reading: にっけい えむじぇいが つたえた りょうはんがわの こえです。ほんねで いうと ひじょうに きびしい せいど。
+    telops:
+    - {text: "量販の声（日経MJ）　非常に厳しい制度", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: wakai
+    emotion: normal
+    text: じゃあ、ここで買う理由って？
+  - speaker: zundamon
+    emotion: happy
+    text: 設置に伺って、壊れたら直しに伺います。
+  - speaker: zundamon
+    emotion: happy
+    text: 値段で負けても、足で負けるな。父の口ぐせです。
+  - speaker: wakai
+    emotion: thinking
+    text: ……足？
+    beat: true
+# ---- 対立：量販店は嫌い、客は知らない ----
+- id: ch1_tairitsu
+  title: ''
+  background: hk_ryohan
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 値段を決めるのは、作った会社か、売る店か。日立は、その綱引きに出たのです。
+    reading: ねだんお きめるのわ つくった かいしゃか うる みせか。ひたちわ その つなひきに でたのです。
+  - speaker: reimu
+    text: このとき、まだ誰も、2年半後に日立の家電が量販店に買われることになるとは思っていません。
+    reading: この とき まだ だれも、にねんはんごに ひたちの かでんが りょうはんてんに かわれる ことに なるとわ おもって いません。
+# ---- 父の代：1959年 ----
+- id: card1959
+  title: ''
+  background: hk_card_1959
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1959年。神奈川県の相模原で、のちのノジマが生まれます。
+    reading: せんきゅうひゃく ごじゅうくねん。かながわけんの さがみはらで、のちの のじまが うまれます。
+  - speaker: reimu
+    text: カタログを持って家々を回る、訪問販売からの出発でした。
+    reading: かたろぐお もって いえいえお まわる、ほうもん はんばいからの しゅっぱつでした。
+  - speaker: reimu
+    text: 日立は1910年、5馬力のモーターから始まった会社。1950年代に洗濯機、掃除機、テレビを出します。
+    reading: ひたちわ せんきゅうひゃく じゅうねん、ごばりきの もーたーから はじまった かいしゃ。せんきゅうひゃく ごじゅうねんだいに せんたくき そうじき てれびお だします。
+  - speaker: reimu
+    text: その品を町で売る系列の電器屋が、日立のお店。この店も1960年代に、日立のお店として開きました。
+    reading: その しなお まちで うる けいれつの でんきやが ひたちの おみせ。この みせも せんきゅうひゃく ろくじゅうねんだいに、ひたちの おみせと して ひらきました。
+# ---- 父の代：茶の間の据え付け ----
+- id: ch2_chanoma
+  title: 日立のお店の仕事
+  background: hk_chanoma
+  bgm: you_and_me
+  stage:
+  - {who: chichi, x: 0.28, flip: true, emotion: happy}
+  - {who: okusan, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: chichi
+    emotion: happy
+    text: 毎度！ 日立のお店です。テレビの据え付けに伺いました。
+  - speaker: okusan
+    emotion: happy
+    text: まあ！ うちにも、とうとうテレビが！
+    se: jaan
+  - speaker: chichi
+    emotion: normal
+    text: アンテナは屋根に立てます。映らなきゃ、何度でも来ますんで。
+  - speaker: okusan
+    emotion: normal
+    text: ついでに洗濯機も見てくれる？ ガタガタいうのよ。
+  - speaker: chichi
+    emotion: happy
+    text: 見ときます。使い方も、もう一回お教えしますね。
+  - speaker: okusan
+    emotion: happy
+    text: 電器屋さんっていうより、うちの家電の係の人ね。
+  - speaker: chichi
+    emotion: happy
+    text: 選ぶのも据え付けも点検も、うちの仕事です。
+  - speaker: chichi
+    emotion: happy
+    text: 壊れたら、夜中でも呼んでください。
+  - speaker: okusan
+    emotion: thinking
+    text: 夜中は、寝かせてちょうだい。
+    beat: true
+  - speaker: reimu
+    text: 日立の説明でも、日立のお店はお得意さんの家を定期的に訪ね、家電の調子を聞いて回ります。
+    reading: ひたちの せつめいでも ひたちの おみせわ おとくいさんの いえお ていきてきに たずね、かでんの ちょうしお きいて まわります。
+  - speaker: reimu
+    text: 値段だけではない、この売り方。60年後、思わぬ人の口から語られることになります。
+    reading: ねだんだけでわ ない この うりかた。ろくじゅうねんご、おもわぬ ひとの くちから かたられる ことに なります。
+# ---- 1971年：希望小売価格 ----
+- id: ch2_kakaku
+  title: ''
+  background: hk_omise_soto
+  cuts:
+  - speaker: reimu
+    text: 1971年。値引きが当たり前になった希望小売価格に、公正取引委員会が線を引きます。
+    reading: せんきゅうひゃく ななじゅういちねん。ねびきが あたりまえに なった きぼう こうり かかくに、こうせい とりひき いいんかいが せんお ひきます。
+  - speaker: reimu
+    text: メーカーは希望の値段を下げるか、やめるかを迫られました。値段を決める力は、少しずつ店へ移っていきます。
+    reading: めーかーわ きぼうの ねだんお さげるか やめるかお せまられました。ねだんお きめる ちからわ、すこしずつ みせえ うつって いきます。
+# ---- 量販店の時代：1982年 ----
+- id: card1982
+  title: ''
+  background: hk_card_1982
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 1982年。全国の電気店は7万1283店で、いちばん多くなります。
+    reading: せんきゅうひゃく はちじゅうにねん。ぜんこくの でんきてんわ ななまん せん にひゃく はちじゅうさんてんで、いちばん おおく なります。
+  - speaker: reimu
+    text: 同じ年、ノジマは郊外型の、オーディオとビデオとコンピュータの専門店を開きました。
+    reading: おなじ とし のじまわ こうがいがたの、おーでぃおと びでおと こんぴゅーたの せんもんてんお ひらきました。
+- id: ch3_kougai
+  title: 国道ぞいの量販店
+  background: hk_omise
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 息子, emotion: normal}
+  - {who: chichi, x: 0.56, emotion: normal}
+  - {who: kyaku, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: kyaku
+    emotion: happy
+    text: 店主さん。国道ぞいに、大きな量販店がいくつもできたのよ。安いのなんのって。
+  - speaker: chichi
+    emotion: thinking
+    text: ……そうですか。
+  - speaker: kyaku
+    emotion: happy
+    text: ビデオ、向こうで買っちゃった。
+  - speaker: chichi
+    emotion: sad
+    text: ……そうですか。
+  - speaker: kyaku
+    emotion: normal
+    text: それでね、つなぎ方がわからないの。来てくれる？
+  - speaker: chichi
+    emotion: surprised
+    text: 買うのは向こうで、つなぐのはうちですか！？
+    se: zukko
+  - speaker: kyaku
+    emotion: happy
+    text: だって、呼んだらすぐ来てくれるじゃない。
+  - speaker: zundamon
+    emotion: angry
+    text: 父ちゃん、そんなの断るのだ！
+  - speaker: chichi
+    emotion: normal
+    text: ……すぐ、伺います。
+  - speaker: zundamon
+    emotion: surprised
+    text: 行くの！？
+    beat: true
+# ---- 父の口ぐせ ----
+- id: ch3_ashi
+  title: 値段で負けても
+  background: hk_omise
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 息子, emotion: angry}
+  - {who: chichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 父ちゃん。うちも量販店みたいに、値段を下げようよ。
+  - speaker: chichi
+    emotion: angry
+    text: 値段で勝とうと思うな。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ。
+  - speaker: chichi
+    emotion: normal
+    text: 向こうは、山ほどまとめて仕入れるんだ。値段じゃ勝てん。
+  - speaker: chichi
+    emotion: normal
+    text: 値段で負けても、足で負けるな。
+    telops:
+    - {text: "父　値段で負けても足で負けるな", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 足……？
+  - speaker: chichi
+    emotion: normal
+    text: 呼ばれたら、すぐ行く。直しに行ける店が、うちの売りだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……地味なのだ。
+  - speaker: chichi
+    emotion: happy
+    text: 地味で、結構。
+    beat: true
+  - speaker: reimu
+    text: 1990年代の半ば。この息子が、店を継ぎます。
+    reading: せんきゅうひゃく きゅうじゅうねんだいの なかば。この むすこが みせお つぎます。
+# ---- 1994年：YKK戦争 ----
+- id: ch3_ykk
+  title: 安売り合戦
+  background: hk_ryohan
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: thinking}
+  - {who: tenin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1994年の夏。北関東では、量販店どうしの安売り合戦が起きていました。
+    reading: せんきゅうひゃく きゅうじゅうよねんの なつ。きたかんとうでわ りょうはんてん どうしの やすうり がっせんが おきて いました。
+  - speaker: reimu
+    text: ヤマダ、コジマ、カトーデンキ。頭文字をとって、YKK戦争と呼ばれます。
+    reading: やまだ こじま かとーでんき。かしらもじお とって、わいけーけー せんそうと よばれます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 店を継いだからには、敵情視察なのだ。
+  - speaker: tenin
+    emotion: happy
+    text: 本日の目玉！ テレビ、さらにお値下げです！
+  - speaker: zundamon
+    emotion: surprised
+    text: また下がった！？
+    background: hk_ryohan_nesage
+    se: bikkuri
+  - speaker: tenin
+    emotion: happy
+    text: 昨日の値段は、もう忘れてください！
+  - speaker: zundamon
+    emotion: thinking
+    text: 昨日の値段が、もう昔の話……。
+    beat: true
+  - speaker: tenin
+    emotion: happy
+    text: お客さん、今日買わないと損ですよ！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……見に来ただけです。
+# ---- メーカーの販売員をやめた店 ----
+- id: ch3_haken
+  title: メーカーの販売員
+  background: hk_gendai
+  bgm: hirusagari
+  stage:
+  - {who: nojima, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 量販店の売り場には、メーカーから来た販売員も立っていました。
+    reading: りょうはんてんの うりばにわ、めーかーから きた はんばいいんも たって いました。
+  - speaker: reimu
+    text: ノジマは1990年代まで使っていましたが、それをやめます。野島はのちに、理由をこう語っています。
+    reading: のじまわ せんきゅうひゃく きゅうじゅうねんだい まで つかって いましたが、それお やめます。のじまわ のちに りゆうお こう かたって います。
+  - speaker: nojima
+    emotion: normal
+    text: メーカーの販売員は当然ながら、洗濯機が欲しいというお客さまに対して
+  - speaker: nojima
+    emotion: normal
+    text: 他社の商品よりも自社の商品を薦めます。
+# ---- 2000年代：商店街 ----
+- id: ch3_shutter
+  title: 減っていく町の電気店
+  background: hk_omise_soto
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2001年4月。ソニーと東芝は家電の全製品をオープン価格にし、値段は店頭で決まる時代になります。
+    reading: にせんいちねん しがつ。そにーと とうしばわ かでんの ぜんせいひんお おーぷん かかくに し、ねだんわ てんとうで きまる じだいに なります。
+  - speaker: kyaku
+    emotion: thinking
+    text: 量販店でもらったカタログ、値段が書いてないのね。
+  - speaker: zundamon
+    emotion: normal
+    text: オープン価格っていうんだ。値段は、お店が決めるの。
+  - speaker: kyaku
+    emotion: surprised
+    text: じゃあ、あんたが決めてるの？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……量販店さんを、横目で見ながらね。
+    beat: true
+  - speaker: kyaku
+    emotion: thinking
+    text: そういえば、お隣の電器屋さんも閉めちゃったのね。
+  - speaker: zundamon
+    emotion: sad
+    text: 継ぐ人が、いなかったんだって。
+    background: hk_omise_soto_shutter
+  - speaker: kyaku
+    emotion: sad
+    text: このへんも、さみしくなったわねえ。
+  - speaker: reimu
+    text: 全国の電気店は、2016年には1982年の半分ほどに減っていました。
+    reading: ぜんこくの でんきてんわ にせん じゅうろくねんにわ、せんきゅうひゃく はちじゅうにねんの はんぶん ほどに へって いました。
+  - speaker: kyaku
+    emotion: normal
+    text: でも、うちはずっとあんたに頼むからね。
+  - speaker: zundamon
+    emotion: happy
+    text: ありがと。足だけは、負けないよ。
+# ---- 2009年：赤字は悪 ----
+- id: card2009
+  title: ''
+  background: hk_card_2009
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2009年4月。日立の会長兼社長に就いた川村隆が、会見を開きます。
+    reading: にせんくねん しがつ。ひたちの かいちょう けん しゃちょうに ついた かわむら たかしが、かいけんお ひらきます。
+- id: ch4_kawamura
+  title: 赤字は悪
+  background: hk_kaiken
+  stage:
+  - {who: kawamura, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: テレビなどの事業は、どうされますか。
+  - speaker: kawamura
+    emotion: angry
+    text: 赤字は悪。
+    se: don
+    telops:
+    - {text: "川村　赤字は悪", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kawamura
+    emotion: normal
+    text: 抜本的な事業構造の改革を検討していく。
+  - speaker: kisha
+    emotion: thinking
+    text: 赤字は、悪……。
+    beat: true
+  - speaker: reimu
+    text: 3月までの1年、日立は7873億円の最終赤字でした。ただ本業の営業利益は、1271億円の黒字です。
+    reading: さんがつまでの いちねん、ひたちわ ななせん はっぴゃく ななじゅうさんおくえんの さいしゅう あかじでした。ただ ほんぎょうの えいぎょう りえきわ せん にひゃく ななじゅういちおくえんの くろじです。
+  - speaker: reimu
+    text: 赤字の大きさは、主に税金の費用によるもの。テレビなどの部門は、1055億円の営業赤字でした。
+    reading: あかじの おおきさわ おもに ぜいきんの ひように よる もの。てれびなどの ぶもんわ、せん ごじゅうごおくえんの えいぎょう あかじでした。
+  - speaker: reimu
+    text: 冷蔵庫や洗濯機の事業は、このときはまだ売りに出されていません。
+    reading: れいぞうこや せんたくきの じぎょうわ、この ときわ まだ うりに だされて いません。
+# ---- 2012年：Tポイント ----
+- id: ch4_tpoint
+  title: 日立のお店にTポイント
+  background: hk_omise
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2012年8月。日立は、テレビを自社の工場で作るのをやめます。
+    reading: にせん じゅうにねん はちがつ。ひたちわ てれびお じしゃの こうじょうで つくるのお やめます。
+  - speaker: kyaku
+    emotion: thinking
+    text: 店主さん。日立のテレビって、もう日立が作ってないの？
+  - speaker: zundamon
+    emotion: normal
+    text: よそで作ったのを、日立の名前で売るんだって。
+  - speaker: kyaku
+    emotion: thinking
+    text: 名前だけ、日立……。
+  - speaker: zundamon
+    emotion: happy
+    text: そのかわり10月から、うちでTポイントが貯まるよ！
+  - speaker: kyaku
+    emotion: surprised
+    text: ポイント？
+  - speaker: zundamon
+    emotion: happy
+    text: うちに来たことない人にも、来てもらうんだって。
+  - speaker: kyaku
+    emotion: happy
+    text: あたしはポイントより、あんたが直しに来てくれるほうがいいわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ……足で、[勝った|かった]のだ。
+    beat: true
+  - speaker: reimu
+    text: 2015年1月、日立のお店は全国に約4500店ありました。
+    reading: にせん じゅうごねん いちがつ、ひたちの おみせわ ぜんこくに やく よんせん ごひゃくてん ありました。
+# ---- 2018年：ソニーのテレビ ----
+- id: ch4_sony
+  title: 看板は日立、テレビはソニー
+  background: hk_omise
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2018年10月。全国約4000店の日立のお店で、ソニーのテレビを売り始めます。
+    reading: にせん じゅうはちねん じゅうがつ。ぜんこく やく よんせんてんの ひたちの おみせで、そにーの てれびお うりはじめます。
+  - speaker: kyaku
+    emotion: surprised
+    text: 日立のお店で、ソニーのテレビ！？
+  - speaker: zundamon
+    emotion: normal
+    text: 日立のテレビは、国内で売るのをやめたんだ。
+  - speaker: kyaku
+    emotion: thinking
+    text: 看板は日立で、テレビはソニー……。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちって、どこのお店なのだ……？
+    se: tenten
+  - speaker: reimu
+    text: 2021年7月には、海外の日立ブランドの家電が、トルコのアルチェリクが6割を持つ会社に移りました。
+    reading: にせん にじゅういちねん しちがつにわ、かいがいの ひたち ぶらんどの かでんが とるこの あるちぇりくが ろくわりお もつ かいしゃに うつりました。
+  - speaker: reimu
+    text: エアコンの白くまくんも、2015年からは米国の会社との合弁で作られていました。
+    reading: えあこんの しろくまくんも、にせん じゅうごねんからわ べいこくの かいしゃとの ごうべんで つくられて いました。
+  - speaker: reimu
+    text: テレビ、海外、エアコン。日立の家電は、ひとつずつ外の会社に任されていきます。
+    reading: てれび かいがい えあこん。ひたちの かでんわ、ひとつずつ そとの かいしゃに まかされて いきます。
+# ---- 2023年：指定価格 ----
+- id: card2023
+  title: ''
+  background: hk_card_2023
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2023年10月4日。あの売り場の1か月前、日立は指定価格の第1号を発表します。
+    reading: にせん にじゅうさんねん じゅうがつ よっか。あの うりばの いっかげつまえ、ひたちわ していかかくの だいいちごうお はっぴょう します。
+- id: ch5_happyou
+  title: 37万円の洗濯機
+  background: hk_happyou
+  stage:
+  - {who: tsuzaka, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ヒートポンプを新しく載せたドラム式。13キロで37万円前後です。
+    reading: ひーとぽんぷお あたらしく のせた どらむしき。じゅうさんきろで さんじゅうななまんえん ぜんごです。
+  - speaker: kisha
+    emotion: normal
+    text: なぜ、高い価格帯に力を入れるんですか。
+  - speaker: tsuzaka
+    emotion: normal
+    text: 限られた市場の中で生き残っていくには、
+  - speaker: tsuzaka
+    emotion: normal
+    text: メインゾーンと言われる高価格帯の商品作りを強化すること。
+  - speaker: tsuzaka
+    emotion: normal
+    text: 業界の中での立ち位置をしっかりと築いていきたい。
+  - speaker: kisha
+    emotion: thinking
+    text: 値引きなしで、37万円……。
+  - speaker: reimu
+    text: 売れ残った場合は、メーカー側が引き取ります。対象は、11月から売る白物家電の約1割にする方針でした。
+    reading: うれのこった ばあいわ めーかーがわが ひきとります。たいしょうわ、じゅういちがつから うる しろもの かでんの やく いちわりに する ほうしんでした。
+  - speaker: reimu
+    text: 量販店や日立のお店など約1万5500店が契約し、指定価格の新製品はそこだけで売られます。
+    reading: りょうはんてんや ひたちの おみせなど やく いちまん ごせん ごひゃくてんが けいやく し、していかかくの しんせいひんわ そこだけで うられます。
+# ---- 毎年の新製品のわけ ----
+- id: ch5_kaihatsu
+  title: 毎年の新製品のわけ
+  background: hk_omise
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: happy}
+  - {who: kaihatsu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kaihatsu
+    emotion: happy
+    text: 店主さん。新しいビッグドラムの説明に来ました。
+  - speaker: zundamon
+    emotion: happy
+    text: これが、どこで買っても同じ値段のやつか。
+  - speaker: kaihatsu
+    emotion: normal
+    text: はい。今までは出して1年で、値段がどんどん下がってたので。
+  - speaker: kaihatsu
+    emotion: normal
+    text: 値段を戻すために、毎年のように型番を変えた新製品を出してたんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 毎年新しいのが出てたの、そういうわけだったのだ！？
+    se: hirameki
+  - speaker: kaihatsu
+    emotion: normal
+    text: 値引きの元手になるお[金|かね]も、メーカーが量販店に払ってました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 自分でお[金|かね]を出して、自分の値段を下げてたのか……。
+  - speaker: kaihatsu
+    emotion: sad
+    text: せっかく作っても、1年で値下げの[札|ふだ]ですから。
+  - speaker: zundamon
+    emotion: normal
+    text: これからは、1年たっても値段はこのまま？
+  - speaker: kaihatsu
+    emotion: thinking
+    text: ……お客さんが、ついてきてくれれば。
+    beat: true
+  - speaker: reimu
+    text: 値段を決める仕組みは、パナソニックが先でした。2020年に試し、2022年から本格的に始めています。
+    reading: ねだんお きめる しくみわ ぱなそにっくが さきでした。にせん にじゅうねんに ためし、にせん にじゅうにねんから ほんかくてきに はじめて います。
+  - speaker: reimu
+    text: パナソニックは2024年、2年で約100億円の増益の効果があったと発表しました。
+    reading: ぱなそにっくわ にせん にじゅうよねん、にねんで やく ひゃくおくえんの ぞうえきの こうかが あったと はっぴょう しました。
+# ---- 2024年の暮れ：シェアが下がる ----
+- id: ch5_share
+  title: シェアが下がる
+  background: hk_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: kaihatsu, x: 0.28, flip: true, emotion: thinking}
+  - {who: bucho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年の暮れ。日立の家電会社の会議室です。数字は、年明けの日経の報道から。
+    reading: にせん にじゅうよねんの くれ。ひたちの かでんがいしゃの かいぎしつです。すうじわ、としあけの にっけいの ほうどうから。
+  - speaker: bucho
+    emotion: normal
+    text: ドラム式のシェアは、どうなった。
+  - speaker: kaihatsu
+    emotion: thinking
+    text: 制度を入れたころは、27％前後ありました。
+  - speaker: bucho
+    emotion: normal
+    text: で、今は。
+  - speaker: kaihatsu
+    emotion: sad
+    text: 3から4ポイント、下がっています。
+    background: hk_kaigi_akaji
+    se: chin
+    telops:
+    - {text: "日経　ドラム式のシェア3〜4ポイント低下", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: bucho
+    emotion: surprised
+    text: お客さんは、どこへ行った。
+  - speaker: kaihatsu
+    emotion: normal
+    text: 値引きのできる、他社の製品に流れました。
+  - speaker: bucho
+    emotion: thinking
+    text: ……値札が動かないと、そうなるか。
+  - speaker: kaihatsu
+    emotion: thinking
+    text: 安い機種のほうは、値崩れも止まりません。
+  - speaker: bucho
+    emotion: angry
+    text: 一番安い機種にも、指定価格を入れる。対象は、1割から2割に倍増だ。
+  - speaker: kaihatsu
+    emotion: surprised
+    text: 一番安いのまで！？
+  - speaker: reimu
+    text: 日経によると、日立の家電会社の幹部はこう話しています。
+    reading: にっけいに よると、ひたちの かでんがいしゃの かんぶわ こう はなして います。
+  - speaker: reimu
+    text: これまでは中下位機種の値崩れはある一線を超えると損失が出てしまうが、我々は制御できていなかった。
+    reading: これまでわ ちゅうかい きしゅの ねくずれわ ある いっせんお こえると そんしつが でて しまうが、われわれわ せいぎょ できて いなかった。
+# ---- 2025年7月：1年で3〜4割 ----
+- id: ch5_yamada
+  title: 発売から1年で3〜4割
+  background: hk_kojo
+  bgm: hirusagari
+  stage:
+  - {who: yamada, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年7月。日立の家電会社で事業を率いる山田三紀夫が、取材に答えます。
+    reading: にせん にじゅうごねん しちがつ。ひたちの かでんがいしゃで じぎょうお ひきいる やまだ みきおが、しゅざいに こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: 指定価格を入れたのは、なぜですか。
+  - speaker: yamada
+    emotion: normal
+    text: 指定価格導入前は、高付加価値商品にも関わらず
+  - speaker: yamada
+    emotion: normal
+    text: 発売から1年ほどで[3～4割|サンワリカラヨンワリ]も価格が下がることも珍しくありませんでした。
+  - speaker: yamada
+    emotion: thinking
+    text: 自分たちが開発に携わった製品が、短期間で値下げされるのを目にするのは
+  - speaker: yamada
+    emotion: thinking
+    text: 従業員のモチベーションにプラスにならないのではと感じていました。
+  - speaker: kisha
+    emotion: thinking
+    text: 作る側の、気持ちの問題でもあったんですね。
+  - speaker: reimu
+    text: 8月。白くまくんの会社はドイツのボッシュに移り、エアコンを作るのはボッシュになります。
+    reading: はちがつ。しろくまくんの かいしゃわ どいつの ぼっしゅに うつり、えあこんお つくるのわ ぼっしゅに なります。
+  - speaker: reimu
+    text: 野島によれば、日立とノジマの話は、この2025年の夏ごろに始まっています。
+    reading: のじまに よれば ひたちと のじまの はなしわ、この にせん にじゅうごねんの なつごろに はじまって います。
+# ---- 2026年：売却の発表 ----
+- id: card2026
+  title: ''
+  background: hk_card_2026
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2026年4月21日。日立とノジマが、家電の新会社を発表します。
+    reading: にせん にじゅうろくねん しがつ にじゅういちにち。ひたちと のじまが、かでんの しんがいしゃお はっぴょう します。
+- id: ch6_amiya
+  title: 前向きな決断
+  background: hk_kaiken
+  stage:
+  - {who: amiya, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 夕方5時。都内の会見に、野島社長と日立の執行役専務が並びます。
+    reading: ゆうがた ごじ。とないの かいけんに、のじま しゃちょうと ひたちの しっこうやく せんむが ならびます。
+  - speaker: kisha
+    emotion: normal
+    text: 日立はなぜ、家電の事業を売るんですか。
+  - speaker: amiya
+    emotion: normal
+    text: 変化の激しい家電事業を、中長期的に成長させるための前向きな決断である。
+  - speaker: reimu
+    text: 日立は新会社の19.9％を残し、日立の名前も貸し続ける予定です。業務用の空調は日立に残ります。
+    reading: ひたちわ しんがいしゃの じゅうきゅうてんきゅう ぱーせんとお のこし、ひたちの なまえも かしつづける よていです。ぎょうむようの くうちょうわ ひたちに のこります。
+  - speaker: reimu
+    text: 6日後、日立の德永俊昭社長は、ポートフォリオ改革を加速するなかでの提携だと説明しました。
+    reading: むいかご、ひたちの とくなが としあき しゃちょうわ ぽーとふぉりお かいかくお かそく する なかでの ていけいだと せつめい しました。
+- id: ch6_nojima
+  title: メーカーに忖度しない
+  background: hk_kaiken
+  stage:
+  - {who: nojima, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: ノジマの強みは、どこですか。
+  - speaker: nojima
+    emotion: normal
+    text: ノジマの最大の特徴は、メーカーに忖度しないという点である。
+    se: don
+    telops:
+    - {text: "野島　メーカーに忖度しない", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: nojima
+    emotion: normal
+    text: お客様の要望にあわせて販売する企業であり、押しつけた販売はしない。
+  - speaker: kisha
+    emotion: normal
+    text: 日立の社員の[方|かた]は、どうなりますか。
+  - speaker: nojima
+    emotion: normal
+    text: '[新会社|しんがいしゃ]では、雇用は維持する。'
+  - speaker: nojima
+    emotion: normal
+    text: ノジマは、買収したすべての企業でリストラは一度も行なっていない。
+  - speaker: kisha
+    emotion: normal
+    text: 日立のお店は、どうなりますか。
+  - speaker: nojima
+    emotion: normal
+    text: 日立チェーンストールは、一生懸命努力している[方|かた]が多い。
+  - speaker: nojima
+    emotion: normal
+    text: 価格だけではない売り方をしており、
+  - speaker: nojima
+    emotion: normal
+    text: 高齢化社会においては、重要な役割を担うことになると思っている。
+  - speaker: reimu
+    text: 家電Watchは、地域家電販売店が家電メーカーを買収する、いわば下克上ともいえる状況だと書きました。
+    reading: かでん うぉっちわ ちいき かでん はんばいてんが かでん めーかーお ばいしゅう する、いわば げこくじょうとも いえる じょうきょうだと かきました。
+# ---- それぞれの言い分（2026年の夏） ----
+- id: ch6_omise
+  title: それぞれの言い分
+  background: hk_omise
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その年の夏。町の日立のお店にも、記者が話を聞きに来ます。
+    reading: その としの なつ。まちの ひたちの おみせにも、きしゃが はなしお ききに きます。
+  - speaker: kisha
+    emotion: normal
+    text: 日立のお店の店主さんに、話を聞いて回ってるんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: う、うちに取材ですか。
+  - speaker: kisha
+    emotion: normal
+    text: ライバルの量販店にとっては、パートナーだった日立が競合に変わります。
+  - speaker: kisha
+    emotion: normal
+    text: 日経の見出しです。ライバル店の本音、商品は良いのに残念。
+  - speaker: zundamon
+    emotion: thinking
+    text: 量販店の売り場が、小さくなるかもしれないのか……。
+  - speaker: kisha
+    emotion: normal
+    text: 日立は、事業の組み替えの一つだと説明しています。家電は黒字なんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 黒字なのに、売るんですか！？
+    se: gaan
+  - speaker: kisha
+    emotion: normal
+    text: 日立は、利益率が10％に届かない事業を立て直しの対象にしてきました。
+  - speaker: kisha
+    emotion: normal
+    text: 家電は2024年度で10.7％。それでも、売ると決めたんです。
+  - speaker: kisha
+    emotion: normal
+    text: 売上で見れば、日立の家電会社は日立全体の約3％ですが。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3％……。日立から見ると、小さいのか。
+  - speaker: kisha
+    emotion: normal
+    text: 6月の株主総会では、日立のブランドを心配する質問が相次ぎました。
+  - speaker: kisha
+    emotion: normal
+    text: 幹部の答えはこうです。当社は適切なブランド管理を行い、価値の維持に努める。
+  - speaker: kisha
+    emotion: thinking
+    text: 一方で日経は、[白物|しろもの]家電の最後の賭けは不発と書きました。
+    telops:
+    - {text: "日経の見出し　最後の賭け不発", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: 価格主導権を小売りから取り返そうと試みた、と。
+  - speaker: zundamon
+    emotion: thinking
+    text: 値段を取り戻そうとして、売る店に……。
+  - speaker: kisha
+    emotion: normal
+    text: ノジマの社長は、決め手は日本国内の工場だったと話しています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 作る会社と売る店が、ひとつになるのか……。
+  - speaker: kisha
+    emotion: normal
+    text: 店主さんは、どう受け止めていますか。
+  - speaker: zundamon
+    emotion: normal
+    text: うちは、呼ばれたら行くだけです。
+# ---- 野島の言葉（5月・8月） ----
+- id: ch6_nojima2
+  title: えこひいきはしない
+  background: hk_gendai
+  stage:
+  - {who: nojima, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 野島は5月の日経の取材に、こう話していました。
+    reading: のじまわ ごがつの にっけいの しゅざいに、こう はなして いました。
+  - speaker: nojima
+    emotion: normal
+    text: 開発・製造と販売は一体でないとイノベーションは生まれない。
+  - speaker: reimu
+    text: 8月にはテレビの番組で、ノジマの売り場での日立の扱いを聞かれます。
+    reading: はちがつにわ てれびの ばんぐみで、のじまの うりばでの ひたちの あつかいお きかれます。
+  - speaker: kisha
+    emotion: normal
+    text: 日立の品を、売り場で特別に扱いますか。
+  - speaker: nojima
+    emotion: normal
+    text: 日立だからといってえこひいきはしない。
+  - speaker: kisha
+    emotion: normal
+    text: メーカーから販売員を送ってもらわない、今のやり方は。
+  - speaker: nojima
+    emotion: normal
+    text: この姿勢は一切変わらない。
+  - speaker: reimu
+    text: 80.1％を売り、19.9％を残す。2016年に東芝が白物家電を売ったときと、同じ比率です。
+    reading: はちじゅってんいち ぱーせんとお うり、じゅうきゅうてんきゅう ぱーせんとお のこす。にせん じゅうろくねんに とうしばが しろもの かでんお うった ときと おなじ ひりつです。
+  - speaker: reimu
+    text: 違うのは買い手。東芝は中国の家電大手、日立は国内の量販店です。
+    reading: ちがうのわ かいて。とうしばわ ちゅうごくの かでん おおて、ひたちわ こくないの りょうはんてんです。
+# ---- 論争：量販店がメーカーを潰した？ ----
+- id: ch7_ronso
+  title: 量販店がメーカーを潰した？
+  background: hk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: つむぎ、ネットで見たのだ！ 量販店が、日本の家電メーカーを潰したって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える事実は、たしかにあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 量販店はたくさん仕入れて、売れ行きを見て値下げしてきた。
+  - speaker: tsumugi
+    emotion: normal
+    text: メーカーは毎年の新製品と、値引きの元手になるお[金|かね]で支えてたの。
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1990年には、仕入れ値の1割から2割がメーカーから戻ると報じられたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 指定価格も、大手量販の7社のうち5社が改善すべき点があると答えてる。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、量販店が悪者なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、潰したとまでは言えないの。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: なんで！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 日立は指定価格で、値段を決める力を取りにいったでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも日経によると、お客さんは値引きのできる他社の製品に流れたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日経の見出しも、消費者なびかず。
+  - speaker: zundamon
+    emotion: thinking
+    text: 量販店じゃなくて、お客さんが選ばなかった……？
+  - speaker: tsumugi
+    emotion: normal
+    text: それに家電は黒字で、日立は事業の組み替えとして売ると説明してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: そもそもヤマダもノジマも、メーカーの系列の店から始まったとされるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 量販店の元は、町の電器屋さん！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 一橋大学の鈴木教授は、こう言ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 価格の主導権がメーカーと量販店のどちらにあるかは、消費者には関係ありません。
+  - speaker: tsumugi
+    emotion: normal
+    text: その商品に価格以上の価値を感じるか。ただ、それだけです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決めてたのは、ボクたちの財布……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 値段を決める力は店に移って、日立はそれを取り戻そうとした。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもお客さんは、ついてこなかった。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして今、店がメーカーを持つ形になろうとしてるの。
+- id: ch7_chugoku
+  title: 中国に負けたのか
+  background: hk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、中国に負けたって話は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 三洋と東芝の[白物|しろもの]は中国の会社へ。シャープは台湾の[鴻海|ほんはい]の傘下よ。
+  - speaker: zundamon
+    emotion: sad
+    text: やっぱり、負けてるのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも業界団体の数字だと、国内の[白物|しろもの]家電の出荷額は2025年に過去2番目よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日立の家電を買うのも、日本の量販店。
+  - speaker: zundamon
+    emotion: thinking
+    text: 負けたっていうより……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 作る会社の持ち主が、入れ替わってきたのね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの財布の持ち主は、ずっとボクなのだ！
+  - speaker: tsumugi
+    emotion: angry
+    text: 中身が入ってればね。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: それより本当の注意点は、あなたが買うときにあるの。
+# ---- 本当の注意点 ----
+- id: ch7_chui
+  title: 指定価格の家電を買うとき
+  background: hk_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 買うとき？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つ目。指定価格の品は、[正規取扱店|セイキトリアツカイテン]ならどこで買っても同じ値段。
+  - speaker: tsumugi
+    emotion: normal
+    text: 値引きの交渉は、通らないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: お店を回って値切るのは、むだなのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つ目。型落ちを待つ作戦は、読みにくいの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい型が出て一定の期間がたつと、値引きできる形に戻るんだけど
+  - speaker: tsumugi
+    emotion: thinking
+    text: それがいつかは、メーカーしだいなの。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの、1年待つ作戦が……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つ目。比べるのは値段じゃなくて、設置と修理と保証よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 足で選ぶ、か。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4つ目。今持ってる日立の家電の修理は、新しい会社が担う予定。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 保証や修理の細かい手続きは、10月23日の時点ではまだ発表されてないわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 白くまくんのエアコンは？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[白くまくん|シロクマクン]は2025年8月から、ドイツのボッシュが作ってるの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 売る窓口とサービスの窓口が、新しい会社に移る予定よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後に。指定価格の[札|ふだ]を見て気になったら、本当にメーカーの指定か店に聞いてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 他社の小さな家電にまで、指定価格の[札|ふだ]が付いてたと日経が報じたこともあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: '[札|ふだ]を見たら、まず聞く。覚えたのだ。'
+# ---- 現代：KADENOVA ----
+- id: ch8_gendai
+  title: KADENOVA（内定）
+  background: hk_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: yamada, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月22日。新会社の名前が、KADENOVAに内定します。家電と、新しい星のNOVAです。
+    reading: じゅうがつ にじゅうににち。しんがいしゃの なまえが かでのばに ないてい します。かでんと、あたらしい ほしの のばです。
+  - speaker: reimu
+    text: 代表に内定したのは山田三紀夫。日立で冷蔵庫の設計を手がけ、栃木の工場長も務めた人です。
+    reading: だいひょうに ないてい したのわ やまだ みきお。ひたちで れいぞうこの せっけいお てがけ、とちぎの こうじょうちょうも つとめた ひとです。
+  - speaker: reimu
+    text: 指定価格の狙いについて、山田は2025年の取材でこうも話していました。
+    reading: していかかくの ねらいに ついて、やまだわ にせん にじゅうごねんの しゅざいで こうも はなして いました。
+  - speaker: yamada
+    emotion: normal
+    text: 自分の買った製品が、別の店舗でもっと安く販売されていたら
+  - speaker: yamada
+    emotion: normal
+    text: お客さまは安心して買いにくいでしょう。
+  - speaker: yamada
+    emotion: normal
+    text: 店舗ごとの価格差をなくし、どこでも同じ適正な価格で購入できることが
+  - speaker: yamada
+    emotion: happy
+    text: お客さまの安心感につながると考えました。
+  - speaker: reimu
+    text: 株の譲渡は、競争法などの許認可を得たあと。2027年3月までに事業を始めることをめざしています。
+    reading: かぶの じょうとわ きょうそうほう などの きょにんかお えた あと。にせん にじゅうななねん さんがつまでに じぎょうお はじめる ことお めざして います。
+  - speaker: reimu
+    text: 指定価格を続けるかどうかは、2026年10月23日の時点で、まだ発表されていません。
+    reading: していかかくお つづけるか どうかわ、にせん にじゅうろくねん じゅうがつ にじゅうさんにちの じてんで まだ はっぴょう されて いません。
+- id: ch8_tana
+  title: 日立のお店の棚
+  background: hk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい会社は日立の名前で家電を作って、修理まで担う予定よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 名前は日立で、持ち主はノジマになるのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい会社のトップについて、ノジマの社長は会見でこう話してたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 買収した企業のプロパーの人に社長になってもらうのが、ノジマのポリシーである。
+  - speaker: zundamon
+    emotion: surprised
+    text: 言葉どおり、冷蔵庫を設計してた日立の人が代表に内定！
+    se: levelup
+  - speaker: tsumugi
+    emotion: normal
+    text: テレビも、ソニーは中国のTCLが51％を持つ会社に移す予定。2027年4月からよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 日立のお店の棚は、[白物|しろもの]がノジマ系でテレビはTCL系！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: どちらも、まだ予定だけどね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 量販店の側でも、ヤマダとエディオンが経営統合で基本合意したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 合わせた売上は、約2.5兆円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 店のほうは、どんどん大きくなるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 日立のお店から始まったと報じられる会社が、
+  - speaker: tsumugi
+    emotion: normal
+    text: 日立ブランドの家電を作る会社を、持とうとしてるのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今度は日立のお店が、ノジマ系の会社から品を仕入れることになるのか……。
+# ---- 締め：系列店の店先 ----
+- id: shime_mise
+  title: ''
+  background: hk_omise_soto
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店主, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: 店主さん。新しい会社の名前、決まったんだって？
+  - speaker: zundamon
+    emotion: happy
+    text: まだ内定だけどね。[KADENOVA|カデノヴァ]。
+  - speaker: kyaku
+    emotion: thinking
+    text: カデ……ノバ？ 舌をかみそう。
+    beat: true
+  - speaker: kyaku
+    emotion: normal
+    text: うちの日立の冷蔵庫、壊れたらどうなるの？
+  - speaker: zundamon
+    emotion: normal
+    text: まずは、うちが見に行くよ。メーカーの修理は、新しい会社が引き継ぐ予定。
+  - speaker: zundamon
+    emotion: thinking
+    text: 細かい手続きは、10月23日の時点ではまだこれからだって。
+  - speaker: zundamon
+    emotion: normal
+    text: それにノジマの社長さんが、日立のお店のことをこう言ってたよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 価格だけではない売り方をしており、って。
+    telops:
+    - {text: "野島　価格だけではない売り方", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kyaku
+    emotion: happy
+    text: あら。あんたのことじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: 父ちゃんの口ぐせなのだ。値段で負けても、足で負けるな。
+  - speaker: kyaku
+    emotion: normal
+    text: じゃあ、その足で来てくれる？ 洗濯機が、また止まっちゃって。
+  - speaker: zundamon
+    emotion: happy
+    text: 今から行くよ！
+  - speaker: kyaku
+    emotion: normal
+    text: ついでに新しいのに替えたら、値引きしてくれる？
+  - speaker: zundamon
+    emotion: thinking
+    text: こちらの商品は、メーカーとの関係でお値引きができないんです。
+  - speaker: kyaku
+    emotion: surprised
+    text: 量販店と、同じこと言うのね。
+  - speaker: zundamon
+    emotion: happy
+    text: そのかわり、今日伺えます。
+    se: oti
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: hk_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ。洗濯機、1年待つのはやめたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: あら、どうして？
+  - speaker: zundamon
+    emotion: happy
+    text: 近くの電器屋さんで、設置と修理込みで決めるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 値段じゃなくて、お店で選ぶのね。
+  - speaker: zundamon
+    emotion: happy
+    text: もちろん、値引きもお願いしてみる！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 指定価格の品なら、通らないわよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 値段を決めるのは、作った会社か売る店か。
+  - speaker: tsumugi
+    emotion: happy
+    text: でもどの店で買うかを決めるのは、あなたね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

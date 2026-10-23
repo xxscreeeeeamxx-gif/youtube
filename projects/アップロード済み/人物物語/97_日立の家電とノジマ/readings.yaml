@@ -1,0 +1,27 @@
+# hitachi-kaden 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 店主・息子 / label: 野島廣司・網谷憲晴・山田三紀夫・津坂明宏・川村隆 など）とテロップは表示専用なのでタグを付けていない。
+# 網谷憲晴・津坂明宏・豊島久則・長谷川雅彦・鈴木智子は読みが未確認のため、声に出す行では名前を言わない（名札だけ。鈴木は姓だけ）。
+# 一橋大学はタグなしで ヒトツバシダイガク と読める（タグを付けると ヒトツバシダイ/ガク と切れたので付けない）。
+# 鴻海はタグなしだと オオトリウミ と読まれるのでタグ必須。勝った は単独だと マサッタ（readings_common に既出）。
+# 人名
+- {surface: 野島廣司, reading: のじまひろし}
+- {surface: 野島, reading: のじま}
+- {surface: 廣司, reading: ひろし}
+- {surface: 山田三紀夫, reading: やまだみきお}
+- {surface: 三紀夫, reading: みきお}
+- {surface: 川村隆, reading: かわむらたかし}
+- {surface: 德永俊昭, reading: とくながとしあき}
+- {surface: 德永, reading: とくなが}
+# 社名・地名・商品名
+- {surface: 相模原, reading: さがみはら}
+- {surface: KADENOVA, reading: かでのゔぁ}
+- {surface: アルチェリク, reading: あるちぇりく}
+- {surface: 鴻海, reading: ほんはい}
+- {surface: 家電Watch, reading: かでんうぉっち}
+# 制度・業界の言葉
+- {surface: 正規取扱店, reading: せいきとりあつかいてん}
+- {surface: 白物, reading: しろもの}   # 単独だと VOICEVOX が シロブツ と読む（白物家電 は正しい）。セリフは全出現にタグ
+- {surface: 中下位機種, reading: ちゅうかいきしゅ}
+- {surface: 下克上, reading: げこくじょう}
