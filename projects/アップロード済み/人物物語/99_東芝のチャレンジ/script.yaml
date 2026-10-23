@@ -1,0 +1,1392 @@
+meta:
+  title: 東芝が社内で「チャレンジ」と呼んだ利益目標、その先で74年の上場に幕【ずんだもん解説】
+  slug: toshiba-delisting
+  hook_line: 日本の電機の名門・東芝は、なぜ74年の上場をやめるまでになったのか。
+  summary: 2015年7月、東芝の家電の設計の部屋に、第三者委員会の報告書のコピーが届きます。社内で「チャレンジ」と呼ばれた利益目標とは、何だったのか。家電の売却、海外の原発、株主との対立を経て、名門は2023年に上場をやめます。1991年入社の冷蔵庫の技術者（架空の人物）の目で、報告書の認定と裁判所の判断、会社と株主と国の言い分を並べて、再現ドラマでたどります。（2026年10月時点）
+  sources:
+  - 東芝「第三者委員会 調査報告書（全文）」（2015年7月21日） https://www.global.toshiba/content/dam/toshiba/migration/corp/irAssets/about/ir/jp/news/20150721_1.pdf
+  - 金融庁「株式会社東芝に係る有価証券報告書等の虚偽記載に対する課徴金納付命令の決定について」（2015年12月25日） https://www.fsa.go.jp/news/27/syouken/20151225-2.html
+  - 東芝「当社海外連結子会社ウェスチングハウス社等の再生手続の申立について」（2017年3月29日） https://www.global.toshiba/content/dam/toshiba/migration/corp/irAssets/about/ir/jp/news/20170329_1.pdf
+  - 東芝「調査報告書（第181期定時株主総会の運営）」（2021年6月10日） https://www.global.toshiba/content/dam/toshiba/migration/corp/irAssets/about/ir/jp/stock/pdf/tsm182_4.pdf
+  - 東芝「TBJHによる公開買付けの結果」（2023年9月21日） https://www.global.toshiba/content/dam/toshiba/jp/ir/corporate/news/20230921_1.pdf
+  - 時事通信「東芝側の逆転敗訴が確定 不正会計、旧経営陣の責任認めず―最高裁」（2026年10月15日） https://www.jiji.com/jc/article?k=2026101500951&g=soc
+  tags:
+  - 東芝
+  - 不正会計
+  - 第三者委員会
+  - チャレンジ
+  - 上場廃止
+  - ウェスチングハウス
+  - キオクシア
+  - 美的集団
+  - 島田太郎
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 社内の「チャレンジ」
+    bottom: 74年の上場に幕
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: senpai
+    label: 経理の先輩
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: doryo
+    label: 同僚
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: shacho
+    label: 社長
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2a32'
+  - id: shacho08
+    label: 社長
+    voice: 13
+    pitch: -0.10
+    outfit: suit
+    color: '#3a2a24'
+  - id: cp
+    label: 部門の社長
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: tanaka
+    label: 田中社長
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#3a4a5a'
+  - id: tsunakawa
+    label: 綱川社長
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#4a3a2f'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: kabunushi
+    label: 株主
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4a3a'
+  - id: shimada
+    label: 島田社長
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: ikeya
+    label: 池谷副社長
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#4a4a52'
+  - id: kyaku
+    label: お客さん
+    voice: 8
+    pitch: 0.04
+    outfit: none
+scenes:
+# ---- 先出し（2023年12月19日・最後の売買日） ----
+- id: co_owarine
+  title: ''
+  background: tb_shoken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2023年12月19日。東芝の株が売り買いされる、最後の日です。
+    reading: にせん にじゅうさんねん じゅうにがつ じゅうくにち。とうしばの かぶが うりかい される、さいごの ひです。
+  - speaker: doryo
+    emotion: thinking
+    text: '[終値|おわりね]は4590円だってさ。明日で上場廃止だ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ……74年も、上場してたんだよな。
+  - speaker: doryo
+    emotion: normal
+    text: お前の冷蔵庫には、まだ東芝って書いてあるのにな。
+  - speaker: zundamon
+    emotion: sad
+    text: 作ってる会社は、もう[美的集団|びてきしゅうだん]のグループだけどね。
+  - speaker: reimu
+    text: 経営破綻ではありません。TOB、株の公開買い付けによる非公開化です。
+    reading: けいえい はたんでわ ありません。てぃーおーびー、かぶの こうかい かいつけに よる ひこうかいかです。
+    telops:
+    - {text: "終値4590円　74年の上場に幕", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 日本の電機の名門は、なぜ上場をやめるまでになったのでしょう。
+    reading: にほんの でんきの めいもんわ、なぜ じょうじょうお やめる までに なったのでしょう。
+# ---- 今の部屋（東芝の冷蔵庫） ----
+- id: hook
+  title: ''
+  background: tb_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 東芝の冷蔵庫を買ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: その冷蔵庫の会社は、2016年から中国の[美的集団|びてきしゅうだん]のグループよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ！？ 東芝が作ってるんじゃないのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 東芝は家電を売って、株の上場もやめたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 名門の東芝が、なんでそこまで……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、社内でチャレンジと呼ばれた数字なの。
+# ---- 2015年7月21日・報告書が出た日 ----
+- id: card2015
+  title: ''
+  background: tb_card_2015
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2015年7月21日。東芝の、家電の設計の部屋です。
+    reading: にせん じゅうごねん しちがつ にじゅういちにち。とうしばの かでんの せっけいの へやです。
+  - speaker: reimu
+    text: 冷蔵庫を設計しているのは、1991年に入社した技術者です。
+    reading: れいぞうこお せっけい して いるのわ、せんきゅうひゃく きゅうじゅういちねんに にゅうしゃ した ぎじゅつしゃです。
+- id: ch1_challenge
+  title: チャレンジという言葉
+  background: tb_sekkei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: senpai
+    emotion: thinking
+    text: 第三者委員会の報告書だ。全文で303ページある。
+  - speaker: zundamon
+    emotion: surprised
+    text: 303ページ！？ 冷蔵庫の説明書より分厚いですね。
+  - speaker: senpai
+    emotion: angry
+    text: 比べるな。読め。
+    beat: true
+  - speaker: senpai
+    emotion: normal
+    text: 委員会が調べた7年分で、利益の修正は1518億円だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: せ、1518億円！？ うちの会社で、何が起きてたんです……。
+  - speaker: senpai
+    emotion: normal
+    text: カギは、この言葉だ。チャレンジ。
+  - speaker: zundamon
+    emotion: happy
+    text: いい言葉じゃないですか。ボクのチャレンジは、冷蔵庫の省エネです。
+  - speaker: senpai
+    emotion: thinking
+    text: そのチャレンジとは、違う。
+    se: hammer
+  - speaker: senpai
+    emotion: normal
+    text: 社長に各部門が数字を報告する、社長月例って会議がある。
+  - speaker: senpai
+    emotion: normal
+    text: そこで社長が示す収益改善の目標を、社内でチャレンジと呼んでた。
+  - speaker: senpai
+    emotion: normal
+    text: 報告書によると、四半期末が近づいてもう届かない時期にも示された。
+  - speaker: senpai
+    emotion: thinking
+    text: しかも会社の実力以上に、かさ上げした数字でな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 届かないのに、どうやって合わせるんです？
+  - speaker: senpai
+    emotion: normal
+    text: 報告書の言葉だと、来期の利益の先取りと今期の費用の先送りだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 先に取って、後に回す。じゃあ来期は？
+  - speaker: senpai
+    emotion: normal
+    text: 穴から始まる。そこへ、また大きなチャレンジが来る。
+  - speaker: zundamon
+    emotion: surprised
+    text: 雪だるまじゃないですか！
+  - speaker: senpai
+    emotion: normal
+    text: 報告書も、その繰り返しで規模が広がったと認定してる。
+  - speaker: senpai
+    emotion: normal
+    text: 一番分かりやすいのが、2012年9月のパソコンだ。
+# ---- 報告書の再現：2012年9月の社長月例 ----
+- id: ch1_getsurei
+  title: 残り3日で120億円
+  background: tb_getsurei
+  bgm: serious
+  stage:
+  - {who: cp, x: 0.28, flip: true, emotion: thinking}
+  - {who: shacho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ここからは、報告書に残る2012年9月の社長月例です。
+    reading: ここからわ ほうこくしょに のこる にせん じゅうにねん くがつの しゃちょう げつれいです。
+  - speaker: cp
+    emotion: thinking
+    text: '[上期|かみき]の見込みは、マイナス201億円。80億円の改善にチャレンジします。'
+  - speaker: shacho
+    emotion: angry
+    text: 全くダメ。やり直し。
+    se: don
+    telops:
+    - {text: "報告書の記録　社長「全くダメ。やり直し。」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 27日、見込みはさらに悪化。報告書によると、社長は残り3日での120億円の利益改善を強く求めました。
+    reading: にじゅうしちにち、みこみわ さらに あっか。ほうこくしょに よると しゃちょうわ のこり みっかでの ひゃくにじゅうおくえんの りえき かいぜんお つよく もとめました。
+    background: tb_getsurei_akaji
+    telops:
+    - {text: "残り3日で120億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 翌28日、部門は119億円の損益対策を報告し、社長らは実施を認めました。
+    reading: よく にじゅうはちにち、ぶもんわ ひゃくじゅうきゅうおくえんの そんえき たいさくお ほうこく し しゃちょうらわ じっしお みとめました。
+# ---- 設計の部屋：売上より多い利益 ----
+- id: ch1_bunshi
+  title: 売上より多い利益
+  background: tb_sekkei
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: surprised}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 3日で120億円！？ [1日|いちにち]40億円じゃないですか！
+  - speaker: senpai
+    emotion: normal
+    text: 報告書の別紙だと、その月のパソコンは売上624億円。営業利益は651億円だ。
+    telops:
+    - {text: "2012年9月のパソコン　売上624億円・営業利益651億円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: ……売上より、もうけのほうが多い？
+  - speaker: senpai
+    emotion: normal
+    text: '[1億分の1|イチオクブンノイチ]にすると、624円売った店が651円もうけたことになる。'
+  - speaker: zundamon
+    emotion: angry
+    text: 仕入れがタダでも、ムリですよ！
+    se: tsukkomi
+  - speaker: senpai
+    emotion: thinking
+    text: 翌月の10月は、マイナス573億円だ。
+  - speaker: zundamon
+    emotion: sad
+    text: しぼんだ……。
+  - speaker: senpai
+    emotion: normal
+    text: 報告書は、月別の損益だけでも異常さは[一見|いっけん]して明白だったと書いてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、どうやったら売上を超えるんです？
+  - speaker: senpai
+    emotion: normal
+    text: パソコンは、台湾の会社に組み立てを任せてる。
+  - speaker: senpai
+    emotion: normal
+    text: 東芝が部品をまとめて買って、その会社に買った値段より高く渡す。
+  - speaker: zundamon
+    emotion: surprised
+    text: 高く？ なんでわざわざ。
+  - speaker: senpai
+    emotion: normal
+    text: 仕入れ値を、よその会社に知られないためだそうだ。
+  - speaker: senpai
+    emotion: normal
+    text: 組み上がったパソコンは、東芝が買い取る。これが[Buy-Sell|バイセル]取引だ。
+  - speaker: senpai
+    emotion: thinking
+    text: 報告書が問題にしたのは、四半期末に必要以上の部品を押し込んだことだ。
+  - speaker: senpai
+    emotion: thinking
+    text: 高く渡した差額で、その期の利益をかさ上げした。そう認定してる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 押し込んだ[分|ぶん]、翌月にしぼむのか。
+  - speaker: reimu
+    text: このバイセルを、のちの裁判所は報告書とは違う目で見ることになります。
+    reading: この ばいせるお のちの さいばんしょわ、ほうこくしょとわ ちがう めで みる ことに なります。
+# ---- 請求書を来期へ・工事・風土 ----
+- id: ch1_co
+  title: 請求書を来期へ
+  background: tb_sekkei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: うちの家電は、関係ないですよね？
+  - speaker: senpai
+    emotion: thinking
+    text: 報告書によると、テレビでは広告や物流の請求書を次の四半期へ遅らせてもらってた。
+  - speaker: senpai
+    emotion: normal
+    text: 社内の呼び名は、キャリーオーバーだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今月のカード払いを、来月の分にする家計簿みたいな……。
+  - speaker: senpai
+    emotion: normal
+    text: 払う額は同じなのに、今月だけ黒字に見えるやつだ。
+  - speaker: senpai
+    emotion: normal
+    text: インフラの工事では、受注のときに80億円ほどの損失が見込まれた案件がある。
+  - speaker: senpai
+    emotion: thinking
+    text: それでも、損失の引当金を積まなかった。報告書の認定だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 分かってた損を、後回し……。
+  - speaker: senpai
+    emotion: thinking
+    text: 上司の意向に逆らうことができない企業風土があった、と報告書は書いてる。
+  - speaker: zundamon
+    emotion: sad
+    text: ……逆らえない、か。
+    beat: true
+  - speaker: reimu
+    text: 部品と請求書と工事。数字の合わせ方は、この会社をどこへ連れていくのでしょう。
+    reading: ぶひんと せいきゅうしょと こうじ。すうじの あわせかたわ、この かいしゃお どこえ つれて いくのでしょう。
+# ---- 何でも作る名門（短く） ----
+- id: ch1_meimon
+  title: 何でも作る名門
+  background: tb_sekkei
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: sad}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: うちは、[からくり儀右衛門|カラクリギエモン]が銀座に作った工場から始まった会社なのに。
+  - speaker: senpai
+    emotion: normal
+    text: 日本で最初の炭素電球を作った、[白熱舎|はくねつしゃ]もご先祖だな。
+  - speaker: zundamon
+    emotion: normal
+    text: 電球から原子力まで、何でも作る名門です。
+    se: jaan
+  - speaker: reimu
+    text: 何でも作る会社。その何でもを、この会社は次々に手放していくことになります。
+    reading: なんでも つくる かいしゃ。その なんでもお この かいしゃわ、つぎつぎに てばなして いく ことに なります。
+  - speaker: senpai
+    emotion: normal
+    text: 原子力といえば、2006年に54億ドルで買ったアメリカの会社もある。
+  - speaker: zundamon
+    emotion: normal
+    text: ウェスチングハウスですね。原子力の事業が、2015年までに約3倍になる見込みって。
+  - speaker: senpai
+    emotion: thinking
+    text: 買ったのは、パソコン出身の[西田|ニシダ]さんが社長のときだ。
+  - speaker: reimu
+    text: 54億ドルは、当時のレートで約6210億円。このウェスチングハウスが、2017年に東芝の底を抜きます。
+    reading: ごじゅうよんおくどるわ とうじの れーとで やく ろくせん にひゃく じゅうおくえん。この うぇすちんぐはうすが にせん じゅうななねんに とうしばの そこお ぬきます。
+  - speaker: senpai
+    emotion: normal
+    text: その[西田|ニシダ]さんが社長だったころの社長月例も、報告書に出てくる。
+# ---- 報告書の再現：2008年12月の社長月例 ----
+- id: ch1_2008
+  title: 2008年の社長月例
+  background: tb_getsurei
+  bgm: serious
+  stage:
+  - {who: cp, x: 0.28, flip: true, emotion: thinking}
+  - {who: shacho08, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 報告書に残る、2008年12月の社長月例。リーマン・ショックの後です。
+    reading: ほうこくしょに のこる にせん はちねん じゅうにがつの しゃちょう げつれい。りーまん しょっくの あとです。
+  - speaker: cp
+    emotion: thinking
+    text: 第3四半期の営業利益は、マイナス184億円の見込みです。
+  - speaker: shacho08
+    emotion: angry
+    text: こんな数字はずかしくて、公表できない。
+  - speaker: reimu
+    text: 報告書によると、この期も部品の押し込みが行われ、12月だけで営業利益207億円。
+    reading: ほうこくしょに よると この きも ぶひんの おしこみが おこなわれ、じゅうにがつ だけで えいぎょう りえき にひゃく ななおくえん。
+  - speaker: reimu
+    text: 翌1月は、マイナス192億円でした。
+    reading: よく いちがつわ まいなす ひゃく きゅうじゅうにおくえんでした。
+    background: tb_getsurei_akaji
+  - speaker: reimu
+    text: 2008年の社長は、西田厚聰です。
+    reading: にせん はちねんの しゃちょうわ、にしだ あつとしです。
+- id: ch1_2008_kakikata
+  title: ''
+  background: tb_sekkei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、[西田|ニシダ]さんが押し込みを……？
+  - speaker: senpai
+    emotion: thinking
+    text: 報告書の認定だ。高いチャレンジで、押し込みせざるを得ない状況に追い込まれていた。
+  - speaker: senpai
+    emotion: normal
+    text: ただ[西田|ニシダ]さんがかさ上げを認識し許容していたと、認めるまでには至らなかった。
+  - speaker: senpai
+    emotion: thinking
+    text: そのうえで、それを是正しなかった疑いは残るとも書いてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 書き方が、細かいですね。
+    beat: true
+  - speaker: senpai
+    emotion: angry
+    text: その細かさを、読み飛ばすな。
+  - speaker: reimu
+    text: のちに裁判所は、西田の賠償責任を認めませんでした。
+    reading: のちに さいばんしょわ、にしだの ばいしょう せきにんお みとめませんでした。
+# ---- 2015年7月21日・辞任会見 ----
+- id: ch2_kaiken
+  title: 歴代3社長の退任
+  background: tb_kaiken
+  stage:
+  - {who: tanaka, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 報告書の全文が出た日の、夕方5時。社長の田中久雄が会見に立ちます。
+    reading: ほうこくしょの ぜんぶんが でた ひの ゆうがた ごじ。しゃちょうの たなか ひさおが かいけんに たちます。
+  - speaker: tanaka
+    emotion: thinking
+    text: 第三者委員会の報告書を厳粛に受け止め、ステークホルダーに心よりおわびを申し上げる。
+  - speaker: kisha
+    emotion: normal
+    text: 不適切な会計に、社長の指示はあったんですか。
+  - speaker: tanaka
+    emotion: normal
+    text: 直接的な指示をした覚えはない。
+  - speaker: tanaka
+    emotion: thinking
+    text: 重大な責任は私をはじめとする経営陣にあり、……経営責任を明らかにする。
+  - speaker: tanaka
+    emotion: thinking
+    text: 適正かつ厳正な会計処理が前提で、今回はそのあたりがずれていた。
+  - speaker: kisha
+    emotion: thinking
+    text: ずれていた……。
+    beat: true
+  - speaker: reimu
+    text: 田中は社長を辞任。前の社長の佐々木則夫は副会長を、その前の西田厚聰は相談役を退きました。
+    reading: たなかわ しゃちょうお じにん。まえの しゃちょうの ささき のりおわ ふくかいちょうお、その まえの にしだ あつとしわ そうだんやくお しりぞきました。
+  - speaker: reimu
+    text: このとき、まだ誰も、この会社が8年後に上場をやめるとは思っていません。
+    reading: この とき まだ だれも、この かいしゃが はちねんごに じょうじょうお やめるとわ おもって いません。
+- id: ch2_terebi
+  title: ''
+  background: tb_sekkei
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doryo
+    emotion: thinking
+    text: 社長が辞めて、オレたちの冷蔵庫はどうなるんだろうな。
+  - speaker: zundamon
+    emotion: normal
+    text: 冷蔵庫は、今日もちゃんと冷えてるよ。ボクのチャレンジも順調だし。
+  - speaker: doryo
+    emotion: thinking
+    text: そのチャレンジって言葉、しばらく社内じゃ使いにくいぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……たしかに。
+    beat: true
+  - speaker: doryo
+    emotion: sad
+    text: 明日から、取引先にどんな顔で会えばいいんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: いつもの顔でいいよ。冷蔵庫に罪はない。
+# ---- 訂正と課徴金、刑事 ----
+- id: ch3_kachokin
+  title: 700億円と31億円
+  background: tb_sekkei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 9月、東芝は7年分の決算を訂正しました。修正の合計は2248億円です。
+    reading: くがつ、とうしばわ ななねんぶんの けっさんお ていせい しました。しゅうせいの ごうけいわ にせん にひゃく よんじゅうはちおくえんです。
+  - speaker: reimu
+    text: 12月25日。金融庁は、課徴金73億7350万円の納付を命じます。当時の過去最高額でした。
+    reading: じゅうにがつ にじゅうごにち。きんゆうちょうわ かちょうきん ななじゅうさんおく ななせん さんびゃく ごじゅうまんえんの のうふお めいじます。とうじの かこ さいこうがくでした。
+    telops:
+    - {text: "課徴金73億7350万円", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: senpai
+    emotion: thinking
+    text: 東芝は、事実と額を認める答弁書を出した。
+  - speaker: zundamon
+    emotion: thinking
+    text: 認めたんですね。
+  - speaker: senpai
+    emotion: normal
+    text: 2012年3月期の有価証券報告書は、純利益を約700億円と書いた。
+  - speaker: senpai
+    emotion: thinking
+    text: 実際は、約31億円だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 31億円が、700億円に……！？
+    se: gaan
+  - speaker: senpai
+    emotion: normal
+    text: 会社は11月に、元社長3人を含む旧経営陣5人を訴えてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分の会社の元社長を、訴える……。
+  - speaker: senpai
+    emotion: thinking
+    text: 役員の責任を調べた委員会の、報告を受けてな。
+  - speaker: reimu
+    text: 一方で、刑事の責任は誰も問われませんでした。
+    reading: いっぽうで けいじの せきにんわ だれも とわれませんでした。
+  - speaker: reimu
+    text: 翌年7月、東京地検は監視委に事件化は困難との見方を伝えた、と日経は報じました。
+    reading: よくねん しちがつ、とうきょう ちけんわ かんしいに じけんかわ こんなんとの みかたお つたえたと にっけいわ ほうじました。
+  - speaker: reimu
+    text: 証券取引等監視委員会は、旧経営陣の刑事告発を断念します。
+    reading: しょうけん とりひきとう かんし いいんかいわ、きゅう けいえいじんの けいじ こくはつお だんねん します。
+# ---- 2016年・家電の売却 ----
+- id: card2016
+  title: ''
+  background: tb_card_2016
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2016年3月30日。東芝は、白物家電の会社の株の80.1％を中国の美的集団に売ると発表します。
+    reading: にせん じゅうろくねん さんがつ さんじゅうにち。とうしばわ しろもの かでんの かいしゃの かぶの はちじゅってんいち ぱーせんとお、ちゅうごくの びてき しゅうだんに うると はっぴょう します。
+  - speaker: reimu
+    text: 同じ月、医療機器の子会社をキヤノンに約6655億円で売ることも決まっていました。
+    reading: おなじ つき、いりょう ききの こがいしゃお きやのんに やく ろくせん ろっぴゃく ごじゅうごおくえんで うる ことも きまって いました。
+- id: ch4_baikyaku
+  title: 部署ごと美的集団へ
+  background: tb_sekkei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: sad}
+  - {who: doryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doryo
+    emotion: thinking
+    text: 冷蔵庫も洗濯機も、部署ごと[美的集団|びてきしゅうだん]のグループに行くってさ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクらの冷蔵庫、どうなるんだ……。
+  - speaker: doryo
+    emotion: normal
+    text: 東芝のブランドは、40年使えるって報道だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 40年……。名前は、残るのか。
+  - speaker: doryo
+    emotion: thinking
+    text: 去年の暮れは、家電の部門などで約6800人の再配置や早期退職って報道もあったしな。
+  - speaker: zundamon
+    emotion: sad
+    text: 隣の机、だいぶ空いたもんな。
+  - speaker: doryo
+    emotion: normal
+    text: オレは、再配置でインフラの部署に移る。
+  - speaker: zundamon
+    emotion: surprised
+    text: え、お前は東芝に残るのか。
+  - speaker: doryo
+    emotion: happy
+    text: 同じ1991年入社でも、夏からは別々の会社だな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 入社式で隣に座ってたのにな。
+  - speaker: doryo
+    emotion: happy
+    text: お前、式の途中で寝てただろ。
+  - speaker: zundamon
+    emotion: angry
+    text: 寝てない。目を閉じて、冷蔵庫の構造を考えてたんだ。
+  - speaker: doryo
+    emotion: thinking
+    text: それを寝てたって言うんだよ。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……冷蔵庫の東芝のマーク、ボクが守るよ。
+    se: namida
+  - speaker: reimu
+    text: 6月30日。冷蔵庫の設計の部屋は、部署ごと美的集団のグループに移りました。
+    reading: ろくがつ さんじゅうにち。れいぞうこの せっけいの へやわ、ぶしょごと びてき しゅうだんの ぐるーぷに うつりました。
+# ---- 2017年・原発で底が抜ける ----
+- id: card2017
+  title: ''
+  background: tb_card_2017
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2017年2月14日。東芝は、四半期報告書の提出期限の当日に延長を申請します。
+    reading: にせん じゅうななねん にがつ じゅうよっか。とうしばわ しはんき ほうこくしょの ていしゅつ きげんの とうじつに えんちょうお しんせい します。
+- id: ch5_denwa
+  title: 決算が出ない日
+  background: tb_sekkei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doryo
+    emotion: thinking
+    text: もしもし。ニュース見たか。原子力の事業で、7125億円の[減損|げんそん]の見通しだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 7125億円！？ なんで原子力で、そんなに。
+  - speaker: doryo
+    emotion: normal
+    text: ウェスチングハウスが買ったアメリカの建設会社で、費用の見積もりが膨らんだ。
+  - speaker: doryo
+    emotion: normal
+    text: アメリカで建ててる原発4基の建設費が、61億ドル増える見積もりだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 家を建てる途中で、工事代がどんどん膨らむみたいな……。
+  - speaker: doryo
+    emotion: thinking
+    text: しかも東芝は親会社として、その工事を保証してた。
+  - speaker: zundamon
+    emotion: sad
+    text: 保証人のハンコか……。
+    se: shobon
+  - speaker: doryo
+    emotion: thinking
+    text: 会長も、明日付けで辞めるそうだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちはもう東芝じゃないのに、胃が痛いよ。
+  - speaker: reimu
+    text: 延長の理由は内部通報。ウェスチングハウスの経営者の、不適切なプレッシャーを懸念するものでした。
+    reading: えんちょうの りゆうわ ないぶ つうほう。うぇすちんぐはうすの けいえいしゃの ふてきせつな ぷれっしゃーお けねん する ものでした。
+  - speaker: reimu
+    text: 2015年の報告書とは別の件です。今度はアメリカの子会社で、プレッシャーという言葉が出てきました。
+    reading: にせん じゅうごねんの ほうこくしょとわ べつの けんです。こんどわ あめりかの こがいしゃで ぷれっしゃーと いう ことばが でて きました。
+- id: ch5_wh
+  title: 米連邦破産法11条
+  background: tb_genpatsu
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 3月29日。ウェスチングハウスは、米連邦破産法11条の再生手続をニューヨークで申請します。
+    reading: さんがつ にじゅうくにち。うぇすちんぐはうすわ べい れんぽう はさんほう じゅういちじょうの さいせい てつづきお にゅーよーくで しんせい します。
+  - speaker: reimu
+    text: 負債は98億1100万ドル。東芝の連結からは外れました。
+    reading: ふさいわ きゅうじゅうはちおく せんひゃくまんどる。とうしばの れんけつからわ はずれました。
+  - speaker: reimu
+    text: 社長の綱川智が、会見に立ちます。
+    reading: しゃちょうの つなかわ さとしが かいけんに たちます。
+- id: ch5_kaiken
+  title: ''
+  background: tb_kaiken
+  stage:
+  - {who: tsunakawa, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長、今のお気持ちは。
+  - speaker: tsunakawa
+    emotion: thinking
+    text: 経営トップとして責任を重く感じている。
+  - speaker: kisha
+    emotion: normal
+    text: これで、海外の原子力のリスクは切れるんですか。
+  - speaker: tsunakawa
+    emotion: normal
+    text: これはほぼ撤退と言えると思います。
+    telops:
+    - {text: "綱川社長「これはほぼ撤退と言えると思います」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: ほぼ、撤退……。
+    beat: true
+- id: ch5_akaji
+  title: 最終赤字9656億円
+  background: tb_kaigi
+  cuts:
+  - speaker: reimu
+    text: 8月1日。東芝の株は、東証1部から2部へ移されます。
+    reading: はちがつ ついたち。とうしばの かぶわ、とうしょう いちぶから にぶえ うつされます。
+  - speaker: reimu
+    text: 8月10日の決算。最終赤字は9656億円で、当時は国内の製造業で過去最大と報じられました。
+    reading: はちがつ とおかの けっさん。さいしゅう あかじわ きゅうせん ろっぴゃく ごじゅうろくおくえんで、とうじわ こくないの せいぞうぎょうで かこ さいだいと ほうじられました。
+    background: tb_kaigi_akaji
+    telops:
+    - {text: "最終赤字9656億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 株主資本はマイナス5529億円。約5500億円の債務超過です。
+    reading: かぶぬし しほんわ まいなす ごせん ごひゃく にじゅうきゅうおくえん。やく ごせん ごひゃくおくえんの さいむ ちょうかです。
+- id: ch5_zoshi
+  title: 6000億円と2兆円
+  background: tb_sekkei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doryo
+    emotion: thinking
+    text: 2部に落ちて、債務超過だ。このままだと上場廃止の瀬戸際だよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: どうやって埋めるんだよ。5500億円も。
+  - speaker: doryo
+    emotion: normal
+    text: 9月に、メモリの事業を約2兆円で売ると決めた。
+  - speaker: zundamon
+    emotion: surprised
+    text: メモリまで！？ 収益の柱じゃないか！
+    se: bikkuri
+  - speaker: doryo
+    emotion: normal
+    text: それに今月、海外の投資ファンドを中心に6000億円の増資だ。
+  - speaker: doryo
+    emotion: thinking
+    text: 外国の株主の割合は、約38％から約72％になる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社の持ち主の顔ぶれが、ガラッと変わるのか。
+  - speaker: doryo
+    emotion: thinking
+    text: 上場を守るためだ。背に腹は代えられないってことさ。
+  - speaker: reimu
+    text: 増資は12月に払い込まれます。目的は、債務超過の解消と上場廃止の回避でした。
+    reading: ぞうしわ じゅうにがつに はらいこまれます。もくてきわ さいむ ちょうかの かいしょうと じょうじょう はいしの かいひでした。
+  - speaker: reimu
+    text: メモリ事業の売却は、翌年6月に完了。今のキオクシアです。
+    reading: めもり じぎょうの ばいきゃくわ よくねん ろくがつに かんりょう。いまの きおくしあです。
+  - speaker: reimu
+    text: テレビはハイセンスへ、パソコンはシャープへ。日曜夜のサザエさんの提供も、2018年3月で降りました。
+    reading: てれびわ はいせんすえ、ぱそこんわ しゃーぷえ。にちよう よるの さざえさんの ていきょうも にせん じゅうはちねん さんがつで おりました。
+  - speaker: reimu
+    text: この増資で大株主になったファンドと、東芝はやがてぶつかります。
+    reading: この ぞうしで おおかぶぬしに なった ふぁんどと、とうしばわ やがて ぶつかります。
+# ---- 株主と経産省（2020〜2022） ----
+- id: card2020
+  title: ''
+  background: tb_card_2020
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2020年7月の株主総会。大株主のファンド、エフィッシモが出した取締役の提案は否決されました。
+    reading: にせん にじゅうねん しちがつの かぶぬし そうかい。おおかぶぬしの ふぁんど えふぃっしもが だした とりしまりやくの ていあんわ ひけつ されました。
+  - speaker: reimu
+    text: 翌年、株主総会で選ばれた弁護士3人が、この総会を調べた報告書を出します。
+    reading: よくねん、かぶぬし そうかいで えらばれた べんごし さんにんが この そうかいお しらべた ほうこくしょお だします。
+- id: ch6_kabunushi
+  title: 経産省といわば一体
+  background: tb_kabunushi
+  stage:
+  - {who: kabunushi, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 2021年6月の調査報告書です。結論を、読み上げます。
+  - speaker: kisha
+    emotion: normal
+    text: 東芝は本定時株主総会について、[経産省|ケイサンショウ]といわば一体となり……。
+  - speaker: kisha
+    emotion: normal
+    text: エフィッシモの株主提案権の行使を妨げようと画策し……。
+  - speaker: kisha
+    emotion: thinking
+    text: よって、本定時株主総会が公正に運営されたものとはいえないと思料する。
+    telops:
+    - {text: "調査報告書「公正に運営されたものとはいえない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kabunushi
+    emotion: surprised
+    text: 総会が、公正とはいえないってことか！
+  - speaker: reimu
+    text: 当時の経産大臣は、報告書の事実関係に疑問がある、と反論しました。
+    reading: とうじの けいさん だいじんわ、ほうこくしょの じじつ かんけいに ぎもんが あると はんろん しました。
+  - speaker: reimu
+    text: 経産省の対応は、政策として当然だという立場です。
+    reading: けいさんしょうの たいおうわ、せいさくと して とうぜんだと いう たちばです。
+  - speaker: kabunushi
+    emotion: thinking
+    text: 調べた側と国の側で、言い分が真っ向から違うのか。
+  - speaker: reimu
+    text: 6月の総会では、取締役会の議長の再任が否決。社長も4月に替わっていました。
+    reading: ろくがつの そうかいでわ とりしまりやくかいの ぎちょうの さいにんが ひけつ。しゃちょうも しがつに かわって いました。
+  - speaker: reimu
+    text: 翌2022年3月には、会社を2つに分ける案も株主総会で否決されます。
+    reading: よく にせん にじゅうにねん さんがつにわ、かいしゃお ふたつに わける あんも かぶぬし そうかいで ひけつ されます。
+  - speaker: kabunushi
+    emotion: sad
+    text: 分けるのも、だめ。何を決めても、割れる会社になっちまった。
+    se: chin
+# ---- 2023年・上場をやめる ----
+- id: card2023
+  title: ''
+  background: tb_card_2023
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2023年3月。東芝は、国内のファンドの日本産業パートナーズの陣営による、買収の提案に賛同します。
+    reading: にせん にじゅうさんねん さんがつ。とうしばわ こくないの ふぁんどの にほん さんぎょう ぱーとなーずの じんえいに よる ばいしゅうの ていあんに さんどう します。
+  - speaker: reimu
+    text: 1株4620円、総額約2兆円。すべての株を買い集めて、上場をやめる提案です。
+    reading: ひとかぶ よんせん ろっぴゃく にじゅうえん、そうがく やく にちょうえん。すべての かぶお かいあつめて じょうじょうお やめる ていあんです。
+- id: ch7_soukai
+  title: 上場をやめる総会
+  background: tb_kabunushi
+  stage:
+  - {who: shimada, x: 0.28, flip: true, emotion: normal}
+  - {who: kabunushi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 買い付けには、株の78.65％が応じました。11月22日、上場をやめるための臨時株主総会です。
+    reading: かいつけにわ かぶの ななじゅうはってん ろくご ぱーせんとが おうじました。じゅういちがつ にじゅうににち、じょうじょうお やめる ための りんじ かぶぬし そうかいです。
+  - speaker: shimada
+    emotion: normal
+    text: 我々が最も大事にするのは技術。
+  - speaker: shimada
+    emotion: normal
+    text: 東芝は世界があっと驚く技術で世の中を席巻してきた。
+  - speaker: shimada
+    emotion: happy
+    text: 安定した株主体制を持つことで、革新的な技術を世界に再び輝かせたい。
+  - speaker: kabunushi
+    emotion: thinking
+    text: 企業規模は、昔の半分になった。
+  - speaker: kabunushi
+    emotion: sad
+    text: 総合電機メーカーとしての将来は期待できない。
+  - speaker: reimu
+    text: 株式の併合は可決。12月19日が、最後の売り買いの日になりました。
+    reading: かぶしきの へいごうわ かけつ。じゅうにがつ じゅうくにちが さいごの うりかいの ひに なりました。
+- id: ch7_owarine
+  title: 最後の終値
+  background: tb_shoken
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doryo
+    emotion: thinking
+    text: '[終値|おわりね]は4590円だってさ。明日で上場廃止だ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ……74年も、上場してたんだよな。
+  - speaker: doryo
+    emotion: normal
+    text: お前の冷蔵庫には、まだ東芝って書いてあるのにな。
+  - speaker: zundamon
+    emotion: sad
+    text: 作ってる会社は、もう[美的集団|びてきしゅうだん]のグループだけどね。
+  - speaker: doryo
+    emotion: normal
+    text: こっちはまだ東芝だ。株を買える人は、いなくなるけどな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 株主がいなくなって、会社はどうなるんだ。
+  - speaker: doryo
+    emotion: normal
+    text: 新しい持ち主の連合が、全部の株を持つ。社長は総会で、最も大事にするのは技術だって。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……お前の技術は、大丈夫か？
+  - speaker: doryo
+    emotion: angry
+    text: 聞くなよ。
+    se: manuke
+  - speaker: reimu
+    text: 翌20日。74年の上場の歴史に、幕が下りました。
+    reading: よく はつか。ななじゅうよねんの じょうじょうの れきしに、まくが おりました。
+# ---- 2024年・100年後に残すため ----
+- id: card2024
+  title: ''
+  background: tb_card_2024
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2024年5月16日。東芝は、最大4000人を減らす計画と、本社の川崎への移転を発表します。
+    reading: にせん にじゅうよねん ごがつ じゅうろくにち。とうしばわ さいだい よんせんにんお へらす けいかくと ほんしゃの かわさきえの いてんお はっぴょう します。
+- id: ch8_100nen
+  title: 100年後に残すため
+  background: tb_kaiken
+  stage:
+  - {who: shimada, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 最大4000人の削減です。社長として、どう考えていますか。
+  - speaker: shimada
+    emotion: thinking
+    text: 会社を100年後に残すためにどうしても必要なもの。
+  - speaker: shimada
+    emotion: thinking
+    text: 苦渋の決断であり、私は従業員を大切に思っている。
+  - speaker: kisha
+    emotion: thinking
+    text: 業績の不振について、社長の責任は。
+  - speaker: shimada
+    emotion: normal
+    text: 社長である以上は結果責任をとらなければならない。
+  - speaker: kisha
+    emotion: thinking
+    text: 結果責任、ですか……。
+    beat: true
+- id: ch8_soki
+  title: ''
+  background: tb_sekkei
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doryo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doryo
+    emotion: thinking
+    text: 早期退職の募集、オレも対象だってさ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……どうするんだ。
+  - speaker: doryo
+    emotion: thinking
+    text: まだ決めてない。お前は、どうなんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクは、まだ冷蔵庫を作ってるよ。東芝のマークのな。
+  - speaker: doryo
+    emotion: happy
+    text: 会社ごと売られたお前が残って、残ったオレが出ていくかもしれない。皮肉だな。
+  - speaker: zundamon
+    emotion: sad
+    text: 同じ1991年入社なのにな。
+  - speaker: doryo
+    emotion: happy
+    text: 入社式で寝てたやつのほうが、しぶといもんだ。
+  - speaker: zundamon
+    emotion: angry
+    text: だから、寝てないって。
+    beat: true
+  - speaker: reimu
+    text: 11月末。早期退職と再配置の対象は約3500人。早期退職は3000人を超えました。
+    reading: じゅういちがつまつ。そうき たいしょくと さいはいちの たいしょうわ やく さんぜん ごひゃくにん。そうき たいしょくわ さんぜんにんお こえました。
+# ---- 2026年・純利益4兆円の中身 ----
+- id: card2026
+  title: ''
+  background: tb_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年8月7日。上場をやめた東芝が、4月から6月の決算を発表します。
+    reading: にせん にじゅうろくねん はちがつ なのか。じょうじょうお やめた とうしばが、しがつから ろくがつの けっさんお はっぴょう します。
+- id: ch9_kessan
+  title: 純利益4兆円の中身
+  background: tb_kaigi
+  stage:
+  - {who: ikeya, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 純利益が4兆4673億円。去年の同じ時期の30倍ですか！？
+    se: levelup
+  - speaker: kisha
+    emotion: normal
+    text: 3月までの1年も、1兆9673億円で過去最高でしたね。
+  - speaker: kisha
+    emotion: normal
+    text: 本業のほうの手応えは、どうですか。
+  - speaker: ikeya
+    emotion: happy
+    text: 目標を上回る利益水準が見えてきた。
+  - speaker: ikeya
+    emotion: normal
+    text: エネルギーやインフラを中心に成長投資を加速させる。
+  - speaker: reimu
+    text: 本業の営業利益は1119億円。営業利益率は約12％で、どちらも過去最高です。
+    reading: ほんぎょうの えいぎょう りえきわ せん ひゃく じゅうきゅうおくえん。えいぎょう りえきりつわ やく じゅうに ぱーせんとで、どちらも かこ さいこうです。
+    background: tb_kaigi_up
+    telops:
+    - {text: "4〜6月の営業利益率　約12％", size: md, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: reimu
+    text: AIのデータセンター向けの送配電の設備や、HDDが伸びています。
+    reading: えーあいの でーたせんたー むけの そうはいでんの せつびや、えいちでぃーでぃーが のびて います。
+  - speaker: kisha
+    emotion: thinking
+    text: 非上場だから、部門ごとの数字は出していないんですよね。
+  - speaker: kisha
+    emotion: thinking
+    text: でも、純利益の大半は……。
+  - speaker: reimu
+    text: 持っているキオクシア株の、再評価益と売却益です。大半は、値上がりを帳簿に載せた評価益でした。
+    reading: もって いる きおくしあ かぶの さいひょうかえきと ばいきゃくえきです。たいはんわ、ねあがりお ちょうぼに のせた ひょうかえきでした。
+  - speaker: reimu
+    text: 7月から9月は逆に再評価損が出る可能性がある、と8月に日経は報じました。
+    reading: しちがつから くがつわ ぎゃくに さいひょうかそんが でる かのうせいが あると、はちがつに にっけいわ ほうじました。
+  - speaker: kisha
+    emotion: thinking
+    text: 株価しだいで、増えも減りもするのか……。
+# ---- 論争の章 ----
+- id: ronso1
+  title: 東芝は不正で潰れた？
+  background: tb_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: 東芝は、粉飾決算と原発で潰れたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: まず、東芝は潰れてないの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 上場廃止は、株の買い付けによる非公開化。ウェスチングハウスは、アメリカの再生手続よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 東芝は、潰れてなかったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次に言葉。報告書は不適切な会計処理。金融庁は虚偽記載。大手の報道は不正会計よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 呼び方が、ばらばらだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社としての東芝は虚偽記載の事実と課徴金を認めて、決算を訂正したの。
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、悪いのは社長たちなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは、分けて考えるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告書は、経営トップらを含めた組織的な関与があったと認定したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも刑事では、誰も責任を問われていない。[監視委|かんしい]は、告発を断念したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、お[金|かね]の責任は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が旧経営陣5人に、32億円の賠償を求めて訴えたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 訴えられた5人のうち[西田|ニシダ]さんは、裁判の途中の2017年に亡くなってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一審|いっしん]はインフラの工事の引当てを違法として、一部に賠償を命じたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: パソコンの取引は違反とせず、[西田|ニシダ]さんの責任も認めなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 二審は逆転。バイセルを、適法としたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一般的な会計基準はなく、各企業で独自の会計処理をしていたって。
+  - speaker: tsumugi
+    emotion: normal
+    text: インフラは、一部で引当てが適切でなかったと指摘したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも会社の規模を踏まえると、重要事項の虚偽記載とまでは認められないって判断よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして2026年10月14日。最高裁が、東芝の上告を退けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 旧経営陣の賠償責任を認めない判決が、確定したわ。
+    telops:
+    - {text: "最高裁　旧経営陣の賠償責任を認めず確定", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 報告書と裁判で、答えが違うのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告書は、会社の中で何が起きたかを調べたもの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判は、個人がお[金|かね]を払う責任があるかを法律で決めたものなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は認めた。個人の責任は、裁判では認められなかった。どっちも本当よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 白黒つけたいのに、灰色なのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 金額の桁も見てね。利益の訂正は、7年分で2248億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 原子力は、のれんの[減損|げんそん]の見通しだけで1年に7125億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 原発のほうが、ずっと大きい……。
+- id: ronso2
+  title: 原発が悪かったのか
+  background: tb_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、原発が悪かったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 損の芯は、アメリカの4基の建設費が61億ドル膨らむ見積もりになったこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして東芝が、親会社としてその工事を保証してたことなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 保証人のハンコが、一番重かったのか。
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: その4基のうちボーグルの2基は、2023年と2024年に動き始めたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報道では去年、米政府とウェスチングハウスの親会社が800億ドル規模で提携したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 再生手続のあとも、まだ現役なのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: だから原発が悪いとも、正しかったとも言えないの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 言えるのは、海外の建設で底が抜けたところまでね。
+- id: ronso3
+  title: 株主が食い物にした？
+  background: tb_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットには、ハゲタカが東芝を食い物にしたって書いてあったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: その株主が入ったのは、東芝が頼んだ2017年の6000億円の増資からよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 上場廃止を避けるための増資だと、東芝自身が書いてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 頼んで、入ってもらったのか。
+    se: tenten
+  - speaker: tsumugi
+    emotion: normal
+    text: 増資は[1株|ひとかぶ]262.8円。のちに[10株|じっかぶ]を[1株|ひとかぶ]にまとめた単位だと、2628円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後の買い付けは4620円。増資の値段の、約1.76倍よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 筆頭株主だったファンドは、全部の株を買い付けに応じたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 最後は売って、出ていったのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 株主総会で選ばれた調査者は、2020年の総会を公正とはいえないと結論づけたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 経産大臣は事実関係に疑問があると反論したから、ここも両方の言い分があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 株主が東芝を助けて、ぶつかって。最後は国内の連合が全部買ったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 悪者探しじゃ、話が収まらないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと再上場。2028年度にもという報道はあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも10月の時点で、会社は正式に発表してないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[島田|しまだ]社長は2023年に、私が決めることではなく株主が決めることと話してたの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 決めるのは、今の持ち主なのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+- id: chui
+  title: 東芝の家電を使う人へ
+  background: tb_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 東芝と書いてある家電でも、作っている会社は東芝とは限らないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 冷蔵庫や洗濯機は、[美的集団|びてきしゅうだん]のグループの東芝ライフスタイル。
+  - speaker: tsumugi
+    emotion: normal
+    text: テレビのレグザは[TVS REGZA|ティーブイエスレグザ]。ハイセンスが95％を持つ会社よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ノートパソコンの[dynabook|ダイナブック]は、シャープの子会社よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前は東芝でも、作る会社はバラバラなのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 修理や問い合わせの窓口も、それぞれの会社。保証書で確かめてね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 保証書、どこにしまったっけ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、東芝の株は今は市場で買えないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 過去最高益の大半も、持っているキオクシア株の値上がりなの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 株価が下がれば、逆に損が出るわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4兆円稼いだ、とは言えないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言うと、言い過ぎね。本業の伸びは、営業利益率で見るのよ。
+# ---- 締め：店頭の冷蔵庫 ----
+- id: shime_ryohan
+  title: ''
+  background: tb_ryohan
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月。家電量販店の売り場です。
+    reading: にせん にじゅうろくねん じゅうがつ。かでん りょうはんてんの うりばです。
+  - speaker: kyaku
+    emotion: normal
+    text: この冷蔵庫、東芝なのね。東芝って、まだあるの？
+  - speaker: zundamon
+    emotion: happy
+    text: ありますよ。この冷蔵庫を作ってるのは、[美的集団|びてきしゅうだん]のグループの会社ですけど。
+  - speaker: kyaku
+    emotion: surprised
+    text: あら、詳しいのね。
+  - speaker: zundamon
+    emotion: happy
+    text: これ、ボクが設計した冷蔵庫なんです。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ、あなたは東芝の人？
+  - speaker: zundamon
+    emotion: thinking
+    text: '[元|もと]、です。名前は、ずっと東芝なんですけど。'
+  - speaker: kyaku
+    emotion: thinking
+    text: ややこしいわねえ。で、電気代は安いの？
+  - speaker: zundamon
+    emotion: happy
+    text: そこはボクのチャレンジです。……ちゃんとした意味の。
+    beat: true
+- id: shime
+  title: ''
+  background: tb_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 冷蔵庫の保証書、見つけたのだ！ 問い合わせ先も書いてあった。
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも省エネにチャレンジするのだ。冷蔵庫を開けるのは、3日で120回までにする！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 今までは、何回開けてたの？
+  - speaker: zundamon
+    emotion: normal
+    text: ……3日で、400回。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 実力以上のチャレンジね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 残り3日で120億円。そして今年の4月から6月は、営業利益率が約12％。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 同じ会社の数字でも、中身を見ないと分からないのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも家電を買うときは、名前と作っている会社を一度確かめてみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

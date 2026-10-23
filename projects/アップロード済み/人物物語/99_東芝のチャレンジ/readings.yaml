@@ -1,0 +1,37 @@
+# toshiba-delisting 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# 東芝 は dictionary.yaml に登録済み（トウシバ）なのでタグを付けていない。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 技術者 / label: 経理の先輩・田中社長・綱川社長・島田社長・池谷副社長 ほか）とテロップは表示専用なのでタグを付けていない。
+# 「元（もと）」は 元社長 などにも掛かるので台帳に入れず、締めの1か所だけ本文のタグで読ませている。
+# 2026-10-23 見直し: 西田・からくり儀右衛門・経産省・1億分の1 のタグの読みはカタカナで書いた（[西田|ニシダ] など）。
+# 「押し込んだ分」が ワケ と読まれたので本文で [分|ぶん] を付けた（分 は 7年分 などにも掛かるので台帳には入れない）。
+# 人名
+- {surface: 西田厚聰, reading: にしだあつとし}      # ナレだけに出る
+- {surface: 西田, reading: にしだ}
+- {surface: 佐々木則夫, reading: ささきのりお}      # ナレだけに出る
+- {surface: 田中久雄, reading: たなかひさお}        # ナレだけに出る
+- {surface: 綱川智, reading: つなかわさとし}        # ナレだけに出る
+- {surface: 島田, reading: しまだ}
+- {surface: からくり儀右衛門, reading: からくりぎえもん}
+- {surface: 儀右衛門, reading: ぎえもん}
+# 社名・機関
+- {surface: 美的集団, reading: びてきしゅうだん}
+- {surface: 白熱舎, reading: はくねつしゃ}
+- {surface: 日本産業パートナーズ, reading: にほんさんぎょうぱーとなーず}   # ナレだけに出る
+- {surface: TVS REGZA, reading: てぃーぶいえすれぐざ}
+- {surface: dynabook, reading: だいなぶっく}
+- {surface: 経産省, reading: けいさんしょう}
+- {surface: 監視委, reading: かんしい}
+# 会計・法律・株の言葉
+- {surface: Buy-Sell, reading: ばいせる}
+- {surface: 上期, reading: かみき}                  # じょうき と読まれやすい
+- {surface: 終値, reading: おわりね}                # しゅうち と読まれやすい
+- {surface: 減損, reading: げんそん}
+- {surface: 一審, reading: いっしん}                # 共通台帳にもある（イチシンの誤読）
+- {surface: 一見, reading: いっけん}
+- {surface: 1株, reading: ひとかぶ}
+- {surface: 10株, reading: じっかぶ}
+# 数の言い方
+- {surface: 1億分の1, reading: いちおくぶんのいち}
+- {surface: 1日, reading: いちにち}                # ついたち と読まれないように（セリフの1か所）
