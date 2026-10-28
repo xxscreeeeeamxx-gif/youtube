@@ -1,0 +1,58 @@
+# jal-inamori 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 稲盛和夫 / label: 経理の幹部・植木義晴・瀬戸委員長 ほか）とテロップ・章タイトルは表示専用なのでタグを付けていない。
+# 大西（オオニシ）は標準の読みで読めるので台帳に入れていない（つむぎの「大西さん」はタグなし）。
+# 便（びん）・方（ほう）・分（ぶん）・根（ね）・値（あたい）・年（とし）・空（そら）は
+# 定期便・考え方・半分・根っこ・値段・2010年・空港 などにも掛かるので台帳に入れず、本文の該当箇所だけタグを付けた。
+# 2026-10-28 見直し: 稲盛・海保・鶴丸・動機善・棒引き(ch5_keikaku)・1日付 のタグの読みはカタカナで書いた（[稲盛|イナモリ] など）。
+# 大西の『根』『切れる』は括弧ごとタグにした（[『根』を|ねを]・[『切れる』|きれる]）。
+# 人名
+- {surface: 稲盛和夫, reading: いなもりかずお}      # ナレと名札だけに出る
+- {surface: 稲盛, reading: いなもり}
+- {surface: 前原誠司, reading: まえはらせいじ}      # ナレだけに出る
+- {surface: 西松遙, reading: にしまつはるか}        # ナレだけに出る
+- {surface: 大田嘉仁, reading: おおたよしひと}      # ナレだけに出る
+- {surface: 植木義晴, reading: うえきよしはる}      # ナレと名札だけに出る
+# 社名・機関・地名
+- {surface: JAL, reading: じゃる}
+- {surface: ANA, reading: えーえぬえー}
+- {surface: 日航, reading: にっこう}
+- {surface: 日航機, reading: にっこうき}
+- {surface: 京都セラミック, reading: きょうとせらみっく}   # ナレだけに出る
+- {surface: 第二電電, reading: だいにでんでん}           # ナレだけに出る
+- {surface: 盛和塾, reading: せいわじゅく}               # ナレだけに出る
+- {surface: 天王洲アイル, reading: てんのうずあいる}     # ナレだけに出る
+- {surface: 小牧, reading: こまき}
+- {surface: 鶴丸, reading: つるまる}
+- {surface: 海保, reading: かいほ}
+- {surface: 管財人, reading: かんざいにん}
+# 稲盛の言葉・経営の言葉
+- {surface: 一銭, reading: いっせん}
+- {surface: 物心両面, reading: ぶっしんりょうめん}
+- {surface: 動機善, reading: どうきぜん}
+- {surface: 私心, reading: ししん}
+- {surface: 八百屋, reading: やおや}
+- {surface: 生産高, reading: せいさんだか}
+- {surface: 車座, reading: くるまざ}
+- {surface: 眉間, reading: みけん}
+- {surface: 尊い, reading: とうとい}               # たっとい と読まれないように
+- {surface: 公的色彩, reading: こうてきしきさい}
+- {surface: 一企業, reading: いちきぎょう}
+# 株・お金・航空の言葉
+- {surface: 終値, reading: おわりね}                # しゅうち と読まれやすい
+- {surface: 棒引き, reading: ぼうびき}
+- {surface: 発着枠, reading: はっちゃくわく}        # タグの読みは ハッチャクワク（は が助詞に化けないよう）
+- {surface: 便ごと, reading: びんごと}              # べん と読まれないように
+- {surface: 搭乗分, reading: とうじょうぶん}        # ふん と読まれないように
+- {surface: 空いた, reading: あいた}                # すいた と読まれないように
+- {surface: 1株, reading: ひとかぶ}
+- {surface: "737", reading: ななさんなな}
+- {surface: A3, reading: えーさん}
+# 数の言い方
+- {surface: 3分の1, reading: さんぶんのいち}
+- {surface: 3分の2, reading: さんぶんのに}
+- {surface: 週3日, reading: しゅうみっか}
+- {surface: 1日付, reading: ついたちづけ}
+- {surface: 1日, reading: いちにち}                # セリフの1か所（1日にすると）。ついたち と読まれないように
+- {surface: 万一, reading: まんいち}

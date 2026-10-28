@@ -1,0 +1,1581 @@
+meta:
+  title: 破綻したJALの会長・稲盛和夫「一銭もあずけられませんな」、2年8か月で再上場【ずんだもん解説】
+  slug: jal-inamori
+  hook_line: 毎日1000機を飛ばしていた日本航空は、なぜ破綻し、どう上場に戻ったのか。
+  summary: 2010年1月、日本航空は負債2兆3221億円で破綻します。会長に来たのは、京セラを作った78歳の稲盛和夫。航空の仕事は初めてでした。本社で出てきたのは、3か月も前の決算。毎日1000機を飛ばしながら1便ごとの損得が見えない会社で、素人の会長は何を変えたのか。整理解雇の裁判、公的資金と税の議論、ANAの主張も、双方の言い分を並べながら、再現ドラマでたどります。（2026年10月時点）
+  sources:
+  - 国土交通省航空局「日本航空の再生について」（2012年11月） https://www.mlit.go.jp/common/000987884.pdf
+  - 参議院 国土交通委員会調査室「ＪＡＬの再生問題」『立法と調査』No.301（2010年2月） https://www.sangiin.go.jp/japanese/annai/chousa/rippou_chousa/backnumber/2010pdf/20100201169.pdf
+  - 国土交通省「日本航空の上場に当たっての国土交通大臣コメント」（2012年9月19日） https://www.mlit.go.jp/report/press/kouku04_hh_000064.html
+  - 京セラ 稲盛ライブラリー「日本航空の再生を支援（2010年）」 https://www.kyocera.co.jp/inamori/archive/episode/episode-18.html
+  - 帝国データバンク 倒産速報「株式会社日本航空など3社」（2010年1月19日） https://www.tdb.co.jp/report/bankruptcy/flash/3201/
+  - 日本経済新聞「元パイロットも敗訴確定 日航整理解雇訴訟」（2015年2月6日） https://www.nikkei.com/article/DGXLASDG06H3U_W5A200C1000000/
+  tags:
+  - JAL
+  - 日本航空
+  - 稲盛和夫
+  - 経営破綻
+  - 会社更生法
+  - 再上場
+  - アメーバ経営
+  - JALフィロソフィ
+  - 企業再生支援機構
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 一銭もあずけられませんな
+    bottom: 破綻したJALの会長
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: shikko
+    label: 執行役員
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#4a3a2f'
+  - id: keiri
+    label: 経理の幹部
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: rosen
+    label: 路線の担当
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: seibi
+    label: 整備士
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#2f3f5f'
+  - id: senpai
+    label: 先輩整備士
+    voice: 21
+    pitch: 0.06
+    outfit: work
+    color: '#3a4a62'
+  - id: furukabu
+    label: 古株の役員
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2a32'
+  - id: hancho
+    label: 工場の班長
+    voice: 11
+    pitch: 0.04
+    outfit: work
+    color: '#e8ebee'
+  - id: maehara
+    label: 国交相
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a3a4a'
+  - id: nishimatsu
+    label: 西松社長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#3a2a24'
+  - id: oonishi
+    label: 大西賢
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4a5a'
+  - id: ueki
+    label: 植木義晴
+    voice: 13
+    pitch: 0.14
+    outfit: suit
+    color: '#1f2a44'
+  - id: kicho
+    label: 機長
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#1a2238'
+  - id: seto
+    label: 瀬戸委員長
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#4a4a52'
+  - id: ito
+    label: 伊東社長
+    voice: 100
+    pitch: 0.08
+    outfit: suit
+    color: '#2f3a52'
+  - id: kisha
+    label: 記者
+    voice: 67
+    pitch: 0.04
+    outfit: suit
+    color: '#6a5a48'
+scenes:
+# ---- 先出し（2010年春・役員会議室） ----
+- id: co_issen
+  title: ''
+  background: jl_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: thinking}
+  - {who: shikko, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2010年の春。破綻した日本航空の本社で、役員が予算の説明をしています。
+    reading: にせん じゅうねんの はる。はたん した にほん こうくうの ほんしゃで、やくいんが よさんの せつめいお して います。
+  - speaker: shikko
+    emotion: normal
+    text: こちらの事業に、10億円ほどの予算を執行したく……。
+  - speaker: zundamon
+    emotion: angry
+    text: あんたには10億円どころか、[一銭|いっせん]もあずけられませんな。
+    se: don
+  - speaker: shikko
+    emotion: surprised
+    text: い、[一銭|いっせん]も……。
+  - speaker: reimu
+    text: 会長は、京セラを作った稲盛和夫、78歳。航空の仕事は、これが初めてです。
+    reading: かいちょうわ、きょうせらお つくった いなもり かずお ななじゅうはっさい。こうくうの しごとわ これが はじめてです。
+  - speaker: reimu
+    text: この会社は1月、負債2兆3221億円で破綻しました。それが2年8か月で、上場に戻ります。
+    reading: この かいしゃわ いちがつ、ふさい にちょう さんぜん にひゃく にじゅういちおくえんで はたん しました。それが にねん はちかげつで じょうじょうに もどります。
+    telops:
+    - {text: "負債2兆3221億円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 毎日1000機を飛ばしていた会社は、なぜ破綻したのか。航空の素人は、どう立て直したのでしょう。
+    reading: まいにち せんきお とばして いた かいしゃわ、なぜ はたん したのか。こうくうの しろうとわ どう たてなおしたのでしょう。
+# ---- 今の部屋（旅行かばん） ----
+- id: hook
+  title: ''
+  background: jl_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 冬休みの飛行機、[JAL|ジャル]で予約したのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: その会社、2010年に一度破綻してるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ！？ じゃあボクの飛行機、飛ぶの！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻した日も、飛行機は飛んでたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 飛んでるのに、なんでつぶれるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まりは、3か月遅れで届く数字なの。
+# ---- 2010年2月・本社 ----
+- id: card2010
+  title: ''
+  background: jl_card_2010
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2010年2月。東京・天王洲アイルの、日本航空の本社です。
+    reading: にせん じゅうねん にがつ。とうきょう てんのうず あいるの にほん こうくうの ほんしゃです。
+  - speaker: reimu
+    text: 会長に就いたばかりの稲盛は、月々の決算を見たいと言いました。
+    reading: かいちょうに ついた ばかりの いなもりわ、つきづきの けっさんお みたいと いいました。
+- id: ch1_kessan
+  title: 3か月遅れの決算
+  background: jl_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: keiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: keiri
+    emotion: normal
+    text: 会長、こちらが最新の決算です。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……これは、3か月も4か月も前の数字ですな。
+  - speaker: keiri
+    emotion: normal
+    text: 当社には世界中に支店があって毎日1000機飛んでいる。
+    telops:
+    - {text: "幹部「毎日1000機飛んでいる」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: keiri
+    emotion: normal
+    text: 各支店や空港の数字を集めて、まとめるのだから時間がかかるのは当然です。
+  - speaker: zundamon
+    emotion: angry
+    text: そんなのは経営なんかではありません。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: angry
+    text: 飛行機のコックピットには、計器がいっぱいあって……
+  - speaker: zundamon
+    emotion: normal
+    text: その計器を全部見なければ、安全に飛べないはずだろう。
+  - speaker: keiri
+    emotion: thinking
+    text: ……はあ。
+- id: ch1_binbetsu
+  title: ''
+  background: jl_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: keiri, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 経営とは、会計学的な計数を見てするのが基本です。
+  - speaker: zundamon
+    emotion: normal
+    text: どの[便|びん]がもうかって、どの[便|びん]が赤字なんです？
+  - speaker: keiri
+    emotion: thinking
+    text: '[便ごと|びんごと]の損得は……分かりません。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 1000機も飛ばして、1[便ごと|びんごと]の損得が誰にも分からない？
+  - speaker: keiri
+    emotion: normal
+    text: 全体で黒字なら、赤字の路線も守る。それが、うちの考え方でして。
+  - speaker: zundamon
+    emotion: thinking
+    text: その全体は、黒字なんですか。
+  - speaker: keiri
+    emotion: sad
+    text: いえ。去年の4月から9月の半年で、最終赤字は1312億円です。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[1日|いちにち]にすると？'
+  - speaker: keiri
+    emotion: sad
+    text: 約7億円。1時間で、約3000万円です。
+    background: jl_kaigi_akaji
+    telops:
+    - {text: "1時間に約3000万円の赤字", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: angry
+    text: この会議も、1時間やれば3000万円の赤字ですな。
+  - speaker: keiri
+    emotion: surprised
+    text: ……で、では手短に。
+    se: manuke
+  - speaker: keiri
+    emotion: thinking
+    text: リーマン・ショックと新型インフルで、国際線の旅客収入は4割以上減りまして。
+  - speaker: keiri
+    emotion: normal
+    text: 同じ波は、[ANA|エーエヌエー]さんにも来てますが……。
+  - speaker: zundamon
+    emotion: thinking
+    text: なら、差は会社の中ですな。
+  - speaker: keiri
+    emotion: thinking
+    text: もう一つ重いのが、企業年金です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 年金？
+  - speaker: keiri
+    emotion: normal
+    text: 予定利率が、4.5％のままなんです。この低金利の時代に。
+  - speaker: keiri
+    emotion: thinking
+    text: 積み立ての不足は、3000億円を超えるといわれます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見えない借金ですな……。
+# ---- 降りられない路線 ----
+- id: ch1_rosen
+  title: 降りられない路線
+  background: jl_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: thinking}
+  - {who: rosen, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: rosen
+    emotion: normal
+    text: 路線の担当です。赤字の路線も、簡単には降りられないんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: なぜです？
+  - speaker: rosen
+    emotion: normal
+    text: たとえば静岡空港の福岡線には、搭乗率の保証という約束があります。
+  - speaker: rosen
+    emotion: normal
+    text: 搭乗率が70％を切ったら、県が1席あたり1万5800円を払うんです。
+    telops:
+    - {text: "1席あたり1万5800円", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 席が[埋まらない|うまらない]と、県がお[金|かね]を！？
+    beat: true
+  - speaker: rosen
+    emotion: thinking
+    text: うちは静岡から、4月で撤退します。県は、払わないと伝えてきました。
+  - speaker: rosen
+    emotion: normal
+    text: 地元や政治から、飛ばしてくれと頼まれる路線も多いんです。
+  - speaker: rosen
+    emotion: normal
+    text: 飛行機も、ジャンボのような大型機が多くて。ピークで、約80機ありました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 大きすぎる飛行機で、降りられない路線を飛ぶ。
+  - speaker: zundamon
+    emotion: thinking
+    text: そのうえ、1[便ごと|びんごと]の損得は誰も知らん。
+  - speaker: zundamon
+    emotion: angry
+    text: ……つぶれん[方|ほう]が、おかしいですな。
+    beat: true
+  - speaker: reimu
+    text: このとき、まだ誰も、この会社が2年8か月で上場に戻るとは思っていません。
+    reading: この とき まだ だれも、この かいしゃが にねん はちかげつで じょうじょうに もどるとわ おもって いません。
+  - speaker: reimu
+    text: 素人の会長、稲盛和夫とは何者なのか。
+    reading: しろうとの かいちょう、いなもり かずおとわ なにものなのか。
+# ---- 稲盛のはじまり（短く） ----
+- id: card1963
+  title: ''
+  background: jl_card_1963
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1963年。京都セラミック、いまの京セラの滋賀工場ができました。
+    reading: せんきゅうひゃく ろくじゅうさんねん。きょうと せらみっく、いまの きょうせらの しが こうじょうが できました。
+  - speaker: reimu
+    text: 4年前、27歳の稲盛が資本金300万円で作った会社です。
+    reading: よねん まえ、にじゅうななさいの いなもりが しほんきん さんびゃくまんえんで つくった かいしゃです。
+- id: ch2_ameba
+  title: アメーバの始まり
+  background: jl_seramikku
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: hancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 班長さん。この組の[生産高|せいさんだか]から、人件費以外の経費を引きなさい。
+  - speaker: hancho
+    emotion: thinking
+    text: 引いて、どうするんです？
+  - speaker: zundamon
+    emotion: normal
+    text: それを、みんなの総労働時間で割る。
+  - speaker: hancho
+    emotion: thinking
+    text: ……1時間あたり、いくら生んだかが分かりますね。
+  - speaker: zundamon
+    emotion: happy
+    text: そう。会社を小さな組に分けて、組ごとに採算を見るんです。
+  - speaker: hancho
+    emotion: normal
+    text: 組の大きさは、決まってるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 仕事に合わせて、変えなさい。アメーバのようにな。
+  - speaker: hancho
+    emotion: surprised
+    text: アメーバって……ボクら、単細胞ですか。
+    se: tenten
+  - speaker: zundamon
+    emotion: happy
+    text: 組ごとに採算を立てて、自分で動く。ほめ言葉ですな。
+  - speaker: reimu
+    text: 時間当り採算と、アメーバ経営。この物差しが、47年後に日本航空で効いてきます。
+    reading: じかん あたり さいさんと、あめーば けいえい。この ものさしが よんじゅうななねんごに にほん こうくうで きいて きます。
+- id: card1984
+  title: ''
+  background: jl_card_1984
+  cuts:
+  - speaker: reimu
+    text: 1984年。稲盛は、NTTに挑む第二電電を作ります。京セラに、通信の技術者はいませんでした。
+    reading: せんきゅうひゃく はちじゅうよねん。いなもりわ えぬてぃーてぃーに いどむ だいに でんでんお つくります。きょうせらに つうしんの ぎじゅつしゃわ いませんでした。
+- id: ch2_ddi
+  title: ''
+  background: jl_seramikku
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 稲盛和夫, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 長距離電話は、高すぎる。誰かが、値段を下げなあかん。
+  - speaker: zundamon
+    emotion: thinking
+    text: けど、通信を始める動機は善なのか。そこに、[私心|ししん]はないのか。
+  - speaker: zundamon
+    emotion: normal
+    text: '[動機善|ドーキゼン]なりや、[私心|ししん]なかりしか。……毎晩、自分に聞くのだ。'
+  - speaker: reimu
+    text: この第二電電が、いまのKDDIです。25年後、稲盛はまた、知らない業界の再建を頼まれることになります。
+    reading: この だいに でんでんが、いまの けーでぃーでぃーあいです。にじゅうごねんご いなもりわ また、しらない ぎょうかいの さいけんお たのまれる ことに なります。
+# ---- 破綻（2009年9月〜2010年1月） ----
+- id: card2009
+  title: ''
+  background: jl_card_2009
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2009年9月。政権交代で、国土交通大臣に前原誠司が就きます。
+    reading: にせん くねん くがつ。せいけん こうたいで、こくど こうつう だいじんに まえはら せいじが つきます。
+- id: ch3_maehara
+  title: 法的整理は考えていない
+  background: jl_kaiken
+  stage:
+  - {who: maehara, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 大臣、日本航空は法的整理になるんでしょうか。
+  - speaker: maehara
+    emotion: normal
+    text: 法的整理はまったく考えていない。
+  - speaker: reimu
+    text: 9月24日の会見です。翌日、前原は直轄のタスクフォースを置き、日本航空の自主再建の案は白紙に戻ります。
+    reading: くがつ にじゅうよっかの かいけんです。よくじつ まえはらわ ちょっかつの たすくふぉーすお おき、にほん こうくうの じしゅ さいけんの あんわ はくしに もどります。
+  - speaker: reimu
+    text: 10月29日。日本航空は、企業再生支援機構に支援の検討を申し入れます。その日の会見です。
+    reading: じゅうがつ にじゅうくにち。にほん こうくうわ きぎょう さいせい しえん きこうに しえんの けんとうお もうしいれます。その ひの かいけんです。
+  - speaker: kisha
+    emotion: thinking
+    text: 一つの会社のために、なぜ国がそこまで？
+  - speaker: maehara
+    emotion: normal
+    text: 日本の[空|そら]を飛ぶ6割の飛行機は日本航空。
+  - speaker: maehara
+    emotion: thinking
+    text: '[万一|まんいち]、[日航機|にっこうき]が飛ばなくなると日本経済や外国との交流に大きな支障が出る。'
+  - speaker: maehara
+    emotion: normal
+    text: '[一企業|いちきぎょう]だが[公的色彩|こうてきしきさい]が強い。'
+  - speaker: kisha
+    emotion: surprised
+    text: ……6割。
+- id: ch3_irai
+  title: 引き受けた理由
+  background: jl_yakuin
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: thinking}
+  - {who: maehara, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月。前原は稲盛に、日本航空の会長を頼みます。ここからは、前原と稲盛ののちの回想です。
+    reading: じゅうがつ。まえはらわ いなもりに、にほん こうくうの かいちょうお たのみます。ここからわ まえはらと いなもりの のちの かいそうです。
+  - speaker: zundamon
+    emotion: normal
+    text: 航空業界には[何の|なんの]知識も経験もありませんし、引き受ける気はありません。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ところで[日航|にっこう]は、いまどういう具合なんです？
+  - speaker: reimu
+    text: 11月の2度目も、稲盛は断りながら日航の今を尋ね、前原は関心があると受け取ります。
+    reading: じゅういちがつの にどめも いなもりわ ことわりながら にっこうの いまお たずね、まえはらわ かんしんが あると うけとります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 二次破綻になれば、日本の経済全体に悪い影響が出る。
+  - speaker: zundamon
+    emotion: thinking
+    text: 残された社員の、雇用もある。
+  - speaker: zundamon
+    emotion: thinking
+    text: 正しい競争がなくなれば、国民が不便になる。
+  - speaker: zundamon
+    emotion: normal
+    text: '[動機善|ドーキゼン]なりや、[私心|ししん]なかりしか。……[私心|ししん]は、ないのだ。'
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: '[週3日|しゅうみっか]くらいで、その代わり無報酬でお手伝いします。'
+  - speaker: reimu
+    text: 12月、稲盛は引き受けます。再建の見通しは確信も自信も何もなかったと、のちに語っています。
+    reading: じゅうにがつ、いなもりわ ひきうけます。さいけんの みとおしわ かくしんも じしんも なにも なかったと のちに かたって います。
+  - speaker: reimu
+    text: 年明け、稲盛は底冷えする京都で親族を集め、迷惑をかけるかもしれない、と話しました。
+    reading: ねんあけ、いなもりわ そこびえ する きょうとで しんぞくお あつめ めいわくお かける かもしれないと はなしました。
+- id: ch3_nishimatsu
+  title: 社長の反対
+  background: jl_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: nishimatsu, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じころ、社長の西松遙は、法的整理に反対していました。
+    reading: おなじ ころ、しゃちょうの にしまつ はるかわ ほうてき せいりに はんたい して いました。
+  - speaker: kisha
+    emotion: normal
+    text: 法的整理になると、何が困るんですか。
+  - speaker: nishimatsu
+    emotion: thinking
+    text: 法的整理は倒産のイメージが影響して客が減る。
+  - speaker: nishimatsu
+    emotion: normal
+    text: 客の評価が下がれば再生がつまずき機構も困るはずだ。
+  - speaker: kisha
+    emotion: thinking
+    text: ……客が、減る。
+  - speaker: reimu
+    text: 1月12日。年金の減額に、OBの3分の2以上が同意しました。1週間後、日本航空は破綻します。
+    reading: いちがつ じゅうににち。ねんきんの げんがくに、おーびーの さんぶんの に いじょうが どうい しました。いっしゅうかんご にほん こうくうわ はたん します。
+- id: ch3_hatan
+  title: 終値5円
+  background: jl_shoken
+  bgm: serious
+  stage:
+  - {who: keiri, x: 0.28, flip: true, emotion: thinking}
+  - {who: seibi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2010年1月19日。日本航空など3社が、東京地裁に会社更生法の適用を申請しました。
+    reading: にせん じゅうねん いちがつ じゅうくにち。にほん こうくう など さんしゃが、とうきょう ちさいに かいしゃ こうせいほうの てきようお しんせい しました。
+  - speaker: reimu
+    text: 負債は2兆3221億円。金融を除く事業会社では、戦後最大の破綻です。
+    reading: ふさいわ にちょう さんぜん にひゃく にじゅういちおくえん。きんゆうお のぞく じぎょう がいしゃでわ、せんご さいだいの はたんです。
+  - speaker: seibi
+    emotion: surprised
+    text: うちの株、[終値|おわりね]は5円ですって。
+    se: gaan
+  - speaker: keiri
+    emotion: thinking
+    text: 来月の20日で、上場廃止だ。
+  - speaker: seibi
+    emotion: thinking
+    text: 飛行機は、どうなるんです？
+  - speaker: keiri
+    emotion: normal
+    text: 飛ばしながら、立て直す。それが国の方針だ。
+  - speaker: keiri
+    emotion: normal
+    text: マイレージも守ると、政府が声明を出した。
+  - speaker: seibi
+    emotion: thinking
+    text: 会社が潰れたのに、飛行機は飛ぶ……。
+  - speaker: reimu
+    text: 社長の西松は辞任。補佐の大田嘉仁の回想では、この日、稲盛は盛和塾ハワイの開塾式の先約を守りました。
+    reading: しゃちょうの にしまつわ じにん。ほさの おおた よしひとの かいそうでわ、この ひ いなもりわ せいわじゅく はわいの かいじゅくしきの せんやくお まもりました。
+# ---- 素人の会長（2010年2月〜6月） ----
+- id: ch4_kinku
+  title: 株主のためでもない
+  background: jl_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: furukabu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2月1日、稲盛は78歳で会長に就きます。その日、幹部200人を集めた会議です。
+    reading: にがつ ついたち、いなもりわ ななじゅうはっさいで かいちょうに つきます。その ひ、かんぶ にひゃくにんお あつめた かいぎです。
+  - speaker: zundamon
+    emotion: normal
+    text: 株主のためでも、[管財人|かんざいにん]のためでもない。
+    telops:
+    - {text: "稲盛「株主のためでも、管財人のためでもない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 全従業員の[物心両面|ぶっしんりょうめん]の幸福を追求する。
+  - speaker: zundamon
+    emotion: happy
+    text: 経営の目標を、この1点に昇華して再建に取り組みたい。
+  - speaker: furukabu
+    emotion: surprised
+    text: か、会長！
+  - speaker: furukabu
+    emotion: angry
+    text: 会長、あれは禁句です。
+    se: bikkuri
+  - speaker: zundamon
+    emotion: surprised
+    text: 禁句？
+  - speaker: furukabu
+    emotion: thinking
+    text: ……あの言葉は、この会社では口にしないものでして。
+  - speaker: zundamon
+    emotion: normal
+    text: 社員が幸せになろうと思わん会社が、立ち直りますかいな。
+  - speaker: furukabu
+    emotion: thinking
+    text: ……はあ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 何も知らないじいさんが来た、という顔ですな。
+    beat: true
+- id: ch4_haneda
+  title: 邪魔をしてごめんね
+  background: jl_kakunoko
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: seibi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日、稲盛は羽田の職場を回ります。全員を集めて話す案は、退けました。
+    reading: よくじつ いなもりわ はねだの しょくばお まわります。ぜんいんお あつめて はなす あんわ しりぞけました。
+  - speaker: seibi
+    emotion: surprised
+    text: あっ、会長！
+  - speaker: zundamon
+    emotion: normal
+    text: 邪魔をしてごめんね。仕事を続けてください。
+  - speaker: zundamon
+    emotion: happy
+    text: 大変ですが、私も頑張りますから一緒にやっていきましょう。
+  - speaker: seibi
+    emotion: surprised
+    text: あ……はい。
+  - speaker: zundamon
+    emotion: normal
+    text: これが、80機もあったというジャンボですな。
+  - speaker: seibi
+    emotion: thinking
+    text: はい。席が[埋まらない|うまらない]と、[空いた|あいた]席ごと飛びます。
+  - speaker: seibi
+    emotion: thinking
+    text: 大きい[分|ぶん]、効率が悪いんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 空気を運ぶのに、いちばん大きい車を出しとるわけですな。
+  - speaker: seibi
+    emotion: normal
+    text: 羽田が混んでるから、大きい機体で運ぶよう勧められてきたって聞きました。
+  - speaker: reimu
+    text: このジャンボは、1年後に日本航空の定期便から姿を消します。
+    reading: この じゃんぼわ、いちねんごに にほん こうくうの ていきびんから すがたお けします。
+- id: ch4_issen
+  title: 一銭もあずけられない
+  background: jl_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: thinking}
+  - {who: shikko, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 春。本社25階の役員会議室に、30人の役員と管財人がそろいます。
+    reading: はる。ほんしゃ にじゅうごかいの やくいん かいぎしつに、さんじゅうにんの やくいんと かんざいにんが そろいます。
+  - speaker: shikko
+    emotion: normal
+    text: こちらの事業に、10億円ほどの予算を執行したく……。
+  - speaker: zundamon
+    emotion: angry
+    text: あんたには10億円どころか、[一銭|いっせん]もあずけられませんな。
+    telops:
+    - {text: "稲盛「一銭もあずけられませんな」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shikko
+    emotion: surprised
+    text: い、[一銭|いっせん]も……。
+  - speaker: shikko
+    emotion: thinking
+    text: で、では次の件を。パイロットの送り迎えのタクシーは、安全のための投資でして。
+  - speaker: zundamon
+    emotion: angry
+    text: 車は一切使うな。
+    se: tsukkomi
+  - speaker: shikko
+    emotion: sad
+    text: い、一切……。
+- id: ch4_ne
+  title: 根を自ら抜く
+  background: jl_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: oonishi, x: 0.56, emotion: thinking}
+  - {who: kisha, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月28日。国際線15路線と国内線30路線をやめる計画を、会見で発表します。
+    reading: しがつ にじゅうはちにち。こくさいせん じゅうご ろせんと こくないせん さんじゅう ろせんお やめる けいかくお、かいけんで はっぴょう します。
+  - speaker: kisha
+    emotion: normal
+    text: '[小牧|こまき]の空港からは、9路線が全部なくなりますね。'
+  - speaker: oonishi
+    emotion: thinking
+    text: 公共交通機関として、地元に生やした[『根』を|ねを]自ら抜くことは避けるべきことだが……
+  - speaker: oonishi
+    emotion: normal
+    text: これを避けての再生は困難。
+  - speaker: kisha
+    emotion: thinking
+    text: やめる路線は、どう決めたんですか。
+  - speaker: oonishi
+    emotion: normal
+    text: 固定費が[『切れる』|きれる]かどうかが重要。
+  - speaker: kisha
+    emotion: normal
+    text: 国際線は、いっそ全部やめないんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: '[JAL|ジャル]を再生していくのには、国際線は非常に大事な路線だ。'
+  - speaker: reimu
+    text: 羽田の国際線は、1日5便から14便に増やします。
+    reading: はねだの こくさいせんわ、いちにち ごびんから じゅうよんびんに ふやします。
+- id: ch4_komaki
+  title: ''
+  background: jl_kuko
+  bgm: 223am
+  stage:
+  - {who: rosen, x: 0.28, flip: true, emotion: thinking}
+  - {who: seibi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: seibi
+    emotion: normal
+    text: '[小牧|こまき]の空港も、今日はいつもどおりですね。'
+  - speaker: rosen
+    emotion: thinking
+    text: 静岡からは、もう撤退した。ここの9路線も、全部なくなる。
+    background: jl_kuko_sukunai
+  - speaker: seibi
+    emotion: surprised
+    text: ……急に、広く見えますね。
+  - speaker: rosen
+    emotion: sad
+    text: 地元は猛反発だよ。それでも、根を抜かないと会社がもたない。
+  - speaker: seibi
+    emotion: sad
+    text: 根っこごと、抜くんですね。
+    beat: true
+- id: ch4_hokoku
+  title: 業績報告会
+  background: jl_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: shikko, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 5月。役員が担当の本部の数字を発表する、月1回の業績報告会が始まります。
+    reading: ごがつ。やくいんが たんとうの ほんぶの すうじお はっぴょう する、つき いっかいの ぎょうせき ほうこくかいが はじまります。
+  - speaker: zundamon
+    emotion: normal
+    text: 先月の実績と今月の予定、来月の見込み。全部、数字で言いなさい。
+  - speaker: shikko
+    emotion: thinking
+    text: 先月は、計画を下回りまして……。
+  - speaker: zundamon
+    emotion: normal
+    text: どうやって取り戻すんです。具体的に。
+  - speaker: shikko
+    emotion: thinking
+    text: 具体的には……その……。
+  - speaker: zundamon
+    emotion: angry
+    text: 皆さん。これでは、[八百屋|やおや]の経営もできませんよ。
+    se: hammer
+  - speaker: shikko
+    emotion: surprised
+    text: や、[八百屋|やおや]……。
+  - speaker: zundamon
+    emotion: normal
+    text: この[A3|エーさん]の紙に数字がびっしり。必要な数字は、向こうから目に飛び込んでくる。
+  - speaker: shikko
+    emotion: surprised
+    text: ……そんな細かい数字まで、見えるんですか。
+  - speaker: reimu
+    text: 3か月後に出ていた月ごとの数字は、稲盛のもとで翌月に出るようになります。
+    reading: さんかげつごに でて いた つきごとの すうじわ、いなもりの もとで よくげつに でる ように なります。
+  - speaker: reimu
+    text: 役員たちは、機器の値段を一つずつ追うようになります。
+    reading: やくいん たちわ、ききの ねだんお ひとつずつ おう ように なります。
+- id: ch4_benkyo
+  title: 缶ビールの勉強会
+  background: jl_kenshu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: furukabu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月。幹部52人のリーダー教育が始まります。1か月で17回、うち5回は稲盛が自ら話しました。
+    reading: ろくがつ。かんぶ ごじゅうににんの りーだー きょういくが はじまります。いっかげつで じゅうななかい、うち ごかいわ いなもりが みずから はなしました。
+  - speaker: zundamon
+    emotion: normal
+    text: '[君|きみ]たちみたいなインテリの頭でっかちは、通常だったら見向きもしない内容だろう。'
+  - speaker: zundamon
+    emotion: normal
+    text: 聞き耳を立てるのは、破綻という現実があったからだ。
+  - speaker: furukabu
+    emotion: thinking
+    text: ……耳が痛いですな。
+  - speaker: furukabu
+    emotion: happy
+    text: 会長、講義のあとは缶ビールで[車座|くるまざ]です。
+    background: jl_konpa
+  - speaker: zundamon
+    emotion: happy
+    text: おお、ええですな。
+  - speaker: furukabu
+    emotion: surprised
+    text: 会長、もう2本目ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 話すと、喉が渇くんです。
+    beat: true
+  - speaker: furukabu
+    emotion: happy
+    text: 講義より、こっちのほうが本音が出ますな。
+# ---- 痛み（2010年8月〜12月） ----
+- id: ch5_lcc
+  title: 更生計画
+  background: jl_yakuin
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: angry}
+  - {who: maehara, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 前原は2020年に、こう振り返っています。格安航空の計画を、更生計画に入れたいと伝えたときのことです。
+    reading: まえはらわ にせん にじゅうねんに、こう ふりかえって います。かくやす こうくうの けいかくお こうせい けいかくに いれたいと つたえた ときの ことです。
+  - speaker: zundamon
+    emotion: angry
+    text: 口を出すなら俺はやめる、あんたが社長やれ！
+    se: don
+- id: ch5_keikaku
+  title: ''
+  background: jl_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: thinking}
+  - {who: keiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月、外部の調査委員会は、歴代の経営者に法的な責任までは問えない、という趣旨の結論を出しました。
+    reading: はちがつ がいぶの ちょうさ いいんかいわ、れきだいの けいえいしゃに ほうてきな せきにんまでわ とえない という しゅしの けつろんお だしました。
+  - speaker: reimu
+    text: 8月31日、管財人の機構が、更生計画の案を裁判所に出します。
+    reading: はちがつ さんじゅういちにち、かんざいにんの きこうが こうせい けいかくの あんお さいばんしょに だします。
+  - speaker: keiri
+    emotion: normal
+    text: グループの人員は、約4万8000人から約3万2000人に。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[3分の1|さんぶんのいち]を、減らすわけですな。'
+  - speaker: keiri
+    emotion: normal
+    text: 飛行機は103機を退役させます。ジャンボは、全部です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 全部！？
+  - speaker: keiri
+    emotion: normal
+    text: 子会社は110社から60社へ。年金は現役で約5割、OBで約3割減らします。
+  - speaker: zundamon
+    emotion: sad
+    text: 痛みは、みんなに回りますな。
+- id: ch5_genshi
+  title: 株が消える日
+  background: jl_kaigi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: thinking}
+  - {who: keiri, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: keiri
+    emotion: thinking
+    text: 昨日、裁判所が更生計画を認めました。
+  - speaker: keiri
+    emotion: thinking
+    text: 今日12月[1日付|ツイタチヅケ]で、100％減資です。資本金2510億円が、ゼロになります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 株主の皆さんの株が、全部消えるわけですな。
+  - speaker: keiri
+    emotion: normal
+    text: 機構は[1株|ひとかぶ]2000円で、3500億円を出資します。
+  - speaker: keiri
+    emotion: normal
+    text: 銀行は債権の87.5％、5215億円を放棄します。
+  - speaker: zundamon
+    emotion: sad
+    text: 大勢の人の損の上に、この会社は立っとるんですな。
+  - speaker: reimu
+    text: 12月、路線ごとの収益に責任を持つ本部ができ、元パイロットの植木義晴が本部長になりました。
+    reading: じゅうにがつ ろせんごとの しゅうえきに せきにんお もつ ほんぶが でき、もと ぱいろっとの うえき よしはるが ほんぶちょうに なりました。
+- id: ch5_kaiko
+  title: 大みそかの165人
+  background: jl_kuko_yoru
+  bgm: serious
+  stage:
+  - {who: seibi, x: 0.28, flip: true, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: senpai
+    emotion: thinking
+    text: 希望退職は、目標の人数に届かなかったそうだ。
+  - speaker: senpai
+    emotion: thinking
+    text: 11月には、機構の幹部が組合にこう言ったそうだ。
+  - speaker: senpai
+    emotion: thinking
+    text: ストの権利を確立したら、3500億円の出資はできないって。
+  - speaker: seibi
+    emotion: surprised
+    text: ……そんな話まで、出てたんですか。
+  - speaker: senpai
+    emotion: thinking
+    text: そして今日付けで、165人の整理解雇だ。
+    telops:
+    - {text: "12月31日　整理解雇165人", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: senpai
+    emotion: normal
+    text: パイロットが81人、客室乗務員が84人。
+  - speaker: seibi
+    emotion: sad
+    text: ……大みそかに、ですか。
+- id: ch5_saiban
+  title: 165人の裁判
+  background: jl_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 大みそかに165人……。これ、裁判になったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: なったわ。国の資料だと、会社は希望退職の目標に届かなかった分を解雇したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 翌月に訴えた原告側は、[稲盛|イナモリ]さんの言葉を持ち出したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 165人を雇い続けるのは経営上不可能ではなかった、と[稲盛|イナモリ]さんが述べたという主張よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[稲盛|イナモリ]さんが、そう言ったのだ？'
+  - speaker: tsumugi
+    emotion: normal
+    text: そう主張したのは、原告側よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年3月、東京地裁は解雇を有効と判断したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決は、会社をいわばいったん沈んだ船だったとしたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[稲盛|イナモリ]さんの発言は苦渋の決断への主観的心情を吐露したにすぎない、という評価よ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 沈んだ船……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年2月、最高裁で解雇は有効と確定したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一方で機構の幹部の組合への発言は、2016年に最高裁で不当労働行為と確定したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 解雇は有効で、あの発言は不当労働行為。別々なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年に会社と2つの組合が解決の協定を結んだと、組合側は伝えているわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……大みそかから、12年。
+    beat: true
+# ---- 逆転（2011年） ----
+- id: card2011
+  title: ''
+  background: jl_card_2011
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2011年1月。40項目の行動の考え方、JALフィロソフィが手帳になり、全社員に配られます。
+    reading: にせん じゅういちねん いちがつ。よんじゅう こうもくの こうどうの かんがえかた、じゃる ふぃろそふぃが てちょうに なり ぜんしゃいんに くばられます。
+  - speaker: reimu
+    text: 前の年に禁句と言われた言葉は、新しい企業理念の書き出しになりました。全社員の物心両面の幸福を追求し……。
+    reading: まえの としに きんくと いわれた ことばわ、あたらしい きぎょう りねんの かきだしに なりました。ぜんしゃいんの ぶっしん りょうめんの こうふくお ついきゅう し。
+- id: ch6_jumbo
+  title: ジャンボ最後の日
+  background: jl_kuko
+  bgm: 223am
+  stage:
+  - {who: oonishi, x: 0.28, flip: true, emotion: normal}
+  - {who: seibi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 3月1日、成田。ホノルルと那覇からの2便が、13時過ぎに相次いで着きます。
+    reading: さんがつ ついたち、なりた。ほのるると なはからの にびんが、じゅうさんじ すぎに あいついで つきます。
+  - speaker: seibi
+    emotion: thinking
+    text: これが、ジャンボの最後の定期便……。
+  - speaker: oonishi
+    emotion: normal
+    text: ジャンボ自体は日本航空の代名詞で、経済成長の象徴。
+  - speaker: seibi
+    emotion: sad
+    text: 1970年から、40年あまり。……お疲れさまでした。
+    se: namida
+  - speaker: reimu
+    text: 残る6機は、順に売られます。その10日後、東日本大震災が起きました。
+    reading: のこる ろっきわ じゅんに うられます。その とおかご、ひがし にほん だいしんさいが おきました。
+- id: ch6_techo
+  title: 40項目の手帳
+  background: jl_kenshu
+  bgm: hirusagari
+  stage:
+  - {who: seibi, x: 0.28, flip: true, emotion: thinking}
+  - {who: kicho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月。職場も役職も違う6人ほどが一つの机を囲む勉強会が、年4回始まります。
+    reading: しがつ。しょくばも やくしょくも ちがう ろくにん ほどが ひとつの つくえお かこむ べんきょうかいが、ねん よんかい はじまります。
+  - speaker: seibi
+    emotion: thinking
+    text: 機長と同じ机って……緊張しますね。
+  - speaker: kicho
+    emotion: normal
+    text: オレもだ。整備の人と、こんな近くで話したことはない。
+  - speaker: seibi
+    emotion: normal
+    text: 手帳の言葉、40項目もあるんですね。一人ひとりが[JAL|ジャル]。
+  - speaker: kicho
+    emotion: thinking
+    text: '[尊い|とうとい]命をお預かりする仕事。……これは、オレらだな。'
+  - speaker: kicho
+    emotion: thinking
+    text: 売上を最大に、経費を最小に。……整備にも、関係あるのか？
+  - speaker: seibi
+    emotion: happy
+    text: 機械を拭く古着を募集したら、全社から集まったんですよ。
+  - speaker: kicho
+    emotion: normal
+    text: 本音でぶつかれ、とも書いてあるな。
+  - speaker: seibi
+    emotion: normal
+    text: じゃあ本音で。……機長、この机は狭くないですか。
+  - speaker: kicho
+    emotion: thinking
+    text: ……それは、オレも思ってた。
+    beat: true
+- id: ch6_tsuru
+  title: 鶴丸が戻る
+  background: jl_kakunoko
+  bgm: curious
+  stage:
+  - {who: seibi, x: 0.28, flip: true, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 稲盛は早くから、尾翼をかつての鶴丸に戻すよう求めていました。費用を理由に、幹部が止めていたのです。
+    reading: いなもりわ はやくから、びよくお かつての つるまるに もどす よう もとめて いました。ひようお りゆうに かんぶが とめて いたのです。
+  - speaker: senpai
+    emotion: normal
+    text: 定期修理のついでなら、特別な費用はかからない。[鶴丸|ツルマル]に塗り替えだ。
+  - speaker: seibi
+    emotion: normal
+    text: 仙台空港が再開します。民間の一番機は、うちの[737|ななさんなな]です。
+  - speaker: senpai
+    emotion: thinking
+    text: その尾翼、[鶴丸|ツルマル]で降ろしてやりたいな。
+  - speaker: seibi
+    emotion: happy
+    text: ……今夜、塗りましょう。徹夜で。
+    background: jl_kuko_yoru
+  - speaker: senpai
+    emotion: happy
+    text: 誰に頼まれたわけでもないのにな。
+  - speaker: seibi
+    emotion: happy
+    text: 頼まれてないから、やるんです。
+  - speaker: reimu
+    text: 4月13日。震災のあとの仙台空港に、民間の一番機として、鶴丸の737が降りました。
+    reading: しがつ じゅうさんにち。しんさいの あとの せんだい くうこうに みんかんの いちばんきと して、つるまるの ななさんななが おりました。
+  - speaker: seibi
+    emotion: happy
+    text: 間に合った……！
+    se: jaan
+- id: ch6_bumon
+  title: 便ごとの収支
+  background: jl_kaigi
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: ueki, x: 0.56, emotion: normal}
+  - {who: rosen, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ4月、部門別採算の制度が始まります。路線ごと、便ごとの収支が分かる仕組みです。
+    reading: おなじ しがつ、ぶもんべつ さいさんの せいどが はじまります。ろせんごと びんごとの しゅうしが わかる しくみです。
+  - speaker: rosen
+    emotion: normal
+    text: パイロットは運航の本部から、客室乗務員は客室の本部から。
+  - speaker: rosen
+    emotion: normal
+    text: 路線の本部が社内で仕入れて、[便|びん]を作るんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[便ごと|びんごと]に、もうけが出るわけですな。'
+  - speaker: rosen
+    emotion: thinking
+    text: '[便ごと|びんごと]なんて無理だ、という声も多かったんですけど。'
+  - speaker: rosen
+    emotion: normal
+    text: 決まってない数字は仮の[値|あたい]で入れて、後で直します。
+  - speaker: zundamon
+    emotion: normal
+    text: で、この[便|びん]はもうかったんですか。
+  - speaker: rosen
+    emotion: happy
+    text: はい。翌月には、数字が出ます。
+  - speaker: zundamon
+    emotion: happy
+    text: 月ごとの数字が翌月に。そのうえ[便ごと|びんごと]まで。これでやっと、計器がそろいましたな。
+  - speaker: ueki
+    emotion: normal
+    text: 満席だと以前は仕事の大変さから、[眉間|みけん]にしわを寄せて答えたのが……
+  - speaker: ueki
+    emotion: happy
+    text: 今は収支がわかるので笑顔を返します。
+  - speaker: reimu
+    text: 3月までの1年、本業のもうけは1884億円。更生計画の見込み641億円の、約2.9倍でした。
+    reading: さんがつまでの いちねん、ほんぎょうの もうけわ せん はっぴゃく はちじゅうよんおくえん。こうせい けいかくの みこみ ろっぴゃく よんじゅういちおくえんの、やく にてんきゅうばいでした。
+    background: jl_kaigi_up
+    telops:
+    - {text: "計画641億円 → 実績1884億円", size: md, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: ueki
+    emotion: normal
+    text: 更生計画では1年目の営業利益は641億円を見込んでいたのが……
+  - speaker: ueki
+    emotion: happy
+    text: 1000億円を超え、次は1300億円と増えていく。
+  - speaker: ueki
+    emotion: happy
+    text: 俺たちもやればできる。数字を見るのが楽しくなっていきました。
+    se: levelup
+# ---- 再上場（2012〜2013年） ----
+- id: card2012
+  title: ''
+  background: jl_card_2012
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2012年2月、植木が社長に。稲盛は、取締役名誉会長に退きます。
+    reading: にせん じゅうにねん にがつ、うえきが しゃちょうに。いなもりわ とりしまりやく めいよ かいちょうに しりぞきます。
+  - speaker: reimu
+    text: 3月までの1年の本業のもうけは、2049億円で過去最高。同じ年度のANAは、970億円でした。
+    reading: さんがつまでの いちねんの ほんぎょうの もうけわ、にせん よんじゅうきゅうおくえんで かこ さいこう。おなじ ねんどの えーえぬえーわ、きゅうひゃく ななじゅうおくえんでした。
+- id: ch7_kane
+  title: 東証の鐘
+  background: jl_shoken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: happy}
+  - {who: oonishi, x: 0.56, emotion: happy}
+  - {who: ueki, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月19日、東京証券取引所。植木が上場の通知書を受け取り、稲盛と大西と3人で鐘を鳴らします。
+    reading: くがつ じゅうくにち、とうきょう しょうけん とりひきじょ。うえきが じょうじょうの つうちしょお うけとり、いなもりと おおにしと さんにんで かねお ならします。
+  - speaker: zundamon
+    emotion: happy
+    text: まったくこういうことが来るとは、考えていなかった。
+  - speaker: zundamon
+    emotion: happy
+    text: 感無量です。
+  - speaker: ueki
+    emotion: normal
+    text: 本日の株価に一喜一憂することなく、確実な経営を続けて企業価値を高め……
+  - speaker: ueki
+    emotion: normal
+    text: 長いスパンで株主にご愛顧いただける経営に努めたい。
+  - speaker: reimu
+    text: 売り出しの値段は3790円、終値は3830円。時価総額は約6946億円で、ANAを上回りました。
+    reading: うりだしの ねだんわ さんぜん ななひゃく きゅうじゅうえん、おわりねわ さんぜん はっぴゃく さんじゅうえん。じか そうがくわ やく ろくせん きゅうひゃく よんじゅうろくおくえんで、えーえぬえーお うわまわりました。
+  - speaker: reimu
+    text: 機構は持っていた株をすべて売り、6633億円を手にしました。出資した3500億円は、全額戻ったのです。
+    reading: きこうわ もって いた かぶお すべて うり、ろくせん ろっぴゃく さんじゅうさんおくえんお てに しました。しゅっし した さんぜん ごひゃくおくえんわ、ぜんがく もどったのです。
+    telops:
+    - {text: "出資3500億円 → 売却6633億円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch7_seto
+  title: ''
+  background: jl_kaiken
+  stage:
+  - {who: seto, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 委員長。再建は、うまくいったと言えますか。
+  - speaker: seto
+    emotion: normal
+    text: 当時[JAL|ジャル]はダメな会社と言われていたが……
+  - speaker: seto
+    emotion: normal
+    text: しっかりした経営指導があり、リスクマネーをきちんと提供すれば……
+  - speaker: seto
+    emotion: happy
+    text: 経営再建できることが立証できた。
+- id: ch7_ana
+  title: 発着枠は8対3
+  background: jl_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: ito, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ANA側は、公的資金を注入してもらい税金もまけてもらっていて、公平な競争になっていない、と主張しました。
+    reading: えーえぬえーがわわ こうてき しきんお ちゅうにゅう して もらい ぜいきんも まけて もらって いて、こうへいな きょうそうに なって いないと しゅちょう しました。
+  - speaker: kisha
+    emotion: normal
+    text: 11月の羽田の[発着枠|ハッチャクワク]の配分は、[ANA|エーエヌエー]さんが8で日本航空が3でした。
+  - speaker: kisha
+    emotion: normal
+    text: 公的支援の期間を、ゼロ点と評価されたためですね。
+  - speaker: kisha
+    emotion: thinking
+    text: これで、競争のゆがみは正されたということですか。
+  - speaker: ito
+    emotion: normal
+    text: ゆがみ是正と[発着枠|ハッチャクワク]の問題とは全く違う話だと認識している。
+  - speaker: reimu
+    text: 伊東は、国に日本航空の経営の監視を続けるよう求めました。
+    reading: いとうわ、くにに にほん こうくうの けいえいの かんしお つづける よう もとめました。
+- id: ch7_tainin
+  title: 素人で無知な私が
+  background: jl_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 稲盛和夫, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2013年3月19日。稲盛は、取締役を退く会見を開きます。
+    reading: にせん じゅうさんねん さんがつ じゅうくにち。いなもりわ、とりしまりやくお しりぞく かいけんお ひらきます。
+  - speaker: kisha
+    emotion: normal
+    text: 再建を振り返って、いかがですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 航空業界にまったく素人で無知な私が、ここまでできるとは思えなかった。
+  - speaker: zundamon
+    emotion: happy
+    text: 素晴らしい成果は、社員の方々が献身的に努力した結果だ。
+  - speaker: kisha
+    emotion: normal
+    text: ほかの会社の再建も、頼まれたら引き受けますか。
+  - speaker: zundamon
+    emotion: normal
+    text: もう81歳。他の企業から頼まれても、引き受けるつもりはない。
+  - speaker: zundamon
+    emotion: happy
+    text: ただ、毎月の業績報告会には出ますよ。
+  - speaker: kisha
+    emotion: surprised
+    text: ……まだ、出るんですか。
+    se: zukko
+  - speaker: reimu
+    text: 2年前、稲盛は、再生のめどがつけば身を引くと話していました。この月の末、取締役を退きます。
+    reading: にねん まえ いなもりわ、さいせいの めどが つけば みお ひくと はなして いました。この つきの すえ、とりしまりやくお しりぞきます。
+# ---- いま（2022〜2026年） ----
+- id: card2022
+  title: ''
+  background: jl_card_2022
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2022年8月24日。稲盛和夫は、京都の自宅で亡くなりました。90歳でした。
+    reading: にせん にじゅうにねん はちがつ にじゅうよっか。いなもり かずおわ、きょうとの じたくで なくなりました。きゅうじゅっさいでした。
+  - speaker: reimu
+    text: 日本航空のコメントです。卓越したリーダーシップにより構造改革と意識改革を進め、再生へと導いていただいた。
+    reading: にほん こうくうの こめんとです。たくえつ した りーだーしっぷに より こうぞう かいかくと いしき かいかくお すすめ、さいせいえと みちびいて いただいた。
+- id: ima
+  title: いまのJAL
+  background: jl_gendai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: で、いまの[JAL|ジャル]はもうかってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月期は、売上が2兆125億円。再上場してから、初めての2兆円超えよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 本業のもうけは2180億円で、過去最高。
+  - speaker: tsumugi
+    emotion: normal
+    text: 物差しは国際基準だから、昔の利益とは比べられないけどね。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ今年は、もっと最高なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 今期の予想は、8月の時点で1800億円。減益の見通しなの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 4月から6月は燃料の高さと円安で、本業のもうけが72％減ったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: な、72％！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: ここまでの数字は、2026年10月の時点のものよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2024年1月2日。羽田の滑走路で、日本航空の機と海上保安庁の機がぶつかったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[海保|カイホ]の機は6人のうち5人が亡くなったわ。日本航空の機の乗客と乗員は、脱出したの。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうだったんだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 今年5月には客室乗務員2人が乗務の前の晩にお酒を飲んで、[便|びん]が42分遅れたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 6月に国が厳重注意。社長は、月の報酬を2か月30％減らしたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は7月に、再発を防ぐ策を国に出したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 手帳には、[尊い|とうとい]命をお預かりする仕事って……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3月には、2035年までの長い計画も出したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2030年度に、本業のもうけ3000億円を目指すって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 利益の半分を、フルサービスの航空以外で稼ぐ体制も目指すの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 飛行機の会社が、飛行機以外で？
+  - speaker: tsumugi
+    emotion: happy
+    text: 格安航空やマイル、金融などね。
+  - speaker: tsumugi
+    emotion: normal
+    text: フィロソフィの教育は2022年の論文の時点でも、名前を変えて続いてたわ。
+# ---- 論争の章 ----
+- id: ronso1
+  title: 税金で救われた？
+  background: jl_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: '[JAL|ジャル]は、税金で救われたって！'
+  - speaker: tsumugi
+    emotion: normal
+    text: 半分は合ってて、半分は違うの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国と民間がお[金|かね]を出し合った機構が、3500億円を出資したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 政府が全部の株を持つ銀行も、つなぎのお[金|かね]を貸したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法人税も軽くなったわ。過去の赤字を、あとの利益と差し引ける仕組みなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年度だけで、約350億円よ。
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり、まけてもらってるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[ANA|エーエヌエー]も、税金をまけてもらっていると主張したわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: でも機構の3500億円は、再上場で6633億円になって戻ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 増えて、戻ってる！？
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 損をかぶったのは、主に銀行と株主と社員よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 銀行は5215億円を[棒引き|ぼうびき]。株は100％減資で、全部消えたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: グループの人員は[3分の1|さんぶんのいち]減って、平均の給料は28％下がった。年金も減ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 赤字を繰り越す仕組みは日本の法人の約7割が使う、ふつうの制度でもあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 救われたのか、救われてないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 出したお[金|かね]は戻った。でも、税の軽さとたくさんの人の負担があった。両方なのよ。
+- id: ronso2
+  title: 稲盛マジック？
+  background: jl_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: でも78歳の素人が2年8か月で立て直したのは、魔法なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 魔法とも、仕組みだけとも言えないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社更生で、飛行機などを今の値段で評価し直したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: すると減価償却が軽くなって、2011年度の本業のもうけを約460億円押し上げたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 金利と税も合わせると、軽くなったのは約860億円。
+    telops:
+    - {text: "更生の仕組みで 約860億円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 下駄をはいてたのだ……。
+    se: chin
+  - speaker: tsumugi
+    emotion: normal
+    text: でも2012年3月期の2049億円から460億円を引いても、約1590億円残るの。
+  - speaker: zundamon
+    emotion: surprised
+    text: まだ、そんなに！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 人や路線を減らす痛みは、機構などの再建案にもともと入っていた部分が大きいわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 変わったのは数字が届く速さと、社員の動き方ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長だった大西さんは、こう話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 『お前ら変われ』という教育はやってきたけど……
+  - speaker: tsumugi
+    emotion: normal
+    text: 『俺、変わる』という教育をやってなかったって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 社長が、自分で言うのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法律の仕組みで身軽になった会社を、[稲盛|イナモリ]さんが数字と言葉で動かした。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 言えるのは、そこまでね。
+- id: chui
+  title: 乗る人と働く人へ
+  background: jl_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクのマイルは、大丈夫なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻した日、政府はマイレージを守ると声明したわ。飛行機も、飛び続けたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも株は、破綻の日に5円。減資で、全部消えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が続くことと、株が残ることは別なのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社が続いても、株は消える……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと企業年金。日本航空ではOBで約3割、現役で約5割減ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: OBと現役それぞれで、[3分の2|さんぶんのに]以上の同意が必要だったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 反対したOBには、今の水準のまま一時金で受け取る道も残されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたの会社の年金の予定利率や積み立ての状況は、年金基金の資料で見られるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4.5％の約束も、ずっと続くとは限らないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: もう一つ。10月25日の[搭乗分|とうじょうぶん]から、若い人やシニア向けの割引の条件が変わったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 乗る前に、一度確かめてね。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: jl_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも、家計に部門別採算を入れるのだ！ おやつ部門の収支を、毎月出す！
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。で、先月のおやつ部門は？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……3か月前の[分|ぶん]まで、計算したのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、2010年の日本航空ね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎日1000機を飛ばしても、1[便ごと|びんごと]の損得が見えなかった会社。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[便ごと|びんごと]の収支まで見える会社に変わって、2年8か月で上場に戻ったの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 数字が早く届けば、手も早く打てる。おやつも同じよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……今月は、もう赤字なのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
