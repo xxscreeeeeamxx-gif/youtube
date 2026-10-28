@@ -3071,5 +3071,306 @@
     "text": "上場廃止は、株の買い付けによる非公開化。"
    }
   ]
+ },
+ {
+  "slug": "docomo-imode",
+  "video_id": "rGd8mvIOywY",
+  "title_a": "「高品質なネットワークを実感してほしい」と言ったドコモ、10年後「つながりにくい」を認める【ずんだもん解説】",
+  "title_b": "【ドコモとiモード】5G基地局は他社の約半分、「つながらない」と言われるまで【ずんだもん解説】",
+  "title_c": "ケータイでネットを広めたドコモは、なぜ「つながらない」と言われるようになったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "長らくお待たせいたしました",
+   "head_hi": "お待たせ",
+   "panels": [
+    {
+     "scene": "dc_machi",
+     "tint": "yellow",
+     "tag": "2013年 発売日",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "行列だ！"
+    },
+    {
+     "scene": "dc_densha",
+     "tint": "mono",
+     "tag": "10年後 駅で",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "止まる…"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "王者ドコモに何が？",
+   "head_hi": "何が",
+   "panels": [
+    {
+     "scene": "dc_shop",
+     "tint": "yellow",
+     "tag": "1999年 iモード",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "ケータイでネット！"
+    },
+    {
+     "scene": "dc_kaigi_akaji",
+     "tint": "red",
+     "tag": "2期連続の減益",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "どうして…"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "大変長らくお待たせいたしました（加藤薫 2013-09-20）",
+    "scene": "ch3_marunouchi",
+    "text": "とにかく大変長らくお待たせいたしました、という気持ちでいっぱい。"
+   },
+   {
+    "claim": "5G基地局は他社の約半分（総務省 2025年3月末）",
+    "scene": "ch1_shikumi",
+    "text": "ソフトバンクは10万4441局。ドコモは、5万2532局でした。"
+   },
+   {
+    "claim": "2期連続の減益（2025年度）",
+    "scene": "ch7_kessan",
+    "text": "2026年5月8日。ドコモの2025年度の決算です。当期利益は6602億円。2期続けての減益でした。"
+   },
+   {
+    "claim": "ドコモの高品質なネットワークを実感してほしい（加藤薫 2013-09-20）",
+    "scene": "ch3_marunouchi",
+    "text": "ぜひ手に取ってドコモの高品質なネットワークを実感してほしい。"
+   }
+  ]
+ },
+ {
+  "slug": "sharp-kameyama",
+  "video_id": "",
+  "title_a": "「亀山のテレビをください」と指名買いされたシャープの工場、22年後に売り先が決まらない【ずんだもん解説】",
+  "title_b": "【シャープの亀山工場】世界の亀山モデルから22年、第2工場は12月に生産終了へ【ずんだもん解説】",
+  "title_c": "「世界の亀山」は、なぜ自分の工場を売れなくなったのか？ シャープ液晶の22年【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "負のサイクルに陥っていた",
+   "head_hi": "負のサイクル",
+   "panels": [
+    {
+     "scene": "sh_kojo",
+     "tint": "yellow",
+     "tag": "2004年 亀山モデル",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "世界の亀山！"
+    },
+    {
+     "scene": "sh_kaigi_akaji",
+     "tint": "red",
+     "tag": "2012年 希望退職",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "隣の机が空に"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "亀山に何が起きた？",
+   "head_hi": "何が",
+   "panels": [
+    {
+     "scene": "sh_ryohan",
+     "tint": "yellow",
+     "tag": "2004年 指名買い",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "亀山のテレビを",
+     "by": "客"
+    },
+    {
+     "scene": "sh_kojo_kara",
+     "tint": "mono",
+     "tag": "12月に生産終了予定",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "最後の1枚…"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "負のサイクルに陥っていた（シャープ 2025年3月期 決算短信）",
+    "scene": "ronso2",
+    "text": "どっちも育たない。会社はそれを、負のサイクルと書いてるの。"
+   },
+   {
+    "claim": "亀山のテレビをください（社史）",
+    "scene": "co_fuseiritsu",
+    "text": "2004年には、亀山のテレビをくださいと名指しで買われた工場です。"
+   },
+   {
+    "claim": "第2工場は12月に生産終了の予定",
+    "scene": "ch6_kibou",
+    "text": "2012年12月13日。希望退職に応じた2960人が、最後に出社する前の日です。"
+   },
+   {
+    "claim": "隣の机がカラになり（公式アカウント 2012-12-13）",
+    "scene": "ch6_kibou",
+    "text": "隣の机がカラになり、現実を感じます……って。"
+   }
+  ]
+ },
+ {
+  "slug": "jal-inamori",
+  "video_id": "",
+  "title_a": "破綻したJALの会長・稲盛和夫「一銭もあずけられませんな」、2年8か月で再上場【ずんだもん解説】",
+  "title_b": "【JALの破綻】負債2兆3221億円の会社に来た、航空の素人の会長・稲盛和夫【ずんだもん解説】",
+  "title_c": "JALはなぜ破綻したのか　素人の会長・稲盛和夫が見た3か月前の数字【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "一銭もあずけられませんな",
+   "head_hi": "一銭も",
+   "panels": [
+    {
+     "scene": "jl_kaigi_akaji",
+     "tint": "red",
+     "tag": "2010年 役員会議",
+     "emo": "angry",
+     "fx": "shock",
+     "say": "数字が遅い！"
+    },
+    {
+     "scene": "jl_shoken",
+     "tint": "yellow",
+     "tag": "2012年 再上場",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "上場に戻った！"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "素人がなぜ立て直せた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "jl_kuko_sukunai",
+     "tint": "mono",
+     "tag": "2010年 負債2.3兆円",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "飛んでるのに…"
+    },
+    {
+     "scene": "jl_kenshu",
+     "tint": "yellow",
+     "tag": "2010年 勉強会",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "缶ビールで勉強"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "あんたには10億円どころか、一銭もあずけられませんな（稲盛 2010年春）",
+    "scene": "co_issen",
+    "text": "あんたには10億円どころか、一銭もあずけられませんな。"
+   },
+   {
+    "claim": "負債2兆3221億円（3社合計）",
+    "scene": "co_issen",
+    "text": "この会社は1月、負債2兆3221億円で破綻しました。それが2年8か月で、上場に戻ります。"
+   },
+   {
+    "claim": "3か月も4か月も前の数字（稲盛の回想）",
+    "scene": "ch1_kessan",
+    "text": "……これは、3か月も4か月も前の数字ですな。"
+   },
+   {
+    "claim": "2年8か月で再上場",
+    "scene": "co_issen",
+    "text": "この会社は1月、負債2兆3221億円で破綻しました。それが2年8か月で、上場に戻ります。"
+   }
+  ]
+ },
+ {
+  "slug": "nikon-stepper",
+  "video_id": "",
+  "title_a": "「オセロゲームのようにシェアを奪った」ASMLに抜かれたニコン、最上位機が1年で0台【ずんだもん解説】",
+  "title_b": "【ニコンの露光装置】世界一だった機械、最上位機は1年で0台に【ずんだもん解説】",
+  "title_c": "金額で世界の約半分を握ったニコンの露光装置は、なぜ後発に逆転されたのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "ニコンに課せられた使命",
+   "head_hi": "使命",
+   "panels": [
+    {
+     "scene": "nk_roko",
+     "tint": "yellow",
+     "tag": "2002年 シェアNo.1",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "世界一の機械！"
+    },
+    {
+     "scene": "nk_kaigai",
+     "tint": "mono",
+     "tag": "後発のASMLが逆転",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "台が2つ！？"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ後発に抜かれた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "nk_jikken",
+     "tint": "yellow",
+     "tag": "自前で磨くレンズ",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "うちのレンズ！"
+    },
+    {
+     "scene": "nk_roko_kara",
+     "tint": "mono",
+     "tag": "2026年 液浸0台",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "1台も売れず…"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "シェアＮｏ.1を維持することは、ニコンに課せられた使命です（嶋村 2002年 年次報告書）",
+    "scene": "ch3_shimei",
+    "text": "シェアNo.1を維持することは、ニコンに課せられた使命です。"
+   },
+   {
+    "claim": "最上位のArF液浸は2026年3月期に0台",
+    "scene": "co_kessan",
+    "text": "それに、うちのいちばん上の機械。この1年で、売れたのは0台だ。"
+   },
+   {
+    "claim": "金額で世界の約半分（1995年 約49％）",
+    "scene": "ch2_sekai",
+    "text": "1995年、ニコンの露光装置は台数で世界の45％、金額では約49％。世界の約半分です。"
+   },
+   {
+    "claim": "ASMLの2枚同時の台（2001年 TWINSCAN）",
+    "scene": "ch1_twin",
+    "text": "しかも向こうは今年、ウエハーを載せる台を2つ持つ機械を出した。"
+   }
+  ]
  }
 ]

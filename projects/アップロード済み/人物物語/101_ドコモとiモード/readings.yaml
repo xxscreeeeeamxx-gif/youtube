@@ -1,0 +1,43 @@
+# docomo-imode 読み台帳（人名・社名・専門語・英字の語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている（人名・英字・数字もひらがなで書き下した）。
+# 名札（tag: 店員・副店長 / label: 店長・常連さん・部長・NTT社長・ドコモ社長・夏野剛 ほか）とテロップは表示専用なのでタグを付けていない。
+# ドコモ・NTT・KDDI・MNP・iモード・iPhone・iアプリ はセリフでもタグなし（英字読み・カタカナ読みで通る想定）。voice 後にモーラで確かめること。
+# 「5G」「4G」「3G」は VOICEVOX が ゴジー／ヨンジー のように数字読みしやすいので、全部タグで ファイブジー／フォージー／スリージー にした。
+# 人名（ナレだけに出る）
+- {surface: 林直樹, reading: はやしなおき}
+- {surface: 榎啓一, reading: えのきけいいち}
+- {surface: 松永真理, reading: まつながまり}
+- {surface: 夏野剛, reading: なつのたけし}
+- {surface: 加藤薫, reading: かとうかおる}
+- {surface: 菅義偉, reading: すがよしひで}
+- {surface: 澤田純, reading: さわだじゅん}
+- {surface: 吉澤和弘, reading: よしざわかずひろ}
+- {surface: 井伊基之, reading: いいもとゆき}
+- {surface: 島田明, reading: しまだあきら}
+- {surface: 前田義晃, reading: まえだよしあき}
+- {surface: 栗田穣崇, reading: くりたしげたか}
+# 人名（セリフにも出る）
+- {surface: 澤田, reading: さわだ}
+- {surface: 吉澤, reading: よしざわ}
+# 英字・型番・サービス名
+- {surface: 5G, reading: ふぁいぶじー}
+- {surface: 4G, reading: ふぉーじー}
+- {surface: 3G, reading: すりーじー}
+- {surface: GB, reading: ぎが}
+- {surface: ahamo, reading: あはも}
+- {surface: FOMA, reading: ふぉーま}
+- {surface: VoLTE, reading: ぼるて}
+- {surface: NISA, reading: にーさ}
+- {surface: F501i, reading: えふごーまるいちあい}
+- {surface: No.1, reading: なんばーわん}
+- {surface: spモード, reading: えすぴーもーど}            # ナレだけに出る
+- {surface: MHz, reading: めがへるつ}                    # ナレだけに出る
+- {surface: '151', reading: いちごーいち}               # ドコモの問い合わせ番号（セリフの1か所）
+# 言葉
+- {surface: 下期, reading: しもき}                      # かき と読まれやすい
+- {surface: 上期, reading: かみき}                      # ナレだけに出る
+- {surface: 何合目, reading: なんごうめ}
+- {surface: 最終形, reading: さいしゅうけい}                # サイシュウガタ と読まれる（見直しで指摘）
+- {surface: 丸の内, reading: まるのうち}                  # ナレだけに出る
+- {surface: 富士通, reading: ふじつう}                    # ナレだけに出る

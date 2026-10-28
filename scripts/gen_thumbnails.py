@@ -4350,6 +4350,25 @@ SPECS = {
         _p("p_fuutou", "1997年", SLATE, "angry", "褒賞は計2万円", "特許1件の褒賞"),
         _p("p_tenbin", "2004年", NAVY, "surprised", "604億円！？", "地裁の認定"),
     ]),
+    # いまの話題 第3弾（2026-11-05〜08）。A は場面型
+    "docomo-imode": dict(layout="scene", headline="ドコモ、つながりにくい", head_hi="つながりにくい", panels=[
+        dict(scene="dc_shop", tint="yellow", tag="1999年 iモード", emo="happy", fx="sparkle", say="ケータイでネット！"),
+        dict(scene="dc_densha", tint="mono", tag="2025年 5G局は半分", emo="sad", fx="gloom", say="駅で止まる…"),
+    ]),
+    "sharp-kameyama": dict(layout="scene", headline="世界の亀山、売り先未定", head_hi="売り先未定", panels=[
+        dict(scene="sh_ryohan", tint="yellow", tag="2004年 指名買い", emo="happy", fx="sparkle",
+             say="亀山のテレビを", by="客"),
+        dict(scene="sh_kojo_kara", tint="mono", tag="2026年 売却不成立", emo="sad", fx="gloom", say="客はいるのに…"),
+    ]),
+    "jal-inamori": dict(layout="scene", headline="破綻のJAL、2年8か月で再上場", head_hi="再上場", panels=[
+        dict(scene="jl_kaigi_akaji", tint="red", tag="2010年 負債2.3兆円", emo="surprised", fx="shock",
+             say="3か月前の数字！？"),
+        dict(scene="jl_shoken", tint="yellow", tag="2012年 再上場", emo="happy", fx="sparkle", say="上場に戻った！"),
+    ]),
+    "nikon-stepper": dict(layout="scene", headline="ニコン、最上位機が0台", head_hi="0台", panels=[
+        dict(scene="nk_roko", tint="yellow", tag="1990年 世界一", emo="happy", fx="sparkle", say="世界一の機械！"),
+        dict(scene="nk_roko_kara", tint="mono", tag="2026年 液浸0台", emo="sad", fx="gloom", say="1台も売れず…"),
+    ]),
     # いまの話題 第2弾（2026-11-01〜04）。A は場面型
     "hitachi-kaden": dict(layout="scene", headline="日立の家電、ノジマへ", head_hi="ノジマへ", panels=[
         dict(scene="hk_ryohan", tint="yellow", tag="2023年 指定価格", emo="surprised", fx="sweat",

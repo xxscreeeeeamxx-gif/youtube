@@ -406,7 +406,8 @@ PLAYLISTS = {
                "yagi-uda-antenna-v2", "kobori-airbag-v2", "fujisawa-supercub-v2",
                "frixion-metamo-v2", "famicom-uemura-v2", "matsushita-socket",
                "sanyo-end", "godzilla-tsuburaya", "yamaha-torakusu", "sega-dreamcast", "sogo-mizushima", "fujifilm-komori", "blue-led-nakamura", "snowbrand-mizutani", "toysrus-japan", "nissan-oppama", "seven-i-suzuki", "honda-ev-sanbe",
-               "hitachi-kaden", "nengajo-otoshidama", "toshiba-delisting", "seiyu-trial"]),
+               "hitachi-kaden", "nengajo-otoshidama", "toshiba-delisting", "seiyu-trial",
+               "docomo-imode", "sharp-kameyama", "nikon-stepper", "jal-inamori"]),
     # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
     # こちらはチャンネルページと検索結果に並ぶ入口。関連動画の隣人が
     # 「会社の興亡」「ゲーム」「クルマ」のように題材ごとに固まっているので、
@@ -425,7 +426,8 @@ PLAYLISTS = {
                "glico-ezaki", "mikimoto-pearl", "casio-kashio-v2",
                "fujisawa-supercub-v2", "matsushita-socket", "sanyo-end",
                "yamaha-torakusu", "sega-dreamcast", "sogo-mizushima", "fujifilm-komori", "blue-led-nakamura", "snowbrand-mizutani", "toysrus-japan", "nissan-oppama", "seven-i-suzuki", "honda-ev-sanbe",
-               "hitachi-kaden", "nengajo-otoshidama", "toshiba-delisting", "seiyu-trial"]),
+               "hitachi-kaden", "nengajo-otoshidama", "toshiba-delisting", "seiyu-trial",
+               "docomo-imode", "sharp-kameyama", "nikon-stepper", "jal-inamori"]),
     "play": dict(
         title="ゲームと遊びの誕生｜ずんだもん再現ドラマ",
         desc="ゲームボーイ、プリクラ、カラオケ。遊びの道具にも、最初に作った人がいます。"

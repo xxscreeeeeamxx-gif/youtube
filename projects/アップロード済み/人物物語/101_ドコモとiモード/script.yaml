@@ -1,0 +1,1573 @@
+meta:
+  title: 「高品質なネットワークを実感してほしい」と言ったドコモ、10年後「つながりにくい」を認める【ずんだもん解説】
+  slug: docomo-imode
+  hook_line: ケータイでネットを広めたドコモが、なぜ“つながらない”と言われるのか。
+  summary: 2026年3月31日、iモードが27年の歴史を終えました。同じ年、都市部の駅ではドコモが“つながらない”という声がSNSで続いています。1999年にiモードの携帯を売り始めた、駅前の携帯ショップの店員（架空の人物）の目で、5Gの基地局と電波の転用、値下げと完全子会社化、シェアを守る販促までを、会社の説明と記者の見方を分けて再現ドラマでたどります。（2026年10月28日時点）
+  sources:
+  - NTTドコモ「FOMA・iモードのサービス終了について」 https://www.docomo.ne.jp/info/3g_closed/
+  - NTTドコモ「2025年度決算 及び 2026年度業績予想について」（2026年5月8日） https://www.docomo.ne.jp/corporate/ir/binary/pdf/library/presentation/260508/presentation_fy2025_4q.pdf
+  - NTTドコモ「2026年度 第1四半期決算について」（2026年8月6日） https://www.docomo.ne.jp/corporate/ir/binary/pdf/library/presentation/260806/presentation_fy2026_1q.pdf
+  - NTT「株式会社NTTドコモ株式等（証券コード9437）に対する公開買付けの開始及び資金の借入について」（2020年9月29日） https://group.ntt/jp/newsrelease/2020/09/29/200929b.html
+  - ITmedia Mobile「なぜドコモで『つながりにくい』問題が起きているのか 明かされた根本的な要因」（2023年4月27日） https://www.itmedia.co.jp/mobile/articles/2304/27/news103.html
+  - ケータイWatch「25年3月の5G基地局の数、ドコモはau・ソフトバンクの半分――総務省調査」（2026年1月14日） https://k-tai.watch.impress.co.jp/docs/news/2077686.html
+  tags:
+  - ドコモ
+  - iモード
+  - NTTドコモ
+  - つながらない
+  - 5G
+  - ahamo
+  - NTT
+  - 完全子会社化
+  - FOMA
+  - 3G停波
+  - 前田義晃
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 高品質なネットワークの10年後
+    bottom: ドコモとiモード
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: tencho
+    label: 店長
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3a4a5a'
+  - id: jouren
+    label: 常連さん
+    voice: 42
+    pitch: 0.0
+    outfit: none
+  - id: kyaku
+    label: お客さん
+    voice: 8
+    pitch: 0.04
+    outfit: none
+  - id: wakai
+    label: 若い客
+    voice: 21
+    pitch: -0.02
+    outfit: none
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: hayashi
+    label: 部長
+    voice: 11
+    pitch: 0.08
+    outfit: suit
+    color: '#2f3a52'
+  - id: nakaminami
+    label: 部長
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: natsuno
+    label: 夏野剛
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2a32'
+  - id: kato
+    label: ドコモ社長
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#3a2a24'
+  - id: sawada
+    label: NTT社長
+    voice: 13
+    pitch: -0.10
+    outfit: suit
+    color: '#1a1a1a'
+  - id: yoshizawa
+    label: ドコモ社長
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#4a4a52'
+  - id: ii
+    label: ドコモ社長
+    voice: 67
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: shimada
+    label: NTT社長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#30343c'
+  - id: maeda
+    label: ドコモ社長
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4a5a'
+scenes:
+# ---- 先出し（2026年3月31日の夜・iモードが終わる日） ----
+- id: co_imode
+  title: ''
+  background: dc_shop
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 副店長, emotion: thinking}
+  - {who: jouren, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2026年3月31日の夜。駅前の、ドコモの携帯ショップです。
+    reading: にせん にじゅうろくねん さんがつ さんじゅういちにちの よる。えきまえの どこもの けいたい しょっぷです。
+  - speaker: jouren
+    emotion: thinking
+    text: 今夜で、iモードも終わりか。
+  - speaker: zundamon
+    emotion: normal
+    text: はい。27年、お疲れさまでした。
+  - speaker: jouren
+    emotion: normal
+    text: あんたから買った最初の1台も、iモードだったな。
+  - speaker: reimu
+    text: iモードの契約は、2010年に約4900万。ケータイでネットを広めたサービスでした。
+    reading: あいもーどの けいやくわ、にせん じゅうねんに やく よんせん きゅうひゃくまん。けいたいで ねっとお ひろめた さーびすでした。
+# ---- 先出し（同じ年の夏・電車の中） ----
+- id: co_densha
+  title: ''
+  background: dc_densha
+  stage:
+  - {who: zundamon, x: 0.5, flip: true, tag: 副店長, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じ年の夏。SNSでは、ドコモはつながらないという声が続いています。
+    reading: おなじ としの なつ。えすえぬえすでわ、どこもわ つながらないと いう こえが つづいて います。
+  - speaker: zundamon
+    emotion: thinking
+    text: アンテナは立ってるのに……ページが止まったのだ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボク、ドコモの店の副店長なのに……。
+    beat: true
+  - speaker: reimu
+    text: 5G基地局は、2025年3月末で他社の約半分。利益は2期続けて減りました。
+    reading: ふぁいぶじー きちきょくわ、にせん にじゅうごねん さんがつまつで たしゃの やく はんぶん。りえきわ にき つづけて へりました。
+    telops:
+    - {text: "5G基地局は他社の約半分（2025年3月末）", size: md, position: top-center, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 世界で最初にケータイでネットを広めた会社が、なぜつながらないと言われるようになったのでしょう。
+    reading: せかいで さいしょに けいたいで ねっとお ひろめた かいしゃが、なぜ つながらないと いわれる ように なったのでしょう。
+# ---- 今の部屋（引き出しの折りたたみの携帯） ----
+- id: hook
+  title: ''
+  background: dc_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 引き出しの奥から、折りたたみの携帯が出てきたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: iモードの携帯ね。そのiモードは、今年の3月で終わったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今のスマホなんて、駅でページが止まるのに……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 止まる理由は、駅の電波の道にあるの。
+# ---- 2023年の春・駅前のショップ ----
+- id: card2023
+  title: ''
+  background: dc_card_2023
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2023年の春。同じ駅前の携帯ショップです。店員は、1999年に代理店に入った社員です。
+    reading: にせん にじゅうさんねんの はる。おなじ えきまえの けいたい しょっぷです。てんいんわ、せんきゅうひゃく きゅうじゅうきゅうねんに だいりてんに はいった しゃいんです。
+- id: ch1_kyaku
+  title: 駅でつながらない
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 店員, emotion: normal}
+  - {who: wakai, x: 0.52, emotion: angry}
+  - {who: tencho, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: wakai
+    emotion: angry
+    text: 新宿駅で、スマホが全然つながらないんですけど！
+  - speaker: zundamon
+    emotion: normal
+    text: 電波のマークは、立ってますよね？
+  - speaker: wakai
+    emotion: angry
+    text: 立ってます。なのにページが止まるんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 圏外じゃないのに、止まる……。
+  - speaker: tencho
+    emotion: thinking
+    text: 申し訳ありません。本社も、品質の低下を認めています。
+  - speaker: zundamon
+    emotion: surprised
+    text: 認めたんですか！？
+- id: ch1_kaiken
+  title: ''
+  background: dc_kaiken
+  stage:
+  - {who: hayashi, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2023年4月26日。ドコモの5Gの説明会で、部長の林直樹が答えます。
+    reading: にせん にじゅうさんねん しがつ にじゅうろくにち。どこもの ふぁいぶじーの せつめいかいで、ぶちょうの はやし なおきが こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: 都市部で、つながりにくいという声が相次いでいます。
+  - speaker: hayashi
+    emotion: thinking
+    text: 全てのトラフィックが[4G|フォージー]側に乗ってしまい、
+    telops:
+    - {text: "林部長「全てのトラフィックが4G側に乗ってしまい」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: hayashi
+    emotion: normal
+    text: 時間帯によっては通信速度が低下する事象がある。
+  - speaker: kisha
+    emotion: surprised
+    text: '[4G|フォージー]に……乗ってしまう？'
+# ---- 店長の説明：4Gに集まる通信と、基地局の数 ----
+- id: ch1_shikumi
+  title: 4Gに集まる通信
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[5G|ファイブジー]のスマホなのに、[4G|フォージー]に乗っちゃうんですか？'
+  - speaker: tencho
+    emotion: normal
+    text: '[5G|ファイブジー]が届く場所が、まだ狭いんだ。届かなければ、スマホは[4G|フォージー]でつなぐ。'
+  - speaker: tencho
+    emotion: thinking
+    text: 流れるデータも年々増えて、[4G|フォージー]の道に車が集まる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 新しい道があるのに、みんな古い道で渋滞！？
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあ[5G|ファイブジー]の基地局を、どんどん建てれば！
+  - speaker: tencho
+    emotion: thinking
+    text: 新しい[5G|ファイブジー]の基地局は、ビルの屋上を借りて建てるんだ。
+  - speaker: tencho
+    emotion: thinking
+    text: 持ち主との話し合いに、時間がかかるらしい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 大家さん待ち！？
+  - speaker: tencho
+    emotion: normal
+    text: その間に他社は、[4G|フォージー]の電波を[5G|ファイブジー]に回して[5G|ファイブジー]の場所を一気に広げた。
+  - speaker: tencho
+    emotion: thinking
+    text: ドコモが回し始めたのは、去年の春だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 遅っ！
+  - speaker: reimu
+    text: 2年後の2025年3月末。総務省の調べでは、5G基地局はKDDIが11万37局。
+    reading: にねんごの にせん にじゅうごねん さんがつまつ。そうむしょうの しらべでわ、ふぁいぶじー きちきょくわ けーでぃーでぃーあいが じゅういちまん さんじゅうななきょく。
+  - speaker: reimu
+    text: ソフトバンクは10万4441局。ドコモは、5万2532局でした。
+    reading: そふとばんくわ じゅうまん よんせん よんひゃく よんじゅういちきょく。どこもわ、ごまん にせん ごひゃく さんじゅうにきょくでした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分！？
+    se: gaan
+  - speaker: reimu
+    text: ただ新しい周波数の局だけなら、ドコモはソフトバンクより多い。差の多くは4Gから回した電波などの局でした。
+    reading: ただ あたらしい しゅうはすうの きょく だけなら、どこもわ そふとばんくより おおい。さの おおくわ ふぉーじーから まわした でんぱ などの きょくでした。
+  - speaker: zundamon
+    emotion: thinking
+    text: なんで、回すのが遅れたんです？
+  - speaker: tencho
+    emotion: thinking
+    text: 3年前、ドコモの部長が他社のそのやり方をけん制してたんだ。
+- id: ch1_2020
+  title: ''
+  background: dc_kaiken
+  stage:
+  - {who: nakaminami, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2020年8月。ドコモの技術企画担当部長の発言です。
+    reading: にせん にじゅうねん はちがつ。どこもの ぎじゅつ きかく たんとう ぶちょうの はつげんです。
+  - speaker: nakaminami
+    emotion: normal
+    text: 周波数の幅は変わらないため速度は[4G|フォージー]と同様であるほか、
+  - speaker: nakaminami
+    emotion: thinking
+    text: '[4G|フォージー]ユーザーの通信速度が低下する可能性がある。'
+  - speaker: nakaminami
+    emotion: thinking
+    text: '[5G|ファイブジー]スマホを買って[5G|ファイブジー]エリアに入っても体感速度が向上せず、優良誤認になる恐れがある。'
+    telops:
+    - {text: "中南直樹部長（2020年）「優良誤認になる恐れ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch1_hanbun
+  title: ''
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: tencho
+    emotion: normal
+    text: ドコモは、新しい周波数の[5G|ファイブジー]を中心に広げてたんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: その電波の回し方を、今はドコモもやってるんですよね。
+  - speaker: tencho
+    emotion: normal
+    text: 国から、[5G|ファイブジー]を急げと言われてな。
+  - speaker: tencho
+    emotion: thinking
+    text: ただ回しても、道の幅は同じだ。混む駅には新しい周波数が要る。
+  - speaker: tencho
+    emotion: normal
+    text: 本社の資料だと、遅くなる原因は4つあるそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 4つも？
+  - speaker: tencho
+    emotion: thinking
+    text: 通信量の増加・新しい[5G|ファイブジー]の遅れ・再開発・特定の周波数のひっ迫。
+  - speaker: tencho
+    emotion: thinking
+    text: 細い道に、人が集まる。それが駅だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: お客さんの言うつながらないは、駅の道の渋滞なんですね。
+  - speaker: tencho
+    emotion: thinking
+    text: この3年で、ドコモは料金を下げてNTTの完全子会社にもなった。
+  - speaker: zundamon
+    emotion: sad
+    text: 時期が、重なってますね……。
+  - speaker: reimu
+    text: ではなぜ、ケータイでネットを広めた会社が、電波の道で出遅れたのでしょう。
+    reading: でわ なぜ けいたいで ねっとお ひろめた かいしゃが、でんぱの みちで でおくれたのでしょう。
+  - speaker: reimu
+    text: 始まりは、この店がiモードを売り始めた1999年です。
+    reading: はじまりわ、この みせが あいもーどお うりはじめた せんきゅうひゃく きゅうじゅうきゅうねんです。
+# ---- 1999年・iモードが始まる ----
+- id: card1999
+  title: ''
+  background: dc_card_1999
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 1999年2月22日。ドコモがiモードを始めます。間に合った電話は富士通のF501iの1機種だけ。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねん にがつ にじゅうににち。どこもが あいもーどお はじめます。まにあった でんわわ ふじつうの えふ ごーまるいち あいの いっきしゅ だけ。
+  - speaker: reimu
+    text: 開発を率いたのは榎啓一。リクルートから来た松永真理や、夏野剛らが加わっていました。
+    reading: かいはつお ひきいたのわ えのき けいいち。りくるーとから きた まつなが まりや、なつの たけしらが くわわって いました。
+- id: ch2_mihon
+  title: 1パケットって何？
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: happy}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tencho
+    emotion: normal
+    text: 今日から、これがiモードの電話だ。
+  - speaker: zundamon
+    emotion: happy
+    text: 見本、ボクが一番に触っていいですか！
+  - speaker: tencho
+    emotion: angry
+    text: お客さんより先に触るな。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: happy
+    text: だって電話なのに、ネットにつながるんですよ！
+  - speaker: tencho
+    emotion: normal
+    text: 月300円と、1パケット0.3円。値段をまず覚えろ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1パケット、0.3円……。
+- id: ch2_packet
+  title: ''
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 店員, emotion: happy}
+  - {who: kyaku, x: 0.52, emotion: normal}
+  - {who: jouren, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: ねえ、1パケットって何？
+  - speaker: zundamon
+    emotion: happy
+    text: 128バイトです！
+  - speaker: kyaku
+    emotion: thinking
+    text: ……バイトって何？
+  - speaker: zundamon
+    emotion: thinking
+    text: ええと……とにかく、0.3円です！
+  - speaker: kyaku
+    emotion: angry
+    text: 答えになってないわよ。
+    beat: true
+  - speaker: jouren
+    emotion: happy
+    text: オレは買うよ。外でメールが打てるんだろ？
+  - speaker: zundamon
+    emotion: happy
+    text: はい！ 250文字まで送れます。
+  - speaker: jouren
+    emotion: normal
+    text: 1台くれ。いくらだ？
+  - speaker: zundamon
+    emotion: happy
+    text: '[F501i|エフゴーマルイチアイ]、3万5900円です！'
+  - speaker: reimu
+    text: 128バイトで0.3円。この値段で1GBを使うと約234万円。今のahamoなら約99円です。
+    reading: ひゃく にじゅうはち ばいとで れいてん さんえん。この ねだんで いちぎがお つかうと やく にひゃく さんじゅうよんまんえん。いまの あはもなら やく きゅうじゅうきゅうえんです。
+    telops:
+    - {text: "1GBの値段　1999年は約234万円／今は約99円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch2_senman
+  title: 532日で1000万
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: happy}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tencho
+    emotion: normal
+    text: iモードの契約が、1000万を超えたそうだ。始まって532日だと。
+  - speaker: zundamon
+    emotion: happy
+    text: 1000万！ ボクが売りまくったおかげなのだ！
+    se: levelup
+  - speaker: tencho
+    emotion: thinking
+    text: お前が売ったのは、そのうち何台だ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……そのうちの、ちょっとです。
+  - speaker: tencho
+    emotion: angry
+    text: ちょっとで、胸を張るな。
+    beat: true
+  - speaker: reimu
+    text: ドコモの時価総額は1999年にNTTを抜き、2000年には約43兆円に達しました。
+    reading: どこもの じかそうがくわ せんきゅうひゃく きゅうじゅうきゅうねんに えぬてぃーてぃーお ぬき、にせんねんにわ やく よんじゅうさんちょうえんに たっしました。
+  - speaker: reimu
+    text: このとき、まだ誰もこの会社がつながりにくいと言われる日が来るとは思っていません。
+    reading: この とき、まだ だれも この かいしゃが つながりにくいと いわれる ひが くるとわ おもって いません。
+- id: ch2_kaigai
+  title: ''
+  background: dc_jimusho
+  cuts:
+  - speaker: reimu
+    text: その頃ドコモは、iモードと3Gを世界に広げようと、海外の携帯会社に出資していました。
+    reading: その ころ どこもわ、あいもーどと すりーじーお せかいに ひろげようと かいがいの けいたい がいしゃに しゅっし して いました。
+  - speaker: reimu
+    text: 2002年3月期。出資先の株の値下がりで、5500億円の評価損を出します。上場して初めての赤字でした。
+    reading: にせん にねん さんがつき。しゅっしさきの かぶの ねさがりで、ごせん ごひゃくおくえんの ひょうかそんお だします。じょうじょう して はじめての あかじでした。
+    background: dc_jimusho_yoru
+- id: ch2_layer
+  title: 全部ドコモが決める
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: happy}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 店長！ 2004年は、[パケ・ホーダイ|パケホーダイ]とおサイフケータイです！
+    se: jaan
+  - speaker: tencho
+    emotion: normal
+    text: 2001年のiアプリに、[FOMA|フォーマ]もあった。新しいものが次々だな。
+  - speaker: zundamon
+    emotion: happy
+    text: 電話の中身から、全部ドコモが決めてますからね。
+  - speaker: tencho
+    emotion: normal
+    text: 電話機のメーカーも、ドコモの決めた仕様で作る。
+  - speaker: zundamon
+    emotion: happy
+    text: 無敵じゃないですか。
+  - speaker: reimu
+    text: ハードウェアからOS、アプリケーションに至るまですべてのレイヤにおいてドコモが仕様を策定し……。
+    reading: はーどうぇあから おーえす、あぷりけーしょんに いたるまで すべての れいやに おいて どこもが しようお さくてい し。
+  - speaker: reimu
+    text: のちにドコモ自身がそう書いた型。この型が、スマホの時代に重荷になっていきます。
+    reading: のちに どこも じしんが そう かいた かた。この かたが、すまほの じだいに おもにに なって いきます。
+# ---- 2008年・iPhoneは他社から ----
+- id: card2008
+  title: ''
+  background: dc_card_2008
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2008年7月11日。iPhone 3Gが、日本で発売されます。売ったのは、ソフトバンクでした。
+    reading: にせん はちねん しちがつ じゅういちにち。あいふぉん すりーじーが、にほんで はつばい されます。うったのわ、そふとばんくでした。
+- id: ch3_iphone
+  title: iPhoneは他社から
+  background: dc_machi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: happy}
+  - {who: jouren, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見てください、あの行列！ ボクも並んでこようかな。
+  - speaker: jouren
+    emotion: angry
+    text: あんた、ドコモの店員だろ。
+    se: hammer
+  - speaker: zundamon
+    emotion: thinking
+    text: ……休憩時間なら、いいかなって。
+  - speaker: jouren
+    emotion: normal
+    text: で、ドコモでは出ないのか？
+  - speaker: zundamon
+    emotion: thinking
+    text: 本社からは、何も……。
+  - speaker: jouren
+    emotion: thinking
+    text: オレのiモード、もう古いのかな。
+  - speaker: reimu
+    text: この年の4月末。iモードの事業の仕組みを担った夏野剛は、ドコモを退社していました。
+    reading: この としの しがつまつ。あいもーどの じぎょうの しくみお になった なつの たけしわ、どこもお たいしゃ して いました。
+- id: ch3_natsuno
+  title: ''
+  background: dc_gendai
+  stage:
+  - {who: natsuno, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2017年のインタビューで、夏野はこう振り返っています。
+    reading: にせん じゅうななねんの いんたびゅーで、なつのわ こう ふりかえって います。
+  - speaker: kisha
+    emotion: normal
+    text: iPhoneが出たときの印象は、どうでしたか。
+  - speaker: natsuno
+    emotion: thinking
+    text: 進化させて進化させて進化させて…、[最終形|サイシュウケイ]をアップルに出されたと感じましたね。
+  - speaker: kisha
+    emotion: surprised
+    text: '[最終形|サイシュウケイ]、ですか。'
+  - speaker: natsuno
+    emotion: normal
+    text: 機種が多過ぎたiモードでは全面液晶を低価格で提供できなかったんですね。
+# ---- 2010年・土管になりたくない ----
+- id: ch3_dokan
+  title: 土管になりたくない
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: happy}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 2010年、iモードは約4900万契約！ まだまだ伸びますね！
+  - speaker: tencho
+    emotion: normal
+    text: 本社の方針だ。スマホでも、ドコモならではのサービスを出す。
+  - speaker: zundamon
+    emotion: thinking
+    text: スマホを、そのまま売らないんですか？
+  - speaker: tencho
+    emotion: thinking
+    text: そのままだと、ドコモは土管になるんだと。
+  - speaker: zundamon
+    emotion: surprised
+    text: 土管！？ ボクら、水道管だったんですか！？
+    se: manuke
+  - speaker: tencho
+    emotion: angry
+    text: 通信の道だけ貸して、ほかの価値を出せない会社って意味だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 道だけの会社……。
+  - speaker: reimu
+    text: 2010年9月、iモードのメールアドレスをスマホでも使えるspモードが始まります。
+    reading: にせん じゅうねん くがつ、あいもーどの めーる あどれすお すまほでも つかえる えすぴー もーどが はじまります。
+  - speaker: reimu
+    text: ドコモは、自分の型をスマホにも持ち込もうとしました。
+    reading: どこもわ、じぶんの かたお すまほにも もちこもうと しました。
+- id: ch3_uriba
+  title: ''
+  background: dc_uriba
+  cuts:
+  - speaker: reimu
+    text: 量販店の売り場には、まだ折りたたみの携帯が並んでいます。
+    reading: りょうはんてんの うりばにわ、まだ おりたたみの けいたいが ならんで います。
+  - speaker: reimu
+    text: この年度、ドコモのスマホは13機種。1年で252万台が売れました。
+    reading: この ねんど、どこもの すまほわ じゅうさん きしゅ。いちねんで にひゃく ごじゅうにまんだいが うれました。
+    background: dc_uriba_sumaho
+- id: ch3_mnp
+  title: 1年で140万件
+  background: dc_shop
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: normal}
+  - {who: jouren, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2012年度。ドコモから他社へ移った契約は、移ってきた契約より140万件多くなります。過去最大でした。
+    reading: にせん じゅうにねんど。どこもから たしゃえ うつった けいやくわ、うつって きた けいやくより ひゃくよんじゅうまんけん おおく なります。かこ さいだいでした。
+  - speaker: jouren
+    emotion: thinking
+    text: 周りがみんな、iPhoneにしてるんだよな。
+  - speaker: zundamon
+    emotion: happy
+    text: ドコモにも、スマホはありますよ！
+  - speaker: jouren
+    emotion: normal
+    text: iPhoneは？
+  - speaker: zundamon
+    emotion: sad
+    text: ……ありません。
+    se: shobon
+  - speaker: jouren
+    emotion: thinking
+    text: じゃあ、もうちょっと考える。
+  - speaker: reimu
+    text: 日経は、人気の高いiPhoneを扱っていないことが響いた、と報じました。
+    reading: にっけいわ、にんきの たかい あいふぉんお あつかって いない ことが ひびいたと ほうじました。
+# ---- 2013年9月20日・ドコモのiPhone ----
+- id: ch3_2013
+  title: 大変長らくお待たせしました
+  background: dc_shop
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: happy}
+  - {who: jouren, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2013年9月20日、朝8時。ドコモがiPhoneの販売を始めます。
+    reading: にせん じゅうさんねん くがつ はつか、あさ はちじ。どこもが あいふぉんの はんばいお はじめます。
+  - speaker: zundamon
+    emotion: happy
+    text: お待たせしました！ ドコモのiPhoneです！
+  - speaker: jouren
+    emotion: happy
+    text: やっとか。5年待ったぞ。
+  - speaker: zundamon
+    emotion: happy
+    text: 店の前、朝から行列ですよ！
+  - speaker: jouren
+    emotion: normal
+    text: あんたは、並ばなくていいのか？
+  - speaker: zundamon
+    emotion: happy
+    text: 今日は、売る側です！
+  - speaker: jouren
+    emotion: thinking
+    text: 5年前は、並びたがってたのにな。
+    beat: true
+  - speaker: reimu
+    text: 東京・丸の内のドコモショップには、315人が並びました。社長の加藤薫が、その店で話します。
+    reading: とうきょう まるのうちの どこも しょっぷにわ、さんびゃく じゅうごにんが ならびました。しゃちょうの かとう かおるが、その みせで はなします。
+- id: ch3_marunouchi
+  title: ''
+  background: dc_machi
+  stage:
+  - {who: kato, x: 0.5, emotion: happy}
+  cuts:
+  - speaker: kato
+    emotion: normal
+    text: 昨夜ここに来た時すでに多くの人が並んでいて、あらためて皆さんの期待の高さを実感した。
+  - speaker: kato
+    emotion: happy
+    text: とにかく大変長らくお待たせいたしました、という気持ちでいっぱい。
+  - speaker: kato
+    emotion: happy
+    text: ぜひ手に取ってドコモの高品質なネットワークを実感してほしい。
+    telops:
+    - {text: "加藤社長「ドコモの高品質なネットワークを実感してほしい」", size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 高品質なネットワーク。この言葉は10年後、逆の意味で語られることになります。
+    reading: こうひんしつな ねっとわーく。この ことばわ じゅうねんご、ぎゃくの いみで かたられる ことに なります。
+# ---- 2018年・4割下げる余地 ----
+- id: ch4_2018
+  title: 4割下げる余地
+  background: dc_shop
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: ニュースで、携帯の料金は4割下げる余地があるって言ってたわよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 4割！？ 誰がですか？
+  - speaker: kyaku
+    emotion: normal
+    text: 官房長官よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4割引きなら、ボクも買い替えたいです。
+  - speaker: kyaku
+    emotion: angry
+    text: 店員さんが言わないの。
+    beat: true
+  - speaker: reimu
+    text: 2018年8月、官房長官の菅義偉が講演で、携帯の料金は4割程度下げる余地があると述べました。
+    reading: にせん じゅうはちねん はちがつ。かんぼう ちょうかんの すが よしひでが こうえんで、けいたいの りょうきんわ よんわりていど さげる よちが あると のべました。
+# ---- 2020年・収益は3番手 ----
+- id: card2020
+  title: ''
+  background: dc_card_2020
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2020年9月29日の朝。NTTは、報道について現時点で決定した事実はありませんと発表します。
+    reading: にせん にじゅうねん くがつ にじゅうくにちの あさ。えぬてぃーてぃーわ、ほうどうに ついて げんじてんで けってい した じじつわ ありませんと はっぴょう します。
+  - speaker: reimu
+    text: その日の午後。NTTは、ドコモを完全子会社にすると発表しました。
+    reading: その ひの ごご。えぬてぃーてぃーわ、どこもお かんぜん こがいしゃに すると はっぴょう しました。
+- id: ch4_kaiken
+  title: 収益は3番手
+  background: dc_kaiken
+  stage:
+  - {who: sawada, x: 0.28, flip: true, emotion: normal}
+  - {who: yoshizawa, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: NTT社長の澤田純と、ドコモ社長の吉澤和弘がそろって会見に立ちます。
+    reading: えぬてぃーてぃー しゃちょうの さわだ じゅんと、どこも しゃちょうの よしざわ かずひろが そろって かいけんに たちます。
+  - speaker: sawada
+    emotion: normal
+    text: ドコモはシェアは大きいが、収益は3番手に落ちている。
+    telops:
+    - {text: "澤田社長「収益は3番手に落ちている」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: sawada
+    emotion: thinking
+    text: 春の段階で明確になっている。
+  - speaker: yoshizawa
+    emotion: thinking
+    text: MNPでビハインドがあり、純増そのものがマイナスの方向に行っている。
+  - speaker: sawada
+    emotion: normal
+    text: 私たちが一方的に強いという状況ではなく、収益は3番手。
+  - speaker: sawada
+    emotion: normal
+    text: どう勝っていくかの方法論を考える。
+- id: ch4_kaiken2
+  title: ''
+  background: dc_kaiken
+  stage:
+  - {who: sawada, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 料金を下げるための、完全子会社化ですか。
+  - speaker: sawada
+    emotion: normal
+    text: 本件と値下げが結びついていることはない。
+  - speaker: sawada
+    emotion: normal
+    text: 財務基盤は整うので、値下げの余力は出てくる。
+  - speaker: kisha
+    emotion: thinking
+    text: 結びつきはない。でも、余力は出る……。
+    beat: true
+  - speaker: reimu
+    text: 買い付けは1株3900円、総額約4.3兆円。12月25日、ドコモは上場をやめます。
+    reading: かいつけわ ひとかぶ さんぜん きゅうひゃくえん、そうがく やく よんてん さんちょうえん。じゅうにがつ にじゅうごにち、どこもわ じょうじょうお やめます。
+- id: ch4_shop
+  title: ''
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: surprised}
+  - {who: tencho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: ドコモが、NTTの完全子会社になるんですか！？
+  - speaker: tencho
+    emotion: normal
+    text: 4.3兆円だとさ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4.3兆円……ボクの給料の、何年分だろう。
+  - speaker: tencho
+    emotion: angry
+    text: 計算するな。むなしくなる。
+    se: zukko
+  - speaker: tencho
+    emotion: thinking
+    text: 去年度の営業利益は、KDDIが1兆252億円でソフトバンクが9117億円。
+  - speaker: tencho
+    emotion: thinking
+    text: ドコモは7065億円。3番目だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: お客さんの数は一番なのに、もうけは3番目……。
+  - speaker: reimu
+    text: 11月には、KDDIやソフトバンクなど28社が、公正な競争を損なうと総務大臣に意見書を出します。
+    reading: じゅういちがつにわ、けーでぃーでぃーあいや そふとばんく など にじゅうはっしゃが こうせいな きょうそうお そこなうと そうむ だいじんに いけんしょお だします。
+  - speaker: zundamon
+    emotion: thinking
+    text: 親が大きくなると、周りも黙ってないんですね。
+# ---- 2020年12月・ahamo ----
+- id: ch4_ahamo
+  title: 店で売れない料金
+  background: dc_kaiken
+  stage:
+  - {who: ii, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2020年12月3日。NTT出身で、2日前に社長に就いた井伊基之が新しい料金を発表します。
+    reading: にせん にじゅうねん じゅうにがつ みっか。えぬてぃーてぃー しゅっしんで、ふつかまえに しゃちょうに ついた いい もとゆきが あたらしい りょうきんお はっぴょう します。
+  - speaker: kisha
+    emotion: surprised
+    text: 税抜きで月2980円、[20GB|にじゅうギガ]。名前は[ahamo|アハモ]ですか。
+  - speaker: ii
+    emotion: normal
+    text: ドコモは中容量層が弱く、
+  - speaker: ii
+    emotion: normal
+    text: '[20GB|にじゅうギガ]の層にぴったりのプランがなかったために新料金プランを設定した。'
+  - speaker: kisha
+    emotion: normal
+    text: 手続きは、どこでできますか。
+  - speaker: ii
+    emotion: normal
+    text: なるべく人と関わらずに手続きできる料金プランとなるため、
+  - speaker: ii
+    emotion: normal
+    text: 手続きはオンラインのみに限定する。
+  - speaker: ii
+    emotion: happy
+    text: 3番手と言われないようにしていきたい。
+- id: ch4_shop2
+  title: ''
+  background: dc_shop
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: surprised}
+  - {who: tencho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: オンラインだけ！？ じゃあ、うちの店じゃ売れないんですか！
+    se: bikkuri
+  - speaker: tencho
+    emotion: thinking
+    text: 売れない。店に来ない人のための料金だ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクら、いらないってことですか……。
+  - speaker: tencho
+    emotion: normal
+    text: そうは言ってない。……たぶん。
+    beat: true
+  - speaker: reimu
+    text: 2022年には、ドコモショップの約3割を閉じる方針だと報じられました。
+    reading: にせん にじゅうにねんにわ、どこも しょっぷの やく さんわりお とじる ほうしんだと ほうじられました。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちの店は、残れるかな……。
+  - speaker: tencho
+    emotion: normal
+    text: 残るさ。iモードのお客さんが、まだ大勢来てくれる。
+# ---- 2022年5月・2700億円 ----
+- id: ch4_2700
+  title: 2700億円の値下げ
+  background: dc_kaigi
+  bgm: serious
+  stage:
+  - {who: ii, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2022年5月の決算会見。値下げで減った通信の収入は、2019年からの累計で約2700億円でした。
+    reading: にせん にじゅうにねん ごがつの けっさん かいけん。ねさげで へった つうしんの しゅうにゅうわ、にせん じゅうきゅうねんからの るいけいで やく にせん ななひゃくおくえんでした。
+  - speaker: ii
+    emotion: thinking
+    text: 収益と利益を失った。
+  - speaker: ii
+    emotion: thinking
+    text: これがずっと続くと苦しい。
+  - speaker: kisha
+    emotion: normal
+    text: '[5G|ファイブジー]の整備は、どうするんですか。'
+  - speaker: ii
+    emotion: normal
+    text: デジタル田園都市構想で、[5G|ファイブジー]をもっと加速してほしいという要請があった。
+  - speaker: ii
+    emotion: normal
+    text: 24年までに90％という要請だったため、
+  - speaker: ii
+    emotion: thinking
+    text: '[4G|フォージー]の周波数再利用を組み込まないと間に合わない。'
+  - speaker: kisha
+    emotion: thinking
+    text: 2年前は、けん制していたやり方ですね。
+  - speaker: reimu
+    text: 2020年に子会社化。2021年にahamo。2022年に転用。三つは同じ3年の間に重なっていました。
+    reading: にせん にじゅうねんに こがいしゃか。にせん にじゅういちねんに あはも。にせん にじゅうにねんに てんよう。みっつわ おなじ さんねんの あいだに かさなって いました。
+# ---- 2023年・つながりにくい ----
+- id: ch5_300
+  title: 300億円と120％
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2023年10月。ドコモは300億円をかけ、全国約2000か所と鉄道の沿線で対策を始めます。
+    reading: にせん にじゅうさんねん じゅうがつ。どこもわ さんびゃくおくえんお かけ、ぜんこく やく にせんかしょと てつどうの えんせんで たいさくお はじめます。
+  - speaker: tencho
+    emotion: normal
+    text: 目安は、HD画質の動画を安心して見られることだそうだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 全国で2000か所！ うちの駅も入ってますかね。
+  - speaker: tencho
+    emotion: normal
+    text: 駅と繁華街と住宅街、それに鉄道の沿線だそうだ。
+  - speaker: zundamon
+    emotion: happy
+    text: これで、駅の苦情も減りますね！
+  - speaker: tencho
+    emotion: thinking
+    text: 減ればいいがな。お客さんは待ってくれないぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今日も、他社へ移るお客さんの手続きをしました。
+  - speaker: tencho
+    emotion: thinking
+    text: ……そうか。
+- id: ch5_120
+  title: ''
+  background: dc_kaiken
+  stage:
+  - {who: shimada, x: 0.28, flip: true, emotion: normal}
+  - {who: ii, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 11月7日の決算会見。NTT社長の島田明が、ドコモの品質に触れます。
+    reading: じゅういちがつ なのかの けっさん かいけん。えぬてぃーてぃー しゃちょうの しまだ あきらが、どこもの ひんしつに ふれます。
+  - speaker: shimada
+    emotion: thinking
+    text: まだ一部で課題があるのは事実。
+  - speaker: shimada
+    emotion: angry
+    text: できるだけ早く100％、いや120％まで上げるように。
+    se: don
+    telops:
+    - {text: "島田社長「120％まで上げるように」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 井伊は、島田から激を飛ばされたと苦笑しました。
+    reading: いいわ、しまだから げきお とばされたと くしょう しました。
+  - speaker: ii
+    emotion: thinking
+    text: 後追いになっている現状を反省して、しっかり対策していきたい。
+# ---- 2024年・iモードの人が社長に ----
+- id: ch5_maeda
+  title: iモードの人が社長に
+  background: dc_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: maeda, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年6月、前田義晃が社長に就きます。リクルートを経て2000年に入社し、iモードを広げた一人です。
+    reading: にせん にじゅうよねん ろくがつ、まえだ よしあきが しゃちょうに つきます。りくるーとお へて にせんねんに にゅうしゃ し、あいもーどお ひろげた ひとりです。
+  - speaker: kisha
+    emotion: normal
+    text: 新しい社長として、何を目指しますか。
+  - speaker: maeda
+    emotion: happy
+    text: 通信サービス品質[No.1|ナンバーワン]をお客様に実感していただけるキャリアを目指したい。
+  - speaker: maeda
+    emotion: normal
+    text: ユーザーからのネガティブな声は80％以上減り、対策の効果はあった。
+  - speaker: maeda
+    emotion: thinking
+    text: ただ、通信品質については常に強化していかないといけない。
+- id: ch5_doki
+  title: ''
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: happy}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 新しい社長、iモードを広げた人なんですって！
+  - speaker: tencho
+    emotion: normal
+    text: お前が最初に売ったサービスだな。
+  - speaker: zundamon
+    emotion: happy
+    text: 入社は、ボクのほうが1年早いのだ！
+  - speaker: tencho
+    emotion: angry
+    text: 会社が違う。
+    se: hammer
+# ---- 2024〜2026年・シェアを守る ----
+- id: ch5_35
+  title: 35％のシェアは必須
+  background: dc_kaiken
+  bgm: serious
+  stage:
+  - {who: shimada, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年11月。NTTの決算の説明会で、島田はドコモのシェアについて語ります。
+    reading: にせん にじゅうよねん じゅういちがつ。えぬてぃーてぃーの けっさんの せつめいかいで、しまだわ どこもの しぇあに ついて かたります。
+  - speaker: kisha
+    emotion: normal
+    text: 他社の攻勢に、いつまで対抗しますか。
+  - speaker: shimada
+    emotion: normal
+    text: これ以上やってもドコモからは取れないと思うところまでは続ける。
+  - speaker: shimada
+    emotion: thinking
+    text: 相手次第になる。1年かもしれないし、半年かもしれない。
+  - speaker: shimada
+    emotion: angry
+    text: 35％のシェアは必須だと思っている。
+    telops:
+    - {text: "島田社長「35％のシェアは必須」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch5_box
+  title: ''
+  background: dc_machi
+  stage:
+  - {who: maeda, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年6月の記事で、前田は駅前で試した工夫をこう話しています。
+    reading: にせん にじゅうごねん ろくがつの きじで、まえだわ えきまえで ためした くふうお こう はなして います。
+  - speaker: kisha
+    emotion: normal
+    text: 駅前の混雑に、何か手は打ったんですか。
+  - speaker: maeda
+    emotion: normal
+    text: 神田や秋葉原の駅前の電話ボックスに基地局を設置したところ、
+  - speaker: maeda
+    emotion: happy
+    text: その周辺の通信容量の緩和が確認できた。
+  - speaker: kisha
+    emotion: surprised
+    text: 電話ボックスに、基地局……！
+- id: ch5_hansoku
+  title: ''
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 店員, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 電話ボックスに基地局ですって！ ボクも中に入ってみたいです。
+  - speaker: tencho
+    emotion: angry
+    text: お前が入っても、速くはならん。
+    se: tsukkomi
+  - speaker: tencho
+    emotion: normal
+    text: 乗り換えのお客さん向けの割引が、また増えたぞ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 出ていった分を、割引で取り返すんですね。
+  - speaker: tencho
+    emotion: thinking
+    text: 9月末のシェアは、33.3％だとさ。上は35％が必須だと言ってる。
+  - speaker: zundamon
+    emotion: sad
+    text: 割引の説明ばっかりで、のどが枯れそうです。
+  - speaker: tencho
+    emotion: normal
+    text: のど飴なら、割引なしで買ってこい。
+    beat: true
+- id: ch5_2025
+  title: ''
+  background: dc_kaiken
+  stage:
+  - {who: maeda, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年11月の決算会見。前田は、駅の品質についてこう話します。
+    reading: にせん にじゅうごねん じゅういちがつの けっさん かいけん。まえだわ、えきの ひんしつに ついて こう はなします。
+  - speaker: kisha
+    emotion: normal
+    text: 混む場所のつながりにくさは、解消したんですか。
+  - speaker: maeda
+    emotion: thinking
+    text: 都市部を中心とした人の多いエリアでのご不便はすべて解消に至っていないことは事実。
+  - speaker: kisha
+    emotion: thinking
+    text: なぜ、そんなに時間がかかるんですか。
+  - speaker: maeda
+    emotion: thinking
+    text: 地権者との交渉などに時間がかかっていることは事実。
+  - speaker: reimu
+    text: 下期は、上期の約3倍のペースで基地局を建てると説明しました。
+    reading: しもきわ、かみきの やく さんばいの ぺーすで きちきょくお たてると せつめい しました。
+- id: ch5_2026
+  title: 2026年度中に
+  background: dc_kaiken
+  stage:
+  - {who: shimada, x: 0.28, flip: true, emotion: thinking}
+  - {who: maeda, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年2月5日の決算会見。乗り換えの取り合いは、まだ続いていました。
+    reading: にせん にじゅうろくねん にがつ いつかの けっさん かいけん。のりかえの とりあいわ、まだ つづいて いました。
+  - speaker: maeda
+    emotion: thinking
+    text: 昨年比でMNP転出が1.2倍程度になっている。
+  - speaker: shimada
+    emotion: thinking
+    text: '[下期|しもき]からかなり力を入れて販促し、収束してくるかと思ったが全然収まらない。'
+  - speaker: shimada
+    emotion: thinking
+    text: 競争は激しくなっている。
+  - speaker: shimada
+    emotion: angry
+    text: 戦いには勝たないといけない。
+  - speaker: reimu
+    text: NTTは、ドコモの2025年度の営業利益の見通しを830億円下げます。
+    reading: えぬてぃーてぃーわ、どこもの にせん にじゅうごねんどの えいぎょう りえきの みとおしお はっぴゃく さんじゅうおくえん さげます。
+  - speaker: maeda
+    emotion: thinking
+    text: 基地局数だけで通信品質が決まるものではない。
+  - speaker: maeda
+    emotion: normal
+    text: 我々の計画をしっかり進めれば2026年度中に他社と遜色ない、
+  - speaker: maeda
+    emotion: normal
+    text: 場合によっては超えられるようなところも含め実現できるのではないかと思っている。
+# ---- 2026年3月31日・iモードが終わる夜 ----
+- id: card2026
+  title: ''
+  background: dc_card_2026
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2026年3月31日。iモードとFOMAが、終わる日です。
+    reading: にせん にじゅうろくねん さんがつ さんじゅういちにち。あいもーどと ふぉーまが、おわる ひです。
+- id: ch6_yoru
+  title: iモードが終わる夜
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 副店長, emotion: normal}
+  - {who: jouren, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: jouren
+    emotion: thinking
+    text: 今夜で、iモードも終わりか。
+  - speaker: zundamon
+    emotion: normal
+    text: はい。27年、お疲れさまでした。
+  - speaker: jouren
+    emotion: normal
+    text: あんたから買った最初の1台も、iモードだったな。
+  - speaker: zundamon
+    emotion: happy
+    text: 1パケットって何、って聞かれた年です。
+  - speaker: jouren
+    emotion: thinking
+    text: で、今日は相談なんだ。4月から、電話がかからなくなるって？
+  - speaker: zundamon
+    emotion: thinking
+    text: スマホを見せてください。……[VoLTE|ボルテ]が、オフですね。
+  - speaker: zundamon
+    emotion: normal
+    text: '[4G|フォージー]のスマホでも、これがオフだと4月から通話できません。'
+  - speaker: jouren
+    emotion: surprised
+    text: スマホなのに！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: オンにしました。これで大丈夫です。
+  - speaker: jouren
+    emotion: normal
+    text: 助かった。そういや、[3G|スリージー]が終わるから今すぐ買い替えろって電話が来たぞ。
+  - speaker: zundamon
+    emotion: angry
+    text: それ、うちからじゃありません。終了に便乗した悪質な販売かもしれません。
+  - speaker: jouren
+    emotion: surprised
+    text: 危ない、危ない。
+- id: ch6_yoru2
+  title: ''
+  background: dc_shop
+  stage:
+  - {who: zundamon, x: 0.5, flip: true, tag: 副店長, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: この夜、ネットの生放送ではiモードの創設者3人の特別番組が流れました。
+    reading: この よる、ねっとの なまほうそうでわ あいもーどの そうせつしゃ さんにんの とくべつ ばんぐみが ながれました。
+  - speaker: reimu
+    text: 松永真理と榎啓一と夏野剛。第2部の司会は、iモードの絵文字を作った栗田穣崇です。
+    reading: まつなが まりと えのき けいいちと なつの たけし。だいにぶの しかいわ、あいもーどの えもじお つくった くりた しげたかです。
+  - speaker: reimu
+    text: 止めた3Gの電波は、4Gに回されます。4Gの幅は20MHzから30MHzに広がり、容量は1.5倍です。
+    reading: とめた すりーじーの でんぱわ、ふぉーじーに まわされます。ふぉーじーの はばわ にじゅう めがへるつから さんじゅう めがへるつに ひろがり、ようりょうわ いってんごばいです。
+  - speaker: zundamon
+    emotion: thinking
+    text: iモードが乗ってた[3G|スリージー]の電波が、混んだ道を広げるのに使われるのか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……お疲れさまでした、iモード。
+    se: namida
+# ---- 2026年5月・2期連続の減益 ----
+- id: ch7_kessan
+  title: 2期連続の減益
+  background: dc_kaigi
+  bgm: serious
+  stage:
+  - {who: maeda, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年5月8日。ドコモの2025年度の決算です。当期利益は6602億円。2期続けての減益でした。
+    reading: にせん にじゅうろくねん ごがつ ようか。どこもの にせん にじゅうごねんどの けっさんです。とうき りえきわ ろくせん ろっぴゃく におくえん。にき つづけての げんえきでした。
+    background: dc_kaigi_akaji
+    telops:
+    - {text: "当期利益6602億円　2期連続の減益", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 会社は、販促費用などを積極的に投じたための大幅な減益だと説明しました。設備投資は20％増えています。
+    reading: かいしゃわ、はんそく ひよう などお せっきょくてきに とうじた ための おおはばな げんえきだと せつめい しました。せつび とうしわ にじゅっ ぱーせんと ふえて います。
+  - speaker: reimu
+    text: 乗り換えの出入りは、下期にプラスに転じていました。
+    reading: のりかえの でいりわ、しもきに ぷらすに てんじて いました。
+  - speaker: kisha
+    emotion: normal
+    text: 料金の値上げは、あるんですか。
+  - speaker: maeda
+    emotion: thinking
+    text: 否定できない状態だと思う。
+  - speaker: maeda
+    emotion: normal
+    text: 検討中とご理解ください。
+  - speaker: kisha
+    emotion: normal
+    text: '[ahamo|アハモ]だけ遅いという噂も、ありますが。'
+  - speaker: maeda
+    emotion: angry
+    text: それはないです。
+  - speaker: maeda
+    emotion: thinking
+    text: あの噂だけはどうにかならないかと思っている。
+    beat: true
+# ---- 2026年8月・まだ道半ば ----
+- id: ch7_michi
+  title: まだ道半ば
+  background: dc_kaigi
+  bgm: hirusagari
+  stage:
+  - {who: maeda, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月6日。4月から6月の決算で、ドコモは増益に転じました。
+    reading: はちがつ むいか。しがつから ろくがつの けっさんで、どこもわ ぞうえきに てんじました。
+    background: dc_kaigi_up
+  - speaker: kisha
+    emotion: normal
+    text: 通信品質の改善は、今[何合目|なんごうめ]ですか。
+  - speaker: maeda
+    emotion: thinking
+    text: '[何合目|なんごうめ]かと言われれば、基地局増設だけでなく細かな最適化も含めて'
+  - speaker: maeda
+    emotion: normal
+    text: 他社との差を詰める段階であり、まだ道半ばだ。
+    telops:
+    - {text: "前田社長「まだ道半ばだ」", size: lg, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: 道半ば、ですか。
+  - speaker: maeda
+    emotion: normal
+    text: 今年度は1万局規模の[5G|ファイブジー]基地局増設を計画しているが、
+  - speaker: maeda
+    emotion: thinking
+    text: 部材不足もあり全国計画としては若干ビハインドしている。
+  - speaker: maeda
+    emotion: normal
+    text: ただ東京23区を含む人口集中地域には最優先で部材を回しており、
+  - speaker: maeda
+    emotion: normal
+    text: そちらは計画を上回るペースで進めている。
+# ---- 2026年秋・携帯の店で銀行 ----
+- id: ch7_nisa
+  title: 携帯の店で銀行
+  background: dc_shop
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 副店長, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: いらっしゃいませ。銀行の口座と、[NISA|ニーサ]のご案内もできます。
+  - speaker: kyaku
+    emotion: surprised
+    text: 携帯のお店で、銀行？
+  - speaker: zundamon
+    emotion: normal
+    text: 7月に、ドコモの金融のグループができたんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 銀行を案内できる店を、早く1000店舗にするそうです。
+  - speaker: kyaku
+    emotion: thinking
+    text: 電話屋さんなのか銀行なのか、分からないわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクも、たまに分からなくなります。
+    se: tenten
+  - speaker: reimu
+    text: 10月末の時点で、11月4日に4月から9月の決算の発表が予定されています。
+    reading: じゅうがつまつの じてんで、じゅういちがつ よっかに しがつから くがつの けっさんの はっぴょうが よてい されて います。
+  - speaker: reimu
+    text: その時点の見通しは、営業利益がほぼ横ばいで当期利益は5％減。値上げも、まだ決まっていません。
+    reading: その じてんの みとおしわ、えいぎょう りえきが ほぼ よこばいで とうき りえきわ ごぱーせんと げん。ねあげも、まだ きまって いません。
+# ---- 論争の章 ----
+- id: ronso1
+  title: ドコモはつながらない？
+  background: dc_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: つむぎ、ネットで見たのだ！ ドコモはつながらないって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言われる理由は、ちゃんとあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年1月から3月の調査では、ドコモの[5G|ファイブジー]のダウンロードの速さは1位。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電波が届く広さも、1位だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1位！？ じゃあ、なんで言われるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 一貫した品質っていう項目が、4社で最下位だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 動画やアプリが、最後まで止まらずに使えた割合よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 10月に出た次の調査では、KDDIが一貫した品質の1位になったと発表してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 速いのに、止まる……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 調査会社の担当者は、1つだけの理由ではなく複合的な理由だと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 例えば周波数帯の制約や基地局が建設中であることなど、ってね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 広くて速い。でも混む駅では詰まりやすい。それが、つながらないと言われる正体よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 圏外になるわけじゃ、ないのか。
+- id: ronso2
+  title: 買われて品質が落ちた？
+  background: dc_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットには、NTTに買われて値下げさせられたから品質が落ちたって書いてあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 時期は、たしかに重なってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 子会社化は2020年。[ahamo|アハモ]は2021年。品質の問題は2023年の春よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 記者の中には、設備投資が絞られていたと見る人もいるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも当時の[澤田|さわだ]社長と[吉澤|よしざわ]社長は、本件と値下げが結びついていることはないと否定したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ドコモ自身が挙げた原因は、通信量の増加や新しい[5G|ファイブジー]の遅れなど4つよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 設備投資は、2025年度には前の年より20％増えてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1つのせいとは、言えないのだ……。
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 値下げと[5G|ファイブジー]の広げ方の遅れ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 二つが重なった時期に、混む駅の電波の道が足りなくなったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 言えるのは、そこまでね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+- id: chui
+  title: ドコモを使う人へ
+  background: dc_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: まず[4G|フォージー]のスマホでも[VoLTE|ボルテ]がオフだと、4月から通話できないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 設定で、オンになってるか確かめてね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家族の古いスマホも、見ておくのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次に、[3G|スリージー]の終了に便乗した悪質な販売。困ったら、ドコモの携帯から[151|いちごーいち]よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それから、速さと詰まりにくさは別に見ること。
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分がよく使う駅で、混む時間に試すのがいちばんよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 料金は、[1GB|いちギガ]あたりで比べてね。[ahamo|アハモ]なら[30GB|さんじゅうギガ]で2970円。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[1GB|いちギガ]あたり、約99円なのだ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 値上げは、10月末の時点ではまだ検討中。決まってはいないわ。
+# ---- 締め：2026年秋の店先 ----
+- id: shime_shop
+  title: ''
+  background: dc_shop
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 副店長, emotion: normal}
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kyaku
+    emotion: thinking
+    text: すみません。1ギガって、[何|なん]ですか？
+  - speaker: zundamon
+    emotion: happy
+    text: 27年前にも、同じことを聞かれました。
+  - speaker: kyaku
+    emotion: surprised
+    text: え？
+  - speaker: zundamon
+    emotion: happy
+    text: 1ギガは、そのころの値段なら234万円分です。
+  - speaker: kyaku
+    emotion: surprised
+    text: 234万円！？
+    se: gaan
+  - speaker: zundamon
+    emotion: normal
+    text: 今は、1ギガ100円くらいのプランもあります。
+  - speaker: kyaku
+    emotion: thinking
+    text: で、ここの駅はちゃんとつながるの？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……基地局を、いま増やしているところです。
+  - speaker: zundamon
+    emotion: normal
+    text: 13年前、社長はドコモの高品質なネットワークを実感してほしいと言いました。
+  - speaker: zundamon
+    emotion: happy
+    text: その言葉を、もう一度言える店にしたいんです。
+  - speaker: kyaku
+    emotion: surprised
+    text: ……あなた、社長さん？
+  - speaker: zundamon
+    emotion: happy
+    text: 副店長です。
+    beat: true
+- id: shime
+  title: ''
+  background: dc_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 1999年、iモードは1パケット0.3円で始まったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年に止まった[FOMA|フォーマ]の電波は、混んだ[4G|フォージー]の道を広げるのに回されるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 高品質なネットワークという言葉に戻れるか。答えは、まだ道半ばね。
+  - speaker: zundamon
+    emotion: happy
+    text: 折りたたみの携帯、充電したら電源が入ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、もうiモードにはつながらないわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……こっちは、本当につながらないのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも一度、スマホの[VoLTE|ボルテ]の設定を見てみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
