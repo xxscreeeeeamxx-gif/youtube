@@ -1,0 +1,1538 @@
+meta:
+  title: 「亀山のテレビをください」と指名買いされたシャープの工場、22年後に売り先が決まらない【ずんだもん解説】
+  slug: sharp-kameyama
+  hook_line: 世界の亀山は、なぜ自分の工場を売れなくなったのか。
+  summary: 2004年、店頭で「亀山のテレビをください」と名指しで買われたシャープの亀山工場。畳ほどのガラスからテレビまで同じ敷地で作る仕組みは、どこで重い荷物に変わったのか。2003年入社の液晶技術者（架空の人物）の目で、堺の巨大工場、初めての赤字、鴻海の出資、そして第2工場の行方を、会社の発表と経営者の公の発言をもとに再現ドラマでたどります。（2026年10月時点）
+  sources:
+  - シャープ 社史「第10章 2004〜2006 大型液晶テレビ“アクオス”亀山モデルの誕生」 https://corporate.jp.sharp/info/history/h_company/pdf_jp/chapter10.pdf
+  - シャープ 社史「第11章 2007〜2011」 https://corporate.jp.sharp/info/history/h_company/pdf_jp/chapter11.pdf
+  - シャープ「FY2024決算及びFY2025-2027中期経営計画」（2025年5月12日） https://corporate.jp.sharp/ir/event/policy_meeting/pdf/25meeting_j_nt.pdf
+  - シャープ「2026年3月期 第3四半期 決算説明資料」（2026年2月10日） https://corporate.jp.sharp/ir/library/financial/pdf/2026/3/2603_3pre_nt.pdf
+  - シャープ「2025年度決算及び中期経営計画の進捗状況」（2026年5月12日） https://corporate.jp.sharp/ir/event/policy_meeting/pdf/26meeting_j_nt.pdf
+  - 日本経済新聞「シャープ、亀山工場の生産終了を12月に延期」（2026年5月12日） https://www.nikkei.com/article/DGXZQOUF126G50S6A510C2000000/
+  tags:
+  - シャープ
+  - 亀山工場
+  - 液晶
+  - アクオス
+  - 鴻海
+  - 堺
+  - 垂直統合
+  - 液晶テレビ
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 「亀山のテレビをください」
+    bottom: 22年後、売り先が決まらない
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: doki
+    label: 同期
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#c9d6e3'
+  - id: ooya
+    label: 大家
+    voice: 42
+    pitch: 0.0
+    outfit: none
+  - id: kyaku
+    label: お客さん
+    voice: 8
+    pitch: 0.04
+    outfit: none
+  - id: tenin
+    label: 店員
+    voice: 67
+    pitch: 0.0
+    outfit: apron
+    color: '#3a6ea5'
+  - id: shain
+    label: 社員
+    voice: 21
+    pitch: 0.0
+    outfit: work
+    color: '#9aa6b2'
+  - id: machida
+    label: 町田社長
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2a32'
+  - id: okuda04
+    label: 奥田本部長
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: okuda12
+    label: 奥田
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: katayama
+    label: 片山社長
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4a5a'
+  - id: kaku
+    label: 郭台銘
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#3a2a24'
+  - id: tai
+    label: 戴社長
+    voice: 100
+    pitch: -0.06
+    outfit: suit
+    color: '#4a3a2f'
+  - id: go
+    label: 呉社長
+    voice: 67
+    pitch: -0.02
+    outfit: suit
+    color: '#2f3a52'
+  - id: kawamura
+    label: 河村社長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#4a4a52'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+scenes:
+# ---- 先出し（2026年2月10日・売却の不成立） ----
+- id: co_fuseiritsu
+  title: ''
+  background: sh_kojo
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2026年2月10日。三重県亀山市、シャープの液晶工場です。
+    reading: にせん にじゅうろくねん にがつ とおか。みえけん かめやまし、しゃーぷの えきしょう こうじょうです。
+  - speaker: doki
+    emotion: thinking
+    text: '[鴻海|ほんハイ]に第2工場を売る話、まとまらなかったってさ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: え？ 買いたいって言ってきたのは、[鴻海|ほんハイ]なのに？
+  - speaker: doki
+    emotion: thinking
+    text: 第2工場は8月をめどに止める。希望退職も約1170人募るって。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボク、2003年からここにいるんだけど。
+  - speaker: reimu
+    text: 2004年には、亀山のテレビをくださいと名指しで買われた工場です。
+    reading: にせん よねんにわ、かめやまの てれびお くださいと なざしで かわれた こうじょうです。
+  - speaker: reimu
+    text: 世界の亀山は、なぜ自分の工場を売れなくなったのでしょう。
+    reading: せかいの かめやまわ、なぜ じぶんの こうじょうお うれなく なったのでしょう。
+    telops:
+    - {text: "世界の亀山は、なぜ売れなくなった？", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 今の部屋（大きなテレビ） ----
+- id: hook
+  title: ''
+  background: sh_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ シャープの大きいテレビを買ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2004年、亀山製の32型は53万円だったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 53万円！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 2021年の店頭だと、シャープは1インチ1600円前後。32型なら5万円ほどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[10分の1|じゅうぶんのいち]……。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 値下がりの中で、いちばん成功した工場がいちばん重い荷物になったの。
+# ---- 2003年・パネルの建物 ----
+- id: card2003
+  title: ''
+  background: sh_card_2003
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2003年春。稼働を前にした亀山工場に、新人の技術者が配属されます。
+    reading: にせん さんねん はる。かどうお まえに した かめやま こうじょうに、しんじんの ぎじゅつしゃが はいぞく されます。
+- id: ch1_glass
+  title: 畳ほどのガラス
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: senpai
+    emotion: normal
+    text: 新人、これがマザーガラスだ。畳ほどある。
+  - speaker: senpai
+    emotion: normal
+    text: この1枚から、32型のパネルが一度に8枚取れる。
+    telops:
+    - {text: "32型が一度に8枚", size: lg, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 8枚！？ 1枚ずつ作るんじゃないんですね。
+  - speaker: senpai
+    emotion: normal
+    text: ガラスが大きいほど、パネル1枚あたりは安くなるんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: 大きいピザのほうが、ひと切れ安いのと同じですね！
+  - speaker: senpai
+    emotion: normal
+    text: だから液晶の会社は、もっと大きなガラスの工場を先に建てる競争をしてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: ピザより先に、窯を買う競争……。
+  - speaker: senpai
+    emotion: thinking
+    text: その窯が、とんでもなく高いんだよ。
+  - speaker: senpai
+    emotion: normal
+    text: 装置は買ってきて、うちで手を入れてある。どう直したかは外に見せない。
+  - speaker: senpai
+    emotion: normal
+    text: 会社は、老舗のうなぎ屋の門外不出の秘伝のたれと同じだと考えてる。
+  - speaker: zundamon
+    emotion: happy
+    text: 秘伝のたれ！ ボクにも、門外不出のずんだあんが……。
+  - speaker: senpai
+    emotion: angry
+    text: 持ち込むな。ここはクリーンルームだ。
+    se: hammer
+  - speaker: senpai
+    emotion: normal
+    text: この建物は、ここで働く人間しか入れない。事業部長でも簡単じゃない。
+  - speaker: senpai
+    emotion: normal
+    text: できたパネルは、同じ敷地でテレビに組み立てる。
+  - speaker: zundamon
+    emotion: surprised
+    text: パネルからテレビまで、全部ここで？
+  - speaker: senpai
+    emotion: thinking
+    text: 誰も経験したことのない一貫生産だ。立ち上げは苦労の連続だよ。
+  - speaker: zundamon
+    emotion: happy
+    text: うちのパネルで、うちのテレビ。最強なのだ！
+  - speaker: reimu
+    text: 自分のテレビが売れるあいだは強い仕組み。この仕組みが、のちに亀山を重くします。
+    reading: じぶんの てれびが うれる あいだわ つよい しくみ。この しくみが、のちに かめやまお おもく します。
+# ---- 2004年1月・発表会と出荷式 ----
+- id: card2004
+  title: ''
+  background: sh_card_2004
+  cuts:
+  - speaker: reimu
+    text: 2004年1月8日。亀山第1工場が本格稼働します。投資は約1000億円でした。
+    reading: にせん よねん いちがつ ようか。かめやま だいいち こうじょうが ほんかく かどう します。とうしわ やく せんおくえんでした。
+- id: ch1_happyo
+  title: 売価は10%下がる
+  background: sh_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: okuda04, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月26日。亀山で作ったテレビの発表会に、事業本部長の奥田隆司が立ちます。
+    reading: いちがつ にじゅうろくにち。かめやまで つくった てれびの はっぴょうかいに、じぎょう ほんぶちょうの おくだ たかしが たちます。
+  - speaker: kisha
+    emotion: normal
+    text: 亀山で一貫生産すると、売り値はどうなりますか。
+  - speaker: okuda04
+    emotion: normal
+    text: '[37V型|サンジュウナナブイガタ]の場合……売価は10%ほど下がる見込み。'
+    telops:
+    - {text: "奥田本部長「売価は10%ほど下がる見込み」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: 出す前から、もう値下がりの話……。
+    beat: true
+- id: ch1_shukka
+  title: ''
+  background: sh_kojo_soto
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 技術者, emotion: happy}
+  - {who: doki, x: 0.56, emotion: normal}
+  - {who: senpai, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月28日、初出荷。出荷式には、異例なほど多くの報道陣が詰めかけました。
+    reading: いちがつ にじゅうはちにち、はつ しゅっか。しゅっかしきにわ いれいな ほど おおくの ほうどうじんが つめかけました。
+  - speaker: zundamon
+    emotion: happy
+    text: テレビ局まで来てる！ ボクのパネルが、全国ニュースなのだ！
+  - speaker: doki
+    emotion: normal
+    text: お前が作ったのは、どのパネルだよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……数えたこと、ない。
+    se: manuke
+  - speaker: zundamon
+    emotion: normal
+    text: それより先輩。発表会で、売価は1割ほど下がる見込みだそうです。
+  - speaker: senpai
+    emotion: normal
+    text: 液晶テレビの値段は、下がり続けるもんだ。
+  - speaker: senpai
+    emotion: thinking
+    text: 下がった[分|ぶん]は、もっと大きなガラスで取り返す。
+  - speaker: zundamon
+    emotion: thinking
+    text: もっと大きなガラスに、もっと大きな窯……。
+  - speaker: reimu
+    text: 下がり続ける値段を、もっと大きな工場で追いかける。この追いかけっこは、どこで終わるのでしょう。
+    reading: さがりつづける ねだんお もっと おおきな こうじょうで おいかける。この おいかけっこわ どこで おわるのでしょう。
+# ---- 亀山が生まれる（1998〜2002年） ----
+- id: card1998
+  title: ''
+  background: sh_card_1998
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 出荷式の6年前、1998年8月。社長になったばかりの町田勝彦が、全国11か所の事業所を回ります。
+    reading: しゅっかしきの ろくねん まえ、せんきゅうひゃく きゅうじゅうはちねん はちがつ。しゃちょうに なった ばかりの まちだ かつひこが、ぜんこく じゅういっかしょの じぎょうしょお まわります。
+- id: ch2_sengen
+  title: 夢物語だ
+  background: sh_kaigi
+  stage:
+  - {who: machida, x: 0.28, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: machida
+    emotion: normal
+    text: 国内で販売するテレビを2005年までに液晶に置き換える。
+  - speaker: shain
+    emotion: surprised
+    text: ……ブラウン管を、全部ですか。
+  - speaker: shain
+    emotion: thinking
+    text: 液晶の事業は、まだ小さくて赤字ですよ。
+  - speaker: reimu
+    text: 世間の大半は、できるわけがない、夢物語だと否定的でした。社内の技術者たちも、とまどいます。
+    reading: せけんの たいはんわ できるわけが ない、ゆめものがたりだと ひていてき でした。しゃないの ぎじゅつしゃたちも とまどいます。
+  - speaker: reimu
+    text: 半導体と液晶の両方に、投資を続けることはできない。町田は、液晶を選びました。
+    reading: はんどうたいと えきしょうの りょうほうに、とうしお つづける ことわ できない。まちだわ えきしょうお えらびました。
+  - speaker: reimu
+    text: 2001年1月にアクオスを発売。秋には、畳ほどのガラスで32型を8枚取る工場の構想が動き出します。
+    reading: にせん いちねん いちがつに あくおすお はつばい。あきにわ たたみ ほどの がらすで、さんじゅうにがたお はちまい とる こうじょうの こうそうが うごきだします。
+  - speaker: reimu
+    text: 2002年2月。場所は、液晶の三重工場や天理工場に近い亀山に決まりました。
+    reading: にせん にねん にがつ。ばしょわ、えきしょうの みえ こうじょうや てんり こうじょうに ちかい かめやまに きまりました。
+  - speaker: reimu
+    text: テレビを液晶ひとつに絞る一本道。この選び方が、のちの亀山を決めていきます。
+    reading: てれびお えきしょう ひとつに しぼる いっぽんみち。この えらびかたが、のちの かめやまお きめて いきます。
+# ---- 世界の亀山（2005〜2006年） ----
+- id: card2005
+  title: ''
+  background: sh_card_2005
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 2005年3月。亀山で作ったアクオスは、累計100万台に届きます。
+    reading: にせん ごねん さんがつ。かめやまで つくった あくおすわ、るいけい ひゃくまんだいに とどきます。
+- id: ch3_ryohan
+  title: 亀山のテレビをください
+  background: sh_ryohan
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 技術者, emotion: happy}
+  - {who: kyaku, x: 0.56, emotion: normal}
+  - {who: tenin, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: すみません。亀山のテレビをください。
+  - speaker: tenin
+    emotion: happy
+    text: はい！ 世界の亀山モデルですね。
+  - speaker: tenin
+    emotion: normal
+    text: 亀山で作ったテレビには、全部その名前が付いてるんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: いま、亀山のテレビって言いました！？
+  - speaker: kyaku
+    emotion: surprised
+    text: 言いましたけど……どちらさま？
+  - speaker: zundamon
+    emotion: happy
+    text: そのパネル、ボクが作ったんです！
+  - speaker: kyaku
+    emotion: normal
+    text: あら。作った人なら、どこがいいのか教えて。
+  - speaker: zundamon
+    emotion: happy
+    text: 畳ほどのガラスから、一度に8枚取れるんです！
+  - speaker: kyaku
+    emotion: thinking
+    text: それ、わたしに関係ある？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……安くなる、かも。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ、まけてくださる？
+  - speaker: zundamon
+    emotion: thinking
+    text: それは……店員さんに。
+  - speaker: tenin
+    emotion: normal
+    text: 値札どおりです。
+    se: oti
+- id: ch3_1pun
+  title: 1分に1台
+  background: sh_kojo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: senpai
+    emotion: happy
+    text: '[1日|いちにち]に約1500枚のガラスを流して、1分に1台テレビが組み上がる。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 1分に1台！？ カップ麺ができるまでに、3台なのだ！
+  - speaker: senpai
+    emotion: normal
+    text: '[歩留まり|ぶどまり]も、動き出して半年あまりで約90%だ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ぶどまり？
+  - speaker: senpai
+    emotion: normal
+    text: 作ったパネルのうち、ちゃんと使える物の割合だ。
+  - speaker: zundamon
+    emotion: happy
+    text: 10枚焼いたら、9枚おいしいクッキーですね。
+  - speaker: senpai
+    emotion: thinking
+    text: ……お前のたとえは、いつも食べ物だな。
+    beat: true
+- id: ch3_ooya
+  title: 交付税のいらない町
+  background: sh_ooya
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: happy}
+  - {who: ooya, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: ooya
+    emotion: happy
+    text: 今月の家賃、たしかに。あんたもシャープさんの人やったな。
+  - speaker: zundamon
+    emotion: happy
+    text: はい！ 世界の亀山です。
+  - speaker: ooya
+    emotion: normal
+    text: 工場に来てもらうのに、県と市で百数十億円の補助金を出したそうや。
+  - speaker: zundamon
+    emotion: surprised
+    text: ひゃくすうじゅうおくえん！？
+    se: bikkuri
+  - speaker: ooya
+    emotion: happy
+    text: 工場が来てから、亀山市は国の交付税をもらわんでええ町になった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 交付税？
+  - speaker: ooya
+    emotion: normal
+    text: 国からの仕送りみたいなもんや。いらんほど、市の財布が潤っとる。
+  - speaker: zundamon
+    emotion: happy
+    text: 工場ひとつで、町の財布まで！
+  - speaker: ooya
+    emotion: thinking
+    text: その工場が、ずっと元気ならええけどな。
+# ---- 2006年・第2工場 ----
+- id: card2006
+  title: ''
+  background: sh_card_2006
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 2006年5月、アクオスは累計1000万台。国内の液晶テレビのシェアは、4割を超えます。
+    reading: にせん ろくねん ごがつ、あくおすわ るいけい せんまんだい。こくないの えきしょう てれびの しぇあわ、よんわりお こえます。
+  - speaker: reimu
+    text: 2006年8月。同じ敷地で、亀山第2工場が動き出します。
+    reading: にせん ろくねん はちがつ。おなじ しきちで、かめやま だいに こうじょうが うごきだします。
+- id: ch3_dai2
+  title: もっと大きなガラス
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: happy}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: senpai
+    emotion: normal
+    text: 第2工場のガラスは、第8世代だ。32型なら15枚取れる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 8枚から15枚！ 窯がまた大きくなったのだ！
+  - speaker: senpai
+    emotion: normal
+    text: 会社は、投資の効率が第1工場の約2倍だと言ってる。
+  - speaker: senpai
+    emotion: happy
+    text: 10月には、第2工場のモデルを日本とアメリカと中国で同時に売り出す。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界の亀山なのだ！
+    beat: true
+  - speaker: reimu
+    text: 研究者の試算では、第2工場を8割動かすのに、2007年の50型台の世界需要の167.8%が要ります。
+    reading: けんきゅうしゃの しさんでわ だいに こうじょうお はちわり うごかすのに、にせん ななねんの ごじゅうがただいの せかい じゅようの ひゃく ろくじゅうなな てん はち ぱーせんとが いります。
+    telops:
+    - {text: "研究者の試算　50型台の世界需要の167.8%", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: このとき、まだ誰も、自分たちの工場が大きすぎるとは思っていません。
+    reading: この とき まだ だれも、じぶんたちの こうじょうが おおきすぎるとわ おもって いません。
+# ---- 2007年・堺の発表 ----
+- id: card2007
+  title: ''
+  background: sh_card_2007
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2007年4月、液晶の技術者だった片山幹雄が49歳で社長に。7月31日、堺の新しい工場を発表します。
+    reading: にせん ななねん しがつ、えきしょうの ぎじゅつしゃ だった かたやま みきおが よんじゅうきゅうさいで しゃちょうに。しちがつ さんじゅういちにち、さかいの あたらしい こうじょうお はっぴょう します。
+- id: ch4_sakai
+  title: 亀山工場の約4倍
+  background: sh_kaiken
+  stage:
+  - {who: katayama, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[堺|さかい]の新しい工場は、どれくらいの大きさですか。'
+  - speaker: katayama
+    emotion: happy
+    text: 亀山工場の約4倍、甲子園球場が32個入る規模。
+    se: don
+    telops:
+    - {text: "片山社長「亀山工場の約4倍」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: パネルは、ほかのテレビの会社にも売るんですか。
+  - speaker: katayama
+    emotion: normal
+    text: 生産能力自体が追いつかなかった。
+  - speaker: katayama
+    emotion: normal
+    text: メーカーの要望にあわせて[外販比率|がいはんひりつ]を高める。
+  - speaker: reimu
+    text: 液晶の工場だけで約3800億円。部材の会社なども集まる一帯の全体で、約1兆円の計画です。
+    reading: えきしょうの こうじょう だけで やく さんぜん はっぴゃくおくえん。ぶざいの かいしゃ なども あつまる いったいの ぜんたいで、やく いっちょうえんの けいかくです。
+- id: ch4_kameyama
+  title: ''
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: surprised}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: doki
+    emotion: normal
+    text: 亀山の4倍だってよ。甲子園32個。
+  - speaker: zundamon
+    emotion: happy
+    text: 甲子園32個……昼休みに野球し放題なのだ！
+  - speaker: doki
+    emotion: angry
+    text: 野球場を建てるんじゃないって。
+    beat: true
+  - speaker: doki
+    emotion: normal
+    text: '[堺|さかい]は第10世代。42型なら15枚取れるガラスだ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 世界の亀山の4倍なら、世界の4倍なのだ。
+  - speaker: doki
+    emotion: thinking
+    text: 計算が雑すぎる。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: もっと大きなガラスに、もっと大きな窯……。
+- id: ch4_kessan
+  title: 5年連続の過去最高
+  background: sh_kaigi
+  cuts:
+  - speaker: reimu
+    text: 2008年春の決算は、純利益1019億円。5年続けての過去最高。ここが、頂上でした。
+    reading: にせん はちねん はるの けっさんわ、じゅんりえき せん じゅうきゅうおくえん。ごねん つづけての かこ さいこう。ここが ちょうじょうでした。
+    background: sh_kaigi_up
+# ---- 2009年・初めての赤字 ----
+- id: card2009
+  title: ''
+  background: sh_card_2009
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2009年1月。シャープは、亀山第1工場を止め、第2工場に生産を集めると決めます。
+    reading: にせん きゅうねん いちがつ。しゃーぷわ かめやま だいいち こうじょうお とめ だいに こうじょうに せいさんお あつめると きめます。
+- id: ch5_teishi
+  title: 第1工場を止める
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: senpai
+    emotion: thinking
+    text: 第1工場のラインは止める。生産は、第2工場に集めるそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 止める！？ 5年前に、あんなに報道陣が来たのに。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのパネルの、ふるさとが……。
+    background: sh_kojo_kara
+    se: gaan
+  - speaker: senpai
+    emotion: normal
+    text: お前は、第2工場に移れ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。
+  - speaker: reimu
+    text: 2009年春の決算は、1956年の上場以来初めての最終赤字。1258億円でした。
+    reading: にせん きゅうねん はるの けっさんわ、せんきゅうひゃく ごじゅうろくねんの じょうじょう いらい はじめての さいしゅう あかじ。せん にひゃく ごじゅうはちおくえんでした。
+- id: ch5_nankin
+  title: 秘伝のたれごと
+  background: sh_kojo_kara
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2009年8月。止まった第1工場の装置を、中国・南京の液晶の会社に売ることが決まります。
+    reading: にせん きゅうねん はちがつ。とまった だいいち こうじょうの そうちお、ちゅうごく なんきんの えきしょうの かいしゃに うる ことが きまります。
+  - speaker: senpai
+    emotion: thinking
+    text: 装置は[南京|なんきん]の会社に売る。作り方も、向こうに渡すそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 秘伝のたれごと、ですか！？
+  - speaker: senpai
+    emotion: thinking
+    text: ……そういうことだ。
+  - speaker: zundamon
+    emotion: angry
+    text: うなぎ屋が、たれの作り方ごと売るようなもんじゃないですか。
+  - speaker: senpai
+    emotion: thinking
+    text: ……たとえが食べ物なのは、相変わらずだな。
+  - speaker: zundamon
+    emotion: sad
+    text: 門外不出だって、先輩が言ったのに。
+  - speaker: senpai
+    emotion: sad
+    text: 会社が決めたことだ。
+    beat: true
+- id: ch5_ooya
+  title: ''
+  background: sh_ooya
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: sad}
+  - {who: ooya, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ooya
+    emotion: thinking
+    text: 第1工場の機械、中国に売ったんやてな。
+  - speaker: ooya
+    emotion: thinking
+    text: 県は補助金の一部を、返してもらう方針やと報道されとったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 補助金で、来てもらった工場なのに……。
+  - speaker: ooya
+    emotion: normal
+    text: 機械は運び出せても、町は運び出せへんからな。
+# ---- 2009〜2011年・特需と反動 ----
+- id: ch5_tokuju
+  title: 地デジの特需
+  background: sh_ryohan
+  bgm: pop
+  stage:
+  - {who: kyaku, x: 0.28, flip: true, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2009年10月、堺の液晶工場が動き出します。その翌年の売り場です。
+    reading: にせん きゅうねん じゅうがつ、さかいの えきしょう こうじょうが うごきだします。その よくねんの うりばです。
+  - speaker: tenin
+    emotion: happy
+    text: 地デジに替えるなら今ですよ！ エコポイントも付きます！
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ、いちばん大きいのを。
+  - speaker: reimu
+    text: 社史は、特需が終わる2011年から、反動で急激に需要が冷えていったと書いています。
+    reading: しゃしわ、とくじゅが おわる にせん じゅういちねんから はんどうで きゅうげきに じゅようが ひえて いったと かいて います。
+    background: sh_ryohan_nesage
+  - speaker: tenin
+    emotion: sad
+    text: 去年度は国内で、薄型テレビが2568万台も出たのに……。
+  - speaker: kyaku
+    emotion: normal
+    text: みんな、もう買っちゃったもの。
+    se: tenten
+  - speaker: reimu
+    text: 2011年度、シャープは大型液晶の工場での生産を、しばらく休みます。
+    reading: にせん じゅういちねんど、しゃーぷわ おおがた えきしょうの こうじょうでの せいさんお しばらく やすみます。
+# ---- 2011〜2012年・テレビからスマホへ ----
+- id: ch5_igzo
+  title: テレビからスマホへ
+  background: sh_kenkyujo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: senpai
+    emotion: normal
+    text: 第2工場は、スマホやタブレットの画面のラインに変える。
+  - speaker: senpai
+    emotion: normal
+    text: '[IGZO|イグゾー]っていう、うちの新しい液晶を使うんだ。'
+  - speaker: zundamon
+    emotion: happy
+    text: イグゾー？ 怪獣みたいな名前なのだ。
+    beat: true
+  - speaker: senpai
+    emotion: normal
+    text: 畳より大きなガラスから、小さな画面をたくさん取るんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 窯は同じなのに、焼くものが変わるのか。
+  - speaker: zundamon
+    emotion: sad
+    text: 亀山のパネルが、テレビ用じゃなくなる……。
+  - speaker: reimu
+    text: 2012年春の決算。最終赤字は3760億円で、当時の過去最大でした。
+    reading: にせん じゅうにねん はるの けっさん。さいしゅう あかじわ さんぜん ななひゃく ろくじゅうおくえんで、とうじの かこ さいだいでした。
+# ---- 2012年・垂直統合の限界 ----
+- id: card2012
+  title: ''
+  background: sh_card_2012
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2012年3月27日。鴻海グループとの提携の会見に、4月から社長になる奥田隆司が立ちます。
+    reading: にせん じゅうにねん さんがつ にじゅうしちにち。ほんはい ぐるーぷとの ていけいの かいけんに、しがつから しゃちょうに なる おくだ たかしが たちます。
+- id: ch6_teikei
+  title: 垂直統合の限界
+  background: sh_kaiken
+  stage:
+  - {who: okuda12, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: なぜ、台湾の[鴻海|ほんハイ]と組むんですか。
+  - speaker: okuda12
+    emotion: thinking
+    text: シャープ単独の垂直統合では限界があった。
+    se: don
+    telops:
+    - {text: "奥田次期社長「シャープ単独の垂直統合では限界があった。」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: ……限界。
+    beat: true
+  - speaker: okuda12
+    emotion: normal
+    text: 協業を含めた新たな戦略的な垂直統合モデルを、両社で作り上げていくことになる。
+  - speaker: reimu
+    text: 鴻海の郭台銘はビデオで、これは間違いなく成功する提携になると話しました。
+    reading: ほんはいの かく たいめいわ びでおで、これわ まちがいなく せいこう する ていけいに なると はなしました。
+  - speaker: reimu
+    text: 出資は、堺の工場の会社に約660億円。本体への約669億円は、払い込まれないまま翌年に期限が切れます。
+    reading: しゅっしわ、さかいの こうじょうの かいしゃに やく ろっぴゃく ろくじゅうおくえん。ほんたいえの やく ろっぴゃく ろくじゅうきゅうおくえんわ、はらいこまれない まま よくねんに きげんが きれます。
+- id: ch6_genkai
+  title: ''
+  background: sh_kenkyujo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: angry}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doki
+    emotion: thinking
+    text: 単独の垂直統合では限界、だってさ。
+  - speaker: zundamon
+    emotion: angry
+    text: パネルからテレビまで、全部ここで。それが亀山だったのに！
+  - speaker: doki
+    emotion: thinking
+    text: その自慢を、次の社長が自分で限界って言ったんだ。
+  - speaker: zundamon
+    emotion: sad
+    text: 秘伝のたれも、もう[南京|なんきん]にあるし……。
+  - speaker: doki
+    emotion: normal
+    text: 残ってるのは、オレたちの腕くらいか。
+# ---- 2012年・隣の机が空になる ----
+- id: ch6_kibou
+  title: 隣の机が空になる
+  background: sh_kaigi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: sad}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2012年12月13日。希望退職に応じた2960人が、最後に出社する前の日です。
+    reading: にせん じゅうにねん じゅうにがつ じゅうさんにち。きぼう たいしょくに おうじた にせん きゅうひゃく ろくじゅうにんが、さいごに しゅっしゃ する まえの ひです。
+  - speaker: senpai
+    emotion: normal
+    text: 明日で最後だ。世話になったな。
+  - speaker: zundamon
+    emotion: sad
+    text: ……先輩まで、手を挙げるなんて。
+  - speaker: senpai
+    emotion: normal
+    text: 新人のとき、最初に何を教えたか覚えてるか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 畳ほどのガラスから、32型が8枚。
+  - speaker: senpai
+    emotion: happy
+    text: それと、秘伝のたれだ。
+  - speaker: zundamon
+    emotion: sad
+    text: たれの残りは、ボクが守ります。
+    se: namida
+  - speaker: senpai
+    emotion: happy
+    text: それと、自分のパネルは数えとけ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社の公式アカウントにも、こう書いてありました。
+  - speaker: zundamon
+    emotion: sad
+    text: 明日の出社を最後に、2960名の仲間が去ります。
+    telops:
+    - {text: "シャープ公式アカウント「2960名の仲間が去ります」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 隣の机がカラになり、現実を感じます……って。
+  - speaker: reimu
+    text: 2013年春は最終赤字5453億円。短信には、会社が続く前提に重要な疑義が生じる状況と書かれました。
+    reading: にせん じゅうさんねん はるわ さいしゅう あかじ ごせん よんひゃく ごじゅうさんおくえん。たんしんにわ、かいしゃが つづく ぜんていに じゅうような ぎぎが しょうじる じょうきょうと かかれました。
+# ---- 2016年・鴻海の出資 ----
+- id: card2016
+  title: ''
+  background: sh_card_2016
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2016年2月25日。シャープの取締役会は、官民ファンドの案ではなく、鴻海の出資の案を選びます。
+    reading: にせん じゅうろくねん にがつ にじゅうごにち。しゃーぷの とりしまりやくかいわ かんみん ふぁんどの あんでわ なく、ほんはいの しゅっしの あんお えらびます。
+- id: ch6_saimu
+  title: 債務超過
+  background: sh_kaigi
+  cuts:
+  - speaker: reimu
+    text: 3月までの1年の最終赤字は2560億円。純資産はマイナス312億円の、債務超過でした。
+    reading: さんがつ までの いちねんの さいしゅう あかじわ にせん ごひゃく ろくじゅうおくえん。じゅんしさんわ まいなす さんびゃく じゅうにおくえんの さいむ ちょうかでした。
+    background: sh_kaigi_akaji
+- id: ch6_choin
+  title: 日本が好きです
+  background: sh_choin
+  bgm: hirusagari
+  stage:
+  - {who: kaku, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月2日、堺。新しい資料が出て延びていた調印が、ようやく行われます。
+    reading: しがつ ふつか、さかい。あたらしい しりょうが でて のびて いた ちょういんが、ようやく おこなわれます。
+  - speaker: kisha
+    emotion: normal
+    text: シャープについて、ひと言お願いします。
+  - speaker: kaku
+    emotion: happy
+    text: 私は日本が好きです、シャープが好きです。
+  - speaker: reimu
+    text: 郭は、買収ではなく投資だと説明しました。出資は約3888億円、1株88円です。
+    reading: かくわ、ばいしゅうでわ なく とうしだと せつめい しました。しゅっしわ やく さんぜん はっぴゃく はちじゅうはちおくえん、ひとかぶ はちじゅうはちえんです。
+- id: ch6_88en
+  title: ''
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doki
+    emotion: thinking
+    text: '[1株|ひとかぶ]88円で、[鴻海|ほんハイ]の傘下か。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 88円……駄菓子の値段なのだ。
+    se: chin
+  - speaker: zundamon
+    emotion: thinking
+    text: '[鴻海|ほんハイ]って、どんな会社なの？'
+  - speaker: doki
+    emotion: normal
+    text: 電子機器の組み立てを請け負う会社の、世界の最大手だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 組み立ての、いちばん大きい会社……。
+  - speaker: doki
+    emotion: normal
+    text: 選んだのは、うちの取締役会だよ。借り入れも1か月しか延びてなかった。
+  - speaker: zundamon
+    emotion: thinking
+    text: ほかの道は、なかったのかな……。
+  - speaker: reimu
+    text: 8月12日、シャープは鴻海の子会社に。翌日、鴻海の副総裁だった戴正呉が社長に就きます。
+    reading: はちがつ じゅうににち、しゃーぷわ ほんはいの こがいしゃに。よくじつ、ほんはいの ふくそうさい だった たい せいごが しゃちょうに つきます。
+- id: ch6_tai
+  title: 信賞必罰
+  background: sh_yakuin
+  stage:
+  - {who: tai, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月22日。戴は社員へのメッセージで、こう書きました。
+    reading: はちがつ にじゅうににち。たいわ しゃいんえの めっせーじで、こう かきました。
+  - speaker: tai
+    emotion: normal
+    text: 信賞必罰の人事を徹底する。
+  - speaker: kisha
+    emotion: thinking
+    text: 人を減らす、ということですか。
+  - speaker: tai
+    emotion: normal
+    text: 人員削減ではなく適正化だ。
+  - speaker: kisha
+    emotion: thinking
+    text: 適正化……。
+    beat: true
+- id: ch6_fukki
+  title: 1年4か月で1部へ
+  background: sh_kaiken
+  bgm: natsuyasumi
+  stage:
+  - {who: tai, x: 0.28, flip: true, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2017年12月7日。シャープは、1年4か月で東証1部に戻ります。
+    reading: にせん じゅうななねん じゅうにがつ なのか。しゃーぷわ、いちねん よんかげつで とうしょう いちぶに もどります。
+  - speaker: kisha
+    emotion: normal
+    text: 1部への復帰、いまのお気持ちは。
+  - speaker: tai
+    emotion: happy
+    text: 社長に就任した時からの目標を果たすことができた。
+  - speaker: reimu
+    text: 同じころ亀山では、請負や派遣の人たちの雇い止めが報じられ、テレビの組み立ても消えていきます。
+    reading: おなじ ころ かめやまでわ うけおいや はけんの ひとたちの やといどめが ほうじられ、てれびの くみたても きえて いきます。
+# ---- 2024年・国内のテレビ用パネルがゼロに ----
+- id: card2024
+  title: ''
+  background: sh_card_2024
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2024年5月14日。2年続けて大きな赤字を出した、シャープの決算会見です。
+    reading: にせん にじゅうよねん ごがつ じゅうよっか。にねん つづけて おおきな あかじお だした、しゃーぷの けっさん かいけんです。
+- id: ch7_go
+  title: 大型の生産を止める
+  background: sh_kaiken
+  stage:
+  - {who: go, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[堺|さかい]の工場は、どうするんですか。'
+  - speaker: go
+    emotion: thinking
+    text: 本年度[上期|かみき]中に大型ディスプレイの生産を停止することを決定しました。
+  - speaker: kisha
+    emotion: surprised
+    text: 2年前に、完全子会社に戻したばかりの工場を……。
+- id: ch7_machida
+  title: ''
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: doki
+    emotion: normal
+    text: 元社長の[町田|まちだ]さんが、取材で振り返ってるぞ。
+  - speaker: doki
+    emotion: thinking
+    text: 売却して黒字化の[目処|めど]が付いていたのに、それを買い戻してしまった。
+  - speaker: doki
+    emotion: thinking
+    text: これが致命的だったと思います、だって。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[堺|さかい]の工場のことか……。'
+  - speaker: zundamon
+    emotion: sad
+    text: 液晶に賭けた社長が、そう振り返るのか。
+  - speaker: doki
+    emotion: thinking
+    text: 元社長の見方だけどな。
+- id: sakai_owari
+  title: 国内のテレビ用パネル
+  background: sh_sakai_soto
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2024年8月21日、堺でテレビ向けのパネルの生産が終わり、国内の拠点はゼロになりました。
+    reading: にせん にじゅうよねん はちがつ にじゅういちにち、さかいで てれび むけの ぱねるの せいさんが おわり こくないの きょてんわ ぜろに なりました。
+# ---- 2025年・ボラティリティの高い工場 ----
+- id: card2025
+  title: ''
+  background: sh_card_2025
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2025年5月12日。シャープは鴻海から買い取りの要望を受け、亀山第2工場を譲る方向だと発表します。
+    reading: にせん にじゅうごねん ごがつ じゅうににち。しゃーぷわ ほんはいから かいとりの ようぼうお うけ、かめやま だいに こうじょうお ゆずる ほうこうだと はっぴょう します。
+- id: ch7_bora
+  title: ボラティリティの高い工場
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doki
+    emotion: thinking
+    text: 会社の資料に、うちの工場がなんて書いてあったと思う？
+  - speaker: doki
+    emotion: normal
+    text: ボラティリティの高い亀山第2工場、だ。
+    telops:
+    - {text: "シャープの資料「ボラティリティの高い亀山第２工場」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: ボラ……？ 出世魚の？
+    se: manuke
+  - speaker: doki
+    emotion: angry
+    text: 魚じゃない。値段や注文の上がり下がりが、激しいってことだ。
+  - speaker: zundamon
+    emotion: sad
+    text: 下がり続ける値段に、ずっと振り回されてきたもんな……。
+  - speaker: doki
+    emotion: thinking
+    text: 来年の8月までに、[鴻海|ほんハイ]に譲る方向だって。
+# ---- 2026年・不成立 ----
+- id: card2026
+  title: ''
+  background: sh_card_2026
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: そして、2026年2月10日。
+    reading: そして、にせん にじゅうろくねん にがつ とおか。
+- id: ch8_fuseiritsu
+  title: 売却の不成立
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doki
+    emotion: thinking
+    text: '[鴻海|ほんハイ]に第2工場を売る話、まとまらなかったってさ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: え？ 買いたいって言ってきたのは、[鴻海|ほんハイ]なのに？
+  - speaker: doki
+    emotion: normal
+    text: '[鴻海|ほんハイ]にとっても、将来メリットが出ないって結論らしい。'
+  - speaker: doki
+    emotion: thinking
+    text: 第2工場は8月をめどに止める。希望退職も約1170人募るって。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボク、2003年からここにいるんだけど。
+  - speaker: doki
+    emotion: normal
+    text: オレは、手を挙げようと思う。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そっか。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: お前が抜けたら、ボクのパネルを数えるやつがいなくなるな。
+  - speaker: doki
+    emotion: normal
+    text: 自分で数えろ。
+- id: ch8_kawamura
+  title: 客がいるのに
+  background: sh_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: kawamura, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年5月12日。4月に社長になった、河村哲治の会見です。
+    reading: にせん にじゅうろくねん ごがつ じゅうににち。しがつに しゃちょうに なった、かわむら てつじの かいけんです。
+  - speaker: kisha
+    emotion: normal
+    text: 第2工場は、8月に止める予定でしたよね。
+  - speaker: kawamura
+    emotion: normal
+    text: 生産終了前にまとまった量の生産を求める顧客が予想以上に多い。
+    telops:
+    - {text: "河村社長「顧客が予想以上に多い」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 生産の終わりは12月に延びました。この工場では、90億円規模の営業損失を見込みます。
+    reading: せいさんの おわりわ じゅうにがつに のびました。この こうじょうでわ、きゅうじゅうおくえん きぼの えいぎょう そんしつお みこみます。
+  - speaker: kisha
+    emotion: thinking
+    text: 売却先は、今年度中にめどを付ける方針ですよね。
+  - speaker: kawamura
+    emotion: normal
+    text: 複数の会社から興味を示してもらっている。
+- id: ch8_kyaku
+  title: ''
+  background: sh_kojo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: お客さんは、まだいるのに。
+  - speaker: doki
+    emotion: thinking
+    text: 止めるまでの今年度も、90億円規模の赤字の見込みだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 注文はあるのに、上がり下がりが激しい工場か……。
+  - speaker: doki
+    emotion: normal
+    text: 会社の資料のとおりだな。
+  - speaker: zundamon
+    emotion: sad
+    text: 客がいるのに、続けられない工場なのだ……。
+    se: shobon
+- id: ch8_ooya
+  title: ''
+  background: sh_ooya
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: ooya, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: ooya
+    emotion: normal
+    text: 市長さんも、可能な限りの支援を行うって言うとったわ。
+  - speaker: ooya
+    emotion: normal
+    text: 6月には県と労働局が、辞める人の仕事探しの会議を開いたそうや。
+  - speaker: zundamon
+    emotion: sad
+    text: 県と市に、迎えてもらった工場なのに……。
+  - speaker: ooya
+    emotion: thinking
+    text: 工場が来て、町が変わった。また変わる、それだけのことや。
+  - speaker: zundamon
+    emotion: thinking
+    text: 大家さんは、強いですね。
+  - speaker: ooya
+    emotion: happy
+    text: 家賃さえ[払うて|はろうて]くれたら、なんでもええ。
+    beat: true
+# ---- 2026年10月・いまの工場 ----
+- id: ch8_ima
+  title: 2026年10月の亀山
+  background: sh_kojo_soto
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月。第2工場は、12月に生産を終える予定です。売却先は、まだ発表されていません。
+    reading: にせん にじゅうろくねん じゅうがつ。だいに こうじょうわ、じゅうにがつに せいさんお おえる よていです。ばいきゃくさきわ まだ はっぴょう されて いません。
+    telops:
+    - {text: "第2工場　12月に生産終了の予定", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: doki
+    emotion: normal
+    text: 第1工場は残る。[下期|しもき]からは、欧米の自動車メーカー向けの画面だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 亀山の液晶が、全部なくなるわけじゃないのか。
+  - speaker: doki
+    emotion: normal
+    text: テレビを組み立ててた建物も、AIのサーバーのほうに使う話がある。
+  - speaker: zundamon
+    emotion: thinking
+    text: それも、いつ動くかはまだ決まってないんだよね。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクは、最後の1枚まで第2工場にいるよ。
+  - speaker: doki
+    emotion: happy
+    text: 知ってる。
+  - speaker: reimu
+    text: 2月の発表では、亀山の別の工場を使い、鴻海と組むAIデータセンターへの参入を検討するとしています。
+    reading: にがつの はっぴょうでわ かめやまの べつの こうじょうお つかい、ほんはいと くむ えーあい でーたせんたーえの さんにゅうお けんとう すると して います。
+# ---- 論争の章 ----
+- id: ronso1
+  title: 鴻海に乗っ取られた？
+  background: sh_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: つむぎ、ネットで見たのだ！ シャープは[鴻海|ほんハイ]に乗っ取られたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 選んだのは、シャープの取締役会よ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 官民ファンドの案と比べて、[鴻海|ほんハイ]の出資の案を受け入れたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、関係者すべてにとってベストと判断したと説明してるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのころは債務超過で、銀行の借り入れも1か月しか延びてなかったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 追い詰められてたのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[鴻海|ほんハイ]は約3888億円を出して、買収ではなく投資だと説明したの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 次の年度には本業の利益が黒字に戻って、2017年には東証1部に復帰よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2018年春の決算は、4期ぶりの最終黒字で702億円。
+  - speaker: zundamon
+    emotion: normal
+    text: 助けてもらったんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方で、[鴻海|ほんハイ]は議決権の34.1%を持つ親会社。関係の深い会社も足すと54.2%よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年度は、カメラの部品と半導体の事業も[鴻海|ほんハイ]のグループに譲ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 亀山第2工場も、買い取りを求めたのは[鴻海|ホンハイ]。やめたのも[鴻海|ほんハイ]よ。
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、[鴻海|ほんハイ]が亀山を見捨てたのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうは言えないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の[沖津|おきつ]社長は、[鴻海|ほんハイ]側にメリットが出ないとの判断に至ったと説明したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 乗っ取りでも、見捨てたでもない。親会社との取引が多い会社なんだ。
+- id: ronso2
+  title: 液晶に賭けたのが間違い？
+  background: sh_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、液晶に賭けたのが間違いだったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 当たったところから見るね。1998年の液晶は、まだ赤字の事業だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが2004年度には、シャープの国内のテレビの売上の約9割が液晶よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 宣言は、目標より早く実現したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 量販店の集計では、液晶テレビの販売シェアの首位も16年と21週続いたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 16年！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者も、亀山第1工場は時期も規模も適切だったと評価してる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 外れたのは、そのあと。第2工場と[堺|さかい]は、研究者の計算では大幅な過剰能力よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[堺|さかい]を8割動かすには、2010年の55型超の世界需要の2073.6%が要る試算よ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 世界の20倍も要るのだ！
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: シャープ自身も2025年に、市場の変化への対応が遅れたと書いてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[町田|まちだ]元社長は2024年の取材で、社長だった2000年ごろの口癖を振り返ってるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 液晶が続くのは2010年ぐらいまで、ってね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 賭けた人が、そう言ってたのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人の振り返りだから、本人の見方として聞いてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 液晶で勝って、同じやり方を大きくしたところでつまずいたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: パネルにはお[金|かね]が足りず、家電などで稼いだ[分|ぶん]もパネルに回る。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どっちも育たない。会社はそれを、[負|フ]のサイクルと書いてるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: いちばん成功した工場が、重い荷物になったわけだ。
+- id: ronso3
+  title: 技術を盗まれた？
+  background: sh_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 秘伝のたれを盗まれたから負けた、って話も見たのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、装置に手を入れて中身を見せないようにしてたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者のまとめだと、韓国や台湾の会社は半年から1年半で同じ世代の工場を動かしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 装置や材料は、外の専門のメーカーから買えるからよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: たれの材料は、スーパーで売ってたのだ……。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: '[町田|まちだ]元社長も2024年の取材で、振り返ってこう話してるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 技術というのは高いところから低いところへ流れていくものなんです。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それに2009年には、シャープ自身が第1工場の装置を[南京|なんきん]に売ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 作り方も、一緒に渡してね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 盗まれたんじゃなくて、流れていった……。
+  - speaker: tsumugi
+    emotion: normal
+    text: どこの国が悪い、って話じゃないの。
+- id: chui
+  title: テレビを買う人へ
+  background: sh_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: テレビは同じ大きさなら、毎年のように安くなる。
+  - speaker: zundamon
+    emotion: happy
+    text: 安くなるのは、うれしいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 買う側には、うれしい話よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも作る側は値段が下がっても、大きな工場をなかなか止められないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: パネルそのものが、半年で5割ほど安くなったこともあるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、買ったばかりのボクのテレビは……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 急がないなら、少し待つのも手ね。
+  - speaker: zundamon
+    emotion: sad
+    text: もう買っちゃったのだ。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: それと国内でテレビ向けのパネルを作る拠点は、2024年8月からゼロよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、ボクのテレビのパネルは……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国内では作られていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 修理の部品は、液晶テレビの製造打ち切りから8年保有するとシャープは書いてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 親会社が変わっても？
+  - speaker: tsumugi
+    emotion: normal
+    text: 買ったテレビの修理の窓口は、シャープよ。無料の保証は1年ね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: もうひとつ。大きな工場が来る町は、補助金と税と仕事がまとめて動くの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 亀山市は2011年度まで、国の交付税がいらない町だったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 工場ひとつで、町の財布まで変わるのか。
+# ---- 締め：最後の1枚 ----
+- id: shime_kojo
+  title: ''
+  background: sh_kojo
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: doki
+    emotion: normal
+    text: 12月まで、流すんだろ。
+  - speaker: zundamon
+    emotion: normal
+    text: うん。待ってるお客さんがいるからね。
+  - speaker: doki
+    emotion: happy
+    text: 出荷式のとき、お前のパネルはどれだって聞いたよな。
+  - speaker: zundamon
+    emotion: happy
+    text: 最後の1枚は、ちゃんと数えるのだ。
+  - speaker: doki
+    emotion: happy
+    text: 23年かかって、やっと1枚か。
+  - speaker: zundamon
+    emotion: angry
+    text: 1枚じゃない！ 数えてなかっただけ！
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 畳ほどのガラスから、32型が8枚。先輩が最初に教えてくれたんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 出荷の前から、売価は10%ほど下がる見込みって言われてた。
+  - speaker: zundamon
+    emotion: thinking
+    text: 下がる値段を大きなガラスで追いかけて、ここまで来たのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: お客さんがいるうちは、最後まで作るよ。
+- id: shime
+  title: ''
+  background: sh_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: このテレビ、大事に使うのだ。作り終わっても、修理の部品は8年あるし！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 製造打ち切りから8年よ。買ってから8年じゃないわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、急いで壊さないと！
+  - speaker: tsumugi
+    emotion: angry
+    text: 壊さないの。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 53万円の32型が、17年で[10分の1|じゅうぶんのいち]。
+  - speaker: zundamon
+    emotion: thinking
+    text: その裏で、工場はずっと追いかけっこをしてたのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: いちばん成功した仕組みが、いちばん重い荷物にもなる。亀山の22年は、その記録ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたもテレビを買うときは、値段の下がり方と修理の窓口を確かめてみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
