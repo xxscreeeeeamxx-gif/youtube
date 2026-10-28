@@ -1,0 +1,1435 @@
+meta:
+  title: 「オセロゲームのようにシェアを奪った」ASMLに抜かれたニコン、最上位機が1年で0台【ずんだもん解説】
+  slug: nikon-stepper
+  hook_line: 金額で世界の約半分を握ったニコンの露光装置は、なぜ後発に抜かれたのか。
+  summary: 2001年、ニコンの工場のクリーンルーム。回路を縮めて焼き付ける露光装置で、ニコンは金額で世界の約半分を握った時期がありました。レンズを自前で磨くニコンと、外の一流を束ねるオランダのASML。水を入れる液浸、次の光のEUV、客が株主になって出した開発費。1985年入社の技術者（架空の人物）の目で、会社の発表と研究者・記者の見方を並べて再現ドラマでたどります。過去最大の赤字の正体も。（2026年10月時点）
+  sources:
+  - ニコン「2026年3月期 決算説明会資料（ノート付き）」（2026年5月8日） https://www.jp.nikon.com/content/dam/web-assets/nikoncom/company/local/jp/ja/ir/ir_library/result/pdf/2026/26_all_script_j.pdf
+  - ニコン「連結財務諸表におけるのれん等の非金融資産の減損損失の計上に関するお知らせ」（2026年2月5日） https://www.jp.nikon.com/content/dam/web-assets/nikoncom/company/local/jp/ja/news/2026/20260205_02_j.pdf
+  - ニコン「2026-2030年度 中期経営計画（ノート付き）」（2026年5月8日） https://www.jp.nikon.com/content/dam/web-assets/nikoncom/company/local/jp/ja/ir/management/midtermbusiness/pdf/2026/0508j_script.pdf
+  - ニコン「構造改革の実施に関するお知らせ」（2016年11月8日） https://www.jp.nikon.com/content/dam/web-assets/nikoncom/company/local/jp/ja/news/2016/20161108_1_j.pdf
+  - ニコン「ニコン、ASML、Carl Zeiss間における全ての訴訟手続の和解合意について」（2019年1月23日） https://www.jp.nikon.com/company/news/2019/0123_01.html
+  - ASML「Samsung joins ASML's Customer Co-Investment Program for Innovation, completing the program」（2012年8月27日） https://www.sec.gov/Archives/edgar/data/0000937966/000119312512370598/d402810dex991.htm
+  tags:
+  - ニコン
+  - 露光装置
+  - ASML
+  - 半導体
+  - ステッパー
+  - 液浸
+  - EUV
+  - 希望退職
+  - 3Dプリンター
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 金額で世界の約半分
+    bottom: 最上位機は1年で0台
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: doki
+    label: 同期
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#dfe6ee'
+  - id: willer
+    label: GCA社長
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3a44'
+  - id: shimamura
+    label: 嶋村社長
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: ushida
+    label: 牛田社長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#3a4a5a'
+  - id: omura
+    label: 大村社長
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2a32'
+  - id: kisha
+    label: 記者
+    voice: 8
+    pitch: 0.04
+    outfit: suit
+    color: '#6a5a48'
+  - id: analyst
+    label: アナリスト
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a3a2f'
+scenes:
+# ---- 先出し（2026年5月8日・決算の日） ----
+- id: co_kessan
+  title: ''
+  background: nk_roko
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2026年5月8日。ニコンが、3月までの1年の決算を発表した日です。
+    reading: にせん にじゅうろくねん ごがつ ようか。にこんが、さんがつまでの いちねんの けっさんお はっぴょう した ひです。
+  - speaker: doki
+    emotion: thinking
+    text: 最終赤字、860億円。過去最大だってさ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 860億円……！？
+  - speaker: doki
+    emotion: thinking
+    text: それに、うちのいちばん[上|ウエ]の機械。この1年で、売れたのは0台だ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……0台。この部屋も、奥が空いたもんな。
+    background: nk_roko_kara
+  - speaker: reimu
+    text: ニコン自身が史上最も精密な機械と書く、露光装置。その最上位の機種が、1年で1台も売れませんでした。
+    reading: にこん じしんが しじょう もっとも せいみつな きかいと かく、ろこう そうち。その さいじょういの きしゅが いちねんで いちだいも うれませんでした。
+    telops:
+    - {text: "最終赤字860億円　最上位機は1年で0台", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: ただし、この860億円の赤字の正体は、少し意外なものです。
+    reading: ただし この はっぴゃく ろくじゅうおくえんの あかじの しょうたいわ、すこし いがいな ものです。
+# ---- 今の部屋（スマホ） ----
+- id: hook
+  title: ''
+  background: nk_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 新しいスマホなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: その回路は、露光装置って機械が光で焼いたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: スマホを焼くのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 最先端の機械は1台約300億円。30万円のカメラ10万台分ね。
+  - speaker: zundamon
+    emotion: surprised
+    text: カメラ10万台……！
+  - speaker: tsumugi
+    emotion: normal
+    text: その露光装置でニコンは一時、金額で世界の約半分を握ってたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それがなぜ、外から部品を集める後発に抜かれたのか。
+# ---- 2001年・組み立てのクリーンルーム ----
+- id: card2001
+  title: ''
+  background: nk_card_2001
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2001年。ニコンの工場の、露光装置を組み立てるクリーンルームです。
+    reading: にせん いちねん。にこんの こうじょうの、ろこう そうちお くみたてる くりーんるーむです。
+  - speaker: reimu
+    text: 組み立てと調整を受け持つのは、1985年に入社した技術者です。
+    reading: くみたてと ちょうせいお うけもつのわ、せんきゅうひゃく はちじゅうごねんに にゅうしゃ した ぎじゅつしゃです。
+- id: ch1_jimae
+  title: 自前で磨くレンズ
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: happy}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 今日もレンズがピカピカです。さすが世界一のレンズ。
+  - speaker: senpai
+    emotion: normal
+    text: 露光装置とは何か。新人に聞かれたら、一言で言えるか。
+  - speaker: zundamon
+    emotion: happy
+    text: すごく高い、回路用のカメラです！
+  - speaker: senpai
+    emotion: thinking
+    text: 半分だけ正解だ。
+    se: hammer
+  - speaker: senpai
+    emotion: normal
+    text: 回路の[原版|げんばん]に光を当てて、レンズで縮めてウエハーに焼き付ける。
+  - speaker: zundamon
+    emotion: normal
+    text: 縮めて、焼く。
+  - speaker: senpai
+    emotion: normal
+    text: 1964年に、東大の先生がうちのレンズで実験をした。
+  - speaker: senpai
+    emotion: normal
+    text: 英語の小説1冊ぶんを、10円切手くらいの大きさに縮めて写したんだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 小説1冊が、切手1枚！？
+  - speaker: senpai
+    emotion: normal
+    text: その血筋のレンズが、この機械の目だ。
+  - speaker: senpai
+    emotion: happy
+    text: うちはそのレンズを、全部自前で磨いてる。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクらの自慢です！
+  - speaker: zundamon
+    emotion: thinking
+    text: オランダのASMLは、レンズはどうしてるんです？
+  - speaker: senpai
+    emotion: normal
+    text: ドイツのツァイスに任せてる。研究も、よその研究所と組んでる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分で磨かないんですか！？
+  - speaker: senpai
+    emotion: normal
+    text: 外の一流を束ねて、自分たちは設計と最後の組み立てに絞ってるんだ。
+  - speaker: zundamon
+    emotion: angry
+    text: それ、ずるくないですか。
+  - speaker: senpai
+    emotion: thinking
+    text: ずるくない。速いんだ。
+    beat: true
+  - speaker: reimu
+    text: 研究者の中馬宏之は、ニコンを垂直統合型、ASMLを外に頼る量産特化型と呼びました。
+    reading: けんきゅうしゃの ちゅうま ひろゆきわ にこんお すいちょく とうごうがた、えーえすえむえるお そとに たよる りょうさん とっかがたと よびました。
+    telops:
+    - {text: "ニコン＝自前で磨く　ASML＝外を束ねる", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 向こうは、雨漏りする小屋から始まった会社って聞きましたよ。
+  - speaker: senpai
+    emotion: thinking
+    text: 1984年にな。それが今は、すぐ後ろまで来てる。
+- id: ch1_twin
+  title: ''
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: senpai
+    emotion: thinking
+    text: しかも向こうは今年、ウエハーを載せる台を2つ持つ機械を出した。
+  - speaker: zundamon
+    emotion: thinking
+    text: 台が2つ？ 何に使うんです？
+  - speaker: senpai
+    emotion: normal
+    text: 片方で位置を測ってる間に、もう片方で焼く。
+  - speaker: zundamon
+    emotion: surprised
+    text: 待ち時間が、なくなる……！
+    se: hirameki
+  - speaker: senpai
+    emotion: normal
+    text: うちは1枚を、いちばんきれいに焼く。
+  - speaker: senpai
+    emotion: thinking
+    text: 向こうは、1時間に何枚焼けるかで勝負してきた。
+  - speaker: zundamon
+    emotion: thinking
+    text: コンロが[2口|ふたくち]ある台所、みたいなもんですか。
+  - speaker: senpai
+    emotion: normal
+    text: そうだ。[1口|ひとくち]で丁寧に焼くか、[2口|ふたくち]で回すかだ。
+  - speaker: zundamon
+    emotion: angry
+    text: きれいさなら、うちが負けるわけないのだ！
+  - speaker: reimu
+    text: この違いがのちに効いてくると、研究者や記者は見ています。
+    reading: この ちがいが のちに きいて くると、けんきゅうしゃや きしゃわ みて います。
+  - speaker: reimu
+    text: では、ニコンは技術で負けたのでしょうか。
+    reading: でわ にこんわ ぎじゅつで まけたのでしょうか。
+# ---- 1972年ごろ・量産に適さない ----
+- id: card1972
+  title: ''
+  background: nk_card_1972
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1972年ごろ。ニコンがまだ、日本光学工業という名前だった時代です。
+    reading: せんきゅうひゃく ななじゅうにねん ごろ。にこんが まだ、にっぽん こうがく こうぎょうと いう なまえだった じだいです。
+- id: ch2_willer
+  title: 量産に適さない
+  background: nk_jikken
+  stage:
+  - {who: willer, x: 0.62, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: のちに世界で初めてステッパーを売る、アメリカのGCAの社長が訪ねてきます。
+    reading: のちに せかいで はじめて すてっぱーお うる、あめりかの じーしーえーの しゃちょうが たずねて きます。
+  - speaker: reimu
+    text: 脇本善司や吉田庄一郎らが、レンズで回路を縮めて焼く機械の構想を見せます。
+    reading: わきもと ぜんじや よしだ しょういちろうらが、れんずで かいろお ちぢめて やく きかいの こうそうお みせます。
+  - speaker: willer
+    emotion: thinking
+    text: そんな精密な[位置決め|いちぎめ]の精度を求められる機械は、
+  - speaker: willer
+    emotion: normal
+    text: 生産性が低く、量産に適さないだろう。
+    se: don
+    telops:
+    - {text: "GCA社長「量産に適さないだろう」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 4、5年後、GCAは自らステッパーを発表。精密だが量産に向かないという見方は、のちに形を変えて現れます。
+    reading: よん ごねんご、じーしーえーわ みずから すてっぱーお はっぴょう。せいみつだが りょうさんに むかないと いう みかたわ、のちに かたちお かえて あらわれます。
+- id: ch2_kenkyujo
+  title: ''
+  background: nk_wafer
+  cuts:
+  - speaker: reimu
+    text: 1976年、国の共同研究所が発足。本命は、電子ビームでした。
+    reading: せんきゅうひゃく ななじゅうろくねん、くにの きょうどう けんきゅうじょが ほっそく。ほんめいわ、でんし びーむでした。
+  - speaker: reimu
+    text: 研究所の中では、マスクを検証する装置と名前をごまかして認めてもらい、ニコンに試作を頼みます。
+    reading: けんきゅうじょの なかでわ ますくお けんしょう する そうちと なまえお ごまかして みとめて もらい、にこんに しさくお たのみます。
+  - speaker: reimu
+    text: 1980年、国産初のステッパーが完成。当時、世界の台数の約9割はGCAでした。
+    reading: せんきゅうひゃく はちじゅうねん、こくさん はつの すてっぱーが かんせい。とうじ せかいの だいすうの やく きゅうわりわ じーしーえーでした。
+# ---- 1985年・新人 ----
+- id: ch2_nyusha
+  title: 1985年の新人
+  background: nk_roko
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: happy}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1985年。日本光学工業の工場に、新人の技術者が入ります。
+    reading: せんきゅうひゃく はちじゅうごねん。にっぽん こうがく こうぎょうの こうじょうに、しんじんの ぎじゅつしゃが はいります。
+  - speaker: senpai
+    emotion: normal
+    text: ここが、ステッパーの組み立てだ。
+  - speaker: zundamon
+    emotion: happy
+    text: ステッパー！ 踊る機械ですか？
+  - speaker: senpai
+    emotion: angry
+    text: 踊らない。
+    beat: true
+  - speaker: senpai
+    emotion: normal
+    text: 1回焼くたびに、ウエハーを少しずつずらす。だからステッパーだ。
+  - speaker: senpai
+    emotion: normal
+    text: 同じ回路を縮めて、何十個も並べて焼いていく。
+  - speaker: senpai
+    emotion: normal
+    text: たとえるなら、東京から富士山の山頂のテニスボールに矢を当てる精度だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボク、弓道は未経験です！
+  - speaker: senpai
+    emotion: angry
+    text: 誰が弓を引けと言った。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: happy
+    text: 世界一の機械を、ボクが組み立てますよ！
+  - speaker: senpai
+    emotion: thinking
+    text: 口より、手を動かせ。
+  - speaker: reimu
+    text: 入社から2年後の1987年、ニコンの露光装置は、累計1,000台に届きます。
+    reading: にゅうしゃから にねんごの せんきゅうひゃく はちじゅうななねん、にこんの ろこう そうちわ るいけい せんだいに とどきます。
+# ---- 1988〜1990年・社名と世界一 ----
+- id: ch2_nikon
+  title: ''
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: happy}
+  - {who: doki, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1988年4月。
+    reading: せんきゅうひゃく はちじゅうはちねん しがつ。
+  - speaker: doki
+    emotion: happy
+    text: 今日から、うちの社名がニコンだってさ。
+  - speaker: zundamon
+    emotion: happy
+    text: カメラの名前が、会社の名前か！ 名刺、刷り直しだな。
+  - speaker: reimu
+    text: 1990年4月。アメリカの官民の研究団体の会長が、議会でニコンを名指しします。
+    reading: せんきゅうひゃく きゅうじゅうねん しがつ。あめりかの かんみんの けんきゅう だんたいの かいちょうが、ぎかいで にこんお なざし します。
+  - speaker: doki
+    emotion: thinking
+    text: うちが新しい機械を、日本の客に先に渡してるって証言だってさ。
+  - speaker: zundamon
+    emotion: angry
+    text: そんなひいきしたら、商売にならないだろ。
+  - speaker: doki
+    emotion: normal
+    text: 会社も否定してる。試作機は、日本とアメリカに半分ずつ置いてるって。
+  - speaker: reimu
+    text: 1990年までに、ニコンの露光装置は世界一になっていました。
+    reading: せんきゅうひゃく きゅうじゅうねん までに、にこんの ろこう そうちわ せかいいちに なって いました。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界一なのだ！ ボクが組んだ機械が、世界一！
+    se: levelup
+  - speaker: doki
+    emotion: normal
+    text: お前が組んだのは、そのうちの何台だよ。
+    beat: true
+  - speaker: reimu
+    text: このとき、まだ誰も、この首位を明け渡す日が来るとは思っていません。
+    reading: この とき まだ だれも、この しゅいお あけわたす ひが くるとわ おもって いません。
+- id: ch2_sekai
+  title: 世界の約半分
+  background: nk_tenji
+  cuts:
+  - speaker: reimu
+    text: 1995年、ニコンの露光装置は台数で世界の45％、金額では約49％。世界の約半分です。
+    reading: せんきゅうひゃく きゅうじゅうごねん、にこんの ろこう そうちわ だいすうで せかいの よんじゅうご ぱーせんと きんがくでわ やく よんじゅうきゅう ぱーせんと。せかいの やく はんぶんです。
+    telops:
+    - {text: "1995年　台数45％・金額約49％", size: md, position: top-right, color: "#9AD8FF", stroke: "#0A1A2A", glow: "#2A6AFF", anim: up}
+  - speaker: reimu
+    text: その会社が、なぜ抜かれるのか。次の光を選び間違えたのか。過去最大の赤字は、露光装置のせいなのか。
+    reading: その かいしゃが、なぜ ぬかれるのか。つぎの ひかりお えらび まちがえたのか。かこ さいだいの あかじわ、ろこう そうちの せい なのか。
+# ---- 2002年・シェアNo.1は使命 ----
+- id: card2002
+  title: ''
+  background: nk_card_2002
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2002年。半導体の不況で、ニコンの露光装置の部門は、売上が前の年より15％減りました。
+    reading: にせん にねん。はんどうたいの ふきょうで にこんの ろこう そうちの ぶもんわ、うりあげが まえの としより じゅうご ぱーせんと へりました。
+- id: ch3_shimei
+  title: シェアNo.1は使命
+  background: nk_yakuin
+  stage:
+  - {who: shimamura, x: 0.62, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この年の年次報告書。社長の嶋村輝郎は、こう書いています。
+    reading: この としの ねんじ ほうこくしょ。しゃちょうの しまむら てるおわ、こう かいて います。
+  - speaker: shimamura
+    emotion: normal
+    text: ステッパー事業における最大の強みは、投影レンズの性能であり
+  - speaker: shimamura
+    emotion: happy
+    text: ニコンは絶対的な自信を持っています。
+  - speaker: shimamura
+    emotion: normal
+    text: シェア[No.1|なんばーわん]を維持することは、ニコンに課せられた使命です。
+    se: jaan
+    telops:
+    - {text: "嶋村社長（年次報告書）「ニコンに課せられた使命です」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 同じ報告書は次の光の候補を3つ挙げ、どれにも対応できるよう開発していると書きました。
+    reading: おなじ ほうこくしょわ つぎの ひかりの こうほお みっつ あげ、どれにも たいおう できるよう かいはつ して いると かきました。
+# ---- 2002年・水を入れる ----
+- id: ch3_mizu
+  title: 水を入れる
+  background: nk_roko
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: happy}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: doki
+    emotion: normal
+    text: 年次報告書、読んだか。シェア[No.1|なんばーわん]は使命だってさ。
+  - speaker: zundamon
+    emotion: happy
+    text: 使命！ かっこいいな。ボクの使命は、このレンズを曇らせないことだ。
+  - speaker: doki
+    emotion: thinking
+    text: 使命が、小さいな。
+    beat: true
+  - speaker: doki
+    emotion: thinking
+    text: それより台湾のTSMCの技術者が、妙なことを言い出したらしい。
+  - speaker: doki
+    emotion: normal
+    text: レンズとウエハーの間を、水で満たして焼けってさ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 水って、飲む水？
+  - speaker: doki
+    emotion: normal
+    text: その水だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 水！？ 精密機械に水なんて、正気なのだ！？
+    se: zukko
+  - speaker: doki
+    emotion: normal
+    text: 同じ193ナノの光のまま、もっと細かく焼けるらしい。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも次は、157ナノの[光|ヒカリ]って話だったろ。
+  - speaker: zundamon
+    emotion: thinking
+    text: みんな、そっちにお[金|かね]をかけてるのに。
+  - speaker: doki
+    emotion: normal
+    text: だから、妙な話なんだよ。
+  - speaker: reimu
+    text: このころ業界は、次の光を157ナノメートルと見て開発を進めていました。
+    reading: この ころ ぎょうかいわ つぎの ひかりお ひゃく ごじゅうなな なのめーとると みて かいはつお すすめて いました。
+  - speaker: doki
+    emotion: thinking
+    text: 水を入れるやり方は、[液浸|えきしん]って呼ぶらしい。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[液浸|えきしん]……。お風呂みたいな名前だな。'
+- id: ch3_asml
+  title: ''
+  background: nk_kaigai
+  cuts:
+  - speaker: reimu
+    text: 2003年5月、インテルは157ナノの光を取りやめます。
+    reading: にせん さんねん ごがつ、いんてるわ ひゃく ごじゅうなな なのの ひかりお とりやめます。
+  - speaker: reimu
+    text: ASMLは同じ年に液浸の試作機を作り、2004年11月、TSMCに液浸の露光装置を納めました。
+    reading: えーえすえむえるわ おなじ としに えきしんの しさくきお つくり、にせん よねん じゅういちがつに てぃーえすえむしーに えきしんの ろこう そうちお おさめました。
+- id: ch3_2005
+  title: ''
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doki, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2005年。
+    reading: にせん ごねん。
+  - speaker: doki
+    emotion: happy
+    text: うちの[液浸|えきしん]の機械も出たぞ。
+  - speaker: doki
+    emotion: happy
+    text: レンズの性能の数字で、世界で初めて1.0の壁を超えたって。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり、うちのレンズは世界一なのだ！
+  - speaker: doki
+    emotion: thinking
+    text: でも向こうは、2004年の11月には台湾の客に納めてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちの試作機も、去年の秋にはできてたのに。
+  - speaker: doki
+    emotion: thinking
+    text: 試作と、客の工場に入るのとは別だ。
+  - speaker: zundamon
+    emotion: sad
+    text: 同じ光で、同じ水なのに……。
+    beat: true
+# ---- 首位が入れ替わる ----
+- id: ch3_gyakuten
+  title: 首位が入れ替わる
+  background: nk_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: ASMLの台数のシェアは、1995年の14％から2000年には30％。ニコンの35％に迫っていました。
+    reading: えーえすえむえるの だいすうの しぇあわ、せんきゅうひゃく きゅうじゅうごねんの じゅうよん ぱーせんとから にせんねんにわ さんじゅっ ぱーせんと。にこんの さんじゅうご ぱーせんとに せまって いました。
+    background: nk_kaigi_up
+  - speaker: reimu
+    text: 首位が入れ替わった年は、台数で数えるか金額で数えるかで、資料によって違います。
+    reading: しゅいが いれかわった としわ だいすうで かぞえるか きんがくで かぞえるかで、しりょうに よって ちがいます。
+  - speaker: reimu
+    text: 2000年代の前半から半ばにかけて、ニコンは世界の首位をASMLに明け渡しました。
+    reading: にせんねんだいの ぜんはんから なかばに かけて、にこんわ せかいの しゅいお えーえすえむえるに あけわたしました。
+    telops:
+    - {text: "2000年代の前半〜半ば　首位が入れ替わる", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 抜かれた……。うちが、2番……。
+    se: gaan
+  - speaker: doki
+    emotion: thinking
+    text: 2枚同時の台も水を入れるのも、向こうが先に客に届けた。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクらは、いちばんきれいに焼いてたのに。
+  - speaker: doki
+    emotion: thinking
+    text: ……ああ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1980年代は、うちがアメリカの[GCA|じーしーえー]を抜いたのにな。
+  - speaker: doki
+    emotion: thinking
+    text: 今度は、うちが抜かれる番か。
+  - speaker: zundamon
+    emotion: thinking
+    text: 次の光で、取り返すしかない。
+# ---- EUVの試作機 ----
+- id: ch3_euv
+  title: EUVの試作機
+  background: nk_jikken
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 次の光の本命は、波長13.5ナノメートルのEUV、極端紫外線でした。
+    reading: つぎの ひかりの ほんめいわ はちょう じゅうさんてんご なのめーとるの いーゆーぶい、きょくたん しがいせんでした。
+  - speaker: reimu
+    text: ニコンは2003年にEUVの開発を正式に始め、2007年に試作機を完成させていました。
+    reading: にこんわ にせん さんねんに いーゆーぶいの かいはつお せいしきに はじめ、にせん ななねんに しさくきお かんせい させて いました。
+  - speaker: doki
+    emotion: happy
+    text: '[EUV|いーゆーぶい]の試作機、日本の半導体メーカーの共同研究の会社に入ったぞ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 13.5ナノの光！ うちも、ちゃんと作れたのだ！
+    se: levelup
+  - speaker: doki
+    emotion: normal
+    text: 193ナノの、およそ[14分の1|じゅうよんぶんのいち]の波長だ。
+  - speaker: doki
+    emotion: normal
+    text: 回路の線を、32ナノで全面に焼いてみせたらしい。
+  - speaker: zundamon
+    emotion: happy
+    text: これで次の光は、うちが取り返せる！
+  - speaker: reimu
+    text: それでも2010年代の初め、ニコンはEUVの量産機の開発から手を引きます。
+    reading: それでも にせん じゅうねんだいの はじめ、にこんわ いーゆーぶいの りょうさんきの かいはつから てお ひきます。
+  - speaker: reimu
+    text: 研究者の柴田友厚は、採算を見たニコン自身の判断として描いています。
+    reading: けんきゅうしゃの しばた ともあつわ、さいさんお みた にこん じしんの はんだんと して えがいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: 試作機まで、作ったのに……。
+  - speaker: doki
+    emotion: thinking
+    text: 上が決めたことだ。俺たちには、紙1枚で回ってくるだけさ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 紙1枚か。ボクらが焼くのは、ウエハー1枚なのにな。
+# ---- 2012年・客が株主になる ----
+- id: ch3_kyaku
+  title: 客が株主になる
+  background: nk_kaigai
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2012年夏。インテル、TSMC、サムスンの3社が、ASMLの株を23％持つと決まります。
+    reading: にせん じゅうにねん なつ。いんてる てぃーえすえむしー さむすんの さんしゃが、えーえすえむえるの かぶお にじゅうさん ぱーせんと もつと きまります。
+  - speaker: reimu
+    text: 株に38億5,000万ユーロ。研究開発費に、13億8,000万ユーロを出します。
+    reading: かぶに さんじゅうはちおく ごせんまん ゆーろ。けんきゅう かいはつひに、じゅうさんおく はっせんまん ゆーろお だします。
+  - speaker: reimu
+    text: 目的は、EUVなどの開発を早めることでした。
+    reading: もくてきわ、いーゆーぶい などの かいはつお はやめる ことでした。
+- id: ch3_kyaku2
+  title: ''
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: surprised}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: お客さんが店の株主になって、開発費まで出す！？
+  - speaker: zundamon
+    emotion: surprised
+    text: 23％って、[4分の1|よんぶんのいち]近くじゃないか。
+  - speaker: doki
+    emotion: thinking
+    text: 早く作ってくれって、最大の客たちが財布ごと出したわけだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 向こうは、お客さんと一緒に走ってるのか。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも、お客さんに開発費を出してほしいな。新しいドライバーの。
+  - speaker: doki
+    emotion: normal
+    text: それは備品の申請書で[出せ|ダセ]。
+    se: tenten
+# ---- 2014年・オセロゲームのように ----
+- id: card2014
+  title: ''
+  background: nk_card_2014
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2014年6月。露光装置の開発を率いたこともある牛田一雄が、社長に就きます。
+    reading: にせん じゅうよねん ろくがつ。ろこう そうちの かいはつお ひきいた ことも ある うしだ かずおが、しゃちょうに つきます。
+- id: ch4_othello
+  title: オセロゲームのように
+  background: nk_yakuin
+  stage:
+  - {who: ushida, x: 0.62, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 9月、牛田は雑誌の記事でこう語っています。
+    reading: くがつ、うしだわ ざっしの きじで こう かたって います。
+  - speaker: ushida
+    emotion: thinking
+    text: 日本勢は圧倒的シェアを持つなかで
+  - speaker: ushida
+    emotion: normal
+    text: '[エボリューション（順次発展）|エボリューション]をすればいいと思っていた。'
+  - speaker: ushida
+    emotion: normal
+    text: 一方、ASMLは技術で[レボリューション（革命）|レボリューション]を起こし
+  - speaker: ushida
+    emotion: thinking
+    text: オセロゲームのようにシェアを奪った。
+    telops:
+    - {text: "牛田社長「オセロゲームのようにシェアを奪った」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: ushida
+    emotion: normal
+    text: ASMLはすでにツインステージというカードを切ってしまったが
+  - speaker: ushida
+    emotion: happy
+    text: ニコンにはまだ切っていない秘蔵のカードがある。
+  - speaker: ushida
+    emotion: happy
+    text: 3年後にシェア30％、さらに50％を目指す。
+  - speaker: reimu
+    text: 好機と見たのは、ウエハーが300ミリから450ミリへ大きくなる切り替わりでした。
+    reading: こうきと みたのわ、うえはーが さんびゃく みりから よんひゃく ごじゅう みりえ おおきく なる きりかわりでした。
+- id: ch4_othello2
+  title: ''
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: happy}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 3年で30％。オセロなら、[角|かど]を取れば一気にひっくり返せるぞ！
+  - speaker: doki
+    emotion: thinking
+    text: その[角|かど]を、先に取られてるんだよ。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあ次の[角|かど]は、450ミリのウエハーだな。
+  - speaker: doki
+    emotion: normal
+    text: 社長は、露光装置の開発を率いた人だしな。
+  - speaker: reimu
+    text: 翌2015年、ニコンの450ミリの液浸の機械は、アメリカの研究拠点で露光を始めます。
+    reading: よく にせん じゅうごねん、にこんの よんひゃく ごじゅう みりの えきしんの きかいわ あめりかの けんきゅう きょてんで ろこうお はじめます。
+  - speaker: reimu
+    text: 研究者の柴田友厚によれば、450ミリへの移行は、その後急速にしぼんでいきました。
+    reading: けんきゅうしゃの しばた ともあつに よれば、よんひゃく ごじゅう みりえの いこうわ そのご きゅうそくに しぼんで いきました。
+  - speaker: zundamon
+    emotion: sad
+    text: '[角|かど]が、盤ごと消えたのだ……。'
+    se: chin
+# ---- 2016年・希望退職 ----
+- id: card2016
+  title: ''
+  background: nk_card_2016
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2016年11月8日。ニコンは、構造改革を発表します。
+    reading: にせん じゅうろくねん じゅういちがつ ようか。にこんわ、こうぞう かいかくお はっぴょう します。
+- id: ch5_kibou
+  title: 希望退職の紙
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: senpai, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: senpai
+    emotion: thinking
+    text: 半導体の装置は、目標の黒字化に届かなかった。
+  - speaker: senpai
+    emotion: thinking
+    text: '[液浸|えきしん]の開発も縮小。半導体で1,000人規模の人員を適正化するそうだ。'
+  - speaker: senpai
+    emotion: normal
+    text: 国内で、希望退職を1,000人ほど募る。
+  - speaker: zundamon
+    emotion: thinking
+    text: 40歳以上で、勤続5年以上……。ボク、54歳です。
+  - speaker: senpai
+    emotion: normal
+    text: 俺は、手を挙げる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 先輩が！？
+  - speaker: senpai
+    emotion: normal
+    text: お前の入社の日に、富士山のテニスボールの話をしたろ。
+  - speaker: zundamon
+    emotion: normal
+    text: 弓道部に入れって、言われた日です。
+  - speaker: senpai
+    emotion: angry
+    text: 言ってない。
+    beat: true
+  - speaker: senpai
+    emotion: happy
+    text: あの精度は、もうお前の手に入ってる。
+  - speaker: zundamon
+    emotion: sad
+    text: 先輩がいなくなったら、誰がボクを叱るんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 機械が叱ってくれる。ずれたら、ずれたと言う。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクは、残ります。この機械が、まだ焼けるうちは。
+  - speaker: reimu
+    text: 2017年2月。希望退職には、1,143人が応募しました。退職日は3月31日です。
+    reading: にせん じゅうななねん にがつ。きぼう たいしょくにわ、せん ひゃく よんじゅうさんにんが おうぼ しました。たいしょくびわ さんがつ さんじゅういちにちです。
+    telops:
+    - {text: "希望退職　応募1,143人", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch5_wakare
+  title: ''
+  background: nk_roko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: sad}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2017年3月31日。
+    reading: にせん じゅうななねん さんがつ さんじゅういちにち。
+  - speaker: senpai
+    emotion: normal
+    text: 今日で、最後だ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……お疲れさまでした。
+  - speaker: senpai
+    emotion: happy
+    text: お前の入社の日の第一声、まだ覚えてるぞ。
+  - speaker: zundamon
+    emotion: surprised
+    text: え。
+  - speaker: senpai
+    emotion: happy
+    text: 踊る機械ですか、だ。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: 忘れてください……。
+  - speaker: senpai
+    emotion: normal
+    text: あの新人が、今は新人に教える側だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 先輩みたいに、一言で言えるか分かりません。
+  - speaker: senpai
+    emotion: normal
+    text: 光を当てて縮めて、焼く。それで足りる。
+  - speaker: senpai
+    emotion: thinking
+    text: あとは、速さだ。頼んだぞ。
+  - speaker: zundamon
+    emotion: sad
+    text: 隣が、こんなに広いのだ……。
+    background: nk_roko_kara
+    se: namida
+# ---- 2017年・2度目の提訴 ----
+- id: ch5_teiso
+  title: 2度目の提訴
+  background: nk_houtei
+  bgm: kinakusai
+  stage:
+  - {who: ushida, x: 0.62, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2017年4月24日。ニコンは、ASMLとツァイスを特許の侵害で訴えます。
+    reading: にせん じゅうななねん しがつ にじゅうよっか。にこんわ、えーえすえむえると つぁいすお とっきょの しんがいで うったえます。
+  - speaker: reimu
+    text: 2000年代の初めに自社で開発した、液浸の技術の特許が使われているという主張です。
+    reading: にせんねんだいの はじめに じしゃで かいはつ した、えきしんの ぎじゅつの とっきょが つかわれて いると いう しゅちょうです。
+  - speaker: reimu
+    text: 発表文で、社長の牛田はこう述べています。
+    reading: はっぴょうぶんで、しゃちょうの うしだわ こう のべて います。
+  - speaker: ushida
+    emotion: thinking
+    text: 知的財産権を尊重しあう環境は公正かつ健全な競争の前提であり……
+  - speaker: reimu
+    text: ASMLは、ニコンの主張には根拠がなく、断固反論するとしました。
+    reading: えーえすえむえるわ、にこんの しゅちょうにわ こんきょが なく だんこ はんろん すると しました。
+  - speaker: reimu
+    text: ニコンとASMLは、2004年にも一度、特許の争いで和解しています。
+    reading: にこんと えーえすえむえるわ にせん よねんにも いちど、とっきょの あらそいで わかい して います。
+- id: ch5_analyst
+  title: ''
+  background: nk_kaigi
+  stage:
+  - {who: analyst, x: 0.62, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この提訴を報じた日経の記事で、証券会社のアナリストはこう話しています。
+    reading: この ていそお ほうじた にっけいの きじで、しょうけん がいしゃの あなりすとわ こう はなして います。
+  - speaker: analyst
+    emotion: normal
+    text: 技術はニコンも持っていたが、製品化のスピードが遅れた。
+- id: ch5_wakai
+  title: お金とライセンス
+  background: nk_roko_kara
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2019年1月。3社は、すべての訴訟で和解に合意しました。
+    reading: にせん じゅうきゅうねん いちがつ。さんしゃわ、すべての そしょうで わかいに ごうい しました。
+  - speaker: doki
+    emotion: normal
+    text: 向こうの2社が、うちに約190億円を払うそうだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、うちの[勝ち|カチ]か！
+  - speaker: doki
+    emotion: normal
+    text: 10年間は[液浸|えきしん]の機械の売上の0.8％を、お互いに払い合う。
+  - speaker: zundamon
+    emotion: thinking
+    text: お互いに？ じゃあ、[勝った|かった]のか負けたのか……。
+  - speaker: doki
+    emotion: normal
+    text: どっちでもない。お[金|かね]とライセンスで、手を打ったんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 向こうは、根拠がないって言ってたのにな。
+  - speaker: doki
+    emotion: normal
+    text: 最後は、お互いさまってことだろ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 大人の決着、か。
+    beat: true
+# ---- 2026年・赤字の正体 ----
+- id: card2026
+  title: ''
+  background: nk_card_2026
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2026年5月8日。ニコンの、決算の日です。
+    reading: にせん にじゅうろくねん ごがつ ようか。にこんの、けっさんの ひです。
+- id: ch6_zero
+  title: 1年で0台
+  background: nk_roko_kara
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: doki
+    emotion: thinking
+    text: 最終赤字、860億円。過去最大だってさ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 860億円……！？
+  - speaker: doki
+    emotion: thinking
+    text: それに、うちのいちばん[上|ウエ]の機械。この1年で、売れたのは0台だ。
+  - speaker: zundamon
+    emotion: sad
+    text: やっぱり、うちの機械のせいで……。
+  - speaker: doki
+    emotion: normal
+    text: いや。赤字のいちばんの原因は、うちじゃない。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ。じゃあ、なんなのさ。
+  - speaker: doki
+    emotion: normal
+    text: 金属の[3D|すりーでぃー]プリンターだ。2023年に完全子会社にした、ドイツの会社だよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[3D|すりーでぃー]プリンター！？ カメラと露光装置の会社が！？'
+    se: bikkuri
+  - speaker: doki
+    emotion: thinking
+    text: 2月に、906億円の[減損|げんそん]を出してる。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[減損|げんそん]って？'
+  - speaker: doki
+    emotion: normal
+    text: 買ったときに見込んだ稼ぎが出ないから、その分の価値を帳簿から落とすんだ。
+  - speaker: doki
+    emotion: thinking
+    text: 会社の説明だと、普及が想定より進まなかった。中国のメーカーも、市場の約3割を取った。
+  - speaker: zundamon
+    emotion: sad
+    text: カメラの会社が、[3D|すりーでぃー]プリンターで……。
+  - speaker: zundamon
+    emotion: thinking
+    text: その[3D|すりーでぃー]プリンター、何を作るんだ？
+  - speaker: doki
+    emotion: normal
+    text: 金属で部品を作る機械だよ。うちの機械とは、別の世界だな。
+- id: ch6_uchiwake
+  title: 赤字の正体
+  background: nk_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 3月までの1年の、部門ごとの営業損益です。
+    reading: さんがつまでの いちねんの、ぶもんごとの えいぎょう そんえきです。
+    background: nk_kaigi_akaji
+  - speaker: reimu
+    text: 3Dプリンターはマイナス1,062億円。露光装置はマイナス45億円。カメラはプラス167億円でした。
+    reading: すりーでぃー ぷりんたーわ まいなす せん ろくじゅうにおくえん。ろこう そうちわ まいなす よんじゅうごおくえん。かめらわ ぷらす ひゃく ろくじゅうななおくえんでした。
+    telops:
+    - {text: "3Dプリンター▲1,062億円・露光装置▲45億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: カメラは、黒字か！
+  - speaker: doki
+    emotion: thinking
+    text: 露光装置も、赤字は赤字だ。半導体の装置は、2年続けて[減損|げんそん]してる。
+  - speaker: doki
+    emotion: thinking
+    text: 会社の振り返りだと、主要なお客さんからの注文減をほかで埋められなかった。
+  - speaker: zundamon
+    emotion: sad
+    text: 0台じゃ、そうなるよな。
+- id: ch6_kaiken
+  title: 重く受け止めている
+  background: nk_kaiken
+  stage:
+  - {who: omura, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月に社長に就いた大村泰弘は、光学設計の技術者の出身です。
+    reading: しがつに しゃちょうに ついた おおむら やすひろわ、こうがく せっけいの ぎじゅつしゃの しゅっしんです。
+  - speaker: kisha
+    emotion: normal
+    text: 過去最大の赤字です。どう受け止めていますか。
+  - speaker: omura
+    emotion: thinking
+    text: 期待した事業拡大ができておらず、重く受け止めている。
+  - speaker: reimu
+    text: 同じ日の中期経営計画の説明では、こうも述べています。
+    reading: おなじ ひの ちゅうき けいえい けいかくの せつめいでわ、こうも のべて います。
+  - speaker: omura
+    emotion: thinking
+    text: 市場環境の急変の中、経営資源を分散しすぎたという面があり
+  - speaker: omura
+    emotion: thinking
+    text: 強みを磨き切れず……。
+    telops:
+    - {text: "大村社長「経営資源を分散しすぎたという面があり」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: 分散しすぎた……。
+    beat: true
+  - speaker: omura
+    emotion: normal
+    text: 稼ぐ事業と育てる事業の役割を明確に……。
+  - speaker: omura
+    emotion: normal
+    text: これは同時に、経営としての覚悟でもあります。
+- id: ch6_shuzai
+  title: ''
+  background: nk_gendai
+  stage:
+  - {who: omura, x: 0.62, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 5月下旬。日経の取材に、大村は露光装置についてこう答えています。
+    reading: ごがつ げじゅん。にっけいの しゅざいに おおむらわ ろこう そうちに ついて こう こたえて います。
+  - speaker: omura
+    emotion: normal
+    text: 自前で作る部分が多く、コスト競争では有利だ。
+- id: ch6_gokan
+  title: ASMLに合わせる
+  background: nk_roko_kara
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: thinking}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月。
+    reading: にせん にじゅうろくねん じゅうがつ。
+  - speaker: doki
+    emotion: normal
+    text: 新しい[液浸|えきしん]の機械は、ASMLの機械と同じマスクが使えるようにするってさ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 向こうの型に、合わせるのか……！
+  - speaker: doki
+    emotion: normal
+    text: 大手の半導体メーカーと一緒に作ってる。試作機は2028年度の予定だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 自前の部分は残して、使い方は向こうに合わせる。
+  - speaker: doki
+    emotion: thinking
+    text: 向こうの代わりになるかは、業界でも見方が分かれてるけどな。
+  - speaker: doki
+    emotion: normal
+    text: AI向けのチップを包む工程の露光装置も、来年4月に出す。
+  - speaker: zundamon
+    emotion: happy
+    text: 包む？ おにぎりみたいに？
+  - speaker: doki
+    emotion: normal
+    text: 海苔は巻かない。[原版|げんばん]を使わずに、データから直接描く機械だ。
+  - speaker: doki
+    emotion: happy
+    text: 画面の回路を焼く機械は、会社の説明だとシェア50％超だ。
+  - speaker: zundamon
+    emotion: happy
+    text: 画面なら、まだ半分以上か！
+    se: jaan
+  - speaker: reimu
+    text: 8月時点の見通しでは、来年3月までの1年でArF液浸を3台売る計画。会社全体は、黒字に戻す見通しです。
+    reading: はちがつ じてんの みとおしでわ、らいねん さんがつまでの いちねんで あるえふ えきしんお さんだい うる けいかく。かいしゃ ぜんたいわ、くろじに もどす みとおしです。
+  - speaker: reimu
+    text: この動画の数字は、2026年10月末までの会社の発表によるものです。
+    reading: この どうがの すうじわ、にせん にじゅうろくねん じゅうがつまつまでの かいしゃの はっぴょうに よる ものです。
+# ---- 論争の章 ----
+- id: ronso1
+  title: カメラにこだわった？
+  background: nk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: ニコンはカメラにこだわったから、露光装置で負けたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見る学者もいるわ。一橋大学名誉教授の[野口悠紀雄|のぐちゆきお]さんね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2社ともカメラという消費財に注力してしまった、と書いてるの。
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり！ カメラなんか売らずに、露光装置だけ作ってれば……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、数字も見てね。2001年3月期は、露光装置の部門が約2350億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: カメラの部門は、約1800億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 露光装置のほうが、大きかったの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 次の年も、売上の約4割は露光装置。シェア[No.1|なんばーわん]は使命とまで書いてたしね。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、何が原因なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究者や記者が挙げる原因は、いくつもあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 全部カメラのせいにしたほうが、すっきりするのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: すっきりと、正しいは別よ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 自前で抱えるか、外を束ねるか。1時間に何枚焼けるか。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[液浸|えきしん]に乗り換える速さ。お客さんが株主になって出した開発費。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[クリス・ミラー|クリスミラー]の[『半導体戦争』|ハンドウタイセンソウ]って本には、こんな見方もあるわ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカ政府は、[EUV|いーゆーぶい]の研究でニコンやキヤノンを
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカの国立研究所と組ませたくなかった、って。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国が！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方で、ニコン自身が採算を見て手を引いたと描く研究者もいる。
+  - speaker: zundamon
+    emotion: thinking
+    text: 原因は、1つじゃないんだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。カメラのせいとだけ言うのは、言い過ぎね。
+- id: ronso2
+  title: 技術で負けた？
+  background: nk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、技術で負けたのだ！ [EUV|いーゆーぶい]も作れなかったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: ニコンが世界初と書く装置は、いくつもあるの。スキャナーもそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[EUV|いーゆーぶい]も試作機を作って、回路を焼いてみせてるわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 作れてたの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 作れなかったんじゃなくて、量産の機械から手を引いたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ[液浸|えきしん]は、気づくのが遅かったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ニコンは2000年代の初めに[液浸|えきしん]の技術を自社で開発したと、裁判で主張してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 差がついたのは、乗り換えの速さとシェアだと見られてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アナリストは、技術はあったけど製品化のスピードが遅れたと見てる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 技術を、量産の速さと規模に変えるところで差がついた。そう見る人が多いのね。
+  - speaker: zundamon
+    emotion: sad
+    text: じゃあ日本の露光装置は、もう全滅なのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それも違うの。金額では、2024年にASMLが約94％。最先端は1社の独走よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 300億円の機械も？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。最初に話した約300億円は、ASMLの[EUV|いーゆーぶい]の値段の目安よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ASMLの去年の売上は、約5.7兆円。ニコン全社の約8倍ね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 8倍……。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも台数なら、キヤノンが3割強。古い世代の光では、キヤノン調べで約8割。
+  - speaker: zundamon
+    emotion: thinking
+    text: キヤノンって、カメラの？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。同じ日本の2社が、違う道を選んだのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: ニコンも画面用の機械では半分以上だし、[EUV|いーゆーぶい]の周りの部品も作ってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 負けたって、ひとまとめにはできないのか。
+    beat: true
+- id: chui
+  title: カメラとスマホの注意点
+  background: nk_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: まず、ニコンのカメラは今も新製品が出てるわ。9月にも、新しいミラーレスを発表したの。
+  - speaker: zundamon
+    emotion: normal
+    text: ニコンがカメラをやめる、わけじゃないんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カメラの部門は、黒字だったしね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 業界団体の集計だと、デジカメの出荷も去年は1割ほど増えたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: カメラ、まだ売れてるんだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 次に値段。会社の説明だと、メモリーの値段が前の年の4月から6月の数倍まで上がったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 状況に応じて、価格転嫁を検討する可能性があるって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 値上げ、決まったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 決まってはいないの。買う予定があるなら、値段の動きは見ておいてね。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ今のうちに、カメラを10万台買っておくのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 300億円、持ってるの？
+    se: manuke
+  - speaker: tsumugi
+    emotion: normal
+    text: それから、画面。スマホやテレビの画面を焼く機械は、ニコンの説明だと半分以上なの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクのスマホも、ニコンの機械で焼かれたかもしれないのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: かもしれない、ね。どの製品かまでは、分からないけど。
+# ---- 締め：2026年10月のクリーンルーム ----
+- id: shime_roko
+  title: ''
+  background: nk_roko_kara
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 技術者, emotion: normal}
+  - {who: doki, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2026年10月。ニコンの工場の、クリーンルームです。
+    reading: にせん にじゅうろくねん じゅうがつ。にこんの こうじょうの、くりーんるーむです。
+  - speaker: doki
+    emotion: happy
+    text: 今月は、画面用の新しい機械の受注も始めたぞ。
+  - speaker: doki
+    emotion: happy
+    text: 解像度0.85マイクロメートル。画面用で世界で初めて、1マイクロを切ったって。
+  - speaker: doki
+    emotion: normal
+    text: 会社調べだけどな。
+  - speaker: zundamon
+    emotion: happy
+    text: 精密さは、まだ健在だな。
+  - speaker: zundamon
+    emotion: normal
+    text: 先輩にも、教えてやりたいな。
+  - speaker: doki
+    emotion: happy
+    text: 年賀状に書いとけ。速さはどうだって、毎年聞いてくるだろ。
+  - speaker: doki
+    emotion: normal
+    text: 新しい価値観、読んだか。コスト、スピードに挑み続けるだってさ。
+  - speaker: zundamon
+    emotion: normal
+    text: 生産コストや届けるスピードが、不十分だったって反省からなんだって。
+  - speaker: doki
+    emotion: thinking
+    text: 1972年ごろ、アメリカの社長が言ったらしいな。
+  - speaker: doki
+    emotion: thinking
+    text: 精密な機械は、生産性が低くて量産に向かないって。
+  - speaker: zundamon
+    emotion: happy
+    text: うちはその精密さで、世界一になった。
+  - speaker: doki
+    emotion: normal
+    text: で、50年あまりたって今度はコストと速さか。
+  - speaker: zundamon
+    emotion: happy
+    text: 1枚を、いちばんきれいに。それを、1時間に何枚でも。
+  - speaker: doki
+    emotion: happy
+    text: 欲張りだな。
+  - speaker: zundamon
+    emotion: happy
+    text: 量産に向かないなんて、もう言わせないのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 先輩の宿題だからな。あとは、速さだって。
+- id: shime
+  title: ''
+  background: nk_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ！ ボクも今日から、外の一流を束ねるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 何を束ねるの？
+  - speaker: zundamon
+    emotion: happy
+    text: 宿題を、クラスでいちばんできる子たちに……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは束ねるじゃなくて、丸写しね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 1972年ごろ、精密な機械は量産に向かないと言われた技術。
+  - speaker: tsumugi
+    emotion: normal
+    text: その精密さで、ニコンは金額で世界の約半分を握ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2026年。コスト、スピードに挑み続ける。それを、新しい価値観に書いたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 精密さに、速さを足すんだ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも宿題は、きれいに速くやるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: まずは、自分でやってね。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたのスマホの画面も、どこかの工場で1枚ずつ焼かれてきたのね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

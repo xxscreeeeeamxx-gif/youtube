@@ -1,0 +1,34 @@
+# nikon-stepper 読み台帳（人名・社名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 技術者 / label: 先輩・同期・GCA社長・嶋村社長・牛田社長・大村社長・記者・アナリスト）とテロップは表示専用なのでタグを付けていない。
+# 「お金」は 金額・金属 にも掛かるので台帳に入れず、本文で お[金|かね] と書いた。
+# ASML・TSMC・一橋大学 はタグなしで1語で正しく読むので、タグも台帳の項目も外した（2026-10-28 見直し）。
+# 「上（ウエ）」「光（ヒカリ）」「出せ（ダセ）」「勝ち（カチ）」は文脈で読みが割れるので台帳に入れず、本文のその箇所だけタグにした。
+# 人名（ナレだけに出るものは reading: で読ませている）
+- {surface: 中馬宏之, reading: ちゅうまひろゆき}      # ナレだけに出る
+- {surface: 柴田友厚, reading: しばたともあつ}        # ナレだけに出る
+- {surface: 嶋村輝郎, reading: しまむらてるお}        # ナレだけに出る
+- {surface: 牛田一雄, reading: うしだかずお}          # ナレだけに出る
+- {surface: 大村泰弘, reading: おおむらやすひろ}      # ナレだけに出る
+- {surface: 吉田庄一郎, reading: よしだしょういちろう}  # ナレだけに出る
+- {surface: 脇本善司, reading: わきもとぜんじ}        # ナレだけに出る
+- {surface: 野口悠紀雄, reading: のぐちゆきお}
+# 社名・機関
+- {surface: GCA, reading: じーしーえー}
+- {surface: 日本光学工業, reading: にっぽんこうがくこうぎょう}   # ナレだけに出る
+# 露光装置の言葉
+- {surface: EUV, reading: いーゆーぶい}
+- {surface: ArF, reading: あるえふ}                 # ナレだけに出る
+- {surface: 液浸, reading: えきしん}
+- {surface: 原版, reading: げんばん}
+- {surface: 位置決め, reading: いちぎめ}
+- {surface: 減損, reading: げんそん}
+- {surface: 3D, reading: すりーでぃー}
+- {surface: No.1, reading: なんばーわん}
+# 言い回し・数の言い方
+- {surface: 角, reading: かど}                      # オセロの角。つの と読まれないように
+- {surface: 1口, reading: ひとくち}
+- {surface: 2口, reading: ふたくち}
+- {surface: 14分の1, reading: じゅうよんぶんのいち}
+- {surface: 4分の1, reading: よんぶんのいち}
