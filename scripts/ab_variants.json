@@ -3372,5 +3372,225 @@
     "text": "しかも向こうは今年、ウエハーを載せる台を2つ持つ機械を出した。"
    }
   ]
+ },
+ {
+  "slug": "takugin-kawatani",
+  "video_id": "",
+  "title_a": "拓銀の最後の頭取「船底を見たら大穴あいてる」、大手銀行のトップでただ一人刑務所へ【ずんだもん解説】",
+  "title_b": "【拓銀の破綻】都市銀行で唯一の破綻、最後の頭取は刑務所へ【ずんだもん解説】",
+  "title_c": "つぶれないはずの都市銀行・拓銀はなぜ破綻し、なぜ頭取だけが刑務所に入ったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "申し訳ありません",
+   "head_hi": "申し訳",
+   "panels": [
+    {
+     "scene": "tk_tv_yoru",
+     "tint": "mono",
+     "tag": "1997年 W杯の夜",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "ただ見てた…"
+    },
+    {
+     "scene": "tk_kaiken",
+     "tint": "red",
+     "tag": "翌朝 破綻を発表",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "都銀で初めて"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ頭取だけが刑務所に？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "tk_honten",
+     "tint": "yellow",
+     "tag": "1994年 頭取に",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "船底に大穴！？"
+    },
+    {
+     "scene": "tk_keimusho",
+     "tint": "mono",
+     "tag": "2009年 収監",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "ただ一人…"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "申し訳ありません（河谷 1997-11-17 会見、HBC の書き起こし）",
+    "scene": "co_kaiken",
+    "text": "大変皆様におかれましては、ご迷惑おかけして大変申し訳ありません。"
+   },
+   {
+    "claim": "船底を見たら大穴あいてる（河谷 2024 HBC）",
+    "scene": "ch1_funazoko",
+    "text": "船底を見たら、大穴あいてるな……。"
+   },
+   {
+    "claim": "大手銀行のトップでただ一人刑務所に（河谷の著書）",
+    "scene": "co_kaiken",
+    "text": "この頭取は、河谷禎昌。12年後、大手銀行のトップでただ一人刑務所に入ります。"
+   },
+   {
+    "claim": "都市銀行の破綻は後にも先にも一度（北海道新聞 2026）",
+    "scene": "co_kaiken",
+    "text": "北海道拓殖銀行の破綻です。都市銀行の破綻は後にも先にも、この一度だけです。"
+   }
+  ]
+ },
+ {
+  "slug": "mcdonalds-fujita",
+  "video_id": "VcxQ0Q9JBRg",
+  "title_a": "「“マクダーナルズ”では、日本人には受けない」と押し切った藤田田、日本で3000店に【ずんだもん解説】",
+  "title_b": "【日本マクドナルド】39時間で建てた銀座の店、初日の売上は目標の半分以下だった【ずんだもん解説】",
+  "title_c": "アメリカ本部も百貨店も渋った銀座の店は、なぜ日本中に3000店も広がったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "日本人には受けない",
+   "head_hi": "受けない",
+   "panels": [
+    {
+     "scene": "md_kaigi",
+     "tint": "red",
+     "tag": "1971年 本部と交渉",
+     "emo": "angry",
+     "fx": "shock",
+     "say": "マクドナルドや！"
+    },
+    {
+     "scene": "md_mise_konzatsu",
+     "tint": "yellow",
+     "tag": "開店の夏 行列",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "並んでるのだ！"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ日本中に広がった？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "md_mise",
+     "tint": "mono",
+     "tag": "開店初日 40万円",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "目標の半分以下…"
+    },
+    {
+     "scene": "md_gendai",
+     "tint": "yellow",
+     "tag": "2026年 3047店",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "3000店超え！"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "“マクダーナルズ”では、日本人には受けない（藤田の著書）",
+    "scene": "ch2_namae",
+    "text": "3音か5音か7音で音が切れないマクダーナルズでは、日本人には受けない。"
+   },
+   {
+    "claim": "初日の売上は約40万円・目標100万円（会社の本）",
+    "scene": "co_kaiten",
+    "text": "会社の本によると、初日の売上は約40万円。目標の100万円の、半分にも届きませんでした。"
+   },
+   {
+    "claim": "39時間（公式）",
+    "scene": "co_koji",
+    "text": "39時間や！ 休館日の月曜も、休みなしやで！"
+   },
+   {
+    "claim": "3047店（2026年9月末）",
+    "scene": "ch19_gendai",
+    "text": "今の日本マクドナルドは、2026年9月末で3047店。"
+   }
+  ]
+ },
+ {
+  "slug": "takata-collapse",
+  "video_id": "",
+  "title_a": "破綻の日のタカタ会長「何が悪かったんだろう」、負債1兆円超・製造業で戦後最大【ずんだもん解説】",
+  "title_b": "【タカタの破綻】命を守るエアバッグの会社が、負債1兆円超で消えるまで【ずんだもん解説】",
+  "title_c": "命を守るエアバッグのタカタは、なぜ製造業で戦後最大の破綻に至ったのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "痛恨の極み",
+   "head_hi": "痛恨",
+   "panels": [
+    {
+     "scene": "tt_kaiken",
+     "tint": "mono",
+     "tag": "2015年 初めての会見",
+     "emo": "thinking",
+     "fx": null,
+     "say": "痛恨の極み"
+    },
+    {
+     "scene": "tt_kaiken_heya",
+     "tint": "red",
+     "tag": "2017年 民事再生",
+     "emo": "thinking",
+     "fx": null,
+     "say": "負債1兆円超"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜ消えた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "tt_kojo",
+     "tint": "yellow",
+     "tag": "命を守る部品",
+     "emo": "normal",
+     "fx": null,
+     "say": "世界2位の会社"
+    },
+    {
+     "scene": "tt_seibi",
+     "tint": "mono",
+     "tag": "いまも回収中",
+     "emo": "thinking",
+     "fx": null,
+     "say": "交換が続く"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "何が悪かったんだろう（高田 2017-06-26 会見、東洋経済）",
+    "scene": "co_kaiken",
+    "text": "何が悪かったんだろう。"
+   },
+   {
+    "claim": "痛恨の極み（高田 2015-06-25 会見）",
+    "scene": "ch5_kaiken",
+    "text": "そのことにつきましては痛恨の極みというふうに思っております。"
+   },
+   {
+    "claim": "負債は最終的に1兆円超・製造業で戦後最大",
+    "scene": "co_kaiken",
+    "text": "この日タカタは破綻します。負債は最終的に1兆円を超え、製造業で戦後最大でした。"
+   }
+  ]
  }
 ]

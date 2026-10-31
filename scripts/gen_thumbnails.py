@@ -4350,6 +4350,23 @@ SPECS = {
         _p("p_fuutou", "1997年", SLATE, "angry", "褒賞は計2万円", "特許1件の褒賞"),
         _p("p_tenbin", "2004年", NAVY, "surprised", "604億円！？", "地裁の認定"),
     ]),
+    # 第4弾（2026-11-09〜12）。実在の当事者が主人公。A は場面型
+    "takugin-kawatani": dict(layout="scene", headline="船底を見たら大穴", head_hi="大穴", panels=[
+        dict(scene="tk_kaiken", tint="red", tag="1997年 破綻の朝", emo="sad", fx="gloom", say="申し訳ありません"),
+        dict(scene="tk_keimusho", tint="mono", tag="2009年 頭取は刑務所へ", emo="sad", fx="gloom", say="ただ一人…"),
+    ]),
+    "takata-collapse": dict(layout="scene", headline="エアバッグの会社が破綻", head_hi="破綻", panels=[
+        dict(scene="tt_kojo", tint="yellow", tag="命を守る部品", emo="normal", fx=None, say="世界2位の会社"),
+        dict(scene="tt_kaiken_heya", tint="mono", tag="2017年 破綻の日", emo="thinking", fx=None, say="何が悪かった…"),
+    ]),
+    "olympus-woodford": dict(layout="scene", headline="問いただした社長、解任", head_hi="解任", panels=[
+        dict(scene="ol_torishimari", tint="yellow", tag="2011年 社長に就任", emo="surprised", fx="sweat", say="この買収は何だ"),
+        dict(scene="ol_kuko", tint="mono", tag="半年後 成田へ", emo="sad", fx="gloom", say="バスで空港へ…"),
+    ]),
+    "mcdonalds-fujita": dict(layout="scene", headline="39時間で建てた1号店", head_hi="39時間", panels=[
+        dict(scene="md_koji", tint="mono", tag="1971年 銀座の夜", emo="angry", fx="shock", say="やるんや！"),
+        dict(scene="md_ginza_hokoten", tint="yellow", tag="開店の夏 歩行者天国", emo="happy", fx="sparkle", say="行列なのだ！"),
+    ]),
     # いまの話題 第3弾（2026-11-05〜08）。A は場面型
     "docomo-imode": dict(layout="scene", headline="ドコモ、つながりにくい", head_hi="つながりにくい", panels=[
         dict(scene="dc_shop", tint="yellow", tag="1999年 iモード", emo="happy", fx="sparkle", say="ケータイでネット！"),

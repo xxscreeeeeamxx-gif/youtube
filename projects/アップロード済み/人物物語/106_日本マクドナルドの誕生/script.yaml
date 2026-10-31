@@ -1,0 +1,1580 @@
+meta:
+  title: 「“マクダーナルズ”では、日本人には受けない」と押し切った藤田田、日本で3000店に【ずんだもん解説】
+  slug: mcdonalds-fujita
+  hook_line: 初日は目標の半分以下だった銀座の1号店は、なぜ3000店に広がったのか。
+  summary: 1971年7月、日曜の夜の銀座三越。ハンバーガーの店を建てるのに与えられた時間は、39時間でした。日本マクドナルドを始めた藤田田は、アメリカの本部と百貨店、そして人前で立って食べるのは下品という日本人の作法を相手に、場所と値段と店の名前で勝負に出ます。けれど初日の売上は、目標に遠く届きませんでした。空振りの店を変えたものは何だったのか。会社の記録と本人の著書、関係者の回想を主語つきで並べて、晩年までを再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 日本マクドナルドホールディングス「沿革・歴史」 https://www.mcd-holdings.co.jp/company/history/
+  - 日本マクドナルド「マクドナルドの歩み」 https://www.mcdonalds.co.jp/company/outline/history/
+  - 日本マクドナルド 50周年サイト「銀座から生まれたハッピー」 https://www.mcdonalds.co.jp/campaign/thankyou50th/history/happy/02/
+  - 藤田田『起業家のモノサシ』抜粋（PRESIDENT Online） https://president.jp/articles/-/109741
+  - 日本食糧新聞「トップインタビュー 日本マクドナルド代表取締役社長・藤田田氏」（1996年3月18日） https://news.nissyoku.co.jp/restaurant/grs-97-0003
+  - 日本マクドナルド 50周年サイト「マクドナルドの窓からのぞいた日本」 https://www.mcdonalds.co.jp/campaign/thankyou50th/history/social/
+  tags:
+  - マクドナルド
+  - 藤田田
+  - 日本マクドナルド
+  - 銀座三越
+  - ハンバーガー
+  - 1号店
+  - 価格破壊
+  - ロナルド
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 昭和史
+  thumbnail:
+    top: 初日は目標の半分以下
+    bottom: マクドナルド1号店
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: mitsukoshi
+    label: 三越の社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: crew
+    label: クルー
+    voice: 8
+    pitch: 0.1
+    outfit: apron
+  - id: kroc
+    label: クロック
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3f4a'
+  - id: honbu
+    label: 米国本部
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#454a55'
+  - id: tencho
+    label: 店長
+    voice: 12
+    pitch: 0.0
+    outfit: apron
+  - id: sagyo
+    label: 作業員
+    voice: 21
+    pitch: 0.0
+    outfit: work
+  - id: kyaku
+    label: 客
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#4a4038'
+  - id: kyaku2
+    label: 年配の客
+    voice: 42
+    pitch: 0.1
+    outfit: haori
+  - id: scout
+    label: スカウト
+    voice: 100
+    pitch: 0.0
+    outfit: work
+    color: '#8a7a4a'
+  - id: wakamono
+    label: 若者
+    voice: 67
+    pitch: 0.0
+  - id: tenshu
+    label: 銀座の店主
+    voice: 13
+    pitch: 0.14
+    outfit: haori
+  - id: kanbu
+    label: 幹部
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shain
+    label: 社員
+    voice: 11
+    pitch: 0.08
+    outfit: suit
+    color: '#5a4a3a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: kouhou
+    label: 広報
+    voice: 8
+    pitch: -0.04
+    outfit: suit
+    color: '#5a4a5a'
+scenes:
+# ---- 先出し（1971年7月18日〜20日・39時間と初日の空振り） ----
+- id: co_koji
+  title: ''
+  background: md_ginza_yoru
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: mitsukoshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1971年7月18日、日曜の午後6時。閉店した銀座三越に、マクドナルドの店を建てる70人が飛び込みます。
+    reading: せんきゅうひゃく ななじゅういちねん しちがつ じゅうはちにち、にちようの ごご ろくじ。へいてん した ぎんざ みつこしに、まくどなるどの みせお たてる ななじゅうにんが とびこみます。
+  - speaker: mitsukoshi
+    emotion: normal
+    background: md_koji
+    text: 火曜の朝9時には、当店を開けます。
+  - speaker: zundamon
+    emotion: angry
+    text: 39時間や！ 休館日の月曜も、休みなしやで！
+  - speaker: mitsukoshi
+    emotion: thinking
+    text: ……本当に、できるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: やるんや。
+- id: co_kaiten
+  title: ''
+  background: md_mise
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: happy}
+  - {who: crew, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 建ったで！ 日本のマクドナルド、1号店の開店や！
+    se: jaan
+  - speaker: crew
+    emotion: happy
+    text: いらっしゃいませ！
+  - speaker: reimu
+    text: 会社の本によると、初日の売上は約40万円。目標の100万円の、半分にも届きませんでした。
+    reading: かいしゃの ほんに よると、しょにちの うりあげわ やく よんじゅうまんえん。もくひょうの ひゃくまんえんの はんぶんにも とどきませんでした。
+    telops:
+    - {text: "初日 約40万円 ／ 目標100万円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……80円のハンバーガー、5000個ぶんか。
+    beat: true
+  - speaker: reimu
+    text: この男は、藤田田。45歳です。
+    reading: この おとこわ、ふじた でん。よんじゅうごさいです。
+# ---- 今の部屋（茶番と問い） ----
+- id: hook
+  title: ''
+  background: md_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ マクダーナルズで、テイクアウトしてきたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: なんで英語読みなの。
+  - speaker: zundamon
+    emotion: happy
+    text: 通っぽいでしょ。今から、食べ歩きなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 55年前は、人前で立って食べるのは下品と言われてたのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その1号店は、アメリカの本部にも百貨店にも渋られたの。
+    telops:
+    - {text: "アメリカの本部 ／ 百貨店 ／ 日本人の作法", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 三方ふさがりから、なんで3000店になったのだ！？
+# ---- 1969年：遅れてきた輸入商と5つの条件 ----
+- id: card1969
+  title: ''
+  background: md_card_1969
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1969年。アメリカのマクドナルドが日本の相手を探し、大手商社などが名乗りを上げていました。
+    reading: せんきゅうひゃく ろくじゅうきゅうねん。あめりかの まくどなるどが にほんの あいてお さがし、おおて しょうしゃなどが なのりお あげて いました。
+- id: ch1_shoten
+  title: 遅れてきた輸入商
+  background: md_shoten
+  stage:
+  - {who: zundamon, x: 0.5, tag: 藤田田, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 藤田商店は、東大の学生のころGHQで通訳をしていた藤田が、在学中に始めた輸入の会社です。
+    reading: ふじた しょうてんわ とうだいの がくせいの ころ じーえいちきゅーで つうやくお して いた ふじたが、ざいがくちゅうに はじめた ゆにゅうの かいしゃです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……こっちは、ハンドバッグを売っとる店やけどな。
+- id: ch1_kroc
+  title: 5つの条件
+  background: md_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 藤田田, emotion: normal}
+  - {who: honbu, x: 0.56, emotion: normal}
+  - {who: kroc, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 条件は、5つです。
+  - speaker: zundamon
+    emotion: normal
+    text: 1つ。出資比率は50対50であること。
+  - speaker: honbu
+    emotion: surprised
+    text: 折半、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 2つ。社長は日本人がやって、アメリカ人は経営に[一切|いっさい]口を出さないこと。
+  - speaker: honbu
+    emotion: surprised
+    text: 口も出すな、と。
+  - speaker: zundamon
+    emotion: normal
+    text: 3つ。儲けはアメリカに持って帰らずに、すべて日本に再投資すること。
+  - speaker: honbu
+    emotion: thinking
+    text: 儲けも、持って帰れない……。
+  - speaker: zundamon
+    emotion: normal
+    text: 4つ。経営権、人事権はすべて[藤田|ふじた]に帰属すること。
+  - speaker: zundamon
+    emotion: normal
+    text: 5つ。あらゆる経営ノウハウは提供してもらうが、命令は一切出さないこと。
+  - speaker: honbu
+    emotion: angry
+    text: それは条件じゃなくて、注文です！
+    se: tsukkomi
+  - speaker: reimu
+    text: 藤田はのちに、この場面をこう振り返っています。
+    reading: ふじたわ のちに、この ばめんお こう ふりかえって います。
+  - speaker: zundamon
+    emotion: thinking
+    text: これでクロック氏は断ると思ったんだ。
+    telops:
+    - {text: "藤田「これでクロック氏は断ると思ったんだ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 藤田の話では、クロックは両手を広げてこう言いました。
+    reading: ふじたの はなしでわ、くろっくわ りょうてお ひろげて こう いいました。
+  - speaker: kroc
+    emotion: happy
+    text: お前がそう言うのならば、それでやろうじゃないか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……[通って|とおって]もうた。
+    beat: true
+  - speaker: reimu
+    text: 会社の記録に残るクロックの言葉は、こうです。
+    reading: かいしゃの きろくに のこる くろっくの ことばわ、こうです。
+  - speaker: kroc
+    emotion: normal
+    text: 今までたくさんの日本人が訪ねてきた。
+  - speaker: kroc
+    emotion: happy
+    text: しかしマクドナルドのビジネスを任せようと思ったのはフジタ、[君|きみ]が初めてだ。
+  - speaker: reimu
+    text: 50対50の折半は、このあと30年あまり続きます。でも最初の壁は、そのアメリカでした。
+    reading: ごじゅう たい ごじゅうの せっぱんわ、この あと さんじゅうねん あまり つづきます。でも さいしょの かべわ、その あめりかでした。
+# ---- 本部 vs 藤田：茅ヶ崎か、銀座か／マクダーナルズ ----
+- id: ch2_basho
+  title: 茅ヶ崎か、銀座か
+  background: md_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 1号店は、郊外のドライブスルーが良いだろう。
+    telops:
+    - {text: "本部「１号店は郊外のドライブスルーが良いだろう」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: honbu
+    emotion: normal
+    text: 候補は、[茅ヶ崎|ちがさき]の海の近くだ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 海水浴の帰りに、ハンバーガーですか。
+  - speaker: honbu
+    emotion: normal
+    text: アメリカでは、店は車で来る郊外に出すものだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の車は、まだ増えとる途中や。郊外は、そのあとでええ。
+  - speaker: zundamon
+    emotion: normal
+    text: 日本１号店は、日本の流行が生まれる中心地・銀座に出店する。
+  - speaker: honbu
+    emotion: surprised
+    text: 銀座！？ 車で来る客は、どうするんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 日本の輸入文化はすべて東京から始まっていて、東京の中心は銀座や。
+  - speaker: zundamon
+    emotion: happy
+    text: 銀座の土地が高いのは承知や。[地代|ちだい]は、払わん方法を考えとる。
+  - speaker: honbu
+    emotion: surprised
+    text: 払わない！？
+    beat: true
+  - speaker: reimu
+    text: 会社の記録では、茅ヶ崎の案は銀座の交渉が始まると同時に幻になります。
+    reading: かいしゃの きろくでわ、ちがさきの あんわ ぎんざの こうしょうが はじまると どうじに まぼろしに なります。
+- id: ch2_namae
+  title: マクダーナルズ
+  background: md_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 店の名前は、世界共通のマクダーナルズでいきたい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本語というのは、[3音|サンオン]か[5音|ゴオン]か[7音|ナナオン]で成立している。
+  - speaker: zundamon
+    emotion: angry
+    text: '[3音|サンオン]か[5音|ゴオン]か[7音|ナナオン]で音が切れないマクダーナルズでは、日本人には受けない。'
+    telops:
+    - {text: "藤田「“マクダーナルズ”では、日本人には受けない」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: honbu
+    emotion: surprised
+    text: ……音？
+    se: tenten
+  - speaker: zundamon
+    emotion: normal
+    text: 日本で事業をしたいのなら、[3音|サンオン]で切れるマクドナルドにすべきだ。
+  - speaker: zundamon
+    emotion: happy
+    text: マクド、ナルド。[3音|サンオン]ずつ切れるやろ。
+  - speaker: honbu
+    emotion: thinking
+    text: なぜそこまで、音にこだわる。
+  - speaker: zundamon
+    emotion: thinking
+    text: わしは昔、外交官になりたかったんや。
+  - speaker: zundamon
+    emotion: sad
+    text: 近所の外交官に言われた。その大阪弁がいけないんだ、てな。
+  - speaker: honbu
+    emotion: thinking
+    text: ……それと店の名前に、[何|なん]の関係が。
+  - speaker: zundamon
+    emotion: normal
+    text: 言葉の響きひとつで、門は閉まるんや。
+  - speaker: honbu
+    emotion: thinking
+    text: ……店の名前ひとつで、ずいぶん大げさだな。
+    beat: true
+  - speaker: reimu
+    text: アメリカ側は難色を示しましたが、藤田は譲りません。次の壁は、銀座の百貨店でした。
+    reading: あめりかがわわ なんしょくお しめしましたが、ふじたわ ゆずりません。つぎの かべわ、ぎんざの ひゃっかてんでした。
+# ---- 三越：軒先と1年と39時間 ----
+- id: ch3_noki
+  title: 軒先を借りる
+  background: md_ginza
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: mitsukoshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 銀座の一等地に[何とか|なんとか][地代|ちだい]のかからない店を開くことはできないだろうか。
+  - speaker: zundamon
+    emotion: happy
+    text: ……そうや。[軒先|のきさき]をちょっと借りるんや！
+    se: hirameki
+  - speaker: mitsukoshi
+    emotion: surprised
+    text: の、[軒先|のきさき]ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: '[三越|みつこし]さんの1階の[角|かど]を、ちょっとだけ。お客さんには立って食べてもらう。'
+  - speaker: mitsukoshi
+    emotion: thinking
+    text: 百貨店の1階で、立ち食いですか……。
+  - speaker: mitsukoshi
+    emotion: thinking
+    text: 駅のおそば屋さんみたいに、なりませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: うらぶれムードは一掃する。明るくモダンで清潔な立ち食いや。
+  - speaker: mitsukoshi
+    emotion: normal
+    text: 椅子とテーブルは、置かないんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 銀座でそれを置いたら、値段を目の玉が飛び出るぐらい高くせなあかん。
+  - speaker: zundamon
+    emotion: happy
+    text: わしは、ハイライト1個分の80円で売りたいんや。
+  - speaker: mitsukoshi
+    emotion: surprised
+    text: たばこ[1箱|ひとハコ]と、同じ値段……。
+  - speaker: mitsukoshi
+    emotion: thinking
+    text: 街のラーメン1杯と、変わりませんね。
+  - speaker: zundamon
+    emotion: normal
+    text: アメリカでは1個20セント。1ドル360円やから、72円や。
+  - speaker: zundamon
+    emotion: normal
+    text: 材料が1割[高う|たこう]ついても、80円に抑える。[地代|ちだい]を払うとったら無理なんや。
+  - speaker: mitsukoshi
+    emotion: thinking
+    text: ……上に、相談してまいります。
+    beat: true
+- id: ch3_ichinen
+  title: ''
+  background: md_ginza
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: mitsukoshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 三越の役員会は、1年近く返事を保留したと1978年の雑誌は書いています。
+    reading: みつこしの やくいんかいわ、いちねん ちかく へんじお ほりゅう したと せんきゅうひゃく ななじゅうはちねんの ざっしわ かいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: ……まだかいな。もうすぐ、1年やで。
+  - speaker: mitsukoshi
+    emotion: happy
+    text: お待たせしました。お貸しすることになりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ほんまか！
+  - speaker: reimu
+    text: 藤田は自分の本に、三越の岡田茂の英断で快諾してくれた、と書いています。
+    reading: ふじたわ じぶんの ほんに みつこしの おかだ しげるの えいだんで かいだく してくれた、と かいて います。
+  - speaker: mitsukoshi
+    emotion: normal
+    text: ただし、当店の営業の妨げにならないこと。
+  - speaker: mitsukoshi
+    emotion: normal
+    text: 工事は日曜の閉店の午後6時から、火曜の朝9時までにお願いします。
+    se: don
+    telops:
+    - {text: "工期39時間　日曜18時〜火曜9時", size: lg, position: top-center, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ……39時間！？
+  - speaker: reimu
+    text: 場所と値段は決まりました。最後の壁は、日本人の作法です。
+    reading: ばしょと ねだんわ きまりました。さいごの かべわ、にほんじんの さほうです。
+# ---- 1971年：店長と、パン会社の工場 ----
+- id: ch4_tencho
+  title: 1号店の店長
+  background: md_daigaku
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: happy}
+  - {who: tencho, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1971年5月1日、日本マクドナルドが生まれます。6月1日には、ハンバーガー大学が開きます。
+    reading: せんきゅうひゃく ななじゅういちねん ごがつ ついたち、にほん まくどなるどが うまれます。ろくがつ ついたちにわ、はんばーがー だいがくが ひらきます。
+  - speaker: tencho
+    emotion: happy
+    text: 社長。店長候補の研修、終わりました！
+  - speaker: zundamon
+    emotion: happy
+    text: ご苦労さん。練習の店は、どうやった。
+  - speaker: tencho
+    emotion: happy
+    text: 新聞の募集に約1000人が来て、店長候補は10人です。
+  - speaker: tencho
+    emotion: happy
+    text: 本社のマニュアルどおり、調理から接客まで仕込まれました。
+  - speaker: tencho
+    emotion: thinking
+    text: でも練習の店が、パン屋さんの工場の中なんですね。
+  - speaker: zundamon
+    emotion: normal
+    text: '[第一屋製パン|ダイイチヤセイパン]は、うちの株主やからな。'
+  - speaker: zundamon
+    emotion: normal
+    text: 今はアメリカが半分。[藤田商店|ふじたしょうてん]とパン会社が、[4分の1|よんぶんのいち]ずつや。
+  - speaker: zundamon
+    emotion: thinking
+    text: けど、パン会社の分はいずれうちが引き取るつもりや。
+  - speaker: tencho
+    emotion: surprised
+    text: えっ。なんでです？
+  - speaker: zundamon
+    emotion: normal
+    text: 材料メーカーの資本が入っていると、当初の意図を貫徹できない場合が生じうる。
+  - speaker: tencho
+    emotion: thinking
+    text: ……研修させてもらった工場で、それ言わないでくださいね。
+    beat: true
+  - speaker: reimu
+    text: 藤田商店はほどなくパン会社の分を引き取り、1975年には米国との折半になります。
+    reading: ふじた しょうてんわ ほどなく ぱんがいしゃの ぶんお ひきとり、せんきゅうひゃく ななじゅうごねんにわ べいこくとの せっぱんに なります。
+  - speaker: zundamon
+    emotion: happy
+    text: それより、1号店の店長をやってくれ。
+  - speaker: tencho
+    emotion: surprised
+    text: ぼ、僕がですか！
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 銀座[三越|ミツコシ]の1階や。初日の目標は、100万円。
+  - speaker: tencho
+    emotion: thinking
+    text: 80円のハンバーガーなら……1万2500個！？
+  - speaker: zundamon
+    emotion: happy
+    text: 銀座なら、売れる。
+    beat: true
+- id: ch4_rehearsal
+  title: 3回目のリハーサル
+  background: md_koji
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: sagyo, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 開店の前。よその土地を借りて、店を建てては壊す練習が繰り返されます。
+    reading: かいてんの まえ。よその とちお かりて、みせお たててわ こわす れんしゅうが くりかえされます。
+  - speaker: sagyo
+    emotion: sad
+    text: 社長。まだ、時間がかかりすぎです。
+  - speaker: zundamon
+    emotion: angry
+    text: 本番は、39時間しかないんやぞ。
+  - speaker: sagyo
+    emotion: thinking
+    text: 芝居の大道具は、短い幕あいに舞台をまるごと変えますよね。
+  - speaker: sagyo
+    emotion: happy
+    text: あの段取りで、手順を体に覚え込ませます。
+  - speaker: zundamon
+    emotion: happy
+    text: 大道具の早業か。ええやないか。
+  - speaker: sagyo
+    emotion: happy
+    text: 3回目、36時間で建ちました！
+    se: levelup
+  - speaker: zundamon
+    emotion: happy
+    text: 39時間の枠で、3時間も余るやないか！
+  - speaker: sagyo
+    emotion: thinking
+    text: 本番でも余るとは、限りませんけど。
+    beat: true
+  - speaker: reimu
+    text: そして本番。22坪、教室ひとつほどの店は、39時間のうちに建ちました。
+    reading: そして ほんばん。にじゅうにつぼ、きょうしつ ひとつ ほどの みせわ さんじゅうきゅうじかんの うちに たちました。
+# ---- 1971年7月20日〜：閑古鳥 ----
+- id: ch5_kankodori
+  title: 閑古鳥
+  background: md_mise
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: tencho, x: 0.56, emotion: thinking}
+  - {who: kyaku, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 7月20日、火曜。1号店は、席の無い持ち帰り専門の売店でした。
+    reading: しちがつ はつか、かよう。いちごうてんわ せきの ない もちかえり せんもんの ばいてんでした。
+  - speaker: tencho
+    emotion: thinking
+    text: 社長。お客さん、外国人ばっかりです。
+  - speaker: tencho
+    emotion: surprised
+    text: さっきは外国のプロレスラーが、ビッグマックを[何個|なんこ]も。
+  - speaker: zundamon
+    emotion: thinking
+    text: 食べっぷりが、ちゃうな。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の人は、[どないした|ドナイシタ]んや。
+  - speaker: tencho
+    emotion: sad
+    text: 来てはくれるんですけど……あちらに。
+  - speaker: kyaku
+    emotion: thinking
+    text: 人前で立って食べるなんて、見られたら恥ずかしいよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 銀座通りに、背中を向けて食べとる……。
+  - speaker: kyaku
+    emotion: sad
+    text: こうでもしないと、食べられないんだ。
+  - speaker: zundamon
+    emotion: angry
+    text: 明るくモダンで清潔な立ち食いや、言うたのに！
+  - speaker: tencho
+    emotion: thinking
+    text: 隠れて食べると、なんだか悪いことしてるみたいですね。
+    beat: true
+- id: ch5_shumai
+  title: ''
+  background: md_mise
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: crew, x: 0.56, emotion: happy}
+  - {who: kyaku2, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kyaku2
+    emotion: normal
+    text: ハンバーグ、ください。
+  - speaker: crew
+    emotion: happy
+    text: ハンバーガーで、よろしいですか。
+  - speaker: kyaku2
+    emotion: happy
+    text: それそれ。新しいシュウマイだろ？ 土産に、どっさり包んでくれ。
+  - speaker: crew
+    emotion: surprised
+    text: シュ、シュウマイ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……シュウマイちゃう。マクドナルドのハンバーガーや。
+  - speaker: kyaku2
+    emotion: happy
+    text: 名前なんか、どっちでもいいよ。
+    se: zukko
+- id: ch5_uriage
+  title: ''
+  background: md_mise
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: sad}
+  - {who: tencho, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: tencho
+    emotion: sad
+    text: 社長。初日の売上は、約40万円です。
+  - speaker: zundamon
+    emotion: sad
+    text: 1万2500個のつもりが、5000個か……。
+    beat: true
+  - speaker: reimu
+    text: その後も平日は閑古鳥が鳴いていた、と会社の本は書いています。
+    reading: そのごも へいじつわ かんこどりが ないて いた、と かいしゃの ほんわ かいて います。
+  - speaker: reimu
+    text: 三つの壁のうち、いちばん厚かったのはお客さんの作法でした。
+    reading: みっつの かべの うち、いちばん あつかったのわ おきゃくさんの さほうでした。
+# ---- 開店から間もない夏：スカウトと歩行者天国 ----
+- id: ch6_scout
+  title: 外国のスカウト
+  background: md_mise
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: tencho, x: 0.56, emotion: normal}
+  - {who: scout, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 開店から間もない夏。銀座に、外国人のスカウトたちがやって来ます。
+    reading: かいてんから まもない なつ。ぎんざに、がいこくじんの すかうとたちが やって きます。
+  - speaker: scout
+    emotion: happy
+    text: オー！ マクダーナルズ！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……日本では、マクドナルドや。
+    beat: true
+  - speaker: scout
+    emotion: happy
+    text: ハンバーガー、プリーズ！ コーラも！
+  - speaker: tencho
+    emotion: happy
+    text: 社長。あの子ら、Mのマークを見つけて来たみたいです。
+  - speaker: tencho
+    emotion: surprised
+    background: md_mise_konzatsu
+    text: 社長、次から次へと来ます！
+  - speaker: zundamon
+    emotion: surprised
+    text: 行列や……！
+    se: bikkuri
+  - speaker: tencho
+    emotion: thinking
+    text: でも席がないのに、どこで食べるんでしょう。
+- id: ch6_hokoten
+  title: 歩行者天国
+  background: md_ginza
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 藤田田, emotion: surprised}
+  - {who: scout, x: 0.56, emotion: happy}
+  - {who: wakamono, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 休みの日の銀座通りは、車を止めた歩行者天国です。
+    reading: やすみの ひの ぎんざ どおりわ、くるまお とめた ほこうしゃ てんごくです。
+  - speaker: scout
+    emotion: happy
+    background: md_ginza_hokoten
+    text: オイシイ！ アメリカの味だ！
+  - speaker: wakamono
+    emotion: surprised
+    text: 見ろよ。外国の子が、歩きながら食べてる。
+  - speaker: wakamono
+    emotion: happy
+    text: 道に座り込んで、コーラ片手に……かっこいいな。
+  - speaker: wakamono
+    emotion: happy
+    text: おれたちも、やってみようぜ。
+  - speaker: zundamon
+    emotion: happy
+    text: 恥ずかしい立ち食いが、かっこいいに変わったのだ！
+  - speaker: reimu
+    text: 新聞や雑誌は、ハンバーガーを新しいファッションとして取り上げました。
+    reading: しんぶんや ざっしわ、はんばーがーお あたらしい ふぁっしょんと して とりあげました。
+  - speaker: reimu
+    text: 初代の店長はのちに、その日の客は1万人だったと振り返っています。
+    reading: しょだいの てんちょうわ のちに、その ひの きゃくわ いちまんにん だったと ふりかえって います。
+  - speaker: reimu
+    text: ただ、行列は新しい壁も連れてきます。
+    reading: ただ ぎょうれつわ、あたらしい かべも つれて きます。
+# ---- 苦情と差し入れ、シェイク ----
+- id: ch7_kujo
+  title: 天下の銀座
+  background: md_ginza
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: tencho, x: 0.56, emotion: sad}
+  - {who: tenshu, x: 0.8, emotion: angry}
+  cuts:
+  - speaker: tenshu
+    emotion: angry
+    text: 立ち食いなんて見苦しい。
+  - speaker: tenshu
+    emotion: angry
+    text: なぜそんな下品なことを天下の銀座で許すのか！
+  - speaker: tencho
+    emotion: sad
+    text: す、すみません！
+  - speaker: zundamon
+    emotion: thinking
+    text: '[三越|みつこし]さんの人らも、白い目で見とるな。'
+- id: ch7_sashiire
+  title: ''
+  background: md_ginza
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: tencho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: tencho
+    emotion: normal
+    text: 毎日午後3時に、ご挨拶に行きます。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[何|なに]を持ってや。'
+  - speaker: tencho
+    emotion: happy
+    text: アップルパイとコーラです。[三越|ミツコシ]の食料品部の部長さんと、四丁目の交番に。
+  - speaker: zundamon
+    emotion: surprised
+    text: 交番にもか。
+  - speaker: tencho
+    emotion: happy
+    text: お巡りさんにも、ご挨拶は大事です。
+  - speaker: tencho
+    emotion: normal
+    text: 歩行者天国にはゴミ箱を置いて、清掃員も20人雇いました。
+  - speaker: zundamon
+    emotion: angry
+    text: 許容範囲内などという生ぬるい清潔さでは、我慢ができないのだ！
+  - speaker: tencho
+    emotion: thinking
+    text: 社長。お店の前で、声が大きいです。
+    se: hammer
+- id: ch7_shake
+  title: 14オンスのシェイク
+  background: md_mise_konzatsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: tencho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: tencho
+    emotion: thinking
+    text: 社長。ゴミ箱に、ミルクシェイクの飲み残しが多いんです。
+  - speaker: zundamon
+    emotion: normal
+    text: マックシェイクや。ミルクセーキと間違われたら、かなわん。
+  - speaker: tencho
+    emotion: thinking
+    text: ……マックシェイクの、飲み残しです。
+    beat: true
+  - speaker: zundamon
+    emotion: surprised
+    text: まずいんか。
+  - speaker: tencho
+    emotion: normal
+    text: いえ。アメリカと同じ14オンスで、量が多すぎるんです。
+  - speaker: tencho
+    emotion: happy
+    text: 12オンスに、減らします。
+  - speaker: zundamon
+    emotion: happy
+    text: 減らして、喜ばれるんか。
+  - speaker: tencho
+    emotion: normal
+    text: それと、レジの前は並ぶ習慣がなくて大混乱です。
+  - speaker: tencho
+    emotion: angry
+    text: こっちがハンバーガーの列です！ こっちがシェイクです！
+  - speaker: zundamon
+    emotion: happy
+    text: 並び方から、教えるんか。
+    beat: true
+# ---- 1972年：1日222万円 ----
+- id: card1972
+  title: ''
+  background: md_card_1972
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 1972年。7月に関西の1号店が京都に開き、店はおおむね月に1つずつ増えていきます。
+    reading: せんきゅうひゃく ななじゅうにねん。しちがつに かんさいの いちごうてんが きょうとに ひらき、みせわ おおむね つきに ひとつずつ ふえて いきます。
+- id: ch8_kiroku
+  title: 1日222万円
+  background: md_mise_konzatsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: tencho, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: tencho
+    emotion: happy
+    text: 社長！ 銀座の店、[1日|いちにち]で222万円です！
+    telops:
+    - {text: "銀座店 1日222万円 世界記録", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 222万円！？
+  - speaker: tencho
+    emotion: happy
+    text: 世界のマクドナルドで、[1日|いちにち]の記録だそうです！
+  - speaker: zundamon
+    emotion: happy
+    text: 初日の40万円の、5倍半や！
+    se: levelup
+  - speaker: tencho
+    emotion: happy
+    text: ハンバーガーにしたら、2万7750個ぶんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 背中を向けて食べとった、あの銀座でか。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[三越|ミツコシ]から10メートルずれとったら、こうはいかんかったかもしれん。'
+  - speaker: reimu
+    text: 藤田の本によると、開店1周年の少し後の記録です。8か月後、同じ店は293万円で記録を塗り替えました。
+    reading: ふじたの ほんに よると、かいてん いっしゅうねんの すこし あとの きろくです。はちかげつご おなじ みせわ、にひゃく きゅうじゅうさんまんえんで きろくお ぬりかえました。
+# ---- 1975年：幹部5人が去る ----
+- id: card1975
+  title: ''
+  background: md_card_1975
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1975年3月。創業から一緒だった幹部5人が、会社を去ります。
+    reading: せんきゅうひゃく ななじゅうごねん さんがつ。そうぎょうから いっしょだった かんぶ ごにんが、かいしゃお さります。
+- id: ch9_kanbu
+  title: 幹部5人が去る
+  background: md_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: kanbu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kanbu
+    emotion: thinking
+    text: 社長。[牛肉頼み|ぎゅうにくだのみ]のハンバーガー一本では、仕入れに限界があります。
+  - speaker: kanbu
+    emotion: thinking
+    text: 1店ごとの投資も重い。地方では、元が取れません。
+  - speaker: zundamon
+    emotion: angry
+    text: ……それで、辞めるんか。
+  - speaker: kanbu
+    emotion: sad
+    text: 5人で、サンドイッチの店を始めます。
+  - speaker: zundamon
+    emotion: sad
+    text: 5人も、か。
+    se: gaan
+  - speaker: reimu
+    text: 去った元広報部長は、チェーン展開の基本政策をめぐって藤田社長との間に相当ズレがあった、と語りました。
+    reading: さった もと こうほう ぶちょうわ ちぇーん てんかいの きほん せいさくお めぐって ふじた しゃちょうとの あいだに そうとう ずれが あった、と かたりました。
+  - speaker: reimu
+    text: それでも12月、全店の年間売上は100億円を超えます。翌年の12月には、100号店です。
+    reading: それでも じゅうにがつ、ぜんてんの ねんかん うりあげわ ひゃくおくえんお こえます。よくねんの じゅうにがつにわ、ひゃくごうてんです。
+# ---- 1977〜1982年：歩く人のいない店 ----
+- id: card1977
+  title: ''
+  background: md_card_1977
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1977年10月。東京の環八高井戸店で、日本で初めての本格的なドライブスルーが開きます。
+    reading: せんきゅうひゃく ななじゅうななねん じゅうがつ。とうきょうの かんぱち たかいどてんで、にほんで はじめての ほんかくてきな どらいぶするーが ひらきます。
+- id: ch10_drive
+  title: 歩く人のいない店
+  background: md_drive
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長。1982年の8月、[江の島|えのしま]の店は1か月で9500万円です！
+  - speaker: zundamon
+    emotion: surprised
+    text: 銀座の店は？
+  - speaker: shain
+    emotion: happy
+    text: 5000万円です。歩く人がほとんどいない店のほうが、上です。
+  - speaker: shain
+    emotion: normal
+    text: 前の道を通る車は、[1日|いちにち]1万4000台。
+  - speaker: zundamon
+    emotion: happy
+    text: 車に乗ったまま注文して、そのまま受け取って走って行く。
+  - speaker: zundamon
+    emotion: happy
+    text: これでなければダメだ、と[思た|オモタ]んや。
+  - speaker: shain
+    emotion: happy
+    text: 車の窓から、テレビ電話で注文を受けるんですもんね。
+  - speaker: zundamon
+    emotion: happy
+    text: 松下通信工業とソニーに頼んで、作ってもろたんや。
+  - speaker: shain
+    emotion: thinking
+    text: 最初にアメリカが勧めた、郊外のドライブスルーですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あのときは、まだ早かったんや。
+    se: tenten
+  - speaker: reimu
+    text: 1982年12月、全店の売上は702億円。外食産業で、売上の首位に立ちます。
+    reading: せんきゅうひゃく はちじゅうにねん じゅうにがつ、ぜんてんの うりあげわ ななひゃく におくえん。がいしょく さんぎょうで うりあげの しゅいに たちます。
+# ---- 1994〜1996年：円高と価格破壊 ----
+- id: card1994
+  title: ''
+  background: md_card_1994
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 1994年。1ドル360円で始まった為替は、90円台の円高になっていました。
+    reading: せんきゅうひゃく きゅうじゅうよねん。いちどる さんびゃく ろくじゅうえんで はじまった かわせわ、きゅうじゅうえんだいの えんだかに なって いました。
+- id: ch11_kakaku
+  title: 100円のハンバーガー
+  background: md_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 輸入品の値段は、[4分の1|よんぶんのいち]になった。
+  - speaker: zundamon
+    emotion: happy
+    text: ハンバーガーが半値になっても、不思議はない。
+  - speaker: shain
+    emotion: happy
+    text: 9月に210円を、期間限定で100円にしました。
+  - speaker: shain
+    emotion: happy
+    background: md_kaigi_up
+    text: 売れたのは2750万。前の年の、18倍です！
+  - speaker: zundamon
+    emotion: surprised
+    text: 安うしたら、こんなに来るんか。
+  - speaker: shain
+    emotion: thinking
+    text: 1ドル360円のころなら、考えられない値段ですね。
+  - speaker: reimu
+    text: 1995年4月には、ハンバーガーを130円に下げます。
+    reading: せんきゅうひゃく きゅうじゅうごねん しがつにわ、はんばーがーお ひゃく さんじゅうえんに さげます。
+- id: ch11_interview
+  title: みんながボーとしている
+  background: md_yakuin
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1996年3月。藤田は、業界紙のインタビューに答えています。
+    reading: せんきゅうひゃく きゅうじゅうろくねん さんがつ。ふじたわ、ぎょうかいしの いんたびゅーに こたえて います。
+  - speaker: kisha
+    emotion: normal
+    text: 正月の創業25周年は、ハンバーガー80円でしたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 5000万個売ろうと計画していましたが、予定通り売れました。
+  - speaker: zundamon
+    emotion: normal
+    text: 普通は人が並んでいると、後ろの人は帰ってしまう。でも、今回は帰らないんです。
+  - speaker: kisha
+    emotion: surprised
+    text: 25年前と、同じ80円ですもんね。
+  - speaker: zundamon
+    emotion: normal
+    text: まとめて買った[方|かた]は、いったん冷凍しておくそうです。
+  - speaker: zundamon
+    emotion: normal
+    text: 子どもが学校から帰ってきたら、電子レンジで温めて食べさせる。
+  - speaker: zundamon
+    emotion: happy
+    text: アンパンでも130円するから、と。
+  - speaker: kisha
+    emotion: thinking
+    text: アンパンより、安いハンバーガー……。
+  - speaker: kisha
+    emotion: thinking
+    text: それで、採算は取れるんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 為替も今年の分は、昨年の3月に予約して[77円80銭|ナナジュウナナエンハチジッセン]でできます。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は3年ぐらい先には、今の物価そのものが半分ぐらいになると見ているんです。
+  - speaker: kisha
+    emotion: thinking
+    text: 景気は、悪いのにですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 今は景気が悪い。もっとよくなるんじゃないか。
+  - speaker: zundamon
+    emotion: normal
+    text: そんなことを言っていたら、いつまでたってもよくならない。
+  - speaker: zundamon
+    emotion: happy
+    text: 今はみんながボーとしているから一番のチャンスなんです。
+    telops:
+    - {text: "藤田「今はみんながボーとしているから一番のチャンスなんです」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 今年は、[何|なん]店出すんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 400から500店。10年後には1万店、売上げ1兆円です。
+  - speaker: kisha
+    emotion: thinking
+    text: 立ち食いは[根付かない|ねづかない]、と言われた店が……。
+  - speaker: zundamon
+    emotion: happy
+    text: 勝てば官軍です。
+    beat: true
+# ---- 2000年：平日半額 ----
+- id: card2000
+  title: ''
+  background: md_card_2000
+  bgm: pastel_house
+  cuts:
+  - speaker: reimu
+    text: 2000年2月。平日だけ、ハンバーガーを半額の65円にします。
+    reading: にせんねん にがつ。へいじつだけ、はんばーがーお はんがくの ろくじゅうごえんに します。
+- id: ch12_hangaku
+  title: でっかく半額
+  background: md_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長。広告代理店から、ポスターの案です。
+  - speaker: reimu
+    text: 元社員によると、50%OFFと書いた案を見た藤田は、こう言ったそうです。
+    reading: もと しゃいんに よると ごじゅっぱーせんと おふと かいた あんお みた ふじたわ、こう いったそうです。
+  - speaker: zundamon
+    emotion: angry
+    text: あかん。でっかく半額って書け。
+  - speaker: shain
+    emotion: surprised
+    text: '[50%OFF|ゴジュッパーセントオフ]も半額も、同じ意味ですよね。'
+  - speaker: shain
+    emotion: thinking
+    text: ……響きが、違うんですか。
+    beat: true
+  - speaker: shain
+    emotion: sad
+    text: でっかく、ですね。……刷り直します。
+    se: shobon
+- id: ch12_hiru
+  title: ''
+  background: md_mise
+  stage:
+  - {who: kyaku, x: 0.5, emotion: happy}
+  cuts:
+  - speaker: kyaku
+    emotion: happy
+    text: 平日の昼は、65円か。ちょっと寄っていくか。
+  - speaker: reimu
+    text: 平日の昼に、40代や50代の男性も来るようになりました。
+    reading: へいじつの ひるに、よんじゅうだいや ごじゅうだいの だんせいも くるように なりました。
+# ---- 2001年：上場とBSE ----
+- id: card2001
+  title: ''
+  background: md_card_2001
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2001年7月26日。日本マクドナルドが、株式を上場します。藤田、75歳。
+    reading: にせんいちねん しちがつ にじゅうろくにち。にほん まくどなるどが、かぶしきお じょうじょう します。ふじた ななじゅうごさい。
+- id: ch13_jojo
+  title: 上場の日
+  background: md_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[初値|ハツネ]は、4700円です。'
+  - speaker: kisha
+    emotion: normal
+    text: 上場は、資金集めのためですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 借り入れなしでも、300から400店は出せます。資金集めではありません。
+  - speaker: zundamon
+    emotion: happy
+    text: 100株ずつ、お客さんに株を持ってもらいたいんです。
+  - speaker: kisha
+    emotion: thinking
+    text: 後継ぎのことは。
+  - speaker: zundamon
+    emotion: thinking
+    text: このまま個人会社でいったら、僕が死んだら大混乱を[来す|きたす]でしょう。
+- id: ch13_bse
+  title: ''
+  background: md_mise
+  stage:
+  - {who: crew, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2か月後の9月、国内でBSEが見つかります。既存店の売上は、24か月続けて前の年を下回ります。
+    reading: にかげつごの くがつ、こくないで びーえすいーが みつかります。きぞんてんの うりあげわ、にじゅうよんかげつ つづけて まえの としお したまわります。
+  - speaker: crew
+    emotion: happy
+    text: いらっしゃいませ。ハンバーガーはいかがですか。
+  - speaker: kyaku
+    emotion: thinking
+    text: ……今は、牛肉がちょっとね。
+  - speaker: crew
+    emotion: sad
+    text: またのお越しを、お待ちしてます……。
+    beat: true
+- id: ch13_kaicho
+  title: ''
+  background: md_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 12月。藤田は、会長になると会見で発表します。
+    reading: じゅうにがつ。ふじたわ、かいちょうに なると かいけんで はっぴょう します。
+  - speaker: kisha
+    emotion: thinking
+    text: 会長になっても、戦略は社長に任せないんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 戦略は私が責任を負う。
+    beat: true
+# ---- 2002年：65円、80円、59円 ----
+- id: card2002
+  title: ''
+  background: md_card_2002
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2002年。3月に藤田は会長になり、八木康行が社長に就きます。
+    reading: にせんにねん。さんがつに ふじたわ かいちょうに なり、やぎ やすゆきが しゃちょうに つきます。
+- id: ch14_59en
+  title: 65円、80円、59円
+  background: md_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 藤田田, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 会長。2月に平日半額をやめて80円にしてから、お客さんが離れています。
+  - speaker: zundamon
+    emotion: thinking
+    text: これからは、インフレが来ると読んだんやが……。
+  - speaker: shain
+    emotion: thinking
+    text: 6年前は、物価は半分になると……。
+  - speaker: zundamon
+    emotion: sad
+    text: 読みは、当たる[年|トシ]もあれば外れる[年|トシ]もあるんや。
+  - speaker: reimu
+    text: 世間では、あの藤田田が予測を間違えた、と話題になりました。
+    reading: せけんでわ あの ふじた でんが よそくお まちがえた、と わだいに なりました。
+  - speaker: shain
+    emotion: sad
+    text: 8月からは、59円です。
+  - speaker: zundamon
+    emotion: sad
+    text: 65円、80円。そして59円……。
+    se: chin
+    telops:
+    - {text: "65円 → 80円 → 59円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 1年ほどで3度変わった値段に、客の信頼が損なわれたと経済誌は書きました。
+    reading: いちねん ほどで さんど かわった ねだんに、きゃくの しんらいが そこなわれたと けいざいしわ かきました。
+  - speaker: reimu
+    background: md_kaigi_akaji
+    text: 2002年12月期は約23億円の最終赤字。上場して、初めての赤字でした。
+    reading: にせんにねん じゅうにがつきわ やく にじゅうさんおくえんの さいしゅう あかじ。じょうじょう して、はじめての あかじでした。
+# ---- 2003年：去る日 ----
+- id: card2003
+  title: ''
+  background: md_card_2003
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2003年3月5日。藤田の退任が発表されます。
+    reading: にせんさんねん さんがつ いつか。ふじたの たいにんが はっぴょう されます。
+- id: ch15_kaiken
+  title: 会見に来なかった
+  background: md_kaiken
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: surprised}
+  - {who: kouhou, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: '[藤田|ふじた]会長は、いらっしゃらないんですか。'
+  - speaker: kouhou
+    emotion: normal
+    text: 年齢と体力を理由に、退任いたします。
+  - speaker: kisha
+    emotion: thinking
+    text: 名誉職には。
+  - speaker: kouhou
+    emotion: normal
+    text: 就きません。
+    beat: true
+  - speaker: reimu
+    text: 当時の分析記事は、退任の理由に3つの見方を並べました。
+    reading: とうじの ぶんせき きじわ、たいにんの りゆうに みっつの みかたお ならべました。
+  - speaker: reimu
+    text: 年齢と体力。業績や値付けの責任を求める米国側の圧力。そして、個人的な理由です。
+    reading: ねんれいと たいりょく。ぎょうせきや ねづけの せきにんお もとめる べいこくがわの あつりょく。そして、こじんてきな りゆうです。
+- id: ch15_yakuin
+  title: ''
+  background: md_yakuin
+  stage:
+  - {who: zundamon, x: 0.5, tag: 藤田田, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 3月28日の株主総会で、藤田は会長を退きます。77歳。長男も、取締役を退きました。
+    reading: さんがつ にじゅうはちにちの かぶぬし そうかいで、ふじたわ かいちょうお しりぞきます。ななじゅうななさい。ちょうなんも、とりしまりやくお しりぞきました。
+  - speaker: reimu
+    text: 代表権を持つ取締役は、日本3対米国2から日本1対米国2に変わりました。
+    reading: だいひょうけんお もつ とりしまりやくわ、にほん さん たい べいこく にから にほん いち たい べいこく にに かわりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……32年、か。
+  - speaker: reimu
+    text: 5月には、アメリカの本社から来た人が会長に。12月、藤田商店との契約も打ち切られます。
+    reading: ごがつにわ、あめりかの ほんしゃから きた ひとが かいちょうに。じゅうにがつ、ふじた しょうてんとの けいやくも うちきられます。
+- id: ch16_shikyo
+  title: ''
+  background: md_ginza_yoru
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2004年4月21日。藤田田は、78歳で亡くなりました。
+    reading: にせんよねん しがつ にじゅういちにち。ふじた でんわ、ななじゅうはっさいで なくなりました。
+  - speaker: reimu
+    text: アメリカの新聞は、欧米式の商売を戦後の日本の習慣に合わせた人、と短く伝えました。
+    reading: あめりかの しんぶんわ おうべいしきの しょうばいお せんごの にほんの しゅうかんに あわせた ひと、と みじかく つたえました。
+- id: ch16_mise
+  title: ''
+  background: md_mise
+  stage:
+  - {who: crew, x: 0.5, emotion: happy}
+  cuts:
+  - speaker: crew
+    emotion: happy
+    text: いらっしゃいませ。ハンバーガー、おひとつですね。
+# ---- 論争の章 ----
+- id: ch17_ronso
+  title: 初日から大行列？
+  background: md_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。マクドナルドの1号店は、初日から大行列だったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 連日1万人を超える客が来た、と書いた昔の雑誌もあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の50周年のサイトには、店の前は大変な賑わいだったとあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも会社自身の本では、初日は約40万円で目標の100万円に届かなかったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 大行列じゃなかったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 初代の店長も、開店直後は[閑古鳥|かんこどり]が鳴いてたって振り返ってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 店長の回想でも、[1日|いちにち]1万人はスカウトが来たあとの話よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ初日は、大失敗だったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: その昔の雑誌には、最初の想定は[1日|いちにち]30万円とあるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 30万円なら、40万円は超えてるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 目標の数字そのものが、資料によって違うの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 失敗か成功かは、物差しで変わるんだね。
+    beat: true
+- id: ch17_ronso2
+  title: 安売りで自滅した？
+  background: md_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: もう1つ見たのだ。[藤田|ふじた]さんは安売りでデフレを招いて、59円で自滅したって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1年ほどで値段を3度変えて、上場して初めての赤字になったのは本当よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも値下げの元は、円高だったの。1ドル360円が、90円台まで来てたから。
+  - speaker: zundamon
+    emotion: surprised
+    text: 輸入の材料が、[4分の1|よんぶんのいち]の値段になるんだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: それに2001年の9月には、BSEが見つかってるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカの本社も同じころ、3か月の決算で上場以来初の赤字だったの。
+    se: hammer
+  - speaker: zundamon
+    emotion: thinking
+    text: 安さで勝って、安さの戻し方で負けたのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこにBSEと円安が重なった、と見るのが近いわね。
+- id: ch17_ronso3
+  title: アメリカのまま？
+  background: md_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも結局、アメリカの店をそのまま持ってきただけでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本社のマニュアルも100%ビーフも、仕組みはアメリカのものね。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも名前はマクドナルド、ミルクシェイクはマックシェイク。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[軒先|のきさき]の立ち食いに、ハイライトと同じ80円。シェイクは12オンスに減らしたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 1989年には、日本生まれのてりやきマックバーガーも出てるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 仕組みはアメリカで、名前と売り方は日本なのだ！
+    se: hirameki
+- id: ch18_chui
+  title: 本当の注意点
+  background: md_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、ハンバーガーの値段は為替で動くってこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1971年は、1ドル360円で80円だった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 円高で下がって、2022年からは円安と材料高で上がってるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 安い高いの裏に、1ドルが[何円|なんえん]かがあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、同じマクドナルドでも店で値段が違うことがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2023年から、都心の店などは別の値段なのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じハンバーガーなのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 旅先や駅前の店では、アプリかレシートで確かめてね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: あと、期間限定の値下げとふだんの値段は分けて見ること。
+  - speaker: zundamon
+    emotion: happy
+    text: でっかく半額って書いてあっても、いつまでかを見るんだね。
+    beat: true
+# ---- 現代の章 ----
+- id: ch19_gendai
+  title: 55年目のマクドナルド
+  background: md_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 今の[日本|にほん]マクドナルドは、2026年9月末で3047店。
+  - speaker: zundamon
+    emotion: surprised
+    text: 22坪の1号店から、3047店……！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年の全店の売上は8886億円。[1日|いちにち]にならすと、約24億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 初日の40万円の、約6000倍なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 既存店の売上は、6月までで43四半期続けて前の年を上回ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 9月も、前の年より10%増えてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ハンバーガーは、2月の値上げでも190円のまま。
+  - speaker: zundamon
+    emotion: thinking
+    text: 80円のころの、2.4倍か。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカへのロイヤリティは、売上の3%。創業のころは1%だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 100円売って1円が、今は3円なんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[藤田|ふじた]さんのころは直営の店が中心。今はフランチャイズが7割を超えてるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2026年10月1日、キャラクターの名前がドナルドからロナルドに変わったの。
+    telops:
+    - {text: "ドナルド → ロナルド　2026年10月1日", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ドナルドが、ロナルドに！？
+  - speaker: tsumugi
+    emotion: happy
+    text: 公式の[X|エックス]はドナルド、どーなるの？って投稿してたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ダジャレで、お知らせなのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: normal
+    text: 財団も同じ日に、ロナルド・マクドナルド・ハウス・ジャパンになったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1999年にできたとき、その財団の名前にはデン・フジタが入ってたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[藤田|ふじた]さんの名前が、入ってたんだ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: キャラクターは、世界と同じ呼び名になったのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも店の名前は、マクドナルドのままなのだ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: md_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ずんだもん。さっきのマクダーナルズ、もう一回言ってみて。
+  - speaker: zundamon
+    emotion: happy
+    text: マクダーナルズ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[藤田|ふじた]さんは、その呼び方じゃ日本人には受けないって押し切ったの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: マクド、ナルド。[3音|サンオン]ずつ切れるから、マクドナルド。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあボクは、マクドで[止める|とめる]のだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは、関西の呼び方ね。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 立って食べるのが恥ずかしかった国で、初日の40万円が[1日|いちにち]24億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前の響きと80円と、清潔な立ち食い。壁は一つずつ崩れたのね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも食べ歩きのゴミは、ちゃんとゴミ箱に入れるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 許容範囲内の清潔さで、満足しないでね。
+  - speaker: zundamon
+    emotion: happy
+    text: 生ぬるい清潔さでは、我慢ができないのだ！
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
