@@ -4360,8 +4360,8 @@ SPECS = {
         dict(scene="tt_kaiken_heya", tint="mono", tag="2017年 破綻の日", emo="thinking", fx=None, say="何が悪かった…"),
     ]),
     "olympus-woodford": dict(layout="scene", headline="問いただした社長、解任", head_hi="解任", panels=[
-        dict(scene="ol_torishimari", tint="yellow", tag="2011年 社長に就任", emo="surprised", fx="sweat", say="この買収は何だ"),
-        dict(scene="ol_kuko", tint="mono", tag="半年後 成田へ", emo="sad", fx="gloom", say="バスで空港へ…"),
+        dict(scene="ol_kaigi", tint="yellow", tag="2011年 買収の報酬", emo="surprised", fx="sweat", say="3割超！？"),
+        dict(scene="ol_kuko", tint="mono", tag="解任の日 成田へ", emo="sad", fx="gloom", say="バスで空港へ…"),
     ]),
     "mcdonalds-fujita": dict(layout="scene", headline="39時間で建てた1号店", head_hi="39時間", panels=[
         dict(scene="md_koji", tint="mono", tag="1971年 銀座の夜", emo="angry", fx="shock", say="やるんや！"),

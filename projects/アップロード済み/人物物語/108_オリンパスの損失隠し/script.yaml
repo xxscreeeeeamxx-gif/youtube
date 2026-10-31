@@ -1,0 +1,1575 @@
+meta:
+  title: オリンパス元社長「私を辞めさせれば“嵐は去る”とでも思ったのだろう」会社は損失隠しを認めた【ずんだもん解説】
+  slug: olympus-woodford
+  hook_line: 社長にも知らされない買収を問いただした英国人社長は、なぜ解任されたのか。
+  summary: 2011年10月14日の朝、オリンパスの取締役会で、社長のマイケル・ウッドフォードが解任されます。20歳で英国の子会社に入り、社長に就いて半年でした。彼が問いただしていたのは、社長にも知らされなかった買収と、その支払い。会社は、経営の方向性と手法の食い違いを理由に挙げました。何が隠されていたのか。本人の著書と会見、会社の発表、第三者委員会の報告書、判決を並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - オリンパス「一連の報道に対する当社の見解について」（2011年10月19日） https://www.olympus.co.jp/ir/data/announcement/pdf/nr111019.pdf
+  - オリンパス「過去の損失計上先送りに関するお知らせ」（2011年11月8日） https://www.olympus.co.jp/ir/data/announcement/pdf/nr111108.pdf
+  - オリンパス 第三者委員会「調査報告書 要約版」（2011年12月6日） https://www.olympus.co.jp/ir/data/announcement/pdf/if111206corpj_1.pdf
+  - 証券取引等監視委員会「オリンパス株式会社に係る有価証券報告書等虚偽記載事件の告発について」（2012年3月6日） https://www.fsa.go.jp/sesc/news/c_2012/2012/20120306-1.html
+  - 東洋経済オンライン「不透明なカネの流れ、必ず日本に戻って真相を究明する」（2011年10月21日） https://toyokeizai.net/articles/-/7971
+  - 日本経済新聞「オリンパス粉飾 旧経営陣、594億円の賠償確定」（2020年10月26日） https://www.nikkei.com/article/DGXMZO65459660W0A021C2CR8000/
+  tags:
+  - オリンパス
+  - オリンパス事件
+  - マイケル・ウッドフォード
+  - 損失隠し
+  - 粉飾決算
+  - 第三者委員会
+  - 内部告発
+  - FACTA
+  - 菊川剛
+  - 企業統治
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 社長に就いて半年
+    bottom: オリンパス社長解任
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kikukawa
+    label: 会長
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#2a2f3a'
+  - id: mori
+    label: 副社長
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: yakuin
+    label: 取締役
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: yakuin2
+    label: 取締役
+    voice: 21
+    pitch: -0.02
+    outfit: suit
+    color: '#4a4038'
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: yamaguchi
+    label: 山口義正
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a7a'
+  - id: yujin
+    label: 友人
+    voice: 21
+    pitch: 0.04
+    outfit: work
+    color: '#6a7a5a'
+  - id: henshu
+    label: 編集者
+    voice: 67
+    pitch: 0.06
+    outfit: suit
+    color: '#7a6a58'
+  - id: pwc
+    label: 会計士
+    voice: 11
+    pitch: 0.08
+    outfit: suit
+    color: '#2f3a52'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.08
+    outfit: suit
+    color: '#6a5a48'
+  - id: kisha2
+    label: 記者
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#4a5a6a'
+  - id: takayama
+    label: 高山社長
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#3a4a5a'
+  - id: sasa
+    label: 笹社長
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#2a3a4a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#1a1a1a'
+scenes:
+# ---- 先出し（2011年10月14日・本社の取締役会） ----
+- id: co_kainin
+  title: ''
+  background: ol_torishimari
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社長, emotion: thinking}
+  - {who: kikukawa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年10月14日、オリンパスの取締役会。社長の著書によれば、会長はこう切り出します。
+    reading: にせん じゅういちねん じゅうがつ じゅうよっか、おりんぱすの とりしまりやくかい。しゃちょうの ちょしょに よれば、かいちょうわ こう きりだします。
+  - speaker: kikukawa
+    emotion: normal
+    text: 議題を変えます。ウッドフォード氏の、社長からの解職です。
+  - speaker: kikukawa
+    emotion: angry
+    text: ウッドフォード氏は利害関係があるため、発言は許されません。
+    se: don
+  - speaker: reimu
+    text: 自分以外の全員が、手を挙げました。
+    reading: じぶん いがいの ぜんいんが、てお あげました。
+    telops:
+    - {text: "賛成　社長以外の全員", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: co_bus
+  title: ''
+  background: ol_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 元社長, emotion: sad}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: マンションの鍵と、パソコンと携帯をお返しください。
+  - speaker: zundamon
+    emotion: sad
+    text: ……空港へは？
+  - speaker: shain
+    emotion: normal
+    text: バスで行ってください。
+    beat: true
+  - speaker: reimu
+    background: ol_kuko
+    text: この男は、マイケル・ウッドフォード。オリンパスの社長に就いて、半年でした。
+    reading: この おとこわ、まいける うっどふぉーど。おりんぱすの しゃちょうに ついて、はんとし でした。
+  - speaker: reimu
+    text: 1か月足らずで、会社は1990年代からの損失隠しを認めます。
+    reading: いっかげつ たらずで、かいしゃわ せんきゅうひゃく きゅうじゅうねんだいからの そんしつかくしお みとめます。
+- id: hook
+  title: ''
+  background: ol_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ マンションの理事長になったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 帳簿は見た？
+  - speaker: zundamon
+    emotion: normal
+    text: 前の理事長が、見なくていいって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……それ、一番見るべきやつよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: オリンパスの社長も、自分の会社の買収を知らされなかったの。
+    telops:
+    - {text: "社長にも知らされない買収", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを問いただした社長が、解任されたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 問いただしたらクビ！？ 何を隠してたのだ！？
+# ---- 2009年・尾瀬（記者の側） ----
+- id: card2009
+  title: ''
+  background: ol_card_2009
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2009年8月。経済記者の山口義正が、オリンパスに勤める友人と尾瀬を歩いていました。
+    reading: にせん きゅうねん はちがつ。けいざい きしゃの やまぐち よしまさが、おりんぱすに つとめる ゆうじんと おぜお あるいて いました。
+- id: p1_oze
+  title: 尾瀬の山道
+  background: ol_oze
+  stage:
+  - {who: yamaguchi, x: 0.3, flip: true, emotion: normal}
+  - {who: yujin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: yujin
+    emotion: thinking
+    text: ウチの会社は、バカなことをやっている。
+  - speaker: yujin
+    emotion: normal
+    text: 売上が[2〜3億円|にさんおくえん]の会社を、約300億円で買ってるんだ。
+  - speaker: reimu
+    text: 山口は取材を重ねます。この買収を、のちに社長になる英国人は知らされていません。
+    reading: やまぐちわ しゅざいお かさねます。この ばいしゅうお、のちに しゃちょうに なる えいこくじんわ しらされて いません。
+# ---- 2011年2月・社長に選ばれる ----
+- id: card2011
+  title: ''
+  background: ol_card_2011
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2011年2月。オリンパスが、英国人を社長に選びます。
+    reading: にせん じゅういちねん にがつ。おりんぱすが、えいこくじんお しゃちょうに えらびます。
+- id: p1_shimei
+  title: 英国人の社長
+  background: ol_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社長, emotion: normal}
+  - {who: kikukawa, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: マイケル・ウッドフォード、50歳。20歳で英国の子会社に入り、30年オリンパスで働いてきました。
+    reading: まいける うっどふぉーど、ごじゅっさい。はたちで えいこくの こがいしゃに はいり、さんじゅうねん おりんぱすで はたらいて きました。
+  - speaker: reimu
+    text: 会社は、グローバル化の取り組みをさらに加速させるためと発表しました。
+    reading: かいしゃわ、ぐろーばるかの とりくみお さらに かそく させる ためと はっぴょう しました。
+  - speaker: zundamon
+    emotion: normal
+    text: ……お引き受けします。
+  - speaker: reimu
+    text: 会社を前に進める役を任された男は、8か月後に追い出されます。
+    reading: かいしゃお まえに すすめる やくお まかされた おとこわ、はちかげつごに おいだされます。
+# ---- 2011年7〜8月・社長だけが知らない記事 ----
+- id: p2_mail
+  title: 2通のメール
+  background: ol_hotel
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.5, tag: 社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月。ドイツに出張していた社長に、メールが2通届きます。
+    reading: しちがつ。どいつに しゅっちょう して いた しゃちょうに、めーるが につう とどきます。
+  - speaker: zundamon
+    emotion: normal
+    text: 同僚からだ。最新の[FACTA|ファクタ]を、読みましたか？
+  - speaker: zundamon
+    emotion: thinking
+    text: 友人からも、同じことを。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[FACTA|ファクタ]……？ 聞いたことのない雑誌だ。'
+  - speaker: reimu
+    text: 7月20日発売の月刊誌、FACTAの8月号のことでした。
+    reading: しちがつ はつか はつばいの げっかんし、ふぁくたの はちがつごうの ことでした。
+- id: p2_tokyo
+  title: 社長だけが知らない
+  background: ol_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社長, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 東京に戻った月曜日。社内の誰も、記事のことを口にしません。
+    reading: とうきょうに もどった げつようび。しゃないの だれも、きじの ことお くちに しません。
+  - speaker: zundamon
+    emotion: normal
+    text: 例の[FACTA|ファクタ]の記事は、読んだかい？
+  - speaker: shain
+    emotion: sad
+    text: ……はい。
+  - speaker: zundamon
+    emotion: normal
+    text: 何が書いてある？
+  - speaker: shain
+    emotion: thinking
+    text: 会長から、社長には言うなと言われていまして……。
+  - speaker: zundamon
+    emotion: surprised
+    text: 社長の私に、言うなと？
+    se: gaan
+  - speaker: shain
+    emotion: sad
+    text: 申し訳ありません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 中身だけでも、教えてくれないか。
+  - speaker: shain
+    emotion: sad
+    text: ……私の口からは。
+- id: p2_kokunai
+  title: 国内のことだから
+  background: ol_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.22, flip: true, tag: 社長, emotion: thinking}
+  - {who: kikukawa, x: 0.56, emotion: normal}
+  - {who: mori, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月。社長は、会長と副社長に説明を求めます。
+    reading: はちがつ。しゃちょうわ、かいちょうと ふくしゃちょうに せつめいお もとめます。
+  - speaker: reimu
+    text: 本人は著書に、記事のほんの一部でも本当なら首が飛ぶと書いています。
+    reading: ほんにんわ ちょしょに、きじの ほんの いちぶでも ほんとうなら くびが とぶと かいて います。
+  - speaker: zundamon
+    emotion: normal
+    text: 記事の英訳を読みました。[零細企業|れいさいきぎょう]3社の買収に700億円も投じた、と。
+  - speaker: zundamon
+    emotion: normal
+    text: 国内3社の買収について、説明してください。
+  - speaker: reimu
+    text: 本人によれば、2人は詳しい説明を断ってこう言いました。
+    reading: ほんにんに よれば、ふたりわ くわしい せつめいお ことわって こう いいました。
+  - speaker: kikukawa
+    emotion: normal
+    text: 国内のことだから、あなたは知らなくていい。
+    telops:
+    - {text: "会長・副社長（本人によれば）「あなたは知らなくていい」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ……知らなくていい？
+    beat: true
+  - speaker: zundamon
+    emotion: angry
+    text: 社長は私です。最後の責任を負うのは、私です。
+- id: p2_nedan
+  title: ''
+  background: ol_kaigi
+  cuts:
+  - speaker: reimu
+    text: 3社は、資源リサイクルと電子レンジ用の調理容器と健康食品の会社でした。
+    reading: さんしゃわ、しげん りさいくると でんしれんじようの ちょうり ようきと けんこう しょくひんの かいしゃでした。
+  - speaker: reimu
+    text: のちの報告書によると、健康食品の会社の株はファンドが1株5万円で手に入れたもの。
+    reading: のちの ほうこくしょに よると、けんこう しょくひんの かいしゃの かぶわ ふぁんどが ひとかぶ ごまんえんで てに いれた もの。
+  - speaker: reimu
+    text: オリンパスはそれを1株2050万円で。1000円のラーメンに、41万円を払う倍率です。
+    reading: おりんぱすわ それお ひとかぶ にせん ごじゅうまんえんで。せんえんの らーめんに、よんじゅう いちまんえんお はらう ばいりつです。
+    telops:
+    - {text: "1株5万円 → 2050万円（410倍）", size: xl, position: top-center, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 社長が問うのは、もう1つ。英国の会社ジャイラスを買ったときの、助言の報酬です。
+    reading: しゃちょうが とうのわ、もう ひとつ。えいこくの かいしゃ じゃいらすお かった ときの、じょげんの ほうしゅうです。
+  - speaker: reimu
+    text: その支払いの先に何があったのか、社長はまだ知りません。
+    reading: その しはらいの さきに なにが あったのか、しゃちょうわ まだ しりません。
+# ---- 2011年9月・6通の手紙 ----
+- id: p3_tegami
+  title: 6通の手紙
+  background: ol_yakuin
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社長, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月。社長は取締役会にあてて、正式な手紙を書きます。
+    reading: くがつ。しゃちょうわ とりしまりやくかいに あてて、せいしきな てがみお かきます。
+  - speaker: zundamon
+    emotion: normal
+    text: 説明を求める手紙だ。届けてくれ。
+  - speaker: shain
+    emotion: normal
+    text: お届けします。
+  - speaker: zundamon
+    emotion: thinking
+    text: 返事は？
+  - speaker: shain
+    emotion: sad
+    text: ……まだです。
+  - speaker: zundamon
+    emotion: normal
+    text: では、2通目だ。
+  - speaker: shain
+    emotion: sad
+    text: ……まだです。
+  - speaker: zundamon
+    emotion: angry
+    text: 3通目。4通目。
+  - speaker: shain
+    emotion: sad
+    text: まだです。まだです。
+  - speaker: zundamon
+    emotion: angry
+    text: 5通目と6通目は、監査法人の幹部にも写しを送ってくれ。
+  - speaker: shain
+    emotion: surprised
+    text: 外部にも、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 外にもだ。
+  - speaker: shain
+    emotion: sad
+    text: ……満足なお返事は、どれにもありません。
+  - speaker: zundamon
+    emotion: sad
+    text: 6通出して、まともな答えは1つも無しか。
+    se: chin
+  - speaker: reimu
+    text: 記事の続報が出ても、役員やメディアや株主は動かない。社長はそのことに、衝撃を受けたと語っています。
+    reading: きじの ぞくほうが でても、やくいんや めでぃあや かぶぬしわ うごかない。しゃちょうわ その ことに、しょうげきお うけたと かたって います。
+- id: p3_ceo
+  title: CEOになる
+  background: ol_torishimari
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.22, flip: true, tag: 社長, emotion: normal}
+  - {who: yakuin, x: 0.56, emotion: thinking}
+  - {who: yakuin2, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月30日の取締役会。社長は、最高経営責任者のCEOも任されます。10月1日付けです。
+    reading: くがつ さんじゅうにちの とりしまりやくかい。しゃちょうわ、さいこう けいえい せきにんしゃの しーいーおーも まかされます。じゅうがつ ついたちづけです。
+  - speaker: yakuin2
+    emotion: normal
+    text: '[CEO|シーイーオー]の肩書まで、求めたそうですね。'
+  - speaker: yakuin
+    emotion: thinking
+    text: 4月から、会長がお持ちだった肩書ですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 権限がなければ、会社は経営できません。責任も持てません。
+  - speaker: yakuin
+    emotion: thinking
+    text: なぜ外部の監査に、調査を頼んでいるんです。
+  - speaker: yakuin2
+    emotion: normal
+    text: ジャイラスを買って3年も経つのに、なぜ今さら気にするんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 7億ドル近い助言の費用です。問題にするのは、当たり前でしょう。
+  - speaker: reimu
+    text: 本人はこの日の役員会を、非常におかしな雰囲気だったと語っています。
+    reading: ほんにんわ この ひの やくいんかいお、ひじょうに おかしな ふんいきだったと かたって います。
+# ---- 2011年10月・ロンドン、PwCの報告書 ----
+- id: p3_pwc
+  title: 買収額の3割
+  background: ol_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社長, emotion: thinking}
+  - {who: pwc, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月3日。社長はロンドンに戻り、会計事務所のPwCに調べてもらいます。
+    reading: じゅうがつ みっか。しゃちょうわ ろんどんに もどり、かいけい じむしょの ぴーだぶりゅーしーに しらべて もらいます。
+  - speaker: zundamon
+    emotion: angry
+    text: この瞬間に会社を変えるには、役員を変えるしかない。
+  - speaker: zundamon
+    emotion: normal
+    text: ジャイラスを買ったとき、助言会社に何を払ったのか。調べてほしい。
+  - speaker: pwc
+    emotion: normal
+    text: ご報告します。助言会社側への報酬は、買収額の3割を超えます。
+    telops:
+    - {text: "助言の報酬　買収額の3割超", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 3割！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: thinking
+    text: 通常、助言の費用は買収額の1%程度とされる。
+  - speaker: pwc
+    emotion: normal
+    text: 3000万円の家を買って、仲介に1000万円払うような話です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 仲介が、1000万円……。
+  - speaker: zundamon
+    emotion: thinking
+    text: その取引を、どう見る？
+  - speaker: pwc
+    emotion: thinking
+    text: 疑わしく、懸念の理由になる取引です。
+- id: p3_mail13
+  title: A4で13枚のメール
+  background: ol_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社長, emotion: angry}
+  - {who: pwc, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月11日。社長は報告書を添えて、A4で13枚のメールを会長と副社長に送ります。
+    reading: じゅうがつ じゅういちにち。しゃちょうわ ほうこくしょお そえて、えーよんで じゅうさんまいの めーるお かいちょうと ふくしゃちょうに おくります。
+  - speaker: zundamon
+    emotion: angry
+    text: '[あなた方|あなたがた]両者が、役員会から辞任することが必要です。'
+    telops:
+    - {text: "社長のメール「あなた方両者が役員会から辞任することが必要です」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: pwc
+    emotion: surprised
+    text: 会長と副社長に、辞任を？
+  - speaker: zundamon
+    emotion: normal
+    text: '[菊川|キクカワ]と[森|もり]が辞めるか、私が辞めるかだ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: その2つしか、選択肢はない。
+  - speaker: reimu
+    text: 13日には役員全員と監査役、監査法人にも報告書を渡します。その翌朝が、10月14日でした。
+    reading: じゅうさんにちにわ やくいん ぜんいんと かんさやく、かんさほうじんにも ほうこくしょお わたします。その よくあさが、じゅうがつ じゅうよっか でした。
+# ---- 2011年10月14日・解任の日 ----
+- id: p4_asa
+  title: 10月14日の朝
+  background: ol_torishimari
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 社長, emotion: thinking}
+  - {who: mori, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月14日、金曜。本人の著書によれば、社長は8時41分に本社に入ります。
+    reading: じゅうがつ じゅうよっか、きんよう。ほんにんの ちょしょに よれば、しゃちょうわ はちじ よんじゅう いっぷんに ほんしゃに はいります。
+  - speaker: reimu
+    text: 9時の予定を過ぎても、会長が来ません。9時2分、副社長と目が合いました。
+    reading: くじの よていお すぎても、かいちょうが きません。くじ にふん、ふくしゃちょうと めが あいました。
+  - speaker: zundamon
+    emotion: angry
+    text: '[森|もり]。[小芝居|こしばい]はやめて、さっさと進めてくれ。'
+- id: p4_giji
+  title: ''
+  background: ol_torishimari
+  stage:
+  - {who: zundamon, x: 0.22, flip: true, tag: 社長, emotion: thinking}
+  - {who: kikukawa, x: 0.56, emotion: normal}
+  - {who: yakuin, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9時7分。会長が、遅れて入ってきます。
+    reading: くじ ななふん。かいちょうが、おくれて はいって きます。
+  - speaker: kikukawa
+    emotion: normal
+    text: 本日の、[M&A|エムアンドエー]に関する懸念を話し合う取締役会は中止します。
+  - speaker: kikukawa
+    emotion: normal
+    text: 代わりに、新しい議題があります。
+  - speaker: kikukawa
+    emotion: normal
+    text: 第一に、ウッドフォード氏の社長・[CEO|シーイーオー]・代表取締役からの解職です。
+  - speaker: zundamon
+    emotion: angry
+    text: 会長、それは……。
+  - speaker: kikukawa
+    emotion: angry
+    text: ウッドフォード氏は利害関係があるため、ここで発言することは許されません。
+    se: don
+  - speaker: reimu
+    text: 自分以外の全員が、同時に手を挙げました。
+    reading: じぶん いがいの ぜんいんが、どうじに てお あげました。
+  - speaker: reimu
+    text: 本人はのちに、妙なことに無性に笑いたくなったと書いています。
+    reading: ほんにんわ のちに、みょうな ことに むしょうに わらいたく なったと かいて います。
+- id: p4_kagi
+  title: 鍵と携帯とバス
+  background: ol_yakuin
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 元社長, emotion: sad}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: マンションの鍵と、パソコンと携帯をお返しください。
+  - speaker: zundamon
+    emotion: normal
+    text: ……空港へは？
+  - speaker: shain
+    emotion: normal
+    text: バスで行ってください。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: '[成田行き|ナリタユキ]のバスは、自分で予約しよう。'
+  - speaker: reimu
+    background: ol_kuko
+    text: 東京を離れる前に、英国の新聞の記者に内部の資料を渡しました。
+    reading: とうきょうお はなれる まえに、えいこくの しんぶんの きしゃに ないぶの しりょうお わたしました。
+  - speaker: reimu
+    text: 本人は、身の安全を恐れて日本を出たと語っています。
+    reading: ほんにんわ、みの あんぜんお おそれて にほんお でたと かたって います。
+- id: p4_kaiken
+  title: 同じ日の会見
+  background: ol_kaiken
+  bgm: serious
+  stage:
+  - {who: kikukawa, x: 0.3, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長に就いて、まだ半年ですよね。
+  - speaker: kisha
+    emotion: thinking
+    text: 解任の理由を、お聞かせください。
+  - speaker: kikukawa
+    emotion: normal
+    text: 組織の意思決定を無視した[独断専横|どくだんせんおう]的な経営で、さまざまなギャップが生じた。
+  - speaker: kisha
+    emotion: thinking
+    text: 会長ご自身の受け止めは。
+  - speaker: kikukawa
+    emotion: thinking
+    text: 忸怩たる思いだ。欧米人と[日本人|ニホンジン]との違いを、見抜けなかった。
+  - speaker: reimu
+    text: 会社は、外国人だから解任したという見方は否定しました。
+    reading: かいしゃわ、がいこくじん だから かいにん したと いう みかたわ ひてい しました。
+  - speaker: reimu
+    text: このとき会社は、不正があったとは一言も言っていません。
+    reading: この とき かいしゃわ、ふせいが あったとわ ひとことも いって いません。
+- id: p4_kabuka
+  title: 4日続けて下がる
+  background: ol_kaigi
+  stage:
+  - {who: shain, x: 0.3, flip: true, emotion: surprised}
+  - {who: yakuin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 株価が、また下がっています。
+  - speaker: yakuin
+    emotion: thinking
+    text: 解任の前の日の[終値|おわりね]は、2482円だったな。
+  - speaker: shain
+    emotion: sad
+    text: 20日の[終値|おわりね]は、1321円です。
+  - speaker: yakuin
+    emotion: surprised
+    text: 1週間で、半分近くか。
+  - speaker: shain
+    emotion: sad
+    background: ol_kaigi_akaji
+    text: 解任から4日続けて下がって、時価総額は約3000億円減りました。
+    se: gaan
+# ---- 2011年10月・記者の側 ----
+- id: p5_henshubu
+  title: 記者の続報
+  background: ol_henshubu
+  bgm: kinakusai
+  stage:
+  - {who: yamaguchi, x: 0.3, flip: true, emotion: normal}
+  - {who: henshu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: henshu
+    emotion: surprised
+    text: 山口さん、社長の解任で一気に騒ぎになったな。
+  - speaker: yamaguchi
+    emotion: normal
+    text: 一連の騒動のきっかけは、8月号で書いた記事です。
+  - speaker: henshu
+    emotion: normal
+    text: 10月号の続報は、何が決め手だった？
+  - speaker: yamaguchi
+    emotion: thinking
+    text: 資料を、弁護士に見せたことです。
+  - speaker: yamaguchi
+    emotion: thinking
+    text: オリンパス経営陣は特別背任の疑いが濃い、と指摘されました。
+  - speaker: henshu
+    emotion: surprised
+    background: ol_henshubu_yoru
+    text: 特別背任……。役員が会社に損をさせた疑い、か。
+  - speaker: reimu
+    text: 10月20日。山口は、ネットの媒体にも記事を書きました。
+    reading: じゅうがつ はつか。やまぐちわ、ねっとの ばいたいにも きじお かきました。
+# ---- 2011年10月・ロンドン ----
+- id: p5_london
+  title: ロンドンからの電話
+  background: ol_london
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 元社長, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月19日。会社は、解職の理由を経営の方向性と手法の大きな食い違いだと説明します。
+    reading: じゅうがつ じゅうくにち。かいしゃわ、かいしょくの りゆうお けいえいの ほうこうせいと しゅほうの おおきな くいちがいだと せつめい します。
+  - speaker: reimu
+    text: 買収は妥当で、監査役会も不正は無いと結論した、とも書きました。
+    reading: ばいしゅうわ だとうで、かんさやくかいも ふせいわ ないと けつろん したとも かきました。
+  - speaker: kisha
+    emotion: normal
+    text: 会社は、あなたへの法的措置も検討すると言っています。
+  - speaker: zundamon
+    emotion: normal
+    text: どうぞ、どうぞ。
+    beat: true
+  - speaker: kisha
+    emotion: surprised
+    text: 解任は、予想していましたか。
+  - speaker: zundamon
+    emotion: normal
+    text: 緊急役員会が開かれる前に、自分がクビになることはわかっていた。
+  - speaker: kisha
+    emotion: thinking
+    text: 会社は、なぜあなたを。
+  - speaker: zundamon
+    emotion: thinking
+    text: 私を辞めさせれば、嵐は去るとでも思ったのだろう。
+    telops:
+    - {text: "元社長「私を辞めさせれば“嵐は去る”とでも思ったのだろう」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: angry
+    text: この会社の意思決定のすべては[菊川|キクカワ]がやっていて、役員は彼の言いなりだ。
+  - speaker: kisha
+    emotion: thinking
+    text: 7月に記事が出たとき、社内はどうでしたか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 広報に、気にしておくべきではないかと伝えた。
+  - speaker: zundamon
+    emotion: normal
+    text: 週明けに報告があるかと思ったが……
+  - speaker: zundamon
+    emotion: angry
+    text: 恐ろしいことに、何の報告もなかった。
+  - speaker: kisha
+    emotion: normal
+    text: 今の、お気持ちは。
+  - speaker: zundamon
+    emotion: sad
+    text: 非常にショックだったし、いまでもショックから立ち直れない。
+    se: namida
+  - speaker: reimu
+    text: 元社長は、英国の重大不正捜査局にも資料を渡しました。
+    reading: もと しゃちょうわ、えいこくの じゅうだい ふせい そうさきょくにも しりょうお わたしました。
+# ---- 2011年11月8日・会社が認める ----
+- id: p5_mitomeru
+  title: 会社が認めた日
+  background: ol_kaiken
+  bgm: serious
+  stage:
+  - {who: takayama, x: 0.3, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月26日、会長は会長兼社長を退きます。後を継いだのは、高山修一です。
+    reading: じゅうがつ にじゅうろくにち、かいちょうわ かいちょう けん しゃちょうお しりぞきます。あとお ついだのわ、たかやま しゅういちです。
+  - speaker: reimu
+    text: 11月8日。会社は、1990年代ごろから損失の計上を先送りしてきたと発表します。
+    reading: じゅういちがつ ようか。かいしゃわ、せんきゅうひゃく きゅうじゅうねんだい ごろから そんしつの けいじょうお さきおくり して きたと はっぴょう します。
+    telops:
+    - {text: "解任の25日後　会社が損失隠しを認める", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 発表では、ジャイラスの報酬と3社の買収の[金|かね]が損の穴埋めだったと。
+  - speaker: kisha
+    emotion: thinking
+    text: ウッドフォード氏がいなければ、[表|おもて]に出なかったのでは。
+  - speaker: takayama
+    emotion: normal
+    text: 必ずしもそうではない。
+  - speaker: takayama
+    emotion: thinking
+    text: 監査の中でも見つけることができた可能性もある。
+  - speaker: takayama
+    emotion: normal
+    text: たまたま、それが早かった。
+  - speaker: kisha
+    emotion: surprised
+    text: では、10月の解任は。
+  - speaker: takayama
+    emotion: normal
+    text: 10月に解任した理由は、社長としての資質の問題。
+  - speaker: kisha
+    emotion: surprised
+    text: 同じことは、防げますか。
+  - speaker: takayama
+    emotion: thinking
+    text: 必ず、こういうことがない会社にしていきたい。
+  - speaker: reimu
+    background: ol_shoken
+    text: 株価は一時、ストップ安まで下がりました。
+    reading: かぶかわ いちじ、すとっぷやすまで さがりました。
+# ---- 2011年11月25日・同じ部屋へ ----
+- id: p6_modoru
+  title: 同じ部屋へ
+  background: ol_torishimari
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 元社長, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 11月24日、菊川・森・山田の3人が取締役と監査役を辞めます。
+    reading: じゅういちがつ にじゅうよっか、きくかわ もり やまだの さんにんが とりしまりやくと かんさやくお やめます。
+  - speaker: reimu
+    text: 取締役として残っていた元社長は、翌日の取締役会に出ます。
+    reading: とりしまりやくと して のこって いた もと しゃちょうわ、よくじつの とりしまりやくかいに でます。
+  - speaker: reimu
+    text: 6週間前、自分以外の全員が手を挙げた部屋です。
+    reading: ろくしゅうかん まえ、じぶん いがいの ぜんいんが てお あげた へやです。
+- id: p6_tokuha
+  title: ''
+  background: ol_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 元社長, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そのあと、元社長は外国特派員協会で会見します。
+    reading: その あと、もと しゃちょうわ がいこく とくはいん きょうかいで かいけん します。
+  - speaker: kisha
+    emotion: normal
+    text: 取締役会は、どうでしたか。
+  - speaker: zundamon
+    emotion: normal
+    text: 思っていたより、ずっと張り詰めていなかった。
+  - speaker: kisha
+    emotion: thinking
+    text: あの3人が、いなかったからですか。
+  - speaker: zundamon
+    emotion: angry
+    text: 彼らはこんなばかげたことに[金|かね]を流して、会社を壊した。
+  - speaker: reimu
+    text: 同じ日、経済誌の単独取材にはこう答えています。
+    reading: おなじ ひ、けいざいしの たんどく しゅざいにわ こう こたえて います。
+  - speaker: kisha
+    emotion: thinking
+    text: 今の経営陣については。
+  - speaker: zundamon
+    emotion: angry
+    text: 情けない経営陣が、従業員の努力を食いつぶす。
+  - speaker: zundamon
+    emotion: angry
+    text: 現在の経営陣は、一掃されるべきだ。
+  - speaker: kisha
+    emotion: normal
+    text: 社長に、戻るおつもりは。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は、権力を手にしたいと思ったことは一度もない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今回の件で少し疲れた、というのが本音だ。
+  - speaker: zundamon
+    emotion: normal
+    text: だが、いつでも社長職に復帰する準備はできている。
+    beat: true
+  - speaker: reimu
+    text: 12月1日、元社長は取締役も辞めました。
+    reading: じゅうにがつ ついたち、もと しゃちょうわ とりしまりやくも やめました。
+# ---- 2011年12月6日・報告書 ----
+- id: p6_houkoku
+  title: 報告書の言葉
+  background: ol_kaiken
+  bgm: serious
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月6日。会社が設けた第三者委員会が、報告書を出します。
+    reading: じゅうにがつ むいか。かいしゃが もうけた だいさんしゃ いいんかいが、ほうこくしょお だします。
+  - speaker: kisha
+    emotion: normal
+    text: 出たぞ。要約版だけで24ページだ。
+  - speaker: kisha2
+    emotion: normal
+    text: 結論は？
+  - speaker: kisha
+    emotion: thinking
+    text: 経営中心部分が腐っており、その周辺部分も汚染され……
+  - speaker: kisha
+    emotion: thinking
+    text: 悪い意味でのサラリーマン根性の集大成ともいうべき状態であった。
+  - speaker: kisha2
+    emotion: surprised
+    text: 腐っておりって、報告書の言葉か。
+  - speaker: kisha
+    emotion: normal
+    text: もう1か所ある。
+  - speaker: kisha
+    emotion: normal
+    text: 正しいことでも異論を唱えれば外に出される覚悟が必要であった。
+  - speaker: kisha
+    emotion: thinking
+    text: そのことは、ウッドフォードの処遇を見ても明らかである。
+    telops:
+    - {text: "報告書「ウッドフォードの処遇を見ても明らかである」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha2
+    emotion: surprised
+    text: 解任のことまで、書いてあるのか！
+    se: bikkuri
+  - speaker: kisha
+    emotion: normal
+    text: 取締役にはイエスマンが多く、取締役会は形骸化していたとも書いてある。
+  - speaker: kisha2
+    emotion: thinking
+    text: 役員たちは、何をしてたんだ。
+  - speaker: kisha
+    emotion: thinking
+    text: 事を荒立てず、自分の担当する業務のみを見て……
+  - speaker: kisha
+    emotion: thinking
+    text: '[大過|タイカ]なく職務を乗り切ろうとする意識があったと見られてもやむをえない。'
+  - speaker: reimu
+    text: 12月14日。会社は遅れていた決算の報告書を出し、期限切れによる上場廃止を免れます。
+    reading: じゅうにがつ じゅうよっか。かいしゃわ おくれて いた けっさんの ほうこくしょお だし、きげんぎれに よる じょうじょう はいしお まぬがれます。
+# ---- 今の部屋：報告書が明らかにした仕組み ----
+- id: p6_shikumi
+  title: 13年隠した仕組み
+  background: ol_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: つむぎ、報告書の飛ばしって[何|なん]なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 値下がりした金融商品を、会社の外の箱に引き取らせることよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも、買ったときの値段のままでね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 損したのに、元の値段で！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 家計で言えば、値下がりした株を親戚に買った値段で引き取ってもらう感じ。
+  - speaker: zundamon
+    emotion: happy
+    text: 親戚、優しすぎるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 引き取るお金は、会社の預金や国債を担保に銀行が箱に貸したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、担保は自分のお金なのだ……。
+  - speaker: zundamon
+    emotion: happy
+    text: でも自分の家計簿からは、損が消える！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも箱の借金は、いつか返す必要があるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 返すお金は、どこから？
+  - speaker: tsumugi
+    emotion: normal
+    text: そこで、あの3社とジャイラスよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 箱が安く手に入れた会社を、オリンパスが高く買う。差額が、箱に流れるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: だから、[1株|ひとかぶ]5万円が2050万円！
+  - speaker: tsumugi
+    emotion: normal
+    text: ジャイラスでは、助言の報酬という形でお金を流したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3割を超える報酬は、そういうことだったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 払いすぎた分は、のれんという資産にして少しずつ減らす計画だったの。
+  - speaker: zundamon
+    emotion: happy
+    text: のれん？ お店の入り口の？
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会社を買った値段のうち、相手の価値を超えた分のことよ。
+- id: p6_shikumi2
+  title: ''
+  background: ol_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 買ったとき、3社の売上の見通しは合わせて約885億円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2011年に会社が示した目標は、約65億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[14分の1|じゅうよんぶんのいち]！？'
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも買って1年後、3社ののれん557億円を減損したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1年で、ほとんど消したのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の説明は、リーマンショックなどで環境が悪くなったからだったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 報告書の数字だと、外に移した損は2003年の時点で1177億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 消すために流したお金は、維持の費用も入れて1348億円よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 損を外に移す準備ができたのは、1998年よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1998年から、13年もばれなかったの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 知っていたのは、ごく一部の幹部だけ。報告書は、裏の最優先経営課題と書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 監査法人も2009年に替わってて、報告書は異例の交代と書いてる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして外から来た社長には、最後まで知らされなかったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国内のことだから、の中身がこれ……。
+    se: hirameki
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう言った理由を、2人が語ったわけじゃないけどね。
+# ---- 2011年12月15日・日本記者クラブ ----
+- id: p7_kurabu
+  title: メディアばんざい
+  background: ol_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 元社長, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月15日。元社長は、日本記者クラブで会見を開きます。
+    reading: じゅうにがつ じゅうごにち。もと しゃちょうわ、にほん きしゃ くらぶで かいけんお ひらきます。
+  - speaker: kisha
+    emotion: normal
+    text: 社長に戻る意向は、ありますか。
+  - speaker: zundamon
+    emotion: happy
+    text: 当然だ。そうでなければ、ここにいないよ。
+  - speaker: kisha
+    emotion: thinking
+    text: 外国人を役員に招く会社が、減るのではという声もあります。
+  - speaker: zundamon
+    emotion: normal
+    text: そんなことになれば、日本は海外から人材を集めることができなくなり……
+  - speaker: zundamon
+    emotion: thinking
+    text: 信用も落とす。
+  - speaker: reimu
+    text: ゲストブックには、日本の自由なメディアばんざいと書きました。
+    reading: げすとぶっくにわ、にほんの じゆうな めでぃあ ばんざいと かきました。
+# ---- 2012年・社長には戻れない ----
+- id: card2012
+  title: ''
+  background: ol_card_2012
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2012年1月6日。元社長は、また日本記者クラブに立ちます。
+    reading: にせん じゅうにねん いちがつ むいか。もと しゃちょうわ、また にほん きしゃ くらぶに たちます。
+- id: p7_alice
+  title: 不思議の国のアリス
+  background: ol_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 元社長, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 株主の票を集めて、経営陣を入れ替える争い。それを、あきらめるという会見でした。
+    reading: かぶぬしの ひょうお あつめて、けいえいじんお いれかえる あらそい。それお、あきらめると いう かいけんでした。
+  - speaker: kisha
+    emotion: thinking
+    text: 断念の理由を、教えてください。
+  - speaker: reimu
+    text: 国内の大株主や機関投資家の支持が、得られなかったのです。家族の負担も、理由に挙げました。
+    reading: こくないの おおかぶぬしや きかん とうしかの しじが、えられなかったのです。かぞくの ふたんも、りゆうに あげました。
+  - speaker: zundamon
+    emotion: sad
+    text: まるで不思議の国のアリスだ。
+    beat: true
+  - speaker: zundamon
+    emotion: angry
+    text: 日本のメディアは、なぜ現経営陣の[居座り|イスワリ]を許すのか。
+  - speaker: kisha
+    emotion: surprised
+    text: 解任そのものについては。
+  - speaker: zundamon
+    emotion: angry
+    text: 解任には、法的根拠が全くない。
+  - speaker: reimu
+    text: こうして元社長は、オリンパスの社長には戻れませんでした。
+    reading: こうして もと しゃちょうわ、おりんぱすの しゃちょうにわ もどれませんでした。
+- id: p8_taiho
+  title: 逮捕と新しい社長
+  background: ol_soukai
+  bgm: serious
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: surprised}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2月16日。東京地検と警視庁が、元会長ら7人を有価証券報告書の虚偽記載の疑いで逮捕します。
+    reading: にがつ じゅうろくにち。とうきょう ちけんと けいしちょうが、もと かいちょうら しちにんお ゆうかしょうけん ほうこくしょの きょぎ きさいの うたがいで たいほ します。
+  - speaker: kisha2
+    emotion: surprised
+    text: 元会長と元副社長、それに元監査役もか。
+  - speaker: kisha
+    emotion: normal
+    text: 助言をしていた側の人たちもだ。
+  - speaker: reimu
+    text: 3月には、法人としてのオリンパスも起訴されました。
+    reading: さんがつにわ、ほうじんと しての おりんぱすも きそ されました。
+  - speaker: kisha2
+    emotion: normal
+    text: 4月の臨時株主総会で、新しい取締役が選ばれたな。
+  - speaker: kisha
+    emotion: normal
+    text: 新しい社長は、[笹宏行|ささひろゆき]さんだ。
+  - speaker: kisha2
+    emotion: thinking
+    text: 上場は、保たれたんだな。
+  - speaker: kisha
+    emotion: normal
+    text: 1月に、特設注意市場銘柄になった。違約金は1000万円だ。
+- id: p8_london
+  title: 何も変わっていない
+  background: ol_london
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 元社長, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 5月、会社と元社長は和解します。和解金は1000万ポンド、約12億4500万円でした。
+    reading: ごがつ、かいしゃと もと しゃちょうわ わかい します。わかいきんわ いっせんまん ぽんど、やく じゅうにおく よんせん ごひゃくまんえんでした。
+  - speaker: kisha
+    emotion: normal
+    text: 和解に応じた理由は。
+  - speaker: zundamon
+    emotion: normal
+    text: オリンパスにも私の家族にも、前進するための合意になった。
+  - speaker: reimu
+    text: 9月には、ソニーが約500億円を出してオリンパスと手を組みます。
+    reading: くがつにわ、そにーが やく ごひゃくおくえんお だして おりんぱすと てお くみます。
+  - speaker: reimu
+    text: その年の終わり。回顧録の出版に合わせて、元社長は取材に答えます。
+    reading: その としの おわり。かいころくの しゅっぱんに あわせて、もと しゃちょうわ しゅざいに こたえます。
+  - speaker: kisha
+    emotion: thinking
+    text: 日本の会社は、変わりましたか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 何も変わっていない。
+  - speaker: kisha
+    emotion: normal
+    text: 回顧録を書くのは、どうでしたか。
+  - speaker: zundamon
+    emotion: sad
+    text: 死ぬかと思った。
+    se: namida
+  - speaker: zundamon
+    emotion: thinking
+    text: 誰が[金|かね]を受け取ったのか、まだ分からないことが多い。
+  - speaker: zundamon
+    emotion: normal
+    text: 私の肌の色ではなく、真実を見て下さい。
+# ---- 2013年・刑事の判決 ----
+- id: card2013
+  title: ''
+  background: ol_card_2013
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2013年7月3日。東京地裁で、刑事裁判の判決が言い渡されます。
+    reading: にせん じゅうさんねん しちがつ みっか。とうきょう ちさいで、けいじ さいばんの はんけつが いいわたされます。
+- id: p9_hanketsu
+  title: 執行猶予の判決
+  background: ol_houtei
+  stage:
+  - {who: saibancho, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人[菊川剛|きくかわつよし]を、懲役3年に処する。
+  - speaker: saibancho
+    emotion: normal
+    text: 5年間、その刑の執行を猶予する。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人[山田秀雄|やまだひでお]は、同じく懲役3年に執行猶予5年。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人[森久志|もりひさし]は、[懲役2年6月|ちょうえきにねんろっかげつ]に執行猶予4年。
+  - speaker: saibancho
+    emotion: normal
+    text: 法人のオリンパスは、罰金7億円とする。
+  - speaker: reimu
+    text: 3人とも、執行猶予がつきました。会社は、控訴しないと決めます。
+    reading: さんにんとも、しっこう ゆうよが つきました。かいしゃわ、こうそ しないと きめます。
+- id: p9_sasa
+  title: ''
+  background: ol_kaiken
+  stage:
+  - {who: sasa, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: sasa
+    emotion: thinking
+    text: 今回の判決を厳粛に受け止めております。
+# ---- 2019年・解職は義務違反 ----
+- id: card2019
+  title: ''
+  background: ol_card_2019
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2019年5月16日。東京高裁で、もう1つの裁判の判決が出ます。
+    reading: にせん じゅうくねん ごがつ じゅうろくにち。とうきょう こうさいで、もう ひとつの さいばんの はんけつが でます。
+- id: p10_kosai
+  title: 解職は義務違反
+  background: ol_houtei
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 会社と株主が、旧経営陣に賠償を求めた裁判だ。
+  - speaker: kisha
+    emotion: surprised
+    text: 3人に、約594億円の賠償命令が出たぞ。
+  - speaker: kisha2
+    emotion: surprised
+    text: 594億円！？
+  - speaker: kisha
+    emotion: thinking
+    text: 判決は、社長の解職にも触れてる。
+  - speaker: kisha
+    emotion: normal
+    text: 疑惑を追及していた社長の解職は取締役の義務に反する、と。
+  - speaker: kisha2
+    emotion: thinking
+    text: 解任の日に、[独断専横|どくだんせんおう]と言われた社長の解職がか。
+  - speaker: kisha
+    emotion: normal
+    text: 8年かかったな。
+  - speaker: kisha2
+    emotion: thinking
+    text: 前の判決と、額は違うのか。
+  - speaker: kisha
+    emotion: normal
+    text: 前は6人で約590億円。90年代の社長2人の分が、今回は取り消された。
+  - speaker: reimu
+    text: 2020年10月。最高裁が上告を退け、約594億円の賠償が確定しました。
+    reading: にせん にじゅうねん じゅうがつ。さいこうさいが じょうこくお しりぞけ、やく ごひゃく きゅうじゅうよんおくえんの ばいしょうが かくてい しました。
+    telops:
+    - {text: "594億円の賠償が確定", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 論争 ----
+- id: ronso1
+  title: 外国人だから追い出された？
+  background: ol_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。外国人だから追い出されたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 解任の日に会長は、欧米人と[日本人|ニホンジン]との違いを見抜けなかったと言ったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも会社は、外国人だからという見方は否定したの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が挙げたのは、事業部門の長を飛び越えて現場に指示したこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、日本にいる時間が少なかったことよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言い分が、ぜんぜん違うのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 損失隠しを認めた日も、高山社長は解任を社長としての資質の問題と言ったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 認めたあとも、解任は正しいままなのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告書はそのあと、異論を唱えれば外に出される例として解任を挙げたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年の高裁も、解職を取締役の義務違反と指摘した。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、隠すために追い出したってこと！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 外国人だからとも隠すためだけとも、言い切れないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の説明から報告書へ、そして判決へと言葉が変わっていったのよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 順番に並べると、見え方が変わるのだ。
+- id: ronso2
+  title: 執行猶予は甘い？
+  background: ol_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 3人とも執行猶予なんて、甘いのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 刑は執行猶予。でもお金は、3人で約594億円の賠償よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 594億円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社への賠償だから、株主1人1人に配られるお金じゃないけどね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 経営陣への賠償で確定した額としては、国内で最も高いとみられてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法人には罰金7億円。上場は保たれたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一方で、90年代に社長だった2人は刑事責任を問われてない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 民事でも二審で、責任なしとされたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 一番上にいた人たちが、責任なし！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 報告書は、2人が損失の処理策を了承したり報告を受けたりしていたと認定してるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、裁判所の結論は違ったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 甘いのか重いのか、わからなくなってきたのだ。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: 数字を並べると、両方の面があるのよ。
+- id: chui
+  title: 本当の注意点
+  background: ol_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別のところにあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 株を持つ人へ。本業と関係のない会社を高く買う、のれんが急に大きくなる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 助言の報酬が、相場から外れて高い。どれも兆しだったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 外から、見えてたの？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[FACTA|ファクタ]の記者は、公表資料に買収の記載が無いことに目をつけたの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 3社も、買って1年で557億円を減損してるでしょ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決算書の、のれんと減損の欄を見ればいいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 働く人へ。この会社では2007年にも、上司のことを通報した社員が配置転換されてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 損失隠しとは別の件で、裁判で違法とされたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年6月からは、窓口の担当者が秘密を漏らすと罰則の対象よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 通報する前に、会社の規程と行政の窓口を確かめてね。
+  - speaker: zundamon
+    emotion: normal
+    text: 守る仕組みを、先に調べるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 報告書は、事を荒立てず[大過|タイカ]なく職務を乗り切ろうとする意識も原因に挙げてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見て見ぬふり、ということか。
+# ---- 今 ----
+- id: gendai
+  title: 今のオリンパス
+  background: ol_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 胃カメラを世界で初めて実用化した会社で、今は医療機器の専業よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カメラの事業は、2020年に手放すと決めたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: カメラのオリンパスが、カメラをやめたの……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長兼[CEO|シーイーオー]は、2025年6月からボブ・ホワイトさん。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月期の売上は、1兆107億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1兆円を超えてるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも営業利益は971億円で、前の年の1625億円から減ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界で約2000人分の仕事を減らす計画も、進めてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方で6月には、イスラエルの会社を約433億円で買って子会社にしたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 減らしながら、買ってもいるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それから10月、アメリカの食品医薬品局から警告書を受け取ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 対象の6つの拠点には、ジャイラスのアメリカの拠点も入ってる。
+  - speaker: zundamon
+    emotion: surprised
+    text: ジャイラスって、あの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 同じ会社の拠点でも、今回は品質の指摘。2011年の会計の不正とは別の話よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 19日には、国内3か所で作った一部の製品に輸入警告も出たわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、すでに手元にある製品は説明書どおりに使えば安全で有効だとしてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 10月の発表では、業績の予想は変えないとしてたわ。
+- id: gendai2
+  title: ''
+  background: ol_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 取締役は10人で、そのうち9人が社外の人。
+  - speaker: zundamon
+    emotion: surprised
+    text: あの取締役会とは、顔ぶれがずいぶん違うのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年には、外国人の[CEO|シーイーオー]が辞めてる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 通報を受けた社内調査のあと、取締役会が辞任を求めたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 今度は、取締役会のほうが動いたのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日経ビジネス電子版の編集長は、改革が機能した結果かもしれないと書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ウッドフォードさんは66歳。企業統治や内部告発、交通安全の講演を続けてる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 交通安全？
+  - speaker: tsumugi
+    emotion: normal
+    text: 交通安全への貢献で、2002年に英国の勲章を受けてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人が出たドキュメンタリー映画も、2018年に日本で公開されたわ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: ol_heya
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 買収を問いただした社長は、[CEO|シーイーオー]になって2週間で解任された。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1か月足らずで、会社は損失隠しを認めた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 8年後には裁判所が、その解職を取締役の義務違反と指摘した。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それでも、社長には戻れなかったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[成田行き|ナリタユキ]のバスに乗ったまま、なのだ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: なぜと聞くのは、社長でも難しかったのね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも理事長として、帳簿を見せてって言ってきたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: えらい。前の理事長は、なんて？
+  - speaker: zundamon
+    emotion: sad
+    text: 見なくていいって。……あと、バスの時刻表をくれたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、帰り道まで決められてるわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 知らなくていいと言われた所こそ、聞いていい所よ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
