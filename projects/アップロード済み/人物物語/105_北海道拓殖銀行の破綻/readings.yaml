@@ -1,0 +1,38 @@
+# takugin-kawatani 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 河谷禎昌 / label: 山内宏・藤田恒郎・石川要三 ほか）とテロップ・章タイトルは表示専用なのでタグを付けていない。
+# 山内宏・藤田恒郎の名の読みは事実台帳で確かめられていないので、本文では読ませていない
+# （山内はナレでも「前の頭取」と言い、藤田は姓だけを読ませる）。
+# 1行（いっこう）・13行・1日（いちにち）・殿・目処・一言・お札・お上・大通・止めれば・断って・並べて・何とか は
+# 文脈で読みが変わるので台帳に入れず、本文の該当箇所だけタグを付けた。
+# 2026-11-01 見直し: 河谷・都銀・道銀・船底・追い貸し のタグの読みはカタカナで書いた（[河谷|カワタニ] など）。
+# 日債銀 はタグなしのほうが1語で読むので、台帳とタグから外した。
+# 人名
+- {surface: 河谷禎昌, reading: かわたにさだまさ}   # ナレと名札だけに出る
+- {surface: 河谷, reading: かわたに}
+- {surface: 禎昌, reading: さだまさ}               # 「ただまさ」ではない
+- {surface: 藤田, reading: ふじた}
+- {surface: 石川要三, reading: いしかわようぞう}   # 名札だけに出る
+- {surface: 節子, reading: せつこ}                 # ナレだけに出る
+# 銀行・会社・機関
+- {surface: 北海道拓殖銀行, reading: ほっかいどうたくしょくぎんこう}   # ナレだけに出る
+- {surface: 拓殖, reading: たくしょく}
+- {surface: 拓銀, reading: たくぎん}
+- {surface: 北洋, reading: ほくよう}
+- {surface: 道銀, reading: どうぎん}
+- {surface: 都銀, reading: とぎん}
+- {surface: 地銀, reading: ちぎん}
+- {surface: 長銀, reading: ちょうぎん}
+- {surface: 山一證券, reading: やまいちしょうけん}
+# 地名
+- {surface: 釧路, reading: くしろ}                 # ナレと章タイトルだけに出る
+- {surface: 洞爺, reading: とうや}
+# 銀行の言葉・この回の言い回し
+- {surface: 船底, reading: ふなぞこ}
+- {surface: 追い貸し, reading: おいがし}
+- {surface: 罪人, reading: ざいにん}
+- {surface: 万死, reading: ばんし}
+- {surface: 行内, reading: こうない}
+- {surface: 業容, reading: ぎょうよう}
+- {surface: 倒産銀座, reading: とうさんぎんざ}     # ナレだけに出る

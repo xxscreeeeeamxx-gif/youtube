@@ -1,0 +1,1495 @@
+meta:
+  title: 拓銀の最後の頭取「船底を見たら大穴あいてる」、大手銀行のトップでただ一人刑務所へ【ずんだもん解説】
+  slug: takugin-kawatani
+  hook_line: つぶれないはずの都市銀行は、なぜ破綻し、なぜ頭取だけが服役したのか。
+  summary: 1997年11月、日本中がサッカーに沸いた夜が明けて、北海道拓殖銀行の頭取が会見で頭を下げました。都市銀行の破綻は、後にも先にも、この一度だけです。後始末を託された13代目の頭取、河谷禎昌。赤字のホテルなどへの融資を、彼はどう判断したのか。合併はなぜ実らなかったのか。一審の無罪と二審の逆転有罪、最高裁の判断と本人の主張を並べながら、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 衆議院 予算委員会 第141回国会 第10号 会議録（1997年12月9日、参考人 河谷禎昌） https://kokkai.ndl.go.jp/txt/114105261X01019971209/193
+  - 参議院 行財政改革・税制等に関する特別委員会 第8号 会議録（1997年11月17日、三塚大蔵大臣の報告） https://kokkai.ndl.go.jp/txt/114114269X00819971117/2
+  - 最高裁判所第三小法廷 平成21年11月9日決定（平成18年(あ)第2057号） https://www.courts.go.jp/assets/hanrei/hanrei-pdf-38159.pdf
+  - 預金保険機構「預金等全額保護制度下における破綻処理（資金援助）の終了等について」（2003年3月6日） https://www.dic.go.jp/katsudo/page_000901.html
+  - ダイヤモンド・オンライン「北海道拓殖銀行『最後の頭取』84歳」（河谷禎昌の著書の抜粋、2019年10月） https://diamond.jp/articles/-/217007
+  - 北海道新聞「河谷禎昌さん死去　90歳　北海道拓殖銀行、最後の頭取」（2025年12月15日） https://www.hokkaido-np.co.jp/article/1252127/
+  tags:
+  - 拓銀
+  - 北海道拓殖銀行
+  - 河谷禎昌
+  - 北洋銀行
+  - 北海道銀行
+  - 経営破綻
+  - 特別背任
+  - 不良債権
+  - 金融危機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 船底を見たら大穴
+    bottom: 拓銀の最後の頭取
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: yamauchi
+    label: 山内宏
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2a32'
+  - id: gyoin
+    label: 行員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: fujita
+    label: 藤田恒郎
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a3a4a'
+  - id: okurasho
+    label: 大蔵省
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#2f3440'
+  - id: ishikawa
+    label: 石川要三
+    voice: 42
+    pitch: 0.08
+    outfit: suit
+    color: '#4a4a52'
+  - id: kisha
+    label: 記者
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#6a5a48'
+  - id: yokinsha
+    label: 預金者
+    voice: 8
+    pitch: -0.06
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: bengoshi
+    label: 弁護士
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4f5f'
+  - id: bengodan
+    label: 弁護団
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#4a3a2f'
+scenes:
+# ---- 先出し（1997年11月16日の夜 → 17日の朝） ----
+- id: co_yoru
+  title: ''
+  background: tk_tv_yoru
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 河谷禎昌, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1997年11月16日の夜。日本中がW杯の初出場に沸くなか、ある銀行の頭取はテレビを見ていました。
+    reading: せんきゅうひゃく きゅうじゅうななねん じゅういちがつ じゅうろくにちの よる。にほんじゅうが わーるどかっぷの はつしゅつじょうに わく なか、ある ぎんこうの とうどりわ てれびお みて いました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……家に帰れば、記者が来てうるさいからな。
+  - speaker: zundamon
+    emotion: sad
+    text: ただ、ぼーっと見てるだけなのだ。
+- id: co_kaiken
+  title: ''
+  background: tk_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 翌朝8時20分。札幌の本店です。
+    reading: よくあさ はちじ にじゅっぷん。さっぽろの ほんてんです。
+  - speaker: kisha
+    emotion: surprised
+    text: 頭取！ [拓銀|たくぎん]は、どうなるんですか！
+  - speaker: zundamon
+    emotion: sad
+    text: 大変皆様におかれましては、ご迷惑おかけして大変申し訳ありません。
+  - speaker: reimu
+    text: 北海道拓殖銀行の破綻です。都市銀行の破綻は後にも先にも、この一度だけです。
+    reading: ほっかいどう たくしょく ぎんこうの はたんです。としぎんこうの はたんわ あとにも さきにも、この いちどだけです。
+  - speaker: reimu
+    text: この頭取は、河谷禎昌。12年後、大手銀行のトップでただ一人刑務所に入ります。
+    reading: この とうどりわ、かわたに さだまさ。じゅうにねんご、おおて ぎんこうの とっぷで ただ ひとり けいむしょに はいります。
+# ---- 今の部屋（全財産を一つの銀行に） ----
+- id: hook
+  title: ''
+  background: tk_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ ボクの全財産、ぜんぶ一つの銀行に預けたのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: なんで一つに？
+  - speaker: zundamon
+    emotion: happy
+    text: 大きい銀行は、絶対つぶれないもん！
+  - speaker: tsumugi
+    emotion: thinking
+    text: その大きい都市銀行が、1997年につぶれたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: つぶれないはずの都市銀行が、なんで！？
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも後始末に来た頭取だけが、刑務所に入ったの。
+    telops:
+    - {text: "なぜ頭取だけが刑務所に？", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: ……なんで、その人だけ？
+# ---- 1993年8月・経営会議 ----
+- id: card1993
+  title: ''
+  background: tk_card_1993
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1993年8月。拓銀の経営会議です。副頭取は河谷禎昌、58歳でした。
+    reading: せんきゅうひゃく きゅうじゅうさんねん はちがつ。たくぎんの けいえい かいぎです。ふくとうどりわ かわたに さだまさ ごじゅうはっさいでした。
+- id: ch1_kaigi
+  title: もう少し時間がほしい
+  background: tk_kaigi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: yamauchi, x: 0.52, emotion: normal}
+  - {who: gyoin, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: gyoin
+    emotion: thinking
+    text: 審査部です。ソフィアグループは先月ご報告したとおり、実質倒産の状態です。
+  - speaker: yamauchi
+    emotion: surprised
+    text: ホテルは、4月に開けたばかりだろう。
+  - speaker: gyoin
+    emotion: normal
+    text: 11階建てで304室。建てるお[金|かね]の大半は、うち[1行|いっこう]で貸しました。
+  - speaker: gyoin
+    emotion: thinking
+    text: ところが毎月の売上では、その月の経費も払えません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 足りない分は？
+  - speaker: gyoin
+    emotion: normal
+    text: うちの追加融資です。[止めれば|とめれば]、その日に倒れます。
+  - speaker: zundamon
+    emotion: surprised
+    text: うちの[金|かね]で、毎月の赤字を埋めてるわけか。
+    beat: true
+  - speaker: yamauchi
+    emotion: thinking
+    text: 副頭取。どう見る。
+  - speaker: zundamon
+    emotion: thinking
+    text: 我々もようやく、ソフィアの実態が分かりかけてきたところだ。
+  - speaker: zundamon
+    emotion: normal
+    text: もう少し時間がほしい。
+    telops:
+    - {text: "河谷「もう少し時間がほしい」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 議事録に残る、副頭取の言葉です。このあと5か月、経営会議は開かれませんでした。
+    reading: ぎじろくに のこる、ふくとうどりの ことばです。この あと ごかげつ けいえい かいぎわ ひらかれませんでした。
+  - speaker: reimu
+    text: そのあいだも抜本策のないまま、ホテルへの融資は続きます。
+    reading: その あいだも ばっぽんさくの ない まま、ほてるえの ゆうしわ つづきます。
+  - speaker: reimu
+    text: 河谷は1957年の入行。新人のころに倒産銀座で、貸した金の回収をたたき込まれました。
+    reading: かわたにわ せんきゅうひゃく ごじゅうななねんの にゅうこう。しんじんの ころに とうさんぎんざで、かした かねの かいしゅうお たたきこまれました。
+  - speaker: reimu
+    text: 回収を知る男が、のちに実質倒産の会社への融資で罪に問われます。
+    reading: かいしゅうお しる おとこが、のちに じっしつ とうさんの かいしゃえの ゆうしで つみに とわれます。
+# ---- 1994年・頭取に ----
+- id: card1994
+  title: ''
+  background: tk_card_1994
+  cuts:
+  - speaker: reimu
+    text: 1994年。頭取が、配当を減らした責任をとって退きます。
+    reading: せんきゅうひゃく きゅうじゅうよねん。とうどりが、はいとうお へらした せきにんお とって しりぞきます。
+- id: ch1_shimei
+  title: 頭取なんてやるんでない
+  background: tk_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: normal}
+  - {who: yamauchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: yamauchi
+    emotion: normal
+    text: '[河谷|カワタニ]くん。次の頭取を、頼みたい。'
+  - speaker: zundamon
+    emotion: surprised
+    text: ……この時期に、ですか。
+  - speaker: yamauchi
+    emotion: thinking
+    text: 頼む。
+- id: ch1_tsuma
+  title: ''
+  background: tk_yakuin
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 河谷禎昌, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ……女房には、怒られたよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 頭取なんてやるんでない、こんな時期にね……って。
+  - speaker: zundamon
+    emotion: thinking
+    text: 上にへつらってまで、出世する必要はない。それが口ぐせの人だからな。
+  - speaker: reimu
+    text: 6月。59歳の河谷は、拓銀の13代目の頭取に就きます。
+    reading: ろくがつ。ごじゅうきゅうさいの かわたにわ、たくぎんの じゅうさんだいめの とうどりに つきます。
+# ---- 1994年7月〜・ホテルへの融資 ----
+- id: ch1_oigashi
+  title: 2週間に1回の8800万円
+  background: tk_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: gyoin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: gyoin
+    emotion: normal
+    text: 頭取。ソフィアのホテルから、今月分の申し込みです。
+  - speaker: zundamon
+    emotion: thinking
+    text: また、赤字の穴埋めか。
+  - speaker: gyoin
+    emotion: thinking
+    text: 売上だけでは、その月の経費が払えませんので。
+  - speaker: gyoin
+    emotion: thinking
+    text: 担保は、もうほとんど……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 止めたら？
+  - speaker: gyoin
+    emotion: normal
+    text: その日に倒れます。これまで貸した分も、戻りません。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……出そう。
+    beat: true
+  - speaker: reimu
+    text: 河谷の在任中、ホテルを含むソフィアグループ3社への融資は88回。合わせて77億3150万円です。
+    reading: かわたにの ざいにんちゅう、ほてるお ふくむ そふぃあぐるーぷ さんしゃえの ゆうしわ はちじゅうはっかい。あわせて ななじゅうななおく さんぜん ひゃくごじゅうまんえんです。
+  - speaker: reimu
+    text: 平均すると、約2週間に1回。1回あたり8800万円です。家が1軒建つお金です。
+    reading: へいきん すると、やく にしゅうかんに いっかい。いっかい あたり はっせん はっぴゃくまんえんです。いえが いっけん たつ おかねです。
+    telops:
+    - {text: "約2週間に1回・8800万円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 河谷はのちに、この融資を本にこう書いています。
+    reading: かわたにわ のちに、この ゆうしお ほんに こう かいて います。
+  - speaker: zundamon
+    emotion: thinking
+    text: すでに10万人という兵隊を戦場に送ってしまっている。黙っていると、全滅する。
+  - speaker: zundamon
+    emotion: thinking
+    text: だから[何とか|なんとか]10万の兵の一部でも助けるため、1万人の援軍を送った。
+  - speaker: zundamon
+    emotion: angry
+    text: もしこれで戦死者が出たから罪だというのであれば、[日本中|にほんじゅう]の銀行員が[罪人|ざいにん]になる。
+    telops:
+    - {text: "河谷「日本中の銀行員が罪人になる」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: この援軍が、のちに特別背任に問われます。最高裁が求めたのは、客観的な再建計画と行内の正式な承認でした。
+    reading: この えんぐんが、のちに とくべつ はいにんに とわれます。さいこうさいが もとめたのわ、きゃっかんてきな さいけん けいかくと こうないの せいしきな しょうにんでした。
+# ---- 1994年8月・大蔵省の検査 ----
+- id: ch1_funazoko
+  title: 船底の大穴
+  background: tk_yakuin
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: gyoin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: gyoin
+    emotion: thinking
+    text: 頭取、8月の大蔵省の検査です。関連会社まで入れると、不良債権は1兆円近くあります。
+  - speaker: zundamon
+    emotion: surprised
+    text: い、1兆円……！？
+  - speaker: zundamon
+    emotion: thinking
+    text: '[船底|フナゾコ]を見たら、大穴あいてるな……。'
+    se: gaan
+  - speaker: zundamon
+    emotion: sad
+    text: ……しまった。
+  - speaker: gyoin
+    emotion: thinking
+    text: 株も土地も、まだ下がり続けています。
+  - speaker: zundamon
+    emotion: thinking
+    text: 何もしなくても、不良債権額がどんどん増えていく。
+  - speaker: zundamon
+    emotion: sad
+    text: まさに悪夢だ。
+  - speaker: gyoin
+    emotion: normal
+    text: 大口はカブトデコムに子会社の抵当証券、それにソフィアです。
+  - speaker: zundamon
+    emotion: thinking
+    text: カブトか……。業務本部長のころ、常務に言ったんだがな。
+  - speaker: zundamon
+    emotion: angry
+    text: これは土地を転がしているだけで危ないぞ、と。
+  - speaker: gyoin
+    emotion: surprised
+    text: それで、どうなったんです？
+  - speaker: zundamon
+    emotion: sad
+    text: 明確な回答は、なかったよ。
+  - speaker: gyoin
+    emotion: thinking
+    text: 新しい会社を育てる部が、営業と審査を一つでやってましたからね。
+  - speaker: zundamon
+    emotion: thinking
+    text: アクセルとブレーキを、同じ足で踏んでたわけだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……だが、あの路線を大事な柱と見ていたのは私も同じだ。
+  - speaker: gyoin
+    emotion: normal
+    text: でも、[都銀|トギン]はつぶれませんよね。大蔵省がついてますし……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……そう、信じたいな。
+# ---- 1995〜1996年・合理化 ----
+- id: ch2_kubikiri
+  title: 首切り河谷
+  background: tk_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: gyoin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ……決算は、どうだった。
+  - speaker: gyoin
+    emotion: sad
+    text: 頭取、1995年3月期の決算です。設立以来、初めての赤字です。
+    background: tk_kaigi_akaji
+  - speaker: zundamon
+    emotion: thinking
+    text: ……削れるものは、全部削る。
+  - speaker: gyoin
+    emotion: surprised
+    text: 全部、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 野球部などの運動部は廃止。会長と相談役と顧問も、なくす。
+  - speaker: gyoin
+    emotion: thinking
+    text: 人は、どこまで減らします？
+  - speaker: zundamon
+    emotion: normal
+    text: 6500人を、5000人まで。海外の店からは全面的に撤退する。
+  - speaker: zundamon
+    emotion: normal
+    text: ボーナスも、カットだ。
+  - speaker: gyoin
+    emotion: thinking
+    text: '[行内|こうない]では、頭取のことを首切り[河谷|カワタニ]と……。'
+  - speaker: zundamon
+    emotion: angry
+    text: 言わせておけ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 焼け石に水かもしれないが、少しでもやらなければ。
+  - speaker: gyoin
+    emotion: thinking
+    text: '[業容|ぎょうよう]では、[地銀|ちぎん]の横浜銀行にも抜かれました。[都銀|トギン][13行|じゅうさんこう]で、うちはいつも最下位です。'
+  - speaker: zundamon
+    emotion: angry
+    text: 最下位でも、[都銀|トギン]は[都銀|トギン]だ。
+  - speaker: gyoin
+    emotion: thinking
+    text: ……[地銀|ちぎん]に抜かれた[都銀|トギン]、ですけどね。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: sad
+    text: ……一服させてくれ。
+  - speaker: gyoin
+    emotion: normal
+    text: たばこ代も、削りますか。
+  - speaker: zundamon
+    emotion: angry
+    text: それは、最後だ。
+    beat: true
+  - speaker: reimu
+    text: 河谷はのちに、都銀としてのプライドはなかなか捨てきれなかった、と書いています。
+    reading: かわたにわ のちに、とぎんと しての ぷらいどわ なかなか すてきれなかったと かいて います。
+  - speaker: reimu
+    text: 1996年3月期は714億円の赤字。本業のもうけは、すべて不良債権の処理に回しました。
+    reading: せんきゅうひゃく きゅうじゅうろくねん さんがつきわ ななひゃく じゅうよんおくえんの あかじ。ほんぎょうの もうけわ、すべて ふりょう さいけんの しょりに まわしました。
+  - speaker: reimu
+    text: 拓銀が倒れるまで、あと1年半です。
+    reading: たくぎんが たおれるまで、あと いちねんはんです。
+# ---- 1997年1〜3月・株価と預金 ----
+- id: card1997
+  title: ''
+  background: tk_card_1997
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1997年1月。拓銀の株価が下がり、預金の解約が増え始めます。
+    reading: せんきゅうひゃく きゅうじゅうななねん いちがつ。たくぎんの かぶかが さがり、よきんの かいやくが ふえ はじめます。
+- id: ch3_kabuka
+  title: 3月だけで3000億円
+  background: tk_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: gyoin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ……今日の株価は。
+  - speaker: gyoin
+    emotion: surprised
+    text: 頭取、株価が200円を割りました！
+    background: tk_shoken
+  - speaker: gyoin
+    emotion: thinking
+    text: テレビで、ある銀行が実質的に破綻していると言われまして。
+  - speaker: gyoin
+    emotion: thinking
+    text: 名前は伏せてましたが、うちのことだと受け取られています。
+  - speaker: gyoin
+    emotion: sad
+    text: 放送の次の月曜だけで、10億円以上が解約されました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10億……！
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: これはかなり危険な状態だな……。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[1行|いっこう]では、もうもたん。'
+  - speaker: zundamon
+    emotion: normal
+    text: '[道銀|ドーギン]さんに、合併を持ちかける。'
+  - speaker: reimu
+    text: 3月だけで、3000億円の預金が出ていきました。
+    reading: さんがつだけで、さんぜんおくえんの よきんが でて いきました。
+# ---- 1997年4月・合併の発表 ----
+- id: ch3_renai
+  title: 恋愛結婚
+  background: tk_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 河谷禎昌, emotion: happy}
+  - {who: fujita, x: 0.52, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 3月、河谷は北海道銀行、略して道銀に合併を申し入れます。発表は4月1日でした。
+    reading: さんがつ、かわたにわ ほっかいどう ぎんこう りゃくして どうぎんに がっぺいお もうしいれます。はっぴょうわ しがつ ついたちでした。
+  - speaker: kisha
+    emotion: surprised
+    text: '[拓銀|たくぎん]と[道銀|ドーギン]が合併！ 来年の4月ですか！'
+    se: jaan
+  - speaker: zundamon
+    emotion: happy
+    text: はい。来年4月の合併を目指します。
+  - speaker: reimu
+    text: この会見では、恋愛結婚という言葉まで飛び出しました。
+    reading: この かいけんでわ、れんあい けっこんと いう ことばまで とびだしました。
+- id: ch3_kaiko
+  title: ''
+  background: tk_sapporo
+  stage:
+  - {who: fujita, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: ただ道銀の藤田頭取は、のちにこう振り返っています。
+    reading: ただ どうぎんの ふじた とうどりわ、のちに こう ふりかえって います。
+  - speaker: fujita
+    emotion: thinking
+    text: 3月5日に[拓銀|たくぎん]が駆け込んできたんです。
+  - speaker: fujita
+    emotion: thinking
+    text: あの時、当行の副頭取は私に断りたいと言って来ました。
+# ---- 1997年6〜9月・数字が合わない ----
+- id: ch3_4500
+  title: 4500億円と1兆円
+  background: tk_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: normal}
+  - {who: fujita, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: fujita
+    emotion: thinking
+    text: '[河谷|カワタニ]さん。[拓銀|たくぎん]さんの処理が要る額は、いくらです。'
+  - speaker: zundamon
+    emotion: normal
+    text: 狭く見て四千数百億。広く見ても、六千億ぐらいです。
+  - speaker: fujita
+    emotion: thinking
+    text: ……うちの見立てとは、ずいぶん違いますな。
+    beat: true
+  - speaker: reimu
+    text: 藤田はのちに、道銀の独自の査定では1兆円を下らなかった、と振り返っています。
+    reading: ふじたわ のちに、どうぎんの どくじの さていでわ いっちょうえんお くだらなかったと ふりかえって います。
+    telops:
+    - {text: "4500億円 vs 1兆円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: fujita
+    emotion: thinking
+    text: 7月には、東海興業が倒れましたな。[拓銀|たくぎん]さんは、主力の銀行の一つでしょう。
+  - speaker: zundamon
+    emotion: sad
+    text: ……穴が、また一つ増えました。
+  - speaker: fujita
+    emotion: normal
+    text: それと、本州の店です。合併するなら、本州からは引いていただきたい。
+  - speaker: zundamon
+    emotion: angry
+    text: 本州は、うちの営業のもうけの4割ですよ。
+  - speaker: fujita
+    emotion: thinking
+    text: 北海道の銀行になる、ということです。
+  - speaker: zundamon
+    emotion: angry
+    text: ……[都銀|トギン]の看板を、下ろせとおっしゃる。
+  - speaker: reimu
+    text: 7月、両行は監査法人による共同の監査で合意します。しかし、実現しませんでした。
+    reading: しちがつ、りょうこうわ かんさ ほうじんに よる きょうどうの かんさで ごうい します。しかし、じつげん しませんでした。
+- id: ch3_enki
+  title: 破談ではない
+  background: tk_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 9月12日。合併は、半年の延期と発表されます。
+    reading: くがつ じゅうににち。がっぺいわ、はんとしの えんきと はっぴょう されます。
+  - speaker: kisha
+    emotion: surprised
+    text: 延期って、事実上の破談じゃないんですか！
+  - speaker: zundamon
+    emotion: angry
+    text: 延期です。破談ではありません。
+  - speaker: reimu
+    text: ただ道銀の側は、白紙に戻ったと受け止めていました。拓銀が倒れるまで、あと2か月です。
+    reading: ただ どうぎんの がわわ、はくしに もどったと うけとめて いました。たくぎんが たおれるまで、あと にかげつです。
+# ---- 1997年11月3日〜・資金繰り ----
+- id: ch4_sanyo
+  title: 毎朝の資金繰り
+  background: tk_yakuin
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: gyoin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: gyoin
+    emotion: surprised
+    text: 頭取！ 三洋証券が、会社更生法を申請しました！
+  - speaker: zundamon
+    emotion: surprised
+    text: 11月3日、祝日にか！？
+    se: bikkuri
+  - speaker: gyoin
+    emotion: thinking
+    text: コール市場で、借りたお[金|かね]を返せない所が出ました。戦後初めてです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 銀行どうしが、[1日|いちにち]単位でお[金|かね]を貸し借りする市場か……。
+  - speaker: gyoin
+    emotion: normal
+    text: うちは毎朝、そこで数百億円を借りてます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 逃げた預金の穴を、毎日の借金で埋めてきたからな。
+  - speaker: gyoin
+    emotion: thinking
+    text: 隣の家に、今日の生活費を毎朝借りに行くようなものです。
+  - speaker: gyoin
+    emotion: sad
+    text: その隣の家が、急に戸を閉め始めました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……戸を閉められたら、店が開けられん。
+  - speaker: gyoin
+    emotion: thinking
+    text: 日銀からは、[1日|いちにち]に5回も6回も電話が来ます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 向こうも、気が気じゃないんだな。
+  - speaker: gyoin
+    emotion: sad
+    text: 株価は、一時59円まで下がりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 59円……。
+  - speaker: reimu
+    text: 拓銀は北海道庁に助けを求め、信用金庫の連合会から500億円を預けてもらいます。
+    reading: たくぎんわ ほっかいどうちょうに たすけお もとめ、しんよう きんこの れんごうかいから ごひゃくおくえんお あずけて もらいます。
+# ---- 1997年11月14日（金） ----
+- id: ch4_kinyo
+  title: 金曜日の呼び出し
+  background: tk_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: gyoin, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: gyoin
+    emotion: sad
+    text: 頭取、14日の金曜です。今朝のお[金|かね]が、集まりません。
+  - speaker: gyoin
+    emotion: sad
+    text: 日銀に預けておくべきお[金|かね]も、足りません。
+  - speaker: zundamon
+    emotion: surprised
+    text: いくら集まった。
+  - speaker: gyoin
+    emotion: sad
+    text: 要る額の、1割半ほどです。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: ……東京へ行く。
+- id: ch4_okurasho
+  title: ''
+  background: tk_okurasho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: okurasho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その日のうちに東京へ。河谷は、大蔵省に呼び出されます。
+    reading: その ひの うちに とうきょうえ。かわたにわ、おおくらしょうに よびだされます。
+  - speaker: okurasho
+    emotion: normal
+    text: 非常に状況が悪い。
+  - speaker: okurasho
+    emotion: normal
+    text: 預金保険機構から資金を入れます。
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: ……それは、[拓銀|たくぎん]を畳むということですか。
+  - speaker: okurasho
+    emotion: normal
+    text: 道内の受け皿は、どうされます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[北洋|ほくよう]さんに、お願いします。
+  - speaker: reimu
+    text: 1997年の国会では、道銀か北洋かの助言を受け、北洋の全面協力の心証を得たと答えています。
+    reading: せんきゅうひゃく きゅうじゅうななねんの こっかいでわ どうぎんか ほくようかの じょげんお うけ、ほくようの ぜんめん きょうりょくの しんしょうお えたと こたえて います。
+  - speaker: reimu
+    text: 20年後には、大蔵省は道銀への譲渡を求めたが、行員がつらい思いをすると断った、と語りました。
+    reading: にじゅうねんごにわ おおくらしょうわ どうぎんえの じょうとお もとめたが、こういんが つらい おもいお すると ことわったと かたりました。
+# ---- 1997年11月15日（土） ----
+- id: ch4_doyo
+  title: 土曜日の取締役会
+  background: tk_kaigi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 河谷禎昌, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 15日、土曜の午後3時半。東京のホテルで、臨時の取締役会が開かれます。
+    reading: じゅうごにち どようの ごご さんじはん。とうきょうの ほてるで、りんじの とりしまりやくかいが ひらかれます。
+  - speaker: zundamon
+    emotion: sad
+    text: 資金繰りの[目処|めど]が、立たなくなりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 自力での営業継続は、断念します。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……異議は、ありませんか。
+  - speaker: reimu
+    text: 全会一致でした。夕方、北洋銀行が引き受けを決めます。
+    reading: ぜんかい いっちでした。ゆうがた、ほくよう ぎんこうが ひきうけお きめます。
+- id: ch4_genkin
+  title: ''
+  background: tk_honten
+  stage:
+  - {who: gyoin, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じころ札幌の本店では、営業企画部の次長が現金の輸送を指揮していました。
+    reading: おなじ ころ さっぽろの ほんてんでわ、えいぎょう きかくぶの じちょうが げんきんの ゆそうお しき して いました。
+  - speaker: gyoin
+    emotion: thinking
+    text: 日銀から運んだ現金を、日曜のうちに全部の支店へ。
+  - speaker: gyoin
+    emotion: thinking
+    text: 支店には、なぜ送るのかはまだ言えない……。
+# ---- 1997年11月16日（日）の夜 ----
+- id: ch4_yoru
+  title: ジョホールバルの夜
+  background: tk_tv_yoru
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 河谷禎昌, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 16日、日曜の夜。道内の店へは、夜9時まで現金が運ばれました。
+    reading: じゅうろくにち にちようの よる。どうないの みせえわ、よる くじまで げんきんが はこばれました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 明日の会見の、想定問答か……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 道内は[北洋|ほくよう]さんへ。預金は、全額守られる。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……決めたのか。日本、[W杯|ワールドカップ]初出場か。
+  - speaker: zundamon
+    emotion: sad
+    text: 家に帰れば、記者が来てうるさいからな……。
+  - speaker: zundamon
+    emotion: sad
+    text: ただ、ぼーっと見てるだけだ。
+# ---- 1997年11月17日（月）の朝 ----
+- id: ch4_getsuyo
+  title: 月曜日の朝
+  background: tk_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 17日、月曜の午前8時20分。大蔵大臣の談話と同じころ、拓銀の会見が始まります。
+    reading: じゅうななにち げつようの ごぜん はちじ にじゅっぷん。おおくら だいじんの だんわと おなじ ころ、たくぎんの かいけんが はじまります。
+  - speaker: zundamon
+    emotion: sad
+    text: 当行の北海道地区における業務を……
+  - speaker: zundamon
+    emotion: sad
+    text: 株式会社[北洋|ほくよう]銀行[殿|どの]に、承継願うことを決定致しました。
+  - speaker: zundamon
+    emotion: sad
+    text: 大変皆様におかれましては、ご迷惑おかけして大変申し訳ありません。
+  - speaker: kisha
+    emotion: surprised
+    text: 頭取、預金はどうなるんですか！
+  - speaker: zundamon
+    emotion: normal
+    text: 預金は、全額保護されます。
+- id: ch4_mise
+  title: ''
+  background: tk_honten
+  stage:
+  - {who: yokinsha, x: 0.28, flip: true, emotion: angry}
+  - {who: gyoin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 午前9時。各地の拓銀の店で、シャッターが開きます。
+    reading: ごぜん くじ。かくちの たくぎんの みせで、しゃったーが あきます。
+  - speaker: yokinsha
+    emotion: angry
+    text: 定期を、全部下ろしてください！
+    background: tk_honten_konzatsu
+  - speaker: gyoin
+    emotion: normal
+    text: お客様。預金は全額守られて、[北洋|ほくよう]銀行に引き継がれます。
+  - speaker: yokinsha
+    emotion: angry
+    text: つぶれた銀行の言うことを、信じろって言うの！
+  - speaker: gyoin
+    emotion: sad
+    text: ……お気持ちは、分かります。
+    se: shobon
+  - speaker: reimu
+    text: この日だけで、個人の定期預金の引き出しは600億円。それまでの最大の3倍でした。
+    reading: この ひだけで、こじんの ていき よきんの ひきだしわ ろっぴゃくおくえん。それまでの さいだいの さんばいでした。
+# ---- 1997年12月9日・国会 ----
+- id: ch5_kokkai
+  title: 万死に値する
+  background: tk_kokkai
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: ishikawa, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 20日に頭取を退いた河谷は、12月9日、衆議院の予算委員会に参考人として呼ばれます。
+    reading: はつかに とうどりお しりぞいた かわたにわ じゅうにがつ ここのか、しゅうぎいんの よさん いいんかいに さんこうにんと して よばれます。
+  - speaker: ishikawa
+    emotion: angry
+    text: その前にまずあなたに求めたいのは、正直に答えてください。正直に。
+  - speaker: zundamon
+    emotion: sad
+    text: お答えする前に、まずもって……
+  - speaker: zundamon
+    emotion: sad
+    text: 今回[拓銀|たくぎん]、私どもが破綻を来しまして……
+  - speaker: zundamon
+    emotion: sad
+    text: 大変多くの皆様方に多大な御迷惑をおかけいたしました。
+  - speaker: ishikawa
+    emotion: thinking
+    text: その根本的な原因というのはどこにあったと思いますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: すべてを突き詰めていくと、やはり不良債権問題に尽きるというように私は思っております。
+  - speaker: ishikawa
+    emotion: thinking
+    text: まさに恋愛結婚だなんというようなハイカラな言葉を使っておりますけれども……
+  - speaker: ishikawa
+    emotion: angry
+    text: 第一回の会合からこの話はぶっつぶれたと言っても間違いではないじゃないですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 恋愛結婚かどうかというのは別にしまして……
+  - speaker: zundamon
+    emotion: thinking
+    text: デッドロックに乗り上げたとか、こういう認識を私は持っております。
+  - speaker: ishikawa
+    emotion: angry
+    text: 経営者として余りにも事態の直視が甘いんじゃないか、こう言わざるを得ない……
+  - speaker: ishikawa
+    emotion: angry
+    text: まさに私は、[万死|ばんし]に値するぐらいのものではないかな。
+    se: don
+    telops:
+    - {text: "石川「万死に値する」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: ishikawa
+    emotion: angry
+    text: こんなふうに思うのです。
+- id: ch5_kokkai2
+  title: ''
+  background: tk_kokkai
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 河谷禎昌, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 別の議員は、不良債権は1兆1497億円ではないかと確かめ、洞爺のホテルへの602億円の担保も問います。
+    reading: べつの ぎいんわ ふりょう さいけんわ いっちょう せんよんひゃく きゅうじゅうななおくえんでわ ないかと たしかめ、とうやの ほてるえの ろっぴゃく におくえんの たんぽも といます。
+  - speaker: zundamon
+    emotion: sad
+    text: 先生の御指摘のとおり、それが正しゅうございます。
+  - speaker: zundamon
+    emotion: sad
+    text: 極めてゼロに近い担保価値というように私も思っております。
+  - speaker: reimu
+    text: 本業のもうけで処理すれば10年はかかる、とも指摘されました。
+    reading: ほんぎょうの もうけで しょり すれば じゅうねんわ かかるとも してき されました。
+  - speaker: zundamon
+    emotion: sad
+    text: いや、先生のおっしゃるとおりでございます。
+  - speaker: zundamon
+    emotion: sad
+    text: その環境のもとでベストジャッジメントをしたというように私は考えております。
+  - speaker: zundamon
+    emotion: sad
+    text: 結果的にはこういう大きな不良債権を生じたわけでございますので……
+  - speaker: zundamon
+    emotion: sad
+    text: この道義的、社会的責任というのはかなり重大である。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[道銀|ドーギン]さんとの合併がうまくいっておれば……'
+  - speaker: zundamon
+    emotion: thinking
+    text: しかしこれは、ればたらの世界ですから。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 雇用については、全力を挙げて進めたいと思います。
+# ---- 1999〜2003年・逮捕と一審 ----
+- id: card1999
+  title: ''
+  background: tk_card_1999
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1999年3月。河谷は前の頭取とともに、特別背任の疑いで逮捕されます。64歳でした。
+    reading: せんきゅうひゃく きゅうじゅうくねん さんがつ。かわたにわ まえの とうどりと ともに、とくべつ はいにんの うたがいで たいほ されます。ろくじゅうよんさいでした。
+  - speaker: reimu
+    text: 本人はのちに、署名を迫られて無力感から調書にサインした、と書いています。
+    reading: ほんにんわ のちに、しょめいお せまられて むりょくかんから ちょうしょに さいん したと かいて います。
+- id: ch6_ichishin
+  title: さん付けで呼びなさい
+  background: tk_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 札幌地裁での公判は59回。
+    reading: さっぽろ ちさいでの こうはんわ ごじゅうきゅうかい。
+  - speaker: zundamon
+    emotion: thinking
+    text: 月に2回、足かけ4年か……。
+  - speaker: reimu
+    text: 検事が河谷を呼び捨てにすると、一審の裁判長はこうたしなめた、と本人は書いています。
+    reading: けんじが かわたにお よびすてに すると、いっしんの さいばんちょうわ こう たしなめたと ほんにんわ かいて います。
+  - speaker: saibancho
+    emotion: angry
+    text: 呼び捨てはやめて、さん付けで呼びなさい。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……さん付け。
+    se: namida
+  - speaker: zundamon
+    emotion: thinking
+    text: 被告人の私にも、さんを付けろと……。
+  - speaker: zundamon
+    emotion: thinking
+    text: すべての融資は、銀行の損失を最小化するための経営判断として[行った|おこなった]ことであり……
+  - speaker: zundamon
+    emotion: angry
+    text: 自己保身という意識はかけらもなかった。
+  - speaker: reimu
+    text: 2003年2月。一審の判決は、融資先の元社長を含む3人とも無罪でした。
+    reading: にせん さんねん にがつ。いっしんの はんけつわ、ゆうしさきの もと しゃちょうお ふくむ さんにんとも むざいでした。
+  - speaker: reimu
+    text: 任務に背いたことは認めながら、利益を図る目的を否定したのです。
+    reading: にんむに そむいた ことわ みとめながら、りえきお はかる もくてきお ひてい したのです。
+  - speaker: zundamon
+    emotion: normal
+    text: ……やっと、終わった。
+    beat: true
+# ---- 2006年8月31日・二審 ----
+- id: card2006
+  title: ''
+  background: tk_card_2006
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2006年8月31日、二審の判決の日。河谷は裁判所へ行かず、自宅で妻と電話を待っていました。
+    reading: にせん ろくねん はちがつ さんじゅういちにち、にしんの はんけつの ひ。かわたにわ さいばんしょえ いかず、じたくで つまと でんわお まって いました。
+- id: ch6_denwa
+  title: 天国から地獄
+  background: tk_houtei
+  stage:
+  - {who: bengoshi, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 判決が読まれたのは、高裁でいちばん大きい5号法廷でした。
+    reading: はんけつが よまれたのわ、こうさいで いちばん おおきい ごごう ほうていでした。
+  - speaker: bengoshi
+    emotion: sad
+    text: 残念ですが、逆転有罪でした。
+  - speaker: bengoshi
+    emotion: sad
+    text: 懲役2年6か月の実刑です。
+    se: gaan
+- id: ch6_jitaku
+  title: ''
+  background: tk_jitaku
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 河谷禎昌, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: ……3人とも[一審|いっしん]は無罪だったのに、なぜ……。
+  - speaker: zundamon
+    emotion: sad
+    text: 天国から地獄へ、突き落とされたのだ……。
+    telops:
+    - {text: "河谷「天国から地獄へ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 二審は、責任を問われるのを恐れた自己保身の融資だ、と認定しました。
+    reading: にしんわ、せきにんお とわれるのお おそれた じこ ほしんの ゆうしだと にんてい しました。
+- id: ch6_bengodan
+  title: ''
+  background: tk_houtei
+  stage:
+  - {who: bengodan, x: 0.56, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 弁護団の一人は、判決のあとこう憤りました。
+    reading: べんごだんの ひとりわ、はんけつの あと こう いきどおりました。
+  - speaker: bengodan
+    emotion: angry
+    text: 供述調書の信用性に、[一言|ひとこと]も触れていない。
+  - speaker: bengodan
+    emotion: angry
+    text: これは調書裁判、人質司法だ。
+# ---- 2009年11月9日・最高裁 ----
+- id: card2009
+  title: ''
+  background: tk_card_2009
+  cuts:
+  - speaker: reimu
+    text: 2009年11月9日。最高裁は上告を退け、懲役2年6月の実刑が確定します。河谷は74歳でした。
+    reading: にせん くねん じゅういちがつ ここのか。さいこうさいわ じょうこくお しりぞけ、ちょうえき にねん ろっかげつの じっけいが かくてい します。かわたにわ ななじゅうよんさいでした。
+  - speaker: reimu
+    text: 銀行の取締役は高い注意義務を負う。最高裁はそう述べ、融資の判断は著しく合理性を欠いたとしました。
+    reading: ぎんこうの とりしまりやくわ たかい ちゅうい ぎむお おう。さいこうさいわ そう のべ、ゆうしの はんだんわ いちじるしく ごうりせいお かいたと しました。
+    telops:
+    - {text: "最高裁「著しく合理性を欠いた」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 民事でも、旧経営陣13人に計約101億円の賠償を命じる判決が確定しています。
+    reading: みんじでも、きゅう けいえいじん じゅうさんにんに けい やく ひゃくいちおくえんの ばいしょうお めいじる はんけつが かくてい して います。
+# ---- 2009〜2011年・釧路の独房 ----
+- id: ch7_dokubo
+  title: 釧路の独房
+  background: tk_keimusho
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 河谷禎昌, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 12月、河谷は収監されます。服役したのは、釧路の刑務所でした。
+    reading: じゅうにがつ、かわたにわ しゅうかん されます。ふくえき したのわ、くしろの けいむしょでした。
+  - speaker: zundamon
+    emotion: sad
+    text: ……たばこも、ここではやめさせられたのだ。
+    beat: true
+  - speaker: reimu
+    text: 2011年3月11日。河谷は、独房にいました。
+    reading: にせん じゅういちねん さんがつ じゅういちにち。かわたにわ、どくぼうに いました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……揺れが、終わらない！
+    se: bikkuri
+  - speaker: zundamon
+    emotion: surprised
+    text: 北海道で、大地震だ！
+  - speaker: reimu
+    text: 慌ててテレビをつけると、映っていたのは東北でした。
+    reading: あわてて てれびお つけると、うつって いたのわ とうほくでした。
+  - speaker: zundamon
+    emotion: sad
+    text: 家族に、連絡したい……。
+  - speaker: zundamon
+    emotion: sad
+    text: ……すぐには、できないのだ。
+  - speaker: reimu
+    text: 2011年の8月末ごろ、河谷は76歳で出所しました。
+    reading: にせん じゅういちねんの はちがつまつ ごろ、かわたにわ ななじゅうろくさいで しゅっしょ しました。
+# ---- 2017〜2019年・沈黙を破る ----
+- id: card2017
+  title: ''
+  background: tk_card_2017
+  cuts:
+  - speaker: reimu
+    text: 2017年5月、妻の節子が亡くなります。20年取材を断ってきたのは、妻が強く反対したからでした。
+    reading: にせん じゅうななねん ごがつ、つまの せつこが なくなります。にじゅうねん しゅざいお ことわって きたのわ、つまが つよく はんたい したからでした。
+- id: ch8_chinmoku
+  title: 格好の獲物
+  background: tk_sapporo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[河谷|カワタニ]さん。20年、取材を[断って|ことわって]こられましたね。'
+  - speaker: zundamon
+    emotion: thinking
+    text: マスコミが押しかけた時、彼女は体を張って私を守ってくれました。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分にけじめをつけるため、本を書きました。
+  - speaker: reimu
+    text: 2019年、河谷は本を出します。題は、最後の頭取です。
+    reading: にせん じゅうくねん、かわたにわ ほんお だします。だいわ、さいごの とうどりです。
+  - speaker: kisha
+    emotion: thinking
+    text: なぜ、[拓銀|たくぎん]の頭取だけが刑務所に？
+  - speaker: zundamon
+    emotion: thinking
+    text: 推測では、どこか血祭りにあげないとおさまりつかなかった。
+  - speaker: zundamon
+    emotion: angry
+    text: 北海道にいて全国的に経済的な影響はない、格好の獲物だったのでは。
+    telops:
+    - {text: "河谷「格好の獲物だったのでは」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 大手銀行のトップで刑務所に収監されたのは結局、私ひとりです。
+  - speaker: kisha
+    emotion: normal
+    text: いまの[北洋|ほくよう]銀行を、どう見ていますか。
+  - speaker: zundamon
+    emotion: happy
+    text: '[北洋|ほくよう]銀行が、[拓銀|たくぎん]をうまく引き継いでくれました。'
+  - speaker: kisha
+    emotion: normal
+    text: 元部下には、あなたをラストエンペラーと呼ぶ人もいるそうですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: どこか重なる運命を感じます。
+  - speaker: zundamon
+    emotion: sad
+    text: 読みが甘かった。
+  - speaker: zundamon
+    emotion: sad
+    text: 銀行をこんなふうにさせてしまって、申し訳ない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 審査と融資を一緒にした組織体制。大蔵省の護送船団方式への甘い考え。
+  - speaker: zundamon
+    emotion: normal
+    text: 波乱万丈の人生だと自分でも思いますが、おもしろい人生でもありました。
+  - speaker: reimu
+    text: 本では破綻の責任者を名指ししました。拓銀のOBの中には、離れていった人もいます。
+    reading: ほんでわ はたんの せきにんしゃお なざし しました。たくぎんの おーびーの なかにわ、はなれて いった ひとも います。
+# ---- 2024年11月・本店の跡 ----
+- id: ch9_haikara
+  title: ハイカラになったな
+  background: tk_honten_soto
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 河谷禎昌, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年11月。89歳の河谷が、拓銀の本店の跡で取材を受けます。
+    reading: にせん にじゅうよねん じゅういちがつ。はちじゅうきゅうさいの かわたにが、たくぎんの ほんてんの あとで しゅざいお うけます。
+  - speaker: kisha
+    emotion: normal
+    text: ここが、[拓銀|たくぎん]の本店のあった場所です。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ハイカラになったな。
+    background: tk_gendai
+  - speaker: kisha
+    emotion: thinking
+    text: たばこは、刑務所でやめたんじゃなかったんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: いまさらやめたからって、何年長生きできるとかって変わらない。
+  - speaker: kisha
+    emotion: thinking
+    text: ……開き直りましたね。
+    se: hammer
+- id: card2025
+  title: ''
+  background: tk_card_2025
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2025年12月13日。河谷禎昌は札幌市の自宅で、テレビをつけたまま亡くなっていました。90歳でした。
+    reading: にせん にじゅうごねん じゅうにがつ じゅうさんにち。かわたに さだまさわ さっぽろしの じたくで、てれびお つけた まま なくなって いました。きゅうじゅっさいでした。
+# ---- 今 ----
+- id: ima
+  title: いまの北洋と本店の跡
+  background: tk_gendai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[拓銀|たくぎん]の店とお[金|かね]は、どうなったの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 1998年11月に、道内の営業は[北洋|ほくよう]銀行へ。本州は中央信託銀行へ引き継がれたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 預金保険機構は受け皿の銀行に、約1.8兆円を贈与したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1.8兆円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[拓銀|たくぎん]は1999年3月に解散。2006年には、会社そのものが消えたわ。'
+  - speaker: tsumugi
+    emotion: happy
+    text: いっぽう[北洋|ほくよう]銀行は、いまや道内でいちばん大きい銀行よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年3月の預金は約11兆円。[拓銀|たくぎん]のいちばん多かったころより、多いの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 引き継いだ[側|がわ]が、追い越したのだ！
+    se: levelup
+  - speaker: tsumugi
+    emotion: normal
+    text: あの週末に現金の輸送を指揮した本店の次長は、のちに[北洋|ほくよう]銀行の頭取になったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[拓銀|たくぎん]の人が、[北洋|ほくよう]の頭取に！？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 本店の跡には、[北洋|ほくよう][大通|おおどおり]センターというビルが建ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 今年の6月には、元日銀の幹部が新しい証言をしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻に備えて、貨物列車で紙幣を大量に運ぶ隠密の計画があったって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 列車で[お札|おさつ]を……！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 合併の相手だった[道銀|ドーギン]の[藤田|ふじた]さんは2025年7月に、[河谷|カワタニ]さんは12月に亡くなったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 来年の11月で、破綻から30年よ。
+# ---- 論争 ----
+- id: ronso1
+  title: 国策捜査の生贄？
+  background: tk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！ [河谷|カワタニ]さんは国策捜査の生贄だったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は、そう考えていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 公的資金を入れるには、誰かを刑務所に入れないと国民感情が収まらない……
+  - speaker: tsumugi
+    emotion: normal
+    text: そう考えて司法が動いた、と本で主張しているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一審|いっしん]は3人とも無罪。事件は時効の関係で、ソフィアグループへの融資に絞られていたの。'
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり、生贄なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、最高裁の見方は違うの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 実質倒産の会社に客観的な再建計画もないまま、ほぼ担保なしで貸し続けた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 損失を小さくする目的が、はっきりあったとも言えないって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 裁判官の一人は、1993年の会議のあと5か月も会議がなかったことにも触れてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: あの、もう少し時間がほしい……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 二審は、責任を問われるのを恐れた自己保身の融資だと認定したの。
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、お[金|かね]を懐に入れた悪い頭取なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは違うの。お[金|かね]を受け取った事件じゃないわ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は生贄だと考えた。裁判所は、客観的な計画のない[追い貸し|オイガシ]だと判断した。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[並べて|ならべて]言えるのは、そこまでね。'
+- id: ronso2
+  title: 1社がつぶした？
+  background: tk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、カブトデコムって会社が[拓銀|たくぎん]をつぶしたんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻のいちばん大きな原因、と呼ばれることはあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 融資は最終的に2803億円。関連会社への保証も、1000億円を超えたの。
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり、そこなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも[河谷|カワタニ]さんは、子会社の抵当証券などがつくった不良債権を原因に挙げてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 抵当証券への貸出は、破綻の時に2175億円。全部が破綻先の債権だったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこにソフィアへの[追い貸し|オイガシ]や、関西のリース会社の[分|ぶん]も加わったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 新しい会社に賭けた路線と子会社と[追い貸し|オイガシ]が、全部重なったのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: カブトデコムの、[洞爺|とうや]のホテルはどうなったの？
+    background: tk_hotel
+  - speaker: tsumugi
+    emotion: normal
+    text: いまは[ザ・ウィンザーホテル|ザウィンザーホテル][洞爺|とうや]。2008年のサミットの会場になったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 担保がゼロに近いと言われたホテルが、サミットの会場に！？
+    se: zukko
+- id: ronso3
+  title: 北海道だから見捨てられた？
+  background: tk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、北海道の銀行だから見捨てられたんじゃないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の大蔵大臣も、大手銀行はつぶすことはないと言っていたの。
+  - speaker: zundamon
+    emotion: angry
+    text: 話が違うのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ[拓銀|たくぎん]は自分から、自力での営業の継続は困難だと報告してるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻のあとに数え直すと、不良債権は貸出の約4割。
+  - speaker: tsumugi
+    emotion: normal
+    text: 合併の相手は、1兆円を下らないと見ていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1週間後には[山一證券|やまいちしょうけん]が、翌年には[長銀|ちょうぎん]と日債銀も破綻してるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[拓銀|たくぎん]だけが、特別だったわけじゃないのか……。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 今年、元日銀の幹部の連載にはこんな見出しが付いたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[お上|おかみ]は見捨てない。都市銀行のプライドが壁に。'
+  - speaker: zundamon
+    emotion: sad
+    text: 最下位でも、[都銀|トギン]は[都銀|トギン]だったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: つぶされたとも、自滅したとも言い切れないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 資金が尽きた。その前に、合併も増資も実らなかった。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 預金はどこまで守られる？
+  background: tk_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの全財産も、銀行が倒れたら全額守られるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1997年は、預金を全額守る特例があったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: いまは1つの銀行ごとに、1人あたり元本1000万円とその利息までよ。
+    telops:
+    - {text: "1人1000万円＋利息まで", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 利息のつかない普通預金のような決済用の預金は、全額守られるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1000万円を超えてたら……！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ銀行に1000万円より多く預けてるなら、どこまで守られるかを知っておいてね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクの全財産、3万円だったのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: 心配する額まで、だいぶあるわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、銀行がつぶれた日は窓口が混むの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも[拓銀|たくぎん]の預金は、[北洋|ほくよう]や中央信託に引き継がれたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 慌てて解約する前に、国と受け皿の銀行の発表を確かめて。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 取引先の銀行が破綻すると、借りる側も困るの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 破綻のあと、新しい融資を受けられなくなった会社があったと国会でも取り上げられたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それから、銀行の株は0になることもあるの。[拓銀|たくぎん]の株は、上場廃止になったわ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: tk_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ボクの3万円、念のため三つの銀行に分けて預ける！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、通帳を3冊なくすだけよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本中|にほんじゅう]がサッカーに沸いた夜、ぼーっとテレビを見ていた頭取がいたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: つぶれないはずの都市銀行が倒れて、その頭取だけが刑務所に入った。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 穴を埋める融資を、計画のないまま続けた。そこが罪とされたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: つぶれないと思い込まずに、守られる範囲を知っておくことね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクも通帳、たまには見るのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
