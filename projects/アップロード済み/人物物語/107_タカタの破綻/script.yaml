@@ -1,0 +1,1527 @@
+meta:
+  title: 破綻の日のタカタ会長「何が悪かったんだろう」、負債1兆円超・製造業で戦後最大【ずんだもん解説】
+  slug: takata-collapse
+  hook_line: 命を守るエアバッグの会社タカタは、なぜ製造業で戦後最大の破綻に至ったのか。
+  summary: 2017年6月、エアバッグの会社タカタは民事再生を申し立てます。会見に立ったのは、祖父が作り、父が育てた会社の3代目、高田重久でした。命を守るはずの部品で、アメリカなどで死傷者が出ていました。小さな火薬の筒の中で何が起きていたのか。もうかっていた会社は、なぜ倒れたのか。会見と株主総会での本人の言葉、アメリカ議会の記録、自動車メーカーの発表を並べて、再現ドラマでたどります。死傷者の数は、時点と発表元をつけて伝えます。（2026年11月時点）
+  sources:
+  - タカタ株式会社（現TKJP）「民事再生手続開始の申立て等に関するお知らせ」（2017年6月26日） https://www.tkjpkk.com/pdf/170626_JP.pdf
+  - 国土交通省「タカタ製エアバッグ問題の経緯」（2017年7月時点） https://www.mlit.go.jp/common/001198966.pdf
+  - 米上院 商業・科学・運輸委員会 公聴会「Examining Takata Airbag Defects and the Vehicle Recall Process」（2014年11月20日） https://www.govinfo.gov/content/pkg/CHRG-113shrg95291/html/CHRG-113shrg95291.htm
+  - 本田技研工業「NHTSAのタカタに対する同意命令について」（2015年11月4日） https://global.honda/jp/info/20151104.html
+  - タカタ株式会社「スポンサーへの事業譲渡完了に関するお知らせ」（2018年4月12日） https://www.tkjpkk.com/pdf/180412_JP.pdf
+  - 国土交通省「タカタ製エアバッグに関するお知らせ」 https://renrakuda.mlit.go.jp/renrakuda/recallinfo-000.html
+  tags:
+  - タカタ
+  - 高田重久
+  - エアバッグ
+  - リコール
+  - 民事再生法
+  - 経営破綻
+  - インフレータ
+  - ホンダ
+  - 司法取引
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 何が悪かったんだろう
+    bottom: タカタの破綻
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#6a5a48'
+  - id: kisha2
+    label: 記者
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a6a'
+  - id: shimizu
+    label: 清水
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: sofu
+    label: 高田武三
+    voice: 42
+    pitch: 0.0
+    outfit: work
+    color: '#5a5048'
+  - id: koin
+    label: 工員
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#6a6a5a'
+  - id: chichi
+    label: 高田重一郎
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: soichiro
+    label: 本田宗一郎
+    voice: 21
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: shain
+    label: 社員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: giin
+    label: 上院議員
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#1f2a44'
+  - id: koho
+    label: 広報
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#2a3a4a'
+  - id: honda
+    label: ホンダ
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#3a4a5a'
+  - id: kabunushi
+    label: 株主
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4a3a'
+  - id: kabunushi2
+    label: 株主
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#4a4038'
+  - id: tanto
+    label: 担当者
+    voice: 11
+    pitch: 0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: torihiki
+    label: 取引先
+    voice: 21
+    pitch: -0.04
+    outfit: work
+    color: '#3a4a62'
+  - id: seibishi
+    label: 整備士
+    voice: 100
+    pitch: -0.04
+    outfit: work
+    color: '#2f3f5f'
+scenes:
+# ---- 先出し（2017年6月26日・東京駅前の法律事務所） ----
+- id: co_kaiken
+  title: ''
+  background: tt_kaiken_heya
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高田重久, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2017年6月26日。エアバッグの会社のトップが、東京駅前で会見を開いていました。
+    reading: にせん じゅうななねん ろくがつ にじゅうろくにち。えあばっぐの かいしゃの とっぷが、とうきょうえき まえで かいけんお ひらいて いました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ご迷惑をおかけすることになり、タカタを代表しまして心より深くお詫び申し上げます。
+  - speaker: kisha
+    emotion: normal
+    text: エアバッグが破裂する原因は？
+  - speaker: zundamon
+    emotion: thinking
+    text: なぜこの問題が起こったのか不可解。
+  - speaker: kisha
+    emotion: surprised
+    text: 不可解……？
+  - speaker: zundamon
+    emotion: sad
+    text: 何が悪かったんだろう。
+  - speaker: reimu
+    text: この男は、高田重久。祖父が作り、父が育てた会社の3代目です。
+    reading: この おとこわ たかだ しげひさ。そふが つくり、ちちが そだてた かいしゃの さんだいめです。
+  - speaker: reimu
+    text: この日タカタは破綻します。負債は最終的に1兆円を超え、製造業で戦後最大でした。
+    reading: このひ たかたわ はたん します。ふさいわ さいしゅうてきに いっちょうえんお こえ、せいぞうぎょうで せんご さいだいでした。
+    telops:
+    - {text: "負債1兆円超・製造業で戦後最大", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 今の部屋（中古の車と、はがき） ----
+- id: hook
+  title: ''
+  background: tt_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 5万円で買った、中古の車の鍵なのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 車検は、通ったの？
+  - speaker: zundamon
+    emotion: sad
+    text: エアバッグがどうとかで、落ちたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのはがき、読んだ？
+  - speaker: zundamon
+    emotion: normal
+    text: 広告だと思って、裏返してあるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、エアバッグのリコールのお知らせよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 作ったタカタは、9年前に潰れたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 命を守るエアバッグの会社が、なんで潰れたの！？
+# ---- 2015年6月25日・初めての会見（前半） ----
+- id: ch1_kaiken
+  title: 初めての会見
+  background: tt_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高田重久, emotion: thinking}
+  - {who: shimizu, x: 0.52, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 破綻の2年前、2015年6月25日。高田は株主総会のあと、初めて記者会見を開きました。
+    reading: はたんの にねん まえ、にせん じゅうごねん ろくがつ にじゅうごにち。たかだわ かぶぬし そうかいの あと はじめて きしゃ かいけんお ひらきました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 私から直接皆さまにお話しをさせていただきたいと思い、
+  - speaker: zundamon
+    emotion: thinking
+    text: 急遽この会見を開かせていただくことといたしました。
+  - speaker: kisha
+    emotion: normal
+    text: エアバッグが破裂する原因は、何なんですか。
+  - speaker: shimizu
+    emotion: normal
+    text: 原因がすでに特定されている事案を、当社では[α|アルファ]事案と呼んでおります。
+  - speaker: shimizu
+    emotion: normal
+    text: ガス発生剤の成型工程における[荷重不足|かじゅうぶそく]や、
+  - speaker: shimizu
+    emotion: normal
+    text: 部品の[誤組付け|ごくみつけ]といった製造時の工程管理上の問題でございます。
+  - speaker: kisha
+    emotion: thinking
+    text: 作るときの、手違いですね。
+  - speaker: shimizu
+    emotion: thinking
+    text: まだ不具合の原因が特定できていない事案もございます。
+  - speaker: shimizu
+    emotion: thinking
+    text: これを当社では[β|ベータ]事案と呼んでおります。
+  - speaker: kisha
+    emotion: surprised
+    text: 原因が、分からない……？
+  - speaker: shimizu
+    emotion: thinking
+    text: インフレータ内に水分が侵入し、
+  - speaker: shimizu
+    emotion: thinking
+    text: その水分をガス発生剤が吸湿した結果、発生した可能性が高いと推察されております。
+  - speaker: kisha
+    emotion: thinking
+    text: インフレータ……ガスを出す、火薬の入った筒ですよね。
+  - speaker: kisha
+    emotion: normal
+    text: 原因の分からない[β|ベータ]の分も、タカタの責任では？
+  - speaker: zundamon
+    emotion: thinking
+    text: 残念ながら今の段階では、
+  - speaker: zundamon
+    emotion: thinking
+    text: これについてわれわれ、コメントできる段階ではないというふうに思っております。
+  - speaker: kisha
+    emotion: thinking
+    text: 命を守る部品なのに、原因が分からないまま回収だけが広がっている。
+  - speaker: reimu
+    text: 国交省によると、2017年6月までの日本のリコール1882万台のうち、1628万台が予防のためでした。
+    reading: こくこうしょうに よると にせん じゅうななねん ろくがつまでの にほんの りこーる せんはっぴゃく はちじゅうにまんだいの うち、せんろっぴゃく にじゅうはちまんだいが よぼうの ためでした。
+    telops:
+    - {text: "予防的リコール 1628万台", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: そもそも、なぜその火薬を使ったんです？
+  - speaker: shimizu
+    emotion: normal
+    text: この[相安定化|そうあんていか][硝酸アンモニウム|しょうさんアンモニウム]のメリットはガス化効率が良く、
+  - speaker: shimizu
+    emotion: normal
+    text: インフレータの小型軽量化が可能になります。
+  - speaker: kisha
+    emotion: thinking
+    text: 小さく軽く、作れる火薬か。
+  - speaker: shimizu
+    emotion: normal
+    text: '[相安定化|そうあんていか][硝酸アンモニウム|しょうさんアンモニウム]の化学的性質につきましては理解が確立しており、'
+  - speaker: shimizu
+    emotion: normal
+    text: 安全性にもまったく問題がなく、ガス発生剤に適した物質であると考えております。
+  - speaker: reimu
+    text: のちの原因調査で、乾燥剤のない火薬は湿気の中で長く温度の変化にさらされると劣化する、と分かります。
+    reading: のちの げんいん ちょうさで かんそうざいの ない かやくわ しっけの なかで ながく おんどの へんかに さらされると れっか すると、わかります。
+  - speaker: kisha
+    emotion: surprised
+    text: 湿気と、長い[年月|ねんげつ]……。
+# ---- 会見のあと・記者室 ----
+- id: ch1_seikyu
+  title: 立て替えの請求
+  background: tt_kaigi
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: thinking}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha2
+    emotion: normal
+    text: その回収の費用は、誰が払うんだ。
+  - speaker: kisha
+    emotion: normal
+    text: リコールを国に届け出るのは、自動車メーカーだ。まずは、メーカーが払う。
+  - speaker: kisha2
+    emotion: thinking
+    text: 部品を作ったのは、タカタだろ。
+  - speaker: kisha
+    emotion: thinking
+    text: 立て替えた分は、あとで部品の会社に請求が来るだろうな。
+  - speaker: reimu
+    text: タカタはのちに、その一定の割合が自社の債務になりうると開示します。
+    reading: たかたわ のちに、その いっていの わりあいが じしゃの さいむに なりうると かいじ します。
+  - speaker: kisha
+    emotion: thinking
+    text: 届け出るメーカーはたくさんあるのに、部品の会社は1社か。
+  - speaker: kisha2
+    emotion: surprised
+    text: 請求書が、1か所に集まるわけだ。
+    se: hirameki
+  - speaker: reimu
+    text: 東京商工リサーチは、メーカーが立て替えた費用を総額1兆3000億円とみています。
+    reading: とうきょう しょうこう りさーちわ、めーかーが たてかえた ひようお そうがく いっちょう さんぜんおくえんと みて います。
+  - speaker: kisha2
+    emotion: normal
+    text: でもタカタは、本業はもうかってるんだろ？
+  - speaker: reimu
+    text: 2年後の決算でも、本業は390億円の黒字。それでも最終の損益は、796億円の赤字でした。
+    reading: にねんごの けっさんでも、ほんぎょうわ さんびゃく きゅうじゅうおくえんの くろじ。それでも さいしゅうの そんえきわ、ななひゃく きゅうじゅうろくおくえんの あかじでした。
+    background: tt_kaigi_akaji
+  - speaker: kisha
+    emotion: thinking
+    text: 本業でもうけても、請求に追いつかない……。
+    beat: true
+  - speaker: reimu
+    text: のちの再生計画で、100万円の払いが残る取引先に戻るのは50万5000円です。
+    reading: のちの さいせい けいかくで、ひゃくまんえんの はらいが のこる とりひきさきに もどるのわ ごじゅうまん ごせんえんです。
+    telops:
+    - {text: "100万円 → 戻るのは50万5000円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha2
+    emotion: thinking
+    text: 命を守る部品の会社が、どうしてここまで……。
+  - speaker: reimu
+    text: 命を守る部品の会社は、なぜこの火薬にたどり着いたのか。始まりは、布でした。
+    reading: いのちお まもる ぶひんの かいしゃわ なぜ この かやくに たどりついたのか。はじまりわ、ぬのでした。
+# ---- 祖父の時代（短く） ----
+- id: card1933
+  title: ''
+  background: tt_card_1933
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1933年。滋賀県の彦根で、重久の祖父が織物の工場を始めます。
+    reading: せんきゅうひゃく さんじゅうさんねん。しがけんの ひこねで、しげひさの そふが おりものの こうじょうお はじめます。
+- id: ch2_obi
+  title: 織物からシートベルトへ
+  background: tt_kojo_old
+  bgm: honwaka_puppu
+  stage:
+  - {who: sofu, x: 0.3, flip: true, emotion: normal}
+  - {who: koin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1952年。工場では、パラシュートの技術を使った研究が始まります。
+    reading: せんきゅうひゃく ごじゅうにねん。こうじょうでわ、ぱらしゅーとの ぎじゅつお つかった けんきゅうが はじまります。
+  - speaker: sofu
+    emotion: thinking
+    text: パラシュートの技術を、車に使えんか。
+  - speaker: koin
+    emotion: surprised
+    text: 車に、パラシュートを！？ 車は、[空|そら]から落ちませんよ。
+    se: manuke
+  - speaker: sofu
+    emotion: angry
+    text: 落ちる人を支える布だ。
+  - speaker: sofu
+    emotion: normal
+    text: 車の座席にも、人を支える帯が要るだろう。
+  - speaker: koin
+    emotion: thinking
+    text: 座席に、人を支える帯……。
+  - speaker: koin
+    emotion: happy
+    text: シートベルトですか！
+    beat: true
+  - speaker: sofu
+    emotion: happy
+    text: 布で、人を守るんだ。
+  - speaker: koin
+    emotion: surprised
+    text: 織物の工場が、車の部品屋に……。
+  - speaker: reimu
+    text: 1960年、会社はシートベルトを売り始めます。命を守る布の会社が、のちに火薬を扱います。
+    reading: せんきゅうひゃく ろくじゅうねん、かいしゃわ しーとべるとお うりはじめます。いのちお まもる ぬのの かいしゃが、のちに かやくお あつかいます。
+# ---- 父と本田宗一郎（日経が伝える話） ----
+- id: ch2_honda
+  title: 1万分の1ではない
+  background: tt_kojo_old
+  bgm: curious
+  stage:
+  - {who: chichi, x: 0.3, flip: true, emotion: normal}
+  - {who: soichiro, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 日経が伝える話では、2代目の重一郎はシートベルトを広めようと本田宗一郎に直談判しました。
+    reading: にっけいが つたえる はなしでわ、にだいめの じゅういちろうわ しーとべるとお ひろめようと ほんだ そういちろうに じきだんぱん しました。
+  - speaker: chichi
+    emotion: normal
+    text: 本田さん。人間の安全性も考えてほしい。
+  - speaker: soichiro
+    emotion: normal
+    text: 顧客にとって製品は[1万分の1|いちまんぶんのいち]ではない。
+    telops:
+    - {text: "本田「1万分の1ではない」", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: chichi
+    emotion: thinking
+    text: ……と、言いますと？
+  - speaker: soichiro
+    emotion: normal
+    text: 1万台に1台の不良でも、買った客にはその1台が全部だ。
+  - speaker: soichiro
+    emotion: angry
+    text: 120%の良品でないといけない。
+  - speaker: chichi
+    emotion: surprised
+    text: 100%じゃ、足りないんですか！？
+  - speaker: soichiro
+    emotion: angry
+    text: 足りん。
+    se: don
+  - speaker: chichi
+    emotion: thinking
+    text: ……120%の、ベルトか。
+  - speaker: reimu
+    text: 1963年、ホンダのS500に、日本で初めて2点式のシートベルトが標準で付きました。
+    reading: せんきゅうひゃく ろくじゅうさんねん、ほんだの えすごひゃくに にほんで はじめて にてんしきの しーとべるとが ひょうじゅんで つきました。
+# ---- エアバッグと、火薬の筒 ----
+- id: ch2_airbag
+  title: 需要が減る
+  background: tt_kojo_old
+  bgm: pop
+  stage:
+  - {who: chichi, x: 0.3, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1976年。今度は、エアバッグの研究の話が持ちかけられます。
+    reading: せんきゅうひゃく ななじゅうろくねん。こんどわ、えあばっぐの けんきゅうの はなしが もちかけられます。
+  - speaker: shain
+    emotion: happy
+    text: アメリカの当局やホンダから、エアバッグを研究しないかと！
+  - speaker: chichi
+    emotion: thinking
+    text: エアバッグが広まったら、うちの需要が減るだろう。
+  - speaker: shain
+    emotion: surprised
+    text: 命を守る道具が、増えるのにですか！？
+  - speaker: reimu
+    text: 重一郎は初め反対し、やがて推し進める側に回ります。社内では、こう繰り返しました。
+    reading: じゅういちろうわ はじめ はんたいし、やがて おしすすめる がわに まわります。しゃないでわ、こう くりかえしました。
+  - speaker: chichi
+    emotion: angry
+    text: やるからには徹底してやり切ることが重要。
+  - speaker: shain
+    emotion: surprised
+    text: 反対してたのに！？
+    se: zukko
+  - speaker: reimu
+    text: 1987年、ホンダの求めで運転席のエアバッグを量産。1991年には、アメリカで火薬の筒も作り始めます。
+    reading: せんきゅうひゃく はちじゅうななねん、ほんだの もとめで うんてんせきの えあばっぐお りょうさん。せんきゅうひゃく きゅうじゅういちねんにわ、あめりかで かやくの つつも つくりはじめます。
+    background: tt_kojo
+  - speaker: reimu
+    text: 2000年ごろ、火薬に硝酸アンモニウムを使い始めます。重久はこのころ、常務から専務に。
+    reading: にせんねん ごろ、かやくに しょうさん あんもにうむお つかいはじめます。しげひさわ このころ じょうむから せんむに。
+  - speaker: reimu
+    text: 小さく軽く作れる火薬の筒。その中身が、のちに会社の運命を決めます。
+    reading: ちいさく かるく つくれる かやくの つつ。その なかみが、のちに かいしゃの うんめいお きめます。
+# ---- 最初の破裂（2004〜2011） ----
+- id: card2004
+  title: ''
+  background: tt_card_2004
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2004年、アメリカでホンダの車のインフレータが破裂し、運転していた人がけがをします。
+    reading: にせん よねん、あめりかで ほんだの くるまの いんふれーたが はれつし うんてん して いた ひとが けがお します。
+- id: ch3_shacho
+  title: 41歳の社長
+  background: tt_kojo
+  stage:
+  - {who: shain, x: 0.28, flip: true, emotion: normal}
+  - {who: koin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年6月、41歳の重久が社長になります。前の年に、東証1部に上場したばかりでした。
+    reading: にせん ななねん ろくがつ、よんじゅう いっさいの しげひさが しゃちょうに なります。まえの としに、とうしょう いちぶに じょうじょう した ばかりでした。
+  - speaker: shain
+    emotion: normal
+    text: 3代目の社長は、41歳か。
+  - speaker: koin
+    emotion: surprised
+    text: 若い社長ですね。
+  - speaker: reimu
+    text: この年アメリカで3件の破裂があり、タカタは原因を調べ始めます。
+    reading: この とし あめりかで さんけんの はれつが あり、たかたわ げんいんお しらべはじめます。
+  - speaker: koin
+    emotion: thinking
+    text: アメリカから、また破裂の報告が……。
+  - speaker: reimu
+    text: 翌年の11月、ホンダがアメリカで最初のリコールを届け出ました。
+    reading: よくねんの じゅういちがつ、ほんだが あめりかで さいしょの りこーるお とどけでました。
+- id: card2009
+  title: ''
+  background: tt_card_2009
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 国交省の資料では、2009年5月にアメリカで最初の死亡事故。12月には2件目が起きます。
+    reading: こくこうしょうの しりょうでわ、にせん きゅうねん ごがつに あめりかで さいしょの しぼう じこ。じゅうにがつにわ にけんめが おきます。
+  - speaker: reimu
+    text: 2011年2月、父の重一郎が亡くなります。
+    reading: にせん じゅういちねん にがつ、ちちの じゅういちろうが なくなります。
+# ---- アメリカの怒り（2014） ----
+- id: card2014
+  title: ''
+  background: tt_card_2014
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2014年11月20日。アメリカ上院の公聴会に、タカタの品質保証の責任者、清水博が呼ばれます。
+    reading: にせん じゅうよねん じゅういちがつ はつか。あめりか じょういんの こうちょうかいに たかたの ひんしつ ほしょうの せきにんしゃ、しみず ひろしが よばれます。
+- id: ch4_gikai
+  title: イエスかノーか
+  background: tt_gikai
+  stage:
+  - {who: shimizu, x: 0.3, flip: true, emotion: thinking}
+  - {who: giin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shimizu
+    emotion: thinking
+    text: 報告された一つ一つの事例について、深くおわびします。
+  - speaker: shimizu
+    emotion: thinking
+    text: タカタのエアバッグが設計どおりに働かず、運転者や同乗者が死傷した事例です。
+  - speaker: reimu
+    text: 同じ公聴会では、エアバッグでけがをした空軍の女性将校も証言しました。ヘッドライトも割れない衝突でした。
+    reading: おなじ こうちょうかいでわ、えあばっぐで けがお した くうぐんの じょせい しょうこうも しょうげん しました。へっどらいとも われない しょうとつでした。
+  - speaker: reimu
+    text: 2005年5月、ホンダから写真で破裂を知らされたときのことを、清水はこう述べます。
+    reading: にせん ごねん ごがつ、ほんだから しゃしんで はれつお しらされた ときの ことお しみずわ こう のべます。
+  - speaker: shimizu
+    emotion: normal
+    text: そのとき、写真には確かに異常が写っていました。
+  - speaker: shimizu
+    emotion: normal
+    text: しかし、調べた記録には何の異常もありませんでした。
+  - speaker: shimizu
+    emotion: normal
+    text: それで、自動車メーカーに報告を返しました。
+  - speaker: reimu
+    text: 清水の証言では、タカタはこのとき、アメリカの当局には知らせていませんでした。
+    reading: しみずの しょうげんでわ たかたわ このとき、あめりかの とうきょくにわ しらせて いませんでした。
+  - speaker: reimu
+    text: 清水は、さらに調べるほどの技術的な根拠は無かった、とも述べています。
+    reading: しみずわ さらに しらべるほどの ぎじゅつてきな こんきょわ なかったと、のべて います。
+  - speaker: shimizu
+    emotion: normal
+    text: 今の重点は湿度の高い特定の地域に、という当局の立場にタカタは強く同意します。
+  - speaker: giin
+    emotion: normal
+    text: 当局は火曜日、運転席側を全米で回収する方針に変えました。
+  - speaker: giin
+    emotion: angry
+    text: 全米でのリコールの求めに賛成ですか、反対ですか。
+  - speaker: shimizu
+    emotion: thinking
+    text: 上院議員、イエスかノーかで答えるのは難しいです。
+  - speaker: giin
+    emotion: angry
+    text: イエスかノーかで答えるのは、難しくありません。
+  - speaker: giin
+    emotion: angry
+    text: 運輸省が出した全米でのエアバッグのリコールを、支持しますか。
+  - speaker: giin
+    emotion: angry
+    text: イエスか、ノーか。
+  - speaker: shimizu
+    emotion: thinking
+    text: 事故のデータで当局の新しい方針を支えるものが見つかれば、
+  - speaker: shimizu
+    emotion: thinking
+    text: 当局や自動車メーカーと必ず一緒に対処します。
+  - speaker: giin
+    emotion: angry
+    text: ノーと受け取ります。
+    se: don
+    telops:
+    - {text: "議員「ノーと受け取ります」", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: このとき会長の高田重久は、まだ一度も会見を開いていません。
+    reading: この とき かいちょうの たかだ しげひさわ、まだ いちども かいけんお ひらいて いません。
+- id: ch4_kyohi
+  title: ''
+  background: tt_gikai
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: thinking}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: thinking
+    text: 昨日の12月2日が、当局の期限だった。タカタは、全米でのリコールを手紙で拒んだ。
+  - speaker: kisha2
+    emotion: surprised
+    text: 拒んだ！？ 理由は？
+  - speaker: kisha
+    emotion: normal
+    text: 求めは証拠に支えられていない。部品の会社にリコールを強いる権限は、当局にない。
+  - speaker: kisha2
+    emotion: thinking
+    text: でも今日の下院で、ホンダは運転席側を全米で回収すると言ったぞ。
+  - speaker: kisha
+    emotion: thinking
+    text: 部品の会社と車の会社で、言うことが分かれたな。
+# ---- 社長に戻る（2014年12月24日） ----
+- id: ch4_jinji
+  title: 引責ではない
+  background: tt_kaiken
+  bgm: curious
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: normal}
+  - {who: koho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月24日。タカタは、社長の交代を発表します。
+    reading: じゅうにがつ にじゅうよっか。たかたわ、しゃちょうの こうたいお はっぴょう します。
+  - speaker: kisha
+    emotion: surprised
+    text: スイス人のストッカー社長が辞めて、[高田|たかだ]会長が社長も兼ねる？
+  - speaker: kisha
+    emotion: thinking
+    text: クリスマスイブに、社長交代ですか。
+    se: tenten
+  - speaker: koho
+    emotion: normal
+    text: 会社始まって以来の危機に対応するため。
+  - speaker: koho
+    emotion: normal
+    text: 経営を一元化し意思決定の迅速化を図るためで、引責ではない。
+  - speaker: kisha
+    emotion: thinking
+    text: 引責では、ない……。報酬は？
+  - speaker: koho
+    emotion: normal
+    text: 会長は50%、ストッカーは30%を減らします。
+# ---- 初めての会見（後半・2015年） ----
+- id: card2015
+  title: ''
+  background: tt_card_2015
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2015年5月、タカタはアメリカで欠陥を認めます。翌月の初めての会見で、質問は責任に移ります。
+    reading: にせん じゅうごねん ごがつ、たかたわ あめりかで けっかんお みとめます。よくげつの はじめての かいけんで、しつもんわ せきにんに うつります。
+- id: ch5_kaiken
+  title: 痛恨の極み
+  background: tt_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高田重久, emotion: thinking}
+  - {who: kisha, x: 0.52, emotion: normal}
+  - {who: kisha2, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: ホンダの依頼で世界2位になった会社が、なぜ。何を間違えたんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 亡くなられた[方々|かたがた]、
+  - speaker: zundamon
+    emotion: sad
+    text: またこの件につきましてけがをされた[方|かた]には大変申し訳なく思っております。
+  - speaker: zundamon
+    emotion: thinking
+    text: われわれの製造管理工程上の不備、というか不測でございまして
+  - speaker: zundamon
+    emotion: thinking
+    text: 原因究明という形まで至ってないというのは申し訳ないですけれども、事実でございます。
+  - speaker: kisha2
+    emotion: angry
+    text: 説明が、なぜここまで遅れたんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 私が直接説明する機会を今まで設けてこなかったというのは大変申し訳なく思っております。
+  - speaker: zundamon
+    emotion: thinking
+    text: お客さまに安全を提供するのがわれわれの本分であるのにもかかわらず、
+  - speaker: zundamon
+    emotion: sad
+    text: 残念ながら今回の内容では、
+  - speaker: zundamon
+    emotion: sad
+    text: われわれの安全を提供するべき製品が、お客さまに被害を与えてしまったと。
+  - speaker: zundamon
+    emotion: sad
+    text: そのことにつきましては痛恨の極みというふうに思っております。
+    telops:
+    - {text: "高田「痛恨の極み」", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: 何人が亡くなり、けがをしたと認識していますか。
+  - speaker: zundamon
+    emotion: sad
+    text: 8名の[方|かた]がこの関係で亡くなられているというふうに理解しております。
+  - speaker: zundamon
+    emotion: sad
+    text: トータル約130名の[方|かた]がおけがをされているというふうに認識しております。
+  - speaker: kisha2
+    emotion: normal
+    text: トップとして、責任の取り方は。辞任は？
+  - speaker: zundamon
+    emotion: thinking
+    text: 大変重く責任を感じております。
+  - speaker: kisha2
+    emotion: thinking
+    text: 辞任については、答えないのか……。
+  - speaker: reimu
+    text: 8名と約130名は、この日の会社の認識。2017年7月の国交省のまとめでは、世界で少なくとも18人です。
+    reading: はちめいと やく ひゃくさんじゅうめいわ、この ひの かいしゃの にんしき。にせん じゅうななねん しちがつの こくこうしょうの まとめでわ、せかいで すくなくとも じゅうはちにんです。
+# ---- ホンダの決別（2015年11月） ----
+- id: ch5_honda
+  title: ホンダの決別
+  background: tt_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: honda, x: 0.3, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月3日、アメリカの当局はタカタに最大2億ドルの制裁金を科し、火薬の段階的な製造中止も決めます。
+    reading: じゅういちがつ みっか、あめりかの とうきょくわ たかたに さいだい におくどるの せいさいきんお かし かやくの だんかいてきな せいぞう ちゅうしも きめます。
+  - speaker: reimu
+    text: 運輸長官は、命を守るはずの装置が命を奪うかもしれないと、運転者に心配させてはならないと述べました。
+    reading: うんゆ ちょうかんわ いのちお まもる はずの そうちが いのちお うばうかも しれないと、うんてんしゃに しんぱい させてわ ならないと のべました。
+  - speaker: kisha
+    emotion: surprised
+    text: ホンダが、タカタの内部の書類を数百万ページ調べたそうだ。
+  - speaker: honda
+    emotion: normal
+    text: タカタがエアバッグインフレータのテストデータを誤って伝える、
+  - speaker: honda
+    emotion: normal
+    text: または不適切な報告を行っていたと思われる情報を認識しました。
+  - speaker: kisha
+    emotion: surprised
+    text: テストデータを、誤って……！？
+  - speaker: honda
+    emotion: normal
+    text: 全世界的に、新規開発中のホンダ車には
+  - speaker: honda
+    emotion: angry
+    text: タカタ製[運転者席側|うんてんしゃせきがわ]・助手席側前突用エアバッグインフレータを今後搭載致しません。
+    telops:
+    - {text: "ホンダ「今後搭載致しません」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: いちばんの取引先が、離れていく……。
+    se: gaan
+  - speaker: reimu
+    text: ただ、アメリカのホンダ自身もこの年の1月、死傷などの報告漏れで7000万ドルの制裁金を払っています。
+    reading: ただ あめりかの ほんだ じしんも この としの いちがつ、ししょう などの ほうこくもれで ななせんまんどるの せいさいきんお はらって います。
+  - speaker: kisha
+    emotion: thinking
+    text: 部品の会社だけの話じゃ、ないのか。
+  - speaker: reimu
+    text: 同じ日のタカタの会見を伝えた日経クロステックの見出しは、データの改ざんはない、でした。
+    reading: おなじ ひの たかたの かいけんお つたえた にっけい くろすてっくの みだしわ、でーたの かいざんわ ない でした。
+# ---- 原因がわかる（2016） ----
+- id: card2016
+  title: ''
+  background: tt_card_2016
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2016年2月。タカタは外部の専門家の委員会を作り、支援する会社を探し始めます。
+    reading: にせん じゅうろくねん にがつ。たかたわ がいぶの せんもんかの いいんかいお つくり、しえん する かいしゃお さがしはじめます。
+- id: ch6_genin
+  title: 原因がわかる
+  background: tt_shiken
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: thinking}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ月、上院の委員会の民主党側がまとめた報告書は、試験データの操作が広くあったと指摘します。
+    reading: おなじ つき、じょういんの いいんかいの みんしゅとう がわが まとめた ほうこくしょわ しけん でーたの そうさが ひろく あったと してき します。
+  - speaker: reimu
+    text: 5月、アメリカの当局は原因を確かめたとして回収を広げます。日本も約700万台を広げる日程が決まります。
+    reading: ごがつ、あめりかの とうきょくわ げんいんお たしかめたと して かいしゅうお ひろげます。にほんも やく ななひゃくまんだいお ひろげる にっていが きまります。
+  - speaker: kisha2
+    emotion: thinking
+    text: 原因が、やっと確かめられたのか……。
+  - speaker: reimu
+    text: 乾燥剤のない火薬が、湿気と長い年月の温度の変化で劣化する。会見で原因不明とされたβ事案の答えでした。
+    reading: かんそうざいの ない かやくが、しっけと ながい ねんげつの おんどの へんかで れっか する。かいけんで げんいん ふめいと された べーた じあんの こたえでした。
+# ---- 怒れる株主（2016年6月の株主総会） ----
+- id: ch6_soukai
+  title: 怒れる株主
+  background: tt_soukai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高田重久, emotion: thinking}
+  - {who: kabunushi, x: 0.52, emotion: angry}
+  - {who: kabunushi2, x: 0.8, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 6月28日の株主総会。約160人の株主が、2時間半近く高田を問いただします。
+    reading: ろくがつ にじゅうはちにちの かぶぬし そうかい。やく ひゃくろくじゅうにんの かぶぬしが、にじかんはん ちかく たかだお といただします。
+  - speaker: kabunushi
+    emotion: normal
+    text: リコールの車を持ってきた人に、謝礼を払ってはいないのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: お考えは貴重なご意見として受け止める。
+  - speaker: kabunushi
+    emotion: angry
+    text: 貴重なご意見など、いい加減な言い方をするな！
+  - speaker: kabunushi2
+    emotion: angry
+    text: 信頼は、どう取り戻すんだ。
+  - speaker: reimu
+    text: 高田は、自動車メーカーからこう言われていると紹介しました。
+    reading: たかだわ、じどうしゃ めーかーから こう いわれて いると しょうかい しました。
+  - speaker: zundamon
+    emotion: thinking
+    text: タカタには急におかしくなってもらっては困る。
+  - speaker: zundamon
+    emotion: thinking
+    text: 継続して製品を供給してほしい。
+  - speaker: kabunushi2
+    emotion: angry
+    text: 聞こえない！ はっきり話せ！
+  - speaker: kabunushi
+    emotion: angry
+    text: 辞める意思は、あるのか。私財を投じる意思は。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長に固執してはいない。
+  - speaker: kabunushi2
+    emotion: thinking
+    text: 原因の分からない分の費用が1兆円を超えたら、資本は消えるだろう。
+  - speaker: reimu
+    text: 高田は、委員会が支援する会社を探していると答えました。
+    reading: たかだわ、いいんかいが しえん する かいしゃお さがして いると こたえました。
+  - speaker: kabunushi
+    emotion: normal
+    text: 私財の処分も、第三者委員会に委ねるということか。
+  - speaker: zundamon
+    emotion: thinking
+    text: そうだ。その前提でお願いしている。
+  - speaker: kabunushi2
+    emotion: angry
+    text: アメリカの公聴会で答えたのは、[清水|しみず]取締役だ。社長は[矢面|やおもて]に立たなかった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 公聴会への出席者は向こうから指名があり、[清水|しみず]取締役になった。
+# ---- 10億ドル（2017年1月） ----
+- id: card2017
+  title: ''
+  background: tt_card_2017
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2017年1月13日。タカタはアメリカの司法省と、司法取引で合意します。
+    reading: にせん じゅうななねん いちがつ じゅうさんにち。たかたわ あめりかの しほうしょうと、しほう とりひきで ごうい します。
+- id: ch7_shiho
+  title: 10億ドル
+  background: tt_kaigi
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: thinking}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: thinking
+    text: タカタが、会社として有罪を認めることで合意した。
+  - speaker: kisha2
+    emotion: surprised
+    text: 罪の名前は？
+  - speaker: kisha
+    emotion: normal
+    text: 通信詐欺が1件。エアバッグの試験データの報告をめぐってだ。
+  - speaker: kisha2
+    emotion: normal
+    text: 払うお[金|かね]は？
+  - speaker: kisha
+    emotion: normal
+    text: 10億ドル。日本円で、約1150億円だ。
+    telops:
+    - {text: "司法取引 10億ドル", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 罰金は2500万ドル。被害者の補償に、1億2500万ドル。
+  - speaker: kisha
+    emotion: normal
+    text: 自動車メーカーの補償に、8億5000万ドル。
+  - speaker: kisha2
+    emotion: thinking
+    text: いちばん大きいのは、立て替えたメーカーの[分|ぶん]か……。
+  - speaker: kisha2
+    emotion: normal
+    text: タカタ自身は、どう書いてる？
+  - speaker: kisha
+    emotion: normal
+    text: 日本の開示では、自動車メーカーへの報告の不備の問題だ。
+  - speaker: kisha2
+    emotion: normal
+    text: アメリカの司法省は？
+  - speaker: kisha
+    emotion: thinking
+    text: 試験データの削除・改変・操作、と書いてる。
+  - speaker: kisha2
+    emotion: thinking
+    text: 同じ話でも、書き方がずいぶん違うな。
+  - speaker: kisha2
+    emotion: normal
+    text: '[元幹部|もとかんぶ]も、起訴されたって？'
+  - speaker: kisha
+    emotion: thinking
+    text: 3人だ。ただ3人とも、日本に住んでいるとされる。
+  - speaker: kisha2
+    emotion: thinking
+    text: 起訴は、まだ疑いの段階か。
+  - speaker: kisha
+    emotion: surprised
+    text: 株はこの日、[ストップ高|ストップだか]の1061円をつけた。
+# ---- 民事再生の会見（2017年6月26日） ----
+- id: ch8_kaiken
+  title: 民事再生
+  background: tt_kaiken_heya
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高田重久, emotion: thinking}
+  - {who: kisha, x: 0.52, emotion: normal}
+  - {who: kisha2, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月26日、タカタは民事再生を申し立てます。会社を続けながら、借金を減らしてもらう手続きです。
+    reading: ろくがつ にじゅうろくにち、たかたわ みんじ さいせいお もうしたてます。かいしゃお つづけながら、しゃっきんお へらして もらう てつづきです。
+  - speaker: reimu
+    text: アメリカのエアバッグ会社KSSに、約1750億円で事業を売ることでも基本合意しました。
+    reading: あめりかの えあばっぐ がいしゃ けーえすえすに、やく せんななひゃく ごじゅうおくえんで じぎょうお うる ことでも きほん ごうい しました。
+  - speaker: zundamon
+    emotion: thinking
+    text: リコール債務の拡大ならびに米国における[訴訟等|ソショウトウ]により
+  - speaker: zundamon
+    emotion: thinking
+    text: 弊社の経営環境は厳しさを増してきました。
+  - speaker: zundamon
+    emotion: thinking
+    text: このままでは資金繰りが持たず、
+  - speaker: zundamon
+    emotion: thinking
+    text: 製品の安定供給ができなくなるリスクがあると認識しています。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[事業譲渡等|ジギョウジョウトトウ]の実行までの適切な時期に、'
+  - speaker: zundamon
+    emotion: thinking
+    text: 私は経営責任を取って辞任し、次期経営陣に引き継ぐ所存でございます。
+  - speaker: kisha
+    emotion: angry
+    text: 消費者を、軽く見ているのではありませんか。
+  - speaker: reimu
+    text: 日経ビジネスによれば、高田はこう答えました。
+    reading: にっけい びじねすに よれば、たかだわ こう こたえました。
+  - speaker: zundamon
+    emotion: thinking
+    text: いろんな[方|かた]から、私見を述べたりコメントを出したりするのは適切ではない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 外部専門家委員会に任せ、ノイズは出すなと言われてきた。
+  - speaker: kisha2
+    emotion: normal
+    text: ほかの会社が使わない火薬を選んだのは、なぜです？
+  - speaker: zundamon
+    emotion: thinking
+    text: 選択は、当時の経営陣がかかわっている。
+  - speaker: zundamon
+    emotion: thinking
+    text: 当時の試験では予見不可能だった。
+  - speaker: zundamon
+    emotion: normal
+    text: 安全性に自信を持ったものを提供した。
+  - speaker: kisha
+    emotion: thinking
+    text: 事故の起きる条件は、分かっているんですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 事故が起きる条件はわかるが、再現性はない。
+  - speaker: zundamon
+    emotion: sad
+    text: 未だに苦慮している。
+  - speaker: reimu
+    text: 日経ビジネスは、この日の謝罪の相手は債権者などで、亡くなった人への弔意はなかったと書きました。
+    reading: にっけい びじねすわ この ひの しゃざいの あいてわ さいけんしゃ などで、なくなった ひとえの ちょういわ なかったと かきました。
+# ---- 最後の株主総会（2017年6月27日） ----
+- id: ch8_soukai
+  title: 最後の株主総会
+  background: tt_soukai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高田重久, emotion: thinking}
+  - {who: kabunushi, x: 0.52, emotion: normal}
+  - {who: kabunushi2, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日。東京・竹芝のホールで、上場して最後の株主総会が開かれます。株主は190人でした。
+    reading: よくじつ。とうきょう たけしばの ほーるで、じょうじょう して さいごの かぶぬし そうかいが ひらかれます。かぶぬしわ ひゃくきゅうじゅうにんでした。
+  - speaker: zundamon
+    emotion: sad
+    text: まずこの場を借りて、
+  - speaker: zundamon
+    emotion: sad
+    text: 当企業グループのエアバッグ不具合によりお亡くなりになった[方々|かたがた]の
+  - speaker: zundamon
+    emotion: sad
+    text: ご冥福をお祈りするとともに……
+  - speaker: reimu
+    text: 場内に、録音の女性の声が流れます。誠に遺憾ながら、無配とさせて頂きました。
+    reading: じょうないに、ろくおんの じょせいの こえが ながれます。まことに いかんながら、むはいと させて いただきました。
+  - speaker: reimu
+    text: 株の見通しを問われて高田が黙ると、声が飛びます。
+    reading: かぶの みとおしお とわれて たかだが だまると、こえが とびます。
+  - speaker: kabunushi
+    emotion: angry
+    text: はっきりしゃべってくれ！
+  - speaker: zundamon
+    emotion: sad
+    text: 申し訳ありません……。以後、気を付けます。
+  - speaker: kabunushi2
+    emotion: angry
+    text: 私財を投げ売ってでも責任をとって、社会に還元すべきではないか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 議案にかかわる質問をしてください。
+  - speaker: kabunushi
+    emotion: thinking
+    text: 終わったことはどうしようもない。エアバッグは信用失っている。
+  - speaker: kabunushi2
+    emotion: angry
+    text: '[KSS|ケーエスエス]への[売値|うりね]は、安すぎるんじゃないか！'
+  - speaker: kabunushi
+    emotion: normal
+    text: '[創業家|そうぎょうけ]の持ち株は、どうするつもりだったんだ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 比率を減らす方針もあったが、
+  - speaker: zundamon
+    emotion: thinking
+    text: 結果、そうはならなかった。
+  - speaker: reimu
+    text: 創業家の資産管理会社は、タカタの株の52.1%を持つ筆頭株主でした。
+    reading: そうぎょうけの しさん かんり がいしゃわ、たかたの かぶの ごじゅうにてん いちぱーせんとお もつ ひっとう かぶぬしでした。
+  - speaker: kabunushi2
+    emotion: normal
+    text: 100%減資で、間違いないのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一般論としては、株式の価値はなくなると見込まれます。
+    telops:
+    - {text: "高田「株式の価値はなくなると見込まれます」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kabunushi2
+    emotion: surprised
+    text: 100%ですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 裁判所が判断することになります。
+  - speaker: kabunushi2
+    emotion: surprised
+    text: 1月には、1061円だった株が……。
+    se: gaan
+- id: ch8_ato
+  title: ''
+  background: tt_soukai
+  stage:
+  - {who: kabunushi, x: 0.3, flip: true, emotion: thinking}
+  - {who: kabunushi2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 総会は2時間57分。終わったあと、株主たちは東洋経済の記者にこう話しています。
+    reading: そうかいわ にじかん ごじゅうななふん。おわった あと、かぶぬしたちわ とうよう けいざいの きしゃに こう はなして います。
+  - speaker: kabunushi
+    emotion: thinking
+    text: '[表|おもて]に立って対処するべきだった。'
+  - speaker: kabunushi2
+    emotion: thinking
+    text: 謝罪の言葉は何度も聞いたが、[上っ面|うわっつら]だけの言い方だった。
+# ---- 譲渡と退任（2018年4月） ----
+- id: card2018
+  title: ''
+  background: tt_card_2018
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2018年4月10日、KSSへの事業の譲渡が終わります。高田は翌日、退任しました。
+    reading: にせん じゅうはちねん しがつ とおか、けーえすえすえの じぎょうの じょうとが おわります。たかだわ よくじつ、たいにん しました。
+# ---- 退任の文書（2018年4月） ----
+- id: ch9_tainin
+  title: 退任の文書
+  background: tt_kaiken
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 高田重久, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: その次の日、高田の名前で出た文書には、こうあります。
+    reading: その つぎの ひ、たかだの なまえで でた ぶんしょにわ こう あります。
+  - speaker: zundamon
+    emotion: sad
+    text: 当社を代表して改めて深くお詫び申し上げます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2018年4月11日付で、私は当社の代表取締役会長兼社長を退任し……
+  - speaker: zundamon
+    emotion: thinking
+    text: 自動車業界の発展とユーザーの皆様の安全に貢献していくことを願っています。
+# ---- 説明会（2018年4月18日） ----
+- id: ch9_setsumei
+  title: 戻るのは1%
+  background: tt_kaigi
+  stage:
+  - {who: torihiki, x: 0.3, flip: true, emotion: normal}
+  - {who: tanto, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月18日。滋賀県で、取引先などへの説明会が開かれます。
+    reading: しがつ じゅうはちにち。しがけんで、とりひきさき などえの せつめいかいが ひらかれます。
+  - speaker: tanto
+    emotion: normal
+    text: 自動車メーカー以外の皆様への弁済は、50万円までは全額です。
+  - speaker: torihiki
+    emotion: happy
+    text: 全額！ よかった……。
+  - speaker: tanto
+    emotion: thinking
+    text: 50万円を超える分は、1%になります。
+    background: tt_kaigi_akaji
+  - speaker: torihiki
+    emotion: surprised
+    text: い、1%……！？
+  - speaker: torihiki
+    emotion: thinking
+    text: うちへの払いは、100万円残ってるんです。
+  - speaker: tanto
+    emotion: thinking
+    text: 50万円と、残りの50万円の1%。合わせて、50万5000円です。
+  - speaker: torihiki
+    emotion: sad
+    text: 半分と、ちょっと……。
+    se: shobon
+  - speaker: torihiki
+    emotion: thinking
+    text: 会社は、いくらで売れたんです？
+  - speaker: tanto
+    emotion: normal
+    text: 15億8800万ドル。日本円で、約1750億円です。
+  - speaker: torihiki
+    emotion: thinking
+    text: 借金は、1兆円を超えるのに……。
+  - speaker: reimu
+    text: 計画は5月、債権者の数で93%、議決権で96%の賛成で可決されます。
+    reading: けいかくわ ごがつ、さいけんしゃの かずで きゅうじゅうさんぱーせんと ぎけつけんで きゅうじゅうろくぱーせんとの さんせいで かけつ されます。
+# ---- 名前が消える（2018年6月） ----
+- id: ch9_kieru
+  title: 名前が消える
+  background: tt_shoken
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 6月20日。タカタの株はすべて無償で取り上げられ、消されました。1061円をつけた株が、0円です。
+    reading: ろくがつ はつか。たかたの かぶわ すべて むしょうで とりあげられ、けされました。せん ろくじゅういちえんお つけた かぶが、ぜろえんです。
+  - speaker: reimu
+    text: 翌21日、タカタ株式会社はTKJP株式会社に。残ったのは、回収した部品を集めて捨てる仕事だけでした。
+    reading: よく にじゅういちにち、たかた かぶしきがいしゃわ てぃーけーじぇーぴー かぶしきがいしゃに。のこったのわ、かいしゅう した ぶひんお あつめて すてる しごとだけでした。
+    telops:
+    - {text: "タカタ → TKJP", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 彦根の織物工場から85年。タカタという名前の会社は、なくなりました。
+    reading: ひこねの おりもの こうじょうから はちじゅうごねん。たかたと いう なまえの かいしゃわ、なくなりました。
+# ---- 現代：整備工場 ----
+- id: gendai_seibi
+  title: いまも続く交換
+  background: tt_seibi
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, emotion: happy}
+  - {who: seibishi, x: 0.52, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: はがきを持って、整備工場に来たのだ！
+  - speaker: seibishi
+    emotion: normal
+    text: エアバッグのリコールですね。部品代も工賃も、かかりませんよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: タダなの！？
+  - speaker: seibishi
+    emotion: normal
+    text: 危険の高い型で直していない車は、2018年5月から車検に通らなくなりました。
+  - speaker: zundamon
+    emotion: sad
+    text: だからボクの車、落ちたのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[国交省|コクコウショウ]によると、日本の改修率は2026年6月末で約99.7%よ。'
+  - speaker: zundamon
+    emotion: normal
+    text: ほとんど、終わってるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、ゼロじゃないの。古い車ほど、気をつけてね。
+  - speaker: seibishi
+    emotion: normal
+    text: 湿気と暑さ寒さと[年月|ねんげつ]で、中の火薬が変わるんです。
+  - speaker: seibishi
+    emotion: happy
+    text: はい、交換が終わりました。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの車、命を守る部品に戻ったのだ！
+    se: levelup
+# ---- 現代：タカタのいま ----
+- id: ima
+  title: タカタのいま
+  background: tt_gendai
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: タカタの仕事は、もう全部なくなったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 事業は、[KSS|ケーエスエス]が名前を変えたジョイソン・セイフティ・システムズに移ったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 中国の会社に買われたって、聞いたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[KSS|ケーエスエス]はアメリカの会社で、2016年から中国の会社の傘下なの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 選んだのは、タカタが作った外部の委員会よ。支援の額と、手続きの安定を見てね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 乗っ取られたわけじゃ、ないのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカでは、今もエアバッグの交換が続いてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2022年の[AP|エーピー]通信のまとめでは、世界で33人だったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: アメリカの当局は2024年9月、米国内で28人目の死者を確認したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2026年10月のホンダの資料では、ホンダの車だけでアメリカで20人よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2001年から2003年の一部の車は、破裂の確率が最大50%。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ホンダは、直すまで運転しないでと呼びかけてるの。
+  - speaker: zundamon
+    emotion: sad
+    text: ……最大で、半分。
+  - speaker: zundamon
+    emotion: thinking
+    text: 直していない車が、まだ走ってるかもしれないのか……。
+# ---- 論争の章 ----
+- id: ronso1
+  title: 安い火薬を選んだ？
+  background: tt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ネットで見たんだけど、タカタは安い火薬をケチって選んだって。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカの報道や訴訟の側では、別の火薬より安かったと言われてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 昔の技術者が、心配を伝えていたという話もあるの。
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり、ケチったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でもタカタのアメリカの広報は、コストが理由ではないと説明してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が挙げたのは、小さく軽くできることと化学的な安定よ。
+  - speaker: zundamon
+    emotion: angry
+    text: でも、破裂したのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年にアメリカの当局は、乾燥剤の入った同じ系統の火薬を回収の拡大から外したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ火薬なのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[国交省|コクコウショウ]のまとめも、乾燥剤の入っていないものと書いてるわ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 乾燥剤なし。湿気。暑さ寒さ。長い[年月|ねんげつ]。これが重なったときなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4つそろうと、中身が変わる……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 安かったから、とは言い切れない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 小さく軽く作れる火薬は、乾燥剤なしだと[年月|ねんげつ]と湿気に弱かった。言えるのは、そこまでよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクのおやつは、安いから選んでるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そっちは言い切れるのね。
+    se: hammer
+- id: ronso2
+  title: 全部知っていて隠した？
+  background: tt_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、全部知ってて隠してたのだ！ 名探偵のボクには分かるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 名探偵は、証拠を見てから言うものよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言える面も、あるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社としてのタカタは、アメリカの裁判で有罪を認めたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 試験データの報告をめぐる、通信詐欺よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカの司法省は、データの削除・改変・操作と書いてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダも、テストデータを誤って伝えていたと思われると発表したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: タカタは2005年に写真で異常を見ても、当局には知らせなかった。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[清水|しみず]さんが、議会でそう証言してるの。'
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、言い切れない面もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2004年に秘密の試験をしていた、という報道は[元社員|もとしゃいん]の話。タカタは否定したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 知らされたのは2005年5月。その前に試験はできないと、[清水|しみず]さんは証言してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 起訴された[元幹部|もとかんぶ]3人の裁判は、開かれていないの。日本に住んでいるとされるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 原因を当局が確かめたのは2016年。[高田|タカダ]さんは破綻の日も、不可解と言っていたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社が認めたことと人が知っていたことは、別……？
+  - speaker: tsumugi
+    emotion: normal
+    text: データの報告をごまかしたことは、会社がアメリカの裁判で認めた。
+  - speaker: tsumugi
+    emotion: normal
+    text: でもいつ誰が何を知っていたかは、個人の裁判では決まっていないの。
+- id: ronso3
+  title: 悪いのはタカタだけ？
+  background: tt_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ悪いのはタカタだけで、車の会社はかわいそうな側なのだ。一件落着！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 勝手に落着させないの。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: 自動車メーカーも、当事者だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカのホンダも死傷などの報告を当局に出さず、制裁金を払ってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: ホンダは議会で、性能の要求を出してタカタがその基準で設計したと証言したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その一方で、回収の費用の多くを肩代わりしたのも自動車メーカーよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちか一方だけの話じゃ、ないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 部品の会社と自動車メーカー。両方の話なのよ。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 自分の車を調べる
+  background: tt_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: リコールのお知らせは、車の登録の住所に届くの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 引っ越したら、登録の住所も変えてね。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクのはがき、前の家に行ってたかもしれないのだ！
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: '[国交省|コクコウショウ]も持ち主や住所が変わったら、手続きをと呼びかけてるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分の車が対象かは、車検証の[車台番号|しゃだいばんごう]で調べられるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[国交省|コクコウショウ]のサイトから、メーカーごとの検索のページに行けるの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: '[車台番号|しゃだいばんごう]って、車の背番号みたいなものなのだ？'
+  - speaker: tsumugi
+    emotion: happy
+    text: そう。1台ごとに違う番号よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 中古の車を買うときも、確かめてね。直すのは無料よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、エアバッグそのものを怖がらなくていいの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 問題は、特定の種類の部品。調べて、対象なら直す。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: tt_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの車は、もう大丈夫なのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいわね。
+  - speaker: zundamon
+    emotion: happy
+    text: これからは、はがきを[表|おもて]から読むのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、ふつうのことよ。
+    se: oti
+    pause_after: 0.72
+  - speaker: tsumugi
+    emotion: normal
+    text: 何が悪かったんだろう。破綻の日、会社のトップはそう言ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 火薬が[年月|ねんげつ]と湿気で変わることは、あとで分かった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもいつ誰が何を知っていたかは、今も全部は分かっていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 顧客にとって製品は[1万分の1|いちまんぶんのいち]ではない。そう伝えられる言葉があるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたの車も、あなたにとっては1台だけ。一度、調べてみてね。
+  - speaker: zundamon
+    emotion: normal
+    text: 調べるのは、タダなのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 参考になったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

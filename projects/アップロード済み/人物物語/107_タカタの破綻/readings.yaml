@@ -1,0 +1,43 @@
+# takata-collapse 読み台帳（人名・社名・地名・専門語）
+# セリフ（VOICEVOX）に出る語は、台本の全出現に [表示|よみ] タグを付けてある。
+# ナレ（ゆっくり）は reading: のひらがなで読ませている。
+# 名札（tag: 高田重久 / label: 清水・高田重一郎・高田武三・本田宗一郎 ほか）とテロップ・章タイトル・meta は表示専用なのでタグを付けていない。
+# 高田武三の読みは台帳で「たけぞう（英語報道からの推定・要確認）」なので、声には出さず名札だけにした（ナレは「重久の祖父」）。
+# 社名のタカタはカタカナ、一族の姓の高田は「たかだ」。株式会社高田工場の読みは確かめていないので台本に出していない。
+# 方（かた）・表（おもて）・空（そら）・金（かね）は言い方・一方・表示・空港などにも掛かるので台帳に入れず、本文の該当箇所だけタグを付けた。
+# 人名
+- {surface: 高田重久, reading: たかだしげひさ}
+- {surface: 高田, reading: たかだ}
+- {surface: 重久, reading: しげひさ}            # ナレだけに出る
+- {surface: 重一郎, reading: じゅういちろう}      # ナレと名札だけに出る
+- {surface: 本田宗一郎, reading: ほんだそういちろう}  # ナレと名札だけに出る
+- {surface: 清水博, reading: しみずひろし}        # ナレだけに出る
+- {surface: 清水, reading: しみず}
+# 社名・地名
+- {surface: KSS, reading: けーえすえす}
+- {surface: TKJP, reading: てぃーけーじぇーぴー}  # ナレとテロップだけに出る
+- {surface: AP, reading: えーぴー}
+- {surface: 彦根, reading: ひこね}
+- {surface: 竹芝, reading: たけしば}              # ナレだけに出る
+- {surface: 国交省, reading: こくこうしょう}      # セリフはタグ [国交省|コクコウショウ]
+- {surface: 創業家, reading: そうぎょうけ}         # そうぎょうか と読まれないように
+# 会見・議会・開示の言葉
+- {surface: 相安定化, reading: そうあんていか}
+- {surface: 硝酸アンモニウム, reading: しょうさんあんもにうむ}
+- {surface: 事業譲渡等, reading: じぎょうじょうととう}   # タグの読みは カタカナ（ジギョウジョウトトウ）
+- {surface: 矢面, reading: やおもて}
+- {surface: 荷重不足, reading: かじゅうぶそく}      # にじゅう と読まれないように
+- {surface: 誤組付け, reading: ごくみつけ}
+- {surface: 訴訟等, reading: そしょうとう}       # タグの読みは カタカナ（ソショウトウ）
+- {surface: 運転者席側, reading: うんてんしゃせきがわ}
+- {surface: 元幹部, reading: もとかんぶ}            # げんかんぶ と読まれないように
+- {surface: 元社員, reading: もとしゃいん}
+- {surface: 上っ面, reading: うわっつら}
+- {surface: 方々, reading: かたがた}                # ほうぼう と読まれないように
+- {surface: α, reading: あるふぁ}
+- {surface: β, reading: べーた}
+# 株・お金・車の言葉
+- {surface: ストップ高, reading: すとっぷだか}
+- {surface: 売値, reading: うりね}
+- {surface: 車台番号, reading: しゃだいばんごう}
+- {surface: 1万分の1, reading: いちまんぶんのいち}
