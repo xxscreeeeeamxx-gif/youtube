@@ -4359,6 +4359,15 @@ SPECS = {
         dict(scene="tt_kojo", tint="yellow", tag="命を守る部品", emo="normal", fx=None, say="世界2位の会社"),
         dict(scene="tt_kaiken_heya", tint="mono", tag="2017年 破綻の日", emo="thinking", fx=None, say="何が悪かった…"),
     ]),
+    # 第5弾（2026-11-13〜16）。A は場面型
+    "vhs-takano": dict(layout="scene", headline="後から出たVHSが逆転", head_hi="逆転", panels=[
+        dict(scene="vh_osetsu", tint="yellow", tag="1976年 松下の選択", emo="surprised", fx="sweat", say="どっちを選ぶ…"),
+        dict(scene="vh_denkiten_gyoretsu", tint="yellow", tag="2年で逆転", emo="happy", fx="sparkle", say="VHSが勝った！"),
+    ]),
+    "chogin-onogi": dict(layout="scene", headline="2度の有罪から逆転無罪", head_hi="逆転無罪", panels=[
+        dict(scene="cg_kokkai", tint="mono", tag="1998年 国会", emo="sad", fx="gloom", say="おわび申し上げます"),
+        dict(scene="cg_saikosai", tint="yellow", tag="2008年 最高裁", emo="surprised", fx="sparkle", say="無罪……！"),
+    ]),
     "olympus-woodford": dict(layout="scene", headline="問いただした社長、解任", head_hi="解任", panels=[
         dict(scene="ol_kaigi", tint="yellow", tag="2011年 買収の報酬", emo="surprised", fx="sweat", say="3割超！？"),
         dict(scene="ol_kuko", tint="mono", tag="解任の日 成田へ", emo="sad", fx="gloom", say="バスで空港へ…"),

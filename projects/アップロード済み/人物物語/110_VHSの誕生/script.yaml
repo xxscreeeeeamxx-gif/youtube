@@ -1,0 +1,1617 @@
+meta:
+  title: 幸之助「ほう、こっちの方が軽うおますなあ」赤字の事業部が作ったVHS、世界で9億台に【ずんだもん解説】
+  slug: vhs-takano
+  hook_line: 先に出て画もきれいと言われたベータに、赤字の事業部のVHSはなぜ勝てたのか。
+  summary: 1976年の春、ビクターの一室。松下幸之助が、机に並んだ3台のビデオを1台ずつ持ち上げました。そのうちの1台を作ったのは、人を減らせと言われ続ける赤字のビデオ事業部と、事業部長の高野鎮雄です。ソニーのベータに1年半遅れた機械は、2時間と仲間づくりで何を変えたのか。そして勝ったはずのビクターは、なぜそのあと苦しんだのか。部下の回想と会社の発表、当事者の著書を主語つきで並べて、晩年までを再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 日本ビクター（JVC）「JVC Awarded Prestigious IEEE Milestone for Development of VHS Video」（2006年10月11日） https://www3.jvckenwood.com/english/press/2006/ieee.pdf
+  - 国立科学博物館 産業技術史資料データベース「VHS方式家庭用ビデオ（初号機モデル） HR-3300」 https://sts.kahaku.go.jp/sts/detail.php?no=900190011024
+  - 白石勇磨「VHS方式家庭用VTR」『テレビジョン学会誌』32巻10号（1978年） https://www.jstage.jst.go.jp/article/itej1978/32/10/32_10_876/_pdf
+  - 日本経済新聞「成功体験の逆襲 ビクターの遠い夜明け」（2011年1月4日） https://www.nikkei.com/article/DGXNASDD280BM_Y0A221C1000000/
+  - 盛田正明・神仁司『人の力を活かすリーダーシップ』抜粋（PRESIDENT Online） https://president.jp/articles/-/74949
+  - 国立映画アーカイブ「マグネティック・テープ・アラート：磁気テープ映像の保存に向けてできること」 https://www.nfaj.go.jp/event/unesco2024/
+  tags:
+  - VHS
+  - 高野鎮雄
+  - 日本ビクター
+  - ベータマックス
+  - ビデオ戦争
+  - 松下幸之助
+  - ソニー
+  - JVCケンウッド
+  - ビデオテープ
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 昭和史
+  thumbnail:
+    top: こっちの方が軽うおますなあ
+    bottom: VHSの逆転
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: konosuke
+    label: 松下幸之助
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2a32'
+  - id: morita
+    label: 盛田昭夫
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: fukusha
+    label: 副社長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#2f3440'
+  - id: keiri
+    label: 経理の部長
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#3e5c4a'
+  - id: gishi
+    label: 技術者
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: eigyo
+    label: 営業マン
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a6a'
+  - id: kenkyu
+    label: 研究者
+    voice: 11
+    pitch: 0.08
+    outfit: labcoat
+  - id: hanbai
+    label: 販売店主
+    voice: 21
+    pitch: 0.0
+    outfit: apron
+  - id: kyaku
+    label: 客
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#4a4038'
+  - id: bucho
+    label: 営業部長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#3a4f5f'
+  - id: shain
+    label: 社員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+scenes:
+# ---- 先出し（1976年の春・ビクターの一室） ----
+- id: co_osetsu
+  title: ''
+  background: vh_osetsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高野鎮雄, emotion: thinking}
+  - {who: konosuke, x: 0.52, emotion: normal}
+  - {who: morita, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1976年の春。ビクターの一室に、親会社の松下と、ライバルのソニーの首脳が集まりました。
+    reading: せんきゅうひゃく ななじゅうろくねんの はる。びくたーの いっしつに おやがいしゃの まつしたと、らいばるの そにーの しゅのうが あつまりました。
+  - speaker: reimu
+    text: 机には、大きさの違うビデオが3台。松下幸之助が、1台ずつ持ち上げます。
+    reading: つくえにわ おおきさの ちがう びでおが さんだい。まつした こうのすけが、いちだいずつ もちあげます。
+  - speaker: konosuke
+    emotion: happy
+    text: ほう、こっちの[方|ほう]が軽うおますなあ。
+    telops:
+    - {text: "幸之助「ほう、こっちの方が軽うおますなあ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ……軽い、か。
+  - speaker: reimu
+    text: 軽いほうを作ったのは、赤字続きの事業部。事業部長は高野鎮雄、52歳です。
+    reading: かるい ほうお つくったのわ、あかじ つづきの じぎょうぶ。じぎょうぶちょうわ たかの しずお、ごじゅうにさいです。
+  - speaker: reimu
+    text: 先に出たベータを抜き、VHSは30年で世界9億台以上。ビクターの2006年の発表です。
+    reading: さきに でた べーたお ぬき、ぶいえいちえすわ さんじゅうねんで せかい きゅうおくだい いじょう。びくたーの にせんろくねんの はっぴょうです。
+    telops:
+    - {text: "30年で9億台以上（ビクター 2006年発表）", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 今の部屋（茶番と問い） ----
+- id: hook
+  title: ''
+  background: vh_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 押し入れから、運動会のビデオテープが出てきたのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: VHSね。見るためのデッキは、あるの？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……無いのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: そのVHS、ソニーのベータより1年半ほど後に出たのよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 画質もベータのほうが上、と言われてたの。
+    telops:
+    - {text: "先に出て画もきれいなベータに、なぜ勝てた？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 後から出て、なんで勝てたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも[勝った|かった]ビクターは、そのあと苦しむの。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[勝った|かった]のに、なんで！？'
+# ---- 1970年：赤字の事業部 ----
+- id: card1970
+  title: ''
+  background: vh_card_1970
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1970年。高野鎮雄が、ビクターのビデオ事業部長になります。
+    reading: せんきゅうひゃく ななじゅうねん。たかの しずおが、びくたーの びでお じぎょうぶちょうに なります。
+- id: ch1_akaji
+  title: 赤字の事業部
+  background: vh_jigyobu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: keiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: keiri
+    emotion: normal
+    text: 事業部長。事業部の数字です。
+  - speaker: zundamon
+    emotion: normal
+    text: 聞こう。
+  - speaker: keiri
+    emotion: thinking
+    text: 業務用のビデオを[細々と|ほそぼそと]作っていますが、精密加工に弱くて。
+  - speaker: keiri
+    emotion: thinking
+    text: 製品は、不良品の山です。
+  - speaker: keiri
+    emotion: thinking
+    text: 販売も伸びず、大赤字と膨大な借金を抱えています。
+  - speaker: reimu
+    text: ビデオの売上は一位のソニーに遠く及ばず、松下の数分の一。人を減らす話も、たびたび出ていました。
+    reading: びでおの うりあげわ いちいの そにーに とおく およばず、まつしたの すうぶんのいち。ひとお へらす はなしも、たびたび でて いました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……で、その責任は。
+  - speaker: keiri
+    emotion: normal
+    text: 事業部長です。損益も資金も、重い責任を負っていただきます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ずいぶん、重い椅子だな。
+  - speaker: zundamon
+    emotion: normal
+    text: よし。家庭用をやろう。家で録れるビデオだ。
+  - speaker: keiri
+    emotion: surprised
+    text: この赤字で、ですか！？
+    se: bikkuri
+  - speaker: reimu
+    text: 高野は浜松の学校で精密機械を学んだ技術者。家庭用のビデオには、大きな需要が来ると見ていました。
+    reading: たかのわ はままつの がっこうで せいみつ きかいお まなんだ ぎじゅつしゃ。かていようの びでおにわ おおきな じゅようが くると みて いました。
+# ---- 1971年：12の目標 ----
+- id: ch1_hyo
+  title: 12の目標
+  background: vh_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: gishi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: gishi
+    emotion: happy
+    text: 事業部長、家庭用の機械は何を目指しますか。
+  - speaker: zundamon
+    emotion: normal
+    text: まず、録画の時間だ。
+  - speaker: gishi
+    emotion: normal
+    text: 1時間なら、テープも機械も小さくできます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1時間じゃ、映画が途中で切れるな。
+  - speaker: zundamon
+    emotion: normal
+    text: 映画もスポーツも最後まで見られる、2時間だ。
+  - speaker: gishi
+    emotion: surprised
+    text: に、2時間！？
+  - speaker: zundamon
+    emotion: normal
+    text: それから、家のテレビにそのままつなげること。
+  - speaker: zundamon
+    emotion: normal
+    text: よその会社の機械とも、テープが使えること。
+  - speaker: gishi
+    emotion: surprised
+    text: よその会社とも！？
+  - speaker: zundamon
+    emotion: normal
+    text: 安くて使いやすくて、作りやすいこと。
+  - speaker: gishi
+    emotion: sad
+    text: ……全部、ですか。
+    se: zukko
+  - speaker: gishi
+    emotion: thinking
+    text: ……表にしたら、目標は12になります。
+  - speaker: reimu
+    text: それでも5年後の1号機は25万6000円。当時の大卒の初任給の約2.7か月分、今なら約72万円です。
+    reading: それでも ごねんごの いちごうきわ にじゅうごまん ろくせんえん。とうじの だいそつの しょにんきゅうの やく にーてんななかげつぶん、いまなら やく ななじゅうにまんえんです。
+    telops:
+    - {text: "25万6000円＝初任給の約2.7か月分", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: ソニーの開発の責任者は、のちに著書でこう語っています。
+    reading: そにーの かいはつの せきにんしゃわ、のちに ちょしょで こう かたって います。
+  - speaker: reimu
+    text: 大河ドラマは45分の番組でした。1時間以上の番組はあまりありませんでした。
+    reading: たいが どらまわ よんじゅうごふんの ばんぐみでした。いちじかん いじょうの ばんぐみわ あまり ありませんでした。
+  - speaker: reimu
+    text: それで、ソニーは1時間録画できれば十分だという考えでスタートしました。
+    reading: それで そにーわ いちじかん ろくが できれば じゅうぶんだと いう かんがえで すたーと しました。
+  - speaker: reimu
+    text: 1時間か、2時間か。この差が、のちに勝負を分けます。
+    reading: いちじかんか にじかんか。この さが、のちに しょうぶお わけます。
+    telops:
+    - {text: "1時間か、2時間か", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 1973年：親会社の方式で出せ ----
+- id: card1973
+  title: ''
+  background: vh_card_1973
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1973年。親会社の松下が、自分の方式の家庭用ビデオ、オートビジョンを出します。
+    reading: せんきゅうひゃく ななじゅうさんねん。おやがいしゃの まつしたが じぶんの ほうしきの かていよう びでお、おーとびじょんお だします。
+- id: ch1_fukusha
+  title: 親会社の方式で出せ
+  background: vh_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: fukusha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: fukusha
+    emotion: normal
+    text: '[高野|たかの]くん。松下さんが、オートビジョンを出した。'
+  - speaker: fukusha
+    emotion: normal
+    text: うちも、この方式で出しなさい。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……お断りします。
+    se: don
+  - speaker: fukusha
+    emotion: surprised
+    text: なに？ 親会社の方式だぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: あれは、本命ではありません。
+  - speaker: fukusha
+    emotion: angry
+    text: 赤字の事業部が、親会社に逆らうのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 本命は、うちで作ります。
+  - speaker: fukusha
+    emotion: thinking
+    text: 松下さんに、何と言えばいいんだ……。
+  - speaker: fukusha
+    emotion: angry
+    text: ……知らんぞ。
+    beat: true
+  - speaker: reimu
+    text: オートビジョンは、まもなく市場から消えました。親会社がどの方式を選ぶかが、勝負の分かれ目になります。
+    reading: おーとびじょんわ まもなく しじょうから きえました。おやがいしゃが どの ほうしきお えらぶかが、しょうぶの わかれめに なります。
+# ---- 1973年：命を懸けてやってくれ ----
+- id: ch2_inochi
+  title: 命を懸けてやってくれ
+  background: vh_jigyobu
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: eigyo, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: eigyo
+    emotion: happy
+    text: 本社で、事業部の機械を家庭向けに売る担当になりました。
+  - speaker: zundamon
+    emotion: normal
+    text: アンタか。
+  - speaker: zundamon
+    emotion: normal
+    text: 命を懸けてやってくれ。
+  - speaker: eigyo
+    emotion: surprised
+    text: い、命……ですか。
+  - speaker: eigyo
+    emotion: thinking
+    text: ……時代劇みたいな言い方だな。
+    beat: true
+- id: ch2_seki
+  title: ''
+  background: vh_jigyobu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: eigyo, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: eigyo
+    emotion: normal
+    text: 事業部長。うちの部署がなくなるので、別の職場へ移ることになりました。
+  - speaker: eigyo
+    emotion: sad
+    text: 事業部長に誘っていただいたのに、すみません。
+  - speaker: eigyo
+    emotion: normal
+    text: ご挨拶に、まいりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: そんなところへ転勤しろと言われて、アンタは黙って承知したのか？
+  - speaker: eigyo
+    emotion: normal
+    text: はい。上司にお任せしました。
+  - speaker: zundamon
+    emotion: angry
+    text: なに！ なぜビデオに移りたい、ダメなら会社を辞めると言わなかった！
+  - speaker: zundamon
+    emotion: angry
+    text: アンタの顔なんか、もう見たくない！
+  - speaker: eigyo
+    emotion: sad
+    text: ……挨拶に、来ただけなのに。
+    se: shobon
+# ---- 1975年：ベータの発売 ----
+- id: ch2_beta
+  title: 文庫本と映画1本
+  background: vh_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: gishi, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1975年5月10日。ソニーが、家庭用ビデオのベータマックスを売り出します。
+    reading: せんきゅうひゃく ななじゅうごねん ごがつ とおか。そにーが、かていよう びでおの べーたまっくすお うりだします。
+  - speaker: gishi
+    emotion: surprised
+    text: 事業部長！ ソニーのベータマックスが出ました！
+  - speaker: gishi
+    emotion: thinking
+    text: 去年うちと松下さんに試作機を見せて、方式をそろえようと言ってきた機械です。
+  - speaker: zundamon
+    emotion: normal
+    text: 録画は、何時間だ。
+  - speaker: gishi
+    emotion: normal
+    text: 1時間です。カセットは、文庫本くらいの大きさです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 文庫本、か。
+  - speaker: zundamon
+    emotion: thinking
+    text: それじゃ、映画1本は入らないな。
+  - speaker: gishi
+    emotion: sad
+    text: でも、よく売れてるそうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……だろうな。
+  - speaker: gishi
+    emotion: thinking
+    text: 先を越されて、うちに勝ち目はあるんでしょうか。
+  - speaker: zundamon
+    emotion: normal
+    text: ……2時間だ。
+    beat: true
+  - speaker: reimu
+    text: ベータは、家庭用ビデオの決定版と言われました。VHSの試作機は、まだ出来上がっていません。
+    reading: べーたわ かていよう びでおの けっていばんと いわれました。ぶいえいちえすの しさくきわ まだ できあがって いません。
+# ---- 1975年：試作機と、松下の研究者 ----
+- id: ch2_shisaku
+  title: 試作機
+  background: vh_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: gishi, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1975年の夏から秋。VHSの試作機が出来上がります。
+    reading: せんきゅうひゃく ななじゅうごねんの なつから あき。ぶいえいちえすの しさくきが できあがります。
+  - speaker: gishi
+    emotion: happy
+    text: 事業部長、できました！ 2時間、録れます！
+    se: levelup
+  - speaker: zundamon
+    emotion: happy
+    text: よくやった。
+- id: ch2_kenkyu
+  title: ''
+  background: vh_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高野鎮雄, emotion: happy}
+  - {who: gishi, x: 0.52, emotion: normal}
+  - {who: kenkyu, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 話は、親会社の松下にも届きます。松下の研究所の人たちが、横浜工場に見に来ました。
+    reading: はなしわ おやがいしゃの まつしたにも とどきます。まつしたの けんきゅうじょの ひとたちが、よこはま こうじょうに みに きました。
+  - speaker: kenkyu
+    emotion: normal
+    text: これが、ビクターさんの試作機ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: どうぞ。中まで、よく見てください。
+  - speaker: gishi
+    emotion: surprised
+    text: 事業部長、全部見せていいんですか！？
+  - speaker: zundamon
+    emotion: normal
+    text: 構わんよ。
+  - speaker: kenkyu
+    emotion: surprised
+    text: 2時間、録れるんですか……。
+  - speaker: kenkyu
+    emotion: thinking
+    text: ……持ち帰って、報告します。
+- id: ch2_saikai
+  title: おう、アンタか
+  background: vh_jigyobu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: happy}
+  - {who: eigyo, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: eigyo
+    emotion: thinking
+    text: ……2年ぶりです。今日から、ビデオ事業部です。
+  - speaker: zundamon
+    emotion: happy
+    text: おう、アンタか！
+  - speaker: eigyo
+    emotion: thinking
+    text: ……顔は、もう見たくないのでは。
+  - speaker: zundamon
+    emotion: normal
+    text: 世界のVHSにしたい。やってくれるか。
+  - speaker: zundamon
+    emotion: normal
+    text: 新しい文化と産業を育てたい。[一企業|いちきぎょう]の損得でVHSをやるのではない。
+  - speaker: zundamon
+    emotion: normal
+    text: 今度は、命がけでやってくれ。
+  - speaker: eigyo
+    emotion: sad
+    text: ……また、命だ。
+    se: manuke
+  - speaker: reimu
+    text: 一企業の損得ではない。この考えが、VHSの勝ち方を決めます。そして、勝ったあとの悩みも。
+    reading: いちきぎょうの そんとくでわ ない。この かんがえが ぶいえいちえすの かちかたお きめます。そして、かった あとの なやみも。
+# ---- 1976年の春：3台の機械 ----
+- id: card1976
+  title: ''
+  background: vh_card_1976
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1976年の春。ビクターの一室に、3社の首脳が集まります。
+    reading: せんきゅうひゃく ななじゅうろくねんの はる。びくたーの いっしつに、さんしゃの しゅのうが あつまります。
+- id: ch3_sandai
+  title: 3台の機械
+  background: vh_osetsu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: konosuke, x: 0.52, emotion: normal}
+  - {who: morita, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 松下は相談役の松下幸之助。ソニーは会長の盛田昭夫たち。ビクターからは、事業部長の高野も加わります。
+    reading: まつしたわ そうだんやくの まつした こうのすけ。そにーわ かいちょうの もりた あきおたち。びくたーからわ じぎょうぶちょうの たかのも くわわります。
+  - speaker: zundamon
+    emotion: normal
+    text: こちらがVHSです。録画は、2時間です。
+  - speaker: reimu
+    text: 机にはベータとVHS、それに松下の子会社のVX。最後に幸之助が、各社の機械を持ち上げます。
+    reading: つくえにわ べーたと ぶいえいちえす、それに まつしたの こがいしゃの ぶいえっくす。さいごに こうのすけが かくしゃの きかいお もちあげます。
+  - speaker: konosuke
+    emotion: happy
+    text: ほう、こっちの[方|ほう]が軽うおますなあ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……軽い、か。
+  - speaker: reimu
+    text: その場にいたソニーの大賀典雄の回想では、幸之助はほほ笑み、ビクター製の採用が決まったといいます。
+    reading: その ばに いた そにーの おおが のりおの かいそうでわ こうのすけわ ほほえみ、びくたーせいの さいようが きまったと いいます。
+  - speaker: reimu
+    text: VHSは、ベータより5キロほど軽かったといいます。お米の5キロ袋、1つ分です。
+    reading: ぶいえいちえすわ べーたより ごきろ ほど かるかったと いいます。おこめの ごきろ ぶくろ、ひとつぶんです。
+# ---- 1976年5月：百五十点 ----
+- id: ch3_hyakugoju
+  title: 百五十点？
+  background: vh_soudanyaku
+  stage:
+  - {who: konosuke, x: 0.3, flip: true, emotion: normal}
+  - {who: morita, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 5月7日。幸之助は、ソニーの盛田昭夫にこう言ったとされます。
+    reading: ごがつ なのか。こうのすけわ、そにーの もりた あきおに こう いったと されます。
+  - speaker: konosuke
+    emotion: normal
+    text: 規格統一は、何としてもせなあかん。
+  - speaker: konosuke
+    emotion: thinking
+    text: わしの見るところ、ベータマックスは百点や。
+  - speaker: konosuke
+    emotion: normal
+    text: わしの見るところ、VHSは百五十点や。
+  - speaker: konosuke
+    emotion: thinking
+    text: これだけ差がある以上、どうにもならん。
+  - speaker: konosuke
+    emotion: normal
+    text: '[盛田|もりた]はん、率直に言います。'
+  - speaker: konosuke
+    emotion: normal
+    text: VHSの規格を採用してもらうという訳には、いかんやろうか。
+  - speaker: morita
+    emotion: thinking
+    text: ……ご迷惑を、おかけしました。
+    beat: true
+  - speaker: reimu
+    text: ただ、幸之助の言葉は資料で割れます。200点とする回想も、安く作れる方を採るとする本もあります。
+    reading: ただ こうのすけの ことばわ しりょうで われます。にひゃくてんと する かいそうも、やすく つくれる ほうお とると する ほんも あります。
+# ---- 1976年9月と10月：発表と発売 ----
+- id: ch3_hatsubai
+  title: 25万6000円
+  background: vh_denkiten
+  bgm: honwaka_puppu
+  stage:
+  - {who: kyaku, x: 0.28, flip: true, emotion: normal}
+  - {who: hanbai, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 9月9日、ビクターはVHSの1号機HR-3300を発表。売り出しは、10月31日です。
+    reading: くがつ ここのか、びくたーわ ぶいえいちえすの いちごうき えいちあーる さんぜん さんびゃくお はっぴょう。うりだしわ じゅうがつ さんじゅういちにちです。
+  - speaker: kyaku
+    emotion: normal
+    text: これが、2時間録れるビデオか。
+  - speaker: hanbai
+    emotion: happy
+    text: はい。120分のテープ1本で、映画が丸ごと入ります。
+  - speaker: kyaku
+    emotion: happy
+    text: 夜中の映画も[録って|とって]おけば、朝に見られるのか。
+  - speaker: hanbai
+    emotion: happy
+    text: 見たい時に、見たいだけ見られます。
+  - speaker: kyaku
+    emotion: happy
+    text: テープは、いくら？
+  - speaker: hanbai
+    emotion: happy
+    text: 6000円です。
+  - speaker: kyaku
+    emotion: thinking
+    text: で、本体は？
+  - speaker: hanbai
+    emotion: happy
+    text: 25万6000円です！
+  - speaker: kyaku
+    emotion: surprised
+    text: 給料の、3か月分近いじゃないか！
+    se: gaan
+  - speaker: hanbai
+    emotion: normal
+    text: チューナー入りで、重さは13.5キロ。小さくて[軽い|かるい]ですよ。
+  - speaker: kyaku
+    emotion: thinking
+    text: 本体は軽くても、値段は重いな。
+    beat: true
+# ---- 1976年秋：他社のマーク ----
+- id: ch4_line
+  title: 他社のマーク
+  background: vh_line
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: eigyo, x: 0.7, tag: 営業課長, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 売り出しの秋。生産が追いつかず、店に出す機械がまるで足りません。
+    reading: うりだしの あき。せいさんが おいつかず、みせに だす きかいが まるで たりません。
+  - speaker: eigyo
+    emotion: surprised
+    text: 事業部長！ うちのマークが、1台も流れていません！
+  - speaker: eigyo
+    emotion: angry
+    background: vh_line_yoso
+    text: シャープに三菱電機……流れてくるのは、よその会社のマークばかりです！
+  - speaker: zundamon
+    emotion: normal
+    text: ああ。先に、仲間の会社へ回している。
+  - speaker: eigyo
+    emotion: angry
+    text: 敵に塩を送るとは、どういう神経ですか！
+  - speaker: zundamon
+    emotion: normal
+    text: まだ生産ラインが出来てないから、アンタ方はただ配給しているだけだ。
+  - speaker: zundamon
+    emotion: normal
+    text: しかし生産体制が整ったら、数量が急増する。
+  - speaker: zundamon
+    emotion: normal
+    text: その時どうやって普及させるか考えるのが、アンタの仕事だ。
+  - speaker: eigyo
+    emotion: thinking
+    text: ……でも、よそのマークですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 世界のVHSになったら、テレビと同じくらいの台数が必要になる。
+  - speaker: eigyo
+    emotion: surprised
+    text: テ、テレビと同じくらい！？
+  - speaker: zundamon
+    emotion: normal
+    text: 年間数千万台という量を、我が社だけで供給できるはずもない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 供給できる仲間をもっともっと増やさないと、責任が果たせない。
+  - speaker: zundamon
+    emotion: normal
+    text: その仲間とは、開発期の利益も分かち合って協力していかなければ……
+  - speaker: zundamon
+    emotion: normal
+    text: 世界のVHSには、育てられない。
+  - speaker: zundamon
+    emotion: normal
+    text: 了見の狭いことを考えるな！
+    beat: true
+    telops:
+    - {text: "高野「了見の狭いことを考えるな！」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: eigyo
+    emotion: sad
+    text: ……はい。
+# ---- 1976〜1977年：発明したと書くな ----
+- id: ch4_kokoku
+  title: 発明したと書くな
+  background: vh_eigyo
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: eigyo, x: 0.7, tag: 営業課長, emotion: happy}
+  cuts:
+  - speaker: eigyo
+    emotion: happy
+    text: 宣伝の案です。VHSはビクターが発明した、と大きく入れました！
+  - speaker: zundamon
+    emotion: thinking
+    text: VHSはビクターが発明したとか、ビクターの技術が優れているという表現は……
+  - speaker: zundamon
+    emotion: angry
+    text: うちの宣伝に、一切使っちゃいかん。
+  - speaker: eigyo
+    emotion: surprised
+    text: え、本当のことなのに！？
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: 新しいメディアは、1企業だけで発展させることは出来ない。
+    telops:
+    - {text: "高野「新しいメディアは、1企業だけで発展させることは出来ない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: それを1社の広告なんぞで技術が優れているとか、自分が作った[等|など]と言うのは傲慢だ。
+  - speaker: eigyo
+    emotion: thinking
+    text: ……じゃあ、何を書けば。
+  - speaker: reimu
+    text: 通った案は、小さなビデオの大きな宣言。
+    reading: とおった あんわ、ちいさな びでおの おおきな せんげん。
+# ---- 1977年：仲間と、在庫の山 ----
+- id: card1977
+  title: ''
+  background: vh_card_1977
+  cuts:
+  - speaker: reimu
+    text: 1977年。ベータには東芝と三洋が付き、松下はアメリカのRCAと組んで、VHSを出しました。
+    reading: せんきゅうひゃく ななじゅうななねん。べーたにわ とうしばと さんようが つき、まつしたわ あめりかの あーるしーえーと くんで ぶいえいちえすお だしました。
+- id: ch4_zaiko
+  title: 在庫の山
+  background: vh_eigyo
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: eigyo, x: 0.7, tag: 営業課長, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 売り出しから半年。生産が整うと、今度は売れ行きが伸び悩みます。
+    reading: うりだしから はんとし。せいさんが ととのうと、こんどわ うれゆきが のびなやみます。
+  - speaker: eigyo
+    emotion: sad
+    text: 事業部長、在庫が増えています。
+  - speaker: eigyo
+    emotion: sad
+    background: vh_eigyo_zaiko
+    text: ……まだ、増えています。
+  - speaker: eigyo
+    emotion: thinking
+    text: 箱の向こうの壁が、もう見えません。
+  - speaker: eigyo
+    emotion: thinking
+    text: よそは値引きを始めました。うちにも[拡販費|カクハンヒ]を、お願いします。
+  - speaker: zundamon
+    emotion: thinking
+    text: アンタは今何歳だ、ン？
+  - speaker: eigyo
+    emotion: surprised
+    text: え？
+  - speaker: zundamon
+    emotion: thinking
+    text: 定年までに、まだ25年もあるのか。
+  - speaker: zundamon
+    emotion: normal
+    text: で、その[金|かね]はアンタの定年の時に役立つ[金|かね]か？
+  - speaker: zundamon
+    emotion: normal
+    text: 無駄になる[金|かね]か？ どっちですか。
+  - speaker: eigyo
+    emotion: surprised
+    text: ……な、なんで急に敬語。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: angry
+    text: アンタ方営業は、値引きすることしか知恵が無いのか。
+  - speaker: zundamon
+    emotion: normal
+    text: いいか。今度は、技術屋に代わってアンタ方が大発明をする番だ。
+  - speaker: eigyo
+    emotion: surprised
+    text: だ、大発明！？ 営業がですか！？
+  - speaker: eigyo
+    emotion: sad
+    text: ……もらえたのは、お[金|かね]じゃなくて宿題か。
+    beat: true
+  - speaker: reimu
+    text: 規格の争いが激しくなっても、在庫はさらに膨らんでいきます。
+    reading: きかくの あらそいが はげしく なっても、ざいこわ さらに ふくらんで いきます。
+  - speaker: eigyo
+    emotion: thinking
+    text: 店では、ベータの悪いところを言って回っているんですが……。
+  - speaker: zundamon
+    emotion: angry
+    text: こんなに素晴らしい商品を売り込む事が出来ない営業には、プロが居ないということか。
+  - speaker: eigyo
+    emotion: sad
+    text: ……プロが、居ない。
+  - speaker: zundamon
+    emotion: thinking
+    text: ライバルをいくら批判しても、それでお客様が買う気になってくれるわけじゃないだろう。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分に知恵が無かったら、もっといろんな人達から知恵を借りてきたらいいじゃないか。
+  - speaker: zundamon
+    emotion: normal
+    text: お客さんの声も、もっと聞いてきたらどうかね。
+# ---- 1977年：アルバムビデオ ----
+- id: ch4_album
+  title: アルバムビデオ
+  background: vh_denkiten
+  bgm: pop
+  stage:
+  - {who: eigyo, x: 0.28, flip: true, tag: 営業課長, emotion: thinking}
+  - {who: hanbai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 知恵を借りた先は、川崎の販売店でした。
+    reading: ちえお かりた さきわ、かわさきの はんばいてんでした。
+  - speaker: hanbai
+    emotion: normal
+    text: お客さんのアルバムの写真で、うちがビデオを作って見せたらどうです。
+  - speaker: eigyo
+    emotion: surprised
+    text: 写真を、ビデオに？
+  - speaker: hanbai
+    emotion: happy
+    text: 自分の家族がテレビに映ったら、見たくなるでしょう。
+  - speaker: eigyo
+    emotion: thinking
+    text: 写真なら、どの家にもありますね……。
+  - speaker: eigyo
+    emotion: happy
+    text: ……アルバムビデオだ！
+    se: hirameki
+- id: ch4_bucho
+  title: ''
+  background: vh_eigyo
+  stage:
+  - {who: eigyo, x: 0.28, flip: true, tag: 営業課長, emotion: thinking}
+  - {who: bucho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: eigyo
+    emotion: sad
+    text: 部長。本社に資金を頼みましたが、反応は冷ややかでした。
+  - speaker: bucho
+    emotion: thinking
+    text: ……そうか。
+  - speaker: bucho
+    emotion: normal
+    text: やろう。失敗しても、殺されやしないだろう。
+  - speaker: eigyo
+    emotion: surprised
+    text: ぶ、部長の独断ですか。
+    beat: true
+- id: ch4_gyoretsu
+  title: ''
+  background: vh_denkiten
+  stage:
+  - {who: eigyo, x: 0.28, flip: true, tag: 営業課長, emotion: thinking}
+  - {who: hanbai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月4日。催しの日です。
+    reading: じゅうにがつ よっか。もよおしの ひです。
+  - speaker: hanbai
+    emotion: surprised
+    background: vh_denkiten_gyoretsu
+    text: 課長！ まだ開ける前なのに、行列ができてます！
+  - speaker: eigyo
+    emotion: surprised
+    text: お客さんが、写真のビデオに見入ってる……！
+  - speaker: eigyo
+    emotion: happy
+    text: キャンペーンの名前は、生き生きビデオ祭りでいきましょう！
+  - speaker: reimu
+    text: 催しが全国に広がると、在庫はたちまち底をつきました。
+    reading: もよおしが ぜんこくに ひろがると、ざいこわ たちまち そこお つきました。
+  - speaker: reimu
+    text: 翌年の3月には、70万円近いビデオカメラのセットまで、飛ぶように売れました。
+    reading: よくねんの さんがつにわ ななじゅうまんえん ちかい びでおかめらの せっとまで、とぶように うれました。
+- id: ch4_oshiero
+  title: ''
+  background: vh_eigyo
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 高野鎮雄, emotion: happy}
+  - {who: gishi, x: 0.52, emotion: happy}
+  - {who: eigyo, x: 0.8, tag: 営業課長, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: この苦しいときに、営業が大発明をしてくれた。
+  - speaker: zundamon
+    emotion: happy
+    text: 今度は工場の番だ。頑張って、売れるモノを作ってくれ。
+  - speaker: gishi
+    emotion: happy
+    text: はい！
+  - speaker: zundamon
+    emotion: normal
+    text: それから販売で苦労しているパートナーの他社さんにも、このやり方を教えて差し上げろ。
+  - speaker: eigyo
+    emotion: surprised
+    text: ……た、他社にもですか！？
+  - speaker: eigyo
+    emotion: sad
+    text: 敵に塩どころか、砂糖まで送るんですか……。
+    se: oti
+# ---- 1978年：逆転 ----
+- id: ch4_gyakuten
+  title: 2年で逆転
+  background: vh_kaigi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: keiri, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1978年。VHSは、作った台数でベータを抜きます。売り出しから、2年です。
+    reading: せんきゅうひゃく ななじゅうはちねん。ぶいえいちえすわ つくった だいすうで べーたお ぬきます。うりだしから にねんです。
+  - speaker: keiri
+    emotion: happy
+    background: vh_kaigi_up
+    text: 事業部長、ついに逆転です！
+    telops:
+    - {text: "発売から2年で逆転", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: ……そうか。
+  - speaker: keiri
+    emotion: happy
+    text: 赤字と借金の事業部が、ですよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……まだ、これからだ。
+  - speaker: reimu
+    text: 勝った側の悩みは、ここから始まります。最初の相手は、親会社の松下でした。
+    reading: かった がわの なやみわ、ここから はじまります。さいしょの あいてわ おやがいしゃの まつしたでした。
+# ---- 1979年：4時間か、6時間か ----
+- id: card1979
+  title: ''
+  background: vh_card_1979
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1979年。アメリカでよく売れていた4時間のVHSを、松下は日本でも出そうとします。
+    reading: せんきゅうひゃく ななじゅうきゅうねん。あめりかで よく うれて いた よじかんの ぶいえいちえすお、まつしたわ にほんでも だそうと します。
+- id: ch5_kitei
+  title: 4時間か、6時間か
+  background: vh_jigyobu
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 高野鎮雄, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 高野は、かねてからこう宣言していました。
+    reading: たかのわ、かねてから こう せんげん して いました。
+  - speaker: zundamon
+    emotion: angry
+    text: 2時間規格だけがVHS規格であり、それ以外はVHS規格ではない。
+  - speaker: reimu
+    text: 高野はほかのVHSの仲間の会社と、幸之助を説得しに行きます。
+    reading: たかのわ ほかの ぶいえいちえすの なかまの かいしゃと、こうのすけお せっとく しに いきます。
+- id: ch5_kenka
+  title: ''
+  background: vh_soudanyaku
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: konosuke, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 普及し始めたばかりのVHS規格に4時間規格を導入するのは、
+  - speaker: zundamon
+    emotion: normal
+    text: 規格を混乱させ、普及にブレーキをかけてしまう。
+  - speaker: zundamon
+    emotion: normal
+    text: 4時間規格はあくまでもVHS規格のオプションであり、
+  - speaker: zundamon
+    emotion: normal
+    text: 販売は、米国市場に限定して[戴きたい|いただきたい]。
+  - speaker: konosuke
+    emotion: thinking
+    text: '[君|きみ]の言うような混乱は、米国市場ではおきとらん。'
+  - speaker: konosuke
+    emotion: normal
+    text: 米国では4時間モード付きVHSが、大変良く売れとるそうやないか。
+  - speaker: konosuke
+    emotion: angry
+    text: お客様が評価してくれるものが、[何|なん]でいかんのや。
+    telops:
+    - {text: "幸之助「お客様が評価してくれるものが何でいかんのや」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: ……それは。
+  - speaker: reimu
+    text: 仲間の会社は、そこまで親会社にたてついて高野さんは大丈夫だろうか、と心配したといいます。
+    reading: なかまの かいしゃわ そこまで おやがいしゃに たてついて たかのさんわ だいじょうぶだろうか、と しんぱい したと いいます。
+- id: ch5_6jikan
+  title: 6時間モード
+  background: vh_jigyobu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: thinking}
+  - {who: eigyo, x: 0.7, tag: 営業課長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 決着は、もっと難しい6時間のモード。VHSの仲間の技術陣が作り、松下も4時間を6時間に切り替えます。
+    reading: けっちゃくわ もっと むずかしい ろくじかんの もーど。ぶいえいちえすの なかまの ぎじゅつじんが つくり、まつしたも よじかんお ろくじかんに きりかえます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 松下電器さんも準備しておられた4時間モードを変更して、6時間モードを導入された。
+  - speaker: zundamon
+    emotion: thinking
+    text: 直前での設計変更は、大変だっただろう。
+  - speaker: zundamon
+    emotion: normal
+    text: 親会社にあすこまでたてついたのに、
+  - speaker: zundamon
+    emotion: happy
+    text: うちの経営トップも、よく我慢してバックアップしてくれた。ありがたいことだ。
+  - speaker: eigyo
+    emotion: thinking
+    text: ……たてついた自覚は、あったんですね。
+    se: hammer
+# ---- 1980〜1982年：欧州へ ----
+- id: ch6_oushu
+  title: 欧州に仕事を作る
+  background: vh_kaigi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: thinking}
+  - {who: shain, x: 0.7, tag: 幹部, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1980年。不況の欧州への出張から戻った高野が、幹部を集めます。
+    reading: せんきゅうひゃく はちじゅうねん。ふきょうの おうしゅう えの しゅっちょうから もどった たかのが、かんぶお あつめます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 急増するVTRに対する輸入規制圧力は、[日一日|ヒイチニチ]と大きくなっている。
+  - speaker: zundamon
+    emotion: normal
+    text: 欧州に仕事を作って、失業者を減らすことが大事だ。
+  - speaker: shain
+    emotion: surprised
+    text: 向こうで、作るんですか！？
+  - speaker: shain
+    emotion: thinking
+    text: 日本から送ったほうが、儲かりますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: ビクター一人が儲かるなどというのは、許されない。
+  - speaker: shain
+    emotion: thinking
+    text: ……一人勝ちは、だめなんですね。
+    beat: true
+- id: ch6_gouben
+  title: ''
+  background: vh_europe
+  cuts:
+  - speaker: reimu
+    text: 1982年。イギリスのソーンEMI、西ドイツのテレフンケンとビクターの3社で、合弁の会社を作ります。
+    reading: せんきゅうひゃく はちじゅうにねん。いぎりすの そーん いーえむあい、にしどいつの てれふんけんと びくたーの さんしゃで ごうべんの かいしゃお つくります。
+# ---- 1984年：ソニーの4日続きの広告 ----
+- id: card1984
+  title: ''
+  background: vh_card_1984
+  cuts:
+  - speaker: reimu
+    text: 1984年1月。ソニーが、4日続けて新聞に広告を出します。
+    reading: せんきゅうひゃく はちじゅうよねん いちがつ。そにーが、よっか つづけて しんぶんに こうこくお だします。
+- id: ch6_shinbun
+  title: 4日続きの広告
+  background: vh_jigyobu
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 1日目は、[ベータマックスは|ベータマックスわ]なくなるの？ です。
+  - speaker: shain
+    emotion: thinking
+    text: 2日目は、ベータマックスを買うと損するの？
+  - speaker: shain
+    emotion: thinking
+    text: 3日目は、ベータマックスはこれからどうなるの？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……で、4日目は。
+  - speaker: shain
+    emotion: happy
+    text: ますます面白くなるベータマックス！ です。
+  - speaker: shain
+    emotion: thinking
+    text: 4日続けて読まないと、答えが分からない広告ですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……なるほど。
+    beat: true
+  - speaker: shain
+    emotion: normal
+    text: それと東芝さんがVHSに移るので、うちの技術者が工場へ量産を手伝いに行きます。
+  - speaker: reimu
+    text: この年、売れた家庭用ビデオの8割がVHSになります。売り出しから、8年です。
+    reading: この とし、うれた かていよう びでおの はちわりが ぶいえいちえすに なります。うりだしから はちねんです。
+- id: ch6_buka
+  title: ''
+  background: vh_jigyobu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: eigyo, x: 0.7, tag: 営業課長, emotion: thinking}
+  cuts:
+  - speaker: eigyo
+    emotion: thinking
+    text: 部下に厳しいのはいいけれども、
+  - speaker: eigyo
+    emotion: thinking
+    text: 社内を見回すと、[高野|たかの]さんの部下は割を食っていると思います。
+  - speaker: zundamon
+    emotion: angry
+    text: '[今|いま]自分たちがどういう立場にあるか、アンタはわかっているのか。'
+  - speaker: zundamon
+    emotion: angry
+    text: 自分達が会社を支えているなんて、思い上がるな。
+  - speaker: zundamon
+    emotion: normal
+    text: 世界のVHSにはなったかも知らないが、
+  - speaker: zundamon
+    emotion: angry
+    text: 社員が人間として一流にならなければ、世界の一流会社とは言えないぞ。
+  - speaker: eigyo
+    emotion: sad
+    text: ……はい。
+    beat: true
+# ---- 1986〜1988年：副社長と、増えすぎた仲間 ----
+- id: card1986
+  title: ''
+  background: vh_card_1986
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1986年6月。高野は、副社長になります。62歳です。
+    reading: せんきゅうひゃく はちじゅうろくねん ろくがつ。たかのわ、ふくしゃちょうに なります。ろくじゅうにさいです。
+- id: card1988
+  title: ''
+  background: vh_card_1988
+  cuts:
+  - speaker: reimu
+    text: 1988年1月。ソニーがVHSも作ると発表します。広告では、ベータマックスをやめません、と約束しました。
+    reading: せんきゅうひゃく はちじゅうはちねん いちがつ。そにーが ぶいえいちえすも つくると はっぴょう します。こうこくでわ べーたまっくすお やめませんと やくそく しました。
+- id: ch7_fuesugi
+  title: 増えすぎた仲間
+  background: vh_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 副社長。VHSを作る会社は、韓国にまで広がりましたね。
+  - speaker: kisha
+    emotion: thinking
+    text: 増えすぎでは、ありませんか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……増えすぎた、とも思ったよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも政治の問題や、いろんな圧力もあってね。技術を出さないわけにはいかなかった。
+  - speaker: reimu
+    text: この年、高野が経済誌に語った話の趣旨です。
+    reading: この とし、たかのが けいざいしに かたった はなしの しゅしです。
+  - speaker: reimu
+    text: 1988年度、ビクターの技術料の収入は約130億円。経常利益の6割を超える見通しでした。
+    reading: せんきゅうひゃく はちじゅうはちねんど、びくたーの ぎじゅつりょうの しゅうにゅうわ やく ひゃくさんじゅうおくえん。けいじょう りえきの ろくわりお こえる みとおしでした。
+  - speaker: kisha
+    emotion: surprised
+    text: 利益の6割が、よその会社からの技術料……。
+    se: tenten
+  - speaker: reimu
+    text: 一方で、作る会社が増えるほど、機械の値段は下がっていきます。
+    reading: いっぽうで つくる かいしゃが ふえるほど、きかいの ねだんわ さがって いきます。
+# ---- 副社長、ひとりで工場へ ----
+- id: ch7_kojo
+  title: ひとりで工場へ
+  background: vh_line
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: happy}
+  - {who: shain, x: 0.7, tag: 若い社員, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 副社長の高野は、ときどきそっと工場に入り、ひとりで隅から隅まで見て回りました。
+    reading: ふくしゃちょうの たかのわ ときどき そっと こうじょうに はいり、ひとりで すみから すみまで みて まわりました。
+  - speaker: zundamon
+    emotion: happy
+    text: やあ。調子は、どうかね。
+  - speaker: shain
+    emotion: surprised
+    text: ふ、副社長！？ おひとりですか！？
+  - speaker: shain
+    emotion: thinking
+    text: 副社長が、なんでラインに？
+  - speaker: zundamon
+    emotion: happy
+    text: 続けて、続けて。
+  - speaker: shain
+    emotion: happy
+    text: ハ、はい！
+  - speaker: reimu
+    text: 最後に、幹部のところへちょこっと顔を出します。
+    reading: さいごに、かんぶの ところえ ちょこっと かおお だします。
+- id: ch7_kanbu
+  title: ''
+  background: vh_eigyo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 高野鎮雄, emotion: thinking}
+  - {who: eigyo, x: 0.7, tag: 昔の部下, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ときには、昔の部下の机にも寄って声をかけました。
+    reading: ときにわ、むかしの ぶかの つくえにも よって こえお かけました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 夢中でVHSビジネスをやってきて、自社の事がもっとも手薄になってしまった。
+  - speaker: zundamon
+    emotion: thinking
+    text: VHSが構造不況業種になるのは、時間の問題だ。
+    telops:
+    - {text: "高野「VHSが構造不況業種になるのは時間の問題だ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 大企業病がヒタヒタと浸透しているように感じられるが、アンタはどう思うかね？
+  - speaker: eigyo
+    emotion: thinking
+    text: ……耳が、痛いです。
+  - speaker: reimu
+    text: 1989年、高野は藍綬褒章を受けます。この年の4月、松下幸之助が亡くなりました。
+    reading: せんきゅうひゃく はちじゅうくねん たかのわ らんじゅ ほうしょうお うけます。この としの しがつ、まつした こうのすけが なくなりました。
+  - speaker: reimu
+    text: 1990年6月。高野は副社長を最後に退き、常勤の監査役になります。
+    reading: せんきゅうひゃく きゅうじゅうねん ろくがつ。たかのわ ふくしゃちょうお さいごに しりぞき、じょうきんの かんさやくに なります。
+# ---- 1992年：数千人の庭 ----
+- id: card1992
+  title: ''
+  background: vh_card_1992
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1992年1月19日。高野鎮雄は、68歳で亡くなりました。
+    reading: せんきゅうひゃく きゅうじゅうにねん いちがつ じゅうくにち。たかの しずおわ、ろくじゅうはっさいで なくなりました。
+- id: ch8_niwa
+  title: ''
+  background: vh_kojo_niwa
+  stage:
+  - {who: shain, x: 0.5, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 横浜工場に高野の棺が見えたとき、数千人の社員が庭を埋め尽くしました。
+    reading: よこはま こうじょうに たかのの ひつぎが みえた とき、すうせんにんの しゃいんが にわお うめつくしました。
+  - speaker: shain
+    emotion: sad
+    text: ……[高野|たかの]さん。
+  - speaker: reimu
+    text: 告別式には、ほかの会社のVHSの仲間が、延々と別れに訪れました。
+    reading: こくべつしきにわ ほかの かいしゃの ぶいえいちえすの なかまが、えんえんと わかれに おとずれました。
+  - speaker: reimu
+    text: アメリカの通信社は、高野がほかの電機メーカーにVHSを使うよう、熱心に働きかけたと伝えました。
+    reading: あめりかの つうしんしゃわ たかのが ほかの でんき めーかーに ぶいえいちえすお つかうよう、ねっしんに はたらきかけたと つたえました。
+  - speaker: reimu
+    text: ビクターによれば、それまでに売れたVHSの機械は約3億5000万台でした。
+    reading: びくたーに よれば、それまでに うれた ぶいえいちえすの きかいわ やく さんおく ごせんまんだいでした。
+# ---- 1992年：勝った会社のその後 ----
+- id: ch8_sonogo
+  title: 勝った会社のその後
+  background: vh_kaigi
+  bgm: serious
+  stage:
+  - {who: keiri, x: 0.28, flip: true, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同じ1992年の8月。
+    reading: おなじ せんきゅうひゃく きゅうじゅうにねんの はちがつ。
+  - speaker: shain
+    emotion: sad
+    text: 会社は、2400人を減らすそうです。配当も、出せないと。
+  - speaker: keiri
+    emotion: thinking
+    text: ……VHSで、あれだけ[勝った|かった]のにな。
+    se: namida
+  - speaker: reimu
+    background: vh_kaigi_akaji
+    text: 1993年3月期の最終赤字は、約430億円でした。
+    reading: せんきゅうひゃく きゅうじゅうさんねん さんがつきの さいしゅう あかじわ、やく よんひゃく さんじゅうおくえんでした。
+  - speaker: reimu
+    text: 円高で、輸出の多いビデオの業界は、どこも儲けにくくなっていました。
+    reading: えんだかで ゆしゅつの おおい びでおの ぎょうかいわ、どこも もうけにくく なって いました。
+  - speaker: reimu
+    text: 日経新聞はのちに、ビクターはVHSに続く柱の製品を生み出せなかった、と書いています。
+    reading: にっけい しんぶんわ のちに、びくたーわ ぶいえいちえすに つづく はしらの せいひんお うみだせなかったと かいて います。
+# ---- 論争の章 ----
+- id: ronso1
+  title: 技術はベータが上？
+  background: vh_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ。技術はベータが上だったのに、VHSが[勝った|かった]って！
+  - speaker: tsumugi
+    emotion: normal
+    text: 画質なら、そう言える面があるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ソニーの開発の責任者は、画質はソニーのほうがはるかに良かったと著書に書いてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1988年のアメリカの新聞でも、証券アナリストが画質ならベータが上だったって。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり、ベータのほうがすごいのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもVHSはベータより5キロほど軽くて、部品も少なかったとされるの。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 作りやすさは、VHSなんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電子産業の歴史の連載は、技術の優劣で勝敗がついたわけではないと書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1時間と2時間という、カセットの基本録画時間の違いが本質だったって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 技術って、画質のことだけじゃないのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 画質はベータ、長さと作りやすさはVHS。お客さんが選んだのは、長さだったの。
+- id: ronso2
+  title: 幸之助の一言で決まった？
+  background: vh_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: でも最後は、[幸之助|コーノスケ]さんの一言で決まったんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ソニーの開発の責任者も、著書にこう書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後の瞬間は松下さんがどっちに転ぶか、それで決まったみたいです。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、やっぱり！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ[幸之助|コーノスケ]さんの言葉は、資料で割れるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 150点とも200点とも言われるし、安く作れる方を採るって話もあるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 点数まで、ばらばらなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 松下のビデオ事業部長だった人は、普及の最大の山場はRCAとの提携だったって。
+  - speaker: tsumugi
+    emotion: normal
+    text: それにビクターは日立やシャープ、三菱や欧米の会社にも仲間を広げたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: レンタルのお店のソフトも、だんだんVHSに寄っていったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一言じゃなくて、仲間の数なのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[幸之助|コーノスケ]さんの判断は大きかった。でも決めたのは、仲間の数と2時間よ。'
+- id: ronso3
+  title: 窓際族が作った？
+  background: vh_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: VHSって、窓際族が本社に隠れて作ったんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 窓際族っていうのは、のちにテレビ番組でそう呼ばれたのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 赤字の事業部の小さなチームが、本社の後押しが薄いまま作ったのは本当。
+  - speaker: tsumugi
+    emotion: normal
+    text: 経理の責任者も、限られた人材と資金のなかでひそかに開発に挑んだと話してる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも[高野|たかの]さんは事業部長。開発も生産も販売も、幅広い権限を持ってたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1976年には、取締役にもなってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 窓際どころか、ど真ん中なのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 映画にもなったけど、主人公は[高野|たかの]さんをもとにした別の名前の人物よ。
+- id: chui
+  title: 本当の注意点
+  background: vh_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、さっきの運動会のテープよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクのテープ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 国立映画アーカイブは、ユネスコのこんな警告を紹介してるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2025年までにデジタルファイル化しなければ、永遠にアクセスできなくなりかねない。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2025年って、もう過ぎてるのだ！
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 理由は、再生機の生産と保守の完全終了。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに技術者の減少と、テープの経年劣化よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見る機械も直す人も、いなくなるんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国内で最後まで新しいVHSのデッキを作っていたメーカーも、2016年にやめたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから家にあるVHSやベータや8ミリのテープは、早めにデジタルに移してね。
+  - speaker: zundamon
+    emotion: thinking
+    text: まだ、間に合うのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: テープが傷みきる前なら、望みはあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: デッキが動くうちに、業者に頼むか機械でダビングするの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: カビの生えたテープは、無理に再生しないこと。
+  - speaker: zundamon
+    emotion: happy
+    text: 運動会、急いで救出するのだ！
+# ---- 現代の章 ----
+- id: gendai
+  title: 発売から50年
+  background: vh_hakubutsukan
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: VHSの1号機の発売から、2026年10月31日でちょうど50年になったの。
+  - speaker: zundamon
+    emotion: happy
+    text: 半世紀なんだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: ビクターの2006年の発表では、30年で世界で9億台以上のデッキが作られたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 9億台……！
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ年、VHSはアメリカの電気電子学会から歴史に残る技術として認められたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本からは6件目で、映像と音響の分野では初めてよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 記念の銘板には、[高野鎮雄|タカノシズオ]と[白石勇磨|シライシユウマ]が率いる技術者のチームが開発したと刻まれてるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 名前が、ちゃんと残ってるんだね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1号機は、国立科学博物館の産業技術史資料にもなってるの。
+- id: gendai2
+  title: ''
+  background: vh_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は2008年にケンウッドと経営を統合して、2011年に[JVCケンウッド|ジェイブイシーケンウッド]に。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 横浜工場は、売却が進んだの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1930年にできた正面の壁も壊されると、2011年の新聞が伝えたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: VHSの生まれた場所が……。
+  - speaker: zundamon
+    emotion: sad
+    text: ビクターの名前も、消えちゃったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: ビクターのブランドは一度途絶えたけど、2017年に復活したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 公式の年表には、1976年の1号機のこともちゃんと載ってるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ベータは、どうなったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: ソニーは2002年にデッキを、2016年にテープを作り終えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ソニーの発表では、ベータのデッキは世界で約1800万台。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国内だけで、約400万台よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ベータも、たくさんの家で動いてたんだね。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: vh_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ずんだもん。その運動会のテープ、持ち上げてみて。
+  - speaker: zundamon
+    emotion: happy
+    text: ……軽いのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: '[幸之助|コーノスケ]さんも言ったのよ。ほう、こっちの[方|ほう]が軽うおますなあ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 売り出した1号機は、13.5キロ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[高野|たかの]さんは、新しいメディアは1企業だけで発展させることは出来ないと言ってたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 軽い機械と、仲間を増やす考え。その先に、9億台があったのね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも仲間を増やして、ダビングの機械を借りてくるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは仲間じゃなくて、ただの借り物ね。
+    beat: true
+  - speaker: zundamon
+    emotion: angry
+    text: 了見の狭いことを考えるな！ なのだ！
+    se: oti
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    duet_with: tsumugi
+    text: ご視聴、ありがとうございました！

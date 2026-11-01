@@ -3672,5 +3672,80 @@
     "text": "どうぞ、どうぞ。"
    }
   ]
+ },
+ {
+  "slug": "vhs-takano",
+  "video_id": "L63792IfYww",
+  "title_a": "松下幸之助「ほう、こっちの方が軽うおますなあ」赤字の事業部が作ったVHS、世界で9億台に【ずんだもん解説】",
+  "title_b": "【VHS】先に出たソニーのベータに、赤字の事業部の機械が2年で逆転【ずんだもん解説】",
+  "title_c": "先に出て画もきれいと言われたベータに、赤字の事業部のVHSはなぜ勝てたのか【ずんだもん解説】",
+  "thumb_b": {
+   "layout": "scene",
+   "headline": "こっちの方が軽うおますなあ",
+   "head_hi": "軽うおますなあ",
+   "panels": [
+    {
+     "scene": "vh_osetsu",
+     "tint": "yellow",
+     "tag": "1976年 松下幸之助",
+     "emo": "surprised",
+     "fx": "sweat",
+     "say": "……軽い、か"
+    },
+    {
+     "scene": "vh_kaihatsu",
+     "tint": "yellow",
+     "tag": "2時間録れる",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "映画が1本！"
+    }
+   ]
+  },
+  "thumb_c": {
+   "layout": "scene",
+   "headline": "なぜベータに勝てた？",
+   "head_hi": "なぜ",
+   "panels": [
+    {
+     "scene": "vh_jigyobu",
+     "tint": "mono",
+     "tag": "1970年 赤字続き",
+     "emo": "sad",
+     "fx": "gloom",
+     "say": "赤字なのだ…"
+    },
+    {
+     "scene": "vh_hakubutsukan",
+     "tint": "yellow",
+     "tag": "世界で9億台",
+     "emo": "happy",
+     "fx": "sparkle",
+     "say": "9億台！"
+    }
+   ]
+  },
+  "evidence": [
+   {
+    "claim": "ほう、こっちの方が軽うおますなあ（松下幸之助。その場にいた大賀典雄の回想、日経2011）",
+    "scene": "co_osetsu",
+    "text": "ほう、こっちの方が軽うおますなあ。"
+   },
+   {
+    "claim": "9億台以上（JVC の2006年の発表。1976〜2006年の生産の累計）",
+    "scene": "co_osetsu",
+    "text": "先に出たベータを抜き、VHSは30年で世界9億台以上。ビクターの2006年の発表です。"
+   },
+   {
+    "claim": "赤字の事業部（大曽根収の講演・発明協会）",
+    "scene": "co_osetsu",
+    "text": "軽いほうを作ったのは、赤字続きの事業部。事業部長は高野鎮雄、52歳です。"
+   },
+   {
+    "claim": "この年、売れた家庭用ビデオの8割がVHS",
+    "scene": "ch6_shinbun",
+    "text": "この年、売れた家庭用ビデオの8割がVHSになります。売り出しから、8年です。"
+   }
+  ]
  }
 ]
