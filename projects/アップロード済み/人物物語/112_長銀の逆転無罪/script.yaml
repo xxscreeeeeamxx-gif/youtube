@@ -1,0 +1,1508 @@
+meta:
+  title: 「決して長銀が生き延びるためのものではない」と国会で謝った頭取、10年後に逆転無罪【ずんだもん解説】
+  slug: chogin-onogi
+  hook_line: 2度有罪の長銀の頭取は、なぜ無罪に。無罪なのに、なぜ3兆円が国民の負担に。
+  summary: 1998年8月、国会に呼ばれた日本長期信用銀行の頭取、大野木克信。株価50円で出した1株3円の配当を、議員から問いただされます。決算のものさしが変わる途中の1年に、頭取の机には何が届き、銀行の中では何が起きていたのか。国有化、逮捕、2度の有罪、そして10年後の最高裁。判決と補足意見、国会の会議録、各紙の論調を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 最高裁判所第二小法廷 平成20年7月18日判決（平成17年(あ)第1716号） https://www.courts.go.jp/assets/hanrei/hanrei-pdf-36629.pdf
+  - 衆議院 金融安定化に関する特別委員会 第143回国会 第5号 会議録（1998年8月31日、参考人 大野木克信） https://kokkai.ndl.go.jp/txt/114304056X00519980831/2
+  - 参議院 金融問題及び経済活性化に関する特別委員会 第143回国会 第3号 会議録（1998年9月10日、参考人 大野木克信） https://kokkai.ndl.go.jp/txt/114314057X00319980910/4
+  - 衆議院 予算委員会 第159回国会 会議録（2004年2月13日、竹中金融相の答弁） https://kokkai.ndl.go.jp/txt/115905261X00920040213/80
+  - 金融再生委員会「ニュー・LTCB・パートナーズの長銀買収に係る買収条件の概要」 https://www.fsa.go.jp/frc/news/n055.pdf
+  - SBI新生銀行「公的資金完済のお知らせ」（2025年7月31日） https://corp.sbishinseibank.co.jp/ja/news/news/20250731a.html
+  tags:
+  - 長銀
+  - 日本長期信用銀行
+  - 大野木克信
+  - 長銀事件
+  - 逆転無罪
+  - 最高裁
+  - 公的資金
+  - 一時国有化
+  - 新生銀行
+  - SBI新生銀行
+  - 不良債権
+  - 金融危機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 被告人らはいずれも無罪
+    bottom: 長銀の頭取
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: hisho
+    label: 秘書
+    voice: 8
+    pitch: -0.04
+    outfit: suit
+    color: '#5a4a5a'
+  - id: buin
+    label: 部員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: gyoin
+    label: 行員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: kabunushi
+    label: 株主
+    voice: 42
+    pitch: 0.1
+    outfit: suit
+    color: '#4a4038'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: iincho
+    label: 委員長
+    voice: 42
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2a32'
+  - id: murata
+    label: 村田吉隆
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: taki
+    label: 滝実
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#4a3a2f'
+  - id: ueda
+    label: 上田清司
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#2f3a52'
+  - id: nakano
+    label: 中野清
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#5a5a60'
+  - id: miyazawa
+    label: 宮澤喜一
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#2a2f3a'
+  - id: suzuki
+    label: 鈴木恒男
+    voice: 11
+    pitch: -0.05
+    outfit: suit
+    color: '#2f3440'
+  - id: bengonin
+    label: 弁護人
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（1998年8月31日の国会 → 2008年7月18日の最高裁） ----
+- id: co_kokkai
+  title: ''
+  background: cg_kokkai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: ueda, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 1998年8月31日、国会。株価50円で配当を出した銀行の頭取が、参考人として呼ばれました。
+    reading: せんきゅうひゃく きゅうじゅうはちねん はちがつ さんじゅういちにち、こっかい。かぶか ごじゅうえんで はいとうお だした ぎんこうの とうどりが さんこうにんと して よばれました。
+  - speaker: ueda
+    emotion: angry
+    text: 今でもその考え方は正しいとお思いでしょうか。
+  - speaker: zundamon
+    emotion: thinking
+    text: あの時点でもし配当をやめたといたしますと、
+  - speaker: zundamon
+    emotion: sad
+    text: 恐らくもっとドラスチックなことが起きまして……
+  - speaker: reimu
+    text: この配当が罪に問われ、頭取は逮捕されます。そして10年後。
+    reading: この はいとうが つみに とわれ、とうどりわ たいほ されます。そして じゅうねんご。
+- id: co_saikosai
+  title: ''
+  background: cg_saikosai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: '[原判決|ゲンハンケツ]及び[第１審|ダイイッシン]判決を破棄する。被告人らはいずれも無罪。'
+  - speaker: reimu
+    text: この男は、大野木克信。日本長期信用銀行、長銀の頭取でした。
+    reading: この おとこわ、おおのぎ かつのぶ。にっぽん ちょうき しんよう ぎんこう、ちょうぎんの とうどりでした。
+# ---- 今の部屋（3円の配当） ----
+- id: hook
+  title: ''
+  background: cg_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 銀行の株の配当、3円届いたのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……封筒代のほうが、高そうね。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 配当を出せる銀行は、つぶれないのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[1株|ひとかぶ]3円の配当を出して、頭取が罪に問われた銀行があるの。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 3円で！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2度の有罪。でも最高裁で逆転無罪。なのに国民の負担は、3兆円を超えたのよ。
+    telops:
+    - {text: "無罪なのに 国民の負担3兆円超", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 無罪なのに、なんで3兆円も！？
+# ---- 1997年7月31日・頭取あての通達 ----
+- id: card1997
+  title: ''
+  background: cg_card_1997
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1997年7月31日。長銀の頭取室に、大蔵省の銀行局長から通達が届きます。
+    reading: せんきゅうひゃく きゅうじゅうななねん しちがつ さんじゅういちにち。ちょうぎんの とうどりしつに、おおくらしょうの ぎんこう きょくちょうから つうたつが とどきます。
+- id: ch1_tsutatsu
+  title: 頭取あての通達
+  background: cg_tochiri
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大野木克信, emotion: normal}
+  - {who: hisho, x: 0.52, emotion: normal}
+  - {who: buin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: hisho
+    emotion: normal
+    text: 頭取、大蔵省の銀行局長からです。宛名は、[長銀|ちょうぎん]の代表取締役頭取。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決算の決まりを、変えるのか。
+  - speaker: hisho
+    emotion: normal
+    text: はい。この年度の決算から、だそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……今年度から！？
+  - speaker: buin
+    emotion: normal
+    text: 事業推進部です。変わるのは、系列のノンバンクに貸したお[金|かね]の数え方です。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちの系列のリース会社なんて、取引先が7万社あるぞ。
+  - speaker: buin
+    emotion: normal
+    text: 今までは、うちが支え続けるかぎり回収できないとは数えなくてよかったんです。
+  - speaker: buin
+    emotion: normal
+    text: 子どもへの仕送りを続けている間は、
+  - speaker: buin
+    emotion: normal
+    text: 家計簿に、返ってこないかもと書かなくてよかった。そんな決まりです。
+    telops:
+    - {text: "古いものさし　仕送り中は焦げ付きと数えない", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 親が子を支えるのは、当たり前の世界だからな。
+  - speaker: buin
+    emotion: thinking
+    text: 新しい決まりでは、子どもの懐具合で数えます。
+  - speaker: buin
+    emotion: thinking
+    text: 仕送りしていても、返せない子は返せない子です。
+  - speaker: buin
+    emotion: thinking
+    text: ただ系列のノンバンクにどこまで当てはめるかは、まだはっきりしないんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 曖昧なのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……新しいものさしで正直に数えたら、損はいくらになる。
+  - speaker: buin
+    emotion: sad
+    text: 何千億円の単位です。
+    se: gaan
+  - speaker: zundamon
+    emotion: surprised
+    text: な、何千億……！
+  - speaker: buin
+    emotion: thinking
+    text: 利益が飛んで、自己資本の比率も下がります。
+  - speaker: zundamon
+    emotion: thinking
+    text: 市場に危ないと見られたら、お[金|かね]が集まらなくなる。
+  - speaker: zundamon
+    emotion: sad
+    text: ……銀行が、倒れるかもしれん。
+  - speaker: reimu
+    text: 最高裁ものちに、新しい基準で処理すると銀行経営が危たいにひんする可能性が多分にあった、と書いています。
+    reading: さいこうさいも のちに、あたらしい きじゅんで しょり すると ぎんこう けいえいが きたいに ひんする かのうせいが たぶんに あったと かいて います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 配当は、どうなる。
+  - speaker: buin
+    emotion: thinking
+    text: 正直に数えれば、出せないかもしれません。
+  - speaker: zundamon
+    emotion: angry
+    text: 配当をやめたら、それこそ市場が逃げるのだ……。
+  - speaker: reimu
+    text: このものさしの変わり目の決算で、長銀は1株3円の配当を出します。
+    reading: この ものさしの かわりめの けっさんで、ちょうぎんわ ひとかぶ さんえんの はいとうお だします。
+  - speaker: reimu
+    text: 配当から1年8か月後、国はその株を1株およそ0.4円で売りました。
+    reading: はいとうから いちねん はちかげつご、くにわ その かぶお ひとかぶ およそ れいてん よんえんで うりました。
+    telops:
+    - {text: "1株3円の配当 → 1株0.4円で売却", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 古いものさしか、新しいものさしか。この数え方が、10年続く裁判で争われます。
+    reading: ふるい ものさしか あたらしい ものさしか。この かぞえかたが、じゅうねん つづく さいばんで あらそわれます。
+- id: ch1_kokusai
+  title: ''
+  background: cg_tochiri
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: hisho, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: hisho
+    emotion: sad
+    text: スイスの大銀行との提携も、今月発表したばかりですのに。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……世界と組む前に、足元の数え方か。
+  - speaker: hisho
+    emotion: normal
+    text: 頭取は若いころ、ロンドンにいらしたんですよね。
+  - speaker: zundamon
+    emotion: normal
+    text: ああ。世界の金融は、ずっと先を走っていたよ。
+  - speaker: hisho
+    emotion: happy
+    text: 農学部のご出身で、国際派ですものね。
+  - speaker: zundamon
+    emotion: sad
+    text: その国際派が、いまは帳簿とにらめっこだ。
+    beat: true
+  - speaker: reimu
+    text: 大野木は1959年、東大の農学部から長銀へ。頭取になったのは2年前、58歳のときでした。
+    reading: おおのぎわ せんきゅうひゃく ごじゅうくねん、とうだいの のうがくぶから ちょうぎんえ。とうどりに なったのわ にねんまえ ごじゅうはっさいの ときでした。
+  - speaker: reimu
+    text: 前の頭取が国会の証人喚問に立ち、株主総会を待たずに辞めたあとの、急な就任です。
+    reading: まえの とうどりが こっかいの しょうにん かんもんに たち、かぶぬし そうかいお またずに やめた あとの きゅうな しゅうにんです。
+  - speaker: reimu
+    text: その長銀は、預金ではなく金融債という債券でお金を集める銀行です。これが、のちに効いてきます。
+    reading: その ちょうぎんわ よきんでわ なく きんゆうさいと いう さいけんで おかねお あつめる ぎんこうです。これが、のちに きいて きます。
+# ---- 1997年6月〜1998年3月・事業推進部 ----
+- id: ch2_jigyo
+  title: 数度の修正
+  background: cg_jigyo
+  bgm: kinakusai
+  stage:
+  - {who: buin, x: 0.28, flip: true, emotion: thinking}
+  - {who: gyoin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: buin
+    emotion: normal
+    text: 新しいものさしを、系列向けの貸出にどう当てはめるか。それがうちの部の仕事だ。
+  - speaker: buin
+    emotion: thinking
+    text: 6月末を基準日にした、トライアルの結果が出たぞ。
+  - speaker: gyoin
+    emotion: surprised
+    text: 新しい通達どおりに数えると、[引当|ひきあて]がこんなに要るんですか！
+  - speaker: buin
+    emotion: thinking
+    text: これじゃ、自己資本比率がもたないな。
+  - speaker: gyoin
+    emotion: thinking
+    text: 償却に回せるお[金|かね]にも、限りがありますよ。
+  - speaker: buin
+    emotion: thinking
+    text: 基準の案を、直すしかないか……。
+  - speaker: gyoin
+    emotion: surprised
+    text: 直すって、どっちにです？
+  - speaker: buin
+    emotion: thinking
+    text: ……[引当|ひきあて]が、軽くなるほうにだ。
+    beat: true
+  - speaker: reimu
+    text: 判決によると、事業推進部は自己資本比率の維持を図るなどのため、償却と引当が緩くなる修正を数度加えました。
+    reading: はんけつに よると じぎょう すいしんぶわ じこ しほん ひりつの いじお はかるなどの ため、しょうきゃくと ひきあてが ゆるく なる しゅうせいお すうど くわえました。
+  - speaker: reimu
+    text: 12月末の本番も経て、基準が確定したのは1998年3月30日。決算の締めの、前の日でした。
+    reading: じゅうにがつまつの ほんばんも へて、きじゅんが かくてい したのわ せんきゅうひゃく きゅうじゅうはちねん さんがつ さんじゅうにち。けっさんの しめの まえの ひでした。
+  - speaker: gyoin
+    emotion: thinking
+    text: ……数え方ひとつで、何千億円も変わるのか。
+  - speaker: buin
+    emotion: normal
+    text: よその大手も、系列には甘く数えてるはずさ。
+  - speaker: gyoin
+    emotion: thinking
+    text: はず、で決算を組むんですか。
+    se: hammer
+  - speaker: reimu
+    text: この基準で長銀が書いた損失は約2700億円。検察はのちに、本当は約5800億円だったと主張します。
+    reading: この きじゅんで ちょうぎんが かいた そんしつわ やく にせん ななひゃくおくえん。けんさつわ のちに、ほんとうわ やく ごせん はっぴゃくおくえんだったと しゅちょう します。
+    telops:
+    - {text: "検察 約5800億円 ／ 長銀 約2700億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: その差、約3100億円の数え方が、罪に問われることになります。
+    reading: その さ、やく さんぜん ひゃくおくえんの かぞえかたが つみに とわれる ことに なります。
+# ---- 1998年3月・公的資金と常務会 ----
+- id: card1998
+  title: ''
+  background: cg_card_1998
+  cuts:
+  - speaker: reimu
+    text: 1998年3月。長銀は国の審査を通り、公的資金1766億円を受け取ります。
+    reading: せんきゅうひゃく きゅうじゅうはちねん さんがつ。ちょうぎんわ くにの しんさお とおり、こうてき しきん せんななひゃく ろくじゅうろくおくえんお うけとります。
+- id: ch3_jomukai
+  title: 赤字でも1株3円
+  background: cg_jomukai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: buin, x: 0.52, emotion: normal}
+  - {who: gyoin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: buin
+    emotion: normal
+    text: 3月31日の常務会です。今期の決算の、基本方針をご説明します。
+  - speaker: buin
+    emotion: thinking
+    text: 当期の未処理損失は、約2700億円。赤字です。
+    background: cg_jomukai_akaji
+  - speaker: zundamon
+    emotion: thinking
+    text: ……赤字か。
+  - speaker: buin
+    emotion: normal
+    text: ただ、任意積立金を取り崩せば配当は出せます。[1株|ひとかぶ]3円です。
+  - speaker: gyoin
+    emotion: surprised
+    text: 公的資金を入れてもらった年に、配当ですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: やめたら、市場はどう読む。
+  - speaker: buin
+    emotion: thinking
+    text: '[長銀|ちょうぎん]は危ない、と読むでしょう。'
+  - speaker: zundamon
+    emotion: normal
+    text: 安定配当は、続けよう。市場の信認だけは、失えないのだ。
+  - speaker: gyoin
+    emotion: thinking
+    text: 国からはお[金|かね]を入れてもらって、株主には配る。……世間の目は厳しいですよ。
+    se: tsukkomi
+  - speaker: reimu
+    text: 国の審査を通った銀行は7か月後に国のものになり、3兆円を超える国民の負担が生まれます。
+    reading: くにの しんさお とおった ぎんこうわ ななかげつごに くにの ものに なり、さんちょうえんお こえる こくみんの ふたんが うまれます。
+# ---- 1998年4月7日・25億円の記事 ----
+- id: ch4_okura
+  title: 25億円の記事
+  background: cg_kokkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: normal}
+  - {who: iincho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月7日。大野木は衆議院の大蔵委員会に、参考人として呼ばれます。
+    reading: しがつ なのか。おおのぎわ しゅうぎいんの おおくら いいんかいに、さんこうにんと して よばれます。
+  - speaker: iincho
+    emotion: normal
+    text: '[大野木参考人|オーノギサンコーニン]。'
+  - speaker: zundamon
+    emotion: normal
+    text: 杉浦前会長に25億円の退職金を払ったという記事が出ましたけれども、
+  - speaker: zundamon
+    emotion: angry
+    text: あれは全く本当のことではございません。
+  - speaker: reimu
+    text: 杉浦は、長銀の拡大路線を進めたとされる元会長です。実際の額は8月の国会で、9億7000万円と答えます。
+    reading: すぎうらわ、ちょうぎんの かくだい ろせんお すすめたと される もと かいちょうです。じっさいの がくわ はちがつの こっかいで きゅうおく ななせんまんえんと こたえます。
+  - speaker: reimu
+    text: 同じ日、日本の銀行の金融技術を問われると、大野木はこう答えました。
+    reading: おなじ ひ、にほんの ぎんこうの きんゆう ぎじゅつお とわれると おおのぎわ こう こたえました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 少なくとも[長銀|ちょうぎん]に関しましてはかなりおくれていると思っています。
+# ---- 1998年4月28日〜6月・決算の承認と株価 ----
+- id: ch5_kabuka
+  title: 200円が50円に
+  background: cg_tochiri
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: hisho, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 4月28日、取締役会が決算案を承認します。3月期の決算を、長銀はホームページでこう説明しました。
+    reading: しがつ にじゅうはちにち、とりしまりやくかいが けっさんあんお しょうにん します。さんがつきの けっさんお、ちょうぎんわ ほーむぺーじで こう せつめい しました。
+  - speaker: reimu
+    text: 決算上必要な損失処理は、峠を越えたものと考えています。
+    reading: けっさんじょう ひつような そんしつ しょりわ、とうげお こえた ものと かんがえて います。
+  - speaker: hisho
+    emotion: surprised
+    text: 頭取！ 6月に入って、株価がまた下がっています！
+    background: cg_shoken
+  - speaker: zundamon
+    emotion: surprised
+    text: 月の初めは、200円台だったはずだ。
+  - speaker: hisho
+    emotion: thinking
+    text: 17日から、出来高がいつもの数倍です。うわさが飛び交っていて……。
+  - speaker: zundamon
+    emotion: thinking
+    text: どんなうわさだ。
+  - speaker: hisho
+    emotion: thinking
+    text: 月刊誌の記事をきっかけに、[長銀|ちょうぎん]は危ないと。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちは預金より、市場からお[金|かね]を集める銀行だ。
+  - speaker: zundamon
+    emotion: sad
+    text: 危ないと思われたら、お[金|かね]が回らなくなる……。
+  - speaker: hisho
+    emotion: sad
+    text: 50円を、割りそうです。
+    se: gaan
+  - speaker: reimu
+    text: 6月の初めに200円台だった株価は、月末には50円。4分の1です。
+    reading: ろくがつの はじめに にひゃくえんだいだった かぶかわ、げつまつにわ ごじゅうえん。よんぶんの いちです。
+  - speaker: reimu
+    text: 長銀が国のものになるまで、あと4か月です。
+    reading: ちょうぎんが くにの ものに なるまで、あと よんかげつです。
+# ---- 1998年6月の末・住友信託へ ----
+- id: ch6_sumishin
+  title: 住友信託へ
+  background: cg_tochiri
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 大野木克信, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 6月の末。大野木は、親しくしてきた住友信託銀行の社長に、合併の検討を申し入れます。
+    reading: ろくがつの すえ。おおのぎわ したしく して きた すみとも しんたく ぎんこうの しゃちょうに がっぺいの けんとうお もうしいれます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……もう、[1行|いっこう]ではもちません。
+  - speaker: zundamon
+    emotion: normal
+    text: 主導権は、[住友信託|すみともしんたく]さんに持っていただいて構いません。
+  - speaker: zundamon
+    emotion: sad
+    text: ……どうか、よろしくお願いいたします。
+# ---- 1998年6月25日・株主総会 ----
+- id: ch7_soukai
+  title: 1株3円の株主総会
+  background: cg_soukai
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: normal}
+  - {who: kabunushi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 6月25日。長銀の定時株主総会です。
+    reading: ろくがつ にじゅうごにち。ちょうぎんの ていじ かぶぬし そうかいです。
+  - speaker: zundamon
+    emotion: normal
+    text: 利益処分案は、[1株|ひとかぶ]につき3円の配当とさせていただきます。
+  - speaker: kabunushi
+    emotion: surprised
+    text: 3円か……。株価は、50円だぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 役員の賞与は、取り下げます。旧役員の退職慰労金も、議案にいたしません。
+  - speaker: kabunushi
+    emotion: angry
+    text: 配当より、株価をなんとかしてくれ！
+  - speaker: zundamon
+    emotion: sad
+    text: ……ご心配を、おかけしております。
+  - speaker: kabunushi
+    emotion: thinking
+    text: それでも、配当だけは出すんだな。
+    se: tenten
+  - speaker: reimu
+    text: 議案は可決。配られた約71億円の配当が、のちに違法配当の罪に問われます。
+    reading: ぎあんわ かけつ。くばられた やく ななじゅういちおくえんの はいとうが、のちに いほう はいとうの つみに とわれます。
+  - speaker: reimu
+    text: 翌日の26日、住友信託との合併構想が発表されました。
+    reading: よくじつの にじゅうろくにち、すみとも しんたくとの がっぺい こうそうが はっぴょう されました。
+- id: ch8_yuho
+  title: ''
+  background: cg_tochiri
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: hisho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: hisho
+    emotion: normal
+    text: 3月期の有価証券報告書です。関東財務局へ、出してまいります。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……頼む。
+  - speaker: reimu
+    text: 6月29日に出されたこの書類も、のちに虚偽記載の罪に問われます。
+    reading: ろくがつ にじゅうくにちに だされた この しょるいも、のちに きょぎ きさいの つみに とわれます。
+# ---- 1998年8月21日・リストラ策 ----
+- id: ch9_restra
+  title: 総退陣
+  background: cg_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 8月21日。長銀は住友信託との合併に向けて、リストラ策を発表します。
+    reading: はちがつ にじゅういちにち。ちょうぎんわ すみとも しんたくとの がっぺいに むけて、りすとらさくお はっぴょう します。
+  - speaker: zundamon
+    emotion: sad
+    text: 不良債権は、7500億円を処理します。
+  - speaker: zundamon
+    emotion: sad
+    text: 私も含め、役員は総退陣いたします。
+  - speaker: kisha
+    emotion: surprised
+    text: 前の経営陣の退職金は、どうするんですか！
+  - speaker: zundamon
+    emotion: normal
+    text: 返還を、お願いいたします。
+  - speaker: kisha
+    emotion: surprised
+    text: 本店は！？
+  - speaker: zundamon
+    emotion: normal
+    text: 本店は売ります。海外の業務からも、全面的に撤退します。
+  - speaker: kisha
+    emotion: surprised
+    text: 5年前に建てたばかりの本店を！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。
+    beat: true
+- id: ch9_miyazawa
+  title: ''
+  background: cg_kokkai
+  stage:
+  - {who: miyazawa, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 宮澤喜一大蔵大臣は国会で、このリストラ策をこう語りました。
+    reading: みやざわ きいち おおくら だいじんわ こっかいで、この りすとらさくお こう かたりました。
+  - speaker: miyazawa
+    emotion: thinking
+    text: 経営者が総退陣をする、本店は売る、海外の仕事もやめる、
+  - speaker: miyazawa
+    emotion: thinking
+    text: 人員は減らす、古い退職金は取り戻す[等々|とうとう]、
+  - speaker: miyazawa
+    emotion: normal
+    text: これはある意味でいわば身を捨てて再生を図るしかないということでございますから、
+  - speaker: miyazawa
+    emotion: thinking
+    text: これが何よりも端的に[長銀|ちょうぎん]の苦しさというものを語っていると思います。
+# ---- 1998年8月31日・国会 ----
+- id: ch10_kokkai1
+  title: 国会で頭を下げる
+  background: cg_kokkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: sad}
+  - {who: iincho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月31日。衆議院の特別委員会に、大野木は参考人として座ります。
+    reading: はちがつ さんじゅういちにち。しゅうぎいんの とくべつ いいんかいに、おおのぎわ さんこうにんと して すわります。
+  - speaker: iincho
+    emotion: normal
+    text: このような事態を迎えた原因について、当事者としてどのように認識していますか。
+  - speaker: zundamon
+    emotion: sad
+    text: 今般世間を大変お騒がせし、皆様方には大変な御迷惑をおかけしましたことを、
+  - speaker: zundamon
+    emotion: sad
+    text: この場をおかりしまして深くおわび申し上げます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 株価もこの六月に二百円台から一気に五十円に下落しました。
+  - speaker: reimu
+    text: 取引先の8000社に迷惑をかける事態は避けたい、と述べてから、大野木はこう続けます。
+    reading: とりひきさきの はっせんしゃに めいわくお かける じたいわ さけたいと のべてから、おおのぎわ こう つづけます。
+  - speaker: zundamon
+    emotion: normal
+    text: 公的資金をお願いしようとしておりますのは、
+  - speaker: zundamon
+    emotion: normal
+    text: このような状況を何とか避けたいという念からでございまして、
+  - speaker: zundamon
+    emotion: thinking
+    text: 決して[長銀|ちょうぎん]が生き延びるためのものではないということをぜひ御理解賜りたいと存じます。
+    telops:
+    - {text: "大野木「決して長銀が生き延びるためのものではない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch10_kokkai2
+  title: 債務超過ではございません
+  background: cg_kokkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: sad}
+  - {who: murata, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: murata
+    emotion: angry
+    text: 銀行マンは高給をはみ、責任をとるべき人間が[今日|こんにち]責任をとった姿を見たことがない。
+  - speaker: zundamon
+    emotion: sad
+    text: ただいま[村田|むらた]先生からのお話、
+  - speaker: zundamon
+    emotion: sad
+    text: 一つ一つが私の心の中に鋭く突き刺さると申しますか、
+  - speaker: murata
+    emotion: thinking
+    text: 一番の問題は、[長銀|ちょうぎん]が既に破綻をしているのではないかという
+  - speaker: murata
+    emotion: thinking
+    text: 各界からの疑問があるということでありまして、
+  - speaker: zundamon
+    emotion: normal
+    text: 結論をまずはっきり申し上げたいと思いますが、
+  - speaker: zundamon
+    emotion: normal
+    text: 現時点の[長銀|ちょうぎん]は債務超過ではございません。
+    se: don
+    telops:
+    - {text: "大野木「現時点の長銀は債務超過ではございません」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 3月末の資本は連結で約1兆円。7500億円を処理しても、9月末に5500億円が残る、という説明でした。
+    reading: さんがつまつの しほんわ れんけつで やく いっちょうえん。ななせん ごひゃくおくえんお しょり しても くがつまつに ごせん ごひゃくおくえんが のこると いう せつめいでした。
+  - speaker: reimu
+    text: 宮澤蔵相も国会で、日銀の考査でも監督庁長官も債務超過と考える理由はないと言っている、と答えました。
+    reading: みやざわ ぞうしょうも こっかいで、にちぎんの こうさでも かんとくちょう ちょうかんも さいむ ちょうかと かんがえる りゆうわ ないと いって いると こたえました。
+- id: ch10_kokkai3
+  title: 配当をやめていたら
+  background: cg_kokkai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大野木克信, emotion: normal}
+  - {who: taki, x: 0.52, emotion: thinking}
+  - {who: ueda, x: 0.8, emotion: angry}
+  cuts:
+  - speaker: taki
+    emotion: normal
+    text: 確かに、商法に規定された条件に合致するような配当の仕方を
+  - speaker: taki
+    emotion: normal
+    text: この六月の総会でおやりになったかもしれませんけれども、
+  - speaker: taki
+    emotion: thinking
+    text: 国民からはやはり、千七百億円もの公的資金の注入を受けて、
+  - speaker: taki
+    emotion: angry
+    text: そんな配当する余裕があるの、
+  - speaker: taki
+    emotion: angry
+    text: 配当するぐらいならば当然それは不良債権の償却に回すべきじゃないの、
+  - speaker: taki
+    emotion: thinking
+    text: こういう気持ちは、これは率直にあるというふうに思うわけでございます。
+  - speaker: zundamon
+    emotion: normal
+    text: この赤字決算と配当をやるということにつきましては、
+  - speaker: zundamon
+    emotion: normal
+    text: 三月の公的資金の申請の時点におきましても、
+  - speaker: zundamon
+    emotion: normal
+    text: 危機管理委員会にはそういった形で御説明は申し上げております。
+  - speaker: ueda
+    emotion: angry
+    text: 一般株主に対して百四十三億五千七百万の配当をなさっておられます。
+  - speaker: ueda
+    emotion: angry
+    text: 任意積立金を取り崩してまでなぜ配当しなければならないのかというのが
+  - speaker: ueda
+    emotion: thinking
+    text: 私の率直な疑問であります。
+  - speaker: zundamon
+    emotion: normal
+    text: 三月末の配当でございますが、
+  - speaker: zundamon
+    emotion: normal
+    text: 確かに、法的あるいは会計学的にはそれなりの配当原資があったということでございます。
+  - speaker: ueda
+    emotion: angry
+    text: 今でもその考え方は正しいとお思いでしょうか。
+  - speaker: zundamon
+    emotion: sad
+    text: 六月の初めから六月の終わりにかけまして、私どもの株価は、
+  - speaker: zundamon
+    emotion: sad
+    text: 大変お恥ずかしい次第でございますけれども、
+  - speaker: zundamon
+    emotion: sad
+    text: 二百円から五十円まで落ちて総会を迎えたということでございます。
+  - speaker: zundamon
+    emotion: thinking
+    text: あの時点でもし配当をやめたといたしますと、
+  - speaker: zundamon
+    emotion: thinking
+    text: 恐らくもっとドラスチックなことが起きまして、
+  - speaker: zundamon
+    emotion: thinking
+    text: やはり金融界にあの時点で相当な混乱を起こしたということに、
+  - speaker: zundamon
+    emotion: thinking
+    text: これは全く仮定の話でございまして、
+  - speaker: zundamon
+    emotion: normal
+    text: そういう判断で混乱を避けさせていただいたということは御理解賜れればと思います。
+  - speaker: ueda
+    emotion: thinking
+    text: 見解の相違かもしれませんが、
+  - speaker: ueda
+    emotion: angry
+    text: 八〇％ぐらい評価できるリストラ案、そうしたものを当時セットで出されておられれば、
+  - speaker: ueda
+    emotion: thinking
+    text: 配当がなくてもむしろ市場は好感で迎えていただけるというふうに私は思っております。
+- id: ch10_kokkai4
+  title: 給与は全額ゼロ
+  background: cg_kokkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: sad}
+  - {who: nakano, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: nakano
+    emotion: thinking
+    text: 私は、実は中小企業の経営者でして、
+  - speaker: nakano
+    emotion: angry
+    text: 四十年間、銀行からお[金|かね]を借りたとき、
+  - speaker: nakano
+    emotion: angry
+    text: 会社の社長としてと一緒に、個人の保証をしないでやったことは一回もありません。
+  - speaker: nakano
+    emotion: thinking
+    text: ですから、それだけに命がけで経営をやってきたと思います。
+  - speaker: nakano
+    emotion: angry
+    text: 少なくとも個人保証を出す、
+  - speaker: nakano
+    emotion: angry
+    text: そのぐらいの腹をもってやらなければ国民は納得しないと思いますけれども、
+  - speaker: nakano
+    emotion: thinking
+    text: いかがでございましょうか。
+  - speaker: zundamon
+    emotion: sad
+    text: 私個人のことを御指摘かと思いますが、
+  - speaker: zundamon
+    emotion: sad
+    text: やはり私も、そういう意味では道義的な責任、社会的な責任というのは
+  - speaker: zundamon
+    emotion: sad
+    text: 十分痛切に感じておりますけれども、
+  - speaker: zundamon
+    emotion: sad
+    text: もちろん退職金などはもらいませんし、給与ももう全額ゼロにいたしております。
+  - speaker: zundamon
+    emotion: thinking
+    text: その後どうするかということにつきましては、[今|いま]具体的なアイデアもございません。
+- id: ch10_sangiin
+  title: 優先株は無配
+  background: cg_kokkai
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 大野木克信, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 9月10日。今度は参議院です。
+    reading: くがつ とおか。こんどわ さんぎいんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 三月に入れていただきました公的資金、この優先株につきまして
+  - speaker: zundamon
+    emotion: sad
+    text: 無配とせざるを得なかったということについては、
+  - speaker: zundamon
+    emotion: sad
+    text: 本当に申しわけなく、心からおわびする次第でございます。
+  - speaker: reimu
+    text: 株主には6月に1株3円を配りました。国の優先株への年13億円ほどの配当は、今期は無配と決めたのです。
+    reading: かぶぬしにわ ろくがつに ひとかぶ さんえんお くばりました。くにの ゆうせんかぶえの ねん じゅうさんおくえんほどの はいとうわ、こんきわ むはいと きめたのです。
+# ---- 1998年9月・日本リースの破綻と退任 ----
+- id: ch11_tainin
+  title: 日本リースの破綻と退任
+  background: cg_tochiri
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: hisho, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: hisho
+    emotion: surprised
+    text: 頭取！ 系列のリース会社が、会社更生法を申請しました！
+  - speaker: zundamon
+    emotion: surprised
+    text: 取引先が、7万社もある会社だぞ……！
+  - speaker: reimu
+    text: 9月27日。国会では、戦後最大の破綻と言われた倒産です。
+    reading: くがつ にじゅうななにち。こっかいでわ、せんご さいだいの はたんと いわれた とうさんです。
+  - speaker: reimu
+    text: 翌日の9月28日。大野木は、頭取を退きます。62歳でした。
+    reading: よくじつの くがつ にじゅうはちにち。おおのぎわ、とうどりお しりぞきます。ろくじゅうにさいでした。
+  - speaker: hisho
+    emotion: sad
+    text: 後任は、[鈴木恒男|すずきつねお]さんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……この部屋の書類も、片付けないとな。
+  - speaker: hisho
+    emotion: sad
+    text: 頭取……。
+  - speaker: zundamon
+    emotion: sad
+    text: もう、頭取じゃないのだ。
+    se: namida
+# ---- 1998年10月23日・国有化 ----
+- id: ch12_kokuyuka
+  title: 国有化の第1号
+  background: cg_honten
+  bgm: serious
+  stage:
+  - {who: gyoin, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1998年10月23日。長銀は、預金などの払い戻しを止めるおそれがある、と国に申し出ました。
+    reading: せんきゅうひゃく きゅうじゅうはちねん じゅうがつ にじゅうさんにち。ちょうぎんわ よきんなどの はらいもどしお とめる おそれが あると くにに もうしでました。
+  - speaker: gyoin
+    emotion: sad
+    text: ……うちが、国のものになるのか。
+    background: cg_honten_yoru
+  - speaker: reimu
+    text: 金融再生法による一時国有化。その第1号でした。
+    reading: きんゆう さいせいほうに よる いちじ こくゆうか。その だいいちごうでした。
+  - speaker: gyoin
+    emotion: thinking
+    text: 前の頭取が辞めて、まだ1か月もたってないのに。
+- id: ch12_suzuki
+  title: ''
+  background: cg_kaiken
+  stage:
+  - {who: suzuki, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 国有化のときの頭取は、後を継いだ鈴木恒男。会見で、こう口にしました。
+    reading: こくゆうかの ときの とうどりわ、あとお ついだ すずき つねお。かいけんで こう くちに しました。
+  - speaker: suzuki
+    emotion: sad
+    text: 急激な環境の変化……。
+- id: ch12_shosai
+  title: ''
+  background: cg_shosai
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 大野木克信, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[長銀|ちょうぎん]の株が、ゼロか。
+  - speaker: reimu
+    text: 長銀の普通株は、価値ゼロとされました。3月に国の資金で引き受けた優先株1300億円分も、対価0円です。
+    reading: ちょうぎんの ふつうかぶわ、かち ぜろと されました。さんがつに くにの しきんで ひきうけた ゆうせんかぶ せんさんびゃくおくえんぶんも たいか ぜろえんです。
+  - speaker: zundamon
+    emotion: sad
+    text: '[1株|ひとかぶ]3円を配った株が……。'
+    beat: true
+  - speaker: reimu
+    text: ここから国は、長銀の穴を埋めるために、兆の単位のお金を入れていきます。
+    reading: ここから くにわ ちょうぎんの あなお うめる ために、ちょうの たんいの おかねお いれて いきます。
+# ---- 1999年・告訴と逮捕 ----
+- id: card1999
+  title: ''
+  background: cg_card_1999
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1999年5月、捜査が進むなかで、元副頭取ら2人が亡くなりました。
+    reading: せんきゅうひゃく きゅうじゅうくねん ごがつ、そうさが すすむ なかで もと ふくとうどりら ふたりが なくなりました。
+  - speaker: reimu
+    text: 6月4日。国有化された長銀の新しい経営陣が、内部調査委員会の報告をもとに旧経営陣を告訴します。
+    reading: ろくがつ よっか。こくゆうか された ちょうぎんの あたらしい けいえいじんが、ないぶ ちょうさ いいんかいの ほうこくお もとに きゅう けいえいじんお こくそ します。
+- id: ch13_kokuso
+  title: 自分の銀行に訴えられる
+  background: cg_shosai
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 大野木克信, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ……自分がいた銀行に、訴えられるのか。
+    beat: true
+  - speaker: reimu
+    text: 6月10日、東京地検特捜部が、大野木と元副頭取2人を逮捕します。大野木は63歳でした。
+    reading: ろくがつ とおか、とうきょう ちけん とくそうぶが おおのぎと もと ふくとうどり ふたりお たいほ します。おおのぎわ ろくじゅうさんさいでした。
+  - speaker: reimu
+    text: 罪に問われたのは、有価証券報告書の虚偽記載と、違法配当です。
+    reading: つみに とわれたのわ、ゆうか しょうけん ほうこくしょの きょぎ きさいと いほう はいとうです。
+- id: ch14_kohan
+  title: 私は無罪です
+  background: cg_houtei
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 大野木克信, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月19日。東京地裁で、初公判が開かれます。
+    reading: じゅういちがつ じゅうくにち。とうきょう ちさいで、しょこうはんが ひらかれます。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は、無罪です。
+  - speaker: reimu
+    text: 弁護側は、当時の決まりと慣行どおりの決算だった、と主張しました。
+    reading: べんごがわわ、とうじの きまりと かんこう どおりの けっさんだったと しゅちょう しました。
+# ---- 2000年3月1日・10億円の銀行 ----
+- id: card2000
+  title: ''
+  background: cg_card_2000
+  cuts:
+  - speaker: reimu
+    text: 2000年3月1日。国は長銀の普通株、およそ24億株を10億円で売りました。
+    reading: にせんねん さんがつ ついたち。くにわ ちょうぎんの ふつうかぶ、およそ にじゅうよんおくかぶお じゅうおくえんで うりました。
+- id: ch13_baikyaku
+  title: 10億円の銀行
+  background: cg_honten
+  stage:
+  - {who: gyoin, x: 0.28, flip: true, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 10億円！？ 銀行が、10億円で買えるんですか！
+  - speaker: gyoin
+    emotion: thinking
+    text: 買ったのは、アメリカの投資会社が中心のグループです。
+  - speaker: kisha
+    emotion: thinking
+    text: '[1株|ひとかぶ]あたりだと、いくらです？'
+  - speaker: gyoin
+    emotion: sad
+    text: ……0.4円ほどです。
+    beat: true
+  - speaker: reimu
+    text: 1株3円の配当を出した株は、1年8か月で1株およそ0.4円になりました。
+    reading: ひとかぶ さんえんの はいとうお だした かぶわ、いちねん はちかげつで ひとかぶ およそ れいてん よんえんに なりました。
+  - speaker: gyoin
+    emotion: sad
+    text: 6月からは、新生銀行になるそうです。[長銀|ちょうぎん]の名前は、消えるんです。
+# ---- 2002年・一審 → 2005年・二審 ----
+- id: card2002
+  title: ''
+  background: cg_card_2002
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2002年9月。東京地裁は3人とも有罪とします。大野木は懲役3年、執行猶予4年でした。
+    reading: にせん にねん くがつ。とうきょう ちさいわ さんにんとも ゆうざいと します。おおのぎわ ちょうえき さんねん しっこう ゆうよ よねんでした。
+- id: ch14_nishin
+  title: 2度の有罪
+  background: cg_houtei
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: surprised}
+  - {who: bengonin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: '[一審|いっしん]は有罪！ 3人とも、執行猶予つきです！'
+  - speaker: reimu
+    text: 2005年6月。二審の東京高裁も、控訴を退けます。
+    reading: にせん ごねん ろくがつ。にしんの とうきょう こうさいも、こうそお しりぞけます。
+  - speaker: reimu
+    text: 二審は、新しい基準に基本的に従うことが、唯一の公正な会計の慣行だ、としました。
+    reading: にしんわ あたらしい きじゅんに きほんてきに したがう ことが、ゆいいつの こうせいな かいけいの かんこうだと しました。
+  - speaker: reimu
+    text: 一審と二審は、3人が数千億円にも上る未処理損失があることを認識しながら決算を承認した、と認めました。
+    reading: いっしんと にしんわ さんにんが すうせんおくえんにも のぼる みしょり そんしつが ある ことお にんしき しながら けっさんお しょうにん したと みとめました。
+  - speaker: kisha
+    emotion: thinking
+    text: 2度の有罪……。上告ですか。
+  - speaker: bengonin
+    emotion: normal
+    text: 上告します。当時の決まりと慣行に従った決算です。
+# ---- 2008年7月18日・最高裁 ----
+- id: card2008
+  title: ''
+  background: cg_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年7月18日。最高裁判所、第二小法廷。大野木は72歳になっていました。
+    reading: にせん はちねん しちがつ じゅうはちにち。さいこう さいばんしょ だいに しょうほうてい。おおのぎわ ななじゅうにさいに なって いました。
+- id: ch15_saikosai
+  title: 逆転無罪
+  background: cg_saikosai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大野木克信, emotion: thinking}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: '[原判決|ゲンハンケツ]及び[第１審|ダイイッシン]判決を破棄する。'
+    se: don
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人らはいずれも無罪。
+    telops:
+    - {text: "最高裁「被告人らはいずれも無罪」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 特に関連ノンバンク等に対する貸出金についての資産査定に関しては、
+  - speaker: saibancho
+    emotion: normal
+    text: 新たな基準として直ちに適用するには、明確性に乏しかったと認められる[上|うえ]、
+  - speaker: saibancho
+    emotion: normal
+    text: 過渡的な状況にあったといえ、
+  - speaker: saibancho
+    emotion: normal
+    text: 資産査定通達等の示す方向性から逸脱するものであったとしても、
+  - speaker: saibancho
+    emotion: normal
+    text: 直ちに違法であったということはできない。
+  - speaker: reimu
+    text: 大手18行のうち14行が、長銀と同じく系列への将来の支援の分を引当てていませんでした。
+    reading: おおて じゅうはちこうの うち じゅうよんこうが、ちょうぎんと おなじく けいれつえの しょうらいの しえんの ぶんお ひきあてて いませんでした。
+  - speaker: saibancho
+    emotion: normal
+    text: 裁判官全員一致の意見で、主文のとおり判決する。
+  - speaker: reimu
+    text: 逮捕から9年1か月。国会で頭を下げた日から、ほぼ10年でした。
+    reading: たいほから くねん いっかげつ。こっかいで あたまお さげた ひから、ほぼ じゅうねんでした。
+  - speaker: reimu
+    text: 同じ日、民事の裁判でも、旧経営陣の責任は認められずに終わります。
+    reading: おなじ ひ、みんじの さいばんでも きゅう けいえいじんの せきにんわ みとめられずに おわります。
+# ---- 論争：補足意見と社説 ----
+- id: ronso0
+  title: 同じ判決の補足意見
+  background: cg_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 逆転無罪！ やっぱり、粉飾なんてなかったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ判決に、[古田|ふるた]裁判官の補足意見が付いてるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[長銀|ちょうぎん]の本件決算は、その抱える不良債権の実態と大きくかい離していたものと推認される。'
+    telops:
+    - {text: "古田裁判官「不良債権の実態と大きくかい離していたものと推認される」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 直ちに違法とはいえないと前置きして、こう続けるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 企業会計の開示制度の観点から見れば、
+  - speaker: tsumugi
+    emotion: thinking
+    text: 大きな問題があったものであることは明らかと思われる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 無罪なのに、大きな問題！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 違法かどうかと実態を正しく見せていたかは、別の話なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決のあと、新聞の社説も割れたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 読売は、経営責任まで免責されたわけではないと書いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎日は、銀行の甘い自己管理を許してきた行政と、
+  - speaker: tsumugi
+    emotion: normal
+    text: 行政任せにしてきた政治の責任こそ、最も問われるべきだって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 行政と政治！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 産経は、不透明な裁量行政が経営者個人の責任に転嫁される弊害を、
+  - speaker: tsumugi
+    emotion: thinking
+    text: 行政当局は重く受け止めるべきだと書いたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 朝日は、刑事も民事も経営者が責任を問われなかったのは、
+  - speaker: tsumugi
+    emotion: thinking
+    text: ツケを負担した国民としてなんとも釈然としないって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4紙とも、言ってることがバラバラなのだ……。
+    beat: true
+- id: ronso1
+  title: 無罪なら問題なし？
+  background: cg_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！ 無罪なんだから、[長銀|ちょうぎん]は悪くなかったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 最高裁が言ったのは当時の決まりでは直ちに違法とはいえない、ということなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい基準は系列ノンバンクについては明確性に乏しくて、過渡的な状況だったって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大手[18行|ジュウハッコウ]のうち[14行|ジュウヨンコウ]が、[長銀|ちょうぎん]と同じく将来の支援の分を[引当て|ひきあて]てなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[長銀|ちょうぎん]ともう[1行|いっこう]を除く大手[17行|ジュウナナコウ]にも、合わせて1兆円以上の[引当|ひきあて]不足が指摘されてたわ。'
+  - speaker: zundamon
+    emotion: happy
+    text: みんな同じなら、セーフなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: セーフかアウトかの線が、まだはっきり引かれてなかったのよ。
+    se: hammer
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決によると[長銀|ちょうぎん]ともう[1行|いっこう]は、自分の査定と国の検査のずれが特に大きかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国有化のあとに数え直すと、1999年3月末で債務超過は約2兆8000億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 債務超過ではございません、だったのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻直前の検査で純資産はプラス1600億円だった、という質問も国会で出てるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ものさしと時点が変わると、穴の大きさが兆の単位で変わる。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから頭取がうそをついた、とも言い切れないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 罪にはならなかった。でも裁判官の一人は、帳簿と実態のずれを指摘した……。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。そこまでが、[並べて|ならべて]言えることね。
+- id: ronso2
+  title: 国策捜査だった？
+  background: cg_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、国策捜査のスケープゴートだったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そういう見方はあるわ。経済誌には、国策捜査の走りともされたと書かれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国会では時効の壁で破綻時の頭取らだけが立件されている、という声も出たの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 拡大路線を進めたとされる元会長の杉浦は、刑事では立件されていないわ。
+  - speaker: zundamon
+    emotion: angry
+    text: やっぱり、狙い撃ちなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも訴えたのは、国有化されたあとの[長銀|ちょうぎん]自身なの。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: 野党の議員の会も、検察に告発状を出してたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一審|いっしん]と二審の裁判官は、2度とも有罪にしてるの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 与党の議員も国会で、責任をとった姿を見たことがないと銀行を[責め|せめ]てたわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 狙われたのか、そうじゃないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 狙い撃ちだったという見方がある。一方で、訴えたのは[長銀|ちょうぎん]自身。
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判所も、2度は有罪とした。並べると、そうなるわ。
+- id: ronso3
+  title: うわさにつぶされた？
+  background: cg_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でも月刊誌のうわさがなければ、つぶれなかったんじゃないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の[宮澤|ミヤザワ]蔵相も、国会でこう言ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本来[長銀|ちょうぎん]の経営内容が私は悪かったようには見ておりませんが、
+  - speaker: tsumugi
+    emotion: normal
+    text: ある月刊誌が報道したことが発端になりまして、
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、うわさのせいなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも頭取だった本人は、9月の国会でこう答えてるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: マーケットが悪いということじゃなくて、
+  - speaker: tsumugi
+    emotion: normal
+    text: 処理の遅さなど自分たちの経営の責任が基本にはあると思う、って。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本人が、そう言ってたのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: うわさは引き金。でも、弾は中にあったのね。
+    beat: true
+# ---- 本当の注意点 ----
+- id: chui
+  title: 預金はどこまで守られる？
+  background: cg_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの3円、銀行に預ければ全部守られるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: いまの預金保険は、1つの銀行ごとに1人あたり元本1000万円とその利息まで。
+    telops:
+    - {text: "1人1000万円＋利息まで", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 利息のつかない普通預金のような決済用の預金は、全額守られるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 3円なら、余裕なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……守る以前の額ね。
+    se: manuke
+  - speaker: tsumugi
+    emotion: normal
+    text: 気をつけたいのは、預金に見えて預金保険の外にある商品よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[長銀|ちょうぎん]がお[金|かね]を集めた[金融債|きんゆうさい]は、はじめは預金保険の対象外だったの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: その後の改正で対象に入ったけど、いまも一部や外貨預金は外れてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 銀行の窓口で買っても、守られないものがあるのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: 買う前に、預金保険の対象かどうかを確かめてね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それと配当が出ている銀行の株でも、0円になったことがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[長銀|ちょうぎん]は[1株|ひとかぶ]3円を配った4か月後に国有化。株は価値ゼロとされたわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクの[1株|ひとかぶ]も……！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そういうことがあった、という話よ。買うか売るかは、自分で決めることね。
+# ---- 今：3兆円はなぜ国民の負担に ----
+- id: ima1
+  title: 3兆円はなぜ国民の負担に
+  background: cg_heya
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、無罪なのになんで3兆円も国民の負担になったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 罪に問われたのは、決算書の数え方。国民の負担は、返ってこなかった貸出の穴なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国有化のあと、国は[長銀|ちょうぎん]の穴を埋めてから売ったの。金融再生法の決まりよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国が[長銀|ちょうぎん]のために動かしたお[金|かね]は、種類の違うものを全部足すと8兆円近く。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのうち国民の負担と確定したのが、2004年の時点で約3兆2000億円よ。
+    telops:
+    - {text: "国民負担として確定　約3兆2000億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 3兆2000億円……！
+  - speaker: tsumugi
+    emotion: normal
+    text: 買い手は、3年以内に前提が崩れて2割以上値下がりした貸出を国へ戻せたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[瑕疵担保|かしたんぽ]という約束よ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: この約束で国が引き取った貸出は、2003年9月末までに8530億円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: デパートのそごうへの債権も、この約束で国へ戻ったわ。
+  - speaker: zundamon
+    emotion: angry
+    text: 外資が10億円で買って、丸もうけなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2004年の再上場で大きな利益を得た、と国会で批判されたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ、その前に国が3兆円を埋めていたの。
+- id: card2017
+  title: ''
+  background: cg_card_2017
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2017年5月10日。大野木克信は、がんのため80歳で亡くなりました。
+    reading: にせん じゅうななねん ごがつ とおか。おおのぎ かつのぶわ、がんの ため はちじゅっさいで なくなりました。
+  - speaker: reimu
+    text: 逆転無罪から、およそ9年後のことでした。
+    reading: ぎゃくてん むざいから、およそ くねんごの ことでした。
+- id: ima2
+  title: 長銀だった銀行の今
+  background: cg_heya
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[長銀|ちょうぎん]だった銀行は、いまどうなってるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2000年に新生銀行と名前を変えて、2023年にSBI新生銀行になったわ。
+    background: cg_gendai
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2025年7月31日。残っていた公的資金、約2300億円が返されたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国有化から27年近くで、やっと返し終わったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 12月には、東証にもう一度上場したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 名前は変わっても、銀行は続いてたのか……。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: cg_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ボクの3円の配当、通帳に記帳しに行くのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 往復の電車賃のほうが、高いわよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: '[1株|ひとかぶ]3円の配当を出した銀行の株は、[1株|ひとかぶ]0.4円で売られたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 決算の数え方は、罪にならなかった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも返ってこなかった約3兆2000億円は、国民の負担になったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国会で頭取は、公的資金は決して[長銀|ちょうぎん]が生き延びるためのものではないと頭を下げたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その[長銀|ちょうぎん]は名前を変えて、いまも銀行として続いてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……生き延びたのは、名前を変えた銀行のほうだったのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 決算書の数字は、ものさしで変わる。数字の前に、ものさしを見ることね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
