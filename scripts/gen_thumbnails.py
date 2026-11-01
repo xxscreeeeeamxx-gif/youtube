@@ -4368,6 +4368,10 @@ SPECS = {
         dict(scene="cg_kokkai", tint="mono", tag="1998年 国会", emo="sad", fx="gloom", say="おわび申し上げます"),
         dict(scene="cg_saikosai", tint="yellow", tag="2008年 最高裁", emo="surprised", fx="sparkle", say="無罪……！"),
     ]),
+    "yaohan-wada": dict(layout="scene", headline="107万人の2年後、無一文", head_hi="無一文", panels=[
+        dict(scene="ya_shanghai_gunshu", tint="yellow", tag="1995年 上海", emo="surprised", fx="sparkle", say="107万人！？"),
+        dict(scene="ya_apart", tint="mono", tag="倒産のあと", emo="sad", fx="gloom", say="年金だけです"),
+    ]),
     "olympus-woodford": dict(layout="scene", headline="問いただした社長、解任", head_hi="解任", panels=[
         dict(scene="ol_kaigi", tint="yellow", tag="2011年 買収の報酬", emo="surprised", fx="sweat", say="3割超！？"),
         dict(scene="ol_kuko", tint="mono", tag="解任の日 成田へ", emo="sad", fx="gloom", say="バスで空港へ…"),

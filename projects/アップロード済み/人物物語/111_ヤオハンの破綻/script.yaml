@@ -1,0 +1,1667 @@
+meta:
+  title: 上海で107万人を集めたヤオハン会長、倒産で無一文に「生活費は年金だけです」【ずんだもん解説】
+  slug: yaohan-wada
+  hook_line: 上海で107万人を集めたヤオハンの会長は、なぜ2年後に無一文になったのか。
+  summary: 1995年12月、上海。開業したばかりの巨大な百貨店に、その日だけで107万人が押し寄せました。率いていたのは、熱海の八百屋の長男、和田一夫。株価が高いうちは返さなくていい借金。日本の店は弟に任せ、自分は香港へ。そして、歯止めだった母。上り坂の裏で、何が積み上がっていたのか。本人がのちに残した言葉と、経済誌や判決の記録を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - マックスバリュ東海「ヤオハン商品券の利用終了のお知らせ」（2026年7月） https://www.mv-tokai.co.jp/wp/wp-content/uploads/2026/07/9d94205e2361e93665fff2ce17277f6e.pdf
+  - 日本経済新聞「9月18日 ヤオハンジャパン、会社更生法の適用申請」（2019年9月17日） https://www.nikkei.com/article/DGKKZO49869590X10C19A9EAC000/
+  - 日本経済新聞「和田一夫氏が死去 元ヤオハングループ代表」（2019年8月29日） https://www.nikkei.com/article/DGXMZO49138980Z20C19A8CZ8000/
+  - 日経ビジネス電子版「ヤオハンはなぜ、倒産してしまったのか」（2019年2月8日） https://business.nikkei.com/atcl/NBD/19/special/00025/
+  - マックスバリュ東海「2026年2月期 決算短信」（2026年4月9日） https://www2.jpx.co.jp/disc/81980/081220260407599504_tse-acedjpsm-81980-20260409381980-ixbrl.htm
+  - 第一财经「第一八佰伴：见证上海改革开放的商业地标」（2018年9月18日） https://www.yicai.com/news/100028794.html
+  tags:
+  - ヤオハン
+  - 和田一夫
+  - 八百半
+  - 和田カツ
+  - マックスバリュ東海
+  - 第一八佰伴
+  - 会社更生法
+  - 転換社債
+  - 熱海
+  - 上海
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 上海で107万人
+    bottom: ヤオハンの会長
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: shain
+    label: 社員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4a3a'
+  - id: zaimu
+    label: 財務部
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: yakuin
+    label: 役員
+    voice: 100
+    pitch: -0.06
+    outfit: suit
+    color: '#2f3440'
+  - id: ginko
+    label: 取引銀行
+    voice: 13
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4f5f'
+  - id: katsu
+    label: 和田カツ
+    voice: 8
+    pitch: -0.08
+    hair: bun
+    outfit: kimono
+    color: '#5a4a5a'
+  - id: ryokan
+    label: 旅館の主人
+    voice: 42
+    pitch: 0.1
+    outfit: haori
+  - id: jukensha
+    label: 若い社員
+    voice: 73
+    pitch: 0.0
+    outfit: apron
+  - id: tenin
+    label: 店員
+    voice: 21
+    pitch: 0.0
+    outfit: apron
+  - id: saikensha
+    label: 債権者
+    voice: 42
+    pitch: -0.04
+    outfit: kimono
+    color: '#4a4038'
+  - id: shanghai
+    label: 上海の担当
+    voice: 8
+    pitch: 0.12
+    hair: short
+    outfit: suit
+    color: '#454a55'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: jomu
+    label: 銀行の常務
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#2a2a32'
+  - id: mitsumasa
+    label: 和田光正
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: okada
+    label: 岡田元也
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#3a3f4a'
+  - id: gakusei
+    label: 学生
+    voice: 67
+    pitch: 0.04
+scenes:
+# ---- 先出し（1995年12月20日・上海の開業の日） ----
+- id: co_shanghai
+  title: ''
+  background: ya_shanghai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1995年12月20日、上海。巨大な百貨店が開業しました。
+    reading: せんきゅうひゃく きゅうじゅうごねん じゅうにがつ はつか、しゃんはい。きょだいな ひゃっかてんが かいぎょう しました。
+  - speaker: shain
+    emotion: happy
+    text: 会長！ 開業の日の来店客、数が出ました！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……[何人|なんにん]、入った。
+  - speaker: shain
+    emotion: surprised
+    background: ya_shanghai_gunshu
+    text: 107万人です！ 世界記録に、なるかもしれません！
+  - speaker: zundamon
+    emotion: surprised
+    text: 107万……！
+  - speaker: zundamon
+    emotion: happy
+    text: '[熱海|あたみ]の八百屋が、上海で107万人か。'
+  - speaker: reimu
+    text: この男は、和田一夫。ヤオハングループを率いる66歳です。
+    reading: この おとこわ、わだ かずお。やおはん ぐるーぷお ひきいる ろくじゅうろくさいです。
+  - speaker: reimu
+    text: 1年9か月後、日本のヤオハンは会社更生法を申請。負債1613億円。68歳の和田は一夜にして無一文に。
+    reading: いちねん きゅうかげつご、にほんの やおはんわ かいしゃ こうせいほうお しんせい。ふさい せんろっぴゃく じゅうさんおくえん。ろくじゅうはっさいの わだわ いちやに して むいちもんに。
+    telops:
+    - {text: "負債1613億円・68歳で無一文", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 今の部屋（引き出しの商品券） ----
+- id: hook
+  title: ''
+  background: ya_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 引き出しの奥から、商品券が出てきたのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: どこの？
+  - speaker: zundamon
+    emotion: happy
+    text: ヤオハンの1000円券！ 今夜はごちそうだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ヤオハンって名前のお店、もう無いわよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[熱海|あたみ]の八百屋が、本人の話では世界の[16か国|ジュウロッカコク]まで広がった会社なの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも上海で107万人を集めた2年後に、率いた[和田一夫|わだかずお]は無一文になったのよ。
+    telops:
+    - {text: "なぜ107万人の2年後に無一文？", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 2年後に無一文！？ なんでなのだ！？
+# ---- 1986年・株に化ける借金 ----
+- id: ch1_kabu
+  title: 株に化ける借金
+  background: ya_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: normal}
+  - {who: zaimu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1986年。ヤオハンは、東証一部に上場します。社長は和田一夫、57歳です。
+    reading: せんきゅうひゃく はちじゅうろくねん。やおはんわ、とうしょう いちぶに じょうじょう します。しゃちょうわ わだ かずお、ごじゅうななさいです。
+  - speaker: zaimu
+    emotion: normal
+    text: 社長。上場したので、社債でお[金|かね]を集められます。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社債って、要は借金だろう。
+  - speaker: zaimu
+    emotion: normal
+    text: はい。ただこの社債は、決まった値段でうちの株に替えられるんです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 株に？
+  - speaker: zaimu
+    emotion: normal
+    text: 株価が高ければ、持ち主は株に替えます。そうなれば、現金で返さなくていい。
+  - speaker: zundamon
+    emotion: surprised
+    text: 返さなくて、いい……！？
+  - speaker: zaimu
+    emotion: happy
+    text: 株価が上がっているかぎり、借金が株に化けるんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 打ち出の[小づち|こづち]だな！
+    se: hirameki
+  - speaker: zundamon
+    emotion: happy
+    background: ya_kaigi_up
+    text: よし、どんどん[出|だ]せ。そのお[金|かね]で、店を建てまくるぞ！
+  - speaker: zaimu
+    emotion: thinking
+    text: ……株価が、下がらなければですけど。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: 下がるもんか。ヤオハンは、これから伸びるんだ。
+  - speaker: reimu
+    text: この借金は、株価が下がると、現金の借金に戻ります。
+    reading: この しゃっきんわ かぶかが さがると、げんきんの しゃっきんに もどります。
+  - speaker: reimu
+    text: 10年後、117億円を現金で返す日が来ます。1年の純利益の、約20年分です。
+    reading: じゅうねんご、ひゃく じゅうななおくえんお げんきんで かえす ひが きます。いちねんの じゅんりえきの、やく にじゅうねんぶんです。
+    telops:
+    - {text: "117億円＝純利益の約20年分", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 年収の20年分を、来月まとめて返せと言われた家です。上海で107万人を集めた、翌年のことでした。
+    reading: ねんしゅうの にじゅうねんぶんお、らいげつ まとめて かえせと いわれた いえです。しゃんはいで ひゃくななまんにんお あつめた、よくねんの ことでした。
+# ---- 1989年・役員会で突然 ----
+- id: ch1_yakuin
+  title: 役員会で突然
+  background: ya_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: normal}
+  - {who: yakuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1989年。日本の会社の役員会です。
+    reading: せんきゅうひゃく はちじゅうくねん。にほんの かいしゃの やくいんかいです。
+  - speaker: zundamon
+    emotion: normal
+    text: 今日は、一つ発表がある。
+  - speaker: yakuin
+    emotion: normal
+    text: 新しいお店の件ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 日本の会社の社長は、弟に任せる。
+    se: don
+  - speaker: yakuin
+    emotion: surprised
+    text: ……い、今この場でですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 私は、香港へ行く。
+  - speaker: yakuin
+    emotion: surprised
+    text: 香港！？
+  - speaker: zundamon
+    emotion: happy
+    text: 向こうに会社を作って、そこから世界をやる。
+  - speaker: yakuin
+    emotion: thinking
+    text: 世界を、やる……。
+  - speaker: yakuin
+    emotion: thinking
+    text: 日本の店は、弟さんに丸投げですか。
+    beat: true
+  - speaker: reimu
+    text: 社長の交代は役員会の席で突然発表された、と経済誌は書いています。
+    reading: しゃちょうの こうたいわ やくいんかいの せきで とつぜん はっぴょう された、と けいざいしわ かいて います。
+  - speaker: reimu
+    text: 8月、和田は香港に持株会社を作ります。天安門事件の直後でしたが、本人はチャンスと見たと語っています。
+    reading: はちがつ、わだわ ほんこんに もちかぶ がいしゃお つくります。てんあんもん じけんの ちょくごでしたが、ほんにんわ ちゃんすと みたと かたって います。
+# ---- 1989〜1990年・銀行の反対 ----
+- id: ch1_ginko
+  title: 銀行の反対を押し切る
+  background: ya_ginko
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: normal}
+  - {who: ginko, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: ginko
+    emotion: thinking
+    text: '[和田|わだ]さん。グループの本部まで香港へ移すというのは、本気ですか。'
+  - speaker: zundamon
+    emotion: normal
+    text: 本気です。香港は規制が無くて、自由です。
+  - speaker: zundamon
+    emotion: happy
+    text: 税も有利で、[華僑|かきょう]の情報が集まる。
+  - speaker: ginko
+    emotion: thinking
+    text: 当行としては、香港への進出には反対です。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……反対、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 日本の店は、弟に任せてあります。
+  - speaker: ginko
+    emotion: angry
+    text: ……それでも、反対です。
+  - speaker: zundamon
+    emotion: happy
+    text: もう、決めたことです。
+  - speaker: ginko
+    emotion: sad
+    text: ……そうですか。
+    beat: true
+  - speaker: reimu
+    text: 1990年5月、本部は香港へ。この移転を境に金融機関との関係は冷え込んだ、と経済誌は書いています。
+    reading: せんきゅうひゃく きゅうじゅうねん ごがつ、ほんぶわ ほんこんえ。この いてんお さかいに きんゆう きかんとの かんけいわ ひえこんだ、と けいざいしわ かいて います。
+  - speaker: reimu
+    text: その冷えが、7年後に響きます。
+    reading: その ひえが、ななねんごに ひびきます。
+# ---- 母という歯止め ----
+- id: ch1_haha
+  title: ''
+  background: ya_hk_office
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 和田一夫, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 和田には、歯止めになる母がいました。1993年に亡くなるカツについて、本人はのちにこう書いています。
+    reading: わだにわ、はどめに なる ははが いました。せんきゅうひゃく きゅうじゅうさんねんに なくなる かつに ついて、ほんにんわ のちに こう かいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: 特に、93年に母のカツが亡くなると、歯止めをかける人もいない。
+    telops:
+    - {text: "和田「歯止めをかける人もいない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 歯止めの母を失った男は、2年後に上海で107万人を集め、その2年後に無一文になります。
+    reading: はどめの ははお うしなった おとこわ にねんごに しゃんはいで ひゃくななまんにんお あつめ、その にねんごに むいちもんに なります。
+# ---- 1930年・熱海の八百屋 ----
+- id: card1930
+  title: ''
+  background: ya_card_1930
+  cuts:
+  - speaker: reimu
+    text: 1930年12月、和田一夫の両親が熱海で八百屋を開きます。元手は千円。旅館相手の行商からでした。
+    reading: せんきゅうひゃく さんじゅうねん じゅうにがつ、わだ かずおの りょうしんが あたみで やおやお ひらきます。もとでわ せんえん。りょかん あいての ぎょうしょうからでした。
+# ---- 1950年・焼け跡の軒下 ----
+- id: ch2_taika
+  title: 焼け跡の軒下
+  background: ya_yaoya
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: sad}
+  - {who: katsu, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 1950年4月13日、熱海の大火。和田の店と家は、すべて焼けました。
+    reading: せんきゅうひゃく ごじゅうねん しがつ じゅうさんにち、あたみの たいか。わだの みせと いえわ、すべて やけました。
+  - speaker: katsu
+    emotion: angry
+    background: ya_yakeato
+    text: '[一夫|かずお]！ 火災保険を増やす話は、どうなってたの！'
+  - speaker: zundamon
+    emotion: sad
+    text: ……間に合いませんでした。
+  - speaker: katsu
+    emotion: angry
+    text: 間に合わなかったじゃ、済まないのよ！
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: sad
+    text: ……すみません。
+  - speaker: reimu
+    text: 息子たちがかばい合う姿を見て、カツは考えを改めます。
+    reading: むすこたちが かばいあう すがたお みて、かつわ かんがえお あらためます。
+  - speaker: katsu
+    emotion: thinking
+    text: ……仕入れ先には、今月の分をきちんと払うわよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: でも向こうは、今月の勘定は棚上げでいいって……。
+  - speaker: katsu
+    emotion: normal
+    text: いいと言われても、払うの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 40軒近く、あるんですよ！？
+  - speaker: katsu
+    emotion: normal
+    text: 預金をおろせば、払えるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 店も家も、焼けたのに……？
+  - speaker: katsu
+    emotion: happy
+    text: 無一物中無尽蔵よ。何も無くなっても、尽きないものはあるの。
+    beat: true
+  - speaker: reimu
+    text: 和田はのちに、自分の人生をこう語っています。
+    reading: わだわ のちに、じぶんの じんせいお こう かたって います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 私は人生において三度の失敗をした。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一度目は[熱海|あたみ]の大火、二度目はブラジルヤオハンの撤退、
+  - speaker: zundamon
+    emotion: sad
+    text: そして三度目はヤオハンジャパンの倒産であった。
+  - speaker: reimu
+    text: 一度目の失敗は、母が支えました。三度目のとき、母はもういません。
+    reading: いちどめの しっぱいわ、ははが ささえました。さんどめの とき、ははわ もう いません。
+# ---- 1956年・掛け売りをやめる日 ----
+- id: ch2_kakeuri
+  title: 掛け売りをやめる日
+  background: ya_yaoya
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: normal}
+  - {who: ryokan, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1956年11月1日。和田の店は旅館への掛け売りをやめ、現金で値札どおりに売り始めます。
+    reading: せんきゅうひゃく ごじゅうろくねん じゅういちがつ ついたち。わだの みせわ りょかんえの かけうりお やめ、げんきんで ねふだ どおりに うり はじめます。
+  - speaker: ryokan
+    emotion: normal
+    text: '[八百半|ヤオハン]さん。いつもの野菜、今月も掛けで頼むよ。'
+  - speaker: zundamon
+    emotion: normal
+    text: 申し訳ありません。今日から、現金でお願いします。
+  - speaker: ryokan
+    emotion: surprised
+    text: 現金！？ うちはずっと、掛けでやってきたじゃないか。
+  - speaker: zundamon
+    emotion: normal
+    text: 母に勧められて、商売の勉強会で講演を聞いてきたんです。
+  - speaker: ryokan
+    emotion: thinking
+    text: それで、なんで現金になるんだい。
+  - speaker: zundamon
+    emotion: normal
+    text: 値段も、値札どおりです。値引きの相談も、なしです。
+  - speaker: ryokan
+    emotion: angry
+    text: 八百屋が、旅館に向かって値札どおり！？
+  - speaker: zundamon
+    emotion: normal
+    text: どのお客さんにも、同じ値段で売ります。
+  - speaker: ryokan
+    emotion: angry
+    text: ……じゃあ、よそで買うよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……いちばんのお得意さんが。
+    beat: true
+  - speaker: reimu
+    text: 一部の旅館には断られましたが、1日の売上は10万円から、4年で100万円に伸びます。
+    reading: いちぶの りょかんにわ ことわられましたが、いちにちの うりあげわ じゅうまんえんから よねんで ひゃくまんえんに のびます。
+# ---- 1962年・33歳の社長 ----
+- id: card1962
+  title: ''
+  background: ya_card_1962
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1962年7月。父が退き、33歳の和田一夫が社長に就きます。
+    reading: せんきゅうひゃく ろくじゅうにねん しちがつ。ちちが しりぞき、さんじゅうさんさいの わだ かずおが しゃちょうに つきます。
+- id: ch3_shacho
+  title: 日本一のスーパー・チェーン
+  background: ya_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: happy}
+  - {who: katsu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: katsu
+    emotion: normal
+    text: 社長さん。これから、どんな店にするの。
+  - speaker: zundamon
+    emotion: happy
+    text: 母さん。アメリカでは、スーパーが町ごとにチェーンになってました。
+  - speaker: katsu
+    emotion: thinking
+    text: 去年の視察のツアーは、とっくに終わってたでしょうに。
+  - speaker: zundamon
+    emotion: happy
+    text: 一人で3か月残って、向こうの店を見て回ったんです。
+  - speaker: katsu
+    emotion: surprised
+    text: 3か月も！？
+  - speaker: zundamon
+    emotion: happy
+    text: 日本一の八百屋は、もうやめます。
+  - speaker: katsu
+    emotion: surprised
+    text: やめる！？
+  - speaker: zundamon
+    emotion: happy
+    text: 日本一の、スーパーのチェーンを作ります。
+  - speaker: katsu
+    emotion: thinking
+    text: ……夢だけは、昔から大きいのよね。
+    beat: true
+- id: ch3_shiken
+  title: ''
+  background: ya_jimusho
+  stage:
+  - {who: jukensha, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 社長になった和田は、社員の試験を始めます。こんな問題も出ました。
+    reading: しゃちょうに なった わだわ、しゃいんの しけんお はじめます。こんな もんだいも でました。
+  - speaker: jukensha
+    emotion: thinking
+    text: 一個五十円のかしわ餅を五千個売りたい。どうすれば良いか……。
+  - speaker: jukensha
+    emotion: surprised
+    text: ……五千個！？
+  - speaker: jukensha
+    emotion: sad
+    text: 端午の節句が、10回来ても売れる気がしない……。
+    se: manuke
+# ---- 1969年・サンパウロの靴下 ----
+- id: card1969
+  title: ''
+  background: ya_card_1969
+  cuts:
+  - speaker: reimu
+    text: 1969年6月、ブラジルのサンパウロ。日系人が約70万人いる町に、日本の百貨店は一つもありませんでした。
+    reading: せんきゅうひゃく ろくじゅうくねん ろくがつ、ぶらじるの さんぱうろ。にっけいじんが やく ななじゅうまんにん いる まちに、にほんの ひゃっかてんわ ひとつも ありませんでした。
+- id: ch3_kutsushita
+  title: 靴下1足
+  background: ya_saopaulo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: normal}
+  - {who: tenin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: すみません。この靴下を、1足ください。
+  - speaker: tenin
+    emotion: thinking
+    text: たったそれだけか。もっと買わないか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……1足で、いいんです。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: 客に、もっと買えと言う店か……。
+  - speaker: zundamon
+    emotion: happy
+    text: ……ここに、日本の店を出す。
+    beat: true
+  - speaker: reimu
+    text: 店員の一言は和田の回想です。1971年9月、海外1号店が開きます。二度目の失敗の始まりでした。
+    reading: てんいんの ひとことわ わだの かいそうです。せんきゅうひゃく ななじゅういちねん くがつ、かいがい いちごうてんが ひらきます。にどめの しっぱいの はじまりでした。
+# ---- 1977年・ブラジルの撤退 ----
+- id: card1977
+  title: ''
+  background: ya_card_1977
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1977年。2年前の金融の引き締めで、ブラジルの会社は行き詰まっていました。
+    reading: せんきゅうひゃく ななじゅうななねん。にねんまえの きんゆうの ひきしめで、ぶらじるの かいしゃわ いきづまって いました。
+- id: ch3_tettai
+  title: 撤退に反対した母
+  background: ya_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: sad}
+  - {who: katsu, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 母さん。ブラジルからは、引き揚げます。
+  - speaker: katsu
+    emotion: angry
+    text: 撤退には、反対よ。
+  - speaker: zundamon
+    emotion: sad
+    text: もう、お[金|かね]が回らないんです。
+  - speaker: katsu
+    emotion: angry
+    text: それでも、反対。
+  - speaker: zundamon
+    emotion: sad
+    text: ……6年かけた、海外の1号店なんです。私だって。
+  - speaker: katsu
+    emotion: thinking
+    text: ……だったら、債権者の皆さんの所を一軒ずつ回るわよ。
+  - speaker: reimu
+    text: 反対もむなしく、会社は清算に。カツも、約1300件の債権者を回りました。
+    reading: はんたいも むなしく、かいしゃわ せいさんに。かつも、やく せんさんびゃっけんの さいけんしゃお まわりました。
+- id: ch3_ame
+  title: ''
+  background: ya_ame
+  stage:
+  - {who: katsu, x: 0.28, flip: true, emotion: sad}
+  - {who: saikensha, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: saikensha
+    emotion: angry
+    text: 帰ってくれ。話すことは、何もない。
+  - speaker: katsu
+    emotion: sad
+    text: お会いいただけるまで、ここで待たせていただきます。
+  - speaker: saikensha
+    emotion: angry
+    text: ……雨だぞ。
+  - speaker: katsu
+    emotion: sad
+    text: ……はい。
+    se: namida
+  - speaker: reimu
+    text: 雨の中、家の前で3日間正座して待った、と言われています。二度目の失敗でも、母が前に立ちました。
+    reading: あめの なか いえの まえで みっかかん せいざ して まった、と いわれて います。にどめの しっぱいでも、ははが まえに たちました。
+  - speaker: reimu
+    text: それでも和田は、1979年にアメリカ、1984年には香港に店を出します。
+    reading: それでも わだわ せんきゅうひゃく ななじゅうくねんに あめりか、せんきゅうひゃく はちじゅうよねんにわ ほんこんに みせお だします。
+# ---- 1990年・山の上の音楽会 ----
+- id: card1990
+  title: ''
+  background: ya_card_1990
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 1990年。本部とともに家族で香港へ移った和田は、このころ山の上の豪邸を手に入れます。
+    reading: せんきゅうひゃく きゅうじゅうねん。ほんぶと ともに かぞくで ほんこんえ うつった わだわ、この ころ やまの うえの ごうていお てに いれます。
+- id: ch4_peak
+  title: 山の上の音楽会
+  background: ya_peak
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: happy}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 会長、この部屋……椅子が100もありますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ここで、音楽会を開くんだ。オペラも呼ぶぞ。
+  - speaker: shain
+    emotion: thinking
+    text: '[熱海|あたみ]の八百屋が、オペラ……。'
+  - speaker: zundamon
+    emotion: happy
+    text: 八百屋だって、山の上で歌を聴いていいだろう。
+  - speaker: shain
+    emotion: thinking
+    text: ……休憩のときに、キャベツの値段の話は抜きでお願いします。
+    se: zukko
+  - speaker: zundamon
+    emotion: happy
+    text: 元は、銀行の公邸だった家だぞ。窓の下は、香港の港だ。
+  - speaker: zundamon
+    emotion: happy
+    text: 母には、そんな贅沢をしてはいけないと言われたがな。
+  - speaker: shain
+    emotion: normal
+    text: 日本からは、ずいぶん遠くなりましたね。
+  - speaker: zundamon
+    emotion: happy
+    text: 遠いほうがいい。ここは、自由だ。
+  - speaker: reimu
+    text: 香港では2年で12社を買い、600億円から700億円を使ったと経済誌は書いています。
+    reading: ほんこんでわ にねんで じゅうにしゃお かい、ろっぴゃくおくえんから ななひゃくおくえんお つかったと けいざいしわ かいて います。
+  - speaker: reimu
+    text: 本人はのちに、このころの考えをこう書いています。
+    reading: ほんにんわ のちに、この ころの かんがえお こう かいて います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 後ろを振り向くのは退化に等しい、と。
+# ---- 1991年・浦東の空き地 ----
+- id: card1991
+  title: ''
+  background: ya_card_1991
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1991年4月、上海。和田は、浦東の開発の事務所を訪ねます。
+    reading: せんきゅうひゃく きゅうじゅういちねん しがつ、しゃんはい。わだわ、ぷーどんの かいはつの じむしょお たずねます。
+- id: ch4_pudong
+  title: 浦東の空き地
+  background: ya_pudong
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: thinking}
+  - {who: shanghai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shanghai
+    emotion: normal
+    text: '[和田|わだ]さん。こちらが、[浦東|プードン]の土地です。'
+  - speaker: shanghai
+    emotion: thinking
+    text: ……ご覧のとおり、まだ何もありません。
+  - speaker: shanghai
+    emotion: normal
+    text: お勧めは、川の向こうの[淮海路|ワイカイロ]です。もう街ができていますから。
+  - speaker: zundamon
+    emotion: thinking
+    text: 向こうは、もう出来上がった街ですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 何も無いから、いいんです。
+  - speaker: shanghai
+    emotion: surprised
+    text: こ、この空き地にですか！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: ここに、とびきり大きな百貨店を建てる。
+  - speaker: shanghai
+    emotion: thinking
+    text: 遠くのクレーンしか、見えませんけど……。
+  - speaker: zundamon
+    emotion: happy
+    text: 街は、あとから来ます。
+  - speaker: reimu
+    text: 市内の土地ではなく、まだ何もない浦東を選んだのです。当時、世界最大の百貨店を建てる計画でした。
+    reading: しないの とちでわ なく、まだ なにも ない ぷーどんお えらんだのです。とうじ、せかい さいだいの ひゃっかてんお たてる けいかくでした。
+  - speaker: reimu
+    text: 2日後、上海市と合弁の意向書を交わします。このとき、ヤオハンの借金はもう増え始めていました。
+    reading: ふつかご、しゃんはいしと ごうべんの いこうしょお かわします。この とき やおはんの しゃっきんわ もう ふえ はじめて いました。
+# ---- 1993年1月・中国に1000店 ----
+- id: card1993
+  title: ''
+  background: ya_card_1993
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1993年1月。和田は、中国でスーパーを1000店つくる構想を発表します。
+    reading: せんきゅうひゃく きゅうじゅうさんねん いちがつ。わだわ、ちゅうごくで すーぱーお せんてん つくる こうそうお はっぴょう します。
+- id: ch4_1000
+  title: 中国に1000店
+  background: ya_hk_office
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 中国に、スーパーを1000店ですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 社内では、5年で1000店と言ってあります。
+  - speaker: kisha
+    emotion: surprised
+    text: 5年で！？ 1年に、200店ずつ……。
+    se: bikkuri
+  - speaker: kisha
+    emotion: thinking
+    text: なぜ、日本ではなく海外なんです。
+  - speaker: zundamon
+    emotion: normal
+    text: 規制の多い国内でチェーン展開に遅れ、後発の不利はいかんともしがたかった。
+  - speaker: zundamon
+    emotion: happy
+    text: 海外ならばナンバーワンになるチャンスがあると思った。
+    telops:
+    - {text: "和田「海外ならばナンバーワンになるチャンスがあると思った」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 海外なら、一番になれると。
+  - speaker: kisha
+    emotion: thinking
+    text: 業界では、夢のような話だと言われてますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: ……夢のような、か。
+    beat: true
+  - speaker: reimu
+    text: 金融機関は、経営の不透明さと強気一辺倒の計画に厳しい注文。借金は売上の6割を超えていました。
+    reading: きんゆう きかんわ、けいえいの ふとうめいさと つよき いっぺんとうの けいかくに きびしい ちゅうもん。しゃっきんわ うりあげの ろくわりお こえて いました。
+# ---- 1993年4月・母の葬儀 ----
+- id: ch4_saijo
+  title: 母の葬儀
+  background: ya_saijo
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 和田一夫, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1993年4月28日。和田カツが、86歳で亡くなります。熱海での社葬には、約4000人が集まりました。
+    reading: せんきゅうひゃく きゅうじゅうさんねん しがつ にじゅうはちにち。わだ かつが はちじゅうろくさいで なくなります。あたみでの しゃそうにわ、やく よんせんにんが あつまりました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……母さん。
+  - speaker: reimu
+    text: 歯止めをかける人は、もういません。上海の店の工事は、続いていました。
+    reading: はどめお かける ひとわ、もう いません。しゃんはいの みせの こうじわ、つづいて いました。
+# ---- 1995年12月20日・107万人の日 ----
+- id: card1995
+  title: ''
+  background: ya_card_1995
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1995年12月20日。浦東の空き地に、あの百貨店が開業します。
+    reading: せんきゅうひゃく きゅうじゅうごねん じゅうにがつ はつか。ぷーどんの あきちに、あの ひゃっかてんが かいぎょう します。
+- id: ch5_107
+  title: 107万人の日
+  background: ya_shanghai_gunshu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 式典では和服で太鼓を打ち、升の日本酒を飲み干した、と上海側の担当者が振り返っています。
+    reading: しきてんでわ わふくで たいこお うち、ますの にほんしゅお のみほしたと しゃんはいがわの たんとうしゃが ふりかえって います。
+  - speaker: shain
+    emotion: happy
+    text: 会長！ 開業の日の来店客、107万人です！
+  - speaker: zundamon
+    emotion: surprised
+    text: ……107万。
+  - speaker: shain
+    emotion: happy
+    text: 世界記録に、なるかもしれませんよ！
+  - speaker: zundamon
+    emotion: happy
+    text: '[熱海|あたみ]の八百屋が、上海で107万人か。'
+  - speaker: shain
+    emotion: happy
+    text: 売場は約11万平方メートル。アジアで最大級ですからね！
+  - speaker: shain
+    emotion: happy
+    text: 1日で、大きな町がまるごと一つ来たようなものです！
+  - speaker: zundamon
+    emotion: happy
+    text: 町が、一つ……。
+- id: ch5_ura
+  title: ''
+  background: ya_uriba
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: ただ……レジのほうは、人の数ほどは鳴っていません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見に来ただけ、か。
+    se: chin
+  - speaker: shain
+    emotion: sad
+    text: 売り場より、建物を見に来た人が多いようです。
+  - speaker: reimu
+    text: 1998年の論文は、来店客の8割は見物が目当てだったと書いています。
+    reading: せんきゅうひゃく きゅうじゅうはちねんの ろんぶんわ、らいてんきゃくの はちわりわ けんぶつが めあてだったと かいて います。
+    telops:
+    - {text: "来店客の8割は見物", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 最初の年の売上は108億円で、赤字。赤字を埋めるのは、約10年後のことです。
+    reading: さいしょの としの うりあげわ ひゃくはちおくえんで、あかじ。あかじお うめるのわ、やく じゅうねんごの ことです。
+# ---- 1996年・上海に住む ----
+- id: card1996
+  title: ''
+  background: ya_card_1996
+  cuts:
+  - speaker: reimu
+    text: 1996年6月。和田は香港から、上海の浦東へ移り住みます。7月には、本部も上海へ。
+    reading: せんきゅうひゃく きゅうじゅうろくねん ろくがつ。わだわ ほんこんから、しゃんはいの ぷーどんえ うつりすみます。しちがつにわ、ほんぶも しゃんはいえ。
+- id: ch6_shanghai
+  title: 上海に住む
+  background: ya_shanghai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 会長ご自身が、上海に住むんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 上海と[江蘇|こうそ]と[浙江|せっこう]で、人口は1億2000万人。
+  - speaker: zundamon
+    emotion: happy
+    text: 中国のGNPの3割で、消費は[年|ねん]に20%以上伸びています。
+  - speaker: kisha
+    emotion: surprised
+    text: それで、ご自分が住むほうが早いと。
+  - speaker: zundamon
+    emotion: happy
+    text: 中国の沿岸に、1060店を作ります。
+  - speaker: kisha
+    emotion: surprised
+    text: 1000店から、さらに増えた……！
+  - speaker: reimu
+    text: このとき日本の会社では、117億円の返済日が近づいていました。
+    reading: この とき にほんの かいしゃでわ、ひゃく じゅうななおくえんの へんさいびが ちかづいて いました。
+# ---- 1996年11月〜12月・117億円の返済日 ----
+- id: ch6_117
+  title: 117億円の返済日
+  background: ya_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: thinking}
+  - {who: zaimu, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: zaimu
+    emotion: sad
+    text: 会長。12月10日に、ワラント債117億円の期限が来ます。
+  - speaker: zundamon
+    emotion: normal
+    text: 株価が高けりゃ、なんとかなるんだろう。
+  - speaker: zaimu
+    emotion: sad
+    text: 株価が下がって、株を買う人がいません。
+  - speaker: zaimu
+    emotion: sad
+    text: 現金で、返すしかありません。
+  - speaker: zundamon
+    emotion: surprised
+    text: 打ち出の[小づち|こづち]が……。
+  - speaker: zaimu
+    emotion: sad
+    text: '[小づち|こづち]が、借金に戻りました。'
+    se: gaan
+  - speaker: zundamon
+    emotion: thinking
+    text: ……どうする。
+  - speaker: zaimu
+    emotion: thinking
+    text: 銀行に、借り換えをお願いするしかありません。
+  - speaker: zaimu
+    emotion: normal
+    text: 12月10日、銀行の借り換えでなんとか返せました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ひとまず、か。
+  - speaker: zaimu
+    emotion: sad
+    background: ya_shoken
+    text: ですが、リストラ案の会見で具体策を出せず……。
+  - speaker: zaimu
+    emotion: sad
+    text: 株価は1か月で、740円から363円です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分……！
+  - speaker: zaimu
+    emotion: sad
+    text: 12月だけで、[ストップ安|ストップやす]が2度です。
+  - speaker: zaimu
+    emotion: thinking
+    text: 社債の残りは、まだ約470億円あります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……返す日は、これからも来るのか。
+# ---- 1997年・日本の店を切れない ----
+- id: card1997
+  title: ''
+  background: ya_card_1997
+  cuts:
+  - speaker: reimu
+    text: 1997年1月。日本の社長が、もう一人の弟の和田光正に替わります。和田は財務の立て直しを託しました。
+    reading: せんきゅうひゃく きゅうじゅうななねん いちがつ。にほんの しゃちょうが もう ひとりの おとうとの わだ みつまさに かわります。わだわ ざいむの たてなおしお たくしました。
+- id: ch7_jomu
+  title: 日本の店は切れない
+  background: ya_ginko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: thinking}
+  - {who: jomu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 和田がのちに取材で振り返った、東海銀行の常務とのやりとりです。
+    reading: わだが のちに しゅざいで ふりかえった、とうかい ぎんこうの じょうむとの やりとりです。
+  - speaker: jomu
+    emotion: normal
+    text: '[和田|わだ]さん。日本の事業を整理して、海外を[礎|いしずえ]に再出発すべきです。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本を、整理……。
+  - speaker: jomu
+    emotion: thinking
+    text: 日本を整理して、海外で出直すんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の店は、父から受け継いだ店です。
+  - speaker: zundamon
+    emotion: sad
+    text: 切り捨てることは、できません。
+  - speaker: jomu
+    emotion: thinking
+    text: ……そうですか。
+    beat: true
+# ---- 1997年2月〜5月・稼ぎ頭を売る ----
+- id: ch7_16
+  title: 稼ぎ頭を売る
+  background: ya_kaigi
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: surprised}
+  - {who: mitsumasa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2月、日本の会社は主力の16店を約300億円で売ると発表。社長の光正は、経済誌の取材に答えます。
+    reading: にがつ、にほんの かいしゃわ しゅりょくの じゅうろくてんお やく さんびゃくおくえんで うると はっぴょう。しゃちょうの みつまさわ、けいざいしの しゅざいに こたえます。
+  - speaker: kisha
+    emotion: surprised
+    text: 社長、なぜ稼ぎ頭の店から売るんですか！？
+  - speaker: mitsumasa
+    emotion: normal
+    text: 収益性の高いうちに店舗を売却すれば、
+  - speaker: mitsumasa
+    emotion: normal
+    text: そこの社員も相手先企業に引き取ってもらいやすいからです。
+  - speaker: kisha
+    emotion: thinking
+    text: 相手は、ダイエーの子会社のセイフーでしたね。
+  - speaker: kisha
+    emotion: thinking
+    text: 売上の4割、年間20億円の営業利益を生む店ですよ。
+  - speaker: kisha
+    emotion: thinking
+    text: 家で言えば、稼ぎの4割をくれる仕事を手放すようなものです。
+  - speaker: kisha
+    emotion: thinking
+    text: 振り返って、反省する点は[何|なん]ですか。
+  - speaker: mitsumasa
+    emotion: sad
+    text: 市場から簡単におカネが入るので、
+  - speaker: mitsumasa
+    emotion: sad
+    text: どうしても金融機関との十分な関係をつくれなかったのです。
+  - speaker: reimu
+    background: ya_kaigi_akaji
+    text: 3月期は359億円の赤字で、上場して初めての最終赤字。16店の代金の大半は、銀行への返済に消えました。
+    reading: さんがつきわ さんびゃく ごじゅうきゅうおくえんの あかじで、じょうじょう して はじめての さいしゅう あかじ。じゅうろくてんの だいきんの たいはんわ ぎんこうえの へんさいに きえました。
+# ---- 1997年8月・香港の友人から200億円 ----
+- id: ch7_200
+  title: 香港の友人から200億円
+  background: ya_yakuin
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 8月下旬。和田は、地元の新聞の取材を受けます。
+    reading: はちがつ げじゅん。わだわ、じもとの しんぶんの しゅざいお うけます。
+  - speaker: kisha
+    emotion: thinking
+    text: '[和田|わだ]さん。資金繰りは、大丈夫なんですか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 香港の友人から、200億円の融資が入ります。
+  - speaker: kisha
+    emotion: surprised
+    text: 200億……！
+  - speaker: kisha
+    emotion: thinking
+    text: それは、確かな話なんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 入ります。
+  - speaker: reimu
+    text: この記事のあと、交渉中の金融機関は一斉に手を引いた、と経済誌は書いています。融資は、結局来ませんでした。
+    reading: この きじの あと こうしょうちゅうの きんゆう きかんわ いっせいに てお ひいた、と けいざいしわ かいて います。ゆうしわ、けっきょく きませんでした。
+# ---- 1997年9月18日・午後5時 ----
+- id: ch8_918
+  title: 9月18日、午後5時
+  background: ya_kaiken
+  bgm: serious
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: surprised}
+  - {who: mitsumasa, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1997年9月18日、午後5時。東京証券取引所で、社長の和田光正が発表します。
+    reading: せんきゅうひゃく きゅうじゅうななねん くがつ じゅうはちにち ごご ごじ。とうきょう しょうけん とりひきじょで、しゃちょうの わだ みつまさが はっぴょう します。
+  - speaker: mitsumasa
+    emotion: sad
+    text: 本日、静岡地裁に会社更生法の適用を申請いたしました。
+  - speaker: kisha
+    emotion: surprised
+    text: 負債は、いくらですか！
+  - speaker: mitsumasa
+    emotion: sad
+    text: ……1613億円です。
+    se: don
+  - speaker: kisha
+    emotion: surprised
+    text: 取引先への支払いは、どうなるんですか！
+  - speaker: mitsumasa
+    emotion: sad
+    text: ……申し訳、ございません。
+  - speaker: reimu
+    text: 主力の東海銀行への連絡は、会見の30分前。当時、流通業で戦後最大の破綻と言われました。
+    reading: しゅりょくの とうかい ぎんこうえの れんらくわ かいけんの さんじゅっぷん まえ。とうじ、りゅうつうぎょうで せんご さいだいの はたんと いわれました。
+- id: ch8_muichimon
+  title: ''
+  background: ya_shanghai
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 和田一夫, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同じ年、和田は上海市の栄誉市民に選ばれていました。
+    reading: おなじ とし、わだわ しゃんはいしの えいよ しみんに えらばれて いました。
+  - speaker: reimu
+    text: 銀行の借り入れに個人保証をしていた和田は、68歳で一夜にして無一文に。グループの役職も、すべて退きます。
+    reading: ぎんこうの かりいれに こじん ほしょうお して いた わだわ、ろくじゅうはっさいで いちやに して むいちもんに。ぐるーぷの やくしょくも、すべて しりぞきます。
+  - speaker: reimu
+    text: 三度目の失敗。母は、もういません。本人はのちに、こう語っています。
+    reading: さんどめの しっぱい。ははわ、もう いません。ほんにんわ のちに、こう かたって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 絶頂期こそ、衰退に向かう危機だということを忘れてはいけません。
+# ---- 1997年10月〜12月・切り離される海外 ----
+- id: ch8_kaigai
+  title: 切り離される海外
+  background: ya_kaiken
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: okada, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: ジャスコさんが、ヤオハンの支援を表明されましたね。
+  - speaker: kisha
+    emotion: normal
+    text: 支援の条件は、[何|なん]ですか。
+  - speaker: okada
+    emotion: normal
+    text: 海外事業の完全な切り離しが前提条件。
+    telops:
+    - {text: "岡田「海外事業の完全な切り離しが前提条件」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 香港の店も、上海の店もですか。
+  - speaker: reimu
+    text: 11月20日、香港の10店がすべて閉まり、2700人が職を失いました。
+    reading: じゅういちがつ はつか、ほんこんの じゅってんが すべて しまり にせん ななひゃくにんが しょくお うしないました。
+  - speaker: reimu
+    text: 12月、ジャスコ会長の岡田卓也が管財人に。いまのイオンです。日本の会社は、海外から手を引きます。
+    reading: じゅうにがつ、じゃすこ かいちょうの おかだ たくやが かんざいにんに。いまの いおんです。にほんの かいしゃわ、かいがいから てお ひきます。
+# ---- 1998年・弟たち ----
+- id: card1998
+  title: ''
+  background: ya_card_1998
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1998年4月18日。社長の和田光正が、59歳で急死します。
+    reading: せんきゅうひゃく きゅうじゅうはちねん しがつ じゅうはちにち。しゃちょうの わだ みつまさが、ごじゅうきゅうさいで きゅうし します。
+  - speaker: reimu
+    text: 11月9日。前の社長だった弟ら3人が、違法配当の疑いで逮捕されます。
+    reading: じゅういちがつ ここのか。まえの しゃちょうだった おとうとら さんにんが、いほう はいとうの うたがいで たいほ されます。
+  - speaker: reimu
+    text: 翌年3月、商法と証券取引法の違反で、その弟に有罪判決が出ます。
+    reading: よくねん さんがつ、しょうほうと しょうけん とりひきほうの いはんで その おとうとに ゆうざい はんけつが でます。
+  - speaker: reimu
+    text: 判決が認めた粉飾は、1996年3月期の約129億円。弟は1997年春、自ら国税庁へ申し出ていました。
+    reading: はんけつが みとめた ふんしょくわ、せんきゅうひゃく きゅうじゅうろくねん さんがつきの やく ひゃく にじゅうきゅうおくえん。おとうとわ せんきゅうひゃく きゅうじゅうななねん はる、みずから こくぜいちょうえ もうしでて いました。
+# ---- 2000年・飯塚の小さな部屋 ----
+- id: card2000
+  title: ''
+  background: ya_card_2000
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2000年。71歳の和田は、福岡県の飯塚に移ります。
+    reading: にせんねん。ななじゅういっさいの わだわ、ふくおかけんの いいづかに うつります。
+- id: ch9_iizuka
+  title: 飯塚の小さな部屋
+  background: ya_apart
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: normal}
+  - {who: gakusei, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: gakusei
+    emotion: happy
+    text: '[和田|わだ]さん、本当にぼくらと会社をやるんですか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 無一文の年寄りで、よければな。
+  - speaker: gakusei
+    emotion: surprised
+    text: む、無一文なんですか！？
+  - speaker: zundamon
+    emotion: normal
+    text: 持っていたものは、全部なくした。
+  - speaker: zundamon
+    emotion: happy
+    text: でも、母の教えがある。無一物中無尽蔵。
+  - speaker: gakusei
+    emotion: thinking
+    text: む、むいちもつ……？
+  - speaker: zundamon
+    emotion: happy
+    text: 何も無いところにこそ、尽きないものがある。
+  - speaker: gakusei
+    emotion: happy
+    text: じゃあ、ぼくらと同じですね！ ぼくらも、お[金|かね]がありません！
+    se: manuke
+  - speaker: zundamon
+    emotion: happy
+    text: よし。何も無い者同士、始めようじゃないか。
+  - speaker: reimu
+    text: 九州工業大学の学生たちと、ITの会社を立ち上げます。若手を育てる場は、IT松下村塾と呼ばれました。
+    reading: きゅうしゅう こうぎょう だいがくの がくせいたちと、あいてぃーの かいしゃお たちあげます。わかてお そだてる ばわ、あいてぃー しょうかそんじゅくと よばれました。
+# ---- 2001年・失敗の教訓 ----
+- id: card2001
+  title: ''
+  background: ya_card_2001
+  cuts:
+  - speaker: reimu
+    text: 2001年9月。破綻から約4年。和田は本を出します。題は、ヤオハン失敗の教訓。
+    reading: にせんいちねん くがつ。はたんから やく よねん。わだわ ほんお だします。だいわ、やおはん しっぱいの きょうくん。
+# ---- 2012年・年金暮らし ----
+- id: ch9_nenkin
+  title: 生活費は年金だけ
+  background: ya_ousetsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 和田一夫, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2004年には上海に移り、講演や執筆を続けます。2012年、83歳の和田は週刊誌の取材に答えます。
+    reading: にせんよねんにわ しゃんはいに うつり、こうえんや しっぴつお つづけます。にせん じゅうにねん、はちじゅうさんさいの わだわ しゅうかんしの しゅざいに こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: いまの暮らしは、どうされているんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 生活費は年金だけです。
+    telops:
+    - {text: "和田「生活費は年金だけです」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 香港の山の上に、豪邸があったのに……。
+  - speaker: kisha
+    emotion: thinking
+    text: 倒産の原因は、[何|なん]だったと思いますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 原因は国内のヤオハンが赤字になり、その手当てが遅れたことです。
+  - speaker: reimu
+    text: 妻のきみ子は同じ記事で、倒産など夢にも思っていませんでしたから、と語っています。
+    reading: つまの きみこわ おなじ きじで、とうさんなど ゆめにも おもって いませんでしたから と かたって います。
+# ---- 2018年・熱海でのお詫び ----
+- id: card2018
+  title: ''
+  background: ya_card_2018
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2018年7月8日、熱海。89歳の和田は、元社員たちを招いてお詫びと感謝の会を開きます。
+    reading: にせん じゅうはちねん しちがつ ようか、あたみ。はちじゅうきゅうさいの わだわ、もと しゃいんたちお まねいて おわびと かんしゃの かいお ひらきます。
+- id: ch10_owabi
+  title: 熱海でのお詫び
+  background: ya_enkai
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 和田一夫, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 妻のきみ子が考えた、生前葬でした。熱海は、両親が千円で八百屋を開いた町です。
+    reading: つまの きみこが かんがえた、せいぜんそうでした。あたみわ、りょうしんが せんえんで やおやお ひらいた まちです。
+# ---- 2019年・亡くなる年のメール ----
+- id: card2019
+  title: ''
+  background: ya_card_2019
+  cuts:
+  - speaker: reimu
+    text: 2019年1月、日経ビジネスの取材に和田はメールで答えます。車いす生活で、娘が代筆しました。
+    reading: にせん じゅうくねん いちがつ、にっけい びじねすの しゅざいに わだわ めーるで こたえます。くるまいす せいかつで、むすめが だいひつ しました。
+- id: ch10_mail
+  title: 亡くなる年のメール
+  background: ya_jitaku
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 和田一夫, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 倒産後、社員の葬儀に香典すら持っていけず、不義理をしたまま長い年月が過ぎた。
+  - speaker: reimu
+    text: メールには、弟の粉飾は資金集めの条件を満たすためで、倒産後しばらくして分かったとあります。
+    reading: めーるにわ おとうとの ふんしょくわ しきん あつめの じょうけんお みたす ためで、とうさんご しばらく して わかったと あります。
+  - speaker: zundamon
+    emotion: sad
+    text: 人としての善悪よりも、会社の発展という目的が重くなっていた。
+  - speaker: zundamon
+    emotion: sad
+    text: 身の丈以上の報告に疑念すら抱かなかった私の責任は重い。
+    telops:
+    - {text: "和田「身の丈以上の報告に疑念すら抱かなかった私の責任は重い」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 経営者の至上命題は、何があっても会社を倒産させない。
+- id: ch10_shikyo
+  title: ''
+  background: ya_saijo
+  cuts:
+  - speaker: reimu
+    text: 2019年8月19日。和田一夫は伊豆の国市の自宅で亡くなります。90歳でした。
+    reading: にせん じゅうくねん はちがつ じゅうくにち。わだ かずおわ いずのくにしの じたくで なくなります。きゅうじゅっさいでした。
+  - speaker: reimu
+    text: 飯塚で共に働いた若手は追悼で、IT松下村塾の塾生がいまも国内外で活躍している、と語りました。
+    reading: いいづかで ともに はたらいた わかてわ ついとうで、あいてぃー しょうかそんじゅくの じゅくせいが いまも こくないがいで かつやく して いると かたりました。
+# ---- 論争 ----
+- id: ronso1
+  title: おしんのモデル？
+  background: ya_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: つむぎ、ネットで見たのだ！ ヤオハンのお母さんは、おしんのモデルだって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年の日経や時事の記事も、カツさんはおしんのモデルとされると書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 行商から身を起こして、商売と子育てを両立した。そこが重なると言われたの。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり、本物のおしんなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも原作者の[橋田壽賀子|ハシダスガコ]さんは、こう言ってるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ヒントはいただいたが、モデルはいない。
+  - speaker: zundamon
+    emotion: surprised
+    text: いない！？
+  - speaker: tsumugi
+    emotion: normal
+    text: カツさん本人も、恐れ多い話と答えてたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一夫|かずお]さんも週刊誌で、モデルではないと答えてるわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 本人たちが、違うって言ってるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: モデルとされる人は、ほかにもいるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 言えるのは、モデルの一人と言われたまでね。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあボクのおばあちゃんも、モデルの一人と言えるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 言えないわよ。
+    se: tsukkomi
+- id: ronso2
+  title: 中国に広げすぎ？
+  background: ya_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、中国に手を広げすぎてつぶれたんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見る人は多いわ。中国に1000店の構想に、見物が8割の上海の店。
+  - speaker: tsumugi
+    emotion: normal
+    text: 台湾の雑誌によると、上海の副市長は[和田|わだ]さんを最初の一羽のペンギンと呼んだの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ペンギン！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 群れの中で、最初に海へ飛び込む一羽のことね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 飛び込みすぎて、おぼれたのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも1996年3月の時点で、国内への投融資は371億円。中国は32億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 中国より、日本のほうがずっと多いのだ！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 香港と中国のほかの海外は、345億円よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 市場から集めた623億円のうち、240億円は国内の大型店2つに使われたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[小づち|こづち]のお[金|かね]、日本にも使ってたんだ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 粉飾があったのも、日本の会社の決算よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も、原因は国内の赤字と手当ての遅れだと言ってたわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、日本のせいなのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: どっちか一つとは、言い切れないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 海外の夢と国内の赤字と、株に化ける借金。それが同時に来たのよ。
+- id: ronso3
+  title: 母が作って息子が潰した？
+  background: ya_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: ネットでは、おしんが作って息子が潰したと言われることもあるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ひどい言い方なのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: お母さんが亡くなって歯止めがなくなった、とは本人も書いてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも八百屋をチェーンにして上場させ、世界に広げたのは[一夫|かずお]さんの代よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 掛け売りをやめたのもブラジルも香港も、お母さんが生きてたころの話。
+  - speaker: zundamon
+    emotion: surprised
+    text: お母さんがいたころから、攻めてたんだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 粉飾決算などで有罪になったのは、日本の社長だった弟。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[一夫|かずお]さんは、起訴されていないわ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、[一夫|かずお]さんは悪くないのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人は報告を疑わなかった自分の責任は重い、と書いてたでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2001年の本の目次には、[驕り|おごり]という[章|しょう]もあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 企業は絶頂期が最大の危機、って。
+  - speaker: tsumugi
+    emotion: normal
+    text: 77歳のときの取材で、仲間への不義理を聞かれた[和田|ワダ]さん。
+  - speaker: tsumugi
+    emotion: normal
+    text: 涙を落としてこう答えたと、取材した人が書き残してるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: いちばん大切な人たちをどうしても裏切れないと思う気持ちが、
+  - speaker: tsumugi
+    emotion: thinking
+    text: 逆にいちばん大切な人たちをもっとも裏切るような結果を招いてしまった。
+  - speaker: zundamon
+    emotion: sad
+    text: ……守りたかったものが、逆になったのだ。
+    beat: true
+# ---- 本当の注意点 ----
+- id: chui
+  title: 古い商品券は払い戻せる？
+  background: ya_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、さっきの商品券よ。
+  - speaker: zundamon
+    emotion: sad
+    text: もう、ただの紙切れなんでしょ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: ヤオハン商品券は、2026年9月30日で使えなくなったの。
+  - speaker: zundamon
+    emotion: sad
+    text: やっぱり……。
+  - speaker: tsumugi
+    emotion: happy
+    text: でも電話で申し出れば、銀行振込で払い戻してもらえるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 紙切れが、お[金|かね]に戻るのだ！？
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 受け付けるのは、いまのマックスバリュ東海よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電話すると封筒と[申出書|もうしでしょ]が届くから、券を書留で送り返すの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 送り返す締め切りは、2027年2月26日の消印よ。
+    telops:
+    - {text: "払い戻しは2027年2月26日の消印まで", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 切手代は、ボク持ち？
+  - speaker: tsumugi
+    emotion: normal
+    text: 切手代も振込の手数料も、会社が持ってくれるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: お店のレジでは受け付けないから、気をつけてね。
+  - speaker: zundamon
+    emotion: surprised
+    text: レジに出したら、恥ずかしいやつなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 対象はヤオハンジャパンと[八百半|ヤオハン]デパートの、1000円券と500円券よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 引き出しの奥、もう一回見てくるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 古い商品券が出てきたら、発行した会社の名前で調べてみてね。
+# ---- 現代の章 ----
+- id: gendai
+  title: いまのヤオハン
+  background: ya_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 上海の店は、いまも[第一八佰伴|ダイイチヤオハン]の名前で営業してるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 107万人の店が、まだあるの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 上海の会社のものになって、2005年に赤字を埋めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年には、上海の百貨店で売上1位になったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: '[浦東|プードン]の空き地の店が、勝ってたのだ！'
+    se: levelup
+  - speaker: tsumugi
+    emotion: normal
+    text: 去年の12月で、開業から30年。
+  - speaker: zundamon
+    emotion: surprised
+    text: 30年……！
+  - speaker: tsumugi
+    emotion: normal
+    text: 上海の店の元のトップは、1階を化粧品売り場にしたのは[和田|わだ]会長の功労だと語ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカの店は元の幹部が買い取って、いまはミツワという店になってるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 名前は変わっても、店は続いてるんだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日本の会社のほうは、どうなったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前を変えて、いまも続いてるの。マックスバリュ東海よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: つぶれたのに、続いてるの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社更生法で立て直されて、2002年にいまの名前になったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 浜松が本社の、イオンの子会社よ。2026年2月期の営業収益は3849億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: つぶれたころの売上の、2倍以上なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でもヤオハンって名前の店は、2011年2月に最後の店が看板を替えて姿を消したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして2026年9月、商品券も使えなくなった。名前の最後のかけらね。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの1000円券が、最後のかけらだったのだ……。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: ya_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ この1000円券、払い戻してもらう！
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: そして戻った千円で、[熱海|あたみ]に八百屋を開くのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: いまの千円じゃ、店先にキャベツが数個並ぶだけよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: でも1930年の[熱海|あたみ]の八百屋も、元手は千円だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 掛け売りをやめるとき、お父さんはこう言って賛成したそうよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1930年に千円で始めた[商い|あきない]だから、千円残れば元々だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 千円から世界の[16か国|ジュウロッカコク]に広げて、一夜で無一文……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後にお詫びの会を開いたのも、始まりの[熱海|あたみ]だったわね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 成功している時ほどおごりが出て、大事なものが見えない。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[和田|わだ]さんが、亡くなる年のメールに書いた言葉よ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: ……うまくいってる時ほど、足元か。
+    beat: true
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
