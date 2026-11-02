@@ -1,0 +1,1048 @@
+meta:
+  title: 「経営そのものに与える影響は軽微だ」駅前留学NOVAの社長、4か月後に自分の会社を追われる【ずんだもん解説】
+  slug: nova-saruhashi
+  hook_line: 駅前留学で48万人を集めたNOVAの社長は、なぜ会社を追われたのか。
+  summary: 2007年6月、英会話教室NOVAの社長、猿橋望は記者会見で頭を下げました。「駅前留学」で受講生48万人を集め、1000教室を掲げた会社の受付では、何が起きていたのか。まとめ買いで安くなるポイントと、途中でやめたときの精算の決まり、最高裁の判決、国の処分、そして社員の積立金。裁判所の判断と本人の言い分、会社の説明を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 消費者庁「特定商取引法ガイド 特定継続的役務提供」 https://www.no-trouble.caa.go.jp/what/continuousservices/
+  - 帝国データバンク 倒産速報「株式会社ノヴァ」（2007年10月26日） https://www.tdb.co.jp/report/bankruptcy/flash/2465/
+  - 日本経済新聞「NOVA元社長に2審も実刑　一審破棄し懲役2年」（2010年12月2日） https://www.nikkei.com/article/DGXNASDG0200X_S0A201C1CC0000/
+  - 日本経済新聞「NOVA元社長の実刑確定へ　最高裁が上告棄却」（2012年11月21日） https://www.nikkei.com/article/DGXNASDG2103L_R21C12A1CC1000/
+  - NOVAホールディングス News Release（2025年2月20日） https://www.nova.co.jp/pdf/media/20250227_nova_info_1.pdf
+  tags:
+  - NOVA
+  - 駅前留学
+  - 猿橋望
+  - ノヴァ
+  - 英会話
+  - 英会話教室
+  - 前払い
+  - 中途解約
+  - 特定商取引法
+  - 会社更生法
+  - 業務上横領
+  - 最高裁
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 影響は軽微だ
+    bottom: 駅前留学NOVA
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: shain
+    label: 社員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: uketsuke
+    label: 受付
+    voice: 8
+    pitch: 0.06
+    hair: bun
+    outfit: suit
+    color: '#8a4a62'
+  - id: jukosei
+    label: 受講生
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a6a'
+  - id: koho
+    label: 広報
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#454a55'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#1a1a1e'
+  - id: koshi
+    label: 講師
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4a3a'
+  - id: torishimari
+    label: 取締役
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: hozen
+    label: 保全管理人
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4f5f'
+scenes:
+# ---- 先出し（2007年6月13日の会見。朝日の一問一答） ----
+- id: co_kaiken
+  title: ''
+  background: nv_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年6月。業務の一部停止を命じられた英会話教室NOVAの社長、猿橋望の会見です。
+    reading: にせん ななねん ろくがつ。ぎょうむの いちぶ ていしお めいじられた えいかいわ きょうしつ のばの しゃちょう、さはし のぞむの かいけんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 極めて厳粛に受け止めている。利用者に深くおわびしたい。
+  - speaker: kisha
+    emotion: normal
+    text: 辞任する考えは。
+  - speaker: zundamon
+    emotion: thinking
+    text: 現時点ではない。
+  - speaker: kisha
+    emotion: normal
+    text: 業績への影響は。
+  - speaker: zundamon
+    emotion: normal
+    text: 経営そのものに与える影響は軽微だ。
+    telops:
+    - {text: "猿橋「経営そのものに与える影響は軽微だ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: この4か月後、彼は自分の会社の取締役会で社長を外されます。
+    reading: この よんかげつご、かれわ じぶんの かいしゃの とりしまりやくかいで しゃちょうお はずされます。
+  - speaker: reimu
+    text: 受講生約30万人が前払いした受講料は、ほとんど戻りませんでした。
+    reading: じゅこうせい やく さんじゅうまんにんが まえばらい した じゅこうりょうわ、ほとんど もどりませんでした。
+# ---- 今の部屋（回数券のまとめ買い） ----
+- id: hook
+  title: ''
+  background: nv_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 習い事の回数券、100回分まとめ買いしたのだ！
+    se: jaan
+  - speaker: zundamon
+    emotion: happy
+    text: 1回あたり、なんと半額！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 途中でやめたら、いくら戻るか知ってる？
+  - speaker: zundamon
+    emotion: surprised
+    text: ……え？
+  - speaker: tsumugi
+    emotion: normal
+    text: まとめ買いで安くして、ピークで48万人を集めた英会話学校があったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 駅前留学のNOVA。創業者は自分の会社を追われ、社員の積立金で実刑になったわ。
+    telops:
+    - {text: "受講生48万人 → 創業者は実刑", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 48万人も集めた社長が、なんで会社を追われたの！？
+# ---- 2005年・1000教室 ----
+- id: card2005
+  title: ''
+  background: nv_card_2005
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 2005年。NOVAは前の年の暮れからの1年半で、300を超える教室を開きます。
+    reading: にせん ごねん。のばわ まえの としの くれからの いちねんはんで さんびゃくお こえる きょうしつお ひらきます。
+- id: ch1_1000
+  title: 1000教室
+  background: nv_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、来月の出店候補です。駅前のビルばかりですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 出店を進めてくれ。
+  - speaker: shain
+    emotion: happy
+    text: はい！ 受講生も48万人。1000教室まで、あと少しです！
+    se: levelup
+  - speaker: reimu
+    text: スローガンは、1000教室達成。教室は4年で約500から994へ、ほぼ倍になります。
+    reading: すろーがんわ、せん きょうしつ たっせい。きょうしつわ よねんで やく ごひゃくから きゅうひゃく きゅうじゅうよんえ ほぼ ばいに なります。
+  - speaker: shain
+    emotion: happy
+    text: 前払いの受講料が入れば、新しい教室の家賃も払えますしね。
+  - speaker: reimu
+    text: ところが講師は2年で、約5900人から約5000人に減っていました。
+    reading: ところが こうしわ にねんで、やく ごせん きゅうひゃくにんから やく ごせんにんに へって いました。
+    telops:
+    - {text: "教室は倍、講師は減る", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 猿橋が自分の会社を追われるのは、この2年後です。
+    reading: さはしが じぶんの かいしゃお おわれるのわ、この にねんごです。
+# ---- 受付（まとめ買いの値段） ----
+- id: ch2_kanyu
+  title: まとめ買いの値段
+  background: nv_lobby
+  stage:
+  - {who: jukosei, x: 0.28, flip: true, emotion: normal}
+  - {who: uketsuke, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: uketsuke
+    emotion: happy
+    text: 600ポイントまとめてなら、40分のレッスンが1回1540円です。
+  - speaker: uketsuke
+    emotion: normal
+    text: 100ポイントなら1回2640円。まとめ買いがお得なんです。
+  - speaker: jukosei
+    emotion: surprised
+    text: 1回で、1000円以上も違うのか。
+  - speaker: uketsuke
+    emotion: happy
+    text: 600ポイントで92万4000円。3年のうちに使ってください。
+  - speaker: jukosei
+    emotion: surprised
+    text: きゅ、92万……！
+    beat: true
+  - speaker: uketsuke
+    emotion: happy
+    text: あなたが空いている時間に朝でも昼でも予約が取れます。
+  - speaker: jukosei
+    emotion: happy
+    text: じゃあ、600ポイントで！
+- id: ch2_yoyaku
+  title: ''
+  background: nv_lobby
+  stage:
+  - {who: jukosei, x: 0.28, flip: true, emotion: normal}
+  - {who: uketsuke, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: jukosei
+    emotion: normal
+    text: 来週の夜、予約をお願いします。
+  - speaker: uketsuke
+    emotion: normal
+    text: その日は予約がいっぱいです。
+    background: nv_lobby_ippai
+  - speaker: jukosei
+    emotion: surprised
+    text: じゃあ、その次の週は。
+  - speaker: uketsuke
+    emotion: normal
+    text: ちょっとの間は全然空いていません。
+  - speaker: jukosei
+    emotion: angry
+    text: 朝でも昼でも取れるって、言いましたよね！？
+    se: tsukkomi
+  - speaker: jukosei
+    emotion: angry
+    text: もういいです。130回は使ったし、やめます。
+# ---- 途中でやめると ----
+- id: ch2_seisan
+  title: 途中でやめると
+  background: nv_lobby_ippai
+  stage:
+  - {who: jukosei, x: 0.28, flip: true, emotion: angry}
+  - {who: uketsuke, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: uketsuke
+    emotion: thinking
+    text: これから講師の人数を増やす予定だから、なんとか続けませんか。
+  - speaker: jukosei
+    emotion: angry
+    text: 今さら！？
+  - speaker: uketsuke
+    emotion: normal
+    text: では精算します。使った130回は、1回2640円で計算しますね。
+  - speaker: jukosei
+    emotion: surprised
+    text: 1540円で買ったのに！？
+  - speaker: uketsuke
+    emotion: normal
+    text: 使った回数以下で一番近い、100ポイントコースの単価です。
+  - speaker: uketsuke
+    emotion: normal
+    text: ここに書いてあるでしょう。サインもしましたよね。
+  - speaker: jukosei
+    emotion: thinking
+    text: ……字が小さすぎて、読んでないです。
+    beat: true
+  - speaker: reimu
+    text: 買ったときの単価より、返金は14万3000円少なくなります。1回あたり1100円の上乗せです。
+    reading: かった ときの たんかより、へんきんわ じゅうよんまん さんぜんえん すくなく なります。いっかい あたり せん ひゃくえんの うわのせです。
+    telops:
+    - {text: "やめると14万3000円少なく返る", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: jukosei
+    emotion: angry
+    text: 回数券を安く買ったのに、やめたら1回ずつの値段で引かれるの！？
+  - speaker: jukosei
+    emotion: sad
+    text: ……やめるのにも、お[金|かね]がかかるのか。
+    beat: true
+  - speaker: reimu
+    text: NOVAはこの決まりを最高裁まで争い、負けます。猿橋が社長を追われる、半年あまり前のことです。
+    reading: のばわ この きまりお さいこうさいまで あらそい、まけます。さはしが しゃちょうお おわれる はんとし あまり まえの ことです。
+# ---- 2006年・初めての赤字 ----
+- id: ch3_akaji
+  title: 初めての赤字
+  background: nv_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1981年、欧州留学から帰った30歳の猿橋が、大阪の心斎橋に開いた1号教室。
+    reading: せんきゅうひゃく はちじゅういちねん。おうしゅう りゅうがくから かえった さんじゅっさいの さはしが おおさかの しんさいばしに ひらいた いちごう きょうしつ。
+  - speaker: reimu
+    text: 1993年からは駅前留学のテレビCMで名前が広まり、1996年に株式を公開します。
+    reading: せんきゅうひゃく きゅうじゅうさんねんからわ えきまえ りゅうがくの てれび しーえむで なまえが ひろまり、せんきゅうひゃく きゅうじゅうろくねんに かぶしきお こうかい します。
+  - speaker: shain
+    emotion: sad
+    text: 社長、決算です。上場してから初めての、最終赤字です。
+    background: nv_kaigi_akaji
+    se: gaan
+  - speaker: shain
+    emotion: sad
+    text: 赤字は、約30億円。
+  - speaker: shain
+    emotion: thinking
+    text: 次の年度は、80を超える教室を閉めることになりそうです。
+  - speaker: reimu
+    text: 48万人を集めた会社が、ここからつぶれるまで、1年半ほどでした。
+    reading: よんじゅうはちまんにんお あつめた かいしゃが ここから つぶれるまで、いちねんはん ほどでした。
+# ---- 2007年2月・立入検査 ----
+- id: card2007
+  title: ''
+  background: nv_card_2007
+  cuts:
+  - speaker: reimu
+    text: 2007年2月14日。経済産業省と東京都が、NOVAの本部と一部の教室に立入検査に入ります。
+    reading: にせん ななねん にがつ じゅうよっか。けいざい さんぎょうしょうと とうきょうとが のばの ほんぶと いちぶの きょうしつに たちいり けんさに はいります。
+- id: ch4_kensa
+  title: 立入検査
+  background: nv_kaigi
+  stage:
+  - {who: koho, x: 0.6, emotion: normal}
+  cuts:
+  - speaker: koho
+    emotion: normal
+    text: 過去にも経産省と話し合いをした上で特商法上、問題がないとの見解を得ている。
+  - speaker: koho
+    emotion: normal
+    text: 予約は事前に入れてもらえばきちんと取れる。
+    beat: true
+  - speaker: reimu
+    text: 精算をめぐる裁判では、判断が出た6件すべてでNOVAの計算が退けられていました。
+    reading: せいさんお めぐる さいばんでわ、はんだんが でた ろっけん すべてで のばの けいさんが しりぞけられて いました。
+  - speaker: reimu
+    text: 東京都も2002年に、ほぼ同じ種類の違反でNOVAを指導していました。
+    reading: とうきょうとも にせん にねんに、ほぼ おなじ しゅるいの いはんで のばお しどう して いました。
+# ---- 2007年4月3日・最高裁 ----
+- id: ch5_saikosai
+  title: 最高裁
+  background: nv_saikosai
+  bgm: serious
+  stage:
+  - {who: saibancho, x: 0.6, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月3日の最高裁。600ポイントを約75万円で買い、386回使って解約した男性の裁判です。
+    reading: しがつ みっかの さいこうさい。ろっぴゃく ぽいんとお やく ななじゅうごまんえんで かい、さんびゃく はちじゅうろっかい つかって かいやく した だんせいの さいばんです。
+  - speaker: saibancho
+    emotion: normal
+    text: '[使用済み|しようずみ]ポイントの対価額は契約時単価で算定するのが自然。'
+  - speaker: saibancho
+    emotion: normal
+    text: 契約解除があった場合にのみ適用される高額の対価額を定めており、
+  - speaker: saibancho
+    emotion: normal
+    text: 受講者による自由な解除権の行使を制約するものといわざるを得ない。
+    se: don
+    telops:
+    - {text: "最高裁「自由な解除権の行使を制約」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 精算の決まりは、特定商取引法に反して無効。約31万円の返還が確定します。
+    reading: せいさんの きまりわ、とくてい しょうとりひきほうに はんして むこう。やく さんじゅういちまんえんの へんかんが かくてい します。
+# ---- のちの取材で（3月と5月） ----
+- id: ch6_250oku
+  title: 250億円
+  background: nv_jimusho
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ここからは、猿橋がのちに雑誌の取材で語った話です。
+    reading: ここからわ、さはしが のちに ざっしの しゅざいで かたった はなしです。
+  - speaker: kisha
+    emotion: normal
+    text: 事業への影響はどれくらいありましたか。
+  - speaker: zundamon
+    emotion: thinking
+    text: そもそも3月というのは、年間の売り上げ[3分の1|さんぶんのいち]を占めるんです。
+  - speaker: zundamon
+    emotion: sad
+    text: ところが、報道のせいで入学者数がまったく伸びず、
+  - speaker: zundamon
+    emotion: sad
+    text: '[2～5月|2から5月]のキャッシュフローのロスが例年に比べ約120億円にふくらみました。'
+  - speaker: kisha
+    emotion: normal
+    text: 2月の立ち入り検査が、事業停止につながるということは予想していましたか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 入学者の落ち込みは5月には落ち着きつつあったのですが、
+  - speaker: zundamon
+    emotion: thinking
+    text: 5月の上旬ごろから、経済産業省から変なことを言われ始めたんです。
+  - speaker: reimu
+    text: 自由に選べる予約制とあるが、選べないときもある。誇大広告では、と言われたそうです。
+    reading: じゆうに えらべる よやくせいと あるが、えらべない ときも ある。こだい こうこくでわ、と いわれたそうです。
+  - speaker: zundamon
+    emotion: normal
+    text: でも、いつでも自由に受けられるなら予約はいらない。予約制ってそういうことですよね。
+  - speaker: reimu
+    text: 6か月の業務停止になったらどうなるのか。そうも聞かれたといいます。
+    reading: ろっかげつの ぎょうむ ていしに なったら どう なるのか。そうも きかれたと いいます。
+  - speaker: zundamon
+    emotion: surprised
+    text: そんなことされたら、ウチは飛んじゃいます。
+  - speaker: reimu
+    text: 経産省の側は決算書の前受金を指し、ここに250億円もあるじゃないかと言ったそうです。
+    reading: けいさんしょうの がわわ けっさんしょの まえうけきんお さし、ここに にひゃく ごじゅうおくえんも あるじゃないかと いったそうです。
+  - speaker: reimu
+    text: 前受金は、受け取った受講料のうち、帳簿でまだ売上にしていない分です。
+    reading: まえうけきんわ、うけとった じゅこうりょうの うち ちょうぼで まだ うりあげに して いない ぶんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: あくまで会計上の金額であって、キャッシュがあるわけじゃありません。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、せいぜい指導で、
+  - speaker: zundamon
+    emotion: sad
+    text: まさかいきなり業務停止が来るとは思っていなかった。
+# ---- 2007年6月13日・業務の一部停止 ----
+- id: ch7_teishi
+  title: 業務の一部停止
+  background: nv_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月13日。経済産業省は、予約がとりにくいのを告げない勧誘などを違反と認め、業務の一部停止を命じます。
+    reading: ろくがつ じゅうさんにち。けいざい さんぎょうしょうわ よやくが とりにくいのお つげない かんゆう などお いはんと みとめ、ぎょうむの いちぶ ていしお めいじます。
+  - speaker: reimu
+    text: 1年を超える契約の新しい勧誘を、6か月止める処分です。授業と更新は続きます。
+    reading: いちねんお こえる けいやくの あたらしい かんゆうお、ろっかげつ とめる しょぶんです。じゅぎょうと こうしんわ つづきます。
+  - speaker: kisha
+    emotion: normal
+    text: 業績への影響は。
+  - speaker: zundamon
+    emotion: normal
+    text: 経営そのものに与える影響は軽微だ。1年超か70時間超という契約者の割合は、
+  - speaker: zundamon
+    emotion: thinking
+    text: それほど多くはない。
+  - speaker: kisha
+    emotion: normal
+    text: 組織運営上の問題が大きいのでは。
+  - speaker: zundamon
+    emotion: thinking
+    text: 05年から06年にかけて大量出店した影響で、
+  - speaker: zundamon
+    emotion: thinking
+    text: スタッフの養成が必要だったが、
+  - speaker: zundamon
+    emotion: sad
+    text: マネジメント力が弱くなり、スタッフと生徒の信頼関係に問題が生じた。
+  - speaker: zundamon
+    emotion: sad
+    text: 解約時のポイントの精算が最大の問題と認識していたが、
+  - speaker: zundamon
+    emotion: sad
+    text: そのせいで他の問題を見逃した。大きな反省点だ。
+# ---- 2007年7月・給料と積立金 ----
+- id: ch8_kyuyo
+  title: 7月の給料
+  background: nv_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 新しい長い契約が止まり、解約した人への返金がたまります。猿橋は、のちにこう語りました。
+    reading: あたらしい ながい けいやくが とまり、かいやく した ひとえの へんきんが たまります。さはしわ、のちに こう かたりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 7月25日支給の給与が払えないという切迫した状況に陥り、
+  - speaker: zundamon
+    emotion: sad
+    text: どうしても5億円を調達する必要がありました。
+  - speaker: zundamon
+    emotion: thinking
+    text: その際、個人で持っていたNOVA株を2200万株、
+  - speaker: zundamon
+    emotion: thinking
+    text: コンサルティング会社に預けてしまった。
+  - speaker: zundamon
+    emotion: sad
+    text: 今から考えたらうかつでしたが、
+  - speaker: zundamon
+    emotion: thinking
+    text: このうち、1100万株を貸株契約して4億9500万円の資金調達をした。
+- id: ch8_shayukai
+  title: 社員の積立金
+  background: nv_kaigi
+  stage:
+  - {who: shain, x: 0.6, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長からのお知らせだ。社内の経営態勢が整うまで協力してほしい……。
+  - speaker: shain
+    emotion: surprised
+    text: ボーナスは、10月まで延期！？
+    se: shobon
+  - speaker: shain
+    emotion: sad
+    text: 給料の一部も、振り込みが遅れてるし。
+  - speaker: shain
+    emotion: thinking
+    text: 会社は、システムのトラブルだって。
+  - speaker: shain
+    emotion: sad
+    text: 毎月の給料からは、社友会の積立もきっちり引かれてるのに。
+  - speaker: reimu
+    text: 社友会は、社員の互助の会。代表は猿橋で、社員の多くが積み立てていました。
+    reading: しゃゆうかいわ、しゃいんの ごじょの かい。だいひょうわ さはしで、しゃいんの おおくが つみたてて いました。
+  - speaker: reimu
+    text: 判決などによると、これより前の7月20日。猿橋の指示で、積立金約3億2000万円が動いていました。
+    reading: はんけつ などに よると、これより まえの しちがつ はつか。さはしの しじで、つみたてきん やく さんおく にせんまんえんが うごいて いました。
+  - speaker: reimu
+    text: 関連会社の口座を通って、その日のうちにNOVAの口座へ。解約した受講生への返金に充てられました。
+    reading: かんれん がいしゃの こうざお とおって その ひの うちに のばの こうざえ。かいやく した じゅこうせいえの へんきんに あてられました。
+  - speaker: reimu
+    text: 受講生に返したお金は、社員が積み立てたお金でした。
+    reading: じゅこうせいに かえした おかねわ、しゃいんが つみたてた おかねでした。
+    telops:
+    - {text: "社員の積立金 約3億2000万円 → 受講生への返金", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 2007年秋・教室の灯りが消える ----
+- id: ch9_heisa
+  title: 閉まる教室
+  background: nv_booth
+  bgm: 223am
+  stage:
+  - {who: jukosei, x: 0.28, flip: true, emotion: normal}
+  - {who: koshi, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 8月分の給料も9月にずれ込み、講師への支払いも遅れ始めます。
+    reading: はちがつぶんの きゅうりょうも くがつに ずれこみ、こうしえの しはらいも おくれ はじめます。
+  - speaker: jukosei
+    emotion: normal
+    text: 先生、来週のレッスンなんですけど。
+  - speaker: koshi
+    emotion: sad
+    text: ……この教室、月末で閉まるそうです。
+  - speaker: jukosei
+    emotion: surprised
+    text: えっ！？
+    background: nv_booth_kara
+    se: gaan
+  - speaker: koshi
+    emotion: sad
+    text: 家賃が払えなくて、大家さんに出ていってくれと言われたそうです。
+  - speaker: koshi
+    emotion: sad
+    text: 私の給料も、まだ入っていなくて。
+  - speaker: jukosei
+    emotion: sad
+    text: ……そんな。
+  - speaker: koshi
+    emotion: thinking
+    text: それでも、授業はできるかぎり続けます。
+  - speaker: jukosei
+    emotion: sad
+    text: こんな状態でも、一生懸命やってくれる講師がいるのに……。
+  - speaker: reimu
+    text: 10月には講師の退職や欠勤で、休校する教室が少なくとも50に。
+    reading: じゅうがつにわ こうしの たいしょくや けっきんで、きゅうこう する きょうしつが すくなくとも ごじゅうに。
+- id: ch9_kabuka
+  title: ''
+  background: nv_shoken
+  cuts:
+  - speaker: reimu
+    text: 株価は、2月の120円から、10月23日には31円まで落ちました。
+    reading: かぶかわ にがつの ひゃくにじゅうえんから じゅうがつ にじゅうさんにちにわ さんじゅういちえんまで おちました。
+# ---- 2007年10月25日深夜・解任 ----
+- id: ch10_kainin
+  title: 社長のいない取締役会
+  background: nv_honbu_yoru
+  bgm: serious
+  stage:
+  - {who: torishimari, x: 0.6, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月25日の深夜、東京の本部で臨時の取締役会が開かれ、猿橋は社長を解かれます。
+    reading: じゅうがつ にじゅうごにちの しんや、とうきょうの ほんぶで りんじの とりしまりやくかいが ひらかれ さはしわ しゃちょうお とかれます。
+  - speaker: reimu
+    text: 会社の説明では、猿橋は招集を受けたものの出席を拒否。解任の理由は、こうです。
+    reading: かいしゃの せつめいでわ、さはしわ しょうしゅうお うけた ものの しゅっせきお きょひ。かいにんの りゆうわ こうです。
+  - speaker: torishimari
+    emotion: normal
+    text: 不透明な資金調達や業務提携交渉について
+  - speaker: torishimari
+    emotion: normal
+    text: '[猿橋|サハシ]氏に情報開示を求めたが十分な説明が得られず、'
+  - speaker: torishimari
+    emotion: angry
+    text: 業務執行を委ねることが不適当と判断した。
+    se: don
+  - speaker: reimu
+    text: 26日の早朝、NOVAは会社更生法を申し立て、全部の教室を一時閉めます。負債は約439億円。
+    reading: にじゅうろくにちの そうちょう、のばわ かいしゃ こうせいほうお もうしたて ぜんぶの きょうしつお いちじ しめます。ふさいわ やく よんひゃく さんじゅうきゅうおくえん。
+- id: ch10_hozen
+  title: ''
+  background: nv_kaiken
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: hozen, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: hozen
+    emotion: normal
+    text: 30万人の生徒と全国に店舗網を持つ事業価値を評価してくれる支援先を探したい。
+  - speaker: hozen
+    emotion: thinking
+    text: 勝負は長くても1カ月だ。
+  - speaker: kisha
+    emotion: normal
+    text: 破産になった場合、授業のチケットは。
+  - speaker: hozen
+    emotion: thinking
+    text: 紙くずになる。
+  - speaker: kisha
+    emotion: normal
+    text: '[猿橋|サハシ]氏と連絡はとれているのか。'
+  - speaker: hozen
+    emotion: thinking
+    text: 携帯に連絡を入れているが出ない。東京方面にいると聞いている。
+- id: ch10_ekimae
+  title: ''
+  background: nv_ekimae
+  stage:
+  - {who: jukosei, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: jukosei
+    emotion: sad
+    text: 36万円払って、まだ8割以上残ってるんですよ。
+  - speaker: jukosei
+    emotion: thinking
+    text: 講師の質は心配だが、授業さえ続けてくれれば文句はない。
+# ---- 2007年10月30日・社長室の公開 ----
+- id: ch11_shachoshitsu
+  title: 公開された社長室
+  background: nv_shachoshitsu
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: hozen, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 10月30日。保全管理人は会見のあと、社長室を報道陣に公開します。
+    reading: じゅうがつ さんじゅうにち。ほぜん かんりにんわ かいけんの あと、しゃちょうしつお ほうどうじんに こうかい します。
+  - speaker: hozen
+    emotion: angry
+    text: 企業私物化の象徴だ。
+  - speaker: hozen
+    emotion: angry
+    text: みんなが苦労しているときに高額報酬を取っていた。
+  - speaker: hozen
+    emotion: thinking
+    text: 本当のオーナー経営者なら、従業員のためにお[金|かね]を残してあげてほしかった。
+  - speaker: reimu
+    text: 保全管理人によると、猿橋の2005年度の所得は3億900万円。会社は31億円の赤字でした。
+    reading: ほぜん かんりにんに よると、さはしの にせん ごねんどの しょとくわ さんおく きゅうひゃくまんえん。かいしゃわ さんじゅういちおくえんの あかじでした。
+# ---- 2007年11月2日・取材 ----
+- id: ch12_shuzai
+  title: 1週間遅かった
+  background: nv_jimusho
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月2日。解任のあと表に出ていなかった猿橋が、雑誌の取材に応じます。
+    reading: じゅういちがつ ふつか。かいにんの あと おもてに でて いなかった さはしが、ざっしの しゅざいに おうじます。
+  - speaker: zundamon
+    emotion: thinking
+    text: なんとかして自力再建の道筋を開こうとしていました。
+  - speaker: zundamon
+    emotion: sad
+    text: しかし間に合わなかった。
+  - speaker: zundamon
+    emotion: sad
+    text: たった1週間遅かったんですね、なにもかも。
+    se: namida
+    telops:
+    - {text: "猿橋「たった1週間遅かったんですね」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 一連のことを知ったのはいつですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 26日の金曜日になって初めて知りました。
+  - speaker: zundamon
+    emotion: sad
+    text: 朝の5時半に電話でたたき起こされて「報道を見たか？」と。
+  - speaker: reimu
+    text: 出席を拒否したという会社の説明とは、食い違っています。
+    reading: しゅっせきお きょひ したと いう かいしゃの せつめいとわ、くいちがって います。
+  - speaker: kisha
+    emotion: normal
+    text: '[保全管理人|ホゼンカンリニン]は、不透明なファイナンスを行なっていたと指摘しています。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 私はなんとしても誰にも迷惑がかからないように
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社を再建するという大前提で動いており、
+  - speaker: zundamon
+    emotion: normal
+    text: そこに一点の曇りもありません。
+# ---- 2008年・逮捕 ----
+- id: card2008
+  title: ''
+  background: nv_card_2008
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2008年6月24日。猿橋は社員の積立金をめぐる業務上横領の疑いで逮捕され、コメントを出します。
+    reading: にせん はちねん ろくがつ にじゅうよっか。さはしわ しゃいんの つみたてきんお めぐる ぎょうむじょう おうりょうの うたがいで たいほ され、こめんとお だします。
+- id: ch13_taiho
+  title: ''
+  background: nv_jimusho
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 猿橋望, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 事実関係につきましては間違いありません。
+  - speaker: zundamon
+    emotion: sad
+    text: 社会的審判を受けるべく、警察の調べを受けたいと思います。
+  - speaker: reimu
+    text: ただ、調べには一部を否認していると報じられました。
+    reading: ただ、しらべにわ いちぶお ひにん して いると ほうじられました。
+# ---- 判決 ----
+- id: ch14_hanketsu
+  title: 懲役2年
+  background: nv_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 猿橋望, emotion: thinking}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 弁護側は倒産を防ぐため、後で返すつもりで一時的に借りただけだと主張しました。
+    reading: べんごがわわ とうさんお ふせぐ ため、あとで かえす つもりで いちじてきに かりた だけだと しゅちょう しました。
+  - speaker: reimu
+    text: 2009年、大阪地裁は懲役3年6月。翌年の大阪高裁は、こう述べます。
+    reading: にせん きゅうねん おおさか ちさいわ ちょうえき さんねん ろっかげつ。よくねんの おおさか こうさいわ、こう のべます。
+  - speaker: saibancho
+    emotion: normal
+    text: 近い将来、返済する意思があったとは到底言えない。
+  - speaker: saibancho
+    emotion: normal
+    text: 多数の受講生を抱える会社の存続のための流用で、個人的資産も拠出されている。
+  - speaker: saibancho
+    emotion: normal
+    text: 犯行動機にはかなりの程度酌むべきものがある。
+  - speaker: saibancho
+    emotion: normal
+    text: 刑の執行を猶予すべきだとは言えないが、[一審|いっしん]判決は重すぎる。
+  - speaker: reimu
+    text: 高裁は、横領したお金は全額が受講生への返金に充てられ、個人的な利得はないとも認めました。
+    reading: こうさいわ おうりょう した おかねわ ぜんがくが じゅこうせいえの へんきんに あてられ、こじんてきな りとくわ ないとも みとめました。
+  - speaker: reimu
+    text: 懲役2年。2012年11月に最高裁が上告を退け、実刑が確定します。
+    reading: ちょうえき にねん。にせん じゅうにねん じゅういちがつに さいこうさいが じょうこくお しりぞけ、じっけいが かくてい します。
+# ---- 論争1：私物化でつぶれた？ ----
+- id: ronso1
+  title: 私物化でつぶれた？
+  background: nv_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 社長が会社を私物化して、つぶしたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[保全管理人|ホゼンカンリニン]は社長室を見せて、企業私物化の象徴だと言ったわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判所も、社員の積立金の流用を業務上横領と認めてる。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも高裁は、お[金|かね]は全額が受講生への返金に使われたと認めたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 個人的な利得はない、ともね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分のためじゃ、なかったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長室にかかったのは、[保全管理人|ホゼンカンリニン]の話で数千万円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 受講生に戻らなかった前払いは、まだ受けていない分で約560億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ケタが、全然ちがうのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 横領は横領。でも会社が傾いた流れは、前払いで回す仕組みのほうにあったの。
+# ---- 論争2：国のせいでつぶれた？ ----
+- id: ronso2
+  title: 国のせいでつぶれた？
+  background: nv_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、最高裁と国がつぶしたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[猿橋|サハシ]も、業務停止がいきなり来るとは思っていなかったと語ってるわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 国も2002年に、NOVAの照会に条件つきで答えてたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 合理性が認められないとはいえない、って。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国は、おかしくないって言ってたのに！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも同じ年、東京都はほぼ同じ種類の違反でNOVAを指導してたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 精算の計算も、最高裁の前に6件全部で退けられてたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……前から言われてたのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[保全管理人|ホゼンカンリニン]の弁護士は、こう言ったの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 経産省も含めて数々の行政指導があり、経営悪化の原因になったが、
+  - speaker: tsumugi
+    emotion: thinking
+    text: 根本はNOVAの経営体制が悪かった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 両方、なのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年には元受講生の裁判で、大阪高裁が[猿橋|サハシ]についてこう判断したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 解約を急増させる事態を招き、旧NOVAを経営破綻させた責任がある。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[猿橋|サハシ]は弁護士を通じて、こんな談話を出したの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 明らかに法律的に間違った判決なので、上告審でひっくり返ると思います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国の処分か、会社のやり方か……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 引き金は国の処分。でも引き金を引かせたのは、何年も前から言われてたやり方なの。
+    beat: true
+# ---- 本当の注意点 ----
+- id: chui
+  title: 前払いの本当の注意点
+  background: nv_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。ずんだもんの回数券、[何|なん]の習い事？
+  - speaker: zundamon
+    emotion: happy
+    text: 英会話なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……よりによって。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: 語学教室は、2か月を超えて5万円を超える契約なら、
+  - speaker: tsumugi
+    emotion: normal
+    text: '[特定商取引法|トクテイショウトリヒキホウ]の決まりがあるの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 途中でやめても、取られるのは使った[分|ぶん]と、
+  - speaker: tsumugi
+    emotion: normal
+    text: 5万円か残りの2割の、安いほうまで。
+  - speaker: zundamon
+    emotion: surprised
+    text: 上限があるのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: 使った分も、いまは買ったときの単価で数えるのが原則よ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、1回ずつの値段で引かれないのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: クーリング・オフは、書面を受け取った日から8日以内。
+  - speaker: tsumugi
+    emotion: thinking
+    text: NOVAは、名前と住所を書いただけの日から数えていたのを違反と認定されたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それより大事なのは、前払いは会社がつぶれると後回しになること。
+  - speaker: zundamon
+    emotion: surprised
+    text: 後回し！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 税金や給料が先で、NOVAの受講生にはほとんど戻らなかったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 約560億円。1人あたり、平均でおよそ19万円よ。
+    telops:
+    - {text: "戻らなかった前払い 約560億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 19万円……！
+  - speaker: tsumugi
+    emotion: normal
+    text: まとめて払うほど、相手がつぶれたときに失う額も大きくなるの。
+# ---- 今の駅前留学 ----
+- id: ima
+  title: いまの駅前留学
+  background: nv_gendai
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: でもNOVAって、いまも駅前にあるよね？
+  - speaker: tsumugi
+    emotion: normal
+    text: いまの駅前留学NOVAは、名前と教室を引き継いだ別の会社なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 引き継いだのは、名古屋の学習塾から始まった会社。破綻の翌月のことよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 塾の会社が！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 600の教室を、全部閉めた状態で引き継いだそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ゼロからの、やり直しなのだ。
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 旧NOVAで受けられなかった分は、新しいレッスン料の半分に充てられるようにしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年12月で、駅前留学NOVAは全国302校。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3年分などをまとめて預かる仕組みから、月謝制を中心に変えたと説明してるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 回数券から、月謝に！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして2025年にも、同じ受付をもう一度してたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 18年たっても……！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 使い切れなかった前払いの話は、まだ続いてるのね。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: nv_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ この回数券、1回も休まず使い切るのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: まず予約が取れるか、確かめてからね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 経営そのものに与える影響は軽微だ。会見でそう答えた4か月後に、NOVAはつぶれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前払いで教室を増やすやり方は、新しい受講生が入り続けるあいだしか回らなかった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 回数券の安さは、お店が続く前提の上にあったのか……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: まとめて払う前に、途中でやめたらいくら戻るか確かめてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
