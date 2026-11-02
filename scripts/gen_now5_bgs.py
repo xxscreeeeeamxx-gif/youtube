@@ -8,12 +8,13 @@
 実行: PYTHONPATH=. python scripts/gen_now5_bgs.py [名前...]
 """
 
+import math
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from scripts.gen_drama_bgs import H, OUT, W, base, vgrad, wood_floor  # noqa: E402
+from scripts.gen_drama_bgs import H, OUT, W, base, hanging_bulb, tatami_floor, vgrad, wood_floor  # noqa: E402
 from scripts.gen_famicom_bgs import _boxes, _papers, _phone, _window, year_card  # noqa: E402
 from scripts.gen_now_bgs import FLOOR, _d, _rgb, kaigi, yakuin  # noqa: E402
 from scripts.gen_now2_bgs import heya2, kabunushi_kaijo, shoken  # noqa: E402
@@ -562,7 +563,388 @@ def ya_jitaku():
     return img
 
 
+# ---------------------------------------------------------------- 船井電機・船井哲良
+def _bulb(img, lx, ly=120):
+    """裸電球（RGB の絵に描くため一度 RGBA にする）。"""
+    rgba = img.convert("RGBA")
+    hanging_bulb(rgba, lx, warm=True, ly=ly)
+    return rgba.convert("RGB")
+
+
+def _mishin(d, x, y, s=1.0, col=(30, 30, 34)):
+    """足踏みミシンの頭（下の端の中央が x, y）。黒い腕と木の台。印は描かない。"""
+    d.rectangle([x - 110 * s, y - 24 * s, x + 110 * s, y], fill=(150, 110, 70), outline=(110, 80, 50), width=2)
+    d.rounded_rectangle([x - 90 * s, y - 70 * s, x + 80 * s, y - 24 * s], radius=int(14 * s), fill=col)       # 下の胴
+    d.rounded_rectangle([x + 30 * s, y - 130 * s, x + 80 * s, y - 40 * s], radius=int(14 * s), fill=col)      # 右の柱
+    d.rounded_rectangle([x - 90 * s, y - 130 * s, x + 80 * s, y - 100 * s], radius=int(14 * s), fill=col)     # 上の腕
+    d.rectangle([x - 86 * s, y - 104 * s, x - 70 * s, y - 50 * s], fill=col)                                    # 針の棒
+    d.ellipse([x + 70 * s, y - 120 * s, x + 110 * s, y - 80 * s], fill=(120, 116, 110))                          # はずみ車
+
+
+def _crate(d, x, y, s=1.0, col=(176, 140, 96)):
+    """木の箱（下の端の中央）。板の線つき。"""
+    d.rectangle([x - 70 * s, y - 90 * s, x + 70 * s, y], fill=col, outline=(120, 90, 60), width=3)
+    for k in range(1, 3):
+        d.line([(x - 70 * s, y - 30 * k * s), (x + 70 * s, y - 30 * k * s)], fill=(140, 106, 70), width=2)
+    d.line([(x - 70 * s, y - 90 * s), (x + 70 * s, y)], fill=(140, 106, 70), width=3)
+
+
+def _flat(d, x, y, w=300, h=180, screen=(40, 70, 120), stand=True):
+    """薄型テレビ（下の端の中央）。"""
+    off = 24 if stand else 0
+    d.rectangle([x - w / 2, y - h - off, x + w / 2, y - off], fill=(24, 24, 28))
+    d.rectangle([x - w / 2 + 8, y - h - off + 8, x + w / 2 - 8, y - off - 8], fill=screen)
+    if stand:
+        d.rectangle([x - 12, y - 24, x + 12, y - 6], fill=(40, 40, 44))
+        d.rectangle([x - 60, y - 8, x + 60, y], fill=(40, 40, 44))
+
+
+def _clock(d, cx, cy, r, hour, minute=0):
+    """掛け時計。針は時刻のとおり。"""
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(250, 248, 240), outline=(90, 70, 50), width=8)
+    for k in range(12):
+        a = math.radians(k * 30)
+        d.line([(cx + math.sin(a) * r * 0.78, cy - math.cos(a) * r * 0.78),
+                (cx + math.sin(a) * r * 0.9, cy - math.cos(a) * r * 0.9)], fill=(60, 60, 60), width=4)
+    ah = math.radians((hour % 12) * 30 + minute * 0.5)
+    am = math.radians(minute * 6)
+    d.line([(cx, cy), (cx + math.sin(ah) * r * 0.5, cy - math.cos(ah) * r * 0.5)], fill=(30, 30, 30), width=10)
+    d.line([(cx, cy), (cx + math.sin(am) * r * 0.75, cy - math.cos(am) * r * 0.75)], fill=(30, 30, 30), width=6)
+
+
+def fn_heya():
+    """今の部屋。薄型テレビの画面に、灰色のお知らせの窓（文字は線）。机にリモコン。"""
+    img = heya2("none")
+    d = _d(img)
+    d.rectangle([1460, 410, 1720, 550], fill=(230, 232, 236), outline=(150, 150, 156), width=3)
+    for k in range(3):
+        d.line([(1490, 440 + k * 30), (1690 - k * 40, 440 + k * 30)], fill=(110, 110, 118), width=6)
+    d.rectangle([300, 620, 330, 690], fill=(40, 40, 44))                                         # リモコン
+    return img
+
+
+def fn_maker():
+    """1951年のミシン工場の事務所（大晦日の夕方）。板の壁、机とそろばん、窓の外は暮れかけ。"""
+    img = _rgb(base((196, 180, 156), (176, 160, 136)))
+    wood_floor(img, FLOOR, col=(130, 104, 78), line=(112, 88, 64))
+    d = _d(img)
+    for k in range(12):
+        d.line([(k * 170, 0), (k * 170, FLOOR)], fill=(170, 152, 126), width=4)
+    _window(d, 1240, 140, 1700, 440, sky=(214, 150, 110))
+    d.rectangle([1250, 150, 1690, 230], fill=(120, 90, 110))
+    d.rectangle([420, 600, 1040, 640], fill=(120, 86, 56))                                       # 机
+    d.rectangle([440, 640, 470, FLOOR], fill=(100, 70, 46))
+    d.rectangle([990, 640, 1020, FLOOR], fill=(100, 70, 46))
+    d.rectangle([500, 584, 700, 600], fill=(90, 60, 40))                                         # そろばん
+    for k in range(12):
+        d.ellipse([506 + k * 16, 586, 518 + k * 16, 598], fill=(200, 170, 120))
+    _papers(d, 760, 590, n=2)
+    d.rectangle([200, FLOOR - 140, 400, FLOOR], fill=(110, 80, 54))
+    _mishin(d, 300, FLOOR - 140, 0.9)
+    return _bulb(img, 760, ly=60)
+
+
+def fn_soko(kara=False):
+    """大晦日の夜の倉庫。裸電球、輸出前のミシンの木箱の山、戸口に小型トラックの荷台。kara は箱がほとんど無い。"""
+    img = _rgb(base((70, 62, 56), (56, 50, 46)))
+    wood_floor(img, FLOOR, col=(90, 80, 70), line=(76, 68, 60))
+    d = _d(img)
+    d.rectangle([1380, 160, 1840, FLOOR], fill=(20, 22, 40))                                     # 戸口の外は夜
+    for k in range(18):
+        x, y = 1400 + (k * 97) % 420, 180 + (k * 53) % 200
+        d.ellipse([x, y, x + 4, y + 4], fill=(230, 230, 210))
+    d.rectangle([1420, 640, 1840, 760], fill=(110, 120, 110), outline=(70, 80, 70), width=4)    # 荷台
+    for x in (1500, 1760):
+        d.ellipse([x - 50, 720, x + 50, 820], fill=(30, 30, 30))
+    if kara:
+        _crate(d, 300, FLOOR, 1.0)
+        _crate(d, 460, FLOOR, 1.0)
+    else:
+        for row in range(4):
+            for k in range(6):
+                _crate(d, 140 + k * 150 + (row % 2) * 30, FLOOR - row * 90, 1.0)
+    return _bulb(img, 700, ly=80)
+
+
+def fn_pachinko():
+    """1950年代のパチンコ屋。縦に並んだ木の台、くぎの点と銀の玉。"""
+    img = _rgb(base((210, 196, 170), (190, 176, 150)))
+    wood_floor(img, FLOOR, col=(120, 100, 80), line=(104, 86, 68))
+    d = _d(img)
+    for k in range(7):
+        x = 60 + k * 270
+        d.rectangle([x, 150, x + 230, 700], fill=(150, 104, 64), outline=(100, 70, 40), width=6)
+        d.rectangle([x + 20, 170, x + 210, 560], fill=(236, 230, 214))
+        for r in range(9):
+            for c in range(6):
+                px, py = x + 36 + c * 30 + (r % 2) * 14, 190 + r * 40
+                d.ellipse([px, py, px + 6, py + 6], fill=(120, 110, 100))
+        d.rectangle([x + 40, 590, x + 190, 640], fill=(190, 150, 100))
+        for k2 in range(5):
+            d.ellipse([x + 60 + k2 * 24, 600, x + 80 + k2 * 24, 620], fill=(206, 210, 214))
+    return img
+
+
+def fn_toiya():
+    """1940年代末の大きなミシン問屋の店の奥。木箱と縄、棚に並んだミシン。"""
+    img = _rgb(base((206, 192, 166), (188, 174, 148)))
+    wood_floor(img, FLOOR, col=(140, 112, 84), line=(122, 96, 70))
+    d = _d(img)
+    for k in range(6):
+        d.rectangle([110 + k * 300, 420, 330 + k * 300, 440], fill=(120, 86, 56))
+        _mishin(d, 220 + k * 300, 420, 0.9)
+    for k in range(5):
+        _crate(d, 380 + k * 170, FLOOR, 1.1)
+    d.arc([1500, 700, 1700, 860], 0, 360, fill=(170, 150, 110), width=10)                       # 縄の束
+    d.arc([1520, 720, 1680, 840], 0, 360, fill=(170, 150, 110), width=10)
+    return img
+
+
+def fn_shokai():
+    """1950年代の小さなミシン商会の事務所。机・そろばん・黒電話、見本のミシン、壁に日めくり。"""
+    img = _rgb(base((216, 204, 180), (198, 186, 162)))
+    wood_floor(img, FLOOR, col=(140, 112, 84), line=(122, 96, 70))
+    d = _d(img)
+    _window(d, 720, 140, 1180, 420, sky=(200, 216, 226))
+    d.rectangle([1360, 160, 1480, 300], fill=(250, 248, 240), outline=(150, 140, 120), width=3)   # 日めくり
+    d.rectangle([1360, 160, 1480, 196], fill=(200, 60, 50))
+    _desk(d, 200, 760, 620, col=(150, 116, 84))
+    _phone(d, 640, 616, 0.9)
+    d.rectangle([260, 604, 440, 620], fill=(90, 60, 40))
+    for k in range(10):
+        d.ellipse([266 + k * 17, 606, 278 + k * 17, 618], fill=(200, 170, 120))
+    for k in range(3):
+        d.rectangle([1090 + k * 250, FLOOR - 150, 1270 + k * 250, FLOOR], fill=(120, 86, 56))
+        _mishin(d, 1180 + k * 250, FLOOR - 150, 0.8)
+    return img
+
+
+def fn_buhin(osoi=False):
+    """1959年の部品会社の受付の長いす。壁に掛け時計。osoi は時計が5時間進み、窓の外が暮れる。"""
+    img = _office_wall((214, 216, 206), (200, 202, 192))
+    d = _d(img)
+    _window(d, 1240, 140, 1700, 420, sky=(214, 150, 110) if osoi else (196, 214, 228))
+    if osoi:
+        d.rectangle([1250, 150, 1690, 230], fill=(120, 90, 110))
+    _clock(d, 900, 260, 110, 18 if osoi else 13)
+    d.rectangle([260, 620, 900, 660], fill=(110, 90, 70))                                         # 長いす
+    d.rectangle([260, 540, 900, 580], fill=(110, 90, 70))
+    for x in (280, 860):
+        d.rectangle([x, 660, x + 20, FLOOR], fill=(80, 64, 50))
+    d.rectangle([1200, 600, 1800, 660], fill=(160, 150, 136), outline=(120, 110, 96), width=3)    # 受付の台
+    d.rectangle([1200, 660, 1800, FLOOR], fill=(176, 166, 150))
+    if osoi:
+        for k in range(3):                                                                        # 空の湯のみ
+            d.rounded_rectangle([1000 + k * 50, 610, 1036 + k * 50, 650], radius=6, fill=(220, 214, 196), outline=(160, 150, 130))
+    return img
+
+
+def fn_radio():
+    """1959年の小さなラジオ工場。作業台に並ぶ小型ラジオ（スピーカーの網目）。"""
+    img = _office_wall((222, 222, 214), (208, 208, 200))
+    d = _d(img)
+    for k in range(5):
+        d.rectangle([k * 400 + 60, 40, k * 400 + 160, 70], fill=(250, 250, 236))
+    for row, y in enumerate((560, 760)):
+        d.rectangle([80, y, 1840, y + 30], fill=(150, 116, 84))
+        for k in range(10):
+            x = 140 + k * 170
+            d.rounded_rectangle([x, y - 90, x + 120, y], radius=12,
+                                fill=[(200, 60, 50), (240, 236, 224), (60, 110, 160)][(k + row) % 3])
+            for g in range(4):
+                d.line([(x + 14, y - 74 + g * 12), (x + 60, y - 74 + g * 12)], fill=(60, 60, 60), width=3)
+            d.ellipse([x + 76, y - 70, x + 104, y - 42], fill=(230, 220, 190))
+    return img
+
+
+def fn_okinawa():
+    """1960年の沖縄。青空、トタン屋根の工場（もとは食品の工場）、ヤシの木。"""
+    img = vgrad((W, H), (90, 170, 230), (190, 226, 240))
+    d = _d(img)
+    d.rectangle([0, 820, W, H], fill=(214, 200, 160))
+    d.rectangle([420, 420, 1500, 820], fill=(226, 222, 210), outline=(150, 146, 136), width=4)
+    d.polygon([(380, 430), (960, 300), (1540, 430)], fill=(150, 156, 160), outline=(110, 116, 120))
+    for k in range(6):
+        d.rectangle([480 + k * 170, 520, 580 + k * 170, 600], fill=(120, 160, 190), outline=(110, 110, 110), width=3)
+    d.rectangle([880, 660, 1040, 820], fill=(110, 90, 70))
+    for x in (160, 1720):                                                                        # ヤシの木
+        d.line([(x, 860), (x + 30, 420)], fill=(120, 90, 60), width=26)
+        for a in (-1, 1):
+            d.polygon([(x + 30, 420), (x + 30 + a * 200, 470), (x + 30 + a * 160, 500)], fill=(60, 140, 70))
+            d.polygon([(x + 30, 420), (x + 30 + a * 180, 380), (x + 30 + a * 200, 420)], fill=(70, 150, 80))
+    return img
+
+
+def fn_trucks():
+    """1977年のトラックの組み立て工場。天井クレーン、ラインに並ぶ箱型の運転台（会社の印は描かない）。"""
+    img = vgrad((W, H), (200, 204, 208), (180, 184, 190))
+    d = _d(img)
+    d.rectangle([0, FLOOR, W, H], fill=(150, 152, 156))
+    d.rectangle([0, 120, W, 150], fill=(230, 180, 40))                                           # 天井クレーンのはり
+    for x in (300, 1100):
+        d.line([(x, 150), (x, 300)], fill=(60, 60, 60), width=6)
+        d.rectangle([x - 30, 300, x + 30, 330], fill=(230, 180, 40))
+    d.rectangle([0, 760, W, 800], fill=(80, 84, 90))                                             # ライン
+    for k in range(4):
+        x = 160 + k * 470
+        col = [(80, 130, 170), (230, 230, 226)][k % 2]
+        d.rounded_rectangle([x, 470, x + 300, 760], radius=20, fill=col, outline=(70, 70, 76), width=4)
+        d.rectangle([x + 30, 500, x + 270, 620], fill=(150, 190, 214))                            # 窓
+        d.rectangle([x + 20, 700, x + 280, 740], fill=(60, 60, 66))
+    return img
+
+
+def fn_ryo():
+    """研修の宿舎の夜。畳、ちゃぶ台にビールの瓶と栓抜き、裸電球。"""
+    img = _rgb(base((200, 190, 166), (184, 174, 150)))
+    tatami_floor(img, FLOOR)
+    d = _d(img)
+    _window(d, 1260, 140, 1700, 420, sky=(30, 34, 60))
+    d.rectangle([660, 700, 690, 840], fill=(100, 70, 46))
+    d.rectangle([1230, 700, 1260, 840], fill=(100, 70, 46))
+    d.ellipse([600, 640, 1320, 760], fill=(120, 86, 56))                                         # ちゃぶ台
+    for k in range(4):                                                                          # ビールの瓶（印なし）
+        x = 760 + k * 120
+        d.rectangle([x, 560, x + 44, 690], fill=(110, 70, 30))
+        d.rectangle([x + 12, 520, x + 32, 560], fill=(110, 70, 30))
+        d.rectangle([x + 10, 512, x + 34, 522], fill=(200, 190, 60))
+    d.rectangle([1260, 676, 1300, 690], fill=(160, 160, 166))                                    # 栓抜き
+    return _bulb(img, 960, ly=60)
+
+
+def fn_china():
+    """1990年代の中国の大きな工場。長い作業台に並ぶ大勢の作業員（後ろ姿）。"""
+    img = vgrad((W, H), (226, 228, 230), (206, 208, 212))
+    d = _d(img)
+    d.rectangle([0, FLOOR, W, H], fill=(176, 178, 182))
+    for k in range(8):
+        d.rectangle([k * 250 + 40, 40, k * 250 + 160, 64], fill=(250, 250, 236))
+    for row, (y, s) in enumerate(((520, 0.55), (660, 0.7), (840, 0.9))):
+        d.rectangle([0, y - 10, W, y + 8], fill=(150, 156, 164))
+        _person_line(d, 20 + row * 20, y, int(W / (70 * s)) + 1, s,
+                     cols=[(70, 110, 170), (80, 120, 180), (60, 100, 160)])
+    return img
+
+
+def fn_store(yasu=False):
+    """北米の大型量販店のテレビ売り場。高い天井、棚に並ぶテレビ（印なし）。yasu は赤い値札が並ぶ。"""
+    img = _rgb(base((236, 238, 242), (222, 224, 230)))
+    wood_floor(img, FLOOR, col=(210, 210, 214), line=(196, 196, 200))
+    d = _d(img)
+    for k in range(6):
+        d.rectangle([k * 340 + 30, 30, k * 340 + 230, 54], fill=(255, 255, 240))
+    d.rectangle([0, 90, W, 140], fill=(40, 90, 160))                                             # 帯（文字なし）
+    for shelf_y in (420, 700):
+        d.rectangle([60, shelf_y, 1860, shelf_y + 24], fill=(150, 150, 156))
+        for k in range(7):
+            x = 190 + k * 255
+            _flat(d, x, shelf_y, w=220, h=130, screen=[(40, 70, 120), (60, 110, 90), (110, 70, 90)][k % 3], stand=False)
+            if yasu:
+                d.rectangle([x - 40, shelf_y + 28, x + 40, shelf_y + 70], fill=(220, 40, 40))
+                d.line([(x - 26, shelf_y + 50), (x + 26, shelf_y + 50)], fill=(255, 240, 240), width=6)
+    return img
+
+
+def fn_kaicho(kara=False, yugata=False):
+    """会長室。大きな窓、重い机、壁ぎわに書の額（筆の線だけ）。kara は誰もいない椅子。yugata は夕方の光。"""
+    img = yakuin(view=(232, 180, 140) if yugata else (190, 206, 222), city=True)
+    if yugata:
+        _glow(img, 960, 300, 700, (255, 190, 120), 60)
+    d = _d(img)
+    d.rectangle([1560, 560, 1840, 640], fill=(250, 246, 236), outline=(110, 80, 50), width=8)    # 額
+    for k in range(4):
+        d.line([(1600 + k * 60, 576), (1590 + k * 60, 626)], fill=(30, 30, 30), width=8)
+    if kara:
+        _glow(img, 960, 600, 260, (255, 250, 230), 60)
+        d = _d(img)
+        d.rounded_rectangle([880, 520, 1040, 650], radius=24, fill=(60, 44, 34), outline=(40, 30, 24), width=4)
+    return img
+
+
+def fn_tentou():
+    """2017年の日本の家電量販店のテレビ売り場。壁一面の薄型テレビ（印なし）。"""
+    img = _rgb(base((240, 240, 238), (228, 228, 226)))
+    wood_floor(img, FLOOR, col=(214, 214, 210), line=(200, 200, 196))
+    d = _d(img)
+    for r in range(2):
+        for k in range(6):
+            _flat(d, 230 + k * 290, 380 + r * 250, w=250, h=150,
+                  screen=[(60, 120, 170), (90, 150, 110), (170, 120, 90)][(k + r) % 3], stand=False)
+    d.rectangle([600, 760, 1320, 800], fill=(200, 200, 204))
+    _flat(d, 960, 760, w=360, h=200, screen=(50, 100, 160))
+    return img
+
+
+def fn_shachoshitsu(ichien=False):
+    """2020年代の社長室。窓にビル街、机。ichien は机の真ん中に1円玉が1枚（光る）。"""
+    img = yakuin(view=(196, 210, 226), city=True)
+    if ichien:
+        _glow(img, 960, 600, 220, (255, 255, 240), 110)
+        d = _d(img)
+        d.ellipse([900, 560, 1020, 650], fill=(214, 216, 220), outline=(140, 142, 150), width=6)
+        d.ellipse([920, 574, 1000, 636], outline=(176, 178, 186), width=3)
+    return img
+
+
+def fn_setsumeikai(kara=False):
+    """2024年の本社の大きな会議室。並んだ椅子に社員の後ろ姿。kara は椅子だけ。"""
+    img = _office_wall((226, 228, 230), (212, 214, 216))
+    d = _d(img)
+    d.rectangle([660, 140, 1260, 440], fill=(250, 250, 250), outline=(160, 160, 166), width=6)   # 白板（文字なし）
+    d.rectangle([780, 470, 1140, 520], fill=(150, 140, 126))                                    # 演台の机
+    for row, (y, s) in enumerate(((700, 0.6), (820, 0.75), (960, 0.95))):
+        n = int(W / (70 * s)) + 1
+        for k in range(n):
+            x = row * 20 + k * 70 * s
+            d.rectangle([x - 6 * s, y - 50 * s, x + 52 * s, y], fill=(120, 124, 132))            # 椅子
+        if not kara:
+            _person_line(d, row * 20, y - 30 * s, n, s, cols=[(60, 64, 76), (80, 84, 96), (50, 54, 66), (90, 90, 100)])
+    return img
+
+
+def fn_honsha():
+    """曇り空の本社ビル。灰色の中層ビルと手前の道。社名の文字は描かない。"""
+    img = vgrad((W, H), (170, 174, 182), (206, 208, 212))
+    d = _d(img)
+    d.rectangle([460, 220, 1460, 860], fill=(200, 200, 204), outline=(120, 120, 126), width=4)
+    for r in range(9):
+        for c in range(10):
+            d.rectangle([500 + c * 96, 250 + r * 66, 570 + c * 96, 290 + r * 66], fill=(130, 144, 160))
+    d.rectangle([860, 760, 1060, 860], fill=(90, 96, 104))                                     # 入口
+    d.rectangle([0, 860, W, H], fill=(140, 142, 146))
+    d.line([(0, 960), (W, 960)], fill=(240, 240, 240), width=6)
+    return img
+
+
+def fn_koudou():
+    """大学の記念講堂（秋）。低い現代的な建物、ガラスの正面、手前に黄色い木。"""
+    img = vgrad((W, H), (150, 196, 236), (214, 230, 240))
+    d = _d(img)
+    d.rectangle([0, 820, W, H], fill=(190, 186, 176))
+    d.rectangle([360, 400, 1560, 820], fill=(214, 208, 196), outline=(150, 144, 134), width=4)
+    d.rectangle([360, 360, 1560, 400], fill=(170, 164, 154))
+    for k in range(10):
+        d.rectangle([420 + k * 112, 470, 510 + k * 112, 800], fill=(160, 190, 210), outline=(120, 130, 140), width=3)
+    for x in (140, 1780):
+        d.ellipse([x - 140, 520, x + 140, 840], fill=(226, 190, 60))
+        d.rectangle([x - 14, 820, x + 14, 900], fill=(110, 80, 50))
+    return img
+
+
 LOCATIONS = {
+    # 船井電機・船井哲良
+    "fn_heya": fn_heya, "fn_maker": fn_maker, "fn_soko": fn_soko, "fn_soko_kara": lambda: fn_soko(kara=True),
+    "fn_pachinko": fn_pachinko, "fn_toiya": fn_toiya, "fn_shokai": fn_shokai,
+    "fn_buhin": fn_buhin, "fn_buhin_osoi": lambda: fn_buhin(osoi=True), "fn_radio": fn_radio,
+    "fn_okinawa": fn_okinawa, "fn_trucks": fn_trucks, "fn_ryo": fn_ryo, "fn_line": lambda: vh_line(),
+    "fn_china": fn_china, "fn_store": fn_store, "fn_store_yasu": lambda: fn_store(yasu=True),
+    "fn_ousetsu": ya_ousetsu, "fn_kaicho": fn_kaicho, "fn_kaicho_yugata": lambda: fn_kaicho(yugata=True),
+    "fn_kaicho_kara": lambda: fn_kaicho(kara=True), "fn_kaigi": kaigi, "fn_kaigi_akaji": lambda: kaigi(akaji=True),
+    "fn_kaiken": _sega_kaiken, "fn_tentou": fn_tentou, "fn_shoken": shoken,
+    "fn_shachoshitsu": fn_shachoshitsu, "fn_shachoshitsu_1en": lambda: fn_shachoshitsu(ichien=True),
+    "fn_setsumeikai": fn_setsumeikai, "fn_setsumeikai_kara": lambda: fn_setsumeikai(kara=True),
+    "fn_honsha": fn_honsha, "fn_houtei": _sogo_saibansho, "fn_saikensha": kabunushi_kaijo,
+    "fn_koudou": fn_koudou, "fn_gendai": _sega_gendai,
     # 長銀・大野木克信
     "cg_heya": cg_heya, "cg_kokkai": _sogo_kokkai, "cg_saikosai": cg_saikosai, "cg_houtei": _sogo_saibansho,
     "cg_tochiri": cg_tochiri, "cg_jomukai": kaigi, "cg_jomukai_akaji": lambda: kaigi(akaji=True),
@@ -589,7 +971,9 @@ LOCATIONS = {
 }
 
 # 年号カード（台本ができてから足す）。接頭辞ごとに "vh_card_1976" のように作る
-CARDS = {"cg": ["1952", "1959", "1995", "1997", "1998", "1999", "2000", "2002", "2005", "2008", "2017", "2025"],
+CARDS = {"fn": ["1951", "1952", "1955", "1959", "1960", "1961", "1977", "1987", "1992", "1999", "2003", "2005", "2008",
+                "2013", "2014", "2016", "2017", "2021", "2023", "2024", "2025", "2026"],
+         "cg": ["1952", "1959", "1995", "1997", "1998", "1999", "2000", "2002", "2005", "2008", "2017", "2025"],
          "ya": ["1930", "1950", "1956", "1962", "1969", "1971", "1977", "1984", "1989", "1990", "1991", "1993", "1995", "1996", "1997", "1998", "2000", "2001", "2018", "2019"],
          "vh": ["1946", "1970", "1973", "1975", "1976", "1977", "1979", "1982", "1984", "1986", "1988", "1992", "2016"]}
 

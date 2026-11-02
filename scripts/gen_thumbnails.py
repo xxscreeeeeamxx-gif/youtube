@@ -4360,6 +4360,10 @@ SPECS = {
         dict(scene="tt_kaiken_heya", tint="mono", tag="2017年 破綻の日", emo="thinking", fx=None, say="何が悪かった…"),
     ]),
     # 第5弾（2026-11-13〜16）。A は場面型
+    "funai-collapse": dict(layout="scene", headline="1円で人手に、即日破産", head_hi="即日破産", panels=[
+        dict(scene="fn_soko", tint="yellow", tag="1951年 大晦日", emo="angry", fx="sweat", say="元旦や……"),
+        dict(scene="fn_setsumeikai", tint="mono", tag="2024年 即日解雇", emo="sad", fx="gloom", say="即時解雇です", by="会社側"),
+    ]),
     "vhs-takano": dict(layout="scene", headline="後から出たVHSが逆転", head_hi="逆転", panels=[
         dict(scene="vh_osetsu", tint="yellow", tag="1976年 松下の選択", emo="surprised", fx="sweat", say="どっちを選ぶ…"),
         dict(scene="vh_denkiten_gyoretsu", tint="yellow", tag="2年で逆転", emo="happy", fx="sparkle", say="VHSが勝った！"),

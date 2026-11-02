@@ -1,0 +1,1644 @@
+meta:
+  title: 「人を騙す人間になるな」と書き残した船井電機の創業者、死後に会社は1円で人手に渡り即日破産【ずんだもん解説】
+  slug: funai-collapse
+  hook_line: 「騙す人間になるな」と書いた創業者の会社は、なぜ死後7年で1日で消えたのか。
+  summary: 1951年の大晦日、大阪。24歳のミシン問屋、船井哲良は、月の売上の6倍の不渡手形をつかまされます。そこから選んだのは、国内で売らず、海外の大口の客に作って納める道でした。自分の名前を出さない「黒子」として、アメリカの大きな店にテレビやビデオを送り出した会社は、なぜ創業者の死から7年で消えたのか。会社の記録と本人の言葉、裁判所の判断と当事者の言い分を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 船井電機 有価証券報告書 第63期（2015年3月期） https://disclosure2dl.edinet-fsa.go.jp/searchdocument/pdf/S1005213.pdf
+  - 日本経済新聞「『偉大なる黒子』船井電機築く　船井哲良氏死去」（2017年7月5日） https://www.nikkei.com/article/DGXLASDZ05HF5_V00C17A7000000/
+  - 日本経済新聞「船井電機、出版会社からTOB　経営立て直し目指す」（2021年3月23日） https://www.nikkei.com/article/DGXZQOHD230O70T20C21A3000000/
+  - 東京商工リサーチ「特報・船井電機にふたつの『代表印』、臨時株主総会の開催に疑義」（2025年1月17日） https://www.tsr-net.co.jp/data/detail/1200865_1527.html
+  - 東京商工リサーチ「船井電機の債権者集会、異例の会社側「出席者ゼロ」、原田義昭氏は入場拒否」（2025年7月2日） https://www.tsr-net.co.jp/data/detail/1201524_1527.html
+  - 東京商工リサーチ「【債権者集会詳細】船井電機の管財人、元代表への損害賠償請求を公表」（2026年6月11日） https://www.tsr-net.co.jp/data/detail/1202945_1527.html
+  tags:
+  - 船井電機
+  - 船井哲良
+  - FUNAI
+  - 破産
+  - 準自己破産
+  - ウォルマート
+  - テレビ
+  - 黒子
+  - 不渡手形
+  - 信用状
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 昭和史
+  - 平成史
+  thumbnail:
+    top: 人を騙す人間になるな
+    bottom: 船井電機の創業者
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: shiire
+    label: 仕入れ先
+    voice: 21
+    pitch: 0.0
+    outfit: apron
+    color: '#6a5a48'
+  - id: maker
+    label: メーカー
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: tenin
+    label: 店員
+    voice: 12
+    pitch: 0.0
+    outfit: apron
+  - id: kacho
+    label: 課長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#2f3a52'
+  - id: shain
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: work
+  - id: kanbu
+    label: 幹部
+    voice: 100
+    pitch: 0.0
+    outfit: work
+    color: '#5a6a7a'
+  - id: buyer
+    label: バイヤー
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#454a55'
+  - id: kisha
+    label: 記者
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#6a5a48'
+  - id: buka
+    label: 社員
+    voice: 12
+    pitch: 0.03
+    outfit: suit
+    color: '#3e5c4a'
+  - id: maeda
+    label: 前田社長
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: setsumei
+    label: 会社側
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#1a1a1e'
+  - id: motoshain
+    label: 元社員
+    voice: 11
+    pitch: -0.04
+    outfit: work
+    color: '#5a6a7a'
+  - id: harada
+    label: 原田義昭
+    voice: 42
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2a32'
+  - id: kanzai
+    label: 管財人
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: saiken
+    label: 債権者
+    voice: 42
+    pitch: 0.1
+    outfit: suit
+    color: '#4a4038'
+scenes:
+# ---- 先出し（1951年12月31日・大晦日の不渡手形） ----
+- id: co_tegata
+  title: ''
+  background: fn_maker
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 船井哲良, emotion: angry}
+  - {who: shiire, x: 0.56, emotion: angry}
+  - {who: maker, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1951年の大晦日、大阪。24歳のミシン問屋が、月の売上の6倍の不渡手形をつかまされました。
+    reading: せんきゅうひゃく ごじゅういちねんの おおみそか、おおさか。にじゅうよんさいの みしん どんやが、つきの うりあげの ろくばいの ふわたり てがたお つかまされました。
+  - speaker: zundamon
+    emotion: angry
+    text: この手形、どうしてくれるんですか！
+  - speaker: maker
+    emotion: sad
+    text: ……払えるお[金|かね]は、うちにはありません。
+  - speaker: zundamon
+    emotion: angry
+    text: ほな倉庫の輸出前のミシンを、手形と同じ額だけもらいます！
+  - speaker: maker
+    emotion: sad
+    text: ……持っていって、ください。
+- id: co_soko
+  title: ''
+  background: fn_soko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: angry}
+  - {who: shiire, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shiire
+    emotion: surprised
+    text: 船井さん、もう夜です。トラック屋は閉まってます！
+  - speaker: zundamon
+    emotion: angry
+    text: 小さいトラックで、[何|なん]べんでも往復や！
+  - speaker: zundamon
+    emotion: sad
+    background: fn_soko_kara
+    text: ……元旦や。
+    beat: true
+  - speaker: reimu
+    text: この男は、船井哲良。のちに船井電機をつくります。
+    reading: この おとこわ、ふない てつろう。のちに ふないでんきお つくります。
+# ---- 先出し（2024年10月24日・破産の日） ----
+- id: co_hasan
+  title: ''
+  background: fn_setsumeikai
+  stage:
+  - {who: setsumei, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: それから73年後の、2024年10月24日。
+    reading: それから ななじゅうさんねんごの、にせん にじゅうよねん じゅうがつ にじゅうよっか。
+  - speaker: setsumei
+    emotion: thinking
+    text: 破産です。給料は払えません。即時解雇です。
+    se: don
+  - speaker: reimu
+    text: 社員約530人は、その日のうちに職を失いました。
+    reading: しゃいん やく ごひゃく さんじゅうにんわ、その ひの うちに しょくお うしないました。
+    telops:
+    - {text: "社員 約530人、その日のうちに解雇", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 今の部屋（茶番と問い） ----
+- id: hook
+  title: ''
+  background: fn_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ 中古屋でいちばん安いテレビを買ったのだ！
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あれ？ ソフト更新終了って出てる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 作った会社が、2年前に破産してるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会社が、もう無いのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 人に騙されても人を騙す人間になるな。そう書き残した創業者よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その会社が死後7年で1円で人手に渡り、1日で消えたの。
+    telops:
+    - {text: "なぜ死後7年で、1円で渡り1日で消えた？", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: なんで、そうなったのだ！？
+# ---- 1952年1月・三が日のパチンコ屋 ----
+- id: ch1_pachinko
+  title: 三が日のパチンコ屋
+  background: fn_pachinko
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 船井哲良, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1952年の元日から3日間、船井はパチンコ屋で過ごします。
+    reading: せんきゅうひゃく ごじゅうにねんの がんじつから みっかかん、ふないわ ぱちんこやで すごします。
+  - speaker: reimu
+    text: 手形は帳簿に載らない簿外のもので、120万円。
+    reading: てがたわ ちょうぼに のらない ぼがいの もので、ひゃく にじゅうまんえん。
+  - speaker: reimu
+    text: 月の売上の6か月分、弁護士の初任給が1万円ほどの時代でした。
+    reading: つきの うりあげの ろっかげつぶん、べんごしの しょにんきゅうが いちまんえんほどの じだいでした。
+    telops:
+    - {text: "不渡手形120万円＝月の売上の6か月分", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 40歳で5つの会社の社長になるはずの自分が、わずか半年で倒産寸前に陥った。
+  - speaker: zundamon
+    emotion: angry
+    text: ……なぜだ。
+    beat: true
+  - speaker: reimu
+    text: 18歳の終戦の日に、40歳で5つの会社の社長になると決めた男でした。
+    reading: じゅうはっさいの しゅうせんの ひに、よんじっさいで いつつの かいしゃの しゃちょうに なると きめた おとこでした。
+# ---- 1952年・銀行が払う約束の紙 ----
+- id: ch1_shokai
+  title: 銀行が払う約束の紙
+  background: fn_shokai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: thinking}
+  - {who: tenin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: tenin
+    emotion: thinking
+    text: 社長、正月からずっと黙ってはりますね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 失敗の原因を、ずっと考えとったんや。
+  - speaker: zundamon
+    emotion: normal
+    text: 国内の問屋に売ったら、代金は手形でもらう。
+  - speaker: zundamon
+    emotion: angry
+    text: 相手がつぶれたら、その手形は紙切れや。
+  - speaker: zundamon
+    emotion: happy
+    text: せやから、輸出や！
+    se: hirameki
+  - speaker: tenin
+    emotion: surprised
+    text: ゆ、輸出！？ うちは4人しかおらんのに！？
+  - speaker: zundamon
+    emotion: normal
+    text: 輸出には、[信用状|しんようじょう]いうもんがある。
+  - speaker: tenin
+    emotion: thinking
+    text: しんよう、じょう？
+  - speaker: zundamon
+    emotion: normal
+    text: 買う側の銀行が、代金を払うと約束してくれる紙や。
+  - speaker: zundamon
+    emotion: happy
+    text: 店がつぶれても、銀行が代わりに払ってくれる約束の紙やな。
+  - speaker: tenin
+    emotion: surprised
+    text: ほな、取りっぱぐれがない……！
+  - speaker: zundamon
+    emotion: happy
+    text: 代金は、100パーセント回収できる。
+  - speaker: zundamon
+    emotion: angry
+    text: これからは、輸出が中心や！
+    beat: true
+  - speaker: reimu
+    text: 1952年、店は輸出を始めます。逃げずに払った誠意は口コミで広がり、信用はむしろ高まりました。
+    reading: せんきゅうひゃく ごじゅうにねん、みせわ ゆしゅつお はじめます。にげずに はらった せいいわ くちこみで ひろがり、しんようわ むしろ たかまりました。
+  - speaker: reimu
+    text: 本人はのちに、この経験からこう書いています。人に騙されても人を騙す人間になるな。
+    reading: ほんにんわ のちに、この けいけんから こう かいて います。ひとに だまされても ひとお だます にんげんに なるな。
+    telops:
+    - {text: "船井「人に騙されても人を騙す人間になるな」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 海外の大口の客に作って納める。この形が60年後、たった1社に売上の半分を買ってもらう会社になります。
+    reading: かいがいの おおぐちの きゃくに つくって おさめる。この かたちが ろくじゅうねんご、たった いっしゃに うりあげの はんぶんお かって もらう かいしゃに なります。
+# ---- 1955〜1959年・何もせずに入る毎月100万円 ----
+- id: card1955
+  title: ''
+  background: fn_card_1955
+  cuts:
+  - speaker: reimu
+    text: 1955年。アメリカへのミシンの輸出には、数の枠が設けられていました。
+    reading: せんきゅうひゃく ごじゅうごねん。あめりかえの みしんの ゆしゅつにわ、かずの わくが もうけられて いました。
+- id: ch2_premium
+  title: 毎月100万円を捨てる
+  background: fn_shokai
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: happy}
+  - {who: tenin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: 社長！ 今月も、枠を譲ったお[金|かね]が100万円近く入りました！
+  - speaker: zundamon
+    emotion: happy
+    text: 何もせんでも、毎月100万円か。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……これでいいのか。何かがおかしい。
+  - speaker: tenin
+    emotion: surprised
+    text: お[金|かね]が入って、おかしいんですか！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 何もせずにお[金|かね]だけ入るが、ほんとうにこれでいいのか。
+  - speaker: zundamon
+    emotion: happy
+    text: ミシンに代わって、何か新しいことをやろう。
+  - speaker: tenin
+    emotion: thinking
+    text: 新しいことって、[何|なん]です？
+  - speaker: zundamon
+    emotion: happy
+    text: ラジオや。ラジオは落としたら壊れる。壊れたら、また買う。
+  - speaker: tenin
+    emotion: surprised
+    text: 壊れる前提で、売るんですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: まずは、社名からミシンを外すで。
+  - speaker: tenin
+    emotion: surprised
+    text: まだラジオ、1台も作ってないのに！？
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: happy
+    text: 名前が先や。[船井軽機工業|ふないけいきこうぎょう]や！
+  - speaker: tenin
+    emotion: thinking
+    text: ……看板だけ、先に未来へ行ってしもた。
+    beat: true
+  - speaker: reimu
+    text: 1959年、店は船井軽機工業に。毎月100万円を捨てた男の会社は、65年後に1円で人手に渡ります。
+    reading: せんきゅうひゃく ごじゅうくねん、みせわ ふない けいき こうぎょうに。まいつき ひゃくまんえんお すてた おとこの かいしゃわ、ろくじゅうごねんごに いちえんで ひとでに わたります。
+# ---- 1959年・5時間の座り込み ----
+- id: ch2_suwarikomi
+  title: 5時間の座り込み
+  background: fn_buhin
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: normal}
+  - {who: kacho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kacho
+    emotion: normal
+    text: 船井軽機さん、でしたか。うちのバリコンが欲しいと。
+  - speaker: zundamon
+    emotion: normal
+    text: ラジオを作るには、どうしても要る部品なんです。
+  - speaker: kacho
+    emotion: normal
+    text: 今日は、お引き取りください。
+  - speaker: zundamon
+    emotion: normal
+    text: 前金を持ってきました。売ってもらえるまで、ここで待たせてもらいます。
+  - speaker: kacho
+    emotion: surprised
+    text: 待つ！？ ……ご自由に。
+  - speaker: zundamon
+    emotion: happy
+    text: 課長は野球、どこを応援してはります？
+  - speaker: kacho
+    emotion: thinking
+    text: ……仕事中です。
+  - speaker: zundamon
+    emotion: happy
+    text: ほな、相撲は？ 今場所は、誰が勝つと思います？
+  - speaker: kacho
+    emotion: angry
+    text: ……仕事中です！
+  - speaker: zundamon
+    emotion: happy
+    text: ほな、もう一回野球の話に戻りますけど。
+  - speaker: kacho
+    emotion: angry
+    text: 戻らなくていいです！
+    se: zukko
+  - speaker: kacho
+    emotion: sad
+    background: fn_buhin_osoi
+    text: ……まだ、いらしたんですか。もう6時ですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 1時から、5時間ですね。
+  - speaker: kacho
+    emotion: sad
+    text: 私も、そろそろ帰りたいんですが。
+  - speaker: zundamon
+    emotion: normal
+    text: 私も、売ってもらえたら帰ります。
+  - speaker: zundamon
+    emotion: angry
+    text: 我々は将来、月産10万台のラジオを作る会社になる。
+  - speaker: zundamon
+    emotion: angry
+    text: バリコンも大量に仕入れるようになるから、[何とか|なんとか]売ってほしい。
+  - speaker: kacho
+    emotion: surprised
+    text: 月産10万台！？ まだ1台も作っていない会社が！？
+  - speaker: kacho
+    emotion: sad
+    text: ……[梃子|てこ]でも動かない人ですね。負けました。
+  - speaker: kacho
+    emotion: sad
+    text: 500個分の前金、お預かりします。
+  - speaker: reimu
+    text: 船井電機で社長が初めて代わるのは、この49年後のことです。
+    reading: ふないでんきで しゃちょうが はじめて かわるのわ、この よんじゅうきゅうねんごの ことです。
+# ---- 1959年5月・ラジオ第1号 ----
+- id: ch2_radio
+  title: ラジオ第1号
+  background: fn_radio
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、[今里|イマザト]の工場で鳴りました！ ラジオの第1号です！
+    se: jaan
+  - speaker: zundamon
+    emotion: happy
+    text: よし。次は、月産10万台や。
+  - speaker: shain
+    emotion: surprised
+    text: いきなり10万台！？ 今日、1台できたとこですよ！？
+    beat: true
+  - speaker: reimu
+    text: 1959年5月、ラジオ第1号。それから65年後、船井電機はたった1日で消えます。
+    reading: せんきゅうひゃく ごじゅうくねん ごがつ、らじお だいいちごう。それから ろくじゅうごねんご、ふないでんきわ たった いちにちで きえます。
+# ---- 1960〜1961年・沖縄の奇策と船井電機の誕生 ----
+- id: card1960
+  title: ''
+  background: fn_card_1960
+  cuts:
+  - speaker: reimu
+    text: 1960年4月。今度は、アメリカ向けのラジオの輸出にも枠ができます。
+    reading: せんきゅうひゃく ろくじゅうねん しがつ。こんどわ、あめりかむけの らじおの ゆしゅつにも わくが できます。
+- id: ch2_okinawa
+  title: 沖縄の奇策
+  background: fn_okinawa
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。輸出の実績がないうちには、枠がほとんど回ってきません。
+  - speaker: zundamon
+    emotion: thinking
+    text: ほな、枠の外から出したらええ。
+  - speaker: shain
+    emotion: thinking
+    text: 枠の外？
+  - speaker: zundamon
+    emotion: happy
+    text: 沖縄や。沖縄は今、アメリカが治めとる。日本の枠の外や。
+  - speaker: shain
+    emotion: surprised
+    text: 沖縄から、アメリカへ売るんですか！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: 向こうの食べ物の工場を、電気の工場に作り変える。
+  - speaker: shain
+    emotion: surprised
+    text: 食べ物を作ってた所で、ラジオを！？
+  - speaker: zundamon
+    emotion: happy
+    text: 4か月で動かすで。
+  - speaker: shain
+    emotion: sad
+    text: ……社長の4か月は、よその1年です。
+    beat: true
+  - speaker: reimu
+    text: 4か月後、沖縄に合弁の琉球軽機工業ができます。月産10万台は、数年で本当になりました。
+    reading: よんかげつご、おきなわに ごうべんの りゅうきゅう けいき こうぎょうが できます。げっさん じゅうまんだいわ、すうねんで ほんとうに なりました。
+- id: card1961
+  title: ''
+  background: fn_card_1961
+  cuts:
+  - speaker: reimu
+    text: 1961年8月9日。ラジオの部門を独立させて、船井電機が生まれます。社長は船井、34歳です。
+    reading: せんきゅうひゃく ろくじゅういちねん はちがつ ここのか。らじおの ぶもんお どくりつ させて、ふないでんきが うまれます。しゃちょうわ ふない、さんじゅうよんさいです。
+# ---- 1977年・退職届を書いてトヨタ系の工場へ ----
+- id: card1977
+  title: ''
+  background: fn_card_1977
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1977年。円高の危機に、船井は幹部100人を、トヨタ系の日野自動車の羽村工場へ3か月送り込みます。
+    reading: せんきゅうひゃく ななじゅうななねん。えんだかの ききに ふないわ かんぶ ひゃくにんお、とよたけいの ひの じどうしゃの はむら こうじょうえ さんかげつ おくりこみます。
+- id: ch3_hino
+  title: 退職届を書いて工場へ
+  background: fn_trucks
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kanbu
+    emotion: thinking
+    text: 社長。出発の前に書かされた、この退職届ですが。
+  - speaker: zundamon
+    emotion: normal
+    text: 読んでみい。
+  - speaker: kanbu
+    emotion: sad
+    text: もし脱落するならば、会社を退職いたします。
+  - speaker: zundamon
+    emotion: normal
+    text: 3か月、ここの作り方を体で覚えてくるんや。
+  - speaker: kanbu
+    emotion: surprised
+    text: トラックの工場で！？ うちは電気の会社ですよ！？
+  - speaker: zundamon
+    emotion: normal
+    text: 物の作り方は、トラックも電気も同じや。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……それにしても。今の時代に、まだこんなに働く会社があるのか。
+  - speaker: kanbu
+    emotion: angry
+    text: 社長が感心してる場合やないです！
+    beat: true
+- id: ch3_ryo
+  title: ''
+  background: fn_ryo
+  stage:
+  - {who: kanbu, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: kanbu
+    emotion: sad
+    text: 研修1か月目。手のひらが、ずっと痛い……。
+  - speaker: kanbu
+    emotion: sad
+    text: ビールでも飲んで、寝よ。
+  - speaker: kanbu
+    emotion: surprised
+    text: ……栓が、抜けへん。
+    se: chin
+  - speaker: kanbu
+    emotion: sad
+    text: 栓抜きを握る力も、残ってへん……。
+  - speaker: kanbu
+    emotion: surprised
+    text: 3か月目。3人分やと思った作業が、1人でこなせてる……！
+  - speaker: kanbu
+    emotion: happy
+    text: 体が、勝手に動くわ。
+- id: ch3_tsuyama
+  title: ''
+  background: fn_line
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kanbu
+    emotion: happy
+    text: 社長。研修組が戻って、うちのラインが変わりました。
+  - speaker: zundamon
+    emotion: happy
+    text: これなら、円高の危機も乗り越えられる。
+  - speaker: reimu
+    text: 岡山県の津山の工場で1人が1日に作るビデオは、1985年の16.7台から1989年には73.7台に。
+    reading: おかやまけんの つやまの こうじょうで ひとりが いちにちに つくる びでおわ、せんきゅうひゃく はちじゅうごねんの じゅうろくてんななだいから せんきゅうひゃく はちじゅうくねんにわ ななじゅうさんてんななだいに。
+  - speaker: kanbu
+    emotion: surprised
+    text: 働く人は150人のままで、4倍あまり……！
+    beat: true
+# ---- 1987年・名前を売らないことには ----
+- id: card1987
+  title: ''
+  background: fn_card_1987
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1987年。パンを焼く機械と再生専用のビデオで、船井電機は国内へ。本人は経済誌にこう話しました。
+    reading: せんきゅうひゃく はちじゅうななねん。ぱんお やく きかいと さいせい せんようの びでおで、ふないでんきわ こくないえ。ほんにんわ けいざいしに こう はなしました。
+- id: ch3_kokunai
+  title: 名前を売らないことには
+  background: fn_ousetsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 我が社は、日本に初めて輸出する外国のメーカーのようなものだ。
+  - speaker: zundamon
+    emotion: normal
+    text: まずは名前を売らないことには。
+  - speaker: kisha
+    emotion: surprised
+    text: 日本の会社なのに、外国のメーカー……。
+    beat: true
+# ---- 1992〜1999年・名前を出さない黒子 ----
+- id: card1992
+  title: ''
+  background: fn_card_1992
+  cuts:
+  - speaker: reimu
+    text: 1992年。船井電機は、中国の広東省で3つの工場を同時に動かし始めます。
+    reading: せんきゅうひゃく きゅうじゅうにねん。ふないでんきわ、ちゅうごくの かんとんしょうで みっつの こうじょうお どうじに うごかし はじめます。
+- id: ch4_china
+  title: 3つの工場を同時に
+  background: fn_china
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: happy}
+  - {who: kanbu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kanbu
+    emotion: surprised
+    text: 3つ同時ですか！？ 1つずつでも大変ですよ。
+  - speaker: zundamon
+    emotion: happy
+    text: トヨタのグループで覚えたやり方を、ここに持ち込むんや。
+  - speaker: kanbu
+    emotion: thinking
+    text: 退職届を書いた研修が、中国で生きるんですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 作ったもんは、今までどおり買う会社の名前で売る。
+  - speaker: kanbu
+    emotion: surprised
+    text: 国内では、名前を売る言うてはったのに！？
+  - speaker: zundamon
+    emotion: normal
+    text: 海外は、それでええ。
+- id: ch4_buyer
+  title: 名前を出さない黒子
+  background: fn_store
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: normal}
+  - {who: buyer, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: buyer
+    emotion: normal
+    text: ミスター・フナイ。このビデオデッキ、もっと安くできますか。
+  - speaker: zundamon
+    emotion: normal
+    text: できます。
+  - speaker: buyer
+    emotion: surprised
+    text: ……即答ですか。
+    se: tenten
+  - speaker: buyer
+    emotion: thinking
+    text: では、もう10ドル下げられますか。
+  - speaker: zundamon
+    emotion: normal
+    text: できます。
+  - speaker: buyer
+    emotion: surprised
+    text: ……どこまで下がるんですか。
+  - speaker: buyer
+    emotion: normal
+    text: ブランドは、こちらの名前で売りますよ。
+  - speaker: zundamon
+    emotion: happy
+    text: かまいません。うちの名前は、[出|だ]さんでええ。
+  - speaker: reimu
+    background: fn_store_yasu
+    text: 1997年には、100ドルを切るビデオデッキを、ほかの会社の名前で売り出します。
+    reading: せんきゅうひゃく きゅうじゅうななねんにわ ひゃくどるお きる びでお でっきお、ほかの かいしゃの なまえで うりだします。
+  - speaker: reimu
+    text: 1990年代の終わりからは、アメリカのウォルマートとも直接取引を始めます。
+    reading: せんきゅうひゃく きゅうじゅうねんだいの おわりからわ、あめりかの うぉるまーとも ちょくせつ とりひきお はじめます。
+  - speaker: buyer
+    emotion: happy
+    text: フナイの名前は、店のどこにもありませんね。
+  - speaker: zundamon
+    emotion: happy
+    text: それで、ええんです。
+    beat: true
+# ---- 2003年・中国で儲けられない会社は ----
+- id: card2003
+  title: ''
+  background: fn_card_2003
+  cuts:
+  - speaker: reimu
+    text: 2003年。76歳の船井は、経済誌の編集長のインタビューに答えます。
+    reading: にせん さんねん。ななじゅうろくさいの ふないわ、けいざいしの へんしゅうちょうの いんたびゅーに こたえます。
+- id: ch4_interview
+  title: 中国で儲けられない会社は
+  background: fn_ousetsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 中国の3工場で1万5000人ほど。人件費は、費用全体の1％台……。
+  - speaker: kisha
+    emotion: thinking
+    text: 中国に工場を移しても、うまくいかない会社もありますね。
+  - speaker: zundamon
+    emotion: normal
+    text: 中国で儲けられない会社は、世界のどこに行っても儲からない。
+    telops:
+    - {text: "船井「中国で儲けられない会社は、世界のどこに行っても儲からない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 製造業の空洞化を、どう見ていますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国内でモノ作りを続けるのは、僕は難しいと思っています。
+  - speaker: kisha
+    emotion: surprised
+    text: ……言い切りますね。
+    se: hammer
+  - speaker: reimu
+    text: 1999年に大証2部、翌年には東証1部に上場。売上は一時、4000億円近くになりました。
+    reading: せんきゅうひゃく きゅうじゅうくねんに だいしょう にぶ、よくねんにわ とうしょう いちぶに じょうじょう。うりあげわ いちじ、よんせんおくえん ちかくに なりました。
+  - speaker: reimu
+    text: 2017年、ヤマダの山田昇会長はお別れの会で、テレビにおける価格競争の仕掛け人の一人と評しました。
+    reading: にせん じゅうななねん やまだの やまだ のぼる かいちょうわ おわかれの かいで、てれびに おける かかく きょうそうの しかけにんの ひとりと ひょう しました。
+  - speaker: reimu
+    text: その安さの勝負で、5年後、船井電機は追われる側に回ります。
+    reading: その やすさの しょうぶで ごねんご、ふないでんきわ おわれる がわに まわります。
+# ---- 2005〜2008年・私になにかあれば ----
+- id: card2005
+  title: ''
+  background: fn_card_2005
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2005年。78歳の船井は、外から副社長を招きます。
+    reading: にせん ごねん。ななじゅうはっさいの ふないわ、そとから ふくしゃちょうお まねきます。
+- id: ch5_kaiken
+  title: 私になにかあれば
+  background: fn_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 船井社長。新しい副社長は、後継の候補ですか。
+  - speaker: reimu
+    text: 会見で船井は、私になにかあれば社長にと考えている、と話したとされます。
+    reading: かいけんで ふないわ、わたしに なにか あれば しゃちょうにと かんがえて いると はなしたと されます。
+  - speaker: kisha
+    emotion: surprised
+    text: 後継ぎの、指名……！
+- id: ch5_diamond
+  title: ''
+  background: fn_ousetsu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年。DVDやブラウン管の市場が縮み、薄型テレビでも損が出る中、80歳の船井は取材にこう答えます。
+    reading: にせん ななねん。でぃーぶいでぃーや ぶらうんかんの しじょうが ちぢみ うすがた てれびでも そんが でる なか、はちじっさいの ふないわ しゅざいに こう こたえます。
+  - speaker: zundamon
+    emotion: normal
+    text: 今年から来年にかけて、人事を刷新します。
+  - speaker: zundamon
+    emotion: normal
+    text: 生え抜き社員を多数昇格させることは事実でして、
+  - speaker: zundamon
+    emotion: happy
+    text: 彼らのうち数人が、うちの会社を引っ張っていく人材になることを期待しています。
+  - speaker: kisha
+    emotion: thinking
+    text: 生え抜きから、ですか……。
+- id: card2008
+  title: ''
+  background: fn_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年6月。船井電機ができてから初めて、トップが代わります。
+    reading: にせん はちねん ろくがつ。ふないでんきが できてから はじめて、とっぷが かわります。
+- id: ch5_kaicho
+  title: 初めての社長交代
+  background: fn_kaicho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 81歳の船井は、代表権のない会長に。社長には生え抜きの役員が就き、招いた副社長は会社を去りました。
+    reading: はちじゅういっさいの ふないわ、だいひょうけんの ない かいちょうに。しゃちょうにわ はえぬきの やくいんが つき、まねいた ふくしゃちょうわ かいしゃお さりました。
+  - speaker: buka
+    emotion: normal
+    text: 会長。新しい社長の、初めての会議が終わりました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……そうか。
+  - speaker: buka
+    emotion: thinking
+    text: 47年、ずっと社長でしたからね。
+  - speaker: buka
+    emotion: sad
+    text: それも、赤字が出た中での交代です。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……会長室の椅子は、広いな。
+    beat: true
+# ---- 2013年・売上の半分が1社 ----
+- id: card2013
+  title: ''
+  background: fn_card_2013
+  cuts:
+  - speaker: reimu
+    text: 2013年。北米では、中国のメーカーがテレビの値下げを仕掛けていました。
+    reading: にせん じゅうさんねん。ほくべいでわ、ちゅうごくの めーかーが てれびの ねさげお しかけて いました。
+- id: ch6_walmart
+  title: 売上の半分が1社
+  background: fn_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: buka
+    emotion: normal
+    text: 会長、今年の決算の数字です。
+  - speaker: buka
+    emotion: normal
+    text: ウォルマート1社への売上が、全体の48.9％になりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……半分か。
+  - speaker: buka
+    emotion: normal
+    text: 去年は、33.6％でした。
+  - speaker: buka
+    emotion: thinking
+    text: お客さんの半分が、1軒の大きな店いうことです。
+  - speaker: zundamon
+    emotion: thinking
+    text: その店が、よそのテレビに乗り換えたら。
+  - speaker: buka
+    emotion: sad
+    text: うちの売上も、半分になります。
+  - speaker: buka
+    emotion: sad
+    background: fn_kaigi_akaji
+    text: 最終の損益は、85億円の赤字です。
+    se: gaan
+  - speaker: zundamon
+    emotion: thinking
+    text: ……赤字か。
+  - speaker: reimu
+    text: 語録には、こうあります。好調な時にこそ、次の手を打つ。不調な時に打つ手は、往々にして失敗する。
+    reading: ごろくにわ、こう あります。こうちょうな ときに こそ つぎの てお うつ。ふちょうな ときに うつ てわ、おうおうに して しっぱい する。
+  - speaker: reimu
+    text: ウォルマートの割合は、翌年に51.9％、その次の年に52.2％。売上の半分を1社が買う形が続きます。
+    reading: うぉるまーとの わりあいわ よくねんに ごじゅういってんきゅうぱーせんと、その つぎの としに ごじゅうにてんにぱーせんと。うりあげの はんぶんお いっしゃが かう かたちが つづきます。
+    telops:
+    - {text: "ウォルマート1社で売上の52.2％（2015年3月期）", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 2014〜2016年・87歳の代表取締役 ----
+- id: card2014
+  title: ''
+  background: fn_card_2014
+  cuts:
+  - speaker: reimu
+    text: 2014年10月。87歳の船井は、代表権のある会長に戻ります。社長は、9か月で交代しました。
+    reading: にせん じゅうよねん じゅうがつ。はちじゅうななさいの ふないわ、だいひょうけんの ある かいちょうに もどります。しゃちょうわ、きゅうかげつで こうたい しました。
+- id: ch6_fukki
+  title: 87歳の代表取締役
+  background: fn_kaicho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: thinking}
+  - {who: buka, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: buka
+    emotion: surprised
+    text: 会長が、また代表に……。
+  - speaker: buka
+    emotion: thinking
+    text: 87歳の、代表取締役か。
+  - speaker: buka
+    emotion: sad
+    text: フィリップスの事業を買う話は、去年向こうから取りやめになりました。
+  - speaker: buka
+    emotion: sad
+    text: うちの契約違反や、言うて。
+  - speaker: reimu
+    text: 2016年4月。国際仲裁は船井電機に約175億円を払うよう判断し、船井側の求めは退けられました。
+    reading: にせん じゅうろくねん しがつ。こくさい ちゅうさいわ ふないでんきに やく ひゃく ななじゅうごおくえんお はらうよう はんだん し、ふないがわの もとめわ しりぞけられました。
+  - speaker: buka
+    emotion: sad
+    text: 175億円……。
+    beat: true
+# ---- 2016〜2017年・10年ぶりのFUNAI ----
+- id: card2016
+  title: ''
+  background: fn_card_2016
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2016年6月。89歳の船井は、取締役相談役に退きます。
+    reading: にせん じゅうろくねん ろくがつ。はちじゅうきゅうさいの ふないわ、とりしまりやく そうだんやくに しりぞきます。
+- id: ch7_yamada
+  title: 10年ぶりのFUNAI
+  background: fn_kaiken
+  stage:
+  - {who: maeda, x: 0.56, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 10月、船井電機はヤマダ電機と、国内でテレビを売る10年の契約を結びます。
+    reading: じゅうがつ、ふないでんきわ やまだ でんきと こくないで てれびお うる じゅうねんの けいやくお むすびます。
+  - speaker: maeda
+    emotion: happy
+    text: 日本での販売再開はテレビ事業回復に向けた大きな一歩になる。
+- id: ch7_tentou
+  title: ''
+  background: fn_tentou
+  cuts:
+  - speaker: reimu
+    text: 2017年6月2日。約10年ぶりに、FUNAIの名前のテレビが国内の店頭に並びました。
+    reading: にせん じゅうななねん ろくがつ ふつか。やく じゅうねんぶりに、ふないの なまえの てれびが こくないの てんとうに ならびました。
+  - speaker: reimu
+    text: 1987年に、まずは名前を売らないことには、と話した会社の名前でした。
+    reading: せんきゅうひゃく はちじゅうななねんに、まずわ なまえお うらない ことにわと はなした かいしゃの なまえでした。
+# ---- 2017年7月4日・今日はこの辺で ----
+- id: card2017
+  title: ''
+  background: fn_card_2017
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2017年7月4日。90歳の船井は、相談役として部下との打ち合わせに出ていました。
+    reading: にせん じゅうななねん しちがつ よっか。きゅうじゅっさいの ふないわ そうだんやくと して、ぶかとの うちあわせに でて いました。
+- id: ch8_konohen
+  title: 今日はこの辺で
+  background: fn_kaicho_yugata
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 船井哲良, emotion: normal}
+  - {who: buka, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: buka
+    emotion: normal
+    text: 相談役。今日の件は、以上です。
+  - speaker: zundamon
+    emotion: normal
+    text: ……そうか。
+  - speaker: zundamon
+    emotion: happy
+    text: 今日はこの[辺|へん]で。
+    se: namida
+    telops:
+    - {text: "船井「今日はこの辺で」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: この言葉を最後に、船井哲良はその日のうちに亡くなりました。肺炎、90歳でした。
+    reading: この ことばお さいごに、ふない てつろうわ その ひの うちに なくなりました。はいえん、きゅうじゅっさいでした。
+  - speaker: reimu
+    text: 当時の社長は、生涯現役の船井相談役らしい最期の言葉、と語りました。お別れの会には約900人。
+    reading: とうじの しゃちょうわ、しょうがい げんえきの ふない そうだんやく らしい さいごの ことばと かたりました。おわかれの かいにわ やく きゅうひゃくにん。
+- id: ch8_kara
+  title: ''
+  background: fn_kaicho_kara
+  cuts:
+  - speaker: reimu
+    text: この日から7年後、会社は消えます。創業者の株は、長男が継ぎました。
+    reading: この ひから ななねんご、かいしゃわ きえます。そうぎょうしゃの かぶわ、ちょうなんが つぎました。
+# ---- 2021年・出版社のTOB ----
+- id: card2021
+  title: ''
+  background: fn_card_2021
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2021年3月。船井電機の株を買い集める、TOBが発表されます。
+    reading: にせん にじゅういちねん さんがつ。ふないでんきの かぶお かいあつめる、てぃーおーびーが はっぴょう されます。
+- id: ch9_tob
+  title: 出版社のTOB
+  background: fn_shoken
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: surprised}
+  - {who: buka, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 買い手は、出版社の子会社です！
+  - speaker: buka
+    emotion: surprised
+    text: 出版社！？ うちは、家電メーカーですよ。
+  - speaker: kisha
+    emotion: normal
+    text: パソコンの本などを出している会社で、従業員は約70人だそうです。
+  - speaker: buka
+    emotion: surprised
+    text: 70人の会社が、東証1部の家電メーカーを……！？
+    se: bikkuri
+  - speaker: kisha
+    emotion: normal
+    text: 1株918円。前の日の値段に、3割ほど上乗せです。
+  - speaker: reimu
+    text: 創業家の株は、TOBのあとに1株403円で売られます。TOBの値段の、半分以下です。
+    reading: そうぎょうけの かぶわ、てぃーおーびーの あとに ひとかぶ よんひゃく さんえんで うられます。てぃーおーびーの ねだんの、はんぶん いかです。
+    telops:
+    - {text: "TOB 1株918円 ／ 創業家 403円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: buka
+    emotion: thinking
+    text: ……半分以下で。
+    beat: true
+  - speaker: kisha
+    emotion: normal
+    text: TOBのあと、上場はやめる予定だそうです。
+  - speaker: buka
+    emotion: sad
+    text: 東証1部の看板も、下ろすんか……。
+- id: card2023
+  title: ''
+  background: fn_card_2023
+  cuts:
+  - speaker: reimu
+    text: 2023年。会社は持株会社の形になり、事業は新しくつくった2代目の船井電機に移ります。
+    reading: にせん にじゅうさんねん。かいしゃわ もちかぶがいしゃの かたちに なり、じぎょうわ あたらしく つくった にだいめの ふないでんきに うつります。
+  - speaker: reimu
+    text: 同じ年、テレビ事業からの脱却を掲げて脱毛サロンの運営会社を買い、1年足らずで手放しました。
+    reading: おなじ とし てれび じぎょうからの だっきゃくお かかげて だつもう さろんの うんえい がいしゃお かい、いちねん たらずで てばなしました。
+# ---- 2024年9月・1円の経営権 ----
+- id: card2024
+  title: ''
+  background: fn_card_2024
+  cuts:
+  - speaker: reimu
+    text: 2024年9月。TOBのあと経営を担ってきた社長が退任し、経営権を手放します。
+    reading: にせん にじゅうよねん くがつ。てぃーおーびーの あと けいえいお になって きた しゃちょうが たいにん し、けいえいけんお てばなします。
+- id: ch9_ichien
+  title: 1円の経営権
+  background: fn_shachoshitsu
+  stage:
+  - {who: buka, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    background: fn_shachoshitsu_1en
+    text: その対価は、1円でした。
+    reading: その たいかわ、いちえんでした。
+    telops:
+    - {text: "経営権の対価 1円", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: buka
+    emotion: surprised
+    text: 経営権が、1円……！？
+    beat: true
+  - speaker: reimu
+    text: 元社長も取材に、受け取ったのは1円だけだと話しています。
+    reading: もと しゃちょうも しゅざいに、うけとったのわ いちえんだけだと はなして います。
+  - speaker: reimu
+    text: 登記の上では、元環境大臣の原田義昭氏が会長になります。
+    reading: とうきの うえでわ、もと かんきょう だいじんの はらだ よしあきしが かいちょうに なります。
+# ---- 2024年10月24〜25日・破産の日 ----
+- id: ch10_honsha
+  title: 破産の日
+  background: fn_honsha
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2024年10月24日。取締役の1人が取締役会を通さずに、東京地裁へ破産を申し立てます。
+    reading: にせん にじゅうよねん じゅうがつ にじゅうよっか。とりしまりやくの ひとりが とりしまりやくかいお とおさずに、とうきょう ちさいえ はさんお もうしたてます。
+  - speaker: reimu
+    text: 裁判所は、その日のうちに破産手続きの開始を決めました。負債は約460億円です。
+    reading: さいばんしょわ、その ひの うちに はさん てつづきの かいしお きめました。ふさいわ やく よんひゃく ろくじゅうおくえんです。
+- id: ch10_setsumei
+  title: ''
+  background: fn_setsumeikai
+  stage:
+  - {who: setsumei, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: setsumei
+    emotion: thinking
+    text: 破産です。給料は払えません。即時解雇です。
+    se: don
+- id: ch10_kara
+  title: ''
+  background: fn_setsumeikai_kara
+  cuts:
+  - speaker: reimu
+    text: 申し立てた取締役は創業者の遠い親戚。半年後の取材に、資金流出に終止符を打つためだった、と語っています。
+    reading: もうしたてた とりしまりやくわ そうぎょうしゃの とおい しんせき。はんとしごの しゅざいに、しきん りゅうしゅつに しゅうしふお うつ ためだったと かたって います。
+- id: ch10_kyuryo
+  title: ''
+  background: fn_honsha
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: thinking}
+  - {who: motoshain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 翌25日は、給料日でした。給料は、払われませんでした。
+    reading: よく にじゅうごにちわ、きゅうりょうびでした。きゅうりょうわ、はらわれませんでした。
+  - speaker: kisha
+    emotion: thinking
+    text: 17年勤めた会社が、突然でしたね。
+  - speaker: motoshain
+    emotion: sad
+    text: 突然そうなるとは思わず、驚いた。あっという間に終わってしまった。
+  - speaker: kisha
+    emotion: thinking
+    text: 社員のみなさんは、どんな様子でしたか。
+  - speaker: motoshain
+    emotion: sad
+    text: みんな怒ったりするのではなく、静かに受け入れた。自分もそうだった。
+  - speaker: motoshain
+    emotion: thinking
+    text: あと数年、数ヶ月はもつと思ってた。
+# ---- 2024年12月〜2025年4月・異議と、退けられた訴え ----
+- id: ch11_harada
+  title: 異議と、退けられた訴え
+  background: fn_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: harada, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 原田氏らは高裁に異議を申し立て、12月2日には民事再生も申し立てて、会見を開きます。
+    reading: はらだしらわ こうさいに いぎお もうしたて、じゅうにがつ ふつかにわ みんじ さいせいも もうしたてて かいけんお ひらきます。
+  - speaker: harada
+    emotion: normal
+    text: 伝統と実績を重ねた企業だ。
+  - speaker: harada
+    emotion: normal
+    text: 近いうちに再生させて国内外に対して事業活動ができるように努力する。
+- id: ch11_kosai
+  title: ''
+  background: fn_houtei
+  stage:
+  - {who: kisha, x: 0.56, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 12月26日。東京高等裁判所は、原田氏らの訴えを退けます。
+    reading: じゅうにがつ にじゅうろくにち。とうきょう こうとう さいばんしょわ、はらだしらの うったえお しりぞけます。
+  - speaker: kisha
+    emotion: surprised
+    text: 9月27日の臨時株主総会は、開かれたと認めがたいそうです！
+  - speaker: kisha
+    emotion: surprised
+    text: 代表印の印影が違う。会議室の予約の記録もない、と。
+  - speaker: kisha
+    emotion: thinking
+    text: 申し立てた取締役は、そのときも取締役だったという判断です。
+  - speaker: reimu
+    text: 2025年3月、東京地裁は民事再生の申し立ても、債権者の利益に合わず見込みもないとして退けます。
+    reading: にせん にじゅうごねん さんがつ、とうきょう ちさいわ みんじ さいせいの もうしたても さいけんしゃの りえきに あわず みこみも ないと して しりぞけます。
+- id: ch11_dannen
+  title: ''
+  background: fn_kaiken
+  stage:
+  - {who: harada, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 4月2日、原田氏は民事再生を断念。新しい会社をつくる考えを示して、こう話しました。
+    reading: しがつ ふつか、はらだしわ みんじ さいせいお だんねん。あたらしい かいしゃお つくる かんがえお しめして、こう はなしました。
+  - speaker: harada
+    emotion: sad
+    text: 法律的には再生ではないが、船井電機のフィロソフィーを残したい。
+# ---- 2025〜2026年・債権者集会と、元社長への訴え ----
+- id: card2025
+  title: ''
+  background: fn_card_2025
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2025年7月。東京で、最初の債権者集会が開かれます。
+    reading: にせん にじゅうごねん しちがつ。とうきょうで、さいしょの さいけんしゃ しゅうかいが ひらかれます。
+- id: ch12_saiken
+  title: 財布に1万4000円
+  background: fn_saikensha
+  stage:
+  - {who: saiken, x: 0.56, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 集会の配布資料では、債権者への配当の可能性は未定とされました。
+    reading: しゅうかいの はいふ しりょうでわ、さいけんしゃえの はいとうの かのうせいわ みていと されました。
+  - speaker: saiken
+    emotion: sad
+    text: 分配は厳しいのではないか。
+  - speaker: reimu
+    text: 4月末の資産は14億円、負債は820億円。財布に1万4000円で、借金が82万円の形です。
+    reading: しがつ まつの しさんわ じゅうよんおくえん、ふさいわ はっぴゃく にじゅうおくえん。さいふに いちまん よんせんえんで、しゃっきんが はちじゅうにまんえんの かたちです。
+    telops:
+    - {text: "資産14億円 ／ 負債820億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: card2026
+  title: ''
+  background: fn_card_2026
+  cuts:
+  - speaker: reimu
+    text: 2026年6月の債権者集会。管財人は、元社長に2億460万円を求めて大阪地裁に訴えたと明かします。
+    reading: にせん にじゅうろくねん ろくがつの さいけんしゃ しゅうかい。かんざいにんわ、もと しゃちょうに におく よんひゃく ろくじゅうまんえんお もとめて おおさか ちさいに うったえたと あかします。
+  - speaker: reimu
+    text: 脱毛サロン側の会社の持ち分を売ったとき、社内の手続きを経ずに助言の報酬を払った、という主張です。
+    reading: だつもう さろんがわの かいしゃの もちぶんお うった とき しゃないの てつづきお へずに じょげんの ほうしゅうお はらったと いう しゅちょうです。
+  - speaker: reimu
+    text: 元社長側の反論は、役務提供をした会計士の求めに応じて支払ったものであり、不正な支出ではない。
+    reading: もと しゃちょうがわの はんろんわ えきむ ていきょうお した かいけいしの もとめに おうじて しはらった ものであり、ふせいな ししゅつでわ ない。
+- id: ch12_kanzai
+  title: ''
+  background: fn_saikensha
+  stage:
+  - {who: saiken, x: 0.28, flip: true, emotion: thinking}
+  - {who: kanzai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saiken
+    emotion: thinking
+    text: 破産の手続きは、いつ終わるんですか。
+  - speaker: kanzai
+    emotion: normal
+    text: 海外の手続きがネックではあるが、破産手続き自体は概ねスムーズに進んでいる。
+  - speaker: reimu
+    text: 2026年11月の時点で、この裁判の判決はまだ出ていません。
+    reading: にせん にじゅうろくねん じゅういちがつの じてんで、この さいばんの はんけつわ まだ でて いません。
+# ---- 論争1 ----
+- id: ronso1
+  title: 300億円はどこへ？
+  background: fn_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 300億円が消えて潰れた、って！
+  - speaker: tsumugi
+    emotion: normal
+    text: そこは、誰が言ってるかを分けて聞いてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: テレビの報道では、破産の申立書に約300億円が流れ出たとあるそうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[管財人|カンザイニン]も、300億円規模の資金流出があった可能性を指摘してるわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: やっぱり、300億円が消えたのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 消えた、とはまだ言えないの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: '[管財人|カンザイニン]の話も、外に出た可能性があるというところまでよ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: その多くは、関係会社への貸し付けだと書く記事もあるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 貸し付け？
+  - speaker: tsumugi
+    emotion: normal
+    text: 船井電機は、破産した親会社に約260億円の債権を届け出ているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 消えたのと、貸して戻らないのは違うの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 違うわ。それに、裁判所の判断はまだ出ていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[管財人|カンザイニン]が訴えたのは、2億460万円の報酬の件。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 300億円じゃなくて、2億円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 元社長側は、不正な支出ではないと反論してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、潰れたのは誰のせいなのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本業のテレビは、創業者が生きてたころから赤字が続いてたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 経済誌の集計では2008年3月期からの16年で、最終赤字は合わせて約1100億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 300億円の話より、ずっと前から……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: '[管財人|カンザイニン]はこう主張して、元社長はこう反論してる。判決は、まだ出ていないの。'
+# ---- 論争2 ----
+- id: ronso2
+  title: 準自己破産はおかしい？
+  background: fn_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 取締役の1人だけで、会社を破産させられるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 申し立てならできるの。破産法の19条で、取締役は1人でも申し立てられるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始めるかどうかを決めるのは、裁判所よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: これを、[準|じゅん]自己破産と言うの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会長も知らないうちに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 登記の上で会長だった[原田|はらだ]氏は、相談はなく報道で知ったと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[原田|はらだ]氏は支払不能でも債務超過でもない、と主張したの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 申し立てた取締役はその前に解任されていた、とも。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年7月には、制度が濫用されなかったかを調べる有識者会議も作ったの。
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあ、[原田|はらだ]さんが正しいのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 裁判所は、そう判断しなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁は臨時株主総会が開かれたと認めがたいとして、訴えを退けた。
+  - speaker: zundamon
+    emotion: surprised
+    text: 総会が、開かれてない……？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[原田|はらだ]氏が取締役に選ばれたとされる総会よ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 解任の書類も、日付を遡らせて作られた疑いがあるとされたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[管財人|カンザイニン]の意見では、申し立ての日の現預金は約5億4000万円。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 払うべきお[金|かね]は、約44億円あったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 財布の8倍の請求書なのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判所は破産を認めて、異議は退けられた。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[原田|はらだ]氏は、その後も手続きに疑問を唱えてきたわ。'
+# ---- 論争3 ----
+- id: ronso3
+  title: 創業者のワンマンのせい？
+  background: fn_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、創業者が後継ぎを育てなかったのが悪いのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言われる面はあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 外から招いた後継ぎの話は、2年ほどで消えたとされる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 87歳で代表権を取り戻して、16年で社長の交代は7回。
+  - speaker: zundamon
+    emotion: sad
+    text: やっぱり、ワンマンなのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも液晶テレビは、パナソニックやシャープでさえ撤退や縮小に追い込まれた市場よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ウォルマートで売上の半分というのも、もうけの源だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 半分は、強みでもあったんだ。
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: それに創業者は2016年に相談役に退いて、2017年に亡くなってる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: TOBもサロンも1円も破産も、全部亡くなったあとの話よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 全部、亡くなったあと！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 語録には、こうあるの。社員の知恵を集め、最後は経営者が判断する。
+  - speaker: tsumugi
+    emotion: normal
+    text: その最後の判断を、47年も続けてきたのが創業者だったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 創業者のつくった仕組みが強すぎて、創業者のあとに舵を切れる[人|ひと]がいなかった。
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見るのが、近いと思うわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 強すぎる仕組み、なのだ……。
+# ---- 本当の注意点 ----
+- id: chui
+  title: メーカーが消えたら
+  background: fn_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、ずんだもんのテレビよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ソフト更新、終わってたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年12月6日に、スマホとの連携とソフトの更新が終わったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 破産から、1か月半で！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 修理は、どうなるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 破産のあとのお知らせでは、修理は部品の在庫が続く限り続けるとされたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 部品があるうちは、直せるんだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもメーカーがつぶれると、修理や更新が止まることはあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家電を買うときは、どこが修理するかも見ておいてね。
+  - speaker: zundamon
+    emotion: normal
+    text: 店の延長保証に入っておけば、安心なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 店ごとに中身が違うから、メーカーがなくなったときの扱いを確かめてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: もう1つ。給料日の前の日に、会社がなくなることもあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 船井電機の人たちは、給料をもらえたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 払われなかった給料が全額届いたのは、約8か月後よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 8か月も……！
+  - speaker: tsumugi
+    emotion: normal
+    text: 国には、払われなかった給料を立て替えて払う制度があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が倒産して、給料が払われないまま辞めた人が対象よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 払われなかった給料と退職金の8割を、年齢ごとの上限まで立て替えてくれるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 相談の窓口は、近くの労働基準監督署よ。
+  - speaker: zundamon
+    emotion: normal
+    text: 覚えておく！
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後に、1社に売上の半分。これは家計でも同じよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家計でも？
+  - speaker: tsumugi
+    emotion: normal
+    text: 収入の柱が1本だけだと、それが止まった日に全部止まるの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの収入の柱は、お小遣い1本なのだ！
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは柱じゃなくて、つまようじね。
+    beat: true
+# ---- 現代の章 ----
+- id: gendai
+  title: いまのFUNAI
+  background: fn_gendai
+  bgm: haru_kitchen
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[FUNAI|フナイ]のテレビの仕事は、どうなったのだ？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 北米で売っていたテレビの一部は、中国の家電大手が引き継ぐと報じられたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 海外の大口の客に納める仕事が、中国の会社へ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: テレビの事業そのものは引き継ぐ先が見つからず、[管財人|カンザイニン]が清算を進めてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: インクの事業とアメリカでの[FUNAI|フナイ]の商標は、アメリカの会社へ。
+  - speaker: zundamon
+    emotion: sad
+    text: 名前まで、よそへ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 元社員533人には、払われなかった給料が全額届いたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年5月までに、266人が再就職したそうよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 会社は消えても、人は次へ行ってるんだ。
+- id: gendai_koudou
+  title: ''
+  background: fn_koudou
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: それと京都大学には、[船井|フナイ]哲良記念講堂があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2007年に、創業者が寄付して建てた講堂よ。今も使われてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前が、残ってるのだ！
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 2001年に作った財団も、今も日本の学生を海外の大学へ送り出してるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 会社は消えて、講堂と留学生は残ったのだ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: fn_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ このテレビ、修理してくれる所を調べておくのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: えらいじゃない。
+  - speaker: zundamon
+    emotion: happy
+    text: それとボクも、40歳で5つの会社の社長になるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: まず1つめの会社は？
+  - speaker: zundamon
+    emotion: happy
+    text: 社名から考えるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 作る物より先に、名前だけ決める人がもう1人いたわね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 1951年の大晦日、つかまされたのは[簿外|ぼがい]の手形だったでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年の会社には、帳簿に出ない保証の債務が33億円あったと報じられたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: また、[簿外|ボガイ]なのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1951年は手形で、2024年は保証。言葉は同じでも、中身は違うの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 同じことが起きた、とは言えないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 人に騙されても人を騙す人間になるな。あの大晦日から生まれた言葉よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は消えたけど、講堂と海外へ送り出した学生は残ってる。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ボクのテレビも、大事に使うのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
