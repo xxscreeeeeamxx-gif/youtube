@@ -22,7 +22,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps  # noqa: E402
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps  # noqa: E402
 
 from ytf.config import Config  # noqa: E402
 from ytf.assets_gen import sprite_path  # noqa: E402
@@ -2763,6 +2763,60 @@ def layout_scene(spec):
     return img.convert("RGB")
 
 
+DOC_COL = {"w": (255, 255, 255), "y": (255, 214, 0), "r": (236, 36, 36)}
+
+
+def layout_doc(spec):
+    """資料型（キャラなし）。右に白黒の場面、左に大きな2行の見出し、左上に赤い札、下に1行の補足。
+
+    2026-11-02 の方向転換の実験で足した。日常研究所のクリック率は 1.5%（10/4〜31）で、
+    ずんだもんの場面型・対立型どうしの A/B ではほとんど差が出なかった。キャラを入れない
+    犯罪ドキュメンタリーのチャンネルは 3.3% なので、A/B の1案をこの型にして比べる。
+    実在の人の写真は使わない（肖像の権利）。右は自作の背景を白黒にして暗くする。
+    spec: label（札）, lines（2行。各行は [(文字, "w"|"y"|"r"), ...]）, sub（補足）, scene（背景名）
+    """
+    img = Image.new("RGBA", (W, H), (8, 8, 10, 255))
+    bw = int(W * 0.66)
+    bg = _scene_bg(bw, H, spec["scene"], "mono")
+    bg.alpha_composite(Image.new("RGBA", (bw, H), (0, 0, 0, 110)))      # 明るい部屋でも字が沈まないように暗くする
+    fade = Image.new("L", (bw, H), 255)
+    fd = ImageDraw.Draw(fade)
+    for x in range(int(bw * 0.55)):
+        fd.line([(x, 0), (x, H)], fill=int(255 * x / (bw * 0.55)))
+    bg.putalpha(ImageChops.multiply(bg.getchannel("A"), fade))
+    img.alpha_composite(bg, (W - bw, 0))
+    d = ImageDraw.Draw(img)
+    key = spec.get("_key", "")
+    label = spec.get("label", "")
+    if label:
+        _budget("tag", label, 11, key)
+        fl = font("w9", 46)
+        d.rectangle([40, 34, 40 + _tw(fl, label) + 36, 34 + 70], fill=(206, 20, 26))
+        _ttext(d, (58, 42), label, fl, (255, 255, 255))
+    lines = spec["lines"]
+    maxw = int(W * 0.70)
+    size = 150
+    while size > 70 and max(sum(_tw(font("w9", size), t) for t, _ in ln) for ln in lines) > maxw:
+        size -= 4
+    f = font("w9", size)
+    y = 140 + (2 - len(lines)) * size // 2
+    for ln in lines:
+        _budget("say", "".join(t for t, _ in ln), 8, key)
+        x = 40
+        for t, c in ln:
+            _ttext(d, (x, y), t, f, DOC_COL.get(c, c), stroke_width=max(8, size // 12), stroke_fill=(0, 0, 0))
+            x += _tw(f, t)
+        y += int(size * 1.18)
+    sub = spec.get("sub", "")
+    if sub:
+        _budget("sub", sub, 20, key)
+        fs = font("w9", 40)
+        sy = H - 118
+        d.rectangle([40, sy, 40 + _tw(fs, sub) + 36, sy + 64], fill=(0, 0, 0, 230))
+        _ttext(d, (58, sy + 8), sub, fs, (255, 214, 0))
+    return img.convert("RGB")
+
+
 def layout_stack(spec):
     """上下分割型。文字は横幅いっぱい・顔は右下に大きく。
 
@@ -4499,6 +4553,7 @@ def render(slug, out_path=None):
            "stack": layout_stack,
            "conflict": layout_conflict,
            "scene": layout_scene,
+           "doc": layout_doc,
            "panels": layout_panels}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
