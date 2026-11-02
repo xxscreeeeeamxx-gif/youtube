@@ -409,7 +409,8 @@ PLAYLISTS = {
                "hitachi-kaden", "nengajo-otoshidama", "toshiba-delisting", "seiyu-trial",
                "docomo-imode", "sharp-kameyama", "nikon-stepper", "jal-inamori",
                "takugin-kawatani", "mcdonalds-fujita", "takata-collapse", "olympus-woodford",
-               "funai-collapse", "vhs-takano", "yaohan-wada", "chogin-onogi"]),
+               "funai-collapse", "vhs-takano", "yaohan-wada", "chogin-onogi",
+               "takefuji-takei", "otsuka-kagu", "nova-saruhashi", "senba-kitcho"]),
     # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
     # こちらはチャンネルページと検索結果に並ぶ入口。関連動画の隣人が
     # 「会社の興亡」「ゲーム」「クルマ」のように題材ごとに固まっているので、
@@ -431,7 +432,8 @@ PLAYLISTS = {
                "hitachi-kaden", "nengajo-otoshidama", "toshiba-delisting", "seiyu-trial",
                "docomo-imode", "sharp-kameyama", "nikon-stepper", "jal-inamori",
                "takugin-kawatani", "mcdonalds-fujita", "takata-collapse", "olympus-woodford",
-               "funai-collapse", "vhs-takano", "yaohan-wada", "chogin-onogi"]),
+               "funai-collapse", "vhs-takano", "yaohan-wada", "chogin-onogi",
+               "takefuji-takei", "otsuka-kagu", "nova-saruhashi", "senba-kitcho"]),
     "play": dict(
         title="ゲームと遊びの誕生｜ずんだもん再現ドラマ",
         desc="ゲームボーイ、プリクラ、カラオケ。遊びの道具にも、最初に作った人がいます。"

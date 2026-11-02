@@ -1,0 +1,1074 @@
+meta:
+  title: 「間違いありません」と法廷で認めた武富士の創業者、会社は払いすぎた利息200万人分で倒れた【ずんだもん解説】
+  slug: takefuji-takei
+  hook_line: 日本一の納税者を生んだ武富士は、なぜ「払いすぎた利息」で倒れたのか。
+  summary: 1994年、国会で日本一の納税者として名前を読み上げられた男、武井保雄。東京・板橋の4坪の事務所から、団地の主婦への小口の貸し付けで消費者金融の武富士を育てた創業者です。10年後、記者の電話の盗聴事件で被告人席に立ち、起訴事実を認めます。刑事罰の線と無効の線、2つの法律のすき間の金利と、明細書の裏の一文。業界トップの会社は、なぜ「払いすぎた利息」に倒れたのか。判決と国会の会議録をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 最高裁判所第二小法廷 平成18年1月13日判決（平成16年(受)第1518号） https://www.courts.go.jp/assets/hanrei/hanrei-pdf-52404.pdf
+  - 横浜地方裁判所 平成24年7月17日判決（平成22年(ワ)第6906号） https://www.courts.go.jp/assets/hanrei/hanrei-pdf-82481.pdf
+  - 参議院 予算委員会 第129回国会 第13号 会議録（1994年6月13日、国税庁次長の答弁） https://kokkai.ndl.go.jp/txt/112915261X01319940613/242
+  - 金融庁「貸金業法について」 https://www.fsa.go.jp/policy/kashikin/index.html
+  - 金融庁 貸金業制度等に関する懇談会 資料（2006年4月21日） https://www.fsa.go.jp/singi/singi_kasikin/20060421/02.pdf
+  - 帝国データバンク 倒産速報「株式会社武富士」 https://www.tdb.co.jp/report/bankruptcy/flash/3351/
+  tags:
+  - 武富士
+  - 武井保雄
+  - 消費者金融
+  - 過払い金
+  - グレーゾーン金利
+  - 利息制限法
+  - 出資法
+  - 会社更生法
+  - 盗聴事件
+  - 最高裁
+  - 高額納税者
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 間違いありません
+    bottom: 武富士の創業者
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: jicho
+    label: 国税庁次長
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: kyaku
+    label: 客
+    voice: 8
+    pitch: -0.04
+    outfit: apron
+  - id: kanbu
+    label: 幹部
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3440'
+  - id: giin
+    label: 議員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4a3a'
+  - id: shain
+    label: 社員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: saikosai
+    label: 裁判長
+    voice: 13
+    pitch: -0.02
+    outfit: suit
+    color: '#202024'
+  - id: yoshida
+    label: 社長
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#6a5a48'
+  - id: kyaku2
+    label: 客
+    voice: 12
+    pitch: 0.0
+scenes:
+# ---- 先出し（1994年6月13日の国会 → 2004年2月24日の初公判） ----
+- id: co_kokkai
+  title: ''
+  background: bf_kokkai
+  bgm: serious
+  stage:
+  - {who: jicho, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1994年6月、国会。日本一の納税者の名前が、読み上げられました。
+    reading: せんきゅうひゃく きゅうじゅうよねん ろくがつ、こっかい。にほんいちの のうぜいしゃの なまえが、よみあげられました。
+  - speaker: jicho
+    emotion: normal
+    text: 最も高額であった者は[武井|たけい]保雄氏で、
+  - speaker: jicho
+    emotion: normal
+    text: その所得税の額は四十三億一千八百四十七万円でございます。
+- id: co_houtei
+  title: ''
+  background: bf_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 武井保雄, emotion: thinking}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10年後。その男は、被告人席にいました。
+    reading: じゅうねんご。その おとこわ、ひこくにんせきに いました。
+  - speaker: saibancho
+    emotion: normal
+    text: 起訴状の内容に、間違いはありますか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……間違いありません。
+    se: don
+  - speaker: reimu
+    text: 武井保雄。団地の主婦への小口の貸し付けから、武富士を育てた男です。
+    reading: たけい やすお。だんちの しゅふえの こぐちの かしつけから、たけふじお そだてた おとこです。
+  - speaker: reimu
+    text: この6年後、彼の会社は、払いすぎた利息を返してと言える200万人以上の前で倒れます。
+    reading: この ろくねんご、かれの かいしゃわ はらいすぎた りそくお かえしてと いえる にひゃくまんにん いじょうの まえで たおれます。
+# ---- 今の部屋（テレビの広告） ----
+- id: hook
+  title: ''
+  background: bf_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: テレビで、払いすぎた利息は取り戻せるって！ ボクにも戻ってくるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 借りたこと、ないでしょ。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……ない。
+  - speaker: tsumugi
+    emotion: normal
+    text: その利息で倒れた会社があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本一の納税者を生んだ、[武富士|タケフジ]よ。
+    telops:
+    - {text: "日本一の納税者の会社が なぜ倒れた？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 日本一の納税者の会社が、なんで払いすぎた利息で倒れたの！？
+# ---- 1966年・板橋の4坪と団地 ----
+- id: card1966
+  title: ''
+  background: bf_card_1966
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1966年、東京・板橋。36歳の武井は、4坪の事務所でお金を貸し始めます。
+    reading: せんきゅうひゃく ろくじゅうろくねん、とうきょう いたばし。さんじゅうろくさいの たけいわ、よんつぼの じむしょで おかねお かしはじめます。
+- id: ch1_4tsubo
+  title: 現金の出前
+  background: bf_4tsubo
+  stage:
+  - {who: zundamon, x: 0.4, flip: true, tag: 武井保雄, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: はい！ 団地の奥様ですね。
+  - speaker: zundamon
+    emotion: normal
+    text: 担保も保証人も、要りません。
+  - speaker: zundamon
+    emotion: happy
+    text: 今から、お届けにあがります！
+    background: bf_danchi
+- id: ch1_danchi
+  title: ''
+  background: bf_danchi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 武井保雄, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kyaku
+    emotion: thinking
+    text: ……主人には、内緒でお願いしますね。
+  - speaker: zundamon
+    emotion: happy
+    text: もちろんです。
+  - speaker: kyaku
+    emotion: surprised
+    text: 本当に、審査はないんですか？
+  - speaker: zundamon
+    emotion: normal
+    text: この団地の入居の審査を、通った[方|かた]ですから。
+  - speaker: kyaku
+    emotion: surprised
+    text: 団地の審査が、そのまま金貸しの審査に！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: 団地に住めるのが、何よりの信用です。
+  - speaker: reimu
+    text: 武井はのちに、経済誌でこう語っています。
+    reading: たけいわ のちに、けいざいしで こう かたって います。
+  - speaker: zundamon
+    emotion: normal
+    text: この商売は信用が第一。
+    telops:
+    - {text: "武井「この商売は信用が第一」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: この一言が、あとで効いてきます。
+    reading: この ひとことが、あとで きいて きます。
+# ---- 1983年・2本の線 ----
+- id: card1983
+  title: ''
+  background: bf_card_1983
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1983年。武富士は、消費者金融の大手になっていました。
+    reading: せんきゅうひゃく はちじゅうさんねん。たけふじわ、しょうひしゃ きんゆうの おおてに なって いました。
+- id: ch2_kaigi
+  title: 2本の線
+  background: bf_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 武井保雄, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kanbu
+    emotion: normal
+    text: 11月から、出資法の上限が73%に下がります。超えたら刑事罰です。
+  - speaker: zundamon
+    emotion: thinking
+    text: 刑事罰の線か。
+  - speaker: kanbu
+    emotion: normal
+    text: もう1本、利息制限法の線があります。50万円なら、[年|ねん]18%まで。
+  - speaker: kanbu
+    emotion: normal
+    text: 超えた分は、無効です。
+  - speaker: zundamon
+    emotion: angry
+    text: 無効なら、18%より上は取れんだろう。
+  - speaker: kanbu
+    emotion: thinking
+    text: そこで新しい貸金業規制法です。お客様が利息として任意に払えば、有効とみなされます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……任意に、か。
+  - speaker: zundamon
+    emotion: happy
+    text: 2本の線の、すき間だな。
+    se: hirameki
+  - speaker: reimu
+    text: 刑事罰の線より下で、無効の線より上。この間の金利は、グレーゾーン金利と呼ばれます。
+    reading: けいじばつの せんより したで むこうの せんより うえ。この あいだの きんりわ、ぐれーぞーん きんりと よばれます。
+    telops:
+    - {text: "2本の線のすき間＝グレーゾーン金利", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: このすき間の利息を、会社はのちに返すことになります。
+    reading: この すきまの りそくお、かいしゃわ のちに かえす ことに なります。
+# ---- 2000年・明細書の裏の一文 ----
+- id: card2000
+  title: ''
+  background: bf_card_2000
+  cuts:
+  - speaker: reimu
+    text: 2000年6月。刑事罰の線は、29.2%まで下がります。
+    reading: にせんねん ろくがつ。けいじばつの せんわ、にじゅうきゅうてん にぱーせんとまで さがります。
+- id: ch2_meisai
+  title: 明細書の裏の一文
+  background: bf_kaicho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 武井保雄, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kanbu
+    emotion: normal
+    text: 会長、お客様にお渡しする明細書です。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……裏の、この一文は[何|なん]だ。
+  - speaker: kanbu
+    emotion: normal
+    text: 1回でも返済が遅れたら、残り全部を一括で返していただく特約です。
+  - speaker: zundamon
+    emotion: happy
+    text: 遅れなければ、関係ないな。
+  - speaker: kanbu
+    emotion: normal
+    text: はい。約束の利息を、きちんと払っていただければ。
+  - speaker: reimu
+    text: 2006年の判決の前、武富士の上限金利は27.375%でした。
+    reading: にせん ろくねんの はんけつの まえ、たけふじの じょうげん きんりわ にじゅうなな てん さんななご ぱーせんとでした。
+  - speaker: kanbu
+    emotion: normal
+    text: 50万円を1年なら、利息は13万6875円。利息制限法の18%なら、9万円です。
+    telops:
+    - {text: "50万円を1年　13万6875円 対 9万円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 差は、4万6875円か。
+  - speaker: kanbu
+    emotion: normal
+    text: お客様が、任意に払ってくださる分です。
+  - speaker: zundamon
+    emotion: happy
+    text: うちのお客様は、きちんとしてる。団地の奥様のころからな。
+  - speaker: reimu
+    text: 裏のあの一文と同じ形の特約を、2006年、最高裁が突きます。武富士とは別の業者の裁判でした。
+    reading: うらの あの いちぶんと おなじ かたちの とくやくお、にせん ろくねん さいこうさいが つきます。たけふじとわ べつの ぎょうしゃの さいばんでした。
+# ---- 2000年11月・株価の急落と疑い ----
+- id: ch3_kabuka
+  title: 株価の急落
+  background: bf_shoken
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 武井保雄, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kanbu
+    emotion: surprised
+    text: 会長！ 株価が、今日もストップ安です！
+    se: gaan
+  - speaker: zundamon
+    emotion: surprised
+    text: 昨日もだぞ！
+  - speaker: zundamon
+    emotion: angry
+    text: うちの数字は、どこも悪くないはずだ。
+  - speaker: kanbu
+    emotion: thinking
+    text: はい。貸付も利益も、伸びています。
+  - speaker: zundamon
+    emotion: angry
+    text: なら、なぜ売られる。
+  - speaker: kanbu
+    emotion: thinking
+    text: うちを批判する記事が、続いていまして……。
+  - speaker: zundamon
+    emotion: angry
+    text: 記事で、ここまで下がるものか。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……あの記事の裏に、誰かがいる。
+  - speaker: reimu
+    text: 判決はのちに、武井が批判的な記者2人の背後に黒幕的な人物がいると疑い、
+    reading: はんけつわ のちに たけいが ひはんてきな きしゃ ふたりの はいごに くろまくてきな じんぶつが いると うたがい、
+  - speaker: reimu
+    text: 放っておけば株価が下がると恐れた、と認めています。
+    reading: ほうって おけば かぶかが さがると おそれたと みとめて います。
+  - speaker: reimu
+    text: 2000年12月から翌年2月。記者2人の電話に盗聴器が仕掛けられ、会話が録音されました。
+    reading: にせんねん じゅうにがつから よくねん にがつ。きしゃ ふたりの でんわに とうちょうきが しかけられ、かいわが ろくおん されました。
+  - speaker: reimu
+    text: 裁判所は、武井が法務の担当者らと共謀した、と認めています。
+    reading: さいばんしょわ たけいが ほうむの たんとうしゃらと きょうぼう したと みとめて います。
+# ---- 2002年・業界のトップ ----
+- id: ch3_top
+  title: 業界のトップ
+  background: bf_kaicho
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 武井保雄, emotion: happy}
+  - {who: kanbu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: kanbu
+    emotion: happy
+    text: 会長！ 2002年3月期の貸付残高、約1兆7667億円。業界のトップです！
+  - speaker: zundamon
+    emotion: happy
+    text: ……4坪から、ここまで来たか。
+    se: levelup
+  - speaker: kanbu
+    emotion: happy
+    text: 前の期の純利益も、1272億円でしたからね。
+  - speaker: kanbu
+    emotion: happy
+    text: 上場のときの理念は、お客様第一主義です。
+  - speaker: zundamon
+    emotion: happy
+    text: 信用が第一で、お客様も第一か。
+  - speaker: kanbu
+    emotion: normal
+    text: 第一が、2つありますね。
+  - speaker: zundamon
+    emotion: angry
+    text: ……細かいことを言うな。
+    beat: true
+  - speaker: kanbu
+    emotion: happy
+    text: 会長の名前も、国会で日本一の納税者と読み上げられましたし。
+  - speaker: zundamon
+    emotion: normal
+    text: 8年も前の話を、まだ言うか。
+  - speaker: reimu
+    text: 業界のトップに立った会社は、8年後に倒れます。答えは、あの2つの線の間にありました。
+    reading: ぎょうかいの とっぷに たった かいしゃわ はちねんごに たおれます。こたえわ、あの ふたつの せんの あいだに ありました。
+# ---- 2003年4月・国会 ----
+- id: card2003
+  title: ''
+  background: bf_card_2003
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2003年4月、国会。野党の議員が、武富士の本部が支店に送った文書だというものを示します。
+    reading: にせん さんねん しがつ、こっかい。やとうの ぎいんが、たけふじの ほんぶが してんに おくった ぶんしょだと いう ものお しめします。
+- id: ch4_kokkai
+  title: 国会で示された指示
+  background: bf_kokkai
+  stage:
+  - {who: giin, x: 0.56, emotion: angry}
+  cuts:
+  - speaker: giin
+    emotion: angry
+    text: 一月のノルマは三千三十六万円、約三千万円ですね。
+  - speaker: giin
+    emotion: angry
+    text: 毎月毎月、これだけ純増にしなければならない。
+  - speaker: reimu
+    text: パソコンの画面に出る指示として、議員はこの言葉を示しました。
+    reading: ぱそこんの がめんに でる しじと して、ぎいんわ この ことばお しめしました。
+  - speaker: giin
+    emotion: thinking
+    text: 全店二〇％伸長せよ。
+    telops:
+    - {text: "国会で示された指示「全店二〇％伸長せよ」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 議員は、借り手44人が行政処分を求めて財務局に申し立てた、とも述べています。
+    reading: ぎいんわ、かりて よんじゅうよにんが ぎょうせい しょぶんお もとめて ざいむきょくに もうしたてたとも のべて います。
+  - speaker: reimu
+    text: 金融庁は、武富士への検査の具体的な内容は、答えを差し控えました。
+    reading: きんゆうちょうわ たけふじえの けんさの ぐたいてきな ないようわ、こたえお さしひかえました。
+# ---- 2003年12月・逮捕 ----
+- id: ch4_taiho
+  title: 逮捕
+  background: bf_kaicho
+  stage:
+  - {who: kanbu, x: 0.28, flip: true, emotion: sad}
+  - {who: shain, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2003年12月2日。武井は、電気通信事業法違反の疑いで逮捕されます。73歳でした。
+    reading: にせん さんねん じゅうにがつ ふつか。たけいわ でんき つうしん じぎょうほう いはんの うたがいで たいほ されます。ななじゅうさんさいでした。
+  - speaker: shain
+    emotion: surprised
+    text: 会長が、逮捕……！？
+  - speaker: kanbu
+    emotion: sad
+    text: 記者の電話の盗聴を、指示した疑いだそうだ。
+  - speaker: shain
+    emotion: surprised
+    text: 盗聴って……うちの会長がですか！？
+  - speaker: kanbu
+    emotion: sad
+    text: テレビ局も、今日からうちのCMを見合わせるそうだ。
+  - speaker: shain
+    emotion: thinking
+    text: お客様に、なんて説明すれば……。
+  - speaker: kanbu
+    emotion: sad
+    text: ……分からん。
+  - speaker: shain
+    emotion: sad
+    text: 信用が第一、だったのに……。
+    se: shobon
+  - speaker: reimu
+    text: 6日後、武井は会長を退きます。この年度、武富士は貸付残高の首位をアコムに奪われました。
+    reading: むいかご、たけいわ かいちょうお しりぞきます。この ねんど、たけふじわ かしつけ ざんだかの しゅいお あこむに うばわれました。
+# ---- 2004年・初公判と判決 ----
+- id: card2004
+  title: ''
+  background: bf_card_2004
+  cuts:
+  - speaker: reimu
+    text: 2004年2月24日、東京地裁。初公判です。
+    reading: にせん よねん にがつ にじゅうよっか、とうきょう ちさい。しょこうはんです。
+- id: ch5_kohan
+  title: 間違いありません
+  background: bf_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 武井保雄, emotion: thinking}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 起訴状の内容に、間違いはありますか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……間違いありません。
+  - speaker: reimu
+    text: 74歳の前会長は、起訴事実を認めました。法人の武富士も、社長が認めています。
+    reading: ななじゅうよんさいの ぜんかいちょうわ きそ じじつお みとめました。ほうじんの たけふじも、しゃちょうが みとめて います。
+  - speaker: reimu
+    text: 11月17日、判決。
+    reading: じゅういちがつ じゅうななにち、はんけつ。
+  - speaker: saibancho
+    emotion: normal
+    text: 主文。被告人[武井|たけい]保雄を懲役3年に処する。
+  - speaker: saibancho
+    emotion: normal
+    text: この裁判確定の日から4年間、その刑の執行を猶予する。
+  - speaker: reimu
+    text: 電気通信事業法違反と名誉毀損の罪。法人の武富士には、罰金100万円でした。
+    reading: でんき つうしん じぎょうほう いはんと めいよ きそんの つみ。ほうじんの たけふじにわ、ばっきん ひゃくまんえんでした。
+  - speaker: reimu
+    text: 裁判所は、財力にものをいわせ、圧倒的な地位を利用して違法な手段に訴えた、と指摘しました。
+    reading: さいばんしょわ ざいりょくに ものお いわせ あっとうてきな ちいお りよう して、いほうな しゅだんに うったえたと してき しました。
+# ---- 2006年1月13日・最高裁 ----
+- id: card2006
+  title: ''
+  background: bf_card_2006
+  cuts:
+  - speaker: reimu
+    text: 2006年1月13日、最高裁判所。武富士とは別の、ある貸金業者の裁判です。
+    reading: にせん ろくねん いちがつ じゅうさんにち、さいこう さいばんしょ。たけふじとわ べつの ある かしきん ぎょうしゃの さいばんです。
+- id: ch6_saikosai
+  title: 事実上の強制
+  background: bf_saikosai
+  stage:
+  - {who: saikosai, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 年29%で300万円を貸した業者と、借りた人の争い。焦点の1つが、あの一文。判決文には、こうあります。
+    reading: ねん にじゅうきゅう ぱーせんとで さんびゃくまんえんお かした ぎょうしゃと かりた ひとの あらそい。しょうてんの ひとつが あの いちぶん。はんけつぶんにわ、こう あります。
+  - speaker: saikosai
+    emotion: normal
+    text: 制限超過部分を支払うことを債務者に事実上強制することになるものというべきである。
+    se: don
+    telops:
+    - {text: "最高裁「債務者に事実上強制することになる」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: saikosai
+    emotion: normal
+    text: 特段の事情のない限り、債務者が自己の自由な意思によって
+  - speaker: saikosai
+    emotion: normal
+    text: 制限超過部分を支払ったものということはできない。
+  - speaker: reimu
+    text: 業界全体の前提を、ひっくり返した判決です。すき間の利息は、返してと言える過払い金になりました。
+    reading: ぎょうかい ぜんたいの ぜんていお ひっくりかえした はんけつです。すきまの りそくわ、かえしてと いえる かばらいきんに なりました。
+  - speaker: reimu
+    text: このとき武井は76歳。会長を退いて、2年がたっていました。
+    reading: この とき たけいわ ななじゅうろくさい。かいちょうお しりぞいて、にねんが たって いました。
+# ---- 2006年・返すしかない利息 ----
+- id: ch6_kaigi
+  title: 返すしかない利息
+  background: bf_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: kanbu, x: 0.28, flip: true, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 最高裁の判決、うちとは別の業者の裁判ですよね。
+  - speaker: kanbu
+    emotion: thinking
+    text: ああ。だがうちの明細書の裏にも、同じ形の特約がある。
+  - speaker: shain
+    emotion: thinking
+    text: でも1回遅れたら一括って、何がいけないんです？
+  - speaker: kanbu
+    emotion: normal
+    text: 法律の上では利息制限法を超えた分を払わなくても、一括にはならないんだ。
+  - speaker: shain
+    emotion: surprised
+    text: えっ、そうなんですか！？
+    se: bikkuri
+  - speaker: kanbu
+    emotion: thinking
+    text: だがお客様は裏の一文を読めば、全部払わないと一括だと思う。
+  - speaker: shain
+    emotion: thinking
+    text: だから、超えた分まで払う……。
+  - speaker: kanbu
+    emotion: thinking
+    text: それを最高裁は、事実上の強制と言ったんだ。
+  - speaker: shain
+    emotion: sad
+    text: じゃあうちのお客様も、任意に払ったことには……。
+  - speaker: kanbu
+    emotion: sad
+    text: ならんだろうな。超えた分は元本の返済に回して、残れば返すしかない。
+  - speaker: kanbu
+    emotion: thinking
+    text: 明細書の裏の、あの一文も書き直すしかない。
+  - speaker: shain
+    emotion: surprised
+    text: 書き直すんですか！？
+    beat: true
+  - speaker: reimu
+    text: 2005年度に返した利息は、約187億円。武富士の報告書は、来期はこの請求が増えると見込みました。
+    reading: にせん ごねんどに かえした りそくわ やく ひゃく はちじゅうななおくえん。たけふじの ほうこくしょわ、らいきわ この せいきゅうが ふえると みこみました。
+# ---- 2006年8月・主のいない会長室 ----
+- id: ch6_shikyo
+  title: ''
+  background: bf_kaicho
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2006年8月10日。武井保雄は、東京の自宅で亡くなりました。肝不全、76歳でした。
+    reading: にせん ろくねん はちがつ とおか。たけい やすおわ、とうきょうの じたくで なくなりました。かんふぜん、ななじゅうろくさいでした。
+  - speaker: reimu
+    text: 4か月後、改正貸金業法が全会一致で成立。グレーゾーン金利は、なくなることが決まります。
+    reading: よんかげつご、かいせい かしきん ぎょうほうが ぜんかい いっちで せいりつ。ぐれーぞーん きんりわ、なくなる ことが きまります。
+# ---- 2007〜2009年・赤字と止まった貸し付け ----
+- id: ch7_akaji
+  title: 利息を返すための赤字
+  background: bf_kaigi
+  bgm: serious
+  stage:
+  - {who: kanbu, x: 0.28, flip: true, emotion: thinking}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kanbu
+    emotion: thinking
+    text: 2007年3月期の決算だ。利息を返すための引当金を積んだ。
+  - speaker: kanbu
+    emotion: sad
+    text: 最終赤字は、約4800億円。
+    background: bf_kaigi_akaji
+  - speaker: shain
+    emotion: surprised
+    text: 1年で、4800億円！？
+    se: gaan
+  - speaker: kanbu
+    emotion: sad
+    text: 返してほしいという声は、まだ増える。
+  - speaker: shain
+    emotion: thinking
+    text: 日本一の会社が、こんなことに……。
+  - speaker: kanbu
+    emotion: thinking
+    text: 日本一だったのは、会長の納税だよ。
+    beat: true
+  - speaker: shain
+    emotion: sad
+    text: ……その会長も、もういないんですね。
+  - speaker: kanbu
+    emotion: sad
+    text: ああ。4坪の事務所から始めた人だった。
+  - speaker: reimu
+    text: 2009年3月期、貸付残高は8615億円。ピークの半分を割りました。
+    reading: にせん くねん さんがつき、かしつけ ざんだかわ はっせん ろっぴゃく じゅうごおくえん。ぴーくの はんぶんお わりました。
+- id: ch7_kasanai
+  title: ''
+  background: bf_shiten
+  stage:
+  - {who: kyaku2, x: 0.28, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: kyaku2
+    emotion: normal
+    text: すみません、お[金|かね]を借りたいんですけど。
+  - speaker: shain
+    emotion: sad
+    text: 申し訳ございません。いま新しいお貸し付けは、ほとんど……。
+  - speaker: kyaku2
+    emotion: surprised
+    text: 金貸しが、お[金|かね]を貸さないの！？
+  - speaker: shain
+    emotion: sad
+    text: ……返すほうで、手いっぱいでして。
+    beat: true
+  - speaker: kyaku2
+    emotion: thinking
+    text: ……じゃあ、よそで借ります。
+# ---- 2010年9月28日・会社更生 ----
+- id: card2010
+  title: ''
+  background: bf_card_2010
+  cuts:
+  - speaker: reimu
+    text: 2010年9月27日。武富士が会社更生法を申請する、という報道が流れます。
+    reading: にせん じゅうねん くがつ にじゅうななにち。たけふじが かいしゃ こうせいほうお しんせい すると いう ほうどうが ながれます。
+- id: ch8_mae
+  title: ''
+  background: bf_kaigi
+  stage:
+  - {who: shain, x: 0.28, flip: true, emotion: surprised}
+  - {who: kanbu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: ニュース、見ました！？ うちが会社更生法だって……！
+  - speaker: kanbu
+    emotion: thinking
+    text: 株の売買も、今日から止められた。
+  - speaker: shain
+    emotion: thinking
+    text: 10月1日って、言われてましたけど……。
+  - speaker: kanbu
+    emotion: sad
+    text: ここまで報道が出たら、待っていられんだろう。
+- id: ch8_kaiken
+  title: 会社更生法
+  background: bf_kaiken
+  stage:
+  - {who: yoshida, x: 0.28, flip: true, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 翌28日、申請。帳簿の負債は約4300億円。夜の会見に立ったのは、この日に就いた新しい社長です。
+    reading: よくじつ にじゅうはちにち、しんせい。ちょうぼの ふさいわ やく よんせん さんびゃくおくえん。よるの かいけんに たったのわ、この ひに ついた あたらしい しゃちょうです。
+  - speaker: yoshida
+    emotion: sad
+    text: 自力再建すべく努力してきたが、社債の償還などを踏まえると更生法申請の結論に至った。
+  - speaker: yoshida
+    emotion: thinking
+    text: このままではデフォルトになる見通しとなった。
+  - speaker: kisha
+    emotion: angry
+    text: なぜ、今なのか。
+  - speaker: reimu
+    text: 記者からは、この質問が続きました。創業者の死から、4年後のことです。
+    reading: きしゃからわ、この しつもんが つづきました。そうぎょうしゃの しから よねんごの ことです。
+# ---- 2010〜2013年・100円が15円 ----
+- id: ch8_shiten
+  title: 100円が15円
+  background: bf_shiten
+  bgm: 223am
+  stage:
+  - {who: shain, x: 0.28, flip: true, emotion: thinking}
+  - {who: kanbu, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kanbu
+    emotion: thinking
+    text: 更生の手続きで、貸付金を利息制限法どおりに計算し直した。
+  - speaker: shain
+    emotion: thinking
+    text: 法律どおりの利息で、最初から計算し直したんですね。
+  - speaker: kanbu
+    emotion: thinking
+    text: 6月末に約5100億円あった貸付金が、10月末には約750億円だ。
+    telops:
+    - {text: "貸付金 約5100億円 → 約750億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: shain
+    emotion: surprised
+    text: 100円貸してたはずが、15円……！？
+    se: chin
+  - speaker: kanbu
+    emotion: sad
+    text: 借りてるはずのお客様が、逆に返してもらう側になることも多い。
+  - speaker: kanbu
+    emotion: sad
+    text: 払いすぎた利息を返してと言える人は、200万人を超えていた。
+  - speaker: shain
+    emotion: thinking
+    text: 全員に返したら……。
+  - speaker: kanbu
+    emotion: sad
+    text: 返せるのは、ほんの一部だろう。
+  - speaker: reimu
+    text: 2011年、更生計画が認められます。払いすぎた利息を返す割合は、3.3%でした。
+    reading: にせん じゅういちねん、こうせい けいかくが みとめられます。はらいすぎた りそくお かえす わりあいわ、さんてん さんぱーせんとでした。
+  - speaker: shain
+    emotion: surprised
+    text: 3.3%の計画に、賛成した人もいたんですか？
+  - speaker: kanbu
+    emotion: thinking
+    text: 払いすぎた利息の債権者の、88%以上が賛成したそうだ。
+  - speaker: shain
+    emotion: sad
+    text: 3.3%でも……。
+- id: ch8_madoguchi
+  title: ''
+  background: bf_shiten
+  stage:
+  - {who: kyaku2, x: 0.28, flip: true, emotion: surprised}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: kyaku2
+    emotion: surprised
+    text: 10万円払いすぎてたのに、戻ってきたのは3300円！？
+  - speaker: shain
+    emotion: sad
+    text: ……申し訳ございません。
+    beat: true
+  - speaker: kyaku2
+    emotion: angry
+    text: 払いすぎた分を返すのが、筋だろう！
+  - speaker: shain
+    emotion: sad
+    text: 会社の財産が、足りないんです……。
+  - speaker: reimu
+    text: 2012年3月、貸す事業は別の会社へ。2013年3月、武富士という名前の店はなくなりました。
+    reading: にせん じゅうにねん さんがつ、かす じぎょうわ べつの かいしゃえ。にせん じゅうさんねん さんがつ、たけふじと いう なまえの みせわ なくなりました。
+    background: bf_shiten_kyugyo
+# ---- 論争：違法な金利だった？ ----
+- id: ronso1
+  title: 違法な金利だった？
+  background: bf_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: つむぎ、ネットで見たのだ！ [武富士|たけふじ]は、違法な金利で儲けてたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 半分は合ってて、半分はちがうの。線が2本あったでしょ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 刑事罰の線は、出資法の29.2%。27.375%は、その下よ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、犯罪じゃないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、無効の線は超えてたの。利息制限法を超えた分は、法律の上では無効。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 犯罪じゃないのに、無効！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 客が任意に払えば有効という決まりがあって、業界は広くそれに頼ってたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年の最高裁は、一括の特約があると
+  - speaker: tsumugi
+    emotion: normal
+    text: 特段の事情がない限り、自由な意思で払ったとは言えないとしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: それで払いすぎた分を、返してと言えるようになった。それが過払い金よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 元の経営陣を訴えた裁判も、地裁で割れたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 横浜は一部の支払いを命じて、広島は計算し直す義務までは無かったとして退けたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 違法のひと言じゃ、言えないのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 刑事罰の線より下。無効の線より上。そのすき間で稼いでいた、が正確ね。
+# ---- 論争：盗聴でつぶれた？ ----
+- id: ronso2
+  title: 盗聴でつぶれた？
+  background: bf_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、つぶれたのは盗聴のせいなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 信用は落としたわ。逮捕の年度に、貸付残高の首位をアコムに譲ってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも会社更生の申請は、逮捕から7年近くあとなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: そんなにあと！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判所が挙げた申請の理由は、まず2006年の判決と会計のルール。
+  - speaker: tsumugi
+    emotion: normal
+    text: それで財務が、急に悪くなったこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法改正で、貸付残高が大きく減るのが確実になったこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: サブプライム問題でお[金|かね]を集めにくくなったこと、などよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 払いすぎた利息に、法律の改正。それにお[金|かね]の集めにくさ……。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ盗聴は、関係なかったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 関係なくはないわ。会社の信用は、そこで大きく傷ついたもの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ申請の理由に挙がったのは、主に利息と法律の話だったの。
+# ---- 本当の注意点 ----
+- id: chui
+  title: いまの上限金利
+  background: bf_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも、テレビの広告で払いすぎた利息を取り戻すのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: まず、借りてないでしょ。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: いまの上限金利は、利息制限法と同じ15%から20%。すき間は、もう無いの。
+    telops:
+    - {text: "上限金利 15〜20％", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: それに貸金業者からは、年収の3分の1を超えて新しく借りられない。総量規制よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 年収300万円なら、貸金業者から借りられるのは合わせて100万円までよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクの年収だと……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: まず、年収を作ってね。
+    beat: true
+  - speaker: zundamon
+    emotion: surprised
+    text: 銀行のカードローンは？
+  - speaker: tsumugi
+    emotion: normal
+    text: 総量規制の対象外。だから、自分で線を引くことね。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと返済が遅れると、残りを一括で求められて遅延損害金がつくこともあるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 明細書の裏の、あの一文……。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[武富士|たけふじ]も2007年12月からは、制限を超える利息は払う義務がないと裏に書いたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: そして借りた相手がつぶれると、払いすぎたお[金|かね]もほとんど戻らないことがあるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[武富士|たけふじ]の手続きは2017年に終わって、いまは請求もできないわ。'
+  - speaker: zundamon
+    emotion: sad
+    text: テレビの広告、ボクには関係なかったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 返済に困ったら、財務局や自治体の多重債務の相談窓口へ。金融庁が一覧を出してるわ。
+    background: bf_jimusho
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: bf_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。最高裁の判決から20年。創業者の死からも、20年がたちました。
+    reading: にせん にじゅうろくねん。さいこうさいの はんけつから にじゅうねん。そうぎょうしゃの しからも、にじゅうねんが たちました。
+- id: ima
+  title: 武富士のいま
+  background: bf_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[武富士|たけふじ]のお店は、いまどうなってるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年に、お客に貸す事業は252億円でJトラストのグループの会社へ移ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[武富士|たけふじ]の名前も、2013年3月で使われなくなったわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前まで……！
+  - speaker: tsumugi
+    emotion: normal
+    text: その会社のいまの仕事は、貸し付けの保証や債権の買い取りと回収が中心よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[武富士|たけふじ]として残った会社は、2017年3月に手続きが終わってなくなったの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 払いすぎた利息に戻ったのは、2回の支払いを合わせて4%ほどだったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 100円払いすぎて、4円……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ほかの消費者金融は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2021年の研究書、サラ金の歴史を紹介した書評はこうまとめてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 現在ではほとんどのサラ金企業が銀行の子会社化している。
+  - speaker: zundamon
+    emotion: surprised
+    text: ライバルは、ほとんど銀行の子どもに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つの線のすき間で大きくなった業界は、すき間が閉じて形を変えたのね。
+  - speaker: zundamon
+    emotion: sad
+    text: 名前も会社も、消えちゃったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも上限金利の線は、利息制限法にそろえて引き直されたまま残ってるわ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: bf_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ まず借りて、払いすぎてから取り戻すのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 最初から、払いすぎないで。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 1994年、国会で日本一の納税者と読み上げられた創業者。
+  - speaker: tsumugi
+    emotion: normal
+    text: その会社は2本の線のすき間で伸びて、すき間が閉じて倒れたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4坪の事務所から、貸付残高1兆7667億円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 最後は計算し直して、100円が15円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 払いすぎた利息を返してと言える人は、200万人を超えていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 創業者は、この商売は信用が第一と語った。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 最高裁は特段の事情がない限り、自由な意思で払ったとは言えないと書いたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……信用って、貸す側だけのものじゃなかったのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 借りる前に、金利と契約の裏まで見ることね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
