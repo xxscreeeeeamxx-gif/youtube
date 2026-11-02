@@ -1,0 +1,1112 @@
+meta:
+  title: 大塚家具の創業者「娘を社長にしたのが間違いだった」、株主総会で勝った娘も5年で会社を去る【ずんだもん解説】
+  slug: otsuka-kagu
+  hook_line: 61%の票で父に勝った娘は、なぜ5年で大塚家具を去ったのか。
+  summary: 2015年3月、東京・有明。大塚家具の株主総会で、議長席の長女と、株主席にいる創業者の父が向き合いました。受付で名前を書く店と入りやすい店。相続に備えて一族の資産管理会社に渡した株。7人の取締役の手。父と娘は何を争い、株主の61%を集めて勝った娘は、そのあと何と向き合ったのか。会見・株主総会・インタビューに残る2人の言葉で、双方の言い分を並べて再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 日本経済新聞「大塚家具、久美子社長側に経営権　株主総会で決定」（2015年3月27日） https://www.nikkei.com/article/DGXLASGD27H0C_X20C15A3MM0000/
+  - 日本経済新聞「大塚家具の大塚会長「娘を社長にしたのが間違いだった」」（2015年2月25日） https://www.nikkei.com/article/DGXMZO83671200V20C15A2000000/
+  - 東洋経済オンライン「大塚家具､娘に勝訴した父は何を得たか」（2016年4月12日） https://toyokeizai.net/articles/-/113355
+  - ヤマダホールディングス「子会社間の合併に関するお知らせ」（2022年2月14日） https://www.yamada-holdings.jp/ir/press/2022/220214_2.pdf
+  - 匠大塚 会社概要 https://takumi-otsuka.jp/company/
+  - 集英社新書プラス 対談「火中の栗を拾った二人」前編（2026年8月26日） https://shinsho-plus.shueisha.co.jp/interview/ootuka_fukuda/36438
+  tags:
+  - 大塚家具
+  - 大塚久美子
+  - 大塚勝久
+  - 匠大塚
+  - 委任状争奪戦
+  - プロキシーファイト
+  - 株主総会
+  - 事業承継
+  - 会員制
+  - ヤマダデンキ
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 61%対36%
+    bottom: 大塚家具
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: katsuhisa
+    label: 大塚勝久
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#2a2f3a'
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.08
+    outfit: apron
+  - id: kyaku
+    label: 客
+    voice: 12
+    pitch: 0.0
+  - id: kanbu
+    label: 幹部社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: torishimari
+    label: 取締役
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: kabunushi
+    label: 株主
+    voice: 42
+    pitch: 0.1
+    outfit: suit
+    color: '#4a4038'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: 0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: dairinin
+    label: 代理人
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: yamada
+    label: 山田昇
+    voice: 42
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+scenes:
+# ---- 先出し（2015年3月27日・株主総会。議長の娘と、株主席の父） ----
+- id: co_soukai
+  title: ''
+  background: ok_soukai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大塚久美子, emotion: sad}
+  - {who: katsuhisa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2015年3月27日、東京・有明。大塚家具の株主総会で、議長は社長の大塚久美子。株主席には創業者の父。
+    reading: にせん じゅうごねん さんがつ にじゅうしちにち、とうきょう ありあけ。おおつか かぐの かぶぬし そうかいで ぎちょうわ しゃちょうの おおつか くみこ。かぶぬしせきにわ そうぎょうしゃの ちち。
+  - speaker: zundamon
+    emotion: sad
+    text: 社員はつらい思いをし、お客様にも迷惑をかけた。
+  - speaker: katsuhisa
+    emotion: normal
+    text: 会社の復活は私しかできない。
+    se: don
+  - speaker: reimu
+    text: この日、娘は61%で勝ちます。5年後に娘も去り、7年後、会社としての大塚家具も消えました。
+    reading: この ひ、むすめわ ろくじゅういち ぱーせんとで かちます。ごねんごに むすめも さり、ななねんご かいしゃと しての おおつか かぐも きえました。
+# ---- 今の部屋（ソファを買いに行く） ----
+- id: hook
+  title: ''
+  background: ok_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ソファを買いに行くのだ！ ふらっと入って、全部座り比べてくる！
+  - speaker: tsumugi
+    emotion: normal
+    text: 昔は、受付で名前を書かないと入れない家具屋さんがあったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家具屋で名前を書くのだ！？
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこで父と争って61%で[勝った|かった]娘が、5年で会社を去ったの。
+    telops:
+    - {text: "61%で勝った娘は なぜ会社を去ったのか", size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: '[勝った|かった]のに、なんで手放したのだ！？'
+# ---- 2009年・受付で名前を書く店 ----
+- id: card2009
+  title: ''
+  background: ok_card_2009
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2009年3月。大塚家具で、41歳の長女の久美子が社長になります。
+    reading: にせん きゅうねん さんがつ。おおつか かぐで よんじゅういっさいの ちょうじょの くみこが しゃちょうに なります。
+- id: ch1_uketsuke
+  title: 受付で名前を書く店
+  background: ok_showroom_uketsuke
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: tenin, x: 0.56, emotion: happy}
+  - {who: kyaku, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: ソファを見たいだけなんですけど。
+  - speaker: tenin
+    emotion: happy
+    text: いらっしゃいませ。まずこちらに、お名前とご住所を。
+  - speaker: kyaku
+    emotion: surprised
+    text: 見るだけで、住所まで！？
+    se: bikkuri
+  - speaker: tenin
+    emotion: happy
+    text: 担当がご一緒すれば、寸法も配送も一度に決まりますよ。
+  - speaker: reimu
+    text: 1993年から続く会員制。始めたわけを父はビルの持ち主の求めと言い、娘はまとめ買いの客のためと言います。
+    reading: せんきゅうひゃく きゅうじゅうさんねんから つづく かいいんせい。はじめた わけお ちちわ びるの もちぬしの もとめと いい、むすめわ まとめがいの きゃくの ためと いいます。
+  - speaker: reimu
+    text: 社長になった娘は、もっと入りやすい店を掲げます。2015年には、こう語っています。
+    reading: しゃちょうに なった むすめわ、もっと はいりやすい みせお かかげます。にせん じゅうごねんにわ こう かたって います。
+  - speaker: zundamon
+    emotion: normal
+    text: つまり、弊社の会員制システムは形骸化したのです。
+  - speaker: reimu
+    text: 勝った娘を苦しめたのは、本当にこの入口の違いだったのか。
+    reading: かった むすめお くるしめたのわ、ほんとうに この いりぐちの ちがいだったのか。
+# ---- 2014〜2015年・7人の取締役の手 ----
+- id: card2014
+  title: ''
+  background: ok_card_2014
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2014年7月23日。大塚家具の取締役会です。
+    reading: にせん じゅうよねん しちがつ にじゅうさんにち。おおつか かぐの とりしまりやくかいです。
+- id: ch1_kainin
+  title: 7人の取締役の手
+  background: ok_kaigi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: torishimari, x: 0.56, emotion: normal}
+  - {who: katsuhisa, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: torishimari
+    emotion: normal
+    text: 社長の解任について、採決します。賛成の方は挙手を。
+  - speaker: torishimari
+    emotion: normal
+    text: 賛成5、反対1、棄権1。社長は、会長が兼ねます。
+    se: don
+    telops:
+    - {text: "解任　賛成5・反対1・棄権1", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: card2015
+  title: ''
+  background: ok_card_2015
+  cuts:
+  - speaker: reimu
+    text: 2015年1月28日、半年後の取締役会。上場会社では、会社をつくった父も1票です。
+    reading: にせん じゅうごねん いちがつ にじゅうはちにち、はんとしごの とりしまりやくかい。じょうじょう がいしゃでわ かいしゃお つくった ちちも いっぴょうです。
+- id: ch1_4tai3
+  title: ''
+  background: ok_kaigi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: torishimari, x: 0.56, emotion: normal}
+  - {who: katsuhisa, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: torishimari
+    emotion: normal
+    text: 社長の選任について、採決します。
+  - speaker: torishimari
+    emotion: surprised
+    text: 賛成4、反対3。社長の復帰が決まりました。
+    telops:
+    - {text: "復帰　賛成4・反対3", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch1_teian
+  title: 翌日の株主提案
+  background: ok_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: kanbu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kanbu
+    emotion: surprised
+    text: 社長、会長から株主提案が届きました。
+  - speaker: kanbu
+    emotion: thinking
+    text: 候補は会長と専務ら10人。社長のお名前は、ありません。
+  - speaker: reimu
+    text: 娘は2022年に、この2日をこう語っています。
+    reading: むすめわ にせん にじゅうにねんに、この ふつかお こう かたって います。
+  - speaker: zundamon
+    emotion: thinking
+    text: そうしたら、翌29日に父から私を取締役候補から外す株主提案が出たのです。
+  - speaker: kanbu
+    emotion: normal
+    text: 会長の持ち株は18%。お一人では、過半数に届きません。
+  - speaker: kanbu
+    emotion: normal
+    text: ごきょうだいの資産管理会社、[ききょう企画|ききょうきかく]の9.75%は社長の側です。
+  - speaker: kanbu
+    emotion: thinking
+    text: 2008年に会長が130万株を渡し、代わりに15億円の社債を受け取った会社です。
+  - speaker: reimu
+    text: 親が相続に備えて子どもの名義にした財布が、もめたとき子どもの側の財布に。
+    reading: おやが そうぞくに そなえて こどもの めいぎに した さいふが、もめた とき こどもの がわの さいふに。
+  - speaker: reimu
+    text: この株も娘の側に入りました、と報じられています。
+    reading: この かぶも むすめの がわに はいりましたと、ほうじられて います。
+  - speaker: kanbu
+    emotion: thinking
+    text: その15億円の社債は、期限の2013年を過ぎても返されていません。
+# ---- 創業者の店（短く） ----
+- id: ch2_kobo
+  title: 桐箪笥の工房の息子
+  background: ok_kobo
+  bgm: hirusagari
+  stage:
+  - {who: katsuhisa, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 父の大塚勝久は、埼玉・春日部の桐箪笥の工房の息子です。2018年の寄稿に、こう書いています。
+    reading: ちちの おおつか かつひさわ、さいたま かすかべの きりだんすの こうぼうの むすこです。にせん じゅうはちねんの きこうに こう かいて います。
+  - speaker: katsuhisa
+    emotion: happy
+    text: 家具にまつわる知識は、すべて父を見ていて覚えたものである。
+  - speaker: reimu
+    text: 1969年に25歳で開いた店は、最盛期に売上約730億円の会社になります。
+    reading: せんきゅうひゃく ろくじゅうくねんに にじゅうごさいで ひらいた みせわ、さいせいきに うりあげ やく ななひゃく さんじゅうおくえんの かいしゃに なります。
+  - speaker: reimu
+    text: その春日部で、のちに父と娘の店が向かい合います。残ったのは、どちらの店だったのか。
+    reading: その かすかべで、のちに ちちと むすめの みせが むかいあいます。のこったのわ、どちらの みせだったのか。
+# ---- 2015年2月・2つの会見 ----
+- id: ch3_chichi
+  title: 幹部がずらりと並ぶ会見
+  background: ok_kaiken_kanbu
+  bgm: serious
+  stage:
+  - {who: katsuhisa, x: 0.5, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2月25日の夜、東京・大手町。父の会見では、役員と幹部社員の計14人が深く頭を下げました。
+    reading: にがつ にじゅうごにちの よる、とうきょう おおてまち。ちちの かいけんでわ やくいんと かんぶ しゃいんの けい じゅうよにんが ふかく あたまお さげました。
+  - speaker: katsuhisa
+    emotion: sad
+    text: 株主、取締役、多くのみなさまに多大なるご迷惑をかけました。深くお詫びします
+  - speaker: katsuhisa
+    emotion: sad
+    text: 創業者である親として、娘を社長にしたのが間違いだった。
+    se: gaan
+    telops:
+    - {text: "父「娘を社長にしたのが間違いだった」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: katsuhisa
+    emotion: sad
+    text: なんとか仲良くやれないか努力したが、いくら言っても聞き入れてもらえなかった。
+  - speaker: reimu
+    text: 父の側の文書は、娘は5年以上の在任で結果を残せず、コンプライアンスの問題も起こした、としました。
+    reading: ちちの がわの ぶんしょわ むすめわ ごねん いじょうの ざいにんで けっかお のこせず、こんぷらいあんすの もんだいも おこしたと しました。
+- id: ch3_musume
+  title: 翌日の娘の会見
+  background: ok_kaiken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 大塚久美子, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 翌日の午後、東京駅のそば。娘の会見には、150人を超える報道陣が集まりました。
+    reading: よくじつの ごご、とうきょうえきの そば。むすめの かいけんにわ ひゃくごじゅうにんお こえる ほうどうじんが あつまりました。
+  - speaker: zundamon
+    emotion: sad
+    text: お客様に対しお恥ずかしい限り
+  - speaker: zundamon
+    emotion: thinking
+    text: 事実認識に誤りがある。
+  - speaker: zundamon
+    emotion: thinking
+    text: 私的な問題を上場会社のコンプライアンスの問題とするのは無理があり、驚きを禁じえない
+  - speaker: zundamon
+    emotion: sad
+    text: そうした演出で社員を巻き込んでしまい、申し訳ない。
+  - speaker: zundamon
+    emotion: normal
+    text: 創業者のリーダーシップは非常に強く、カリスマ性もあるが、永遠に続くものではない。
+    se: gaan
+    telops:
+    - {text: "娘「…永遠に続くものではない」", size: md, position: top-right, color: "#8AD0FF", stroke: "#0A1A2A", glow: "#2A6ACC", anim: up}
+# ---- 2015年3月・票を数える ----
+- id: ch4_hyo
+  title: 票を数える3月
+  background: ok_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: kanbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kanbu
+    emotion: normal
+    text: 総会は今月27日です。会長の案は、3年間の配当を前の年の3倍の120円に。
+  - speaker: kanbu
+    emotion: normal
+    text: こちらは前の年の倍、80円です。
+  - speaker: kanbu
+    emotion: thinking
+    text: 100株の方なら、1年でこちらは8000円。会長の案なら1万2000円です。
+  - speaker: reimu
+    text: 61%は、何を約束して集めた票だったのか。その約束が、勝ったあとで重くなります。
+    reading: ろくじゅういち ぱーせんとわ なにお やくそく して あつめた ひょうだったのか。その やくそくが、かった あとで おもく なります。
+  - speaker: kanbu
+    emotion: normal
+    text: 票は会長の18%に、取引先のフランスベッドが3%。
+  - speaker: kanbu
+    emotion: thinking
+    text: 店長の多くも、会長への賛同を表明しました。
+  - speaker: kanbu
+    emotion: normal
+    text: こちらにはアメリカの投資会社の10%余り。助言会社の2社も、こちらの支持です。
+  - speaker: reimu
+    text: 娘は2022年に、この騒ぎの報道をこう振り返っています。
+    reading: むすめわ にせん にじゅうにねんに、この さわぎの ほうどうお こう ふりかえって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 株主総会までの間の2か月間の露出をCM換算すると60億円って言われましたね。
+  - speaker: zundamon
+    emotion: sad
+    text: 事実と異なる宣伝をされ続けたことはビジネス的には大きな痛手になりました。
+- id: ch4_tegami
+  title: ''
+  background: ok_showroom_uketsuke
+  stage:
+  - {who: tenin, x: 0.3, flip: true, emotion: normal}
+  - {who: kabunushi, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kabunushi
+    emotion: normal
+    text: 株主なんだがね。総会では会長と会社、どっちに入れたもんかね。
+  - speaker: tenin
+    emotion: surprised
+    text: わ、わたくしどもからは何とも……。
+  - speaker: kabunushi
+    emotion: thinking
+    text: 配当は会長が120円、会社が80円。そりゃ多いほうがいいけどなあ。
+  - speaker: kabunushi
+    emotion: normal
+    text: とりあえず、ここに名前を書けばいいのかい。
+  - speaker: tenin
+    emotion: surprised
+    text: こちらは、ご来店のお名前です！
+    se: zukko
+# ---- 2015年3月27日・株主総会 ----
+- id: ch4_soukai
+  title: 議長席と株主席
+  background: ok_soukai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: kabunushi, x: 0.52, emotion: normal}
+  - {who: katsuhisa, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 3月27日、有明の本社。出席した株主は約200人、例年の約10倍です。
+    reading: さんがつ にじゅうしちにち、ありあけの ほんしゃ。しゅっせき した かぶぬしわ やく にひゃくにん、れいねんの やく じゅうばいです。
+  - speaker: zundamon
+    emotion: sad
+    text: 社員はつらい思いをし、お客様にも迷惑をかけた。
+  - speaker: zundamon
+    emotion: normal
+    text: 続いて、株主提案のご説明をお願いします。
+  - speaker: katsuhisa
+    emotion: sad
+    text: 今回の経緯を巡る騒動はすべて私の不徳の致すところでおわび申し上げる
+  - speaker: katsuhisa
+    emotion: normal
+    text: 昨年7月に消費増税の影響で受注が落ち、このままで会社はしばらく存続できても、
+  - speaker: katsuhisa
+    emotion: thinking
+    text: 社員や社員の家族、家具業界に影響が出ると危惧した
+  - speaker: katsuhisa
+    emotion: thinking
+    text: 会社が良くなることを考えてくれれば、クーデターはなかった。
+  - speaker: katsuhisa
+    emotion: normal
+    text: 会社の復活は私しかできない。
+  - speaker: kabunushi
+    emotion: thinking
+    text: この騒ぎで、ブランドイメージは壊れたんじゃないですか。
+  - speaker: reimu
+    text: 株主からは、社員との信頼や収益の立て直しを問う声も続きました。
+    reading: かぶぬしからわ しゃいんとの しんらいや しゅうえきの たてなおしお とう こえも つづきました。
+  - speaker: zundamon
+    emotion: normal
+    text: では、採決に移ります。
+  - speaker: reimu
+    text: 結果は、会社提案61%、父の株主提案36%。父と長男は、取締役を退きました。
+    reading: けっかわ かいしゃ ていあん ろくじゅういち ぱーせんと、ちちの かぶぬし ていあん さんじゅうろく ぱーせんと。ちちと ちょうなんわ とりしまりやくお しりぞきました。
+    telops:
+    - {text: "61%対36%", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch4_kaiken
+  title: ''
+  background: ok_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大塚久美子, emotion: normal}
+  - {who: kisha, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長。社員や取引先との関係は、どう立て直しますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 全員が心をひとつにする
+- id: ch4_chichi
+  title: ''
+  background: ok_soukai
+  stage:
+  - {who: katsuhisa, x: 0.5, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 父は2016年に、インタビューでこう語っています。
+    reading: ちちわ にせん じゅうろくねんに、いんたびゅーで こう かたって います。
+  - speaker: katsuhisa
+    emotion: sad
+    text: 正しくやっている人が勝つと思ったし、株主さんは分かって頂けると思っていた。
+  - speaker: katsuhisa
+    emotion: thinking
+    text: これは私の責任。
+    beat: true
+# ---- 2015年4月・おわびと呼ばれたセール ----
+- id: ch5_happyo
+  title: おわびと呼ばれたセール
+  background: ok_kaiken
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.5, tag: 大塚久美子, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 4月。勝った娘は、全国16店で最大5割引きのセールを発表します。
+    reading: しがつ。かった むすめわ、ぜんこく じゅうろくてんで さいだい ごわりびきの せーるお はっぴょう します。
+  - speaker: zundamon
+    emotion: happy
+    text: 時代に合わせて接客の手法は変えるが、よいものを安く販売するという理念は変えない
+- id: ch5_sale
+  title: ''
+  background: ok_showroom_uketsuke
+  stage:
+  - {who: tenin, x: 0.3, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: 本日から、入口でのお名前のご記入は要りません！
+    background: ok_showroom
+  - speaker: kyaku
+    emotion: surprised
+    text: え、書かなくていいの？
+  - speaker: tenin
+    emotion: happy
+    text: ご説明が要るかどうかも、お客様が選べます。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ遠慮なく……しかも、最大5割引き！？
+    background: ok_showroom_sale
+    se: jaan
+  - speaker: tenin
+    emotion: happy
+    text: ご好評につき、セールを10日延ばします！
+  - speaker: tenin
+    emotion: happy
+    text: 週末は、売り場がお客様でいっぱいです！
+  - speaker: kyaku
+    emotion: thinking
+    text: 名前は書かなくていいのに、列には並ぶんだな。
+    beat: true
+  - speaker: reimu
+    text: 世間でおわびセールと呼ばれた売り出しのあと、この年は営業黒字に。まだ誰も翌年の数字を知りません。
+    reading: せけんで おわび せーると よばれた うりだしの あと、この としわ えいぎょう くろじに。まだ だれも よくねんの すうじお しりません。
+# ---- 2016年・父が勝った裁判と、父の店 ----
+- id: card2016
+  title: ''
+  background: ok_card_2016
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2016年4月11日、東京地裁。父が、娘の側の資産管理会社ききょう企画を訴えた裁判の判決です。
+    reading: にせん じゅうろくねん しがつ じゅういちにち、とうきょう ちさい。ちちが むすめの がわの しさん かんり がいしゃ ききょう きかくお うったえた さいばんの はんけつです。
+- id: ch6_hanketsu
+  title: 父が勝った裁判
+  background: ok_houtei
+  stage:
+  - {who: saibancho, x: 0.3, flip: true, emotion: normal}
+  - {who: dairinin, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 被告は原告に対して15億円および、これに対する平成25年4月4日から
+  - speaker: saibancho
+    emotion: normal
+    text: 支払い日まで、[年6分|ネンロクブ]の割合による金利を支払え。
+  - speaker: reimu
+    text: 返済を延ばす正式な合意は無かった、と裁判所は判断しました。父の全面勝訴です。
+    reading: へんさいお のばす せいしきな ごういわ なかったと さいばんしょわ はんだん しました。ちちの ぜんめん しょうそです。
+  - speaker: dairinin
+    emotion: sad
+    text: 当方の主張が認められなかったことは誠に遺憾である。
+  - speaker: reimu
+    text: 2日後、ききょう企画は控訴せず、利息を含め約17億円を払いました。
+    reading: ふつかご、ききょう きかくわ こうそ せず りそくお ふくめ やく じゅうななおくえんお はらいました。
+  - speaker: dairinin
+    emotion: thinking
+    text: 大塚家具への影響などを考慮し、収束が望ましい
+- id: ch6_mise
+  title: 駅の東口に父の店
+  background: ok_depart
+  bgm: hirusagari
+  stage:
+  - {who: katsuhisa, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 父はこの春、総会のあとの日々をこう語っていました。
+    reading: ちちわ この はる、そうかいの あとの ひびお こう かたって いました。
+  - speaker: katsuhisa
+    emotion: thinking
+    text: 本当に辞めると思っていなかったから何も準備していなかった。
+  - speaker: katsuhisa
+    emotion: normal
+    text: 昨年3月に会社と縁が切れ、4月は悩んだ1カ月間、5月は決断の1カ月だった
+  - speaker: reimu
+    text: 6月、春日部駅の東口。西武百貨店の跡に、父の匠大塚が約2万7000平方メートルの店を開きます。
+    reading: ろくがつ、かすかべえきの ひがしぐち。せいぶ ひゃっかてんの あとに ちちの たくみ おおつかが やく にまん ななせん へいほう めーとるの みせお ひらきます。
+  - speaker: katsuhisa
+    emotion: happy
+    text: 成功することが分かっている店舗。どれだけ成功するのか、それが楽しみだ
+  - speaker: kisha
+    emotion: normal
+    text: 建物は、借りているんですか。
+  - speaker: katsuhisa
+    emotion: happy
+    text: 土地・建物が自社所有で家賃がない、あるのは維持管理費だけだ
+  - speaker: kisha
+    emotion: normal
+    text: どんなお店になりますか。
+  - speaker: katsuhisa
+    emotion: normal
+    text: 普及品から超高級品まで販売するのが特徴
+  - speaker: katsuhisa
+    emotion: happy
+    text: 全国からお客さんが来る店になると思う
+  - speaker: kisha
+    emotion: thinking
+    text: 大塚家具とは、競争になりますか。
+  - speaker: katsuhisa
+    emotion: normal
+    text: 前の会社とは競争したくない
+# ---- 2016〜2018年・勝ったあとの赤字 ----
+- id: ch7_akaji
+  title: 勝ったあとの赤字
+  background: ok_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: kanbu, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: kanbu
+    emotion: sad
+    text: 2016年の決算です。最終赤字、約46億円。
+    background: ok_kaigi_akaji
+  - speaker: zundamon
+    emotion: thinking
+    text: 配当は。
+  - speaker: kanbu
+    emotion: thinking
+    text: 80円のまま、という方針です。1年に約15億円が出ていきます。
+  - speaker: kanbu
+    emotion: sad
+    text: 店の家賃も重いです。解約できない残りだけで、約118億円あります。
+  - speaker: kanbu
+    emotion: thinking
+    text: 中期経営計画も、取り下げることになりました。
+  - speaker: kanbu
+    emotion: thinking
+    text: 貸会議室の会社から出資を受けて、店の一部を会議室に貸すことになりました。
+  - speaker: kanbu
+    emotion: sad
+    text: 翌年の赤字は、約73億円です。
+  - speaker: reimu
+    text: 最終赤字は3年で計約150億円。現預金は、約110億円が2年で20億円ほどになりました。
+    reading: さいしゅう あかじわ さんねんで けい やく ひゃく ごじゅうおくえん。げんよきんわ やく ひゃく じゅうおくえんが にねんで にじゅうおくえん ほどに なりました。
+    telops:
+    - {text: "3年で最終赤字　計約150億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: card2018
+  title: ''
+  background: ok_card_2018
+  cuts:
+  - speaker: reimu
+    text: 2018年1月。父は経済誌のサイトへの寄稿に、こう書いています。
+    reading: にせん じゅうはちねん いちがつ。ちちわ けいざいしの さいとえの きこうに、こう かいて います。
+- id: ch7_kiko
+  title: ''
+  background: ok_depart
+  stage:
+  - {who: katsuhisa, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: katsuhisa
+    emotion: thinking
+    text: 私自身、創業会社を追われた身である。
+  - speaker: katsuhisa
+    emotion: normal
+    text: 二度と失敗はできない。
+- id: ch7_setsumei
+  title: 決算説明会
+  background: ok_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大塚久美子, emotion: thinking}
+  - {who: kisha, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 2期続けての赤字です。今年の黒字化について、どうお考えですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 黒字化を達成するのが自分の責任
+  - speaker: kisha
+    emotion: thinking
+    text: 黒字にならなかったら、進退はどうされますか。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[if（仮定）|イフ]の話には答えられない'
+    beat: true
+- id: ch7_heiten
+  title: 創業の地を閉じる
+  background: ok_tenpo
+  bgm: 223am
+  stage:
+  - {who: tenin, x: 0.3, flip: true, emotion: sad}
+  - {who: kyaku, x: 0.72, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 5月27日。創業の地、春日部の大塚家具の店が閉まります。会社の説明は、建物の老朽化や店舗再編のため。
+    reading: ごがつ にじゅうしちにち。そうぎょうの ち、かすかべの おおつか かぐの みせが しまります。かいしゃの せつめいわ、たてものの ろうきゅうかや てんぽ さいへんの ため。
+  - speaker: kyaku
+    emotion: surprised
+    text: ここ、閉まっちゃうんですか。
+  - speaker: tenin
+    emotion: sad
+    text: はい。本日で、閉店いたします。
+    background: ok_tenpo_kara
+    se: shobon
+  - speaker: kyaku
+    emotion: sad
+    text: 家具は、ずっとここで見てきたのになあ。
+  - speaker: kyaku
+    emotion: thinking
+    text: 駅の向こうじゃ、[匠大塚|たくみおおつか]が開いてるのに……。
+# ---- 2019年・4年ぶりの面会 ----
+- id: card2019
+  title: ''
+  background: ok_card_2019
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2019年3月。総会から4年。娘は会見で、父に呼びかけます。
+    reading: にせん じゅうくねん さんがつ。そうかいから よねん。むすめわ かいけんで、ちちに よびかけます。
+- id: ch8_yobikake
+  title: 父への呼びかけ
+  background: ok_kaiken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 大塚久美子, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 上場会社の経営という点では考えが異なった
+  - speaker: zundamon
+    emotion: normal
+    text: 愛着を持って長く家具を使いたいという価値観は同じだ
+  - speaker: zundamon
+    emotion: normal
+    text: いつか父に理解してもらえる
+  - speaker: reimu
+    text: 父は、経営の立て直しを優先してほしい、と応じました。
+    reading: ちちわ、けいえいの たてなおしお ゆうせん して ほしいと おうじました。
+- id: ch8_menkai
+  title: 4年ぶりの面会
+  background: ok_aoyama
+  stage:
+  - {who: katsuhisa, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 会長。今日、社長がこちらに来られるそうですね。
+  - speaker: katsuhisa
+    emotion: thinking
+    text: 訪問は昼に知って驚いた。悩んだ末の結果だろう。
+- id: ch8_menkai2
+  title: ''
+  background: ok_aoyama
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 大塚久美子, emotion: normal}
+  - {who: katsuhisa, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月26日の夕方、開店前日の匠大塚 青山。娘が花と、名誉職を頼む書類を持って訪ねます。
+    reading: しがつ にじゅうろくにちの ゆうがた、かいてん ぜんじつの たくみ おおつか あおやま。むすめが はなと めいよしょくお たのむ しょるいお もって たずねます。
+  - speaker: katsuhisa
+    emotion: normal
+    text: はい。
+- id: ch8_menkai3
+  title: ''
+  background: ok_aoyama
+  stage:
+  - {who: katsuhisa, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 会長。会われて、いかがでしたか。
+  - speaker: katsuhisa
+    emotion: happy
+    text: 来てくれるだけでうれしい
+    se: namida
+  - speaker: reimu
+    text: 2週間後、父から手紙が届きます。名誉職は辞退。取引先メーカーへの感謝を大切にしたい、とありました。
+    reading: にしゅうかんご、ちちから てがみが とどきます。めいよしょくわ じたい。とりひきさき めーかーえの かんしゃお たいせつに したいと ありました。
+# ---- 2019〜2022年・家電量販店の傘下へ ----
+- id: ch9_yamada
+  title: 家電量販店の傘下へ
+  background: ok_kaiken
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 大塚久美子, emotion: normal}
+  - {who: yamada, x: 0.52, emotion: happy}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月。ヤマダ電機が約43億円を出し、株の過半数を持つ親会社になると発表されます。
+    reading: じゅうにがつ。やまだ でんきが やく よんじゅうさんおくえんお だし、かぶの かはんすうお もつ おやがいしゃに なると はっぴょう されます。
+  - speaker: yamada
+    emotion: happy
+    text: 方向性については間違っていない
+  - speaker: yamada
+    emotion: normal
+    text: 粗利が高く、少しでも売り上げが上向けば、すぐに黒字化できる
+  - speaker: kisha
+    emotion: normal
+    text: 投資の回収は、いつごろを見込みますか。
+  - speaker: yamada
+    emotion: normal
+    text: 3年くらいで達成できれば十分でしょう
+  - speaker: zundamon
+    emotion: normal
+    text: 抜本的な構造改革で、黒字まであと一歩まできた
+  - speaker: zundamon
+    emotion: happy
+    text: 引き続き全力を尽くしたい
+  - speaker: kisha
+    emotion: normal
+    text: お父様には。
+  - speaker: zundamon
+    emotion: normal
+    text: 父には事前に伝えた
+  - speaker: kisha
+    emotion: thinking
+    text: "[何|なん]と言われましたか。"
+  - speaker: zundamon
+    emotion: thinking
+    text: あえて申し上げない
+    beat: true
+- id: ch9_corona
+  title: ''
+  background: ok_kaiken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 大塚久美子, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 娘は2026年に、このときの狙いとその後を、こう振り返っています。
+    reading: むすめわ にせん にじゅうろくねんに、この ときの ねらいと そのごお こう ふりかえって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 家電も家具も高付加価値なものは大塚家具で、お求めやすいものはヤマダさんで
+  - speaker: zundamon
+    emotion: thinking
+    text: 提携の直後にコロナ禍になり、家具店は営業自粛、家電店は営業可能という逆風が吹き、
+  - speaker: zundamon
+    emotion: sad
+    text: 当初の想定通りには進められませんでした。
+- id: card2020
+  title: ''
+  background: ok_card_2020
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2020年12月1日、娘は社長を退きます。会社の発表は、これまでの経営責任を明確にするため。
+    reading: にせん にじゅうねん じゅうにがつ ついたち、むすめわ しゃちょうお しりぞきます。かいしゃの はっぴょうわ これまでの けいえい せきにんお めいかくに する ため。
+- id: ch9_shippai
+  title: ''
+  background: ok_gendai
+  stage:
+  - {who: zundamon, x: 0.5, tag: 大塚久美子, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2022年1月、娘はインタビューでこう語っています。
+    reading: にせん にじゅうにねん いちがつ、むすめわ いんたびゅーで こう かたって います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 多分、世の中では、私を失敗者だと見る人が多いと思います。
+  - speaker: zundamon
+    emotion: normal
+    text: 後に続く人にどのような貢献ができたかに価値があると思ってます。
+- id: card2022
+  title: ''
+  background: ok_card_2022
+  cuts:
+  - speaker: reimu
+    text: 2022年5月1日。会社としての大塚家具は、ヤマダデンキに吸収されて消えました。
+    reading: にせん にじゅうにねん ごがつ ついたち。かいしゃと しての おおつか かぐわ、やまだ でんきに きゅうしゅう されて きえました。
+# ---- 論争 ----
+- id: ronso1
+  title: 安売りにしたから潰れた？
+  background: ok_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 娘が高級路線をやめて安売りにしたから、潰れたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える数字はあるの。セールは最大[5割引き|ごわりびき]、翌年から3年続けて大きな赤字。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年の報道も、父は高級で娘は安売りという図で伝えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 考えの違いは、確かにあったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父は2018年に、そもそも値引きという行為が嫌いだと書いてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 娘は2015年に、実は中価格帯が主力商品と話してたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でもその報道の図は、2人ともあとで否定してるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 娘は2026年に、低価格路線にシフトした事実はなかったと話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父も2016年に、会員制という言葉をほとんど使ってこなかったと話してるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、受付で名前を書くのは[何|なん]だったのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 書く店だったのは本当よ。でもそれが争いの中身だったかは、2人とも違うと言ってるの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 数字も一本の線では引けないの。娘が社長の2011年から3年は黒字。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父が社長に戻った2014年は、営業赤字よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして争いの最中の2015年3月は、売上が前の年の同じ月より37.8%減。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[勝った|かった]あとの立て直しは間に合わなかった。何が一番効いたかは、2人の言い分が違うの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 安売りのせい、とは言い切れないのか……。
+- id: ronso2
+  title: 決めたのは誰？
+  background: ok_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあ結局、家族のもめごとだったんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 世間は親子げんかと呼んだわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父も2016年に、ワイドショー化してしまったと話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも勝ち負けを決めたのは、株主の票なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取締役会の5対1と4対3。海外の投資会社や取引先の票。そして総会の61%。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家族の話なのに、決めたのは家族じゃなかったのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: thinking
+    text: 40歳の男性だったら経済ニュースとして扱われたのでは、と娘は2022年に話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年には、会社そのものの認識が父と根本的に違ったと腹落ちしたと話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本来問われるべきは株主の質だ、とも言ってるわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 家族の話に見えて、中身は会社の決め方の話だったのか……。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 家族の約束は紙で
+  background: ok_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家族の間のお[金|かね]と株の約束は、書面と第三者で決めておくこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[ききょう企画|ききょうきかく]は、返済を延ばす約束があったと主張したの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも裁判所は、正式な合意はなかったと判断した。払ったのは約17億円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家族の口約束じゃ、通らないんだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 相続に備えて家族の名義にした株も、家族が割れたら別の人の票になる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 承継に強い弁護士などを入れて後戻りしない合意に、と娘自身も2023年に話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 継ぐ人の問題は、どこの会社でも起きてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 帝国データバンクの2025年11月の調べでは、後継者のいない会社が50.1%。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分も！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい社長は、内部昇格が36.1%、同族承継が32.3%よ。
+# ---- 現代 ----
+- id: ima
+  title: いまの大塚家具と匠大塚
+  background: ok_heya
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: それで、大塚家具のお店はなくなっちゃったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: ううん。いまはヤマダデンキの、インテリア家具事業部として営業してるの。
+    background: ok_kaden
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年も、もとの本社の[有明|ありあけ]のショールームで催しを開いてたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家電の会社の中で、大塚家具の名前が続いてるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 会員制と同じ1993年に付けた店の名前も、[IDC OTSUKA|アイディーシーオオツカ]として残ってるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 大きな家具を買うときは、保証の窓口がどこかも確かめておいてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父の[匠大塚|たくみおおつか]も、[春日部|カスカベ]本店など4つの店を開けてる。会長は、いまも父本人よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 娘は2025年に事業承継の本を出して、いまは承継の相談に乗る仕事をしてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本の第1章の題は、家対株式会社よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 父の店も大塚家具の名前も、形を変えて残ってるのか……。
+# ---- 締め ----
+- id: shime_kumiko
+  title: ''
+  background: ok_gendai
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 大塚久美子, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2026年8月。娘は対談で、あの委任状争奪戦をこう振り返っています。
+    reading: にせん にじゅうろくねん はちがつ。むすめわ たいだんで、あの いにんじょう そうだつせんお こう ふりかえって います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 父の考えや行動はかなり深く理解していて、予測を外すことも余りありませんでした。
+  - speaker: zundamon
+    emotion: sad
+    text: 初めて完全に予測を外したのが、あのプロキシーファイトだったんです。
+    telops:
+    - {text: "娘（2026年）「初めて完全に予測を外した」", size: md, position: top-center, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 本当に最後までやるとは思っていませんでした。
+- id: shime
+  title: ''
+  background: ok_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ソファは受付で名前を書いて、担当さんと選ぶ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのお店、いまは家電量販店の一部門よ。……テレビまで勧められるかもね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 61%で勝っても、会社は5年で娘の手を離れたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父は、娘を社長にしたのが間違いだったと言った。
+  - speaker: tsumugi
+    emotion: normal
+    text: 娘は、創業者のリーダーシップは永遠には続かないと言った。
+  - speaker: zundamon
+    emotion: thinking
+    text: でもその娘にも、父が最後までやるとは読めなかったのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一番近くの家族でも、読み切れないことはあるのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから家族の約束ほど、紙に書いておくことね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
