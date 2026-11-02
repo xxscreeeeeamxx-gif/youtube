@@ -1,0 +1,1126 @@
+meta:
+  title: 「叱られると思います」と泣いた船場吉兆の女将、5か月後に吉兆ののれんを自分から返した【ずんだもん解説】
+  slug: senba-kitcho
+  hook_line: 父がつくった「吉兆」の名前を継いだ一家は、なぜ自分からその名前を返したのか。
+  summary: 2007年秋、福岡の百貨店の売場で、お菓子の期限ラベルの張り替えが見つかります。売っていたのは料亭の船場吉兆。創業者・湯木貞一の三女の一家が、のれん分けで継いだ会社でした。「パートの独断」という会社の説明、パートの女性たちの反論、そして12月10日の会見。社長になった女将・湯木佐知子は、なぜその5か月後に「吉兆」ののれんを自分から返したのか。会見の言葉と、会社・パート・取締役それぞれの言い分を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 帝国データバンク 倒産速報「株式会社船場吉兆」（2008年1月16日） https://www.tdb.co.jp/report/bankruptcy/flash/2529/
+  - 日本食糧新聞「船場吉兆、改善策まとめる　経営も責任を認める　コンプライアンスの構築へ」（2008年1月7日） https://news.nissyoku.co.jp/?p=127941
+  - 農林水産省「株式会社船場吉兆が販売した食肉加工品、菓子類等における不適正表示に対する措置について」（2007年11月9日・国立国会図書館WARP） https://warp.ndl.go.jp/web/20080128000000/www.maff.go.jp/j/press/syouan/kansa/071109.html
+  - J-CASTニュース「船場吉兆、再建を断念し廃業」（2008年5月28日） https://www.j-cast.com/2008/05/28020679.html?p=all
+  - 消費者庁「メニュー・料理等の食品表示に係る景品表示法上の考え方について」 https://www.caa.go.jp/policies/policy/representation/fair_labeling/guideline/
+  tags:
+  - 船場吉兆
+  - 吉兆
+  - 湯木佐知子
+  - 湯木貞一
+  - 食品偽装
+  - 産地偽装
+  - 消費期限
+  - 賞味期限
+  - 民事再生法
+  - 廃業
+  - 料亭
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 叱られると思います
+    bottom: 船場吉兆の廃業
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: teiichi
+    label: 湯木貞一
+    voice: 42
+    pitch: 0.0
+    outfit: haori
+    color: '#3a3030'
+  - id: choonan
+    label: 長男
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#6a5a48'
+  - id: paat
+    label: パート
+    voice: 8
+    pitch: -0.08
+    outfit: apron
+    color: '#6a5a7a'
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.1
+    outfit: apron
+    color: '#8a5a4a'
+  - id: kakari
+    label: 市の担当
+    voice: 13
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4f5f'
+  - id: nosui
+    label: 農水省
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: ryoricho
+    label: 料理長
+    voice: 13
+    pitch: -0.08
+    outfit: work
+    color: '#e8ebee'
+  - id: kyaku
+    label: 客
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#4a4038'
+  - id: nakai
+    label: 仲居
+    voice: 8
+    pitch: 0.04
+    outfit: kimono
+    color: '#5a6a8a'
+scenes:
+# ---- 先出し（2008年5月28日、のれんを返す会見） ----
+- id: co_noren
+  title: ''
+  background: sk_hotel
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2008年5月、大阪のホテル。高級料亭・船場吉兆の社長、湯木佐知子の会見です。
+    reading: にせんはちねん ごがつ、おおさかの ほてる。こうきゅう りょうてい せんば きっちょうの しゃちょう、ゆき さちこの かいけんです。
+  - speaker: zundamon
+    emotion: sad
+    text: もはや吉兆というのれんを用いて営業することは、社会的にも許されない
+  - speaker: kisha
+    emotion: normal
+    text: のれんは……
+  - speaker: zundamon
+    emotion: sad
+    text: 自主的に返上させていただくことにした
+  - speaker: reimu
+    text: 父がつくった吉兆ののれんを、娘は自分の手で返しました。社長になって、4か月あまりのことです。
+    reading: ちちが つくった きっちょうの のれんお、むすめわ じぶんの てで かえしました。しゃちょうに なって よんかげつ あまりの ことです。
+# ---- 今の部屋（期限の過ぎたプリン） ----
+- id: hook
+  title: ''
+  background: sk_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ このプリン、期限を2日過ぎてるけどまだいけるのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、賞味期限じゃなくて消費期限よ。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: ……どっちも期限なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: お菓子の偽りが分かって7か月。父がつくった吉兆の名前を、自分から返した一家がいるの。
+    telops:
+    - {text: "偽りの発覚から7か月で のれん返上", size: lg, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 継いだ名前を、なんで自分から返したの！？
+# ---- 1991年・のれん分け ----
+- id: card1991
+  title: ''
+  background: sk_card_1991
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1991年。日本を代表する料亭の一つ、吉兆の創業者、湯木貞一が、店を子どもたちの家に分けます。
+    reading: せんきゅうひゃく きゅうじゅういちねん。にほんお だいひょう する りょうていの ひとつ、きっちょうの そうぎょうしゃ ゆき ていいちが みせお こどもたちの いえに わけます。
+- id: ch1_bunke
+  title: 名前は1つ、会社は5つ
+  background: sk_zashiki
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: normal}
+  - {who: teiichi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 本吉兆、東京吉兆、京都吉兆、神戸吉兆。そして三女、佐知子の夫が率いる船場吉兆です。
+    reading: ほんきっちょう とうきょうきっちょう きょうときっちょう こうべきっちょう。そして さんじょ さちこの おっとが ひきいる せんば きっちょうです。
+  - speaker: teiichi
+    emotion: happy
+    text: 出迎え三歩、見送り七歩。
+  - speaker: reimu
+    text: 創業者のこの教えを、孫がのちに書き残しています。
+    reading: そうぎょうしゃの この おしえお、まごが のちに かきのこして います。
+  - speaker: reimu
+    text: 看板は同じ吉兆。でも会社は別々。これが、のちに効いてきます。
+    reading: かんばんわ おなじ きっちょう。でも かいしゃわ べつべつ。これが のちに きいて きます。
+    telops:
+    - {text: "名前は1つ　会社は5つ", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch1_okami
+  title: ''
+  background: sk_ryotei
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 佐知子が女将になったのは、24歳のとき。料理人の夫と、店を継いできました。
+    reading: さちこが おかみに なったのわ にじゅうよんさいの とき。りょうりにんの おっとと みせお ついで きました。
+  - speaker: kyaku
+    emotion: happy
+    text: '[女将|おかみ]さん、また来たで。'
+  - speaker: zundamon
+    emotion: happy
+    text: ようこそ、おいでくださいました。
+  - speaker: kyaku
+    emotion: happy
+    text: 相変わらず、深いお辞儀やなあ。
+  - speaker: kyaku
+    emotion: normal
+    text: 頭を上げるまで、こっちが待ってしまうわ。
+  - speaker: reimu
+    text: この女将が、吉兆ののれんを自分の手で返すのは、17年後のことです。
+    reading: この おかみが きっちょうの のれんお じぶんの てで かえすのわ、じゅうななねんごの ことです。
+# ---- 料亭の外へ（1995〜2006年） ----
+- id: ch2_soto
+  title: 料亭の外へ
+  background: sk_uriba
+  bgm: natsuyasumi
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1995年に心斎橋。1999年には福岡へ。船場吉兆は、料亭の外へ広がります。
+    reading: せんきゅうひゃく きゅうじゅうごねんに しんさいばし。せんきゅうひゃく きゅうじゅうきゅうねんにわ ふくおかえ。せんば きっちょうわ、りょうていの そとえ ひろがります。
+  - speaker: tenin
+    emotion: happy
+    text: いらっしゃいませ。吉兆の黒豆プリン、いかがですか。
+  - speaker: kyaku
+    emotion: surprised
+    text: 吉兆って、あの料亭の？ 百貨店で買えるの！？
+    se: bikkuri
+  - speaker: kyaku
+    emotion: happy
+    text: 料亭に行かなくても、吉兆の味か。ありがたいねえ。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ、そのプリンを2つもらおうか。
+  - speaker: reimu
+    text: 福岡の百貨店には、菓子と総菜の売場。牛肉のみそ漬けは、大阪の百貨店や東京のギフト会社へ。
+    reading: ふくおかの ひゃっかてんにわ かしと そうざいの うりば。ぎゅうにくの みそづけわ、おおさかの ひゃっかてんや とうきょうの ぎふとがいしゃえ。
+- id: ch2_kazoku
+  title: 家族だけの取締役会
+  background: sk_kaigi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: normal}
+  - {who: choonan, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 社長は佐知子の夫。取締役は佐知子と2人の息子。取締役会は、家族だけでした。
+    reading: しゃちょうわ さちこの おっと。とりしまりやくわ さちこと ふたりの むすこ。とりしまりやくかいわ、かぞく だけでした。
+    telops:
+    - {text: "取締役会は 家族だけ", size: lg, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 大阪の料亭から遠く離れた売場まで、家族の目は届いていたのでしょうか。
+    reading: おおさかの りょうていから とおく はなれた うりばまで、かぞくの めわ とどいて いたの でしょうか。
+  - speaker: reimu
+    text: 料亭の外へ広げた売場の一つから、すべてが始まります。
+    reading: りょうていの そとえ ひろげた うりばの ひとつから、すべてが はじまります。
+# ---- 2007年秋・福岡の売場 ----
+- id: card2007
+  title: ''
+  background: sk_card_2007
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2007年9月。のれんを返す日まで、あと8か月あまり。
+    reading: にせんななねん くがつ。のれんお かえす ひまで、あと はっかげつ あまり。
+  - speaker: reimu
+    text: 福岡市の保健所に、匿名の電話が入ります。売場で、期限のラベルを張り替えている、と。
+    reading: ふくおかしの ほけんじょに とくめいの でんわが はいります。うりばで きげんの らべるお はりかえて いると。
+- id: ch3_label
+  title: ラベルの下のラベル
+  background: sk_uriba
+  stage:
+  - {who: tenin, x: 0.28, flip: true, emotion: normal}
+  - {who: kakari, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kakari
+    emotion: normal
+    text: 市の者です。このプリンの、ラベルを見せてください。
+  - speaker: tenin
+    emotion: thinking
+    text: ……はい。
+  - speaker: kakari
+    emotion: thinking
+    text: 賞味期限のシールの上に、日付のラベルを貼ってありますね。
+  - speaker: kakari
+    emotion: normal
+    text: でも、このプリンは消費期限で書くものですよ。
+  - speaker: tenin
+    emotion: surprised
+    text: 消費期限？ うちは全部、賞味期限で書いてます。
+  - speaker: kakari
+    emotion: thinking
+    text: 賞味期限とは、別のものです。
+  - speaker: tenin
+    emotion: surprised
+    text: ……違うんですか！？
+    se: gaan
+  - speaker: kakari
+    emotion: thinking
+    text: 消費期限が4日か5日のお菓子で、17日以上過ぎたものもありますね。
+  - speaker: tenin
+    emotion: sad
+    text: 17日……。
+  - speaker: kakari
+    emotion: normal
+    text: 張り替えたものは、販売を自粛してください。
+  - speaker: tenin
+    emotion: sad
+    text: ……はい。
+  - speaker: reimu
+    text: 10月27日、会社は売場の全商品の販売をやめました。
+    reading: じゅうがつ にじゅうななにち、かいしゃわ うりばの ぜんしょうひんの はんばいお やめました。
+    background: sk_uriba_kara
+- id: ch3_room
+  title: ''
+  background: sk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 17日も過ぎてたの！？ ボクの2日なんて、かわいいもんなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 比べるところじゃないわ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年1月からの21か月で、期限の切れたお菓子は約2700個売られたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2700個！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 21か月で割ると、1日に約4個。毎日4個ずつ、期限切れが売られていた計算ね。
+    telops:
+    - {text: "期限切れのお菓子 1日に約4個", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 毎日、4個も……。
+  - speaker: zundamon
+    emotion: thinking
+    text: でもお菓子のラベルで、料亭ののれんまで返すことになるの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: このときは、まだ福岡の売場の話。ここから話は、大阪の本店にまで広がるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本店にまで！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう。料亭そのものよ。
+# ---- 「パートの独断」と、パート4人の会見 ----
+- id: ch4_paat
+  title: パートに全責任？
+  background: sk_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: paat, x: 0.28, flip: true, emotion: thinking}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 会社は、パートの独断だったと説明しました。11月14日、売場のパートの女性たちが会見を開きます。
+    reading: かいしゃわ ぱーとの どくだんだったと せつめい しました。じゅういちがつ じゅうよっか、うりばの ぱーとの じょせいたちが かいけんお ひらきます。
+  - speaker: kisha
+    emotion: normal
+    text: 期限の張り替えは、誰の判断だったんですか。
+  - speaker: paat
+    emotion: thinking
+    text: 店長の取締役から、1か月延ばして売るよう指示されました。
+  - speaker: kisha
+    emotion: surprised
+    text: 取締役から！？
+    se: bikkuri
+  - speaker: paat
+    emotion: sad
+    text: 全責任はパート女性にある。そう書いた報告書に、署名を求められました。
+  - speaker: kisha
+    emotion: surprised
+    text: 署名、したんですか。
+  - speaker: paat
+    emotion: angry
+    text: いいえ。お断りしました。
+  - speaker: kisha
+    emotion: normal
+    text: 会社は、パートの独断だと説明していますが。
+  - speaker: paat
+    emotion: angry
+    text: わたしたちが勝手にやったんと、違います。
+  - speaker: kisha
+    emotion: thinking
+    text: 4人とも、同じ証言ですか。
+  - speaker: paat
+    emotion: normal
+    text: はい。
+  - speaker: reimu
+    text: 店長は、佐知子の次男でした。次男の取締役は、指示していないと否定しました。
+    reading: てんちょうわ さちこの じなんでした。じなんの とりしまりやくわ、しじ して いないと ひてい しました。
+  - speaker: reimu
+    text: この食い違いに、会社は1か月後、まったく別の答えを出します。
+    reading: この くいちがいに、かいしゃわ いっかげつご まったく べつの こたえお だします。
+# ---- 但馬牛の納品書と、府警の捜索 ----
+- id: ch5_tajima
+  title: 但馬牛の納品書
+  background: sk_jimusho
+  bgm: serious
+  stage:
+  - {who: choonan, x: 0.28, flip: true, emotion: thinking}
+  - {who: nosui, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じころ、大阪の本店には、農林水産省の調べが入っていました。
+    reading: おなじ ころ、おおさかの ほんてんにわ のうりん すいさんしょうの しらべが はいって いました。
+  - speaker: nosui
+    emotion: normal
+    text: '[但馬牛|タジマウシ]として売った牛肉の、納品書を見せてください。'
+  - speaker: nosui
+    emotion: thinking
+    text: ……産地の欄は、鹿児島産と佐賀産。
+  - speaker: nosui
+    emotion: thinking
+    text: 1回40キロを、月に2回。福岡の業者からですね。
+  - speaker: nosui
+    emotion: angry
+    text: '[但馬牛|タジマウシ]の納品書は、1枚もありませんね。'
+    se: don
+  - speaker: reimu
+    text: 長男は調べに、品質は劣ってないのでかまわないと思った、と話したと報じられました。
+    reading: ちょうなんわ しらべに、ひんしつわ おとってないので かまわないと おもったと はなしたと ほうじられました。
+  - speaker: nosui
+    emotion: normal
+    text: 本店の表示も、確かめさせてもらいます。
+  - speaker: nosui
+    emotion: thinking
+    text: 佐賀県産の和牛が、[但馬牛|タジマウシ]。ブロイラーが、地鶏……。
+  - speaker: reimu
+    text: 11月9日、農水省は本店の偽装を発表しました。
+    reading: じゅういちがつ ここのか、のうすいしょうわ ほんてんの ぎそうお はっぴょう しました。
+- id: ch5_sosaku
+  title: ''
+  background: sk_ryotei
+  stage:
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月16日、大阪府警が本店など12か所を捜索しました。
+    reading: じゅういちがつ じゅうろくにち、おおさかふけいが ほんてんなど じゅうにかしょお そうさく しました。
+  - speaker: kyaku
+    emotion: surprised
+    text: 牛肉のみそ漬けの産地を、偽った疑いやて。
+  - speaker: kyaku
+    emotion: sad
+    text: 府警が料亭に来るとはなあ。
+  - speaker: reimu
+    text: 船場吉兆は、すべての店の営業を休みます。
+    reading: せんば きっちょうわ、すべての みせの えいぎょうお やすみます。
+    background: sk_ryotei_kyugyo
+  - speaker: kyaku
+    emotion: surprised
+    text: 全店、休業……。
+    se: gaan
+  - speaker: kyaku
+    emotion: sad
+    text: 来月の予約、入れてあったんやけどなあ。
+# ---- 2007年12月10日の会見 ----
+- id: ch6_kaiken
+  title: 12月10日の会見
+  background: sk_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 湯木佐知子, emotion: sad}
+  - {who: choonan, x: 0.52, emotion: sad}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月10日。会社は国に改善報告書を出します。偽装は、合わせて44品目になりました。
+    reading: じゅうにがつ とおか。かいしゃわ くにに かいぜん ほうこくしょお だします。ぎそうわ あわせて よんじゅうよん ひんもくに なりました。
+    telops:
+    - {text: "偽装は合わせて44品目", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 会見に出たのは、長男の取締役と、母で取締役の佐知子。社長は出ていません。
+    reading: かいけんに でたのわ ちょうなんの とりしまりやくと、ははで とりしまりやくの さちこ。しゃちょうわ でて いません。
+  - speaker: kisha
+    emotion: normal
+    text: 従業員の独断、判断はあったんですか？
+  - speaker: zundamon
+    emotion: sad
+    text: ございません。
+  - speaker: kisha
+    emotion: normal
+    text: 一切なかったんですか？
+  - speaker: zundamon
+    emotion: sad
+    text: はい。
+  - speaker: reimu
+    text: 2人は、約40秒、頭を下げ続けました。
+    reading: ふたりわ やく よんじゅうびょう、あたまお さげ つづけました。
+    pause_after: 1.5
+  - speaker: kisha
+    emotion: normal
+    text: 九州産の牛肉を仕入れて、
+  - speaker: kisha
+    emotion: normal
+    text: '[但馬牛|タジマウシ]という名前で売ることに、欺くという意識がなかったわけですね？'
+  - speaker: reimu
+    text: 佐知子は、隣の長男に小さな声で答えを伝えます。その声を、マイクが拾っていました。
+    reading: さちこわ となりの ちょうなんに ちいさな こえで こたえお つたえます。その こえお、まいくが ひろって いました。
+  - speaker: zundamon
+    emotion: sad
+    text: ないですー。ないですー。
+  - speaker: choonan
+    emotion: sad
+    text: 申し訳ございません。
+  - speaker: zundamon
+    emotion: sad
+    text: はい、ないですー。ないですー。
+  - speaker: reimu
+    text: これまでの説明を覆した理由を問われても、小さな声は続きました。
+    reading: これまでの せつめいお くつがえした りゆうお とわれても、ちいさな こえわ つづきました。
+  - speaker: zundamon
+    emotion: sad
+    text: 頭が真っ白で、頭が真っ白で……。
+  - speaker: choonan
+    emotion: sad
+    text: はい、あのー、初めてのこういう記者会見という経験でございまして、
+  - speaker: choonan
+    emotion: sad
+    text: あのー、まぁ頭が真っ白になっていたといいましょうか……。
+# ---- 今の部屋（ございません、と、なぜ耳打ちしたのか） ----
+- id: mid_room
+  title: ''
+  background: sk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 小さな声が、全部マイクに入ってたのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: その前の、ございません。あれも大きい一言なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社はそれまで、パートの独断だと説明してたんだから。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分で、取り消したのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。従業員の独断はなかった、と認めたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、あの小さな声は……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会見の前の日に弁護士と想定問答を練習していた、と次男がのちに書いてるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 前の日に、練習まで……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 緊張した長男は、想定どおりに答えられなかったそうなの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 母は助け船のつもりで耳打ちした、と伝えられてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……必死だったのか。
+    se: namida
+- id: ch6_kaiken2
+  title: ''
+  background: sk_kaiken
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 湯木佐知子, emotion: sad}
+  - {who: choonan, x: 0.52, emotion: sad}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[佐知子|さちこ]さんは取締役を辞めないんですか。'
+  - speaker: zundamon
+    emotion: sad
+    text: 本来なら退任しないといけませんけども、現状を踏まえた場合、
+  - speaker: zundamon
+    emotion: sad
+    text: 皆様のお許しがいただけるならば、残らせていただいて、
+  - speaker: zundamon
+    emotion: sad
+    text: なんとか再生させていただきたいと思っています。
+  - speaker: reimu
+    text: この日、社長の夫と2人の息子は責任を取って辞めると発表しました。残ると言ったのは佐知子だけです。
+    reading: この ひ、しゃちょうの おっとと ふたりの むすこわ せきにんお とって やめると はっぴょう しました。のこると いったのわ、さちこ だけです。
+  - speaker: kisha
+    emotion: normal
+    text: 創業者のお父さまに、いまどんな思いですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 父に対して申し訳ないという気持ちでいっぱいでございます。
+  - speaker: zundamon
+    emotion: sad
+    text: お前はなんてひどいことをしたんやと言うて叱られると思います。
+    telops:
+    - {text: "佐知子「叱られると思います」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 涙を流しながらの答えでした。
+    reading: なみだお ながしながらの こたえでした。
+  - speaker: reimu
+    text: メディアはこの会見に、「ささやき女将」という呼び名を付けて、繰り返し流しました。
+    reading: めでぃあわ この かいけんに、ささやき おかみと いう よびなお つけて くりかえし ながしました。
+# ---- 2008年1月・女将が社長に ----
+- id: card2008
+  title: ''
+  background: sk_card_2008
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2008年1月、船場吉兆は民事再生法の適用を申請。負債は約8億円。新しい社長は、佐知子です。
+    reading: にせんはちねん いちがつ、せんば きっちょうわ みんじ さいせいほうの てきようお しんせい。ふさいわ やく はちおくえん。あたらしい しゃちょうわ、さちこです。
+- id: ch7_shacho
+  title: 女将が社長に
+  background: sk_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月21日。再生の手続きが始まり、社長の佐知子が会見に立ちます。
+    reading: いちがつ にじゅういちにち。さいせいの てつづきが はじまり、しゃちょうの さちこが かいけんに たちます。
+  - speaker: kisha
+    emotion: normal
+    text: 12月の会見の、小さな声についてですが。
+  - speaker: zundamon
+    emotion: sad
+    text: 精巧なマイクで一語一語、聞き取れるということを存じませんでした。
+- id: ch7_saikai
+  title: ''
+  background: sk_ryotei
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日、本店は約2か月ぶりに、営業を再開しました。
+    reading: よくじつ、ほんてんわ やく にかげつぶりに えいぎょうお さいかい しました。
+  - speaker: kyaku
+    emotion: normal
+    text: '[女将|おかみ]さん……いや、社長さんか。'
+  - speaker: zundamon
+    emotion: happy
+    text: ようこそ、おいでくださいました。
+  - speaker: kyaku
+    emotion: happy
+    text: また来られて、よかったわ。
+  - speaker: kyaku
+    emotion: normal
+    text: 社長さんが自分で、玄関に立つんやな。
+  - speaker: zundamon
+    emotion: happy
+    text: どうぞ、お上がりくださいませ。
+  - speaker: reimu
+    text: 会社の弁護士によると、再開のあと、店は毎月黒字でした。
+    reading: かいしゃの べんごしに よると、さいかいの あと みせわ まいつき くろじでした。
+  - speaker: reimu
+    text: このときまだ、休業の前に板場で何があったかは、表に出ていません。
+    reading: この とき まだ、きゅうぎょうの まえに いたばで なにが あったかわ おもてに でて いません。
+# ---- 2008年5月・一度出した料理 ----
+- id: ch8_itaba
+  title: 箸をつけていない料理
+  background: sk_itaba
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: ryoricho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2008年5月。本店で、客が箸をつけずに残した料理を、別の客に出していたと分かります。
+    reading: にせんはちねん ごがつ。ほんてんで きゃくが はしお つけずに のこした りょうりお、べつの きゃくに だして いたと わかります。
+  - speaker: kisha
+    emotion: surprised
+    text: 一度お客さんに出した料理を、別のお客さんに！？
+    se: don
+  - speaker: ryoricho
+    emotion: thinking
+    text: 料理が足りなくなったときにやっていた。2週間に1回程度の頻度。
+  - speaker: kisha
+    emotion: thinking
+    text: 2週間に、1回……。
+  - speaker: reimu
+    text: アユの塩焼きは焼き直し、天ぷらは揚げ直し。刺身は盛り直し、つまは洗ってもう一度。
+    reading: あゆの しおやきわ やきなおし、てんぷらわ あげなおし。さしみわ もりなおし、つまわ あらって もう いちど。
+  - speaker: reimu
+    text: 料理長と会社の弁護士は、前の社長の指示だったと説明しました。
+    reading: りょうりちょうと かいしゃの べんごしわ、まえの しゃちょうの しじだったと せつめい しました。
+- id: ch8_room
+  title: ''
+  background: sk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 12月の会見で、全部打ち明けたんじゃなかったの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 12月の改善報告書には、使い回しのことは書かれていなかったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会社は新聞の最初の取材に、そういう事実は判明していないと答えていたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 後から後から、出てくるのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長の[佐知子|さちこ]は3月ごろに警察の聴取で知った、と説明してるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長になってから、知ったのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもお客さんから見れば、同じ[船場|せんば]吉兆の料理よ。
+- id: ch8_maede
+  title: ''
+  background: sk_ryotei
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 5月7日、本店の前。社長の佐知子が、記者の問いに答えます。
+    reading: ごがつ なのか、ほんてんの まえ。しゃちょうの さちこが きしゃの といに こたえます。
+  - speaker: kisha
+    emotion: normal
+    text: 食べ残しの使い回し、と言われていますが。
+  - speaker: zundamon
+    emotion: normal
+    text: 手つかずの料理を食べ残しと表現するのはニュアンスが違うと思う
+- id: ch8_yoyaku
+  title: ''
+  background: sk_ryotei
+  bgm: 223am
+  stage:
+  - {who: nakai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 使い回しは、閉めた店も含めた4店すべてで行われていました。
+    reading: つかいまわしわ、しめた みせも ふくめた よんてん すべてで おこなわれて いました。
+  - speaker: nakai
+    emotion: normal
+    text: はい、[船場|せんば]吉兆でございます。
+  - speaker: nakai
+    emotion: sad
+    text: ……ご予約の、お取り消しですね。かしこまりました。
+  - speaker: nakai
+    emotion: sad
+    text: ……今日だけで、何件目やろ。
+    se: shobon
+  - speaker: nakai
+    emotion: normal
+    text: はい、[船場|せんば]吉兆でございます。……はい、お取り消しですね。
+  - speaker: reimu
+    text: 予約は、発覚の前の半分に。やがて3分の1にまで減りました。
+    reading: よやくわ はっかくの まえの はんぶんに。やがて さんぶんの いちにまで へりました。
+# ---- 2008年5月28日・のれんを返す日 ----
+- id: ch9_noren
+  title: のれんを返す日
+  background: sk_hotel
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 湯木佐知子, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 5月28日、午後1時。大阪市内のホテルで、社長の佐知子が会見を開きます。
+    reading: ごがつ にじゅうはちにち、ごご いちじ。おおさか しないの ほてるで、しゃちょうの さちこが かいけんお ひらきます。
+  - speaker: zundamon
+    emotion: sad
+    text: お客様、関係取引先、社会の皆様に大変なご迷惑をおかけし、
+  - speaker: zundamon
+    emotion: sad
+    text: 食品の安全、安心に対する信頼を裏切ったことを心よりおわび申し上げます。
+  - speaker: zundamon
+    emotion: sad
+    text: 食に携わる者に、あるまじき行為であり、改めて深く心からおわび申し上げます。
+  - speaker: zundamon
+    emotion: sad
+    text: もはや吉兆というのれんを用いて営業することは、社会的にも許されない
+  - speaker: kisha
+    emotion: normal
+    text: のれんは……
+  - speaker: zundamon
+    emotion: sad
+    text: 自主的に返上させていただくことにした
+    telops:
+    - {text: "佐知子「自主的に返上させていただくことにした」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 使い回しが大きく影響した。客の予約状況が半分から[3分の1|さんぶんのいち]まで減った。
+  - speaker: zundamon
+    emotion: sad
+    text: 世間をお騒がせして、これ以上営業を続けられない
+  - speaker: reimu
+    text: 涙をぬぐいながらの会見でした。
+    reading: なみだお ぬぐいながらの かいけんでした。
+- id: ch9_kara
+  title: ''
+  background: sk_ryotei
+  bgm: 223am
+  stage:
+  - {who: nakai, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: この日、船場吉兆は廃業届を出しました。
+    reading: この ひ、せんば きっちょうわ はいぎょうとどけお だしました。
+  - speaker: reimu
+    text: のれんは下ろされ、従業員約80人は、全員解雇されました。
+    reading: のれんわ おろされ、じゅうぎょういん やく はちじゅうにんわ ぜんいん かいこ されました。
+    background: sk_ryotei_kara
+  - speaker: nakai
+    emotion: sad
+    text: ……長い間、ありがとうございました。
+  - speaker: nakai
+    emotion: sad
+    text: お見送りは、これでおしまいやね。
+# ---- その後（破産と書類送検） ----
+- id: ch10_hasan
+  title: 破産と書類送検
+  background: sk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: お店を閉めて、会社はどうなったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 6月、[船場|せんば]吉兆の破産手続きの開始が決まったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 警察のほうは？
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ年、府警は前の社長と長男と会社を、
+  - speaker: tsumugi
+    emotion: normal
+    text: 不正競争防止法違反の疑いで書類送検した、と報じられたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 書類送検……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ看板のほかの吉兆からもほかの企業からも、支援は得られなかったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 同じ看板でも、助けるかどうかは別なのか……。
+- id: card2010
+  title: ''
+  background: sk_card_2010
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2010年10月。外食チェーンで働いていた次男が、難波に6坪、6席の店を開きます。
+    reading: にせんじゅうねん じゅうがつ。がいしょく ちぇーんで はたらいて いた じなんが、なんばに ろくつぼ ろくせきの みせお ひらきます。
+  - speaker: reimu
+    text: 2015年、次男は取材にこう語っています。我々の慢心が、あの事件を招いたのですから。
+    reading: にせんじゅうごねん、じなんわ しゅざいに こう かたって います。われわれの まんしんが あの じけんお まねいたの ですから。
+# ---- 論争の章 ----
+- id: ronso1
+  title: 全部、女将のせい？
+  background: sk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 分かったのだ！ 全部、会見の[女将|おかみ]のせいなのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 会見の印象は、たしかに強く残ったわね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも偽装の多くは、会見よりずっと前に起きてたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: そうなの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 期限切れのお菓子は2006年から。九州の牛肉の仕入れは、2004年ごろからよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会見の、何年も前なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 会見の日、社長だったのは夫。[佐知子|さちこ]が社長になったのは、翌年の1月。
+  - speaker: tsumugi
+    emotion: normal
+    text: 警察が書類送検したと報じられたのは、前の社長と長男と会社だったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 使い回しも、関係者は前の社長の指示だったと証言してるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、[佐知子|さちこ]さんは関係なかったのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうとも言えないの。[佐知子|さちこ]は取締役で、会社を動かす側の1人だったから。
+  - speaker: tsumugi
+    emotion: normal
+    text: のれんを返すと決めたのも、社長の[佐知子|さちこ]よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会見の場面だけじゃ、分からないのだ……。
+    beat: true
+- id: ronso2
+  title: 誰が指示したのか
+  background: sk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、お菓子のラベルは誰の指示だったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は最初、パートの独断だと説明したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: パートの人たちは、店長の取締役に指示されたと証言したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その取締役は、指示していないと否定したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 正反対なのだ！
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社の報告書には、[何|なん]て書いてあるのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 改善報告書は、経営陣が見て見ぬふりをしてきた責任を認めたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも取締役の個別の具体的な指示があったかは、はっきりさせていないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 言ってることが、みんなちがうのだ！
+    se: tenten
+  - speaker: tsumugi
+    emotion: normal
+    text: だから、誰が指示したかは決めつけないでおくわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、はっきりしてることは？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 家族だけの取締役会が、売場の偽装を止められなかったことね。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 消費期限と賞味期限
+  background: sk_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ところで、ボクのプリン。消費期限って、[何|なん]なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: その前に。2007年の今年の漢字は、偽りの一字だったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 食品の表示の偽りが、次々に見つかった年なのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 漢字1字に、なっちゃったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 消費期限は、決められた方法で保存したとき安全に食べられる期限。
+  - speaker: tsumugi
+    emotion: normal
+    text: 賞味期限は、おいしく食べられる目安の期限よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 安全と、おいしさ！？ 全然ちがうのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 福岡の売場は、この違いを知らないまま全部を賞味期限と書いていたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクと同じなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: どちらも開けていない状態で、書かれた保存方法を守ったときの期限よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: お弁当や生菓子の消費期限は、過ぎたら食べない。
+    telops:
+    - {text: "消費期限＝安全　賞味期限＝おいしさ", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: スナック菓子や缶詰の賞味期限は、おいしさの目安ね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 書いてあるのは、開ける前の期限。開けたら、早めに食べるのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクのプリン、消費期限って書いてあるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: だから言ったでしょ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: もう一つ。[船場|せんば]吉兆の牛肉は、売り物のみそ漬けの表示で疑いをかけられたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: お店の料理のメニューの表示も、景品表示法という法律で見られているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: メニューの産地に疑問があったら、お店に聞いていいの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 聞いて、答えられないお店は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 少し気をつける、くらいでいいと思うわ。
+# ---- 現代 ----
+- id: ima
+  title: 船場吉兆の、いま
+  background: sk_heya
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[船場|せんば]吉兆の本店は、いまどうなってるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 建物は、テナントの入るビルになってるわ。
+    background: sk_tenant
+  - speaker: zundamon
+    emotion: sad
+    text: 料亭の面影は、もうないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、吉兆の名前は消えていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1991年に分かれたほかの4つの吉兆は、いまも営業してるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前は1つ、会社は5つ……。だから、ほかの店は残ったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 吉兆のグループは2008年に、法令を守るための委員会もつくったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 同じ看板を、それぞれの会社で守っていくのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次男は2011年から、北新地で[日本料理|にほんりょうり]の店を続けてるの。
+  - speaker: zundamon
+    emotion: normal
+    text: 料理の道に、戻ったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年には、お店は4つになっていたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 6席の店から、4店に！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[佐知子|さちこ]は2026年の番組で、健在と伝えられたわ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: そうなのか……。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: sk_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 期限の切れたプリンは、ちゃんと見送るのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 見送り七歩で、ゴミ箱までね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 出迎え三歩、見送り七歩。吉兆の創業者の教えよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[船場|せんば]吉兆は、外の売場にも本店の板場にも目が届いていなかったの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして最後は、父がつくった吉兆ののれんを自分の手で返したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 継いだ名前を、自分で見送ったのか……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 看板を守るのは、毎日のラベル1枚なのかもしれないわね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

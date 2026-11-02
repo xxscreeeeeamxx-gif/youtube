@@ -4414,6 +4414,23 @@ SPECS = {
         dict(scene="tt_kaiken_heya", tint="mono", tag="2017年 破綻の日", emo="thinking", fx=None, say="何が悪かった…"),
     ]),
     # 第5弾（2026-11-13〜16）。A は場面型
+    # 第6弾（2026-11-17〜20。方向転換の実験：会社の転落・破綻・裁判）。A は場面型、B は資料型（ab_variants）
+    "takefuji-takei": dict(layout="scene", headline="日本一の納税者が被告人に", head_hi="被告人", panels=[
+        dict(scene="bf_kokkai", tint="yellow", tag="1994年 国会", emo="happy", fx="sparkle", say="納税は日本一"),
+        dict(scene="bf_houtei", tint="mono", tag="2004年 被告人席", emo="sad", fx="gloom", say="間違いありません"),
+    ]),
+    "nova-saruhashi": dict(layout="scene", headline="社長、自分の会社を追われる", head_hi="追われる", panels=[
+        dict(scene="nv_kaiken", tint="yellow", tag="2007年6月 会見", emo="normal", fx="sweat", say="影響は軽微だ"),
+        dict(scene="nv_honbu_yoru", tint="mono", tag="4か月後 解任", emo="sad", fx="gloom", say="1週間遅かった"),
+    ]),
+    "otsuka-kagu": dict(layout="scene", headline="61%で勝った娘、5年で去る", head_hi="5年で去る", panels=[
+        dict(scene="ok_kaiken_kanbu", tint="mono", tag="2015年 父の会見", emo="sad", fx="gloom", say="間違いだった", by="父"),
+        dict(scene="ok_soukai", tint="yellow", tag="2015年 株主総会", emo="surprised", fx="sweat", say="61%で勝った"),
+    ]),
+    "senba-kitcho": dict(layout="scene", headline="のれんを自分から返した", head_hi="返した", panels=[
+        dict(scene="sk_kaiken", tint="mono", tag="2007年 会見", emo="sad", fx="gloom", say="叱られると思います"),
+        dict(scene="sk_ryotei_kara", tint="mono", tag="2008年 廃業", emo="sad", fx="gloom", say="自主的に返上"),
+    ]),
     "funai-collapse": dict(layout="scene", headline="1円で人手に、即日破産", head_hi="即日破産", panels=[
         dict(scene="fn_soko", tint="yellow", tag="1951年 大晦日", emo="angry", fx="sweat", say="元旦や……"),
         dict(scene="fn_setsumeikai", tint="mono", tag="2024年 即日解雇", emo="sad", fx="gloom", say="即時解雇です", by="会社側"),
