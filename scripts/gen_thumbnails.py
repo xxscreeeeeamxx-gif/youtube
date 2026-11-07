@@ -4478,6 +4478,23 @@ SPECS = {
         dict(scene="tt_kaiken_heya", tint="mono", tag="2017年 破綻の日", emo="thinking", fx=None, say="何が悪かった…"),
     ]),
     # 第5弾（2026-11-13〜16）。A は場面型
+    # 第7弾（2026-11-21〜24。方向転換の実験の5〜8本目）。A は場面型、B は資料型、C は言葉型（ab_variants）
+    "bigmotor-fusei": dict(layout="scene", headline="9か月余りで人手に", head_hi="人手に", panels=[
+        dict(scene="bm_kojo_fusen", tint="yellow", tag="2022年 板金工場", emo="surprised", fx="sweat", say="1台14万円！？"),
+        dict(scene="bm_kaiken", tint="mono", tag="2023年 会見", emo="sad", fx="gloom", say="天地神明に誓って"),
+    ]),
+    "ikinari-steak": dict(layout="scene", headline="490店が3年で半分以下", head_hi="半分以下", panels=[
+        dict(scene="ik_party", tint="yellow", tag="2017年 パーティー", emo="happy", fx="sparkle", say="来年は200店舗"),
+        dict(scene="ik_mise_harigami", tint="mono", tag="2019年 貼り紙", emo="sad", fx="gloom", say="お近くの店を閉める"),
+    ]),
+    "kanebo-funshoku": dict(layout="scene", headline="1年5か月後に逮捕", head_hi="逮捕", panels=[
+        dict(scene="kn_kaiken", tint="yellow", tag="2004年 会見", emo="normal", fx="sweat", say="後輩に譲る"),
+        dict(scene="kn_houtei", tint="mono", tag="2006年 判決", emo="sad", fx="gloom", say="責任は私を含めて"),
+    ]),
+    "skymark-saisei": dict(layout="scene", headline="半年で民事再生", head_hi="民事再生", panels=[
+        dict(scene="sm_kaigi_4ji", tint="yellow", tag="2010年 A380", emo="happy", fx="sparkle", say="A380を6機"),
+        dict(scene="sm_shacho_fax", tint="mono", tag="2014年 ファクス", emo="sad", fx="gloom", say="会議も一度もない"),
+    ]),
     # 第6弾（2026-11-17〜20。方向転換の実験：会社の転落・破綻・裁判）。A は場面型、B は資料型（ab_variants）
     "takefuji-takei": dict(layout="scene", headline="日本一の納税者が被告人に", head_hi="被告人", panels=[
         dict(scene="bf_kokkai", tint="yellow", tag="1994年 国会", emo="happy", fx="sparkle", say="納税は日本一"),
