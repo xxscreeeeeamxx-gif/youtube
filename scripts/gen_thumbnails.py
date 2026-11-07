@@ -22,7 +22,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont, ImageOps  # noqa: E402
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps  # noqa: E402
 
 from ytf.config import Config  # noqa: E402
 from ytf.assets_gen import sprite_path  # noqa: E402
@@ -2817,6 +2817,70 @@ def layout_doc(spec):
     return img.convert("RGB")
 
 
+def _glow(img, xy, text, f, fill, stroke, sw, glow=None, radius=14, anchor="ma"):
+    """フチ付きの字。glow を渡すと字の周りをその色で光らせる（言葉型の下の赤字）。img は RGB。"""
+    if glow:
+        g = Image.new("RGB", img.size, (0, 0, 0))
+        ImageDraw.Draw(g).text(xy, text, font=f, fill=glow, stroke_width=sw * 2, stroke_fill=glow, anchor=anchor)
+        img.paste(ImageChops.add(img, g.filter(ImageFilter.GaussianBlur(radius))))
+    ImageDraw.Draw(img).text(xy, text, font=f, fill=fill, stroke_width=sw, stroke_fill=stroke, anchor=anchor)
+
+
+def layout_quote(spec):
+    """言葉型（2026-11-07〜）。上に本人の実際の言葉（白）と出どころ、真ん中に場面と主人公、下に赤で結果。
+
+    ユーザー「なぜ〇〇？は押したくならない」。伸びている競合（クレーエ）の「上に本人の言葉、下に赤で結果」の型。
+    犯罪チャンネルの言葉型（C:\\yt-crime の layout="quote"）と同じ見た目で、実写の代わりに自作の背景と、
+    主人公を演じるずんだもんを置く（実在の人の写真は使わない）。言葉は会見・判決・著書・会議録の原文だけ。
+    spec: tag（左上の赤帯）, quote（1〜2行。「」込み）, src（出どころ）, result（赤の結果）, scene, tint,
+          emo（表情。None ならキャラなし）, who, fx, bust_top（立ち絵の上端）。誰の言葉かは src で言う
+    """
+    img = _scene_bg(W, H, spec["scene"], spec.get("tint", "mono")).convert("RGB")
+    img = ImageEnhance.Brightness(img).enhance(spec.get("bright", 0.75))
+    emo = spec.get("emo", "sad")
+    if emo:
+        # 顔が言葉と赤字の間（y 200〜590）に来るように、上をそろえて置く（下に置くと赤字が顔にかかる）
+        two = len(spec["quote"]) >= 2                          # 言葉が2行なら小さくして下げる（出どころに重ねない）
+        bu = bust(spec.get("who", "zundamon"), emo, height=int(H * (0.50 if two else 0.62)), crop=0.40).convert("RGBA")
+        bu = _fx(bu, spec.get("fx"), inner_left=False)
+        canvas = img.convert("RGBA")
+        canvas.alpha_composite(bu, ((W - bu.width) // 2 + spec.get("dx", 0), spec.get("bust_top", 286 if two else 190)))
+        img = canvas.convert("RGB")
+    band = Image.new("L", (1, H))                              # 上と下の字の下地を暗く
+    for y in range(H):
+        t = y / H
+        band.putpixel((0, y), min(255, int(max(0, 1 - t / 0.30) * 225 + max(0, (t - 0.68) / 0.32) * 235)))
+    img = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), img, band.resize((W, H)))
+    d = ImageDraw.Draw(img)
+    key = spec.get("_key", "")
+    tag = spec.get("tag", "")
+    if tag:
+        _budget("tag", tag, 11, key)
+        f = font("w9", 34)
+        d.rectangle([0, 14, _tw(f, tag) + 44, 66], fill=(200, 16, 30))
+        _ttext(d, (22, 17), tag, f, (255, 255, 255))
+    y = 80 if tag else 26
+    for line in spec["quote"]:
+        _budget("quote", line.strip("「」"), 16, key)
+        size = spec.get("quote_size", 84)
+        while size > 44 and _tw(font("w9", size), line) > W - 60:
+            size -= 2
+        f = font("w9", size)
+        _glow(img, (W // 2, y), line, f, (255, 255, 255), (0, 0, 0), 7, glow=(60, 60, 60), radius=10)
+        y += int(size * 1.18)
+    if spec.get("src"):
+        _budget("src", spec["src"], 30, key)
+        _glow(img, (W // 2, y + 4), spec["src"], font("w9", 28), (215, 215, 215), (0, 0, 0), 4)
+    res = spec["result"]
+    _budget("result", res, 14, key)
+    size = spec.get("result_size", 104)
+    while size > 56 and _tw(font("w9", size), res) > W - 80:
+        size -= 2
+    _glow(img, (W // 2, H - 26), res, font("w9", size), (255, 40, 40), (40, 0, 0), 7,
+          glow=(200, 0, 0), radius=16, anchor="md")
+    return img
+
+
 def layout_stack(spec):
     """上下分割型。文字は横幅いっぱい・顔は右下に大きく。
 
@@ -4571,6 +4635,7 @@ def render(slug, out_path=None):
            "conflict": layout_conflict,
            "scene": layout_scene,
            "doc": layout_doc,
+           "quote": layout_quote,
            "panels": layout_panels}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
