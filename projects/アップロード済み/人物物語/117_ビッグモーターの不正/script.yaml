@@ -1,0 +1,1110 @@
+meta:
+  title: 「天地神明に誓って、知りませんでした」と言ったビッグモーター創業者、会社は人手に渡った【ずんだもん解説】
+  slug: bigmotor-fusei
+  hook_line: 創業者が「知りませんでした」と言った不正は、なぜ全国の工場で起きたのか。
+  summary: 2023年7月、中古車販売の大手ビッグモーターの創業者・兼重宏行は、会見で「天地神明に誓って、知りませんでした」と語りました。板金の工場に回っていた「1台14万円」の目標。事故車を紹介する損保と、店で売られる保険。写真だけで見積もる部屋。そして1年半前、工場の作業員から社長に届いたLINE。不正はなぜ全国の工場で同じ形で起きたのか。特別調査委員会と損保側の報告書、会見の言葉をもとに、それぞれの言い分を並べて再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 株式会社ビッグモーター 特別調査委員会「調査報告書」（2023年6月26日・同社が7月18日に公表／ウェブアーカイブ） https://web.archive.org/web/20230720200919/https://www.bigmotor.co.jp/pdf/research-report.pdf
+  - SOMPOホールディングス 自動車保険金不正請求に関する社外調査委員会「調査報告書」（2024年1月16日） https://www.sompo-hd.com/-/media/hd/files/news/2024/20240116_1.pdf
+  - 国土交通省「ビッグモーターに対する行政処分等及び同種事案の再発防止について」（2024年3月29日） https://www.mlit.go.jp/report/press/jidosha09_hh_000318.html
+  - 金融庁「株式会社ビッグモーター、株式会社ビーエムホールディングス及び株式会社ビーエムハナテンに対する行政処分について」（2023年11月24日） https://www.fsa.go.jp/news/r5/hoken/20231124.html
+  - 日本経済新聞「ビッグモーター会見 兼重社長「天地神明に誓って知りませんでした」」（2023年7月25日） https://www.nikkei.com/article/DGXZQOUC250KJ0V20C23A7000000/
+  - 株式会社BALM「民事再生手続開始の申立てに関するお知らせ」（2024年12月2日） https://balm-info.jp/assets/pdf/document_241202.pdf
+  tags:
+  - ビッグモーター
+  - 兼重宏行
+  - 損保ジャパン
+  - 保険金不正請求
+  - 板金塗装
+  - 特別調査委員会
+  - 中古車
+  - 自賠責保険
+  - 街路樹
+  - WECARS
+  - BALM
+  - 民事再生
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: 天地神明に誓って
+    bottom: ビッグモーター
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a48'
+  - id: honbu
+    label: 本部幹部
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kojocho
+    label: 工場長
+    voice: 11
+    pitch: -0.02
+    outfit: work
+    color: '#3e4a5a'
+  - id: front
+    label: フロント
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#6a7a8a'
+  - id: pt
+    label: 見積担当
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: sagyoin
+    label: 塗装作業員
+    voice: 100
+    pitch: -0.04
+    outfit: work
+    color: '#8a6a4a'
+  - id: bucho
+    label: BP部長
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: sonpo1
+    label: 損保の幹部
+    voice: 13
+    pitch: 0.14
+    outfit: suit
+    color: '#1f2a44'
+  - id: sonpo2
+    label: 損保の社員
+    voice: 8
+    pitch: -0.08
+    outfit: suit
+    color: '#5a5a7a'
+  - id: izumi
+    label: 和泉伸二
+    voice: 11
+    pitch: 0.06
+    outfit: suit
+    color: '#2f3a52'
+  - id: kyaku
+    label: 客
+    voice: 8
+    pitch: 0.1
+scenes:
+# ---- 先出し（2023年7月25日・会見。日経の時刻つき速報の順：11:15ごろ「冒瀆ですよ」→ 12:38ごろ「天地神明に」） ----
+- id: co_kaiken
+  title: ''
+  background: bm_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 兼重宏行, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2023年7月、東京。中古車販売の大手、ビッグモーターの創業者、兼重宏行の会見です。
+    reading: にせん にじゅうさんねん しちがつ とうきょう。ちゅうこしゃ はんばいの おおて びっぐもーたーの そうぎょうしゃ、かねしげ ひろゆきの かいけんです。
+  - speaker: reimu
+    text: 報告書が認めた、ゴルフボールで車を叩く手口について。
+    reading: ほうこくしょが みとめた ごるふぼーるで くるまお たたく てぐちに ついて。
+  - speaker: zundamon
+    emotion: angry
+    text: ゴルフを愛する人に対する[冒瀆|ぼうとく]ですよ
+  - speaker: reimu
+    text: 1時間あまりのち。記者は、こう問いました。
+    reading: いちじかん あまり のち。きしゃわ こう といました。
+  - speaker: kisha
+    emotion: normal
+    text: 板金部門以外も、不正を認識していたとの疑惑があります。
+  - speaker: kisha
+    emotion: normal
+    text: 社長は現場とLINEでつながっていたのに、本当に不正を認識していなかったんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: '[天地神明|てんちしんめい]に誓って、知りませんでした'
+  - speaker: reimu
+    text: この翌日、創業者は社長を辞めました。会社はこのあと9か月余りで、事業ごと別の会社に渡ります。
+    reading: この よくじつ、そうぎょうしゃわ しゃちょうお やめました。かいしゃわ この あと きゅうかげつ あまりで、じぎょうごと べつの かいしゃに わたります。
+# ---- 今の部屋（バンパーの修理の見積書） ----
+- id: hook
+  title: ''
+  background: bm_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ バンパーの修理、見積もり5万円。保険で払えばタダなのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: 保険を使ったら、来年から保険料が上がるわよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、その見積もりは本当に正しい？
+  - speaker: zundamon
+    emotion: surprised
+    text: え……？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 社長が知らなかったと言った不正が、全国の工場で起きていた会社があるの。
+    telops:
+    - {text: "「知りませんでした」　なぜ全国の工場で？", size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 社長が知らないのに、なんで全国で同じことが起きるの！？
+# ---- 2005年・全て直営店だ ----
+- id: card2005
+  title: ''
+  background: bm_card_2005
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2005年5月。中古車のビッグモーターは、店を41にまで増やしていました。
+    reading: にせん ごねん ごがつ。ちゅうこしゃの びっぐもーたーわ、みせお よんじゅういちにまで ふやして いました。
+- id: ch1_chokuei
+  title: 41店、全て直営
+  background: bm_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 兼重宏行, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: グループ各社を含めて、いまは41店。その特徴は。
+  - speaker: zundamon
+    emotion: happy
+    text: 当社の場合は全て直営店だ。
+  - speaker: kisha
+    emotion: normal
+    text: 大阪の老舗、[ハナテン|はなてん]にも資本を入れましたね。
+  - speaker: zundamon
+    emotion: normal
+    text: '[ハナテン|はなてん]は中古車業界の老舗で、関西圏では強いブランド力を持っている。'
+  - speaker: reimu
+    text: 拠点の長には、粗利益の目標を意識させる。創業者は、そう語っていました。
+    reading: きょてんの ちょうにわ あらりえきの もくひょうお いしき させる。そうぎょうしゃわ そう かたって いました。
+- id: ch1_iwakuni
+  title: ''
+  background: bm_seibi_old
+  cuts:
+  - speaker: reimu
+    text: 1970年代に岩国の整備工場から始めた会社は、2023年には約300店・社員約6000人になります。
+    reading: せんきゅうひゃく ななじゅうねんだいに いわくにの せいび こうじょうから はじめた かいしゃわ、にせん にじゅうさんねんにわ やく さんびゃくてん しゃいん やく ろくせんにんに なります。
+# ---- 2020〜2022年・工場長会議の「アット」 ----
+- id: card2020
+  title: ''
+  background: bm_card_2020
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2020年。板金と塗装の工場は、2014年には14か所。2021年には29か所になります。
+    reading: にせん にじゅうねん。ばんきんと とそうの こうじょうわ、にせん じゅうよねんにわ じゅうよんかしょ。にせん にじゅういちねんにわ にじゅうきゅうかしょに なります。
+- id: ch2_at
+  title: 1台14万円の目標
+  background: bm_kaigi
+  stage:
+  - {who: honbu, x: 0.28, flip: true, emotion: normal}
+  - {who: kojocho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 今週のアットだ。修理1台あたりの工賃と部品のもうけ、全部の工場の分。
+  - speaker: honbu
+    emotion: normal
+    text: 目標は1台14万円前後。届いていない工場は、説明してもらう。
+    telops:
+    - {text: "アット＝修理1台のもうけ　目標14万円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kojocho
+    emotion: thinking
+    text: 事故の修理代は、来た車の傷の具合で決まりますので……。
+  - speaker: honbu
+    emotion: angry
+    text: "[月末|げつまつ]までに、どうやって数字を達成するんだ。"
+    se: don
+  - speaker: kojocho
+    emotion: sad
+    text: お客さんに事故を起こしてくれと言えるものではない……。
+  - speaker: kojocho
+    emotion: thinking
+    text: バンパー1枚の修理にも、1台14万円ですか。
+  - speaker: honbu
+    emotion: normal
+    text: 平均で14万だ。
+  - speaker: reimu
+    text: 報告書は、この目標に社長が直接かかわっていたとは認めていません。では、誰のための数字だったのか。
+    reading: ほうこくしょわ、この もくひょうに しゃちょうが ちょくせつ かかわって いたとわ みとめて いません。でわ だれの ための すうじだったのか。
+# ---- 2021年度・事故車を回す損保 ----
+- id: ch2_sonpo
+  title: 事故車を回す損保
+  background: bm_sonpo
+  bgm: kinakusai
+  stage:
+  - {who: sonpo1, x: 0.28, flip: true, emotion: normal}
+  - {who: sonpo2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じころ、大手損保の損保ジャパン。事故にあった客に、修理工場を紹介する仕組みがありました。
+    reading: おなじ ころ、おおて そんぽの そんぽ じゃぱん。じこに あった きゃくに しゅうり こうじょうお しょうかい する しくみが ありました。
+  - speaker: sonpo2
+    emotion: thinking
+    text: ビッグモーターへの紹介目標は、担当の部で今年度1,902台です。
+  - speaker: sonpo2
+    emotion: thinking
+    text: でも、修理の質の低い工場もあります。
+  - speaker: sonpo2
+    emotion: thinking
+    text: 去年は出向している社員から、こんな報告も。
+  - speaker: sonpo2
+    emotion: thinking
+    text: 工場長たちは叱責を恐れて、[何|なん]とか売上げを捻出しようとしている。
+  - speaker: sonpo2
+    emotion: sad
+    text: それが不正につながりかねない、と。
+  - speaker: sonpo1
+    emotion: normal
+    text: 紹介の台数は、必ず達成してくれ。
+  - speaker: sonpo1
+    emotion: normal
+    text: 紹介すれば、向こうは店でうちの保険を売ってくれる。
+  - speaker: sonpo1
+    emotion: angry
+    text: 紹介が少なければ、担当の損保をよそに替えられるぞ。
+  - speaker: sonpo2
+    emotion: sad
+    text: ……紹介を優先するしか、ないんですね。
+  - speaker: reimu
+    text: 2022年度、この会社が代理店として扱った保険料は約200億円。その6割が、損保ジャパンの分でした。
+    reading: にせん にじゅうにねんど、この かいしゃが だいりてんと して あつかった ほけんりょうわ やく にひゃくおくえん。その ろくわりが そんぽ じゃぱんの ぶんでした。
+    telops:
+    - {text: "保険料 約200億円　6割が損保ジャパン", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 会見で知らなかったと言った社長のもとには、その1年半前、工場の作業員からLINEが届いていました。
+    reading: かいけんで しらなかったと いった しゃちょうの もとにわ、その いちねんはん まえ こうじょうの さぎょういんから らいんが とどいて いました。
+# ---- 2020〜2022年・写真で見積もる部屋 ----
+- id: ch3_pt
+  title: 写真で見積もる部屋
+  background: bm_pt
+  bgm: curious
+  stage:
+  - {who: pt, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2020年8月、写真だけで見積もるチームができます。
+    reading: にせん にじゅうねん はちがつ、しゃしん だけで みつもる ちーむが できます。
+  - speaker: pt
+    emotion: normal
+    text: 全国の工場の見積もりが、この福岡の事務所に集まる。
+  - speaker: pt
+    emotion: normal
+    text: 工場から写真とチェックシートが届く。これで見積もって、損保と修理代を決める。
+  - speaker: pt
+    emotion: thinking
+    text: 車は見ない。見るのは、送られてきた写真だけ。
+  - speaker: pt
+    emotion: sad
+    text: 年間[4万件|ヨンマンケン]を超えるのに、こっちは多いときでも20人ほど。
+  - speaker: pt
+    emotion: sad
+    text: 今日も、帰りは夜中の0時過ぎか……。
+    se: shobon
+  - speaker: pt
+    emotion: sad
+    text: 本部からも、強く言われてるしな。
+  - speaker: pt
+    emotion: thinking
+    text: 写真に写った傷が、そのまま修理代になる。
+- id: ch3_kojo
+  title: ''
+  background: bm_kojo
+  stage:
+  - {who: kojocho, x: 0.28, flip: true, emotion: normal}
+  - {who: front, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kojocho
+    emotion: normal
+    text: その写真じゃ、傷が小さく見えるな。
+  - speaker: kojocho
+    emotion: normal
+    text: 傷のないところにも、矢印の付箋を貼って撮ってくれ。
+  - speaker: front
+    emotion: thinking
+    text: ……はい。
+    background: bm_kojo_fusen
+  - speaker: kojocho
+    emotion: normal
+    text: ヘッドライトのカバーも、割れてるほうがいいな。
+  - speaker: kojocho
+    emotion: normal
+    text: こっちの車は、タワーで引いたことにしておけ。
+  - speaker: front
+    emotion: thinking
+    text: 引くほどの曲がりじゃ、ないですけど……。
+  - speaker: front
+    emotion: sad
+    text: これ、お客さんの車ですよね……。
+  - speaker: reimu
+    text: 報告書は、ゴルフボールを靴下に入れて振り回し、車体を叩いて雹の痕を広げた例も認めています。
+    reading: ほうこくしょわ、ごるふぼーるお くつしたに いれて ふりまわし しゃたいお たたいて ひょうの あとお ひろげた れいも みとめて います。
+- id: ch3_room
+  title: ''
+  background: bm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: それ、お客さんの車なのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長が知らなかったなら、誰がこんなことをさせてたの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: アンケートで、板金の経験者382人のうち104人が不正な作業に関わったと答えたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 4人に1人以上！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 理由でいちばん多いのは、上司からの指示。自分の歩合給を上げるため、は8人よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: タワーで引いたことにする、っていうのは？
+  - speaker: tsumugi
+    emotion: normal
+    text: タワーは、曲がった車の骨組みを鎖で引っぱって直す大きな機械。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 引いたことにすれば、その作業の代金も請求できるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 報告書は、社長の指示は認めていないの。でも、工場長たちを追い込むものがあった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 降格よ。
+# ---- 降格の掲示と、点検の前の大掃除 ----
+- id: ch3_kokaku
+  title: 降格と大掃除
+  background: bm_kojo
+  bgm: serious
+  stage:
+  - {who: kojocho, x: 0.28, flip: true, emotion: normal}
+  - {who: front, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: front
+    emotion: surprised
+    text: 工場長、社内のサイトに降格の掲示が……。
+  - speaker: kojocho
+    emotion: sad
+    text: 工場長から、フロントへか。理由は、書いてないな。
+  - speaker: kojocho
+    emotion: sad
+    text: 弁明の機会も、なしか。
+  - speaker: front
+    emotion: sad
+    text: 今年だけで、工場長が延べ20人もフロントに……。
+  - speaker: reimu
+    text: 降格は、次の社長と目されていた副社長らの判断。副社長は、創業者の長男の兼重宏一です。
+    reading: こうかくわ、つぎの しゃちょうと もくされて いた ふくしゃちょうらの はんだん。ふくしゃちょうわ そうぎょうしゃの ちょうなんの かねしげ こういちです。
+  - speaker: front
+    emotion: normal
+    text: 来週は、環境整備の点検です。修理より、掃除が先ですね。
+  - speaker: kojocho
+    emotion: thinking
+    text: 隅から隅まで、きれいにしておけ。
+  - speaker: reimu
+    text: 経営陣の説明では、降格の多くは点検の成績が理由。のちに創業者は、降格と抜てきを社員教育と呼びます。
+    reading: けいえいじんの せつめいでわ、こうかくの おおくわ てんけんの せいせきが りゆう。のちに そうぎょうしゃわ、こうかくと ばってきお しゃいん きょういくと よびます。
+# ---- 月曜日の本社 ----
+- id: ch3_honsha
+  title: 取締役会のない会社
+  background: bm_yakuin
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 兼重宏行, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: honbu
+    emotion: normal
+    text: 社長、月曜のご報告に参りました。
+  - speaker: honbu
+    emotion: normal
+    text: 板金の部門は、売上ではグループ全体の2〜3%ほどです。
+  - speaker: reimu
+    text: 月曜日に役員が三々五々、社長に報告に来る会社。取締役会は、7年近くほとんど開かれていませんでした。
+    reading: げつようびに やくいんが さんさん ごご しゃちょうに ほうこくに くる かいしゃ。とりしまりやくかいわ、ななねん ちかく ほとんど ひらかれて いませんでした。
+  - speaker: honbu
+    emotion: happy
+    text: それと、今年の経営計画書も刷り上がりました。
+  - speaker: honbu
+    emotion: normal
+    text: 全社員に配る冊子の、最初の言葉です。
+  - speaker: honbu
+    emotion: normal
+    text: 大方針は義を明らかにして、利を計らず。
+# ---- 2022年1月・酒々井からのLINE ----
+- id: card2022
+  title: ''
+  background: bm_card_2022
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2022年1月ごろ。千葉の酒々井店の工場に、副社長が点検に来ます。
+    reading: にせん にじゅうにねん いちがつ ごろ。ちばの しすいてんの こうじょうに、ふくしゃちょうが てんけんに きます。
+- id: ch4_line
+  title: 酒々井からのLINE
+  background: bm_yakuin
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 兼重宏行, emotion: normal}
+  - {who: sagyoin, x: 0.52, emotion: thinking}
+  - {who: bucho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 塗装の作業員が、工場長の不適切な行為を副社長に訴えます。副社長は、社長に直接連絡するよう伝えました。
+    reading: とそうの さぎょういんが、こうじょうちょうの ふてきせつな こういお ふくしゃちょうに うったえます。ふくしゃちょうわ しゃちょうに ちょくせつ れんらく するよう つたえました。
+  - speaker: sagyoin
+    emotion: thinking
+    text: タワーで引くような作業ではない。
+  - speaker: sagyoin
+    emotion: sad
+    text: 写真だけ何枚も撮らされました。
+  - speaker: sagyoin
+    emotion: angry
+    text: 傷無し作業とか何百台もありました。
+    telops:
+    - {text: "作業員「傷無し作業とか何百台もありました。」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 社長は部長に転送して調べるよう指示し、その結果を聞く前に、作業員へ返信しました。
+    reading: しゃちょうわ ぶちょうに てんそう して しらべるよう しじ し、その けっかお きく まえに さぎょういんえ へんしん しました。
+  - speaker: zundamon
+    emotion: normal
+    text: '[酒々井|しすい]BPのメンバーなんだから、他人事のようなことを言うんじゃなくて、'
+  - speaker: zundamon
+    emotion: normal
+    text: 工場長と協力して、問題があれば解決してください
+  - speaker: reimu
+    text: 部長は工場に入りましたが、実質的な調査はほとんどしないまま、こう報告します。
+    reading: ぶちょうわ こうじょうに はいりましたが、じっしつてきな ちょうさわ ほとんど しないまま こう ほうこく します。
+  - speaker: bucho
+    emotion: normal
+    text: 話し合いを行い、[蟠り|わだかまり]を解きました。
+  - speaker: reimu
+    text: 報告書によれば、社長と部長は、個人的な確執で誇張された話にすぎないだろう、という先入観を持っていました。
+    reading: ほうこくしょに よれば しゃちょうと ぶちょうわ、こじんてきな かくしつで こちょう された はなしに すぎないだろうと いう せんにゅうかんお もって いました。
+  - speaker: reimu
+    text: 告発は、調べられないまま終わりました。全国の工場で、同じことが続きます。
+    reading: こくはつわ しらべられない まま おわりました。ぜんこくの こうじょうで、おなじ ことが つづきます。
+- id: ch4_room
+  title: ''
+  background: bm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 社長、LINEで聞いてたのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: LINEは、届いていたの。部長に、調べるよう指示もした。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも結果を聞く前に、工場長と協力してと返したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 訴えは、なんで社長の所で止まったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: その作業員からは前にも、工場長への不満が何度も届いていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告書が先入観と書いたのは、そのことよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それに、悪い話が上まで届く仕組みもなかった。
+  - speaker: tsumugi
+    emotion: normal
+    text: コンプライアンスを受け持つ取締役さえ、決まっていなかったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 届いた訴えを、確かめる[人|ひと]がいなかったのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのころ、損保の側も調べを進めていたの。
+# ---- 2022年6月・紹介の停止と、自賠責の停止 ----
+- id: ch5_teishi
+  title: 紹介と自賠責の止め合い
+  background: bm_yakuin
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 兼重宏行, emotion: normal}
+  - {who: honbu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2022年6月。損保3社が連名で、修理の実態を確かめたいと会社に求めます。
+    reading: にせん にじゅうにねん ろくがつ。そんぽ さんしゃが れんめいで、しゅうりの じったいお たしかめたいと かいしゃに もとめます。
+  - speaker: honbu
+    emotion: surprised
+    text: 社長。3社が、うちの24の工場への事故車の紹介を止めました。
+  - speaker: honbu
+    emotion: normal
+    text: 3社への[自賠責|ジバイセキ]保険の販売と契約は、止めると連絡しました。
+  - speaker: reimu
+    text: 損保側の報告書は、これを3社の動きへの対抗と書いています。
+    reading: そんぽがわの ほうこくしょわ、これお さんしゃの うごきえの たいこうと かいて います。
+# ---- 2022年6月27日・信じてほしい ----
+- id: ch5_shinjite
+  title: 信じてほしい
+  background: bm_sonpo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 兼重宏行, emotion: normal}
+  - {who: sonpo1, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月27日。3社の営業担当の役員らが、社長と面談します。
+    reading: ろくがつ にじゅうしちにち。さんしゃの えいぎょう たんとうの やくいんらが、しゃちょうと めんだん します。
+  - speaker: zundamon
+    emotion: normal
+    text: 見積をごまかしてまで売上を上げることはしておらず、まっとうなことをしている。
+  - speaker: zundamon
+    emotion: normal
+    text: 信じてほしい。ただし、正すことは正す
+    telops:
+    - {text: "兼重「信じてほしい。ただし、正すことは正す」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: sonpo1
+    emotion: thinking
+    text: ……社に、持ち帰ります。
+# ---- 2022年7月・損保ジャパンの役員ミーティング ----
+- id: ch5_sj
+  title: 急転直下の再開
+  background: bm_kaigi
+  stage:
+  - {who: sonpo1, x: 0.28, flip: true, emotion: normal}
+  - {who: sonpo2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: sonpo2
+    emotion: normal
+    text: 面談の言葉を受けて、うちの社長から再開の日を考えるようにとメールが。
+  - speaker: sonpo2
+    emotion: thinking
+    text: ただ、向こうの自主調査の記載が書き換えられていました。
+    se: don
+  - speaker: sonpo2
+    emotion: thinking
+    text: 工場長の指示で不正が常態化していた、という一文。向こうの部長の指示で、です。
+  - speaker: reimu
+    text: 7月6日の役員ミーティング。損保ジャパンの社長が、関係を保ったまま再開するのが得策では、と提案します。
+    reading: しちがつ むいかの やくいん みーてぃんぐ。そんぽ じゃぱんの しゃちょうが、かんけいお たもった まま さいかい するのが とくさくでわと ていあん します。
+  - speaker: sonpo2
+    emotion: thinking
+    text: 追加の調査が、要るのではないでしょうか。
+  - speaker: sonpo1
+    emotion: normal
+    text: 社長のご提案に、異論はありません。
+  - speaker: sonpo1
+    emotion: normal
+    text: 2週間後くらいをめどに、再開ですね。
+  - speaker: sonpo2
+    emotion: sad
+    text: ……今朝8時の打ち合わせでは、止めたままにする方向だったのに。
+  - speaker: reimu
+    text: 社外調査委員会は、主としてその社長の意見に釣られるようにして、僅か30分程度で決められたと書きました。
+    reading: しゃがい ちょうさ いいんかいわ、しゅと して その しゃちょうの いけんに つられるように して わずか さんじゅっぷん ていどで きめられたと かきました。
+# ---- 2022年7月11日・損保ジャパン本社へ ----
+- id: ch5_houmon
+  title: 損保ジャパン本社へ
+  background: bm_sonpo
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 兼重宏行, emotion: normal}
+  - {who: sonpo1, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月11日、兼重社長が損保ジャパン本社へ。不正請求をなくし再発防止に努める、という趣旨を話します。
+    reading: しちがつ じゅういちにち、かねしげ しゃちょうが そんぽ じゃぱん ほんしゃえ。ふせい せいきゅうお なくし さいはつ ぼうしに つとめると いう しゅしお はなします。
+  - speaker: sonpo1
+    emotion: normal
+    text: 再発防止策には、うちも協力します。
+  - speaker: sonpo1
+    emotion: normal
+    text: できるだけ早く、事故車の紹介を再開します。
+  - speaker: reimu
+    text: 社長は、出店予定の2つの店で損保ジャパンを担当にすると約束。25日、損保ジャパンだけが紹介を再開します。
+    reading: しゃちょうわ、しゅってん よていの ふたつの みせで そんぽ じゃぱんお たんとうに すると やくそく。にじゅうごにち そんぽ じゃぱん だけが しょうかいお さいかい します。
+- id: ch5_room
+  title: ''
+  background: bm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 紹介を再開してもらって、2つの店を約束したの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1年後の会見で、創業者はこの訪問を事故車入庫再開のお礼と話したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも同じ日に、会社が訂正したわ。当時の記憶に事実誤認があった、って。
+  - speaker: tsumugi
+    emotion: normal
+    text: 目的は自主調査の結果報告と、不正請求となったことへの謝罪など。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1年たって、訪問の目的の説明が変わったのだ……。
+    beat: true
+- id: ch5_ptend
+  title: ''
+  background: bm_pt
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 8月29日、経済誌が不正請求の疑いを報じます。9月、損保ジャパンは紹介をもう一度止めました。
+    reading: はちがつ にじゅうくにち、けいざいしが ふせい せいきゅうの うたがいお ほうじます。くがつ、そんぽ じゃぱんわ しょうかいお もう いちど とめました。
+  - speaker: reimu
+    text: 10月17日、兼重社長の判断で、写真で見積もるチームはなくなりました。
+    reading: じゅうがつ じゅうしちにち、かねしげ しゃちょうの はんだんで しゃしんで みつもる ちーむわ なくなりました。
+    background: bm_pt_kara
+# ---- 2023年6月・報告書 ----
+- id: card2023
+  title: ''
+  background: bm_card_2023
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2023年1月、会社は弁護士による特別調査委員会を置きます。報告書が届いたのは、6月26日でした。
+    reading: にせん にじゅうさんねん いちがつ、かいしゃわ べんごしに よる とくべつ ちょうさ いいんかいお おきます。ほうこくしょが とどいたのわ、ろくがつ にじゅうろくにちでした。
+- id: ch6_houkoku
+  title: 報告書
+  background: bm_yakuin
+  stage:
+  - {who: zundamon, x: 0.5, tag: 兼重宏行, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 創業者は、報告書を受け取ったときのことを、会見でこう語っています。
+    reading: そうぎょうしゃわ、ほうこくしょお うけとった ときの ことお かいけんで こう かたって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 本当に耳を疑い、[愕然|がくぜん]とした
+- id: ch6_room
+  title: ''
+  background: bm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 報告書には、何が書いてあったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: サンプルで調べた2,717件のうち、1,198件に不適切な行為の疑い。
+    telops:
+    - {text: "2,717件中 1,198件に疑い", size: md, position: top-center, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 4割を超えてるのだ！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: 疑いだから、全部が不正と決まったわけじゃないの。報告書もそう書いてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして経営陣の指示などで組織的にやった事実までは、認められなかった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本部が損保3社に、全社的な問題だったと伝えた文書もあったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 社長も副社長も、委員会の聞き取りで初めて知ったと書かれてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 知らなかったことも、あったのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1年半前のLINEのことも、同じ報告書に書いてあるの。
+# ---- 2023年7月25日・会見 ----
+- id: ch6_kaiken
+  title: 7月25日の会見
+  background: bm_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 兼重宏行, emotion: sad}
+  - {who: izumi, x: 0.52, emotion: sad}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月25日の午前11時、東京都港区。会見は2時間あまり続きました。
+    reading: しちがつ にじゅうごにちの ごぜん じゅういちじ、とうきょうと みなとく。かいけんわ にじかん あまり つづきました。
+  - speaker: zundamon
+    emotion: sad
+    text: 多大なるご迷惑と心配をおかけし、深くおわび申し上げます
+  - speaker: izumi
+    emotion: sad
+    text: あまりにも強いリーダーシップに頼り切っていた部分も否めない
+  - speaker: zundamon
+    emotion: sad
+    text: 板金塗装部門単独で他の経営陣は知らなかった。これは事実だ
+  - speaker: zundamon
+    emotion: sad
+    text: 私も息子も経営に一切関与しない
+  - speaker: kisha
+    emotion: normal
+    text: 社員の刑事告訴は、考えているんですか。
+  - speaker: zundamon
+    emotion: angry
+    text: 犯罪であって刑事罰で罪を償ってもらう
+  - speaker: kisha
+    emotion: normal
+    text: 社員は被害者ですか、加害者ですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 保険金の不正請求は私の管理不足で招いてしまった。
+  - speaker: zundamon
+    emotion: sad
+    text: 私の責任であって加害者だ
+  - speaker: kisha
+    emotion: normal
+    text: 社長ご自身に、罪はないんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 決して私に罪がないということではないので、潔くお受けするという覚悟はできております
+  - speaker: reimu
+    text: 天地神明に誓って、と答えたのは、このあとでした。
+    reading: てんちしんめいに ちかってと こたえたのわ この あとでした。
+  - speaker: zundamon
+    emotion: sad
+    text: 私の職務怠慢が原因。もっと現場に入ればよかった
+- id: ch6_kaiken2
+  title: ''
+  background: bm_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 兼重宏行, emotion: normal}
+  - {who: izumi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 終わり間際。創業者は、ゴルフボールなどの件で社員を刑事告訴する、という発言を取り消します。
+    reading: おわり まぎわ。そうぎょうしゃわ、ごるふぼーるなどの けんで しゃいんお けいじ こくそ すると いう はつげんお とりけします。
+  - speaker: zundamon
+    emotion: sad
+    text: 刑事告発うんぬんと言ったが、今考えるとその責任は私にあるなあということで
+  - speaker: zundamon
+    emotion: normal
+    text: そのあたりは厳正に対処するがそこまでする必要はないなと考えています
+  - speaker: zundamon
+    emotion: normal
+    text: 考え直しましたので
+  - speaker: reimu
+    text: 翌26日、親子はそろって役員を退き、専務の和泉伸二が社長になりました。
+    reading: よく にじゅうろくにち おやこわ そろって やくいんお しりぞき、せんむの いずみ しんじが しゃちょうに なりました。
+# ---- 2023年7月28日・枯れた街路樹 ----
+- id: ch7_karegi
+  title: 枯れた街路樹
+  background: bm_tenpo
+  bgm: kinakusai
+  stage:
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: ニュースで、国の検査が入ったって言ってたわね。……あら、この植え込み。
+  - speaker: kyaku
+    emotion: surprised
+    text: 街路樹が、枯れてる……。
+    background: bm_tenpo_karegi
+    se: gaan
+  - speaker: reimu
+    text: 7月28日、会社は、複数の店で除草剤などの影響により街路樹が枯れた可能性が高い、と発表しました。
+    reading: しちがつ にじゅうはちにち かいしゃわ、ふくすうの みせで じょそうざいなどの えいきょうに より がいろじゅが かれた かのうせいが たかいと はっぴょう しました。
+  - speaker: reimu
+    text: 点検で店の前をきれいにすることが求められた、その店の前で、木が枯れていました。
+    reading: てんけんで みせの まえお きれいに する ことが もとめられた、その みせの まえで きが かれて いました。
+# ---- 2023年10月〜・処分の連続 ----
+- id: ch7_shobun
+  title: 処分の連続
+  background: bm_kojo_teishi
+  bgm: 223am
+  stage:
+  - {who: front, x: 0.28, flip: true, emotion: sad}
+  - {who: kojocho, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 10月、国は34の工場などを処分します。12か所が、民間車検場の指定を取り消されました。
+    reading: じゅうがつ くにわ、さんじゅうよんの こうじょうなどお しょぶん します。じゅうにかしょが みんかん しゃけんじょうの していお とりけされました。
+    telops:
+    - {text: "34か所を処分　12か所で指定取り消し", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: front
+    emotion: sad
+    text: 事業停止、か……。
+  - speaker: kojocho
+    emotion: sad
+    text: 修理も車検も、しばらく受けられないな。
+  - speaker: kojocho
+    emotion: thinking
+    text: 11月30日には、保険代理店の登録も取り消しだそうだ。
+  - speaker: front
+    emotion: surprised
+    text: 下請けの業者さんの保険も、149件のうち121件が圧力による加入だったって……。
+  - speaker: reimu
+    text: 街路樹の件は、器物損壊の刑事事件になりました。副社長だった宏一は書類送検されましたが、不起訴。
+    reading: がいろじゅの けんわ、きぶつ そんかいの けいじ じけんに なりました。ふくしゃちょうだった こういちわ しょるい そうけん されましたが、ふきそ。
+  - speaker: reimu
+    text: 創業者は送検の対象外です。本社で環境整備を担当した元社員は、罰金30万円の判決を受け控訴しました。
+    reading: そうぎょうしゃわ そうけんの たいしょうがいです。ほんしゃで かんきょう せいびお たんとう した もと しゃいんわ、ばっきん さんじゅうまんえんの はんけつお うけ こうそ しました。
+# ---- 2024年・事業を手放す ----
+- id: ch8_tebanasu
+  title: 事業を手放す
+  background: bm_tenpo_kara
+  bgm: 223am
+  stage:
+  - {who: kyaku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kyaku
+    emotion: thinking
+    text: このお店、これからどうなるのかしら……。
+  - speaker: reimu
+    text: 2024年5月1日。店と社員は、伊藤忠商事などが出資する新しい会社、WECARSに引き継がれます。
+    reading: にせん にじゅうよねん ごがつ ついたち。みせと しゃいんわ、いとうちゅう しょうじなどが しゅっし する あたらしい かいしゃ うぃーかーずに ひきつがれます。
+    background: bm_tenpo_new
+  - speaker: kyaku
+    emotion: surprised
+    text: あら、看板が変わってる。
+    se: jaan
+  - speaker: reimu
+    text: 元の会社は名前をBALMに変え、補償と返済を受け持ち、12月に民事再生法の適用を申請しました。
+    reading: もとの かいしゃわ なまえお ばーむに かえて ほしょうと へんさいお うけもち、じゅうにがつに みんじ さいせいほうの てきようお しんせい しました。
+# ---- 論争 ----
+- id: ronso1
+  title: 社長の指示はあったか
+  background: bm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 社長の指示で、会社ぐるみで保険金をだまし取ったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える事実はあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 金融庁は、広い範囲の工場で組織的に繰り返されていたと書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1台14万円の目標に、続く降格。開かれない取締役会に、調べられなかった告発。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも特別調査委員会は、経営陣の指示で組織的にやった事実までは認められないとしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 目標の数字にも社長は直接かかわっていない、と。
+  - speaker: tsumugi
+    emotion: normal
+    text: 保険金の水増しで刑事責任を問われた人は、調べた範囲では見つからなかったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、社長は関係ないの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうとも言えないの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: thinking
+    text: 経営陣の意向によるものと考えても何ら不思議ではない、とも書いてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告書が名付けたのは経営陣に盲従し、[忖度|そんたく]する[歪|いびつ]な企業風土よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 指示がなくても、全国の工場で同じことが起きる会社だったのか……。
+    beat: true
+- id: ronso2
+  title: 損保は何をしたのか
+  background: bm_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 損保ジャパンもグルだったんでしょ？ 出向した社員が、手口を教えたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 損保ジャパンからは、2004年から43人が出向していたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも社外調査委員会は、出向者が不正に関わった事実は認められないとしたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 認められなかったのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 認定されたのは別のこと。不正の疑いを知りながら、取引を優先したことよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: なんで、疑いを知りながら事故車を回したの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 紹介の見返りの保険と、担当をよその損保に替えられる心配。報告書はそう書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2023年9月、損保ジャパンの社長は辞任を表明したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 昨年の7月に入庫紹介を再開するという、
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きな経営判断ミスをしたことに責任を感じている、って。
+  - speaker: tsumugi
+    emotion: normal
+    text: 翌年1月には、金融庁が業務改善命令を出したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 不正の請求はしてないけど、疑いを知りながら紹介を再開したのか……。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 修理の前と後の写真
+  background: bm_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 事故の修理は損保に紹介された工場でも、修理の前とあとの写真を見せてと頼めるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国のガイドラインが、作業の説明と前後の画像を残すことを求めてるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 写真を見せてって、言っていいの？
+  - speaker: tsumugi
+    emotion: happy
+    text: いいの。傷がどこに、どれだけあったか確かめてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、保険を使う前に比べること。修理代と、等級が下がって上がる保険料よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのバンパー、5万円……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: thinking
+    text: 保険を使うと、次の年から何年か保険料が上がるの。そのほうが高くつくこともあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それから2018年1月から2023年8月に、この会社で事故の修理をした人。
+  - speaker: tsumugi
+    emotion: normal
+    text: 補償の対象になるか、自分の[損保|そんぽ]に聞いてみてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 車を買う店で保険を勧められても、ほかと比べて決めていいのよ。
+# ---- 現代 ----
+- id: ima
+  title: 店の、いま
+  background: bm_gendai
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: それで、お店はいまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[WECARS|ウィーカーズ]の店が、2026年3月の時点で242店。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 伊藤忠商事などが出資する会社で、創業家とは資本の関係がないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 発足のときの取締役にも、創業家と前の経営陣は入らなかったわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 同じ場所でも、別の会社なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[自賠責|ジバイセキ]保険を扱う代理店の登録も受けて、12月1日から売り始める予定よ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 前の会社が登録を取り消されてから、3年で……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 元の会社の[BALM|バーム]は、民事再生の手続き中。客への補償も、続いているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい会社は、2027年度の黒字化を目指していると報じられてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 創業者は、どちらの会社の役員でもないわ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: bm_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ バンパーの修理は、前とあとの写真を見せてもらうのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: その前に、等級の計算ね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎年全社員に配られた経営計画書。その大方針は義を明らかにして、利を計らず。
+    telops:
+    - {text: "経営計画書「義を明らかにして、利を計らず。」", size: md, position: top-center, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tsumugi
+    emotion: thinking
+    text: 報告書は最後にその言葉を引いて、経営陣にこう求めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 誇りをもって仕事ができる会社に生まれ変わってほしいとの、
+  - speaker: tsumugi
+    emotion: normal
+    text: 数多くの現場従業員の訴えに真摯に耳を傾けてもらいたい。
+  - speaker: zundamon
+    emotion: sad
+    text: '[酒々井|しすい]からのLINEも、社長には届いていたのだ……。'
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1台14万円の数字は毎週、上から届いた。でも現場の声は、上で止まったのね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

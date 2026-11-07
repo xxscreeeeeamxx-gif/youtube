@@ -1,0 +1,1186 @@
+meta:
+  title: 「再生して後輩に譲るのが経営責任」と語ったカネボウの社長、1年5か月後に逮捕された【ずんだもん解説】
+  slug: kanebo-funshoku
+  hook_line: 化粧品を花王に渡さなかった名門は、なぜ2年後に会社ごと切り分けられたのか。
+  summary: 2004年2月16日、名門カネボウの社長、帆足隆は会見で「再生して後輩に譲るのが経営責任」と語りました。繊維が本流の会社で、化粧品の販売会社から社長になった人です。化粧品が稼いで繊維の赤字を埋める会社、行ったり来たりする毛布、帳簿の外の15社。花王との合意はなぜ破れ、5億円の黒字はどこから来た数字だったのか。産業再生機構の資料と判決、当時の報道をもとに、会社・労組・花王それぞれの言い分を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 産業再生機構「カネボウ株式会社及び株式会社三井住友銀行による産業再生機構活用の意向表明について」（2004年2月16日） https://www8.cao.go.jp/sangyo/ircj/ja/pdf/shien_kanebo_2004021601.pdf
+  - 産業再生機構「事業再生計画の概要」（2004年3月10日） https://www8.cao.go.jp/sangyo/ircj/ja/pdf/shien_kanebo_2004031002.pdf
+  - 産業再生機構「カネボウ株式会社による過年度決算の訂正発表について」（2005年4月13日） https://www8.cao.go.jp/sangyo/ircj/ja/pdf/shien_kanebo_2005041301.pdf
+  - 東京証券取引所「記者会見要旨」（2005年5月12日） https://www.jpx.co.jp/files/tse/about/press/050512.pdf
+  - 産業再生機構「株式会社カネボウ化粧品及びカネボウ株式会社にかかる株式及び債権の譲渡等について」（2005年12月16日） https://www8.cao.go.jp/sangyo/ircj/ja/pdf/shien_kanebo_2005121601.pdf
+  - 証券取引等監視委員会「証券取引等監視委員会の活動状況」（2006年8月） https://www.fsa.go.jp/sesc/reports/n_17/n_17b.pdf
+  tags:
+  - カネボウ
+  - 帆足隆
+  - 粉飾決算
+  - 花王
+  - 産業再生機構
+  - カネボウ化粧品
+  - クラシエ
+  - 鐘紡
+  - 伊藤淳二
+  - 連結外し
+  - 上場廃止
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 再生して後輩に譲る
+    bottom: カネボウの粉飾
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: ito
+    label: 伊藤淳二
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: yakuin
+    label: 役員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3f4a'
+  - id: yakuin68
+    label: 役員
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#5a4636'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 若手社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: kaikeishi
+    label: 会計士
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: shitencho
+    label: 支店長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#4a4038'
+  - id: bucho
+    label: 部長
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: kao
+    label: 後藤卓也
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#1f3550'
+  - id: kumiai
+    label: 労組幹部
+    voice: 67
+    pitch: 0.06
+    outfit: work
+    color: '#7a8a9a'
+  - id: tori
+    label: 取締役
+    voice: 11
+    pitch: 0.06
+    outfit: suit
+    color: '#5a4a3a'
+  - id: fukusha
+    label: 副社長
+    voice: 100
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2a30'
+  - id: kiko
+    label: 機構幹部
+    voice: 67
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: shinshacho
+    label: 新社長
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: tosho
+    label: 東証社長
+    voice: 42
+    pitch: 0.06
+    outfit: suit
+    color: '#2f3440'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2004年2月16日の会見） ----
+- id: co_kaiken
+  title: ''
+  background: kn_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 帆足隆, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2004年2月16日。名門カネボウの社長、帆足隆の会見です。
+    reading: にせんよねん にがつ じゅうろくにち。めいもん かねぼうの しゃちょう ほあし たかしの かいけんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 協議を重ねたが、花王と合意に達しなかった
+  - speaker: kisha
+    emotion: normal
+    text: 経営責任は。
+  - speaker: zundamon
+    emotion: sad
+    text: 辞めるのは簡単だが、しっかりと再生できるメドが立てば判断する
+  - speaker: zundamon
+    emotion: sad
+    text: 再生して後輩に譲るのが経営責任
+  - speaker: reimu
+    text: 10日後、取締役は全員辞任を表明。1年5か月後、この社長は逮捕されます。
+    reading: とおかご とりしまりやくわ ぜんいん じにんお ひょうめい。いちねん ごかげつご、この しゃちょうわ たいほ されます。
+# ---- 今の部屋（お菓子の箱を数える） ----
+- id: hook
+  title: ''
+  background: kn_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: このお菓子を全部100円で数えれば、ボクの財産は1万円なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 期限ぎりぎりのそのお菓子、20円でしか売れないわよ。
+    se: hammer
+  - speaker: zundamon
+    emotion: normal
+    text: ……売らないから、100円のままでいいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そうやって売れない在庫を高く数えて、黒字に見せた名門があるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 化粧品を花王に渡さないと決めて、2年後に会社ごと切り分けられたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 化粧品を守ったのに、なんで会社ごと失ったの！？
+    telops:
+    - {text: "化粧品を守った名門は なぜ会社ごと失った？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 1968年・五角形の会社 ----
+- id: card1968
+  title: ''
+  background: kn_card_1968
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1887年創立、戦前は日本最大級の紡績の名門、鐘淵紡績。1968年、45歳の伊藤淳二が社長になります。
+    reading: せんはっぴゃく はちじゅうななねん そうりつ、せんぜんわ にほん さいだいきゅうの ぼうせきの めいもん かねがふち ぼうせき。せんきゅうひゃく ろくじゅうはちねん、よんじゅうごさいの いとう じゅんじが しゃちょうに なります。
+- id: ch1_gokaku
+  title: 五角形の会社
+  background: kn_kaigi_old
+  stage:
+  - {who: ito, x: 0.28, flip: true, emotion: normal}
+  - {who: yakuin68, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: ito
+    emotion: normal
+    text: 繊維だけでは、この先はない。
+  - speaker: yakuin68
+    emotion: surprised
+    text: では、どうなさるんです？
+  - speaker: ito
+    emotion: happy
+    text: 化粧品に食品、薬品に住宅。繊維と合わせて5本の柱だ。
+    se: jaan
+  - speaker: yakuin68
+    emotion: normal
+    text: 黒板の五角形は、そういうことですか。
+  - speaker: yakuin68
+    emotion: normal
+    text: でも化粧品は、繊維に比べたらまだ小さいですよ。
+  - speaker: ito
+    emotion: happy
+    text: だから育てる。
+  - speaker: yakuin68
+    emotion: thinking
+    text: 繊維が赤字になったら、どうします？
+  - speaker: ito
+    emotion: normal
+    text: 化粧品で埋める。
+  - speaker: yakuin68
+    emotion: normal
+    text: お姉ちゃんのバイト代で、お兄ちゃんの借金を払う家ですか。
+    beat: true
+  - speaker: ito
+    emotion: happy
+    text: 家族なら、助け合うものだ。
+  - speaker: reimu
+    text: 36年後、産業再生機構は、この会社を事業部門間の相互もたれあいと書きます。
+    reading: さんじゅうろくねんご、さんぎょう さいせい きこうわ この かいしゃお じぎょう ぶもんかんの そうご もたれあいと かきます。
+    telops:
+    - {text: "機構の診断「事業部門間の相互もたれあい」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 稼ぎ頭の化粧品を、手放せるのか。会社はのちに、この問いで割れます。
+    reading: かせぎがしらの けしょうひんお、てばなせるのか。かいしゃわ のちに この といで われます。
+# ---- 1998年・傍流の社長 ----
+- id: card1998
+  title: ''
+  background: kn_card_1998
+  cuts:
+  - speaker: reimu
+    text: 1998年4月。繊維の名門に、化粧品から来た社長が生まれます。
+    reading: せんきゅうひゃく きゅうじゅうはちねん しがつ。せんいの めいもんに、けしょうひんから きた しゃちょうが うまれます。
+- id: ch2_bouryu
+  title: 傍流の社長
+  background: kn_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 帆足隆, emotion: normal}
+  - {who: yakuin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: yakuin
+    emotion: happy
+    text: 大阪の化粧品の販売会社から、ついに社長ですね。
+  - speaker: reimu
+    text: 帆足隆、62歳。1961年に25歳で、大阪の化粧品の販売会社に入った人です。
+    reading: ほあし たかし ろくじゅうにさい。せんきゅうひゃく ろくじゅういちねんに にじゅうごさいで、おおさかの けしょうひんの はんばいがいしゃに はいった ひとです。
+  - speaker: yakuin
+    emotion: normal
+    text: 歴代の社長は、繊維の出身ばかりでしたからね。
+  - speaker: yakuin
+    emotion: thinking
+    text: 化粧品は稼いでいても、社内じゃ傍流と言われてましたし。
+  - speaker: yakuin
+    emotion: normal
+    text: 社長、会議のお時間です。皆さん、注目してますよ。
+  - speaker: reimu
+    text: このとき会社の本当の数字は、すでに2年続けて、借金が資産を上回っていました。外には出ていません。
+    reading: この とき かいしゃの ほんとうの すうじわ、すでに にねん つづけて しゃっきんが しさんお うわまわって いました。そとにわ でて いません。
+  - speaker: reimu
+    text: この社長は、なぜ会社そのものを失うのか。始まりは、倉庫の毛布でした。
+    reading: この しゃちょうわ、なぜ かいしゃ そのものお うしなうのか。はじまりわ そうこの もうふでした。
+# ---- 1998〜2003年・売れない毛布 ----
+- id: ch2_soko
+  title: 売れない毛布
+  background: kn_soko
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: senpai
+    emotion: normal
+    text: この毛布、どこへ行くと思う？
+  - speaker: shinjin
+    emotion: normal
+    text: 商社に売って、お店に並ぶんですよね。
+  - speaker: senpai
+    emotion: normal
+    text: 売れ残ったら、うちが買い取る。
+  - speaker: shinjin
+    emotion: surprised
+    text: うちが！？
+  - speaker: senpai
+    emotion: normal
+    text: それをまた、毛布の会社に売るんだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: じゃあ、この毛布は……
+  - speaker: senpai
+    emotion: sad
+    text: ……また、うちに戻ってくる。
+    beat: true
+  - speaker: shinjin
+    emotion: thinking
+    text: お[金|かね]は、もらえるんですか？
+  - speaker: senpai
+    emotion: normal
+    text: 毛布の会社に現金は無い。払いは手形だ。
+  - speaker: shinjin
+    emotion: normal
+    text: あとで払うっていう、約束の紙ですね。
+  - speaker: senpai
+    emotion: sad
+    text: その紙が、たまる一方なんだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 箱も、天井まで……！？
+    background: kn_soko_yama
+    se: bikkuri
+  - speaker: senpai
+    emotion: normal
+    text: ぐるぐる回るから、宇宙遊泳って呼ぶ人もいる。
+  - speaker: senpai
+    emotion: thinking
+    text: 相手は[興洋染織|コーヨーセンショク]。うちから、役員が半分近く行ってる。
+  - speaker: shinjin
+    emotion: surprised
+    text: それって、ほとんどうちの子会社じゃないですか。
+  - speaker: senpai
+    emotion: thinking
+    text: ……そう見る人もいる。
+  - speaker: reimu
+    text: 穴埋めは、帆足が社長になった1998年から。損失は、522億円に上ります。
+    reading: あなうめわ ほあしが しゃちょうに なった せんきゅうひゃく きゅうじゅうはちねんから。そんしつわ、ごひゃく にじゅうにおくえんに のぼります。
+    telops:
+    - {text: "毛布の会社への損失 522億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 帳簿の外に出された会社は、15社。会社を失う種は、もうここにありました。
+    reading: ちょうぼの そとに だされた かいしゃわ じゅうごしゃ。かいしゃお うしなう たねわ、もう ここに ありました。
+# ---- 1999年・連結外し ----
+- id: ch2_hazure
+  title: 帳簿の外の15社
+  background: kn_kaigi
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: thinking}
+  - {who: kaikeishi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: yakuin
+    emotion: thinking
+    text: 来年の3月期から、決算に入れる子会社の範囲が広がるそうだな。
+  - speaker: yakuin
+    emotion: thinking
+    text: 毛布の会社も、うちの決算に入ってしまうのか。
+  - speaker: reimu
+    text: 1999年。報道によると、監査の会計士は、株を持たせる割合を示しながら具体的に助言しました。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねん。ほうどうに よると かんさの かいけいしわ、かぶお もたせる わりあいお しめしながら ぐたいてきに じょげん しました。
+  - speaker: kaikeishi
+    emotion: normal
+    text: これ以上持たせるとまずい。
+  - speaker: yakuin
+    emotion: thinking
+    text: では、この割合なら？
+  - speaker: kaikeishi
+    emotion: normal
+    text: これだと外れませんよ。
+  - speaker: reimu
+    text: 毛布の会社の株は、休眠中の販売代理店に持たせ、資本のつながりを切りました。
+    reading: もうふの かいしゃの かぶわ きゅうみんちゅうの はんばい だいりてんに もたせ、しほんの つながりお きりました。
+  - speaker: reimu
+    text: 会社はのちに、こう訂正します。毛布の会社など15社は、連結子会社とすべきであった。
+    reading: かいしゃわ のちに こう ていせい します。もうふの かいしゃなど じゅうごしゃわ、れんけつ こがいしゃと すべきで あった。
+    telops:
+    - {text: "会社の訂正「15社は連結子会社とすべきであった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2002年・数字を作る職場 ----
+- id: card2002
+  title: ''
+  background: kn_card_2002
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2002年2月。のちの新聞によると、当時の副社長はこう怒鳴りました。
+    reading: にせんにねん にがつ。のちの しんぶんに よると、とうじの ふくしゃちょうわ こう どなりました。
+  - speaker: reimu
+    text: 「会社をつぶす気か。粉飾してでも事業計画を達成しろ」
+    reading: かいしゃお つぶす きか。ふんしょく してでも じぎょう けいかくお たっせい しろ。
+- id: ch3_shiten
+  title: 数字を作る職場
+  background: kn_oroshi
+  stage:
+  - {who: shitencho, x: 0.28, flip: true, emotion: angry}
+  - {who: bucho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shitencho
+    emotion: angry
+    text: 大阪支店、今月の数字がまだ足りんぞ。
+  - speaker: bucho
+    emotion: thinking
+    text: 本社から割り当てられた数字、ですよね。
+  - speaker: shitencho
+    emotion: angry
+    text: そうだ。卸さんに、もっと入れてこい。
+  - speaker: bucho
+    emotion: thinking
+    text: 先月も、押し込んだばかりですよ。
+  - speaker: bucho
+    emotion: thinking
+    text: 卸さんの倉庫、もう入りきりません。
+    se: zukko
+  - speaker: shitencho
+    emotion: angry
+    text: やれ、お前らそれができなかったら会社潰れるぞ。
+  - speaker: bucho
+    emotion: sad
+    text: ……出来ません。
+  - speaker: shitencho
+    emotion: angry
+    text: 会社潰す気か。
+    beat: true
+  - speaker: bucho
+    emotion: sad
+    text: ……はい。
+  - speaker: reimu
+    text: 期限の近い食品は、ふだんの2割ほどでしか卸せない。それを10割で数えた、と幹部はのちに証言しています。
+    reading: きげんの ちかい しょくひんわ ふだんの にわり ほどでしか おろせない。それお じゅうわりで かぞえたと、かんぶわ のちに しょうげん して います。
+  - speaker: bucho
+    emotion: sad
+    text: 20円でしか売れないお菓子を、100円と数える……。
+    telops:
+    - {text: "20円のお菓子を 100円と数える", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: bucho
+    emotion: sad
+    text: 1万個なら、80万円の赤字が見えなくなる。
+- id: ch3_kuroji
+  title: ''
+  background: kn_yakuin
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 帆足隆, emotion: normal}
+  - {who: yakuin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: yakuin
+    emotion: happy
+    text: 社長、2003年3月期の連結は黒字です。
+  - speaker: yakuin
+    emotion: happy
+    text: 5億1800万円で、発表します。
+  - speaker: reimu
+    text: この5億円の黒字は、どこから来た数字だったのか。答えは、2年後に出ます。
+    reading: この ごおくえんの くろじわ、どこから きた すうじ だったのか。こたえわ にねんごに でます。
+# ---- 2003年10月・花王との合意 ----
+- id: card2003
+  title: ''
+  background: kn_card_2003
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2003年10月。カネボウは花王と、化粧品の統合で合意します。花王が新しい会社に49%を出す形でした。
+    reading: にせんさんねん じゅうがつ。かねぼうわ かおうと けしょうひんの とうごうで ごうい します。かおうが あたらしい かいしゃに よんじゅうきゅう ぱーせんとお だす かたちでした。
+- id: ch4_kao
+  title: やり方が違う
+  background: kn_osetsu
+  bgm: kinakusai
+  stage:
+  - {who: kao, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月の初め。花王の後藤卓也社長は、交渉の担当役員にこう指示したと報じられました。
+    reading: じゅうにがつの はじめ。かおうの ごとう たくや しゃちょうわ、こうしょうの たんとう やくいんに こう しじ したと ほうじられました。
+  - speaker: kao
+    emotion: normal
+    text: カネボウとは、どうもビジネスのやり方が違う。
+  - speaker: kao
+    emotion: normal
+    text: やめにしよう。
+    se: don
+  - speaker: reimu
+    text: 花王の交渉の関係者は、在庫がどれほどあるか分からないずさんさに驚いた、と話しています。
+    reading: かおうの こうしょうの かんけいしゃわ、ざいこが どれほど あるか わからない ずさんさに おどろいたと はなして います。
+- id: ch4_kieru
+  title: ''
+  background: kn_kaigi
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: thinking}
+  - {who: tori, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: tori
+    emotion: thinking
+    text: '花王は統合じゃなく、化粧品をまるごと買いたいと。'
+  - speaker: tori
+    emotion: sad
+    text: しかもカネボウの名前は、化粧品のほかでは使わせないそうです。
+  - speaker: yakuin
+    emotion: angry
+    text: ……消えろというのか。
+    beat: true
+  - speaker: tori
+    emotion: sad
+    text: 死刑宣告ですよ、これは。
+- id: ch4_kumiai
+  title: ''
+  background: kn_honsha
+  stage:
+  - {who: kumiai, x: 0.56, emotion: angry}
+  cuts:
+  - speaker: kumiai
+    emotion: angry
+    text: 組合は、化粧品を売ること自体に反対します。
+  - speaker: kumiai
+    emotion: angry
+    text: 化粧品なきカネボウは、カネボウにあらず。
+# ---- 2004年1月・社長のいない取締役会 ----
+- id: card2004
+  title: ''
+  background: kn_card_2004
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2004年1月29日、取締役会。社長の帆足は、入院中で欠席でした。
+    reading: にせんよねん いちがつ にじゅうくにち、とりしまりやくかい。しゃちょうの ほあしわ にゅういんちゅうで けっせき でした。
+- id: ch4_torishimari
+  title: 社長のいない取締役会
+  background: kn_torishimari
+  stage:
+  - {who: yakuin, x: 0.28, flip: true, emotion: normal}
+  - {who: tori, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: yakuin
+    emotion: normal
+    text: 社長の椅子は、空いたままか。
+  - speaker: tori
+    emotion: normal
+    text: '花王に売るか、機構に頼むか。決めるのは、我々です。'
+  - speaker: reimu
+    text: この日、7人のうち6人が、国の産業再生機構に持ち込む案に賛成します。
+    reading: この ひ、ななにんの うち ろくにんが くにの さんぎょう さいせい きこうに もちこむ あんに さんせい します。
+  - speaker: tori
+    emotion: normal
+    text: 機構で、いきましょう。
+  - speaker: reimu
+    text: 翌日。同じ7人が、前の日とは逆の6対1で、花王案に賛成しました。
+    reading: よくじつ。おなじ ななにんが まえの ひとわ ぎゃくの ろくたいいちで、かおうあんに さんせい しました。
+  - speaker: tori
+    emotion: thinking
+    text: ……やはり、花王案で。
+  - speaker: yakuin
+    emotion: surprised
+    text: 1日で、ひっくり返った……。
+    beat: true
+  - speaker: tori
+    emotion: sad
+    text: 社長には、どう伝えます？
+  - speaker: reimu
+    text: 1月31日。花王は、化粧品の事業をまるごと買い取ると発表しました。
+    reading: いちがつ さんじゅういちにち。かおうわ、けしょうひんの じぎょうお まるごと かいとると はっぴょう しました。
+# ---- 2004年2月12日・調印の日 ----
+- id: ch4_chouin
+  title: 調印の日
+  background: kn_osetsu
+  stage:
+  - {who: fukusha, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2月12日、調印の予定の日。入院中の社長に代わって、副社長が花王の本社を訪ねます。
+    reading: にがつ じゅうににち、ちょういんの よていの ひ。にゅういんちゅうの しゃちょうに かわって ふくしゃちょうが かおうの ほんしゃお たずねます。
+  - speaker: fukusha
+    emotion: sad
+    text: 労組の反対が根強く、調印はできない。
+    se: don
+# ---- 2004年2月16日・会見 ----
+- id: ch5_kaiken
+  title: 2月16日の会見
+  background: kn_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 帆足隆, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2月16日。カネボウは花王への売却を白紙に戻し、産業再生機構に支援を頼むと表明します。
+    reading: にがつ じゅうろくにち。かねぼうわ かおうえの ばいきゃくお はくしに もどし、さんぎょう さいせい きこうに しえんお たのむと ひょうめい します。
+  - speaker: zundamon
+    emotion: sad
+    text: 協議を重ねたが、花王と合意に達しなかった
+  - speaker: kisha
+    emotion: normal
+    text: 経営責任は。
+  - speaker: zundamon
+    emotion: sad
+    text: 辞めるのは簡単だが、しっかりと再生できるメドが立てば判断する
+  - speaker: zundamon
+    emotion: sad
+    text: 再生して後輩に譲るのが経営責任
+    telops:
+    - {text: "帆足「再生して後輩に譲るのが経営責任」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 社長が入院中でも適切な経営判断ができたのか。
+  - speaker: zundamon
+    emotion: sad
+    text: ポイントはある程度打ち合わせしていた
+  - speaker: reimu
+    text: 同じ会見で常務の嶋田賢三郎は、今回は銀行の債権放棄のない新しい方式になる、と答えました。
+    reading: おなじ かいけんで じょうむの しまだ けんざぶろうわ、こんかいわ ぎんこうの さいけん ほうきの ない あたらしい ほうしきに なると こたえました。
+- id: ch5_goto
+  title: ''
+  background: kn_kaiken
+  stage:
+  - {who: kao, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同じ日、花王の後藤社長も会見を開きます。
+    reading: おなじ ひ、かおうの ごとう しゃちょうも かいけんお ひらきます。
+  - speaker: kao
+    emotion: sad
+    text: ほぼまとまっていた段階で通告を受け、非常に残念
+  - speaker: reimu
+    text: 主力の銀行の幹部も、寝耳に水、経営陣は危機感が足りない、と漏らしました。
+    reading: しゅりょくの ぎんこうの かんぶも ねみみに みず、けいえいじんわ ききかんが たりないと もらしました。
+# ---- 2004年3月10日・23日後 ----
+- id: ch6_jitaku
+  title: 23日後
+  background: kn_jitaku
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 帆足隆, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 10日後、帆足を含む取締役は全員、辞めると表明。3月10日は、機構が支援を決める日です。
+    reading: とおかご、ほあしお ふくむ とりしまりやくわ ぜんいん やめると ひょうめい。さんがつ とおかわ、きこうが しえんお きめる ひです。
+  - speaker: kisha
+    emotion: surprised
+    text: '[帆足|ホアシ]さん！ ひと言、お願いします！'
+  - speaker: kisha
+    emotion: surprised
+    text: 今日、支援が決まりますよね！
+  - speaker: reimu
+    text: その朝、帆足は自宅から姿を見せ、多くを語らずに黒い車で去りました。夕方、会見に立ちます。
+    reading: その あさ ほあしわ じたくから すがたお みせ、おおくお かたらずに くろい くるまで さりました。ゆうがた、かいけんに たちます。
+- id: ch6_kaiken
+  title: ''
+  background: kn_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 帆足隆, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 再建案が二転三転し、株主や取引先に不信感や不安を与え遺憾だ
+  - speaker: zundamon
+    emotion: sad
+    text: 改革はしてきた。スピードが遅かっただけ
+  - speaker: reimu
+    text: 3月末、帆足は会社を去ります。旧経営陣は全員、退職慰労金を辞退しました。
+    reading: さんがつまつ、ほあしわ かいしゃお さります。きゅう けいえいじんわ ぜんいん、たいしょく いろうきんお じたい しました。
+- id: ch6_kiko
+  title: ''
+  background: kn_kaigi
+  stage:
+  - {who: kiko, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 機構は、本体の事業を分けて立て直します。その理由を、幹部はこう話しました。
+    reading: きこうわ、ほんたいの じぎょうお わけて たてなおします。その りゆうお かんぶわ こう はなしました。
+  - speaker: kiko
+    emotion: normal
+    text: 赤字を出しても他の事業が補ってくれるという甘えを
+  - speaker: kiko
+    emotion: normal
+    text: 排除する必要があると考えた
+# ---- 2004年4月〜2005年4月・切り分けられる会社 ----
+- id: ch7_shinshacho
+  title: 切り分けられる会社
+  background: kn_kaiken
+  bgm: kinakusai
+  stage:
+  - {who: shinshacho, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月、新しい社長は、これまでの経営を調べる委員会をつくります。
+    reading: しがつ、あたらしい しゃちょうわ これまでの けいえいお しらべる いいんかいお つくります。
+  - speaker: shinshacho
+    emotion: normal
+    text: 経営がなぜ悪化したかチェックするのは、新経営陣に必要なけじめ
+  - speaker: shinshacho
+    emotion: normal
+    text: 調査結果次第で強い社会的批判を受けることになるが、
+  - speaker: shinshacho
+    emotion: normal
+    text: 事実を隠ぺいすれば再生機構や国民を裏切ることになる
+- id: ch7_honsha
+  title: ''
+  background: kn_honsha
+  bgm: 223am
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: senpai
+    emotion: normal
+    text: 5月から化粧品は、カネボウ化粧品という別の会社だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 看板が、2枚に……！
+    background: kn_honsha_2
+    se: bikkuri
+  - speaker: senpai
+    emotion: normal
+    text: 稼ぎ頭だけ、先に切り分けたんだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 残った本体は、どうなるんですか。
+  - speaker: senpai
+    emotion: sad
+    text: 3年で1800人を減らすそうだ。社員の4割近くだ。
+  - speaker: shinjin
+    emotion: sad
+    text: 4割……。
+  - speaker: senpai
+    emotion: sad
+    text: 工場も、6つ閉める。
+  - speaker: shinjin
+    emotion: thinking
+    text: 化粧品が抜けて、本体は稼げるんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 一般用の漢方と口の中を爽やかにするお菓子は、業界1位だそうだ。
+  - speaker: shinjin
+    emotion: sad
+    text: 全部、新聞で知るんですね。
+  - speaker: shinjin
+    emotion: sad
+    text: ボーナス出ません、も新聞で知りました。
+    beat: true
+- id: ch7_seni
+  title: ''
+  background: kn_boseki
+  cuts:
+  - speaker: reimu
+    text: 2005年3月、祖業の繊維も、ほかの会社と作る新会社へ。見出しは、創業の柱、118年歴史に幕。
+    reading: にせんごねん さんがつ、そぎょうの せんいも ほかの かいしゃと つくる しんがいしゃえ。みだしわ、そうぎょうの はしら ひゃくじゅうはちねん れきしに まく。
+- id: ch7_seisa
+  title: 5億円の黒字の正体
+  background: kn_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: thinking}
+  - {who: shinjin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shinjin
+    emotion: thinking
+    text: 4月の発表、見ました？ 会社が5年分の決算を、自分で直したって。
+  - speaker: senpai
+    emotion: thinking
+    text: 見た。調査の委員会が去年の秋に、2年分の粉飾を指摘してたからな。
+  - speaker: shinjin
+    emotion: thinking
+    text: 2003年3月期は、5億1800万円の黒字と発表してましたよね。
+  - speaker: senpai
+    emotion: sad
+    text: 直した数字は……218億8700万円の赤字だ。
+    background: kn_kaigi_akaji
+    se: gaan
+    telops:
+    - {text: "5億円の黒字 → 219億円の赤字", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: shinjin
+    emotion: surprised
+    text: 黒字じゃなくて、大赤字……！
+  - speaker: senpai
+    emotion: thinking
+    text: 帳簿の外に出した15社も、連結に入れるべきだったと会社が認めた。
+  - speaker: shinjin
+    emotion: sad
+    text: あの、戻ってくる毛布も……。
+  - speaker: senpai
+    emotion: sad
+    text: ああ。あれも帳簿の外だった。
+  - speaker: senpai
+    emotion: thinking
+    text: 直した粉飾の額は、5年分で2000億円あまりだ。
+  - speaker: shinjin
+    emotion: sad
+    text: 5億円の黒字なんて、どこにも無かったんですね。
+- id: ch7_shoken
+  title: 上場廃止
+  background: kn_shoken
+  bgm: serious
+  stage:
+  - {who: tosho, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 機構は、上場を続けるべきだと考えていました。株主は11万人超。5月12日、東証は廃止を決めます。
+    reading: きこうわ じょうじょうお つづけるべきだと かんがえて いました。かぶぬしわ じゅういちまんにん ちょう。ごがつ じゅうににち、とうしょうわ はいしお きめます。
+  - speaker: tosho
+    emotion: normal
+    text: 上場廃止によってカネボウの一般株主の換金の機会が
+  - speaker: tosho
+    emotion: normal
+    text: 狭められるという御指摘は、その通りだと思いますが、
+  - speaker: tosho
+    emotion: normal
+    text: 内外の投資者の信頼を維持、回復していくためには、
+  - speaker: tosho
+    emotion: normal
+    text: やむを得ない対応であったと認識しております。
+  - speaker: reimu
+    text: 6月13日、上場廃止。
+    reading: ろくがつ じゅうさんにち、じょうじょう はいし。
+# ---- 2005〜2006年・逮捕と法廷 ----
+- id: card2005
+  title: ''
+  background: kn_card_2005
+  cuts:
+  - speaker: reimu
+    text: 2005年7月29日。東京地検特捜部は、元社長の帆足ら3人を逮捕します。
+    reading: にせんごねん しちがつ にじゅうくにち。とうきょう ちけん とくそうぶわ、もと しゃちょうの ほあしら さんにんお たいほ します。
+  - speaker: reimu
+    text: 起訴されたのは、帆足と元副社長の宮原の2人。罪は、証券取引法違反でした。
+    reading: きそ されたのわ、ほあしと もと ふくしゃちょうの みやはらの ふたり。つみわ しょうけん とりひきほう いはんでした。
+- id: ch8_houtei
+  title: 法廷
+  background: kn_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 帆足隆, emotion: sad}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 初公判で2人は起訴事実を認めました。帆足は公判で、責任と粉飾の理由をこう語ったと報じられています。
+    reading: しょこうはんで ふたりわ きそじじつお みとめました。ほあしわ こうはんで、せきにんと ふんしょくの りゆうお こう かたったと ほうじられて います。
+  - speaker: zundamon
+    emotion: sad
+    text: 責任は私を含めて歴代の全社長にある。
+    telops:
+    - {text: "帆足「責任は私を含めて歴代の全社長にある」（報道）", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 破産して従業員や家族、株主に迷惑をかけるわけにはいかない。
+  - speaker: zundamon
+    emotion: sad
+    text: やむを得ないと思わないが、どうしようもなかった。
+  - speaker: reimu
+    text: 2006年3月27日、判決。
+    reading: にせん ろくねん さんがつ にじゅうしちにち、はんけつ。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人を懲役2年に処する。
+  - speaker: saibancho
+    emotion: normal
+    text: この裁判確定の日から3年間、その刑の執行を猶予する。
+  - speaker: reimu
+    text: 宮原は懲役1年6か月、執行猶予3年。判決のあと、裁判長はこう述べたと報じられました。
+    reading: みやはらわ ちょうえき いちねん ろっかげつ しっこう ゆうよ さんねん。はんけつの あと、さいばんちょうわ こう のべたと ほうじられました。
+  - speaker: saibancho
+    emotion: normal
+    text: カネボウ生き残りのために様々な経営努力をしてきたことは裁判所として理解する。
+  - speaker: reimu
+    text: 判決は、そのまま確定しました。監査の会計士3人も、のちに執行猶予つきの有罪判決を受けます。
+    reading: はんけつわ そのまま かくてい しました。かんさの かいけいし さんにんも、のちに しっこう ゆうよ つきの ゆうざい はんけつお うけます。
+  - speaker: reimu
+    text: 1968年から会社を率いた伊藤淳二は、この法廷にいません。罪に問われていないからです。
+    reading: せんきゅうひゃく ろくじゅうはちねんから かいしゃお ひきいた いとう じゅんじわ、この ほうていに いません。つみに とわれて いないからです。
+# ---- 2005〜2007年・解体 ----
+- id: ch9_kaitai
+  title: 化粧品は花王へ
+  background: kn_honsha_2
+  bgm: 223am
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: thinking}
+  - {who: shinjin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 判決の前の2005年12月。機構は化粧品を花王に、残りをファンドの会社に売ると決めていました。
+    reading: はんけつの まえの にせんごねん じゅうにがつ。きこうわ けしょうひんお かおうに、のこりお ふぁんどの かいしゃに うると きめて いました。
+  - speaker: shinjin
+    emotion: surprised
+    text: 化粧品は、結局花王に……！
+  - speaker: senpai
+    emotion: thinking
+    text: 約4100億円だそうだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 4100億円……！ 化粧品だけで？
+  - speaker: senpai
+    emotion: normal
+    text: 稼ぎ頭だったからな。お姉ちゃんのバイト代は、本物だったんだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 2年前は、売らないと決めたのに。
+  - speaker: senpai
+    emotion: sad
+    text: ……2年前は、な。
+    beat: true
+  - speaker: reimu
+    text: 2007年6月、カネボウ株式会社は株主総会で解散を決めました。創立から120年でした。
+    reading: にせん ななねん ろくがつ、かねぼう かぶしきがいしゃわ かぶぬし そうかいで かいさんお きめました。そうりつから ひゃくにじゅうねんでした。
+  - speaker: senpai
+    emotion: normal
+    text: 残った事業は、7月からクラシエという名前で出直すそうだ。
+    background: kn_honsha_new
+  - speaker: shinjin
+    emotion: sad
+    text: 看板の名前も、変わるんですね。
+  - speaker: shinjin
+    emotion: sad
+    text: 化粧品なきカネボウは、カネボウにあらず。……そう言ってましたよね。
+    se: namida
+  - speaker: senpai
+    emotion: sad
+    text: その化粧品だけが、カネボウの名前で残ったんだ。
+# ---- 論争：2人の悪人？ ----
+- id: ronso1
+  title: 2人だけの罪？
+  background: kn_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: つむぎ、分かったのだ！ 粉飾は、社長と副社長の2人の悪だくみなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 経営陣で有罪になったのは、たしかにその2人ね。どちらも執行猶予つきよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 悪い2人がいなくなって、一件落着！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも裁かれたのは、2002年と2003年の3月期の2年分だけ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2年分だけ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が自分で直したのは、5年分よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社内の調べだと、本当の連結の数字は1996年3月期から借金が資産を上回ってたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 社長になる前からなのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 監査の会計士も、3人が有罪になってるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、歴代の社長みんなの罪なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それも言い過ぎ。前の社長たちが、罪に問われたことはないの。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちでも、ないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁かれたのは2年分。帳簿の嘘は、その前から始まってた。確かなのは、そこまでね。
+# ---- 論争：労組のせい？ ----
+- id: ronso2
+  title: 労組のせい？
+  background: kn_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、花王に売るのを潰したのは労組なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 労組だけのせいにしないの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: たしかに調印の日、副社長は労組の反対を理由に挙げたわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱり！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも検証記事の最後で、ある関係者はこう総括してるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '花王以外の道を望んでいたのは、従業員だけじゃない。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 取引先もOBも一部の役員さえ、そうだったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 役員まで！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 合意できていなかったのはカネボウの内部で、経営陣の判断の誤りだったと。
+  - speaker: zundamon
+    emotion: thinking
+    text: 取締役会も、1日でひっくり返ってた……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: しかも社長は入院中。誰も、最後に決められなかったのね。
+  - speaker: zundamon
+    emotion: sad
+    text: 決める人が、いなかった……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 機構が問題にしたのも五角形に広げたことより、赤字を埋め合う甘えのほうだったわ。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 黒字の決算でも
+  background: kn_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: まだあるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒字と書かれた決算でも、監査つきで間違っていることがある。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 5億円の黒字は、2年後に会社自身が219億円の赤字に直したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 監査の人が見てたのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: その会計士も有罪よ。株主は、11万人を超えていた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 上場廃止で、株をお[金|かね]に換える機会も狭まったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 黒字って書いてあれば、安心だと思ってた……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒字の数字だけで、安心しきらないことね。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの財産も、数え直すのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: お菓子100個は、本当は20円ずつで2000円。8000円の見えない赤字ね。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、今月の数字を何とかしろと言われ続ける職場は危ない合図よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 売れない物を押し込み始めたら、その数字はもう本当のことを言ってないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 働いてる人は、気づいてたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の社員は、もうこの会社はダメだなと思ったと振り返ってるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: なのに、大事なことは新聞で知ったんだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後に。名前が同じでも、作っている会社は変わるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 困ったときは、箱に書いてあるいまの会社に問い合わせてね。
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: kn_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。花王との交渉をやめた会見から、22年がたちました。
+    reading: にせん にじゅうろくねん。かおうとの こうしょうお やめた かいけんから、にじゅうにねんが たちました。
+- id: ima
+  title: カネボウのいま
+  background: kn_uriba
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ カネボウの化粧品、いまも売り場にあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: いまは花王グループのカネボウ化粧品よ。2026年で、90周年。
+  - speaker: zundamon
+    emotion: surprised
+    text: '花王に渡さなかった化粧品が、花王で90年目！？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年から、花王の子会社なの。名前は、カネボウのままね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 薬やお菓子のほうは？
+  - speaker: tsumugi
+    emotion: normal
+    text: 漢方や日用品、お菓子はクラシエ。カネボウの名前を外して、2007年に出発したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: カネボウっていう会社は？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2007年に解散して、もう無いわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 名前は残って、会社は無いのか……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1968年の社長と、2004年の社長は？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[伊藤淳二|いとうじゅんじ]は2021年12月に、99歳で亡くなったわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 分かったのは、2024年になってからよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[帆足隆|ホアシタカシ]は、いま90歳。判決のあと、公の場で語った言葉は見当たらないの。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: kn_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ボクのお菓子は、正直に20円で数えるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 財産2000円。いい決算ね。
+    se: oti
+  - speaker: zundamon
+    emotion: sad
+    text: 1万円が、2000円……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 化粧品なきカネボウは、カネボウにあらず。
+  - speaker: tsumugi
+    emotion: normal
+    text: '花王に売るかで割れたとき、社内で上がった声よ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: その会社は無くなって、化粧品のカネボウだけが名前を残したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 守ろうとした化粧品だけが、残ったのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 20円の物は、20円と数える。会社でも、家計でもね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

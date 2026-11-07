@@ -1,0 +1,1193 @@
+meta:
+  title: いきなり!ステーキの社長「お近くの店を閉めることになります」、3年で店は半分以下に【ずんだもん解説】
+  slug: ikinari-steak
+  hook_line: 行列のできた1500円のステーキ屋は、なぜ3年で半分以下になったのか。
+  summary: 2013年12月、71歳の社長が東京・銀座に開いた立ち食いのステーキ店に、行列ができました。1グラム5円、300グラムから。売上の7割が肉の値段という店は、客の回転で稼ぎ、出せば売れるまま全国へ広がります。その社長が2019年12月、店先に直筆の紙を貼りました。店はなぜ増えすぎ、なぜ誰も止めなかったのか。創業者・一瀬邦夫と長男の公の言葉を主語つきで並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - ペッパーフードサービス「沿革」 https://www.pepper-fs.co.jp/corpinfo/history.php
+  - ペッパーフードサービス「2019年12月期 決算短信〔日本基準〕（連結）」（2020年2月14日） https://www.pepper-fs.co.jp/_img/ir/lib/2020/PFS20200214A.pdf
+  - ペッパーフードサービス「2020年12月期 第２四半期決算短信〔日本基準〕（連結）」（2020年7月31日） https://www.pepper-fs.co.jp/_img/ir/lib/2020/PFS20200731_6.pdf
+  - J-CASTニュース「いきなり！ステーキ「お客様のご来店が減少しております」　社長直筆の「お願い」全店掲出へ」（2019年12月10日） https://www.j-cast.com/2019/12/10374778.html?p=all
+  - 東洋経済オンライン「低迷の｢いきなり!ステーキ｣､社長が語った悔恨」（2021年5月12日） https://toyokeizai.net/articles/-/426978
+  - デイリー新潮「「いきなり！ステーキ」を手放した一瀬邦夫氏（81）が両国に和牛ステーキ店を開店　本人が自ら厨房に立つ理由」（2024年1月30日） https://www.dailyshincho.jp/article/2024/01301101/
+  tags:
+  - いきなり!ステーキ
+  - 一瀬邦夫
+  - ペッパーフードサービス
+  - ペッパーランチ
+  - 立ち食いステーキ
+  - 量り売り
+  - 過剰出店
+  - 自社競合
+  - 直筆の貼り紙
+  - 債務超過
+  - 外食チェーン
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: お近くの店を閉める
+    bottom: いきなり!ステーキ
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kensaku
+    label: 一瀬健作
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2f3a'
+  - id: senpai
+    label: 先輩
+    voice: 13
+    pitch: -0.06
+    outfit: apron
+    color: '#7a4a3a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: apron
+    color: '#4a6a8a'
+  - id: kyaku
+    label: 客
+    voice: 8
+    pitch: 0.1
+    hair: short
+    color: '#8a5a6a'
+  - id: fudosan
+    label: 不動産業者
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#6a5a48'
+  - id: ginko
+    label: 銀行員
+    voice: 13
+    pitch: 0.14
+    outfit: suit
+    color: '#454a55'
+  - id: tencho
+    label: 店長
+    voice: 100
+    pitch: 0.0
+    outfit: apron
+    color: '#5a6a4a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.1
+    outfit: suit
+    color: '#4a4038'
+  - id: beikoku
+    label: 米国の客
+    voice: 8
+    pitch: -0.06
+    hair: bun
+    color: '#5a6a8a'
+  - id: shain
+    label: 社員
+    voice: 67
+    pitch: 0.06
+    outfit: suit
+    color: '#3e5c4a'
+scenes:
+# ---- 先出し（2019年12月・直筆の貼り紙）。嘲らない：笑いのSE・ツッコミ・「？」の表情を入れない ----
+- id: co_harigami
+  title: ''
+  background: ik_mise_harigami
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2019年12月。ステーキ店「いきなり!ステーキ」の店先に、社長が手で書いた紙が貼られました。
+    reading: にせん じゅうくねん じゅうにがつ。すてーきてん いきなり すてーきの みせさきに、しゃちょうが てで かいた かみが はられました。
+- id: co_yoru
+  title: ''
+  background: ik_shacho_yoru
+  stage:
+  - {who: zundamon, x: 0.5, tag: 一瀬邦夫, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: しかし、お客様のご来店が減少しております。
+  - speaker: zundamon
+    emotion: sad
+    text: このままではお近くの店を閉めることになります。
+- id: co_studio
+  title: ''
+  background: ik_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長、貼り紙の反響の大きさについては。
+  - speaker: zundamon
+    emotion: normal
+    text: 普通の社長ならしない。
+  - speaker: zundamon
+    emotion: normal
+    text: 一瀬社長は非常識の塊だって、僕は[誉め言葉|ほめことば]だとずっと思ってきた。
+  - speaker: reimu
+    text: このとき店は国内に488。3年後には半分以下になり、この人は、自分の会社を去ります。
+    reading: この とき みせわ こくないに よんひゃく はちじゅうはち。さんねんごにわ はんぶん いかに なり、この ひとわ じぶんの かいしゃお さります。
+# ---- 今の部屋（量り売りのナッツ） ----
+- id: hook
+  title: ''
+  background: ik_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 量り売りのナッツ、好きなだけすくってきたのだ！
+  - speaker: zundamon
+    emotion: surprised
+    text: ……2400円！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1グラムの値段、見なかったの？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 1グラム5円で、行列を作ったステーキ屋があるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その店は6年で約490店になって、3年で半分以下になったのよ。
+    telops:
+    - {text: "1500円の行列店は なぜ3年で半分以下に", size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 行列ができたのに、なんで半分以下に！？
+# ---- 2013年12月5日・銀座の1号店 ----
+- id: card2013
+  title: ''
+  background: ik_card_2013
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2013年12月5日、東京・銀座。71歳の社長が、立ち食いのステーキ店を開きます。
+    reading: にせん じゅうさんねん じゅうにがつ いつか、とうきょう ぎんざ。ななじゅう いっさいの しゃちょうが たちぐいの すてーきてんお ひらきます。
+- id: ch1_ginza
+  title: 1グラム5円の立ち食い
+  background: ik_tenpo
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: senpai, x: 0.56, emotion: normal}
+  - {who: shinjin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: '[いきなり!ステーキ|いきなりステーキ]のロゴの中心には、ロケットを入れた。'
+  - speaker: zundamon
+    emotion: happy
+    text: ロケットには、いままでのビジネスを突き破る意味を込めた。
+  - speaker: zundamon
+    emotion: normal
+    text: この店は客席回転率の向上で、損益分岐点を下げていく。
+  - speaker: reimu
+    text: 3000円のステーキが、半額の1500円。椅子なし、前菜なし、20分で帰る。
+    reading: さんぜんえんの すてーきが はんがくの せん ごひゃくえん。いすなし ぜんさいなし、にじゅっぷんで かえる。
+    telops:
+    - {text: "3000円のステーキが 半額の1500円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、半額で儲かるんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 売上の7割が肉の値段だ。業界の常識を打ち破る数字だよ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 残りの3割で、家賃もお給料もですか！？
+  - speaker: senpai
+    emotion: normal
+    text: だから回転で稼ぐ。椅子がないから、客は早く帰る。
+  - speaker: senpai
+    emotion: happy
+    text: 45人ほど入る店に、1日300人。それが目標だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 300人……。
+    beat: true
+- id: ch1_gyoretsu
+  title: ''
+  background: ik_mise
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: ステーキを、立って食べるの？
+  - speaker: kyaku
+    emotion: surprised
+    text: ……なのに、この行列！？
+    background: ik_mise_gyoretsu
+  - speaker: kyaku
+    emotion: normal
+    text: 私、200グラムでいい。
+  - speaker: zundamon
+    emotion: happy
+    text: ダメです。300グラムからです！
+  - speaker: kyaku
+    emotion: surprised
+    text: ……300グラムから！？
+    se: bikkuri
+  - speaker: reimu
+    text: 行列の店の社長は、なぜ6年後、店を閉めることになると書いたのか。
+    reading: ぎょうれつの みせの しゃちょうわ、なぜ ろくねんご みせお しめる ことに なると かいたのか。
+# ---- 出せば1日100万円 ----
+- id: ch1_dasu
+  title: 出せば1日100万円
+  background: ik_shacho
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: fudosan, x: 0.56, emotion: happy}
+  - {who: ginko, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: fudosan
+    emotion: happy
+    text: 社長、駅前にいい物件が空きました！
+  - speaker: ginko
+    emotion: happy
+    text: ご融資は、当行にお任せください。
+  - speaker: reimu
+    text: 店が増え続けた2018年ごろを、本人は2021年にこう振り返っています。
+    reading: みせが ふえつづけた にせん じゅうはちねん ごろお、ほんにんわ にせん にじゅういちねんに こう ふりかえって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 当時は、[新店|しんてん]を出せば1日100万円の売り上げがあった。
+  - speaker: zundamon
+    emotion: normal
+    text: だからこそ業者は物件をどんどん斡旋してくれたし、銀行融資も存分に受けられた。
+  - speaker: reimu
+    text: でもこの仕組みは、客が減ると一気に崩れます。肉の値段が、売上の7割だからです。
+    reading: でも この しくみわ、きゃくが へると いっきに くずれます。にくの ねだんが うりあげの ななわり だからです。
+# ---- 1961年ごろ・新人コック（年号カードで時を戻すのはここだけ） ----
+- id: card1961
+  title: ''
+  background: ik_card_1961
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1961年ごろ、東京の洋食店。のちの社長は、高校を出たばかりの新人コックでした。
+    reading: せんきゅうひゃく ろくじゅういちねん ごろ、とうきょうの ようしょくてん。のちの しゃちょうわ こうこうお でたばかりの しんじん こっくでした。
+- id: ch2_chubo
+  title: 1か月の給料のステーキ
+  background: ik_chubo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, scale: 0.85, emotion: normal}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 初日、先輩にビーフステーキを頼みます。本人がのちに話した思い出です。
+    reading: しょにち、せんぱいに びーふすてーきお たのみます。ほんにんが のちに はなした おもいでです。
+  - speaker: senpai
+    emotion: normal
+    text: ……ポークソテーにしなよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。
+    se: shobon
+  - speaker: zundamon
+    emotion: normal
+    text: ビーフステーキは僕の1カ月の給料と同じ、3000円だったんですよ。
+  - speaker: reimu
+    text: そのあと赤坂の山王ホテルで9年。アメリカ人の客に、分厚いステーキを焼きました。
+    reading: その あと あかさかの さんのう ほてるで きゅうねん。あめりかじんの きゃくに、ぶあつい すてーきお やきました。
+- id: card1970
+  title: ''
+  background: ik_card_1970
+  cuts:
+  - speaker: reimu
+    text: 1970年、東京・墨田区。27歳で、6坪の洋食店キッチンくにを開きます。
+    reading: せんきゅうひゃく ななじゅうねん、とうきょう すみだく。にじゅうななさいで ろくつぼの ようしょくてん きっちん くにお ひらきます。
+- id: ch2_yoshoku
+  title: ''
+  background: ik_yoshoku
+  stage:
+  - {who: zundamon, x: 0.5, tag: 一瀬邦夫, scale: 0.92, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: いらっしゃいませ！
+  - speaker: reimu
+    text: 1994年、51歳でペッパーランチを始めます。1号店が当たると、1年で10の店を出しました。
+    reading: せんきゅうひゃく きゅうじゅうよねん ごじゅういっさいで ぺっぱーらんちお はじめます。いちごうてんが あたると いちねんで じゅうの みせお だしました。
+  - speaker: reimu
+    text: 結果は全店が大赤字だった、と本人は話しています。会社は持ち直し、2006年に上場します。
+    reading: けっかわ ぜんてんが おおあかじだったと ほんにんわ はなして います。かいしゃわ もちなおし にせん ろくねんに じょうじょう します。
+  - speaker: reimu
+    text: これが、あとで効きます。出しすぎた店が赤字になると知っていた人が、なぜ490店まで出したのか。
+    reading: これが あとで ききます。だしすぎた みせが あかじに なると しって いた ひとが、なぜ よんひゃく きゅうじゅってんまで だしたのか。
+# ---- 2017年2月・ニューヨーク ----
+- id: card2017
+  title: ''
+  background: ik_card_2017
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2017年2月、ニューヨーク。いきなり!ステーキが、海の向こうに1号店を出します。
+    reading: にせん じゅうななねん にがつ、にゅーよーく。いきなり すてーきが うみの むこうに いちごうてんお だします。
+- id: ch3_ny
+  title: ステーキの本場へ
+  background: ik_ny
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: kisha, x: 0.56, emotion: normal}
+  - {who: beikoku, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長、アメリカではどう売るんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 高級牛肉を割安にスピード提供する。
+  - speaker: zundamon
+    emotion: happy
+    text: フランチャイズチェーンも視野に入れ、全米で加速度的に展開していければ。
+  - speaker: zundamon
+    emotion: normal
+    text: おいしいものを短時間で食べたいという欲求は、先進国で共通の現象。
+  - speaker: beikoku
+    emotion: normal
+    text: ……やはり、座って食べたい。
+    beat: true
+  - speaker: reimu
+    text: アメリカの店はこのあと11まで増えます。本人はのちに、マンハッタンは2店で十分だった、と振り返ります。
+    reading: あめりかの みせわ この あと じゅういちまで ふえます。ほんにんわ のちに まんはったんわ にてんで じゅうぶんだったと ふりかえります。
+# ---- 来年は200店舗 ----
+- id: ch3_party
+  title: 来年は200店舗
+  background: ik_party
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 会社が東証1部に上がった年。あるパーティーの壇上です。
+    reading: かいしゃが とうしょう いちぶに あがった とし。ある ぱーてぃーの だんじょうです。
+  - speaker: zundamon
+    emotion: happy
+    text: 来年は200店舗、出店します！
+    se: don
+    telops:
+    - {text: "一瀬「来年は200店舗、出店します！」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: kyaku
+    emotion: surprised
+    text: 200！？ 1年で！？
+  - speaker: kyaku
+    emotion: thinking
+    text: ……大丈夫？
+  - speaker: reimu
+    text: この年の暮れ、本人は銀座の行列を振り返って、こう話しています。
+    reading: この としの くれ、ほんにんわ ぎんざの ぎょうれつお ふりかえって こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 僕は母に、コックになるんだったら日本で5本の指に入るんだよと言われてた。
+  - speaker: zundamon
+    emotion: happy
+    text: それに匹敵することは達成できたかな、と思うと格別にうれしいんですよね。
+  - speaker: reimu
+    text: のちの2024年には、店を増やすこと自体が目標になってしまった、と振り返ります。
+    reading: のちの にせん にじゅうよねんにわ、みせお ふやす こと じたいが もくひょうに なって しまったと ふりかえります。
+  - speaker: reimu
+    text: 出せば売れる店を、なぜ誰も止めなかったのか。
+    reading: だせば うれる みせお、なぜ だれも とめなかったのか。
+# ---- 2018年・1日5店舗 ----
+- id: ch3_pin
+  title: 1日5店舗
+  background: ik_shacho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、2018年は宣言どおり200店のペースです！
+  - speaker: shain
+    emotion: happy
+    text: 今日は1日で、5店舗が開店です！
+  - speaker: shain
+    emotion: happy
+    text: 9月にはアメリカのナスダックに上場。日本の外食で初めてです！
+  - speaker: shain
+    emotion: happy
+    text: 24時間で1734食。ギネス世界記録にもなりました！
+  - speaker: shain
+    emotion: happy
+    text: そして11月、47都道府県のすべてに店ができました！
+    background: ik_shacho_pin
+    se: levelup
+  - speaker: reimu
+    text: でもこの年の4月から、前からある店の売上は、もう前の年を下回り始めていました。
+    reading: でも この としの しがつから、まえから ある みせの うりあげわ もう まえの としお したまわり はじめて いました。
+# ---- 2019年・同じ駅に4店 ----
+- id: card2019
+  title: ''
+  background: ik_card_2019
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2019年。会社はこの年も、210の店を出す計画を立てます。増えた店は、何を食い合っていたのか。
+    reading: にせん じゅうくねん。かいしゃわ この としも にひゃく じゅうの みせお だす けいかくお たてます。ふえた みせわ、なにお くいあって いたのか。
+- id: ch4_hoshin
+  title: ''
+  background: ik_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、今年の方針を貼り出しました！
+  - speaker: shain
+    emotion: normal
+    text: 急成長を楽しむ、驕る事なく素直な心で社会の公器となる。
+- id: ch4_ekimae
+  title: 同じ駅に4店
+  background: ik_ekimae
+  stage:
+  - {who: tencho, x: 0.3, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: 駅の反対側の店が混んでたから、こっちに来たの。
+  - speaker: tencho
+    emotion: happy
+    text: ありがとうございます！ どちらのお店ですか。
+  - speaker: kyaku
+    emotion: normal
+    text: "[いきなり!ステーキ|いきなりステーキ]。"
+  - speaker: tencho
+    emotion: sad
+    text: ……それも、うちです。
+    beat: true
+  - speaker: kyaku
+    emotion: normal
+    text: じゃあ、駅ビルの中の店は？
+  - speaker: tencho
+    emotion: sad
+    text: ……うちです。
+  - speaker: kyaku
+    emotion: normal
+    text: 商店街の奥の店も？
+  - speaker: tencho
+    emotion: sad
+    text: うちです。この駅のまわりだけで、4つあるんです。
+    se: zukko
+    telops:
+    - {text: "同じ駅に4店", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kyaku
+    emotion: normal
+    text: じゃあ私、どこで食べても同じ店の客なのね。
+- id: ch4_jisha
+  title: ''
+  background: ik_shacho_pin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: normal}
+  - {who: kensaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 本人は2020年1月に、こう話しています。
+    reading: ほんにんわ にせん にじゅうねん いちがつに こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: そして19年は、210店出そうと宣言したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: そしたら[2、3月|ニサンガツ]ごろから、待てよ。売り上げに影響が出てくるかもしれないな、と。
+  - speaker: zundamon
+    emotion: sad
+    text: 分析したら、自社競合していたと分かりました。
+  - speaker: reimu
+    text: 副社長だった長男は、2025年にこう書いています。
+    reading: ふくしゃちょうだった ちょうなんわ、にせん にじゅうごねんに こう かいて います。
+  - speaker: kensaku
+    emotion: normal
+    text: パソコンの画面上だけで、出店場所を即決していた時期もありました。
+  - speaker: kensaku
+    emotion: sad
+    text: 急激な出店に危うさを感じながらも、
+  - speaker: kensaku
+    emotion: sad
+    text: 会社の勢いを止めてはいけない。父を止めるのは悪だ、とさえ思っていたこともありました。
+# ---- 2019年11月・44店を閉める ----
+- id: ch4_44
+  title: 止まったら終わり
+  background: ik_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: sad}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 10月の既存店の売上は、前の年より41.4%減です。
+  - speaker: shain
+    emotion: sad
+    text: 出店の計画は、210から115に減らします。
+  - speaker: reimu
+    text: 11月14日、44の店を閉めると発表。同じころの取材で、店を広げたい経営者に向けてこう話しています。
+    reading: じゅういちがつ じゅうよっか、よんじゅうよんの みせお しめると はっぴょう。おなじ ころの しゅざいで、みせお ひろげたい けいえいしゃに むけて こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 企業はコマと同じで、止まったら終わりです。
+  - speaker: zundamon
+    emotion: sad
+    text: いたずらに店を増やしても、お客様がリピートしてくれないと意味がありません。
+# ---- 2019年12月・社長からのお願い（冒頭の場面）。嘲らない ----
+- id: ch5_harigami
+  title: 社長からのお願い
+  background: ik_shacho_yoru
+  stage:
+  - {who: zundamon, x: 0.5, tag: 一瀬邦夫, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そして12月。社長は、店に貼る紙を自分の手で書きます。
+    reading: そして じゅうにがつ。しゃちょうわ、みせに はる かみお じぶんの てで かきます。
+  - speaker: zundamon
+    emotion: normal
+    text: いきなりステーキは日本初の格安高級牛肉の厚切りステーキを
+  - speaker: zundamon
+    emotion: normal
+    text: 気軽に召しあがれる食文化を発明、大繁盛させて頂きました。
+  - speaker: zundamon
+    emotion: normal
+    text: 今では店舗の急拡大により、
+  - speaker: zundamon
+    emotion: normal
+    text: いつでも、どこでもいきなりステーキを食べることができるようになりました。
+  - speaker: zundamon
+    emotion: sad
+    text: しかし、お客様のご来店が減少しております。
+  - speaker: zundamon
+    emotion: sad
+    text: このままではお近くの店を閉めることになります。
+    telops:
+    - {text: "貼り紙「お近くの店を閉めることになります」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 従業員一同は明るく元気に頑張っております。
+  - speaker: zundamon
+    emotion: normal
+    text: お店も皆様のご希望にお答えして、ほぼ全店を着席できるようにしました。
+  - speaker: zundamon
+    emotion: sad
+    text: 創業者一瀬邦夫からのお願いです。
+- id: ch5_isu
+  title: ''
+  background: ik_tenpo
+  stage:
+  - {who: shinjin, x: 0.3, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: 立ち食いの店、だったわよね。
+  - speaker: shinjin
+    emotion: happy
+    text: いらっしゃいませ！ お席へどうぞ。
+    background: ik_tenpo_isu
+  - speaker: kyaku
+    emotion: surprised
+    text: え、座れるの？
+  - speaker: reimu
+    text: 12月8日、渋谷の店の貼り紙の写真がネットで広まります。15日の番組では、本人が取材に答えました。
+    reading: じゅうにがつ ようか、しぶやの みせの はりがみの しゃしんが ねっとで ひろまります。じゅうごにちの ばんぐみでわ、ほんにんが しゅざいに こたえました。
+- id: ch5_studio
+  title: ''
+  background: ik_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長、あの貼り紙にはどんな思いを。
+  - speaker: zundamon
+    emotion: normal
+    text: 僕の思い。実情を知ってもらうことが一番手っ取り早いと思った。
+  - speaker: kisha
+    emotion: normal
+    text: 反響の大きさについては。
+  - speaker: zundamon
+    emotion: normal
+    text: 想定というよりも、書いて訴えよう。お客様に気づいてもらおうと。
+  - speaker: zundamon
+    emotion: normal
+    text: 普通の社長ならしない。
+  - speaker: zundamon
+    emotion: normal
+    text: 一瀬社長は非常識の塊だって、僕は[誉め言葉|ほめことば]だとずっと思ってきた。
+  - speaker: zundamon
+    emotion: normal
+    text: そういう社長がいてもいい。自分に素直に、自分の気持ちを訴えた。
+  - speaker: zundamon
+    emotion: sad
+    text: このままじゃ、店をもっと閉店しなければならなくなるので。
+# ---- 2020年・2枚目の紙と、初めての赤字 ----
+- id: card2020
+  title: ''
+  background: ik_card_2020
+  cuts:
+  - speaker: reimu
+    text: 2020年1月。店先に、2枚目の紙が貼られます。
+    reading: にせん にじゅうねん いちがつ。みせさきに にまいめの かみが はられます。
+- id: ch6_nimaime
+  title: ''
+  background: ik_shacho_yoru
+  stage:
+  - {who: zundamon, x: 0.5, tag: 一瀬邦夫, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 私の思いとは違う厳しいご意見を多数頂きました。
+  - speaker: zundamon
+    emotion: normal
+    text: しかし、頑張れとの励ましのお言葉も数多く頂き勇気がでました。
+  - speaker: zundamon
+    emotion: sad
+    text: 一番人気はワイルドステーキですが、時々硬いとお叱りを受けておりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 大いに反省しております。
+- id: ch6_akaji
+  title: 上場以来初の営業赤字
+  background: ik_kaigi_akaji
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: sad}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 2019年の決算です。上場以来初めての営業赤字です。
+  - speaker: shain
+    emotion: sad
+    text: 最終赤字は、27億円です。
+  - speaker: reimu
+    text: 客が減った理由を聞かれ、本人は2月の取材でこう話しています。
+    reading: きゃくが へった りゆうお きかれ、ほんにんわ にがつの しゅざいで こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 原因の半分は、一番の売れ筋で初めての来店者が多く頼む
+  - speaker: zundamon
+    emotion: sad
+    text: ワイルドステーキに硬い部分があること。
+  - speaker: zundamon
+    emotion: sad
+    text: 振り返ると、18年に大量出店をしなくてもよかった。
+- id: ch6_byou
+  title: 0.2秒作戦
+  background: ik_tenpo_isu
+  bgm: curious
+  stage:
+  - {who: tencho, x: 0.3, flip: true, emotion: happy}
+  - {who: shinjin, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: tencho
+    emotion: happy
+    text: 本社から立て直しの策だ。名前は、0.2秒作戦！
+  - speaker: tencho
+    emotion: happy
+    text: お客様の目を見て、いらっしゃいませ！
+  - speaker: shinjin
+    emotion: happy
+    text: いらっしゃいませ！
+  - speaker: tencho
+    emotion: angry
+    text: 目を見て！
+  - speaker: shinjin
+    emotion: surprised
+    text: ……0.2秒って、[何|なに]が0.2秒なんですか。
+  - speaker: tencho
+    emotion: angry
+    text: ……とにかく、目を見る！
+    se: hammer
+# ---- 2020年・ペッパーランチを手放す ----
+- id: ch7_pepper
+  title: ペッパーランチを手放す
+  background: ik_kaigi_akaji
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 一瀬邦夫, emotion: sad}
+  - {who: shain, x: 0.56, emotion: sad}
+  - {who: kensaku, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 3月からはコロナで、お客様がさらに減っています。
+  - speaker: shain
+    emotion: sad
+    text: 6月末の純資産は、マイナス55億5900万円。債務超過です。
+    telops:
+    - {text: "債務超過 マイナス55億5900万円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: shain
+    emotion: sad
+    text: 払うべきお[金|かね]が、会社の持ち物より多くなったということです。
+  - speaker: reimu
+    text: 本人は2021年に、このときをこう話しています。
+    reading: ほんにんわ にせん にじゅういちねんに、この ときお こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 銀行に何か言われればそれで終わりかもしれないなってときに、相談したんです。
+  - speaker: zundamon
+    emotion: sad
+    text: ペッパーランチを買ってくれるところはあるのかな、って。
+  - speaker: shain
+    emotion: sad
+    text: 7月3日、発表の日です。ペッパーランチの売却額は、85億円。
+  - speaker: shain
+    emotion: sad
+    text: 店は114を閉め、希望退職を200人。アメリカの子会社は、破産を申し立てます。
+  - speaker: reimu
+    text: 発表のころ、本人はこう話しています。
+    reading: はっぴょうの ころ、ほんにんわ こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 悔しくないといったら嘘になる。
+  - speaker: reimu
+    text: 長男は2025年に、こう書いています。
+    reading: ちょうなんわ にせん にじゅうごねんに こう かいて います。
+  - speaker: kensaku
+    emotion: normal
+    text: ペッパーランチ事業の投資ファンドへの売却も決断しました。
+  - speaker: kensaku
+    emotion: sad
+    text: 虎の子の資産を売るのかと関係者から反対されましたが、それ以外に方法がなかった。
+  - speaker: reimu
+    text: 51歳で始めた事業を手放す。父は相談したと言い、長男は決断したと書いています。
+    reading: ごじゅういっさいで はじめた じぎょうお てばなす。ちちわ そうだん したと いい、ちょうなんわ けつだん したと かいて います。
+# ---- 2021年・止めてくれる人 ----
+- id: card2021
+  title: ''
+  background: ik_card_2021
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2021年3月。10の店で、ステーキを大きく値下げします。4月には35店に広げました。
+    reading: にせん にじゅういちねん さんがつ。じゅうの みせで すてーきお おおきく ねさげ します。しがつにわ さんじゅうごてんに ひろげました。
+- id: ch8_vivid
+  title: ビビット作戦
+  background: ik_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 大幅値下げをしたら、お客さんはビビッと来るだろう！
+    se: hirameki
+  - speaker: reimu
+    text: この一言から、社内ではビビット作戦と呼ばれます。5月の取材では、こんなやりとりがありました。
+    reading: この ひとことから、しゃないでわ びびっと さくせんと よばれます。ごがつの しゅざいでわ、こんな やりとりが ありました。
+- id: ch8_kuikon
+  title: ''
+  background: ik_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 長らくメディアに出られませんでしたね。
+  - speaker: zundamon
+    emotion: normal
+    text: 感染症対策というのが大きいが、
+  - speaker: zundamon
+    emotion: happy
+    text: いろいろあったから、あまり出たくない時期もあった。
+  - speaker: kisha
+    emotion: normal
+    text: 原点を見失い、経営が傾いたのはなぜでしょうか。
+  - speaker: zundamon
+    emotion: sad
+    text: 出店数については、イケイケどんどんで出しすぎた。
+  - speaker: zundamon
+    emotion: sad
+    text: ぜいたくな話だが、
+  - speaker: zundamon
+    emotion: sad
+    text: あのとき、私を止めてくれる人がいればよかったなと今になって思う。
+    telops:
+    - {text: "一瀬「私を止めてくれる人がいればよかった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 止めてくれる人がいればよかった、と言う父。止めるのは悪だ、とさえ思っていたこともある息子。
+    reading: とめて くれる ひとが いれば よかったと いう ちち。とめるのわ あくだと さえ おもって いた ことも ある むすこ。
+# ---- 2022年8月12日・取締役会。辞任の経緯は決めない ----
+- id: card2022
+  title: ''
+  background: ik_card_2022
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2022年8月12日、本社の取締役会。79歳の一瀬は、社長と取締役を辞めました。
+    reading: にせん にじゅうにねん はちがつ じゅうににち、ほんしゃの とりしまりやくかい。ななじゅうきゅうさいの いちのせわ しゃちょうと とりしまりやくお やめました。
+- id: ch9_kaigi
+  title: 取締役会の日
+  background: ik_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: sad}
+  - {who: kensaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 会社の発表は、業績不振の経営責任を明確にするため。長男は2023年に、こう話しています。
+    reading: かいしゃの はっぴょうわ ぎょうせき ふしんの けいえい せきにんお めいかくに する ため。ちょうなんわ にせん にじゅうさんねんに こう はなして います。
+  - speaker: kensaku
+    emotion: normal
+    text: 本当に突然だった。
+  - speaker: kensaku
+    emotion: normal
+    text: 2022年8月12日の取締役会で前社長から申し出があり、
+  - speaker: kensaku
+    emotion: normal
+    text: その3日後、ネットでつないだ各店長さんたちを含め全社員に
+  - speaker: kensaku
+    emotion: sad
+    text: 残ったメンバーでしっかり頑張ってくれ、と。
+  - speaker: reimu
+    text: 2025年には、こう書いています。
+    reading: にせん にじゅうごねんにわ こう かいて います。
+  - speaker: kensaku
+    emotion: sad
+    text: そして22年、父に社長退任を迫り辞任してもらいました。
+  - speaker: reimu
+    text: 父は2024年に、こう話しています。
+    reading: ちちわ にせん にじゅうよねんに こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 後を継いだ息子から、前社長の影響力が強いから
+  - speaker: zundamon
+    emotion: sad
+    text: 取締役としても会長としても残らないでくれと言われたので、全部離れました。
+  - speaker: reimu
+    text: 申し出たのか、迫られたのか。説明は、ひとつではありません。
+    reading: もうしでたのか、せまられたのか。せつめいわ ひとつでわ ありません。
+# ---- 2023〜2025年・両国の厨房 ----
+- id: card2023
+  title: ''
+  background: ik_card_2023
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2023年11月、東京・両国。国技館の前に、81歳の一瀬が和牛ステーキの店を開きます。
+    reading: にせん にじゅうさんねん じゅういちがつ、とうきょう りょうごく。こくぎかんの まえに はちじゅういっさいの いちのせが わぎゅう すてーきの みせお ひらきます。
+- id: ch10_ryogoku
+  title: 81歳の厨房
+  background: ik_ryogoku
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 一瀬邦夫, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長を辞めてから、どう過ごされていたんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: だらしなくなるのは嫌だから、早起きはしていた。
+  - speaker: zundamon
+    emotion: happy
+    text: でもね、何も仕事をしないのは僕の[性|しょう]に合わない。
+  - speaker: zundamon
+    emotion: happy
+    text: 和牛を安く提供するため、原価率は70％。
+    background: ik_wakuni
+    telops:
+    - {text: "一瀬（2024年）「原価率は70％」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: happy
+    text: 繁盛するまで、僕は無給でサポートしていきます。
+  - speaker: kisha
+    emotion: surprised
+    text: ……無給で。
+  - speaker: zundamon
+    emotion: happy
+    text: 日によってはインバウンドが9割を占めることもある。
+  - speaker: kisha
+    emotion: normal
+    text: お店は、また増やすんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分の店を持ちたいという従業員がいれば与えます。
+  - speaker: zundamon
+    emotion: normal
+    text: でも、[いきなり!ステーキ|いきなりステーキ]の時のようなあんなバカなマネはできませんよ。
+  - speaker: kisha
+    emotion: normal
+    text: '[いきなり!ステーキ|いきなりステーキ]は、まだ立ち直れていないと報じられていますが。'
+  - speaker: zundamon
+    emotion: normal
+    text: まだ1年しか経っていないからね。
+  - speaker: zundamon
+    emotion: normal
+    text: 息子たちも頑張っていますし、自分は会社を離れた身ですから
+  - speaker: zundamon
+    emotion: normal
+    text: それについて言うことはありません。
+- id: ch10_heiten
+  title: ''
+  background: ik_ryogoku
+  bgm: 223am
+  stage:
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: 国技館の帰りに、あのステーキ屋さんへ……。
+  - speaker: kyaku
+    emotion: sad
+    text: あれ……閉まってる。
+    background: ik_ryogoku_heiten
+    se: shobon
+  - speaker: reimu
+    text: 2025年8月20日、この店も閉じました。告知は、2年に満たない営業への感謝で結ばれています。
+    reading: にせん にじゅうごねん はちがつ はつか、この みせも とじました。こくちわ にねんに みたない えいぎょうえの かんしゃで むすばれて います。
+# ---- 論争 ----
+- id: ronso1
+  title: 出しすぎたから？
+  background: ik_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 店を出しすぎたから、つぶれかけたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: まず、会社はいまも続いてるわ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人もペッパーランチを85億円で売れて、会社はなんとか持ちこたえたと話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、出しすぎたのは本当よ。2018年は1年で約200店。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社も店どうしの競合を理由に挙げてる。本人も、出し過ぎちゃったと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 外食の調査をする人も2024年に、店舗を出し過ぎたことに尽きると話してるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり出しすぎなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ本人は2021年に、ペッパーランチを売った理由を聞かれてこうも言ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 店を出し過ぎたことで駄目になったのではなくて、商売の仕方が間違っていたんだと思う。
+  - speaker: zundamon
+    emotion: surprised
+    text: 商売の仕方？
+  - speaker: tsumugi
+    emotion: normal
+    text: 客が減ると、採算のために値上げした。値上げすると、さらに客が遠のく。
+  - speaker: tsumugi
+    emotion: normal
+    text: 5月の取材で本人はそれを悪循環と呼び、顧客優先から利益優先になったと話してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 看板のワイルドステーキの硬い部分も、本人が原因の半分と言ったわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 出しすぎた、だけじゃなかったのか……。
+- id: ronso2
+  title: 貼り紙で客が離れた？
+  background: ik_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、あの貼り紙で客が離れたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も2枚目の紙で、厳しいご意見を多数頂いたと書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年の東洋経済のコラムは、自画自賛や上から目線という見方を書いたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも前からある店の売上が、前の年を割り始めたのは2018年の4月。
+  - speaker: tsumugi
+    emotion: normal
+    text: 貼り紙の1年8か月前よ。10月の41.4%減も、貼り紙の前なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 貼り紙より、ずっと前から！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 貼り紙は、落ち始めて1年半以上たってから打った手のひとつだったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は翌年の計画に、社長の筆書きのメッセージを正式に入れてるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 先に落ちてたのか……。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 1グラムの値段を見る
+  background: ik_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 量り売りは、1グラムの値段といちばん少ない量を見ること。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も話してる。1グラム1円の値上げでも、300グラムなら300円になる。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ボクのナッツ、1グラム[何|なん]円だったっけ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: レシートに書いてあるわよ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: もう一つ。ポイントや前払いの特典は、変わることも終わることもあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 食べた肉の量でランクが上がる肉マイレージは、特典が改められたことがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前払いの肉マイレージマネーも、2021年12月に終わったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 長男も2023年に、常連様の気持ちを裏切ってしまったと話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 特典が変わるお知らせは、ちゃんと見ておいてね。
+  - speaker: zundamon
+    emotion: sad
+    text: ボク、お知らせのメールは全部未読なのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……今日から読みなさい。
+    se: hammer
+# ---- 現代 ----
+- id: ima
+  title: いまのいきなり!ステーキ
+  background: ik_gendai
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: それで、[いきなり!ステーキ|いきなりステーキ]はいまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年9月の時点で、国内に167店。最盛期の[3分の1|さんぶんのいち]ほどね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前からある店の売上は、前の年を上回ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ブームが去っただけなら、この数字は説明がつかないわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の営業利益は、2024年から2年続けて黒字。今年も8月の発表では黒字の予想よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1号店で税抜き1500円だったリブロース300グラムは、いまは税込みで4410円。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……4410円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 長男は2024年に、父の強いリーダーシップを振り返ってこう話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: すべてが悪いことではなかった、って。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一瀬は2025年の終わりの時点で、会社の2番目の大株主よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社を離れても、株は持ってたのか……。
+# ---- 締め ----
+- id: shime_ginza
+  title: ''
+  background: ik_tenpo
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 一瀬邦夫, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2013年、71歳の銀座。
+    reading: にせん じゅうさんねん、ななじゅう いっさいの ぎんざ。
+  - speaker: zundamon
+    emotion: happy
+    text: ロケットには、いままでのビジネスを突き破る意味を込めた。
+- id: shime_ryogoku
+  title: ''
+  background: ik_wakuni
+  stage:
+  - {who: zundamon, x: 0.5, tag: 一瀬邦夫, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2024年、81歳の両国。
+    reading: にせん にじゅうよねん、はちじゅう いっさいの りょうごく。
+  - speaker: zundamon
+    emotion: normal
+    text: あんなバカなマネはできませんよ。
+- id: shime
+  title: ''
+  background: ik_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ナッツは、1グラムの値段を見てからすくう！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……その袋、もう半分食べてるじゃない。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 出せば売れる仕組みは、客が減ると一気に崩れる。
+  - speaker: tsumugi
+    emotion: normal
+    text: ロケットの店は6年で約490店まで増えて、3年で半分以下になったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 止めてくれる人がいればよかった、と本人はあとで言った。
+  - speaker: zundamon
+    emotion: thinking
+    text: 量り売りも出店も、ちょうどいい量があるんだね……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも量り売りは、1グラムの値段から見てね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

@@ -1,0 +1,1126 @@
+meta:
+  title: スカイマーク元社長「完全に裸の王様でした」、売上の2倍の買い物を解約され半年で民事再生【ずんだもん解説】
+  slug: skymark-saisei
+  hook_line: 売上の2倍の買い物を、なぜ誰も止めず、誰が会社を拾ったのか。
+  summary: 2014年7月、霞が関の会見で、スカイマークの社長・西久保愼一は「資金繰りに問題はない」と語りました。大手の半額で飛ぶ会社に35億円を出し、「1年だけなら」と社長になったIT企業の経営者。手荒な改革のあと、誰も反対しなくなった会議室で、世界最大の旅客機6機の約束が決まります。会社はなぜそこまで行き、清算の前夜に誰が拾ったのか。会見・国会・取材に残る本人たちの言葉と、国や会社の文書をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 日本経済新聞「スカイマーク西久保社長「一方的に解約の連絡が来た」」（2014年7月29日） https://www.nikkei.com/article/DGXLMSGD29H0D_Z20C14A7I00000/
+  - 国会会議録 衆議院 国土交通委員会 第164回国会 第12号（2006年4月11日、参考人 西久保愼一） https://kokkai.ndl.go.jp/txt/116404319X01220060411/24
+  - 国土交通省 報道発表「スカイマーク株式会社に対する業務改善勧告について」（2010年4月6日） https://www.mlit.go.jp/report/press/cab10_hh_000024.html
+  - スカイマーク「再生計画認可決定に関するお知らせ（再生債務者案可決）」（2015年8月5日） https://www.skymark.co.jp/ja/company/press/150805_press.pdf
+  - スカイマーク「民事再生手続の終結のお知らせ」（2016年3月28日） https://www.skymark.co.jp/ja/company/press/160328_press.pdf
+  - JBpress「スカイマーク元社長が初めて語る経営破綻の真相」（2018年7月13日） https://jbpress.ismedia.jp/articles/-/53551
+  tags:
+  - スカイマーク
+  - 西久保愼一
+  - 佐山展生
+  - エアバス
+  - A380
+  - 民事再生
+  - 円安
+  - インテグラル
+  - 定時運航率
+  - 再上場
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 裸の王様でした
+    bottom: スカイマーク
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#6a5a48'
+  - id: kanbu
+    label: 幹部
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3440'
+  - id: keiri
+    label: 経理
+    voice: 8
+    pitch: -0.06
+    outfit: suit
+    color: '#5a4a6a'
+  - id: airbus
+    label: エアバス
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: daijin
+    label: 国交大臣
+    voice: 100
+    pitch: -0.06
+    outfit: suit
+    color: '#1a1a1e'
+  - id: ide
+    label: 井手隆司
+    voice: 42
+    pitch: 0.1
+    outfit: suit
+    color: '#3a3f4a'
+  - id: sayama
+    label: 佐山展生
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#1f2a3a'
+  - id: arimori
+    label: 有森社長
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: saikensha
+    label: 債権者
+    voice: 21
+    pitch: -0.06
+    outfit: suit
+    color: '#4a4038'
+  - id: kakari
+    label: 地上係員
+    voice: 8
+    pitch: 0.08
+    outfit: suit
+    color: '#2a5a9a'
+  - id: kyaku
+    label: 客
+    voice: 12
+    pitch: 0.0
+  - id: hora
+    label: 洞駿
+    voice: 67
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+scenes:
+# ---- 先出し（2014年7月29日・国交省での会見 → 2018年の取材） ----
+- id: co_kaiken
+  title: ''
+  background: sm_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2014年7月、霞が関。大型機の契約を解かれた、スカイマークの社長・西久保愼一の会見です。
+    reading: にせん じゅうよねん しちがつ、かすみがせき。おおがたきの けいやくお とかれた すかいまーくの しゃちょう にしくぼ しんいちの かいけんです。
+  - speaker: kisha
+    emotion: normal
+    text: エアバスとの交渉の現状は。
+  - speaker: zundamon
+    emotion: normal
+    text: 十分な話し合いがもたれていない。……正式な会議も一度もない。
+  - speaker: kisha
+    emotion: normal
+    text: ……資金繰りは。
+  - speaker: zundamon
+    emotion: normal
+    text: 資金繰りに問題はない。
+  - speaker: reimu
+    text: 半年後、会社は民事再生を申し立て、この人は社長を退きます。4年後の取材で、本人はこう振り返ります。
+    reading: はんとしご かいしゃわ みんじ さいせいお もうしたて、この ひとわ しゃちょうお しりぞきます。よねんごの しゅざいで、ほんにんわ こう ふりかえります。
+  - speaker: zundamon
+    emotion: sad
+    background: sm_jimusho
+    text: 今にして思えば、当時の僕は完全に裸の王様でした。
+    se: don
+    telops:
+    - {text: "西久保（2018年）「当時の僕は完全に裸の王様でした」", size: md, position: top-center, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 今の部屋（ドル払いのプラモデル） ----
+- id: hook
+  title: ''
+  background: sm_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: お小遣いの2倍の飛行機のプラモ、海外通販で6個予約したのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: 毎月少しずつ払えばいけるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、ドル払いでしょ。円安になったら？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 売上の2倍を超える飛行機を、買う約束をした航空会社があるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: なんでそこまで行っちゃったのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 潰れかけたその会社を、拾った人もいるのよ。
+    telops:
+    - {text: "売上の2倍超の買い物 なぜそこまで行き 誰が拾った？", size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 1998年・大手の半額 ----
+- id: card1998
+  title: ''
+  background: sm_card_1998
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1998年9月、羽田〜福岡。新しい航空会社、スカイマークの初便です。
+    reading: せんきゅうひゃく きゅうじゅうはちねん くがつ、はねだ ふくおか。あたらしい こうくう がいしゃ すかいまーくの しょびんです。
+- id: ch1_kuko
+  title: 大手の半額で飛ぶ
+  background: sm_kuko
+  stage:
+  - {who: kyaku, x: 0.5, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: 福岡まで1万3700円！？ 大手の半額じゃないか！
+  - speaker: kyaku
+    emotion: happy
+    text: チェックインの紙も、スーパーのレシートみたいに薄いな。
+  - speaker: reimu
+    text: 大手は2万7000円。差は1万3300円です。それでも5年後、たまった赤字は120億円を超えます。
+    reading: おおてわ にまん ななせんえん。さわ いちまん さんぜん さんびゃくえんです。それでも ごねんご、たまった あかじわ ひゃく にじゅうおくえんお こえます。
+# ---- 2003年・35億円の男と、2時に始まる会議 ----
+- id: card2003
+  title: ''
+  background: sm_card_2003
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2003年。35億円を出して筆頭株主になったのは、ITの会社の経営者、48歳の西久保愼一です。
+    reading: にせん さんねん。さんじゅうごおくえんお だして ひっとう かぶぬしに なったのわ、あいてぃーの かいしゃの けいえいしゃ よんじゅうはっさいの にしくぼ しんいちです。
+- id: ch1_kaigi
+  title: 2時に始まる会議
+  background: sm_kaigi_2ji
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kanbu
+    emotion: normal
+    text: 顧問、幹部会議は2時からです。どうぞ。
+  - speaker: kanbu
+    emotion: normal
+    text: ……3時です。昼に出た者が、いま戻りました。
+  - speaker: kanbu
+    emotion: happy
+    background: sm_kaigi_4ji
+    text: そろいました！ 4時です。
+    se: zukko
+  - speaker: kanbu
+    emotion: normal
+    text: 顧問。社長を、引き受けていただけませんか。
+  - speaker: kanbu
+    emotion: thinking
+    text: 1週間たちました。やはり、顧問しかいません。
+  - speaker: reimu
+    text: 本人は2018年に、こう振り返っています。
+    reading: ほんにんわ にせん じゅうはちねんに、こう ふりかえって います。
+  - speaker: zundamon
+    emotion: thinking
+    text: これでよく飛行機が飛んでいるなと思いましたね。
+  - speaker: zundamon
+    emotion: sad
+    text: 自分も、[金|かね]をドブに捨ててしまったなと。
+  - speaker: zundamon
+    emotion: normal
+    text: 『1年だけなら』という条件で引き受けたんです。
+  - speaker: reimu
+    text: やがて社長に。1年だけのはずが、11年続きます。
+    reading: やがて しゃちょうに。いちねん だけの はずが、じゅういちねん つづきます。
+  - speaker: zundamon
+    emotion: normal
+    text: 僕はかなり手荒な社内改革をやって、それから会社が上手くいきだしたわけです。
+  - speaker: zundamon
+    emotion: sad
+    text: そうしたら、社員がほとんど僕に逆らわなくなってしまっていた。
+# ---- 2010年11月・誰も反対しない会議室 ----
+- id: ch1_a380
+  title: 売上の2倍を超える買い物
+  background: sm_kaigi_4ji
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: kanbu, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2010年11月。会社はエアバスと、世界最大の旅客機A380を6機買う基本合意を結びます。
+    reading: にせん じゅうねん じゅういちがつ。かいしゃわ えあばすと せかい さいだいの りょかくき えーさんはちまるお ろっき かう きほん ごういお むすびます。
+  - speaker: kanbu
+    emotion: happy
+    text: 2階建てで、3クラスで525席ですか！
+  - speaker: kanbu
+    emotion: happy
+    text: これで国際線ですね。夢がありますなあ。
+  - speaker: kanbu
+    emotion: happy
+    text: 社長の案に、反対の方は。……いませんね。
+  - speaker: reimu
+    text: このときのことを、本人は2018年にこう振り返ります。
+    reading: この ときの ことお、ほんにんわ にせん じゅうはちねんに こう ふりかえります。
+  - speaker: zundamon
+    emotion: sad
+    text: '[A380|エーサンハチマル]の導入を言い出した時も、誰も反対しなかった。'
+  - speaker: zundamon
+    emotion: normal
+    text: 『それは素晴らしい。絶対いけますよ』なんてね。
+  - speaker: zundamon
+    emotion: sad
+    text: 気づかなかった僕のミスです。
+  - speaker: reimu
+    text: 6機の代金は、2014年の会社の見込みで1915億円。年間の売上の2倍を超えます。
+    reading: ろっきの だいきんわ、にせん じゅうよねんの かいしゃの みこみで せん きゅうひゃく じゅうごおくえん。ねんかんの うりあげの にばいお こえます。
+    telops:
+    - {text: "A380 6機 1915億円 ＝売上の2倍超", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: そしてこの買い物は、ドルで払う約束でした。
+    reading: そして この かいものわ、どるで はらう やくそくでした。
+# ---- 今の部屋（国会と国の勧告を読む） ----
+- id: ch1_kiroku
+  title: 国会と国の勧告
+  background: sm_heya
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: ドル払い！？ ボクのプラモと同じなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 額は、売上の2倍を超えるけどね。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 売上の2倍って、どのくらいなのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 年収500万円の家が、合わせて1100万円の車を6台買う約束をしたようなものね。
+  - speaker: zundamon
+    emotion: surprised
+    text: それを、誰も止めなかったの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年、本人は国会に[参考人|サンコウニン]として呼ばれてこう認めてる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 整備期限を過ぎて運航していたというこういった恥ずべき状況。
+  - speaker: zundamon
+    emotion: sad
+    text: 自分で、恥ずべきって言ったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 別の答えでは、安全がまず第一優先であることには変わりはないとも言ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2010年4月、国土交通省の業務改善勧告。理由はこう。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 社長及び安全統括管理者が機長の安全優先の判断を尊重せず運航を指示した事案。
+  - speaker: tsumugi
+    emotion: normal
+    text: 操縦室内でデジタルカメラを使用した事案、管制指示を逸脱した運航を行った事案。
+  - speaker: tsumugi
+    emotion: normal
+    text: これが連続して発生したことから、とあるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 国の文書に、そこまで書かれたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[A380|エーサンハチマル]の基本合意は、この勧告の7か月後よ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: その約束が会社をどこまで追い込み、誰が拾ったのか。
+# ---- 2012年・過去最高益とニューヨーク ----
+- id: card2012
+  title: ''
+  background: sm_card_2012
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2012年3月期。営業利益は152億円で、会社の過去最高になります。
+    reading: にせん じゅうにねん さんがつき。えいぎょう りえきわ ひゃく ごじゅうにおくえんで、かいしゃの かこ さいこうに なります。
+- id: ch2_ny
+  title: 過去最高益とニューヨーク
+  background: sm_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: happy}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: '[A380|エーサンハチマル]は、どの路線から飛ばしますか。'
+  - speaker: zundamon
+    emotion: happy
+    text: 第一候補はニューヨーク路線で動いている。
+  - speaker: zundamon
+    emotion: normal
+    text: ロンドン路線はヨーロッパの景気が好ましくないので、その次くらいにしようと考えている。
+  - speaker: kisha
+    emotion: normal
+    text: '[羽田|ハネダ]の発着枠の配分の影響は。'
+  - speaker: zundamon
+    emotion: normal
+    text: 幹線は[A330|エーサンサンマル]を入れていくので提供座席数が1.8倍くらいになり、
+  - speaker: zundamon
+    emotion: happy
+    text: 枠を10枠くらいもらうのに匹敵する。
+  - speaker: reimu
+    text: 11月の中間決算の説明会の言葉です。このA380は、1機もこの会社に届きませんでした。
+    reading: じゅういちがつの ちゅうかん けっさんの せつめいかいの ことばです。この えーさんはちまるわ、いっきも この かいしゃに とどきませんでした。
+# ---- 2014年・円安と払えない8億円 ----
+- id: card2014
+  title: ''
+  background: sm_card_2014
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2014年4月。前の年度、会社は5年ぶりの赤字になっていました。
+    reading: にせん じゅうよねん しがつ。まえの ねんど、かいしゃわ ごねんぶりの あかじに なって いました。
+- id: ch3_enyasu
+  title: 円安と払えない8億円
+  background: sm_kaigi
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: keiri, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: keiri
+    emotion: normal
+    text: 社長、うちの支払いの6割はドル払いです。
+  - speaker: keiri
+    emotion: normal
+    text: 燃料も借りている機体も、外国人パイロットのお給料も。
+  - speaker: keiri
+    emotion: normal
+    text: 整備の部品も、ドルです。
+  - speaker: keiri
+    emotion: normal
+    text: 1万ドルの支払いが、1ドル80円なら80万円。
+  - speaker: keiri
+    emotion: sad
+    background: sm_kaigi_akaji
+    text: 120円なら、120万円です。
+    se: gaan
+  - speaker: keiri
+    emotion: sad
+    text: 社長。今月の[A380|エーサンハチマル]の前払い、8億円が払えません。
+  - speaker: reimu
+    text: 円安は、このあと1ドル120円ほどまで進みます。本人の説明では、毎月約8億円の赤字になりました。
+    reading: えんやすわ このあと いちどる ひゃく にじゅうえん ほどまで すすみます。ほんにんの せつめいでわ、まいつき やく はちおくえんの あかじに なりました。
+    telops:
+    - {text: "円安で 毎月 約8億円の赤字", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: ch3_kosho
+  title: 大手の傘下という条件
+  background: sm_yakuin
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: airbus, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: airbus
+    emotion: normal
+    text: 4機は解約、製造中の2機は受け取りを延ばしたいというお話ですね。
+  - speaker: airbus
+    emotion: normal
+    text: 大手航空会社の傘下に入るのが契約変更を受け入れる条件。
+  - speaker: reimu
+    text: 会社の説明では、この条件を示され、西久保は断ります。
+    reading: かいしゃの せつめいでわ この じょうけんお しめされ、にしくぼわ ことわります。
+- id: ch3_jishu
+  title: ''
+  background: sm_shacho
+  stage:
+  - {who: zundamon, x: 0.5, tag: 西久保愼一, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月13日、借りたA330の就航の前日。大手などに買われるという噂を、西久保はこう否定します。
+    reading: ろくがつ じゅうさんにち、かりた えーさんさんまるの しゅうこうの ぜんじつ。おおてなどに かわれると いう うわさお、にしくぼわ こう ひてい します。
+  - speaker: zundamon
+    emotion: normal
+    text: 航空運賃が10年前に戻ってしまう。
+  - speaker: zundamon
+    emotion: normal
+    text: この10年の仕事がまったく意味をなさなくなる。
+  - speaker: zundamon
+    emotion: normal
+    text: 多少見苦しくても、粘れるところまで粘っていきたい。
+  - speaker: zundamon
+    emotion: sad
+    text: 去年はお世辞にも良い業績ではなかった。
+  - speaker: zundamon
+    emotion: normal
+    text: 自主独立が存在価値だと思っており、これからも変わることはない。
+# ---- 2014年7月・ファクス1枚 ----
+- id: ch4_fax
+  title: ファクス1枚
+  background: sm_shacho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: sad}
+  - {who: kanbu, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kanbu
+    emotion: surprised
+    background: sm_shacho_fax
+    text: 社長、エアバスからファクスが1枚……。
+  - speaker: kanbu
+    emotion: sad
+    text: '[A380|エーサンハチマル]購入契約の解除を通知します。'
+    se: don
+  - speaker: reimu
+    text: 2日後の声明で会社は、傘下に入らずに解約するなら、常識を逸脱した法外な違約金を示された、と説明しました。
+    reading: ふつかごの せいめいで かいしゃわ さんかに はいらずに かいやく するなら じょうしきお いつだつ した ほうがいな いやくきんお しめされた、と せつめい しました。
+  - speaker: reimu
+    text: 同じ日、西久保は霞が関で会見を開き、エアバスが伝えた損害額は7億ドルだったと明かします。
+    reading: おなじ ひ にしくぼわ かすみがせきで かいけんお ひらき、えあばすが つたえた そんがいがくわ ななおくどるだったと あかします。
+    telops:
+    - {text: "求められた額 7億ドル", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: ch4_furikaeri
+  title: ''
+  background: sm_jimusho
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 本人は2018年に、こう振り返っています。
+    reading: ほんにんわ にせん じゅうはちねんに、こう ふりかえって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 違約金を求められるまでは会社が破綻するとは思っていませんでした。
+  - speaker: zundamon
+    emotion: normal
+    text: 銀行からの借入枠を結構持っていましたから。
+  - speaker: reimu
+    text: 7月31日の決算で、会社は自ら、事業を続けられるか分からないと書きます。
+    reading: しちがつ さんじゅういちにちの けっさんで かいしゃわ みずから、じぎょうお つづけられるか わからないと かきます。
+  - speaker: zundamon
+    emotion: sad
+    text: ところが違約金請求が来た途端、
+  - speaker: zundamon
+    emotion: sad
+    text: 中間期決算で監査法人からゴーイングコンサーンの注記を付けられてしまった。
+  - speaker: zundamon
+    emotion: sad
+    text: そうなると増資もできないし融資も受けられない。
+  - speaker: zundamon
+    emotion: sad
+    text: そこからはあっという間でした。
+# ---- 2014年11月〜2015年1月・JAL、そしてANA ----
+- id: ch5_daijin
+  title: JAL、そしてANA
+  background: sm_kaiken
+  stage:
+  - {who: daijin, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月、JALに支援を頼みます。公的資金で立ち直ったJALに、国は公正な競争の約束を課していました。
+    reading: じゅういちがつ、じゃるに しえんお たのみます。こうてき しきんで たちなおった じゃるに、くにわ こうせいな きょうそうの やくそくお かして いました。
+  - speaker: daijin
+    emotion: normal
+    text: 具体的な話があった時に判断しますが、厳しく判断するということです。
+- id: ch5_ana
+  title: ''
+  background: sm_shacho
+  stage:
+  - {who: zundamon, x: 0.5, tag: 西久保愼一, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 西久保は、JALとANAの両方に共同運航を頼みます。この形を、本人はこう語りました。
+    reading: にしくぼわ じゃると えーえぬえーの りょうほうに きょうどう うんこうお たのみます。この かたちお、ほんにんわ こう かたりました。
+  - speaker: zundamon
+    emotion: normal
+    text: 民間企業の論理ではあり得ない。
+  - speaker: reimu
+    text: 7億ドルを求められた会社を、誰が、いくらで拾うのか。
+    reading: ななおくどるお もとめられた かいしゃお だれが いくらで ひろうのか。
+# ---- 2015年1月23日・清算の前夜 ----
+- id: card2015
+  title: ''
+  background: sm_card_2015
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2015年1月23日、夜。投資会社インテグラルの佐山展生が、会長の井手隆司に電話をかけます。
+    reading: にせん じゅうごねん いちがつ にじゅうさんにち、よる。とうし がいしゃ いんてぐらるの さやま のぶおが かいちょうの いで たかしに でんわお かけます。
+- id: ch6_denwa
+  title: 清算の前夜の電話
+  background: sm_seisa
+  stage:
+  - {who: sayama, x: 0.28, flip: true, emotion: normal}
+  - {who: ide, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 佐山の2017年の回想では、会長はこう言いました。
+    reading: さやまの にせん じゅうななねんの かいそうでわ、かいちょうわ こう いいました。
+  - speaker: ide
+    emotion: sad
+    text: 明日から清算の準備に入る。
+    se: gaan
+  - speaker: sayama
+    emotion: normal
+    text: 清算はないですよ。すぐに[民事再生|みんじさいせい]の申し立てをしましょう。
+    telops:
+    - {text: "佐山「清算はないですよ」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch6_konkyo
+  title: ''
+  background: sm_seisa
+  stage:
+  - {who: sayama, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: sayama
+    emotion: normal
+    text: 3日間缶詰状態で経営状態を精査しました。
+  - speaker: sayama
+    emotion: normal
+    text: 26日には、90億円の融資があれば乗り切れるという結論に達しました。
+  - speaker: sayama
+    emotion: normal
+    text: 正直なところ、その時点で再生に100％の自信はありませんでしたね。
+  - speaker: reimu
+    text: 2019年には、こうも明かしています。
+    reading: にせん じゅうくねんにわ、こうも あかして います。
+  - speaker: sayama
+    emotion: normal
+    text: 90億円の明確な根拠なんてありません。
+    beat: true
+# ---- 2015年1月28日・申請 ----
+- id: ch6_shinsei
+  title: 1月28日 午後7時
+  background: sm_kuko_yoru
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1月28日、午後7時。臨時取締役会は、民事再生法の適用の申請を決めます。負債は約710億円。
+    reading: いちがつ にじゅうはちにち ごご しちじ。りんじ とりしまりやくかいわ、みんじ さいせいほうの てきようの しんせいお きめます。ふさいわ やく ななひゃく じゅうおくえん。
+  - speaker: reimu
+    text: 会社を潰さずに、借金を減らしてもらい、営業を続けながら立て直す手続きです。
+    reading: かいしゃお つぶさずに しゃっきんお へらして もらい、えいぎょうお つづけながら たてなおす てつづきです。
+- id: ch6_kaiken
+  title: ''
+  background: sm_kaiken
+  stage:
+  - {who: arimori, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日の会見に、社長を退いた西久保の姿はありません。新しい社長は、取締役だった有森正和です。
+    reading: よくじつの かいけんに、しゃちょうお しりぞいた にしくぼの すがたわ ありません。あたらしい しゃちょうわ、とりしまりやく だった ありもり まさかずです。
+  - speaker: kisha
+    emotion: normal
+    text: 社員を減らすことは、考えていますか。
+  - speaker: arimori
+    emotion: normal
+    text: そういうことはしない。
+- id: ch6_unkyu
+  title: 飛ぶ便と止まる便
+  background: sm_kuko
+  stage:
+  - {who: kakari, x: 0.28, flip: true, emotion: sad}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kakari
+    emotion: sad
+    text: 申し訳ございません。2月から、こちらの便は運休です。
+  - speaker: kyaku
+    emotion: surprised
+    text: 会社が潰れかけても、飛行機は飛ぶんじゃなかったの！？
+    se: bikkuri
+  - speaker: kakari
+    emotion: normal
+    text: ほかの便は、これまでどおり飛んでおります。
+  - speaker: kyaku
+    emotion: thinking
+    text: 飛ぶ便と、止まる便があるのか……。
+  - speaker: reimu
+    background: sm_kuko_sukunai
+    text: 2月から14路線の一部。3月末には、仙台〜福岡、那覇〜宮古、那覇〜石垣の全便が止まりました。
+    reading: にがつから じゅうよ ろせんの いちぶ。さんがつまつにわ せんだい ふくおか なは みやこ なは いしがきの ぜんびんが とまりました。
+# ---- 2015年2月・元社長の株 ----
+- id: ch7_kabu
+  title: 元社長の株
+  background: sm_jimusho
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 申請のあとの2月、西久保は持っていた株をすべて売り、議決権はゼロになります。2018年の言葉です。
+    reading: しんせいの あとの にがつ、にしくぼわ もって いた かぶお すべて うり ぎけつけんわ ぜろに なります。にせん じゅうはちねんの ことばです。
+  - speaker: zundamon
+    emotion: normal
+    text: あいつは大損こいた、とみんな思うかもしれませんが
+  - speaker: zundamon
+    emotion: normal
+    text: どうせ持っていても使い道のない[金|かね]です。
+  - speaker: zundamon
+    emotion: sad
+    text: ただ経営に失敗したことについては、しばらくウジウジ考えていましたね。
+# ---- 2015年2月・全国の支店を回る ----
+- id: ch7_shiten
+  title: 全国の支店を回る
+  background: sm_shiten
+  bgm: hirusagari
+  stage:
+  - {who: sayama, x: 0.28, flip: true, emotion: normal}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2月4日に再生の手続きが始まると、佐山は翌週から全国の支店を回りました。そのわけを、のちにこう語ります。
+    reading: にがつ よっかに さいせいの てつづきが はじまると さやまわ よくしゅうから ぜんこくの してんお まわりました。その わけお、のちに こう かたります。
+  - speaker: sayama
+    emotion: normal
+    text: 1カ月後に現場を回るのではダメです。
+  - speaker: sayama
+    emotion: normal
+    text: 社員の皆さんがどのようなことを考えているかを想像し、
+  - speaker: sayama
+    emotion: normal
+    text: 先回りをして将来起こるであろう心配ごとや不安を[払拭|ふっしょく]する。
+  - speaker: shain
+    emotion: sad
+    text: 人員削減や給与カットがあるのですか。
+  - speaker: sayama
+    emotion: normal
+    text: '[A330|エーサンサンマル]と[A380|エーサンハチマル]を契約解約して、[B737|ビーナナサンナナ]に統一すればビジネスは回るので'
+  - speaker: sayama
+    emotion: happy
+    text: むしろ辞めてもらっては困る。
+  - speaker: shain
+    emotion: surprised
+    text: 辞めなくて、いいんですか！？
+    beat: true
+  - speaker: reimu
+    text: 羽田では社員と家族を格納庫に招き、民事再生は破産と違うこと、給料と人は減らさないことを伝えます。
+    reading: はねだでわ しゃいんと かぞくお かくのうこに まねき、みんじ さいせいわ はさんと ちがう ことと きゅうりょうと ひとわ へらさない ことお つたえます。
+# ---- 2015年4〜8月・債権者の投票 ----
+- id: ch8_tohyo
+  title: 債権者の投票
+  background: sm_saikensha
+  bgm: kinakusai
+  stage:
+  - {who: saikensha, x: 0.28, flip: true, emotion: thinking}
+  - {who: ide, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月、インテグラルとANAホールディングスが、そろってスポンサーになることで合意します。
+    reading: しがつ、いんてぐらると えーえぬえー ほーるでぃんぐすが そろって すぽんさーに なる ことで ごうい します。
+  - speaker: reimu
+    text: 対抗したのは、A330を貸していた最大の債権者。米国のイントレピッドが、デルタ航空と別の案を出します。
+    reading: たいこう したのわ、えーさんさんまるお かして いた さいだいの さいけんしゃ。べいこくの いんとれぴっどが、でるた こうくうと べつの あんお だします。
+  - speaker: saikensha
+    emotion: thinking
+    text: うちは1000万円貸してたんだ。どっちの案なら、いくら戻る？
+  - speaker: saikensha
+    emotion: normal
+    text: 8月5日、東京地裁で投票か。
+  - speaker: saikensha
+    emotion: surprised
+    text: 174の債権者のうち135、お金の額で60.25%。スカイマークの案に決まりだ。
+    telops:
+    - {text: "債権者の投票 60.25%で可決", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: saikensha
+    emotion: thinking
+    text: 最大の債権者の案は、38%どまりか。
+  - speaker: saikensha
+    emotion: normal
+    text: ほかの大口は、ほとんどこっちに回ったわけだ。
+  - speaker: reimu
+    text: 返済は100万円までは全額、超える分は約1割。1000万円を貸した会社に戻ったのは約193万円です。
+    reading: へんさいわ ひゃくまんえんまでわ ぜんがく、こえる ぶんわ やく いちわり。いっせんまんえんお かした かいしゃに もどったのわ やく ひゃく きゅうじゅうさんまんえんです。
+  - speaker: ide
+    emotion: happy
+    text: これまでの出来事が走馬灯のように浮かんだ。
+    se: namida
+# ---- 2015年9月〜2018年・定時運航率 ----
+- id: ch9_kaicho
+  title: 独立を守る仕組み
+  background: sm_yakuin
+  bgm: natsuyasumi
+  stage:
+  - {who: sayama, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月29日、180億円の出資と100%減資。会長に就く佐山は、その少し前の取材でこう語っていました。
+    reading: くがつ にじゅうくにち、ひゃく はちじゅうおくえんの しゅっしと ひゃく ぱーせんと げんし。かいちょうに つく さやまわ、その すこし まえの しゅざいで こう かたって いました。
+  - speaker: kisha
+    emotion: normal
+    text: 競合の[ANA|エーエヌエー]のグループにありながら、どのように独立性を維持しますか。
+  - speaker: sayama
+    emotion: normal
+    text: スカイマークの独立性の維持がインテグラルの責務。
+  - speaker: kisha
+    emotion: normal
+    text: 予約システムは、[ANA|エーエヌエー]と分かれるのでしょうか。
+  - speaker: sayama
+    emotion: normal
+    text: すべての情報を[ANA|エーエヌエー]に提供しなければ、スカイマークの運賃が決められないとなると
+  - speaker: sayama
+    emotion: normal
+    text: 独立性があるとはとても言えない。
+- id: ch9_gate
+  title: 窓側からご案内
+  background: sm_gate
+  stage:
+  - {who: kakari, x: 0.28, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 新しい体制の前、手続きの最中から、搭乗口ではこんな工夫も始まっていました。
+    reading: あたらしい たいせいの まえ、てつづきの さいちゅうから とうじょうぐちでわ こんな くふうも はじまって いました。
+  - speaker: kakari
+    emotion: happy
+    text: 窓側の席のお客様から、先にご案内いたします！
+  - speaker: kyaku
+    emotion: surprised
+    text: 窓側から？ 通路側の人に、立ってもらわなくて済むのか。
+  - speaker: kakari
+    emotion: happy
+    text: お手荷物の収納も、お手伝いいたします。
+  - speaker: kakari
+    emotion: happy
+    text: 定刻どおり、出発です！
+    se: levelup
+  - speaker: kyaku
+    emotion: happy
+    text: 遅れないって、それだけで有り難いよ。
+  - speaker: reimu
+    text: 2017年度、定時運航率は93.06%。国内12社のうち1位になりました。
+    reading: にせん じゅうななねんど、ていじ うんこうりつわ きゅうじゅうさんてん ぜろろく ぱーせんと。こくない じゅうにしゃの うち いちいに なりました。
+    telops:
+    - {text: "定時運航率 93.06% 国内12社中1位", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch9_moeru
+  title: ''
+  background: sm_gate
+  stage:
+  - {who: sayama, x: 0.5, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 佐山は、このころのいくつかの取材でこう語っています。
+    reading: さやまわ、この ころの いくつかの しゅざいで こう かたって います。
+  - speaker: sayama
+    emotion: normal
+    text: 我々が一番に大切にしているのは、やはり安全です。
+  - speaker: sayama
+    emotion: normal
+    text: パイロット・[CA|シーエー]・地上なども含めて、遅れの原因を追求してきました。
+  - speaker: sayama
+    emotion: normal
+    text: 基本的にできて当たり前のことには燃えません。
+  - speaker: sayama
+    emotion: happy
+    text: 『そら、無理やろ』という[方|ほう]が燃えます。
+# ---- 2022年・再上場 ----
+- id: card2022
+  title: ''
+  background: sm_card_2022
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2022年12月14日。申し立てから7年10か月で、スカイマークは株式市場に戻ります。
+    reading: にせん にじゅうにねん じゅうにがつ じゅうよっか。もうしたてから ななねん じゅっかげつで、すかいまーくわ かぶしき しじょうに もどります。
+- id: ch10_saijojo
+  title: 7年10か月後の再上場
+  background: sm_shoken
+  stage:
+  - {who: hora, x: 0.5, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 佐山は前の年に会長を退き、この場にはいません。社長の洞駿が、会見で語ります。
+    reading: さやまわ まえの としに かいちょうお しりぞき、この ばにわ いません。しゃちょうの ほら しゅんが かいけんで かたります。
+  - speaker: hora
+    emotion: happy
+    text: ビリだった定時運航と顧客満足度がトップ。
+    se: jaan
+  - speaker: hora
+    emotion: normal
+    text: これからが新たなスタート。
+  - speaker: hora
+    emotion: normal
+    text: '[ANA|エーエヌエー]は重要な株主で、これまでも再生にあたり大変お世話になった。'
+# ---- 論争1：A380を買ったから潰れた？ ----
+- id: ronso1
+  title: A380を買ったから潰れた？
+  background: sm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ [A380|エーサンハチマル]を買ったから潰れたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言える事実はあるの。売上の2倍を超える代金に、払えなかった前払い。
+  - speaker: tsumugi
+    emotion: normal
+    text: 求められた7億ドルは、当時のお[金|かね]で700億円から800億円ほど。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1年の売上に近いのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も2018年に、あれは完全な失敗でしたと話してる。
+  - speaker: zundamon
+    emotion: sad
+    text: 本人が、そう言ってるのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: プランの段階で止めておくべきでした、とも話してるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、いちばん大きな債権者は[A330|エーサンサンマル]を貸したリース会社だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 買う約束じゃなくて、借りる約束のほう！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[A380|エーサンハチマル]は買う約束、[A330|エーサンサンマル]は借りる約束。どっちもドルで払うのよ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 申請の理由の先頭も、[A330|エーサンサンマル]のドル建てのリース料と円安だったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[円安|えんやす]が、ここでも出てくるのだ！'
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も2024年に、いちばんの要因は円安だと話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年の講演では、これという特定のものはないとも言ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[佐山|さやま]は、単純に大きな飛行機を調達しすぎただけと言ったの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 大きな飛行機の約束を2つ抱えたところに、円安が来たのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: どれが一番効いたかは、当事者の言い方が少しずつ違うのよ。
+# ---- 論争2：ANAの子会社になった？ ----
+- id: ronso2
+  title: ANAの子会社になった？
+  background: sm_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: じゃあ最後は、[ANA|エーエヌエー]に助けられて子会社になったんでしょ？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[ANA|エーエヌエー]ホールディングスの出資は16.5%。株の[6分の1|ろくぶんのいち]を持つ支援者よ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 筆頭は、インテグラルの50.1%。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分を超えてるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[佐山|さやま]は、[利益相反|リエキソウハン]のある行為には取締役全員の一致が要る仕組みを作ったの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 1人でも反対したら、通らないってこと？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。[利益相反|リエキソウハン]のある話は、取締役が1人でも反対すれば通らないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2017年には、[ANA|エーエヌエー]の予約システムには入らないとも話してるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 助けてもらっても、舵は渡さなかったのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 大手に頼らない会社でいることは、破綻のあとも仕組みで残したのね。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 円安とドル払いの注意点
+  background: sm_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ドルで払う費用は、円安で一気に重くなる。1万ドルが、80万円から120万円よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのプラモデルも、ドル払いなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 航空券も、運賃と燃油サーチャージを分けて見てね。
+  - speaker: tsumugi
+    emotion: normal
+    text: スカイマークは、2027年度の早いうちに国内線に入れる方針よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 運賃が同じでも、払う額が変わるのか！
+  - speaker: tsumugi
+    emotion: normal
+    text: それから、航空会社が[民事再生|みんじさいせい]になっても飛行機は飛ぶ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、路線が消えることがあるの。あのときは[宮古|みやこ]や[石垣|いしがき]への便も止まったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 地方の路線を予約したら、運休の知らせを確かめてね。
+  - speaker: zundamon
+    emotion: normal
+    text: メールは、ちゃんと見るのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[佐山|さやま]は2017年に、撤退した路線の運賃は途端に上がったと話してるわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 安い会社がいなくなると、高くなるのだ……！
+  - speaker: zundamon
+    emotion: normal
+    text: 株は、どうなったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 破綻した会社の株は、ゼロになることがあるの。ここは100%減資で消えたわ。
+# ---- 現代 ----
+- id: ima
+  title: いまのスカイマーク
+  background: sm_gendai
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月期の売上は1104億円で、過去最高よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 立ち直ったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ利益は、3期続けて減ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売上は最高なのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 筆頭株主は、静岡の[鈴与|すずよ]のグループ。インテグラルは、2024年に株を手放したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 6月には、[鈴与|すずよ]から来た新しい社長に替わったの。
+  - speaker: tsumugi
+    emotion: happy
+    text: そして2026年5月、新しい型の[737|ななさんなな]の[初便|しょびん]が[羽田|ハネダ]から福岡へ飛んだわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1998年の[初便|しょびん]と、同じ路線なのだ！
+# ---- 締め（元社長の振り返り） ----
+- id: shime_nishikubo
+  title: ''
+  background: sm_jimusho
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 西久保愼一, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2018年の取材です。
+    reading: にせん じゅうはちねんの しゅざいです。
+  - speaker: kisha
+    emotion: normal
+    text: あれから3年あまり。スカイマーク時代を振り返って、どう感じていますか。
+  - speaker: zundamon
+    emotion: sad
+    text: 会社が上手く回り始めた時点で離れるべきでした。
+  - speaker: zundamon
+    emotion: sad
+    text: 自分はその器ではなかった。
+  - speaker: reimu
+    text: 2024年、空の仕事に戻るまでを振り返って、こう語っています。
+    reading: にせん にじゅうよねん、そらの しごとに もどるまでお ふりかえって こう かたって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 経営者としては[前科者|ぜんかもの]ですよね。
+  - speaker: zundamon
+    emotion: normal
+    text: もう一度、事業家として活動できることは有り難いです。
+  - speaker: kisha
+    emotion: normal
+    text: 事業を成長させるには、何が必要だと考えていますか。
+  - speaker: zundamon
+    emotion: happy
+    text: やはり懲りないやつが次のステップに行けますね。
+  - speaker: reimu
+    text: 元社長は、小さなジェットの会社の会長として、また空の仕事をしています。
+    reading: もと しゃちょうわ ちいさな じぇっとの かいしゃの かいちょうと して、また そらの しごとお して います。
+# ---- 締め（今の部屋） ----
+- id: shime
+  title: ''
+  background: sm_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ プラモは1個だけにして、円で払える国内のお店で買う！
+  - speaker: tsumugi
+    emotion: thinking
+    text: その1個も、お小遣いの2倍なのは変わらないわよ。
+    se: oti
+  - speaker: zundamon
+    emotion: sad
+    text: ……誰か、ボクを止めてほしかったのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人いわく誰も反対しない会社で、売上の2倍を超える約束が決まった。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこに円安が来て、ファクス1枚から半年で[民事再生|みんじさいせい]。
+  - speaker: zundamon
+    emotion: sad
+    text: 半年で……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1年だけのはずの社長が、11年続いた会社だったのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 拾った人は、まず社員のところへ行ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 反対してくれる人がいるのも、会社の力よ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
