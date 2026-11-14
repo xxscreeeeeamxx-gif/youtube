@@ -1,0 +1,1072 @@
+meta:
+  title: 「ビットコインがなくなってしまい」と謝ったマウントゴックス社長、古い財布から20万枚【ずんだもん解説】
+  slug: mtgox-karpeles
+  hook_line: 85万枚が消えたと発表した取引所。社長の罪は、なぜ盗みではなかったのか。
+  summary: 2014年2月、ビットコインの取引所マウントゴックスの社長、28歳のマルク・カルプレスは、東京・霞が関の会見で頭を下げました。タダで譲り受けた取引所、画面に出る残高と金庫の本物のコイン、画面の上だけの30万枚。消えたビットコインはどこへ行ったのか。そして彼が罪に問われたのは、なぜ「盗み」ではなかったのか。判決と管財人の発表、本人の手記をもとに、会社・本人・米国の起訴それぞれの言い分を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 株式会社ＭＴＧＯＸ「民事再生手続開始の申立てに関するお知らせ」（2014年2月28日・英訳） https://www.mtgox.com/img/pdf/20140228-announcement_eng.pdf
+  - 株式会社ＭＴＧＯＸ「当社保有ビットコインの残高に関するお知らせ」（2014年3月20日） https://www.mtgox.com/img/pdf/20140320-btc-announce.pdf
+  - 再生管財人「民事再生手続開始決定のお知らせ」（2018年6月22日） https://www.mtgox.com/img/pdf/20180622_announcement_jp.pdf
+  - 再生管財人「弁済期限日の変更に関するお知らせ」（2026年10月16日） https://www.mtgox.com/img/pdf/20261016_b3a13e0f-55f6-4653-913b-be80762390e8_announcement_ja.pdf
+  - 前田雅英「ＭＴＧＯＸ虚偽データ事件－ビットコインと私電磁的記録不正作出」WLJ判例コラム第222号（2021年1月8日） https://www.westlawjapan.com/pdf/column_law/20210108.pdf
+  - 日本経済新聞「マウントゴックス破綻 顧客のビットコインは消失」（2014年2月28日） https://www.nikkei.com/article/DGXNASGC28020_Y4A220C1000000/
+  tags:
+  - マウントゴックス
+  - マルク・カルプレス
+  - ビットコイン
+  - Mt.Gox
+  - 仮想通貨
+  - 暗号資産
+  - 取引所
+  - 民事再生
+  - 破産
+  - 私電磁的記録不正作出
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 消えた85万枚
+    bottom: 20万枚は古い財布に
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: shain
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shain2
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: denwa
+    label: 電話番
+    voice: 8
+    pitch: 0.08
+    outfit: suit
+    color: '#7a5a6a'
+  - id: riyosha
+    label: 利用者
+    voice: 67
+    pitch: 0.0
+    outfit: none
+    color: '#8a7a5a'
+  - id: kenji
+    label: 検察官
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: saikensha
+    label: 債権者
+    voice: 67
+    pitch: 0.04
+    outfit: none
+    color: '#5a6a4a'
+scenes:
+# ---- 先出し（2014年2月28日夕・霞が関の会見。記者の問いの原文は無いので問いは作らない） ----
+- id: co_kaiken
+  title: ''
+  background: mx_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2014年2月28日の夕方、東京・霞が関。ビットコインの取引所、マウントゴックスの社長の会見です。
+    reading: にせん じゅうよねん にがつ にじゅうはちにちの ゆうがた、とうきょう かすみがせき。びっとこいんの とりひきじょ まうんと ごっくすの しゃちょうの かいけんです。
+  - speaker: zundamon
+    emotion: sad
+    text: ビットコインがなくなってしまい、本当に申し訳ない
+  - speaker: reimu
+    text: マルク・カルプレス、28歳。最初の発表で消えたのは85万枚。7日後、20万枚が古い財布から見つかります。
+    reading: まるく かるぷれす にじゅうはっさい。さいしょの はっぴょうで きえたのわ はちじゅうごまんまい。なのかご、にじゅうまんまいが ふるい さいふから みつかります。
+  - speaker: reimu
+    text: 1年5か月後、彼は逮捕されます。罪は、消えたビットコインのことではありませんでした。
+    reading: いちねん ごかげつご、かれわ たいほ されます。つみわ、きえた びっとこいんの ことでわ ありませんでした。
+# ---- 今の部屋（ゲームセンターのメダルの預かりカード） ----
+- id: hook
+  title: ''
+  background: mx_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ゲーセンにメダル1000枚、預けてるのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: そのお店、閉店の貼り紙が出てたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ。ボクのメダルは？
+  - speaker: tsumugi
+    emotion: thinking
+    text: カードの1000枚は、お店の帳簿の数字よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 金庫にあるかは、カードじゃ分からない。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが85万枚で起きた[取引所|トリヒキジョ]があるの。
+    telops:
+    - {text: "消えた85万枚はどこへ？　罪はなぜ盗みでない？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 85万枚はどこへ！？なんで盗みの罪じゃないの！？
+# ---- 2011年・タダの取引所 ----
+- id: card2011
+  title: ''
+  background: mx_card_2011
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2011年の初め。フランスで生まれ、2009年に日本へ来て、小さなIT会社を作った25歳がいました。
+    reading: にせん じゅういちねんの はじめ。ふらんすで うまれ にせん きゅうねんに にほんえ きて、ちいさな あいてぃー がいしゃお つくった にじゅうごさいが いました。
+- id: ch1_yuzuri
+  title: タダの取引所
+  background: mx_jimusho_s
+  stage:
+  - {who: zundamon, x: 0.5, tag: カルプレス, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 本人の話では1月18日、引き継がないかとメールが来ます。彼は2019年の手記に、こう書いています。
+    reading: ほんにんの はなしでわ いちがつ じゅうはちにち、ひきつがないかと めーるが きます。かれわ にせん じゅうくねんの しゅきに、こう かいて います。
+  - speaker: zundamon
+    emotion: normal
+    text: 実は、マウントゴックスの事業は
+  - speaker: zundamon
+    emotion: normal
+    text: ジェド・マカレブという創業者から無償で譲り受けたものでした。
+  - speaker: reimu
+    text: 2月に譲り受けます。本人によれば条件は、6か月分の稼ぎの半分を渡すだけ。口座は約2000でした。
+    reading: にがつに ゆずりうけます。ほんにんに よれば じょうけんわ、ろっかげつぶんの かせぎの はんぶんお わたす だけ。こうざわ やく にせんでした。
+# ---- 判決が書いた仕組み：画面の数字と、本当の財布 ----
+- id: ch1_gamen
+  title: 画面と金庫
+  background: mx_gamen
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: カルプレス, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 判決によれば、利用者どうしの売り買いで動くのは画面の残高だけ。銀行の現金も、本物のコインも動きません。
+    reading: はんけつに よれば、りようしゃ どうしの うりかいで うごくのわ がめんの ざんだか だけ。ぎんこうの げんきんも ほんものの こいんも うごきません。
+  - speaker: reimu
+    text: 本物が動くのは、利用者が引き出す時だけ。彼は手記に、こうも書いています。
+    reading: ほんものが うごくのわ、りようしゃが ひきだす とき だけ。かれわ しゅきに こうも かいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: 譲り受けてまもなく、保有するビットコインと
+  - speaker: zundamon
+    emotion: sad
+    text: システム上の残高に[乖離|かいり]があることが判明しています。
+- id: ch1_medal
+  title: ''
+  background: mx_kinko
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: カードに1000枚あっても、金庫には足りなかったのだ！？
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。カードには1000枚。でも金庫に1000枚あるかは、カードを見ても分からない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、画面と同じだけ本物も持つ約束。判決は、それを会社の意思と呼んだわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: なのに、足りなかった……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人の言い分では、ずれは譲り受ける前からあったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 知らずに手を出した、と書いてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ画面の残高は、本当にあったの？
+  - speaker: reimu
+    text: このあと穴や資金の不足が出ると、彼は画面の数字のほうを書き換えます。のちに裁判所は、そう認めました。
+    reading: この あと あなや しきんの ふそくが でると、かれわ がめんの すうじの ほうお かきかえます。のちに さいばんしょわ そう みとめました。
+# ---- 2011年3〜6月・3か月で6万人 ----
+- id: ch2_30bai
+  title: 3か月で6万人
+  background: mx_jimusho_s_yama
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.5, tag: カルプレス, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 3月、運営が始まります。本人の話では、ビットコインは1ドルから30ドルくらいに。利用者は3か月で6万人。
+    reading: さんがつ うんえいが はじまります。ほんにんの はなしでわ、びっとこいんわ いちどるから さんじゅうどる くらいに。りようしゃわ さんかげつで ろくまんにん。
+  - speaker: reimu
+    text: 6月のハッキングで、一時1セントの値に。システムの作り直しに約1週間。2019年に、彼はこう語ります。
+    reading: ろくがつの はっきんぐで、いちじ いっせんとの ねに。しすてむの つくりなおしに やく いっしゅうかん。にせん じゅうくねんに、かれわ こう かたります。
+  - speaker: zundamon
+    emotion: sad
+    text: あのときは2時間も睡眠が取れれば良いほうです。
+  - speaker: zundamon
+    emotion: sad
+    text: プログラミングとマネジメントの能力は
+  - speaker: zundamon
+    emotion: sad
+    text: 全くの別物だと気がついたときにはすでに遅すぎました。
+# ---- 2011年8月〜2012年4月・判決が認めた経緯（罪に問われた行為ではない） ----
+- id: ch2_ana
+  title: 画面の上の30万枚
+  background: mx_gamen
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 1ドルが30ドルなら、100円のお菓子が3000円なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、ここからは判決が認めた経緯よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年8月、社長の会社が別の小さな[取引所|トリヒキジョ]を買ったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこはもう、1万7000枚を失ってた。返す約束ごと、引き受けたのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 買ったら、穴までついてきた！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長は入金の無いまま、自分が使う[A口座|エーこうざ]に15万ドルを足したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのドルで利用者から約1万8000枚を買って、穴の分を消したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 画面の上のドルで、穴をふさいだ……。
+  - speaker: reimu
+    text: その翌月、2011年9月。のちの米国の起訴によれば、この取引所の財布から盗みが始まります。
+    reading: その よくげつ、にせん じゅういちねん くがつ。のちの べいこくの きそに よれば、この とりひきじょの さいふから ぬすみが はじまります。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、ある日いっぺんに消えたんじゃないのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 米国の起訴は、そう見てるの。疑いの段階だけどね。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして11月には、使っていたフランスの銀行口座が一時凍結。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 約1億円が、引き出せなくなるの。
+  - speaker: zundamon
+    emotion: sad
+    text: 穴に、凍結……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: お[金|かね]が回らなくなるのを心配して、社長は[A口座|エーこうざ]のビットコインを増やした。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年4月までの8回で、計30万枚よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本物は無いのに、画面の上だけで30万枚！？
+    background: mx_gamen_plus
+    se: bikkuri
+    telops:
+    - {text: "判決の認定　画面の上だけの30万枚", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: それを利用者に売って、約130万ドルを得たわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 金庫にメダルが無いのに、カードの数字を増やして売ったのね。
+  - speaker: tsumugi
+    emotion: normal
+    text: この[A口座|エーこうざ]を社長が使っていることは、利用者に知らされていなかったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: この30万枚が、社長の罪になったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: ううん。これは判決が認めた経緯。罪に問われたのは、このあとの話よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、何が罪になったの！？
+    beat: true
+# ---- 2013年・3350万ドルの入力（有罪の事実） ----
+- id: card2013
+  title: ''
+  background: mx_card_2013
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2013年。ビットコインは年の初めの約13ドルから、1200ドルを超えるまで上がります。
+    reading: にせん じゅうさんねん。びっとこいんわ としの はじめの やく じゅうさんどるから、せんにひゃくどるお こえるまで あがります。
+- id: ch3_input
+  title: 3350万ドルの入力
+  background: mx_gamen
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: normal}
+  - {who: shain2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この年の2月から9月。社長はA口座のドルの残高を、入金の無いまま計3350万ドル増やします。
+    reading: この としの にがつから くがつ。しゃちょうわ えーこうざの どるの ざんだかお、にゅうきんの ない まま けい さんぜん さんびゃく ごじゅうまんどる ふやします。
+    telops:
+    - {text: "有罪の事実　3350万ドル", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shain2
+    emotion: surprised
+    text: 社長、この[A口座|エーこうざ]は……
+- id: ch3_room
+  title: ''
+  background: mx_gamen_plus
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決によると、社長は2月か3月ごろ社員に口座を知られたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして一連の入力を終えた直後に、その口座のデータを変えた。
+  - speaker: zundamon
+    emotion: surprised
+    text: 変えたの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 増やしたドルで利用者から約30万枚を買い戻して、[A口座|エーこうざ]の30万枚も消したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 画面の上だけの30万枚を、画面の上だけのドルで……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう。数字は消えても、金庫に本物が増えたわけじゃないの。
+  - speaker: reimu
+    text: のちに法廷で、彼は主張します。資金が尽きて、会社が破綻するのを避けるためだった、と。
+    reading: のちに ほうていで かれわ しゅちょう します。しきんが つきて かいしゃが はたん するのお さける ためだったと。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも判決は、30万枚を隠すための入力だったと認めたわ。高裁も、言い分を退けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: これが、有罪になった事実よ。
+  - speaker: zundamon
+    emotion: sad
+    text: 隠すため……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 本物の金庫の鍵は、誰が持ってたの？
+# ---- 2013年・世界の7割と、社長しか持たない鍵 ----
+- id: ch3_jimusho
+  title: 世界の7割
+  background: mx_jimusho
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: normal}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、うちが世界の取引の7割を扱ってるそうですよ！
+  - speaker: shain
+    emotion: happy
+    text: 渋谷の、この事務所がですよ。
+  - speaker: shain
+    emotion: normal
+    text: 1階のビットコインカフェは、いつ開くんでしょうね。
+  - speaker: shain
+    emotion: thinking
+    text: ……開く気配、ないですね。
+    beat: true
+  - speaker: shain
+    emotion: sad
+    text: 社長、[米ドル|ベイドル]の払い戻しをもう何か月も待たせています。
+    background: mx_jimusho_kami
+    se: gaan
+  - speaker: shain
+    emotion: sad
+    text: 問い合わせが、壁一面に……。
+  - speaker: shain
+    emotion: thinking
+    text: 社長、鍵を……。
+  - speaker: reimu
+    text: 鍵は、社長しか持っていなかった、と元社員たちは言います。
+    reading: かぎわ しゃちょうしか もって いなかったと、もと しゃいんたちわ いいます。
+# ---- 2014年2月・払い戻しを止める ----
+- id: card2014
+  title: ''
+  background: mx_card_2014
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2014年2月7日。マウントゴックスは、ビットコインの払い戻しを全部止めます。
+    reading: にせん じゅうよねん にがつ なのか。まうんと ごっくすわ、びっとこいんの はらいもどしお ぜんぶ とめます。
+- id: ch4_denwa
+  title: 鳴りやまない電話
+  background: mx_denwa
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: sad}
+  - {who: denwa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: denwa
+    emotion: normal
+    text: はい、マウントゴックスです。払い戻しは、ただいま止まっておりまして……。
+  - speaker: denwa
+    emotion: thinking
+    text: 原因は、ビットコインの仕組みの不具合と発表しております。
+  - speaker: denwa
+    emotion: surprised
+    text: ……切れた。と思ったら、もう次が鳴ってる！
+  - speaker: denwa
+    emotion: sad
+    text: 社長、電話が鳴りやみません……。
+    se: shobon
+- id: ch4_biru
+  title: 事務所の前の札
+  background: mx_biru
+  stage:
+  - {who: kisha, x: 0.3, flip: true, emotion: normal}
+  - {who: riyosha, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 事務所の前には、ロンドンから来た利用者が札を持って立ちます。札には英語で、私たちのお金はどこだ。
+    reading: じむしょの まえにわ、ろんどんから きた りようしゃが ふだお もって たちます。ふだにわ えいごで、わたしたちの おかねわ どこだ。
+  - speaker: kisha
+    emotion: surprised
+    text: マウントゴックスの事務所、ここだ！ カメラ、こっち！
+    background: mx_biru_kamera
+- id: ch4_chosa
+  title: ''
+  background: mx_jimusho_kami
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: sad}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長、社内の調べです。まだ途中ですが、
+  - speaker: shain
+    emotion: sad
+    text: 預かったお[金|かね]より、現金が約28億円少ないと。
+  - speaker: shain
+    emotion: thinking
+    text: ……社長？
+- id: ch4_shiro
+  title: ''
+  background: mx_gamen_shiro
+  stage:
+  - {who: shain, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 2月25日、正午。サイトを、閉じました……。
+# ---- 2014年2月28日・会見 ----
+- id: ch5_kaiken
+  title: 2月28日の会見
+  background: mx_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2月28日。会社は東京地裁に民事再生を申し立て、その日の夕方、霞が関で会見を開きます。
+    reading: にがつ にじゅうはちにち。かいしゃわ とうきょう ちさいに みんじ さいせいお もうしたて、その ひの ゆうがた かすみがせきで かいけんお ひらきます。
+  - speaker: zundamon
+    emotion: sad
+    text: ビットコインがなくなってしまい、本当に申し訳ない
+    telops:
+    - {text: "カルプレス「本当に申し訳ない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 消えたのは利用者の約75万枚と、会社の約10万枚。客は12万7000人で、日本人は約1000人でした。
+    reading: きえたのわ りようしゃの やく ななじゅうごまんまいと、かいしゃの やく じゅうまんまい。きゃくわ じゅうにまん ななせんにんで、にほんじんわ やく せんにんでした。
+  - speaker: reimu
+    text: 会社は、盗まれた可能性が高いと説明しました。原因も確かな金額も、まだ確定できていません。
+    reading: かいしゃわ ぬすまれた かのうせいが たかいと せつめい しました。げんいんも たしかな きんがくも、まだ かくてい できて いません。
+  - speaker: reimu
+    text: 彼はまだ知りません。7日後、古い財布を開けることになるとは。
+    reading: かれわ まだ しりません。なのかご、ふるい さいふお あける ことに なるとわ。
+# ---- 2014年3月7日・古い財布 ----
+- id: ch6_kinko
+  title: 古い財布
+  background: mx_kinko
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: normal}
+  - {who: shain, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 社長、残高は無いはずの古い財布を調べ直したんですか？
+  - speaker: shain
+    emotion: surprised
+    text: 約20万枚……まだ残ってたんですか！
+    background: mx_kinko_hikari
+    se: bikkuri
+  - speaker: shain
+    emotion: thinking
+    text: 消えたのは85万枚じゃなくて、約65万枚……。
+  - speaker: reimu
+    text: 3月7日のことでした。20万枚は当時の値段で、100億円を超えます。それが古い財布に入っていました。
+    reading: さんがつ なのかの ことでした。にじゅうまんまいわ とうじの ねだんで、ひゃくおくえんお こえます。それが ふるい さいふに はいって いました。
+    telops:
+    - {text: "古い財布に 約20万枚", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch6_daijin
+  title: ''
+  background: mx_kaiken
+  cuts:
+  - speaker: reimu
+    text: 同じ日、金融担当の大臣は会見で、ビットコインは通貨ではないですから、と述べています。
+    reading: おなじ ひ、きんゆう たんとうの だいじんわ かいけんで びっとこいんわ つうかでわ ないですからと のべて います。
+# ---- 2014年4月・棄却、そして破産 ----
+- id: ch6_kaigi
+  title: 50日足らず
+  background: mx_kaigi
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: sad}
+  - {who: shain, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長、発表の文です。事業再開の見込も立っておりません、と……。
+  - speaker: reimu
+    text: 4月16日、東京地裁は民事再生の申し立てを退けます。24日、破産が決まりました。
+    reading: しがつ じゅうろくにち、とうきょう ちさいわ みんじ さいせいの もうしたてお しりぞけます。にじゅうよっか、はさんが きまりました。
+  - speaker: shain
+    emotion: sad
+    text: ……破産、ですか。
+  - speaker: reimu
+    text: 会社を立て直すための手続きは、50日足らずで終わりました。ここから先は、たたむための手続きです。
+    reading: かいしゃお たてなおす ための てつづきわ、ごじゅうにち たらずで おわりました。ここから さきわ、たたむ ための てつづきです。
+# ---- 2015年8月1日・逮捕の朝 ----
+- id: card2015
+  title: ''
+  background: mx_card_2015
+  cuts:
+  - speaker: reimu
+    text: 2015年8月1日、早朝5時。逮捕に行く、と警察から電話。彼は2018年に、こう振り返っています。
+    reading: にせん じゅうごねん はちがつ ついたち、そうちょう ごじ。たいほに いくと けいさつから でんわ。かれわ にせん じゅうはちねんに、こう ふりかえって います。
+- id: ch7_genkan
+  title: 逮捕の朝
+  background: mx_genkan
+  stage:
+  - {who: zundamon, x: 0.5, tag: カルプレス, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ちょっと待ってください、シャワー浴びます
+  - speaker: reimu
+    text: 2019年の手記には、私は何もやっていない、とあります。容疑は、口座の残高を水増しした疑いでした。
+    reading: にせん じゅうくねんの しゅきにわ、わたしわ なにも やって いないと あります。ようぎわ、こうざの ざんだかお みずまし した うたがいでした。
+- id: ch7_ryuchijo
+  title: 11か月半
+  background: mx_ryuchijo
+  stage:
+  - {who: zundamon, x: 0.5, tag: カルプレス, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: このあと横領の疑いでも、2回逮捕。本人によれば、万世橋警察署に4か月半、東京拘置所に7か月。
+    reading: この あと おうりょうの うたがいでも にかい たいほ。ほんにんに よれば まんせいばし けいさつしょに よんかげつはん、とうきょう こうちしょに ななかげつ。
+  - speaker: reimu
+    text: その間、漢和辞典で日本語を勉強します。2016年7月、保釈。逮捕から11か月半でした。
+    reading: その あいだ かんわじてんで にほんごお べんきょう します。にせん じゅうろくねん しちがつ ほしゃく。たいほから じゅういっかげつはん でした。
+    background: mx_ryuchijo_jisho
+  - speaker: reimu
+    text: 彼は2019年、雑誌に好きな言葉を聞かれて、こう答えています。
+    reading: かれわ にせん じゅうくねん、ざっしに すきな ことばお きかれて こう こたえて います。
+  - speaker: zundamon
+    emotion: normal
+    text: 逮捕され、無一文になっても
+  - speaker: zundamon
+    emotion: normal
+    text: ニッポンのことは大好きです
+# ---- 2017年・初公判 ----
+- id: card2017
+  title: ''
+  background: mx_card_2017
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2017年7月、東京地裁で初公判。彼は、無罪を主張します。
+    reading: にせん じゅうななねん しちがつ、とうきょう ちさいで しょこうはん。かれわ むざいお しゅちょう します。
+  - speaker: reimu
+    text: 2019年の手記には、こうあります。私はシステム上で必要な措置を行っただけでした。
+    reading: にせん じゅうくねんの しゅきにわ こう あります。わたしわ しすてむじょうで ひつような そちお おこなった だけでした。
+# ---- 2017〜2018年・値上がりが、破産をひっくり返す ----
+- id: ch9_agari
+  title: 余りの出る破産
+  background: mx_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判が続くあいだに、ビットコインは大きく値上がりしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2017年12月には、1枚約2万ドル。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2014年は、1枚約5万円だったのに！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: ここで、破産の決まりが効いてくるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決まり？
+  - speaker: tsumugi
+    emotion: normal
+    text: 破産だと、預けたビットコインは破産の時の値段で円の借金に直されるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 5万円で預けた1枚は……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 5万円の現金で返す。1枚のままでは返さないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 値上がりした分は、どこへ行くのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 借金を全部払っても、余る。破産のままだと、その余りは株主に行く形だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 株の88%を持つのは、社長の会社。その会社の株は、全部社長のものよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 余りが、社長の会社へ行く形なのだ！？
+  - speaker: reimu
+    text: 本人は英語の取材に、受け取るつもりは無かった、という趣旨を話しています。
+    reading: ほんにんわ えいごの しゅざいに、うけとる つもりわ なかったと いう しゅしお はなして います。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2017年11月、債権者の一部が民事再生を申し立てたの。
+- id: card2018
+  title: ''
+  background: mx_card_2018
+  cuts:
+  - speaker: reimu
+    text: 2018年6月22日。民事再生が始まり、破産の手続きは止まります。
+    reading: にせん じゅうはちねん ろくがつ にじゅうににち。みんじ さいせいが はじまり、はさんの てつづきわ とまります。
+- id: ch9_saisei
+  title: ''
+  background: mx_oshirase
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 管財人の説明は、こうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 民事再生手続では、民事再生手続開始時に
+  - speaker: tsumugi
+    emotion: normal
+    text: 非金銭債権が金銭債権に転換されることはありません。
+  - speaker: zundamon
+    emotion: thinking
+    text: むずかしいのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: happy
+    text: 1枚は、1枚のまま。円の借金に直さないってこと。
+  - speaker: zundamon
+    emotion: surprised
+    text: 5万円で決まらずに、1枚のまま残るのだ！
+    beat: true
+    telops:
+    - {text: "破産＝円に直す　民事再生＝ビットコインのまま", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 2018年12月・求刑 ----
+- id: ch10_kyukei
+  title: 2018年12月の求刑
+  background: mx_houtei
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: normal}
+  - {who: kenji, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kenji
+    emotion: normal
+    text: 以上の事情から、被告人を懲役10年に処するのが相当と考えます。
+# ---- 2019年3月15日・判決 ----
+- id: card2019
+  title: ''
+  background: mx_card_2019
+  cuts:
+  - speaker: reimu
+    text: 2019年3月15日、東京地裁。判決の日です。
+    reading: にせん じゅうくねん さんがつ じゅうごにち、とうきょう ちさい。はんけつの ひです。
+- id: ch10_hanketsu
+  title: 判決
+  background: mx_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: カルプレス, emotion: normal}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 主文。被告人を[懲役2年6月|ちょうえきにねんろっかげつ]に処する。
+    se: don
+  - speaker: saibancho
+    emotion: normal
+    text: この裁判確定の日から4年間、その刑の執行を猶予する。
+  - speaker: reimu
+    text: 業務上横領と特別背任は、無罪。取引システムの口座の残高を、入金が無いのに書き換えた罪は、有罪でした。
+    reading: ぎょうむじょう おうりょうと とくべつ はいにんわ むざい。とりひき しすてむの こうざの ざんだかお にゅうきんが ないのに かきかえた つみわ、ゆうざいでした。
+    telops:
+    - {text: "横領・特別背任は無罪　口座の書き換えは有罪", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 権限を乱用して本来存在しない[米ドル|ベイドル]口座残高の増加を示す記録を作り出しており、
+  - speaker: saibancho
+    emotion: normal
+    text: 内容が虚偽であることは明らか
+  - speaker: reimu
+    text: 彼は2019年の手記に、こう書いています。
+    reading: かれわ にせん じゅうくねんの しゅきに、こう かいて います。
+  - speaker: zundamon
+    emotion: normal
+    text: 全面的には納得していませんが、
+  - speaker: zundamon
+    emotion: normal
+    text: 無罪に近い判決が出たことは、事実上の勝利であると認識しています。
+  - speaker: zundamon
+    emotion: sad
+    text: 一部が有罪となってしまったことはやりきれません。
+- id: card2020
+  title: ''
+  background: mx_card_2020
+  cuts:
+  - speaker: reimu
+    text: 検察は控訴せず、横領の無罪は確定。2020年6月、東京高裁は本人の控訴を退けます。
+    reading: けんさつわ こうそ せず、おうりょうの むざいわ かくてい。にせん にじゅうねん ろくがつ、とうきょう こうさいわ ほんにんの こうそお しりぞけます。
+  - speaker: reimu
+    text: 2021年に有罪が確定。裁かれたのは、消えたビットコインではなく、画面の数字の書き換えでした。
+    reading: にせん にじゅういちねんに ゆうざいが かくてい。さばかれたのわ きえた びっとこいんでわ なく、がめんの すうじの かきかえでした。
+# ---- 2024〜2025年・10年後の弁済 ----
+- id: card2024
+  title: ''
+  background: mx_card_2024
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2024年5月。破綻から10年。彼は経済誌の取材に、こう語っています。
+    reading: にせん にじゅうよねん ごがつ。はたんから じゅうねん。かれわ けいざいしの しゅざいに こう かたって います。
+- id: ch11_kotoba
+  title: 10年後の弁済
+  background: mx_gendai
+  stage:
+  - {who: zundamon, x: 0.5, tag: カルプレス, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: チームの上に立てる、信頼のおける人をより早く見つけておくべきでした。
+    beat: true
+- id: ch11_bensai
+  title: ''
+  background: mx_oshirase
+  stage:
+  - {who: saikensha, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月、管財人はビットコインなどで返し始めます。そのころ1枚は、約880万円でした。
+    reading: しちがつ、かんざいにんわ びっとこいん などで かえしはじめます。その ころ いちまいわ、やく はっぴゃく はちじゅうまんえん でした。
+  - speaker: saikensha
+    emotion: surprised
+    text: 10年たって、ビットコインで戻ってきた……！
+  - speaker: saikensha
+    emotion: thinking
+    text: 全部じゃないけど、預けた分の一部が……。
+# ---- 論争1：社長のものになった？ ----
+- id: ronso1
+  title: 社長のものに？
+  background: mx_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 消えたビットコインは、社長がこっそり自分のものにしたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見られた事実はあるの。判決も、画面の残高を架空に増やして隠したと認めてるわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも横領と特別背任は、無罪が確定してるの。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 無罪！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 消えたビットコインのことで、彼が起訴されたことは無いわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 米国の司法省は2023年、ハッキングをめぐるロシア国籍の2人の起訴を公表したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 起訴は、疑いの段階よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長は、画面と本物のずれを[表|おもて]に出さずに[埋めよう|うめよう]とした。日本の裁判所は、そう認めたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長の会社の画面を、社長が書き換えてもダメなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決は画面と同じだけ本物を持つのが会社の意思で、社長の意思とは別だとしたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 罪になったのは、数字の埋め方だったのか……。
+    beat: true
+# ---- 論争2：ビットコインの仕組みに穴？ ----
+- id: ronso2
+  title: 仕組みに穴？
+  background: mx_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、ビットコインの仕組みそのものに穴があったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、仕組みの不具合のせいだと発表したわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: でもスイスの大学の研究では、その不具合で盗まれ得たのは多くて約386枚。
+  - speaker: zundamon
+    emotion: surprised
+    text: 発表は85万枚なのに、386枚！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: 米国の起訴と分析会社は、2011年ごろから[取引所|トリヒキジョ]の財布の鍵が盗まれていたと見てるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 鍵ごと！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 守り方に、穴があったのだ……。
+    beat: true
+# ---- 論争3：預けた人は得をした？ ----
+- id: ronso3
+  title: 預けた人は得をした？
+  background: mx_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: でも預けた人は、値上がりで得したのだ！ 5万円の1枚が、880万円！
+  - speaker: tsumugi
+    emotion: normal
+    text: 民事再生に移ったから、ビットコインのまま受け取る道ができた。そこは本当よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも戻ったのは、預けた枚数の一部。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 一部だけ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 預けた枚数の一部が、10年分値上がりして戻った。それが正確ね。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 画面の残高は帳簿
+  background: mx_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[取引所|トリヒキジョ]の画面の残高は、預け先の帳簿の数字。'
+    telops:
+    - {text: "画面の残高＝預け先の帳簿の数字", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本物が金庫にあるかは、画面だけでは分からないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゲーセンのカードと、同じなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本では2017年4月から、交換業者は登録制。
+  - speaker: tsumugi
+    emotion: normal
+    text: 預かった財産を、分けて管理する決まりもあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 使う前に、金融庁に登録された業者かを確かめてね。
+  - speaker: zundamon
+    emotion: normal
+    text: 登録を、確かめる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 次に、払い戻しが遅れるのはいちばん大きな合図。
+  - speaker: zundamon
+    emotion: thinking
+    text: 合図……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2013年に[米ドル|ベイドル]の払い戻しが遅れて、翌年2月にはビットコインも止まったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 遅れ始めたら、もう危ないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: それと返金しますと言ってくる連絡は、まず疑うこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: マウントゴックスの管財人も、偽のサイトや偽のメールに何度も注意を出してるの。
+  - speaker: zundamon
+    emotion: sad
+    text: 返してくれる話ほど、あやしいのだ……。
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: mx_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。霞が関の会見から、12年がたちました。
+    reading: にせん にじゅうろくねん。かすみがせきの かいけんから、じゅうにねんが たちました。
+- id: ima
+  title: マウントゴックスのいま
+  background: mx_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: マウントゴックスの会社は、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社はまだ、再生債務者として残ってるの。管財人が、返す手続きを続けてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年3月までに、1万9500人を超える債権者が受け取ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 期限は2027年10月31日。4年続けて延びたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: まだ終わってないの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 手続きの済んでいない人が、いまも多数いるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長だった人は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 41歳。いまもエンジニアとして働いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年2月には2011年から動いていない約8万枚を、債権者に戻す案を出したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ビットコインの決まりを変える案よ。出した場所では、その日のうちに閉じられたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2011年から、動いてないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人の言い分では、2011年に盗まれてから1つのアドレスにとどまったままなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 12年前、大臣が通貨ではないと言ったもの。
+  - speaker: tsumugi
+    emotion: normal
+    text: いまは法律の上で暗号資産と呼ばれて、登録した業者しか扱えないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 値段は、いまいくらなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: いまも大きく上下してるわ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: mx_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 次のゲーセンでは、金庫の中を見せてもらうのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 見せてくれるお店は、ないと思うわ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: ビットコインがなくなってしまい、本当に申し訳ない。28歳の社長は、そう頭を下げたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: なくなったはずのコインの一部は、10年分値上がりして戻り始めたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも本人の言い分では、2011年に盗まれた財布はいまも動かないまま。
+  - speaker: zundamon
+    emotion: thinking
+    text: カードの数字と、金庫の中身。最後まで、別ものだったのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 画面の数字を見たら、その奥の金庫のことも思い出してね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

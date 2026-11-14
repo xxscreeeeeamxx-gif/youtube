@@ -4518,7 +4518,7 @@ SPECS = {
         dict(scene="ld_wakai", tint="yellow", tag="2005年 和解", emo="happy", fx="sparkle", say="想定の範囲内"),
         dict(scene="ld_tower_yoake", tint="mono", tag="2006年 捜索の朝", emo="sad", fx="gloom", say="報告したい"),
     ]),
-    "mtgox-karpeles": dict(layout="scene", headline="求刑10年、横領は無罪", head_hi="無罪", panels=[
+    "mtgox-karpeles": dict(layout="scene", headline="罪は盗みではなかった", head_hi="盗みではなかった", panels=[
         dict(scene="mx_kaiken", tint="mono", tag="2014年 会見", emo="sad", fx="gloom", say="本当に申し訳ない"),
         dict(scene="mx_houtei", tint="yellow", tag="2019年 判決", emo="normal", fx="sweat", say="事実上の勝利"),
     ]),
