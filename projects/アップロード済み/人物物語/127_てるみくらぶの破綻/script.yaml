@@ -1,0 +1,1156 @@
+meta:
+  title: 「嘘に嘘を重ねた」と認めたてるみくらぶの社長、2日後に逮捕された【ずんだもん解説】
+  slug: terumi-club
+  hook_line: 赤字の会社は、なぜつぶれる4日前まで客を集め続けられたのか。
+  summary: 2017年3月27日、格安の海外ツアーを売ってきた旅行会社てるみくらぶが破産し、社長の山田千賀子は国土交通省の会見で頭を下げました。安い席が消えたあとも売り続けた会社、客が先に払った旅行代金、黒字に見せた帳簿。払えない日の新聞にも、広告は載っていました。赤字の会社は、なぜつぶれる4日前まで客を集め続けられたのか。破産管財人の調べ、判決、本人の言葉を主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 帝国データバンク 倒産速報「株式会社てるみくらぶ」（2017年3月27日） https://www.tdb.co.jp/report/bankruptcy/flash/4280/
+  - 東京商工リサーチ「てるみくらぶの『決算書』を読み解く」（2017年5月19日） https://www.tsr-net.co.jp/data/detail/1188772_1527.html
+  - 東京商工リサーチ「てるみくらぶ山田社長、『嘘に嘘を重ねた』が『詐欺ではない』」（2017年11月6日） https://www.tsr-net.co.jp/data/detail/1188904_1527.html
+  - トラベルボイス「てるみくらぶ被害者への弁済率は3.5％に、最高額は約13万円程度」（2017年11月16日） https://www.travelvoice.jp/20171116-100741
+  - 日本経済新聞「てるみ社長に懲役6年　東京地裁判決　融資金詐取事件で」（2018年7月20日） https://www.nikkei.com/article/DGKKZO33194590Q8A720C1CC0000/
+  - 東京商工リサーチ「破産した『てるみくらぶ』の配当率 1.9％に」（2019年3月13日） https://www.tsr-net.co.jp/data/detail/1189391_1527.html
+  tags:
+  - てるみくらぶ
+  - 山田千賀子
+  - 旅行会社
+  - 破産
+  - 格安ツアー
+  - 海外旅行
+  - 前払い
+  - 粉飾決算
+  - 弁済業務保証金
+  - 日本旅行業協会
+  - 債権者集会
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 破産4日前も
+    bottom: 新聞に旅の広告
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: bengoshi
+    label: 弁護士
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: shiire
+    label: 仕入れ担当
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a6a5a'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: uketsuke
+    label: 受付
+    voice: 8
+    pitch: 0.08
+    outfit: suit
+    color: '#7a5a6a'
+  - id: uketsuke2
+    label: 受付
+    voice: 8
+    pitch: -0.06
+    outfit: suit
+    color: '#5a6a7a'
+  - id: ginko
+    label: 銀行員
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#2f3a52'
+  - id: kyaku
+    label: 客
+    voice: 67
+    pitch: 0.04
+    outfit: none
+    color: '#8a7a5a'
+  - id: front
+    label: フロント
+    voice: 8
+    pitch: 0.12
+    outfit: suit
+    color: '#8a5a4a'
+  - id: kyokai
+    label: 協会職員
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#454a55'
+  - id: kyokai2
+    label: 職員
+    voice: 8
+    pitch: -0.02
+    outfit: suit
+    color: '#6a5a4a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2017年3月27日 午前11時30分・国土交通省の会見。問いは台帳の「趣旨」の形まで。答えは同じ答えの中の2文） ----
+- id: co_kaiken
+  title: ''
+  background: tm_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山田社長, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2017年3月27日、午前11時半。東京・霞が関の国土交通省です。
+    reading: にせん じゅうななねん さんがつ にじゅうしちにち、ごぜん じゅういちじはん。とうきょう かすみがせきの こくど こうつうしょうです。
+  - speaker: reimu
+    text: 格安の海外旅行を売ってきた、てるみくらぶの社長、山田千賀子が会見に立ちます。
+    reading: かくやすの かいがい りょこうお うって きた てるみくらぶの しゃちょう、やまだ ちかこが かいけんに たちます。
+  - speaker: zundamon
+    emotion: sad
+    text: 私の不徳のいたすところです。誠に申し訳ありませんでした
+  - speaker: kisha
+    emotion: normal
+    text: 経営状態が悪いにも関わらず、キャッシュを集めていたのではないか
+  - speaker: zundamon
+    emotion: sad
+    text: 全くそんなことはなくて
+  - speaker: zundamon
+    emotion: sad
+    text: とにかく生きることしか考えてなかった。
+  - speaker: reimu
+    text: 4日前の新聞にも、この会社の広告は載っていました。およそ9万人の旅行代金を抱えたまま、破産しました。
+    reading: よっかまえの しんぶんにも この かいしゃの こうこくわ のって いました。およそ きゅうまんにんの りょこう だいきんお かかえた まま、はさん しました。
+# ---- 今の部屋（来年のハワイを全額前払い） ----
+- id: hook
+  title: ''
+  background: tm_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 来年のハワイ旅行、もう全額払ったのだ！ 今だけ現金一括で安くなるのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 出発は来年よね。そのお[金|かね]、会社は今どこに置いてるの？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……金庫？
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを今日の支払いに回して、赤字なのにつぶれる4日前まで客を集めた会社があるの。
+    telops:
+    - {text: "赤字の会社は なぜ4日前まで客を集められた？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤字なのに、なんで4日前まで客が集まるのだ！？
+# ---- 1998年・余った席を安く ----
+- id: card1998
+  title: ''
+  background: tm_card_1998
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1998年。ネットで売る格安の海外ツアーの会社として、てるみくらぶが生まれます。
+    reading: せんきゅうひゃく きゅうじゅうはちねん。ねっとで うる かくやすの かいがい つあーの かいしゃと して、てるみくらぶが うまれます。
+- id: ch1_seki
+  title: 余った席を安く
+  background: tm_jimusho
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 山田社長, emotion: normal}
+  - {who: shiire, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: shiire
+    emotion: happy
+    text: 社長！ 新しい路線で余った席を、まとめて安く仕入れられました！
+  - speaker: shiire
+    emotion: happy
+    text: ハワイもソウルも台北も、よその会社より安く出せます！
+    background: tm_jimusho_poster
+    se: levelup
+  - speaker: reimu
+    text: 会社の説明では、新しい路線や急な需要の変化で余った席を、航空会社から安く買っていました。
+    reading: かいしゃの せつめいでわ あたらしい ろせんや きゅうな じゅようの へんかで あまった せきお、こうくう がいしゃから やすく かって いました。
+  - speaker: shiire
+    emotion: happy
+    text: 安く仕入れて、安く売る。お客さんが、どんどん来ます！
+# ---- 経理の机・前払いの財布（同僚どうしの脚色） ----
+- id: ch1_saifu
+  title: 前払いの財布
+  background: tm_jimusho
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩！ 半年先のハワイの申し込みなのに、もう代金が入ってます。
+  - speaker: senpai
+    emotion: normal
+    text: 旅行代金は、出発の前にもらう。それがこの商売だ。
+  - speaker: shinjin
+    emotion: thinking
+    text: ホテルや航空会社に払うのは、まだ先ですよね。
+  - speaker: senpai
+    emotion: normal
+    text: 払うまでは、うちの手元にある。
+  - speaker: shinjin
+    emotion: normal
+    text: じゃあ、お客さんが来続ける限り……
+  - speaker: senpai
+    emotion: happy
+    text: 財布は、いつも重い。
+  - speaker: shinjin
+    emotion: thinking
+    text: 来月の旅行のお[金|かね]を今月もらって、今月の家賃も払えちゃう？
+  - speaker: senpai
+    emotion: normal
+    text: ……払えちゃう。お客さんが来続ける限りはな。
+    beat: true
+  - speaker: reimu
+    text: この財布の中身は、のちに100億円。会社がつぶれた日、手元にあったのは約1億円でした。
+    reading: この さいふの なかみわ のちに ひゃくおくえん。かいしゃが つぶれた ひ、てもとに あったのわ やく いちおくえんでした。
+    telops:
+    - {text: "客の前払い100億円　手元に1億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: heya1
+  title: ''
+  background: tm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 100億円を預かって、なんで手元に1億円なのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 前払いのお[金|かね]は、本当なら出発までにその旅のホテルや飛行機に払うものよ。
+  - speaker: zundamon
+    emotion: normal
+    text: それまでは、どこかにしまってあるはず。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ずんだもん、さっき金庫って言ったわね。
+  - speaker: zundamon
+    emotion: normal
+    text: ……言った。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ客が払ったお[金|かね]は、どこへ行ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 金庫じゃなかったの。今日の支払いに、出ていってたのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 客が払ったお[金|かね]で、今日の支払い……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも客が来続ければ回る。崩れ始めたのは、席の値段からよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 席の、値段？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 安く仕入れられた席が、だんだん消えていくの。
+# ---- 2012〜2013年・安い席が消える ----
+- id: ch2_kieru
+  title: 安い席が消える
+  background: tm_jimusho
+  bgm: kinakusai
+  stage:
+  - {who: shiire, x: 0.28, flip: true, emotion: sad}
+  - {who: senpai, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2012年ごろ。会社の説明では、ここから安い席が減っていきます。
+    reading: にせん じゅうにねん ごろ。かいしゃの せつめいでわ、ここから やすい せきが へって いきます。
+  - speaker: shiire
+    emotion: sad
+    text: 先輩、航空会社にまた断られました。安い席は自分のサイトで売るそうです。
+  - speaker: senpai
+    emotion: sad
+    text: またか。
+  - speaker: shiire
+    emotion: sad
+    text: 機体も小さくなって、余る席そのものが減ってます。
+  - speaker: shiire
+    emotion: thinking
+    text: おまけに円安で、海外のホテル代まで上がってます。
+  - speaker: shiire
+    emotion: sad
+    text: 航空会社からの販売の奨励金も、減らされました。
+  - speaker: senpai
+    emotion: sad
+    text: 踏んだり蹴ったりだな。
+  - speaker: senpai
+    emotion: thinking
+    text: なら、大手と同じ値段で仕入れるしかないか。
+  - speaker: shiire
+    emotion: surprised
+    text: でも先輩、うちの売値は大手より安いんですよ。
+  - speaker: shiire
+    emotion: thinking
+    text: この席だと、売値より仕入れのほうが高いです。
+  - speaker: senpai
+    emotion: normal
+    text: それでも売る。売らないと、来月払うお[金|かね]が入ってこない。
+  - speaker: shiire
+    emotion: surprised
+    text: 100円で仕入れたおにぎりを、80円で売るんですか！？
+    se: zukko
+  - speaker: shiire
+    emotion: surprised
+    text: 1個売るたびに、20円の損ですよ！
+  - speaker: senpai
+    emotion: normal
+    text: 売れるほど損だ。でもレジには、毎日お[金|かね]が入る。
+  - speaker: shiire
+    emotion: thinking
+    text: ……それ、止めたらどうなるんです？
+  - speaker: senpai
+    emotion: sad
+    text: 止めたその日に、足りない分が全部見える。
+    beat: true
+  - speaker: reimu
+    text: 破産管財人の調べでは、売上を増やすため、赤字販売と認識しながら販売を継続しました。
+    reading: はさん かんざいにんの しらべでわ うりあげお ふやす ため、あかじ はんばいと にんしき しながら はんばいお けいぞく しました。
+  - speaker: shiire
+    emotion: thinking
+    text: 赤字でも、売れば客は集まり続ける……。決算は、どうするんでしょう。
+# ---- 2013〜2014年・黒字に見せる ----
+- id: card2013
+  title: ''
+  background: tm_card_2013
+  cuts:
+  - speaker: reimu
+    text: 2013年。管財人の調べでは、4月に月ごとの粗利益がマイナスになります。
+    reading: にせん じゅうさんねん。かんざいにんの しらべでわ、しがつに つきごとの あらりえきが まいなすに なります。
+- id: ch3_kessan
+  title: 赤い帯が黒に
+  background: tm_kessan
+  stage:
+  - {who: senpai, x: 0.18, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.82, emotion: thinking}
+  cuts:
+  - speaker: shinjin
+    emotion: thinking
+    text: 先輩、9月期の決算書です。赤い数字が並んでますね。
+  - speaker: senpai
+    emotion: sad
+    text: 売るほど損をしてるからな。
+  - speaker: reimu
+    text: 管財人によれば、決算を閉める段階でマイナスを資産に振り替えて、利益を出していました。
+    reading: かんざいにんに よれば、けっさんお しめる だんかいで まいなすお しさんに ふりかえて りえきお だして いました。
+    background: tm_kessan_kuro
+  - speaker: shinjin
+    emotion: surprised
+    text: 赤が、黒になってる……！
+    se: bikkuri
+    telops:
+    - {text: "管財人の調べ　赤字を資産に振り替え", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shinjin
+    emotion: thinking
+    text: なんで、そこまで黒字に？
+  - speaker: senpai
+    emotion: normal
+    text: うちは航空券を自分で出せる。国際航空運送協会の資格があるからだ。
+  - speaker: shinjin
+    emotion: normal
+    text: 自分で出せると、何がいいんですか？
+  - speaker: senpai
+    emotion: normal
+    text: 航空券の代金は、あとでまとめて払えばいい。
+  - speaker: shinjin
+    emotion: normal
+    text: その資格の条件って？
+  - speaker: senpai
+    emotion: normal
+    text: 銀行に、約5億円の保証を付けてもらうことだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 資格をなくしたら？
+  - speaker: senpai
+    emotion: sad
+    text: よそに頼んで出す。仕入れが、もっと高くなる。
+  - speaker: shinjin
+    emotion: sad
+    text: それじゃ、ますます赤字になりますね……。
+- id: ch3_shacho
+  title: ''
+  background: tm_kessan_kuro
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 山田社長, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: のちに債権者集会で、粉飾や前払いの商売に、犯罪性はあるのかと問われ、山田はこう答えます。
+    reading: のちに さいけんしゃ しゅうかいで ふんしょくや まえばらいの しょうばいに はんざいせいわ あるのかと とわれ、やまだわ こう こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: 粉飾は[IATA|イアタ]の資格を守るためにした。
+  - speaker: zundamon
+    emotion: sad
+    text: なんとか会社の形をキープしたかった。
+  - speaker: reimu
+    text: 2014年9月期には、払うべきお金が財産を上回る債務超過に。それでも帳簿の上は、黒字でした。
+    reading: にせん じゅうよねん くがつきにわ はらうべき おかねが ざいさんお うわまわる さいむ ちょうかに。それでも ちょうぼの うえわ くろじでした。
+- id: heya_kuro
+  title: ''
+  background: tm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 赤字を資産に振り替えるって、どういうことなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 家計簿で言うね。今月は2万円の赤字。
+  - speaker: zundamon
+    emotion: normal
+    text: ボクの家計簿も、だいたい赤字だよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを、貯金が2万円増えましたと書き換えるの。
+  - speaker: zundamon
+    emotion: angry
+    text: 貯金なんて、どこにも無いのだ！
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも家計簿の上では、黒字の家に見える。
+  - speaker: tsumugi
+    emotion: normal
+    text: 東京商工リサーチによれば、親会社への配当も出ていたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2011年からの6年で、3億1000万円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 粉飾が始まったあとの2014年9月期にも、5000万円。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会社の外にも、お[金|かね]が出ていたの！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 赤字なのに黒字の顔で、客を集め続けたのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本当の赤字がどれほどだったかは、のちに管財人が数字にするわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも会社は、ここから広告を増やしていくの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤字なのに、もっとお[金|かね]を使うの！？
+# ---- 2015〜2016年・新聞のシニア ----
+- id: card2015
+  title: ''
+  background: tm_card_2015
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2015年の春。
+    reading: にせん じゅうごねんの はる。
+- id: ch4_kokoku
+  title: 新聞のシニア
+  background: tm_shinbun
+  cuts:
+  - speaker: reimu
+    text: 会社は、シニア向けのツアーを新聞広告で売り始めます。
+    reading: かいしゃわ しにあ むけの つあーお しんぶん こうこくで うりはじめます。
+- id: ch4_shinbun
+  title: ''
+  background: tm_denwa
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 山田社長, emotion: normal}
+  - {who: uketsuke, x: 0.4, emotion: happy}
+  - {who: uketsuke2, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: uketsuke
+    emotion: happy
+    text: はい、てるみくらぶです！ 新聞の広告をご覧になったんですね！
+  - speaker: uketsuke2
+    emotion: surprised
+    text: こっちも鳴ってます！ 次も、その次も！
+    se: levelup
+  - speaker: uketsuke
+    emotion: happy
+    text: ヨーロッパの周遊、ご夫婦でお二人ですね！
+  - speaker: reimu
+    text: 2015年からは、団体旅行も手がけます。のちに会見で、彼女はこう話しています。
+    reading: にせん じゅうごねんからわ だんたい りょこうも てがけます。のちに かいけんで、かのじょわ こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 他社が20人くらいで催行するものを我が社は80人といった数で催行することもできた。
+  - speaker: uketsuke2
+    emotion: surprised
+    text: 広告関連のお[金|かね]、9億9600万円から20億7300万円に増えたそうです。
+  - speaker: uketsuke
+    emotion: surprised
+    text: 1年で、倍！？ 広告を出すほど、電話は鳴るんですけど……。
+  - speaker: uketsuke2
+    emotion: thinking
+    text: そのお[金|かね]で、会社は大丈夫なんでしょうか……。
+  - speaker: reimu
+    text: 財務が悪くなった理由を、彼女はのちの会見でこう答えています。
+    reading: ざいむが わるく なった りゆうお、かのじょわ のちの かいけんで こう こたえて います。
+  - speaker: zundamon
+    emotion: sad
+    text: 一昨年の春から新聞広告を打ち出しまして
+  - speaker: zundamon
+    emotion: sad
+    text: 一言でいうと媒体コスト、経費がかかり過ぎということで
+  - speaker: zundamon
+    emotion: sad
+    text: それが一番の要因だと思っている。
+# ---- 2016年6月〜2017年2月・ありもしない飛行機（有罪の事実。山田の台詞は作らない） ----
+- id: card2016
+  title: ''
+  background: tm_card_2016
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2016年6月。銀行の応接室です。
+    reading: にせん じゅうろくねん ろくがつ。ぎんこうの おうせつしつです。
+- id: ch5_osetsu
+  title: ありもしない飛行機
+  background: tm_osetsu
+  stage:
+  - {who: ginko, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: ginko
+    emotion: normal
+    text: 航空機のチャーター費用の、請求書ですね。拝見します。
+  - speaker: ginko
+    emotion: happy
+    text: 飛行機を丸ごと借りるとは、お客様が多いんですね。
+  - speaker: ginko
+    emotion: normal
+    text: ……承知しました。ご融資の手続きに入ります。
+  - speaker: reimu
+    text: 判決によれば、チャーター費用などと偽り、三井住友銀行と東日本銀行から5回、約5億4000万円。
+    reading: はんけつに よれば ちゃーたー ひようなどと いつわり、みつい すみとも ぎんこうと ひがし にほん ぎんこうから ごかい やく ごおく よんせんまんえん。
+    telops:
+    - {text: "有罪の事実　約5億4000万円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 経理の元社員への判決によれば、架空の請求書は、社長の指示で銀行に出されていました。
+    reading: けいりの もと しゃいんえの はんけつに よれば、かくうの せいきゅうしょわ しゃちょうの しじで ぎんこうに だされて いました。
+  - speaker: reimu
+    text: 客の前払いで足りない分を、銀行から。そのために、ありもしない飛行機を書いたのです。
+    reading: きゃくの まえばらいで たりない ぶんお ぎんこうから。その ために ありも しない ひこうきお かいたのです。
+# ---- 2017年3月22〜23日・払えない日の新聞 ----
+- id: card2017
+  title: ''
+  background: tm_card_2017
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2017年3月22日の夕方。会社の説明では、めどが立っていたスポンサーと銀行の話が破談になります。
+    reading: にせん じゅうななねん さんがつ にじゅうににちの ゆうがた。かいしゃの せつめいでわ めどが たって いた すぽんさーと ぎんこうの はなしが はだんに なります。
+- id: ch6_hadan
+  title: ''
+  background: tm_jimusho_yoru
+  stage:
+  - {who: zundamon, x: 0.5, tag: 山田社長, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: のちに会見で、彼女はこう話しています。
+    reading: のちに かいけんで、かのじょわ こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: とにかく最後の最後までスポンサーの人、銀行の人とかけあって
+- id: ch6_asa
+  title: 払えない日の新聞
+  background: tm_shinbun
+  stage:
+  - {who: senpai, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.36, emotion: normal}
+  cuts:
+  - speaker: shinjin
+    emotion: normal
+    text: 先輩、今日の新聞にもうちの広告が出てますね。
+  - speaker: senpai
+    emotion: sad
+    text: 今日は23日。航空券の代金をまとめて払う期限だ。3億7100万円。
+  - speaker: shinjin
+    emotion: thinking
+    text: ……払えるんですか？
+  - speaker: senpai
+    emotion: sad
+    text: ……払えない。
+    background: tm_seikyu
+    beat: true
+  - speaker: reimu
+    text: 破産の直前まで、会社は新聞広告などで、現金一括入金キャンペーンとうたっていました。
+    reading: はさんの ちょくぜんまで かいしゃわ しんぶん こうこくなどで、げんきん いっかつ にゅうきん きゃんぺーんと うたって いました。
+- id: ch6_yoru
+  title: ''
+  background: tm_jimusho_yoru
+  stage:
+  - {who: uketsuke, x: 0.28, flip: true, emotion: sad}
+  - {who: uketsuke2, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 23日の深夜。出発できないという連絡が、客に届き始めます。
+    reading: にじゅうさんにちの しんや。しゅっぱつ できないと いう れんらくが、きゃくに とどき はじめます。
+  - speaker: uketsuke
+    emotion: sad
+    text: てるみくらぶです。夜分に申し訳ございません。
+  - speaker: uketsuke
+    emotion: sad
+    text: ご予約のツアーが、ご出発できない見込みでして……
+  - speaker: uketsuke2
+    emotion: sad
+    text: こちらのお客様も、もうすぐ出発です……。
+# ---- 2017年3月24日・張り紙とメール ----
+- id: ch7_honsha
+  title: 臨時休業
+  background: tm_honsha
+  stage:
+  - {who: kisha, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 格安ツアーのてるみくらぶ、渋谷の本社前です。
+  - speaker: reimu
+    text: 3月24日。本社のガラスの扉に、臨時休業の張り紙が出ました。
+    reading: さんがつ にじゅうよっか。ほんしゃの がらすの とびらに、りんじ きゅうぎょうの はりがみが でました。
+    background: tm_honsha_harigami
+  - speaker: kisha
+    emotion: surprised
+    text: 社長の名前で、緊急のお知らせとお詫びというメールも出たそうです。
+- id: ch7_kuko
+  title: ''
+  background: tm_kuko
+  stage:
+  - {who: kyaku, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 発券済みの航空券はご利用頂けるかどうか現時点で確認できておりません。
+    reading: はっけんずみの こうくうけんわ ごりよう いただけるか どうか げんじてんで かくにん できて おりません。
+  - speaker: kyaku
+    emotion: surprised
+    text: 使えるかどうか、分からないって……。
+  - speaker: kyaku
+    emotion: sad
+    text: ……カウンターで、聞いてみるしかないか。
+# ---- 2017年3月27日・会見（本編） ----
+- id: ch8_kaiken
+  title: 3月27日の会見
+  background: tm_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山田社長, emotion: sad}
+  - {who: bengoshi, x: 0.52, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3月27日の朝、会社は破産を決めて東京地裁に申し立て、その日のうちに手続きが始まりました。
+    reading: さんがつ にじゅうしちにちの あさ かいしゃわ はさんお きめて とうきょう ちさいに もうしたて、その ひの うちに てつづきが はじまりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 私の不徳のいたすところです。誠に申し訳ありませんでした
+  - speaker: bengoshi
+    emotion: normal
+    text: ご迷惑をおかけしているお客様数は[36,000件|サンマンロクセンケン]
+  - speaker: bengoshi
+    emotion: normal
+    text: 総金額数は99億円余りが引っかかる可能性がある。
+  - speaker: reimu
+    text: 負債は、およそ151億円。旅行中の客は約3000人で、影響は8万から9万人に及ぶと試算されました。
+    reading: ふさいわ およそ ひゃくごじゅういちおくえん。りょこうちゅうの きゃくわ やく さんぜんにんで、えいきょうわ はちまんから きゅうまんにんに およぶと しさん されました。
+  - speaker: reimu
+    text: 経緯を説明する中で、彼女は同席の弁護士に、こう尋ねる場面もありました。
+    reading: けいいお せつめい する なかで、かのじょわ どうせきの べんごしに こう たずねる ばめんも ありました。
+  - speaker: zundamon
+    emotion: sad
+    text: 銀行のことは言ってはだめですか
+  - speaker: kisha
+    emotion: normal
+    text: 経営状態が悪いにも関わらず、キャッシュを集めていたのではないか
+  - speaker: zundamon
+    emotion: sad
+    text: 全くそんなことはなくて
+  - speaker: zundamon
+    emotion: sad
+    text: とにかく生きることしか考えてなかった。
+    telops:
+    - {text: "山田「とにかく生きることしか考えてなかった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch8_kaiken2
+  title: ''
+  background: tm_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 山田社長, emotion: sad}
+  - {who: bengoshi, x: 0.52, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 何割戻るのかと問われ、弁護士は試算は難しいとしたうえで、こう答えます。
+    reading: なんわり もどるのかと とわれ、べんごしわ しさんわ むずかしいと した うえで こう こたえます。
+  - speaker: bengoshi
+    emotion: normal
+    text: 1億2000万円に99億ですから、ざっくりいうと1%くらい。
+  - speaker: bengoshi
+    emotion: normal
+    text: 弁済保証金の配当の割合。
+  - speaker: kisha
+    emotion: normal
+    text: 改めて、被害者の皆さんにどんな思いを伝えたいか。
+  - speaker: zundamon
+    emotion: sad
+    text: お客様にご迷惑をかけることになってしまい本当に申し訳ないと思っている。
+  - speaker: kisha
+    emotion: normal
+    text: 振り込んだのにチケットも出ないしそもそも旅行に行けないという[方|カタ]が
+  - speaker: kisha
+    emotion: normal
+    text: これだけいらっしゃるのは詐欺じゃないかとの声もある。
+  - speaker: zundamon
+    emotion: sad
+    text: 詐欺を働くとかそういうことは最初から毛頭考えていない。
+  - speaker: zundamon
+    emotion: sad
+    text: お客様に安くて良い商品をと思って、ずっと何十年もやってきまして
+  - speaker: reimu
+    text: ここで問われた詐欺は、客の前払いのことでした。
+    reading: ここで とわれた さぎわ、きゃくの まえばらいの ことでした。
+  - speaker: reimu
+    text: 同じ日、4月に入社するはずだった新卒の約50人に、内定の取り消しが伝えられました。
+    reading: おなじ ひ、しがつに にゅうしゃ する はずだった しんそつの やく ごじゅうにんに ないていの とりけしが つたえられました。
+# ---- 2017年3月下旬〜4月・現地のホテル（笑いにしない） ----
+- id: ch9_hotel
+  title: 現地のホテル
+  background: tm_hotel
+  bgm: 223am
+  stage:
+  - {who: kyaku, x: 0.18, flip: true, emotion: normal}
+  - {who: front, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: front
+    emotion: sad
+    text: お客様、ツアーの会社から宿泊代のお支払いがまだでして……
+  - speaker: kyaku
+    emotion: surprised
+    text: 代金は、もう全部払ってあるんですけど……。
+  - speaker: front
+    emotion: sad
+    text: こちらで、お支払いいただけますでしょうか。
+  - speaker: kyaku
+    emotion: sad
+    text: ……払うしか、ないんですよね。
+  - speaker: kyaku
+    emotion: sad
+    text: 旅行代金は、出発のずっと前に払ったのに……。
+  - speaker: kyaku
+    emotion: sad
+    text: 帰りの飛行機には、乗れるんでしょうか……。
+  - speaker: front
+    emotion: normal
+    text: 航空券が発券済みなら、使えると聞いています。
+  - speaker: reimu
+    text: 観光庁は、現地のホテルで追加の料金を払った例があると説明しました。
+    reading: かんこうちょうわ、げんちの ほてるで ついかの りょうきんお はらった れいが あると せつめい しました。
+- id: ch9_yoru
+  title: ''
+  background: tm_kuko_yoru
+  cuts:
+  - speaker: reimu
+    text: 4月3日の時点でも、なお約1100人が海外にいました。
+    reading: しがつ みっかの じてんでも、なお やく せん ひゃくにんが かいがいに いました。
+# ---- 2017年3月28日〜11月16日・100億円に1億2000万円 ----
+- id: ch10_kyokai
+  title: 協会の上限
+  background: tm_kyokai
+  stage:
+  - {who: kyokai, x: 0.18, flip: true, emotion: normal}
+  - {who: kyokai2, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 業界団体の日本旅行業協会には、返金の手続きを求める登録が相次ぎます。
+    reading: ぎょうかい だんたいの にほん りょこうぎょう きょうかいにわ、へんきんの てつづきお もとめる とうろくが あいつぎます。
+  - speaker: kyokai
+    emotion: surprised
+    text: 返金の手続きの登録、もう2万1000人です……！
+    background: tm_kyokai_hako
+  - speaker: kyokai2
+    emotion: normal
+    text: うちから返せる上限は？
+  - speaker: kyokai
+    emotion: sad
+    text: 分担金の5倍の、1億2000万円。
+  - speaker: kyokai2
+    emotion: sad
+    text: 被害は、およそ100億円ですよ……。
+  - speaker: kyokai
+    emotion: normal
+    text: 最初の申し出から60日の間は、みんな同じ扱い。上限を超えたら割って配ります。
+  - speaker: kyokai2
+    emotion: normal
+    text: カード会社が取り消しに応じた分などは、ここから外れますね。
+  - speaker: reimu
+    text: のちに協会は、1万643件、約34億円の申し出を認めます。返せる割合は、3.5%でした。
+    reading: のちに きょうかいわ いちまん ろっぴゃく よんじゅうさんけん、やく さんじゅうよんおくえんの もうしでお みとめます。かえせる わりあいわ さんてんごぱーせんとでした。
+    telops:
+    - {text: "協会からの弁済　3.5%", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kyokai
+    emotion: sad
+    text: 364万円払った[方|カタ]で、約13万円……。
+# ---- 2017年11月6日〜8日・嘘に嘘を重ねた（債権者の声はモブの台詞にしない） ----
+- id: ch11_hall
+  title: 嘘に嘘を重ねた
+  background: tm_hall
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 山田社長, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2017年11月6日。東京・港区のホールに、500人を超える債権者が集まりました。
+    reading: にせん じゅうななねん じゅういちがつ むいか。とうきょう みなとくの ほーるに、ごひゃくにんお こえる さいけんしゃが あつまりました。
+  - speaker: zundamon
+    emotion: sad
+    text: ご迷惑をお掛けし、お詫びが遅くなり申し訳ございません
+  - speaker: zundamon
+    emotion: sad
+    text: 嘘に嘘を重ねた。売上至上主義で赤字になった
+    telops:
+    - {text: "山田「嘘に嘘を重ねた」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 席からは、厳しい声が飛びました。管財人が直すと、2016年9月期は143億円の債務超過です。
+    reading: せきからわ きびしい こえが とびました。かんざいにんが なおすと、にせん じゅうろくねん くがつきわ ひゃく よんじゅうさんおくえんの さいむ ちょうかです。
+  - speaker: reimu
+    text: 破産を分かっていて振り込ませたのかと問われ、彼女はこう答えます。
+    reading: はさんお わかって いて ふりこませたのかと とわれ、かのじょわ こう こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: 詐欺は思ったこともない。交渉を続けたが、破産になってしまった。
+  - speaker: reimu
+    text: 2日後の11月8日。彼女は、チャーター機の資金と偽って融資を受けた、詐欺などの疑いで逮捕されます。
+    reading: ふつかごの じゅういちがつ ようか。かのじょわ ちゃーたーきの しきんと いつわって ゆうしお うけた さぎなどの うたがいで たいほ されます。
+# ---- 2018年・法廷 ----
+- id: card2018
+  title: ''
+  background: tm_card_2018
+  cuts:
+  - speaker: reimu
+    text: 2018年4月25日。東京地裁で、初公判が開かれます。
+    reading: にせん じゅうはちねん しがつ にじゅうごにち。とうきょう ちさいで、しょこうはんが ひらかれます。
+- id: ch12_houtei
+  title: 法廷
+  background: tm_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 山田元社長, emotion: sad}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 間違いございません。
+  - speaker: reimu
+    text: 起訴されたのは、銀行から融資をだまし取った詐欺と、破産の手続きで現金を隠したことでした。
+    reading: きそ されたのわ ぎんこうから ゆうしお だましとった さぎと、はさんの てつづきで げんきんお かくした ことでした。
+  - speaker: reimu
+    text: 公判で、彼女はこう謝っています。
+    reading: こうはんで、かのじょわ こう あやまって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 迷惑をかけてしまい、申し訳ない
+  - speaker: reimu
+    text: 求刑は、懲役8年。そして7月20日、判決の日です。
+    reading: きゅうけいわ ちょうえき はちねん。そして しちがつ はつか、はんけつの ひです。
+  - speaker: saibancho
+    emotion: normal
+    text: 主文。被告人を[懲役6年|ちょうえきろくねん]に処する。
+    se: don
+  - speaker: saibancho
+    emotion: normal
+    text: 犯行の計画性や常習性は明白で、手口も巧妙だ
+  - speaker: reimu
+    text: 銀行への約5億4000万円の詐欺と、管財人に申告しなかった現金およそ1000万円。合わせての刑でした。
+    reading: ぎんこうえの やく ごおく よんせんまんえんの さぎと、かんざいにんに しんこく しなかった げんきん およそ せんまんえん。あわせての けいでした。
+    telops:
+    - {text: "懲役6年の実刑", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 2019年・1.9%、そして会社が消える ----
+- id: card2019
+  title: ''
+  background: tm_card_2019
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2019年3月、破産の配当は1.9%に。9月に手続きが終わり、てるみくらぶは消えました。
+    reading: にせん じゅうくねん さんがつ、はさんの はいとうわ いってんきゅうぱーせんとに。くがつに てつづきが おわり てるみくらぶわ きえました。
+- id: heya2
+  title: 1.9%
+  background: tm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 100万円の旅行で、配当は1万9000円！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 協会からの3.5%とは、別の仕組みのお[金|かね]よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 会見の日に、弁護士は1%くらいって言ってたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あれは協会の分の見込み。認められた申し出が34億円だったから、3.5%になったの。
+  - speaker: zundamon
+    emotion: sad
+    text: どっちにしても、ほんの少しなのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 配当が配り終わったのは2019年8月。破産から、2年5か月がたっていたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 2年待って、1万9000円……。
+    beat: true
+# ---- 論争1：最初からつぶすつもり？ ----
+- id: ronso1
+  title: 最初からつぶすつもり？
+  background: tm_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 最初からつぶすつもりで、客のお[金|かね]を集めてたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見られた事実はあるの。払えない日の新聞にも、広告が出てた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 破産の直前まで、前払いを促す広告を出してたわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そこは事実。だから疑われたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも本人は、一貫して否定してるわ。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の説明では22日の夕方まで、スポンサーと銀行の話で払うめどが立っていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 弁護士も、23日の夕方からは新しく売っていないという理解だと話したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 起訴されたのは、銀行の融資の詐欺と破産の手続きで現金を隠したことなの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 裁かれたのは銀行への嘘と、隠した現金……。
+    beat: true
+# ---- 論争2：安さに飛びついた客の自己責任？ ----
+- id: ronso2
+  title: 客の自己責任？
+  background: tm_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、安すぎるツアーに飛びついた客も悪いのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 安さには理由があった。けれど、その理由は帳簿の上では見えないようにされていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 帳簿は資産超過。客が会社の決算を調べる手段も、ほとんど無かったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに協会の正会員で、それまでの破綻では全額戻ることが多かったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 見ても、分からなかったのか……。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国もこのあと、つぶれたときに返せる額を増やす方向で決まりを変えたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 客だけのせいには、できないか……。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 払う前に立ち止まる
+  background: tm_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。出発のずっと前に全額を現金で、とせかす広告は立ち止まる合図よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのハワイ、全額現金で払っちゃったのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 2017年12月の業界の指針では、海外のパッケージツアーの申込金は原則2割まで。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2割！？ ボク、10割払ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。旅行会社がつぶれたら、すぐ協会か役所の窓口へ。
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちに行けばいいの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が入っている協会か、会社が登録した役所よ。申し出は早いほどいいわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 協会が返せるのは、その会社が積んだ額の5倍まで。全額とは限らないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 協会が、全部返してくれるわけじゃない……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 申し込む前に、上限を超えた分を補う保証に入っている会社かも見てね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: てるみくらぶは、その保証に入っていなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。カードで払ったなら、まずカード会社に聞いてみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 払い方によっては、支払いを止められる場合があるの。
+  - speaker: zundamon
+    emotion: normal
+    text: 協会と、カード会社。窓口は2つ。
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: tm_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。霞が関の会見から、9年あまりがたちました。
+    reading: にせん にじゅうろくねん。かすみがせきの かいけんから、くねん あまりが たちました。
+- id: ima
+  title: 破綻のあと
+  background: tm_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: てるみくらぶのあと、決まりは変わったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2018年4月から、海外のパッケージツアーを多く扱う会社は保証金が上乗せになったの。
+  - speaker: zundamon
+    emotion: happy
+    text: つぶれても、返せるお[金|かね]を増やしたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 前の年に、海外のツアーを8億円以上売った会社が対象よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 観光庁の作業部会も、早く払えとあおる広告を禁じる方針をまとめたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 現金一括のキャンペーンみたいな広告なのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 旅の買い方は、変わったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 格安の航空会社やホテルの直販で、旅を自分で組む人も増えたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 安い席が減った理由に、会社自身も直販を挙げていたわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも旅行会社のツアーも、先に払うんだよね？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。旅行代金は出発の前に払うことが多いの。そこは、いまも同じよ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: tm_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 次の旅行は、申込金だけ払って残りは出発の近くにするのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: それ、ふつうの払い方よ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: とにかく生きることしか考えてなかった。破産の日、社長はそう話したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会社を生かしていたのは、客の前払いだったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 残ったのは協会からの3.5%と、破産の配当の1.9%。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして、申込金は2割までという指針。
+  - speaker: zundamon
+    emotion: thinking
+    text: 全額払ったのだ、は自慢にならないのだ……。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: 今だけ現金一括、は立ち止まる合図……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 先に払うお[金|かね]が、いまどこにあるのか。払う前に、少し立ち止まってね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
