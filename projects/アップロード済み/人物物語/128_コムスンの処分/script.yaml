@@ -1,0 +1,1130 @@
+meta:
+  title: コムスン親会社の会長「結果的にそう見られるかもしれない」、介護の事業はすべて他社へ【ずんだもん解説】
+  slug: comsn-origuchi
+  hook_line: 申請書の偽りで、なぜ2,081の事業所が手放されることになったのか。
+  summary: 2007年6月8日、訪問介護の最大手コムスンの親会社の会長・折口雅博は、六本木ヒルズの会見で「チャンスをお与えください」と語りました。介護保険が始まった日に、全国1,200あまりの事業所を一斉に開いた会社。申請書に名前のあったヘルパーは、どこで働いていたのか。処分の前に閉じた事業所は、何を守ろうとしたのか。国の資料と会見の言葉をもとに、行政・会社・本人の言い分を主語つきで並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 厚生労働省「株式会社コムスンの不正事案に係る経緯について」（介護事業運営の適正化に関する有識者会議 2007年7月23日 資料3） https://www.wam.go.jp/wamappl/bb05Kaig.nsf/0/aba27b4daeda8f3a49257321001c24ad/$FILE/20070723_2shiryou3.pdf
+  - 厚生労働省 柳沢大臣 閣議後記者会見概要（2007年6月8日） https://www.mhlw.go.jp/kaiken/daijin/2007/06/k0608.html
+  - 東京都福祉保健局「介護保険サービス事業者の検査結果及び指導について」（2007年4月） https://www.fukushi.metro.tokyo.lg.jp/documents/d/fukushi/34_bessi
+  - 衆議院「コムスン問題に関する質問に対する答弁書」（内閣衆質一六八第二二七号・2007年11月22日） https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b168227.htm
+  - 厚生労働省「平成２１年５月1日から介護保険法が変わります」（リーフレット） https://www.city.awaji.lg.jp/uploaded/attachment/12205.pdf
+  - 株式会社コムスン「厚生労働省からの指導に伴うサービス継続及び雇用継続の対応について」（2007年6月6日・ウェブアーカイブ） https://web.archive.org/web/20080705200939id_/http://www.comsn.co.jp/comsnpress/new/2007/06/06/21070606com.pdf
+  tags:
+  - コムスン
+  - 折口雅博
+  - グッドウィル
+  - グッドウィル・グループ
+  - 介護保険
+  - 訪問介護
+  - 行政処分
+  - 連座制
+  - 廃止届
+  - ジュリアナ東京
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 監査の日に廃止届
+    bottom: 全事業所が更新不可
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 100
+    pitch: -0.02
+    outfit: suit
+    color: '#6a5a48'
+  - id: higuchi
+    label: 樋口社長
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kanrisha
+    label: 管理者
+    voice: 8
+    pitch: -0.08
+    outfit: suit
+    color: '#5a6a7a'
+  - id: helper
+    label: ヘルパー
+    voice: 8
+    pitch: 0.1
+    outfit: apron
+    color: '#8a5a6a'
+  - id: kacho
+    label: 県の課長
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: kansa1
+    label: 県の監査
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3a52'
+  - id: kansa2
+    label: 県の新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: tonin
+    label: 都の担当
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#3e4a5a'
+  - id: bucho
+    label: 都の部長
+    voice: 13
+    pitch: 0.14
+    outfit: suit
+    color: '#1f2a44'
+  - id: daijin
+    label: 厚労大臣
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: kazoku
+    label: 家族
+    voice: 21
+    pitch: -0.04
+    outfit: none
+    color: '#7a6a5a'
+  - id: haken
+    label: 派遣の人
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#6a7a8a'
+scenes:
+# ---- 先出し（2007年6月8日15時〜・六本木ヒルズ34階の会見。J-CAST 2007-06-08 の抜き出し） ----
+# 「結果的に」は記者の「それは、処分逃れを指示した、と思われて仕方ないでしょ」（記事の「」）への答え。
+# 「それは」が指すのは、樋口が明かした「処分に備え、子会社の所属を移すなど事前に準備していたこと（会長も知っていた）」。
+# 「チャンスを」は報酬辞退について問われた別の答え（記事では先に出る）。ナレで場面を分け、同じ問いの答えに見せない。
+- id: co_kaiken
+  title: ''
+  background: og_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 折口会長, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年6月8日、六本木ヒルズ。訪問介護の最大手コムスンの親会社の会長、折口雅博、45歳の会見です。
+    reading: にせん ななねん ろくがつ ようか、ろっぽんぎ ひるず。ほうもん かいごの さいおおて こむすんの おやがいしゃの かいちょう おりぐち まさひろ、よんじゅうごさいの かいけんです。
+  - speaker: reimu
+    text: 処分に備えた準備を、会長も知っていた。記者が詰め寄ります。
+    reading: しょぶんに そなえた じゅんびお、かいちょうも しって いた。きしゃが つめよります。
+  - speaker: kisha
+    emotion: normal
+    text: それは処分逃れを指示した、と思われて仕方ないでしょ
+  - speaker: zundamon
+    emotion: sad
+    text: ……結果的にそう見られるかもしれない
+  - speaker: reimu
+    text: 報酬の辞退を問われた場面では、こう頼んでいます。
+    reading: ほうしゅうの じたいお とわれた ばめんでわ、こう たのんで います。
+  - speaker: zundamon
+    emotion: sad
+    text: チャンスをお与えください
+  - speaker: reimu
+    text: 5月末、コムスンの介護の事業所は全国に2,081。12月までに、その事業はすべて別の会社へ移ります。
+    reading: ごがつまつ、こむすんの かいごの じぎょうしょわ ぜんこくに にせん はちじゅういち。じゅうにがつ までに、その じぎょうわ すべて べつの かいしゃえ うつります。
+# ---- 今の部屋（部の名簿） ----
+- id: hook
+  title: ''
+  background: og_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 部員が足りないから、名簿にお兄ちゃんの名前も書いたのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: お兄ちゃん、その部に来たことある？
+  - speaker: zundamon
+    emotion: sad
+    text: ……一度もないのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: それと同じことが、介護の事業所の申請書で見つかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見つかったのは8つの事業所。でも手放したのは、2,000か所あまりよ。
+    telops:
+    - {text: "偽りの申請で　なぜ2,081か所を手放した？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 8つで2,000！？ なんで！？
+# ---- 1991年・湾岸の倉庫（本人の当時の台詞は無いので喋らせない。店の意匠は描かない） ----
+- id: card1991
+  title: ''
+  background: og_card_1991
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1991年5月、東京・芝浦。湾岸の倉庫が、ディスコに変わります。
+    reading: せん きゅうひゃく きゅうじゅういちねん ごがつ、とうきょう しばうら。わんがんの そうこが でぃすこに かわります。
+- id: ch1_disco
+  title: ディスコから介護へ
+  background: og_soko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 折口雅博, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 企画したのは、商社の日商岩井の社員、折口雅博。29歳でした。
+    reading: きかく したのわ、しょうしゃの にっしょう いわいの しゃいん おりぐち まさひろ。にじゅうきゅうさい でした。
+  - speaker: reimu
+    text: 店の名前はジュリアナ東京。彼は、その仕掛け人と呼ばれます。
+    reading: みせの なまえわ じゅりあな とうきょう。かれわ その しかけにんと よばれます。
+    background: og_disco
+  - speaker: reimu
+    text: 4年後、彼は人を送る会社、グッドウィルを始め、介護のコムスンを傘下に入れていきます。
+    reading: よねんご かれわ ひとお おくる かいしゃ ぐっどうぃるお はじめ、かいごの こむすんお さんかに いれて いきます。
+# ---- 2000年4月1日・同じ日に1,200あまり（1,208と1,217の2説なので「あまり」） ----
+- id: card2000
+  title: ''
+  background: og_card_2000
+  cuts:
+  - speaker: reimu
+    text: 2000年4月1日。介護保険が始まった日です。
+    reading: にせんねん しがつ ついたち。かいご ほけんが はじまった ひです。
+- id: ch2_care
+  title: 1,200あまりの朝
+  background: og_care
+  stage:
+  - {who: kanrisha, x: 0.28, flip: true, emotion: happy}
+  - {who: helper, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: この日コムスンは、全国で1,200あまりの事業所を一斉に開きます。会長兼社長は、折口でした。
+    reading: この ひ こむすんわ、ぜんこくで せん にひゃく あまりの じぎょうしょお いっせいに ひらきます。かいちょう けん しゃちょうわ おりぐち でした。
+    telops:
+    - {text: "同じ日に1,200あまり", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: helper
+    emotion: happy
+    text: 全国で一斉に、ですか。広告もすごかったですね！
+  - speaker: kanrisha
+    emotion: happy
+    text: うちもその1つよ。最初に、覚えてほしいことがあるの。
+  - speaker: kanrisha
+    emotion: normal
+    text: 事業所は1か所ずつ、県の指定を受ける。ヘルパーの数にも決まりがある。
+  - speaker: helper
+    emotion: normal
+    text: 申請書に書いた人が、ちゃんとここで働く。そういう決まりですね。
+  - speaker: kanrisha
+    emotion: normal
+    text: そう。それと、お客さんが払うのは1割。残りは保険から出るの。
+  - speaker: helper
+    emotion: surprised
+    text: 1万円のお世話なら、お客さんは1,000円！？
+  - speaker: kanrisha
+    emotion: normal
+    text: そう。9,000円は、みんなの保険料と税金よ。
+  - speaker: helper
+    emotion: thinking
+    text: でも、そのお客さんがまだ1人も……
+    se: tenten
+  - speaker: reimu
+    text: 7年後、ある事業所の申請書のヘルパーが、そこで働いていなかったと分かります。
+    reading: ななねんご、ある じぎょうしょの しんせいしょの へるぱーが そこで はたらいて いなかったと わかります。
+# ---- 2000年6月・4割を閉じる（ヘルパーの側から。2007年の不正の原因とは言わない） ----
+- id: ch2_oshirase
+  title: 2か月半で4割を閉じる
+  background: og_care
+  stage:
+  - {who: kanrisha, x: 0.28, flip: true, emotion: sad}
+  - {who: helper, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月、利用者が2人以下の事業所を、統合して閉じると決まります。全体のおよそ4割です。
+    reading: ろくがつ、りようしゃが ふたり いかの じぎょうしょお とうごう して とじると きまります。ぜんたいの およそ よんわりです。
+  - speaker: kanrisha
+    emotion: sad
+    text: このセンターも、統合されることになったわ。
+    background: og_care_oshirase
+  - speaker: helper
+    emotion: surprised
+    text: 開いて、まだ2か月半ですよ！？
+  - speaker: kanrisha
+    emotion: sad
+    text: 社員には退職か都市部への異動かを選んでもらう、と……
+  - speaker: helper
+    emotion: sad
+    text: 毎週うかがってるおばあちゃんに、なんて言えば……。
+  - speaker: kanrisha
+    emotion: sad
+    text: 近くの事業所に、引き継ぐことになると思う。
+  - speaker: helper
+    emotion: sad
+    text: ……わたしは、どこへ行けば。
+    beat: true
+  - speaker: reimu
+    text: 開くのも閉じるのも、速い会社でした。
+    reading: ひらくのも とじるのも、はやい かいしゃでした。
+# ---- 2004〜2005年・最大手へ（豪邸・車・ジェットは出さない） ----
+- id: ch3_tower
+  title: 訪問介護の最大手へ
+  background: og_tower
+  stage:
+  - {who: zundamon, x: 0.25, flip: true, tag: 折口会長, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2004年、グループは東証一部へ。折口は経団連の理事になり、コムスンはやがて訪問介護の最大手に。
+    reading: にせん よねん ぐるーぷわ とうしょう いちぶえ。おりぐちわ けいだんれんの りじに なり、こむすんわ やがて ほうもん かいごの さいおおてに。
+  - speaker: reimu
+    text: 2006年4月、法律が変わります。1か所の不正で、同じ会社の全部の事業所の更新が止まる。
+    reading: にせん ろくねん しがつ、ほうりつが かわります。いっかしょの ふせいで おなじ かいしゃの ぜんぶの じぎょうしょの こうしんが とまる。
+# ---- 2006年4月・1つの不正で、全部（役所の会議室のモブで見せる。つむぎの解説で済ませない） ----
+- id: ch4_law
+  title: 1か所の不正で、全部
+  background: og_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: kacho, x: 0.28, flip: true, emotion: normal}
+  - {who: kansa2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kacho
+    emotion: normal
+    text: 事業所の指定に、6年の期限ができた。更新がいる。
+  - speaker: kansa2
+    emotion: normal
+    text: 運転免許みたいですね。
+  - speaker: kacho
+    emotion: normal
+    text: 免許と違うのは、ここからだ。
+  - speaker: kacho
+    emotion: normal
+    text: 1か所の不正で、同じ会社の全部が更新できない。今年からそうなった。
+  - speaker: kansa2
+    emotion: surprised
+    text: 全国に事業所がある会社でも、ですか！？
+  - speaker: kacho
+    emotion: normal
+    text: 1か所でも、だ。新しい指定も受けられない。
+    se: don
+    telops:
+    - {text: "全事業所の更新が止まる", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kansa2
+    emotion: thinking
+    text: じゃあ、不正の見つかった事業所を先に閉じてしまったら……
+  - speaker: kacho
+    emotion: thinking
+    text: 閉じた事業所は、取り消しようがないな。
+  - speaker: reimu
+    text: このころ、事業所を閉じる届けは、閉じたあと10日以内に出せばよい決まりでした。
+    reading: この ころ じぎょうしょお とじる とどけわ、とじた あと とおか いないに だせば よい きまりでした。
+# ---- 2007年2〜3月・重い十字架（J-CAST 4/11：3月23日の朝の廃業届の提出のときのやりとり。相手は都側＝都の担当とだけ） ----
+- id: ch5_jujika
+  title: 重い十字架
+  background: og_kencho
+  stage:
+  - {who: higuchi, x: 0.28, flip: true, emotion: normal}
+  - {who: tonin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年2月。東京都は、銀座など3つの事業所に、不正を前提とした監査に入ります。
+    reading: にせん ななねん にがつ。とうきょうとわ ぎんざなど みっつの じぎょうしょに、ふせいお ぜんてい とした かんさに はいります。
+  - speaker: reimu
+    text: 3月23日、監査の結果を伝えるため、都が社長らを呼んだ日。その朝、3つの事業所の廃止届が出されます。
+    reading: さんがつ にじゅうさんにち、かんさの けっかお つたえる ため とが しゃちょうらお よんだ ひ。その あさ、みっつの じぎょうしょの はいしとどけが だされます。
+  - speaker: tonin
+    emotion: normal
+    text: 廃業届の提出は、社会から処分逃れと見られますよ。
+  - speaker: higuchi
+    emotion: normal
+    text: 指定取り消しはあまりに重い十字架だ。どうしても出させてほしい
+    telops:
+    - {text: "樋口社長「あまりに重い十字架だ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tonin
+    emotion: sad
+    text: ……閉じられたら、取り消しはできない。
+  - speaker: reimu
+    text: 都はのちに、3か所が偽りの申請で受け取った報酬を、4,320万円あまりとします。
+    reading: とわ のちに、さんかしょが いつわりの しんせいで うけとった ほうしゅうお よんせん さんびゃく にじゅうまんえん あまりと します。
+# ---- 2007年4月・業界そのものの体質（コムスンだけにしない場面。主人公は出さない） ----
+- id: ch6_taishitsu
+  title: 業界そのものの体質
+  background: og_kaigi
+  stage:
+  - {who: bucho, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月12日の都の説明会。コムスンと同じく、ニチイ学館とジャパンケアサービスも改善勧告を受けていました。
+    reading: しがつ じゅうににちの とのせつめいかい。こむすんと おなじく、にちい がっかんと じゃぱん けあ さーびすも かいぜん かんこくお うけて いました。
+  - speaker: bucho
+    emotion: normal
+    text: 大手３社がそろって改善勧告を受けた。業界そのものの体質が問われている。
+  - speaker: reimu
+    text: 国も、全国に事業所を持つ会社の監査を、都道府県に求めました。
+    reading: くにも ぜんこくに じぎょうしょお もつ かいしゃの かんさお、とどうふけんに もとめました。
+# ---- 2007年4〜5月・弘前と豊岡（県の監査のモブ。ヘルパーを不正の主語にしない） ----
+- id: ch7_aomori
+  title: 弘前と豊岡
+  background: og_kencho
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 4月、青森県の弘前。申請書のヘルパーは雇用の実態が確かめられず、5月、聴聞の準備中に廃止届が出ます。
+    reading: しがつ、あおもりけんの ひろさき。しんせいしょの へるぱーわ こようの じったいが たしかめられず、ごがつ ちょうもんの じゅんびちゅうに はいしとどけが でます。
+- id: ch7_toyooka
+  title: ''
+  background: og_jigyosho
+  stage:
+  - {who: kansa1, x: 0.22, flip: true, emotion: normal}
+  - {who: kansa2, x: 0.46, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 5月21日、兵庫県の豊岡。県の監査が、コムスンの事業所に入ります。
+    reading: ごがつ にじゅういちにち、ひょうごけんの とよおか。けんの かんさが こむすんの じぎょうしょに はいります。
+  - speaker: kansa1
+    emotion: normal
+    text: 申請は去年の12月7日。指定は、1月1日か。
+  - speaker: kansa2
+    emotion: normal
+    text: 申請書では、ヘルパーは3人。でも……
+  - speaker: kansa2
+    emotion: surprised
+    text: 申請書のヘルパーさんが、いない……！
+    background: og_jigyosho_sukunai
+    se: bikkuri
+  - speaker: kansa1
+    emotion: thinking
+    text: 3人のうち2人は、[姫路|ヒメジ]の事業所の人だった。
+  - speaker: kansa2
+    emotion: thinking
+    text: ここでは、働いていなかった……。
+  - speaker: kansa1
+    emotion: normal
+    text: あとで、本人たちにも話を聞こう。
+  - speaker: kansa2
+    emotion: normal
+    text: 申請のときの管理者にも、ですね。
+- id: ch7_todoke
+  title: ''
+  background: og_kencho
+  stage:
+  - {who: kansa1, x: 0.28, flip: true, emotion: normal}
+  - {who: kansa2, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kansa2
+    emotion: surprised
+    text: 先輩、コムスンから届けです。もう閉じました、と。
+  - speaker: kansa1
+    emotion: sad
+    text: 監査の、その日にか……。
+    beat: true
+    telops:
+    - {text: "監査の日に　廃止届", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 閉じれば、取り消せない。でも、閉じた日付は残りました。
+    reading: とじれば とりけせない。でも、とじた ひづけわ のこりました。
+# ---- 今の部屋（名簿の回収1。名前を書かれた人を悪者にしない） ----
+- id: room1
+  title: ''
+  background: og_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 名簿のお兄ちゃんと、同じなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 名前を書かれた2人は、[姫路|ヒメジ]で働いていたの。悪いのは、その人たちじゃないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、閉じたら取り消せないなら……
+  - speaker: tsumugi
+    emotion: normal
+    text: 6月5日の時点で、同じ形の事業所が8つ。8つとも、取り消しの前に閉じていたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 8つ全部！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 処分の前に閉じて、何を守ろうとしたのか。答えは、6月の会見で出てくるわ。
+# ---- 2007年6月6日・通知（「取消」ではなく「新しい指定も更新もしない」） ----
+- id: ch8_tsuchi
+  title: 6月6日の通知
+  background: og_kaigi
+  bgm: serious
+  stage:
+  - {who: kacho, x: 0.28, flip: true, emotion: normal}
+  - {who: kansa2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年6月6日。国から都道府県に、通知が届きます。
+    reading: にせん ななねん ろくがつ むいか。くにから とどうふけんに、つうちが とどきます。
+  - speaker: kacho
+    emotion: normal
+    text: コムスンのすべての事業所で指定も更新もしてはならない、と。
+  - speaker: kansa2
+    emotion: surprised
+    text: 取り消し、ですか！？
+  - speaker: kacho
+    emotion: normal
+    text: いや、取り消しじゃない。今ある事業所は、更新の時期までは続けられる。
+  - speaker: kacho
+    emotion: normal
+    text: ただ、新しい指定と更新は2011年12月7日までなしだ。
+    se: don
+    telops:
+    - {text: "新しい指定も更新もなし", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kansa2
+    emotion: surprised
+    text: 2011年……4年半も先ですね。
+  - speaker: kansa2
+    emotion: thinking
+    text: 根拠は、どの事業所ですか。
+  - speaker: kacho
+    emotion: normal
+    text: 青森と兵庫。法律が変わってから申請した、2つの事業所だ。
+  - speaker: kacho
+    emotion: thinking
+    text: 利用者が困らないように。働く人の雇用にも配慮しろ、とも書いてある。
+  - speaker: kansa2
+    emotion: normal
+    text: コムスンの発表です。真摯に重く受け止めご指導に従う、と。
+- id: room_tsuchi
+  title: ''
+  background: og_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 取り消しじゃないなら、事業所はそのまま続けられるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 今ある事業所はね。でも6年ごとの更新が来たら、1つずつ止まっていくの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 5月末、介護予防を除いて2,081か所。更新が来るのは、翌年度だけで657か所。
+  - speaker: zundamon
+    emotion: surprised
+    text: 657！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: その先の3年も、毎年300か所前後よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 12月7日って、[何|なん]の日付？
+  - speaker: tsumugi
+    emotion: normal
+    text: "[豊岡|トヨオカ]の事業所が、申請を出した日よ。そこから5年。"
+  - speaker: zundamon
+    emotion: sad
+    text: 2つの申請書で、2,081が少しずつ止まる……。
+    beat: true
+# ---- 6月6日の夜・グループの中の会社へ（折口の台詞は置かない。発表文の署名は社長の樋口） ----
+# 譲渡先の名前（日本シルバーサービス）は読みを確かめられなかったので声に出さない。
+- id: ch9_yoru
+  title: その夜の発表
+  background: og_yakei
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.76, tag: 折口会長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その夜、コムスンはもう1つ発表します。全部の事業を、同じグループの老人ホームの会社に譲る。
+    reading: その よる、こむすんわ もう ひとつ はっぴょう します。ぜんぶの じぎょうお、おなじ ぐるーぷの ろうじん ほーむの かいしゃに ゆずる。
+- id: ch9_shinbun
+  title: ''
+  background: og_shinbun
+  stage:
+  - {who: kacho, x: 0.28, flip: true, emotion: normal}
+  - {who: kansa2, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kansa2
+    emotion: surprised
+    text: 課長、コムスンが全部の事業をグループの会社に譲るって！
+    se: bikkuri
+  - speaker: kacho
+    emotion: thinking
+    text: 同じグループの中で、か……。
+  - speaker: kansa2
+    emotion: normal
+    text: 社長の名前の発表です。サービスと雇用を続けるため、7月末をめどに。
+  - speaker: reimu
+    text: 翌7日、国は譲渡の凍結を指導します。利用者や国民の納得を得られない行為だ、と。
+    reading: よく なのか、くにわ じょうとの とうけつお しどう します。りようしゃや こくみんの なっとくお えられない こういだと。
+- id: ch9_daijin
+  title: ''
+  background: og_kaiken
+  stage:
+  - {who: daijin, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8日の朝、閣議のあと。厚労大臣は、グループの中への譲渡について、会社にこう言い添えたと話します。
+    reading: ようかの あさ、かくぎの あと。こうろう だいじんわ ぐるーぷの なかえの じょうとに ついて、かいしゃに こう いいそえたと はなします。
+  - speaker: daijin
+    emotion: normal
+    text: 今のような譲渡という形では、国民の理解が得られないで、混乱するのではないか
+  - speaker: kisha
+    emotion: normal
+    text: 指定取り消しの前に、廃止届を出すケースが相当相次いでいるようですが。
+  - speaker: daijin
+    emotion: normal
+    text: それを回避するために先手を打つというようなこと、これがあったようですね
+# ---- 6月8日15時〜・会見（J-CAST の段落の並びのまま。記者の問いは記事の「」と地の文の範囲） ----
+# ch10_kaiken2 の「それは」は、樋口が明かした「処分に備えた子会社の所属の移しかえなどの準備（会長も知っていた）」を指す。
+- id: ch10_kaiken
+  title: 6月8日の会見
+  background: og_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 折口会長, emotion: sad}
+  - {who: higuchi, x: 0.52, emotion: sad}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その日の午後3時、六本木ヒルズの34階。会見は、2時間半を超えました。
+    reading: その ひの ごご さんじ、ろっぽんぎ ひるずの さんじゅうよんかい。かいけんわ にじかんはんお こえました。
+  - speaker: zundamon
+    emotion: sad
+    text: 多大なご迷惑をおかけして心よりおわび申し上げます
+  - speaker: zundamon
+    emotion: sad
+    text: 経過につきまして[樋口|ヒグチ]の方から説明させます
+  - speaker: higuchi
+    emotion: sad
+    text: 連座制を適用されては大変だ、と指示した
+  - speaker: kisha
+    emotion: normal
+    text: 会長は知っていたのか。
+  - speaker: reimu
+    text: 折口は、報告を受けて了承したと答えます。
+    reading: おりぐちわ、ほうこくお うけて りょうしょう したと こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: 報告の際は適法と聞いていた
+  - speaker: higuchi
+    emotion: sad
+    text: 法律的に問題ないから、と[折口|オリグチ]に強く勧めたのは私だ
+  - speaker: higuchi
+    emotion: sad
+    text: 責任を取るため辞職します
+  - speaker: reimu
+    text: 折口は、辞めない考えを示します。経団連の理事について問われると、
+    reading: おりぐちわ やめない かんがえお しめします。けいだんれんの りじに ついて とわれると、
+  - speaker: zundamon
+    emotion: sad
+    text: 経団連におまかせする
+  - speaker: reimu
+    text: 役員報酬の1年間の辞退も明かします。それだけでは理解は得られないのでは、と問われると、
+    reading: やくいん ほうしゅうの いちねんかんの じたいも あかします。それだけでわ りかいわ えられないのでわと とわれると、
+  - speaker: zundamon
+    emotion: sad
+    text: チャンスをお与えください
+- id: ch10_kaiken2
+  title: ''
+  background: og_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 折口会長, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 処分に備え、子会社の所属を移すなどの準備もしていた。会長も知っていた、と樋口社長が明かします。
+    reading: しょぶんに そなえ こがいしゃの しょぞくお うつすなどの じゅんびも して いた。かいちょうも しって いたと、ひぐち しゃちょうが あかします。
+  - speaker: zundamon
+    emotion: sad
+    text: 適法と聞いていた
+  - speaker: kisha
+    emotion: normal
+    text: それは処分逃れを指示した、と思われて仕方ないでしょ
+  - speaker: zundamon
+    emotion: sad
+    text: ……結果的にそう見られるかもしれない
+    telops:
+    - {text: "折口会長「結果的にそう見られるかもしれない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 介護の事業で利益が上がっていないことを強調し、こう述べます。
+    reading: かいごの じぎょうで りえきが あがって いない ことお きょうちょう し、こう のべます。
+  - speaker: zundamon
+    emotion: sad
+    text: 邪心もなく利得行為でもなかった
+# ---- 今の部屋（room1 の問いへの答え。連座の仕組みを名簿でたとえる。「処分逃れ」は国の会議の言葉として） ----
+- id: room_kaiken
+  title: ''
+  background: og_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 連座制を適用されては大変だ……。守りたかったのは、ほかの事業所なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 連座は、1か所の取り消しで全部の更新が止まる仕組み。社長はそれを避けたと話したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 部で言うと？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1人の名前がウソだと、部の全員が大会に出られない。そんな決まりね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 全員！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: だから取り消される前に、事業所を閉じた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国の会議は、それをいわゆる処分逃れと書いたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: グループ内の譲渡も、国の会議は実質的に処分の回避と見られかねない行為と書いたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも結局、全部止まったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 閉じても、偽りの申請があったこと自体が処分の根拠になったの。
+# ---- 6月10日・テレビ／6月12日午後・経済誌の単独取材（週刊東洋経済6/23号・オンライン6/22掲載。場所を混ぜない） ----
+- id: ch11_tv
+  title: テレビと、4日後の取材
+  background: og_studio
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 折口会長, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2日後、6月10日の朝。折口は、テレビの番組に出ます。
+    reading: ふつかご、ろくがつ とおかの あさ。おりぐちわ てれびの ばんぐみに でます。
+  - speaker: zundamon
+    emotion: sad
+    text: 管理、事務処理の能力がなかった
+  - speaker: zundamon
+    emotion: sad
+    text: 悪意はなかったが、結果的に不正が出て、介護を食い物にしているといわれても仕方がない
+- id: ch11_shuzai
+  title: ''
+  background: og_shinbun
+  stage:
+  - {who: zundamon, x: 0.5, tag: 折口会長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月12日の午後、経済誌の単独取材。処分逃れで廃止届を出したのか、と問われます。
+    reading: ろくがつ じゅうににちの ごご、けいざいしの たんどく しゅざい。しょぶん のがれで はいしとどけお だしたのかと とわれます。
+  - speaker: zundamon
+    emotion: normal
+    text: これは[樋口|ヒグチ]が独断でしたこと。
+- id: room2
+  title: ''
+  background: og_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 会見では、報告を受けて了承。取材では、[樋口|ヒグチ]さんの独断！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 6月8日と4日後で、言い方が違う……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 取材でも、適法との報告は受けたと話してるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どちらが本当かは、ここでは決められないわ。言い方が違う、そこまでよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その月のうちに、経団連の理事も退いたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして6月13日。グループは、介護の事業から全部手を引くと決めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 譲る先はグループの外。都道府県ごとにね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 利用者さんは、どうなるのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 利用者は6月末で、およそ8万人。働く人は、4月で2万3,000人あまりよ。
+# ---- 2007年6〜12月・8万人の行き先（笑いにしない。ヘルパーの台詞は脚色＝「担当者が引き続き」の範囲） ----
+- id: ch12_kaigo
+  title: 8万人の行き先
+  background: og_kaigo
+  bgm: 223am
+  stage:
+  - {who: kazoku, x: 0.36, flip: true, emotion: normal}
+  - {who: helper, x: 0.62, emotion: normal}
+  cuts:
+  - speaker: kazoku
+    emotion: normal
+    text: コムスンから、手紙が来た。
+  - speaker: kazoku
+    emotion: normal
+    text: 直ちにサービスが中断されることはございませんので、どうぞご安心下さい
+  - speaker: kazoku
+    emotion: sad
+    text: ……安心と言われても、母さんの世話はこれからどうなるんだ。
+  - speaker: helper
+    emotion: normal
+    text: わたしたちも、まだ何も聞いていないんです。でも、明日も来ます。
+  - speaker: reimu
+    text: 移る先は、弁護士などの委員会が選びます。住まいの事業は全国で1社、家に通う事業は都道府県ごとです。
+    reading: うつる さきわ、べんごしなどの いいんかいが えらびます。すまいの じぎょうわ ぜんこくで いっしゃ、いえに かよう じぎょうわ とどうふけん ごとです。
+  - speaker: helper
+    emotion: normal
+    text: 来月から、会社の名前が変わります。
+  - speaker: kazoku
+    emotion: surprised
+    text: 変わる……じゃあ、来る人も変わるのか？
+  - speaker: helper
+    emotion: happy
+    text: 来るのは、わたしです。
+    se: namida
+  - speaker: kazoku
+    emotion: happy
+    text: ……そうか。それなら、母さんも安心する。
+- id: ch12_kanban
+  title: ''
+  background: og_kanban
+  stage:
+  - {who: helper, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月1日と12月1日。住まいの事業はニチイ学館へ、家に通う事業は都道府県ごとに十数社へ移りました。
+    reading: じゅういちがつ ついたちと じゅうにがつ ついたち。すまいの じぎょうわ にちい がっかんえ、いえに かよう じぎょうわ とどうふけん ごとに じゅうすうしゃえ うつりました。
+  - speaker: helper
+    emotion: normal
+    text: 看板の色が、変わった……。
+    background: og_kanban_new
+  - speaker: helper
+    emotion: normal
+    text: さあ、今日も行こう。
+# ---- 2008年・祖業の派遣の会社も（折口は刑事の対象ではない。派遣の労働者は被害の側） ----
+- id: card2008
+  title: ''
+  background: og_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年1月。祖業の派遣の会社、グッドウィルに、国が事業停止を命じます。
+    reading: にせん はちねん いちがつ。そぎょうの はけんの かいしゃ ぐっどうぃるに、くにが じぎょう ていしお めいじます。
+- id: ch13_haken
+  title: 派遣の会社も
+  background: og_haken
+  stage:
+  - {who: haken, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 理由は、港湾の仕事への派遣と、二重派遣。どちらも法律で禁じられた形でした。
+    reading: りゆうわ こうわんの しごとえの はけんと にじゅう はけん。どちらも ほうりつで きんじられた かたちでした。
+  - speaker: haken
+    emotion: sad
+    text: 明日の仕事、回ってこないのか……。
+  - speaker: reimu
+    text: 3月、折口は会長を辞めます。6月、グッドウィルと社員3人に職業安定法違反の手助けで罰金の略式命令。
+    reading: さんがつ おりぐちわ かいちょうお やめます。ろくがつ ぐっどうぃると しゃいん さんにんに、しょくぎょう あんていほう いはんの てだすけで ばっきんの りゃくしき めいれい。
+  - speaker: reimu
+    text: 折口本人は、刑事の罪に問われていません。7月31日、グッドウィルは事業をやめました。
+    reading: おりぐち ほんにんわ、けいじの つみに とわれて いません。しちがつ さんじゅういちにち、ぐっどうぃるわ じぎょうお やめました。
+  - speaker: haken
+    emotion: sad
+    text: 毎日7,000人も、この会社から仕事に出てたのに……。
+  - speaker: haken
+    emotion: sad
+    text: ……会社ごと、なくなった。
+    se: gaan
+  - speaker: haken
+    emotion: thinking
+    text: ハローワークで、相談に乗ってくれるらしい。行ってみるか。
+# ---- 2008年〜・ニューヨーク（2022年のインタビューの言葉とナレで前置き） ----
+- id: ch14_ny
+  title: ニューヨーク
+  background: og_ny
+  stage:
+  - {who: zundamon, x: 0.5, tag: 折口雅博, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2008年、彼はアメリカへ渡りました。2022年のインタビューで、コムスンについてこう話しています。
+    reading: にせん はちねん、かれわ あめりかえ わたりました。にせん にじゅうにねんの いんたびゅーで、こむすんに ついて こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 自分の手から離れたことより、なくなったことが残念でしたね。
+# ---- 論争1：ヘルパーのせい？ ----
+- id: ronso1
+  title: ヘルパーのせい？
+  background: og_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: なくなったことが残念、か……。
+  - speaker: tsumugi
+    emotion: normal
+    text: コムスンの会社は、2009年の暮れに解散したの。いまはもう無いわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 看板が変わっても、事業所は続いたのに……。
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 現場のヘルパーがズルをして、会社が潰れたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える事実はあるの。不正は、各地の事業所の申請で見つかったわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱり！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも処分の根拠は、申請書に書いた人の数。ヘルパーの仕事ぶりじゃないの。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 人の数！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 都の勧告にあったのも、管理者や責任者が足りないという配置の話よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 廃止届は、社長が自分で指示したと会見で言ったわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国の会議も、偽りの申請は組織的に行われていたとみられると書いたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、ヘルパーさんたちは……
+  - speaker: tsumugi
+    emotion: normal
+    text: 多くの事業所とヘルパーが、別の会社の名前で利用者の家に通い続けたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 問われたのは、ヘルパーの手の中ではなく申請書と廃止届の上のことだったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 書類の上のこと、だったのか……。
+    beat: true
+# ---- 論争2：8か所で全部は重すぎた？ ----
+- id: ronso2
+  title: 8か所で全部は重すぎた？
+  background: og_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも8か所の不正で2,000か所なんて、重すぎるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 国の会議は、コムスンへの処分を法の趣旨に沿った適切な対応だったと評価したの。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 適切！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 偽りの申請が、組織的に行われていたとみられたからよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報酬を返す先は、保険を運営する市町村。全国で12億円あまりよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1万円のお世話の、9,000円の側のお[金|かね]……。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ同じ会議は、問題点の1つにこんなことも書いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 組織的に不正をしていない会社まで、1か所の取り消しで一律に止めていいのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 行為と制裁の均衡という観点から妥当なものか
+  - speaker: zundamon
+    emotion: thinking
+    text: 組織的じゃない会社の話なのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 重いか軽いかは、国の会議でも議論になった。そして、ルールの方が書き直されたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ルールの方が！？
+# ---- 本当の注意点 ----
+- id: chui
+  title: 閉じると言われたら
+  background: og_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 使っている事業所が閉じると言われたら、まずケアマネジャーに相談してね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ケアマネジャーって、誰なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 介護の計画を立てて、事業所とのあいだをつなぐ人よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: その人が、いなかったら？
+  - speaker: tsumugi
+    emotion: normal
+    text: 市町村の介護保険の窓口か、地域包括支援センターへ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が変わるときは、担当の人と契約が続くかを聞いていいの。
+  - speaker: zundamon
+    emotion: normal
+    text: 来るのは、わたしです。あのヘルパーさんみたいに、か。
+  - speaker: tsumugi
+    emotion: normal
+    text: 事業所の情報は、国の介護サービス情報公表システムでも調べられるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 閉じる前に、調べて聞けるのだ！
+    se: hirameki
+# ---- 現代：2009年の書き直し ----
+- id: card2009
+  title: ''
+  background: og_card_2009
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2009年5月1日。介護保険法が、また変わります。
+    reading: にせん きゅうねん ごがつ ついたち。かいご ほけんほうが、また かわります。
+- id: gendai
+  title: 書き直されたルール
+  background: og_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 閉じる届けは閉じたあと10日以内から、休止・廃止予定日の[１月前|ひとつきまえ]までに変わったの。
+    telops:
+    - {text: "廃止届は　予定日の１月前まで", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 先に言わないと、閉じられないのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 監査のあと聴聞の予定を知らされてから閉じると、欠格になる決まりもできたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 閉じても、その先がないってことか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社には、法令を守る仕組みを整えて届け出ることも求められたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会社ごと、見られるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: やめるときは、利用者をほかの事業所につなぐことも義務になったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1か所の不正で全部を止めるのは、法人の組織的関与が確認された場合に。
+  - speaker: zundamon
+    emotion: thinking
+    text: 重すぎる、の議論も入ったんだね……。
+- id: card2026
+  title: ''
+  background: og_card_2026
+  cuts:
+  - speaker: reimu
+    text: 2026年。六本木の会見から、19年がたちました。
+    reading: にせん にじゅうろくねん。ろっぽんぎの かいけんから、じゅうきゅうねんが たちました。
+- id: ima
+  title: いま
+  background: og_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 訪問介護の倒産は2025年に91件で過去最多。介護全体の倒産の約8割は売上不振よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: コムスンの件とは、別の話。でも事業所が閉じることは、いまも起きるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: だから、さっきの注意点なのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: "[折口|オリグチ]さんは、いま？"
+  - speaker: tsumugi
+    emotion: normal
+    text: 起業家を支える会社のCEOと、2024年までの記事で紹介されているわ。
+# ---- 締め（名簿の回収2・「チャンスを」と2009年の条文） ----
+- id: shime
+  title: ''
+  background: og_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 部の名簿は、来てる人の名前だけにする！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それで部員は、何人になるの？
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボク1人なのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: チャンスをお与えください。会見で、会長はそう言ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも半年たたずに介護の事業は他社へ。1年あまりで、祖業の派遣の会社も廃業したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 処分の前に閉じた事業所の日付は、次の法律の条文になったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 閉じるなら、1か月前までに届けること。
+  - speaker: zundamon
+    emotion: thinking
+    text: 名前を書くなら、そこにいること。閉じるなら、先に言うこと……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 家族が使う事業所から知らせが来たら、まずケアマネジャーさんに聞いてみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
