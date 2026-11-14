@@ -1,0 +1,1162 @@
+meta:
+  title: 「私は逃げもしない」と拘置所で語った日産のゴーン元会長、11か月後に箱に隠れて国外へ【ずんだもん解説】
+  slug: ghosn-nissan
+  hook_line: 「逃げもしない」と言った日産の元会長は、なぜ11か月後に箱の中にいたのか。
+  summary: 2019年1月、手錠と腰縄で東京地裁に入った日産の元会長カルロス・ゴーンは「容疑は無実です」と述べ、3週間後には拘置所で「私は逃げもしない」と語りました。報告書に書いた報酬と、別に記録されていた数字。ルノー・日産・三菱の3社を1人で率いた経営者は、なぜ11か月後、関西空港で箱の中にいたのか。検察・日産・本人・日本政府の言い分を主語つきで並べ、日本では一度も開かれていない裁判の行方を、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 日本経済新聞「ゴーン元会長意見陳述全文「日産に一切損害与えず」」（2019年1月8日） https://www.nikkei.com/article/DGXMZO39747090Y9A100C1I00000/
+  - 日本経済新聞「「これは策略、反逆だ」 ゴーン元会長会見全文」（2019年1月30日） https://www.nikkei.com/article/DGXMZO40665080Q9A130C1I00000/
+  - 日産自動車「当社代表取締役会長らによる重大な不正行為について」（2018年11月19日） https://global.nissannews.com/ja-JP/releases/release-860852d7040eed420ffbaebb223b6973-181119-01-j
+  - 法務省「森法務大臣コメント（カルロス・ゴーン被告人関係）」（2020年1月5日） https://www.moj.go.jp/kokusai/kokusai03_00010.html
+  - 日産自動車「日産、元会長カルロス・ゴーンに対して、不正行為による100億円の損害賠償を請求」（2020年2月12日） https://global.nissannews.com/ja-JP/releases/200212-02-j
+  - 日本経済新聞「ゴーン元会長逃亡、隠避の元米兵に実刑判決 東京地裁」（2021年7月19日） https://www.nikkei.com/article/DGXZQOUE161WF0W1A710C2000000/
+  tags:
+  - ゴーン事件
+  - カルロス・ゴーン
+  - ゴーン
+  - 日産
+  - 日産自動車
+  - ルノー
+  - 三菱自動車
+  - 保釈
+  - 関西空港
+  - 有価証券報告書
+  - 金融商品取引法違反
+  - 特別背任
+  - グレッグ・ケリー
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 逃げもしない
+    bottom: 11か月後に国外へ
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: saibankan
+    label: 裁判官
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: kisha2
+    label: 記者
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a6a'
+  - id: kabunushi
+    label: 株主
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4a3a'
+  - id: kabunushi2
+    label: 株主
+    voice: 8
+    pitch: 0.1
+    outfit: suit
+    color: '#7a5a6a'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: shain
+    label: 社員
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#4a5a7a'
+  - id: tokuso
+    label: 特捜部
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2a32'
+  - id: kuko
+    label: 空港職員
+    voice: 11
+    pitch: 0.04
+    outfit: work
+    color: '#3a4a6a'
+  - id: homu
+    label: 法務大臣
+    voice: 8
+    pitch: 0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: chiken
+    label: 東京地検
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: taylor
+    label: テイラー父
+    voice: 21
+    pitch: -0.06
+    outfit: suit
+    color: '#4a4a52'
+scenes:
+# ---- 先出し（2019年1月8日・東京地裁の勾留理由開示。手続きの順に、裁判官が理由を告げてから本人が英語の紙を読む） ----
+- id: co_houtei
+  title: ''
+  background: gs_houtei
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: ゴーン, emotion: normal}
+  - {who: saibankan, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2019年1月8日、東京地裁。日産の元会長、カルロス・ゴーン、64歳。
+    reading: にせん じゅうくねん いちがつ ようか、とうきょう ちさい。にっさんの もと かいちょう かるろす ごーん ろくじゅうよんさい。
+  - speaker: reimu
+    text: 逮捕から50日。勾留の理由を明かす法廷に、手錠と腰縄で初めて姿を見せます。
+    reading: たいほから ごじゅうにち。こうりゅうの りゆうお あかす ほうていに、てじょうと こしなわで はじめて すがたお みせます。
+  - speaker: saibankan
+    emotion: normal
+    text: 逃亡や証拠隠滅のおそれがあります。
+  - speaker: zundamon
+    emotion: normal
+    text: '[裁判長殿|サイバンチョウドノ]、私にかけられている容疑は無実です。'
+# ---- 先出し（2019年1月30日・東京拘置所。逮捕後初のインタビュー。問いは原文「日本の刑事司法についてどう思いますか」） ----
+- id: co_menkai
+  title: ''
+  background: gs_menkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: ゴーン, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3週間後、東京拘置所。
+    reading: さんしゅうかんご、とうきょう こうちしょ。
+  - speaker: kisha
+    emotion: normal
+    text: 日本の刑事司法について、どう思いますか。
+  - speaker: zundamon
+    emotion: normal
+    text: なぜ勾留が続いているのか理解できない。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は逃げもしないし、しっかりと自分を弁護する。
+  - speaker: reimu
+    text: その11か月後、彼は関西空港で箱の中にいました。日本の法廷で、彼の裁判は一度も開かれていません。
+    reading: その じゅういっかげつご、かれわ かんさい くうこうで はこの なかに いました。にほんの ほうていで、かれの さいばんわ いちども ひらかれて いません。
+# ---- 今の部屋（宿題と段ボール箱。箱が見えるよう、つむぎを左・ずんだもんを箱の前に置く） ----
+- id: hook
+  title: ''
+  background: gs_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: tsumugi, x: 0.25, flip: true, emotion: normal}
+  - {who: zundamon, x: 0.72, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 今日は絶対に、宿題から逃げないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……で、なんで箱に入ろうとしてるの。
+  - speaker: zundamon
+    emotion: normal
+    text: 箱の中は、逃げたうちに入らないのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: 屁理屈ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 逃げもしないと言って、本当に箱に入って国を出た人がいるの。
+    telops:
+    - {text: "逃げもしないと言った人は なぜ箱の中に？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 逃げないって言った人が、なんで箱に入ったのだ！？
+# ---- 1999年6月25日・株主総会 ----
+- id: card1999
+  title: ''
+  background: gs_card_1999
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1999年6月、日産の株主総会。ルノーから来た45歳が、壇に立ちます。
+    reading: せんきゅうひゃく きゅうじゅうくねん ろくがつ、にっさんの かぶぬし そうかい。るのーから きた よんじゅうごさいが だんに たちます。
+- id: ch1_sokai
+  title: 日産のために来た
+  background: gs_sokai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: ゴーン, emotion: normal}
+  - {who: kabunushi, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: kabunushi
+    emotion: thinking
+    text: ルノーで経費を削って、コストカッターと呼ばれた人でしょう。
+  - speaker: kabunushi
+    emotion: thinking
+    text: うちの会社も、削られて終わりじゃないのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 私はルノーのためではなく、日産のために来た。
+  - speaker: zundamon
+    emotion: happy
+    text: 再建のために全力をつくす
+  - speaker: kabunushi
+    emotion: surprised
+    text: ……言い切ったな。
+# ---- 2001年5月17日・決算の会見 ----
+- id: ch1_kaifuku
+  title: ''
+  background: gs_kaigi_up
+  stage:
+  - {who: zundamon, x: 0.5, tag: ゴーン, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月の再建計画で、5つの工場を閉じると発表。2001年5月、黒字に戻った決算の会見です。
+    reading: じゅうがつの さいけん けいかくで、いつつの こうじょうお とじると はっぴょう。にせん いちねん ごがつ、くろじに もどった けっさんの かいけんです。
+  - speaker: zundamon
+    emotion: happy
+    text: 日産はまだ救急救命室から一般病棟に移る前の回復室に移ったところにすぎない
+  - speaker: reimu
+    text: 日産のために来た人は、20年後、なぜ箱の中にいたのか。
+    reading: にっさんの ために きた ひとわ にじゅうねんご、なぜ はこの なかに いたのか。
+# ---- 2010年・2枚の紙（検察の冒頭陳述の構図に沿った脚色。名前の無い秘書室の社員） ----
+- id: card2010
+  title: ''
+  background: gs_card_2010
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2010年。1億円以上の役員の報酬は、有価証券報告書に名前つきで書く決まりになります。
+    reading: にせん じゅうねん。いちおくえん いじょうの やくいんの ほうしゅうわ、ゆうか しょうけん ほうこくしょに なまえつきで かく きまりに なります。
+- id: ch2_nimai
+  title: 2枚の紙
+  background: gs_nimai
+  stage:
+  - {who: senpai, x: 0.1, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: のちの検察の主張では、この年から報酬の数字が2つに分かれます。
+    reading: のちの けんさつの しゅちょうでわ、この としから ほうしゅうの すうじが ふたつに わかれます。
+  - speaker: shinjin
+    emotion: normal
+    text: 先輩。会長の報酬って、今年から報告書に名前が載るんですよね。
+  - speaker: senpai
+    emotion: normal
+    text: ああ。報告書には、この数字。
+  - speaker: senpai
+    emotion: normal
+    text: こっちは、別の紙だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 別の紙？
+  - speaker: senpai
+    emotion: normal
+    text: 報酬の総額の記録さ。報告書との差は、辞めたあとで受け取る。
+  - speaker: shinjin
+    emotion: thinking
+    text: 給料明細とは別に、辞めたら払うってメモが引き出しにある感じですか。
+    se: hirameki
+  - speaker: senpai
+    emotion: normal
+    text: ……まあ、そんなところだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: でも、なんで紙を分けるんです？
+  - speaker: senpai
+    emotion: normal
+    text: 名前つきで載る決まりができた。それが、きっかけさ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 払い方まで、考えてあるんですか。
+  - speaker: senpai
+    emotion: normal
+    text: ドバイの関連会社を通す案まで、出たらしい。
+  - speaker: shinjin
+    emotion: surprised
+    text: ドバイ……。
+  - speaker: reimu
+    text: 差は検察の主張で、8年で91億円余り。1日に直すと、約310万円です。
+    reading: さわ けんさつの しゅちょうで、はちねんで きゅうじゅういちおくえん あまり。いちにちに なおすと、やく さんびゃく じゅうまんえんです。
+    telops:
+    - {text: "1日約310万円＝検察の主張", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 本人の言い分（2019年1月8日の法廷の陳述を、出どころを言って先に置く。原文の並び＝市場価値→開示されていない報酬） ----
+- id: ch2_kiroku
+  title: ''
+  background: gs_nimai
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: ゴーン, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この紙について、本人はのちに法廷でこう述べます。
+    reading: この かみに ついて、ほんにんわ のちに ほうていで こう のべます。
+  - speaker: zundamon
+    emotion: normal
+    text: 私の市場価値、すなわち報酬金額について記録をつけていくことにしました。
+  - speaker: zundamon
+    emotion: normal
+    text: これは将来の参考のために私が残していた個人的なベンチマークであり、
+  - speaker: zundamon
+    emotion: normal
+    text: 法的な効力のあるものではありませんでした。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は、開示されていない報酬を日産から受け取ったことはありません
+  - speaker: reimu
+    text: 報告書に載らなかった91億円は、報酬だったのか。ただの記録だったのか。
+    reading: ほうこくしょに のらなかった きゅうじゅういちおくえんわ、ほうしゅう だったのか。ただの きろく だったのか。
+# ---- 2015年6月23日・株主総会（株主の問いは脚色の振り） ----
+- id: ch3_hoshu
+  title: 報酬は高すぎる？
+  background: gs_sokai
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: ゴーン会長, emotion: normal}
+  - {who: kabunushi2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2015年6月、日産の株主総会。
+    reading: にせん じゅうごねん ろくがつ、にっさんの かぶぬし そうかい。
+  - speaker: kabunushi2
+    emotion: thinking
+    text: 社長の報酬、高すぎませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 日産の経営陣はグローバル競合他社からの採用のターゲットになっている。
+  - speaker: zundamon
+    emotion: normal
+    text: 競争力のある水準の報酬を提供しないといけない
+  - speaker: zundamon
+    emotion: normal
+    text: 世界の自動車メーカーの最高経営責任者の平均報酬は2870万ドル
+  - speaker: kabunushi2
+    emotion: surprised
+    text: ……引き抜かれないための、値段ですか。
+  - speaker: kabunushi2
+    emotion: thinking
+    text: 3年前の講演でも、高額報酬を恥だと思う必要はないと言ってましたね。
+  - speaker: reimu
+    text: 報告書の彼の報酬は、年に10億円前後。もう1枚の紙の額は入っていない、と検察はのちに言います。
+    reading: ほうこくしょの かれの ほうしゅうわ、ねんに じゅうおくえん ぜんご。もう いちまいの かみの がくわ はいって いない、と けんさつわ のちに いいます。
+# ---- 2016〜2018年・3社の名札 ----
+- id: ch3_nafuda
+  title: 3社の名札
+  background: gs_door
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: ゴーン会長, emotion: normal}
+  - {who: shain, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2016年、日産は三菱自動車の株の34%を持ち、彼は三菱自動車の会長も兼ねます。
+    reading: にせん じゅうろくねん にっさんわ みつびし じどうしゃの かぶの さんじゅうよん ぱーせんとお もち、かれわ みつびし じどうしゃの かいちょうも かねます。
+  - speaker: shain
+    emotion: happy
+    text: 会長、会長室の名札が3枚になりました。
+    background: gs_door3
+    se: jaan
+  - speaker: shain
+    emotion: happy
+    text: ルノーに日産に三菱。3枚とも、同じお名前です。
+  - speaker: reimu
+    text: 2018年1月、3社は前の年の世界販売を発表。その発表文で、彼はこう述べます。
+    reading: にせん じゅうはちねん いちがつ、さんしゃわ まえの としの せかい はんばいお はっぴょう。その はっぴょうぶんで、かれわ こう のべます。
+  - speaker: zundamon
+    emotion: happy
+    text: 世界一の自動車グループとなりました
+# ---- 2018年6月26日・日産の定時株主総会（日経 vdata［K4］：検査不正問題の責任を追及する株主への回答。前の年に社長兼CEOを譲り、会長に残っていた） ----
+- id: ch3_sokai2018
+  title: ''
+  background: gs_sokai
+  stage:
+  - {who: zundamon, x: 0.5, tag: ゴーン会長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月の株主総会。検査の不正の責任を問われ、前の年に社長を譲った彼はこう答えます。
+    reading: ろくがつの かぶぬし そうかい。けんさの ふせいの せきにんお とわれ、まえの としに しゃちょうお ゆずった かれわ こう こたえます。
+  - speaker: zundamon
+    emotion: normal
+    text: '[CEO|シーイーオー]だけが会社のボス。今の日産のトップは[西川|サイカワ]氏だけだ'
+- id: heya1
+  title: ''
+  background: gs_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 1人で3社の会長で、世界一……。そんな人が、なんで箱に入ることになるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 世界一は、3社の発表の言い方よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 数え方によっては、フォルクスワーゲンのほうが上なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 数え方で、1位が変わるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: まずは、3社のつながり方を見てみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: ルノーが日産の株を43.4%持ってるの。日産のルノー株には、議決権がないのよ。
+    telops:
+    - {text: "ルノー→日産株43.4%　日産→ルノー株は議決権なし", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 日産は、口を出せないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかもルノーの大株主は、フランス政府。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国まで出てくるの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年には、日産の経営の自主性を守る約束も結んだの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人の話では2018年9月、日産の社長と資本の関係の見直しを話していたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3つの会社を、1つにまとめる話なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は、1つの持ち株会社の下で3社の自主性を保つ形と言ってる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: この話が、のちの本人の主張に関わってくるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 世界一のすぐあとに、何が起きるのだ……。
+# ---- 2018年11月19日・羽田の夕方（本人の台詞は作らない。逮捕は「羽田に着いたその日」まで） ----
+- id: ch4_haneda
+  title: 羽田の夕方
+  background: gs_haneda
+  bgm: serious
+  stage:
+  - {who: tokuso, x: 0.6, flip: true, emotion: normal}
+  - {who: zundamon, x: 0.84, tag: ゴーン会長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2018年11月19日の夕方。彼を乗せたビジネスジェットが、レバノンから羽田に着きます。
+    reading: にせん じゅうはちねん じゅういちがつ じゅうくにちの ゆうがた。かれお のせた びじねす じぇっとが、ればのんから はねだに つきます。
+  - speaker: tokuso
+    emotion: normal
+    text: カルロス・ゴーンさんですね。
+    background: gs_haneda_kuruma
+    se: don
+  - speaker: tokuso
+    emotion: normal
+    text: 東京地検特捜部です。
+  - speaker: reimu
+    text: 容疑は金融商品取引法違反。報酬を少なく報告した疑いです。ケリー代表取締役も同じ日に逮捕。
+    reading: ようぎわ きんゆう しょうひん とりひきほう いはん。ほうしゅうお すくなく ほうこく した うたがいです。けりー だいひょう とりしまりやくも おなじ ひに たいほ。
+  - speaker: reimu
+    text: その夜、日産の社長は会見で、会長らの重大な不正行為を社内の調べで確認した、と発表しました。
+    reading: その よる にっさんの しゃちょうわ かいけんで、かいちょうらの じゅうだいな ふせい こういお しゃないの しらべで かくにん したと はっぴょう しました。
+# ---- 2018年12月・起訴と再逮捕のくり返し（取調室は描かない） ----
+- id: ch4_karenda
+  title: ''
+  background: gs_karenda
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: ゴーン, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 12月10日、5年分の約48億6800万円で起訴。同じ日に、続く3年分の約42億7000万円で再逮捕。
+    reading: じゅうにがつ とおか ごねんぶんの やく よんじゅうはちおく ろくせん はっぴゃくまんえんで きそ。おなじ ひに、つづく さんねんぶんの やく よんじゅうにおく ななせんまんえんで さいたいほ。
+  - speaker: reimu
+    text: 20日、裁判所は勾留の延長を認めません。その翌日、中東のお金をめぐる特別背任の疑いで、3回目の逮捕。
+    reading: はつか、さいばんしょわ こうりゅうの えんちょうお みとめません。その よくじつ ちゅうとうの おかねお めぐる とくべつ はいにんの うたがいで、さんかいめの たいほ。
+# ---- 2019年1月8日・手錠と腰縄（冒頭の本編版。陳述は原文の並び＝スワップ→20年間→無実→不当な勾留→感謝） ----
+- id: ch5_houtei
+  title: 手錠と腰縄
+  background: gs_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: ゴーン, emotion: normal}
+  - {who: saibankan, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 年が明けて1月8日。手錠と腰縄で入った法廷で、裁判官が勾留の理由を告げます。
+    reading: としが あけて いちがつ ようか。てじょうと こしなわで はいった ほうていで、さいばんかんが こうりゅうの りゆうお つげます。
+  - speaker: saibankan
+    emotion: normal
+    text: 逃亡や証拠隠滅のおそれがあります。
+  - speaker: reimu
+    text: 彼は英語で書いた紙を読み上げます。中東のお金をめぐる疑いには、こう述べます。
+    reading: かれわ えいごで かいた かみお よみあげます。ちゅうとうの おかねお めぐる うたがいにわ、こう のべます。
+  - speaker: zundamon
+    emotion: normal
+    text: '[為替|かわせ]スワップ契約の主体を再び私に戻しましたが、'
+  - speaker: zundamon
+    emotion: normal
+    text: この間、日産に一切損害を与えておりません。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は人生の20年間を日産の復活とアライアンスの構築にささげてきました。
+  - speaker: zundamon
+    emotion: normal
+    text: '[裁判長殿|サイバンチョウドノ]、私にかけられている容疑は無実です。'
+    telops:
+    - {text: "ゴーン「容疑は無実です」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 私は確証も根拠もなく容疑をかけられ、不当に勾留されています。
+  - speaker: zundamon
+    emotion: normal
+    text: '[裁判長殿|サイバンチョウドノ]、ご傾聴いただき感謝いたします。'
+# ---- 2019年1月30日・東京拘置所（逮捕後初のインタビュー。問いは原文に近い形・原文の並び＝1問目→7問目） ----
+- id: ch5_menkai
+  title: 逃げもしない
+  background: gs_menkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: ゴーン, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11日に2回目と3回目の起訴。30日、拘置所で初めてのインタビューに応じます。
+    reading: じゅういちにちに にかいめと さんかいめの きそ。さんじゅうにち、こうちしょで はじめての いんたびゅーに おうじます。
+  - speaker: kisha
+    emotion: normal
+    text: 日産による不正の調査と、ルノーとの経営統合に反対していた一部関係者が
+  - speaker: kisha
+    emotion: normal
+    text: 関連していたと思いますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 疑いようがない。これは策略であり、反逆だ
+  - speaker: kisha
+    emotion: normal
+    text: 「独裁者」であり「会社を私物化していた」との批判に、どう反論しますか。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は日産を再生させた。日産を愛しているし、すばらしいことをしてきた。
+  - speaker: zundamon
+    emotion: normal
+    text: 独裁ではなく、強いリーダーシップだ。
+  - speaker: kisha
+    emotion: normal
+    text: 日本の刑事司法について、どう思いますか。
+  - speaker: zundamon
+    emotion: normal
+    text: なぜ勾留が続いているのか理解できない。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は逃げもしないし、しっかりと自分を弁護する。
+    telops:
+    - {text: "ゴーン「私は逃げもしない」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: この言葉を、覚えておいてください。
+    reading: この ことばお、おぼえて おいて ください。
+# ---- 2019年3月6日・作業服の保釈（笑いは報道陣の芝居と画だけ。「変装は見破られた」とは言わない） ----
+- id: ch6_hoshaku
+  title: 作業服の保釈
+  background: gs_kosoku_hodo
+  bgm: curious
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3月6日、保釈。保釈保証金は10億円。海外へ行かないことも、条件でした。
+    reading: さんがつ むいか ほしゃく。ほしゃく ほしょうきんわ じゅうおくえん。かいがいえ いかない ことも、じょうけんでした。
+  - speaker: kisha
+    emotion: surprised
+    text: 出てきます！ 108日ぶりです！
+  - speaker: kisha2
+    emotion: normal
+    text: スーツで出てくると思ったら……。
+  - speaker: kisha2
+    emotion: surprised
+    text: ……作業服？ 帽子にマスクに、眼鏡の人が。
+  - speaker: kisha
+    emotion: surprised
+    text: 軽自動車です！ 屋根に、脚立！
+    background: gs_kei
+  - speaker: kisha2
+    emotion: surprised
+    text: 追ってください！ 全社のカメラが、脚立の車を追ってます！
+  - speaker: kisha
+    emotion: thinking
+    text: 脚立を積んだ車をこんなに大勢で追うの、初めて見ました。
+    se: zukko
+# ---- 今の部屋（保釈の条件。のちの箱への伏線） ----
+- id: heya_hoshaku
+  title: ''
+  background: gs_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 作業服で、屋根に脚立の車……。カメラが全部ついていったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: この姿は、海外の新聞も伝えたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 保釈されたら、もう自由なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 条件つきよ。決められた住まいにいて、海外へは行かないこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 約束を破れば、預けた10億円は[没取|ぼっしゅ]されることがあるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 10億円って、ボクのお小遣いの何年分なのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 数えるのは、やめておきなさい。
+  - speaker: zundamon
+    emotion: thinking
+    text: それだけ重い約束なのだ……。
+# ---- 2019年4月3〜4日・予告の翌朝（住まいの中は描かない） ----
+- id: ch7_yokoku
+  title: 予告の翌朝
+  background: gs_genkan
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.28, flip: true, emotion: normal}
+  - {who: kisha2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月3日、彼はツイッターで予告します。「4月11日木曜日に記者会見をします」
+    reading: しがつ みっか、かれわ ついったーで よこく します。しがつ じゅういちにち もくようびに きしゃ かいけんお します。
+  - speaker: kisha
+    emotion: surprised
+    text: 特捜部です！ 朝早くに、住まいへ入っていきます！
+    se: gaan
+  - speaker: kisha2
+    emotion: surprised
+    text: 保釈中に、また逮捕……！？
+  - speaker: kisha
+    emotion: thinking
+    text: 会見は、来週のはずでは……。
+  - speaker: reimu
+    text: 保釈中の4回目の逮捕。オマーンをめぐる特別背任の疑いでした。声明には、「私の心は折れない」。
+    reading: ほしゃくちゅうの よんかいめの たいほ。おまーんお めぐる とくべつ はいにんの うたがいでした。せいめいにわ、わたしの こころわ おれない。
+# ---- 2019年4月9日・弁護団が公開した動画（名指しの部分は使わない） ----
+- id: ch7_doga
+  title: ''
+  background: gs_doga
+  stage:
+  - {who: zundamon, x: 0.5, tag: ゴーン, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9日、弁護団は逮捕の前に撮っておいた動画を公開します。
+    reading: ここのか、べんごだんわ たいほの まえに とって おいた どうがお こうかい します。
+  - speaker: zundamon
+    emotion: normal
+    text: 私にかけられている全ての嫌疑について、私は無実です。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は日本を愛し、日産を愛しているということです。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は心配です。明らかに日産の業績が低下していることを心配しています。
+  - speaker: zundamon
+    emotion: normal
+    text: 私が最も強く望むことは、公正な裁判を受けることです。
+# ---- 2019年12月29日・関西空港の箱（判決が認めた事実。本人の台詞・箱の中・気持ちは描かない） ----
+- id: card2019
+  title: ''
+  background: gs_card_2019
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 22日に4回目の起訴、25日に5億円で再び保釈。そして、2019年12月29日。関西空港です。
+    reading: にじゅうににちに よんかいめの きそ、にじゅうごにちに ごおくえんで ふたたび ほしゃく。そして にせん じゅうくねん じゅうにがつ にじゅうくにち。かんさい くうこうです。
+- id: ch8_hako
+  title: 関西空港の箱
+  background: gs_kanku
+  stage:
+  - {who: kuko, x: 0.2, flip: true, emotion: normal}
+  cuts:
+  - speaker: kuko
+    emotion: normal
+    text: プライベートジェットのお客様の、お荷物ですね。
+  - speaker: kuko
+    emotion: surprised
+    text: ずいぶん大きな箱ですね……。
+    background: gs_kanku_hako
+  - speaker: reimu
+    text: 判決によれば、手助けした親子が保釈中の彼を箱に隠し、プライベートジェットに乗せました。
+    reading: はんけつに よれば、てだすけ した おやこが ほしゃくちゅうの かれお はこに かくし ぷらいべーと じぇっとに のせました。
+    background: gs_hako
+  - speaker: reimu
+    text: 機体はトルコを経由して、レバノンへ。日本を出た記録は、ありません。
+    reading: きたいわ とるこお けいゆ して、ればのんえ。にほんお でた きろくわ、ありません。
+  - speaker: reimu
+    text: のちに彼は、「私の人生で最も困難な決断だった」と語ります。
+    reading: のちに かれわ わたしの じんせいで もっとも こんなんな けつだんだったと、かたります。
+  - speaker: reimu
+    text: 「私は逃げもしない」。あの言葉から、333日でした。
+    reading: わたしわ にげも しない。あの ことばから、さんびゃく さんじゅうさんにち でした。
+    telops:
+    - {text: "ゴーン「逃げもしない」から333日", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: heya2
+  title: ''
+  background: gs_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 本当に、箱の中だったのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 宿題から隠れる箱とは、わけが違うわ。保釈の約束を破って、国を出たの。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: 箱のことは、どうして分かったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 手助けした親子の判決が、認めたことよ。本人は、出国の方法を語っていないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、なんでレバノンなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 彼はレバノンの国籍も持ってるの。ベイルートで育った人なのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それにレバノンは、自分の国の人をよその国に引き渡さない国なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 10億円と5億円の保釈金は、どうなったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 12月31日、東京地裁は保釈を取り消して15億円を全部[没取|ぼっしゅ]したわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 15億円が、戻らないのだ……。
+    se: shobon
+# ---- 2020年1月8日・ベイルートの会見（反論を主語つきで並べる） ----
+- id: card2020
+  title: ''
+  background: gs_card_2020
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2020年1月8日、レバノンのベイルート。日本を出て10日、彼は会見を開きます。
+    reading: にせん にじゅうねん いちがつ ようか、ればのんの べいるーと。にほんお でて とおか、かれわ かいけんお ひらきます。
+- id: ch9_beirut
+  title: ベイルートの会見
+  background: gs_beirut
+  stage:
+  - {who: zundamon, x: 0.5, tag: ゴーン, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 私が公正に取り扱われることは絶対になかった。これは正義ではなかった。
+  - speaker: zundamon
+    emotion: normal
+    text: 私は、17年間にわたって[仕えた国|ツカエタクニ]の人質になったように感じた
+  - speaker: zundamon
+    emotion: normal
+    text: 弁護士の同席なしに1日8時間にわたって尋問を受けた
+- id: ch9_hanron
+  title: ''
+  background: gs_kanmae
+  stage:
+  - {who: homu, x: 0.3, flip: true, emotion: normal}
+  - {who: chiken, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 日本の側の言い分です。会見の3日前に法務大臣と東京地検が文書で、翌日に次席検事が記者に述べました。
+    reading: にほんの がわの いいぶんです。かいけんの みっかまえに ほうむ だいじんと とうきょう ちけんが ぶんしょで、よくじつに じせき けんじが きしゃに のべました。
+  - speaker: homu
+    emotion: normal
+    text: 保釈中の被告人の逃亡が正当化される余地はない。
+  - speaker: chiken
+    emotion: normal
+    text: 犯罪に当たり得る行為であって、誠に遺憾である。
+  - speaker: chiken
+    emotion: normal
+    text: 毎日2時間前後、ゴーン被告は弁護士と接見していた。
+# ---- 2021〜2022年・被告人席に、彼はいない ----
+- id: card2021
+  title: ''
+  background: gs_card_2021
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2021年7月、東京地裁。出国を手助けした親子に判決が出ます。父親は最後の公判で、こう述べていました。
+    reading: にせん にじゅういちねん しちがつ、とうきょう ちさい。しゅっこくお てだすけ した おやこに はんけつが でます。ちちおやわ さいごの こうはんで、こう のべて いました。
+- id: ch10_taylor
+  title: 被告人席にいない人
+  background: gs_houtei
+  stage:
+  - {who: taylor, x: 0.3, flip: true, emotion: sad}
+  - {who: saibankan, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: taylor
+    emotion: sad
+    text: お[金|かね]のためにしたことではなかった。反省している
+  - speaker: saibankan
+    emotion: normal
+    text: 被告人マイケル・テイラーを[懲役2年|ちょうえきにねん]に、
+  - speaker: saibankan
+    emotion: normal
+    text: 被告人ピーター・テイラーを[懲役1年8月|ちょうえきいちねんはっかげつ]に処する。
+  - speaker: saibankan
+    emotion: normal
+    text: 犯行の動機は、主として報酬目的であった。
+- id: ch10_houtei
+  title: ''
+  background: gs_houtei
+  stage:
+  - {who: saibankan, x: 0.3, flip: true, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌年3月。報酬の事件で裁かれたのは、ケリー元代表取締役と、会社としての日産でした。
+    reading: よくねん さんがつ。ほうしゅうの じけんで さばかれたのわ、けりー もと だいひょう とりしまりやくと かいしゃと しての にっさんでした。
+  - speaker: saibankan
+    emotion: normal
+    text: 被告人グレッグ・ケリーを[懲役6月|ちょうえきろっかげつ]に処する。
+  - speaker: saibankan
+    emotion: normal
+    text: この裁判確定の日から3年間、その刑の執行を猶予する。
+  - speaker: saibankan
+    emotion: normal
+    text: 被告会社日産自動車株式会社を、罰金2億円に処する。
+  - speaker: reimu
+    text: ケリー元代表取締役の有罪は、2017年度の1年分だけ。ほかの7年分は、無罪でした。
+    reading: けりー もと だいひょう とりしまりやくの ゆうざいわ、にせん じゅうななねんどの いちねんぶん だけ。ほかの ななねんぶんわ、むざいでした。
+  - speaker: reimu
+    text: ケリー元代表取締役と日産の裁判で、裁判所は、報告書に書くべき未払いの報酬があったと認めました。
+    reading: けりー もと だいひょう とりしまりやくと にっさんの さいばんで、さいばんしょわ ほうこくしょに かくべき みばらいの ほうしゅうが あったと みとめました。
+    telops:
+    - {text: "未払い報酬はあった＝ケリーと日産の判決", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: けれど、報酬は決まっていなかったと言う本人は、この法廷にいません。
+    reading: けれど ほうしゅうわ きまって いなかったと いう ほんにんわ、この ほうていに いません。
+    background: gs_houtei_kara
+# ---- 2026年・72歳（窓の外だけ。家の中は描かない） ----
+- id: card2026
+  title: ''
+  background: gs_card_2026
+  cuts:
+  - speaker: reimu
+    text: 2026年。彼は72歳。いまも、レバノンにいるとみられます。
+    reading: にせん にじゅうろくねん。かれわ ななじゅうにさい。いまも、ればのんに いると みられます。
+- id: ch11_mado
+  title: 72歳のいま
+  background: gs_mado
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: ゴーン, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 日本が求めた国際手配の赤手配書は、出たまま。9月にはパリで、本人のいない裁判が開かれました。
+    reading: にほんが もとめた こくさい てはいの あかてはいしょわ、でた まま。くがつにわ ぱりで、ほんにんの いない さいばんが ひらかれました。
+  - speaker: reimu
+    text: フランスの元大臣をめぐる汚職などの事件で、2人とも否定。判決は2027年1月21日の予定です。
+    reading: ふらんすの もと だいじんお めぐる おしょく などの じけんで、ふたりとも ひてい。はんけつわ にせん にじゅうななねん いちがつ にじゅういちにちの よていです。
+# ---- 論争1：盗んだ有罪の人？ ----
+- id: ronso1
+  title: ネットの「有罪」説
+  background: gs_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ ゴーンさんは日産のお[金|かね]を盗んだ、有罪の人だって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見られた理由はあるの。起訴は4回。日産も、重大な不正があったと発表したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日産は昔の報告書を訂正して、国から課徴金も受けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ケリー元代表取締役と日産の判決も、未払いの報酬はあったと認めてる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年2月には高裁も同じ判断で、双方が最高裁に上告したわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、本人の裁判は一度も開かれていないの。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 起訴は4回なのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[日本|ニホン]で、本人に有罪の判決は出ていないわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は、開示されていない報酬は受け取っていないと言ってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日産に損害も与えていない、ともね。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、無実なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それも、決まっていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 検察は起訴して、日産は不正と言う。本人は無実と言う。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その答えを出すはずの裁判が、[日本|ニホン]では開かれていないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 答えの出る場所が、ないのか……。
+    beat: true
+# ---- 論争2：逃げても仕方ない？ ----
+- id: ronso2
+  title: 逃げても仕方ない？
+  background: gs_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: '[日本|ニホン]は人質司法だから、逃げても仕方なかったのだ！'
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言う人もいるわ。勾留は、2回で合わせて130日になったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国連の作業部会は4度の逮捕と勾留を、根本的に不当だとしたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国連が！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: でも[日本|ニホン]政府は、受け入れられないと異議を出したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法務省は自白しないと保釈が認められないということはありません、とも説明してる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 勾留のやり方は作業部会と[日本|ニホン]政府で、言い分がぶつかったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、どっちが正しいのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そこは、まだぶつかったまま。
+  - speaker: tsumugi
+    emotion: normal
+    text: けれど保釈の約束を破って国を出たことは、本人も認めているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 手助けした親子は、[日本|ニホン]の裁判で罪を認めて実刑になった。
+  - speaker: tsumugi
+    emotion: normal
+    text: トルコでも、パイロットたちが有罪になってるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言い分がどうでも、約束は約束なのだ……。
+    beat: true
+# ---- 本当の注意点 ----
+- id: chui
+  title: 本当の注意点
+  background: gs_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。起訴された人と、有罪の人は違うの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ニュースの被告って、もう犯人のことじゃないのだ？
+    telops:
+    - {text: "起訴された人 ≠ 有罪の人", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: まだ裁かれている途中の人よ。ネットに犯人って書かないこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ゴーンさんも起訴は4回。でも[日本|ニホン]で、有罪の判決は出ていないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。会社のトップの報酬は、だれでも読めるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1億円以上の役員の報酬は、有価証券報告書に名前つきで載ってるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告書は、金融庁の開示のサイトで見られるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 社長のお給料、のぞき放題なのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: thinking
+    text: のぞくんじゃなくて、株を持つ会社の役員の報酬の欄を読むの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただし、同じ年の報酬でも数字が変わることがあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日産の2018年3月期のゴーンさんの報酬は、最初の報告書で7億3500万円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日産が2019年に出した訂正の報告書では、28億6900万円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 4倍近くに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。保釈の約束は重いの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 約束を破れば、保釈金は戻らない。15億円も、全額が[没取|ぼっしゅ]されたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 約束を破ると、お[金|かね]も信用も戻らないのだ……。
+# ---- 現代 ----
+- id: ima
+  title: 事件のあと
+  background: gs_gendai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 日産は、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 11月の発表では、上期は営業黒字。でも最終の損益は、397億円の赤字よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゴーンさんの[日本|ニホン]の裁判は？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 4つの起訴は、公判が開かれないまま。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年には出国の手続きをせずに国を出た疑いでも、逮捕状が出たわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 日産とゴーンさんは、いまはどういう関係なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: お互いを、裁判に訴えたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: お互いに！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 日産は2020年、横浜地裁で100億円の賠償を求めたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 彼は2023年、レバノンで日産などに10億ドル超を求めたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 円とドルで、訴え合いなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 訴えたことと、認められたことは別よ。どちらも、相手への言い分なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決まりは、何か変わったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2020年1月には法務大臣が、出国の手続きをもっと厳しくするよう指示したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: この事件のあと、2023年に刑事訴訟法が変わったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 保釈中に決められた住まいを離れることにも、罰則ができたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 海外へ逃げるおそれのある人には、居場所を知らせる端末を付けさせられるようになるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 居場所を知らせる端末！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: その仕組みは、2023年から5年以内に始まるの。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: gs_heya
+  bgm: pastel_house
+  stage:
+  - {who: tsumugi, x: 0.25, flip: true, emotion: normal}
+  - {who: zundamon, x: 0.72, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 宿題は、この箱の上でやるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 箱の上なら、まあいいわ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 私は逃げもしないし、しっかりと自分を弁護する。拘置所で、彼はそう言ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その弁護をするはずの彼の公判は、[日本|ニホン]で一度も開かれていないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1999年、彼は日産のために来たと言った。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 日産は2020年に彼を訴え、彼も2023年に日産を訴えたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 答えが出ないまま、時間だけが進んでるのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: ニュースで被告と聞いたら、まだ答えの途中だと思い出してね。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも宿題の答え、箱の上で出すのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
