@@ -1,0 +1,1140 @@
+meta:
+  title: 「軽い気持ちで株式を持っていただいた」と国会で語ったリクルート創業者、69日後に逮捕【ずんだもん解説】
+  slug: recruit-ezoe
+  hook_line: 1株3000円で渡した未公開株は、なぜ内閣まで揺るがしたのか。
+  summary: 1988年11月、リクルートの創業者・江副浩正は、入院先の病院から国会の証人席に立ちました。屋上の2坪半で始めた、学生にタダで配る求人の本の会社は、なぜ国の決まりに左右される会社になり、子会社の未公開株を、買うお金まで貸して渡したのか。国会の証言の原文、法務省の捜査の報告、最高裁の決定と判決の報道をもとに、起訴された人とされなかった人を分けて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 衆議院 リクルート問題に関する調査特別委員会 第2号（1988年11月21日・証人喚問） https://kokkai.ndl.go.jp/txt/111303813X00219881121
+  - 参議院 税制問題等に関する調査特別委員会 第5号（1988年12月6日・証人喚問） https://kokkai.ndl.go.jp/txt/111314585X00519881206
+  - 衆議院 予算委員会 第17号（1989年6月12日・法務大臣による捜査終了の報告） https://kokkai.ndl.go.jp/txt/111405261X01719890612
+  - 最高裁判所第一小法廷 決定（1999年10月20日・受託収賄被告事件） https://www.courts.go.jp/hanrei/50398/detail2/index.html
+  - 金融庁「未公開株購入の勧誘にご注意！」 https://www.fsa.go.jp/ordinary/mikoukai/index.html
+  - リクルートホールディングス「2027年3月期第2四半期（中間期）決算短信」（2026年11月11日） https://file.recruit-holdings.com/files/ja/Recruit_202703Q2_earnings_jp.pdf
+  tags:
+  - リクルート事件
+  - 江副浩正
+  - リクルート
+  - 未公開株
+  - リクルートコスモス
+  - 証人喚問
+  - 贈賄
+  - 就職協定
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 昭和史
+  - 平成史
+  thumbnail:
+    top: 1株3000円の株
+    bottom: 初値は5270円
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: iincho
+    label: 委員長
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#2a2f3a'
+  - id: giin
+    label: 議員
+    voice: 21
+    pitch: -0.02
+    outfit: suit
+    color: '#4a5a7a'
+  - id: hisho
+    label: 秘書
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: bucho
+    label: 経理部長
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#5a4636'
+  - id: kinyu
+    label: 金融会社
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: shoken1
+    label: 証券係員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: shoken2
+    label: 証券係員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#6a7a8a'
+  - id: camera
+    label: カメラマン
+    voice: 21
+    pitch: 0.04
+    outfit: work
+    color: '#3a3f4a'
+  - id: onsei
+    label: 音声係
+    voice: 11
+    pitch: 0.04
+    outfit: work
+    color: '#5a6a4a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: takeshita
+    label: 竹下首相
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#1f3550'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shain2
+    label: 社員
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#6a5a7a'
+scenes:
+# ---- 先出し（1988年11月21日・衆院リクルート特委の証人喚問。言葉はすべて会議録の原文。笑いの SE なし） ----
+- id: co_kokkai
+  title: ''
+  background: ez_kokkai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 江副浩正, emotion: sad}
+  - {who: iincho, x: 0.52, emotion: normal}
+  - {who: giin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1988年11月21日、国会。リクルートの創業者、江副浩正52歳。入院先の病院から証人席に来ました。
+    reading: せんきゅうひゃく はちじゅうはちねん じゅういちがつ にじゅういちにち、こっかい。りくるーとの そうぎょうしゃ えぞえ ひろまさ ごじゅうにさい。にゅういんさきの びょういんから しょうにんせきに きました。
+  - speaker: iincho
+    emotion: normal
+    text: これより江副浩正君の証言が終了するまで、撮影は中止してください。
+  - speaker: zundamon
+    emotion: sad
+    text: 良心に[従つて|したがって]、真実を述べ、何事もかくさず、又、何事もつけ加えないことを誓います
+  - speaker: giin
+    emotion: normal
+    text: 株を渡した民間の人の名前を、ここで言ってください。
+  - speaker: zundamon
+    emotion: sad
+    text: これ以上私の口からお名前を申し上げることは、
+  - speaker: zundamon
+    emotion: sad
+    text: どうかその点、その一点に関してはお許しいただきたい
+  - speaker: reimu
+    text: 何事もかくさず、と誓った3か月足らずのち、彼は贈賄で逮捕されます。裁判は、13年続きました。
+    reading: なにごとも かくさずと ちかった さんかげつ たらずのち、かれわ ぞうわいで たいほ されます。さいばんわ じゅうさんねん つづきました。
+# ---- 今の部屋（あなただけに特別に、のメール） ----
+- id: hook
+  title: ''
+  background: ez_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: メールなのだ！ 上場間近の株を、あなただけに特別に！
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、詐欺でよく使う誘い文句よ。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: でも、本当に上がったら？
+  - speaker: tsumugi
+    emotion: normal
+    text: 昔、本当に上がった株をお[金|かね]まで貸して政治家や役人に渡した会社があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 求人の本の会社よ。内閣まで揺れたわ。
+    telops:
+    - {text: "求人の本の会社が なぜ内閣を揺るがした？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 求人の本の会社が、なんで内閣を揺るがしたのだ！？
+# ---- 1960〜1962年・屋上の2坪半から、タダの本へ ----
+- id: card1960
+  title: ''
+  background: ez_card_1960
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1960年の春。東大を出る23歳の江副は、自分の会社を始めます。
+    reading: せんきゅうひゃく ろくじゅうねんの はる。とうだいお でる にじゅうさんさいの えぞえわ、じぶんの かいしゃお はじめます。
+- id: ch1_okujo
+  title: 屋上の2坪半
+  background: ez_okujo
+  stage:
+  - {who: zundamon, x: 0.5, tag: 江副浩正, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 東京・西新橋のビルの屋上。2坪半の部屋で、大学新聞に載せる求人の広告を集めます。
+    reading: とうきょう にししんばしの びるの おくじょう。につぼはんの へやで、だいがく しんぶんに のせる きゅうじんの こうこくお あつめます。
+  - speaker: zundamon
+    emotion: happy
+    text: もしもし。大学新聞に、求人の広告を載せませんか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……切られた。
+    beat: true
+- id: ch1_hon
+  title: ''
+  background: ez_henshu
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.5, tag: 江副浩正, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1962年。求人の広告だけでできた本を作ります。学生には、タダで配る本です。
+    reading: せんきゅうひゃく ろくじゅうにねん。きゅうじんの こうこく だけで できた ほんお つくります。がくせいにわ ただで くばる ほんです。
+  - speaker: zundamon
+    emotion: happy
+    text: お[金|かね]は載せる会社からいただく。学生は、タダで読める。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……載せる会社が増えるほど、本が厚くなる。
+    background: ez_henshu_yama
+    se: zukko
+  - speaker: reimu
+    text: その厚さから、電話帳と呼ばれた本。この男がなぜ、26年後に国会の証人席に立つのか。
+    reading: その あつさから、でんわちょうと よばれた ほん。この おとこが なぜ にじゅうろくねんごに こっかいの しょうにんせきに たつのか。
+# ---- 国の決まりで商売が決まる会社（励ます会の末席） ----
+- id: ch2_party
+  title: 秘書の隣の席
+  background: ez_party
+  stage:
+  - {who: zundamon, x: 0.5, flip: true, tag: 江副浩正, emotion: happy}
+  - {who: hisho, x: 0.76, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 会社が大きくなると、政治家と知り合う場も増えます。たいていは、励ます会や囲む会でした。
+    reading: かいしゃが おおきく なると、せいじかと しりあう ばも ふえます。たいていわ はげます かいや かこむ かいでした。
+  - speaker: hisho
+    emotion: happy
+    text: '江副さん、今日もお隣ですね。'
+  - speaker: zundamon
+    emotion: happy
+    text: いつも、お世話になっております。
+  - speaker: hisho
+    emotion: normal
+    text: 先生は、今日もあちらの上座です。
+  - speaker: reimu
+    text: 彼はのちに国会で、こう話しています。
+    reading: かれわ のちに こっかいで、こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 末席に座りますと秘書の隣に私が席を置くというケースが多うございまして、
+  - speaker: zundamon
+    emotion: normal
+    text: 御本人よりも秘書の方が親しいというケースもございますし、
+- id: heya1
+  title: ''
+  background: ez_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 秘書と仲良くするのが、そんなに大事なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: この会社の商売は、国の決まりで大きく変わるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: まず、学生の採用を何月から始めるかを決める就職協定。
+  - speaker: tsumugi
+    emotion: normal
+    text: 求人の本を配る時期は、それで決まるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本を配る日まで、決まりしだい！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 就職情報誌そのものへの規制。[NTT|エヌティーティー]の回線とスーパーコンピューター。[安比高原|アッピコウゲン]の開発。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 法務省は、どれも会社の懸案事項だったと報告してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決まりを作る側に、知り合いがほしくなるね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 八百屋さんが、[市場|いちば]の開く時間を決める人と仲良くしたくなるのと同じね。
+    se: hirameki
+  - speaker: zundamon
+    emotion: normal
+    text: 仲良くするだけなら、悪くないよね？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 問題は、仲良くするのに何を渡したかよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 何を渡したのだ！？
+# ---- 1984年12月・つじつまの76人（この分は罪にならなかった） ----
+- id: ch3_tsujitsuma
+  title: つじつまの76人
+  background: ez_shachoshitsu
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江副浩正, emotion: normal}
+  - {who: bucho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1984年の暮れ、社長室。48歳の江副は、決算の数字を見ていました。
+    reading: せんきゅうひゃく はちじゅうよねんの くれ、しゃちょうしつ。よんじゅうはっさいの えぞえわ けっさんの すうじお みて いました。
+  - speaker: bucho
+    emotion: thinking
+    text: 社長、ビルを買って営業外の収支が悪くなりました。
+  - speaker: bucho
+    emotion: sad
+    text: このままだと、減益です。
+  - speaker: zundamon
+    emotion: normal
+    text: 子会社の株を売ろう。
+  - speaker: zundamon
+    emotion: normal
+    text: どうせ店頭に出すには、株主が200人以上いる。
+  - speaker: bucho
+    emotion: normal
+    text: では不動産の子会社の株を、76人に。
+    telops:
+    - {text: "1984年　1株1200円で76人に", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: bucho
+    emotion: happy
+    text: 株主づくりにもなりますね。
+  - speaker: reimu
+    text: 彼はのちに国会で、こう話します。
+    reading: かれわ のちに こっかいで、こう はなします。
+  - speaker: zundamon
+    emotion: normal
+    text: 何か資産の売却益でもってつじつまを合わせなければ減益になる
+  - speaker: reimu
+    text: 値段は、のちの株の単位で1株1200円。国会議員3人もいましたが、検察はのちに罪に問いません。
+    reading: ねだんわ、のちの かぶの たんいで ひとかぶ せんにひゃくえん。こっかい ぎいん さんにんも いましたが、けんさつわ のちに つみに といません。
+- id: heya_kabu
+  title: ''
+  background: ez_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 76人に売った株は、罪にならなかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 株の公開の、1年10か月も前だったからよ。検察はそう判断したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも1年9か月後、同じ会社の株を1株3000円で渡すの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1万株なら3000万円。そのお[金|かね]も、貸してくれる。
+  - speaker: zundamon
+    emotion: surprised
+    text: 3000万円も借りて、大丈夫なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1か月後の初値は5270円。売って3000万円を返しても、2270万円が残るわ。
+    telops:
+    - {text: "借りて買った1万株　2270万円が残る", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分のお[金|かね]を1円も出さずに、2270万円！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: angry
+    text: その3000円の株は、なんで罪になったのだ！？
+# ---- 1986年8〜9月・「そのときの思いつき」と3000円 ----
+- id: card1986
+  title: ''
+  background: ez_card_1986
+  cuts:
+  - speaker: reimu
+    text: 1986年8月。子会社リクルートコスモスの株を、店頭に出すことが決まります。
+    reading: せんきゅうひゃく はちじゅうろくねん はちがつ。こがいしゃ りくるーと こすもすの かぶお、てんとうに だす ことが きまります。
+- id: ch4_omoitsuki
+  title: そのときの思いつき
+  background: ez_osetsu
+  stage:
+  - {who: zundamon, x: 0.26, flip: true, tag: 江副浩正, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 初めは、子会社に移った社員に株を持たせたい、という話でした。彼はのちに国会で、こう話します。
+    reading: はじめわ、こがいしゃに うつった しゃいんに かぶお もたせたいと いう はなしでした。かれわ のちに こっかいで こう はなします。
+  - speaker: zundamon
+    emotion: normal
+    text: ならば、ほかの信頼できる方々にも
+  - speaker: zundamon
+    emotion: normal
+    text: 株式を持って[いただこう|イタダコウ]ではないかとそのときに思いつきまして、
+  - speaker: zundamon
+    emotion: sad
+    text: その範囲を広げてしまった
+  - speaker: reimu
+    text: 9月。株を受けたNTTの事業部長は、彼からの電話を、のちに国会でこう証言します。
+    reading: くがつ。かぶお うけた えぬてぃーてぃーの じぎょうぶちょうわ、かれからの でんわお のちに こっかいで こう しょうげん します。
+  - speaker: zundamon
+    emotion: normal
+    text: 個人的に親しくて社会的に信用が置ける[方|かた]に
+  - speaker: zundamon
+    emotion: normal
+    text: リクルートコスモス株を持っていただくことにしました、
+  - speaker: zundamon
+    emotion: normal
+    text: ついてはあなたにも持っていただきたいと思います、
+  - speaker: zundamon
+    emotion: normal
+    text: 詳細については後でうちの者をやるので
+- id: ch4_kinyu
+  title: ''
+  background: ez_osetsu
+  stage:
+  - {who: kinyu, x: 0.22, flip: true, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 株と融資の話を持って回ったのは、系列の金融会社の社長。文部次官を務めた人は、のちに国会でこう証言します。
+    reading: かぶと ゆうしの はなしお もって まわったのわ、けいれつの きんゆう がいしゃの しゃちょう。もんぶ じかんお つとめた ひとわ、のちに こっかいで こう しょうげん します。
+  - speaker: kinyu
+    emotion: normal
+    text: 一株三千円で一万株の購入の御希望があればお世話ができます
+  - speaker: kinyu
+    emotion: normal
+    text: もし御希望であればファーストファイナンス社の方から融資は可能でございます
+    beat: true
+  - speaker: reimu
+    text: お金を借りた人の株券の多くは、担保として、この金融会社が預かりました。
+    reading: おかねお かりた ひとの かぶけんの おおくわ、たんぽと して この きんゆう がいしゃが あずかりました。
+    background: ez_osetsu_kinko
+# ---- 1986年10月30日・初値5270円 ----
+- id: ch5_hatsune
+  title: 初値5270円
+  background: ez_board
+  bgm: curious
+  stage:
+  - {who: shoken1, x: 0.1, flip: true, emotion: normal}
+  - {who: shoken2, x: 0.3, flip: true, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1986年10月30日。リクルートコスモスの株が、店頭に出る日です。
+    reading: せんきゅうひゃく はちじゅうろくねん じゅうがつ さんじゅうにち。りくるーと こすもすの かぶが、てんとうに でる ひです。
+  - speaker: shoken1
+    emotion: normal
+    text: コスモス株の値段の幅は、4060円から5270円までか。
+  - speaker: shoken2
+    emotion: normal
+    text: 上まで行けば、5270円ですね。
+  - speaker: shoken2
+    emotion: surprised
+    text: ……出ました、5270円！ 上限です！
+    background: ez_board_ue
+    se: don
+  - speaker: shoken1
+    emotion: surprised
+    text: 最初の値段から、いきなり天井か。
+  - speaker: reimu
+    text: 公開に合わせて、江副も持ち株を売り出しました。売却益は120億円前後と、のちに本人が国会で答えています。
+    reading: こうかいに あわせて、えぞえも もちかぶお うりだしました。ばいきゃくえきわ ひゃくにじゅうおくえん ぜんごと、のちに ほんにんが こっかいで こたえて います。
+- id: heya2
+  title: ''
+  background: ez_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 本当に、5270円になったのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 受けた側には、断りにくかったと話す人もいたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 電話を受けた事業部長は、断ればビジネス上の信用を失うと考えたと証言してるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: お得意さんの社長からの電話か……。
+  - speaker: zundamon
+    emotion: thinking
+    text: そこまでして渡して、何をしてほしかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: それを2年後、国会と検察が問うことになるの。
+# ---- 1988年6〜7月・寝耳に水 ----
+- id: card1988
+  title: ''
+  background: ez_card_1988
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1988年6月18日。朝日新聞が、川崎市の助役がこの株を手にしていたと報じます。助役は、のちに不起訴。
+    reading: せんきゅうひゃく はちじゅうはちねん ろくがつ じゅうはちにち。あさひ しんぶんが、かわさきしの じょやくが この かぶお てに して いたと ほうじます。じょやくわ のちに ふきそ。
+- id: ch6_shinbun
+  title: 寝耳に水
+  background: ez_shinbun
+  stage:
+  - {who: zundamon, x: 0.8, tag: 江副浩正, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: この記事のことを、彼はのちに著書にこう書いています。
+    reading: この きじの ことお、かれわ のちに ちょしょに こう かいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: 寝耳に水の報道だった
+- id: ch6_byoin
+  title: ''
+  background: ez_byoin
+  cuts:
+  - speaker: reimu
+    text: 株を受けた人の名前が次々に報じられるなか、7月6日に会長を辞任。7月26日に入院します。
+    reading: かぶお うけた ひとの なまえが つぎつぎに ほうじられる なか、しちがつ むいかに かいちょうお じにん。しちがつ にじゅうろくにちに にゅういん します。
+# ---- 1988年8〜9月・議員宿舎の隠しカメラ（主人公は出さない） ----
+- id: ch7_shukusha
+  title: 議員宿舎のカメラ
+  background: ez_shukusha
+  bgm: kinakusai
+  stage:
+  - {who: camera, x: 0.12, flip: true, emotion: normal}
+  - {who: onsei, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月、子会社の社長室長が、楢崎弥之助議員に現金を渡そうとします。議員は、テレビ局と組みました。
+    reading: はちがつ、こがいしゃの しゃちょう しつちょうが ならさき やのすけ ぎいんに げんきんお わたそうと します。ぎいんわ てれびきょくと くみました。
+  - speaker: camera
+    emotion: normal
+    text: カメラは、テレビの下のラックに入れた。
+  - speaker: onsei
+    emotion: normal
+    text: マイクは、食卓の脇です。
+  - speaker: camera
+    emotion: thinking
+    text: いいか、物音ひとつ立てるなよ。
+  - speaker: onsei
+    emotion: sad
+    text: ……おなかが鳴ったら、どうします。
+  - speaker: camera
+    emotion: angry
+    text: 全国に流れるぞ。
+    se: tsukkomi
+  - speaker: reimu
+    text: その場面は9月5日の夕方、テレビのニュースで流れます。3日後、議員は東京地検に告発しました。
+    reading: その ばめんわ くがつ いつかの ゆうがた、てれびの にゅーすで ながれます。みっかご ぎいんわ とうきょう ちけんに こくはつ しました。
+    background: ez_shukusha_tv
+# ---- 1988年11月15日・2時間でつくったリスト（社員は名前の無いモブ） ----
+- id: ch7_list
+  title: 2時間のリスト
+  background: ez_jimusho
+  stage:
+  - {who: shain, x: 0.28, flip: true, emotion: surprised}
+  - {who: shain2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 11月15日の夜9時半……国会が、株を譲った先のリストを出すようにと！
+  - speaker: shain2
+    emotion: thinking
+    text: 先月は本社の家宅捜索、今度は国会ですか……。
+  - speaker: shain2
+    emotion: sad
+    text: 今夜中に、全員の名前を？
+  - speaker: shain
+    emotion: angry
+    text: ああ、今夜中にだ。手分けして打て！
+  - speaker: reimu
+    text: リストが国会に届いたのは、夜11時10分ごろ。4日後、名前が1人抜けていたと報じられます。
+    reading: りすとが こっかいに とどいたのわ、よる じゅういちじ じゅっぷん ごろ。よっかご、なまえが ひとり ぬけて いたと ほうじられます。
+# ---- 1988年11月21日・衆院の証人喚問（冒頭の本編版。問いと答えは会議録の並びのまま） ----
+- id: ch8_shuin
+  title: 衆議院の証人喚問
+  background: ez_kokkai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 江副浩正, emotion: sad}
+  - {who: iincho, x: 0.52, emotion: normal}
+  - {who: giin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月21日、衆議院。病院から来た江副は、まず誓いの言葉を読みます。
+    reading: じゅういちがつ にじゅういちにち、しゅうぎいん。びょういんから きた えぞえわ まず ちかいの ことばお よみます。
+  - speaker: zundamon
+    emotion: sad
+    text: 良心に[従つて|したがって]、真実を述べ、何事もかくさず、又、何事もつけ加えないことを誓います
+  - speaker: giin
+    emotion: normal
+    text: 株の譲渡先や株数は、だれがどういう考え方で選んだんですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 率直に申し上げまして私自身がかなり関与をいたしておりまして、
+  - speaker: zundamon
+    emotion: normal
+    text: 中心的に関与したと申し上げてもいいかと思いますが、
+  - speaker: zundamon
+    emotion: normal
+    text: 特定の基準を持たないで、いわば、何と申しましょうか、
+  - speaker: zundamon
+    emotion: normal
+    text: そのときの思いつきと申しましょうか、場当たり的と申しましょうか、
+  - speaker: zundamon
+    emotion: sad
+    text: そんなことでやったような次第でございます。
+    telops:
+    - {text: "江副「そのときの思いつき」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: giin
+    emotion: normal
+    text: 譲渡先のリストの作成には、あなたはどの程度かかわったのですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 私はもう二カ月以上ずっと病院におりまして、一歩も外を出ておりません。
+  - speaker: zundamon
+    emotion: sad
+    text: このリスト作成がどのようになされたかということについては全く私は承知しておりません。
+  - speaker: giin
+    emotion: normal
+    text: 株を渡した民間の人の名前を、ここで言ってください。
+  - speaker: reimu
+    text: 彼は、名前が出て職を辞めた民間の人もいる、と何度も答えていました。
+    reading: かれわ なまえが でて しょくお やめた みんかんの ひとも いると、なんども こたえて いました。
+  - speaker: zundamon
+    emotion: sad
+    text: 本当にもう身の縮むというか身の置きどころのない、
+  - speaker: zundamon
+    emotion: sad
+    text: 本当に死んでおわびをしたいような気持ちでございまして、
+  - speaker: zundamon
+    emotion: sad
+    text: これ以上私の口からお名前を申し上げることは、
+  - speaker: zundamon
+    emotion: sad
+    text: どうかその点、その一点に関してはお許しいただきたい
+  - speaker: giin
+    emotion: normal
+    text: やはり、それなりの意図があってやったんじゃありませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 何かの見返りがあるとかあるいはこういうふうなことをしてもらおうとか、
+  - speaker: zundamon
+    emotion: normal
+    text: そういうふうな考えは毛頭持っていなかったことを述べさせていただきます。
+  - speaker: iincho
+    emotion: normal
+    text: 以上をもちまして、江副証人に対する尋問は終了いたしました。
+# ---- 1988年12月6日・参院の証人喚問 ----
+- id: ch8_sanin
+  title: ''
+  background: ez_kokkai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江副浩正, emotion: sad}
+  - {who: giin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月6日、参議院。2度目の証人喚問です。
+    reading: じゅうにがつ むいか、さんぎいん。にどめの しょうにん かんもんです。
+  - speaker: giin
+    emotion: normal
+    text: こういうことをなさる、そのねらいというか目的は[何|なん]だったんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: そのことを聞かれますと大変つらいのでございますが、
+  - speaker: zundamon
+    emotion: sad
+    text: さしたる動機はなくて、
+  - speaker: zundamon
+    emotion: sad
+    text: 軽い気持ちで株式を持っていただいたのが本当のところでございまして
+    telops:
+    - {text: "江副「軽い気持ちで株式を持っていただいた」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: giin
+    emotion: normal
+    text: 株券も見たことない、という[方|かた]もおいでになるんですけれども。
+  - speaker: zundamon
+    emotion: normal
+    text: 株券を見たことないという[方|かた]が大勢いらっしゃることは確かでございますが、
+  - speaker: reimu
+    text: お金を借りた人の株券は、金融会社が担保として預かっていたからです。この69日後、彼は逮捕されます。
+    reading: おかねお かりた ひとの かぶけんわ、きんゆう がいしゃが たんぽと して あずかって いたからです。この ろくじゅうくにちご、かれわ たいほ されます。
+# ---- 1989年2〜6月・逮捕、拘置所、首相の談話 ----
+- id: card1989
+  title: ''
+  background: ez_card_1989
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1989年2月13日、逮捕。容疑は、NTTの幹部2人に株を渡した、NTT法上の贈賄です。
+    reading: せんきゅうひゃく はちじゅうくねん にがつ じゅうさんにち、たいほ。ようぎわ えぬてぃーてぃーの かんぶ ふたりに かぶお わたした、えぬてぃーてぃー ほうじょうの ぞうわいです。
+- id: ch9_kosoku
+  title: 拘置所の前
+  background: ez_kosoku_hodo
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江副浩正, emotion: sad}
+  - {who: kisha, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 来ました！ リクルートの江副前会長です！
+  - speaker: kisha
+    emotion: surprised
+    text: カメラ、こっち！ フラッシュ！
+  - speaker: reimu
+    text: 彼はのちに著書に、こう書いています。
+    reading: かれわ のちに ちょしょに、こう かいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: これは[“見せしめ”|みせしめ]だ。私は被疑者に過ぎない
+  - speaker: reimu
+    text: 取り調べでは壁に向かって立たされた、とも本人は著書で主張しています。
+    reading: とりしらべでわ かべに むかって たたされたとも、ほんにんわ ちょしょで しゅちょう して います。
+- id: ch9_hei
+  title: ''
+  background: ez_hei_yuki
+  cuts:
+  - speaker: reimu
+    text: 2月から4月にかけて、NTT、労働省、文部省のルートで、逮捕と起訴が続きます。
+    reading: にがつから しがつに かけて、えぬてぃーてぃー ろうどうしょう もんぶしょうの るーとで たいほと きそが つづきます。
+  - speaker: reimu
+    text: 4月25日。竹下首相は、国民の皆様へ、という談話で退陣を表明します。
+    reading: しがつ にじゅうごにち。たけした しゅしょうわ、こくみんの みなさまえと いう だんわで たいじんお ひょうめい します。
+    background: ez_hei_sakura
+- id: ch10_danwa
+  title: 首相の談話
+  background: ez_kaiken
+  bgm: serious
+  stage:
+  - {who: takeshita, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: takeshita
+    emotion: sad
+    text: リクルート問題に[端|たん]を発する今日の深刻な政治不信の広がりは、
+  - speaker: takeshita
+    emotion: sad
+    text: 我が国の議会制民主主義にとり、極めて重大な危機であります。
+  - speaker: takeshita
+    emotion: normal
+    text: 政治に対する国民の皆様の信頼を取り戻すために、
+  - speaker: takeshita
+    emotion: normal
+    text: 私は、みずからの身を引く決意を固めることといたしました。
+    telops:
+    - {text: "竹下首相の談話「みずからの身を引く決意」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 竹下首相は、起訴されていません。この事件で起訴された国会議員は、2人です。
+    reading: たけした しゅしょうわ、きそ されて いません。この じけんで きそ された こっかい ぎいんわ ふたりです。
+- id: ch10_hoshaku
+  title: ''
+  background: ez_hei
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 捜査は約260日、取り調べた参考人は延べ約3800人。6月6日、江副は113日ぶりに保釈されます。
+    reading: そうさわ やく にひゃく ろくじゅうにち、とりしらべた さんこうにんわ のべ やく さんぜん はっぴゃくにん。ろくがつ むいか、えぞえわ ひゃく じゅうさんにちぶりに ほしゃく されます。
+# ---- 1989〜2003年・13年の法廷 ----
+- id: ch11_houtei
+  title: 13年の法廷
+  background: ez_houtei
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 江副浩正, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1989年12月15日、初公判。53歳の江副と藤波孝生元官房長官ら4人は、そろって無罪を主張します。
+    reading: せんきゅうひゃく はちじゅうくねん じゅうにがつ じゅうごにち、しょこうはん。ごじゅうさんさいの えぞえと ふじなみ たかお もと かんぼう ちょうかんら よにんわ そろって むざいお しゅちょう します。
+  - speaker: zundamon
+    emotion: normal
+    text: 強引な取り調べで虚偽の供述を強いられた
+- id: ch11_saikosai
+  title: ''
+  background: ez_saikosai
+  cuts:
+  - speaker: reimu
+    text: 1999年10月20日。一審は無罪、二審は有罪だった藤波の上告を最高裁が退け、受託収賄の有罪が確定。
+    reading: せんきゅうひゃく きゅうじゅうくねん じゅうがつ はつか。いっしんわ むざい にしんわ ゆうざいだった ふじなみの じょうこくお さいこうさいが しりぞけ、じゅたく しゅうわいの ゆうざいが かくてい。
+- id: card2003
+  title: ''
+  background: ez_card_2003
+  cuts:
+  - speaker: reimu
+    text: 2003年3月4日。322回目の公判、判決の日です。江副は66歳になっていました。
+    reading: にせん さんねん さんがつ よっか。さんびゃく にじゅうにかいめの こうはん、はんけつの ひです。えぞえわ ろくじゅうろくさいに なって いました。
+- id: ch11_hanketsu
+  title: 判決
+  background: ez_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 江副浩正, emotion: normal}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 主文。被告人を[懲役3年|ちょうえきさんねん]に処する。
+    se: don
+  - speaker: saibancho
+    emotion: normal
+    text: この裁判確定の日から5年間、その刑の執行を猶予する。
+    telops:
+    - {text: "懲役3年・執行猶予5年", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 大がかりな疑獄事件の首謀者。
+  - speaker: saibancho
+    emotion: normal
+    text: 政界、官界と企業の癒着に不信感を持たせた責任は重い
+  - speaker: reimu
+    text: 判決は、ほかの11人の有罪がすでに確定していることなども挙げ、こう続けました。
+    reading: はんけつわ、ほかの じゅういちにんの ゆうざいが すでに かくてい して いる ことなども あげ こう つづけました。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告も反省しており、実刑に処すべき事案ではない
+  - speaker: reimu
+    text: 求刑は懲役4年。判決は、そのまま確定しました。
+    reading: きゅうけいわ ちょうえき よねん。はんけつわ そのまま かくてい しました。
+- id: heya3
+  title: ''
+  background: ez_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 判決まで、13年もかかったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '初公判から13年3か月。判決の日で、公判は322回目よ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 弁護士の団体によると、時間の多くは彼の調書をめぐる争いに使われたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に自分から話したのか、信用できるのかってことね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 取り調べの中身で、ずっともめてたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのあいだ、会社のほうも大きな借金を抱えていたわ。
+# ---- 1992〜2013年・借金を返した会社と、献花台 ----
+- id: card2006
+  title: ''
+  background: ez_card_2006
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2006年3月期。東京・銀座の本社です。
+    reading: にせん ろくねん さんがつき。とうきょう ぎんざの ほんしゃです。
+- id: ch12_ginza
+  title: 借金を返した会社
+  background: ez_ginza
+  stage:
+  - {who: shain, x: 0.28, flip: true, emotion: happy}
+  - {who: bucho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 部長、残っていた借金の返済が終わりました！
+  - speaker: bucho
+    emotion: happy
+    text: ピークで1兆4000億円を超えた借金が、ついにゼロか。
+    se: levelup
+  - speaker: shain
+    emotion: normal
+    text: あの借金って、事件のせいだったんですか？
+  - speaker: bucho
+    emotion: normal
+    text: いや。バブルがはじけて、不動産とノンバンクの子会社が抱えたものだ。
+  - speaker: shain
+    emotion: thinking
+    text: 創業者の株は、1992年にダイエーへ渡ったんですよね。
+  - speaker: bucho
+    emotion: normal
+    text: ああ。だが借金は、うちが自分で返した。
+  - speaker: shain
+    emotion: happy
+    text: 返したのは、情報誌の稼ぎですね。
+  - speaker: bucho
+    emotion: normal
+    text: タダで配る本から始まった、うちの商売のな。
+- id: card2013
+  title: ''
+  background: ez_card_2013
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2013年2月8日。江副浩正は、肺炎のため76歳で亡くなります。
+    reading: にせん じゅうさんねん にがつ ようか。えぞえ ひろまさわ、はいえんの ため ななじゅうろくさいで なくなります。
+- id: ch12_kenka
+  title: ''
+  background: ez_ginza_kenka
+  stage:
+  - {who: shain, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 東京・銀座のリクルートのビルには、白い菊で飾った献花台が置かれました。
+    reading: とうきょう ぎんざの りくるーとの びるにわ、しろい きくで かざった けんかだいが おかれました。
+  - speaker: shain
+    emotion: normal
+    text: ……屋上の小さな部屋から、始まった会社なんですね。
+# ---- 論争1：正反対の2つの俗説（どちらとも言わない） ----
+- id: ronso1
+  title: ネットの2つの説
+  background: ez_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 江副は株で国を動かそうとした黒幕だって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決は、大がかりな疑獄事件の首謀者と言ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4つのルートで起訴された12人は、全員の有罪が確定してる。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: zundamon
+    emotion: surprised
+    text: でも別のサイトには、検察が作った冤罪だって……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は法廷で、ずっと無罪を訴えたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '初公判から、取り調べのやり方を問い続けたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決の日には日弁連が、取り調べの録音と録画を求める声明を出したの。
+  - speaker: zundamon
+    emotion: angry
+    text: どっちが本当なの！？ はっきりしてほしいのだ！
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決は、彼が中心だったと認めた。彼は、取り調べがゆがめたと言い続けた。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして取り調べはその後、録画する方向へ進んだの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 白か黒かより、記録が残るほうへ……。
+    beat: true
+# ---- 論争2：買った株が、なぜ賄賂？ ----
+- id: ronso2
+  title: 買った株がなぜ賄賂？
+  background: ez_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも、株は3000円で買ってるのだ！ なんで賄賂なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: タダでもらったわけじゃない。そこは本当よ。
+    se: hammer
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもお[金|かね]も貸してもらえて、1か月後に上がることがほぼ分かっていた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決は、公開のあとに見込まれる利益が賄賂の中身になるとしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 普通の人が手に入れるのは、極めて困難だったともね。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、1984年の1200円の株は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 公開の1年10か月前。検察は、罪の疑いを認めなかったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに1986年に株を受けた国会議員も、多くは罪に問われていないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ株なのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 頼みごとに応えられる仕事についていたか。そこも分かれ目だったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 官房長官への頼みは、国の役所も就職協定に沿って採用してほしいというもの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最高裁は、それが官房長官の仕事の範囲だと認めたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: いつ、誰に渡したかなのだ……。
+    beat: true
+# ---- 本当の注意点 ----
+- id: chui
+  title: 本当の注意点
+  background: ez_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 上場間近。値上がり確実。あなただけに特別に。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう誘ってくる未公開株は、まず疑うこと。
+    telops:
+    - {text: "未公開株の誘いは まず疑う", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクのメールなのだ！
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 金融庁によると、未公開株を売れるのは発行した会社か登録を受けた証券会社だけ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その証券会社も、原則として勧誘できないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、知らない人からのメールは……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に上場するなら、金融庁の[EDINET|エディネット]に届け出が出るわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 届け出を、確かめる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次に、お[金|かね]も貸しますという話。1986年も株券を見ずにサインした人がいたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 借りて買った株が下がったら、借金だけが残るの。
+  - speaker: zundamon
+    emotion: sad
+    text: 上がる話しか、聞いてなかったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それから、タダのものは誰かが払ってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: タダの求人の本も、載せる会社のお[金|かね]で作られてたでしょ。
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: ez_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。国会の証人席から、38年がたちました。
+    reading: にせん にじゅうろくねん。こっかいの しょうにんせきから、さんじゅうはちねんが たちました。
+- id: ima
+  title: リクルートのいま
+  background: ez_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: リクルートは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年に上場して、2026年3月期の売上はおよそ3兆7000億円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 11月の発表では、今期は4兆2300億円の見通しよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: タダの本の会社が、4兆円！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 求人の[Indeed|インディード]。旅行のじゃらん。結婚のゼクシィ。勉強のスタディサプリ。
+  - speaker: zundamon
+    emotion: happy
+    text: 全部、聞いたことあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 創業者の名前の財団は、いまも若い人に返さなくていい奨学金を出してるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 就職活動の日程は、いまは政府がまとめて企業の側に要請してるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 就職協定の、その後だね。
+  - speaker: reimu
+    text: 事件は、政治の制度が変わるきっかけの一つにもなりました。
+    reading: じけんわ、せいじの せいどが かわる きっかけの ひとつにも なりました。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: ez_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ あなただけに特別に、のメールはすぐ消すのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 正解。特別なのは、あなたじゃなくて送った数のほうよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 何事もかくさず。52歳の彼は、国会でそう誓ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして株を渡したわけを、そのときの思いつきや軽い気持ちと答えたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決は、この事件を大がかりな疑獄事件と呼んだわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 軽い気持ちと、13年の裁判……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: あなただけに特別にと言われたら、それが誰のための特別かを考えてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
