@@ -4522,6 +4522,23 @@ SPECS = {
         dict(scene="mx_kaiken", tint="mono", tag="2014年 会見", emo="sad", fx="gloom", say="本当に申し訳ない"),
         dict(scene="mx_houtei", tint="yellow", tag="2019年 判決", emo="normal", fx="sweat", say="事実上の勝利"),
     ]),
+    # 第9弾（2026-11-29〜12-02。方向転換の実験の13〜16本目）。A は場面型、B・C は資料型（ab_variants）
+    "ghosn-nissan": dict(layout="scene", headline="11か月後に箱で国外へ", head_hi="箱で国外へ", panels=[
+        dict(scene="gs_menkai", tint="yellow", tag="2019年1月 拘置所", emo="normal", fx="sweat", say="逃げもしない"),
+        dict(scene="gs_kanku_hako", tint="mono", tag="同年12月 関西空港", emo="sad", fx="gloom"),
+    ]),
+    "recruit-ezoe": dict(layout="scene", headline="国会証言の69日後に逮捕", head_hi="逮捕", panels=[
+        dict(scene="ez_kokkai", tint="yellow", tag="1988年 証人喚問", emo="normal", fx="sweat", say="軽い気持ちで"),
+        dict(scene="ez_kosoku_hodo", tint="mono", tag="1989年 逮捕", emo="sad", fx="gloom"),
+    ]),
+    "terumi-club": dict(layout="scene", headline="破産4日前も新聞広告", head_hi="4日前", panels=[
+        dict(scene="tm_kaiken", tint="mono", tag="2017年 破産の日", emo="sad", fx="gloom", say="生きることしか"),
+        dict(scene="tm_houtei", tint="yellow", tag="2018年 初公判", emo="sad", fx="sweat", say="間違いございません"),
+    ]),
+    "comsn-origuchi": dict(layout="scene", headline="2081か所が他社へ", head_hi="他社へ", panels=[
+        dict(scene="og_disco", tint="yellow", tag="1991年 ディスコ", emo="happy", fx="sparkle"),
+        dict(scene="og_kaiken", tint="mono", tag="2007年 会見", emo="sad", fx="gloom", say="結果的に"),
+    ]),
     # 第6弾（2026-11-17〜20。方向転換の実験：会社の転落・破綻・裁判）。A は場面型、B は資料型（ab_variants）
     "takefuji-takei": dict(layout="scene", headline="日本一の納税者が被告人に", head_hi="被告人", panels=[
         dict(scene="bf_kokkai", tint="yellow", tag="1994年 国会", emo="happy", fx="sparkle", say="納税は日本一"),
