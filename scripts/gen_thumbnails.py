@@ -2774,6 +2774,11 @@ def layout_doc(spec):
     犯罪ドキュメンタリーのチャンネルは 3.3% なので、A/B の1案をこの型にして比べる。
     実在の人の写真は使わない（肖像の権利）。右は自作の背景を白黒にして暗くする。
     spec: label（札）, lines（2行。各行は [(文字, "w"|"y"|"r"), ...]）, sub（補足）, scene（背景名）
+          emo（任意。付けると右に主人公を演じるずんだもんの胸から上を大きく置く。2026-11-14〜 A/B の C）, fx, who
+
+    2026-11-14 追記: ユーザー「サムネの言葉がクリックしようと思わない」（言葉型＝本人の長い言葉→結果をやめた）。
+    見出しは**短い落差型**（2行・各10字前後。落差・有名なもの・数字・逆説のどれか）。B はこの型のキャラなし、
+    C は同じ型に emo を付けたキャラあり（キャラの有無だけを比べる）。
     """
     img = Image.new("RGBA", (W, H), (8, 8, 10, 255))
     bw = int(W * 0.66)
@@ -2785,6 +2790,11 @@ def layout_doc(spec):
         fd.line([(x, 0), (x, H)], fill=int(255 * x / (bw * 0.55)))
     bg.putalpha(ImageChops.multiply(bg.getchannel("A"), fade))
     img.alpha_composite(bg, (W - bw, 0))
+    emo = spec.get("emo")
+    if emo:                                                             # 右下に主人公（胸から上）。字の後ろに置く
+        bu = bust(spec.get("who", "zundamon"), emo, height=int(H * 0.80), crop=0.42).convert("RGBA")
+        bu = _fx(bu, spec.get("fx"), inner_left=True)
+        img.alpha_composite(bu, (W - int(bu.width * 0.86), H - bu.height + 6))
     d = ImageDraw.Draw(img)
     key = spec.get("_key", "")
     label = spec.get("label", "")
@@ -2794,14 +2804,14 @@ def layout_doc(spec):
         d.rectangle([40, 34, 40 + _tw(fl, label) + 36, 34 + 70], fill=(206, 20, 26))
         _ttext(d, (58, 42), label, fl, (255, 255, 255))
     lines = spec["lines"]
-    maxw = int(W * 0.70)
+    maxw = int(W * (0.60 if emo else 0.70))                            # キャラありは字を左に寄せて頭にかけない
     size = 150
     while size > 70 and max(sum(_tw(font("w9", size), t) for t, _ in ln) for ln in lines) > maxw:
         size -= 4
     f = font("w9", size)
     y = 140 + (2 - len(lines)) * size // 2
     for ln in lines:
-        _budget("say", "".join(t for t, _ in ln), 8, key)
+        _budget("say", "".join(t for t, _ in ln), 10, key)               # 2026-11-14 短い落差型は各行10字前後
         x = 40
         for t, c in ln:
             _ttext(d, (x, y), t, f, DOC_COL.get(c, c), stroke_width=max(8, size // 12), stroke_fill=(0, 0, 0))

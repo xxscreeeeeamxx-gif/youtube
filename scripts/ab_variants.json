@@ -4330,17 +4330,34 @@
    "scene": "bm_kojo_fusen"
   },
   "thumb_c": {
-   "layout": "quote",
-   "tag": "ビッグモーター",
+   "layout": "doc",
+   "label": "ビッグモーター",
+   "lines": [
+    [
+     [
+      "天地神明に",
+      "w"
+     ],
+     [
+      "誓って",
+      "y"
+     ]
+    ],
+    [
+     [
+      "9か月余りで",
+      "w"
+     ],
+     [
+      "人手に",
+      "r"
+     ]
+    ]
+   ],
+   "sub": "保険金の不正請求　2023年",
    "scene": "bm_kaiken",
    "emo": "sad",
-   "fx": "gloom",
-   "quote": [
-    "「天地神明に誓って、",
-    "知りませんでした」"
-   ],
-   "src": "創業者・兼重宏行（2023年7月25日の会見）",
-   "result": "→ 9か月余りで人手に"
+   "fx": "gloom"
   },
   "evidence": [
    {
@@ -4358,7 +4375,20 @@
     "scene": "ch8_tebanasu",
     "text": "2024年5月1日。店と社員は、伊藤忠商事などが出資する新しい会社、WECARSに引き継がれます。"
    }
-  ]
+  ],
+  "thumb_c_quote_old": {
+   "layout": "quote",
+   "tag": "ビッグモーター",
+   "scene": "bm_kaiken",
+   "emo": "sad",
+   "fx": "gloom",
+   "quote": [
+    "「天地神明に誓って、",
+    "知りませんでした」"
+   ],
+   "src": "創業者・兼重宏行（2023年7月25日の会見）",
+   "result": "→ 9か月余りで人手に"
+  }
  },
  {
   "slug": "ikinari-steak",
@@ -4391,17 +4421,34 @@
    "scene": "ik_mise_heiten"
   },
   "thumb_c": {
-   "layout": "quote",
-   "tag": "いきなり!ステーキ",
-   "scene": "ik_mise_harigami",
-   "emo": "sad",
-   "fx": "gloom",
-   "quote": [
-    "「このままではお近くの店を",
-    "閉めることになります」"
+   "layout": "doc",
+   "label": "いきなり!ステーキ",
+   "lines": [
+    [
+     [
+      "行列の",
+      "w"
+     ],
+     [
+      "1500円",
+      "y"
+     ]
+    ],
+    [
+     [
+      "店は",
+      "w"
+     ],
+     [
+      "半分以下",
+      "r"
+     ]
+    ]
    ],
-   "src": "社長・一瀬邦夫（2019年12月、店頭の直筆の貼り紙）",
-   "result": "→ 3年で店は半分以下に"
+   "sub": "国内約490店が3年で",
+   "scene": "ik_tenpo",
+   "emo": "sad",
+   "fx": "gloom"
   },
   "evidence": [
    {
@@ -4419,7 +4466,20 @@
     "scene": "ima",
     "text": "2026年9月の時点で、国内に167店。最盛期の3分の1ほどね。"
    }
-  ]
+  ],
+  "thumb_c_quote_old": {
+   "layout": "quote",
+   "tag": "いきなり!ステーキ",
+   "scene": "ik_mise_harigami",
+   "emo": "sad",
+   "fx": "gloom",
+   "quote": [
+    "「このままではお近くの店を",
+    "閉めることになります」"
+   ],
+   "src": "社長・一瀬邦夫（2019年12月、店頭の直筆の貼り紙）",
+   "result": "→ 3年で店は半分以下に"
+  }
  },
  {
   "slug": "kanebo-funshoku",
@@ -4456,17 +4516,34 @@
    "scene": "kn_oroshi"
   },
   "thumb_c": {
-   "layout": "quote",
-   "tag": "カネボウの粉飾",
+   "layout": "doc",
+   "label": "カネボウの粉飾",
+   "lines": [
+    [
+     [
+      "名門",
+      "w"
+     ],
+     [
+      "カネボウ",
+      "y"
+     ]
+    ],
+    [
+     [
+      "元社長が",
+      "w"
+     ],
+     [
+      "逮捕",
+      "r"
+     ]
+    ]
+   ],
+   "sub": "黒字の決算は219億円の赤字だった",
    "scene": "kn_kaiken",
    "emo": "sad",
-   "fx": "gloom",
-   "quote": [
-    "「再生して後輩に譲るのが",
-    "経営責任」"
-   ],
-   "src": "社長・帆足隆（2004年2月16日の会見）",
-   "result": "→ 1年5か月後に逮捕"
+   "fx": "gloom"
   },
   "evidence": [
    {
@@ -4484,7 +4561,20 @@
     "scene": "ch8_houtei",
     "text": "宮原は懲役1年6か月、執行猶予3年。判決のあと、裁判長はこう述べたと報じられました。"
    }
-  ]
+  ],
+  "thumb_c_quote_old": {
+   "layout": "quote",
+   "tag": "カネボウの粉飾",
+   "scene": "kn_kaiken",
+   "emo": "sad",
+   "fx": "gloom",
+   "quote": [
+    "「再生して後輩に譲るのが",
+    "経営責任」"
+   ],
+   "src": "社長・帆足隆（2004年2月16日の会見）",
+   "result": "→ 1年5か月後に逮捕"
+  }
  },
  {
   "slug": "skymark-saisei",
@@ -4521,17 +4611,34 @@
    "scene": "sm_shacho_fax"
   },
   "thumb_c": {
-   "layout": "quote",
-   "tag": "スカイマーク",
-   "scene": "sm_kaiken",
-   "emo": "sad",
-   "fx": "gloom",
-   "quote": [
-    "「今にして思えば、",
-    "当時の僕は完全に裸の王様でした」"
+   "layout": "doc",
+   "label": "スカイマーク",
+   "lines": [
+    [
+     [
+      "世界最大の",
+      "w"
+     ],
+     [
+      "旅客機",
+      "y"
+     ]
+    ],
+    [
+     [
+      "買えずに",
+      "w"
+     ],
+     [
+      "破綻",
+      "r"
+     ]
+    ]
    ],
-   "src": "元社長・西久保愼一（2018年の取材で）",
-   "result": "→ 半年で民事再生"
+   "sub": "6機1915億円の約束　半年で民事再生",
+   "scene": "sm_kakunoko",
+   "emo": "sad",
+   "fx": "gloom"
   },
   "evidence": [
    {
@@ -4549,6 +4656,19 @@
     "scene": "card2022",
     "text": "2022年12月14日。申し立てから7年10か月で、スカイマークは株式市場に戻ります。"
    }
-  ]
+  ],
+  "thumb_c_quote_old": {
+   "layout": "quote",
+   "tag": "スカイマーク",
+   "scene": "sm_kaiken",
+   "emo": "sad",
+   "fx": "gloom",
+   "quote": [
+    "「今にして思えば、",
+    "当時の僕は完全に裸の王様でした」"
+   ],
+   "src": "元社長・西久保愼一（2018年の取材で）",
+   "result": "→ 半年で民事再生"
+  }
  }
 ]
