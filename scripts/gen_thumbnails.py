@@ -4505,6 +4505,23 @@ SPECS = {
         dict(scene="sm_kaigi_4ji", tint="yellow", tag="2010年 A380", emo="happy", fx="sparkle", say="A380を6機"),
         dict(scene="sm_shacho_fax", tint="mono", tag="2014年 ファクス", emo="sad", fx="gloom", say="会議も一度もない"),
     ]),
+    # 第8弾（2026-11-25〜28。方向転換の実験の9〜12本目）。A は場面型、B は資料型、C は資料型＋キャラ（ab_variants）
+    "daio-igawa": dict(layout="scene", headline="子会社から106億円", head_hi="106億円", panels=[
+        dict(scene="dz_vip_yama", tint="yellow", tag="2011年ごろ カジノ", emo="happy", fx="sparkle", say="まだ大丈夫"),
+        dict(scene="dz_houtei", tint="mono", tag="2012年 初公判", emo="sad", fx="gloom", say="間違いありません"),
+    ]),
+    "seibu-tsutsumi": dict(layout="scene", headline="65日後に上場廃止", head_hi="上場廃止", panels=[
+        dict(scene="tj_yakuin", tint="yellow", tag="1977年 西武の総帥", emo="happy", fx="sparkle", say="三菱のような"),
+        dict(scene="tj_kaiken", tint="mono", tag="2004年 会見", emo="sad", fx="gloom", say="ノータッチだった"),
+    ]),
+    "livedoor-horie": dict(layout="scene", headline="和解の9か月後に逮捕", head_hi="逮捕", panels=[
+        dict(scene="ld_wakai", tint="yellow", tag="2005年 和解", emo="happy", fx="sparkle", say="想定の範囲内"),
+        dict(scene="ld_tower_yoake", tint="mono", tag="2006年 捜索の朝", emo="sad", fx="gloom", say="報告したい"),
+    ]),
+    "mtgox-karpeles": dict(layout="scene", headline="求刑10年、横領は無罪", head_hi="無罪", panels=[
+        dict(scene="mx_kaiken", tint="mono", tag="2014年 会見", emo="sad", fx="gloom", say="本当に申し訳ない"),
+        dict(scene="mx_houtei", tint="yellow", tag="2019年 判決", emo="normal", fx="sweat", say="事実上の勝利"),
+    ]),
     # 第6弾（2026-11-17〜20。方向転換の実験：会社の転落・破綻・裁判）。A は場面型、B は資料型（ab_variants）
     "takefuji-takei": dict(layout="scene", headline="日本一の納税者が被告人に", head_hi="被告人", panels=[
         dict(scene="bf_kokkai", tint="yellow", tag="1994年 国会", emo="happy", fx="sparkle", say="納税は日本一"),

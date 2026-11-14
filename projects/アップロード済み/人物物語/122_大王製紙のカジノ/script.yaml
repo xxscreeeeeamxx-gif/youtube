@@ -1,0 +1,1165 @@
+meta:
+  title: 「まだ大丈夫だから、もう少し続けてみるよ」大王製紙の3代目は子会社から106億円を借りた【ずんだもん解説】
+  slug: daio-igawa
+  hook_line: ティッシュの会社の3代目は、なぜ自分の子会社から106億円も借りられたのか。
+  summary: 2011年ごろ、シンガポールのカジノ。テーブルのチップが20億円になっても、大王製紙の創業家の3代目、井川意高は「まだ大丈夫だから」と賭けを続けました。お金を貸す7社の会長も、借りる人も、同じ1人。電話1本、担保なしで動いたお金を、なぜ誰も止めなかったのか。父に問われて答えた「FXです」、子会社からの1通の業務メール、そして法廷へ。特別調査委員会の報告書と判決の報道、本人の著書をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 大王製紙株式会社元会長への貸付金問題に関する特別調査委員会「調査報告書」（2011年10月27日） https://www.daio-paper.co.jp/wp-content/uploads/n231020a.pdf
+  - 大王製紙「元会長への貸付金問題に対する再発防止策に関するお知らせ」（2011年12月14日） https://www.daio-paper.co.jp/wp-content/uploads/n231214c.pdf
+  - 北越コーポレーション「大王製紙株式の追加取得について」（2019年12月26日） https://www.hokuetsucorp.com/pdf/OSIRASE/20191226_release01.pdf
+  - カジノ管理委員会事務局「ＩＲ整備法におけるカジノ行為に対する依存防止対策の概要」（2026年7月17日） https://www.cas.go.jp/jp/seisakukaigi/gambletou_izonsho/kaigi/dai19/shiryo2.pdf
+  - 日本経済新聞「『ほとんどカジノで使った』大王製紙前会長が謝罪文」（2011年11月22日） https://www.nikkei.com/article/DGXNASFK22010_S1A121C1000000/
+  - 日本経済新聞「大王前会長、二審も実刑 東京高裁『公私を混同』」（2013年2月28日） https://www.nikkei.com/article/DGXNASDG28052_Y3A220C1CC1000/
+  tags:
+  - 大王製紙
+  - 井川意高
+  - エリエール
+  - 特別背任
+  - カジノ
+  - バカラ
+  - 子会社
+  - 特別調査委員会
+  - 北越コーポレーション
+  - 熔ける
+  - 創業家
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 電話1本で3億円
+    bottom: 大王製紙の3代目
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: staff
+    label: スタッフ
+    voice: 8
+    pitch: -0.06
+    outfit: suit
+    color: '#1a1a1e'
+  - id: yakuin
+    label: 役員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3f4a'
+  - id: keiri
+    label: 経理
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: chichi
+    label: 井川高雄
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#2a2f3a'
+  - id: chichi_y
+    label: 井川高雄
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: koin
+    label: 工員
+    voice: 12
+    pitch: 0.02
+    outfit: work
+    color: '#7a8a9a'
+  - id: chukai
+    label: 仲介業者
+    voice: 67
+    pitch: -0.08
+    outfit: suit
+    color: '#2a2a2a'
+  - id: keiritori
+    label: 経理役員
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#4a4038'
+  - id: kansa
+    label: 会計士
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: kansajr
+    label: 若手会計士
+    voice: 12
+    pitch: 0.04
+    outfit: suit
+    color: '#6a7a8a'
+  - id: jimukyoku
+    label: 事務局
+    voice: 67
+    pitch: 0.06
+    outfit: suit
+    color: '#5a5a6a'
+  - id: tori
+    label: 取締役
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: jimuin
+    label: 若手社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#6a7a8a'
+  - id: jimuin2
+    label: 先輩社員
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#4a5a4a'
+  - id: sako
+    label: 佐光社長
+    voice: 100
+    pitch: -0.06
+    outfit: suit
+    color: '#2f3440'
+  - id: kenji
+    label: 検察官
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#1f2a44'
+  - id: bengoshi
+    label: 弁護人
+    voice: 67
+    pitch: -0.04
+    outfit: suit
+    color: '#3a3a42'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: saibancho2
+    label: 裁判長
+    voice: 21
+    pitch: -0.1
+    outfit: suit
+    color: '#202024'
+scenes:
+# ---- 先出し（2011年ごろ・シンガポールのカジノ。本人の著書の場面） ----
+- id: co_vip
+  title: ''
+  background: dz_vip_yama
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: staff, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2011年ごろ、シンガポールのカジノ。エリエールの大王製紙、創業家の3代目、井川意高です。
+    reading: にせんじゅういちねん ごろ しんがぽーるの かじの。えりえーるの だいおう せいし、そうぎょうけの さんだいめ いかわ もとたかです。
+  - speaker: staff
+    emotion: thinking
+    text: '[井川|イカワ]さん、そろそろおやめになったらどうですか。'
+  - speaker: staff
+    emotion: thinking
+    text: もうすでに、テーブル上のチップは20億円もあります。
+  - speaker: zundamon
+    emotion: happy
+    text: うん、ありがとう。まだ大丈夫だから、もう少し続けてみるよ
+  - speaker: reimu
+    text: 本人がのちに著書に書いた場面です。このころの賭け金は、彼が会長を兼ねる子会社から借りたものでした。
+    reading: ほんにんが のちに ちょしょに かいた ばめんです。この ころの かけきんわ、かれが かいちょうお かねる こがいしゃから かりた ものでした。
+  - speaker: reimu
+    text: この年の9月、子会社からの1通のメールで、すべてが明るみに出ます。
+    reading: この としの くがつ、こがいしゃからの いっつうの めーるで すべてが あかるみに でます。
+# ---- 今の部屋（スマホのくじ） ----
+- id: hook
+  title: ''
+  background: dz_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: くじ、また外れたのだ……。
+  - speaker: zundamon
+    emotion: angry
+    text: 取り返すのだ！ もう1回だけ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのもう1回、さっきも聞いた。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 取り返そうとして、子会社から106億円を借りた会長がいるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ティッシュのエリエール、[大王製紙|だいおうせいし]の3代目よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 子会社から106億円も！？ なんで借りられたの！？ 誰も止めなかったの！？
+    telops:
+    - {text: "ティッシュの会社の3代目 なぜ子会社から106億円も借りられた？", size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 2010年5月12日・電話1本 ----
+- id: ch1_denwa
+  title: 電話1本
+  background: dz_yakuin
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: yakuin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2010年5月、子会社からの借り入れが始まります。役員への頼み方を、本人はのちに著書にこう書いています。
+    reading: にせんじゅうねん ごがつ、こがいしゃからの かりいれが はじまります。やくいんえの たのみかたお、ほんにんわ のちに ちょしょに こう かいて います。
+  - speaker: zundamon
+    emotion: normal
+    text: 個人的に運用している事業がある。至急[×|マルマル]億円の貸付を頼む
+  - speaker: yakuin
+    emotion: normal
+    text: わかりました
+  - speaker: yakuin
+    emotion: thinking
+    text: ……経理を呼んでくれ。
+- id: ch1_keiri
+  title: ''
+  background: dz_keiri
+  stage:
+  - {who: keiri, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: keiri
+    emotion: normal
+    text: 役員から電話だ。言われた口座に、今日中に振り込んでくれ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 億単位ですよ！？ 担保は？
+  - speaker: keiri
+    emotion: normal
+    text: ……取らない。
+  - speaker: shinjin
+    emotion: thinking
+    text: 契約書は？
+  - speaker: keiri
+    emotion: normal
+    text: あとで作る。
+    beat: true
+  - speaker: shinjin
+    emotion: thinking
+    text: 取締役会には、かけないんですか。
+  - speaker: keiri
+    emotion: thinking
+    text: ……かけない。
+  - speaker: shinjin
+    emotion: thinking
+    text: 借りるのは、どなたなんです？
+  - speaker: keiri
+    emotion: normal
+    text: 親会社の社長だ。
+  - speaker: shinjin
+    emotion: thinking
+    text: うちの会長って、誰でしたっけ。
+  - speaker: keiri
+    emotion: thinking
+    text: ……[同じ人|オナジヒト]だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 同じ人！？
+    se: bikkuri
+  - speaker: reimu
+    text: このあとお金を貸す子会社7社は、7社とも会長が井川意高。大王製紙の持ち株は、10〜25%でした。
+    reading: この あと おかねお かす こがいしゃ ななしゃわ、ななしゃとも かいちょうが いかわ もとたか。だいおう せいしの もちかぶわ じゅっぱーせんとから にじゅうごぱーせんとでした。
+    telops:
+    - {text: "貸す7社の会長も 借りる人も 井川意高", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: keiri
+    emotion: normal
+    text: 株の過半数は、[井川家|イカワケ]の側が持ってる。
+  - speaker: keiri
+    emotion: thinking
+    text: ここは、[井川家|イカワケ]の会社なんだよ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 金庫の鍵を持つ店長と、借りに来た客が[同じ人|オナジヒト]……。
+    beat: true
+  - speaker: reimu
+    text: 国内の子会社35社のうち、大王製紙だけで株の半分を超えるのは、3社だけでした。
+    reading: こくないの こがいしゃ さんじゅうごしゃの うち、だいおう せいし だけで かぶの はんぶんお こえるのわ さんしゃ だけでした。
+  - speaker: reimu
+    text: 最後の貸付まで、26回で106億8000万円。電話1本あたり、約4億円です。
+    reading: さいごの かしつけまで、にじゅうろっかいで ひゃくろくおく はっせんまんえん。でんわ いっぽん あたり やく よんおくえんです。
+    telops:
+    - {text: "26回で106億8000万円 電話1本あたり約4億円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 2か月後、本社の経理と監査法人が、この貸付に気づきます。なのに、なぜ止まらなかったのか。
+    reading: にかげつご、ほんしゃの けいりと かんさ ほうじんが この かしつけに きづきます。なのに、なぜ とまらなかったのか。
+# ---- 1943〜1986年・祖父の会社、父の会社 ----
+- id: card1943
+  title: ''
+  background: dz_card_1943
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: なぜ貸す側も借りる側も同じ1人なのか。始まりは1943年、愛媛の伊予三島。祖父の井川伊勢吉の会社です。
+    reading: なぜ かす がわも かりる がわも おなじ ひとりなのか。はじまりわ せんきゅうひゃく よんじゅうさんねん、えひめの いよみしま。そふの いかわ いせきちの かいしゃです。
+- id: ch2_kojo
+  title: 祖父の会社、父の会社
+  background: dz_kojo_old
+  stage:
+  - {who: chichi_y, x: 0.28, flip: true, emotion: normal}
+  - {who: koin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1962年、会社は会社更生法の手続きへ。支えたのは、入社したばかりの息子、井川高雄です。
+    reading: せんきゅうひゃく ろくじゅうにねん、かいしゃわ かいしゃ こうせいほうの てつづきえ。ささえたのわ、にゅうしゃ したばかりの むすこ いかわ たかおです。
+  - speaker: chichi_y
+    emotion: angry
+    text: 3年で立て直す。切り捨ててもらった借金も、全部返すぞ。
+  - speaker: koin
+    emotion: surprised
+    text: 切り捨ててもらった分まで、返すんですか！？
+  - speaker: koin
+    emotion: happy
+    text: うちも、ティッシュを始めましたね。名前は、エリエール。
+  - speaker: chichi_y
+    emotion: happy
+    text: 1986年。ティッシュで、国内1位だ！
+    background: dz_kojo
+    se: levelup
+  - speaker: chichi_y
+    emotion: normal
+    text: よその製紙会社を買うときは、株はうちの家で持つ。
+  - speaker: chichi_y
+    emotion: normal
+    text: '[大王製紙|だいおうせいし]の持ち分は、15%ほどでいい。'
+  - speaker: reimu
+    text: 7社の形は、ここから来ています。倒れかけた会社を救った父は、社員にとって特別な人でした。
+    reading: ななしゃの かたちわ ここから きて います。たおれかけた かいしゃお すくった ちちわ、しゃいんに とって とくべつな ひとでした。
+# ---- 2007年・42歳の社長 ----
+- id: card2007
+  title: ''
+  background: dz_card_2007
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2007年6月、井川意高が42歳で社長に。前の年の夏ごろから、マカオなどのカジノに通っていました。
+    reading: にせんななねん ろくがつ、いかわ もとたかが よんじゅうにさいで しゃちょうに。まえの としの なつごろから、まかおなどの かじのに かよって いました。
+- id: ch2_shacho
+  title: 42歳の社長
+  background: dz_kaigi
+  stage:
+  - {who: tori, x: 0.28, flip: true, emotion: normal}
+  - {who: keiritori, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: tori
+    emotion: normal
+    text: 創業家の社長は、12年ぶりか。
+  - speaker: keiritori
+    emotion: happy
+    text: 家庭紙で、値段の勝負を仕掛けてきた人ですからね。
+  - speaker: tori
+    emotion: happy
+    text: エリエールを大きくしたのは、あの人だ。
+# ---- 2007〜2009年・VIPルーム ----
+- id: ch3_vip
+  title: VIPルーム
+  background: dz_vip
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: staff, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 本人によると、初めてのカジノは96年か97年ごろのオーストラリア。100万円が2000万円になりました。
+    reading: ほんにんに よると、はじめての かじのわ きゅうじゅうろくねんか きゅうじゅうななねん ごろの おーすとらりあ。ひゃくまんえんが にせんまんえんに なりました。
+  - speaker: staff
+    emotion: happy
+    text: いらっしゃいませ、[井川|イカワ]様。お部屋は、いつものスイートです。
+  - speaker: staff
+    emotion: happy
+    text: もちろん、お代は頂きません。往復の飛行機も、こちらで。
+  - speaker: staff
+    emotion: normal
+    text: 社長になられて、2年ですか。賭け方が変わりましたね。
+  - speaker: staff
+    emotion: normal
+    text: 1回100万円が、当たり前に。
+  - speaker: staff
+    emotion: surprised
+    text: ……1回で、1000万円！？
+  - speaker: staff
+    emotion: normal
+    text: 本日のお迎えは、ベンツでございました。
+  - speaker: staff
+    emotion: happy
+    text: 次のお迎えは、ロールスロイスをご用意します。
+    se: jaan
+  - speaker: reimu
+    text: 迎えの車は、客がカジノで使う額で変わりました。本人はのちに、こう書いています。
+    reading: むかえの くるまわ、きゃくが かじので つかう がくで かわりました。ほんにんわ のちに こう かいて います。
+  - speaker: zundamon
+    emotion: happy
+    text: 黒塗りのロールスロイスがスタンバイしていてくれる気分は悪くない。
+  - speaker: staff
+    emotion: happy
+    text: 勝っても負けても、動かした額の1%ほどはお戻しします。
+  - speaker: staff
+    emotion: happy
+    text: またのお越しを、お待ちしております。
+- id: ch3_chukai
+  title: ''
+  background: dz_vip
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: chukai, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: chukai
+    emotion: happy
+    text: お手元が足りなければ、カジノからお借りできます。
+  - speaker: chukai
+    emotion: happy
+    text: 数千万でも、数億でも。手配は、わたくしどもで。
+  - speaker: reimu
+    text: 2009年の秋、それまでの負けを一度すべて取り返します。なのに、なぜやめなかったのか。
+    reading: にせんきゅうねんの あき、それまでの まけお いちど すべて とりかえします。なのに、なぜ やめなかったのか。
+# ---- 2010年7月・載るか ----
+- id: ch3_yuho
+  title: 有価証券報告書に載るか
+  background: dz_yakuin
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: keiritori, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2010年7月、本社の経理担当の取締役が貸付に気づきます。調査報告書によると、本人から尋ねたといいます。
+    reading: にせんじゅうねん しちがつ、ほんしゃの けいり たんとうの とりしまりやくが かしつけに きづきます。ちょうさ ほうこくしょに よると、ほんにんから たずねたと いいます。
+  - speaker: zundamon
+    emotion: normal
+    text: 翌年3月末までに返す予定だが、その場合も有価証券報告書に載るか
+  - speaker: keiritori
+    emotion: normal
+    text: 開示されることになります。
+  - speaker: keiritori
+    emotion: thinking
+    text: ……グループのための資金、だろう。
+  - speaker: reimu
+    text: 取締役は、ほかの役員にも監査役にも伝えません。29日には、監査法人も気づきます。
+    reading: とりしまりやくわ、ほかの やくいんにも かんさやくにも つたえません。にじゅうくにちにわ、かんさ ほうじんも きづきます。
+- id: ch3_kansa
+  title: ''
+  background: dz_jimusho
+  stage:
+  - {who: kansa, x: 0.28, flip: true, emotion: thinking}
+  - {who: kansajr, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: kansajr
+    emotion: surprised
+    text: 子会社から、親会社の社長個人への貸付です。億単位で、何件も。
+  - speaker: kansa
+    emotion: thinking
+    text: 使い道は？
+  - speaker: kansajr
+    emotion: thinking
+    text: 経理に聞いても、分からないそうです。
+  - speaker: kansa
+    emotion: thinking
+    text: ……グループの事業のため、でしょうね。
+    beat: true
+  - speaker: reimu
+    text: 気づいた人は、いた。それでも、借り入れは止まりません。
+    reading: きづいた ひとわ いた。それでも、かりいれわ とまりません。
+# ---- 2011年3月・父に問われる ----
+- id: card2011
+  title: ''
+  background: dz_card_2011
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2011年3月、父の高雄が20億円分の借り入れに気づきます。本人はのちに著書に、こう書いています。
+    reading: にせんじゅういちねん さんがつ、ちちの たかおが にじゅうおくえんぶんの かりいれに きづきます。ほんにんわ のちに ちょしょに こう かいて います。
+- id: ch4_komon
+  title: FXです
+  background: dz_komon
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: sad}
+  - {who: chichi, x: 0.7, emotion: angry}
+  cuts:
+  - speaker: chichi
+    emotion: angry
+    text: この借金はどうしてつくった！
+  - speaker: zundamon
+    emotion: sad
+    text: FXです
+  - speaker: chichi
+    emotion: angry
+    text: FX？ なんやそれは！ なんでそんなにカネが要る！
+  - speaker: reimu
+    text: 少ない元手で何十倍もの取引ができる仕組みを、本人は説明しました。
+    reading: すくない もとでで なんじゅうばいもの とりひきが できる しくみお、ほんにんわ せつめい しました。
+  - speaker: chichi
+    emotion: angry
+    text: バカヤロウ！ そんなもん、バクチと一緒じゃないか!!
+    se: don
+    telops:
+    - {text: "父「バクチと一緒じゃないか!!」（著書）", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: chichi
+    emotion: angry
+    text: お前がもっている株を売りはらって、早いところお前自身の手で借金のカタをつけろ！
+  - speaker: reimu
+    text: 負けていたのはFXではなく、バカラでした。父の言うとおりだった、と本人は書いています。
+    reading: まけて いたのわ えふえっくすでわ なく、ばからでした。ちちの いう とおりだったと、ほんにんわ かいて います。
+  - speaker: reimu
+    text: 4月、株を手放して一部を返します。でも、借金のすべては明かしませんでした。
+    reading: しがつ、かぶお てばなして いちぶお かえします。でも しゃっきんの すべてわ、あかしませんでした。
+  - speaker: reimu
+    text: 報告書によると、父はこの件を、取締役にも監査役にも知らせていません。
+    reading: ほうこくしょに よると、ちちわ この けんお とりしまりやくにも かんさやくにも しらせて いません。
+- id: ch4_maishu
+  title: ''
+  background: dz_vip
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: staff, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: staff
+    emotion: happy
+    text: '[井川|イカワ]様、今週もようこそ。'
+  - speaker: staff
+    emotion: thinking
+    text: 先週も、その前の週も……。お疲れではありませんか。
+# ---- 2011年ごろ・20億円のチップ ----
+- id: ch4_chip
+  title: 20億円のチップ
+  background: dz_vip_yama
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: staff, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2011年ごろ、シンガポール。本人はのちに著書に、ある夜のことをこう書いています。
+    reading: にせんじゅういちねん ごろ しんがぽーる。ほんにんわ のちに ちょしょに、ある よるの ことお こう かいて います。
+  - speaker: staff
+    emotion: thinking
+    text: '[井川|イカワ]さん、そろそろおやめになったらどうですか。'
+  - speaker: staff
+    emotion: thinking
+    text: もうすでに、テーブル上のチップは20億円もあります。
+  - speaker: zundamon
+    emotion: happy
+    text: うん、ありがとう。まだ大丈夫だから、もう少し続けてみるよ
+  - speaker: reimu
+    text: やがて、テーブルは空になります。子会社から借り始めたころを、本人はのちにこうまとめています。
+    reading: やがて てーぶるわ からに なります。こがいしゃから かりはじめた ころお、ほんにんわ のちに こう まとめて います。
+    background: dz_vip_kara
+  - speaker: zundamon
+    emotion: sad
+    text: 借りる。負ける。さらに借りる。さらに大きく負ける。
+# ---- 2011年5〜7月・事業の中身 ----
+- id: ch5_kansa
+  title: 事業の中身
+  background: dz_jimusho
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: normal}
+  - {who: kansa, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年5月6日、監査法人の会計士が本人と面談。報告書によると、こういう趣旨を述べたといいます。
+    reading: にせんじゅういちねん ごがつ むいか、かんさ ほうじんの かいけいしが ほんにんと めんだん。ほうこくしょに よると、こういう しゅしお のべたと いいます。
+  - speaker: zundamon
+    emotion: normal
+    text: 個人的な事業をやっている。運転資金として使用した
+  - speaker: kansa
+    emotion: normal
+    text: ご返済は。
+  - speaker: zundamon
+    emotion: normal
+    text: 6月末ないし遅くとも9月末には返済する
+  - speaker: kansa
+    emotion: thinking
+    text: その事業の中身は……。
+  - speaker: kansa
+    emotion: normal
+    text: ……いえ、結構です。
+    beat: true
+- id: ch5_kaigi
+  title: ''
+  background: dz_kaigi
+  stage:
+  - {who: keiritori, x: 0.28, flip: true, emotion: normal}
+  - {who: jimukyoku, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月、井川は社長を佐光正義に譲り、会長になります。29日の取締役会に、有価証券報告書が出されました。
+    reading: ろくがつ いかわわ しゃちょうお さこう まさよしに ゆずり、かいちょうに なります。にじゅうくにちの とりしまりやくかいに、ゆうか しょうけん ほうこくしょが だされました。
+  - speaker: keiritori
+    emotion: normal
+    text: 以上で、有価証券報告書のご報告を終わります。
+  - speaker: reimu
+    text: その71ページには、会長への貸付23億5000万円。そのページのコピーは、資料に付いていません。
+    reading: その ななじゅう いっぺーじにわ、かいちょうえの かしつけ にじゅうさんおく ごせんまんえん。その ぺーじの こぴーわ、しりょうに ついて いません。
+  - speaker: jimukyoku
+    emotion: normal
+    text: お手元の資料は、お帰りの際に回収いたします。
+    beat: true
+- id: ch5_shinrai
+  title: ''
+  background: dz_yakuin
+  stage:
+  - {who: tori, x: 0.28, flip: true, emotion: normal}
+  - {who: yakuin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: yakuin
+    emotion: thinking
+    text: 取締役、子会社からのご報告です。
+  - speaker: yakuin
+    emotion: thinking
+    text: 会長への貸付が、また出ています。
+  - speaker: tori
+    emotion: thinking
+    text: ……問題にすべきか。
+  - speaker: tori
+    emotion: normal
+    text: いや。会長を、信じよう。
+  - speaker: reimu
+    text: 会長が最後に返したのは、7月14日。このあとは、借りるだけになります。
+    reading: かいちょうが さいごに かえしたのわ、しちがつ じゅうよっか。この あとわ、かりる だけに なります。
+# ---- 2011年9月7日・1通のメール ----
+- id: ch6_mail
+  title: 9月7日、1通のメール
+  background: dz_jigyobu
+  bgm: serious
+  stage:
+  - {who: jimuin, x: 0.28, flip: true, emotion: normal}
+  - {who: jimuin2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年9月7日、午前10時28分。本社の関連事業部に、子会社からメールが届きます。
+    reading: にせんじゅういちねん くがつ なのか、ごぜん じゅうじ にじゅうはっぷん。ほんしゃの かんれん じぎょうぶに、こがいしゃから めーるが とどきます。
+    telops:
+    - {text: "9月7日 午前10時28分", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: jimuin
+    emotion: normal
+    text: '[赤平|あかびら]製紙から、業務の報告です。'
+  - speaker: jimuin2
+    emotion: normal
+    text: 読んでくれ。
+  - speaker: jimuin
+    emotion: normal
+    text: 9月1日のご指示どおり、2日に会長の個人口座へ3億円を……。
+  - speaker: jimuin2
+    emotion: surprised
+    text: 会長の、個人口座！？
+    se: bikkuri
+  - speaker: jimuin
+    emotion: surprised
+    text: エリエールテクセルからも、ゆうべ5億5000万円のメールが……！
+  - speaker: jimuin
+    emotion: thinking
+    text: 担当の取締役は、今日は……。
+  - speaker: jimuin2
+    emotion: thinking
+    text: いない。社長に、直接上げよう。
+  - speaker: jimuin2
+    emotion: normal
+    text: 社長の指示だ。この場で、子会社に電話するぞ。
+    background: dz_jigyobu_denwa
+  - speaker: jimuin2
+    emotion: thinking
+    text: 翌日。取締役の指示で、ほかの子会社にも電話だ。
+  - speaker: jimuin
+    emotion: surprised
+    text: ……この会社にも、会長への貸付が。
+  - speaker: jimuin2
+    emotion: sad
+    text: ここもか。1社や2社じゃない。
+  - speaker: reimu
+    text: 直近に貸した3社は、取締役会を開いて承認し、すぐ本社に知らせていました。それが、発覚につながります。
+    reading: ちょっきんに かした さんしゃわ、とりしまりやくかいお ひらいて しょうにんし すぐ ほんしゃに しらせて いました。それが はっかくに つながります。
+# ---- 2011年9月16日〜10月・辞任 ----
+- id: ch6_jinin
+  title: 辞任
+  background: dz_kaiken
+  stage:
+  - {who: sako, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 9月16日、井川は会長を辞めます。会長個人への貸付について、社長の佐光正義は会見でこう述べました。
+    reading: くがつ じゅうろくにち、いかわわ かいちょうお やめます。かいちょう こじんえの かしつけに ついて、しゃちょうの さこう まさよしわ かいけんで こう のべました。
+  - speaker: sako
+    emotion: sad
+    text: 借入額の多さは、社会通念上、問題がある
+  - speaker: sako
+    emotion: sad
+    text: 残念ながらオーナー会社としての甘さがあった
+- id: ch6_iinkai
+  title: ''
+  background: dz_kaigi
+  stage:
+  - {who: zundamon, x: 0.5, tag: 井川意高, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同じ日に、特別調査委員会ができます。報告書によると、本人は使い道をこう説明しただけでした。
+    reading: おなじ ひに、とくべつ ちょうさ いいんかいが できます。ほうこくしょに よると、ほんにんわ つかいみちお こう せつめい しただけでした。
+  - speaker: zundamon
+    emotion: sad
+    text: FX取引や株式投資にかなり使った
+- id: ch6_houkoku
+  title: ''
+  background: dz_kaigi
+  stage:
+  - {who: tori, x: 0.28, flip: true, emotion: thinking}
+  - {who: jimukyoku, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: tori
+    emotion: thinking
+    text: 10月27日付の、委員会の報告書だ。子会社7社から、26回。
+  - speaker: jimukyoku
+    emotion: surprised
+    text: 合わせて、106億8000万円……。
+  - speaker: tori
+    emotion: thinking
+    text: 使い道は明らかにするに至っていない、か。
+  - speaker: jimukyoku
+    emotion: sad
+    text: 本人は、その後の聞き取りに出てこなかったそうです。
+  - speaker: tori
+    emotion: normal
+    text: 告訴や告発も検討しろ、と書いてある。
+- id: ch6_kaiken2
+  title: ''
+  background: dz_kaiken
+  stage:
+  - {who: sako, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日、会社は父の高雄を顧問から外します。同じ日の会見で、佐光はこう述べました。
+    reading: よくじつ、かいしゃわ ちちの たかおお こもんから はずします。おなじ ひの かいけんで さこうわ こう のべました。
+  - speaker: sako
+    emotion: normal
+    text: '[井川家|イカワケ]排除の考えは持っていない'
+# ---- 2011年11月22日・逮捕の日の文書 ----
+- id: ch7_bunsho
+  title: 逮捕の日の文書
+  background: dz_jimusho
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.5, tag: 井川意高, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 11月22日、東京地検特捜部が特別背任の疑いで井川を逮捕。同じ日、本人は弁護人を通じて文書を出します。
+    reading: じゅういちがつ にじゅうににち、とうきょう ちけん とくそうぶが とくべつ はいにんの うたがいで いかわお たいほ。おなじ ひ、ほんにんわ べんごにんお つうじて ぶんしょお だします。
+  - speaker: zundamon
+    emotion: sad
+    text: 借入金のほとんどをカジノでのギャンブルに使ったことも事実だ。
+  - speaker: zundamon
+    emotion: sad
+    text: 借り入れは全て私一人が[行った|おこなった]ものであり、
+    telops:
+    - {text: "井川「借り入れは全て私一人が行った」（文書）", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 融資をしてくれた関連会社の担当役員らは単に私の要請に応じてくれたにすぎず、
+  - speaker: zundamon
+    emotion: sad
+    text: 私一人に責任があると考えている。
+  - speaker: zundamon
+    emotion: sad
+    text: 全ては私の不徳の致すところで深く反省している。
+  - speaker: reimu
+    text: 1か月前の報告書では、本人の説明はFXや株でした。
+    reading: いっかげつ まえの ほうこくしょでわ、ほんにんの せつめいわ えふえっくすや かぶでした。
+# ---- 2012〜2013年・法廷 ----
+- id: card2012
+  title: ''
+  background: dz_card_2012
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2012年3月1日、東京地裁で初公判。起訴は、子会社7社から15回、55億3000万円の分です。
+    reading: にせんじゅうにねん さんがつ ついたち、とうきょう ちさいで しょこうはん。きそわ こがいしゃ ななしゃから じゅうごかい、ごじゅうごおく さんぜんまんえんの ぶんです。
+- id: ch8_houtei
+  title: 法廷
+  background: dz_houtei
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 井川意高, emotion: sad}
+  - {who: kenji, x: 0.52, emotion: normal}
+  - {who: saibancho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 起訴状の内容に、間違いはありますか。
+  - speaker: zundamon
+    emotion: sad
+    text: 間違いありません
+  - speaker: kenji
+    emotion: normal
+    text: それでは、冒頭陳述を行います。
+  - speaker: kenji
+    emotion: normal
+    text: 起訴の55億3000万円のうち、約43億8000万円はカジノに使われました。
+- id: ch8_kabu
+  title: ''
+  background: dz_kaigi
+  stage:
+  - {who: chichi, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2012年8月、創業家は大王製紙の株を北越紀州製紙に売ります。いまの北越コーポレーションです。
+    reading: にせんじゅうにねん はちがつ、そうぎょうけわ だいおう せいしの かぶお ほくえつ きしゅう せいしに うります。いまの ほくえつ こーぽれーしょんです。
+  - speaker: chichi
+    emotion: normal
+    text: 製紙業界の置かれた状況を鑑み、縁のある[北越|ほくえつ]紀州製紙とともに、
+  - speaker: chichi
+    emotion: normal
+    text: 業界再編の道筋をつけ得ればと思い、今回の株式譲渡を決断した次第です
+  - speaker: reimu
+    text: 父の高雄のコメントです。同じ月、元会長への貸付は全額戻った、と会社は明らかにしました。
+    reading: ちちの たかおの こめんとです。おなじ つき もと かいちょうえの かしつけわ ぜんがく もどったと、かいしゃわ あきらかに しました。
+- id: ch8_ronkoku
+  title: ''
+  background: dz_houtei
+  stage:
+  - {who: kenji, x: 0.28, flip: true, emotion: angry}
+  - {who: bengoshi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月5日、検察は懲役6年を求めます。
+    reading: くがつ いつか、けんさつわ ちょうえき ろくねんお もとめます。
+  - speaker: kenji
+    emotion: angry
+    text: グループ内での支配的地位を悪用して子会社の資金を財布代わりにした悪質な行為で、
+  - speaker: kenji
+    emotion: angry
+    text: 刑事責任は重い
+  - speaker: bengoshi
+    emotion: normal
+    text: 前会長は深く反省し、社会的制裁も受けている。
+  - speaker: bengoshi
+    emotion: normal
+    text: もう一度実社会でやり直す機会を与えていただきたい
+- id: ch8_hanketsu
+  title: ''
+  background: dz_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: sad}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人、最後に述べておきたいことはありますか。
+  - speaker: zundamon
+    emotion: sad
+    text: 私の安易な考えから犯罪を犯し、
+  - speaker: zundamon
+    emotion: sad
+    text: 関係者に多大な迷惑をかけ、悔やんでも悔やみきれない。
+  - speaker: zundamon
+    emotion: sad
+    text: しっかり責任を取り、二度と誤りを犯さない人生を送りたい
+  - speaker: reimu
+    text: 10月10日、判決。
+    reading: じゅうがつ とおか、はんけつ。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人を懲役4年に処する。
+    se: don
+  - speaker: saibancho
+    emotion: normal
+    text: 被告の地位と権限の強さや、被告に対する信頼から、
+  - speaker: saibancho
+    emotion: normal
+    text: 子会社の役員らが指示には逆らわないだろうと見越し、貸し付けを実行させた
+  - speaker: saibancho
+    emotion: normal
+    text: 公私の別をわきまえず、自己に対する信頼を[逆手|さかて]に取って敢行したもので、
+  - speaker: saibancho
+    emotion: normal
+    text: 任務違背の程度は大きい。動機に[酌む|くむ]べき点はない
+  - speaker: reimu
+    text: 起訴の分は、全額を返していました。それでも、実刑でした。
+    reading: きその ぶんわ、ぜんがくお かえして いました。それでも じっけいでした。
+    telops:
+    - {text: "全額を返しても 懲役4年", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: ch8_kosai
+  title: ''
+  background: dz_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 井川意高, emotion: sad}
+  - {who: saibancho2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2013年2月28日、東京高裁も控訴を退けます。
+    reading: にせんじゅうさんねん にがつ にじゅうはちにち、とうきょう こうさいも こうそお しりぞけます。
+  - speaker: saibancho2
+    emotion: normal
+    text: 公私混同が甚だしく、厳しい非難は免れない
+  - speaker: saibancho2
+    emotion: normal
+    text: オーナーの地位を乱用しており悪質
+  - speaker: reimu
+    text: 井川は微動だにせず聞き、裁判長に深く一礼して、小さな声でつぶやきました。
+    reading: いかわわ びどうだに せず きき、さいばんちょうに ふかく いちれい して ちいさな こえで つぶやきました。
+  - speaker: zundamon
+    emotion: sad
+    text: ありがとうございました
+  - speaker: reimu
+    text: 6月、最高裁が上告を退け、懲役4年が確定します。
+    reading: ろくがつ、さいこうさいが じょうこくお しりぞけ ちょうえき よねんが かくてい します。
+    background: dz_saikosai
+# ---- 論争 ----
+- id: ronso1
+  title: カジノで106億円負けた？
+  background: dz_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ カジノで106億円負けた会長なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう書かれることは多いわね。本人も、カジノに使うために借りたと書いてる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも106億8000万円は、子会社7社から借りたお金の合計なの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 負けた額じゃないの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年10月までに、そのうち47億5000万円は返してるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分近くは、返してたの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 委員会は使い道を、明らかにするに至っていないと書いた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 検察がカジノに使ったとしたのは、起訴の55億3000万円のうち約43億8000万円。
+  - speaker: zundamon
+    emotion: thinking
+    text: 数字が、頭の中でぐるぐるする……。
+    se: tenten
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、何が本当なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 確かなのは、子会社から26回で106億8000万円を借りたこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして逮捕の日に、ほとんどをカジノで使ったと本人が認めたこと。そこまでね。
+- id: ronso2
+  title: 全部返したから、いい？
+  background: dz_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: でも、お[金|かね]は全部返したんでしょ？ じゃあ、いいのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 返したのは本当よ。2012年8月には、全額が戻ってる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、裁かれたのは返したかどうかじゃないの。
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも借りたゲーム、ちゃんと返したからセーフなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 店長が店の金庫から自分に貸したら、返してもアウトでしょ。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: sad
+    text: ……アウトなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 問われたのは、どうやって借りたか。
+  - speaker: tsumugi
+    emotion: normal
+    text: トップの立場で、担保も取締役会もなしに自分へ貸させたこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが会社法違反の、[特別背任|とくべつハイニン]よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[一審|いっしん]の判決は、子会社の資金繰りが[逼迫|ひっぱく]するなど深刻な影響が出たとも言ってる。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 返せば済む話じゃ、なかったのか……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人はのちの著書で、[井川家|イカワケ]排除のクーデターがあったと主張してるわ。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 取り返そうと思ったら
+  background: dz_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取り返そうと思った時が、深みの入口よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人も、父に叱られたあと毎週のように通い続けたと書いてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2009年の秋、彼は負けを一度ぜんぶ取り返してた。それでも、やめなかった。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのもう1回と、同じなのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 負けても、部屋も飛行機もタダ。また来てねって、待っててくれるお店だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: タダより高いものは、ないのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本でも大阪で、カジノのある施設が2030年秋ごろの開業に向けて準備中よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カジノが日本人にお[金|かね]を貸すことには、規制がある。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本人はクレジットカードで賭けられないし、中にATMも置けないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: その場で、お[金|かね]を足せないんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人や家族が申し出れば、利用を止めることもできるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家族からも、止められるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。本人が止まれなくても、家族から申し出る道があるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: もう1つ。偉い人の頼みだから、は確かめない理由にならないわ。
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: dz_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。1通のメールから、15年がたちました。
+    reading: にせん にじゅうろくねん。いっつうの めーるから、じゅうごねんが たちました。
+- id: ima
+  title: 大王製紙のいま
+  background: dz_uriba
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 見て！ ティッシュの棚に、エリエールがあるのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: '[大王製紙|だいおうせいし]は、いまも上場している会社よ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月期の連結の売上高は、6668億円。
+  - speaker: zundamon
+    emotion: surprised
+    text: ティッシュ、強い……。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、何が変わったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 株の持ち主ね。創業家の株は、2012年と2019年に[北越|ほくえつ]へ渡ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 新潟の製紙会社よ。創業家は、大株主ではなくなったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 家の会社じゃ、なくなったんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月、両社はお互いの持ち株をそろえて対等な関係にすると発表したの。
+  - speaker: zundamon
+    emotion: thinking
+    text: お父さんと、本人は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 父の[井川高雄|イカワタカオ]は、2019年に82歳で亡くなったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は2013年10月から3年2か月服役し、いまは動画や本で自分のことを話してる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年のインタビューでは、ギャンブルは一種の臨死体験だと語ってるわ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: dz_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ くじは、あと1回でやめるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: そのあと1回も、やめときなさい。
+    se: oti
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい。
+  - speaker: tsumugi
+    emotion: normal
+    text: まだ大丈夫だから、もう少し続けてみるよ。20億円のチップを前に、彼はそう言ったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 日本にできるカジノでは、日本人はカードを使えずカジノから借りるのにも規制がある。
+  - speaker: tsumugi
+    emotion: normal
+    text: 借りて、もう少しと続けにくい仕組みにしてあるのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: まだ大丈夫って思ったら、もう大丈夫じゃない合図なのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
