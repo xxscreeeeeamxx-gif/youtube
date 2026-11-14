@@ -1,0 +1,1188 @@
+meta:
+  title: 「全く疎く、ノータッチだった」と会見で語った西武の総帥、141日後に逮捕された【ずんだもん解説】
+  slug: seibu-tsutsumi
+  hook_line: 「ノータッチだった」と語った西武の総帥は、なぜ有罪になったのか。
+  summary: 2004年10月13日、西武グループの総帥だった堤義明は、すべての役職を退く会見で「ノータッチだった」と語りました。上場している西武鉄道を、上場していないコクドが握る形。その株主名簿には、本人も知らない約1,200人の名前が並び、印鑑は会社の棚にありました。55年続いた上場は、なぜ65日後に終わったのか。証券取引等監視委員会の資料、西武鉄道の発表、当時の報道をもとに、会社と本人の言葉を主語つきで並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 証券取引等監視委員会「証券取引等監視委員会の活動状況」（2005年） https://www.fsa.go.jp/sesc/reports/n_16/n_16d.pdf
+  - 証券取引等監視委員会「告発事件の概要一覧表」 https://www.fsa.go.jp/sesc/actions/koku_gaiyou.htm
+  - 西武鉄道「コクド管理株の発生の原因・経緯等について」（2004年11月12日） https://www.seiburailway.jp/company/ir/disclosure/ka-04-33.pdf
+  - 小谷融「証券不祥事と法規制〜西武鉄道事件〜」『大阪経大論集』67巻6号（2017年） https://www.jstage.jst.go.jp/article/keidaironshu/67/6/67_43/_pdf
+  - ダイヤモンド・オンライン「堤義明が急拡大“前夜”に語った『三菱のような企業集団が夢』」（2020年4月22日） https://diamond.jp/articles/-/235248
+  tags:
+  - 西武鉄道
+  - 堤義明
+  - コクド
+  - 上場廃止
+  - 有価証券報告書
+  - 虚偽記載
+  - インサイダー取引
+  - 西武グループ
+  - プリンスホテル
+  - 西武ライオンズ
+  - 西武ホールディングス
+  - 名義株
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 名前だけの株主1200人
+    bottom: 西武鉄道の上場廃止
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: yakuin
+    label: 役員
+    voice: 100
+    pitch: 0.0
+    outfit: suit
+    color: '#3a3f4a'
+  - id: jimuin
+    label: 事務員
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#4a4038'
+  - id: jimuin2
+    label: 若い事務員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a7a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: kacho
+    label: 課長
+    voice: 67
+    pitch: -0.04
+    outfit: suit
+    color: '#454a55'
+  - id: kansayaku
+    label: 監査役
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: honbucho
+    label: 管理本部長
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4450'
+  - id: kokudo
+    label: コクド社員
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#5a4636'
+  - id: torihiki
+    label: 取引先
+    voice: 21
+    pitch: -0.08
+    outfit: suit
+    color: '#5a4a3a'
+  - id: shokuin
+    label: 東証の職員
+    voice: 11
+    pitch: 0.06
+    outfit: suit
+    color: '#3a4f5f'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2004年10月13日の会見） ----
+- id: co_kaiken
+  title: ''
+  background: tj_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堤義明, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2004年10月13日、東京のホテル。西武グループの総帥、堤義明、70歳。すべての役職を退く会見です。
+    reading: にせんよねん じゅうがつ じゅうさんにち、とうきょうの ほてる。せいぶ ぐるーぷの そうすい つつみ よしあき ななじゅっさい。すべての やくしょくお しりぞく かいけんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 株式実務とか法の手続き規定などには、率直なところ全く疎く、ノータッチだった
+  - speaker: reimu
+    text: 起訴状によれば、彼は141日前に届け出のうそを知り、公表の前にグループの会社が株を売っていました。
+    reading: きそじょうに よれば かれわ ひゃくよんじゅういちにち まえに とどけでの うそお しり、こうひょうの まえに ぐるーぷの かいしゃが かぶお うって いました。
+  - speaker: reimu
+    text: 12日後、彼の球団は日本一に。65日後、西武鉄道は上場廃止。141日後、彼は逮捕されます。
+    reading: じゅうににちご、かれの きゅうだんわ にほんいちに。ろくじゅうごにちご、せいぶ てつどうわ じょうじょう はいし。ひゃくよんじゅういちにちご、かれわ たいほ されます。
+# ---- 今の部屋（名前だけの部員） ----
+- id: hook
+  title: ''
+  background: tj_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ずんだ餅同好会、部員5人そろったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 誰が入ったの？
+  - speaker: zundamon
+    emotion: happy
+    text: クラスの子の名前を書いて、ハンコも押しといたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人たち、知ってるの？
+  - speaker: zundamon
+    emotion: normal
+    text: 知らないのだ。
+    se: zukko
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを47年以上やってた会社があるの。でも裁かれたのは、最後の数か月だけ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ノータッチだったのに、なんで有罪なの！？
+    telops:
+    - {text: "「ノータッチ」と言った総帥は なぜ有罪に？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 2004年5月・43%と65% ----
+- id: ch1_houkoku
+  title: 43%と65%
+  background: tj_yakuin
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堤義明, emotion: normal}
+  - {who: yakuin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 起訴状によれば、2004年5月25日。堤は、コクドの役員から報告を受けます。
+    reading: きそじょうに よれば にせんよねん ごがつ にじゅうごにち。つつみわ、こくどの やくいんから ほうこくお うけます。
+  - speaker: yakuin
+    emotion: thinking
+    text: 西武鉄道の報告書に、うちの持ち株が少なく書かれ続けています。
+  - speaker: zundamon
+    emotion: normal
+    text: ……。
+  - speaker: yakuin
+    emotion: normal
+    text: 届け出は約43%。本当は、約65%です。
+    telops:
+    - {text: "届け出 約43% → 本当は 約65%", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: yakuin
+    emotion: thinking
+    text: 上の10人の持ち株を足すと、88%になります。
+  - speaker: yakuin
+    emotion: sad
+    text: 上場を続ける決まりは、80%以下です。
+  - speaker: reimu
+    text: このあと公表の前に、コクドは株を売ります。ばれる前に売った株は、誰が買ったのか。
+    reading: この あと こうひょうの まえに、こくどわ かぶお うります。ばれる まえに うった かぶわ、だれが かったのか。
+- id: ch1_room
+  title: ''
+  background: tj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 43%と65%って、何が困るの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 上場していないコクドが、上場している西武鉄道を握ってる形なの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: だれでも買える店の看板なのに、品物の9割近くを店主の身内と仲間が押さえてるのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: それじゃ、ほかの人はほとんど買えないよ！
+    se: bikkuri
+  - speaker: zundamon
+    emotion: thinking
+    text: でも届け出は43%。残りの株は、誰の名前になってたの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 名前だけの株主よ。
+# ---- 名前だけの株主（2004年の株式の担当の棚） ----
+- id: ch1_meigi
+  title: 名前だけの株主
+  background: tj_kabushiki_new
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1,200人の株主は、どこにいたのか。名前は、本人も知らない元社員らのものでした。
+    reading: せんにひゃくにんの かぶぬしわ、どこに いたのか。なまえわ、ほんにんも しらない もと しゃいんらの ものでした。
+  - speaker: reimu
+    text: その人たちの印鑑は、西武鉄道の社内の棚にしまわれていました。
+    reading: その ひとたちの いんかんわ、せいぶ てつどうの しゃないの たなに しまわれて いました。
+- id: ch1_room2
+  title: ''
+  background: tj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 知らない人の名前の株って、1人いくらぶんなの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 平均で約9万株。1株1,200円ほどなら、約1億円よ。
+    telops:
+    - {text: "知らないうちに 平均で1億円分の株主", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 知らないうちに、1億円の株主！？
+  - speaker: zundamon
+    emotion: happy
+    text: ボクも知らないうちに、1億円の株主になりたいのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人には、1円も入らないわよ。配当はコクドへ行くんだから。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 名簿には、[堤義明|つつみよしあき]の名前で81万株もあったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: その81万株の[堤義明|つつみよしあき]は、本人なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: それも、コクドが管理する株だったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本人の名前の株まで、本人のじゃないのだ！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: しかもこの名簿のうそは、彼がグループを継ぐ前から続いてたの。
+# ---- 1964年・父の事務所の株券 ----
+- id: card1964
+  title: ''
+  background: tj_card_1964
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1964年4月。西武グループをつくった父、堤康次郎が亡くなります。75歳でした。
+    reading: せんきゅうひゃく ろくじゅうよねん しがつ。せいぶ ぐるーぷお つくった ちち つつみ やすじろうが なくなります。ななじゅうごさい でした。
+- id: ch2_bunsitsu
+  title: 広尾分室の株券
+  background: tj_bunsitsu
+  stage:
+  - {who: jimuin, x: 0.28, flip: true, emotion: sad}
+  - {who: jimuin2, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: jimuin2
+    emotion: thinking
+    text: 棚の西武鉄道の株券は、どこへ運びます？
+  - speaker: jimuin
+    emotion: sad
+    text: 全部、コクドだ。事務所の後始末だよ。
+  - speaker: jimuin2
+    emotion: surprised
+    text: この束を、全部……。
+    background: tj_bunsitsu_hako
+  - speaker: jimuin2
+    emotion: normal
+    text: 後を継ぐのは、三男の義明さんだそうですね。
+  - speaker: jimuin
+    emotion: normal
+    text: 29歳だそうだ。
+  - speaker: reimu
+    text: 名前だけの株主が、いつなぜ始まったのか。西武鉄道はのちに調べても、よく判りませんでしたと書いています。
+    reading: なまえだけの かぶぬしが、いつ なぜ はじまったのか。せいぶ てつどうわ のちに しらべても、よく わかりませんでしたと かいて います。
+  - speaker: reimu
+    text: この箱の中身が、40年後に西武鉄道の上場を終わらせます。
+    reading: この はこの なかみが、よんじゅうねんごに せいぶ てつどうの じょうじょうお おわらせます。
+# ---- 1977年・三菱のような事業集団 ----
+- id: ch3_yume
+  title: 三菱のような事業集団
+  background: tj_yakuin
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堤義明, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1977年。42歳の堤は、経済誌のインタビューでこう語っています。
+    reading: せんきゅうひゃく ななじゅうななねん。よんじゅうにさいの つつみわ けいざいしの いんたびゅーで こう かたって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 西武集団を三菱のような事業集団にしたいというのが一つの夢ですね
+  - speaker: kisha
+    emotion: surprised
+    text: 三菱のような、ですか。
+  - speaker: reimu
+    text: 理想を言えば、苗場のようなスキー場を全国に10か所造りたいとも話しました。
+    reading: りそうお いえば なえばの ような すきーじょうお ぜんこくに じゅっかしょ つくりたいとも はなしました。
+  - speaker: reimu
+    text: 翌年には、プロ野球の球団を買います。
+    reading: よくねんにわ、ぷろやきゅうの きゅうだんお かいます。
+# ---- 1983年ごろ・株主コード92 ----
+- id: ch4_code92
+  title: 株主コード92
+  background: tj_kabushiki
+  bgm: curious
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1983年ごろ。西武鉄道は、株主の名簿をコンピューターに移します。
+    reading: せんきゅうひゃく はちじゅうさんねん ごろ。せいぶ てつどうわ、かぶぬしの めいぼお こんぴゅーたーに うつします。
+  - speaker: shinjin
+    emotion: normal
+    text: 先輩。この棚の印鑑は、誰のですか。
+  - speaker: senpai
+    emotion: normal
+    text: 92番の人たちのだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 92番？
+  - speaker: senpai
+    emotion: normal
+    text: コンピューターの株主コードだ。92番は、コクドの株だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: でも名簿には、知らない人の名前が並んでますよ。
+  - speaker: senpai
+    emotion: normal
+    text: 名前はな。
+  - speaker: shinjin
+    emotion: thinking
+    text: 前の担当の人からは、どう引き継いだんですか。
+  - speaker: senpai
+    emotion: normal
+    text: コクドの指示に基づいて処理するように、だ。
+    telops:
+    - {text: "引き継ぎの言葉「コクドの指示に基づいて処理するように」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shinjin
+    emotion: normal
+    text: それで、何をするんです？
+  - speaker: senpai
+    emotion: normal
+    text: 株主総会の招集通知を作る。
+  - speaker: shinjin
+    emotion: happy
+    text: じゃあ、切手を貼りますね！
+  - speaker: senpai
+    emotion: normal
+    text: 送らない。
+  - speaker: shinjin
+    emotion: surprised
+    text: 作るのに！？
+  - speaker: senpai
+    emotion: normal
+    text: 作って、送らない。
+  - speaker: shinjin
+    emotion: thinking
+    text: 配当は？
+  - speaker: senpai
+    emotion: normal
+    text: コクドに払う。
+  - speaker: shinjin
+    emotion: thinking
+    text: 来年の通知は……。
+  - speaker: senpai
+    emotion: normal
+    text: 作って、送らない。
+  - speaker: shinjin
+    emotion: normal
+    text: ……切手代、浮きますね。
+    beat: true
+# ---- 1984年・対談 ----
+- id: ch4_taidan
+  title: ''
+  background: tj_yakuin
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堤義明, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1984年。堤は住友銀行の磯田一郎との対談で、銀行が企業を育てた話の中でこう語っています。
+    reading: せんきゅうひゃく はちじゅうよねん。つつみわ すみとも ぎんこうの いそだ いちろうとの たいだんで、ぎんこうが きぎょうお そだてた はなしの なかで こう かたって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 私のところなんかも昔、止められたら倒産というのはなんべんかあったんですよ
+# ---- 1987年・世界一の富豪 ----
+- id: ch5_fugo
+  title: 世界一の富豪
+  background: tj_kabushiki
+  bgm: natsuyasumi
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1987年。アメリカの経済誌フォーブスは、堤義明を世界一の富豪と書きました。
+    reading: せんきゅうひゃく はちじゅうななねん。あめりかの けいざいし ふぉーぶすわ、つつみ よしあきお せかいいちの ふごうと かきました。
+  - speaker: shinjin
+    emotion: happy
+    text: 先輩！ うちの社長、世界一のお[金|かね]持ちですって！
+    se: levelup
+  - speaker: senpai
+    emotion: normal
+    text: そうか。
+  - speaker: shinjin
+    emotion: happy
+    text: スキー場は33か所。ホテルも、どんどん増えてます！
+  - speaker: shinjin
+    emotion: happy
+    text: 野球の球団まで、持ってますし！
+  - speaker: senpai
+    emotion: normal
+    text: 通知、作るぞ。
+  - speaker: shinjin
+    emotion: thinking
+    text: ……送らないやつですね。
+    beat: true
+  - speaker: reimu
+    text: 届け出の数字の上では、西武鉄道は上場の基準を満たしていました。
+    reading: とどけでの すうじの うえでわ、せいぶ てつどうわ じょうじょうの きじゅんお みたして いました。
+  - speaker: reimu
+    text: それから17年。株式の担当には、ほとんど異動がありませんでした。
+    reading: それから じゅうななねん。かぶしきの たんとうにわ ほとんど いどうが ありませんでした。
+    background: tj_kabushiki_new
+  - speaker: shinjin
+    emotion: thinking
+    text: ……変わったのは、パソコンだけですね。
+  - speaker: senpai
+    emotion: normal
+    text: 前例どおりだ。
+    beat: true
+# ---- 2004年・総会屋の事件と6月の1通 ----
+- id: card2004
+  title: ''
+  background: tj_card_2004
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2004年3月、総会屋の事件で、西武鉄道の専務らが逮捕。4月14日、堤は西武鉄道の会長を辞めます。
+    reading: にせんよねん さんがつ そうかいやの じけんで、せいぶ てつどうの せんむらが たいほ。しがつ じゅうよっか、つつみわ せいぶ てつどうの かいちょうお やめます。
+  - speaker: reimu
+    text: 5月の報告から1か月。西武鉄道は、例年どおりの有価証券報告書を出しました。のちに罪に問われる1通です。
+    reading: ごがつの ほうこくから いっかげつ。せいぶ てつどうわ、れいねん どおりの ゆうかしょうけん ほうこくしょお だしました。のちに つみに とわれる いっつうです。
+# ---- 2004年夏・印鑑の棚 ----
+- id: ch6_inkan
+  title: 印鑑の棚
+  background: tj_kabushiki_new
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: kacho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: この事件の反省で人が入れ替わり、株式の担当に新しい課長が来ます。これが、もっと大きなうそを掘り出します。
+    reading: この じけんの はんせいで ひとが いれかわり、かぶしきの たんとうに あたらしい かちょうが きます。これが、もっと おおきな うそお ほりだします。
+  - speaker: kacho
+    emotion: thinking
+    text: この棚の印鑑、なぜうちにあるんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 前例だ。
+  - speaker: kacho
+    emotion: thinking
+    text: 前例、ですか。
+    beat: true
+  - speaker: senpai
+    emotion: normal
+    text: コクドの指示に基づいて処理するように、と引き継いでいる。
+  - speaker: kacho
+    emotion: thinking
+    text: 株主総会の通知は、どうしてたんです？
+  - speaker: senpai
+    emotion: normal
+    text: 去年までは、作って送らなかった。
+  - speaker: kacho
+    emotion: surprised
+    text: ……送らなかった！？
+    se: tenten
+  - speaker: kacho
+    emotion: surprised
+    text: 名前の人たちの印鑑を、うちの会社が持ってるんですよ？
+  - speaker: senpai
+    emotion: sad
+    text: ……ずっと、そうしてきた。
+  - speaker: kacho
+    emotion: normal
+    text: 8月中に、全部コクドへ引き渡します。
+  - speaker: senpai
+    emotion: sad
+    text: ……棚が、からっぽだな。
+    background: tj_kabushiki_kara
+    beat: true
+# ---- 2004年8月・監査役の指摘と社長の注意 ----
+- id: ch6_kansa
+  title: 8月20日の取締役会
+  background: tj_kaigi
+  stage:
+  - {who: kansayaku, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: kansayaku
+    emotion: thinking
+    text: 個人の名前になっている株に、手を打つ必要があります。
+  - speaker: kansayaku
+    emotion: thinking
+    text: 本当の持ち主を、確かめるべきです。
+  - speaker: reimu
+    text: 同じ日、西武鉄道はコクドとプリンスホテルに、書面で事実の確認を頼みます。
+    reading: おなじ ひ、せいぶ てつどうわ こくどと ぷりんす ほてるに しょめんで じじつの かくにんお たのみます。
+- id: ch6_chui
+  title: ''
+  background: tj_kaigi
+  stage:
+  - {who: honbucho, x: 0.5, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3日後。社長の指示で取締役が集められ、こう注意されます。
+    reading: みっかご。しゃちょうの しじで とりしまりやくが あつめられ、こう ちゅうい されます。
+  - speaker: honbucho
+    emotion: normal
+    text: 当社株式の売買に際しては十分注意するように。
+  - speaker: honbucho
+    emotion: normal
+    text: また家族が売買する際も同様である。
+  - speaker: reimu
+    text: 西武鉄道はのちに、これはコクドの売買を予想した注意ではなかった、と書いています。
+    reading: せいぶ てつどうわ のちに、これわ こくどの ばいばいお よそう した ちゅういでわ なかったと かいて います。
+  - speaker: reimu
+    text: コクドが取引先に株を売ったのは、この8月から9月にかけてでした。
+    reading: こくどが とりひきさきに かぶお うったのわ、この はちがつから くがつに かけて でした。
+# ---- 2004年8〜9月・売る ----
+- id: ch7_uru
+  title: 長いお付き合い
+  background: tj_osetsu
+  stage:
+  - {who: kokudo, x: 0.28, flip: true, emotion: happy}
+  - {who: torihiki, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: torihiki
+    emotion: surprised
+    text: 西武鉄道の株を、うちに？
+  - speaker: kokudo
+    emotion: happy
+    text: 長いお付き合いですから。
+  - speaker: torihiki
+    emotion: thinking
+    text: '[市場|しじょう]を通さずに、ですか。'
+  - speaker: kokudo
+    emotion: normal
+    text: はい。取引のある会社に、お願いして回っています。
+  - speaker: torihiki
+    emotion: thinking
+    text: 値段は、いくらで？
+  - speaker: kokudo
+    emotion: normal
+    text: 1株1,200円ほどで、お願いできれば。
+  - speaker: torihiki
+    emotion: normal
+    text: ……長いお付き合い、ですからね。
+    beat: true
+  - speaker: reimu
+    text: 起訴状によれば、罪に問われた9月の10社分だけで約1,800万株、約216億円。
+    reading: きそじょうに よれば つみに とわれた くがつの じゅっしゃぶん だけで、やく せんはっぴゃくまんかぶ やく にひゃくじゅうろくおくえん。
+  - speaker: reimu
+    text: 買った会社は、まだ知りません。この株が、2か月後に整理ポストに並ぶことを。
+    reading: かった かいしゃわ、まだ しりません。この かぶが、にかげつごに せいり ぽすとに ならぶ ことお。
+# ---- 2004年9月30日・口頭の答え ----
+- id: ch7_kaito
+  title: ''
+  background: tj_kaigi
+  bgm: serious
+  stage:
+  - {who: kokudo, x: 0.28, flip: true, emotion: normal}
+  - {who: kacho, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 9月30日。コクドとプリンスホテルは、西武鉄道の問い合わせに口頭で答えます。
+    reading: くがつ さんじゅうにち。こくどと ぷりんす ほてるわ、せいぶ てつどうの といあわせに こうとうで こたえます。
+  - speaker: kokudo
+    emotion: normal
+    text: 当該株式については、その実質所有者は、
+  - speaker: kokudo
+    emotion: normal
+    text: 西武鉄道が把握している株主名簿上の株主ではなく、コクドおよびプリンスホテルである
+  - speaker: kacho
+    emotion: sad
+    text: ……やっぱり、コクドの株だったんですね。
+    se: gaan
+# ---- 2004年10月13日・会見 ----
+- id: ch8_kaiken
+  title: 10月13日の会見
+  background: tj_kaiken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堤義明, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 10月13日、午後6時半。新高輪プリンスホテルの平安の間。彼は、配られたばかりの文面を読み上げます。
+    reading: じゅうがつ じゅうさんにち、ごご ろくじはん。しんたかなわ ぷりんす ほてるの へいあんのま。かれわ くばられた ばかりの ぶんめんお よみあげます。
+  - speaker: zundamon
+    emotion: sad
+    text: コクド及びグループ各社のすべての取締役その他の役職を辞任し、
+  - speaker: zundamon
+    emotion: sad
+    text: 経営の第一線から身を引くことといたしました
+  - speaker: zundamon
+    emotion: sad
+    text: 株式実務とか法の手続き規定などには、率直なところ全く疎く、ノータッチだった
+    telops:
+    - {text: "堤「全く疎く、ノータッチだった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: すべてこういうことが起こったのは、大学を出てすぐ経営にタッチして
+  - speaker: zundamon
+    emotion: sad
+    text: '[前行け前行け|まえいけまえいけ]と進んできて、肝心のことに気づかなかったためだ'
+  - speaker: reimu
+    text: 起訴状によれば、彼は5月に報告を受けていました。8月から9月に、コクドは株を売っていました。
+    reading: きそじょうに よれば、かれわ ごがつに ほうこくお うけて いました。はちがつから くがつに、こくどわ かぶお うって いました。
+- id: ch8_board
+  title: ''
+  background: tj_board
+  stage:
+  - {who: shokuin, x: 0.5, emotion: thinking}
+  cuts:
+  - speaker: shokuin
+    emotion: thinking
+    text: 西武鉄道から、届け出の訂正が出ました。
+  - speaker: shokuin
+    emotion: normal
+    text: 株は、今日から監理ポストに移します。
+    background: tj_board_kanri
+    se: don
+  - speaker: shokuin
+    emotion: thinking
+    text: 上場廃止のおそれがある銘柄の、置き場です。
+# ---- 2004年10〜12月・12日後と65日後 ----
+- id: ch9_nihonichi
+  title: 12日後と65日後
+  background: tj_shinbun
+  bgm: 223am
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 10月25日。会見から12日後、西武ライオンズは日本一になりました。
+    reading: じゅうがつ にじゅうごにち。かいけんから じゅうににちご、せいぶ らいおんずわ にほんいちに なりました。
+  - speaker: shinjin
+    emotion: happy
+    text: 先輩、ライオンズが日本一ですよ！
+  - speaker: senpai
+    emotion: sad
+    text: 同じ月に、うちの株は監理ポストだ。
+  - speaker: shinjin
+    emotion: sad
+    text: ……新聞の面が、違いますね。
+    beat: true
+- id: ch9_haishi
+  title: ''
+  background: tj_board_kanri
+  stage:
+  - {who: shokuin, x: 0.5, emotion: sad}
+  cuts:
+  - speaker: shokuin
+    emotion: sad
+    text: 11月16日、西武鉄道の上場廃止が決まりました。
+  - speaker: reimu
+    text: 東証の社長は会見で、虚偽記載につき西武鉄道による組織的な取組みがあったと推認できる、と述べました。
+    reading: とうしょうの しゃちょうわ かいけんで、きょぎきさいにつき せいぶ てつどうによる そしきてきな とりくみが あったと すいにん できると のべました。
+  - speaker: shokuin
+    emotion: sad
+    text: 上場廃止は12月17日。1949年からの、55年の上場でした。
+    telops:
+    - {text: "会見から65日後 上場廃止", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: ch9_room
+  title: ''
+  background: tj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 上場廃止って、株を持ってた人はどうなるの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 9月に売られた株は、1株1,200円ほど。10月20日には、548円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 10万円で買ったら、1か月ほどで4万5千円ほど！？
+    se: chin
+  - speaker: tsumugi
+    emotion: normal
+    text: 上場廃止になると、取引所ではもう売り買いできないの。
+  - speaker: zundamon
+    emotion: sad
+    text: 売りたくても、売れない……。
+  - speaker: tsumugi
+    emotion: normal
+    text: このあと、金融庁の点検で589社が報告書を直したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 西武だけじゃなかったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 589社も！？
+# ---- 2005年1月・買い戻し ----
+- id: ch9_henpin
+  title: ''
+  background: tj_osetsu
+  bgm: 223am
+  stage:
+  - {who: kokudo, x: 0.28, flip: true, emotion: sad}
+  - {who: torihiki, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2005年1月。コクドは売った先の72社すべてと、契約を解くことで合意。返す代金は約650億円です。
+    reading: にせんごねん いちがつ。こくどわ うった さきの ななじゅうにしゃ すべてと けいやくお とく ことで ごうい。かえす だいきんわ やく ろっぴゃくごじゅうおくえんです。
+  - speaker: torihiki
+    emotion: thinking
+    text: 上場廃止の基準に触れるなんて、あのとき説明はありませんでしたよ。
+  - speaker: torihiki
+    emotion: thinking
+    text: うちだけじゃ、ないんですよね。
+  - speaker: kokudo
+    emotion: sad
+    text: ……72社、すべてです。
+  - speaker: kokudo
+    emotion: sad
+    text: ……代金は、お返しします。
+  - speaker: torihiki
+    emotion: normal
+    text: 株も、お返しします。
+    background: tj_osetsu_henpin
+    beat: true
+# ---- 2005年・141日後 ----
+- id: card2005
+  title: ''
+  background: tj_card_2005
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2005年3月3日。会見から141日後、堤は東京地検特捜部に逮捕されます。70歳でした。
+    reading: にせんごねん さんがつ みっか。かいけんから ひゃくよんじゅういちにちご、つつみわ とうきょう ちけん とくそうぶに たいほ されます。ななじゅっさい でした。
+  - speaker: reimu
+    text: 3月23日、起訴。罪は証券取引法違反。有価証券報告書の虚偽記載と、インサイダー取引の2つです。
+    reading: さんがつ にじゅうさんにち、きそ。つみわ しょうけん とりひきほう いはん。ゆうかしょうけん ほうこくしょの きょぎきさいと、いんさいだー とりひきの ふたつです。
+  - speaker: reimu
+    text: 起訴を伝える新聞は、供述をこう書きました。公表すると株価下落や上場廃止になると思い、隠して株を売った。
+    reading: きそお つたえる しんぶんわ きょうじゅつお こう かきました。こうひょう すると かぶか げらくや じょうじょう はいしに なると おもい、かくして かぶお うった。
+# ---- 2005年・法廷 ----
+- id: ch10_houtei
+  title: 法廷
+  background: tj_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堤義明, emotion: sad}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月の初公判で、71歳の堤は起訴事実を認め、謝罪しました。10月27日、判決です。
+    reading: ろくがつの しょこうはんで、ななじゅういっさいの つつみわ きそじじつお みとめ しゃざい しました。じゅうがつ にじゅうしちにち、はんけつです。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人を[懲役2年6月|ちょうえきにねんろっかげつ]及び罰金500万円に処する。
+  - speaker: saibancho
+    emotion: normal
+    text: この裁判確定の日から4年間、その懲役刑の執行を猶予する。
+    telops:
+    - {text: "懲役2年6月 執行猶予4年", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 被告会社西武鉄道を罰金2億円に、被告会社コクドを罰金1億5000万円に処する。
+  - speaker: reimu
+    text: 判決は、そのまま確定しました。この法廷で裁かれたのは、2004年6月の1通の報告書と、9月の売却。
+    reading: はんけつわ そのまま かくてい しました。この ほうていで さばかれたのわ、にせんよねん ろくがつの いっつうの ほうこくしょと くがつの ばいきゃく。
+  - speaker: reimu
+    text: 名簿のうそが始まった1957年ごろのことは、罪に問われていません。
+    reading: めいぼの うそが はじまった せんきゅうひゃく ごじゅうななねん ごろの ことわ、つみに とわれて いません。
+- id: ch10_kotae
+  title: ノータッチと有罪
+  background: tj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ノータッチだったのに、なんで有罪になったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁かれたのは、名簿のうそを始めたことじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 告発によれば、知ったあとにうその報告書を出したこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: そしてコクドの社員らと組んで、公表の前にコクドの持ち株を売ったことよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 株の手続きに疎くても、知ったあとのことは……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人も、法廷でそれを認めたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 始まりじゃなくて、知ったあとのことで裁かれたのだ！
+    se: hirameki
+# ---- 2006〜2016年・コクドの消えた日 ----
+- id: card2006
+  title: ''
+  background: tj_card_2006
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2006年2月。コクドはプリンスホテルに合併されて、消えました。
+    reading: にせんろくねん にがつ。こくどわ ぷりんす ほてるに がっぺい されて、きえました。
+- id: ch11_biru
+  title: コクドの消えた日
+  background: tj_biru
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: コクドが、なくなった……。
+  - speaker: senpai
+    emotion: normal
+    text: 上に西武ホールディングスができる。社長は、去年銀行から来た後藤さんだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 銀行の人が、決めたんですか。
+  - speaker: senpai
+    emotion: normal
+    text: この形を出したのは、社外の5人の委員会だ。
+  - speaker: senpai
+    emotion: normal
+    text: 外国のファンドも、お[金|かね]を出したそうだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 西武鉄道の株、また買えるようになるんでしょうか。
+  - speaker: senpai
+    emotion: thinking
+    text: ……さあな。
+- id: card2014
+  title: ''
+  background: tj_card_2014
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2014年4月。西武ホールディングスは、東証一部に上場します。
+    reading: にせんじゅうよねん しがつ。せいぶ ほーるでぃんぐすわ、とうしょう いちぶに じょうじょう します。
+- id: ch11_new
+  title: ''
+  background: tj_biru_new
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shinjin
+    emotion: happy
+    text: 看板も新しくなって、グループの株がまた買えるようになりましたね！
+  - speaker: senpai
+    emotion: normal
+    text: 上場廃止から、9年と4か月だ。
+- id: card2016
+  title: ''
+  background: tj_card_2016
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2016年2月。西武ホールディングスは、堤ら旧経営陣5人から255億円を回収すると発表します。
+    reading: にせんじゅうろくねん にがつ。せいぶ ほーるでぃんぐすわ、つつみら きゅう けいえいじん ごにんから にひゃくごじゅうごおくえんお かいしゅう すると はっぴょう します。
+- id: ch11_zero
+  title: ''
+  background: tj_biru_new
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shinjin
+    emotion: thinking
+    text: 株主に払った賠償のぶん、ですよね。
+  - speaker: senpai
+    emotion: normal
+    text: これで、元オーナーの持ち株はゼロだ。
+  - speaker: shinjin
+    emotion: sad
+    text: 1株も、ですか。
+  - speaker: senpai
+    emotion: sad
+    text: 1株もだ。
+    beat: true
+# ---- 論争：父の代のせい？ ----
+- id: ronso1
+  title: 父の代のせい？
+  background: tj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 名前だけの株主は父の代からで、本人は背負わされただけって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まったのは、たしかに彼が継ぐ前。少なくとも1957年ごろからよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1964年までは、父の事務所が株券をまとめて預かってたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 誰がなぜ始めたかは、西武鉄道が調べても分からなかったの。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、本人は悪くないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうとも言えないの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 起訴状だと、彼が知ったのは5月25日。会見まで、141日あるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのあいだに例年どおりの報告書が出て、公表の前に株が売られた。本人も法廷で認めたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 検察は、彼が部下の直そうという進言を退けたとも主張したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 父のせいとも全部知ってたとも、言えないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 始まったのは、彼が継ぐ前。裁かれたのは、その141日にしたことよ。
+# ---- 論争：ただの書類のミス？ ----
+- id: ronso2
+  title: ただの書類のミス？
+  background: tj_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも決算の数字は、うそじゃないのだ！ 80%の決まりに引っかかっただけなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 売上や利益のうそじゃないのは、その通り。うそだったのは、株主の顔ぶれよ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、ただの書類のミスなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは違うわ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 東証が上場廃止にしたのは、80%を超えたからだけじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 虚偽記載の影響が重大で、投資者を守るためと決めたのよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決も、コクドの持ち株の数は投資の判断を大きく変えうる事実だとしてるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 数字のうそじゃなくて……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 誰の会社か、といううそ。それは、株を買う人が一番知りたいことだったの。
+    telops:
+    - {text: "数字ではなく「誰の会社か」のうそ", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 最後は銀行と外国のファンドに、会社を取られたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 立て直しの形は、社外の5人の委員会の答申からよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大株主になった外国のファンドも、2017年に全部売って出ていったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 取られた、とは言えないのか……。
+# ---- 本当の注意点 ----
+- id: chui
+  title: 大株主の欄
+  background: tj_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 有価証券報告書の大株主の欄も、うそのことがあるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 西武鉄道は上の10人を63.68%と書いて、本当は88.57%だったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 書いてある数字が、そもそも違ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 上場廃止のあいだ、約1万4千人の株主がお[金|かね]を取り戻す道を失ったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 1万4千人も……。
+  - speaker: tsumugi
+    emotion: normal
+    text: もう1つ。前例だからという言葉が、うそを半世紀つないだの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 見つけたのは、事件のあとの人事異動で来た新任の部長と課長だったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: なぜって聞いた、あの課長なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そういうものだと言われた書類は、一度だけなぜと聞いていいの。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクの同好会の名簿も……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 聞かれた元社員の数人は、自分の名前が用いられていることを知らなかったって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前は、知らないうちに使われていることがあるのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……5人に、ちゃんと聞いてくるのだ。
+    se: shobon
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: tj_card_2026
+  bgm: haru_kitchen
+  cuts:
+  - speaker: reimu
+    text: 2026年。ノータッチだったと語った会見から、22年がたちました。
+    reading: にせんにじゅうろくねん。のーたっち だったと かたった かいけんから、にじゅうにねんが たちました。
+- id: ima
+  title: 西武のいま
+  background: tj_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 西武鉄道は、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 西武ホールディングスの子会社として、電車を走らせてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月には運賃を改定して、こども全線定期券も始めたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: こども用の、全線の定期券！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 西武のデパートも、同じ会社なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: あれは別のグループ。1971年に、兄の[堤清二|つつみせいじ]が率いる流通の西武と分かれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: CEOは2026年4月から、生え抜きの[西山隆一郎|にしやまりゅういちろう]が務めてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2005年に銀行から来た[後藤高志|ごとうたかし]は、会長として残ってるわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 銀行から来た人と、生え抜きの人か。
+  - speaker: tsumugi
+    emotion: thinking
+    text: この事件のあと、社長が報告書は正しいと確かめる書類を出す決まりもできたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[堤|つつみ]さんは？'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 元オーナーは、いま92歳。2016年に、グループとの資本の関係は切れたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: tj_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ちゃんと聞いてきたのだ！ 入ってくれたのは、2人だったのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 5人の名簿が、本当は2人。正直な名簿ね。
+    se: oti
+  - speaker: zundamon
+    emotion: happy
+    text: でも2人は、本物の部員なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 全く疎く、ノータッチだった。2004年の会見の言葉よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 名前だけの株主は、もういないの。81万株の[堤義明|つつみよしあき]もね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 西武鉄道は、株の事務を外の会社に任せると書いたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 印鑑の棚の仕事は、外の会社に任せることにしたのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 三菱のような事業集団にしたいって、1977年に言ってたのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 39年後の2016年。創業家は、その集団の株を1株も持たなくなったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 名前を書くのは一瞬なのに、直すまでに47年以上かかったのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 名前を貸すのも借りるのも、本人に聞いてからね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
