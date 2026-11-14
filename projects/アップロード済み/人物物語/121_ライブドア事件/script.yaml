@@ -1,0 +1,1237 @@
+meta:
+  title: 「想定の範囲内の良い方でおさまった」と言ったライブドアの社長、9か月後に逮捕された【ずんだもん解説】
+  slug: livedoor-horie
+  hook_line: 時価総額7300億円の会社は、なぜ3か月で上場廃止になったのか。
+  summary: 2005年4月、フジテレビとの和解の会見で、ライブドアの社長・堀江貴文は「想定の範囲内の良い方でおさまった」と語りました。1株を100株に切って増えた株主、すでに買ってあった出版社を株式交換で子会社にするという発表、そして自分の会社の株を売ったお金を入れた「売上」。時価総額7300億円の会社は、なぜ強制捜査から3か月で上場廃止になったのか。証券取引等監視委員会と金融庁の資料、判決、本人の会見の言葉をもとに、判決が認めた範囲と本人の主張を並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 証券取引等監視委員会「証券取引等監視委員会の活動状況」（2006年8月） https://www.fsa.go.jp/sesc/reports/n_17/n_17b.pdf
+  - 金融庁「ライブドアに関して報道されている問題点と証券会社に期待される役割」（2006年3月27日の審議会資料） https://www.fsa.go.jp/singi/mdth_kon/siryou/20060327/03-2.pdf
+  - INTERNET Watch「本誌記事で振り返る「ライブドア事件」」（2006年12月19日） https://internet.watch.impress.co.jp/static/index/2006/12/19/
+  - ITmedia NEWS「堀江社長、提携は「想定の範囲内の良い方」」（2005年4月18日） https://www.itmedia.co.jp/news/articles/0504/18/news071.html
+  - ITmedia NEWS「堀江被告に懲役2年6カ月の実刑判決」（2007年3月16日） https://www.itmedia.co.jp/news/articles/0703/16/news040.html
+  - 日本経済新聞「堀江被告の実刑確定へ ライブドア事件」（2011年4月26日） https://www.nikkei.com/article/DGXNASDG2601U_W1A420C1000000/
+  tags:
+  - ライブドア
+  - 堀江貴文
+  - ライブドア事件
+  - ホリエモン
+  - ニッポン放送
+  - フジテレビ
+  - 粉飾決算
+  - 証券取引法違反
+  - 株式分割
+  - 想定の範囲内
+  - 上場廃止
+  - 東京証券取引所
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 想定の範囲内
+    bottom: 9か月後に逮捕
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: miyauchi
+    label: 宮内亮治
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: kintetsu
+    label: 近鉄
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#3a4f5f'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: kyokuin
+    label: 局員
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#454a55'
+  - id: kyokuin2
+    label: 若手局員
+    voice: 67
+    pitch: 0.04
+    outfit: suit
+    color: '#6a7a8a'
+  - id: hieda
+    label: 日枝久
+    voice: 42
+    pitch: 0.0
+    outfit: suit
+    color: '#1f3550'
+  - id: kamebuchi
+    label: 亀渕昭信
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#5a4636'
+  - id: shokuin
+    label: 取引所職員
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: shokuin2
+    label: 職員
+    voice: 67
+    pitch: -0.02
+    outfit: suit
+    color: '#2f3440'
+  - id: hiramatsu
+    label: 平松社長
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kabunushi
+    label: 株主
+    voice: 8
+    pitch: 0.1
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2006年1月17日、午前7時前。捜索が明けた朝、約5分の会見） ----
+- id: co_yoake
+  title: ''
+  background: ld_tower_yoake
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2006年1月17日、午前7時前。東京・六本木のライブドア本社。
+    reading: にせん ろくねん いちがつ じゅうしちにち ごぜん しちじまえ。とうきょう ろっぽんぎの らいぶどあ ほんしゃ。
+  - speaker: reimu
+    text: 社長の堀江貴文、33歳。夜通しの家宅捜索が終わった朝の会見です。
+    reading: しゃちょうの ほりえ たかふみ さんじゅうさんさい。よどおしの かたく そうさくが おわった あさの かいけんです。
+- id: co_kaiken
+  title: ''
+  background: ld_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堀江貴文, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 全容把握に向けて社内で調査中。解明次第、報告したい
+  - speaker: kisha
+    emotion: normal
+    text: 進退は？
+  - speaker: zundamon
+    emotion: normal
+    text: 状況が把握できていない状態で述べるのは無責任になる
+  - speaker: reimu
+    text: 翌日、東京証券取引所は、すべての株の売買を止めます。6日後、彼は逮捕されます。
+    reading: よくじつ とうきょう しょうけん とりひきじょわ すべての かぶの ばいばいお とめます。むいかご、かれわ たいほ されます。
+# ---- 今の部屋（100切れのピザ） ----
+- id: hook
+  title: ''
+  background: ld_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ピザを100切れに切ったのだ！ 1切れ10円なら、みんな買うのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 全部売っても1000円。ピザは1枚のままよ。
+    se: hammer
+  - speaker: zundamon
+    emotion: normal
+    text: でも安く見えるから、行列ができるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを本当にやった会社があるの。株を細かく切って、株主は22万人。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 時価総額7300億円の会社が、3か月で上場廃止。
+    telops:
+    - {text: "7300億円の会社が なぜ3か月で上場廃止？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 7300億円が、なんで3か月で！？
+# ---- 1996〜2000年（ナレ1行） ----
+- id: card1996
+  title: ''
+  background: ld_card_1996
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1996年、東大生の堀江は、23歳でホームページを作る会社を起こします。2000年、27歳で上場。
+    reading: せんきゅうひゃく きゅうじゅうろくねん、とうだいせいの ほりえわ にじゅうさんさいで ほーむぺーじお つくる かいしゃお おこします。にせんねん にじゅうななさいで じょうじょう。
+# ---- 2004年1〜2月・株を100に切る ----
+- id: card2004
+  title: ''
+  background: ld_card_2004
+  cuts:
+  - speaker: reimu
+    text: 2004年。2月にライブドアと名前を変えた会社は、1株を100株に分けます。
+    reading: にせん よねん。にがつに らいぶどあと なまえお かえた かいしゃわ、ひとかぶお ひゃっかぶに わけます。
+- id: ch1_kabu
+  title: 株を100に切る
+  background: ld_gamen
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堀江貴文, emotion: happy}
+  - {who: shain, x: 0.7, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長！ うちの株、今日もストップ高です！
+  - speaker: shain
+    emotion: surprised
+    text: 1月から数えて、これで15日続けてです！
+    background: ld_gamen_aka
+    se: bikkuri
+    telops:
+    - {text: "15日連続ストップ高", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: shain
+    emotion: normal
+    text: 新しい株が出回るまで、50日ほどかかるそうで。
+  - speaker: shain
+    emotion: happy
+    text: それまでは品薄で、値段が乱高下するんです。
+  - speaker: shain
+    emotion: happy
+    text: 1株が安くなって、買いやすいって評判ですよ。
+  - speaker: reimu
+    text: 上場の直前から5回、合わせて36万分割。市場からは、株式市場をおもちゃにしている、と批判も出ます。
+    reading: じょうじょうの ちょくぜんから ごかい、あわせて さんじゅうろくまん ぶんかつ。しじょうからわ かぶしき しじょうお おもちゃに して いると ひはんも でます。
+- id: heya1
+  title: ''
+  background: ld_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 切っただけで、15日も上がり続けたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1枚を100切れにしても、ピザは1枚のまま。安く見えるだけよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、みんな欲しがってるよ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 切った新しい株が出回るまで、品薄になるからね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 株主は2003年9月の約9000人から、1年で15万4000人に増えたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1年で、そんなに！？
+  - speaker: reimu
+    text: この年の決算で、会社は3億円の赤字を、50億円の黒字と書くことになります。
+    reading: この としの けっさんで、かいしゃわ さんおくえんの あかじお ごじゅうおくえんの くろじと かく ことに なります。
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤字の会社が、どうやって黒字の決算を作ったのだ！？
+# ---- 2004年6月30日・球団を買いたい ----
+- id: ch2_kyudan
+  title: 球団を買いたい
+  background: ld_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堀江貴文, emotion: happy}
+  - {who: miyauchi, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2004年6月30日。31歳の堀江は、近鉄球団を買いたいと会見を開きます。隣は財務担当の宮内亮治。
+    reading: にせん よねん ろくがつ さんじゅうにち。さんじゅういっさいの ほりえわ、きんてつ きゅうだんお かいたいと かいけんお ひらきます。となりわ ざいむ たんとうの みやうち りょうじ。
+  - speaker: zundamon
+    emotion: happy
+    text: 売名なら広告宣伝費を使って堂々とやる。
+  - speaker: miyauchi
+    emotion: normal
+    text: 2月の交渉時には[10－30億円|じゅうからさんじゅうおくえん]を提示した
+  - speaker: zundamon
+    emotion: normal
+    text: '[近鉄|きんてつ]だけでなく、球界全体を相手に戦う覚悟はできている'
+- id: ch2_kintetsu
+  title: ''
+  background: ld_kaigi
+  stage:
+  - {who: kintetsu, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: kintetsu
+    emotion: normal
+    text: 明確にお断りしている。
+    se: chin
+  - speaker: reimu
+    text: 11月。新しく球界に入ると決まったのは、楽天でした。
+    reading: じゅういちがつ。あたらしく きゅうかいに はいると きまったのわ、らくてんでした。
+  - speaker: reimu
+    text: 7300億円の会社を止めたのは、何だったのか。その種になる『買い物』が、帳簿の上でもう始まっていました。
+    reading: ななせん さんびゃく おくえんの かいしゃお とめたのわ、なんだったのか。その たねに なる かいものが、ちょうぼの うえで もう はじまって いました。
+# ---- 2004年6〜12月・買い終わった会社を、これから買う ----
+- id: ch3_kumiai
+  title: 買い終わった会社を買う
+  background: ld_kumiai
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: shinjin
+    emotion: normal
+    text: 先輩、ここが組合の事務所ですか？ 郵便受けと表札だけですね。
+  - speaker: senpai
+    emotion: normal
+    text: 名前だけの事務所さ。うちが出資してる[投資事業組合|とうしじぎょうくみあい]だ。
+  - speaker: shinjin
+    emotion: normal
+    text: 名前だけ……。
+  - speaker: senpai
+    emotion: normal
+    text: この組合が6月ごろ、出版社を1つ現金で買った。
+  - speaker: senpai
+    emotion: normal
+    text: マネーライフって会社だ。約4000万円。
+  - speaker: shinjin
+    emotion: normal
+    text: 出版社を、ですか。
+  - speaker: senpai
+    emotion: thinking
+    text: なのに10月、子会社のライブドアマーケティングがこう発表した。
+  - speaker: shinjin
+    emotion: normal
+    text: '[株式交換|かぶしきこうかん]比率[（１対１）|いちたいいち]については、'
+  - speaker: shinjin
+    emotion: normal
+    text: 第三者機関が算出した結果を踏まえ、両者間で協議の上で決定した。
+  - speaker: shinjin
+    emotion: thinking
+    text: ……これから買う相手みたいな書き方ですね。
+  - speaker: senpai
+    emotion: normal
+    text: この会社、もう買ってあるんだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: じゃあ、なんで発表を？
+  - speaker: senpai
+    emotion: normal
+    text: 株を作るためさ。
+    se: don
+  - speaker: senpai
+    emotion: normal
+    text: 交換すれば、組合の手にライブドアマーケティングの新しい株が入る。
+  - speaker: shinjin
+    emotion: thinking
+    text: それを、売るんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 高く売れれば、な。
+  - speaker: senpai
+    emotion: normal
+    text: 11月には、その株を100に分けると発表した。
+  - speaker: shinjin
+    emotion: surprised
+    text: 本体と、同じ手ですね。
+  - speaker: senpai
+    emotion: normal
+    text: 11月の業績の発表は、こうだ。
+  - speaker: shinjin
+    emotion: normal
+    text: ……完全黒字化への転換を果たしている。
+  - speaker: reimu
+    text: この黒字は、架空の売上で作ったものでした。株価は跳ね上がり、組合は高値で売り抜けます。
+    reading: この くろじわ、かくうの うりあげで つくった ものでした。かぶかわ はねあがり くみあいわ たかねで うりぬけます。
+  - speaker: shinjin
+    emotion: sad
+    text: 買ってある会社を、これから買うと言って……。
+  - speaker: reimu
+    text: 約8億円の大半は、ライブドアに戻りました。1年3か月後、上場廃止へ向かう捜査は、この件から始まります。
+    reading: やく はちおくえんの たいはんわ、らいぶどあに もどりました。いちねん さんかげつご じょうじょう はいしえ むかう そうさわ、この けんから はじまります。
+# ---- 2004年9月期・赤字3億円が、黒字50億円になる ----
+- id: ch4_zaimu
+  title: 赤字3億円が黒字50億円に
+  background: ld_zaimu
+  stage:
+  - {who: senpai, x: 0.28, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.7, emotion: thinking}
+  cuts:
+  - speaker: shinjin
+    emotion: thinking
+    text: 先輩、9月期の決算です。この大きな売上、どこの取引ですか？
+  - speaker: senpai
+    emotion: normal
+    text: この売上、どこから来たと思う？
+  - speaker: shinjin
+    emotion: normal
+    text: 新しい広告の仕事、とか……。
+  - speaker: senpai
+    emotion: sad
+    text: ……うちの株だよ。
+    beat: true
+  - speaker: shinjin
+    emotion: surprised
+    text: 株！？
+  - speaker: senpai
+    emotion: normal
+    text: '[株式交換|かぶしきこうかん]で出したうちの株を、組合を通して売った。'
+  - speaker: senpai
+    emotion: normal
+    text: そのお[金|かね]が、37億6699万円。売上に入れてある。
+  - speaker: shinjin
+    emotion: surprised
+    text: 自分の株を売ったお[金|かね]が、売上に！？
+  - speaker: senpai
+    emotion: normal
+    text: それと、この2社への売上が15億8000万円。
+  - speaker: shinjin
+    emotion: thinking
+    text: この2社、取引の中身が見当たりませんけど……。
+  - speaker: senpai
+    emotion: sad
+    text: ……そういうことだ。
+  - speaker: reimu
+    text: 本当は3億1278万円の赤字。それが、50億3421万円の黒字になりました。
+    reading: ほんとうわ さんおく せん にひゃく ななじゅうはちまんえんの あかじ。それが ごじゅうおく さんぜん よんひゃく にじゅういちまんえんの くろじに なりました。
+- id: heya2
+  title: ''
+  background: ld_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 赤字が黒字に！？ どういう計算なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: お小遣い帳で言うね。今月は3128円の赤字。
+  - speaker: zundamon
+    emotion: normal
+    text: ふむふむ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そこで自分のゲーム機を売った3万7670円を、バイト代と書く。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゲーム機を売ったお[金|かね]は、バイト代じゃないよ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: さらに、来るはずのない1万5800円も書き足すの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 来ないのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そして、今月は5万342円の黒字ですと言ったの。
+    telops:
+    - {text: "赤字3億円 → 黒字50億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: angry
+    text: ボクの家計簿より、ひどいのだ！
+    se: zukko
+  - speaker: zundamon
+    emotion: thinking
+    text: これ、社長が全部やらせたの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決の要旨によれば、ほとんどの罪で社長は
+  - speaker: tsumugi
+    emotion: normal
+    text: '[宮内|みやうち]被告らの提案などを了承したにとどまり'
+  - speaker: tsumugi
+    emotion: normal
+    text: 各犯行を主導したとまでは認められない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 了承した、だけ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも同じ判決は、中心的な役割を担ったとも認めてるの。
+  - speaker: zundamon
+    emotion: sad
+    text: 主導はしてないけど、真ん中にいた……。
+- id: ch4_shacho
+  title: ''
+  background: ld_shacho
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堀江貴文, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月27日、この数字の有価証券報告書が国に出されます。彼を刑務所へ連れていく書類です。
+    reading: じゅうにがつ にじゅうしちにち、この すうじの ゆうか しょうけん ほうこくしょが くにに だされます。かれお けいむしょえ つれて いく しょるいです。
+  - speaker: reimu
+    text: のちに2009年の会見で、彼はこう語ります。「私は『違法でない』と考えております。」
+    reading: のちに にせん きゅうねんの かいけんで、かれわ こう かたります。わたしわ いほうで ないと かんがえて おります。
+# ---- 2005年2月8日・28分で、ラジオ局の筆頭株主に ----
+- id: card2005
+  title: ''
+  background: ld_card_2005
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2005年2月8日の朝。東京のラジオ局、ニッポン放送です。
+    reading: にせん ごねん にがつ ようかの あさ。とうきょうの らじおきょく、にっぽん ほうそうです。
+- id: ch5_radio
+  title: 28分で筆頭株主に
+  background: ld_radio
+  stage:
+  - {who: kyokuin, x: 0.28, flip: true, emotion: normal}
+  - {who: kyokuin2, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 社長の亀渕昭信は、のちに本にこう書いています。その日、社に戻る車の中で常務から電話。イヤな予感。
+    reading: しゃちょうの かめぶち あきのぶわ、のちに ほんに こう かいて います。その ひ しゃに もどる くるまの なかで じょうむから でんわ。いやな よかん。
+  - speaker: kyokuin
+    emotion: normal
+    text: 株主の円グラフ、今朝も変わりなしだな。
+  - speaker: kyokuin2
+    emotion: surprised
+    text: 大変です！ 朝の時間外の取引で、うちの株が3割近く買われました！
+    background: ld_radio_nuri
+    se: gaan
+    telops:
+    - {text: "28分で35%の筆頭株主に", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kyokuin
+    emotion: surprised
+    text: 誰に！？
+  - speaker: kyokuin2
+    emotion: surprised
+    text: ライブドアです！ 前から持ってた分と合わせて、35%です！
+  - speaker: kyokuin
+    emotion: sad
+    text: 筆頭株主が、朝のうちに替わった……。
+  - speaker: reimu
+    text: 亀渕の本によれば、買い付けは午前8時22分からの28分間でした。
+    reading: かめぶちの ほんに よれば、かいつけわ ごぜん はちじ にじゅうにふんからの にじゅうはっぷんかんでした。
+  - speaker: kyokuin2
+    emotion: thinking
+    text: うちはフジテレビの株を約22.5%持つ、筆頭株主ですよ。
+  - speaker: kyokuin
+    emotion: thinking
+    text: 会社の大きさは、フジテレビのほうがずっと上なのに。
+  - speaker: kyokuin2
+    emotion: normal
+    text: 親のほうが小さい家です。親の財布を握れば、子の家の金庫にも手が届く。
+  - speaker: kyokuin
+    emotion: sad
+    text: うちを取られたら、フジテレビまで……。
+  - speaker: kyokuin2
+    emotion: surprised
+    text: ニュースでは、約700億円の買い物だそうです。
+  - speaker: kyokuin2
+    emotion: surprised
+    text: 32歳の社長が、会見を開いてます！
+- id: ch5_kaiken
+  title: ''
+  background: ld_kaiken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堀江貴文, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 単なる協業ではスピード感が足りない
+  - speaker: zundamon
+    emotion: normal
+    text: 現時点での転売は損。長期保有する計画
+# ---- 2005年3月・裁判所の判断 ----
+- id: heya3
+  title: ''
+  background: ld_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ニッポン放送は、やられっぱなし？
+  - speaker: tsumugi
+    emotion: normal
+    text: フジテレビに新株予約権を出して、対抗しようとしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも3月、東京地裁がそれを差し止めたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 止められたの！？
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、時間外の買い方はセーフなのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 地裁は、[証券取引法|しょうけんとりひきほう]の違反とはいえないとしたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも2月の買い付けから4か月後、法律のほうが変わったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: あとから、決まりが変わった……。
+# ---- 2005年4月18日・想定の範囲内 ----
+- id: ch6_wakai
+  title: 想定の範囲内
+  background: ld_wakai
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 堀江貴文, emotion: happy}
+  - {who: hieda, x: 0.52, emotion: normal}
+  - {who: kamebuchi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月18日、和解の会見。ニッポン放送株を持つライブドアの子会社を、フジテレビが670億円で買い取ります。
+    reading: しがつ じゅうはちにち わかいの かいけん。にっぽん ほうそう かぶお もつ らいぶどあの こがいしゃお、ふじてれびが ろっぴゃく ななじゅうおくえんで かいとります。
+  - speaker: zundamon
+    emotion: happy
+    text: 想定の範囲内の良い方でおさまった
+    telops:
+    - {text: "堀江「想定の範囲内の良い方でおさまった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: hieda
+    emotion: happy
+    text: 提携に満足している
+  - speaker: hieda
+    emotion: normal
+    text: 21世紀の勝ち組メディアとして勝ち残りたい
+  - speaker: kamebuchi
+    emotion: normal
+    text: 友好的によく話し合って今回の合意に達し、たいへん嬉しい
+  - speaker: reimu
+    text: 2か月前、長期保有すると言った株でした。この年の流行語大賞には、想定内（外）が選ばれます。
+    reading: にかげつまえ、ちょうき ほゆう すると いった かぶでした。この としの りゅうこうご たいしょうにわ そうていない そうていがいが えらばれます。
+  - speaker: reimu
+    text: 想定の範囲内と言った社長に、想定できなかったものは何だったのか。
+    reading: そうていの はんいないと いった しゃちょうに、そうてい できなかった ものわ なんだったのか。
+# ---- 2005年8〜9月・選挙 ----
+- id: ch6_senkyo
+  title: ''
+  background: ld_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堀江貴文, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月、社長のまま衆院選に無所属で立った堀江は、広島6区で8万4433票。亀井静香に届かず、落選しました。
+    reading: はちがつ しゃちょうの まま しゅういんせんに むしょぞくで たった ほりえわ、ひろしま ろっくで はちまん よんせん よんひゃく さんじゅうさんぴょう。かめい しずかに とどかず らくせん しました。
+# ---- 2006年1月16〜17日・捜索の夜と、夜明けの会見 ----
+- id: card2006
+  title: ''
+  background: ld_card_2006
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2006年1月16日、月曜の夕方6時半ごろ。東京地検特捜部などが、本社と自宅を捜索します。
+    reading: にせん ろくねん いちがつ じゅうろくにち げつようの ゆうがた ろくじはん ごろ。とうきょう ちけん とくそうぶなどが ほんしゃと じたくお そうさく します。
+- id: ch7_sosaku
+  title: 捜索の夜
+  background: ld_tower_sosaku
+  stage:
+  - {who: kisha, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 特捜部と、証券取引等監視委員会の合同の捜索です。
+  - speaker: kisha
+    emotion: normal
+    text: 段ボール箱が、次々に運び出されています。
+  - speaker: kisha
+    emotion: normal
+    text: 社長の自宅にも、捜索が入ったそうです。
+  - speaker: kisha
+    emotion: normal
+    text: 容疑は、[証券取引法|しょうけんとりひきほう]違反です。
+  - speaker: kisha
+    emotion: normal
+    text: ……夜が明けました。間もなく、社長が会見に出てきます。
+    background: ld_tower_yoake
+- id: ch7_kaiken
+  title: ''
+  background: ld_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堀江貴文, emotion: normal}
+  - {who: kisha, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 全容把握に向けて社内で調査中。解明次第、報告したい
+  - speaker: kisha
+    emotion: normal
+    text: 進退は？
+  - speaker: zundamon
+    emotion: normal
+    text: 状況が把握できていない状態で述べるのは無責任になる
+  - speaker: reimu
+    text: のちに彼は、2009年の会見でこう主張しています。
+    reading: のちに かれわ、にせん きゅうねんの かいけんで こう しゅちょう して います。
+  - speaker: reimu
+    text: 「通常こういった経済事件は市場への影響を最小限にとどめるために、金曜日に行うことが通例です。」
+    reading: つうじょう こういった けいざい じけんわ しじょうえの えいきょうお さいしょうげんに とどめる ために、きんようびに おこなう ことが つうれいです。
+# ---- 2006年1月18日・取引所が止まる ----
+- id: ch8_torihikijo
+  title: 取引所が止まる
+  background: ld_torihikijo
+  stage:
+  - {who: shokuin, x: 0.28, flip: true, emotion: surprised}
+  - {who: shokuin2, x: 0.7, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 東証の説明は、こうでした。「約定件数が400万件を超える場合には、システム処理の継続に支障が生じる」
+    reading: とうしょうの せつめいわ こうでした。やくじょう けんすうが よんひゃくまんけんお こえる ばあいにわ、しすてむ しょりの けいぞくに ししょうが しょうじる。
+  - speaker: shokuin
+    emotion: surprised
+    text: 売りの注文が、止まりません！
+  - speaker: shokuin2
+    emotion: sad
+    text: 朝、ライブドア株を一時止めたのに……。
+  - speaker: shokuin
+    emotion: surprised
+    text: '[約定|やくじょう]、380万……390万……。'
+  - speaker: shokuin2
+    emotion: sad
+    text: ……止めます。
+    background: ld_torihikijo_kie
+    se: don
+  - speaker: reimu
+    text: 1月18日の午後2時40分。東証は、すべての株の売買を止めました。
+    reading: いちがつ じゅうはちにちの ごご にじ よんじゅっぷん。とうしょうわ、すべての かぶの ばいばいお とめました。
+    telops:
+    - {text: "東証が全銘柄の売買を停止", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2006年1月23日〜4月14日・逮捕、そして94円 ----
+- id: ch9_taiho
+  title: 逮捕、そして94円
+  background: ld_tower
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1月23日、堀江は夕方から特捜部の聴取を受け、夜に逮捕されます。容疑は、偽計と風説の流布。
+    reading: いちがつ にじゅうさんにち、ほりえわ ゆうがたから とくそうぶの ちょうしゅお うけ よるに たいほ されます。ようぎわ ぎけいと ふうせつの るふ。
+- id: heya4
+  title: ''
+  background: ld_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 粉飾で、捕まったんじゃないのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 最初の逮捕の容疑は、マネーライフをめぐるうその発表のほうよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告書のうその記載、つまり粉飾で再逮捕されるのは2月22日。
+  - speaker: zundamon
+    emotion: thinking
+    text: 容疑が、2つあったのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、インサイダー取引で捕まったって話は？
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは、村上ファンドの別の事件。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[堀江|ほりえ]は、インサイダーでは捕まっていないわ。'
+  - speaker: zundamon
+    emotion: sad
+    text: 全部、ごちゃまぜに覚えてたのだ……。
+    se: manuke
+- id: ch9_hiramatsu
+  title: ''
+  background: ld_kaiken
+  bgm: 223am
+  stage:
+  - {who: hiramatsu, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 翌24日、新しい経営陣が会見を開き、22万の株主らに謝罪しました。社長になったのは、平松庚三です。
+    reading: よく にじゅうよっか、あたらしい けいえいじんが かいけんお ひらき にじゅうにまんの かぶぬしらに しゃざい しました。しゃちょうに なったのわ ひらまつ こうぞうです。
+  - speaker: hiramatsu
+    emotion: sad
+    text: 大変大きなチャレンジと認識している
+  - speaker: hiramatsu
+    emotion: normal
+    text: 今までのライブドアは、[堀江貴文|ほりえたかふみ]がピッチャーで4番だった
+- id: ch9_haishi
+  title: ''
+  background: ld_gamen
+  cuts:
+  - speaker: reimu
+    text: 3月13日、東証は上場廃止を決め、理由にこう書きました。
+    reading: さんがつ じゅうさんにち、とうしょうわ じょうじょう はいしお きめ りゆうに こう かきました。
+  - speaker: reimu
+    text: 「組織的に行なった点で上場会社としての適格性を強く疑わざるを得ない。」
+    reading: そしきてきに おこなった てんで じょうじょう がいしゃと しての てきかくせいお つよく うたがわざるお えない。
+- id: ch9_kabunushi
+  title: ''
+  background: ld_shoken
+  stage:
+  - {who: kabunushi, x: 0.56, emotion: sad}
+  cuts:
+  - speaker: kabunushi
+    emotion: sad
+    text: 捜索の日は696円。4月13日の今日は、94円……。
+    telops:
+    - {text: "696円 → 94円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kabunushi
+    emotion: sad
+    text: 缶ジュース1本にも、届かないな。
+    beat: true
+  - speaker: kabunushi
+    emotion: sad
+    text: 明日でもう、[市場|しじょう]では売り買いできなくなる。
+  - speaker: kabunushi
+    emotion: sad
+    text: 時価総額7300億円の会社が、3か月で……。
+  - speaker: kabunushi
+    emotion: sad
+    text: 22万人の株主の、ひとりさ。
+# ---- 2006年9月〜2008年7月・法廷 ----
+- id: ch10_houtei
+  title: 法廷
+  background: ld_houtei
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堀江貴文, emotion: normal}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4月の終わりに保釈された堀江は、9月4日、東京地裁の初公判に立ちます。
+    reading: しがつの おわりに ほしゃく された ほりえわ、くがつ よっか とうきょう ちさいの しょこうはんに たちます。
+  - speaker: zundamon
+    emotion: normal
+    text: 犯罪を行なったことはございません。起訴されたことを心外に思っている
+- id: card2007
+  title: ''
+  background: ld_card_2007
+  cuts:
+  - speaker: reimu
+    text: 2007年3月16日。一審の判決です。
+    reading: にせん ななねん さんがつ じゅうろくにち。いっしんの はんけつです。
+- id: ch10_hanketsu
+  title: ''
+  background: ld_houtei
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 堀江貴文, emotion: sad}
+  - {who: saibancho, x: 0.7, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人を[懲役2年6月|ちょうえきにねんろっかげつ]に処する。
+    beat: true
+    telops:
+    - {text: "懲役2年6月の実刑", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 一般投資者の判断を誤らせた責任は重い
+  - speaker: saibancho
+    emotion: normal
+    text: 被告のこれまでの生き方をすべて否定したわけではない。
+  - speaker: saibancho
+    emotion: normal
+    text: 罪を償い、
+  - speaker: saibancho
+    emotion: normal
+    text: その能力を生かし、再出発を期待している
+  - speaker: reimu
+    text: 求刑は懲役4年でした。堀江は、その日のうちに控訴します。
+    reading: きゅうけいわ ちょうえき よねんでした。ほりえわ、その ひの うちに こうそ します。
+- id: card2008
+  title: ''
+  background: ld_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年7月25日、東京高裁。堀江は二審に、一度も出廷しませんでした。
+    reading: にせん はちねん しちがつ にじゅうごにち、とうきょう こうさい。ほりえわ にしんに いちども しゅってい しませんでした。
+- id: ch10_nishin
+  title: ''
+  background: ld_houtei
+  stage:
+  - {who: saibancho, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: '[堀江|ほりえ]被告をはじめとする経営陣が、組織的に敢行した'
+  - speaker: reimu
+    text: 控訴は退けられ、堀江はその日のうちに上告します。
+    reading: こうそわ しりぞけられ、ほりえわ その ひの うちに じょうこく します。
+# ---- 2011〜2013年・12時7分の電話と、モヒカン頭 ----
+- id: card2011
+  title: ''
+  background: ld_card_2011
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2011年4月26日、12時7分。弁護士から電話が入ります。最高裁が上告を退けた、という知らせでした。
+    reading: にせん じゅういちねん しがつ にじゅうろくにち、じゅうにじ ななふん。べんごしから でんわが はいります。さいこうさいが じょうこくお しりぞけたと いう しらせでした。
+- id: ch11_kakutei
+  title: 12時7分の電話
+  background: ld_kaiken
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堀江貴文, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: その日の夕方、彼は会見を開きます。
+    reading: その ひの ゆうがた、かれわ かいけんお ひらきます。
+  - speaker: zundamon
+    emotion: sad
+    text: 到底納得できないところで終わっている。
+- id: ch11_shukan
+  title: モヒカン頭
+  background: ld_kanmae
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堀江貴文, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月20日、収監の日。霞が関に現れた38歳の堀江は、モヒカン頭にゴー・トゥー・ジェイルと書いたTシャツ。
+    reading: ろくがつ はつか しゅうかんの ひ。かすみがせきに あらわれた さんじゅうはっさいの ほりえわ、もひかん あたまに ごー とぅー じぇいると かいた てぃーしゃつ。
+  - speaker: zundamon
+    emotion: normal
+    text: 人生を生き急ぎすぎたかなというのもあり、
+  - speaker: zundamon
+    emotion: normal
+    text: 2年半で見つめ直し、健康になって帰ってきたいと思います
+- id: ch11_hei
+  title: ''
+  background: ld_hei
+  cuts:
+  - speaker: reimu
+    text: 移された先は、長野刑務所でした。
+    reading: うつされた さきわ、ながの けいむしょでした。
+  - speaker: reimu
+    text: 塀の前の木に、雪が積もります。
+    reading: へいの まえの きに、ゆきが つもります。
+    background: ld_hei_yuki
+  - speaker: reimu
+    text: 2013年3月27日。1年9か月がたち、仮釈放の日が来ました。
+    reading: にせん じゅうさんねん さんがつ にじゅうしちにち。いちねん きゅうかげつが たち、かりしゃくほうの ひが きました。
+    background: ld_hei_sakura
+- id: ch11_karishaku
+  title: 仮釈放
+  background: ld_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.5, tag: 堀江貴文, emotion: happy}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: '[収監時|しゅうかんじ]は95.7キロ。先ほど控室で計ったときは着衣状態で67.3キロです。'
+  - speaker: reimu
+    text: 投資について問われると、彼はこう答えます。
+    reading: とうしに ついて とわれると、かれわ こう こたえます。
+  - speaker: zundamon
+    emotion: normal
+    text: 株に対しては、のめり込まないようにしてくださいと申し上げたい。
+# ---- 論争：目立ったから捕まった？ ----
+- id: ronso1
+  title: 目立ったから捕まった？
+  background: ld_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 28キロ以上やせて、出てきたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判では一貫して、無罪を訴えていたわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 目立ちすぎたから、出る杭は打たれたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言われる理由はあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[証券取引法|しょうけんとりひきほう]の違反だけで実刑になったのは、極めて異例と報じられたわ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人も2011年に、検察が来て捜査をして初めて事件になったと言ってるの。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも[一審|いっしん]も二審も最高裁も、同じ結論を出したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最高裁は、5人の裁判官の全員一致よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 3回とも、同じ答え……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 元幹部たちも公判で、起訴された事実を大筋で認めてるわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 目立ったから、だけじゃないのか……。
+# ---- 論争：全部、社長の指示？ ----
+- id: ronso2
+  title: 全部、社長の指示？
+  background: ld_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、[堀江|ほりえ]が全部仕組んだ黒幕なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それも違うの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決の要旨は、ほとんどの罪で主導したとまでは認められないとしてるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: なら、部下が勝手にやったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それも言い過ぎ。社長として了承して、中心的な役割を担ったと認めてるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 主導はしていないと、判決は認めた。それでも、了承した社長がいちばん重い刑になったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 上に立つ人が、いちばん重い……。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 二審は、こうも言ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 結果的に本件犯行による利益を受けており、量刑上無視できない。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 社長は、持っていた自分の会社の株を売って利益を得ていたの。
+# ---- 論争：お金で買えないもの？ ----
+- id: ronso3
+  title: お金で買えないもの？
+  background: ld_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: お[金|かね]で買えないものはないって、言った人でしょ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: この言葉を本人が言ったという記録は、実ははっきりしないの。
+  - speaker: zundamon
+    emotion: sad
+    text: 出どころが、はっきりしないのか……。
+    se: tenten
+# ---- 本当の注意点 ----
+- id: chui
+  title: 利益の中身を見る
+  background: ld_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめは、利益の中身を見ること。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 黒字50億円は、自分の会社の株を売ったお[金|かね]と架空の売上でできてたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゲーム機を売って、バイト代と書いたのと同じなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒字なら、本業で稼いだお[金|かね]かどうかを分けて見るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。株を細かく切っても、会社の値打ちは増えない。
+  - speaker: zundamon
+    emotion: sad
+    text: ピザは、1枚のままなのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 安く買えることと得をすることは、別の話よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。株主の多い有名な会社でも、止まるときは早いの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 22万人の株主がいた会社でも、捜索の2日後には取引所ごと止まったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 取引所ごと……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 売った人と持ち続けた人と訴えた人で、結末も分かれたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 訴えた人は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判で、1株あたり200円から585円の損害が認められたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も、[仮釈放|かりしゃくほう]の日にこう言ってたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 株に対しては、のめり込まないようにしてくださいって。
+  - speaker: zundamon
+    emotion: normal
+    text: '[仮釈放|かりしゃくほう]の日の、言葉なんだね……。'
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: ld_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。夜明けの会見から、20年がたちました。
+    reading: にせん にじゅうろくねん。よあけの かいけんから、にじゅうねんが たちました。
+- id: ima
+  title: 20年後
+  background: ld_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: あの社長は、いま何をしてるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年6月、食料品の輸入などをする上場会社の取締役に選ばれたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 太洋物産という会社よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 上場企業の取締役は2006年1月以来、20年ぶりと報じられたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 20年ぶりに、戻ってきたのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 9月には、業務を受け持つ取締役になったと報じられたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その会社は7月に宅配ピザの会社を買って、9月に売っているの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本物のピザの話なの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 創業にかかわったロケットの会社は、初号機の打ち上げを目標にしてるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ロケットまで！
+  - speaker: zundamon
+    emotion: thinking
+    text: 事件のライブドアは？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2012年に清算が終わって、もう無いの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でもライブドアの名前は、別の会社のニュースとブログにいまも残ってる。
+  - speaker: zundamon
+    emotion: normal
+    text: 名前は、残ったんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時のニッポン放送の社長も、2026年4月にあの攻防の本を出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 決まりも変わったの。時間外の取引の一部も、公開買い付けの決まりの対象になった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取引所も、大きな[株式分割|かぶしきぶんかつ]は控えるよう求めたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ピザの切りすぎも、禁止なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 禁止じゃなくて、控えてねというお願いよ。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: ld_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ピザは切らずに、1枚まるごと1000円で売るのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 最初から、それでいいのよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 解明次第、報告したい。夜明けの会見で、彼はそう言ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 答えを出したのは3つの裁判所で、本人は裁判の最後まで無罪を訴えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして20年後、上場会社の取締役に戻ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ピザも株も、切っただけでは増えないの。
+  - speaker: zundamon
+    emotion: normal
+    text: 切り方より、中身なのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 黒字の数字を見たら、中身も見てね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
