@@ -1,0 +1,1289 @@
+meta:
+  title: 成人式の朝に会社の人が来なかったはれのひ、18日後の会見で社長は「逃げてはないです」【ずんだもん解説】
+  slug: harenohi
+  hook_line: 2年先の晴れ着の代金を受け取った会社は、なぜ成人式の朝に来なかったのか。
+  summary: 2018年1月8日、成人の日の朝。横浜の着付け会場で、新成人たちが振袖の会社「はれのひ」の人を待っていました。社長の篠崎洋一郎が姿を見せたのは、その18日後の会見です。2年先の成人式の晴れ着の契約、増え続けた店、銀行に出した決算書、断られ続けた12月。会社の人は、なぜあの朝に来なかったのか。会見と法廷に残る本人の言葉と、判決・検察・管財人の説明を主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 東京商工リサーチ「はれのひ、取材ドキュメント」（2018年1月9日） https://www.tsr-net.co.jp/data/detail/1188958_1527.html
+  - 神奈川新聞「『晴れの日』台無し 成人の日、着付け業者連絡途絶」（2018年1月9日） https://www.kanaloco.jp/news/social/entry-24235.html
+  - 東京商工リサーチ「『はれのひ』債権者集会、篠﨑社長が不在のまま開催」（2018年6月21日） https://www.tsr-net.co.jp/data/detail/1189143_1527.html
+  - 神奈川新聞「はれのひ融資詐取、元社長起訴内容認める 横浜地裁初公判」（2018年10月5日） https://www.kanaloco.jp/news/social/entry-37146.html
+  - 神奈川新聞「はれのひ元社長に実刑 融資詐欺に地裁判決『一線越えた』」（2018年12月19日） https://www.kanaloco.jp/news/social/entry-146637.html
+  - 国民生活センター 見守り新鮮情報「成人式の晴れ着レンタル　早期契約や強引な勧誘に注意！」（2026年2月5日） https://www.kokusen.go.jp/mimamori/kmj_mailmag/kmj-support229.html
+  tags:
+  - はれのひ
+  - 篠崎洋一郎
+  - 成人式
+  - 振袖
+  - 晴れ着
+  - 着付け
+  - 破産
+  - 粉飾決算
+  - 融資詐欺
+  - 債権者集会
+  - 国民生活センター
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 成人式の朝
+    bottom: 会社の人が来ない
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: kisha2
+    label: 記者
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#4a5a6a'
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.1
+    outfit: apron
+    color: '#8a4a5a'
+  - id: hogosha
+    label: 保護者
+    voice: 8
+    pitch: -0.06
+    outfit: none
+    color: '#7a6a5a'
+  - id: keiri
+    label: 経理
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a6a5a'
+  - id: shain
+    label: 社員
+    voice: 8
+    pitch: 0.04
+    outfit: suit
+    color: '#5a6a8a'
+  - id: shain2
+    label: 社員
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: ginko
+    label: 銀行員
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#2f3a52'
+  - id: ginko2
+    label: 銀行員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4f5f'
+  - id: ginko3
+    label: 銀行員
+    voice: 100
+    pitch: 0.1
+    outfit: suit
+    color: '#4a3f5a'
+  - id: ginko4
+    label: 銀行員
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#3f4a3a'
+  - id: kyaku
+    label: 客
+    voice: 8
+    pitch: -0.1
+    outfit: none
+    color: '#6a5a6a'
+  - id: hotel
+    label: 従業員
+    voice: 8
+    pitch: 0.12
+    outfit: suit
+    color: '#8a5a4a'
+  - id: hotel2
+    label: 従業員
+    voice: 12
+    pitch: 0.04
+    outfit: suit
+    color: '#5a4a3a'
+  - id: shinseijin
+    label: 新成人
+    voice: 8
+    pitch: 0.16
+    outfit: none
+    color: '#a05a7a'
+  - id: kitsuke
+    label: 着付け
+    voice: 8
+    pitch: -0.02
+    outfit: apron
+    color: '#6a7a5a'
+  - id: hogosha2
+    label: 保護者
+    voice: 100
+    pitch: 0.04
+    outfit: none
+    color: '#5a5a6a'
+  - id: shokuin
+    label: 職員
+    voice: 11
+    pitch: 0.06
+    outfit: suit
+    color: '#454a55'
+  - id: kanzainin
+    label: 管財人
+    voice: 67
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: sosain
+    label: 捜査員
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f38'
+  - id: kenji
+    label: 検察官
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2a30'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2018年1月26日 19時5分〜・横浜市内の会見。問いと答えは会見の書き起こしの並びと言い回し） ----
+- id: co_kaiken
+  title: ''
+  background: hn_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 篠崎社長, emotion: sad}
+  - {who: kisha2, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2018年1月26日、横浜。振袖の会社、はれのひの社長、篠崎洋一郎。
+    reading: にせん じゅうはちねん いちがつ にじゅうろくにち、よこはま。ふりそでの かいしゃ はれのひの しゃちょう、しのざき よういちろう。
+  - speaker: reimu
+    text: 成人の日から18日ぶりに、人前に姿を見せます。
+    reading: せいじんのひから じゅうはちにちぶりに、ひとまえに すがたお みせます。
+  - speaker: zundamon
+    emotion: sad
+    text: 代表取締役である私にすべての責任がございます。本当に申し訳ございませんでした。
+  - speaker: kisha2
+    emotion: normal
+    text: なぜ成人式当日になって逃げてしまったんでしょうか。
+  - speaker: zundamon
+    emotion: sad
+    text: できなくなるということの危険性はあったんですけども、
+  - speaker: zundamon
+    emotion: sad
+    text: 一切考えず最後まで交渉しておりました。
+  - speaker: kisha2
+    emotion: normal
+    text: 逃げていたのではありませんか？
+  - speaker: zundamon
+    emotion: sad
+    text: 逃げてはないです。
+  - speaker: reimu
+    text: 18日前の朝、着付けの会場に、会社の人は来ませんでした。
+    reading: じゅうはちにちまえの あさ きつけの かいじょうに、かいしゃの ひとわ きませんでした。
+  - speaker: reimu
+    text: 横浜のある会場では、約100人の多くが晴れ着を着られなかったとみられます。
+    reading: よこはまの ある かいじょうでわ、やく ひゃくにんの おおくが はれぎお きられなかったと みられます。
+  - speaker: reimu
+    text: 5か月後、彼は成田空港で逮捕されます。
+    reading: ごかげつご、かれわ なりた くうこうで たいほ されます。
+# ---- 今の部屋（遠足の朝のお弁当） ----
+- id: hook
+  title: ''
+  background: hn_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 明日は遠足！ お弁当は、お店に頼んであるのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 受け取りは何時？
+  - speaker: zundamon
+    emotion: happy
+    text: 朝6時に、お店が開けて待っててくれるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その朝、お店に誰もいなかったら？
+  - speaker: zundamon
+    emotion: surprised
+    text: 手ぶらで遠足なのだ！？
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一生に一度の朝に、本当に起きたの。2018年の成人の日よ。
+    telops:
+    - {text: "成人式の朝 なぜ会社の人は来なかった？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 成人式の朝に、なんで会社の人が来なかったのだ！？
+# ---- 2011年・会社をつくる（短く。生い立ちは言わない） ----
+- id: card2011
+  title: ''
+  background: hn_card_2011
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2011年3月。篠崎洋一郎、48歳。のちのはれのひ株式会社を立ち上げます。
+    reading: にせん じゅういちねん さんがつ。しのざき よういちろう よんじゅうはっさい。のちの はれのひ かぶしきがいしゃお たちあげます。
+# ---- 一生に1回（会見の言葉。問いをナレで先に置く） ----
+- id: ch1_shigoto
+  title: 一生に一度の仕事
+  background: hn_mise
+  stage:
+  - {who: zundamon, x: 0.72, tag: 篠崎社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: のちの会見で、当日泣いていた女性たちに心は痛まなかったかと問われ、彼は仕事のきっかけをこう話します。
+    reading: のちの かいけんで とうじつ ないて いた じょせいたちに こころわ いたまなかったかと とわれ、かれわ しごとの きっかけお こう はなします。
+  - speaker: zundamon
+    emotion: sad
+    text: 一生に1回のことに携われるというのがすごくいい仕事だなと思って。
+  - speaker: zundamon
+    emotion: sad
+    text: それがきっかけでした。
+# ---- 2年先の晴れ着（店のカウンター。モブの脚色。数字は会見どおり） ----
+- id: ch1_mise
+  title: 2年先の晴れ着
+  background: hn_mise
+  stage:
+  - {who: tenin, x: 0.64, flip: true, emotion: happy}
+  - {who: hogosha, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: hogosha
+    emotion: normal
+    text: 成人式は、2年後の1月ですよね。もう決めるんですか？
+  - speaker: tenin
+    emotion: happy
+    text: はい。前撮りもありますし、お体に合わせてお仕立てしますので。
+  - speaker: hogosha
+    emotion: thinking
+    text: それで、お代は？
+  - speaker: tenin
+    emotion: normal
+    text: 30万円です。お支払いは、先にお願いしております。
+  - speaker: hogosha
+    emotion: surprised
+    text: 着るのは2年後なのに、お[金|かね]は今！？
+    se: bikkuri
+  - speaker: hogosha
+    emotion: thinking
+    text: 30万円って、時給1000円のバイトなら300時間[分|ぶん]よ……。
+  - speaker: tenin
+    emotion: happy
+    text: 成人式の朝は、着付けもヘアメイクもうちにお任せください！
+  - speaker: reimu
+    text: 2年先の朝のためのお金。それは、成人式の朝まで残っているのでしょうか。
+    reading: にねんさきの あさの ための おかね。それわ、せいじんしきの あさまで のこって いるの でしょうか。
+# ---- 店を増やす（2012〜2016年。経理はモブの脚色。検察の「店が増えるほど損失も膨らんだ」に沿う） ----
+- id: ch1_kaigi
+  title: 増える店
+  background: hn_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 篠崎社長, emotion: normal}
+  - {who: keiri, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: keiri
+    emotion: happy
+    text: 社長！ [八王子|ハチオウジ]につくば、[福岡天神|ふくおかてんじん]。店がどんどん増えますね！
+  - speaker: keiri
+    emotion: thinking
+    text: ただ店が増えるたびに、毎月の赤字も増えています。
+    background: hn_kaigi_akaji
+  - speaker: keiri
+    emotion: thinking
+    text: 新しい店の家賃に、人の給料。開けた月から出ていきます。
+  - speaker: keiri
+    emotion: sad
+    text: 晴れ着のお[金|かね]は先に入りますけど、出ていくほうが速いんです。
+  - speaker: reimu
+    text: のちに会見で、彼はこう説明しています。
+    reading: のちに かいけんで、かれわ こう せつめい して います。
+  - speaker: zundamon
+    emotion: sad
+    text: 急激な出店により、人件費コストなどが拡大し、
+  - speaker: zundamon
+    emotion: sad
+    text: 平成28年9月期には大幅な赤字となりました。
+    telops:
+    - {text: "店が増えるほど 赤字も増える", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: keiri
+    emotion: normal
+    text: それでも目標は、2020年までに100店でしたよね。
+  - speaker: keiri
+    emotion: surprised
+    text: ……今の何十倍ですか、それ。
+    beat: true
+  - speaker: reimu
+    text: 店を増やすほど苦しくなる会社が、なぜ店を増やし続けたのか。
+    reading: みせお ふやすほど くるしく なる かいしゃが、なぜ みせお ふやし つづけたのか。
+# ---- 2015年・借りて返す（検察の冒頭陳述） ----
+- id: ch2_jitensha
+  title: 借りて返す
+  background: hn_jimusho
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 篠崎社長, emotion: thinking}
+  - {who: keiri, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: keiri
+    emotion: normal
+    text: 社長、来週は銀行の返済日です。
+  - speaker: keiri
+    emotion: thinking
+    text: ……別の銀行から借りたお[金|かね]で、返しておきます。
+  - speaker: keiri
+    emotion: sad
+    text: 借りて返して、また借りて。こぐのをやめたら倒れる自転車ですね。
+  - speaker: reimu
+    text: 検察によれば、2015年8月までに、融資を別の借金の返済に回す自転車操業に陥っていました。
+    reading: けんさつに よれば にせん じゅうごねん はちがつまでに、ゆうしお べつの しゃっきんの へんさいに まわす じてんしゃ そうぎょうに おちいって いました。
+  - speaker: keiri
+    emotion: thinking
+    text: 新しく借りるには、決算書を見せないといけません。
+# ---- 黒く塗った決算書（検察の主張と、判決が認めた事実。社長の台詞は作らない） ----
+- id: ch2_kessan
+  title: 黒く塗った決算書
+  background: hn_kessan
+  stage:
+  - {who: shain, x: 0.1, flip: true, emotion: thinking}
+  - {who: keiri, x: 0.9, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: thinking
+    text: 9月期の決算書、銀行に出したんですよね？
+  - speaker: keiri
+    emotion: sad
+    text: 出した。……融資は、難しいそうだ。
+    se: chin
+  - speaker: reimu
+    text: 検察によれば、社長は融資を受け続けるため、部下や税理士に売上の水増しを指示しました。
+    reading: けんさつに よれば しゃちょうわ ゆうしお うけ つづける ため、ぶかや ぜいりしに うりあげの みずましお しじ しました。
+  - speaker: keiri
+    emotion: normal
+    text: 売上に、無い数字を足す。仕入れは、少なく書く。
+  - speaker: keiri
+    emotion: normal
+    text: 架空の売上は、約5000万円。
+    background: hn_kessan_kuro
+  - speaker: shain
+    emotion: surprised
+    text: 赤字の会社が、紙の上だけ黒字に……！
+  - speaker: shain
+    emotion: thinking
+    text: 赤点の答案を書き直して、合格ですって見せるようなもんですよ。
+  - speaker: keiri
+    emotion: sad
+    text: ……分かってる。
+    beat: true
+# ---- 2016年9月30日・柏の新しい店の融資（判決が認めた詐欺。社長の台詞は調べの言葉だけ） ----
+- id: ch2_osetsu
+  title: 柏の店の融資
+  background: hn_osetsu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 篠崎社長, emotion: normal}
+  - {who: ginko, x: 0.76, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2016年9月30日。横浜市内の銀行の支店です。
+    reading: にせん じゅうろくねん くがつ さんじゅうにち。よこはま しないの ぎんこうの してんです。
+  - speaker: ginko
+    emotion: normal
+    text: 千葉の[柏|かしわ]に、新しいお店を。ご融資は、3500万円ですね。
+  - speaker: ginko
+    emotion: happy
+    text: 決算書も拝見しました。売上は、順調ですね。
+  - speaker: ginko
+    emotion: happy
+    text: '[柏|かしわ]のお店、オープンが楽しみですね。'
+  - speaker: reimu
+    text: 判決によれば、偽りの決算書で経営を良く見せ、横浜銀行と東日本銀行から約6500万円をだまし取りました。
+    reading: はんけつに よれば いつわりの けっさんしょで けいえいお よく みせ、よこはま ぎんこうと ひがし にほん ぎんこうから やく ろくせん ごひゃくまんえんお だましとりました。
+    telops:
+    - {text: "判決　2つの銀行から約6500万円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: のちの調べに、彼はこう話したと報じられています。
+    reading: のちの しらべに、かれわ こう はなしたと ほうじられて います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 他の金融機関に借りた[金|かね]を返すためのものだった
+  - speaker: reimu
+    text: このとき、成人式の朝に会場が空になるとは、まだ誰も思っていません。
+    reading: この とき、せいじんしきの あさに かいじょうが からに なるとわ まだ だれも おもって いません。
+# ---- 2017年・届かない給料、止まる振袖 ----
+- id: card2017
+  title: ''
+  background: hn_card_2017
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2017年。店は一時、6つにまで増えていました。
+    reading: にせん じゅうななねん。みせわ いちじ、むっつにまで ふえて いました。
+- id: ch3_kiki
+  title: 春からの危機
+  background: hn_jimusho
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: 篠崎社長, emotion: sad}
+  - {who: shain, x: 0.52, flip: true, emotion: sad}
+  - {who: shain2, x: 0.84, emotion: thinking}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 今月のお給料、また遅れるって……
+  - speaker: shain2
+    emotion: sad
+    text: 店のほうでも、また1人辞めたそうです。
+  - speaker: shain2
+    emotion: normal
+    text: はい、はれのひです。……京都の取引先さん。先月分のお支払いですね。
+  - speaker: shain2
+    emotion: sad
+    text: ……はい。申し訳ありません。
+  - speaker: shain2
+    emotion: sad
+    text: 次の振袖は、お支払いが済んでからだそうです。
+  - speaker: shain
+    emotion: sad
+    text: お客様に見せる[柄|がら]が、減っていく一方ね……。
+    se: shobon
+  - speaker: reimu
+    text: 社長はのちの会見で、春の大型連休の前から商品が足りず、社員の士気が落ち始めたと話しています。
+    reading: しゃちょうわ のちの かいけんで はるの おおがた れんきゅうの まえから しょうひんが たりず、しゃいんの しきが おち はじめたと はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: そこからは非常に危機感を、実は感じておりました。
+# ---- 2017年秋・1つめの「お受けできかねます」（銀行は3行。断る台詞は支店の行員の脚色） ----
+- id: ch3_ginko
+  title: 3つの銀行
+  background: hn_osetsu
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 篠崎社長, emotion: thinking}
+  - {who: ginko2, x: 0.76, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月中旬、会社は銀行に融資の相談を始めます。相談した銀行は、3つでした。
+    reading: じゅうがつ ちゅうじゅん、かいしゃわ ぎんこうに ゆうしの そうだんお はじめます。そうだん した ぎんこうわ みっつでした。
+  - speaker: ginko2
+    emotion: normal
+    text: 決算書、拝見しました。
+  - speaker: ginko2
+    emotion: thinking
+    text: 上とも、検討いたしましたが……
+  - speaker: ginko2
+    emotion: sad
+    text: ……年内は、難しいかと……。
+- id: ch3_ginko2
+  title: ''
+  background: hn_osetsu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 篠崎社長, emotion: sad}
+  - {who: ginko4, x: 0.76, emotion: normal}
+  cuts:
+  - speaker: ginko4
+    emotion: normal
+    text: '[篠崎|シノザキ]社長。先日の、融資のご相談ですが……'
+  - speaker: ginko4
+    emotion: sad
+    text: 申し訳ございません。今回は、見合わせます。
+# ---- 2017年12月中旬・それでも注文は入る（客はモブ。最後の注文は12月中旬＝会見の答え） ----
+- id: ch3_chumon
+  title: ''
+  background: hn_mise
+  bgm: hirusagari
+  stage:
+  - {who: tenin, x: 0.64, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: いらっしゃいませ。2020年の成人式のお振袖ですね。
+  - speaker: kyaku
+    emotion: normal
+    text: 早いほうが、いい[柄|がら]が残ってるって聞いて。
+  - speaker: tenin
+    emotion: normal
+    text: はい。人気の[柄|がら]から、決まっていきますので。
+  - speaker: kyaku
+    emotion: happy
+    text: じゃあ、この赤いのでお願いします。
+  - speaker: kyaku
+    emotion: normal
+    text: お支払いは、今日まとめてですか？
+  - speaker: tenin
+    emotion: normal
+    text: はい。先にいただいております。
+  - speaker: tenin
+    emotion: happy
+    text: ありがとうございます。成人式の朝、お待ちしております！
+  - speaker: kyaku
+    emotion: happy
+    text: 2年後の朝、楽しみにしてますね。
+# ---- 2017年12月・会場費（ホテルの従業員はモブの脚色。分割を断られたのは社長の会見の説明） ----
+- id: ch3_hotel
+  title: ''
+  background: hn_kitsuke_kara
+  bgm: kinakusai
+  stage:
+  - {who: hotel, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: hotel
+    emotion: normal
+    text: はれのひさん。会場費を分割に、というご相談ですが……
+  - speaker: hotel
+    emotion: thinking
+    text: 2回に分けてのお支払いでは、いかがでしょうか。
+  - speaker: reimu
+    text: 彼は会見で、当時の資金繰りでは払えず、成人式のあとの支払いを頼んだと話しています。
+    reading: かれわ かいけんで とうじの しきんぐりでわ はらえず、せいじんしきの あとの しはらいお たのんだと はなして います。
+  - speaker: hotel
+    emotion: normal
+    text: 利用料のお振込は、12月29日までにお願いいたします。
+# ---- 2017年12月20日ごろ・メインバンク（頭取の言葉は作らない。社長の説明をナレで） ----
+- id: ch3_kotowari
+  title: ''
+  background: hn_osetsu
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 篠崎社長, emotion: sad}
+  - {who: ginko3, x: 0.76, emotion: sad}
+  cuts:
+  - speaker: ginko3
+    emotion: sad
+    text: '[篠崎|シノザキ]社長。上とも相談しましたが……'
+  - speaker: ginko3
+    emotion: sad
+    text: 今回のご融資は、見送らせてください。
+    se: gaan
+  - speaker: reimu
+    text: 最後にメインバンクに頭取の段階で断られたのは、彼の説明では12月20日ごろでした。
+    reading: さいごに めいんばんくに とうどりの だんかいで ことわられたのわ、かれの せつめいでわ じゅうにがつ はつか ごろでした。
+- id: ch3_hotel2
+  title: ''
+  background: hn_kitsuke_kara
+  stage:
+  - {who: hotel, x: 0.88, emotion: thinking}
+  cuts:
+  - speaker: hotel
+    emotion: thinking
+    text: ……12月29日。はれのひさんのお振込、まだ入っていませんね。
+  - speaker: hotel
+    emotion: sad
+    text: 年明けの8日は、毎年200人ほどの着付けがあるのに……。
+# ---- 2018年1月7日・前日の夜（ホテルの側。7日夜10時の搬入に誰も来ない） ----
+- id: card2018
+  title: ''
+  background: hn_card_2018
+  cuts:
+  - speaker: reimu
+    text: 2018年1月5日の夜。成人の日の、3日前です。
+    reading: にせん じゅうはちねん いちがつ いつかの よる。せいじんのひの、みっか まえです。
+- id: ch4_denwa
+  title: 3日前の電話
+  background: hn_kitsuke_kara
+  stage:
+  - {who: hotel, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: hotel
+    emotion: normal
+    text: もしもし、はれのひさんですか。8日の着付けの件で、お電話しました。
+  - speaker: hotel
+    emotion: normal
+    text: ……はい。予定どおり、ですね。
+  - speaker: hotel
+    emotion: surprised
+    text: ……え？ 社長さんと、連絡が取れない？
+  - speaker: hotel
+    emotion: thinking
+    text: 会場費のお振込も、まだなんですけど……。
+- id: ch4_zenjitsu
+  title: 前日の夜
+  background: hn_kitsuke_kara
+  stage:
+  - {who: hotel, x: 0.12, flip: true, emotion: thinking}
+  - {who: hotel2, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月7日。この日から、はれのひの従業員は出社せず、連絡も取れなくなりました。
+    reading: いちがつ なのか。この ひから はれのひの じゅうぎょういんわ しゅっしゃ せず、れんらくも とれなく なりました。
+  - speaker: hotel
+    emotion: thinking
+    text: 夜10時。はれのひさんの搬入、まだですか？
+  - speaker: hotel2
+    emotion: sad
+    text: 電話が、つながりません。
+  - speaker: hotel2
+    emotion: thinking
+    text: 今日のつくばの成人式で、はれのひさんの着付けが遅れたってネットに出てます。
+  - speaker: hotel
+    emotion: surprised
+    text: うちは、明日ですよ……。
+  - speaker: hotel
+    emotion: thinking
+    text: 5日の夜は、予定どおりやると言ってましたよね。
+  - speaker: hotel2
+    emotion: sad
+    text: 社員の[方|カタ]も、社長とは連絡が取れないって……。
+  - speaker: hotel
+    emotion: sad
+    text: 明日の朝、お客様は何時から？
+  - speaker: hotel2
+    emotion: sad
+    text: 式の3時間前には、皆さんいらっしゃいます。
+  - speaker: reimu
+    text: 彼ののちの説明では、横浜での着付けはできないと判断したのは、この日の夕方6時ごろでした。
+    reading: かれの のちの せつめいでわ よこはまでの きつけわ できないと はんだん したのわ、この ひの ゆうがた ろくじ ごろでした。
+# ---- 2018年1月8日・成人の日の朝（主人公のいない場面。新成人・保護者は名前の無いモブ。笑いにしない） ----
+- id: ch4_asa
+  title: 成人の日の朝
+  background: hn_kitsuke_kara
+  bgm: 223am
+  stage:
+  - {who: hotel, x: 0.12, flip: true, emotion: sad}
+  - {who: shinseijin, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月8日、成人の日の朝。式典の3時間前から、新成人と保護者が集まり始めます。
+    reading: いちがつ ようか、せいじんのひの あさ。しきてんの さんじかん まえから しんせいじんと ほごしゃが あつまり はじめます。
+  - speaker: shinseijin
+    emotion: normal
+    text: すみません。はれのひで、着付けを予約してるんですけど……。
+  - speaker: hotel
+    emotion: sad
+    text: それが……業者の[方|カタ]が、まだ来ていないんです。
+  - speaker: shinseijin
+    emotion: surprised
+    text: え……？
+  - speaker: hotel
+    emotion: sad
+    text: 会社とも、連絡が取れなくて。
+  - speaker: shinseijin
+    emotion: sad
+    text: 振袖は、お店に預けてあるんです……。
+  - speaker: hotel
+    emotion: normal
+    text: もしもし、今から着付けをお願いできませんか。何人でも……！
+  - speaker: hotel
+    emotion: normal
+    text: いま、別の着付けの[方|カタ]を呼んでいます。
+  - speaker: shinseijin
+    emotion: sad
+    text: ヘアメイクも、ここでしてもらうはずでした……。
+  - speaker: shinseijin
+    emotion: sad
+    text: 式に、間に合うんでしょうか……。
+  - speaker: hotel
+    emotion: normal
+    text: 横浜市が、遅れても式典に入れるようにしてくれるそうです。
+- id: ch4_asa2
+  title: ''
+  background: hn_kitsuke
+  stage:
+  - {who: kitsuke, x: 0.12, flip: true, emotion: normal}
+  - {who: hogosha2, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: kitsuke
+    emotion: normal
+    text: お着物をお持ちの[方|カタ]から、順番にどうぞ！
+  - speaker: hogosha2
+    emotion: sad
+    text: うちの子の振袖は、お店の中なんです。
+  - speaker: kitsuke
+    emotion: sad
+    text: ……申し訳ありません。お着物がないと……。
+  - speaker: reimu
+    text: 例年、約200人がこのホテルで、はれのひの着付けを受けていました。
+    reading: れいねん やく にひゃくにんが この ほてるで はれのひの きつけお うけて いました。
+  - speaker: reimu
+    text: この朝、約100人は持ち込んだ衣装で、別の業者に着付けてもらいます。
+    reading: この あさ やく ひゃくにんわ もちこんだ いしょうで、べつの ぎょうしゃに きつけて もらいます。
+  - speaker: reimu
+    text: 残る約100人の多くは、晴れ着を着られなかったとみられます。
+    reading: のこる やく ひゃくにんの おおくわ、はれぎお きられなかったと みられます。
+    background: hn_kitsuke_kara
+    telops:
+    - {text: "約100人の多くが 着られなかったとみられる", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 同じ朝の店と、18日間（記者はモブ。張り紙は施設の運営会社） ----
+- id: ch4_mise
+  title: 閉まった店
+  background: hn_shutter
+  stage:
+  - {who: kisha, x: 0.1, flip: true, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ朝、横浜の店の入口は閉ざされ、施設の運営会社が張り紙を出しました。
+    reading: おなじ あさ よこはまの みせの いりぐちわ とざされ、しせつの うんえい がいしゃが はりがみお だしました。
+    background: hn_shutter_harigami
+  - speaker: kisha
+    emotion: normal
+    text: 入口の張り紙です。本日の営業を休業させて頂いております、とあります。
+  - speaker: kisha
+    emotion: thinking
+    text: 本社のドアも閉まったまま。ノックにも、返事はありません。
+  - speaker: kisha
+    emotion: normal
+    text: 今日営業しているのは、[福岡天神|ふくおかてんじん]の店だけだそうです。
+- id: ch4_18nichi
+  title: 18日間
+  background: hn_shutter_harigami
+  stage:
+  - {who: kisha, x: 0.1, flip: true, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 翌日には、[福岡天神|ふくおかてんじん]の店も閉まりました。
+  - speaker: kisha
+    emotion: normal
+    text: 横浜市と[八王子市|ハチオウジシ]の窓口に、10日までに327件の相談です。
+  - speaker: kisha
+    emotion: surprised
+    text: そのうち6割は、来年と再来年の新成人だそうです。
+    telops:
+    - {text: "相談327件　6割は来年・再来年の新成人", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: thinking
+    text: まだ晴れ着を着ていない人たちが、先にお[金|かね]を払っていたんですね。
+  - speaker: kisha
+    emotion: sad
+    text: 社長とは、今も連絡が取れていません。
+  - speaker: reimu
+    text: 社長が姿を見せないまま、18日が過ぎていきます。
+    reading: しゃちょうが すがたお みせない まま、じゅうはちにちが すぎて いきます。
+# ---- 2018年1月26日・会見（本編。問いと答えは書き起こしの並びと言い回し） ----
+- id: ch5_kaiken
+  title: 1月26日の会見
+  background: hn_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 篠崎社長, emotion: sad}
+  - {who: kisha, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月26日、横浜地裁が破産の手続きの開始を決めます。その夜、横浜市内で会見が開かれました。
+    reading: いちがつ にじゅうろくにち、よこはま ちさいが はさんの てつづきの かいしお きめます。その よる、よこはま しないで かいけんが ひらかれました。
+  - speaker: zundamon
+    emotion: sad
+    text: 成人式当日着付けの費用のお支払のめどが立たず、このような事態となりました。
+  - speaker: zundamon
+    emotion: sad
+    text: 代表取締役である私にすべての責任がございます。本当に申し訳ございませんでした。
+  - speaker: kisha
+    emotion: normal
+    text: なぜ、今まで雲隠れしていたんでしょうか？ どこで、何をしていたんでしょうか？
+  - speaker: zundamon
+    emotion: sad
+    text: どこにいたかということに対しては、知人のところにおりまして、
+  - speaker: zundamon
+    emotion: sad
+    text: 隠れるつもりはなかったんですけども、そのように見えたことで、
+  - speaker: zundamon
+    emotion: sad
+    text: 世間にお騒がせしたこと、申し訳ないなと思っております。
+  - speaker: kisha
+    emotion: normal
+    text: 当日までの間で、直近最後の注文はいつですか？
+  - speaker: zundamon
+    emotion: sad
+    text: 最後の注文は、確か12月の中旬ぐらいだと思います。
+  - speaker: kisha
+    emotion: normal
+    text: 相当もう厳しい状況ですよね。
+  - speaker: zundamon
+    emotion: sad
+    text: そうですね。
+  - speaker: kisha
+    emotion: normal
+    text: それでも注文を、そのときに取り続けたんですか？
+  - speaker: zundamon
+    emotion: sad
+    text: そうですね。今振り返ると、そこで止めといた方が良かったんでしょうけども、
+  - speaker: zundamon
+    emotion: sad
+    text: やはりお店が営業している以上、お客さまが来られますので、
+  - speaker: zundamon
+    emotion: sad
+    text: お断りするわけにもいかずというところです。
+- id: ch5_kaiken1b
+  title: ''
+  background: hn_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 篠崎社長, emotion: sad}
+  - {who: kisha2, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kisha2
+    emotion: normal
+    text: 1月8日成人式当日。この日はどこで何をしていたんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 知人宅におりまして、
+  - speaker: zundamon
+    emotion: sad
+    text: '[何と|なんと]言いますか、そこで待機をしていたというか……。'
+  - speaker: kisha2
+    emotion: normal
+    text: なぜ成人式当日になって逃げてしまったんでしょうか。
+  - speaker: zundamon
+    emotion: sad
+    text: できなくなるということの危険性はあったんですけども、
+  - speaker: zundamon
+    emotion: sad
+    text: 一切考えず最後まで交渉しておりました。
+  - speaker: kisha2
+    emotion: normal
+    text: 逃げていたのではありませんか？
+  - speaker: zundamon
+    emotion: sad
+    text: 逃げてはないです。
+- id: ch5_kaiken2
+  title: ''
+  background: hn_kaiken
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 篠崎社長, emotion: sad}
+  - {who: kisha, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 社長、ぎりぎりまで交渉していたとおっしゃっていましたが、
+  - speaker: kisha
+    emotion: normal
+    text: 成人式前日の1月7日の時点で、当日の営業ができないことはわかっていたのでしょうか？
+  - speaker: zundamon
+    emotion: sad
+    text: 例えば、成人式当日の技術者さんの宿泊先が、お支払う資金がありません、と。
+  - speaker: zundamon
+    emotion: sad
+    text: 朝が早いものですから、支度ができないことになってしまうんですけれども。
+  - speaker: kisha
+    emotion: normal
+    text: 晴れ着を着れなかったみなさんに対して、一言お願いします。
+  - speaker: zundamon
+    emotion: sad
+    text: 今回、成人式を晴れ着を着て迎えられなかった[方|カタ]に対しては、
+  - speaker: zundamon
+    emotion: sad
+    text: 非常に大変申し訳なく思います。
+  - speaker: zundamon
+    emotion: sad
+    text: ただ、成人式の日には二度と戻れないので、
+  - speaker: zundamon
+    emotion: sad
+    text: どんなにお詫びをしてもお詫びしきれないと思っています。
+    telops:
+    - {text: "篠崎「どんなにお詫びをしても お詫びしきれない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 1〜2月・返ってきた振袖と、もう1度の成人式 ----
+- id: ch5_hako
+  title: 返ってきた振袖
+  background: hn_hako
+  bgm: 223am
+  stage:
+  - {who: shokuin, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月29日から、会社に残っていた客の振袖が、買った人のもとへ送り返され始めます。
+    reading: いちがつ にじゅうくにちから、かいしゃに のこって いた きゃくの ふりそでが かった ひとの もとえ おくりかえされ はじめます。
+  - speaker: shokuin
+    emotion: normal
+    text: この箱は、[八王子|ハチオウジ]の店の分。宛名を確かめて、送ります。
+  - speaker: reimu
+    text: 2月12日、八王子では呉服店などの有志が、もう1度成人式を開き、66人が無料で振袖を着ました。
+    reading: にがつ じゅうににち はちおうじでわ ごふくてんなどの ゆうしが もう いちど せいじんしきお ひらき、ろくじゅうろくにんが むりょうで ふりそでお きました。
+# ---- 2018年6月20日・来なかった社長（債権者集会） ----
+- id: ch5_hall
+  title: 来なかった社長
+  background: hn_hall
+  bgm: serious
+  stage:
+  - {who: kanzainin, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月20日、横浜。債権者集会に約70人が集まりました。社長は、来ませんでした。
+    reading: ろくがつ はつか、よこはま。さいけんしゃ しゅうかいに やく ななじゅうにんが あつまりました。しゃちょうわ、きませんでした。
+  - speaker: reimu
+    text: 代理人は、3月下旬から連絡が取れず、海外にいる可能性が高いと説明しました。
+    reading: だいりにんわ さんがつ げじゅんから れんらくが とれず、かいがいに いる かのうせいが たかいと せつめい しました。
+  - speaker: kanzainin
+    emotion: normal
+    text: 資産がほとんどなく、債権者への配当の見込みはない
+  - speaker: reimu
+    text: 負債は約10億8500万円。資産は、着物などを売った約1620万円だけでした。
+    reading: ふさいわ やく じゅうおく はっせん ごひゃくまんえん。しさんわ、きものなどお うった やく せん ろっぴゃく にじゅうまんえん だけでした。
+    background: hn_mise_kara
+    telops:
+    - {text: "負債 約10億8500万円　配当なし", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 2018年6月23日・成田（空港の到着ロビーだけ。取調室・機内・家族は描かない） ----
+- id: ch5_kuko
+  title: ''
+  background: hn_kuko
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 篠崎元社長, emotion: sad}
+  - {who: sosain, x: 0.74, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3日後の6月23日。彼は米国から、成田空港に帰ってきます。
+    reading: みっかごの ろくがつ にじゅうさんにち。かれわ べいこくから、なりた くうこうに かえって きます。
+  - speaker: sosain
+    emotion: normal
+    text: '[篠崎洋一郎|シノザキヨーイチロー]さんですね。神奈川県警です。'
+    se: don
+  - speaker: sosain
+    emotion: normal
+    text: お話を聞かせてください。横浜まで、ご同行願います。
+  - speaker: reimu
+    text: その夜、彼は銀行から約3500万円の融資をだまし取った疑いで逮捕されました。
+    reading: その よる、かれわ ぎんこうから やく さんぜん ごひゃくまんえんの ゆうしお だましとった うたがいで たいほ されました。
+  - speaker: reimu
+    text: 5か月前の会見で、彼は逃げてはないです、と答えていました。
+    reading: ごかげつ まえの かいけんで、かれわ にげてわ ないですと こたえて いました。
+# ---- 法廷（2018年10月5日〜12月19日。調書は検察が法廷で読んだもの） ----
+- id: ch6_houtei
+  title: 法廷
+  background: hn_houtei
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 篠崎元社長, emotion: sad}
+  - {who: saibancho, x: 0.52, emotion: normal}
+  - {who: kenji, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月5日、横浜地裁で初公判。起訴された銀行への詐欺について、彼は認めます。
+    reading: じゅうがつ いつか、よこはま ちさいで しょこうはん。きそ された ぎんこうえの さぎに ついて、かれわ みとめます。
+  - speaker: zundamon
+    emotion: sad
+    text: 間違いありません
+  - speaker: reimu
+    text: 検察は、彼の供述調書を読み上げました。
+    reading: けんさつわ、かれの きょうじゅつ ちょうしょお よみあげました。
+  - speaker: kenji
+    emotion: normal
+    text: ぎりぎりまで[何とか|なんとか]しようと思っていたので、顧客への連絡をしなかった。
+  - speaker: kenji
+    emotion: normal
+    text: 成人式当日は自宅にいて電話にも出ず、現実から背を向けていた。
+  - speaker: reimu
+    text: 11月20日、被告人質問で、彼はこう述べます。
+    reading: じゅういちがつ はつか、ひこくにん しつもんで かれわ こう のべます。
+  - speaker: zundamon
+    emotion: sad
+    text: 見えやプライドのために誤った判断を繰り返してしまった
+  - speaker: reimu
+    text: 検察は、経営者の責任を放棄し無責任だとして、懲役5年を求めました。
+    reading: けんさつわ、けいえいしゃの せきにんお ほうきし むせきにんだと して ちょうえき ごねんお もとめました。
+  - speaker: reimu
+    text: 12月19日、判決の日です。
+    reading: じゅうにがつ じゅうくにち、はんけつの ひです。
+  - speaker: saibancho
+    emotion: normal
+    text: 主文。被告人を[懲役2年6月|ちょうえきにねんろっかげつ]に処する。
+    se: don
+  - speaker: saibancho
+    emotion: normal
+    text: 企業の経営者として守るべき一線を大きく踏み越えた
+  - speaker: reimu
+    text: 裁かれたのは、売上を水増しした決算書で、2つの銀行から約6500万円の融資を受けた詐欺でした。
+    reading: さばかれたのわ うりあげお みずまし した けっさんしょで、ふたつの ぎんこうから やく ろくせん ごひゃくまんえんの ゆうしお うけた さぎでした。
+    telops:
+    - {text: "懲役2年6月の実刑（求刑5年）", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 新成人ら客の損失は、立件されませんでした。
+    reading: しんせいじんら きゃくの そんしつわ、りっけん されませんでした。
+# ---- 2019年1月14日・翌年の朝（ホテルの関係者はモブ。「和やかな雰囲気」は神奈川新聞） ----
+- id: card2019
+  title: ''
+  background: hn_card_2019
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2019年1月14日。次の成人の日です。
+    reading: にせん じゅうくねん いちがつ じゅうよっか。つぎの せいじんのひです。
+- id: ch7_yokunen
+  title: 翌年の朝
+  background: hn_kitsuke
+  stage:
+  - {who: hotel, x: 0.12, flip: true, emotion: happy}
+  - {who: hotel2, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: hotel
+    emotion: happy
+    text: 着付けの[方|カタ]、朝から皆さんそろってます。
+  - speaker: hotel2
+    emotion: normal
+    text: 去年は別の業者さんに、約100人分の振袖をお願いしましたね。
+  - speaker: hotel
+    emotion: happy
+    text: 今年は、和やかな朝です。
+# ---- 論争1：最初から消えるつもり？（主語を付けて並べる。「計画倒産」とは言わない） ----
+- id: ronso1
+  title: 1200着は残っていた
+  background: hn_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 最初からお[金|かね]を集めて、消えるつもりだったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう疑われたのには、理由があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 春から危機を感じていたのに、12月中旬まで注文を受けてた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 成人の日から18日、姿を見せなかった。6月の集会にも来なかった。
+  - speaker: zundamon
+    emotion: angry
+    text: もう決まりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、それだけでは言い切れない事実もあるの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社には客の振袖や仮縫いが、約1200着残ってたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決も、だまし取ったお[金|かね]は会社の経費に使われて着服はなかったとしてるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会見で詐欺に当たらないかと問われて、本人はそういうつもりではなかったと答えてる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 法廷で問われたのも、客のお[金|かね]じゃなく銀行から借りたお[金|かね]のほうよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 消えるつもりだったかは、決められないのか……。
+    beat: true
+# ---- 論争2：売り払って海外へ？（時期を分けて言う。居場所の言葉は日付と主語を付けて並べるだけ） ----
+- id: ronso2
+  title: いつ、どこにいたのか
+  background: hn_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 振袖をフリマアプリで売って、海外に行ってたって話もあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: フリマアプリに振袖がたくさん出ていた、という話はあったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも出したのがこの会社の人だと確かめた報道は、見当たらないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会見で着物を売ったのではと問われて、本人は一切ございませんと答えてる。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、海外は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会見では海外には行っていません、神奈川県内にいましたと答えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 米国にいたと分かるのは、そのあとよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3月下旬から、代理人と連絡が取れなくなって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 6月23日に、米国から帰ってきたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 時期が、ちがうのだ！
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 1月26日の会見で成人式当日はどこにいたかと問われて、知人宅。
+  - speaker: tsumugi
+    emotion: normal
+    text: 10月5日に法廷で読まれた調書では、成人式当日は自宅にいた。
+  - speaker: zundamon
+    emotion: thinking
+    text: 同じ日の話なのに、ちがうのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どちらが本当かは、ここでは決めないでおくわ。
+# ---- 本当の注意点（127 と言い方を変える。カードは1行まで） ----
+- id: chui
+  title: 契約は、その日から
+  background: hn_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に気をつけたいのは、別のところなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。2年先の晴れ着でも、契約はその日から有効よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2年先のレンタルを約25万円で申し込んで、30日以内でも半額のキャンセル料。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そんな相談が、国民生活センターに届いているの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2年も先なのに、半分！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 好みの[柄|がら]がなくなると急かされても、その場では決めないで。
+- id: chui2
+  title: ''
+  background: hn_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。買う振袖と借りる振袖では、会社がつぶれたときの戻り方が違うの。
+  - speaker: tsumugi
+    emotion: normal
+    text: はれのひのとき、買った人の仮縫いは返すと会社の弁護士は説明したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも借りる約束の振袖は、法的には会社に処理権があるだろうって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: だから、そのままは戻せないと。
+  - speaker: zundamon
+    emotion: sad
+    text: 借りる約束は、戻ってこないのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 申込書や領収書、業者からの手紙は全部とっておいてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: カードの分割払いなら、支払いを止められる場合もあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 困ったら、消費者ホットラインの[188|イチハチハチ]よ。
+  - speaker: zundamon
+    emotion: happy
+    text: いややの[188|イチハチハチ]なのだ。
+    se: hirameki
+# ---- 現代 ----
+- id: card2026
+  title: ''
+  background: hn_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。あの朝のあと、成人の日は8回めぐってきました。
+    reading: にせん にじゅうろくねん。あの あさの あと、せいじんのひわ はちかい めぐって きました。
+- id: ima
+  title: 8年後の成人式
+  background: hn_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 会社と社長は、その後どうなったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は2018年に破産の手続きが打ち切られて、なくなったわ。配当はゼロ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 残った着物約820枚は、着付けの会社がまとめて買い取ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次の年からのレンタルの契約者に、無料で貸す方針を示したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 借りる約束の人に、貸すと言ってくれた会社があったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[篠崎|シノザキ]元社長は2019年5月、二審でも[懲役2年6月|ちょうえきにねんろっかげつ]の実刑だったの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 公の記録で確かめられるのは、そこまでよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 横浜の成人式は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年1月、横浜アリーナの[二十歳|ハタチ]のつどいには2万2175人が集まったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 2万人も！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも国民生活センターは2026年2月にも、晴れ着の早い契約に注意を呼びかけてるの。
+  - speaker: zundamon
+    emotion: sad
+    text: 8年たっても、同じ心配が続いてるのだ……。
+# ---- 締め ----
+- id: shime
+  title: ''
+  background: hn_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 遠足のお弁当は、前の晩に受け取っておくのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 前の晩に、お店が閉まってたら？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……自分で作るのだ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 一生に1回のことに携われる。あの社長は、この仕事をそう話していたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2年先の晴れ着のお[金|かね]は受け取っていたのに、成人式の朝のお[金|かね]はめどが立たなかった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 成人式の日には、二度と戻れない。会見で、本人もそう話していたわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 一生に一度の朝は、やり直せないのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 晴れ着を契約するときは、着る朝までの2年間のことも少しだけ考えてみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 参考になったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
