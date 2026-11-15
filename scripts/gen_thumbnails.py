@@ -4535,6 +4535,19 @@ SPECS = {
         dict(scene="tm_kaiken", tint="mono", tag="2017年 破産の日", emo="sad", fx="gloom", say="生きることしか"),
         dict(scene="tm_houtei", tint="yellow", tag="2018年 初公判", emo="sad", fx="sweat", say="間違いございません"),
     ]),
+    # 第10弾（2026-12-03〜05。方向転換の実験の17〜19本目）
+    "murakami-fund": dict(layout="scene", headline="会見の数時間後に逮捕", head_hi="逮捕", panels=[
+        dict(scene="mu_kaiken2", tint="mono", tag="2006年6月 会見", emo="sad", fx="gloom", say="聞いちゃった"),
+        dict(scene="mu_houtei", tint="yellow", tag="2007年 一審", emo="sad", fx="sweat", say="嘘をつきました"),
+    ]),
+    "harenohi": dict(layout="scene", headline="成人式の朝に店が閉まった", head_hi="店が閉まった", panels=[
+        dict(scene="hn_mise", tint="yellow", tag="2011年 開業", emo="happy", fx="sparkle", say="一生に1回"),
+        dict(scene="hn_kaiken", tint="mono", tag="2018年 会見", emo="sad", fx="gloom", say="逃げてはないです"),
+    ]),
+    "elpida-sakamoto": dict(layout="scene", headline="負債4480億円", head_hi="4480億円", panels=[
+        dict(scene="ep_cleanroom", tint="yellow", tag="2004年 黒字に", emo="happy", fx="sparkle"),
+        dict(scene="ep_kaiken", tint="mono", tag="2012年 更生法", emo="sad", fx="gloom", say="火を消したくない"),
+    ]),
     "comsn-origuchi": dict(layout="scene", headline="2081か所が他社へ", head_hi="他社へ", panels=[
         dict(scene="og_disco", tint="yellow", tag="1991年 ディスコ", emo="happy", fx="sparkle"),
         dict(scene="og_kaiken", tint="mono", tag="2007年 会見", emo="sad", fx="gloom", say="結果的に"),
