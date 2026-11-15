@@ -1,0 +1,1057 @@
+meta:
+  title: 「聞いちゃった」と会見で認めた村上ファンドの代表、その日の午後に逮捕された【ずんだもん解説】
+  slug: murakami-fund
+  hook_line: 「物言う株主」は、なぜ自分の買った株で有罪になったのか。
+  summary: 2006年6月5日、東京証券取引所の記者クラブ。村上ファンドを率いる村上世彰は「聞いちゃったと言われれば聞いちゃってるんですよね」と語り、その日の午後に逮捕されました。小さなラジオ局が大きなテレビ局の筆頭株主という「ねじれ」、自分から持ちかけた買い集めの話、そして2か月半で99億円あまりの買い付け。「物言う株主」は、なぜ自分の買った株で有罪になったのか。最高裁の決定と判決、本人の会見・著書・対談の言葉を、主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 最高裁判所第一小法廷 平成23年6月6日決定（平成21年(あ)第375号）全文 https://www.sn-hoki.co.jp/snh-cms/contents/tamaster/e13/110606_375.pdf
+  - 証券取引等監視委員会「証券取引等監視委員会の活動状況」（2006年8月） https://www.fsa.go.jp/sesc/reports/n_17/n_17b.pdf
+  - 日本経済新聞 フジ・メディア・ホールディングスの約2349億円の自社株買い（2026年2月5日） https://www.nikkei.com/article/DGXZQOUC051A10V00C26A2000000/
+  - AFPBB News「村上被告に実刑判決、「もの言う株主」に厳しい司法の判断」（2007年7月19日） https://www.afpbb.com/articles/-/2255975
+  - 日本経済新聞「村上ファンド元代表の有罪確定へ インサイダー事件」（2011年6月7日） https://www.nikkei.com/article/DGXNASDG0702K_X00C11A6000000/
+  - 文藝春秋『生涯投資家』（村上世彰、2017年） https://books.bunshun.jp/ud/book/num/9784163906652
+  tags:
+  - 村上ファンド
+  - 村上世彰
+  - 村上ファンド事件
+  - インサイダー取引
+  - 物言う株主
+  - ニッポン放送
+  - フジテレビ
+  - ライブドア
+  - 証券取引法違反
+  - 東京証券取引所
+  - 最高裁
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 会見の数時間後に
+    bottom: 逮捕
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: yakuin
+    label: 役員
+    voice: 21
+    pitch: -0.02
+    outfit: suit
+    color: '#3a4f5f'
+  - id: soumu
+    label: 総務
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#454a55'
+  - id: keiri
+    label: 経理
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#6a7a8a'
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: shain2
+    label: 社員
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: miyauchi
+    label: 宮内亮治
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: bocho
+    label: 傍聴人
+    voice: 8
+    pitch: 0.06
+    outfit: none
+    color: '#7a6a5a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2006年6月5日 午前11時・東証の記者クラブ。記者の問いは原文が無いので置かない。会見を嘲らない） ----
+- id: co_kaiken
+  title: ''
+  background: mu_kaiken2
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.5, tag: 村上世彰, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2006年6月5日、午前11時。東京証券取引所の記者クラブ。
+    reading: にせん ろくねん ろくがつ いつか、ごぜん じゅういちじ。とうきょう しょうけん とりひきじょの きしゃ くらぶ。
+  - speaker: reimu
+    text: 村上ファンドを率いる村上世彰、46歳の会見です。
+    reading: むらかみ ふぁんどお ひきいる むらかみ よしあき、よんじゅうろくさいの かいけんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 聞いちゃったと言われれば聞いちゃってるんですよね
+  - speaker: zundamon
+    emotion: normal
+    text: プロ中のプロとして認識が甘かった点については、
+  - speaker: zundamon
+    emotion: normal
+    text: 私自身が罪を認め、それを甘んじて受けるのが、私がやるべきことと判断した。
+  - speaker: reimu
+    text: その日の午後、彼はインサイダー取引の疑いで逮捕されます。のちに法廷では、この会見の言葉を言い直します。
+    reading: その ひの ごご、かれわ いんさいだー とりひきの うたがいで たいほ されます。のちに ほうていでわ この かいけんの ことばお いいなおします。
+# ---- 今の部屋（先に聞いた話で株を買う） ----
+- id: hook
+  title: ''
+  background: mu_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 友だちのお父さんの会社、来週いい発表があるって聞いたのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: 今のうちに、その会社の株を買うのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それ、やったら犯罪になるかもしれないわよ。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 聞いただけなのに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 先に聞いて、買った。それで有罪になった、物言う株主がいるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 彼はなぜ、自分の買った株で有罪になったのか。
+    telops:
+    - {text: "物言う株主は なぜ自分の買った株で有罪に？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ものを言う人が、聞いて有罪！？
+# ---- 1959〜1999年・官僚から株主へ（30秒以内。子供時代は描かない。父は1行だけ） ----
+- id: ch0_kanryo
+  title: 官僚から株主へ
+  background: mu_shingikai
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: 村上世彰, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 小学生で父から100万円を渡され、株を始めた男。通産省に16年勤め、1999年にファンドを作ります。
+    reading: しょうがくせいで ちちから ひゃくまんえんお わたされ、かぶお はじめた おとこ。つうさんしょうに じゅうろくねん つとめ、せんきゅうひゃく きゅうじゅうきゅうねんに ふぁんどお つくります。
+# ---- 2002年・東京スタイルの株主総会（社長は故人・台詞なし。会社側が勝った、まで） ----
+- id: ch1_sokai
+  title: お金を株主に返せ
+  background: mu_sokai
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 村上世彰, emotion: normal}
+  - {who: yakuin, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2002年。彼のファンドは、服の会社、東京スタイルの株を9.3%買います。
+    reading: にせん にねん。かれの ふぁんどわ、ふくの かいしゃ とうきょう すたいるの かぶお きゅうてんさん ぱーせんと かいます。
+  - speaker: yakuin
+    emotion: surprised
+    text: ファンドの要求は、1株500円の配当と500億円までの自社株買い！
+  - speaker: yakuin
+    emotion: thinking
+    text: お[金|かね]を株主に返せ、か……。
+  - speaker: yakuin
+    emotion: angry
+    text: 株主のくせに、経営に口を出す。物言う株主ってやつか。
+  - speaker: yakuin
+    emotion: normal
+    text: 株主総会は、委任状の奪い合い。[委任状争奪戦|イニンジョウソウダツセン]だ。
+  - speaker: yakuin
+    emotion: happy
+    text: ……通ったのは、うちの案です。
+    beat: true
+# ---- 2001〜2004年・ラジオ局の株主の円グラフ（局の社員は名前なし。121とは別の時期・別の言い回し） ----
+- id: ch2_radio
+  title: テレビ局がついてくる株
+  background: mu_radio
+  stage:
+  - {who: soumu, x: 0.16, flip: true, emotion: normal}
+  - {who: keiri, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2001年から彼が買い集めていたのは、東京のラジオ局、ニッポン放送の株でした。
+    reading: にせん いちねんから かれが かいあつめて いたのわ、とうきょうの らじおきょく にっぽん ほうそうの かぶでした。
+  - speaker: keiri
+    emotion: surprised
+    text: '[村上|ムラカミ]ファンドが、社外取締役を選べと株主提案です！'
+    se: bikkuri
+  - speaker: soumu
+    emotion: thinking
+    text: 関連会社と合わせて、2割近く持つ大株主だからな。
+    background: mu_radio_nuri
+  - speaker: keiri
+    emotion: thinking
+    text: 狙いは、うちが持つフジテレビの議決権22.5%か。
+  - speaker: soumu
+    emotion: thinking
+    text: うちの株を買えば、テレビ局までついてくる。おまけのほうが本体より高いお菓子だな。
+  - speaker: keiri
+    emotion: normal
+    text: 総会では提案を取り下げて、資本政策を話し合う場を作ることに。
+  - speaker: reimu
+    text: ラジオ局が、ずっと大きなテレビ局の筆頭株主。この形は、ねじれと呼ばれました。
+    reading: らじおきょくが ずっと おおきな てれびきょくの ひっとう かぶぬし。この かたちわ ねじれと よばれました。
+# ---- 今の部屋（5%の線と、本人の本の言葉） ----
+- id: heya1
+  title: ''
+  background: mu_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: お菓子を買ったら、テレビ局がついてくるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きく買う話には、線があるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 5%以上買い集めると決めた、と買う側から聞いた人は
+  - speaker: tsumugi
+    emotion: normal
+    text: 公表されるまで、その株を買ってはいけない。
+    telops:
+    - {text: "5%以上買う、と聞いたら 公表まで買えない", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 友だちのお父さんの話と、同じだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 彼は、誰から何を聞いちゃったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は2017年の本に、こう書いているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 株主の立場からこの資本関係のおかしさを正したかった。
+  - speaker: zundamon
+    emotion: happy
+    text: 正義の味方なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: フジテレビの[TOB|ティーオービー]などを想定していたとして、こうも書いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 投資利益が、ファンドマネージャーとして大きな魅力だったことは、もちろん事実だ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 正義とお[金|かね]と、両方……。
+    se: tenten
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして最初に話を持ちかけたのは、彼のほうだったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 聞いた側じゃなくて、誘った側！？
+# ---- 2004年9月15日 午前9時・ライブドアの会議室（判決が認めた事実。村上の台詞は決定文の認定の言葉だけ） ----
+- id: card2004
+  title: ''
+  background: mu_card_2004
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2004年9月15日、午前9時。ライブドアの会議室で、45歳の彼は堀江と宮内に会います。
+    reading: にせん よねん くがつ じゅうごにち、ごぜん くじ。らいぶどあの かいぎしつで、よんじゅうごさいの かれわ ほりえと みやうちに あいます。
+- id: ch3_sasoi
+  title: 午前9時の誘い
+  background: mu_kaigi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 村上世彰, emotion: happy}
+  - {who: shain, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 判決によれば、彼が部下と見せた資料には、ニッポン放送が持つフジテレビ株は1373億円とありました。
+    reading: はんけつに よれば かれが ぶかと みせた しりょうにわ、にっぽん ほうそうが もつ ふじてれびかぶわ せん さんびゃく ななじゅうさんおくえんと ありました。
+  - speaker: reimu
+    text: そのうえで彼は、こう働きかけたと最高裁は認めています。
+    reading: その うえで かれわ、こう はたらきかけたと さいこうさいわ みとめて います。
+  - speaker: zundamon
+    emotion: happy
+    text: '[3分の1|さんぶんのいち]を取得すれば、うちの[18%|じゅうはっパーセント]と合わせて、'
+  - speaker: zundamon
+    emotion: happy
+    text: 経営権を掌握でき、
+  - speaker: zundamon
+    emotion: normal
+    text: たとえ失敗しても、フジテレビの[公開買付け|こうかいかいつけ]などに応じればリスクはない
+  - speaker: reimu
+    text: 判決によれば、堀江は強い興味を示しました。この誘いが2か月後、彼自身を縛ります。
+    reading: はんけつに よれば、ほりえわ つよい きょうみお しめしました。この さそいが にかげつご かれ じしんお しばります。
+# ---- 2004年11月8日 午後・村上ファンドの会議室（宮内の台詞は最高裁が認めた1言だけ） ----
+- id: ch4_meado
+  title: 資金のめどが立ったので
+  background: mu_office
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: 村上世彰, emotion: normal}
+  - {who: miyauchi, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月8日の午後。今度はライブドアの側が、彼のファンドの会議室に来ます。
+    reading: じゅういちがつ ようかの ごご。こんどわ らいぶどあの がわが、かれの ふぁんどの かいぎしつに きます。
+  - speaker: miyauchi
+    emotion: normal
+    text: 資金のめどが立ったので、具体的に進めさせていただきたい。
+    se: don
+  - speaker: reimu
+    text: 最高裁は、この日に宮内がこう述べ、堀江と2人で3分の1を目指すと決意を示した、と認めました。
+    telops:
+    - {text: "宮内「資金のめどが立ったので」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+    reading: さいこうさいわ この ひに みやうちが こう のべ、ほりえと ふたりで さんぶんのいちお めざすと けついお しめしたと みとめました。
+  - speaker: reimu
+    text: 判決によれば、12月のTOBを持ち出す堀江に、彼は2000年に失敗した自分のTOBの例を話します。
+    reading: はんけつに よれば じゅうにがつの てぃーおーびーお もちだす ほりえに、かれわ にせんねんに しっぱい した じぶんの てぃーおーびーの れいお はなします。
+# ---- 今の部屋（聞いたこと、本人の主張、翌日からの買い付け） ----
+- id: heya2
+  title: ''
+  background: mu_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 5%どころか、[3分の1|さんぶんのいち]を買うって聞いたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も2017年に、5%以上を買いたいという趣旨の話を聞いたのは事実と話してるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただし解釈の違いだと思っています、とも。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年の声明では、ライブドアの単なる願望だとしか受け止めていなかったと。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも、誘ったのは自分のほうだよ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 相手の[宮内|ミヤウチ]ものちに法廷で、9月の彼は前のめりだったと証言しているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決によれば[18%|じゅうはっパーセント]を持ち続ける約束を紙に、と頼まれても断っているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 買うのは勧めて、自分は約束しないのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取ったあとの子会社の分け方まで、話に出たと判決は書いているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 聞いただけなら、罪じゃないのだ？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 聞いただけなら、ね。問題は、翌日の11月9日からよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1月26日までの2か月半で、ニッポン放送株を193万3100株。99億円あまりよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 99億円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 平均で1株約5148円。100株で約51万円の株よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その100株の束を、2万近く買ったことになるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2万束……！
+    se: gaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ二審は、1月6日の会議まではもとの方針どおりに買っていたとみたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、1月6日に何があったの？
+# ---- 2005年1月6日・3回目の会議（本人がのちに法廷で話した言葉） ----
+- id: card2005
+  title: ''
+  background: mu_card_2005
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2005年1月6日。3回目の会議です。
+    reading: にせん ごねん いちがつ むいか。さんかいめの かいぎです。
+- id: ch5_kaigi3
+  title: 3回目の会議
+  background: mu_kaigi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 村上世彰, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: のちに一審の法廷で彼は、TOBを口にするライブドアの2人に、こう言ったと話しています。
+    reading: のちに いっしんの ほうていで かれわ、てぃーおーびーお くちに する らいぶどあの ふたりに こう いったと はなして います。
+  - speaker: zundamon
+    emotion: angry
+    text: ガタガタ言わずにまずは[市場|しじょう]で株を買え！
+  - speaker: reimu
+    text: 二審は、この日からは、ライブドアが本気で大量に買うと分かったうえで、買い続けたとみました。
+    reading: にしんわ この ひからわ、らいぶどあが ほんきで たいりょうに かうと わかった うえで かいつづけたと みました。
+# ---- 2005年1月17日〜2月10日・5950円と、6050円（121と重ねない。村上の側の売値だけ） ----
+- id: ch6_uri
+  title: 5950円と6050円
+  background: mu_gamen
+  bgm: curious
+  stage:
+  - {who: shain, x: 0.12, flip: true, emotion: surprised}
+  - {who: shain2, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 1月17日、フジテレビが1株5950円で買い付けると発表しました！
+  - speaker: reimu
+    text: 判決によれば、直後に訪ねた堀江らに彼はまず、フジの買い付けに応じる考えを示します。
+    reading: はんけつに よれば ちょくごに たずねた ほりえらに かれわ まず、ふじの かいつけに おうじる かんがえお しめします。
+  - speaker: reimu
+    text: ただ、もっと高い値ならと聞かれると、ファンドだからいちばん高い値の所に売る、という趣旨で答えました。
+    reading: ただ もっと たかい ねならと きかれると、ふぁんどだから いちばん たかい ねの ところに うると いう しゅしで こたえました。
+  - speaker: shain2
+    emotion: thinking
+    text: フジの買い付けを歓迎する、とサイトに出した声明は……。
+  - speaker: shain
+    emotion: normal
+    text: もう、消しました。
+  - speaker: shain2
+    emotion: normal
+    text: 1月の終わり、弁護士の指示で買い付けは止めました。
+  - speaker: shain
+    emotion: surprised
+    text: 2月8日。持ち株の約半分を、1株6050円でライブドアへ売りました！
+  - speaker: shain2
+    emotion: surprised
+    text: 10日は[市場|しじょう]で157万株あまり。平均8747円です！
+    background: mu_gamen_aka
+    se: jaan
+  - speaker: shain
+    emotion: surprised
+    text: フジの5950円より、ずっと高い……。
+  - speaker: reimu
+    text: 二審は、この売り方を市場操作的で、背信的だと厳しく見ました。ただし、起訴された罪ではありません。
+    reading: にしんわ この うりかたお しじょう そうさてきで はいしんてきだと きびしく みました。ただし きそ された つみでわ ありません。
+# ---- 今の部屋（罪の中身） ----
+- id: heya3
+  title: ''
+  background: mu_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 5950円の話をよそに、8747円で売ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2月8日にライブドアが5%を超えて持ったと公表して、値が上がったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 物言う株主には、悩みが1つあるの。大きく買った株を、どう売るか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 買うより、売るほうが難しいの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 大量の株を売れば、値は崩れるからね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 研究所の論考は、ライブドアという[引き受け手|ひきうけて]を見つけて安心して買い増せたと見たわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 買い手を連れてきて、自分も買った……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも罪になったのは、高く売ったことじゃないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ、じゃあ[何|なに]が罪なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 11月8日に聞いたあと、公表の前に193万株を買ったこと。それだけよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 誘ったのは自分なのに、聞いた側として裁かれるのか……。
+    beat: true
+# ---- 2005年9月〜2006年5月・甲子園と、シンガポール（短く。選手・監督・ファンの声は出さない） ----
+- id: ch7_hanshin
+  title: 甲子園とシンガポール
+  background: mu_kyujo
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2005年9月、甲子園球場を運営する阪神電鉄の株を26.67%持つと判明。のちに4割を超えます。
+    reading: にせん ごねん くがつ、こうしえん きゅうじょうお うんえい する はんしん でんてつの かぶお にじゅうろく てん ろくなな ぱーせんと もつと はんめい。のちに よんわりお こえます。
+- id: ch7_shutsugoku
+  title: ''
+  background: mu_yakuin
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 村上世彰, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2006年5月、彼は拠点をシンガポールへ移すと発表。出国の前に、六本木の事務所で取材を受けます。
+    reading: にせん ろくねん ごがつ、かれわ きょてんお しんがぽーるえ うつすと はっぴょう。しゅっこくの まえに ろっぽんぎの じむしょで しゅざいお うけます。
+  - speaker: zundamon
+    emotion: normal
+    text: 日本では[金儲け|かねもうけ]は悪いことのように言われる。
+  - speaker: zundamon
+    emotion: normal
+    text: 企業家や投資家が住むところではないと思った
+  - speaker: reimu
+    text: この取材のおよそ3週間後、あの会見の日が来ます。
+    reading: この しゅざいの およそ さんしゅうかんご、あの かいけんの ひが きます。
+# ---- 2006年6月5日 午前11時・会見（本編。記者の問いは作らない。笑いのSEは入れない） ----
+- id: card2006
+  title: ''
+  background: mu_card_2006
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2006年6月5日、午前11時。東京証券取引所の記者クラブ。
+    reading: にせん ろくねん ろくがつ いつか、ごぜん じゅういちじ。とうきょう しょうけん とりひきじょの きしゃ くらぶ。
+- id: ch8_kaiken
+  title: 6月5日の会見
+  background: mu_kaiken2
+  stage:
+  - {who: zundamon, x: 0.38, tag: 村上世彰, emotion: normal}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 会見はもともと、阪急による阪神電鉄の買い付けについての場でした。彼は、それに応じる考えを示します。
+    reading: かいけんわ もともと はんきゅうに よる はんしん でんてつの かいつけに ついての ばでした。かれわ それに おうじる かんがえお しめします。
+  - speaker: reimu
+    text: そのうえで、前の週から報じられていたインサイダー取引の疑いを、大筋で認めました。
+    reading: その うえで まえの しゅうから ほうじられて いた いんさいだー とりひきの うたがいお、おおすじで みとめました。
+  - speaker: kisha
+    emotion: surprised
+    text: 阪神の会見のはずが、ニッポン放送の話に……。
+  - speaker: zundamon
+    emotion: normal
+    text: '[宮内|ミヤウチ]さんがそら行け、やれ[行け|いけ]ニッポン放送だというのを'
+    pause_after: 0.6
+  - speaker: zundamon
+    emotion: sad
+    text: 聞いちゃったと言われれば聞いちゃってるんですよね
+    telops:
+    - {text: "村上「聞いちゃってるんですよね」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 私の方から、検事さんのおっしゃる通りかもしれないと話した。
+  - speaker: zundamon
+    emotion: normal
+    text: プロ中のプロとして認識が甘かった点については、
+  - speaker: zundamon
+    emotion: normal
+    text: 私自身が罪を認め、それを甘んじて受けるのが、私がやるべきことと判断した。
+  - speaker: zundamon
+    emotion: normal
+    text: 一方通行の道に知らずに入り、後で立ち入り禁止の看板に気付いたようなもの
+  - speaker: zundamon
+    emotion: normal
+    text: '[証券取引法|しょうけんとりひきほう]違反をした以上は株式の世界にいることはおかしいので、株式から引退する'
+  - speaker: kisha
+    emotion: normal
+    text: 株の世界から、引退……。
+  - speaker: reimu
+    text: この日、記者たちにこう問いかけたと伝えられています。
+    reading: この ひ きしゃたちに こう といかけたと つたえられて います。
+  - speaker: zundamon
+    emotion: normal
+    text: お金儲けは悪いことですか？
+# ---- 2006年6月5日 午後〜6月26日・逮捕（逮捕の瞬間は作らない。報道陣の前に人を立たせない） ----
+- id: ch9_taiho
+  title: その日の午後
+  background: mu_tower
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 東京地検特捜部が、[村上|ムラカミ]ファンドの代表を逮捕しました。
+  - speaker: kisha
+    emotion: normal
+    text: 午前の会見で認めた疑いでの逮捕です。会見から、数時間後のことでした。
+- id: ch9_yoru
+  title: ''
+  background: mu_tower_yoru
+  cuts:
+  - speaker: reimu
+    text: 関係先にも捜索が入りました。6月23日に起訴され、26日に保釈金5億円で保釈されます。
+    reading: かんけいさきにも そうさくが はいりました。ろくがつ にじゅうさんにちに きそ され、にじゅうろくにちに ほしゃくきん ごおくえんで ほしゃく されます。
+# ---- 2006年11月〜2007年・法廷（会見と公判のどちらが本当かを地の文で決めない） ----
+- id: ch10_houtei
+  title: 嘘をつきました
+  background: mu_houtei
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 村上世彰, emotion: sad}
+  - {who: bocho, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2006年11月30日の初公判で、彼は全面的に否認。のちの公判で会見の自白を問われ、こう答えます。
+    reading: にせん ろくねん じゅういちがつ さんじゅうにちの しょこうはんで、かれわ ぜんめんてきに ひにん。のちの こうはんで かいけんの じはくお とわれ、こう こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: 申し訳ございません、嘘をつきました
+    telops:
+    - {text: "村上「申し訳ございません、嘘をつきました」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: bocho
+    emotion: surprised
+    text: 会見で認めたのに、嘘だった……？
+  - speaker: reimu
+    text: 会見の朝、彼から電話を受けたという元記者は、2010年の記事にこう書いています。
+    reading: かいけんの あさ、かれから でんわお うけたと いう もときしゃわ にせん じゅうねんの きじに こう かいて います。
+  - speaker: reimu
+    text: きょう、生まれて初めて公の場でうそをつきます。
+    reading: きょう うまれて はじめて おおやけの ばで うそお つきます。
+  - speaker: bocho
+    emotion: thinking
+    text: 認めた言葉と、否定した言葉。裁判所は、どっちを……。
+# ---- 2007年7月19日・一審（判決の言葉は裁判長の口で1回ずつ） ----
+- id: card2007
+  title: ''
+  background: mu_card_2007
+  cuts:
+  - speaker: reimu
+    text: 2007年7月19日。一審、東京地裁の判決です。
+    reading: にせん ななねん しちがつ じゅうくにち。いっしん、とうきょう ちさいの はんけつです。
+- id: ch11_isshin
+  title: 慄然とせざるを得ない
+  background: mu_houtei
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 村上世彰, emotion: sad}
+  - {who: saibancho, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人を[懲役2年|ちょうえきにねん]及び罰金300万円に処する。
+    se: don
+  - speaker: reimu
+    text: 弁護側は、当時のライブドアの資金では支配権を取れるはずがない、と訴えていました。判決は、これを退けます。
+    reading: べんごがわわ、とうじの らいぶどあの しきんでわ しはいけんお とれる はずが ないと うったえて いました。はんけつわ これお しりぞけます。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告は、ファンドなのだから、安ければ買うし、高ければ売るのは当たり前と言うが、
+  - speaker: saibancho
+    emotion: normal
+    text: このような徹底した利益至上主義には慄然とせざるを得ない
+    telops:
+    - {text: "判決「利益至上主義には慄然とせざるを得ない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 翌日、大手の新聞4紙が、そろって社説でこの判決を取り上げます。彼は控訴しました。
+    reading: よくじつ おおての しんぶん よんしが、そろって しゃせつで この はんけつお とりあげます。かれわ こうそ しました。
+    background: mu_shinbun
+- id: heya4
+  title: ''
+  background: mu_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[懲役2年|ちょうえきにねん]の実刑……。お[金|かね]のほうは？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 罰金は300万円。当時の、上限の額よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 99億円も買ったのに、それだけなのだ！？
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: それとは別に、追徴金が11億4900万円あまり。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時、インサイダー事件で過去最高と報じられた額よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 11億円も、儲けたのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それは罪になった193万株で、彼個人が得たと判決が計算した利益。
+  - speaker: tsumugi
+    emotion: normal
+    text: ファンド全体の儲けとは、別の数字なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 数字にも、それぞれ線がある……。
+# ---- 2009年2月3日・二審（理由は英訳の趣旨と日経の要約。ナレと帯で） ----
+- id: card2009
+  title: ''
+  background: mu_card_2009
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2009年2月3日。二審、東京高裁です。
+    reading: にせん きゅうねん にがつ みっか。にしん、とうきょう こうさいです。
+- id: ch12_nishin
+  title: 執行猶予
+  background: mu_houtei
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 村上世彰, emotion: normal}
+  - {who: saibancho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: '[原判決|げんはんけつ]を破棄する。'
+  - speaker: reimu
+    text: 懲役2年に、執行猶予3年。高裁は、最初から内部の情報で儲けるつもりだったとはいえない、と認めました。
+    reading: ちょうえき にねんに しっこう ゆうよ さんねん。こうさいわ さいしょから ないぶの じょうほうで もうける つもりだったとわ いえないと みとめました。
+    telops:
+    - {text: "二審 懲役2年・執行猶予3年", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: ファンドを解散したことも、刑を軽くする事情に挙げています。彼は、その日のうちに上告しました。
+    reading: ふぁんどお かいさん した ことも、けいお かるく する じじょうに あげて います。かれわ その ひの うちに じょうこく しました。
+- id: heya5
+  title: ''
+  background: mu_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 実刑から、[執行猶予|しっこうゆうよ]に。何が変わったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 二審は、193万株のうち159万株あまりを
+  - speaker: tsumugi
+    emotion: normal
+    text: 内部の情報だとはっきり分からないまま買った株とみたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: フジの発表後に買った32万株あまりは、強い非難に値するという趣旨も書いたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 同じ193万株でも、重さが違うのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 物言う株主の役割をどう評価するかは、まだ十分な議論が無いという趣旨も書いているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それでも、罪そのものは消えなかったの。
+# ---- 2011年6月6日付・最高裁（主文の1行と「要しない」の帯だけ。裁判官の名前は出さない） ----
+- id: card2011
+  title: ''
+  background: mu_card_2011
+  cuts:
+  - speaker: reimu
+    text: 2011年6月6日付で、最高裁の決定が出ます。
+    reading: にせん じゅういちねん ろくがつ むいかづけで、さいこうさいの けってえが でます。
+- id: ch13_saikosai
+  title: 最高裁の一行
+  background: mu_saikosai
+  cuts:
+  - speaker: reimu
+    text: 主文は、本件各上告を棄却する。5人の裁判官の全員一致で、懲役2年、執行猶予3年が確定しました。
+    reading: しゅぶんわ、ほんけん かく じょうこくお ききゃく する。ごにんの さいばんかんの ぜんいん いっちで ちょうえき にねん しっこう ゆうよ さんねんが かくてい しました。
+  - speaker: reimu
+    text: 決定は、公開買付けの実現の見込みが、具体的に認められることまでは要らない、としました。
+    reading: けってえわ こうかい かいつけの じつげんの みこみが、ぐたいてきに みとめられる ことまでわ いらないと しました。
+    telops:
+    - {text: "最高裁「具体的に認められることは要しない」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 論争1：聞いただけで有罪？ ----
+- id: ronso1
+  title: 聞いただけで有罪？
+  background: mu_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 聞いただけで有罪なんて、見せしめだって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言われる理由はあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一審|いっしん]は実現の見込みが少しでもあれば足りるとして、法律家から心配の声が出たわ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人も2017年に、僕にだけ適用された司法判断なのかもしれないと話してるの。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも3つの裁判所の答えは、どれも有罪。最高裁では反対の意見も出なかったわ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 11月8日の時点で、ライブドアには5%分の約98億円を買える資金の当てもあったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 願望じゃ、なかったのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 二審は、たまたま聞いてしまった事件ではないという趣旨も書いているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 誘った話の、続きを聞いたから……。
+    beat: true
+# ---- 論争2：認めたから有罪？ ----
+- id: ronso2
+  title: 認めたから有罪？
+  background: mu_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも会見で自分で認めたんだから、有罪は当たり前なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それも、少し違うの。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は法廷で、幹部の逮捕とファンドの崩壊を防ぐための嘘だったと述べたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 認めたのも、かばうため……？
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究所の論考も、会見で認めても法廷で有罪を認めるのと同じではないと書いていたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 実際、裁判所は会見の言葉で決めてはいないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 二審は取り調べの自白の調書に頼らなくても、ほかの証拠で認められると判断したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 有罪を支えたのは、会議のやりとりとお[金|かね]の動きだったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 会見の言葉じゃ、なかったのか……。
+    beat: true
+# ---- 本当の注意点（茶番の回収） ----
+- id: chui
+  title: 聞いたら、待つ
+  background: mu_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。会社の大事な話を公表の前に聞いたら、公表まで売り買いしない。
+  - speaker: tsumugi
+    emotion: normal
+    text: アメリカでは、話を明かすか取引をやめるかを選べと言うの。
+  - speaker: zundamon
+    emotion: sad
+    text: 友だちのお父さんから聞いた話も……？
+  - speaker: tsumugi
+    emotion: normal
+    text: 伝えられた人も、対象になるの。
+  - speaker: zundamon
+    emotion: sad
+    text: ……買うの、やめるのだ。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。どうせ実現しない話、と思っても安心できない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 来るか分からない大口のお客さんでも、来るつもりで準備を始めたと聞いたら
+  - speaker: tsumugi
+    emotion: normal
+    text: もう同じ品は買ってはいけない。最高裁は、そういう線を引いたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 来るかどうかは、関係ないんだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。株主として会社にものを言うのは、罪じゃないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究所の論考も、株主価値を訴えた功績は無に帰するわけではないと書いているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 彼の罪は[委任状争奪戦|イニンジョウソウダツセン]でも配当の要求でもなく、聞いたあとに買ったことよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言うのはいい。聞いて買うのが、だめ……。
+# ---- 現代（2020年・2025年の対談の言葉は、出どころと年をナレで言う。フジの話は2026年4月時点で止める） ----
+- id: taidan
+  title: 他人のお金
+  background: mu_jimusho
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 村上世彰, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2020年の対談。ファンドのころ、寝る時間はあったのかと聞かれて。
+    reading: にせん にじゅうねんの たいだん。ふぁんどの ころ ねる じかんわ あったのかと きかれて。
+  - speaker: zundamon
+    emotion: normal
+    text: 必ず7時間寝ていました。寝ないと頭が働かない。
+  - speaker: zundamon
+    emotion: happy
+    text: 拘置所でもちゃんと寝てました。
+  - speaker: reimu
+    text: 重圧の話のあと、変わったきっかけを問われると、こう答えます。
+    reading: じゅうあつの はなしの あと、かわった きっかけお とわれると こう こたえます。
+  - speaker: zundamon
+    emotion: normal
+    text: 逮捕されたことです。それ以来、他人のお[金|かね]を預かるのを[止|や]めました。
+  - speaker: zundamon
+    emotion: normal
+    text: 大変ですよ、他人様のお[金|かね]を預かるのは。
+  - speaker: reimu
+    text: 2025年、ジャーナリストとの対談。逮捕の直前のあの言葉で、国民を敵に回したと言われると、
+    reading: にせん にじゅうごねん、じゃーなりすとの たいだん。たいほの ちょくぜんの あの ことばで こくみんお てきに まわしたと いわれると、
+  - speaker: zundamon
+    emotion: normal
+    text: そうでしたね。
+  - speaker: zundamon
+    emotion: normal
+    text: ただあの発言については、未だに反省はしていません。
+- id: card2026
+  title: ''
+  background: mu_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。記者クラブで、聞いちゃったと話した日から20年あまり。
+    reading: にせん にじゅうろくねん。きしゃ くらぶで、きいちゃったと はなした ひから にじゅうねん あまり。
+- id: ima
+  title: 20年後のフジ
+  background: mu_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 他人のお[金|かね]を預からないなら、いまは何をしてるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分と家族のお[金|かね]で、投資を続けていると報じられているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[村上|ムラカミ]ファンドは、どうなったの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年11月までにほとんどの株を売って、六本木の拠点を引き払ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年には黒田電気の臨時総会で、社外取締役を出す提案をして僅差で否決されたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ものを言うのは、やめてないんだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年には旧[村上|ムラカミ]系の投資会社と長女が、フジの親会社の株を17%台まで持ったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 20年前の、あのフジなのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年2月、親会社は約2349億円の自社株買い。旧[村上|ムラカミ]系も応じて売ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 親会社の発表では、彼は今後取得することはないと思うと答えたそうよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 残りは市場で売る、という意向を撤回しないと合意した。親会社はそう発表したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[村上|ムラカミ]氏側は、売らせる拘束力のある契約は無いという趣旨の声明を出したわ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 言い分が、食い違ってる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3月には、旧[村上|ムラカミ]系の持ち分がまた5%を超えて5.76%に。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 親会社は、懸念を抱いていると質問状を出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4月8日時点では、4.62%と報告されたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 20年たって、またフジをめぐる株の話なのだ……。
+# ---- 締め（茶番と「聞いちゃった」の回収） ----
+- id: shime
+  title: ''
+  background: mu_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 友だちのお父さんの会社の株は、発表のあとで考えるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: それが、ふつうよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 聞いちゃったと言われれば聞いちゃってる。逮捕の日、彼はそう話したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 法廷では、それを嘘だったと言ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2017年の本には、いまだに違和感が残ったままとも書いているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 罪になったのは、ものを言ったことでも儲けたことでもないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 聞いたあとに、買ったこと……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 先に聞いた話で、株は買わない。それだけは覚えておいてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
