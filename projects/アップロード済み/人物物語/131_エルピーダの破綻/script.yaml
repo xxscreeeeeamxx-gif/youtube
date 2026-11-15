@@ -1,0 +1,1088 @@
+meta:
+  title: 「DRAMの火を消したくない」と語ったエルピーダの社長、その工場にいま国が最大5360億円【ずんだもん解説】
+  slug: elpida-sakamoto
+  hook_line: 国が300億円を入れた国内ただ1社のDRAMの会社は、なぜ2年半でつぶれたのか。
+  summary: 2012年2月27日、日本でただ1社残ったDRAMの会社、エルピーダメモリが会社更生法の適用を申請しました。社長の坂本幸雄は、2年半前に国の銀行から300億円を受けた会社を率いていました。電話帳のような稟議、おにぎり1つより安いチップ、1ドル75円の円高、借り換えの条件、そして最後の1か月。国が支えた会社は、なぜ行き詰まったのか。本人の言葉と、国・銀行・専門家の見方を並べて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 帝国データバンク 倒産速報「エルピーダメモリ株式会社」（2012年2月27日） https://www.tdb.co.jp/report/bankruptcy/flash/3574/
+  - 日本政策投資銀行「エルピーダメモリ株式会社の会社更生手続開始の申立てについて」（2012年2月28日） https://www.dbj.jp/news/20120228_0000009399.html
+  - PC Watch「エルピーダメモリ、坂本社長が事業継続と社長続投に意欲を表明」（2012年2月28日） https://pc.watch.impress.co.jp/docs/news/515056.html
+  - 日本経済新聞「エルピーダ更生法申請、公的負担最大280億円」（2012年2月27日） https://www.nikkei.com/article/DGXNASFL270G5_X20C12A2000001/
+  - Micron Technology プレスリリース（2012年7月2日・SEC Form 8-K） https://www.sec.gov/Archives/edgar/data/0000723125/000072312512000079/exh99-1pr.htm
+  - 中国新聞「東広島のマイクロン工場、経産省が5360億円助成」（2025年9月12日） https://www.chugoku-np.co.jp/articles/-/711286
+  tags:
+  - エルピーダ
+  - エルピーダメモリ
+  - 坂本幸雄
+  - DRAM
+  - 半導体
+  - 会社更生法
+  - マイクロン
+  - 日本政策投資銀行
+  - 公的資金
+  - 円高
+  - 広島工場
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: つぶれた会社の工場に
+    bottom: 国が最大5360億円
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#6a5a48'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: work
+    color: '#7a6a4a'
+  - id: kanbu
+    label: 幹部
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: gishi
+    label: 技術者
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: zaimu
+    label: 財務担当
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: edano
+    label: 枝野大臣
+    voice: 100
+    pitch: -0.02
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2012年2月27日 朝10時・社長室。相手の会社の名前は台帳に無いので出さない。相手の声も出さない。「金額で」は本人ののちの話としてナレで） ----
+- id: co_denwa
+  title: ''
+  background: ep_yakuin
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: 坂本社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2012年2月27日、朝10時。半導体メモリの会社、エルピーダの社長、坂本幸雄。
+    reading: にせん じゅうにねん にがつ にじゅうしちにち、あさ じゅうじ。はんどうたい めもりの かいしゃ えるぴーだの しゃちょう、さかもと ゆきお。
+  - speaker: reimu
+    text: 工場の半分を買う相手の返事を待っています。
+    reading: こうじょうの はんぶんお かう あいての へんじお まって います。
+  - speaker: zundamon
+    emotion: normal
+    text: ……10時半。こちらから、かけよう。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうですか。分かりました。
+  - speaker: reimu
+    text: 工場を半分買うはずだった相手とは金額で折り合わなかった、とのちに坂本は語っています。
+    reading: こうじょうお はんぶん かう はずだった あいてとわ きんがくで おりあわなかったと、のちに さかもとわ かたって います。
+# ---- 先出し（同じ日の夜・東京証券取引所の会見。記者の問いの原文は無いので、ナレで「経営責任を問われ」とする。言葉は PC Watch の並びどおり） ----
+- id: co_kaiken
+  title: ''
+  background: ep_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 坂本社長, emotion: sad}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その夜、東京証券取引所で会見。更生法を申請した坂本は、経営責任や日本のDRAMの限界を問われます。
+    reading: その よる、とうきょう しょうけん とりひきじょで かいけん。こうせいほうお しんせいした さかもとわ、けいえい せきにんや にほんの でぃーらむの げんかいお とわれます。
+  - speaker: zundamon
+    emotion: sad
+    text: '[DRAM|ディーラム]の火を消したくない'
+  - speaker: zundamon
+    emotion: sad
+    text: 私自身、会社の行く末を見届けなくてはいけない
+  - speaker: reimu
+    text: 負債4480億円。当時、製造業で最大の倒産です。2年半前、国はこの会社に300億円を入れていました。
+    reading: ふさい よんせん よんひゃく はちじゅうおくえん。とうじ せいぞうぎょうで さいだいの とうさんです。にねんはん まえ、くにわ この かいしゃに さんびゃくおくえんお いれて いました。
+# ---- 今の部屋（メモリの増設。回収は本当の注意点と締め） ----
+- id: hook
+  title: ''
+  background: ep_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: このメモリ、増設しても数千円だったのだ。安いのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: その安さの陰で、[日本|ニホン]でただ1社の[DRAM|ディーラム]の会社がつぶれたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: チップ1個が、コンビニのおにぎり1つより安くなったのよ。
+    telops:
+    - {text: "国が300億円を入れた会社は なぜ2年半でつぶれた？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 国が300億円入れた会社が、なんで2年半でつぶれたのだ！？
+# ---- 1970年・倉庫係から（30秒以内。子どもの時代・家族は描かない。先輩は名前の無いモブ） ----
+- id: ch1_soko
+  title: 倉庫係から
+  background: ep_soko
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.28, flip: true, tag: 坂本, emotion: normal}
+  - {who: senpai, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1970年。坂本は、アメリカの半導体会社の日本法人に入ります。配属は、倉庫でした。
+    reading: せんきゅうひゃく ななじゅうねん。さかもとわ あめりかの はんどうたい がいしゃの にほん ほうじんに はいります。はいぞくわ そうこでした。
+  - speaker: senpai
+    emotion: normal
+    text: 新人、この箱を棚へ運んでくれ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半導体の会社で、倉庫番ですか！？
+  - speaker: senpai
+    emotion: normal
+    text: 半導体も、箱で届くんだよ。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: ……運びます。
+# ---- 2002年11月・電話帳の稟議（東京・八重洲。幹部は名前の無いモブ。本人の2022年の回想に沿った脚色） ----
+- id: card2002
+  title: ''
+  background: ep_card_2002
+  cuts:
+  - speaker: reimu
+    text: 2002年11月、東京・八重洲。外資の副社長などを経た坂本が、55歳でエルピーダの社長になります。
+    reading: にせん にねん じゅういちがつ、とうきょう やえす。がいしの ふくしゃちょうなどお へた さかもとが、ごじゅうごさいで えるぴーだの しゃちょうに なります。
+- id: ch1_ringi
+  title: 電話帳の稟議
+  background: ep_ringi
+  stage:
+  - {who: zundamon, x: 0.13, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: kanbu, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: kanbu
+    emotion: normal
+    text: 社長。[NEC|エヌイーシー]と日立から来た者で、新製品の開発計画をまとめました。
+  - speaker: kanbu
+    emotion: normal
+    text: これから[稟議|りんぎ]に回します。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……電話帳ですか、これ。
+  - speaker: kanbu
+    emotion: normal
+    text: 判子をもらう上の役職は、10段を超えます。
+  - speaker: zundamon
+    emotion: angry
+    text: 全部通るころには、[DRAM|ディーラム]の値段が変わってますよ！
+    se: tsukkomi
+  - speaker: kanbu
+    emotion: thinking
+    text: 値段、ですか？
+  - speaker: zundamon
+    emotion: normal
+    text: '[DRAM|ディーラム]は、毎日値段が変わる品物なんです。'
+  - speaker: zundamon
+    emotion: normal
+    text: 装置も[毎年|まいねん]買い足さないと、負けるんです。
+  - speaker: reimu
+    text: のちに坂本は、DRAM1個の値段がコンビニのおにぎり1つより安い、と嘆くことになります。
+    reading: のちに さかもとわ でぃーらむ いっこの ねだんが こんびにの おにぎり ひとつより やすいと なげく ことに なります。
+    telops:
+    - {text: "DRAM1個 ＜ おにぎり1つ", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2003〜2004年・広島の工場（30億円の即決。本人の2022年の回想に沿った脚色。技術者は名前の無いモブ） ----
+- id: ch1_hiroshima
+  title: 30億円の即決
+  background: ep_cleanroom_kara
+  bgm: honwaka_puppu
+  stage:
+  - {who: gishi, x: 0.1, flip: true, emotion: normal}
+  - {who: zundamon, x: 0.5, tag: 坂本社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2003年、広島県東広島市。生産を任せてきたNECの工場を、エルピーダが引き取ります。
+    reading: にせん さんねん ひろしまけん ひがし ひろしまし。せいさんお まかせて きた えぬいーしーの こうじょうお、えるぴーだが ひきとります。
+  - speaker: gishi
+    emotion: normal
+    text: 社長、新しい装置が要ります。30億円ほどです。
+  - speaker: zundamon
+    emotion: normal
+    text: 分かった。買おう。
+  - speaker: gishi
+    emotion: surprised
+    text: えっ。[稟議|りんぎ]は……？
+  - speaker: zundamon
+    emotion: happy
+    text: 今、ここで決める。
+    background: ep_cleanroom
+    beat: true
+  - speaker: reimu
+    text: 30億円ほどの装置なら、その場で即断即決した、と坂本はのちに語っています。
+    reading: さんじゅうおくえん ほどの そうちなら そのばで そくだん そっけつ したと さかもとわ のちに かたって います。
+  - speaker: gishi
+    emotion: happy
+    text: 社長！ 2004年の1月から3月の決算、黒字です！
+  - speaker: zundamon
+    emotion: happy
+    text: 来てから、1年ちょっとか。次は上場だ。
+# ---- 2007年・世界3位 → 2009年・過去最悪（大会議室のスクリーンが赤に。財務担当は名前の無いモブ） ----
+- id: ch2_getsurei
+  title: 世界3位
+  background: ep_getsurei
+  stage:
+  - {who: zundamon, x: 0.13, flip: true, tag: 坂本社長, emotion: happy}
+  - {who: zaimu, x: 0.87, emotion: happy}
+  cuts:
+  - speaker: zaimu
+    emotion: happy
+    text: 社長、2007年3月期の決算です。売上は5000億円近く、利益は過去最高です！
+  - speaker: zaimu
+    emotion: happy
+    text: '[DRAM|ディーラム]の世界シェアは、3位です。'
+  - speaker: zundamon
+    emotion: happy
+    text: 来たときは、5%もなかったのにな。
+  - speaker: zundamon
+    emotion: thinking
+    text: でも3位で、どこまで投資を続けられるか……。
+  - speaker: zaimu
+    emotion: sad
+    text: 社長……リーマン・ショックで、2009年3月期は1800億円近い赤字です。
+    background: ep_getsurei_akaji
+    se: gaan
+  - speaker: zundamon
+    emotion: sad
+    text: 2年前は、過去最高だったのに……。
+    telops:
+    - {text: "1800億円近い赤字", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zaimu
+    emotion: sad
+    text: 売れば売るほど、どうして苦しくなるんでしょう……。
+  - speaker: zundamon
+    emotion: normal
+    text: うちだけじゃ、もたない。組む相手が要る。
+# ---- 2008年11月〜・隔週の台湾（台湾の会社の人に台詞は作らない） ----
+- id: ch2_taiwan
+  title: 隔週の台湾
+  background: ep_kaigai
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: zaimu, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: zaimu
+    emotion: surprised
+    text: 社長、また台湾ですね。去年の11月から、2週間に1度ですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 組む相手がいなければ、生き残れない。
+  - speaker: zaimu
+    emotion: thinking
+    text: 台湾の会社は、どこも小さいですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 小さくても、まとまれば大きくなる。
+  - speaker: reimu
+    text: なぜ組む相手が要るのか。2010年、坂本はインタビューでこう話しています。
+    reading: なぜ くむ あいてが いるのか。にせん じゅうねん、さかもとわ いんたびゅーで こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 将来、[DRAM|ディーラム]産業では、2社しか生き残れないという仮説を立てました。
+  - speaker: zundamon
+    emotion: normal
+    text: そうするとエルピーダ単独では無理。
+  - speaker: reimu
+    text: けれど坂本の話では、台湾との連合は幻に終わります。生き残れるのは2社。では、どこと組むのか。
+    reading: けれど さかもとの はなしでわ たいわんとの れんごうわ まぼろしに おわります。いきのこれるのわ にしゃ。でわ どこと くむのか。
+# ---- 2009年6月30日・産活法の第1号（財務担当は名前の無いモブ。「主役の銀行」の台詞は、のちの坂本の言葉に沿った脚色） ----
+- id: card2009
+  title: ''
+  background: ep_card_2009
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2009年6月30日。エルピーダは、国の支援の制度、改正産業活力再生法の認定を受けます。第1号でした。
+    reading: にせん きゅうねん ろくがつ さんじゅうにち。えるぴーだわ くにの しえんの せいど かいせい さんぎょう かつりょく さいせいほうの にんていお うけます。だい いちごうでした。
+- id: ch2_kuni
+  title: 国の銀行が300億円
+  background: ep_shingikai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: zaimu, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: zaimu
+    emotion: happy
+    text: 社長！ 国の日本政策投資銀行、略して政投銀が優先株で300億円です！
+    se: levelup
+  - speaker: zaimu
+    emotion: happy
+    text: ほかの銀行からも、約1000億円借りられます。
+  - speaker: zundamon
+    emotion: normal
+    text: これで、次の投資ができる。
+  - speaker: zaimu
+    emotion: thinking
+    text: ただ、うちの主役の銀行は国の銀行になったってことですよね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 主役？
+  - speaker: zaimu
+    emotion: normal
+    text: ほかの銀行も、政投銀の動きを見ますよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 生き残るためだ。迷っている[暇|ひま]はない。
+  - speaker: reimu
+    text: 公的資金を受けることについて、坂本は翌年、こう話しています。
+    reading: こうてき しきんお うける ことに ついて、さかもとわ よくねん こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: プライドのためにそれをやらないという選択肢はない。
+  - speaker: reimu
+    text: 国が300億円を入れたこの会社は、なぜ2年半で行き詰まるのか。
+    reading: くにが さんびゃくおくえんお いれた この かいしゃわ、なぜ にねんはんで いきづまるのか。
+# ---- 2011年10月27日・半年の決算の会見（言葉は会見の記事の並びどおり） ----
+- id: ch3_kessan
+  title: 75円の秋
+  background: ep_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年10月27日、半年の決算の会見。パソコン向けDRAMの取引の値段は、前の日に0.90ドル。
+    reading: にせん じゅういちねん じゅうがつ にじゅうしちにち、はんとしの けっさんの かいけん。ぱそこん むけ でぃーらむの とりひきの ねだんわ、まえの ひに れいてん きゅう ぜろ どる。
+  - speaker: zundamon
+    emotion: normal
+    text: 1ドル76円換算だと
+  - speaker: zundamon
+    emotion: sad
+    text: コンビニで売っているおにぎり1つよりも安い価格で売っている計算になる。
+  - speaker: zundamon
+    emotion: sad
+    text: 為替の問題は1企業がどうこうやってもどうにもできない。
+  - speaker: zundamon
+    emotion: sad
+    text: こうなってくると、エルピーダが生き残る道は生産ラインを台湾へ移設するしかない。
+# ---- 2011年10月31日・1ドル75円32銭（会議室のグラフが赤に） ----
+- id: ch3_endaka
+  title: ''
+  background: ep_kaigi
+  stage:
+  - {who: zundamon, x: 0.13, flip: true, tag: 坂本社長, emotion: thinking}
+  - {who: zaimu, x: 0.87, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 4日後の10月31日。1ドルは75円32銭、戦後の最高値をつけます。
+    reading: よっかごの じゅうがつ さんじゅういちにち。いちどるわ ななじゅうごえん さんじゅうにせん、せんごの さいたかねお つけます。
+    telops:
+    - {text: "1ドル＝75円32銭", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zaimu
+    emotion: normal
+    text: 社長、うちの売上は9割近くが海外です。
+  - speaker: zaimu
+    emotion: thinking
+    text: 1ドル80円なら、100ドルで8000円。75円だと、7500円です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ物を同じ値段で売って、手取りだけ減るのか！？
+    se: bikkuri
+  - speaker: zaimu
+    emotion: sad
+    text: 値段も、7月から9月の3か月で4割近く下がりました。
+    background: ep_kaigi_akaji
+  - speaker: zaimu
+    emotion: sad
+    text: 半年で、567億円の赤字です。
+  - speaker: zundamon
+    emotion: sad
+    text: 値段と為替で、二重に削られる……。
+# ---- 2011年12月〜2012年1月・条件が上がる（日経の報道と、のちの坂本の話を分けて並べる。政投銀の人は画に出さない） ----
+- id: ch4_jouken
+  title: 借り換えの条件
+  background: ep_yakuin
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: zaimu, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zaimu
+    emotion: normal
+    text: 社長、もう12月です。銀行から借りたお[金|かね]は、来年の3月末が借り換えの期限です。
+  - speaker: zaimu
+    emotion: sad
+    text: 主力の4つの銀行は、業界再編が軸の再建計画などを条件にしています。
+  - speaker: reimu
+    text: 当時の日経によれば、政投銀は、抜本的な構造改革がなければ3月末以降は金融支援しない、という姿勢でした。
+    reading: とうじの にっけいに よれば せいとうぎんわ、ばっぽんてきな こうぞう かいかくが なければ さんがつまつ いこうわ きんゆう しえん しないと いう しせいでした。
+  - speaker: reimu
+    text: ここからは、2013年に坂本が語った話です。
+    reading: ここからわ、にせん じゅうさんねんに さかもとが かたった はなしです。
+  - speaker: zundamon
+    emotion: normal
+    text: 12月中旬になって、提携先を見つけて資本金2000億円をプラスしてくれと、
+  - speaker: zundamon
+    emotion: sad
+    text: 政投銀がハードルを上げてきた。
+  - speaker: reimu
+    text: 財務の担当は冗談だと思い、年が明けた1月中旬にこう言ってきたそうです。
+    reading: ざいむの たんとうわ じょうだんだと おもい、としが あけた いちがつ ちゅうじゅんに こう いって きたそうです。
+  - speaker: zaimu
+    emotion: thinking
+    text: こういうのがありますが冗談ですよね
+  - speaker: zundamon
+    emotion: normal
+    text: ……政投銀に、確かめてくれ。
+  - speaker: reimu
+    text: 返ってきた答えは、やってもらわないと困ります、だったと坂本は語っています。
+    reading: かえって きた こたえわ、やって もらわないと こまりますだったと さかもとわ かたって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 2000億円……。
+  - speaker: zaimu
+    emotion: sad
+    text: 提携の相手を見つけないと、お[金|かね]がつながりません。
+# ---- 今の部屋（借り換えと「主役の銀行」。5分を過ぎてからの整理） ----
+- id: heya_karikae
+  title: ''
+  background: ep_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 借り換えって、[何|なん]なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 借りたお[金|かね]を、新しく借りたお[金|かね]で返すこと。家のローンの組み直しみたいなものよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 期限が来たら、また借りればいいのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その、また借りるのがいちばん難しいの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: thinking
+    text: どの銀行も、ほかの銀行の動きを見てるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 坂本の話では、政投銀が断るとほかの銀行も続いたそうよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 主役の1行で、全部決まるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 坂本はのちに、一番の失敗は300億円で政投銀を主役の銀行にしたことだと語ったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 300億円で、主役が決まっちゃったのか……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 提携の相手は、見つかったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 見つかりかけたの。相手は、アメリカのマイクロンよ。
+# ---- 2012年2月3日（墜落の画は描かない。アップルトンに台詞は無し。笑いにしない。「話がついていた」は坂本の話として枠付き） ----
+- id: ch4_0203
+  title: 2月3日
+  background: ep_yakuin_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 坂本社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2012年2月3日。マイクロンとはこの日に経営統合の話がついていた、と坂本はのちに語ります。
+    reading: にせん じゅうにねん にがつ みっか。まいくろんとわ この ひに けいえい とうごうの はなしが ついて いたと、さかもとわ のちに かたります。
+  - speaker: reimu
+    text: 日本時間の4日未明、アメリカで小型機が墜落します。ひとりで乗っていたのは、マイクロンのCEOでした。
+    reading: にほん じかんの よっか みめい、あめりかで こがたきが ついらく します。ひとりで のって いたのわ、まいくろんの しーいーおーでした。
+  - speaker: zundamon
+    emotion: sad
+    text: ……[アップルトンさん|アップルトンサン]が、亡くなった？
+    pause_after: 0.8
+  - speaker: reimu
+    text: スティーブ・アップルトン、51歳。坂本は、のちにこう語っています。
+    reading: すてぃーぶ あっぷるとん ごじゅういっさい。さかもとわ、のちに こう かたって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 経営統合できなくなった。
+  - speaker: reimu
+    text: 当時の日経も、マイクロンとの交渉は振り出しに戻った、と書きました。
+    reading: とうじの にっけいも、まいくろんとの こうしょうわ ふりだしに もどったと かきました。
+# ---- 2012年2月24日・最後の協議（政投銀の姿勢は日経の報道どおり） ----
+- id: ch4_0224
+  title: 最後の協議
+  background: ep_osetsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.13, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: zaimu, x: 0.87, emotion: normal}
+  cuts:
+  - speaker: zaimu
+    emotion: normal
+    text: 社長、24日の協議です。返す期限を半年延ばす案も出ました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 政投銀は？
+  - speaker: zaimu
+    emotion: sad
+    text: 3月末までに業界再編につながる資本・業務提携の最終合意が必須、と。
+  - speaker: reimu
+    text: 当時の日経が伝えた、政投銀の姿勢です。
+    reading: とうじの にっけいが つたえた、せいとうぎんの しせいです。
+  - speaker: zundamon
+    emotion: sad
+    text: 3月末まで、あと1か月か……。
+# ---- 2012年2月27日（本編。10時の電話 → 午後3時 → 大臣 → 午後6時45分の会見） ----
+- id: card2012
+  title: ''
+  background: ep_card_2012
+  cuts:
+  - speaker: reimu
+    text: 2012年2月27日、月曜日。
+    reading: にせん じゅうにねん にがつ にじゅうしちにち、げつようび。
+- id: ch5_0227
+  title: 2月27日
+  background: ep_yakuin
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: zaimu, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: zaimu
+    emotion: normal
+    text: 社長、10時を過ぎました。まだ、連絡はありません。
+  - speaker: zundamon
+    emotion: normal
+    text: ……10時半。こちらから、かけよう。
+  - speaker: reimu
+    text: のちに坂本は、こう語っています。
+    reading: のちに さかもとわ、こう かたって います。
+  - speaker: zundamon
+    emotion: sad
+    text: でも10時になっても電話はなくて、僕が10時半に電話すると金額で折り合わなかった。
+  - speaker: zundamon
+    emotion: sad
+    text: 仕方なくその日の午後、更生法を申請した。
+  - speaker: zaimu
+    emotion: sad
+    text: 午後3時です。……申請を、決めますか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……申請しよう。リストラはしない。広島の工場も止めない。
+- id: ch5_daijin
+  title: ''
+  background: ep_shingikai
+  stage:
+  - {who: edano, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ日の夕方、枝野幸男経済産業大臣はこう答えました。
+    reading: おなじ ひの ゆうがた、えだの ゆきお けいざい さんぎょう だいじんわ こう こたえました。
+  - speaker: edano
+    emotion: normal
+    text: 最大で280億円の損害担保が日本政策金融公庫から
+  - speaker: edano
+    emotion: normal
+    text: 日本政策投資銀行に対してなされる可能性がある
+  - speaker: edano
+    emotion: normal
+    text: 国民の負担で出資したものが損害担保に充てられることは大変残念なことだ
+- id: ch5_kaiken
+  title: ''
+  background: ep_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 坂本社長, emotion: sad}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 午後6時45分、東京証券取引所。坂本の会見です。
+    reading: ごご ろくじ よんじゅうごふん、とうきょう しょうけん とりひきじょ。さかもとの かいけんです。
+  - speaker: zundamon
+    emotion: sad
+    text: 多大なるご迷惑、ご心配をおかけし、心よりお詫び申し上げます
+  - speaker: zundamon
+    emotion: sad
+    text: 為替が、完全に競争力を失わせている。
+  - speaker: reimu
+    text: 経営責任や日本のDRAMの限界を問われ、坂本はこう答えます。
+    reading: けいえい せきにんや にほんの でぃーらむの げんかいお とわれ、さかもとわ こう こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: '[DRAM|ディーラム]の火を消したくない'
+    telops:
+    - {text: "坂本「DRAMの火を消したくない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 私自身、会社の行く末を見届けなくてはいけない
+  - speaker: zundamon
+    emotion: sad
+    text: 責任とってやめるのは簡単だが、きちんとするという覚悟を持ってやっていく
+  - speaker: reimu
+    text: 限界ではないかという指摘には、こう返しました。
+    reading: げんかいでわ ないかと いう してきにわ、こう かえしました。
+  - speaker: zundamon
+    emotion: normal
+    text: 性急すぎる議論
+  - speaker: zundamon
+    emotion: normal
+    text: '[20nm|ニジューナノメートル]プロセスでまともに生産できるのはエルピーダともう1社しかない。'
+  - speaker: reimu
+    text: 負債4480億円。当時、製造業で最大の倒産でした。
+    reading: ふさい よんせん よんひゃく はちじゅうおくえん。とうじ せいぞうぎょうで さいだいの とうさんでした。
+    telops:
+    - {text: "負債4480億円　当時、製造業で最大", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 今の部屋（会社更生法と国の損。大臣の説明は主語つき） ----
+- id: heya_kousei
+  title: 社長が管財人に
+  background: ep_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: つぶれたのに、社長が辞めないのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社更生法は、会社をなくさずに立て直すための手続きなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 申し立ての日に、裁判所は会社の財産を勝手に動かせないようにする命令を出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: エルピーダでは、社長の坂本が弁護士と並んで手続きを進める管財人になったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、国が入れた300億円は？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 政投銀の損の一部は、国が100%出資する日本政策金融公庫が補う仕組みなの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大臣は、予算で用意済みなので新たな国民負担は生じないとも説明したわ。
+  - speaker: zundamon
+    emotion: sad
+    text: でも、もとは国民のお[金|かね]なのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: だから大臣も、大変残念と言ったのね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 残るは、会社の買い手探しなのだ。
+# ---- 2012年3月〜7月・管財人の入札（ハイニックスの言葉は坂本の話としてナレで） ----
+- id: ch6_nyusatsu
+  title: 12時半の電話
+  background: ep_yakuin
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: zaimu, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: zaimu
+    emotion: normal
+    text: 名乗りは4社。東芝に韓国のハイニックス、中国のファンドとマイクロンです。
+  - speaker: zundamon
+    emotion: normal
+    text: どこが一番、工場と人を大事にしてくれるかだ。
+  - speaker: zaimu
+    emotion: normal
+    text: 入札の最終日です。締め切りは、[12時半|ジューニジハン]。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……また、電話待ちか。
+    se: tenten
+  - speaker: zaimu
+    emotion: surprised
+    text: 鳴りました！
+  - speaker: reimu
+    text: 坂本の話では、12時半に電話が来て、ハイニックスは今回は降りた、と伝えてきました。
+    reading: さかもとの はなしでわ じゅうにじはんに でんわが きて、はいにっくすわ こんかいわ おりたと つたえて きました。
+  - speaker: zundamon
+    emotion: normal
+    text: ……マイクロンに、絞ろう。
+- id: ch6_choin
+  title: ''
+  background: ep_choin
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 坂本社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月2日。マイクロンが2000億円で引き受ける契約を結びます。事業と従業員を維持する約束でした。
+    reading: しちがつ ふつか。まいくろんが にせんおくえんで ひきうける けいやくお むすびます。じぎょうと じゅうぎょういんお いじ する やくそくでした。
+  - speaker: zundamon
+    emotion: normal
+    text: 工場も人も、残せる。
+# ---- 2013年・認可と退任（退任の言葉は見出ししか読めないので台詞にしない） ----
+- id: card2013
+  title: ''
+  background: ep_card_2013
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2013年2月28日。東京地裁が、会社を立て直す更生計画を認めます。
+    reading: にせん じゅうさんねん にがつ にじゅうはちにち。とうきょう ちさいが、かいしゃお たてなおす こうせい けいかくお みとめます。
+- id: ch6_ninka
+  title: 更生計画
+  background: ep_kaigi
+  stage:
+  - {who: zundamon, x: 0.13, flip: true, tag: 坂本社長, emotion: sad}
+  - {who: zaimu, x: 0.87, emotion: sad}
+  cuts:
+  - speaker: zaimu
+    emotion: sad
+    text: 社長。もとの株は、すべて価値を失います。
+  - speaker: zaimu
+    emotion: sad
+    text: マイクロンの2000億円のうち1400億円は、2019年まで分けて払われます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+- id: ch6_tainin
+  title: 社長を退く
+  background: ep_honsha
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 坂本社長, emotion: normal}
+  - {who: zaimu, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: zaimu
+    emotion: sad
+    text: 社長、7月31日。マイクロンの買収、今日で完了です。
+  - speaker: zundamon
+    emotion: normal
+    text: 社長も管財人も、今日で終わりだ。……あとは、頼む。
+  - speaker: zaimu
+    emotion: sad
+    text: 長い間、お疲れさまでした。
+  - speaker: reimu
+    text: 辞めるとき坂本は、社名がマイクロンになってもエルピーダの火は消えない、という趣旨を話しました。
+    reading: やめる とき さかもとわ、しゃめいが まいくろんに なっても えるぴーだの ひわ きえないと いう しゅしお はなしました。
+# ---- 2013年10月〜2024年・不本意な敗戦、中国へ、そして（中国の話は本人の言葉と役職・年だけ） ----
+- id: ch7_hon
+  title: 不本意な敗戦
+  background: ep_jimusho
+  stage:
+  - {who: zundamon, x: 0.5, tag: 坂本, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2013年10月、坂本は本を出します。題は、不本意な敗戦。
+    reading: にせん じゅうさんねん じゅうがつ、さかもとわ ほんお だします。だいわ ふほんいな はいせん。
+  - speaker: reimu
+    text: 破綻の前の年度は、358億円の営業利益。なぜ更生法なのか、と坂本は語ります。
+    reading: はたんの まえの ねんどわ、さんびゃく ごじゅうはちおくえんの えいぎょう りえき。なぜ こうせいほうなのかと さかもとわ かたります。
+  - speaker: zundamon
+    emotion: sad
+    text: 私には最後まで経営破綻という気持ちはなかった。
+  - speaker: zundamon
+    emotion: sad
+    text: いまでも疑問に思っているし、不本意だ
+- id: ch7_chugoku
+  title: ''
+  background: ep_kaigai
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: 坂本, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2019年11月、72歳の坂本は中国の半導体の会社、紫光集団の幹部になります。
+    reading: にせん じゅうきゅうねん じゅういちがつ、ななじゅうにさいの さかもとわ ちゅうごくの はんどうたいの かいしゃ しこう しゅうだんの かんぶに なります。
+  - speaker: reimu
+    text: 破綻の年から7年。引き受けた理由を、こう話しています。
+    reading: はたんの としから ななねん。ひきうけた りゆうお、こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 12年の苦渋の思いを7年間[心|こころ]にため続けていたんだ。
+  - speaker: zundamon
+    emotion: normal
+    text: '[このまま|このまま、]負け犬では終われない'
+    telops:
+    - {text: "坂本「このまま負け犬では終われない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 2022年からは、中国・深圳のDRAMの会社で、最高戦略責任者を務めます。
+    reading: にせん にじゅうにねんからわ ちゅうごく しんせんの でぃーらむの かいしゃで、さいこう せんりゃく せきにんしゃお つとめます。
+- id: card2024
+  title: ''
+  background: ep_card_2024
+  cuts:
+  - speaker: reimu
+    text: 2024年2月14日。坂本幸雄は、76歳で亡くなりました。
+    reading: にせん にじゅうよねん にがつ じゅうよっか。さかもと ゆきおわ、ななじゅうろくさいで なくなりました。
+    pause_after: 1.2
+# ---- 論争1：国に見捨てられた？（坂本の話と、国・銀行の側の事実を主語つきで並べる） ----
+- id: ronso1
+  title: 国に見捨てられた？
+  background: ep_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ エルピーダは、国に見捨てられたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そういう話はあるの。坂本は2022年、政投銀の方針転換が今でも不可解だと語ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 坂本の話では、政投銀はこう言ったそうよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[日本|ニホン]に[DRAM|ディーラム]は必要ない。韓国から買える。'
+  - speaker: tsumugi
+    emotion: normal
+    text: アップルの担当者が来日して政投銀に支援を頼んだ、とも坂本は語ってるわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱり見捨てたのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、それは坂本の側の話。政投銀がそう話した記録は、確かめられなかったの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: それに2009年に支援を決めたのは、その国よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 坂本も翌年には、経済産業省が信じられないぐらいに協力的だったと話してたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行と政投銀が求めたのは、業界再編を軸にした再建計画と3月末までの提携の合意。
+  - speaker: zundamon
+    emotion: thinking
+    text: 条件は出ていて、それが間に合わなかったのか……。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 円高を、坂本は1企業ではどうにもできないと言ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1ドル75円[32銭|サンジューニセン]をつけた日、政府と日銀は円売りの介入もしていたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国が見捨てた、とは言い切れないのだ……。
+# ---- 論争2：経営が下手だった？（専門家の見方と本人の言い分を並べる） ----
+- id: ronso2
+  title: 経営が下手だった？
+  background: ep_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 分かったのだ！ 社長の経営が下手だったのだ！
+    se: hirameki
+  - speaker: tsumugi
+    emotion: normal
+    text: 専門家の[湯之上隆|ユノガミタカシ]さんは、破綻の原因は低収益体質だったことにあると書いたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: チップ1個を作る費用が韓国の最大手のおよそ2倍だった、という見方よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2倍！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 台湾の合弁にお[金|かね]が流れて新しい露光装置が遅れた、と見る評伝もあるわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 投資の順番も、難しいのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 坂本は、戦略が間違っていなかったと確かめるために本を書いたと言ってるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本で挙げた358億円は、2011年3月期の営業利益。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも破綻した2012年3月期は、1000億円を超える赤字の見通しだったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会見では、韓国の会社以上の開発力を持っていると考えているとも話してたわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 下手とも、うまかったとも言い切れないのか……。
+    beat: true
+# ---- 本当の注意点 ----
+- id: chui
+  title: 本当の注意点
+  background: ep_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。国がお[金|かね]を入れた[日本|ニホン]でただ1社の会社でも、株が安全とは限らないわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: エルピーダの株は、更生計画ですべて価値を失ったの。上場廃止は、申請の1か月後よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国がついてても、ゼロになるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。為替のニュースは、給料のニュースでもあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 売上の9割近くが海外なら、円高の分だけ同じ物を売っても手取りが減るわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 円高のニュースって、ボクの給料にも関係あるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 勤め先が海外で売っているなら、関係するかもしれないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 自分の会社が、どこの国で売ってるかも見るのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。メモリの値段には、波があるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2012年はチップ1個が1ドル前後。
+  - speaker: tsumugi
+    emotion: thinking
+    text: いまはAIの需要でメモリが足りない、というニュースが続いてるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年の終わりからは、パソコンやスマホの値上がりの見通しも報じられたの。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクの数千円のメモリ、次はもっと高くなるの……？
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 増設するなら、その時の相場を見てからね。
+  - speaker: zundamon
+    emotion: sad
+    text: ボク、値札の安さしか見てなかったのだ……。
+# ---- 現代（広島の工場の隣に新しい棟） ----
+- id: card2026
+  title: ''
+  background: ep_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。東京証券取引所の会見から、14年あまりがたちました。
+    reading: にせん にじゅうろくねん。とうきょう しょうけん とりひきじょの かいけんから、じゅうよねん あまりが たちました。
+- id: ima
+  title: 広島の工場のいま
+  background: ep_kojo
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.42, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: エルピーダは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年に、マイクロンメモリジャパンと名前を変えたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 名前も、消えたのか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも広島の工場はいま、マイクロンの最先端の[DRAM|ディーラム]の拠点よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年9月、経済産業省はこの工場に最大5360億円の助成を決めたの。
+    telops:
+    - {text: "同じ工場に 国が最大5360億円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: つぶれた会社の工場に、5360億円！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2012年、国の穴埋めは最大280億円と大臣は述べたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その[13年後|ジューサンネンゴ]に、同じ工場へ最大5360億円よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: マイクロンで[DRAM|ディーラム]の開発を率いる幹部の1人も、エルピーダの元幹部なの。
+  - speaker: zundamon
+    emotion: normal
+    text: 人も、残ったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年7月には、新しいクリーンルームの起工式。総額1兆5000億円の計画なの。
+    background: ep_kojo_koji
+  - speaker: tsumugi
+    emotion: normal
+    text: 2028年の後半に装置を入れる予定で、AI向けのメモリを作る見通しよ。
+  - speaker: reimu
+    text: 起工式で岸田元首相は、高性能半導体の需要は今後ますます拡大するだろう、と述べました。
+    reading: きこうしきで きしだ もと しゅしょうわ、こうせいのう はんどうたいの じゅようわ こんご ますます かくだい するだろうと のべました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 工場は、止まらなかったのか。
+# ---- 締め（「DRAMの火を消したくない」を広島の工場のいまで回収。茶番のメモリを回収） ----
+- id: shime
+  title: ''
+  background: ep_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ メモリは、値段がいちばん下がった時に買うのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: その底値のころに、[日本|ニホン]のメモリの会社がひとつ倒れたのよ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: '[DRAM|ディーラム]の火を消したくない。破綻の日、坂本はそう言ったわ。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会社はアメリカの会社に渡り、名前も変わった。けれど広島の工場の火は、残ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして国は今度、その工場に最大5360億円を出すと決めた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その広島の工場で、いまAI向けのメモリを作る準備が進んでるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: おにぎりより安かったチップが、いまは足りないのか……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたのスマホの中のメモリも、その波の上にあるのよ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
