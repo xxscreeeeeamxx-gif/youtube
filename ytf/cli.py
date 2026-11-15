@@ -100,9 +100,11 @@ def run_reading_checks(cfg: Config, proj: Project, skip_whisper: bool = False) -
         # 読み取りスレッドが UnicodeDecodeError で落ち、stdout が空になる。
         # 空の出力は「指摘ゼロ」と区別が付かないので、検査に通ったように見えてしまう
         # （2026-09-22 のカルピス回で、5種すべてが素通りしていた）
+        # 読み検査（whisper など）も「通常より低い」優先度で動かす（2026-11-15）
+        extra = {"creationflags": subprocess.BELOW_NORMAL_PRIORITY_CLASS} if os.name == "nt" else {}
         r = subprocess.run([sys.executable, f"scripts/{name}", slug],
                            cwd=root, env=env, capture_output=True, text=True,
-                           encoding="utf-8", errors="replace")
+                           encoding="utf-8", errors="replace", **extra)
         out = (r.stdout or "") + (r.stderr or "")
         return [ln for ln in out.splitlines()
                 if ln.strip() and "Warning" not in ln and "warnings.warn" not in ln

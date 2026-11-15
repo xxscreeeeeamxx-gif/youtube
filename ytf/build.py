@@ -12,6 +12,7 @@ narration.wav + (任意)BGM + ASS字幕 を合成する。
 from __future__ import annotations
 
 import hashlib
+import os
 import shutil
 import subprocess
 from functools import lru_cache
@@ -43,7 +44,24 @@ def pick_encoder(cfg_encoder: str) -> list[str]:
         ).stdout
         if "h264_videotoolbox" in out:
             return ["h264_videotoolbox", "-b:v", "8M"]
-    return ["libx264", "-preset", "medium"]
+    # 2026-11-15 ユーザー「動画作るときメモリが一杯でPCの画面固まる」。x264 は既定で
+    # 論理コア数の1.5倍（24コアで約36本）のスレッドを立て、そのぶんフレームの作業用メモリも積む。
+    # 本数を絞ってメモリと CPU を空ける（画質の設定は同じ。区切りのキャッシュの鍵はエンコーダ名だけなので、作り置きもそのまま使える）
+    return ["libx264", "-preset", "medium", "-threads", str(ENCODER_THREADS)]
+
+
+# x264 のスレッド数の上限（環境変数 YTF_X264_THREADS で変えられる）
+ENCODER_THREADS = int(os.environ.get("YTF_X264_THREADS", "8"))
+
+
+def lowprio_kwargs() -> dict:
+    """子プロセス（ffmpeg・VOICEVOX・読み検査）を「通常より低い」優先度で動かす。
+
+    書き出しの間も画面の操作が先に回るようにする（Windows だけ。ほかの OS では何もしない）。
+    """
+    if os.name == "nt":
+        return {"creationflags": subprocess.BELOW_NORMAL_PRIORITY_CLASS}
+    return {}
 
 
 def write_concat_file(proj: Project, frames: list[tuple[str, float]], name: str) -> Path:
@@ -59,7 +77,7 @@ def write_concat_file(proj: Project, frames: list[tuple[str, float]], name: str)
 
 
 def _run(cmd: list[str], cwd: Path) -> None:
-    r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True)
+    r = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, **lowprio_kwargs())
     if r.returncode != 0:
         raise SystemExit(f"ffmpeg 失敗:\n{' '.join(cmd)}\n{r.stderr[-3000:]}")
 

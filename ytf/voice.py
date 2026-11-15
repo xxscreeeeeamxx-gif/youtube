@@ -65,6 +65,7 @@ def ensure_engine(cfg) -> "VoicevoxClient":
 
     GUIアプリを開いておく必要をなくす（voicevox_engine の思想を部分採用）。
     """
+    import os
     import subprocess
     import time
     from urllib.parse import urlparse
@@ -78,9 +79,11 @@ def ensure_engine(cfg) -> "VoicevoxClient":
     port = urlparse(url).port or 50021
     if Path(engine).exists():
         print(f"VOICEVOXエンジンをヘッドレス起動中… (:{port})")
+        # Windows では「通常より低い」優先度で起動し、合成の間も画面の操作を先に回す（2026-11-15）
+        extra = {"creationflags": subprocess.BELOW_NORMAL_PRIORITY_CLASS} if os.name == "nt" else {}
         subprocess.Popen([engine, "--port", str(port)],
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                         start_new_session=True)
+                         start_new_session=True, **extra)
         for _ in range(30):
             time.sleep(2)
             if client.ping():
