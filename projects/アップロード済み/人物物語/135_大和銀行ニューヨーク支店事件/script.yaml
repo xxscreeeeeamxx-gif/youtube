@@ -1,0 +1,1183 @@
+meta:
+  title: 「ローカル・ルールに固執し」と判決に書かれた大和銀行の元役員11人、計829億円の賠償命令【ずんだもん解説】
+  slug: daiwa-ny
+  hook_line: 全部を告白した行員に、銀行はなぜ隠し続けられるかと聞いたのか。
+  summary: 1995年7月、大和銀行ニューヨーク支店の行員、井口俊英は頭取あてに30ページあまりの手紙を書きました。11年分の無断の売買で、銀行の損は約11億ドル。11日後、日本の本部からの電話が尋ねたのは、損を隠し続けられるかでした。売る人と金庫番が同じ1人だった支店、倉庫に化けた取引室、米国に知らせなかった約2か月。米国の当局の文書と判決、本人の英語の取材を主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 米連邦準備制度理事会・ニューヨーク州銀行局 Daiwa Bank に対する命令と告発（1995年10月2日） https://www.federalreserve.gov/supervisionreg/files/19951002.pdf
+  - 米連邦準備制度理事会・FDIC・ニューヨーク州銀行局 Regulators Announce Termination of Enforcement Orders Against Daiwa Bank（2003年5月5日） https://www.federalreserve.gov/boarddocs/press/enforcement/2003/20030505/default.htm
+  - 米司法省 犯罪被害者局 Report to Congress（1999年12月）付録 https://ovc.ojp.gov/sites/ovc/files/pubs/OVC_Archives/repcong2000/app1.html
+  - 総務省「参考資料５ 内部統制関連資料」 https://www.soumu.go.jp/main_content/000376783.pdf
+  - 金融庁「金融庁オーラルヒストリー作成に係る史談会」（乾文男・2019年7月2日） https://www.fsa.go.jp/common/about/kaikaku/openpolicylab/inui_oral.pdf
+  - 'CNBC "I''m not a criminal: Daiwa rogue trader who lost $1 billion"（2014年4月29日） https://www.cnbc.com/2014/04/29/im-not-a-criminal-daiwa-rogue-trader-who-lost-1-billion.html'
+  tags:
+  - 大和銀行
+  - 大和銀行ニューヨーク支店事件
+  - 井口俊英
+  - ニューヨーク支店
+  - 米国債
+  - 無断取引
+  - 株主代表訴訟
+  - 内部統制
+  - りそな銀行
+  - FRB
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 頭取に告白の手紙
+    bottom: 米国から撤退
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: trader
+    label: トレーダー
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shiten
+    label: 支店の人
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#5a5a6a'
+  - id: kensakan
+    label: 検査官
+    voice: 21
+    pitch: -0.02
+    outfit: suit
+    color: '#2f3a52'
+  - id: fbi
+    label: FBI
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#1e2430'
+  - id: kanshu
+    label: 看守
+    voice: 100
+    pitch: -0.04
+    outfit: work
+    color: '#4a5a4a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: totori
+    label: 頭取
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#2a2e3a'
+  - id: hanji
+    label: 判事
+    voice: 100
+    pitch: -0.08
+    outfit: suit
+    color: '#1a1a1e'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: kabunushi
+    label: 株主
+    voice: 8
+    pitch: 0.06
+    outfit: none
+    color: '#7a6a5a'
+scenes:
+# ---- 先出し（1995年7月・書斎の机 → 7月24日の電話。電話の向こうの役員に台詞を作らない。SEなし） ----
+- id: co_tegami
+  title: ''
+  background: dw_jitaku
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.72, tag: 井口, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1995年7月、ニューヨークの近く。大和銀行の行員、井口俊英が頭取あての手紙を書いています。
+    reading: せんきゅうひゃく きゅうじゅうごねん しちがつ、にゅーよーくの ちかく。だいわ ぎんこうの こういん、いぐち としひでが とうどりあての てがみお かいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: ……11年分、全部書く
+  - speaker: reimu
+    text: 30ページあまり。11年分の無断の取引を、全部書いた手紙でした。
+    reading: さんじゅっぺーじ あまり。じゅういちねんぶんの むだんの とりひきお ぜんぶ かいた てがみでした。
+  - speaker: reimu
+    background: dw_jitaku_denwa
+    text: 11日後、日本の本部から電話が来ます。
+    reading: じゅういちにちご、にっぽんの ほんぶから でんわが きます。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……はい、[井口|イグチ]です
+  - speaker: reimu
+    text: 聞かれたのは、これからも隠し続けられるかでした。
+    reading: きかれたのわ、これからも かくしつづけられるか でした。
+  - speaker: zundamon
+    emotion: sad
+    text: ……隠し続ける、ですか
+  - speaker: reimu
+    text: 銀行の損は約11億ドル。その年の11月、大和銀行はアメリカから出ていくよう命じられます。
+    reading: ぎんこうの そんわ やく じゅういちおく どる。その としの じゅういちがつ、だいわ ぎんこうわ あめりかから でていくよう めいじられます。
+# ---- 今の部屋（集金の穴。20秒以内） ----
+- id: hook
+  title: ''
+  background: dw_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 集金が100円足りなかったのだ。お小遣いで埋めたのだ
+  - speaker: tsumugi
+    emotion: normal
+    text: 先生に言った？
+  - speaker: zundamon
+    emotion: sad
+    text: 言ってないのだ。来週は、500円足りないのだ……
+    se: chin
+  - speaker: tsumugi
+    emotion: thinking
+    text: 数万ドルの穴を言えずに、11年で11億ドルにした行員がいたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 全部を告白したその行員に、銀行はなぜ隠し続けられるかと聞いたのか。
+    telops:
+    - {text: "全部を告白した行員に なぜ隠し続けられるかと？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 告白したのに！？
+# ---- 1976年・嘱託の行員（30秒以内。子供時代は描かない） ----
+- id: card1976
+  title: ''
+  background: dw_card_1976
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1976年1月。24歳の井口は、大和銀行のニューヨーク支店に入ります。
+    reading: せんきゅうひゃく ななじゅうろくねん いちがつ。にじゅうよんさいの いぐちわ、だいわ ぎんこうの にゅーよーく してんに はいります。
+- id: ch1_shokutaku
+  title: 嘱託の行員
+  background: dw_shiten
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: normal}
+  - {who: shiten, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shiten
+    emotion: normal
+    text: 高校を出て渡米して、大学のあとは車の販売か。
+  - speaker: shiten
+    emotion: normal
+    text: '[井口|イグチ]くんは[嘱託|しょくたく]で採用だ。預かった証券を管理する、[保管|ほかん]の係を頼む'
+  - speaker: zundamon
+    emotion: happy
+    text: はい。よろしくお願いします
+  - speaker: reimu
+    text: 現地雇いの嘱託は、本来なら補助の役しかない身分。これが、のちに効いてきます。
+    reading: げんちやといの しょくたくわ、ほんらいなら ほじょの やくしか ない みぶん。これが のちに きいて きます。
+# ---- 1983〜84年・最初の穴（金額は資料で割れる→数万ドル。5万ドルなら約1200万円） ----
+- id: ch2_ana
+  title: 最初の穴
+  background: dw_torihiki
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: normal}
+  - {who: trader, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1983年ごろ。債券の売り買いも任された彼は、変動金利債の取引で最初の損を出します。
+    reading: せんきゅうひゃく はちじゅうさんねん ごろ。さいけんの うりかいも まかされた かれわ、へんどう きんりさいの とりひきで さいしょの そんお だします。
+  - speaker: trader
+    emotion: surprised
+    text: '[井口|イグチ]さん。[変動金利債|へんどうきんりさい]の値が、下がってます！'
+  - speaker: zundamon
+    emotion: surprised
+    text: ……分かってる
+  - speaker: zundamon
+    emotion: sad
+    text: ……言えば、終わりなのだ
+  - speaker: zundamon
+    emotion: normal
+    text: 取り戻せば、誰も困らない
+  - speaker: reimu
+    text: 最初の穴は数万ドル。5万ドルなら、当時のお金で約1200万円です。
+    reading: さいしょの あなわ すうまん どる。ごまん どるなら、とうじの おかねで やく せんにひゃくまんえんです。
+  - speaker: reimu
+    text: 1984年から、帳簿に載せない無断の米国債の売買が始まります。穴は11年後、約1100億円に。
+    reading: せんきゅうひゃく はちじゅうよねんから、ちょうぼに のせない むだんの べいこくさいの ばいばいが はじまります。あなわ じゅういちねんご やく せんひゃくおくえんに。
+    telops:
+    - {text: "約1200万円→約1100億円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#CC0000", anim: up}
+# ---- 1984〜89年・売る人と金庫番（劇中の職場で仕組みを見せる） ----
+- id: ch3_kinko
+  title: 金庫の鍵
+  background: dw_kinko
+  stage:
+  - {who: zundamon, x: 0.07, flip: true, tag: 井口, emotion: normal}
+  - {who: shinjin, x: 0.93, emotion: normal}
+  cuts:
+  - speaker: shinjin
+    emotion: normal
+    text: '[井口|イグチ]さん、新人です。金庫の鍵は、どなたが？'
+  - speaker: zundamon
+    emotion: normal
+    text: ボクだ
+  - speaker: shinjin
+    emotion: normal
+    text: '[米国債|べいこくさい]の売り買いは？'
+  - speaker: zundamon
+    emotion: normal
+    text: ボクだ
+  - speaker: shinjin
+    emotion: thinking
+    text: じゃあ売った国債の確認書は、どこに回せば？
+  - speaker: zundamon
+    emotion: happy
+    text: ボクの机でいい
+    se: tenten
+  - speaker: shinjin
+    emotion: surprised
+    text: バンカーズ・トラストから、[保管|ほかん]残高の[明細|めいさい]も届いてます
+  - speaker: zundamon
+    emotion: normal
+    text: それも、ボクが回しておく
+  - speaker: reimu
+    text: 売る人と金庫の鍵を持つ人、確かめる紙を受け取る人。全部が同じ1人でした。
+    reading: うる ひとと きんこの かぎお もつ ひと、たしかめる かみお うけとる ひと。ぜんぶが おなじ ひとりでした。
+    telops:
+    - {text: "売る人も金庫番も 同じ1人", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+- id: ch3_meisai
+  title: ''
+  background: dw_meisai
+  stage:
+  - {who: zundamon, x: 0.06, flip: true, tag: 井口, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 預けてある国債は、銀行の分も客の分も売らせる
+  - speaker: zundamon
+    emotion: normal
+    text: 売った分は、[明細|めいさい]の上では残っていることにする
+  - speaker: reimu
+    text: 検査も監査も、残高はこの明細で確かめていました。取り寄せていたのは、彼の係です。
+    reading: けんさも かんさも、ざんだかわ この めいさいで たしかめて いました。とりよせて いたのわ、かれの かかりです。
+# ---- 今の部屋（通帳のコピーのたとえ・2014年の英語の取材の趣旨・論考の見方・問いに戻る） ----
+- id: heya1
+  title: ''
+  background: dw_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 確かめる紙を、なんで本人が受け取ってたの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 家計簿なら、通帳を持つ本人が残高のコピーを見せる感じね。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのコピーで、合ってるねと言っていたの。
+  - speaker: zundamon
+    emotion: angry
+    text: そんなの、いくらでも書き換えられるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は2014年、英語の取材でこう語っているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取り戻せる見込みがある限り、銀行のために損を取り戻そうとする。
+  - speaker: tsumugi
+    emotion: thinking
+    text: だから、犯罪だという感覚が無い。そういう趣旨よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 銀行のため……？
+  - speaker: tsumugi
+    emotion: normal
+    text: ある論文の見方では、[嘱託|しょくたく]として腕を認められていた彼は
+  - speaker: tsumugi
+    emotion: normal
+    text: 実績と名誉を、小さな失敗で失うわけにいかなかったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 100円の集金と、同じなのだ……
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: その本人が11年後、自分から全部を告白するの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 確かめる紙を握っていた人の告白に、銀行は何と返したのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 隠し続けられるか、って……
+# ---- 1989〜91年・神様（新聞の匿名の言葉はナレで出どころつき・1回） ----
+- id: ch4_kamisama
+  title: 神様と思われた人
+  background: dw_torihiki
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: normal}
+  - {who: trader, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: trader
+    emotion: happy
+    text: '[井口|イグチ]さん、今月もうちの取引は黒字です！'
+  - speaker: zundamon
+    emotion: normal
+    text: ……[表|おもて]の数字は、な
+  - speaker: reimu
+    text: 1991年、彼は副支店長格に。事件のあと新聞は、行内の人の話をこう書きます。
+    reading: せんきゅうひゃく きゅうじゅういちねん、かれわ ふくしてんちょうかくに。じけんの あと しんぶんわ、こうないの ひとの はなしお こう かきます。
+  - speaker: reimu
+    text: 副支店長格で、神様とも思われていた人物。部下は約50人いたが、みな彼の教え子で
+    reading: ふくしてんちょうかくで、かみさまとも おもわれて いた じんぶつ。ぶかわ やく ごじゅうにん いたが みな かれの おしえごで
+  - speaker: reimu
+    text: 幹部も彼に仕事を任せきっていた。
+    reading: かんぶも かれに しごとお まかせきって いた。
+  - speaker: trader
+    emotion: happy
+    text: さすが、[井口|イグチ]さんです！
+  - speaker: zundamon
+    emotion: sad
+    text: ……さすが、か
+# ---- 1992年11月・取引室が倉庫になる日（笑いの場面。支店長・役員の台詞は作らない） ----
+- id: ch5_soko
+  title: 取引室が倉庫になる日
+  background: dw_torihiki
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.1, flip: true, tag: 井口, emotion: normal}
+  - {who: shinjin, x: 0.92, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1992年11月。FRBとニューヨーク州の検査が、支店に来ます。
+    reading: せんきゅうひゃく きゅうじゅうにねん じゅういちがつ。えふあーるびーと にゅーよーくしゅうの けんさが してんに きます。
+  - speaker: shinjin
+    emotion: surprised
+    text: 支店の上の指示で、検査中はトレーダーがミッドタウンへ移るそうです！
+  - speaker: shinjin
+    emotion: thinking
+    text: ここ、届け出の上では証券の管理だけの事務所ですもんね
+  - speaker: zundamon
+    emotion: normal
+    text: ……取引も、ここでしてるからな
+  - speaker: shinjin
+    emotion: thinking
+    text: 机と画面は、どうします？
+  - speaker: zundamon
+    emotion: normal
+    text: 段ボールで隠す
+  - speaker: shinjin
+    emotion: thinking
+    text: 何箱、積みます？
+  - speaker: zundamon
+    emotion: angry
+    text: 天井まで、積むのだ！
+  - speaker: shinjin
+    emotion: surprised
+    background: dw_torihiki_soko
+    text: 照明も、消しますか？
+  - speaker: zundamon
+    emotion: normal
+    text: 消す。ここは倉庫だ
+  - speaker: shinjin
+    emotion: thinking
+    text: ……電話が鳴ったら？
+  - speaker: zundamon
+    emotion: normal
+    text: 倉庫は、電話に出ない
+    beat: true
+- id: ch5_soko2
+  title: ''
+  background: dw_torihiki_soko
+  stage:
+  - {who: zundamon, x: 0.1, flip: true, tag: 井口, emotion: normal}
+  - {who: kensakan, x: 0.92, emotion: thinking}
+  cuts:
+  - speaker: kensakan
+    emotion: thinking
+    text: ……ここは？
+  - speaker: zundamon
+    emotion: happy
+    text: 倉庫です
+  - speaker: kensakan
+    emotion: normal
+    text: ……倉庫ですね
+    se: oti
+  - speaker: reimu
+    text: これは支店ぐるみの細工でした。この日のことは3年後、銀行が起訴された罪の1つになります。
+    reading: これわ してんぐるみの さいくでした。この ひの ことわ さんねんご、ぎんこうが きそ された つみの ひとつに なります。
+  - speaker: reimu
+    text: 罰を受けるのは、損を出したことか。隠したことか。
+    reading: ばつお うけるのわ、そんお だした ことか。かくした ことか。
+# ---- 1993年11月・形だけの分離（FRB の見方。名前の無いモブで） ----
+- id: ch6_utsushi
+  title: 写しと、形だけの分離
+  background: dw_shiten
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1993年9月には大和銀行の監査役も支店を訪ね、写しで残高の一致を確かめました。
+    reading: せんきゅうひゃく きゅうじゅうさんねん くがつにわ だいわ ぎんこうの かんさやくも してんお たずね、うつしで ざんだかの いっちお たしかめました。
+  - speaker: zundamon
+    emotion: normal
+    text: こちらが、[保管|ほかん]残高の写しです
+  - speaker: zundamon
+    emotion: normal
+    text: ……写しの上では、合ってる
+    beat: true
+- id: ch6_bunri
+  title: ''
+  background: dw_shiten
+  stage:
+  - {who: kensakan, x: 0.16, flip: true, emotion: thinking}
+  - {who: shiten, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kensakan
+    emotion: thinking
+    text: 去年も言いましたね。取引と[保管|ほかん]、まだ1人で両方では？
+  - speaker: shiten
+    emotion: normal
+    text: 分けました。[井口|イグチ]はもう、両方は担当していません
+  - speaker: kensakan
+    emotion: normal
+    text: ……分かりました
+  - speaker: reimu
+    text: 1993年11月の検査です。FRBの見方では、井口はその後も保管を握っていました。
+    reading: せんきゅうひゃく きゅうじゅうさんねん じゅういちがつの けんさです。えふあーるびーの みかたでわ、いぐちわ そのごも ほかんお にぎって いました。
+  - speaker: reimu
+    text: 11年分の穴を、最初に明かしたのは検査ではありませんでした。
+    reading: じゅういちねんぶんの あなお、さいしょに あかしたのわ けんさでわ ありませんでした。
+# ---- 1995年7月13日付・30ページの手紙（手紙の文面は作らない。中身は FRB の文書の要約で） ----
+- id: card1995
+  title: ''
+  background: dw_card_1995
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1995年7月。44歳の井口は、頭取の藤田彬にあてて手紙を書きます。
+    reading: せんきゅうひゃく きゅうじゅうごねん しちがつ。よんじゅうよんさいの いぐちわ、とうどりの ふじた あきらに あてて てがみお かきます。
+- id: ch7_tegami
+  title: 30ページの手紙
+  background: dw_jitaku
+  stage:
+  - {who: zundamon, x: 0.72, tag: 井口, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 米国の雑誌によれば彼は手紙に、隠し続けるのが難しくなったと書いていたといいます。
+    reading: べいこくの ざっしに よれば かれわ てがみに、かくしつづけるのが むずかしく なったと かいて いたと いいます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……もう隠しきれない。全部、書くんだ
+  - speaker: zundamon
+    emotion: sad
+    text: 無断の取引。売った客の国債。作り替えた[明細|めいさい]……
+  - speaker: zundamon
+    emotion: sad
+    text: 検査官にも[監査人|カンサニン]にも、うそをついてきた
+  - speaker: reimu
+    text: FRBの文書によれば、手紙は11年の無断の取引で約11億ドルを失ったと明かしていました。
+    reading: えふあーるびーの ぶんしょに よれば、てがみわ じゅういちねんの むだんの とりひきで やく じゅういちおく どるお うしなったと あかして いました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……これで、終わりだ
+  - speaker: reimu
+    background: dw_post
+    text: 7月13日付。親展と記した、タイプ打ちの手紙です。21日、日本の本部に届きます。
+    reading: しちがつ じゅうさんにちづけ。しんてんと しるした たいぷうちの てがみです。にじゅういちにち、にっぽんの ほんぶに とどきます。
+  - speaker: reimu
+    text: 彼はのちに本で、数週間でクビになると思っていたと明かしています。
+    reading: かれわ のちに ほんで、すうしゅうかんで くびに なると おもって いたと あかして います。
+# ---- 1995年7月24日・11日後の電話（電話の向こうの役員に台詞を作らない） ----
+- id: ch8_denwa
+  title: 11日後の電話
+  background: dw_jitaku_denwa
+  stage:
+  - {who: zundamon, x: 0.72, tag: 井口, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月24日。日本の本部の副頭取ら3人から、電話が入ります。
+    reading: しちがつ にじゅうよっか。にっぽんの ほんぶの ふくとうどりら さんにんから、でんわが はいります。
+  - speaker: zundamon
+    emotion: normal
+    text: ……はい。手紙は、お読みになりましたか
+  - speaker: reimu
+    text: 論文によれば3人は、損を隠し続けることができるかを尋ねたうえで協力を求めました。
+    reading: ろんぶんに よれば さんにんわ、そんお かくしつづける ことが できるかお たずねた うえで きょうりょくお もとめました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……隠し続ける、ですか
+    se: gaan
+  - speaker: zundamon
+    emotion: normal
+    text: ……国債を買い戻せば、見つからないのだ
+  - speaker: reimu
+    text: 米国の雑誌によれば同じ日付の手紙に、彼は見つかる可能性はゼロと書いています。
+    reading: べいこくの ざっしに よれば おなじ ひづけの てがみに、かれわ みつかる かのうせいわ ぜろと かいて います。
+  - speaker: reimu
+    text: 銀行が国債の一部を買い戻せば、という趣旨でした。告白した男が、今度は隠す側に回ります。
+    reading: ぎんこうが こくさいの いちぶお かいもどせばと いう しゅしでした。こくはく した おとこが、こんどわ かくす がわに まわります。
+# ---- 1995年7月28日・ホテルの一室（役員の言葉は本人の本の英文の要約→ナレで趣旨。台詞にしない） ----
+- id: ch9_hotel
+  title: ホテルの一室
+  background: dw_hotel
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 7月28日。マンハッタンのホテルで、井口と本部の常務や支店長らが損の処理を相談します。
+    reading: しちがつ にじゅうはちにち。まんはったんの ほてるで、いぐちと ほんぶの じょうむや してんちょうらが そんの しょりお そうだん します。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクは、どうなるんですか
+  - speaker: reimu
+    text: その後、本店は彼が売った客の国債を買い戻して帳尻を合わせます。国債の利払いも続けました。
+    reading: そのご、ほんてんわ かれが うった きゃくの こくさいお かいもどして ちょうじりお あわせます。こくさいの りばらいも つづけました。
+  - speaker: reimu
+    text: 論文によれば、常務はその間に井口が経緯を記録したフロッピーを捨てるよう指示しました。
+    reading: ろんぶんに よれば、じょうむわ その あいだに いぐちが けいいお きろく した ふろっぴーお すてるよう しじ しました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……フロッピーも、ですか
+# ---- 1995年7月31日〜9月18日・報告しなかった約2か月（本店は人を立たせずナレだけ。大蔵省は1行） ----
+- id: ch10_nikagetsu
+  title: 報告しなかった2か月
+  background: dw_honten
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 7月31日、損を伏せた報告書をFRBへ。8月8日、頭取は大蔵省に報告。米国には、まだ知らせません。
+    reading: しちがつ さんじゅういちにち、そんお ふせた ほうこくしょお えふあーるびーえ。はちがつ ようか、とうどりわ おおくらしょうに ほうこく。べいこくにわ まだ しらせません。
+  - speaker: reimu
+    text: 井口はのちに本で、このころの役員の言葉を書いています。アメリカで問題になったら大変だ、と。
+    reading: いぐちわ のちに ほんで、この ころの やくいんの ことばお かいて います。あめりかで もんだいに なったら たいへんだ、と。
+- id: heya2
+  title: ''
+  background: dw_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 手紙が届いてから、米国に言わなかったの！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 米国に知らせたのは9月18日。届いてから、約2か月よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2か月も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行はのちに、事実を確かめる時間が要ったと説明しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[井口|イグチ]にそれまでの処理を続けさせたことも、銀行は認めたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 利払いを続けて、彼の逃亡を防ぐためという説明よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: そのあいだに、損を伏せた報告書まで出してる……
+  - speaker: tsumugi
+    emotion: thinking
+    text: ある論文は、頭取の判断に働いたであろう事情を挙げているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 7月26日に予定していた500億円の増資と、9月の中間決算。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、同じ年の信用組合や[兵庫銀行|ひょうごぎんこう]の破綻よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言えない理由が、いくつも……
+  - speaker: tsumugi
+    emotion: thinking
+    text: 損を出したことと、言わなかったこと。罰が来たのは、どっちだと思う？
+  - speaker: zundamon
+    emotion: normal
+    text: そりゃ、11億ドルの損のほうなのだ
+  - speaker: tsumugi
+    emotion: thinking
+    text: それが、違うの。
+    beat: true
+# ---- 1995年9月下旬・ノックの音（FBI はモブ。夜と決めない。家族は出さない） ----
+- id: ch11_knock
+  title: ノックの音
+  background: dw_ie
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: normal}
+  - {who: fbi, x: 0.42, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月18日。銀行は米国の当局に報告し、彼の手紙も添えます。9月下旬、ニュージャージーの自宅。
+    reading: くがつ じゅうはちにち。ぎんこうわ べいこくの とうきょくに ほうこくし、かれの てがみも そえます。くがつ げじゅん、にゅーじゃーじーの じたく。
+  - speaker: fbi
+    emotion: normal
+    text: '[井口|イグチ]さんですね。[FBI|エフビーアイ]です'
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: ……[FBI|エフビーアイ]？
+  - speaker: fbi
+    emotion: normal
+    text: 少し、お話を聞かせてください
+  - speaker: fbi
+    emotion: normal
+    text: 銀行から届いた書類に、あなたの手紙がありました
+  - speaker: zundamon
+    emotion: sad
+    text: ……手紙、読んだのですか
+  - speaker: reimu
+    background: dw_ie_kaiten
+    text: 44歳の井口は、逮捕されます。銀行の届け出を、彼は知りませんでした。
+    reading: よんじゅうよんさいの いぐちわ、たいほ されます。ぎんこうの とどけでお、かれわ しりませんでした。
+# ---- 1995年9月26日・大阪の会見（頭取の台詞は会見の1文だけ。嘲らない。SEなし） ----
+- id: ch11_kaiken
+  title: 9月26日の会見
+  background: dw_kaiken
+  stage:
+  - {who: totori, x: 0.22, emotion: sad}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 9月26日、大阪。頭取の会見が始まります
+  - speaker: totori
+    emotion: sad
+    text: '[米国債|べいこくさい]投資の失敗で[約11億ドル（約1100億円）|約11億ドル、約1100億円]の損失を被った'
+    telops:
+    - {text: "頭取「約11億ドル（約1100億円）の損失を被った」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: ……約1100億円
+  - speaker: reimu
+    text: 頭取は米国の通信社にも、彼を信頼し評価しすぎていたと語っています。同じ日、彼は解雇されます。
+    reading: とうどりわ べいこくの つうしんしゃにも、かれお しんらいし ひょうか しすぎて いたと かたって います。おなじ ひ かれわ かいこ されます。
+# ---- 1995年10月19日・有罪答弁（罪名は「帳簿の偽造などの罪」。着服の額もここで） ----
+- id: ch12_toben
+  title: 言わなかった罰
+  background: dw_us_houtei
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: sad}
+  - {who: hanji, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月19日、マンハッタンの連邦地裁。
+    reading: じゅうがつ じゅうくにち、まんはったんの れんぽう ちさい。
+  - speaker: hanji
+    emotion: normal
+    text: 罪を、認めますか
+  - speaker: zundamon
+    emotion: sad
+    text: ……認めます
+  - speaker: reimu
+    text: 帳簿の偽造などの罪です。銀行から自分の口座へ移した、57万5000ドルも認めました。
+    reading: ちょうぼの ぎぞうなどの つみです。ぎんこうから じぶんの こうざえ うつした、ごじゅうななまん ごせん どるも みとめました。
+  - speaker: reimu
+    text: 法廷では、銀行の上の人に損を隠し続けるよう言われたとも述べています。
+    reading: ほうていでわ、ぎんこうの うえの ひとに そんお かくしつづけるよう いわれたとも のべて います。
+# ---- 1995年11月2日・24の罪と、撤退の命令（記者はモブ。命令は銀行の同意つき） ----
+- id: ch12_ny
+  title: ''
+  background: dw_ny
+  stage:
+  - {who: kisha, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 11月2日。[大和銀行|ダイワギンコウ]が、24の罪で起訴されました
+  - speaker: kisha
+    emotion: normal
+    text: 起訴の罪には、FRBを欺く共謀や1992年の検査の妨害も並びます
+  - speaker: kisha
+    emotion: normal
+    text: 米国の当局は、米国での銀行の仕事をやめるよう命じています
+  - speaker: kisha
+    emotion: normal
+    text: 期限は3か月。銀行は、命令に同意しました
+- id: heya3
+  title: ''
+  background: dw_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 銀行まで、アメリカから出ていくの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2003年に命令を解いたときの発表は、1995年の理由をこう説明しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 上の経営陣と一部の取締役が、10億ドルを超える損を当局に隠した。そういう趣旨よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 損を出したからじゃなくて、隠したからなのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。損を出した罰じゃなくて、言わなかった罰。
+    telops:
+    - {text: "損を出した罰ではなく 言わなかった罰", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: thinking
+    text: ホワイト検事正は会見で、幹部が各段階で許されない選択をしたという趣旨を述べたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 各段階で、選んだ……
+  - speaker: tsumugi
+    emotion: normal
+    text: 新しい頭取は、起訴を非常に不適切だとして争う構えだったわ。
+  - speaker: zundamon
+    emotion: angry
+    text: 争うの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: でも翌年の2月、銀行の答えは変わるの。
+# ---- 1996年・銀行の罰金と、井口の4年（拘置所は机の画まで） ----
+- id: card1996
+  title: ''
+  background: dw_card_1996
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1996年2月28日。大和銀行は16の罪を認め、罰金3億4000万ドルを払うことになります。
+    reading: せんきゅうひゃく きゅうじゅうろくねん にがつ にじゅうはちにち。だいわ ぎんこうわ じゅうろくの つみお みとめ、ばっきん さんおく よんせんまん どるお はらう ことに なります。
+- id: ch13_hanketsu
+  title: 禁錮4年
+  background: dw_us_houtei
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: sad}
+  - {who: hanji, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月16日。45歳の井口に、判決が言い渡されます。
+    reading: じゅうにがつ じゅうろくにち。よんじゅうごさいの いぐちに、はんけつが いいわたされます。
+  - speaker: hanji
+    emotion: normal
+    text: 被告人を[禁錮4年|きんこよねん]と、罰金200万ドルに処する
+    se: don
+    telops:
+    - {text: "銀行 罰金3億4000万ドル／井口 禁錮4年・罰金200万ドル", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: ……はい
+- id: ch13_kochisho
+  title: ''
+  background: dw_kochisho
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 井口, emotion: normal}
+  - {who: kanshu, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kanshu
+    emotion: normal
+    text: また書いてるのか。消灯だぞ
+  - speaker: zundamon
+    emotion: normal
+    text: ……全部、書くのだ
+  - speaker: reimu
+    text: 1997年1月、獄中で書いた本が出ます。真実を明かすのは社会的な責任と感じた、と本で明かしました。
+    reading: せんきゅうひゃく きゅうじゅうななねん いちがつ、ごくちゅうで かいた ほんが でます。しんじつお あかすのわ しゃかいてきな せきにんと かんじたと ほんで あかしました。
+# ---- 1995〜2000年・株主代表訴訟（主人公は出ない。株主は名前の無いモブ） ----
+- id: ch14_sosho
+  title: 株主が役員を訴える
+  background: dw_saibansho_mae
+  bgm: kinakusai
+  stage:
+  - {who: kabunushi, x: 0.84, emotion: angry}
+  cuts:
+  - speaker: kabunushi
+    emotion: angry
+    text: 1995年の11月から、私たちは役員を訴えています
+  - speaker: kabunushi
+    emotion: angry
+    text: 銀行に代わって、役員に損を返させる裁判です
+  - speaker: kabunushi
+    emotion: normal
+    text: これが、[株主代表訴訟|かぶぬしだいひょうそしょう]です
+- id: card2000
+  title: ''
+  background: dw_card_2000
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2000年9月20日。大阪地裁の判決です。
+    reading: にせんねん くがつ はつか。おおさか ちさいの はんけつです。
+- id: ch14_hanketsu
+  title: ローカル・ルール
+  background: dw_houtei
+  stage:
+  - {who: kabunushi, x: 0.07, flip: true, emotion: normal}
+  - {who: saibancho, x: 0.94, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 会社が営む事業の規模、特性などに応じた
+  - speaker: saibancho
+    emotion: normal
+    text: '[リスク管理体制（いわゆる内部統制システム）|リスクかんりたいせい、いわゆるないぶとうせいシステム]を整備することを要する'
+  - speaker: reimu
+    text: そのうえで判決は、本人の係に取り寄せさせた明細で残高を確かめていた点をこう述べます。
+    reading: その うえで はんけつわ、ほんにんの かかりに とりよせさせた めいさいで ざんだかお たしかめて いた てんお こう のべます。
+  - speaker: saibancho
+    emotion: normal
+    text: この点で、実質的に機能していなかったものと言わなければならない。
+    telops:
+    - {text: "判決「実質的に機能していなかった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kabunushi
+    emotion: surprised
+    text: 機能、していなかった……
+  - speaker: reimu
+    text: 米国に知らせなかった役員たちについては、こうです。
+    reading: べいこくに しらせなかった やくいんたちに ついてわ、こうです。
+  - speaker: saibancho
+    emotion: normal
+    text: 我が国内でのみ通用する非公式の[ローカル・ルール|ローカルルール]に固執し、
+  - speaker: saibancho
+    emotion: normal
+    text: '[大蔵省|オオクラショウ]銀行局長の威信を頼りとして[大和銀行|ダイワギンコウ]の危機を克服しようとして、'
+  - speaker: saibancho
+    emotion: normal
+    text: アメリカ当局の厳しい処分を受ける事態を招いた
+    telops:
+    - {text: "判決「ローカル・ルールに固執し」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    background: dw_shinbun
+    text: 役員11人に、合わせて7億7500万ドル。夕刊には、元役員らに829億円損害賠償の見出しが出ます。
+    reading: やくいん じゅういちにんに、あわせて ななおく ななせん ごひゃくまん どる。ゆうかんにわ、もとやくいんらに はっぴゃく にじゅうきゅうおくえん そんがい ばいしょうの みだしが でます。
+- id: heya4
+  title: ''
+  background: dw_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 829億円！？ 罰金なの？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 罰金じゃないわ。役員が、銀行に払えと命じられたお[金|かね]よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取引の損で払えと言われたのは、ニューヨーク支店長だった元副頭取1人だけ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1人だけ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: その1人に、5億3000万ドルよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 米国に報告しなかった責任では、11人に合わせて約2億4500万ドル。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 頭取たちは、疑う特別な事情が無い限り
+  - speaker: tsumugi
+    emotion: thinking
+    text: 取引の損そのものの監督の責任までは負わない、とも判決は言ったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 損で1人、言わなかったことで11人……
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁判は高裁へ。2001年12月、和解が成立したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 役員49人が連帯して、銀行に2億5000万円を払う和解よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 829億円の判決が、2億5000万円の和解に……
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行が、持ち株会社の下に入る直前だったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうなると株主は訴える資格を失うおそれがあった、と論文は説明しているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 直前の、和解……
+# ---- 本人のその後（2014年の英語の取材は趣旨で。2019年に68歳で死去。家族は出さない） ----
+- id: sonogo
+  title: その後の井口
+  background: dw_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[井口|イグチ]さんは、そのあとどうなったの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 出所するとアトランタで本を書き、2007年に神戸へ戻ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年には、英語の取材でこう語っているの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 犯罪だとすら思っていない。社内の規則違反にすぎない。そういう趣旨よ。
+  - speaker: zundamon
+    emotion: angry
+    text: '[禁錮4年|きんこよねん]だったのに！？'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 法廷で罪を認めて、刑を受けたのは本人。犯罪ではない、は本人の意見よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 認めたのも、本人……
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年4月、彼はフロリダの自宅で亡くなったわ。68歳だった。
+  - speaker: zundamon
+    emotion: sad
+    text: ……68歳
+# ---- 論争1：ひとりの行員の不正？（俗説→正面から受ける→言い切らない） ----
+- id: ronso1
+  title: ひとりの行員の不正？
+  background: dw_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 悪いのは1人の行員で、銀行は被害者だって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える事実はあるの。無断の売買も書類の作り替えも、したのは本人。
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行もはじめは、大阪の本店は彼の売買を知らなかったと主張していたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも米国が罰したのは、損を出したことじゃないの。分かったあとに隠したことよ。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: あとの、2か月……
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行は16の罪を認めたし、取引室を倉庫に見せたのは支店ぐるみだったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人も2014年に、責任は最後はトップに行くという趣旨を話しているの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 売買は1人。隠したのは、銀行の上も。そう言うのが近いわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1人とも、みんなとも言い切れない……
+    beat: true
+# ---- 論争2：大蔵省が隠せと言った？（判決は命令の証拠なし。大蔵省の場面は作らない） ----
+- id: ronso2
+  title: 大蔵省が隠せと言った？
+  background: dw_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、[大蔵省|オオクラショウ]が隠せって言ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[大蔵省|オオクラショウ]は8月8日に報告を受けたのに、10月まで9月18日だと説明していたの。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 日付まで！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 米国の上院の委員長は、両国政府の信頼の重大な裏切りだと[責め|せめ]たわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[井口|イグチ]も本で、銀行と[大蔵省|オオクラショウ]の会合が少なくとも4回あったと書いているの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本が出たとき、銀行も[大蔵省|オオクラショウ]もコメントしなかったわ。
+  - speaker: zundamon
+    emotion: angry
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも判決は、[大蔵省|オオクラショウ]が報告をしないよう指示や命令をした証拠はないとしたの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[責め|せめ]たのは、役所に頼って自分の責任で決めなかったことよ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 命令がなくても、頼ったのがだめ……
+    beat: true
+# ---- 本当の注意点（茶番の回収・投資や銀行選びの助言にしない） ----
+- id: chui
+  title: 言える仕組み
+  background: dw_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。お[金|かね]を動かす人と、確かめる人を分ける。
+  - speaker: tsumugi
+    emotion: normal
+    text: サークルの会計でも、通帳と印鑑を1人に持たせきりにしない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 金庫番と、売る人……
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。残高は相手から直接、原本で確かめる。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人が持ってきたコピーで、合ってると言わないこと。
+  - speaker: zundamon
+    emotion: thinking
+    text: コピーじゃ、だめなのだ……
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。小さな失敗を、言える仕組みを作る。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人は2014年、英語の取材でこうも話しているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 一度足を踏み入れたら、[流砂|りゅうさ]のようなもの。そういう趣旨よ。
+  - speaker: zundamon
+    emotion: sad
+    text: 100円が、500円に……
+    se: shobon
+# ---- 現代（金融監督庁・会社法の内部統制・りそな銀行。因果で言い切らない） ----
+- id: card2026
+  title: ''
+  background: dw_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。頭取への手紙から、31年がたちました。
+    reading: にせん にじゅうろくねん。とうどりえの てがみから、さんじゅういちねんが たちました。
+- id: ima
+  title: 31年後の銀行
+  background: dw_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 銀行を見張る仕組みは、変わったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1998年に、[大蔵省|オオクラショウ]から分かれて金融監督庁ができたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その監督部長だった人は、2019年の金融庁の聞き取りでこう語っているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[大蔵省|オオクラショウ]から金融監督機能を切り離すことについて、'
+  - speaker: tsumugi
+    emotion: normal
+    text: 最も影響が大きかったのは、
+  - speaker: tsumugi
+    emotion: normal
+    text: ９５年の[大和銀行|ダイワギンコウ]ニューヨーク支店事件と[住専|じゅうせん]問題だと思います。
+  - speaker: zundamon
+    emotion: surprised
+    text: 役所の形まで、変わったの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: この判決のあと、2005年の会社法で
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きな会社は、内部統制の仕組みを決めることが義務になったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 判決のあとに、法律……
+  - speaker: tsumugi
+    emotion: normal
+    text: '[大和銀行|ダイワギンコウ]は2003年にあさひ銀行と合併し、いまの[りそな銀行|リソナギンコウ]になったの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 米国での仕事をやめる命令も、2003年に解かれているわ。
+# ---- 締め（集金の回収・「誰にも見つからなかった」と本人の手紙） ----
+- id: shime
+  title: ''
+  background: dw_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 集金の穴、先生に言うのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: えらい。穴が小さいうちに、ね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分の場合は、誰にも見つからなかった。彼は2014年の取材で、そうも話しているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 検査も監査も、見つけられなかったのだ……
+  - speaker: tsumugi
+    emotion: normal
+    text: FRBの議長も米国の議会で、検査で見逃した手がかりがあったと認めているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見つけたのは検査じゃなくて、本人の手紙だった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その告白に、銀行は隠し続けられるかと聞いた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決は、国内だけで通じる[ローカル・ルール|ローカルルール]に頼ったと書いたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 米国で重い罰を受けたのは、損よりも言わなかったことだったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 小さな失敗ほど、言える仕組みを。それだけは覚えておいてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
