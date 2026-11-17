@@ -4535,6 +4535,23 @@ SPECS = {
         dict(scene="tm_kaiken", tint="mono", tag="2017年 破産の日", emo="sad", fx="gloom", say="生きることしか"),
         dict(scene="tm_houtei", tint="yellow", tag="2018年 初公判", emo="sad", fx="sweat", say="間違いございません"),
     ]),
+    # 第11弾（2026-12-06〜09。方向転換の実験の20〜23本目）
+    "mitsukoshi-okada": dict(layout="scene", headline="16対0で解任", head_hi="解任", panels=[
+        dict(scene="mt_uriba", tint="yellow", tag="1972年 社長に", emo="happy", fx="sparkle"),
+        dict(scene="mt_torishimari_kiritsu", tint="mono", tag="1982年 取締役会", emo="sad", fx="gloom", say="なぜだ！"),
+    ]),
+    "meathope-tanaka": dict(layout="scene", headline="報道27日で破産", head_hi="破産", panels=[
+        dict(scene="mh_hyosho", tint="yellow", tag="2006年 国の表彰", emo="happy", fx="sparkle"),
+        dict(scene="mh_hiroma", tint="mono", tag="2007年 会見", emo="sad", fx="gloom", say="指示したことがある"),
+    ]),
+    "agura-farm": dict(layout="scene", headline="負債4330億円", head_hi="4330億円", panels=[
+        dict(scene="ag_bokujo", tint="yellow", tag="和牛のオーナー", emo="happy", fx="sparkle"),
+        dict(scene="ag_kokugikan", tint="mono", tag="2011年 説明会", emo="sad", fx="gloom", say="おわびする"),
+    ]),
+    "daiwa-ny": dict(layout="scene", headline="11億ドルの穴", head_hi="11億ドル", panels=[
+        dict(scene="dw_torihiki", tint="yellow", tag="NY支店", emo="happy", fx="sparkle"),
+        dict(scene="dw_ie_kaiten", tint="mono", tag="1995年 告白", emo="sad", fx="gloom"),
+    ]),
     # 第10弾（2026-12-03〜05。方向転換の実験の17〜19本目）
     "murakami-fund": dict(layout="scene", headline="会見の数時間後に逮捕", head_hi="逮捕", panels=[
         dict(scene="mu_kaiken2", tint="mono", tag="2006年6月 会見", emo="sad", fx="gloom", say="聞いちゃった"),

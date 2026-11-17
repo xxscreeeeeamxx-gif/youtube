@@ -414,7 +414,8 @@ PLAYLISTS = {
                "bigmotor-fusei", "ikinari-steak", "kanebo-funshoku", "skymark-saisei",
                "livedoor-horie", "daio-igawa", "seibu-tsutsumi", "mtgox-karpeles",
                "ghosn-nissan", "recruit-ezoe", "terumi-club", "comsn-origuchi",
-               "murakami-fund", "harenohi", "elpida-sakamoto"]),
+               "murakami-fund", "harenohi", "elpida-sakamoto",
+               "mitsukoshi-okada", "meathope-tanaka", "agura-farm", "daiwa-ny"]),
     # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
     # こちらはチャンネルページと検索結果に並ぶ入口。関連動画の隣人が
     # 「会社の興亡」「ゲーム」「クルマ」のように題材ごとに固まっているので、
@@ -441,7 +442,8 @@ PLAYLISTS = {
                "bigmotor-fusei", "ikinari-steak", "kanebo-funshoku", "skymark-saisei",
                "livedoor-horie", "daio-igawa", "seibu-tsutsumi", "mtgox-karpeles",
                "ghosn-nissan", "recruit-ezoe", "terumi-club", "comsn-origuchi",
-               "murakami-fund", "harenohi", "elpida-sakamoto"]),
+               "murakami-fund", "harenohi", "elpida-sakamoto",
+               "mitsukoshi-okada", "meathope-tanaka", "agura-farm", "daiwa-ny"]),
     "play": dict(
         title="ゲームと遊びの誕生｜ずんだもん再現ドラマ",
         desc="ゲームボーイ、プリクラ、カラオケ。遊びの道具にも、最初に作った人がいます。"
