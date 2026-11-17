@@ -1,0 +1,1241 @@
+meta:
+  title: 解任の席で「なぜだ！」と叫んだ三越の社長、37日後に特別背任の疑いで逮捕された【ずんだもん解説】
+  slug: mitsukoshi-okada
+  hook_line: 「なぜだ！」と叫んだ三越の社長は、本当に理由が分からなかったのか。
+  summary: 1982年9月22日、東京・日本橋の三越本店。取締役会で議長の席を譲った社長の岡田茂は、16対0で解任され「なぜだ！」と叫びました。57歳で社長に就いて10年。仕入れの間にはさまれた1つの会社、取引先に回る映画の前売券、そして2か月前の人事の打ち合わせ。叫んだ社長は、本当に理由が分からなかったのか。一審と二審の判決、公正取引委員会の審決、当時の報道を主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 東京高等裁判所 平成5年11月29日判決（昭和63年(う)第266号）全文 https://www.courts.go.jp/assets/hanrei/hanrei-pdf-20224.pdf
+  - 裁判所「裁判例結果詳細」（東京高裁 平成5年11月29日判決） https://www.courts.go.jp/hanrei/20224/detail4/index.html
+  - 公正取引委員会「優越的地位の濫用に関する独占禁止法上の考え方」（2010年11月30日） https://www.jftc.go.jp/dk/guideline/unyoukijun/yuetsutekichii.html
+  - 時事ドットコム「1982年9月22日 三越の岡田茂社長解任、「なぜだ」が流行語に」 https://www.jiji.com/jc/daily?d=0922
+  - TIME "Sayonara"（1982年10月4日） https://time.com/archive/6859675/sayonara-2/
+  tags:
+  - 三越
+  - 三越事件
+  - 岡田茂
+  - 竹久みち
+  - なぜだ
+  - 特別背任
+  - 百貨店
+  - 日本橋
+  - 取締役会
+  - 社長解任
+  - 公正取引委員会
+  - 三越伊勢丹
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 昭和史
+  thumbnail:
+    top: 16対0で解任
+    bottom: なぜだ！
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: senmu
+    label: 専務
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: koyama
+    label: 社外取締役
+    voice: 21
+    pitch: -0.08
+    outfit: suit
+    color: '#3a3f4a'
+  - id: takehisa
+    label: 竹久
+    voice: 8
+    pitch: -0.08
+    hair: bun
+    outfit: suit
+    color: '#7a3a5a'
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.08
+    outfit: apron
+  - id: jomu
+    label: 常務
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: shitsucho
+    label: 室長
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#454a55'
+  - id: honbucho
+    label: 本部長
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#454a55'
+  - id: shain
+    label: 社員
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#4a5a7a'
+  - id: tkshain
+    label: 社員
+    voice: 12
+    pitch: 0.04
+    outfit: suit
+    color: '#5a6a7a'
+  - id: senpai
+    label: 先輩
+    voice: 21
+    pitch: 0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: torihiki
+    label: 取引先
+    voice: 67
+    pitch: -0.02
+    outfit: suit
+    color: '#6a5a48'
+  - id: kacho
+    label: 課長
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#5a4a3a'
+  - id: gyosha
+    label: 業者
+    voice: 21
+    pitch: -0.04
+    outfit: work
+    color: '#6a6a5a'
+  - id: kisha
+    label: 記者
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（1982年9月22日・日本橋本店の取締役会。筋は Wikipedia＋データ・マックスの1本。杉田は1言だけ。笑いの SE なし。議長の席は画面右なので x を左寄せ） ----
+- id: co_torishimari
+  title: ''
+  background: mt_torishimari
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: normal}
+  - {who: senmu, x: 0.6, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1982年9月22日、東京・日本橋。三越本店の取締役会で、社長の岡田茂が議長の席を譲ります。
+    reading: せんきゅうひゃく はちじゅうにねん くがつ にじゅうににち、とうきょう にほんばし。みつこし ほんてんの とりしまりやくかいで、しゃちょうの おかだ しげるが ぎちょうの せきお ゆずります。
+  - speaker: senmu
+    emotion: normal
+    text: 賛成の[方|カタ]はご起立してください
+    pause_after: 0.6
+  - speaker: reimu
+    text: 椅子を引く音が、次々に続きます。
+    reading: いすお ひく おとが、つぎつぎに つづきます。
+    background: mt_torishimari_kiritsu
+  - speaker: zundamon
+    emotion: angry
+    text: '[何|なん]だこれは！……議長は俺だ！'
+  - speaker: reimu
+    text: 16対0。社長の解任が決まります。
+    reading: じゅうろく たい ぜろ。しゃちょうの かいにんが きまります。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……なぜだ！
+  - speaker: reimu
+    text: この『なぜだ』は11年後、裁判所の判決にもう一度書かれます。
+    reading: この なぜだわ じゅういちねんご、さいばんしょの はんけつに もういちど かかれます。
+# ---- 今の教室（多数決で降ろされた委員長） ----
+- id: hook
+  title: ''
+  background: mt_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 委員長を、多数決で降ろされたのだ……なぜだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 給食のプリン、毎日2つ取ってたでしょう。
+    se: hammer
+  - speaker: zundamon
+    emotion: happy
+    text: 委員長だから、当然なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 創業300年を超える百貨店、三越の社長も1982年に同じ言葉を叫んだの。
+  - speaker: tsumugi
+    emotion: normal
+    text: なぜだと叫んだ社長は、本当に理由が分からなかったのか。
+    telops:
+    - {text: "「なぜだ！」と叫んだ社長は 本当に分からなかった？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: プリンの話と、同じなのだ！？
+# ---- 1962年ごろ・売り場（30秒以内。週刊誌の会話は使わない。出会いは判決の「昭和三二、三年ころ」） ----
+- id: card1962
+  title: ''
+  background: mt_card_1962
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1962年ごろ。アクセサリーのデザイナー、竹久みちに三越との取引の口座が開かれます。
+    reading: せんきゅうひゃく ろくじゅうにねん ごろ。あくせさりーの でざいなー たけひさ みちに、みつこしとの とりひきの こうざが ひらかれます。
+- id: ch1_uriba
+  title: 売り場のアクセサリー
+  background: mt_uriba
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田部長, emotion: normal}
+  - {who: tenin, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: 宣伝部長！ 竹久さんのアクセサリー、今日から売り場に並びます！
+  - speaker: zundamon
+    emotion: happy
+    text: どれどれ。
+  - speaker: reimu
+    text: 2人は1950年代の終わりに知り合っていました。竹久と三越の取引は、20年後に裁判で問われます。
+    reading: ふたりわ せんきゅうひゃく ごじゅうねんだいの おわりに しりあって いました。たけひさと みつこしの とりひきわ、にじゅうねんごに さいばんで とわれます。
+# ---- 1972年・13日差の椅子（銀座のハンバーガーの店は1行だけ） ----
+- id: card1972
+  title: ''
+  background: mt_card_1972
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 1972年3月30日。竹久が実質的に経営する輸入の会社、オリエント交易ができます。
+    reading: せんきゅうひゃく ななじゅうにねん さんがつ さんじゅうにち。たけひさが じっしつてきに けいえい する ゆにゅうの かいしゃ、おりえんと こうえきが できます。
+- id: ch2_isu
+  title: 13日差の椅子
+  background: mt_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: happy}
+  - {who: jomu, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: その13日後の4月12日。57歳の岡田が、三越の社長に就きます。
+    reading: その じゅうさんにちごの しがつ じゅうににち。ごじゅうななさいの おかだが、みつこしの しゃちょうに つきます。
+  - speaker: jomu
+    emotion: happy
+    text: 社長、ご就任おめでとうございます！
+  - speaker: zundamon
+    emotion: happy
+    text: うむ。
+  - speaker: jomu
+    emotion: normal
+    text: 銀座の店長のころは、ハンバーガーの店まで入れましたからね。
+  - speaker: zundamon
+    emotion: happy
+    text: 次は海外の品だ。どんどん直に仕入れるぞ。
+  - speaker: jomu
+    emotion: happy
+    text: 社長のお考えなら、誰も反対しません。
+  - speaker: reimu
+    text: 一審はのちに、この椅子をあたかもオーナー社長のごとくと書きます。13日の差は、まだ誰も気にしていません。
+    reading: いっしんわ のちに、この いすお あたかも おーなー しゃちょうの ごとくと かきます。じゅうさんにちの さわ、まだ だれも きに して いません。
+    telops:
+    - {text: "一審「オーナー社長のごとく」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 1973年12月・業界誌（岡田の言葉は一審が認めた社長室長の証言。回収は1000万円） ----
+- id: ch3_zasshi
+  title: 二割位あたり前
+  background: mt_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: normal}
+  - {who: shitsucho, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 1973年12月。一審によれば、岡田はある業界誌を1000万円で回収します。
+    reading: せんきゅうひゃく ななじゅうさんねん じゅうにがつ。いっしんに よれば、おかだわ ある ぎょうかいしお いっせんまんえんで かいしゅう します。
+  - speaker: shitsucho
+    emotion: surprised
+    text: 社長！ この記事です。オリエント交易を間に通すと、
+  - speaker: shitsucho
+    emotion: surprised
+    text: '竹久さんの側の取り分で、うちの仕入れ値が2割ほど高いと。'
+  - speaker: zundamon
+    emotion: normal
+    text: 二割[位|ぐらい]あたり前じゃねえか
+    telops:
+    - {text: "岡田「二割位あたり前じゃねえか」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shitsucho
+    emotion: surprised
+    text: あ、当たり前……。
+    se: tenten
+  - speaker: reimu
+    text: 9年後、この社長が『なぜだ』と叫びます。
+    reading: くねんご、この しゃちょうが なぜだと さけびます。
+# ---- 1978年4月ごろ・竹久の言葉（相手はアクセサリーたけひさの社員＝オリエント交易の代表取締役に名前だけ就いていた人。名前は出さない。一審が認めた言葉だけ） ----
+- id: ch4_juugo
+  title: ''
+  background: mt_denpyo
+  bgm: kinakusai
+  stage:
+  - {who: tkshain, x: 0.12, flip: true, emotion: normal}
+  - {who: takehisa, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1978年4月ごろ。竹久は、自分の会社の社員に念を押します。
+    reading: せんきゅうひゃく ななじゅうはちねん しがつ ごろ。たけひさわ、じぶんの かいしゃの しゃいんに ねんお おします。
+  - speaker: takehisa
+    emotion: normal
+    text: アクセサリーたけひさの[方|ほう]のマージンは[15|ジュウゴ]パーセントは必ず取ってよ
+  - speaker: tkshain
+    emotion: surprised
+    text: ……はい。
+  - speaker: tkshain
+    emotion: thinking
+    text: たけひさもオリエント交易も、竹久さんの会社ですよね……。
+# ---- 1978年夏・仕入れの部屋（先輩と新人は名前の無いモブ。1万円→1万1500円は台帳のたとえ） ----
+- id: ch4_shiire
+  title: 1万円が1万1500円
+  background: mt_shiire
+  stage:
+  - {who: senpai, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: その年の夏。三越の仕入れの部屋です。
+    reading: その としの なつ。みつこしの しいれの へやです。
+  - speaker: shinjin
+    emotion: thinking
+    text: 先輩、この伝票おかしくないですか。
+  - speaker: senpai
+    emotion: normal
+    text: どこがだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 海外で買い付けた品なのに、オリエント交易から直に来ないで
+  - speaker: shinjin
+    emotion: thinking
+    text: 間にアクセサリーたけひさが入ってます。
+  - speaker: senpai
+    emotion: normal
+    text: 社内じゃ、[準直方式|じゅんちょくほうしき]と呼んでる。
+  - speaker: shinjin
+    emotion: normal
+    text: たけひさが入ると、何が変わるんです？
+  - speaker: senpai
+    emotion: normal
+    text: 検品と値札[付け|つけ]をする場所。それだけだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: それだけ？
+  - speaker: senpai
+    emotion: normal
+    text: オリエント交易から1万円で買った品を、たけひさが1万1500円で納める。
+  - speaker: shinjin
+    emotion: surprised
+    text: 1500円も、どこへ行くんですか！？
+    se: bikkuri
+  - speaker: senpai
+    emotion: normal
+    text: たけひさの懐だ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 上に、言わないんですか。
+  - speaker: senpai
+    emotion: sad
+    text: 言ったら、地方の店へ飛ばされる。
+  - speaker: reimu
+    text: 一審によれば、社員たちは不合理と思いながら社長の人事権の行使を恐れて受け入れてきました。
+    reading: いっしんに よれば、しゃいんたちわ ふごうりと おもいながら しゃちょうの じんじけんの こうしお おそれて うけいれて きました。
+  - speaker: shinjin
+    emotion: thinking
+    text: 社長は、このことご存じなんですか？
+  - speaker: senpai
+    emotion: sad
+    text: ……それを聞きに行った者は、まだいない。
+    beat: true
+# ---- 今の部屋（間に1社で約15%。4年で15億7745万円＝準直方式の差益。1日あたりは台帳の割り算） ----
+- id: heya1
+  title: ''
+  background: mt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 間に1社はさむだけで、1500円も増えるのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁は、まったく必要がないのに間にはさんだと書いているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 必要ないのに……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 差は仕入れ値の約[15%|ジュウゴパーセント]。4年で、15億7745万円よ。
+    telops:
+    - {text: "間に1社で約15%　4年で15億7745万円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 15億！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 1日にならすと、約108万円。
+  - speaker: zundamon
+    emotion: sad
+    text: 毎日、100万円ちょっと……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1973年に2割高いと書かれたとき、社長は当たり前と言ったわね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 高いのは、知ってたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長に誰も逆らえない会社で、いったい誰が社長を止めたのか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社員は、言えないのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 止めたのは、社員じゃなかったの。
+# ---- 1978年暮れ・取引先の応接室（押し付け販売。中身は「前売券などを買わせた」「改装や催しの費用」まで。取引先は名前の無いモブ） ----
+- id: ch5_ken
+  title: 断れない前売券
+  background: mt_osetsu
+  bgm: curious
+  stage:
+  - {who: torihiki, x: 0.14, flip: true, emotion: surprised}
+  - {who: kacho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1978年の暮れ。三越がお金を出した映画、燃える秋の公開が迫っていました。
+    reading: せんきゅうひゃく ななじゅうはちねんの くれ。みつこしが おかねお だした えいが、もえる あきの こうかいが せまって いました。
+  - speaker: torihiki
+    emotion: surprised
+    text: 課長、三越さんからまた映画の前売券です。
+  - speaker: kacho
+    emotion: thinking
+    text: 燃える秋か。三越さんが、お[金|かね]を出した映画だ。
+  - speaker: kacho
+    emotion: sad
+    text: 断ったら、来年の取引はどうなる。
+  - speaker: torihiki
+    emotion: sad
+    text: ……買うしか、ないですね。
+  - speaker: torihiki
+    emotion: surprised
+    text: 課長、こっちの束も前売券です！
+    background: mt_osetsu_ken
+    se: zukko
+  - speaker: kacho
+    emotion: sad
+    text: 売り場の改装の費用も、うち持ちだそうだ。
+  - speaker: torihiki
+    emotion: normal
+    text: '[公正取引委員会|こうせいとりひきいいんかい]が、三越に立ち入り検査に入ったそうですよ。'
+  - speaker: reimu
+    text: 一審によれば公取委の件で取引先の協力を得られず、岡田は海外の品へ一層の関心を寄せます。
+    reading: いっしんに よれば こうとりいの けんで とりひきさきの きょうりょくお えられず、おかだわ かいがいの しなえ いっそうの かんしんお よせます。
+# ---- 1979〜1981年・人事の言葉（一審が認めた言葉。社員の名前は伏せる。言われる側が1人ずつ替わる） ----
+- id: ch6_sendai
+  title: 仙台へ出せ
+  background: mt_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: angry}
+  - {who: jomu, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1979年から1981年。一審が認めた、岡田の人事の言葉です。
+    reading: せんきゅうひゃく ななじゅうくねんから せんきゅうひゃく はちじゅういちねん。いっしんが みとめた、おかだの じんじの ことばです。
+  - speaker: jomu
+    emotion: normal
+    text: 社長、常務会の議題は以上です。
+  - speaker: zundamon
+    emotion: angry
+    text: '[○○|まるまる]は愛想が悪い。取引先の評判も悪いようだ。仙台へ[出|だ]せ'
+  - speaker: jomu
+    emotion: surprised
+    text: せ、仙台……。
+- id: ch6_kubi
+  title: ''
+  background: mt_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: angry}
+  - {who: shain, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 社長、宝石の買い付けの件ですが……。
+  - speaker: zundamon
+    emotion: angry
+    text: いったい貴様どこの社員だ。[買付|かいつけ]に消極的なのはどういうことだ。
+  - speaker: zundamon
+    emotion: angry
+    text: てめえなんかクビだ。辞めっちまえ
+    se: don
+  - speaker: shain
+    emotion: surprised
+    text: ク、クビ……！？
+- id: ch6_uchiawase
+  title: ''
+  background: mt_uchiawase
+  stage:
+  - {who: zundamon, x: 0.17, flip: true, tag: 岡田社長, emotion: normal}
+  - {who: takehisa, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1981年春ごろ、竹久の家。岡田は、あの社員の異動を竹久に確かめます。
+    reading: せんきゅうひゃく はちじゅういちねん はる ごろ、たけひさの いえ。おかだわ、あの しゃいんの いどうお たけひさに たしかめます。
+  - speaker: zundamon
+    emotion: normal
+    text: '[○○|まるまる]は本当に出していいんだな。あいつは本当に駄目なんだな'
+  - speaker: takehisa
+    emotion: normal
+    text: 絶対駄目です。出して下さい
+- id: ch6_atama
+  title: ''
+  background: mt_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: angry}
+  - {who: honbucho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: honbucho
+    emotion: normal
+    text: 社長、お呼びでしょうか。
+  - speaker: zundamon
+    emotion: angry
+    text: お前は竹久のことを[誹謗|ひぼう]している。[方々|ほうぼう]へ投書したのもお前じゃないか。
+  - speaker: zundamon
+    emotion: angry
+    text: 少し脇に行って頭を冷やせ
+  - speaker: honbucho
+    emotion: sad
+    text: ……はい。
+    beat: true
+# ---- 1981年・東雲の倉庫（5月31日は一審の「社長出張前の会議」での言葉。会議の部屋で言わせ、倉庫は画だけ） ----
+- id: ch7_soko
+  title: 全部店出ししろ
+  background: mt_soko
+  bgm: pop
+  stage:
+  - {who: senpai, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: shinjin
+    emotion: thinking
+    text: 先輩、[東雲|しののめ]の倉庫は箱でいっぱいですね。
+  - speaker: senpai
+    emotion: normal
+    text: 在庫が多いとか回転が悪いとか、仕入れはずっと言ってるんだがな。
+- id: ch7_kaigi
+  title: ''
+  background: mt_torishimari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: angry}
+  - {who: senpai, x: 0.6, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1981年5月31日、社長の出張前の会議。岡田の号令です。
+    reading: せんきゅうひゃく はちじゅういちねん ごがつ さんじゅういちにち、しゃちょうの しゅっちょう まえの かいぎ。おかだの ごうれいです。
+  - speaker: zundamon
+    emotion: angry
+    text: '[東雲|しののめ]の倉庫に物を入れては絶対にいかん、倉庫にあるものは全部[店出し|みせだし]しろ'
+  - speaker: senpai
+    emotion: surprised
+    text: ぜ、全部ですか！？
+- id: ch7_uriba
+  title: ''
+  background: mt_uriba
+  stage:
+  - {who: senpai, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、棚に入りきりません！
+  - speaker: senpai
+    emotion: normal
+    text: 通路に置け。
+  - speaker: shinjin
+    emotion: surprised
+    text: 通路も、箱で埋まりました！
+    background: mt_uriba_hako
+    se: manuke
+  - speaker: senpai
+    emotion: sad
+    text: 倉庫が、売り場に引っ越してきたな。
+    beat: true
+# ---- 今の部屋（呼び名は1回。自宅の工事代＝ケースのリース料への上乗せ8742万円は高裁の認定） ----
+- id: heya2
+  title: ''
+  background: mt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 仙台にクビ、頭を冷やせ……。社長に言い返せる人が、いないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社内では、岡田天皇と呼ばれたと評伝は書いているわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 天皇！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁も、役員たちは社長の意向に従うほかない状況だったと書いているの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: しかも社長の人事に、納入業者の竹久が答えていた。
+  - speaker: zundamon
+    emotion: angry
+    text: 社長の会社なのか、竹久の会社なのか分からないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのうえ社長は、自分の家の工事代まで会社に払わせていたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家の工事代を！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1980年3月、三越は出入りの内装業者と陳列ケースのリース契約を結ぶの。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのリース料に、社長の家の工事代が上乗せされていた。
+  - speaker: zundamon
+    emotion: angry
+    text: 上乗せは、いくらなのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁が認めた損害は、8742万円よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 止める人が動き出すのは、1982年の夏よ。
+# ---- 1982年（公取委の同意審決。中身は前売券などの押し付けまで） ----
+- id: card1982
+  title: ''
+  background: mt_card_1982
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1982年6月17日。公正取引委員会は前売券などの押し付けを、不公正な取引方法とする同意審決を出します。
+    reading: せんきゅうひゃく はちじゅうにねん ろくがつ じゅうしちにち。こうせい とりひき いいんかいわ まえうりけん などの おしつけお、ふこうせいな とりひき ほうほうと する どうい しんけつお だします。
+# ---- 1982年7月ごろ・竹久の家の人事の打ち合わせ（岡田の台詞は一審の1言だけ。竹久の台詞は無い。部屋の中は打ち合わせの画だけ） ----
+- id: ch8_sugita
+  title: 杉田は代えなきゃ
+  background: mt_uchiawase
+  stage:
+  - {who: zundamon, x: 0.17, flip: true, tag: 岡田社長, emotion: normal}
+  - {who: takehisa, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月ごろ、竹久の家での人事の打ち合わせ。一審が認めた岡田の言葉です。
+    reading: しちがつ ごろ、たけひさの いえでの じんじの うちあわせ。いっしんが みとめた おかだの ことばです。
+  - speaker: zundamon
+    emotion: angry
+    text: '[杉田|スギタ]は代えなきゃだめだ'
+    telops:
+    - {text: "岡田「杉田は代えなきゃだめだ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 本店長で専務の杉田忠義のことです。2か月後、この杉田が議長の席に座ります。
+    reading: ほんてんちょうで せんむの すぎた ただよしの ことです。にかげつご、この すぎたが ぎちょうの せきに すわります。
+# ---- 1982年8月29日〜30日・秘宝展（岡田の会見の台詞は作らない。詐欺と言わない。点数・値段は言わない） ----
+- id: ch9_hihoten
+  title: 24日前の秘宝展
+  background: mt_hihoten
+  cuts:
+  - speaker: reimu
+    text: 8月29日、三越本店で古代ペルシア秘宝展が始まります。
+    reading: はちがつ にじゅうくにち、みつこし ほんてんで こだい ぺるしあ ひほうてんが はじまります。
+- id: ch9_kaiken
+  title: ''
+  background: mt_kaiken
+  stage:
+  - {who: kisha, x: 0.9, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 同じ日の朝日新聞です。東大の学者が、出品の大半を偽物と指摘しています！
+  - speaker: kisha
+    emotion: normal
+    text: 三越は入手先を企業秘密とし、7点には米国の鑑定機関の鑑定書があると説明しました。
+  - speaker: reimu
+    text: のちに朝日の特派員が、その鑑定機関は存在しないと確かめます。
+    reading: のちに あさひの とくはいんが、その かんてい きかんわ そんざい しないと たしかめます。
+  - speaker: kisha
+    emotion: surprised
+    text: 今度は岡田社長が、朝日新聞への三越の広告を即日全面ストップと通告しました！
+    background: mt_shinbun
+# ---- 1982年夏〜9月・準備（小山の台詞は作らない。議案を誰が「その他」にしたかは資料に無いので、岡田は段取りを受け取る側に） ----
+- id: ch10_junbi
+  title: 第6号議案はその他
+  background: mt_shachoshitsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: angry}
+  - {who: jomu, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: メインバンク三井銀行の相談役、小山五郎は岡田に辞任を勧めます。岡田は語気を強めて拒みました。
+    reading: めいんばんく みつい ぎんこうの そうだんやく、こやま ごろうわ おかだに じにんお すすめます。おかだわ ごきお つよめて こばみました。
+  - speaker: zundamon
+    emotion: angry
+    text: 辞めるつもりは、無い。
+  - speaker: jomu
+    emotion: normal
+    text: 社長、次の取締役会の議案です。第6号は、その他です。
+  - speaker: zundamon
+    emotion: normal
+    text: その他？
+  - speaker: jomu
+    emotion: normal
+    text: そこで、社長の噂は事実に反すると確かめる段取りです。
+  - speaker: jomu
+    emotion: normal
+    text: 役員の皆さんには、もう話を通してあります。
+  - speaker: zundamon
+    emotion: happy
+    text: なら、それで終わりだ。
+    beat: true
+  - speaker: reimu
+    text: 高裁はのちに顧問弁護士の本から判断する限り、岡田は事前に周到な多数派工作を準備したと書きます。
+    reading: こうさいわ のちに こもん べんごしの ほんから はんだん する かぎり、おかだわ じぜんに しゅうとうな たすうは こうさくお じゅんび したと かきます。
+# ---- 1982年9月22日・取締役会（本編。全体の45〜50%。小山の言葉は Wikipedia の1つだけ。議長の席の前に人を立たせない） ----
+- id: ch11_kiritsu
+  title: 9月22日
+  background: mt_torishimari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: normal}
+  - {who: senmu, x: 0.6, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 秘宝展から24日後、9月22日の取締役会。第5号議案まで済むと、岡田は議長の席を杉田に譲ります。
+    reading: ひほうてんから にじゅうよっかご、くがつ にじゅうににちの とりしまりやくかい。だいごごう ぎあんまで すむと、おかだわ ぎちょうの せきお すぎたに ゆずります。
+  - speaker: zundamon
+    emotion: normal
+    text: 第6号は、その他か。
+  - speaker: reimu
+    text: 議長の杉田が切り出したのは、社長の解任でした。
+    reading: ぎちょうの すぎたが きりだしたのわ、しゃちょうの かいにんでした。
+  - speaker: senmu
+    emotion: normal
+    text: 賛成の[方|カタ]はご起立してください
+    pause_after: 0.6
+  - speaker: zundamon
+    emotion: angry
+    text: '[何|なん]だこれは！'
+    background: mt_torishimari_kiritsu
+  - speaker: reimu
+    text: 立ったのは14人。説明を求めても、その義務は無いと退けられます。
+    reading: たったのわ じゅうよにん。せつめいお もとめても、その ぎむわ ないと しりぞけられます。
+  - speaker: zundamon
+    emotion: angry
+    text: おかしいじゃねえか。議長は俺だ！
+- id: ch11_kaiketsu
+  title: ''
+  background: mt_torishimari_kiritsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田社長, emotion: angry}
+  - {who: koyama, x: 0.6, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 社外取締役で三井銀行の小山五郎が、改めて解任を発議。残る2人も立って、16対0。
+    reading: しゃがい とりしまりやくで みつい ぎんこうの こやま ごろうが、あらためて かいにんお はつぎ。のこる ふたりも たって、じゅうろく たい ぜろ。
+    telops:
+    - {text: "16対0", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: angry
+    text: 違法だ！
+  - speaker: reimu
+    text: 顧問弁護士は、手続きに瑕疵は無いと述べます。
+    reading: こもん べんごしわ、てつづきに かしわ ないと のべます。
+  - speaker: zundamon
+    emotion: surprised
+    text: なぜだ！
+    pause_after: 0.6
+  - speaker: koyama
+    emotion: normal
+    text: '岡田君、もう終わったのだよ'
+  - speaker: zundamon
+    emotion: sad
+    text: なぜだ……
+- id: ch11_kara
+  title: ''
+  background: mt_torishimari_kara
+  cuts:
+  - speaker: reimu
+    text: 岡田は非常勤の取締役に。後任は名古屋三越の市原晃。なぜだは、この年の流行語になりました。
+    reading: おかだわ ひじょうきんの とりしまりやくに。こうにんわ なごや みつこしの いちはら あきら。なぜだわ、この としの りゅうこうごに なりました。
+# ---- 1982年9月25日ごろ・玄関先（高裁が認めた言葉。家の中・家族は描かない。業者は名前の無いモブ） ----
+- id: ch12_genkan
+  title: 3日後の4000万円
+  background: mt_genkan
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田, emotion: normal}
+  - {who: gyosha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3日後の9月25日ごろ。岡田は、自宅の工事をした業者を家に呼び出します。
+    reading: みっかごの くがつ にじゅうごにち ごろ。おかだわ、じたくの こうじお した ぎょうしゃお いえに よびだします。
+  - speaker: gyosha
+    emotion: normal
+    text: お呼びでしょうか。
+  - speaker: zundamon
+    emotion: normal
+    text: 自宅の工事ではこれまでいろいろ世話になった。
+  - speaker: zundamon
+    emotion: normal
+    text: この中に[金|かね]が四つ入っているから預かっておいてくれ
+  - speaker: gyosha
+    emotion: surprised
+    text: よ、四つ……。
+  - speaker: gyosha
+    emotion: surprised
+    text: 4000万円……！
+  - speaker: reimu
+    text: 高裁は未払いの工事代を払う趣旨と容易に推認できるとし、預けただけという岡田の弁解を退けました。
+    reading: こうさいわ みばらいの こうじだいお はらう しゅしと よういに すいにん できると し、あずけた だけと いう おかだの べんかいお しりぞけました。
+# ---- 1982年10月・37日後（逮捕の瞬間の細部は作らない。検察の建物の外観と記者だけ） ----
+- id: ch13_taiho
+  title: 37日後
+  background: mt_kensatsu
+  bgm: serious
+  stage:
+  - {who: kisha, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 10月18日、竹久が所得税法違反の疑いで逮捕。そして10月29日です。
+    reading: じゅうがつ じゅうはちにち、たけひさが しょとくぜいほう いはんの うたがいで たいほ。そして じゅうがつ にじゅうくにちです。
+  - speaker: kisha
+    emotion: surprised
+    text: 三越の前の社長、岡田茂が[特別背任|とくべつハイニン]の疑いで逮捕されました！
+  - speaker: kisha
+    emotion: normal
+    text: 解任から37日。68歳での逮捕です。
+# ---- 今の部屋（罪は3つ。秘宝展は罪に入っていない） ----
+- id: heya3
+  title: 罪は3つ
+  background: mt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 偽物の[秘宝展|ひほうてん]のせいで、逮捕されたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[秘宝展|ひほうてん]は、どの罪にも入っていないの。'
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ、そうなの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 起訴は3回。罪は3つよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめは2人の、海外の品の仕入れの[特別背任|とくべつハイニン]。
+  - speaker: tsumugi
+    emotion: normal
+    text: 間に竹久の会社をはさんだ取引と、香港の業者に竹久への手数料を上乗せさせた取引よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめは岡田だけの、自宅の工事代をリース料に乗せた[特別背任|とくべつハイニン]。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめは竹久だけの、脱税よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[特別背任|とくべつハイニン]って？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 役員が自分や誰かの得のために務めに背いて、会社に損をさせる罪。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の商法の罪よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2か月前に代えなきゃと言ってた専務に、降ろされて……。
+  - speaker: zundamon
+    emotion: thinking
+    text: なぜだって、本当に分からなかったのかな。
+  - speaker: tsumugi
+    emotion: thinking
+    text: このなぜだは、裁判でも持ち出されるの。
+# ---- 1987年6月29日・一審（判決の言葉は裁判長のモブの口で。判決の日の岡田の言葉は無いので黙って聞く） ----
+- id: card1987
+  title: ''
+  background: mt_card_1987
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1987年6月29日。東京地裁、一審の判決です。岡田は72歳。
+    reading: せんきゅうひゃく はちじゅうななねん ろくがつ にじゅうくにち。とうきょう ちさい、いっしんの はんけつです。おかだわ ななじゅうにさい。
+- id: ch14_isshin
+  title: 私物化してきた歴史
+  background: mt_houtei
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田, emotion: sad}
+  - {who: saibancho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人岡田茂を[懲役3年6月|ちょうえきさんねんろっかげつ]に処する。
+    se: don
+  - speaker: reimu
+    text: 竹久は、懲役3年と罰金7000万円。2人とも、執行猶予は付きません。
+    reading: たけひさわ、ちょうえき さんねんと ばっきん ななせんまんえん。ふたりとも、しっこう ゆうよわ つきません。
+  - speaker: saibancho
+    emotion: normal
+    text: まさに公私を混同し、企業を私物化してきた歴史であったといっても過言ではない。
+    telops:
+    - {text: "一審「私物化してきた歴史」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 種々の外国フェアー、直輸入推進等を通じて国際文化の交流に寄与したことも指摘できる。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人岡田のこれらに示された非凡な才能が社長在任中正しく発揮されなかったことは
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人のためまことに惜しむべきことと思われる。
+# ---- 1993年11月29日・二審（香港の手数料の分は2人とも無罪。準直方式と自宅は有罪のまま） ----
+- id: card1993
+  title: ''
+  background: mt_card_1993
+  cuts:
+  - speaker: reimu
+    text: 1993年11月29日。東京高裁、二審の判決です。岡田は79歳。
+    reading: せんきゅうひゃく きゅうじゅうさんねん じゅういちがつ にじゅうくにち。とうきょう こうさい、にしんの はんけつです。おかだわ ななじゅうきゅうさい。
+- id: ch15_nishin
+  title: 香港の分は無罪
+  background: mt_houtei
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岡田, emotion: sad}
+  - {who: saibancho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: '[原判決|げんはんけつ]を破棄する。'
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人岡田茂を[懲役3年|ちょうえきさんねん]に処する。
+  - speaker: reimu
+    text: 竹久は懲役2年6月と罰金6000万円に。香港の業者を通した手数料の分は、2人とも無罪でした。
+    reading: たけひさわ ちょうえき にねん ろっかげつと ばっきん ろくせんまんえんに。ほんこんの ぎょうしゃお とおした てすうりょうの ぶんわ、ふたりとも むざいでした。
+- id: heya4
+  title: ''
+  background: mt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 香港の分だけ、無罪なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁は、竹久らの働きに若干の有用性を認めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 香港の手数料は2から5%。無用な支出とまでは断定できない、という趣旨よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも間にはさんだ会社の約[15%|ジュウゴパーセント]は、働きの対価を超えている。こっちは有罪のままよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[15%|ジュウゴパーセント]は、取りすぎ……。'
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一審|いっしん]は、海外のフェアや直輸入の功績も書いていたわね。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 功績も罪も、舞台は同じ直輸入だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: あのなぜだは、どうなったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 弁護側は控訴審で、あのなぜだを持ち出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の心理状態をありのままに表したもの。任務に背く認識は無かった証拠だ、とね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 本当に、分からなかったってこと！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 高裁は、この主張にも答えを書いているわ。
+# ---- 1995年7月20日・上告中の死去と公訴棄却（有罪は確定していない） ----
+- id: ch15_shikyo
+  title: ''
+  background: mt_shinbun
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 岡田は上告します。そして1995年7月20日、上告中に80歳で亡くなりました。
+    reading: おかだわ じょうこく します。そして せんきゅうひゃく きゅうじゅうごねん しちがつ はつか、じょうこくちゅうに はちじゅっさいで なくなりました。
+  - speaker: reimu
+    text: 被告人の死亡で、裁判は公訴棄却に。岡田の有罪は、確定しないままでした。
+    reading: ひこくにんの しぼうで、さいばんわ こうそ ききゃくに。おかだの ゆうざいわ、かくてい しない ままでした。
+# ---- 論争1：竹久が操った？（「女帝」は呼び名として1回。「愛人」は判決の言葉として1回） ----
+- id: ronso1
+  title: 操ったのは竹久？
+  background: mt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 三越を本当に動かしてたのは竹久で、社長は言いなりだったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: '竹久は、三越の女帝と呼ばれたわね。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 岡田が、幹部でも逆らえないほどの力を竹久に持たせた。[一審|いっしん]もそう書いているわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、責任が重いのは岡田のほう。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: '[一審|いっしん]は竹久について、岡田と比べると刑事上の責任には自ら限度があるとしたの。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決の言葉では、2人は愛人関係。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……判決には、そう書いてあるのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも罪になったのは、2人の関係じゃなくてお[金|かね]の流れよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 仕事の価値より多いお[金|かね]を、社長が親しい女性の会社に流した。その差が罪なの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '竹久は1997年に刑が確定して、服役したわ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 操られたんじゃなくて、流したのは社長……。
+    beat: true
+# ---- 論争2：解任は仕組まれた？（「クーデター」は俗説の言葉としてだけ。地の文で「黒幕」「謀略」と言わない） ----
+- id: ronso2
+  title: 解任は仕組まれた？
+  background: mt_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、あの解任は銀行と反対派が仕組んだクーデターだったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう言われる理由はあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: メインバンクの相談役が辞任を勧めて、役員への根回しもしたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 弁護側も控訴審で、事件は反対派の弁護士らの10年がかりの謀略に始まると訴えたの。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、誰が動いたかと罪があったかは別の話よ。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁は、三越の役員や社員の証言を関係者だという一事で全部疑うべきではないとしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長を降ろしたのは、取締役会の手続き。罪を判断するのは、裁判所よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 降ろした人と、罪を判断する所は別……。
+    beat: true
+# ---- 本当の注意点（相談の手順は書かない。「公取委が取り締まる対象」まで） ----
+- id: chui
+  title: 付き合いと上乗せ
+  background: mt_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。取引先に付き合いで品物や券を買わされるのは、優越的地位の濫用にあたりうるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[公正取引委員会|こうせいとりひきいいんかい]が、取り締まる対象よ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 公取委の考え方には、協賛金や手伝いの人を出させることも挙がっているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 改装の費用を持たされたのも、それなのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 断ったら来年の取引が……って、あの前売券なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。間に1社はさむだけの上乗せは、伝票が正しく見えても損になる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家計なら、紹介料や手数料という名前の上乗せに気づくこと。
+  - speaker: zundamon
+    emotion: thinking
+    text: 伝票は、ちゃんとしてたのに……。
+  - speaker: zundamon
+    emotion: sad
+    text: 1万円が、1万1500円……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。社長でも、取締役会の決議で降ろせるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時も、本人は自分の解任の決議に加われなかったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 自分の一票は、無いのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 9月22日も、最後に発議したのは社外の取締役だったわね。
+# ---- 現代（数字は報道の1つだけ。日産の元会長は名前を出さず1行） ----
+- id: card2026
+  title: ''
+  background: mt_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。あの取締役会から、44年がたちました。
+    reading: にせん にじゅうろくねん。あの とりしまりやくかいから、よんじゅうよねんが たちました。
+- id: ima
+  title: 三越のいま
+  background: mt_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 三越は、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年に伊勢丹と経営統合。2011年には三越が伊勢丹を合併したわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2つの百貨店が、1つの会社に！
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本橋本店と銀座店は、いまも三越の名前で開いているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本橋本店の本館は、国の重要文化財にもなっているの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 建物ごと、歴史なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 報道によれば、グループは2026年3月期まで3年続けて営業利益が過去最高よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 事件のあとも、続いてるのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして、あのなぜだも忘れられていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2018年、日産の元会長の逮捕でこのなぜだを思い出したと書いた解説者もいたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法律家も[特別背任|とくべつハイニン]を考える例として、この高裁の判決を挙げているわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 何十年たっても、なぜだが出てくるのだ……。
+# ---- 締め（茶番の回収。高裁の言葉は留保ごと帯で出し、つむぎが受ける） ----
+- id: shime
+  title: ''
+  background: mt_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ プリンは1つにして、委員長に返り咲くのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 返り咲けるかは、また多数決よ。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あの日、岡田はなぜだと叫んだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁は顧問弁護士の本の記載から判断する限りと断って、こう書いたの。
+  - speaker: reimu
+    text: なぜだという発言は、事前に周到な多数派工作を準備したにもかかわらず、これが完全に失敗し
+    reading: なぜだと いう はつげんわ じぜんに しゅうとうな たすうは こうさくお じゅんび したにも かかわらず、これが かんぜんに しっぱいし
+  - speaker: reimu
+    text: 最も信頼していた専務らを含む全員が、社長解任の決議に賛成したことから発せられたものに過ぎず
+    reading: もっとも しんらい して いた せんむらお ふくむ ぜんいんが、しゃちょう かいにんの けつぎに さんせい した ことから はっせられた ものに すぎず
+    telops:
+    - {text: "高裁「完全に失敗し…発せられたものに過ぎず」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: thinking
+    text: 裁判所は、こう読んだの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 用意した票が、1つも来なかったから……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長を止めたのは判決より5年早い、取締役会の起立だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 間に1社と、付き合いの押し付け。お[金|かね]の流れに、少しだけ目を向けてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
