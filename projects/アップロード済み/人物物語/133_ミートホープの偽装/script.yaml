@@ -1,0 +1,1181 @@
+meta:
+  title: 「指示したことがある」と認めたミートホープの社長、報道から27日で会社は破産した【ずんだもん解説】
+  slug: meathope-tanaka
+  hook_line: ミートホープの社長の説明は「2、3回」から1日で「7、8年前から」に変わった。
+  summary: 2007年6月、北海道苫小牧のひき肉の会社ミートホープ。牛肉と書いた箱の中身に、豚や鶏が混ざっていたと報じられます。社長の田中稔の説明は「間違った製品」「2、3回」と日ごとに変わり、3日目の会見で「指示したことがある」と認めました。挽いてしまえば見えない肉と、会社どうしの取引に表示の義務が無かった時代。札幌地裁の判決、農林水産省の発表、会見の言葉を、主語と日付を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 札幌地方裁判所 平成20年3月19日判決（平成19(わ)1454 不正競争防止法違反，詐欺被告事件）全文 https://www.courts.go.jp/assets/hanrei/hanrei-pdf-36276.pdf
+  - 農林水産省「「牛ミンチ」事案について（経緯と今後の対応）」（食品の業者間取引の表示のあり方検討会 資料3、2007年7月10日） https://www.maff.go.jp/j/jas/kaigi/pdf/070710_siryou3.pdf
+  - 衆議院 答弁書（内閣衆質166第458号、2007年7月10日） https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b166458.htm
+  - 農林水産省 パンフレット「これまで表示義務がなかった業者間取引にも表示が義務付けられました!!」 https://www.maff.go.jp/j/jas/hyoji/pdf/pamph_k.pdf
+  - 帝国データバンク 倒産速報「ミートホープ株式会社」 https://www.tdb.co.jp/report/bankruptcy/flash/2397/
+  - 中日新聞「ミートホープ事件告発、赤羽喜六さん死去」（2023年4月20日） https://www.chunichi.co.jp/article/675900
+  tags:
+  - ミートホープ
+  - 田中稔
+  - ミートホープ事件
+  - 食品偽装
+  - 牛ミンチ
+  - ひき肉
+  - 苫小牧
+  - 内部告発
+  - 不正競争防止法
+  - 食品表示
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 牛100%のはずが
+    bottom: 豚・鶏・鴨
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: torishimari
+    label: 取締役
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: kojocho
+    label: 工場長
+    voice: 13
+    pitch: -0.06
+    outfit: work
+    color: '#8a9aa8'
+  - id: senpai
+    label: 先輩
+    voice: 100
+    pitch: -0.04
+    outfit: work
+    color: '#e8ebee'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#c9d6de'
+  - id: kensain
+    label: 検査員
+    voice: 8
+    pitch: 0.04
+    outfit: labcoat
+  - id: madoguchi
+    label: 窓口の人
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#3a4f5f'
+  - id: jomu
+    label: 元常務
+    voice: 13
+    pitch: -0.10
+    outfit: suit
+    color: '#4a4038'
+  - id: jugyoin
+    label: 従業員
+    voice: 8
+    pitch: -0.06
+    outfit: work
+    color: '#7a8a96'
+  - id: jugyoin2
+    label: 従業員
+    voice: 21
+    pitch: -0.04
+    outfit: work
+    color: '#5f6e7a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2007年6月21日 夕〜夜・本社2階の広間の会見。記者の問いは原文が無いので趣旨まで。長男は名前・年齢・呼びかけを作らない。会見を嘲らない・SEなし） ----
+- id: co_kaiken
+  title: ''
+  background: mh_hiroma
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 田中社長, emotion: sad}
+  - {who: kisha, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年6月21日、北海道苫小牧。牛ひき肉の偽装を問われたミートホープの社長、田中稔の会見です。
+    reading: にせん ななねん ろくがつ にじゅういちにち、ほっかいどう とまこまい。ぎゅうひきにくの ぎそうお とわれた みーとほーぷの しゃちょう、たなか みのるの かいけんです。
+  - speaker: kisha
+    emotion: normal
+    text: 指示していたという証言がありますが
+    pause_after: 0.5
+- id: co_kaiken2
+  title: ''
+  background: mh_hiroma
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 田中社長, emotion: sad}
+  - {who: torishimari, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: torishimari
+    emotion: sad
+    text: やったなら、やったと認めてください。
+  - speaker: torishimari
+    emotion: sad
+    text: あいまいな表現はやめて、本当のことを言ってください
+  - speaker: zundamon
+    emotion: sad
+    text: ……指示したことがある
+  - speaker: reimu
+    text: 前の日には、やったのは2、3回と言っていました。報道から27日で、会社は自己破産を申請します。
+    reading: まえの ひにわ やったのわ にさんかいと いって いました。ほうどうから にじゅうしちにちで、かいしゃわ じこはさんお しんせい します。
+# ---- 今の部屋（挽いたら分からないハンバーグ。20秒以内） ----
+- id: hook
+  title: ''
+  background: mh_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 今日のハンバーグ、[牛100%|ぎゅうひゃくパーセント]なのだ！
+    se: jaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: ……このひき肉、半分お豆腐じゃない？
+  - speaker: zundamon
+    emotion: normal
+    text: 挽いたら分からないのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを何年も、会社で続けた社長がいたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[牛100%|ぎゅうひゃくパーセント]のはずのひき肉に、なぜ豚や鶏が混ざっていたのか。'
+    telops:
+    - {text: "牛100%のはずが なぜ豚や鶏が？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 牛肉のはずが、豚や鶏！？
+# ---- 1976年・焼肉にならない切れ端（30秒以内。子供時代は描かない。社長は台詞なし・判決の地の文をナレで） ----
+- id: card1976
+  title: ''
+  background: mh_card_1976
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1976年6月、苫小牧。中学を出て食肉の業者で働いた田中稔が、ミートホープを興します。
+    reading: せんきゅうひゃく ななじゅうろくねん ろくがつ、とまこまい。ちゅうがくお でて しょくにくの ぎょうしゃで はたらいた たなか みのるが みーとほーぷお おこします。
+- id: ch1_hazai
+  title: 焼肉にならない切れ端
+  background: mh_kojo
+  stage:
+  - {who: zundamon, x: 0.5, flip: true, tag: 田中社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 最初の得意先は、焼肉店など。焼肉にできない切れ端が、たくさん出ました。
+    reading: さいしょの とくいさきわ やきにくてんなど。やきにくに できない きれはしが たくさん でました。
+  - speaker: reimu
+    text: 判決によれば、彼は見た目だけでは何の挽肉かわからないなどと考えました。
+    reading: はんけつに よれば、かれわ みためだけでわ なんの ひきにくか わからないなどと かんがえました。
+  - speaker: reimu
+    text: 会社を作って数年後には、牛挽肉に豚や羊のくず肉を混ぜ始めます。この考えが30年後、彼を法廷に立たせます。
+    reading: かいしゃお つくって すうねんごにわ ぎゅうひきにくに ぶたや ひつじの くずにくお まぜはじめます。この かんがえが さんじゅうねんご、かれお ほうていに たたせます。
+# ---- 2006年ごろ・工場（先輩と新人は名前の無いモブ。手口は判決と農水省の範囲。社長は台詞なし） ----
+- id: ch3_kojo
+  title: 二度挽き
+  background: mh_kojo
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.36, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.52, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2006年ごろ。苫小牧の工場です。
+    reading: にせん ろくねん ごろ。とまこまいの こうじょうです。
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、この切れ端の山はどうするんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 焼肉にならない切れ端は、どこへ行くと思う？
+  - speaker: shinjin
+    emotion: thinking
+    text: ……ゴミ箱？
+  - speaker: senpai
+    emotion: happy
+    text: 挽肉機さ。
+    background: mh_hikiniku
+  - speaker: shinjin
+    emotion: surprised
+    text: 牛肉の箱に、豚の切れ端も入ってますけど！？
+  - speaker: senpai
+    emotion: normal
+    text: 挽いてしまえば、見た目じゃ分からない。
+  - speaker: shinjin
+    emotion: thinking
+    text: 箱のシールは、[十勝|トカチ]産[牛|ギュウ]バラ挽肉……。
+  - speaker: senpai
+    emotion: normal
+    text: 会社どうしの取引に、表示の決まりは無いからな。
+  - speaker: senpai
+    emotion: normal
+    text: 取引先は大きくなる一方だ。量も増える。
+  - speaker: reimu
+    text: 社長はのちの会見で、混ぜると1、2割安くなったと話します。1000円の牛ひき肉なら800円か900円。
+    reading: しゃちょうわ のちの かいけんで まぜると いちにわり やすく なったと はなします。せんえんの ぎゅうひきにくなら はっぴゃくえんか きゅうひゃくえん。
+  - speaker: shinjin
+    emotion: thinking
+    text: でも、色が白っぽいです。
+  - speaker: senpai
+    emotion: normal
+    text: 豚の血液製剤で、赤みを付ける。
+  - speaker: shinjin
+    emotion: surprised
+    text: 血で！？ でもよく見ると、粒が違いますよ。
+  - speaker: senpai
+    emotion: normal
+    text: もう1回、機械に通す。二度[挽き|ビキ]だ。
+  - speaker: shinjin
+    emotion: thinking
+    text: ……もう、[何|なん]の肉か分からないです。
+  - speaker: senpai
+    emotion: happy
+    text: それでいいんだ。
+    beat: true
+  - speaker: shinjin
+    emotion: thinking
+    text: じゃあ、豚挽肉の色が悪いときは？
+  - speaker: senpai
+    emotion: normal
+    text: 牛の心臓を入れる。
+  - speaker: shinjin
+    emotion: surprised
+    text: 今度は逆！？
+    se: zukko
+- id: ch3_shacho
+  title: ''
+  background: mh_hikiniku
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 田中社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 判決によれば、手口を考えて従業員に指示したのは社長でした。
+    reading: はんけつに よれば、てぐちお かんがえて じゅうぎょういんに しじ したのわ しゃちょうでした。
+# ---- 今の部屋（表示の義務の穴と、問いの言い換え2つ） ----
+- id: heya1
+  title: ''
+  background: mh_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: シールは牛肉なのに、表示の決まりが無いの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時は、消費者向けの品を作る会社にだけ表示の義務があったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社どうしは、規格書のやりとりで正しく伝わっている。そういう前提だったのよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 規格書って？
+  - speaker: tsumugi
+    emotion: normal
+    text: 中身はこうです、と書いた紙。買う会社は、その紙を信じるの。
+  - speaker: zundamon
+    emotion: happy
+    text: 紙を信じるだけ！？ じゃあ、罪にもならないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: それが、罪になるの。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: 表示の義務が無いのに、なぜ罪になったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかもこの社長は2、3回と言った次の日に7、8年前からと言い直すの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1日で、何があったの！？
+# ---- 2006年4月・国の表彰（業績と判決の言葉を並べるだけ。地の文で茶化さない） ----
+- id: card2006
+  title: ''
+  background: mh_card_2006
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2006年4月。苫小牧の社長が、国の表彰を受けます。
+    reading: にせん ろくねん しがつ。とまこまいの しゃちょうが、くにの ひょうしょうお うけます。
+- id: ch2_hyosho
+  title: 国の表彰
+  background: mh_hyosho
+  stage:
+  - {who: zundamon, x: 0.18, flip: true, tag: 田中社長, emotion: happy}
+  - {who: jugyoin, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: jugyoin
+    emotion: happy
+    text: 社長、文部科学大臣の表彰ですよ！
+    se: levelup
+  - speaker: jugyoin
+    emotion: normal
+    text: 攪拌機付きひき肉製造器の考案、だそうです。
+  - speaker: jugyoin
+    emotion: happy
+    text: これで、うちの機械も有名ですね！
+  - speaker: reimu
+    text: 推薦したのは北海道庁。のちの判決は、長年の経験で培った専門的知識を彼が悪用したと書きます。
+    reading: すいせん したのわ ほっかいどうちょう。のちの はんけつわ、ながねんの けいけんで つちかった せんもんてき ちしきお かれが あくよう したと かきます。
+  - speaker: reimu
+    text: 国にたたえられたひき肉の機械。その工場で何が挽かれていたかは、まだ表に出ていません。
+    reading: くにに たたえられた ひきにくの きかい。その こうじょうで なにが ひかれて いたかわ、まだ おもてに でて いません。
+# ---- 2006〜2007年・抜き打ち検査（「片づけろ」は先輩のモブ。社長の台詞にしない。判決は「従業員に隠蔽を指示」まで） ----
+- id: ch4_kensa
+  title: 抜き打ち検査
+  background: mh_kojo
+  bgm: curious
+  stage:
+  - {who: senpai, x: 0.41, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.59, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩！ 取引先の検査の人が、いきなり来ました！
+  - speaker: senpai
+    emotion: normal
+    text: 片づけろ。豚の箱は奥だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: ……作業台の上、見たことないくらいきれいです。
+    background: mh_kojo_katazuke
+  - speaker: reimu
+    text: 判決によれば抜き打ち検査のときは、社長が従業員に隠すよう指示していました。
+    reading: はんけつに よれば ぬきうち けんさの ときわ、しゃちょうが じゅうぎょういんに かくすよう しじ して いました。
+- id: ch4_kensa2
+  title: ''
+  background: mh_kojo_katazuke
+  stage:
+  - {who: kensain, x: 0.41, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.59, emotion: thinking}
+  cuts:
+  - speaker: kensain
+    emotion: normal
+    text: '[牛挽肉|ギュウヒキニク]の工程を、見せてもらいます。'
+  - speaker: shinjin
+    emotion: thinking
+    text: ど、どうぞ……。
+  - speaker: kensain
+    emotion: normal
+    text: 冷凍庫も、見せてください。
+  - speaker: shinjin
+    emotion: surprised
+    text: れ、冷凍庫は……。
+  - speaker: kensain
+    emotion: normal
+    text: 肉の色も、きれいですね。
+  - speaker: kensain
+    emotion: normal
+    text: ……問題ありませんね。
+    beat: true
+- id: ch4_kensa3
+  title: ''
+  background: mh_kojo
+  stage:
+  - {who: senpai, x: 0.41, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.59, emotion: thinking}
+  cuts:
+  - speaker: shinjin
+    emotion: thinking
+    text: 先輩、昨日あれだけ片づけたのに……。
+  - speaker: senpai
+    emotion: normal
+    text: 検査は、昨日で終わりだ。
+  - speaker: shinjin
+    emotion: normal
+    text: ……もう、元どおり。
+    se: tenten
+  - speaker: reimu
+    text: 生協のコロッケも発覚までに10回の品質検査を受けていましたが、見抜けませんでした。
+    reading: せいきょうの ころっけも はっかくまでに じゅっかいの ひんしつ けんさお うけて いましたが、みぬけませんでした。
+# ---- 最後のごみ箱（13項目は画面の一覧で1回、読むのは2つまで。取引先の工場長は名前を出さない・取引先ぐるみと言わない） ----
+- id: ch5_gomi
+  title: 何でも引き取る
+  background: mh_reito
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.18, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 冷凍庫の奥の箱、よその会社の処分品ですか！？
+  - speaker: senpai
+    emotion: normal
+    text: うちは、[何|なん]でも引き取る。
+  - speaker: reimu
+    text: 十勝の業者は新聞に、全部引き取るので最後のごみ箱と言われていたと話しています。
+    reading: とかちの ぎょうしゃわ しんぶんに、ぜんぶ ひきとるので さいごの ごみばこと いわれて いたと はなして います。
+  - speaker: reimu
+    text: 農水省によれば2002年ごろ、取引先の工場長から捨てるはずのコロッケを1個5〜10円で買っていました。
+    reading: のうすいしょうに よれば にせん にねん ごろ、とりひきさきの こうじょうちょうから すてる はずの ころっけお いっこ ごえんから じゅうえんで かって いました。
+  - speaker: shinjin
+    emotion: surprised
+    text: 1個5円！？
+  - speaker: reimu
+    text: 農水省の調べで分かった不正は、牛挽肉のほかにもあって全部で13項目にのぼります。
+    reading: のうすいしょうの しらべで わかった ふせいわ、ぎゅうひきにくの ほかにも あって ぜんぶで じゅうさん こうもくに のぼります。
+    slide:
+      title: 農水省の調べ　不正は13項目
+      bullets:
+      - 牛挽肉に豚・鶏・鴨など
+      - 牛脂に豚脂
+      - 冷凍食品の賞味期限の改ざん
+# ---- 2006年4月・名刺とひき肉（元常務は故人。台詞は本人の公の言葉だけ。2月の情報と同じ人の話にしない） ----
+- id: ch6_madoguchi
+  title: 名刺とひき肉
+  background: mh_madoguchi
+  bgm: kinakusai
+  stage:
+  - {who: jomu, x: 0.18, flip: true, emotion: normal}
+  - {who: madoguchi, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 表彰と同じ月。1995年から常務を務めた赤羽喜六が辞職願を出し、農林水産省の農政事務所へ向かいます。
+    reading: ひょうしょうと おなじ つき。せんきゅうひゃく きゅうじゅうごねんから じょうむお つとめた あかはね きろくが じしょくねがいお だし、のうりん すいさんしょうの のうせい じむしょえ むかいます。
+  - speaker: madoguchi
+    emotion: normal
+    text: ご用件は。
+  - speaker: reimu
+    text: 差し出したのは常務取締役の名刺と、偽装された牛ひき肉。本人の話では、無視されました。
+    reading: さしだしたのわ じょうむ とりしまりやくの めいしと、ぎそう された ぎゅうひきにく。ほんにんの はなしでわ、むし されました。
+  - speaker: reimu
+    text: 2017年、本人はこう振り返ります。
+    reading: にせん じゅうななねん、ほんにんわ こう ふりかえります。
+  - speaker: jomu
+    emotion: angry
+    text: 告発しても動かない行政には、こんちくしょう、と思いましたね。
+# ---- 今の部屋（農水省と道の言い分を主語で分ける。「握りつぶした」と言わない） ----
+- id: heya2
+  title: ''
+  background: mh_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 名刺とひき肉まで持っていったのに！？
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: 農水省の説明では、その2か月前にも[苫小牧|トマコマイ]の出先に情報が入っていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 挽肉に牛の血小板やとり皮、豚の内臓などを混ぜている。
+  - speaker: tsumugi
+    emotion: normal
+    text: そういう、表示110番の情報よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 情報をくれたのが社内の人かどうかは、確認されていないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 担当者は3月24日に、受付のカードを道庁へ持っていったと述べているの。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、[道|どう]が調べたのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[道|どう]は、受け取った記録は無いと反論したわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 言ってることが、食い違ってる……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 8月から12月には、[道|どう]への通報が9回あったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 9回も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 保健所は12月に2回、予告なしで立ち入ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 警察から照会があったので、調べに支障が出ないよう立入検査をしなかった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 農水省は、そう説明しているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1年前に届いてた本当のことは、どこへ行ったの……？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1年余り、調べは進まなかったの。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 2007年8月、農水省は当時の担当者を処分しているわ。
+# ---- 2007年春・新聞へ（記者の取材の場面は作らない。画は輪転機） ----
+- id: ch8_shinbun
+  title: 新聞へ
+  background: mh_insatsu
+  bgm: curious
+  stage:
+  - {who: jomu, x: 0.16, flip: true, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌2007年の春。元幹部たちは名前を明かして新聞社へ。朝日新聞が、牛肉コロッケを研究機関で鑑定します。
+    reading: よく にせん ななねんの はる。もと かんぶたちわ なまえお あかして しんぶんしゃえ。あさひ しんぶんが、ぎゅうにく ころっけお けんきゅう きかんで かんてい します。
+# ---- 2007年6月19日〜20日・「間違った製品」から「2、3回」へ（社長の台詞はこの2つだけ。言った場所は作らない） ----
+- id: card2007
+  title: ''
+  background: mh_card_2007
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2007年6月19日。新聞に載る前の日、社長は取材にこう答えます。
+    reading: にせん ななねん ろくがつ じゅうくにち。しんぶんに のる まえの ひ、しゃちょうわ しゅざいに こう こたえます。
+- id: ch9_seihin
+  title: 間違った製品
+  background: mh_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田中社長, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 結果的に間違った製品を入れてしまい、申し訳ない。
+    telops:
+    - {text: "6月19日 社長「間違った製品」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch9_choukan
+  title: ''
+  background: mh_honsha
+  stage:
+  - {who: kisha, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 6月20日の朝刊1面です！ 生協の牛肉コロッケから、豚肉！
+    background: mh_honsha_press
+    se: don
+  - speaker: kisha
+    emotion: normal
+    text: 取引先は、問題の商品の出荷を全部止めました！
+  - speaker: kisha
+    emotion: normal
+    text: 農水省も、コロッケを売っていた2社を呼んで事情を聞くそうです。
+- id: ch9_yoru
+  title: ''
+  background: mh_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田中社長, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: この日の社長の説明は、指示はしていないが容認してしまったという趣旨でした。
+    reading: この ひの しゃちょうの せつめいわ、しじわ して いないが ようにん して しまったと いう しゅしでした。
+  - speaker: zundamon
+    emotion: sad
+    text: やったのは05年11月[〜|から]06年7月で、2、3回
+    telops:
+    - {text: "6月20日 社長「2、3回」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 今の部屋（6月19日〜20日の説明を並べ、問いに戻る） ----
+- id: heya_mae
+  title: ''
+  background: mh_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 間違いから2、3回に変わったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 19日は、間違った製品。
+  - speaker: tsumugi
+    emotion: normal
+    text: 20日は、指示はしていないが容認した。そして2、3回。
+  - speaker: tsumugi
+    emotion: normal
+    text: 19日には会社の責任者も、取引先に豚肉が混ざった可能性があると報告していたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも同じ20日の朝日新聞には、元幹部たちのこんな話も載ったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: つぶしてしまえば肉の味などわからない。どうせ、ばれない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2、3回の工場の話には聞こえない……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2、3回と言った社長は次の日に何と言うのか。
+# ---- 2007年6月21日 夕〜夜・本社2階の広間（一問一答は台帳6章の順。問いは趣旨で短く。長男はこの1言だけ。笑いのSEは入れない） ----
+- id: ch10_hiroma
+  title: 本社2階の広間
+  background: mh_hiroma
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 田中社長, emotion: sad}
+  - {who: kisha, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月21日の夕方。本社2階の広間で、もう一度会見が開かれます。同席した取締役は、彼の長男です。
+    reading: ろくがつ にじゅういちにちの ゆうがた。ほんしゃ にかいの ひろまで もう いちど かいけんが ひらかれます。どうせき した とりしまりやくわ、かれの ちょうなんです。
+  - speaker: kisha
+    emotion: normal
+    text: いつから偽装していたのか。
+  - speaker: zundamon
+    emotion: sad
+    text: '[牛ミンチ|ギュウミンチ]の注文が増えた7、8年前から始めた'
+    telops:
+    - {text: "6月21日 社長「7、8年前から」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kisha
+    emotion: normal
+    text: 違法行為とは考えなかったか。
+  - speaker: zundamon
+    emotion: sad
+    text: BSEが問題になって以降、食の安全が厳しくなったが、
+  - speaker: zundamon
+    emotion: sad
+    text: 甘い認識のままだった。私だけではなかったはず
+  - speaker: kisha
+    emotion: normal
+    text: 理由は。
+  - speaker: zundamon
+    emotion: normal
+    text: 商売をやっている人間なら誰でもコストを下げたい
+  - speaker: kisha
+    emotion: normal
+    text: どれくらい安くなるのか。
+  - speaker: zundamon
+    emotion: normal
+    text: 豚のくず肉を[10－20％|ジッカラニジッパーセント]混ぜることで、通常より1、2割は安くなった
+  - speaker: kisha
+    emotion: normal
+    text: 指示していたという証言がありますが
+    pause_after: 0.5
+- id: ch10_chonan
+  title: ''
+  background: mh_hiroma
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 田中社長, emotion: sad}
+  - {who: torishimari, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: torishimari
+    emotion: sad
+    text: やったなら、やったと認めてください。
+  - speaker: torishimari
+    emotion: sad
+    text: あいまいな表現はやめて、本当のことを言ってください
+    pause_after: 0.6
+  - speaker: zundamon
+    emotion: sad
+    text: 指示したことがある
+- id: ch10_kaiken
+  title: ''
+  background: mh_hiroma
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 田中社長, emotion: sad}
+  - {who: kisha, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 自らの主導だったんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: そう言われたらそうだ
+- id: ch10_kojocho
+  title: ''
+  background: mh_hiroma
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 田中社長, emotion: sad}
+  - {who: kojocho, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同じ会見で、工場長は社長の指示を命令と受け取ったと説明しました。
+    reading: おなじ かいけんで、こうじょうちょうわ しゃちょうの しじお めいれいと うけとったと せつめい しました。
+  - speaker: kojocho
+    emotion: sad
+    text: 社長は雲の上の人ですから
+# ---- 今の部屋（説明が日を追うごとに古くなった。地の文の答えは判決の「設立の数年後」） ----
+- id: heya_ato
+  title: ''
+  background: mh_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 長男に促されて、やっと認めた……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前の日の2、3回は1日で7、8年前からになったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 6月25日の農水省の発表では、[牛挽肉|ギュウヒキニク]は1998年ごろから。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、のちの判決はもっと前からだと認めているの。会社を作って数年後には、と。
+  - speaker: zundamon
+    emotion: surprised
+    text: 7、8年じゃなかったのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: thinking
+    text: 社長の説明は、日を追うごとに古くなっていったの。
+# ---- 2007年6月24日〜25日・半額セールと捜索（「半額セール」はここでは言わせっぱなし。論争の章で受ける。言った場所は作らない） ----
+- id: ch11_hangaku
+  title: 半額セール
+  background: mh_honsha_press
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田中社長, emotion: normal}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月24日の朝。警察の捜索を前に、彼はこう話しました。
+    reading: ろくがつ にじゅうよっかの あさ。けいさつの そうさくお まえに、かれわ こう はなしました。
+  - speaker: zundamon
+    emotion: normal
+    text: 販売店も悪いし、半額セールで喜んで買う消費者にも問題がある
+  - speaker: kisha
+    emotion: surprised
+    text: 道警の捜索です。不正競争防止法違反の疑いで、本社などに入りました。
+- id: ch11_nosui
+  title: ''
+  background: mh_shinbun
+  stage:
+  - {who: kisha, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 6月25日、農水省の発表です。
+  - speaker: kisha
+    emotion: normal
+    text: 田中社長は、不正と認識していた。
+  - speaker: kisha
+    emotion: normal
+    text: 社長自らか社長の意向を受けた幹部社員の指示で常態的に行われていた、と。
+    telops:
+    - {text: "農水省「常態的に行われていた」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kisha
+    emotion: surprised
+    text: 2006年7月から約1年で、18社に368トンです。
+  - speaker: kisha
+    emotion: normal
+    text: 26日、農水大臣は会社どうしの取引の表示も検討するよう指示しました。
+  - speaker: kisha
+    emotion: normal
+    text: 文部科学省も、表彰の取り消しの検討に入りました。
+# ---- 2007年6月26日〜7月17日・全員解雇と自己破産（従業員の数は割れるので「全員」。従業員の言葉は台帳に無いのでモブの小さな芝居） ----
+- id: ch12_hasan
+  title: 報道から27日
+  background: mh_kojo
+  bgm: 223am
+  stage:
+  - {who: jugyoin, x: 0.41, flip: true, emotion: sad}
+  - {who: jugyoin2, x: 0.59, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 6月26日、会社は従業員全員に解雇を伝えました。
+    reading: ろくがつ にじゅうろくにち、かいしゃわ じゅうぎょういん ぜんいんに かいこお つたえました。
+  - speaker: jugyoin
+    emotion: sad
+    text: ……荷物、これだけか。
+  - speaker: jugyoin2
+    emotion: sad
+    text: 機械の音が、しないな。
+    background: mh_kojo_nuno
+    se: namida
+  - speaker: reimu
+    text: 判決によれば発覚のあと、偽装に使った豚の心臓などを工場の外へ運び出して処分していました。
+    reading: はんけつに よれば はっかくの あと、ぎそうに つかった ぶたの しんぞうなどお こうじょうの そとえ はこびだして しょぶん して いました。
+  - speaker: jugyoin
+    emotion: sad
+    text: 社長は記者に、債務超過だと話したそうだ。
+  - speaker: jugyoin2
+    emotion: sad
+    text: 取引先も、次々と手を引いてる。
+  - speaker: jugyoin
+    emotion: normal
+    text: せめて組合を作って、話し合おう。
+  - speaker: reimu
+    text: 7月17日、会社は自己破産を申請。負債は約6億7000万円。報道から27日でした。
+    reading: しちがつ じゅうななにち、かいしゃわ じこはさんお しんせい。ふさいわ やく ろくおく ななせんまんえん。ほうどうから にじゅうしちにちでした。
+    telops:
+    - {text: "報道から27日で 自己破産を申請", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 2007年10月〜11月・逮捕と起訴（逮捕の瞬間・取調べは作らない。逮捕4人・起訴は社長だけ） ----
+- id: ch13_taiho
+  title: ''
+  background: mh_shinbun
+  bgm: serious
+  stage:
+  - {who: kisha, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 10月24日、社長ら元幹部4人が逮捕されました。不正競争防止法違反の疑いです。
+  - speaker: kisha
+    emotion: normal
+    text: 11月、起訴されたのは社長だけ。不正競争防止法違反と詐欺の罪です。
+# ---- 2008年・法廷（公判の言葉は報道どおり） ----
+- id: card2008
+  title: ''
+  background: mh_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年1月、札幌地方裁判所。初公判で、彼は起訴された事実を全て認めます。
+    reading: にせん はちねん いちがつ、さっぽろ ちほう さいばんしょ。しょこうはんで、かれわ きそ された じじつお すべて みとめます。
+- id: ch13_houtei
+  title: 食品Gメン
+  background: mh_houtei
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 田中, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 公判で、彼はこうも述べています。
+    reading: こうはんで、かれわ こうも のべて います。
+  - speaker: zundamon
+    emotion: normal
+    text: 安い肉を求める取引先業者にも原因があった
+  - speaker: zundamon
+    emotion: normal
+    text: 経験を生かし、将来は食の不正を摘発する食品[Gメン|ジーメン]になりたい
+# ---- 2008年3月19日・判決（主文と判決の帯3つ。裁判長は名前を出さない。軽くする事情も1行） ----
+- id: ch14_hanketsu
+  title: 罪障感に乏しい
+  background: mh_houtei
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 田中, emotion: sad}
+  - {who: saibancho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3月19日、判決の日です。
+    reading: さんがつ じゅうくにち、はんけつの ひです。
+  - speaker: saibancho
+    emotion: normal
+    text: 被告人を[懲役4年|ちょうえきよねん]に処する。
+    se: don
+  - speaker: saibancho
+    emotion: normal
+    text: その動機は極めて利欲的かつ自己中心的というほかなく、厳しい非難を免れない。
+  - speaker: reimu
+    text: 判決は牛肉にほかの畜肉を加えたこと自体の悪質さを、こう書きます。
+    reading: はんけつわ ぎゅうにくに ほかの ちくにくお くわえた こと じたいの あくしつさお、こう かきます。
+  - speaker: saibancho
+    emotion: normal
+    text: 昨今みられる食品偽装の中でも、原産地偽装等の事案とは一線を画すものというべきである。
+  - speaker: saibancho
+    emotion: normal
+    text: 悔悟する姿勢はあまりみられず、罪障感に乏しいと指摘されてもやむを得ない。
+    telops:
+    - {text: "判決「罪障感に乏しいと指摘されてもやむを得ない」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 事実を全て認めたことや会社も本人も破産したことは、刑を軽くする事情とされました。
+    reading: じじつお すべて みとめた ことや かいしゃも ほんにんも はさん した ことわ、けいお かるく する じじょうと されました。
+  - speaker: reimu
+    text: 求刑の懲役6年に対し、懲役4年の実刑。彼は控訴せず、4月3日に確定しました。
+    reading: きゅうけいの ちょうえき ろくねんに たいし ちょうえき よねんの じっけい。かれわ こうそ せず、しがつ みっかに かくてい しました。
+- id: ch14_soto
+  title: ''
+  background: mh_saibansho_mae
+  stage:
+  - {who: jomu, x: 0.84, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 判決の日、傍聴した元常務はこう話しています。
+    reading: はんけつの ひ、ぼうちょう した もと じょうむわ こう はなして います。
+  - speaker: jomu
+    emotion: sad
+    text: 程度の差こそあれ、私も不正に加担したと言える。
+  - speaker: jomu
+    emotion: sad
+    text: 正しいことをしたという思いが半分、そして後悔が半分。
+# ---- 2008年5月〜8月・牛の像が降りた日（背景の差し替え） ----
+- id: ch15_zou
+  title: 牛の像が降りた日
+  background: mh_honsha
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2008年5月。苫小牧の本社の屋上には、まだ牛の像が立っていました。
+    reading: にせん はちねん ごがつ。とまこまいの ほんしゃの おくじょうにわ、まだ うしの ぞうが たって いました。
+  - speaker: reimu
+    text: その像が下ろされます。8月、会社は法人としても消えました。
+    reading: その ぞうが おろされます。はちがつ、かいしゃわ ほうじんと しても きえました。
+    background: mh_honsha_nashi
+  - speaker: reimu
+    text: 秋には、本社の建物も取り壊されました。
+    reading: あきにわ、ほんしゃの たてものも とりこわされました。
+# ---- 論争1：安く求めた側も悪い？（社長の言い分 → 判決の答え。消費者を地の文で責めない） ----
+- id: ronso1
+  title: 安く求めた側も悪い？
+  background: mh_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 安い肉を求めた取引先も、半額で喜ぶ客も悪いって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 社長も法廷で、取引先業者にも原因があったと言っていたわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取引先が求める安い単価に応えるには混ぜるほかなかった、とも述べたの。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも判決は、こう答えているの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 価格交渉を尽くすなど他の適法な手段を採り得たのはいうまでもなく、
+  - speaker: tsumugi
+    emotion: normal
+    text: この点は特に酌量すべき事情とはいえない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 値段の交渉を、すればよかったのか……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 安さを求めることと、だますことは別なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、半額で買ったボクも悪いの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 買う人は、表示を信じて買っただけよ。判決は、こう書いているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 表示を信頼した多数の関係者や一般消費者を裏切る著しく背信的な犯罪
+  - speaker: tsumugi
+    emotion: normal
+    text: 取引先も被害者として、ブランドへの信頼が一瞬で崩れたと訴えていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決の日の新聞によれば、検察は全国の消費者を真の被害者と考えていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 検察幹部の1人は、こう話しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 司直の判断は時代に応じて変化する。今の社会では、絶対に許されない犯罪だった。
+# ---- 論争2：法律の穴だった？（穴は JAS 法。罪は不正競争防止法と詐欺。368トンと約138トンを混ぜない） ----
+- id: ronso2
+  title: 法律の穴だった？
+  background: mh_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも会社どうしなら、表示しなくてよかったのだ！ 法律の穴なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 穴があったのは、JAS法。会社どうしの取引に、表示の義務が無かったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも罪になったのは、別の2つの法律よ。
+    telops:
+    - {text: "罪は 不正競争防止法違反と詐欺", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 牛肉だけのように見せるシールを貼って送った。これが、不正競争防止法違反。
+  - speaker: tsumugi
+    emotion: normal
+    text: その中身で、代金をだまし取った。これが、詐欺。
+  - speaker: zundamon
+    emotion: surprised
+    text: 表示の義務が無くても、うそのシールはだめなんだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。罪と認められたのは、約138トンを送ったこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、3社から3926万円あまりをだまし取ったことよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 農水省の調べの368トンとは、数え方が違うの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 穴をくぐったつもりで、別の法律に引っかかったのだ……。
+    beat: true
+# ---- 本当の注意点（原材料名は重い順／食品表示110番／生協の10回の検査は1行。92本目の「記録を残す」にしない） ----
+- id: chui
+  title: 原材料名は重い順
+  background: mh_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。加工食品の原材料名は、重い順に書いてあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 牛肉・豚肉・玉ねぎと並んでいたら、いちばん多いのは牛肉。
+  - speaker: tsumugi
+    emotion: normal
+    text: ハンバーグなら、最初に[何|なん]の肉が書いてあるかを見るの。
+  - speaker: zundamon
+    emotion: happy
+    text: 牛肉って最初に書いてあれば、安心なのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただこの事件は、お店の表示を見ても見抜けなかったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ、なんで！？
+  - speaker: tsumugi
+    emotion: normal
+    text: うそは、会社どうしの取引の中にあったから。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから2008年4月から、会社どうしの取引にも表示の義務ができたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。おかしいと思った表示は、食品表示110番へ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 農林水産省が、電話とメールで受け付けているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2006年の2月に[苫小牧|トマコマイ]へ届いた情報も、この110番だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 届いては、いたんだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。安すぎる理由は、お店にもお客にも分からないことがある。
+  - speaker: tsumugi
+    emotion: thinking
+    text: コロッケが受けていた10回の品質検査でも、見つからなかったのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: 10回でも……。
+    se: shobon
+# ---- 現代（2026年11月時点。改正公益通報者保護法は1行。社長のその後は言わない） ----
+- id: card2026
+  title: ''
+  background: mh_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。本当のことを、と言われた会見から19年。
+    reading: にせん にじゅうろくねん。ほんとうの ことおと いわれた かいけんから じゅうきゅうねん。
+- id: gendai
+  title: それからの表示
+  background: mh_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ミートホープのあと、表示の決まりは変わったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2009年に消費者庁ができて、2015年には食品表示法が始まったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: バラバラだった表示の決まりを、1つの法律にまとめたのよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 1つにまとまったんだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 中日新聞は、元常務の告発が消費者庁の発足にもつながったと書いているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2026年12月1日、通報した人を守る法律の改正が施行されたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長は、いまどうしてるの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[懲役4年|ちょうえきよねん]が確定したあとの彼の言葉は、公の記録に残っていないの。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 告発した元常務は、そのあとどうなったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2017年の取材では、長野の生家で1人で暮らしていたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本人の言葉よ。やっぱり、内部告発は告発した本人の身を滅ぼすと思う。
+  - speaker: tsumugi
+    emotion: thinking
+    text: あの時[はね|ワね]、やはり勇気があったと思う。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、今になってみればね、バカなことをしたなという気持ちが強いね。
+  - speaker: zundamon
+    emotion: sad
+    text: バカなことって……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2023年4月、87歳で亡くなったわ。町議選に、立候補を表明していたの。
+# ---- 締め（茶番のハンバーグと「本当のことを」の回収） ----
+- id: shime
+  title: ''
+  background: mh_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ハンバーグは、原材料名の最初を見てから買うのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: さっきのハンバーグは？
+  - speaker: zundamon
+    emotion: normal
+    text: ……最初に書いてあるの、豆腐だった。
+  - speaker: tsumugi
+    emotion: happy
+    text: '[牛100%|ぎゅうひゃくパーセント]じゃ、なかったわね。'
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当のことを言ってください。あの会見で、社長はそう言われたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも本当のことは、その1年以上前に窓口へ届いていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: おかしいと思ったら、食品表示110番。それだけは覚えておいてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
