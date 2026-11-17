@@ -1,0 +1,1162 @@
+meta:
+  title: 安愚楽牧場の社長「だますつもりはまったくございません」、繁殖牛は契約の6割前後だった【ずんだもん解説】
+  slug: agura-farm
+  hook_line: 牛がいないのに、なぜ会社は「います」と言い続けたのか。
+  summary: 2011年8月19日、雨の両国国技館。安愚楽牧場の社長・三ケ尻久美子は、出資した人たちの前で「いいえ、だますつもりはまったくございません」と答えました。牛を売って預かり、毎年子牛の分を払い、満期に同じ値段で買い戻す「和牛オーナー制度」。パンフレットには「『私の牛』は本当にいるのですか？」「います」。なぜ会社は「います」と言い続けたのか。判決と報道を主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 東京高等裁判所第12刑事部 判決（2014年10月16日、平成26年(う)第223号） https://agurahigai.a.la9.jp/aguracriminaljudege20141016.pdf
+  - 帝国データバンク 倒産速報「株式会社安愚楽牧場」（2011年8月9日） https://www.tdb.co.jp/report/bankruptcy/flash/3497/
+  - 帝国データバンク 倒産速報「株式会社安愚楽牧場」続報（2011年8月15日） https://www.tdb.co.jp/report/bankruptcy/flash/3499/
+  - 日本経済新聞「『口蹄疫や原発事故が原因』安愚楽牧場社長が債権者に謝罪」（2011年8月19日） https://www.nikkei.com/article/DGXNASDG1903V_Z10C11A8000000/
+  - 時事通信「『安愚楽』破綻、国の賠償認めず」（2026年5月26日） https://www.jiji.com/jc/article?k=2026052600077&g=soc
+  - 日本経済新聞「安愚楽牧場の出資被害巡り国に賠償命令 大阪地裁」（2026年7月30日） https://www.nikkei.com/article/DGXZQOUF3071X0Q6A730C2000000/
+  tags:
+  - 安愚楽牧場
+  - 三ケ尻久美子
+  - 和牛オーナー制度
+  - 預託法
+  - 不実の告知
+  - 口蹄疫
+  - 民事再生
+  - 破産
+  - 両国国技館
+  - 債権者説明会
+  - 農林水産省
+  - 消費者庁
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 帳簿の借金620億
+    bottom: 本当は4330億
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: senmu
+    label: 専務
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: keiri
+    label: 経理の幹部
+    voice: 21
+    pitch: -0.02
+    outfit: suit
+    color: '#4a4f5a'
+  - id: torishimari
+    label: 取締役
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: kensakan
+    label: 検査官
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#454a55'
+  - id: kensakan2
+    label: 検査官
+    voice: 67
+    pitch: 0.04
+    outfit: suit
+    color: '#5a6a5a'
+  - id: bokujo
+    label: 牧場の人
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#7a6a4a'
+  - id: kenshoku
+    label: 県の職員
+    voice: 8
+    pitch: -0.04
+    outfit: work
+    color: '#e8ebee'
+  - id: kisha
+    label: 記者
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: saikensha
+    label: 債権者
+    voice: 13
+    pitch: 0.1
+    outfit: none
+    color: '#7a6a5a'
+  - id: bengoshi
+    label: 弁護士
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kanzai
+    label: 管財人
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2011年8月19日・両国国技館の債権者説明会。非公開。社長の言葉は日経1つ・経済サイト1つ。笑いのSEなし。債権者は趣旨の脚色） ----
+- id: co_kokugikan
+  title: ''
+  background: ag_kokugikan
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 三ケ尻社長, emotion: sad}
+  - {who: saikensha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年8月19日、両国国技館。破綻した安愚楽牧場の社長、三ケ尻久美子が、出資者の前に座っています。
+    reading: にせん じゅういちねん はちがつ じゅうくにち、りょうごく こくぎかん。はたん した あぐら ぼくじょうの しゃちょう みかじり くみこが しゅっししゃの まえに すわって います。
+  - speaker: reimu
+    text: 民事再生の申し立てから10日後の、債権者説明会です。
+    reading: みんじ さいせいの もうしたてから とおかごの、さいけんしゃ せつめいかいです。
+  - speaker: zundamon
+    emotion: sad
+    text: 口蹄疫の発生や福島第1原発の事故でオーナーの解約が相次ぎ、
+  - speaker: zundamon
+    emotion: sad
+    text: 資金繰りが急激に悪化した。おわびする
+  - speaker: saikensha
+    emotion: angry
+    text: 経営に問題はないって、言ってたじゃないか！
+  - speaker: zundamon
+    emotion: sad
+    text: ……えー……
+  - speaker: saikensha
+    emotion: angry
+    text: だますつもりだったのか！
+  - speaker: zundamon
+    emotion: sad
+    text: いいえ、だますつもりはまったくございません。
+  - speaker: reimu
+    text: その4年前から、パンフレットには問いと答えがありました。『私の牛』は本当にいるのですか？　います。
+    reading: その よねんまえから ぱんふれっとにわ といと こたえが ありました。わたしの うしわ ほんとうに いるのですか。います。
+  - speaker: reimu
+    text: 実際にいた繁殖牛は、契約の6割前後でした。
+    reading: じっさいに いた はんしょくぎゅうわ、けいやくの ろくわり ぜんごでした。
+# ---- 今の部屋（見たことのない物を「ある」と言われて預ける。20秒以内） ----
+- id: hook
+  title: ''
+  background: ag_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 友だちのレアカードを買って、そのまま預けたのだ！ 毎月おまけ付き！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そのカード、見た？
+    se: hammer
+  - speaker: zundamon
+    emotion: normal
+    text: ……あるって、言ってた。
+  - speaker: tsumugi
+    emotion: normal
+    text: あると言われて、信じて預ける。2011年、7万あまりの契約がそうだったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 牛がいないのに、なぜ「います」と言い続けたのか。
+    telops:
+    - {text: "牛がいないのに なぜ「います」と言い続けた？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 牛が、いなかったのだ！？
+# ---- 1981〜1990年・那須の共済牧場（30秒以内。社長の経歴は言わない。実弟は出さない） ----
+- id: card1981
+  title: ''
+  background: ag_card_1981
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1981年12月、栃木県の那須町。安愚楽共済牧場ができます。
+    reading: せんきゅうひゃく はちじゅういちねん じゅうにがつ、とちぎけんの なすまち。あぐら きょうさい ぼくじょうが できます。
+- id: ch1_nasu
+  title: 牛を預かる牧場
+  background: ag_bokujo
+  stage:
+  - {who: bokujo, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: bokujo
+    emotion: normal
+    text: 銀行は、牛や牧場だけじゃ大きなお[金|かね]を貸してくれない。
+  - speaker: bokujo
+    emotion: happy
+    text: だから牛を買ってもらって、うちで預かるんだ。
+  - speaker: reimu
+    text: 1990年3月、三ケ尻久美子が社長になります。
+    reading: せんきゅうひゃく きゅうじゅうねん さんがつ、みかじり くみこが しゃちょうに なります。
+  - speaker: reimu
+    text: この牧場が2011年につぶれるとは、まだ誰も思っていません。
+    reading: この ぼくじょうが にせん じゅういちねんに つぶれるとわ、まだ だれも おもって いません。
+# ---- 日本橋のオーナー営業部・300万円の牛（先輩と新人のモブ。約定と会計は判決の認定。300万円は台帳の逆算） ----
+- id: ch2_eigyo
+  title: 300万円の牛
+  background: ag_eigyo
+  stage:
+  - {who: senpai, x: 0.16, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩！ お客さんが牛を1頭、300万円で買ってくれました！
+  - speaker: senpai
+    emotion: normal
+    text: 牛は、うちの牧場で預かる。
+  - speaker: senpai
+    emotion: normal
+    text: 生まれる子牛をうちが買って、エサ代を引いた13万5000円を毎年払う。
+  - speaker: shinjin
+    emotion: happy
+    text: 満期になったら？
+  - speaker: senpai
+    emotion: happy
+    text: うちが同じ300万円で買い戻す。
+  - speaker: shinjin
+    emotion: thinking
+    text: 牛が、子どもを産まなかった年は？
+  - speaker: senpai
+    emotion: normal
+    text: 払う。
+  - speaker: shinjin
+    emotion: surprised
+    text: 産まなくても払うんですか！？
+    se: zukko
+  - speaker: shinjin
+    emotion: thinking
+    text: 満期に、牛を連れて帰ったお客さんは？
+  - speaker: senpai
+    emotion: normal
+    text: ……まだ、1人もいない。
+    beat: true
+  - speaker: shinjin
+    emotion: thinking
+    text: 帳簿では、どうなってるんですか？
+  - speaker: senpai
+    emotion: normal
+    text: 牛を売った。売上だ。買い戻す約束は、借金に載らない。
+  - speaker: shinjin
+    emotion: surprised
+    text: 300万円返す約束なのに、借金じゃない……？
+  - speaker: reimu
+    text: この書き方のまま、2011年3月の決算の借金は620億円。4か月後の申立てのときは、4330億円でした。
+    reading: この かきかたの まま にせん じゅういちねん さんがつの けっさんの しゃっきんわ ろっぴゃく にじゅうおくえん。よんかげつごの もうしたての ときわ、よんせん さんびゃく さんじゅうおくえんでした。
+    telops:
+    - {text: "帳簿620億円　本当は4330億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 新しいお金で古いお金を払えば回る。止めた日に、穴が全部見える仕組みでした。
+    reading: あたらしい おかねで ふるい おかねお はらえば まわる。とめた ひに、あなが ぜんぶ みえる しくみでした。
+# ---- 1996年ごろ・那須の本部（判決の推認。社長室の3人は台詞なし。専務・経理の幹部は名前の無いモブ） ----
+- id: card1996
+  title: ''
+  background: ag_card_1996
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1996年ごろ、那須の本部。ここからの社内の話は、のちの民事裁判の判決によります。
+    reading: せんきゅうひゃく きゅうじゅうろくねん ごろ、なすの ほんぶ。ここからの しゃないの はなしわ のちの みんじ さいばんの はんけつに よります。
+- id: ch3_karauri
+  title: 足りない牛
+  background: ag_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 三ケ尻社長, emotion: normal}
+  - {who: senmu, x: 0.62, emotion: normal}
+  - {who: keiri, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 判決によれば、このころには売る繁殖牛が足りず、繁殖牛ではない牛の耳の番号を契約に割り当てていました。
+    reading: はんけつに よれば この ころにわ うる はんしょくぎゅうが たりず、はんしょくぎゅうでわ ない うしの みみの ばんごうお けいやくに わりあてて いました。
+  - speaker: reimu
+    text: 判決は、社長ら経営陣3人が、倒産を避けるため売り続けると決めた、と見ています。
+    reading: はんけつわ しゃちょうら けいえいじん さんにんが、とうさんお さける ため うりつづけると きめたと みて います。
+  - speaker: reimu
+    text: 牛の不足は、社内でも秘密。知っていた社員は3人だけ。なぜ、契約を止めなかったのか。
+    reading: うしの ふそくわ、しゃないでも ひみつ。しって いた しゃいんわ さんにん だけ。なぜ けいやくお とめなかったのか。
+# ---- 1997年5月・口出しした取締役（判決の認定。取締役は名前の無いモブ。社長の台詞は判決の言葉の命令形1行だけ） ----
+- id: ch4_torishimari
+  title: 口出しした取締役
+  background: ag_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 三ケ尻社長, emotion: normal}
+  - {who: torishimari, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: torishimari
+    emotion: normal
+    text: 社長。オーナー制度の損得を、計算してみました。
+  - speaker: torishimari
+    emotion: thinking
+    text: 1頭85万円でオーナーに売ったとしても
+  - speaker: torishimari
+    emotion: thinking
+    text: 契約が10年より短ければ、会社の借金が増えるだけです。
+  - speaker: torishimari
+    emotion: surprised
+    text: 売れば売るほど、借金が増えます。
+  - speaker: zundamon
+    emotion: normal
+    text: オーナー制度には、口出ししないこと。
+    se: don
+  - speaker: torishimari
+    emotion: sad
+    text: ……計算を、見せただけなのに。
+- id: ch4_ishigaki
+  title: ''
+  background: ag_ishigaki
+  stage:
+  - {who: torishimari, x: 0.84, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1997年5月、社長は口出しを禁じ、石垣島の牧場への転勤を命じました。民事の判決の認定です。
+    reading: せんきゅうひゃく きゅうじゅうななねん ごがつ、しゃちょうわ くちだしお きんじ いしがきじまの ぼくじょうえの てんきんお めいじました。みんじの はんけつの にんていです。
+  - speaker: reimu
+    text: なぜ石垣島へ行かされたのか。民事の判決は、経営陣3人が誰の口出しも許さない方針を固めた、と見ています。
+    reading: なぜ いしがきじまえ いかされたのか。みんじの はんけつわ けいえいじん さんにんが だれの くちだしも ゆるさない ほうしんお かためたと みて います。
+  - speaker: reimu
+    text: 同じ年、家畜が預託法の対象に。同じ商売の10数社は多くが摘発され、安愚楽は残りました。
+    reading: おなじ とし、かちくが よたくほうの たいしょうに。おなじ しょうばいの じゅうすうしゃわ おおくが てきはつ され、あぐらわ のこりました。
+# ---- 2007年4月〜・パンフレットの問いと答え（文言は判決の認定。電話の言葉は文言の範囲の脚色） ----
+- id: ch5_pamph
+  title: います
+  background: ag_pamph
+  bgm: curious
+  stage:
+  - {who: senpai, x: 0.09, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.91, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年4月。会社の新しいパンフレットに、問いと答えが載ります。
+    reading: にせん ななねん しがつ。かいしゃの あたらしい ぱんふれっとに、といと こたえが のります。
+  - speaker: shinjin
+    emotion: normal
+    text: 私の牛は、本当にいるのですか。
+    telops:
+    - {text: "パンフレット「『私の牛』は本当にいるのですか？」「います」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: senpai
+    emotion: happy
+    text: います。
+  - speaker: shinjin
+    emotion: surprised
+    text: ……答え、みじかっ！
+    se: manuke
+  - speaker: senpai
+    emotion: normal
+    text: 長く書くと、かえって心配になるからな。
+  - speaker: shinjin
+    emotion: normal
+    text: 10年前のパンフレットには、いつでも自分の牛を見ていただけますってあります。
+  - speaker: senpai
+    emotion: happy
+    text: 見に行けるなら、安心だろ。
+- id: ch5_denwa
+  title: ''
+  background: ag_eigyo
+  stage:
+  - {who: senpai, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: senpai
+    emotion: normal
+    text: はい、[安愚楽牧場|アグラボクジョウ]です。
+  - speaker: senpai
+    emotion: happy
+    text: お客様、ご安心ください。パンフレットのとおり、牛はいます。
+  - speaker: shinjin
+    emotion: thinking
+    text: 1頭の牛に、お客さんが2人ついたりしないんですか？
+  - speaker: senpai
+    emotion: normal
+    text: 牛1頭に番号1つ。耳の[札|ふだ]で決まってる。
+  - speaker: shinjin
+    emotion: happy
+    text: なら、安心ですね！
+- id: ch5_kara
+  title: ''
+  background: ag_gyusha_kara
+  cuts:
+  - speaker: reimu
+    text: その直前の2007年3月期、実際にいた繁殖牛は契約の55.9%。なのに、なぜ「います」と書いたのか。
+    reading: その ちょくぜんの にせん ななねん さんがつき、じっさいに いた はんしょくぎゅうわ けいやくの ごじゅうご てん きゅう ぱーせんと。なのに なぜ いますと かいたのか。
+    beat: true
+    telops:
+    - {text: "実際にいた繁殖牛　契約の55.9%", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 2009年1月・農水省の立入検査（応対は経理の幹部。台詞なし、虚偽の説明はナレで。検査官は名前の無いモブ） ----
+- id: ch6_kensa
+  title: 国の立入検査
+  background: ag_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: keiri, x: 0.1, flip: true, emotion: normal}
+  - {who: kensakan2, x: 0.73, emotion: normal}
+  - {who: kensakan, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2009年1月。農林水産省が、預託法に基づく立入検査に入ります。応対したのは経理の幹部でした。
+    reading: にせん きゅうねん いちがつ。のうりん すいさんしょうが、よたくほうに もとづく たちいり けんさに はいります。おうたい したのわ けいりの かんぶでした。
+  - speaker: kensakan
+    emotion: normal
+    text: 契約している牛は何頭で、残高はいくらですか。
+  - speaker: reimu
+    text: 6万7501頭、残高は約2315億円。彼はそう説明しました。実際は9万頭超、3000億円超です。
+    reading: ろくまん ななせん ごひゃく いっとう、ざんだかわ やく にせん さんびゃく じゅうごおくえん。かれわ そう せつめい しました。じっさいわ きゅうまんとう ちょう、さんぜんおくえん ちょうです。
+  - speaker: kensakan2
+    emotion: thinking
+    text: 直営の牧場の[繁殖牛|はんしょくぎゅう]、数えると約3万1000頭です。
+  - speaker: kensakan
+    emotion: thinking
+    text: ご説明の4万517頭より、9500頭ほど少ないですね。
+  - speaker: reimu
+    text: 預託先の牧場に移した、と彼は答えました。民事の判決によれば、これも事実と違う説明でした。
+    reading: よたくさきの ぼくじょうに うつしたと かれわ こたえました。みんじの はんけつに よれば、これも じじつと ちがう せつめいでした。
+  - speaker: kensakan2
+    emotion: surprised
+    text: 牛舎は、どこも牛でいっぱいです！
+    background: ag_gyusha
+  - speaker: kensakan
+    emotion: normal
+    text: 全部で13万頭以上。契約の6万7501頭より多いですね。
+  - speaker: kensakan
+    emotion: happy
+    text: ……足りないどころか、余ってる。
+    se: tenten
+  - speaker: kensakan2
+    emotion: normal
+    text: ……全部、見て回りますか？
+  - speaker: kensakan
+    emotion: normal
+    text: 今日は、このくらいにしておきましょう。
+  - speaker: reimu
+    text: 7月の報告では、契約が4か月で2万頭以上も増加。農水省は詳しく調べず、9月に担当は消費者庁へ移ります。
+    reading: しちがつの ほうこくでわ けいやくが よんかげつで にまんとう いじょうも ぞうか。のうすいしょうわ くわしく しらべず、くがつに たんとうわ しょうひしゃちょうえ うつります。
+# ---- 今の部屋（足りないのに余って見えた。毎年必ず払った配当。なぜ止めなかったか） ----
+- id: heya1
+  title: ''
+  background: ag_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 国の検査も、通っちゃったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 契約の数を少なく言ったから、牛の総数のほうが多く見えたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 足りないのに、余って見えた……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 担当が移った消費者庁は、立入検査をしていないわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: もう、誰も数えに来ない……。
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも配当は、毎年必ず振り込まれていた。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1年に生まれる子牛は、[繁殖牛|はんしょくぎゅう]の6割から8割だったのに。
+  - speaker: zundamon
+    emotion: surprised
+    text: 生まれない子牛の分まで、払ってたのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年3月期までの10年で、契約で集めたお[金|かね]は6164億円。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 買い戻しと配当で、5407億円が出ていったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 集めたお[金|かね]の、9割近く……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 民事の判決は、新しい契約で集め続けないと買い戻しが払えない状態だったとみているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: だから、契約を止めなかった……？
+  - speaker: tsumugi
+    emotion: normal
+    text: なぜ止めなかったのか。そのわけを、のちに刑事の判決が書くわ。
+# ---- 2010年4月・宮崎の、会社の農場（社長の台詞は作らない。持ち込んだ・初発・隠したと言わない。笑いにしない） ----
+- id: ch7_kouteieki
+  title: 宮崎の農場
+  background: ag_miyazaki
+  bgm: 223am
+  stage:
+  - {who: bokujo, x: 0.16, flip: true, emotion: sad}
+  - {who: kenshoku, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2010年4月。宮崎県の、会社の農場で口蹄疫が見つかります。
+    reading: にせん じゅうねん しがつ。みやざきけんの かいしゃの のうじょうで こうていえきが みつかります。
+  - speaker: kenshoku
+    emotion: normal
+    text: この農場の牛は、すべて処分になります。
+  - speaker: bokujo
+    emotion: sad
+    text: ……全部、ですか。
+  - speaker: kenshoku
+    emotion: normal
+    text: 消毒を、急いでください。
+  - speaker: bokujo
+    emotion: sad
+    text: ……この子たちも、か。
+  - speaker: reimu
+    text: 会社の説明では、全体で約1万5000頭の牛が殺処分になりました。
+    reading: かいしゃの せつめいでわ、ぜんたいで やく いちまん ごせんとうの うしが さつしょぶんに なりました。
+# ---- 2011年3〜6月・原発の事故のあと（解約は会社の説明。観光は説明会の社長の話の趣旨） ----
+- id: ch8_genpatsu
+  title: 原発の事故のあと
+  background: ag_michi
+  stage:
+  - {who: bokujo, x: 0.84, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2011年3月、東日本大震災。原発の事故のあと、会社の説明では、オーナーの解約が相次ぎます。
+    reading: にせん じゅういちねん さんがつ、ひがしにほん だいしんさい。げんぱつの じこの あと かいしゃの せつめいでわ、おおなあの かいやくが あいつぎます。
+  - speaker: bokujo
+    emotion: sad
+    text: 本社には、解約の申し出が続いてるらしい。
+  - speaker: bokujo
+    emotion: sad
+    text: '[那須|ナス]の観光のお客さんも、ぱったり来なくなったな。'
+  - speaker: reimu
+    text: 6月の末。オーナーへの配当の支払いが止まります。
+    reading: ろくがつの すえ。おおなあえの はいとうの しはらいが とまります。
+# ---- 2011年7月19日・3週間前の募集（日経。会社の説明は趣旨） ----
+- id: ch9_boshu
+  title: 3週間前の募集
+  background: ag_eigyo
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.09, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.91, emotion: happy}
+  cuts:
+  - speaker: shinjin
+    emotion: happy
+    text: 先輩！ 新しいコースのチラシが刷り上がりました！
+    background: ag_chirashi
+    se: jaan
+  - speaker: senpai
+    emotion: normal
+    text: '[肥育牛|ヒイクギュウ]売買コース。48万円で、半年後に52万円。'
+  - speaker: shinjin
+    emotion: happy
+    text: 半年で4万円も増えるんですか！
+  - speaker: senpai
+    emotion: normal
+    text: 52万円に届かない分は、会社が持ってくれるそうだ。
+  - speaker: senpai
+    emotion: normal
+    text: 日付は、7月19日だ。
+  - speaker: reimu
+    text: 民事再生の申立ての、3週間前の募集でした。会社はのちに、事業を続けられる状況だったと説明しています。
+    reading: みんじ さいせいの もうしたての、さんしゅうかん まえの ぼしゅうでした。かいしゃわ のちに じぎょうお つづけられる じょうきょうだったと せつめい して います。
+  - speaker: reimu
+    text: 払えなくなる直前まで、なぜ新しいお金を集めたのか。
+    reading: はらえなく なる ちょくぜんまで、なぜ あたらしい おかねお あつめたのか。
+# ---- 2011年8月1日〜15日・通知と申立て ----
+- id: card2011
+  title: ''
+  background: ag_card_2011
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2011年8月1日。会社は弁護士の名前で、支払いを止める通知書を出します。
+    reading: にせん じゅういちねん はちがつ ついたち。かいしゃわ べんごしの なまえで、しはらいお とめる つうちしょお だします。
+- id: ch10_tsuchi
+  title: 8月の通知
+  background: ag_shiten
+  stage:
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 東京支店の前です。オーナーの人たちが集まってきています。
+    background: ag_shiten_retsu
+  - speaker: kisha
+    emotion: normal
+    text: 8月9日、[安愚楽牧場|アグラボクジョウ]が東京地裁に民事再生を申し立てました。
+  - speaker: kisha
+    emotion: surprised
+    text: 15日、負債は4330億円と分かりました。この年、最大の倒産です。
+    se: gaan
+  - speaker: kisha
+    emotion: thinking
+    text: 春の決算の借金は、620億円だったはずですが……。
+  - speaker: kisha
+    emotion: normal
+    text: 差のほとんどは、帳簿に載らない買い戻しの約束でした。
+  - speaker: kisha
+    emotion: normal
+    text: オーナーの契約は、7万あまり。19日には説明会が開かれます。
+# ---- 2011年8月19日・両国国技館（非公開。言葉は経済サイトが債権者から得て伝えたもの。笑いにしない） ----
+- id: ch11_soto
+  title: 両国国技館
+  background: ag_kokugikan_soto
+  stage:
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月19日、雨の両国国技館。集まった債権者は、1000人を超えました。
+    reading: はちがつ じゅうくにち、あめの りょうごく こくぎかん。あつまった さいけんしゃわ、せんにんお こえました。
+  - speaker: kisha
+    emotion: normal
+    text: 説明会は非公開。報道陣は、中に入れません。
+  - speaker: reimu
+    text: 中の言葉は、経済サイトが債権者から得て伝えたものです。
+    reading: なかの ことばわ、けいざい さいとが さいけんしゃから えて つたえた ものです。
+- id: ch11_naka
+  title: ''
+  background: ag_kokugikan
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 三ケ尻社長, emotion: sad}
+  - {who: saikensha, x: 0.88, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 社長はこの日、口蹄疫と原発の事故を挙げて、おわびしました。
+    reading: しゃちょうわ この ひ こうていえきと げんぱつの じこお あげて、おわび しました。
+  - speaker: saikensha
+    emotion: angry
+    text: 経営に問題はないって、言ってたじゃないか！
+  - speaker: zundamon
+    emotion: sad
+    text: ……えー……
+  - speaker: reimu
+    text: 客席から、罵声が飛びます。
+    reading: きゃくせきから、ばせいが とびます。
+  - speaker: zundamon
+    emotion: sad
+    text: 私どもの事業は、一挙に解約が重なりますと、
+  - speaker: zundamon
+    emotion: sad
+    text: 牛の対応、資金の調達ができなくなります。
+  - speaker: zundamon
+    emotion: sad
+    text: 決して、倒産してはいけないんだという気持ちで、
+  - speaker: zundamon
+    emotion: sad
+    text: 最後の最後まで、資金の調達に回っておりました
+  - speaker: saikensha
+    emotion: angry
+    text: だますつもりだったのか！
+  - speaker: zundamon
+    emotion: sad
+    text: いいえ、だますつもりはまったくございません。
+    telops:
+    - {text: "三ケ尻「いいえ、だますつもりはまったくございません」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 私は、だますことは、そんなことは考えたことはございません
+- id: ch11_naka2
+  title: ''
+  background: ag_kokugikan
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 三ケ尻社長, emotion: sad}
+  - {who: bengoshi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: bengoshi
+    emotion: normal
+    text: 解約でお支払いしたのは、約5,000人。総額で、65億から70億の範囲です。
+  - speaker: bengoshi
+    emotion: normal
+    text: もう7月末には、75億円近くのお[金|かね]が払えなくなっていた状況でした。
+  - speaker: reimu
+    text: 払えなくなっていた7月末は、あの48万円の募集から10日あまりあとです。
+    reading: はらえなく なって いた しちがつまつわ、あの よんじゅう はちまんえんの ぼしゅうから とおか あまり あとです。
+  - speaker: bengoshi
+    emotion: normal
+    text: 牛は、14万5,000頭残っています。
+# ---- 2011年11月〜2013年12月・破産と5%（管財人は名前の無いモブで数字だけ。笑いにしない） ----
+- id: ch12_hasan
+  title: 牧場を売る
+  background: ag_bokujo
+  bgm: 223am
+  stage:
+  - {who: bokujo, x: 0.84, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 11月、民事再生は打ち切りに。管財人は、早く売らないと大量の牛が餓死するおそれがあると判断しました。
+    reading: じゅういちがつ、みんじ さいせいわ うちきりに。かんざいにんわ、はやく うらないと たいりょうの うしが がし する おそれが あると はんだん しました。
+  - speaker: bokujo
+    emotion: sad
+    text: この牛たちも、よその牧場へ行くのか……。
+    background: ag_bokujo_kara
+  - speaker: bokujo
+    emotion: sad
+    text: ……元気でな。
+  - speaker: reimu
+    text: 12月9日、破産。同じ月、社長個人も破産しています。
+    reading: じゅうにがつ ここのか、はさん。おなじ つき、しゃちょう こじんも はさん して います。
+- id: ch12_kokaido
+  title: ''
+  background: ag_kokaido
+  stage:
+  - {who: kanzai, x: 0.16, flip: true, emotion: normal}
+  - {who: saikensha, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2012年5月、日比谷公会堂。最初の債権者集会に、約2000人が集まります。
+    reading: にせん じゅうにねん ごがつ、ひびや こうかいどう。さいしょの さいけんしゃ しゅうかいに、やく にせんにんが あつまります。
+  - speaker: kanzai
+    emotion: normal
+    text: 負債の総額は、約4264億円です。
+  - speaker: kanzai
+    emotion: normal
+    text: いま回収できたのは、負債の0.5%です。
+  - speaker: kanzai
+    emotion: normal
+    text: 配当に回せるのは、約23億円です。
+  - speaker: saikensha
+    emotion: sad
+    text: 0.5%……。
+    beat: true
+# ---- 2013年6〜10月・逮捕と起訴（罪は預託法違反の不実の告知。取調室・自宅は描かない） ----
+- id: card2013
+  title: ''
+  background: ag_card_2013
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2013年6月18日。警視庁は、元社長ら旧経営陣の3人を逮捕します。
+    reading: にせん じゅうさんねん ろくがつ じゅうはちにち。けいしちょうわ、もと しゃちょうら きゅう けいえいじんの さんにんお たいほ します。
+- id: ch13_kiso
+  title: いない牛を、いると
+  background: ag_saibansho_mae
+  stage:
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 7月、元社長と元幹部の2人が起訴されました。
+  - speaker: kisha
+    emotion: normal
+    text: 罪は預託法違反、[不実の告知|ふじつのこくち]です。
+  - speaker: reimu
+    text: いない牛を、いると告げて、契約を勧めた罪です。国技館の『だますつもりは』から2年でした。
+    reading: いない うしお いると つげて けいやくお すすめた つみです。こくぎかんの だますつもりわ から にねんでした。
+  - speaker: kisha
+    emotion: normal
+    text: 起訴されたのは、2010年9月ごろからの192人との契約の[分|ぶん]です。
+  - speaker: kisha
+    emotion: normal
+    text: 7万あまりの契約の、すべてではありません。
+- id: ch13_mimi
+  title: ''
+  background: ag_gyusha
+  cuts:
+  - speaker: reimu
+    text: 刑事の判決によれば、いる牛の耳の番号の桁を増やして、同じ牛に重ねて番号を付けていました。
+    reading: けいじの はんけつに よれば いる うしの みみの ばんごうの けたお ふやして、おなじ うしに かさねて ばんごうお つけて いました。
+  - speaker: reimu
+    text: 思いついて進めたのは、経理の幹部。社長が、それを承認しました。
+    reading: おもいついて すすめたのわ けいりの かんぶ。しゃちょうが それお しょうにん しました。
+- id: ch13_kohan
+  title: ''
+  background: ag_houtei
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 三ケ尻, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2013年10月、東京地裁の被告人質問。被害者の弁護団の報告によれば、彼女はこう述べました。
+    reading: にせん じゅうさんねん じゅうがつ、とうきょう ちさいの ひこくにん しつもん。ひがいしゃの べんごだんの ほうこくに よれば かのじょわ こう のべました。
+  - speaker: zundamon
+    emotion: sad
+    text: 被害者には本当に申し訳ないと思っている。
+# ---- 2013年12月・最後の配当（管財人は名前の無いモブで数字だけ。笑いにしない） ----
+- id: ch12_kanzai
+  title: 戻ったのは5%
+  background: ag_kanzai
+  bgm: 223am
+  stage:
+  - {who: kanzai, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: kanzai
+    emotion: normal
+    text: 2013年12月、最後の配当です。
+  - speaker: kanzai
+    emotion: normal
+    text: 配当の総額は214億円。配当率は、5.0267%です。
+    telops:
+    - {text: "最終の配当率　5.0267%", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kanzai
+    emotion: normal
+    text: 100万円を出した[方|カタ]に、約5万円です。
+  - speaker: kanzai
+    emotion: normal
+    text: 配当の大半の173億円あまりは、税務署から戻った消費税でした。
+- id: heya2
+  title: ''
+  background: ag_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: sad}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 100万円出して、5万円……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 最初の集会では0.5%だったから、そこからは増えているの。
+  - speaker: zundamon
+    emotion: sad
+    text: 増えて、5%……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1件あたりの平均は約574万円。5%なら、約29万円。人によって違うけどね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 牛は、14万頭以上いたんじゃないの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 管財人は、牛を餓死させないために急いで売ると判断したの。
+  - speaker: zundamon
+    emotion: sad
+    text: 牛の会社なのに、戻ったお[金|かね]の8割が税金の還付なのだ……。
+    beat: true
+# ---- 2014年・一審と控訴審（主文は「原判決を破棄する。」だけ裁判長の口で。量刑の理由は判決の言葉をナレで） ----
+- id: card2014
+  title: ''
+  background: ag_card_2014
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2014年1月、一審は懲役2年10月。10月16日、東京高裁です。
+    reading: にせん じゅうよねん いちがつ、いっしんわ ちょうえき にねん じゅっかげつ。じゅうがつ じゅうろくにち、とうきょう こうさいです。
+- id: ch14_kosai
+  title: 原判決を破棄する
+  background: ag_houtei
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 三ケ尻, emotion: sad}
+  - {who: saibancho, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: '[原判決|げんはんけつ]を破棄する。'
+    se: don
+  - speaker: reimu
+    text: 一審の判決は、2人が牛の不足を知りながら、経営を保つためにさらに客を集めた、と認めました。
+    reading: いっしんの はんけつわ ふたりが うしの ふそくお しりながら、けいえいお たもつ ために さらに きゃくお あつめたと みとめました。
+  - speaker: reimu
+    text: その動機は会社本位の自己中心的なものというべきで、その犯意も強固である。
+    reading: その どうきわ かいしゃ ほんいの じこ ちゅうしんてきな ものと いうべきで、その はんいも きょうこで ある。
+    telops:
+    - {text: "判決「会社本位の自己中心的」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch14_mae
+  title: ''
+  background: ag_saibansho_mae
+  stage:
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 高裁は[一審|いっしん]を破棄し、[懲役2年6月|ちょうえきにねんろっかげつ]の実刑としました。
+  - speaker: kisha
+    emotion: normal
+    text: 192人のうち162人と示談し、3285万円を払っています。
+  - speaker: kisha
+    emotion: normal
+    text: 高裁は、それを考えて4か月短くしました。
+  - speaker: kisha
+    emotion: normal
+    text: 弁護側はBSEや牛肉の偽装事件、口蹄疫と原発の事故を挙げていました。
+  - speaker: kisha
+    emotion: normal
+    text: 高裁は、牛がいないのにいると告げる理由にはならないと退けています。
+  - speaker: reimu
+    text: 10月31日、懲役2年6月の実刑が確定しました。
+    reading: じゅうがつ さんじゅういちにち、ちょうえき にねん ろっかげつの じっけいが かくてい しました。
+    telops:
+    - {text: "懲役2年6月の実刑が確定", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 論争1：口蹄疫と原発のせい？（会社の説明と判決を主語つきで） ----
+- id: ronso1
+  title: 口蹄疫と原発のせい？
+  background: ag_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 口蹄疫と原発でつぶれた、会社も被害者だって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える事実はあるの。口蹄疫で約1万5000頭を処分したと、会社は説明したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 原発の事故のあとは、解約が相次いだとも。社長も国技館でそう話したわね。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、運が悪かっただけなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも民事の判決は、遅くとも1996年ごろには新しいお[金|かね]で払う状態だったとみたの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 1999年3月期の末には、契約の3割から4割が空売りだったとも。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 日経は破綻の直後、経験不足で子牛が死ぬことが多かったとも報じていたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 子牛まで、足りなかったのか……。
+  - speaker: zundamon
+    emotion: surprised
+    text: 口蹄疫より、ずっと前から……！？
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、口蹄疫は関係ないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 関係はあるわ。刑事の判決も、牛の不足を強めた要因になったことはうかがえるとしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 口蹄疫と原発は、とどめになった。牛が足りなくなったのは、その15年ほど前からよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: とどめで、つぶれたんじゃなかったのか……。
+    beat: true
+# ---- 論争2：出資者の自己責任？（「出資者が悪い」と言わない） ----
+- id: ronso2
+  title: 出資者の自己責任？
+  background: ag_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、高い利回りに飛びついたお客さんの自己責任なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 配当は1年に5%前後。満期には同じ値段で買い戻す。条件がよく見えたのは確かよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でもパンフレットは、牛は「います」と言い切っていたの。
+    se: hammer
+  - speaker: zundamon
+    emotion: thinking
+    text: パンフレットを信じたら、いけないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 刑事の判決は、パンフレットの改訂を最後に決める権限は社長にあったと認めているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 帳簿の上の借金は620億円。牛の不足を知っていたのは、経営陣と社員の6人だけ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国の立入検査でさえ、見抜けなかったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 牛を見に行っても、分からない？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 見に行っても、その牛が自分の牛かは分からない。1頭の牛に、番号が2つ付いていたのよ。
+  - speaker: zundamon
+    emotion: sad
+    text: 1頭なのに、番号が2つ……。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: 6人しか知らないのに、お客さんが見抜けるわけないのだ。
+# ---- 本当の注意点（1と2を中心に。3・4は1行ずつ。会社名・商品名の例は出さない） ----
+- id: chui
+  title: 売って、預かって、配当
+  background: ag_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。物を売って預かって、毎年配当。この形はいま、法律で原則禁止よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国の確認を受けずに結んだ契約は、効力を生じない。2022年6月からの決まりなの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 契約そのものが、無効になるんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 牛でもほかの品物でも、そんな話が来たら立ち止まって。
+  - speaker: tsumugi
+    emotion: normal
+    text: 迷ったら、お住まいの消費生活センターに相談してね。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのレアカード、毎月おまけ付きで預けてるのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。見に行けることは、あることの証明にならない。
+  - speaker: tsumugi
+    emotion: thinking
+    text: パンフレットには、いつでも自分の牛を見ていただけますとあったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、同じ牛に番号が重なっていたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: カードも、見せてもらうだけじゃだめか……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 手元に戻せるか。そこを確かめてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。帳簿の借金が少なくても、安心の材料にはならない。
+  - speaker: zundamon
+    emotion: thinking
+    text: 帳簿に載らない借金……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4つめ。毎年必ず同じ配当が届くこと自体が、合図になることもあるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 毎月のおまけも、合図なのだ！？
+# ---- 現代（台帳8章。国の裁判は時点を付けて。社長の確定のあとの服役・近況は言わない） ----
+- id: card2026
+  title: ''
+  background: ag_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。国技館の説明会から、15年がたちました。
+    reading: にせん にじゅうろくねん。こくぎかんの せつめいかいから、じゅうごねんが たちました。
+- id: ima
+  title: 15年後の裁判
+  background: ag_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[安愚楽牧場|アグラボクジョウ]は、いまどうなってるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年3月に破産の手続きが終わって、会社はもう無いわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 社長は？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年には民事の裁判で、元社長ら3人に約1億円の賠償が命じられたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国は、止められなかったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2014年5月、出資者たちが国を訴えたの。判決が出たのは12年後よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年5月、東京地裁は請求を棄却。頭数の不足をつかむのは容易ではなかった、と。
+  - speaker: tsumugi
+    emotion: normal
+    text: 7月、大阪地裁は国に約3億7900万円の賠償を命じたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 遅くとも2009年3月末には業務の停止を命じるべきだった、という判断よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ話で、答えが逆なのだ！？
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちが正しいの？
+  - speaker: tsumugi
+    emotion: normal
+    text: まだ決まっていないの。国は控訴したわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国の責任をめぐる裁判は、2026年のいまも続いているの。
+  - speaker: zundamon
+    emotion: sad
+    text: 15年たっても、まだ終わってないのだ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: 決まりのほうは、変わったの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 預託法は1986年にできた法律。それが牛の会社のあとで、原則禁止まで変わったの。
+# ---- 締め（茶番のカードと、冒頭の「います」「だますつもりは」を回収） ----
+- id: shime
+  title: ''
+  background: ag_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 友だちに預けたレアカード、今日返してもらうのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 見せてもらうんじゃなくて、手元に戻すのね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: いいえ、だますつもりはまったくございません。国技館で、社長はそう話したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: パンフレットには、「います」。実際にいた[繁殖牛|はんしょくぎゅう]は、契約の6割前後だった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 裁かれたのは、いない牛をいると告げたこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: それも、最後の1年ほどの192人との契約だけ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決は、その動機を会社本位の自己中心的なものと書いたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 戻ったのは、5%よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見に行けるは、あるの証明じゃない……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 物を売って預かって、毎年配当。そんな話が来たら、払う前に立ち止まってね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 参考になったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
