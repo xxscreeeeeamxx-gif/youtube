@@ -1,0 +1,1228 @@
+meta:
+  title: 「すべからく『信頼』の問題です」と書いた男の日本振興銀行、日本で初めてのペイオフに【ずんだもん解説】
+  slug: shinko-bank
+  hook_line: 検査する側にいた男は、なぜ自分の銀行の検査で罪に問われたのか。
+  summary: 2010年12月9日、保釈の翌日の会見で破綻を謝罪し、「道義的な責任は痛感している」と述べた日本振興銀行の元会長、木村剛。8年前、彼は金融庁のプロジェクトチームで、大手銀行の資産査定を厳しくする側にいました。定期預金だけを集める銀行、額面で買った商工ローンの債権、仲間の会社の輪、そして消えたメール。検査する側にいた男は、なぜ自分の銀行の検査で罪に問われたのか。判決と預金保険機構・金融庁の資料をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 金融庁「金融担当大臣談話－日本振興銀行株式会社について－」（2010年9月10日） https://www.fsa.go.jp/common/conference/danwa/20100910-1.html
+  - 金融庁「自見内閣府特命担当大臣閣議後記者会見の概要」（2010年9月10日） https://www.fsa.go.jp/common/conference/minister/2010b/20100910-1.html
+  - 預金保険機構「日本振興銀行の預金等債権の買取り（概算払）について」（2010年12月7日） https://www.fsa.go.jp/common/diet/houkoku/2306/04.pdf
+  - 預金保険機構「日本振興銀行の旧役員に対する責任追及訴訟の提起について」（2011年8月23日） https://www.fsa.go.jp/common/diet/houkoku/2312/06.pdf
+  - 参議院『立法と調査』No.319「預金保険制度を概観してみると～初のペイオフ適用に関連して～」（2011年8月） https://www.sangiin.go.jp/japanese/annai/chousa/rippou_chousa/backnumber/2011pdf/20110801101.pdf
+  - 日本経済新聞「木村振興銀元会長に有罪判決 メール削除指示認定」（2012年3月16日） https://www.nikkei.com/article/DGXNASDG1603F_W2A310C1CR8000/
+  tags:
+  - 日本振興銀行
+  - 木村剛
+  - ペイオフ
+  - 預金保険機構
+  - 検査忌避
+  - 金融庁
+  - 名寄せ
+  - SFCG
+  - 商工ローン
+  - 銀行破綻
+  - 定期預金
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 日本初のペイオフ
+    bottom: 振興銀行の破綻
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kisha
+    label: 記者
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: shokuin
+    label: 職員
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#454a55'
+  - id: keieisha
+    label: 経営者
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#5a4a3a'
+  - id: koin
+    label: 行員
+    voice: 21
+    pitch: 0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: kyaku
+    label: 客
+    voice: 8
+    pitch: -0.04
+  - id: shikko
+    label: 執行役
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3440'
+  - id: kensakan
+    label: 検査官
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: shacho
+    label: 社長
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: yoho
+    label: 預保職員
+    voice: 67
+    pitch: -0.02
+    outfit: suit
+    color: '#3a4f5f'
+  - id: yoho2
+    label: 職員
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#4a5a7a'
+  - id: fukudaijin
+    label: 副大臣
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#1f2a3a'
+  - id: egami
+    label: 江上社長
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: yokinsha
+    label: 預金者
+    voice: 8
+    pitch: 0.06
+scenes:
+# ---- 先出し（2010年12月9日・司法記者クラブの会見。記者の問いは作らずナレで。笑いの SE なし） ----
+- id: co_kaiken
+  title: ''
+  background: nb_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村元会長, emotion: sad}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2010年12月9日、東京・霞が関。日本振興銀行の元会長・木村剛が、保釈の翌日に会見を開きます。
+    reading: にせん じゅうねん じゅうにがつ ここのか、とうきょう かすみがせき。にほん しんこう ぎんこうの もと かいちょう きむら たけしが、ほしゃくの よくじつに かいけんお ひらきます。
+  - speaker: reimu
+    text: 銀行の破綻を謝り、その原因についてこう述べます。
+    reading: ぎんこうの はたんお あやまり、その げんいんに ついて こう のべます。
+  - speaker: zundamon
+    emotion: sad
+    text: 私の力不足で、道義的な責任は痛感している
+  - speaker: reimu
+    text: 融資や決算への疑いには、こう答えました。
+    reading: ゆうしや けっさんえの うたがいにわ、こう こたえました。
+  - speaker: zundamon
+    emotion: normal
+    text: 融資や決算が不適切だったとは考えていない
+  - speaker: reimu
+    text: 3か月前。彼の銀行は日本で初めて、預金が1000万円で切られました。
+    reading: さんかげつまえ。かれの ぎんこうわ にほんで はじめて、よきんが いっせんまんえんで きられました。
+  - speaker: reimu
+    text: 8年前、彼は銀行を検査する側にいました。
+    reading: はちねんまえ、かれわ ぎんこうお けんさ する がわに いました。
+# ---- 今の部屋（お年玉を金利の一番高い銀行に。仕組みは言い切らない） ----
+- id: hook
+  title: ''
+  background: nb_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: お年玉を、金利が一番高い銀行に全部預けたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: いくら？
+  - speaker: zundamon
+    emotion: happy
+    text: 1億円……のつもりなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: つもり貯金ね。で、その銀行が潰れたら？
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: ……え。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2010年、本当に預金が切られた人たちがいたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 銀行を厳しく検査する側にいた男は、なぜ自分の銀行の検査で罪に問われたのか。
+    telops:
+    - {text: "検査する側にいた男が なぜ検査で罪に？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 検査する側が、検査で！？
+# ---- 2002年10月・竹中チーム（30秒以内。著書の言葉はナレで出どころを言う。竹中平蔵の台詞・顔は出さない） ----
+- id: card2002
+  title: ''
+  background: nb_card_2002
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2002年10月、霞が関の金融庁。竹中平蔵金融相のプロジェクトチームが集まります。
+    reading: にせん にねん じゅうがつ、かすみがせきの きんゆうちょう。たけなか へいぞう きんゆうしょうの ぷろじぇくと ちーむが あつまります。
+- id: ch1_team
+  title: 検査する側
+  background: nb_kinyucho
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村代表, emotion: normal}
+  - {who: shokuin, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: メンバーの1人は日銀出身の金融コンサルタント、木村剛。40歳です。
+    reading: めんばーの ひとりわ にちぎん しゅっしんの きんゆう こんさるたんと、きむら たけし。よんじゅっさいです。
+  - speaker: shokuin
+    emotion: normal
+    text: 大手銀行の貸し倒れへの備えを、厳しく調べます。
+  - speaker: reimu
+    text: 木村はのちに、翌年3月の著書でこう書きます。
+    reading: きむらわ のちに、よくねん さんがつの ちょしょで こう かきます。
+  - speaker: zundamon
+    emotion: normal
+    text: 一の矢で逃げられても、二の矢、三の矢で仕留められるようになっている
+    telops:
+    - {text: "木村の著書「二の矢、三の矢で仕留められる」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 金融問題というものは、すべからく[『信頼』|シンライ]の問題です
+  - speaker: reimu
+    text: 8年後に初めてペイオフが使われる銀行を作るのがこの男だとは、まだ誰も思っていません。
+    reading: はちねんごに はじめて ぺいおふが つかわれる ぎんこうお つくるのが この おとこだとわ、まだ だれも おもって いません。
+# ---- 2003年2月・東京青年会議所の例会（B の言葉なので「とされます」） ----
+- id: ch2_reikai
+  title: 20億円集めれば
+  background: nb_reikai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村代表, emotion: happy}
+  - {who: keieisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2003年2月、東京青年会議所の例会。木村は、こう語ったとされます。
+    reading: にせん さんねん にがつ、とうきょう せいねん かいぎしょの れいかい。きむらわ こう かたったと されます。
+  - speaker: zundamon
+    emotion: happy
+    text: 20億円集めれば銀行をすぐに作れる。
+  - speaker: keieisha
+    emotion: surprised
+    text: 20億円で、銀行が！？
+# ---- 2004年4月・開業の窓口（名前の無い行員と客。定期だけ・決済なし・年約2%＝毎年約20万円。2:00 までに行き先へ） ----
+- id: card2004
+  title: ''
+  background: nb_card_2004
+  cuts:
+  - speaker: reimu
+    text: 2004年4月、東京・大手町。日本振興銀行が開業します。
+    reading: にせん よねん しがつ、とうきょう おおてまち。にほん しんこう ぎんこうが かいぎょう します。
+- id: ch3_madoguchi
+  title: 定期預金だけの銀行
+  background: nb_madoguchi
+  stage:
+  - {who: koin, x: 0.12, flip: true, emotion: normal}
+  - {who: kyaku, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: kyaku
+    emotion: normal
+    text: 普通預金の口座を、作りたいんですけど。
+  - speaker: koin
+    emotion: normal
+    text: 普通預金は、ございません。
+  - speaker: kyaku
+    emotion: surprised
+    text: え？ じゃあ、公共料金の引き落としは？
+  - speaker: koin
+    emotion: normal
+    text: できません。振り込みも、承っておりません。
+  - speaker: kyaku
+    emotion: angry
+    text: 銀行なのに、何ができるんですか！？
+    se: zukko
+  - speaker: koin
+    emotion: happy
+    text: '[定期預金|ていきよきん]だけです。そのかわり、金利は高めです。'
+  - speaker: kyaku
+    emotion: normal
+    text: 1000万円、預けたら？
+  - speaker: reimu
+    text: この銀行の10年の定期は、一時は年約2%。1000万円なら、毎年約20万円の利息です。
+    reading: この ぎんこうの じゅうねんの ていきわ、いちじわ ねん やく にぱーせんと。いっせんまんえん なら、まいとし やく にじゅうまんえんの りそくです。
+    telops:
+    - {text: "定期だけ・一時は年約2%", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: kyaku
+    emotion: surprised
+    text: そのお[金|かね]、どこに貸すんです？
+  - speaker: koin
+    emotion: normal
+    text: 中小企業です。担保も保証人も、要りません。
+  - speaker: reimu
+    text: 定期預金だけの銀行は、集めたお金をどこへ回したのか。のちの行き先の1つは、商工ローンの債権でした。
+    reading: ていき よきん だけの ぎんこうわ、あつめた おかねお どこえ まわしたのか。のちの いきさきの ひとつわ、しょうこう ろーんの さいけんでした。
+# ---- 2004年11月〜2005年5月・内紛と社長（創業メンバーは名前も台詞も出さない。会見の言葉は数字の読み上げまで） ----
+- id: ch4_naifun
+  title: 1年余りで2度の交代
+  background: nb_kaigi
+  bgm: curious
+  stage:
+  - {who: koin, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2004年11月。内部の書類を持ち出したとして創業メンバーが解雇され、のちに木村を告訴します。
+    reading: にせん よねん じゅういちがつ。ないぶの しょるいお もちだしたと して そうぎょう めんばーが かいこ され、のちに きむらお こくそ します。
+  - speaker: shinjin
+    emotion: surprised
+    text: 開業から、まだ半年ですよ！？
+  - speaker: koin
+    emotion: normal
+    text: その人が、経営陣の解任を求めてるんだ。
+- id: ch4_shacho
+  title: ''
+  background: nb_kaiken
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村社長, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2005年の元日、木村が社長に就きます。4日の会見では、解任案の否決に自信を見せます。
+    reading: にせん ごねんの がんじつ、きむらが しゃちょうに つきます。よっかの かいけんでわ、かいにんあんの ひけつに じしんお みせます。
+  - speaker: zundamon
+    emotion: happy
+    text: 多くの株主に理解してもらっている
+- id: ch4_kessan
+  title: ''
+  background: nb_kaigi
+  stage:
+  - {who: koin, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、3月期の決算です。赤字が19億円……。
+  - speaker: koin
+    emotion: sad
+    text: 貸出は118億円。当初の目標は182億円だった。
+  - speaker: shinjin
+    emotion: sad
+    text: 目標の、[3分の2|さんぶんのに]にも届かない……。
+    beat: true
+  - speaker: koin
+    emotion: normal
+    text: 社長は6月の総会のあと、会長に退くそうだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 開業から1年余りで、トップが2度替わるんですか！？
+  - speaker: koin
+    emotion: normal
+    text: 銀行を検査する側だった人が、今度は検査される銀行の会長か。
+# ---- 2006年1月・1兆円の構想（ブログの原文は未見。日経の要約をナレで） ----
+- id: ch5_icchoen
+  title: 1兆円の構想
+  background: nb_kaigi
+  stage:
+  - {who: koin, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2006年1月。会長の木村はブログに、2012年に1兆円規模の金融グループにする構想を書きます。
+    reading: にせん ろくねん いちがつ。かいちょうの きむらわ ぶろぐに、にせん じゅうにねんに いっちょうえん きぼの きんゆう ぐるーぷに する こうそうお かきます。
+  - speaker: shinjin
+    emotion: surprised
+    text: 1兆円！？ 去年の春の貸出は、118億円ですよ！
+  - speaker: koin
+    emotion: normal
+    text: ゼロを、2つ足すだけだ。
+  - speaker: shinjin
+    emotion: angry
+    text: 足し算みたいに、言わないでください！
+    se: tsukkomi
+  - speaker: koin
+    emotion: happy
+    text: 金利が高いから、預金は集まる。
+  - speaker: shinjin
+    emotion: normal
+    text: 問題は、どこに貸すかですね……。
+  - speaker: reimu
+    text: 1兆円を目指した銀行に、やがて金融庁の検査が入ります。検査する側だった男は、そのとき何をしたのか。
+    reading: いっちょうえんお めざした ぎんこうに、やがて きんゆうちょうの けんさが はいります。けんさ する がわだった おとこわ、その とき なにお したのか。
+# ---- 2007年12月〜・商工ローンの債権を額面で（連帯保証人が SFCG、手数料は訴えと処分の事実の範囲） ----
+- id: ch6_sfcg
+  title: 額面で買う
+  background: nb_kaigi
+  stage:
+  - {who: koin, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 2007年12月。銀行は商工ローン大手のSFCGから、貸付の債権を買い始めます。
+    reading: にせん ななねん じゅうにがつ。ぎんこうわ しょうこう ろーん おおての えすえふしーじーから、かしつけの さいけんお かいはじめます。
+  - speaker: shinjin
+    emotion: normal
+    text: 先輩、これSFCGの貸付の束ですよね。いくらで買うんです？
+  - speaker: koin
+    emotion: normal
+    text: '[額面|がくめん]で。'
+  - speaker: shinjin
+    emotion: surprised
+    text: '[額面|がくめん]って、書いてある金額のままですか！？'
+  - speaker: koin
+    emotion: normal
+    text: そうだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 返ってこない貸付が、混じってたら……。
+  - speaker: koin
+    emotion: normal
+    text: 保証が付いてる。SFCGのな。
+  - speaker: shinjin
+    emotion: angry
+    text: 売った会社が、自分で保証するんですか！
+    se: hammer
+  - speaker: koin
+    emotion: happy
+    text: 手数料も入る。うちには、悪い話じゃない。
+  - speaker: reimu
+    text: 買い取りは17回、総額1705億円。売り手のSFCGは、2009年に破綻します。
+    reading: かいとりわ じゅうななかい、そうがく せんななひゃくごおくえん。うりての えすえふしーじーわ、にせん きゅうねんに はたん します。
+    telops:
+    - {text: "額面で17回・1705億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 預金保険機構はのちに、これをSFCGへの実質的な信用供与で破綻の大きな原因の一つとします。
+    reading: よきん ほけん きこうわ のちに、これお えすえふしーじーえの じっしつてきな しんよう きょうよで はたんの おおきな げんいんの ひとつと します。
+# ---- 2008年7月・中小企業振興ネットワーク（看板の社名は出さない。外れる看板＝のちの倒産、社数は言わない） ----
+- id: ch7_rouka
+  title: 仲間の会社の輪
+  background: nb_rouka
+  stage:
+  - {who: koin, x: 0.12, flip: true, emotion: happy}
+  - {who: shinjin, x: 0.88, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2008年7月。銀行を中心に融資先が集まる、中小企業振興ネットワークができます。
+    reading: にせん はちねん しちがつ。ぎんこうお ちゅうしんに ゆうしさきが あつまる、ちゅうしょう きぎょう しんこう ねっとわーくが できます。
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、この看板は全部うちの融資先ですか。
+  - speaker: koin
+    emotion: happy
+    text: ネットワークの会員だ。仲間の輪だよ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 仲間って、何をするんです？
+  - speaker: koin
+    emotion: normal
+    text: 会員どうしで、お[金|かね]を回し合う。
+  - speaker: shinjin
+    emotion: thinking
+    text: でも1社に貸せる額には、上限がありますよね。
+  - speaker: koin
+    emotion: normal
+    text: ……1社なら、な。
+    beat: true
+  - speaker: reimu
+    text: 輪の中からも、のちに倒れる会社が出ていきます。
+    reading: わの なかからも、のちに たおれる かいしゃが でて いきます。
+    background: nb_rouka_kara
+# ---- 今の部屋（行き先は2つ。迂回融資は特別調査委員会の公表どおり。お年玉の小さな回収） ----
+- id: heya1
+  title: ''
+  background: nb_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: '[定期預金|ていきよきん]のお[金|かね]が、[商工ローン|しょうこうローン]の[債権|さいけん]と仲間の会社に行ったのだ！？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2010年6月末、ネットワークへの融資は2308億円。貸出全体の半分を超えていたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 半分も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そのネットワークの理事長は、木村だったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 自分が理事長の輪に、半分も……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行が置いた特別調査委員会が、のちに指摘したの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 大口融資の規制を逃れるため、会員企業の間で[迂回融資|うかいゆうし]を繰り返していたって。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[迂回融資|うかいゆうし]って？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 別の会社を間に通して、本当の貸し先が見えないように貸すことよ。
+  - speaker: zundamon
+    emotion: angry
+    text: 上限があっても、横から通り抜けられるなんて！
+  - speaker: tsumugi
+    emotion: normal
+    text: 毎年20万円の利息を約束したお[金|かね]が、こういう所へ流れたの。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのお年玉も、そこへ行くところだったのだ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして2009年、この銀行に金融庁の検査が来るの。
+  - speaker: zundamon
+    emotion: happy
+    text: 検査する側だった人の銀行なら、楽勝なのだ。
+    se: manuke
+  - speaker: tsumugi
+    emotion: thinking
+    text: 楽勝どころか、メールが消えたの。
+# ---- 2009年6月〜9月・消えたメール（起訴の発表の範囲。木村の指示の台詞は作らない。執行役・検査官は名前の無いモブ） ----
+- id: card2009
+  title: ''
+  background: nb_card_2009
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2009年6月。金融庁の立入検査が、すぐそこまで来ていました。
+    reading: にせん きゅうねん ろくがつ。きんゆうちょうの たちいり けんさが、すぐ そこまで きて いました。
+- id: ch8_server
+  title: 消えたメール
+  background: nb_server
+  stage:
+  - {who: shikko, x: 0.12, flip: true, emotion: normal}
+  cuts:
+  - speaker: shikko
+    emotion: normal
+    text: 検査官が見るメールは、このサーバーか……。
+  - speaker: reimu
+    text: 起訴の内容では、6月15日ごろにメール285件が消されます。検査が始まるのは、翌日でした。
+    reading: きその ないようでわ、ろくがつ じゅうごにち ごろに めーる にひゃくはちじゅうごけんが けされます。けんさが はじまるのわ、よくじつでした。
+    background: nb_server_kara
+  - speaker: reimu
+    text: 8月にも、さらに438件。合わせて700件余りでした。
+    reading: はちがつにも、さらに よんひゃくさんじゅうはっけん。あわせて ななひゃっけん あまりでした。
+    telops:
+    - {text: "消えたメール　700件余り", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: ch8_kensa
+  title: ''
+  background: nb_kaigi
+  stage:
+  - {who: kensakan, x: 0.14, flip: true, emotion: normal}
+  - {who: shikko, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kensakan
+    emotion: normal
+    text: この時期のメールが、抜けていますね。
+  - speaker: shikko
+    emotion: normal
+    text: 抽出の作業で、事務担当者が誤りまして……。
+  - speaker: kensakan
+    emotion: normal
+    text: 抜けているのは、決まった人が送ったメールばかりですね。
+    se: tenten
+  - speaker: shikko
+    emotion: sad
+    text: ……事務担当者の、誤りです。
+  - speaker: kensakan
+    emotion: normal
+    text: では、元のメールと突き合わせます。
+  - speaker: shikko
+    emotion: sad
+    text: ……はい。
+  - speaker: reimu
+    text: 判決はのちに、木村が削除を指示したと認めます。消えたメールには、何があったのか。
+    reading: はんけつわ のちに、きむらが さくじょお しじ したと みとめます。きえた めーるにわ、なにが あったのか。
+# ---- 2010年3月〜7月・85億円、辞任、処分、逮捕（民事の判決の範囲。逮捕は記者とナレだけ） ----
+- id: card2010
+  title: ''
+  background: nb_card_2010
+  cuts:
+  - speaker: reimu
+    text: 2010年3月。約9か月に及んだ検査が終わります。
+    reading: にせん じゅうねん さんがつ。やく きゅうかげつに およんだ けんさが おわります。
+- id: ch9_85oku
+  title: 85億円の融資
+  background: nb_kaigi
+  stage:
+  - {who: koin, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、[中小企業保証機構|ちゅうしょうきぎょうほしょうきこう]に85億円の融資です。
+  - speaker: koin
+    emotion: normal
+    text: ネットワークの、中核の会社だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: あそこ、大きな債務超過ですよね！？
+  - speaker: koin
+    emotion: sad
+    text: ……決まったことだ。
+  - speaker: reimu
+    text: 会社は約7か月後に破綻。民事の判決はのちに、融資の時点で返済能力が無いと木村が認識していたと認めます。
+    reading: かいしゃわ やく ななかげつごに はたん。みんじの はんけつわ のちに、ゆうしの じてんで へんさい のうりょくが ないと きむらが にんしき して いたと みとめます。
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、木村会長が辞めました。
+    background: nb_kaigi_akaji
+  - speaker: koin
+    emotion: sad
+    text: 3月期は、51億円の赤字だ。
+  - speaker: shinjin
+    emotion: sad
+    text: 1兆円の、はずが……。
+    beat: true
+- id: ch10_shobun
+  title: ''
+  background: nb_kaigi_akaji
+  stage:
+  - {who: koin, x: 0.14, flip: true, emotion: sad}
+  - {who: shinjin, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 5月27日、金融庁は業務の一部停止を命じます。理由には、検査の忌避と出資法違反の強い疑いが並びました。
+    reading: ごがつ にじゅうしちにち、きんゆうちょうわ ぎょうむの いちぶ ていしお めいじます。りゆうにわ、けんさの きひと しゅっしほう いはんの つよい うたがいが ならびました。
+  - speaker: shinjin
+    emotion: thinking
+    text: 出資法違反の疑いって、何のことですか。
+  - speaker: koin
+    emotion: sad
+    text: 貸金業者から買った[債権|さいけん]の、手数料だ。金融庁は年利に直すと45.7%とみた。
+  - speaker: shinjin
+    emotion: surprised
+    text: 上限は、29.2%ですよね！？
+- id: ch10_sosaku
+  title: ''
+  background: nb_honten
+  stage:
+  - {who: shacho, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 6月11日には刑事告発と家宅捜索。社長は、こう認めます。
+    reading: ろくがつ じゅういちにちにわ けいじ こくはつと かたく そうさく。しゃちょうわ、こう みとめます。
+  - speaker: shacho
+    emotion: sad
+    text: メールの削除はあった
+- id: ch10_taiho
+  title: ''
+  background: nb_keisatsu
+  bgm: serious
+  stage:
+  - {who: kisha, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 速報です。[日本振興銀行|にほんしんこうぎんこう]の[木村剛|キムラタケシ]・前会長ら5人が、逮捕されました！
+    se: don
+  - speaker: kisha
+    emotion: normal
+    text: 疑いは[銀行法|ぎんこうほう]違反、[検査忌避|けんさきひ]です。
+  - speaker: reimu
+    text: 7月14日。8年前、銀行を厳しく検査する側にいた男でした。
+    reading: しちがつ じゅうよっか。はちねんまえ、ぎんこうお きびしく けんさ する がわに いた おとこでした。
+# ---- 今の部屋（逮捕の疑いは検査忌避。融資や決算ではない。逮捕と有罪を並べない） ----
+- id: heya3
+  title: ''
+  background: nb_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 検査する側だった人が、検査を妨げた疑いで逮捕……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 疑いは、メールを消して検査を妨げたこと。融資や決算の疑いでは、ないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: メールだけ……？
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、銀行は大丈夫なの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 逮捕から2か月後。ある金曜日の朝に、それは起きるの。
+# ---- 2010年9月10日（金）の朝（全体の45〜50%。木村は勾留中なので出さない） ----
+- id: ch11_yoake
+  title: 金曜の朝
+  background: nb_honten_yoake
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 9月10日、金曜日の午前6時2分。振興銀行の取締役会が始まります。
+    reading: くがつ とおか、きんようびの ごぜん ろくじ にふん。しんこう ぎんこうの とりしまりやくかいが はじまります。
+  - speaker: reimu
+    text: 終わると同時に、銀行は申し出ます。その財産をもって債務を完済することができない。
+    reading: おわると どうじに、ぎんこうわ もうしでます。その ざいさんお もって さいむお かんさい する ことが できない。
+  - speaker: reimu
+    text: その朝、木村は警察署の中にいました。
+    reading: その あさ、きむらわ けいさつしょの なかに いました。
+- id: ch11_shutter
+  title: ''
+  background: nb_honten
+  stage:
+  - {who: yoho, x: 0.14, flip: true, emotion: normal}
+  - {who: koin, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: yoho
+    emotion: normal
+    text: '[預金保険機構|よきんほけんきこう]です。きょうから、この銀行を管理します。'
+  - speaker: koin
+    emotion: surprised
+    text: お店は……開けないんですか。
+  - speaker: yoho
+    emotion: normal
+    text: 開けません。
+    background: nb_shutter
+  - speaker: koin
+    emotion: sad
+    text: 行員は、みんな来てるのに……。
+  - speaker: koin
+    emotion: sad
+    text: 預金は、どうなるんですか。
+  - speaker: yoho
+    emotion: normal
+    text: 元本1000万円とその利息までは、守られます。
+    telops:
+    - {text: "日本で初めてのペイオフ", size: lg, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: koin
+    emotion: sad
+    text: 超えた分は？
+  - speaker: yoho
+    emotion: normal
+    text: 残った財産から、分けて払うことになります。
+  - speaker: koin
+    emotion: sad
+    text: いつ、どれだけ……。
+  - speaker: yoho
+    emotion: normal
+    text: それは、まだ分かりません。
+- id: ch11_kaiken
+  title: ''
+  background: nb_kaiken
+  stage:
+  - {who: fukudaijin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10時15分、金融庁の会見。早朝に処分した理由を問われ、副大臣はこう答えます。
+    reading: じゅうじ じゅうごふん、きんゆうちょうの かいけん。そうちょうに しょぶん した りゆうお とわれ、ふくだいじんわ こう こたえます。
+  - speaker: fukudaijin
+    emotion: normal
+    text: '[金月処理|きんげつしょり]と一般には言われておりますが、'
+  - speaker: fukudaijin
+    emotion: normal
+    text: 結果として金曜の朝からの処理になったということだと認識しています。
+- id: ch11_egami
+  title: ''
+  background: nb_kaiken
+  stage:
+  - {who: egami, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 有楽町の預金保険機構では、7月から社長を務める作家の江上剛が頭を下げます。
+    reading: ゆうらくちょうの よきん ほけん きこうでわ、しちがつから しゃちょうお つとめる さっかの えがみ ごうが あたまお さげます。
+  - speaker: egami
+    emotion: sad
+    text: 預金者や融資先などに深くおわびする
+# ---- 9月12日（日）名寄せ・13日（月）営業再開（預金者は名前の無いモブ。笑いにしない） ----
+- id: ch12_nayose
+  title: 名寄せ
+  background: nb_kaigi_akaji
+  stage:
+  - {who: yoho, x: 0.14, flip: true, emotion: normal}
+  - {who: yoho2, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月12日、日曜日。預金保険機構の職員が、預金者の名簿を突き合わせます。
+    reading: くがつ じゅうににち、にちようび。よきん ほけん きこうの しょくいんが、よきんしゃの めいぼお つきあわせます。
+  - speaker: yoho
+    emotion: normal
+    text: 月曜の朝までに、全員分だ。
+  - speaker: yoho2
+    emotion: normal
+    text: この人の定期、本店と支店に分かれてます。
+  - speaker: yoho
+    emotion: normal
+    text: 足すと？
+  - speaker: yoho2
+    emotion: surprised
+    text: ……1000万円を、超えます。
+  - speaker: yoho
+    emotion: normal
+    text: 同じ銀行の預金は、1人ずつ足して数える。それが[名寄せ|なよせ]だ。
+- id: ch12_getsuyo
+  title: ''
+  background: nb_madoguchi
+  stage:
+  - {who: koin, x: 0.12, flip: true, emotion: normal}
+  - {who: kyaku, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 9月13日、月曜日の午前9時。本店など16の店が開きます。
+    reading: くがつ じゅうさんにち、げつようびの ごぜん くじ。ほんてんなど じゅうろくの みせが ひらきます。
+  - speaker: kyaku
+    emotion: sad
+    text: 預けたお[金|かね]は、返してもらえるんですか。
+    background: nb_madoguchi_retsu
+  - speaker: koin
+    emotion: normal
+    text: 1000万円までは、お振り込みでお返しします。
+  - speaker: kyaku
+    emotion: sad
+    text: 超えた分は……。
+  - speaker: koin
+    emotion: sad
+    text: あとから、分けてのお支払いになります。
+  - speaker: kyaku
+    emotion: sad
+    text: 全部じゃ、ないんですか……。
+  - speaker: koin
+    emotion: sad
+    text: ……申し訳ありません。
+  - speaker: koin
+    emotion: normal
+    text: 電話は鳴りやまないけど、窓口は落ち着いてる……。
+# ---- 今の部屋（名寄せ後の確定値。0.2〜0.3%は受け皿へ移ったあとの見込み。概算払25%と資産の評価は12月7日＝会見の2日前） ----
+- id: heya2
+  title: 6400億円が2200億円
+  background: nb_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: これが、[日本|にほん]で初めてのペイオフ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[名寄せ|なよせ]のあと、1000万円を超えていたのは3423人と決まったわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 預金者の2.7%。超えた部分は、合わせて110億円よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 守られた定期も、受け皿では大手並みの0.2から0.3%に下がる見込みと報じられたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 毎年20万円が、2〜3万円に！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 超えた110億円は、戻ってこないの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行に残った財産から、少しずつ返されるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 12月、[預金保険機構|よきんほけんきこう]はまず25%を先に払うと決めたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 25%だけ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻の日の帳簿で6400億円の財産を、機構は売るなら2200億円と見積もったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[商工ローン|しょうこうローン]から買った[債権|さいけん]は、過払いのおそれでゼロの評価よ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: '[額面|がくめん]で買ったのに、ゼロ！？'
+    se: gaan
+  - speaker: tsumugi
+    emotion: thinking
+    text: この数字が出たのは、あの会見の2日前よ。
+  - speaker: zundamon
+    emotion: sad
+    text: そのあとで、あの会見だったのだ……。
+    beat: true
+# ---- 2010年12月8日・保釈、9日・会見の本編版（言葉は台帳の3つだけ。並びは記事どおり） ----
+- id: ch13_hoshaku
+  title: 保釈の翌日
+  background: nb_keisatsu
+  bgm: serious
+  stage:
+  - {who: kisha, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 8月に起訴された木村は12月8日、勾留されていた麹町署から保釈されます。
+    reading: はちがつに きそ された きむらわ じゅうにがつ ようか、こうりゅう されて いた こうじまちしょから ほしゃく されます。
+  - speaker: kisha
+    emotion: normal
+    text: 逮捕から約5か月。保釈保証金は、1000万円です。
+- id: ch13_kaiken
+  title: ''
+  background: nb_kaiken
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村元会長, emotion: sad}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日の会見。木村はそれまで否認していた起訴の内容を大筋で認め、指示の仕方の一部は争うとしました。
+    reading: よくじつの かいけん。きむらわ それまで ひにん して いた きその ないようお おおすじで みとめ、しじの しかたの いちぶわ あらそうと しました。
+  - speaker: zundamon
+    emotion: sad
+    text: 私の力不足で、道義的な責任は痛感している
+  - speaker: zundamon
+    emotion: normal
+    text: 融資や決算が不適切だったとは考えていない
+  - speaker: zundamon
+    emotion: sad
+    text: 金融という世界から距離をおいて何をすべきか考えたい
+  - speaker: reimu
+    text: 融資や決算は不適切ではなかった、と彼は言います。では、なぜメールは消されたのか。
+    reading: ゆうしや けっさんわ ふてきせつでわ なかったと かれわ いいます。でわ、なぜ めーるわ けされたのか。
+# ---- 2012年3月16日・判決（裁判長は名前を出さない。言葉は判決の2つだけ。木村は台詞なし） ----
+- id: card2012
+  title: ''
+  background: nb_card_2012
+  cuts:
+  - speaker: reimu
+    text: 2012年3月16日、東京地裁。49歳の木村に、判決が言い渡されます。
+    reading: にせん じゅうにねん さんがつ じゅうろくにち、とうきょう ちさい。よんじゅうきゅうさいの きむらに、はんけつが いいわたされます。
+- id: ch14_houtei
+  title: 悪質というほかない
+  background: nb_houtei
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 木村, emotion: sad}
+  - {who: saibancho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 懲役1年、執行猶予3年。求刑は、懲役1年でした。
+    reading: ちょうえき いちねん、しっこう ゆうよ さんねん。きゅうけいわ、ちょうえき いちねんでした。
+  - speaker: saibancho
+    emotion: normal
+    text: 検査の実効性を失わせる行為を組織的に[行|おこな]っており、悪質というほかない
+    se: don
+    telops:
+    - {text: "東京地裁「悪質というほかない」", size: sm, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 積極的かつ主導的に犯行に関与した責任は重い
+  - speaker: reimu
+    text: 積極的に指示する意図はなかった、という弁護側の主張は退けられました。刑は控訴されずに確定したとされます。
+    reading: せっきょくてきに しじ する いとわ なかったと いう べんごがわの しゅちょうわ しりぞけられました。けいわ こうそ されずに かくてい したと されます。
+  - speaker: reimu
+    text: 罪に問われたのは、メールを消したことでした。融資でも、決算でもありません。
+    reading: つみに とわれたのわ、めーるお けした ことでした。ゆうしでも、けっさんでも ありません。
+# ---- 2012〜2016年・超えた分の弁済（預金者は名前の無いモブ。率は預金保険機構の公表どおり） ----
+- id: ch15_bensai
+  title: 6年後の61%
+  background: nb_shinbun
+  bgm: 223am
+  stage:
+  - {who: yokinsha, x: 0.91, emotion: sad}
+  cuts:
+  - speaker: yokinsha
+    emotion: sad
+    text: 2012年の春。超えた分の戻りは、合わせて39%……。
+  - speaker: yokinsha
+    emotion: sad
+    text: 2014年。合わせて58%。
+  - speaker: yokinsha
+    emotion: sad
+    text: 2016年。これが最後で、合わせて約61%か。
+  - speaker: yokinsha
+    emotion: sad
+    text: 6年かかって、4割は戻らないままだ。
+# ---- 2016〜2017年・民事（判決の言葉は記事どおり。家族への財産の話は使わない） ----
+- id: card2016
+  title: ''
+  background: nb_card_2016
+  cuts:
+  - speaker: reimu
+    text: 2016年9月。東京地裁で、民事の判決が出ます。
+    reading: にせん じゅうろくねん くがつ。とうきょう ちさいで、みんじの はんけつが でます。
+- id: ch15_minji
+  title: 民事の37億円
+  background: nb_saibansho_mae
+  stage:
+  - {who: kisha, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 東京地裁が、木村元会長に約37億5千万円の賠償を命じました！
+  - speaker: kisha
+    emotion: normal
+    text: 判決は、木村氏はSFCGの極めて危険な経営状況を認識していたと指摘。
+  - speaker: kisha
+    emotion: normal
+    text: 取締役会で[債権|さいけん]の買い取りを承認したのは、[善管注意義務違反|ぜんかんちゅういぎむいはん]だったとしています。
+  - speaker: kisha
+    emotion: normal
+    text: ほかの元役員6人とは和解。争ったのは、木村元会長だけでした。
+  - speaker: reimu
+    text: 2017年9月、二審も一審を支持しました。
+    reading: にせん じゅうななねん くがつ、にしんも いっしんお しじ しました。
+# ---- 論争1：メールだけの罪？（刑事は検査忌避だけ。融資の責任は民事） ----
+- id: ronso1
+  title: メールだけの罪？
+  background: nb_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ メールを消しただけで捕まるなんて、形だけの罪だって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 確かに、刑事の罪は[検査忌避|けんさきひ]だけ。融資や決算は、罪に問われていないわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも判決は、消されたメールに不適切な取引を推測させるものもあったとしたの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 金融庁も、違法の疑いのある貸金業者との取引の資料が入っていたとしたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 消えたメールに、それが……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 照らし合わせるのに手間取って、検査は約9か月に延びたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 消したせいで、かえって長引いたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: そしてお[金|かね]の使い方の責任は、民事の裁判で問われたわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 刑事はメール、お[金|かね]は民事……。
+    beat: true
+# ---- 論争2：国が作らせた銀行？（政治家の見方は主語を付けて1回。竹中平蔵の台詞・顔は出さない） ----
+- id: ronso2
+  title: 国のせい？
+  background: nb_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも、国のチームにいた人の銀行なのだ！ 国のせいなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 免許を出した国の責任を問う声は、確かにあったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 破綻の日、金融相の[自見|ジミ]庄三郎は会見でこう述べたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: やはり私は政治家として、当時の金融大臣の道義的責任は免れないと思っております
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、やっぱり！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、それは政治家としての見方よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大臣の談話は、[債権|さいけん]の買い取りと大口融資を急に増やした銀行をこう書いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 特異なビジネスモデルの[下|もと]で、それに見合った十分な与信審査管理を行わなかった
+  - speaker: tsumugi
+    emotion: normal
+    text: 特別調査委員会は、大きな引当金についてこう結論づけたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[木村剛|キムラタケシ]前会長が経営方針を拡大路線に変えたのが要因だ'
+  - speaker: tsumugi
+    emotion: normal
+    text: 刑事の罪で裁かれたのも、銀行の元役員たちと銀行そのものよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 免許より、そのあとの広げ方……。
+    beat: true
+# ---- 本当の注意点（高い金利の理由・超えた分が戻るまでの年数・名寄せ。1500万円は台帳の計算。助言にしない） ----
+- id: chui
+  title: 高い金利の理由
+  background: nb_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。ほかより金利が高い預金には、集める側の理由がある。
+  - speaker: zundamon
+    emotion: thinking
+    text: 理由って？
+  - speaker: tsumugi
+    emotion: normal
+    text: 年利約2%で集めた預金は、[商工ローン|しょうこうローン]の[債権|さいけん]を買うお[金|かね]にもなったわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 毎年20万円の利息の、出どころ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 高い金利を見たら、そのお[金|かね]の使い道を一度だけ調べてみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。1000万円を超えた分は、何年もかけて一部だけ戻るの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1500万円を1人で預けていたら、超えた500万円は3か月後に125万円。
+  - speaker: tsumugi
+    emotion: normal
+    text: 6年かけて、合わせて約305万円。約195万円は戻らない計算よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: すぐには、使えないってこと？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そう。戻る分も、何年も先なの。
+  - speaker: zundamon
+    emotion: sad
+    text: 6年も、待つのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。同じ銀行の口座は、足して数えられる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本店と支店に分けても、同じ銀行なら1人分よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 店を分けても、[名寄せ|なよせ]で見つかるんだ！
+# ---- 現代（2026年11月時点。木村のその後は言わない） ----
+- id: card2026
+  title: ''
+  background: nb_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。初めてのペイオフから、16年がたちました。
+    reading: にせん にじゅうろくねん。はじめての ぺいおふから、じゅうろくねんが たちました。
+- id: ima
+  title: 振興銀行のいま
+  background: nb_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[日本振興銀行|にほんしんこうぎんこう]は、いまどうなってるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: もう無いわ。全国に100を超えていた店は、2012年9月には拠点1つだけ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1つ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 店や預金の一部は受け皿の銀行に移り、2011年にその株をイオン銀行が譲り受けたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: イオン銀行は、引き継いだ側の別の銀行よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 残った会社も、2017年に清算が終わったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 超えた預金は、結局どれだけ削られたの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 日経によれば39%。41億円分よ。
+    telops:
+    - {text: "1000万円を超えた預金　39%・41億円分が戻らず", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 受け皿へ移すときには、[預金保険機構|よきんほけんきこう]が2226億円を援助したの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2226億円も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: この破綻で機構の立て直しが[鈍る|にぶる]として、2011年度の預金保険料は下げられなかったの。
+  - speaker: zundamon
+    emotion: sad
+    text: ほかの銀行の負担も、軽くならなかったのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 木村は2012年、検査を妨げた罪で[執行猶予|しっこうゆうよ]つきの有罪判決を受けたわ。
+# ---- 締め（お年玉の回収→高い金利の理由。著書の「信頼」と会見の「道義的な責任」を回収） ----
+- id: shime
+  title: ''
+  background: nb_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ お年玉は、金利のわけを調べてから預けるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: まず1億円を、本当に貯めてからね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 2003年の著書に、木村はこう書いていたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 金融問題というものは、すべからく[『信頼』|シンライ]の問題です
+  - speaker: tsumugi
+    emotion: thinking
+    text: 信頼の問題だと書いた男の銀行は、1000万円を超えた分の約4割を返せなかった。
+  - speaker: zundamon
+    emotion: sad
+    text: 道義的な責任は痛感しているって、言ってたのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 高い金利には、理由がある。預ける前に、一度だけ確かめてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
