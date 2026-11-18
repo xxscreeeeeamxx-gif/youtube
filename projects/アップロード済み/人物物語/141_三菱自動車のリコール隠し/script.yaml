@@ -1,0 +1,1341 @@
+meta:
+  title: 「知らなかったと責任を逃れることはできない」三菱自動車の会長、翌日に日産が34%出資を発表【ずんだもん解説】
+  slug: mitsubishi-masuko
+  hook_line: 隠しで潰れかけた三菱自動車を立て直した男の下で、なぜまた数字が分けられたのか。
+  summary: 2016年5月11日、燃費の不正で初めて会見に出た三菱自動車の会長、益子修は「経営責任は、知らなかったと責任を逃れることはできないと考えている。」と述べました。12年前、欠陥を隠して潰れかけたこの会社を立て直すため、三菱商事から来た人です。国に見せる分と見せない分に分けた苦情の紙、「整備のせい」とされた部品、5回引き上げられた燃費の目標。国の発表、判決を伝える報道、会社の資料をもとに、事故と裁判は人ごとに分けて、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 国土交通省「三菱ふそう製大型車のハブ破損に関するリコールについて」（2004年3月11日） https://www.mlit.go.jp/kisha/kisha04/09/090311_.html
+  - 国土交通省「三菱自動車製大型車に係る不正行為に対する対応について」（2004年5月6日） https://www.mlit.go.jp/kisha/kisha04/09/090506_.html
+  - 三菱自動車工業「アニュアルレポート2005」 https://www.mitsubishi-motors.com/content/dam/com/ir_jp/pdf/anual/annual2005.pdf
+  - 日産自動車「日産自動車と三菱自動車、戦略的アライアンスを締結」（2016年5月12日） https://global.nissannews.com/ja-JP/releases/160512-02-j
+  - 消費者庁 表示対策課「景品表示法の課徴金制度の運用状況について」（2017年6月27日） https://www.cao.go.jp/consumer/iinkai/2017/250/doc/20170627_shiryou1_1.pdf
+  - Car Watch「三菱自動車、燃費試験の不正問題で益子会長が会見」（2016年5月12日） https://car.watch.impress.co.jp/docs/news/20160512_756957.html
+  tags:
+  - 三菱自動車
+  - リコール隠し
+  - 益子修
+  - 燃費不正
+  - 三菱ふそう
+  - ハブ
+  - 河添克彦
+  - 三菱商事
+  - 日産
+  - 筆頭株主
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 燃費30.4
+    bottom: 国の値26.1
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: yakuin
+    label: 役員
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3440'
+  - id: yakuin2
+    label: 役員
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: senpai
+    label: 先輩
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#454a55'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: kensakan
+    label: 検査官
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kisha
+    label: 記者
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#6a5a48'
+  - id: kisha2
+    label: 記者
+    voice: 21
+    pitch: -0.02
+    outfit: suit
+    color: '#4a5a6a'
+  - id: kawasoe
+    label: 河添
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#3a3f4a'
+  - id: shain
+    label: 社員
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#3e5c4a'
+  - id: tencho
+    label: 店長
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#5a4a3a'
+  - id: tenin
+    label: 新人
+    voice: 8
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a7a'
+  - id: buka
+    label: 部下
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#4a5a7a'
+  - id: kaicho
+    label: 会長
+    voice: 13
+    pitch: -0.16
+    outfit: suit
+    color: '#1f2a3a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: jsenpai
+    label: 先輩
+    voice: 21
+    pitch: -0.08
+    outfit: work
+    color: '#5a6a7a'
+  - id: jshinjin
+    label: 新人
+    voice: 12
+    pitch: 0.02
+    outfit: work
+    color: '#7a8a9a'
+  - id: aikawa
+    label: 相川
+    voice: 11
+    pitch: -0.08
+    outfit: suit
+    color: '#2a3a4a'
+  - id: ghosn
+    label: ゴーン
+    voice: 13
+    pitch: 0.0
+    outfit: suit
+    color: '#1a2a3a'
+scenes:
+# ---- 先出し（2016年5月11日・国交省の会見室。記者の問いは作らない。並びの分からない言葉を一問一答にしない。笑いの SE なし） ----
+- id: co_kaiken
+  title: ''
+  background: mm_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 益子, emotion: sad}
+  - {who: yakuin, x: 0.56, emotion: sad}
+  - {who: yakuin2, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2016年5月11日、東京・霞が関。三菱自動車の会長の益子修が、燃費の不正で初めて会見に出ます。
+    reading: にせん じゅうろくねん ごがつ じゅういちにち、とうきょう かすみがせき。みつびし じどうしゃの かいちょうの ますこ おさむが ねんぴの ふせいで はじめて かいけんに でます。
+  - speaker: zundamon
+    emotion: sad
+    text: 経営責任は、知らなかったと責任を逃れることはできないと考えている。
+  - speaker: zundamon
+    emotion: sad
+    text: なぜ[日本|にほん]向けで起きたのか。私も同じ疑問を持っているが……
+  - speaker: reimu
+    text: 記者に今回の説明で納得してもらえるのかと問われ、益子はこう答えます。
+    reading: きしゃに こんかいの せつめいで なっとく して もらえるのかと とわれ、ますこわ こう こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: 歯切れがわるいですね。これでは納得していただけると思いません
+  - speaker: reimu
+    text: 彼は12年前、欠陥を隠して潰れかけたこの会社を立て直すため三菱商事から来ました。
+    reading: かれわ じゅうにねん まえ、けっかんお かくして つぶれかけた この かいしゃお たてなおす ため みつびし しょうじから きました。
+  - speaker: reimu
+    text: 国に見せる数字と本当の数字。この会社がそれを分けたのは、これが3度目です。
+    reading: くにに みせる すうじと ほんとうの すうじ。この かいしゃが それお わけたのわ、これが さんどめです。
+  - speaker: reimu
+    text: 翌日、株の34%を日産が取ると発表されます。
+    reading: よくじつ、かぶの さんじゅうよん ぱーせんとお にっさんが とると はっぴょう されます。
+    telops:
+    - {text: "翌日　日産が34%出資を発表", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 今の部屋（都合のいい条件の5分。燃費の中身は本編で） ----
+- id: hook
+  title: ''
+  background: mm_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 家から駅まで、自転車で5分なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当に？
+  - speaker: zundamon
+    emotion: happy
+    text: 下り坂で追い風で、信号が全部青なら5分なのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを、ふだんの5分とは言わないの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年、車の燃費でそれに近いことが分かった会社があるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 隠しで潰れかけた会社を立て直した男の[下|もと]で、なぜまた数字が分けられたのか。
+    telops:
+    - {text: "立て直した男の下で なぜまた数字が？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 立て直した人の[下|もと]で、また！？
+# ---- 2000年・品質保証部の書類棚（P と H が何の略かは言わない。量の比べも言わない。2:00 までに「分けていた」へ） ----
+- id: card2000
+  title: ''
+  background: mm_card_2000
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2000年。三菱自動車の品質保証部には、お客さんの苦情の紙が集まっていました。
+    reading: にせん ねん。みつびし じどうしゃの ひんしつ ほしょうぶにわ、おきゃくさんの くじょうの かみが あつまって いました。
+- id: ch1_tana
+  title: 見せる箱、見せない箱
+  background: mm_tana
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.56, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: shinjin
+    emotion: normal
+    text: 先輩、この苦情の紙はPの箱とHの箱のどっちですか。
+  - speaker: senpai
+    emotion: normal
+    text: Pは、運輸省の監査が来たら見せる箱だ。
+  - speaker: shinjin
+    emotion: normal
+    text: Hは？
+  - speaker: senpai
+    emotion: normal
+    text: 見せない箱。
+  - speaker: shinjin
+    emotion: surprised
+    text: 見せない！？
+    beat: true
+  - speaker: shinjin
+    emotion: thinking
+    text: じゃあHの欠陥は、どうやって直すんです？
+  - speaker: senpai
+    emotion: normal
+    text: 販売店に頼んで、点検のついでに直してもらう。
+  - speaker: shinjin
+    emotion: sad
+    text: 国に届けずに、こっそり……。
+  - speaker: shinjin
+    emotion: thinking
+    text: それ、なんて呼ぶんです？
+  - speaker: senpai
+    emotion: normal
+    text: 社内じゃ、指示改修だ。
+  - speaker: reimu
+    text: この会社は苦情の紙を、国に見せる分と見せない分に分けていました。
+    reading: この かいしゃわ くじょうの かみお、くにに みせる ぶんと みせない ぶんに わけて いました。
+  - speaker: shinjin
+    emotion: normal
+    text: Hの箱は、監査の日はどこに置くんです？
+  - speaker: senpai
+    emotion: normal
+    text: ……更衣室。
+  - speaker: shinjin
+    emotion: surprised
+    text: 更衣室！？
+  - speaker: senpai
+    emotion: normal
+    text: ロッカーの中だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: ロッカーに、書類を入れるんですか！？
+    se: zukko
+  - speaker: senpai
+    emotion: normal
+    text: ……扉は、閉めておけ。
+    beat: true
+# ---- 2000年7月5日・抜き打ちの立入検査（ロッカー室は社内の調べ ※A の範囲。内部告発の人は描かない） ----
+- id: ch1_kensa
+  title: ''
+  background: mm_tana
+  stage:
+  - {who: kensakan, x: 0.12, flip: true, emotion: normal}
+  - {who: senpai, x: 0.56, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月5日。運輸省の検査官が、抜き打ちで本社と岡崎の技術センターに入ります。
+    reading: しちがつ いつか。うんゆしょうの けんさかんが、ぬきうちで ほんしゃと おかざきの ぎじゅつ せんたーに はいります。
+  - speaker: kensakan
+    emotion: normal
+    text: 運輸省です。苦情の記録を、見せてください。
+  - speaker: senpai
+    emotion: normal
+    text: ……こちらの棚です。
+  - speaker: kensakan
+    emotion: normal
+    text: この棚の苦情で、全部ですか。
+  - speaker: senpai
+    emotion: sad
+    text: ……はい。全部です。
+  - speaker: reimu
+    text: 会社がのちに調べると、苦情の一部はロッカー室に隠されていました。
+    reading: かいしゃが のちに しらべると、くじょうの いちぶわ ろっかーしつに かくされて いました。
+    background: mm_tana_kara
+  - speaker: reimu
+    text: 国に見せる箱と、見せない箱。4年後にこの会社の再建を任される男は、まだ三菱商事にいます。
+    reading: くにに みせる はこと みせない はこ。よねんごに この かいしゃの さいけんお まかされる おとこわ まだ みつびし しょうじに います。
+  - speaker: reimu
+    text: 16年後、同じ会社の軽自動車のカタログには燃費30.4。国の物差しで名乗れたのは、26.1でした。
+    reading: じゅうろくねんご、おなじ かいしゃの けいじどうしゃの かたろぐにわ ねんぴ さんじゅってん よん。くにの ものさしで なのれたのわ、にじゅうろくてん いちでした。
+  - speaker: reimu
+    text: 1年に1万km走ると、ガソリンは18リットルのポリタンク3本分ちがいます。
+    reading: いちねんに いちまん きろ はしると、がそりんわ じゅうはち りっとるの ぽりたんく さんぼんぶん ちがいます。
+    telops:
+    - {text: "カタログ30.4　国の物差しでは26.1", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2000年7月18日〜9月8日・連絡ミスから辞任（連絡ミスは会社の説明としてナレ。河添の台詞は会見の2つだけ） ----
+- id: ch2_mis
+  title: 連絡ミスから辞任へ
+  background: mm_honsha_kaiken
+  stage:
+  - {who: kisha2, x: 0.14, flip: true, emotion: normal}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 7月18日。運輸省の厳重注意を受けた会社は、会見で組織的な隠蔽ではなく業務上の連絡ミスと説明します。
+    reading: しちがつ じゅうはちにち。うんゆしょうの げんじゅう ちゅういお うけた かいしゃわ、かいけんで そしきてきな いんぺいでわ なく ぎょうむじょうの れんらく みすと せつめい します。
+  - speaker: kisha
+    emotion: thinking
+    text: 連絡ミス、ねえ……。
+  - speaker: kisha2
+    emotion: normal
+    text: 届け出が要る案件が、14件も見つかったのにな。
+  - speaker: kisha
+    emotion: surprised
+    text: 8日後には、50万台を超えるリコールなどを届け出た。
+  - speaker: kisha2
+    emotion: surprised
+    text: 組織的な隠蔽も、認めたぞ。
+  - speaker: kisha
+    emotion: thinking
+    text: 8日で、ミスが隠蔽に……。
+    beat: true
+- id: ch2_jinin
+  title: ''
+  background: mm_honsha_kaiken
+  stage:
+  - {who: kawasoe, x: 0.3, flip: true, emotion: normal}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 8月22日、[河添|カワソエ]社長の会見だ。辞任は否定するらしい。
+  - speaker: kawasoe
+    emotion: normal
+    text: 再び信頼される会社にするのが私の務め
+- id: ch2_rouka
+  title: ''
+  background: mm_rouka
+  stage:
+  - {who: kawasoe, x: 0.2, flip: true, emotion: sad}
+  - {who: kisha, x: 0.62, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 17日後の9月8日。運輸省に、[河添|カワソエ]社長が来た。
+  - speaker: kawasoe
+    emotion: sad
+    text: 一連の事件の責任をとって社長を辞任する
+  - speaker: kisha
+    emotion: normal
+    text: 務めると言ってから、17日か……。
+  - speaker: reimu
+    text: このとき会社が調べたのは、1998年4月以降の苦情だけ。残りは、4年後に出てきます。
+    reading: この とき かいしゃが しらべたのわ、せんきゅうひゃく きゅうじゅうはちねん しがつ いこうの くじょう だけ。のこりわ、よねんごに でて きます。
+# ---- 2002年1月10日・瀬谷（人のいない道路の遠景とナレだけ。SE・ボケなし。被害者の名前・年齢は出さない） ----
+- id: ch3_seya
+  title: 1月10日、瀬谷
+  background: mm_doro
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2002年1月10日、午後3時50分。横浜市瀬谷区の県道で、三菱製の大型車の左の前輪が外れます。
+    reading: にせん にねん いちがつ とおか、ごご さんじ ごじゅっぷん。よこはまし せやくの けんどうで、みつびしせいの おおがたしゃの ひだりの ぜんりんが はずれます。
+  - speaker: reimu
+    text: 歩いていた母子3人に当たります。母親が亡くなり、子ども2人がけがをしました。
+    reading: あるいて いた ぼし さんにんに あたります。ははおやが なくなり、こども ふたりが けがお しました。
+  - speaker: reimu
+    text: 車輪を取り付ける部品のハブが、輪切りに割れていました。1992年から数えて40件目です。
+    reading: しゃりんお とりつける ぶひんの はぶが、わぎりに われて いました。せんきゅうひゃく きゅうじゅうにねんから かぞえて よんじゅっけんめです。
+# ---- 1月〜2月・一生もの（品質保証部の先輩と新人。有罪になった元部長・元グループ長は出さない。笑いなし） ----
+- id: ch4_kaigi
+  title: 一生もの
+  background: mm_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: senpai, x: 0.12, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: shinjin
+    emotion: sad
+    text: 横浜の事故も、ハブが割れたそうです。
+  - speaker: shinjin
+    emotion: sad
+    text: ハブって、壊れるんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 壊れない。廃車まで持つ。だから、[一生もの|いっしょうもの]。
+  - speaker: shinjin
+    emotion: normal
+    text: 車検では、見るんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 見ない。[一生もの|いっしょうもの]だからな。
+  - speaker: shinjin
+    emotion: sad
+    text: でも、また割れたって……。
+  - speaker: senpai
+    emotion: normal
+    text: '[摩耗|まもう]だ。使う側の整備が悪い。'
+  - speaker: shinjin
+    emotion: normal
+    text: 最初に割れたのは、いつなんです？
+  - speaker: senpai
+    emotion: normal
+    text: 1992年だ。それからずっと、[摩耗|まもう]で通してきた。
+  - speaker: shinjin
+    emotion: normal
+    text: 外には、知らせてないんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 事故の情報は、社内だけの扱いだ。
+  - speaker: senpai
+    emotion: normal
+    text: 会社は、今回もリコールはしないそうだ。
+  - speaker: senpai
+    emotion: normal
+    text: 自主的に点検して、ハブを替える。
+  - speaker: shinjin
+    emotion: sad
+    text: ……届けないんですね。
+  - speaker: shinjin
+    emotion: sad
+    text: 同じ部品が何十回も割れて、それでも整備のせいなんですか……。
+  - speaker: reimu
+    text: 2月1日。会社は脱輪が相次ぐ原因について、国にうその報告をします。当時の罰は、20万円以下の罰金でした。
+    reading: にがつ ついたち。かいしゃわ だつりんが あいつぐ げんいんに ついて、くにに うその ほうこくお します。とうじの ばつわ、にじゅうまんえん いかの ばっきんでした。
+  - speaker: reimu
+    text: 10月には山口でも、三菱のトラックの運転手が亡くなります。会社は、これも整備のせいだとしました。
+    reading: じゅうがつにわ やまぐちでも、みつびしの とらっくの うんてんしゅが なくなります。かいしゃわ、これも せいびの せいだと しました。
+# ---- 2004年2月19日〜4月・筆頭株主として（共同声明の言葉は原文。笑いは数字の落差だけ） ----
+- id: card2004
+  title: ''
+  background: mm_card_2004
+  bgm: curious
+  cuts:
+  - speaker: reimu
+    text: 2004年2月19日。三菱自動車の筆頭株主と三菱グループの3社が、共同声明を出します。
+    reading: にせん よねん にがつ じゅうくにち。みつびし じどうしゃの ひっとう かぶぬしと みつびし ぐるーぷの さんしゃが、きょうどう せいめいお だします。
+- id: ch5_seimei
+  title: 筆頭株主として
+  background: mm_seimei
+  stage:
+  - {who: shain, x: 0.1, flip: true, emotion: happy}
+  - {who: senpai, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: ダイムラーは戦略的パートナーとしてまた[筆頭株主|ひっとうかぶぬし]として計画づくりを支援、だそうです。
+  - speaker: senpai
+    emotion: normal
+    text: ダイムラー・クライスラー。2000年に株の34%を取った会社だな。
+  - speaker: shain
+    emotion: happy
+    text: これで、ひと安心ですね。
+  - speaker: senpai
+    emotion: normal
+    text: ……だといいがな。
+  - speaker: shain
+    emotion: surprised
+    text: 先輩、3月11日です。三菱ふそうが、ハブのリコールを行うと。
+  - speaker: senpai
+    emotion: thinking
+    text: 去年分かれた、トラックとバスの会社か。
+  - speaker: senpai
+    emotion: sad
+    text: ハブの欠陥を、認めたのか……。
+  - speaker: shain
+    emotion: surprised
+    text: 先輩、4月です。ダイムラーが、増資も追加の支援もしないと。
+    background: mm_seimei_kara
+  - speaker: senpai
+    emotion: surprised
+    text: 2月に、[筆頭株主|ひっとうかぶぬし]として支援するって書いたよな！？
+  - speaker: shain
+    emotion: sad
+    text: 2か月で、欄が1つ空きました。
+    se: tenten
+# ---- 2004年5月〜7月・告発と逮捕、客のいない店（逮捕はナレだけ。販売は「半分を下回る月」と7月の6割減の範囲） ----
+- id: ch6_taiho
+  title: 告発と逮捕
+  background: mm_shinbun
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 5月6日、国はうその報告で会社と元役員らを告発。警察は横浜の事故の疑いも含め7人を逮捕。
+    reading: ごがつ むいか、くにわ うその ほうこくで かいしゃと もと やくいんらお こくはつ。けいさつわ よこはまの じこの うたがいも ふくめ しちにんお たいほ。
+- id: ch6_mise
+  title: 客のいない店
+  background: mm_hanbaiten
+  stage:
+  - {who: tencho, x: 0.14, flip: true, emotion: sad}
+  - {who: tenin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tenin
+    emotion: sad
+    text: 店長、きょうも展示の車を見に来た人はいません。
+  - speaker: tencho
+    emotion: sad
+    text: 今月のお客さんは、去年の半分もいない。
+  - speaker: tenin
+    emotion: normal
+    text: 点検の電話だけは、鳴りやまないです。
+  - speaker: tencho
+    emotion: sad
+    text: 2度目だ。乗用車でも、届けていなかった欠陥が26件あったそうだ。
+  - speaker: tenin
+    emotion: surprised
+    text: 乗用車まで！？
+  - speaker: tencho
+    emotion: sad
+    text: 6月には、元社長まで逮捕だ。山口の事故の疑いだそうだ。
+  - speaker: tenin
+    emotion: sad
+    text: 元社長まで……。
+  - speaker: tencho
+    emotion: sad
+    text: 7月の乗用車は、全国で前の年の6割減だと。
+  - speaker: tenin
+    emotion: sad
+    text: 6割……。
+  - speaker: tenin
+    emotion: sad
+    text: 売る電話より、謝る電話のほうが多いです……。
+    se: shobon
+# ---- 2004年6月・商事から来た男（生い立ちは1行。「やってくるよ」は商事が役員を送ると決まったときの部下への言葉） ----
+- id: ch7_shoji
+  title: 商事から来た男
+  background: mm_shoji
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 益子, emotion: normal}
+  - {who: buka, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2004年6月。益子修、55歳。1972年に三菱商事に入り、韓国やインドネシアで車を売ってきた人です。
+    reading: にせん よねん ろくがつ。ますこ おさむ、ごじゅうごさい。せんきゅうひゃく ななじゅうにねんに みつびし しょうじに はいり、かんこくや いんどねしあで くるまお うって きた ひとです。
+  - speaker: buka
+    emotion: surprised
+    text: 本部長、三菱自動車へ常務で行くって本当ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: 本当だ。海外の担当だよ。
+  - speaker: buka
+    emotion: thinking
+    text: いちばん苦しい会社ですよ……。
+  - speaker: zundamon
+    emotion: normal
+    text: やってくるよ。
+  - speaker: buka
+    emotion: sad
+    text: ……分かりました。
+- id: ch7_hitori
+  title: ''
+  background: mm_shoji
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 益子, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: ……失敗すれば、商事に戻っても、決していい目は見られない。
+  - speaker: zundamon
+    emotion: normal
+    text: そんなことは人にやらせちゃいけない。
+# ---- 2004年の暮れ・役員室（評伝の地の文と思ったことはナレで出どころを言う。「潰れる」は心の声の字幕で1回だけ） ----
+- id: ch7_kure
+  title: ''
+  background: mm_yakuinshitsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.38, flip: true, tag: 益子, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 評伝によれば、グループがつぎ込んだ5000億円は年末に底を突きます。益子は、こう思ったといいます。
+    reading: ひょうでんに よれば、ぐるーぷが つぎこんだ ごせんおくえんわ ねんまつに そこお つきます。ますこわ、こう おもったと いいます。
+    telops:
+    - {text: "益子の心の声「この会社は潰れる」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 2005年1月・社長指名（西岡は「明るくやれ」の1つだけ。電話は人事の発表のあと） ----
+- id: card2005
+  title: ''
+  background: mm_card_2005
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2005年1月。支援の分担で3社がもめるなか、三菱重工の会長の西岡喬が益子を呼びます。
+    reading: にせん ごねん いちがつ。しえんの ぶんたんで さんしゃが もめる なか、みつびし じゅうこうの かいちょうの にしおか たかしが ますこお よびます。
+- id: ch8_shimei
+  title: 明るくやれ
+  background: mm_yakuinshitsu
+  stage:
+  - {who: zundamon, x: 0.38, flip: true, tag: 益子, emotion: normal}
+  - {who: kaicho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kaicho
+    emotion: normal
+    text: 明るくやれ。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……明るく、ですか。
+  - speaker: zundamon
+    emotion: normal
+    text: ……はい。
+  - speaker: reimu
+    text: 社長への指名でした。評伝では、益子は内心できないと思ったといいます。就任は1月28日です。
+    reading: しゃちょうえの しめいでした。ひょうでんでわ、ますこわ ないしん できないと おもったと いいます。しゅうにんわ いちがつ にじゅうはちにちです。
+- id: ch8_denwa
+  title: ''
+  background: mm_yakuinshitsu
+  stage:
+  - {who: zundamon, x: 0.38, flip: true, tag: 益子, emotion: happy}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 発表の前、社長ではと聞いた記者を益子ははぐらかしていました。発表のあと、その記者に電話を入れます。
+    reading: はっぴょうの まえ、しゃちょうでわと きいた きしゃお ますこわ はぐらかして いました。はっぴょうの あと、その きしゃに でんわお いれます。
+  - speaker: zundamon
+    emotion: happy
+    text: ごめん。自分でオレだとは言えないじゃない
+  - speaker: kisha
+    emotion: surprised
+    text: 新しい社長から、おわびの電話……。
+    se: manuke
+  - speaker: reimu
+    text: その年の秋、年次報告書ではこう語っています。
+    reading: その としの あき、ねんじ ほうこくしょでわ こう かたって います。
+  - speaker: zundamon
+    emotion: normal
+    text: 三菱商事では30年以上海外での自動車販売に携わってきたため、
+  - speaker: zundamon
+    emotion: normal
+    text: 自動車メーカーの経営を行うことに不安や重圧はありません。
+# ---- 2005年3月30日・旧経営陣を訴える（「そうか、社員の総意なのか」は評伝の言葉。「そこまでやるか」はグループの声） ----
+- id: ch9_board
+  title: 旧経営陣を訴える
+  background: mm_board
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 益子, emotion: normal}
+  - {who: yakuin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: yakuin
+    emotion: normal
+    text: 社長。3月10日の増資で、3社の持ち分は約34%になりました。
+  - speaker: zundamon
+    emotion: normal
+    text: グループの3社で、約34%か。
+  - speaker: yakuin
+    emotion: normal
+    text: はい。それと、元の経営陣への損害賠償の件です。
+  - speaker: yakuin
+    emotion: sad
+    text: グループの中から、そこまでやるかという声も出ています。
+  - speaker: zundamon
+    emotion: normal
+    text: 社員に聞く。役員会でも、一人ひとりに聞こう。
+  - speaker: yakuin
+    emotion: surprised
+    text: ……一人ひとり、ですか。
+- id: ch9_kanbu
+  title: ''
+  background: mm_board
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 益子, emotion: normal}
+  - {who: yakuin2, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: yakuin2
+    emotion: normal
+    text: 社長、話がある。
+  - speaker: yakuin2
+    emotion: sad
+    text: 最後のお願いだ。やってくれ。
+  - speaker: yakuin2
+    emotion: sad
+    text: そうしなければ、会社は立ち直らない。けじめが必要なんだ。
+  - speaker: reimu
+    text: 評伝は、このときの益子の思いをこう書いています。
+    reading: ひょうでんわ、この ときの ますこの おもいお こう かいて います。
+  - speaker: zundamon
+    emotion: sad
+    text: ……この人が言う。そうか、社員の総意なのか。
+  - speaker: reimu
+    text: 3月30日、会社は旧経営陣に損害賠償を請求。国には、過去25年を調べた最終の回答を出しました。
+    reading: さんがつ さんじゅうにち、かいしゃわ きゅう けいえいじんに そんがい ばいしょうお せいきゅう。くににわ、かこ にじゅうごねんお しらべた さいしゅうの かいとうお だしました。
+  - speaker: reimu
+    text: 同じ年の年次報告書で、益子は決断という言葉をこう説明しています。
+    reading: おなじ としの ねんじ ほうこくしょで、ますこわ けつだんと いう ことばお こう せつめい して います。
+    background: mm_board_saisei
+  - speaker: zundamon
+    emotion: normal
+    text: 決断とは、問題を先送りしない強い意志を持ち、
+  - speaker: zundamon
+    emotion: normal
+    text: 嫌なことに対しても逃げずに立ち向かうということです。
+  - speaker: reimu
+    text: 評伝によれば、会社は2年後には利益が出るまでに戻ります。
+    reading: ひょうでんに よれば、かいしゃわ にねんごにわ りえきが でる までに もどります。
+  - speaker: reimu
+    text: 問題を先送りしない。同じ2005年、ある新人が会社に提言書を出していました。
+    reading: もんだいお さきおくり しない。おなじ にせん ごねん、ある しんじんが かいしゃに ていげんしょお だして いました。
+# ---- 3つの刑事裁判（人ごと。裁判長は名前なし。河添は台詞なし。笑い・SE なし） ----
+- id: card2008
+  title: ''
+  background: mm_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年1月16日、横浜地裁。山口の事故で、元社長の河添ら4人に判決が言い渡されます。
+    reading: にせん はちねん いちがつ じゅうろくにち、よこはま ちさい。やまぐちの じこで、もと しゃちょうの かわそえら よにんに はんけつが いいわたされます。
+- id: ch10_houtei
+  title: 3つの判決
+  background: mm_houtei
+  stage:
+  - {who: kawasoe, x: 0.14, flip: true, emotion: sad}
+  - {who: saibancho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 元役員たちは、欠陥を知らなかったと主張していました。
+    reading: もと やくいん たちわ、けっかんお しらなかったと しゅちょう して いました。
+  - speaker: reimu
+    text: 裁判長は河添について、欠陥は知らなくても二重の管理や指示改修は熟知していたとしました。
+    reading: さいばんちょうわ かわそえに ついて、けっかんわ しらなくても にじゅうの かんりや しじ かいしゅうわ じゅくち して いたと しました。
+  - speaker: saibancho
+    emotion: normal
+    text: 将来、死傷事故が起きることを容易に予見できたのに放置した
+    telops:
+    - {text: "山口の事故の判決「容易に予見できたのに放置した」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 自覚に欠けた無責任な態度
+  - speaker: reimu
+    text: 河添は禁錮3年、執行猶予5年。控訴を取り下げ、刑が確定しました。
+    reading: かわそえわ きんこ さんねん、しっこう ゆうよ ごねん。こうそお とりさげ、けいが かくてい しました。
+- id: ch10_hyo
+  title: ''
+  background: mm_shinbun
+  stage:
+  - {who: kisha2, x: 0.12, flip: true, emotion: normal}
+  - {who: kisha, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 横浜の事故は、品質保証部門の元部長と元グループ長が有罪。
+  - speaker: kisha2
+    emotion: normal
+    text: 2012年に、最高裁で確定した。
+  - speaker: kisha
+    emotion: sad
+    text: 10年か……。
+  - speaker: kisha
+    emotion: normal
+    text: うその報告は、2008年に東京高裁で逆転の有罪。
+  - speaker: kisha2
+    emotion: normal
+    text: 会社と元役員3人に、罰金20万円ずつだ。
+  - speaker: kisha
+    emotion: sad
+    text: 20万円……。
+  - speaker: reimu
+    text: 死傷の罪で有罪になったのは、当時の役員と担当者。会社の有罪は、うその報告の罰金だけです。
+    reading: ししょうの つみで ゆうざいに なったのわ、とうじの やくいんと たんとうしゃ。かいしゃの ゆうざいわ、うその ほうこくの ばっきん だけです。
+    slide:
+      title: 3つの刑事裁判
+      bullets:
+      - 横浜の死傷：元部長ら2人 禁錮・猶予
+      - 山口の死亡：元社長ら4人 禁錮・猶予
+      - うその報告：会社と3人 罰金20万円
+  - speaker: reimu
+    text: 知らなくても、予見はできた。8年後に益子は、知らなかったと責任を逃れることはできないと言います。
+    reading: しらなくても、よけんわ できた。はちねんごに ますこわ、しらなかったと せきにんお のがれる ことわ できないと いいます。
+# ---- 2011〜2013年・岡崎の実験の部屋（益子はいない。役員の「1kmでも」は台帳の範囲の脚色。走行抵抗は 4/20 会見の範囲） ----
+- id: ch11_mokuhyo
+  title: 5回の引き上げ
+  background: mm_jikken
+  bgm: curious
+  stage:
+  - {who: yakuin, x: 0.12, flip: true, emotion: normal}
+  - {who: jsenpai, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年、日産と軽自動車を一緒に企画する会社ができます。試験は、岡崎の性能実験部です。
+    reading: にせん じゅういちねん、にっさんと けいじどうしゃお いっしょに きかく する かいしゃが できます。しけんわ、おかざきの せいのう じっけんぶです。
+  - speaker: yakuin
+    emotion: normal
+    text: 燃費の目標は、ライバルより1kmでも上だ。
+  - speaker: jsenpai
+    emotion: surprised
+    text: ……前にも、そう聞きました。
+    se: tenten
+  - speaker: yakuin
+    emotion: angry
+    text: 向こうが、また上げてきたんだ。
+  - speaker: jsenpai
+    emotion: thinking
+    text: 26.4から始まって、これで5回目ですよ。
+  - speaker: yakuin
+    emotion: normal
+    text: 29.2だ。頼んだぞ。
+  - speaker: jsenpai
+    emotion: sad
+    text: ……はい。
+- id: ch11_shiken
+  title: ''
+  background: mm_jikken
+  stage:
+  - {who: jsenpai, x: 0.12, flip: true, emotion: sad}
+  - {who: jshinjin, x: 0.88, emotion: surprised}
+  cuts:
+  - speaker: jshinjin
+    emotion: surprised
+    text: 29.2！？ 試験で、そこまで出なかったら？
+  - speaker: jsenpai
+    emotion: sad
+    text: ……走行抵抗の数字を、小さく入れる。
+  - speaker: jshinjin
+    emotion: normal
+    text: '走行抵抗って、車の走りにくさの数字ですよね。'
+  - speaker: jsenpai
+    emotion: normal
+    text: 小さいほど、燃費は良く出る。
+  - speaker: jshinjin
+    emotion: sad
+    text: ……できない、とは言えないんですね。
+    beat: true
+  - speaker: jshinjin
+    emotion: sad
+    text: 社内のアンケートで、認証の資料にうそがあると書いた人もいたのに。
+  - speaker: jsenpai
+    emotion: sad
+    text: 調べは、中途半端で終わったな。
+  - speaker: reimu
+    text: 2017年のインタビューで聞き手が挙げたのは、2005年に新人社員が出した提言書でした。
+    reading: にせん じゅうななねんの いんたびゅーで ききてが あげたのわ、にせん ごねんに しんじん しゃいんが だした ていげんしょでした。
+  - speaker: reimu
+    text: この測定方法は規則に反しているのではないか。その年に社長になったのが、益子です。
+    reading: この そくてい ほうほうわ きそくに はんして いるのでわ ないか。その としに しゃちょうに なったのが、ますこです。
+- id: ch11_teigen
+  title: ''
+  background: mm_kaigishitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 益子, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: その提言書は結局、社内に展開されることはなく
+  - speaker: zundamon
+    emotion: sad
+    text: 狭いサークル内で話が終わってしまいました。
+  - speaker: zundamon
+    emotion: sad
+    text: 非常に残念です。
+# ---- 2016年4月20日・相川社長の会見（相川の台詞は会見の原文だけ。益子はいない。テレビを見る画は作らない） ----
+- id: card2016
+  title: ''
+  background: mm_card_2016
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2016年4月20日、午後5時。国土交通省で、三菱自動車の社長が会見を開きます。
+    reading: にせん じゅうろくねん しがつ はつか、ごご ごじ。こくど こうつうしょうで、みつびし じどうしゃの しゃちょうが かいけんお ひらきます。
+- id: ch12_kaiken
+  title: 4月20日
+  background: mm_kaiken
+  stage:
+  - {who: aikawa, x: 0.24, flip: true, emotion: sad}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 日産から去年の12月、合同で調べたいと申し入れがあったそうだ。
+  - speaker: aikawa
+    emotion: sad
+    text: 燃費を実際よりも良く見せるために、不正な操作が行われていたことが判明しました。
+  - speaker: kisha
+    emotion: surprised
+    text: 軽の4車種、62万5千台。日産向けの車もか……。
+  - speaker: aikawa
+    emotion: sad
+    text: この操作は意図的なものであると考えております
+  - speaker: kisha
+    emotion: surprised
+    text: 意図的……。
+  - speaker: reimu
+    text: その日の会見に、会長の姿はありませんでした。
+    reading: その ひの かいけんに、かいちょうの すがたわ ありませんでした。
+# ---- 翌年のインタビューでの振り返り（4/20 と 4/21。言葉は 2017年の本人の言葉。ゴーンの言葉は回想の中なので字幕で） ----
+- id: ch12_kaiko
+  title: ''
+  background: mm_kaigishitsu
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 益子, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 益子は翌年のインタビューで、4月20日とその翌日をこう振り返ります。
+    reading: ますこわ よくねんの いんたびゅーで、しがつ はつかと その よくじつお こう ふりかえります。
+  - speaker: zundamon
+    emotion: sad
+    text: 一言で言えば、信じられない……でしょうか。
+  - speaker: zundamon
+    emotion: normal
+    text: その翌日にゴーンさんに連絡をしたら、たまたま横浜にいて会えた。
+  - speaker: zundamon
+    emotion: normal
+    text: 助けを求めた時に、全力で助けてあげるよと言ってくれたのがスタートです。
+    telops:
+    - {text: "益子の回想　ゴーン「全力で助けてあげるよ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2016年5月11日・会見の本編版（言葉は Car Watch の別の言葉。記者の問いは作らない） ----
+- id: ch13_kaiken
+  title: 5月11日の会見
+  background: mm_kaiken
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 益子, emotion: sad}
+  - {who: aikawa, x: 0.56, emotion: sad}
+  - {who: yakuin2, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 5月11日の会見で、益子はこうも述べています。
+    reading: ごがつ じゅういちにちの かいけんで、ますこわ こうも のべて います。
+  - speaker: zundamon
+    emotion: sad
+    text: 経営の責任と、不正な業務が行なわれていた現場の責任については分けて考えたい。
+  - speaker: zundamon
+    emotion: sad
+    text: 報告が上がってくる透明度の高い組織を作れなかった、
+  - speaker: zundamon
+    emotion: sad
+    text: 意識改革ができなかったのも経営の責任。
+  - speaker: zundamon
+    emotion: sad
+    text: 責任の取り方についてはいろいろあるが、
+  - speaker: zundamon
+    emotion: sad
+    text: 会社の将来を安定させる道筋をつけることも経営者の責任と考える。
+  - speaker: zundamon
+    emotion: sad
+    text: 具体的には、残りの会社生活をどのように使うかは、
+  - speaker: zundamon
+    emotion: sad
+    text: これからの結果を見て皆さんに評価していただきたい
+# ---- 2016年5月12日・横浜（ゴーンは背中だけ・台詞なし。34%は「取ると発表」） ----
+- id: ch13_yokohama
+  title: 34%
+  background: mm_yokohama
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 益子, emotion: normal}
+  - {who: ghosn, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌12日、横浜市内で日産が株の34%を2370億円で取ると発表。このころ益子は、こうも述べています。
+    reading: よく じゅうににち、よこはま しないで にっさんが かぶの さんじゅうよん ぱーせんとお にせん さんびゃく ななじゅうおくえんで とると はっぴょう。この ころ ますこわ、こうも のべて います。
+  - speaker: zundamon
+    emotion: normal
+    text: 日産自動車から燃費目標でプレッシャーがあった訳ではなく、
+  - speaker: zundamon
+    emotion: normal
+    text: 日産自動車に責任はない
+  - speaker: reimu
+    text: 株の34%を持つ株主が現れるのは、これで3度目。ドイツの会社と三菱の3社、そして日産です。
+    reading: かぶの さんじゅうよん ぱーせんとお もつ かぶぬしが あらわれるのわ、これで さんどめ。どいつの かいしゃと みつびしの さんしゃ、そして にっさんです。
+    telops:
+    - {text: "34%の持ち主　ダイムラー → 三菱3社 → 日産", size: sm, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 2016年5月18日〜10月20日・辞任、補償、留任（続投の理由と、続投への疑問の両方。英雄とも言い切らない） ----
+- id: ch14_jinin
+  title: 辞任と留任
+  background: mm_kaiken
+  stage:
+  - {who: zundamon, x: 0.24, flip: true, tag: 益子, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 5月18日、相川社長らの辞任が決まり益子が当面社長を兼ねることに。6月、4車種の補償は1台10万円に。
+    reading: ごがつ じゅうはちにち、あいかわ しゃちょうらの じにんが きまり ますこが とうめん しゃちょうお かねる ことに。ろくがつ、よんしゃしゅの ほしょうわ いちだい じゅうまんえんに。
+  - speaker: reimu
+    text: 益子らは会見で、高い燃費を期待する自分たちの発言などが結果的に不正を招いたと説明しました。
+    reading: ますこらわ かいけんで、たかい ねんぴお きたい する じぶん たちの はつげん などが けっかてきに ふせいお まねいたと せつめい しました。
+- id: ch14_ryunin
+  title: ''
+  background: mm_shinbun
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 益子, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月20日、日産の払い込みの日。辞める考えだった益子はゴーンに引き留められ、会見でこう述べます。
+    reading: じゅうがつ はつか、にっさんの はらいこみの ひ。やめる かんがえだった ますこわ ごーんに ひきとめられ、かいけんで こう のべます。
+  - speaker: zundamon
+    emotion: normal
+    text: ゴーンさんが再建に情熱を持って接してくれた。
+  - speaker: zundamon
+    emotion: normal
+    text: 次期中期計画の道筋をつけることも経営責任の取り方と考え方を改めた
+- id: ch14_hihan
+  title: ''
+  background: mm_shinbun
+  stage:
+  - {who: kisha2, x: 0.12, flip: true, emotion: normal}
+  - {who: kisha, x: 0.88, emotion: thinking}
+  cuts:
+  - speaker: kisha
+    emotion: thinking
+    text: 日刊工業の記事だ。不正は、[益子|マスコ]さんがトップの時期だと。
+  - speaker: kisha2
+    emotion: normal
+    text: 経営責任を明確にしないままの続投は、消費者の反発を招く恐れもある。
+  - speaker: kisha
+    emotion: thinking
+    text: 引き留められた続投か……。
+- id: ch14_shobun
+  title: ''
+  background: mm_jikken
+  cuts:
+  - speaker: reimu
+    text: 燃費の不正は、刑事事件にはなっていません。
+    reading: ねんぴの ふせいわ、けいじ じけんにわ なって いません。
+  - speaker: reimu
+    text: 消費者庁が2017年、表示について措置命令と課徴金の処分を出しました。
+    reading: しょうひしゃちょうが にせん じゅうななねん、ひょうじに ついて そち めいれいと かちょうきんの しょぶんお だしました。
+    background: mm_jikken_kara
+- id: ch14_furikaeri
+  title: ''
+  background: mm_kaigishitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 益子, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 翌年のインタビューで、益子はこう振り返っています。
+    reading: よくねんの いんたびゅーで、ますこわ こう ふりかえって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 工夫して答えを探してみなさいは分かるけど、
+  - speaker: zundamon
+    emotion: sad
+    text: できないとは絶対に言うな、になってしまうのが良くなかった。
+# ---- 論争1：整備不良のせい？（会社の主張に主語。最高裁の多数意見と反対意見。いまの脱落の多くは整備の不足） ----
+- id: ronso1
+  title: 整備のせい？
+  background: mm_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ タイヤが外れたのは整備不良で、メーカーのせいじゃないって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える事実は、あるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: いまも大型車の車輪の脱落は、多くが整備の不足で起きているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年度は、128件よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 128件も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 最高裁でも5人のうち1人は、科学技術的な検証が極めて不十分だと反対意見を書いたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、ほかの4人は有罪としたわ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: このハブは開発のとき、実際に走らせる強度の試験をしていなかった。
+  - speaker: zundamon
+    emotion: surprised
+    text: 試してないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1999年までの7年余りで、16件も割れていたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その事故の情報を、会社は秘密にして一手に握っていたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 外からは、調べようがないのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 整備の不足で外れる事故は、いまもある。
+  - speaker: tsumugi
+    emotion: normal
+    text: だから会社の説明は、もっともらしく聞こえたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: うん。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも裁判所が見たのは、同じ部品が何十回も割れていたこと。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして、その情報を会社の中にしまっていたことよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 整備のせいだけじゃ、なかったのか……。
+    beat: true
+# ---- 論争2：日産がわざと見つけた？（「罠」「乗っ取り」「買収」と言わない。株価の下げ幅は言わない） ----
+- id: ronso2
+  title: わざと見つけた？
+  background: mm_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ日産は、わざと不正を見つけて株を安く手に入れたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 株の値段は、公表の翌日から5月11日までの株価の平均で決めたの。
+  - speaker: zundamon
+    emotion: angry
+    text: 不正が分かったあとの値段なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 公表のあとの株価で買われたのは、事実よ。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも[益子|マスコ]は日産との会見で、日産に責任はないと言ったわ。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 三菱の会長が！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2017年には、提携は燃費の問題があったから決めたのではないと語っているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前からの、1社でやっていけるのかという疑問だったって。
+  - speaker: zundamon
+    emotion: thinking
+    text: 前から……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 合同で調べたいと申し入れたのは日産。でも公表したのは、三菱自動車よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 不正をしたのは三菱の中の人で、見つけたのは提携先だった。それが会社の説明なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 仕掛けた人じゃなくて、見つけた人……。
+    beat: true
+# ---- 本当の注意点（カタログの燃費は国の物差しの数字・冬のタイヤ交換のあとの締め直し。距離・トルクは言わない。どの車がよいとは言わない） ----
+- id: chui
+  title: 燃費とタイヤ
+  background: mm_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。カタログの燃費は、国の決めた試験の方法で測った数字よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 国の、物差し？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。同じ物差しで比べるための数字。物差しが違えば、比べられないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 30.4と26.1は、物差しが違ったのだ！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国の方法で名乗れたのは、26.1までだったわ。
+  - speaker: zundamon
+    emotion: sad
+    text: ポリタンク3本分の、差なのだ……。
+    se: shobon
+- id: chui2
+  title: ''
+  background: mm_garage
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。冬のタイヤ交換のあとは、しばらく走ってからナットを締め直すこと。
+  - speaker: zundamon
+    emotion: surprised
+    text: 替えたら、終わりじゃないの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 終わりじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 大型車の車輪の脱落は、約半分が11月から1月に起きているの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 冬に、半分も……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国交省は毎年この時期に、大型車のタイヤの確実な作業を呼びかけているわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 替えたあとが、本番なのだ。
+# ---- 現代（2026年11月時点。日産は筆頭株主〔当面の保有は報道〕。ホンダとは覚書。子会社・買収・統合と言わない） ----
+- id: ima
+  title: 三菱自動車のいま
+  background: mm_gendai
+  bgm: natsuyasumi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: あの会見から10年。三菱自動車は、いまは日産の会社なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年11月の時点で、日産は株の26.67%を持つ[筆頭株主|ひっとうかぶぬし]よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2024年に一部を手放して、34%から減ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 減ったのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 当面は持ち続ける見通しだと、関係者への取材で報じられているわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 当面は、そのままなのか。
+  - speaker: zundamon
+    emotion: normal
+    text: ホンダとも、何か始めたって聞いたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年10月、ホンダとは四輪商品の相互補完に関する[覚書|おぼえがき]を結んだの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 三菱のピックアップをもとにしたホンダの車を、アセアンで2028年中に売る予定よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 三菱の車が、ホンダの車に！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 発表には、株の話は入っていないわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 車どうしで、補い合うのか！
+# ---- 益子の死去（ナレ1行まで。病名・家族は描かない） ----
+- id: card2020
+  title: ''
+  background: mm_card_2020
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 益子修は2020年8月、71歳で亡くなりました。
+    reading: ますこ おさむわ にせん にじゅうねん はちがつ、ななじゅういっさいで なくなりました。
+    background: mm_isu
+# ---- 締め（茶番の5分の回収 → 決断の言葉と見せる箱・見せない箱の回収。救われた・乗っ取られたと言わない） ----
+- id: shime
+  title: ''
+  background: mm_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ふだんの日に、駅まで測り直したのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 何分だったの？
+  - speaker: zundamon
+    emotion: sad
+    text: ……12分。
+  - speaker: tsumugi
+    emotion: happy
+    text: 5分の、倍以上じゃない。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 2005年の年次報告書で、[益子|マスコ]は決断とは問題を先送りしないことだと語ったわ。
+    telops:
+    - {text: "益子「決断とは、問題を先送りしない」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: thinking
+    text: その年に、新人の提言書は会社に出されていたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 同じ年に……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 国に見せる数字と、本当の数字。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 3度目にそれを見つけたのは、外から測り直した提携先だった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見せる箱と、見せない箱……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 数字は、同じ物差しで測って初めて比べられる。カタログの燃費も、そう読んでみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
