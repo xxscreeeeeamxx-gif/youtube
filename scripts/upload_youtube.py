@@ -415,7 +415,8 @@ PLAYLISTS = {
                "livedoor-horie", "daio-igawa", "seibu-tsutsumi", "mtgox-karpeles",
                "ghosn-nissan", "recruit-ezoe", "terumi-club", "comsn-origuchi",
                "murakami-fund", "harenohi", "elpida-sakamoto",
-               "mitsukoshi-okada", "meathope-tanaka", "agura-farm", "daiwa-ny"]),
+               "mitsukoshi-okada", "meathope-tanaka", "agura-farm", "daiwa-ny",
+               "lotte-shigemitsu", "shinko-bank", "playstation-kutaragi", "hayashibara"]),
     # 以下は**題材別の棚**（2026-09-28 追加）。自動再生の連鎖は main が担い、
     # こちらはチャンネルページと検索結果に並ぶ入口。関連動画の隣人が
     # 「会社の興亡」「ゲーム」「クルマ」のように題材ごとに固まっているので、
@@ -443,7 +444,8 @@ PLAYLISTS = {
                "livedoor-horie", "daio-igawa", "seibu-tsutsumi", "mtgox-karpeles",
                "ghosn-nissan", "recruit-ezoe", "terumi-club", "comsn-origuchi",
                "murakami-fund", "harenohi", "elpida-sakamoto",
-               "mitsukoshi-okada", "meathope-tanaka", "agura-farm", "daiwa-ny"]),
+               "mitsukoshi-okada", "meathope-tanaka", "agura-farm", "daiwa-ny",
+               "lotte-shigemitsu", "shinko-bank", "hayashibara"]),
     "play": dict(
         title="ゲームと遊びの誕生｜ずんだもん再現ドラマ",
         desc="ゲームボーイ、プリクラ、カラオケ。遊びの道具にも、最初に作った人がいます。"
@@ -451,7 +453,7 @@ PLAYLISTS = {
         follow_main=True,
         slugs=["yokoi-gunpei", "yamauchi-nintendo", "purikura-meme", "karaoke",
                "othello-hasegawa-v2", "tamagotchi-yokoi-v2", "famicom-uemura-v2",
-               "sega-dreamcast", "toysrus-japan"]),
+               "sega-dreamcast", "toysrus-japan", "playstation-kutaragi"]),
     "food": dict(
         title="食べ物と飲み物の誕生｜ずんだもん再現ドラマ",
         desc="カップ麺、味の素、カルピス。毎日口にしているものにも、最初に作った人がいます。"

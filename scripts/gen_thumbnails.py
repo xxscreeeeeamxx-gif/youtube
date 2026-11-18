@@ -4535,6 +4535,23 @@ SPECS = {
         dict(scene="tm_kaiken", tint="mono", tag="2017年 破産の日", emo="sad", fx="gloom", say="生きることしか"),
         dict(scene="tm_houtei", tint="yellow", tag="2018年 初公判", emo="sad", fx="sweat", say="間違いございません"),
     ]),
+    # 第12弾（2026-12-10〜13。方向転換の実験の24〜26本目＋開発秘話の実験1本）
+    "lotte-shigemitsu": dict(layout="scene", headline="創業者が代表を外された", head_hi="外された", panels=[
+        dict(scene="lt_kojo", tint="yellow", tag="1948年 ガムから", emo="happy", fx="sparkle"),
+        dict(scene="lt_torishimari_kara", tint="mono", tag="2015年 取締役会", emo="sad", fx="gloom"),
+    ]),
+    "shinko-bank": dict(layout="scene", headline="日本初のペイオフ", head_hi="ペイオフ", panels=[
+        dict(scene="nb_kinyucho", tint="yellow", tag="2002年 検査する側", emo="happy", fx="sparkle"),
+        dict(scene="nb_kaiken", tint="mono", tag="2010年 会見", emo="sad", fx="gloom", say="道義的な責任は"),
+    ]),
+    "playstation-kutaragi": dict(layout="scene", headline="出荷1億台", head_hi="1億台", panels=[
+        dict(scene="pl_kaigi", tint="mono", tag="1992年 社内で反対", emo="sad", fx="gloom"),
+        dict(scene="pl_mise", tint="yellow", tag="1994年 発売", emo="happy", fx="sparkle"),
+    ]),
+    "hayashibara": dict(layout="scene", headline="銀行ごとに違う決算書", head_hi="違う決算書", panels=[
+        dict(scene="hy_kenkyujo", tint="yellow", tag="研究の会社", emo="happy", fx="sparkle"),
+        dict(scene="hy_kaigi_yasumi", tint="mono", tag="2011年 会社更生", emo="sad", fx="gloom"),
+    ]),
     # 第11弾（2026-12-06〜09。方向転換の実験の20〜23本目）
     "mitsukoshi-okada": dict(layout="scene", headline="16対0で解任", head_hi="解任", panels=[
         dict(scene="mt_uriba", tint="yellow", tag="1972年 社長に", emo="happy", fx="sparkle"),
