@@ -1,0 +1,1265 @@
+meta:
+  title: 「刑事訴追のおそれがありますので」と証言を控えたヒューザー社長、4か月後に詐欺で逮捕【ずんだもん解説】
+  slug: taishin-ojima
+  hook_line: 偽装の対策会議の翌日に、なぜ17戸の売買は進んだのか。
+  summary: 2006年1月17日、阪神・淡路大震災の日の国会。耐震偽装が見つかったマンションの売り主、ヒューザーの社長・小嶋進は、証人として証言を控え続けました。下請けの下請けが計算した構造計算書、最短2週間で下りることもあったという民間の審査、そして偽装の対策会議の翌日に進んだ17戸の売買。食い違う言い分を国会の会議録の言葉のまま並べ、国土交通省の資料と判決の報道をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 国土交通省「姉歯（あねは）建築設計事務所による構造計算書の偽造とその対応について」（2005年11月17日） https://www.mlit.go.jp/kisha/kisha05/07/071117_.html
+  - 国土交通省「マンションの耐震性等についてのＱ＆Ａについて」（2005年12月8日） https://www.mlit.go.jp/kisha/kisha05/07/071208_2_.html
+  - 国土交通省「構造計算書偽装問題に関する緊急調査委員会の最終報告について」（2006年4月6日） https://www.mlit.go.jp/kisha/kisha06/15/150406_.html
+  - 衆議院 国土交通委員会 第163回国会 第7号（2005年11月29日・参考人） https://kokkai.ndl.go.jp/txt/116304319X00720051129
+  - 衆議院 国土交通委員会 第163回国会 第14号（2006年1月17日・証人喚問） https://kokkai.ndl.go.jp/txt/116304319X01420060117
+  - 日本経済新聞「ヒューザー小嶋元社長、有罪確定へ 耐震強度偽装」（2011年12月13日） https://www.nikkei.com/article/DGXNASDG1302V_T11C11A2000000/
+  tags:
+  - 耐震偽装
+  - 構造計算書偽造問題
+  - ヒューザー
+  - 小嶋進
+  - 証人喚問
+  - 参考人質疑
+  - 建築確認
+  - 構造計算
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 会議の翌日に
+    bottom: 17戸の売買
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: iincho
+    label: 委員長
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#2a2f3a'
+  - id: iinchodairi
+    label: 委員長代理
+    voice: 21
+    pitch: -0.06
+    outfit: suit
+    color: '#2f3440'
+  - id: sato
+    label: 佐藤議員
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: nagatsuma
+    label: 長妻議員
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#454a55'
+  - id: mikazuki
+    label: 三日月議員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: kokuta
+    label: 穀田議員
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#5a4a3a'
+  - id: hayakawa
+    label: 早川議員
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#3e5c4a'
+  - id: watanabe
+    label: 渡辺議員
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#4a3f36'
+  - id: fujita
+    label: 藤田
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#2a3a5a'
+  - id: aneha
+    label: 姉歯
+    voice: 12
+    pitch: -0.02
+    outfit: suit
+    color: '#5a5a5a'
+  - id: yakuin
+    label: 役員
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: senpai
+    label: 先輩
+    voice: 67
+    pitch: -0.02
+    outfit: suit
+    color: '#4a4f5a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.04
+    outfit: suit
+    color: '#5a6a8a'
+  - id: kensain
+    label: 検査員
+    voice: 11
+    pitch: -0.04
+    outfit: suit
+    color: '#3e4a40'
+  - id: kensain2
+    label: 検査員
+    voice: 67
+    pitch: 0.06
+    outfit: suit
+    color: '#4a5a4a'
+  - id: sekkeisha
+    label: 設計者
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#4a4040'
+  - id: shokunin
+    label: 職人
+    voice: 21
+    pitch: 0.0
+    outfit: work
+  - id: hanbai
+    label: 販売担当
+    voice: 67
+    pitch: 0.04
+    outfit: suit
+    color: '#5a4a5a'
+  - id: jumin
+    label: 住民
+    voice: 8
+    pitch: -0.04
+  - id: shokuin
+    label: 職員
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#454a55'
+  - id: shokuin2
+    label: 職員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: kushokuin
+    label: 職員
+    voice: 8
+    pitch: -0.02
+    outfit: suit
+    color: '#5a6a7a'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2006年1月17日・衆院国交委の証人喚問。佐藤議員の1問目 K3-133→134。黙祷と、佐藤議員の2・3問目 K3-135〜138 は ch13 へ。言葉はすべて会議録の原文。笑いの SE なし） ----
+- id: co_shitsumon
+  title: ''
+  background: ah_iinkai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  - {who: sato, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2006年1月17日、阪神・淡路大震災の日の国会。
+    reading: にせん ろくねん いちがつ じゅうしちにち、はんしん あわじ だいしんさいの ひの こっかい。
+  - speaker: reimu
+    text: 耐震偽装が見つかったマンションの売り主、ヒューザーの社長・小嶋進が証人に立ちます。
+    reading: たいしん ぎそうが みつかった まんしょんの うりぬし ひゅーざーの しゃちょう おじま すすむが、しょうにんに たちます。
+  - speaker: sato
+    emotion: normal
+    text: あす、[藤沢|ふじさわ]の方に引き渡しがあるんですけれどもどうしますか、
+  - speaker: sato
+    emotion: normal
+    text: そういうふうに聞かれたと言っておられます。
+  - speaker: sato
+    emotion: normal
+    text: これは、二十七日のいつ、そのようなやりとりがありましたか。
+  - speaker: zundamon
+    emotion: sad
+    text: これに関しましても証言は控えさせていただきたいと思います。
+  - speaker: reimu
+    text: その3か月ほど前、偽装の対策会議の翌日に、彼の会社は藤沢の17戸の売買を実行していました。
+    reading: その さんかげつ ほど まえ、ぎそうの たいさく かいぎの よくじつに かれの かいしゃわ ふじさわの じゅうななこの ばいばいお じっこう して いました。
+  - speaker: reimu
+    text: 4か月後、彼は詐欺の疑いで逮捕されます。
+    reading: よんかげつご、かれわ さぎの うたがいで たいほ されます。
+# ---- 今の部屋（フリマの自転車。「裁判所に認められた」の範囲。20秒以内） ----
+- id: hook
+  title: ''
+  background: ah_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: フリマの自転車、ブレーキが怪しいって言われたけど送ったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: 買った人に、伝えた？
+  - speaker: zundamon
+    emotion: normal
+    text: ……届いてから言うつもりだったのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: それ、いちばんだめなやつ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: それをマンションでやったと、裁判所に認められた社長がいるの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 偽装の対策会議の翌日に、なぜ17戸の売買は進んだのか。
+    telops:
+    - {text: "対策会議の翌日 なぜ17戸の売買は進んだ？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 翌日に！？
+# ---- 1982〜2004年・広い部屋を安く（ナレ2行・台詞なし。売上は2004年3月期、社員数は事件のころ） ----
+- id: card1982
+  title: ''
+  background: ah_card_1982
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1982年に不動産の会社を起こした小嶋進。広い部屋を安く売るマンションで伸びます。
+    reading: せんきゅうひゃく はちじゅうにねんに ふどうさんの かいしゃお おこした おじま すすむ。ひろい へやお やすく うる まんしょんで のびます。
+- id: ch1_hiroi
+  title: 広い部屋を安く
+  background: ah_model
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 小嶋, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 社名は2001年からヒューザー。2004年3月期の売上は約124億円、事件のころの社員は15人ほど。
+    reading: しゃめいわ にせん いちねんから ひゅーざー。にせん よねん さんがつきの うりあげわ やく ひゃくにじゅうよんおくえん、じけんの ころの しゃいんわ じゅうごにん ほど。
+# ---- 1998〜2004年・下請けの下請けと坪の値段（ヒューザーの社員のモブ。坪は姉歯の証言だと字幕で。2:00 までに着く） ----
+- id: ch2_shitauke
+  title: 下請けの下請け
+  background: ah_honsha
+  stage:
+  - {who: senpai, x: 0.14, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shinjin
+    emotion: normal
+    text: この[構造計算|こうぞうけいさん]、どこがやったんですか。
+  - speaker: senpai
+    emotion: normal
+    text: 元請けの設計事務所が、さらに外に出してる。
+  - speaker: shinjin
+    emotion: surprised
+    text: 外の、外……。
+    beat: true
+  - speaker: shinjin
+    emotion: normal
+    text: 計算の前に、何が決まるんです？
+  - speaker: senpai
+    emotion: normal
+    text: '[坪|ツボ]いくらで建てるか、だ。'
+  - speaker: shinjin
+    emotion: normal
+    text: '[坪|ツボ]って、畳2枚分ですよね。'
+  - speaker: senpai
+    emotion: normal
+    text: その2枚分の値段が、先に決まる。
+  - speaker: reimu
+    text: 計算した姉歯秀次はのちに国会で、ヒューザーから直接ではないが、打ち合わせで坪の値段が決まると述べます。
+    reading: けいさん した あねは ひでつぐわ のちに こっかいで ひゅーざーから ちょくせつでわ ないが、うちあわせで つぼの ねだんが きまると のべます。
+    telops:
+    - {text: "姉歯「坪四十五万でやる」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shinjin
+    emotion: thinking
+    text: 中身は、誰が見るんです？
+# ---- 1998〜2004年・民間の審査の窓口（名前の無い検査員。委員会の「形式的にチェック」の範囲。イーホームズの社員にしない） ----
+- id: ch2_madoguchi
+  title: 民間の審査
+  background: ah_madoguchi
+  stage:
+  - {who: kensain, x: 0.14, flip: true, emotion: normal}
+  cuts:
+  - speaker: kensain
+    emotion: normal
+    text: 1998年の法改正で、民間でも審査ができる。
+  - speaker: kensain
+    emotion: normal
+    text: 計算のプログラムは、大臣の認定……あり。
+  - speaker: kensain
+    emotion: happy
+    text: はい、確認済み。
+    se: zukko
+  - speaker: reimu
+    text: 姉歯はのちに国会で、審査は最短2週間で下りる場合もあったと言います。
+    reading: あねはわ のちに こっかいで、しんさわ さいたん にしゅうかんで おりる ばあいも あったと いいます。
+  - speaker: reimu
+    text: イーホームズの社長は、チェックはされていたことになっている、と述べます。
+    reading: いーほーむずの しゃちょうわ ちぇっくわ されて いた ことに なって いると のべます。
+  - speaker: kensain
+    emotion: normal
+    text: 次の申請、どうぞ。
+  - speaker: reimu
+    text: 売り主、元請け、下請け、施工、審査。5つの会社の誰が、地震の力の欄を見ていたのか。
+    reading: うりぬし もとうけ したうけ しこう しんさ。いつつの かいしゃの だれが、じしんの ちからの らんお みて いたのか。
+# ---- 2004年3月8日・1年8か月前の指摘（主人公は不在。別の構造設計者は名前の無いモブ。姉歯は台詞なし） ----
+- id: ch3_shiteki
+  title: 1年8か月前の指摘
+  background: ah_sekkei
+  bgm: curious
+  stage:
+  - {who: sekkeisha, x: 0.14, flip: true, emotion: normal}
+  - {who: aneha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: sekkeisha
+    emotion: surprised
+    text: '[姉歯|アネハ]さん。この計算、地震の力を[低減|ていげん]してますね。'
+  - speaker: sekkeisha
+    emotion: normal
+    text: 目盛りをずらした体重計に、乗るようなもんですよ。
+  - speaker: reimu
+    text: 2004年3月の横浜での打ち合わせ。姉歯はのちに国会で、その場で認めて物件から降りたと述べます。
+    reading: にせん よねん さんがつの よこはまでの うちあわせ。あねはわ のちに こっかいで、その ばで みとめて ぶっけんから おりたと のべます。
+# ---- 2004年4月ごろ・別の民間の機関に届いた情報（名前の無い検査員のモブ。委員会の認定の範囲） ----
+- id: ch3_joho
+  title: ''
+  background: ah_madoguchi
+  stage:
+  - {who: kensain, x: 0.14, flip: true, emotion: normal}
+  - {who: kensain2, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kensain2
+    emotion: surprised
+    text: この[構造計算|こうぞうけいさん]書、おかしいという情報が来てます。
+  - speaker: kensain
+    emotion: normal
+    text: ……個別の申請の誤り、だな。
+  - speaker: kensain2
+    emotion: thinking
+    text: 誤り、ですか。
+  - speaker: reimu
+    text: 翌月ごろ、別の民間の機関に届いた疑いの情報は、国などに伝えられませんでした。
+    reading: よくげつ ごろ、べつの みんかんの きかんに とどいた うたがいの じょうほうわ くになどに つたえられませんでした。
+  - speaker: reimu
+    text: 公表の1年8か月前に、偽装は一度見つかっていた。なぜ、止まらなかったのか。
+    reading: こうひょうの いちねん はちかげつ まえに、ぎそうわ いちど みつかって いた。なぜ、とまらなかったのか。
+# ---- 2005年10月・82キロと117キロ（施工会社の職人と構造設計者のモブ。117キロは前の川崎の建物の量、81キロは北千住の図面＝渡辺議員の説明 K2-58 の範囲。再計算の数字にしない） ----
+- id: card2005
+  title: ''
+  background: ah_card_2005
+  cuts:
+  - speaker: reimu
+    text: 2005年10月、東京・北千住のマンションの工事現場。
+    reading: にせん ごねん じゅうがつ、とうきょう きたせんじゅの まんしょんの こうじ げんば。
+- id: ch4_genba
+  title: 82キロと117キロ
+  background: ah_genba
+  stage:
+  - {who: shokunin, x: 0.14, flip: true, emotion: normal}
+  - {who: sekkeisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shokunin
+    emotion: surprised
+    text: この柱、[鉄筋|てっきん]これだけか？ 前の現場は、もっと入ってたぞ。
+  - speaker: sekkeisha
+    emotion: normal
+    text: 前の川崎の現場は、1平方メートルあたり117キロでした。
+  - speaker: shokunin
+    emotion: normal
+    text: この図面は？
+  - speaker: sekkeisha
+    emotion: sad
+    text: 81キロです。
+  - speaker: shokunin
+    emotion: surprised
+    text: 36キロも足りねえのか！？
+  - speaker: sekkeisha
+    emotion: normal
+    text: 地震で横から押されたとき、それを受け止めるのが柱の[鉄筋|てっきん]です。
+  - speaker: shokunin
+    emotion: angry
+    text: '[鉄筋|てっきん]、ダイエットしすぎだろ。'
+    se: hammer
+  - speaker: sekkeisha
+    emotion: thinking
+    text: しかも、審査は[通|とお]ってるんです。
+  - speaker: reimu
+    text: 国会で示された数字では、偽造された建物は82キロほど。正しく計算すれば117キロだったと説明されました。
+    reading: こっかいで しめされた すうじでわ、ぎぞう された たてものわ はちじゅうにきろ ほど。ただしく けいさん すれば ひゃくじゅうななきろ だったと せつめい されました。
+    telops:
+    - {text: "鉄筋 約3割少ない", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 審査を通った建物に、なぜ鉄筋が3割足りなかったのか。見つかったきっかけは、施工会社が気づいたことでした。
+    reading: しんさお とおった たてものに なぜ てっきんが さんわり たりなかったのか。みつかった きっかけわ、しこう がいしゃが きづいた ことでした。
+# ---- 2005年10月25日・報告（小嶋は報告を受ける画だけ。役員は名前を出さない） ----
+- id: ch5_hokoku
+  title: 10月25日の報告
+  background: ah_honsha
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: normal}
+  - {who: yakuin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: yakuin
+    emotion: normal
+    text: 社長。イーホームズで、[姉歯|アネハ]さんが数値が低いと認めました。
+  - speaker: yakuin
+    emotion: normal
+    text: 私も、その場にいました。
+# ---- 2005年10月26日・国交省に届いたメール（職員は名前の無いモブ。委員会の「1週間を要した」の範囲） ----
+- id: ch5_mail
+  title: ''
+  background: ah_kokkosho
+  stage:
+  - {who: shokuin, x: 0.14, flip: true, emotion: normal}
+  - {who: shokuin2, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shokuin2
+    emotion: surprised
+    text: 10月26日。イーホームズの社長から、メールです。
+  - speaker: shokuin2
+    emotion: surprised
+    text: '[構造計算|こうぞうけいさん]書の偽造が、4件あると。'
+  - speaker: shokuin2
+    emotion: normal
+    text: 大臣には、上げますか？
+  - speaker: shokuin
+    emotion: thinking
+    text: ……まず、確かめてからだ。
+  - speaker: reimu
+    text: 偽装を知らされた売り主は、このあと何をしたのか。
+    reading: ぎそうお しらされた うりぬしわ、この あと なにお したのか。
+# ---- 2005年10月27日・11人、3時間（会議の中の台詞は作らない。言い分は場面10の国会の言葉へ橋渡し。昼の同じ机に予定表の背景へ差し替え。やりとりの時刻は決めない） ----
+- id: ch6_kaigi
+  title: 11人、3時間
+  background: ah_kaigi
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: normal}
+  - {who: hanbai, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月27日、ヒューザー本社。イーホームズや元請けの4社、姉歯ら11人の会議が約3時間続きます。
+    reading: じゅうがつ にじゅうしちにち、ひゅーざー ほんしゃ。いーほーむずや もとうけの よんしゃ あねはら じゅういちにんの かいぎが やく さんじかん つづきます。
+  - speaker: hanbai
+    emotion: normal
+    text: 社長。あす、[藤沢|ふじさわ]の方に引き渡しがあるんですけれども……。
+    background: ah_kaigi_yotei
+  - speaker: reimu
+    text: 彼が何と答えたのか。国会でこのやりとりを問われると、彼は証言を控えました。
+    reading: かれが なんと こたえたのか。こっかいで この やりとりお とわれると、かれわ しょうげんお ひかえました。
+# ---- 2005年10月28日・藤沢の17戸（住民は台詞なし。「売買を実行した」の言い方で） ----
+- id: ch7_fujisawa
+  title: 翌日の17戸
+  background: ah_kagi
+  stage:
+  - {who: hanbai, x: 0.12, flip: true, emotion: normal}
+  - {who: jumin, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌10月28日、グランドステージ藤沢で17戸の売買が実行されます。同じ日、国交省は調査を始めました。
+    reading: よく じゅうがつ にじゅうはちにち、ぐらんど すてーじ ふじさわで じゅうななこの ばいばいが じっこう されます。おなじ ひ、こっこうしょうわ ちょうさお はじめました。
+# ---- 2005年11月・公表の前の2週間（職員は名前の無いモブ。元国土庁長官は名前も台詞も出さない。委員会の結論を添える） ----
+- id: ch8_kokkosho
+  title: 公表の前の2週間
+  background: ah_kokkosho
+  bgm: serious
+  stage:
+  - {who: shokuin, x: 0.14, flip: true, emotion: normal}
+  - {who: shokuin2, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shokuin2
+    emotion: normal
+    text: 11月です。届いた計算書のうち、5件を計算し直しました。
+  - speaker: shokuin
+    emotion: normal
+    text: 結果は？
+  - speaker: shokuin2
+    emotion: surprised
+    text: 5件とも、偽造です。
+    se: don
+  - speaker: reimu
+    text: 11月15日、小嶋は元国土庁長官らと国交省へ。入居済みの客への速やかな対応を頼んだ、とのちに述べます。
+    reading: じゅういちがつ じゅうごにち、おじまわ もと こくどちょう ちょうかんらと こっこうしょうえ。にゅうきょずみの きゃくえの すみやかな たいおうお たのんだと のちに のべます。
+  - speaker: reimu
+    text: 公表は慎重の上にも慎重にと頼んだのかと11月29日に問われると、当然お願いしたと答えています。
+    reading: こうひょうわ しんちょうの うえにも しんちょうにと たのんだのかと じゅういちがつ にじゅうくにちに とわれると、とうぜん おねがい したと こたえて います。
+  - speaker: reimu
+    text: 政治家が動いたと騒がれましたが、国の委員会は、公表の時期がゆがめられた形跡は無いとしました。
+    reading: せいじかが うごいたと さわがれましたが、くにの いいんかいわ こうひょうの じきが ゆがめられた けいせきわ ないと しました。
+# ---- 2005年11月17日・公表（職員は名前の無いモブ。持ち主の言葉は作らない。笑いにしない） ----
+- id: ch9_kohyo
+  title: 11月17日
+  background: ah_yakusho
+  stage:
+  - {who: kushokuin, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 11月17日、国交省が偽造を公表します。21件。すでに建っていたマンションは13件、471戸でした。
+    reading: じゅういちがつ じゅうしちにち、こっこうしょうが ぎぞうお こうひょう します。にじゅういっけん。すでに たって いた まんしょんわ じゅうさんけん、よんひゃく ななじゅういっこでした。
+    telops:
+    - {text: "11月17日 国交省が公表 偽造21件", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: kushokuin
+    emotion: thinking
+    text: もしもし。お住まいのマンションの[構造計算|こうぞうけいさん]について、お伝えすることが……。
+  - speaker: kushokuin
+    emotion: thinking
+    text: 耐震性に、大きな問題がある可能性が高いと……。
+# ---- 今の部屋（25日〜28日と公表までの整理。会議の言い分はどちらかに決めない。本人がのちに国会で認めた2つだけを確かな事実として言う） ----
+- id: heya1
+  title: ''
+  background: ah_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 25日に報告、26日に国へメール。
+  - speaker: zundamon
+    emotion: surprised
+    text: 27日に会議、28日に売買……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4日のあいだの出来事よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 国は、26日に知ってたのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 国の委員会によると、担当の課が確かめてから大臣に伝わるまで1週間かかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国が偽装を公表したのは、売買から20日後よ。
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、会議の中身は！？ 公表するなって言ったの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: そこは、2人の言い分が食い違っているの。どちらも、国会での言葉よ。
+# ---- 2005年11月29日・参考人（宣誓なし）。この回の対立の山。一問一答は会議録の並びのまま（K1-13・17〜22・73〜76・133〜137・231〜234）。委員長が藤田を止める所も嘲らない ----
+- id: ch10_sankonin
+  title: 食い違う言い分
+  background: ah_iinkai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  - {who: iincho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月29日、衆議院の委員会。小嶋とイーホームズの藤田東吾が、宣誓をしない参考人として呼ばれます。
+    reading: じゅういちがつ にじゅうくにち、しゅうぎいんの いいんかい。おじまと いーほーむずの ふじた とうごが、せんせいお しない さんこうにんと して よばれます。
+  - speaker: zundamon
+    emotion: sad
+    text: おわびのしようもなく、まことに申しわけございません。
+- id: ch10_fujita
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: fujita, x: 0.14, flip: true, emotion: normal}
+  - {who: iincho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: fujita
+    emotion: normal
+    text: 今回、私どもは、第一通報者としてこの事件を公表いたしました。
+  - speaker: iincho
+    emotion: normal
+    text: 参考人は端的にお答えください。
+    beat: true
+  - speaker: fujita
+    emotion: normal
+    text: わかりました。
+  - speaker: iincho
+    emotion: normal
+    text: 質問に答えてください。
+    beat: true
+- id: ch10_fujita2
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  - {who: fujita, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: fujita
+    emotion: normal
+    text: 公表を差し控えるように初めの圧力という点では、
+  - speaker: fujita
+    emotion: normal
+    text: こちらに座っていらっしゃる[小嶋|オジマ]社長の方から、十月二十七日においてありました。
+- id: ch10_fujita3
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: fujita, x: 0.14, flip: true, emotion: normal}
+  - {who: iincho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: fujita
+    emotion: normal
+    text: 一回下がるのですか。
+  - speaker: iincho
+    emotion: normal
+    text: '[藤田|フジタ]参考人、お引き取りください。'
+    beat: true
+- id: ch10_nagatsuma
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: fujita, x: 0.14, flip: true, emotion: normal}
+  - {who: nagatsuma, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: nagatsuma
+    emotion: normal
+    text: 具体的にどんな言葉があったんですか。
+  - speaker: fujita
+    emotion: normal
+    text: もしそれでも公表するのであれば、徹底的にたたくというふうに言われました。
+  - speaker: fujita
+    emotion: normal
+    text: '[小嶋|オジマ]社長に言われました、ヒューザーの本社にて。'
+- id: ch10_hitei
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: normal}
+  - {who: nagatsuma, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: nagatsuma
+    emotion: normal
+    text: '[小嶋|オジマ]社長、いかがですか。'
+  - speaker: zundamon
+    emotion: normal
+    text: 私の方は、公表するなと申したのではございません。
+    telops:
+    - {text: "小嶋「公表するなと申したのではございません」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 公表するまでに相当程度お調べする時間が必要であるということをまず申し上げました。
+  - speaker: zundamon
+    emotion: normal
+    text: それから、たたくという言葉は全く違いまして、
+  - speaker: zundamon
+    emotion: normal
+    text: 徹底的にそれは追及させていただきますということを申し上げました。
+- id: ch10_mikazuki
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: normal}
+  - {who: mikazuki, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 三日月大造議員は、国交省の文書にヒューザーから勝手に動くなという指示とある、とただします。
+    reading: みかづき たいぞう ぎいんわ、こっこうしょうの ぶんしょに ひゅーざーから かってに うごくなと いう しじと あると ただします。
+  - speaker: zundamon
+    emotion: normal
+    text: 国交省もいいかげんにしてほしいですね、全く。
+    telops:
+    - {text: "小嶋「国交省もいいかげんにしてほしいですね、全く。」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: mikazuki
+    emotion: normal
+    text: 勝手に動くなという指示を出す方がいいかげんにしてほしいですよ。
+  - speaker: mikazuki
+    emotion: normal
+    text: 公表しようというその指定検査機関を呼び出すんですか、建築主が。
+  - speaker: mikazuki
+    emotion: normal
+    text: 一体どんな権限でそんなことをされるんですか。
+- id: ch10_chui
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: normal}
+  - {who: iinchodairi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: iinchodairi
+    emotion: normal
+    text: なお、参考人、感情で答弁をなさらないようにお願いします。
+  - speaker: zundamon
+    emotion: normal
+    text: はい、かしこまりました。
+  - speaker: zundamon
+    emotion: normal
+    text: 間違った方が謝りに来るべきじゃないのかということで、
+  - speaker: zundamon
+    emotion: normal
+    text: 当社に来ていただきたいということをお願い申し上げました。
+- id: ch10_kokuta
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: fujita, x: 0.14, flip: true, emotion: normal}
+  - {who: kokuta, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 共産党の穀田恵二議員は、小嶋がこう語ったと記されている、と読み上げます。
+    reading: きょうさんとうの こくた けいじ ぎいんわ、おじまが こう かたったと しるされて いると よみあげます。
+  - speaker: kokuta
+    emotion: normal
+    text: '[天災|てんさい]地震にて[倒壊|とうかい]したとき調査し発覚したことにしたい、'
+  - speaker: kokuta
+    emotion: normal
+    text: イーホームズさん、こういう発言があったことは事実ですね。
+  - speaker: fujita
+    emotion: normal
+    text: そのとおりです。事実です。
+- id: ch10_netsuzo
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: normal}
+  - {who: kokuta, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kokuta
+    emotion: normal
+    text: では、[小嶋|オジマ]さん。
+  - speaker: zundamon
+    emotion: normal
+    text: これは全くひどい[捏造|ねつぞう]でございまして、
+  - speaker: zundamon
+    emotion: normal
+    text: 私の方が申し上げたことは、[阪神大震災|はんしんだいしんさい]によって六千人以上の方が亡くなり、
+  - speaker: zundamon
+    emotion: normal
+    text: そして[二十万棟|ニジュウマントウ]以上の家屋が[倒壊|とうかい]し、四十万世帯以上がなくなったんです。
+  - speaker: zundamon
+    emotion: normal
+    text: それぞれがいずれも耐震構造での確認だったはずのものが、
+  - speaker: zundamon
+    emotion: normal
+    text: なぜこのように倒れてしまったのか、そこを追及するということがどうなのかという問題で、
+  - speaker: zundamon
+    emotion: normal
+    text: 私どもとしましては、これを地震があってから調査した方がいいなどということは
+  - speaker: zundamon
+    emotion: normal
+    text: 全く申し上げてございません。
+  - speaker: reimu
+    text: 言い分は、分かれたまま。では、会議の翌日の17戸の売買は、なぜ進んだのか。
+    reading: いいぶんわ わかれた まま。でわ かいぎの よくじつの じゅうななこの ばいばいわ、なぜ すすんだのか。
+# ---- 2005年12月14日・姉歯の証人喚問（小嶋は出さない。圧力の証言のすぐあとに偽証の注記。声の小ささは扱わない） ----
+- id: ch11_aneha
+  title: 姉歯の証人喚問
+  background: ah_iinkai
+  stage:
+  - {who: aneha, x: 0.14, flip: true, emotion: sad}
+  - {who: iincho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月14日。今度は姉歯が、うその証言が罪になる証人として呼ばれます。
+    reading: じゅうにがつ じゅうよっか。こんどわ あねはが、うその しょうげんが つみに なる しょうにんと して よばれます。
+  - speaker: iincho
+    emotion: normal
+    text: あなたはなぜ悪質な偽装を[行|おこな]ったのか、あるいは[行|おこな]わざるを得なかったのか、
+  - speaker: iincho
+    emotion: normal
+    text: その背景と理由について説明してください。
+  - speaker: aneha
+    emotion: sad
+    text: 始まりは多分一九九八年ごろだったと思います。
+  - speaker: aneha
+    emotion: sad
+    text: '[木村建設|キムラケンセツ]の東京支店長、[篠塚|シノヅカ]氏から[鉄筋|てっきん]を減らすように相当プレッシャーをかけられまして'
+  - speaker: reimu
+    text: 裁判所はのちに、この証言を偽証と認めました。支店長も、強く圧力をかけた認識は無いと答えています。
+    reading: さいばんしょわ のちに、この しょうげんお ぎしょうと みとめました。してんちょうも、つよく あつりょくお かけた にんしきわ ないと こたえて います。
+  - speaker: iincho
+    emotion: normal
+    text: '[構造計算|こうぞうけいさん]書の偽装は、どのような形で[行|おこな]いましたか。'
+  - speaker: aneha
+    emotion: sad
+    text: そこの部分を[低減|ていげん]、例えば〇・五とか〇・四とか[低減|ていげん]して、
+  - speaker: aneha
+    emotion: sad
+    text: 地震時の[応力|おうりょく]を少なくして偽造いたしました。
+- id: ch11_watanabe
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: aneha, x: 0.14, flip: true, emotion: sad}
+  - {who: watanabe, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: watanabe
+    emotion: normal
+    text: この偽造は大胆不敵だと私は思っているんですけれども、
+  - speaker: watanabe
+    emotion: normal
+    text: 見る人が見たらすぐわかりますよね。
+  - speaker: aneha
+    emotion: sad
+    text: 構造のプロであれば、すぐわかると思います。
+# ---- 2005年12月・0.5の線（国交省の職員のモブ。0.5は国の目安・「おそれ」まで。住民の言葉は作らず、笑い・SE なし） ----
+- id: ch12_kokkosho
+  title: 0.5の線
+  background: ah_kokkosho
+  bgm: 223am
+  stage:
+  - {who: shokuin, x: 0.14, flip: true, emotion: normal}
+  - {who: shokuin2, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shokuin2
+    emotion: normal
+    text: 12月8日の目安ですね。地震の横の力に耐える力が、必要な量の何倍か。
+  - speaker: shokuin
+    emotion: normal
+    text: 法律の線は、1.0。
+  - speaker: shokuin2
+    emotion: thinking
+    text: 0.5を切ったら？
+  - speaker: shokuin
+    emotion: normal
+    text: 使用禁止の目安だ。[震度5強|しんどごきょう]の地震で、[倒壊|とうかい]するおそれがあると考えられる。
+  - speaker: shokuin2
+    emotion: normal
+    text: 出ていく人の家賃は？
+  - speaker: shokuin
+    emotion: normal
+    text: 月に10万円まで、原則2年の補助が出る。
+  - speaker: shokuin2
+    emotion: sad
+    text: 買った部屋のローンは……。
+  - speaker: shokuin
+    emotion: sad
+    text: ……残る。
+    beat: true
+- id: ch12_model
+  title: ''
+  background: ah_model
+  cuts:
+  - speaker: reimu
+    text: 広い部屋を安く、と売られたリビング。
+    reading: ひろい へやお やすくと うられた りびんぐ。
+  - speaker: reimu
+    text: 0.5を切ったマンションには、使用禁止などの命令が出されていきます。
+    reading: れいてんごお きった まんしょんにわ、しよう きんしなどの めいれいが だされて いきます。
+    background: ah_model_kinshi
+- id: ch12_manshon
+  title: ''
+  background: ah_manshon
+  cuts:
+  - speaker: reimu
+    text: 2006年4月までに、18の物件のうち15で、退去の勧告などが出されました。
+    reading: にせん ろくねん しがつまでに じゅうはちの ぶっけんの うち じゅうごで、たいきょの かんこくなどが だされました。
+  - speaker: reimu
+    text: 窓の明かりが、消えていきます。
+    reading: まどの あかりが、きえて いきます。
+    background: ah_manshon_kie
+# ---- 2006年1月17日・阪神・淡路大震災の日の証人喚問（冒頭の本編版。黙祷はここ。並びは会議録どおり 林→早川→佐藤） ----
+- id: card2006
+  title: ''
+  background: ah_card_2006
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2006年1月17日。阪神・淡路大震災から、11年の日です。
+    reading: にせん ろくねん いちがつ じゅうしちにち。はんしん あわじ だいしんさいから、じゅういちねんの ひです。
+- id: ch13_shonin
+  title: 震災の日の証人喚問
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  - {who: iincho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: iincho
+    emotion: normal
+    text: 本日は、[阪神・淡路大震災|はんしんあわじだいしんさい]の日でありますので、[黙祷|もくとう]をいたしたいと存じます。
+    pause_after: 1.5
+  - speaker: reimu
+    text: 小嶋は今度は証人として宣誓します。委員長はまず、10月25日のあとの売買を問います。
+    reading: おじまわ こんどわ しょうにんと して せんせい します。いいんちょうわ まず、じゅうがつ にじゅうごにちの あとの ばいばいお といます。
+  - speaker: zundamon
+    emotion: sad
+    text: 十月の二十五日に当社の担当役員が[姉歯|アネハ]と会ったことは報告を聞いてございます。
+  - speaker: zundamon
+    emotion: normal
+    text: そして、その日付以降に引き渡しあるいは売買契約がなされた、
+  - speaker: zundamon
+    emotion: normal
+    text: これも事実として認識しております。
+  - speaker: zundamon
+    emotion: normal
+    text: しかしながら、それらに対して、[宅建業法|たっけんぎょうほう]等による、
+  - speaker: zundamon
+    emotion: normal
+    text: あるいはそれ以外の法律によって違法性があったという認識はございません。
+- id: ch13_hayakawa
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  - {who: hayakawa, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: hayakawa
+    emotion: normal
+    text: 平成十七年の十月の二十八日に、グランドステージ[藤沢|ふじさわ]十七戸の売買を実行しています。
+  - speaker: hayakawa
+    emotion: normal
+    text: その入金額、そしてその入金された[金|かね]をどこへ使ったか。
+  - speaker: zundamon
+    emotion: sad
+    text: この件に関しましても、
+  - speaker: zundamon
+    emotion: sad
+    text: '[刑事訴追|けいじそつい]のおそれがありますので、控えさせていただければと思います。'
+    telops:
+    - {text: "小嶋「刑事訴追のおそれがありますので」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2006年1月17日・佐藤議員の2問目・3問目（K3-135〜138。冒頭の1問目 K3-133→134 の続き。読み上げの中身はナレで言う） ----
+- id: ch13_sato
+  title: ''
+  background: ah_iinkai
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  - {who: sato, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 公明党の佐藤茂樹議員は、藤沢の件をさらに問います。
+    reading: こうめいとうの さとう しげき ぎいんわ、ふじさわの けんお さらに といます。
+  - speaker: sato
+    emotion: normal
+    text: それに対して、あなたはどのように指示を出されましたか。
+  - speaker: zundamon
+    emotion: sad
+    text: 大変申しわけないですが、その件に関しましても証言は控えさせていただきたいと思います。
+  - speaker: reimu
+    text: 佐藤議員は、地震のあとで調べた方がいいとは言っていない、という11月の答えを読み上げます。
+    reading: さとう ぎいんわ じしんの あとで しらべた ほうが いいとわ いって いないと いう、じゅういちがつの こたえお よみあげます。
+  - speaker: sato
+    emotion: normal
+    text: 今もそのとおりで、言っておられませんか。お答えください。
+  - speaker: zundamon
+    emotion: sad
+    text: ちょっとだけ相談させていただいてよろしいですか。
+  - speaker: zundamon
+    emotion: sad
+    text: 大変申しわけないですが、拒絶させていただきたいと思います。
+# ---- 2006年1月末〜5月17日・破産と逮捕（逮捕はナレだけ。受付の看板を外す差し替え） ----
+- id: ch14_hasan
+  title: 破産と逮捕
+  background: ah_uketsuke
+  bgm: 223am
+  stage:
+  - {who: hanbai, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: hanbai
+    emotion: sad
+    text: 1月の末、住民の方々がうちの破産を申し立てました。
+  - speaker: hanbai
+    emotion: sad
+    text: 2月16日。破産の手続きが、始まりました。負債は、約84億円です。
+  - speaker: hanbai
+    emotion: sad
+    text: ……看板、外しますね。
+    background: ah_uketsuke_kara
+  - speaker: reimu
+    text: 5月17日。小嶋は、詐欺の疑いで逮捕されます。証言を控えた日から、ちょうど4か月後でした。
+    reading: ごがつ じゅうしちにち。おじまわ、さぎの うたがいで たいほ されます。しょうげんお ひかえた ひから、ちょうど よんかげつごでした。
+  - speaker: reimu
+    text: 起訴されると、彼は初公判で無罪を主張しました。
+    reading: きそ されると、かれわ しょこうはんで むざいお しゅちょう しました。
+# ---- 2008〜2011年・判決（裁判長は名前の無いモブ、言葉は判決の報道どおり。被告人席の小嶋は台詞なし。罪は詐欺だけ） ----
+- id: card2008
+  title: ''
+  background: ah_card_2008
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2008年2月。計算書の改ざんや国会での偽証などの罪で、姉歯の懲役5年の実刑が確定します。
+    reading: にせん はちねん にがつ。けいさんしょの かいざんや こっかいでの ぎしょう などの つみで、あねはの ちょうえき ごねんの じっけいが かくてい します。
+- id: ch15_houtei
+  title: 判決
+  background: ah_houtei
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  - {who: saibancho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌月の3月25日、東京地裁。小嶋に、懲役3年、執行猶予5年の判決です。
+    reading: よくげつの さんがつ にじゅうごにち、とうきょう ちさい。おじまに ちょうえき さんねん しっこう ゆうよ ごねんの はんけつです。
+  - speaker: saibancho
+    emotion: normal
+    text: エンドユーザー軽視の悪質な犯行だ
+    se: don
+    telops:
+    - {text: "東京地裁「エンドユーザー軽視の悪質な犯行」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: 罪は詐欺。藤沢の物件で、安全が確かめられないと知りながら、買う人に伝えなかったとされました。
+    reading: つみわ さぎ。ふじさわの ぶっけんで あんぜんが たしかめられないと しりながら、かう ひとに つたえなかったと されました。
+  - speaker: reimu
+    text: 被害は11人で約4億1千万円、平均で1人約3700万円。偽装そのものの罪ではありません。
+    reading: ひがいわ じゅういちにんで やく よんおく いっせんまんえん、へいきんで ひとり やく さんぜん ななひゃくまんえん。ぎそう その ものの つみでわ ありません。
+  - speaker: reimu
+    text: 2009年の二審は身勝手で無責任極まりない犯行とし、2011年12月、最高裁で有罪が確定しました。
+    reading: にせん きゅうねんの にしんわ みがってで むせきにん きわまりない はんこうと し、にせん じゅういちねん じゅうにがつ さいこうさいで ゆうざいが かくてい しました。
+# ---- 2015年4月・公表したコメント（法廷の言葉ではない。原文の連続した一部だけ） ----
+- id: card2015
+  title: ''
+  background: ah_card_2015
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2015年4月。週刊誌の問いに書面で答えたコメントには、こうあります。
+    reading: にせん じゅうごねん しがつ。しゅうかんしの といに しょめんで こたえた こめんとにわ、こう あります。
+- id: ch15_comment
+  title: 命のある限り
+  background: ah_shinbun
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 小嶋, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: 私は[『耐震偽装』|たいしんぎそう]に全く関与していないにもかかわらず有罪とされ、
+  - speaker: zundamon
+    emotion: sad
+    text: 地位も名誉も奪われました。
+  - speaker: zundamon
+    emotion: normal
+    text: 命のある限り、[再審請求|さいしんせいきゅう]し続ける覚悟です。
+# ---- 論争1：業界ぐるみ？（議員の見方・委員会の見方は主語を付ける。偽証と単独犯の構図。数字は時点と主語を分ける） ----
+- id: ronso1
+  title: 業界ぐるみ？
+  background: ah_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 売り主も[施工|しこう]も審査も、みんなグルだったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 国会でも、悪意の人たちの輪があったと言った議員はいたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、支店長の圧力で始めたという[姉歯|アネハ]の証言は[偽証|ぎしょう]とされたわ。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: うそだったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 日経は、偽装そのものは[姉歯|アネハ]の単独犯の形が固まったと報じたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[小嶋|オジマ]が問われたのも、偽装ではなく[藤沢|ふじさわ]の売買の詐欺よ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年8月末の国の集計で、[姉歯|アネハ]の偽装は99件。
+  - speaker: tsumugi
+    emotion: normal
+    text: 刑事で罪に問われたのは、そのうち[6棟|ろくとう]よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1人の手の偽装が、何十もの建物で審査を通り抜けた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 国の委員会は、根の深い仕組みの問題だと見たの。
+  - speaker: zundamon
+    emotion: normal
+    text: 手は1人、穴は仕組み……。
+    beat: true
+# ---- 論争2：国のせい？（民間も役所も見逃した。最高裁の判断は県の責任を認めなかった範囲） ----
+- id: ronso2
+  title: 国のせい？
+  background: ah_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、民間に審査を任せた国のせいなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 1998年に民間へ開いたのは確か。民間の審査の形骸化も、委員会は挙げたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、見逃したのは民間の6つの機関だけじゃないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 役所の審査でも、29の自治体が見逃していたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 役所も！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: 2013年には最高裁が、偽装のホテルの会社が県を訴えた裁判で
+  - speaker: tsumugi
+    emotion: normal
+    text: 県の責任を認めなかったわ。安全はまず建築士が確かめるもの、としてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 民間か役所かで、見逃しは変わらなかった。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 問われたのは、計算の答えだけを見る審査のやり方よ。
+  - speaker: zundamon
+    emotion: sad
+    text: 答えだけ見て、はい確認済み……。
+    beat: true
+# ---- 本当の注意点（確認済みは保証書ではない／新築は保険か供託かを聞ける。言い切らない） ----
+- id: chui
+  title: 確認済みの意味
+  background: ah_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。[建築確認|けんちくかくにん]済みは、安全の保証書ではないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: え、保証書じゃないの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 確認は、法律の最低の基準に合うかを確かめる手続きよ。
+  - speaker: zundamon
+    emotion: sad
+    text: 合格の紙は、中身の保証じゃないのだ……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。新築を買うなら、契約の前に売主へ保険か[供託|きょうたく]かを聞けるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 保険か、[供託|きょうたく]？
+  - speaker: tsumugi
+    emotion: normal
+    text: 売主が潰れても、直す費用が出るようにする仕組みよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 聞くだけなら、タダなのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 細かい所は、国交省の説明で確かめてね。
+# ---- 現代（2026年11月時点。2007年の専門家の二重の審査・2009年の保険か供託。着工は1行。小嶋・姉歯の近況は言わない） ----
+- id: card2026
+  title: ''
+  background: ah_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。偽装の公表から、21年がたちました。
+    reading: にせん にじゅうろくねん。ぎそうの こうひょうから、にじゅういちねんが たちました。
+- id: ima
+  title: 審査のいま
+  background: ah_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: いまは、審査はどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2007年6月から、高さ20メートルを超える[鉄筋|てっきん]コンクリートの建物などは
+  - speaker: tsumugi
+    emotion: normal
+    text: 別の専門家が、[構造計算|こうぞうけいさん]をもう一度審査するの。
+  - speaker: zundamon
+    emotion: happy
+    text: 二重のチェックなのだ！
+    se: levelup
+  - speaker: tsumugi
+    emotion: normal
+    text: 確認にかかる期間も、原則21日から35日に延びたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 35日も！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: その年の住宅の着工は、前の年より約18%減ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 厳しくすると、建つのも遅れるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2015年からは、建築主が判定の機関を選んで、直接申し込む形になったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 売主の側では2009年10月から、保険か[供託|きょうたく]が義務になったわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 売主が潰れても、直すお[金|かね]が出るのだ。
+# ---- 締め（自転車の回収→阪神・淡路大震災の日と、11月29日の「阪神大震災によって」を回収。倒れた建物は無い） ----
+- id: shime
+  title: ''
+  background: ah_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 自転車は、ブレーキを直してから送るのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 直せないなら、売る前に書くの。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 偽装の対策会議の翌日に、なぜ17戸の売買は進んだのか。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 判決は、安全が確かめられないと知りながら伝えなかったと認めたわ。
+  - speaker: zundamon
+    emotion: sad
+    text: 本人は、2015年に無実を訴えたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[阪神・淡路大震災|はんしんあわじだいしんさい]の日に、彼は証言を控えたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: その前の年の11月、彼は国会で[阪神大震災|はんしんだいしんさい]を挙げていたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 耐震の確認を通ったはずの建物が、なぜ倒れたのかと。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[震度5強|しんどごきょう]で倒れるおそれのある建物は、地震が来る前に見つかった。'
+  - speaker: tsumugi
+    emotion: normal
+    text: '[施工|しこう]会社が、[鉄筋|てっきん]が少ないと気づいたことからよ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 実際に倒れた建物は、ないの。
+  - speaker: zundamon
+    emotion: sad
+    text: 地震の前で、よかったのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 確認済みの[紙|かみ]より、確かめた中身。買う前に、一度だけ聞いてみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
