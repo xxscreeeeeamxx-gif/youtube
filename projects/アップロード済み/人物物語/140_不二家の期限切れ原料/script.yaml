@@ -1,0 +1,1204 @@
+meta:
+  title: 不二家の社長が雇ったコンサルの報告書「雪印乳業の二の舞となる」、2か月後に創業家社長は辞意【ずんだもん解説】
+  slug: fujiya-fujii
+  hook_line: 1日過ぎた牛乳60キロで、なぜ97年続いた創業家の経営は終わったのか。
+  summary: 2007年1月15日、不二家の社長・藤井林太郎は、銀座の本社の社員食堂で辞意を表明しました。始まりは、埼玉工場で消費期限が1日過ぎた牛乳60キロ。そして2か月前、社長が雇った外部のコンサルタントが会議で配った1枚の紙でした。「雪印乳業の二の舞」と書いたのは誰で、会社はなぜ公表しなかったのか。第三者の会議の報告書とBPOの見解、新聞が伝えた会見の言葉をもとに、会社と報告書とテレビ、それぞれの言い分を主語つきで並べて再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 不二家 信頼回復対策会議「信頼回復対策会議最終報告書」（2007年3月30日） https://www.fujiya-peko.co.jp/company/ir/pdf/assembly_20070419_01.pdf
+  - 不二家 信頼回復対策会議「業務レベルにおける最終報告『品質管理関連の実態調査』」（2007年3月30日） https://www.fujiya-peko.co.jp/company/ir/pdf/assembly_20070419_02.pdf
+  - BPO 放送倫理検証委員会「不二家関連の２番組に関する見解」（決定第1号・2007年8月6日） https://www.bpo.gr.jp/wordpress/wp-content/themes/codex/pdf/kensyo/determination/2007/01/dec/0.pdf
+  - 日本食糧新聞「不二家、新社長に櫻井康文取締役が就任 外部識者で改革委員会設置」（2007年1月24日） https://news.nissyoku.co.jp/news/nss-9769-0006
+  - 不二家「株式情報」（大株主・2026年6月30日現在） https://www.fujiya-peko.co.jp/company/ir/stock/stock.html
+  - 不二家「2026年12月期 第３四半期決算短信」（2026年10月26日） https://www.fujiya-peko.co.jp/assets/pdf/financial_20261026_01.pdf
+  tags:
+  - 不二家
+  - 藤井林太郎
+  - 期限切れ原料
+  - 消費期限
+  - シュークリーム
+  - 雪印乳業の二の舞
+  - 山崎製パン
+  - ペコちゃん
+  - 第三者委員会
+  - 企業不祥事
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 報道から5日で辞意
+    bottom: 不二家の期限切れ原料
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kanbu
+    label: 幹部
+    voice: 11
+    pitch: -0.02
+    outfit: suit
+    color: '#2a2f3a'
+  - id: kanbu2
+    label: 幹部
+    voice: 67
+    pitch: -0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: torishimari
+    label: 取締役
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2f3a52'
+  - id: torishimari2
+    label: 取締役
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: konsaru
+    label: コンサル
+    voice: 100
+    pitch: 0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: paat
+    label: パート
+    voice: 42
+    pitch: 0.1
+    outfit: work
+    color: '#e8ebee'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: kakaricho
+    label: 係長
+    voice: 11
+    pitch: 0.04
+    outfit: work
+    color: '#d8dde2'
+  - id: koho
+    label: 広報
+    voice: 8
+    pitch: 0.06
+    outfit: suit
+    color: '#5a6a8a'
+  - id: koho2
+    label: 広報
+    voice: 12
+    pitch: 0.02
+    outfit: suit
+    color: '#4a5a7a'
+  - id: seisanbucho
+    label: 生産部長
+    voice: 67
+    pitch: 0.06
+    outfit: suit
+    color: '#454a55'
+  - id: kisha
+    label: 記者
+    voice: 13
+    pitch: 0.16
+    outfit: suit
+    color: '#6a5a48'
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.1
+    outfit: apron
+    color: '#8a5a4a'
+  - id: tenin2
+    label: 店員
+    voice: 8
+    pitch: -0.06
+    outfit: apron
+    color: '#6a5a7a'
+  - id: tenin3
+    label: 店員
+    voice: 11
+    pitch: 0.06
+    outfit: apron
+    color: '#3e5c4a'
+  - id: kojocho
+    label: 工場長
+    voice: 13
+    pitch: -0.1
+    outfit: work
+    color: '#d8dde2'
+  - id: koroso
+    label: 厚労省
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#1f2a3a'
+  - id: sakurai
+    label: 櫻井
+    voice: 67
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: gishi
+    label: 技術者
+    voice: 11
+    pitch: -0.04
+    outfit: work
+    color: '#e8ebee'
+  - id: gohara
+    label: 郷原
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#1a1a1e'
+scenes:
+# ---- 先出し（2007年1月15日・本社7階の社員食堂。言葉は朝日・毎日の会見の言葉だけ。笑いの SE なし。フラッシュは間とナレで） ----
+- id: co_shokudo
+  title: ''
+  background: fj_shokudo
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 藤井, emotion: sad}
+  - {who: kanbu, x: 0.62, emotion: sad}
+  - {who: kanbu2, x: 0.84, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2007年1月15日、東京・銀座。不二家の本社の社員食堂で、
+    reading: にせんななねん いちがつ じゅうごにち、とうきょう ぎんざ。ふじやの ほんしゃの しゃいん しょくどうで、
+  - speaker: reimu
+    text: 期限切れ原料の問題で、社長の藤井林太郎が100人を超す記者の前に立ちます。
+    reading: きげんぎれ げんりょうの もんだいで、しゃちょうの ふじい りんたろうが ひゃくにんお こす きしゃの まえに たちます。
+  - speaker: zundamon
+    emotion: sad
+    text: 国民の皆様にご迷惑をかけ、誠に申し訳ございません
+  - speaker: zundamon
+    emotion: sad
+    text: 組織ぐるみと言われても仕方がない。上司の指示もあった。
+  - speaker: zundamon
+    emotion: sad
+    text: 私は責任を取り、辞任したい
+    pause_after: 1.2
+  - speaker: reimu
+    text: フラッシュが、一斉にたかれました。新聞が伝えた、会見の言葉です。
+    reading: ふらっしゅが、いっせいに たかれました。しんぶんが つたえた かいけんの ことばです。
+  - speaker: reimu
+    text: 最初の報道から、5日。1910年の創業から97年、社長は代々、藤井家から出ていました。
+    reading: さいしょの ほうどうから いつか。せんきゅうひゃく じゅうねんの そうぎょうから きゅうじゅうななねん、しゃちょうわ だいだい ふじいけから でて いました。
+  - speaker: reimu
+    text: 始まりは、消費期限が1日過ぎた牛乳60キロ。そして2か月前、社長の前で配られた、1枚の紙でした。
+    reading: はじまりわ、しょうひきげんが いちにち すぎた ぎゅうにゅう ろくじゅっきろ。そして にかげつまえ、しゃちょうの まえで くばられた いちまいの かみでした。
+# ---- 今の部屋（ソファにこぼしたジュース。食べ物の期限のボケにしない。20秒以内） ----
+- id: hook
+  title: ''
+  background: fj_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ソファにジュースこぼしたの、まだ言ってないのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: いつ？
+  - speaker: zundamon
+    emotion: normal
+    text: 2か月前なのだ。
+  - speaker: tsumugi
+    emotion: angry
+    text: ……その2か月のほうが、ジュースより大きいわよ。
+    se: hammer
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[不二家|ふじや]も、牛乳のことを2か月言わなかったの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1日過ぎた牛乳60キロで、なぜ97年続いた創業家の経営が終わったのか。
+    telops:
+    - {text: "1日過ぎた牛乳60キロで なぜ創業家の経営が終わった？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 牛乳60キロで、97年が！？
+# ---- 1910年の元町から6代目へ（ナレ2行だけ。年号カードなし。藤井の台詞なし） ----
+- id: ch1_rokudaime
+  title: 6代目の社長
+  background: fj_honsha
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 藤井, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1910年、横浜・元町の洋菓子店から始まった不二家。1995年、創業家から6代目の社長が出ます。
+    reading: せんきゅうひゃく じゅうねん、よこはま もとまちの ようがしてんから はじまった ふじや。せんきゅうひゃく きゅうじゅうごねん、そうぎょうけから ろくだいめの しゃちょうが でます。
+  - speaker: reimu
+    text: 藤井林太郎、52歳。12年後、1日過ぎた牛乳のことで頭を下げます。
+    reading: ふじい りんたろう、ごじゅうにさい。じゅうにねんご、いちにち すぎた ぎゅうにゅうの ことで あたまお さげます。
+# ---- 2006年9月・2億円のコンサル（取締役のモブの掛け合い。報告書の「消極的意見」「戦略コンサルタント」の範囲。藤井は出さない） ----
+- id: card2006
+  title: ''
+  background: fj_card_2006
+  cuts:
+  - speaker: reimu
+    text: 2006年9月。社長が選んだ外のコンサルが、赤字の洋菓子を本格的に調べ始めます。
+    reading: にせんろくねん くがつ。しゃちょうが えらんだ そとの こんさるが、あかじの ようがしお ほんかくてきに しらべ はじめます。
+- id: ch2_konsaru
+  title: 2億円のコンサル
+  background: fj_kaigi
+  stage:
+  - {who: torishimari, x: 0.16, emotion: surprised}
+  - {who: torishimari2, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: torishimari
+    emotion: surprised
+    text: 外のコンサルに、2億円？
+  - speaker: torishimari2
+    emotion: normal
+    text: 40週で約2億円。社長が決めた。
+  - speaker: torishimari
+    emotion: thinking
+    text: 洋菓子のこと、分かってるんですか。
+  - speaker: torishimari2
+    emotion: normal
+    text: 戦略の専門家だそうだ。
+  - speaker: torishimari
+    emotion: thinking
+    text: 1週あたり、約500万円……。
+  - speaker: torishimari2
+    emotion: normal
+    text: 工場の品質管理の担当は、3人なのにな。
+    beat: true
+    telops:
+    - {text: "コンサルに週約500万円　工場の品質管理は3人", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 埼玉工場の仕込み場（缶で4日・チョコ生のトラブル・捨て方の決まりが無い。「捨てたら怒られるし。」は文書が書き留めた言葉のまま。健康被害の話にしない） ----
+- id: ch3_kojo
+  title: 缶で届く牛乳
+  background: fj_kojo
+  bgm: curious
+  stage:
+  - {who: paat, x: 0.42, emotion: normal}
+  - {who: shinjin, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 埼玉県新座市の埼玉工場。牛乳は、使い回しの缶で届きます。
+    reading: さいたまけん にいざしの さいたま こうじょう。ぎゅうにゅうわ、つかいまわしの かんで とどきます。
+  - speaker: shinjin
+    emotion: normal
+    text: 缶の牛乳は、期限が4日なんですか。
+  - speaker: paat
+    emotion: normal
+    text: ポリの容器なら、7日だがな。
+  - speaker: shinjin
+    emotion: surprised
+    text: 同じ牛乳なのに！？
+  - speaker: paat
+    emotion: normal
+    text: 缶は使い回しだ。4日までしか保証されん。
+  - speaker: shinjin
+    emotion: surprised
+    text: '[チョコ生|チョコなま]のラインが、止まりました！'
+  - speaker: shinjin
+    emotion: surprised
+    text: 牛乳の缶が、1つ……2つ……。
+    background: fj_kojo_kan
+  - speaker: shinjin
+    emotion: surprised
+    text: 3つ……この缶、全部ですか！？
+    se: gaan
+  - speaker: shinjin
+    emotion: thinking
+    text: 期限、昨日までですよ。
+  - speaker: paat
+    emotion: normal
+    text: 使い切れなかったらニオイを嗅いで品質的に問題ないと判断したら使ってる。
+  - speaker: paat
+    emotion: normal
+    text: 捨てたら怒られるし。
+  - speaker: shinjin
+    emotion: thinking
+    text: 捨てる場所は？
+  - speaker: paat
+    emotion: normal
+    text: 決まってない。
+    beat: true
+  - speaker: shinjin
+    emotion: surprised
+    text: 流しに捨てるのは？
+  - speaker: paat
+    emotion: normal
+    text: 禁止だ。捨てた量が増えると、報告も書かされる。
+  - speaker: shinjin
+    emotion: thinking
+    text: 工場長は、知ってるんですか。
+  - speaker: paat
+    emotion: normal
+    text: 工場長までは、な。本社には上がってない。
+  - speaker: paat
+    emotion: normal
+    text: 偉い人は、ラインを見て帰るだけだ。
+  - speaker: reimu
+    text: 11月8日。消費期限が1日過ぎた牛乳60キロで、シュークリーム2,000個が作られます。
+    reading: じゅういちがつ ようか。しょうひきげんが いちにち すぎた ぎゅうにゅう ろくじゅっきろで、しゅーくりーむ にせんこが つくられます。
+  - speaker: shinjin
+    emotion: thinking
+    text: 60キロで2,000個。1個に大さじ2杯ほどか……。
+  - speaker: reimu
+    text: この牛乳は、危なかったのか。答えは翌年の3月、第三者の会議の報告書が出します。
+    reading: この ぎゅうにゅうわ、あぶなかったのか。こたえわ よくねんの さんがつ、だいさんしゃの かいぎの ほうこくしょが だします。
+# ---- 2006年11月13日・第8回推進委員会（コンサルは文書の言葉を読み上げるだけ。藤井は台詞なし・字幕で。鼠の写真は描かない） ----
+- id: ch4_gaihi
+  title: 外秘の1枚
+  background: fj_kaigi_gaihi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.1, flip: true, tag: 藤井, emotion: normal}
+  - {who: konsaru, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 11月13日、本社の会議室。週1回の推進委員会で、コンサルが28ページの報告書を配ります。
+    reading: じゅういちがつ じゅうさんにち、ほんしゃの かいぎしつ。しゅう いっかいの すいしん いいんかいで、こんさるが にじゅうはっぺーじの ほうこくしょお くばります。
+  - speaker: konsaru
+    emotion: normal
+    text: 24ページ目をご覧ください。[推進委員会|すいしんいいんかい]の[外秘|がいひ]です。
+  - speaker: konsaru
+    emotion: normal
+    text: '[消費期限切れ|しょうひきげんぎれ]原料の使用がマスコミに発覚すれば，'
+  - speaker: konsaru
+    emotion: normal
+    text: '雪印乳業の[二の舞|にのまい]となることは避けられない。'
+    se: don
+    telops:
+    - {text: "外のコンサルの報告書「雪印乳業の二の舞」", size: sm, position: middle-center, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: konsaru
+    emotion: normal
+    text: 工場の仕込みの担当の言葉も、書き留めました。
+  - speaker: konsaru
+    emotion: normal
+    text: 捨てたら怒られるし。
+- id: ch4_kaigi
+  title: ''
+  background: fj_kaigi_gaihi
+  stage:
+  - {who: zundamon, x: 0.1, flip: true, tag: 藤井, emotion: normal}
+  - {who: torishimari2, x: 0.75, emotion: normal}
+  - {who: torishimari, x: 0.92, emotion: normal}
+  cuts:
+  - speaker: torishimari
+    emotion: surprised
+    text: これまでの7回は、生産性の話ばかりだったのに。
+  - speaker: torishimari
+    emotion: angry
+    text: 2000年の雪印乳業の食中毒と、同じにするのか。
+  - speaker: torishimari
+    emotion: normal
+    text: また外のコンサルが、大げさに……
+  - speaker: torishimari2
+    emotion: normal
+    text: ……公表は。
+    pause_after: 1.2
+  - speaker: reimu
+    text: 公表すべきだ、という声は出ませんでした。藤井社長は、事実の確認と改善を指示します。
+    reading: こうひょう すべきだと いう こえわ でませんでした。ふじい しゃちょうわ、じじつの かくにんと かいぜんお しじ します。
+  - speaker: reimu
+    text: 紙は、翌日までに回収されました。外のコンサルのこの1行が、なぜ会社の言葉になっていくのか。
+    reading: かみわ、よくじつまでに かいしゅう されました。そとの こんさるの この いちぎょうが、なぜ かいしゃの ことばに なって いくのか。
+    background: fj_kaigi_kara
+    telops:
+    - {text: "社長は、事実の確認と改善を指示した（第三者会議の報告書）", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2006年11月15日〜・「遵法絶対」（係長と新人。報告書「遵守指示だけ」の範囲） ----
+- id: ch5_junpo
+  title: 遵法絶対
+  background: fj_keiji
+  stage:
+  - {who: kakaricho, x: 0.16, emotion: normal}
+  - {who: shinjin, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: kakaricho
+    emotion: normal
+    text: 本社の品質保証部から、指示の紙だ。[遵法絶対|じゅんぽうぜったい]。
+  - speaker: kakaricho
+    emotion: normal
+    text: 期限切れの原料は、絶対に使うなと。
+  - speaker: shinjin
+    emotion: normal
+    text: はい。
+  - speaker: shinjin
+    emotion: thinking
+    text: で、余った牛乳はどこに捨てるんですか。
+  - speaker: kakaricho
+    emotion: normal
+    text: ……それは書いてない。
+    se: tenten
+  - speaker: shinjin
+    emotion: thinking
+    text: 上に、聞いてもらえませんか。
+  - speaker: kakaricho
+    emotion: sad
+    text: 何を言っても、何も変わらんよ。
+# ---- 2006年11月20日・27日の推進委員会（コンサルの報告。藤井は台詞なし） ----
+- id: ch5_hokoku
+  title: ''
+  background: fj_kaigi
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 藤井, emotion: normal}
+  - {who: konsaru, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: konsaru
+    emotion: normal
+    text: 11月20日の報告です。この1か月で、期限切れの牛乳を7回使っています。
+  - speaker: konsaru
+    emotion: normal
+    text: アップルフィリングも、4回です。
+  - speaker: konsaru
+    emotion: normal
+    text: 11月27日は、6月に作ったシューロールを出荷していた件です。
+  - speaker: konsaru
+    emotion: normal
+    text: 菌は1グラムに640万個。社内の回収の基準は、100万個です。
+  - speaker: reimu
+    text: なぜ2か月、公表しなかったのか。第三者の会議は、全く誤ったものであったと言わざるを得ないと書きます。
+    reading: なぜ にかげつ、こうひょう しなかったのか。だいさんしゃの かいぎわ、まったく あやまった もので あったと いわざるお えないと かきます。
+# ---- 2006年12月・クリスマスの店（架空の店。商戦は好調） → 12月29日〜1月4日・ファックス（送り主は描かない。藤井は台詞なし） ----
+- id: ch6_xmas
+  title: 年末のファックス
+  background: fj_mise
+  bgm: hirusagari
+  stage:
+  - {who: tenin, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: クリスマスケーキのご予約、まだ承ってます！
+  - speaker: tenin
+    emotion: happy
+    text: ことしのクリスマスは、よく売れるわね。
+- id: ch6_fax
+  title: ''
+  background: fj_fax
+  bgm: kinakusai
+  stage:
+  - {who: kanbu, x: 0.14, emotion: normal}
+  - {who: kanbu2, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 12月29日。あの外秘の1枚が、いくつもの加盟店にファックスで届きます。
+    reading: じゅうにがつ にじゅうくにち。あの がいひの いちまいが、いくつもの かめいてんに ふぁっくすで とどきます。
+  - speaker: kanbu2
+    emotion: surprised
+    text: "[外秘|がいひ]の紙が、加盟店に……。"
+  - speaker: kanbu2
+    emotion: surprised
+    text: 加盟店から本社に、あの紙が届きました。
+  - speaker: kanbu
+    emotion: normal
+    text: 社長に、例のファックスの件を……。
+  - speaker: kanbu2
+    emotion: normal
+    text: 社長には、元日にお伝えしました。
+  - speaker: kanbu2
+    emotion: thinking
+    text: 4日には、2つ目の店からも届いています。
+  - speaker: kanbu
+    emotion: normal
+    text: まあ、加盟店は身内ですから。
+  - speaker: reimu
+    text: 会社は、動きませんでした。
+    reading: かいしゃわ、うごきませんでした。
+# ---- 2007年1月9日〜10日・共同通信の電話（記者の言葉は報告書の原文をナレで。広報は1人） ----
+- id: card2007
+  title: ''
+  background: fj_card_2007
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2007年1月9日。共同通信の記者から、不二家の広報に電話が入ります。
+    reading: にせんななねん いちがつ ここのか。きょうどう つうしんの きしゃから、ふじやの こうほうに でんわが はいります。
+- id: ch7_koho
+  title: 広報は1人
+  background: fj_koho
+  stage:
+  - {who: koho, x: 0.14, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 記者は、こう尋ねました。不二家が消費期限切れの原料を使用したとの情報があるが、事実か。
+    reading: きしゃわ、こう たずねました。ふじやが しょうひきげんぎれの げんりょうお しよう したとの じょうほうが あるが、じじつか。
+  - speaker: koho
+    emotion: normal
+    text: ……当該資料は[不二家|ふじや]の内部文書である可能性が高い
+  - speaker: koho
+    emotion: sad
+    text: ……牛乳の件も、事実です。
+  - speaker: reimu
+    text: 翌日、記事が出ます。
+    reading: よくじつ、きじが でます。
+  - speaker: koho
+    emotion: normal
+    text: 部長たちが、2000個と60キロだと説明しています！
+  - speaker: koho
+    emotion: normal
+    text: はい、[不二家|ふじや]広報です……少々お待ちください！
+    background: fj_koho_denwa
+  - speaker: koho
+    emotion: surprised
+    text: こっちも！？ はい、[不二家|ふじや]です……少々！
+  - speaker: koho
+    emotion: surprised
+    text: 3台目……4台目……。
+  - speaker: koho
+    emotion: angry
+    text: 広報は、わたし1人なんです！
+    se: gaan
+# ---- 2007年1月11日・1回目の会見（記者の問いは朝日の原文だけ。ほかの問いはナレで「〜について問われ」） ----
+- id: ch8_kaiken
+  title: 1回目の会見
+  background: fj_shokudo
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 藤井, emotion: sad}
+  - {who: seisanbucho, x: 0.56, emotion: sad}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月11日、本社の社員食堂。1回目の会見で、会社は洋菓子の工場と店を止めると発表します。
+    reading: いちがつ じゅういちにち、ほんしゃの しゃいん しょくどう。いっかいめの かいけんで、かいしゃわ ようがしの こうじょうと みせお とめると はっぴょう します。
+  - speaker: kisha
+    emotion: normal
+    text: 11月の時点で問題が発覚していたのに今になって公表した。
+  - speaker: kisha
+    emotion: normal
+    text: '[隠蔽|いんぺい]する意図があったのでは。'
+  - speaker: zundamon
+    emotion: sad
+    text: 社内の対応策に気を取られて意識が及ばなかった。考えに甘さがあった
+  - speaker: reimu
+    text: 外のコンサルが書いた『雪印の二の舞』の紙について問われ、藤井社長はこう答えます。
+    reading: そとの こんさるが かいた ゆきじるしの にのまいの かみに ついて とわれ、ふじい しゃちょうわ こう こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: ことの重大さを伝えるための表現で、[隠蔽|いんぺい]するつもりはなかった
+  - speaker: reimu
+    text: 会社はその紙を、プロジェクトの報告書とだけ説明しました。外のコンサルが書いた、とは言っていません。
+    reading: かいしゃわ その かみお、ぷろじぇくとの ほうこくしょと だけ せつめい しました。そとの こんさるが かいたとわ いって いません。
+  - speaker: reimu
+    text: 会社は、牛乳を使ったのはベテランのパートの判断だったと説明。生産部長はこう述べました。
+    reading: かいしゃわ、ぎゅうにゅうお つかったのわ べてらんの ぱーとの はんだんだったと せつめい。せいさん ぶちょうわ こう のべました。
+  - speaker: seisanbucho
+    emotion: sad
+    text: ベテランの甘さがあった
+# ---- 2007年1月11日〜15日・店から消える（架空の店と売り場。店を止めたのは会社の判断。FC の店主の言葉は使わない） ----
+- id: ch9_mise
+  title: 店から消える
+  background: fj_mise
+  stage:
+  - {who: tenin, x: 0.16, emotion: normal}
+  - {who: tenin2, x: 0.84, emotion: thinking}
+  cuts:
+  - speaker: tenin2
+    emotion: thinking
+    text: 本部から電話。きょうから、店を休むって。
+  - speaker: tenin
+    emotion: surprised
+    text: ケーキだけじゃなくて？ お店ごと？
+  - speaker: tenin2
+    emotion: sad
+    text: 全部。
+    se: shobon
+    background: fj_mise_shutter
+  - speaker: tenin
+    emotion: sad
+    text: ……おわびの紙、ここに貼るね。
+  - speaker: tenin
+    emotion: sad
+    text: クリスマスは、あんなに売れたのに。
+  - speaker: tenin
+    emotion: thinking
+    text: 休んでいる間、お店はどうなるの？
+  - speaker: tenin2
+    emotion: normal
+    text: 本部から、補償が出るって。
+  - speaker: reimu
+    text: 洋菓子の店およそ800店が、販売を休みます。休むと決めたのは、会社です。
+    reading: ようがしの みせ およそ はっぴゃくてんが、はんばいお やすみます。やすむと きめたのわ、かいしゃです。
+  - speaker: reimu
+    text: 加盟店約700店への補償は、1週間で8000万〜9000万円の見込み。1店で週11〜13万円ほどです。
+    reading: かめいてん やく ななひゃくてんえの ほしょうわ、いっしゅうかんで はっせんまんから きゅうせんまんえんの みこみ。いってんで しゅう じゅういちから じゅうさんまんえん ほどです。
+- id: ch9_uriba
+  title: ''
+  background: fj_uriba
+  stage:
+  - {who: tenin3, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: tenin3
+    emotion: normal
+    text: '[不二家|ふじや]の商品は、ミルキーも棚から下ろします。'
+  - speaker: reimu
+    text: 1月15日には、大手のスーパーも不二家の商品の販売を見合わせました。
+    reading: いちがつ じゅうごにちにわ、おおての すーぱーも ふじやの しょうひんの はんばいお みあわせました。
+    background: fj_uriba_kara
+  - speaker: reimu
+    text: その3日前、パンの会社の山崎製パンが不二家に接触していました。
+    reading: その みっかまえ、ぱんの かいしゃの やまざき せいぱんが ふじやに せっしょく して いました。
+# ---- 2007年1月15日・辞意（先出しの本編版。言葉は朝日・毎日の会見の言葉だけ、並びは記事どおり。記者の問いは毎日の原文だけ。嘲らない。SE なし） ----
+- id: ch10_jii
+  title: 辞意
+  background: fj_shokudo
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 藤井, emotion: sad}
+  - {who: kanbu, x: 0.6, emotion: sad}
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月15日、午後3時からの会見は2時間40分。会社は、過去7年に18件の期限切れ原料の使用を公表します。
+    reading: いちがつ じゅうごにち、ごご さんじからの かいけんわ にじかん よんじゅっぷん。かいしゃわ、かこ ななねんに じゅうはっけんの きげんぎれ げんりょうの しようお こうひょう します。
+  - speaker: zundamon
+    emotion: sad
+    text: 組織ぐるみと言われても仕方がない。上司の指示もあった。違反は頻発していた
+  - speaker: zundamon
+    emotion: sad
+    text: 私は責任を取り、辞任したい
+    pause_after: 1.2
+    telops:
+    - {text: "藤井「私は責任を取り、辞任したい」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 伝統のペコ人形のように、皆様に笑顔を送りたい
+  - speaker: reimu
+    text: 18件は、社員の記憶をたどった聞き取りでした。細かく問われると、調査中という答えが続きます。
+    reading: じゅうはっけんわ、しゃいんの きおくお たどった ききとりでした。こまかく とわれると、ちょうさちゅうと いう こたえが つづきます。
+  - speaker: kisha
+    emotion: normal
+    text: そんなあいまいな情報で発表しているのか
+  - speaker: reimu
+    text: 隠蔽体質をなくす具体策を問われると、こう答えます。
+    reading: いんぺい たいしつお なくす ぐたいさくお とわれると、こう こたえます。
+  - speaker: zundamon
+    emotion: sad
+    text: 社員の倫理観に頼るしかない
+  - speaker: reimu
+    text: 藤井家で守ってきたブランドの責任に触れ、こう述べました。
+    reading: ふじいけで まもって きた ぶらんどの せきにんに ふれ、こう のべました。
+  - speaker: zundamon
+    emotion: sad
+    text: 長年築き上げた伝統、ブランドを失って残念
+  - speaker: reimu
+    text: 第三者の会議はのちに、裏づけの無い18件まで全部出したことも適切ではなかったとします。
+    reading: だいさんしゃの かいぎわ のちに、うらづけの ない じゅうはっけんまで ぜんぶ だした ことも てきせつでわ なかったと します。
+# ---- 今の部屋（電話から辞意までの6日を並べる。会見を嘲らない） ----
+- id: heya_5ka
+  title: ''
+  background: fj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 記者の電話から6日で、社長が辞めるって言ったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 9日に電話、10日に記事。
+  - speaker: tsumugi
+    emotion: normal
+    text: 11日に店を止めて、15日に辞意よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 紙が配られてからは、2か月もあったのに……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 最初に世の中に出したのは、会社じゃなくて報道だったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 黙ってた2か月が、5日で全部出たのだ……。
+# ---- 2007年1月16日・川口保健所の前の工場長（名前を出さない。言葉は毎日の1つだけ） → 1月17日・厚労省（藤井の最後の画。台詞は「深くおわび申し上げます」だけ。役人は名前を出さない） ----
+- id: ch11_kojocho
+  title: おわびの日
+  background: fj_roka
+  bgm: 223am
+  stage:
+  - {who: kojocho, x: 0.24, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1月16日。埼玉工場の工場長は、報告書を出しに訪れた保健所で記者たちにこう話します。
+    reading: いちがつ じゅうろくにち。さいたま こうじょうの こうじょうちょうわ、ほうこくしょお だしに おとずれた ほけんじょで きしゃたちに こう はなします。
+  - speaker: kojocho
+    emotion: sad
+    text: コストと安心安全のバランスが崩れた。
+  - speaker: kojocho
+    emotion: sad
+    text: コストを優先することがあったかもしれない
+- id: ch11_owabi
+  title: ''
+  background: fj_roka
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 藤井, emotion: sad}
+  - {who: koroso, x: 0.58, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月17日、厚生労働省。藤井社長が、おわびに訪れます。
+    reading: いちがつ じゅうしちにち、こうせい ろうどうしょう。ふじい しゃちょうが、おわびに おとずれます。
+  - speaker: zundamon
+    emotion: sad
+    text: 深くおわび申し上げます
+  - speaker: koroso
+    emotion: normal
+    text: 食の信頼を揺るがす重大な事案で大変遺憾。
+  - speaker: koroso
+    emotion: normal
+    text: 行政に対する報告が遅れたことも見逃すことはできない
+- id: ch11_ev
+  title: ''
+  background: fj_roka
+  cuts:
+  - speaker: reimu
+    text: このあと訪れた農水省では、記者団の問いに一言も答えずエレベーターに乗り込みました。
+    reading: この あと おとずれた のうすいしょうでわ、きしゃだんの といに ひとことも こたえず えれべーたーに のりこみました。
+    pause_after: 1.0
+# ---- 2007年1月22日・創業家の外から初めての社長（櫻井の台詞は日本食糧新聞の1つだけ）→ 広報は6人に（会社の資料の範囲） ----
+- id: ch11_sakurai
+  title: 創業家の外から
+  background: fj_honsha
+  bgm: hirusagari
+  stage:
+  - {who: sakurai, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1月22日、就任の会見。創業家の外から出た初めての社長、58歳の櫻井康文です。
+    reading: いちがつ にじゅうににち、しゅうにんの かいけん。そうぎょうけの そとから でた はじめての しゃちょう、ごじゅうはっさいの さくらい やすふみです。
+  - speaker: sakurai
+    emotion: normal
+    text: '[不二家|フジヤ]ブランド、ペコちゃんはお客さまのものであるという原点に立ち返り、再生を目指す'
+- id: ch11_koho
+  title: ''
+  background: fj_koho_denwa
+  stage:
+  - {who: koho, x: 0.14, emotion: happy}
+  - {who: koho2, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: koho
+    emotion: happy
+    text: 広報が、6人になりました！
+    se: levelup
+  - speaker: koho2
+    emotion: normal
+    text: 社長の直轄の広報室です。電話も、みんなで取ります。
+  - speaker: koho
+    emotion: happy
+    text: 社員が社長に、じかにメールを書ける仕組みもできました。
+  - speaker: reimu
+    text: 1月11日から3月30日までに、会社は18回の記者会見を開きました。
+    reading: いちがつ じゅういちにちから さんがつ さんじゅうにちまでに、かいしゃわ じゅうはっかいの きしゃ かいけんお ひらきました。
+# ---- 2007年1月22日・「チョコ再利用」の放送（両論。画面は架空のスタジオの影だけ。司会者の顔・声まねはしない） ----
+- id: ch12_tv
+  title: チョコ再利用の放送
+  background: fj_studio
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 同じ1月22日の朝。テレビの情報番組が元従業員の証言として、チョコ再利用の疑いを伝えます。
+    reading: おなじ いちがつ にじゅうににちの あさ。てれびの じょうほう ばんぐみが もと じゅうぎょういんの しょうげん として、ちょこ さいりようの うたがいお つたえます。
+- id: ch12_heya
+  title: ''
+  background: fj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: チョコまで！？ 本当だったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 見方が、2つに分かれたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[不二家|ふじや]が置いた第三者の会議は、[捏造|ねつぞう]の疑いすらあると書いたわ。'
+    telops:
+    - {text: "第三者会議は「捏造の疑いすらある」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 放送を調べた[BPO|ビーピーオー]は、こう書いたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 放送倫理上、見逃すことができない落ち度であった。
+    telops:
+    - {text: "BPOは「見逃すことができない落ち度」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: ただし内部告発の存在自体に[捏造|ねつぞう]はなく、とも書いてるの。
+    telops:
+    - {text: "BPOは「内部告発の存在自体に捏造はなく」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: '[BPO|ビーピーオー]は、告発の中身の真偽は確かめられていないとも書いたわ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちが正しいの……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 番組は4月に、伝聞だったことなど3点を訂正したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 4月って、放送から3か月近くもあと……。
+  - speaker: tsumugi
+    emotion: normal
+    text: "[BPO|ビーピーオー]は、そこも問題だとしたの。"
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ店のシャッターが下りたのは、その放送の11日前よ。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: 放送より前に、もう閉まってたのか……。
+# ---- 2007年2月5日〜3月23日・71日ぶりの再開（山崎製パンの技術者は名前の無いモブ。報告書の対策「受け入れと記録の徹底、卵・乳の管理」の範囲） ----
+- id: ch13_kojo
+  title: 71日ぶりの再開
+  background: fj_kojo
+  bgm: honwaka_puppu
+  stage:
+  - {who: gishi, x: 0.16, emotion: normal}
+  - {who: paat, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2月5日、不二家は山崎製パンと支援の覚書を結びます。山崎の技術者が、各地の工場で指導を始めました。
+    reading: にがつ いつか、ふじやわ やまざき せいぱんと しえんの おぼえがきお むすびます。やまざきの ぎじゅつしゃが、かくちの こうじょうで しどうお はじめました。
+  - speaker: gishi
+    emotion: normal
+    text: 原料が届いたら、日付を書く。誰が見たかも書く。
+  - speaker: paat
+    emotion: surprised
+    text: 書くんですか、全部。
+    beat: true
+  - speaker: gishi
+    emotion: happy
+    text: 全部です。牛乳も、卵も。
+  - speaker: paat
+    emotion: thinking
+    text: 缶の牛乳の日付も、ですか。
+  - speaker: gishi
+    emotion: normal
+    text: 誰が見ても、分かるようにです。
+  - speaker: paat
+    emotion: thinking
+    text: 前は、ニオイを嗅いで決めてたのにな。
+  - speaker: gishi
+    emotion: normal
+    text: これからは、紙に残します。3月20日には、消費者団体の見学も来ますよ。
+- id: ch13_mise
+  title: ''
+  background: fj_mise_akari
+  stage:
+  - {who: tenin, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 3月23日。洋菓子の販売が、71日ぶりに再開します。
+    reading: さんがつ にじゅうさんにち。ようがしの はんばいが、ななじゅういちにちぶりに さいかい します。
+  - speaker: tenin
+    emotion: happy
+    text: いらっしゃいませ！
+    se: jaan
+  - speaker: reimu
+    text: 止まっていた71日。その間に創業家の社長はいなくなり、会社はパンの会社の手を借りました。
+    reading: とまって いた ななじゅういちにち。その あいだに そうぎょうけの しゃちょうわ いなくなり、かいしゃわ ぱんの かいしゃの てお かりました。
+# ---- 2007年3月30日・最終報告書（郷原は報告書の文の読み上げだけ。両面を言う。藤井は出さない） ----
+- id: ch14_hokoku
+  title: 報告書の両面
+  background: fj_kaiken
+  bgm: hirusagari
+  stage:
+  - {who: gohara, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3月30日。不二家が置いた第三者の会議が、最終報告書を出します。議長は弁護士の郷原信郎です。
+    reading: さんがつ さんじゅうにち。ふじやが おいた だいさんしゃの かいぎが、さいしゅう ほうこくしょお だします。ぎちょうわ べんごしの ごうはら のぶおです。
+  - speaker: gohara
+    emotion: normal
+    text: '[『消費期限切れ』|しょうひきげんぎれ][『隠蔽』|インペイ]という二つの言葉が、'
+  - speaker: gohara
+    emotion: normal
+    text: '[不二家|ふじや]に対する社会の信頼を決定的に失わせることにつながった'
+  - speaker: gohara
+    emotion: normal
+    text: 埼玉工場での牛乳の原料使用に関する問題は、
+  - speaker: gohara
+    emotion: normal
+    text: 健康被害の危険を生じさせるような一般的な[『消費期限』|ショウヒキゲン]の問題ではなく、
+  - speaker: gohara
+    emotion: normal
+    text: また、[不二家|ふじや]側が積極的に[『隠蔽』|インペイ]を図ろうとしたものでもない。
+  - speaker: reimu
+    text: 同じ報告書は結びの章で、不二家のコンサル選びの誤りに触れてこう続けます。
+    reading: おなじ ほうこくしょわ むすびの しょうで、ふじやの こんさるえらびの あやまりに ふれて こう つづけます。
+  - speaker: gohara
+    emotion: normal
+    text: そこから発生した危機的事態に対しても、全くの無為無策を繰り返してきた。
+  - speaker: gohara
+    emotion: normal
+    text: それらの責任の大部分は、[藤井|フジイ]前社長を中心とする[不二家|ふじや]経営陣にある。
+    se: don
+  - speaker: reimu
+    text: 本社には全国から、約300通の励ましの便りも届いていました。
+    reading: ほんしゃにわ ぜんこくから、やく さんびゃくつうの はげましの たよりも とどいて いました。
+# ---- 2008年11月・山崎製パンの子会社に（乗っ取りと言わない。記者は名前の無いモブ） ----
+- id: card2008
+  title: ''
+  background: fj_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年11月。山崎製パンは、不二家への出資を51%に引き上げます。
+    reading: にせんはちねん じゅういちがつ。やまざき せいぱんわ、ふじやえの しゅっしお ごじゅういち ぱーせんとに ひきあげます。
+- id: ch15_kogaisha
+  title: 山崎製パンの子会社に
+  background: fj_shinbun
+  stage:
+  - {who: kisha, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: 2007年3月期の最終損益は、80億9000万円の赤字でした。
+  - speaker: kisha
+    emotion: normal
+    text: 最初の出資は2007年4月で、株の35%でした。
+  - speaker: kisha
+    emotion: normal
+    text: '[不二家|ふじや]は、[山崎製パン|ヤマザキセイパン]の子会社になりました。'
+  - speaker: kisha
+    emotion: normal
+    text: 2012年の決算では、8期ぶりに配当を出しています。
+# ---- 論争1：腐った牛乳？（期限の問題は3つ。混ぜない。健康被害は保健所を主語に） ----
+- id: ronso1
+  title: 期限の問題は3つ
+  background: fj_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ [不二家|ふじや]は、腐った牛乳でシュークリームを作ってたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 使ったのは、[消費期限|しょうひきげん]が1日過ぎた牛乳よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ポリ容器なら[賞味期限|しょうみきげん]で7日。缶で運ぶから、[消費期限|しょうひきげん]で4日だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その日のシュークリームは、菌が1グラムに300個未満。出荷の基準に合っていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 保健所は健康被害も無いとして、処分は見送って[厳重注意|げんじゅうちゅうい]にしたの。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、問題なかったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうじゃないの。保健所も、県の決まりに反すると指摘してるわ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: それに期限の問題は、3つあったのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめは、期限の切れた原料を使ったこと。聞き取りでは、過去7年に18件よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめは、プリンなどの期限を社内の決まりより1日か2日長く書いたこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめは、細菌の検査で社内の回収の基準を超えたシューロールを出したこと。
+  - speaker: zundamon
+    emotion: surprised
+    text: 期限だけで、3つも！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: シュークリームは、検査の基準に合っていた。でも、自分たちの決まりを守らなかったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 決めた人が、守らなかったのか……。
+    beat: true
+# ---- 論争2：隠すと決めた？（「二の舞」は外のコンサルの報告書。「センセーショナル」は第三者会議の見方。報告書の評価は両方） ----
+- id: ronso2
+  title: 隠すと決めた？
+  background: fj_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: でも雪印乳業の[二の舞|にのまい]って書いて、隠すと決めたんでしょ！
+  - speaker: tsumugi
+    emotion: normal
+    text: あの1行は、社長が雇った外のコンサルの報告書の言葉よ。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: 会社が書いたんじゃないの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 第三者の会議は、その書き方を過剰なまでにセンセーショナルと見たわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも期限切れの牛乳を使ったこと自体は、事実だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 社内の会議で公表を話題にした人はいたけど、公表すべきだという声は出なかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 第三者の会議は、積極的に[隠蔽|いんぺい]を図ろうとしたものでもないとしたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、隠してないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも同じ会議は、11月の対応を全く誤ったものと書いたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 正月に流出を知っても動かなかった遅れが、致命的な事態を招いたって。
+  - speaker: tsumugi
+    emotion: thinking
+    text: コンサルの紙だと会見で言わなかったことも、[隠蔽|いんぺい]体質との批判につながったそうよ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 隠そうと決めた会議は、無かった。でも、言おうと言う人もいなかったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 隠さなくても、言わなければ同じに見えるのだ……。
+    beat: true
+# ---- 本当の注意点（基準の種類・回収の探し方。「だから大丈夫」「期限を過ぎても食べられる」と言わない。URL は出さない） ----
+- id: chui
+  title: どの基準の話か
+  background: fj_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。ニュースの基準違反は、どの基準の話かを見て。
+  - speaker: tsumugi
+    emotion: normal
+    text: 法律の基準か[国|くに]の目安か、それとも会社のルールか。
+  - speaker: zundamon
+    emotion: surprised
+    text: 基準にも、種類があるの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: あのシューロールは、国の基準の64倍と報じられたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: でもそれは、洋生菓子の[衛生規範|えいせいきはん]という国の目安。法律の違反とは、されなかったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、大丈夫だったのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: そうじゃないわ。会社が決めた回収の基準は、超えていたの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分で決めたルールを守らなかったこと、それ自体が問題なのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見出しの基準が法律か目安かルールか、一度だけ確かめてみて。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。家の食べ物が回収の対象かは、国のシステムで商品名から調べられるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2021年6月から、食品を[自主回収|じしゅかいしゅう]する会社は届け出が義務になったからよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 回収のお知らせ、探したことなかったのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 見出しだけで、怖がってた……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 気になる商品があったら、名前で調べてみてね。
+# ---- 現代（2026年11月時点。台帳8章の2つだけ。藤井の近況は言わない） ----
+- id: card2026
+  title: ''
+  background: fj_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。不二家の問題から、19年がたちました。
+    reading: にせん にじゅうろくねん。ふじやの もんだいから、じゅうきゅうねんが たちました。
+- id: ima
+  title: 不二家の、いま
+  background: fj_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: '[不二家|ふじや]は、いまどうなってるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 親会社は[山崎製パン|ヤマザキセイパン]。2026年6月末で、株の54.3%を持ってるわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: パンの会社が、半分より多く！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年に51%になってから、ずっと[山崎製パン|ヤマザキセイパン]の子会社なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: お店は、まだあるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 洋菓子の店は、2026年9月末で815店あるわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ペコちゃんのお店、まだたくさんあるのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 前の年の同じ時期より、38店減ってはいるけどね。
+  - speaker: zundamon
+    emotion: normal
+    text: それでも、800を超えてるんだ。
+# ---- 締め（「雪印乳業の二の舞」を回収。会社は残った、経営は創業家の手を離れた。ソファの回収→デュエット） ----
+- id: shime
+  title: ''
+  background: fj_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ソファのジュース、いまから言ってくるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 2か月ぶんの染みと一緒にね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 外のコンサルの報告書は、雪印乳業の[二の舞|にのまい]となると書いたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 会社は残った。経営は、創業家の手を離れたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 牛乳そのものより、言わなかった2か月が重かったのか……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: こぼしたら、その日のうちに言う。会社も、きっと同じね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
