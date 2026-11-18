@@ -1,0 +1,1208 @@
+meta:
+  title: 取締役6人の解任を告げたロッテの創業者、翌朝に自分の代表権を外された【ずんだもん解説】
+  slug: lotte-shigemitsu
+  hook_line: 6人の解任を告げた創業者は、なぜ翌朝、自分の代表権を失ったのか。
+  summary: 2015年7月27日、東京・新宿。ロッテの創業者で92歳の重光武雄は、本社で取締役6人を外すと告げました。翌朝、本人のいない取締役会で外されたのは、創業者自身の代表権でした。ガムで始めた会社、韓国で大きくなった稼ぎ、3つに分かれた親会社の株。父のひと声と取締役会の多数決は、どちらが強かったのか。日韓の判決と報道、会社と当事者の発表を主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 韓国大法院「ロッテグループ会長等に対する贈賄等事件、大法院の判断は？」（2019年10月24日掲載・2018도16652） https://www.scourt.go.kr/portal/gongbo/PeoplePopupView.work?gubun=21&sDate=201910&seqNum=2414
+  - ロッテホールディングス「ロッテグループの歩み」 https://lotte-hd.com/company/history/
+  - ロッテホールディングス「役員一覧」 https://lotte-hd.com/company/officer/
+  - 日本経済新聞「ロッテ重光一族の乱　経営権巡り対立」（2015年7月29日） https://www.nikkei.com/article/DGXLASGM28H89_Y5A720C1FFE000/
+  - テレ東BIZ「ロッテ 兄弟対決 決着は」（2015年8月17日） https://txbiz.tv-tokyo.co.jp/wbs/newsl/post_95725
+  - AFPBB News「韓国ロッテ会長、執行猶予確定　朴前大統領汚職事件」（2019年10月17日） https://www.afpbb.com/articles/-/3249978
+  tags:
+  - ロッテ
+  - ロッテお家騒動
+  - 重光武雄
+  - 辛格浩
+  - 重光昭夫
+  - 重光宏之
+  - ロッテホールディングス
+  - 韓国ロッテ
+  - 取締役会
+  - 代表権
+  - 株主総会
+  - 創業者
+  - 同族経営
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 6人を解任した翌朝
+    bottom: 代表権を外された
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: shain
+    label: 社員
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#4a5a7a'
+  - id: kyaku
+    label: 客
+    voice: 12
+    pitch: 0.0
+    outfit: work
+    color: '#6a6a5a'
+  - id: yakuin
+    label: 役員
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: hisho
+    label: 秘書
+    voice: 8
+    pitch: 0.06
+    hair: bun
+    outfit: suit
+    color: '#5a4a6a'
+  - id: torishimari
+    label: 取締役
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#3a3f4a'
+  - id: torishimari2
+    label: 取締役
+    voice: 21
+    pitch: -0.06
+    outfit: suit
+    color: '#454a55'
+  - id: kisha
+    label: 記者
+    voice: 12
+    pitch: 0.04
+    outfit: suit
+    color: '#6a5a48'
+  - id: chonan
+    label: 長男
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#2f3a52'
+  - id: jinan
+    label: 次男
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#1f2a3a'
+  - id: giin
+    label: 議員
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: saibancho
+    label: 裁判長
+    voice: 13
+    pitch: -0.12
+    outfit: suit
+    color: '#1a1a1e'
+  - id: bengonin
+    label: 弁護人
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#3e5c4a'
+scenes:
+# ---- 先出し（2015年7月27日・新宿の本社。「指さし」「よろしく頼む」は伝え聞きなのでここでは使わない。6人に次男と佃社長を含む。笑いの SE なし） ----
+- id: co_honsha
+  title: ''
+  background: lt_honsha
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 重光会長, emotion: angry}
+  - {who: shain, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2015年7月27日、東京・新宿のロッテ本社。92歳の創業者、重光武雄が韓国からチャーター機で来ます。
+    reading: にせん じゅうごねん しちがつ にじゅうしちにち、とうきょう しんじゅくの ろって ほんしゃ。きゅうじゅうにさいの そうぎょうしゃ しげみつ たけおが かんこくから ちゃーたーきで きます。
+  - speaker: shain
+    emotion: surprised
+    text: 会長、本日はどういったご用件で……。
+    background: lt_kaichoshitsu
+  - speaker: zundamon
+    emotion: angry
+    text: 取締役は、私のほかの6人とも外す。
+  - speaker: shain
+    emotion: surprised
+    text: ご次男の、副会長もですか！？
+  - speaker: zundamon
+    emotion: angry
+    text: 次男もだ。
+    pause_after: 0.6
+# ---- 翌朝の取締役会（本人はいない。空いた席の前に人を立たせない） ----
+- id: co_yokuasa
+  title: ''
+  background: lt_torishimari_kara
+  cuts:
+  - speaker: reimu
+    text: 翌朝の取締役会。創業者は出られませんでした。前の日の深夜に、メールで招集が届いていました。
+    reading: よくあさの とりしまりやくかい。そうぎょうしゃわ でられませんでした。まえの ひの しんやに めーるで しょうしゅうが とどいて いました。
+  - speaker: reimu
+    text: 外されたのは、創業者の代表権でした。
+    reading: はずされたのわ、そうぎょうしゃの だいひょうけんでした。
+- id: co_hitokoto
+  title: ''
+  background: lt_kaichoshitsu
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 重光, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ……私が作った会社だぞ。
+  - speaker: reimu
+    text: 2017年3月、創業者は車椅子で法廷に入ります。被告は、家族5人です。
+    reading: にせん じゅうななねん さんがつ、そうぎょうしゃわ くるまいすで ほうていに はいります。ひこくわ かぞく ごにんです。
+# ---- 今の部屋（作った部活の部長選挙。20秒以内。笑いの SE は入れず一拍だけ） ----
+- id: hook
+  title: ''
+  background: lt_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ボクが作った部活なのに、部長選挙で負けたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 部員は何人？
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボク以外、全員あっちに入れたのだ。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: ガムの会社を作った人も、自分の会社で代表を外されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ガムから日本と韓国の大企業を作った創業者は、なぜ自分の会社の代表を外されたのか。
+    telops:
+    - {text: "作った会社の代表を なぜ外された？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 作った人を、代表から外せるの！？
+# ---- 1941年（時を戻すのはここ1回。30秒以内。83円は聯合と評伝） ----
+- id: card1941
+  title: ''
+  background: lt_card_1941
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1941年。20歳の辛格浩が83円を持って、朝鮮半島から日本へ渡ります。のちの重光武雄です。
+    reading: せんきゅうひゃく よんじゅういちねん。はたちの しん ぎょくほが はちじゅうさんえんお もって ちょうせん はんとうから にほんえ わたります。のちの しげみつ たけおです。
+- id: ch1_gum
+  title: 83円で海を渡る
+  background: lt_yamiichi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 重光武雄, emotion: happy}
+  - {who: kyaku, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 配達をしながら学び、戦後はガムに目をつけます。1948年6月、東京で株式会社ロッテを作りました。
+    reading: はいたつお しながら まなび、せんごわ がむに めお つけます。せんきゅうひゃく よんじゅうはちねん ろくがつ とうきょうで かぶしきがいしゃ ろってお つくりました。
+  - speaker: kyaku
+    emotion: normal
+    text: 兄さん、そのガムは進駐軍のかい。
+  - speaker: zundamon
+    emotion: happy
+    text: いいえ、うちの会社で作ったガムです！
+    se: jaan
+  - speaker: kyaku
+    emotion: surprised
+    text: へえ、日本でガムを作るのかい。
+  - speaker: reimu
+    text: この会社を、彼はのちに100%自分が持つ会社だと言います。
+    reading: この かいしゃお、かれわ のちに ひゃく ぱーせんと じぶんが もつ かいしゃだと いいます。
+# ---- 1961〜1979年・日本で稼いで韓国へ（懸賞は1961年。韓国の数字はナレで2015年と時点を付ける） ----
+- id: ch2_kankoku
+  title: 日本で稼いで韓国へ
+  background: lt_kojo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 重光社長, emotion: happy}
+  - {who: shain, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 社長！ 1000万円の懸賞に、応募が760万通です！
+  - speaker: zundamon
+    emotion: happy
+    text: '[日本中|にほんじゅう]が、うちのガムを噛んでるな。'
+  - speaker: zundamon
+    emotion: normal
+    text: 日本で稼いだ[金|かね]で、韓国にも工場を建てる。
+  - speaker: reimu
+    text: 1967年に韓国でロッテ製菓。1973年にホテルロッテ。1979年には、ソウルにロッテホテルが開きます。
+    reading: せんきゅうひゃく ろくじゅうななねんに かんこくで ろって せいか。せんきゅうひゃく ななじゅうさんねんに ほてる ろって。せんきゅうひゃく ななじゅうくねんにわ そうるに ろって ほてるが ひらきます。
+    background: lt_seoul
+  - speaker: reimu
+    text: これが後で効きます。2015年の売上は韓国が約9兆円、日本は約4000億円でした。
+    reading: これが あとで ききます。にせん じゅうごねんの うりあげわ かんこくが やく きゅうちょうえん、にほんわ やく よんせんおくえんでした。
+    telops:
+    - {text: "韓国約9兆円／日本約4000億円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2007年・親会社の会議室（株の比率は2016年の報道としてナレで。円グラフの紙の前に人を立たせない） ----
+- id: ch2_kaigi
+  title: 東京の親会社
+  background: lt_kaigi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 重光社長, emotion: happy}
+  - {who: yakuin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2007年、東京に持株会社のロッテホールディングスができます。
+    reading: にせん ななねん、とうきょうに もちかぶがいしゃの ろって ほーるでぃんぐすが できます。
+  - speaker: yakuin
+    emotion: normal
+    text: 社長。日本と韓国のロッテを、この親会社が束ねます。
+  - speaker: zundamon
+    emotion: happy
+    text: 日本も韓国も、私の会社だ。
+    se: levelup
+  - speaker: yakuin
+    emotion: normal
+    text: こちらが、親会社の株主の一覧です。
+  - speaker: zundamon
+    emotion: normal
+    text: 株主の名前など誰でもいい。ロッテは、私が作ったんだ。
+  - speaker: reimu
+    text: 2016年の報道では、創業家の会社の光潤社・従業員持株会・関係会社と役員持株会がほぼ3分の1ずつ。
+    reading: にせん じゅうろくねんの ほうどうでわ、そうぎょうけの かいしゃの こうじゅんしゃと じゅうぎょういん もちかぶかいと かんけいがいしゃ やくいん もちかぶかいが ほぼ さんぶんの いちずつ。
+  - speaker: yakuin
+    emotion: thinking
+    text: ……社長。株主総会で勝つのは、株の多い側ですが。
+  - speaker: zundamon
+    emotion: angry
+    text: 私に逆らう株主など、おらん。
+  - speaker: reimu
+    text: 2015年の夏、そのうち2つの塊が次男の側につきます。
+    reading: にせん じゅうごねんの なつ、その うち ふたつの かたまりが じなんの がわに つきます。
+# ---- 今の部屋（100円と2000円は「20倍以上」の言い換え。代表は取締役会、取締役は株主総会） ----
+- id: heya1
+  title: ''
+  background: lt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 売上は韓国が20倍以上なのに、親会社は東京なの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本のロッテが100円売るあいだに、韓国は2000円以上売る。
+  - speaker: tsumugi
+    emotion: normal
+    text: その両方を、東京の親会社が束ねていたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: しかも創業者が自分で持つ株は、わずかだったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、会社を持っていたのは誰なのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: その親会社で代表を選ぶのは取締役会。取締役を選ぶのは、株主総会よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 作った人のひと声じゃ、決まらないのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: thinking
+    text: 父のひと声と、取締役会の多数決。どっちが強いのか。
+    telops:
+    - {text: "父のひと声 vs 取締役会の多数決", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 2009年・2人の副会長（「日本は長男、韓国は次男」は評伝の整理。息子たちに台詞を作らない。ソウルへの転居と次男の韓国会長は2011年） ----
+- id: card2009
+  title: ''
+  background: lt_card_2009
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2009年7月。創業者は社長を退いて会長に。長男の宏之と次男の昭夫は、そろって副会長になります。
+    reading: にせん きゅうねん しちがつ。そうぎょうしゃわ しゃちょうお しりぞいて かいちょうに。ちょうなんの ひろゆきと じなんの あきおわ そろって ふくかいちょうに なります。
+- id: ch3_fukukaicho
+  title: 2人の副会長
+  background: lt_kaichoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 重光会長, emotion: happy}
+  - {who: hisho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: hisho
+    emotion: normal
+    text: 会長。新しい社長には、佃さんが就かれます。
+  - speaker: hisho
+    emotion: normal
+    text: 日本は宏之副会長、韓国は昭夫副会長という分担ですね。
+  - speaker: zundamon
+    emotion: happy
+    text: 2人の上に、私がいる。それでいい。
+  - speaker: hisho
+    emotion: normal
+    text: 2011年に入りました。会長、ソウルのお住まいの準備ができました。
+  - speaker: hisho
+    emotion: normal
+    text: 韓国ロッテの会長には、昭夫副会長が就かれます。
+  - speaker: zundamon
+    emotion: happy
+    text: 日本も韓国も、ここから見る。
+  - speaker: reimu
+    text: 2人の副会長のうち1人が外されるのは、2014年の暮れです。
+    reading: ふたりの ふくかいちょうの うち ひとりが はずされるのわ、にせん じゅうよねんの くれです。
+# ---- 2014年12月〜2015年1月・長男が外される（同意は長男の側の資料。理由は会社が明かさない。判決は確定した高裁の判断） ----
+- id: ch4_chonan
+  title: 長男が外される
+  background: lt_kaichoshitsu
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 重光会長, emotion: sad}
+  - {who: hisho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2014年12月。長男の側の資料によれば、創業者は社長の説明を受けて長男の解任に同意します。
+    reading: にせん じゅうよねん じゅうにがつ。ちょうなんの がわの しりょうに よれば そうぎょうしゃわ しゃちょうの せつめいお うけて ちょうなんの かいにんに どうい します。
+  - speaker: hisho
+    emotion: normal
+    text: 会長、社長からのご報告です。宏之副会長の件で。
+  - speaker: zundamon
+    emotion: sad
+    text: ……分かった。
+  - speaker: hisho
+    emotion: sad
+    text: 会長。取締役会で、宏之副会長の解職が決まりました。
+- id: ch4_kisha
+  title: ''
+  background: lt_honsha
+  stage:
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: kisha
+    emotion: normal
+    text: ロッテの発表です。1月8日の臨時株主総会で、長男を取締役から解任しました。
+  - speaker: kisha
+    emotion: normal
+    text: 解任の理由は、お答えできないとしています。
+- id: heya2
+  title: ''
+  background: lt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: お父さんが、自分の息子を外したのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 日本だけじゃないの。3月には、韓国のグループ会社の役員からも外れたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 長男の側は、社長が父にうその説明を重ねたと言っているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1月8日に長男が事情を話して、父は誤りに気づいたとも書いているわ。
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、長男は悪くないのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 一方で裁判所は、長男の側に別の問題を見たの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 長男は、グループ会社4社の役員から外されたのは不当だとして賠償を求めたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 高裁は、長男が取締役会で担当者にうその説明をさせたなどと認めたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: えっ、長男のほうが！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 解任されてもやむを得ない理由があった。2019年に、そう確定したわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言い分が、真っ二つ……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 作った人の声は、会社のどこまで届くのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 長男の側によれば、父は2015年7月に次男にも退くよう求めていたの。
+# ---- 2015年7月なかば・次男の代表権（日付は15日か16日で割れるので「なかば」） ----
+- id: ch5_jinan
+  title: 次男の代表権
+  background: lt_kaichoshitsu
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 重光会長, emotion: normal}
+  - {who: hisho, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: hisho
+    emotion: surprised
+    text: 会長、東京の取締役会です。昭夫副会長が、代表取締役副会長に選ばれました。
+  - speaker: zundamon
+    emotion: angry
+    text: ……昭夫が、代表に。
+  - speaker: reimu
+    text: 7月なかばのことです。創業者の代表権は、このあと2週間足らずで消えます。
+    reading: しちがつ なかばの ことです。そうぎょうしゃの だいひょうけんわ、この あと にしゅうかん たらずで きえます。
+# ---- 今の部屋（代表権の説明。佃社長も代表取締役。持株会の票は2016年の報道） ----
+- id: heya_daihyo
+  title: 代表権とは
+  background: lt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 代表権って、そんなに大事なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の名前で、契約を結んだり約束したりできる力よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 当時の親会社では、会長の父と社長と次男が代表権を持っていたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 代表が、何人もいていいのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: normal
+    text: いいのよ。誰に持たせるかは、取締役会の多数決で決まるの。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ取締役が、お父さんの味方ならいいのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その取締役を選ぶのは株主。2016年の報道では、株の約3割が従業員持株会よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会員は約130人。その票を、理事長1人がまとめて入れるの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 130人の票を、1人で！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 父はこの並びを、自分のやり方で変えようとするの。
+# ---- 2015年7月27日・チャーター機（親族5人。韓国ロッテは知らなかったと韓国日報） ----
+- id: card2015
+  title: ''
+  background: lt_card_2015
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2015年7月27日。92歳の創業者が、韓国からチャーター機に乗ります。
+    reading: にせん じゅうごねん しちがつ にじゅうしちにち。きゅうじゅうにさいの そうぎょうしゃが、かんこくから ちゃーたーきに のります。
+- id: ch6_jet
+  title: チャーター機で東京へ
+  background: lt_jet
+  stage:
+  - {who: zundamon, x: 0.1, flip: true, tag: 重光会長, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 一緒に乗ったのは親族5人。韓国のロッテはこの出発を知らなかったと、韓国の新聞は書いています。
+    reading: いっしょに のったのわ しんぞく ごにん。かんこくの ろってわ この しゅっぱつお しらなかったと かんこくの しんぶんわ かいて います。
+  - speaker: zundamon
+    emotion: angry
+    text: 東京で、全部決め直す。
+# ---- 2015年7月27日午後・本社（本編。解任は職務を解く宣言。指さしは伝え聞きとしてナレで） ----
+- id: ch6_kainin
+  title: 6人を外す
+  background: lt_kaichoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 重光会長, emotion: angry}
+  - {who: shain, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 会長、ようこそお越しくださいました。
+  - speaker: zundamon
+    emotion: angry
+    text: 取締役は、私のほかの6人とも外す。
+  - speaker: shain
+    emotion: surprised
+    text: しゃ、社長もですか！？
+  - speaker: zundamon
+    emotion: angry
+    text: 社長も、昭夫もだ。これからは、宏之を中心にやる。
+    se: don
+  - speaker: reimu
+    text: 韓国の新聞は伝え聞きとして、創業者が取締役の名前を手で指して告げたと書きました。
+    reading: かんこくの しんぶんわ つたえぎきと して そうぎょうしゃが とりしまりやくの なまえお てで さして つげたと かきました。
+  - speaker: shain
+    emotion: sad
+    text: でも取締役は、株主総会でないと辞めさせられないのでは……。
+  - speaker: zundamon
+    emotion: angry
+    text: 私が作った会社だ。私が決める。
+  - speaker: reimu
+    text: 長男は2016年に、職務の権限をなくして新たに執行役員を任命したと説明しています。
+    reading: ちょうなんわ にせん じゅうろくねんに、しょくむの けんげんお なくして あらたに しっこう やくいんお にんめい したと せつめい して います。
+  - speaker: shain
+    emotion: sad
+    text: ……社内に、どうお伝えすれば。
+  - speaker: reimu
+    text: 会社の側は、正式な取締役会を経ていない決定とみなしました。
+    reading: かいしゃの がわわ、せいしきな とりしまりやくかいお へて いない けってい と みなしました。
+# ---- 2015年7月28日午前・臨時取締役会（取締役は名前の無いモブ。次男・佃社長の台詞は作らない。空いた席の前に立たせない） ----
+- id: ch7_torishimari
+  title: 本人のいない取締役会
+  background: lt_torishimari
+  stage:
+  - {who: torishimari, x: 0.14, flip: true, emotion: normal}
+  - {who: torishimari2, x: 0.62, emotion: normal}
+  cuts:
+  - speaker: torishimari
+    emotion: normal
+    text: 7月28日、臨時取締役会を始めます。
+  - speaker: torishimari2
+    emotion: surprised
+    text: 会長の席が、空いていますが。
+    background: lt_torishimari_kara
+  - speaker: torishimari
+    emotion: normal
+    text: 招集は、昨日の深夜にメールでお送りしています。
+  - speaker: torishimari
+    emotion: normal
+    text: 昨日、会長は取締役6人の職務を解くとおっしゃいました。
+  - speaker: torishimari
+    emotion: normal
+    text: ですがこの解任は、正式な取締役会を経ていません。無効と確認します。
+  - speaker: torishimari2
+    emotion: normal
+    text: 異議ありません。
+  - speaker: torishimari
+    emotion: normal
+    text: 続いて、会長の代表権を外して名誉会長とする件です。
+    se: don
+  - speaker: torishimari2
+    emotion: normal
+    text: 異議ありません。
+  - speaker: reimu
+    text: 創業者の代表権は、本人のいない部屋で外されました。
+    reading: そうぎょうしゃの だいひょうけんわ、ほんにんの いない へやで はずされました。
+    telops:
+    - {text: "本人不在で代表権を外す", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+- id: ch7_hitori
+  title: ''
+  background: lt_kaichoshitsu
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 重光, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ……私が作った会社だぞ。
+- id: ch7_press
+  title: ''
+  background: lt_honsha
+  stage:
+  - {who: shain, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: ……会長は、昨日から名誉会長だそうです。
+  - speaker: shain
+    emotion: sad
+    text: 今朝の日経には、骨肉の争いが表面化したと。
+    background: lt_honsha_press
+# ---- 今の部屋（自分の代表権の決議に本人は加われない＝解説の記事。判決はあとの論争の章で） ----
+- id: heya3
+  title: ''
+  background: lt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 本人がいないのに外すなんて、ずるいのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも自分の代表権を外す決議には、本人は加われないの。
+  - speaker: zundamon
+    emotion: sad
+    text: 出ても、手を挙げられないのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 前の日の6人の解任のほうは、取締役会の決議ではなかったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 父のひと声より、取締役会の多数決が強かった。次は、株主が選ぶ番よ。
+# ---- 2015年7月30〜31日・指示書と父の声（長男の言葉は日本語のインタビューの韓国語訳。録音の日時は不明なので場面にしない） ----
+- id: ch8_shijisho
+  title: 指示書と父の声
+  background: lt_shinbun
+  bgm: kinakusai
+  stage:
+  - {who: chonan, x: 0.2, flip: true, emotion: normal}
+  - {who: kisha, x: 0.82, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 7月30日。韓国へ渡った長男は、韓国のテレビに父の署名入りの指示書を見せます。
+    reading: しちがつ さんじゅうにち。かんこくえ わたった ちょうなんわ、かんこくの てれびに ちちの しょめい いりの しじしょお みせます。
+  - speaker: kisha
+    emotion: surprised
+    text: 取締役6人の職務を解き、長男ら4人を任命する。会長の自筆の署名があります！
+    se: gaan
+  - speaker: kisha
+    emotion: normal
+    text: 長男は日本語で答えています。韓国の新聞の[訳|やく]では、こうです。
+  - speaker: chonan
+    emotion: normal
+    text: クーデターという表現は理解できない。父が自分の権限を行使したもの。
+- id: ch8_koe
+  title: ''
+  background: lt_shinbun
+  stage:
+  - {who: zundamon, x: 0.3, flip: true, tag: 重光, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 翌日には、父の声の録音も公開します。日本語の録音で、韓国の新聞の訳ではこういう意味でした。
+    reading: よくじつにわ ちちの こえの ろくおんも こうかい します。にほんごの ろくおんで、かんこくの しんぶんの やくでわ こう いう いみでした。
+  - speaker: zundamon
+    emotion: angry
+    text: 昭夫を、辞めさせたじゃないか。
+  - speaker: reimu
+    text: ロッテの側は経営権と全く関係のない人たちに遮られた中で作られた録音で、意図が疑わしいとしました。
+    reading: ろっての がわわ けいえいけんと まったく かんけいの ない ひとたちに さえぎられた なかで つくられた ろくおんで、いとが うたがわしいと しました。
+# ---- 2015年8月3日・金浦空港（言葉は韓国語の報道の訳。記者の問いは作らずナレで） ----
+- id: ch9_kinpo
+  title: 金浦のお辞儀
+  background: lt_kuko
+  stage:
+  - {who: jinan, x: 0.3, flip: true, emotion: sad}
+  - {who: kisha, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月3日、次男が金浦空港に戻ります。深く3回頭を下げ、記者の問いにはすべて韓国語で答えました。
+    reading: はちがつ みっか、じなんが きんぽ くうこうに もどります。ふかく さんかい あたまお さげ、きしゃの といにわ すべて かんこくごで こたえました。
+  - speaker: jinan
+    emotion: sad
+    text: まず国民の皆さんに、このような事態が起きたことを本当に申し訳なく思う。
+  - speaker: kisha
+    emotion: normal
+    text: ロッテは、韓国企業ですか。日本企業ですか。
+  - speaker: jinan
+    emotion: normal
+    text: ロッテグループは、韓国企業。
+    telops:
+    - {text: "次男「ロッテグループは韓国企業」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: jinan
+    emotion: normal
+    text: 95%の売上が、わが国で起きている。
+  - speaker: kisha
+    emotion: normal
+    text: 父の指示書は、法的効力のない書類だと思うとも話しています。
+# ---- 2015年8月11日・謝罪会見（全文の抜粋の訳。嘲らない） ----
+- id: ch10_kaiken
+  title: ロッテはわが国の企業
+  background: lt_kaiken
+  stage:
+  - {who: jinan, x: 0.5, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 8月11日、ソウルのロッテホテル。次男は韓国語で、国民への謝罪会見を開きます。
+    reading: はちがつ じゅういちにち、そうるの ろって ほてる。じなんわ かんこくごで こくみんえの しゃざい かいけんお ひらきます。
+  - speaker: jinan
+    emotion: sad
+    text: 心からおわびします。
+  - speaker: jinan
+    emotion: sad
+    text: ロッテについて皆様が感じられた失望と懸念は、すべて私の責任だと考えます。
+  - speaker: jinan
+    emotion: normal
+    text: まず、ロッテはわが国の企業です。
+  - speaker: jinan
+    emotion: normal
+    text: 父は韓国で生まれた収益を、韓国のロッテに再投資し続けてこられました。
+# ---- 2015年8月17日・15分の臨時総会（東京のホテル。言葉は総会のあとの日本語。持株会の支持は2016年の報道） ----
+- id: ch11_sokai
+  title: 15分の臨時総会
+  background: lt_sokai
+  bgm: serious
+  stage:
+  - {who: jinan, x: 0.16, flip: true, emotion: normal}
+  - {who: chonan, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 8月17日、東京のホテルで臨時株主総会。創業者は欠席です。次男の側の議案は、約15分で通りました。
+    reading: はちがつ じゅうしちにち、とうきょうの ほてるで りんじ かぶぬし そうかい。そうぎょうしゃわ けっせきです。じなんの がわの ぎあんわ、やく じゅうごふんで とおりました。
+  - speaker: reimu
+    text: 総会のあと次男はコメントを出し、長男は日本語で語りました。
+    reading: そうかいの あと じなんわ こめんとお だし、ちょうなんわ にほんごで かたりました。
+  - speaker: jinan
+    emotion: normal
+    text: 経営と家族は混同すべきではない。
+  - speaker: jinan
+    emotion: normal
+    text: 開かれた経営を加速してまいります。
+  - speaker: chonan
+    emotion: normal
+    text: 私の信じるところを貫く。
+  - speaker: reimu
+    text: 2016年の報道では、従業員持株会と関係会社・役員持株会が次男を支持。親会社の株の、あの2つの塊です。
+    reading: にせん じゅうろくねんの ほうどうでわ、じゅうぎょういん もちかぶかいと かんけいがいしゃ やくいん もちかぶかいが じなんお しじ。おやがいしゃの かぶの、あの ふたつの かたまりです。
+# ---- 2015年9月17日・国会の証人席（韓国語の答えの訳。問いは台帳の範囲。呼び名は1回） ----
+- id: ch12_kokkai
+  title: 国会の証人席
+  background: lt_kokkai
+  stage:
+  - {who: jinan, x: 0.16, flip: true, emotion: sad}
+  - {who: giin, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 9月17日、ソウルの国会。次男は証人として、韓国語で答えます。
+    reading: くがつ じゅうしちにち、そうるの こっかい。じなんわ しょうにんと して かんこくごで こたえます。
+  - speaker: jinan
+    emotion: sad
+    text: 今回の家族の間のことで、国民にも議員の皆様にもご心配をおかけした点を
+  - speaker: jinan
+    emotion: sad
+    text: 恥ずかしく思い、心からおわびします。
+  - speaker: reimu
+    text: 議員は、韓国の新聞が付けた呼び名で問います。
+    reading: ぎいんわ、かんこくの しんぶんが つけた よびなで といます。
+  - speaker: giin
+    emotion: normal
+    text: 王子の乱は、終わりましたか。
+  - speaker: jinan
+    emotion: normal
+    text: はい、終わりました。
+  - speaker: giin
+    emotion: normal
+    text: ロッテは、韓国企業ですか。
+  - speaker: jinan
+    emotion: normal
+    text: はい、その通りです。
+  - speaker: giin
+    emotion: normal
+    text: 韓国と日本がサッカーをしたら、韓国を応援しますか。
+  - speaker: jinan
+    emotion: happy
+    text: 今も、一生懸命応援しています。
+    beat: true
+  - speaker: reimu
+    text: 父が出ていけと解任を命じたとされる件を議員が批判すると、次男は笑って問い返しました。
+    reading: ちちが でていけと かいにんお めいじたと される けんお ぎいんが ひはん すると、じなんわ わらって といかえしました。
+  - speaker: jinan
+    emotion: normal
+    text: 普通に考えて、父が息子に出ていけと言うのはおかしなことではないか。
+# ---- 2016年・捜査と後見（後見は家庭法院の判断として。「認知症」と地の文で言わない） ----
+- id: ch13_sosa
+  title: 捜査と後見
+  background: lt_shinbun
+  bgm: kinakusai
+  stage:
+  - {who: kisha, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 2016年6月。韓国の検察がグループの本社や創業者の執務室など約30か所を捜索！
+  - speaker: reimu
+    text: 8月にソウル家庭法院は、創業者の判断する力が落ちていると認めて限定後見を始めました。
+    reading: はちがつに そうる かてい ほういんわ、そうぎょうしゃの はんだん する ちからが おちて いると みとめて げんてい こうけんお はじめました。
+  - speaker: kisha
+    emotion: surprised
+    text: 10月、検察が創業者と息子2人らを起訴しました！
+# ---- 2017年3月20日・初公判（本人の言葉は韓国の新聞の訳。病気を笑いにしない。被告席の前に立たせない） ----
+- id: card2017
+  title: ''
+  background: lt_card_2017
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2017年3月20日、ソウル中央地裁の初公判。ここからの言葉は、韓国の新聞の訳です。
+    reading: にせん じゅうななねん さんがつ はつか、そうる ちゅうおう ちさいの しょこうはん。ここからの ことばわ かんこくの しんぶんの やくです。
+- id: ch13_houtei
+  title: これは何の場だ
+  background: lt_houtei
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 重光, emotion: sad}
+  - {who: saibancho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 灰色の毛布をかけた創業者が、車椅子で15分から20分ほど遅れて入ります。被告は、家族5人です。
+    reading: はいいろの もうふお かけた そうぎょうしゃが、くるまいすで じゅうごふんから にじゅっぷん ほど おくれて はいります。ひこくわ かぞく ごにんです。
+  - speaker: reimu
+    text: 裁判長が本人を確かめると、創業者はこう言いました。
+    reading: さいばんちょうが ほんにんお たしかめると、そうぎょうしゃわ こう いいました。
+  - speaker: zundamon
+    emotion: angry
+    text: ……これは、[何|なん]の場だ。
+    telops:
+    - {text: "創業者「これは何の場だ」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: saibancho
+    emotion: normal
+    text: 裁判中だということが、お分かりになりませんか。
+- id: ch13_bengonin
+  title: ''
+  background: lt_houtei
+  stage:
+  - {who: bengonin, x: 0.14, flip: true, emotion: normal}
+  - {who: saibancho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 弁護人は、本人の言葉としてこう伝えました。
+    reading: べんごにんわ、ほんにんの ことばと して こう つたえました。
+  - speaker: bengonin
+    emotion: normal
+    text: この会社は、私が100%持っている会社だ。
+  - speaker: bengonin
+    emotion: normal
+    text: 私が作った会社で、株を100%持っているのに
+  - speaker: bengonin
+    emotion: normal
+    text: どうして私を起訴できるのか。誰が私を起訴したのか。
+  - speaker: reimu
+    text: 実際には、創業者が自分で持つ株はわずかでした。
+    reading: じっさいにわ、そうぎょうしゃが じぶんで もつ かぶわ わずかでした。
+- id: ch13_taitei
+  title: ''
+  background: lt_houtei
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 重光, emotion: angry}
+  - {who: saibancho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: saibancho
+    emotion: normal
+    text: 後でご説明ください。その程度のお話でしたら、退廷されてもよいでしょう。
+  - speaker: zundamon
+    emotion: angry
+    text: ……なんで、こうなる！
+  - speaker: reimu
+    text: 大声は約20分続き、退廷のとき創業者は杖を投げました。被告席の次男と長女は、涙をぬぐいます。
+    reading: おおごえわ やく にじゅっぷん つづき、たいていの とき そうぎょうしゃわ つえお なげました。ひこくせきの じなんと ちょうじょわ なみだお ぬぐいます。
+# ---- 2018年10月5日・二審（名前と年齢は中身が台帳に無いのでナレだけ。拘束されない） ----
+- id: card2018
+  title: ''
+  background: lt_card_2018
+  cuts:
+  - speaker: reimu
+    text: 2018年10月5日、ソウル高裁。二審の判決の日です。
+    reading: にせん じゅうはちねん じゅうがつ いつか、そうる こうさい。にしんの はんけつの ひです。
+- id: ch14_nishin
+  title: 名前と年齢
+  background: lt_houtei
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 重光, emotion: sad}
+  - {who: saibancho, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 一審は懲役4年で、高齢と健康を理由に拘束されず。二審の日、車椅子の創業者は名前と年齢を答えました。
+    reading: いっしんわ ちょうえき よねんで、こうれいと けんこうお りゆうに こうそく されず。にしんの ひ、くるまいすの そうぎょうしゃわ なまえと ねんれいお こたえました。
+  - speaker: reimu
+    text: 二審の判決は、懲役3年と罰金30億ウォン。この日も、法廷で拘束はされませんでした。
+    reading: にしんの はんけつわ、ちょうえき さんねんと ばっきん さんじゅうおく うぉん。この ひも、ほうていで こうそくわ されませんでした。
+# ---- 今の部屋（大法院で確定。人ごと・罪名ごとに分ける。大統領の事件は1行） ----
+- id: heya4
+  title: 人ごとに違う判決
+  background: lt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 結局、誰が有罪で誰が無罪なの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 人ごとに違うの。2019年10月に、韓国の[大法院|だいほういん]で確定した結果で言うわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父は、懲役3年と罰金30億ウォン。会社のお[金|かね]をめぐる横領や背任などの罪よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも検察は満97歳の高齢と末期の認知症などで受刑は難しいとして、刑の執行を止めたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: じゃあ、刑務所には……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 一度も入っていないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 次男は、大統領の求めで財団に70億ウォンを出したことが贈賄とされたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2018年2月の[一審|いっしん]では実刑。二審で釈放されるまで、235日拘束されたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 235日も……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 確定は贈賄と背任で、懲役2年6か月と執行猶予4年。
+  - speaker: tsumugi
+    emotion: normal
+    text: 働いていない家族への給料の横領は、二審で無罪になったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 長男は、[一審|いっしん]から最後まで無罪よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 人ごとに、ばらばらなのだ……。
+    beat: true
+# ---- 2020年1月19日・死去（ソウル峨山病院、満98歳。立ち会いは報道として） ----
+- id: card2020
+  title: ''
+  background: lt_card_2020
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2020年1月19日、ソウルの病院。創業者は98歳で亡くなります。
+    reading: にせん にじゅうねん いちがつ じゅうくにち、そうるの びょういん。そうぎょうしゃわ きゅうじゅうはっさいで なくなります。
+- id: ch15_byoin
+  title: 父の最期
+  background: lt_byoin
+  stage:
+  - {who: kisha, x: 0.84, emotion: sad}
+  cuts:
+  - speaker: kisha
+    emotion: sad
+    text: 日本への出張から急いで戻った次男と、長男たちが最期に立ち会ったそうです。
+    se: namida
+- id: ch15_igon
+  title: ''
+  background: lt_shinbun
+  stage:
+  - {who: kisha, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: kisha
+    emotion: surprised
+    text: 6月24日、ロッテの側が創業者の自筆の遺言を発表しました。
+  - speaker: kisha
+    emotion: normal
+    text: 2000年に書かれ、東京の事務所の金庫にあったと。
+  - speaker: kisha
+    emotion: normal
+    text: 後継者は次男。長男には研究開発を任せる、という中身です。
+  - speaker: kisha
+    emotion: thinking
+    text: 長男の側は、1月にロッテが遺言は無いと公表していたのに非常に不自然だとしています。
+# ---- 論争1：次男が父を追い出した？（「クーデター」は長男が否定した言葉なので俗説に使わない。判決は要旨を伝える記事の言葉） ----
+- id: ronso1
+  title: 次男が父を追い出した？
+  background: lt_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 次男が父を会社から追い出したって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見える事実はあるの。本人のいない取締役会で、招集は前の日の深夜のメール。
+  - speaker: tsumugi
+    emotion: normal
+    text: 父は決議の無効を東京地裁に訴えたわ。判決は、招集の手続きが適法でないと認めたの。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも同じ判決は、決議を有効としたの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 判決の要旨を伝えた記事によれば、理由はこうなの。
+  - speaker: reimu
+    text: 他の取締役の意思は固く、重光氏が出席してもなお影響はなかった。
+    reading: ほかの とりしまりやくの いしわ かたく、しげみつしが しゅっせき しても なお えいきょうわ なかった。
+    telops:
+    - {text: "地裁「出席してもなお影響はなかった」", size: sm, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: そのあとの総会でも、株主は毎回次男の側を選んでいるわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 父の声と、会社のルールがぶつかった。裁判所は、ルールのほうを有効としたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 追い出したんじゃなくて、ルールで外れた……。
+    beat: true
+# ---- 論争2：長男が父を担ぎ出した？（「利用した」「操った」と言わない。後見は家庭法院、録音の評価は会社の側） ----
+- id: ronso2
+  title: 長男が父を担ぎ出した？
+  background: lt_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあ、長男が年をとったお父さんを担ぎ出したんだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 韓国の新聞は、東京行きは長男が主導したと書いたわ。会社の側は、録音の意図を疑った。
+  - speaker: zundamon
+    emotion: happy
+    text: 決まりだね！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも長男は、父が自分の権限を行使したものだと話したわ。
+    se: zukko
+  - speaker: tsumugi
+    emotion: normal
+    text: 創業家の会社の[光潤社|こうじゅんしゃ]はいまも最大の株主で、長男がその社長よ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 長男は父の意思だったと言い、会社は父の判断する力を疑った。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[家庭法院|かていほういん]は2016年、判断する力が落ちていると認めた。言えるのは、そこまでよ。'
+  - speaker: zundamon
+    emotion: thinking
+    text: 誰が悪い、とは決められないのか……。
+# ---- 本当の注意点（法律の助言にしない。持株会の理事長1人は2016年の報道） ----
+- id: chui
+  title: 作る人と持つ人
+  background: lt_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。会社を作った人と株を持つ人と経営を決める人は、別の人になりうる。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家族の店でも、誰が持ち分を持って誰が決めるのか。元気なうちにはっきりさせておくこと。
+  - speaker: zundamon
+    emotion: thinking
+    text: 作った人が、いちばん強いとは限らないのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。遺言は、いつ書いたかと置き場所が争いになるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2000年の遺言が20年後に金庫から出て、長男はその経緯を疑ったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 書いただけじゃ、足りないのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 書いたら、置き場所を信頼できる人に伝えておくこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。持株会の票は、理事長1人がまとめて入れることがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分の会社に持株会があったら、決まりを一度読んでおいてね。
+# ---- 現代（2026年11月時点。係争中の訴えは時点を付ける。業績の数字は使わない） ----
+- id: card2026
+  title: ''
+  background: lt_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。あの取締役会から、11年がたちました。
+    reading: にせん にじゅうろくねん。あの とりしまりやくかいから、じゅういちねんが たちました。
+- id: ima
+  title: ロッテのいま
+  background: lt_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ロッテは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: ロッテホールディングスの会長は、次男の重光昭夫。社長は2021年から玉塚元一よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 取締役には、次男の長男の重光聡も名を連ねているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 長男の側は2016年から毎年、株主として提案を出してきたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 2026年6月の総会で、12回目の否決よ。
+    telops:
+    - {text: "長男の側の提案　12回目の否決", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 12回も！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年7月には、次男ら取締役を相手に約144億円の株主代表訴訟も起こした。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年11月の時点で、その裁判は続いているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ガムは、どうなったの？
+  - speaker: tsumugi
+    emotion: happy
+    text: 1950年代に出たガムの名前は、いまも店で見かけるわね。
+# ---- 締め（茶番の部活を回収。「葬儀が最後」は長男の2025年の言葉として） ----
+- id: shime
+  title: ''
+  background: lt_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 新しい部活を作って、部長はボクで決まりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 部員は？
+  - speaker: zundamon
+    emotion: happy
+    text: ボク1人なのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それなら、多数決でも負けないわね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: あの7月の午後、創業者は6人を外すと告げた。翌朝、外されたのは自分の代表権だった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 私が作った会社だと言っても、決めたのは取締役会と株主の票だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 兄弟は、そのあと会っているの？
+  - speaker: tsumugi
+    emotion: thinking
+    text: 近年兄弟で顔を合わせたことはあるかと聞かれて、長男は2025年にこう答えたわ。
+  - speaker: reimu
+    text: 全然ないですね。2020年の父の葬儀が最後です。
+    reading: ぜんぜん ないですね。にせん にじゅうねんの ちちの そうぎが さいごです。
+  - speaker: zundamon
+    emotion: sad
+    text: 会社は残ったのに……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 作った人と持つ人と、決める人。あなたの家の店や会社でも、一度確かめてみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
