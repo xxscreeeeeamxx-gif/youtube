@@ -1,0 +1,1132 @@
+meta:
+  title: ソニーの役員は反対、社長は「そこまで言うならやってみろ」プレイステーションは出荷1億台に【ずんだもん解説】
+  slug: playstation-kutaragi
+  hook_line: 「ソニーの事業ではない」と言われたゲーム機は、なぜ出荷1億台を超えたのか。
+  summary: 1992年6月、ソニー本社の経営会議。技術者の久夛良木健は、反対する役員たちの前で社長の大賀典雄に迫ります。判まで押した任天堂との計画は、発表の翌日から白紙へ向かっていました。カセットではなくCD、平らな絵ではなく立体。本社を出て、音楽の会社の軒先で作ったゲーム機に、ゲーム会社は振り向いたのか。本人の講演と、丸山茂雄の新聞の連載に残る言葉で、双方の言い分を並べて再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - Sony Interactive Entertainment「Business Data & Sales」 https://sonyinteractive.com/en/corporate/data.html
+  - 公正取引委員会 平成13年度年次報告「株式会社ソニー・コンピュータエンタテインメントに対する件」 https://www.jftc.go.jp/info/nenpou/h13/13kakuron00002-4-2.html
+  - 武田計測先端知財団「久夛良木健 「プレイステーション」市場の創出と次世代エンタテインメント機器開発への挑戦」（2006年12月26日） http://takeda-foundation.jp/reports/pdf/ant0303.pdf
+  - 'Game Informer「The First 25 Years: A PlayStation Oral History」（2019年12月3日） https://gameinformer.com/feature/2019/12/03/the-first-25-years-a-playstation-oral-history'
+  - 電撃オンライン「プレステの生みの親・久夛良木健氏が語るゲーム市場の未来とPS開発秘話とは？ TGS2024基調講演レポート」（2024年9月26日） https://dengekionline.com/article/202409/18945
+  - 4Gamer「「黒川塾 六十二（62）」聴講レポート。久夛良木 健氏が自身の育てたPlayStationのこれまでと，デジタルエンターテイメントの可能性を語った」（2018年7月19日） https://www.4gamer.net/games/999/G999905/20180719035/
+  tags:
+  - プレイステーション
+  - 久夛良木健
+  - ソニー
+  - PlayStation
+  - 大賀典雄
+  - 丸山茂雄
+  - 任天堂
+  - Do it会議
+  - ソニー・コンピュータエンタテインメント
+  - ナムコ
+  - ゲーム機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 役員は反対
+    bottom: 出荷1億台
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: oga
+    label: 社長
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#2a2f3a'
+  - id: oga2
+    label: 大賀
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#2a2f3a'
+  - id: yakuin
+    label: 役員
+    voice: 100
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: maruyama
+    label: 丸山
+    voice: 21
+    pitch: -0.04
+    outfit: suit
+    color: '#5a4632'
+  - id: shain
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: gishi
+    label: 技術者
+    voice: 67
+    pitch: 0.0
+    outfit: labcoat
+  - id: gk1
+    label: ゲーム会社
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#6a5a48'
+  - id: gk2
+    label: ゲーム会社
+    voice: 21
+    pitch: 0.06
+    outfit: suit
+    color: '#3a4f5f'
+  - id: gk3
+    label: ゲーム会社
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#5a4a3a'
+  - id: gk4
+    label: ゲーム会社
+    voice: 67
+    pitch: 0.06
+    outfit: suit
+    color: '#4a3a5a'
+  - id: namco
+    label: ナムコの人
+    voice: 12
+    pitch: 0.02
+    outfit: suit
+    color: '#3e5c4a'
+  - id: tonya
+    label: 問屋
+    voice: 42
+    pitch: -0.04
+    outfit: suit
+    color: '#5a4a3a'
+  - id: kyaku
+    label: 客
+    voice: 12
+    pitch: 0.04
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.08
+    outfit: apron
+scenes:
+# ---- 先出し（1992年6月・ソニー本社の経営会議。台詞は丸山の連載の形と財団の言葉だけ。笑いの SE なし。机をたたく音は間とナレで） ----
+- id: co_kaigi
+  title: ''
+  background: pl_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 久夛良木, emotion: angry}
+  - {who: yakuin, x: 0.56, emotion: normal}
+  - {who: oga, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1992年6月、ソニー本社の経営会議。技術者の久夛良木健が、ゲーム機を作らせてほしいと迫ります。
+    reading: せんきゅうひゃく きゅうじゅうにねん ろくがつ、そにー ほんしゃの けいえい かいぎ。ぎじゅつしゃの くたらぎ けんが げーむきお つくらせて ほしいと せまります。
+  - speaker: yakuin
+    emotion: normal
+    text: ゲーム市場は、ソニーの事業ではない。
+  - speaker: zundamon
+    emotion: angry
+    text: 任天堂に話をひっくり返されたままでいいんですか
+  - speaker: reimu
+    text: 社長の大賀典雄が、机をたたきます。
+    reading: しゃちょうの おおが のりおが、つくえお たたきます。
+  - speaker: oga
+    emotion: angry
+    text: そこまで言うならやってみろ
+    pause_after: 0.6
+  - speaker: reimu
+    text: 丸山茂雄の新聞の連載などに残る場面です。2年半後に出たプレイステーションは、出荷1億台を超えます。
+    reading: まるやま しげおの しんぶんの れんさいなどに のこる ばめんです。にねんはんごに でた ぷれいすてーしょんわ、しゅっか いちおくだいお こえます。
+# ---- 今の部屋（約束した相手に、別の相手と組まれる。任天堂をたとえに使わない。20秒以内） ----
+- id: hook
+  title: ''
+  background: pl_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 文化祭の出し物、2人で作る約束だったのに！ 別のクラスと組まれたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: じゃあ、どうするの？
+  - speaker: zundamon
+    emotion: angry
+    text: ……1人で、もっとすごいのを作るのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1991年、組んでいた相手に別の会社と組まれた技術者がいたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ゲームはソニーの事業ではないと言われた機械が、なぜ出荷1億台になったのか。
+    telops:
+    - {text: "「ソニーの事業ではない」機械は なぜ出荷1億台に？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 反対されたのに、1億台！？
+# ---- 1980年代半ば・厚木の研究所（3Dは短く。子供時代は出さない。カセットの話は2017年の本人の言葉で） ----
+- id: ch1_kenkyujo
+  title: 立体の映像とカセット
+  background: pl_kenkyujo
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: normal}
+  - {who: gishi, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1980年代の半ば、神奈川・厚木。ソニーの研究所です。
+    reading: せんきゅうひゃく はちじゅうねんだいの なかば、かながわ あつぎ。そにーの けんきゅうじょです。
+  - speaker: gishi
+    emotion: happy
+    text: '[久夛良木|クタラギ]さん。業務用の機械で、立体がその場で動いてます。'
+  - speaker: zundamon
+    emotion: surprised
+    text: これ、家のゲーム機で動かせないかな。
+  - speaker: gishi
+    emotion: thinking
+    text: それより、人気のカセットはどこも品切れですよ。
+  - speaker: reimu
+    text: 久夛良木は2017年に、カセットの弱点をこう話しています。
+    reading: くたらぎわ にせん じゅうななねんに、かせっとの じゃくてんお こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 半導体のROMカセットだと当時は作るのに2カ月かかるので、
+  - speaker: zundamon
+    emotion: normal
+    text: ゲームを欲しい子が待っている間に中古ソフトが店頭に並ぶ。
+  - speaker: gishi
+    emotion: surprised
+    text: 待ってる間に、中古が先に！？
+    se: bikkuri
+  - speaker: gishi
+    emotion: thinking
+    text: 夏休みの初めに売り切れたら、次は夏休みのあとですね。
+  - speaker: zundamon
+    emotion: happy
+    text: CDにすればいいんだ。作るのが早い。
+  - speaker: gishi
+    emotion: thinking
+    text: でもカセットは、読み込みが速くてコピーに強いですよ。
+  - speaker: reimu
+    text: のちにCDの追加は、最長6日で店へ。なぜCDなのか、答えは売り方に出てきます。
+    reading: のちに しーでぃーの ついかわ、さいちょう むいかで みせえ。なぜ しーでぃーなのか、こたえわ うりかたに でて きます。
+  - speaker: reimu
+    text: ただこのCDが、任天堂との話をこじらせます。
+    reading: ただ この しーでぃーが、にんてんどうとの はなしお こじらせます。
+# ---- 1987年・京都通い（音源チップは1行。フロッピーと音の悪口は使わない） ----
+- id: card1987
+  title: ''
+  background: pl_card_1987
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1987年。久夛良木は、京都の任天堂に通い始めます。
+    reading: せんきゅうひゃく はちじゅうななねん。くたらぎわ、きょうとの にんてんどうに かよい はじめます。
+# ---- 京都の応接室 → 1990年1月の調印のあと、ソニーの担当の部屋（判を押したのは大賀と山内。権利の線は東洋経済・Wikipedia の形まで） ----
+- id: ch1_keiyaku
+  title: CDは開放してやる
+  background: pl_osetsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: happy}
+  - {who: shain, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: '[久夛良木|クタラギ]さん、もう任天堂の社員みたいですね。'
+  - speaker: zundamon
+    emotion: happy
+    text: 音の部品の注文も、もらったからな。
+  - speaker: reimu
+    text: 1990年1月。両社の社長が、CDの読める次のゲーム機を一緒に作る約束に判を押します。
+    reading: せんきゅうひゃく きゅうじゅうねん いちがつ。りょうしゃの しゃちょうが、しーでぃーの よめる つぎの げーむきお いっしょに つくる やくそくに はんお おします。
+    background: pl_keiyaku
+  - speaker: shain
+    emotion: normal
+    text: 室長。CDのソフトを出す許しは、うちが持つんですよね。
+  - speaker: zundamon
+    emotion: happy
+    text: そうだ。CDは、うちに任せるという話だ。
+  - speaker: shain
+    emotion: thinking
+    text: CDのゲームまでうちが許すなら、あとで揉めませんか。
+  - speaker: zundamon
+    emotion: normal
+    text: 社長どうしが判を押した約束だ。
+  - speaker: shain
+    emotion: happy
+    text: 部屋の名前も、PS事業室ですしね。
+  - speaker: zundamon
+    emotion: happy
+    text: プレイステーションの、PSだ。
+  - speaker: reimu
+    text: 丸山は2016年に、この約束をこう言います。マスクROMは触らせないけど、CD-ROMは開放してやる。
+    reading: まるやまわ にせん じゅうろくねんに、この やくそくお こう いいます。ますくろむわ さわらせない けど、しーでぃーろむわ かいほう してやる。
+    telops:
+    - {text: "丸山「CD-ROMは開放してやる」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shain
+    emotion: thinking
+    text: ……任天堂さんは、それで本当にいいんでしょうか。
+  - speaker: reimu
+    text: その点をはっきりさせないまま、計画は進みます。判を押した約束が揺らぐのは、翌年の6月です。
+    reading: その てんお はっきり させない まま、けいかくわ すすみます。はんお おした やくそくが ゆらぐのわ、よくねんの ろくがつです。
+# ---- 1991年6月・シカゴの家電見本市（日にちは言わない。「ソニーの発表の翌日」まで。本人の驚きは短く） ----
+- id: card1991
+  title: ''
+  background: pl_card_1991
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 1991年6月、アメリカ・シカゴの家電見本市。
+    reading: せんきゅうひゃく きゅうじゅういちねん ろくがつ、あめりか しかごの かでん みほんいち。
+- id: ch2_ces
+  title: 発表の翌日
+  background: pl_tenjikai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 久夛良木, emotion: happy}
+  - {who: shain, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: ソニーは、スーパーファミコンのソフトもCDも動く機械を発表します。仮の名前は、プレイステーション。
+    reading: そにーわ、すーぱーふぁみこんの そふとも しーでぃーも うごく きかいお はっぴょう します。かりの なまえわ、ぷれいすてーしょん。
+  - speaker: shain
+    emotion: happy
+    text: 室長、ブースに人だかりです！
+  - speaker: zundamon
+    emotion: happy
+    text: 目標は秋に4万9800円。最初の年に300万台だ。
+  - speaker: shain
+    emotion: surprised
+    text: 300万台！ 秋が待ち遠しいですね！
+  - speaker: shain
+    emotion: surprised
+    text: 室長！ 一夜明けたら、任天堂がフィリップスと組むと発表しました！
+    se: gaan
+    telops:
+    - {text: "発表の翌日 任天堂はフィリップスと", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ボクらの発表は、きのうなのだ。
+  - speaker: shain
+    emotion: thinking
+    text: スーパーファミコンで遊べるCDの機械を、フィリップスと作るそうです。
+  - speaker: shain
+    emotion: thinking
+    text: フィリップスは、テレビにつなぐ自分のCDの機械も出すところですし。
+  - speaker: shain
+    emotion: surprised
+    text: 会場は、ソニーとフィリップスのどっちが本命かで大騒ぎです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 任天堂は、なんと言ってる。
+  - speaker: shain
+    emotion: thinking
+    text: 米国の幹部が、記者に話しています。
+  - speaker: shain
+    emotion: thinking
+    text: 技術の面からはフィリップスと組むほうがよい、と技術者が結論を出したと。
+  - speaker: zundamon
+    emotion: sad
+    text: ……技術の面、か。
+  - speaker: reimu
+    text: その夜、久夛良木はアメリカから東京の社員に電話をかけ、火消しを相談します。
+    reading: その よる、くたらぎわ あめりかから とうきょうの しゃいんに でんわお かけて ひけしお そうだん します。
+# ---- 今の部屋（任天堂の筋。悪者にしない。主語を付ける。1万円のうち3000円は「とも言われる」） ----
+- id: ch2_heya
+  title: 任天堂の筋
+  background: pl_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 判まで押したのに、なんで別の会社と組むのだ！
+  - speaker: zundamon
+    emotion: angry
+    text: これじゃ1億台どころか、1台も出ないのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 任天堂の側にも、心配があったの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: CDのソフトを出す許しの権利を、ソニーが持つ契約。そこを危ぶんだ、とされているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 許しを持つと、何が変わるのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: カセットのソフトなら、1万円のうち3000円ほどが任天堂の取り分とも言われるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: CDのソフトの許しがソニーにあれば、その取り分の一部がソニーへ行くわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 任天堂から見れば、家の鍵を半分渡すような契約だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 鍵を半分……それは、こわい。
+  - speaker: tsumugi
+    emotion: normal
+    text: 任天堂の社長の山内溥は、のちにこう語っているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 可能性が広がってもだめなのです。高性能と面白さは別物です
+  - speaker: zundamon
+    emotion: thinking
+    text: 性能より、面白さ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: で、別れたあとはどうなるのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: まずは、よりを戻す話し合いが1年続くの。
+    beat: true
+# ---- 1991年6月〜1992年・1年の話し合いと15億円（出井は台詞なし。大賀の電話は中身を書かない） ----
+- id: ch2_kosho
+  title: 1年の話し合い
+  background: pl_keiyaku
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: thinking}
+  - {who: shain, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 取締役の出井伸之を中心に、ソニーは1年にわたって任天堂と話し合います。
+    reading: とりしまりやくの いでい のぶゆきお ちゅうしんに、そにーわ いちねんに わたって にんてんどうと はなしあいます。
+  - speaker: shain
+    emotion: normal
+    text: 社長も、任天堂とフィリップスのトップに電話をかけたそうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……それで、どうなった。
+  - speaker: shain
+    emotion: normal
+    text: 年明けに、任天堂さんと互換の機械で話がまとまりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: まとまった？ CDのソフトの許しは？
+  - speaker: shain
+    emotion: sad
+    text: ……任天堂さんに、移すそうです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 許しまで、渡すのか……。
+  - speaker: reimu
+    text: 1992年の初めのことです。それでもその年の夏までに、ソニーは任天堂向けの機械をやめます。
+    reading: せんきゅうひゃく きゅうじゅうにねんの はじめの ことです。それでも その としの なつまでに そにーわ、にんてんどうむけの きかいお やめます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……任天堂さんとの機械は、ここまでか。
+  - speaker: shain
+    emotion: sad
+    text: '[ソニー・ミュージック|ソニーミュージック]のゲームの企画も中止です。損は、約[15億円|ジュウゴオクエン]だと。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……[15億円|ジュウゴオクエン]が、消えたのだ。
+    se: shobon
+# ---- 1992年・試作機（会議で試作機を見せた・ほぼ出来上がっていたまで。社内の空気は2024年の本人の言葉） ----
+- id: ch2_shisaku
+  title: ''
+  background: pl_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: thinking}
+  - {who: gishi, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 任天堂との話が壊れたあとの決断を、若手の社員は2019年にこう振り返ります。自分たちで作る。3Dで。
+    reading: にんてんどうとの はなしが こわれた あとの けつだんお、わかての しゃいんわ にせん じゅうきゅうねんに こう ふりかえります。じぶんたちで つくる。すりーでぃーで。
+  - speaker: gishi
+    emotion: happy
+    text: 室長。こっそり作ってた立体の試作機が、ほぼ組み上がりました。
+  - speaker: gishi
+    emotion: thinking
+    text: でも任天堂さんとの話が無くなったら、これは……。
+  - speaker: zundamon
+    emotion: normal
+    text: 任天堂向けじゃない。ソニーの機械として、経営会議に持っていく。
+  - speaker: gishi
+    emotion: thinking
+    text: 本社の役員は、ゲームをどう見てるんでしょう。
+  - speaker: reimu
+    text: 久夛良木は2019年に、当時の社内を英語でこう振り返ります。
+    reading: くたらぎわ にせん じゅうきゅうねんに、とうじの しゃないお えいごで こう ふりかえります。
+  - speaker: zundamon
+    emotion: sad
+    text: 子どものおもちゃに大事な資源を使うことには、ソニーの中でかなりの抵抗があった。
+  - speaker: gishi
+    emotion: surprised
+    text: おもちゃ扱い……。
+# ---- 1992年6月・経営会議（本編。全体の45〜50%。役員の台詞は1つだけ。久夛良木の言葉は財団と丸山の書いた形のまま、出どころを言って並べる） ----
+- id: card1992
+  title: ''
+  background: pl_card_1992
+  cuts:
+  - speaker: reimu
+    text: 1992年6月。ソニーが自分でゲームをやるかを決める、本社の経営会議です。
+    reading: せんきゅうひゃく きゅうじゅうにねん ろくがつ。そにーが じぶんで げーむお やるかお きめる ほんしゃの けいえい かいぎです。
+- id: ch3_kaigi
+  title: 6月の経営会議
+  background: pl_kaigi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 久夛良木, emotion: thinking}
+  - {who: yakuin, x: 0.56, emotion: normal}
+  - {who: oga, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: yakuin
+    emotion: normal
+    text: ゲーム市場は、ソニーの事業ではない。
+  - speaker: reimu
+    text: 財団の報告書によれば、出席した役員の全員が反対に回りました。
+    reading: ざいだんの ほうこくしょに よれば、しゅっせき した やくいんの ぜんいんが はんたいに まわりました。
+  - speaker: zundamon
+    emotion: normal
+    text: 試作機は、ほぼできています。
+  - speaker: zundamon
+    emotion: normal
+    text: こちらが、試作機の立体の映像です。
+  - speaker: zundamon
+    emotion: normal
+    text: 立体の映像が、家のゲーム機で動くんです。
+  - speaker: zundamon
+    emotion: normal
+    text: ファミコンとは、まったく別の物に見えるはずです。
+  - speaker: zundamon
+    emotion: angry
+    text: 見た人は、必ず買ってくれます。
+  - speaker: reimu
+    text: 役員たちは、黙ったままです。
+    reading: やくいんたちわ、だまった ままです。
+  - speaker: reimu
+    text: 丸山は新聞の連載に、このときの久夛良木の一言をこう書いています。
+    reading: まるやまわ しんぶんの れんさいに、この ときの くたらぎの ひとことお こう かいて います。
+  - speaker: zundamon
+    emotion: angry
+    text: 任天堂に話をひっくり返されたままでいいんですか
+  - speaker: reimu
+    text: 顔に塗られた泥をぬぐうにはゲームをやるしかないと責め立てます。大賀は、机をたたきました。
+    reading: かおに ぬられた どろお ぬぐうにわ げーむお やるしか ないと せめたてます。おおがわ、つくえお たたきました。
+  - speaker: oga
+    emotion: angry
+    text: そこまで言うならやってみろ
+    se: don
+    telops:
+    - {text: "大賀「そこまで言うならやってみろ」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ……はい！
+  - speaker: reimu
+    text: 丸山が、世間でも有名な『Do it』会議と書いた日です。
+    reading: まるやまが、せけんでも ゆうめいな どぅー いっと かいぎと かいた ひです。
+# ---- 1992年夏・本社を出て、音楽の会社の側へ（建物の場所は言わない。80人は丸山の言葉） ----
+- id: ch4_music
+  title: 音楽の会社の軒先
+  background: pl_music
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 久夛良木, emotion: normal}
+  - {who: shain, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その夏。久夛良木は9人の仲間と本社を出て、ソニー・ミュージックの側に移ります。
+    reading: その なつ。くたらぎわ きゅうにんの なかまと ほんしゃお でて、そにー みゅーじっくの がわに うつります。
+  - speaker: shain
+    emotion: normal
+    text: 室長、新しい机はここです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……狭いな。
+  - speaker: shain
+    emotion: happy
+    text: 音楽の会社の、軒先ですから。
+    beat: true
+  - speaker: zundamon
+    emotion: happy
+    text: でもここには、CDを作る工場がある。
+  - speaker: reimu
+    text: ソニー・ミュージックの副社長の丸山は、80人ほどの部隊を呼んだと2016年に話しています。
+    reading: そにー みゅーじっくの ふくしゃちょうの まるやまわ、はちじゅうにん ほどの ぶたいお よんだと にせん じゅうろくねんに はなして います。
+# ---- 丸山の連載の一場面（話した場所は書かれていないので、新聞の背景で。言葉は連載の形のまま） ----
+- id: ch4_mariah
+  title: ''
+  background: pl_shinbun
+  stage:
+  - {who: maruyama, x: 0.14, flip: true, emotion: happy}
+  - {who: oga, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 丸山は連載に、あるときの大賀とのこんなやりとりを書いています。
+    reading: まるやまわ れんさいに、ある ときの おおがとの こんな やりとりお かいて います。
+  - speaker: maruyama
+    emotion: happy
+    text: '[久夛良木|クタラギ]の面倒をみるのは[マライア・キャリー|マライアキャリー]の面倒をみるのと同じですよ'
+  - speaker: oga
+    emotion: happy
+    text: シゲ、面白いこと言うね
+    se: hammer
+# ---- 3Dにかける（「全部演算で」は2017年の本人の言葉。画面は色の三角形だけ） ----
+- id: ch5_3d
+  title: 全部、計算で
+  background: pl_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: normal}
+  - {who: gishi, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: gishi
+    emotion: happy
+    text: 室長。CDなら、きれいな絵を山ほど入れられますね。
+  - speaker: reimu
+    text: CDの使い方について、久夛良木は2017年にこう話しています。
+    reading: しーでぃーの つかいかたに ついて、くたらぎわ にせん じゅうななねんに こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: ゲームを作る人たちは[CD-ROM|シーディーロム]にキレイな画像や動画をたくさん入れたがったが、
+  - speaker: zundamon
+    emotion: happy
+    text: そんなものは全部演算でやればいい
+  - speaker: gishi
+    emotion: surprised
+    text: 全部、計算で！？ 画面の三角を、1つずつですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: その計算を、指先に載るくらいのチップに収めるんだ。
+  - speaker: gishi
+    emotion: surprised
+    text: そんなに小さく！？
+  - speaker: reimu
+    text: 少ない人数の技術者が、1年から1年半でそのチップを形にします。
+    reading: すくない にんずうの ぎじゅつしゃが、いちねんから いちねんはんで その ちっぷお かたちに します。
+  - speaker: gishi
+    emotion: surprised
+    text: 見てください！ 専用のチップで、色の三角が立体になって動きました！
+    background: pl_kaihatsu_3d
+    se: jaan
+  - speaker: zundamon
+    emotion: happy
+    text: ……動いたのだ。
+# ---- 1993年・約100社の塩対応（会社の名前はモブに付けない。断る理由は台帳の形まで。段階を上げる） ----
+- id: card1993
+  title: ''
+  background: pl_card_1993
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 1993年。久夛良木たちは、ソフトを作ってもらうためにゲーム会社を回ります。
+    reading: せんきゅうひゃく きゅうじゅうさんねん。くたらぎたちわ、そふとお つくって もらう ために げーむがいしゃお まわります。
+- id: ch6_shio1
+  title: 100社の塩対応
+  background: pl_soft
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: happy}
+  - {who: gk1, x: 0.84, emotion: thinking}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 立体の絵がその場で動く、ソニーのゲーム機です！
+  - speaker: gk1
+    emotion: thinking
+    text: 3Dですか。使えるのは、レースくらいですね。
+  - speaker: zundamon
+    emotion: surprised
+    text: レースだけ……。
+- id: ch6_shio2
+  title: ''
+  background: pl_soft
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: happy}
+  - {who: gk2, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: こちらが、3Dのゲーム機です！
+  - speaker: gk2
+    emotion: normal
+    text: どこも同じことをやってますけど、ダメですよ。
+  - speaker: zundamon
+    emotion: sad
+    text: まだ、何も見せてないのに……。
+- id: ch6_shio2b
+  title: ''
+  background: pl_soft
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: happy}
+  - {who: gk4, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 本日は、3Dのゲーム機の……。
+  - speaker: gk4
+    emotion: normal
+    text: お名刺だけ、いただいておきます。
+  - speaker: zundamon
+    emotion: surprised
+    text: 機械の電源、まだ入れてないのに！？
+- id: ch6_shio3
+  title: ''
+  background: pl_soft
+  stage:
+  - {who: shain, x: 0.16, flip: true, emotion: thinking}
+  - {who: gk3, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 丸山が回った会社には、こう断るところもありました。
+    reading: まるやまが まわった かいしゃにわ、こう ことわる ところも ありました。
+  - speaker: shain
+    emotion: thinking
+    text: せめて、試作の画面だけでも……。
+  - speaker: gk3
+    emotion: normal
+    text: ソフトを1本作るのに、億かかるんです。
+  - speaker: gk3
+    emotion: thinking
+    text: 目指せ100万台じゃ、元は取れませんね。
+  - speaker: shain
+    emotion: sad
+    text: ……まだ1台も、売ってないんですが。
+    se: zukko
+- id: ch6_shio4
+  title: ''
+  background: pl_soft
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 回ったのは、100社近く。久夛良木は2024年の講演で、ひと言でこう振り返ります。
+    reading: まわったのわ、ひゃくしゃ ちかく。くたらぎわ にせん にじゅうよねんの こうえんで ひとことで こう ふりかえります。
+  - speaker: zundamon
+    emotion: sad
+    text: 塩対応でした。
+    beat: true
+    telops:
+    - {text: "久夛良木「塩対応でした」", size: md, position: middle-right, color: "#8AD0FF", stroke: "#0A1A2A", glow: "#2A6ACC", anim: up}
+# ---- 1993年・追い風（セガの3Dが追い風。悪者にしない） ----
+- id: ch6_kaze
+  title: ''
+  background: pl_kaihatsu_3d
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: thinking}
+  - {who: shain, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 同じ1993年。ゲームセンターで、セガの3Dの格闘ゲーム、バーチャファイターが当たります。
+    reading: おなじ せんきゅうひゃく きゅうじゅうさんねん。げーむせんたーで せがの すりーでぃーの かくとう げーむ、ばーちゃふぁいたーが あたります。
+  - speaker: shain
+    emotion: surprised
+    text: 大変です！ 興味がないと言ってた会社から、話がしたいと電話が次々に！
+  - speaker: zundamon
+    emotion: surprised
+    text: 次々に！？
+  - speaker: shain
+    emotion: happy
+    text: ゲームセンターで3Dを見て、考えが変わったそうです。
+  - speaker: zundamon
+    emotion: happy
+    text: セガさんの3Dが、追い風になったな。
+# ---- ナムコ（言葉は TGS2024 の講演の記事の形。中村雅哉は出さない） ----
+- id: ch7_namco
+  title: 本当にこれが動くのか
+  background: pl_soft
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: normal}
+  - {who: namco, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: こちらが、試作機の画面です。
+  - speaker: namco
+    emotion: normal
+    text: では、拝見します。
+  - speaker: namco
+    emotion: surprised
+    text: 本当にこれが動くのか！
+    se: bikkuri
+  - speaker: namco
+    emotion: normal
+    text: 秘密を守る約束をしたうえで、詳しく聞かせてください。
+  - speaker: namco
+    emotion: happy
+    text: うちのアーケード基板を全部これに変えたほうがいい
+  - speaker: zundamon
+    emotion: surprised
+    text: ゲームセンターの機械まで、これに！？
+  - speaker: reimu
+    text: 1993年11月、ナムコが全面協力を発表。翌日、ソニー・コンピュータエンタテインメントができます。
+    reading: せんきゅうひゃく きゅうじゅうさんねん じゅういちがつ、なむこが ぜんめん きょうりょくお はっぴょう。よくじつ そにー こんぴゅーた えんたていんめんとが できます。
+  - speaker: zundamon
+    emotion: happy
+    text: 社員は80人ほど。小さな会社からだ。
+# ---- 売れた分だけ、すぐ足す（問屋の言い分は丸山の回想の筋。問屋を悪者にしない。溶かすは2017年の本人の言葉） ----
+- id: ch8_tonya
+  title: 売れた分だけ、すぐ足す
+  background: pl_music
+  bgm: honwaka_puppu
+  stage:
+  - {who: shain, x: 0.2, flip: true, emotion: happy}
+  - {who: tonya, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 毎日の売れた数を見て、売れた分だけCDを追加で作ります。
+  - speaker: tonya
+    emotion: surprised
+    text: 毎日、ちょこちょこ追加？
+  - speaker: tonya
+    emotion: thinking
+    text: 1回に作って、全部配る。うちはずっとそれで回してますから。
+  - speaker: reimu
+    text: 丸山の回想では、問屋とは話がまとまりません。会社は、店と直に取引する道を選びます。
+    reading: まるやまの かいそうでわ、とんやとわ はなしが まとまりません。かいしゃわ みせと じかに とりひき する みちお えらびます。
+- id: ch8_cd
+  title: ''
+  background: pl_music
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: normal}
+  - {who: shain, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 部長、きのう売れた分の追加をもう工場で作ってます！
+    background: pl_cd
+  - speaker: shain
+    emotion: thinking
+    text: でも、作りすぎて余ったらどうします？
+  - speaker: reimu
+    text: 久夛良木は2017年に、CDの強みをこう話しています。
+    reading: くたらぎわ にせん じゅうななねんに、しーでぃーの つよみお こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: それにプラスチックなので、在庫になったら溶かせばいい
+  - speaker: shain
+    emotion: surprised
+    text: 溶かす！？
+    se: manuke
+  - speaker: reimu
+    text: 1994年6月ごろまでに、会社は店に値引きをさせない決まりも作ります。この決まりは、のちに問われます。
+    reading: せんきゅうひゃく きゅうじゅうよねん ろくがつ ごろまでに、かいしゃわ みせに ねびきお させない きまりも つくります。この きまりわ、のちに とわれます。
+# ---- 1994年12月2日の夜・発売前夜（涙は本人の英語の回想。セガは1行） ----
+- id: card1994
+  title: ''
+  background: pl_card_1994
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 1994年12月2日の夜。
+    reading: せんきゅうひゃく きゅうじゅうよねん じゅうにがつ ふつかの よる。
+- id: ch9_zenya
+  title: 発売前夜の列
+  background: pl_mise_yoru
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 久夛良木, emotion: thinking}
+  - {who: kyaku, x: 0.68, emotion: happy}
+  - {who: tenin, x: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 発売の11日前には、セガのゲーム機が先に出ていました。
+    reading: はつばいの じゅういちにち まえにわ、せがの げーむきが さきに でて いました。
+  - speaker: kyaku
+    emotion: happy
+    text: 朝まで、ここで待つんだ。
+  - speaker: kyaku
+    emotion: happy
+    text: 3万9800円、握りしめてきた。
+  - speaker: kyaku
+    emotion: surprised
+    text: 列、[角|かど]の向こうまで続いてるぞ！
+  - speaker: zundamon
+    emotion: sad
+    text: ……。
+  - speaker: reimu
+    text: この列に涙が出た。本当に成功したとそのとき分かった、と久夛良木は2019年に英語で振り返ります。
+    reading: この れつに なみだが でた。ほんとうに せいこう したと その とき わかったと、くたらぎわ にせん じゅうきゅうねんに えいごで ふりかえります。
+  - speaker: tenin
+    emotion: happy
+    text: お待たせしました！ プレイステーション、発売です！
+    background: pl_mise
+  - speaker: tenin
+    emotion: surprised
+    text: 今日の分は、もう売り切れです！
+    se: levelup
+  - speaker: reimu
+    text: 1994年12月3日、3万9800円。用意した10万台は、1日で売り切れました。
+    reading: せんきゅうひゃく きゅうじゅうよねん じゅうにがつ みっか、さんまん きゅうせん はっぴゃくえん。ようい した じゅうまんだいわ、いちにちで うりきれました。
+    telops:
+    - {text: "用意した10万台が1日で完売", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- いくぜ100万台（広告の言葉は B。目指せ100万台の回収） ----
+- id: ch10_hyakuman
+  title: いくぜ100万台
+  background: pl_music
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 久夛良木, emotion: happy}
+  - {who: shain, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 出荷が50万台を超えました！ 新しい広告は、いくぜ100万台です！
+  - speaker: zundamon
+    emotion: happy
+    text: 元は取れないと言われた、あの100万台か。
+  - speaker: shain
+    emotion: surprised
+    text: そして1995年5月。出荷が、100万台を超えました！
+# ---- 大賀の言葉（久夛良木の英語の回想の日本語の趣旨。時点は「柱になったあと」） ----
+- id: ch10_wonderful
+  title: ''
+  background: pl_kaigi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 久夛良木, emotion: happy}
+  - {who: oga2, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: ソニーの柱になったあと、大賀は会議室の窓から空を見上げて言った、と久夛良木は2019年に振り返ります。
+    reading: そにーの はしらに なった あと、おおがわ かいぎしつの まどから そらお みあげて いったと くたらぎわ にせん じゅうきゅうねんに ふりかえります。
+  - speaker: oga2
+    emotion: happy
+    text: すばらしい、[久夛良木|クタラギ]。本当にすばらしい。
+  - speaker: reimu
+    text: 初代のプレイステーションは2006年まで作られ、出荷は会社の発表で1億240万台を超えました。
+    reading: しょだいの ぷれいすてーしょんわ にせん ろくねんまで つくられ、しゅっかわ かいしゃの はっぴょうで いちおく にひゃくよんじゅうまんだいお こえました。
+# ---- 論争1：任天堂への仕返し？（「裏切り」「復讐」は俗説の言葉としてだけ。本人の打ち消しと任天堂側の言い分） ----
+- id: ronso1
+  title: 任天堂への仕返し？
+  background: pl_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ プレステは、任天堂に裏切られたソニーの復讐だって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう語られることは多いわ。任天堂の発表は、ソニーの発表の翌日だったし。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも本人は2018年に、両社の対立はメディアが勝手に作ったと話しているの。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 作った！？
+    telops:
+    - {text: "本人「メディアが勝手に作った」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 家のゲーム機で立体の映像を、という考えは任天堂と組む前の研究所からあったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 丸山は2016年に、ソニーの中で話が大きくなった面も語っているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 丸山のたとえでは、テナントのひと部屋を断られただけ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それを[久夛良木|クタラギ]は、社内でこんな話にしていったと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 悔しいから歌舞伎座ビルの隣に、歌舞伎座ビルより巨大なビルを建てるべきだ
+  - speaker: zundamon
+    emotion: surprised
+    text: ひと部屋で、隣に巨大なビル！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年には、両社の思いが合わなかったと英語で振り返っているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 業界を先へ進めたいソニーと、ある程度の管理を保ちたい任天堂。
+  - speaker: zundamon
+    emotion: thinking
+    text: 仕返しじゃなくて、考えが合わなかった……。
+    beat: true
+# ---- 論争2：社長のひと言ですべて決まった？（言葉は資料で違う。Do it は会議の呼び名） ----
+- id: ronso2
+  title: 社長のひと言で？
+  background: pl_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ社長のやってみろのひと言で、全部決まったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: まず、その言葉が資料で違うの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 丸山の連載では、そこまで言うならやってみろ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人の英語の回想だと、できると信じるならやりなさいだったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[Do it|ドゥーイット]は、会議の呼び名なのよ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 言葉まで、ちがうの！？
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: それに会議の前には1年の話し合いがあって、試作機もほぼできていた。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会議のあとは軒先と80人ほどの部隊、100社まわりとナムコが必要だったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人も2017年に、音楽の会社と組んだのが大きかったと話しているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 社長のひと言は、扉を開けただけ。中に机を並べたのは、音楽の会社だったの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 扉の向こうは、借りた机……。
+# ---- 本当の注意点（出荷の数・値引きの禁止。罰金と言わない。買い物の助言にしない） ----
+- id: chui
+  title: 出荷の数と値引き
+  background: pl_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。ゲーム機の累計の台数は、多くがお店に出した出荷の数よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 遊んでいる人の数じゃないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。プレイステーションは安く売ったから[勝った|カッタ]、とも言われるわね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 値段は安かった。でも店が勝手に値引きすることは、許さなかったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 安いのに、値引きはだめ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[公正取引委員会|コウセイトリヒキイインカイ]が2001年の審決で、'
+  - speaker: tsumugi
+    emotion: normal
+    text: 新品のソフトの値引きを禁じたことなどを、独占禁止法の違反と認めたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 中古を扱わせない決まりも、その値引き禁止を支えるものとされたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 値引き禁止の決まりは、審決の前にもう無くなっていたとも認められているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 店の売る値段を、メーカーが縛っちゃだめなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 買う側から見れば、同じ新品でも店によって値段が違っていいの。
+# ---- 現代（2026年11月時点。数字は会社の発表の時点つきで2つまで。講演の中身は記事の地の文なので「報じられた」） ----
+- id: card2026
+  title: ''
+  background: pl_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。発売から、32年がたちました。
+    reading: にせん にじゅうろくねん。はつばいから、さんじゅうにねんが たちました。
+- id: ima
+  title: プレイステーションのいま
+  background: pl_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: プレイステーションは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の発表では、2026年11月10日時点で[PS5|ピイエスファイブ]の出荷も1億台を超えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1億台を超えたのは、初代とPS2とPS4に続いて4つ目よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1億台が、4回もなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: '[久夛良木|クタラギ]は1999年に会社の社長になって、2007年に会長を退いたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2025年にはNHKの新プロジェクトXで、初代を作った人たちの回が放送されたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: テレビの番組にも、なったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年9月には、母校の電気通信大学で特別客員教授として講演したの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最先端の技術を追うより生み出してきたのが、かつてのゲーム業界だと語ったそうよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 追うより、生み出す……。
+# ---- 締め（茶番の文化祭と「やってみろ」の回収。締めの言葉は2017年の本人の言葉） ----
+- id: shime
+  title: ''
+  background: pl_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 文化祭は、音楽部の軒先を借りて作るのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: そこまで言うなら、やってみなさい。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 組む相手が変わっても、作りたかった物は研究所で見た立体の映像のままだった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は2017年に、こう話しているわ。
+  - speaker: reimu
+    text: 我々は決まった大きさの陣地を取り合っているのではなく、
+    reading: われわれわ きまった おおきさの じんちお とりあって いるのでわ なく、
+  - speaker: reimu
+    text: 陣地をさらに広げたいと思っていたのだが、それがなかなか上手く伝わらなかった
+    reading: じんちお さらに ひろげたいと おもって いたのだが それが なかなか うまく つたわらなかった
+    telops:
+    - {text: "久夛良木「陣地をさらに広げたい」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 取り合いじゃなくて、広げたかった……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: ニュースで1億台と聞いたら、出荷の数かどうかを確かめてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
