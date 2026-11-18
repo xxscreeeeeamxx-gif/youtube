@@ -4535,6 +4535,23 @@ SPECS = {
         dict(scene="tm_kaiken", tint="mono", tag="2017年 破産の日", emo="sad", fx="gloom", say="生きることしか"),
         dict(scene="tm_houtei", tint="yellow", tag="2018年 初公判", emo="sad", fx="sweat", say="間違いございません"),
     ]),
+    # 第13弾（2026-12-14〜17。方向転換の実験の27〜30本目）
+    "fujiya-fujii": dict(layout="scene", headline="報道5日で社長が辞意", head_hi="辞意", panels=[
+        dict(scene="fj_mise", tint="yellow", tag="2006年 クリスマス", emo="happy", fx="sparkle"),
+        dict(scene="fj_shokudo", tint="mono", tag="2007年 会見", emo="sad", fx="gloom", say="辞任したい"),
+    ]),
+    "mitsubishi-masuko": dict(layout="scene", headline="株の34%は日産へ", head_hi="日産へ", panels=[
+        dict(scene="mm_board_saisei", tint="yellow", tag="2005年 再建", emo="happy", fx="sparkle"),
+        dict(scene="mm_kaiken", tint="mono", tag="2016年 燃費の不正", emo="sad", fx="gloom"),
+    ]),
+    "compile-niitani": dict(layout="scene", headline="年商70億の翌年に和議", head_hi="和議", panels=[
+        dict(scene="pu_kaijo", tint="yellow", tag="1996年 1万8千人", emo="happy", fx="sparkle"),
+        dict(scene="pu_kaiken", tint="mono", tag="1998年 負債75億", emo="sad", fx="gloom"),
+    ]),
+    "taishin-ojima": dict(layout="scene", headline="対策会議の翌日に17戸", head_hi="17戸", panels=[
+        dict(scene="ah_iinkai", tint="yellow", tag="2005年 国会", emo="normal", fx="sweat", say="いいかげんにして"),
+        dict(scene="ah_houtei", tint="mono", tag="2008年 有罪", emo="sad", fx="gloom"),
+    ]),
     # 第12弾（2026-12-10〜13。方向転換の実験の24〜26本目＋開発秘話の実験1本）
     "lotte-shigemitsu": dict(layout="scene", headline="創業者が代表を外された", head_hi="外された", panels=[
         dict(scene="lt_kojo", tint="yellow", tag="1948年 ガムから", emo="happy", fx="sparkle"),
