@@ -1,0 +1,1431 @@
+meta:
+  title: 「急場をしのげればいい」とぷよぷよの権利を手放した社長、会社は負債75億円で和議へ【ずんだもん解説】
+  slug: compile-niitani
+  hook_line: 最高の売上の翌年に、ぷよぷよの会社はなぜ看板の権利を手放したのか。
+  summary: 1997年12月、広島。ぷよぷよを世に出したゲーム会社コンパイルの社長・仁井谷正充は、社員のボーナスが払えず、取引先のセガに電話をかけます。落ちゲーを狙った小さな会社は、まんじゅうの行列と1万8000人の大会を経て、年商約70億円に。テーマパークの夢、1年で130人の採用、競うように貸した30ほどの銀行。最高の売上の翌年に、なぜ看板の権利を手放したのか。本人のインタビューと当時の報道をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - ASCII.jp「コンパイルが広島地裁に和議申請、今後はイベントを縮小しゲーム制作を柱に」（1998年3月19日） https://ascii.jp/elem/000/000/302/302818/
+  - 4Gamer.net「コンパイルという十字架，蟄居の気持ちから再起して「にょきにょき」へ。コンパイル○社長・仁井谷正充氏インタビュー」（2016年9月20日） https://www.4gamer.net/games/343/G034312/20160905028/
+  - 読売新聞オンライン 連載「あれから」（2023年12月10日） https://www.yomiuri.co.jp/national/20231209-OYT1T50198/
+  - GameBusiness.jp「【対談】『にょきにょき』コンパイル○仁井谷正充の人生―成功と失敗から再起」（2016年11月27日） https://www.gamebusiness.jp/article/2016/11/27/12764.html
+  - 4Gamer.net「ぷよぷよ」35周年記念対談（2026年3月） https://www.4gamer.net/games/434/G043433/20260303064/
+  - セガ（PR TIMES）「「ぷよぷよ」35周年 “だいれんさ！” プロジェクト続報発表！」（2026年10月13日） https://prtimes.jp/main/html/rd/p/000007750.000005397.html
+  tags:
+  - ぷよぷよ
+  - コンパイル
+  - 仁井谷正充
+  - 米光一成
+  - セガ
+  - 和議
+  - 魔導物語
+  - ぷよまん
+  - ぷよぷよランド
+  - ゲーム会社
+  - 倒産
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 年商70億円の翌年
+    bottom: ぷよぷよの会社が和議
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: sega
+    label: セガの人
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: yakuin
+    label: 役員
+    voice: 100
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: jinji
+    label: 人事
+    voice: 8
+    pitch: 0.08
+    outfit: suit
+    color: '#7a5a6a'
+  - id: ginko1
+    label: 銀行員
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: ginko2
+    label: 銀行員
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#4a5a7a'
+  - id: ginko3
+    label: 銀行員
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#5a4a3a'
+  - id: keiri
+    label: 経理
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#454a55'
+  - id: shain
+    label: 社員
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: shain2
+    label: 社員
+    voice: 8
+    pitch: 0.12
+    outfit: suit
+    color: '#6a5a7a'
+  - id: kanbu
+    label: 幹部
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#5a4632'
+  - id: joso1
+    label: 上層部
+    voice: 100
+    pitch: -0.04
+    outfit: suit
+    color: '#2f3440'
+  - id: joso2
+    label: 上層部
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#3a4f5f'
+  - id: yonemitsu
+    label: 米光
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: wagashi1
+    label: 和菓子屋
+    voice: 42
+    pitch: 0.0
+    outfit: apron
+  - id: wagashi2
+    label: 和菓子屋
+    voice: 8
+    pitch: -0.02
+    outfit: apron
+    color: '#7a6a4a'
+  - id: wagashi3
+    label: 和菓子屋
+    voice: 13
+    pitch: 0.1
+    outfit: apron
+    color: '#5a4a3a'
+  - id: shinjin2
+    label: 新人
+    voice: 8
+    pitch: 0.1
+    outfit: suit
+    color: '#6a5a7a'
+  - id: kyaku
+    label: 客
+    voice: 12
+    pitch: 0.04
+  - id: shinjin
+    label: 新人
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#5a6a8a'
+  - id: kisha
+    label: 記者
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: koho
+    label: 広報
+    voice: 13
+    pitch: 0.04
+    outfit: suit
+    color: '#3a3f4a'
+scenes:
+# ---- 先出し（1997年12月〜1998年2月・社長室の電話。台詞は読売の連載の形だけ。条件は電話の「その後」。泣かない。笑いの SE なし。出どころは本編の ch11_denwa の頭で1回だけ言う） ----
+- id: co_denwa
+  title: ''
+  background: pu_shachoshitsu_yoru
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  - {who: sega, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1997年12月、広島。ぷよぷよを世に出したゲーム会社、コンパイル。
+    reading: せんきゅうひゃく きゅうじゅうななねん じゅうにがつ、ひろしま。ぷよぷよお よに だした げーむがいしゃ、こんぱいる。
+  - speaker: reimu
+    text: 社員のボーナスが払えなくなった社長の仁井谷正充が、取引先のセガに電話をかけます。
+    reading: しゃいんの ぼーなすが はらえなく なった しゃちょうの にいたに まさみつが、とりひきさきの せがに でんわお かけます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……[何とか|なんとか]運転資金を、貸してほしい。
+  - speaker: sega
+    emotion: normal
+    text: 仲間なので、支えます。
+  - speaker: reimu
+    text: その後、セガから条件が出されます。
+    reading: そのご、せがから じょうけんが だされます。
+  - speaker: sega
+    emotion: normal
+    text: ぷよぷよの権利と引き換えなら、[10億円|ジュウオクエン]出します。権利は、買い戻せます。
+  - speaker: reimu
+    text: 1998年2月。仁井谷は『急場をしのげればいい』と、権利を手放すと決めます。
+    reading: せんきゅうひゃく きゅうじゅうはちねん にがつ。にいたにわ きゅうばお しのげれば いいと、けんりお てばなすと きめます。
+  - speaker: reimu
+    text: 1か月後。コンパイルは負債約75億円で和議を申し立てます。事実上の倒産でした。
+    reading: いっかげつご。こんぱいるわ ふさい やく ななじゅうごおくえんで わぎお もうしたてます。じじつじょうの とうさんでした。
+# ---- 今の部屋（大事な物を預けて借り、あとで買い戻すつもり。セガを友だちにたとえない。20秒以内） ----
+- id: hook
+  title: ''
+  background: pu_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: いちばん大事なカードを友だちに預けて、500円借りたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 返すあては？
+  - speaker: zundamon
+    emotion: happy
+    text: 来月のお小遣いで、買い戻すのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 来月の[分|ぶん]、もう前借りしてたわよね。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1998年、それを会社でやった社長がいたの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 最高の売上の翌年に、なぜ看板のゲームの権利を手放したのか。
+    telops:
+    - {text: "最高の売上の翌年に なぜ看板の権利を手放した？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: いちばん売れた、次の年に！？
+# ---- 1997年・社長室（M計画・上場・130人・30の銀行。2:00 までに転落の原因の仕組みへ。銀行の名前はメインバンクだけ。壁の絵の前に立たせない） ----
+- id: ch1_mkeikaku
+  title: M計画と30の銀行
+  background: pu_shachoshitsu_e
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.46, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: yakuin, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1997年、広島のコンパイル。社内で、M計画と呼ばれた計画がありました。
+    reading: せんきゅうひゃく きゅうじゅうななねん、ひろしまの こんぱいる。しゃないで えむけいかくと よばれた けいかくが ありました。
+  - speaker: yakuin
+    emotion: normal
+    text: 社長、ぷよぷよランドの見積もりが出ました。
+  - speaker: zundamon
+    emotion: happy
+    text: どうだった。
+  - speaker: yakuin
+    emotion: normal
+    text: ……事業費は、500億円から1000億円。
+  - speaker: yakuin
+    emotion: surprised
+    text: うちの売上の、7年分から14年分ですよ！
+  - speaker: zundamon
+    emotion: happy
+    text: '[上場|じょうじょう]すれば、出るのだ。'
+  - speaker: yakuin
+    emotion: normal
+    text: ……まだ、[上場|じょうじょう]してませんが。
+    se: zukko
+  - speaker: reimu
+    text: 1997年3月までの1年の売上は、約70億円。最高の数字でした。
+    reading: せんきゅうひゃく きゅうじゅうななねん さんがつまでの いちねんの うりあげわ、やく ななじゅうおくえん。さいこうの すうじでした。
+    telops:
+    - {text: "計画は売上の7〜14年分", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: yakuin
+    emotion: surprised
+    text: 年収700万円の人が、5000万から1億円の家を建てる話ですよ！
+  - speaker: zundamon
+    emotion: happy
+    text: 外には、まだ内緒なのだ。
+- id: ch1_jinji
+  title: ''
+  background: pu_shachoshitsu_e
+  stage:
+  - {who: zundamon, x: 0.46, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: jinji, x: 0.88, emotion: happy}
+  cuts:
+  - speaker: jinji
+    emotion: happy
+    text: 社長、今年は130人採りました！
+  - speaker: zundamon
+    emotion: happy
+    text: ランドには、1000人いるのだ。
+  - speaker: jinji
+    emotion: surprised
+    text: 1000人！？ もう机が、足りません！
+    beat: true
+  - speaker: jinji
+    emotion: normal
+    text: 1年で130人。社員は、420人になります。
+- id: ch1_ginko1
+  title: ''
+  background: pu_shachoshitsu_e
+  stage:
+  - {who: zundamon, x: 0.46, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: ginko1, x: 0.88, emotion: happy}
+  cuts:
+  - speaker: ginko1
+    emotion: happy
+    text: 社長、ご融資の件で参りました。
+  - speaker: zundamon
+    emotion: happy
+    text: 助かります。
+  - speaker: ginko1
+    emotion: happy
+    text: メインバンクさんが貸すなら、うちも。
+- id: ch1_ginko3
+  title: ''
+  background: pu_shachoshitsu_e
+  stage:
+  - {who: zundamon, x: 0.44, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: ginko1, x: 0.66, scale: 0.8, emotion: happy}
+  - {who: ginko2, x: 0.78, scale: 0.8, emotion: happy}
+  - {who: ginko3, x: 0.9, scale: 0.8, emotion: happy}
+  cuts:
+  - speaker: ginko2
+    emotion: happy
+    text: うちも、ぜひ。
+  - speaker: ginko3
+    emotion: happy
+    text: うちも、うちもです！
+  - speaker: zundamon
+    emotion: surprised
+    text: ……順番に、並んでほしいのだ。
+    se: manuke
+- id: ch1_hiki
+  title: ''
+  background: pu_shachoshitsu_e
+  stage:
+  - {who: zundamon, x: 0.46, flip: true, tag: 仁井谷, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: このとき、30ほどの銀行が競うように貸していました。その年の11月、銀行は一度に引きます。
+    reading: このとき、さんじゅう ほどの ぎんこうが きそうように かして いました。その としの じゅういちがつ、ぎんこうわ いちどに ひきます。
+  - speaker: reimu
+    text: 最高の売上の会社が、なぜ1年足らずで看板を手放すのか。
+    reading: さいこうの うりあげの かいしゃが、なぜ いちねん たらずで かんばんお てばなすのか。
+# ---- 1982年・1人の会社（30秒以内。2016年の本人の言葉は出どころを言う。セガとの縁は1行） ----
+- id: card1982
+  title: ''
+  background: pu_card_1982
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1982年4月、広島。32歳の仁井谷正充は、1人で会社を作ります。
+    reading: せんきゅうひゃく はちじゅうにねん しがつ、ひろしま。さんじゅうにさいの にいたに まさみつわ、ひとりで かいしゃお つくります。
+- id: ch2_jimusho
+  title: 1人の会社
+  background: pu_jimusho
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 前の仕事は、マイコンを売る会社でした。本人は2016年に、こう振り返ります。
+    reading: まえの しごとわ、まいこんお うる かいしゃでした。ほんにんわ にせん じゅうろくねんに、こう ふりかえります。
+  - speaker: zundamon
+    emotion: normal
+    text: 商品を仕入れて売るだけという仕事が肌に合わなかったんです。
+  - speaker: zundamon
+    emotion: happy
+    text: それなら、もう自分で会社をやるしかないという状態だったんです。
+  - speaker: reimu
+    text: 翌年からゲームの仕事へ。最初は、のちに電話をかけるセガの下請けでした。
+    reading: よくねんから げーむの しごとえ。さいしょわ、のちに でんわお かける せがの したうけでした。
+- id: ch2_ds
+  title: ''
+  background: pu_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  - {who: shain, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 社長、フロッピーの容量が余ってます。
+  - speaker: zundamon
+    emotion: happy
+    text: うちやほかの会社の体験版を、入れればいいのだ。
+    se: hirameki
+  - speaker: shain
+    emotion: happy
+    text: 新人が作ったゲームも、載せていいんですか？
+  - speaker: zundamon
+    emotion: happy
+    text: 載せて、受けたら製品にする。
+  - speaker: reimu
+    text: 1988年、フロッピーで出す雑誌ディスクステーションが始まります。魔導物語も、ここから生まれました。
+    reading: せんきゅうひゃく はちじゅうはちねん、ふろっぴーで だす ざっし でぃすくすてーしょんが はじまります。まどうものがたりも、ここから うまれました。
+# ---- 1990年夏・東京の飲食店（幹部は名前の無いモブ。テトリスは1行） ----
+- id: ch3_ochige
+  title: 落ちゲーを狙う
+  background: pu_inshokuten
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  - {who: kanbu, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1990年の夏、東京の飲食店。仁井谷は、ゲームメーカーの幹部と会います。
+    reading: せんきゅうひゃく きゅうじゅうねんの なつ、とうきょうの いんしょくてん。にいたにわ、げーむ めーかーの かんぶと あいます。
+  - speaker: kanbu
+    emotion: normal
+    text: コンパイルさんは、次は何を？
+  - speaker: zundamon
+    emotion: happy
+    text: '[落ちゲー|おちゲー]を狙います。'
+  - speaker: kanbu
+    emotion: surprised
+    text: ……[落ちゲー|おちゲー]？ 携帯ゲーム機で売れてる、テトリスみたいな？
+  - speaker: zundamon
+    emotion: normal
+    text: はい。
+  - speaker: kanbu
+    emotion: normal
+    text: 上から落ちてくる物を、消すだけの？
+  - speaker: zundamon
+    emotion: happy
+    text: それを、うちらしく作ります。
+  - speaker: kanbu
+    emotion: normal
+    text: ……お手並み拝見ですな。
+  - speaker: reimu
+    text: 作りは単純で、開発費も安い。この落ちゲーの権利を、なぜ7年半後に手放すのか。
+    reading: つくりわ たんじゅんで、かいはつひも やすい。この おちげーの けんりお、なぜ ななねんはんごに てばなすのか。
+# ---- 1990〜1991年・喫茶店の会議（仁井谷は出さない。結論は米光の話どおり「丸めて出す」。「うまいことやれ」は上層部のモブ。米光はすぐに引き受けた。コーヒーの話は米光の2026年の言葉） ----
+- id: ch4_kissaten
+  title: 喫茶店の会議
+  background: pu_kissaten
+  stage:
+  - {who: joso1, x: 0.12, flip: true, emotion: normal}
+  - {who: joso2, x: 0.34, flip: true, emotion: normal}
+  - {who: yonemitsu, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 社内で作り始めた落ちものは、どうにも面白くなりません。上層部が、喫茶店に集まります。
+    reading: しゃないで つくりはじめた おちものわ、どうにも おもしろく なりません。じょうそうぶが、きっさてんに あつまります。
+  - speaker: reimu
+    text: 別のチームの米光一成は、コーヒー目当てでついてきていたとのちに話しています。
+    reading: べつの ちーむの よねみつ かずなりわ、こーひー めあてで ついてきて いたと のちに はなして います。
+  - speaker: joso2
+    emotion: normal
+    text: ドミノの数字を合わせて、消すゲームだったな。
+  - speaker: joso1
+    emotion: normal
+    text: 議題は、開発をやめるかどうかだ。
+  - speaker: joso2
+    emotion: normal
+    text: ほぼできてるんだから、どうにか丸めて出そう。
+  - speaker: joso1
+    emotion: normal
+    text: ……で、誰がまとめる。
+  - speaker: joso1
+    emotion: normal
+    text: じゃあ米光、うまいことやれ。
+    se: don
+  - speaker: yonemitsu
+    emotion: happy
+    text: やります！
+  - speaker: joso2
+    emotion: normal
+    text: 即答か。
+    beat: true
+  - speaker: reimu
+    text: その場でいちばん若かった米光が、初代ぷよぷよの企画監督になります。
+    reading: その ばで いちばん わかかった よねみつが、しょだい ぷよぷよの きかく かんとくに なります。
+  - speaker: reimu
+    text: プログラマーの広野隆行は2023年に、社長をこう振り返ります。現場の創造力を信頼し、任せてくれた。
+    reading: ぷろぐらまーの ひろの たかゆきわ にせん にじゅうさんねんに、しゃちょうお こう ふりかえります。げんばの そうぞうりょくお しんらいし まかせて くれた。
+# ---- 1991年・発売の前（「あえて市場規模の小さい所を狙う」は読売の形のまま。社員に告げた言葉） ----
+- id: ch5_chiisai
+  title: あえて小さい所を
+  background: pu_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  - {who: shain, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: あえて市場規模の小さい所を狙う。
+  - speaker: shain
+    emotion: surprised
+    text: 小さい所、ですか！？
+  - speaker: shain
+    emotion: happy
+    text: 競争の少ない機種なら、機種ごとの順位で1位を取れますね！
+  - speaker: zundamon
+    emotion: happy
+    text: 1位になれば、名前を覚えてもらえる。
+  - speaker: shain
+    emotion: happy
+    text: さすが、社長！
+  - speaker: reimu
+    text: 1991年10月、初代ぷよぷよが出ます。売り方まで周到だった社長は、なぜその権利を手放すのか。
+    reading: せんきゅうひゃく きゅうじゅういちねん じゅうがつ、しょだい ぷよぷよが でます。うりかたまで しゅうとう だった しゃちょうわ、なぜ その けんりお てばなすのか。
+# ---- 1992年・ゲームセンター版と「1000年先も」（セガは一緒に育てた相手。言葉は読売の形のまま） ----
+- id: ch6_1000nen
+  title: ''
+  background: pu_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: shain, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1992年、セガがゲームセンター用のぷよぷよを出します。
+    reading: せんきゅうひゃく きゅうじゅうにねん、せがが げーむせんたーようの ぷよぷよお だします。
+  - speaker: shain
+    emotion: happy
+    text: セガさんの頼みで、相手から来る攻撃の予告を画面の上に出しました！
+  - speaker: shain
+    emotion: happy
+    text: 社長、みんな夜中まで帰らずに遊んでます！
+  - speaker: zundamon
+    emotion: happy
+    text: 1000年先も楽しめるゲームができた。
+    se: jaan
+    telops:
+    - {text: "仁井谷「1000年先も楽しめるゲームができた」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: shain
+    emotion: surprised
+    text: 1000年、ですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 1000年だ。
+  - speaker: shain
+    emotion: surprised
+    text: ……大きく出ましたね。
+  - speaker: reimu
+    text: 1000年先と言ってから5年あまり。コンパイルは、裁判所に和議を申し立てます。
+    reading: せんねんさきと いってから ごねん あまり。こんぱいるわ、さいばんしょに わぎお もうしたてます。
+# ---- 1994年・おもちゃショーの張り紙（張り紙の前に立たせない） ----
+- id: card1994
+  title: ''
+  background: pu_card_1994
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 1994年。2作目のぷよぷよ通が出ます。
+    reading: せんきゅうひゃく きゅうじゅうよねん。にさくめの ぷよぷよつうが でます。
+- id: ch7_booth
+  title: 犬のように働く人
+  background: pu_booth
+  stage:
+  - {who: shain, x: 0.14, flip: true, emotion: surprised}
+  - {who: kyaku, x: 0.88, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: おもちゃショーの狭いブースに、1000人も来てます！
+  - speaker: shain
+    emotion: surprised
+    text: 人が多すぎて、社員だけじゃ回りません！
+  - speaker: kyaku
+    emotion: surprised
+    text: 張り紙だ。犬のように働いてくれる人を、募集しています……？
+    beat: true
+  - speaker: kyaku
+    emotion: happy
+    text: 犬は無理だけど、手伝います！
+  - speaker: shain
+    emotion: happy
+    text: 本当に、来てくれた！ 張り紙、もう1枚書きます！
+# ---- 1994年・ぷよまん（断られる段階を上げる。まんじゅうは箱だけ。背景差し替え：店先 → 工場） ----
+- id: ch7_manju1
+  title: ぷよまんの列
+  background: pu_manjuya
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: wagashi1, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ゲームのキャラクターの形で、まんじゅうを作りませんか！
+  - speaker: wagashi1
+    emotion: normal
+    text: キャラクターの、まんじゅう……？
+  - speaker: wagashi1
+    emotion: normal
+    text: うちは、ずっと同じ形で売ってきたけえ。
+- id: ch7_manju2
+  title: ''
+  background: pu_manjuya
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: wagashi2, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: うちと組んで、まんじゅうを！
+  - speaker: wagashi2
+    emotion: normal
+    text: うちは、もみじで。
+    beat: true
+- id: ch7_manju2b
+  title: ''
+  background: pu_manjuya
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: wagashi3, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: キャラクターの形の、まんじゅうを！
+  - speaker: wagashi3
+    emotion: normal
+    text: もみじの形なら、作れますけえ。
+  - speaker: zundamon
+    emotion: surprised
+    text: それじゃ、もみじ饅頭なのだ！
+    se: tenten
+- id: ch7_manju3
+  title: ''
+  background: pu_manjuya
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ……どこも、首を振る。
+  - speaker: zundamon
+    emotion: angry
+    text: なら、自分たちで作るのだ！
+    background: pu_manju_kojo
+- id: ch7_manju4
+  title: ''
+  background: pu_manju_kojo
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: shain2, x: 0.88, emotion: surprised}
+  cuts:
+  - speaker: shain2
+    emotion: surprised
+    text: 店は直営、工場も自前ですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 伝わらないなら、自分でやる。
+  - speaker: shain2
+    emotion: surprised
+    text: 社長、思い切りましたね……。
+  - speaker: reimu
+    text: 1994年12月、ぷよまんを広島県大野町で売り出すと約300人が並びます。
+    reading: せんきゅうひゃく きゅうじゅうよねん じゅうにがつ、ぷよまんお ひろしまけん おおのちょうで うりだすと やく さんびゃくにんが ならびます。
+# ---- 1996年・大会に1万8000人（涙は本人が語った大会の涙。1000人の大会とは言い分ける） ----
+- id: card1996
+  title: ''
+  background: pu_card_1996
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 1996年、千葉の大きな展示場。ぷよぷよの大会に、1万8000人が集まります。
+    reading: せんきゅうひゃく きゅうじゅうろくねん、ちばの おおきな てんじじょう。ぷよぷよの たいかいに、いちまん はっせんにんが あつまります。
+- id: ch8_taikai
+  title: 1万8000人の大会
+  background: pu_kaijo
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: shain, x: 0.62, emotion: surprised}
+  - {who: kyaku, x: 0.88, emotion: surprised}
+  cuts:
+  - speaker: kyaku
+    emotion: surprised
+    text: うしろの席まで、ぎっしりだ！
+  - speaker: shain
+    emotion: surprised
+    text: 社長、入場の上限を決めてませんでした！
+  - speaker: zundamon
+    emotion: surprised
+    text: まだ、入ってくるのか！？
+  - speaker: kyaku
+    emotion: happy
+    text: 通路まで、人だらけだ！
+  - speaker: shain
+    emotion: happy
+    text: 社長、壇上へお願いします！
+  - speaker: zundamon
+    emotion: happy
+    text: ……行ってくる。
+  - speaker: reimu
+    text: 大会で客席と声を合わせた日のことを、仁井谷は2016年にこう話しています。
+    reading: たいかいで きゃくせきと こえお あわせた ひの ことお、にいたにわ にせん じゅうろくねんに こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: みんなが声を合わせているときは、一体感が嬉しくて涙を流してましたね。
+  - speaker: reimu
+    text: 翌年の暮れ。この会社は、社員のボーナスが払えなくなります。
+    reading: よくねんの くれ。この かいしゃわ、しゃいんの ぼーなすが はらえなく なります。
+# ---- 1995〜1997年・カラオケの入社試験と3か月で1本（記者のまとめは台詞にしない。3か月は本人の言葉） ----
+- id: ch9_mensetsu
+  title: カラオケの入社試験
+  background: pu_mensetsu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  - {who: shinjin, x: 0.54, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 入社試験に、カラオケですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 選曲で、人が分かる。
+  - speaker: shinjin
+    emotion: happy
+    text: では、選んだ1曲を歌います！
+  - speaker: zundamon
+    emotion: happy
+    text: その選曲、採用なのだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: まだ[1小節|イッショウセツ]も、歌ってません！
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: happy
+    text: 入ったら、3か月で新作ゲームを1本だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 3か月で、1本！？
+  - speaker: shinjin
+    emotion: normal
+    text: ……同期は、何人いるんですか。
+  - speaker: zundamon
+    emotion: happy
+    text: 今年は、130人だ。
+- id: ch9_mensetsu2
+  title: ''
+  background: pu_mensetsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: shinjin2, x: 0.54, emotion: happy}
+  cuts:
+  - speaker: shinjin2
+    emotion: happy
+    text: 次の者です！ 1曲、歌い切りました！
+  - speaker: zundamon
+    emotion: happy
+    text: ……採用なのだ。
+    beat: true
+# ---- 1995〜1997年・手の広げ方（1行ずつ。ビジネスソフトの売る道は本人の敗因の言葉の範囲。人の増やし方は2016年の本人の振り返り） ----
+- id: ch9b_hirogeru
+  title: 広がる手
+  background: pu_shachoshitsu_e
+  stage:
+  - {who: zundamon, x: 0.46, flip: true, tag: 仁井谷, emotion: happy}
+  - {who: yakuin, x: 0.88, emotion: happy}
+  cuts:
+  - speaker: yakuin
+    emotion: happy
+    text: 社長、オートバイのレースのチームが走り出しました！
+  - speaker: zundamon
+    emotion: happy
+    text: 次は、韓国に子会社だ。
+  - speaker: yakuin
+    emotion: thinking
+    text: 2作目は、1作目ほど売れていませんが……。
+  - speaker: zundamon
+    emotion: normal
+    text: だから、次の手を打つ。
+  - speaker: yakuin
+    emotion: thinking
+    text: 手が、また1つ増えますね。
+  - speaker: yakuin
+    emotion: normal
+    text: 社内連絡のソフトも、商品にして売るんですよね。
+  - speaker: zundamon
+    emotion: happy
+    text: 毎日使ってる物だ。売れるぞ。
+  - speaker: yakuin
+    emotion: normal
+    text: ……会社に売る道は、あるんですか？
+  - speaker: zundamon
+    emotion: normal
+    text: ……これからなのだ。
+    beat: true
+  - speaker: reimu
+    text: 人の増やし方を、仁井谷は2016年にこう振り返っています。
+    reading: ひとの ふやしかたお、にいたにわ にせん じゅうろくねんに こう ふりかえって います。
+  - speaker: zundamon
+    emotion: sad
+    text: 人員拡大は年率で10%以内に抑えておけばよかったと今なら思いますが、
+  - speaker: zundamon
+    emotion: sad
+    text: 当時は一気に30%以上増やしてしまった。
+# ---- 1997年11〜12月・「返せ、返せ」（全体の45〜55%。銀行員に合唱させない。本人の言葉は2016年の振り返りとして。拓銀と山一は1行） ----
+- id: card1997
+  title: ''
+  background: pu_card_1997
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 1997年11月。北海道拓殖銀行と山一證券が、続けて経営破綻します。
+    reading: せんきゅうひゃく きゅうじゅうななねん じゅういちがつ。ほっかいどう たくしょく ぎんこうと やまいち しょうけんが、つづけて けいえい はたん します。
+- id: ch10_kaese
+  title: 返せ、返せ
+  background: pu_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  - {who: ginko1, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: ginko1
+    emotion: normal
+    text: 社長。……ご融資の件ですが。
+  - speaker: zundamon
+    emotion: happy
+    text: 来年も、よろしくお願いします。
+  - speaker: ginko1
+    emotion: sad
+    text: いえ。期日どおりに、お返しいただけますか。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……え。
+- id: ch10_kaese2
+  title: ''
+  background: pu_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 仁井谷, emotion: surprised}
+  - {who: ginko1, x: 0.7, scale: 0.8, emotion: sad}
+  - {who: ginko2, x: 0.81, scale: 0.8, emotion: sad}
+  - {who: ginko3, x: 0.92, scale: 0.8, emotion: sad}
+  cuts:
+  - speaker: ginko2
+    emotion: sad
+    text: ……うちも、ご融資の件で。
+  - speaker: ginko3
+    emotion: sad
+    text: うちも、同じ件で。
+    background: pu_shachoshitsu_shorui
+  - speaker: zundamon
+    emotion: sad
+    text: 借りるときと同じで、一斉なのか……。
+    se: gaan
+  - speaker: ginko1
+    emotion: sad
+    text: ……申し訳ありません。
+- id: ch10_furikaeri
+  title: ''
+  background: pu_shachoshitsu_shorui
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 仁井谷は2016年に、目安の計算でこう振り返ります。
+    reading: にいたにわ にせん じゅうろくねんに、めやすの けいさんで こう ふりかえります。
+  - speaker: zundamon
+    emotion: sad
+    text: いちどに[1行|いっこう]2億円として60億円。
+  - speaker: zundamon
+    emotion: sad
+    text: それが、[『返せ、返せ』|かえせかえせ]の大合唱で、
+  - speaker: zundamon
+    emotion: sad
+    text: 一気に資金ショートに追い込まれてしまったのです。
+- id: ch10_keiri
+  title: ''
+  background: pu_shachoshitsu_shorui
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  - {who: keiri, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: keiri
+    emotion: sad
+    text: 社長。12月のボーナスの分が、足りません。
+  - speaker: zundamon
+    emotion: sad
+    text: ……足りない。
+  - speaker: keiri
+    emotion: sad
+    text: 貸してくれる銀行も、もうありません。
+  - speaker: zundamon
+    emotion: sad
+    text: ……セガさんに、頼んでみる。
+# ---- 1997年12月〜1998年2月・電話と10億円（冒頭の本編版。読売の出どころはここで1回だけ言う。条件は電話の「その後」、「急場をしのげればいい」は2月に決めたときの考え。セガの声は冷たくしない） ----
+- id: ch11_denwa
+  title: 仲間なので支えます
+  background: pu_shachoshitsu_yoru
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  - {who: sega, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: ここからは、2023年の読売新聞の連載に書かれたやりとりです。
+    reading: ここからわ、にせん にじゅうさんねんの よみうり しんぶんの れんさいに かかれた やりとりです。
+  - speaker: reimu
+    text: 1997年12月。仁井谷は、セガに電話をかけます。
+    reading: せんきゅうひゃく きゅうじゅうななねん じゅうにがつ。にいたにわ、せがに でんわお かけます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……[何とか|なんとか]運転資金を、貸してほしい。
+  - speaker: sega
+    emotion: normal
+    text: 仲間なので、支えます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ありがとうございます。
+  - speaker: reimu
+    text: その後、セガからは条件が出されます。
+    reading: そのご、せがからわ じょうけんが だされます。
+  - speaker: sega
+    emotion: normal
+    text: ぷよぷよの権利と引き換えなら、[10億円|ジュウオクエン]出します。
+    telops:
+    - {text: "権利と引き換えに10億円 買い戻せる約束", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: sega
+    emotion: normal
+    text: 権利は、買い戻せます。
+  - speaker: zundamon
+    emotion: normal
+    text: ……買い戻せる。
+  - speaker: reimu
+    text: 1998年2月。このとき仁井谷は、こう考えます。
+    reading: せんきゅうひゃく きゅうじゅうはちねん にがつ。この とき にいたにわ、こう かんがえます。
+  - speaker: zundamon
+    emotion: normal
+    text: '[急場|きゅうば]をしのげればいい。'
+  - speaker: reimu
+    text: 深く考えずに、ぷよぷよの知的財産権を手放すと決めます。
+    reading: ふかく かんがえずに、ぷよぷよの ちてき ざいさんけんお てばなすと きめます。
+# ---- 1998年2月・ボーナス（明るく。社員を悪く見せない） ----
+- id: ch11_bonus
+  title: ''
+  background: pu_shachoshitsu
+  bgm: honwaka_puppu
+  stage:
+  - {who: shain, x: 0.14, flip: true, emotion: happy}
+  - {who: shain2, x: 0.88, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: ボーナス、出ました！
+    se: levelup
+  - speaker: shain2
+    emotion: happy
+    text: がんばったかいがありました！
+  - speaker: reimu
+    text: 10億円の大半は、社員へのボーナスで消えました。
+    reading: じゅうおくえんの たいはんわ、しゃいんえの ぼーなすで きえました。
+- id: ch11_tegata
+  title: ''
+  background: pu_shachoshitsu
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  - {who: keiri, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: keiri
+    emotion: sad
+    text: 2億円の[手形|てがた]の支払い日が、目の前です。
+  - speaker: zundamon
+    emotion: sad
+    text: ……[10億円|ジュウオクエン]は、ほとんど残ってないのだ。
+# ---- 1998年3月・和議と会見（SE・ボケなし。記者の問いは短い1つ、答えは広報。本人の言葉は1つだけ、語尾をいじらない。壁の絵が外れた跡を前後に） ----
+- id: card1998
+  title: ''
+  background: pu_card_1998
+  cuts:
+  - speaker: reimu
+    text: 1998年3月18日、広島。
+    reading: せんきゅうひゃく きゅうじゅうはちねん さんがつ じゅうはちにち、ひろしま。
+- id: ch12_wagi
+  title: 急ぎすぎた先行投資
+  background: pu_shachoshitsu_e
+  stage:
+  - {who: zundamon, x: 0.48, flip: true, tag: 仁井谷, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ……。
+  - speaker: reimu
+    text: コンパイルは広島地方裁判所に、負債約75億円で和議を申し立てます。
+    reading: こんぱいるわ ひろしま ちほう さいばんしょに、ふさい やく ななじゅうごおくえんで わぎお もうしたてます。
+    background: pu_shachoshitsu_kara
+    telops:
+    - {text: "負債 約75億円で和議", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 会社を残したまま、借金を減らしてもらう約束を裁判所で決める手続き。事実上の倒産でした。
+    reading: かいしゃお のこした まま、しゃっきんお へらして もらう やくそくお さいばんしょで きめる てつづき。じじつじょうの とうさんでした。
+- id: ch12_kaiken
+  title: ''
+  background: pu_kaiken
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  - {who: kisha, x: 0.62, emotion: normal}
+  - {who: koho, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 同じ月、広島市で記者会見に臨みます。
+    reading: おなじ つき、ひろしましで きしゃかいけんに のぞみます。
+  - speaker: kisha
+    emotion: normal
+    text: 負債の総額は。
+  - speaker: koho
+    emotion: sad
+    text: 約75億円です。
+  - speaker: reimu
+    text: 仁井谷は、声を振り絞ります。
+    reading: にいたにわ、こえお ふりしぼります。
+  - speaker: zundamon
+    emotion: sad
+    text: ……[先行投資|せんこうとうし]を急ぎすぎてしまった。
+    pause_after: 1.5
+    telops:
+    - {text: "仁井谷「先行投資を急ぎすぎてしまった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+- id: ch12_after
+  title: ''
+  background: pu_shachoshitsu_kara
+  stage:
+  - {who: jinji, x: 0.88, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 新卒121人の内定を取り消し、社員400人を2か月で200人にする方針です。
+    reading: しんそつ ひゃくにじゅういちにんの ないていお とりけし、しゃいん よんひゃくにんお にかげつで にひゃくにんに する ほうしんです。
+  - speaker: jinji
+    emotion: sad
+    text: ……取り消しの通知は、121通です。
+  - speaker: reimu
+    text: 仁井谷が上場に備えて蓄えた数億円も和議ではき出し、手元に残ったのは数百万円でした。
+    reading: にいたにが じょうじょうに そなえて たくわえた すうおくえんも わぎで はきだし、てもとに のこったのわ すうひゃくまんえんでした。
+# ---- 1998年12月〜2003年・許可の終わり（ナレ中心で1分以内。セガの許可で作り続けた。本人の自己破産の年は言わない） ----
+- id: ch13_kyoka
+  title: 許可の終わり
+  background: pu_kaihatsu
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  - {who: shain, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 社長。12月の債権者の集まりで、[和議|わぎ]が認められました。
+  - speaker: zundamon
+    emotion: sad
+    text: ……会社は、残るか。
+  - speaker: shain
+    emotion: normal
+    text: セガさんの許可で、次のぷよぷよも作れます。
+  - speaker: zundamon
+    emotion: normal
+    text: ……作るぞ。
+  - speaker: reimu
+    text: 和議のあとも、セガの許可で新作を作り続けます。ただ権利を買い戻すお金は、ありませんでした。
+    reading: わぎの あとも、せがの きょかで しんさくお つくりつづけます。ただ けんりお かいもどす おかねわ、ありませんでした。
+- id: card2002
+  title: ''
+  background: pu_card_2002
+  cuts:
+  - speaker: reimu
+    text: 2002年8月。
+    reading: にせん にねん はちがつ。
+- id: ch13_tsuchi
+  title: ''
+  background: pu_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  - {who: shain, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。ぷよぷよを使う許可が、8月の終わりで取り消されます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……そうか。
+- id: ch13_kara
+  title: ''
+  background: pu_jimusho_kara
+  cuts:
+  - speaker: reimu
+    text: その年の12月に会社は解散し、翌年に負債約54億円で破産します。
+    reading: その としの じゅうにがつに かいしゃわ かいさんし、よくねんに ふさい やく ごじゅうよんおくえんで はさん します。
+  - speaker: reimu
+    text: 仁井谷も、のちに自己破産します。報じられた本人の借金は、約90億円でした。
+    reading: にいたにも、のちに じこ はさん します。ほうじられた ほんにんの しゃっきんわ、やく きゅうじゅうおくえんでした。
+# ---- 2003〜2016年・蟄居と20年の問い（暮らしは読売の1行まで。言葉は2016年の本人のインタビューの形のまま。背景差し替え：夜 → 朝） ----
+- id: ch14_keibi
+  title: 蟄居の気持ち
+  background: pu_keibi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 首都圏のアパートを移りながら、夜の工事現場の警備員や専門学校の講師をして食いつなぎます。
+    reading: しゅとけんの あぱーとお うつりながら、よるの こうじげんばの けいびいんや せんもん がっこうの こうしお して くいつなぎます。
+  - speaker: zundamon
+    emotion: normal
+    text: こちらへ、どうぞ。
+  - speaker: zundamon
+    emotion: normal
+    text: 足元、気をつけてください。
+  - speaker: reimu
+    text: 仕事を継いだ別の会社も無くなったあとの気持ちを、仁井谷は2016年にこう話しています。
+    reading: しごとお ついだ べつの かいしゃも なくなった あとの きもちお、にいたにわ にせん じゅうろくねんに こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 江戸時代で言うところの[蟄居|ちっきょ]の気持ちでしたね。
+    telops:
+    - {text: "仁井谷「蟄居の気持ちでしたね」", size: md, position: top-right, color: "#8AD0FF", stroke: "#0A1A2A", glow: "#2A6ACC", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 自分で自分を幽閉する感じで、ゲーム関係者の集まりにも出席しなかった。
+    background: pu_keibi_asa
+  - speaker: zundamon
+    emotion: sad
+    text: 世間の冷たい目もありましたね。
+  - speaker: zundamon
+    emotion: sad
+    text: 失敗したお前が何をしてるんだ、という。
+- id: ch14_kyoshitsu
+  title: ''
+  background: pu_kyoshitsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1作目は渋谷の女子高生も遊んだのに2作目は違った、と本人は言います。その原因を問われて、こう答えます。
+    reading: いっさくめわ しぶやの じょしこうせいも あそんだのに にさくめわ ちがったと、ほんにんわ いいます。その げんいんお とわれて、こう こたえます。
+  - speaker: zundamon
+    emotion: normal
+    text: 考え続けて分かったのが、ぷよぷよの[連鎖|れんさ]は難しいということです。
+  - speaker: reimu
+    text: 2015年、テレビの取材を受けます。本人は2016年に、こう話しています。
+    reading: にせん じゅうごねん、てれびの しゅざいお うけます。ほんにんわ にせん じゅうろくねんに、こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: よくワラをも掴む心境と言いますが、あの[TV|テレビ]出演が僕にとってのワラだった。
+# ---- 2016年・コンパイル○とにょきにょき（言葉は2016年の取材のもの）→ 2025年の新作の発表（発売日・延期は言わない） ----
+- id: card2016
+  title: ''
+  background: pu_card_2016
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 2016年4月。66歳の仁井谷は、コンパイル○という会社を作ります。
+    reading: にせん じゅうろくねん しがつ。ろくじゅうろくさいの にいたにわ、こんぱいるまると いう かいしゃお つくります。
+- id: ch15_shisaku
+  title: 20年の問い
+  background: pu_shisaku
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 11月、新しい落ちものパズルにょきにょきを出します。本人はその年、こう話しています。
+    reading: じゅういちがつ、あたらしい おちもの ぱずる にょきにょきお だします。ほんにんわ その とし、こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: にょきにょきでは、すでにレベルの違う人が対等に戦えるような仕組みも考えています。
+  - speaker: zundamon
+    emotion: happy
+    text: ぷよぷよのあと、このテーマで20年間悩んできたからこそ作れるものです。
+- id: ch15_2025
+  title: ''
+  background: pu_shinbun
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 仁井谷, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2025年3月、東京の池袋。9年ぶりの新作ダブルタワーの発表会で、当時のぷよぷよをこう語ります。
+    reading: にせん にじゅうごねん さんがつ、とうきょうの いけぶくろ。きゅうねんぶりの しんさく だぶるたわーの はっぴょうかいで、とうじの ぷよぷよお こう かたります。
+  - speaker: zundamon
+    emotion: normal
+    text: ぷよぷよの最大の課題は、上級者になるまでに5年ほどかかること。
+  - speaker: zundamon
+    emotion: normal
+    text: また初心者と上級者が一緒に遊ぶのが難しい。
+# ---- 論争1：ランドで潰れた？（7-1。本人の2つの答えを問いと続きつきで。テーマパークは建っていない（計画の段階）。場所は言わない。7-3はつむぎの1行） ----
+- id: ronso1
+  title: ランドで潰れた？
+  background: pu_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ ぷよぷよの生みの親は、ぷよぷよランドを作ろうとして潰れたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 見出しではそう呼ばれるけど、初代の企画監督は米光[一成|カズナリ]よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに、テーマパークは建っていないの。計画の段階だったわ。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 建ってないのに、潰れたの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人は2016年に、計画は発表していなかったとも話しているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 倒産の最大の要因を聞かれて、本人は2016年にこう答えているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ぷよぷよをテーマにした遊園地、ぷよぷよランドを作ろうと考えたんです。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのためにはたくさんのスタッフが必要になるからと、
+  - speaker: tsumugi
+    emotion: normal
+    text: 大量に新規採用したことで資金ショートを起こしてしまったことですね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 建てる前に、人を増やしすぎたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 1年で130人を雇って、社員は420人になっていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人によれば、1作目は200万本。2作目は100万本しか売れなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 性急な拡大路線に経営判断の失敗があったかと聞かれると、こうも答えているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そうでなく、単なる資金ショートです。
+  - speaker: tsumugi
+    emotion: normal
+    text: ITバブルも崩壊していた時期ですし。
+  - speaker: tsumugi
+    emotion: thinking
+    text: どちらも、同じ2016年の取材よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ITバブルの崩壊は、[和議|わぎ]のあとの話よ。
+  - speaker: zundamon
+    emotion: normal
+    text: ランドは紙の上で、効いたのは人と2作目と銀行……。
+    beat: true
+# ---- 論争2：10億円は安かった？（7-2。頼んだのは仁井谷。買い戻せる約束。2002年までセガの許可で作った。奪った・買いたたいた・騙したと言わない。セガの台所事情は言わない） ----
+- id: ronso2
+  title: 10億円は安かった？
+  background: pu_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 年商70億円の会社の看板が、たった[10億円|ジュウオクエン]なのだ！ セガが安く取り上げたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 頼んだのは、[仁井谷|ニイタニ]のほうよ。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 答えは、仲間なので支えます。条件には、買い戻せますと付いていたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 買い戻せたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: '[和議|わぎ]のあとも2002年8月まで、セガの許可でコンパイルがぷよぷよを作り続けたわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 1992年にゲームセンター版を出して、一緒に育てた相手もセガよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 最初の[下請け|したうけ]の仕事も、セガだったのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 長い付き合いの取引先だったの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: セガは頼まれて、買い戻せる約束でお[金|かね]を出した。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 買い戻すお[金|かね]が、コンパイルに無かったの。
+  - speaker: zundamon
+    emotion: sad
+    text: 約束より先に、お[金|かね]が尽きたのだ……。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、悪いのはセガじゃなかったの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 悪者探しの話じゃないわ。約束の形と、お[金|かね]の順番の話よ。
+  - speaker: zundamon
+    emotion: normal
+    text: 約束の形と、お[金|かね]の順番……。
+    beat: true
+# ---- 本当の注意点（7章の1と3。金融・法律の助言にしない） ----
+- id: chui
+  title: 買い戻せる約束
+  background: pu_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。買い戻せる約束は、買い戻すお[金|かね]があるときだけの約束よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: お[金|かね]が無いときは、戻らないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: コンパイルは、[10億円|ジュウオクエン]の大半をボーナスに使っていたわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 引き換えにしたお[金|かね]を、どこから返すのか。そこが先なの。
+  - speaker: zundamon
+    emotion: sad
+    text: 来月の分を前借りしてたボクと、同じなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 引き換えにする前に、返す道を決めておく。それだけよ。
+  - speaker: zundamon
+    emotion: normal
+    text: 預けた物が大事なほど、返す道が要るのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。累計何本や年商何億円は、何を数えた数かを見ること。
+  - speaker: tsumugi
+    emotion: normal
+    text: 年商70億円は売上で、もうけではないの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売上と、もうけは別……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 負債も[和議|わぎ]のときは75億円、破産のときは54億円よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本人の借金として報じられた90億円も、また別の数よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 借金の数字が、3つもあるのだ！？
+  - speaker: zundamon
+    emotion: thinking
+    text: 時点がちがうと、額もちがうのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: ニュースの数字を見たら、いつの[何|なん]の額かを確かめてね。
+# ---- 現代（2026年11月時点。数字・出来事は2つまで。小学生の名前は言わない。eスポーツはセガが実現した、の言い方。ダブルタワーの発売日は言わない） ----
+- id: card2026
+  title: ''
+  background: pu_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。初代ぷよぷよから、35年がたちました。
+    reading: にせん にじゅうろくねん。しょだい ぷよぷよから、さんじゅうごねんが たちました。
+- id: ima
+  title: ぷよぷよのいま
+  background: pu_esports
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: ぷよぷよは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: いまはセガのシリーズよ。2026年で、35周年を迎えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年4月には、小学生の2人がプロのライセンスを取ったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 小学生が、プロ！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: sad
+    text: ボクより、ずっと強いのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年の[仁井谷|ニイタニ]は、新作についてこう話していたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[e-Sports|イースポーツ]にしていきたいくらいですよ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: こうした展開は、元々ぷよぷよのときに考えていたんですけどね。
+  - speaker: tsumugi
+    emotion: normal
+    text: ぷよぷよで、その形を実現したのはセガよ。
+  - speaker: zundamon
+    emotion: happy
+    text: 1万8000人の大会から、小学生のプロまで……。
+  - speaker: zundamon
+    emotion: happy
+    text: ぷよぷよは、ずっと続いてるのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: '[仁井谷|ニイタニ]さんは、いまどうしてるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年11月時点で76歳の[仁井谷|ニイタニ]は、いまも新しい落ちものパズルを作っているわ。
+# ---- 締め（茶番の「買い戻す」と冒頭の「1000年先も」を回収。本人の言葉は2016年の「クリエイターに引退はないです。」） ----
+- id: shime
+  title: ''
+  background: pu_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ カードを預ける前に、返すお[金|かね]を先に貯めるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: それなら、最初から借りなくていいわね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 1000年先も楽しめると言ったゲームは、35年たったいまも遊ばれているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年の取材で引退を考えなかったかと聞かれて、[仁井谷|ニイタニ]はこう答えているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: クリエイターに引退はないです。
+    telops:
+    - {text: "仁井谷「クリエイターに引退はないです。」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 引退は、ない……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 大事な物を預けてお[金|かね]を借りる前に、返す道を先に決めてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
