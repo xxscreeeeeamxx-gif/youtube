@@ -1,0 +1,1226 @@
+meta:
+  title: 「結果責任は、社長がかぶればいい」トレハロースの林原の社長、銀行ごとに違う決算書で破綻【ずんだもん解説】
+  slug: hayashibara
+  hook_line: 本業は黒字と発表していた林原は、なぜ銀行ごとに違う決算書を見せたのか。
+  summary: 2011年2月2日、トレハロースで知られる岡山の林原。債権者会議の休憩のあと、会社更生法へ移ることが告げられます。社長の林原健は「すべての責任が私にある」と頭を下げました。本業は黒字と発表していた研究の会社は、銀行には約30年、本当と違う決算書を見せていました。研究は社長、お金は弟。2つの銀行が数字を見せ合った日に、何が見えたのか。兄の本、弟の講演、調査委員会の報告を主語を分けて並べ、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 長瀬産業「更生会社株式会社林原等の更生計画認可決定の確定、株式取得（完全子会社化）に関するお知らせ」（2012年1月31日） https://www.nagase.co.jp/assetfiles/tekijikaiji/20120131-2.pdf
+  - 長瀬産業「株式会社林原の更生手続終結に関するお知らせ」（2012年3月26日） https://www.nagase.co.jp/assetfiles/tekijikaiji/20120326.pdf
+  - 長瀬産業・林原「株式会社林原 社名変更のお知らせ【2024年4月1日より】」（2023年8月10日） https://www.nagase.co.jp/assetfiles/uploads/20230810_GCD_01.pdf
+  - 東洋経済オンライン「林原のはがれたメッキ、ウソの上塗り３０年」（2011年2月10日） https://toyokeizai.net/articles/-/5848
+  - 日本経済新聞「『資金流出、前社長ら主導』 林原不正経理で調査委」（2011年8月14日） https://www.nikkei.com/article/DGXNNSE2INK01_T10C11A8000000/
+  - 日本経済新聞「林原元社長ら書類送検 不正に融資枠増額させた疑い」（2012年12月10日） https://www.nikkei.com/article/DGXNASDG1002E_Q2A211C1CC0000/
+  tags:
+  - 林原
+  - 林原健
+  - トレハロース
+  - 会社更生法
+  - 粉飾決算
+  - 中国銀行
+  - 長瀬産業
+  - ナガセヴィータ
+  - 事業再生ADR
+  - 同族経営
+  - 岡山
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  thumbnail:
+    top: 銀行ごとに
+    bottom: 違う決算書
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: bengoshi
+    label: 弁護士
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: ginko
+    label: 銀行員
+    voice: 21
+    pitch: -0.06
+    outfit: suit
+    color: '#3a4f5f'
+  - id: koin
+    label: 工員
+    voice: 13
+    pitch: -0.1
+    outfit: work
+  - id: kenkyuin
+    label: 研究員
+    voice: 11
+    pitch: 0.0
+    outfit: labcoat
+  - id: kisha
+    label: 記者
+    voice: 100
+    pitch: 0.04
+    outfit: suit
+    color: '#6a5a48'
+  - id: hisho
+    label: 秘書
+    voice: 8
+    pitch: 0.08
+    outfit: suit
+    color: '#7a5a6a'
+  - id: shain
+    label: 社員
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: hakkutsu
+    label: 社員
+    voice: 12
+    pitch: 0.02
+    outfit: work
+    color: '#a89a78'
+  - id: tanto
+    label: 担当者
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#454a55'
+  - id: ginko2
+    label: 銀行員
+    voice: 13
+    pitch: 0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: chugin
+    label: 中国銀行
+    voice: 21
+    pitch: 0.02
+    outfit: suit
+    color: '#2f4a5a'
+  - id: sumishin
+    label: 住友信託
+    voice: 100
+    pitch: -0.02
+    outfit: suit
+    color: '#4a3f5a'
+  - id: fukutodori
+    label: 副頭取
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#1e2230'
+  - id: somu
+    label: 総務
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#5a4a3a'
+  - id: shinjin
+    label: 新人
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: todori
+    label: 頭取
+    voice: 13
+    pitch: -0.14
+    outfit: suit
+    color: '#1a1a1e'
+  - id: kanzainin
+    label: 管財人
+    voice: 13
+    pitch: 0.02
+    outfit: suit
+    color: '#2a2a30'
+  - id: senmu
+    label: 元専務
+    voice: 11
+    pitch: -0.06
+    outfit: suit
+    color: '#3e4a5c'
+scenes:
+# ---- 先出し（2011年2月2日・ADRの債権者会議。会議の場所は言わない（「岡山の」は会社に掛ける）。笑いの SE なし） ----
+# 弁護士と銀行員は名前の無いモブ。林原の言葉は日経ビジネスを引いたブログの1言だけで、言い回しを足さない。ファクスと空いた席は本編（ch11_kaigi）で見せる
+- id: co_kaigi
+  title: ''
+  background: hy_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: sad}
+  - {who: bengoshi, x: 0.52, emotion: normal}
+  - {who: ginko, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2011年2月2日。トレハロースで知られる岡山の会社、林原と約30の銀行などの会議です。
+    reading: にせん じゅういちねん にがつ ふつか。とれはろーすで しられる おかやまの かいしゃ、はやしばらと やく さんじゅうの ぎんこう などの かいぎです。
+  - speaker: bengoshi
+    emotion: normal
+    text: 林原は、裁判所に会社更生法を申し立てます。
+  - speaker: ginko
+    emotion: surprised
+    text: 調整は、これからのはずでしょう！
+  - speaker: zundamon
+    emotion: sad
+    text: すべての責任が私にある
+    pause_after: 0.6
+  - speaker: reimu
+    text: この男は、社長の林原健。負債は、林原1社で1322億円でした。
+    reading: この おとこわ、しゃちょうの はやしばら けん。ふさいわ はやしばら いっしゃで せん さんびゃく にじゅうに おくえんでした。
+  - speaker: reimu
+    text: 9年近く前、彼は新聞の取材にこう話していました。『結果責任は、社長がかぶればいいんです。』
+    reading: くねん ちかく まえ、かれわ しんぶんの しゅざいに こう はなして いました。けっか せきにんわ しゃちょうが かぶれば いいんです。
+  - speaker: reimu
+    text: 会社は約30年、銀行に本当と違う決算書を見せていました。
+    reading: かいしゃわ やく さんじゅうねん、ぎんこうに ほんとうと ちがう けっさんしょお みせて いました。
+# ---- 今の部屋（相手ごとに違う点数。回収は締め） ----
+- id: hook
+  title: ''
+  background: hy_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.46, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: テスト、お母さんには80点で友だちには95点って言ったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当は？
+  - speaker: zundamon
+    emotion: normal
+    text: ……40点。
+  - speaker: tsumugi
+    emotion: thinking
+    text: お母さんと友だちが話したら？
+  - speaker: zundamon
+    emotion: sad
+    text: ……話さないのだ。
+    se: tenten
+  - speaker: tsumugi
+    emotion: thinking
+    text: 林原も2010年、2つの銀行が数字を見せ合った日から終わりが始まったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究で知られた会社は、なぜ銀行ごとに違う決算書を作ったのか。
+    telops:
+    - {text: "研究の会社は なぜ銀行ごとに違う決算書を？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: テストと、同じなのだ！？
+# ---- 1961年4月・19歳の社長（30秒以内。父は1行のナレまで。父との対立は使わない） ----
+- id: card1961
+  title: ''
+  background: hy_card_1961
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1961年4月。父の林原一郎の急逝で、慶応大学の学生だった19歳の林原健が社長になります。
+    reading: せんきゅうひゃく ろくじゅういちねん しがつ。ちちの はやしばら いちろうの きゅうせいで、けいおう だいがくの がくせいだった じゅうきゅうさいの はやしばら けんが しゃちょうに なります。
+- id: ch1_kojo
+  title: 19歳の社長
+  background: hy_kojo
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: normal}
+  - {who: koin, x: 0.9, emotion: happy}
+  cuts:
+  - speaker: koin
+    emotion: happy
+    text: 新しい社長、ここが水あめの釜です。
+  - speaker: koin
+    emotion: normal
+    text: 学生さんが社長で、大丈夫ですかね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……僕も、そう思います。
+    beat: true
+  - speaker: reimu
+    text: この19歳が50年後に銀行ごとに違う決算書のことで頭を下げるとは、まだ誰も思っていません。
+    reading: この じゅうきゅうさいが ごじゅうねんごに ぎんこうごとに ちがう けっさんしょの ことで あたまお さげるとわ、まだ だれも おもって いません。
+# ---- 1970〜1994年・研究所（1kg 3〜5万円→100分の1は会社の説明。見つけた研究員は名前を出さない） ----
+- id: ch2_kenkyu
+  title: 100分の1の糖
+  background: hy_kenkyujo
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: normal}
+  - {who: kenkyuin, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 林原は1970年に研究の会社をつくり、1994年には糖のトレハロースの量産を始めます。
+    reading: はやしばらわ せんきゅうひゃく ななじゅうねんに けんきゅうの かいしゃお つくり、せんきゅうひゃく きゅうじゅうよねんにわ とうの とれはろーすの りょうさんお はじめます。
+  - speaker: kenkyuin
+    emotion: happy
+    text: 社長！ 1キロ3万円以上した糖が、100分の1の値段です！
+  - speaker: zundamon
+    emotion: surprised
+    text: 100分の1！？
+    se: bikkuri
+# ---- 2002年5月30日掲載・中国新聞の取材（問いと答えは原文の組み合わせのまま。答えの途中を少し省く） ----
+- id: ch2_shuzai
+  title: ''
+  background: hy_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2002年5月、新聞の取材です。
+    reading: にせん にねん ごがつ、しんぶんの しゅざいです。
+  - speaker: kisha
+    emotion: normal
+    text: 肝心の研究テーマは、どうやって決めているのでしょうか。
+  - speaker: zundamon
+    emotion: normal
+    text: うちの研究テーマは、すべて私の名前で下に伝えている。
+  - speaker: zundamon
+    emotion: normal
+    text: でないと研究者に結果責任がかかりますからね。
+  - speaker: zundamon
+    emotion: happy
+    text: 結果責任は、社長がかぶればいいんです。
+    telops:
+    - {text: "林原「結果責任は、社長がかぶればいいんです」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 社長室（数字は会社の発表。4.7倍は負債1322億円÷売上281億円。株100%・取締役会・会計監査人は兄の本の要旨＋長瀬産業の開示。弟は舞台に出さない） ----
+- id: ch3_shacho
+  title: 研究は社長、お金は弟
+  background: hy_shachoshitsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: normal}
+  - {who: hisho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 破綻直前の2010年10月期。会社の発表では本業のもうけは45億円、残ったのは12億円。
+    reading: はたん ちょくぜんの にせん じゅうねん じゅうがつき。かいしゃの はっぴょうでわ ほんぎょうの もうけわ よんじゅうご おくえん、のこったのわ じゅうに おくえん。
+    telops:
+    - {text: "会社発表　45億円 → 12億円", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 負債は、年商の約4.7倍です。
+    reading: ふさいわ、ねんしょうの やく よんてん ななばいです。
+  - speaker: reimu
+    text: 林原健の本によれば、株は家族で100%。兄弟の意見が合えば、取締役会を開く必要もありません。
+    reading: はやしばら けんの ほんに よれば、かぶわ かぞくで ひゃく ぱーせんと。きょうだいの いけんが あえば、とりしまりやくかいお ひらく ひつようも ありません。
+  - speaker: reimu
+    text: 会計監査人も、置いていませんでした。
+    reading: かいけい かんさにんも、おいて いませんでした。
+  - speaker: hisho
+    emotion: normal
+    text: 社長、銀行の借入のご報告ですが……。
+  - speaker: zundamon
+    emotion: normal
+    text: お[金|かね]のことは、専務に任せてある。
+  - speaker: hisho
+    emotion: thinking
+    text: 数字は、ご覧にならないんですか？
+  - speaker: zundamon
+    emotion: happy
+    text: 私は、研究を見る。
+    beat: true
+  - speaker: reimu
+    text: 経理は、弟で専務の林原靖。兄はのちに本で『私は1日3時間しか出社しない』と書いています。
+    reading: けいりわ、おとうとで せんむの はやしばら やすし。あにわ のちに ほんで わたしわ いちにち さんじかんしか しゅっしゃ しないと かいて います。
+  - speaker: hisho
+    emotion: surprised
+    text: 社長、もうお帰りですか？
+  - speaker: zundamon
+    emotion: happy
+    text: 研究所に、顔を出してくる。
+    beat: true
+  - speaker: hisho
+    emotion: thinking
+    text: もうかってるのに、なんでお[金|かね]が残らないんだろう……。
+# ---- 会計監査人（住友信託の勧めと弟の反対は兄の本の要旨。弟の言い分を必ず並べる。秘書は名前の無いモブ） ----
+- id: ch4_kansa
+  title: 会計監査人は置かない
+  background: hy_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: normal}
+  - {who: hisho, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: hisho
+    emotion: normal
+    text: 社長、住友信託さんから[会計監査人|カイケイカンサニン]を置いてはと勧められました。
+  - speaker: zundamon
+    emotion: normal
+    text: 専務に聞いてみよう。
+  - speaker: reimu
+    text: 兄の本によれば、弟は反対しました。『社長がしたいことができなくなるよ』
+    reading: あにの ほんに よれば、おとうとわ はんたい しました。しゃちょうが したい ことが できなく なるよ。
+  - speaker: reimu
+    text: 弟のほうは、兄の本には事実と違う所があると話しています。
+    reading: おとうとの ほうわ、あにの ほんにわ じじつと ちがう ところが あると はなして います。
+  - speaker: hisho
+    emotion: thinking
+    text: では、誰が外から数字を見るんですか？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……誰だろう。
+    se: manuke
+# ---- 今の部屋（身近な値段：年収500万円の家に2350万円は台帳の例え。4.7倍は台帳の計算） ----
+- id: heya1
+  title: ''
+  background: hy_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 45億円もうけて、残ったのは12億円なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 家計に直すと、年収500万円の家に借金が2350万円あるようなものよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 家が1軒、建っちゃう！
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも数字を見るのは身内だけ。外から止める[人|ひと]がいないの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 本業でもうけても、なぜお[金|かね]が残らなかったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 手がかりは、駅前の広い土地と恐竜よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 恐竜！？
+# ---- 駅前の土地（7割を不動産・3割を研究は東洋経済。博物館の予定は2002年の本人の話。388億円は東京地裁の調査委員の報告） ----
+- id: ch5_ekimae
+  title: 駅前の土地と恐竜
+  background: hy_ekimae
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: happy}
+  - {who: shain, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: もうけの7割は不動産へ、3割は研究へ。林原は、水あめの利益で土地を買い集めました。
+    reading: もうけの ななわりわ ふどうさんえ、さんわりわ けんきゅうえ。はやしばらわ、みずあめの りえきで とちお かいあつめました。
+  - speaker: shain
+    emotion: surprised
+    text: 社長、駅前にこんな広い土地が！
+  - speaker: zundamon
+    emotion: happy
+    text: 土地から入るお[金|かね]で、10年かかる研究を支えるんだ。
+  - speaker: shain
+    emotion: happy
+    text: 土地があれば、銀行も貸してくれますしね。
+  - speaker: zundamon
+    emotion: happy
+    text: そう。研究のお[金|かね]は、それで回る。
+  - speaker: shain
+    emotion: normal
+    text: この土地には、何を建てるんです？
+  - speaker: zundamon
+    emotion: happy
+    text: 博物館だ。恐竜の骨を並べたい。
+  - speaker: shain
+    emotion: thinking
+    text: 恐竜は、どこから？
+  - speaker: zundamon
+    emotion: happy
+    text: ゴビ砂漠から、掘ってくる。
+  - speaker: reimu
+    text: のちに裁判所が選んだ調査委員は、12年で本業の外に388億円が出たと書きます。うち不動産が293億円。
+    reading: のちに さいばんしょが えらんだ ちょうさいいんわ、じゅうにねんで ほんぎょうの そとに さんびゃく はちじゅうはち おくえんが でたと かきます。うち ふどうさんが にひゃく きゅうじゅうさん おくえん。
+# ---- 1993年〜・ゴビ砂漠（骨の形の前に人を立たせない。千円は2002年の本人の言葉。実在の化石は描かない） ----
+- id: ch5_gobi
+  title: ''
+  background: hy_gobi
+  stage:
+  - {who: hakkutsu, x: 0.15, flip: true, emotion: happy}
+  - {who: kenkyuin, x: 0.85, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1993年から、林原はモンゴルのゴビ砂漠で恐竜の化石を掘ります。
+    reading: せんきゅうひゃく きゅうじゅうさんねんから、はやしばらわ もんごるの ごびさばくで きょうりゅうの かせきお ほります。
+  - speaker: hakkutsu
+    emotion: happy
+    text: 骨が出たぞ！ でかい！
+  - speaker: kenkyuin
+    emotion: surprised
+    text: こっちにも！ 掘っても掘っても骨です！
+  - speaker: reimu
+    text: 2002年、本人は取材にこう話しています。『現地では一人雇っても、一カ月で千円ぐらいで済んでいますから』
+    reading: にせん にねん、ほんにんわ しゅざいに こう はなして います。げんちでわ ひとり やとっても いっかげつで せんえん ぐらいで すんで いますから。
+  - speaker: kenkyuin
+    emotion: happy
+    text: 恐竜は、安上がりなんですね！
+  - speaker: hakkutsu
+    emotion: sad
+    text: 恐竜は、な。
+    se: chin
+# ---- 2002年5月の同じ取材（問いと答えは原文の組み合わせのまま。問いの並びは、ゴビ砂漠→メセナ→研究テーマの順で、研究テーマの答えは先に出した） ----
+- id: ch5_mecena
+  title: ''
+  background: hy_shachoshitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ取材では、美術館や恐竜などを支えるメセナについても問われます。
+    reading: おなじ しゅざいでわ、びじゅつかんや きょうりゅう などお ささえる めせなに ついても とわれます。
+  - speaker: kisha
+    emotion: normal
+    text: それでも、この不況下です。メセナに取り組むことに、反対の声はないのですか。
+  - speaker: zundamon
+    emotion: normal
+    text: みなさん勘違いしてもらっては困るが、メセナは慈善事業とは違う。
+  - speaker: zundamon
+    emotion: happy
+    text: 必ず企業にプラス、メセナの側にもプラスじゃないといけない。
+# ---- 1984年10月期〜（調査報告の骨子。誰が作ったかは言わない。主人公はこの場面にいない） ----
+- id: ch6_osetsu
+  title: 銀行ごとに違う決算書
+  background: hy_osetsu
+  bgm: kinakusai
+  stage:
+  - {who: tanto, x: 0.2, flip: true, emotion: normal}
+  - {who: ginko2, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: のちの調査の報告によれば、林原は1984年10月期から銀行向けの決算書を操作していました。
+    reading: のちの ちょうさの ほうこくに よれば、はやしばらわ せんきゅうひゃく はちじゅうよねん じゅうがつきから ぎんこうむけの けっさんしょお そうさ して いました。
+  - speaker: tanto
+    emotion: normal
+    text: 今期の決算書を、お持ちしました。
+  - speaker: ginko2
+    emotion: happy
+    text: 林原さんは、いつも数字が立派ですね。
+  - speaker: tanto
+    emotion: normal
+    text: おかげさまで。
+    beat: true
+- id: ch6_osetsu2
+  title: ''
+  background: hy_osetsu
+  stage:
+  - {who: tanto, x: 0.2, flip: true, emotion: normal}
+  - {who: ginko, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: ginko
+    emotion: normal
+    text: ほかの銀行からの借入は、この額で間違いないですね？
+  - speaker: tanto
+    emotion: normal
+    text: ……はい。
+  - speaker: ginko
+    emotion: happy
+    text: では、今回もお貸ししましょう。
+  - speaker: reimu
+    text: 報告によれば1990年からは売上を架空に計上し、その後は借入の額の表も偽りました。
+    reading: ほうこくに よれば せんきゅうひゃく きゅうじゅうねんからわ うりあげお かくうに けいじょう し、その あとわ かりいれの がくの ひょうも いつわりました。
+# ---- 決算書（表紙は同じ、中の帯だけ違う。人を立たせない。経済誌＝日経ビジネスを引いた記事） ----
+- id: ch6_kessan
+  title: ''
+  background: hy_kessan
+  cuts:
+  - speaker: reimu
+    text: 表紙は、同じ決算書。
+    reading: ひょうしわ、おなじ けっさんしょ。
+  - speaker: reimu
+    text: 中身の違う決算書を銀行ごとに使い分けていた、と経済誌は伝えています。
+    reading: なかみの ちがう けっさんしょお ぎんこうごとに つかいわけて いた、と けいざいしわ つたえて います。
+    background: hy_kessan_chigau
+# ---- 2009年7月27日・テレビの経済番組（番組の名前・セット・司会者は描かない。言葉は番組ページの「社長の金言」） ----
+- id: ch7_studio
+  title: 百社あれば百通り
+  background: hy_studio
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2009年7月。林原は、テレビの経済番組に出ます。
+    reading: にせん きゅうねん しちがつ。はやしばらわ、てれびの けいざい ばんぐみに でます。
+  - speaker: zundamon
+    emotion: happy
+    text: 百社あれば百通りの経営があっていい。
+  - speaker: zundamon
+    emotion: happy
+    text: 基礎研究は成功すればすべて自分のものになる。
+  - speaker: reimu
+    text: この放送の1年半後、林原は会社更生法を申し立てます。
+    reading: この ほうそうの いちねん はんご、はやしばらわ かいしゃ こうせいほうお もうしたてます。
+# ---- 今の部屋（メガバンク3行と中国銀行の融資は東洋経済。ここで「岡山の中国銀行」と言う） ----
+- id: heya2
+  title: ''
+  background: hy_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 違う決算書なのに、銀行はずっと気づかなかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 大きな銀行の3つは破綻の[3〜4年前|さんよねんまえ]から、監査が不透明だと貸す額を減らしていたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 逆に地元岡山の中国銀行は、4年で330億円から447億円に増やしたの。
+    telops:
+    - {text: "中国銀行の融資　4年で330億円 → 447億円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 減らすどころか、増やしたの！？
+  - speaker: tsumugi
+    emotion: thinking
+    text: その中国銀行が、2010年にもう1つの銀行と数字を見せ合うの。
+# ---- 2010年11月中旬・2つの銀行（日経ビジネスを引いた記事と東洋経済。銀行員は名前の無いモブ） ----
+- id: card2010
+  title: ''
+  background: hy_card_2010
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2010年11月。林原から融資を頼まれた中国銀行と住友信託銀行が、互いの貸した額を確かめ合います。
+    reading: にせん じゅうねん じゅういちがつ。はやしばらから ゆうしお たのまれた ちゅうごく ぎんこうと すみとも しんたく ぎんこうが、たがいの かした がくお たしかめあいます。
+- id: ch8_shogo
+  title: 数字が合わない
+  background: hy_osetsu
+  stage:
+  - {who: chugin, x: 0.2, flip: true, emotion: normal}
+  - {who: sumishin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: chugin
+    emotion: normal
+    text: うちの林原さん向けの貸出は、この額です。
+  - speaker: sumishin
+    emotion: thinking
+    text: ……林原さんから聞いていた、そちらの額と違いますね。
+  - speaker: chugin
+    emotion: surprised
+    text: うちが聞いた、そちらの額とも違います！
+    se: gaan
+  - speaker: sumishin
+    emotion: thinking
+    text: 2つの銀行が、それぞれ違う説明を受けていた……？
+  - speaker: chugin
+    emotion: angry
+    text: すぐに、林原さんに確かめます。
+# ---- 翌日・中国銀行の副頭取（副頭取は名前を出さないモブ。本の言葉は「銀行から破綻を聞かされた時」としてナレで） ----
+- id: ch8_fuku
+  title: ''
+  background: hy_osetsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: sad}
+  - {who: fukutodori, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 翌日。林原健は、中国銀行の副頭取を訪ねます。
+    reading: よくじつ。はやしばら けんわ、ちゅうごく ぎんこうの ふくとうどりお たずねます。
+  - speaker: fukutodori
+    emotion: normal
+    text: 2つの銀行で、お聞きしている借入の額が違います。
+  - speaker: fukutodori
+    emotion: angry
+    text: どちらが、本当の数字なんですか。
+  - speaker: zundamon
+    emotion: sad
+    text: ……申し訳ありません。
+    pause_after: 0.6
+  - speaker: reimu
+    text: 経済誌によれば、林原健はここで不正を認めます。明かされたのは、約30年前からの不正な会計でした。
+    reading: けいざいしに よれば、はやしばら けんわ ここで ふせいお みとめます。あかされたのわ、やく さんじゅうねん まえからの ふせいな かいけいでした。
+  - speaker: fukutodori
+    emotion: sad
+    text: 林原さんは、うちのいちばん大きな株主でもあるのに……。
+  - speaker: reimu
+    text: 12月、中国銀行は林原の土地の担保を本登記で固めます。
+    reading: じゅうにがつ、ちゅうごく ぎんこうわ はやしばらの とちの たんぽお ほんとうきで かためます。
+# ---- 今の部屋（問いに戻る。300万円・200万円は台帳の例え。1000億円・42億円は調査報告の骨子＝監査役のコラムが引いた産経の記事） ----
+- id: heya_naze
+  title: ''
+  background: hy_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: surprised}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: surprised
+    text: 2つの銀行が見せ合っただけで、ばれちゃったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: Aさんには借金300万円、Bさんには200万円と言って両方から借りるようなものよ。
+  - speaker: zundamon
+    emotion: thinking
+    text: AさんとBさんが話したら、おしまい……。
+  - speaker: tsumugi
+    emotion: normal
+    text: テストの点と、同じね。
+    se: hammer
+  - speaker: zundamon
+    emotion: angry
+    text: でも、なんで違う数字を見せたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 報告の骨子によれば、粉飾した決算書をもとに借入を約1000億円増やしたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その一部が、土地や42億円分の美術品に回ったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 借りるための、決算書だったの……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして2011年1月、林原は銀行とだけ話し合う道を選ぶの。
+# ---- 2011年1月25〜27日・事業再生ADR（説明は工場の総務が新人に。会社の発表の言葉の範囲） ----
+- id: card2011
+  title: ''
+  background: hy_card_2011
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2011年1月25日。林原が事業再生ADRの利用を申請した、と報じられます。
+    reading: にせん じゅういちねん いちがつ にじゅうごにち。はやしばらが じぎょう さいせい えーでぃーあーるの りようお しんせい した、と ほうじられます。
+- id: ch10_adr
+  title: 事業再生ADR
+  background: hy_kojo
+  stage:
+  - {who: somu, x: 0.1, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.9, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 先輩、新聞にうちの名前が……。ADRって書いてあります。
+  - speaker: shinjin
+    emotion: thinking
+    text: ADRって、[何|なん]ですか？
+  - speaker: somu
+    emotion: normal
+    text: 裁判所を使わずに、銀行とだけ話し合って借金を軽くしてもらう手続きだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: 取引先への支払いは？
+  - speaker: somu
+    emotion: normal
+    text: 取引先には影響はない、と会社は発表してる。
+  - speaker: shinjin
+    emotion: thinking
+    text: でも、不正経理の疑いって記事も……。
+  - speaker: somu
+    emotion: normal
+    text: 会社は、事業自体は堅調だと言ってるがな。
+  - speaker: shinjin
+    emotion: thinking
+    text: メインバンクの中国銀行は、[何|なん]て？
+  - speaker: somu
+    emotion: sad
+    text: 経営の全権を掌握している社長と専務の退任は当然、だそうだ。
+  - speaker: reimu
+    text: 1月27日、社長と専務の退任が発表されます。
+    reading: いちがつ にじゅうしちにち、しゃちょうと せんむの たいにんが はっぴょう されます。
+  - speaker: shinjin
+    emotion: sad
+    text: 社長が、辞めるんですか……。
+# ---- 2011年2月2日・債権者会議（本編。全体の45〜50%。会議の場所は言わない。笑いの SE・ツッコミなし。机のファクスの前に人を立たせない） ----
+- id: ch11_kaigi
+  title: 2月2日
+  background: hy_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2月2日の債権者会議。約30の銀行などを前に、話はまとまりません。
+    reading: にがつ ふつかの さいけんしゃ かいぎ。やく さんじゅうの ぎんこう などお まえに、はなしわ まとまりません。
+  - speaker: reimu
+    text: 休憩で空いた席。そのあいだに、取り下げの書面が銀行の支店へファクスで届いていました。
+    reading: きゅうけいで あいた せき。その あいだに、とりさげの しょめんが ぎんこうの してんえ ふぁくすで とどいて いました。
+    background: hy_kaigi_yasumi
+- id: ch11_saikai
+  title: ''
+  background: hy_kaigi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 林原社長, emotion: sad}
+  - {who: bengoshi, x: 0.52, emotion: normal}
+  - {who: ginko, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: bengoshi
+    emotion: normal
+    text: 銀行の間の調整は、困難と判断しました。
+  - speaker: bengoshi
+    emotion: normal
+    text: 事業再生ADRを取り下げ、会社更生法を申し立てます。
+    se: don
+  - speaker: ginko
+    emotion: surprised
+    text: 調整は、これからのはずでしょう！
+  - speaker: ginko
+    emotion: angry
+    text: ……出来レースか。
+  - speaker: reimu
+    text: 経済誌によれば、林原健は債権者の前で深々と頭を下げました。
+    reading: けいざいしに よれば、はやしばら けんわ さいけんしゃの まえで ふかぶかと あたまお さげました。
+  - speaker: zundamon
+    emotion: sad
+    text: すべての責任が私にある
+    pause_after: 0.6
+    telops:
+    - {text: "林原「すべての責任が私にある」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 2月2日・中国銀行の頭取の会見（頭取は名前を出さない。言葉は日経の報道。引責は問いを作らずナレで） ----
+- id: ch11_todori
+  title: ''
+  background: hy_kaiken
+  stage:
+  - {who: todori, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: この日、林原健と弟の林原靖は取締役を辞めます。同じ日、中国銀行の頭取も会見を開きました。
+    reading: この ひ、はやしばら けんと おとうとの はやしばら やすしわ とりしまりやくお やめます。おなじ ひ、ちゅうごく ぎんこうの とうどりも かいけんお ひらきました。
+  - speaker: todori
+    emotion: normal
+    text: 林原の不正会計はすべての金融機関が見抜けなかった
+  - speaker: reimu
+    text: 引責は全くない、とも話しました。
+    reading: いんせきわ まったく ない、とも はなしました。
+# ---- 本社を去る（日付は言わない。会議の場所が分からないので、2月2日の夜とは言わない。家・家族は描かない） ----
+- id: ch11_yoru
+  title: ''
+  background: hy_honsha_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 林原, emotion: sad}
+  - {who: shain, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 社長を辞めた林原健は、岡山の本社を去ります。
+    reading: しゃちょうお やめた はやしばら けんわ、おかやまの ほんしゃお さります。
+  - speaker: shain
+    emotion: sad
+    text: 社長……。
+  - speaker: zundamon
+    emotion: sad
+    text: ……もう、社長じゃない。
+  - speaker: shain
+    emotion: sad
+    text: 明日も、工場は動くんですよね？
+  - speaker: zundamon
+    emotion: sad
+    text: ……止めないでください。
+# ---- 2011年3月7日・管財人（取引先の代金は申立ての日から全額。会社更生法の説明は過去の回と言い回しを変える） ----
+- id: ch12_kanzai
+  title: 取引先には全額
+  background: hy_shachoshitsu
+  bgm: curious
+  stage:
+  - {who: shain, x: 0.2, flip: true, emotion: thinking}
+  - {who: kanzainin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3月7日、裁判所は更生手続きの開始を決めます。会社を預かるのは、裁判所が選んだ管財人です。
+    reading: さんがつ なのか、さいばんしょわ こうせい てつづきの かいしお きめます。かいしゃお あずかるのわ、さいばんしょが えらんだ かんざいにんです。
+  - speaker: shain
+    emotion: thinking
+    text: 銀行への返済は、どうなるんですか。
+  - speaker: kanzainin
+    emotion: normal
+    text: 更生計画が決まるまで、銀行などへの返済は止まります。
+  - speaker: shain
+    emotion: thinking
+    text: 取引先への支払いも、止まるんですか？
+  - speaker: kanzainin
+    emotion: normal
+    text: いいえ。取引先の代金は、これまでどおり全額払います。
+  - speaker: shain
+    emotion: surprised
+    text: 全額！？
+  - speaker: kanzainin
+    emotion: normal
+    text: 中国銀行も、40億円の運転資金の枠を用意しました。
+  - speaker: kanzainin
+    emotion: normal
+    text: 裁判所の監督のもとで、事業を続けながら借金を整理する。それが会社更生です。
+  - speaker: shain
+    emotion: happy
+    text: お客さまの注文は、止めずに済むんですね。
+# ---- 2011年3月・8月・報告（48億円は日経。外部調査委員会の言葉は「可能性がある」の留保ごと。誰が作ったかは言わない） ----
+- id: ch13_hokoku
+  title: 調査委の報告
+  background: hy_shinbun
+  bgm: kinakusai
+  stage:
+  - {who: shain, x: 0.2, flip: true, emotion: thinking}
+  - {who: shinjin, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: shinjin
+    emotion: surprised
+    text: 前の社長の資産管理会社に、約48億円が流れた疑いですって……。
+  - speaker: reimu
+    text: 3月末、中国銀行は代表権を持つ3人が退くと発表。8月には外部の調査委員会の報告が明らかになります。
+    reading: さんがつまつ、ちゅうごく ぎんこうわ だいひょうけんお もつ さんにんが しりぞくと はっぴょう。はちがつにわ がいぶの ちょうさ いいんかいの ほうこくが あきらかに なります。
+  - speaker: shain
+    emotion: thinking
+    text: 創業家へのお[金|かね]の流れは、前の社長と弟の前専務が主導……。
+  - speaker: shain
+    emotion: thinking
+    text: 特別背任罪が成立する可能性がある、とも書いてある。
+    telops:
+    - {text: "調査委員会「特別背任罪が成立する可能性がある」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shinjin
+    emotion: surprised
+    text: じゃあ、捕まるんですか？
+  - speaker: shain
+    emotion: normal
+    text: 可能性がある、と書いただけだ。罪かどうかを決めるのは裁判所だよ。
+  - speaker: reimu
+    text: 管財人は旧経営陣4人に損害賠償を求める手続きを、裁判所に申し立てていました。
+    reading: かんざいにんわ きゅう けいえいじん よにんに そんがい ばいしょうお もとめる てつづきお、さいばんしょに もうしたてて いました。
+# ---- 2011年8月〜2012年3月・700億円と93%（700億円は出資と融資の合計。93%は更生債権等への弁済率。取引先の代金は別に全額） ----
+- id: ch14_ekimae
+  title: 700億円と93%
+  background: hy_ekimae
+  bgm: hirusagari
+  stage:
+  - {who: shain, x: 0.2, flip: true, emotion: normal}
+  - {who: shinjin, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 同じ8月、大阪の化学品商社の長瀬産業がスポンサーに決まります。
+    reading: おなじ はちがつ、おおさかの かがくひん しょうしゃの ながせ さんぎょうが すぽんさーに きまります。
+  - speaker: shain
+    emotion: normal
+    text: 長瀬産業が、出資と融資で700億円を出すそうだ。
+  - speaker: shinjin
+    emotion: thinking
+    text: この駅前の土地も、売るんですよね。
+  - speaker: shain
+    emotion: normal
+    text: 9月には、イオンモールに約200億円で売る契約をした。持っていた中国銀行の株も売る。
+  - speaker: shinjin
+    emotion: sad
+    text: 前の社長が、博物館を建てたかった土地ですよね……。
+  - speaker: shain
+    emotion: normal
+    text: 大みそかに、裁判所が更生計画を認めた。債権者は書面の投票で、全員が賛成だ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 全員が、ですか。
+  - speaker: shain
+    emotion: normal
+    text: 2月には長瀬産業の100%子会社になる。社名は、林原のままだ。
+  - speaker: reimu
+    text: 2012年3月、更生手続きが終わります。グループ4社の約1400億円の債務に、返す原資は約1300億円。
+    reading: にせん じゅうにねん さんがつ、こうせい てつづきが おわります。ぐるーぷ よんしゃの やく せん よんひゃく おくえんの さいむに、かえす げんしわ やく せん さんびゃく おくえん。
+    background: hy_ekimae_kouji
+  - speaker: shinjin
+    emotion: surprised
+    text: 約93%！？
+    se: bikkuri
+    telops:
+    - {text: "銀行などへ約93%　取引先には全額", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: shain
+    emotion: normal
+    text: 新聞は、更生法では異例の高さだと書いている。
+# ---- 2012年3月26日・岡山市内の会見（管財人の言葉は山陽新聞の原文） ----
+- id: ch15_kaiken
+  title: 事件にならなかった粉飾
+  background: hy_kaiken
+  bgm: serious
+  stage:
+  - {who: kanzainin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 終わった日の岡山市内の会見で、管財人は旧経営陣から約50億円の弁済があったと話します。
+    reading: おわった ひの おかやま しないの かいけんで、かんざいにんわ きゅう けいえいじんから やく ごじゅう おくえんの べんさいが あったと はなします。
+  - speaker: kanzainin
+    emotion: normal
+    text: 現時点では刑事告訴する必要はないと考えている
+# ---- 今の部屋（粉飾は立件されていない。2012年12月の書類送検は「書類送検された」まで。起訴・不起訴とも言わない） ----
+- id: heya3
+  title: ''
+  background: hy_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 30年も違う決算書を見せて、捕まらなかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 粉飾そのものは、事件にならなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年12月、元社長ら4人が別の件で書類送検されたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 別の件！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 林原が持っていない美術館の建物を担保にして、銀行の融資の枠を増やさせた疑いよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 疑いは、詐欺と有印私文書偽造など。でも、起訴されたという報道は見つからないの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 疑いのまま……。
+    beat: true
+# ---- 論争1：銀行に潰された？（弟の言い分は2014年の講演の言葉だけ。「出来レース」と言い切らない） ----
+- id: ronso1
+  title: 銀行に潰された？
+  background: hy_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ 林原は優良企業なのに、銀行に潰されたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう訴えたのは、弟の林原靖よ。
+# ---- 2014年7月24日・弟の講演（講演録の言葉だけ。悪役にしない） ----
+- id: ronso1_koen
+  title: ''
+  background: hy_kaiken
+  bgm: curious
+  stage:
+  - {who: senmu, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2014年7月の講演。弟は、まず粉飾をわびました。
+    reading: にせん じゅうよねん しちがつの こうえん。おとうとわ、まず ふんしょくお わびました。
+  - speaker: senmu
+    emotion: sad
+    text: 林原は20年～30年ほど前に粉飾決算があった。
+  - speaker: senmu
+    emotion: sad
+    text: その点については大変申し訳なく思っており、心からお詫びを申しあげます。
+  - speaker: senmu
+    emotion: normal
+    text: 今回の会社更生法の弁済率の数字にまず注目してほしい。93%です。
+  - speaker: senmu
+    emotion: normal
+    text: 破綻時に一人も従業員を解雇していません。
+  - speaker: senmu
+    emotion: normal
+    text: なぜ、あわてて林原をつぶそうとしたのか。
+- id: ronso1b
+  title: ''
+  background: hy_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 取引先には全額払い、銀行などへの借金も約93%を返した。ここまでは本当よ。
+  - speaker: zundamon
+    emotion: happy
+    text: やっぱり、返せる会社だったのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも93%は、土地と株を売ってスポンサーが700億円を出したからよ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: thinking
+    text: 銀行が仕組んだと言える資料も、見つかっていないわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 約30年、銀行に本当と違う決算書を見せていたのも本当。
+  - speaker: tsumugi
+    emotion: normal
+    text: スポンサーの長瀬産業も、林原では連結決算や会計監査が実施されていなかったと書いたわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 外から見る人が、いなかった……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 返せる会社だったのか、売れば返せる会社だったのか。見方は、分かれているわ。
+# ---- 論争2：社長は知らなかった？（兄の本・弟の言い分・調査委員会の報告を主語つきで並べる。「被害者」とも「黒幕」とも言わない） ----
+- id: ronso2
+  title: 社長は知らなかった？
+  background: hy_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ社長は、研究ばかりで何も知らなかったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 兄はのちの本に、売上高さえ正確には把握していなかったと書いたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 銀行から破綻したと聞かされても、何がなんだか皆目理解できなかったとも。
+  - speaker: tsumugi
+    emotion: normal
+    text: 倒産のあとの調査で弟が報告もなく資金を移していたと知った、とも。
+  - speaker: tsumugi
+    emotion: normal
+    text: 弟のほうは、兄の本には事実と違う所があると言っているの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: そして調査委員会は、創業家へのお[金|かね]の流れを2人が主導したと書いた。
+  - speaker: zundamon
+    emotion: thinking
+    text: 言い分が3つ、ばらばらなのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: どれが本当か、裁判で決着したという報道は見つからないわ。
+    beat: true
+  - speaker: tsumugi
+    emotion: thinking
+    text: ただ2002年の社長は、研究の結果責任は社長がかぶればいいと言っていたわね。
+  - speaker: zundamon
+    emotion: sad
+    text: ……かぶるって、言ってた。
+# ---- 本当の注意点（暮らしの目線。数字は本編と同じ時点・同じ量） ----
+- id: chui
+  title: 本当の注意点
+  background: hy_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。もうかっていることと、借金を返せることは別。
+  - speaker: tsumugi
+    emotion: normal
+    text: 本業で45億円もうけても、残ったのは12億円。負債は年商の約4.7倍だった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家計なら、手取りは多いのにローンが年収の5倍近い家よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 給料が多くても、安心できない……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。相手ごとに違う数字を言うと、2人が話した日に終わる。
+  - speaker: zundamon
+    emotion: sad
+    text: テストの点も……。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 家族のお[金|かね]でも、借りている先ごとに違う話をしないこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。身内だけで決めると、止める[人|ひと]がいない。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 林原は、外から数字を見る[会計監査人|カイケイカンサニン]も置いていなかったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家のお[金|かね]も、1人に任せきりにしないこと。
+  - speaker: zundamon
+    emotion: normal
+    text: 通帳は、2人で見るのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それから取引先がつぶれても、代金が全額払われることもあるわ。林原がそうだった。
+  - speaker: zundamon
+    emotion: surprised
+    text: 全部なくなるとは、限らないんだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ、どこまで払われるかは会社ごとに違うわ。
+# ---- 現代（会社のお知らせと会社のサイトの範囲。2026年の分割・神戸の話は言わない。死因は言わない） ----
+- id: card2026
+  title: ''
+  background: hy_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。あの債権者会議から、15年あまりがたちました。
+    reading: にせん にじゅうろくねん。あの さいけんしゃ かいぎから、じゅうごねん あまりが たちました。
+- id: ima
+  title: 林原のいま
+  background: hy_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: 林原は、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年に長瀬産業の子会社に。2024年4月からは、ナガセヴィータという名前よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 名前から、林原が消えたのだ！
+    se: gaan
+  - speaker: tsumugi
+    emotion: normal
+    text: でも本社はいまも岡山。トレハロースは、2025年に発売から30年を迎えたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年6月には、トレハロースで文化財を守る技術が海外向けの番組で紹介されたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社のサイトの年表は、いまは1999年で終わっているわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2011年は、載ってない……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 恐竜の研究は岡山理科大学へ、チンパンジーの研究は京都大学へ移ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 林原美術館は、いまも岡山で開いているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 駅前の、あの土地は？
+  - speaker: tsumugi
+    emotion: normal
+    text: イオンモールが建ったわ。社長が博物館を建てると話していた土地ね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 林原健は2014年に、[林原家|ハヤシバラケ] 同族経営への警鐘という本を出したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: その秋には地元のテレビ番組で、約3年半ぶりにカメラの前に立ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 林原健は2020年に、78歳で亡くなったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 弟は2014年の講演で、破綻のあとは[兄|あに]と疎遠になったと話していたの。
+# ---- 締め（テストの点と「結果責任」を回収。最後はデュエット） ----
+- id: shime
+  title: ''
+  background: hy_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.46, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ これからは、誰にでも40点って言うのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 言う前に、点のほうを上げなさい。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 結果責任は社長がかぶればいい。そう話した社長は、あの会議で頭を下げたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 研究は、いまも残っているわ。足りなかったのは、外から数字を見る人だった。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家のお[金|かね]も、ときどき2人で見てね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
