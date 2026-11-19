@@ -2834,6 +2834,11 @@ TITLE_BIG = {
     "mitsubishi-masuko": [["三菱自動車"], ["株の34%が"], ["日産へ渡った理由とは？"]],             # A
     "compile-niitani": [["コンパイル"], ["ぷよぷよの会社で"], ["何が起きていた？"]],               # C
     "taishin-ojima": [["ヒューザー"], ["マンション会社の社長が"], ["有罪になった理由とは？"]],     # A
+    # 第14弾（ゲーム・ネット・スマホ）。1行目は会社名かサービス名。
+    "pokemon-tajiri": [["ポケモン"], ["発売までの6年で"], ["何が起きていた？"]],                 # C
+    "mixi-kimura": [["mixi"], ["赤字のSNS会社が"], ["売上9倍の理由とは？"]],                       # A
+    "niconico-kawakami": [["ニコニコ動画"], ["動画サイトの会長が"], ["頭を下げた理由とは？"]],     # A
+    "iwata-ds": [["任天堂"], ["負けていた社長が"], ["過去最高益の理由とは？"]],                   # A
 }
 
 
@@ -2846,7 +2851,8 @@ TITLE_ORDER = ["senba-kitcho", "bigmotor-fusei", "ikinari-steak", "kanebo-funsho
                "livedoor-horie", "daio-igawa", "seibu-tsutsumi", "mtgox-karpeles", "ghosn-nissan", "recruit-ezoe",
                "terumi-club", "comsn-origuchi", "murakami-fund", "harenohi", "elpida-sakamoto", "mitsukoshi-okada",
                "meathope-tanaka", "agura-farm", "daiwa-ny", "lotte-shigemitsu", "shinko-bank", "playstation-kutaragi",
-               "hayashibara", "fujiya-fujii", "mitsubishi-masuko", "compile-niitani", "taishin-ojima"]
+               "hayashibara", "fujiya-fujii", "mitsubishi-masuko", "compile-niitani", "taishin-ojima",
+               "pokemon-tajiri", "mixi-kimura", "niconico-kawakami", "iwata-ds"]
 TITLE_BG = {}          # slug -> 背景名（前のコマの場面が他の回と似ているときに足す）
 
 
@@ -4877,6 +4883,24 @@ SPECS = {
     "taishin-ojima": dict(layout="scene", headline="対策会議の翌日に17戸", head_hi="17戸", panels=[
         dict(scene="ah_iinkai", tint="yellow", tag="2005年 国会", emo="normal", fx="sweat", say="いいかげんにして"),
         dict(scene="ah_houtei", tint="mono", tag="2008年 有罪", emo="sad", fx="gloom"),
+    ]),
+    # 第14弾（2026-12-18〜21。ゲーム・ネット・スマホにしぼった最初の4本）。サムネは題名型（TITLE_BIG）。
+    # panels の前のコマの scene が題名型の背景になる。
+    "pokemon-tajiri": dict(layout="scene", headline="6年かけた交換のゲーム", head_hi="6年", panels=[
+        dict(scene="pk_cable", tint=None, tag="1990年 企画", emo="surprised"),
+        dict(scene="pk_mise_shinagire", tint=None, tag="1996年 品切れ", emo="happy"),
+    ]),
+    "mixi-kimura": dict(layout="scene", headline="赤字のSNSが売上9倍", head_hi="9倍", panels=[
+        dict(scene="mi_board_midori", tint=None, tag="2014年 逆転", emo="surprised"),
+        dict(scene="mi_kaihatsu_4", tint=None, tag="2013年 配信", emo="normal"),
+    ]),
+    "niconico-kawakami": dict(layout="scene", headline="画質で頭を下げた会長", head_hi="画質", panels=[
+        dict(scene="nc_gamen", tint=None, tag="2006年 開始", emo="surprised"),
+        dict(scene="nc_happyokai", tint=None, tag="2017年 発表会", emo="sad"),
+    ]),
+    "iwata-ds": dict(layout="scene", headline="負けていた社長の逆転", head_hi="逆転", panels=[
+        dict(scene="iw_gyoretsu", tint=None, tag="2004年 DS", emo="surprised"),
+        dict(scene="iw_ima", tint=None, tag="2006年 Wii", emo="happy"),
     ]),
     # 第12弾（2026-12-10〜13。方向転換の実験の24〜26本目＋開発秘話の実験1本）
     "lotte-shigemitsu": dict(layout="scene", headline="創業者が代表を外された", head_hi="外された", panels=[
