@@ -1,0 +1,1308 @@
+meta:
+  title: 「もう後がないという時にリリースしたのがモンストです」赤字のmixiの会社、売上9倍に【ずんだもん解説】
+  slug: mixi-kimura
+  hook_line: SNSの王者は、なぜ赤字になり、なぜゲーム1本で生き返ったのか。
+  summary: 2013年10月、SNSのmixiを動かす会社ミクシィの開発室。会社が1年の見通しを赤字に書き換えた9日後、木村弘毅たちは4人で集まって遊ぶゲームを出そうとしていました。招待状と足あとで広がった日本のSNSは、スマホへの移り変わりの中で上場以来初めての赤字に。よその会社のゲームに場所を貸していた会社は、なぜ自分たちで1本を作ったのか。本人と関係者の公の言葉、決算の資料をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 株式会社ミクシィ「2014年度 通期決算説明会」資料（2015年5月） https://pdf.irpocket.com/C2121/H3x0/rK9b/OC0F.pdf
+  - 株式会社MIXI「2026年３月期 決算短信〔日本基準〕(連結)」（2026年5月15日） https://www.nikkei.com/markets/ir/irftp/data/tdnr/tdnetg3/20260515/fxd6u1/140120260514535353.pdf
+  - 日本経済新聞「悩めるミクシィ、笠原社長の誤算と覚悟」（2012年11月22日） https://www.nikkei.com/article/DGXBZO48711810S2A121C1000000/
+  - ITmedia NEWS「ミクシィ、上場来初の赤字転落・4〜6月期 「厳しい状況だが立ち止まらない」と朝倉社長」（2013年8月9日） https://www.itmedia.co.jp/news/articles/1308/09/news110.html
+  - ITmedia NEWS「ミクシィ、通期で赤字転落へ mixiゲーム課金不振で売り上げ大幅減」（2013年10月1日） https://www.itmedia.co.jp/news/articles/1310/01/news088.html
+  - 国民生活センター「子どものオンラインゲーム 無断課金につながるあぶない場面に注意！！」（2024年3月13日） https://www.kokusen.go.jp/news/data/n-20240313_1.html
+  tags:
+  - mixi
+  - モンスト
+  - モンスターストライク
+  - ミクシィ
+  - 木村弘毅
+  - 笠原健治
+  - 朝倉祐介
+  - MIXI
+  - SNS
+  - スマホゲーム
+  - 足あと
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 赤字のSNSの会社が
+    bottom: 売上9倍の理由とは？
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: buka
+    label: 部下
+    voice: 12
+    pitch: 0.02
+    outfit: suit
+    color: '#4a5a7a'
+  - id: kasahara
+    label: 笠原
+    voice: 67
+    pitch: 0.0
+    outfit: suit
+    color: '#2f3440'
+  - id: joshi
+    label: 上司
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: senpai
+    label: 先輩
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#5a4632'
+  - id: sap1
+    label: ゲーム会社
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#3e5c4a'
+  - id: sap2
+    label: ゲーム会社
+    voice: 100
+    pitch: 0.02
+    outfit: suit
+    color: '#6a5a7a'
+  - id: sap3
+    label: ゲーム会社
+    voice: 13
+    pitch: 0.1
+    outfit: suit
+    color: '#5a4a3a'
+  - id: shain1
+    label: 社員
+    voice: 8
+    pitch: 0.1
+    outfit: suit
+    color: '#7a5a6a'
+  - id: shain2
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: riyosha
+    label: 利用者
+    voice: 12
+    pitch: 0.0
+    color: '#6a6a5a'
+  - id: kisha
+    label: 記者
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: kyaku1
+    label: 客
+    voice: 12
+    pitch: 0.0
+  - id: kyaku2
+    label: 客
+    voice: 8
+    pitch: 0.12
+    color: '#9a6a7a'
+  - id: okamoto
+    label: 岡本
+    voice: 13
+    pitch: -0.1
+    outfit: suit
+    color: '#5a3a3a'
+  - id: asakura
+    label: 朝倉
+    voice: 11
+    pitch: 0.03
+    outfit: suit
+    color: '#2a2f3a'
+  - id: team1
+    label: チーム
+    voice: 21
+    pitch: 0.04
+  - id: team2
+    label: チーム
+    voice: 8
+    pitch: 0.08
+    color: '#6a7a9a'
+  - id: gakusei1
+    label: 学生
+    voice: 73
+    pitch: 0.0
+  - id: gakusei2
+    label: 学生
+    voice: 12
+    pitch: 0.04
+    color: '#5a6a8a'
+  - id: gakusei3
+    label: 学生
+    voice: 8
+    pitch: 0.14
+    color: '#8a5a6a'
+  - id: morita
+    label: 森田
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: seito1
+    label: 生徒
+    voice: 73
+    pitch: 0.02
+    outfit: gakuran
+  - id: seito2
+    label: 生徒
+    voice: 11
+    pitch: 0.05
+    outfit: gakuran
+scenes:
+# ---- 先出し（2013年10月・開発室。台帳3章の候補①。見通しは1年の見通しの数字。「落ちました」は岡本の回想の範囲。木村の言葉は2024年の経済界のインタビュー、語尾そのまま。笑いの SE なし。泣く・叫ぶ芝居なし。スマホの画面は見せない） ----
+- id: co_kaihatsu
+  title: ''
+  background: mi_kaihatsu_4
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: normal}
+  - {who: buka, x: 0.86, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2013年10月、ミクシィの開発室。ゲームの会社ではなく、SNSのmixiを動かす会社です。
+    reading: にせん じゅうさんねん じゅうがつ、みくしいの かいはつしつ。げーむの かいしゃでわ なく、えすえぬえすの みくしいお うごかす かいしゃです。
+  - speaker: buka
+    emotion: sad
+    text: ……会社の1年の見通し、[16億円|ジュウロクオクエン]の赤字に書き換えだそうです。
+  - speaker: zundamon
+    emotion: normal
+    text: 10日に出すのだ。4人で集まって遊ぶゲームを。
+  - speaker: buka
+    emotion: surprised
+    text: 配信の日です！ ……サーバーが、落ちました！
+    telops:
+    - {text: "10月10日 配信の日", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ……人が、来すぎてるのか。
+  - speaker: reimu
+    text: この男は、ゲームを企画した木村弘毅。2024年にこう話しています。
+    reading: この おとこわ、げーむお きかく した きむら こうき。にせん にじゅうよねんに こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: もう[後|あと]がないという時にリリースしたのがモンストです。
+  - speaker: reimu
+    text: このゲームで、ミクシィの売上は1年で9倍になります。
+    reading: この げーむで、みくしいの うりあげわ いちねんで きゅうばいに なります。
+# ---- 今の部屋（集まっても全員スマホ。20秒以内。問いに直結） ----
+- id: hook
+  title: ''
+  background: mi_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: みんなで集まったのに、全員スマホ見てるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: ずんだもんも、見てるわよ。
+    se: hammer
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ボクは、見張ってるだけなのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: それを、10年以上前に気にした人がいるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: SNSの王者はなぜ赤字になり、なぜゲーム1本で生き返ったのか。
+    telops:
+    - {text: "SNSの王者は なぜ赤字に？ なぜゲーム1本で？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ゲーム1本で！？
+# ---- 2004年・会社の端っこの3人 → 2006年の上場（主人公はまだいない。笠原の言葉は2026年の振り返りと2006年の上場の会見。出どころを言う。生い立ちは無し） ----
+- id: card2004
+  title: ''
+  background: mi_card_2004
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2004年2月。求人サイトの会社の端っこで、mixiが始まります。
+    reading: にせん よねん にがつ。きゅうじん さいとの かいしゃの はしっこで、みくしいが はじまります。
+- id: ch1_hashikko
+  title: 端っこの3人
+  background: mi_hashikko
+  stage:
+  - {who: kasahara, x: 0.3, flip: true, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 始めたのは、社長の笠原健治。2026年に、こう振り返ります。
+    reading: はじめたのわ、しゃちょうの かさはら けんじ。にせん にじゅうろくねんに、こう ふりかえります。
+  - speaker: kasahara
+    emotion: happy
+    text: 社内に3人ぐらいのチームをつくって、会社の端っこの方で始めたのがmixiです。
+- id: ch1_jojo
+  title: ''
+  background: mi_board_kai
+  stage:
+  - {who: kasahara, x: 0.16, flip: true, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2006年9月、上場の日。買い注文が多すぎて値が付かず、笠原は会見でこう話します。
+    reading: にせん ろくねん くがつ、じょうじょうの ひ。かいちゅうもんが おおすぎて ねが つかず、かさはらわ かいけんで こう はなします。
+  - speaker: kasahara
+    emotion: normal
+    text: ありがたいことだが、同時に責任の重さを実感している。
+# ---- 2008年6月・入社と異動（経歴はナレ1行。家族は出さない。背景差し替え：SNS の明るい島 → 段ボールの島。言葉は2026年の講演） ----
+- id: card2008
+  title: ''
+  background: mi_card_2008
+  cuts:
+  - speaker: reimu
+    text: 2008年6月。32歳の木村弘毅が、ミクシィに入ります。
+    reading: にせん はちねん ろくがつ。さんじゅうにさいの きむら こうきが、みくしいに はいります。
+- id: ch1_sasen
+  title: 左遷されたという思い
+  background: mi_sns_shima
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: happy}
+  - {who: joshi, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: SNSの企画、がんばります！
+  - speaker: joshi
+    emotion: happy
+    text: 携帯のコンテンツの会社から来た人だね。期待してるよ。
+  - speaker: joshi
+    emotion: normal
+    text: '[木村|キムラ]さん。ゲームの部署へ、異動です。'
+  - speaker: zundamon
+    emotion: surprised
+    text: ……入って、まだ3か月ほどですが。
+  - speaker: zundamon
+    emotion: sad
+    text: ……段ボールの島なのだ。
+    background: mi_game_shima
+    se: shobon
+  - speaker: reimu
+    text: 木村は2026年の講演で、このときをこう話しています。
+    reading: きむらわ にせん にじゅうろくねんの こうえんで、この ときお こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: 当時は本流から外された、左遷されたという思いもありました。
+    telops:
+    - {text: "木村「左遷されたという思いもありました」", size: md, position: top-right, color: "#8AD0FF", stroke: "#0A1A2A", glow: "#2A6ACC", anim: up}
+  - speaker: reimu
+    text: 左遷されたと思った隅の島から、なぜ会社を生き返らせるゲームが出たのか。
+    reading: させん されたと おもった すみの しまから、なぜ かいしゃお いきかえらせる げーむが でたのか。
+# ---- 2009〜2011年・場所を貸す商売（材料1。大家さんのたとえ。名刺の山の笑い。言葉は2026年の講演。1人で遊ぶゲームの気付きは2013年初めなので「のちに」。2013年の数字はナレの予告として。家賃は1万分の1にしたたとえ） ----
+- id: ch2_ooya
+  title: 場所を貸す商売
+  background: mi_game_shima
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: normal}
+  - {who: senpai, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2009年。mixiの中で、よその会社のゲームを遊べる仕組みが始まります。
+    reading: にせん きゅうねん。みくしいの なかで、よその かいしゃの げーむお あそべる しくみが はじまります。
+  - speaker: senpai
+    emotion: normal
+    text: '[木村|キムラ]。うちは場所を貸して、売上の一部をもらう。'
+  - speaker: senpai
+    emotion: happy
+    text: 大家さんみたいなものだ。
+  - speaker: zundamon
+    emotion: normal
+    text: ……大家さん、ですか。
+  - speaker: senpai
+    emotion: normal
+    text: 入ってくるのはmixiの広告と、よその会社のゲームの課金の一部。
+  - speaker: zundamon
+    emotion: happy
+    text: 人が来るほど、家賃が入るんですね。
+  - speaker: senpai
+    emotion: happy
+    text: そういうこと。
+  - speaker: senpai
+    emotion: happy
+    text: サンシャイン牧場なんて、3か月足らずで300万人だ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 畑のゲームに、300万人……。
+- id: ch2_meishi1
+  title: ''
+  background: mi_meishi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: normal}
+  - {who: sap1, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: sap1
+    emotion: happy
+    text: はじめまして！ ゲームを作っている会社です！
+  - speaker: sap1
+    emotion: happy
+    text: うちのゲームも、mixiに並べてください！
+- id: ch2_meishi3
+  title: ''
+  background: mi_meishi
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 木村, emotion: normal}
+  - {who: sap1, x: 0.66, scale: 0.8, emotion: happy}
+  - {who: sap2, x: 0.78, scale: 0.8, emotion: happy}
+  - {who: sap3, x: 0.9, scale: 0.8, emotion: happy}
+  cuts:
+  - speaker: sap2
+    emotion: happy
+    text: うちもです！ 名刺、置いていきます！
+  - speaker: sap3
+    emotion: happy
+    text: うちも、うちも！
+  - speaker: zundamon
+    emotion: surprised
+    text: 名刺で、机が見えないのだ！
+    se: manuke
+- id: ch2_suhyaku
+  title: ''
+  background: mi_meishi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: normal}
+  - {who: senpai, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 木村は2026年に、この頃をこう振り返ります。
+    reading: きむらわ にせん にじゅうろくねんに、この ころお こう ふりかえります。
+  - speaker: zundamon
+    emotion: normal
+    text: ゲームプラットフォーム側で数百社、
+  - speaker: zundamon
+    emotion: happy
+    text: 数多くのゲームタイトルのデータを見る経験ができたのは学びになりましたね。
+  - speaker: reimu
+    text: のちに木村は、1人で黙々と遊ぶゲームが多いことが気になり始めます。これが後で効きます。
+    reading: のちに きむらわ ひとりで もくもくと あそぶ げーむが おおい ことが きに なりはじめます。これが あとで ききます。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……お客さんがいなくなったら、大家さんはどうなるんですか。
+  - speaker: senpai
+    emotion: angry
+    text: 家賃が入らない。……縁起でもないこと言うな。
+    beat: true
+  - speaker: reimu
+    text: その日は4年後に来ます。2013年4〜6月、広告と課金を合わせたmixiの売上は2年前のほぼ半分に。
+    reading: その ひわ よねんごに きます。にせん じゅうさんねん しがつから ろくがつ、こうこくと かきんお あわせた みくしいの うりあげわ にねんまえの ほぼ はんぶんに。
+    background: mi_meishi_han
+    telops:
+    - {text: "mixiの売上 2年でほぼ半分", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: reimu
+    text: 家賃で言えば、35万円が18万8000円に。客の減った大家は、ここからどうするのか。
+    reading: やちんで いえば、さんじゅうごまんえんが じゅうはちまん はっせんえんに。きゃくの へった おおやわ、ここから どう するのか。
+# ---- 2011年・つむぎの部屋で「あった、あった」の1つ目（招待状・15歳から・ガラケー・マイミク・足あと。利用者の書き込みは出さない。笠原の反省は2012年の日経の取材） ----
+- id: ch3_ashiato
+  title: 招待状と足あと
+  background: mi_heya
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年5月、mixiの月間の利用者は[1547万人|センゴヒャクヨンジュウナナマンニン]で山を迎えたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: その月に1回でも入った人の数よ。
+  - speaker: zundamon
+    emotion: happy
+    text: mixiって、入るのに招待状が要ったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: そう。2010年3月までは、会員に招かれないと入れなかったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年12月からは、[15歳|ジュウゴサイ]から使えるようになったわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: ガラケーでも見られて、友だちはマイミクと呼んだの。
+  - speaker: zundamon
+    emotion: happy
+    text: マイミクって、みんな何人いたのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年の時点で、平均は24〜25人よ。
+  - speaker: zundamon
+    emotion: sad
+    text: ……ボクより、ずっと多い。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: それに足あと。自分のページを見に来た人が、分かる仕組みよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 見に行ったら、バレるのだ！？
+    se: bikkuri
+  - speaker: tsumugi
+    emotion: happy
+    text: 気まずいけど、見に来てくれたしるしでもあったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年6月、その足あとが訪問者に変わったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 見に来た日時も、出なくなったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 反対のコミュニティに集まった人は、合わせて約26万人よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 26万人……。
+  - speaker: tsumugi
+    emotion: thinking
+    text: '[1547万人|センゴヒャクヨンジュウナナマンニン]の山から、会社はなぜ2年あまりで赤字に落ちたのか。'
+  - speaker: tsumugi
+    emotion: normal
+    text: '[笠原|カサハラ]は翌年の取材で、足あとについてこう反省しているわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: 閲覧者のメリットよりも投稿者のデメリットが大きかった
+# ---- 2012年春〜2013年1月・3つの知らせ（身売り説・コンプガチャ・mixiパーク。3段の笑い。コナミを悪く言わない。木村の言葉は2024年） ----
+- id: ch4_shirase
+  title: 3つの知らせ
+  background: mi_game_shima
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: normal}
+  - {who: shain1, x: 0.56, emotion: normal}
+  - {who: shain2, x: 0.78, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2012年の春から、翌年の初めにかけて。木村の島に、知らせが続けて届きます。
+    reading: にせん じゅうにねんの はるから よくねんの はじめに かけて。きむらの しまに、しらせが つづけて とどきます。
+  - speaker: shain1
+    emotion: normal
+    text: うちの会社、身売りするらしいですよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 身売り！？
+  - speaker: shain2
+    emotion: sad
+    text: 全部そろえると景品が出るコンプガチャ、消費者庁がだめだって。
+  - speaker: zundamon
+    emotion: sad
+    text: 課金の収入が、減る……。
+  - speaker: shain1
+    emotion: sad
+    text: それと、mixiパーク。終わるそうです。
+  - speaker: zundamon
+    emotion: sad
+    text: ……3つ目は、ボクらのアプリなのだ。
+    se: chin
+  - speaker: reimu
+    text: mixiパークは、分身で友だちと過ごす仮想空間のアプリ。木村は2024年にこう振り返ります。
+    reading: みくしい ぱーくわ、ぶんしんで ともだちと すごす かそう くうかんの あぷり。きむらわ にせん にじゅうよねんに こう ふりかえります。
+  - speaker: zundamon
+    emotion: sad
+    text: モンスト以前にmixiパークという、
+  - speaker: zundamon
+    emotion: sad
+    text: ゲームと連動したコミュニケーションサービスも作ったのですが、
+  - speaker: zundamon
+    emotion: sad
+    text: ユーザーの支持が得られず早々に撤退することになりました。
+# ---- 2012年11月・交流会と取材（「なぜ今さら」は日経の地の文なので記者の問いにしない。利用者の不満は名前の無いモブの短い脚色。答えと並びは日経の原文のまま。身売りは問いの原文が無いのでナレで） ----
+- id: ch5_kaijo
+  title: 遅いからといって
+  background: mi_kaijo
+  bgm: kinakusai
+  stage:
+  - {who: kasahara, x: 0.2, flip: true, emotion: sad}
+  - {who: riyosha, x: 0.8, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 2012年11月。ミクシィはライバルのDeNAと手を組み、スマホのゲームの場所を作り直すと発表します。
+    reading: にせん じゅうにねん じゅういちがつ。みくしいわ らいばるの でぃー えぬ えーと てお くみ すまほの げーむの ばしょお つくりなおすと はっぴょう します。
+  - speaker: reimu
+    text: 同じころ笠原は、利用者を第一にと掲げて交流会を開きます。
+    reading: おなじ ころ かさはらわ、りようしゃお だいいちにと かかげて こうりゅうかいお ひらきます。
+  - speaker: riyosha
+    emotion: angry
+    text: 今になって利用者第一って言われても、信じられませんよ。
+- id: ch5_shuzai
+  title: ''
+  background: mi_kaijo_kara
+  stage:
+  - {who: kasahara, x: 0.2, flip: true, emotion: normal}
+  - {who: kisha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: なぜ今さらという声に、笠原は取材でこう答えます。
+    reading: なぜ いまさらと いう こえに、かさはらわ しゅざいで こう こたえます。
+  - speaker: kasahara
+    emotion: normal
+    text: 遅いからといってやらない理由にはならない。
+    telops:
+    - {text: "笠原「遅いからといってやらない理由にはならない」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 身売りのうわさについては、こう話します。
+    reading: みうりの うわさに ついてわ、こう はなします。
+  - speaker: kasahara
+    emotion: normal
+    text: 身売りは完全に否定ですし、現に何も起きていませんよ
+  - speaker: reimu
+    text: 取材の最後に、記者はこう聞きます。
+    reading: しゅざいの さいごに、きしゃわ こう ききます。
+  - speaker: kisha
+    emotion: normal
+    text: 日本のネットの中心でmixiがふたたび輝ける日はくるのか？
+  - speaker: kasahara
+    emotion: happy
+    text: その可能性はぜんぜん、あると思ってますけどね。
+  - speaker: reimu
+    text: その2か月後、木村は新しいゲームの企画を始めます。
+    reading: その にかげつご、きむらわ あたらしい げーむの きかくお はじめます。
+# ---- 2013年の初め・声をかけたのは木村 → 喫茶店のカップルは岡本の話（電ファミ 2026 の言葉のまま）→ 木村のデータの言葉（2026年の講演）。『モンスターハンター』は名前だけ ----
+- id: ch6_koe
+  title: 4人で集まって
+  background: mi_game_shima
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: happy}
+  - {who: okamoto, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2013年の初め。木村は新しいゲームの話を、ミクシィに通っていたゲーム会社の岡本吉起に持ちかけます。
+    reading: にせん じゅうさんねんの はじめ。きむらわ あたらしい げーむの はなしお、みくしいに かよって いた げーむがいしゃの おかもと よしきに もちかけます。
+  - speaker: zundamon
+    emotion: happy
+    text: '[岡本|オカモト]さん。みんなで集まって遊べるゲーム、どうですか。'
+    se: hirameki
+- id: ch6_kissaten
+  title: ''
+  background: mi_kissaten
+  stage:
+  - {who: okamoto, x: 0.16, flip: true, emotion: thinking}
+  - {who: kyaku1, x: 0.56, emotion: normal}
+  - {who: kyaku2, x: 0.78, flip: true, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 岡本は2026年に、喫茶店などで見たカップルをこう振り返っています。
+    reading: おかもとわ にせん にじゅうろくねんに、きっさてん などで みた かっぷるお こう ふりかえって います。
+  - speaker: kyaku2
+    emotion: normal
+    text: ……ねえ、聞いてる？
+  - speaker: kyaku1
+    emotion: normal
+    text: うん。
+  - speaker: kyaku2
+    emotion: angry
+    text: ……画面に、返事してるでしょ。
+    beat: true
+  - speaker: okamoto
+    emotion: sad
+    text: その状況がさみしいと思っていて、
+  - speaker: okamoto
+    emotion: normal
+    text: ふたりで遊べるゲーム、みんなが集まって
+  - speaker: okamoto
+    emotion: happy
+    text: ワイワイガヤガヤと楽しく遊べるゲームを作りたいなと。
+  - speaker: okamoto
+    emotion: happy
+    text: モンスターハンターをベンチマークにして、
+  - speaker: okamoto
+    emotion: happy
+    text: スマホでモンハンを作ろうという感覚で作り始めたのがモンストです。
+- id: ch6_okamoto
+  title: ''
+  background: mi_game_shima
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: happy}
+  - {who: okamoto, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 木村は2026年の講演で、口コミの広がり方をこう話しています。
+    reading: きむらわ にせん にじゅうろくねんの こうえんで、くちこみの ひろがりかたお こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: データによれば、モンハンには
+  - speaker: zundamon
+    emotion: normal
+    text: 1人が2人を呼び、2人が4人を呼ぶという
+  - speaker: zundamon
+    emotion: happy
+    text: カードゲームのようなバイラルな増殖構造があることが分かりました。
+  - speaker: zundamon
+    emotion: happy
+    text: スマホを持ち寄って、4人で遊ぶ。これで、いきましょう。
+# ---- 2013年5〜6月・30歳の社長（朝倉の言葉は日経のインタビューの言葉だけ。社員の前の演説にしない。若いころの経歴は1行。企画は朝倉の就任の前から） ----
+- id: ch7_shacho
+  title: 30歳の社長
+  background: mi_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: normal}
+  - {who: shain1, x: 0.56, emotion: surprised}
+  - {who: shain2, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: shain1
+    emotion: surprised
+    text: 5月の発表、見ました？ 次の社長、30歳ですって！
+  - speaker: zundamon
+    emotion: surprised
+    text: ボクより、7つも下なのだ。
+    se: tenten
+  - speaker: shain2
+    emotion: normal
+    text: 大学のころから経営してた会社を、うちが買ったんですよね。
+  - speaker: reimu
+    text: 朝倉祐介は就任の前、新聞の取材にこう語っています。
+    reading: あさくら ゆうすけわ しゅうにんの まえ、しんぶんの しゅざいに こう かたって います。
+- id: ch7_asakura
+  title: ''
+  background: mi_kaigi
+  stage:
+  - {who: kisha, x: 0.2, flip: true, emotion: normal}
+  - {who: asakura, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: asakura
+    emotion: normal
+    text: 2011年に入社した際、正直言って社内が停滞しているなぁと感じた。
+  - speaker: asakura
+    emotion: normal
+    text: いつまでもSNSだけの会社ではいけないと思っている。
+  - speaker: reimu
+    text: 6月に朝倉が社長に就いたとき、木村たちの企画はもう年の初めから動いていました。
+    reading: ろくがつに あさくらが しゃちょうに ついた とき、きむらたちの きかくわ もう としの はじめから うごいて いました。
+# ---- 2013年春〜秋・開発の机（10人足らずのチームと岡本の会社。3段の笑い：説明・HP・絵。絵は見せない。絵の言葉は岡本の回想の形で出どころを先に。背景差し替え：スマホ1台 → 4台） ----
+- id: ch8_e
+  title: 全員が反対した絵
+  background: mi_kaihatsu_1
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: happy}
+  - {who: team1, x: 0.56, emotion: thinking}
+  - {who: team2, x: 0.78, emotion: thinking}
+  cuts:
+  - speaker: team2
+    emotion: normal
+    text: うちは10人足らず。アクションの所は、[岡本|オカモト]さんの会社と作るんですよね。
+  - speaker: zundamon
+    emotion: happy
+    text: そう。外の会社と組んで、一緒に作る。
+  - speaker: team1
+    emotion: thinking
+    text: '[木村|キムラ]さん。遊び方の説明は、入れないんですか？'
+  - speaker: zundamon
+    emotion: happy
+    text: 入れない。昔のゲームにも、無かっただろ。
+  - speaker: team1
+    emotion: surprised
+    text: 初めての人、迷いませんか！？
+  - speaker: zundamon
+    emotion: happy
+    text: 触って、覚えてもらう。
+  - speaker: team2
+    emotion: thinking
+    text: HPがじわじわ減る仕様は、どうします？
+  - speaker: zundamon
+    emotion: normal
+    text: やめる。じわじわだと、緊張感が無い。
+  - speaker: zundamon
+    emotion: happy
+    text: みんなで遊んで、思わず声が出るくらいがいい。
+  - speaker: zundamon
+    emotion: happy
+    text: スマホを4台並べて、みんなで試そう。
+    background: mi_kaihatsu_4
+  - speaker: team1
+    emotion: surprised
+    text: それで、この絵で出すんですか！？
+  - speaker: team2
+    emotion: sad
+    text: ないですよ、これは。
+  - speaker: reimu
+    text: 岡本は2026年に、こう振り返っています。
+    reading: おかもとわ にせん にじゅうろくねんに、こう ふりかえって います。
+  - speaker: reimu
+    text: 8〜9人のチームの中で、木村さん以外の全員が反対していたんです。
+    reading: はちから きゅうにんの ちーむの なかで、きむらさん いがいの ぜんいんが はんたい して いたんです。
+    telops:
+    - {text: "木村以外の全員が反対", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: たしかに絵はよくない。
+  - speaker: zundamon
+    emotion: happy
+    text: だけどこれだけゲームがおもしろいんだから、この絵でもギリギリ持ち堪える
+  - speaker: team1
+    emotion: surprised
+    text: ギリギリって、自分で言いましたね！
+    se: tsukkomi
+  - speaker: team2
+    emotion: happy
+    text: ……でも、遊ぶと面白いんですよね。
+# ---- 夜の開発室（「ワー」「キャー」。言葉は2015年の ITmedia の取材） ----
+- id: ch8_yoru
+  title: ''
+  background: mi_kaihatsu_yoru
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: happy}
+  - {who: team1, x: 0.56, emotion: happy}
+  - {who: team2, x: 0.78, emotion: happy}
+  cuts:
+  - speaker: team1
+    emotion: happy
+    text: ワー！ 当たった！
+  - speaker: team2
+    emotion: surprised
+    text: キャー！ あと少し！
+  - speaker: team1
+    emotion: happy
+    text: もう1回、もう1回！
+  - speaker: team2
+    emotion: happy
+    text: もう夜ですよ。……あと1回だけ！
+  - speaker: zundamon
+    emotion: happy
+    text: みんな、手が止まらない……。
+  - speaker: reimu
+    text: 木村は2015年に、このころをこう話しています。
+    reading: きむらわ にせん じゅうごねんに、この ころお こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 作ってる自分たちがこれだけ楽しめているならきっとユーザーにも届くと思った
+  - speaker: reimu
+    text: そのころ会社は、上場して初めての赤字に向かっていました。
+    reading: その ころ かいしゃわ、じょうじょう して はじめての あかじに むかって いました。
+# ---- 2013年8月9日・10月1日・上場以来初の赤字（会見を嘲らない。記者の問いは作らない。朝倉の言葉は6章の版、語尾そのまま。木村は出さない） ----
+- id: card2013
+  title: ''
+  background: mi_card_2013
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2013年8月9日。ミクシィの決算の発表です。
+    reading: にせん じゅうさんねん はちがつ ここのか。みくしいの けっさんの はっぴょうです。
+- id: ch9_akaji
+  title: 上場以来初の赤字
+  background: mi_kaikenjo
+  stage:
+  - {who: asakura, x: 0.82, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 4月から6月の3か月で、最終損益は2億5300万円の赤字。上場以来初めての赤字に、朝倉はこう話します。
+    reading: しがつから ろくがつの さんかげつで さいしゅう そんえきわ におく ごせん さんびゃくまんえんの あかじ。じょうじょう いらい はじめての あかじに、あさくらわ こう はなします。
+  - speaker: asakura
+    emotion: sad
+    text: 厳しい状態だが立ち止まることなく、新たな事業成長に向けた取り組みを進めたい
+  - speaker: reimu
+    text: 10月1日。会社は1年の見通しを、売上80億円と営業損益16億円の赤字に書き換えます。
+    reading: じゅうがつ ついたち。かいしゃわ いちねんの みとおしお、うりあげ はちじゅうおくえんと えいぎょう そんえき じゅうろくおくえんの あかじに かきかえます。
+# ---- 2013年10月10日・配信とサーバー（冒頭の回収。岡本の回想。10万人は11月の決算の記事。口コミは2015年の木村の言葉の一部） ----
+- id: ch10_haishin
+  title: 10月10日
+  background: mi_kaihatsu_4
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: thinking}
+  - {who: buka, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 9日後の10月10日。モンスターストライク、略してモンストが出ます。
+    reading: ここのかごの じゅうがつ とおか。もんすたー すとらいく、りゃくして もんすとが でます。
+  - speaker: buka
+    emotion: surprised
+    text: '[木村|キムラ]さん、また落ちました！ サーバーが！'
+  - speaker: zundamon
+    emotion: surprised
+    text: また！？ 今日、何回目だ！？
+    se: gaan
+  - speaker: buka
+    emotion: normal
+    text: 遊んだ人が友だちを誘って、一気に増えてるみたいです。
+  - speaker: zundamon
+    emotion: happy
+    text: 1人が、友だちを呼んでる……。
+  - speaker: reimu
+    text: 岡本は2026年に、こう振り返っています。リリース初期の売上はぜんぜんでした。
+    reading: おかもとわ にせん にじゅうろくねんに、こう ふりかえって います。りりーす しょきの うりあげわ ぜんぜん でした。
+  - speaker: reimu
+    text: 出だしは、iOS版だけで10万人。利用者の増え方を、木村は2015年にこう話しています。
+    reading: でだしわ、あいおーえす ばんだけで じゅうまんにん。りようしゃの ふえかたお、きむらわ にせん じゅうごねんに こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 予想していた中でも大勝利の曲線
+# ---- 2013年の暮れ・駅のホーム（「あった、あった」の2つ目：スマホを持ち寄って4人で。画面は見せない。木村の言葉は2021年。どこで見たかは言わない） ----
+# ---- 2013年11月の終わり・株価のボード（J-CAST：11月27〜29日に3日続けてストップ高。背景差し替え：赤い下げの板 → 緑の板） ----
+- id: ch10_board
+  title: ''
+  background: mi_board
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: thinking}
+  - {who: buka, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 11月の終わり。赤字が続くミクシィの株価が、急に上がり始めます。
+    reading: じゅういちがつの おわり。あかじが つづく みくしいの かぶかが、きゅうに あがりはじめます。
+  - speaker: buka
+    emotion: happy
+    text: '[木村|キムラ]さん、株価が今日もストップ高です！'
+    background: mi_board_midori
+  - speaker: zundamon
+    emotion: surprised
+    text: 今日も！？ 昨日も、そう言ってなかった？
+  - speaker: buka
+    emotion: happy
+    text: 昨日も、おとといもです！
+    beat: true
+- id: ch10_eki0
+  title: ''
+  background: mi_eki
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 年の暮れ。利用者は累計で、100万人を超えます。
+    reading: としの くれ。りようしゃわ るいけいで、ひゃくまんにんお こえます。
+- id: ch10_eki
+  title: ''
+  background: mi_eki
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 木村, emotion: normal}
+  - {who: gakusei1, x: 0.5, scale: 0.8, emotion: happy}
+  - {who: gakusei2, x: 0.64, scale: 0.8, flip: true, emotion: happy}
+  - {who: gakusei3, x: 0.78, scale: 0.8, emotion: happy}
+  cuts:
+  - speaker: gakusei1
+    emotion: happy
+    text: スマホ、持ってきた？ こっち集まって！
+  - speaker: gakusei2
+    emotion: surprised
+    text: ワー！ 今の、当たった！？
+  - speaker: gakusei3
+    emotion: happy
+    text: キャー！ あと1人、呼ぼうぜ！
+  - speaker: zundamon
+    emotion: happy
+    text: ……4人目を、呼んでる。
+- id: ch10_eki2
+  title: ''
+  background: mi_eki
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 木村は2021年に、こう話しています。
+    reading: きむらわ にせん にじゅういちねんに、こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 狙いどおり、多くのユーザーが友人や家族と楽しくプレイしている姿を
+  - speaker: zundamon
+    emotion: happy
+    text: 見たときは、とても嬉しかったです。
+# ---- 2014年2月13日・本社での決算説明会（朝倉の言葉は原文。記者の問いは作らない。木村は会場の後ろで台詞なし） ----
+- id: card2014
+  title: ''
+  background: mi_card_2014
+  bgm: honwaka_puppu
+  cuts:
+  - speaker: reimu
+    text: 2014年2月13日。本社での決算の説明会です。
+    reading: にせん じゅうよねん にがつ じゅうさんにち。ほんしゃでの けっさんの せつめいかいです。
+- id: ch11_icu
+  title: 集中治療室から
+  background: mi_kaikenjo
+  stage:
+  - {who: zundamon, x: 0.12, flip: true, tag: 木村, scale: 0.85, emotion: normal}
+  - {who: asakura, x: 0.82, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1年の見通しは、営業損益16億円の赤字から2億円の黒字へ。モンストは250万人に。
+    reading: いちねんの みとおしわ、えいぎょう そんえき じゅうろくおくえんの あかじから におくえんの くろじえ。もんすとわ にひゃく ごじゅうまんにんに。
+  - speaker: asakura
+    emotion: normal
+    text: 言ってみれば集中治療室から出てきた患者
+    telops:
+    - {text: "朝倉「集中治療室から出てきた患者」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: asakura
+    emotion: normal
+    text: 構造的な赤字から脱却しており、モンスト一本足ではない
+  - speaker: reimu
+    text: 同じ日、朝倉は社長を退くと発表します。
+    reading: おなじ ひ、あさくらわ しゃちょうお しりぞくと はっぴょう します。
+  - speaker: asakura
+    emotion: normal
+    text: ノーアウト満塁からマウンドに立たされたピッチャーとして、
+  - speaker: asakura
+    emotion: happy
+    text: やるべき仕事は全うしたと感じている
+# ---- 2014年5月・時価総額（5月30日の終値。180億円は朝倉の講演の数。森田の言葉は2014年7月の取材。DeNA を悪く言わない） ----
+- id: ch12_board
+  title: 時価総額2020億円
+  background: mi_board_midori
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 2014年5月30日の終値で、時価総額は2020億円。提携相手のDeNAの2004億円を上回ります。
+    reading: にせん じゅうよねん ごがつ さんじゅうにちの おわりねで、じかそうがくわ にせん にじゅうおくえん。ていけい あいての でぃー えぬ えーの にせん よんおくえんお うわまわります。
+  - speaker: reimu
+    text: 朝倉の話では、朝倉が社長になった日の時価総額は約180億円でした。
+    reading: あさくらの はなしでわ、あさくらが しゃちょうに なった ひの じかそうがくわ やく ひゃくはちじゅうおくえんでした。
+  - speaker: zundamon
+    emotion: happy
+    text: 1年足らずで、10倍を超えたのだ……！
+    se: levelup
+- id: ch12_morita
+  title: ''
+  background: mi_board_midori
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: happy}
+  - {who: morita, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 6月に社長を継いだ森田仁基は、7月の取材にこう話しています。
+    reading: ろくがつに しゃちょうお ついだ もりた ひろきわ、しちがつの しゅざいに こう はなして います。
+  - speaker: morita
+    emotion: normal
+    text: 時価総額なんて僕らが決められることではない。
+  - speaker: morita
+    emotion: happy
+    text: 何よりスタッフたちが、周りからよかったねって言われるようになったことがうれしい
+# ---- 2015年3月までの1年・売上9倍（9倍は決算の数字。1日あたりは台帳の計算。200人強は2015年4月。世界1位は月間の売上） ----
+- id: card2015
+  title: ''
+  background: mi_card_2015
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2015年3月までの1年。会社の売上は、前の年の9倍あまりになります。
+    reading: にせん じゅうごねん さんがつまでの いちねん。かいしゃの うりあげわ、まえの としの きゅうばい あまりに なります。
+- id: ch13_9bai
+  title: 売上9倍
+  background: mi_kaihatsu_4
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 木村, emotion: surprised}
+  - {who: buka, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: buka
+    emotion: happy
+    text: 売上は、121億円から1129億円です！
+    telops:
+    - {text: "売上 121億円 → 1129億円", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 9倍……！？
+  - speaker: buka
+    emotion: happy
+    text: 営業利益は、4億8000万円から527億円。[約110倍|ヤクヒャクジュウバイ]です！
+  - speaker: zundamon
+    emotion: surprised
+    text: 利益は、100倍超え……。
+  - speaker: buka
+    emotion: happy
+    text: 1月から3月のモンストなどは、ならすと1日約4億7000万円です！
+  - speaker: zundamon
+    emotion: surprised
+    text: 1日で、4億7000万円！？
+    se: bikkuri
+  - speaker: buka
+    emotion: happy
+    text: 去年の夏の3か月は、モンストなどだけで194億円です！
+  - speaker: zundamon
+    emotion: surprised
+    text: 1年分の121億円を、3か月で……。
+  - speaker: buka
+    emotion: happy
+    text: 10人足らずだったチームも、200人を超えました。
+  - speaker: reimu
+    text: 9月には、調査会社の集計で世界のゲームアプリの月間の売上1位に。
+    reading: くがつにわ、ちょうさがいしゃの しゅうけいで せかいの げーむ あぷりの げっかんの うりあげ いちいに。
+# ---- 教室（「あった、あった」の3つ目。木村の言葉は謎解きのあるアニメの配信を前にした2015年の取材なので、ナレを先に。生徒は名前の無いモブ。配信日は言わない） ----
+- id: ch13_kyoshitsu
+  title: ''
+  background: mi_kyoshitsu
+  stage:
+  - {who: seito1, x: 0.2, flip: true, emotion: happy}
+  - {who: seito2, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: モンストは、YouTubeでアニメも始めます。木村は2015年、配信を前にこう話しています。
+    reading: もんすとわ、ゆーちゅーぶで あにめも はじめます。きむらわ にせん じゅうごねん、はいしんお まえに こう はなして います。
+  - speaker: reimu
+    text: 配信の次の日に学校の教室で『あれ分かった？』という会話が生まれてほしい。
+    reading: はいしんの つぎの ひに がっこうの きょうしつで、あれ わかったと いう かいわが うまれて ほしい。
+  - speaker: seito1
+    emotion: happy
+    text: 昨日の夜、4人で集まれた？
+  - speaker: seito2
+    emotion: happy
+    text: 集まれた！ 次は、お前も呼ぶからな！
+  - speaker: seito1
+    emotion: happy
+    text: アニメも見た？ ……で、あれ分かった？
+  - speaker: seito2
+    emotion: surprised
+    text: 分かんない！ 放課後、一緒に考えようぜ！
+    beat: true
+# ---- 論争1：Facebook に負けて終わった？（7-1。「負けた」は俗説の言葉としてだけ。Facebook を悪く言わない。笠原の言葉は2025年） ----
+- id: ronso1
+  title: Facebookに負けた？
+  background: mi_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ mixiは、Facebookに負けて終わったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 世間ではそう言われたわね。利用者が減ったのは本当よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2011年5月の[1547万人|センゴヒャクヨンジュウナナマンニン]が山で、2012年9月は1402万人。
+  - speaker: tsumugi
+    emotion: normal
+    text: 同じ月、Facebookは日本の利用者が[1500万人|センゴヒャクマンニン]を超えたと明かしたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、やっぱりそうなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、来た波は1つじゃないの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 2008年にはTwitterとiPhoneも来たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2012年には、LINEも広がったわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: コンプガチャの禁止に、足あとをやめた判断も重なったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 波が、いっぺんに！？
+  - speaker: tsumugi
+    emotion: normal
+    text: それにmixiは、いまも続いているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[笠原|カサハラ]は2025年に、こう話しているわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: SNS mixiは一応、黒字で運営してはいるんですよね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 2025年の時点で、黒字なのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 抜かれたのは本当。でも、終わったわけじゃないの。
+# ---- 論争2：テレビCMで当てた？（7-3。CMの前に250万人。7-2 は役割を分けて1行） ----
+- id: ronso2
+  title: テレビCMで当てた？
+  background: mi_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあモンストは、テレビCMで当てたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: CMは2014年3月から。4月には利用者が600万人になったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、CMのおかげなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でもCMの前、2月の時点でもう250万人いたの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 大がかりな宣伝は、まだしていなかったのよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 大きな宣伝なしで、250万人！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の資料は、友だちの招待で人が増えて定着したと書いているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 4人で遊ぶには、友だちを呼ぶしかないでしょ。
+  - speaker: zundamon
+    emotion: happy
+    text: 呼ばれた人が、また呼ぶのだ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 火を付けたのは口コミ。CMは、その火に風を送ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[木村|キムラ]が企画して、[岡本|オカモト]の会社と作ったの。'
+  - speaker: tsumugi
+    emotion: thinking
+    text: CMを決めたのは、[朝倉|アサクラ]の時の経営陣よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1人の手柄じゃ、なかったのだ……。
+    beat: true
+# ---- 本当の注意点（7章の1と2。国民生活センターの数字と助言どおり。特定のゲームの助言にしない。3は1行） ----
+- id: chui
+  title: 子どもの課金と確率
+  background: mi_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。あぶないのは、保護者のアカウントのスマホで子どもが遊ぶこと。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2022年度、小中高生のオンラインゲームの相談は4024件。
+  - speaker: tsumugi
+    emotion: normal
+    text: 使った額は、平均で約33万円よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 33万円！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 保護者のスマホで遊ばせるときは、アカウントからログオフしておく。
+  - speaker: tsumugi
+    emotion: normal
+    text: 子ども用のアカウントで、課金を承認制にしておくのも手よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 払うときに、パスワードや指紋の確認が要るようにしておくこと。
+  - speaker: zundamon
+    emotion: thinking
+    text: ボクのスマホも、見直しておくのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 困ったときは、[188|イチハチハチ]に電話して相談してね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。ガチャを回す前に、出る確率の表示を見ること。
+  - speaker: zundamon
+    emotion: thinking
+    text: 確率を、先に見る……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。利用者何千万人と聞いたら、累計か月間かを確かめてね。
+# ---- 現代（2026年11月時点。数字は2026年3月期の2つ。インドは始まったばかり。社長交代の理由は言わない。mixi2 は2024年12月） ----
+- id: card2026
+  title: ''
+  background: mi_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。モンストの配信から、13年がたちました。
+    reading: にせん にじゅうろくねん。もんすとの はいしんから、じゅうさんねんが たちました。
+- id: ima
+  title: mixiとモンストのいま
+  background: mi_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: mixiとモンストは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2018年6月に社長が代わって、[木村|キムラ]が社長になったの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 左遷されたと思った人が、社長に！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そのころを、[木村|キムラ]は2024年にこう語っているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 私が社長に就任した頃は、売上高の約9割をモンストが占めている状況でした。
+  - speaker: zundamon
+    emotion: surprised
+    text: 9割が、モンスト1本！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年3月までの1年は、売上が1713億円あまりで営業利益は222億円あまり。
+  - speaker: tsumugi
+    emotion: normal
+    text: その1年、モンストは遊ぶ人が減って売上も減ったと会社は発表しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年4月には、世界向けのモンストがインドで始まったばかりよ。
+  - speaker: zundamon
+    emotion: surprised
+    text: インドで！？
+  - speaker: tsumugi
+    emotion: normal
+    text: そして2024年12月、創業者の[笠原|カサハラ]が開発を率いる[mixi2|ミクシィツー]が始まったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 招待された人だけが入れる形にしたわけを、2025年にこう語っているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 誰からも招待を受けずに入ってしまうと、本当に空っぽのタイムラインになってしまう。
+  - speaker: zundamon
+    emotion: happy
+    text: 招待状が、帰ってきたのだ！
+# ---- 締め（茶番の「全員スマホ」と、冒頭の見通し80億円・笠原の「ふたたび輝ける日」を回収。締めの言葉は2018年の木村の言葉） ----
+- id: shime
+  title: ''
+  background: mi_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ 次に集まったら、スマホを持ち寄って4人で遊ぶのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 結局、スマホは見るのね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 1年の売上を[80億円|ハチジュウオクエン]と見ていた会社は、次の1年に1129億円を売ったわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: mixiから20年。ふたたび輝ける日を聞かれた創業者は、もう一度SNSを作ったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[木村|キムラ]は2018年に、こう話しているわ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: ITが発達すればするほど、リアルのコミュニケーションの価値はどんどん上がるはずです。
+  - speaker: zundamon
+    emotion: thinking
+    text: 画面の向こうより、隣の人……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 隣にいる人と、たまには同じ画面をのぞき込んでみてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

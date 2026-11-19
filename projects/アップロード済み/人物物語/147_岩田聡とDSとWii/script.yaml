@@ -1,0 +1,1238 @@
+meta:
+  title: 任天堂の社長「おそらく我々はゆっくり死ぬんだ」、DSとWiiで当時の過去最高益に【ずんだもん解説】
+  slug: iwata-ds
+  hook_line: 負けていた任天堂の社長は、なぜDSの発売日に大学の研究室にいたのか。
+  summary: 2004年12月2日、ニンテンドーDSの発売日。行列のできた東京の店ではなく、仙台の大学の研究室に、任天堂の社長・岩田聡の姿がありました。ゲームキューブで負け、縮んでいくゲームの市場を前にした社長は、2つの画面とペン、テレビのリモコンの形のコントローラで、ゲームをしない人まで呼び込もうとします。プログラマー出身の社長が率いた逆転と、そのあとの値下げの壇上まで、本人の公の言葉をもとに再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 任天堂 社長が訊く『ものすごく脳を鍛える５分間の鬼トレーニング』川島隆太教授 篇 https://www.nintendo.co.jp/3ds/interview/asrj/vol1/index.html
+  - 任天堂 社長が訊く Wii プロジェクト Vol.2「Wiiリモコン編」 https://www.nintendo.co.jp/wii/topics/interview/vol2/index.html
+  - 任天堂 平成21年3月期 決算短信（2009年5月7日） https://www.nintendo.co.jp/ir/pdf/2009/090507.pdf
+  - 任天堂 2011年7月29日 第1四半期決算説明会 社長説明 https://www.nintendo.co.jp/ir/events/110729/index.html
+  - 任天堂 第73期定時株主総会 質疑応答（2013年6月27日） https://www.nintendo.co.jp/ir/stock/meeting/130627qa/03.html
+  - 任天堂「主要ハード・ソフトの販売実績」 https://www.nintendo.co.jp/ir/finance/hard_soft/index.html
+  tags:
+  - 任天堂
+  - 岩田聡
+  - ニンテンドーDS
+  - Wii
+  - 脳トレ
+  - 宮本茂
+  - 山内溥
+  - 川島隆太
+  - 竹田玄洋
+  - ゲームキューブ
+  - ニンテンドー3DS
+  - 社長が訊く
+  - HAL研究所
+  - ゲーム機
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 負けていた社長が
+    bottom: 任天堂
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.08
+    outfit: apron
+  - id: tomo
+    label: 友だち
+    voice: 11
+    pitch: 0.0
+    outfit: gakuran
+  - id: keiri
+    label: 社員
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: dev1
+    label: 開発者
+    voice: 12
+    pitch: 0.02
+    outfit: suit
+    color: '#5a4a3a'
+  - id: nshain
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#454a55'
+  - id: shain
+    label: 社員
+    voice: 100
+    pitch: 0.02
+    outfit: suit
+    color: '#3a4f5f'
+  - id: takeda
+    label: 竹田
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#3a3f4a'
+  - id: yamauchi
+    label: 山内
+    voice: 42
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: miyamoto
+    label: 宮本
+    voice: 21
+    pitch: 0.0
+    outfit: suit
+    color: '#5a6a8a'
+  - id: dev2
+    label: 開発者
+    voice: 67
+    pitch: 0.0
+    outfit: work
+    color: '#e8ebee'
+  - id: shogaku
+    label: 小学生
+    voice: 73
+    pitch: 0.0
+  - id: kawashima
+    label: 川島
+    voice: 67
+    pitch: -0.02
+    outfit: labcoat
+  - id: choshu
+    label: 聴衆
+    voice: 100
+    pitch: 0.06
+  - id: kyaku
+    label: 客
+    voice: 12
+    pitch: 0.04
+  - id: toshiyori
+    label: 年配の客
+    voice: 42
+    pitch: 0.02
+  - id: dev3
+    label: 開発者
+    voice: 21
+    pitch: 0.04
+    outfit: work
+    color: '#c9d2da'
+  - id: chichi
+    label: 父
+    voice: 13
+    pitch: 0.1
+  - id: haha
+    label: 母
+    voice: 8
+    pitch: -0.02
+    outfit: apron
+    color: '#9a4f5a'
+  - id: ko
+    label: 子ども
+    voice: 73
+    pitch: 0.02
+  - id: kabunushi
+    label: 株主
+    voice: 13
+    pitch: -0.02
+    outfit: suit
+    color: '#5a4632'
+scenes:
+# ---- 先出し①（2004年12月2日・東京の量販店。行列は後ろ姿。笑いの SE なし。「お一人様1点限り」は GAME Watch の店頭の様子） ----
+- id: co_gyoretsu
+  title: ''
+  background: iw_gyoretsu
+  bgm: curious
+  stage:
+  - {who: tenin, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2004年12月2日の朝。東京の量販店に、新しいゲーム機の行列ができていました。
+    reading: にせんよねん じゅうにがつ ふつかの あさ。とうきょうの りょうはんてんに、あたらしい げーむきの ぎょうれつが できて いました。
+  - speaker: tenin
+    emotion: happy
+    text: ニンテンドーDS、おひとり様1点限りです！
+# ---- 先出し②（同じ日・仙台の大学の研究室。訪ねた時刻は資料に無いので「朝」と言わない。川島は出さない。「社内で勝手につくった試作ソフト」「30分だけ」は2012年の本人の言葉の組み方） ----
+- id: co_kenkyushitsu
+  title: ''
+  background: iw_kenkyushitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その会社、任天堂の社長は店にいませんでした。同じ日、仙台。大学の研究室です。
+    reading: その かいしゃ、にんてんどうの しゃちょうわ みせに いませんでした。おなじ ひ、せんだい。だいがくの けんきゅうしつです。
+  - speaker: zundamon
+    emotion: normal
+    text: ……30分だけ、という約束なのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 社内で勝手に作った試作のソフト、見てもらうのだ。
+  - speaker: reimu
+    text: 話は、3時間に延びました。この男は、岩田聡。ゲームキューブで負けていた、任天堂の社長です。
+    reading: はなしわ さんじかんに のびました。この おとこわ いわた さとる。げーむきゅーぶで まけて いた にんてんどうの しゃちょうです。
+  - speaker: reimu
+    text: 4年半後の決算で、任天堂の利益は当時の過去最高に。その2年あまりあと、彼は自分の報酬を50％減らします。
+    reading: よねんはんごの けっさんで、にんてんどうの りえきわ とうじの かこ さいこうに。その にねん あまり あと、かれわ じぶんの ほうしゅうお ごじゅっぱーせんと へらします。
+# ---- 今の部屋（ゲーム機が家で嫌われる。「お母さんが電源を抜く」は本編の Wii の開発室で回収。20秒以内） ----
+- id: hook
+  title: ''
+  background: iw_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 夜中までゲームしてたら、お母さんにコンセントを抜かれたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: セーブは？
+  - speaker: zundamon
+    emotion: sad
+    text: ……してないのだ。
+    se: chin
+  - speaker: tsumugi
+    emotion: normal
+    text: それ、ゲーム機を作る側が本気で悩んだことなの。お母さんに嫌われないゲーム機。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 負けていた任天堂の社長は、なぜ発売日に大学の研究室にいたのか。
+    telops:
+    - {text: "負けていた任天堂の社長は なぜ発売日に大学にいた？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 店じゃなくて、大学！？
+# ---- 1970年代後半・札幌の高校（20秒。親は出さない。電卓の機種名は言わない。「クラスで最初に買った」「最初は野球のゲーム」＝GDC 2005 の本人の言葉。後で効く：GDC の「頭の中ではゲーム開発者」） ----
+- id: ch1_dentaku
+  title: 札幌の電卓
+  background: iw_kyoshitsu
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: happy}
+  - {who: tomo, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1970年代の後半、札幌の高校。授業中の教室です。
+    reading: せんきゅうひゃく ななじゅうねんだいの こうはん、さっぽろの こうこう。じゅぎょうちゅうの きょうしつです。
+  - speaker: tomo
+    emotion: normal
+    text: '[岩田|イワタ]、授業中に何やってんだ。'
+  - speaker: zundamon
+    emotion: happy
+    text: 電卓で、ゲームを作ったのだ。
+  - speaker: tomo
+    emotion: surprised
+    text: 電卓で！？ 数字しか出ないだろ。
+  - speaker: zundamon
+    emotion: happy
+    text: プログラムの組める電卓、クラスで最初に買ったのだ。
+  - speaker: reimu
+    text: 最初に作ったのは、野球のゲーム。この生徒が、のちに世界の開発者の前で自分をゲーム開発者と名乗ります。
+    reading: さいしょに つくったのわ やきゅうの げーむ。この せいとが のちに せかいの かいはつしゃの まえで じぶんお げーむ かいはつしゃと なのります。
+# ---- 1990年代のはじめ・HAL研究所の社長室（年は言わない。借金の書類 → 6年後は企画書だけの机。身近な数：1日あたり約68万円＝台帳の計算） ----
+- id: ch2_hal
+  title: マイナス15億円から
+  background: iw_shachoshitsu_shorui
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: thinking}
+  - {who: keiri, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 1990年代のはじめ、東京のHAL研究所。岩田が学生のころから働いてきた会社が、経営危機に陥ります。
+    reading: せんきゅうひゃく きゅうじゅうねんだいの はじめ、とうきょうの はるけんきゅうじょ。いわたが がくせいの ころから はたらいて きた かいしゃが けいえい ききに おちいります。
+  - speaker: keiri
+    emotion: sad
+    text: 社長。負債は、何十億円にもなります。
+  - speaker: keiri
+    emotion: sad
+    text: そのうち[15億円|ジュウゴオクエン]は、6年で返すことになりました。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1年に2億5000万円。1日あたり、約68万円なのだ……。
+    telops:
+    - {text: "15億円を6年で 1日あたり約68万円", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: keiri
+    emotion: thinking
+    text: 30代の前半で、よく社長を引き受けましたね。
+  - speaker: zundamon
+    emotion: normal
+    text: 一緒に汗をかいた仲間がいるのに、逃げられないだろ。
+  - speaker: zundamon
+    emotion: normal
+    text: まず全員と1人ずつ話す。それから、開発で立て直す。
+  - speaker: keiri
+    emotion: happy
+    text: 社長！ 6年かかりましたけど、[15億円|ジュウゴオクエン]を返し終わりました！
+    background: iw_shachoshitsu_kikaku
+# ---- 1998年ごろ・開発室（ポケモンそのものは説明しない。森本は名前を出さずモブで原文の言葉。本人の返しは2009年の言葉と出どころを言う） ----
+- id: ch3_programmer
+  title: 社長か、プログラマーか
+  background: iw_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: dev1, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: dev1
+    emotion: surprised
+    text: 聞きました？ 人気の携帯ゲームの対戦が、1週間くらいでもう据置型で動いてるって！
+  - speaker: dev1
+    emotion: surprised
+    text: あの人はプログラマーなの？ それとも社長なの？
+    se: hammer
+  - speaker: reimu
+    text: 社長になっても、岩田は自分でプログラムを書いていました。本人は2009年に、笑ってこう振り返ります。
+    reading: しゃちょうに なっても、いわたわ じぶんで ぷろぐらむお かいて いました。ほんにんわ にせん きゅうねんに わらって こう ふりかえります。
+  - speaker: zundamon
+    emotion: happy
+    text: 社長というよりは、プログラマーでしたね。
+    beat: true
+# ---- 2002年5月・京都（31本目と重ねない：交代の場面・山内の台詞・「53年ぶり」は使わない。山内への思い・現状否定をしないは2005年の本人の言葉の趣旨） ----
+- id: card2002
+  title: ''
+  background: iw_card_2002
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2002年5月、京都の任天堂。42歳の岩田が、社長になります。
+    reading: にせん にねん ごがつ、きょうとの にんてんどう。よんじゅうにさいの いわたが しゃちょうに なります。
+- id: ch4_shacho
+  title: 42歳の社長
+  background: iw_shachoshitsu_kyoto
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: thinking}
+  - {who: nshain, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: nshain
+    emotion: happy
+    text: 社長。前の社長のあとを継ぐのは、大変ですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……山内さんと同じことを、ボクがなしとげられるとは思えないのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: これまで誠実にやってきたことを、否定から入るのはなしだ。
+  - speaker: reimu
+    text: その任天堂は、据置型のゲーム機で大きく負けていました。2年半後の発売日、社長はなぜ店にいないのか。
+    reading: その にんてんどうわ、すえおきがたの げーむきで おおきく まけて いました。にねんはんごの はつばいび、しゃちょうわ なぜ みせに いないのか。
+# ---- 2003年・会議室（右肩下がりの折れ線・数字なし。ゲームキューブと PS2 の比較はこの1回。「ゆっくり死ぬ」は2009年の本人の言葉のまま、出どころを言う。竹田は存命扱い → 2006年の「社長が訊く」の原文だけ、出どころを言い、2003年の岩田に返事をさせない。TGS の講演の言葉は使わない（電撃の節の見出しは記者のまとめ）） ----
+- id: ch5_yukkuri
+  title: ゆっくり死ぬ
+  background: iw_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 岩田, emotion: thinking}
+  - {who: takeda, x: 0.6, emotion: normal}
+  - {who: shain, x: 0.84, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。ゲームキューブ、思ったほど伸びません。
+  - speaker: reimu
+    text: 最後まで数えると、ゲームキューブは世界で2174万台。プレイステーション2は1億6000万台を超えます。
+    reading: さいごまで かぞえると、げーむきゅーぶわ せかいで にせん ひゃくななじゅうよんまんだい。ぷれいすてーしょん つーわ いちおく ろくせんまんだいお こえます。
+  - speaker: shain
+    emotion: sad
+    text: それに、[日本|ニホン]のゲームの市場がずっと右肩下がりです。
+  - speaker: reimu
+    text: 秋の講演の準備で業界の調べを見たときの考えを、岩田は2009年にこう話しています。
+    reading: あきの こうえんの じゅんびで ぎょうかいの しらべお みた ときの かんがえお、いわたわ にせん きゅうねんに こう はなして います。
+  - speaker: zundamon
+    emotion: sad
+    text: ゲームをする層を広げなければいけない。
+  - speaker: zundamon
+    emotion: sad
+    text: そうしないと、おそらく我々はゆっくり死ぬんだ
+    se: gaan
+    telops:
+    - {text: "岩田「おそらく我々はゆっくり死ぬんだ」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: shain
+    emotion: surprised
+    text: ゆっくり、死ぬ……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ゲームをしない人に、どうやってゲーム機を持ってもらうかなのだ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 昔はやってたけど、最近は忙しくて全然やってない。取材で会う人によく言われるんだ。
+  - speaker: shain
+    emotion: thinking
+    text: 絵がきれいになるほど、操作も難しくなってますからね。
+  - speaker: reimu
+    text: のちに次の据置型の開発を率いる竹田玄洋は2006年に、それまでの道筋をこう振り返ります。
+    reading: のちに つぎの すえおきがたの かいはつお ひきいる たけだ げんようわ にせん ろくねんに、それまでの みちすじお こう ふりかえります。
+  - speaker: takeda
+    emotion: normal
+    text: 従来のロードマップをそのまま踏まえるなら、
+  - speaker: takeda
+    emotion: normal
+    text: より速く、より豪華にというふうになったと思うんです。
+  - speaker: takeda
+    emotion: normal
+    text: もっといいものを！というふうに求めていく人々の要望というのは、
+  - speaker: takeda
+    emotion: normal
+    text: 臨界がないんですね。
+  - speaker: reimu
+    text: この分かれ道を、岩田は2005年にこう話しています。
+    reading: この わかれみちお、いわたわ にせん ごねんに こう はなして います。
+  - speaker: zundamon
+    emotion: thinking
+    text: ぼくらが変わらなかったらどうなる？ ゆっくり死ぬ道を選ぶ？
+  - speaker: zundamon
+    emotion: normal
+    text: それとも、もっとたくさんの人が
+  - speaker: zundamon
+    emotion: normal
+    text: 未来にぼくらの作ったものでよろこんでくれるようになる道を選ぶ？
+  - speaker: zundamon
+    emotion: normal
+    text: 変わるほうを、選ぶのだ。
+# ---- 2003年・「２画面にしてくれ」（山内は故人。舞台はこの1場面・台詞はこの1つだけ。声はモブ。2画面とタッチは山内の要望から逆算＝「社長が訊く」の本人の言葉） ----
+- id: ch6_nigamen
+  title: ２画面にしてくれ
+  background: iw_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: yamauchi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じころ、次の携帯型の研究が進んでいました。相談役に退いた山内が、強く求めます。
+    reading: おなじ ころ、つぎの けいたいがたの けんきゅうが すすんで いました。そうだんやくに しりぞいた やまうちが つよく もとめます。
+  - speaker: yamauchi
+    emotion: normal
+    text: ２画面にしてくれ。
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: ……画面を、2つですか。
+  - speaker: zundamon
+    emotion: thinking
+    text: 2つの画面で、ゲームをしない人を呼べるのか……。
+# ---- 開発の机（宮本は存命 → 舞台に立たせるが台詞なし。タッチの案を名前の無い開発者の手柄にしない。無線で最大16台・会話は共同の記事。試作機の真ん前にモブを立たせない） ----
+- id: ch6_pen
+  title: ''
+  background: iw_kaihatsu_pen
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 岩田, emotion: thinking}
+  - {who: miyamoto, x: 0.66, emotion: thinking}
+  - {who: dev2, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: dev2
+    emotion: thinking
+    text: 社長。2つ目の画面の使い道が、まだ決まりません。
+  - speaker: zundamon
+    emotion: thinking
+    text: 上と下に同じものを映しても、しかたないのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 2画面が活きる遊びは何か。宮本さんと、逆から考えるのだ。
+  - speaker: dev2
+    emotion: normal
+    text: 社長と宮本さんがたどり着いた答えは、これですか。
+  - speaker: dev2
+    emotion: surprised
+    text: 片方の画面を、ペンで直接さわれる！
+  - speaker: dev2
+    emotion: happy
+    text: 無線で最大16台つながって、ケーブルなしで会話もできます。
+  - speaker: reimu
+    text: ペンでさわる2つ目の画面。山内の要望から、岩田と専務の宮本茂が逆算してたどり着いた答えです。
+    reading: ぺんで さわる ふたつめの がめん。やまうちの ようぼうから、いわたと せんむの みやもと しげるが ぎゃくさん して たどりついた こたえです。
+  - speaker: reimu
+    text: 本人はのちに、こう話しています。
+    reading: ほんにんわ のちに、こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 山内さんの情熱がなければ、ニンテンドーDSはあの形をしていないんですよ。
+# ---- 2004年・京都の社長室（川島と同じ学年と知り、自分で会いに行くと決めた＝2012年の本人の言葉。大人のドリルを岩田がやっていた＝同じ対談。だれが教えたかは資料に無いので、社員の台詞は「だそうです」まで。自分で行った理由は同じ学年と知ったこと＝本人の言葉。ほかの動機を足さない） ----
+- id: ch6_doshi
+  title: 自分で会いに行く
+  background: iw_shachoshitsu_kyoto
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: nshain, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: nshain
+    emotion: normal
+    text: 社長。大人のドリルの[川島|カワシマ]先生、社長と同じ学年だそうです。
+  - speaker: zundamon
+    emotion: surprised
+    text: 同じ学年！？
+    se: bikkuri
+  - speaker: zundamon
+    emotion: happy
+    text: 先生のドリル、ボクもやってるのだ。
+  - speaker: zundamon
+    emotion: normal
+    text: 自分で会いに行って、お願いしよう。
+  - speaker: nshain
+    emotion: surprised
+    text: 社長が、ご自分で！？
+  - speaker: zundamon
+    emotion: happy
+    text: 試作のソフトを持って、[仙台|センダイ]へ行くのだ。
+# ---- 2004年12月2日（木）・東京の店の前（あった、あった：登校前の小学生。任天堂の担当者は名前を出さない。GAME Watch の店頭の取材） ----
+- id: card2004
+  title: ''
+  background: iw_card_2004
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 2004年12月2日、木曜日。発売の日、社長は東京にいませんでした。
+    reading: にせん よねん じゅうにがつ ふつか、もくようび。はつばいの ひ、しゃちょうわ とうきょうに いませんでした。
+- id: ch7_gyoretsu
+  title: 発売日の朝
+  background: iw_gyoretsu
+  stage:
+  - {who: shogaku, x: 0.2, flip: true, emotion: happy}
+  - {who: nshain, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: shogaku
+    emotion: happy
+    text: ニンテンドーDS！ 1万5000円、握りしめてきた！
+  - speaker: shogaku
+    emotion: happy
+    text: 学校に行く前に、買っていくんだ！
+  - speaker: nshain
+    emotion: surprised
+    text: 前の晩の11時から、列ができてます。
+  - speaker: nshain
+    emotion: happy
+    text: 先に出たアメリカでは、1週間で50万台でした！
+  - speaker: nshain
+    emotion: happy
+    text: ファミコンが出たころを、しのぐほどの勢いです！
+# ---- 同じ日・仙台の研究室（本編。全体の4〜5割。川島は存命 → 台詞は2012年の公の言葉だけ、出どころを言う。お墨つきの言葉は岩田の回想の形。3時間後は窓の外が夕方） ----
+- id: ch7_kenkyushitsu
+  title: 発売日の研究室
+  background: iw_kenkyushitsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: kawashima, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ日、仙台。東北大学の川島隆太は、2012年にこのときの気持ちをこう振り返ります。
+    reading: おなじ ひ、せんだい。とうほく だいがくの かわしま りゅうたわ にせん じゅうにねんに この ときの きもちお こう ふりかえります。
+  - speaker: kawashima
+    emotion: surprised
+    text: 任天堂さんから社長さんが、いったい何をしにいらっしゃるんだろう？
+  - speaker: zundamon
+    emotion: happy
+    text: はじめまして。任天堂の[岩田|イワタ]です。
+  - speaker: zundamon
+    emotion: normal
+    text: 社内で勝手に作った試作のソフトです。見ていただけますか。
+  - speaker: reimu
+    text: 川島は、その場で試作ソフトを測ります。岩田の2012年の回想では、こう言われました。
+    reading: かわしまわ、その ばで しさく そふとお はかります。いわたの にせん じゅうにねんの かいそうでわ こう いわれました。
+  - speaker: kawashima
+    emotion: happy
+    text: このソフトは大丈夫です。ちゃんと脳に効いているから、商品化できますよ
+  - speaker: zundamon
+    emotion: happy
+    text: ありがとうございます！
+  - speaker: zundamon
+    emotion: surprised
+    text: ……あっ。30分だけ、というお約束でした。
+    background: iw_kenkyushitsu_yugata
+    se: manuke
+  - speaker: zundamon
+    emotion: surprised
+    text: もう、3時間もお邪魔してるのだ……。
+    telops:
+    - {text: "30分の約束が 3時間に", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 最初に脳トレを作ったころの気持ちを、岩田は同じ2012年にこう話しています。
+    reading: さいしょに のうとれお つくった ころの きもちお、いわたわ おなじ にせん じゅうにねんに こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 面白いものができたという自信はあったんです。
+  - speaker: zundamon
+    emotion: thinking
+    text: ただ、ゲームに触れたことがない方たちが、これは面白いと言ってくれるほど
+  - speaker: zundamon
+    emotion: thinking
+    text: 受け入れられるかは、やってみなければわかりませんでした。
+# ---- 2005年3月10日・サンフランシスコの GDC（訳は台帳の訳のまま。「なのだ」にしない。名刺は画に無いので言わない。"Video games are meant to be just one thing" は使わない） ----
+- id: card2005
+  title: ''
+  background: iw_card_2005
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 2005年3月、サンフランシスコ。ゲームの開発者が集まる会議、GDCの基調講演です。
+    reading: にせん ごねん さんがつ、さんふらんしすこ。げーむの かいはつしゃが あつまる かいぎ、じーでぃーしーの きちょう こうえんです。
+- id: ch8_gdc
+  title: 心の中ではゲーマー
+  background: iw_gdc
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: choshu, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 名刺の上では、社長です。
+  - speaker: choshu
+    emotion: normal
+    text: ……社長のあいさつか。
+  - speaker: zundamon
+    emotion: normal
+    text: 頭の中では、ゲーム開発者です。
+  - speaker: choshu
+    emotion: surprised
+    text: お？
+  - speaker: zundamon
+    emotion: happy
+    text: でも、心の中では、ゲーマーです。
+    se: jaan
+    telops:
+    - {text: "岩田「心の中では、ゲーマーです」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: reimu
+    text: 記録に残る英語を、意味を変えずに訳した言葉です。札幌の教室の生徒は、45歳になっていました。
+    reading: きろくに のこる えいごお、いみお かえずに やくした ことばです。さっぽろの きょうしつの せいとわ よんじゅうごさいに なって いました。
+  - speaker: zundamon
+    emotion: normal
+    text: 同じお客さんばかりを追いかけて時間とお金を使ううちに、
+  - speaker: zundamon
+    emotion: normal
+    text: 私たちは、誰を置き去りにしているのでしょう。
+  - speaker: zundamon
+    emotion: normal
+    text: ゲームをしない友だちや家族は、いませんか。
+  - speaker: choshu
+    emotion: thinking
+    text: ……いる。うちの家族、誰もやらない。
+# ---- 2005年・年末の売り場（あった、あった①：脳年齢・タッチペン。お客さんの層が変わった＝本人の言葉。社員の家族の話は本人が話した例としてナレで1回。岩田は店にいない） ----
+- id: ch9_uriba
+  title: 年末の売り場
+  background: iw_uriba
+  bgm: honwaka_puppu
+  stage:
+  - {who: tenin, x: 0.2, flip: true, emotion: happy}
+  - {who: kyaku, x: 0.62, emotion: happy}
+  - {who: toshiyori, x: 0.84, scale: 0.9, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2005年の年末。仙台に持っていった試作ソフトは5月に店に並び、半年たって火がつきます。
+    reading: にせん ごねんの ねんまつ。せんだいに もって いった しさく そふとわ ごがつに みせに ならび、はんとし たって ひが つきます。
+  - speaker: tenin
+    emotion: happy
+    text: 脳を鍛える大人のDSトレーニング、入りました！
+  - speaker: tenin
+    emotion: happy
+    text: 計算や音読で、脳年齢が出るソフトです！
+  - speaker: kyaku
+    emotion: surprised
+    text: 脳年齢、本当の年より上だったんだけど！
+    se: chin
+  - speaker: tenin
+    emotion: happy
+    text: タッチペンで、答えを書くだけですから。
+  - speaker: tenin
+    emotion: surprised
+    text: あれ？ 大人のお客さんも、お年寄りも並んでます！
+    background: iw_uriba_otona
+  - speaker: toshiyori
+    emotion: happy
+    text: わしにも、ひとつ。計算のやつをな。
+  - speaker: kyaku
+    emotion: surprised
+    text: おじいちゃんまで並んでる……。
+  - speaker: reimu
+    text: 社員が親から、あれを送ってくれと頼まれる。そんな話が社内でいっぱい起きた、と本人はのちに話しています。
+    reading: しゃいんが おやから、あれお おくって くれと たのまれる。そんな はなしが しゃないで いっぱい おきたと、ほんにんわ のちに はなして います。
+# ---- 2006年・会議室（1世帯3.0人は2006年9月の任天堂の発表。言い換えは台帳の形。20か月で1000万台も同じ発表。DS Lite の品薄は専門メディアの振り返り） ----
+- id: ch9_setai
+  title: 1世帯3.0人
+  background: iw_kaigi_up
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: shain, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、2006年の調べです。1つの家で何人がDSを遊んでいるか。
+  - speaker: zundamon
+    emotion: normal
+    text: どうだった。
+  - speaker: shain
+    emotion: normal
+    text: 据置型はふつう2.2から2.8人。携帯型は、昔から2人前後です。
+  - speaker: shain
+    emotion: surprised
+    text: DSは……3.0人です！
+    se: levelup
+  - speaker: zundamon
+    emotion: happy
+    text: 4人家族なら、子ども2人だけじゃない。お父さんかお母さんまで、3人目なのだ！
+  - speaker: shain
+    emotion: happy
+    text: '[日本|ニホン]では、発売から20か月で1000万台。これまででいちばん速いペースです！'
+  - speaker: shain
+    emotion: happy
+    text: 新しいDS Liteも、入荷してもすぐ売り切れです！
+# ---- 次の据置型の開発室（2006年の「社長が訊く」の開発者の言葉をもとに。開発者は名前を出さずモブで原文の趣旨。「お母さんが電源を引っこ抜く」は岩田の原文で茶番の回収。「枯れた技術」は言わない） ----
+- id: ch10_fan
+  title: 夜中のファン
+  background: iw_kaihatsu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: dev3, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 同じころ、次の据置型の開発が山場でした。2006年の対談に残る、開発者たちの話からたどります。
+    reading: おなじ ころ、つぎの すえおきがたの かいはつが やまばでした。にせん ろくねんの たいだんに のこる、かいはつしゃたちの はなしから たどります。
+  - speaker: dev3
+    emotion: happy
+    text: 新しい半導体なら、前と同じ仕事を[4分の1|ヨンブンノイチ]から[3分の1|サンブンノイチ]の電気でこなせます。
+  - speaker: dev3
+    emotion: happy
+    text: 厚さの目標は、DVDのケース2、3枚分です。
+  - speaker: zundamon
+    emotion: surprised
+    text: そんなに薄く！？
+  - speaker: dev3
+    emotion: normal
+    text: 夜のあいだは、ファンを回しません。
+  - speaker: zundamon
+    emotion: happy
+    text: だって、夜中にゲーム機のファンが回っていると、
+  - speaker: zundamon
+    emotion: happy
+    text: お母さんはまた、つけっぱなし！と思って電源を引っこ抜いちゃうかもしれませんからね。
+    beat: true
+# ---- リモコンの名前（3段の笑い。台詞は「言い張りました」の芝居の脚色。本当の言葉は竹田の振り返りと居間の場面で） ----
+- id: ch10_remocon
+  title: 絶対、リモコン
+  background: iw_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 岩田, emotion: normal}
+  - {who: dev2, x: 0.6, emotion: normal}
+  - {who: dev3, x: 0.84, emotion: thinking}
+  cuts:
+  - speaker: dev2
+    emotion: normal
+    text: 社長、新しいコントローラの名前ですが……。
+  - speaker: zundamon
+    emotion: normal
+    text: リモコンなのだ。
+  - speaker: dev3
+    emotion: thinking
+    text: でも、ゲーム機のコントローラですよ。
+  - speaker: zundamon
+    emotion: normal
+    text: リモコンだ。
+  - speaker: dev2
+    emotion: thinking
+    text: ……アメリカで売るときは？
+  - speaker: zundamon
+    emotion: angry
+    text: リモコンなのだ！
+  - speaker: dev3
+    emotion: normal
+    text: ……言い張ってる。
+    se: zukko
+  - speaker: reimu
+    text: 竹田は2006年に、アメリカで売るときもリモコンと呼ばせようとしていたと笑って振り返りました。
+    reading: たけだわ にせん ろくねんに、あめりかで うる ときも りもこんと よばせようと して いたと わらって ふりかえりました。
+# ---- 居間のテレビの前（2006年の本人の言葉。机に転がるリモコンが画にある） ----
+- id: ch10_ima
+  title: ''
+  background: iw_ima
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: なぜリモコンにこだわったのか。本人は2006年に、こう話しています。
+    reading: なぜ りもこんに こだわったのか。ほんにんわ にせん ろくねんに、こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: なぜテレビのリモコンは家族みんなが触るのにゲーム機のコントローラは触らないのか
+  - speaker: zundamon
+    emotion: normal
+    text: というのは[Wii|ウィー]を開発するうえでの大事なコンセプトでしたから。
+  - speaker: zundamon
+    emotion: happy
+    text: だから絶対、これはリモコンです！と言い張りました。
+    telops:
+    - {text: "岩田「絶対、これはリモコンです！」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 2006年12月2日（土）・店の前 → 完売（行列は電撃の取材。キャラクターの着ぐるみは描かない） ----
+- id: card2006
+  title: ''
+  background: iw_card_2006
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2006年12月2日、土曜日。
+    reading: にせん ろくねん じゅうにがつ ふつか、どようび。
+- id: ch11_kanbai
+  title: 発売の朝と完売
+  background: iw_gyoretsu
+  stage:
+  - {who: kyaku, x: 0.2, flip: true, emotion: happy}
+  - {who: tenin, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: kyaku
+    emotion: happy
+    text: '[Wii|ウィー]、2万5000円。前の日の夕方から並んだんだ。'
+  - speaker: kyaku
+    emotion: surprised
+    text: 後ろに2000人くらいいるらしいぞ。
+  - speaker: tenin
+    emotion: surprised
+    text: 始発が動くころには、今日の分はもう完売です！
+    background: iw_kanbai
+# ---- 居間（あった、あった②：家族で腕を振る。事故の具体は言わない。「家族の誰にも敵視されない」は2006年9月の発表会の本人の言葉。母のオチで茶番を回収） ----
+- id: ch11_ima
+  title: ''
+  background: iw_ima
+  stage:
+  - {who: ko, x: 0.18, flip: true, emotion: happy}
+  - {who: chichi, x: 0.62, emotion: happy}
+  - {who: haha, x: 0.84, scale: 0.9, emotion: normal}
+  cuts:
+  - speaker: ko
+    emotion: happy
+    text: お父さん、リモコンを振るだけだよ！
+  - speaker: chichi
+    emotion: happy
+    text: こうか！ それっ！
+  - speaker: haha
+    emotion: angry
+    text: ちょっと、テレビの前で振り回さないで！
+  - speaker: chichi
+    emotion: surprised
+    text: あっ、手から……！
+  - speaker: reimu
+    text: 発売の2週間後、任天堂はリモコンのストラップを必ず付けるようお願いを出しました。
+    reading: はつばいの にしゅうかんご、にんてんどうわ りもこんの すとらっぷお かならず つけるよう おねがいお だしました。
+  - speaker: reimu
+    text: 発売の前、岩田は目標をこう話していました。家族の誰にも敵視されないようなマシンを作る。
+    reading: はつばいの まえ、いわたわ もくひょうお こう はなして いました。かぞくの だれにも てきし されない ような ましんお つくる。
+  - speaker: haha
+    emotion: happy
+    text: ……次、お母さんの番ね。
+    se: oti
+# ---- 2009年3月期・最高益（社員の台詞は2009年の時点の言い方。「当時の過去最高」はナレで。岩田の言葉は2009年の取材と出どころを言う。後で効く：値下げの場面） ----
+- id: ch12_saikoueki
+  title: 過去最高の決算
+  background: iw_kaigi_up
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: shain, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長！ DSは、ゲーム機として史上最短で1億台を超えました！
+  - speaker: shain
+    emotion: happy
+    text: 売上高は1兆8386億円、営業利益は5552億円。どちらも過去最高です！
+  - speaker: zundamon
+    emotion: normal
+    text: ……そうか。
+  - speaker: reimu
+    text: 2009年3月期の、その時点の過去最高でした。このころ、岩田は取材にこう話しています。
+    reading: にせん きゅうねん さんがつきの、その じてんの かこ さいこうでした。この ころ いわたわ しゅざいに こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: 本当にしんどかった時期を経験していない人が増えていくことは、少し不安です。
+  - speaker: zundamon
+    emotion: normal
+    text: しかし、多くの社員は追い風がずっと吹き続けることは
+  - speaker: zundamon
+    emotion: normal
+    text: 絶対にないことを理解していると思っています。
+  - speaker: zundamon
+    emotion: normal
+    text: 何より、娯楽というものは同じ成功法則が続かないマーケットですから。
+# ---- 2011年・会議室（苦しさを段階的に。値下げの決断の芝居は脚色。アンバサダーの20本は会社の発表。先に買った人へのメッセージは出どころを言う） ----
+- id: card2011
+  title: ''
+  background: iw_card_2011
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2011年2月。立体に見える携帯型、ニンテンドー3DSが2万5000円で出ます。
+    reading: にせん じゅういちねん にがつ。りったいに みえる けいたいがた、にんてんどー すりーでぃーえすが にまん ごせんえんで でます。
+- id: ch13_nesage
+  title: 1万円の値下げ
+  background: iw_kaigi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: shain, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。[3DS|スリーディーエス]の売れ行きが、計画に届きません。
+  - speaker: shain
+    emotion: sad
+    text: 春も……夏になっても、伸びません。
+  - speaker: zundamon
+    emotion: sad
+    text: ……1万円、下げるのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 発売から、まだ半年もたってませんよ！
+    se: bikkuri
+  - speaker: zundamon
+    emotion: sad
+    text: 先に買ってくれた人には、ソフトを20本無料で配る。
+  - speaker: shain
+    emotion: normal
+    text: ファミコンとゲームボーイアドバンスを、10本ずつですね。
+  - speaker: reimu
+    text: 岩田は、先に買った人へのメッセージにこう書きました。
+    reading: いわたわ、さきに かった ひとえの めっせーじに こう かきました。
+  - speaker: zundamon
+    emotion: sad
+    text: 早く買って損をしたというお気持ちを完全になくすことはできないかもしれませんが、
+  - speaker: zundamon
+    emotion: sad
+    text: 特別なお客様であるみなさまに対し感謝の意を表して、
+# ---- 2011年7月29日・決算説明会（原文の語尾のまま。笑いの SE・ツッコミ・thinking なし。会場の場所は言わない。記者の問いは作らない） ----
+- id: ch13_setsumeikai
+  title: 社長の私が50％
+  background: iw_setsumeikai
+  stage:
+  - {who: zundamon, x: 0.5, tag: 岩田, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 7月29日の決算説明会。値下げで信頼を損ね配当も減ることに、岩田は大きな責任を感じていると話します。
+    reading: しちがつ にじゅうくにちの けっさん せつめいかい。ねさげで しんらいお そこね はいとうも へる ことに、いわたわ おおきな せきにんお かんじて いると はなします。
+  - speaker: zundamon
+    emotion: sad
+    text: 固定報酬枠削減幅は、社長の私が50％、
+    telops:
+    - {text: "岩田「社長の私が50％」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: "[他|ほか]の代表取締役が30％、それ以外の取締役が20％といたしました。"
+  - speaker: zundamon
+    emotion: normal
+    text: 本来の責任は、業績を回復させ、
+  - speaker: zundamon
+    emotion: normal
+    text: 任天堂を市場でご評価いただける状況に回復させることだと認識しています。
+# ---- 2013年6月27日・株主総会（株主の問いと答えは原文の組み合わせと並びのまま。報酬の話とつなげない） ----
+- id: ch14_sokai
+  title: リストラをしない理由
+  background: iw_sokai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: kabunushi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: その年度、任天堂は1981年からの記録で初めての営業赤字に。2013年6月の株主総会で、株主が問います。
+    reading: その ねんど、にんてんどうわ せんきゅうひゃく はちじゅういちねんからの きろくで はじめての えいぎょう あかじに。にせん じゅうさんねん ろくがつの かぶぬし そうかいで かぶぬしが といます。
+  - speaker: kabunushi
+    emotion: normal
+    text: コスト高になっていたのであれば、リストラを行ったほうがよかったのではないか。
+  - speaker: zundamon
+    emotion: normal
+    text: では、なぜリストラをしないのかということですが、
+  - speaker: zundamon
+    emotion: normal
+    text: 私たちは、どうしても数年サイクルで山と谷のあるビジネスをしております。
+  - speaker: reimu
+    text: 谷の時期にも利益を出すのが理想だと述べたうえで、岩田はこう続けます。
+    reading: たにの じきにも りえきお だすのが りそうだと のべた うえで、いわたわ こう つづけます。
+  - speaker: zundamon
+    emotion: normal
+    text: ただ、短期の業績を求めてリストラをいたしますと、
+  - speaker: zundamon
+    emotion: normal
+    text: 会社で働く人たちの[モラール（士気）|モラール]は下がり、
+  - speaker: zundamon
+    emotion: sad
+    text: その人たちが不安に怯えながら作ったソフトが
+  - speaker: zundamon
+    emotion: sad
+    text: 本当に世の中の人の心を動かせるのかということがございます。
+    telops:
+    - {text: "岩田「本当に世の中の人の心を動かせるのか」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: もちろん、無駄な経費を削減し、効率的な方法を追求するのは当然です。
+# ---- 2014年1月・会議室（Wii U の計画の修正は1月17日の会社の発表。報酬の減額は1月29日の会見の報道。リストラの答えとは別の日・別の場） ----
+- id: ch14_keikaku
+  title: ''
+  background: iw_kaigi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: sad}
+  - {who: shain, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: shain
+    emotion: sad
+    text: 社長。[Wii|ウィー]の次の[Wii U|ウィーユー]、計画を900万台から280万台に下げます。
+  - speaker: zundamon
+    emotion: sad
+    text: ……分かった。
+  - speaker: reimu
+    text: 2014年1月。経営陣の責任は重いとして、岩田は報酬を再び50％減らします。今度は5か月です。
+    reading: にせん じゅうよねん いちがつ。けいえいじんの せきにんわ おもいと して、いわたわ ほうしゅうお ふたたび ごじゅっぱーせんと へらします。こんどわ ごかげつです。
+# ---- 論争1：最初から計算して当てた？（主語を付ける。ブルーオーシャンという言葉は使わない。2画面・ペン・nintendogs・リモコンの持ち主を言い分ける） ----
+- id: ronso1
+  title: 最初から計算どおり？
+  background: iw_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ネットで見たのだ！ DSと[Wii|ウィー]は、天才社長が最初から計算して当てたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: どちらも数を伸ばしたから、そう見えるわね。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも本人は2009年に、こう話しているの。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当にできるかどうか分からず恐る恐るやっていた。
+  - speaker: zundamon
+    emotion: surprised
+    text: 恐る恐る！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 脳トレに火がついたのは、DSの発売から約1年後。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが[Wii|ウィー]の開発の山場と重なったのを、本人は超ラッキーと言っているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2画面は山内の強い要望で、ペンはそこから逆算。
+  - speaker: tsumugi
+    emotion: normal
+    text: DSのソフト、[nintendogs|ニンテンドッグス]の試作は宮本茂よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: リモコンも、たくさんの人のバラバラの思いが不思議に融合したと本人が話しているの。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 同じ考えで作った[Wii U|ウィーユー]は、計画を大きく下回ったわ。
+  - speaker: zundamon
+    emotion: thinking
+    text: 方角は決めたけど、当たるかは本人にも分からなかった……。
+    beat: true
+# ---- 論争2：社員を守るために給料を半分に？（2つの別の場を言い分ける。理由は本人の言葉の「責任」。美談にしない） ----
+- id: ronso2
+  title: 社員を守るため？
+  background: iw_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: じゃあ、これは本当なのだ！ 社員を守るために、自分の給料を半分にしたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 報酬を50％減らしたのは本当。2011年と2014年の2回よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: でも2011年に本人が挙げたのは、値下げや赤字で配当まで減ることへの責任。
+  - speaker: tsumugi
+    emotion: normal
+    text: リストラをしないと答えたのは、2013年の株主総会。別の日の、別の場なの。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: 2つの話が、くっついてたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも同じ答えで、無駄な経費を削るのは当然とも言っているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 1つの美談にまとめると、本人が言った理由が消えちゃうの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 本人の言葉は、別々のまま聞くのだ……。
+    beat: true
+# ---- 本当の注意点（1：累計の台数は会社の発表の数。3：家族のゲームの時間＝みまもりの使い方の紹介まで。2・4は1行ずつ。特定の時間を勧めない） ----
+- id: chui
+  title: 台数とゲームの時間
+  background: iw_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。ゲーム機の累計の台数は、会社がお店などに出した数よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 遊んでいる人の数じゃないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: ニュースの数字は、いつの時点の[何|なん]の数かを見てね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめは、家族のゲームの時間。
+  - speaker: tsumugi
+    emotion: normal
+    text: 任天堂には、[Nintendo みまもり Switch|ニンテンドーみまもりスイッチ]という無料のアプリがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 遊ぶ時間の約束を決めると、時間が来たらアラーム。自動で中断もできるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 年齢区分に合わせた制限や、毎月のレポートもあるのよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 家族の誰にも敵視されない機械を目指した会社が、いまはこういう道具も出しているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: コンセントを抜かれる前に、約束を決めるのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: それと、発売のすぐあとに値下げされることもあるわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: リモコンを振るときは、いまも手首にストラップよ。
+# ---- 最後の1年（笑いなし・ミーム・茶番・SE なし。病気は任天堂の発表の言葉だけ。病院・病状は描かない。議長の席に別の人＝ナレ） ----
+- id: ch15_kesseki
+  title: 最後の1年
+  background: iw_sokai
+  bgm: 223am
+  cuts:
+  - speaker: reimu
+    text: 2014年6月。任天堂は、岩田が胆管腫瘍の手術を受けたと発表します。
+    reading: にせん じゅうよねん ろくがつ。にんてんどうわ、いわたが たんかん しゅようの しゅじゅつお うけたと はっぴょう します。
+  - speaker: reimu
+    text: 27日の株主総会は欠席。議長の席には、専務の竹田玄洋が代わって座りました。
+    reading: にじゅうしちにちの かぶぬし そうかいわ けっせき。ぎちょうの せきにわ、せんむの たけだ げんようが かわって すわりました。
+# ---- 2014年10月30日・経営方針説明会（原文の語尾のまま） ----
+- id: ch15_fukki
+  title: ''
+  background: iw_setsumeikai
+  stage:
+  - {who: zundamon, x: 0.5, tag: 岩田, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 10月30日、経営方針説明会。岩田は壇上で、こう話します。
+    reading: じゅうがつ さんじゅうにち、けいえい ほうしん せつめいかい。いわたわ だんじょうで こう はなします。
+  - speaker: zundamon
+    emotion: normal
+    text: お盆明け以降は出社しての業務を再開しており、
+  - speaker: zundamon
+    emotion: normal
+    text: 現在では、通常の業務に復帰しております。
+  - speaker: zundamon
+    emotion: normal
+    text: ご心配をおかけいたしました。
+# ---- 2015年6月26日・株主総会（NX の問いの原文は台帳に無い → 「〜について問われ」とナレで。答えは原文） ----
+- id: ch15_sokai
+  title: ''
+  background: iw_sokai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 岩田, emotion: normal}
+  - {who: kabunushi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2015年6月26日、株主総会。開発中の新しいゲーム機NXについて問われ、岩田はこう答えます。
+    reading: にせん じゅうごねん ろくがつ にじゅうろくにち、かぶぬし そうかい。かいはつちゅうの あたらしい げーむき えぬえっくすに ついて とわれ いわたわ こう こたえます。
+  - speaker: zundamon
+    emotion: normal
+    text: 先ほど申しあげたとおり、[NX|エヌエックス]について今日具体的なお話をすることはできません。
+# ---- 2015年7月11日（ナレだけ。評価の言葉は言わない） ----
+- id: card2015
+  title: ''
+  background: iw_card_2015
+  cuts:
+  - speaker: reimu
+    text: 2015年7月11日。岩田聡は、胆管腫瘍のため亡くなりました。55歳でした。
+    reading: にせん じゅうごねん しちがつ じゅういちにち。いわた さとるわ、たんかん しゅようの ため なくなりました。ごじゅうごさいでした。
+# ---- 7月16日・通夜（顔は描かない。糸井の言葉・弔辞は使わない） ----
+- id: ch15_ame
+  title: ''
+  background: iw_ame
+  cuts:
+  - speaker: reimu
+    text: 7月16日、京都での通夜。台風の風雨の中、弔問を待つ人の長い列ができました。
+    reading: しちがつ じゅうろくにち、きょうとでの つや。たいふうの ふううの なか、ちょうもんお まつ ひとの ながい れつが できました。
+# ---- 現代（2026年11月時点。数字は2026年9月末の会社の発表の2つだけ。NX がのちの Switch になったのは B。岩田が Switch を作ったとは言わない） ----
+- id: ima
+  title: DSとWiiのいま
+  background: iw_gendai
+  bgm: you_and_me
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: DSと[Wii|ウィー]は、そのあとどうなったのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の発表では、2026年9月末までにDSは1億5402万台。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[Wii|ウィー]は、1億163万台が出たわ。'
+  - speaker: zundamon
+    emotion: surprised
+    text: 2つとも、1億台を超えてるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: あの総会で[NX|エヌエックス]と呼ばれた機械は、2017年に[Switch|スイッチ]として出たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: '[岩田|イワタ]が亡くなって、1年8か月ほどあとのことよ。'
+  - speaker: tsumugi
+    emotion: normal
+    text: いま任天堂でいちばん売れたゲーム機は、その[Switch|スイッチ]なの。
+  - speaker: zundamon
+    emotion: thinking
+    text: DSより、売れたのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2019年には、[ほぼ日|ホボニチ]が[岩田|イワタ]の言葉を集めた本を出したわ。
+  - speaker: zundamon
+    emotion: normal
+    text: 言葉が、本になったんだ。
+# ---- 締め（GDC の言葉の回収。死去の章のあとなので静かに。oti は使わない。2016年の GDC のアニメは専門メディアの記事） ----
+- id: shime
+  title: ''
+  background: iw_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年、世界の開発者の会議で[岩田|イワタ]をたたえる短いアニメが流れたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 最後に出たのは、2005年のあの講演の言葉だったの。
+  - speaker: zundamon
+    emotion: normal
+    text: 名刺の上では社長、頭の中ではゲーム開発者。心の中では……。
+  - speaker: tsumugi
+    emotion: normal
+    text: ゲーマー。ゲームをしない家族まで、遊ぶ側に呼ぼうとした人ね。
+  - speaker: zundamon
+    emotion: happy
+    text: 今日はコンセントを抜かれる前に、お母さんも誘ってみるのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
