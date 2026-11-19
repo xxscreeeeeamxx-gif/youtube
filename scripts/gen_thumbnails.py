@@ -16,6 +16,7 @@
 
 from __future__ import annotations
 
+import zlib
 import math
 import sys
 from pathlib import Path
@@ -2693,7 +2694,8 @@ def layout_scene(spec):
     """場面型2コマ。見出し＋各コマ: 場面の背景・上の札（年と数字）・吹き出し・表情・（小物）。"""
     panels = spec["panels"]
     img = Image.new("RGBA", (W, H), (10, 10, 12, 255))
-    HEAD_H = int(H * 0.21)
+    big = spec.get("title")                  # 題名型は layout_title に移した（2026-11-19）
+    HEAD_H = int(H * (0.36 if big else 0.21))
     gap = 10
     pw = (W - gap) // 2
     ph = H - HEAD_H
@@ -2745,6 +2747,31 @@ def layout_scene(spec):
     d.polygon([(ax - 40, ay - 30), (ax - 4, ay - 30), (ax - 4, ay - 50), (ax + 52, ay), (ax - 4, ay + 50),
                (ax - 4, ay + 30), (ax - 40, ay + 30)], fill=(255, 120, 20), outline=(14, 10, 6), width=5)
     d.rectangle([0, 0, W, HEAD_H], fill=(8, 8, 10))
+    if big:
+        # 1行目＝会社名＋動画のタイトル（いちばん大きく）。2行目＝落差の見出し（小さく、黄）
+        segs = []
+        for i, ln in enumerate(big):                                    # 会社名と題名の間に半角の間を空ける
+            if i and not segs[-1][0].endswith(("の", "と")):        # 「〜の」で終わる行のあとは間を空けない
+                segs.append((" ", (255, 255, 255)))
+            segs += [(tx, DOC_COL.get(c, c)) for tx, c in ln]
+        size = 150
+        while size > 60 and sum(_tw(font("w9", size), tx) for tx, _ in segs) > W - 40:
+            size -= 4
+        f = font("w9", size)
+        x = (W - sum(_tw(f, tx) for tx, _ in segs)) // 2
+        y = 10
+        for tx, c in segs:
+            _ttext(d, (x, y), tx, f, c, stroke_width=max(6, size // 14), stroke_fill=(0, 0, 0))
+            x += _tw(f, tx)
+        hk = spec.get("headline", "")
+        if hk:
+            fs = 54
+            while fs > 30 and _tw(font("w9", fs), hk) > W - 80:
+                fs -= 2
+            f2 = font("w9", fs)
+            _ttext(d, ((W - _tw(f2, hk)) // 2, HEAD_H - int(fs * 1.25) - 6), hk, f2, (255, 214, 0),
+                   stroke_width=5, stroke_fill=(0, 0, 0))
+        return img.convert("RGB")
     headline, hi = spec["headline"], spec.get("head_hi", "")
     base_c, hi_c = (255, 255, 255), spec.get("head_hi_color", (255, 40, 40))
     segs = [(headline, base_c)]
@@ -2764,6 +2791,282 @@ def layout_scene(spec):
 
 
 DOC_COL = {"w": (255, 255, 255), "y": (255, 214, 0), "r": (236, 36, 36)}
+
+# 2026-11-19 ユーザー指示「会社名と動画のタイトルをサムネで一番大きく書いて」。
+# slug ごとに、サムネでいちばん大きく描く「会社名＋動画のタイトル」（回の名前）を2行で持つ。
+# A（場面型）は上の帯をこの題名にし、それまでの落差の見出しは帯の下に小さく出す。
+# B・C（資料型）は左の大きな2行をこの題名にし、落差の2行は1行にまとめて中くらいで下に出す。
+# 色は "y"（黄＝会社名）・"w"（白）・"r"（赤）。各行は10字まで。
+TITLE_BIG = {
+    # 2026-11-19 ユーザーの指示の流れ：
+    #   「会社名と動画のタイトルをサムネで一番大きく」→「単語で終わってるやつは何も伝わらない」
+    #   →「会社名の下の文章、知らない人が見たら意味がわからない」→「ネタバレ書いてるみたい。結末とその理由とは？とかにして」
+    #   →（4つの書き方を比べて）「AとCを使い分けて」
+    # 1行目＝会社名（色の箱）。2〜3行目は回ごとに A か C のどちらか。どちらも原因（ネタ）は書かない。
+    #   A：何の会社・誰が ＋ 結末 ＋「理由とは？」。結末が広く知られていて、それ自体が引きになる回（逮捕・破綻・国外へ）。
+    #   C：何の会社の・どこで ＋「何が起きていた？」。中で起きていたこと（偽装・不正）が話の芯で、結末より中身が引きになる回。
+    # 結末・場所は台本の meta.summary・題名にある事実だけ。各行11字まで（長いと全部の行が小さくなる）。
+    "senba-kitcho": [["船場吉兆"], ["高級料亭が"], ["店をたたんだ理由とは？"]],                    # A
+    "bigmotor-fusei": [["ビッグモーター"], ["中古車の修理工場で"], ["何が起きていた？"]],          # C
+    "ikinari-steak": [["いきなり!ステーキ"], ["行列のステーキ店が"], ["3年で半減した理由とは？"]],  # A
+    "kanebo-funshoku": [["カネボウ"], ["化粧品の名門で"], ["何が起きていた？"]],                 # C
+    "skymark-saisei": [["スカイマーク"], ["格安航空が"], ["破綻した理由とは？"]],                  # A
+    "livedoor-horie": [["ライブドア"], ["人気IT企業の社長が"], ["逮捕された理由とは？"]],          # A
+    "daio-igawa": [["大王製紙"], ["会長が子会社から"], ["106億円借りた理由とは？"]],              # A
+    "seibu-tsutsumi": [["西武鉄道"], ["鉄道会社の株主名簿で"], ["何が起きていた？"]],             # C
+    "mtgox-karpeles": [["マウントゴックス"], ["ビットコインの取引所で"], ["何が起きていた？"]],     # C
+    "ghosn-nissan": [["日産"], ["ゴーン元会長が"], ["国外へ逃げた理由とは？"]],                    # A
+    "recruit-ezoe": [["リクルート"], ["求人誌の会社が内閣を"], ["揺るがした理由とは？"]],          # A
+    "terumi-club": [["てるみくらぶ"], ["格安ツアーの会社が"], ["突然つぶれた理由とは？"]],          # A
+    "comsn-origuchi": [["コムスン"], ["介護の最大手で"], ["何が起きていた？"]],                   # C
+    "murakami-fund": [["村上ファンド"], ["「物言う株主」が"], ["逮捕された理由とは？"]],           # A
+    "harenohi": [["はれのひ"], ["成人式の朝、振袖の店で"], ["何が起きていた？"]],                 # C
+    "elpida-sakamoto": [["エルピーダ"], ["国が支えた半導体会社が"], ["破綻した理由とは？"]],       # A
+    "mitsukoshi-okada": [["三越"], ["社長が16対0で"], ["解任された理由とは？"]],                  # A
+    "meathope-tanaka": [["ミートホープ"], ["ひき肉の工場で"], ["何が起きていた？"]],               # C
+    "agura-farm": [["安愚楽牧場"], ["和牛オーナーの牧場で"], ["何が起きていた？"]],               # C
+    "daiwa-ny": [["大和銀行"], ["日本の銀行が"], ["米国を追われた理由とは？"]],                    # A
+    "lotte-shigemitsu": [["ロッテ"], ["創業者が自分の会社で"], ["代表を外された理由とは？"]],      # A
+    "shinko-bank": [["日本振興銀行"], ["日本で初めて預金が"], ["削られた理由とは？"]],             # A
+    "playstation-kutaragi": [["ソニー"], ["反対されたゲーム機が"], ["1億台になった理由とは？"]],   # A
+    "hayashibara": [["林原"], ["トレハロースの会社で"], ["何が起きていた？"]],                    # C
+    "fujiya-fujii": [["不二家"], ["洋菓子の工場で"], ["何が起きていた？"]],                       # C
+    "mitsubishi-masuko": [["三菱自動車"], ["株の34%が"], ["日産へ渡った理由とは？"]],             # A
+    "compile-niitani": [["コンパイル"], ["ぷよぷよの会社で"], ["何が起きていた？"]],               # C
+    "taishin-ojima": [["ヒューザー"], ["マンション会社の社長が"], ["有罪になった理由とは？"]],     # A
+}
+
+
+# 2026-11-19 題名型（layout_title）の回ごとの見た目。公開順に並べ、色・キャラの左右・表情が隣の回と重ならないように回す。
+# 新しい回は TITLE_BIG に文を書き、slug をこの TITLE_ORDER の末尾（公開順）に足す。ここにある回は題名型で描く。
+# bg を書かなければ SPECS の前のコマの場面を使う。
+TITLE_PALETTE = [(206, 26, 36), (22, 86, 200), (16, 140, 70), (122, 40, 176), (226, 108, 0), (0, 136, 158),
+                 (198, 28, 118), (34, 44, 128)]
+TITLE_ORDER = ["senba-kitcho", "bigmotor-fusei", "ikinari-steak", "kanebo-funshoku", "skymark-saisei",
+               "livedoor-horie", "daio-igawa", "seibu-tsutsumi", "mtgox-karpeles", "ghosn-nissan", "recruit-ezoe",
+               "terumi-club", "comsn-origuchi", "murakami-fund", "harenohi", "elpida-sakamoto", "mitsukoshi-okada",
+               "meathope-tanaka", "agura-farm", "daiwa-ny", "lotte-shigemitsu", "shinko-bank", "playstation-kutaragi",
+               "hayashibara", "fujiya-fujii", "mitsubishi-masuko", "compile-niitani", "taishin-ojima"]
+TITLE_BG = {}          # slug -> 背景名（前のコマの場面が他の回と似ているときに足す）
+
+
+def _title_style(slug):
+    i = TITLE_ORDER.index(slug) if slug in TITLE_ORDER else zlib.crc32(slug.encode()) % 8   # hash() は起動ごとに変わる
+    sp = SPECS.get(slug, {})
+    pn = sp.get("panels") or [{}]
+    bg = TITLE_BG.get(slug) or pn[0].get("scene")
+    looks = [("surprised", None), ("sad", "gloom"), ("normal", "sweat")]
+    emo, fx = looks[(i // 2) % len(looks)]
+    return dict(accent=TITLE_PALETTE[i % len(TITLE_PALETTE)], char_left=bool(i % 2), emo=emo, fx=fx, bg=bg)
+
+
+def layout_title(spec):
+    """1枚絵の題名型（2026-11-19）。場面の絵を全面に色つきで敷き、片側に回ごとの色のグラデーション。
+    1行目＝会社名（色の箱・いちばん大きく）、2〜3行目＝何が起きたかの短い文（白・黒フチ）。反対側の端にずんだもん。
+    ユーザー：「黒背景に黄色字もやめて」→ 黒い帯・黄色の字は使わない。"""
+    slug = spec.get("_key", "").split("#")[0]
+    st = _title_style(slug)
+    rows = _title_big(spec) or [[spec.get("headline", "")]]
+    rows = ["".join(x if isinstance(x, str) else x[0] for x in r) for r in rows]
+    acc = st["accent"]
+    img = _scene_bg(W, H, st["bg"], None)
+    left = st["char_left"]
+    grad = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(grad)
+    span = int(W * 0.74)
+    for k in range(span):
+        a_ = int(230 * (1 - k / span) ** 1.1)
+        x = (W - 1 - k) if left else k
+        gd.line([(x, 0), (x, H)], fill=(*[int(c * 0.5) for c in acc], a_))
+    img.alpha_composite(grad)
+    bu = bust(spec.get("who", "zundamon"), st["emo"], height=int(H * 0.62), crop=0.42).convert("RGBA")
+    if left:
+        bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
+    if st["fx"]:
+        bu = _fx(bu, st["fx"], inner_left=not left)
+    bx = -int(bu.width * 0.26) if left else W - int(bu.width * 0.74)   # 字が髪にかからないよう端へ寄せる
+    img.alpha_composite(bu, (bx, H - bu.height + 6))
+    d = ImageDraw.Draw(img)
+    maxw = int(W * 0.62)
+    edge = 34
+
+    def fit(tx, top):
+        s = top
+        while s > 50 and _tw(font("w9", s), tx) > maxw:
+            s -= 2
+        return s
+
+    s1 = fit(rows[0], 160)
+    s2s = [fit(r, 118) for r in rows[1:]]
+    if s2s:                                         # 文の行はそろえて同じ大きさに
+        s2 = min(s2s)
+        s2s = [s2] * len(s2s)
+    total = int(s1 * 1.22) + 30 + sum(int(s * 1.2) for s in s2s)
+    room = H - 70
+    if total > room:
+        r = room / total
+        s1, s2s = int(s1 * r), [int(s * r) for s in s2s]
+        total = int(s1 * 1.22) + 30 + sum(int(s * 1.2) for s in s2s)
+    y = max(30, (H - total) // 2 - 20)
+    f1 = font("w9", s1)
+    bw1 = _tw(f1, rows[0]) + 44
+    bxx = edge if not left else W - edge - bw1
+    d.rounded_rectangle([bxx, y, bxx + bw1, y + int(s1 * 1.22)], radius=18, fill=acc, outline=(10, 10, 12), width=7)
+    _ttext(d, (bxx + 22, y + int(s1 * 0.05)), rows[0], f1, (255, 255, 255), stroke_width=max(6, s1 // 16), stroke_fill=(0, 0, 0))
+    y += int(s1 * 1.22) + 30
+    for tx, s2 in zip(rows[1:], s2s):
+        f2 = font("w9", s2)
+        x = edge if not left else W - edge - _tw(f2, tx)
+        _ttext(d, (x, y), tx, f2, (255, 255, 255), stroke_width=max(8, s2 // 10), stroke_fill=(0, 0, 0))
+        y += int(s2 * 1.2)
+    return img.convert("RGB")
+
+
+
+def _title_rows(spec):
+    rows = _title_big(spec) or [[spec.get("headline", "")]]
+    return ["".join(x if isinstance(x, str) else x[0] for x in r) for r in rows]
+
+
+def _fit_w(tx, top, maxw, low=40):
+    s = top
+    while s > low and _tw(font("w9", s), tx) > maxw:
+        s -= 2
+    return s
+
+
+def layout_title_band(spec):
+    """別案1（帯型）。上に回ごとの色の帯を全幅で敷き、会社名を真ん中に大きく。下は場面の絵に2行、端にずんだもん。"""
+    slug = spec.get("_key", "").split("#")[0]
+    st = _title_style(slug)
+    rows = _title_rows(spec)
+    acc = st["accent"]
+    BAND = int(H * 0.34)
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 255))
+    img.alpha_composite(_scene_bg(W, H - BAND, st["bg"], None), (0, BAND))
+    shade = Image.new("RGBA", (W, H - BAND), (0, 0, 0, 0))
+    sd = ImageDraw.Draw(shade)
+    for k in range(int(W * 0.7)):
+        x = (W - 1 - k) if st["char_left"] else k
+        sd.line([(x, 0), (x, H - BAND)], fill=(0, 0, 0, int(170 * (1 - k / (W * 0.7)))))
+    img.alpha_composite(shade, (0, BAND))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, BAND], fill=acc)
+    d.rectangle([0, BAND - 10, W, BAND], fill=(10, 10, 12))
+    s1 = _fit_w(rows[0], 190, W - 80)
+    f1 = font("w9", s1)
+    _ttext(d, ((W - _tw(f1, rows[0])) // 2, (BAND - int(s1 * 1.2)) // 2), rows[0], f1, (255, 255, 255),
+           stroke_width=max(8, s1 // 14), stroke_fill=(0, 0, 0))
+    left = st["char_left"]
+    bu = bust(spec.get("who", "zundamon"), st["emo"], height=int((H - BAND) * 0.98), crop=0.42).convert("RGBA")
+    if left:
+        bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
+    if st["fx"]:
+        bu = _fx(bu, st["fx"], inner_left=not left)
+    img.alpha_composite(bu, (-int(bu.width * 0.12) if left else W - int(bu.width * 0.88), H - bu.height + 6))
+    d = ImageDraw.Draw(img)
+    maxw = int(W * 0.66)
+    s2 = min(_fit_w(r, 104, maxw) for r in rows[1:])
+    f2 = font("w9", s2)
+    y = BAND + (H - BAND - int(s2 * 1.22) * len(rows[1:])) // 2
+    for tx in rows[1:]:
+        x = 40 if not left else W - 40 - _tw(f2, tx)
+        _ttext(d, (x, y), tx, f2, (255, 255, 255), stroke_width=max(8, s2 // 10), stroke_fill=(0, 0, 0))
+        y += int(s2 * 1.22)
+    return img.convert("RGB")
+
+
+def layout_title_bubble(spec):
+    """別案2（吹き出し型）。場面の絵の上に会社名を大きく（色のフチ）。ずんだもんを大きく置き、その吹き出しに2行。"""
+    slug = spec.get("_key", "").split("#")[0]
+    st = _title_style(slug)
+    rows = _title_rows(spec)
+    acc = st["accent"]
+    img = _scene_bg(W, H, st["bg"], None)
+    img.alpha_composite(Image.new("RGBA", (W, H), (*[int(c * 0.4) for c in acc], 120)))
+    left = st["char_left"]
+    bu = bust(spec.get("who", "zundamon"), st["emo"], height=int(H * 0.74), crop=0.42).convert("RGBA")
+    if left:
+        bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
+    if st["fx"]:
+        bu = _fx(bu, st["fx"], inner_left=not left)
+    bx = -int(bu.width * 0.10) if left else W - int(bu.width * 0.90)
+    img.alpha_composite(bu, (bx, H - bu.height + 6))
+    d = ImageDraw.Draw(img)
+    s1 = _fit_w(rows[0], 200, W - 80)
+    f1 = font("w9", s1)
+    x1 = (W - _tw(f1, rows[0])) // 2
+    _ttext(d, (x1, 24), rows[0], f1, (255, 255, 255), stroke_width=max(10, s1 // 11), stroke_fill=acc)
+    _ttext(d, (x1, 24), rows[0], f1, (255, 255, 255), stroke_width=max(4, s1 // 30), stroke_fill=(0, 0, 0))
+    # 吹き出し（キャラの反対側から口元へ）
+    bw = int(W * 0.60)
+    bh = int(H * 0.36)
+    bx0 = (W - bw - 40) if left else 40
+    by0 = int(H * 0.44)
+    box = (bx0, by0, bx0 + bw, by0 + bh)
+    tip_x = bx + (int(bu.width * 0.62) if left else int(bu.width * 0.38))
+    tip = (tip_x, H - bu.height + int(bu.height * 0.45))
+    sx = box[2] - 60 if not left else box[0] + 60
+    d.polygon([(sx - 30, box[1] + bh // 2 - 26), (sx + 30, box[1] + bh // 2 + 26), tip], fill=(255, 255, 255),
+              outline=(18, 14, 12))
+    d.rounded_rectangle(box, radius=36, fill=(255, 255, 255), outline=(18, 14, 12), width=7)
+    s2 = min(_fit_w(r, 96, bw - 60) for r in rows[1:])
+    f2 = font("w9", s2)
+    y = by0 + (bh - int(s2 * 1.2) * len(rows[1:])) // 2
+    for tx in rows[1:]:
+        _ttext(d, (bx0 + (bw - _tw(f2, tx)) // 2, y), tx, f2, (20, 16, 12))
+        y += int(s2 * 1.2)
+    return img.convert("RGB")
+
+
+def layout_title_paper(spec):
+    """別案3（紙面型）。明るい紙の地に、会社名を赤で大きく、2行は黒。右に白黒の場面の写真、角にずんだもん。"""
+    slug = spec.get("_key", "").split("#")[0]
+    st = _title_style(slug)
+    rows = _title_rows(spec)
+    acc = st["accent"]
+    img = Image.new("RGBA", (W, H), (246, 242, 230, 255))
+    left = st["char_left"]
+    pw = int(W * 0.40)
+    ph = int(H * 0.70)
+    photo = _scene_bg(pw, ph, st["bg"], "mono")
+    px = 40 if left else W - pw - 40
+    py = int(H * 0.08)
+    d = ImageDraw.Draw(img)
+    d.rectangle([px - 10, py - 10, px + pw + 10, py + ph + 10], fill=(255, 255, 255), outline=(30, 30, 30), width=4)
+    img.alpha_composite(photo, (px, py))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, 18], fill=acc)
+    d.rectangle([0, H - 18, W, H], fill=acc)
+    tx0 = (px + pw + 50) if left else 50
+    maxw = W - pw - 140
+    s1 = _fit_w(rows[0], 180, maxw)
+    f1 = font("w9", s1)
+    y = 70
+    _ttext(d, (tx0, y), rows[0], f1, (206, 26, 36), stroke_width=4, stroke_fill=(120, 10, 16))
+    y += int(s1 * 1.18)
+    d.rectangle([tx0, y, tx0 + maxw, y + 8], fill=(30, 30, 30))
+    y += 30
+    s2 = min(_fit_w(r, 92, maxw) for r in rows[1:])
+    f2 = font("w9", s2)
+    for tx in rows[1:]:
+        _ttext(d, (tx0, y), tx, f2, (20, 20, 22))
+        y += int(s2 * 1.22)
+    bu = bust(spec.get("who", "zundamon"), st["emo"], height=int(H * 0.46), crop=0.42).convert("RGBA")
+    if not left:
+        bu = bu.transpose(Image.FLIP_LEFT_RIGHT)
+    if st["fx"]:
+        bu = _fx(bu, st["fx"], inner_left=left)
+    bxx = (px + pw - int(bu.width * 0.55)) if left else (px - int(bu.width * 0.45))
+    img.alpha_composite(bu, (bxx, H - bu.height - 10))
+    return img.convert("RGB")
+
+def _title_big(spec):
+    """spec に title（2行）があればそれを、無ければ _key の slug から TITLE_BIG を引く。"""
+    if spec.get("title"):
+        return spec["title"]
+    return TITLE_BIG.get(spec.get("_key", "").split("#")[0])
+
 
 
 def layout_doc(spec):
@@ -2797,19 +3100,27 @@ def layout_doc(spec):
         img.alpha_composite(bu, (W - int(bu.width * 0.86), H - bu.height + 6))
     d = ImageDraw.Draw(img)
     key = spec.get("_key", "")
-    label = spec.get("label", "")
+    label = "" if spec.get("title") else spec.get("label", "")
     if label:
         _budget("tag", label, 11, key)
         fl = font("w9", 46)
         d.rectangle([40, 34, 40 + _tw(fl, label) + 36, 34 + 70], fill=(206, 20, 26))
         _ttext(d, (58, 42), label, fl, (255, 255, 255))
-    lines = spec["lines"]
+    big = spec.get("title")                  # 題名型は layout_title に移した（2026-11-19）
+    if big:
+        hook = spec["lines"]
+        lines = big
+    else:
+        hook = None
+        lines = spec["lines"]
     maxw = int(W * (0.60 if emo else 0.70))                            # キャラありは字を左に寄せて頭にかけない
     size = 150
     while size > 70 and max(sum(_tw(font("w9", size), t) for t, _ in ln) for ln in lines) > maxw:
         size -= 4
     f = font("w9", size)
     y = 140 + (2 - len(lines)) * size // 2
+    if hook:
+        y = 120
     for ln in lines:
         _budget("say", "".join(t for t, _ in ln), 10, key)               # 2026-11-14 短い落差型は各行10字前後
         x = 40
@@ -2817,6 +3128,21 @@ def layout_doc(spec):
             _ttext(d, (x, y), t, f, DOC_COL.get(c, c), stroke_width=max(8, size // 12), stroke_fill=(0, 0, 0))
             x += _tw(f, t)
         y += int(size * 1.18)
+    if hook:
+        # 落差の2行を1行にまとめ、題名より小さく（題名の約半分）
+        segs = []
+        for i, ln in enumerate(hook):
+            if i:
+                segs.append(("　", "w"))
+            segs += list(ln)
+        hs = min(80, size // 2 + 6)
+        while hs > 36 and sum(_tw(font("w9", hs), t) for t, _ in segs) > maxw:
+            hs -= 2
+        fh = font("w9", hs)
+        x = 40
+        for t, c in segs:
+            _ttext(d, (x, y + 4), t, fh, DOC_COL.get(c, c), stroke_width=max(6, hs // 12), stroke_fill=(0, 0, 0))
+            x += _tw(fh, t)
     sub = spec.get("sub", "")
     if sub:
         _budget("sub", sub, 20, key)
@@ -4750,8 +5076,9 @@ SPECS = {
 
 
 def render(slug, out_path=None):
-    spec = SPECS[slug]
-    kind = spec["layout"]
+    spec = dict(SPECS[slug])
+    spec.setdefault("_key", slug)
+    kind = "title" if slug in TITLE_ORDER else spec["layout"]
     img = {"split": layout_split, "band": layout_band, "ba": layout_beforeafter,
            "charbig": layout_charbig, "photo": layout_photo,
            "bold": layout_bold, "face": layout_face,
@@ -4761,6 +5088,7 @@ def render(slug, out_path=None):
            "scene": layout_scene,
            "doc": layout_doc,
            "quote": layout_quote,
+           "title": layout_title,
            "panels": layout_panels}.get(kind, layout_hero)(spec)
     if out_path is None:
         from ytf.config import find_project_dir
