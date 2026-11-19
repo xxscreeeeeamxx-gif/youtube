@@ -1,0 +1,1236 @@
+meta:
+  title: ニコニコ動画の会長「画質が悪いのは大変な問題」、有料会員は頂点の3分の1に【ずんだもん解説】
+  slug: niconico-kawakami
+  hook_line: コメントが流れるニコニコ動画の会長は、なぜ「画質」で頭を下げたのか。
+  summary: 2017年11月28日、ニコニコ動画の新しい版の発表会。ドワンゴ会長の川上量生は「他のサービスと比べ、画質が悪いのは大変な問題」と頭を下げます。動画を1本も持たず、YouTubeの動画にコメントを重ねる「（仮）」の名前で始まったサイトは、なぜ画質でつまずいたのか。YouTubeの動画が使えなくなった日、自前の置き場、3年の赤字、有料会員の頂点、そして2024年のサイバー攻撃の朝。本人の講演・インタビューと会社の発表の言葉で、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - ITmedia NEWS「川上会長、niconicoが重いのは「大変な問題」 「半年で解決したい」」（2017年11月28日） https://www.itmedia.co.jp/news/articles/1711/28/news147.html
+  - ITmedia NEWS「「ネットはもうからないという幻想、壊したい」 川上会長が語る、ニコ動のこれまでと今」（2009年10月9日） https://www.itmedia.co.jp/news/article/0910/09/1091009049/
+  - ITmedia NEWS「ニコニコ動画がいったん終了 「YouTubeがアクセス一部遮断」」（2007年2月26日） https://www.itmedia.co.jp/news/articles/0702/26/news010.html
+  - ドワンゴ「当社サービスへのサイバー攻撃に関するご報告とお詫び」（2024年6月14日） https://dwango.co.jp/news/5131439897051136/
+  - KADOKAWA（PR TIMES）「ランサムウェア攻撃による情報漏洩に関するお知らせ」（2024年8月5日） https://prtimes.jp/main/html/rd/p/000015155.000007006.html
+  - KADOKAWA「2027年3月期 第2四半期 決算説明資料」（2026年11月12日） https://ssl4.eir-parts.net/doc/9468/ir_material_for_fiscal_ym10/218061/00.pdf
+  tags:
+  - ニコニコ動画
+  - 川上量生
+  - ドワンゴ
+  - ニワンゴ
+  - 夏野剛
+  - KADOKAWA
+  - YouTube
+  - プレミアム会員
+  - 弾幕
+  - 時報
+  - ニコニコ超会議
+  - ランサムウェア
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 有料会員が3分の1に
+    bottom: ニコニコ動画
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: kyaku1
+    label: 客席
+    voice: 12
+    pitch: 0.0
+  - id: kyaku2
+    label: 客席
+    voice: 21
+    pitch: 0.04
+  - id: shain
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: gishi
+    label: 技術者
+    voice: 67
+    pitch: 0.0
+  - id: koizuka
+    label: 戀塚
+    voice: 100
+    pitch: -0.04
+  - id: shinjin
+    label: 新人
+    voice: 21
+    pitch: 0.02
+    outfit: suit
+    color: '#5a6a8a'
+  - id: keiri
+    label: 経理
+    voice: 8
+    pitch: 0.08
+    outfit: suit
+    color: '#7a5a6a'
+  - id: riyosha
+    label: 利用者
+    voice: 12
+    pitch: 0.02
+  - id: riyosha2
+    label: 利用者
+    voice: 73
+    pitch: 0.0
+  - id: raijo
+    label: 来場者
+    voice: 21
+    pitch: 0.06
+  - id: natsuno
+    label: 夏野
+    voice: 13
+    pitch: -0.06
+    outfit: suit
+    color: '#2a2f3a'
+  - id: shain24a
+    label: 社員
+    voice: 11
+    pitch: 0.04
+    outfit: suit
+    color: '#3a4f5f'
+  - id: shain24b
+    label: 社員
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#454a55'
+  - id: kaihatsu
+    label: 開発者
+    voice: 100
+    pitch: 0.04
+scenes:
+# ---- 先出し（2017年11月28日・新しい版の発表会。川上の台詞は ITmedia の引いた形のまま・語尾をいじらない。泣く・怒るなし。笑いの SE なし。客席の声は記事の地の文の言い換えで、実在の人の言葉ではない。「引責」と言わない） ----
+- id: co_happyokai
+  title: ''
+  background: nc_happyokai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 川上, emotion: sad}
+  - {who: kyaku1, x: 0.56, emotion: normal}
+  - {who: kyaku2, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2017年11月28日。コメントが流れる動画サイト、ニコニコ動画の新しい版の発表会。
+    reading: にせん じゅうななねん じゅういちがつ にじゅうはちにち。こめんとが ながれる どうがさいと、にこにこどうがの あたらしい はんの はっぴょうかい。
+  - speaker: kyaku1
+    emotion: normal
+    text: 有料の会員でも、動画が止まるんですよ。
+  - speaker: kyaku2
+    emotion: normal
+    text: ほかのサイトより、画面も粗いですし。
+  - speaker: zundamon
+    emotion: sad
+    text: '[他の|ホカノ]サービスと比べ、画質が悪いのは大変な問題。'
+  - speaker: zundamon
+    emotion: sad
+    text: ……あと半年、お待ちください。
+  - speaker: reimu
+    text: この男は、川上量生。ニコニコ動画を作った会社、ドワンゴの会長です。3週間後、会長を退きます。
+    reading: この おとこわ、かわかみ のぶお。にこにこどうがお つくった かいしゃ、どわんごの かいちょうです。さんしゅうかんご、かいちょうお しりぞきます。
+# ---- 今の部屋（動画に1人でツッコむ → 流せたら → 11年前の（仮）の予告 → 問い。20秒ほど） ----
+- id: hook
+  title: ''
+  background: nc_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: そこで転ぶのかーい！
+  - speaker: zundamon
+    emotion: sad
+    text: ……動画に1人でツッコんでも、むなしいのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: そのツッコミ、動画の上に流せたら？
+  - speaker: zundamon
+    emotion: thinking
+    text: みんなのツッコミが流れたら、うるさいのだ。
+  - speaker: tsumugi
+    emotion: happy
+    text: それが、日本で大流行したの。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 2006年に、[（仮）|カッコカリ]の名前で始まったニコニコ動画よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: コメントが流れる動画サイトを作った人は、なぜ画質で頭を下げたのか。
+    telops:
+    - {text: "コメントの動画サイトは なぜ画質で頭を下げた？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: コメントじゃなくて、画質で！？
+# ---- 2001年・着メロ（30秒以内。年号カードで時を戻すのはここだけ。「大ポカン」は2012年の本人の言葉） ----
+- id: card2001
+  title: ''
+  background: nc_card_2001
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 2001年。ネットワークゲームの仕組みの会社として始まった、ドワンゴ。
+    reading: にせん いちねん。ねっとわーく げーむの しくみの かいしゃとして はじまった、どわんご。
+- id: ch1_chakumero
+  title: 大ポカンの着メロ
+  background: nc_chakumero
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 川上, emotion: happy}
+  - {who: shain, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 会長、うちが着メロをやるって本当ですか！？
+  - speaker: zundamon
+    emotion: happy
+    text: ケータイの着メロだ。
+  - speaker: shain
+    emotion: thinking
+    text: ゲームの会社が、着メロ……？
+  - speaker: reimu
+    text: 川上は2012年に、このときの周りの反応をこう振り返ります。
+    reading: かわかみわ にせん じゅうにねんに、この ときの まわりの はんのうお こう ふりかえります。
+  - speaker: zundamon
+    emotion: happy
+    text: ドワンゴが着メロサービスをやるなんていうから、もうみんな大ポカンだったわけで
+  - speaker: shain
+    emotion: happy
+    text: 会長！ 着メロが、売れてます！
+  - speaker: zundamon
+    emotion: happy
+    text: 大ポカンが、大当たりだ。
+    beat: true
+# ---- 2006年・会議室（2015年の言葉は「振り返る」と付け、同じ記事の2つの言葉を続けて置く。「とにかくプロトタイプを作ろう」は記事の地の文の中の言葉で話し手が書かれていないので、川上の台詞にせずナレで。背景差し替え①：ホワイトボード → 壁一面の紙） ----
+- id: ch2_kaigi
+  title: このままだと潰れる
+  background: nc_kaigi
+  bgm: kinakusai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 川上, emotion: thinking}
+  - {who: shain, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2006年。着うたが広がって着メロの売れ行きが落ち、会社の決算は赤字になります。
+    reading: にせん ろくねん。ちゃくうたが ひろがって ちゃくめろの うれゆきが おち、かいしゃの けっさんわ あかじに なります。
+  - speaker: shain
+    emotion: sad
+    text: 会長。着うたに押されて、着メロの売上がまた下がってます……。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……次の柱が要るな。
+  - speaker: reimu
+    text: 川上は2015年に、このころをこう振り返ります。
+    reading: かわかみわ にせん じゅうごねんに、この ころお こう ふりかえります。
+  - speaker: zundamon
+    emotion: normal
+    text: このままだと会社が潰れるから、何か新しいことをやらなくちゃいけないと
+  - speaker: zundamon
+    emotion: normal
+    text: 必要に迫られてやっただけですよ
+  - speaker: zundamon
+    emotion: normal
+    text: ニコ動のときは動画生放送で勝負しようと思っていて、
+  - speaker: zundamon
+    emotion: happy
+    text: その前にテストで動画サービスをつくったら当たってしまった。
+  - speaker: shain
+    emotion: surprised
+    text: 会長！ 議論を始めて半年、案の紙で壁が埋まりました！
+    background: nc_kaigi_kami
+    beat: true
+  - speaker: zundamon
+    emotion: surprised
+    text: ……壁が、見えないな。
+  - speaker: reimu
+    text: とにかくプロトタイプを作ろう、となります。その試作が、11年後に画質で頭を下げるサイトになります。
+    reading: とにかく ぷろとたいぷお つくろうと なります。その しさくが、じゅういちねんごに がしつで あたまお さげる さいとに なります。
+# ---- 2006年夏〜秋・3つの試作（「川上が考えた」と言わない。1つ目・2つ目の作り手の名前は出さない。首を左右に振る笑い。「これはいける」は記事では「確信したという」＝心の中なので、声に出さない一言にする。テロップ・題名に使わない） ----
+- id: ch3_shisaku
+  title: 3つの試作
+  background: nc_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: normal}
+  - {who: shain, x: 0.6, emotion: normal}
+  - {who: gishi, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 1つ目の試作です。YouTubeの動画の横に、コメントが並びます。
+  - speaker: shain
+    emotion: normal
+    text: 動画を見て……コメントを見て……。
+  - speaker: gishi
+    emotion: normal
+    text: 動画を見て……コメントを見て……。
+  - speaker: shain
+    emotion: sad
+    text: ……首が、疲れます。
+    se: manuke
+  - speaker: zundamon
+    emotion: thinking
+    text: どっちも、ちゃんと見られないな。
+- id: ch3_gamen
+  title: ''
+  background: nc_gamen
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: normal}
+  - {who: shain, x: 0.6, emotion: normal}
+  - {who: gishi, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: gishi
+    emotion: happy
+    text: 2つ目は、外の会社の人の試作です。コメントが、動画の上を流れます！
+  - speaker: shain
+    emotion: surprised
+    text: 文字が、映像の上を流れていく！
+  - speaker: zundamon
+    emotion: happy
+    text: （……これは、いけるのだ）
+    beat: true
+# ---- 3つ目（川上の指示で戀塚が作った。戀塚の台詞は2007年の本人の言葉だけ。日数は「数日」） ----
+- id: ch3_koizuka
+  title: ''
+  background: nc_kaihatsu_3
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: shain, x: 0.56, emotion: surprised}
+  - {who: koizuka, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 3つ目は、川上の指示で、技術者の戀塚昭彦が作ります。2ちゃんねるの実況を意識した試作です。
+    reading: みっつめわ かわかみの しじで、ぎじゅつしゃの こいづか あきひこが つくります。にちゃんねるの じっきょうお いしきした しさくです。
+  - speaker: shain
+    emotion: surprised
+    text: 画面を埋めるほどコメントが重なる、[弾幕|ダンマク]の仕組みも入ってます！
+  - speaker: zundamon
+    emotion: surprised
+    text: もう、動いてるのだ！？
+  - speaker: reimu
+    text: 試作は、数日でできあがりました。戀塚は2007年に、こう話しています。
+    reading: しさくわ、すうじつで できあがりました。こいづかわ にせん ななねんに、こう はなして います。
+  - speaker: koizuka
+    emotion: happy
+    text: 実際に絵が動くシステムを一刻も早く組み上げてしまいたかったんです
+  - speaker: zundamon
+    emotion: thinking
+    text: 仕組みはできた。……下の動画は、1本もうちの物じゃないけどな。
+# ---- 2006年12月・正体を隠した開店（隠したのが誰の判断かは言わない。（仮）の札はテロップで） ----
+- id: ch4_kari
+  title: （仮）のまま開店
+  background: nc_kaihatsu
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: shinjin, x: 0.56, emotion: normal}
+  - {who: gishi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: gishi
+    emotion: happy
+    text: 名前は、ニコニコ動画に決まりました。
+  - speaker: shinjin
+    emotion: thinking
+    text: 運営の会社の名前は、出さないんですか？
+  - speaker: gishi
+    emotion: normal
+    text: 出さない。個人が趣味でやってるように見せるんだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 名前のうしろの[（仮）|カッコカリ]は……？
+  - speaker: gishi
+    emotion: happy
+    text: 仮のオープンだからな。
+    beat: true
+  - speaker: reimu
+    text: 2006年12月12日。ニコニコ動画は（仮）のまま、ひっそりと始まります。
+    reading: にせん ろくねん じゅうにがつ じゅうににち。にこにこどうがわ かっこかりの まま、ひっそりと はじまります。
+    telops:
+    - {text: "2006年12月12日 ニコニコ動画（仮）", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+# ---- 動画はよそ、コメントは自分（材料1を劇中の職場で。川上の台詞は2009年の「動画データ自体は、YouTubeでもなんでもいい」の趣旨から外れない。425万円は「のちの見込み」。1分に約3000円は台帳の割り算） ----
+- id: ch4_karimono
+  title: 動画は借り物
+  background: nc_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: shinjin, x: 0.84, emotion: thinking}
+  cuts:
+  - speaker: shinjin
+    emotion: thinking
+    text: 会長。動画は、どこに置くんですか？
+  - speaker: zundamon
+    emotion: happy
+    text: 置かないのだ。YouTubeのを、借りるのだ。
+  - speaker: shinjin
+    emotion: surprised
+    text: 借り物！？ じゃあ、うちの物は？
+  - speaker: zundamon
+    emotion: happy
+    text: コメントだ。
+  - speaker: shinjin
+    emotion: happy
+    text: 置き場がよそなら、回線の代金もかかりませんね。
+  - speaker: zundamon
+    emotion: normal
+    text: ……今のところは、な。
+  - speaker: reimu
+    text: のちに自前で置いたとき、回線などの代金は1日 約425万円の見込み。1分に約3000円です。
+    reading: のちに じまえで おいた とき、かいせんなどの だいきんわ いちにち やく よんひゃく にじゅうごまんえんの みこみ。いっぷんに やく さんぜんえんです。
+  - speaker: reimu
+    text: 見る人が増えるほど、代金もふくらむ。画質の問題は、この代金と隣り合わせでした。
+    reading: みる ひとが ふえるほど だいきんも ふくらむ。がしつの もんだいわ、この だいきんと となりあわせでした。
+# ---- 2006年12月〜2007年1月・押し寄せる人（ひろゆきは舞台に出さず、ナレで肩書きだけ。言葉は2013年の本人の話。背景差し替え③：緑のランプ → 全部赤） ----
+- id: ch5_server
+  title: 押し寄せる人
+  background: nc_server
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: gishi, x: 0.84, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 運営の会社の取締役には、2ちゃんねるの管理人のひろゆきも。川上は2013年にこう話しています。
+    reading: うんえいの かいしゃの とりしまりやくにわ、にちゃんねるの かんりにんの ひろゆきも。かわかみわ にせん じゅうさんねんに こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 1番初めにひろゆきが宣伝して
+  - speaker: zundamon
+    emotion: happy
+    text: '[2ちゃんねらー|ニチャンネラー]やビッパーっていう人たちが大量にきたんですよね'
+  - speaker: gishi
+    emotion: surprised
+    text: 会長！ 人が増えすぎて、サーバーが追いつきません！
+    background: nc_server_aka
+  - speaker: zundamon
+    emotion: surprised
+    text: ランプが、全部赤なのだ！
+  - speaker: gishi
+    emotion: thinking
+    text: 見る人に登録してもらって、負荷を減らしましょう！
+# ---- 2007年2月・切られた日（全体の2〜3割の所。YouTube を悪者にしない。「遮断」「使えなくなった」。賭けの中身は言わない） ----
+- id: card2007
+  title: ''
+  background: nc_card_2007
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2007年2月。画質で頭を下げる10年あまり前、サイトはまだ動画を1本も持っていません。
+    reading: にせん ななねん にがつ。がしつで あたまお さげる じゅうねん あまり まえ、さいとわ まだ どうがお いっぽんも もって いません。
+- id: ch6_kirareru
+  title: 動画が出ない日
+  background: nc_kaigi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: thinking}
+  - {who: gishi, x: 0.56, emotion: surprised}
+  - {who: shain, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: gishi
+    emotion: surprised
+    text: 会長、攻撃がもう3日目です！ 今夜、サイトを止めます！
+  - speaker: shain
+    emotion: surprised
+    text: 会長！ YouTubeの動画も、出ません！
+    se: gaan
+  - speaker: reimu
+    text: 同じころ、YouTubeがニコニコ動画からのアクセスの一部を遮断していました。
+    reading: おなじ ころ、ゆーちゅーぶが にこにこどうがからの あくせすの いちぶお しゃだん して いました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……来たか。
+  - speaker: shain
+    emotion: surprised
+    text: 会長、やけに落ち着いてますね……。
+  - speaker: reimu
+    text: 川上は2009年に、このときをこう振り返ります。
+    reading: かわかみわ にせん きゅうねんに、この ときお こう ふりかえります。
+  - speaker: zundamon
+    emotion: normal
+    text: YouTubeに切られるリスクは最初から予想していて、
+  - speaker: zundamon
+    emotion: happy
+    text: いつ切られるかをひろゆきと賭けていた
+    telops:
+    - {text: "川上「いつ切られるかをひろゆきと賭けていた」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: normal
+    text: 2月ごろにはニコ動の再生ランキングとYouTubeのランキングが連動を始めて、
+  - speaker: zundamon
+    emotion: sad
+    text: こりゃまずいと、思っていたら切られた
+  - speaker: reimu
+    text: YouTubeは、遮断の理由を公に言っていません。24日の夜、いったんサービスを終えると告知します。
+    reading: ゆーちゅーぶわ、しゃだんの りゆうお おおやけに いって いません。にじゅうよっかの よる、いったん さーびすお おえると こくち します。
+# ---- 2007年2月28日〜3月・自前の置き場（15億5000万円は2007年11月の見込み。場面は3月なので数字はナレで時点を付ける） ----
+- id: ch7_jimae
+  title: 自前の置き場
+  background: nc_server_kara
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: angry}
+  - {who: gishi, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 自前の置き場を作って、再開すると発表する。
+  - speaker: gishi
+    emotion: surprised
+    text: 会長。動画を置くサーバーから、全部うちで用意するんですか！？
+  - speaker: zundamon
+    emotion: angry
+    text: 借りられないなら、置くしかないのだ。
+  - speaker: gishi
+    emotion: thinking
+    text: ……このサーバー室、空っぽですけど。
+  - speaker: zundamon
+    emotion: sad
+    text: ……埋めるのだ。
+    beat: true
+- id: ch7_ippai
+  title: ''
+  background: nc_server_ippai
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: gishi, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: gishi
+    emotion: happy
+    text: 会長！ 3月の初め、自前の置き場で再開できました！
+  - speaker: gishi
+    emotion: surprised
+    text: でも見る人が多すぎて、テストで作った負荷じゃ足りません！
+  - speaker: zundamon
+    emotion: surprised
+    text: 本番のほうが、テストより重い！？
+    beat: true
+  - speaker: reimu
+    text: その年の11月の見込みでは、回線とデータセンターとサイトの見張りの代金は、年15億5000万円。
+    reading: その としの じゅういちがつの みこみでわ、かいせんと でーたせんたーと さいとの みはりの だいきんわ ねん じゅうごおく ごせんまんえん。
+    telops:
+    - {text: "回線など 年15億5000万円（2007年11月の見込み）", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 見る人が増えるほど、出ていくのだ……。
+# ---- 2007年6月・525円の「ポカン」（2012年の本人の言葉。低画質モードは混雑時の仕組みとしてナレで。誰の判断かは言わない） ----
+- id: ch8_premium
+  title: 525円のポカン
+  background: nc_kaigi
+  bgm: honwaka_puppu
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: shain, x: 0.84, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 会長！ 6月から月525円の有料会員、本当にやるんですか！？
+  - speaker: shain
+    emotion: thinking
+    text: ネットの動画に毎月お[金|かね]を払う人なんて、いますか！？
+  - speaker: reimu
+    text: プレミアム会員の始まりです。川上は2012年に、このときもこう振り返ります。
+    reading: ぷれみあむ かいいんの はじまりです。かわかみわ にせん じゅうにねんに、この ときも こう ふりかえります。
+  - speaker: zundamon
+    emotion: happy
+    text: ニコニコ動画のプレミアム会員制度を導入して、
+  - speaker: zundamon
+    emotion: happy
+    text: これを収益にするっていうことを決めた時もポカンだし
+# ---- 低画質モード（あった、あった。利用者は名前の無いモブ） ----
+- id: ch8_economy
+  title: ''
+  background: nc_gamen
+  stage:
+  - {who: riyosha, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 混み合う夜の時間は、払った人が先。払っていない人は、画質を落とした低画質モードです。
+    reading: こみあう よるの じかんわ はらった ひとが さき。はらって いない ひとわ、がしつお おとした ていがしつ もーどです。
+  - speaker: riyosha
+    emotion: thinking
+    text: 夜になると、急に画面が粗くなるんだよな……。
+  - speaker: riyosha
+    emotion: sad
+    text: これが、エコノミーモードか。
+  - speaker: riyosha
+    emotion: thinking
+    text: 払えば、夜でもきれいに見られるのか……。
+# ---- 今の部屋（数の整理30秒。大家さんの例えは台帳の例え。YouTube は理由を言っていない・ニコニコ側も推測。9億円は台帳の割り算） ----
+- id: heya_kazu
+  title: 足りない会費
+  background: nc_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 使えなくなって自分で置いて、今度はお[金|かね]を取るのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 借りていた家の大家さんに、鍵を替えられたようなものね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: でも、家賃は払っていなかったの。
+    se: tsukkomi
+  - speaker: zundamon
+    emotion: surprised
+    text: ……ただで住んでたのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: YouTubeは、理由を言っていないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ニコニコの側も、ただ乗りで負荷をかけたと見ていたの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2007年11月、有料の会員は14万4000人。無料の会員は401万人よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 14万4000人が525円ずつで、1年で約9億円。見込みの回線代の6割ほどね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 足りないのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: しかも会員は、1日に1万5000人ずつ増えていたの。
+  - speaker: zundamon
+    emotion: sad
+    text: 増えるほど、回線代も増えるのだ……。
+    beat: true
+# ---- 時報（あった、あった①。苦しさを段階的に。利用者を笑い者にしない。言葉は2011年の講演の書き起こしの形。背景差し替え④：画面 → 大きな時計） ----
+- id: ch9_jiho
+  title: やめない時報
+  background: nc_gamen
+  bgm: pop
+  stage:
+  - {who: riyosha, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 夜の決まった時刻には、見ている動画が止まって、時報が流れます。
+    reading: よるの きまった じこくにわ、みて いる どうがが とまって じほうが ながれます。
+  - speaker: riyosha
+    emotion: happy
+    text: よし、ここからがいちばんいい所……！
+  - speaker: riyosha
+    emotion: surprised
+    text: ……止まった！ 時報だ！
+    background: nc_jiho
+- id: ch9_jiho2
+  title: ''
+  background: nc_gamen
+  stage:
+  - {who: riyosha, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: riyosha
+    emotion: happy
+    text: 今日こそ、最後まで……！
+  - speaker: riyosha
+    emotion: angry
+    text: また時報！？ なんで毎回、いちばんいい所なんだよ！
+    background: nc_jiho
+- id: ch9_jiho3
+  title: ''
+  background: nc_jiho
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: riyosha, x: 0.84, emotion: angry}
+  cuts:
+  - speaker: reimu
+    text: 川上は2011年の講演で、こう話しています。
+    reading: かわかみわ にせん じゅういちねんの こうえんで、こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: ユーザーからこれだけはやめてくれっていうことを何年間も言われ続けているんですけども、
+  - speaker: zundamon
+    emotion: happy
+    text: 我々は絶対にやめるつもりはなくって
+  - speaker: reimu
+    text: 時報の理由を、同じ講演でこう話しています。
+    reading: じほうの りゆうお、おなじ こうえんで こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 理由がないっていうのが理由だったわけです。
+  - speaker: riyosha
+    emotion: surprised
+    text: 理由、ないのかよ！
+    se: oti
+  - speaker: reimu
+    text: 0時の時報が終わったのは、2020年2月12日。川上が退いた、あとのことです。
+    reading: れいじの じほうが おわったのわ、にせん にじゅうねん にがつ じゅうににち。かわかみが しりぞいた あとの ことです。
+# ---- 2009年10月・巨大な幻想（取材の言葉は「取材にこう答えています」と出どころを言う。材料4はここ。先の予告） ----
+- id: ch10_gensou
+  title: 巨大な幻想
+  background: nc_kaigi
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 2009年10月。赤字が続くなか、川上は取材にこう答えています。
+    reading: にせん きゅうねん じゅうがつ。あかじが つづく なか、かわかみわ しゅざいに こう こたえて います。
+  - speaker: zundamon
+    emotion: angry
+    text: ネットでお[金|かね]がもうからないというのは10年ぐらいで連綿と作られてしまった巨大な幻想。
+  - speaker: zundamon
+    emotion: normal
+    text: 多くのユーザーが使う巨大なポータルを作れば、もうからないことはあり得ない。
+  - speaker: zundamon
+    emotion: normal
+    text: そういう前提で、黒字化は急いでいない。ただ、さすがにそろそろもうけないと。
+  - speaker: zundamon
+    emotion: normal
+    text: YouTubeの戦略は、動画データをとにかく多く、高解像度で集めること。
+  - speaker: zundamon
+    emotion: normal
+    text: うちはそれを志向していないし、同じことをしても勝てない。
+    telops:
+    - {text: "川上「同じことをしても勝てない」（2009年）", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: reimu
+    text: このとき、まだ誰も、8年後に同じ人が画質で頭を下げるとは思っていません。
+    reading: この とき まだ だれも、はちねんごに おなじ ひとが がしつで あたまお さげるとわ おもって いません。
+# ---- 2009年11月・決算の発表（夏野は「ドコモでiモードを手がけた」の1行だけ。台詞は「黒字化への道筋は確実に付いた」だけ） ----
+- id: ch10_natsuno
+  title: ''
+  background: nc_kaigi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: normal}
+  - {who: natsuno, x: 0.56, emotion: happy}
+  - {who: shain, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 11月の決算の発表。ドコモでiモードを手がけた夏野剛が、黒字化を担当する取締役でした。
+    reading: じゅういちがつの けっさんの はっぴょう。どこもで あいもーどお てがけた なつの たけしが、くろじかお たんとう する とりしまりやくでした。
+  - speaker: natsuno
+    emotion: happy
+    text: 黒字化への道筋は確実に付いた
+  - speaker: shain
+    emotion: thinking
+    text: この9月までの1年で、ニコニコの事業は18億3000万円の赤字ですけど……。
+    beat: true
+# ---- 2010年春・初めての黒字（四半期の額は言わない。「3年あまりの赤字のあとに、初めて黒字」） ----
+- id: card2010
+  title: ''
+  background: nc_card_2010
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 2010年の春。
+    reading: にせん じゅうねんの はる。
+- id: ch10_kuroji
+  title: 初めての黒字
+  background: nc_kaigi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: normal}
+  - {who: keiri, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: keiri
+    emotion: happy
+    text: 会長！ 3年あまりの赤字のあと、初めての黒字です！
+    se: levelup
+  - speaker: zundamon
+    emotion: happy
+    text: ……3年かかったのだ。
+# ---- 2012年4月・超会議と頂点（あった、あった。収支の言葉は2012年の本人の言葉。2014年の統合は1行。角川は出さない） ----
+- id: card2012
+  title: ''
+  background: nc_card_2012
+  cuts:
+  - speaker: reimu
+    text: 2012年4月、千葉の幕張メッセ。第1回のニコニコ超会議です。
+    reading: にせん じゅうにねん しがつ、ちばの まくはり めっせ。だいいっかいの にこにこ ちょうかいぎです。
+- id: ch11_chokaigi
+  title: 祭りの頂点
+  background: nc_chokaigi
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: shain, x: 0.56, emotion: happy}
+  - {who: raijo, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: raijo
+    emotion: surprised
+    text: 通路まで、人でぎっしりだ！
+  - speaker: shain
+    emotion: happy
+    text: 会長！ 会場に9万2384人です！ ネットでも347万人！
+  - speaker: raijo
+    emotion: surprised
+    text: どこを見ても、なんでもあるぞ……！
+  - speaker: reimu
+    text: 川上は同じ年に、ねらいと収支をこう話しています。
+    reading: かわかみわ おなじ としに、ねらいと しゅうしお こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 一個のジャンルでみんなが満足しないって言うなら、
+  - speaker: zundamon
+    emotion: happy
+    text: （ほぼ）全部のジャンルでやってやろうと。
+  - speaker: zundamon
+    emotion: happy
+    text: '[約4〜5億円|ヤクヨンゴオクエン]の[大赤字|オオアカジ]'
+    beat: true
+- id: ch11_256
+  title: ''
+  background: nc_board_256
+  stage:
+  - {who: zundamon, x: 0.16, flip: true, tag: 川上, emotion: happy}
+  - {who: shain, x: 0.84, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 2014年、ドワンゴは出版のKADOKAWAと経営統合します。
+    reading: にせん じゅうよねん、どわんごわ しゅっぱんの かどかわと けいえい とうごう します。
+  - speaker: shain
+    emotion: happy
+    text: 会長！ 2016年、有料会員は256万人です！
+  - speaker: zundamon
+    emotion: happy
+    text: 256万人……！
+    se: jaan
+  - speaker: reimu
+    text: これが、いちばん高い所でした。
+    reading: これが、いちばん たかい ところでした。
+# ---- 2017年・重い、粗い（数字は時点つき。延期は利用者の口で。YouTube と数字で比べない） ----
+- id: card2017
+  title: ''
+  background: nc_card_2017
+  bgm: kinakusai
+  cuts:
+  - speaker: reimu
+    text: 2017年9月末。有料会員は228万人で、前の年の256万人から減っていました。
+    reading: にせん じゅうななねん くがつまつ。ゆうりょう かいいんわ にひゃく にじゅうはちまんにんで、まえの としの にひゃく ごじゅうろくまんにんから へって いました。
+- id: ch12_omoi
+  title: 重い、粗い
+  background: nc_gamen
+  stage:
+  - {who: riyosha, x: 0.2, flip: true, emotion: sad}
+  - {who: riyosha2, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: riyosha
+    emotion: sad
+    text: 有料の会員なのに、また止まった……。
+  - speaker: riyosha2
+    emotion: thinking
+    text: ほかのサイトのほうが、きれいに見えるんだよな。
+  - speaker: riyosha2
+    emotion: sad
+    text: 新しい版、10月に出るはずだったのにまだなんだって。
+  - speaker: riyosha
+    emotion: sad
+    text: 新しい機能より、画質と重さを直してほしい……。
+  - speaker: riyosha2
+    emotion: sad
+    text: 有料でも止まるなら、払う意味が……。
+  - speaker: reimu
+    text: 8年前、動画を多く高い画質で集めることは志向しない、と言った会社。その画質に、不満が集まっていました。
+    reading: はちねんまえ、どうがお おおく たかい がしつで あつめる ことわ しこう しないと いった かいしゃ。その がしつに、ふまんが あつまって いました。
+# ---- 2017年11月28日・発表会（転落の山場。全体の6〜7割。冒頭の回収。SE・ボケなし。言葉は ITmedia の記事の並びのまま（1→3→6→7、間を抜くだけ）。記者の問いは作らない） ----
+- id: ch13_happyokai
+  title: 画質が悪いのは大変な問題
+  background: nc_happyokai
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 川上, emotion: normal}
+  - {who: kyaku1, x: 0.56, emotion: normal}
+  - {who: kyaku2, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: 新しい版では、こんなことができるようになります。
+  - speaker: kyaku1
+    emotion: normal
+    text: それより、画質は……？
+  - speaker: kyaku2
+    emotion: sad
+    text: 重いのは、どうなるんだろう。
+  - speaker: reimu
+    text: 11月28日の発表会。画質と重さと有料会員について、川上はこう話します。
+    reading: じゅういちがつ にじゅうはちにちの はっぴょうかい。がしつと おもさと ゆうりょう かいいんに ついて、かわかみわ こう はなします。
+  - speaker: zundamon
+    emotion: sad
+    text: '[他の|ホカノ]サービスと比べ、画質が悪いのは大変な問題。'
+    telops:
+    - {text: "川上「画質が悪いのは大変な問題」", size: md, position: top-right, color: "#8AD0FF", stroke: "#0A1A2A", glow: "#2A6ACC", anim: up}
+  - speaker: zundamon
+    emotion: sad
+    text: 画質と重さの改善はずっと努力しているが、根が深く解決に時間がかかっている
+  - speaker: zundamon
+    emotion: normal
+    text: 今後もプレミアム会員を廃止する予定はない
+  - speaker: zundamon
+    emotion: sad
+    text: あと半年お待ちください。
+  - speaker: reimu
+    text: 新しい版の公開が延びたことについては、こう謝ります。
+    reading: あたらしい はんの こうかいが のびた ことに ついてわ、こう あやまります。
+  - speaker: zundamon
+    emotion: sad
+    text: 本当に申し訳ないとしか言えないが、開発が遅れている
+    pause_after: 1.2
+# ---- 11月30日・夜の机（本人名の声明の連続した一部。12月21日の退任は「代表取締役会長CTO → 取締役CTO」。CTO はもとからなので「会長を退き、取締役に」まで。会社の説明どおり。「引責」と言わない。背景：発表会 → 夜の机） ----
+- id: ch13_tsukue
+  title: ''
+  background: nc_tsukue_yoru
+  bgm: 223am
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 川上, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 2日後。川上は、自分の名前で謝罪文を出します。
+    reading: ふつかご。かわかみわ、じぶんの なまえで しゃざいぶんお だします。
+  - speaker: zundamon
+    emotion: sad
+    text: ユーザーの皆さんの不便や不満点に[十分|じゅうぶん]目を向けてられていなかったことについて
+  - speaker: zundamon
+    emotion: sad
+    text: 改めて深くおわびさせてください
+  - speaker: reimu
+    text: 12月21日、川上は会長を退き、取締役に。会社は、新しい技術の開発に集中するためと説明しました。
+    reading: じゅうにがつ にじゅういちにち、かわかみわ かいちょうお しりぞき とりしまりやくに。かいしゃわ、あたらしい ぎじゅつの かいはつに しゅうちゅう する ためと せつめい しました。
+# ---- 2019年2月・社長を降りる（川上の台詞なし。画とナレだけ。「業績が悪くなり、社長を降りた」の範囲） ----
+- id: card2019
+  title: ''
+  background: nc_card_2019
+  cuts:
+  - speaker: reimu
+    text: 2019年2月。カドカワは、黒字の見込みだった1年の最終損益を、43億円の赤字の見込みに改めます。
+    reading: にせん じゅうきゅうねん にがつ。かどかわわ くろじの みこみだった いちねんの さいしゅう そんえきお、よんじゅうさんおくえんの あかじの みこみに あらためます。
+- id: ch14_shacho
+  title: 社長を降りる
+  background: nc_shachoshitsu_kara
+  cuts:
+  - speaker: reimu
+    text: 同じ日、川上はカドカワの社長を辞めて取締役に。ドワンゴの社長には、夏野剛が就きます。
+    reading: おなじ ひ、かわかみわ かどかわの しゃちょうお やめて とりしまりやくに。どわんごの しゃちょうにわ、なつの たけしが つきます。
+# ---- 2024年6月8日・ケーブルを抜いた朝（締めの山。会社の発表の言葉だけ。攻撃者の名前・国・身代金は言わない。川上は出さない。背景差し替え⑤：暗いデータセンター → 抜かれたケーブル） ----
+- id: card2024
+  title: ''
+  background: nc_card_2024
+  bgm: serious
+  cuts:
+  - speaker: reimu
+    text: 2024年6月8日、午前3時30分ごろ。
+    reading: にせん にじゅうよねん ろくがつ ようか、ごぜん さんじ さんじゅっぷん ごろ。
+- id: ch15_kogeki
+  title: 6月8日の朝
+  background: nc_server_yoru
+  stage:
+  - {who: shain24a, x: 0.2, flip: true, emotion: surprised}
+  - {who: shain24b, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: shain24a
+    emotion: surprised
+    text: ニコニコが、全部つながりません！
+  - speaker: reimu
+    text: 午前8時ごろ。ランサムウェアを含むサイバー攻撃によるものと確認されます。
+    reading: ごぜん はちじ ごろ。らんさむうぇあお ふくむ さいばー こうげきに よる ものと かくにん されます。
+  - speaker: shain24b
+    emotion: surprised
+    text: データが暗号化されてる……ランサムウェアです！
+  - speaker: shain24a
+    emotion: thinking
+    text: サーバーを、遠くから止めます！
+  - speaker: shain24b
+    emotion: surprised
+    text: 遠くから止めたサーバーを、また誰かが起動させてます！
+  - speaker: shain24a
+    emotion: angry
+    text: ……ケーブルを、抜きます。
+    background: nc_server_cable
+    se: don
+  - speaker: shain24b
+    emotion: sad
+    text: ……抜きました。
+  - speaker: reimu
+    text: ドワンゴの発表です。サーバーの電源ケーブルや通信ケーブルを物理的に抜線し封鎖しました。
+    reading: どわんごの はっぴょうです。さーばーの でんげん けーぶるや つうしん けーぶるお ぶつりてきに ばっせんし ふうさ しました。
+    telops:
+    - {text: "ドワンゴ「通信ケーブルを物理的に抜線し封鎖しました」", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+# ---- 6月14日・夏野のビデオメッセージ（言葉は本人の公の言葉だけ。対面の場面にしない） ----
+- id: ch15_natsuno
+  title: ''
+  background: nc_server_cable
+  stage:
+  - {who: natsuno, x: 0.8, emotion: sad}
+  cuts:
+  - speaker: reimu
+    text: 6月14日。ドワンゴの社長の夏野剛が、ビデオメッセージで謝ります。
+    reading: ろくがつ じゅうよっか。どわんごの しゃちょうの なつの たけしが、びでお めっせーじで あやまります。
+  - speaker: natsuno
+    emotion: sad
+    text: この度はご迷惑をおかけいたしまして大変申し訳ありません。
+  - speaker: natsuno
+    emotion: sad
+    text: 復旧に向けて全社員が頑張って作業を進めておりますので、
+  - speaker: natsuno
+    emotion: normal
+    text: 復旧まで今しばらくお待ちください
+# ---- 6月14日15時・（Re:仮）（あった、あった②。開発チームの言葉は名前の無いモブで。札は背景にある。流れるコメントは架空の画面の場面で） ----
+- id: ch15_rekari
+  title: （Re:仮）
+  background: nc_karifuda
+  bgm: you_and_me
+  stage:
+  - {who: kaihatsu, x: 0.2, flip: true, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 同じ日の15時。机の上の札は、（Re:仮）。18年前の（仮）から、もう一度始めます。
+    reading: おなじ ひの じゅうごじ。つくえの うえの ふだわ、かっこりかり。じゅうはちねん まえの かっこかりから、もう いちど はじめます。
+  - speaker: kaihatsu
+    emotion: normal
+    text: 動画のデータは、外のクラウドにあって無事でした。
+  - speaker: kaihatsu
+    emotion: happy
+    text: 動画を見て、コメントを書くだけ。2006年の始まりと同じ形です。
+  - speaker: kaihatsu
+    emotion: happy
+    text: 開発のチームで言い出して、3日で作りました。
+- id: ch15_rekari_gamen
+  title: ''
+  background: nc_gamen
+  stage:
+  - {who: riyosha, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: riyosha
+    emotion: surprised
+    text: 2007年の動画だ……！ コメントが、流れてる！
+    se: levelup
+  - speaker: riyosha
+    emotion: happy
+    text: アカウントが無くても、見られるんだ！
+# ---- 8月5日・再開（流出は会社の発表どおり短く。利用者のアカウントとカードは「漏洩は確認されていない」） ----
+- id: ch15_saikai
+  title: ''
+  background: nc_gamen
+  stage:
+  - {who: riyosha, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: riyosha
+    emotion: happy
+    text: 帰ってきた……！ 2か月ぶりだ！
+  - speaker: reimu
+    text: 8月5日に再開。漏れた個人情報は、取引先や社員、グループの学校の生徒などの25万4241人分。
+    reading: はちがつ いつかに さいかい。もれた こじん じょうほうわ とりひきさきや しゃいん、ぐるーぷの がっこうの せいとなどの にじゅうごまん よんせん にひゃく よんじゅういちにんぶん。
+  - speaker: reimu
+    text: ニコニコの利用者のアカウント情報とカード情報は、漏洩が確認されていません。
+    reading: にこにこの りようしゃの あかうんと じょうほうと かーど じょうほうわ、ろうえいが かくにん されて いません。
+# ---- 論争1：ニコニコは終わった？（7-1。「オワコン」は地の文で言わない。数字は時点つき。有効会員は数え方が違う。YouTube と数字で比べない。7-2 は2行） ----
+- id: ronso1
+  title: ニコニコは終わった？
+  background: nc_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ ニコニコは、YouTubeに負けて終わったって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 有料会員は、2016年の256万人から2026年9月末には87.1万人。
+    telops:
+    - {text: "有料会員 256万人→87.1万人（2026年9月末）", size: md, position: top-right, color: "#FF8A8A", stroke: "#2A0A0A", glow: "#CC0000", anim: up}
+  - speaker: tsumugi
+    emotion: normal
+    text: 頂点の、約[3分の1|さんぶんのいち]よ。
+  - speaker: zundamon
+    emotion: happy
+    text: ほら、やっぱりなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも、2026年9月末の有効会員は1億1057万人。
+  - speaker: tsumugi
+    emotion: normal
+    text: 数え方は、昔の数とは違うけどね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 1億！？ じゃあ、終わってないのだ！
+  - speaker: tsumugi
+    emotion: thinking
+    text: どっちなのよ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: ニコニコを含む事業は、2026年4月から9月で13億円あまりの営業黒字よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: それに2009年の[川上|カワカミ]は、YouTubeと同じことをしても勝てないと言っていたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 負けたんじゃなくて、別の道……。
+    beat: true
+  - speaker: zundamon
+    emotion: thinking
+    text: でも最初は、よその動画を借りてたのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 使えなくなったあとは自前の置き場に移って、曲の権利の契約や消す仕組みも整えたわ。
+# ---- 論争2：身代金と利用者の情報（7-3。会社が公表したことだけ。「払った」「払わない」を言わない） ----
+- id: ronso2
+  title: 身代金と情報
+  background: nc_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: 身代金はどうなったのだ！？ ネットには、いろいろ書いてあるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社は、身代金については何も言っていないの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社が書いたのは、報道への抗議と『犯罪行為に屈することなく』の言葉まで。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、ボクの情報は……？
+  - speaker: tsumugi
+    emotion: normal
+    text: ニコニコの利用者のアカウントとカードの情報は、漏洩が確認されていないわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: カードの情報は、もともと社内に持っていなかったの。
+  - speaker: zundamon
+    emotion: normal
+    text: ……確認されてない、なのだ。
+    beat: true
+  - speaker: zundamon
+    emotion: normal
+    text: ネットのうわさより、会社の発表を読むのだ。
+# ---- 本当の注意点（7章の1と3。3はつむぎの助言として。2は1行。会社の呼びかけは主語を付ける） ----
+- id: chui
+  title: 見に行かない
+  background: nc_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめ。漏れたとされる情報を、見に行かない。広めない。
+  - speaker: tsumugi
+    emotion: normal
+    text: 流出させたと主張する側のサイトは、マルウェアの危険があると会社は呼びかけたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 見に行くだけで、パソコンが危ないのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 悪質な拡散の896件には削除を求めて、刑事告訴に向けた手続きも進めていたの。
+  - speaker: zundamon
+    emotion: surprised
+    text: 広めると、訴えられることもあるのだ……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。事件のあとに届くお詫びや確認のメールにも、気をつけてね。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3つめ。調査した会社は、社員のアカウントの情報が盗まれたのが原因と推測しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたも、パスワードを使い回さない。二段階認証を使う。
+  - speaker: zundamon
+    emotion: sad
+    text: ……全部、同じパスワードなのだ。
+    se: shobon
+  - speaker: tsumugi
+    emotion: normal
+    text: 今日、1つだけでも変えてね。
+# ---- 現代（2026年11月時点。9月末の数字は1つ（40代）。990円は2026年8月から。エコノミーモードは2023-12-04 のドワンゴの発表で「2024-03-01 に廃止」＝発表の形で言う。20年の記念の企画は言わない。川上は「KADOKAWA の取締役」まで。「ドワンゴ会長」と言わない） ----
+- id: card2026
+  title: ''
+  background: nc_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。
+    reading: にせん にじゅうろくねん。
+- id: ima
+  title: ニコニコのいま
+  background: nc_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: normal}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: normal
+    text: ニコニコは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 会社の資料では、2026年9月末の利用者でいちばん多いのは40代よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 40代！？ ボクより、ずっと先輩なのだ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 有料会員の月額は、2026年8月から990円になったわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 525円のころの、倍近くなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 混む夜に画質を落とす仕組みは、2024年3月になくすと発表されたわ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 画質を落とすのを、やめたのだ……！
+  - speaker: tsumugi
+    emotion: normal
+    text: そして12月12日で、サービスが始まって20年。
+  - speaker: zundamon
+    emotion: surprised
+    text: '[（仮）|カッコカリ]だったのに、20年も続いたのだ！'
+  - speaker: zundamon
+    emotion: thinking
+    text: '[川上|カワカミ]さんは、いまどうしてるの？'
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年6月の時点で、[KADOKAWA|カドカワ]の取締役よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 3月には、新しいスマホのアプリを始めたわ。
+  - speaker: zundamon
+    emotion: happy
+    text: また、新しいのを始めたのだ。
+# ---- 締め（茶番の「流す」と、（仮）→（Re:仮）の回収。行動の一言は注意点の3） ----
+- id: shime
+  title: ''
+  background: nc_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ ボクのツッコミも、[（仮）|カッコカリ]の名前で流すのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 正体を隠すところまで、まねしなくていいの。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 動画を借りて[（仮）|カッコカリ]で始まったサイトは、18年後に[（Re:仮）|カッコリカリ]から始め直したわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 画質で頭を下げたサイトは、20年たったいまもコメントを流し続けているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 止まっても、またコメントが流れ始めたのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: あなたのアカウントも、パスワードの使い回しだけはやめてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi

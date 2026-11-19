@@ -1,0 +1,1205 @@
+meta:
+  title: 「アウトだと分かっていて」任天堂へ持ち込んだポケモン、5億本のシリーズに【ずんだもん解説】
+  slug: pokemon-tajiri
+  hook_line: 考えた本人がアウトだと思ったゲームは、なぜ5億本のシリーズになったのか。
+  summary: 1995年の秋、ゲームフリークの田尻智は仕上がったカセットを任天堂へ持っていきます。2台のゲーム機をつなぐケーブルで、勝ち負けではなく生き物を行き来させる。それまで対戦に使われていたケーブルの、新しい遊び方でした。小さな会社はほかの仕事で食いつなぎながら、6年かけて形にします。売れない2月に出たゲームは、週間1位まで1年半。何が火をつけたのか。本人と作り手たちの公の言葉をもとに、再現ドラマでたどります。（2026年11月時点）
+  sources:
+  - 株式会社ポケモン「沿革」 https://corporate.pokemon.co.jp/aboutus/history/
+  - 株式会社ゲームフリーク「会社概要」 https://www.gamefreak.co.jp/company/about/
+  - 任天堂「第86期 定時株主総会 質疑応答（要旨）」（2026年6月26日） https://www.nintendo.co.jp/ir/pdf/2026/qa2606.pdf
+  - TIME「The Ultimate Game Freak」（1999年11月22日） https://time.com/archive/6951818/the-ultimate-game-freak/
+  - 'Nintendo「Iwata Asks: Pokémon HeartGold Version & SoulSilver Version」 https://www.nintendo.com/en-gb/Iwata-Asks/Iwata-Asks-Pokemon-HeartGold-Version-SoulSilver-Version/Iwata-Asks-Pokemon-HeartGold-Version-SoulSilver-Version/1-Just-Making-The-Last-Train/1-Just-Making-The-Last-Train-225842.html'
+  - ほぼ日刊イトイ新聞「特集 編集とは何か。」久保雅一 第4回（2021年10月28日） https://www.1101.com/n/s/14editors/masakazu_kubo/2021-10-28.html
+  tags:
+  - ポケモン
+  - ポケットモンスター
+  - 田尻智
+  - ゲームフリーク
+  - 任天堂
+  - ゲームボーイ
+  - 通信ケーブル
+  - ミュウ
+  - 赤・緑
+  - 石原恒和
+  - 増田順一
+  - コロコロコミック
+  - ゲーム会社
+  - 再現ドラマ
+  - ゆっくり
+  - ずんだもん
+  - 企業史
+  - 平成史
+  thumbnail:
+    top: 発売までの6年で
+    bottom: ポケモン
+  mode: drama
+  narrator: reimu
+  mobs:
+  - id: nin
+    label: 任天堂の人
+    voice: 13
+    pitch: -0.04
+    outfit: suit
+    color: '#2a2f3a'
+  - id: shain
+    label: 社員
+    voice: 11
+    pitch: 0.0
+    outfit: suit
+    color: '#4a5a7a'
+  - id: shain2
+    label: 社員
+    voice: 67
+    pitch: 0.02
+    outfit: suit
+    color: '#5a6a8a'
+  - id: masuda
+    label: 増田
+    voice: 12
+    pitch: 0.0
+    outfit: suit
+    color: '#3e5c4a'
+  - id: ishihara
+    label: 石原
+    voice: 13
+    pitch: -0.08
+    outfit: suit
+    color: '#2f3440'
+  - id: morimoto
+    label: 森本
+    voice: 21
+    pitch: 0.04
+    outfit: suit
+    color: '#5a4a3a'
+  - id: henshu
+    label: 編集部員
+    voice: 100
+    pitch: 0.06
+    outfit: suit
+    color: '#6a5a48'
+  - id: kubo
+    label: 久保
+    voice: 13
+    pitch: 0.08
+    outfit: suit
+    color: '#3a4f5f'
+  - id: tenin
+    label: 店員
+    voice: 8
+    pitch: 0.08
+    outfit: apron
+  - id: kodomo1
+    label: 子ども
+    voice: 73
+    pitch: 0.0
+  - id: kodomo2
+    label: 子ども
+    voice: 8
+    pitch: 0.14
+scenes:
+# ---- 先出し（1995年の秋・任天堂の会議室〔架空〕。台詞は TIME 1999 の訳だけ。任天堂の人は悪意なく、田尻の「期待されていなかった」はナレで。笑いの SE なし。「ところが、セーフだった」は ch5_ichii に取っておく） ----
+- id: co_kaigi
+  title: ''
+  background: pk_kaigi
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: thinking}
+  - {who: nin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1995年の秋。携帯ゲーム機のソフトを6年かけて仕上げた男が、任天堂へ向かいます。
+    reading: せんきゅうひゃく きゅうじゅうごねんの あき。けいたい げーむきの そふとお ろくねん かけて しあげた おとこが、にんてんどうえ むかいます。
+  - speaker: zundamon
+    emotion: normal
+    text: 仕上がった、カセットです。
+  - speaker: nin
+    emotion: normal
+    text: ……ゲームボーイの人気、いま落ちてますからね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……6年、かかったのだ。
+  - speaker: reimu
+    text: 1999年のアメリカの雑誌の取材に、田尻はこう話しています。あまり期待されていなかった。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねんの あめりかの ざっしの しゅざいに、たじりわ こう はなして います。あまり きたい されて いなかった。
+  - speaker: zundamon
+    emotion: sad
+    text: アウトだと分かっていて、二塁に滑り込む野球選手の気分でした。
+    pause_after: 0.6
+  - speaker: reimu
+    text: この男は、田尻智。ゲームはポケットモンスター。30年後、シリーズは5億本を超えます。
+    reading: この おとこわ、たじり さとし。げーむわ ぽけっと もんすたー。さんじゅうねんご、しりーずわ ごおくほんお こえます。
+# ---- 今の部屋（交換しないとそろわない。20秒以内。問いは「世界一」でなく台帳で確かめられる「5億本」） ----
+- id: hook
+  title: ''
+  background: pk_heya
+  bgm: shuffle_shuffle
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: シールが全部そろうまで、1人で買い続けるのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 友だちと交換すれば、早いのに。
+  - speaker: zundamon
+    emotion: angry
+    text: 交換なんて、損した気分になるし。
+  - speaker: tsumugi
+    emotion: thinking
+    text: その交換を遊びにして、6年かけたゲームがあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 考えた本人はアウトだと思ったのに、なぜ5億本を超えるシリーズになったのか。
+    telops:
+    - {text: "アウトだと思ったゲームは なぜ5億本のシリーズに？", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: アウトなのに、5億本！？
+# ---- 1970年代・町田の雑木林（30秒以内。子供時代は演じない。言葉は TIME 1999 の訳。あだ名は1回。背景差し替え：雑木林 → 造成地） ----
+- id: ch1_mushi
+  title: 虫がいなくなった町
+  background: pk_zokibayashi
+  bgm: hirusagari
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1970年代の東京・町田。ほかの子に虫博士と呼ばれた田尻は、同じ取材で子どものころをこう話しています。
+    reading: せんきゅうひゃく ななじゅうねんだいの とうきょう まちだ。ほかの こに むしはかせと よばれた たじりわ、おなじ しゅざいで こどもの ころお こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 虫を集めることに、すごく興味があったんです。
+  - speaker: zundamon
+    emotion: sad
+    text: やがて開発が進むにつれて、虫はみんな追い払われていきました。
+    background: pk_zokibayashi_zosei
+  - speaker: reimu
+    text: 町から消えた虫が、なぜ5億本のシリーズにつながるのか。
+    reading: まちから きえた むしが、なぜ ごおくほんの しりーずに つながるのか。
+# ---- 1980年代のはじめ・手書きの雑誌（1万部の別冊は言わない。杉森の手紙は2016年の鼎談の言葉のまま。杉森は台詞なし） ----
+- id: ch1_doujin
+  title: ''
+  background: pk_doujin
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1980年代のはじめ。高専の田尻は、手書きのゲーム雑誌ゲームフリークを作ります。
+    reading: せんきゅうひゃく はちじゅうねんだいの はじめ。こうせんの たじりわ、てがきの げーむざっし げーむふりーくお つくります。
+  - speaker: reimu
+    text: 雑誌に手紙を送ってきたのが、のちにキャラクターをまとめる杉森建。田尻は2016年にこう話しています。
+    reading: ざっしに てがみお おくって きたのが、のちに きゃらくたーお まとめる すぎもり けん。たじりわ にせん じゅうろくねんに こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: 僕もかなりゲームをやったと思っていたのに、
+  - speaker: zundamon
+    emotion: surprised
+    text: タイトーのナナハンライダーみたいな自分が知らないゲームばかりを、
+  - speaker: zundamon
+    emotion: happy
+    text: '[杉森|スギモリ]くんは書いてくるんです。'
+    beat: true
+# ---- 1989年4月・株式会社ゲームフリーク（年号カード1枚目。社員は名前の無いモブ） ----
+- id: card1989
+  title: ''
+  background: pk_card_1989
+  bgm: pop
+  cuts:
+  - speaker: reimu
+    text: 1989年4月。23歳の田尻は、雑誌と同じ名前の会社を作ります。株式会社ゲームフリーク。
+    reading: せんきゅうひゃく はちじゅうきゅうねん しがつ。にじゅうさんさいの たじりわ、ざっしと おなじ なまえの かいしゃお つくります。かぶしきがいしゃ げーむ ふりーく。
+- id: ch2_kaisha
+  title: ''
+  background: pk_mansion
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain, x: 0.8, emotion: happy}
+  cuts:
+  - speaker: shain
+    emotion: happy
+    text: 社長、名刺ができました。
+  - speaker: zundamon
+    emotion: surprised
+    text: ……社長って、ボクのことなのだ？
+  - speaker: shain
+    emotion: normal
+    text: はい。[下北沢|シモキタザワ]のマンションの、社長です。
+    beat: true
+# ---- 1989〜1990年・ケーブルを見た日（2:00 までに着く。ゲームボーイの説明は1行。テトリスの名前は出さない。「虫」は脚色で、本人の言葉は「生き物」とナレで言う。背景差し替え：机のゲーム機 → 雑木林の上を伸びるコード） ----
+- id: ch2_cable
+  title: 勝ち負けじゃない
+  background: pk_cable
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 同じ年、任天堂が携帯ゲーム機のゲームボーイを出します。2台をケーブルでつなげる機械です。
+    reading: おなじ とし、にんてんどうが けいたい げーむきの げーむぼーいお だします。にだいお けーぶるで つなげる きかいです。
+  - speaker: shain
+    emotion: normal
+    text: そのケーブル、落ちものパズルの対戦に使うやつですよね。
+  - speaker: zundamon
+    emotion: thinking
+    text: 勝ち負けだけに使うのは、もったいない。
+  - speaker: shain
+    emotion: surprised
+    text: じゃあ、何を送るんです？
+  - speaker: zundamon
+    emotion: happy
+    text: ……虫なのだ。
+  - speaker: shain
+    emotion: surprised
+    text: 虫！？
+    se: bikkuri
+  - speaker: reimu
+    text: 本人の言葉では、生き物。田尻は1999年に、こう話しています。
+    reading: ほんにんの ことばでわ、いきもの。たじりわ せんきゅうひゃく きゅうじゅうきゅうねんに、こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: ゲームボーイの、通信のところ。心に強く残るイメージでした。
+  - speaker: zundamon
+    emotion: happy
+    text: あのケーブルに、すごく興味をひかれました。
+  - speaker: zundamon
+    emotion: happy
+    text: 本物の生き物が、ケーブルの上を行ったり来たりするのを思い浮かべたんです。
+    background: pk_atama
+  - speaker: zundamon
+    emotion: normal
+    text: みんな、対戦に使っていました。
+  - speaker: zundamon
+    emotion: happy
+    text: 考えたのは、情報が行ったり来たりすること。勝ち負けの話じゃなかった。
+    telops:
+    - {text: "田尻「勝ち負けの話じゃなかった」", size: md, position: top-right, color: "#FFFFFF", stroke: "#1E222E", glow: "#3A6AFF", anim: up}
+  - speaker: shain
+    emotion: surprised
+    text: 相手と、取り替えっこするんですか？
+  - speaker: zundamon
+    emotion: happy
+    text: そう。交換だ。
+  - speaker: shain
+    emotion: thinking
+    text: 生き物を、どうやって持ち歩くんです？
+  - speaker: zundamon
+    emotion: happy
+    text: カプセルに、入れる。
+  - speaker: reimu
+    text: 企画の名前は、カプセルモンスター。この交換のゲームが、なぜ発売まで6年もかかるのか。
+    reading: きかくの なまえわ、かぷせる もんすたー。この こうかんの げーむが、なぜ はつばいまで ろくねんも かかるのか。
+# ---- 1990年・任天堂へ（年号カード2枚目。「断られた」と言わない。担当は名前の無いモブで冷たくしない。宮本は台詞なし、師の話は TIME の地の文と田尻の言葉） ----
+- id: card1990
+  title: ''
+  background: pk_card_1990
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1990年。田尻は、この企画を任天堂に持ち込みます。
+    reading: せんきゅうひゃく きゅうじゅうねん。たじりわ、この きかくお にんてんどうに もちこみます。
+- id: ch2_nintendo
+  title: 分かってもらえない企画
+  background: pk_kaigi
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: happy}
+  - {who: nin, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: nin
+    emotion: normal
+    text: ……交換、ですか。
+  - speaker: zundamon
+    emotion: happy
+    text: はい。集めた生き物を、友だちと交換するんです。
+  - speaker: nin
+    emotion: thinking
+    text: それで、どこが面白いんでしょう。
+  - speaker: zundamon
+    emotion: normal
+    text: ケーブルの上を、生き物が行ったり来たりするんです。
+  - speaker: nin
+    emotion: thinking
+    text: ……対戦では、ないんですね。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……うまく、言えません。
+  - speaker: reimu
+    text: ゲームのコンセプトが、よく分からなかったと聞かされた。田尻は1999年に、そう話しています。
+    reading: げーむの こんせぷとが、よく わからなかったと きかされた。たじりわ せんきゅうひゃく きゅうじゅうきゅうねんに、そう はなして います。
+  - speaker: reimu
+    text: 任天堂の宮本茂は田尻の師匠になり、助言を続けます。田尻は同じ取材で、こう話しています。
+    reading: にんてんどうの みやもと しげるわ たじりの ししょうに なり、じょげんお つづけます。たじりわ おなじ しゅざいで、こう はなして います。
+  - speaker: zundamon
+    emotion: normal
+    text: もらった助言は、ひとつ残らず覚えました。
+  - speaker: zundamon
+    emotion: happy
+    text: 心の師匠です。
+  - speaker: reimu
+    text: それでも任天堂は、田尻のゲーム作りを買って契約します。交換のゲームは、なぜ5億本に届くのか。
+    reading: それでも にんてんどうわ、たじりの げーむづくりお かって けいやく します。こうかんの げーむわ、なぜ ごおくほんに とどくのか。
+# ---- 1991〜1994年・ほかのゲームで食いつなぐ（止まった年・再開した年は言わない。横井は1行。ゲームの画は出さず名前の紙だけ。背景はシーンごとに紙が1枚ずつ増え、うちのゲームの字があせる） ----
+- id: ch3_board
+  title: ほかの仕事で食いつなぐ
+  background: pk_board
+  bgm: pop
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 発売まで、ここから6年。小学1年生が、卒業するまでの長さです。
+    reading: はつばいまで、ここから ろくねん。しょうがく いちねんせいが、そつぎょう するまでの ながさです。
+  - speaker: shain
+    emotion: normal
+    text: 社長、ホワイトボードに次の仕事を貼りますね。
+  - speaker: zundamon
+    emotion: surprised
+    text: うちのゲームの横に！？
+  - speaker: reimu
+    text: 1991年の暮れ。任天堂の横井軍平に頼まれた、ヨッシーのたまごが出ます。
+    reading: せんきゅうひゃく きゅうじゅういちねんの くれ。にんてんどうの よこい ぐんぺいに たのまれた よっしーの たまごが でます。
+  - speaker: shain
+    emotion: happy
+    text: 社長、ヨッシーが当たりました！
+  - speaker: zundamon
+    emotion: happy
+    text: ……これで、もう少し続けられる。
+  - speaker: shain
+    emotion: thinking
+    text: うちのゲームは、いつ作るんです？
+  - speaker: zundamon
+    emotion: thinking
+    text: ……次の仕事の、あとだ。
+    beat: true
+- id: ch3_board_masuda
+  title: ''
+  background: pk_board
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: masuda, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 設立のときからの社員、増田順一は2019年にこう話しています。
+    reading: せつりつの ときからの しゃいん、ますだ じゅんいちわ にせん じゅうきゅうねんに こう はなして います。
+  - speaker: masuda
+    emotion: happy
+    text: 当たってくれて、本当にありがたかった。おかげで、助かったんです。
+- id: ch3_board2
+  title: ''
+  background: pk_board_2
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: ishihara, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1993年には、マリオとワリオ。エイプという会社の、石原恒和たちと作ります。
+    reading: せんきゅうひゃく きゅうじゅうさんねんにわ、まりおと わりお。えいぷと いう かいしゃの いしはら つねかずたちと つくります。
+  - speaker: reimu
+    text: 石原は2016年に、エイプにいたころ初めて企画書を見た印象をこう話しています。
+    reading: いしはらわ にせん じゅうろくねんに、えいぷに いた ころ はじめて きかくしょお みた いんしょうお こう はなして います。
+  - speaker: ishihara
+    emotion: thinking
+    text: 企画として荒削りな所もあって、技術的な検証もできていないものでしたが、
+  - speaker: ishihara
+    emotion: happy
+    text: これが実現できれば今までとは全く違う遊びが
+  - speaker: ishihara
+    emotion: happy
+    text: できるんじゃないかという印象はありましたね。
+- id: ch3_board2b
+  title: ''
+  background: pk_board_2
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: shain
+    emotion: normal
+    text: 社長、2枚目を貼ります。
+  - speaker: zundamon
+    emotion: thinking
+    text: うちのゲームは……？
+  - speaker: shain
+    emotion: thinking
+    text: ……来年、ですかね。
+    beat: true
+- id: ch3_board3
+  title: ''
+  background: pk_board_3
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1994年には、パルスマン。
+    reading: せんきゅうひゃく きゅうじゅうよねんにわ、ぱるすまん。
+  - speaker: shain
+    emotion: normal
+    text: 3枚目、貼ります。
+  - speaker: zundamon
+    emotion: surprised
+    text: うちのゲームの字、薄くなってないか？
+  - speaker: shain
+    emotion: normal
+    text: 書いてから、もう4年ですから。
+    se: zukko
+- id: ch3_board3b
+  title: ''
+  background: pk_board_3
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: thinking}
+  - {who: masuda, x: 0.86, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 増田は同じ取材で、こうも話しています。
+    reading: ますだわ おなじ しゅざいで、こうも はなして います。
+  - speaker: masuda
+    emotion: thinking
+    text: 何かの収入がなければ、ポケモンまでの6年を会社は越えられませんでした。
+# ---- 熱くなるパソコン（2016年の増田の言葉はナレで。煙と保存の笑いは名前の無い社員の脚色。苦しさを段階的に。背景差し替え：開発室 → 煙） ----
+- id: ch3_kemuri
+  title: ''
+  background: pk_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain2, x: 0.86, emotion: surprised}
+  cuts:
+  - speaker: reimu
+    text: 増田は2016年に、パソコンがいつも熱くなって壊れたことを覚えていると話しています。
+    reading: ますだわ にせん じゅうろくねんに、ぱそこんが いつも あつく なって こわれた ことお おぼえて いると はなして います。
+  - speaker: shain2
+    emotion: surprised
+    text: 社長、パソコンがまた熱くなってます！
+  - speaker: zundamon
+    emotion: normal
+    text: ……冷やすのだ。
+  - speaker: shain2
+    emotion: happy
+    text: うちわで、あおぎます！
+  - speaker: shain2
+    emotion: surprised
+    text: あおいだら、煙が出ました！
+    background: pk_kaihatsu_kemuri
+  - speaker: zundamon
+    emotion: surprised
+    text: あおぐの、やめ！ やめ！
+  - speaker: shain2
+    emotion: surprised
+    text: もう、画面が見えません！
+  - speaker: shain2
+    emotion: sad
+    text: 煙で、社長の顔も見えません！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……データは、保存してあるよな？
+  - speaker: shain2
+    emotion: sad
+    text: ……保存したかどうか、覚えてないです。
+    se: chin
+# ---- 年は不明・下北沢の事務所（全体の4割前後。TIME 1999 の地の文だと言う。田尻の言葉は脚色の一言だけ、中身は言わせない。辞めた人の名前・台詞は作らない。「翌朝」とは言わない。9人とつなげない） ----
+- id: ch3_yoru
+  title: 社員に話したこと
+  background: pk_jimusho_yoru
+  bgm: serious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: sad}
+  - {who: shain2, x: 0.8, emotion: thinking}
+  cuts:
+  - speaker: reimu
+    text: 1999年のアメリカの雑誌によれば、会社はつぶれかけて社員の給料を払うのもやっとの月が続きました。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねんの あめりかの ざっしに よれば、かいしゃわ つぶれかけて しゃいんの きゅうりょうお はらうのも やっとの つきが つづきました。
+  - speaker: shain2
+    emotion: thinking
+    text: 社長。今月も、給料の分がぎりぎりです。
+  - speaker: zundamon
+    emotion: sad
+    text: ……先月も、そう聞いたな。
+  - speaker: shain2
+    emotion: sad
+    text: その前の月もです。
+    beat: true
+  - speaker: zundamon
+    emotion: sad
+    text: ……みんなに、話しておくことがある。
+  - speaker: reimu
+    text: お金の状態がどれほど苦しいかを、田尻は社員に話します。
+    reading: おかねの じょうたいが どれほど くるしいかお、たじりわ しゃいんに はなします。
+- id: ch3_kara
+  title: ''
+  background: pk_jimusho_kara
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: sad}
+  cuts:
+  - speaker: zundamon
+    emotion: sad
+    text: ……。
+  - speaker: reimu
+    text: 同じ雑誌によれば、話を聞いた5人が辞めました。お金も人も尽きかけた会社が、なぜ最後まで作れたのか。
+    reading: おなじ ざっしに よれば、はなしお きいた ごにんが やめました。おかねも ひとも つきかけた かいしゃが、なぜ さいごまで つくれたのか。
+    telops:
+    - {text: "話を聞いた5人が辞めた", size: md, position: top-right, color: "#8AD0FF", stroke: "#0A1A2A", glow: "#2A6ACC", anim: up}
+# ---- 増田の引き継ぎ（2019年の増田の回想。5人の件と同じとも別とも言わない） ----
+- id: ch3_masuda
+  title: プログラマーが一斉に
+  background: pk_kaihatsu
+  bgm: curious
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: thinking}
+  - {who: masuda, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 増田は2019年の同じ取材で、こんな危機も振り返ります。
+    reading: ますだわ にせん じゅうきゅうねんの おなじ しゅざいで、こんな ききも ふりかえります。
+  - speaker: masuda
+    emotion: sad
+    text: プログラマーが全員一斉に辞めて、危機になったことがありました。
+  - speaker: masuda
+    emotion: normal
+    text: 新しい人を雇っても、途中のプログラムを引き継ぐのは難しい。
+  - speaker: masuda
+    emotion: normal
+    text: だから、自分で引き受けたんです。
+# ---- 1993〜1995年・後から足した仕組みと2本（足したのは石原の提案、と増田の2019年の言葉で。2本は宮本の提案「とされる」。石原の「確信はもてませんでした」は論争の章で） ----
+- id: ch3_nihon
+  title: 片方にしかいない生き物
+  background: pk_mansion
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain, x: 0.56, emotion: normal}
+  - {who: masuda, x: 0.78, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 開発の後半に足された仕組みを、増田は2019年にこう話しています。
+    reading: かいはつの こうはんに たされた しくみお、ますだわ にせん じゅうきゅうねんに こう はなして います。
+  - speaker: masuda
+    emotion: normal
+    text: タイプや通信対戦や図鑑は、どれも開発の後半に石原さんの提案で足したんです。
+  - speaker: shain
+    emotion: surprised
+    text: いまから、そんなに足すんですか……。
+  - speaker: zundamon
+    emotion: happy
+    text: 足すのだ。
+    beat: true
+  - speaker: reimu
+    text: ソフトを2本に分ける案は、任天堂の宮本茂の提案とされます。
+    reading: そふとお にほんに わける あんわ、にんてんどうの みやもと しげるの ていあんと されます。
+  - speaker: zundamon
+    emotion: happy
+    text: 2本に分けたら、交換しないと全部はそろわない。
+  - speaker: shain
+    emotion: surprised
+    text: 片方にしか出ない生き物を、交換し合うんですね！
+# ---- 1995年10月・残り300バイトと最後の1匹（森本・石原の言葉は「社長が訊く」2010 の訳、増田は2019年。ミュウの姿は出さない。背景差し替え：容量の札 → 151の札） ----
+- id: card1995
+  title: ''
+  background: pk_card_1995
+  bgm: you_and_me
+  cuts:
+  - speaker: reimu
+    text: 1995年10月。赤と緑の2本が、いったん仕上がります。
+    reading: せんきゅうひゃく きゅうじゅうごねん じゅうがつ。あかと みどりの にほんが、いったん しあがります。
+- id: ch3_300
+  title: 残り300バイト
+  background: pk_board_300
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: morimoto, x: 0.86, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: プログラマーの森本茂樹は2010年に、カセットの中身をこう振り返ります。
+    reading: ぷろぐらまーの もりもと しげきわ にせん じゅうねんに、かせっとの なかみお こう ふりかえります。
+  - speaker: morimoto
+    emotion: normal
+    text: カセットは本当に満杯で、もうほとんど入る場所がありませんでした。
+  - speaker: morimoto
+    emotion: thinking
+    text: 空きは、ほんのわずか300バイトです。
+    telops:
+    - {text: "カセットの空き 残り300バイト", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: 全角なら150字。原稿用紙の半分もない！
+  - speaker: morimoto
+    emotion: happy
+    text: 最後の最後に、ミュウを入れたんです。
+    background: pk_board_mew
+    se: jaan
+  - speaker: reimu
+    text: 151番目の、まぼろしの1匹です。
+    reading: ひゃくごじゅういちばんめの、まぼろしの いっぴきです。
+- id: ch3_300b
+  title: ''
+  background: pk_board_mew
+  stage:
+  - {who: zundamon, x: 0.14, flip: true, tag: 田尻, emotion: normal}
+  - {who: masuda, x: 0.86, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 増田は2019年に、仕上げのころをこう話しています。
+    reading: ますだわ にせん じゅうきゅうねんに、しあげの ころお こう はなして います。
+  - speaker: masuda
+    emotion: happy
+    text: 9人で、赤・緑を完璧なものにしたかったんです。
+  - speaker: masuda
+    emotion: thinking
+    text: 時間をかけすぎて、仕上がる前に世の中のほうが変わってしまいました。
+  - speaker: zundamon
+    emotion: thinking
+    text: ……任天堂へ、持っていこう。
+  - speaker: reimu
+    text: 年末には間に合わず、発売は翌年の2月の末になります。
+    reading: ねんまつにわ まにあわず、はつばいわ よくねんの にがつの すえに なります。
+  - speaker: reimu
+    text: 機械の寿命の終わりまで引っ張った。最終電車に乗り遅れるかと思った、と石原は2010年に振り返ります。
+    reading: きかいの じゅみょうの おわりまで ひっぱった。さいしゅう でんしゃに のりおくれるかと おもったと、いしはらわ にせん じゅうねんに ふりかえります。
+# ---- 1996年2月27日・静かな出だし（田尻は店に出さない。客の子どもと店員は名前の無いモブ。岩田は聞き手として名前を1回だけ） ----
+- id: card1996
+  title: ''
+  background: pk_card_1996
+  bgm: hirusagari
+  cuts:
+  - speaker: reimu
+    text: 1996年2月27日。ポケットモンスター赤・緑が、3900円で発売されます。
+    reading: せんきゅうひゃく きゅうじゅうろくねん にがつ にじゅうしちにち。ぽけっと もんすたー あか みどりが、さんぜん きゅうひゃくえんで はつばい されます。
+- id: ch4_mise
+  title: 静かな出だし
+  background: pk_mise
+  stage:
+  - {who: kodomo1, x: 0.14, flip: true, emotion: normal}
+  - {who: tenin, x: 0.9, emotion: happy}
+  cuts:
+  - speaker: tenin
+    emotion: happy
+    text: いらっしゃい。ゲームボーイの新しいソフト、入ってるよ。
+  - speaker: kodomo1
+    emotion: thinking
+    text: ポケット……モンスター？ 知らないなあ。
+  - speaker: tenin
+    emotion: thinking
+    text: ……2月は、ゲームが売れないんだよなあ。
+    se: tenten
+  - speaker: reimu
+    text: 新しいゲーム機のソフトは、6000円から7000円ほど。3900円は、おこづかいでも手の届く値段でした。
+    reading: あたらしい げーむきの そふとわ、ろくせんえんから ななせんえん ほど。さんぜん きゅうひゃくえんわ、おこづかいでも てのとどく ねだんでした。
+  - speaker: kodomo1
+    emotion: happy
+    text: 3900円なら、お年玉の残りで買えるかも。
+  - speaker: tenin
+    emotion: thinking
+    text: でもこれ、知ってる子がいないんだよ。
+  - speaker: kodomo1
+    emotion: thinking
+    text: ……やめとこうかな。
+    beat: true
+  - speaker: reimu
+    text: 2010年に任天堂の社長の岩田聡に聞かれ、石原はこう振り返ります。本当に、静かな出だしでした。
+    reading: にせん じゅうねんに にんてんどうの しゃちょうの いわた さとるに きかれ、いしはらわ こう ふりかえります。ほんとうに、しずかな でだしでした。
+# ---- 1996年の春・20名に8万通（久保の言葉は2021年のほぼ日の形のまま。編集部員は名前の無いモブ。8万通は久保の言葉、電撃の約7万8千と混ぜない。背景差し替え：編集部 → 机のはがき → 床と廊下） ----
+- id: ch4_henshu
+  title: 20名に8万通
+  background: pk_henshubu
+  bgm: pop
+  stage:
+  - {who: henshu, x: 0.12, flip: true, emotion: happy}
+  cuts:
+  - speaker: reimu
+    text: 1996年の春。小学館の月刊コロコロコミックが、ミュウを20名にプレゼントします。
+    reading: せんきゅうひゃく きゅうじゅうろくねんの はる。しょうがくかんの げっかん ころころ こみっくが、みゅうお にじゅうめいに ぷれぜんと します。
+  - speaker: henshu
+    emotion: happy
+    text: 当たった人は、カセットを送ってもらって書き込んで返すんですよね。
+  - speaker: henshu
+    emotion: surprised
+    text: 応募のはがき、まだ届きます！
+    background: pk_henshubu_hagaki
+- id: ch4_yuka
+  title: ''
+  background: pk_henshubu_yuka
+  stage:
+  - {who: henshu, x: 0.12, flip: true, emotion: surprised}
+  - {who: kubo, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: henshu
+    emotion: surprised
+    text: 廊下まで、はがきです！
+    beat: true
+  - speaker: reimu
+    text: コロコロの編集部にいた久保雅一は、2021年にこう話しています。
+    reading: ころころの へんしゅうぶに いた くぼ まさかずわ、にせん にじゅういちねんに こう はなして います。
+  - speaker: kubo
+    emotion: happy
+    text: たったの20名。
+  - speaker: kubo
+    emotion: surprised
+    text: その枠に、8万通ぐらい応募が来たんです。
+    telops:
+    - {text: "20名のプレゼントに8万通", size: md, position: top-center, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: henshu
+    emotion: surprised
+    text: 4000人に1人……全校400人の小学校を10校集めて、1人ですよ！
+  - speaker: reimu
+    text: ミュウの話は口から口へ。それまでのひと月ぶんが1週間で売れ始めた、と石原は2010年に振り返ります。
+    reading: みゅうの はなしわ くちから くちえ。それまでの ひとつきぶんが いっしゅうかんで うれはじめたと、いしはらわ にせん じゅうねんに ふりかえります。
+# ---- 1996年・休み時間の教室（あった、あった の1つ目。16本目の「ケーブルつないで！」とは別の言い回し。子どもは名前の無いモブ） ----
+- id: ch4_kyoshitsu
+  title: 休み時間の交換
+  background: pk_kyoshitsu
+  bgm: honwaka_puppu
+  stage:
+  - {who: kodomo1, x: 0.3, flip: true, emotion: happy}
+  - {who: kodomo2, x: 0.72, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: そのころ、休み時間の教室。小学生の7割がゲームボーイを持っていた、と久保は話しています。
+    reading: その ころ、やすみじかんの きょうしつ。しょうがくせいの ななわりが げーむぼーいお もって いたと、くぼわ はなして います。
+  - speaker: kodomo1
+    emotion: happy
+    text: ……送るよ。
+  - speaker: kodomo2
+    emotion: surprised
+    text: 来た！
+  - speaker: kodomo1
+    emotion: happy
+    text: そっちのと、取り替えっこね。
+  - speaker: kodomo2
+    emotion: happy
+    text: 図鑑、また1匹うまった！
+    se: levelup
+  - speaker: kodomo1
+    emotion: happy
+    text: こっちのソフトにしか、いないやつだからね。
+  - speaker: kodomo2
+    emotion: thinking
+    text: テレビで遊ぶやつだと、交換できないもんね。
+  - speaker: kodomo2
+    emotion: normal
+    text: ケーブル、店にもう無いんだって。
+# ---- 1996年5月ごろから・ケーブルの品切れ（品切れの札はケーブル。石原の言葉は2016年の形のまま） ----
+- id: ch4_shinagire
+  title: ''
+  background: pk_mise_shinagire
+  stage:
+  - {who: kodomo1, x: 0.14, flip: true, emotion: happy}
+  - {who: tenin, x: 0.92, emotion: sad}
+  cuts:
+  - speaker: kodomo1
+    emotion: happy
+    text: 通信ケーブル、ください！
+  - speaker: tenin
+    emotion: sad
+    text: ごめんね、品切れなんだ。入っても、すぐ無くなるの。
+  - speaker: kodomo1
+    emotion: sad
+    text: えー、また！？
+  - speaker: reimu
+    text: 5月頃からケーブルが品切れ。任天堂がいくら生産しても追い付かない、と石原は2016年に話しています。
+    reading: ごがつごろから けーぶるが しなぎれ。にんてんどうが いくら せいさん しても おいつかないと、いしはらわ にせん じゅうろくねんに はなして います。
+# ---- 1996年10月・青の通信販売（久保の言葉はほぼ日の形のまま。60万本の注文だけ、55万通と混ぜない） ----
+- id: ch5_ao
+  title: 予測の倍の注文
+  background: pk_henshubu
+  bgm: you_and_me
+  stage:
+  - {who: henshu, x: 0.12, flip: true, emotion: surprised}
+  - {who: kubo, x: 0.88, emotion: normal}
+  cuts:
+  - speaker: reimu
+    text: 1996年10月。コロコロは、通信販売だけの青を売り出します。同じ月に、カードゲームも出ました。
+    reading: せんきゅうひゃく きゅうじゅうろくねん じゅうがつ。ころころわ、つうしん はんばいだけの あおお うりだします。おなじ つきに、かーど げーむも でました。
+  - speaker: henshu
+    emotion: surprised
+    text: 青の注文、まだ増えてます！
+  - speaker: reimu
+    text: このときのことも、久保は2021年にこう話しています。
+    reading: この ときの ことも、くぼわ にせん にじゅういちねんに こう はなして います。
+  - speaker: kubo
+    emotion: normal
+    text: 当初は、どんなに売れても[30万本|サンジュウマンボン]くらいだろうと予測していたのが、
+  - speaker: kubo
+    emotion: surprised
+    text: "[60万本|ロクジュウマンボン]の注文が入ったんです。"
+  - speaker: henshu
+    emotion: surprised
+    text: 予測の、倍！？
+    beat: true
+# ---- 1997年・1年半で週間1位（年号カード。1位は石原の2010年の言葉。「アウトじゃ、なかったのだ」は脚色、「ところが、セーフだった」は TIME 1999 の訳で冒頭を回収） ----
+- id: card1997
+  title: ''
+  background: pk_card_1997
+  cuts:
+  - speaker: reimu
+    text: 1997年4月。テレビアニメの放送が始まります。
+    reading: せんきゅうひゃく きゅうじゅうななねん しがつ。てれび あにめの ほうそうが はじまります。
+- id: ch5_ichii
+  title: 1年半で1位
+  background: pk_kaihatsu
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, tag: 田尻, emotion: normal}
+  - {who: shain, x: 0.8, emotion: surprised}
+  cuts:
+  - speaker: shain
+    emotion: surprised
+    text: 社長！ 赤・緑が、週間の売れ行きで1位です！
+    se: don
+  - speaker: zundamon
+    emotion: surprised
+    text: ……1位？
+  - speaker: shain
+    emotion: happy
+    text: 出だしは、ベストテンのぎりぎりだったのに！
+  - speaker: zundamon
+    emotion: thinking
+    text: ……ここまで、長かったのだ。
+  - speaker: reimu
+    text: 週間の1位は、発売から1年半を過ぎてからでした。石原は2010年に、そう振り返ります。
+    reading: しゅうかんの いちいわ、はつばいから いちねんはんお すぎてからでした。いしはらわ にせん じゅうねんに、そう ふりかえります。
+  - speaker: zundamon
+    emotion: happy
+    text: アウトじゃ、なかったのだ。
+  - speaker: reimu
+    text: 1999年の取材で、田尻はあの言葉の続きをこう話しています。
+    reading: せんきゅうひゃく きゅうじゅうきゅうねんの しゅざいで、たじりわ あの ことばの つづきお こう はなして います。
+  - speaker: zundamon
+    emotion: happy
+    text: ところが、セーフだった。
+    telops:
+    - {text: "田尻「ところが、セーフだった」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+# ---- 今の部屋・あのころのポケモン（25〜34歳が子どもの頃に見たもの。年は台帳どおり。パンは見出しだけの資料なので「出た」まで。サトシは TIME 1999 の問いと答えのまま） ----
+- id: atta
+  title: あのころのポケモン
+  background: pk_heya
+  bgm: 10do
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: ボクが覚えてるのは、テレビのアニメなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: アニメは1997年4月から。赤・緑は、お兄さんやお姉さんの世代ね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 石原は最初、アニメにも反対だったと2010年に話しているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: テレビのアニメは、長く続かないことが多いからって。
+  - speaker: zundamon
+    emotion: surprised
+    text: 反対されてたのに、ボクは毎週見てたのだ！
+  - speaker: zundamon
+    emotion: happy
+    text: パンのシールも、カードも集めたなあ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ポケモンパンは1998年。映画の1作目も、同じ年の夏よ。
+  - speaker: zundamon
+    emotion: happy
+    text: 金・銀は、ゲームボーイカラーで遊んだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 金・銀は1999年よ。
+  - speaker: zundamon
+    emotion: thinking
+    text: ルビー・サファイアは？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2002年。ダイヤモンド・パールは2006年ね。
+  - speaker: zundamon
+    emotion: surprised
+    text: どれで遊んだかで、年がばれちゃうのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: あなたの最初の1本は、どれだった？
+  - speaker: tsumugi
+    emotion: normal
+    text: 主人公の名前は、田尻と同じサトシ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 自分の分身かと1999年に聞かれて、こう答えているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 要するに、子どものころの僕です。
+  - speaker: zundamon
+    emotion: surprised
+    text: 主人公の名前は、考えた人の名前だったのだ！
+    beat: true
+# ---- 論争1：すぐ大ヒットした？（7-1。13万本は「とされる」。石原の2016年の問いと答えは原文の組み合わせのまま） ----
+- id: ronso1
+  title: すぐ大ヒットした？
+  background: pk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: ネットで見たのだ！ ポケモンは、出してすぐ大ヒットしたって！
+  - speaker: tsumugi
+    emotion: normal
+    text: 赤・緑あわせた初日の出荷は、[13万本|ジュウサンマンボン]ほどとされるわ。
+    se: tsukkomi
+  - speaker: tsumugi
+    emotion: normal
+    text: 石原は、ベストテンのぎりぎりの所だったと振り返っているの。
+  - speaker: zundamon
+    emotion: surprised
+    text: ぎりぎり！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 週間の1位は、1年半を過ぎてから。
+  - speaker: tsumugi
+    emotion: normal
+    text: コロコロの[久保|クボ]も2021年に、こう話しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ただ、初見でここまでのビッグヒットを見通せたかというと、
+  - speaker: tsumugi
+    emotion: normal
+    text: まったく、そんなことはなかったですね。
+  - speaker: zundamon
+    emotion: surprised
+    text: 雑誌の人も、見通せなかったのだ！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 交換がユーザーにとって一番楽しいポイントになるはずだ、という確信はあったのか。
+  - speaker: tsumugi
+    emotion: normal
+    text: 2016年にそう聞かれた石原は、こう答えているわ。
+  - speaker: tsumugi
+    emotion: thinking
+    text: いや、確信はもてませんでした。
+  - speaker: tsumugi
+    emotion: normal
+    text: それでも信じて、それを楽しんで貰う仕掛けは導入していました。
+  - speaker: zundamon
+    emotion: thinking
+    text: 確信は無いのに、仕掛けは入れてた……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 火をつけたのは、口コミとミュウとコロコロ。そこに、青とカードとアニメが続いたの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 1年半かけて、子どもの口から口へ……。
+    beat: true
+# ---- 論争2：ミュウは仕組まれた？（7-2。森本の2010年の言葉の訳。バグの中身・手順は言わない） ----
+- id: ronso2
+  title: ミュウは仕組まれた？
+  background: pk_heya
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: angry}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: angry
+    text: じゃあミュウは？ 最初から宣伝のために、仕組んだ隠しキャラなのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: そう見えるわね。ゲームの中では手に入らず、雑誌の企画で配ったから。
+  - speaker: tsumugi
+    emotion: normal
+    text: 田尻は1999年に、隠しキャラかと聞かれてこう答えているの。
+  - speaker: tsumugi
+    emotion: normal
+    text: ええ。これは、わざとです。
+  - speaker: tsumugi
+    emotion: normal
+    text: ミュウは、交換でしか手に入りません。
+  - speaker: zundamon
+    emotion: surprised
+    text: やっぱり、仕組んでたのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: でも入れた森本は2010年に、こう話しているの。
+    se: hammer
+  - speaker: tsumugi
+    emotion: normal
+    text: 発売のあとの企画に使えればと、残しておいたものでした。
+  - speaker: tsumugi
+    emotion: normal
+    text: それが思わぬバグで、一部の人のゲームに出てきてしまいました。
+  - speaker: tsumugi
+    emotion: normal
+    text: まるで全部計画したように見えた。でも、そうではなかった。
+  - speaker: zundamon
+    emotion: thinking
+    text: 隠したのは、わざと。出てきたのは、バグ……。
+    beat: true
+# ---- 本当の注意点（7章の1と2。株主総会の言葉は原文のまま。店・サイトを名指ししない。3の光の点滅は入れない） ----
+- id: chui
+  title: カードと累計の数
+  background: pk_heya
+  bgm: jitaku_nite
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: tsumugi
+    emotion: normal
+    text: 本当の注意点は、別にあるの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1つめはカード。2026年6月、任天堂の株主総会で質問が出たの。
+  - speaker: tsumugi
+    emotion: normal
+    text: "[古川|フルカワ]社長は、こう答えているわ。"
+  - speaker: tsumugi
+    emotion: thinking
+    text: 数量が限られたカードを投機的な意図で買い占める行為があることは認識しています。
+  - speaker: zundamon
+    emotion: surprised
+    text: 子どものカードを、買い占め！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 株式会社ポケモンの対策も、同じ総会で説明されたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 受注販売の実施やマーケットプレイス運営会社との協定の締結など、
+  - speaker: tsumugi
+    emotion: normal
+    text: さまざまな対策を進めています。
+  - speaker: zundamon
+    emotion: thinking
+    text: じゃあ、どうやって買えばいいのだ？
+  - speaker: tsumugi
+    emotion: normal
+    text: カードは、公式の販売や抽選や受注販売で買ってね。
+  - speaker: tsumugi
+    emotion: thinking
+    text: 高い値段をあおる売り方には、乗らないこと。
+  - speaker: zundamon
+    emotion: sad
+    text: ボクのシール集めとは、桁がちがうのだ……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: 2つめ。累計5億本は、多くがお店に出した出荷の数よ。
+  - speaker: zundamon
+    emotion: surprised
+    text: 売れた数とも、ちがうの！？
+  - speaker: tsumugi
+    emotion: normal
+    text: 初日の[13万本|ジュウサンマンボン]ほどとされる数も、出荷の数よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ニュースの売れたは、出荷か販売かを見てね。
+# ---- 現代（2026年11月時点。数字は累計出荷と2027年の2つ。ウインド・ウェーブの日付は言わない。ポケモンジェットは発表まで、絵柄は描かない） ----
+- id: card2026
+  title: ''
+  background: pk_card_2026
+  bgm: natsuyasumi
+  cuts:
+  - speaker: reimu
+    text: 2026年。発売から、30年がたちました。
+    reading: にせん にじゅうろくねん。はつばいから、さんじゅうねんが たちました。
+- id: ima
+  title: ポケモンのいま
+  background: pk_gendai
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: thinking}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: thinking
+    text: ポケモンは、いまどうなってるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 30周年の2月に、本編の新作のウインド・ウェーブが発表されたわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 発売は、2027年の予定よ。
+  - speaker: tsumugi
+    emotion: normal
+    text: ゲームのシリーズの累計出荷は、2026年3月末で[5億1500万本|ゴオクセンゴヒャクマンボン]を超えたの。
+    telops:
+    - {text: "累計出荷5億1500万本以上（2026年3月末）", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: surprised
+    text: ベストテンのぎりぎりから、5億本！？
+    se: jaan
+  - speaker: tsumugi
+    emotion: normal
+    text: ANAも30周年で、赤・緑・青と名づけたポケモンジェットを発表したわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 飛行機の名前まで、赤・緑・青なのだ！
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年の夏には、JR東日本のポケモンスタンプラリーもあったわ。
+  - speaker: zundamon
+    emotion: happy
+    text: 駅を回って、スタンプを集めるやつ！
+  - speaker: zundamon
+    emotion: thinking
+    text: 田尻さんは、いまどうしてるの？
+  - speaker: tsumugi
+    emotion: normal
+    text: 2026年11月時点で、いまもゲームフリークの代表を務めているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 1999年の雑誌も、ふだんは人前に出ない人だと書いているの。
+  - speaker: zundamon
+    emotion: thinking
+    text: 人前に出ないで、作る側なのだ……。
+# ---- 締め（茶番のシールと、序盤の虫を回収。7-3 は1行。締めの言葉は2016年の田尻の言葉） ----
+- id: shime
+  title: ''
+  background: pk_heya
+  bgm: pastel_house
+  stage:
+  - {who: zundamon, x: 0.2, flip: true, emotion: happy}
+  - {who: tsumugi, x: 0.8, emotion: normal}
+  cuts:
+  - speaker: zundamon
+    emotion: happy
+    text: 決めたのだ！ シールは、友だちと交換してそろえるのだ！
+  - speaker: tsumugi
+    emotion: happy
+    text: 1人で買いすぎて、同じのが山ほどあるものね。
+    se: oti
+  - speaker: tsumugi
+    emotion: normal
+    text: 町からいなくなった虫は、ケーブルの中で世界中を行き来するようになったの。
+  - speaker: tsumugi
+    emotion: normal
+    text: 石原は2016年に、こう話しているわ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 双方がゼロサムではない仕組みを作りたい、どうすれば作れるかというアイデアは
+  - speaker: tsumugi
+    emotion: normal
+    text: ゲームフリークが一番考えたポイントだと思います。
+  - speaker: zundamon
+    emotion: thinking
+    text: 勝ち負けじゃない、仕組み……。
+  - speaker: tsumugi
+    emotion: normal
+    text: 考えたのは田尻。形にしたのは9人と、外から支えた人たちよ。
+  - speaker: tsumugi
+    emotion: normal
+    text: 田尻は2016年の座談会で、こう話しているわ。
+  - speaker: tsumugi
+    emotion: happy
+    text: ゲームというのは、評価を言うのは簡単だけど、作るのは大変なんです
+    telops:
+    - {text: "田尻「作るのは大変なんです」", size: md, position: top-right, color: "#FFF15A", stroke: "#2A2A0A", glow: "#FFAA00", anim: up}
+  - speaker: zundamon
+    emotion: thinking
+    text: 作るのは、大変……。
+    beat: true
+  - speaker: tsumugi
+    emotion: normal
+    text: カードは公式の売り場で。数字は、出荷か販売かを確かめてね。
+  - speaker: tsumugi
+    emotion: happy
+    text: 面白かったら、高評価とチャンネル登録をお願いします。
+  - speaker: zundamon
+    emotion: happy
+    text: ご視聴、ありがとうございました！
+    duet_with: tsumugi
